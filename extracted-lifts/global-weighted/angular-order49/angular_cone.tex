@@ -1,0 +1,191 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{2em}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newcommand{\R}{\mathbb R}
+\newcommand{\pos}{\succeq0}
+\title{A second-order cone representation of the angular determinant}
+\author{}
+\date{23 October 2026}
+\begin{document}
+\maketitle
+\vspace{-2em}
+
+The angular determinant of a canonical Bell inequality contains eight
+nonconstant Laurent monomials. Their coefficients are nonnegative;
+only the constant can be negative. Positivity is therefore determined by
+how much constant each balanced group of exponents can support. There are
+twelve such elementary groups. We give their complete matrix representation,
+including vanishing coefficients and minima approached at infinity.
+
+Put $E=\{-1,0,1\}^2\setminus\{0\}$ and write $z^e=U^{e_1}V^{e_2}$.
+The cone to be represented is
+\begin{equation}\label{eq:cone}
+ \mathcal L=\{(h,q):q_e\ge0,\quad
+             h+\sum_{e\in E}q_ez^e\ge0\quad(U,V>0)\}.
+\end{equation}
+Its nine coordinates are $h$ and the eight $q_e$.
+
+\section{The twelve circuits and their matrices}
+
+Opposite pairs $\{e,-e\}$ give four circuits. Four more are
+$\{(s,t),(-s,0),(0,-t)\}$, with $s,t\in\{-1,1\}$.
+Their exponents add to zero. The remaining four have the form
+$\{e,f,g\}$, where $e,f$ are adjacent corners of the square and
+$e+f+2g=0$. Denote the eight triangles by $\mathcal T$ and all
+twelve circuits by $\mathcal C$.
+
+For each triangle $C$ allocate three coefficients $r_{C,e}$ to its
+three monomials. The opposite pairs receive everything left over:
+\begin{equation}\label{eq:residual}
+ R_e=q_e-\sum_{C\in\mathcal T:\,e\in C}r_{C,e}.
+\end{equation}
+Each circuit also receives a constant $s_C$. The matrices below ensure
+that its allocated monomials dominate $s_C$ for every positive $U,V$.
+
+For a pair $C=\{e,-e\}$ require
+\begin{equation}\label{eq:pair}
+ \begin{pmatrix}2R_e&s_C\\s_C&2R_{-e}\end{pmatrix}\pos.
+\end{equation}
+For a triangle whose exponents add to zero, abbreviate its three
+allocations by $r_1,r_2,r_3$, put $t=s_C/3$, and require
+\begin{equation}\label{eq:equal}
+ \begin{pmatrix}r_1&x\\x&r_2\end{pmatrix}\pos,\qquad
+ \begin{pmatrix}r_3&y\\y&t\end{pmatrix}\pos,\qquad
+ \begin{pmatrix}x&t\\t&y\end{pmatrix}\pos.
+\end{equation}
+For $e+f+2g=0$, use $r_1,r_2,r_3$ in that order, put $t=s_C/4$,
+and require
+\begin{equation}\label{eq:weighted}
+ \begin{pmatrix}r_1&x\\x&r_2\end{pmatrix}\pos,\qquad
+ \begin{pmatrix}x&t\\t&r_3/2\end{pmatrix}\pos.
+\end{equation}
+Finally impose the single scalar inequality
+\begin{equation}\label{eq:constant}
+                         h+\sum_{C\in\mathcal C}s_C\ge0.
+\end{equation}
+Every matrix entry is affine in the nine inputs and the auxiliary
+variables. The allocations and $R_e$ are automatically nonnegative
+because they occur on matrix diagonals.
+
+\begin{theorem}\label{thm:lift}
+Equations~\eqref{eq:residual}--\eqref{eq:constant} represent
+$\mathcal L$ exactly. Their block diagonal pencil has 24 blocks of
+order two and one scalar block, hence total order 49. It uses 48
+auxiliary variables and rational coefficients.
+\end{theorem}
+
+\begin{proof}
+We first show that the matrices imply positivity. For an opposite
+pair, \eqref{eq:pair} gives
+$s_C\le2\sqrt{R_eR_{-e}}$. The arithmetic--geometric mean inequality
+then gives $R_ez^e+R_{-e}z^{-e}\ge s_C$.
+
+In \eqref{eq:equal}, all diagonal entries are nonnegative and
+$x^2\le r_1r_2$, $y^2\le r_3t$, $t^2\le xy$.
+If $t>0$, these imply $t^3\le r_1r_2r_3$; if $t=0$ the desired
+bound is immediate. Since the three monomials have product one,
+their allocated sum is at least
+$3(r_1r_2r_3)^{1/3}\ge s_C$.
+
+Similarly, \eqref{eq:weighted} implies
+$t^4\le r_1r_2(r_3/2)^2$. Applying the arithmetic--geometric mean
+inequality to $r_1z^e,r_2z^f,(r_3/2)z^g,(r_3/2)z^g$ shows that
+their sum is at least $4|t|\ge s_C$. Thus negative $s_C$ causes no
+problem in either a pair or a weighted triangle; the ordinary triangle
+already forces $s_C\ge0$.
+Summing all twelve bounds and using \eqref{eq:residual} and
+\eqref{eq:constant} proves membership in \eqref{eq:cone}.
+
+For the converse, suppose first that $h\ge0$. Set all triangle
+allocations, constants and auxiliary variables to zero. The pair
+blocks are nonnegative diagonal matrices, and \eqref{eq:constant}
+holds. Now let $h<0$ and let $I=\{e:q_e>0\}$. Positivity forces
+$0\in\operatorname{conv} I$: otherwise a separating direction in
+$(\log U,\log V)$ makes every active monomial tend to zero.
+
+Let $J$ be the active exponents on the smallest face of
+$\operatorname{conv}I$ containing zero. An exposing direction sends
+all off-face monomials to zero and leaves the face monomials fixed.
+Hence $h+\sum_{e\in J}q_ez^e$ is nonnegative. In the span of $J$,
+the exponential sum is strictly convex and tends to infinity along
+every unbounded ray. It has a positive minimizer $z_c=(U_c,V_c)$,
+unique modulo directions orthogonal to $J$. Put
+\[
+ w_e=q_ez_c^e\quad(e\in J),\qquad w_e=0\quad(e\notin J).
+\]
+Stationarity and positivity at this minimum give
+\begin{equation}\label{eq:balance}
+               \sum_e w_e e=0,\qquad h+\sum_e w_e\ge0.
+\end{equation}
+
+A nonnegative balanced vector on $E$ decomposes into the twelve
+circuits above. Indeed, a minimal positive dependence uses an opposite
+pair or a triangle containing zero in its interior. The eight-point
+square has exactly the four equal-weight and four $(1,1,2)$ triangles
+listed above. Subtract the largest nonnegative multiple of an active
+minimal dependence and repeat. Each subtraction removes at least one
+positive coefficient, so there are at most eight steps. Write the
+result as $w=\sum_C\lambda_C b^C$, where $\lambda_C\ge0$ and $b^C$
+has weights $(1,1)$, $(1,1,1)$ or $(1,1,2)$.
+
+Allocate $\lambda_C b^C_e/z_c^e$ to circuit $C$ and set
+$s_C=\lambda_C\sum_e b^C_e$. Each circuit attains equality at $z_c$,
+so it meets exactly the corresponding geometric-mean bound. For an
+ordinary triangle choose $x=\sqrt{r_1r_2}$ and
+$y=\sqrt{r_3t}$; the equality $t^3=r_1r_2r_3$ makes all three
+blocks positive semidefinite. For a weighted triangle choose
+$x=\sqrt{r_1r_2}$; its second block has determinant zero.
+The pair block also has determinant zero. Zero circuit weight gives
+zero blocks without any division by that weight.
+
+The off-face coefficients have not been used. Assign each to its
+opposite-pair allocation; this only increases the corresponding
+diagonal entry. Thus the pair allocations are exactly
+\eqref{eq:residual}. Equation~\eqref{eq:balance} gives
+\eqref{eq:constant}, proving the converse even when the original
+Laurent polynomial has no finite minimizer.
+
+There are 24 triangle allocations, 12 constants $s_C$, eight
+variables for the four ordinary triangles and four for the weighted
+triangles: 48 auxiliaries in total. The pair, ordinary-triangle and
+weighted-triangle blocks number $4+12+8=24$.
+\end{proof}
+
+The accompanying \texttt{ANGULAR\_CONE\_ORDER49.coo.json} lists all
+109 nonzero rational coefficient records of the pencil. Off-diagonal
+records are mirrored without a factor of one half. A standard-library
+checker reconstructs every coefficient matrix and checks exact boundary,
+zero-weight and off-face witnesses.
+
+\section{Application to canonical Bell inequalities}
+
+For nonnegative canonical coefficients
+$c=(d,\lambda,n,m,C,A,D,\alpha,\beta)$, the state determinant is
+\[
+ \det P_{\rm aff}(u,v)
+ =16(1+u^2)^2(1+v^2)^2u^2v^2
+       \left(h(c)+\sum_{e\in E}q_e(c)u^{2e_1}v^{2e_2}\right).
+\]
+The nine polynomials $h(c),q_e(c)$ are given in the accompanying
+determinant certificate and coefficient file. All outer coefficients
+are nonnegative on this orthant. If $d>0$ and $uv\ne0$, the
+three-dimensional transverse state block is positive definite.
+The Schur complement therefore shows that $P_{\rm aff}\pos$ exactly
+when its determinant is nonnegative. Continuity includes the testing
+axes and projective endpoints. When $d=0$, the full state polynomial
+is already a nonnegative sum of event squares.
+
+Consequently a canonical Bell inequality is quantum-valid if and only
+if the order-49 pencil is feasible at $(h(c),q(c))$. This gives a smaller
+exact validity test than completing the entire state polynomial.
+The coefficient map is quartic in $c$. The pencil is affine in the
+nine Laurent coefficients; it is not an affine lift in the Bell
+coefficients or the eight quantum expectations. The separate order-133
+construction supplies the fixed square factors for the determinant-
+weighted full state polynomial.
+\end{document}

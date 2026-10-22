@@ -37,7 +37,8 @@ The recovered files provide:
 | Bounded-z C1 source box | Exact order-669 pencil for the specified local certificate cone; 120 blocks and 2,694 auxiliaries |
 | Reciprocal Alice angle, every positive source ratio | Exact order-62 local source-cone pencil; 19 blocks and 97 auxiliaries |
 | All Alice angles, bounded-z source box | Exact order-731 intersection of the two specified local certificate cones; 139 blocks and 2,791 auxiliaries |
-| Canonical Bell validity at every angle | Exact order-133 pencil with a quartic source map; 104 functions and 27 blocks |
+| Canonical Bell validity at every angle | Exact order-49 pencil with a quartic source map; 24 order-two blocks, one scalar block and 48 auxiliaries |
+| Determinant-weighted full state polynomial | Exact order-133 fixed square certificate; 104 functions and 27 blocks |
 | Global candidates of orders 8,368 and 10,736 | Strict outer approximations, with exact separation proofs |
 | Global candidate of order 13,744 | Forward inclusion; reverse inclusion remains unproved |
 | C160 candidate of order 63,888 | Reverse inclusion remains unproved; full forward inclusion uses the stated extremal-coverage theorem |
@@ -92,6 +93,16 @@ of each specified canonical inequality exactly. Its input is quartic in the
 inequality coefficients, so it does not supply an affine lift of the full
 quantum set. The complete fixed functions, product equations, coefficient
 arrays and reproduction scripts are included.
+
+The [three-page angular-cone proof](extracted-lifts/global-weighted/angular-order49/angular_cone.pdf)
+reduces the same canonical validity test to twelve balanced circuits. Each
+circuit has an elementary geometric-mean bound represented by two-by-two
+positive-semidefinite matrices. The resulting order-49 pencil has 48
+auxiliaries and 109 rational coefficient records, all supplied explicitly.
+It includes zero coefficients and minima approached only at infinity.
+This pencil is affine in the nine Laurent coefficients; their dependence
+on the Bell coefficients remains quartic. The order-133 construction
+additionally supplies the fixed square factors for the full state polynomial.
 
 The [bounded source-interval theorem](extracted-lifts/global-weighted/bridges/bounded_unit_L/bounded_unit_L_all_tests.pdf)
 extends a fixed testing family to every pair of measurement angles when

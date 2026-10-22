@@ -15,6 +15,41 @@
   "publication_changes": "Proof exposition only; all formulas, hypotheses and evaluated matrix data retained.",
   "published_files": [
     {
+      "file": "angular-order49/angular_cone.pdf",
+      "bytes": 274345,
+      "sha256": "a409dca16bcbae4f45bcc5a1dd367e0aaca5482456a94f8d1592542ea4e2efb2"
+    },
+    {
+      "file": "angular-order49/angular_cone.tex",
+      "bytes": 8619,
+      "sha256": "cb7ddaef9665c1f18ee3a33b146394b33e86850de2661932bf5d8136fd3e1c60"
+    },
+    {
+      "file": "angular-order49/ANGULAR_CONE_ORDER49.coo.json",
+      "bytes": 12010,
+      "sha256": "22bdfcd7b98c583ea68c8679e30392644edaf589d02a12f2e4debd50dc10f336"
+    },
+    {
+      "file": "angular-order49/angular_pencil_checks.json",
+      "bytes": 539,
+      "sha256": "682caf8683e7a37e4500ff506bc7455ef6e0c553475e8b3dcc7997577421c98d"
+    },
+    {
+      "file": "angular-order49/check_angular_pencil.py",
+      "bytes": 5235,
+      "sha256": "adf32c279959d6d874fb4be9e8946e157ea156dc3238d8f65887f04c3d6b8e90"
+    },
+    {
+      "file": "angular-order49/compile_angular_pencil.py",
+      "bytes": 3346,
+      "sha256": "e2b17ce75ae38ad112e1a2f0bace54d078be03b1b1057f3c6a422ca2a9e2a4f4"
+    },
+    {
+      "file": "angular-order49/source_to_angular.py",
+      "bytes": 1245,
+      "sha256": "6fa5a6a36296bf5fde7438fbb569b728ed162f2d3f0a838d34f13c80d790fcbb"
+    },
+    {
       "file": "bridges/bounded_R/bounded_R_bridge.pdf",
       "bytes": 268994,
       "sha256": "ff4e71f0ea1121587053d3b0bd0c19c1401c67b2bfec01c719859276f2ea68de"
@@ -116,8 +151,8 @@
     },
     {
       "file": "reproduce.py",
-      "bytes": 1363,
-      "sha256": "017b9602ebc07a24f9dab074f4db390e4ade5a2bf2032998098db3632f1d1b86"
+      "bytes": 1480,
+      "sha256": "4d1cdcfc1aba54cee6d298d6ae43716b83a361ed5f3bdc3d52a6b0bd316c487a"
     },
     {
       "file": "requirements.txt",
@@ -204,5 +239,16 @@
       "bytes": 309610,
       "sha256": "b1cfed39126584e623ae65befeb226163ee0f30ab5fcf8fdce1144a16b9fe614"
     }
-  ]
+  ],
+  "angular_order49": {
+    "derivation": "Local exact circuit allocation from the verified eight-exponent Laurent cone; independently reviewed.",
+    "directory": "angular-order49",
+    "input_dimension": 9,
+    "auxiliary_variables": 48,
+    "order": 49,
+    "order_two_blocks": 24,
+    "scalar_blocks": 1,
+    "scope": "Affine Laurent cone; quartic canonical-source pullback. Not an affine Q222 lift.",
+    "existing_quartic_coefficients": "weighted/DETERMINANT_SOURCE_COEFFICIENTS.json"
+  }
 }

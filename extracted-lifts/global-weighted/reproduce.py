@@ -27,6 +27,9 @@ if args.rebuild:
     run('weighted/compile_weighted_family.py')
     run('weighted/compile_weighted_pencil.py')
 run('weighted/check_evaluated_matrices.py','--full-source-identity')
+if args.rebuild:
+    run('angular-order49/compile_angular_pencil.py')
+run('angular-order49/check_angular_pencil.py')
 run('bridges/bounded_R/check_bridge.py')
 run('bridges/compact_Bob/check_compact_bob.py')
 run('bridges/bounded_unit_L/check_bounded_unit_L.py')
