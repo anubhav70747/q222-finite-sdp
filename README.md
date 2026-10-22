@@ -14,10 +14,12 @@ complementary source weights control the state couplings in singular limits.
 - [Scientific matrix data and exact checkers](extracted-lifts/).
 
 The main article is **7 pages**. The complete technical companion
-is **345 pages**: its C1 calculations are grouped into seven mathematical
+is **343 pages**: its C1 calculations are grouped into seven mathematical
 domains and its C2 calculations into seventeen families. One full-state completion now treats the large-$L$ C1 source for all Alice
 angles, replacing three separate proofs while retaining their complete source
-and testing domain. The short
+and testing domain. A second two-page argument now treats every testing
+angle for the unit-$L$ source with unbounded $\eta$, replacing its two
+separate testing proofs. The short
 article uses the companion's source estimates in the canonical-certificate
 proposition.
 
@@ -90,6 +92,15 @@ of each specified canonical inequality exactly. Its input is quartic in the
 inequality coefficients, so it does not supply an affine lift of the full
 quantum set. The complete fixed functions, product equations, coefficient
 arrays and reproduction scripts are included.
+
+The [bounded source-interval theorem](extracted-lifts/global-weighted/bridges/bounded_unit_L/bounded_unit_L_all_tests.pdf)
+extends a fixed testing family to every pair of measurement angles when
+the native source ratio belongs to a specified positive interval. Positive
+event weights control the state uniformly away from the singular corner;
+two endpoint completions and the corner certificate complete the cover.
+The quantitative six-page proof includes exact functions, source bounds and
+independent symbolic checks. Its interval-dependent grid has not been
+enumerated into matrix arrays.
 
 The [tensor-rank note](extracted-lifts/fixed-features/uniform_feature_route.pdf)
 explains why a bound on each square's tensor rank differs from a common

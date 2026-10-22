@@ -29,4 +29,6 @@ if args.rebuild:
 run('weighted/check_evaluated_matrices.py','--full-source-identity')
 run('bridges/bounded_R/check_bridge.py')
 run('bridges/compact_Bob/check_compact_bob.py')
+run('bridges/bounded_unit_L/check_bounded_unit_L.py')
+run('bridges/bounded_unit_L/check_independent_annulus.py')
 print('\nAll new exact checks passed. The full affine Q222 lift remains open.',flush=True)

@@ -148,3 +148,21 @@ gate scale does not establish admission to the old evaluated order-669
 pencil. RECOVERED_SHA256SUMS.json describes the original received ZIP;
 SHA256SUMS.json describes this publication. The original archive SHA256 and
 the current file hashes are recorded in PROVENANCE.json.
+
+ALL TESTING ANGLES ON A FIXED POSITIVE SOURCE INTERVAL
+
+bridges/bounded_unit_L/bounded_unit_L_all_tests.tex and .pdf give an
+explicit complete family on each rational interval 0<ell<=L<=U, with
+a quantitative native source box. The construction joins the corner
+certificate to one uniform matrix estimate away from that corner and
+two exact endpoint completions. It keeps every event term and both
+state normals. A rational grid gives at most65 fixed functions per
+annulus chart; the finite grid is specified, not enumerated into an
+evaluated pencil. Its constants depend on ell and U.
+
+The companion uses the same matrix estimate qualitatively to replace
+the two earlier unit-L/unbounded-eta testing proofs by one two-page
+argument. That replacement retains its original inner-corner theorem
+and does not add a dependency on the quantitative bounded-R bridge.
+The two new exact checkers verify the endpoint/restoration identities,
+the annulus cofactor formula and the seven coefficient matrices.

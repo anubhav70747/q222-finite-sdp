@@ -1,0 +1,383 @@
+\documentclass[11pt]{article}
+\usepackage[margin=24mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+\usepackage{needspace}
+\setlength{\emergencystretch}{2em}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\allowdisplaybreaks
+\begin{document}
+\title{A fixed testing family on a bounded C1 source interval}
+\author{}\date{23 October 2026}\maketitle
+
+The three positive event weights may grow without bound near a contact.
+Their growth helps control the state, but prevents a direct bounded-matrix
+argument. We keep a fixed part of each weight and retain its excess as an
+event square. Away from one angular corner, the remaining matrix has a
+uniform positive lower bound. A separate completion handles the Alice
+endpoint; the known local certificate handles the corner.
+
+This gives one fixed family of testing functions for every source ratio in
+a specified positive interval. We first give the source and its quantitative
+bounds, then construct the functions on three overlapping angle regions.
+
+\paragraph{The source and the Bell polynomial.}
+For positive $x,\sigma,z$ and $0<b,h<1$ put
+\begin{gather*}
+ r=bz<1,\quad Q=1-b,\quad\theta=1-h,\quad
+ e=xh/\sigma,\quad E_s=1-e,\quad K_s=1+x,\quad R_s=1+xr,\\
+ M_s=R_s-xz\theta,\quad J_s=1+xh-\sigma(1-r),\\
+ P_s=\sigma+K_s+\sigma z(1+bx+2xh)
+                          +\sigma bx^2hz^2+x^2h\theta z,\\
+ \pi=\frac{z(1+xh)E_s+(1-r)(1+xhz)}{2P_s},\qquad
+ l=\frac{(1+\sigma r)\{eR_s(1+\sigma z)+M_sE_s\}}{2P_s},\\
+ \kappa_s=\frac{K_s(1+\sigma r)(1+\sigma z)}{2M_sP_s}.
+\end{gather*}
+The strict gaps are $E_s,M_s,J_s>0$. The coefficients are
+\begin{gather*}
+ m=\kappa_s x^2z h/\sigma,\quad
+ C=\frac{K_sz(1+\sigma r)E_s}{2(1-r)P_s},\quad
+ A=\frac\pi{bz},\quad \alpha=\frac l{Qz},\\
+ D=\frac{K_s(1+\sigma z)(1+\sigma r)-J_sP_s}{2J_sP_s},\quad
+ \beta=\frac{K_s(1+\sigma r)(1+xhz)-\theta P_s}{2\theta P_s}.
+\end{gather*}
+Require $D,\beta\ge0$. With $D_u=1+u^2$, $D_v=1+v^2$, write the
+complete quarter-parent as
+\begin{align*}
+ \mathcal F={}&m(vW-X+uvY-uZ)^2+CD_v(uW-Y)^2+AD_uD_vY^2\\
+ &+(D+\tfrac12)(uW+uvX-Y-vZ)^2
+ +(\alpha+\tfrac12)D_u(vY-Z)^2\\
+ &+(\beta+\tfrac12)D_v(X+uZ)^2-\tfrac12D_uD_vZ^2.
+\end{align*}
+The physical normalization is the pure testing factor $(D_uD_v)^{-1}$.
+Homogeneous polynomial values define both projective angle endpoints.
+
+\Needspace{16\baselineskip}
+\begin{theorem}\label{thm:bounded-unit}
+Fix rationals $0<\ell\le U$. Define the following rational constants:
+\begin{gather*}
+ R=\max(1,1/\ell),\quad
+ \varepsilon_R=2^{-40}(1+R)^{-8},\quad
+ \delta_R=2^{-20}(1+R)^{-2},\\
+ \mu=\frac1{4\max(U,1)},\quad
+ M=\lceil96\max(U,1)\rceil,\quad\tau=\delta_R^2/2,\\
+ \mathcal B=U^2(4+2M^2+M^4)+U(2+2M^2+M^4)+1+2M^2,\\
+ k=\frac{\min(\ell,1)\tau^2}{8\mathcal B},\quad K=3M^2,\quad
+ \varepsilon=\min\left(2^{-78},\varepsilon_R,
+                                  \frac{k}{50(k+K)}\right).
+\end{gather*}
+Suppose the above native source satisfies
+\[
+ \ell\le L=1/z\le U,\qquad
+ 0<x,\sigma\le\frac\varepsilon{1+z}.
+\]
+There is one finite source-independent family of semialgebraic testing
+functions whose source Gram assignments express the physical normalization of the complete parent
+as a separated sum of squares at every pair of projective angles and
+every state. This statement includes $D=0$, $\beta=0$, every allowed
+source-opening rate, and all testing and state-coordinate zeros.
+For the corner it uses the bounded-$R$ admission theorem\footnote{\href{../bounded_R/bounded_R_bridge.pdf}{An explicit bounded-$R$ bridge for the complete C1 certificate}, Theorem~1.} on
+$\sqrt{|u|},|w|\le\delta_R$, $w=1/v$, for native sources
+$x,\sigma\le\varepsilon_R$, $0<z\le R$.
+That theorem supplies fixed families of at most $220$ and $157$
+functions in the two signs of its source angular coefficient.
+\end{theorem}
+
+All functions below are fixed after $\ell,U$ are chosen. They do not depend
+on $L,r,h$, any event coefficient, or a source residue.
+
+\paragraph{Quantitative native admission.}
+Put $H_0=1+zQ$, $B_s=P_s+xz(J_s-\sigma)$ and
+\[
+ \mathcal H=R_sH_0+z\{(1-r)xh(2+xr)
+                      -e[2+x(1+h+r\theta)]+K_se^2\}.
+\]
+Direct substitution in the displayed source formulas gives
+\[
+ 2\theta P_s\beta=hB_s-\sigma H_0,\qquad
+ 2P_s(J_sD+x\theta\beta)=\sigma^2\mathcal H,
+\]
+and hence
+\[
+ eB_s=xH_0+\sigma\mathcal H-2P_sJ_sD/\sigma.
+\]
+Writing $T=1+z$ and using $Tx,T\sigma\le\varepsilon$,
+$e<1$ and $r<1$ gives
+\[
+ 1\le P_s\le1+4\varepsilon,\quad |M_s-1|\le\varepsilon,
+ \quad B_s\ge1,\quad\mathcal H\le4T,
+ \quad e\le5\varepsilon.
+\]
+For
+\[
+ C_0=\frac1{2L(1-r)},\quad
+ A_0=\frac{1+L(1-r)}{2Lr},\quad
+ a_0=\frac L{2(1-Lr)},
+\]
+the exact source ratios are
+\begin{gather*}
+ \frac C{C_0}=\frac{K_s(1+\sigma r)(1-e)}{P_s},\qquad
+ \frac A{A_0}=\frac{z(1+xh)(1-e)+(1-r)(1+xhz)}{P_sH_0},\\
+ \frac\alpha{a_0}=
+ \frac{(1+\sigma r)\{eR_s(1+\sigma z)+M_s(1-e)\}}{P_s}.
+\end{gather*}
+The first two ratios lie between $1-9\varepsilon$ and
+$1+3\varepsilon$; the third lies between $1-5\varepsilon$
+and $1+5\varepsilon$. For the second numerator use
+$H_0-ze+xhz(2-r-e)$ and $H_0-z=1-r>0$.
+For the third use its convex combination of $M_s$ and
+$R_s(1+\sigma z)$. In particular
+\begin{equation}\label{eq:source-admit}
+ d_s:=|C/C_0-1|+|A/A_0-1|+|\alpha/a_0-1|
+ \le25\varepsilon\le\frac{k}{2(k+K)},\qquad C,A\ge\mu.
+\end{equation}
+These bounds are uniform in $h/\sigma$ and include $D=0$ and $\beta=0$.
+
+\begin{lemma}[Both Bob charts at the Alice endpoint]\label{lem:endpoint}
+If $C,A\ge\mu$ with $0<\mu\le1/4$, one fixed algebraic testing family
+suffices whenever $0\le p=1/u\le\mu/24$, for every Bob angle.
+The other nonnegative event coefficients are unrestricted.
+\end{lemma}
+\begin{proof}
+On $|v|\le1$ use raw roots $(W,Y,B,R)$ with
+$B=pX+Z$, $R=vX$. The complete homogeneous core is
+\[
+ K_p=B^2-2pvBW-2vBY+(1+p^2)R^2+2(1+p^2)RW
+                       +(W-pY)^2+(1+p^2)v^2Y^2.
+\]
+Select only the fixed coefficients $C=A=\mu$. Their quarter-parent
+\[
+ Q_p=\mu(1+v^2)(W-pY)^2
+          +\mu(1+p^2)(1+v^2)Y^2+K_p/2
+\]
+has the testing-only matrix
+\[
+ \begin{pmatrix}
+ \mu D_v+1/2&-p(\mu D_v+1/2)&-pv/2&(1+p^2)/2\\
+ -p(\mu D_v+1/2)&\mu D_v(1+2p^2)+(p^2+(1+p^2)v^2)/2&-v/2&0\\
+ -pv/2&-v/2&1/2&0\\
+ (1+p^2)/2&0&0&(1+p^2)/2
+ \end{pmatrix}.
+\]
+At $p=0$ its form is
+\[
+ \mu D_v(W^2+Y^2)+\tfrac12(W+R)^2+\tfrac12(B-vY)^2.
+\]
+The raw norm is at most three times the squared norm of
+$(W,Y,W+R,B-vY)$, so this matrix is at least $(\mu/3)I_4$.
+The difference from its $p=0$ matrix has absolute row sums at most
+$3p$ for $|v|\le1$, $p\le1$, $\mu\le1/4$.
+
+On $|w|=|1/v|\le1$ use raw roots $(W,Y,X,H)$, $H=wZ$.
+The complete twice-homogeneous core is
+\begin{align*}
+ K_{pw}={}&H^2-2pHW+2pwHX-2HY+w^2W^2+2wWX-2pw^2WY\\
+ &+(1+p^2+p^2w^2)(X^2+Y^2)-2pwXY.
+\end{align*}
+The corresponding selected quarter-parent is
+$Q_{pw}=\mu D_w(W-pY)^2+\mu(1+p^2)D_wY^2+K_{pw}/2$.
+Its testing-only matrix is
+\[
+ \begin{pmatrix}
+ \mu D_w+w^2/2&-p(\mu D_w+w^2/2)&w/2&-p/2\\
+ -p(\mu D_w+w^2/2)&\mu D_w(1+2p^2)+(1+p^2D_w)/2&-pw/2&-1/2\\
+ w/2&-pw/2&(1+p^2D_w)/2&pw/2\\
+ -p/2&-1/2&pw/2&1/2
+ \end{pmatrix}.
+\]
+At $p=0$ its form is
+\[
+ \mu D_w(W^2+Y^2)+\tfrac12(X+wW)^2+\tfrac12(H-Y)^2
+                  \succeq(\mu/3)I_4.
+\]
+Its finite-$p$ correction has absolute row sums at most $4p$.
+Thus both displayed matrices are at least $(\mu/6)I_4$ when
+$p\le\mu/24$. Factoring them takes place entirely in the testing
+field: they contain only fixed $\mu$ and testing variables.
+Their four Cholesky roots in each chart are therefore fixed algebraic
+testing functions. Every leading principal minor is strictly positive,
+so the usual finite Cholesky formulas define them at all chart points.
+
+Restore the six original nonnegative contributions with source
+coefficients $C-\mu,A-\mu,\alpha,m,D,\beta$.
+On the $v$ chart their fixed testing roots are
+\begin{gather*}
+ \sqrt{D_v}(W-pY),\quad\sqrt{(1+p^2)D_v}\,Y,
+ \quad\sqrt{1+p^2}(vY-Z),\\
+ pvW-pX+vY-Z,\quad W+vX-pY-pvZ,
+ \quad\sqrt{D_v}(pX+Z).
+\end{gather*}
+On the $w$ chart they are
+\begin{gather*}
+ \sqrt{D_w}(W-pY),\quad\sqrt{(1+p^2)D_w}\,Y,
+ \quad\sqrt{1+p^2}(Y-wZ),\\
+ pW-pwX+Y-wZ,\quad wW+X-pwY-pZ,
+ \quad\sqrt{D_w}(pX+Z).
+\end{gather*}
+This is at most ten fixed functions per chart, including their four
+testing Cholesky roots. All original terms and literal endpoints
+are included. The physical normalizers are pure testing.
+\end{proof}
+
+\paragraph{A finite annulus for all remaining bounded Alice angles.}
+Put $c=(1+v^2)^{-1/2}$, $s=vc$, $P=uW$, $T=cZ$.
+The selected compact-Bob quarter-parent is
+\[
+ S_0=C_0(P-Y)^2+A_0(1+u^2)Y^2
+                       +a_0(1+u^2)(sY-T)^2+K_B/2,
+\]
+where
+\[
+ K_B=X^2+c^2(P-Y)^2+s^2Y^2-2sPT
+ +2ucX(sP-sY+T)+u^2s^2X^2+u^2(sY-T)^2.
+\]
+For its raw Gram $G_0$ in $(P,X,Y,T)$, direct cofactors give
+\[
+ \operatorname{tr}G_0^{-1}
+ =\frac{2(L^2N_2+LN_1+N_0)}
+ {(1+t)\{Lq+t(1-q)\}\{1+L(1-r)\}},\quad t=u^2,\ q=c^2,
+\]
+with
+\begin{align*}
+ N_2&=1+r^2+(1-r)q\{1+r(1-q)\}
+ +(1-r)(2-qr)t+(1-r)^2(1-q)t^2,\\
+ N_1&=2(1-r)q+\{2-rq(3-q)\}t+(1-r)(1-q)t^2,\\
+ N_0&=1+(2-q)t.
+\end{align*}
+The strict $T=0$ block and positive determinant establish
+$G_0\succ0$ unless $u=c=0$. For $|u|\le M$,
+\[
+ N_2\le4+2M^2+M^4,\quad N_1\le2+2M^2+M^4,
+ \quad N_0\le1+2M^2.
+\]
+Since $L\ge\ell$,
+\[
+ (1+t)\{Lq+t(1-q)\}\ge\min(\ell,1)(q+t).
+\]
+Consequently $G_0\succeq\min(\ell,1)\tau^2I/(2\mathcal B)$ on
+$u^2+c^2\ge\tau^2$, and is at least $kI$ on the larger annulus
+$u^2+c^2\ge\tau^2/2$. The complete core matrices, both in raw
+coordinates and in
+$e=(P-Y,Y,sY-T,X)$, have absolute row sums at most $K=3M^2$.
+Using the common source factor $1-d_s$ and retaining all three event
+excesses, \eqref{eq:source-admit} therefore gives an actual raw
+reserve $k/2$ on that larger annulus.
+
+Here is an explicit finite construction in separated fields. Define
+\[
+ N=K+1+24K^2/k,\qquad h_* =\min(1,k/24),\qquad B_*=N+1.
+\]
+Clip $C,A,\alpha$ at the fixed real $N$ and retain their excesses.
+Both the event-coordinate map and its inverse have squared Frobenius
+norm at most six. Thus the unmodified event-coordinate Gram is at
+least $k/12$. Its core has norm at most $K$.
+Splitting coordinates according to their source coefficient being
+above $N$, the unchanged small block is at least $k/12$, the clipped
+large block is at least $N-K$, and the off-diagonal norm is at most $K$.
+The exact inequality
+\[
+ 2Kab\le(24K^2/k)a^2+(k/24)b^2
+\]
+proves a clipped reserve $h_*I$.
+
+The clipped event-coordinate Gram is affine in the seven testing
+monomials
+\[
+ \eta=(u^2,c^2,s^2,s,ucs,uc,u^2s^2).
+\]
+Its coefficient matrices are exactly the following, with
+$C',A',a'$ denoting the three clipped source weights:
+\begin{gather*}
+ G_{\rm const}=\operatorname{diag}(C',A',a',1/2),\qquad
+ A_1=\operatorname{diag}(0,A',a'+1/2,0),\quad A_2=E_{11}/2,\\
+ A_3=-(E_{12}+E_{21}+E_{22})/2,\quad
+ A_4=(E_{13}+E_{31}+E_{23}+E_{32})/2,\\
+ A_5=(E_{14}+E_{41}+E_{24}+E_{42})/2,\quad
+ A_6=-(E_{34}+E_{43})/2,\quad A_7=E_{44}/2.
+\end{gather*}
+Each has norm at most $B_*$.
+Choose the fixed integer and grid
+\[
+ n=\left\lceil\max\left(\frac{8M^2}{\tau^2},
+                         \frac{56M^2B_*}{h_*}\right)\right\rceil,
+ \quad \delta_g=4M^2/n,
+\]
+\[
+ a_{jk}=\left(j/n,\frac{n^2-k^2}{n^2+k^2},
+                         \frac{2kn}{n^2+k^2}\right),
+ \quad -Mn\le j\le Mn,\quad -n\le k\le n.
+\]
+All centers are rational. The circle parametrization
+$c=(1-t^2)/(1+t^2)$, $s=2t/(1+t^2)$, $-1\le t\le1$,
+has both coordinate derivatives bounded by two. Thus the nearest
+parameter grid point gives errors at most $1/n$ in $c,s$.
+Retain centers with $u_j^2+c_k^2\ge\tau^2/2$.
+Charts within $1/n$ of a center in each coordinate cover the target
+annulus. On each chart $b_i=\eta_i-\eta_i(a)$ satisfies
+$|b_i|\le\delta_g$: the derivative bounds for $u^2s^2$ give
+$2M+2M^2\le4M^2$, and those of the other six monomials are smaller.
+The exact identity
+\[
+ G'=G'(a)-7\delta_gB_*I
+ +\tfrac12\sum_{i=1}^7
+ \{(B_*I+A_i)(\delta_g+b_i)+(B_*I-A_i)(\delta_g-b_i)\}
+\]
+has positive source matrices, its first matrix being at least
+$h_*I/2$. It uses only the fixed testing functions
+$e_j$ and $e_j\sqrt{\delta_g\pm b_i}$.
+The excess $C-C'$ uses the existing root $e_1=P-Y$.
+Restore the fixed roots $\sqrt{1+u^2}Y$,
+$\sqrt{1+u^2}(sY-T)$ and the three full $m,D,\beta$ events.
+At most $65$ functions per chart express the complete parent.
+
+\paragraph{Completing the testing cover.}
+When $|u|\ge M$, Lemma~\ref{lem:endpoint} applies because
+$1/M\le\mu/24$. For $|u|\le M$ outside the displayed annulus,
+$|u|,c<\tau$. Thus
+\[
+ |u|<\delta_R^2/2,\qquad
+ |w|=c/\sqrt{1-c^2}<2\tau=\delta_R^2\le\delta_R.
+\]
+These inequalities imply the bounded-$R$ inner testing conditions
+$\sqrt{|u|},|w|\le\delta_R$. Its source box contains the present box,
+since $z\le1/\ell\le R$ and $x,\sigma\le\varepsilon\le\varepsilon_R$.
+
+These are finitely many fixed testing charts. To obtain one family
+on the whole testing domain, order the charts and assign a point to
+the first chart containing it. Multiply each chart function by the
+indicator of its resulting disjoint semialgebraic piece and extend it
+by zero elsewhere. The identities then sum literally; all source
+Gram assignments remain source-only. This introduces no additional
+functions per chart. The indicators and radicals have fixed
+semialgebraic graphs. Before this summation divide the compact-Bob
+functions by $\sqrt{D_u}$, the endpoint $v$-chart functions by
+$\sqrt{(1+p^2)D_v}$, and the endpoint $w$-chart functions by
+$\sqrt{(1+p^2)D_w}$. Use the corresponding physical normalizer for
+the inner family, with its constant factor $1/2$ if its target is
+the full parent $4\mathcal F$. All charts then represent the same
+quadratic function $\mathcal F/(D_uD_v)$, including its homogeneous
+projective values. The exact sign gauges are
+\[
+ (u,W,X,Y,Z)\longmapsto(-u,W,X,-Y,-Z),\qquad
+ (v,W,X,Y,Z)\longmapsto(-v,W,-X,Y,-Z).
+\]
+They preserve every square term and the signed complete core, so
+negative $p$ requires no additional source statement.
+Real/imaginary splitting handles complex
+states. This proves Theorem~\ref{thm:bounded-unit}.
+
+\paragraph{Dependence on the source interval.}
+The fixed testing family is obtained for each specified interval
+$[\ell,U]$. It is not uniform over all positive real residues of $L$
+without fixing such an interval, and does not treat $z=0$ or other
+source charts. The bounded-$R$ inner functions depend on the fixed $R$;
+this theorem does not identify them with the evaluated order-$731$
+bounded-$z$ construction.
+When $\ell\ge1$, one may instead use the published local669 theorem,
+choose $\tau=2^{-25}$, and omit $\varepsilon_R$ from the minimum.
+Then the same proof requires no bounded-$R$ input.
+The remaining source scales and the second canonical family require
+their own certificates.
+\end{document}

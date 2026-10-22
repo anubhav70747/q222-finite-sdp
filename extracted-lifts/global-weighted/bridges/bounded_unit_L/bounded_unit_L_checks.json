@@ -1,0 +1,93 @@
+{
+  "scope": "bounded C1 source interval L in [ell,U], all tests; no global Q222 assertion",
+  "checks": {
+    "CE4 endpoint full selected matrix": true,
+    "CE7 endpoint full selected matrix": true,
+    "CE4 zero-p reserve squares": true,
+    "CE7 zero-p reserve squares": true,
+    "CE4 full core restoration": true,
+    "CE4 all six original contributions": true,
+    "CE7 full core restoration": true,
+    "CE7 all six original contributions": true,
+    "endpoint row-bound majorants": true,
+    "endpoint positive reserve": true,
+    "generalized annulus denominator": true,
+    "rational compact circle grid": true,
+    "circle c derivative majorant": true,
+    "circle s derivative majorant": true,
+    "U1 all rational admission and grid inequalities": true
+  },
+  "exact_checks": 15,
+  "endpoint_matrices": {
+    "p_v": [
+      [
+        "(2*mu*v**2 + 2*mu + 1)/2",
+        "-p*(2*mu*v**2 + 2*mu + 1)/2",
+        "-p*v/2",
+        "(p**2 + 1)/2"
+      ],
+      [
+        "-p*(2*mu*v**2 + 2*mu + 1)/2",
+        "(4*mu*p**2*v**2 + 4*mu*p**2 + 2*mu*v**2 + 2*mu + p**2*v**2 + p**2 + v**2)/2",
+        "-v/2",
+        "0"
+      ],
+      [
+        "-p*v/2",
+        "-v/2",
+        "1/2",
+        "0"
+      ],
+      [
+        "(p**2 + 1)/2",
+        "0",
+        "0",
+        "(p**2 + 1)/2"
+      ]
+    ],
+    "p_w": [
+      [
+        "(2*mu*w**2 + 2*mu + w**2)/2",
+        "-p*(2*mu*w**2 + 2*mu + w**2)/2",
+        "w/2",
+        "-p/2"
+      ],
+      [
+        "-p*(2*mu*w**2 + 2*mu + w**2)/2",
+        "(4*mu*p**2*w**2 + 4*mu*p**2 + 2*mu*w**2 + 2*mu + p**2*w**2 + p**2 + 1)/2",
+        "-p*w/2",
+        "-1/2"
+      ],
+      [
+        "w/2",
+        "-p*w/2",
+        "(p**2*w**2 + p**2 + 1)/2",
+        "p*w/2"
+      ],
+      [
+        "-p/2",
+        "-1/2",
+        "p*w/2",
+        "1/2"
+      ]
+    ]
+  },
+  "endpoint_feature_count_per_Bob_chart": 10,
+  "U1_variant": "ell=U=1, optimized published-local669 option; tau=2^-25",
+  "U1_rational_constants": {
+    "U": "1",
+    "M": "96",
+    "tau": "1/33554432",
+    "B": "169924615",
+    "k": "1/1530544865590149990318080",
+    "K": "27648",
+    "epsilon": "1/2115825222191823346615713792050",
+    "N": "28079201156716575305871002362211329",
+    "h": "1/36733076774163599767633920",
+    "Bstar": "28079201156716575305871002362211330",
+    "n": "532319710956353609621260783641957718701349826622614948476983705600",
+    "chart_count_bound": "108811881474299847619851927168358740411264787251803956497672336059723494905101387183093182340493223773794471675835279335041003841126401",
+    "feature_count_bound_using_669_plus_annulus_plus_endpoint": "7072772295829490095290375265943318126732211171367257172348701843882027168831590166901056852132059545296640658929293156777665249673216754"
+  },
+  "verification_limit": "The accompanying analytical proof establishes inequalities. Bounded-R inner admission is retained for general ell; local669 suffices for the optimized ell>=1 option."
+}

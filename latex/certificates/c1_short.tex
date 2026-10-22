@@ -141,10 +141,10 @@ certificate with one full-state completion on the inverse-Alice chart
 and the adjacent-event bound for the remaining Bob angles.
 For unit $L$, infinitesimal and unit $\eta$ are covered in
 Sections~\ref{component:p080aa62de16d} and~\ref{component:p686209b87229}.
-Unbounded $\eta$ has $z$ a positive unit and uses
-Theorem~\ref{thm:c1-unification-bounded-z-all-H}; its complementary
-testing cases remain in Sections~\ref{component:pb0d9d28d0849}
-and~\ref{component:pda4a21937f64}.
+For unbounded $\eta$, Theorem~\ref{thm:c1-unit-L-all-tests}
+covers every testing angle. Its proof controls the state matrix away
+from the double infinitesimal corner and uses
+Theorem~\ref{thm:c1-unification-bounded-z-all-H} at that corner.
 
 When $L$ is infinitesimal, unbounded $\eta$ gives
 \[
@@ -7986,311 +7986,136 @@ nonzero homogeneous states have the additional pure-testing state
 norm factor. This proves the stated full C14.1 domain.
 \end{proof}
 
-\subsection{Unit $L$: noninfinitesimal Alice tests}
-
+\subsection{Unit \texorpdfstring{$L$}{L} and unbounded \texorpdfstring{$\eta$}{eta}: all testing angles}
 \label{component:pb0d9d28d0849}
-
-\label{pb0d9d28d0849:sec:r18-c142-remote}
-
-\begin{proposition}
-Keep the unchanged physical C14.2 source: $d=1$, $x>0$
-infinitesimal, $L=x\zeta$ a positive bounded unit, $\eta$ unbounded,
-all original strict gaps, nonnegative event weights, total-scale and
-earlier-exclusion intersections.  Then the complete original parent
-is finite tensor SOS for every noninfinitesimal Alice angle $u$,
-including $u=\infty$, every independent Bob angle, and all real or
-complex states.  Literal $D=0$ and $\beta=0$ are retained.  Thus
-only infinitesimal or zero $u$, with arbitrary Bob type, remains in
-C14.2.  No entire-source certificate is asserted.
-\end{proposition}
-
-\paragraph{Opening-safe source input.}
-Use the source estimates in
-Section~\ref{sec:c1-unification-bounded-z-all-H}, including
-the exact positive source inequality~\eqref{eq:c1-unification-e-bound}
-and its sphere and opening-cleared products.
-Put $e_r=1-r$, $Q=1-Lr>0$ and define positive pure-source weights
-\[
- C_0=\frac1{2Le_r},\qquad
- A_0=\frac{1+Le_r}{2Lr},\qquad
- a_0=\frac L{2Q}.
-                                                               \tag{LA1}
-\]
-Their actual-weight ratios satisfy
-$C/C_0,A/A_0,\alpha/a_0\sim1$ uniformly through $r$, $e_r$,
-and $Q$ openings.  Each leading and actual weight has a positive
-real lower bound, since $L$ is a positive bounded unit and
-$0<r,e_r,Q<1$.  No upper bound for the individual weights is assumed.
-The BE source sphere and both its endpoints remain unchanged; no
-coefficient $D$, $\beta$, $d_0$ or $b_0$ is divided by.
-
-\paragraph{The reciprocal Bob strip with a unit Alice angle.}
-Let $u$ be a bounded nonzero unit and $w=1/v$ infinitesimal or zero.
-Use four legal raw roots
-\[
- P=uW,\quad X,\quad Y,\quad T=wZ,
- \qquad U=u^2,\quad D_u=1+U,\quad D_w=1+w^2.
-\]
-The original signed core is given in Section~\ref{component:p89fd3edb3edd}.
-Written in these roots it has the exact split
-\[
- K_w=K_0+w^2\{(P-Y)^2+X^2\}
-                      +2uwX(T+P-Y),                         \tag{LA2}
-\]
-\[
- K_0=D_uX^2+D_uY^2+UT^2-2UTY-2PT.
-\]
-This is the complete core, including its sign; no state graph is used.
-The selected positive events are
-$CD_w(P-Y)^2$, $AD_uD_wY^2$, and
-$\alpha D_u(Y-T)^2$ in the quarter-parent.  The whole original
-$m,D,\beta$ terms are retained separately.
-
-Direct expansion using LA1 gives the following exact identity for
-the leading selected form at $w=0$:
-\[
-\begin{split}
- Q_0={}&C_0(P-Y)^2+A_0D_uY^2+a_0D_u(Y-T)^2+K_0/2\\
- ={}&\frac{D_u}{2}X^2
-       +C_0\{P-Y-Le_rT\}^2
-       +(A_0+a_0+1/2)\{Y-LrT\}^2\\
- &+U\{A_0Y^2+(a_0+1/2)(Y-T)^2\}.
-\end{split}                                                   \tag{LA3}
-\]
-Every displayed coefficient is nonnegative pure source or a positive
-pure-testing factor.  The source coefficients in LA3 can be clipped
-at positive real lower bounds, retaining their exact positive square
-excesses.  The resulting bounded Gram on $(P,X,Y,T)$ has strictly
-positive residue: $X$ is controlled directly, the two $U$ terms
-control $Y,T$ because $u$ is a unit, and the first contact square
-then controls $P$.  The coefficients $Le_r,Lr$ in these roots are
-bounded pure source, including all original openings.
-
-\paragraph{Exact common-factor accounting for the actual weights.}
-To transfer LA3 to the actual parent, define solely in the source field
-\[
- \delta=|C/C_0-1|+|A/A_0-1|+|\alpha/a_0-1|,
- \qquad f=1-\delta.
-\]
-Then $\delta$ is nonnegative infinitesimal, $f>0$ is a unit,
-and each of $C-fC_0$, $A-fA_0$, $\alpha-fa_0$ is nonnegative.
-Retain their original event terms as exact squares.  The complete
-remaining selected polynomial is, identically,
-\[
-\begin{split}
- S={}&f\{C_0D_w(P-Y)^2+A_0D_uD_wY^2
-                          +a_0D_u(Y-T)^2\}+K_w/2\\
-  ={}&fQ_0+fw^2\{C_0(P-Y)^2+A_0D_uY^2\}\\
-    &+(1-f)K_0/2+(K_w-K_0)/2.
-\end{split} \tag{LA4}
-\]
-The second line's $w^2$ terms are retained positive squares with
-their complete actual source scales.  The third line, including the
-signed $(1-f)K_0/2$ term, is a bounded infinitesimal Gram on the
-four raw roots, by LA2 and $1-f=\delta\in\operatorname{Inf}$.
-Clip the completed source-square coefficients of $fQ_0$ at positive
-real lower bounds as above.  Its retained bounded Gram remains
-strict under this entire infinitesimal perturbation.  The separated
-bounded-Gram lemma gives tensor SOS; restoring all square excesses
-proves the whole original parent.  This is exact polynomial
-accounting in the tensor ring, not an inequality that orders mixed
-source and testing quantities.
-
-\paragraph{The other Bob types and the unbounded Alice endpoint.}
-If $u$ is a bounded nonzero unit and $v$ is a bounded nonzero unit,
-use the common noncommuting-residue theorem on the unchanged
-physical parent.  If $u$ is a bounded nonzero unit and $v$ is
-infinitesimal or zero, clip the original $C,A,\alpha$ at positive
-real lower bounds $c_*,a_*,a'_*$ and retain every excess and the
-whole original $m,D,\beta$ terms.  The complete selected residue is
-\[
- (c_*+1/2)(uW-Y)^2+a_*D_uY^2
-          +a'_*D_uZ^2+\tfrac12(X+uZ)^2\succ0.     \tag{LA5}
-\]
-It is strict on all four original states when $u$ is a unit; every
-finite-angle correction has bounded infinitesimal coefficients.
-This covers all bounded Bob types without invoking LA4 outside its
-stated reciprocal strip.
-
-For $u$ unbounded, put $p=1/u$ and use the original homogeneous
-parent.  The exact CE4--CE5 raw-frame proof, with any positive real
-caps for $C,A$, covers every bounded $v$.  Its strict selected
-residue is
-\[
- 4c_*(1+v^2)W^2+4a_*(1+v^2)Y^2
-                      +2(W+R)^2+2(B-vY)^2,
- \quad B=pX+Z,\quad R=vX.                         \tag{LA6}
-\]
-For unbounded $v$, the exact twice-homogeneous CE7--CE8 proof has
-strict residue
-\[
- 4c_*W^2+4a_*Y^2+2X^2+2(T-Y)^2,
- \qquad T=wZ.                                    \tag{LA7}
-\]
-These two homogeneous proofs need only positive real lower bounds
-for $C,A$ at these endpoints.  They do not use the stronger
-``$C,A$ unbounded'' hypothesis needed for the finite-unit-angle part
-of the adjacent-event theorem.  All unselected original terms and
-positive excesses are retained exactly.  Literal $p=0$ and $w=0$
-are the polynomial values of these original homogeneous parents.
-
-The finite unit-Alice and homogeneous unbounded-Alice cases exhaust
-all noninfinitesimal $u$.  Exact sign gauges and real/imaginary splitting
-give both signs and complex states.  The possible additional $D=0$
-null direction at $u=w=0$ is untouched, since the proposition does
-not include the infinitesimal-Alice chart.  The sole remaining C14.2
-testing obligation is now $u$ infinitesimal or zero, with arbitrary
-Bob types and the unchanged full source intersection.
-
-
-
-% Source formulas: pda4a21937f64
-\subsection{Unit $L$: bounded Bob tests}
-
 \label{component:pda4a21937f64}
 
-\label{pda4a21937f64:sec:r18-c142-bounded-bob}
-
-\begin{proposition}
-Retain the unchanged full C14.2 source and every original intersection
-as in the preceding noninfinitesimal-Alice proposition.  For every
-infinitesimal or zero Alice test $u$ and every bounded Bob test $v$,
-the entire original parent is finite tensor SOS for all real or
-complex states.  Every source opening and both $D=0$, $\beta=0$
-are included.  Together with that proposition this leaves exactly
-$u$ infinitesimal and $v$ projectively unbounded, equivalently
-$u,w=1/v$ infinitesimal, as the remaining C14.2 testing corner.
-\end{proposition}
-
-\paragraph{The same source weights and a pure-source strict matrix.}
-Keep the opening-safe positive source weights from LA1,
+\begin{theorem}\label{thm:c1-unit-L-all-tests}
+Consider the C1 source (P1), with $d=1$, $x,\sigma=1/\eta$ positive
+infinitesimal and $L=x\zeta$ a positive bounded unit. Assume the
+strict gaps $E,M,J>0$, $0<b,h,r<1$ and $D,\beta\ge0$. The complete parent
+is a tensor sum of squares at every independent projective angle pair
+and every real or complex state, including either permitted face
+$D=0$ or $\beta=0$.
+\end{theorem}
+\begin{proof}
+The source formulas (P1) and opening-safe estimates (BE3)--(BE9) give
 \[
+ C/C_0,A/A_0,\alpha/a_0\sim1,\qquad
  C_0=\frac1{2L(1-r)},\quad
  A_0=\frac{1+L(1-r)}{2Lr},\quad
  a_0=\frac L{2(1-Lr)}.
 \]
-Let $c=(1+v^2)^{-1/2}$, $s=vc$, so $c^2+s^2=1$.
-Since $v$ is bounded, $c$ is a positive testing unit.  Write
-$s_0=\operatorname{res}s\in(-1,1)$ and $c_0^2=1-s_0^2>0$.
-These are real numbers, not source/testing comparisons.  Consider
-the pure-source quadratic form in three placeholder variables
+Choose real $0<\ell\le L\le U$ and a real
+$0<\mu\le\min(1/4,C,A)$. Such a $\mu$ exists uniformly through
+the source openings because $C_0,A_0\ge1/(2U)$.
+
+First let $u$ be bounded. Put
+$c=(1+v^2)^{-1/2}$, $s=vc$, $P=uW$, $T=cZ$.
+The projective Bob endpoint has $c=0$, $s=\pm1$ and $w=0$.
+When $u,c$ are both infinitesimal, $w=1/v$ is infinitesimal and
+Theorem~\ref{thm:c1-unification-bounded-z-all-H} applies, since
+$z=1/L$ is bounded. This includes the literal corner.
+Otherwise put $(u_0,c_0,s_0)=\operatorname{res}(u,c,s)$ and choose
+real $M_*\ge1$, $\tau>0$ with $|u_0|\le M_*$ and
+$u_0^2+c_0^2\ge\tau^2$. The next reserve calculation is evaluated
+at $(u,c,s)=(u_0,c_0,s_0)$: every determinant, inverse and matrix
+inequality is then taken in the ordered source field $K_c$.
+
+The leading selected quarter-parent in the four raw roots $(P,X,Y,T)$ is
 \[
- M_0(P,Y,T)=
-  (C_0+c_0^2/2)(P-Y)^2+(A_0+s_0^2/2)Y^2
-          +a_0(s_0Y-T)^2-s_0PT.                    \tag{LB1}
+ S_0=C_0(P-Y)^2+A_0(1+u^2)Y^2
+                   +a_0(1+u^2)(sY-T)^2+K_B/2,
 \]
-Its Gram has first leading minor $C_1=C_0+c_0^2/2>0$,
-second leading minor $C_1[A_0+s_0^2(a_0+1/2)]>0$, and
 \[
- \det M_0=
- \frac{c_0^2\{1+L(1-r)\}^2}
-                {8Lr(1-r)(1-Lr)}>0.               \tag{LB2}
+ K_B=X^2+c^2(P-Y)^2+s^2Y^2-2sPT
+ +2ucX(sP-sY+T)+u^2s^2X^2+u^2(sY-T)^2.
 \]
-This is an exact source identity, not just a limiting determinant.
-Moreover $M_0^{-1}$ has bounded entries through every opening.
-Indeed every cofactor is a sum of bounded multiples of
-$C_0A_0,C_0a_0,A_0a_0,C_0,A_0,a_0,1$; terms involving a square
-of a single divergent weight cancel.  Multiplication by
-$8L^2r(1-r)(1-Lr)$ makes every cofactor polynomial in bounded
-$L,r,s_0$.  Division by LB2 therefore leaves only the source-unit
-denominators $L$, $c_0^2$, and $1+L(1-r)$.
-Explicitly, with $e=1-r$ and $B_L=1+Le$,
+Its $T=0$ block is strictly positive. Its determinant is
 \[
- M_0^{-1}=\frac1{c_0^2B_L}
- \begin{pmatrix}
- 2L&2Lr&2s_0\\
- 2Lr&2Lr(1-s_0^2e)&2s_0r(1+Le c_0^2)\\
- 2s_0&2s_0r(1+Le c_0^2)&
-       2(1-Lr c_0^2)(1+Le c_0^2)/L
- \end{pmatrix}.                                      \tag{LB2a}
+ \det G_0=\frac{(1+u^2)^2(Lc^2+u^2s^2)
+                 \{1+L(1-r)\}^2}{16L^2r(1-r)(1-Lr)}>0.
 \]
-
-Choose any exact positive pure-source congruence
-$M_0=N_1^2+N_2^2+N_3^2$.  Its inverse allocation of $P,Y,T$
-on these three roots is bounded: each inverse-row norm squared is
-the corresponding diagonal of $M_0^{-1}$.  This uses only a
-pure-source Gram, with the fixed real number $s_0$ as parameter;
-no mixed matrix is inverted or square-rooted.
-
-\paragraph{Freeze the only divergent Bob-dependent event exactly.}
-Use the legal raw roots
+All source-opening denominators cancel from the cofactor ratio:
 \[
- P=uW,\quad X,\quad Y,\quad
- T=cZ-(s-s_0)Y,
- \qquad d_s=s-s_0\in\operatorname{Inf}_{\rm test}.
-                                                               \tag{LB3}
+ \operatorname{tr}G_0^{-1}
+ =\frac{2(L^2N_2+LN_1+N_0)}
+ {(1+t)\{Lq+t(1-q)\}\{1+L(1-r)\}},\quad t=u^2,\ q=c^2,
 \]
-In particular the entire alpha event satisfies
-$sY-cZ=s_0Y-T$ exactly.  Thus no product of an unbounded alpha
-weight with $d_s$ is ever estimated.  No inverse of $c$, $u$, or
-a state coordinate is needed in these root definitions.
+where, writing $e_r=1-r$,
+\begin{align*}
+ N_2&=1+r^2+e_rq\{1+r(1-q)\}+e_r(2-qr)t+e_r^2(1-q)t^2,\\
+ N_1&=2e_rq+\{2-rq(3-q)\}t+e_r(1-q)t^2,\qquad
+ N_0=1+(2-q)t.
+\end{align*}
+The numerator is bounded by a real constant depending only on $U,M_*$.
+Moreover $(1+t)\{Lq+t(1-q)\}\ge\min(\ell,1)(q+t)$.
+Thus $G_0\succeq\kappa I$ for some real $\kappa>0$, uniformly
+through every source opening.
 
-Let $B_0=c_0^2(P-Y)^2+s_0^2Y^2-2s_0PT$.
-The complete original half-core after Bob normalization is
-$K_B/2$, where
+Set $d_s=|C/C_0-1|+|A/A_0-1|+|\alpha/a_0-1|$ and $f=1-d_s$.
+The selected form is the sum of $fS_0+(1-f)K_B/2$ and the
+nonnegative event terms with coefficients
+$C-fC_0,A-fA_0,\alpha-fa_0$.
+The core at the real center has bounded coefficients, whereas $d_s$
+is source infinitesimal. This decomposition gives a positive real
+lower bound for the selected Gram with the original $C,A,\alpha$.
+
+Use the moving event coordinates $e=(P-Y,Y,sY-T,X)$.
+Both coordinate maps have squared Frobenius norm at most six.
+Clip $C,A,\alpha$ at a sufficiently large real $N$, retaining each
+excess as its whole original event. In these coordinates the core
+has norm at most a real $K$, independently of source openings.
+If the unmodified Gram has reserve $k>0$, its complementary block
+remains at least $k$, its clipped large block is at least $N-K$,
+and the off-diagonal norm is at most $K$. Taking
+$N>K+2K^2/k+1$ preserves a positive real reserve, by
+$2Kab\le(2K^2/k)a^2+(k/2)b^2$.
+
+The clipped coefficients are bounded source elements. Keep the root
+column $e(u,c,s)$ unchanged and replace only its coefficient matrix
+by its value at $(u_0,c_0,s_0)$. The difference belongs to
+$\operatorname{Sym}_4(B_c\otimes\mathfrak m_t)$, where
+$\mathfrak m_t$ denotes the testing infinitesimals. The source
+matrix at the center is bounded and has positive-definite real
+residue by the preceding estimate.
+The separated bounded-Gram lemma applies. Restore all clipped
+excesses and the complete original $m,D,\beta$ terms.
+
+It remains to treat unbounded $u$. Put $p=1/u$ and use two Bob charts.
+For $|v|\le1$ take $(W,Y,B,R)$ with $B=pX+Z$, $R=vX$; the exact core is
 \[
- K_B=\{c(P-Y)+usX-sZ\}^2
-       +(1+u^2)(sY-cZ)^2+(X+uZ)^2-(1+u^2)Z^2.
+ K_p=B^2-2pvBW-2vBY+(1+p^2)R^2+2(1+p^2)RW
+                         +(W-pY)^2+(1+p^2)v^2Y^2.
 \]
-It has the following exact, division-free allocation on LB3:
+Select only $C=A=\mu$. At $p=0$ the selected quarter-parent is
 \[
-\begin{split}
- K_B={}&X^2+B_0
-       +d_sP\{-(s+s_0)P+2s_0Y-2T\}\\
-       &+2ucX(sP-s_0Y+T)
-       +u^2s^2X^2+u^2(s_0Y-T)^2.
-\end{split} \tag{LB4}
+ \mu(1+v^2)(W^2+Y^2)+\tfrac12(W+R)^2
+                             +\tfrac12(B-vY)^2\succeq(\mu/3)I.
 \]
-This keeps the full signed core and all $u$-dependent hard normals.
-
-\paragraph{Exact actual-parent reassembly.}
-Use exactly LA4's pure-source factor
-$f=1-(|C/C_0-1|+|A/A_0-1|+|\alpha/a_0-1|)>0$.
-Retain the actual original event excesses
-$C-fC_0$, $A-fA_0$, $\alpha-fa_0$, and the whole $m,D,\beta$
-terms.  On the finite Bob chart the original quarter-parent divided
-by $1+v^2$ is then the sum of those positive terms and exactly
+For $|w|=|1/v|\le1$ use $(W,Y,X,H)$, $H=wZ$, and the exact core
+\begin{align*}
+ K_{pw}={}&H^2-2pHW+2pwHX-2HY+w^2W^2+2wWX-2pw^2WY\\
+ &+(1+p^2+p^2w^2)(X^2+Y^2)-2pwXY.
+\end{align*}
+The corresponding selected value at $p=0$ is
 \[
- S=f\{C_0(P-Y)^2+A_0(1+u^2)Y^2
-                         +a_0(1+u^2)(s_0Y-T)^2\}+K_B/2.
+ \mu(1+w^2)(W^2+Y^2)+\tfrac12(X+wW)^2
+                               +\tfrac12(H-Y)^2\succeq(\mu/3)I.
 \]
-Substitution of LB1 and LB4 gives
-\[
-\begin{split}
- S={}&fM_0+\tfrac12X^2
-       +fA_0u^2Y^2+fa_0u^2(s_0Y-T)^2\\
-    &+\tfrac12u^2s^2X^2+\tfrac12u^2(s_0Y-T)^2\\
-    &+\tfrac12(1-f)B_0
-       +\tfrac12d_sP\{-(s+s_0)P+2s_0Y-2T\}\\
-    &+ucX(sP-s_0Y+T).
-\end{split} \tag{LB5}
-\]
-The first two lines consist of a strict source-normalized Gram on
-$(N_1,N_2,N_3,X)$ and exact retained positive squares.  All terms
-in the last two lines have infinitesimal bounded coefficients on
-that same frame: $1-f$ is source infinitesimal, $d_s,u$ are testing
-infinitesimals, $c,s,s_0$ bounded, and LB2 supplies a bounded inverse
-allocation for all three raw roots.  Since $f\sim1$, the resulting
-complete Gram has residue $\operatorname{diag}(1,1,1,1/2)$.
-The separated bounded-Gram lemma and restoration of every retained
-term prove the full original parent.  The normalization factor
-$1+v^2$ is pure testing and positive.
+In each chart every remaining coefficient is bounded infinitesimal.
+The complete selected testing Gram is therefore positive definite
+and can be factored entirely in the testing field. Restore $C-\mu$,
+$A-\mu$ and all other original nonnegative event terms. The two
+charts cover every Bob angle, including their literal endpoints.
 
-Both coefficient-boundary terms were retained rather than capped
-or inverted.  The argument works literally at $u=0$ or $v=0$,
-allows signed testing angles, and extends to complex states by
-real/imaginary splitting.  It gives no claim for $c$ infinitesimal:
-there $c_0=0$, the determinant in LB2 vanishes, and the reciprocal
-two-small-angle corner remains a separate obligation.
+All normalizations are positive pure testing factors. The exact
+sign gauges are $u\mapsto-u$, $(Y,Z)\mapsto(-Y,-Z)$, and
+$v\mapsto-v$, $(X,Z)\mapsto(-X,-Z)$; they preserve the full parent.
+Real and imaginary splitting treats complex states. The event terms with coefficients $D$ and $\beta$ remain valid
+on their zero faces.
+\end{proof}
 
-The new focused checks establish LB2, opening-regular cofactors,
-the complete original-core identity LB4 and the entire selected-parent
-identity LB5.  They do not rerun prior source identities or assert
-the remaining C14.2 corner closed.
-
-
-
-% Source formulas: p98e371f5b846
 \section{Contact gaps when $L$ vanishes}
 Here the coefficient gaps, rather than $L$ alone, determine the remaining quadratic form. The gap $j$ first separates a strict block from its singular limit. The completed $J$ relation controls the remaining state normal when that block degenerates.
 
