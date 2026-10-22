@@ -129,3 +129,14 @@ The checker rebuilds the full-parent coefficient maps with exact fractions,
 verifies ranks 281, 221 and 180, all 2687 component free directions, and all
 682 equations of the final combined pencil. The corrected 17-page proof,
 matrix data, product maps and symbolic regeneration programs are included.
+
+
+`inverse-alice/` contains a seven-page completion of squares for every
+positive source ratio, with 51 fixed testing functions. The actual local
+source-cone pencil has total order 62 (19 blocks, 97 auxiliaries); its
+intersection with the inner-angle cone has order 731 (139 blocks, 2791
+auxiliaries). On the stated bounded-z source domain, the latter combines
+certificates for every Alice angle and `|w|<=2^-36`. The directory README
+gives the exact domains, matrix-entry convention and reproduction commands.
+Both pencils act on seven Bell-source coordinates. The full quantum-set
+pencil still requires the other source and Bob-angle regions.

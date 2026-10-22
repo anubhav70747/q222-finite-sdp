@@ -1,0 +1,482 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,mathtools}
+\usepackage[hidelinks]{hyperref}
+\allowdisplaybreaks[2]
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newcommand{\eps}{\varepsilon}
+\begin{document}
+\title{A fixed certificate for reciprocal Alice angles}
+\author{}\date{23 October 2026}\maketitle
+
+The source ratio can become large while the corresponding state quadratic
+remains positive. Two source-dependent rescalings reveal why: the remaining
+coupling vector has norm at most one. We use this contraction to complete
+the leading quadratic form, then control the three corrections in the full
+parent. The resulting testing functions are independent of the source.
+
+\paragraph{The source and the polynomial to be certified.}
+The source variables obey $x,\sigma,z>0$, $0<b,h<1$,
+$r=bz<1$. Set
+\begin{gather*}
+ Q=1-b,\quad \theta=1-h,\quad e=xh/\sigma,\quad E_s=1-e,
+ \quad K_s=1+x,\quad R_s=1+xr,\\
+ M=R_s-xz\theta,\quad J=1+xh-\sigma(1-r),\\
+ P_s=\sigma+K_s+\sigma z(1+bx+2xh)
+                   +\sigma bx^2hz^2+x^2h\theta z,\\
+ \pi=\frac{z(1+xh)E_s+(1-r)(1+xhz)}{2P_s},\qquad
+ \ell=\frac{(1+\sigma r)\{eR_s(1+\sigma z)+ME_s\}}{2P_s},\\
+ \kappa_s=\frac{K_s(1+\sigma r)(1+\sigma z)}{2MP_s}.
+\end{gather*}
+The strict gaps are $E_s,M,J>0$. The seven source coefficients,
+in the normalization $d=1$, are
+\begin{gather*}
+ m=\kappa_s x^2z\frac h\sigma,\qquad
+ C=\frac{K_s z(1+\sigma r)E_s}{2(1-r)P_s},\qquad
+ A=\frac\pi{bz},\qquad \alpha=\frac\ell{Qz},\\
+ D=\frac{K_s(1+\sigma z)(1+\sigma r)-JP_s}{2JP_s},\qquad
+ \beta=\frac{K_s(1+\sigma r)(1+xhz)-\theta P_s}{2\theta P_s}.
+\end{gather*}
+In particular $m>0$; the hypotheses also require $D,\beta\ge0$.
+
+For $D_p=1+p^2$, $D_w=1+w^2$, the complete inverse-Alice parent is
+\begin{equation}\label{eq:allz-explicit-parent}
+\begin{split}
+ \widehat F={}&4m(pW-pwX+Y-wZ)^2+4CD_w(W-pY)^2
+                         +4AD_pD_wY^2\\
+ &+(4D+2)(wW+X-pwY-pZ)^2
+        +(4\alpha+2)D_p(Y-wZ)^2\\
+ &+(4\beta+2)D_w(pX+Z)^2-2D_pD_wZ^2.
+\end{split}
+\end{equation}
+It equals $p^2F_w(1/p,w)$ for $p\ne0$. For unit states the physical
+slack is $\widehat F/(D_pD_w)$. The pure testing factor
+$\kappa_t=(D_pD_w)^{-1/2}$ therefore restores the physical normalization
+and remains regular at $p=0$.
+
+
+
+\begin{theorem}\label{thm:allz}
+Fix a real constant $P_*\ge1$ and set
+\[
+ \eta=2^{-30}P_*^{-2},\qquad
+ \delta=2^{-12}P_*^{-1},\qquad f=1-25\eta.
+\]
+Use the native source just defined, normalized by $d=1$. Suppose
+\begin{equation}\label{eq:domain}
+ 0<x,\sigma\le\frac\eta{1+z},\quad z>0,\quad
+ 0<b,h<1,\quad r=bz<1,\quad E_s,M,J>0,\quad D,\beta\ge0.
+\end{equation}
+There is no upper bound on $H=h/\sigma$. For the independent testing
+coordinates
+\[
+ p=1/u,\qquad 0\le p\le P_*,\quad 0\le w\le\delta,
+\]
+the complete inverse-Alice parent has a separated square identity in
+one fixed finite family of testing functions. This family depends on
+$P_*$ and $\delta$, and is independent of $z$ or any upper bound for
+$z$. The construction uses $51$ testing functions. The identity
+includes every state vector and the literal testing face $p=0$.
+Neither $D$ nor $\beta$ is inverted, so their permitted zero faces
+are included.
+\end{theorem}
+
+The testing statement applies to the projectively normalized parent
+$p^2F(1/p,w)$, continued polynomially at $p=0$. Negative angle signs
+are handled by the fixed gauges
+$(u,Y,Z)\mapsto(-u,-Y,-Z)$ and
+$(w,X,Z)\mapsto(-w,-X,-Z)$. Complex states are separated into real
+and imaginary parts. No restriction on a ratio of state coordinates
+is imposed.
+
+\paragraph{Source estimates.}
+Define
+\begin{gather*}
+ H_0=1+zQ,\qquad B_s=P_s+xz(J-\sigma),\\
+ \mathcal H=R_sH_0+z\{(1-r)xh(2+xr)
+                  -e[2+x(1+h+r\theta)]+K_s e^2\}.
+\end{gather*}
+The exact native identities are
+\begin{equation}\label{eq:BE}
+ 2\theta P_s\beta=hB_s-\sigma H_0,\qquad
+ 2P_s(JD+x\theta\beta)=\sigma^2\mathcal H.
+\end{equation}
+Define the leading weights
+\begin{equation}\label{eq:leadingweights}
+ C_0=\frac{z}{2(1-r)},\qquad
+ A_0=\frac{H_0}{2bz},\qquad
+ \alpha_0=\frac1{2Qz}.
+\end{equation}
+The native coefficients give the exact ratios
+\begin{align}
+ \frac C{C_0}&=\frac{K_s(1+\sigma r)(1-e)}{P_s},\label{eq:ratioC}\\
+ \frac A{A_0}&=
+ \frac{z(1+xh)(1-e)+(1-r)(1+xhz)}{P_sH_0},\label{eq:ratioA}\\
+ \frac\alpha{\alpha_0}&=
+ \frac{(1+\sigma r)\{eR_s(1+\sigma z)+M(1-e)\}}{P_s}.
+ \label{eq:ratioalpha}
+\end{align}
+
+To control all three ratios together, bound the weighted source openings.
+Put $T=1+z$. From \eqref{eq:domain}, $Tx,T\sigma\le\eta$.
+Using $bz<1$ in the $\sigma bx^2hz^2$ term shows
+\[
+ 1\le P_s\le1+4\eta,\quad |M-1|\le\eta,\quad
+ J-\sigma>0,\quad 1\le B_s\le1+6\eta.
+\]
+Initially $e<1$. Dropping the negative term in $\mathcal H$ yields
+$\mathcal H\le4T$. From \eqref{eq:BE} one obtains the exact identity
+\[
+ eB_s=xH_0+\sigma\mathcal H-2P_sJD/\sigma,
+\]
+so $e\le Tx+4T\sigma\le5\eta$, uniformly in $H$. The first ratio lies between
+$(1-5\eta)/(1+4\eta)\ge1-9\eta$ and
+$(1+\eta)^2\le1+3\eta$.
+The numerator of the second ratio lies between
+$H_0(1-e)$ and $H_0+2xhz\le H_0(1+2\eta)$, since $H_0\ge z$.
+It has the same lower bound $1-9\eta$ and upper bound $1+2\eta$.
+For the third ratio the expression in braces is a convex combination
+of $M$ and $R_s(1+\sigma z)$; they lie between $1-\eta$ and
+$1+3\eta$. Consequently
+\begin{equation}\label{eq:ratioest}
+ \left|C/C_0-1\right|\le10\eta,\quad
+ \left|A/A_0-1\right|\le10\eta,\quad
+ \left|\alpha/\alpha_0-1\right|\le5\eta.
+\end{equation}
+Thus $C-fC_0$, $A-fA_0$, and $\alpha-f\alpha_0$ are nonnegative.
+The same fraction $f$ of each leading weight can therefore be retained.
+
+\paragraph{The exact leading completion.}
+Set $q=\sqrt z>0$ and introduce the full-state forms
+\[
+ E=qW,\quad F=Y/q,\quad G=wZ/q,\quad
+ R=X+wW,\quad S=pX.
+\]
+The complete core is
+\begin{equation}\label{eq:core}
+ K=R^2+(1+w^2)S^2+z(G-F)^2
+    +p^2(1+w^2)zF^2
+    -2pE(G+w^2F)+2qwS(G-F).
+\end{equation}
+Write
+\[
+ K_0=R^2+S^2+z(G-F)^2+p^2zF^2-2pEG.
+\]
+Taking the three weights \eqref{eq:leadingweights} at $w=0$ gives
+\begin{align*}
+ Q_0={}&2K_0+\frac{4C_0}{z}(E-pzF)^2
+          +4A_0z(1+p^2)F^2
+          +4\alpha_0z(1+p^2)(F-G)^2.
+\end{align*}
+Define
+\begin{gather*}
+ J_0=F-bG,\quad B=\frac{H_0}{bQ},\quad
+ J_* =\sqrt B\,J_0,\quad G_* =\sqrt{H_0}\,G,\\
+ a=\frac z{\sqrt B},\qquad c=\frac1{\sqrt{H_0}},\qquad
+ L=aJ_*+cG_*=zJ_0+G.
+\end{gather*}
+Direct completion of $E$ gives the exact identity
+\begin{equation}\label{eq:leadingidentity}
+ Q_0=2R^2+2S^2+\frac2{1-r}(E-pL)^2
+              +2(1+p^2)J_*^2+2G_*^2.
+\end{equation}
+Indeed the $p^2$ remainder after completing $E$ is
+$(z+1/Q)(F-bG)^2/b$, and the constant remainder diagonalizes in
+$(J_0,G)$. The bounded source coefficients satisfy
+\begin{equation}\label{eq:ac}
+ a^2+c^2=\frac{bQz^2+1}{H_0}\le1,
+ \qquad H_0-1-bQz^2=zQ(1-r)\ge0.
+\end{equation}
+This is the reason that a large value of $z$ causes no loss after the
+source-only normalization.
+
+Put $t=p/P_*\in[0,1]$, $\bar E=E/P_*$, and
+$y=(\bar E,J_*,G_*,R,S)$. Let
+\[
+ B_0=2R^2+2S^2+2(\bar E-tL)^2
+                         +2(1+t^2)J_*^2+2G_*^2.
+\]
+The leading excess is exactly
+\begin{equation}\label{eq:leadingexcess}
+ Q_0-B_0=2\left(\frac{P_*^2}{1-r}-1\right)(\bar E-tL)^2
+                   +2(P_*^2-1)t^2J_*^2.
+\end{equation}
+It is nonnegative. More specifically, the following square identity
+proves $B_0\succeq I_5/2$ on the independent forms $y$:
+\begin{align}\label{eq:strictbaseline}
+ B_0-\tfrac12\|y\|^2={}&
+ \tfrac32(R^2+S^2)+\tfrac32(\bar E-\tfrac43tL)^2
+ +\tfrac32J_*^2+\tfrac56G_*^2\nonumber\\
+ &+\tfrac23(1-t^2)G_*^2+\tfrac43t^2J_*^2\nonumber\\
+ &+\tfrac23t^2\{(1-a^2-c^2)(J_*^2+G_*^2)
+                            +(cJ_*-aG_*)^2\}.
+\end{align}
+Every coefficient or radical in this identity belongs entirely to
+the source field or entirely to the testing field.
+
+\paragraph{The full retained-square identity.}
+Let $\widehat F=p^2F(1/p,w)$ be the projectively normalized parent.
+Besides the core $2K$, its three selected events are
+\[
+ \frac{4C}{z}(1+w^2)(E-pzF)^2,\qquad
+ 4Az(1+p^2)(1+w^2)F^2,\qquad
+ 4\alpha z(1+p^2)(F-G)^2.
+\]
+All remaining events are retained literally:
+\begin{align*}
+ \mathcal X={}&4m(pW-pwX+Y-wZ)^2
+ +4D(wW+X-pwY-pZ)^2\\
+ &+4\beta(1+w^2)(pX+Z)^2\\
+ &+\frac{4(C-fC_0)}z(1+w^2)(E-pzF)^2\\
+ &+4(A-fA_0)z(1+p^2)(1+w^2)F^2\\
+ &+4(\alpha-f\alpha_0)z(1+p^2)(F-G)^2.
+\end{align*}
+They have nonnegative source weights. Define the further retained sum
+\begin{align*}
+ \mathcal P={}&2(1-f)\{R^2+S^2+z(G-F)^2+p^2zF^2\}\\
+ &+2w^2S^2+2p^2w^2zF^2\\
+ &+\frac{4fC_0}z w^2(E-pzF)^2
+                      +4fA_0z(1+p^2)w^2F^2.
+\end{align*}
+Then the complete parent, with no omitted state terms, is
+\begin{equation}\label{eq:whole}
+ \widehat F=fQ_0+\mathcal E+\mathcal P+\mathcal X,
+\end{equation}
+where the only correction is
+\begin{equation}\label{eq:error}
+ \mathcal E=-4(1-f)pEG-4pw^2EJ_0-4pbw^2EG
+                              -4qwSJ_0+4qQwSG.
+\end{equation}
+This follows from \eqref{eq:core}; its difference from $K_0$ includes
+the positive term $p^2w^2zF^2$, which has been retained in
+$\mathcal P$.
+
+\paragraph{Explicit source Gram assignments.}
+In the ordering $y=(\bar E,J_*,G_*,R,S)$ write
+\[
+ \mathcal E=y^{\mathsf T}(tC_1+tw^2C_2+wC_3)y.
+\]
+Only the following upper-triangular entries are nonzero; the lower
+triangles are obtained by symmetry:
+\begin{align*}
+ &(C_1)_{13}=-2(1-f)P_*^2/\sqrt{H_0},\\
+ &(C_2)_{12}=-2P_*^2/\sqrt B,\qquad
+   (C_2)_{13}=-2bP_*^2/\sqrt{H_0},\\
+ &(C_3)_{25}=-2q/\sqrt B,\qquad
+   (C_3)_{35}=2qQ/\sqrt{H_0}.
+\end{align*}
+The row norms are at most $50\eta P_*^2,4P_*^2,4$, respectively.
+For the last bound use
+\[
+ q^2/B=rQ/H_0\le1,\qquad q^2Q^2/H_0=zQ^2/H_0\le1.
+\]
+The first two use $H_0\ge1$ and $B\ge1$.
+Set
+\begin{gather*}
+ T_1=C_1,\quad T_2=\delta^2C_2,\quad T_3=\delta C_3,\\
+ M_1=50\eta P_*^2,\quad M_2=4P_*^2\delta^2,\quad
+ M_3=4\delta,\quad \rho=M_1+M_2+M_3.
+\end{gather*}
+Then
+\[
+ \rho\le50\cdot2^{-30}+4\cdot2^{-24}+4\cdot2^{-12}<1/512,
+ \qquad f/2-\rho>1/4.
+\]
+All six source matrices $(M_iI_5\pm T_i)/2$ are positive
+semidefinite. With pure testing monomials
+\[
+ m_1=t,\quad m_2=t(w/\delta)^2,\quad m_3=w/\delta,
+\]
+one has the exact identity
+\begin{equation}\label{eq:pairs}
+ \rho\|y\|^2+\mathcal E
+ =\sum_{i=1}^3\left\{
+ (1+m_i)y^{\mathsf T}\frac{M_iI_5+T_i}2y
+ +(1-m_i)y^{\mathsf T}\frac{M_iI_5-T_i}2y\right\}.
+\end{equation}
+Also
+\[
+ fQ_0-\rho\|y\|^2
+ =f(Q_0-B_0)+f(B_0-\tfrac12\|y\|^2)
+                     +(f/2-\rho)\|y\|^2.
+\]
+Equations \eqref{eq:leadingexcess}, \eqref{eq:strictbaseline}, and
+\eqref{eq:pairs}, together with $\mathcal P+\mathcal X$, specify all
+positive source Gram blocks of the complete parent.
+
+\paragraph{An explicit list of 51 testing functions.}
+Fix $P_*\ge1$, put $t=p/P_*$, and write
+\[
+ \phi=(X,Y,W,wW,wZ,pX)^T,\qquad
+ y_1=t,\quad y_2=t(w/\delta)^2,\quad y_3=w/\delta.
+\]
+Take the $42$ labelled functions consisting of every entry of $\phi$
+multiplied by one of
+\[
+ 1,\quad\sqrt{1+y_1},\sqrt{1-y_1},\quad
+ \sqrt{1+y_2},\sqrt{1-y_2},\quad
+ \sqrt{1+y_3},\sqrt{1-y_3},
+\]
+and the nine further functions
+\[
+ pwZ,\ pY,\ pwY,\ wY,\ pwX,\ pW,\ pZ,\ Z,
+                         \quad wZ\sqrt{1-t^2}.
+\]
+All radicands are nonnegative on $0\le p\le P_*$,
+$0\le w\le\delta$. This list is independent of all source variables.
+For the physical slack multiply its entries by $\kappa_t$.
+For signed angles compose the list with the fixed angle-sign and
+state-sign gauges. No state-coordinate inverse or sign-dependent
+source factor occurs.
+
+\paragraph{Polynomial weighted blocks.}
+Here is the complete smaller weighted representation. A row
+$(v,g,H)$ means $g\,v^THv$. Write $[v]=vv^T$, and put
+\begin{gather*}
+ t_B=\sqrt B,\quad t_H=\sqrt{H_0},\quad
+ \ell_J=(t_B/q,-bt_B/q)^T,\quad \ell_G=(0,t_H/q)^T,\\
+ h_s=\frac1{P_*}(q,-sz/q,-s(1-r)/q)^T\quad(s=1,4/3),\\
+ \nu=1-a^2-c^2=\frac{Qz(1-r)}{H_0},\qquad \psi=(Y,wZ)^T.
+\end{gather*}
+Define source matrices
+\begin{align*}
+ G_{RS}&=(2-f/2)I_2,\\
+ G_{EL}&=\tfrac32f[h_{4/3}]
+               +2f\left(\frac{P_*^2}{1-r}-1\right)[h_1],\\
+ G_{JG}&=\tfrac32f[\ell_J]+\tfrac56f[\ell_G]
+                                      +2(1-f)[(1,-1)^T],\\
+ G_{pJG}&=f\left(2-\frac2{3P_*^2}\right)[\ell_J]
+       +\frac{2f}{3P_*^2}\{\nu([\ell_J]+[\ell_G])
+                                      +[c\ell_J-a\ell_G]\}
+       +2(1-f)[(1,0)^T].
+\end{align*}
+Their coefficients are nonnegative. In the order
+$(R,S,J_*,\bar E,G_*)=\mathsf L\phi$, the source matrix is
+\[
+ \mathsf L=\begin{pmatrix}
+ 1&0&0&1&0&0\\0&0&0&0&0&1\\
+ 0&t_B/q&0&0&-bt_B/q&0\\
+ 0&0&q/P_*&0&0&0\\0&0&0&0&t_H/q&0
+ \end{pmatrix}.
+\]
+Let $\Pi$ be the permutation with
+$\Pi y=(R,S,J_*,\bar E,G_*)^T$, and define
+$\widetilde T_i=\Pi T_i\Pi^{\mathsf T}$ from the three matrices
+in the theorem. Let $M_i$ be their stated row-sum bounds.
+Thus the seven main rows are
+\[
+ \left(\phi,1,\mathsf L^T(f/2-\rho)I_5\mathsf L\right),\qquad
+ \left(\phi,1\pm y_i,
+              \mathsf L^T\frac{M_iI_5\pm\widetilde T_i}{2}\mathsf L\right),
+ \quad i=1,2,3.
+\]
+The other twelve rows are
+\[
+\begin{array}{c|c|c}
+ v&g&H\\\hline
+ (X+wW,pX)^T&1&G_{RS}\\
+ (W,pY,pwZ)^T&1&G_{EL}\\
+ \psi&1&G_{JG}\\
+ wZ&1-t^2&2ft_H^2/(3q^2)\\
+ \psi&p^2&G_{pJG}\\
+ (pwX,pwY)^T&1&2I_2\\
+ (W-pY,w(W-pY))^T&1&4\operatorname{diag}(C-fC_0,C)\\
+ (Y,wY)^T&D_p&4\operatorname{diag}(A-fA_0,A)\\
+ pW-pwX+Y-wZ&1&4m\\
+ wW+X-pwY-pZ&1&4D\\
+ pX+Z&D_w&4\beta\\
+ Y-wZ&D_p&4(\alpha-f\alpha_0)
+\end{array}
+\]
+Their sum is exactly \eqref{eq:allz-explicit-parent}. There are
+$19$ blocks, of total order
+\[
+ 7\cdot6+(2+3+2+1+2)+2+2+2+4=62,
+\]
+with maximum order six. All matrix entries are source-only. They
+are explicit sums or congruences of nonnegative source rank-one
+matrices, diagonal matrices, or the proved row-sum matrices.
+The testing scalar multipliers are nonnegative polynomials.
+
+To recover the stated scalar list, factor each source Gram in the
+source field and split $D_p=1+p^2$, $D_w=1+w^2$, and $p^2$ into
+polynomial testing squares. Every resulting ungated root is a
+source-linear combination of the fourteen displayed monomials;
+the only remaining radicals are the six main gate roots and
+$\sqrt{1-t^2}$ multiplying $wZ$. Thus no additional testing function
+is introduced by any of the retained full events.
+
+
+
+\begin{corollary}[All Alice angles in the bounded chart]\label{cor:alice}
+Choose $P_*=2^{24}$. On the native source domain
+\[
+ 0<z\le1,\qquad 0<x,\sigma\le\frac{2^{-78}}{1+z},
+\]
+the union of this construction and the inner-angle certificate\footnote{\href{https://github.com/anubhav70747/q222-finite-sdp/tree/main/extracted-lifts/local-order669}{A fixed finite C1 testing family and an evaluated rational local pencil}, Theorem~1.} covers every projective Alice angle and
+$|w|\le2^{-36}$, for every state and arbitrary $H$.
+\end{corollary}
+\begin{proof}
+The present theorem covers $|u|\ge2^{-24}$, including infinity.
+For $|u|\le2^{-24}$, the positive-$\lambda$ inner testing
+condition $\sqrt{|u|},|w|\le2^{-12}$ holds. The nonpositive branch
+has the weaker requirement $|u|,|w|\le2^{-12}$. The present source
+box is contained in both inner source boxes. The cases meet at
+$|u|=2^{-24}$ and include $u=0$ literally.
+\end{proof}
+
+
+\paragraph{The rational affine pencil.}
+The weighted vectors in the table determine a finite semidefinite
+representation without retaining the nonlinear source formulas as constraints.
+Let $c=(d,m,C,A,D,\alpha,\beta)$, and let $G_b$ be unrestricted positive
+semidefinite matrices of the displayed orders. Define the certificate cone by
+\[
+ \widehat F_c=\sum_{b=1}^{19} g_b v_b^{\mathsf T}G_bv_b,
+ \qquad G_b\succeq0.
+\]
+The identity is an equality of polynomials in $p,w,W,X,Y,Z$.
+Every $v_b$ and $g_b$ is fixed once $P_*$ is chosen. Their rational
+coefficients make coefficient comparison a rational linear system
+\[
+ \mathcal A\,\gamma=\mathcal B\,c,
+\]
+where $\gamma$ lists the $176$ upper-triangular Gram entries.
+For $P_*=2^{24}$ there are $80$ coefficient equations of rank $79$.
+Eliminating the pivot entries leaves $97$ free entries $y$ and gives
+the rational pencil $L_{62}(c,y)$ of total order $62$.
+The accompanying \texttt{SOURCE\_PENCIL.coo.json} lists its $338$
+nonzero affine coefficients.
+
+The two directions of this representation follow from the same elimination.
+A feasible pencil reconstructs positive semidefinite $G_b$ satisfying every
+polynomial coefficient equation. Conversely, for any certificate, take its
+$97$ free Gram entries as $y$; the pivot equations reconstruct the remaining
+entries of those same matrices. Thus the pencil represents this weighted
+certificate cone exactly.
+
+Sharing $c$ with the inner-angle pencil gives the intersection
+\[
+ L_{731}(c,y,z)=\operatorname{diag}\bigl(L_{669}(c,y),L_{62}(c,z)\bigr).
+\]
+It has $139$ blocks and $2791$ auxiliary coordinates. Its source admission
+and testing coverage are precisely those of Corollary~\ref{cor:alice}.
+The file \texttt{ALL\_ALICE\_ORDER731.coo.json} gives all its entries.
+
+\paragraph{Remaining domains.}
+For $0<z\le R$ one sufficient admission box is
+$x,\sigma\le2^{-30}P_*^{-2}/(1+R)$; the testing family is unchanged
+as $R$ varies. Every germ with $x,\sigma$ infinitesimal and $z$
+bounded satisfies \eqref{eq:domain}. Thus this is one testing family
+for the inverse-Alice part of all those bounded-$z$ germs, without
+choosing a real upper bound for $z$ first. It also covers unbounded
+$z$ whenever $(1+z)x,(1+z)\sigma\le\eta$.
+It does not cover a native source with larger weighted openings,
+nor reciprocal Bob angles $|w|>\delta$. For $z>1$, the existing
+inner extension has an $R$-dependent testing interval; the present
+outer identity alone does not remove that separate inner issue.
+Literal zero openings excluded by the native formulas, such as $z=0$, are handled
+in their other source charts and are not obtained by division here.
+No full-$Q_{222}$ adequacy statement follows.
+\end{document}

@@ -135,11 +135,10 @@ For $k$ infinitesimal and $\zeta$ noninfinitesimal, put $L=x\zeta$.
 When $L$ is unbounded, $Q>0$ forces $r$ infinitesimal and
 $1-r=a\eta$, $a<2$ exclude infinitesimal $\eta$. Unit $\eta$
 is treated in Section~\ref{component:pd4b92bf7de71}; unbounded
-$\eta$ uses Theorem~\ref{thm:c1-unification-bounded-z-all-H}, with $z=1/L$ infinitesimal,
-for $u,w$ infinitesimal. The unit-Alice results remain in
-Sections~\ref{component:pb1104217f67b},~\ref{component:p909aa5765721}
-and~\ref{component:pcc84202479d2}, and the complementary projective
-tests remain in Section~\ref{component:p89fd3edb3edd}.
+$\eta$ is covered for every testing pair by
+Theorem~\ref{thm:c1-c141-all-tests}. It combines the two-small-angle
+certificate with one full-state completion on the inverse-Alice chart
+and the adjacent-event bound for the remaining Bob angles.
 For unit $L$, infinitesimal and unit $\eta$ are covered in
 Sections~\ref{component:p080aa62de16d} and~\ref{component:p686209b87229}.
 Unbounded $\eta$ has $z$ a positive unit and uses
@@ -7771,589 +7770,221 @@ $D$ or $\beta$ occurs, so both permitted source faces are included.
 The parent is real quadratic in the state; applying the proof to
 the real and imaginary parts proves the complex-state assertion.
 This completes the theorem.
-\subsection{The six-root identity and unit-Alice angular relation}
+\subsection{A full-state completion for every Alice angle}
+\label{sec:c1-c141-all-alice}
 
-\label{component:pb1104217f67b}
-
-\label{pb1104217f67b:sec:r13-joint-radial-beta-zero}
-
-\paragraph{Quantified domain and conclusion.}
-Retain the original physical C1.4 source and all its residual-complement
-conditions. Suppose $x=k^2$, $z=L^{-1}$ and $\sigma=\eta^{-1}$ are
-positive infinitesimals, $0<b<1$, and the original coefficient $\beta=0$.
-There are no further source hypotheses. In particular $h/\sigma\sim1$
-and $D/\sigma^2\sim1/2$ follow from BE3--BE7, rather than being imposed.
-The conclusion below covers every bounded independent real test $u$,
-every infinitesimal or zero independent reciprocal test $w$, all their
-signs, and real or complex states. The previously proved remote
-complement supplies the other tests on this large-$L$ source chart.
-Thus this proves the literal $\beta=0$ part of C14.1. The adjoining
-Section~\ref{p909aa5765721:sec:r13-beta-positive-extension} extends the actual certificate
-to all sources with $\beta\theta/\sigma^2$ bounded; the present result
-is its beta-zero corollary and supplies the residue calculation used
-there. C14.2 is not included.
-
-The calculation joins the entire radial scalar quotient with every
-radial first normal \emph{before} deciding boundedness. Their exact
-cancellations remove the BR3 pole, including its separate
-$8(ab)b/\sigma$ summand through $Q=1-b$ infinitesimal.
-
-\paragraph{Notation and the original contact identities.}
-Use the complete reciprocal parent \eqref{eq:c1-reciprocal-parent} and the large-$L$ source
-notation. Thus $m=\mu x^2z$, $C=cz$, $A=a/z$, and
-$\alpha=\ell/z$. In expressions below $p=ab$ and $l=\ell Q$ are
-the two opening-cleared products; $p$ is not the source parameter $b$.
-Set $t=u^2$, $\xi=w^2$, $\xi_0=\sigma z$, $\delta=\xi-\xi_0$,
-$g=h-Q$, $D_u=1+t$, $D_w=1+\xi$, and $q=\sqrt z$.
-The source identities established in the handoff give
+\begin{theorem}\label{thm:c1-c141-all-tests}
+Retain the original stationary C14.1 source and all its intersections:
+$d=1$, $\lambda_{\rm ev}=n=0$, the native strict gaps,
+$m,C,A,\alpha>0$, $D,\beta\ge0$, and
 \[
- \phi=\phi_t=\phi_\xi=L_x=L_y=L_z=0
- \quad\hbox{at }(t,\xi)=(x,\xi_0),
+ x=k^2,\qquad z=(x\zeta)^{-1},\qquad\sigma=\eta^{-1}
+          \quad\hbox{positive source infinitesimals}.
 \]
-as well as $\phi(0,\xi)=4m$ and $L_x(0,\xi)=-8m$.
-Here $\phi,L_x,L_y,L_z$ are the \emph{complete} EN2 polynomials,
-with $D_*=D$, $\beta_*=0$ and $\beta=0$.
+There is no restriction on $H=h/\sigma$. The complete homogeneous
+parent is a finite tensor sum of squares at every independent
+projective testing pair and every real or complex state. The literal
+faces $D=0$, $\beta=0$ and all testing and state-coordinate zeros
+are included.
+\end{theorem}
 
-Choose the fixed caps $a_* = \ell_* =1/4$. They are smaller than
-the actual $a,\ell$, since $p,l\sim1/2$ and $0<b,Q<1$.
-Retain the two exact nonnegative centered excesses
+\begin{proof}
+We first treat the corner in which the Bob half-angle is projectively
+unbounded. Put $w=1/v$, including $w=0$ at $v=\infty$.
+Thus $w$ is infinitesimal or zero. If $u$ is infinitesimal or zero,
+Theorem~\ref{thm:c1-unification-bounded-z-all-H} applies directly.
+For every other Alice test, $p=1/u$ is bounded; $p=0$ includes
+$u=\infty$. The exact angle gauges allow $p,w\ge0$: changing the
+sign of $p$ together with $Y,Z$, or changing the sign of $w$ together
+with $X,Z$, preserves the homogeneous polynomial below.
+
+\paragraph{The whole polynomial in the inverse-Alice chart.}
+Write $D_p=1+p^2$ and $D_w=1+w^2$. The homogeneous parent is
 \[
- E_{\rm cap}=4(a-a_*)D_uD_wN_y^2+4(\ell-\ell_*)D_uN_y^2.
+\begin{split}
+ \widetilde F={}&4m(pW-pwX+Y-wZ)^2+4CD_w(W-pY)^2
+                         +4AD_pD_wY^2\\
+ &+(4D+2)(wW+X-pwY-pZ)^2
+ +(4\alpha+2)D_p(Y-wZ)^2\\
+ &+(4\beta+2)D_w(pX+Z)^2-2D_pD_wZ^2.
+\end{split}                                                    \tag{IA1}
 \]
-Define six separated roots
+For $p\ne0$ this is $p^2$ times the reciprocal parent
+\eqref{eq:c1-reciprocal-parent}; the displayed polynomial defines its
+literal projective endpoint at $p=0$. Set
 \[
-\begin{aligned}
-N_x&=X+uhZ,&N_y&=(Y-bwZ)/q,\\
-\Gamma&=\sigma Z-uwW,&R&=wZ/q-uqW,\\
-A_\theta&=q(t-x)W,&V&=uw(t-x)W.
-\end{aligned}\tag{JR1}
+ q=\sqrt z,\quad Q=1-b,\quad r=bz,\quad H_0=1+zQ,
 \]
-No test/source quotient is used in their definition. Their inverses
-and radicals are pure source.
-
-\paragraph{Exact quotient specification.}
-The contact identities give the exact divisions
-\begin{align*}
- \phi&=z(t-x)^2A+t(t-x)\delta B+t\delta^2C_r,\\
- L_x&=(t-x)(tA_x+zB_x)+t\delta C_x,\\
- L_y&=(t-x)A_y+\delta B_y,\\
- L_z&=(t-x)A_z+\delta B_z.
-\end{align*}
-All quotients are monic polynomial divisions in one testing variable.
-Their complete support can equivalently be specified by
-\begin{gather*}
- A=4\mu+\frac{2h^2(2D+1)}\sigma t,\qquad
- A_x=-\frac{4h(2D+1)}\sigma,\qquad B_x=8\mu x,\\
- A_y=8(p-l)+4z\{(1+2m)g+2Dh+2p\sigma\},\\
- S:=A_z/\sigma-B=S_0+
-       \frac{2h^2(2D+1)}{\sigma^2}(t-x).
-\tag{JR2}
-\end{gather*}
-The same monic divisions give the much shorter exact expression
 \[
- S_0=\frac{2\{2h^2(2D+1)x+4Dh-2bp\sigma^2z+h^2\}}{\sigma^2}.
-\tag{JR2a}
+ E=qW,\quad F=Y/q,\quad G=wZ/q,\quad
+ R=X+wW,\quad S=pX,\quad J=F-bG.
 \]
-Thus $S_0\sim2$ follows immediately from $h/\sigma\sim1$ and
-$D/\sigma^2\sim1/2$. This removes any dependency on the longer R10
-reduction modulo the original beta numerator. The source contact jets
-are still needed for the quotient remainders to vanish.
-For a denominator-free quotient specification, $C_r$ is obtained by
-dividing $\phi$ twice by $\xi-\xi_0$ and then dividing the quotient
-by $t$; $B$ is the quotient of
-$t^{-1}\phi_\xi(t,\xi_0)$ by $t-x$; and $A_z$ is the quotient of
-$L_z(t,\xi_0)$ by $t-x$. These divisions introduce no mixed inverse.
+Only pure-source inverses occur in these roots. Direct expansion of
+the complete signed part of \eqref{eq:c1-reciprocal-parent} gives
+\[
+ K=R^2+D_wS^2+z(G-F)^2+p^2D_wzF^2
+                    -2pE(G+w^2F)+2qwS(G-F).             \tag{IA2}
+\]
+Thus \eqref{eq:c1-reciprocal-parent}, in this chart, is $2K$ plus
+the six original positive event terms. This identity keeps all four
+state coordinates.
 
-The remaining exact coefficients are most compactly written as
-\begin{align*}
- K_r:=\sigma^2C_r={}&k_0+k_1t+k_2\xi,\\
- k_0={}&2b\{(2C+1)b+4D+4p\sigma
-             +2(2C+2D+1)\sigma(bz-1)\},\\
- k_1={}&2(1+2m)g^2+8Dhb+8pb\sigma,\\
- k_2={}&2b^2(2C+2D+1),\\
- R_x:=\sigma C_x={}&-4\{2Db+(1+2m)g\},\\
- R_y:=\sigma B_y={}&4\{t[2Dh+2p\sigma+(1+2m)g]
-      +b(2C+2D+1)(\xi+\sigma z)\\
- &\hspace{23mm} +(2C+1)(b-\sigma)+2D(1-\sigma)+2p\sigma\},\\
- E_r={}&2(C+D)(bz-1)+2p+bz-1,\qquad
- R_\gamma=-4(E_r+2pt),\\
- Z_0={}&\frac{4D+2t(4Dh+h^2)+2t^2h^2(2D+1)}{\sigma^2},\\
- Z_x={}&-\frac{4u}{\sigma}\{2D+h+th(2D+1)\}.
-\tag{JR3}
-\end{align*}
-In particular all of these coefficients are bounded when $u$ is bounded
-and $w$ infinitesimal. The $\sigma^{-1}$ and $\sigma^{-2}$ in $Z_0,Z_x$
-are controlled by the \emph{proved pure-source} bounds on $h,D$.
+\paragraph{Three leading event weights complete the signed core.}
+Define the positive source coefficients
+\[
+ C_0=\frac{z}{2(1-r)},\qquad
+ A_0=\frac{H_0}{2bz},\qquad
+ \alpha_0=\frac1{2Qz},\qquad B=\frac{H_0}{bQ}.
+\]
+The opening-cleared estimates (BE9) imply
+\[
+ C/C_0\sim1,\qquad A/A_0\sim1,\qquad\alpha/\alpha_0\sim1.
+\]
+In particular the pure-source number
+\[
+ f=\min\{1,C/C_0,A/A_0,\alpha/\alpha_0\}
+\]
+is positive, $f\sim1$, and each original event weight is at least
+$f$ times its corresponding leading weight. This uses neither a
+bound on $H$ nor positivity of $D$ or $\beta$.
 
-\paragraph{The joint cancellation, including all first normals.}
-The exact full normal block EN3--EN4 obeys
-\begin{align*}
- H_z/\sigma^2+\xi C_r-(\xi/\sigma)B_z&=Z_0,\\
- B_z-2\sigma C_r&=bR_\gamma,\\
- \frac4\sigma\{2DT_{\rm test}+bD_w(1+2C)+tg(1+2m)\}-B_y&=R_\gamma,\\
- \frac{4u}{\sigma}\{-2DT_{\rm test}-hD_u-(1+2m)\xi g\}
-                         -u\xi C_x&=Z_x.
-\tag{JR4}
-\end{align*}
-Here $T_{\rm test}=1+th+b\xi$. These are polynomial identities after clearing
-pure-source powers of $\sigma$. No coefficient is discarded: $K_r$
-contains the full BR3 term, and the last three lines keep its radial
-couplings. The cancellation explains why a scalar-only extraction of
-BR1 followed by boundedness checking cannot see this certificate.
+Completing the leading form gives the exact identity
+\[
+\begin{split}
+ &2z(G-F)^2+2p^2zF^2-4pEG
+ +\frac2{1-r}(E-pzF)^2\\
+ &\hspace{8mm}+\frac{2H_0}{b}(1+p^2)F^2
+                    +\frac2Q(1+p^2)(F-G)^2\\
+ &=\frac2{1-r}(E-pzJ-pG)^2
+                  +2B(1+p^2)J^2+2H_0G^2.
+\end{split}                                                    \tag{IA3}
+\]
+Substituting $F=J+bG$ and $r=bz$ joins the negative product to
+the three event squares. The remaining coefficients can then be
+estimated together.
 
 Put
-\begin{align*}
- H_x&=2(1+t+\xi)+4Dt+4m\xi,\\
- H_y&=4D_u(a_*D_w+\ell_*)+4mtz+4CzD_w+(4D+2)\xi z+2D_uz,\\
- c_G&=4D_u\{pbD_w+lQ\},\qquad
- c_N=8D_u\{pD_w-l\}.
-\end{align*}
-The \emph{entire original parent}, without restriction to a state
-subspace, is exactly $F_w=E_{\rm cap}+G$, where
-\begin{align*}
- G={}&H_xN_x^2+H_yN_y^2+Z_0\Gamma^2
-        +(c_G+zK_r)R^2+AA_\theta^2\\
- &-4uqw(2m+2D+1)N_xN_y+Z_xN_x\Gamma
-       +qwR_\gamma N_y\Gamma+qwbR_\gamma R\Gamma\\
- &+uqwR_xN_xR+(c_N+zR_y)N_yR
-       +qwB_xN_xA_\theta+uA_yN_yA_\theta\\
- &+uA_xN_xV+u\sigma B A_\theta R+S\Gamma V.
-\tag{JR5}
-\end{align*}
-For example, the scalar radial conductor is
-$t\delta^2W^2=\sigma^2(qR-w\Gamma/\sigma)^2$;
-the radial $Z$ first normal is
-$uw\delta W(\Gamma/\sigma)=qwR\Gamma-(\xi/\sigma)\Gamma^2$.
-Their joint use gives the first two identities of JR4. The other
-conductors are those of the verified large-$L$ proof with
-$N_z=\Gamma/\sigma$. These identities prove JR5 exactly and include
-every first normal and every hard quadratic coupling.
-
-\paragraph{One bounded positive Gram for every bounded Alice test.}
-All entries of JR5 are bounded separated tensors. Indeed
 \[
- h/\sigma\sim1,\quad D/\sigma^2\sim1/2,\quad
- \mu\sim1/2,\quad C=O(z),\quad p,l\sim1/2,
- \quad p-l\in z\mathcal O_{\rm source},
+ J_* =\sqrt B J,\quad G_* =\sqrt{H_0}G,\quad
+ a=\frac z{\sqrt B},\quad c=\frac1{\sqrt{H_0}},\quad
+ L=aJ_*+cG_*=zJ+G.
 \]
-and $\sigma B=A_z-\sigma S\sim4$ uniformly for bounded $u$.
-The displayed formula for $A_z$ obtained from $L_z$ has only the
-bounded terms $h^2/\sigma$, $Dh/\sigma$, $p,l$, and bounded multiples
-of $z$; hence this last assertion does not order any mixed rate.
-
-For completeness, the possibly needed opening-uniform divisibility
-$p-l\in z\mathcal O_{\rm source}$ follows directly from the exact
-source formulas, not from a residue subtraction. Write $H=h/\sigma$.
-The two numerators over their common unit denominator $2P$ are
-\begin{align*}
- U_A={}&z(1+x\sigma H)(1-xH)+(1-bz)(1+x\sigma Hz),\\
- U_\ell={}&(1+\sigma bz)\big[xH(1+xbz)(1+\sigma z)
-       +\{1+xbz-xz(1-\sigma H)\}(1-xH)\big].
-\end{align*}
-They are bounded polynomials in the source letters and both equal
-one at $z=0$. Consequently $(U_A-U_\ell)/z$ is a bounded polynomial.
-Neither numerator has a $b$ or $Q$ denominator. This proves the claimed
-divisibility through both openings and is the source argument in EN6's
-adjoining radial paragraph.
-
-The exact syzygy
+The native inequality $r<1$ gives the exact contraction
 \[
- V^2=\sigma t A_\theta^2+u\sigma(t-x)A_\theta R-(t-x)V\Gamma
-\tag{JR6}
+ 1-a^2-c^2=\frac{zQ(1-r)}{H_0}\ge0.                  \tag{IA4}
 \]
-allows the addition of zero times the pure-testing function
-\[
- \lambda(t)=\frac{2(t^2+t+1)}{(1+t)^2}>0.
-\]
-Specifically add
-$\lambda[V^2-\sigma tA_\theta^2-u\sigma(t-x)A_\theta R+(t-x)V\Gamma]$
-to JR5. There is no source/test denominator in $\lambda$.
+Consequently the source coefficients $a,c$ are bounded, including
+arbitrarily small $b$ or $Q$.
 
-At any real residue $u_0$, write $t_0=u_0^2$. The $N_y$ pivot is
-$2(1+t_0)$. The $(A_\theta,R)$ block is
-\[
- \begin{pmatrix}2&2u_0\\2u_0&2(1+t_0)\end{pmatrix},
- \qquad \det=4.
-\]
-The remaining $(N_x,\Gamma,V)$ block is
-\[
- \begin{pmatrix}
- 2(1+t_0)&-2u_0(1+t_0)&-2u_0\\
- -2u_0(1+t_0)&2(1+t_0+t_0^2)&1+t_0+\lambda(t_0)t_0/2\\
- -2u_0&1+t_0+\lambda(t_0)t_0/2&\lambda(t_0)
- \end{pmatrix}.
-\tag{JR7}
-\]
-Its first two leading pivots are positive, with leading $2\times2$
-determinant $4(1+t_0)$. The last Schur complement is exactly
-\[
- \lambda(1+t_0^2)+\frac{2t_0^2}{1+t_0}
-       -\frac12(1+t_0+\lambda t_0/2)^2
-   =\frac{4t_0+3}{2(1+t_0)^4}>0.
-\tag{JR8}
-\]
-Thus the residue Gram is strictly positive definite for every finite
-real $u_0$, including zero and both signs. Crucially it does not depend
-on the residue of $b$: the result remains strict through $b\to0$
-and $Q\to0$. The finite bounded positive-Gram criterion already used
-by the project then gives the exact legal tensor-SOS.
-
-\paragraph{Boundaries and scope.}
-JR1--JR6 are identities, including $u=0$ and $w=0$; no root is inverted
-at a zero. Their sign coverage is literal. Apply the real identity to
-the real and imaginary parts of the state for complex states.
-The exact remote join is the common-parent theorem in
-Section~\ref{component:p89fd3edb3edd},
-Section~\texttt{sec:r6-c1-common-remote}. First, $A,\alpha$ are
-unbounded on this source, so its adjacent-event theorem transported by
-(CE9)--(CE10) covers every $v$ that is not projectively unbounded.
-For projectively unbounded $v$ and projectively unbounded $u$, put
-$p_t=1/u$ and apply the complete raw frame (CE20), whose strict
-residue is (CE21). Its exact source premises (CE17), without the
-unneeded $m$ lower bound in this $p_t$ chart, hold with $q=\sqrt z$:
-$C\sim z/2$, $A\ge1/(4z)$, and $\alpha\ge1/(4z)$.
-The $C$ lower bound may likewise be chosen as $z/4$. The unselected
-$D,\beta$ events are retained. The identities include literal
-$p_t=0$, $w=0$ and all signs. These two remote cases and JR1--JR8
-exhaust all projective tests on the printed source face. No source
-domain with $L$ a unit, or $\beta>0$, is covered by this proof.
-
-\paragraph{Corroboration.}
- The
-original six contact identities are explicitly identified imported
-results, not silently replaced by numerical residue checks.
-
-
-
-% Source formulas: p909aa5765721
-\subsection{Bounded $H$ at unit Alice testing angle}
-
-\label{component:p909aa5765721}
-
-\label{p909aa5765721:sec:r13-beta-positive-extension}
-
-Retain the same original C14.1 source as JR1--JR8, with $x,z,\sigma$
-positive infinitesimals, but allow $\beta\ge0$. Write
-\[
- b_\theta=\beta\theta,\qquad H=h/\sigma,\qquad
- M_\beta=b_\theta/\sigma^2.
-\]
-This section proves two precise extensions. First, if $M_\beta$ is
-bounded, the \emph{entire source domain is covered for every test}.
-This includes the beta-zero theorem. Second, if $H$ is bounded but
-$M_\beta$ is unbounded, every bounded nonzero-unit $u$ is covered
-at the residual infinitesimal-$w$ tests. On this second source domain
-only $u$ infinitesimal remains. Neither statement assumes $d_0$ a
-unit: the second includes $D=0$. The $H$-unbounded domain and C14.2
-are not covered here.
-
-\paragraph{The generic joint radial identity.}
-The exact six-root identity JR5 continues to hold if its coefficients
-are given the following beta corrections:
-\begin{gather*}
- k_1\ \mapsto\ k_1+4b_\theta\theta,\qquad
- R_x\ \mapsto\ R_x+8b_\theta,\\
- Z_0\ \mapsto\ Z_0+\frac{4b_\theta\theta t}{\sigma^2},\qquad
- Z_x\ \mapsto\ Z_x+8ub_\theta/\sigma,\\
- S\ \mapsto\ S+4b_\theta\theta/\sigma^2.
-\tag{JB1}
-\end{gather*}
-Here the uncorrected formulas on the right are the polynomials in
-JR2--JR3 evaluated at the actual $h,D,m,p,l$, not at a beta-zero
-source. The scalar $B$ remains its full monic quotient. The additional
-retained centered excess is $4\beta D_wN_x^2$. The complete generic
-coefficient is, explicitly,
-\[
- S=\frac{2\{h^2(2D+1)(t+x)+4Dh-2bp\sigma^2z
-                       +2b_\theta\theta+h^2\}}{\sigma^2}.
-\tag{JB2}
-\]
-All four cancellations JR4 are exact with these changes. They were
-checked symbolically with $b_\theta$ free. Thus no radial pole remains
-unallocated in this extension.
-
-\paragraph{The source estimates needed by the extension.}
-The source equation BE3 gives exactly
-\[
- H=H_0/B+\frac{2P}{B}\frac{b_\theta}{\sigma}.
-\tag{JB3}
-\]
-Consequently $M_\beta$ bounded implies $H\sim1$ and $\theta\sim1$.
-The sphere budget then implies $D/\sigma^2\sim1/2$, since
-$xb_\theta/\sigma^2=xM_\beta$ is infinitesimal. Also $\mu\sim1/2$.
-
-More generally, suppose only $H$ bounded. Then $\res H\ge1$;
-no exact inequality $H\ge1$ is imposed. One has $\theta\sim1$,
-and $b_\theta/\sigma$ is bounded. Write
-\[
- d=\res(D/\sigma^2),\qquad
- c=\res(xb_\theta\theta/\sigma^2).
-\]
-BE4--BE6 give $d,c\ge0$ and $d+c=1/2$. Formula JB3 gives
-$\res(b_\theta/\sigma)=(\res H-1)/2$. The bounded source formulas
-also give $\mu\sim H/2$, $p,l\sim1/2$, $C=O(z)$, and
-$p-l\in z\mathcal O_{\rm source}$. These statements retain both
-source-sphere endpoints and both $b,Q$ openings.
-
-\paragraph{An exact square joining the beta pole to its angular reserve.}
-Suppose first $u$ is a bounded nonzero unit, so that $1/u$ is an
-allowed bounded pure-testing inverse. Put
-\[
- a_\beta=b_\theta\theta,\qquad
- C_\beta=4a_\beta/\sigma^2,\qquad T_c=t\Gamma+V,
- \qquad P_\beta=uZ-(x/\sigma)wW.
-\]
-The identity $T_c=\sigma uP_\beta$ has no $u$ denominator.
-Adding $(C_\beta/t)$ times JR6's zero, and completing the resulting
-$T_c$ square, gives the exact entire-parent identity
-\[
- G=4a_\beta P_\beta^2+\widehat G,
-\tag{JB4}
-\]
-where $G$ is the complete generic JR5 and
-\begin{align*}
- \widehat G=G
- &-C_\beta t\Gamma^2
- -(C_\beta+C_\beta x/t)\Gamma V
- -C_\beta\sigma A_\theta^2\\
- &-C_\beta\sigma(t-x)A_\theta R/u.
-\tag{JB5}
-\end{align*}
-Every coefficient of $\widehat G$ is bounded when $H$ is bounded
-and $u$ a unit. The only apparent angular reserve subtraction is
-$4a_\beta/\sigma$. Its exact source comparison is
-\[
- \mu-a_\beta/\sigma
- =\kappa H_0/B+
-    \frac{b_\theta}{\sigma}\left(\frac{2\kappa P}{B}-\theta\right),
-\tag{JB6}
-\]
-where $\kappa$ is the BE8 source factor. The bracket is infinitesimal,
-so this difference has residue $1/2$. Thus the beta pole is paid for
-by the actual shared $m$ term. No leading coefficient is substituted
-in the exact identity JB4.
-
-\paragraph{Bounded $M_\beta$: all residual tests.}
-When $M_\beta$ is bounded and $u$ a unit, the residue of $\widehat G$
-is exactly the beta-zero residue in JR7 before the finite $V$ pivot:
-$H\sim1$, $d=1/2$, $c=0$. Add the same pure-testing pivot
-$\lambda(t)=2(t^2+t+1)/(1+t)^2$ and apply JR8. Restore the positive
-square in JB4 and every centered excess. This covers every unit $u$.
-
-\paragraph{Unbounded $M_\beta$, bounded $H$: all unit-Alice tests.}
-For any real nonzero residue $u_0$, set $t_0=u_0^2$. In the notation
-of JB3, and writing $H$ now for its finite real residue, the only
-nontrivial $\widehat G$ residue block is
-\begin{align*}
- Q={}&2(1+t_0)N_x^2+[4d+2H^2t_0(1+t_0)]\Gamma^2\\
- &-4u_0(1+Ht_0)N_x\Gamma-4Hu_0N_xV\\
- &+[2H^2(1+t_0)-4c/t_0]\Gamma V.
-\tag{JB7}
-\end{align*}
-Its angular $(A_\theta,R)$ block is the strict matrix from JR7 and
-its $N_y$ pivot is $2(1+t_0)$. All other residue cross entries vanish.
-The beta square in JB4 equals $(C_\beta/t)T_c^2$, with
-$C_\beta$ unbounded. On its exact residue kernel $V=-t_0\Gamma$,
-JB7 reduces to
-\[
- 2(1+t_0)N_x^2-4u_0N_x\Gamma+2\Gamma^2,
- \qquad \det=4.
-\tag{JB8}
-\]
-Here the cancellation uses exactly $d+c=1/2$. It remains strict at
-$d=0$ and $c=0$. The row $T_c=V+t\Gamma$ has a bounded separated
-right inverse, obtained by changing $V$ alone. The elementary finite
-penalty lemma therefore chooses a positive real $K$ such that
-$\widehat G+(K/t)T_c^2$ has strictly positive residue. This is possible
-because $t_0>0$. The exact retained excess is
-$((C_\beta-K)/t)T_c^2$: $C_\beta-K$ is a positive pure-source
-coefficient, and its square root separates from the pure-testing
-$1/\sqrt t$. No ordering of $C_\beta/t$ minus a real number is used.
-This proves the entire
-parent for all bounded nonzero-unit $u$, with infinitesimal or zero
-$w$, all signs and complex states.
-
-The new exact remaining obstruction on the bounded-$H$ source branch
-is therefore $M_\beta$ unbounded and $u$ infinitesimal. JB5 has
-$x/u$ and $x/u^2$ terms there, so its bounded-Gram argument cannot be
-imported. The square $P_\beta$ itself is still legal and has no
-$u$ inverse; a joint allocation with the remaining angular terms is
-required to remove those coefficient denominators without comparing
-independent source and testing rates. No such allocation is claimed.
-
-\paragraph{Denominators and coefficient bounds.}
-Every source inverse in the roots or exact coefficients is a pure-source
-inverse. On the large-$L$, bounded-$H$ domains, $P,J,B$ and the original
-geometry coefficient $M=1+xbz-xz\theta$ are units; $1-r$ and $\theta$
-are units as well. Possible $b,Q$ inverses occur only in the original
-source weights and the retained positive centered excesses, while their
-opening-cleared products $p,l$ are bounded. The normalized quantities
-$H$, $D/\sigma^2$, $b_\theta/\sigma$, and
-$xb_\theta\theta/\sigma^2$ are bounded by JB3 and the BE sphere.
-The corrections in JB5 therefore leave bounded coefficients: the
-remaining $\Gamma^2$ terms involve $D/\sigma^2$, $Dh/\sigma^2$ and
-$H^2$; the $\Gamma V$ coefficient involves those same bounded source
-products and $(xb_\theta\theta/\sigma^2)/t$; the angular-radial
-coefficient involves $b_\theta\theta/\sigma$ times $(t-x)/u$.
-The factors $1/u,1/t$ are used only when $u$ is a testing unit.
-All $u=0$ and infinitesimal-$u$ assertions for bounded $M_\beta$
-instead use the unaltered generic six-root identity and its bounded
-pure-source pivot $(1+2M_\beta)^2$. The everywhere bounded testing
-denominator $1+t=1+u^2$ in JR8 is also pure testing. No mixed inverse,
-mixed radical, or source/testing rate comparison occurs in either
-covered domain or its remote join.
-
-
-
-% Source formulas: pcc84202479d2
-\subsection{Unbounded $H$ at unit Alice testing angle}
-
-\label{component:pcc84202479d2}
-
-\label{pcc84202479d2:sec:r18-sphere-unit-u}
-
-Retain the entire original C14.1b source intersection and the exact
-SP6 parent from the common identity.  Assume $u$ is a bounded nonzero unit
-and $w$ is infinitesimal.  The argument below proves the whole parent
-for every testing state, including the remaining
-$W/Z$-unbounded states.  It does not cover infinitesimal $u$.
-All source gaps, $D=0$, both source sphere endpoints and the literal
-coefficient boundaries remain unchanged.
-
-\paragraph{No state chart is needed.}
-All roots below are homogeneous polynomials in the original testing
-state, with pure-source coefficients.  In particular the proof
-uses no state-coordinate inverse, no bound on $W/Z$, and no sign
-restriction.  The only testing inverse is that of the unit $u$.
-Write $U=u^2$, $s=x/\sigma$, and preserve the exact SP/BS coefficients
-\[
- L_h=\lambda\sigma/h,\quad \rho=\lambda x/\sigma,
- \quad d=4D/\sigma^2,\quad K_A=4\kappa h/\sigma-\lambda.
-\]
-The source identities give $s\in\mathrm{Inf}$,
-$\sigma/\sqrt h\in\mathrm{Inf}$, $L_h\sim2$, $\nu\sim1$, and
-\[
- d+\rho\sim2,\quad K_A-(2-4h)\in\mathrm{Inf},\quad
- \chi-(4-4h)\in\mathrm{Inf},\quad
- (c_G+zK_r)-2(1+U)\in\mathrm{Inf}.
- \tag{SU2}
-\]
-The last infinitesimal is a finite separated expression for bounded
-$u$ and infinitesimal $w$.  For the only new source assertion in
-SU2, the sphere identities give exactly
-\[
- d=\frac{2\mathcal H}{PJ}d_0^2,\qquad
- \rho=\frac{2xH_0}{\sigma B}
-       +\frac{2\mathcal H}{B}b_0^2+\lambda_0s.
- \tag{SU3}
-\]
-Thus $d+\rho\sim2$ follows from $d_0^2+b_0^2=1$, with no inverse
-of either sphere coordinate.  All other bounds follow from the exact source cancellations in
-equations~\eqref{eq:c1-unification-nu}--\eqref{eq:c1-unification-KA} and the source estimates,
-including $p-l\in zB_c$, in Section~\ref{sec:c1-unification-bounded-z-all-H}.
-
-\paragraph{Shift the troublesome angular product into the normal block.}
-Set $A_0=qW$, $A=A_\theta=(U-x)A_0$, and retain $R$.
-There is an exact conductor:
-\[
- A(A+uR)=u(U-x)wWZ-x(U-x)A_0^2.
- \tag{SU4}
-\]
-Consequently, collecting the radial terms in \eqref{eq:compression-full-parent} gives
+\paragraph{Restoring the exact event weights.}
+The difference between the actual and retained weights contributes
 \[
 \begin{split}
- K_AA^2+\chi uAR+(c_G+zK_r)R^2
- ={}&2(A+uR)^2+2R^2-4hu(U-x)wWZ\\
- &+4hx(U-x)A_0^2+\delta_A A^2+
-   \delta_\chi uAR+\delta_RR^2,
-\end{split} \tag{SU5}
+ \mathcal X={}&4m(pW-pwX+Y-wZ)^2
+       +4D(wW+X-pwY-pZ)^2+4\beta D_w(pX+Z)^2\\
+ &+4(C-fC_0)D_w(W-pY)^2
+       +4(A-fA_0)D_pD_wY^2\\
+ &+4(\alpha-f\alpha_0)D_p(Y-wZ)^2,
+\end{split}
 \]
-where the three $\delta$ coefficients are the infinitesimals in
-SU2.  This step keeps the signed product exactly; it is not an
-inequality based on the sign of $U-x$.
-
-\paragraph{A complete strict normal block.}
-Introduce the legal separated roots
-\[
- H=\sqrt h\,uZ,\qquad S=uwW-hu^2Z,\qquad N=N_x,
- \qquad Z_g=uwW=S+u\sqrt h\,H.
-\]
-Their exact allocations are
+and retain the nonnegative expression
 \[
 \begin{split}
- \Gamma&=-S+\left(\frac{\sigma}{u\sqrt h}-u\sqrt h\right)H,\\
- P_h:=\sqrt h P_\beta&=(1-sh)H-\frac{s\sqrt h}{u}S,\\
- X_e&=N-\sqrt h P_h.
-\end{split} \tag{SU6}
+ \Pi={}&\mathcal X
+ +2(1-f)\{R^2+S^2+z(G-F)^2+p^2zF^2\}\\
+ &+2w^2S^2+2p^2w^2zF^2
+ +4fC_0w^2(W-pY)^2+4fA_0D_pw^2Y^2.
+\end{split}                                                    \tag{IA5}
 \]
-Every coefficient is bounded; the factors $u^{-1}$ are pure testing
-units.  The full scalar term $\mathscr S$ in \eqref{eq:compression-full-parent} also satisfies exactly
-\[
- \mathscr P=L_hP_h^2+
-      \rho(1-x/U)Z_g^2-\rho\sigma(U-x)A_0^2.
- \tag{SU7}
-\]
-The apparently signed factor $1-x/U$ is simply a bounded Gram
-coefficient of residue one.  No mixed inverse is used.
-
-Combine the $wWZ$ term in SU5 with every $N,\Gamma,P_h,Z_g$ term:
+All its source coefficients are nonnegative; $D_p,D_w$ and the
+remaining factors separate in the testing field. Each term is
+therefore a tensor sum of squares. Equations (IA1)--(IA3) give
+the full equality
 \[
 \begin{split}
- \mathscr N={}&[2(1+w^2)+4mw^2]N^2
-     +2(2D+1)U X_e^2+d\Gamma^2-4u\nu N\Gamma\\
- &+L_hP_h^2+\rho(1-x/U)Z_g^2
-       -4\sqrt h\,\frac{U-x}{u}\,Z_gH .
-\end{split} \tag{SU8}
+ \widetilde F={}&f\mathcal Q+\Pi+\mathcal E,\\
+ \mathcal Q={}&2R^2+2S^2+\frac2{1-r}(E-pL)^2
+                         +2(1+p^2)J_*^2+2G_*^2,\\
+ \mathcal E={}&-4(1-f)pEG-4pw^2EF+4qwS(G-F).
+\end{split}                                                    \tag{IA6}
 \]
-This is an exact equality for the entire indicated normal block.
-Its coefficients in $(N,S,H)$ are bounded separated expressions.
-Using SU2 and SU6, its residue is exactly
-\[
- 2(1+u_0^2)N^2+4u_0NS+2S^2+2H^2.
- \tag{SU9}
-\]
-The $N,S$ determinant is $4$, so this residue is strictly positive.
-The $H$ cross terms cancel: the $X_e$ square cancels the leading
-$N\Gamma$ coupling to $H$, and the angular shift in SU5 cancels
-the remaining $S H$ and $hH^2$ terms.  This is where the sphere
-sum $d_0^2+b_0^2=1$ is essential.
 
-The remaining angular/radial block is
+\paragraph{A uniform reserve for every bounded inverse angle.}
+Choose a real constant $P\ge1$ with $p\le P$ and put
+\[
+ t=p/P,\qquad E_*=E/P,\qquad
+ g=(R,S,E_*,J_*,G_*)^{\mathsf T}.
+\]
+Then $0\le t\le1$. Define
+\[
+ \mathcal B=2R^2+2S^2+2(E_*-tL)^2
+                         +2(1+t^2)J_*^2+2G_*^2.
+\]
+The difference $\mathcal Q-\mathcal B$ is exactly
+\[
+ 2\left(\frac{P^2}{1-r}-1\right)(E_*-tL)^2
+                    +2(P^2-1)t^2J_*^2\in\Sigma T^2.
+                                                               \tag{IA7}
+\]
+Moreover, the contraction (IA4) gives the explicit reserve
 \[
 \begin{split}
- \mathscr A={}&2\{(U-x)A_0+uR\}^2+2R^2\\
- &+(4hx-\rho\sigma)(U-x)A_0^2
-   +\delta_A(U-x)^2A_0^2
-   +\delta_\chi u(U-x)A_0R+\delta_RR^2.
-\end{split} \tag{SU10}
+ \mathcal B-\tfrac12g^{\mathsf T}g
+ ={}&\tfrac32(R^2+S^2)
+       +\tfrac32(E_*-4tL/3)^2+\tfrac32J_*^2+\tfrac56G_*^2\\
+ &+\tfrac23(1-t^2)G_*^2+\tfrac43t^2J_*^2\\
+ &+\tfrac23t^2\{(1-a^2-c^2)(J_*^2+G_*^2)
+                                   +(cJ_*-aG_*)^2\}.
+\end{split}                                                    \tag{IA8}
 \]
-Its residue on $(A_0,R)$ has determinant $4u_0^4>0$.
+Every radical needed on the right is in one labelled field.
+In particular no square root of a mixed coefficient is taken.
 
-\paragraph{Every other original-parent term.}
-The unchanged hard $N_y$ diagonal has residue $2(1+u_0^2)$.
-All non-Gamma cross terms of \eqref{eq:compression-full-parent} already have
-infinitesimal coefficients on $(N,N_y,A_0,R)$, by SP's complete
-opening-uniform coefficient bounds and $A=(U-x)A_0$.
-The two $\Gamma$ terms have a factor $qw$ and become infinitesimal
-crosses after the bounded allocation SU6.  Thus the complete Gram
-on $(N,N_y,S,H,A_0,R)$ has strictly positive residue, the direct
-sum of SU9, the $N_y$ entry and SU10.
+It remains to put the complete error in the same five roots.
+Its only nonzero upper-triangle matrix entries are
+\[
+\begin{array}{c|c}
+ (E_*,G_*)&-2(1-f)P^2t/\sqrt{H_0}
+                         -2P^2btw^2/\sqrt{H_0}\\
+ (E_*,J_*)&-2P^2tw^2/\sqrt B\\
+ (S,J_*)&-2qw/\sqrt B\\
+ (S,G_*)& 2qQw/\sqrt{H_0}.
+\end{array}                                                    \tag{IA9}
+\]
+The pure-source coefficient matrices at $t,tw^2,w$ have absolute
+row bounds $2(1-f)P^2$, $4P^2$, and $4$, respectively. Here use
+$1/\sqrt B\le1/2$, $b/\sqrt{H_0}\le1$, and
+\[
+ q^2/B=rQ/H_0\le1,\qquad q^2Q^2/H_0\le1.
+\]
+The first bound is a source infinitesimal. In the other two terms,
+$tw^2$ and $w$ are testing infinitesimals. Thus (IA9) defines a
+bounded tensor matrix with zero real residue, without imposing an
+order on the tensor product or comparing source and testing rates.
+The remaining Gram matrix is $fI/2$ plus this error; its residue is
+$I/2$. The strict bounded-Gram lemma proves its tensor sum of
+squares. Restoring (IA5), (IA7) and (IA8) proves the whole corner
+for every homogeneous real state. The roots themselves need not
+be bounded or independent.
 
-The remaining exact nonnegative rows are retained once: both
-centered cap excesses, $4\beta D_wN^2$, and
-$4bpzU\Gamma^2$.  The $d\Gamma^2$ part and
-$2(2D+1)(uX_e)^2$ have already been used in SU8 and are not
-retained a second time.  All scalar, hard and first-normal terms
-of the original SP6 parent are therefore included.
+\paragraph{The remaining Bob angles and the endpoints.}
+On C14.1, (BE9) and $z$ infinitesimal imply that $A$ and $\alpha$
+are unbounded. The adjacent-event theorem transported by
+(CE9)--(CE10) in Section~\ref{component:p89fd3edb3edd} therefore
+covers every Bob test that is not projectively unbounded, with all
+Alice tests. This and the corner just proved exhaust the projective
+testing pairs.
 
-The bounded separated-Gram criterion proves tensor SOS for all real
-states and both testing signs, including literal $Z=0$ and $w=0$.
-Applying the real identity separately to real and imaginary parts
-gives all complex states.  Neither source sphere endpoint is inverted.
-The precise remaining C14.1b testing domain has $u$ infinitesimal
-(with the earlier state and sign certificates still retained).
-
-
+No inverse of $D$, $\beta$ or a state coordinate occurs. The
+identities specialize literally at $p=0$, $w=0$ and zero state
+coordinates; $u=0$ was covered separately at the start. Real and
+imaginary state parts give complex states. Finally restore the
+positive pure-field homogenization factors as in the original
+parent normalization. For unit states the inverse-Alice angular
+factor is $1/(D_pD_w)$, which remains positive at $p=0$; arbitrary
+nonzero homogeneous states have the additional pure-testing state
+norm factor. This proves the stated full C14.1 domain.
+\end{proof}
 
 \subsection{Unit $L$: noninfinitesimal Alice tests}
 

@@ -14,9 +14,10 @@ complementary source weights control the state couplings in singular limits.
 - [Scientific matrix data and exact checkers](extracted-lifts/).
 
 The main article is **7 pages**. The complete technical companion
-remains **348 pages**: its C1 calculations are grouped into seven mathematical
-domains and its C2 calculations into seventeen families. The displayed
-identities, theorem statements and dependencies are retained. The short
+is **345 pages**: its C1 calculations are grouped into seven mathematical
+domains and its C2 calculations into seventeen families. One full-state completion now treats the large-$L$ C1 source for all Alice
+angles, replacing three separate proofs while retaining their complete source
+and testing domain. The short
 article uses the companion's source estimates in the canonical-certificate
 proposition.
 
@@ -32,6 +33,8 @@ The recovered files provide:
 | Regular C2 contact box | Explicit local certificate: 785 order-2 blocks, 1,570 listed functions and 237 coefficient equations |
 | C1D source box | Explicit local library: 82,928 separated squares and 3,844 testing spanning functions |
 | Bounded-z C1 source box | Exact order-669 pencil for the specified local certificate cone; 120 blocks and 2,694 auxiliaries |
+| Reciprocal Alice angle, every positive source ratio | Exact order-62 local source-cone pencil; 19 blocks and 97 auxiliaries |
+| All Alice angles, bounded-z source box | Exact order-731 intersection of the two specified local certificate cones; 139 blocks and 2,791 auxiliaries |
 | Global candidates of orders 8,368 and 10,736 | Strict outer approximations, with exact separation proofs |
 | Global candidate of order 13,744 | Forward inclusion; reverse inclusion remains unproved |
 | C160 candidate of order 63,888 | Reverse inclusion remains unproved; full forward inclusion uses the stated extremal-coverage theorem |
@@ -65,6 +68,17 @@ with rational matrices. Its 17-page derivation covers the larger source box
 independent testing rectangle. The matrix arrays and a standard-library
 checker for all 682 coefficient equations are included. This supplies an
 actual local pencil while leaving the other global domains to be covered.
+
+The [reciprocal-angle proof](extracted-lifts/inverse-alice/inverse_alice_all_z_certificate.pdf)
+uses a source rescaling to turn the leading state coupling into a vector of
+norm at most one. The resulting completion works for every positive source
+ratio and gives 51 fixed testing functions. Its seven-page derivation includes
+the exact source bounds and both directions of the order-62 pencil.
+Combined with the inner-angle construction, it covers every projective Alice
+angle for `0<z<=1`, `0<x,sigma<=2^-78/(1+z)` and `|w|<=2^-36`, under the
+printed native gaps. The exact intersection pencil has total order 731.
+The complete companion uses the same cancellation to replace its former
+three C14.1 proofs with one theorem, including the remaining Bob-angle join.
 
 The [tensor-rank note](extracted-lifts/fixed-features/uniform_feature_route.pdf)
 explains why a bound on each square's tensor rank differs from a common
