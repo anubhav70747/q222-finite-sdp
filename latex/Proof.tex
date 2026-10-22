@@ -1,0 +1,433 @@
+% Include in an article with amsmath, amssymb, amsthm and hyperref.
+% Companion cross-references refer to paper-unified/Supplement.tex.
+
+\section{The finite lift and the positivity it requires}
+\label{sec:insight-statement}
+
+Consider two separated quantum systems, with two binary measurements
+on each. Write their eight expectations as
+\[
+ q=(a_0,a_1,b_0,b_1,E_{00},E_{01},E_{10},E_{11}),\qquad
+ p(\alpha,\beta\mid x,y)
+   ={1+\alpha a_x+\beta b_y+\alpha\beta E_{xy}\over4}.
+\]
+Let $\mathcal Q_{222}$ be the set obtained from arbitrary
+finite-dimensional bipartite states and binary measurements.
+
+\begin{theorem}\label{thm:insight-finite-lift}
+There are finite integers $N,p$ and real symmetric matrices of order $N$,
+denoted by $L_0,\ldots,L_8$ and $M_1,\ldots,M_p$, such that
+\[
+ \mathcal Q_{222}
+ =\left\{q\in\mathbb R^8:\ \exists y\in\mathbb R^p,\quad
+       L_0+\sum_{\nu=1}^8q_\nu L_\nu+
+                         \sum_{j=1}^py_jM_j\succeq0\right\}.
+\]
+The matrix entries can be chosen to be real algebraic numbers.
+\end{theorem}
+
+The decisive step is to preserve positivity when the Bell inequality
+and the experiment approach a singular contact independently.
+A stationary contact already determines the global angular minimum
+through a balanced sum of eight Laurent monomials. To obtain a
+finite lift, we must also express the full state quadratic form as
+a sum of squares with the two sets of parameters kept separate.
+The proof below explains this passage. Its source-specific estimates,
+including simultaneous vanishing coefficients and projective
+endpoints, are proved in the complete companion.
+
+The two-qubit reduction gives a fixed polynomial model for the set.
+Two binary measurements can be dilated using one common embedding,
+then decomposed into common blocks of dimension at most two.
+In each block the observables can be written
+\[
+ A_0=B_0=Z,\quad A_1=c_AZ+s_AX,\quad B_1=c_BZ+s_BX,
+ \qquad c_A^2+s_A^2=c_B^2+s_B^2=1,
+\]
+with $X,Z$ the real Pauli matrices. Because these matrices are real,
+the real and imaginary parts of a complex state give a convex
+mixture of real states. Thus, for the polynomial expectation map
+$\Phi$ defined by these observables,
+\begin{equation}\label{eq:insight-finite-model}
+ \mathcal Q_{222}=\operatorname{conv}\Phi(S^1\times S^1\times S^3)
+ =\left\{\sum_{i=1}^{9}w_i\Phi(z_i):
+ w_i\ge0,\ \sum_iw_i=1,\ z_i\in S^1\times S^1\times S^3\right\}.
+\end{equation}
+The first reduction is the usual real-qubit description of this
+scenario~\cite{Masanes}; Chapter~2 proves the dilation,
+block decomposition and both inclusions, including commuting blocks.
+The nine-atom bound is Carath\'eodory's theorem in eight dimensions.
+Equation~\eqref{eq:insight-finite-model} makes the set compact and
+semialgebraic and gives a finite formula over $\mathbb Q$ for its
+extension to any real closed field.
+
+Let $P$ be the cone of affine functions nonnegative on
+$\mathcal Q_{222}$. Such a function is the slack of a Bell bound.
+For separately labelled real closed extensions $K_c,K_t$ of
+$\mathbb R$, put $T=K_c\otimes_{\mathbb R}K_t$ and define
+\begin{equation}\label{eq:insight-tensor-slack}
+ [f,q]=f_0\otimes1+\sum_{\nu=1}^8f_\nu\otimes q_\nu,
+ \qquad f\in P_{K_c},\quad q\in(\mathcal Q_{222})_{K_t}.
+\end{equation}
+The subscripts denote transfer of the fixed finite formulas.
+Scheiderer's Corollary~3.19~\cite{Scheiderer} identifies finite
+semidefinite representability with the following condition:
+for every real closed extension $K/\mathbb R$, every
+$f\in P_K$ and every $q\in(\mathcal Q_{222})_K$, their evaluation
+in two labelled copies of $K$ is a finite sum of squares in
+$K\otimes_{\mathbb R}K$. We prove the stronger statement
+\begin{equation}\label{eq:insight-universal-goal}
+ [f,q]\in\Sigma T^2\qquad
+ \text{for every }K_c,K_t,\ f\in P_{K_c},\ q\in(\mathcal Q_{222})_{K_t}.
+\end{equation}
+No algebraic-disjointness assumption is imposed. The number of
+squares may depend on these choices; the criterion supplies one
+finite lift from the universal assertion.
+
+\section{A stationary contact balances the angular monomials}
+\label{sec:insight-angular}
+
+Choose
+$S=E_{00}-E_{01}+E_{10}+E_{11}$ and write $H=1-S/2$.
+Order its eight losing events as
+\begingroup\setlength{\arraycolsep}{3pt}
+\[
+\begin{array}{c|cccccccc}
+\text{weight}&\lambda_{\rm ev}&n&m&C&A&D&\alpha&\beta\\
+\text{event}&(++|01)&(+-|00)&(+-|11)&(-+|10)&(-+|00)&(-+|11)&(--|01)&(+-|10).
+\end{array}
+\]
+\endgroup
+Every valid slack
+which is negative at the corresponding PR vertex has the unique form
+\begin{equation}\label{eq:insight-event-source}
+ f=dH+4\sum_i c_i p_i,\qquad d>0,\quad c_i\ge0.
+\end{equation}
+Here $p_i$ are its eight losing-event probabilities; evaluating at
+the PR vertex and its eight deterministic neighbours determines
+the coefficients. A slack nonnegative at every PR vertex is a
+nonnegative combination of event probabilities, whose separated
+square certificates are immediate.
+
+For half-angles $u,v$ and a homogeneous real state
+$\psi=(W,X,Y,Z)$, clear the positive measurement denominators and
+the state norm. With $D_u=1+u^2$, $D_v=1+v^2$, the resulting
+quadratic form $F_c=\psi^{\mathsf T}P_c(u,v)\psi$ is
+\begin{align}
+ F_c={}&4\lambda_{\rm ev}D_u(W+vX)^2+4nD_uD_vX^2
+             +4m(vW-X+uvY-uZ)^2\notag\\
+ &+4CD_v(uW-Y)^2+4AD_uD_vY^2
+             +(4D+2d)(uW+uvX-Y-vZ)^2\notag\\
+ &+(4\alpha+2d)D_u(vY-Z)^2
+             +(4\beta+2d)D_v(X+uZ)^2-2dD_uD_vZ^2.
+ \label{eq:insight-parent}
+\end{align}
+Chapter~2, Eq.~(RFA10), gives its homogeneous angle
+form at all projective endpoints. Each event contributes a
+nonnegative amplitude square. The signed CHSH part has just one
+negative square, $-2dD_uD_vZ^2$. For $uv\ne0$, the $Z=0$ block
+of $P_c$ contains the positive-definite form
+\begin{equation}\label{eq:insight-transverse}
+ 2d\bigl[(uW+uvX-Y)^2+(1+u^2)v^2Y^2+(1+v^2)X^2\bigr].
+\end{equation}
+Hence $P_c$ has three positive transverse directions and
+$P_c\succeq0$ is equivalent to $\det P_c\ge0$.
+
+The determinant has a sparse structure:
+\begin{equation}\label{eq:insight-determinant}
+ \begin{gathered}
+ \det P_c=16(1+u^2)^2(1+v^2)^2u^2v^2L_c(u^2,v^2),\\
+ L_c(U,V)=h_c+\sum_{e\in E}q_eU^{e_1}V^{e_2},
+ \end{gathered}
+\end{equation}
+where $E=\{-1,0,1\}^2\setminus\{0\}$ and every $q_e$ is
+nonnegative. The eight factored coefficients are Eq.~(SG6) in
+Chapter~4. Their signs are the reason a local
+stationarity condition determines global physicality.
+
+\begin{lemma}[Balanced angular positivity]\label{lem:insight-balance}
+Suppose $q_e,h_c,U_c,V_c\in K_c$, $q_e\ge0$, $U_c,V_c>0$, and
+$L_c=L_{c,U}=L_{c,V}=0$ at $(U_c,V_c)$. Then the separated
+evaluation of $L_c$ belongs to $\Sigma T^2$ at every positive
+$U,V\in K_t$.
+\end{lemma}
+\begin{proof}
+Put $w_e=q_eU_c^{e_1}V_c^{e_2}$. The three contact equations are
+\[
+ h_c=-\sum_e w_e,\qquad \sum_e w_e e=0.
+\]
+Decompose this nonnegative balanced vector into minimal positive
+dependencies among the eight exponents. A minimal dependency is
+an opposite pair, or, up to symmetries of the square, one of
+\[
+ \{(1,1),(-1,0),(0,-1)\},\qquad
+ \{(1,1),(-1,1),(0,-1)\},
+\]
+with integer weights $(1,1,1)$ and $(1,1,2)$, respectively.
+To obtain the decomposition, subtract from any such active
+dependency its largest nonnegative multiple. At least one active
+coefficient disappears, so this finishes after finitely many steps.
+
+Set $X=U_c^{-1}\otimes U$ and $Y=V_c^{-1}\otimes V$.
+Each dependency now gives positive separated monomials with
+weighted product one. Their nonnegative differences are sums of
+squares by the identities
+\begin{align*}
+ p+p^{-1}-2&=(\sqrt p-p^{-1/2})^2,\\
+ a^3+b^3+c^3-3abc
+ &=\tfrac12(a+b+c)\bigl[(a-b)^2+(b-c)^2+(c-a)^2\bigr],\\
+ a^4+b^4+c^4+d^4-4abcd
+ &=(a^2-b^2)^2+(c^2-d^2)^2+2(ab-cd)^2.
+\end{align*}
+Use cube roots for weights $(1,1,1)$, and fourth roots with the
+last monomial repeated for weights $(1,1,2)$. Every root is taken
+separately in the source and testing fields. Expand each positive
+monomial prefactor before taking its square root. Multiplying by
+the positive source weights and summing proves the assertion.
+\end{proof}
+
+In one field, Lemma~\ref{lem:insight-balance} and
+Eq.~\eqref{eq:insight-transverse} show that a nonnegative event
+source is physical whenever it has a noncommuting stationary zero:
+\begin{equation}\label{eq:insight-contact}
+ P_c(u_c,v_c)\psi_c=0,\qquad
+ \psi_c^{\mathsf T}P_{c,u}(u_c,v_c)\psi_c=
+ \psi_c^{\mathsf T}P_{c,v}(u_c,v_c)\psi_c=0.
+\end{equation}
+The positive transverse block makes its adjugate a positive
+multiple of $\psi_c\psi_c^{\mathsf T}$, so these equations give
+the three scalar contact equations used in the lemma.
+
+This also reduces the supporting inequalities. Normalize
+$d+\sum_i c_i=1$. Call the angular sum coercive when zero lies in
+the interior of the convex hull of its active exponents. Over $\mathbb R$,
+it then diverges whenever $(\log U,\log V)$ leaves every bounded set.
+A coercive extreme source must attain zero;
+otherwise opposite small perturbations remain physical. At a
+fixed zero, Eq.~\eqref{eq:insight-contact} is a system of six
+homogeneous linear equations in the source coefficients. Extremality
+therefore leaves at most six positive event weights. The compatible
+omissions in the eight-event cycle leave at least five. Up to the
+CHSH symmetries, the resulting patterns are precisely
+\begin{equation}\label{eq:insight-two-families}
+\begin{aligned}
+ \mathsf C_1:&\quad\lambda_{\rm ev}=n=0,\quad
+ d,m,C,A,\alpha>0,\quad D,\beta\ge0,\quad D+\beta>0,\\
+ \mathsf C_2:&\quad\lambda_{\rm ev}=\beta=0,\quad
+ d,m,C,A,D,\alpha>0,\quad n\ge0.
+\end{aligned}
+\end{equation}
+Noncoercive sources belong to two closed families with explicit
+small lifts. Chapter~4 proves the extreme-source
+reduction, the compatibility assertion and these closed-family
+lifts. Chapter~5 proves that the actual contacts have
+the required signs and positive native gaps, including $D=0$,
+$\beta=0$ and $n=0$. Thus no positive infinitesimal event is
+discarded by replacing it with zero.
+
+\section{Recovering the full state polynomial at singular contacts}
+\label{sec:insight-normal}
+
+The angular lemma certifies the determinant. It does not yet
+certify the full state polynomial in the separated ring. Ordinary
+state elimination can introduce an inverse depending on both the
+source and the test; such an inverse is not licensed in $T$.
+The local argument keeps the state amplitudes in explicit polynomial
+identities and controls the coefficients of their Gram matrix.
+
+Let $B_c,B_t$ be the bounded elements of the two fields, and put
+$B=B_c\otimes B_t$. The residue $\overline a$ of a bounded tensor
+is obtained by taking the real standard part in each factor.
+
+\begin{lemma}[A strict real Gram matrix]\label{lem:insight-gram}
+If $G\in\operatorname{Sym}_r(B)$ and $\overline G\succ0$, then
+$z^{\mathsf T}Gz\in\Sigma T^2$ for every $z\in T^r$.
+The entries of $z$ need not be bounded or independent.
+\end{lemma}
+\begin{proof}
+First suppose $a\in B$ has positive real residue $a_0$.
+Write $a=a_0+\sum_jx_j\otimes y_j$, with bounded factors and
+an infinitesimal factor in each summand. Distribute $a_0$ into
+positive real numbers $a_j$. If $x_j$ is infinitesimal, choose
+a real $M_j>|y_j|$ and use
+\[
+ a_j+x_j\otimes y_j
+ ={1\over2}\bigl[(a_j/M_j+x_j)\otimes(M_j+y_j)
+                +(a_j/M_j-x_j)\otimes(M_j-y_j)\bigr].
+\]
+Each pure factor on the right is positive and has a square root
+in its own field. Interchange the factors when $y_j$ is
+infinitesimal. Thus $a$ is a tensor sum of squares.
+
+A real congruence reduces the matrix statement to
+$\overline G=I$. Choose real $\delta>0$ with $(r-1)\delta<1$.
+Writing $e_i$ for the coordinate vectors, the exact decomposition
+\[
+\begin{aligned}
+ G={}&\sum_i[G_{ii}-(r-1)\delta]e_ie_i^{\mathsf T}\\
+ &+\sum_{i<j}{\delta+G_{ij}\over2}(e_i+e_j)(e_i+e_j)^{\mathsf T}\\
+ &+\sum_{i<j}{\delta-G_{ij}\over2}(e_i-e_j)(e_i-e_j)^{\mathsf T}
+\end{aligned}
+\]
+has scalar coefficients of positive residue. Apply the scalar
+argument and pair the resulting squares with $z$.
+\end{proof}
+
+Every local certificate reduces to this lemma. If $\Pi$ is a sum
+of positive event squares and $s=s_0+A\xi$ is the chosen state
+substitution, quadratic state degree gives the exact identity
+\begin{equation}\label{eq:insight-whole-state}
+ \begin{gathered}
+ \mathcal R(\xi):=(F-\Pi)(s_0+A\xi)
+        =g_0+\sum_i g_i\xi_i+\xi^{\mathsf T}H\xi,\\
+ g_0=[1]\mathcal R,\qquad g_i=[\xi_i]\mathcal R,\qquad
+ H_{ij}=\tfrac12\partial_{\xi_i}\partial_{\xi_j}\mathcal R.
+ \end{gathered}
+\end{equation}
+The scalar $g_0$, every first state-normal coefficient $g_i$ and
+the whole state Hessian $H$ must be included. Monic polynomial
+division at the contact expresses their vanishing factors in the
+angular roots. The raw monomial support and the source bounds
+then show that the resulting coefficient corrections have zero
+residue. Contact vanishing alone does not provide either assertion.
+The exact restricted division theorem is in
+Section~6.2; the common polynomial
+coefficient operations are in Section~B.1.1.
+
+A useful uniform step removes a choice between a vanishing state
+coefficient and a vanishing angular coefficient.
+
+\begin{lemma}[Complementary source weights]\label{lem:insight-complementary}
+Let $a,b\ge0$ be source coefficients with $S=a+b$ a positive
+bounded unit. Suppose $\ell,c_i\in B$ have zero residue and
+\[
+ \sqrt b\,\ell\Gamma=\sum_i c_i z_i.
+\]
+Then $\ell\Gamma$ is a linear combination, with zero-residue
+bounded coefficients, of $\sqrt a\Gamma,z_1,\ldots,z_m$.
+This includes either weight equal to zero.
+\end{lemma}
+\begin{proof}
+Use the exact identity
+\[
+ \ell\Gamma={\sqrt a\,\ell\over S}(\sqrt a\Gamma)
+                  +{\sqrt b\over S}\sum_i c_i z_i.
+\]
+Only the positive source unit $S$ is inverted. Both sets of
+coefficients are bounded with zero residue.
+\end{proof}
+
+Here is a small polynomial example of the conductor step.
+Let $k>0$ be a source infinitesimal, $s>0$ a bounded source
+element, and $u,v>0$ independent testing elements. Put
+\[
+ U_1=u^2v,\quad U_2=kuv^2/s,\quad U_3=k^2s,\quad g=kuv,
+ \qquad d_i=U_i-g.
+\]
+Then $U_1U_2U_3=g^3$. With $p_i=U_i^{1/3}$,
+\[
+ \sum_i U_i^2-3g^2
+ =\sum_i d_i^2+
+       g(p_1+p_2+p_3)\sum_{i<j}(p_i-p_j)^2\in\Sigma T^2.
+\]
+Thus the angular identity supplies three unit diagonal coefficients
+on $d_1,d_2,d_3$. The exact polynomial relations
+\begin{equation}\label{eq:insight-polynomial-conductors}
+ g(u-k)=k d_1,\qquad g(v-s)=s d_2
+\end{equation}
+express contact factors in those same roots, with no division by
+$u-k$ or $v-s$. The first coefficient is infinitesimal. If $s$
+is a unit, the second becomes a zero-residue correction only when
+the complete state-normal term supplies an additional small
+coefficient. That coefficient bound is part of the full state-normal
+calculation; stationarity alone does not supply it.
+
+The C1 application, Theorem~B.23,
+combines polynomial conductors with complementary source weights.
+Its statement gives the exact source domain, and its proof verifies
+the complete state-normal bounds uniformly over that domain.
+It covers all infinitesimal independent $u,w$, every state ratio,
+and both $D=0$ and $\beta=0$; separate complementary results
+supply the unit-Alice and other projective tests.
+
+The C2 construction uses the same operations on the full state
+polynomial: positive event squares remain whole, polynomial contact
+relations produce angular roots, and a strict real matrix controls
+the remaining directions. Its shared local and complementary
+identities are Sections~C.3.1
+and~C.3.2; the bounded-ratio theorem is
+Section~C.11.6. The hypotheses of these
+statements are proved from the original source coefficients.
+They are not consequences of the determinant identity alone.
+
+\begin{proposition}[Complete canonical certificate]
+\label{prop:insight-canonical}
+Let $K_c,K_t$ be any separately labelled real closed extensions
+of $\mathbb R$. For a source in either family
+\eqref{eq:insight-two-families} with an actual finite noncommuting
+stationary zero~\eqref{eq:insight-contact}, the complete homogeneous parent
+belongs to $\Sigma T^2$ at every independent projective testing
+pair and every homogeneous real or complex state.
+\end{proposition}
+\begin{proof}
+The full source-dependent proof is in the complete companion.
+After normalizing $d=1$, the source ratio
+\[
+ \delta={d\over d+\lambda_{\rm ev}+n+m+C+A+D+\alpha+\beta}
+\]
+is either a positive unit or a positive infinitesimal. A unit
+gives bounded source coefficients and is covered by
+Chapter~A. The infinitesimal case is covered by the
+C1 and C2 source theorems in Chapters~B
+and~C. Those chapters prove the source partitions
+and the coefficient estimates needed in
+Eq.~\eqref{eq:insight-whole-state}, and give all complementary
+testing and state charts. The noncommuting-residue theorem
+(Theorem~6.2) applies at arbitrary source
+scale. Literal commuting tests have a positive CHSH slack directly.
+The homogeneous parent includes both zero and infinite half-angles.
+The proofs retain the permitted literal $D=0$, $\beta=0$ and
+$n=0$ faces. Applying the real result separately to the real and
+imaginary state parts gives the complex-state result.
+\end{proof}
+
+\section{Assembly and the extraction of an exact pencil}
+\label{sec:insight-assembly}
+
+The source reduction in Chapter~4 expresses any
+valid slack as a nonnegative combination of at most nine event,
+closed-family or stationary source slacks. Its fixed finite formula
+transfers to $K_c$. Equation~\eqref{eq:insight-finite-model} gives
+at most nine testing atoms in $K_t$. Events, the explicit
+closed-family lifts and Proposition~\ref{prop:insight-canonical}
+certify every source/test atom pair. If
+\[
+ f=\sum_j a_jf_j,\qquad q=\sum_iw_iq_i,\qquad
+ a_j,w_i\ge0,\quad\sum_iw_i=1,\quad
+ [f_j,q_i]=\sum_k h_{ijk}^2,
+\]
+then exactly
+\[
+ [f,q]=\sum_{i,j,k}
+       \bigl[(\sqrt{a_j}\otimes\sqrt{w_i})h_{ijk}\bigr]^2.
+\]
+The normalized testing weights preserve the affine constant.
+All positive source and testing normalizations are
+restored by square roots in their own fields, as in Eq.~(RFA13)
+of Chapter~2. This proves
+Eq.~\eqref{eq:insight-universal-goal}. Scheiderer's criterion now
+gives one finite semidefinite representation of all eight coordinates.
+
+Finally, at any fixed $N,p$, equality between the proposed projection
+and Eq.~\eqref{eq:insight-finite-model} is a first-order condition
+over $\mathbb Q$ on the matrix entries: positive semidefiniteness
+is expressed by its principal minors. A real solution therefore
+has a solution in the real algebraic field. This proves the
+algebraic-coefficient assertion in
+Theorem~\ref{thm:insight-finite-lift}. It also gives an exact
+extraction procedure in principle: enumerate the finite size pairs,
+decide each existence sentence by quantifier elimination, and
+return an algebraic sample for the first successful pair.
+The theorem ensures termination. No successful full-set pencil or
+useful size bound has been evaluated here; finding a small explicit
+representation requires further constructive work.

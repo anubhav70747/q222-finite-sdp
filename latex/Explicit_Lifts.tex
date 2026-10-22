@@ -1,0 +1,620 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,hyperref}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathcal Q_{222}}
+\newcommand{\Id}{\mathbb I}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\title{Explicit semidefinite representations and local certificates for Q222}
+\author{}
+\date{23 October 2026}
+\begin{document}
+\maketitle
+
+We use the eight coordinates
+\[
+ q=(a_0,a_1,b_0,b_1,E_{00},E_{01},E_{10},E_{11}).
+\]
+The recovered evaluated matrices give an exact representation of a
+two-dimensional projection, two explicit local feature constructions,
+and four full-coordinate outer approximations. They do not give an
+evaluated exact lift of the full eight-coordinate set. This distinction
+is independent of the qualitative finite-lift existence theorem.
+
+\section{An exact two-coordinate projection}
+
+Put $t=a_0$ and $s=E_{00}+E_{01}+E_{10}-E_{11}$.
+\begin{theorem}
+The image of $\Q$ in these coordinates is
+\[
+ \mathcal T=\{(t,s): |t|\leq1,\quad t^2+s^2/4\leq2\}.
+\]
+It has the explicit order-four representation
+\begin{equation}
+ D(t,s)=\operatorname{diag}\left(
+ \begin{pmatrix}\sqrt2+t&s/2\\s/2&\sqrt2-t\end{pmatrix},
+ 1-t,1+t\right)\succeq0.                    \label{eq:direct}
+\end{equation}
+There are no auxiliary variables. All coefficients belong to
+$\mathbb Q(\sqrt2)$, with $\sqrt2$ the positive root of $x^2-2$.
+\end{theorem}
+\begin{proof}
+Binary observables can be dilated to reflections with the same local
+embedding, preserving all eight expectations. For reflections define
+\begin{align*}
+ S&=A_0(B_0+B_1)+A_1(B_0-B_1),\\
+ S'&=A_0(B_0-B_1)+A_1(B_0+B_1),\\
+ T_\alpha&=\alpha A_0+S,\qquad R_\alpha=\alpha A_1-S'.
+\end{align*}
+Reflection relations and cross-party commutation give
+\[
+ T_\alpha^2+R_\alpha^2=(8+2\alpha^2)\Id.
+\]
+Indeed $S^2+(S')^2=8\Id$, and the linear terms cancel since
+$\{A_0,S\}=\{A_1,S'\}$. With $\beta=\sqrt{8+2\alpha^2}$ this gives
+\[
+ \beta\Id-T_\alpha
+ =\frac{(\beta\Id-T_\alpha)^2+R_\alpha^2}{2\beta}\succeq0.
+\]
+Thus $\alpha t+s\leq\sqrt{8+2\alpha^2}$. For $|t|\leq1$, take
+$h=\sqrt{2-t^2}$ and $\alpha=2t/h$. The result is $s\leq2h$.
+Flipping both Bob outcomes gives $-s\leq2h$.
+
+Conversely fix $t\in[-1,1]$, put $r=\sqrt{1-t^2}$, and take
+\[
+ |\psi_t\rangle=\sqrt{\frac{1+t}{2}}|00\rangle+
+                  \sqrt{\frac{1-t}{2}}|11\rangle,
+ \quad A_0=Z,\quad A_1=X,\quad B_{0,1}=\frac{Z\pm rX}{h}.
+\]
+These are reflections, and their behavior is
+\[
+ \left(t,0,\frac t h,\frac t h,\frac1h,\frac1h,
+                   \frac{1-t^2}{h},-\frac{1-t^2}{h}\right).
+\]
+It projects to $(t,2h)$. The Bob flip realizes $(t,-2h)$; a finite
+classical mixture realizes every intermediate $s$. At $t=\pm1$ the
+same construction remains defined since $h=1$.
+
+Finally \eqref{eq:direct} forces $|t|\leq1$. On this interval its
+two-by-two diagonal entries are strictly positive, and its determinant
+is $2-t^2-s^2/4$. These conditions prove both matrix inclusions.
+\end{proof}
+
+In the original eight coordinates the coefficient matrices of
+\eqref{eq:direct} are particularly simple. Write $\mathsf e_{ij}$ for matrix
+units with indices $1,\ldots,4$. Then
+\[
+ \begin{aligned}
+ A_0&=\operatorname{diag}(\sqrt2,\sqrt2,1,1),&
+ A_{a_0}&=\operatorname{diag}(1,-1,-1,1),\\
+ A_{E_{00}}=A_{E_{01}}=A_{E_{10}}
+   &=\tfrac12(\mathsf e_{12}+\mathsf e_{21}),&
+ A_{E_{11}}&=-\tfrac12(\mathsf e_{12}+\mathsf e_{21}),
+ \end{aligned}
+\]
+and $A_{a_1}=A_{b_0}=A_{b_1}=0$. Their feasible set in $\R^8$ is
+the inverse image of $\mathcal T$, not $\Q$.
+
+\subsection{Fixed features and an auxiliary-variable version}
+
+On $\mathcal T$ define the five fixed testing functions
+\[
+ u_1=\sqrt{\sqrt2+t},\quad u_2=s/(2u_1),\quad
+ u_3=\sqrt{\sqrt2-t-u_2^2},\quad
+ u_4=\sqrt{1-t},\quad u_5=\sqrt{1+t}.
+\]
+Their roots are defined on the whole set because
+$\sqrt2+t\geq\sqrt2-1>0$ and
+$(\sqrt2+t)u_3^2=2-t^2-s^2/4\geq0$. The within-block products in
+the spaces $(u_1,u_2)$, $(u_3)$, $(u_4)$, $(u_5)$ are exactly
+\[
+ u_1^2=\sqrt2+t,\quad u_1u_2=s/2,\quad u_2^2=y,\quad
+ u_3^2=\sqrt2-t-y,\quad u_4^2=1-t,\quad u_5^2=1+t.
+\]
+Thus an extracted lift with $N=5,m=1$ is
+\begin{equation}
+ L(t,s,y)=\operatorname{diag}\left(
+ \begin{pmatrix}\sqrt2+t&s/2\\s/2&y\end{pmatrix},
+ \sqrt2-t-y,1-t,1+t\right).                 \label{eq:lift}
+\end{equation}
+For $(t,s)\in\mathcal T$, the witness
+$y=s^2/[4(\sqrt2+t)]$ makes every block positive semidefinite.
+Conversely \eqref{eq:lift} gives
+$s^2/[4(\sqrt2+t)]\leq y\leq\sqrt2-t$ and $|t|\leq1$,
+which imply the defining ellipse inequality. This also proves the
+elimination of $y$ without a closure argument.
+
+The same fixed functions certify every affine support. For a source
+tilt $\alpha$ and sign $\epsilon=\pm1$, put
+\[
+ \gamma=\sqrt{4+\alpha^2},\quad
+ v_0=\sqrt{(\gamma-\alpha)/2},\quad
+ v_1=-\epsilon\sqrt{(\gamma+\alpha)/2}.
+\]
+Then $v_0v_1=-\epsilon$ and, in separately labelled real closed
+source and testing fields,
+\[
+ \sqrt2\gamma\otimes1-\alpha\otimes t-1\otimes\epsilon s
+ =(v_0\otimes u_1+v_1\otimes u_2)^2+(v_1\otimes u_3)^2.
+\]
+The support value is $h(\alpha)=\sqrt{8+2\alpha^2}$ for
+$|\alpha|\leq2$, and $h(\alpha)=2+|\alpha|$ otherwise.
+For the latter range, $\sigma=\operatorname{sgn}\alpha$ gives
+\[
+ 2+|\alpha|-\alpha t-\epsilon s
+ =4-2\sigma t-\epsilon s+(|\alpha|-2)(1-\sigma t).
+\]
+The first term uses the displayed square identity at $\alpha=2\sigma$;
+the last uses $u_4^2$ or $u_5^2$. Positive constants use
+$1=(u_4^2+u_5^2)/2$. Scaling these slacks and adding a positive
+constant covers every affine function nonnegative on $\mathcal T$.
+This includes unbounded source tilts and all tilt endpoints without
+identifying the two field copies.
+
+\subsection{An exact obstruction to treating this as the full set}
+
+The rational behavior
+\[
+ q_*=(0,0,0,0,1,1,1/4,-1/4)
+\]
+has nonnegative nonsignalling probabilities
+$p(a,b|x,y)=(1+abE_{xy})/4$. Its maximum absolute CHSH value over
+the eight sign patterns is $5/2<2\sqrt2$. Every marginal is zero,
+so it satisfies every standard relabelled single-marginal tilted-CHSH
+inequality, whose bound is at least $2\sqrt2$. It also lies in
+\eqref{eq:direct}, since $t=0,s=5/2$ and $s^2/4=25/16<2$.
+
+It is not quantum. After dilation and purification, $E_{00}=E_{01}=1$
+would imply
+\[
+ \|(A_0-B_y)\psi\|^2=2-2E_{0y}=0\quad(y=0,1).
+\]
+Hence $(B_0-B_1)\psi=0$, forcing $E_{10}-E_{11}=0$, whereas the
+displayed point gives $1/2$. Thus intersecting all these projected
+lifts and the probability inequalities still does not recover $\Q$.
+
+\section{An evaluated regular-C2 local certificate}
+
+The following construction recovers a complete local coefficient lift.
+Its domain is part of the assertion. For the seven-source order
+$(d,n,m,C,A,D,\alpha)$, the full quarter-parent is
+\begin{align*}
+ \widetilde P={}&nD_uD_vX^2+m(vW-X+uvY-uZ)^2+CD_v(uW-Y)^2+AD_uD_vY^2\\
+ &+(D+d/2)(uW+uvX-Y-vZ)^2+(\alpha+d/2)D_u(vY-Z)^2\\
+ &+(d/2)D_v(X+uZ)^2-(d/2)D_uD_vZ^2,
+ \qquad D_u=1+u^2,\quad D_v=1+v^2.
+\end{align*}
+Set only $d=Z=1$, and write $P_c(z)$, where
+$c=(n,m,C,A,D,\alpha)$ and $z=(u,v,W,X,Y)$. The exact anchors are
+\[
+ c_*=(7/8,9/8,1/18,11/8,9/8,1/18),\qquad
+ \theta_*=(1,1,1,-1/10,1/10).
+\]
+Let $F(c,\theta)=(P_c,\partial_uP_c,\partial_vP_c,
+\partial_WP_c,\partial_XP_c,\partial_YP_c)(\theta)$.
+Put $s=(c-c_*,h)$, $h=\theta-\theta_*$, and independently
+$t=z-\theta_*$. The source domain and testing box are exactly
+\[
+ F(c,\theta)=0,\quad |s_i|\leq\rho\ (i=1,\ldots,11),\qquad
+ |t_j|\leq\rho\ (j=1,\ldots,5),\qquad
+ \rho=\frac{510101005}{350806159660744}.
+\]
+The value equation supplies the remaining homogeneous $Z$ derivative
+by Euler's identity. The six-by-six source Jacobian has determinant
+$114048/78125$ at the anchor. On this entire contact box its relative
+row-norm perturbation is at most
+$11650604933999/11225797109143808<1$, so the source solution is unique
+for any fixed contact in the box. No global cover is implied.
+
+Here is an exact finite prescription for all the features and matrices.
+Expand $P_c(\theta+\Delta)$ and remove degree zero and one in
+$\Delta$. Allocate each remaining monomial to a symmetric matrix $H$:
+use the first coordinate with exponent at least two as a diagonal
+square; if none exists, use the first two occupied coordinates and
+put half the coefficient in each symmetric off-diagonal entry. Then
+\[
+ P_c(\theta+\Delta)=P_c(\theta)+\nabla P_c(\theta)^T\Delta+
+                                      \Delta^TH\Delta
+\]
+is an exact polynomial identity with no Taylor remainder. At the anchor
+$H_0=LD_0L^T$, where
+\[
+ L=\begin{pmatrix}
+ 1&0&0&0&0\\
+ -9801/10201&1&0&0&0\\
+ 1210/10201&8991/20002&1&0&0\\
+ 10080/10201&-5040/10001&79/1010&1&0\\
+ -10120/10201&5060/10001&-119/1010&2/81&1
+ \end{pmatrix},
+\]
+\[
+ D_0=\operatorname{diag}\left(\frac{10201}{3600},
+ \frac{20002}{91809},\frac{27775}{10001},\frac{891}{202},\frac{1067}{162}\right).
+\]
+Thus $f=L^Tz$, $\widehat H=L^{-1}HL^{-T}$ give the correctly oriented
+identity $\Delta^TH\Delta=(\Delta f)^T\widehat H\Delta f$.
+Put $\varepsilon=10001/918090$. Use the 25 linear forms
+$\ell_k=f_i$ and $f_i\pm f_j$, in that order, with coefficients
+\[
+ \widehat H_{ii}-8\varepsilon,\qquad
+ \varepsilon+\widehat H_{ij}/2,\qquad
+ \varepsilon-\widehat H_{ij}/2.
+\]
+Each coordinate participates in four pairs, so the pair diagonal
+contribution is exactly $8\varepsilon$. Substitute $\Delta=t-h$ and
+write the resulting coefficient polynomials as $\gamma_k(s,t)$.
+Their constants are at least $\varepsilon$, and their largest
+nonconstant coefficient norm is exactly
+\[
+ B_*=\frac{43803942777143}{46827180450},\qquad
+ \rho=\frac{\varepsilon}{8(1+B_*)}<\tfrac12.
+\]
+All these rational coefficient data are given in the accompanying
+\path{regular-c2-local/regular_c2_frames.json}.
+
+For completeness, the separation of every coefficient into nonnegative
+pure factors has a uniform exact formula. Group its support uniquely as
+\[
+ \gamma=\gamma_0+G(s)+T(t)+\sum_{\beta\ne0}A_\beta(s)t^\beta,
+\]
+where $G,T,A_\beta$ have zero constant. Define
+\[
+ \sigma_\beta=\sum_a|[s^a]A_\beta|,\quad
+ U_\beta=A_\beta+\sigma_\beta\rho,\quad
+ V_\beta=t^\beta+\rho^{|\beta|},\quad
+ B=\sum_\beta\sigma_\beta\rho^{|\beta|+1},
+\]
+\[
+ \begin{aligned}
+ p(s)&=\gamma_0/2-B/2+G(s)-\sum_\beta\rho^{|\beta|}A_\beta(s),\\
+ q(t)&=\gamma_0/2-B/2+T(t)-\sum_\beta\sigma_\beta\rho\,t^\beta.
+ \end{aligned}
+\]
+Expansion proves $\gamma=p+q+\sum U_\beta V_\beta$.
+On the independent boxes, $U_\beta,V_\beta\geq0$. If $g,r,M$ are
+the coefficient norms of $G,T,\sum A_\beta t^\beta$, then
+$g+r+M\leq B_*$, $B\leq\rho M$, and
+\[
+ p,q\geq\gamma_0/2-\tfrac32\rho(g+r+M)
+       \geq5\varepsilon/16>0.
+\]
+These inequalities prove all root signs, including box boundaries.
+
+For each frame and each pair $(U,V)=(p,1),(1,q),(U_\beta,V_\beta)$,
+use the testing vector and source matrix
+\[
+ \psi_b(t)=\sqrt{V(t)}\binom{1}{\ell_k(t)},\qquad
+ Q_b(s)=U(s)\begin{pmatrix}\ell_k(h)^2&-\ell_k(h)\\-\ell_k(h)&1\end{pmatrix}.
+\]
+Then $Q_b\succeq0$ and
+$\psi_b^TQ_b\psi_b=UV(\ell_k(t)-\ell_k(h))^2$. The 735 mixed
+pairs and 50 pure pairs give exactly 785 blocks of order two and
+1570 listed testing functions. Contact makes the discarded constant
+and linear Taylor terms zero, proving the full-parent identity.
+The same proof is a tensor sum of squares in independently labelled
+real closed fields because each square root is taken in its own field.
+
+The within-block products are $V,V\ell_k,V\ell_k^2$. Let
+$m_0,\ldots,m_{236}$ be the lexicographically ordered union of their
+monomial supports. Define exact rational arrays by coefficient extraction
+\[
+ \psi_{b,i}\psi_{b,j}=\sum_kp_{b,ij,k}m_k,
+ \qquad \widetilde P_{\lambda}(\theta_*+t,1)
+             =\sum_{k,\nu}T_{k\nu}\lambda_\nu m_k,
+ \quad\lambda=(d,n,m,C,A,D,\alpha).
+\]
+The evaluated data contain 27747 nonzero product coefficients and
+295 nonzero target coefficients. The exact coefficient lift is
+\[
+ \sum_{b,i\leq j}(2-\delta_{ij})p_{b,ij,k}G_{b,ij}
+       =\sum_\nu T_{k\nu}\lambda_\nu\quad(k=0,\ldots,236),
+ \qquad G_b\succeq0.
+\]
+It has 2355 upper-triangular Gram variables and 237 equations.
+Every feasible point gives the displayed nonnegative polynomial
+identity; every source in the contact box has the explicit feasible
+matrices above. Equality with the entire cone of polynomials nonnegative
+on the box is not asserted. This is a local certificate lift in source
+coordinates, not an eight-coordinate quantum-set lift.
+
+\section{A second recovered local feature library}
+
+The September C1D construction gives a different explicit finite local
+library. Its source domain is
+\[
+ 0<a\leq1,\quad0<b,q\leq\epsilon,\quad0<r<1,\quad0<E\leq1,
+ \qquad\epsilon=1/2788018,
+\]
+with independent tests $|u|,|v|,|W|,|X|,|Y|\leq\epsilon$, $Z=1$.
+Put $e^2=E$, $r_r^2=r$, $s_s^2=1-r$ with positive roots. Its five
+separated roots are
+\[
+ \begin{pmatrix}
+ uW-b^2v\\buv\\b^2(v^2-q^2)\\
+ (b/e)(X+u)-a^2b^3q^2e\,vW\\(Y-ruW)/(r_rs_s)
+ \end{pmatrix}.
+\]
+The recovered full source Gram is $8I_5$ plus a polynomial correction
+whose upper coefficient norm is $1394008$. Each correction monomial
+contains a small source or testing variable. Hence its row perturbation
+is less than $1/2$ on this rectangle, uniformly without lower bounds on
+$E,r,1-r$.
+
+For a scalar channel $\rho+\sum\beta_mC_m\otimes T_m$, set
+$S=\sum|\beta_m|$. Choose the small pure factor as $t_m$, absorb
+the sign into it, and call the other factor $l_m$. Each term has
+$|t_m|\leq\epsilon$, $|l_m|\leq1$, and $\rho/S>\epsilon$.
+The exact identity
+\[
+ \rho/S+t_m\otimes l_m
+ =\tfrac12\{(\rho/S+t_m)\otimes(1+l_m)
+              +(\rho/S-t_m)\otimes(1-l_m)\}
+\]
+uses nonnegative factors on their own sides. The 25 diagonal and pair
+channels produce 82928 tensor squares. The data specify all 41464 term
+pairs and all pure-factor radical choices.
+
+After adjoining the 1212 testing radicals, the fixed testing spanning
+functions are the 3844 listed pairs of
+\[
+ \kappa\zeta_j\chi_a,\qquad
+ \chi_a\in\{1,uW,v,uv,v^2,X+u,vW,Y\},
+\]
+where
+$\kappa^2(1+u^2)(1+v^2)(1+W^2+X^2+Y^2)=1$.
+Box equations $\operatorname{box}_t^2+t^2=\epsilon^2$ and the
+printed radical equations give 1223 algebra variables and 1218 equations.
+The testing image is this entire closed local box. The list is not
+claimed linearly independent. Neither its union with the regular-C2
+library nor its own local identities establishes a finite global cover.
+The original polynomial allocation multipliers and pure-factor
+restoration are preserved beside the library; they are required to
+identify its source Gram with the original Bell slack.
+
+\section{Evaluated full-coordinate outer pencils}
+
+The recovered data include the following actual rational matrices.
+Here $N$ is the total block-diagonal order and $m$ is the auxiliary
+dimension; none of these rows is an evaluated exact full-set lift.
+\begin{center}
+\begin{tabular}{rrrl}
+\toprule
+$N$&$m$&nonzero records&reverse inclusion\\\midrule
+8368&16480&55712&disproved\\
+10736&21472&72608&disproved\\
+13744&29920&153248&unproved\\
+63888&31111&455750&unproved (C160)\\\bottomrule
+\end{tabular}
+\end{center}
+For the first three files a record $[k,i,j,a]$ adds $a$ to the upper
+entry $(i,j)$ of $A_0$ if $k=0$, of $A_k$ if $1\leq k\leq8$, and
+of $B_{k-9}$ otherwise. Mirror each off-diagonal once. The represented
+set is
+\[
+ \mathcal O_N=\{q:\exists y\in\R^m,
+                A_0+\sum_{k=1}^8q_kA_k+\sum_{j=0}^{m-1}y_jB_j\succeq0\}.
+\]
+Here the auxiliary variables and matrices are indexed from zero,
+so a coefficient index $k=9+j$ multiplies $y_jB_j$.
+C160 instead stores $[b,i,j,k,p,q]$, meaning the entry $p/q$ in
+block $b$ and coefficient $k$ with the same visible/auxiliary convention.
+Its block orders and all 455750 records are supplied explicitly.
+
+The first three constructions dualize finite cones of globally valid
+source certificates, with exact source maps, all source signs, and
+explicitly positive strict source points. An elementary adjoint argument
+then proves $\Q\subseteq\mathcal O_N$: if $L(c,z)$ is a source
+certificate pencil with a strict positive point, the image
+$\{L^*(Y):Y\succeq0\}$ is closed. Indeed bounded adjoint images,
+paired with the strict source point, bound $\operatorname{tr}Y$;
+subsequential limits give closedness. Bipolarity identifies the dual of
+the projected source cone with the attained adjoint image. Exact linear
+elimination supplies every affine auxiliary coordinate in the recovered
+primal arrays. Thus source-certificate soundness gives the quantum
+forward inclusion, not its converse.
+
+For $N=13744$ the source certificates use four blocks of orders
+$(14,15,14,15)$ for C1 and $(15,14,14,15)$ for C2 in the full identity
+\[
+ (1+u)(1+v)F_c=\sum_{g\in\{0,1\}^2}u^{g_1}v^{g_2}
+                                       f_g^TG_gf_g,\quad G_g\succeq0.
+\]
+The multiplier is pure testing and positive for $u,v>0$; state sign
+gauges and homogeneous limits give the other charts. The global pencil
+retains 128 C1 copies, 64 C2 copies, 64 adjacent and 32 opposite exact
+closed-face copies, and 16 event inequalities. Their local orders and
+auxiliaries give exactly $N=13744,m=29920$, with 2928 blocks of maximum
+order 15. Adequacy of these fixed features for every physical source is
+not established by their coefficient matching identities.
+
+\subsection{Why the two smaller global candidates are strictly outer}
+
+The exact physical C1 source is
+\[
+ \begin{aligned}
+ d&=1,&m&=\frac{1166523000}{31661820415017653},&
+ C&=\frac{322803000}{186199784281},\\
+ A&=\frac{218288946200}{1359122513},&
+ D&=\frac{90943434293}{222507771414},&
+ \alpha&=\frac{248802430236}{3300726103},\\
+ \beta&=\frac{205476973}{51646655494}.&&&&
+ \end{aligned}
+\]
+It has the contact $(u,v;\psi)=(1/13,16;140,-1/32,1/50,1)$.
+Its complete state-kernel and angular equations hold exactly. Its six
+positive Laurent determinant weights balance around zero, so the
+elementary weighted AM--GM identity proves determinant nonnegativity.
+The positive $m,C,A$ rows have a strict complementary state block;
+the Schur complement therefore proves physicality, including signs
+and homogeneous endpoints.
+
+Let $f_*=J_1c_*$, where
+\[
+ \begin{aligned}
+ (J_1c)_0&=d+m+C+A+D+\alpha+\beta,\\
+ (J_1c)_{1:4}&=(-A-\alpha,m-C-D+\beta,C+A-\beta,-m+D-\alpha),\\
+ (J_1c)_{5:8}&=(-d/2-A,d/2+\alpha,-d/2-C-\beta,-d/2-m-D).
+ \end{aligned}
+\]
+The four kernel equations, two angular equations and two deterministic
+zeros have rank eight in the nine affine coefficients: the indicated
+eight-column minor is
+\[
+ \frac{409072768794400177096031164572864}{10770194675703125}\ne0.
+\]
+In any positive physical decomposition every summand obeys these same
+eight equations. It is therefore proportional to $f_*$, with a
+nonnegative scalar. Thus $f_*$ is an extreme physical ray.
+
+For the actual order-$8368$ and order-$10736$ source cones the only
+nonnegative component preimages of this ray are $c_*$ and
+$\sigma_1c_*=(d,C,m,\alpha,\beta,A,D)$. The complete source-map
+arrays retain the finite screen establishing this statement. The
+preserved positive rational dual matrices give, on the actual C1
+coefficient pencil, the trace identities
+\[
+ \sum_b\operatorname{tr}(Y_b^{(0)}L_b(c,y))=\ell(c)-d,\qquad
+ \sum_b\operatorname{tr}(Y_b^{(1)}L_b(c,y))=\ell(\sigma_1c)-d,
+\]
+where $\ell(c)=93424\,\psi_*^TP_c(u_*,v_*)\psi_*-d$ and
+$\ell(c_*)=-1$. Every auxiliary coefficient is zero, and all dual
+matrices are positive definite. The Gram trace at the proposed source
+is therefore $-2$: the further subtraction of $d$ is the actual scalar
+certificate coefficient, not a change of parent normalization. Hence
+neither permitted preimage lies in its certificate cone.
+
+These finite source sums are closed: positive finite evaluation moments
+bound all Gram matrices of convergent certificate sources, and the
+positive affine constant bounds each nonnegative component in the sum.
+Thus separating $f_*$ from the closed source sum gives a point of its
+dual violating $f_*$. The event rays force its constant coordinate to
+be positive, so it normalizes to $(1,q)$ with $q\notin\Q$.
+Consequently
+\[
+ \Q\subsetneq\mathcal O_{8368},\qquad
+ \Q\subsetneq\mathcal O_{10736}.
+\]
+This proof gives strictness; it does not print one numerical behavior
+and thousands of auxiliary coordinates. It does not refute the enlarged
+order-$13744$ or the separate C160 candidate.
+
+\subsection{The C160 moment construction and its coverage dependency}
+
+For the fourth candidate use angular parameters
+$z=(k,x_0,y_0,x_1,y_1)\in[0,1]^5$ with
+\[
+ ky_0(1-x_0)\geq x_0(1-y_0),\quad
+ kx_1(1-y_0)\geq y_0(1-x_1),\quad
+ ky_1(1-x_1)\geq x_1(1-y_1).
+\]
+Call this domain $T$. Put $d(t)=(1-t)^2+t^2$,
+$c(t)=(1-2t)/d(t)$, $s(t)=2t(1-t)/d(t)$ and
+$D=(1+k^2)d(x_0)d(y_0)d(x_1)d(y_1)$, so $1/16\leq D\leq2$.
+The physical map is
+\[
+ \Phi_{A_x}=\frac{1-k^2}{1+k^2}c(x_x),\quad
+ \Phi_{B_y}=\frac{1-k^2}{1+k^2}c(y_y),\quad
+ \Phi_{E_{xy}}=c(x_x)c(y_y)+\frac{2k}{1+k^2}s(x_x)s(y_y).
+\]
+Its stated full-quantum coverage is
+\begin{equation}
+ \Q=\operatorname{conv}\bigl(\{\ell_1,\ldots,\ell_{16}\}
+            \cup\bigcup_{g\in\mathcal G}g\Phi(T)\bigr),
+ \label{eq:c160-coverage}
+\end{equation}
+where $\mathcal G$ contains the 128 local relabellings and party swaps.
+The recovered construction invokes the Barizien--Bancal extremal
+characterization~\cite{BB} for \eqref{eq:c160-coverage}. This external coverage
+theorem and its coordinate interface are a dependency of its full-$\Q$
+forward inclusion; they were not independently re-proved in this
+extraction. The following moment statement itself is direct.
+
+Let $p_e=\prod_i p_{e_i}(z_i)$ for
+$(p_0,p_1,p_2)=((1-t)^2,t(1-t),t^2)$ and $e\in\{0,1,2\}^5$.
+There are 243 moments. The 160 printed feature blocks have entries
+$\sqrt{w_b/D}$ times products of $z_i$ or $1-z_i$, where every
+$w_b$ is a nonnegative rational multiple of the cube factors and the
+three displayed domain inequalities. Their orders sum to 499.
+The source cache prints all product coefficients in the $p_e$ basis
+and all nine target columns $D,-D\Phi_1,\ldots,-D\Phi_8$.
+For $z\in T$, the exact witness $Y_e=p_e(z)/D(z)$ makes every moment
+block the rank-one Gram of its feature vector, and the target map gives
+$(1,\Phi(z))$. Nine independent target equations eliminate nine moments,
+leaving 234 canonical auxiliaries. Thus
+$\operatorname{conv}\Phi(T)$ lies in the canonical order-499 projection.
+
+Block zero has weight one, includes all five variables, and its products
+span all 243 moments. The exact constant-column Gram
+\[
+ Q_D=\begin{pmatrix}I_{16}&I_{16}\\I_{16}&2I_{16}\end{pmatrix}\succ0
+\]
+bounds the trace of its PSD moment block at mass one and forces every
+moment to vanish at mass zero. Therefore the canonical projection is
+compact and its homogenization introduces no nonzero zero-mass point.
+Taking 128 copies and 16 nonnegative deterministic weights, then
+eliminating nine independent weights, gives
+$N=128\cdot499+16=63888$ and $m=128\cdot243+7=31111$.
+This proves the forward inclusion subject to
+\eqref{eq:c160-coverage}. The reverse inclusion would require a
+universal adequacy theorem for this particular fixed 160-block space;
+neither the Dirac witnesses nor exact elimination supplies it.
+
+\section{The effective construction that remains unevaluated}
+
+There is a precise finite search, conditional only on the independently
+established qualitative existence theorem. The full quantum set has a
+rational first-order membership formula using nine real two-qubit atoms:
+each atom has a unit real four-state vector and two unit measurement
+circles, and its eight outputs are Pauli expectation polynomials. Nine
+convex weights suffice by Carath\'eodory in $\R^8$. This gives 81
+existential variables, 36 equations, nine inequalities and degree at most
+five, covering complex mixed models by realification and direct sums.
+
+For a proposed single PSD order $N$, set $D=N(N+1)/2$. Any auxiliary
+matrix span compresses to at most $D$ variables. Let $c$ contain all
+unknown entries of $A_0,A_1,\ldots,A_8,B_1,\ldots,B_D$. The sentence
+\[
+ \exists c\ \forall q\quad
+ [\operatorname{Phys}(q)\ \longleftrightarrow\
+       \exists y\in\R^D:L_c(q,y)\succeq0]
+\]
+is a rational first-order sentence, with PSD replaced by all principal
+minors. Quantifier elimination decides it. If true over $\R$, it is true
+over the real algebraic numbers, so exact algebraic coefficient witnesses
+can be extracted with real-root selection data. Enumerating $N=1,2,\ldots$
+terminates if some finite lift exists. This is an effective procedure;
+it supplies no evaluated order, coefficient tuple or useful running-time
+bound until executed.
+
+The stored three-block order-two instance has 162 unknown coefficients
+and nine auxiliaries and is explicitly unsolved. Existence of an arbitrary
+finite SDP lift does not ensure termination of an order-two-only search.
+
+The unevaluated global tasks are therefore concrete: E1 requires the
+selected global testing functions, product basis and dimensions; E2
+requires one fixed exact original-coordinate pencil; E3 requires both
+full-set inclusions for that same pencil. Local certificates, rejected
+outer candidates and an executable first-order input do not by themselves
+complete these tasks.
+
+\section*{Scientific data and exact checks}
+
+The accompanying \path{extracted-lifts/} directory contains the exact
+projection matrices and checker; the complete regular-C2 feature and
+product arrays with an independent standard-library checker; the C1D
+local square library, source multipliers and algebra; and all four global
+outer matrices with source maps and separator data. Its README specifies
+the two COO conventions and the status of each construction. In the
+two disproved candidate files only scientific scope metadata was updated;
+all coefficient and block arrays are unchanged. Provenance records bind
+the source bytes and the copied mathematical data. No matrix here is
+presented as an exact full-$\Q$ lift.
+\begin{thebibliography}{1}
+\bibitem{BB} V. Barizien and J.-D. Bancal,
+\emph{Quantum statistics in the minimal scenario},
+\href{https://arxiv.org/abs/2406.09350}{arXiv:2406.09350} (2024),
+Theorem 1 and its full-alternance parametrization.
+\end{thebibliography}
+\end{document}

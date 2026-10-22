@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "exact_assertions": 260,
+  "allocations": [
+    {
+      "target": "scalar",
+      "original_target_terms": 2045,
+      "multiplier_terms": 13805
+    },
+    {
+      "target": "x",
+      "original_target_terms": 568,
+      "multiplier_terms": 6292
+    },
+    {
+      "target": "y",
+      "original_target_terms": 884,
+      "multiplier_terms": 6724
+    }
+  ],
+  "physical_polynomial_terms": 5011,
+  "epsilon": "1/2788018",
+  "coefficient_l1": "1394008",
+  "strict_positive_coefficient_example": {
+    "b": "1/5576036",
+    "q": "1/5576036",
+    "a": "1/2",
+    "r": "1/2",
+    "E": "1/2",
+    "coefficients": {
+      "d": {
+        "positive": true,
+        "numerator_digits": 220,
+        "denominator_digits": 234
+      },
+      "e2": {
+        "positive": true,
+        "numerator_digits": 165,
+        "denominator_digits": 221
+      },
+      "e3": {
+        "positive": true,
+        "numerator_digits": 220,
+        "denominator_digits": 221
+      },
+      "e4": {
+        "positive": true,
+        "numerator_digits": 220,
+        "denominator_digits": 221
+      },
+      "e5": {
+        "positive": true,
+        "numerator_digits": 207,
+        "denominator_digits": 234
+      },
+      "alpha": {
+        "positive": true,
+        "numerator_digits": 180,
+        "denominator_digits": 234
+      },
+      "beta": {
+        "positive": true,
+        "numerator_digits": 220,
+        "denominator_digits": 234
+      }
+    }
+  },
+  "proof_scope": "complete full physical C1D Z=1 identity and uniform local parameter rectangle; no universal master coverage",
+  "elapsed_seconds": 4.21134877204895
+}

@@ -31,7 +31,16 @@ polynomial. Coefficients need not be expanded to define them. All
 support, divisibility, source-bound and residue verifications remain
 part of the relevant calculation below.
 
-\section{The C2 source cases}
+The proof follows the source geometry. We first determine the stationary
+coefficients and treat two weak complementary events by a weighted radial
+completion. The remaining families are organized by the scales of the actual
+angles. For one small angle the state parameter separates bounded and
+unbounded source scales; for two small angles the source ratios define
+R1--R10. Within each family the scalar calculation is completed by the
+state-normal and complementary-testing arguments.
+
+\section{Stationary sources and their classification}
+\subsection{Source domains}
 \label{component:pe351eb06b28b}
 \label{pe351eb06b28b:sec:c2-complete-source-routing}
 The native entry theorem supplies an actual physical stationary source
@@ -87,9 +96,8 @@ bounded-unit, and unbounded finite actual angles. The complete cases are
  \mathrm{OO}&\text{reflected II}&\text{reflected weak II}.
 \end{array}
 \]
-Each entry refers to the full-parent calculations below, including all
-independent testing angles and states. Their exact source bounds are
-also proved below; the following inequalities explain exhaustion.
+Each source domain is treated below for all independent testing angles and
+states. The following bounds establish that these domains exhaust the source.
 
 If $C,\alpha$ are both weak, the four event-cycle physicality tests
 force $n,m,A,D$ unbounded. One test is
@@ -172,7 +180,7 @@ The remaining reflected entries follow from
 \eqref{eq:c2-short-reflection}. The directed weak OO entry is the
 following weak-II calculation.
 
-\subsection{The directed weak II source}
+\subsubsection{The directed weak II source}
 \label{component:pec6c617d3a3d}
 \label{pec6c617d3a3d:sec:weak-c2-complete-join-rederived}
 Use $z=u_c^2$, $y=v_c^2$, $H=v_cY_c$,
@@ -216,8 +224,7 @@ unbounded-coefficient equivalences
 \end{array}
 \]
 For $t$ unbounded, $j\sim1$ and $D=O(1/t)$.
-These are bounds on the actual source, not on a modified coefficient
-tuple.
+These estimates concern the original source.
 
 Split $t$ first. Infinitesimal $t$ is R1 and unbounded $t$ is R2,
 proved below with their complete scalar and both-normal calculations.
@@ -253,7 +260,7 @@ formal negative-$\beta$ tuple physical. These source splits and the
 finite and homogeneous outer calculations below exhaust every
 independent testing pair and state.
 
-\section{The stationary source}\label{component:p6e5d41ed80b3}\label{app:c2-source}
+\subsection{Stationary coefficients and contact}\label{component:p6e5d41ed80b3}\label{app:c2-source}
 In this appendix, $c$ denotes the actual half-angle and
 $C$ the event weight previously denoted $c$. Set
 \[
@@ -281,9 +288,8 @@ Its exact contact is
 \label{eq:c2-native-contact}\end{equation}
 The positive chart requires $a,c,b,t>0$, $0<r<1$, $h,g,j>0$,
 $1-zh>0$, $b-a^2zr>0$, and nonnegative original event weights.
-The source identities and the full independent-test radial certificates
-are included in the accompanying inherited calculations; the source-entry
-proof above imposes no hidden shape-unit hypothesis.
+The source-entry proof uses this positive chart without a shape-unit
+assumption.
 
 The numerator has the useful positive identity
 \[
@@ -297,10 +303,10 @@ For the determinant calculation use the aliases
  \qquad(e_1,e_2,e_3,e_4,e_5)=(n,m,C,A,D).
 \]
 
-\subsection{Uniqueness of the stationary coefficients}\label{component:p61209c7390b0}
+\subsubsection{Uniqueness of the stationary coefficients}\label{component:p61209c7390b0}
 \label{sec:c2-contact-determinant}
 
-Here is a reproducible uniqueness check for the six source coefficients.
+The six stationary coefficients are unique, as follows.
 Let $M$ have rows indexed by $(W,X,Y,Z,u,v)$ and columns equal to the
 derivatives of
 \[
@@ -354,10 +360,10 @@ Each source coefficient occurs with a factor $4$ in the parent, so the
 stationary linear system in $(e_1,e_2,e_3,e_4,e_5,\alpha)$ has determinant
 $4^6\det M$.  On the positive source domain this is nonzero.  Since the
 six source formulas above satisfy all six stationary equations,
-they are their unique solution.  This checks exact coefficient entry,
-independently of the subsequent asymptotic Gram argument.
+they are the unique stationary coefficients.
 
-\section{\texorpdfstring{Two weak complementary events force the C2 radial certificate}{Two weak complementary events force the C2 radial certificate}}
+\section{Two weak complementary coefficients}
+\subsection{Entry from two weak coefficients}
 \label{component:p534f57e1da6f}
 
 \label{p534f57e1da6f:sec:chart-free-c2}
@@ -420,8 +426,7 @@ The last inequality follows by squaring the positive quantities
 \begin{equation}
                          H\ge-2uv\,\|\psi\|^2.        \label{p534f57e1da6f:eq:cf-core-bound}
 \end{equation}
-This is an exact ordered-field inequality, not a truncated expansion.
-It is the usual quadratic CHSH excess in the present normalization.
+This is the quadratic CHSH bound in the present normalization.
 
 At a normalized zero contact, every event term is nonnegative. Define
 the four matching amplitudes, in the fixed order \((n,A,m,D)\), by
@@ -498,8 +503,6 @@ both \(W,Z\) units. Consequently
 \[
                   X/u,\ Y/u,\ R_m/u,\ R_D/u\longrightarrow0.
 \]
-This is relative coalescence, which the compact-angle argument alone
-does not establish.
 
 Normalize \(W=1\) by a pure coefficient factor. Write
 \[
@@ -595,13 +598,12 @@ These definitions give exactly
 h=b-a^2t,\qquad
 g=(1+c^2)b-(1-r+a^2c^2t),\qquad j=1+c^2r-t.
 \]
-There is no remaining sign-entry assumption.
 
 Finally the stationary coefficient matrix has the nonzero determinant
 \[
 4^6[-64ac^6rgt\,hj(1-c^2h)(1+c^2)^2(1+a^2c^2)^2\Delta].
 \]
-The inherited short three-by-three reduction proves this formula.
+The preceding three-by-three reduction gives this determinant.
 For \(z=c^2\), its positive expansion is
 \[
 \Delta=1+(1+z)b+z(1+z)b^2+2z(1+z)br+z^2r^2+2zr
@@ -610,21 +612,16 @@ For \(z=c^2\), its positive expansion is
 The original coefficients
 therefore equal the unique positive rational C2 source formulas.
 In particular their positive numerator identity forces \(C,\alpha>0\).
-If \(c\) is infinitesimal, the complete small-angle radial theorem,
-including its outer-test corollary, applies. If \(c\) is a unit,
-the inherited ordinary-angle radial corollary applies. The precise
-source files are identified in the reproduction paragraph below. These certificates concern
-the full parent and arbitrary independent testing fields. Reflect back
-when required and restore \(d\) by a pure coefficient square root.
-This proves Theorem~\ref{p534f57e1da6f:thm:chart-free-c2}.
+If \(c\) is infinitesimal, apply the small-angle radial theorem and its
+outer-test corollary; if \(c\) is a unit, apply the ordinary-angle radial
+corollary. Reflect back when necessary and restore \(d\) by a pure-source
+square root. This proves Theorem~\ref{p534f57e1da6f:thm:chart-free-c2}.
 
-The conclusion closes the full two-weak-complementary-event
-\emph{finite-contact} C2 branch, not just a preselected rational chart.
-It does not assert that every weak-\(C\) source has weak \(\alpha\).
-The explicit one-weak escape family in the following supplement shows
-why that remaining implication fails.
+This covers the finite-contact two-weak branch. Weak \(C\) alone need
+not imply weak \(\alpha\); the one-weak family below supplies the
+complementary case.
 
-\section{\texorpdfstring{Matching both weak C2 positive square terms to the four strong positive square terms}{Matching both weak C2 positive square terms to the four strong positive square terms}}
+\subsection{Matching the weak coefficients to the strong events}
 \label{component:p8b53b68d8af6}
 
 \label{p8b53b68d8af6:sec:c2-matching-strength}
@@ -685,12 +682,9 @@ the reflected parent.  Its infinity-infinity chart is precisely the
 original zero-zero chart.  Restore the homogeneous pure-testing
 factors to obtain the certificate there as well.
 
-Every noncommuting residue test is covered by the already-established
-physical-source theorem, after positive pure-coefficient normalization
-if a coefficient is unbounded.  Undoing that normalization preserves
-SOS.  These alternatives exhaust the tests, and real/imaginary splitting
-handles complex states.  No coefficient scale was compared with an
-independent testing scale.
+For noncommuting residue tests apply the physical-source theorem, using
+positive pure-source normalization when a coefficient is unbounded.
+Restore that factor and split real and imaginary state parts.
 \end{proof}
 
 \begin{corollary}[Radial C2 source with ordinary contact angles]
@@ -758,12 +752,11 @@ this its global minimum.  The determinant criterion and homogeneous
 continuity prove physicality, exactly as for the small-angle source.
 Theorem~\ref{p8b53b68d8af6:thm:c2-matching-strength} now applies.
 
-This corollary concerns the stated radial subfamily of the ordinary
-source-angle cell.  It does not assert that every ordinary-angle C2
-source has the required matching strengths or enters this subfamily.
+The corollary applies to the stated radial subfamily of the ordinary-angle
+cell.
 \end{proof}
 
-\section{The weighted two-weak radial case}
+\subsection{Weighted radial completion}
 \label{component:p9f1235511111}
 \label{component:p53752031d16c}
 \label{component:p163e0ebf59f6}
@@ -986,7 +979,7 @@ state charts are exhaustive. Homogeneous restoration and real/imaginary
 splitting prove every state. Section~\ref{component:pc7dacaa3258e}
 then proves all other independent projective testing pairs.
 
-\section{\texorpdfstring{All outer tests for the all-small C2 radial family}{All outer tests for the all-small C2 radial family}}
+\subsection{Complementary testing angles}
 \label{component:pc7dacaa3258e}
 
 \label{pc7dacaa3258e:sec:c2-radial-all-tests}
@@ -1098,7 +1091,7 @@ $1/\sqrt{Ce_i}$ are bounded by hypothesis, and
 $\sqrt{C/A}=C/\sqrt{CA}$ is infinitesimal.
 All coefficients of this Gram are therefore in the bounded tensor
 ring.  Every displayed correction has zero residue, whereas its five
-positive positive square term pivots have residue $4$.  Thus its residue is exactly
+positive square term pivots have residue $4$.  Thus its residue is exactly
 \[
              4(K_1^2+K_2^2+K_4^2+K_5^2+T_C^2)\succ0.
 \]
@@ -1188,13 +1181,13 @@ No coefficient-entry claim is made here for C2 sources outside the
 stated radial family.
 \end{proof}
 
-\section{The shared II calculation}
+\section{Strong sources with two small actual angles}
 The following full-parent polynomial identities and normal divisions are
 also used by the C1 coefficient domains. Their use there requires the
 C1 source bounds and coefficient identities proved in the C1 chapter;
 it does not use a C2 source conclusion with altered coefficients.
 
-\section{\texorpdfstring{A complete local strong-II Gram with independent testing rates}{A complete local strong-II Gram with independent testing rates}}
+\subsection{Local strong-II Gram}
 \label{component:pe16499ccc4c6}
 
 \label{pe16499ccc4c6:sec:r7-local-strong-II}
@@ -1501,17 +1494,15 @@ joined by the separate direct-parent remote certificate.
 \paragraph{Source input.}
 Source contact and stationarity follow from the native-entry identification in Chapter~\ref{ch:entry} and the exact source formulas in Section~\ref{component:p6e5d41ed80b3}. The scaled bounds used above are the II specialization of GE1--GE2 in Section~\ref{component:pf5726218aec8}, recorded there as DI7.
 
-\section{\texorpdfstring{The entire remote complement of strong C2 II}{The entire remote complement of strong C2 II}}
+\subsection{Complementary strong-II tests}
 \label{component:p590112f102bd}
 
 \label{p590112f102bd:sec:r7-c2-remote}
 
-This section is a full-parent tensor-SOS case.  It applies to the
-original C2 positive chart with $z,y$ infinitesimal and $B=H+L$ a
-positive unit, and to every testing pair for which at least one testing
-angle is not infinitesimal.  Literal testing axes and projective
-infinities are included in the assertions below.  The local case in
-which both testing angles are infinitesimal is not asserted here.
+Use the positive C2 source with $z,y$ infinitesimal and $B=H+L$ a
+positive unit. We prove the full parent for every testing pair with at
+least one noninfinitesimal angle, including literal axes and projective
+infinities. The double-small testing chart was treated above.
 
 \paragraph{Source constants, including all openings.}
 Put $t=L/y$, $j=1+zr-t$, and write $h=\operatorname{res}H$.
@@ -1608,7 +1599,7 @@ needed below is the polynomial identity
  a x\ell-b^2z_0\ell=bVq.                                \tag{RR6}
 \]
 For a real cap $0<\beta_0<\alpha$, the original parent divided
-by $4(1+u^2)$ is the sum of the explicitly positive positive square terms
+by $4(1+u^2)$ is the sum of the explicitly positive square terms
 \[
  \begin{split}
  &nD_vX^2+m\{b(vW-X)+a(vY-Z)\}^2+N^2+Cv^2E^2\\
@@ -1682,7 +1673,7 @@ On these three roots and $(V,q)$, (RR9) has positive diagonal
 residue; the only off-block term is $D_vbVq$, whose coefficient
 is infinitesimal.  The negative perturbation changes only the
 $(z_0-\ell)^2$ coefficient by an infinitesimal.  Its Gram is again
-strict.  Formula (RR7) restores all retained positive positive square terms.
+strict.  Formula (RR7) restores all retained positive square terms.
 The argument does not divide by $u,v,b$, or any state coordinate,
 so the asserted literal boundaries are included.
 \end{proof}
@@ -1696,7 +1687,8 @@ Combined with a separately verified full-parent case of that
 local region, they close the strong II/HH orbit by the exact C2
 reflection.  They do not close the $B$-infinitesimal weak face.
 
-\section{\texorpdfstring{Physical entry excludes a small state parameter}{Physical entry excludes a small state parameter}}
+\section{One small actual angle: bounded state scale}
+\subsection{A lower bound on the state parameter}
 \label{component:p7294aae40ee2}
 
 \label{p7294aae40ee2:sec:c2-bounded-state-entry}
@@ -1735,7 +1727,7 @@ joint necessary degeneration $r_0=g_0=0$, hence $b_0=1$; the other
 remaining scale is unbounded $b$.  This is a necessary source
 reduction, not a certificate for the joint degeneration.
 
-\section{\texorpdfstring{A bounded-shape one-weak C2 family, at all tests}{A bounded-shape one-weak C2 family, at all tests}}
+\subsection{A bounded-shape family at all tests}
 \label{component:pec59340d644f}
 
 \label{pec59340d644f:sec:c2-general-single-angle}
@@ -2152,7 +2144,7 @@ No mixed inverse and no comparison of independent infinitesimals
 occurs.  Applying the strict bounded-tensor Gram lemma completes
 the proof.
 
-\section{\texorpdfstring{The one-weak C2 family with three arbitrarily small openings}{The one-weak C2 family with three arbitrarily small openings}}
+\subsection{Three arbitrarily small source openings}
 \label{component:p81893ad08bed}
 
 \label{p81893ad08bed:sec:c2-three-openings}
@@ -2179,11 +2171,8 @@ independent projective measurement pairs and all real or complex
 projective states.  Literal $n=0$ is included.
 \end{theorem}
 
-We write $\rho=\sqrt x$, $\eta=h/b$, and retain the exact source
-quantities $A_c,S_c,\Delta$ from that section.  All arguments below
-take place over the independent coefficient and testing fields.
-Every coefficient inverse used below is pure coefficient or pure
-testing, as specified; no mixed denominator is inverted.
+Write $\rho=\sqrt x$, $\eta=h/b$, and retain the source quantities
+$A_c,S_c,\Delta$ from that section.
 
 \paragraph{Entry and the two complementary openings.}
 First the former assumptions that $1-r$ and $b-k^2r$ are units follow
@@ -2436,7 +2425,7 @@ both have unbounded ratios to this scale because $h+(b-h)=b$ is a unit.  There i
 prescribed comparison between these coefficient scales and any
 testing infinitesimal.
 
-\section{\texorpdfstring{The remaining opening when the opposite event is bounded}{The remaining opening when the opposite event is bounded}}
+\subsection{The remaining opening with bounded opposite event}
 \label{component:pd7bd7f0d7fb6}
 
 \label{pd7bd7f0d7fb6:sec:c2-last-opening}
@@ -2650,7 +2639,7 @@ result does not yet treat unbounded $b$ or a degenerate residue of
 the finite actual angle $k$.  Section~\ref{p7294aae40ee2:sec:c2-bounded-state-entry}
 excludes infinitesimal $b$ under these entry hypotheses.
 
-\section{\texorpdfstring{The joint rational C2 opening: a full-parent certificate}{The joint rational C2 opening: a full-parent certificate}}
+\subsection{Joint opening of the two event coefficients}
 \label{component:p8f912583feaa}
 
 \label{p8f912583feaa:sec:c2-joint-centered}
@@ -2666,13 +2655,10 @@ and every independent projective pair of testing angles.  No lower
 bound on either $h$ or $b-h$ is required.
 \end{theorem}
 
-Together with the three-opening and last-opening theorems this
-removes the condition that at least one of $r,g$ be a unit in the
-bounded-$k,b$ rational C2 source family.  It does not classify all
-physical one-weak C2 sources, nor admit a nonunit $k$ or unbounded $b$.
-All tensor-ring conventions and the strict bounded tensor Gram lemma
-are those of the authoritative package.  In particular, a root vector
-need not be linearly independent, and its entries may be unbounded.
+Together with the three-opening and last-opening theorems this covers
+the bounded-$k,b$ rational source family without requiring either $r$
+or $g$ to be a unit. Nonunit $k$ and unbounded $b$ remain separate
+source domains.
 
 \paragraph{Source bounds, including both complementary openings.}
 Write $\rho=\sqrt{x}$, $\eta=h/b$, $\kappa=b/k$, $K=k_0>0$,
@@ -2701,7 +2687,7 @@ Put $H_c=x(C+A)$.  This quantity is bounded below by a positive
 real, although it can be unbounded.  Its reciprocal and reciprocal
 square root are bounded pure coefficient elements.
 
-\paragraph{Center the excess positive positive square terms before taking normals.}
+\paragraph{Center the excess positive square terms before taking normals.}
 Retain exactly the original amplitudes
 \[
  M=vW-X+uvY-uZ,\qquad J=uW+uvX-Y-vZ,
@@ -2957,15 +2943,12 @@ unit $u$ axis, both reciprocal axes, all their intersections, and
 literal projective ends.  The inherited physical
 noncommuting-residue theorem covers the remaining tests.
 
-These charts and the entire finite $u=0$ axis exhaust all independent
-projective measurement pairs.  All state charts were restored above;
-complex states split into their real and imaginary parts as in the
-prior proof.  Every inverse or radical used in a tensor coefficient
-is pure coefficient or pure testing.  No comparison of a source
-infinitesimal with a testing infinitesimal, and no mixed inverse
-or radical, occurs.  Restoring the retained positive square terms proves the theorem.
+These charts and the finite $u=0$ axis exhaust the projective measurement
+pairs. Restore the retained squares and homogeneous factors, then apply
+the real identities to the real and imaginary state parts.
 
-\section{\texorpdfstring{The exact unbounded-state-scale C2 complement}{The exact unbounded-state-scale C2 complement}}
+\section{One small actual angle: unbounded state scale}
+\subsection{Source reduction at unbounded state scale}
 \label{component:pb60046a37191}
 
 \label{pb60046a37191:sec:c2-unbounded-b-reduction}
@@ -3051,7 +3034,7 @@ closes the remaining infinitesimal-$B$ leaf without assuming a bounded
 actual state ratio. Thus both unbounded-$b$ leaves, as well as all
 bounded-$b$ openings, are now covered. Literal $n=0$ is preserved.
 
-\section{\texorpdfstring{A homogeneous scalar lift at the unbounded-state contact}{A homogeneous scalar lift at the unbounded-state contact}}
+\subsection{Homogeneous completion of the scalar graph}
 \label{component:pbb29c73cc124}
 
 \label{pbb29c73cc124:sec:unbounded-b-homogeneous-scalar}
@@ -3212,7 +3195,7 @@ strictly positive.  This proves the scalar strict bounded Gram for
 all homogeneous states in the matched-angle chart.  Full normals
 and the other testing charts remain separate requirements.
 
-\section{\texorpdfstring{The unbounded-$b$ source with $xb$ infinitesimal}{The unbounded-b source with xb infinitesimal}}
+\subsection{The case $b$ unbounded and $xb$ infinitesimal}
 \label{component:pab6222b899ef}
 
 \label{pab6222b899ef:sec:c2-unbounded-b-small-B}
@@ -3529,17 +3512,14 @@ corners, and literal projective endpoints have strict bounded
 Grams.  The inherited physical noncommuting-residue theorem covers
 all remaining testing pairs.
 
-The finite-axis certificates above are homogeneous in the state,
-including the previously problematic unbounded actual state
-ratio.  Splitting a complex state into its real and imaginary
-parts proves the complex assertion without an additional chart.
-All inverses and radicals used in coefficients are pure coefficient
-or pure testing operations; every displayed mixed quotient is
-explicit monic polynomial division.  The roots may be unbounded.
-The strict bounded tensor Gram lemma and restoration of the retained
-positive square terms complete the all-tests proof.
+The finite-axis identities are homogeneous in the state and include
+unbounded actual state ratios. Every mixed quotient used above is a
+monic polynomial quotient; coefficient inverses and radicals remain in
+one labelled field. Restore the retained squares and apply the strict
+bounded-Gram lemma to each real and imaginary state part.
 
-\section{\texorpdfstring{C2 pitchfork with two arbitrarily large retained events}{C2 pitchfork with two arbitrarily large retained events}}
+\section{One small actual angle: strong complementary events}
+\subsection{Two unbounded retained events}
 \label{component:p0c7a15f800d9}
 
 \label{p0c7a15f800d9:sec:c2-two-large}
@@ -3823,7 +3803,7 @@ $(m,C,D,\alpha;u_c,v_c)\mapsto(D,\alpha,m,C;1/v_c,1/u_c)$ supplies
 its corresponding reflected domain. No exhaustive C2 join follows
 from these two domains alone.
 
-\section{\texorpdfstring{C2 pitchfork with three arbitrary event weights}{C2 pitchfork with three arbitrary event weights}}
+\subsection{Three arbitrary event weights}
 \label{component:p6c62a53b1454}
 
 \label{p6c62a53b1454:sec:c2-three-large}
@@ -4039,13 +4019,10 @@ neighborhoods have strict-residue Grams, including literal zeros
 and infinities. These expressions use only the bounded selected
 parent; no residue of an unbounded $A$ or $D$ is taken.
 
-All other commuting tests use the same cap and the already printed
-open-axis and corner forms in the preceding all-tests proof. Their
-hypotheses require only the four lower bounds supplied by (TA5).
-Noncommuting residue tests use the retained arbitrary-physical-source
-theorem. Restore the positive pure factors and split complex states
-into real and imaginary parts. This completes every independent
-test for the stated source domain.
+For every other commuting test, the open-axis and corner forms of the
+preceding proof apply with the four lower bounds (TA5). Noncommuting
+residue tests use the physical-source theorem. Restore the positive pure
+factors and split complex states into real and imaginary parts.
 
 \paragraph{Coverage gained and remaining restriction.}
 The theorem removes every relative-scale restriction among $n,A,D$
@@ -4055,7 +4032,7 @@ $\alpha/d$ are bounded units and this actual-angle residue type.
 Unbounded $C/d$ or $\alpha/d$, other actual-angle types, and the
 exhaustive C2 join remain outside this theorem.
 
-\section{\texorpdfstring{Strong C2 pitchfork with arbitrary complementary scales}{Strong C2 pitchfork with arbitrary complementary scales}}
+\subsection{Arbitrary complementary event scales}
 \label{component:pf7943b34a7dc}
 
 \label{pf7943b34a7dc:sec:strong-complement-pitchfork}
@@ -4516,15 +4493,13 @@ coefficient and testing factors, and split complex states into real
 and imaginary parts. No source infinitesimal was compared with an
 independent testing infinitesimal anywhere in the argument.
 
-\paragraph{Exact scope.}
-This completes the strong C2 finite pitchfork for $C/d,\alpha/d$
-bounded below, with arbitrary upper scales of all six events.
-The reflected actual-contact domain follows by the established C2
-reflection. It does not cover other actual-angle residue types or
-sources in which either complementary ratio has no positive real
-lower bound; no exhaustive global C2 join is asserted here.
+\paragraph{Domain.}
+This proves the finite pitchfork when $C/d,\alpha/d$ have positive real
+lower bounds, with arbitrary upper event scales, and its C2 reflection.
+Other actual-angle types and vanishing complementary lower bounds remain
+separate cases.
 
-\section{\texorpdfstring{Strong C2 source entry at an infinitesimal first angle}{Strong C2 source entry at an infinitesimal first angle}}
+\subsection{Source bounds from an infinitesimal first angle}
 \label{component:pf5726218aec8}
 
 \label{pf5726218aec8:sec:strong-angle-entry}
@@ -4649,7 +4624,8 @@ are units.  Finally the exact GE1 identity
 is bounded.  No lower bound on $r$, $j$, or $1-H$ was imposed,
 and the argument includes $n=0$.
 
-\section{\texorpdfstring{The directed weak-$C$ IH source}{The directed weak-C IH source}}
+\section{One small and one unbounded actual angle}
+\subsection{Source bounds for weak $C$}
 \label{component:p93b05ea6ad1e}
 
 \label{p93b05ea6ad1e:sec:c2-weak-ih-frontier}
@@ -4741,14 +4717,13 @@ If $\rho$ is infinitesimal then $e$ is a unit and $D$ is weak;
 if $\rho$ is a unit then $D$ is strong. Literal $n=0$ remains
 allowed throughout the reduction. No lower bound on $r$ was used.
 
-\section{\texorpdfstring{An exact full-parent Gram at the interior IH double corner}{An exact full-parent Gram at the interior IH double corner}}
+\subsection{Interior double corner}
 \label{component:pc00b84929b12}
 
 \label{pc00b84929b12:sec:c2-weak-ih-interior-corner}
 
-This is a local testing-chart theorem. It does not admit its source
-subdomain at all independent tests. In particular, no conclusion for
-remote commuting testing corners is included below.
+This proof covers the stated local testing chart; the remote commuting
+charts are treated below.
 
 \begin{theorem}[Full-parent IH corner, interior shape]
 Use the exact positive C2 source with $d=1$, the omitted original
@@ -4993,7 +4968,7 @@ and states stated in the theorem.
 
 This calculation proves the interior $0<\rho_0<1$ testing corner. Section~\ref{component:p18dbedfff317} treats the source endpoints; Sections~\ref{component:p0fb32cd2f1bc} and~\ref{component:pf95b1c5fc32f} prove the other testing charts.
 
-\section{\texorpdfstring{Weak IH: the two source endpoints}{Weak IH: the two source endpoints}}
+\subsection{The two source endpoints}
 \label{component:p18dbedfff317}
 
 \label{p18dbedfff317:sec:weak-ih-endpoints}
@@ -5135,7 +5110,7 @@ $1-\rho$ is infinitesimal. Along with the preserved interior proof
 and the $\rho_0=0$ argument, every allowed source shape is covered
 at the independent testing corner $u,w$ infinitesimal.
 
-\section{\texorpdfstring{Weak-$C$ IH: the open testing axis}{Weak-C IH: the open testing axis}}
+\subsection{The open testing axis}
 \label{component:pf95b1c5fc32f}
 
 \label{pf95b1c5fc32f:sec:weak-ih-open-axis}
@@ -5303,7 +5278,7 @@ positive square terms proves the assertion.  The argument is valid for arbitrary
 including $n=0$, and literal projective $w=0$; no comparison between source
 and testing infinitesimals was used.
 
-\section{\texorpdfstring{Weak IH: all remote testing charts}{Weak IH: all remote testing charts}}
+\subsection{Complementary tests for weak $C$}
 \label{component:p0fb32cd2f1bc}
 
 \label{p0fb32cd2f1bc:sec:weak-ih-remote}
@@ -5426,7 +5401,7 @@ positive-residue lemma and the retained squares prove tensor SOS.
 These charts, the open-axis theorem, and the three local source-shape
 proofs cover every independent testing pair.
 
-\section{\texorpdfstring{Strong IH: the complete local corner}{Strong IH: the complete local corner}}
+\subsection{Local completion for strong $C$}
 \label{component:pf3e0ca8bf054}
 
 \label{pf3e0ca8bf054:sec:strong-ih-local}
@@ -5522,7 +5497,7 @@ $C-c_*$ squares. This holds for all states and all independent local
 tests, for both opening endpoints, for arbitrary $n\ge0$, and at
 literal $u=0$ or $w=0$.
 
-\section{\texorpdfstring{Strong IH: remote charts and the all-tests join}{Strong IH: remote charts and the all-tests join}}
+\subsection{Complementary tests for strong $C$}
 \label{component:p7405dbf89341}
 
 \label{p7405dbf89341:sec:strong-ih-remote}
@@ -5692,7 +5667,8 @@ state normals and the omitted original $\lambda,\beta$ remain zero.
 Therefore the entire strong IH source leaf has all-tests tensor-SOS
 case, including $n=0$ and every projective endpoint.
 
-\section{\texorpdfstring{The exact strong-C2 ordinary--small source reduction}{The exact strong-C2 ordinary--small source reduction}}
+\section{One ordinary and one small actual angle}
+\subsection{Source reduction at an ordinary--small contact}
 \label{component:pc3daa35e9a9b}
 
 \label{pc3daa35e9a9b:sec:ui-full-parent-reduction}
@@ -5941,13 +5917,12 @@ certificate supplies the complete normal lift, cap choice, and strict
 Gram. The outer-angle and other commuting-axis join remains a separate
 obligation, so this reduction adds no all-tests source case.
 
-\section{\texorpdfstring{A reciprocal contact completion for a singular angle}{A reciprocal contact completion for a singular angle}}
+\subsection{Reciprocal completion of a singular angle}
 \label{component:pa142a027a282}
 
 \label{pa142a027a282:sec:ui-reciprocal-contact}
 
-The following exact algebraic lemma isolates a useful mechanism. It
-does not assert a complete C2 all-tests theorem.
+The following algebraic identity applies at the indicated singular angle.
 
 \begin{lemma}[Reciprocal contact completion]
 Let $A_0,A_2$ be symmetric matrices over a real closed field, let
@@ -6051,7 +6026,7 @@ Section~\ref{pc3daa35e9a9b:sec:ui-full-parent-reduction}. The complete local lif
 Gram is proved in Section~\ref{p76545700d90b:sec:local-ui-certificate}; the outer
 projective join remains a separate obligation.
 
-\section{\texorpdfstring{A local strong-C2 certificate at the ordinary--small contact}{A local strong-C2 certificate at the ordinary--small contact}}
+\subsection{Local contact certificate}
 \label{component:p76545700d90b}
 
 \label{p76545700d90b:sec:local-ui-certificate}
@@ -6293,14 +6268,12 @@ diagonals are positive. The entire six-root residue Gram is now
 positive definite. The strict-residue Gram lemma proves the exact
 bounded remainder plus relative positive square term is tensor SOS.
 
-Finally restore every centered excess and both other C/D positive square terms.
-The construction was homogeneous in $W$ and its state inverse was
-polynomial, so it includes $W=0$ and every projective state. Real and
-imaginary parts give complex states. This completes only the stated
-local independent-test domain; the outer-angle and other commuting-axis
-certificates are still required before admitting the full UI source leaf.
+Restore the centered excesses and the other C/D squares. The construction
+is homogeneous in $W$ with a polynomial state inverse, so it includes
+$W=0$ and every state. Real and imaginary parts give complex states.
+The complementary angle charts are proved next.
 
-\section{\texorpdfstring{Completion of the strong C2 ordinary--small source chart}{Completion of the strong C2 ordinary--small source chart}}
+\subsection{Complementary angle charts}
 
 \label{p6b22e944bd7c:sec:ui-all-tests-recovered}
 
@@ -6314,11 +6287,9 @@ homogeneous state. The statement retains the literal boundary $n=0$
 and arbitrary positive rates of every source opening.
 \end{theorem}
 
-The local contact certificate in Section~\ref{p76545700d90b:sec:local-ui-certificate}
-already covers $v$ infinitesimal and $u$ with the same residue as $a$.
-We supply its complete complement. No comparison between $v$ and $k$
-is made. The argument uses one elementary rank-one allocation, followed
-by short positive frames at the testing endpoints.
+Section~\ref{p76545700d90b:sec:local-ui-certificate} covers $v$ infinitesimal
+and $u$ with the same residue as $a$. Its complement follows from a
+rank-one allocation and positive frames at the testing endpoints.
 
 \paragraph{A rank-one allocation lemma.}
 Let $P$ be a positive definite real symmetric matrix, let $\ell,b$ be
@@ -6653,7 +6624,8 @@ Restoring all retained positive square terms completes the original parent.
 Real and imaginary parts treat complex states. This closes the
 entire strong C2 UI case and its exact symmetry image HU.
 
-\section{\texorpdfstring{Exact source entry for the strong HI corner}{Exact source entry for the strong HI corner}}
+\section{An unbounded first angle and a small second angle}
+\subsection{Source entry at the HI corner}
 \label{component:p54b8f20ad2dd}
 
 Use the original positive rational C2 source with $d=1$, actual
@@ -6737,7 +6709,7 @@ This conclusion follows from the original source formulas and
 $n\geq0$; no additional strong-weight assumption is needed for
 an actual HI source.
 
-\section{The HI contact for every nonnegative n}
+\subsection{The HI contact for every $n\ge0$}
 \label{component:p888d9f79ba3b}
 \label{component:p4363feef60dd}
 \label{p888d9f79ba3b:sec:r7-hi-n0-retained}
@@ -6942,7 +6914,7 @@ cases. Restore the five positive squares. Section~\ref{component:pcee1372511ed}
 then proves the other measurements, including the literal axes and
 infinities, for every $n\ge0$.
 
-\section{\texorpdfstring{A full-parent remote theorem for strong HI sources}{A full-parent remote theorem for strong HI sources}}
+\subsection{Tests outside the HI critical corner}
 \label{component:pcee1372511ed}
 
 \label{pcee1372511ed:sec:hi-remote}
@@ -7101,7 +7073,7 @@ $1/u$ and $v$ both nonzero infinitesimal. Exact sign gauges may
 make both positive.
 The original HI source leaf is therefore narrowed but not closed.
 
-\section{\texorpdfstring{Further actual-angle reductions from exact source entry}{Further actual-angle reductions from exact source entry}}
+\subsection{Further source reductions}
 \label{component:pe56fb394b522}
 
 \label{pe56fb394b522:sec:c2-angle-reductions}
@@ -7237,7 +7209,7 @@ and $n\to1/2$. Thus a genuine strong-complementary source can have
 two infinitesimal actual angles and weak $m,A$. This is an obstruction
 to deleting that angle orbit, not a counterexample to tensor SOS.
 
-\section{\texorpdfstring{An unbounded first actual angle forces a strong $C$ positive square term}{An unbounded first actual angle forces a strong C positive square term}}
+\subsection{A strong $C$ event from an unbounded first angle}
 \label{component:pb7189b9c1f6e}
 
 \label{pb7189b9c1f6e:sec:c2-weak-hi-hu-empty}
@@ -7357,7 +7329,8 @@ that $\alpha$ is automatically strong at every UI actual contact.
 These observations respect the directed weak-$C$ orientation; they
 do not identify IH with HI.
 
-\section{\texorpdfstring{Five consecutive lower-bounded event positive square terms}{Five consecutive lower-bounded event positive square terms}}
+\section{Sources with five lower-bounded events}
+\subsection{Five consecutive lower-bounded events}
 \label{component:p80253fe9bc1b}
 
 \label{p80253fe9bc1b:sec:five-retained-events}
@@ -7498,7 +7471,8 @@ of actual contact angles and of all original event hierarchies. In
 particular, it contains both C1 and C2 sources with all six retained
 events bounded below relative to $d$.
 
-\section{\texorpdfstring{R9 source data and the finite coefficient calculation}{R9 source data and the finite coefficient calculation}}
+\section{Two small actual angles: common identities}
+\subsection{Source coefficients and normal arrays}
 \label{component:pd709027c7805}
 
 The following are the exact native scalar and state-normal coefficient arrays.
@@ -7592,7 +7566,7 @@ R10.9). BA6 explicitly gives its entire hard quadratic. Those identities
 hold before any source size assumption; the bounded-$a$, R8 and R10
 certificates separately establish their coefficient bounds and pivots.
 
-\section{The five-root coefficient identity}
+\subsection{The five-root identity}
 \label{component:p9ec3d6bbd717}
 Set $\kappa=1/t$, $\ell=1/a$. The letters $e_0,e_1$ are the native
 scalar coefficients above. In this subsection $a_g$ denotes the scalar
@@ -7606,7 +7580,7 @@ Put $U=u^2$, $V=v^2$, and define
 \]
 Every root vanishes at the actual source contact. Inverses and
 radicals in their coefficients are pure source. The large $A$
-positive square term is retained in $q$; no positive positive square term is subtracted from
+positive square term is retained in $q$; no positive square term is subtracted from
 the parent and no physicality hypothesis is transferred to a
 modified remainder.
 
@@ -7710,7 +7684,7 @@ Block notation in (WA8) has sizes $1,1,3$. Every coefficient of this finite poly
 four plus two contact equations. Thus (WA8) is not merely a graph
 or Hessian certificate.
 
-\section{Division at the source-ratio zero}
+\subsection{Division at the source-ratio zero}
 \label{component:p296e824cb97a}
 Use the native coefficient dictionary and put $\mu=m/a^2$,
 $\alpha_*=\alpha/B^2$.
@@ -7760,7 +7734,7 @@ Its newly rescaled coefficients are
  q_y/a=-k_z-\kappa p_y'-Bk_{uv}.                  \end{gathered}\tag{WE5}
 \]
 
-\section{The full angular circuit identity}
+\subsection{The angular circuit}
 \label{sec:c2-short-angular-identity}
 For $\lambda=(m-a^2q)/(ta^2B)>0$ and $q=nr^2+(m+1/2)e^2+\alpha$,
 the following identity holds before any source-size assumption.
@@ -7836,7 +7810,7 @@ these six identities are the original value and all five first-contact
 conditions. Both the full identity and those six numerator equalities
 have also been independently expanded during verification.
 
-\section{Shared homogeneous identities for a unit t greater than one}
+\subsection{Homogeneous identities for unit $t>1$}
 The following polynomial identities hold before any source-size
 specialization. Their strict residues in this subsection use
 $t_0=\tau>1$, $C\sim c_0=\tau/2$, $D\sim d_0=1/[2(\tau-1)]$,
@@ -7954,7 +7928,7 @@ The nontrivial determinant is $d_0/2>0$. At $p=q_v=0$ the two
 extra roots vanish, respecting the original null state rather than
 inventing a positive $Z$ pivot.
 
-\section{A bounded source ratio in the two-small-angle C2 chart}
+\subsection{Bounded source ratio}
 \label{sec:c2-bounded-a-new}
 
 Let $K_c,K_t$ be independently labelled real closed extensions of
@@ -8024,30 +7998,18 @@ For finite tests set $D_u=1+u^2$, $D_v=1+v^2$ and define the quarter-parent
  \label{eq:c2-ba-parent}
 \end{equation}
 All identities below are identities of this four-state polynomial.
+\paragraph{Gram completion and real caps.}
+Apply Lemma~\ref{p25af2c58da7e:lem:gram} to the bounded remainder after
+retaining the displayed nonnegative squares. The roots may be unbounded;
+only its matrix and positive-definite real residue enter this lemma.
 
-\paragraph{The completion principle.}
-We repeatedly retain an exact nonnegative source multiple of a square,
-and represent the remainder by a finite symmetric matrix with bounded
-pure-source coefficients. If its residue at real testing residues is
-positive definite, the separated strict-Gram lemma gives a finite tensor
-SOS. Indeed, whiten the pure-source constant matrix; its inverse and
-square root are pure source. Every remaining matrix entry is a finite
-sum of a bounded pure-source coefficient times a pure-testing
-infinitesimal monomial. Split these terms by the elementary $2\times2$
-positive completions and split each remaining positive scalar as a finite
-sum of positive pure-source times positive pure-testing factors. No
-inverse or square root of a mixed tensor is taken.
-
-We also use its real finite-dimensional cap consequence. Suppose a real
-quadratic form is positive definite on the common kernel of finitely
-many squared rows. Adding sufficiently large positive real multiples of
-those rows makes the whole form positive definite: decompose into that
-kernel and its orthogonal complement and use the ordinary Schur
-complement. An unbounded positive source coefficient admits every such
-real cap. Finite positive coefficients admit sufficiently close smaller
-real caps whenever the full finite-residue form is strict. Restoring all
-positive excess positive square terms is exact. This elementary argument includes
-simultaneously unbounded coefficients; no rate ordering is involved.
+For real caps, let a real quadratic form be positive definite on the
+common kernel of finitely many squared rows. A sufficiently large real
+multiple of those squares makes the form positive definite: decompose
+into the kernel and its orthogonal complement and take the Schur
+complement. Each unbounded source weight admits that cap; a finite weight
+admits a sufficiently close smaller cap when the finite-residue form is
+strict. Retain every nonnegative excess.
 
 \paragraph{Source bounds when $e$ is a unit.}
 The denominator has residue $1+a_0>0$. The physical numerator has the
@@ -8293,7 +8255,7 @@ Every other entry of BA5--BA7 uses the bounded products in
 $\lambda,\sigma$. The correction in \eqref{eq:c2-ba-D-circuit} is
 bounded because $Dj$ is bounded. There is no $a$, $h$, $l$, or $j$
 inverse left in the matrix coefficients. Pure-source inverse factors
-inside the separately retained positive positive square term $T^2$ do not need to
+inside the separately retained positive square term $T^2$ do not need to
 be bounded.
 
 At $u=v=0$ write $d_+=d_0+1/2$ and use residues of the bounded source
@@ -8499,7 +8461,7 @@ branches, the noncommuting finite branch, and the displayed homogeneous
 charts exhaust every independent source and test type. This proves the
 proposition.
 
-\section{Full-state signs and projective measurement endpoints}
+\subsection{State signs and projective endpoints}
 \label{component:pf77de02d80c4}
 
 \label{pf77de02d80c4:sec:rederived-state-join}
@@ -8523,7 +8485,7 @@ Write $D_u=1+u^2$, $D_v=1+v^2$, and define the complete parent
 Products involving source and testing quantities mean tensor products.
 For example, $nD_uD_vX^2$ means
 $n\otimes(D_uD_vX^2)$; a testing-only term means $1\otimes K$.
-The positive positive square terms in (SJ1) are sums of squares in
+The positive square terms in (SJ1) are sums of squares in
 $K_c\otimes_{\mathbb R}K_t$, since each coefficient and each testing
 multiplier has a square root in its own real closed field.
 
@@ -8630,7 +8592,7 @@ including the intersections of these axes.  Equations (SJ3)--(SJ10)
 establish the stated full-state, sign, and endpoint reduction.  They do
 not establish the still-required positive-ratio chart certificate.
 
-\section{R2 source coordinates and full two-positive square term decomposition}
+\subsection{Source coordinates and the two-square decomposition}
 \label{component:p667905169990}
 
 \label{p667905169990:sec:r2-reconstructed-source-entry}
@@ -8763,7 +8725,7 @@ Define the mixed rows
 \[
  q_a=v(W+uY),\qquad N=X+uZ-pq_a,\qquad \xi=X+ruZ.
 \]
-Then the following identity retains both actual positive positive square terms,
+Then the following identity retains both actual positive square terms,
 without setting either normal to zero:
 \[
  \mathcal P=mpN^2+nD_uD_v\xi^2+G,                       \tag{RER8}
@@ -8786,7 +8748,7 @@ mixed rows.  When $n=0$ the second positive square term vanishes literally.
 The exact identity and all estimates above are the exact
 structural conclusion; no positivity conclusion about $G$ is asserted.
 
-\section{\texorpdfstring{The shared C1--C2 boundary and a positive source partition}{The shared C1--C2 boundary and a positive source partition}}
+\subsection{The C1--C2 boundary identity}
 \label{component:pc024f5300388}
 
 \label{pc024f5300388:sec:r13-source-overlap}
@@ -8862,7 +8824,8 @@ with OP4. For $n>0$, OP5 makes the formal C1 beta negative. Hence
 OP4 does \emph{not} map that source to the nonnegative C1 event cone,
 and no physical C1 all-tests theorem may be imported there.
 
-\section{\texorpdfstring{Exact R1 unbounded-$q$ source and scalar certificate}{Exact R1 unbounded-q source and scalar certificate}}
+\section{Two small actual angles: the R1 sector}
+\subsection{Scalar completion at unbounded source ratio}
 \label{component:p9e725a065583}
 
 \label{p9e725a065583:sec:reconstructed-r1-qo-source-scalar}
@@ -9151,7 +9114,7 @@ Put
 These are pure-source quantities and $0\leq J_c\leq M_{ac}$.
 Writing $e_c=np^2y^2+e_0$ preserves the entire second correlated
 current positive square term. The conclusion is the following precise scalar
-statement: after subtracting the reserved positive positive square terms
+statement: after subtracting the reserved positive square terms
 \[
  (M_{ac}-J_c)B_*^2+np^2y^2V^2B_*^2,
  \tag{RSR22}
@@ -9270,7 +9233,7 @@ The proof allows arbitrary relative rates of all source and testing
 infinitesimals. Literal $n=0$ is covered by Cases 1 and 2; Case 3
 excludes it by the original physicality equation itself.
 
-\section{\texorpdfstring{Exact full R1 conductor in the unbounded source-ratio sector}{Exact full R1 conductor in the unbounded source-ratio sector}}
+\subsection{Completion of both state normals}
 \label{component:p261f71af685d}
 
 \label{p261f71af685d:sec:fn-reconstructed}
@@ -9789,7 +9752,7 @@ retained rows throughout.  Hence the proof has no bounded-state
 restriction, and it includes literal $n=0$ without any limiting
 argument.
 
-\section{\texorpdfstring{A new complete R1 theorem with no source-ratio split}{A new complete R1 theorem with no source-ratio split}}
+\subsection{All source ratios and testing angles}
 \label{component:pbaab204a8ab1}
 
 \label{pbaab204a8ab1:sec:new-r1-all-tests}
@@ -10098,7 +10061,8 @@ complete original R1 source row at all independent tests and
 states, without a source-ratio split or a comparison of source
 and testing rates.
 
-\section{\texorpdfstring{R2 with bounded \(a\), or an infinitesimal paired-event parameter}{R2 with bounded a, or an infinitesimal paired-event parameter}}
+\section{Two small actual angles: the R2 sector}
+\subsection{Bounded $a$ or an infinitesimal paired-event parameter}
 \label{component:p393d3faa269a}
 
 \label{p393d3faa269a:sec:r2-shifted-local}
@@ -10119,10 +10083,7 @@ Literal \(n=0\) and every opening of \(r,h,1-h,g\) are retained.
 For the all-testing conclusion, the local proof below is joined
 explicitly to R2O1--R2O24.
 
-The two fields and the bounded-Gram convention are those of EN1--EN4.
-In particular no mixed inverse is used.  Every coefficient bound
-below refers to a finite array in \(B_c\otimes B_t\); the rows need
-not be bounded.
+Use the field and bounded-Gram conventions of EN1--EN4.
 
 \subsubsection*{Actual source entry and bounds}
 
@@ -10430,7 +10391,7 @@ The complementary source \(a_s\) unbounded and \(p\) a positive
 unit is not inferred from this proof.  It requires the separate
 TU source comparison and additional-current conductor.
 
-\section{\texorpdfstring{Two exact circuit budgets and the complete R2 opposite normal}{Two exact circuit budgets and the complete R2 opposite normal}}
+\subsection{Circuit budgets for the opposite normal}
 \label{component:p09b2107cc05e}
 
 Use the compact actual-source dictionary of RSR1--RSR8.  In the R2
@@ -10542,13 +10503,11 @@ remains.  Multiplication by the additional bounded source
 factor \(\sqrt{\ell(1-\ell)}\), used to normalize the complete
 second normal, preserves the estimate.
 
-Thus the entire opposite term in that normal is controlled
-uniformly through all R2 source ratios, once the stated scalar
-pivots have been retained.  This lemma resolves that normal
-allocation only.  It does not assert the signed scalar allocation
-or all-source R2 positivity.
+This controls the opposite normal uniformly through all R2 source ratios
+once the stated scalar pivots are retained. The signed scalar allocation
+remains a separate step.
 
-\section{\texorpdfstring{R2 with an unbounded source ratio and a bounded relative current}{R2 with an unbounded source ratio and a bounded relative current}}
+\subsection{Unbounded source ratio and bounded relative current}
 \label{component:pb88ccd68a4bf}
 
 \label{pb88ccd68a4bf:sec:r2-thin-new}
@@ -10935,7 +10894,7 @@ Combining that result with this local proof gives the claimed
 all-tests, all-states theorem on (TU1).  No other source branch
 is proved by this conclusion.
 
-\section{\texorpdfstring{R2 with both the native source ratio and relative current unbounded}{R2 with both the native source ratio and relative current unbounded}}
+\subsection{Unbounded source ratio and relative current}
 \label{component:pef021eabacde}
 
 \label{pef021eabacde:sec:r2-unbounded-current-new}
@@ -11288,14 +11247,11 @@ angle chart outside $u,v$ both infinitesimal without any
 condition on $\lambda$ or the native $a$. This proves UL1 for
 all tests and states.
 
-Combining this theorem with TU covers the entire original R2
-sector with native $a$ unbounded: its nonnegative
-$\lambda=n/(tB)$ is either bounded, including zero, or positive
-unbounded. The complementary bounded-$a$ theorem remains a
-separate input to the final R2 join. This local result alone is
-not the universal tensor-SOS theorem or finite-lift existence.
+Together with TU this covers native $a$ unbounded: the nonnegative
+$\lambda=n/(tB)$ is bounded, including zero, or unbounded. The
+bounded-$a$ theorem supplies the complementary source domain.
 
-\section{\texorpdfstring{A fresh complete outer-testing certificate for the original R2 source}{A fresh complete outer-testing certificate for the original R2 source}}
+\subsection{Complementary testing angles}
 \label{component:p8f8780350b13}
 
 \label{p8f8780350b13:sec:r2-rederived-outer-join}
@@ -11645,7 +11601,8 @@ Equation (R2O6) restores the original frame and positive pure-testing
 factor.  The zero state and the real/imaginary split for complex states
 are immediate.  No source-to-testing rate comparison was made.
 
-\section{\texorpdfstring{R3 and R4 at infinitesimal \(e\), with all source ratios and tests}{R3 and R4 at infinitesimal e, with all source ratios and tests}}
+\section{Two small actual angles: the R3 and R4 sectors}
+\subsection{All ratios at infinitesimal $e$}
 \label{component:p1de8b5ffab69}
 
 \label{p1de8b5ffab69:sec:new-r34-all-tests}
@@ -11782,7 +11739,7 @@ For clarity, the inverse is
 X=N_0+pv-uz,\quad Z=z+uN_0+puv,\quad
 W=1+u(M_0+Hvz),\quad Y=u-M_0-Hvz.                       \tag{EN10}
 \]
-Retain the actual positive positive square term $mpD_u^2N_0^2$, and divide the
+Retain the actual positive square term $mpD_u^2N_0^2$, and divide the
 remaining entire parent by the pure testing factor $D_u=1+u^2$.
 Its exact expansion is RFN7--RFN9. In particular the hard entries are
 \[
@@ -12117,7 +12074,8 @@ $m,n,\alpha$ positive square terms, and the homogeneous testing squares.
 The exact SJ sign gauges, literal projective endpoints and
 real/imaginary state split finish the asserted all-tests theorem.
 
-\section{\texorpdfstring{R6 at a positive residual value of $a^2B$: an all-tests theorem}{R6 at a positive residual value of a2B: an all-tests theorem}}
+\section{Two small actual angles: the R6 sector}
+\subsection{Positive residue of $a^2B$}
 \label{component:pb60eba754641}
 
 \label{pb60eba754641:sec:r6-b-unit}
@@ -12449,12 +12407,9 @@ identities. Their literal reciprocal zeros include the actual projective
 endpoints; undoing a nonzero homogeneous factor uses a pure-testing
 square only.
 
-This exhausts all independently chosen angle and state charts.
-Apply the real identities separately to the real and imaginary parts
-of a complex state. Every retained positive positive square term and original
-normalization is restored. The new case is the entire stated
-$b$-unit source subdomain, rather than a scalar graph or a single
-local testing corner.
+The charts exhaust the stated $b$-unit source domain. Restore all retained
+squares and normalizations and apply the real identities to the real and
+imaginary parts of a complex state.
 
 \paragraph{Imported exact identities.}
 The BE4 four-root state identity and the unnumbered $(\infty,0)$
@@ -12472,7 +12427,7 @@ pure-testing inverse and the exact sign reduction. Only these
 algebraic identities are used with the present source estimates;
 no C1 physical-source or negative-beta perturbation theorem is imported.
 
-\section{\texorpdfstring{The remaining R6 boundary: $a^2B$ infinitesimal}{The remaining R6 boundary: a2B infinitesimal}}
+\subsection{Infinitesimal $a^2B$}
 \label{component:p75b395956985}
 
 \label{p75b395956985:sec:r6-b-inf}
@@ -12935,7 +12890,8 @@ coefficients, with the bounds proved here. We then apply the monic
 square-lift and gradient repair CC4--CC6 in
 Section~\ref{component:pfabc29e28ab3}.
 
-\section{\texorpdfstring{The unbounded-$a$ complement of R7, including its physical zero face}{The unbounded-a complement of R7, including its physical zero face}}
+\section{Two small actual angles: the R7 sector}
+\subsection{Unbounded $a$, including the physical zero face}
 \label{component:p405d96527133}
 
 \label{p405d96527133:sec:r7-unbounded-a}
@@ -12959,8 +12915,7 @@ of the source infinitesimals are included. No inverse or radical of
 a mixed source--testing expression is used.
 \end{theorem}
 
-The inherited bounded-$a$ R7 theorem and this theorem exhaust R7.
-This statement does not admit R3, R4, or the global finite-lift theorem.
+Together with the bounded-$a$ theorem this covers R7.
 
 \paragraph{Actual source scale and the physical inequality.}
 Use
@@ -13465,7 +13420,8 @@ every retained actual positive square term and separated clearing factor, and us
 the exact sign gauges for both angle signs. This completes the stated
 all-tests theorem without a restriction on any opening ratio.
 
-\section{The unbounded-ratio case with an opening D gap}
+\section{Two small actual angles: the R8 and R10 sectors}
+\subsection{The opening $D$ gap}
 \label{component:pe07041e033da}
 \label{pe07041e033da:sec:r17-R8-joint-D}
 Assume $t,g$ units, $h,j$ infinitesimal, and $a$ unbounded. Then
@@ -13621,7 +13577,7 @@ Thus the exact support, full-jet, and finite divisibility hypotheses
 of CC3--CC6 and SE5--SE8 are unchanged.  The complete stress divided
 by $\rho$ has a bounded Gram on the same eight roots.  Multiplication
 by $\rho$ makes it an infinitesimal perturbation of the strict formal
-C1 base.  Restoring the positive positive square terms proves the actual C2 parent
+C1 base.  Restoring the positive square terms proves the actual C2 parent
 on the entire thin contact chart, including both full state normals.
 
 At literal $n=0$, OP4 is a physical C1 identification with
@@ -13692,7 +13648,7 @@ state homogenization and real/imaginary splitting therefore give all
 independent tests and states on this unbounded-$a$ R8 domain.
 The bounded-$a$ part of R8 is Proposition~\ref{prop:c2-bounded-a}.
 
-\section{\texorpdfstring{R10: forced source scale, every remote test, and a weighted local case}{R10: forced source scale, every remote test, and a weighted local case}}
+\subsection{Source scale, remote tests, and weighted local completion}
 \label{component:p9ee4ba7326a7}
 
 Use the native coefficient dictionary, the exact full-parent identity
@@ -13931,7 +13887,7 @@ $b_0=w_0/t_0$, its residue is zero. Thus R10.9 is a useful full-parent
 identity there, but its stated strict-Gram argument does not prove that
 complement. The companion thin-layer proof and direct state join complete this complement; the final join states the whole-R10 theorem.
 
-\section{\texorpdfstring{The positive-$n$ thin R10 layer: an exact extra row and a bounded conductor perturbation}{The positive-n thin R10 layer: an exact extra row and a bounded conductor perturbation}}
+\subsection{The positive-$n$ thin layer}
 \label{component:pef37475d831e}
 
 \paragraph{Domain.}
@@ -14055,7 +14011,7 @@ There is no remaining hard quadratic from this subtraction. This row
 is necessary: without it the scalar $nu^2$ lies outside the old raw
 square ideal, even if $n/k^4$ is infinitesimal.
 
-\paragraph{Exact bounded stress after the positive positive square terms.}
+\paragraph{Exact bounded stress after the positive square terms.}
 Let $A_{*,1}$ be the inherited bounded centered-$A$ cap. In the actual
 parent retain $(A_2-\kappa A_{*,1})D_uD_v(Y-huW)^2$, which is positive
 because $A_2$ is unbounded and $\kappa A_{*,1}$ bounded. Comparing with
@@ -14195,7 +14151,7 @@ The direct actual-C2 outer/state argument and the all-R10 remote
 argument are required for the all-tests join; no negative formal-beta
 positive square term is used in either join.
 
-\section{\texorpdfstring{R10: a direct critical-wall certificate for every unit-$W$ state}{R10: a direct critical-wall certificate for every unit-W state}}
+\subsection{The critical wall for unit $W$}
 \label{component:pf1aac1dff7c7}
 
 \paragraph{Statement.}

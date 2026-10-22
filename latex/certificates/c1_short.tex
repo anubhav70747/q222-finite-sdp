@@ -18,7 +18,10 @@ four-state quadratic parent in Chapter~\ref{ch:cover}, with its
 homogeneous value used at projective testing endpoints.
 No testing angle is identified with the source contact.
 
-\section{Finite polynomial operations used in the proof}
+\section{Source coordinates and polynomial operations}
+The contact equations determine the source coefficients. Their positive denominators and the lower bound for $E=1-x\eta h$ determine which rescalings remain bounded. We establish these facts before choosing the roots of the certificate.
+
+\subsection{Finite polynomial operations used in the proof}
 \label{sec:c1-finite-operations}
 
 All coefficient arrays in this chapter have the following precise
@@ -31,8 +34,8 @@ $s=s_0+A\xi$ is the displayed change of state coordinates, put
  \quad H_{ij}={1\over2}\partial_i\partial_j\mathcal Q.
 \]
 Then exactly $\mathcal Q=q_0+\sum_i q_i\xi_i+\xi^TH\xi$.
-This definition includes every state coefficient; it is not a
-restriction of the parent to its state graph. Multiplying by the
+Thus the scalar term, both linear state couplings and the entire state
+quadratic form are computed from the same polynomial. Multiplying by the
 displayed positive pure-source and pure-testing common denominators
 makes these coefficient extractions polynomial. All later divisions
 are divisions by the specified monic polynomials.
@@ -49,9 +52,8 @@ Thus every quotient defined below is an explicit finite polynomial
 operation, even where a source opening tends to zero. Weighted degree
 is checked on the original polynomial before division; division by
 a weighted-homogeneous monic polynomial preserves the filtration
-with its stated degree shift. We give the actual support and weight
-bounds at each use. Contact vanishing alone is never used as a
-substitute for those bounds.
+with its stated degree shift. The support and weight bounds specified below ensure that the resulting
+Gram coefficients remain bounded after rescaling.
 
 \begin{lemma}[Auxiliary square allocation]
 \label{lem:c1-square-allocation}
@@ -95,7 +97,7 @@ caps where a source opening makes a retained coefficient unbounded.
 Every coefficient correction and both complete first state normals
 are included before this argument is applied.
 
-\section{The native source partition}
+\subsection{The native source partition}
 \label{sec:c1-source-partition}
 \label{component:pfd0dd7bb10cf}
 
@@ -127,7 +129,7 @@ the ordinary UI/UH alternatives and the bound needed to split C1.1.
 The last two centered-$A$ rows share the same bounded-reciprocal
 construction. The source field alone determines this partition.
 
-\subsection{The $L=x\zeta$ cases}
+\subsubsection{The $L=x\zeta$ cases}
 \label{sec:c1-L-partition}
 For $k$ infinitesimal and $\zeta$ noninfinitesimal, put $L=x\zeta$.
 When $L$ is unbounded, $Q>0$ forces $r$ infinitesimal and
@@ -185,14 +187,13 @@ $D=0$ or $\beta=0$ has a case in the proof.
 
 
 % Source formulas: p42ee07a067c1
-\section{The native coefficient formulas and their uniform gap}
+\subsection{The native coefficient formulas and their uniform gap}
 
 \label{component:p42ee07a067c1}
 
 \label{p42ee07a067c1:sec:c1-global-native-cap}
 
-This section uses the original canonical C1 source, not an enlarged
-formal parameter family. Thus $\lambda=n=0$, $d>0$, $m,C,A,\alpha>0$,
+For the physical C1 source, $\lambda=n=0$, $d>0$, $m,C,A,\alpha>0$,
 $D,\beta\ge0$ with at most one zero, and the source has its actual
 finite noncommuting stationary contact. Use the common global sign
 entry and normalize $C=2$. The exact full-parent Alice reflection
@@ -238,8 +239,8 @@ The exact relative coefficients are
  \frac\beta d&=\frac{B_\beta}{2\theta P_d}.
  \tag{NC4}
 \end{align*}
-All denominators have their original positive signs; no denominator is
-silently declared a unit.
+The source inequalities make every denominator positive; their sizes
+will enter the bounds below.
 
 \begin{lemma}[A uniform native gap]
 On every physical native C1 contact oriented by $0<k\le1$,
@@ -352,7 +353,7 @@ an actual source angle in this source-entry argument.
 
 
 % Source formulas: p51451360ff4a
-\section{Consequences of the native source inequalities}
+\subsection{Consequences of the native source inequalities}
 
 \label{component:p51451360ff4a}
 
@@ -556,7 +557,7 @@ All implications retain the original physicality and exact source openings.
 
 
 % Source formulas: pa133fae35e52
-\section{The bound on $x\eta$}
+\subsection{The bound on $x\eta$}
 
 \label{component:pa133fae35e52}
 
@@ -677,7 +678,10 @@ for the entry, rather than an estimate on a truncated coefficient.
 
 
 % Source formulas: p0acdb66bba2f
-\section{Polynomial source coordinates and exact contact balances}
+\section{Contact identities and complementary measurement charts}
+The scalar contact polynomial supplies the first square roots. Polynomial division then expresses state couplings through these roots. The complementary measurement charts follow directly from the positive event terms and will be used throughout the remaining proof.
+
+\subsection{Polynomial source coordinates and exact contact balances}
 
 \label{component:p0acdb66bba2f}
 
@@ -868,7 +872,7 @@ in the native source.
 
 
 % Source formulas: p58894e12bcef
-\section{A finite four-monomial circuit}
+\subsection{A finite four-monomial circuit}
 
 \label{component:p58894e12bcef}
 
@@ -918,7 +922,7 @@ The two-pairing contrast matrix displayed above is strict in either case.
 
 
 % Source formulas: p466b31015532
-\section{The restricted three-monomial contact lift}
+\subsection{The restricted three-monomial contact lift}
 
 \label{component:p466b31015532}
 
@@ -1021,7 +1025,7 @@ three-term AM--GM form alone does not close a source domain.
 
 
 % Source formulas: p89fd3edb3edd
-\section{The complementary projective testing charts}
+\subsection{The complementary projective testing charts}
 
 \label{component:p89fd3edb3edd}
 
@@ -1309,7 +1313,7 @@ contact conductors.
 
 
 % Source formulas: p6cad7544d1b8
-\section{Two exact complementary-current identities}
+\subsection{Two exact complementary-current identities}
 
 \label{component:p6cad7544d1b8}
 
@@ -1400,7 +1404,10 @@ homogeneous factors also cover literal Alice infinity.
 
 
 
-\section{One contact calculation for bounded $k$ and bounded reciprocal $e$}
+\section{Bounded reciprocal contacts and a nonvanishing Alice scale}
+For infinitesimal $\eta=f^2,\zeta=g^2$, one contact calculation covers bounded $k$ and bounded $\Delta=1/e$, including infinitesimal $k$. For unit $k$, a source reflection covers every positive ratio $g/f$. The remaining ordinary-Alice sources use the state completions derived below.
+
+\subsection{One contact calculation for bounded $k$ and bounded reciprocal $e$}
 \label{sec:c1-bounded-reciprocal}
 
 Use the original C1 source in the normalization $C=2$, with the seven
@@ -1601,7 +1608,7 @@ nonnegative radicals. This proves the stated local result for every
 real state, and separately for both parts of a complex state.
 
 
-\section{Every test in the bounded-reciprocal and ordinary-Alice sources}
+\subsection{Every test in the bounded-reciprocal and ordinary-Alice sources}
 \label{sec:c1-uniform-projective-join}
 \label{component:p9f00f949fc8c}
 \label{component:p64b054e815d0}
@@ -1717,7 +1724,7 @@ without a separate comparable-ratio or shape-unit argument.
 
 
 % Source formulas: p050c7ae6d9b8
-\section{The positive Laurent form at the ordinary/small source}
+\subsection{The positive Laurent form at the ordinary/small source}
 
 \label{component:p050c7ae6d9b8}
 
@@ -1792,7 +1799,7 @@ is incorrect. All three identities follow by polynomial collection in the displa
 
 
 % Source formulas: pa0b854a04f49
-\section{The ordinary/small source: the complete state quadratic}
+\subsection{The ordinary/small source: the complete state quadratic}
 
 \label{component:pa0b854a04f49}
 
@@ -2138,7 +2145,7 @@ The actual UH subdomain of C1.5 remains a separate obligation.
 
 
 % Source formulas: p013c226a79b3
-\section{The ordinary/small source: complementary testing charts}
+\subsection{The ordinary/small source: complementary testing charts}
 
 \label{component:p013c226a79b3}
 
@@ -2307,7 +2314,7 @@ The ordinary/small testing strip is completed in Section~\ref{component:pa0b854a
 
 
 % Source formulas: pf7ffa921793c
-\section{The ordinary/unbounded source}
+\subsection{The ordinary/unbounded source}
 
 \label{component:pf7ffa921793c}
 
@@ -2735,7 +2742,10 @@ recorded alongside this section.
 
 
 % Source formulas: p7d4e5164e84a
-\section{The endpoint polynomial source}
+\section{Vanishing contact scales and the state normal directions}
+When $k$ vanishes, some contact directions become singular. The following polynomial identities retain their exact factors before any rescaling. They control the scalar term and both state normal directions, including the complementary state charts.
+
+\subsection{The endpoint polynomial source}
 
 \label{component:p7d4e5164e84a}
 \paragraph{Seven short source polynomials.}
@@ -2794,7 +2804,7 @@ These seven factored expressions agree separately with the defining source. Thei
 
 
 % Source formulas: p935c9d6318ea
-\section{Finite monic divisions at the endpoint}
+\subsection{Finite monic divisions at the endpoint}
 
 \label{component:p935c9d6318ea}
 \paragraph{Deriving the scalar and first-normal inputs by monic division.}
@@ -2875,7 +2885,7 @@ This is a reproducible coefficient construction: the source consists of seven sh
 
 
 % Source formulas: p05180564ed05
-\section{The endpoint product relation}
+\subsection{The endpoint product relation}
 
 \label{component:p05180564ed05}
 \label{p05180564ed05:sec:productrepair}
@@ -3044,7 +3054,7 @@ is given in Section~\ref{component:p845b3cb8b114}.
 
 
 % Source formulas: pa4f6d1e57f34
-\section{The uniform small-$e$ source on the bounded $Z$ chart}
+\subsection{The uniform small-$e$ source on the bounded $Z$ chart}
 
 \label{component:pa4f6d1e57f34}
 
@@ -3420,7 +3430,7 @@ and the complementary $W$-unit chart to cover all tests.
 
 
 % Source formulas: pabbcd0905dcd
-\section{The uniform small-$e$ source at unbounded $b$}
+\subsection{The uniform small-$e$ source at unbounded $b$}
 
 \label{component:pabbcd0905dcd}
 
@@ -3877,7 +3887,7 @@ of the local conductor proved here.
 
 
 % Source formulas: p845b3cb8b114
-\section{The uniform small-$e$ testing and state partition}
+\subsection{The uniform small-$e$ testing and state partition}
 
 \label{component:p845b3cb8b114}
 
@@ -4009,7 +4019,7 @@ projective tests.
 
 
 % Source formulas: pf5d2f33f694c
-\section{Every positive $e$ in the uniform source}
+\subsection{Every positive $e$ in the uniform source}
 
 \label{component:pf5d2f33f694c}
 
@@ -4104,7 +4114,7 @@ factors; no algebraic-disjointness assumption is imposed.
 
 
 % Source formulas: p9afbe73899af
-\section{The source with infinitesimal $k,\zeta$ and unbounded $\eta$}
+\subsection{The source with infinitesimal $k,\zeta$ and unbounded $\eta$}
 
 \label{component:p9afbe73899af}
 
@@ -4363,7 +4373,7 @@ No assumption of bounded $e$ or $1/e$ is imposed.
 
 
 % Source formulas: p95350f69a353
-\section{Positive-unit $q=x\eta$}
+\subsection{Positive-unit $q=x\eta$}
 
 \label{component:p95350f69a353}
 
@@ -4635,7 +4645,7 @@ This supplies every independent test and proves the theorem.
 
 
 % Source formulas: p7d43f3fccb7d
-\section{A uniform normal at infinitesimal $q$}
+\subsection{A uniform normal at infinitesimal $q$}
 
 \label{component:p7d43f3fccb7d}
 
@@ -4696,7 +4706,7 @@ protected-square lift establishes the missing scalar allocation.
 
 
 % Source formulas: pc376284fc7ae
-\section{Infinitesimal $q$ at the two small testing angles}
+\subsection{Infinitesimal $q$ at the two small testing angles}
 
 \label{component:pc376284fc7ae}
 
@@ -4923,7 +4933,7 @@ small-$u$, small-$v$ theorem.
 
 
 % Source formulas: pd2ecc6ac1891
-\section{Infinitesimal $q$ at the other Bob testing angles}
+\subsection{Infinitesimal $q$ at the other Bob testing angles}
 
 \label{component:pd2ecc6ac1891}
 
@@ -5046,7 +5056,7 @@ $q$-infinitesimal C1.1 source, and consequently C1.1 itself, is closed.
 
 
 % Source formulas: p69995d829bb2
-\section{Unit $\eta,e,r$}
+\subsection{Unit $\eta,e,r$}
 
 \label{component:p69995d829bb2}
 
@@ -5259,7 +5269,7 @@ infinitesimal; those are separate source domains.
 
 
 % Source formulas: p3763434080c2
-\section{The centered-$A$ source with unit $e$}
+\subsection{The centered-$A$ source with unit $e$}
 
 \label{component:p3763434080c2}
 
@@ -5476,7 +5486,7 @@ $\eta$ or either nonunit alternative for $e$.
 
 
 % Source formulas: pccaa793fd0bf
-\section{The centered-$A$ source with bounded reciprocal $e$}
+\subsection{The centered-$A$ source with bounded reciprocal $e$}
 
 \label{component:pccaa793fd0bf}
 
@@ -5615,7 +5625,7 @@ claim the infinitesimal-$e$ slice.
 
 
 % Source formulas: p364e14238053
-\section{Complementary centered-$A$ testing and state charts}
+\subsection{Complementary centered-$A$ testing and state charts}
 
 \label{component:p364e14238053}
 
@@ -5831,7 +5841,7 @@ real and imaginary evaluations because the parent is real.
 
 
 % Source formulas: p890eea5f538b
-\section{Unit $\eta,r$ and unbounded $e$}
+\subsection{Unit $\eta,r$ and unbounded $e$}
 
 \label{component:p890eea5f538b}
 
@@ -6007,7 +6017,7 @@ or matching testing chart.
 
 
 % Source formulas: pa7e744614f49
-\section{Unit $\eta$ and infinitesimal $e$: local polynomial}
+\subsection{Unit $\eta$ and infinitesimal $e$: local polynomial}
 
 \label{component:pa7e744614f49}
 
@@ -6221,7 +6231,7 @@ two independent real closed fields.
 
 
 % Source formulas: p05a86be0046c
-\section{Unit $\eta$ and infinitesimal $e$: complementary tests}
+\subsection{Unit $\eta$ and infinitesimal $e$: complementary tests}
 
 \label{component:p05a86be0046c}
 
@@ -6539,7 +6549,10 @@ Complex states split into their real and imaginary evaluations.
 
 
 % Source formulas: pd4b92bf7de71
-\section{Unbounded $L$ and unit $\eta$}
+\section{Nonvanishing \texorpdfstring{$L=x\zeta$}{L=x zeta}}
+For positive-unit or unbounded $L$, the reciprocal $z=1/L$ is bounded. When $\eta$ is unbounded, the uniform completion below combines two nonnegative source weights through their sum and covers every relative size of $h$ and the infinitesimal $\sigma=1/\eta$. The other source and testing domains retain their separate completions in complementary coordinates.
+
+\subsection{Unbounded $L$ and unit $\eta$}
 
 \label{component:pd4b92bf7de71}
 
@@ -6842,7 +6855,7 @@ $\sigma$ infinitesimal subdomain or claim a whole-row count change.
 
 
 % Source formulas: p080aa62de16d
-\section{Unit $L$ and infinitesimal $\eta$: C1 substitution in LII}
+\subsection{Unit $L$ and infinitesimal $\eta$: C1 substitution in LII}
 
 \label{component:p080aa62de16d}
 
@@ -7009,7 +7022,7 @@ regimes or the entire C1.4 row.
 
 
 % Source formulas: p686209b87229
-\section{Unit $L,\eta$: C1 substitution in LII}
+\subsection{Unit $L,\eta$: C1 substitution in LII}
 
 \label{component:p686209b87229}
 
@@ -7225,7 +7238,7 @@ the $\eta$-unbounded subdomain is not included.
 
 
 % Source formulas: p10ee3d96a3f1
-\section{Large $\eta$ with bounded reciprocal $x\zeta$: one proof for every $h/\sigma$}
+\subsection{Large $\eta$ with bounded reciprocal $x\zeta$: one proof for every $h/\sigma$}
 \label{sec:c1-unification-bounded-z-all-H}
 
 Let $K_c,K_t$ be separately labelled real closed extensions of $\mathbb R$,
@@ -7758,7 +7771,7 @@ $D$ or $\beta$ occurs, so both permitted source faces are included.
 The parent is real quadratic in the state; applying the proof to
 the real and imaginary parts proves the complex-state assertion.
 This completes the theorem.
-\section{The six-root identity and unit-Alice angular relation}
+\subsection{The six-root identity and unit-Alice angular relation}
 
 \label{component:pb1104217f67b}
 
@@ -8013,7 +8026,7 @@ results, not silently replaced by numerical residue checks.
 
 
 % Source formulas: p909aa5765721
-\section{Bounded $H$ at unit Alice testing angle}
+\subsection{Bounded $H$ at unit Alice testing angle}
 
 \label{component:p909aa5765721}
 
@@ -8193,7 +8206,7 @@ covered domain or its remote join.
 
 
 % Source formulas: pcc84202479d2
-\section{Unbounded $H$ at unit Alice testing angle}
+\subsection{Unbounded $H$ at unit Alice testing angle}
 
 \label{component:pcc84202479d2}
 
@@ -8342,7 +8355,7 @@ The precise remaining C14.1b testing domain has $u$ infinitesimal
 
 
 
-\section{Unit $L$: noninfinitesimal Alice tests}
+\subsection{Unit $L$: noninfinitesimal Alice tests}
 
 \label{component:pb0d9d28d0849}
 
@@ -8501,7 +8514,7 @@ Bob types and the unchanged full source intersection.
 
 
 % Source formulas: pda4a21937f64
-\section{Unit $L$: bounded Bob tests}
+\subsection{Unit $L$: bounded Bob tests}
 
 \label{component:pda4a21937f64}
 
@@ -8647,7 +8660,10 @@ the remaining C14.2 corner closed.
 
 
 % Source formulas: p98e371f5b846
-\section{Small $L$: the source openings and complementary tests}
+\section{Contact gaps when $L$ vanishes}
+Here the coefficient gaps, rather than $L$ alone, determine the remaining quadratic form. The gap $j$ first separates a strict block from its singular limit. The completed $J$ relation controls the remaining state normal when that block degenerates.
+
+\subsection{Small $L$: the source openings and complementary tests}
 
 \label{component:p6d2f659c0fde}
 
@@ -8833,7 +8849,7 @@ $a=\pm1,b=0$ and is included; literal $v=0$ also causes no change.
 
 
 % Source formulas: pc15b7caff0a3
-\section{The small-$L$ native scalar and complete state normals}
+\subsection{The small-$L$ native scalar and complete state normals}
 
 \label{component:pc15b7caff0a3}
 
@@ -8915,7 +8931,7 @@ RO/JO/HO and DG/LD/CJ terms.
 
 
 % Source formulas: pe3ef590c01d6
-\section{The small-$L$ scalar and finite Taylor quotients}
+\subsection{The small-$L$ scalar and finite Taylor quotients}
 
 \label{component:pe3ef590c01d6}
 
@@ -9128,7 +9144,7 @@ original terms keep their entire roots:
 
 
 % Source formulas: p3df6e6bdd8f4
-\section{Unit positive $j$: all $r$ openings}
+\subsection{Unit positive $j$: all $r$ openings}
 
 \label{component:p3df6e6bdd8f4}
 
@@ -9432,7 +9448,7 @@ This proves the local and literal-axis assertions under (RO15).
 
 
 % Source formulas: p48da253a150f
-\section{The positive $j$ opening}
+\subsection{The positive $j$ opening}
 
 \label{component:p48da253a150f}
 
@@ -9774,7 +9790,7 @@ $r,j$ opening or any unbounded-$\zeta$ or infinitesimal-$\eta$ source.
 
 
 % Source formulas: pbf6de1d7328a
-\section{The simultaneous positive $r,j$ opening}
+\subsection{The simultaneous positive $r,j$ opening}
 
 \label{component:pbf6de1d7328a}
 
@@ -10177,7 +10193,7 @@ and each supplies its complete local, remote and endpoint join.
 
 
 % Source formulas: pa73a17051258
-\section{The simultaneous small-$\eta$ parent identity}
+\subsection{The simultaneous small-$\eta$ parent identity}
 
 \label{component:pa73a17051258}
 
@@ -10365,7 +10381,7 @@ The complete JF1 identity is the input to DG3/LD9 and the completed $J$-row cond
 
 
 % Source formulas: peea9e9c546c5
-\section{The small-$\eta$ angular cancellation}
+\subsection{The small-$\eta$ angular cancellation}
 
 \label{component:peea9e9c546c5}
 
@@ -10419,7 +10435,7 @@ the retained JF/DG/LD/CJ terms; SC5 supplies their angular block.
 
 
 % Source formulas: p60eca5442075
-\section{Small $L$, unbounded $\zeta$ and unit $\eta$}
+\subsection{Small $L$, unbounded $\zeta$ and unit $\eta$}
 
 \label{component:p60eca5442075}
 
@@ -10639,7 +10655,7 @@ The remaining C14.3a sources have $\eta$ infinitesimal, hence $r\sim1$, with all
 
 
 % Source formulas: p024c821bfb59
-\section{Small $\eta$ and unit $\zeta$: the damped positive block}
+\subsection{Small $\eta$ and unit $\zeta$: the damped positive block}
 
 \label{component:p024c821bfb59}
 
@@ -10875,7 +10891,7 @@ The hypothesis DG1 is used only in the final allocation DG10. The exact DG3 iden
 
 
 % Source formulas: pc720c1e06aca
-\section{Small $\eta$ and unbounded $\zeta$: the damped positive block}
+\subsection{Small $\eta$ and unbounded $\zeta$: the damped positive block}
 
 \label{component:pc720c1e06aca}
 
@@ -11136,7 +11152,7 @@ The restriction LD1 is used only in LD14. The complete LD9 identity, source boun
 
 
 % Source formulas: p8cfada778490
-\section{The direct large-$X/Z$ state bound}
+\subsection{The direct large-$X/Z$ state bound}
 
 \label{component:p8cfada778490}
 
@@ -11167,7 +11183,7 @@ part to include complex states.
 
 
 % Source formulas: pe3bbfd3a8151
-\section{The completed $J$ relation for the entire remaining normal}
+\subsection{The completed $J$ relation for the entire remaining normal}
 
 \label{component:pe3bbfd3a8151}
 
@@ -11324,7 +11340,10 @@ all source gaps and $\beta=0$ retained.  The SB remote theorem in Section~\ref{c
 
 
 % Source formulas: p66922bb7f235
-\section{The small-$L$, unbounded-$\eta$ source sphere}
+\section{Vanishing $L$ with unbounded \texorpdfstring{$\eta$}{eta}}
+Both $L$ and $\sigma=1/\eta$ now vanish. With $S=L+\sigma$, the three source ratios $\kappa=x/S$, $\nu=\sigma/S$ and $\ell=L/S$ satisfy $\nu+\ell=1$. Their exact relations organize the remaining contacts, including the endpoints at which two of these ratios vanish.
+
+\subsection{The small-$L$, unbounded-$\eta$ source sphere}
 
 \label{component:p66922bb7f235}
 
@@ -11437,7 +11456,7 @@ order in each individual field.
 
 
 % Source formulas: p8c30238a5f7d
-\section{The unmatched Bob residue}
+\subsection{The unmatched Bob residue}
 
 \label{component:p8c30238a5f7d}
 
@@ -11606,7 +11625,7 @@ After the unmatched-residue certificates, the complementary C14.4 domain is cont
 
 
 % Source formulas: p1a6cc124f5db
-\section{The homogeneous unmatched-Bob quadratic}
+\subsection{The homogeneous unmatched-Bob quadratic}
 
 \label{component:p1a6cc124f5db}
 
@@ -11795,7 +11814,7 @@ These two obligations are retained, not declared empty.
 
 
 % Source formulas: pe55ec4890781
-\section{The common finite matched-Bob angular relation}
+\subsection{The common finite matched-Bob angular relation}
 
 \label{component:pe55ec4890781}
 
@@ -11861,7 +11880,7 @@ infinitesimal coefficients on $(N,G)$.
 
 
 % Source formulas: p3f02c51074be
-\section{Unit $\kappa,\nu,\ell$: complementary Bob charts}
+\subsection{Unit $\kappa,\nu,\ell$: complementary Bob charts}
 
 \label{component:p3f02c51074be}
 
@@ -12243,7 +12262,7 @@ source endpoints are separate from this conclusion.
 
 
 % Source formulas: pd26b89cdb3f0
-\section{Unit $\kappa,\nu,\ell$: the matched Bob residue}
+\subsection{Unit $\kappa,\nu,\ell$: the matched Bob residue}
 
 \label{component:pd26b89cdb3f0}
 
@@ -12565,7 +12584,7 @@ remain outside this theorem.
 
 
 % Source formulas: p578719565e9d
-\section{Unit $\kappa,\ell$ and infinitesimal $\nu$}
+\subsection{Unit $\kappa,\ell$ and infinitesimal $\nu$}
 
 \label{component:p578719565e9d}
 
@@ -12917,7 +12936,7 @@ This completes the all-tests theorem on precisely NU1.
 
 
 % Source formulas: p2edb55cd1f69
-\section{Infinitesimal $\kappa$ and unit $\nu,\ell$}
+\subsection{Infinitesimal $\kappa$ and unit $\nu,\ell$}
 
 \label{component:p2edb55cd1f69}
 
@@ -13030,7 +13049,7 @@ unbounded coordinates. The rows satisfy the exact MB identities
                   =(\delta T)^2.
 \end{gathered}\tag{FM8}
 \]
-These are polynomial identities, not ordered-ring inequalities.
+These polynomial identities hold in the separated tensor ring.
 
 \paragraph{The full graph scalar.}
 Let $F_0$ denote FM5 with $N_x=N_y=0$; it is used only as the
@@ -13249,7 +13268,7 @@ this theorem makes no claim about them.
 
 
 % Source formulas: pb96c9bfcc12d
-\section{Infinitesimal $\kappa,\ell$ and unit $\nu$}
+\subsection{Infinitesimal $\kappa,\ell$ and unit $\nu$}
 
 \label{component:pb96c9bfcc12d}
 
@@ -13698,7 +13717,7 @@ is an input to this conclusion.
 
 
 % Source formulas: p1de5b12d1927
-\section{Exact quotients at the doubly infinitesimal source}
+\subsection{Exact quotients at the doubly infinitesimal source}
 
 \label{component:p1de5b12d1927}
 
@@ -13928,7 +13947,7 @@ are retained until their cancellations in the printed combinations.
 
 
 % Source formulas: p80b0c5b9879f
-\section{The doubly infinitesimal source with bounded $\tau$}
+\subsection{The doubly infinitesimal source with bounded $\tau$}
 
 \label{component:p80b0c5b9879f}
 
@@ -14169,7 +14188,7 @@ The unbounded-$h/q$ source and the $\ell$-infinitesimal endpoint are proved in S
 
 
 % Source formulas: peaa56c1a3c7a
-\section{The doubly infinitesimal source with unbounded $\tau$}
+\subsection{The doubly infinitesimal source with unbounded $\tau$}
 
 \label{component:peaa56c1a3c7a}
 
@@ -14476,16 +14495,16 @@ The theorem just proved has precisely the source domain UN1. Its join with the b
 
 
 
-\section{Exhaustion and restoration}
-Every source in the table of Section~\ref{sec:c1-source-partition}
-has now been treated. At eta-large sources, the bounded-$H$ lemma
-handles every local state with $z$ either infinitesimal or a unit;
-the unbounded-$H$ proofs and their complementary testing charts
-handle the remaining cases. At small $L$ the positive $j$ cases,
-the completed-$J$ proof and the five source domains in the table
-are exhaustive. Each proof includes the complete quadratic state
-polynomial and all its first normals. All retained positive excesses
-are restored exactly once.
+\section{Completion of the C1 certificate}
+The source partition in Section~\ref{sec:c1-source-partition} is
+exhausted. For unbounded $\eta$ and bounded $z=1/(x\zeta)$,
+Theorem~\ref{thm:c1-unification-bounded-z-all-H} gives the local
+certificate for every $H=h/\sigma$; the unit-Alice and complementary
+projective charts cover the other tests. When $L$ is infinitesimal,
+the positive-$j$ completions, the completed $J$ relation and the five
+normalized source domains give the remaining certificates. Each
+represents the full state quadratic form, with its positive event
+terms restored.
 
 The real statement applies separately to the real and imaginary state
 parts because the parent is a real quadratic form. Source and testing

@@ -1,0 +1,168 @@
+{
+  "arithmetic": "Python integers and fractions.Fraction; sparse polynomials; reduced noncommutative words",
+  "check_count": 38,
+  "checks": [
+    {
+      "detail": "Exact word reduction uses A0^2=A1^2=B0^2=B1^2=I and cross-party commutation only.",
+      "name": "reflection_identity",
+      "status": "PASS"
+    },
+    {
+      "name": "reflection_sos_identity",
+      "status": "PASS"
+    },
+    {
+      "name": "attainment_pauli_a0",
+      "status": "PASS"
+    },
+    {
+      "name": "attainment_pauli_a1",
+      "status": "PASS"
+    },
+    {
+      "name": "attainment_pauli_b0",
+      "status": "PASS"
+    },
+    {
+      "name": "attainment_pauli_b1",
+      "status": "PASS"
+    },
+    {
+      "name": "attainment_pauli_E00",
+      "status": "PASS"
+    },
+    {
+      "name": "attainment_pauli_E01",
+      "status": "PASS"
+    },
+    {
+      "name": "attainment_pauli_E10",
+      "status": "PASS"
+    },
+    {
+      "name": "attainment_pauli_E11",
+      "status": "PASS"
+    },
+    {
+      "name": "attainment_parameter_relation",
+      "status": "PASS"
+    },
+    {
+      "name": "attainment_observable_reflection",
+      "status": "PASS"
+    },
+    {
+      "name": "attainment_chsh",
+      "status": "PASS"
+    },
+    {
+      "name": "attainment_endpoint_parameters",
+      "status": "PASS"
+    },
+    {
+      "name": "source_radical_product",
+      "status": "PASS"
+    },
+    {
+      "name": "source_square_difference",
+      "status": "PASS"
+    },
+    {
+      "name": "source_square_sum",
+      "status": "PASS"
+    },
+    {
+      "name": "separated_tensor_sos",
+      "status": "PASS"
+    },
+    {
+      "name": "testing_radicand_clear_denominator",
+      "status": "PASS"
+    },
+    {
+      "name": "constant_square_certificate",
+      "status": "PASS"
+    },
+    {
+      "name": "outer_tilt_endpoint_completion",
+      "status": "PASS"
+    },
+    {
+      "name": "support_stationary_boundary",
+      "status": "PASS"
+    },
+    {
+      "name": "lift_upper_coo_count",
+      "status": "PASS"
+    },
+    {
+      "name": "direct_upper_coo_count",
+      "status": "PASS"
+    },
+    {
+      "name": "lift_original_coordinates",
+      "status": "PASS"
+    },
+    {
+      "name": "direct_original_coordinates",
+      "status": "PASS"
+    },
+    {
+      "name": "eliminated_determinant",
+      "status": "PASS"
+    },
+    {
+      "name": "schur_complement_elimination",
+      "status": "PASS"
+    },
+    {
+      "name": "scope_probabilities_nonnegative",
+      "status": "PASS"
+    },
+    {
+      "name": "scope_probabilities_normalized_00",
+      "status": "PASS"
+    },
+    {
+      "name": "scope_probabilities_normalized_01",
+      "status": "PASS"
+    },
+    {
+      "name": "scope_probabilities_normalized_10",
+      "status": "PASS"
+    },
+    {
+      "name": "scope_probabilities_normalized_11",
+      "status": "PASS"
+    },
+    {
+      "name": "scope_all_chsh_sign_patterns",
+      "status": "PASS"
+    },
+    {
+      "name": "scope_below_tsirelson",
+      "status": "PASS"
+    },
+    {
+      "name": "scope_all_marginals_zero",
+      "status": "PASS"
+    },
+    {
+      "detail": "E00=E01=1 forces (B0-B1)|psi>=0, hence E10=E11 in any quantum realization.",
+      "name": "scope_nonquantum_equality_failure",
+      "status": "PASS"
+    },
+    {
+      "name": "scope_lift_feasible",
+      "status": "PASS"
+    }
+  ],
+  "not_verified": [
+    "full Q222 finite-lift existence",
+    "full Q222 exact extraction",
+    "quantifier elimination"
+  ],
+  "run_kind": "fresh exact rational symbolic regeneration",
+  "scope": "Listed finite algebraic identities, exact matrices and rational scope witness; see analytical text for inequalities and quantum reduction.",
+  "status": "PASS"
+}

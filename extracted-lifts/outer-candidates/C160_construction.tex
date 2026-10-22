@@ -1,0 +1,224 @@
+\section{An evaluated global affine pencil and its proved scope}
+\label{sec:c160-global}
+
+This section supplies actual rational matrices in the original eight
+coordinates.  It proves that their projection contains the quantum set.
+It does not prove the reverse inclusion.  Consequently, the dimensions
+below are dimensions of an evaluated \emph{outer candidate}; they are not
+an upper bound for an exact lift of $\mathcal Q_{222}$.
+
+\paragraph{The canonical physical domain.}
+Write $z=(k,a_0,b_0,a_1,b_1)$ and let $T\subset[0,1]^5$ be defined by
+\[
+\begin{split}
+ g_1&=kb_0(1-a_0)-a_0(1-b_0)\ge0,\\
+ g_2&=ka_1(1-b_0)-b_0(1-a_1)\ge0,\\
+ g_3&=kb_1(1-a_1)-a_1(1-b_1)\ge0.
+\end{split}\tag{CC1}
+\]
+Here the letters $a_x,b_y$ in $z$ are angular parameters; the visible
+expectation coordinates will be denoted by $q$ to avoid confusing them
+with these parameters.  Put
+\[
+ d(t)=(1-t)^2+t^2,\quad c(t)=\frac{1-2t}{d(t)},\quad
+ s(t)=\frac{2t(1-t)}{d(t)},\quad
+ D(z)=(1+k^2)\prod_{t\in\{a_0,b_0,a_1,b_1\}}d(t).
+\tag{CC2}
+\]
+Since $c(t)^2+s(t)^2=1$, these are real qubit measurements
+$c(t)Z+s(t)X$ on the normalized state
+$(|00\rangle+k|11\rangle)/\sqrt{1+k^2}$.
+Their eight-coordinate expectation map is
+\[
+\begin{split}
+ \Phi_{A_x}(z)&=\frac{1-k^2}{1+k^2}c(a_x),\qquad
+ \Phi_{B_y}(z)=\frac{1-k^2}{1+k^2}c(b_y),\\
+ \Phi_{E_{xy}}(z)&=c(a_x)c(b_y)+\frac{2k}{1+k^2}s(a_x)s(b_y).
+\end{split}\tag{CC3}
+\]
+All endpoints of the cube are physical and
+$1/16\le D\le2$.  In particular, no limiting division by a vanishing
+physical denominator is used.
+
+Let $\mathcal G$ be the 128 input, outcome, and party relabelings in the
+CHSH scenario, and let $\ell_1,\ldots,\ell_{16}$ be the deterministic
+local vectors.  The extremal characterization of Barizien and Bancal
+\cite{barizien_bancal} gives
+\[
+ \mathcal Q_{222}=\operatorname{conv}
+ \left(\{\ell_1,\ldots,\ell_{16}\}\cup
+       \bigcup_{g\in\mathcal G}g\Phi(T)\right).
+\tag{CC4}
+\]
+For clarity, the conversion of its full-alternance condition into CC1
+is algebraic.  After a Schmidt interchange one has $0<k\le1$.
+Write $h(t)=t/(1-t)$, so that $2\arctan h(t)$ is the measurement
+angle.  In the alternating half-circle ordering, the largest and
+smallest steered Alice half-angle tangents are respectively
+$h(a_x)/k$ and $kh(a_x)$.  Full alternance is therefore equivalent to
+\[
+ h(a_0)\le kh(b_0),\qquad h(b_0)\le kh(a_1),\qquad
+ h(a_1)\le kh(b_1),
+\]
+which gives CC1 on clearing the positive denominators.  Outcome
+relabelings select the half-circle representatives; reversal or an
+exchange of the alternating ordering is included in $\mathcal G$.
+Taking the closed domain includes the limiting angle and Schmidt
+endpoints.  Local extreme points are the explicitly retained
+deterministic vectors.  Thus CC4 uses a physical parametrization and
+the published extremal theorem, rather than an unproved completeness
+claim for a Gram cone.
+
+\paragraph{Literal fixed features.}
+The coefficient space has dimension $3^5=243$, with tensor basis
+\[
+ p_e(z)=\prod_{i=0}^4 p_{e_i}(z_i),\qquad
+ (p_0(t),p_1(t),p_2(t))=((1-t)^2,t(1-t),t^2),
+ \quad e\in\{0,1,2\}^5.
+\tag{CC5}
+\]
+The recovered compiler has 160 blocks.  For each block $b$, the
+accompanying file \nolinkurl{C160_FIXED_FEATURES.json} prints a subset
+$I_b\subset\{0,\ldots,4\}$ and an explicit polynomial weight $w_b$.
+Every weight is a positive rational constant times a product of
+$z_i$, $1-z_i$, and $g_1,g_2,g_3$; it is therefore nonnegative on $T$.
+The corresponding fixed vector is
+\[
+ v_b(z)=\sqrt{\frac{w_b(z)}{D(z)}}\,
+       \left(\prod_{i\in I_b}z_i^{\eta_i}(1-z_i)^{1-\eta_i}
+         \right)_{\eta\in\{0,1\}^{I_b}}.
+\tag{CC6}
+\]
+Its entries depend only on the test point.  The block orders sum to
+499 and the largest order is 32.  All 2,140 upper-triangular feature
+product identities were checked exactly over $\mathbb Q$ against the
+recovered compiler, including every off-diagonal factor of two.
+
+Let $A_{r,c}$ be the exact coefficient matrix mapping upper-triangular
+Gram coordinates to the basis CC5, and let $T_{r,j}$ be the nine target
+columns.  Independent expansion of CC2--CC3 verifies
+\[
+ \sum_r T_{r,0}p_r=D,\qquad
+ \sum_r T_{r,j}p_r=-D\Phi_j\quad(1\le j\le8).
+\tag{CC7}
+\]
+Write $L_0=T_{\cdot,0}^{T}$ and $L_j=-T_{\cdot,j}^{T}$ for $j\ge1$.
+For a moment vector $Y\in\mathbb R^{243}$, define each symmetric block
+by
+\[
+ [M_b(Y)]_{ij}=\sum_r\frac{A_{r,c(b,i,j)}}{2-\delta_{ij}}Y_r,
+ \qquad i\le j.
+\tag{CC8}
+\]
+The denominator $2-\delta_{ij}$ is essential.  The stored primal
+off-diagonal coordinate contributes twice a raw feature product;
+the adjoint matrix entry contributes that raw product once.
+
+\paragraph{Canonical affine elimination.}
+The $9\times243$ matrix $L$ has rank nine.  Its exact pivot columns
+and inverse are evaluated by the script.  Solving
+\[
+ LY=(1,q)^T
+\tag{CC9}
+\]
+eliminates nine moments and leaves 234 auxiliaries.  Substitution into
+CC8 gives the actual rational affine pencil in
+\nolinkurl{C160_CANONICAL_OUTER_PENCIL.coo.json}.  It contains 3,749
+nonzero upper-triangular coefficient entries.  Its block-diagonal
+matrix order is 499.  Define its projection to be $R_{160}$.
+
+For $z\in T$, choose $Y_e=p_e(z)/D(z)$.  Equations CC7 and CC8 give
+$LY=(1,\Phi(z))^T$ and
+$M_b(Y)=v_b(z)v_b(z)^T\succeq0$.  Convex combinations give
+\[
+ \operatorname{conv}\Phi(T)\subseteq R_{160}.
+\tag{CC10}
+\]
+This inclusion is exact and includes every boundary point of $T$.
+
+\paragraph{Compactness and the homogeneous zero face.}
+Block zero has all five variables free and weight one.  Its products
+span the complete 243-dimensional space.  The target $D$ has the
+exact strictly positive block-zero Gram
+\[
+ Q_D=\begin{pmatrix}I_{16}&I_{16}\\I_{16}&2I_{16}\end{pmatrix},
+ \qquad \lambda_{\min}(Q_D)=\frac{3-\sqrt5}{2}.
+\tag{CC11}
+\]
+Consequently
+$L_0Y=\operatorname{tr}(Q_DM_0(Y))\ge0$ whenever all the blocks
+are positive semidefinite.  If $L_0Y=0$, positive definiteness of
+$Q_D$ forces $M_0(Y)=0$, and the spanning property then forces
+$Y=0$.  If $L_0Y=1$, the trace of $M_0(Y)$ is at most
+$(3+\sqrt5)/2$.  Each $Y_e$ is one of its entries, so the feasible
+moment set is bounded as well as closed.  Its linear image $R_{160}$
+is compact.  This also proves that homogenization introduces no
+nonzero moment vector of zero mass.
+
+\paragraph{A single global affine pencil.}
+Introduce a moment vector $Y_g\in\mathbb R^{243}$ for each of the
+128 relabelings and local coefficients $\lambda_\ell\ge0$.  Impose
+\[
+\begin{split}
+ M_b(Y_g)&\succeq0\quad(1\le b\le160,\ g\in\mathcal G),\\
+ \sum_gL_0Y_g+\sum_\ell\lambda_\ell&=1,\\
+ q&=\sum_g g(L_1Y_g,\ldots,L_8Y_g)^T
+       +\sum_\ell\lambda_\ell\ell.
+\end{split}\tag{CC12}
+\]
+The cached Bell matrices act on \emph{support directions}; their
+transposes are used for $g$ on primal points.  All 128 matrices were
+checked to be distinct signed permutations preserving the local
+vertex set.  The lifted local vectors $(1,\ell)^T$ span
+$\mathbb R^9$.  Eliminate nine $\lambda_\ell$ through an evaluated
+rational $9\times9$ inverse and retain the other seven as auxiliaries.
+The nine eliminated weights retain their scalar PSD constraints.
+
+The resulting single block-diagonal pencil is fully printed in
+\nolinkurl{C160_GLOBAL_OUTER_PENCIL.coo.json}, with
+\[
+ \boxed{N=128\cdot499+16=63\,888,\qquad
+        m=128\cdot243+7=31\,111.}
+\tag{CC13}
+\]
+It has 20,496 blocks, largest order 32, and 455,750 nonzero rational
+upper-triangular coefficient entries.  The coordinate order is
+$(a_0,a_1,b_0,b_1,E_{00},E_{01},E_{10},E_{11})$, now denoting the
+original expectations.  Each stored row has the form
+\[
+ (\text{block},\text{row},\text{column},\text{variable},
+   \text{numerator},\text{denominator}).
+\]
+Variable zero is the constant; variables 1--8 are the expectations;
+the remaining variables are the 31,111 auxiliaries.  Each off-diagonal
+entry is mirrored once.  Thus the file gives actual matrices
+$A_0,A_1,\ldots,A_8,B_1,\ldots,B_m$, rather than a symbolic
+instruction to search for them.
+
+Let $R_{\mathrm{global}}$ be this projected spectrahedron.  CC11
+shows directly that CC12 is the convex hull of the relabeled copies
+of $R_{160}$ and the sixteen local points.  Together with CC4 and
+CC10 it proves
+\[
+ \boxed{\mathcal Q_{222}\subseteq R_{\mathrm{global}}.}
+\tag{CC14}
+\]
+Every homogeneous mass is nonnegative, their sum is one, and
+zero-mass copies vanish.  The same estimates prove compactness of
+the global feasible moment set.  Hence CC14 does not depend on
+replacing a projection by its closure.
+
+\paragraph{The remaining assertion is mathematical, not a compiler step.}
+Equality requires
+\[
+ \boxed{R_{\mathrm{global}}\subseteq\mathcal Q_{222}.}
+\tag{CC15}
+\]
+Equivalently, for every $h\in\mathbb R^8$, the maximum of $h\cdot q$
+over CC12 must equal its quantum support value.  It would suffice to
+prove that every affine functional valid on $\mathcal Q_{222}$ has
+its canonical numerator in the fixed C160 Gram cone, with compatible
+relabelings.  Neither the exact compiler identities, the physical
+Dirac-moment witnesses, compactness, nor numerical agreement for
+chosen Bell functionals proves this universal assertion.  CC15
+remains unproved in this extraction package.

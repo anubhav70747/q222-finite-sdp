@@ -1,0 +1,24 @@
+{
+  "endpoint_status": "alpha=0, alpha=+/-2, |alpha|>2, t=+/-1 all covered",
+  "general_affine": "For c2!=0 use lambda=abs(c2), alpha=-c1/lambda, epsilon=-sign(c2), plus nonnegative constant. For c2=0 use marginal squares.",
+  "optimal_support": {
+    "abs(alpha)<=2": "sqrt(8+2*alpha^2)",
+    "abs(alpha)>=2": "2+abs(alpha)"
+  },
+  "outer_completion": "2+abs(alpha)-alpha*t-epsilon*s=(4-2*sign(alpha)*t-epsilon*s)+(abs(alpha)-2)*(1-sign(alpha)*t)",
+  "parameters": "alpha real, epsilon in {-1,+1}",
+  "source_functions": {
+    "beta": "sqrt(2)*gamma",
+    "gamma": "sqrt(4+alpha^2)",
+    "v0": "sqrt((gamma-alpha)/2)",
+    "v1": "-epsilon*sqrt((gamma+alpha)/2)"
+  },
+  "source_relations": [
+    "v0^2+v1^2=gamma",
+    "v0^2-v1^2=-alpha",
+    "v0*v1=-epsilon"
+  ],
+  "status": "EXACT_FOR_TILTED_PROJECTION_ONLY",
+  "tensor_identity": "beta tensor 1-alpha tensor t-1 tensor epsilon*s=(v0 tensor u1+v1 tensor u2)^2+(v1 tensor u3)^2",
+  "tensor_scope": "Kc tensor_R Kt; arbitrary real closed extensions, separately labelled, no disjointness assumption"
+}

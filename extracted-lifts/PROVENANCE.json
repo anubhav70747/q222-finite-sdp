@@ -1,0 +1,315 @@
+{
+  "archive_sha256": "9dcf9554b1a2578bb6b9fd909e7d194d82636fe61a0035da0694eb2e44f441a3",
+  "scope": "Exact tilted projection; regular-C2 and C1D local certificate libraries; four global OUTER pencils (two strictly outer, two with unproved reverse inclusion), not an exact full-Q222 lift.",
+  "files": [
+    {
+      "file": "tilted-projection/exact_poly.py",
+      "source": "source/compiler/exact_poly.py",
+      "bytes": 4487,
+      "sha256": "a1f26fcb8db8075843e24489fe9454d1f1106b0140a4b4620223934536b640a0"
+    },
+    {
+      "file": "tilted-projection/build_and_check_tilted_extraction.py",
+      "source": "source/compiler/build_and_check_tilted_extraction.py",
+      "bytes": 14112,
+      "sha256": "c54df2fc9147b07794524c9a3a51f72c9b819d39323cecbd1ed4858c6272d9ca"
+    },
+    {
+      "file": "tilted-projection/TILTED_ORIGINAL_COORDINATE_LIFT.coo.json",
+      "source": "source/compiler/TILTED_ORIGINAL_COORDINATE_LIFT.coo.json",
+      "bytes": 2730,
+      "sha256": "d9acc6cbdb612debd45814fdbda97fe9c8182d1c8d48de8450c3ad433eb351cf"
+    },
+    {
+      "file": "tilted-projection/TILTED_DIRECT_ELIMINATED.coo.json",
+      "source": "source/compiler/TILTED_DIRECT_ELIMINATED.coo.json",
+      "bytes": 2435,
+      "sha256": "a848fbdf196d4e36ac151b8ea2b203c8f729ad85a03433d4db4aef38d3614bcb"
+    },
+    {
+      "file": "tilted-projection/TILTED_FIXED_FEATURES.json",
+      "source": "source/compiler/TILTED_FIXED_FEATURES.json",
+      "bytes": 840,
+      "sha256": "73216737a757977c7e759a767277ddfb361183891719a0f951d9be3bc6704727"
+    },
+    {
+      "file": "tilted-projection/TILTED_SOURCE_CERTIFICATES.json",
+      "source": "source/compiler/TILTED_SOURCE_CERTIFICATES.json",
+      "bytes": 1052,
+      "sha256": "9389a3de39d718bcb23aea31e6ef6a04717c49c85fc925eb50be56464e031ef0"
+    },
+    {
+      "file": "tilted-projection/TILTED_SCOPE_COUNTEREXAMPLE.json",
+      "source": "source/compiler/TILTED_SCOPE_COUNTEREXAMPLE.json",
+      "bytes": 3188,
+      "sha256": "57ad9030ab9f469d79217cb5681b8ff4a1a44f1026730b5832b3fcf600630e37"
+    },
+    {
+      "file": "regular-c2-local/regular_c2_check.py",
+      "source": "source/c2/regular_c2_check.py",
+      "bytes": 21028,
+      "sha256": "3b7350392ea853c788dc7ffb4723d5c238a0e2328ecf67e78e07408888483c60"
+    },
+    {
+      "file": "regular-c2-local/regular_c2_frames.json",
+      "source": "source/c2/regular_c2_frames.json",
+      "bytes": 1692864,
+      "sha256": "9543cbe723c11fd777d5c67521d5bc13f3e5aefd46ae19e290f8192be52eaa8c"
+    },
+    {
+      "file": "regular-c2-local/regular_c2_feature_list.json",
+      "source": "source/c2/regular_c2_feature_list.json",
+      "bytes": 1229288,
+      "sha256": "8a67754cb93a916da818afd7eb752ecc392ff3562d109d4bc5116b4c1e01e51c"
+    },
+    {
+      "file": "regular-c2-local/regular_c2_product_map.json",
+      "source": "source/c2/regular_c2_product_map.json",
+      "bytes": 1574950,
+      "sha256": "cf653ac20a6692bcb5169f5ece53f39316c7035194220761141f4eed9576ae2a"
+    },
+    {
+      "file": "conditional-global-search/effective_algebraic_extraction.tex",
+      "source": "source/compiler/effective_algebraic_extraction.tex",
+      "bytes": 18235,
+      "sha256": "4b272c2064bf1387c4735cf6e76f603cd15c1191702c3428ab360ef2eff6ff86"
+    },
+    {
+      "file": "conditional-global-search/generate_q222_qe_problem.py",
+      "source": "source/compiler/generate_q222_qe_problem.py",
+      "bytes": 9323,
+      "sha256": "754cf52aa65f663643c5e3080e9f7b8602205fe227465c59c5d891a447ea82b4"
+    },
+    {
+      "file": "conditional-global-search/exact_poly.py",
+      "source": "source/compiler/exact_poly.py",
+      "bytes": 4487,
+      "sha256": "a1f26fcb8db8075843e24489fe9454d1f1106b0140a4b4620223934536b640a0"
+    },
+    {
+      "file": "conditional-global-search/Q222_SOC_M3_UNSOLVED_INPUT.wl",
+      "source": "source/compiler/Q222_SOC_M3_UNSOLVED_INPUT.wl",
+      "bytes": 143822,
+      "sha256": "222ffbb4cfd0e546c58d69e7869a9800673fdae3d6e32ab7699aa22ccd4ccbfa"
+    },
+    {
+      "file": "conditional-global-search/Q222_SOC_M3_UNSOLVED_INPUT.json",
+      "source": "source/compiler/Q222_SOC_M3_UNSOLVED_INPUT.json",
+      "bytes": 129732,
+      "sha256": "a03b776d6a09e2c86a8d8a55df8b0c6023b284c816c8347cb551af163efd4cc8"
+    },
+    {
+      "file": "outer-candidates/OUTER_REVERSE_OPEN_N13744.coo.json",
+      "source": "continuation.zip!Q222_Extraction_Continuation_2026-10-22/baseline/routing/compiled_enlarged/GLOBAL_CANONICAL_OUTER_PENCIL.coo.json",
+      "bytes": 3529527,
+      "sha256": "fd0f0b9cb634b7d4cb0049a8f15641eff82cbb905d37157dbbd60cc2dee367fe",
+      "original_bytes_sha256": "80af9cb45c8b3ad19a7ff0267c80d1304cc62d5148f78b932ec365df1d8b54ff",
+      "transformation": "Only scientific scope/status metadata updated; all matrix and block arrays preserved exactly."
+    },
+    {
+      "file": "outer-candidates/source_maps_N13744.json",
+      "source": "continuation.zip!Q222_Extraction_Continuation_2026-10-22/baseline/routing/compiled_enlarged/GLOBAL_SOURCE_MAPS.json",
+      "bytes": 647645,
+      "sha256": "0d25e2cc6bc0ea84b768c113e71fc4e733cd9ca59f58f7e228bbab2db8ea1706"
+    },
+    {
+      "file": "outer-candidates/source_maps_N8368.json",
+      "source": "continuation.zip!Q222_Extraction_Continuation_2026-10-22/baseline/routing/inputs/GLOBAL_SOURCE_MAPS_N8368.json",
+      "bytes": 646646,
+      "sha256": "8c9ff4124066b35cdf2842ead6b9afad9bab3ae5bbe0d12f2ed48d77dc7f0882"
+    },
+    {
+      "file": "outer-candidates/source_maps_N10736.json",
+      "source": "continuation.zip!Q222_Extraction_Continuation_2026-10-22/baseline/routing/inputs/GLOBAL_SOURCE_MAPS_N10736.json",
+      "bytes": 785785,
+      "sha256": "700615701cb8a1a2bb674bb55c3820f00e66fd1c1a125446bf27f6756edcee7e"
+    },
+    {
+      "file": "outer-candidates/C1_certificate_source_pencil.coo.json",
+      "source": "continuation.zip!Q222_Extraction_Continuation_2026-10-22/baseline/routing/inputs/C1_RAMIFIED_PRIMAL.coo.json",
+      "bytes": 14658,
+      "sha256": "dfa5c0774812fb28b6f51e47f9da343c66d8adaf3d22d7c959daf591b1dad89a"
+    },
+    {
+      "file": "outer-candidates/C2_certificate_source_pencil.coo.json",
+      "source": "continuation.zip!Q222_Extraction_Continuation_2026-10-22/baseline/routing/inputs/C2_RAMIFIED_PRIMAL.coo.json",
+      "bytes": 14561,
+      "sha256": "dceb93404fce9714d062907859389fc510336bd72ca618a199c61545974d0c65"
+    },
+    {
+      "file": "outer-candidates/strict_outer_separator.json",
+      "source": "continuation.zip!Q222_Extraction_Continuation_2026-10-22/baseline/routing/inputs/historical_C1_SATURATED_CONE_SEPARATOR.json",
+      "bytes": 109734,
+      "sha256": "7371b427f45d312cc59302267d7edb0a0c9ed7724f2ffcba193e66ad683ca1bc"
+    },
+    {
+      "file": "outer-candidates/C1_enlarged_certificate_source_pencil.coo.json",
+      "source": "continuation.zip!Q222_Extraction_Continuation_2026-10-22/baseline/routing/inputs/C1_ENLARGED_PRIMAL.coo.json",
+      "bytes": 63508,
+      "sha256": "1e1eb340077940be9c466f176efc4816d95c5271d448b7b52e94aa6a6542e344"
+    },
+    {
+      "file": "outer-candidates/C2_enlarged_certificate_source_pencil.coo.json",
+      "source": "continuation.zip!Q222_Extraction_Continuation_2026-10-22/baseline/routing/inputs/C2_ENLARGED_PRIMAL.coo.json",
+      "bytes": 63139,
+      "sha256": "c5009389922c90ee8e479738b1f120b45164e074b21511a176ac1fee7553e3e7"
+    },
+    {
+      "file": "outer-candidates/strict_outer_physical_source.json",
+      "source": "scientific fields of continuation.zip!Q222_Extraction_Continuation_2026-10-22/baseline/routing/inputs/remembered_contact_source.json",
+      "bytes": 535,
+      "sha256": "0479aeabc84cb1e3a71073d5162df83af8603c5f94609742498b0659ad793b75"
+    },
+    {
+      "file": "outer-candidates/STRICT_OUTER_N8368.coo.json",
+      "source": "continuation.zip!Q222_Extraction_Continuation_2026-10-22/baseline/provenance/Q222_Preceding_Extraction_Update_2026-10-22.zip!Q222_Finite_Lift_Extraction_Update_2026-10-22/global_route/compiled_minimal_repaired/GLOBAL_CANONICAL_OUTER_PENCIL.coo.json",
+      "bytes": 1307498,
+      "sha256": "540a748efcb7fccfeedfa176953a086fecc0ab86f2560c01e1759630e217ca81",
+      "original_bytes_sha256": "c74cff1cd626bd2bd13ee5ec529eddc4a4d5e221de06c777a690e3625649940e",
+      "transformation": "Only scientific scope/status metadata updated; all matrix and block arrays preserved exactly."
+    },
+    {
+      "file": "outer-candidates/STRICT_OUTER_N10736.coo.json",
+      "source": "continuation.zip!Q222_Extraction_Continuation_2026-10-22/baseline/provenance/Q222_Preceding_Extraction_Update_2026-10-22.zip!Q222_Finite_Lift_Extraction_Update_2026-10-22/global_route/compiled_all_frames/GLOBAL_CANONICAL_OUTER_PENCIL.coo.json",
+      "bytes": 1719071,
+      "sha256": "0b28d0cdffe1b4699bbe61bb04a6c94824f45bbd398a5affd01d8fd6f5f1e072",
+      "original_bytes_sha256": "27b606478f682500121d505a7598f500a99d88a4551538894f41b4ff85934598",
+      "transformation": "Only scientific scope/status metadata updated; all matrix and block arrays preserved exactly."
+    },
+    {
+      "file": "outer-candidates/OUTER_REVERSE_OPEN_C160_N63888.coo.json",
+      "source": "continuation.zip!Q222_Extraction_Continuation_2026-10-22/baseline/provenance/Q222_Preceding_Extraction_Update_2026-10-22.zip!Q222_Finite_Lift_Extraction_Update_2026-10-22/previous_release/Q222_Finite_Lift_Extraction_Package_2026-10-22.zip!Q222_Finite_Lift_Extraction_2026-10-22/c160_extraction/C160_GLOBAL_OUTER_PENCIL.coo.json",
+      "bytes": 10157361,
+      "sha256": "781984d04c58dc84fbdffe1484c34ee61d40b1094c5388a6a9932ddacf20f16b",
+      "original_bytes_sha256": "b7f90a3a584d7f6bf794cdfd5d74d8c6718b0fc5717a4eb5adde130a74bc2fff",
+      "transformation": "Only scientific scope/status metadata updated; all matrix and block arrays preserved exactly."
+    },
+    {
+      "file": "outer-candidates/C160_canonical.coo.json",
+      "source": "continuation.zip!Q222_Extraction_Continuation_2026-10-22/baseline/provenance/Q222_Preceding_Extraction_Update_2026-10-22.zip!Q222_Finite_Lift_Extraction_Update_2026-10-22/previous_release/Q222_Finite_Lift_Extraction_Package_2026-10-22.zip!Q222_Finite_Lift_Extraction_2026-10-22/c160_extraction/C160_CANONICAL_OUTER_PENCIL.coo.json",
+      "bytes": 73940,
+      "sha256": "dc02ff437f113266bfc021908ac245e0627c91f590b0650870ee30e29c1134b4"
+    },
+    {
+      "file": "outer-candidates/C160_fixed_features.json",
+      "source": "continuation.zip!Q222_Extraction_Continuation_2026-10-22/baseline/provenance/Q222_Preceding_Extraction_Update_2026-10-22.zip!Q222_Finite_Lift_Extraction_Update_2026-10-22/previous_release/Q222_Finite_Lift_Extraction_Package_2026-10-22.zip!Q222_Finite_Lift_Extraction_2026-10-22/c160_extraction/C160_FIXED_FEATURES.json",
+      "bytes": 125997,
+      "sha256": "0fa16b684e14d3ba2dd07034f7e60945b34ad57d32fba0a3a697281bf6530745"
+    },
+    {
+      "file": "outer-candidates/compile_c160_candidate.py",
+      "source": "continuation.zip!Q222_Extraction_Continuation_2026-10-22/baseline/provenance/Q222_Preceding_Extraction_Update_2026-10-22.zip!Q222_Finite_Lift_Extraction_Update_2026-10-22/previous_release/Q222_Finite_Lift_Extraction_Package_2026-10-22.zip!Q222_Finite_Lift_Extraction_2026-10-22/compile_c160_candidate.py",
+      "bytes": 13092,
+      "sha256": "f2b3aa29ece4f6c173c1ef9d0714098d5a2e8ab94ba4adc76d31e2df80489803",
+      "transformation": "Only relocated input and output paths; algebra unchanged."
+    },
+    {
+      "file": "outer-candidates/C160_construction.tex",
+      "source": "continuation.zip!Q222_Extraction_Continuation_2026-10-22/baseline/provenance/Q222_Preceding_Extraction_Update_2026-10-22.zip!Q222_Finite_Lift_Extraction_Update_2026-10-22/previous_release/Q222_Finite_Lift_Extraction_Package_2026-10-22.zip!Q222_Finite_Lift_Extraction_2026-10-22/c160_extraction/c160_evaluated_outer_lift.tex",
+      "bytes": 9142,
+      "sha256": "0d5ba4a6969b89b42726a7e32be06ad1afa5c4bb35ff8d8ac0261146bf6066d9"
+    },
+    {
+      "file": "outer-candidates/C160_source_compiler_cache.json",
+      "source": "continuation.zip!Q222_Extraction_Continuation_2026-10-22/baseline/provenance/Q222_Preceding_Extraction_Update_2026-10-22.zip!Q222_Finite_Lift_Extraction_Update_2026-10-22/previous_release/Q222_Finite_Lift_Extraction_Package_2026-10-22.zip!Q222_Finite_Lift_Extraction_2026-10-22/inputs/library/Q222 STEERING TEST V3/COMPILER/Q222_P160_C160_EXACT_COMPILER_CACHE_V1.json",
+      "bytes": 194890,
+      "sha256": "d17f367bcee162479db4a31ac86808c04198bb15aa8b6ec2bdf354096d3ef703"
+    },
+    {
+      "file": "c1d-local/data/C1D_Z_COMPLETE_SOURCE_GRAM.json",
+      "source": "Q222_Plan_Execution_2026-09-28.zip!Q222_Plan_Execution_2026-09-28/data/C1D_Z_COMPLETE_SOURCE_GRAM.json",
+      "bytes": 7942891,
+      "sha256": "71496ca5ea3aa6a8d6c10b1f6860c924f59cbb0750fae4652ecaafc5e0a0fff2"
+    },
+    {
+      "file": "c1d-local/data/C1D_Z_EXPLICIT_SEPARATED_SQUARE_LIBRARY.json",
+      "source": "Q222_Plan_Execution_2026-09-28.zip!Q222_Plan_Execution_2026-09-28/data/C1D_Z_EXPLICIT_SEPARATED_SQUARE_LIBRARY.json",
+      "bytes": 8103102,
+      "sha256": "33806e9aea12412365b97466f547bdde22f16b4b57c11119f634e06fbbdc1610"
+    },
+    {
+      "file": "c1d-local/data/C1D_Z_LOCAL_TESTING_ALGEBRA.json",
+      "source": "Q222_Plan_Execution_2026-09-28.zip!Q222_Plan_Execution_2026-09-28/data/C1D_Z_LOCAL_TESTING_ALGEBRA.json",
+      "bytes": 453358,
+      "sha256": "8f4b7efcd3c4e076ab935f92807a00854ff4ae053ee57b2a28236e0c716a23c9"
+    },
+    {
+      "file": "c1d-local/code/verify_local_square_library.py",
+      "source": "Q222_Plan_Execution_2026-09-28.zip!Q222_Plan_Execution_2026-09-28/code/verify_local_square_library.py",
+      "bytes": 5977,
+      "sha256": "1395ad894a6a458f0a5a108024f6a476637e93b923e68f32ccf2bc7deb314f6b"
+    },
+    {
+      "file": "c1d-local/code/build_local_square_library.py",
+      "source": "Q222_Plan_Execution_2026-09-28.zip!Q222_Plan_Execution_2026-09-28/code/build_local_square_library.py",
+      "bytes": 5229,
+      "sha256": "3cb3d7b3a2da838acaf132b653d2f7b9d4725885d6fd96a203dc87a12b7abee7"
+    },
+    {
+      "file": "c1d-local/proofs/RECTANGULAR_TENSOR_SOS.md",
+      "source": "Q222_Plan_Execution_2026-09-28.zip!Q222_Plan_Execution_2026-09-28/proofs/RECTANGULAR_TENSOR_SOS.md",
+      "bytes": 4578,
+      "sha256": "0509e43daf1da8aa9fbed65b345caa75356d1a0afe307fcfc3261a564f166418"
+    },
+    {
+      "file": "c1d-local/proofs/EXPLICIT_C1D_SOURCE_ALLOCATION.md",
+      "source": "Q222_Plan_Execution_2026-09-28.zip!Q222_Plan_Execution_2026-09-28/proofs/EXPLICIT_C1D_SOURCE_ALLOCATION.md",
+      "bytes": 6781,
+      "sha256": "87410d4d0540b92b86fbf56f5b1f09fc5aed4e87387b0846ddd4fb57523c437d"
+    },
+    {
+      "file": "c1d-local/code/verify_source_allocations.py",
+      "source": "Q222_Plan_Execution_2026-09-28.zip!Q222_Plan_Execution_2026-09-28/code/verify_source_allocations.py",
+      "bytes": 7131,
+      "sha256": "03a0bd3957d0b4466af063395688b27cb6615905894c532f715836098635da1c"
+    },
+    {
+      "file": "c1d-local/code/verify_original_bridge_fast.py",
+      "source": "Q222_Plan_Execution_2026-09-28.zip!Q222_Plan_Execution_2026-09-28/code/verify_original_bridge_fast.py",
+      "bytes": 2091,
+      "sha256": "b0896e411934d70073ccf21d24503c9a52682cff5041abdb6e6f0693d48d4aff"
+    },
+    {
+      "file": "c1d-local/data/C1D_Z_SCALAR_ORIGINAL_MULTIPLIERS.json",
+      "source": "Q222_Plan_Execution_2026-09-28.zip!Q222_Plan_Execution_2026-09-28/data/C1D_Z_SCALAR_ORIGINAL_MULTIPLIERS.json",
+      "bytes": 2187438,
+      "sha256": "f3bd06fb7580273a88e6d058b2838cbcd643002462d7ed9befc96df469f5700f"
+    },
+    {
+      "file": "c1d-local/data/C1D_Z_X_ORIGINAL_MULTIPLIERS.json",
+      "source": "Q222_Plan_Execution_2026-09-28.zip!Q222_Plan_Execution_2026-09-28/data/C1D_Z_X_ORIGINAL_MULTIPLIERS.json",
+      "bytes": 999171,
+      "sha256": "b98a2631a2c56e30eb5b9d15276d1f35aef8a06f89719c176e586fc58f4dda2b"
+    },
+    {
+      "file": "c1d-local/data/C1D_Z_Y_ORIGINAL_MULTIPLIERS.json",
+      "source": "Q222_Plan_Execution_2026-09-28.zip!Q222_Plan_Execution_2026-09-28/data/C1D_Z_Y_ORIGINAL_MULTIPLIERS.json",
+      "bytes": 1064942,
+      "sha256": "f3841aa32abb8a79cf221020cbb0fff3219e7b314c74826d3b97ff700643b119"
+    },
+    {
+      "file": "c1d-local/sources/ORIGINAL_C1_CONTACT.json",
+      "source": "Q222_Plan_Execution_2026-09-28.zip!Q222_Plan_Execution_2026-09-28/sources/ORIGINAL_C1_CONTACT.json",
+      "bytes": 1598,
+      "sha256": "3da226517141ce6067f11f91a6ef3c11106ec68f1e2e2bc89e159dd86f11d7ab"
+    },
+    {
+      "file": "c1d-local/sources/XSMALL_Z_FULL_SOURCE.json",
+      "source": "Q222_Plan_Execution_2026-09-28.zip!Q222_Plan_Execution_2026-09-28/sources/XSMALL_Z_FULL_SOURCE.json",
+      "bytes": 685470,
+      "sha256": "d7b46a6fd14ee4a2a19b37daf15eaeb57de47a547e50536cb97954c73849d31b"
+    },
+    {
+      "file": "c1d-local/sources/XSMALL_W_FULL_SOURCE.json",
+      "source": "Q222_Plan_Execution_2026-09-28.zip!Q222_Plan_Execution_2026-09-28/sources/XSMALL_W_FULL_SOURCE.json",
+      "bytes": 381633,
+      "sha256": "057f7043942047fb528e41c27908b6bb780fd79781236979c59a0941a1f7387c"
+    },
+    {
+      "file": "c1d-local/sources/X_BOUNDED_V_SMALL_FULL_POLYNOMIALS.json",
+      "source": "Q222_Plan_Execution_2026-09-28.zip!Q222_Plan_Execution_2026-09-28/sources/X_BOUNDED_V_SMALL_FULL_POLYNOMIALS.json",
+      "bytes": 45584,
+      "sha256": "64d2ba4858e17e7936cfd7dd0e4380eeb66fa6b51d012209bfe322097be5233a"
+    }
+  ]
+}

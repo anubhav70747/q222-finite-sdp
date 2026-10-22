@@ -1,0 +1,54 @@
+{
+  "assertions_by_group": {
+    "LDL": 5,
+    "Taylor": 62,
+    "assembly": 2,
+    "bounds": 5,
+    "contact": 17,
+    "encoding": 99116,
+    "explicit_features": 7067,
+    "features": 1598,
+    "frame": 126,
+    "normalization": 4,
+    "positivity": 785,
+    "products": 6,
+    "separation": 3015,
+    "targets": 15
+  },
+  "contact_graph_box_bound": {
+    "interpretation": "Less than one implies source Jacobian invertible on the entire declared contact box.",
+    "relative_Jacobian_infinity_norm_upper_bound": "11650604933999/11225797109143808",
+    "relative_Jacobian_row_coefficient_norm": "114199/160"
+  },
+  "counts": {
+    "PSD2_blocks": 785,
+    "Taylor_remainder_monomials": 1193,
+    "ambient_monomials": 237,
+    "frames": 25,
+    "listed_features": 1570,
+    "mixed_products": 735,
+    "product_records": 27747,
+    "source_target_records": 295
+  },
+  "files_checked": [
+    {
+      "bytes": 1692864,
+      "file": "regular_c2_frames.json",
+      "sha256": "9543cbe723c11fd777d5c67521d5bc13f3e5aefd46ae19e290f8192be52eaa8c"
+    },
+    {
+      "bytes": 1574950,
+      "file": "regular_c2_product_map.json",
+      "sha256": "cf653ac20a6692bcb5169f5ece53f39316c7035194220761141f4eed9576ae2a"
+    },
+    {
+      "bytes": 1229288,
+      "file": "regular_c2_feature_list.json",
+      "sha256": "8a67754cb93a916da818afd7eb752ecc392ff3562d109d4bc5116b4c1e01e51c"
+    }
+  ],
+  "method": "Independent standard-library Fraction dictionary implementation; no builder import.",
+  "scope": "Regular-C2 local normalized contact graph/testing box only; global E1-E3 remain open.",
+  "status": "PASS",
+  "total_assertions": 111823
+}
