@@ -1,0 +1,97 @@
+\chapter{Finite semidefinite representation}
+\label{ch:theorem}
+
+Consider two separated quantum systems, with two binary measurements
+on each. Their behaviour is specified by the eight expectations
+\[
+ q=(a_0,a_1,b_0,b_1,E_{00},E_{01},E_{10},E_{11}),\qquad
+ p(\alpha,\beta\mid x,y)=
+ \frac{1+\alpha a_x+\beta b_y+\alpha\beta E_{xy}}4.
+\]
+Let $\mathcal Q_{222}$ contain all such behaviours obtained from
+finite-dimensional quantum states and binary positive-operator-valued
+measurements. Local dimensions are unrestricted.
+
+\begin{theorem}\label{thm:main}
+There are finite integers $N,m$ and real symmetric matrices
+$A_0,A_1,\ldots,A_8,B_1,\ldots,B_m$ of order $N$ such that
+\[
+ \mathcal Q_{222}=\left\{q\in\mathbb R^8:\ \exists y\in\mathbb R^m,\quad
+ A_0+\sum_{\nu=1}^8q_\nu A_\nu+\sum_{j=1}^my_jB_j\succeq0\right\}.
+\]
+\end{theorem}
+
+Thus every Bell functional in this scenario can be optimized over
+one fixed finite semidefinite representation. We prove existence by
+certifying all supporting inequalities. The certificate must remain
+valid when the inequality and the quantum realization are perturbed
+independently. This independence is expressed by a tensor product.
+
+\begin{theorem}[Separated sums of squares]\label{thm:slack}
+Let $K_c,K_t$ be labelled real closed extensions of $\mathbb R$.
+If $f=f_0+\sum_{\nu=1}^8f_\nu q_\nu$ is nonnegative on
+$(\mathcal Q_{222})_{K_c}$ and $q\in(\mathcal Q_{222})_{K_t}$, then
+\[
+ [f,q]:=f_0\otimes1+\sum_{\nu=1}^8f_\nu\otimes q_\nu
+       \in\Sigma(K_c\otimes_{\mathbb R}K_t)^2.
+\]
+Here $\Sigma T^2$ denotes finite sums of squares in $T$.
+The two fields may be labelled copies of the same extension.
+\end{theorem}
+
+The proof proceeds from the physical model to the supporting
+inequalities, and then to their singular contacts.
+
+Chapter~\ref{ch:model} first reduces the quantum set to
+$\operatorname{conv}\Phi(S^1\times S^1\times S^3)$, where
+$\Phi$ is the polynomial expectation map for two real qubits.
+At most nine such points are needed in a mixture. This gives a
+compact convex semialgebraic set and a finite formula for its
+extension to any real closed field.
+
+Chapter~\ref{ch:geometry} then reduces a valid inequality to
+nonnegative combinations of events and canonical supporting
+inequalities. Two closed families have explicit small matrix
+representations. Every other extreme inequality has a stationary
+zero and, after relabelling, one of two event supports:
+\[
+\begin{array}{ll}
+\mathsf C_1:&\lambda=n=0,\quad d,m,C,A,\alpha>0,
+                       \quad D,\beta\ge0,\quad D+\beta>0,\\
+\mathsf C_2:&\lambda=\beta=0,\quad d,m,C,A,D,\alpha>0,
+                       \quad n\ge0.
+\end{array}
+\]
+Chapter~\ref{ch:entry} derives the signs and rational coordinates
+of these contacts from the original stationary equations.
+
+It remains to certify the corresponding quadratic form in the
+state amplitudes. Chapter~\ref{ch:tensor} provides the common
+algebraic step: a matrix with bounded tensor coefficients and
+positive-definite real residue gives an exact sum of squares.
+The local calculations express the full quadratic form in roots
+for which this criterion applies. Chapter~\ref{ch:cover} gives
+an exhaustive source partition; the subsequent proofs establish
+its identities at every boundary. Vanishing event weights and
+commuting measurement limits remain part of the argument.
+
+Finally, finite mixtures preserve the certificates. If
+$f=\sum_j a_jf_j$, $q=\sum_iw_iq_i$, $a_j,w_i\ge0$ and
+$\sum_iw_i=1$, and if $[f_j,q_i]=\sum_k h_{ijk}^2$, then
+\[
+ [f,q]=\sum_{i,j,k}
+       \bigl[(\sqrt{a_j}\otimes\sqrt{w_i})h_{ijk}\bigr]^2.
+ \tag{M2}
+\]
+The normalization of the testing weights preserves the constant
+term of $f$. Theorem~\ref{thm:slack} follows. Applying
+Scheiderer's tensor-evaluation criterion
+\cite[Corollary 3.19]{scheiderer} to two labelled copies of each
+real closed field gives Theorem~\ref{thm:main}.
+
+Throughout, source coefficients and contact coordinates belong
+to $K_c$; testing measurements and states belong to $K_t$.
+The symbols $\mathrm I,\mathrm U,\mathrm O$ distinguish positive
+infinitesimals, positive bounded elements with bounded inverse,
+and positive unbounded elements. Formula tags are local to each
+section. Every sum and algebraic operation in a certificate is finite.

@@ -1,0 +1,98 @@
+\chapter{Assembly of the local certificates}
+\label{ch:cover}
+\label{component:pe1088004af65}
+\label{pe1088004af65:sec:complete-source-routing}
+
+The preceding chapters reduce every valid inequality to events, the
+closed faces, and the two contact families C1 and C2. Events and closed
+faces already have separated certificates. We now prove the same
+assertion for the contact families.
+
+\begin{theorem}[Canonical certificate]
+For every source in either family SG10 with an actual finite
+noncommuting stationary zero, the complete homogeneous state polynomial
+is a finite sum of squares in $K_c\otimes_{\mathbb R}K_t$ at every
+independent projective testing pair and every real or complex state.
+\end{theorem}
+
+Here and below, a source coefficient times a testing expression denotes
+its separated tensor product. With $D_u=1+u^2$, $D_v=1+v^2$, the full
+polynomial to be certified is
+\[
+\begin{split}
+ F={}&4\lambda D_u(W+vX)^2+4nD_uD_vX^2
+       +4m(vW-X+uvY-uZ)^2\\
+ &+4CD_v(uW-Y)^2+4AD_uD_vY^2
+       +(4D+2d)(uW+uvX-Y-vZ)^2\\
+ &+(4\alpha+2d)D_u(vY-Z)^2
+       +(4\beta+2d)D_v(X+uZ)^2-2dD_uD_vZ^2.
+\end{split}\tag{LC2}
+\]
+Its homogeneous form defines the literal projective endpoints.
+
+\begin{proof}
+Normalize $d=1$. Every original coefficient can be restored by
+multiplying the roots by $\sqrt d\otimes1$. The source parameter
+\[
+ \delta_{\rm tot}=\frac d{d+\lambda+n+m+C+A+D+\alpha+\beta}
+ \tag{LC3}
+\]
+separates two possibilities. If it is a positive unit, all coefficients
+after normalization are bounded. The proof in
+Chapter~\ref{ch:cert-2} covers this domain. Otherwise
+$\delta_{\rm tot}$ is a positive infinitesimal, and the contact
+coordinates from Chapter~\ref{ch:entry} give the source partitions
+of Chapters~\ref{ch:c1-short} and \ref{ch:c2-short}.
+
+For reference, the C1 coordinates satisfy
+\[
+\begin{gathered}
+ 0<k\le1,\quad \eta,\zeta>0,\quad x=k^2,\\
+ r=1-a\eta\in(0,1),\quad\theta=t\zeta\in(0,1),\quad h=1-\theta,\\
+ 0<a,t<2,\quad E=1-x\eta h>0,\quad Q=1-x\zeta r>0,\\
+ M=1+xr-t>0,\quad J=1+xh-a>0,\quad
+ e=k\sqrt{\eta/\zeta}>0.
+\end{gathered}\tag{LC4}
+\]
+The C1 partition first separates bounded and infinitesimal $k$, then
+the relative source scales $\eta,\zeta,e$. When $\zeta$ is
+noninfinitesimal, the product $L=x\zeta$ gives the remaining three
+alternatives. Chapter~\ref{ch:c1-short} proves their source inequalities
+and constructs the corresponding full quadratic forms. The literal
+faces $D=0$ and $\beta=0$ are included wherever the stationary equations
+permit them.
+
+For C2, the reflection
+$(u,v;W,X,Y,Z)\mapsto(1/v,1/u;Z,X,Y,W)$ exchanges
+$(m,D)$ and $(C,\alpha)$. Chapter~\ref{ch:c2-short} uses it to reduce
+the source angle types. The case of two weak complementary events
+has a separate radial calculation. With one weak event, the directed
+source partition distinguishes bounded and unbounded ratios; the
+bounded ratios share one full matrix completion. The remaining
+unbounded cases and every $n=0$ boundary are proved there. All these
+partitions concern coordinates in $K_c$ alone.
+
+Each local identity certifies the full state quadratic form, including
+its two first-normal terms and its state Hessian. Positive source
+excesses are retained as whole squares. The remaining coefficient
+matrix is bounded and has positive-definite real residue, so the
+lemma of Chapter~\ref{ch:tensor} gives a finite tensor sum of squares.
+The explicit complementary charts cover all independent testing
+angles and state ratios.
+
+The sign changes
+$(u,Y,Z)\mapsto(-u,-Y,-Z)$ and
+$(v,X,Z)\mapsto(-v,-X,-Z)$ preserve LC2. Its homogeneous identities
+include zero and infinite half-angles. State normalizations use a
+nonzero testing coordinate and are restored by its square. Finally,
+real and imaginary state parts add, since the measurements are real.
+This proves the theorem.
+\end{proof}
+
+To finish the global argument, write an arbitrary valid source as a
+nonnegative combination of at most nine extreme sources, and an
+arbitrary testing behaviour as a mixture of at most nine real-qubit
+behaviours. Events, closed faces and the theorem above certify every
+atom pair. Equation M2 combines their squares and preserves the affine
+constant. This proves the separated-slack theorem, and hence the finite
+semidefinite representation.

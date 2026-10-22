@@ -1,0 +1,236 @@
+\chapter{The finite real-qubit model and exact normalization}
+\label{ch:model}
+\label{component:p9b00698ff36a}
+\label{p9b00698ff36a:sec:fresh-r21-conditional-assembly}
+\section{An exact finite-dimensional physical model}
+
+Let $Q\subset\mathbb R^8$ be the set of correlations obtained from arbitrary
+finite-dimensional complex bipartite tensor-product states and two binary
+measurements per party. The coordinates are
+\[
+ (a_0,a_1,b_0,b_1,E_{00},E_{01},E_{10},E_{11}).
+ \tag{RFA1}
+\]
+A binary measurement is represented by an effect $0\preceq E\preceq I$,
+with observable $2E-I$. Put
+$Z=\operatorname{diag}(1,-1)$ and
+$X=\left(\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\right)$.
+For $(c_A,s_A),(c_B,s_B)\in S^1$ and $\psi\in S^3\subset\mathbb R^4$,
+let $\Phi$ be the eight expectations of
+\[
+ A_0=B_0=Z,\qquad A_1=c_AZ+s_AX,\qquad B_1=c_BZ+s_BX
+ \tag{RFA2}
+\]
+in the state $\psi$. Every coordinate of $\Phi$ is polynomial in these
+eight real parameters.
+
+\begin{theorem}[Real-qubit representation]
+With $\mathcal Z=S^1\times S^1\times S^3$,
+\[
+ Q=\operatorname{conv}\Phi(\mathcal Z)
+   =\left\{\sum_{i=1}^{9}w_i\Phi(z_i):
+       z_i\in\mathcal Z,\ w_i\geq0,\ \sum_iw_i=1\right\}.
+ \tag{RFA3}
+\]
+In particular $Q$ is compact, convex and semialgebraic over the real field.
+\end{theorem}
+
+\begin{proof}
+First, both effects of a party can be dilated with the same embedding.
+For an effect $E$ on $\mathcal H$ define, on $\mathcal H\oplus\mathcal H$,
+\[
+ \widehat P_E=
+ \begin{pmatrix}E&\sqrt{E(I-E)}\\
+                 \sqrt{E(I-E)}&I-E\end{pmatrix},
+ \qquad Vh=(h,0).
+ \tag{RFA4}
+\]
+The square root commutes with $E$ by its spectral construction. Direct
+block multiplication gives $\widehat P_E^2=\widehat P_E$ and
+$V^*\widehat P_EV=E$. Thus for both measurement settings the same $V$
+compresses the two projections to the original effects. Applying this
+construction to each party and replacing $\rho$ by
+$(V_A\otimes V_B)\rho(V_A\otimes V_B)^*$ preserves every marginal and
+joint expectation. We may therefore assume the two observables of each
+party are Hermitian involutions.
+
+Here is the needed two-dimensional block decomposition. If $U,V$ are
+Hermitian involutions, $C=UV$ is unitary and $UCU=C^*$. For an eigenvector
+$e$ of $C$ with nonreal eigenvalue $\lambda$, $Ue$ has eigenvalue
+$\overline\lambda$. The vectors are orthogonal and their span is invariant
+under $U$ and $V=UC$. Its orthogonal complement is invariant too. Repeating
+on orthogonal eigenvectors gives two-dimensional blocks. On the real
+eigenvalue spaces $\lambda=\pm1$ one has $V=\pm U$; diagonalizing $U$ gives
+one-dimensional blocks. This proves the decomposition in finite dimension
+without an assumption on multiplicities.
+
+On a two-dimensional block $U$ has eigenvalues $1,-1$. In its eigenbasis,
+the other nontrivial involution has the form
+$\left(\begin{smallmatrix}c&\overline z\\z&-c\end{smallmatrix}\right)$,
+where $c$ is real and $c^2+|z|^2=1$. A diagonal change of phase leaves
+$U=Z$ and makes $z$ real. Thus the pair has the form $Z,cZ+sX$.
+A one-dimensional block with outcomes $a_0,a_1\in\{\pm1\}$ embeds into
+this form: use the $a_0$ eigenvector of $Z$ and take
+$c=a_0a_1,s=0$. The unused basis vector does not affect the experiment.
+
+Apply both local decompositions. All measurement operators are block
+diagonal, so their expectations depend only on the diagonal blocks of
+the state. The traces of these positive blocks are nonnegative weights
+summing to one. Every nonzero block, after normalization and the harmless
+one-dimensional embedding, is a two-qubit state with real measurement
+matrices. Decompose that state into finitely many complex pure states.
+For a real symmetric matrix $M$ and a vector $r+is$,
+\[
+ (r+is)^*M(r+is)=r^TMr+s^TMs,\qquad
+ \|r+is\|^2=\|r\|^2+\|s\|^2.
+ \tag{RFA5}
+\]
+The cross terms cancel by symmetry. The nonzero real and imaginary parts,
+normalized separately, are real pure states with their squared norms as
+weights. This proves $Q\subseteq\operatorname{conv}\Phi(\mathcal Z)$.
+
+Conversely each atom is a physical two-qubit experiment. A finite convex
+combination is realized by a finite direct sum on each party and a state
+with the corresponding classical diagonal weights in matching summands.
+Therefore the reverse inclusion holds.
+
+Any convex combination of more than nine points in $\mathbb R^8$ can be
+shortened. The augmented vectors $(1,q_i)\in\mathbb R^9$ are linearly
+dependent, so there are $\alpha_i$, not all zero, with
+$\sum_i\alpha_i=0$ and $\sum_i\alpha_iq_i=0$. Change their common sign if
+needed so that some $\alpha_i>0$, and replace the positive weights $w_i$
+by $w_i-\tau\alpha_i$, where
+$\tau=\min_{\alpha_i>0}w_i/\alpha_i$. They remain nonnegative, keep the
+same sum and point, and at least one vanishes. Iterate. Zero weights
+allow a fixed list of nine atoms. The right side of (RFA3) is the
+continuous image of the compact product of a simplex and nine copies of
+$\mathcal Z$, hence is compact. It is semialgebraic by the projection
+theorem for real closed fields applied to its displayed finite polynomial
+formula. Convexity has already been proved.
+\end{proof}
+
+For any real closed extension $K\supset\mathbb R$, define $Q_K$ by
+(RFA3) with all variables in $K$. Define
+$P=\{f\in\mathbb R[q]_{\leq1}:f\geq0\text{ on }Q\}$.
+The defining formula
+$\forall q\,(q\in Q\Rightarrow f(q)\geq0)$, together with quantifier
+elimination and elementary transfer, gives exactly
+\[
+ P_K=\{f\in K[q]_{\leq1}:f\geq0\text{ on }Q_K\}.
+ \tag{RFA6}
+\]
+Compactness was used only over $\mathbb R$. No compactness assertion for
+the order topology of a non-Archimedean field is needed.
+
+\section{Separated fields and the full homogeneous parent}
+
+Fix arbitrary real closed extensions $K_c,K_t\supset\mathbb R$ and put
+$T=K_c\otimes_{\mathbb R}K_t$. The factors are labelled; they may be two
+copies of the same extension. There is no assumption of algebraic
+disjointness and no chosen ordering on $T$. For
+$f=f_0+\sum_{\nu=1}^8f_\nu q_\nu$ define
+\[
+ \mathscr S(f,q)=f_0\otimes1+\sum_{\nu=1}^8f_\nu\otimes q_\nu.
+ \tag{RFA7}
+\]
+
+The event and CHSH convention is
+\[
+ S=E_{00}-E_{01}+E_{10}+E_{11},\quad H=1-S/2,\quad
+ f=dH+4\sum_{\xi}\xi\,p_\xi,
+ \quad \xi\in\{\lambda,n,m,C,A,D,\alpha,\beta\}.
+ \tag{RFA8}
+\]
+The homogeneous parent is explicit.
+
+Choose projective angle pairs $(a_0,a_1)$ and $(b_0,b_1)$ in $K_t^2$,
+each nonzero, and set
+$\Delta_A=a_0^2+a_1^2>0$, $\Delta_B=b_0^2+b_1^2>0$.
+The corresponding circle coordinates are
+\[
+ c_A=(a_0^2-a_1^2)/\Delta_A,\quad s_A=2a_0a_1/\Delta_A,
+ \tag{RFA9}
+\]
+and similarly for Bob. These cover every circle point over $K_t$:
+if $c\ne-1$ use $(1+c,s)$, and if $c=-1$ use $(0,1)$.
+No affine half-angle chart is therefore needed at infinity.
+For $\Psi=(W,X,Y,Z)$ put
+\[
+ \begin{split}
+ L_m&=a_0b_1W-a_0b_0X+a_1b_1Y-a_1b_0Z,\\
+ L_D&=a_1b_0W+a_1b_1X-a_0b_0Y-a_0b_1Z.
+ \end{split}
+\]
+Products of a coefficient-field element with a testing-field expression
+in the next identity mean their separated tensor product. The complete
+homogeneous parent is
+\[
+ \begin{split}
+ \mathcal F={}&4\lambda\Delta_A(b_0W+b_1X)^2
+       +4n\Delta_A\Delta_BX^2+4mL_m^2\\
+ &+4C\Delta_B(a_1W-a_0Y)^2+4A\Delta_A\Delta_BY^2\\
+ &+(4D+2d)L_D^2
+       +(4\alpha+2d)\Delta_A(b_1Y-b_0Z)^2\\
+ &+(4\beta+2d)\Delta_B(a_0X+a_1Z)^2
+       -2d\Delta_A\Delta_BZ^2.
+ \end{split}                                                    \tag{RFA10}
+\]
+For a nonzero state let $N=\|\Psi\|^2>0$ and let $z$ be the atom
+with the circle coordinates (RFA9) and unit state $\Psi/\sqrt N$.
+Then
+\[
+ \mathcal F=(1\otimes\Delta_A\Delta_BN)\,
+                 \mathscr S(f,\Phi(z)).
+ \tag{RFA11}
+\]
+
+To check the normalization, first take $a_0=b_0=1$, $u=a_1$ and
+$v=b_1$. The plus/minus measurement eigenvectors are
+$(1,u)/\sqrt{1+u^2}$ and $(u,-1)/\sqrt{1+u^2}$.
+Their product amplitudes give, in the order of (RFA8),
+\[
+ \frac{(W+vX)^2}{1+v^2},\quad X^2,\quad
+ \frac{(vW-X+uvY-uZ)^2}{(1+u^2)(1+v^2)},\quad
+ \frac{(uW-Y)^2}{1+u^2},\quad Y^2,
+\]
+\[
+ \frac{(uW+uvX-Y-vZ)^2}{(1+u^2)(1+v^2)},\quad
+ \frac{(vY-Z)^2}{1+v^2},\quad
+ \frac{(X+uZ)^2}{1+u^2}.
+ \tag{RFA12}
+\]
+For a normalized state these are exactly the eight selected event
+probabilities. For a general state they are multiplied by $N$.
+Substitution of the matrices (RFA2) into $H$ gives its numerator
+\[
+ 2\{(uW+uvX-Y-vZ)^2+(1+u^2)(vY-Z)^2
+       +(1+v^2)(X+uZ)^2-(1+u^2)(1+v^2)Z^2\}.
+\]
+This proves (RFA11) in the affine chart. Homogenization gives (RFA10);
+it is a polynomial identity and therefore also gives the zero and
+infinite projective coordinates without dividing by $a_0$ or $b_0$.
+The zero state has zero parent separately.
+
+If $\mathcal F$ or $(s\otimes1)\mathcal F$ has an exact finite SOS
+certificate, with $s\in K_c^{>0}$, the original slack is restored by
+multiplying each root by
+\[
+ s^{-1/2}\otimes(\Delta_A\Delta_BN)^{-1/2}.
+ \tag{RFA13}
+\]
+All these inverses are taken within one field before forming a tensor.
+The identity does not permit cancellation of an arbitrary mixed tensor.
+Additional positive source gauges are handled in the same way. A state
+chart or a change of frame must first prove its own denominator nonzero.
+
+\paragraph{Literal commuting tests.}
+These require no limiting local certificate. If one party's two
+involutions commute, on a simultaneous eigenspace the CHSH operator
+$S=A_0(B_0-B_1)+A_1(B_0+B_1)$ is either $\pm2B_0$ or $\pm2B_1$.
+Thus $H=I-S/2$ is positive semidefinite in the testing field. For
+$d\geq0$, its contribution is a pure-source square times a
+pure-testing square. Every nonnegative event packet is also separated
+SOS. This covers the actual commuting angle axes and infinities for
+every nonnegative canonical coefficient tuple. It does not cover merely
+infinitesimal nonzero angles, which are covered by the canonical certificate theorem.
+

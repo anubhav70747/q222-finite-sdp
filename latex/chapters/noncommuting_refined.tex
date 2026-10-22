@@ -1,0 +1,635 @@
+\label{component:pe25c50379365}
+\label{component:p76173e99815f}
+\label{component:p24f8a75e651e}
+\label{component:p4e9ae18b7af4}
+\label{component:pa2cbe6ecbeb4}
+\label{component:pb16e5066334b}
+\label{component:pf47f6a4e3a60}
+\label{component:p94dfbc8a5970}
+\label{component:p2c3fc22497a5}
+% Standalone replacement for the NONCOMMUTING portions of components4--12.
+% Uses only the tensor foundation (positive residue, strict bounded Gram,
+% pure-factor cancellation), standard real algebra and the displayed parent.
+
+\label{sec:noncommuting-refined}
+
+Use the two labelled fields and the bounded tensor ring of
+Chapter~\ref{ch:tensor}. The strict-Gram lemma applies to arbitrary
+root columns, including unbounded rows.
+
+\subsection{Parent, physicality and contact curvature}
+
+For real homogeneous state coordinates $\psi=(W,X,Y,Z)$ and half angles
+$u,v$, set
+\[
+ D_u=1+u^2,\quad D_v=1+v^2,\quad
+ M=vW-X+uvY-uZ,\quad J=uW+uvX-Y-vZ.
+\]
+All nine source coefficients $d,\lambda,n,m,c,A,D,\alpha,\beta$ are
+nonnegative. The entire parent is
+\begin{align}
+ F={}&4\lambda D_u(W+vX)^2+4nD_uD_vX^2+4mM^2
+       +4cD_v(uW-Y)^2+4AD_uD_vY^2\notag\\
+ &+(4D+2d)J^2+(4\alpha+2d)D_u(vY-Z)^2
+       +(4\beta+2d)D_v(X+uZ)^2-2dD_uD_vZ^2.
+ \tag{NC1}
+\end{align}
+Write $C$ for the coefficient of $d$ in this expression. A source is
+\emph{physical} if its state matrix is positive semidefinite at every
+measurement pair over its own field $K_c$. The claim below concerns
+evaluation of (NC1) at an independent test over $K_t$.
+
+\begin{theorem}\label{thm:noncommuting-refined}
+For every physical source in (NC1), its tensor evaluation is a finite
+sum of squares at every independent test for which both measurement
+pairs are noncommuting in residue, and every homogeneous real or
+complex state. No relation between source scales or between source
+and testing scales is assumed.
+\end{theorem}
+
+Local frame changes and a projective state chart are pure-testing
+operations. At a noncommuting residue one may take $u,v$ to be bounded
+units, and normalize one state coordinate to a bounded unit. The
+original slack is restored by positive pure-testing norm factors.
+For complex states, apply the real result separately to real and
+imaginary parts, since the state matrix is real symmetric. We prove
+the real case.
+
+If $d=0$, the parent is already a sum of event squares.
+For the remaining $d>0$ case, use the eight outer coefficients
+$q_{ij}$ and the positive quantities $t_i$ in (SG5)--(SG6), put
+$q_{11}=h$, and denote the event coefficient by $c$ here. Equivalently
+\[
+ \det P=16D_u^2D_v^2\sum_{i,j=0}^2q_{ij}u^{2i}v^{2j}.
+ \tag{NC2}
+\]
+Thus every coefficient in the constrained determinant calculations
+below is specified by that displayed finite dictionary.
+
+For $U=u^2,V=v^2>0$, let
+\[
+ L(U,V)=q_{11}+\sum_{(i,j)\ne(1,1)}q_{ij}U^{i-1}V^{j-1}.
+ \tag{NC4}
+\]
+Every nonconstant coefficient is nonnegative. Over the real residue
+field, a stationary zero of such a Laurent polynomial satisfies
+\[
+ \sum_{e\in E}w_e e=0,\qquad
+ \nabla^2_{\log U,\log V}L=\sum_{e\in E}w_e ee^T,
+ \quad w_e=q_eU^{e_1}V^{e_2}>0.                       \tag{NC5}
+\]
+Consequently its angular Hessian is positive definite exactly when
+the active exponent vectors span $\mathbb R^2$. Logarithms are used
+only for this real calculation; the displayed formulas are algebraic.
+
+When $d>0$ and $uv\ne0$, the core restricted to $Z=0$ is
+\[
+ C|_{Z=0}=2\{(uW+uvX-Y)^2+D_uv^2Y^2+D_vX^2\},       \tag{NC6}
+\]
+which is positive definite in $(W,X,Y)$. Thus a physical state matrix
+at a nonzero kernel has exactly three positive transverse directions.
+The same observation supplies two or one positive transverse
+directions after imposing one or two independent state-linear event
+constraints, respectively.
+
+\subsection{Exact local lifting with unequal hard weights}
+
+We record the local argument that will turn real curvature into an
+exact tensor certificate. Suppose, in a real coordinate neighborhood,
+the complete physical parent has the form
+\[
+ F(x,y)=\sum_{i=1}^k a_i b_i(y)x_i^2+\sigma G(x,y),
+ \qquad \varepsilon_i=\sigma/a_i>0\text{ infinitesimal},
+ \tag{NC7}
+\]
+where $a_i,\sigma$ are pure-source, all coefficients of $b_i,G$ are
+bounded, $\bar x=0$, $\bar y=y_0$, and $\bar b_i(y_0)>0$.
+The case $k=0$ is allowed. Rational expressions are also allowed when
+their denominators are products of pure-source units and real testing
+polynomials nonzero at the residue. Multiply first by their squares;
+the resulting polynomial has the same physical sign and the same
+strictness at a zero, and the factors are canceled afterward.
+
+Let $g(y)=\overline G(0,y)$. Physicality on the exact hard kernel
+implies $g\ge0$ in its real neighborhood. If $g(y_0)>0$, the roots
+$(x_i/\sqrt{\varepsilon_i},1)$ give an exact bounded Gram with residue
+$\operatorname{diag}(\bar b_i(y_0),g(y_0))\succ0$:
+every term of $G-G(0,y)$ containing $x_i$ acquires a factor
+$\sqrt{\varepsilon_i}$ in this frame.
+
+If $g(y_0)=0$ and $\nabla^2g(y_0)\succ0$, physicality also gives
+$\nabla g(y_0)=0$. Put $x_i=\varepsilon_i s_i$ in the stationary
+equations for $F/\sigma$ and divide the $x_i$ equations by their
+nonzero factors. The exact equations are
+\[
+ 2b_i(y)s_i+G_{x_i}(\varepsilon s,y)=0,\qquad
+ \sum_i\varepsilon_i s_i^2\nabla b_i(y)
+                       +G_y(\varepsilon s,y)=0.       \tag{NC8}
+\]
+At residue they have a block upper triangular Jacobian with diagonal
+blocks $2\operatorname{diag}(\bar b_i(y_0))$ and
+$\nabla^2g(y_0)$. The real implicit-function theorem gives a unique
+local solution in fixed semialgebraic neighborhoods. Existence,
+uniqueness and continuity bounds in those neighborhoods are fixed
+first-order statements and transfer to $K_c$. They give an exact
+source-field stationary point $(x_c,y_c)$ with
+$x_{ci}=\varepsilon_i s_{ci}$ and bounded $s_c$, of the prescribed
+residue. No center depends on a testing infinitesimal.
+
+Finite polynomial Taylor expansion at this center, using the rows
+\[
+ h=\big((x_i-x_{ci})/\sqrt{\varepsilon_i}\big)_i
+                    \mathbin{\oplus}(y-y_c),
+\]
+gives exactly
+\[
+ F/\sigma=a+h^TQh,\qquad
+ a=F(x_c,y_c)/\sigma\ge0,\qquad
+ \bar Q=\operatorname{diag}
+   (\bar b_i(y_0),\tfrac12\nabla^2g(y_0))\succ0.      \tag{NC9}
+\]
+Indeed two hard deviations are allocated to their two scaled rows;
+one hard deviation and a tangent deviation leave
+$\sqrt{\varepsilon_i}$ in the coefficient; a hard packet's pure
+tangent term leaves $\varepsilon_i$, because
+$x_{ci}/\varepsilon_i$ is bounded. The $G$ terms have the same or
+smaller factors. All higher Taylor terms leave an infinitesimal
+deviation in the coefficient. The exact linear terms vanish at the
+center. This proves the full-parent certificate, including all state
+normals and higher terms. In particular, $k=0$ proves the ordinary
+regular-contact case.
+
+\subsection{Geometry of the event constraints}
+
+The losing events form one bipartite cycle of local outcome rays,
+in edge order
+\[
+ (\lambda,D,c,A,\alpha,m,\beta,n).                   \tag{NC10}
+\]
+For completeness its consecutive vertices may be taken as
+$A_0^+,B_1^+,A_1^-,B_0^+,A_0^-,B_1^-,A_1^+,B_0^-$.
+The four rays at either party are distinct at noncommuting residue
+angles. CHSH-preserving relabelings act on $(x,y,a,b)$ as
+\[
+\begin{split}
+g_A:(x,y,a,b)&\mapsto(1-x,y,a,(-1)^yb),\\
+g_B:(x,y,a,b)&\mapsto(x,1-y,(-1)^{1-x}a,b),\\
+g_T:(x,y,a,b)&\mapsto(y,x,(-1)^yb,(-1)^xa).
+\end{split}
+\]
+They act on the edge indices of (NC10) by $i\mapsto5-i,3-i,2-i$
+modulo eight. Hence they generate a cycle rotation and reflection.
+They preserve the parent interpretation; chart changes contribute
+only positive pure-testing homogeneous factors.
+
+Product residue states need no further argument. For a product state
+the CHSH expression satisfies
+\[
+ S=a_0(b_0-b_1)+a_1(b_0+b_1)
+ \le |b_0-b_1|+|b_0+b_1|=2\max(|b_0|,|b_1|)\le2.
+\]
+The inequality is strict when both measurement pairs are
+noncommuting. If a Bob modulus is one, the other is strictly less
+than one, and equality would require Alice to be a common eigenstate
+of her two noncommuting reflections. Thus $C$ has positive testing
+residue and its actual pure-testing value is positive. The term $dC$
+and all event packets are then sums of squares using separate roots.
+
+For an entangled real residue state, write its amplitudes as an
+invertible two-by-two matrix $\Psi$. A fixed Alice ray $a$ has
+exactly one Bob projective ray satisfying $a^T\Psi b=0$, and
+conversely. The vanishing events therefore share no endpoint in
+(NC10): they form a matching and there are at most four of them.
+Any three matching event vectors are state-linearly independent.
+To see this, the span of two rank-one matrices with independent
+left and right factors contains no other rank-one projective point;
+three dependent rank-one matrices must therefore share a left or a
+right factor, contrary to the matching condition. For $k\le3$, the
+event amplitudes are consequently exact local projective-state
+coordinates. Their coordinate inverse has only pure-testing unit
+denominators and their packets have the diagonal form (NC7).
+
+There are two perfect matchings. For $\{n,m,A,D\}$ their equations
+are $X=Y=0$, $vW=uZ$, $uW=vZ$. Thus $u^2=v^2$; on either sign
+branch $W\ne0$ and, after a sign gauge, $W=Z=1$, $v=u=t\ne0$.
+With $t=u$ and $\delta=v-u$, the independent event-normal differentials are
+\[
+ dX,\quad dY,\quad
+ dR_m=d\delta-dX+t^2dY-t\,dZ,\quad
+ dR_D=t^2dX-dY-d\delta-t\,dZ.
+\]
+Their rank is four; the remaining tangent is $t$. The core is zero
+on the curve and has differential
+\[
+ dC=2t\{(1+t^2)dX-(1+t^2)dY-dR_m+dR_D\}.           \tag{NC11}
+\]
+Every coefficient here is nonzero. The other perfect matching is
+$\{\lambda,c,\alpha,\beta\}$; with $W=1$ its equations give
+$X=-1/v$, $Y=u$, $Z=uv$, $u^2v^2=1$. It is the symmetry image
+of the first and has the same rank and differential properties.
+
+\subsection{Curvature when the signed coefficient is visible}
+
+All statements in this subsection are over $\mathbb R$ with $d>0$.
+We prove that every physical zero of the full parent, or of its
+restriction to at most three hard matching events, has strictly
+positive Hessian in its remaining angle and projective-state
+coordinates. This supplies precisely the soft Hessian in (NC8).
+
+\paragraph{No hard event.}
+At a zero the transverse state block is positive by (NC6). If the
+active exponents in (NC4) have rank one, stationarity (NC5) requires
+an opposite pair on one of the four lines through the Newton square.
+A horizontal opposite pair combines $\lambda D$ or $\alpha m$
+with $\beta n$ or $cA$; in the four cases it also activates
+$\lambda n,cD,\beta m,\alpha A$, respectively, off that line.
+The vertical case is identical: combining $\alpha A$ or $\lambda n$
+with $\beta m$ or $cD$ activates $\alpha m,cA,\beta n,\lambda D$.
+The two diagonal pairs force exactly the supports
+$\{n,m,A,D\}$ and $\{\lambda,c,\alpha,\beta\}$.
+Any further event activates an exponent off the diagonal.
+
+Neither diagonal support is physical. At $u=v=1$ the core matrix is
+\[
+ \begin{pmatrix}
+ 2&2&-2&-2\\2&6&-2&2\\-2&-2&6&-2\\-2&2&-2&2
+ \end{pmatrix}.                                      \tag{NC12}
+\]
+The corresponding vectors $(1,0,0,1)$ and $(1,-1,1,1)$ are
+annihilated by all selected events, have zero core value, and have
+nonzero core image. A positive semidefinite matrix cannot have zero
+quadratic value and nonzero image at the same vector.
+
+If no outer exponent is active, the event support contains neither
+neighboring nor opposite pairs in (NC10); these are exactly the
+twelve activating pairs in (SG6). Such a set extends to a triple
+with cyclic gaps $(2,3,3)$. Indeed an independent four-set in the
+cycle would be alternating and contain an opposite pair, and the
+only possible independent triple gap patterns are $(2,3,3)$ and
+$(2,2,4)$, of which the latter contains an opposite pair. All the
+allowed triples are cyclic images of $\{\lambda,m,c\}$.
+The state
+\[
+ \psi_H=(uv,-u,u^2v,1+v^2+u^2v^2)
+\]
+annihilates this triple and has
+$C(\psi_H)=-2u^2v^2D_uD_v<0$. This contradicts physicality.
+Thus the active exponents span the plane.
+
+\paragraph{One hard event: explicit coefficients.}
+By symmetry take the hard event to be $\lambda$. Its kernel is
+$W=-vX$. The constrained matrix in $(X,Y,Z)$ is positive definite
+on $Z=0$, so it has two positive state pivots at a zero. Extracting
+the coefficient of $\lambda$ from (NC2) gives its determinant as
+$4D_uD_v^2UV L_\lambda(U,V)$, whose outer coefficients are
+\[
+\begin{array}{ll}
+a_{00}=4\alpha t_7t_8,&
+a_{01}=4(Dt_7t_6+2\alpha mt_8),\\
+a_{02}=8mDt_6,&
+a_{10}=4(2\alpha At_7+nt_8t_4),\\
+a_{12}=8(\beta mt_6+cDt_2),&
+a_{20}=8nAt_4,\\
+a_{21}=8(\beta nt_2+cAt_4),&
+a_{22}=8\beta ct_2.
+\end{array}                                                    \tag{NC13}
+\]
+The factor follows directly by using first the normal coordinate
+$W+vX$, whose packet is $4\lambda D_u(W+vX)^2$, and then the
+three kernel coordinates. All $t_i$ in (NC13) are strictly positive.
+
+The four rank-one possibilities are exhausted as follows. On the
+horizontal line, off-line vanishing forces $\alpha=n=0$; its negative
+end requires $D>0$, forcing $m=c=0$, so its positive end is absent.
+On the vertical line, off-line vanishing gives $\alpha=D=0$; its
+negative end requires $n>0$, forcing $\beta=0$, so its positive end
+is absent. The slope-minus-one pair requires $m,D,n,A>0$, which
+activates $a_{01}$ off the line. The slope-plus-one pair forces
+$\alpha,\beta,c>0$ and $m=D=n=A=0$: it completes the perfect
+matching containing the hard $\lambda$ event.
+
+This last possibility is not nonnegative on the hard kernel. On the
+matching curve every event and the core vanish, but (NC11) has a
+nonzero derivative after only one event-normal direction is fixed.
+All event squares have zero derivative there, so the constrained
+parent changes sign. If no exponent is active, (NC13) gives
+$\alpha=D=n=0$ and $\beta m=cA=\beta c=0$. Its support, including
+the hard event, is contained in one of
+\[
+ \{\lambda,A,\beta\},\quad\{\lambda,m,c\},
+ \quad\{\lambda,m,A\}.
+\]
+These are cyclic images of the negative-core triple above, so each
+has a kernel witness contradicting constrained physicality. The
+active exponents of $L_\lambda$ therefore span the plane.
+
+\paragraph{Two hard events: exhaustive positivity table.}
+Matching pairs have cyclic distances two, three or four, represented
+by $\{\lambda,c\}$, $\{\lambda,m\}$ and
+$\{\lambda,\alpha\}$. Extract the coefficient of the two hard
+weights from (SG6). An adapted state basis shows that it is a
+positive angle-dependent factor times the determinant of the
+constrained two-by-two state form. After the monomial $UV$ is removed,
+the exact positivity conditions of its eight outer coefficients are
+the following. Juxtaposition means both entries are positive;
+``or'' means at least one condition holds.
+\[
+\begin{array}{c|c|c|c}
+ e&\{\lambda,m\}&\{\lambda,c\}&\{\lambda,\alpha\}\\\hline
+(-1,-1)&\alpha&\alpha&\text{always}\\
+(-1,0)&D\text{ or }\alpha&D\text{ or }\alpha m&D\text{ or }m\\
+(-1,1)&D&Dm&Dm\\
+(0,-1)&n\text{ or }A\alpha&n&A\text{ or }n\\
+(0,1)&\beta\text{ or }Dc&D\text{ or }\beta m&Dc\text{ or }\beta m\\
+(1,-1)&An&0&An\\
+(1,0)&Ac\text{ or }\beta n&A&Ac\text{ or }\beta n\\
+(1,1)&\beta c&\beta&\beta c
+\end{array}                                                    \tag{NC14}
+\]
+This table is obtained by differentiating (SG6), not by a sign
+approximation. For example the first two entries in the
+$\{\lambda,m\}$ column, apart from the positive factor four, are
+$2\alpha(2A+2D+2c+d)$ and
+$2(2AD+2A\alpha+4D\alpha+2Dc+Dd+2\alpha c+\alpha d)$.
+
+For $\{\lambda,m\}$, either diagonal pair activates the off-line
+exponent $(-1,0)$. A horizontal pair combines $D$ or $\alpha$ with
+$Ac$ or $\beta n$ and activates an off-line exponent in all four
+cases. A vertical pair combines $n$ or $A\alpha$ with $\beta$ or
+$Dc$ and does the same. Rank zero forces
+$\alpha=D=n=\beta=0$ and $Ac=0$, so only $A$ or only $c$ may remain.
+
+For $\{\lambda,c\}$ the slope-minus-one pair is impossible because
+one end is identically zero. A horizontal pair requires $A>0$ and
+$D>0$ or $\alpha m>0$, activating $(0,1)$ or $(-1,-1)$ off the
+line. A vertical pair requires $n>0$ and either $D>0$ or
+$\beta m>0$, activating $(-1,0)$ or $(1,1)$ off the line.
+The slope-plus-one pair forces $\alpha,\beta>0$ and
+$D=n=A=m=0$. Rank zero leaves only $m$.
+
+For $\{\lambda,\alpha\}$ the exponent $(-1,-1)$ is always active.
+A rank-one stationary support must be the slope-plus-one pair,
+forcing $c,\beta>0$ and $D=m=A=n=0$. These last two rank-one
+possibilities complete $\{\lambda,c,\alpha,\beta\}$. Imposing
+only two hard events still leaves a nonzero core derivative in
+(NC11), so the constrained parent changes sign on the matching
+curve. The rank-zero possibilities are contained in
+$\{\lambda,m,A\}$ or $\{\lambda,m,c\}$. At $u=v=1$, their kernel
+vectors $(1,-1,0,2)$ and $(1,-1,1,3)$ have core values $-4,-8$.
+Thus every obstruction is excluded by constrained physicality.
+The active exponents again span the plane.
+
+\paragraph{Three hard events: two complete Laurent restrictions.}
+A three-edge matching has cyclic gaps $(2,2,4)$ or $(2,3,3)$;
+rotations and reflections are transitive on each pattern. The two
+orbits have representatives and kernel states
+\[
+ M_N=\{\lambda,m,A\},\quad\psi_N=(uv,-u,0,1+v^2);
+ \qquad
+ M_E=\{n,m,A\},\quad\psi_E=(u,0,0,v).
+\]
+Direct substitution into the entire parent gives
+\begin{align}
+ {F(\psi_N)\over2UV(1+V)}
+ ={}&{2n(1+U)\over V}+2cU+{2D(1+V)\over U}
+       +{2\alpha(1+U)(1+V)\over UV}+2\beta V-d,
+                                                        \tag{NC15}\\
+ {F(\psi_E)\over2UV}
+ ={}&d(U/V-1)+{2\lambda(1+U)\over V}
+       +{2cU(1+V)\over V}+{2D(U-V)^2\over UV}
+       +{2\alpha(1+U)\over U}+2\beta(1+V).            \tag{NC16}
+\end{align}
+For (NC15), any positive $n,D$ or $\alpha$ supplies two independent
+exponents. If they vanish, $2cU+2\beta V-d$ cannot have a stationary
+zero: stationarity forces $c=\beta=0$ and the value is $-d<0$.
+For (NC16), $d>0$ supplies $(1,-1)$. Rank less than two forces
+$\lambda=c=\alpha=\beta=0$. The remaining function of $x=U/V$
+has infimum
+\[
+ 2\sqrt{2D(d+2D)}-d-4D<0,
+ \qquad (d+4D)^2-8D(d+2D)=d^2>0.
+\]
+The formula also gives a negative infimum when $D=0$. This contradicts
+physicality. Both constrained Laurent Hessians are therefore strict
+at every zero.
+
+\paragraph{From angular determinants to the full soft Hessian.}
+For zero, one or two hard events, (NC6) supplies a positive state
+block on the remaining projective-state coordinates. In a fixed real
+kernel chart write the constrained state form as
+$a+2b^Ty+y^TC_0y$, with $C_0\succ0$ at contact. Its state Schur
+complement is $a-b^TC_0^{-1}b$, and its determinant equals this
+scalar times $\det C_0$. At a stationary zero, differentiating a
+positive prefactor does not change the Hessian sign. Equations
+(NC5), (NC12)--(NC14) therefore give a positive angular Schur
+complement and hence the full positive soft Hessian. For three hard
+events only the two angles remain and (NC15)--(NC16) apply directly.
+All these matrix inverses are ordinary real residue calculations.
+The exact certificate itself is (NC7)--(NC9), with no tensor inverse.
+
+\subsection{Four matching weights, with no comparability assumption}
+
+Suppose the four positive weights of a perfect matching dominate
+$d$ and every complementary event. By symmetry use
+$\{n,m,A,D\}$ and arrange that $D=\mu=\min(n,m,A,D)$.
+Set
+\[
+ \eta_1=\mu/n,\quad\eta_2=\mu/A,\quad\eta_3=\mu/m,
+ \qquad0<\eta_i\le1.
+\]
+Their residues may vanish independently. Work near the matching
+curve in $W=1$ and introduce the exact state coordinates
+\[
+ R=v-X+uvY-uZ,\qquad
+ Z={v-X+uvY-R\over u},\qquad\delta=v-u,
+\]
+using only the testing unit $u^{-1}$. The fourth event is exactly
+$f+L$, where
+\[
+ f={u^2-v^2\over u}=-2\delta-\delta^2/u,\qquad
+ L=v(u+u^{-1})X-(1+v^2)Y+(v/u)R.                    \tag{NC17}
+\]
+The first three hard packets are
+$4nD_uD_vX^2+4AD_uD_vY^2+4mR^2$.
+On $X=Y=R=0$ the core is exactly $2uf$, so
+\[
+ 4\mu f^2+2duf
+ =4\mu\left(f+{du\over4\mu}\right)^2
+                         -{d^2u^2\over4\mu}.         \tag{NC18}
+\]
+Let $\tau=\max(\lambda,c,\alpha,\beta)$. Testing (NC18) at
+$u=1$, $v=\sqrt{1+d/(4\mu)}$ proves
+\[
+ \tau>0,\qquad \rho={d^2\over\mu\tau}\text{ bounded}.
+ \tag{NC19}
+\]
+Indeed all complementary amplitudes are bounded at this source-field
+test; if their scale were infinitesimal relative to $d^2/\mu$, the
+complete parent would be negative. The case $d=0$ was already an
+event-square sum. Put $\varepsilon=d/\mu$, which is infinitesimal.
+
+If $\bar\rho=0$, use the five rows
+\[
+ (\sqrt{n/\tau}X,\sqrt{A/\tau}Y,
+       \sqrt{m/\tau}R,\sqrt{\mu/\tau}\delta,1).
+\]
+Their four-normal residue is, with $B_0=1+u_0^2$,
+\[
+4B_0^2z_1^2+4B_0^2z_2^2+4z_3^2
+ +4(-2z_4+B_0\sqrt{\bar\eta_1}z_1
+       -B_0\sqrt{\bar\eta_2}z_2+\sqrt{\bar\eta_3}z_3)^2,
+ \tag{NC20}
+\]
+which is positive definite. The constant residue is
+$4(1+u_0^2)(P+Qu_0^2)>0$, where
+$P=\overline{(\lambda+\alpha)/\tau}$,
+$Q=\overline{(c+\beta)/\tau}$ and $P+Q>0$.
+The signed linear coefficients are $\sqrt{\rho\eta_i}$ and
+$\sqrt\rho$, so vanish. All other normalized coefficients are
+bounded by $\varepsilon,\eta_i,\tau/\mu$ and bounded testing
+units. This is an exact strict bounded Gram of the whole parent.
+
+Now suppose $\bar\rho>0$. In the source-field stationary equations
+put
+\[
+ X=\varepsilon\eta_1s_1,\quad
+ Y=\varepsilon\eta_2s_2,\quad
+ R=\varepsilon\eta_3s_3,\quad\delta=\varepsilon r,
+ \quad u=t.                                          \tag{NC21}
+\]
+Divide the three state equations and the $\delta$ equation by $d$,
+and the tangent equation by $\tau$. All coefficients are bounded
+after clearing powers of the unit $t$: the factors $\eta_i$ cancel
+the large weights $\mu/\eta_i$, and
+$\tau=\mu\varepsilon^2/\rho$. Put, in residue,
+\[
+ B_t=1+t^2,\quad\ell=(B_t,-B_t,1),\quad
+ b=(B_t^2,B_t^2,1),\quad
+ k=-2r+\sum_i\bar\eta_i\ell_i s_i.
+\]
+Direct differentiation of (NC1), (NC17) gives the four normal equations
+\[
+ 8b_i s_i+8k\ell_i+(4tB_t,-4tB_t,0)_i=0,
+ \qquad-16k-4t=0.                                   \tag{NC22}
+\]
+Eliminating the last row from the first three gives diagonal pivots
+$8b_i$, with the last pivot $32$. The determinant is
+$32\cdot8^3B_t^4>0$, even if some $\bar\eta_i=0$.
+Their solution is
+\[
+ s_1^*=-{t\over4B_t},\quad s_2^*={t\over4B_t},\quad
+ s_3^*={t\over4},\quad
+ r^*={t\over8}(1-\bar\eta_1-\bar\eta_2+\bar\eta_3).
+ \tag{NC23}
+\]
+The complete normalized residue objective is
+\[
+\begin{split}
+ \Psi={}&\bar\rho\{4\sum_i\bar\eta_i b_i s_i^2+4k^2
+           +4tB_t(\bar\eta_1s_1-\bar\eta_2s_2)-4tr\}\\
+ &+4(1+t^2)(P+Qt^2).
+\end{split}
+\]
+Completing its four normal squares by (NC23) leaves exactly
+\[
+ g(t)=4(1+t^2)(P+Qt^2)
+       -{\bar\rho t^2\over4}
+          (1+\bar\eta_1+\bar\eta_2+\bar\eta_3).     \tag{NC24}
+\]
+This completion is polynomial in the $\bar\eta_i$ and remains
+valid when one vanishes; its scaled equation in (NC22) still has
+the displayed positive pivot. Substituting the corresponding normal
+values into the physical source and taking residue proves $g(t)\ge0$
+for every real $t\ne0$.
+
+If $g(t_0)>0$, shifting by (NC23) gives the positive normal form
+(NC20) and a positive constant, hence a strict bounded Gram. At a
+zero, divide (NC24) by $4t^2$:
+\[
+ P(1+t^{-2})+Q(1+t^2)
+       -{\bar\rho\over16}(1+\bar\eta_1+\bar\eta_2+\bar\eta_3).
+\]
+Stationarity gives $P/t_0^2=Qt_0^2$. Since $P+Q>0$, both are
+positive; the logarithmic second derivative is positive, and thus
+$g''(t_0)>0$. Append the tangent equation to (NC22). Its Schur
+complement is $g''(t_0)$, so its real Jacobian is invertible. The
+semialgebraic implicit-function argument gives an exact source
+stationary center of the form (NC21), with bounded $s_c,r_c,t_c$.
+Its normalized value is nonnegative by physicality.
+
+The exact full Taylor rows are
+\[
+\big(\sqrt{n/\tau}(X-X_c),\sqrt{A/\tau}(Y-Y_c),
+\sqrt{m/\tau}(R-R_c),\sqrt{\mu/\tau}(\delta-\delta_c),t-t_c\big).
+ \tag{NC25}
+\]
+Here is the required coefficient control, including all normal terms.
+For $a_i=\mu/\eta_i$ the two center factors in a hard packet are
+\[
+ {a_ix_{ci}^2\over\tau}=\rho\eta_i s_{ci}^2,
+ \qquad {a_ix_{ci}\over\sqrt{a_i\tau}}
+                    =\sqrt{\rho\eta_i}\,s_{ci}.      \tag{NC26}
+\]
+The fourth packet has the analogous factors $\rho r_c^2$ and
+$\sqrt\rho r_c$. The core belongs to the ideal $(X,Y,R,\delta)$
+because it vanishes identically on the matching curve. Its center-linear
+factors after division by $\tau$ are therefore
+$d x_{ci}/\tau=\rho\eta_i s_{ci}$ and
+$d\delta_c/\tau=\rho r_c$; its normalized normal factors are
+$d/\sqrt{a_i\tau}=\sqrt{\rho\eta_i}$ and
+$d/\sqrt{\mu\tau}=\sqrt\rho$. Its quadratic normal factors are
+bounded by $d/\mu=\varepsilon$. Complementary coefficients are at
+most $\tau$ and give smaller factors. Each packet is at most quadratic in the
+state coordinates, and all remaining higher Taylor factors are
+actual angle or state deviations with zero residue. The only testing
+denominators are powers of the unit $t$. Thus exact packetwise Taylor
+allocation is a bounded Gram on (NC25). Its normal residue is (NC20)
+and its tangent Schur complement is $g''(t_0)/2>0$, as follows by
+differentiating the completed squares (NC23)--(NC24). This assertion
+also holds when $\bar\eta_i=0$: the normal form (NC20), its cross
+entries and the completed Schur expression are continuous polynomial
+expressions in $\sqrt{\bar\eta_i}$, with a strict normal block.
+The strict-Gram lemma, the nonnegative center value and pure-factor
+restoration prove the four-event case without any restriction
+on its internal coefficient ratios.
+
+\subsection{A terminating induction on event constraints}
+
+Normalize the nonzero source by $d+\lambda+n+m+c+A+D+\alpha+\beta=1$.
+The factor is positive and pure-source. Literal $d=0$ is already an
+event-square sum; positive slack residue is covered by the positive
+residue lemma. If $\bar d>0$ and the residue slack is zero, the
+unconstrained curvature argument and (NC9) with $k=0$ apply.
+
+It remains that $d>0$, $\bar d=0$ and the residue slack is zero.
+Product residue states were settled above. At an entangled residue,
+let $S$ be all events with positive coefficient residue. This is a
+nonempty matching. If it has four edges, every complementary
+coefficient and $d$ is infinitesimal relative to its smallest weight,
+and (NC17)--(NC26) apply. Otherwise use its at most three independent
+event amplitudes as the exact hard state coordinates. Set
+\[
+ \sigma=\max\bigl(\{d\}\cup\{c_e:e\notin S\}\bigr)>0.
+\]
+Every hard weight $a_i$ satisfies $\sigma/a_i$ infinitesimal. The
+parent has the diagonal form (NC7), and its constrained next-scale
+residue $g=\overline G(0,y)$ is nonnegative by physicality.
+
+If $g(y_0)>0$, (NC9)'s positive-value argument finishes. If $g(y_0)=0$
+and $\overline{d/\sigma}>0$, the one-, two- or three-hard curvature
+calculation above gives a strict full soft Hessian; (NC8)--(NC9)
+finish without assuming comparability of the hard weights.
+
+The only remaining case has $g(y_0)=0$ and
+$\overline{d/\sigma}=0$. Then $g$ is a nonnegative event-square
+sum, and at least one remaining event coefficient has positive
+normalized residue. All such event amplitudes vanish at the same
+entangled residue state. Add them all to $S$. The enlarged set is
+still a matching; every coefficient left outside it is infinitesimal
+relative to each of its weights. If it has at most three edges, repeat.
+If it has four, apply the four-event proof above, which allows arbitrary source scales.
+Each repetition adds an edge, and a matching has at most four edges.
+There are therefore at most three enlargements. Every step retains
+the entire original parent. This proves
+Theorem~\ref{thm:noncommuting-refined}.
+

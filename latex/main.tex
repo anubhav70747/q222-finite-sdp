@@ -1,0 +1,690 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=26mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,booktabs,array}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\Qset}{\mathcal Q_{222}}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Id}{\mathbb I}
+\newcommand{\conv}{\operatorname{conv}}
+\newcommand{\Sym}{\operatorname{Sym}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\res}{\operatorname{res}}
+\newcommand{\sos}{\Sigma T^2}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\setlength{\emergencystretch}{2em}
+\allowdisplaybreaks[1]
+\title{Finite semidefinite representation of the simplest quantum correlation set}
+\author{}
+\date{}
+\hypersetup{pdftitle={Finite semidefinite representation of the simplest quantum correlation set}}
+\begin{document}
+\makeatletter
+\begin{center}
+{\LARGE\@title\par}
+\end{center}
+\makeatother
+\vspace{1em}
+\begin{abstract}
+\input{abstract.tex}
+\end{abstract}
+
+\section{Introduction}
+
+Which joint outcome probabilities can two separated quantum systems produce?
+Even when each party chooses between two binary measurements, the answer
+depends on both the correlations between the outcomes and their individual
+biases. Together these quantities form an eight-dimensional convex set.
+Its supporting hyperplanes give all quantum bounds on Bell inequalities in
+this experiment.
+
+Semidefinite programming provides a systematic way to bound these quantum
+values. The Navascu\'es--Pironio--Ac\'in hierarchy imposes positivity on
+successively larger moment matrices~\cite{NPA}. In the two-input,
+two-output scenario, a different finite description follows from the
+reduction to two-qubit experiments~\cite{Masanes}: the quantum set is the
+convex hull of a compact polynomial image. Its extreme points also admit
+an analytical characterization~\cite{BarizienBancal}. These descriptions
+make the set accessible to real algebraic geometry. They do not, by
+themselves, provide a finite linear matrix inequality for membership.
+Indeed, compact convex semialgebraic sets can fail to admit any
+semidefinite lift~\cite{Shadows}.
+
+We prove that the complete quantum set in this scenario does admit such
+a lift. There is one finite positive-semidefinite constraint, with
+auxiliary real variables, whose projection is exactly the set of all
+eight expectations. The same feasible region therefore gives the exact
+quantum value of every Bell functional. The matrices can be chosen with
+real algebraic entries.
+
+The difficulty occurs near compatible measurements. An inequality may
+approach a singular supporting hyperplane while an independent quantum
+experiment approaches a product-state or commuting-measurement boundary.
+A certificate valid at a fixed interior point need not remain valid
+through these simultaneous limits. We keep the coefficients of the
+inequality and the parameters of the experiment in separate real closed
+fields. Exact sums of squares in their tensor product then express the
+positivity needed for a finite lift. Scheiderer's tensor-evaluation
+criterion~\cite{Scheiderer} turns this universal positivity statement
+into semidefinite representability.
+
+We develop the physical reduction, the tensor criterion and the global
+assembly below. The local proof has two parts: regular contacts are
+controlled by curvature, whereas the compatible-measurement limits
+require explicit rescalings of the complete state polynomial. The
+accompanying \emph{Complete proofs} supplies every local calculation
+and the source partitions used in the assembly.
+
+\section{The quantum set and the main theorem}
+
+Alice chooses $x\in\{0,1\}$ and Bob chooses $y\in\{0,1\}$.
+Their outcomes $a,b$ take values in $\{+1,-1\}$. A quantum behavior has
+the form
+\begin{equation}
+ p(a,b\mid x,y)=\tr\bigl[\rho(M_{a|x}\otimes N_{b|y})\bigr],
+ \label{eq:behavior}
+\end{equation}
+where $\rho$ is a bipartite density operator and each measurement is a
+binary positive-operator-valued measurement. Arbitrary finite local
+Hilbert-space dimensions are allowed. Define the observables
+$A_x=M_{+|x}-M_{-|x}$ and $B_y=N_{+|y}-N_{-|y}$. Nonsignalling makes
+the four marginal expectations independent of the other party's input.
+We use the eight coordinates
+\begin{equation}
+ q=(a_0,a_1,b_0,b_1,E_{00},E_{01},E_{10},E_{11}),\qquad
+ a_x=\langle A_x\rangle,\quad b_y=\langle B_y\rangle,
+ \quad E_{xy}=\langle A_xB_y\rangle.
+ \label{eq:coordinates}
+\end{equation}
+They recover every probability through
+\begin{equation}
+ p(a,b\mid x,y)=\frac{1+a a_x+b b_y+abE_{xy}}4.
+ \label{eq:probabilities}
+\end{equation}
+Let $\Qset\subset\R^8$ denote the set obtained from
+Eq.~\eqref{eq:behavior}.
+
+\begin{theorem}[Finite semidefinite representation]
+\label{thm:main}
+There exist finite integers $N,p$ and real symmetric matrices
+$L_0,L_1,\ldots,L_8,M_1,\ldots,M_p$ of order $N$ such that
+\begin{equation}
+ \Qset=\left\{q\in\R^8:\ \exists y\in\R^p,\quad
+ L_0+\sum_{\nu=1}^{8}q_\nu L_\nu+
+                   \sum_{j=1}^{p}y_jM_j\succeq0\right\}.
+ \label{eq:lift}
+\end{equation}
+All entries of these matrices may be chosen to be real algebraic numbers.
+\end{theorem}
+
+Thus $\Qset$ is a spectrahedral shadow. For any Bell functional
+$\beta(q)=\beta_0+\sum_\nu\beta_\nu q_\nu$, its maximum over
+Eq.~\eqref{eq:lift} is exactly its quantum maximum. Compactness of
+$\Qset$, proved next, ensures that this maximum is attained.
+The theorem establishes existence of a finite representation; evaluating
+its matrices and finding a useful matrix size are subsequent constructive
+questions.
+
+\section{A finite polynomial description of all quantum behaviors}
+\label{sec:physical}
+
+The field-extension argument requires a fixed finite description of
+$\Qset$. We obtain one by reducing the measurements before taking the
+convex hull.
+
+For an effect $0\preceq E\preceq I$, the matrix
+\begin{equation}
+ \widehat P_E=\begin{pmatrix}
+ E&\sqrt{E(I-E)}\\ \sqrt{E(I-E)}&I-E
+ \end{pmatrix},\qquad Vh=(h,0),
+ \label{eq:dilation}
+\end{equation}
+is a projection and satisfies $V^*\widehat P_EV=E$. The embedding $V$
+is the same for both settings of a party. Applying it on both sides
+preserves all eight expectations. We may therefore use observables
+whose squares are the identity.
+
+Two such observables have a common decomposition into invariant blocks
+of dimension at most two. To see this, let $U,V$ be Hermitian involutions.
+The unitary $C=UV$ satisfies $UCU=C^*$. An eigenvector of $C$ with
+nonreal eigenvalue $\lambda$ pairs with its image under $U$, which has
+eigenvalue $\overline\lambda$; their span is invariant under both
+observables. On the $\lambda=\pm1$ eigenspaces, $V=\pm U$, and
+one-dimensional blocks suffice. Repeating this decomposition gives the
+claimed blocks.
+
+Within a two-dimensional block a choice of basis and phase puts the
+measurements in the form
+\begin{equation}
+ A_0=B_0=Z,\qquad A_1=c_AZ+s_AX,\qquad B_1=c_BZ+s_BX,
+ \quad c_A^2+s_A^2=c_B^2+s_B^2=1,
+ \label{eq:qubit}
+\end{equation}
+where $X,Z$ are the Pauli matrices. One-dimensional blocks embed in this
+description at $s_A=0$ or $s_B=0$. Since the measurements are block
+diagonal, their expectations are convex combinations of two-qubit
+expectations. The matrices in Eq.~\eqref{eq:qubit} are real. For each
+real symmetric measurement matrix $M$,
+\begin{equation}
+ (r+is)^*M(r+is)=r^TMr+s^TMs.
+ \label{eq:real-state}
+\end{equation}
+Normalizing the nonzero real and imaginary parts separately therefore
+reduces complex states to mixtures of real pure states.
+
+Let $\Phi:S^1\times S^1\times S^3\to\R^8$ be the expectation map
+defined by Eq.~\eqref{eq:qubit} and a real unit state
+$\psi\in\R^4$. Every coordinate of $\Phi$ is polynomial.
+The preceding reduction and the physical realization of a finite mixture
+by direct sums give
+\begin{equation}
+ \Qset=\conv\Phi(S^1\times S^1\times S^3)
+ =\left\{\sum_{i=1}^{9}w_i\Phi(z_i):
+ w_i\ge0,\ \sum_iw_i=1,\ z_i\in S^1\times S^1\times S^3\right\}.
+ \label{eq:nine}
+\end{equation}
+The bound of nine is the Carath\'eodory bound in eight dimensions.
+It limits the number of atoms in a representation; the states and
+measurement angles still range continuously.
+
+Equation~\eqref{eq:nine} is a polynomial formula with rational
+coefficients and finitely many variables. Its domain is compact over
+$\R$, so $\Qset$ is compact. Projection of a semialgebraic set is
+semialgebraic~\cite{Basu}. We can consequently transfer this same finite
+formula to any real closed extension $K$ of $\R$; the resulting set is
+denoted $(\Qset)_K$. This supplies the precise meaning of a quantum
+point over $K$ in the next section.
+
+\section{From Bell bounds to a finite lift}
+\label{sec:tensor}
+
+Write $P$ for the cone of affine functions nonnegative on $\Qset$.
+A Bell bound $\beta(q)\le b$ gives such a function,
+$f(q)=b-\beta(q)$. We call $f$ a Bell slack. Over a real closed
+extension $K$, the transferred cone $P_K$ consists exactly of the
+affine functions nonnegative on $(\Qset)_K$. This follows by
+transferring the finite formula
+$\forall q\,[q\in\Qset\Rightarrow f(q)\ge0]$.
+
+To keep the inequality and the experiment independent, choose two
+labelled real closed extensions $K_c,K_t$ of $\R$ and put
+$T=K_c\otimes_{\R}K_t$. For $f=f_0+\sum_\nu f_\nu q_\nu$
+with coefficients in $K_c$, and $q\in(\Qset)_{K_t}$, define
+\begin{equation}
+ [f,q]=f_0\otimes1+\sum_{\nu=1}^{8}f_\nu\otimes q_\nu.
+ \label{eq:tensor}
+\end{equation}
+An element of $T$ is a finite sum of separated products. We seek an
+identity $[f,q]=\sum_k h_k^2$ in this ring. The fields may be labelled
+copies of the same field, but their elements retain their separate
+positions in the tensor product.
+
+\begin{theorem}[Universal sum of squares]
+\label{thm:tensor}
+For every $K_c,K_t\supset\R$, every $f\in P_{K_c}$ and every
+$q\in(\Qset)_{K_t}$,
+\begin{equation}
+                         [f,q]\in\Sigma T^2.
+ \label{eq:universalsos}
+\end{equation}
+Here $\Sigma T^2$ is the set of finite sums of squares in $T$.
+\end{theorem}
+
+Scheiderer's Corollary~3.19~\cite{Scheiderer} states that a closed
+convex semialgebraic set $S\subset\R^n$ has a finite semidefinite
+lift precisely when the corresponding tensor evaluations are sums of
+squares for every real closed extension $K/\R$, every valid affine
+function over $K$, and every point of $S_K$. Applying
+Theorem~\ref{thm:tensor} to two labelled copies of each $K$ gives this
+condition for $\Qset$. Together with Eq.~\eqref{eq:nine}, it proves
+the real-coefficient part of Theorem~\ref{thm:main}.
+
+The criterion permits the number and tensor ranks of the squares to
+depend on the point and the affine function. Its conclusion supplies
+a common finite lift. It is therefore enough to construct exact
+certificates throughout the source and testing domains. The next
+two sections make those domains and their certificates explicit.
+
+\section{Two families of supporting inequalities}
+\label{sec:sources}
+
+We first reduce the cone of Bell slacks to a small collection of
+coefficient patterns. Choose the CHSH expression
+$S=E_{00}-E_{01}+E_{10}+E_{11}$ and set $H=1-S/2$.
+At the corresponding Popescu--Rohrlich vertex, $H=-1$ and the eight
+losing-event probabilities vanish. Order these events as
+\begingroup\setlength{\arraycolsep}{3pt}
+\begin{equation}
+ \begin{array}{c|cccccccc}
+ \text{weight}&\lambda&n&m&C&A&D&\alpha&\beta\\
+ \text{event}&(++|01)&(+-|00)&(+-|11)&(-+|10)&(-+|00)&(-+|11)&(--|01)&(+-|10)
+ \end{array}
+ \label{eq:events}
+\end{equation}
+\endgroup
+The letters on the left denote nonnegative weights, not probabilities.
+Every valid slack negative at that vertex has the unique form
+\begin{equation}
+ f=dH+4\sum_i c_i p_i,\qquad d>0,\quad c_i\ge0.
+ \label{eq:source}
+\end{equation}
+The coefficients follow by evaluating $f$ at that vertex and its
+eight deterministic CHSH-facet neighbors. If $f$ is nonnegative at
+every PR vertex, it is nonnegative on the nonsignalling polytope and
+is a nonnegative combination of event probabilities. Those slacks
+already have separated square certificates.
+
+For the remaining slacks, introduce half-angles $u,v$ and a real
+homogeneous state $(W,X,Y,Z)$. The measurement circle coordinates are
+$(1-u^2,2u)/(1+u^2)$ and $(1-v^2,2v)/(1+v^2)$.
+Multiplication by the positive measurement denominators and state norm
+gives the complete polynomial
+\begin{align}
+ F={}&4\lambda D_u(W+vX)^2+4nD_uD_vX^2
+          +4m(vW-X+uvY-uZ)^2\notag\\
+ &+4CD_v(uW-Y)^2+4AD_uD_vY^2
+          +(4D+2d)(uW+uvX-Y-vZ)^2\notag\\
+ &+(4\alpha+2d)D_u(vY-Z)^2
+          +(4\beta+2d)D_v(X+uZ)^2-2dD_uD_vZ^2,
+ \label{eq:parent}
+\end{align}
+where $D_u=1+u^2$ and $D_v=1+v^2$.
+Thus $F=D_uD_v\|\psi\|^2 f(\Phi)$ in one field, and the same
+identity holds with separated coefficients in $T$. Homogeneous angle
+pairs give the polynomial at the missing projective endpoints.
+
+The negative term in Eq.~\eqref{eq:parent} is the only obstruction
+to an immediate event-square decomposition. Let $P(u,v)$ be its
+four-by-four state matrix. For $d>0$ and $uv\ne0$, the restriction
+to $Z=0$ contains the positive definite form
+\begin{equation}
+ 2d\bigl[(uW+uvX-Y)^2+D_uv^2Y^2+D_vX^2\bigr].
+ \label{eq:stateblock}
+\end{equation}
+Hence $P\succeq0$ is equivalent to $\det P\ge0$. Its determinant
+has a useful structure:
+\begin{equation}
+ \det P=16D_u^2D_v^2u^2v^2 L(u^2,v^2),\qquad
+ L(U,V)=h+\sum_{(i,j)\ne(1,1)}q_{ij}U^{i-1}V^{j-1},
+ \quad q_{ij}\ge0,
+ \label{eq:determinant}
+\end{equation}
+where $(i,j)\in\{0,1,2\}^2\setminus\{(1,1)\}$.
+The eight coefficients are displayed in Complete proofs, Chapter~4,
+Eq.~(SG6). Their nonnegativity makes $L(e^s,e^t)$ convex.
+Consequently, a stationary zero at finite positive angles is a global
+minimum. Together with Eq.~\eqref{eq:stateblock}, this proves that
+the six contact equations
+\begin{equation}
+ P(u_c,v_c)\psi_c=0,\qquad
+ \psi_c^TP_u(u_c,v_c)\psi_c=
+ \psi_c^TP_v(u_c,v_c)\psi_c=0
+ \label{eq:contact}
+\end{equation}
+already certify physicality of a nonnegative coefficient tuple.
+
+Include the event-face boundary $d=0$ and normalize all nine
+nonnegative coefficients in Eq.~\eqref{eq:source} to sum to one.
+The physical tuples form a compact convex body. At an extreme point
+with $d>0$ whose Laurent
+polynomial is coercive, the minimum of $L$ must be zero; otherwise
+small opposite coefficient perturbations would remain physical.
+At this contact, Eq.~\eqref{eq:contact} gives six linear equations
+in the source coefficients. Seven positive event weights would leave
+a nonzero perturbation preserving those equations and the normalization,
+again contradicting extremality. The compatibility of the omitted
+events then leaves exactly two patterns, up to Bell relabellings:
+\begin{equation}
+\begin{array}{ll}
+\mathsf C_1:&\lambda=n=0,\quad d,m,C,A,\alpha>0,
+                       \quad D,\beta\ge0,\quad D+\beta>0,\\[2pt]
+\mathsf C_2:&\lambda=\beta=0,\quad d,m,C,A,D,\alpha>0,
+                       \quad n\ge0.
+\end{array}
+\label{eq:families}
+\end{equation}
+The noncoercive supports reduce to two other patterns,
+$\lambda=m=0$ or $\lambda=\alpha=0$. Their source cones have explicit
+matrix lifts: a six-by-six Gram matrix with three auxiliaries in the
+first case, and two three-by-three blocks with one auxiliary in the
+second. Complete proofs, Chapter~4, derives both lifts and their
+attained dual representations. Pairing a source lift with its testing
+dual gives separated squares directly.
+
+Every normalized source is a mixture of at most nine extreme sources.
+This finite decomposition, the contact equations and the support
+classification all transfer to the coefficient field. It remains to
+certify the full polynomial~\eqref{eq:parent} for the two families
+in Eq.~\eqref{eq:families} at arbitrary independent tests.
+
+\section{Exact certificates at regular and singular contacts}
+\label{sec:local}
+
+\subsection{A positive real Gram matrix controls infinitesimal errors}
+
+For $K_i\supset\R$, let $B_i$ be its ring of bounded elements and
+$\mathfrak m_i$ its ideal of infinitesimals. Every bounded element has
+a unique real standard part. This defines a residue map
+$\rho:B_c\otimes B_t\to\R$ with kernel
+$\mathfrak m_c\otimes B_t+B_c\otimes\mathfrak m_t$.
+Thus a zero-residue coefficient is a finite sum of separated terms,
+each with an infinitesimal factor.
+
+The following elementary identity turns a positive residue into exact
+squares. If $x\in K_c$ is infinitesimal, $y\in K_t$ is bounded,
+and $\epsilon,M$ are positive reals with $M>|y|$, then
+\begin{equation}
+ \epsilon+x\otimes y=
+ \tfrac12\bigl[(\epsilon/M+x)\otimes(M+y)
+              +(\epsilon/M-x)\otimes(M-y)\bigr].
+ \label{eq:reserve}
+\end{equation}
+Each pure-field factor on the right is positive, so each product is
+an elementary tensor square. A positive real residue can be split
+among finitely many such terms.
+
+\begin{lemma}[Bounded Gram matrix]
+\label{lem:gram}
+If $G\in\Sym_r(B_c\otimes B_t)$ and $\rho(G)\succ0$, then
+$z^TGz\in\Sigma T^2$ for every $z\in T^r$.
+\end{lemma}
+\begin{proof}
+A fixed real congruence reduces the residue to the identity. Choose
+$\delta>0$ with $(r-1)\delta<1$. The exact decomposition
+\begin{align}
+ G={}&\sum_i\bigl(G_{ii}-(r-1)\delta\bigr)e_ie_i^T\notag\\
+ &+\sum_{i<j}\frac{\delta+G_{ij}}2(e_i+e_j)(e_i+e_j)^T
+ +\sum_{i<j}\frac{\delta-G_{ij}}2(e_i-e_j)(e_i-e_j)^T
+ \label{eq:gramframe}
+\end{align}
+has coefficients of positive residue. Apply Eq.~\eqref{eq:reserve}
+to each coefficient and evaluate on $z$. The roots in $z$ may be
+unbounded; only the Gram coefficients require boundedness.
+\end{proof}
+
+\subsection{Contacts with noncommuting measurement residues}
+
+Suppose both local measurement pairs remain noncommuting after taking
+real residues. At a zero of the Bell slack the residue state must be
+entangled, since a product state gives a strict CHSH bound at these
+angles. An entangled two-qubit state is an invertible bilinear form
+on the local rays. Each local ray can therefore be orthogonal to at
+most one remote ray. The vanishing losing events form a matching
+in the cycle of eight events, so at most four of them can vanish.
+
+This finite constraint has an important consequence for unequal source
+scales. Retain the event amplitudes with the largest coefficients as
+exact state coordinates. If the next source scale has a positive
+constant term, Lemma~\ref{lem:gram} applies. If the signed coefficient
+is visible at that scale, the constrained contact has a positive
+Hessian. The angular part follows from Eq.~\eqref{eq:determinant}:
+at a stationary zero,
+\begin{equation}
+ \nabla^2_{\log U,\log V} L
+       =\sum_{e} q_e U^{e_1}V^{e_2}\,ee^T.
+ \label{eq:curvature}
+\end{equation}
+The active exponent vectors span the plane. The event supports that
+would reduce their span have an explicit negative CHSH-core direction
+and are excluded by physicality. The positive transverse state block
+then gives the full constrained Hessian.
+
+To lift this curvature through independent infinitesimals, write the
+complete local polynomial as
+\begin{equation}
+ F(x,y)=\sum_i a_i b_i(y)x_i^2+\sigma G(x,y),\qquad
+ \varepsilon_i=\sigma/a_i>0\text{ infinitesimal}.
+ \label{eq:weighted}
+\end{equation}
+The ratios $\varepsilon_i$ may differ arbitrarily. Substituting
+$x_i=\varepsilon_i s_i$ into the stationary equations gives a
+nonsingular real residue Jacobian. The semialgebraic implicit-function
+theorem supplies an exact center $(x_c,y_c)$ in the coefficient field.
+Finite Taylor expansion there gives
+\begin{equation}
+ F/\sigma=a+h^TQh,\qquad a\ge0,\quad\rho(Q)\succ0,
+ \qquad h=\bigl((x_i-x_{ci})/\sqrt{\varepsilon_i}\bigr)_i
+                         \mathbin{\oplus}(y-y_c).
+ \label{eq:weightedgram}
+\end{equation}
+The vanishing first derivatives remove linear terms. Every higher
+coefficient acquires a bounded or infinitesimal pure-field factor
+after the displayed rescaling. Lemma~\ref{lem:gram} gives exact
+squares of the entire polynomial.
+
+If the signed coefficient remains infinitesimal at the next scale,
+another positive event amplitude must vanish. Add it to the retained
+constraints. Each repetition adds an edge to the matching, so the
+process stops after at most four edges. The four-edge case has an
+explicit weighted completion and a strictly positive remaining
+tangential curvature. Complete proofs, Chapter~6, proves this
+terminal case for arbitrary ratios of the four coefficients.
+
+\subsection{Limits of compatible measurements}
+
+When a measurement pair becomes compatible in residue, the curvature
+in Eq.~\eqref{eq:curvature} may vanish. The exact contact equations
+then determine the rescaling needed to keep the lost directions.
+We first solve those equations for the source coefficients and prove
+the strict signs of their denominators. The derivation uses a connected
+graph of real contacts, explicit nonzero minors and event-deletion
+arguments. It also includes the permitted zero coefficients in
+Eq.~\eqref{eq:families}; see Complete proofs, Chapter~5.
+
+These coordinates divide the source domain into finitely many cases.
+The first division uses the signed coefficient relative to the sum of
+all coefficients. A positive residue gives the ordinary edge and
+corner cases. An infinitesimal residue gives the two families
+$\mathsf C_1,\mathsf C_2$ with further exact source inequalities.
+Every positive quantity is either infinitesimal, a bounded unit or
+unbounded in its own field. Literal zero coefficients are kept as
+separate boundaries. This classification exhausts the source domain
+without comparing the rates in the two fields.
+
+For each case, choose state deviations $\xi$ from the relevant contact
+graph and retain the identity
+\begin{equation}
+ F=F_0+2\sum_i\xi_iF_i+\sum_{i,j}\xi_i\xi_jF_{ij}.
+ \label{eq:fullnormal}
+\end{equation}
+The scalar $F_0$, all first-normal coefficients $F_i$ and the whole
+quadratic state form are used together. Contact identities express
+the vanishing parts through finitely many polynomial roots. Monic
+division preserves the required source factors; it never divides by
+a difference between source and testing parameters. Rescaling these
+roots gives bounded Gram coefficients with a strict real residue.
+Complementary state charts and measurement directions are treated
+directly from Eq.~\eqref{eq:parent}.
+
+One identity illustrates how the source factors survive this division.
+Let $k$ be a positive source infinitesimal and $s$ a positive source
+unit. For independent positive testing coordinates $u,v$, put
+\begin{equation}
+ U_1=u^2v,\qquad U_2=kuv^2/s,\qquad U_3=k^2s,\qquad g=kuv.
+ \label{eq:circuitroots}
+\end{equation}
+Then $U_1U_2U_3=g^3$, and the exact identities
+\begin{equation}
+ g(u-k)=k(U_1-g),\qquad g(v-s)=s(U_2-g)
+ \label{eq:conductor}
+\end{equation}
+replace contact differences by the roots already present in the
+three-monomial sum-of-squares circuit. The first replacement supplies
+the infinitesimal factor $k$. In the second, $s$ is a unit, so the
+corresponding Taylor coefficients must themselves be infinitesimal;
+the local source formulas establish this before the identity is used.
+The first contact derivatives cancel the remaining linear terms.
+Neither $u-k$ nor $v-s$ is inverted. Complete proofs, Appendix~B,
+gives the resulting finite Gram correction and the full state-normal
+extension.
+
+The resulting statement is the local input needed for the global proof.
+
+\begin{proposition}[Complete canonical certificate]
+\label{prop:canonical}
+Let $K_c,K_t\supset\R$ be labelled real closed fields. Let the
+coefficients of Eq.~\eqref{eq:parent} belong to either family in
+Eq.~\eqref{eq:families} and admit a contact satisfying
+Eq.~\eqref{eq:contact} with $u_c,v_c>0$ and $\psi_c\ne0$.
+Then its full homogeneous tensor
+evaluation is a finite sum of squares for every measurement pair
+and every state in $K_t$.
+\end{proposition}
+
+Chapter~7 of Complete proofs assembles the local certificates.
+Appendix~A treats bounded source coefficients; Appendices~B and C
+establish the two remaining contact families, including their
+complementary testing charts. Several singular cases share one
+quadratic completion. In $\mathsf C_1$, one contact-division argument
+allows the source and testing coordinates to have either zero or
+nonzero residue. Its coefficients retain an infinitesimal factor
+after every division. In $\mathsf C_2$, the four vanishing event
+gaps enter through one radial scale; an exact current relation
+cancels the cross term before that scale is divided out. The
+remaining source domains have the explicit positive matrix
+completions given there. Source and testing perturbations remain
+independent throughout.
+
+\section{Global assembly and algebraic coefficients}
+\label{sec:assembly}
+
+We can now prove Theorem~\ref{thm:tensor}. Decompose a valid affine
+function into finitely many event, closed-face and canonical contact
+sources. Event sources are separated squares. The explicit closed-face
+lifts give positive-semidefinite matrices $X_c$ and $Y_t$ over their
+respective fields. Their pairing is a sum of squares because
+\begin{equation}
+ \sum_{i,j}(X_c)_{ij}\otimes(Y_t)_{ij}
+   =\sum_{a,b}\left(\sum_i U_{ia}\otimes V_{ib}\right)^2,
+ \qquad X_c=UU^T,\quad Y_t=VV^T.
+ \label{eq:pairing}
+\end{equation}
+The factorizations exist over real closed fields, including for
+singular matrices. Proposition~\ref{prop:canonical} handles the
+remaining source families. Dividing out the measurement denominators
+and the state norm multiplies each root only by positive inverse
+square roots in the testing field. Source normalizations are restored
+in the coefficient field.
+
+For completeness, signs and endpoints do not introduce further cases.
+Local changes of basis give positive finite half-angles. If one pair
+commutes literally, the CHSH operator is $\pm2$ times a reflection
+on each local block, so $H\succeq0$ in the testing field. At positive
+half-angles the CHSH core is also nonnegative when $WZ\le0$, by its
+explicit two-state Schur form. The remaining states have $W/Z>0$
+and are covered by Proposition~\ref{prop:canonical}. Homogeneous
+angle coordinates retain both projective endpoints.
+
+Write $f=\sum_j a_jf_j$ with $a_j\ge0$ in $K_c$, and use
+Eq.~\eqref{eq:nine} to write $q=\sum_iw_iq_i$ in $K_t$.
+For each source and testing atom, let $[f_j,q_i]=\sum_kh_{ijk}^2$.
+Then
+\begin{equation}
+ [f,q]=\sum_{i,j,k}
+           \bigl[(\sqrt{a_j}\otimes\sqrt{w_i})h_{ijk}\bigr]^2.
+ \label{eq:assembly}
+\end{equation}
+The testing weights sum to one and therefore preserve the affine
+constant. Zero weights give zero roots. This proves
+Theorem~\ref{thm:tensor}, and the tensor criterion proves
+Eq.~\eqref{eq:lift}.
+
+It remains to justify the algebraic entries asserted in
+Theorem~\ref{thm:main}. Let $\R_{\mathrm{alg}}$ be the real algebraic
+numbers. This is a real closed subfield of $\R$.
+Fix the finite sizes $N,p$ supplied by the existence theorem.
+Equality between Eq.~\eqref{eq:nine} and a projected pencil of these
+sizes is a first-order sentence over $\mathbb Q$:
+\begin{equation}
+ \exists L_0,\ldots,L_8,M_1,\ldots,M_p\quad
+ \forall q\quad
+ \left[q\in\Qset\ \Longleftrightarrow\
+ \exists y\;L_0+\sum_\nu q_\nu L_\nu+\sum_jy_jM_j\succeq0\right].
+ \label{eq:algebraic}
+\end{equation}
+Here membership uses the finite polynomial formula~\eqref{eq:nine},
+and matrix positivity uses finitely many principal minors. The sentence
+is true over $\R$ and hence over $\R_{\mathrm{alg}}$. Choose its
+matrix coefficients there. Elementary transfer back to $\R$ gives
+Eq.~\eqref{eq:lift} for every real $q$, with those same algebraic
+entries. This completes the proof of Theorem~\ref{thm:main}.
+
+\section{An explicit projection}
+
+A two-dimensional projection illustrates what an evaluated representation
+looks like. Set $t=a_0$ and $s=E_{00}+E_{01}+E_{10}-E_{11}$.
+The exact projection is
+\begin{equation}
+ \mathcal T=\{(t,s):|t|\le1,\quad t^2+s^2/4\le2\}.
+ \label{eq:tiltedset}
+\end{equation}
+It has the order-four linear matrix inequality
+\begin{equation}
+ \begin{pmatrix}\sqrt2+t&s/2\\s/2&\sqrt2-t\end{pmatrix}
+             \oplus(1-t)\oplus(1+t)\succeq0.
+ \label{eq:tiltedlmi}
+\end{equation}
+The two-by-two determinant gives the ellipse, and the scalar blocks
+give the interval for $t$.
+
+The quantum upper boundary follows from the tilted-CHSH identity of
+Bamps and Pironio~\cite{BampsPironio}. If
+$T_\alpha=\alpha A_0+A_0(B_0+B_1)+A_1(B_0-B_1)$ and
+$R_\alpha=\alpha A_1-A_0(B_0-B_1)-A_1(B_0+B_1)$, then
+\begin{equation}
+ T_\alpha^2+R_\alpha^2=(8+2\alpha^2)I,
+ \qquad
+ \beta I-T_\alpha=
+ \frac{(\beta I-T_\alpha)^2+R_\alpha^2}{2\beta},
+ \quad\beta=\sqrt{8+2\alpha^2}.
+ \label{eq:tiltedsos}
+\end{equation}
+For a given $|t|\le1$, choosing $\alpha=2t/\sqrt{2-t^2}$ gives
+$|s|\le2\sqrt{2-t^2}$.
+Conversely, write $r=\sqrt{1-t^2}$ and $h=\sqrt{2-t^2}$.
+The state and measurements
+\begin{equation}
+ |\psi_t\rangle=\sqrt{\frac{1+t}{2}}|00\rangle+
+                \sqrt{\frac{1-t}{2}}|11\rangle,
+ \quad A_0=Z,\quad A_1=X,\quad B_{0,1}=(Z\pm rX)/h
+ \label{eq:tiltedattain}
+\end{equation}
+give $(t,s)=(t,2h)$. Reversing both Bob outcomes gives $(t,-2h)$;
+mixing these experiments fills the vertical interval. This proves
+both inclusions in Eq.~\eqref{eq:tiltedset}, including $t=\pm1$.
+Theorem~\ref{thm:main} extends finite semidefinite representability
+to all eight coordinates at once.
+
+\section{Discussion}
+
+The complete quantum set for two binary measurements per party has a
+finite semidefinite representation with real algebraic coefficients.
+The result places all Bell objectives in this scenario on one exact
+finite optimization domain. It includes biased outcomes, mixed states
+and arbitrary finite-dimensional implementations.
+
+The proof depends on retaining the singular limits of the measurement
+geometry. The real-qubit reduction makes the set semialgebraic; the
+separated sum-of-squares construction supplies the additional positivity
+that a finite lift requires. Independent coefficient and measurement
+parameters expose the cases in which ordinary contact curvature
+degenerates. Exact rescalings recover those directions while preserving
+the complete state polynomial.
+
+Finding a small explicit pencil is the next concrete problem.
+The algebraic-coefficient conclusion makes exact coefficient search
+possible in principle, while the local identities identify the
+functions from which a constructive representation may be built.
+The existence theorem itself is independent of the choice of a
+moment hierarchy. Its conclusion is that the full quantum boundary
+in the simplest Bell experiment admits one finite semidefinite
+description.
+
+\input{references.tex}
+\end{document}
+

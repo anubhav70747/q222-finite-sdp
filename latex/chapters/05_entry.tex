@@ -1,0 +1,311 @@
+\chapter{Coordinates of the contact families}
+\label{ch:entry}
+\label{component:p477c0ac30750}
+\label{p477c0ac30750:sec:rederived-contact-entry}
+The source support, physicality, curvature and deletion facts used below were proved in Chapter~\ref{ch:geometry}, including (SG17)--(SG22).
+\section{Signs and stationary coordinates}
+\label{component:paf13bbf8fd32}
+
+\label{paf13bbf8fd32:sec:global-native-entry-rederived}
+
+The stationary equations give rational formulas for the event weights.
+To use those formulas at a singular limit, we first determine the signs
+of every denominator. The contact geometry of Chapter~\ref{ch:geometry}
+provides the required strict inequalities.
+
+\subsubsection*{Statement and the real maximal-contact graph}
+
+Use the raw full parent \(F\), with \(d>0\).
+Every source below is physical and has an actual finite noncommuting
+zero.  The two allowed coefficient domains are
+\[
+\begin{array}{ll}
+ {\rm C1}:&\lambda=n=0,\quad m,C,A,\alpha>0,\quad
+ D,\beta\ge0,\quad D+\beta>0,\\
+ {\rm C2}:&\lambda=\beta=0,\quad m,C,A,D,\alpha>0,\quad n\ge0.
+\end{array}\tag{EN1}
+\]
+Make the actual angle gauges positive and put \(Z_c=1\), as permitted
+by SG3--SG4.  Then \(W_c>0\) by SG15 and SG21.  We prove the strict signs
+\[
+\begin{gathered}
+ X_c<0,\quad Y_c>0,\quad u_cW_c-Y_c>0,\quad
+ 1-v_cY_c>0,\\
+ R_{m,c}:=v_cW_c-X_c+u_cv_cY_c-u_c>0,\\
+ R_{D,c}:=u_cW_c+u_cv_cX_c-Y_c-v_c<0,\\
+ X_c+u_c>0,\qquad W_c+v_cX_c>0.
+\end{gathered}\tag{EN2}
+\]
+These inequalities hold over every real closed coefficient field.
+In particular they are strict ordered-field statements, with no
+assertion that a gap has positive real residue.
+
+Here is the common connected-graph argument, proved over \(\mathbb R\)
+before first-order transfer.  In either exact two-omission family,
+initially require all six retained events positive, normalize \(C=2\),
+and let their other five weights vary over the positive orthant.  Put
+\[
+ d_*(w)=\max\{d\ge0:(d,w)\text{ is physical}\}.
+ \tag{EN3}
+\]
+The admissible set is a closed interval by convexity.  It has positive
+length: at \(d=0\) the central Laurent coefficient is positive, its
+nonnegative Cauchy--Binet expansion containing \(16mCAD\); the outer
+coefficients remain nonnegative for \(d\ge0\).  Thus sufficiently small
+positive \(d\) is physical by SG3--SG6 and the homogeneous endpoint
+limits.  A fixed strictly CHSH-violating real test bounds \(d\) above.
+
+For these positive six-event supports the active outer exponents are
+constant and have zero in the interior of their convex hull.  The
+logarithmic Laurent sum is strictly convex and coercive.  At \(d_*\)
+its unique minimum is zero.  Indeed if its minimum were \(\mu>0\),
+a small increase of \(d\) preserves every active outer coefficient
+within a relative error \(\varepsilon\) and the central coefficient
+within absolute error \(\varepsilon\).  As in the extreme-source argument, this preserves a
+positive uniform lower bound, contradicting maximality.
+There is therefore one positive squared-angle contact, and SG3--SG4 gives
+one state with \(Z=1\).
+
+At that contact the core value is strictly negative (SG20--SG21).
+The Jacobian of the six equations
+\(\nabla_zF=0,F=0\), in \(z=(W,X,Y,u,v)\) and \(d\), is
+\[
+ \begin{pmatrix}\nabla_z^2F&\partial_d\nabla_zF\\
+ 0&\partial_dF\end{pmatrix},
+ \qquad \nabla_z^2F\succ0,\quad\partial_dF<0 .
+ \tag{EN4}
+\]
+The real analytic implicit-function theorem gives a local analytic
+contact branch.  SG7 makes it physical and the negative core value
+makes its \(d\) maximal.  Uniqueness makes these branches agree.
+Thus the normalized contact is analytic on the entire connected
+positive orthant.  Every physical finite zero with those event weights
+lies on this graph, because its negative core value prevents increasing
+\(d\) at that same test.
+
+\subsubsection*{C1: strict signs including the two literal boundary faces}
+
+Write
+\[
+ (W,X,Y,Z)=(S,u(\theta-1),uY_0,1).
+ \tag{EN5}
+\]
+We first determine the sign of $\theta$ from an adjugate entry. With \(B=\operatorname{adj}P\),
+\[
+\begin{gathered}
+ uB_{44}+B_{24}
+ =16uv^2D_u^2D_v\,\mathcal F,\\
+\begin{aligned}
+ \mathcal F={}&(d+2D)\{(d+2\alpha)(mD_v+Cu^2v^2)
+                       +2AD_v(m+Cu^2)\}\\
+ &+2mC\{d(u^2v^2+D_v)+2\alpha+2Dv^2D_u\}>0 .
+\end{aligned}
+\end{gathered}\tag{EN6}
+\]
+Since \(P\) has one-dimensional kernel and three positive eigenvalues,
+\(B=\gamma\psi\psi^T\) with \(\gamma>0\).  Equation EN6 gives
+\(\theta>0\).
+
+Neither \(Y_0=0\) nor \(S-Y_0=0\) is possible.  These walls would delete
+the positive \(A\)-event or \(C\)-event, respectively, while preserving
+the kernel and both angle jets.  The resulting omission set contains
+an exclusive pair, so has noncoercive support.  SG7 and SG22 rule this out.
+The remaining cross-multiplied contact identity is
+\[
+ m\,[S+uv(\theta-1)]\,
+       [v(S+u^2Y_0)-u\theta]
+   =2u^3(S-Y_0)(1-\theta)D_v .
+ \tag{EN7}
+\]
+For precision about exceptional source minors, use the four raw kernel
+equations and the two full angular derivatives.  Their selected six-column
+system, for \((d,m,A,D,\alpha,\beta)\) with \(C=2\), has
+determinant
+\[
+ -8192\theta u^2vD_u^2D_v^2\,\mathcal D,\qquad
+ \mathcal D=Y_0D_u(uY_0+v)(1-uvY_0)
+ [S+uv(\theta-1)]R_m(-R_D).
+ \tag{EN8}
+\]
+EN7 follows first from its rational solution wherever this selected
+minor is nonzero: the Cramer determinant for the \(m\)-column,
+multiplied by \([S+uv(\theta-1)]R_m\), equals this determinant
+times \(2u^3(S-Y_0)(1-\theta)D_v\).  This is an exact
+polynomial determinant identity.  The equivalent native formula is
+\(m=2ae^2c_2/(Mc_3)\), with the definitions in EN13 below:
+\(c_2/c_3=(1-\theta)D_v/E\),
+\(M=R_m/(Sv)\), \(E=[S+uv(\theta-1)]/S\),
+\(a=u(S-Y_0)/v\), \(e=u/S\).  These substitutions give EN7
+exactly.  The native contact equations are polynomial identities, so
+this argument does not assume the signs being proved.
+
+At the exact positive seed
+\[
+ (u,v;S,Y_0,\theta)=(1,1;1,\tfrac14,\tfrac12),\qquad
+ (d,m,C,A,D,\alpha,\beta)
+ =(\tfrac{27}2,4,2,9,\tfrac54,\tfrac{13}4,\tfrac94),
+ \tag{EN9}
+\]
+all six stationary equations hold and the selected minor is nonzero.
+Consequently that analytic minor is not identically zero on the
+connected contact graph.  Its nonzero set is dense.  Continuity extends
+EN7 to every contact on the graph.  At \(\theta=1\), EN7 and \(S,m>0\)
+would imply \(R_m=0\), permitting deletion of \(m\) and creating an
+exclusive omitted pair, again impossible.  The three continuous
+nonzero functions \(Y_0,S-Y_0,\theta-1\) therefore have constant signs,
+fixed by EN9:
+\[
+ S>0,\qquad 0<Y_0<S,\qquad 0<\theta<1.
+ \tag{EN10}
+\]
+
+The full-parent C1 reflection swaps
+\((\lambda,n),(m,C),(A,\alpha),(D,\beta)\), sends \(u\) to \(1/u\),
+and sends the state to
+\[
+ (vS-u(\theta-1),\,-S-uv(\theta-1),\,
+                   1-uvY_0,\,uY_0+v).
+\]
+Its state matrix \(G\) has \(G^TG=D_vI\); the full core and every event
+obey \(u^2F_{\sigma_1c}(1/u,v;G\psi)=D_vF_c(u,v;\psi)\).
+Its last coordinate is positive.
+Applying EN10 to the transformed normalized state proves successively
+\(1-uvY_0>0,\ S+uv(\theta-1)>0,\ R_D<0,\ R_m>0\).
+Together with EN10 this is precisely EN2.
+
+For a literal third omission \(D=0\) or \(\beta=0\), start at the
+given real contact and open that coefficient to \(\varepsilon>0\).
+EN4 is still invertible by the strict contact Hessian (SG18--SG19).  The local analytic branch stays at
+positive \(d\), has nonnegative event weights, and is physical by SG7.
+The already proved inequalities hold on it.  At the limit, EN6 and
+SG15 and SG21 stay strict; the still positive \(A,C,m\) and the same deletion
+arguments make the other weak inequalities strict.  EN7 passes to
+the limit, and so does the reflection.  Thus EN2 holds on both
+boundary faces.  This is an implicit-function limit at a fixed
+finite real contact, not an assertion that an optimizer cannot escape
+to infinity.  First-order transfer now gives the entire implication
+over every real closed field.
+
+\subsubsection*{C2: all signs and a positive omitted-row cofactor}
+
+Use the same positive six-event graph.  Five retained-amplitude walls
+are excluded directly by SG22:
+\[
+ Y=0,\quad uW-Y=0,\quad R_m=0,\quad R_D=0,\quad vY-1=0.
+ \tag{EN11}
+\]
+Deleting \(A,C,m,D,\alpha\), respectively, introduces an exclusive
+omitted pair in addition to \(\lambda=\beta=0\).
+The wall \(X=0\) deletes \(n\); the resulting source is on the C1
+three-consecutive-omission face \(\lambda=n=\beta=0\).
+It is physical by SG7, so EN10 gives \(X<0\), a contradiction.
+Thus all six retained event rows have fixed signs on the connected
+C2 graph.  The exact seed
+\[
+ (n,m,C,A,D,\alpha)=(\tfrac18,\tfrac38,\tfrac16,
+                              \tfrac58,\tfrac38,\tfrac16),\quad d=1,
+ \qquad (u,v;W,X,Y,Z)=(1,1;1,-\tfrac14,\tfrac14,1)
+\]
+has every required positive weight and every stationary equation.
+It fixes their signs to the first six signs in EN2.
+
+Here is a direct proof of the omitted-row sign, including \(n=0\).
+Let \(P_0\) be this raw C2 matrix with \(n\) set to zero.
+Changing \(n\) adds only \(4nD_uD_v\) to its \(XX\) entry.
+The cofactor \(B_{24}\) does not contain that column, whereas
+\(B_{44}\) changes by \(4nD_uD_v\det(P_0|_{W,Y})\).
+Consequently
+\[
+\begin{split}
+ uB_{44}+B_{24}
+  ={}&16uv^2D_u^2D_v\,\mathcal F\\
+    &+4unD_uD_v\det(P_0|_{W,Y})>0 .
+\end{split}\tag{EN12}
+\]
+Here \(\mathcal F\) is EN6 with \(\beta=0\).  The determinant in
+the second line is positive: the \(Z=0\) state block already has
+the strictly positive signed-core form SG3--SG4.  Thus \(X+u>0\).
+The C2 full-parent reflection
+\[
+ (u,v;W,X,Y,Z)\mapsto(1/v,1/u;Z,X,Y,W),
+ \quad (m,D),(C,\alpha),(\lambda,\beta)
+\]
+has the exact homogeneous identity
+\(u^2v^2F_{\sigma_2c}(1/v,1/u;Z,X,Y,W)=F_c(u,v;W,X,Y,Z)\).
+The transformed contact
+has positive last coordinate \(W\).  Applying the just-proved
+\(X'+u'Z'>0\) gives \(W+vX>0\).
+This proves EN2 for positive \(n\).  For literal \(n=0\), EN1 is
+already a C1 triple face and its signs apply directly; EN12 remains
+strict as well.
+
+\subsubsection*{Exact native-coordinate transport and uniqueness}
+
+For C1, reflect if needed so \(0<k=u_c\le1\), and define
+\[
+\begin{gathered}
+ S=W_c,\quad r=Y_c/(kS),\quad
+ \theta=1+X_c/k,\quad h=1-\theta,\\
+ \eta=v_c/(kS),\quad \zeta=Sv_c/k,\quad
+ f=\sqrt\eta,\quad g=\sqrt\zeta,\quad e=k/S=kf/g,\\
+ a=(1-r)/\eta,\quad t=\theta/\zeta,\quad x=k^2,\\
+ R=1+xr,\quad T=1+xh,\quad M=R-t,\quad J=T-a,\\
+ E=1-x\eta h,\qquad Q=1-x\zeta r .
+\end{gathered}\tag{EN13}
+\]
+By EN2, \(0<r,\theta<1\), all \(\eta,\zeta,a,t\) are positive,
+and
+\[
+ R_m=k\zeta M>0,\quad R_D=-v_cJ<0,\quad
+ W_c+v_cX_c=SE>0,\quad 1-v_cY_c=Q>0.
+\]
+Thus \(M,J,E,Q>0\), and \(0<a,t<2\).
+The selected determinant EN8 is now strictly nonzero.  The native
+seven coquotients and source coefficients SD1 in Section~\ref{component:p0acdb66bba2f}, with their exact stationarity identities SD9--SD11,
+satisfy exactly the six stationary equations at this same contact.
+Uniqueness therefore identifies them with the original normalized
+source, including \(D=0\) or \(\beta=0\).  No asymptotic hypothesis
+is used for these polynomial identities.
+
+For C2, normalize \(d=1\), and set
+\[
+\begin{gathered}
+ c=u_c,\quad a=v_c/u_c,\quad b=aW_c,\quad r=-X_c/u_c,\quad
+ t=(u_cW_c-Y_c)/v_c,\quad z=c^2,\\
+ h=b-a^2t=aY_c/u_c,\quad
+ g=(1+z)b-(1-r+a^2zt)=R_m/u_c,\quad
+ j=1+zr-t=-R_D/v_c .
+\end{gathered}\tag{EN14}
+\]
+The complete strict native domain follows:
+\[
+ a,b,c,t>0,\quad 0<r<1,\quad h,g,j>0,\quad
+ 1-zh=1-v_cY_c>0,\quad b-a^2zr=a(W_c+v_cX_c)>0.
+ \tag{EN15}
+\]
+The actual six-column stationary determinant is, in the unweighted
+event convention of the retained determinant proof,
+\[
+ -64ac^6rgt\,hj(1-zh)(1+z)^2(1+a^2z)^2\Delta,
+\]
+\[
+ \Delta=1+(1+z)b+z(1+z)b^2+2z(1+z)br+z^2r^2+2zr
+        +a^2z\{(1+z)b+1+zr(2-r)\}\ge1 .
+ \tag{EN16}
+\]
+That body provides its explicit reduction to a three-by-three
+determinant.  The six rational coefficients in
+Section~\ref{component:p6e5d41ed80b3} solve these six equations at the
+contact EN14.  EN16 makes the solution unique, so they are exactly
+the original source coefficients.  This remains valid at \(n=0\);
+one does not delete its column from the square system.
+
+All gauge actions, positivity statements and source equations used
+above are finite polynomial or rational ordered-field statements
+with denominators explicitly nonzero.  The real connected-graph
+proof therefore transfers as one fixed first-order implication.
+Together, EN1--EN16 discharge the native sign and positive-gap
+interface for both families in SG10.  They do not prove an
+all-tests tensor assertion; that assertion is supplied by the
+source partitions and their proofs in Appendices B and C.
+

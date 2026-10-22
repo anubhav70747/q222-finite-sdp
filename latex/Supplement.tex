@@ -1,0 +1,117 @@
+\documentclass[10pt,a4paper,oneside,openany]{book}
+\usepackage[margin=19mm,top=18mm,bottom=19mm,headheight=14pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,mathrsfs}
+\usepackage{booktabs,array,longtable,graphicx,xcolor,tikz,xurl}
+\usepackage{titlesec,fancyhdr}
+\usepackage[hypertexnames=false,hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{claim}[theorem]{Claim}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\providecommand{\R}{\mathbb R}
+\providecommand{\Q}{\mathbb Q}
+\providecommand{\Rc}{\mathbb Q[\delta,k,b,a,t]}
+\providecommand{\I}{\mathsf I}
+\providecommand{\U}{\mathsf U}
+\providecommand{\Otype}{\mathsf O}
+\providecommand{\SOS}{\operatorname{SOS}}
+\providecommand{\Inf}{\operatorname{Inf}}
+\providecommand{\res}{\operatorname{res}}
+\providecommand{\Sym}{\operatorname{Sym}}
+\providecommand{\Ow}{O_{\mathrm{wt}}}
+\providecommand{\wt}{\operatorname{wt}}
+\providecommand{\norm}[1]{\left\lVert #1\right\rVert}
+\providecommand{\status}[1]{\par\smallskip\noindent\textit{Scope. }#1\par\smallskip}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\DeclareUnicodeCharacter{2264}{\ensuremath{\leq}}
+\DeclareUnicodeCharacter{2265}{\ensuremath{\geq}}
+\DeclareUnicodeCharacter{221E}{\ensuremath{\infty}}
+\DeclareUnicodeCharacter{2212}{-}
+\DeclareUnicodeCharacter{03B1}{\ensuremath{\alpha}}
+\DeclareUnicodeCharacter{03B2}{\ensuremath{\beta}}
+\DeclareUnicodeCharacter{03B4}{\ensuremath{\delta}}
+\DeclareUnicodeCharacter{03BB}{\ensuremath{\lambda}}
+\DeclareUnicodeCharacter{03C1}{\ensuremath{\rho}}
+\DeclareUnicodeCharacter{03C3}{\ensuremath{\sigma}}
+\DeclareUnicodeCharacter{03C4}{\ensuremath{\tau}}
+\DeclareUnicodeCharacter{03A3}{\ensuremath{\Sigma}}
+\DeclareUnicodeCharacter{00D7}{\ensuremath{\times}}
+\DeclareUnicodeCharacter{2192}{\ensuremath{\to}}
+\DeclareUnicodeCharacter{21D4}{\ensuremath{\Longleftrightarrow}}
+\allowdisplaybreaks[2]
+\setlength{\emergencystretch}{2em}
+\setlength{\parskip}{2pt}
+\setlength{\parindent}{1em}
+\titleformat{\chapter}[display]{\normalfont\Large\bfseries}{\chaptername\ \thechapter}{4pt}{\LARGE}
+\titlespacing*{\chapter}{0pt}{0pt}{16pt}
+\titlespacing*{\section}{0pt}{14pt plus 3pt minus 2pt}{6pt}
+\titlespacing*{\subsection}{0pt}{10pt plus 2pt minus 2pt}{4pt}
+\titlespacing*{\subsubsection}{0pt}{8pt plus 2pt minus 2pt}{3pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Q222: finite semidefinite representability}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[C]{\thepage}\renewcommand{\headrulewidth}{0pt}}
+\setcounter{tocdepth}{0}
+\hypersetup{bookmarksdepth=1,pdftitle={Complete proofs: finite semidefinite representation of the simplest quantum correlation set},pdfsubject={Complete qualitative existence argument and explicit full-slack certificates},pdfauthor={}}
+\begin{document}
+\frontmatter
+\begin{titlepage}
+\centering
+\vspace*{25mm}
+{\LARGE\bfseries Finite semidefinite representation\\[4pt]
+of the simplest quantum correlation set\par}
+\vspace{16mm}
+{\Huge Complete proofs\par}
+\vspace{12mm}
+{\large 23 October 2026\par}
+\vfill
+\begin{minipage}{0.88\textwidth}
+The first seven chapters derive the real-qubit representation, the
+tensor sum-of-squares criterion, the reduction of supporting
+inequalities, and the partition of the source parameters. Appendices A--C give
+the exact local certificates, including the full state dependence,
+coefficient boundaries and projective measurement endpoints.
+
+\medskip
+The main algebraic step is common to all cases: after separating
+the vanishing directions, the remaining matrix has a positive real
+residue. Chapters 1 and 7 explain how the local identities combine
+to give the finite semidefinite representation.
+\end{minipage}
+\end{titlepage}
+\tableofcontents
+\mainmatter
+\input{chapters/01_theorem.tex}
+\input{chapters/02_model.tex}
+\input{chapters/03_tensor.tex}
+\input{chapters/04_geometry.tex}
+\input{chapters/05_entry.tex}
+\input{chapters/06_mechanisms.tex}
+\input{chapters/07_cover.tex}
+\appendix
+\input{certificates/all.tex}
+\backmatter
+\chapter{Reference}
+\begingroup
+\let\chapter\section
+\begin{thebibliography}{9}
+\bibitem{scheiderer}
+C. Scheiderer, \emph{Second-order cone representation for convex sets
+in the plane}, SIAM J. Appl. Algebra Geom. \textbf{5}, 114--139 (2021),
+arXiv:2004.04196v2.
+The general tensor-evaluation criterion used here is Corollary 3.19,
+p.~15; the quantitative tensor-rank criterion is Theorem 3.10.
+\url{https://arxiv.org/abs/2004.04196}.
+\end{thebibliography}
+\endgroup
+\end{document}
+

@@ -1,0 +1,3227 @@
+\chapter{Bounded source coefficients}
+\label{ch:cert-2}
+
+\section{Two quartic contacts}
+\label{component:p4ec1a51262f9}
+\label{p4ec1a51262f9:a-full-parent-case-for-a-finite-positive-d-commuting-edge}
+
+When one measurement pair becomes commuting, a quadratic angular
+coefficient can vanish. The next coefficient is then quartic. We treat
+the two such contacts together: the source determines a critical centre,
+and a finite polynomial expansion about that centre gives the required
+Gram matrix. All coefficients in this section are bounded, $d$ is a
+positive unit, and $\lambda=0$. The source is physical.
+Write $(n,m,C,A,D)$ for the coefficients denoted
+$(e_1,e_2,e_3,e_4,e_5)$ in the event order of SG1.
+
+\paragraph{A finite commuting edge.}
+Suppose the testing residues are $u=0$, $v=v_0\ne0$ and
+$[W:X:Y:Z]=[1:0:0:0]$, and $m$ is infinitesimal.
+On the residue source the determinant numerator is
+\[
+ Q(U,V)=UE(V)+U^2B(V),\quad
+ E(V)=q_{10}+hV+q_{12}V^2,\quad
+ B(V)=q_{20}+q_{21}V+q_{22}V^2.
+\]
+Assume $q_{10},q_{12},B(v_0^2)>0$ and $E(v_0^2)=0$.
+The unit event amplitude $vW-X+uvY-uZ$ can be set to one,
+so $W=(1+X-uvY+uZ)/v$. The opened event contributes the
+constant $4m$. The state block at $u=0$ is
+\[
+ M_0(v)=\begin{pmatrix}
+ 2(d+2n+2\beta)(1+v^2)&0&0\\
+ 0&2d(1+v^2)+4(C+A)(1+v^2)+4D+4\alpha v^2&4v(D-\alpha)\\
+ 0&4v(D-\alpha)&4\alpha+4Dv^2
+ \end{pmatrix}.
+\]
+Assume $M_0(v_0)\succ0$. In the applications below its lower
+minor is positive because
+$\alpha d+2\alpha C+2\alpha A+2\alpha D(1+v_0^2)
++Dv_0^2(d+2C+2A)>0$.
+
+The substitution $X=u^2x$, $Y=ua$, $Z=ub$, $U=u^2$ defines
+the polynomial $K$ by the exact identity
+\[
+ F(u^2x,ua,ub,u,v)=4m+u^2K(x,a,b,v,U).
+ \tag{FE1}
+\]
+Its coefficients are Laurent polynomials in $v$. Substitution in
+SG2 shows that $K_x=UE_x$ and
+\[
+ (E_x)_x\big|_{U=0}=4(d+2n+2\beta)(1+v^2)>0.
+ \tag{FE2}
+\]
+The residue of $K$ at $U=0$ is independent of $x$.
+Minimizing its positive $(a,b)$ block leaves
+\[
+ r(v)=\frac{16(1+v^2)^2E(v^2)}{v^2\det M_0(v)}.
+\]
+Since $E\ge0$ and has a zero at $v_0^2>0$,
+$E(V)=q_{12}(V-v_0^2)^2$. Thus the Hessian in $(a,b,v)$
+is positive definite at the residue zero. Equation FE2 then
+determines $x$. The equations
+$\mathcal E=(E_x,K_a,K_b,K_v)=0$ have an invertible
+Jacobian in $q=(x,a,b,v)$. They define a source-field branch
+$q_*(c,U)$. Its minimized profile $k(c,U)=K(q_*(c,U),U)$ satisfies
+\[
+ k(c_0,0)=0,\qquad
+ \gamma=k_U(c_0,0)=
+ \frac{16(1+v_0^2)^2B(v_0^2)}{v_0^2\det M_0(v_0)}>0.
+ \tag{FE3}
+\]
+The last equality follows by taking the Schur complement of the
+three-state block in the event-normalized parent. Its determinant
+is $\det P/v^2$; the coefficients of $U$ and $U^2$ give
+$r(v)$ and FE3 respectively.
+
+\paragraph{A finite-ratio corner.}
+\label{component:p03b551f2a9a0}
+\label{p03b551f2a9a0:a-positive-d-case-at-a-finite-ratio-distance-four-corner}
+Now let $\alpha$ be infinitesimal. At the residue source suppose
+\[
+ Q(U,V)=q_{20}U^2+hUV+q_{02}V^2+
+ q_{21}U^2V+q_{12}UV^2+q_{22}U^2V^2,
+\]
+where $q_{20},q_{02}>0$. Choose a nonzero real $t_0$ such that
+\[
+ q_{20}t_0^4+ht_0^2+q_{02}=0,
+ \qquad q_{21}t_0^4+q_{12}t_0^2>0.
+\]
+Normalize the unit amplitude $vY-Z$ to $-1$, giving $Z=1+vY$.
+The substitution $X=vx$, $Y=vy$, $u=vt$, $W=w$, $V=v^2$
+defines a polynomial $K$ by
+\[
+ F=4\alpha+v^2K(x,y,t,w,V).
+ \tag{FR1}
+\]
+Its constant coefficient in $V$ is
+\[
+\begin{split}
+ K_0={}&4nx^2+4m(w-x-t)^2+4C(tw-y)^2+4Ay^2\\
+ &+4D(tw-y-1)^2+4\beta(x+t)^2\\
+ &+2d\{(tw-y)^2+(x+t)^2-2tw\}+4\alpha t^2.
+\end{split}
+\]
+Assume the residue quadratic form at $t_0$ has kernel
+$(w_0,x_0,y_0,1)$ and a positive $(w,x,y)$ principal block
+$M_J(t_0)$. Its minimized scalar is
+$16(q_{20}t^4+ht^2+q_{02})/\det M_J(t)$.
+Physicality makes the numerator $q_{20}(t^2-t_0^2)^2$.
+The full Hessian in $q=(x,y,t,w)$ is therefore positive definite.
+The source equations $\nabla_qK=0$ define $q_*(c,V)$, and
+\[
+ \gamma=\partial_VK(q_0,0)=
+ \frac{16(q_{21}t_0^4+q_{12}t_0^2)}{\det M_J(t_0)}>0.
+ \tag{FR2}
+\]
+This is again the next coefficient of the full determinant after
+the positive state block is minimized. The testing chart has
+$u,v$ infinitesimal and $[W:X:Y:Z]$ of residue $[w_0:0:0:1]$.
+The actual testing ratio $u/v$ is unrestricted.
+
+\paragraph{The common choice of centre.}
+In either case write $S=U$ or $V$, and put $\kappa=k(c,0)$.
+If $\kappa\ge0$, choose $S_c=0$ and $q_c=q_*(c,0)$.
+If $\kappa<0$, solve
+\[
+ \mathcal E(q_c,S_c)=0,\qquad
+ K(q_c,S_c)+S_cK_S(q_c,S_c)=0,
+ \tag{FC1}
+\]
+where $\mathcal E=\nabla_qK$ in the corner case. The Jacobian
+has the invertible normal block above and last pivot $2\gamma>0$.
+The semialgebraic implicit-function theorem and real closed transfer
+give a unique nearby source solution. The function
+$k(c,S)+Sk_S(c,S)$ increases from the negative value $\kappa$,
+so $S_c>0$. Realizing the corresponding source measurement and
+state shows that
+\[
+ \mu=c_*+S_cK(q_c,S_c)\ge0,
+ \qquad c_*=4m\ \hbox{or}\ 4\alpha.
+ \tag{FC2}
+\]
+Every use of the implicit-function theorem here is within the
+source field. The tensor identity uses only the resulting source
+coordinates and finite polynomial divisions.
+
+\paragraph{Full state expansion.}
+At the edge set
+\[
+ N_s=(X-u^2x_c,Y-ua_c,Z-ub_c),\qquad N_v=u(v-v_c).
+\]
+Quadratic state dependence gives exactly
+\[
+ F=4m+UK(x_c,a_c,b_c,v,U)
+       +UE_xN_x+uK_aN_y+uK_bN_z+N_s^TMN_s.
+\]
+The centre equations make each derivative vanish at $(v_c,U_c)$.
+Difference division in $v$ and $U$ therefore gives only the
+cross terms
+\[
+ N_xU(U-U_c),\quad N_yu(U-U_c),\quad N_zu(U-U_c),
+ \quad N_xuN_v,\quad N_yN_v,\quad N_zN_v,
+\]
+and $N_v^2$ and $N_vu(U-U_c)$ from the scalar profile.
+All coefficients are bounded. For negative powers of the unit
+$v$, use $(v^{-j}-v_c^{-j})/(v-v_c)
+=-\sum_{i=0}^{j-1}v^{-i-1}v_c^{-(j-i)}$.
+
+At the corner set
+\[
+ N=(X-vx_c,Y-vy_c,u-vt_c,v(W-w_c)),\qquad z=W-w_c.
+\]
+The linear part is $v\nabla_qK(q_c,V)\cdot N$.
+The rest belongs to $(N_1,N_2,N_3,vz)^2$: in SG2, a term
+containing one $z$ and only one of the first three normals carries
+$v$, and a term containing $z^2$ and no such normal carries $v^2$.
+Terms with two of the first three normals already belong to this
+ideal, with bounded $z$ left in their coefficients. This gives the
+whole quadratic remainder without dividing by $v$.
+
+In both cases the derivative coefficients are divisible by $S-S_c$.
+Their cross coefficients with that last generator are infinitesimal.
+The fixed-centre scalar profile has a double zero at $S_c$ when
+$\kappa<0$. Finite division thus yields
+\[
+ \begin{array}{ll}
+ \kappa\ge0:&F=c_*+\kappa S+G^THG,\quad G=(N,S),\\
+ \kappa<0:&F=\mu+G^THG,\quad G=(N,S-S_c).
+ \end{array}
+ \tag{FC3}
+\]
+At the edge $N=(N_s,N_v)$ and the normal residue block is the
+positive $X$ entry together with half the positive $(a,b,v)$
+Hessian. At the corner it is half the positive four-variable
+Hessian. The last diagonal is $\gamma>0$, and its cross entries
+vanish in residue. The strict bounded-Gram lemma applies.
+The remaining scalars in FC3 are nonnegative in the source field;
+$S$ is a testing square. Restoring the event normalization completes
+both certificates, including arbitrary relative infinitesimal rates.
+
+For the edge with $E(v_0^2)>0$, the four-normal quadratic form in
+$(X,Y,Z,u)$ is already strict, with $4m$ retained separately.
+This supplies the other finite-edge alternative.
+
+
+\section{\texorpdfstring{Positive total scale: the finite-pitchfork case}{Positive total scale: the finite-pitchfork case}}
+\label{component:pfb0cf454f653}
+
+
+The finite-edge calculation applies whenever $d,C,A,D,\alpha$
+are positive units. We establish its hypotheses and then treat the
+remaining commuting and projective limits.
+
+\begin{theorem}
+Let the original normalized C1 or C2 source be bounded, nonnegative and
+physical over a real closed coefficient extension of $\mathbb R$.
+Assume $d,C,A,D,\alpha$ are positive bounded units. Retain its exact
+canonical zero coefficients, in particular $\lambda=0$, and every
+other nonnegative original coefficient $n,m,\beta$. Then its entire
+parent is tensor-SOS at every independent projective testing pair and
+every real or complex testing state.
+\end{theorem}
+
+Noncommuting testing residues are covered by
+Theorem~\ref{thm:noncommuting-refined}.
+
+\subsection*{The finite edge}
+
+The only possible zero at $u=0$, $v=v_0\ne0$ is the $W$ state
+ray when $m$ is infinitesimal. We verify the conditions of
+Section~\ref{component:p4ec1a51262f9} on that domain.
+
+At $\lambda=m=0$, the exact determinant polynomial is
+\[
+ Q(U,V)=U E(V)+U^2 B(V),\quad
+ E(V)=q_{10}+q_{11}V+q_{12}V^2,\quad
+ B(V)=q_{20}+q_{21}V+q_{22}V^2.
+\]
+Use the positive quantities $t_1,\ldots,t_8$ in SG6.
+
+All eight have positive bounded-unit residues. At the residue $m=0$,
+the required coefficients are
+\[
+ q_{10}=4\alpha A t_7t_3>0,\quad
+ q_{12}=4CDt_5t_2>0,\quad
+ q_{21}=4(\beta n t_3t_2+CA t_1t_4)>0,
+\]
+and $q_{20},q_{22}\geq0$. Therefore $B(v_0^2)>0$ for every
+$v_0\ne0$. Physicality implies $E(V)\geq0$ for all real $V>0$:
+divide $Q(U,V)\geq0$ by $U>0$ and let the real variable $U$ tend to
+zero. Consequently a zero $E(v_0^2)=0$ is a double zero,
+$E(V)=q_{12}(V-v_0^2)^2$, and otherwise $E(v_0^2)>0$.
+
+The state complement $M_0(v_0)$ in
+Section~\ref{component:p4ec1a51262f9} is positive definite: its
+lower determinant has the positive factor
+$\alpha d+2\alpha C+2\alpha A+2\alpha D(1+v_0^2)
++Dv_0^2(d+2C+2A)$. Thus that section proves the full state
+certificate at this edge, including both possible signs of the
+optimized source value.
+
+
+
+\subsection*{The other measurement limits}
+
+Noncommuting residue tests use A6. It remains that at least one angle
+has residue zero or infinity. For finite $u_0\ne0$ and $v_0=0$,
+the real residue parent is a sum of nonnegative event terms and the
+core $2d[(uW-Y)^2+(X+uZ)^2]$. The unit $A,\alpha,C$ terms
+force $Y=Z=W=0$, and the core then forces $X=0$.
+Hence the residue state matrix is positive definite.
+
+For $u_0=0$ and finite $v_0\ne0$, the unit $C,A,D,\alpha$ terms
+and $d>0$ leave only the $W$ ray if $m$ is weak, while unit $m$
+removes that ray too. In the weak case, positive residue slack is
+immediate; at the $W$ ray, the previous section applies for either
+$E(v_0^2)>0$ or $E(v_0^2)=0$.
+
+For $u=\infty$ and finite nonzero $v$, set $p=1/u$ and homogenize
+as $F_p=p^2F(1/p,v)$. Its real residue has core
+\[
+ 2d[(W+vX)^2+(vY-Z)^2]
+\]
+and positive $4C(1+v^2)W^2+4A(1+v^2)Y^2$ squares. These
+force every state coordinate to vanish at a zero, so the matrix is
+positive definite. For $v=\infty$ and finite nonzero $u$, the
+homogenized residue has core $2d(1+u^2)(X^2+Y^2)$ together with
+$4C(uW-Y)^2+4D(uX-Z)^2$. Again it is positive definite.
+These are exact residue identities and use no density argument.
+
+It remains to cover the four double corners. The following displayed
+quadratic forms are complete, with coefficient letters interpreted in
+real residue. All coefficients that are merely nonnegative remain so.
+At a unit state coordinate, normalize it in the testing field.
+
+At $(u,v)=(0,0)$ the only possible zero state is the $W$ ray.
+Put $W=1$ and retain the entire $m$ square. The remainder lies
+exactly in $(u,X,Y,Z)^2$, and its residue quadratic is
+\[
+ 2(d+2n+2\beta)X^2+(4C+4D+2d)(u-Y)^2+4AY^2+4\alpha Z^2.
+\]
+It is strict. The testing $v$ is bounded infinitesimal in its
+coefficients and is never divided out.
+
+At $(u,v)=(\infty,0)$ the only possible zero state is the $X$ ray
+when $n$ is weak; if $n$ is a unit there is no zero. Put $X=1$,
+retain the entire $n$ square in $F_p$, and use roots $(p,v,W,Y,Z)$.
+The whole remainder belongs to their square ideal and its residue is
+\[
+ 4CW^2+4AY^2+(4D+2d)(W+v)^2
+                 +4\alpha Z^2+[4(m+\beta)+2d](p+Z)^2\succ0.
+\]
+
+At $(u,v)=(0,\infty)$ the only possible zero state is the $W$ ray
+when $m$ is weak. Put $q=1/v$, $W=1$, and retain the entire $m$
+square in $F_q=q^2F(u,1/q)$. The whole remainder is in
+$(u,X,Y,Z)^2$ and its residue quadratic is
+\[
+ (4n+4\beta+2d)X^2+4C(u-Y)^2+[4(A+\alpha)+2d]Y^2+4DZ^2\succ0.
+\]
+The testing $q$ remains a bounded infinitesimal coefficient.
+
+At $(u,v)=(\infty,\infty)$ the only possible zero state is the $Z$
+ray when $\beta$ is weak. Put $Z=1$ and retain the entire $\beta$
+square in $F_{pq}=p^2q^2F(1/p,1/q)$. The complete remainder lies
+in $(p,q,W,X,Y)^2$ and its residue quadratic is
+\[
+ 4CW^2+4AY^2+4D(X-p)^2+(2d+4n)X^2
+                            +[2d+4(m+\alpha)](Y-q)^2\succ0.
+\]
+
+For each corner, allocate two normal factors from every monomial to
+the Gram roots; every remaining factor is bounded. Terms above
+quadratic order have infinitesimal coefficients. The displayed full
+quadratic residues are strict, so the separated strict-Gram lemma
+applies. Restore each retained square. Homogeneous angle factors and
+state normalizations are pure testing squares. The identities include
+literal zero and infinity and every original nonnegative opening rate.
+For nonzero state residues away from the listed rays, positivity gives
+the scalar strict-residue exit. The zero state is immediate and complex
+states split into real and imaginary evaluations. This proves the theorem.
+
+
+
+\section{\texorpdfstring{Bounded C2 sources with infinitesimal alpha}{Bounded C2 sources with infinitesimal alpha}}
+\label{component:pf31e38136e03}
+
+
+
+\begin{theorem}
+Let the original bounded normalized C2 source be physical, with
+$\lambda=\beta=0$, all event coefficients nonnegative,
+$d,n,m,C,A,D$ positive bounded units, and $\alpha$ weak, meaning
+$\bar\alpha=0$. Then the complete original parent is tensor-SOS
+for every independent projective testing pair and every real or
+complex testing state.
+\end{theorem}
+
+The finite-ratio calculation of
+Section~\ref{component:p03b551f2a9a0} treats the remaining corner.
+We first identify the zero states to which it applies.
+
+\subsection*{Only the zero-zero corner needs a new argument}
+
+A6 covers noncommuting testing residues. On finite $u=0$, $v\ne0$,
+the unit $m$ removes the $W$ ray, and the $(X,Y,Z)$ complement is
+strict because $d,D,C,A$ are units and $v\ne0$. On finite $v=0$,
+$u\ne0$, the units $n,A$ force $X=Y=0$ at a zero; the $C$ square
+forces $W=0$, and the signed core $(X+uZ)^2$ forces $Z=0$.
+
+The exact single-infinity core identities in
+Section~\ref{component:pfb0cf454f653} require no unit $\alpha$: at
+$u=\infty$, $v\ne0$ use
+$2d[(W+vX)^2+(vY-Z)^2]$ and the $C,A$ squares; at $v=\infty$,
+$u\ne0$ use $2d(1+u^2)(X^2+Y^2)$ and the $C,D$ squares.
+Both state matrices are strictly positive.
+
+At $(\infty,0)$ the unit $n$ removes the only possible $X$ zero
+ray, and at $(0,\infty)$ the unit $m$ removes the $W$ ray.
+At $(\infty,\infty)$, put $p=1/u,q=1/v$, normalize the possible
+$Z$ zero ray to $Z=1$, and use $(p,q,W,X,Y)$ as roots. The exact
+full-parent square-ideal allocation given in
+Section~\ref{component:pfb0cf454f653} has residue
+\[
+ 4CW^2+4AY^2+4D(X-p)^2+(2d+4n)X^2
+                         +[2d+4(m+\alpha)](Y-q)^2\succ0.
+\]
+This form remains strict for weak $\alpha$. Thus every projective
+test except $u,v$ infinitesimal is already covered, including literal
+zero/infinite endpoints and all signs.
+
+\subsection*{The exact two state charts at zero-zero}
+
+Write $F$ for the original parent, with $\lambda=\beta=0$, and retain
+the whole nonnegative $\alpha$ square
+$4\alpha(1+u^2)(vY-Z)^2$ whenever using an ordinary strict jet.
+At $u=v=0$ the residue is strictly positive on the $(X,Y)$ state
+subspace. Hence $X$- or $Y$-unit states have positive residue slack.
+For all other states, normalize a maximal coordinate. Then either
+$W=1$ with $Z$ infinitesimal, or $Z=1$ with $W$ bounded.
+
+In the first chart the entire remaining parent belongs to
+$(X,Y,u,v)^2$. Its quadratic residue is
+\begin{equation}
+ (4n+2d)X^2+4m(v-X)^2+[4(C+D)+2d](u-Y)^2+4AY^2\succ0. \tag{1}
+\end{equation}
+Consequently the finite normal allocation and restoration of the
+complete $\alpha$ square give tensor-SOS. No testing ratio is used.
+
+In the second chart, set $w=\bar W\in\mathbb R$. The full residue
+quadratic jet on $(X,Y,u,v)$ is
+\begin{align}
+ Q_w={}&4nX^2+4m(vw-X-u)^2+4C(uw-Y)^2+4AY^2\notag\\
+      &+4D(uw-Y-v)^2
+        +2d[(uw-Y)^2+(X+u)^2-2uvw].                    \tag{2}
+\end{align}
+All coefficient letters in (1)--(2) now denote their real residues.
+Physicality implies $Q_w\succeq0$: evaluate the physical residue
+parent at $(X,Y,u,v)=s(x,y,a,b)$ and let the real $s$ tend to zero.
+The $(X,Y)$ principal block is strictly positive, already from the
+$nX^2$ and $AY^2$ terms. If $Q_w$ is strict, the same ordinary
+four-normal allocation applies, with $W-w$ infinitesimal in its
+coefficients, and the whole $\alpha$ square restored.
+
+Suppose instead that $Q_w$ is singular. It has no nonzero kernel
+vector with $v=0$: the nonnegative sum at $v=0$ includes
+$4nX^2+(4m+2d)(X+u)^2+4AY^2$, so $X=u=Y=0$.
+It also has no nonzero kernel vector with $u=0$: the sum at $u=0$
+includes $4nX^2+4AY^2+4D(Y+v)^2$, so $X=Y=v=0$.
+Its real angular Schur complement therefore has positive diagonal
+entries. Being singular and positive semidefinite, it has rank one
+and a kernel with finite nonzero ratio $t_0=u/v$. Normalize a real
+kernel vector by $v=1$ and write it as $(x_0,y_0,t_0,1)$.
+This constructs a real coefficient-side jet center; it imposes no
+condition on the actual independent testing value of $u/v$.
+
+\subsection*{Application of the finite-ratio contact calculation}
+
+The homogeneous state jet at a real ratio $t$ is
+\begin{align*}
+ J_t(W,x,y,Z)={}&4nx^2+4m(W-x-tZ)^2+4C(tW-y)^2+4Ay^2\\
+ &+4D(tW-y-Z)^2
+   +2d[(tW-y)^2+(x+tZ)^2-2tWZ].
+\end{align*}
+Its $(W,x,y)$ complement at $Z=0$ is strict: it contains
+$4nx^2+4m(W-x)^2+4Ay^2$, with the remaining terms nonnegative.
+At $t=t_0$, its kernel is $(w,x_0,y_0,1)$ by (2).
+
+In the original determinant notation, at $\lambda=\beta=\alpha=0$,
+\[
+ q_{20}=4nAt_3t_4>0,\qquad q_{02}=4mDt_5t_6>0,
+ \qquad q_{21}=4CAt_1t_4>0,\qquad q_{12}=4CDt_5t_2>0.
+\]
+Here the $t_i$ are the original positive sums of bounded coefficients
+printed in the finite-pitchfork fit; all are units since $d$ is a
+unit. The full jet determinant is
+\[
+ \det J_t=16(q_{20}t^4+q_{11}t^2+q_{02}).
+\]
+Thus the singular jet gives precisely the finite nonzero root required
+by Section~\ref{component:p03b551f2a9a0}, and its next coefficient satisfies
+$q_{21}t_0^4+q_{12}t_0^2>0$. The state complement, both endpoint
+coefficients, and the positive next coefficient are all verified.
+
+That calculation normalizes the pure-testing event
+$vY-Z$ to $-1$, setting $Z=1+vY$. It keeps the complete opened
+$\alpha$ square, including its $4\alpha u^2$ term, in the exact
+profile
+\[
+ F=4\alpha+v^2K(x,y,t,w,V),\qquad
+ (X,Y,u,W,V)=(vx,vy,vt,w,v^2)
+\]
+used only to construct coefficient-field critical centers. The positive
+state complement and the double finite root give a strict full Hessian
+in $(x,y,t,w)$, with positive next coefficient
+\[
+ \frac{16(q_{21}t_0^4+q_{12}t_0^2)}{\det M_J(t_0)}.
+\]
+The two signs of the optimized constant are handled by coefficient-only
+implicit centers exactly as in the finite-edge proof; physicality makes
+the remaining scalar nonnegative.
+
+Its actual tensor roots are the un-divided expressions
+\[
+ X-vx_c,\quad Y-vy_c,\quad u-vt_c,\quad v(W-w_c),
+ \quad v^2-V_c.
+\]
+All four full first-normal coefficients are $v\nabla K$ on this
+frame. Monic difference division makes their coupling to $v^2-V_c$
+infinitesimal. All 55 full-tail monomials have an exact allocation to
+the first four roots; factors of $W-w_c$ that remain in coefficients
+are infinitesimal. There is no substitution dividing $v(W-w_c)$ by
+$v$. The full residue Gram is the positive four-variable Hessian and
+the positive last scalar pivot. Hence the theorem applies to every
+testing point with the stated residue state, regardless of whether its
+actual tested $u/v$ is bounded or approaches $t_0$. This includes literal
+$v=0$ and arbitrary independent opening rates.
+
+The two zero-corner state charts and the strict/singular jet split
+are exhaustive. Together with the complementary projective cases, this
+proves the theorem. The zero state is direct, and complex states split
+into real and imaginary quadratic evaluations.
+
+
+
+\section{\texorpdfstring{The complete positive-scale C1 reciprocal case}{The complete positive-scale C1 reciprocal case}}
+\label{component:p98f24864b071}
+
+\label{p98f24864b071:sec:c1-reciprocal-rederived}
+
+\paragraph{The source domain.}
+Let the canonical C1 source be physical, with an actual finite
+noncommuting zero contact, and normalize $d=1$. Suppose every source
+coefficient is bounded, $\lambda=n=0$, $C,A,\alpha$ are positive
+bounded units, $m>0$ and $D\geq0$ are infinitesimal, and
+$\beta\geq0$ is arbitrary bounded. Retain the original canonical
+source gaps and intersections. Then the entire parent has a finite
+sum-of-squares representation in $K_c\otimes_{\mathbb R}K_t$ for
+every independent projective test and every real or complex state.
+The assertion includes literal $D=0$ and literal $\beta=0$ when
+permitted by the actual contact; they cannot both vanish.
+
+We use $O(1)$ and $o(1)$ for bounded and infinitesimal elements of
+one of the two fields, and $a\asymp b$ for positive source quantities
+whose ratio is a bounded unit. A bounded tensor Gram with a strictly
+positive real residue is a sum of squares by the separated strict-Gram lemma. Its rows need not be bounded. No order on the tensor
+product, mixed inverse, or cancellation of a determinant multiplier is
+used below.
+
+\subsection*{Source balances at the reciprocal corner}
+\label{lem:reciprocal-source-balance}
+Both C1 and C2 have a reciprocal corner when $m,D$ are
+infinitesimal and $C,A,\alpha$ are positive units. All coefficients
+are bounded, $d=1$, $\lambda=0$, and $n\beta=0$.
+At a stationary source contact put $U=u_c^2$, $P=v_c^{-2}$.
+The determinant formula SG5--SG6 becomes
+\[
+\begin{split}
+ L(U,P^{-1})={}&h+\frac{ma_1}{U}+\frac{mDa_2}{UP}+a_3P\\
+ &+\frac{\beta ma_4+Da_5}{P}+a_6U+na_8UP
+ +\frac{\beta a_7U}{P},
+\end{split}
+\]
+where the positive units are explicitly
+\[
+\begin{array}{llll}
+a_1=4\alpha t_5t_8,&a_2=4t_5t_6,&a_3=4\alpha A t_7t_3,&a_4=4t_1t_6,\\
+a_5=4Ct_5t_2,&a_6=4CAt_1t_4,&a_7=4Ct_1t_2,&a_8=4At_3t_4.
+\end{array}
+\]
+Here $h$ is bounded. At a zero, every positive Laurent term is
+bounded by $-h$, so $U,P$ are bounded. Differentiating at the
+stationary contact gives the exact balances
+\begin{equation}
+\begin{aligned}
+ U^2(a_6+na_8P+\beta a_7/P)&=m(a_1+Da_2/P),\\
+ P^2(a_3+na_8U)&=mDa_2/U+\beta ma_4+Da_5+\beta a_7U.
+\end{aligned}
+\label{eq:reciprocal-source-balances}
+\end{equation}
+These equations force both $U$ and $P$ to be infinitesimal.
+Indeed, if $U$ were a unit and $P$ a unit, the first balance
+would have a positive-unit left side and an infinitesimal right
+side. If $U$ were a unit and $P$ infinitesimal, the second balance
+would give $mDa_2/P\le UP(a_3+na_8U)$, again making the first
+right side infinitesimal. Thus $U$ is infinitesimal. If $P$ were
+a unit, the first balance would then give
+\[
+ \frac{mDa_2}{U}
+ =UP(a_6+na_8P)+\beta a_7U-ma_1P/U
+ \le UP(a_6+na_8P)+\beta a_7U,
+\]
+which is infinitesimal. Every term on the second right side would
+be infinitesimal, contradicting its positive-unit left side.
+
+The nonnegative terms in the second balance now give
+$D/P^2=O(1)$ and $\beta U/P^2=O(1)$. The first consequently gives
+\begin{equation}
+ \frac m{U^2}\asymp1+\frac\beta P,\qquad
+ \frac mU,\ \frac DP,\ \frac{\beta U}P\in\operatorname{Inf}.
+\label{eq:reciprocal-source-ratios}
+\end{equation}
+In C2, $\beta=0$, so $m/U^2$ is a positive unit and
+\[
+ \frac D{P^2}=\frac{a_3+na_8U}{a_5+ma_2/U}
+\]
+is a positive unit as well. Thus $m\asymp U^2$, $D\asymp P^2$.
+For C1 the preceding bounded estimates also allow literal $D=0$
+or $\beta=0$ whenever the source contact permits it.
+
+
+\subsubsection*{Source entry before any state-ratio division}
+
+Write the actual contact angles as $u_c=k>0$, $b_c=1/v_c=p>0$,
+and put $U=k^2$, $P=p^2$. Equation~\eqref{eq:reciprocal-source-balances}, with $n=0$,
+gives $U,P$ positive infinitesimals and
+\[
+ D/P^2=O(1),\qquad \beta U/P^2=O(1),\qquad
+ m/U^2\asymp1+\beta/P.
+ \tag{CR1}
+\]
+The same balances give
+\[
+ m/U=o(1),\qquad D/P=o(1),\qquad \beta U/P=o(1).
+ \tag{CR2}
+\]
+
+At a physical noncommuting contact the signed core is negative, and
+the exact core Schur identity SE9 gives $W_cZ_c>0$. Normalize $W_c=1$
+and write $Z_c=q>0$. Define
+\[
+ Q=q^2,\quad L=PQ,\qquad
+ r=\frac{k}{pq},\quad y=\frac{Y_c}{pq},\quad
+ x=\frac{X_c}{pq^2}.
+ \tag{CR3}
+\]
+We now prove these divisions are bounded wherever they are used.
+In the reciprocal quarter-parent CR9 below the hard $X,Y$ matrix at
+the source has residue
+$\operatorname{diag}(\bar\beta+1/2,H_0)$, where
+$H=C+A+\alpha+1/2$ is a positive unit. Eliminate this two-by-two
+block inside the source field. Its Schur block on $W,Z$ satisfies
+\[
+ \frac{S_{WW}}{U}\sim a:=C-C^2/H>0,\qquad
+ -\frac{S_{WZ}}{kp}\sim b_*:=1/2+C\alpha/H>0.
+ \tag{CR4}
+\]
+Here and below a displayed positive expression in an asymptotic
+formula is evaluated in residue. To check CR4 without a shape
+assumption, the original hard couplings are
+\[
+\begin{aligned}
+ P_{XW}&=p\{-m+(D+1/2)U\},&
+ P_{YW}&=k\{m-C(1+P)-(D+1/2)P\},\\
+ P_{XZ}&=k\{\beta-D+P(m+\beta+1/2)\},&
+ P_{YZ}&=p\{D-\alpha-U(m+\alpha+1/2)\},\\
+ P_{WZ}&=-(m+D+1/2)kp.
+\end{aligned}
+\]
+CR2 shows that the $X$ corrections in CR4 vanish in residue and
+the $Y$ corrections are respectively $C^2/H$ and $C\alpha/H$.
+The kernel equation gives $q=S_{WW}/(-S_{WZ})$, so $r$ is a
+positive bounded unit.
+
+The scaled $X,Y$ kernel equations in the unknowns $x,y$ have
+bounded entries and a diagonal positive residue. For example their
+$X$ equation is exactly
+\[
+\begin{split}
+ 0={}&\{(\beta+1/2)(1+P)+Pm+(D+1/2)r^2PQ\}x\\
+ &+r\{\beta-D+P[\beta+1/2-m(y-1)+(D+1/2)(r-y)]\}-m/Q.
+\end{split}\tag{CR5}
+\]
+The quantity $m/Q=(m/U)r^2P$ is bounded before this equation is
+used. The $y$ coefficient in CR5 is infinitesimal; the $x$
+coefficient in the scaled $Y$ equation is $O(PQ)$ and its $y$
+pivot is $H+o(1)$. Thus $x,y$ are bounded. Taking the $Y$ and
+$Z$ kernel equations in residue, using CR1--CR2, yields
+\[
+ Hy\sim Cr+\alpha,\qquad C(r-y)\sim1/2,
+ \qquad \alpha(1-y)\sim r/2.
+ \tag{CR6}
+\]
+Consequently $y,r-y,1-y$ are positive bounded units. Equivalently
+their real residues satisfy
+\[
+ C_0=\frac1{2(r_0-y_0)},\quad
+ A_0=\frac{1+r_0-y_0}{2y_0},\quad
+ \alpha_0=\frac{r_0}{2(1-y_0)}.
+ \tag{CR7}
+\]
+For the last equation in CR6, divide the original $Z$ kernel
+equation by $Pq$. Its extra $X$ contribution is
+$O(x\beta Q+xPQ)$; CR1 and the already proved unit $r$ give
+$\beta Q=O(P)$, while $PQ=U/r^2$ is infinitesimal. All the
+omitted terms therefore vanish in residue. This proves CR6 in the
+unbounded-$q$ case as well.
+
+In CR5, $D=o(P)$ and $m/Q=o(P)$. Its numerator for $-x$ is
+the sum of $r\beta$ and a positive-unit multiple of $P$, up to
+$o(P)$. Hence the following bounds hold on the whole source domain:
+\[
+\begin{gathered}
+ L=PQ=o(1),\qquad \beta Q/P=O(1),\qquad
+ -x\asymp P+\beta,\qquad r+x\text{ is a positive unit},\\
+ m\asymp PQ^2(P+\beta),\qquad
+ m/(PQ)=O(PQ+\beta Q)=o(1),\qquad xQ=o(1).
+\end{gathered}\tag{CR8}
+\]
+The statement about $r+x$ follows directly from CR5:
+$x/r=-\beta/(\beta+1/2)+o(1)$.
+
+\subsubsection*{The entire scalar and all normal coefficients}
+
+Use $b=1/v$, $D_u=1+u^2$, $D_b=1+b^2$. The full reciprocal
+quarter-parent is
+\[
+\begin{aligned}
+ F={}&m(W-bX+uY-ubZ)^2+CD_b(uW-Y)^2+AD_uD_bY^2\\
+ &+(D+1/2)(ubW+uX-bY-Z)^2
+ +(\alpha+1/2)D_u(Y-bZ)^2\\
+ &+(\beta+1/2)D_b(X+uZ)^2-D_uD_bZ^2/2.
+\end{aligned}\tag{CR9}
+\]
+All further local identities are expansions of this full expression.
+In the chart $W=1$, $Z=z$ put
+\[
+ u_g=rbz,\qquad X_g=xbz^2,\qquad Y_g=ybz,
+ \qquad V=b^2,\quad T=z^2.
+ \tag{CR10}
+\]
+Its entire scalar restriction is
+\[
+ \Phi=m+DT+hVT+\mathcal C V^2T+EVT^2+
+ \mathcal F V^2T^2+GV^3T^2+JV^2T^3,
+ \tag{CR11}
+\]
+where
+\[
+\begin{aligned}
+ \mathcal C&=Ay^2+(C+D+1/2)(r-y)^2,\\
+ E&=\beta(r+x)^2+x^2/2-2Drx,\qquad
+ G=Ar^2y^2,\qquad J=(D+1/2)r^2x^2,\\
+ \mathcal F&=Ar^2y^2+(\alpha+1/2)r^2(y-1)^2
+       +\beta(r+x)^2+m[r(y-1)-x]^2\\
+ &\hspace{12mm}+(2D+1)rx(r-y)+rx+x^2/2,\\
+ h&=Ay^2+C(r-y)^2+\alpha(y-1)^2+y^2/2-r
+          -2D(r-y)+2m[r(y-1)-x].
+\end{aligned}\tag{CR12}
+\]
+In particular $\mathcal C,G$ are positive units,
+$E\asymp\beta+P^2>0$, $J\geq0$, and all these coefficients
+are bounded. If $\beta$ is infinitesimal, $\mathcal F$ is a
+positive unit, with residue $r_0^2(1+r_0-y_0)/2$.
+For unit $\beta$, $\mathcal F$ can have either sign; it is not
+discarded or assumed positive.
+
+Actual contact and its two angular/state jets give
+$\Phi(P,Q)=\Phi_V(P,Q)=\Phi_T(P,Q)=0$. Therefore
+\[
+\begin{aligned}
+ D&=P^2\mathcal C-PQE+P^3QG-P^2Q^2J,\\
+ m&=PQ^2E+P^2Q^2\mathcal F+P^3Q^2G+2P^2Q^3J,\\
+ h&=-2P\mathcal C-QE-2PQ\mathcal F-3P^2QG-2PQ^2J.
+\end{aligned}\tag{CR13}
+\]
+Set
+\[
+ \delta=D/P^2\geq0,\qquad \theta=EQ/P>0.
+ \quad \delta,\theta=O(1),\qquad
+ \delta+\theta=\mathcal C+GL-JQ^2=\mathcal C+o(1),
+ \tag{CR14}
+\]
+where $L=PQ$. The bounds follow either from CR1 and CR8 or from CR13;
+$JQ^2=O((xQ)^2)=o(1)$. At least one of $\delta,\theta$
+is a unit. Define
+\[
+ R=z(V-P),\quad K=VT-PQ,\quad
+ M=V^2T+(P/Q)VT^2+P^2Q-3PVT.
+\]
+The exact complete balanced scalar is
+\[
+\begin{aligned}
+ \Phi={}&\delta R^2+\theta M+\mathcal F K^2
+       +G\{PK^2+VzRK\}\\
+       &+J\{(QR-zK)^2+2QK^2\}.
+\end{aligned}\tag{CR15}
+\]
+The entire $J$ line is retained as positive squares.
+
+To retain the complete first-normal terms, Let $L_u,L_X,L_Y$
+be half the first derivatives of CR9 at CR10. Then
+\[
+ L_u=bz A_u(V,T),\quad L_Y=bz A_y(V,T),\quad
+ L_X=b\{-m+TB_X(V,T)\},
+ \tag{CR16}
+\]
+where
+\[
+\begin{aligned}
+ A_u&=a_{00}+a_{10}V+a_{01}T+a_{11}VT+a_{21}V^2T+a_{12}VT^2,\\
+ A_y&=e_{00}+e_{10}V+e_{11}VT+e_{21}V^2T,\\
+ B_X&=c_0+c_1V+c_2VT,\\
+ c_0&=-Dr+\beta(r+x)+x/2,\\
+ c_1&=(D+1/2)r(r-y)+(\beta+1/2)(r+x)
+                        +m[x-r(y-1)],\\
+ c_2&=(D+1/2)r^2x.
+\end{aligned}\tag{CR17}
+\]
+Every displayed coefficient is bounded. The only bounds beyond this
+needed below are
+\[
+ a_{01}=\beta(r+x)-Dx=O(E),\quad
+ a_{12}=(D+1/2)rx^2,\quad a_{12}Q=O(1),
+ \qquad c_2=O(P+E).
+ \tag{CR18}
+\]
+They follow from CR8 and CR12. Every other coefficient is the corresponding monomial coefficient
+of the explicit polynomial CR9.
+
+State and angle stationarity give
+$A_u(P,Q)=A_y(P,Q)=0$ and $B_X(P,Q)=m/Q$.
+Put $E_T=bz(T-Q)$. Finite monic division therefore gives exactly
+\[
+\begin{aligned}
+ L_i&=A_{i,V}(V,T)bR+B_i(T)E_T,\
+ B_u(T)&=a_{01}+P\{a_{11}+Pa_{21}+a_{12}(T+Q)\},\\
+ B_y(T)&=P(e_{11}+Pe_{21}),\\
+ L_X&=b\{[m/(PQ)+c_2T]K+z[c_1-m/(PQ)]R\}.
+\end{aligned}\tag{CR19}
+\]
+The first line is for $i=u,y$ and
+$A_{i,V}=[A_i(V,T)-A_i(P,T)]/(V-P)$, an exact polynomial.
+In particular, using $P(T-Q)=K-zR$, each of $L_u,L_Y,L_X$
+is a bounded linear combination of
+\[
+ bR,\qquad bzK,\qquad b[m/(PQ)+c_2T]K,
+ \qquad E E_T.
+ \tag{CR20}
+\]
+Every occurrence of $K$ outside the last product has an
+infinitesimal coefficient. CR19 remains literal at $b=0$ or $z=0$.
+
+\subsubsection*{The cubic conductors and the bounded source-ratio chart}
+
+All radicals in this subsection are products of radicals in the
+separate fields. Set
+\[
+ \mathsf A=(V^2T)^{1/3},\quad
+ \mathsf B=((P/Q)VT^2)^{1/3},\quad
+ \mathsf C=(P^2Q)^{1/3},\qquad \rho=(P/Q)^{1/3}.
+\]
+Because $\mathsf A\mathsf B\mathsf C=PVT$,
+\[
+ M=\tfrac12(\mathsf A+\mathsf B+\mathsf C)
+ [ (\mathsf A-\mathsf B)^2+(\mathsf A-\mathsf C)^2
+                         +(\mathsf B-\mathsf C)^2].
+ \tag{CR21}
+\]
+Let $\mathcal Z$ be its nine roots multiplied by $\sqrt\theta$,
+so that $\theta M=\frac12\sum_{j=1}^9\mathcal Z_j^2$.
+For nonnegative testing $b,z$, the following exact identities hold:
+\[
+\begin{aligned}
+ bR={}&b\sqrt{\mathsf A}(\mathsf A-\mathsf B)
+       +\rho b^{1/3}z^{2/3}\sqrt{\mathsf A}(\mathsf A-\mathsf C),\\
+ E E_T={}&\sqrt E\,z\,[\sqrt\theta\sqrt{\mathsf B}
+                                      (\mathsf B-\mathsf A)]\\
+ &+\theta^{1/3}E^{1/6}b^{2/3}z^{1/3}
+       [\sqrt\theta\sqrt{\mathsf B}(\mathsf B-\mathsf C)].
+\end{aligned}\tag{CR22}
+\]
+Negative signs are handled by the exact testing gauges; absolute
+values give the same monomial identities if desired. If $\theta$
+is a unit, the first line has infinitesimal coefficients on
+$\mathcal Z$: $\rho=(E/\theta)^{1/3}$ is bounded and $b$ is
+infinitesimal. If $\delta$ is a unit, $bR$ instead has the
+infinitesimal coefficient $b$ on the strict row $R$. The second
+line has infinitesimal coefficients whenever $E$ is infinitesimal
+or $z$ is infinitesimal. Its displayed coefficients use no
+comparison of a source rate with a testing rate.
+
+Suppose first that actual $q$ is bounded and $\beta$ is
+infinitesimal. Use $K$ and $\mathcal Z$, with $R$ added when
+$\delta$ is a unit. If only $\theta$ is a unit, retain
+$\delta R^2$ as a separate positive square. In CR15 the $K$
+pivot $\mathcal F$ is a positive unit. The only signed extra
+term is
+$GVzRK=Gbz(bR)K$, an infinitesimal Gram correction by CR22.
+The term $GPK^2$ is nonnegative. Thus CR15 has a strict residue
+Gram on the stated roots. CR19--CR22 give infinitesimal lifts of
+all three complete first normals to these same roots.
+
+If $\beta$ is a unit, CR8 forces $Q$ infinitesimal and $E$ a
+unit. The only chart still requiring CR10 will be $z$ infinitesimal.
+The second line of CR22 still has infinitesimal coefficients.
+When $\delta$ is a unit, use the exact identity
+\[
+ 2QM+TR^2-K^2=(K-zR)^2+2QR^2.
+ \tag{CR23}
+\]
+Choose a positive real $a$ with $\overline{\mathcal F}+a>1$.
+Subtracting $a$ times the corresponding zero identity changes the
+first three terms of CR15 into
+\[
+ (\delta-aT+2aQ)R^2+(1-2aP/E)\theta M
+       +(\mathcal F+a)K^2+a(K-zR)^2.
+ \tag{CR24}
+\]
+The first three pivots have strictly positive residues; both costs
+$T$ and $P/E$ are infinitesimal. This handles the signed
+$\mathcal F$ exactly.
+
+When instead $\theta$ is a unit, $\rho$ is also a unit and
+\[
+ K=\rho^{-1}\{\sqrt{\mathsf A}\,
+       [\sqrt{\mathsf A}(\mathsf B-\mathsf C)]
+       +\sqrt{\mathsf C}\,
+       [\sqrt{\mathsf C}(\mathsf A-\mathsf C)]\}.
+ \tag{CR25}
+\]
+Both coefficients on $\mathcal Z$ are infinitesimal. Thus the
+entire signed $\mathcal F K^2$ is an infinitesimal correction on
+the strict circuit Gram. The $G$ cross term and every first normal
+are controlled by CR22 and CR25; $\delta R^2$ and the $J$ line
+remain positive squares. No inverse of $\delta$ is used.
+
+\subsubsection*{An unbounded actual state ratio in the same testing chart}
+
+Now let actual $q$ be unbounded. CR8 and CR12 imply
+\[
+ \beta/P=O(1/Q)=o(1),\quad -x\asymp P,\quad
+ m\asymp L^2,\quad E/P=o(1),\quad JQ^2=O(L^2)=o(1).
+ \tag{CR26}
+\]
+Here $\beta$ is infinitesimal and $\mathcal F$ is a positive
+unit. In the testing chart $W=1$, $z$ bounded, the exact relation
+\[
+ \theta M=\theta R^2+(E/P)(K^2-zRK)
+ \tag{CR27}
+\]
+makes CR15 a strict two-row Gram on $R,K$, plus its whole positive
+$J$ line. Its residue is
+$\operatorname{diag}(\overline{\delta+\theta},\overline{\mathcal F})$.
+Every correction coefficient is infinitesimal: $E/P$, $P$ and
+$Vz$ are infinitesimal. In CR19, $B_u/P$ and $B_y/P$ are bounded,
+because $a_{01}/P=O(\beta/P+Dx/P)$ and $a_{12}Q$ are bounded.
+Using $P E_T=bzK-bz^2R$ shows that all three full normals are
+infinitesimal linear combinations of $R,K$.
+
+\subsubsection*{The complementary testing state chart}
+
+Use $Z=1$, $W=w$ infinitesimal, and write $a=u/r$. The graph is
+\[
+ b=aw,\qquad X=xa,\qquad Y=yaw.
+ \tag{CR28}
+\]
+The entire scalar is
+\[
+ \Phi'=D+mw^2+Ea^2+ha^2w^2+\mathcal C a^4w^4
+       +\mathcal F a^4w^2+Ga^6w^4+Ja^4.
+ \tag{CR29}
+\]
+First assume actual $q$ bounded and $\beta$ infinitesimal. If
+$\delta$ is a unit, use the three strict rows
+$P,a^2w,\sqrt E\,a$. The sole signed cross in CR29 is
+$h a^2w^2=(h/P)w\,P(a^2w)$, and $h/P$ is bounded by CR13.
+Every other term is positive or has the positive-unit $\mathcal F$
+pivot. If $\theta$ is a unit, $P/E=Q/\theta$ is bounded;
+use instead $\sqrt E\,a,a^2w$ and retain $D,mw^2$ whole.
+The same signed term is the infinitesimal correction
+$(h/E)w^2(\sqrt E\,a)^2$.
+
+Here are the complete complementary first normals, which also prove
+the bounds for unbounded actual $q$. Define
+\[
+ R'=a^2w^2-P,\qquad K'=w(a^2-L).
+ \tag{CR30}
+\]
+Half the $b,Y$ derivatives of the original full CR9 at CR28 have
+the respective forms
+\[
+ L_i'=aw(d_{i0}+d_{i1}a^2+d_{i2}a^2w^2+d_{i3}a^4w^2),
+ \qquad i=b,Y,
+ \tag{CR31}
+\]
+with bounded coefficients. At the actual contact
+$a^2=L,w^2=1/Q$, they satisfy
+$d_{i0}+Ld_{i1}+Pd_{i2}+PLd_{i3}=0$.
+Consequently the entire, exact divisions are
+\[
+ L_i'=(d_{i1}+Pd_{i3})aK'
+                   +(d_{i2}+a^2d_{i3})awR'.
+ \tag{CR32}
+\]
+The full $X$ derivative is
+\[
+ L_X'=a(c_0+c_2a^2-mw^2+c_1a^2w^2),\qquad
+ c_0+c_2L-m/Q+c_1P=0.
+ \tag{CR33}
+\]
+For bounded $Q$, $c_0/P$ and $m/P$ are bounded, and
+$c_2\in P B_c+E B_c$ by CR18. The products $aK'$ and
+$awR'$ are infinitesimal linear combinations of $P,a^2w$.
+Expanding CR33 gives infinitesimal coefficients on
+$P,a^2w,\sqrt E\,a$. If $\theta$ is a unit, use $P/E=O(1)$:
+$c_0/\sqrt E=o(1)$, $c_2=O(E)$ and $m/E=O(1)$, giving the
+same assertion on the two rows $\sqrt E\,a,a^2w$.
+These are pure-source bounded quotients; no testing $w$ is inverted.
+
+For unbounded actual $q$, CR29 has the exact alternative form
+\[
+\begin{aligned}
+ \Phi'={}&\delta R'^2+\theta M'+\mathcal F K'^2
+       +G\{PK'^2+a^2wR'K'\}\\
+       &+J\{a^4(Qw^2-1)^2+2QK'^2\},\\
+ M'={}&a^4w^4+(P/Q)a^2+P^2Qw^2-3Pa^2w^2.
+\end{aligned}\tag{CR34}
+\]
+Define nonnegative elementary radicals
+\[
+ \mathsf A'=|aw|^{4/3},\quad
+ \mathsf B'=(P/Q)^{1/3}|a|^{2/3},\quad
+ \mathsf C'=(P^2Q)^{1/3}|w|^{2/3}.
+\]
+They give the same nine-square cubic identity for $M'$. The exact
+conductor needed for the complete normals is
+\[
+ |a|R'=|a|\sqrt{\mathsf A'}(\mathsf A'-\mathsf C')
+          +\sqrt L\sqrt{\mathsf B'}(\mathsf A'-\mathsf B').
+ \tag{CR35}
+\]
+Its coefficients are infinitesimal. If $\delta$ is a unit, use
+$R',K'$ and retain the circuit as positive squares. If $\theta$
+is a unit, use its scaled nine roots and $K'$, retaining
+$\delta R'^2$ whole. In either case CR34 is strict: its sole
+signed cross is $Gaw(aR')K'$, controlled by CR35, and its last
+line is retained as squares.
+
+CR26 implies $c_2/P=O(1)$ and
+$c_0/P=m/(PQ)-Qc_2-c_1=O(1)$. The full exceptional normal
+has the exact division
+\[
+\begin{aligned}
+ L_X'={}&-[c_0/P+(c_2/P)a^2]\,aR'\\
+ &+[(c_2/P)(a^2+L)+c_0/P+c_1]\,awK'.
+\end{aligned}\tag{CR36}
+\]
+Together with CR32, this uses only bounded multiples of
+$aR',awR',aK'$. Each has infinitesimal coefficients on the strict
+soft rows by CR35. This also proves the result at literal $w=0$.
+
+\subsubsection*{All higher normals and the remaining unit-beta states}
+
+The preceding scalar and first-normal formulas certify the entire
+parent. Here are the required hard blocks and the justification for
+every higher term. Normalize the testing state so its coordinates
+are bounded with at least one unit. At the reciprocal angle corner
+$u,b=o(1)$ the state residue hard block is
+$(\bar\beta+1/2)X^2+H_0Y^2$. If $X$ or $Y$ is a unit, the
+entire parent has positive real residue and the strict-element lemma
+applies immediately. Otherwise $X,Y$ are infinitesimal and one of
+$W,Z$ is a unit.
+
+The exact sign gauges make $u,b\geq0$. If $WZ\leq0$, the signed
+core is a nonnegative pure-testing scalar by the full core Schur
+identity SE9 and its literal homogeneous endpoints, so its source
+multiple and all event squares are separated squares. Otherwise
+choose either $W=1$, $z=Z$ bounded, or $Z=1$, $w=W$
+infinitesimal. Both have $X,Y$ infinitesimal.
+
+In the $W=1$ chart, set
+$N_u=u-rbz$, $N_X=X-xbz^2$, $N_Y=Y-ybz$.
+They are infinitesimal. The complete expansion of CR9 is its scalar
+CR11, twice the three first normals CR16, and a polynomial quadratic
+Gram in $N_u,N_X,N_Y$. Terms of normal degree at least three
+have infinitesimal Gram entries. For weak $\beta$, or for unit
+$\beta$ with $z$ infinitesimal, the hard residue is
+\[
+ C_0(N_u-N_Y)^2+(A_0+\alpha_0+1/2)N_Y^2
+                         +(\beta_0+1/2)N_X^2\succ0.
+ \tag{CR37}
+\]
+All first-normal lifts established above have infinitesimal
+coefficients. The full hard-and-soft residue is therefore positive
+definite. In the $Z=1$ chart use
+$N_b=b-aw$, $N_X=X-xa$, $N_Y=Y-yaw$.
+For weak $\beta$ its hard residue is
+\[
+ N_X^2/2+H_0N_Y^2-2\alpha_0N_bN_Y+\alpha_0N_b^2\succ0,
+ \tag{CR38}
+\]
+since $H_0-\alpha_0=C_0+A_0+1/2>0$.
+The same finite expansion handles every higher normal term. Thus
+none of CR15, CR27 or CR34 is being used merely as a scalar
+restriction.
+
+It remains only unit $\beta$ and a testing state with $Z$ a unit
+relative to $W$. Normalize $Z=1$ and $W=\omega$ bounded. Retain
+the entire $m,D$ squares. The remainder belongs exactly to the
+square of the ideal $(u,b,X,Y)$. Its quadratic real residue is
+\[
+\begin{aligned}
+ &(\beta_0+1/2)\left(X+\frac{\beta_0}{\beta_0+1/2}u\right)^2
+      +\frac{\beta_0}{1+2\beta_0}u^2\\
+ &\quad+H_0\left(Y-\frac{C_0\omega u+\alpha_0 b}{H_0}\right)^2
+      +a_0(\omega u-r_0b)^2,
+ \qquad a_0=C_0-C_0^2/H_0>0.
+\end{aligned}\tag{CR39}
+\]
+CR7 is precisely the critical relation needed for this identity.
+The expression is positive definite in $(u,b,X,Y)$ for every
+real $\omega$, including zero. Its complete bounded polynomial
+matrix is consequently strict; every higher degree is an
+infinitesimal correction. This completes all local states, including
+the unit-beta case where $\mathcal F$ was signed.
+
+\subsubsection*{Every other test and restoration}
+
+The exact outer identities RC18--RC25 from the newly rederived
+C2 reciprocal theorem apply here as polynomial identities, with
+$n=0$ and the entire extra $\beta$ square retained. Their strictness
+uses only $C,A,\alpha$ positive units and the critical residue
+relations CR7; no C2 source membership is used. Explicitly:
+\begin{itemize}
+\item For bounded original $u,v$, the four rows $(uW,Y,X,Z)$
+give RC18. After CR7 its real determinant is
+$ (r_0+u^2v^2)D_u^2D_v^2(1+r_0-y_0)^2/
+[16y_0(r_0-y_0)(1-y_0)]>0$.
+\item For Alice reciprocal and Bob bounded, use the four rows
+$(W,Y,vX,sX+Z)$ and the full core RC20. Its real residue RC21
+is strict using $C,A>0$.
+\item For Bob reciprocal and Alice a bounded unit, use
+$(uW-Y,Y,X,bZ,\sqrt D\,Z)$ and the entire $D$ square as in
+RC22--RC23. CR7 makes the three-by-three angular determinant
+strict. Literal $D=0$ causes its last row to be zero, which is
+allowed in a strict coefficient Gram.
+\item For both angles reciprocal, RC24--RC25 give the five rows
+$(W,X,Y,bZ,\sqrt D\,sZ)$ and a strictly positive real residue.
+\end{itemize}
+The only remaining angle chart is exactly $u,b=o(1)$, treated
+above. These are whole-parent identities with every omitted event
+square retained, and include all literal axes and infinities.
+The exact source and testing sign gauges, positive pure-field
+homogeneous normalization factors and real/imaginary state splitting
+restore the stated projective tensor-SOS theorem.
+
+
+
+\section{Exhaustion of the bounded source domain}
+\label{component:pc0b2849f8d09}
+
+\label{pc0b2849f8d09:sec:positive-scale-union-rederived}
+
+\paragraph{Exact statement.}
+Let \(K_c,K_t\) be labelled real closed extensions of \(\mathbb R\).
+The original canonical coefficient vector is physical over \(K_c\),
+has nonnegative coefficients, and has an actual finite noncommuting
+zero contact. In C1 the exact omissions are \(\lambda=n=0\),
+with \(m,C,A,\alpha>0\), \(D,\beta\geq0\), \(D+\beta>0\);
+in C2 they are \(\lambda=\beta=0\), with
+\(m,C,A,D,\alpha>0\), \(n\geq0\).
+Use the actual native sign chart of this contact, with its explicitly
+positive source gaps, as supplied by canonical entry.
+Assume that normalization by \(d>0\) makes all coefficients bounded.
+Equivalently the normalized total-scale coordinate
+\(d/(d+\lambda+n+m+C+A+D+\alpha+\beta)\) is a positive unit.
+Then the entire original homogeneous slack is a sum of squares
+in \(K_c\otimes_{\mathbb R}K_t\) for every independent projective
+testing pair and every real or complex testing state.
+Chapter~\ref{ch:entry} supplies these contact coordinates for every
+source in the two families.
+
+Division by \(d\) is a positive pure-source normalization.
+Hence take \(d=1\) below. Every nonnegative bounded source quantity
+is either infinitesimal (including literal zero where permitted)
+or a positive unit. These two alternatives give the source partition below.
+
+We use the following two cases established above:
+\[
+\begin{array}{c|l|l}
+ &\text{positive-unit coefficients}&\text{proof}\\\hline
+\mathrm S&d,C,A,D,\alpha&\text{Section~\ref{component:pfb0cf454f653}}\\
+\mathrm{CU}&d,n,m,C,A,D\quad(\alpha\text{ infinitesimal})
+ &\text{Section~\ref{component:pf31e38136e03}}.
+\end{array}
+\]
+Every other nonnegative coefficient may have arbitrary residue in
+the stated canonical support. Both proofs certify the full state
+polynomial at all independent tests. Their noncommuting case is
+Theorem~\ref{thm:noncommuting-refined}; their finite-edge and
+finite-ratio cases were proved at the start of this chapter.
+
+
+\subsection*{Symmetries and the source partition}
+
+Both transformations below preserve the core and nonnegative event
+coefficients, actual physicality, finite nonzero contact, and pure
+total-scale normalization. They act separately in source and testing
+fields, so transport a full tensor certificate.
+
+For C1 let
+\[
+ \sigma_1=(\lambda\ n)(m\ C)(A\ \alpha)(D\ \beta),\qquad
+ G_v(W,X,Y,Z)=(vW-X,-W-vX,Z-vY,Y+vZ).
+\]
+The entire raw parent has the polynomial identity
+\[
+ u^2F_{\sigma_1c}(1/u,v;G_v\psi)
+       =(1+v^2)F_c(u,v;\psi),\qquad
+ G_v^{\mathsf T}G_v=(1+v^2)I .
+ \tag{AU12}
+\]
+Homogenization interchanges the two Alice angle coordinates;
+the Bob-homogeneous \(G\) has norm factor \(v_0^2+v_1^2>0\).
+Thus literal endpoints are transported without dividing zero.
+
+For C2 let
+\[
+ \sigma_2=(\lambda\ \beta)(m\ D)(C\ \alpha),\qquad
+ J(W,X,Y,Z)=(Z,X,Y,W).
+\]
+The full identity is
+\[
+ u^2v^2F_{\sigma_2c}(1/v,1/u;J\psi)=F_c(u,v;\psi).
+ \tag{AU13}
+\]
+It is the physical party interchange with both first observables
+negated, followed by the local real \(X\) basis changes.
+The homogeneous identity includes both projective endpoints.
+In particular the source squared half-angles transform as
+\((U,V)\mapsto(1/V,1/U)\).
+
+The two actual forbidden weak faces are
+\[
+\begin{aligned}
+ h|_{\lambda=\beta=A=0}
+ &=-(1+2n)(2D+2C+1)(2\alpha+1+2m),\\
+ h|_{\lambda=n=m=C=0}
+ &=-(2D+1)(2\beta+1)(2A+2\alpha+1).
+\end{aligned}\tag{AU14}
+\]
+In C2 with \(A\) weak, the only positive Laurent terms are
+\(q_{01}/U+q_{02}V/U+q_{12}V\), which tend to zero along
+\(U=t^2,V=1/t,\ t\to\infty\).
+In C1 with both \(m,C\) weak the only positive term is \(q_{10}/V\),
+which tends to zero as \(V\to\infty\).
+The negative constants contradict physicality.
+Thus C2 has \(A\) unit, and C1 has at least one of \(m,C\) unit.
+
+
+\paragraph{C2.}
+If \(\alpha\) is weak, WA1--WA6 force \(C,A,D\) to be units.
+There are precisely three disjoint alternatives:
+\[
+\begin{array}{c|c}
+ n,m\text{ units}&\mathrm{CU}\\
+ n\text{ unit},\ m\text{ weak}&\mathrm{WA1\!-\!WA27}\\
+ n\text{ weak},\ m\text{ arbitrary}&\mathrm{WN1\!-\!WN44}.
+\end{array}\tag{AU15}
+\]
+If \(C\) is weak, apply \(\sigma_2\) and the same table.
+Every unit requirement in the transformed table is a consequence
+of the transformed physical source, including its required
+\(D'=m\) bound; it is not assumed for an excluded original case.
+
+It remains that \(C,A,\alpha\) are units.
+The actual dictionary then has
+\[
+ q_{01}=ma_1,\ q_{02}=mDa_2,\ q_{10}=a_3,\
+ q_{12}=Da_4,\ q_{20}=na_5,\ q_{21}=a_6 ,
+\]
+where every \(a_i\) is a positive bounded unit.
+The contact equation bounds \(U,V^{-1},m/U,DV\).
+The two angular equations give exactly
+\[
+ \begin{split}
+ DV^2(a_4+a_2m/U)&=a_3+na_5U,\\
+ U^2(a_6+na_5/V)&=m(a_1+a_2DV).
+ \end{split}
+\]
+All parentheses are positive bounded units, so
+\(DV^2\asymp1\), \(U^2\asymp m\).
+Consequently the exhaustive partition is
+\[
+\begin{array}{c|c}
+ D\text{ unit},\ m\text{ arbitrary}&\mathrm S\\
+ D\text{ weak},\ m\text{ unit}&\sigma_2(\mathrm S)\\
+ D,m\text{ weak}&\mathrm{RC1\!-\!RC25}.
+\end{array}\tag{AU16}
+\]
+RC is the direct full-parent C2 reciprocal theorem; it permits
+arbitrary \(n\geq0\). No unit-\(n\) condition has entered this
+part of the partition.
+
+\paragraph{C1.}
+If \(\alpha\) is weak, WN applies directly, with all its common
+source-entry implications proved in WA1--WA10.
+If \(A\) is weak, apply \(\sigma_1\), making \(\alpha'=A\) weak,
+and use WN on the transformed physical source.
+Otherwise \(A,\alpha\) are units.
+By AU14, orient with \(\sigma_1\), if necessary, so that \(C\)
+is a unit. The exact dictionary becomes
+\[
+\begin{gathered}
+ q_{01}=ma_1,\ q_{02}=mDa_2,\ q_{10}=a_3,\quad
+ q_{12}=\beta ma_4+Da_5,\quad q_{21}=a_6,\quad q_{22}=\beta a_7,\\
+ U^2(a_6+\beta a_7V)=m(a_1+a_2DV),\\
+ a_3=V^2\{mDa_2/U+\beta ma_4+Da_5+\beta a_7U\}.
+\end{gathered}\tag{AU17}
+\]
+The contact equation again bounds \(U,V^{-1},m/U,DV\).
+If \(m\) is weak, \(U\) is infinitesimal.
+If \(m\) is a unit, \(U\) is a positive unit.
+Indeed, the contact equation also bounds \(\beta UV\); if
+\(U\) were infinitesimal, then
+\(U^2(a_6+\beta a_7V)\) would be infinitesimal, contradicting
+the positive unit \(ma_1\) on the right of AU17.
+For unit \(m\), the last braces are comparable with \(D+\beta\).
+For weak \(m\), bounded \(V\) forces \(m/U\) weak in the
+preceding equation, and then the last equation forces \(D\)
+unit; conversely unit \(D\) forces bounded \(V\).
+Thus the following source partition is exhaustive:
+\[
+\begin{array}{c|c}
+ D\text{ unit},\ m\text{ arbitrary}&\mathrm S\\
+ D\text{ weak},\ m\text{ unit},\ \beta\text{ unit}
+       &\sigma_1(\mathrm S)\\
+ m\text{ unit},\ D,\beta\text{ weak}
+       &\mathrm{PP1\!-\!PP19}\\
+ m,D\text{ weak},\ \beta\text{ arbitrary}
+       &\mathrm{CR1\!-\!CR39}.
+\end{array}\tag{AU18}
+\]
+In the second line all of \(m,C,A,\alpha\) are units before
+reflection, so the reflected strong theorem has every required
+unit. PP is the C1 projective-pitchfork theorem, with actual
+contact \(U\) unit and \(V\) unbounded.
+CR is the C1 reciprocal all-tests theorem, including unit
+\(\beta\) and literal allowed \(D=0\) or \(\beta=0\).
+The last line treats infinitesimal \(m,D\).
+No boundary is promoted by a density argument.
+
+AU15--AU18 cover every permitted bounded positive-\(d\) canonical
+source. Each leaf proves the entire original parent at every
+independent projective test, with the exact same source coefficients.
+The full-parent symmetries, positive pure-source \(d\) scaling,
+positive pure-testing homogeneous factors and complex-state split
+restore the assertion in the opening paragraph. This completes
+A5 at its canonical-entry interface.
+
+The source estimates in each listed case use precisely its
+physical contact equations and the displayed coefficient bounds.
+The finite partition therefore proves the all-tests assertion for
+every bounded canonical source.
+
+\section{A three-event face and its stationary zeros}
+\label{component:p23a094ff816d}
+
+\label{p23a094ff816d:sec:rederived-three-event-contact}
+
+The three-event face has an explicit matrix representation. Its
+dual gives a separated sum of squares. We then use the stationary
+equations to show that this face contains no source with a finite
+noncommuting contact.
+
+\subsubsection*{The selected full parent}
+
+Write $D_u=1+u^2$, $D_v=1+v^2$, and retain the coefficient order
+$(d,\lambda,n,m,C,A,D,\alpha,\beta)$.  The original complete parent is
+\begin{align}
+F={}&4\lambda D_u(W+vX)^2+4nD_uD_vX^2
+ +4m(vW-X+uvY-uZ)^2\notag\\
+&+4CD_v(uW-Y)^2+4AD_uD_vY^2
+ +(4D+2d)(uW+uvX-Y-vZ)^2\notag\\
+&+(4\alpha+2d)D_u(vY-Z)^2
+ +(4\beta+2d)D_v(X+uZ)^2-2dD_uD_vZ^2.
+\tag{CAP1}
+\end{align}
+All nine coefficients are nonnegative.  Let $F_*$ be the selected parent
+with $\lambda=n=m=\alpha=\beta=0$, so that only the consecutive event
+triple $(D,C,A)$ remains.  For $d,C,A,D\geq0$ define
+\[
+\Delta=8ADC-4ADd-d^2\{d+2(C+A+D)\}.
+\tag{CAP2}
+\]
+
+\begin{proposition}[Exact physical wall and strict interior-angle positivity]
+If $d>0$, the selected parent $F_*$ is positive semidefinite at every
+projective measurement pair if and only if $\Delta\geq0$.  Whenever
+this holds, its state matrix is positive definite at every finite pair
+$u,v\ne0$.  In particular, the equality wall $\Delta=0$ has no finite
+noncommuting contact.
+\end{proposition}
+
+\begin{proof}
+Let $P_*(u,v)$ be the symmetric state matrix.  Direct expansion of the
+full polynomial (CAP1), without a state or angle truncation, gives
+\[
+\det P_*=16D_u^2D_v^2u^2v^2
+ \{d\Delta+4CDd(d+2A)v^2+4CAd(d+2D)u^2\}.
+\tag{CAP3}
+\]
+Its restriction to $Z=0$ is the sum of the
+nonnegative event squares and
+\[
+2d\{(uW+uvX-Y)^2+D_uv^2Y^2+D_vX^2\}.
+\tag{CAP4}
+\]
+For $uv\ne0$ these three squared linear forms are independent.  Hence
+the upper $3\times3$ state block is positive definite.  A Schur
+complement taken in this one ordered field proves that $P_*\succeq0$
+if and only if its determinant is nonnegative, and that a positive
+determinant gives positive definiteness.  This is a statement about
+ordinary field-valued source or testing matrices; it takes no inverse
+in a tensor product.
+
+Suppose $\Delta<0$.  Put $r=4CDd(d+2A)$ and
+$s=4CAd(d+2D)$, both nonnegative.  Taking
+\[
+u^2=v^2=\frac{-d\Delta}{2(r+s+1)}>0
+\]
+makes the expression in braces in (CAP3) negative.  This is an explicit
+ordered-field witness to nonphysicality, so no limiting argument is
+needed.  Conversely, $\Delta\geq0$ makes all three terms in braces
+nonnegative.  It also forces $C,A,D>0$: if one vanished, (CAP2) would
+be strictly negative because $d>0$.  Thus $r,s>0$ and the determinant
+is strictly positive whenever $uv\ne0$.
+
+At an actual commuting angle, including a projective infinity, one
+party's two reflections commute.  Simultaneous diagonalization makes
+the CHSH operator on each local eigenspace either $\pm2$ times one
+remote reflection.  The signed core $I-S/2$ is then positive
+semidefinite.  Every event square is positive semidefinite too.  This
+covers all literal endpoints directly.  The argument holds over every
+real closed field, because it uses real diagonalization of symmetric
+matrices and explicit ordered-field identities.  If $d=0$, every
+parent in (CAP1) is its event-square sum separately.
+\end{proof}
+
+\subsubsection*{A small exact lift of the selected source cone}
+
+Set
+\[
+p=4C+4D+2d,\qquad r=4D+2d,\qquad
+B(d,C,A,D)=
+\begin{pmatrix}
+p+4A&4D&-p\\
+4D&4D&-r\\
+-p&-r&p
+\end{pmatrix}.
+\tag{CAP5}
+\]
+For nonnegative coefficients the selected source is physical exactly
+when $B\succeq0$.  Here is a direct verification of this matrix
+description.  When $d>0$, use the positive last diagonal entry $p$.
+The Schur complement of that entry is
+\[
+\begin{pmatrix}4A&-2d\\-2d&4b/p\end{pmatrix},
+\qquad b=4CD-2Dd-d^2,
+\qquad \det B=8\Delta.
+\tag{CAP6}
+\]
+Moreover
+\[
+\Delta=2Ab-d^2(d+2C+2D).
+\tag{CAP7}
+\]
+If $\Delta\geq0$, then $A,b>0$, and (CAP6) is positive semidefinite.
+If $B\succeq0$, its determinant is nonnegative, hence $\Delta\geq0$.
+For $d=0$ one has the exact quadratic identity
+\[
+(y,z,x)B(0,C,A,D)(y,z,x)^T
+ =4C(y-x)^2+4Ay^2+4D(y+z-x)^2.
+\tag{CAP8}
+\]
+Thus the entire selected physical cone, including all zero faces, is
+\[
+\mathcal C=\{(d,C,A,D)\in\mathbb R_{\geq0}^4:B(d,C,A,D)\succeq0\}.
+\tag{CAP9}
+\]
+It has a strict feasible point $(1,2,2,2)$: the leading principal
+minors of $B$ there are $26,144,280$.
+
+\begin{lemma}[Separated certificate for the selected wall]
+For arbitrary labelled real closed fields $K_c,K_t\supset\mathbb R$,
+every source $c\in\mathcal C_{K_c}$, and every projective angle pair
+and real state in $K_t$, the complete selected parent is a finite sum
+of squares in $K_c\otimes_{\mathbb R}K_t$.  The full parent (CAP1)
+has the same property if its selected coefficients satisfy (CAP9).
+\end{lemma}
+
+\begin{proof}
+We first establish the exact dual representation used in this lemma.
+For a real linear functional $\ell$ nonnegative on $\mathcal C$,
+there are $\mu\in\mathbb R_{\geq0}^4$ and a real symmetric
+$Q\succeq0$ such that, for all $c=(d,C,A,D)$,
+\[
+\ell(c)=\mu\cdot c+\operatorname{tr}(B(c)Q).
+\tag{CAP10}
+\]
+Indeed let $\mathcal D$ be the cone of functionals on the right.  It
+is closed: if a sequence of these functionals converges, evaluation
+at $c_0=(1,2,2,2)$ bounds both $\sum\mu_i$ and
+$\operatorname{tr}Q$, because all coordinates of $c_0$ and the
+smallest eigenvalue of $B(c_0)$ are strictly positive.  Positive
+semidefinite matrices with bounded trace are bounded, so there is a
+convergent subsequence of the representing pairs.  The dual cone
+$\mathcal D^*$ is exactly (CAP9).  Finite-dimensional separation of
+closed convex cones gives $\mathcal D=\mathcal C^*$ and proves
+(CAP10).  This statement has a fixed finite first-order formulation
+using the principal-minor inequalities for a $3\times3$ matrix.
+Consequently it holds over every real closed field by transfer.
+
+Fix an arbitrary testing tuple in $K_t$.  Its homogeneous selected
+parent is a linear functional $\ell_t$ on the four source
+coefficients.  The physical equivalence just proved says that
+$\ell_t\geq0$ on $\mathcal C_{K_t}$.  Apply (CAP10) in $K_t$ to
+obtain $\mu_t\geq0$, $Q_t\succeq0$.  Evaluating the resulting
+linear coefficient identity in separated fields gives
+\[
+F_*(c,t)=\sum_{i=1}^4c_i\otimes\mu_{t,i}
+ +\sum_{j,k=1}^3 B(c)_{jk}\otimes(Q_t)_{jk}.
+\tag{CAP11}
+\]
+The first terms are squares by separate square roots.  Factor
+$B(c)=UU^T$ within $K_c$ and $Q_t=VV^T$ within $K_t$.  The last
+term in (CAP11) is exactly
+\[
+\sum_{a,b}\left(\sum_jU_{ja}\otimes V_{jb}\right)^2.
+\]
+This proves the tensor certificate with no mixed denominator.  The
+five omitted event squares in (CAP1) are separate positive-source
+factors times testing squares and can be restored exactly.  Every
+literal projective endpoint is already included in the homogeneous
+testing tuple.  Splitting a complex state into its real and imaginary
+parts gives the same assertion for complex states.
+\end{proof}
+
+\subsubsection*{Every actual finite contact lies strictly below all eight walls}
+
+The fixed event cycle is
+\[
+(a_0,\ldots,a_7)=(\lambda,D,C,A,\alpha,m,\beta,n).
+\]
+For indices modulo eight put
+\[
+\Delta_i=8a_i a_{i+1}a_{i+2}-4d a_i a_{i+2}
+ -d^2\{d+2(a_i+a_{i+1}+a_{i+2})\}.
+\tag{CAP12}
+\]
+The cyclic equivalence can be verified without an unspecified symmetry
+import.  In the CHSH convention
+$S=A_0B_0-A_0B_1+A_1B_0+A_1B_1$, the Bell relabeling
+\[
+(A'_0,A'_1,B'_0,B'_1)=(B_1,-B_0,-A_0,-A_1)
+\tag{CAP13}
+\]
+preserves $S$ and maps each event in the displayed cycle to the next.
+For example the transformed $\lambda=(+,+\mid0,1)$ is the original
+$D=(-,+\mid1,1)$.  The complete eight-event permutation and the CHSH
+identity are checked exactly.  Relabeling preserves whether each local
+pair is noncommuting, so the strict assertion of the first proposition
+applies to every cyclic triple.
+
+\begin{theorem}[Automatic contact exclusion]
+Let $d>0$, let every event coefficient be nonnegative, and suppose
+the original parent (CAP1) has a zero on a nonzero source-field state
+at an actual finite noncommuting source pair.  Then
+\[
+\Delta_i<0\qquad (i=0,\ldots,7).
+\tag{CAP14}
+\]
+\end{theorem}
+
+\begin{proof}
+If some $\Delta_i\geq0$, the selected parent for that triple is
+positive definite at the specified pair.  The full parent is this
+selected parent plus five nonnegative event squares.  It is therefore
+positive on every nonzero state at that pair, contradicting the
+assumed zero.  This uses only ordinary ordered-field positivity at
+the source contact.  It does not evaluate a source contact in an
+independent testing field.
+\end{proof}
+
+More generally, suppose a proposed cap keeps the same signed coefficient
+$d$ and removes nonnegative amounts $e_j$ from event coefficients.
+At an actual zero $t_c$ one has the exact identity
+\[
+F_{\mathrm{cap}}(t_c)
+ =-4\sum_j e_j\,\omega_j(t_c)R_j(t_c)^2,
+\tag{CAP15}
+\]
+where $\omega_j$ is the positive angle factor multiplying the event
+row in (CAP1).  Thus a globally physical cap can remove a strictly
+positive amount only from an event whose row vanishes at that contact.
+If one removed positive square has nonzero row, (CAP15) is already a
+strictly negative physicality witness.  In the special three-event cap,
+(CAP14) rules out even the case in which all removed rows vanish.
+The same argument permits smaller retained event coefficients: add
+their nonnegative excesses back as well.  It does not apply to a
+modification of $d$, whose difference is a signed CHSH term rather
+than a nonnegative event square.
+
+\subsubsection*{Exact consequences for source normalization and routing}
+
+For $d>0$ put
+\[
+\delta_{\rm tot}=\frac{d}{d+\sum_{i=0}^7a_i},
+\qquad b_i=a_i/d.
+\tag{CAP16}
+\]
+In a real closed extension, ``bounded'' means bounded in absolute
+value by a real number, and ``infinitesimal'' means smaller in
+absolute value than every positive real number.  Since all $b_i$
+are nonnegative and the sum is finite,
+\[
+\begin{array}{ll}
+\delta_{\rm tot}\text{ has positive real residue}
+ &\Longleftrightarrow\text{every }b_i\text{ is bounded},\\
+\delta_{\rm tot}\text{ is infinitesimal}
+ &\Longleftrightarrow\text{at least one }b_i\text{ is unbounded}.
+\end{array}
+\tag{CAP17}
+\]
+These alternatives are disjoint and exhaustive because
+$0<\delta_{\rm tot}\leq1$.  They are invariant under a positive
+source rescaling and under Bell relabeling.  Normalizing $d=1$ is
+legal in the coefficient field, and multiplying each tensor root by
+the pure-source factor $\sqrt d$ restores the original scale.
+
+There cannot be three consecutive unbounded $b_i$ at an actual finite
+contact.  Indeed division of (CAP12) by its positive triple product
+gives
+\[
+\frac{\Delta_i}{a_i a_{i+1}a_{i+2}}
+ =8-\frac{4d}{a_{i+1}}
+ -\frac{d^3}{a_i a_{i+1}a_{i+2}}
+ -2d^2\left\{
+ \frac1{a_i a_{i+1}}+\frac1{a_i a_{i+2}}
+ +\frac1{a_{i+1}a_{i+2}}\right\}.
+\tag{CAP18}
+\]
+If the three ratios $a_j/d$ were unbounded, its residue would be
+$8$, contradicting (CAP14).  Equivalently, every consecutive triple
+contains an event bounded relative to $d$.
+
+If a later chart uses $C=2$, the rescaling factor is $2/C$, and its
+new signed weight is $2d/C$; (CAP16) remains unchanged.  The implication
+$d/C$ infinitesimal $\Rightarrow\delta_{\rm tot}$ infinitesimal is
+valid, but the reverse implication does not follow from normalization
+alone.  A different event may be the unbounded one.  An entry map that
+claims more must prove its extra source inequalities explicitly.
+
+For a more precise cap screen with $d>0$, (CAP7) yields
+\[
+b>0\quad\Longrightarrow\quad
+\Delta<0\ \Longleftrightarrow\
+A<\frac{d^2(d+2C+2D)}{2b}.
+\tag{CAP19}
+\]
+If $b\leq0$, the strict inequality $\Delta<0$ is automatic.  Every
+inverse in (CAP19) is within the source field, and the polynomial
+condition (CAP14) remains the primary contact condition.
+
+
+
+\section{\texorpdfstring{Weak-alpha source entry and the unit-\(n\) case}{Weak-alpha source entry and the unit-n case}}
+\label{component:p3a3949869b9e}
+
+\label{p3a3949869b9e:sec:new-weak-alpha-unit-n}
+
+\paragraph{The source domain.}
+All coefficients are bounded in the source field, \(d=1\), and the
+original canonical source is physical with an actual finite noncommuting
+zero contact. The C2 convention is \(\lambda=\beta=0\), and the C1
+convention is \(\lambda=n=0\). The first subsection applies to either
+family with \(\alpha\) infinitesimal. The all-tests theorem proved below
+has the additional C2 hypotheses that \(n\) is a positive unit and \(m\)
+is infinitesimal. It includes all independent testing states, signs and
+literal projective endpoints. The weak-\(n\) and C1 cases are separate.
+
+\subsubsection*{Source entry, proved before any shape quotient is used}
+
+Physicality forces \(C,A,D\) to be positive units. Here are exact
+residue-face tests proving this assertion. In C2 the negative central
+coefficient at \(A=0\), and its vanishing positive Laurent terms along
+\(U=t^2,V=1/t\), are the displayed forbidden-face proof in the actual
+positive-\(d\) source partition. If also \(C=0\) in residue, the source
+has only the four alternating events \(n,m,A,D\). At \(u=v=1\) the full
+parent at state \((1,-\varepsilon,\varepsilon,1)\) is exactly
+\[
+ 16\varepsilon\{(1+n+m+A+D)\varepsilon-1\}<0
+ \tag{WA1}
+\]
+for a sufficiently small positive real \(\varepsilon\).
+Thus \(C\) cannot be weak. The remaining central coefficient identities
+are
+\[
+\begin{aligned}
+h|_{\alpha=D=0}
+ &=(2A+2C+1)\{8\beta mn-2\beta-4mn-2m-2n-1\},\\
+h|_{\alpha=C=n=0}
+ &=-(2A+1)(2D+1)(2\beta+2m+1),\\
+h|_{\alpha=A=n=0}
+ &=-(2C+2D+1)(2\beta+2m+1).
+\end{aligned}\tag{WA2}
+\]
+In the first line \(n\beta=0\), so it is strictly negative. For C2
+with \(\alpha=D=0\), the other Laurent terms are
+\(q_{20}U/V+q_{21}U\), killed by \(U=t^2,V=t\).
+For C1 with \(\alpha=D=0\), they are
+\(q_{12}V+q_{21}U+q_{22}UV\), killed by \(U=V=t\).
+For C1 with \(\alpha=C=0\), they are \(q_{02}V/U+q_{12}V\),
+killed by \(U=1/t,V=t\). For C1 with \(\alpha=A=0\), they are
+\(q_{02}V/U+q_{12}V+q_{22}UV\), killed by \(U=t,V=t^2\).
+Here \(t\) tends to zero through positive reals. These contradictions
+prove all the asserted unit bounds without a source-contact assumption.
+
+Write \(U=u_c^2,V=v_c^2>0\). The actual determinant dictionary now has
+\[
+ q_{01}=\alpha m a_1,\quad q_{02}=ma_2,\quad
+ q_{10}=\alpha a_3,\quad q_{12}=a_4,\quad
+ q_{20}=na_5,\quad q_{21}=a_6,\quad q_{22}=\beta a_7,
+ \tag{WA3}
+\]
+where the \(a_i\) are positive bounded units. The two angular equations
+and their sum are
+\[
+\begin{aligned}
+ U^2(na_5+a_6V+\beta a_7V^2)&=mV(\alpha a_1+a_2V),\\
+ V^2(ma_2+a_4U+\beta a_7U^2)&=\alpha a_3U+na_5U^2,\\
+ a_6U+a_4V+2\beta a_7UV
+ &=\alpha(ma_1/U+a_3/V).
+\end{aligned}\tag{WA4}
+\]
+Every \(t_i\) in the dictionary is a positive unit because it includes
+\(d=1\). At contact all noncentral Laurent terms are nonnegative,
+and their sum is bounded. In particular \(U,V,mV/U,nU/V\) are bounded.
+Multiplying the last equation by \(V\) shows
+\(\alpha/V=O(U+V)\). The first two equations then exclude either
+\(U\) or \(V\) having nonzero residue: if \(U\) is a unit the first
+forces \(V\) a unit, and conversely the second forces \(U\) a unit;
+the last equation then contradicts weak \(\alpha\).
+Both are infinitesimal. Consequently
+\[
+ \alpha/V=o(1),\qquad
+ m\asymp (U/V)^2(n+V),\qquad
+ \alpha\asymp V(U+V).
+ \tag{WA5}
+\]
+For the last comparison, the denominator
+\(a_3+ma_1V/U\) is a positive bounded unit. Actual finite contact
+forces \(m,\alpha>0\) in WA4. If \(n\) is a unit and \(m\) weak,
+\[
+ U/V\asymp\sqrt m=o(1).
+ \tag{WA6}
+\]
+If \(n\) is weak, then, whether \(U/V\) is bounded or unbounded,
+WA5 gives \(mV/U,nU/V=o(1)\). These same two conclusions hold
+under WA6. They are the common source bounds used in the shape argument.
+
+Orient the actual signs positively, use \(W_c=1\), and put
+\[
+ p=v_c,\quad q=Z_c,\quad P=p^2,\quad Q=q^2,\qquad
+ u_c=rpq,\quad X_c=xpq^2,\quad Y_c=ypq.
+ \tag{WA7}
+\]
+The exact core sign identity SE9 ensures \(W_cZ_c>0\), so this
+normalization is legitimate. To prove boundedness before using these
+quotients, eliminate the \(X,Y\) block inside the source field. Set
+\[
+ H_X=n+m+\beta+\tfrac12,\quad K=C+D+\tfrac12,\quad H=K+A .
+\]
+The block has diagonal positive residue \(H_X,H\) and an infinitesimal
+off-diagonal entry. The source Schur entries satisfy
+\[
+ S_{WW}/U\sim a=AK/H>0,\qquad
+ -S_{WZ}/(u_cv_c)\sim b=\tfrac12+AD/H>0.
+ \tag{WA8}
+\]
+Indeed the only additional leading contributions are multiples of
+\(mV/U,nU/V,mn\), all infinitesimal on the domains just stated.
+The kernel equation gives \(r\sim b/a\), a positive unit. The scaled
+\(X,Y\) equations are then a bounded system with positive triangular
+residue; its apparent \(m/Q\) term is bounded since
+\(m/Q=r^2mV/U\). Thus \(x,y\) are bounded before taking residues.
+Those equations and the two remaining kernel equations give
+\[
+ Ay\sim\tfrac12,\quad
+ K(r-y)\sim D+\tfrac12,\quad
+ D(1+y-r)\sim r/2,\qquad
+ x\sim-\frac{m+\beta+1/2}{H_X}\,r.
+ \tag{WA9}
+\]
+For the last kernel division the possible extra \(\alpha/V\),
+\(nU/V\) and \(mV/U\) terms vanish by WA5. In particular \(y,r-y\)
+and \(1+y-r\) are positive units, and the critical residue dictionary is
+\[
+ A_0=\frac1{2y_0},\qquad
+ C_0=\frac{1+y_0}{2(r_0-y_0)},\qquad
+ D_0=\frac{r_0}{2(1+y_0-r_0)}.
+ \tag{WA10}
+\]
+In the unit-\(n\), weak-\(m\) domain, \(\beta=0\), and hence
+\[
+ P,Q=o(1),\qquad m\asymp Q^2,\qquad
+ \alpha\asymp P^2,\qquad
+ x_0=-r_0/(1+2n_0).
+ \tag{WA11}
+\]
+No independent testing coordinate occurred in this entry proof.
+
+\subsubsection*{The exact scalar and every first normal}
+
+For reference the full finite quarter-parent is
+\[
+\begin{aligned}
+F={}&nD_uD_vX^2+m(vW-X+uvY-uZ)^2
+       +CD_v(uW-Y)^2+AD_uD_vY^2\\
+ &+(D+\tfrac12)(uW+uvX-Y-vZ)^2
+       +(\alpha+\tfrac12)D_u(vY-Z)^2\\
+ &+(\beta+\tfrac12)D_v(X+uZ)^2-\tfrac12D_uD_vZ^2 .
+\end{aligned}\tag{WA12}
+\]
+Here \(D_u=1+u^2,D_v=1+v^2\). We retain \(\beta\) symbolically to make
+the exact common graph explicit, but the current case has \(\beta=0\).
+In the testing chart \(W=1,Z=z\), use
+\[
+ u_g=rvz,\qquad X_g=xvz^2,\qquad Y_g=yvz,\qquad
+ V_t=v^2,\quad T=z^2.
+ \tag{WA13}
+\]
+In the rest of this subsection write \(V=V_t\) only. The full graph
+restriction is
+\[
+\begin{aligned}
+\Phi={}&mV+\alpha T+hVT+\mathcal C V^2T+EVT^2
+   +\mathcal F V^2T^2+GV^3T^2+JV^2T^3+\mathcal K V^3T^3,\\
+\mathcal C={}&Ay^2+C(r-y)^2+(\alpha+\tfrac12)y^2+2mry,\\
+E={}&\alpha r^2+(m+\beta+\tfrac12)(r+x)^2+nx^2,\\
+G={}&r^2y^2(A+\alpha+m+\tfrac12),\qquad
+J=nr^2x^2,\qquad \mathcal K=(D+n+\tfrac12)r^2x^2,\\
+\mathcal F={}&Ar^2y^2+(2D+1)rx(r-y-1)-(2\alpha+1)r^2y\\
+ &-2mry(r+x)+\beta(r+x)^2+nx^2+rx+x^2/2 .
+\end{aligned}\tag{WA14}
+\]
+The coefficient \(h\) is defined by this entire expansion; it is bounded.
+Every displayed coefficient is bounded. In the current unit-\(n\)
+domain \(\mathcal C,E\) are positive units, since
+\[
+ \mathcal C_0=r_0(1+y_0)/2,\qquad
+ E_0=n_0r_0^2/(1+2n_0).
+ \tag{WA15}
+\]
+The coefficient \(\mathcal F\) need not be positive.
+
+The actual contact gives \(\Phi(P,Q)=\Phi_V(P,Q)=\Phi_T(P,Q)=0\).
+Solving these three linear equations in \(m,\alpha,h\) is exact:
+\[
+\begin{aligned}
+m={}&EQ^2+\mathcal F PQ^2+GP^2Q^2+2JPQ^3+2\mathcal K P^2Q^3,\\
+\alpha={}&\mathcal C P^2+\mathcal F P^2Q+2GP^3Q
+                         +JP^2Q^2+2\mathcal K P^3Q^2,\\
+h={}&-2\mathcal CP-2EQ-3\mathcal FPQ-4GP^2Q
+                         -4JPQ^2-5\mathcal K P^2Q^2 .
+\end{aligned}\tag{WA16}
+\]
+Put
+\[
+ R=z(V-P),\quad S=v(T-Q),\quad
+ \Psi=QR^2+PS^2+vzRS .
+\]
+With the exact balanced monomials
+\[
+\begin{aligned}
+B_{32}&=2PQR^2+(vzR+PS)^2,\\
+B_{23}&=2PQS^2+(QR+vzS)^2,\\
+B_{33}&=(2PQ^2+VT^2)R^2+(2P^2Q+PVT)S^2
+                              +(3PQ+PT)vzRS,
+\end{aligned}\tag{WA17}
+\]
+the whole scalar, not a leading truncation, is
+\[
+ \Phi=\mathcal CR^2+ES^2+\mathcal F\Psi
+                          +GB_{32}+JB_{23}+\mathcal K B_{33}.
+ \tag{WA18}
+\]
+For \(v,z\) infinitesimal, all entries after the first two positive
+unit pivots are infinitesimal, by \(P,Q=o(1)\). This is a strict
+two-row Gram even when \(\mathcal F\) is signed.
+
+Let \(L_u,L_X,L_Y\) be half the full first derivatives of WA12 at
+WA13. The complete polynomials have the forms
+\[
+\begin{aligned}
+ L_u&=vz A_u(V,T),\qquad L_Y=vz A_y(V,T),\\
+ A_u&=a_{00}+a_{10}V+a_{01}T+a_{11}VT
+                      +a_{12}VT^2+a_{21}V^2T+a_{22}V^2T^2,\\
+ A_y&=e_{00}+e_{10}V+e_{11}VT+e_{21}V^2T,\\
+ L_X&=v[-m+TB_X(V,T)],\qquad
+ B_X=c_0+c_1V+c_2VT+c_3V^2T .
+\end{aligned}\tag{WA19}
+\]
+All coefficients are bounded, and the expansion fixes every one
+unambiguously. In particular
+\[
+ c_2=nr^2x,\qquad c_3=(D+n+\tfrac12)r^2x .
+\]
+Their actual source jets are \(A_u(P,Q)=A_y(P,Q)=0\) and
+\(B_X(P,Q)=m/Q\). Finite monic difference division gives
+\[
+\begin{aligned}
+ L_i&=v A_{i,V}(V,T)R+z B_i(T)S,\qquad i=u,Y,\\
+ L_X&=vz B_{X,V}(V,T)R+
+                \{T(Pc_2+P^2c_3)+m/Q\}S .
+\end{aligned}\tag{WA20}
+\]
+Here \(A_{i,V}=[A_i(V,T)-A_i(P,T)]/(V-P)\), and \(B_{X,V}\)
+is defined identically. The other divided polynomials are
+\[
+\begin{aligned}
+B_u(T)&=a_{01}+Pa_{11}+Pa_{12}(T+Q)+P^2a_{21}
+                                      +P^2a_{22}(T+Q),\\
+B_Y(T)&=Pe_{11}+P^2e_{21}.
+\end{aligned}
+\]
+These are literal polynomial identities with bounded coefficients,
+including \(v=0\) or \(z=0\). Since \(m/Q=O(Q)=o(1)\),
+every full first normal is an infinitesimal linear combination of \(R,S\).
+
+Set \(N_u=u-rvz,N_X=X-xvz^2,N_Y=Y-yvz\). In the chart under
+consideration these are infinitesimal. The full higher-normal
+remainder is a polynomial in the three normals with no terms of
+normal degree below two; all terms of degree at least three give
+infinitesimal Gram entries. Its quadratic residue is
+\[
+ K_0(N_u-N_Y)^2+A_0N_Y^2+(n_0+\tfrac12)N_X^2\succ0.
+ \tag{WA21}
+\]
+WA18 and WA20 therefore give a strict bounded Gram for the entire
+parent on the three hard and two soft rows. The strict-Gram lemma
+proves its tensor-SOS assertion, with no mixed inverse.
+
+\subsubsection*{The complementary local states}
+
+Normalize a maximal testing state coordinate. At \(u,v=o(1)\)
+the state residue has positive pivots on \(X,Y\); if one is a unit,
+the full parent has positive residue immediately. Otherwise one
+of \(W,Z\) is a unit. The preceding proof covers \(W=1,Z=o(1)\).
+Every remaining state can be normalized to \(Z=1,W=\omega\)
+bounded. Retain the entire positive \(m,\alpha\) squares.
+The remainder lies exactly in the square of \((u,v,X,Y)\).
+Its quadratic real residue is
+\[
+\begin{aligned}
+ &(n_0+\tfrac12)\left(X+\frac{u}{1+2n_0}\right)^2
+     +\frac{n_0}{1+2n_0}u^2\\
+ &+H_0\left(Y-\frac{K_0\omega u-D_0v}{H_0}\right)^2
+     +a_0(\omega u-r_0v)^2,\qquad a_0=A_0K_0/H_0>0 .
+\end{aligned}\tag{WA22}
+\]
+The critical identities WA10 prove the equality. This quadratic
+form is positive definite for every real \(\omega\), including zero.
+All higher normal terms are infinitesimal corrections on these
+four rows, while \(\omega-\bar\omega\) is retained in coefficients.
+Thus every state at the double-infinitesimal angle corner is covered.
+
+\subsubsection*{All other testing angles, including the literal endpoints}
+
+Again retain the entire \(m,\alpha\) squares and call the remainder
+\(F_0\). Its source residue is the critical \(C,A,D,n\) source.
+For bounded \(u,v\), \(F_0\) is exactly a bounded quadratic form
+in the four rows \((uW,X,Y,Z)\). Its real \(Z=0\) block is positive:
+the \(nX^2\) and \(AY^2\) squares and \(C(uW-Y)^2\) suffice.
+The determinant is
+\[
+ \det \operatorname{Mat}_{(uW,X,Y,Z)}(\bar F_0)
+ =D_u^2D_v^2\{q_{20}u^2+q_{12}v^4+q_{21}u^2v^2\}/16>0
+ \tag{WA23}
+\]
+whenever at least one of the two real angle residues is nonzero.
+Here \(q_{20},q_{12},q_{21}>0\) are the actual residue determinant
+coefficients, and \(h=0\) follows from WA10. This proves strictness
+of the full four-row Gram. Literal \(u=0\) is allowed.
+
+For Bob reciprocal \(b=1/v\) infinitesimal and Alice bounded,
+use the same rows \((uW,X,Y,Z)\) in \(b^2F_0(u,1/b)\).
+At \(b=0\) its whole real expression is
+\[
+ C_0(uW-Y)^2+(A_0+\tfrac12)D_uY^2
+             +D_0(uX-Z)^2+(n_0+\tfrac12)D_uX^2\succ0 .
+ \tag{WA24}
+\]
+It is strict at every real \(u\), including zero.
+For Alice reciprocal \(s=1/u\) infinitesimal and Bob bounded,
+the original state rows suffice. The expression at \(s=0\) is
+\[
+ n_0D_vX^2+C_0D_vW^2+A_0D_vY^2
+          +(D_0+\tfrac12)(W+vX)^2+\tfrac12(vY-Z)^2\succ0 .
+ \tag{WA25}
+\]
+This includes \(v=0\), using the positive \(n_0\) pivot.
+
+For both reciprocal angles \(s,b=o(1)\), use the five rows
+\((W,X,Y,sZ,bZ)\). The whole reciprocal polynomial belongs
+to their square ideal, and its real coefficient Gram is
+\[
+ C_0W^2+A_0Y^2+D_0(X-sZ)^2
+          +(n_0+\tfrac12)X^2+\tfrac12(Y-bZ)^2\succ0 .
+ \tag{WA26}
+\]
+Every remaining coefficient is infinitesimal. These exact finite
+square-ideal allocations include \(s=0\), \(b=0\) and arbitrary
+states; no projective endpoint is obtained by a limiting argument.
+
+The four angle charts and the two local state charts are exhaustive.
+Testing sign gauges, positive pure-field homogeneous normalization
+factors and real/imaginary state splitting restore the original parent:
+\[
+ F_c(u,v;\psi)\ \in\ \Sigma(K_c\otimes_{\mathbb R}K_t)^2
+ \quad\text{for every independent projective test and state.}
+ \tag{WA27}
+\]
+This closes exactly the C2 unit-\(n\), weak-\(m,\alpha\) case.
+The common source-entry subsection does not by itself close the
+weak-\(n\) or C1 weak-\(\alpha\) branches.
+
+
+
+\section{\texorpdfstring{Weak-alpha weak-\(n\) and C1: the complete parent}{Weak-alpha weak-n and C1: the complete parent}}
+\label{component:p0db05df21ad1}
+
+\label{p0db05df21ad1:sec:weak-alpha-weak-n-c1}
+
+\paragraph{The source domain.}
+The source is an actual physical canonical finite noncommuting contact,
+all coefficients are bounded in the source field, and \(d=1\).
+Either it is C2 with \(\lambda=\beta=0\) and \(n,\alpha\) infinitesimal,
+or it is C1 with \(\lambda=n=0\), \(\alpha\) infinitesimal and arbitrary
+bounded \(\beta\geq0\). All strict source gaps retain their original
+meaning. We prove the tensor-SOS statement for the entire parent at
+every independent projective testing angle and every state.
+The common source-entry proof WA1--WA10 is used on precisely its
+weak-\(n\) domain. In particular \(C,A,D,r,y,r-y,1+y-r\) are positive
+units, \(x\) is bounded, and \(x_0=-r_0\).
+Boundedness, infinitesimality and residue refer
+to the separated bounded tensor ring and its real residue map.
+The strict-Gram lemma is applied only after a finite explicit row
+allocation; no mixed tensor is inverted.
+
+Use the full quarter-parent WA12 and its exact source coordinates
+\[
+ p=v_c,\quad q=Z_c>0,\quad P=p^2,\quad Q=q^2,\qquad
+ W_c=1,\quad u_c=rpq,\quad X_c=xpq^2,\quad Y_c=ypq.
+ \tag{WN1}
+\]
+Thus \(P,PQ\) are positive infinitesimals. Put
+\[
+ H_0=m+\beta+\tfrac12,\quad H_X=H_0+n,\quad
+ K=C+D+\tfrac12,\quad H_Y=K+A.
+ \tag{WN2}
+\]
+These are positive units. The exact scalar coefficients
+\(\mathcal C,E,\mathcal F,G,J,\mathcal K\), the contact balances, and
+the complete first normal polynomials are those displayed in
+WA14, WA16 and WA19; those identities retain \(\beta\) and \(n\).
+Their relevant residues are
+\[
+ \mathcal C_0=\frac{r_0(1+y_0+4m_0y_0)}2>0,\qquad
+ \mathcal F_0=\frac{r_0^2(1+y_0)}2>0,
+ \qquad G,J,\mathcal K\geq0 .
+ \tag{WN3}
+\]
+Both \(\mathcal C,\mathcal F\) are consequently positive units.
+The exact source \(X\)-jet gives, with the WA19 coefficients,
+\[
+\begin{gathered}
+ c_0=H_0(r+x)+nx,\quad c_2=nr^2x,\quad
+ c_3=(D+n+\tfrac12)r^2x,\\
+ c_0=m/Q-Pc_1-PQc_2-P^2Qc_3,\\
+ E=\alpha r^2+c_0^2/H_X+nH_0r^2/H_X .
+\end{gathered}\tag{WN4}
+\]
+The last equality is an exact completion inside the source field.
+
+\subsubsection*{Two finite positive circuit identities}
+
+For \(V=v^2,T=z^2\) put
+\[
+ R=z(V-P),\quad S=v(T-Q),\quad
+ \Psi=V^2T^2+PQ^2V+P^2QT-3PQVT .
+\]
+Then \(\Psi=QR^2+PS^2+vzRS\). It is an explicit six-square
+cubic circuit: if \(L_1^3=V^2T^2,L_2^3=PQ^2V,L_3^3=P^2QT\),
+then \(L_1L_2L_3=PQVT\), and
+\[
+ \Psi=\sum_{i=1}^3 L_i
+ \bigl\{(L_1-L_2)^2-(L_1-L_2)(L_1-L_3)+(L_1-L_3)^2\bigr\}.
+ \tag{WN5}
+\]
+The real \(2\)-by-\(2\) Gram in each brace is strictly positive.
+All radicals in this formula are elementary separated monomials:
+source radicals and testing radicals are taken in their own real
+closed fields and then tensored.
+
+The balanced degree-\((3,3)\) term has the polynomial identity
+\[
+ a^{10}+2b^{10}+2c^{10}-5a^2b^4c^4
+ =2(b^5-c^5)^2
+ +(a^2-bc)^2(a^6+2a^4bc+3a^2b^2c^2+4b^3c^3).
+ \tag{WN6}
+\]
+For nonnegative elementary monomials \(a,b,c\), the bracket is the
+sum of squares of the four rows
+\[
+ a^3,\qquad \sqrt2a^2\sqrt{bc},\qquad
+ \sqrt3abc,\qquad 2(bc)^{3/2}.
+\]
+This is a five-square separated certificate, including vanishing
+variables. Applied with
+\[
+ a^{10}=V^3T^3,\quad b^{10}=P^2Q^3V,\quad c^{10}=P^3Q^2T,
+\]
+it proves positivity of the entire \(B_{33}\) in WA17.
+
+A further exact identity supplies any fixed positive real pivot
+on the row \(PS\):
+\[
+ 2P\Psi+VT R^2-(PS)^2=(PS+vzR)^2+2PQR^2.
+ \tag{WN7}
+\]
+Indeed, for every fixed \(b>0\),
+\[
+\begin{split}
+ \mathcal C R^2+\mathcal F\Psi={}&
+ (\mathcal C-bVT+2bPQ)R^2+(\mathcal F-2bP)\Psi\\
+ &+b(PS)^2+b(PS+vzR)^2.
+\end{split}\tag{WN8}
+\]
+On the charts where this is used, \(VT,P,PQ\) are infinitesimal,
+so the original two unit residues are unchanged.
+
+\subsubsection*{Bounded source ratio \(Q\)}
+
+From WA5, WN4 and bounded \(Q\),
+\[
+ m\asymp Q^2(n+P),\quad \alpha\asymp P^2,\quad
+ r+x=O(n+P),\quad E\asymp n+P^2.
+ \tag{WN9}
+\]
+In particular \(m,n,E,\alpha\) are infinitesimal. None of these
+estimates contains an independent testing coordinate.
+
+First take \(W=1,Z=z\) bounded and \(u,v\) infinitesimal. Use the
+entire graph \(u=rvz,X=xvz^2,Y=yvz\). The exact scalar is
+\[
+ \Phi=\mathcal CR^2+ES^2+\mathcal F\Psi
+          +GB_{32}+JB_{23}+\mathcal K B_{33},
+ \tag{WN10}
+\]
+where the last three terms retain their positive full certificates.
+The strict soft rows are \(R\), the six cubic rows in WN5,
+\(\sqrt E\,S\), and \(PS\); WN8 supplies any needed real pivot
+on the last row.
+
+The exact monic normal divisions WA20 apply unchanged.
+Their \(R\)-coefficients contain \(v\) or \(vz\), hence are
+infinitesimal. Their \(S\)-coefficients are \(O(E+P)\):
+in particular
+\[
+ a_{01}=\alpha r+H_0(r+x)=O(E+P),\qquad
+ a_{12}=nr x^2,\qquad m/Q=O(E+P).
+ \tag{WN11}
+\]
+Every \(ES\) contribution has infinitesimal coefficient \(\sqrt E\)
+on \(\sqrt E S\). Coefficients on \(PS\) may be bounded units.
+There are only finitely many of them, so choose \(b\) in WN8
+larger than their finite real Schur cost. This uses a real constant,
+not an inverse of a mixed tensor.
+
+The three hard normals
+\(N_u=u-rvz,N_X=X-xvz^2,N_Y=Y-yvz\) are infinitesimal.
+Their complete quadratic residue is
+\[
+ K_0(N_u-N_Y)^2+A_0N_Y^2+
+          (\beta_0+\tfrac12)(N_X+\bar zN_u)^2\succ0.
+ \tag{WN12}
+\]
+All higher-normal terms have degree at least three and bounded
+coefficients, hence allocate as infinitesimal Gram entries on these
+hard rows. WN10--WN12 prove the full parent in this chart.
+
+For the complementary local states take \(Z=1,W=w\) infinitesimal,
+set \(a=u/r\), and use
+\[
+ v=aw,\quad X=xa,\quad Y=yaw,\qquad U=a^2,\quad T=w^2.
+ \tag{WN13}
+\]
+The entire scalar is
+\[
+\begin{split}
+ \Phi'={}&\alpha+mUT^2+EU+hUT+\mathcal C U^2T^2
+       +\mathcal F U^2T+GU^3T^2+JU^2+\mathcal K U^3T .
+\end{split}\tag{WN14}
+\]
+Here \(a=(1/r)\otimes u\) is elementary; its roots remain separated.
+The strict rows are \(P,a^2w,\sqrt E\,a\).
+The term \(hUT\) is harmless: the contact balances give
+\(h=O(P+E)\), and writing \(h=Ph_P+Eh_E\) with bounded source
+coefficients gives the infinitesimal Gram terms
+\(h_Pw\,P(a^2w)+h_Ew^2(\sqrt E a)^2\).
+All other terms of WN14 are positive.
+
+For completeness, half the entire \(v,Y,X\) derivatives have
+the polynomial forms
+\[
+\begin{aligned}
+ L_v'&=aw(d_0+mT+d_1U+d_2UT+d_3U^2+d_4U^2T),\\
+ L_Y'&=aw(e_0+e_1U+e_2UT+e_3U^2T),\\
+ L_X'&=a(c_0-mT+c_2U+c_1UT+c_3U^2T).
+\end{aligned}\tag{WN15}
+\]
+Every coefficient is bounded. Source jets at
+\(U=PQ,T=1/Q\) give
+\[
+\begin{split}
+d_0&=-m/Q-d_1PQ-d_2P-d_3P^2Q^2-d_4P^2Q=O(n+P),\\
+e_0&=-e_1PQ-e_2P-e_3P^2Q=O(P).
+\end{split}
+\]
+Also \(c_0,m=O(n+P)\) and \(c_2=O(n)\).
+Splitting \(n+P=O(E+P)\) in these displayed complete polynomials
+allocates all first normals with infinitesimal coefficients to
+\(P,a^2w,\sqrt E a\). For example \(awP\), \(awE\), and
+\(a^3w\) have coefficients \(aw\), \(w\sqrt E\), and \(a\)
+on those three rows; the other monomials have still more small
+testing factors. The complete hard residue is
+\[
+ (\beta_0+\tfrac12)N_X^2+
+ D_0N_v^2+2D_0N_vN_Y+H_{Y,0}N_Y^2\succ0,
+ \tag{WN16}
+\]
+where \(N_v=v-aw,N_Y=Y-yaw,N_X=X-xa\).
+The higher-normal argument is again exact polynomial allocation.
+This proves all local states when \(Q\) is bounded.
+
+\subsubsection*{Unbounded source ratio: the \(W\)-chart}
+
+Suppose \(Q\) is unbounded. The source estimates and positive
+contact balances give
+\[
+ PQ=o(1),\quad m\asymp Q^2(n+P),\quad nQ^2,PQ^2=O(1),
+ \quad \alpha\asymp P^2Q .
+ \tag{WN17}
+\]
+WN4 now gives
+\[
+ c_0\sim m/Q,\quad r+x\sim m/(H_XQ),\quad
+ E\asymp n+(m/Q)^2,\quad h/m=o(1).
+ \tag{WN18}
+\]
+To justify the first comparison before its use, divide the three
+errors \(Pc_1,PQc_2,P^2Qc_3\) by \(m/Q\).
+Their absolute values are \(O(1/Q),O(P),O(P)\), respectively;
+\(n/(m/Q)=O(1/Q)\). The positive term
+\(\alpha/(m/Q)^2=O(1/Q)\) follows from
+\(m\geq cPQ^2\). The last comparison follows term by term from
+WA16 using these same inequalities.
+
+Take \(W=1,Z=z\) bounded, \(u,v\) infinitesimal. If \(m\) is a
+unit, retain the entire \(n,\alpha\) squares. The remainder lies
+in the square of \((u,v,X,Y)\). Its real quadratic form is
+\[
+\begin{split}
+ &H_0\{X+zu-(m/H_0)v\}^2+
+       \frac{m(\beta+1/2)}{H_0}v^2\\
+ &\qquad+H_Y\{Y-(Ku-Dzv)/H_Y\}^2
+       +a_*(u-rzv)^2,\qquad a_*=AK/H_Y>0,
+\end{split}\tag{WN19}
+\]
+with coefficients interpreted in residue. WA10 verifies this
+identity. It is strict for every bounded \(z\), so the complete
+higher terms give a strict Gram.
+
+If \(m\) is weak, use the graph WA13. Its entire scalar has strict
+rows \(\sqrt m\,v,v^2z,\sqrt\alpha\,z\), since
+\(mV+hVT=mV[1+(h/m)T]\), while \(\mathcal C,\mathcal F,E,G,J,\mathcal K\)
+are nonnegative. The complete source jet equations yield
+\[
+ a_{00}=O(m),\quad e_{00}=O(PQ),\quad
+ a_{01},c_0=O(m/Q).
+ \tag{WN20}
+\]
+Thus \(a_{00}/\sqrt m\), \(e_{00}/\sqrt m\),
+\(a_{01}/\sqrt m\), \(c_0/\sqrt m\) are infinitesimal.
+For \(e_{00}\), use \(PQ/\sqrt m=O(\sqrt P)\).
+Every other monomial of the complete normals WA19 has a factor
+\(v^3z\) or \(v^3z^2\), so it has an infinitesimal coefficient
+on \(v^2z\). The hard residue is WN12; all higher terms are
+allocated exactly as there. This proves the whole \(W\)-chart.
+
+\subsubsection*{Unbounded source ratio: the complementary scalar}
+
+Use WN13 with \(a,w\) infinitesimal. Introduce only source quantities
+\[
+\begin{gathered}
+ \epsilon=Q^{-1}=o(1),\quad \Lambda=PQ=o(1),\quad
+ \tau=\Lambda/\epsilon=PQ^2=O(1),\\
+ \nu=n/\epsilon^2=O(1),\qquad N=E/\epsilon^2=O(1).
+\end{gathered}\tag{WN21}
+\]
+The quantities \(\epsilon,\Lambda,\tau,N\) are positive; \(\nu\geq0\).
+Let
+\[
+ A_1=a(T-\epsilon),\quad K_1=UT-\Lambda\epsilon,\quad
+ \mathcal M=U^2T+\tau UT^2+\Lambda^2\epsilon-3\Lambda UT .
+ \tag{WN22}
+\]
+The whole scalar WN14, using exactly the three contact balances, is
+\[
+\begin{split}
+ \Phi'={}&\mathcal C K_1^2+NA_1^2+\mathcal F\mathcal M\\
+ &+G\{2\Lambda K_1^2+UT^2(U-\Lambda)^2\}\\
+ &+J\{(U-\Lambda)^2+2\Lambda A_1^2/\epsilon^2\}
+       +\mathcal K\mathcal B_{33},\\
+ \mathcal B_{33}={}&U^3T+2(\Lambda^2/\epsilon)UT^2
+                      +2\Lambda^3\epsilon-5\Lambda^2UT .
+\end{split}\tag{WN23}
+\]
+The apparent \(1/\epsilon^2\) in the positive \(J\) square is
+a source-field quantity, and \(J/\epsilon^2=\nu r^2x^2\) is bounded.
+All positive terms are retained. WN6 applies to \(\mathcal B_{33}\)
+with \(a^{10}=U^3T,b^{10}=(\Lambda^2/\epsilon)UT^2,
+c^{10}=\Lambda^3\epsilon\).
+Here \(\Lambda^2/\epsilon=\tau\Lambda\) is bounded.
+
+Write \(a=t^3,w=s^3,\epsilon=h^6,\tau=c^6\), taking positive
+elementary roots. Then \(t,s,h\) are infinitesimal and \(c\)
+is bounded; it is allowed to be a unit. Put
+\[
+\begin{gathered}
+ L_1=t^4s^2,\quad L_2=c^2t^2s^4,\quad L_3=h^6c^4,\\
+ f_1=t^2s,\quad f_2=cts^2,\quad f_3=h^3c^2,\\
+ R_{2i-1}=f_i(L_1-L_2),\qquad R_{2i}=f_i(L_1-L_3)
+ \quad (i=1,2,3).
+\end{gathered}\tag{WN24}
+\]
+Then \(\mathcal M=\sum_{i=1}^3(R_{2i-1}^2-R_{2i-1}R_{2i}+R_{2i}^2)\),
+a strict six-row constant Gram. The following are exact identities:
+\[
+\begin{aligned}
+ aw(U-\Lambda)&=t^3R_1+c^2ts^2R_2,\\
+ a^2w(T-\epsilon)&=-h^6R_1+s^6R_2-h^3s^3R_5,\\
+ \tau aw(T-\epsilon)&=c^2ts^2(R_2-R_1)-c^3s^3R_3,\\
+ \tau\sqrt\epsilon\,A_1&=t^3R_6-t(t^2+c^2s^2)R_5 .
+\end{aligned}\tag{WN25}
+\]
+Every coefficient on the right is infinitesimal, even when \(c\)
+is a unit. These are finite linear conductors, not limiting
+approximations. The further quadratic conductor is
+\[
+ \boxed{\ \Lambda(U-\Lambda)K_1
+       =\Lambda\mathcal M-(\tau\sqrt\epsilon\,A_1)^2.\ }
+ \tag{WN26}
+\]
+Its right side is an infinitesimal Gram on the six cubic rows.
+It remains so after multiplication by any bounded signed coefficient.
+
+If \(\tau\) is a unit, then \(K_1\) itself has an infinitesimal
+linear representation on those rows:
+\[
+ K_1=\tau^{-1/3}
+       \{\sqrt{L_1}(R_2-R_1)+\sqrt{L_3}R_6\}.
+ \tag{WN27}
+\]
+This follows by expansion as
+\(\tau^{-1/3}(L_1L_2-L_3^2)=UT-\Lambda\epsilon\).
+Consequently any fixed real pivot on \(K_1\) can be supplied at
+infinitesimal cost to the strict \(\mathcal M\) Gram in this case.
+
+\subsubsection*{Every complementary first normal}
+
+Let \(D_U,E_U\) denote the monic \(U\)-divided differences of
+the bracket polynomials in the first two lines of WN15.
+The source jets at \(U=\Lambda,T=\epsilon\) give the exact
+identities
+\[
+\begin{aligned}
+ L_v'={}&aw\{D_U(U,T)(U-\Lambda)
+                 +(m+\Lambda d_2+\Lambda^2d_4)(T-\epsilon)\},\\
+ L_Y'={}&aw\{E_U(U,T)(U-\Lambda)
+                 +(\Lambda e_2+\Lambda^2e_3)(T-\epsilon)\},\\
+ L_X'={}&-mA_1+
+       a(c_2+c_3\Lambda\epsilon)(U-\Lambda)
+                  +a(c_1+c_3U)K_1 .
+\end{aligned}\tag{WN28}
+\]
+There are no omitted monomials. Define
+\[
+ d_*=(c_2+c_3\Lambda\epsilon)/\epsilon
+       =\nu\epsilon r^2x+\Lambda c_3 .
+\]
+Since \(\epsilon(U-\Lambda)=K_1-U(T-\epsilon)\), the last line is
+\[
+ L_X'=-mA_1+P_X,\qquad
+ P_X=a(c_1+c_3U+d_*)K_1-d_*UA_1 .
+ \tag{WN29}
+\]
+The exact source equations also give
+\[
+\begin{aligned}
+ m&=N+\tau(\mathcal F+G\Lambda\epsilon+2\mathcal K\Lambda)
+                            +2\nu r^2x^2\Lambda,\\
+ c_0/\epsilon&=m-\Lambda B,\qquad
+ B=c_1+\Lambda c_3+\nu\epsilon r^2x,\\
+ N&=\alpha r^2/\epsilon^2+
+             (m-\Lambda B)^2/H_X+\nu H_0r^2/H_X .
+\end{aligned}\tag{WN30}
+\]
+In particular
+\[
+ N,\nu,\tau=O(m),\quad \Lambda=O(m\epsilon),\quad
+ N=m^2/H_X+\nu H_0r^2/H_X+O(m\Lambda).
+ \tag{WN31}
+\]
+For the error term use \(\alpha/\epsilon^2=O(\tau\Lambda)\),
+which is the exact positive alpha balance WN23/WA16.
+All these comparisons are inside the source field.
+We split by the bounded source ratio \(\nu/m\); \(m>0\).
+
+\paragraph{Substantial \(\nu/m\).}
+If \(\nu/m\) has positive residue, keep \(S_0=\sqrt m A_1\).
+The \(N_X,S_0\) Gram, including the entire \(-mA_1\) first
+normal, has residue from
+\[
+ \begin{pmatrix}H_X&-\sqrt m\\-\sqrt m&N/m\end{pmatrix}.
+ \tag{WN32}
+\]
+Its determinant is
+\((\nu/m)H_0r^2+O(\Lambda)\), a positive unit.
+The \(v,Y\) first normals in WN28 use the first conductor WN25;
+their remaining coefficients on \(S_0\) are
+\(O(\sqrt m\,w)\), hence infinitesimal.
+In WN29 the \(K_1\)-coefficient contains \(a\), and
+\(d_*U/\sqrt m=O(\sqrt m\,\epsilon U)\) is infinitesimal.
+Thus all other first normals have infinitesimal coefficients
+on \(K_1\), the six cubic rows, and \(S_0\).
+The \(v,Y\) hard block in WN16 is strict. All higher terms have
+at least three infinitesimal hard normals and bounded coefficients.
+This proves the full parent on this source subdomain.
+
+\paragraph{Thin \(\nu/m\), including literal \(n=0\).}
+Assume \(\nu/m=o(1)\). Equations WN30--WN31 imply
+\(\tau/m\) is a positive unit: after division by \(m\),
+\[
+ 1=N/m+(\tau/m)\mathcal F+o(1),\qquad
+ N/m=m/H_X+o(1),
+\]
+and \(1-m/H_X=(n+\beta+1/2)/H_X\) has positive residue.
+Write
+\[
+ N-m^2/H_X=\nu\xi+\eta,\qquad
+ \xi=H_0r^2/H_X>0,\qquad \eta=O(m\Lambda).
+\]
+Complete only the source coefficient \(H_X\):
+\[
+\begin{split}
+ H_XN_X^2-2mN_XA_1+NA_1^2
+ &=H_X\widetilde N_X^2+\nu\xi A_1^2+\eta A_1^2,\\
+ \widetilde N_X&=N_X-(m/H_X)A_1.
+\end{split}\tag{WN33}
+\]
+Retain the strict row \(\sqrt\nu A_1\) when \(\nu>0\);
+if \(\nu=0\), all terms allocated to it vanish literally.
+The signed error is an infinitesimal cubic Gram, since
+\[
+ m\Lambda A_1^2=(m/\tau)(\tau\sqrt\epsilon\,A_1)^2.
+ \tag{WN34}
+\]
+The first two normals in WN28 use WN25 and bounded \(m/\tau\).
+For \(P_X\), its \(K_1\)-coefficient contains \(a\), while its
+two other contributions have infinitesimal allocations
+\[
+ \nu\epsilon U A_1=(\sqrt\nu\,\epsilon U)(\sqrt\nu A_1),
+ \qquad \Lambda U A_1=(\sqrt\epsilon\,U)
+                         (\tau\sqrt\epsilon\,A_1).
+ \tag{WN35}
+\]
+Therefore \(2P_X\widetilde N_X\) has infinitesimal Gram entries.
+
+The shift in WN33 also creates the entire scalar term
+\(2(m/H_X)A_1P_X\), which must not be dropped.
+Its main factor is controlled by the exact identity
+\[
+ mU(T-\epsilon)K_1
+   =mK_1^2-(m/\tau)\Lambda(U-\Lambda)K_1 .
+ \tag{WN36}
+\]
+The second term is infinitesimal by WN26. If \(m\) is
+infinitesimal, the first is an infinitesimal \(K_1\)-Gram.
+If \(m\) is a unit, then \(\tau\) is a unit and WN27
+makes it an infinitesimal cubic Gram. In that case a positive
+real \(K_1\)-pivot may be reinserted by WN27 at infinitesimal
+cubic cost. This allocation remains valid with each bounded
+factor \(c_1+c_3U+d_*\).
+The remaining scalar factors are multiples of
+\(m\nu\epsilon U A_1^2\) and \(m\Lambda U A_1^2\);
+they have infinitesimal Gram entries on \(\sqrt\nu A_1\)
+and the fourth conductor in WN25, respectively.
+This accounts for the whole scalar effect of the completion.
+
+\subsubsection*{The entire higher-normal restoration in the thin case}
+
+The full parent is quadratic in \(X\). Its coefficient beyond
+the source constant \(H_X\) is exactly the nonnegative polynomial
+\[
+ D_X=(n+\beta+\tfrac12)v^2+nu^2+
+                         (n+D+\tfrac12)u^2v^2 .
+ \tag{WN37}
+\]
+Retain the entire square \(D_XN_X^2\), evaluated at the actual
+independent \(u,v\), as separated squares. Each monomial coefficient
+is a nonnegative source scalar times a testing square. It remains
+a positive whole square after WN33.
+The remaining polynomial has no quadratic \(N_X\) term except
+\(H_XN_X^2\). At the complementary graph its half mixed
+derivatives have the exact forms
+\[
+ [N_XN_v]=w[-m+a^2B_v],\qquad
+ [N_XN_Y]=a^2wB_Y,
+ \tag{WN38}
+\]
+where \(B_v,B_Y\) are bounded polynomials fixed by the full
+parent expansion. After the shift, the new first-normal terms
+are bounded multiples of \(\tau aw(T-\epsilon)\), using
+\(m/\tau=O(1)\); WN25 gives infinitesimal coefficients.
+Every other remaining monomial linear in \(N_X\) has degree at
+least two in the other hard normals. Replacing \(N_X\) by
+\(\widetilde N_X+(m/H_X)A_1\) gives an infinitesimal coefficient
+on a product of at least two hard normals, since \(A_1=o(1)\).
+Terms involving \(\widetilde N_X\) have total hard-normal
+degree at least three and are handled in the same way.
+Terms independent of \(N_X\) are unchanged. The full real hard block is
+\[
+ H_{X,0}\widetilde N_X^2+
+       D_0N_v^2+2D_0N_vN_Y+H_{Y,0}N_Y^2\succ0.
+ \tag{WN39}
+\]
+Equations WN23--WN39 therefore give a finite strict Gram for
+the whole parent, including all first normals, every higher term,
+all \(\beta\)-openings and literal \(n=0\).
+This completes the double-infinitesimal testing corner for both
+source ratios and all local states.
+
+\subsubsection*{Every other angle, all states and literal endpoints}
+
+Retain the entire \(m,n,\alpha,\beta\) squares and call the
+remainder \(F_0\). Only its residue is the critical \(C,A,D\)
+source in WA10; no global physicality of the subtracted finite
+source is asserted. The following are complete polynomial row
+allocations, so their strict residue Grams apply to the original
+nearby coefficients.
+
+For bounded \(u,v\) with \(v\) a unit use \((uW,X,Y,Z)\).
+The \(Z=0\) principal block is positive definite and
+\[
+ \det\operatorname{Mat}_{(uW,X,Y,Z)}\bar F_0
+ =D_u^2D_v^2(q_{12}v^4+q_{21}u^2v^2)/16>0.
+ \tag{WN40}
+\]
+Both \(q_{12},q_{21}\) are positive units. If \(u\) is a unit
+and \(v\) infinitesimal, use instead
+\((uW-Y,Y,X+uZ,vZ)\). The entire parent is polynomial in
+these rows with bounded coefficients; the only algebraic
+coefficient divisions are by the pure testing unit \(u\).
+Its determinant at \(v=0\) is
+\(D_u^2q_{21}u^2/16>0\), and the first three-row principal block
+is strict. This covers all bounded angle pairs outside the
+double-infinitesimal corner.
+
+For Bob reciprocal \(b=1/v=o(1)\), Alice bounded, the rows
+\((uW,X,Y,Z)\) give the real form
+\[
+ C_0(uW-Y)^2+(A_0+\tfrac12)D_uY^2+
+                 D_0(uX-Z)^2+\tfrac12D_uX^2\succ0.
+ \tag{WN41}
+\]
+For Alice reciprocal \(s=1/u=o(1)\) and Bob a bounded unit,
+the original state rows give
+\[
+ C_0D_vW^2+A_0D_vY^2+
+       (D_0+\tfrac12)(W+vX)^2+\tfrac12(vY-Z)^2\succ0.
+\]
+If \(s,v\) are both infinitesimal, use
+\((W,Y,vX,\Gamma)\), where \(\Gamma=sX+Z\).
+The entire reciprocal parent is polynomial in these four
+un-divided rows, and its real form is
+\[
+ C_0W^2+A_0Y^2+
+                 (D_0+\tfrac12)(W+vX)^2+\tfrac12\Gamma^2\succ0.
+ \tag{WN42}
+\]
+The coefficient-extraction substitution \(X=R/v,Z=\Gamma-sR/v\)
+cancels all denominators; the asserted identity itself contains
+no \(v^{-1}\), and includes literal \(v=0\).
+
+For both reciprocal angles \(s,b=o(1)\), the full polynomial
+belongs to the square ideal of \((W,X,Y,sZ,bZ)\), with real form
+\[
+ C_0W^2+A_0Y^2+D_0(X-sZ)^2+
+                    \tfrac12X^2+\tfrac12(Y-bZ)^2\succ0.
+ \tag{WN43}
+\]
+These finite identities include \(s=0\) and \(b=0\) exactly.
+
+It remains to check that the local state charts were exhaustive.
+Normalize a maximal state coordinate in the testing field.
+At \(u,v=o(1)\), a unit \(X\) or \(Y\) gives positive full
+residue immediately. Otherwise one of \(W,Z\) is a unit.
+The exact sign gauges give \(u,v\geq0\).
+If \(WZ\leq0\), the full-core sign identity SE9 supplies
+separated nonnegative terms; all event squares are positive.
+If \(WZ>0\), choose \(W=1,Z\) bounded, or \(Z=1,W=o(1)\).
+These are exactly the states covered above; vanishing angles
+or states are included by the same polynomial identities
+(or by the nonpositive-sign case).
+Positive pure-field homogeneous normalization and real/imaginary
+state splitting now restore the original full parent:
+\[
+ F_c(\hbox{any independent projective test and state})
+       \ \in\ \Sigma(K_c\otimes_{\mathbb R}K_t)^2 .
+ \tag{WN44}
+\]
+This proves precisely the weak-\(n\) C2 and all-\(\beta\) C1
+weak-\(\alpha\) source domains in the source domain stated above.
+It supplies the missing local leaves usually called WB, WU
+and CW. It does not, by itself, assert the global source
+partition or the finite-lift conclusion.
+
+
+
+\section{\texorpdfstring{A source-exact projective pitchfork for C1}{A source-exact projective pitchfork for C1}}
+\label{component:p2cdf6197677b}
+
+\label{p2cdf6197677b:sec:new-c1-projective-pitchfork}
+
+\paragraph{Theorem and precise source domain.}
+Take a bounded physical canonical C1 source with $d=1$,
+$\lambda=n=0$, $m,C,A,\alpha$ positive bounded units and
+$D,\beta\geq0$ infinitesimal. Assume the original actual finite
+noncommuting stationary zero contact, and retain every original
+source gap and intersection. Then the entire parent has a finite
+sum-of-squares certificate in $K_c\otimes_{\mathbb R}K_t$ for
+every independent projective test and every real or complex state.
+This includes literal $D=0$ or $\beta=0$ whenever allowed by the
+source domain. The two cannot vanish together at an actual contact.
+
+\subsubsection*{Opening-safe source entry}
+
+Write the positive source contact as $(u_c,w_c)=(c,1/v_c)$,
+and $V=w_c^2$. The retained positive-$d$ balance proof gives
+$c$ a positive bounded unit and $V$ a positive infinitesimal.
+Its second stationarity equation, in the notation of that proof, is
+\[
+ a_3=V^{-2}\{mDa_2/c^2+\beta ma_4+Da_5+\beta a_7c^2\},
+ \tag{PP1}
+\]
+where all $a_i$ are positive bounded units. Therefore
+\[
+ D=V^2\delta,\quad\beta=V^2\eta,\qquad
+ \delta,\eta\geq0\text{ bounded},\qquad
+ \delta+\eta\text{ a positive unit}.
+ \tag{PP2}
+\]
+No inverse of either opening is used.
+
+Normalize the source state by $Z_c=1$. Set
+\[
+ p=W_c/w_c,\qquad y=Y_c/w_c,\qquad x=X_c/V.
+ \tag{PP3}
+\]
+All three are bounded source elements. To prove this without a
+shape hypothesis, restrict the reciprocal full parent PP6 to
+$(W,Y,X)$ at $w=0$, and then take residues. Its positive hard form is
+\[
+ H_u(W,Y,X)=m(W+uY)^2+C(uW-Y)^2
+       +(A+\alpha+1/2)(1+u^2)Y^2+(1+u^2)X^2/2.
+ \tag{PP4}
+\]
+It is positive definite for every bounded real $u$. Scale the two
+$W,Y$ kernel equations at the source by $w_c$, and the $X$
+equation by $V$. In the unknowns $(p,y,x)$ the resulting bounded
+matrix has a block triangular residue: its $p,y$ block is the
+positive $W,Y$ block of PP4, and its $x$ pivot is $(1+c^2)/2$.
+The terms $(\beta-D)/V=V(\eta-\delta)$ are bounded. All right
+hand sides are bounded, proving PP3 by an ordinary source-field
+matrix inverse with unit determinant.
+
+Let $q_{01},q_{10},q_{21},h$ be the original Laurent coefficients.
+Their first three residues are positive units because $m,C,A,\alpha$
+are units. The actual zero and angular stationarity equations,
+using PP2, give
+\[
+ \bar q_{01}=\bar q_{21}\bar c^{\,4},\qquad
+ \bar h=-2\bar q_{21}\bar c^{\,2}.
+ \tag{PP5}
+\]
+Every other nonconstant Laurent contribution apart from $q_{10}w^2$
+vanishes in this residue calculation. These are equations wholly in
+the coefficient field followed by its real residue map.
+
+\subsubsection*{A complete local normal and divided-difference argument}
+
+It remains locally to treat testing $w$ infinitesimal or zero and
+$u$ with the same positive real residue as $c$. The full reciprocal
+quarter-parent is
+\[
+\begin{split}
+ F={}&m(W-wX+uY-uwZ)^2+CD_w(uW-Y)^2+AD_uD_wY^2\\
+ &+(D+1/2)(uwW+uX-wY-Z)^2
+       +(\alpha+1/2)D_u(Y-wZ)^2\\
+ &+(\beta+1/2)D_w(X+uZ)^2-D_uD_wZ^2/2,
+ \qquad D_u=1+u^2,\quad D_w=1+w^2.
+\end{split}\tag{PP6}
+\]
+Use three unrestricted normals and two scalar conductors
+\[
+ N_W=W-pwZ,\quad N_Y=Y-ywZ,\quad N_X=X-xw^2Z,
+ \qquad Q=w(u-c)Z,\quad L=(w^2-V)Z.
+ \tag{PP7}
+\]
+The centers agree with the actual source contact; no equation is
+imposed on an independent state. Write the full normal expansion
+\[
+ F=N^TH(u,w)N+2Z\sum_iN_i\ell_i(u,w)+E(u,w^2)Z^2,
+ \quad N=(N_W,N_Y,N_X)^T.
+ \tag{PP8}
+\]
+It is an exact expansion of every term of PP6. The matrix $H$ has
+bounded entries and residue PP4 at $u=\bar c$. Parity and direct
+inspection of PP6 give bounded polynomials $a_W,a_Y,a_X$ such that
+\[
+ \ell_W=w a_W(u,b),\qquad \ell_Y=w a_Y(u,b),\qquad
+ \ell_X=u(\beta-D)+b a_X(u,b),\quad b=w^2.
+ \tag{PP9}
+\]
+Actual state stationarity gives $a_W(c,V)=a_Y(c,V)=0$ and
+$\ell_X(c,w_c)=0$. Finite monic division thus gives bounded
+polynomials $A_i,B_i$ with
+\[
+ a_i(u,b)=(u-c)A_i(u,b)+(b-V)B_i(b),\qquad i=W,Y.
+\]
+Consequently the entire first two normal couplings are
+$Z\ell_i=A_iQ+wB_iL$.
+
+For the third normal put
+$r(u)=u(\beta-D)/V+a_X(u,V)$. This is a bounded source
+polynomial by PP2, and $r(c)=0$. Hence $r=(u-c)R(u)$ for
+a bounded polynomial $R$. Division in $b$ gives another bounded
+polynomial $B_X$ with
+\[
+ Z\ell_X=\{B_X(u,b)-(u-c)R(u)\}L+wR(u)Q.
+ \tag{PP10}
+\]
+Here the identity $V(u-c)Z=wQ-(u-c)L$ is exact. Moreover
+$B_X(c,0)$ has zero residue: the source equation
+$u(\beta-D)+Va_X(u,V)=0$ at $u=c$, divided by $V$,
+gives $a_X(c,V)$ infinitesimal, and $B_X(c,0)$ has the same
+residue. Thus the third normal has no residue coupling to $L$
+or $Q$. The first two have no residue coupling to $L$.
+
+For completeness, the scalar coefficient obeys
+\[
+ E(u,0)=D+\beta u^2,\qquad
+ E(c,V)=E_u(c,V)=E_b(c,V)=0.
+ \tag{PP11}
+\]
+The first assertion follows by setting $w=0$ in the entire PP6
+after the graph substitution. The other three follow from the
+actual full source contact and its two angle derivatives; neither
+normal term is discarded in making this inference.
+Define $d(u)=\delta+\eta u^2$ and the bounded polynomial
+\[
+ J(u,b)=\{E(u,b)-d(u)(b-V)^2\}/b.
+ \tag{PP12}
+\]
+This notation means exact monic division: PP11--PP2 make the
+constant term zero. No testing $b$ is inverted. At $(c,V)$
+the value and both first derivatives of $J$ vanish. A second
+finite monic Taylor division gives bounded polynomials $J_{20}$,
+$J_{11},J_{02}$ with
+\[
+ J(u,b)=(u-c)^2J_{20}(u,b)
+       +(u-c)(b-V)J_{11}(b)+(b-V)^2J_{02}(b).
+ \tag{PP13}
+\]
+Substitution yields the complete exact scalar identity
+\[
+ E(u,w^2)Z^2=J_{20}(u,w^2)Q^2+wJ_{11}(w^2)QL
+                     +\{d(u)+w^2J_{02}(w^2)\}L^2.
+ \tag{PP14}
+\]
+All divisions preceded tensor evaluation, with monic divisors and
+bounded source coefficients. These formulas hold literally at $w=0$.
+
+Equations PP8--PP14 represent the entire parent by a bounded
+Gram on the five rows $N_W,N_Y,N_X,Q,L$. Its $L$ pivot in
+residue is $\bar\delta+\bar\eta\bar c^2>0$, and its $L$
+crosses have zero residue. It remains to check the four-row hard
+and angular residue; the following exact determinant computation
+provides that check without taking a mixed inverse.
+
+\subsubsection*{Strictness of the angular residue}
+
+At $D=\beta=0$, replace $Z$ by $T/w$ in the whole reciprocal
+parent and take its polynomial value at $w=0$. This gives a real
+four-state quadratic form $B_u(W,Y,X,T)$, with hard block PP4.
+The original determinant identity gives
+\[
+ \det B_u=\frac{(1+u^2)^2}{16}
+                  (q_{01}+hu^2+q_{21}u^4).
+ \tag{PP15}
+\]
+Using PP5, its real Schur coefficient at $T$ is
+\[
+ g(u)=\frac{(1+u^2)^2q_{21}}{16\det H_u}
+                       (u^2-c^2)^2.
+ \tag{PP16}
+\]
+Here all entries and inverses are real residues; this calculation
+proves positivity of a real matrix and does not factor a matrix in
+the tensor ring. The contact centers PP3 give the unique real
+kernel of $B_c$, so the four-row residue in PP8--PP14 is precisely
+the quadratic Taylor coefficient in hard normals and the change
+$u-c$. Its angular Schur pivot is
+\[
+ g''(c)/2=\frac{(1+c^2)^2q_{21}c^2}{4\det H_c}>0.
+ \tag{PP17}
+\]
+The hard block is PP4 and is positive definite. Thus this full
+four-row residue is positive definite, as is the independent $L$
+pivot. The separated strict bounded-Gram lemma proves that PP6
+is tensor SOS in the complete local chart. The rows may be
+unbounded or linearly dependent at a literal endpoint; only the
+coefficient Gram needs a strict real residue.
+
+\subsubsection*{Explicit testing complement and projective endpoints}
+
+If $u,v$ are bounded original testing coordinates, use the ordinary
+state matrix except near the double zero corner. At finite nonzero
+real residues, the residue Laurent polynomial is
+\[
+ q_{21}(u^2-c^2)^2/u^2+q_{10}/v^2>0,
+ \tag{PP18}
+\]
+so its state matrix is positive definite by the hard $Z=0$ block.
+At $u=0$, $v\ne0$ the real quarter-parent is
+\[
+ m(vW-X)^2+(C+A+1/2)(1+v^2)Y^2
+                       +\alpha(vY-Z)^2+(1+v^2)X^2/2\succ0.
+\]
+At $v=0$, $u\ne0$ it is
+$m(X+uZ)^2+(C+1/2)(uW-Y)^2+A(1+u^2)Y^2
++\alpha(1+u^2)Z^2+(X+uZ)^2/2$, which is likewise strict.
+These are residue identities; the bounded full matrices therefore
+give tensor SOS on their respective charts.
+
+When both $u,v$ are infinitesimal or zero, use the five rows
+$(uW,vW,X,Y,Z)$ in the entire original finite parent. The exact
+polynomial substitution is bounded and its residue is
+\[
+ m(vW-X)^2+(C+1/2)(uW-Y)^2+AY^2+\alpha Z^2+X^2/2\succ0
+ \tag{PP19}
+\]
+as a coefficient Gram on those five rows. This treats that corner
+with no state normalization.
+
+For reciprocal Alice and bounded Bob, the complete core identity
+RC20 applies unchanged with all $m,D,\alpha,\beta$ event squares
+retained whole. Its residue RC21 is strict using only $C,A>0$.
+For two reciprocal testing angles, retain those positive squares
+and use RC24 for the four rows $W,X,Y,wZ$. The residue
+$CW^2+AY^2+X^2/2+(Y-wZ)^2/2$ is strictly positive.
+These identities allow the reciprocal coordinate to be literally zero.
+
+For Bob reciprocal and bounded Alice, retain the whole $D,\beta$
+squares, put $T=wZ$, and use the full four-row expression
+\[
+\begin{split}
+ m(W-wX+uY-uT)^2+CD_w(uW-Y)^2
+          +AD_uD_wY^2+\alpha D_u(Y-T)^2+K/2,
+\end{split}
+\]
+where $K$ is the full core RC22 with $\rho_*=uW-Y$.
+Its residue is exactly $B_u$. By PP15--PP16 it is strictly
+positive whenever $u^2$ has residue different from $\bar c^2$,
+including $u$ infinitesimal. The remaining matched residues are
+PP7--PP17 after the exact Alice sign gauge if necessary.
+
+Both signs of either angle are allowed by the exact simultaneous
+state sign gauges of the original parent. Every normalization is
+a positive square in a single source or testing field. Complex
+states split into real and imaginary parts. The finite and
+reciprocal homogeneous identities include all literal axes and
+projective endpoints. This completes the all-tests theorem on the
+stated positive-$d$ C1 projective source domain.
+
+
+
+\section{\texorpdfstring{A direct certificate for the positive-$d$ C2 reciprocal corner}{A direct certificate for the positive-d C2 reciprocal corner}}
+\label{component:p10686597065a}
+
+\label{p10686597065a:sec:new-rc-direct}
+
+\paragraph{The source domain.}
+Normalize the original C2 source by $d=1$ and $\lambda=\beta=0$.
+Assume that all source coefficients are bounded, that $C,A,\alpha$
+are positive bounded units, that $m,D$ are positive infinitesimals,
+and that $n\geq0$ is bounded. Retain the original physicality,
+finite noncommuting stationary zero contact and positive native gaps. This section proves
+the complete parent is tensor SOS at every independent projective
+test and every state. The contact is used only inside the source
+field. No mixed determinant is cancelled.
+
+Equation~\eqref{eq:reciprocal-source-balances}, with $\beta=0$,
+gives, for the reciprocal Bob contact coordinate $w_c=1/v_c$,
+\[
+ U=u_c^2\in\operatorname{Inf}_{>0},\qquad
+ V=w_c^2\in\operatorname{Inf}_{>0},\qquad
+ m\asymp U^2,\qquad D\asymp V^2.
+ \tag{RC1}
+\]
+The positive-unit ratios follow from the final formula in
+Section~\ref{lem:reciprocal-source-balance}.
+
+\subsubsection*{The actual source has a bounded shape chart}
+
+Choose the native positive contact chart with $Z_c=1$, and set
+\[
+ S=(u_c/w_c)W_c,\qquad y=Y_c/w_c,\qquad
+ R=-X_c/(u_cV).
+ \tag{RC2}
+\]
+Then $S,y,S-y,1-y,R$ are positive bounded units. Here is an entry
+proof that does not assume those facts as extra source hypotheses.
+In the reciprocal parent RC6 below, take the ordinary source-field
+Schur complement of the $X,Y$ block. That block has residue
+$\operatorname{diag}(n+1/2,H)$, where $H=C+A+\alpha+1/2$.
+Its $W,W$ Schur entry divided by $U$ has residue
+$a=C-C^2/H>0$, while its $W,Z$ entry divided by $u_cw_c$
+has residue $-b=-(1/2+C\alpha/H)<0$. The balance
+$m/U\in\operatorname{Inf}$ and $D/V\in\operatorname{Inf}$
+justifies these divisions in the source field. The zero-state
+equation therefore gives $S\sim b/a$, a positive bounded unit.
+
+The two hard state equations, scaled in the source field by
+$u_cV$ and $w_c$, are a bounded linear system in $R,y$. Its
+residue is triangular with positive diagonal $n+1/2,H$.
+Consequently both quantities are bounded. The second equation gives
+$Hy=CS+\alpha$ in residue, so $y$ is a positive unit. The
+$W$ equation divided by $u_cw_c$ gives
+$C(S-y)=1/2$ in residue. The $Z$ equation divided by $V$
+gives $\alpha(1-y)=S/2$ in residue: its apparently constant
+$U$ terms cancel exactly before the division. Finally the first
+hard equation gives $(n+1/2)R=(1+S-y)/2$ in residue. These
+relations prove all five claimed positive-unit bounds. The exact
+native gaps already give $0<y<1$ and $S-y>0$ before taking
+residues.
+
+The unchanged native source formulas are converted by the following
+dictionary. Their letters are used only in this display:
+\[
+\begin{aligned}
+ z=U,\quad a^2=1/(UV),\quad b=S/U,\quad t=(S-y)V,
+ &\quad r=VR,\quad h=y/U,\\
+ g=S/U+y-1+VR,&\qquad j=1+UVR-V(S-y).
+\end{aligned}
+ \tag{RC3}
+\]
+Substitution into the six exact native coefficients has denominators
+with positive-unit leading parts after the displayed powers of
+$U,V$ are removed. Thus $\mu=m/U^2$ and $\delta=D/V^2$
+are bounded units, and the source residues are
+\[
+\begin{aligned}
+ C_0&=\frac1{2(S-y)},& A_0&=\frac{1+S-y}{2y},&
+ \alpha_0&=\frac{S}{2(1-y)},\\
+ n_0&=\frac{1+S-y-R}{2R},&
+ \mu_0&=\frac{1+S-y}{2S^2},&
+ \delta_0&=\frac{S(1+S-y)}2.
+\end{aligned}\tag{RC4}
+\]
+In residue formulas such as RC4 the shape letters mean their real
+residues. In particular
+\[
+ C_0\{\alpha_0(A_0-1/2)-1/4\}
+       =(A_0+\alpha_0+1/2)/4.
+ \tag{RC5}
+\]
+These are source statements only. They do not identify any source
+infinitesimal with an independent testing infinitesimal.
+
+\subsubsection*{The complete local parent and both unrestricted normals}
+
+For $u,w$ infinitesimal or zero in the independent testing field,
+put $D_u=1+u^2$, $D_w=1+w^2$. The full quarter-parent after
+the pure testing reciprocal Bob normalization is
+\[
+\begin{split}
+ F={}&m(W-wX+uY-uwZ)^2+nD_uD_wX^2
+       +CD_w(uW-Y)^2+AD_uD_wY^2\\
+ &+(D+1/2)(uwW+uX-wY-Z)^2
+       +(\alpha+1/2)D_u(Y-wZ)^2\\
+ &+\tfrac12D_w(X+uZ)^2-\tfrac12D_uD_wZ^2.
+\end{split}\tag{RC6}
+\]
+All four state coordinates are arbitrary. Introduce tensor rows
+\[
+ \begin{gathered}
+ N_x=X+uRw^2Z,\qquad N_y=Y-ywZ,\\
+ \rho=uW-SwZ,\qquad k=UW-SuwZ,\qquad \ell=(w^2-V)Z.
+ \end{gathered}
+ \tag{RC7}
+\]
+The testing-dependent $w^2$ in $N_x$ is essential; it agrees with
+the source contact and removes the unbounded coefficient produced
+by a contact-fixed center. The exact conductor identities are
+\[
+ U\rho-uk=Sw(u^2-U)Z,\qquad
+ u\rho-k=(u^2-U)W.
+ \tag{RC8}
+\]
+
+Expanding the entire RC6 gives
+\[
+ F=F_0+H_xN_x^2+H_yN_y^2+2H_{xy}N_xN_y
+                         +2N_xL_x+2N_yL_y,
+ \tag{RC9}
+\]
+where $F_0$ is only the constant coefficient of this unrestricted
+normal expansion. The hard coefficients are exactly
+\[
+\begin{split}
+ H_x&=mw^2+nD_uD_w+(D+1/2)u^2+D_w/2,\\
+ H_y&=mu^2+CD_w+AD_uD_w+(D+1/2)w^2+(\alpha+1/2)D_u,\\
+ H_{xy}&=-(m+D+1/2)uw.
+\end{split}\tag{RC10}
+\]
+Set $J_x=n(1+w^2)+D+1/2$ and $K_x=n(1+U)+1/2+m$.
+The complete first normal is
+\[
+ L_x=(D+1/2)uw\rho-(m/U)wk
+ +u\{D/V-Rw^2K_x\}\ell
+ -(R/S)uwJ_x(U\rho-uk).
+ \tag{RC11}
+\]
+Every coefficient on $\rho,k,\ell$ is bounded infinitesimal.
+For the other normal define
+\[
+ \begin{aligned}
+ a_{10}&=Ay+(m+\alpha+1/2)(y-1),\\
+ a_{01}&=-(C+D+1/2)S+(C+A+D+1/2)y,\\
+ a_{11}&=R(m+D+1/2)+Ay.
+ \end{aligned}
+\]
+Then the exact expression is
+\[
+\begin{split}
+ L_y={}&\{m-C-(C+D+1/2)w^2+(U/S)(a_{10}+a_{11}w^2)\}\rho\\
+ &-(u/S)(a_{10}+a_{11}w^2)k+w(a_{01}+a_{11}U)\ell.
+\end{split}\tag{RC12}
+\]
+Its only nonzero residue coupling is $-C_0\rho$. RC11--RC12
+follow by full expansion and the two actual source state equations;
+they account for every term linear in the two normals in RC6.
+
+\subsubsection*{A scalar certificate by finite monic divisions}
+
+Put
+\[
+ c=C+(C+D+1/2)w^2,\quad b_2=(D+1/2)R,
+ \quad b_1=(C+D+1/2)(y-S)-mR,\quad \gamma=b_1+b_2U.
+\]
+Define
+\[
+ F_{\rm base}=(c-2Ub_2w^2/S)\rho^2+\mu k^2
+       +(2ub_2w^2/S)\rho k-2w\gamma\rho\ell.
+ \tag{RC13}
+\]
+The source $W$ state equation removes the remaining $WZ$
+coefficient. Direct expansion then gives
+$F_0-F_{\rm base}=E(u^2,w^2)Z^2$, with $E(a,b)$ a
+bounded-coefficient polynomial of degree at most two in $a$.
+Its exact properties are
+\[
+\begin{gathered}
+ E(a,0)=D,\qquad E(U,V)=E_a(U,V)=E_b(U,V)=0,\\
+ E(a,b)=E_0(b)+(a-U)E_1(b)+(a-U)^2E_2(b),\\
+ E_2(b)=R^2b^2\{n(1+b)+D+1/2\}.
+\end{gathered}\tag{RC14}
+\]
+The three vanishing jets follow from the actual full contact:
+every row in RC7 vanishes there, the complete scalar and both
+angle derivatives vanish, and RC13 has zero first derivatives
+there. They are also checked directly from the native source
+coefficients. Since $E_1(0)=E_1(V)=0$ and $E_0$ has a double
+zero at $V$, finite monic polynomial division gives bounded
+polynomials $J_0,J_1$ such that
+\[
+ E_0(b)=(b-V)^2J_0(b),\qquad
+ E_1(b)=b(b-V)J_1(b).
+ \tag{RC15}
+\]
+These divisions take place in the source polynomial algebra before
+tensor evaluation. They introduce no inverse of $V$ or of a mixed
+quantity. In particular $V^2J_0(0)=D$, and the other coefficients
+of $J_0$ remain bounded; hence $J_0(w^2)$ has residue $\delta_0$.
+
+RC8 now gives the exact scalar identity
+\[
+\begin{split}
+ F_0={}&F_{\rm base}
+ +\frac{R^2w^2\{n(1+w^2)+D+1/2\}}{S^2}(U\rho-uk)^2\\
+ &+\frac wS J_1(w^2)(U\rho-uk)\ell+J_0(w^2)\ell^2.
+\end{split}\tag{RC16}
+\]
+This polynomial formula also holds at $u=0$ or $w=0$; neither
+is inverted. Combining RC9--RC16 represents the entire parent
+by a bounded Gram on $(N_x,N_y,\rho,k,\ell)$ with real residue
+\[
+ (n_0+1/2)N_x^2+H_0N_y^2-2C_0N_y\rho+C_0\rho^2
+                              +\mu_0k^2+\delta_0\ell^2,
+ \qquad H_0=C_0+A_0+\alpha_0+1/2.
+ \tag{RC17}
+\]
+This is positive definite: the $N_y,\rho$ determinant is
+$C_0(A_0+\alpha_0+1/2)>0$, and the other three pivots are
+strictly positive. The separated strict bounded-Gram lemma
+therefore gives a finite tensor SOS of the complete RC6. It
+requires bounded matrix entries, not bounded rows or states.
+
+\subsubsection*{All other testing charts}
+
+The remaining measurement charts follow from three matrix
+identities. In each one we retain the indicated event squares and
+prove positivity of the remaining bounded Gram matrix.
+
+\paragraph{Both original testing coordinates bounded.}
+Put $p=uW$. Retain the whole $m,n,D$ squares and use the
+remaining Gram on $(p,Y,X,Z)$:
+\[
+\begin{split}
+ C D_v(p-Y)^2+A D_uD_vY^2
+ &+\tfrac12(p+uvX-Y-vZ)^2+(\alpha+1/2)D_u(vY-Z)^2\\
+ &+\tfrac12D_v(X+uZ)^2-\tfrac12D_uD_vZ^2.
+\end{split}\tag{RC18}
+\]
+The $Z=0$ hard block is positive definite by its displayed
+$C,A,X$ squares. After RC4 the determinant of the real residue is
+\[
+ \frac{(S+u^2v^2)(1+u^2)^2(1+v^2)^2(1+S-y)^2}
+      {16y(S-y)(1-y)}>0.
+ \tag{RC19}
+\]
+Here also $u,v$ mean real testing residues. Thus RC18 is a strict
+bounded Gram, even when $u$ or $v$ has zero residue.
+
+\paragraph{Alice reciprocal, Bob bounded.}
+Let $s=1/u$ be infinitesimal or zero, set $D_s=1+s^2$, and use
+rows $(W,Y,V_x,R_x)=(W,Y,vX,sX+Z)$. Retain the entire
+$m,n,D,\alpha$ squares. The remaining expression is
+$CD_v(W-sY)^2+AD_sD_vY^2+K/2$, where exactly
+\[
+\begin{split}
+ K={}&\{W-sY+D_sV_x-svR_x\}^2+D_vR_x^2\\
+ &+D_s\{v^2Y^2-2Y(vR_x-sV_x)-(vR_x-sV_x)^2\}.
+\end{split}\tag{RC20}
+\]
+Its residue is
+\[
+ C_0D_vW^2+A_0D_vY^2
+          +\tfrac12(W+V_x)^2+\tfrac12(vY-R_x)^2\succ0.
+ \tag{RC21}
+\]
+This single formula includes all bounded $v$, including literal
+zero and arbitrary competing small $s,v$. There is no $s/v$
+coefficient.
+
+\paragraph{Bob reciprocal, Alice a bounded unit.}
+Let $w$ be infinitesimal or zero, and $u$ a bounded unit. Use
+$\rho_*=uW-Y$, $T=wZ$, $S_D=\sqrt D\,Z$, and the five rows
+$(\rho_*,Y,X,T,S_D)$. Retain $m,n$ whole. The $D$ square is
+exactly $\{\sqrt D(uX+w\rho_*)-S_D\}^2$. The other terms are
+\[
+ CD_w\rho_*^2+AD_uD_wY^2+\alpha D_u(Y-T)^2+K/2,
+\]
+where the complete core is
+\[
+ K=(D_u+w^2)X^2+2uwX T+w^2\rho_*^2+2uw\rho_*X
+                           -2\rho_*T-T^2+D_u(Y-T)^2.
+ \tag{RC22}
+\]
+The $X,S_D$ residue pivots are $D_u/2,1$. On
+$(\rho_*,Y,T)$ the residue matrix is
+\[
+ \begin{pmatrix}
+ C_0&0&-1/2\\
+ 0&G D_u&-(\alpha_0+1/2)D_u\\
+ -1/2&-(\alpha_0+1/2)D_u&\alpha_0D_u+u^2/2
+ \end{pmatrix},\qquad G=A_0+\alpha_0+1/2.
+ \tag{RC23}
+\]
+Its first two leading minors are $C_0,C_0GD_u$. By RC5 its
+determinant is $GD_uu^2(1+2C_0)/4>0$. This proves strictness.
+The alternative $u$ infinitesimal or zero is precisely RC7--RC17.
+
+\paragraph{Both testing coordinates reciprocal.}
+Let $s,w$ be infinitesimal or zero. Set $T=wZ$ and
+$S_D=\sqrt D\,sZ$. Use the five rows $W,X,Y,T,S_D$, and retain the
+entire $m,n,\alpha$ squares. The $D$ square is
+$\{\sqrt D(wW+X-swY)-S_D\}^2$. The other terms are
+$CD_w(W-sY)^2+AD_sD_wY^2+K/2$, where exactly
+\[
+\begin{split}
+ K={}&(wW+X-swY)^2+D_s(Y-T)^2+s^2D_wX^2\\
+ &-2sWT+2s^2YT+2swXT-s^2T^2.
+\end{split}\tag{RC24}
+\]
+The full five-row residue is
+\[
+ C_0W^2+A_0Y^2+X^2/2+(Y-T)^2/2+S_D^2\succ0.
+ \tag{RC25}
+\]
+This gives the final strict bounded Gram.
+
+Every ordered-field testing coordinate is bounded or has
+infinitesimal reciprocal. RC18--RC25 and the local proof therefore
+cover both projective lines. The identities are polynomial in the
+chosen homogeneous coordinates, so literal infinity is included by
+$s=0$ or $w=0$. Both signs are allowed throughout; no state ratio
+or state normalization is used. Positive pure testing square
+normalizations restore the original homogeneous parent, and the
+original source scale is restored by a pure source square root.
+Real and imaginary parts of a complex state are handled separately.
+
+
