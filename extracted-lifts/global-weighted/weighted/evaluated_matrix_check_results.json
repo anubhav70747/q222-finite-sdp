@@ -1,0 +1,38 @@
+{
+  "status": "all independent exact checks passed",
+  "scope": "New multiplied-slack Gram cone and quartic source map; no old669 recomputation",
+  "implementation": "Independent row table; SymPy Groebner from six original relations; neither compiler imported",
+  "input_sha256": {
+    "WEIGHTED_FIXED_FUNCTIONS.json": "6fb1ae56821a45d904739792fdd241195b00091e23411f972998574ec152dc20",
+    "WEIGHTED_GRAM_PRODUCT_MAP.coo.json": "b1cfed39126584e623ae65befeb226163ee0f30ab5fcf8fdce1144a16b9fe614",
+    "WEIGHTED_CONE_ORDER133.coo.json": "f7c4b782031138a9a9632e8ad22599096e1d32f49dba1e868f70c929bc8962b3",
+    "CANONICAL_SOURCE_QUARTIC_MAP.json": "1c3d28154ec5f3ede8cd63fe28275ada619a47c909e80f78c60d9df03d2969b4"
+  },
+  "groebner_basis": [
+    "a0**2 + x1**6 - 1",
+    "a1**2 - x1**6",
+    "b0**2 + y1**6 - 1",
+    "b1**2 - y1**6",
+    "x0**6 + x1**6 - 1",
+    "y0**6 + y1**6 - 1"
+  ],
+  "original_functions_checked": 189,
+  "global_feature_dimension": 104,
+  "psd_blocks": 27,
+  "total_psd_order": 133,
+  "zero_pair_blocks_removed": 2,
+  "gram_product_columns_checked": 535,
+  "coefficient_monomial_rows": 261,
+  "product_map_nonzeros": 5653,
+  "pencil_nonzero_affine_entries": 6079,
+  "coefficient_map_rank": 189,
+  "free_kernel_directions": 346,
+  "pencil_coefficient_identity": "A*M=[reconstruction,0]; free coordinates of M equal [0,I346]",
+  "quartic_source_terms": 7472,
+  "rational_full_parent_matrix_evaluations": 60,
+  "source_fixtures": 12,
+  "test_fixtures": 5,
+  "symbolic_full_source_identity_all_ten_state_coefficients": true,
+  "floating_point_operations": 0,
+  "elapsed_seconds": 37.979
+}

@@ -1,0 +1,390 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,hyperref}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}[lemma]{Proposition}
+\newcommand{\R}{\mathbb R}
+\newcommand{\diag}{\operatorname{diag}}
+\title{A fixed completion on the compact Bob circle, and its exact defect}
+\author{}
+\date{23 October 2026}
+\begin{document}
+\maketitle
+\vspace{-1.5em}
+
+This note replaces the residue-selected Bob parameter in the leading
+unit-$L$ form by six fixed functions.  An explicit source-only
+perturbation bound then gives a finite fixed testing family for the
+complete actual C1 parent on a complementary annulus.  No certificate
+on the full testing domain is asserted: the last proposition identifies
+the negative term obstructing a three-event cap at the omitted corner.
+The source conventions are those of
+\texttt{pda4a21937f64}, \texttt{pb0d9d28d0849}, and
+\texttt{p23a094ff816d} in commit
+\texttt{fb58c232e374dadf3cbb5f23e7e7413d429de884}.
+
+\section*{The six-function completion}
+
+Let
+\[
+ L>0,\qquad 0<r<1,\qquad Lr<1,
+ \qquad
+ C_0=\frac1{2L(1-r)},\quad
+ A_0=\frac{1+L(1-r)}{2Lr},\quad
+ a_0=\frac L{2(1-Lr)}.
+\]
+The inequalities on $r$ and $Lr$ are strict.  All limits towards their
+openings are allowed; no value is assigned to a divergent coefficient
+at a literal zero denominator.  Write
+\[
+ B=\frac{1+L(1-r)}{2Lr(1-r)},\qquad
+ \gamma=\frac{1+L(1-r)}{2L}
+       =\frac12+\frac1{4a_0}.
+\]
+Let $c^2+s^2=1$, with $c\geq0$.  The endpoints $c=0$, $s=\pm1$
+are included.  The four state variables $P,X,Y,T$ below are independent.
+For finite physical angles the substitution is
+\[
+ c=(1+v^2)^{-1/2},\quad s=vc,\quad P=uW,\quad T=cZ.
+\]
+Identities on the independent raw variables therefore retain the full
+state polynomial; they impose neither a state graph nor a relation
+between the two state normals.
+
+\begin{lemma}[Residue-free Bob completion]
+For every source in the displayed domain,
+\begin{align}
+ M(s)&=(C_0+c^2/2)(P-Y)^2+(A_0+s^2/2)Y^2
+             +a_0(sY-T)^2-sPT\notag\\
+ &=a_0\left(T-sY-\frac{1-Lr}{L}sP\right)^2
+        +B(Y-rP)^2+\gamma(cP)^2.                 \label{eq:three}
+\end{align}
+Thus the fixed six-function family
+\[
+ (T,sY,sP,Y,P,cP)
+\]
+has the positive source Gram matrix
+\[
+ \begin{pmatrix}
+ a_0&-a_0&-1/2&0&0&0\\
+ -a_0&a_0&1/2&0&0&0\\
+ -1/2&1/2&1/(4a_0)&0&0&0\\
+ 0&0&0&B&-Br&0\\
+ 0&0&0&-Br&Br^2&0\\
+ 0&0&0&0&0&\gamma
+ \end{pmatrix}.                                    \label{eq:sixgram}
+\]
+It has rank three, including at either Bob endpoint as an abstract
+feature Gram.  Evaluation can lower the rank because the functions
+can become dependent there.
+\end{lemma}
+
+\begin{proof}
+Put $k=C_0+1/2$.  The source identities
+\[
+ C_0+A_0+1/2=B,\qquad k/B=r,\qquad kA_0/B=\gamma
+\]
+reduce the claim to two successive completions of squares, first in
+$T$ and then in $Y$.  They also give the three rank-one summands of
+\eqref{eq:sixgram}.  No source or testing residue is chosen.
+\end{proof}
+
+\section*{A complete four-state annulus}
+
+The normalized complete signed core, in the same raw variables, is
+\begin{align}
+ K={}&X^2+c^2(P-Y)^2+s^2Y^2-2sPT
+       +2ucX(sP-sY+T)\notag\\
+    &+u^2s^2X^2+u^2(sY-T)^2.                    \label{eq:core}
+\end{align}
+Under $P=uW$, $T=cZ$, this is identically
+\[
+ \{c(P-Y)+usX-sZ\}^2
+ +(1+u^2)(sY-cZ)^2+(X+uZ)^2-(1+u^2)Z^2.
+\]
+The whole leading selected quarter-parent is
+\[
+ S_0=C_0(P-Y)^2+A_0(1+u^2)Y^2
+           +a_0(1+u^2)(sY-T)^2+K/2.              \label{eq:parent}
+\]
+In particular, the independent $X$ normal and all $u$-dependent terms
+remain present.
+
+\begin{proposition}[Explicit uniform leading-source reserve]
+Fix $0<\ell\leq U$, $0<\tau\leq1$.  If
+\[
+ \ell\leq L\leq U,\quad |u|\leq1,\quad
+ c^2+s^2=1,\quad c\geq0,\quad u^2+c^2\geq\tau^2,
+\]
+the matrix of $S_0$ in $(P,X,Y,T)$ satisfies
+\[
+ G\succeq \kappa I_4,\qquad
+ \kappa=\frac{\min(\ell,1)\tau^2}
+                   {4(7U^2+5U+3)}.               \label{eq:kappa}
+\]
+This estimate is uniform through the three source openings
+$r\to0$, $r\to1$, and $Lr\to1$ whenever they are compatible with
+the displayed source domain.
+\end{proposition}
+
+\begin{proof}
+The restriction $T=0$ is the strict three-variable sum of squares
+\begin{align*}
+ &C_0(P-Y)^2+A_0(1+u^2)Y^2+a_0(1+u^2)s^2Y^2\\
+ &\hspace{1em}+\tfrac12\{c(P-Y)+usX\}^2
+       +\tfrac12X^2+\tfrac12s^2(1+u^2)Y^2.
+\end{align*}
+The exact determinant is
+\[
+ \det G=\frac{(1+u^2)^2\{Lc^2+u^2s^2\}
+                    \{1+L(1-r)\}^2}
+                   {16L^2r(1-r)(1-Lr)}.
+\]
+It is positive unless $u=c=0$.  The strict upper state block and a
+one-field Schur complement therefore prove $G\succ0$.  This uses a
+complete state matrix, not a determinant without a normal-block check.
+
+For the quantitative estimate put $t=u^2$, $q=c^2$, $e=1-r$ and
+$D=Lq+t(1-q)$.  Direct cofactors, with all opening denominators
+cancelled, give
+\[
+ \operatorname{tr}G^{-1}
+ =\frac{2(L^2N_2+LN_1+N_0)}{(1+t)D(1+Le)},
+\]
+where
+\begin{align*}
+ N_2&=1+r^2+eq\{1+r(1-q)\}+e(2-qr)t+e^2(1-q)t^2,\\
+ N_1&=2eq+\{2-rq(3-q)\}t+e(1-q)t^2,\\
+ N_0&=1+(2-q)t.
+\end{align*}
+For $0\leq q,t\leq1$, $0<r<1$, these satisfy
+$0\leq N_2\leq7$, $0\leq N_1\leq5$, $0\leq N_0\leq3$.
+Also
+\[
+ D\geq\min(\ell,1)\{q+t(1-q)\}
+    \geq\tfrac12\min(\ell,1)(q+t).
+\]
+Thus $\operatorname{tr}G^{-1}\leq1/\kappa$.
+The largest eigenvalue of $G^{-1}$ is at most its trace, proving
+\eqref{eq:kappa}.
+\end{proof}
+
+\section*{Explicit fixed testing functions on that annulus}
+
+The same reserve admits actual source weights on an explicit domain.
+For positive $C,A,a$ put
+\[
+ d_{\rm src}=|C/C_0-1|+|A/A_0-1|+|a/a_0-1|.
+\]
+If the leading raw Gram is at least $kI$, the actual selected raw Gram
+is at least $\{k-(k+3)d_{\rm src}\}I$.  Indeed put $f=1-d_{\rm src}$,
+retain the nonnegative event excesses $C-fC_0$, $A-fA_0$, $a-fa_0$,
+and use the exact identity
+\[
+ S(C,A,a)=fS_0+(1-f)K/2+\text{the three event excesses}.
+\]
+The raw matrix of $K/2$ has absolute row sums at most $5/2$, hence
+operator norm at most $3$.  This proves the bound with both state
+normals retained.
+
+Here is a finite construction, rather than an appeal to pointwise
+bounded-Gram positivity.  Choose rational $\ell,U,\tau$ in the displayed
+ranges, so that every fixed coefficient below is rational or algebraic.
+Set
+\[
+ k_* =\frac{\min(\ell,1)\tau^2}{8(7U^2+5U+3)},\quad
+ N=4+\frac{216}{k_*},\quad h_* =\min(1,k_*/24),\quad B_*=N+1.
+\]
+The actual source admission is
+\[
+ C,A,a>0,\qquad
+ d_{\rm src}\leq\frac{k_*}{2(k_*+3)}.             \label{eq:actual-admission}
+\]
+It implies an actual raw reserve $k_*/2$ on the slightly larger annulus
+$u^2+c^2\geq\tau^2/2$.  All infinitesimal unit-$L$ sources with
+$\ell\leq L\leq U$ satisfy this admission, by the unchanged opening-safe
+ratios LA1/BE9.  The finite statement here uses the displayed inequality
+itself and does not infer an explicit $x,\sigma$ bound from an
+asymptotic assertion.
+
+Clip the three source weights at $N$:
+$C'=\min(C,N)$, $A'=\min(A,N)$,
+$a'=\min(a,N)$.  Retain the three nonnegative differences.
+Use the event coordinates
+\[
+ e=(P-Y,Y,sY-T,X)^T.
+\]
+In these coordinates the clipped Gram has the exact form
+\[
+ G'=G_{\rm const}+\sum_{j=1}^7\eta_j A_j,
+ \qquad G_{\rm const}=\diag(C',A',a',1/2),
+\]
+with testing monomials
+\[
+ \eta=(u^2,c^2,s^2,s,ucs,uc,u^2s^2).
+\]
+The matrices, with indices $1,\ldots,4$ and $E_{ij}$ denoting matrix
+units, are
+\begin{align*}
+ A_1&=\diag(0,A',a'+1/2,0),&A_2&=E_{11}/2,\\
+ A_3&=-(E_{12}+E_{21}+E_{22})/2,
+ &A_4&=(E_{13}+E_{31}+E_{23}+E_{32})/2,\\
+ A_5&=(E_{14}+E_{41}+E_{24}+E_{42})/2,
+ &A_6&=-(E_{34}+E_{43})/2,\\
+ A_7&=E_{44}/2.
+\end{align*}
+All satisfy $\|A_j\|\leq B_*$.
+
+For clarity, the uniform clipping claim used here has a short proof.
+The core matrix in the event coordinates has row sums at most $5/2$,
+so its operator norm is at most $3$.  The inverse change of coordinates
+has squared Frobenius norm at most $6$.  At any point with
+$u^2+c^2\geq\tau^2/2$, the preceding proposition therefore gives the
+unclipped actual event-coordinate Gram at least $(k_*/12)I$.
+Split coordinates according as their source event weight exceeds $N$.
+The unchanged complementary principal block is at least $k_*/12$.
+The clipped large block is at least $N-3$, and the off-diagonal
+block has norm at most $3$.  The inequality
+\[
+ 6ab\leq\frac{216}{k_*}a^2+\frac{k_*}{24}b^2
+\]
+proves $G'\succeq h_*I$.  This argument uses only source clipping;
+the indices being clipped do not depend on a test.
+
+Choose a fixed integer
+\[
+ n\geq\max\left(\frac8{\tau^2},\frac{56B_*}{h_*}\right),
+ \qquad \delta=4/n.
+\]
+Take the finite algebraic grid
+\[
+ u_j=j/n,\qquad
+ c_k=\cos\frac{k\pi}{2n},\qquad
+ s_k=\sin\frac{k\pi}{2n},\qquad -n\leq j,k\leq n,
+\]
+retaining centers $a=(u_j,c_k,s_k)$ with
+$u_j^2+c_k^2\geq\tau^2/2$.  A chart consists of circle points within
+$1/n$ in each coordinate of its center.  These charts cover the
+target annulus: nearest-grid errors are at most $1/(2n)$ in $u$
+and $\pi/(4n)<1/n$ in either circle coordinate, and the change in
+$u^2+c^2$ is at most $4/n$.
+
+On a fixed chart put $b_j=\eta_j-\eta_j(a)$.
+Then $|b_j|\leq\delta$.  The exact matrix identity
+\begin{align}
+ G'={}&\left(G'(a)-7\delta B_* I\right)\notag\\
+ &+\frac12\sum_{j=1}^7
+  \left[(B_*I+A_j)(\delta+b_j)
+          +(B_*I-A_j)(\delta-b_j)\right]          \label{eq:fixed}
+\end{align}
+has only positive source matrices: its first block is at least
+$h_*/2$, and $B_*I\pm A_j\succeq0$.  Consequently the following
+\emph{fixed}, source-independent testing functions suffice on that chart:
+\[
+ e_i,\quad e_i\sqrt{\delta+b_j},\quad
+ e_i\sqrt{\delta-b_j}\quad(1\leq i\leq4,\ 1\leq j\leq7),
+\]
+together with
+\[
+ \sqrt{1+u^2}\,Y,\qquad
+ \sqrt{1+u^2}\,(sY-T).
+\]
+There are at most $62$ functions per chart, and at most
+$(2n+1)^2$ charts.  The excess $C-C'$ uses the already retained
+function $e_1$; the other two excesses use the last two functions.
+Their source Gram coefficients are $C-C'$, $A-A'$ and $a-a'$.
+The blocks in \eqref{eq:fixed}, the displayed $A_j$, and these excess
+coefficients are the complete evaluated matrix prescription.  All
+centers are algebraic, all source entries are rational on the eight
+possible source clipping chambers, and every radical has a fixed
+constant $\delta$.  Factoring the positive matrices takes place only
+in the source field.  These identities also hold over separately
+labelled real closed fields, chart by chart.
+
+For the actual C1 source put $a=\alpha$.  After the physical substitution
+$P=uW$, $T=cZ$, restore the three fixed testing functions
+\[
+ r_m=sW-cX+usY-ucZ,\quad
+ r_D=c(uW-Y)+usX-sZ,\quad r_\beta=X+uZ.
+\]
+Their source coefficients are respectively $m,D,\beta\geq0$.
+The complete normalized parent, with $\lambda_{\rm ev}=n=0$, is
+identically $S(C,A,\alpha)+mr_m^2+Dr_D^2+\beta r_\beta^2$.
+Thus at most $65$ fixed functions per chart admit the \emph{entire}
+actual C1 parent on this annulus.  All $m,D,\beta\geq0$ are allowed,
+including literal zero coefficients.  All state variables and the
+literal Bob endpoints remain included.  The restriction $|u|\leq1$
+and the omitted double corner remain part of the theorem's domain.
+Real and imaginary splitting handles complex states without new
+testing functions.
+
+\section*{The exact obstruction for actual stationary weights}
+
+\begin{proposition}[Below-wall defect and a full selected-parent witness]
+Let $C,A,a>0$ be arbitrary and set
+\[
+ k=C+1/2,\quad B=C+A+1/2,\quad
+ g=\frac{kA}{B},\quad \gamma=\frac12+\frac1{4a},
+\]
+\[
+ \Delta=8CAa-4Ca-1-2(C+A+a),\qquad
+ d_*=\frac{\Delta}{8aB}=g-\gamma.
+\]
+The moving Bob form obeys the exact identity
+\begin{align}
+ &(C+c^2/2)(P-Y)^2+(A+s^2/2)Y^2+a(sY-T)^2-sPT\notag\\
+ &\quad=a\left(T-sY-\frac{sP}{2a}\right)^2
+       +B\left(Y-\frac{k}{B}P\right)^2
+       +g c^2P^2+d_*s^2P^2.                    \label{eq:defect}
+\end{align}
+The leading weights have $\Delta=0$.  If $\Delta<0$, the selected
+complete parent with weights $(C,A,a)$ is negative at an explicit
+finite angle pair and a finite nonzero state.
+\end{proposition}
+
+\begin{proof}
+Two square completions prove \eqref{eq:defect}; the coefficient identity
+$8aB(g-\gamma)=\Delta$ is immediate by multiplication.
+For the last assertion retain the complete core \eqref{eq:core} and put
+\[
+ X=0,\quad P=1,\quad Y=k/B,\quad
+ T=sY+s/(2a),\quad
+ E=A(k/B)^2+F>0,\qquad F=\frac{a+1/2}{4a^2}>0.
+\]
+Its complete selected value is exactly
+\[
+ d_*+\gamma c^2+Eu^2-Fu^2c^2.
+\]
+Choose
+\[
+ t=\frac{-d_*}{2(\gamma+E+1)},\quad
+ u=c=\sqrt t,\quad s=\sqrt{1-t}.
+\]
+Since $g>0$, one has $0<t<1/2$.  The selected value becomes
+\[
+ d_*\frac{\gamma+E+2}{2(\gamma+E+1)}-Ft^2<0.
+\]
+The actual finite angle and state realization is
+$v=s/c$, $W=1/u$, $X=0$, $Y=k/B$, $Z=T/c$.
+Thus the witness uses the entire selected four-state polynomial,
+not a determinant or a state-normal truncation.
+\end{proof}
+
+For an actual finite noncommuting stationary contact of the full
+nonnegative-event parent, the existing strict three-event result
+(CAP14) gives $\Delta(C,A,\alpha)<0$.  Substituting $a=\alpha$
+in \eqref{eq:defect} therefore exposes a strictly negative term which
+the leading source loses.  The explicit witness disproves replacing
+the full source by that three-event cap.  It is not a counterexample
+to the full parent: the omitted original events supply indispensable
+contact-scale contributions.  The source identities BE3--BE9, the
+$e$-bound and SP6 have neither been altered nor replaced.  Literal
+$D=0$ or $\beta=0$ alone do not remove the defect argument.
+
+The annulus construction absorbs this defect only where the displayed
+strict reserve is available.  The missing global step remains a fixed
+separated completion with the other original events at the double
+contact corner, projective Alice charts, and the remaining source
+scales and regions.
+
+\end{document}

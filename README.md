@@ -35,6 +35,7 @@ The recovered files provide:
 | Bounded-z C1 source box | Exact order-669 pencil for the specified local certificate cone; 120 blocks and 2,694 auxiliaries |
 | Reciprocal Alice angle, every positive source ratio | Exact order-62 local source-cone pencil; 19 blocks and 97 auxiliaries |
 | All Alice angles, bounded-z source box | Exact order-731 intersection of the two specified local certificate cones; 139 blocks and 2,791 auxiliaries |
+| Canonical Bell validity at every angle | Exact order-133 pencil with a quartic source map; 104 functions and 27 blocks |
 | Global candidates of orders 8,368 and 10,736 | Strict outer approximations, with exact separation proofs |
 | Global candidate of order 13,744 | Forward inclusion; reverse inclusion remains unproved |
 | C160 candidate of order 63,888 | Reverse inclusion remains unproved; full forward inclusion uses the stated extremal-coverage theorem |
@@ -79,6 +80,16 @@ angle for `0<z<=1`, `0<x,sigma<=2^-78/(1+z)` and `|w|<=2^-36`, under the
 printed native gaps. The exact intersection pencil has total order 731.
 The complete companion uses the same cancellation to replace its former
 three C14.1 proofs with one theorem, including the remaining Bob-angle join.
+
+The [determinant certificate](extracted-lifts/global-weighted/proof/global_weighted_certificate.pdf)
+gives a seven-page argument for all nonnegative canonical source coefficients
+and every measurement angle. A polynomial adjugate identity completes the
+state quadratic, and twelve elementary circuits express its angular
+determinant as fixed squares. The resulting order-133 pencil decides validity
+of each specified canonical inequality exactly. Its input is quartic in the
+inequality coefficients, so it does not supply an affine lift of the full
+quantum set. The complete fixed functions, product equations, coefficient
+arrays and reproduction scripts are included.
 
 The [tensor-rank note](extracted-lifts/fixed-features/uniform_feature_route.pdf)
 explains why a bound on each square's tensor rank differs from a common

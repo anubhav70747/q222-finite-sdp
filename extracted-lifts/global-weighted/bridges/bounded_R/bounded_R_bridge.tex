@@ -1,0 +1,585 @@
+\documentclass[10pt]{article}
+\usepackage[margin=21mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\norm}[1]{\lVert#1\rVert_{\rm row}}
+\allowdisplaybreaks
+\title{An explicit bounded-$R$ bridge for the complete C1 certificate}
+\author{}\date{23 October 2026}
+\begin{document}\maketitle
+
+The source formulas, full parent, and root identities below are those of
+\texttt{latex/certificates/c1\_short.tex}, (P1), (BE3)--(BE9), (SP3),
+(SP6), and the twelve- and six-root exports in
+\texttt{extracted-lifts/local-order669/}, at commit
+\texttt{fb58c232e374dadf3cbb5f23e7e7413d429de884}.
+The new result is a quantitative extension of their source admission
+from $z\le1$ to every specified finite $R$. No coefficient map or
+previously evaluated pencil is regenerated.
+
+\begin{theorem}[Explicit bounded-$R$ admission]\label{thm:bridge}
+For a real $R\ge1$, put
+\[
+ B=1+R,\qquad \eps_R=2^{-40}B^{-8},\qquad
+ \delta_R=2^{-20}B^{-2}.
+\]
+Take exactly the native source formulas (P1), with
+\[
+ 0<x,\sigma\le\eps_R,\quad 0<z\le R,\quad
+ 0<b,h<1,\quad r=bz<1,\quad E,M,J>0,\quad D,\beta\ge0.
+\]
+The complete parent $F_w$ has a separated source/testing sum of squares
+on the independent rectangle
+\[
+             \sqrt{|u|},\ |w|\le\delta_R
+\]
+for every real state $(W,X,Y,Z)$ and unrestricted $H=h/\sigma$.
+The same algebraic root identities and feature supports apply, including
+both state normals, both circuit-sign sectors, $D=0$, and $\beta=0$.
+
+One fixed family for each $R$ has at most $220$ functions on $\lambda>0$
+and $157$ on $\lambda\le0$. Their source coefficients are given by the
+matrix splits below and the already evaluated retained-root formulas.
+Every numerical bound here is a real inequality, so the assertion
+holds over real closed source and testing fields as well.
+\end{theorem}
+
+The theorem does not assert that the functions are independent of $R$.
+It covers positive opening variables; a literal zero source opening
+requires its own chart. These are the same restrictions as the native
+bounded-positive-$z$ C1 chart.
+
+\section{Source estimates that retain the exact identities}
+
+Write $Q=1-b$, $\theta=1-h$, $e=xh/\sigma$, $E=1-e$, $K=1+x$,
+$R_s=1+xr$, $M=R_s-xz\theta$, and
+$J=1+xh-\sigma(1-r)$. The positive denominator is
+\[
+ P=\sigma+K+\sigma z(1+bx+2xh)
+                  +\sigma bx^2hz^2+x^2h\theta z.
+\]
+The three opening-cleared coefficients are
+\[
+ p={z(1+xh)E+(1-r)(1+xhz)\over2P},\quad
+ l={(1+\sigma r)\{eR_s(1+\sigma z)+ME\}\over2P},\quad
+ \kappa={K(1+\sigma r)(1+\sigma z)\over2MP}.
+\]
+As in (P1), $m=\kappa xze$, $a=p/b$, $\ell=l/Q$, and
+$C(1-r)=Kz(1+\sigma r)E/(2P)$; $D$ and $\beta$ are the native
+nonnegative rational coefficients, not independently chosen variables.
+Put
+\[
+ H_0=1+zQ,\qquad B_s=P+xz(J-\sigma),
+\]
+\[
+ \mathcal H=R_sH_0+z\{(1-r)xh(2+xr)
+       -e[2+x(1+h+r\theta)]+Ke^2\}.
+\]
+Throughout the proof $\eps$ can be any number with $0<\eps\le\eps_R$
+that bounds both $x$ and $\sigma$. In particular $B^j\eps$ is small
+for every exponent $j\le8$ used below.
+
+The exact source identities remain
+\begin{align}
+ 2\theta P\beta&=hB_s-\sigma H_0,\tag{BE3}\\
+ 2P(JD+x\theta\beta)&=\sigma^2\mathcal H,\tag{BE4}\\
+ eB_s&=xH_0+\sigma\mathcal H-2PJD/\sigma
+                      \le xH_0+\sigma\mathcal H.\label{eq:e}
+\end{align}
+No rescaling of the source or testing arguments has changed these equations.
+The following conservative bounds suffice:
+\begin{align}
+ &1\le P\le1+4B\eps,\quad |J-1|\le\eps,\quad
+ |M-1|\le B\eps,\quad1\le B_s\le1+6B\eps,
+ \quad1\le H_0\le B,\label{eq:b1}\\
+ &e\le5B\eps,\quad |\mathcal H-H_0|\le32B^2\eps,
+ \quad0\le D\le2B\sigma^2,\quad0\le\beta\theta\le h,
+                                                        \label{eq:b2}\\
+ &|p-H_0/2|\le8B^2\eps,\quad |l-1/2|\le4B\eps,
+ \quad |\kappa-1/2|\le6B\eps,\label{eq:b3}\\
+ &\tfrac13\le p\le B,\quad\tfrac13\le l,\kappa\le1,
+ \quad m\le5B^2\eps^2,\quad C(1-r)\le z\le B.\label{eq:b4}
+\end{align}
+To check these bounds, use $r<1$ before estimating the positive
+summands of $P$. This gives \eqref{eq:b1}. Initially $E>0$ gives
+$e<1$, and dropping the negative term in $\mathcal H$ gives
+$\mathcal H\le4B$. Equation \eqref{eq:e} then gives
+$e\le Bx+4B\sigma\le5B\eps$. Direct expansion yields
+\[
+ |\mathcal H-H_0|\le4B\eps+3Be+2Be^2\le32B^2\eps.
+\]
+Now $\mathcal H\le2B$, and (BE4) gives the bound on $D$; (BE3)
+gives $\beta\theta\le h$. For the bounds on $p,l$, the useful exact
+numerator differences are
+\[
+ 2Pp-H_0=xzh(2-r-e)-ze,
+\]
+\[
+ {2Pl\over1+\sigma r}=M+e\{xz\theta+\sigma zR_s\}.
+\]
+They prove \eqref{eq:b3}--\eqref{eq:b4} by \eqref{eq:b1}; the
+formula for $\kappa$ is handled in the same way.
+
+Retain the source definitions (SP3):
+\[
+ \nu=(2D-2\beta\theta+h)/\sigma,\quad
+ \lambda=(8Dh+4\beta\theta^2+2h^2)/\sigma-4bp\sigma z,
+ \quad\lambda_0=\lambda-2H,
+\]
+\[
+ K_A=4\kappa H-\lambda,\quad B_x=8\kappa e,\quad
+ R_0=-4\{2(C+D)(r-1)+2p+r-1\}.
+\]
+Then
+\begin{align}
+ &|\nu|\le2B,\quad |\lambda_0|\le3B,
+ \quad |\lambda_0+2\theta H_0|\le64B^2\eps,\label{eq:b5}\\
+ &|K_A-(2\theta H_0-2h(1-r))|\le1024B^4\eps,\label{eq:b6}\\
+ &|R_0|\le32B(x+\sigma),\quad |B_x|\le40B\eps,
+ \quad |R_x|\le16,\quad |A_y|\le32B,
+ \quad |\chi|\le64B,\quad 0\le k_1\le16.\label{eq:b7}
+\end{align}
+Here $R_x,A_y,\chi,k_1$ have precisely their printed (SP3) definitions.
+For \eqref{eq:b5}, use the exact rearrangements
+\[
+ \nu=2D/\sigma+[H_0-ez(J-\sigma)]/P,
+\]
+\[
+ \lambda_0=2e\theta z(J-\sigma)/P-2\theta H_0/P
+                                      +8Dh/\sigma-4pr\sigma.
+\]
+The only apparently unbounded factor in \eqref{eq:b6} is removed by
+\[
+ K(1+\sigma r)(1+\sigma z)-MP=xF_x+\sigma F_\sigma,
+ \qquad F_\sigma=r-1+\sigma rz,
+\]
+\[
+ H(2\kappa-1)={eF_x+hF_\sigma\over MP}.
+\]
+The polynomial $F_x$, after $r=bz$, has coefficient $\ell^1$ norm
+$37$ and $z$-degree $3$. Thus $|F_x|\le37B^3$.
+Also $(MP)^{-1}\le2$ and $|(MP)^{-1}-1|\le12B\eps$, giving
+\[
+ |H(2\kappa-1)+h(1-r)|\le384B^4\eps.
+\]
+Together with $K_A=2H(2\kappa-1)-\lambda_0$, this proves
+\eqref{eq:b6}. The pole-free identity
+\[
+\begin{split}
+ -PR_0/4={}&zE\{1+xh-K(1+\sigma r)\}\\
+ &+(1-r)(1+xhz-P)-2DP(1-r)
+\end{split}
+\]
+gives the first bound in \eqref{eq:b7}; the others follow by
+substitution into (SP3), using $|h-Q|\le1$ and
+$\beta\theta^2\le h\theta\le1/4$.
+
+\paragraph{The downstream source identities.}
+In particular $1/2\le\mathcal H\le2B$. Therefore the unchanged
+sphere definitions
+\[
+ d_0^2={2PJD\over\sigma^2\mathcal H},\qquad
+ b_0^2={2Px\theta\beta\over\sigma^2\mathcal H}
+\]
+give $d_0,b_0\ge0$, $d_0^2+b_0^2=1$ without dividing by either
+coordinate, and
+\[
+ {\sigma^2\over8}\le JD+x\theta\beta\le B\sigma^2.
+\]
+The exact (BE6)--(BE8) formulas for $D,\beta,H,m_0,m_1$ are unchanged.
+For example
+\[
+ H={H_0\over B_s}+{\sigma\over x}{\mathcal H\over B_s}b_0^2,
+ \quad {1\over6}\le{m_0\over x^2z}\le B,
+ \quad {1\over12}\le{m_1\over x\sigma z}\le2B.
+\]
+The three (BE9) errors are bounded, respectively, by
+$8B\eps,8B^2\eps,4B\eps$. Finally $2P(p-l)/z$ is a polynomial
+in $(x,\sigma,z,b,h,e)$ with coefficient norm $18$ and $z$-degree
+$2$. Hence $|(p-l)/z|\le9B^2$. This proves all the boundedness and
+asymptotic assertions used downstream, including the radial boundary
+estimate, from the same exact source identities.
+
+\section{A uniform bound for the positive-angular Gram}
+
+Suppose $\lambda>0$. Use the existing twelve-root column
+\[
+ (N_x,N_y,R,\Gamma_*,A_\theta,T_\theta,d_1,d_2,d_3,d_4,U_*,K_*)^T
+\]
+and its exact matrix $Q(s,w)$, where $s=\sqrt u$. Put
+\[
+ d_G=4D/\sigma^2,\quad\rho=\lambda x/\sigma,\quad S=d_G+\rho,
+ \quad L_0=\lambda\sigma,\quad q_0=\lambda\sqrt x,
+ \quad c=\max(0,1-K_A),\quad a_0=\sqrt x/\sigma.
+\]
+The source identities and \eqref{eq:b1}--\eqref{eq:b7} imply
+\begin{gather}
+ |S-2H_0|\le128B^2\eps,\quad1\le S\le3B,
+ \quad0\le d_G,\rho\le3B,\quad0<L_0\le3,\label{eq:sp}\\
+ {\sqrt{d_G}\over S},{\sqrt\rho\over S},{d_G\over S},
+ {\rho\over S}\le1,\qquad q_0/S\le2,\quad\sqrt{q_0}\le2B.
+                                                        \label{eq:ratios}
+\end{gather}
+Indeed the exact identity to use is
+\[
+ S=2\mathcal H/P+d_G(1-J+2hx)+2eH_0/P
+                     -2e^2z(J-\sigma)/P-4prx.
+\]
+Initially $d_G\le8B$; bounding the five terms gives
+\eqref{eq:sp}. Then $q_0^2=L_0\rho$ gives \eqref{eq:ratios}.
+Further,
+\[
+ (x+\sigma)^2H=xe+2\sigma e+\sigma h\le2\eps,
+ \qquad |R_0\sqrt\lambda|\le128B\sqrt\eps.
+\]
+The second conclusion follows from $\lambda\le2H+3B$ and
+$(x+\sigma)^2\lambda\le5\eps$.
+
+The compensation terms satisfy
+\begin{equation}
+ 0\le c\le4,\quad ca_0\le32B,\quad c/L_0\le32,
+                         \quad c/\lambda\le32\sigma.\label{eq:c}
+\end{equation}
+For $c>0$, \eqref{eq:b6} forces $h>1/8$, because the reference
+$2\theta H_0-2h(1-r)$ is at least $3/2$ when $h\le1/8$.
+Now $L_0\ge h>1/8$ and
+\[
+ a_0^2(hB_s-\sigma H_0)\le\mathcal H\le2B,
+ \qquad hB_s-\sigma H_0\ge1/16.
+\]
+Thus $a_0\le8B$. If $c=0$, every compensation term is zero;
+no unused denominator is bounded away from zero.
+
+Here is a finite positive-coefficient check of every matrix entry.
+Let $\tau=\sqrt\eps$, and regard the twelve root letters as independent
+nonnegative formal variables, abbreviating
+$G=\Gamma_*$, $A=A_\theta$, $T=T_\theta$, $U=U_*$, $K'=K_*$.
+The two full normal conductors $\mathfrak U=u\Gamma$ and
+$\mathfrak V=(R_0-8pu^2)qw\Gamma$ have coefficient majorants
+\[
+ f_1=uG+\tau d_1+ud_2+(u+\tau)d_3+\tau T,
+\]
+\[
+\begin{split}
+ f_2={}&64B^2\tau^2wG+64B^2\tau^4R
+ +64B^2\tau^2(w+\tau)(d_2+d_3)\\
+ &+(128B^2\tau^2+128B^2\tau w)T+8B^2uwf_1.
+\end{split}
+\]
+These follow by substituting \eqref{eq:ratios} in the two exact
+conductor formulas in \texttt{twelve\_root.tex}; in particular no
+normal coupling is deleted. Let $B_{\rm src}$ denote the original
+source reference with $N_x$ entry $2$, radial form
+$J_C^2+J_\ell^2$, $G$ entry $1$, angular entries $(K_A+c)/2$,
+four circuit entries $1/2$, and final entries $1,1/2$.
+Then $B_{\rm src}\succeq I_{12}/3$.
+The correction $Q-B_{\rm src}$ is coefficientwise dominated by
+\begin{align*}
+ \mathcal P={}&(\tfrac{131}{2}B\tau^2+4u^2)R^2
+ +(64B^2\tau^2+16Bu^2+8w^2)N_yR\\
+ &+8BN_xf_1+(N_y+R)f_2+8BuwN_xN_y+16BuwN_xR\\
+ &+40B^2\tau^2wN_xA+32BuN_yA+64BuAR+2BsUR\\
+ &+32BuU^2+64BsUK'+32B\tau(K')^2\\
+ &+[(64B+32)u+32\tau]G^2
+ +(64\tau^2+4u+4\tau)\sum_i d_i^2.
+\end{align*}
+For example, $|E_{RR}^0|\le64B\eps$,
+the coefficients of $E_{yR}$ on $(1,u^2,w^2)$ are at most
+$(64B^2\eps,16B,8)$, and the three compensation expressions
+are bounded using \eqref{eq:c}. These give exactly the displayed
+majorant.
+
+The sum of its coefficients in all variables other than $B$ is
+\[
+              1480B^2+\tfrac{887}{2}B+364<2048B^2
+                       \qquad(B\ge2).
+\]
+Every term with testing degree zero contains a factor $\tau$.
+For a quadratic form, total absolute coefficient mass bounds the
+matrix row norm: an off-diagonal coefficient is split equally
+between two matrix entries. Therefore, on the exact support
+\[
+ I=\{(0,1),(0,2),(1,0),(2,0),(2,1),(4,0),(4,1)\},
+\]
+\begin{equation}\label{eq:matrixbound}
+ Q=Q_0+\sum_I C_{ij}s^iw^j,\qquad
+ \norm{Q_0-B_{\rm src}}\le2048B^2\sqrt\eps,
+ \qquad \norm{C_{ij}}\le2048B^2.
+\end{equation}
+
+The $220$-function organization puts the four already retained
+positive terms
+\[
+ 2z[(1+2m)u^2+(1+2D)w^2]N_y^2
+       +[zk_1u^2+2zb^2(2D+1)w^2]R^2
+\]
+into the main matrix. Their additional majorant is
+$4B(u^2+w^2)N_y^2+(16Bu^2+4Bw^2)R^2$.
+The resulting mass is $1480B^2+943B/2+364<2048B^2$.
+Thus \eqref{eq:matrixbound} proves the same guard for this
+organization as well. This is a regrouping of four existing squares,
+not a new guessed Gram space. The old $z\le1$ row estimate for
+$w^2$ is $5$, not $4$:
+$2z(1+2D)(1+b)\le4(1+6\eps^2)<5$.
+
+Set $M_R=2048B^2$, $\delta=\delta_R$, and
+\[
+ T_\delta=2\delta+2\delta^2+\delta^3+\delta^4+\delta^5.
+\]
+At the stated constants,
+\[
+ 2048B^2\sqrt{\eps_R}\le1/2048,\qquad
+ M_RT_\delta\le7M_R\delta=7/512<1/48.
+\]
+Consequently the explicit source matrices
+\[
+ H_0^{\rm mat}=Q_0-M_RT_\delta I\succeq I/6,\qquad
+ H_{ij}^{\pm}={\delta^{i+j}\over2}(M_RI\pm C_{ij})\succeq0
+\]
+give the exact split
+\[
+ Q=H_0^{\rm mat}+\sum_I\left[
+ H_{ij}^+\left(1+{s^iw^j\over\delta^{i+j}}\right)
+ +H_{ij}^-\left(1-{s^iw^j\over\delta^{i+j}}\right)\right].
+\]
+Every scalar factor is nonnegative on $0\le s,w\le\delta$.
+The circuit remainder has coefficient
+\[
+ q_C=\tfrac12-(cd_G/S)(2/\lambda+\sqrt x+u).
+\]
+Its source constant after subtracting $(cd_G/S)\delta^2$ is at least
+$1/2-64\eps-4\sqrt\eps-4\delta^2>1/3$. Thus the existing
+circuit split with $\sqrt{\delta^2-u}$ is also valid. Source-field
+square completion proves the asserted separated SOS.
+
+\section{The nonpositive-angular branch needs no new shear}
+
+Suppose $\lambda\le0$, and put $L=\lambda/\sigma$,
+$s_6=\sqrt{1+L^2}$. Nonnegativity of the four terms defining
+$\lambda+4pr\sigma$ gives
+\[
+ H^2\le2pr\le2B,\quad h\le2B\sigma,\quad
+ \beta\theta^2\le B\sigma^2,\quad-4B\le L\le0,
+ \quad s_6\le5B.
+\]
+Hence $\theta\ge1/2$, $\beta\theta\le2B\sigma^2$.
+(BE3) gives $H\ge H_0/B_s\ge3/4$; therefore
+$4\kappa H\ge1$, while $4a,4\ell\ge1$ follows from
+\eqref{eq:b4}. Finally (BE4) gives
+\[
+ d_G={2\mathcal H\over PJ}-{4x\theta\beta\over J\sigma^2}
+ \ge {2(1-32B^2\eps)\over1+6B\eps}
+                           -{8B\eps\over1-\eps}\ge1.
+\]
+After multiplying positive denominators, the last inequality is
+\[
+ 1-(64B^2+14B+1)\eps+(16B^2+6B)\eps^2\ge0;
+\]
+its left side is at least $1-72B^2\eps>0$.
+
+Use the unchanged six-root identity (SR1)--(SR3), on
+$v=(N_x,N_y,R,\Gamma,A_\theta,s_6uw(u^2-x)W)^T$.
+Its source reference $G_0$ has $N_x$ entry $2$, radial block
+$\left(\begin{smallmatrix}2&2b-1\\2b-1&b^2+Q^2\end{smallmatrix}\right)$,
+angular entry $4\kappa H$, and $(\Gamma,\widehat V)$ block
+$\left(\begin{smallmatrix}d_G&L/(2s_6)\\L/(2s_6)&1\end{smallmatrix}\right)$.
+The displayed guards imply $G_0\succeq I_6/3$.
+
+The coefficient matrices printed in (SR2) satisfy, directly,
+\[
+ \norm{E_{00}}\le128B^2\eps,\qquad
+ \norm{E_\gamma}\le128B^2\quad
+ (\gamma\in\{10,01,11,20,02,21,30\}).
+\]
+For an explicit row check, the seven nonconstant rows are bounded,
+respectively, by
+\[
+ 49B,\quad64B^2\eps,\quad12B,\quad
+ \max(22B,25B^2\eps),\quad8B,\quad8B^2,\quad
+ (25/2)B^2\eps.
+\]
+For $E_{00}$ use the previously proved constant radial estimates
+and $s_6x/2\le(5/2)B\eps$.
+Thus
+\[
+ \norm{E_{00}}<1/12,\qquad
+ \delta^{|\gamma|}\norm{E_\gamma}\le128B^2\delta
+                                      =1/8192<1/56.
+\]
+The same source matrices (SR6), with $\eta=1/56$ and
+$y_\gamma=u^{\gamma_1}w^{\gamma_2}/\delta^{|\gamma|}$, apply
+on $0\le u,w\le\delta$, and hence on the common smaller rectangle
+$0\le\sqrt u,w\le\delta$. The residual source matrix is
+$G_0+E_{00}-I/8\succeq I/8$.
+This proves the complementary branch without assuming its guards.
+In particular $D>0$ here; its literal zero face occurs in the positive
+branch. No inverse of $\beta$ occurs in either construction.
+
+\section{Fixed functions, and what transfer does and does not give}
+
+The positive main family is the twelve pre-Gram functions
+\[
+ \mathcal V=\{X,Y,Z,W,uZ,wZ,uW,uwW,u^2W,
+                 u^{3/2}W,u^{1/2}W,\sqrt{uwWZ_+}\}
+\]
+times $1$ and the fourteen factors
+$\sqrt{1\pm s^iw^j/\delta^{i+j}}$, $(i,j)\in I$.
+First apply the fixed angle sign gauge, then the common state sign
+making $W\ge0$; here $Z_+=\max(Z,0)$ and $Z_- =\max(-Z,0)$.
+Add the seven ordinary functions
+\[
+ \{wX,uwZ,uX,u^2wW,uY,wY,uwY\},
+\]
+the nineteen angular functions printed in
+\texttt{fixed-features/fixed\_box\_c1.tex}, and its seven circuit
+functions $t_i$ together with $\sqrt{\delta^2-u}\,t_i$.
+These are $180+7+19+14=220$ labelled functions; the nineteen angular
+and seven circuit formulas contain no $R$ or new source choice.
+Their verified source-linear root prescriptions remain unchanged.
+The six-root family is its ten pre-Gram monomials
+\[
+ \{X,Y,Z,W,uZ,wZ,uW,uwW,u^2W,u^3wW\}
+\]
+times $1,\sqrt{1\pm y_\gamma}$, plus the same seven ordinary functions:
+$10\cdot15+7=157$.
+
+Alternatively the previously used polynomial testing cover is
+\[
+ u=\delta^2A_t^8,\quad w=\delta B_t^4,\quad
+ \xi^2=1-A_t^4,\quad\eta^2=1-B_t^4,
+\]
+with the same quarter-state cover and normalization equations.
+The existing geometric-sum identities use
+exactly the same sixteen multiplier monomials for every fixed $R$.
+Its primitive monomial product maps are unchanged. The parent
+coefficient embedding contains the newly specified powers of $\delta$;
+this statement does not identify it with the previously eliminated
+order-$669$ affine source pencil at its old numerical $\delta$.
+
+For rational or algebraic coefficients, one may replace a given real
+$R$ by any integer $N\ge R$ and use $\eps_N,\delta_N$. Both constants
+are then rational, and every quarter-power used by the cover is algebraic.
+
+All root identities are polynomial after the existing algebraic
+covers. Hence testing axes and zero state coordinates are literal
+specializations. The two exact angle gauges extend to both signs,
+and the two state sectors cover all states. The full (SP6), not a
+determinant restriction, is the identity assembled above.
+
+For a bounded positive source $z$ in a real closed extension, some
+real $R$ bounds it. Infinitesimal $x,\sigma$ are below this
+$\eps_R$, and infinitesimal tests are below this $\delta_R$.
+The finite inequalities therefore recover the corresponding
+bounded-$z$ infinitesimal admission assertion in B.23 by transfer.
+The quantifiers are
+\[
+ \forall R\ge1\quad\exists(\eps_R,\delta_R,\mathcal V_R)\quad
+             \forall\hbox{ native sources and independent tests in the boxes}.
+\]
+They do not supply one $R$-independent testing space. The displayed
+radical branch locations depend on $\delta_R$; a finite cover of the
+remaining independent testing regions and source charts is still needed.
+
+\section{An exact obstruction to one proposed fixed-$\delta$ repair}
+
+The need for a new argument is visible in a two-by-two principal
+minor. This is an obstruction to the unchanged principal matrix,
+not a Bell-slack counterexample or a no-lift theorem.
+
+\begin{proposition}\label{prop:minor}
+For every fixed $u_*>0$, arbitrarily large finite $z$ admit native
+sources arbitrarily close to the source origin for which the unchanged
+twelve-root principal Gram at $(u,w)=(u_*,0)$ is indefinite.
+Adding any amount of the positive $J_C^2,J_\ell^2$ radial reserves,
+or applying an invertible source-only diagonal congruence, cannot
+repair this principal minor.
+\end{proposition}
+
+\begin{proof}
+It suffices to take $z\ge1$ and
+\[
+ r=\tfrac12,\quad b={1\over2z},\quad H_0=z+\tfrac12,
+ \quad\sigma=t,\quad x=t^2,\quad h=H_0t,
+                     \quad0<t\le\eps_z.
+\]
+Here $B=z+1$. Every strict native gap is positive at this bound:
+$h<1$, $E=1-H_0t^2>0$, and $M,J>0$ by \eqref{eq:b1}, or directly
+from their formulas. Since $J-t>0$ and $P>1$,
+$B_s=P+t^2z(J-t)>1$, so (BE3) gives $\beta>0$ exactly.
+The numerator $N_D=K(1+tz)(1+t/2)-JP$ of $D$ satisfies
+\[
+ N_D=t^2(H_0+\mathcal R),\qquad |\mathcal R|\le19B^4t^2.
+\]
+Indeed $\mathcal R$ is a polynomial whose monomials all have
+$t$-degree at least two, whose $z$-degree is at most four, and whose
+absolute coefficient sum is $19$; the checker prints its derivation.
+Thus $D>0$. Also
+\[
+ \lambda\ge2t(H_0^2-p)>0,
+\]
+because $p\le B$ and $H_0^2-B=z^2-3/4>0$. Finally $c=0$ by
+\eqref{eq:b6}, as its reference tends to $2H_0\ge3$ and its error
+is bounded explicitly by $1024B^4\eps_z$.
+
+The exact leading coefficients are
+\[
+ \beta\sim\tfrac12H_0(z+1)t^2,\quad
+ D\sim\tfrac12H_0t^2,\quad\lambda\sim4H_0^2t,
+\]
+\[
+ \nu\longrightarrow H_0,\quad d_G,S\longrightarrow2H_0,
+                         \quad\rho\longrightarrow0.
+\]
+At $w=0$, the $(N_x,\Gamma_*)$ principal submatrix is exactly
+\[
+ \begin{pmatrix}
+ 2&-2\nu\sqrt{d_G}\,u_*/S\\
+ -2\nu\sqrt{d_G}\,u_*/S&1
+ \end{pmatrix},
+\]
+whose determinant tends to $2-2H_0u_*^2$.
+For $H_0u_*^2>1$ it is negative for small enough $t$.
+An entirely explicit choice for $0<u_*\le1$ is
+$z=32/u_*^2$, $0<t\le\eps_z$. The exact formula for $\nu$ gives
+$|\nu-H_0|\le16B^2t$; also $\rho=\lambda t\le5Bt$ and
+$|S-2H_0|\le128B^2t$. Consequently
+$\nu\ge H_0/2$, $d_G\ge H_0$, $S\le3H_0$, and thus
+\[
+ \det\le2-H_0u_*^2/9<0.
+\]
+The radial reserves affect only the $(N_y,R)$ rows, and an
+invertible congruence preserves inertia. This proves the claim.
+\end{proof}
+
+This obstruction must not be overstated. The separately retained
+averaged square $(L_0/2)F_A^2$ can change the defective minor:
+\[
+ F_A=u(Z-a_0wW)={u\over\sigma}\Gamma
+                         +{uw\over\sigma kq}T_\theta.
+\]
+Along the path above at $w=0$, its contribution to the
+$\Gamma_*^2$ coefficient tends to $H_0u^2$, precisely the scale
+missing from the unchanged principal matrix. A polynomial completion
+that reorganizes this square therefore remains open. What fails is
+the proposed repair by radial reserves and constant diagonal
+normalization alone.
+
+\paragraph{Reproducibility.}
+\texttt{check\_bridge.py} uses exact SymPy arithmetic to check the
+new positive majorants, their support and coefficient masses, the
+two denominator removals and radial divisibility, the reserve
+inequalities, the nonpositive $d_G$ guard, and the explicit path's
+leading coefficients. Its output is \texttt{check\_results.json}.
+It also evaluates the explicit rational source with
+$u=2^{-40}$, $z=2^{85}$, and $t=2^{-40}(1+z)^{-8}$.
+The native guards and the negative determinant are checked with rational
+arithmetic; the source and a rationally congruent $2\times2$ matrix are
+printed in \texttt{fixed\_delta\_obstruction.json}.
+It does not rerun the $682$ old coefficient equations or regenerate
+any old affine pencil. The analytic admissibility proof uses the
+native identities throughout, not independent intervals for tied
+derived source quantities.
+\end{document}

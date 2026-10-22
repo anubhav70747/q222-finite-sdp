@@ -1,0 +1,534 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{2em}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newcommand{\R}{\mathbb R}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\adj}{\operatorname{adj}}
+\title{A determinant certificate for canonical Bell inequalities}
+\author{}
+\date{23 October 2026}
+\begin{document}
+\maketitle
+\vspace{-2em}
+
+A canonical Bell inequality separates into eight positive event terms and
+one negative state component. This structure reduces positivity of its
+four-dimensional state matrix to an angular determinant. That determinant
+has only eight nonconstant monomials, all with nonnegative coefficients.
+Their exponents form twelve elementary balanced circuits, each with an
+explicit sum-of-squares identity.
+
+We combine these two observations into a single certificate for every
+canonical valid inequality and every measurement angle. Multiplication by
+the determinant of the three-dimensional positive state block clears the
+state elimination, including its singular limits. The resulting certificate
+uses 104 fixed functions and an explicit rational semidefinite pencil of
+order 133. Its coefficients depend quartically on the inequality. This
+dependence is the remaining step between the certificate and an affine
+semidefinite representation of the quantum set.
+
+\section{Completing the state quadratic without division}
+
+Use the compact half-angle cover
+\[
+ a_0^2+a_1^2=b_0^2+b_1^2=1,
+ \qquad \psi=(W,X,Y,Z)\in S^3.
+\]
+Thus $A_0=B_0=\sigma_z$,
+$A_1=(a_0^2-a_1^2)\sigma_z+2a_0a_1\sigma_x$, and similarly for Bob.
+The circuit identities below contain cube roots of angular monomials.
+To make those roots polynomial on a fixed cover, adjoin all real solutions of
+\[
+ x_0^6=a_0^2,\quad x_1^6=a_1^2,\quad
+ y_0^6=b_0^2,\quad y_1^6=b_1^2.                       \tag{1}
+\]
+This compact algebraic cover includes every root sign, angle sign and
+projective endpoint. Every new variable has absolute value at most one.
+
+For the canonical source use $d\geq0$ and eight nonnegative event weights
+$(\lambda,n,m,C,A,D,\alpha,\beta)$, with
+\[
+ \kappa=(4\lambda,4n,4m,4C,4A,4D+2d,4\alpha+2d,4\beta+2d).
+\]
+The eight rows below contain no source coefficients:
+\[
+\begin{array}{c|rrrr}
+i&R_{iW}&R_{iX}&R_{iY}&R_{iZ}\\\hline
+1&b_0&b_1&0&0\\
+2&0&1&0&0\\
+3&a_0b_1&-a_0b_0&a_1b_1&-a_1b_0\\
+4&a_1&0&-a_0&0\\
+5&0&0&1&0\\
+6&a_1b_0&a_1b_1&-a_0b_0&-a_0b_1\\
+7&0&0&b_1&-b_0\\
+8&0&a_0&0&a_1
+\end{array}                                                        \tag{2}
+\]
+The complete canonical polynomial, including the signed core, is
+\[
+ F=\sum_{i=1}^8\kappa_i(R_i\psi)^2-2dZ^2
+   =\psi^TP\psi,\qquad
+ P=\sum_i\kappa_iR_i^TR_i-2d e_4e_4^T.                \tag{3}
+\]
+These are precisely the homogeneous physical-parent rows, restricted to
+the normalized half-angle cover.  Put $r_i=(R_{iW},R_{iX},R_{iY})^T$ and
+write $P=\bigl[\begin{smallmatrix}H&b\\b^T&c\end{smallmatrix}\bigr]$.
+In particular $H=\sum_i\kappa_i r_ir_i^T$.
+
+The adjugate of $H$ is a sum of outer products of cross products of its
+rows. Completing the state quadratic therefore produces the functions
+\[
+ f_{ijk}=\det(r_i,r_j,r_k)R_k\psi,
+ \qquad 1\leq i<j\leq8,\quad k\notin\{i,j\}.          \tag{4}
+\]
+The $168$ indices include zero functions and linear dependencies.
+Let $E=\{-1,0,1\}^2\setminus\{0\}$ and
+\[
+ \mathcal N=3E\ \cup\
+ \{(\pm1,\pm1),(\pm1,\pm2),(\pm2,\pm1)\}\ \cup\{0\}.
+                                                               \tag{5}
+\]
+There are exactly 21 distinct elements.  For $\nu\in\mathcal N$ define
+\[
+ g_\nu=4x_0^{3-\nu_1}x_1^{3+\nu_1}
+           y_0^{3-\nu_2}y_1^{3+\nu_2}Z.                \tag{6}
+\]
+Every exponent in (6) is an integer between zero and six.
+
+\begin{theorem}[Fixed multiplier certificate]
+For every quantum-valid canonical source with $d\geq0$ and all eight
+event weights nonnegative, the polynomial $(\det H)F$, on the entire
+testing cover (1), belongs to the Gram cone of the fixed indexed family
+\[
+                    (f_{ijk})\ \cup\ (g_\nu),          \tag{7}
+\]
+of size 189.  A positive-semidefinite source-only Gram matrix is specified
+in (9), (15)--(16) below.  If the angular determinant has a positive
+stationary zero, $g_0$ is unnecessary, giving the 188-function subfamily.
+No source weight is required to be positive, and no testing opening is
+required to be nonzero.
+\end{theorem}
+
+The matrix completion is the following polynomial identity, valid even
+when $H$ is singular:
+\[
+ (\det H)F=
+ \sum_{i<j}\kappa_i\kappa_j
+       \left(\sum_{k\notin\{i,j\}}\kappa_k f_{ijk}\right)^2
+                  +(\det P)Z^2.                      \tag{8}
+\]
+Indeed Cauchy--Binet gives
+$\adj H=\sum_{i<j}\kappa_i\kappa_j
+(r_i\times r_j)(r_i\times r_j)^T$.
+Also $[H\ b]\psi=\sum_k\kappa_k r_k(R_k\psi)$, and the block determinant
+identity gives
+$\det P=c\det H-b^T(\adj H)b$.
+Substituting these three polynomial identities proves (8); neither an
+inverse nor a division has been used.  Thus the first Gram block, in the
+ordering (4), is the explicit block diagonal matrix
+\[
+ G_{\rm state}=
+ \bigoplus_{i<j}\kappa_i\kappa_j\,\kappa_{\widehat{ij}}
+                       \kappa_{\widehat{ij}}^T,
+ \qquad \kappa_{\widehat{ij}}=(\kappa_k)_{k\notin\{i,j\}}.
+                                                               \tag{9}
+\]
+
+\section{A fixed angular Gram cone for every valid source}
+
+It remains to express the determinant term in (8) as fixed squares.
+Introduce affine variables
+$u=a_1/a_0$, $v=b_1/b_0$, $U=u^2$, $V=v^2$.
+Write $D_u=1+u^2$, $D_v=1+v^2$.  The affine state matrix obeys
+\[
+ \det P_{\rm aff}=16D_u^2D_v^2u^2v^2 L(U,V),
+ \qquad L=h+\sum_{e\in E}q_e U^{e_1}V^{e_2},\quad q_e\geq0.
+                                                               \tag{10}
+\]
+For reproducibility, set
+\[
+\begin{array}{ll}
+t_1=d+2(\lambda+n+D),&t_2=d+2(\alpha+m+A),\\
+t_3=d+2(\lambda+C+D),&t_4=d+2(\alpha+\beta+m),\\
+t_5=d+2(\lambda+\beta+n),&t_6=d+2(\alpha+C+A),\\
+t_7=d+2(\beta+n+m),&t_8=d+2(C+A+D).
+\end{array}
+\]
+The coefficient indexed by $e=(i-1,j-1)$ is
+\[
+\begin{array}{ll}
+q_{00}=4\lambda\alpha t_7t_8,&
+q_{01}=4(\lambda Dt_7t_6+\alpha mt_5t_8),\\
+q_{02}=4mDt_5t_6,&
+q_{10}=4(\alpha At_7t_3+\lambda nt_8t_4),\\
+q_{12}=4(\beta mt_1t_6+CDt_5t_2),&
+q_{20}=4nAt_3t_4,\\
+q_{21}=4(\beta nt_3t_2+CAt_1t_4),&
+q_{22}=4\beta Ct_1t_2,
+\end{array}
+\]
+and $h=\det P_{\rm aff}(1,1)/256-\sum_e q_e$.
+Expanding the determinant of (3) gives these coefficients. Validity of
+the Bell inequality implies
+$L(U,V)\geq0$ for all $U,V>0$.
+
+\begin{lemma}[The 21-monomial Laurent cone]
+Every $L=h+\sum_{e\in E}q_e U^{e_1}V^{e_2}$ with $q_e\geq0$ and
+$L\geq0$ on the positive quadrant is a sum of squares in the fixed span
+\[
+             \{U^{\nu_1/6}V^{\nu_2/6}:\nu\in\mathcal N\}.
+                                                               \tag{11}
+\]
+The source-only algebraic coefficient prescription below also covers
+zero outer coefficients and minima attained only at infinity.
+\end{lemma}
+
+\begin{proof}
+If $h\geq0$, use $\sqrt h$ and $\sqrt{q_e}U^{e_1/2}V^{e_2/2}$.
+Suppose $h<0$ and put $I=\{e:q_e>0\}$.  The origin belongs to
+$\operatorname{conv}I$: otherwise strict separation and a ray in logarithmic
+coordinates make every nonconstant term tend to zero, contradicting
+$h<0$.  Let $J$ consist of the exponents on the minimal face of
+$\operatorname{conv}I$ containing the origin.  An exposing ray sends
+every off-face monomial to zero while keeping the face monomials fixed.
+Consequently
+\[
+              h+\sum_{e\in J}q_eU^{e_1}V^{e_2}\geq0. \tag{12}
+\]
+In the span of $J$, the function
+$\sum_{e\in J}q_e\exp(e\cdot y)$ is coercive and strictly convex:
+the origin lies in the relative interior of $\operatorname{conv}J$, and
+its Hessian is $\sum q_e\exp(e\cdot y)ee^T$, positive on that span.
+It therefore has a unique minimum modulo the orthogonal complement.
+Choose a positive minimizer $(U_c,V_c)$ and put
+\[
+ w_e=q_eU_c^{e_1}V_c^{e_2}\ (e\in J),\quad w_e=0\ (e\notin J),\qquad
+ c=\sum_{e\in J}w_e,\qquad r=h+c\geq0.
+\]
+Then $\sum w_ee=0$.  For a rank-two face, $(U_c,V_c)$ is the unique
+positive solution of the two equations
+\[
+ \sum_{e\in J} e_1q_e U_c^{e_1+1}V_c^{e_2+1}=0,
+ \qquad
+ \sum_{e\in J} e_2q_e U_c^{e_1+1}V_c^{e_2+1}=0.       \tag{13}
+\]
+These have bidegree at most $(2,2)$ and prescribe algebraic functions
+of the source coefficients.  For a rank-one face $J=\{e,-e\}$ choose
+$e$ with first nonzero component positive, set
+$t=\sqrt{q_{-e}/q_e}$, and take $(U_c,V_c)=(t,1)$ if $e_1=1$,
+or $(1,t)$ if $e=(0,1)$.  This gives $U_c^{e_1}V_c^{e_2}=t$.
+
+The face selection needs only fixed rational sign cases.  Order the four
+directions as $(1,0)$, $(0,1)$, $(1,1)$, $(1,-1)$, and for each direction
+try $\sigma=1$ before $\sigma=-1$.  Test whether $q_e,q_{-e}>0$ and
+$q_f=0$ for every $f$ with
+$\sigma\det(e,f)<0$.  The first successful test gives
+$J=\{e,-e\}$.  If none succeeds, $J=I$ is the rank-two case.
+These are exhaustive because a proper face through the origin must
+be one of the four opposite pairs in $E$.
+
+The nonnegative balanced vector $w$ is a conic combination of exactly
+twelve primitive positive circuits: four opposite pairs with weights
+$(1,1)$, four triangles
+$\{(s,t),(-s,0),(0,-t)\}$ with weights $(1,1,1)$, and four triangles
+formed by adjacent corners and the opposite axial point, with weights
+$(1,1,2)$.  Here $s,t\in\{-1,1\}$.
+A deterministic prescription chooses the first supported circuit in
+the fixed order in the accompanying JSON file, subtracts
+$\lambda_C b^C$ with
+$\lambda_C=\min_{b_e^C>0} w_e/b_e^C$, and repeats.  Each subtraction
+eliminates a positive entry, so at most eight steps are needed.
+
+Put $p_e=(U/U_c)^{e_1}(V/V_c)^{e_2}$.
+An opposite pair contributes $(p_e^{1/2}-p_{-e}^{1/2})^2$.
+For a triangle of weight $(1,1,1)$ use the nine squares
+\[
+ \frac12\sum_{h\in C}\ \sum_{\{l,m\}\subset C}
+       \bigl[p_h^{1/6}(p_l^{1/3}-p_m^{1/3})\bigr]^2
+                         =\sum_{e\in C}p_e-3.        \tag{14}
+\]
+For weights $(1,1,2)$, with $e+f+2g=0$, use
+$(p_e^{1/2}-p_f^{1/2})^2+2(p_{-g}^{1/2}-p_g^{1/2})^2
+=p_e+p_f+2p_g-4$.
+All exponents in these roots belong to (11): in (14) they are
+$(h+2l)/6$, and the possible numerators are precisely among (5).
+Multiply each circuit identity by $\lambda_C$, and add the constant
+$r$ and the off-face monomials.  Their sum is exactly $L$.
+\end{proof}
+
+For an entirely explicit Gram prescription, let $e_\nu$ denote the
+coordinate vector indexed by $\nu\in\mathcal N$.  The twelve fixed
+rational positive-semidefinite matrices are
+\[
+\begin{array}{ll}
+A_C=(e_{3e}-e_{-3e})(e_{3e}-e_{-3e})^T,
+     &C=\{e,-e\},\\[2mm]
+A_C=\frac12\displaystyle\sum_{h\in C}\sum_{\{l,m\}\subset C}
+ (e_{h+2l}-e_{h+2m})(e_{h+2l}-e_{h+2m})^T,
+     &C\text{ has weights }(1,1,1),\\[2mm]
+A_C=(e_{3e}-e_{3f})(e_{3e}-e_{3f})^T
+ +2(e_{-3g}-e_{3g})(e_{-3g}-e_{3g})^T,
+     &e+f+2g=0.
+\end{array}                                                        \tag{15}
+\]
+Their entries are evaluated in \texttt{multiplier\_schema.json}.
+Set $T=\diag(U_c^{-\nu_1/6}V_c^{-\nu_2/6})$.  The angular Gram matrix is
+\[
+ G_{\rm ang}=
+ \begin{cases}
+ h e_0e_0^T+\sum_{e\in E}q_e e_{3e}e_{3e}^T,&h\geq0,\\
+ r e_0e_0^T+\sum_{e\notin J}q_e e_{3e}e_{3e}^T
+       +T(\sum_C\lambda_CA_C)T,&h<0.
+ \end{cases}                                                     \tag{16}
+\]
+It is positive semidefinite and depends only on the source.  Its
+coefficients use finite support and sign cases, positive algebraic
+roots, the unique positive solution (13), and finitely many minima.
+There is no testing-dependent coefficient choice.
+
+On $a_0a_1b_0b_1\ne0$ the homogeneous form of (10) is
+\[
+ \det P=16a_0^2a_1^2b_0^2b_1^2
+ L(a_1^2/a_0^2,b_1^2/b_0^2).
+\]
+On the nonnegative-root branch, multiplication of (11) by
+$4|a_0a_1b_0b_1|Z$ gives exactly (6), so
+$\det P\,Z^2=g^TG_{\rm ang}g$ there.
+The root-sign and endpoint statements are algebraic.  In every dyad in
+(15), the two indices are congruent coordinatewise modulo two.
+Consequently every nonzero entry of $G_{\rm ang}$ joins indices with
+the same parities.  Each product $g_\nu g_\mu$ appearing in the quadratic
+form therefore has even exponents in all four new variables.  The
+quadratic identity is unchanged by any of their sign flips.
+In each fixed Laurent identity
+set $U=(x_1/x_0)^6$, $V=(y_1/y_0)^6$ and multiply by
+$16x_0^6x_1^6y_0^6y_1^6Z^2$.  Every exponent is nonnegative, because
+each index lies in $[-3,3]^2$.  This gives a polynomial identity also
+at zero coordinates, and $x_i^6=a_i^2$, $y_i^6=b_i^2$ identify its
+right-hand side with the homogeneous determinant.  Thus every zero
+opening and projective endpoint is included without division.
+Together with (8)--(9)
+this proves the theorem with Gram matrix
+$G_{\rm state}\oplus G_{\rm ang}$.
+For a positive stationary zero of $L$, take its contact as $(U_c,V_c)$,
+$J=I$, and $r=0$; the constant angular feature is then absent.
+
+\paragraph{Independent real closed fields.}
+The Laurent lemma, including the finite support split and the
+prescriptions (13)--(16), is first-order over the reals after its
+source-side positive roots are represented by polynomial equations and
+sign conditions.
+It therefore holds over any real closed source field $K_c$ extending
+$\R$.  The Gram coefficients and the square roots of the nonnegative
+source quantities used in their dyad factorizations belong to $K_c$. Equations
+(8), (14), and the polynomial homogenization just given then hold in
+$K_c\otimes_{\R}K_t$ for an independent real closed testing extension
+$K_t$ of $\R$.
+The resulting tensor roots use exactly the fixed testing functions (7);
+no source-dependent testing radical or bounded-residue choice occurs.
+
+\begin{corollary}[Exact quartic pullback, with both inclusions]
+Among canonical tuples with $d$ and all eight event weights nonnegative,
+physical Bell validity is
+equivalent to membership of $(\det H)F$ in the fixed Gram cone (7).
+Consequently the canonical valid-slack cone is the inverse image of a
+fixed rational Gram cone under an explicit homogeneous quartic
+coefficient map.
+\end{corollary}
+
+\begin{proof}
+The theorem proves the forward implication.  Conversely, a Gram
+representation makes $(\det H)F$ nonnegative at every test.  If $d>0$,
+the signed-core part of the affine $Z=0$ block is
+\[
+ 2d\{(uW+uvX-Y)^2+(1+u^2)v^2Y^2+(1+v^2)X^2\}.
+\]
+It is strictly positive for every nonzero $(W,X,Y)$ when $uv\ne0$;
+hence $\det H>0$ on a dense open set of tests.  There $F\geq0$, and
+continuity extends the inequality to every projective test.  If $d=0$,
+the original parent (3) is already a sum of nonnegative event squares.
+The Jordan block reduction for two binary measurements, proved in
+Chapter~2 of the companion, reduces general tests to two-dimensional
+blocks.  Local basis choices place each pair in the real plane used
+here.  Since $P$ is real, its value on a complex state is the sum of
+its values on the real and imaginary parts.  Thus the displayed
+real-state tests establish validity on the full quantum set.
+Finally $H$ and $F$ are linear in the source, so $(\det H)F$ has source
+degree four.  Every testing function in (7) is a polynomial with
+rational coefficients on (1), so all Gram product equations are
+rational and finite.
+\end{proof}
+
+
+\section{The rational pencil}
+
+All data in this section are evaluated over $\mathbb Q$ in the accompanying
+JSON files.  Reduce polynomial feature products by the six monic rules
+\[
+\begin{gathered}
+a_0^2=1-x_1^6,\quad a_1^2=x_1^6,\quad
+b_0^2=1-y_1^6,\quad b_1^2=y_1^6,\\
+x_0^6=1-x_1^6,\qquad y_0^6=1-y_1^6.
+\end{gathered}                                                    \tag{17}
+\]
+Their leading monomials are pairwise coprime, so they form a monic
+Gr\"obner basis for the angle-cover equations.  Every feature product
+is homogeneous quadratic in the state; its vanishing on $S^3$ is
+equivalent to its vanishing on every state.  No state-sphere reduction
+is needed.  These normal forms introduce no spurious functional
+identities: the real sign sheets over the open arcs of the two Fermat
+curves are Zariski dense.  Equivalently, sign averaging separates the
+four half-angle parities, and the remaining reduced polynomials vanish
+only when all their coefficients vanish on the two curves.
+
+The 189 indexed functions have 175 distinct normal-form monomials and
+coefficient rank 104: 83 polynomial functions and 21 angular functions.
+The exported 104-column basis and its exact rational reconstruction
+matrix express every indexed function in that basis.  In the 28 state
+blocks of (9), two blocks vanish, 22 have function rank four, and four
+have rank six.  Congruence by their exported rational basis maps gives
+the fixed structured Gram cone with block orders
+\[
+       \underbrace{4,\ldots,4}_{22},\quad
+       \underbrace{6,\ldots,6}_{4},\quad21.             \tag{18}
+\]
+Its total order is $133$ and it has $535$ symmetric Gram coordinates.
+The exact source blocks are pushed forward by the same congruences;
+positivity and every represented polynomial are preserved.
+
+Let $z\in\R^{535}$ be those upper-triangular Gram coordinates.  With
+off-diagonal products counted twice, the evaluated product matrix is
+\[
+       \mathcal A\in\mathbb Z^{261\times535},\qquad
+       \operatorname{rank}\mathcal A=189.              \tag{19}
+\]
+It has 5653 nonzero entries.  Choose the 189 pivot rows $J$ and pivot
+columns $P$ recorded in the export, and let $K$ denote the other 346
+columns.  Put $B=\mathcal A_{J,P}$.  All coefficient equations are
+eliminated exactly by
+\[
+ z_K=t,\qquad z_P=B^{-1}y-B^{-1}\mathcal A_{J,K}t.       \tag{20}
+\]
+Inserting (20) into the block matrices (18) gives an actual rational
+pencil $\mathcal L(y,t)$ of order 133, with 189 visible coefficient
+variables, 346 free Gram variables, and 6079 nonzero upper-triangle
+coefficient records.  The export includes the coefficient reconstruction
+$\mathcal A_{:,P}B^{-1}y$, so all 261 product equations are specified,
+including their 72 linear dependencies.  Conversely, every feasible
+Gram tuple is represented by (20), because its $K$ coordinates are free
+and $B$ is invertible.  Thus this pencil describes the structured Gram
+cone exactly, in both directions.
+
+For a canonical source $c=(d,\lambda,n,m,C,A,D,\alpha,\beta)$, let
+\[
+ y(c)=\operatorname{coeff}_{J}\bigl((\det H_c)F_c\bigr).
+                                                               \tag{21}
+\]
+The evaluated map (21) has 7472 rational monomial records, all of
+homogeneous source degree four.  It is obtained from (9), with the
+angular target initially represented by the diagonal entries $h,q_e$;
+this initial diagonal representation is an identity, not a claim that
+$h$ is nonnegative.  The circuit construction supplies a positive Gram
+when the source is valid.  The preceding theorem and its reverse
+implication give the exact statement
+\[
+\boxed{\quad c\geq0:\quad
+ F_c\text{ is quantum-valid}\quad\Longleftrightarrow\quad
+ \exists t\in\R^{346}\;\mathcal L(y(c),t)\succeq0.\quad}           \tag{22}
+\]
+For a fixed source, (22) is finite semidefinite feasibility.  The input
+$y(c)$ is quartic.  Treating its monomials as free lift variables would
+drop their defining relations and would not preserve (22).  In
+particular, the 189 coefficient variables are not the eight quantum
+expectations.  Formula (22) is an exact polynomial pullback of a
+spectrahedral shadow, not an affine lift of $Q_{222}$.
+
+\section{Removing the determinant multiplier}
+
+The source-dependent multiplier in (8) cannot simply be removed by a
+fixed finite family of exact inverse or whitening factors, even on
+compact regions with uniform positive reserve.  Here is a physical
+example.
+
+Take $d=1$, $\lambda=n=m=C=\alpha=\beta=1$, $D=2$, and $A=a\in[1,2]$.
+For the CHSH convention $S=E_{00}-E_{01}+E_{10}+E_{11}$, the sum of the
+eight losing event probabilities is $2-S/2$.  Hence this Bell slack is
+\[
+ f_a=9-\frac52S+4(a-1)p_A+4p_D
+                    \geq9-5\sqrt2>\frac32.             \tag{23}
+\]
+The inequality follows directly from $S^2=4I+[A_0,A_1]\otimes[B_0,B_1]$
+and $\|[A_0,A_1]\|,\|[B_0,B_1]\|\leq2$.
+Thus every source in this compact family is strictly quantum valid.
+
+At the noncommuting affine tests $u=1$ and $v\in[1/2,1]$, its $Z=0$
+block is exactly
+\[
+ H_a(v)=\begin{pmatrix}
+ 8v^2+22&14v&-14\\
+ 14v&32v^2+18&-14v\\
+ -14&-14v&8a(1+v^2)+20v^2+14
+ \end{pmatrix}.                                           \tag{24}
+\]
+In particular $\frac{15}{4}I\preceq H_a(v)\preceq94I$ throughout this
+compact source--test rectangle.  The lower bound follows from (23) and
+$F=2(1+v^2)\|\psi\|^2f$; the upper bound follows from the absolute row
+sums of (24).  Direct evaluation gives
+\[
+ (H_a(v)^{-1})_{YY}=
+ \frac{1}{8(1+v^2)(a+r(v))},\qquad
+ r(v)=\frac{320v^4+621v^2+126}{2(1+v^2)(64v^2+99)}.       \tag{25}
+\]
+The rational function $r$ is nonconstant; for example,
+$r(1/2)=241/230$ and $r(1)=1067/652$.
+
+\begin{proposition}[Rank-one inverse obstruction]
+For any distinct $a_1,\ldots,a_N\in[1,2]$, the functions
+$(H_{a_j}^{-1})_{YY}$ are linearly independent on $[1/2,1]$.
+Consequently no finite-dimensional real space of testing functions
+can provide exact inverse Gram factors $H_a^{-1}=B_aB_a^T$ for every
+$a\in[1,2]$.  In particular no such space supports square invertible
+exact whitening matrices $C_a^TH_aC_a=I$ for this family.
+\end{proposition}
+
+\begin{proof}
+After multiplication by $8(1+v^2)$, a dependence would have the form
+$\sum_jc_j/(a_j+r(v))=0$.  Multiplying denominators produces a
+polynomial $Q(r(v))=0$.  Since a nonconstant rational function takes
+infinitely many values on an interval, $Q=0$.  Evaluating $Q(-a_j)$
+then gives $c_j\prod_{k\ne j}(a_k-a_j)=0$, so every $c_j=0$.
+If all entries of all $B_a$ belonged to a fixed finite space $V$, every
+entry of $B_aB_a^T$ would belong to the finite-dimensional product span
+$\operatorname{span}\{vw:v,w\in V\}$, contradicting this independence.
+Finally $C_a^TH_aC_a=I$ with $C_a$ square invertible implies
+$H_a^{-1}=C_aC_a^T$.
+\end{proof}
+
+This proposition rules out that exact-whitening construction.  It does
+not rule out other fixed Gram representations of the original slack,
+and it is not an obstruction to the existence of a finite lift of the
+quantum set.  In fact, the example itself has a fixed unmultiplied
+certificate: with $T_0=A_0-(B_0-B_1)/\sqrt2$ and
+$T_1=A_1-(B_0+B_1)/\sqrt2$, the identity
+$T_0^2+T_1^2=\sqrt2(2\sqrt2I-S)$ gives
+\[
+ 9I-\tfrac52S=(9-5\sqrt2)I+
+                 \tfrac5{2\sqrt2}(T_0^2+T_1^2).
+\]
+Its two additional event terms are already positive squares.
+The precise unfinished step is to obtain a source-independent
+finite Gram cone for $F$ itself from an identity such as (8), without
+dividing by the mixed source--testing function $\det H$ or introducing
+source-dependent testing functions.  At some zero-weight boundary
+sources the multiplier also vanishes at commuting tests; the continuous
+identity proved above does not turn that zero into an unmultiplied
+certificate.
+\end{document}

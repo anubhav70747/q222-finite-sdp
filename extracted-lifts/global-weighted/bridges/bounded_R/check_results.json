@@ -1,0 +1,71 @@
+{
+  "status": "all exact checks passed",
+  "scope": "new bounded-R estimates only; no pencil reassembly or global adequacy claim",
+  "constants": {
+    "B": "1+R",
+    "epsilon_R": "1/(1099511627776*B**8)",
+    "delta_R": "1/(1048576*B**2)"
+  },
+  "positive_testing_support": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      4,
+      1
+    ]
+  ],
+  "positive_majorant_mass": "1480*B**2 + 887*B/2 + 364",
+  "positive_220_majorant_mass": "1480*B**2 + 943*B/2 + 364",
+  "positive_matrix_envelope": "2048*B**2",
+  "constant_error_max": "1/2048",
+  "reserve_upper_bound": "7/512",
+  "nonpositive_matrix_envelope": "128*B**2",
+  "nonpositive_scaled_coefficient_bound": "1/8192",
+  "Fx_coefficient_mass": 37,
+  "Fx_z_degree": 3,
+  "p_minus_l_quotient_coefficient_mass": 18,
+  "p_minus_l_quotient_z_degree": 2,
+  "dG_guard_cleared_numerator": "16*B**2*eps**2 - 64*B**2*eps + 6*B*eps**2 - 14*B*eps - eps + 1",
+  "principal_minor_path": {
+    "r": "1/2",
+    "b": "1/(2*z)",
+    "sigma": "t",
+    "x": "t**2",
+    "h": "(z+1/2)*t"
+  },
+  "path_D_numerator_remainder_mass": 19,
+  "path_beta_over_t2_limit": "(z + 1/2)*(z + 1)/2",
+  "path_D_over_t2_limit": "z/2 + 1/4",
+  "path_lambda_over_t_limit": "4*(z + 1/2)**2",
+  "path_Nx_Gamma_minor_limit": "-uu**2*(2*z + 1) + 2",
+  "evaluated_rational_obstruction": "fixed_delta_obstruction.json",
+  "evaluated_obstruction_sqrt_u": "2^-20",
+  "evaluated_obstruction_z": "38685626227668133590597632",
+  "evaluated_obstruction_determinant_sign": -1
+}
