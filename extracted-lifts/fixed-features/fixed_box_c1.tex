@@ -1,0 +1,1095 @@
+\documentclass[11pt]{article}
+\usepackage[margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs,hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\R}{\mathbb R}
+\newcommand{\eps}{\varepsilon}
+\allowdisplaybreaks
+\title{Fixed testing functions at singular C1 contacts}
+\author{}\date{23 October 2026}
+\begin{document}\maketitle
+
+A finite semidefinite construction needs testing functions that remain
+fixed as the supporting Bell inequality varies. We construct such a space
+for the reciprocal C1 contact family on an explicit source and testing
+rectangle. The ratio $H=h/\sigma$ is unrestricted, and either event
+weight $D$ or $\beta$ may vanish.
+
+Two identities control the state couplings through the sum of complementary
+source weights. They give a fixed positive diagonal Gram matrix with
+uniformly small corrections. We then separate its source and testing
+coefficients by one scalar identity. Including every retained square gives
+220 testing functions for $\lambda>0$ and 157 for $\lambda\le0$.
+Their union therefore supplies at most 377 functions for the complete
+real-state parent on this rectangle. The other source domains and
+projective testing charts remain necessary for a global pencil.
+
+\section{The rectangle and source formulas}
+
+Fix the rational constants
+\[
+ \eps=2^{-160},\qquad \delta=2^{-100},\qquad
+ c_0=2^{-8},\qquad A_*=2^{30},\qquad
+ \gamma={c_0\over7A_*}={1\over7\,2^{38}}.
+\]
+The source domain consists of
+\[
+ 0<x,\sigma\le\eps,\quad 0<z\le1,\quad 0<b<1,
+ \quad r=bz<1,\quad 0<h<1,
+\]
+with the original strict gaps and the two nonnegative event
+coefficients specified below. Set
+\[
+ Q=1-b,\quad \theta=1-h,\quad H=h/\sigma,\quad e=xh/\sigma,
+ \quad E=1-e>0,\quad k=\sqrt x,\quad q=\sqrt z,
+\]
+\[
+ K=1+x,\quad R_s=1+xr,\quad M=R_s-xz\theta>0,
+ \quad J=1+xh-\sigma(1-r)>0,
+\]
+\[
+ P=\sigma+K+\sigma z(1+bx+2xh)
+                  +\sigma bx^2hz^2+x^2h\theta z,
+\]
+\[
+\begin{gathered}
+ p={z(1+xh)E+(1-r)(1+xhz)\over2P},\qquad
+ l={(1+\sigma r)\{eR_s(1+\sigma z)+ME\}\over2P},\\
+ \kappa={K(1+\sigma r)(1+\sigma z)\over2MP}.
+\end{gathered}
+\]
+The original coefficients are
+\[
+\begin{gathered}
+ m=\kappa x^2zH=\kappa xze,\qquad
+ C={Kz(1+\sigma r)E\over2(1-r)P},\\
+ A=p/r,\quad \alpha=l/(zQ),\quad a=p/b,\quad \ell=l/Q,\\
+ D={K(1+\sigma z)(1+\sigma r)-JP\over2JP}\ge0,\qquad
+ \beta={K(1+\sigma r)(1+xhz)-\theta P\over2\theta P}\ge0.
+\end{gathered}
+\]
+Here $H$ has no upper bound. Neither $b$, $Q$, $\theta$, $1-r$,
+nor $z$ is bounded below. The testing rectangle is independently
+\[
+                  0\le u,w\le\delta.
+\]
+For signed angles $u_s,w_s$, set
+$\alpha_s=\operatorname{sgn}(u_s)$ and
+$\beta_s=\operatorname{sgn}(w_s)$, choosing the value $1$ at zero.
+The exact testing gauge is
+\[
+ (u,w,X,Y,Z,W)=(|u_s|,|w_s|,\beta_sX_s,\alpha_sY_s,
+                                \alpha_s\beta_sZ_s,W_s).
+\]
+It preserves the parent polynomial. Composing every testing function
+below with this one fixed piecewise semialgebraic map extends the
+same feature count to $|u_s|,|w_s|\le\delta$; no square root of a
+negative angle is taken. State coordinates $X,Y,Z,W$ are unrestricted
+real numbers; no state ratio is bounded.
+
+Define
+\[
+ H_0=1+zQ,\quad B_s=P+xz(J-\sigma),
+\]
+\[
+ \mathcal H=R_sH_0+z\{(1-r)xh(2+xr)
+ -e[2+x(1+h+r\theta)]+Ke^2\}.
+\]
+Two exact source identities, obtained by multiplication, are
+\begin{align}
+ 2\theta P\beta&=hB_s-\sigma H_0,\label{eq:BE3}\\
+ 2P(JD+x\theta\beta)&=\sigma^2\mathcal H.\label{eq:BE4}
+\end{align}
+The angular quantities used below are
+\[
+\begin{gathered}
+ \nu=(2D-2\beta\theta+h)/\sigma,\quad
+ \lambda=(8Dh+4\beta\theta^2+2h^2)/\sigma-4bp\sigma z>0,\\
+ K_A=4\kappa H-\lambda,\quad d_G=4D/\sigma^2,
+ \quad \rho=\lambda x/\sigma,\quad S=d_G+\rho,\\
+ L_0=\lambda\sigma,\quad q_0=\lambda k,\quad
+ c=\max(0,1-K_A),\quad a_0=k/\sigma.
+\end{gathered}
+\]
+The letter $q_0$ here is a source quantity, not the constant
+coefficient of a later scalar channel.
+
+The complete reciprocal parent being certified is
+\[
+\begin{split}
+ F_w={}&4m(W-wX+uY-uwZ)^2+4C(1+w^2)(uW-Y)^2\\
+ &+4A(1+u^2)(1+w^2)Y^2
+ +(4D+2)(uwW+uX-wY-Z)^2\\
+ &+(4\alpha+2)(1+u^2)(Y-wZ)^2
+ +(4\beta+2)(1+w^2)(X+uZ)^2\\
+ &-2(1+u^2)(1+w^2)Z^2.
+\end{split}
+\]
+All four state coordinates occur; they need not be normalized.
+
+\section{Uniform source bounds, without an upper bound on $H$}
+
+All inequalities in this section follow under the larger condition
+$\eps\le2^{-22}$, so in particular on the chosen rectangle.
+Directly from the positive formula for $P$ and the definitions,
+\[
+ 1\le P\le1+5\eps,\quad |J-1|,|M-1|\le\eps,
+ \quad 1\le B_s\le1+7\eps,\quad 1\le H_0\le2.
+\]
+Initially $0<e<1$ gives $0\le\mathcal H\le4$: nonnegativity
+uses \eqref{eq:BE4}. Eliminate $\beta$ to obtain
+\[
+ eB_s=xH_0+\sigma\mathcal H-2PJD/\sigma.
+\]
+Consequently
+\begin{equation}\label{eq:basic-bounds}
+ e\le2x+4\sigma\le6\eps,\qquad
+ |\mathcal H-H_0|\le32\eps,\qquad
+ 0\le D\le4\sigma^2,\quad 0\le\beta\theta\le1.
+\end{equation}
+For example, in $\mathcal H-H_0$ the terms are bounded by
+$2\eps+3\eps+3e+2e^2$, which is at most $32\eps$ here.
+The same positive formulas give
+\begin{equation}\label{eq:p-bounds}
+ |p-H_0/2|\le16\eps,\quad |l-1/2|\le8\eps,
+ \quad 1/4\le p,l,\kappa\le2,
+ \quad \kappa\le1,\quad m\le6\eps^2,
+ \quad C(1-r)\le1.
+\end{equation}
+In particular $4a,4\ell\ge1$. The unbounded positive coefficients
+$a,\ell,C$ will be retained in whole squares and will not be
+estimated separately.
+
+Exact rearrangement gives
+\[
+ \nu=2D/\sigma+[H_0-ez(J-\sigma)]/P,
+\]
+\[
+ \lambda=2H+2e\theta z(J-\sigma)/P
+                  -2\theta H_0/P+8Dh/\sigma-4bp\sigma z.
+\]
+Thus
+\begin{equation}\label{eq:lambda-bounds}
+ |\nu|\le3,\qquad |\lambda-2H|\le5,
+ \qquad |L_0-2h|\le8\sigma.
+\end{equation}
+
+For completeness, the cancellation needed when $H$ is large is
+polynomial. Write
+\[
+ N_\kappa=K(1+\sigma r)(1+\sigma z)-MP=xF_x+\sigma F_\sigma.
+\]
+Here $F_\sigma=r-1+\sigma rz$, and $F_x$ is the polynomial
+$(N_\kappa-N_\kappa|_{x=0})/x$. Its coefficient $\ell^1$ norm
+in $(x,\sigma,z,b,h,r)$ is $37$, as can also be checked by
+expanding the displayed product. Since all six arguments lie in
+$[0,1]$,
+\[
+ H(2\kappa-1)={eF_x+hF_\sigma\over MP},\qquad
+ |H(2\kappa-1)-h(r-1)|\le462\eps.
+\]
+The estimate $|MP-1|\le8\eps$ suffices for the second inequality.
+Combining this with \eqref{eq:lambda-bounds} more precisely yields
+\begin{equation}\label{eq:KA-bounds}
+ |K_A-\{2\theta H_0-2h(1-r)\}|\le2^{12}\eps,
+ \qquad |K_A|\le5,\quad 0\le c\le6.
+\end{equation}
+If $c>0$, then $h\ge1/8$: for $h<1/8$ the expression in braces
+is at least $3/2$, whereas the error is less than $1/4$.
+The earlier elimination identity also gives
+\[
+ a_0^2(hB_s-\sigma H_0)\le\mathcal H.
+\]
+Therefore, whenever $c>0$,
+\begin{equation}\label{eq:c-positive}
+ a_0\le8,\qquad L_0\ge1/8,\qquad
+ 1/\lambda\le8\sigma.
+\end{equation}
+Every term below containing $a_0$ or $1/\lambda$ from the angular
+subtraction is multiplied by $c$. On $c=0$ that subtraction is
+identically zero; no uniform estimate on those unused factors is
+required.
+
+Put
+\[
+ R_0=-4\{2(C+D)(r-1)+2p+r-1\}.
+\]
+The positive expression for $C(1-r)$ and the formula for $p$ give
+$|R_0|\le256(x+\sigma)\le512\eps$. Since
+\[
+ (x+\sigma)^2H=xe+2\sigma e+\sigma h\le2\eps,
+\]
+\eqref{eq:lambda-bounds} further gives
+\begin{equation}\label{eq:R0-bounds}
+ |R_0|\sqrt\lambda\le1024\sqrt\eps.
+\end{equation}
+Finally the exact identity
+\[
+ S={2\mathcal H\over P}+d_G(1-J+2hx)
+       +{2eH_0\over P}-{2e^2z(J-\sigma)\over P}-4bpxz
+\]
+shows
+\begin{equation}\label{eq:S-bounds}
+ |S-2H_0|\le256\eps,\qquad
+ 1\le S\le5,\quad 0\le d_G,\rho\le5,
+ \quad 0<L_0\le3,\quad 0<q_0\le4.
+\end{equation}
+Here $q_0^2=L_0\rho$; all bounds use $\lambda>0$ but no lower
+bound on $\lambda$ or upper bound on $H$.
+
+\section{A finite formula for the main Gram}
+
+The state roots are
+\[
+\begin{gathered}
+ N_x=X+uhZ,\quad N_y=(Y-bwZ)/q,\quad
+ R=wZ/q-uqW,\quad \Gamma=\sigma Z-uwW,\\
+ A_\theta=q(u^2-x)W,\quad T_\theta=kq(u-k)W,
+ \quad J_C=N_y+bR,\quad J_\ell=N_y-QR,\quad
+ \Gamma_*=\sqrt{d_G}\Gamma.
+\end{gathered}
+\]
+Let
+\[
+ B_1=\sqrt{\lambda\sigma}\,uZ,\quad
+ B_2=\sqrt\rho\,uwW,\quad
+ B_3=\sqrt\lambda\,xqW,\quad
+ B_4=\sqrt{\lambda x}\,wZ/q.
+\]
+When $WZ>0$, put
+$G_*=\operatorname{sgn}(W)(B_1B_2B_3B_4)^{1/4}$ and
+$d_i=B_i-G_*$. This is the positive-state convention followed,
+when necessary, by changing the signs of all roots together.
+When $WZ\le0$
+put $d_i=B_i$. Equivalently, for every state,
+\[
+ G_*=\sqrt{\lambda x}\,\operatorname{sgn}(W)
+                \sqrt{uw\max(WZ,0)},\qquad d_i=B_i-G_*.
+\]
+Define
+\[
+ U_*=\sqrt{q_0}\sqrt u\,q(u-k)W,
+ \qquad K_*=\sqrt{q_0}\sqrt k\,q(u-k)W.
+\]
+Use the twelve-root column
+\[
+ g=(N_x,J_C,J_\ell,\Gamma_*,A_\theta,T_\theta,
+                         d_1,d_2,d_3,d_4,U_*,K_*)^{\mathsf T}.
+\]
+The two radial changes are source-only and uniformly bounded:
+\[
+ R=J_C-J_\ell,\qquad N_y=QJ_C+bJ_\ell.
+\]
+Set
+\[
+ D_*={\rm diag}(2,1,1,1,1/2,1/2,1/2,1/2,1/2,1/2,1,1/2).
+\]
+We now define a polynomial quadratic form $\mathcal E(g)$, which
+fully specifies the correction matrix; a cross term is divided by
+two when placed in its two symmetric entries.
+
+For its coefficients put $t=u^2$, $\xi=w^2$, $g_s=h-Q$ and
+\[
+\begin{gathered}
+ R_x=-4\{2Db+(1+2m)g_s-2\beta\theta\},\quad B_x=8\kappa e,\\
+ A_y=8(p-l)+4z\{(1+2m)g_s+2Dh+2p\sigma\},\\
+ \chi=8(pb+lQ)-4h+4eh(2D+1)-8Dh\\
+ \hspace{12mm}+4z\{4Dbh+4pb\sigma+(1+2m)g_s^2+2\beta\theta^2\},\\
+ k_1=2(1+2m)g_s^2+8Dhb+8pb\sigma+4\beta\theta^2.
+\end{gathered}
+\]
+Then
+\[
+\begin{split}
+ E_{yy}&=2z\{(1+2m)u^2+(1+2D)w^2\},\\
+ E_{RR}&=z\{8bD+8bp\sigma+4b\sigma(2C+2D+1)(r-1)
+                                  +k_1u^2+2b^2(2D+1)w^2\},\\
+ E_{yR}&=4z\{u^2[2Dh+2p\sigma+(1+2m)g_s]+b(2D+1)w^2\\
+ &\hspace{25mm}+\sigma(2C+1)(r-1)+2D[1+\sigma(r-1)]+2p\sigma\}.
+\end{split}
+\]
+The entire first normal is represented by the linear form
+\[
+ F_1={\sqrt{d_G}\over S}u\Gamma_*
+ +{\sqrt\rho\over S}\{kd_1-ud_2+(u-k)d_3\}
+                         -{\rho\over S}\sqrt\sigma T_\theta.
+\]
+The entire second normal is represented by
+\[
+\begin{split}
+ F_2={}&{R_0\sqrt{d_G}\over S}qw\Gamma_*
+ +{R_0\rho\sigma z\over S}R
+ -{R_0\sqrt\rho\over S}(qw+z\sqrt\sigma)(d_2-d_3)\\
+ &+\left\{{R_0q_0z\over S}
+       +{R_0\sqrt\lambda\sqrt\rho\over S}qw\right\}T_\theta
+                                          -8pquwF_1.
+\end{split}
+\]
+These are exact identities $F_1=u\Gamma$ and
+$F_2=qw(R_0-8pu^2)\Gamma$. In particular they keep both complete
+state-normal couplings, not only their contact restrictions.
+
+Write
+\[
+ \eps_C=2/\lambda+u+k,\qquad
+ \eps_G=2a_0u+(u+k)/L_0.
+\]
+The correction is exactly
+\begin{align*}
+ \mathcal E={}&E_{yy}N_y^2+E_{RR}R^2+E_{yR}N_yR
+                  -4\nu N_xF_1+J_CF_2\\
+ &-4uqw(2m+2D+1)N_xN_y+uqwR_xN_xR
+                 +qwB_xN_xA_\theta+uA_yN_yA_\theta+\chi uA_\theta R\\
+ &-\tfrac12\rho\sigma R^2+\sqrt{q_0}\sqrt u\,U_*R
+       -{cd_G\over S}\eps_C\sum_{i=1}^4d_i^2
+       -{cd_G\over S}u^2R^2-{c\over S}\eps_G\Gamma_*^2\\
+ &-{c\over S}\{\sqrt{a_0u}\,U_*+\sqrt{a_0k}\,K_*\}^2.
+\end{align*}
+Define $G$ by
+$g^{\mathsf T}Gg=g^{\mathsf T}D_*g+\mathcal E$.
+This is the actual main Gram after retaining the positive excess
+of the $N_x,J_C,J_\ell$ squares, splitting $K_A+c\ge1$ equally
+between $A_\theta,T_\theta$, and retaining their nonnegative
+difference. The averaged circuit identity and angular identity
+used in this step are precisely those of the printed all-$H$
+proof at
+\href{https://github.com/anubhav70747/q222-finite-sdp/blob/0c1ce2e15ed067a6845464e2468559cea5274f2c/latex/certificates/c1_short.tex#L7550-L7740}
+{lines 7550--7740}. This definition therefore prints every main-Gram
+entry through one quadratic polynomial instead of twelve rows of
+expanded rational functions.
+
+\section{Rational coefficient bounds and fixed radicals}
+
+Put $v=\sqrt u$. Every entry of $G-D_*$ is a polynomial in
+$(v,w)$, with source coefficients, supported on
+\[
+ \{1,w,w^2,v,v^2,v^2w,v^4,v^4w\}
+ \subset\{v^\alpha w^\beta:0\le\alpha\le4,0\le\beta\le2\}.
+\]
+The following elementary bounds provide a reproducible coefficient
+estimate:
+\[
+ |R_x|,|A_y|\le32,\quad |\chi|\le64,\quad
+ |B_x|\le48\eps,\quad |k_1|\le16.
+\]
+The coefficients of $E_{yy}$ on $(u^2,w^2)$ are bounded by $(4,4)$;
+those of $E_{RR}$ on $(1,u^2,w^2)$ by $(64\sigma,16,4)$;
+those of $E_{yR}$ by $(32\sigma,12,8)$.
+These follow term by term from \eqref{eq:basic-bounds}--\eqref{eq:p-bounds};
+in the constant terms use $C(r-1)$, never $C$ separately.
+
+Here is a single positive-coefficient majorant which verifies
+all remaining estimates. In it $s=\sqrt\eps$, all twelve root
+letters are formal nonnegative indeterminates, and
+$n=r'=J_C+J_\ell$. Define
+\[
+ f_1=u\Gamma_*+sd_1+ud_2+(u+s)d_3+sT_\theta,
+\]
+\[
+\begin{split}
+ f_2={}&512s^2w\Gamma_*+512s^4r'
+  +512s^2(w+s)(d_2+d_3)\\
+ &+(2048s^2+1024sw)T_\theta+16uwf_1.
+\end{split}
+\]
+The absolute coefficient polynomial of $\mathcal E$ is bounded by
+\begin{align*}
+ \mathcal Q={}&(4u^2+4w^2)n^2
+ +(64s^2+16u^2+4w^2)r'^2
+ +(32s^2+12u^2+8w^2)nr'\\
+ &+12N_xf_1+J_Cf_2+16uwN_xn+32uwN_xr'
+      +48s^2wN_xA_\theta+32unA_\theta+64uA_\theta r'\\
+ &+\tfrac52s^2r'^2+2vU_*r'
+      +6(16s^2+u+s)\sum_i d_i^2+6u^2r'^2
+      +(144u+48s)\Gamma_*^2\\
+ &+48uU_*^2+96vU_*K_*+48sK_*^2.
+\end{align*}
+Indeed \eqref{eq:S-bounds} bounds $\sqrt{d_G}/S$, $\sqrt\rho/S$,
+$d_G/S$, $\rho/S$ by one, while \eqref{eq:c-positive} gives
+$\eps_C\le16\sigma+u+k$ and $\eps_G\le24u+8k$ when needed.
+The two small coefficients in $F_2$ use
+$|R_0q_0|\le2048\eps$ and \eqref{eq:R0-bounds}.
+
+Expansion, or simply evaluation at one of this positive-coefficient
+polynomial, gives coefficient $\ell^1$ norm $8590$. Its constant
+testing part has norm $5030$ and every term of that part is
+divisible by $s$. Consequently every source coefficient of every
+nonconstant testing monomial in $G$ has absolute value below
+$2^{20}$, and the source matrix $G(0,0)$ satisfies
+\begin{equation}\label{eq:matrixbounds}
+ |G_{ij}(0,0)-(D_*)_{ij}|\le2^{20}\sqrt\eps=2^{-60}.
+\end{equation}
+These estimates hold before any ordering of the tensor product is
+assumed. They bound pure-source coefficients in their own field.
+
+For $r=12$ the following exact quadratic-form decomposition uses
+only fixed directions:
+\[
+\begin{split}
+ G={}&\sum_i\left(G_{ii}-{11\over48}\right)e_ie_i^{\mathsf T}\\
+ &+\sum_{i<j}{1/48+G_{ij}\over2}(e_i+e_j)(e_i+e_j)^{\mathsf T}\\
+ &+\sum_{i<j}{1/48-G_{ij}\over2}(e_i-e_j)(e_i-e_j)^{\mathsf T}.
+\end{split}
+\]
+Write each of its $144$ scalar channels as
+\[
+ q(c,t)=q^{(0)}(c)+\sum_{j=1}^{7}a_j(c)b_j(t),
+\]
+where $b_j$ run through the seven nonconstant monomials
+in the displayed support. By \eqref{eq:matrixbounds}, for every
+channel
+\[
+ q^{(0)}\ge c_0=1/256,\qquad |a_j|\le A_*=2^{30}.
+\]
+In fact the off-diagonal channels have constant term at least
+$1/96-2^{-61}$ and the diagonal ones at least $13/48-2^{-60}$.
+On the independent testing rectangle,
+$0\le b_j\le\sqrt\delta=2^{-50}<\gamma$.
+Hence the exact separated identity
+\[
+ q=(q^{(0)}-c_0)+\frac12\sum_{j=1}^{7}
+ \bigl[(A_*+a_j)(\gamma+b_j)+(A_*-a_j)(\gamma-b_j)\bigr]
+\]
+has nonnegative factors in their own labelled fields. It proves
+the required tensor SOS without an appeal to entrywise positivity
+in a tensor ring or to a point-dependent real congruence.
+
+All twelve roots are source-linear combinations of the fixed
+testing functions
+\[
+ \mathcal V=\{X,Y,Z,W,uZ,wZ,uW,uwW,u^2W,
+                u^{3/2}W,u^{1/2}W,
+                  \operatorname{sgn}(W)\sqrt{uw\max(WZ,0)}\}.
+\]
+The last function includes both state-sign cases and is zero
+when $WZ\le0$. Changing all state signs changes all twelve roots'
+signs and preserves the quadratic form.
+Therefore a fixed main-Gram dictionary is
+\[
+ \mathcal V\ \cup\ \{f\sqrt{\gamma+b_j},f\sqrt{\gamma-b_j}:
+                         f\in\mathcal V,\ 1\le j\le7\}.
+\]
+It has $180$ displayed functions. All radicals are testing-only;
+the remaining coefficients are source-only square roots. The retained
+positive squares are included explicitly below.
+
+\section{The two zero faces are present, and $H$ is unrestricted}
+
+No inverse of $D$, $\beta$, $b$, $Q$ or a state coordinate was used
+in the coefficient estimates or Gram decomposition. At $D=0$
+the root $\Gamma_*$ is zero and all formulas remain literal.
+At $\beta=0$ the same formulas apply. Testing axes are included.
+The denominators $S,M,P,J,\sigma,k$ used above are nonzero on
+the stated source domain; their potentially dangerous combinations
+were bounded explicitly rather than omitted on a boundary.
+
+For explicit nonemptiness set $x=\sigma=t$, $z=1$, $b=1/2$,
+$h=Ht$, with $0<t\le\eps$. The numerators $D_N=2JPD$ and
+$\beta_N=2\theta P\beta$ are exactly
+\[
+\begin{split}
+ D_N={}&(3-H)t^2+(3/4-6H)t^3+(H^2+H/2)t^4\\
+       &+(-7H^2/2+H/4)t^5+(H^3-H^2/2)t^6,\\
+ \beta_N={}&(H-3/2)t+4Ht^2-Ht^3+4H^2t^4
+                                      +(-H^3+H^2/2)t^5.
+\end{split}
+\]
+Uniformly for $1\le H\le4$, the remainders beyond the first
+terms have absolute values at most $(687/4)t^3$ and $156t^2$.
+Thus continuity gives a $\beta=0$ source with $H\in[1,2]$ and
+$D>0$, and a $D=0$ source with $H\in[2,4]$ and $\beta>0$.
+On the first face $p\le7/8$ and
+$\lambda=8DH+2(H^2-p)t\ge t/4$.
+On the second, $\beta\theta\ge t/16$, so
+$\lambda\ge1/8-4t>0$. All strict native gaps hold.
+
+Finally take $\sigma=t$, $x=t^2/16$, $z=1$, $b=1/2$, $h=3/4$.
+Then $H=3/(4t)$ is unbounded along $t\downarrow0$ and
+\[
+ D_N={-3t^2\over262144}
+ (6t^5-61t^4+608t^3-7872t^2+8192t-126976)>0,
+\]
+\[
+ \beta_N={3(3t^2+64)(2t^3+5t^2+64)\over16384}>0.
+\]
+Also $K_A=O(\eps)$ on this path by \eqref{eq:KA-bounds}, so
+$c>0$ is represented. These are singular limits inside the
+evaluated rectangle, not merely a nonsingular compact slice.
+
+
+% Include after the positive-angular main-Gram construction.
+% Requires amsmath, amssymb, amsthm and mathrsfs; theorem is already defined.
+\section{Fixed testing functions for the complete positive-angular parent}
+Retain the preceding source/testing rectangle and $\lambda>0$.
+Compose the testing functions with the angle gauge already defined, then
+multiply all four state coordinates by $\operatorname{sgn}_+(W)$,
+where $\operatorname{sgn}_+(0)=1$. Thus $W\ge0$.
+Put $Z_+=\max(Z,0)$ and $Z_-=\max(-Z,0)$. The common state sign
+preserves the quadratic parent. Every testing function below is pulled
+back through this one fixed map.
+
+\subsection{The exact whole-parent decomposition}
+
+All symbols $g,G,N_x,N_y,R,\Gamma,A_\theta,T_\theta,J_C,J_\ell$
+retain their preceding definitions.
+Set $F_A=u(Z-a_0wW)$, $X_e=X+ewW$, and
+\[
+ a_C=cd_G/S,\quad q_C^{(0)}=\tfrac12-a_C(2/\lambda+k),\quad
+ p_C=q_C^{(0)}-a_C\delta.
+\]
+The proved bounds give $0\le a_C\le6$ and $p_C>1/4$.
+The circuit remainder satisfies
+\[
+ \mathscr C=\sum_{i=1}^4d_i^2+\mathscr C_+,
+\]
+and the angular difference is
+\[
+ \Delta_A=(2/\lambda+u+k)\mathscr C+u^2R^2
+       +\{2a_0u+(u+k)/L_0\}\Gamma^2-A_\theta^2.
+\]
+The complete parent is exactly
+\begin{align*}
+ F_w={}&g^{\mathsf T}Gg+\mathcal E_+
+ +(2+4m)w^2N_x^2
+ +\{4a+2z(2C+1)-1\}J_C^2+(4\ell-1)J_\ell^2\\
+ &+\tfrac12L_0F_A^2
+ +{K_A+c-1\over2}(A_\theta^2+T_\theta^2)
+ +{K_A+c\over2}(A_\theta^2-T_\theta^2)\\
+ &+{cd_G\over S}\Delta_A
+ +\{p_C+a_C(\delta-u)\}\mathscr C_+,
+\end{align*}
+where
+\[
+\begin{split}
+ \mathcal E_+={}&4\beta(1+w^2)N_x^2+2(2D+1)(uX_e)^2
+                 +4bpzu^2\Gamma^2\\
+ &+4a(u^2+w^2+u^2w^2)J_C^2+4\ell u^2J_\ell^2
+                                             +4Czw^2J_C^2.
+\end{split}
+\]
+After the expansions below, every square coefficient outside $G$
+is nonnegative and source-only, except the explicitly separated
+testing factor $\delta-u$, which is nonnegative on the fixed
+testing rectangle. This equality
+is the full-state identity, not its restriction to a stationary
+state or a determinant. No inverse of $D$ or $\beta$ occurs.
+
+\subsection{Ordinary retained squares: seven additional functions}
+
+Let $\mathcal V$ be the twelve pre-Gram functions
+\[
+ \{X,Y,Z,W,uZ,wZ,uW,uwW,u^2W,
+                     u^{3/2}W,u^{1/2}W,\sqrt{uwWZ_+}\}.
+\]
+All ordinary retained roots are source-linear combinations of
+$\mathcal V$ and the seven functions
+\[
+                   wX,\ uwZ,\ uX,\ u^2wW,\ uY,\ wY,\ uwY.
+\]
+Here are all seventeen roots; every displayed square root of a
+coefficient is source-only:
+\[
+\begin{array}{c|l}
+\text{family}&\text{square roots}\\\hline
+\mathcal E_+&2\sqrt\beta N_x,\quad2\sqrt\beta\,wN_x,\quad
+ \sqrt{2(2D+1)}\,uX_e,\quad2\sqrt{bpz}\,u\Gamma\\
+ &2\sqrt a\,uJ_C,\quad2\sqrt a\,wJ_C,\quad2\sqrt a\,uwJ_C,\quad
+ 2\sqrt\ell\,uJ_\ell,\quad2\sqrt{Cz}\,wJ_C\\
+N_x\text{ excess}&\sqrt{2+4m}\,wN_x\\
+\text{radial excess}&\sqrt{4a+2z(2C+1)-1}\,J_C,\quad
+                              \sqrt{4\ell-1}\,J_\ell\\
+\text{averaged square}&\sqrt{L_0/2}\,F_A\\
+\text{angular excess}&\sqrt{(K_A+c-1)/2}\,A_\theta,\quad
+                       \sqrt{(K_A+c-1)/2}\,T_\theta\\
+\text{angular difference}&\sqrt{(K_A+c)/2}\,qu(u-k)W,\\
+ &\sqrt{(K_A+c)/2}\,q\sqrt{2k}\sqrt u(u-k)W.
+\end{array}
+\]
+For example $J_C=Y/q-bquW$ and
+$J_\ell=Y/q-wZ/q+QquW$, so multiplying by $u,w,uw$ adds
+exactly the stated functions. All other rows follow by substitution.
+The last two squares use
+$A_\theta^2-T_\theta^2=z(u-k)^2W^2(u^2+2uk)$.
+
+\subsection{The angular difference: nineteen functions}
+
+The following calculation clears the intermediate state ratio
+completely. Define positive source constants
+\[
+ A_u=1/k,\quad A_v=1/(\sqrt\sigma q),\quad
+ A_z=\sqrt\sigma/(kq),\quad M_0=k^2q,\quad a_*=\lambda k,
+\]
+and write $r_* =\sqrt{wW|Z|}$. Eight cleared roots are
+\[
+\begin{split}
+ f_1={}&M_0(A_uA_vA_zuw|Z|-W),\\
+ f_2={}&\sqrt2 M_0(A_vA_zw|Z|-A_uuW),\\
+ f_3={}&M_0\{(\sqrt{a_*}+1/\sqrt{a_*})A_uA_vuwW
+                   -\sqrt{a_*}A_uA_zu|Z|-A_z|Z|/\sqrt{a_*}\},\\
+ f_4={}&\sqrt{A_u}\sqrt u\,f_3,\\
+ f_5={}&\sqrt{a_*}M_0(W-A_vA_zw|Z|),\qquad
+ f_6=\sqrt{A_u}\sqrt u\,f_5,\\
+ f_7={}&\sqrt{2a_*A_vA_z}M_0(A_uu-1)r_*,\qquad
+ f_8=\sqrt{A_u}\sqrt u\,f_7.
+\end{split}
+\]
+For $Z\ge0$, $\Delta_A=\sum_{i=1}^8f_i^2$. To verify this,
+put $U=A_uu$, $V=A_vw$, $Z_*=A_z|Z|/W$, $M=M_0W$;
+the roots are $M$ times the eight roots obtained by expanding
+every $U+1$ factor in the identity
+\begin{align*}
+ &[2+a_*(U+1)]\Psi+U^2Q_*^2
+       +[2U+(U+1)/a_*]R_*^2-T_*^2\\
+ &=(T_*+UQ_*)^2+2Q_*^2
+ +(U+1)(\sqrt{a_*}U(V-Z_*)-R_*/\sqrt{a_*})^2\\
+ &\quad+a_*(U+1)(1-VZ_*)^2
+                         +2a_*(U+1)VZ_*(U-1)^2,
+\end{align*}
+where $\Psi=1+U^2V^2+U^2Z_*^2+V^2Z_*^2-4UVZ_*$,
+$Q_*=VZ_*-U$, $R_*=Z_*-UV$, and $T_*=U^2-1$.
+It is a polynomial identity by multiplication.
+
+For $Z<0$, add three squares. Put
+\[
+ C_2=4,\quad C_1=8a_*+8+4/a_*,\quad C_0=16+8a_*+4/a_*.
+\]
+Their roots are
+\[
+ M_0\sqrt{A_uA_vA_z}\,\boldsymbol1_{Z<0}
+ \bigl(\sqrt{C_2}A_u u^{3/2}r_*,\quad
+       \sqrt{C_1A_u}\,u r_*,\quad
+       \sqrt{C_0}\sqrt u\,r_*\bigr).
+\]
+Indeed changing $Z_*$ to $-Z_*$ increases the left side by
+$M^2UV|Z_*|(C_2U^2+C_1U+C_0)$. This also proves the exact
+negative-state-sector coefficients. Every displayed source
+factor is a real closed field square root in the source factor.
+
+The resulting nineteen testing functions, including overlaps
+with $\mathcal V$, are
+\[
+\begin{split}
+ \mathcal A=\{&W,uw|Z|,w|Z|,uW,uwW,u|Z|,|Z|,
+ u^{3/2}wW,u^{3/2}|Z|,\sqrt u|Z|,\sqrt uW,\sqrt u w|Z|,\\
+ &ur_*,r_*,u^{3/2}r_*,\sqrt u r_*,
+ \boldsymbol1_{Z<0}u^{3/2}r_*,
+ \boldsymbol1_{Z<0}ur_*,\boldsymbol1_{Z<0}\sqrt u r_*\}.
+\end{split}
+\]
+Multiply the eleven root formulas above by the pure-source factor
+$\sqrt{cd_G/S}$ for their contribution to $F_w$.
+Every cleared formula is defined at $W=0$ and $Z=0$. After
+substituting squares for $u,w,W,|Z|$, the identities are polynomial;
+therefore they include those literal boundaries, without a limit
+or a state-coordinate inverse in the final formulas.
+
+\subsection{The circuit remainder: fourteen functions}
+
+Set the positive source constants
+\[
+ s_1=\sqrt{\lambda\sigma},\quad s_2=\sqrt\rho,\quad
+ s_3=\sqrt\lambda\,xq,\quad s_4=\sqrt{\lambda x}/q,
+ \qquad g_0=\sqrt{\lambda x}.
+\]
+Define seven testing functions
+\[
+\begin{array}{ll}
+ t_1=u^{3/4}w^{1/4}W^{1/4}Z_+^{3/4},&
+ t_2=u^{3/4}w^{3/4}W^{3/4}Z_+^{1/4},\\
+ t_3=u^{1/4}w^{1/4}W^{3/4}Z_+^{1/4},&
+ t_4=u^{1/4}w^{3/4}W^{1/4}Z_+^{3/4},\\
+ t_5=u^{3/4}w^{1/2}W^{1/2}Z_+^{1/2},&
+ t_6=u^{1/4}w^{1/2}W^{1/2}Z_+^{1/2},\\
+ t_7=\sqrt{uwWZ_-}.&
+\end{array}
+\]
+An explicit full-sector SOS is
+\[
+ \mathscr C_+=r_1^2+r_2^2+r_3^2+r_4^2,
+\]
+\[
+\begin{gathered}
+ r_1=\sqrt{2g_0}(\sqrt{s_1}t_1-\sqrt{s_2}t_2),\quad
+ r_2=\sqrt{2g_0}(\sqrt{s_3}t_3-\sqrt{s_4}t_4),\\
+ r_3=2\sqrt{g_0}\{(s_1s_2)^{1/4}t_5-(s_3s_4)^{1/4}t_6\},
+ \qquad r_4=2\sqrt{\lambda x}\,t_7.
+\end{gathered}
+\]
+The first three roots vanish for $Z\le0$ and the last vanishes
+for $Z\ge0$. They also vanish wherever $WZ=0$. On $Z>0$ they
+are precisely the separated two-pairing four-monomial identity;
+on $Z<0$ the remainder is $4\lambda xuwWZ_-$.
+
+There is no point-dependent scalar reserve at this step:
+\[
+ (p_C+a_C(\delta-u))\mathscr C_+
+      =\sum_{j=1}^4(\sqrt{p_C}r_j)^2
+        +\sum_{j=1}^4(\sqrt{a_C}\sqrt{\delta-u}\,r_j)^2.
+\]
+Thus the fixed circuit feature list is exactly the seven $t_i$
+and their seven products with $\sqrt{\delta-u}$.
+
+\subsection{The complete testing space}
+
+For the main Gram take the seven nonconstant monomials
+\[
+ \mathcal B=\{w,w^2,\sqrt u,u,uw,u^2,u^2w\},\qquad
+ \gamma_7={1\over7\,2^{38}}.
+\]
+The main list is $\mathcal V$ times the fifteen fixed factors
+$1,\sqrt{\gamma_7+b},\sqrt{\gamma_7-b}$ for $b\in\mathcal B$,
+giving $180$ functions. Its $144$ fixed directions are $e_i$,
+$e_i+e_j$, and $e_i-e_j$, with the exact scalar-channel formulas
+derived above, using $7A_*\gamma_7=c_0$.
+
+\begin{theorem}
+On the stated independent rectangle, the full real-state parent
+$F_w$ is a sum of squares of source-linear combinations of one
+fixed list of $220$ labelled testing functions: the $180$ main
+functions, the seven ordinary functions, the nineteen angular
+functions, and the fourteen circuit functions. Repeated functions
+are harmless; the real dimension of their span is at most $220$.
+There is an explicit construction using at most $2196$ square
+roots: $144\cdot15$ main roots, seventeen ordinary roots, eleven
+angular roots, and eight circuit roots. The same list, composed
+with the fixed gauges above, includes all real state-sign sectors,
+both testing axes, and the source faces $D=0$ and $\beta=0$.
+\end{theorem}
+
+This theorem follows from the displayed exact decomposition and
+the separated coefficient formulas. It needs no Gram factorization
+with mixed radicals. Without using the physical reality reduction,
+apply the theorem separately to the real and imaginary state
+amplitudes; their union has at most $440$ functions and $4392$
+roots. The parent is real quadratic in the state, so those two
+contributions sum to its complex-state value.
+
+
+\section{The complete nonpositive-angular branch}\label{sec:fixed-c1-nonpositive}
+
+The same source identities also control $\lambda\le0$. In this case,
+a source-only shear replaces the angular circuit and gives a fixed
+positive diagonal Gram matrix.
+
+\subsection{Domain and source bounds}
+
+Keep the same rational source formulas and strict gaps, and
+now assume $\lambda\le0$. Thus
+\[
+ \begin{gathered}
+ 0<x,\sigma\le\eps=2^{-160},\quad 0<z\le1,\quad
+ 0<b<1,\quad r=bz<1,\quad 0<h<1,\quad D,\beta\ge0,
+ \\ 0\le u,w\le\delta=2^{-100}.
+ \end{gathered}
+\]
+State coordinates $W,X,Y,Z$ are unrestricted. Set $k=\sqrt x$,
+$q=\sqrt z$, $Q=1-b$, $H=h/\sigma$, $H_0=1+zQ$,
+$d_G=4D/\sigma^2$, $L=\lambda/\sigma$, and $K_c=1+L^2$.
+The source identities BE3--BE4 give the following finite bounds:
+\[
+ H\le2,\quad h\le2\sigma,\quad -8\le L\le0,\quad
+ |d_G-2H_0|\le200\eps,\quad
+ |4\kappa H-2H_0|\le400\eps.                 \tag{N1}
+\]
+The already established common bounds used below are
+\[
+ 1\le H_0\le2,\quad |\nu|\le3,\quad p\le2,\quad
+ m\le6\eps^2,\quad D\le4\sigma^2,\quad
+ |R_0|\le512\eps,\quad |B_x|\le48\eps,
+\]
+\[
+ |R_x|,|A_y|\le32,\quad |\chi|\le64,\quad
+ |k_1|\le16,\qquad 4a,4\ell\ge1.           \tag{N2}
+\]
+Here all coefficient symbols have their displayed definitions in the
+preceding main-Gram construction, and $R_\gamma=R_0-8pu^2$.
+The coefficient bounds for $E_{yy},E_{RR},E_{yR}$ on their respective
+testing supports $(u^2,w^2)$ and $(1,u^2,w^2)$ are
+\[
+ (4,4),\qquad (64\sigma,16,4),\qquad
+ (32\sigma,12,8).                         \tag{N3}
+\]
+These bounds retain $C(1-r)$ rather than estimating the possibly
+unbounded positive coefficient $C$. Their source-formula proofs in the
+shared calculation do not use $\lambda>0$; only the subsequent
+positive-angular construction there uses that sign.
+
+Here is a short derivation of (N1), using only the shared source
+formulas and common bounds. Multiplying $\lambda\le0$ by $\sigma$
+gives
+\[
+ 8Dh+4\beta\theta^2+2h^2\le4bp\sigma^2z.
+\]
+Thus $H^2\le2bpz\le4$, $h\le2\sigma$, and
+$\beta\theta^2/\sigma^2\le bpz\le2$. In particular
+$\theta\ge1-2\eps$ and $\beta\theta/\sigma^2\le3$.
+Also every positive term in $L$ can be discarded to give
+$L\ge-4bpz\ge-8$.
+For the remaining estimates it is enough to use $\eps\le1/2000$.
+The positive formula for $P$, with $h\le2\sigma$, yields
+$1\le P\le1+4\eps$, and $1\le B_s\le1+6\eps$.
+BE3 is exactly
+\[
+ HB_s-H_0=2P\beta\theta/\sigma.
+\]
+Consequently
+\[
+ |H-H_0|\le
+ \left\{\frac{4(1+4\eps)}{1-2\eps}+12\right\}\eps
+ <18\eps.
+\]
+Use the common bound $|\mathcal H-H_0|\le32\eps$ and
+$|PJ-1|\le6\eps$, $PJ\ge1-\eps$. BE4 gives
+\[
+ d_G=\frac{2\mathcal H}{PJ}
+             -\frac{4x\beta\theta}{J\sigma^2}.
+\]
+The first term differs from $2H_0$ by at most
+$88\eps/(1-\eps)$ and the second has absolute value at most
+$12\eps/(1-\eps)$, so their sum is less than $200\eps$.
+Finally $|M-1|\le\eps$ implies $|MP-1|\le6\eps$, while
+$1\le K(1+\sigma r)(1+\sigma z)\le1+4\eps$.
+The formula for $\kappa$ therefore gives
+$|\kappa-1/2|\le5\eps/(1-\eps)<39\eps$.
+Together with $H\le2$, this proves
+\[
+ |4\kappa H-2H_0|
+ \le8(39\eps)+2(18\eps)<400\eps.
+\]
+
+\subsection{Exact complete quadratic correction}
+
+Retain the uniform proof's roots
+\[
+\begin{gathered}
+ N_x=X+uhZ,\quad N_y=(Y-bwZ)/q,\quad
+ R=wZ/q-uqW,\quad \Gamma=\sigma Z-uwW,\\
+ A_\theta=q(u^2-x)W,\quad V=uw(u^2-x)W,\quad
+ J_C=N_y+bR,\quad J_\ell=N_y-QR,\quad X_e=X+ewW.
+\end{gathered}
+\]
+In particular $R=J_C-J_\ell$ and $N_y=QJ_C+bJ_\ell$.
+Introduce the source-only shear
+\[
+ T=\Gamma+(L/2)V,\qquad
+ g=(N_x,J_C,J_\ell,T,V,A_\theta)^{\mathsf T},\qquad
+ D_* =\operatorname{diag}(2,1,1,1,1,2).
+\]
+This shear is invertible with inverse $\Gamma=T-(L/2)V$;
+both directions have coefficients bounded by four.
+The source baseline has the exact decomposition
+\[
+\begin{split}
+ 2H_0\Gamma^2+L\Gamma V+(1+L^2)V^2
+ &=T^2+V^2+(2H_0-1)\Gamma^2+\tfrac34L^2V^2,\\
+ 2H_0A_\theta^2&=2A_\theta^2+2(H_0-1)A_\theta^2.
+\end{split}                                                   \tag{N4}
+\]
+Thus the principal baseline is the fixed diagonal $D_*$, with the
+last terms in (N4) retained as nonnegative source squares. This is
+a source-only change of roots, not a congruence depending on testing
+parameters. Below all final directions are fixed in these six coordinates.
+
+Define $\mathcal E$ by the following quadratic polynomial, substituting
+$\Gamma=T-(L/2)V$, $R=J_C-J_\ell$, and $N_y=QJ_C+bJ_\ell$:
+\[
+\begin{split}
+ \mathcal E={}&E_{yy}N_y^2+E_{RR}R^2+E_{yR}N_yR
+ +(d_G-2H_0)\Gamma^2-4\nu uN_x\Gamma
+ +qw(R_0-8pu^2)J_C\Gamma\\
+ &-4uqw(2m+2D+1)N_xN_y+uqwR_xN_xR
+ +qwB_xN_xA_\theta+uA_yN_yA_\theta\\
+ &+(\chi+\lambda)uA_\theta R
+ +(4\kappa H-2H_0)A_\theta^2+Lu^2\Gamma^2\\
+ &-K_c\sigma u^2 A_\theta^2
+ -K_c\sigma u(u^2-x)A_\theta R
+ +K_c(u^2-x)V\Gamma .
+\end{split}                                                    \tag{N5}
+\]
+This specifies every entry of $G$ by
+$g^{\mathsf T}Gg=g^{\mathsf T}D_*g+\mathcal E$; cross coefficients
+are divided by two between symmetric entries.
+
+For completeness the entire retained part is
+\[
+\begin{split}
+ \Pi={}&4\beta N_x^2+(4\beta+2+4m)(wN_x)^2
+ +2(2D+1)(uX_e)^2+4bpz(u\Gamma)^2\\
+ &+4a\{(uJ_C)^2+(wJ_C)^2+(uwJ_C)^2\}
+ +4\ell(uJ_\ell)^2+4Cz(wJ_C)^2\\
+ &+[4a+2z(2C+1)-1]J_C^2+(4\ell-1)J_\ell^2\\
+ &+(2H_0-1)\Gamma^2+\tfrac34L^2V^2
+ +2(H_0-1)A_\theta^2.
+\end{split}                                                    \tag{N6}
+\]
+Every coefficient in (N6) is nonnegative in the source field.
+No mixed radical occurs.
+
+The exact parent identity is
+\[
+                     F_w=\Pi+g^{\mathsf T}Gg.             \tag{N7}
+\]
+Indeed the uniform proof gives
+\[
+ K_AA_\theta^2+\mathscr S
+ =4\kappa H A_\theta^2+Lu^2\Gamma^2+L\Gamma V
+                                      +\lambda uA_\theta R.
+\]
+Add $K_c$ times its exact zero identity
+\[
+ V^2-\sigma u^2A_\theta^2
+ -u\sigma(u^2-x)A_\theta R+(u^2-x)V\Gamma=0.
+\]
+Splitting the radial and $N_x$ pivots and then using (N4) gives
+precisely (N5)--(N7), including both complete Gamma normal terms.
+
+\subsection{Evaluated coefficient bound and fixed directions}
+
+All entries of $G-D_*$ are polynomials on the fixed testing support
+\[
+ \{1,w,w^2,u,uw,u^2,u^2w,u^3\}.                 \tag{N8}
+\]
+Here is a positive-coefficient majorant for the absolute coefficient
+polynomial of (N5). Treat its root letters as formal nonnegative
+variables, put $n=J_C+J_\ell$, and $C_*=T+4V$. Then
+\[
+\begin{split}
+ \mathcal Q={}&(4u^2+4w^2)n^2
+ +(64\eps+16u^2+4w^2)n^2
+ +(32\eps+12u^2+8w^2)n^2\\
+ &+200\eps C_*^2+12uN_xC_*
+ +(512\eps w+16u^2w)J_CC_*\\
+ &+16uwN_xn+32uwN_xn+48\eps wN_xA_\theta
+ +32unA_\theta+65uA_\theta n\\
+ &+400\eps A_\theta^2+8u^2C_*^2
+ +65\eps u^2A_\theta^2
+ +65\eps(u^3+u)A_\theta n
+ +65(u^2+\eps)VC_* .
+\end{split}                                                   \tag{N9}
+\]
+For the two replacement terms use $|\lambda|\le8\eps$,
+$|\chi+\lambda|\le65$, $K_c\le65$, and $x,\sigma\le\eps$.
+All other terms use (N1)--(N3). In particular
+$|2m+2D+1|\le4$, a deliberately loose bound.
+
+Evaluating this positive polynomial at one gives total coefficient
+norm $10189<2^{14}$. Its constant-testing part has norm
+$6109\eps$. The successive summands contribute
+\[
+32,336,208,5000,60,2640,32,64,48,64,130,400,200,65,260,650
+\]
+to the first total. The constant part consists of
+$(256+128+5000+400+325)\eps$.
+Consequently the deliberately larger rational bounds
+\[
+ |G_{ij}(0,0)-(D_*)_{ij}|\le2^{20}\eps,
+ \quad\text{every nonconstant coefficient has magnitude }\le2^{20}
+                                                               \tag{N10}
+\]
+hold in the source field.
+
+For six coordinates use the exact fixed-direction decomposition
+\[
+\begin{split}
+ G={}&\sum_i(G_{ii}-5/16)e_ie_i^{\mathsf T}\\
+ &+\sum_{i<j}\frac{1/16+G_{ij}}2(e_i+e_j)(e_i+e_j)^{\mathsf T}
+ +\sum_{i<j}\frac{1/16-G_{ij}}2(e_i-e_j)(e_i-e_j)^{\mathsf T}.
+\end{split}                                                    \tag{N11}
+\]
+There are $36$ scalar channels. Let $b_1,\ldots,b_7$ be the
+nonconstant monomials of (N8), fix
+\[
+ c_0=2^{-8},\qquad A_*=2^{30},\qquad
+ \gamma=\frac1{7\,2^{38}},
+\]
+and write a channel as $q_0(c)+\sum_j a_j(c)b_j(t)$.
+The diagonal constant channels are at least $11/16-2^{20}\eps$;
+the off-diagonal ones are at least $1/32-2^{19}\eps$.
+Thus $q_0\ge c_0$ and $|a_j|\le A_*$. Also
+$0\le b_j\le\delta<\gamma$ throughout the independent testing box.
+The exact separated identity
+\[
+ q_0+\sum_ja_jb_j=(q_0-c_0)
+ +\frac12\sum_{j=1}^7
+ \{(A_*+a_j)(\gamma+b_j)+(A_*-a_j)(\gamma-b_j)\}       \tag{N12}
+\]
+uses $7A_*\gamma=c_0$. Every factor on its right is nonnegative
+in its own labelled field. Multiplying these squares by the fixed
+linear directions in (N11) proves (N7) by an evaluated finite
+tensor sum of squares, without an infinitesimal-residue argument
+on a finite rectangle.
+
+\subsection{A fixed complete testing space}
+
+Every coordinate of $g$ is source-linearly spanned by
+\[
+ \mathcal V_0=\{X,Y,Z,W,uZ,wZ,uW,uwW,u^2W,u^3wW\}.       \tag{N13}
+\]
+For example $J_C=Y/q-buqW$, $J_\ell=Y/q-wZ/q+QuqW$,
+and $T=\sigma Z-uwW+(L/2)(u^3wW-xuwW)$.
+Thus the main Gram uses the $150$ displayed functions
+\[
+ \mathcal V_0\ \cup\
+ \{f\sqrt{\gamma+b_j},\ f\sqrt{\gamma-b_j}:
+                         f\in\mathcal V_0,\ 1\le j\le7\}.      \tag{N14}
+\]
+All retained roots in (N6) lie in the source-linear span of
+$\mathcal V_0$ together with the seven additional functions
+\[
+       \{wX,uwZ,uX,u^2wW,uY,wY,uwY\}.                     \tag{N15}
+\]
+For instance $uX_e=uX+euwW$ and
+$u\Gamma=\sigma uZ-u^2wW$. This proves a complete-parent
+dictionary of $157$ displayed testing functions. Each source-only
+linear combination obtained from (N11)--(N12) and (N6) has a
+nonnegative source coefficient, absorbed by its own source square
+root. The formulas give the finite coefficient prescription; no
+successful global pencil or global feature bound follows.
+
+For signed testing angles compose the entire dictionary with the
+source-independent angle gauge defined above; this does
+not change the count. The polynomial identities specialize literally
+at $u=0$, $w=0$, and arbitrary zero state coordinates. Applying
+the same real certificate to the real and imaginary parts treats
+complex states (with the corresponding doubled real dictionary).
+
+No inverse of $D$ or $\beta$ appears. The $\beta=0$ face is allowed
+literally. In this branch (N1) actually implies
+$d_G\ge2-200\eps>0$, so the $D=0$ face has empty intersection
+with the stated box and $\lambda\le0$. Actual $D=0$ sources are
+therefore supplied by the positive-$\lambda$ branch, not by this note.
+This distinction is a consequence of the explicit bounds, not an
+additional exclusion.
+
+\subsubsection*{Nonempty sources, including the zero-beta face}
+For a completely explicit source path set
+\[
+ x=\sigma=t,\qquad z=b=1-t^2,\qquad
+ h=t-4t^2+Bt^3,\qquad 16\le B\le18,\quad0<t\le\eps.
+\]
+All strict native gaps hold, since $0<h\le2t$, $E=1-h>0$,
+and $J,M\ge1-t>0$. Let $p_N=2Pp$, $D_N=2JPD$,
+$\beta_N=2\theta P\beta$, and
+\[
+ N_L=4D_Nh+2\beta_N\theta J+2h^2JP
+                              -2bp_N\sigma^2zJ=\sigma^2JP L.
+\]
+Direct polynomial multiplication, grouping by powers of $t$, gives
+\[
+\begin{split}
+ |D_N-t^2|&\le27640t^3,\\
+ |\beta_N-(B-17)t^3|&\le24459t^4,\\
+ |N_L-(2B-38)t^3|&\le248856t^4.
+\end{split}
+\]
+For these bounds take absolute coefficient sums in $(t,B)$ and
+replace every $B^j$ by $18^j$ in the remainders. Thus $D>0$ and
+$L<0$ throughout this path. At $B=18$, also $\beta>0$, giving
+an entirely rational strict source for each rational $t$.
+The signs of $\beta_N$ at $B=16,18$ are opposite. Polynomial
+continuity therefore gives $B\in(16,18)$ with $\beta=0$, while
+$D>0$ and $L<0$ remain strict. This verifies actual zero-beta
+sources in the branch; it is not only a formal boundary allowance.
+
+\end{document}

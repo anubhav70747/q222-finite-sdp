@@ -1,0 +1,93 @@
+\documentclass[11pt]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,hyperref}
+\newtheorem{proposition}{Proposition}
+\title{Event probabilities in the C160 moment representation}
+\author{}
+\date{23 October 2026}
+\begin{document}
+\maketitle
+
+The first C160 block already certifies all sixteen event probabilities.
+Its features are the thirty-two multilinear Bernstein monomials in the
+five physical parameters. The certificate follows directly from the
+two-qubit outcome amplitudes, so no semidefinite optimization is needed.
+
+Write $z=(k,a_0,b_0,a_1,b_1)$ and define
+\[
+ d(t)=(1-t)^2+t^2,\qquad
+ D=(1+k^2)\prod_{t\in\{a_0,b_0,a_1,b_1\}}d(t).
+\]
+The state is $(|00\rangle+k|11\rangle)/\sqrt{1+k^2}$.
+For the observable
+\[
+ O(t)=\frac{1-2t}{d(t)}Z+\frac{2t(1-t)}{d(t)}X,
+\]
+unnormalized eigenvectors for outcomes $+1$ and $-1$ are
+$f_+(t)=(1-t,t)$ and $f_-(t)=(-t,1-t)$.
+They are orthogonal and each has squared norm $d(t)$.
+Thus the numerator of the amplitude for outcomes $\alpha,\beta$
+at settings $x,y$ is
+\[
+ P_{\alpha\beta xy}
+ =f_{\alpha,0}(a_x)f_{\beta,0}(b_y)
+   +k f_{\alpha,1}(a_x)f_{\beta,1}(b_y).
+\]
+Born's rule gives the following four-square identity. Here
+$e_0(t)=1-t$, $e_1(t)=t$, $\bar x=1-x$ and $\bar y=1-y$:
+\begin{equation}\label{eq:event}
+ D\,p(\alpha,\beta|x,y)
+ =\sum_{r,s=0}^1
+ \bigl[P_{\alpha\beta xy}e_r(a_{\bar x})e_s(b_{\bar y})\bigr]^2.
+\end{equation}
+Every root is multilinear in all five variables. Consequently it has
+a unique expansion in
+\[
+ \phi_\varepsilon(z)=\prod_{i=0}^4
+ z_i^{\varepsilon_i}(1-z_i)^{1-\varepsilon_i},\qquad
+ \varepsilon\in\{0,1\}^5.
+\]
+The coefficient of $\phi_\varepsilon$ is simply the root's value at
+the cube vertex $\varepsilon$. This gives four integer vectors
+$r_{\alpha\beta xy}^{rs}\in\mathbb Z^{32}$ and the explicit Gram
+\[
+ G_{\alpha\beta xy}
+ =\sum_{r,s=0}^1r_{\alpha\beta xy}^{rs}
+                  (r_{\alpha\beta xy}^{rs})^{\mathsf T}\succeq0.
+\]
+All sixteen Grams have rank four.
+
+\begin{proposition}
+Every point of the normalized C160 moment projection defines
+nonnegative, normalized and no-signalling binary outcome probabilities.
+\end{proposition}
+\begin{proof}
+Let $\ell$ be its moment functional, with $\ell(D)=1$, and let
+$M_0(\ell)=[\ell(\phi_i\phi_j)]\succeq0$ be the first block.
+The physical coordinate maps define $q$ by
+$q_\nu=\ell(D\Phi_\nu)$. Applying $\ell$ to \eqref{eq:event} gives
+\[
+ \frac{1+\alpha q_{A_x}+\beta q_{B_y}
+                  +\alpha\beta q_{E_{xy}}}{4}
+ =\operatorname{tr}(G_{\alpha\beta xy}M_0(\ell))\ge0.
+\]
+Summing over both outcomes gives one. Summing over either outcome
+gives $(1+\alpha q_{A_x})/2$ or $(1+\beta q_{B_y})/2$,
+independently of the other party's setting.
+\end{proof}
+
+The sum of the four event Grams represents $D$. It need not equal
+the strictly positive normalization Gram
+$Q_D=\left(\begin{smallmatrix}I_{16}&I_{16}\\I_{16}&2I_{16}\end{smallmatrix}\right)$
+entry by entry: Gram representations of the same polynomial are
+not unique. The exact check compares their polynomial coefficients.
+
+The file \nolinkurl{C160_EVENT_GRAMS.json} contains all sixty-four
+integer root vectors. The accompanying
+\nolinkurl{check_c160_event_grams.py} reconstructs them from the
+amplitudes and verifies all sixteen identities against the actual
+243-row C160 coefficient map, including its off-diagonal factors.
+These event certificates establish probability positivity. Equality
+of the C160 projection with the quantum set still requires certificates
+for every quantum Bell inequality.
+\end{document}

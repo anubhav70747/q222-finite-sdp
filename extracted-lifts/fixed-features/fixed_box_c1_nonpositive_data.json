@@ -1,0 +1,1971 @@
+{
+  "Astar": "1073741824",
+  "c0": "1/256",
+  "channel_factorization": {
+    "base_multiplier_source_weight": "q0-c0",
+    "direction_row": "fixed_root_direction * root_coefficients_on_10_polynomial_features",
+    "identity": "q=(q0-c0)+sum_j((Astar+a_j)*(gamma+b_j)+(Astar-a_j)*(gamma-b_j))/2",
+    "minus_multiplier_source_weight": "(Astar-a_j)/2",
+    "plus_multiplier_source_weight": "(Astar+a_j)/2"
+  },
+  "complex_states": "Apply the real certificate to real and imaginary parts separately.",
+  "delta": "1/1267650600228229401496703205376",
+  "epsilon": "1/1461501637330902918203684832716283019655932542976",
+  "fixed_testing_features_157": [
+    {
+      "expression": "X",
+      "id": "f001"
+    },
+    {
+      "expression": "Y",
+      "id": "f002"
+    },
+    {
+      "expression": "Z",
+      "id": "f003"
+    },
+    {
+      "expression": "W",
+      "id": "f004"
+    },
+    {
+      "expression": "Z*u",
+      "id": "f005"
+    },
+    {
+      "expression": "Z*w",
+      "id": "f006"
+    },
+    {
+      "expression": "W*u",
+      "id": "f007"
+    },
+    {
+      "expression": "W*u*w",
+      "id": "f008"
+    },
+    {
+      "expression": "W*u**2",
+      "id": "f009"
+    },
+    {
+      "expression": "W*u**3*w",
+      "id": "f010"
+    },
+    {
+      "expression": "X*sqrt(w + 1/1924145348608)",
+      "id": "f011"
+    },
+    {
+      "expression": "X*sqrt(1/1924145348608 - w)",
+      "id": "f012"
+    },
+    {
+      "expression": "Y*sqrt(w + 1/1924145348608)",
+      "id": "f013"
+    },
+    {
+      "expression": "Y*sqrt(1/1924145348608 - w)",
+      "id": "f014"
+    },
+    {
+      "expression": "Z*sqrt(w + 1/1924145348608)",
+      "id": "f015"
+    },
+    {
+      "expression": "Z*sqrt(1/1924145348608 - w)",
+      "id": "f016"
+    },
+    {
+      "expression": "W*sqrt(w + 1/1924145348608)",
+      "id": "f017"
+    },
+    {
+      "expression": "W*sqrt(1/1924145348608 - w)",
+      "id": "f018"
+    },
+    {
+      "expression": "Z*u*sqrt(w + 1/1924145348608)",
+      "id": "f019"
+    },
+    {
+      "expression": "Z*u*sqrt(1/1924145348608 - w)",
+      "id": "f020"
+    },
+    {
+      "expression": "Z*w*sqrt(w + 1/1924145348608)",
+      "id": "f021"
+    },
+    {
+      "expression": "Z*w*sqrt(1/1924145348608 - w)",
+      "id": "f022"
+    },
+    {
+      "expression": "W*u*sqrt(w + 1/1924145348608)",
+      "id": "f023"
+    },
+    {
+      "expression": "W*u*sqrt(1/1924145348608 - w)",
+      "id": "f024"
+    },
+    {
+      "expression": "W*u*w*sqrt(w + 1/1924145348608)",
+      "id": "f025"
+    },
+    {
+      "expression": "W*u*w*sqrt(1/1924145348608 - w)",
+      "id": "f026"
+    },
+    {
+      "expression": "W*u**2*sqrt(w + 1/1924145348608)",
+      "id": "f027"
+    },
+    {
+      "expression": "W*u**2*sqrt(1/1924145348608 - w)",
+      "id": "f028"
+    },
+    {
+      "expression": "W*u**3*w*sqrt(w + 1/1924145348608)",
+      "id": "f029"
+    },
+    {
+      "expression": "W*u**3*w*sqrt(1/1924145348608 - w)",
+      "id": "f030"
+    },
+    {
+      "expression": "X*sqrt(w**2 + 1/1924145348608)",
+      "id": "f031"
+    },
+    {
+      "expression": "X*sqrt(1/1924145348608 - w**2)",
+      "id": "f032"
+    },
+    {
+      "expression": "Y*sqrt(w**2 + 1/1924145348608)",
+      "id": "f033"
+    },
+    {
+      "expression": "Y*sqrt(1/1924145348608 - w**2)",
+      "id": "f034"
+    },
+    {
+      "expression": "Z*sqrt(w**2 + 1/1924145348608)",
+      "id": "f035"
+    },
+    {
+      "expression": "Z*sqrt(1/1924145348608 - w**2)",
+      "id": "f036"
+    },
+    {
+      "expression": "W*sqrt(w**2 + 1/1924145348608)",
+      "id": "f037"
+    },
+    {
+      "expression": "W*sqrt(1/1924145348608 - w**2)",
+      "id": "f038"
+    },
+    {
+      "expression": "Z*u*sqrt(w**2 + 1/1924145348608)",
+      "id": "f039"
+    },
+    {
+      "expression": "Z*u*sqrt(1/1924145348608 - w**2)",
+      "id": "f040"
+    },
+    {
+      "expression": "Z*w*sqrt(w**2 + 1/1924145348608)",
+      "id": "f041"
+    },
+    {
+      "expression": "Z*w*sqrt(1/1924145348608 - w**2)",
+      "id": "f042"
+    },
+    {
+      "expression": "W*u*sqrt(w**2 + 1/1924145348608)",
+      "id": "f043"
+    },
+    {
+      "expression": "W*u*sqrt(1/1924145348608 - w**2)",
+      "id": "f044"
+    },
+    {
+      "expression": "W*u*w*sqrt(w**2 + 1/1924145348608)",
+      "id": "f045"
+    },
+    {
+      "expression": "W*u*w*sqrt(1/1924145348608 - w**2)",
+      "id": "f046"
+    },
+    {
+      "expression": "W*u**2*sqrt(w**2 + 1/1924145348608)",
+      "id": "f047"
+    },
+    {
+      "expression": "W*u**2*sqrt(1/1924145348608 - w**2)",
+      "id": "f048"
+    },
+    {
+      "expression": "W*u**3*w*sqrt(w**2 + 1/1924145348608)",
+      "id": "f049"
+    },
+    {
+      "expression": "W*u**3*w*sqrt(1/1924145348608 - w**2)",
+      "id": "f050"
+    },
+    {
+      "expression": "X*sqrt(u + 1/1924145348608)",
+      "id": "f051"
+    },
+    {
+      "expression": "X*sqrt(1/1924145348608 - u)",
+      "id": "f052"
+    },
+    {
+      "expression": "Y*sqrt(u + 1/1924145348608)",
+      "id": "f053"
+    },
+    {
+      "expression": "Y*sqrt(1/1924145348608 - u)",
+      "id": "f054"
+    },
+    {
+      "expression": "Z*sqrt(u + 1/1924145348608)",
+      "id": "f055"
+    },
+    {
+      "expression": "Z*sqrt(1/1924145348608 - u)",
+      "id": "f056"
+    },
+    {
+      "expression": "W*sqrt(u + 1/1924145348608)",
+      "id": "f057"
+    },
+    {
+      "expression": "W*sqrt(1/1924145348608 - u)",
+      "id": "f058"
+    },
+    {
+      "expression": "Z*u*sqrt(u + 1/1924145348608)",
+      "id": "f059"
+    },
+    {
+      "expression": "Z*u*sqrt(1/1924145348608 - u)",
+      "id": "f060"
+    },
+    {
+      "expression": "Z*w*sqrt(u + 1/1924145348608)",
+      "id": "f061"
+    },
+    {
+      "expression": "Z*w*sqrt(1/1924145348608 - u)",
+      "id": "f062"
+    },
+    {
+      "expression": "W*u*sqrt(u + 1/1924145348608)",
+      "id": "f063"
+    },
+    {
+      "expression": "W*u*sqrt(1/1924145348608 - u)",
+      "id": "f064"
+    },
+    {
+      "expression": "W*u*w*sqrt(u + 1/1924145348608)",
+      "id": "f065"
+    },
+    {
+      "expression": "W*u*w*sqrt(1/1924145348608 - u)",
+      "id": "f066"
+    },
+    {
+      "expression": "W*u**2*sqrt(u + 1/1924145348608)",
+      "id": "f067"
+    },
+    {
+      "expression": "W*u**2*sqrt(1/1924145348608 - u)",
+      "id": "f068"
+    },
+    {
+      "expression": "W*u**3*w*sqrt(u + 1/1924145348608)",
+      "id": "f069"
+    },
+    {
+      "expression": "W*u**3*w*sqrt(1/1924145348608 - u)",
+      "id": "f070"
+    },
+    {
+      "expression": "X*sqrt(u*w + 1/1924145348608)",
+      "id": "f071"
+    },
+    {
+      "expression": "X*sqrt(-u*w + 1/1924145348608)",
+      "id": "f072"
+    },
+    {
+      "expression": "Y*sqrt(u*w + 1/1924145348608)",
+      "id": "f073"
+    },
+    {
+      "expression": "Y*sqrt(-u*w + 1/1924145348608)",
+      "id": "f074"
+    },
+    {
+      "expression": "Z*sqrt(u*w + 1/1924145348608)",
+      "id": "f075"
+    },
+    {
+      "expression": "Z*sqrt(-u*w + 1/1924145348608)",
+      "id": "f076"
+    },
+    {
+      "expression": "W*sqrt(u*w + 1/1924145348608)",
+      "id": "f077"
+    },
+    {
+      "expression": "W*sqrt(-u*w + 1/1924145348608)",
+      "id": "f078"
+    },
+    {
+      "expression": "Z*u*sqrt(u*w + 1/1924145348608)",
+      "id": "f079"
+    },
+    {
+      "expression": "Z*u*sqrt(-u*w + 1/1924145348608)",
+      "id": "f080"
+    },
+    {
+      "expression": "Z*w*sqrt(u*w + 1/1924145348608)",
+      "id": "f081"
+    },
+    {
+      "expression": "Z*w*sqrt(-u*w + 1/1924145348608)",
+      "id": "f082"
+    },
+    {
+      "expression": "W*u*sqrt(u*w + 1/1924145348608)",
+      "id": "f083"
+    },
+    {
+      "expression": "W*u*sqrt(-u*w + 1/1924145348608)",
+      "id": "f084"
+    },
+    {
+      "expression": "W*u*w*sqrt(u*w + 1/1924145348608)",
+      "id": "f085"
+    },
+    {
+      "expression": "W*u*w*sqrt(-u*w + 1/1924145348608)",
+      "id": "f086"
+    },
+    {
+      "expression": "W*u**2*sqrt(u*w + 1/1924145348608)",
+      "id": "f087"
+    },
+    {
+      "expression": "W*u**2*sqrt(-u*w + 1/1924145348608)",
+      "id": "f088"
+    },
+    {
+      "expression": "W*u**3*w*sqrt(u*w + 1/1924145348608)",
+      "id": "f089"
+    },
+    {
+      "expression": "W*u**3*w*sqrt(-u*w + 1/1924145348608)",
+      "id": "f090"
+    },
+    {
+      "expression": "X*sqrt(u**2 + 1/1924145348608)",
+      "id": "f091"
+    },
+    {
+      "expression": "X*sqrt(1/1924145348608 - u**2)",
+      "id": "f092"
+    },
+    {
+      "expression": "Y*sqrt(u**2 + 1/1924145348608)",
+      "id": "f093"
+    },
+    {
+      "expression": "Y*sqrt(1/1924145348608 - u**2)",
+      "id": "f094"
+    },
+    {
+      "expression": "Z*sqrt(u**2 + 1/1924145348608)",
+      "id": "f095"
+    },
+    {
+      "expression": "Z*sqrt(1/1924145348608 - u**2)",
+      "id": "f096"
+    },
+    {
+      "expression": "W*sqrt(u**2 + 1/1924145348608)",
+      "id": "f097"
+    },
+    {
+      "expression": "W*sqrt(1/1924145348608 - u**2)",
+      "id": "f098"
+    },
+    {
+      "expression": "Z*u*sqrt(u**2 + 1/1924145348608)",
+      "id": "f099"
+    },
+    {
+      "expression": "Z*u*sqrt(1/1924145348608 - u**2)",
+      "id": "f100"
+    },
+    {
+      "expression": "Z*w*sqrt(u**2 + 1/1924145348608)",
+      "id": "f101"
+    },
+    {
+      "expression": "Z*w*sqrt(1/1924145348608 - u**2)",
+      "id": "f102"
+    },
+    {
+      "expression": "W*u*sqrt(u**2 + 1/1924145348608)",
+      "id": "f103"
+    },
+    {
+      "expression": "W*u*sqrt(1/1924145348608 - u**2)",
+      "id": "f104"
+    },
+    {
+      "expression": "W*u*w*sqrt(u**2 + 1/1924145348608)",
+      "id": "f105"
+    },
+    {
+      "expression": "W*u*w*sqrt(1/1924145348608 - u**2)",
+      "id": "f106"
+    },
+    {
+      "expression": "W*u**2*sqrt(u**2 + 1/1924145348608)",
+      "id": "f107"
+    },
+    {
+      "expression": "W*u**2*sqrt(1/1924145348608 - u**2)",
+      "id": "f108"
+    },
+    {
+      "expression": "W*u**3*w*sqrt(u**2 + 1/1924145348608)",
+      "id": "f109"
+    },
+    {
+      "expression": "W*u**3*w*sqrt(1/1924145348608 - u**2)",
+      "id": "f110"
+    },
+    {
+      "expression": "X*sqrt(u**2*w + 1/1924145348608)",
+      "id": "f111"
+    },
+    {
+      "expression": "X*sqrt(-u**2*w + 1/1924145348608)",
+      "id": "f112"
+    },
+    {
+      "expression": "Y*sqrt(u**2*w + 1/1924145348608)",
+      "id": "f113"
+    },
+    {
+      "expression": "Y*sqrt(-u**2*w + 1/1924145348608)",
+      "id": "f114"
+    },
+    {
+      "expression": "Z*sqrt(u**2*w + 1/1924145348608)",
+      "id": "f115"
+    },
+    {
+      "expression": "Z*sqrt(-u**2*w + 1/1924145348608)",
+      "id": "f116"
+    },
+    {
+      "expression": "W*sqrt(u**2*w + 1/1924145348608)",
+      "id": "f117"
+    },
+    {
+      "expression": "W*sqrt(-u**2*w + 1/1924145348608)",
+      "id": "f118"
+    },
+    {
+      "expression": "Z*u*sqrt(u**2*w + 1/1924145348608)",
+      "id": "f119"
+    },
+    {
+      "expression": "Z*u*sqrt(-u**2*w + 1/1924145348608)",
+      "id": "f120"
+    },
+    {
+      "expression": "Z*w*sqrt(u**2*w + 1/1924145348608)",
+      "id": "f121"
+    },
+    {
+      "expression": "Z*w*sqrt(-u**2*w + 1/1924145348608)",
+      "id": "f122"
+    },
+    {
+      "expression": "W*u*sqrt(u**2*w + 1/1924145348608)",
+      "id": "f123"
+    },
+    {
+      "expression": "W*u*sqrt(-u**2*w + 1/1924145348608)",
+      "id": "f124"
+    },
+    {
+      "expression": "W*u*w*sqrt(u**2*w + 1/1924145348608)",
+      "id": "f125"
+    },
+    {
+      "expression": "W*u*w*sqrt(-u**2*w + 1/1924145348608)",
+      "id": "f126"
+    },
+    {
+      "expression": "W*u**2*sqrt(u**2*w + 1/1924145348608)",
+      "id": "f127"
+    },
+    {
+      "expression": "W*u**2*sqrt(-u**2*w + 1/1924145348608)",
+      "id": "f128"
+    },
+    {
+      "expression": "W*u**3*w*sqrt(u**2*w + 1/1924145348608)",
+      "id": "f129"
+    },
+    {
+      "expression": "W*u**3*w*sqrt(-u**2*w + 1/1924145348608)",
+      "id": "f130"
+    },
+    {
+      "expression": "X*sqrt(u**3 + 1/1924145348608)",
+      "id": "f131"
+    },
+    {
+      "expression": "X*sqrt(1/1924145348608 - u**3)",
+      "id": "f132"
+    },
+    {
+      "expression": "Y*sqrt(u**3 + 1/1924145348608)",
+      "id": "f133"
+    },
+    {
+      "expression": "Y*sqrt(1/1924145348608 - u**3)",
+      "id": "f134"
+    },
+    {
+      "expression": "Z*sqrt(u**3 + 1/1924145348608)",
+      "id": "f135"
+    },
+    {
+      "expression": "Z*sqrt(1/1924145348608 - u**3)",
+      "id": "f136"
+    },
+    {
+      "expression": "W*sqrt(u**3 + 1/1924145348608)",
+      "id": "f137"
+    },
+    {
+      "expression": "W*sqrt(1/1924145348608 - u**3)",
+      "id": "f138"
+    },
+    {
+      "expression": "Z*u*sqrt(u**3 + 1/1924145348608)",
+      "id": "f139"
+    },
+    {
+      "expression": "Z*u*sqrt(1/1924145348608 - u**3)",
+      "id": "f140"
+    },
+    {
+      "expression": "Z*w*sqrt(u**3 + 1/1924145348608)",
+      "id": "f141"
+    },
+    {
+      "expression": "Z*w*sqrt(1/1924145348608 - u**3)",
+      "id": "f142"
+    },
+    {
+      "expression": "W*u*sqrt(u**3 + 1/1924145348608)",
+      "id": "f143"
+    },
+    {
+      "expression": "W*u*sqrt(1/1924145348608 - u**3)",
+      "id": "f144"
+    },
+    {
+      "expression": "W*u*w*sqrt(u**3 + 1/1924145348608)",
+      "id": "f145"
+    },
+    {
+      "expression": "W*u*w*sqrt(1/1924145348608 - u**3)",
+      "id": "f146"
+    },
+    {
+      "expression": "W*u**2*sqrt(u**3 + 1/1924145348608)",
+      "id": "f147"
+    },
+    {
+      "expression": "W*u**2*sqrt(1/1924145348608 - u**3)",
+      "id": "f148"
+    },
+    {
+      "expression": "W*u**3*w*sqrt(u**3 + 1/1924145348608)",
+      "id": "f149"
+    },
+    {
+      "expression": "W*u**3*w*sqrt(1/1924145348608 - u**3)",
+      "id": "f150"
+    },
+    {
+      "expression": "X*w",
+      "id": "f151"
+    },
+    {
+      "expression": "Z*u*w",
+      "id": "f152"
+    },
+    {
+      "expression": "X*u",
+      "id": "f153"
+    },
+    {
+      "expression": "W*u**2*w",
+      "id": "f154"
+    },
+    {
+      "expression": "Y*u",
+      "id": "f155"
+    },
+    {
+      "expression": "Y*w",
+      "id": "f156"
+    },
+    {
+      "expression": "Y*u*w",
+      "id": "f157"
+    }
+  ],
+  "gamma": "1/1924145348608",
+  "gram_entries_6_by_6": [
+    [
+      "2",
+      "Rx*q*u*w/2 - 2*q*u*w*(1 - b)*(2*D + 2*m + 1)",
+      "-Rx*q*u*w/2 - 2*b*q*u*w*(2*D + 2*m + 1)",
+      "-2*nu*u",
+      "L*nu*u",
+      "Bx*q*w/2"
+    ],
+    [
+      "Rx*q*u*w/2 - 2*q*u*w*(1 - b)*(2*D + 2*m + 1)",
+      "z*(1 - b)*(2 - 2*b)*(u**2*(2*m + 1) + w**2*(2*D + 1)) + 4*z*(1 - b)*(2*D*(sig*(b*z - 1) + 1) + b*w**2*(2*D + 1) + 2*p*sig + sig*(2*C + 1)*(b*z - 1) + u**2*(2*D*h + 2*p*sig + (2*m + 1)*(b + h - 1))) + z*(8*D*b + 2*b**2*w**2*(2*D + 1) + 8*b*p*sig + 4*b*sig*(b*z - 1)*(2*C + 2*D + 1) + u**2*(8*D*b*h + 8*b*p*sig + 4*beta*(1 - h)**2 + (4*m + 2)*(b + h - 1)**2)) + 1",
+      "b*z*(2 - 2*b)*(u**2*(2*m + 1) + w**2*(2*D + 1)) + 2*b*z*(2*D*(sig*(b*z - 1) + 1) + b*w**2*(2*D + 1) + 2*p*sig + sig*(2*C + 1)*(b*z - 1) + u**2*(2*D*h + 2*p*sig + (2*m + 1)*(b + h - 1))) - 2*z*(1 - b)*(2*D*(sig*(b*z - 1) + 1) + b*w**2*(2*D + 1) + 2*p*sig + sig*(2*C + 1)*(b*z - 1) + u**2*(2*D*h + 2*p*sig + (2*m + 1)*(b + h - 1))) - z*(8*D*b + 2*b**2*w**2*(2*D + 1) + 8*b*p*sig + 4*b*sig*(b*z - 1)*(2*C + 2*D + 1) + u**2*(8*D*b*h + 8*b*p*sig + 4*beta*(1 - h)**2 + (4*m + 2)*(b + h - 1)**2))",
+      "q*w*(R0 - 8*p*u**2)/2",
+      "-L*q*w*(R0 - 8*p*u**2)/4",
+      "Ay*u*(1 - b)/2 - sig*u*(L**2 + 1)*(u**2 - x)/2 + u*(L*sig + chi)/2"
+    ],
+    [
+      "-Rx*q*u*w/2 - 2*b*q*u*w*(2*D + 2*m + 1)",
+      "b*z*(2 - 2*b)*(u**2*(2*m + 1) + w**2*(2*D + 1)) + 2*b*z*(2*D*(sig*(b*z - 1) + 1) + b*w**2*(2*D + 1) + 2*p*sig + sig*(2*C + 1)*(b*z - 1) + u**2*(2*D*h + 2*p*sig + (2*m + 1)*(b + h - 1))) - 2*z*(1 - b)*(2*D*(sig*(b*z - 1) + 1) + b*w**2*(2*D + 1) + 2*p*sig + sig*(2*C + 1)*(b*z - 1) + u**2*(2*D*h + 2*p*sig + (2*m + 1)*(b + h - 1))) - z*(8*D*b + 2*b**2*w**2*(2*D + 1) + 8*b*p*sig + 4*b*sig*(b*z - 1)*(2*C + 2*D + 1) + u**2*(8*D*b*h + 8*b*p*sig + 4*beta*(1 - h)**2 + (4*m + 2)*(b + h - 1)**2))",
+      "2*b**2*z*(u**2*(2*m + 1) + w**2*(2*D + 1)) - 4*b*z*(2*D*(sig*(b*z - 1) + 1) + b*w**2*(2*D + 1) + 2*p*sig + sig*(2*C + 1)*(b*z - 1) + u**2*(2*D*h + 2*p*sig + (2*m + 1)*(b + h - 1))) + z*(8*D*b + 2*b**2*w**2*(2*D + 1) + 8*b*p*sig + 4*b*sig*(b*z - 1)*(2*C + 2*D + 1) + u**2*(8*D*b*h + 8*b*p*sig + 4*beta*(1 - h)**2 + (4*m + 2)*(b + h - 1)**2)) + 1",
+      "0",
+      "0",
+      "Ay*b*u/2 + sig*u*(L**2 + 1)*(u**2 - x)/2 - u*(L*sig + chi)/2"
+    ],
+    [
+      "-2*nu*u",
+      "q*w*(R0 - 8*p*u**2)/2",
+      "0",
+      "-2*H0 + L*u**2 + dG + 1",
+      "-L**2*u**2/2 - L*(-2*H0 + dG)/2 + (L**2 + 1)*(u**2 - x)/2",
+      "0"
+    ],
+    [
+      "L*nu*u",
+      "-L*q*w*(R0 - 8*p*u**2)/4",
+      "0",
+      "-L**2*u**2/2 - L*(-2*H0 + dG)/2 + (L**2 + 1)*(u**2 - x)/2",
+      "L**3*u**2/4 + L**2*(-2*H0 + dG)/4 - L*(L**2 + 1)*(u**2 - x)/2 + 1",
+      "0"
+    ],
+    [
+      "Bx*q*w/2",
+      "Ay*u*(1 - b)/2 - sig*u*(L**2 + 1)*(u**2 - x)/2 + u*(L*sig + chi)/2",
+      "Ay*b*u/2 + sig*u*(L**2 + 1)*(u**2 - x)/2 - u*(L*sig + chi)/2",
+      "0",
+      "0",
+      "4*H*kap - 2*H0 - sig*u**2*(L**2 + 1) + 2"
+    ]
+  ],
+  "main_channels_36": [
+    {
+      "constant_source_coefficient": "27/16",
+      "fixed_root_direction": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "id": "diagonal_1",
+      "nonconstant_source_coefficients": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "constant_source_coefficient": "8*C*b*sig*z**2 - 8*C*sig*z + 8*D*b*sig*z**2 - 8*D*sig*z + 8*D*z + 4*b*sig*z**2 + 8*p*sig*z - 4*sig*z + 11/16",
+      "fixed_root_direction": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "id": "diagonal_2",
+      "nonconstant_source_coefficients": [
+        "0",
+        "4*D*z + 2*z",
+        "0",
+        "0",
+        "8*D*h*z + 4*beta*h**2*z - 8*beta*h*z + 4*beta*z + 4*h**2*m*z + 2*h**2*z + 8*p*sig*z",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "constant_source_coefficient": "11/16",
+      "fixed_root_direction": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "id": "diagonal_3",
+      "nonconstant_source_coefficients": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "4*beta*h**2*z - 8*beta*h*z + 4*beta*z + 4*h**2*m*z + 2*h**2*z - 8*h*m*z - 4*h*z + 4*m*z + 2*z",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "constant_source_coefficient": "-2*H0 + dG + 11/16",
+      "fixed_root_direction": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "id": "diagonal_4",
+      "nonconstant_source_coefficients": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "L",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "constant_source_coefficient": "-H0*L**2/2 + L**3*x/2 + L**2*dG/4 + L*x/2 + 11/16",
+      "fixed_root_direction": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "id": "diagonal_5",
+      "nonconstant_source_coefficients": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "-L**3/4 - L/2",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "constant_source_coefficient": "4*H*kap - 2*H0 + 27/16",
+      "fixed_root_direction": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "id": "diagonal_6",
+      "nonconstant_source_coefficients": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "-L**2*sig - sig",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "constant_source_coefficient": "1/32",
+      "fixed_root_direction": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "id": "pair_1_2_plus",
+      "nonconstant_source_coefficients": [
+        "0",
+        "0",
+        "0",
+        "2*D*b*q - 2*D*q + Rx*q/4 + 2*b*m*q + b*q - 2*m*q - q",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "constant_source_coefficient": "1/32",
+      "fixed_root_direction": [
+        1,
+        -1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "id": "pair_1_2_minus",
+      "nonconstant_source_coefficients": [
+        "0",
+        "0",
+        "0",
+        "-2*D*b*q + 2*D*q - Rx*q/4 - 2*b*m*q - b*q + 2*m*q + q",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "constant_source_coefficient": "1/32",
+      "fixed_root_direction": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "id": "pair_1_3_plus",
+      "nonconstant_source_coefficients": [
+        "0",
+        "0",
+        "0",
+        "-2*D*b*q - Rx*q/4 - 2*b*m*q - b*q",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "constant_source_coefficient": "1/32",
+      "fixed_root_direction": [
+        1,
+        0,
+        -1,
+        0,
+        0,
+        0
+      ],
+      "id": "pair_1_3_minus",
+      "nonconstant_source_coefficients": [
+        "0",
+        "0",
+        "0",
+        "2*D*b*q + Rx*q/4 + 2*b*m*q + b*q",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "constant_source_coefficient": "1/32",
+      "fixed_root_direction": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "id": "pair_1_4_plus",
+      "nonconstant_source_coefficients": [
+        "0",
+        "0",
+        "-nu",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "constant_source_coefficient": "1/32",
+      "fixed_root_direction": [
+        1,
+        0,
+        0,
+        -1,
+        0,
+        0
+      ],
+      "id": "pair_1_4_minus",
+      "nonconstant_source_coefficients": [
+        "0",
+        "0",
+        "nu",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "constant_source_coefficient": "1/32",
+      "fixed_root_direction": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "id": "pair_1_5_plus",
+      "nonconstant_source_coefficients": [
+        "0",
+        "0",
+        "L*nu/2",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "constant_source_coefficient": "1/32",
+      "fixed_root_direction": [
+        1,
+        0,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "id": "pair_1_5_minus",
+      "nonconstant_source_coefficients": [
+        "0",
+        "0",
+        "-L*nu/2",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "constant_source_coefficient": "1/32",
+      "fixed_root_direction": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "id": "pair_1_6_plus",
+      "nonconstant_source_coefficients": [
+        "Bx*q/4",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "constant_source_coefficient": "1/32",
+      "fixed_root_direction": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        -1
+      ],
+      "id": "pair_1_6_minus",
+      "nonconstant_source_coefficients": [
+        "-Bx*q/4",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "constant_source_coefficient": "-2*C*b*sig*z**2 + 2*C*sig*z - 2*D*b*sig*z**2 + 2*D*sig*z - 2*D*z - b*sig*z**2 - 2*p*sig*z + sig*z + 1/32",
+      "fixed_root_direction": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "id": "pair_2_3_plus",
+      "nonconstant_source_coefficients": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "-2*D*h*z - 2*beta*h**2*z + 4*beta*h*z - 2*beta*z - 2*h**2*m*z - h**2*z + 2*h*m*z + h*z - 2*p*sig*z",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "constant_source_coefficient": "2*C*b*sig*z**2 - 2*C*sig*z + 2*D*b*sig*z**2 - 2*D*sig*z + 2*D*z + b*sig*z**2 + 2*p*sig*z - sig*z + 1/32",
+      "fixed_root_direction": [
+        0,
+        1,
+        -1,
+        0,
+        0,
+        0
+      ],
+      "id": "pair_2_3_minus",
+      "nonconstant_source_coefficients": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "2*D*h*z + 2*beta*h**2*z - 4*beta*h*z + 2*beta*z + 2*h**2*m*z + h**2*z - 2*h*m*z - h*z + 2*p*sig*z",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "constant_source_coefficient": "1/32",
+      "fixed_root_direction": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "id": "pair_2_4_plus",
+      "nonconstant_source_coefficients": [
+        "R0*q/4",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-2*p*q",
+        "0"
+      ]
+    },
+    {
+      "constant_source_coefficient": "1/32",
+      "fixed_root_direction": [
+        0,
+        1,
+        0,
+        -1,
+        0,
+        0
+      ],
+      "id": "pair_2_4_minus",
+      "nonconstant_source_coefficients": [
+        "-R0*q/4",
+        "0",
+        "0",
+        "0",
+        "0",
+        "2*p*q",
+        "0"
+      ]
+    },
+    {
+      "constant_source_coefficient": "1/32",
+      "fixed_root_direction": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "id": "pair_2_5_plus",
+      "nonconstant_source_coefficients": [
+        "-L*R0*q/8",
+        "0",
+        "0",
+        "0",
+        "0",
+        "L*p*q",
+        "0"
+      ]
+    },
+    {
+      "constant_source_coefficient": "1/32",
+      "fixed_root_direction": [
+        0,
+        1,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "id": "pair_2_5_minus",
+      "nonconstant_source_coefficients": [
+        "L*R0*q/8",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-L*p*q",
+        "0"
+      ]
+    },
+    {
+      "constant_source_coefficient": "1/32",
+      "fixed_root_direction": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "id": "pair_2_6_plus",
+      "nonconstant_source_coefficients": [
+        "0",
+        "0",
+        "-Ay*b/4 + Ay/4 + L**2*sig*x/4 + L*sig/4 + chi/4 + sig*x/4",
+        "0",
+        "0",
+        "0",
+        "-L**2*sig/4 - sig/4"
+      ]
+    },
+    {
+      "constant_source_coefficient": "1/32",
+      "fixed_root_direction": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        -1
+      ],
+      "id": "pair_2_6_minus",
+      "nonconstant_source_coefficients": [
+        "0",
+        "0",
+        "Ay*b/4 - Ay/4 - L**2*sig*x/4 - L*sig/4 - chi/4 - sig*x/4",
+        "0",
+        "0",
+        "0",
+        "L**2*sig/4 + sig/4"
+      ]
+    },
+    {
+      "constant_source_coefficient": "1/32",
+      "fixed_root_direction": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "id": "pair_3_4_plus",
+      "nonconstant_source_coefficients": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "constant_source_coefficient": "1/32",
+      "fixed_root_direction": [
+        0,
+        0,
+        1,
+        -1,
+        0,
+        0
+      ],
+      "id": "pair_3_4_minus",
+      "nonconstant_source_coefficients": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "constant_source_coefficient": "1/32",
+      "fixed_root_direction": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "id": "pair_3_5_plus",
+      "nonconstant_source_coefficients": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "constant_source_coefficient": "1/32",
+      "fixed_root_direction": [
+        0,
+        0,
+        1,
+        0,
+        -1,
+        0
+      ],
+      "id": "pair_3_5_minus",
+      "nonconstant_source_coefficients": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "constant_source_coefficient": "1/32",
+      "fixed_root_direction": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "id": "pair_3_6_plus",
+      "nonconstant_source_coefficients": [
+        "0",
+        "0",
+        "Ay*b/4 - L**2*sig*x/4 - L*sig/4 - chi/4 - sig*x/4",
+        "0",
+        "0",
+        "0",
+        "L**2*sig/4 + sig/4"
+      ]
+    },
+    {
+      "constant_source_coefficient": "1/32",
+      "fixed_root_direction": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        -1
+      ],
+      "id": "pair_3_6_minus",
+      "nonconstant_source_coefficients": [
+        "0",
+        "0",
+        "-Ay*b/4 + L**2*sig*x/4 + L*sig/4 + chi/4 + sig*x/4",
+        "0",
+        "0",
+        "0",
+        "-L**2*sig/4 - sig/4"
+      ]
+    },
+    {
+      "constant_source_coefficient": "H0*L/2 - L**2*x/4 - L*dG/4 - x/4 + 1/32",
+      "fixed_root_direction": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "id": "pair_4_5_plus",
+      "nonconstant_source_coefficients": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "1/4",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "constant_source_coefficient": "-H0*L/2 + L**2*x/4 + L*dG/4 + x/4 + 1/32",
+      "fixed_root_direction": [
+        0,
+        0,
+        0,
+        1,
+        -1,
+        0
+      ],
+      "id": "pair_4_5_minus",
+      "nonconstant_source_coefficients": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "-1/4",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "constant_source_coefficient": "1/32",
+      "fixed_root_direction": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "id": "pair_4_6_plus",
+      "nonconstant_source_coefficients": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "constant_source_coefficient": "1/32",
+      "fixed_root_direction": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        -1
+      ],
+      "id": "pair_4_6_minus",
+      "nonconstant_source_coefficients": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "constant_source_coefficient": "1/32",
+      "fixed_root_direction": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "id": "pair_5_6_plus",
+      "nonconstant_source_coefficients": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "constant_source_coefficient": "1/32",
+      "fixed_root_direction": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        -1
+      ],
+      "id": "pair_5_6_minus",
+      "nonconstant_source_coefficients": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    }
+  ],
+  "nonempty_source_path": {
+    "b": "1-t**2",
+    "beta_zero": "An algebraic B in(16,18) gives beta=0,D>0,L<0",
+    "h": "t-4*t**2+B*t**3",
+    "parameter_bounds": "0<t<=epsilon,16<=B<=18",
+    "remainder_norms": [
+      27640,
+      24459,
+      248856
+    ],
+    "sig": "t",
+    "strict_source": "B=18 gives D>0,beta>0,L<0",
+    "x": "t",
+    "z": "1-t**2"
+  },
+  "polynomial_features_10": [
+    "X",
+    "Y",
+    "Z",
+    "W",
+    "Z*u",
+    "Z*w",
+    "W*u",
+    "W*u*w",
+    "W*u**2",
+    "W*u**3*w"
+  ],
+  "retained_additional_polynomial_features_7": [
+    "X*w",
+    "Z*u*w",
+    "X*u",
+    "W*u**2*w",
+    "Y*u",
+    "Y*w",
+    "Y*u*w"
+  ],
+  "retained_squares_14": [
+    {
+      "nonnegative_source_coefficient": "4*beta",
+      "root_coefficients_on_17_polynomial_features": [
+        "1",
+        "0",
+        "0",
+        "0",
+        "h",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "nonnegative_source_coefficient": "4*beta + 4*m + 2",
+      "root_coefficients_on_17_polynomial_features": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1",
+        "h",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "nonnegative_source_coefficient": "4*D + 2",
+      "root_coefficients_on_17_polynomial_features": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "e",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "nonnegative_source_coefficient": "4*b*p*z",
+      "root_coefficients_on_17_polynomial_features": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "sig",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-1",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "nonnegative_source_coefficient": "4*a",
+      "root_coefficients_on_17_polynomial_features": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-b*q",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1/q",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "nonnegative_source_coefficient": "4*a",
+      "root_coefficients_on_17_polynomial_features": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-b*q",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1/q",
+        "0"
+      ]
+    },
+    {
+      "nonnegative_source_coefficient": "4*a",
+      "root_coefficients_on_17_polynomial_features": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-b*q",
+        "0",
+        "0",
+        "1/q"
+      ]
+    },
+    {
+      "nonnegative_source_coefficient": "4*ell",
+      "root_coefficients_on_17_polynomial_features": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-b*q + q",
+        "0",
+        "0",
+        "-1/q",
+        "0",
+        "0",
+        "1/q",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "nonnegative_source_coefficient": "4*C*z",
+      "root_coefficients_on_17_polynomial_features": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-b*q",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1/q",
+        "0"
+      ]
+    },
+    {
+      "nonnegative_source_coefficient": "4*a + 2*z*(2*C + 1) - 1",
+      "root_coefficients_on_17_polynomial_features": [
+        "0",
+        "1/q",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-b*q",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "nonnegative_source_coefficient": "4*ell - 1",
+      "root_coefficients_on_17_polynomial_features": [
+        "0",
+        "1/q",
+        "0",
+        "0",
+        "0",
+        "-1/q",
+        "-b*q + q",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "nonnegative_source_coefficient": "2*H0 - 1",
+      "root_coefficients_on_17_polynomial_features": [
+        "0",
+        "0",
+        "sig",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "nonnegative_source_coefficient": "3*L**2/4",
+      "root_coefficients_on_17_polynomial_features": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-x",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "nonnegative_source_coefficient": "2*H0 - 2",
+      "root_coefficients_on_17_polynomial_features": [
+        "0",
+        "0",
+        "0",
+        "-q*x",
+        "0",
+        "0",
+        "0",
+        "0",
+        "q",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    }
+  ],
+  "root_coefficients_on_10_polynomial_features": [
+    [
+      "1",
+      "0",
+      "0",
+      "0",
+      "h",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "1/q",
+      "0",
+      "0",
+      "0",
+      "0",
+      "-b*q",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "1/q",
+      "0",
+      "0",
+      "0",
+      "-1/q",
+      "-b*q + q",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "sig",
+      "0",
+      "0",
+      "0",
+      "0",
+      "-L*x/2 - 1",
+      "0",
+      "L/2"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "-x",
+      "0",
+      "1"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "-q*x",
+      "0",
+      "0",
+      "0",
+      "0",
+      "q",
+      "0"
+    ]
+  ],
+  "root_order": [
+    "Nx",
+    "JC",
+    "Jl",
+    "T",
+    "V",
+    "Atheta"
+  ],
+  "scope": "Complete local lambda<=0 C1 parent on the stated source/testing box; not a global pencil.",
+  "shared_native_source_definition_file": "fixed_box_c1.tex, section1",
+  "signed_testing_gauge": {
+    "W": "Ws",
+    "X": "sign_plus(ws)*Xs",
+    "Y": "sign_plus(us)*Ys",
+    "Z": "sign_plus(us)*sign_plus(ws)*Zs",
+    "sign_plus(0)": 1,
+    "u": "abs(us)",
+    "w": "abs(ws)"
+  },
+  "source_bounds": {
+    "H": 2,
+    "abs_L": 8,
+    "abs_R0": "512*epsilon",
+    "gram_constant_entry_error": "2**20*epsilon",
+    "gram_nonconstant_coefficient_bound": "2**20"
+  },
+  "source_conditions": [
+    "0<x,sigma<=epsilon",
+    "0<z<=1",
+    "0<b<1",
+    "r=b*z<1",
+    "0<h<1",
+    "E=1-x*h/sigma>0",
+    "native J,M>0",
+    "D,beta>=0",
+    "L=lambda/sigma<=0"
+  ],
+  "source_definitions": {
+    "Ay": "-8*l + 8*p + 4*z*(2*D*h + 2*p*sig + (2*m + 1)*(b + h - 1))",
+    "Bx": "8*kap*e",
+    "C": "K*z*(1+sig*r)*E/(2*(1-r)*P)",
+    "D": "(K*(1+sig*z)*(1+sig*r)-J*P)/(2*J*P)",
+    "E": "1-x*h/sig",
+    "H": "h/sig",
+    "H0": "1+z*(1-b)",
+    "J": "1+x*h-sig*(1-r)",
+    "K": "1+x",
+    "L": "lambda/sig",
+    "M": "Rs-x*z*theta",
+    "P": "sig+K+sig*z*(1+b*x+2*x*h)+sig*b*x**2*h*z**2+x**2*h*theta*z",
+    "Q": "1-b",
+    "R0": "-4*(2*(C+D)*(b*z-1)+2*p+b*z-1)",
+    "Rs": "1+x*r",
+    "Rx": "-8*D*b + 8*beta*(1 - h) - 4*(2*m + 1)*(b + h - 1)",
+    "a": "p/b",
+    "beta": "(K*(1+sig*r)*(1+x*h*z)-theta*P)/(2*theta*P)",
+    "chi": "-8*D*h + 8*b*p + 4*e*h*(2*D + 1) - 4*h + 8*l*(1 - b) + 4*z*(4*D*b*h + 4*b*p*sig + 2*beta*(1 - h)**2 + (2*m + 1)*(b + h - 1)**2)",
+    "dG": "4*D/sig**2",
+    "e": "x*h/sig",
+    "ell": "l/(1-b)",
+    "event_A": "a/z",
+    "event_alpha": "ell/z",
+    "k": "sqrt(x)",
+    "kap": "K*(1+sig*r)*(1+sig*z)/(2*M*P)",
+    "l": "(1+sig*r)*(e*Rs*(1+sig*z)+M*E)/(2*P)",
+    "lambda": "(8*D*h+4*beta*(1-h)**2+2*h**2)/sig-4*b*p*sig*z",
+    "m": "kap*x**2*z*H",
+    "nu": "(2*D-2*beta*(1-h)+h)/sig",
+    "p": "(z*(1+x*h)*E+(1-r)*(1+x*h*z))/(2*P)",
+    "q": "sqrt(z)",
+    "r": "b*z",
+    "theta": "1-h"
+  },
+  "symbol_conventions": {
+    "A": "A_theta",
+    "JC": "J_C",
+    "JL": "J_ell",
+    "N": "Nx",
+    "T": "Gamma+(L/2)*V",
+    "ell": "opening-cleared alpha*z",
+    "kap": "kappa",
+    "q": "sqrt(z), source only",
+    "sig": "sigma"
+  },
+  "testing_channel_monomials_7": [
+    "w",
+    "w**2",
+    "u",
+    "u*w",
+    "u**2",
+    "u**2*w",
+    "u**3"
+  ],
+  "testing_conditions": [
+    "0<=u,w<=delta",
+    "W,X,Y,Z unrestricted real"
+  ],
+  "zero_faces": "beta=0 literal; D=0 cannot intersect this branch since dG>=2-200*epsilon>0"
+}

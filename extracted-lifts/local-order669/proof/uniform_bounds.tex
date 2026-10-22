@@ -1,0 +1,222 @@
+\section{A fully evaluated source box, with arbitrary \texorpdfstring{$H$}{H}}
+\label{sec:sourcebox}
+The pointwise estimates in the uniform C1 proof can be replaced by numerical
+inequalities. Set
+\[
+ \epsilon=2^{-30},\qquad \delta=2^{-12}.
+\]
+Use the native source formulas (P1), the definitions (SP3), and impose
+\begin{equation}\label{eq:sourcebox}
+ 0<x,\sigma\le\epsilon,\quad 0<z\le1,\quad 0<b,h<1,\quad
+ r=bz<1,\quad E,M,J>0,\quad D,\beta\ge0.
+\end{equation}
+There is no lower bound on $z,b,1-b,h,1-h$, and no upper bound on
+$H=h/\sigma$. The literal faces $D=0$ and $\beta=0$ are admitted.
+The opening variables $x,\sigma,z$ remain positive in this chart; a
+literal zero opening is not obtained by cancelling a zero factor.
+
+Here and below every displayed inequality holds in the source real
+closed field. Put $k=\sqrt x$, $q=\sqrt z$, and $e=xh/\sigma$.
+The following estimates will be deliberately conservative.
+\begin{align}
+ &1\le P\le1+4\epsilon,\quad
+  1-\epsilon\le J,M\le1+\epsilon,\quad
+ 1\le B_s\le1+6\epsilon,\quad 1\le H_0\le2,\label{eq:bound1}\\
+ &0<e\le6\epsilon,\quad
+ |\mathcal H-H_0|\le32\epsilon,\quad
+ 0\le D\le3\sigma^2,\quad 0\le\beta(1-h)\le h,\label{eq:bound2}\\
+ &\tfrac13\le p,l,\kappa\le2,\quad\kappa\le1,
+ \quad 0<m\le6\epsilon^2,\quad |C(r-1)|\le1,\label{eq:bound3}\\
+ &|\nu|\le4,\quad |\lambda_0|\le5,\quad
+ |K_A-\{2(1-h)H_0-2h(1-r)\}|\le1024\epsilon,\label{eq:bound4}\\
+ &|R_0|\le40(x+\sigma),\quad |B_x|\le48\epsilon,
+ \quad |A_y|,|\chi|\le64,\quad |R_x|\le24.\label{eq:bound5}
+\end{align}
+
+\paragraph{Proof of the bounds.}
+For the proof one may first replace $2^{-30}$ by any positive real
+$\epsilon\le2^{-12}$. The formula for $P$ is a sum of nonnegative
+terms. Its nonconstant part is at most
+$x+2\sigma+3x\sigma+x^2\sigma+x^2\le4\epsilon$.
+The formulas for $J,M,B_s$ give \eqref{eq:bound1} directly; in particular
+$J-\sigma>0$.
+
+Initially $0<e<1$ follows from $E>0$. Dropping the negative term in
+$\mathcal H$ gives $\mathcal H\le4$. The source identities
+\[
+ 2(1-h)P\beta=hB_s-\sigma H_0,\qquad
+ 2P\{JD+x(1-h)\beta\}=\sigma^2\mathcal H
+\]
+imply
+\[
+ eB_s\le xH_0+\sigma\mathcal H\le2x+4\sigma.
+\]
+Thus $e\le6\epsilon$. Expanding $\mathcal H-H_0$ and taking absolute
+values gives
+\[
+ |\mathcal H-H_0|\le5x+3e+2e^2\le32\epsilon.
+\]
+The second source identity, with both summands nonnegative, gives
+$D\le3\sigma^2$. The first gives
+$\beta(1-h)\le hB_s/(2P)\le h$. The numerator of $p$ is at least
+$H_0-e\ge1-6\epsilon$; the numerator of $l$ is at least
+$M(1-e)$. These inequalities, together with \eqref{eq:bound1}, give
+the lower bounds $p,l\ge1/3$. The corresponding upper bounds and
+$1/3\le\kappa\le1$ follow by bounding each positive numerator factor.
+Now $m=\kappa xze$ and the pole-free expression for $C(1-r)$ prove
+the rest of \eqref{eq:bound3}.
+
+Use the exact identities
+\begin{align*}
+ \nu&=2D/\sigma+\{H_0-ez(J-\sigma)\}/P,\\
+ \lambda_0&=2e(1-h)z(J-\sigma)/P
+       -2(1-h)H_0/P+8Dh/\sigma-4bp\sigma z.
+\end{align*}
+They imply $|\nu|\le4$, $|\lambda_0|\le5$, and
+\[
+ |\lambda_0+2(1-h)H_0|\le72\epsilon.
+\]
+To bound $K_A$ uniformly in $H$, write
+\[
+ N_\kappa=(1+x)(1+\sigma r)(1+\sigma z)-MP
+            =xF_x+\sigma F_\sigma.
+\]
+Here $F_x=(N_\kappa-N_\kappa|_{x=0})/x$ is a polynomial with sum of
+absolute coefficients $37$ after $r=bz$, and
+$F_\sigma=r-1+\sigma rz$. All its arguments belong to $[0,1]$.
+The exact pole removal is
+\[
+ H(2\kappa-1)=\frac{eF_x+hF_\sigma}{MP}.
+\]
+Since $|(MP)^{-1}-1|\le12\epsilon$ and $(MP)^{-1}\le2$,
+\[
+ |H(2\kappa-1)+h(1-r)|\le458\epsilon.
+\]
+Combining this with $K_A=2H(2\kappa-1)-\lambda_0$ proves
+\eqref{eq:bound4}, since $2\cdot458+72<1024$.
+
+For $R_0$, eliminate the apparent $C$ pole explicitly:
+\begin{align*}
+ -PR_0/4={}&z(1-e)\{1+xh-(1+x)(1+\sigma r)\}\\
+ &+(1-r)\{1+xhz-P\}-2DP(1-r).
+\end{align*}
+Taking absolute values gives $|R_0|\le40(x+\sigma)$.
+The remaining bounds in \eqref{eq:bound5} follow immediately from
+the definitions (SP3), $|h+b-1|\le1$, and \eqref{eq:bound2}--\eqref{eq:bound3}.
+
+\paragraph{The positive-$\lambda$ branch.}
+Suppose additionally $\lambda>0$ and put
+\[
+ S=d_G+\rho,\quad d_G=4D/\sigma^2,\quad
+ \rho=\lambda x/\sigma,\quad L_0=\lambda\sigma,\quad q_0=\lambda k.
+\]
+The exact identity
+\begin{align*}
+ S={}&2\mathcal H/P+d_G(1-J+2hx)+2eH_0/P\\
+ &-2e^2z(J-\sigma)/P-4bpxz
+\end{align*}
+and the preceding bounds give
+\begin{equation}\label{eq:positivebounds}
+ 1\le S\le10,\quad 0\le d_G,\rho\le10,\quad
+ 0<L_0\le3,\quad 0<q_0\le6,\quad \lambda x\le10\epsilon.
+\end{equation}
+For example, the negative terms in the expression for $S$ have
+magnitude at most $144\epsilon^2+8\epsilon$; its leading term is
+at least $2(1-32\epsilon)/(1+4\epsilon)$. This gives $S\ge1$.
+The upper bound follows by dropping the two negative terms and
+using $d_G\le12$ before improving it to $d_G\le S\le10$.
+Finally $q_0^2=L_0\rho\le30$.
+
+The remaining potentially large expression is controlled without
+bounding $\lambda$ itself:
+\[
+ (x+\sigma)^2H=xe+2\sigma e+\sigma h\le2\epsilon,
+ \qquad (x+\sigma)^2\le4\epsilon^2.
+\]
+Since $\lambda\le2H+5$, it follows that
+\begin{equation}\label{eq:Rlambda}
+ |R_0\sqrt\lambda|\le100\sqrt\epsilon.
+\end{equation}
+
+Let $c=\max(0,1-K_A)$ and $a_0=k/\sigma$. The error bound for
+$K_A$ gives $0\le c\le4$. If $c>0$, then $h>1/8$: for
+$h\le1/8$ the reference value of $K_A$ is at least $3/2$, and its
+error is at most $1/4$. On this branch $L_0=2h+\sigma\lambda_0\ge h>1/8$.
+Moreover
+\[
+ a_0^2(hB_s-\sigma H_0)\le\mathcal H,
+ \qquad hB_s-\sigma H_0\ge1/16,
+\]
+so $a_0\le8$. Consequently
+\begin{equation}\label{eq:cbounds}
+ c/L_0\le32,\quad ca_0\le32,\quad c/\lambda\le32\sigma.
+\end{equation}
+When $c=0$, all terms containing these factors are exactly zero;
+no positive lower bound for $L_0$ or upper bound for $a_0$ is needed.
+
+\paragraph{Bounds on every coefficient matrix.}
+Let $s=\sqrt u$, and write the complete principal Gram from the
+source export as
+\[
+ Q(s,w)=Q_0+\sum_{(i,j)\in\mathcal A}C_{ij}s^iw^j,
+ \quad
+ \mathcal A=\{(0,1),(0,2),(1,0),(2,0),(2,1),(4,0),(4,1)\}.
+\]
+Its source reference $B$ has $N_x$ entry $2$, radial block
+\[
+ \begin{pmatrix}2&2b-1\\2b-1&b^2+(1-b)^2\end{pmatrix},
+\]
+Gamma entry $1$, two angular entries $(K_A+c)/2$, four circuit
+entries $1/2$, and final entries $1,1/2$. There are no other
+entries. The exact identity
+\begin{align*}
+ (N_y+bR)^2+(N_y-(1-b)R)^2
+ ={}&\frac{N_y^2+R^2}{3}
+ +\frac53\left(N_y+\frac{3(2b-1)}5R\right)^2\\
+ &+\frac{1+6b(1-b)}{15}R^2
+\end{align*}
+proves $B\succeq\frac13I_{12}$ without any choice of whitening matrix.
+Here $K_A+c\ge1$ by definition.
+
+For a symmetric matrix use the row norm
+$\|A\|_\infty=\max_i\sum_j|A_{ij}|$.
+Substitution of \eqref{eq:bound1}--\eqref{eq:cbounds} into the
+printed matrices yields
+\begin{equation}\label{eq:matrixbounds}
+ \|Q_0-B\|_\infty\le2048\sqrt\epsilon,\qquad
+ \|C_{ij}\|_\infty\le128\quad((i,j)\in\mathcal A).
+\end{equation}
+These are finite coefficient bounds, not bounds obtained after a test
+has been selected. To make the entrywise audit transparent, the
+largest possible $s^2$ diagonal correction is
+$c(2a_0+1/L_0)/S\le96$; its adjacent normal coupling is at most
+$2\sqrt{10}|\nu|<26$, so its row sum is below $128$.
+The three-entry normal rows in the $s^2$ and $s^4w$ matrices are at
+most $6|\nu|\sqrt{10}<76$ and $12p\sqrt{10}<76$, respectively.
+The $s$ matrix is bounded by $\sqrt6/2+32\sqrt{k}$.
+The $w$ matrix is bounded using \eqref{eq:Rlambda}; all its entries
+are $O(\sqrt\epsilon)$ with the explicit constants above.
+The $w^2,s^2w,s^4$ rows are bounded by $5,32,44$, respectively.
+Indeed, the largest $w^2$ row is
+$2z(1+2D)(1+b)\le4(1+6\epsilon^2)<5$.
+The constant correction is bounded by grouping the pole-free
+$C(r-1)$ terms before taking absolute values; its normal rows are
+at most $144\sqrt\epsilon$, its radial rows at most $612\epsilon$,
+and its circuit rows at most $72\sqrt\epsilon+1000\epsilon$.
+All these are below the bound in \eqref{eq:matrixbounds}.
+
+Define the evaluated rational number
+\[
+ R_*:=128(2\delta+2\delta^2+\delta^3+\delta^4+\delta^5)
+ =\frac{563087409156097}{9007199254740992}<\frac1{12}.
+\]
+Because $2048\sqrt\epsilon=1/16<1/12$, the source matrices
+\begin{equation}\label{eq:sourcePSDblocks}
+ Q_0-R_*I_{12},\qquad
+ \frac{\delta^{i+j}}2(128I_{12}\pm C_{ij})
+ \quad((i,j)\in\mathcal A)
+\end{equation}
+are positive semidefinite. In fact the first is positive definite
+with lower bound greater than $1/6$. Thus the fixed testing
+construction applies throughout \eqref{eq:sourcebox} with
+$\lambda>0$, including both weak source-weight faces.

@@ -1,0 +1,335 @@
+\documentclass[11pt]{article}
+\usepackage[margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,hyperref}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}[proposition]{Lemma}
+\newcommand{\R}{\mathbb R}
+\newcommand{\rankt}{\operatorname{rank}_{\otimes}}
+\newcommand{\SOS}{\Sigma}
+\allowdisplaybreaks
+\title{From singular tensor certificates to fixed testing features}
+\author{}
+\date{23 October 2026}
+\begin{document}
+\maketitle
+
+\noindent
+The strict-Gram construction preserves small tensor rank even when
+it changes the testing functions. We prove this fact, apply it to
+the all-$H$ C1 certificate, and give explicit formulas for fixing
+the testing functions on a bounded source and testing region.
+The passage from these local regions to a full-set pencil remains
+to be constructed.
+
+\section{What the tensor criterion does and does not supply}
+
+Write $T=K_c\otimes_{\R}K_t$ for two labelled real closed
+extensions of $\R$, and let $B=B_c\otimes B_t$ be its bounded
+tensor subring. There is no disjointness assumption.
+For $z\in T$, $\rankt(z)$ is the smallest number of elementary
+source--testing products summing to $z$.
+
+Scheiderer's Theorem 3.10 converts a universal bound $d$ on the
+tensor rank of individual square roots into a bound $d$ on the
+largest PSD block. It does not prescribe the number of blocks.
+Its proof constructs the algebra of testing functions at an
+individual pair, then makes two finite selections: a testing-image
+cover, combined by a disjoint union, and a support-admission cover,
+combined by a fibre product. See Lemmas 3.15--3.17, printed
+pp.~13--15 of
+\href{https://arxiv.org/pdf/2004.04196}{arXiv:2004.04196v2}.
+The dimensions and functions in those finite selections have not
+been evaluated in the present public Q222 source.
+
+Thus there are three different finite objects to extract:
+a rank bound for each tensor root; a common finite testing space
+on one algebraic cover; and the multiplication tables that give
+the affine pencil. The first does not by itself print the other two.
+
+\section{A rank bound which survives the strict-Gram step}
+
+\begin{lemma}\label{lem:rank}
+Let $G\in\operatorname{Sym}_r(B)$ have positive-definite real
+residue. Suppose $g_1,\ldots,g_r\in K_c\otimes V$, where
+$V\subset K_t$ is an $\R$-linear space of dimension at most $d$.
+Then $g^{\mathsf T}Gg$ is a finite sum of squares whose individual
+roots have tensor rank at most $d$.
+If only $\rankt(g_i)\le R$ is known, the bound $rR$ follows.
+\end{lemma}
+\begin{proof}
+The scalar positive-residue lemma TF1 writes every positive-residue
+bounded tensor as a sum of squares of elementary tensors. This is
+stronger than merely giving arbitrary tensor square roots.
+The strict-Gram lemma TF2 first applies a real congruence and then
+expresses the quadratic form using positive-residue scalar
+coefficients times squares of real linear combinations of the
+$g_i$. Those combinations still lie in $K_c\otimes V$.
+Multiplication by an elementary tensor $a\otimes b$ places such a
+combination in $K_c\otimes bV$, whose real dimension is at most
+$d$. Expanding the scalar sums of squares therefore proves the
+bound. Taking $V$ to be spanned by the testing factors in displayed
+rank-$R$ expansions of all $g_i$ gives $\dim V\le rR$.
+\end{proof}
+
+This proof needs no bound on the number of elementary tensors in a
+Gram coefficient. Such a bound affects the number of square roots,
+but not their individual tensor rank. The exact source is
+\href{https://github.com/anubhav70747/q222-finite-sdp/blob/0c1ce2e15ed067a6845464e2468559cea5274f2c/latex/chapters/03_tensor.tex#L44-L118}
+{\texttt{03\_tensor.tex}, TF1--TF2}.
+
+\subsection{An evaluated rank bound for the all-$H$ C1 theorem}
+
+Use the domain of the public theorem
+\href{https://github.com/anubhav70747/q222-finite-sdp/blob/0c1ce2e15ed067a6845464e2468559cea5274f2c/latex/certificates/c1_short.tex#L7253-L7780}
+{\texttt{thm:c1-unification-bounded-z-all-H}}:
+$x=k^2$ and $\sigma$ are positive source infinitesimals,
+$z>0$ is bounded, $h/\sigma$ is arbitrary, $u,w$ are independent
+testing infinitesimals, and the original strict gaps and
+$D,\beta\ge0$ are retained. No state ratio is imposed.
+
+For its $\lambda>0$, $WZ>0$ branch, choose the common state sign
+so $W,Z>0$. Every root in its main Gram belongs to the
+source-linear span of the following twelve testing functions:
+\begin{equation}\label{eq:h12}
+\begin{split}
+ \mathcal H_+=\{&X,Y,Z,W,uZ,wZ,uW,uwW,u^2W,\\
+              &u^{3/2}W,u^{1/2}W,\sqrt{uwWZ}\}.
+\end{split}
+\end{equation}
+These are distinct generalized monomials. Substituting squares
+for the positive variables makes them distinct ordinary monomials,
+so their real span has dimension exactly twelve on the open chart.
+Homogeneous state normalization does not change this independence.
+
+Here is the entire root check. In the notation of that theorem,
+\[
+\begin{array}{c|l}
+\text{root}&\text{testing factors needed}\\\hline
+N_x&X,\ uZ\\
+N_y&Y,\ wZ\\
+R&wZ,\ uW\\
+\Gamma_*&Z,\ uwW\\
+A_\theta&W,\ u^2W\\
+T_\theta&W,\ uW\\
+d_1,\ldots,d_4&uZ,\ uwW,\ W,\ wZ,\ \sqrt{uwWZ}\\
+U_*,K_*&u^{3/2}W,\ u^{1/2}W,\ uW,\ W.
+\end{array}
+\]
+All omitted factors are pure source factors. In particular the
+four circuit monomials $B_i$ are elementary tensors, and their
+geometric mean has testing factor $\sqrt{uwWZ}$.
+The twelve-root Gram is printed at
+\href{https://github.com/anubhav70747/q222-finite-sdp/blob/0c1ce2e15ed067a6845464e2468559cea5274f2c/latex/certificates/c1_short.tex#L7550-L7691}
+{lines 7550--7691}. Lemma~\ref{lem:rank} therefore bounds its
+post-TF2 roots by twelve, rather than the coarser $12\cdot2$.
+
+The retained squares do not enlarge this bound. Event and radial
+excess roots have rank at most three; the circuit remainder roots
+have rank at most two. For the angular budget, after expanding
+each $U+1$ prefactor, the only root with more than two monomials is
+\[
+ \sqrt a\,U(V-Z_*)-(Z_*-UV)/\sqrt a
+ =(\sqrt a+1/\sqrt a)UV-\sqrt a\,UZ_*-Z_*/\sqrt a.
+\]
+It has rank at most three: $a$ is pure source and $U,V,Z_*$ are
+separated monomials. Multiplication by the other separated factors
+preserves that rank. Opposite-state-sign additions are separated
+nonnegative monomials. The zero-state-coordinate cases have the
+same or smaller ranks. In the $WZ\le0$ branch the $d_i=B_i$ do
+not even need the twelfth testing function.
+
+For $\lambda\le0$, the Gram uses
+$(N_x,N_y,R,\Gamma,A_\theta,V)$ with
+$V=uw(u^2-x)W$. Its testing span is contained in
+\[
+ \{X,Y,Z,W,uZ,wZ,uW,uwW,u^2W,u^3wW\},
+\]
+of dimension ten. The source boundary $D=0$ does not cause a
+rank loss problem: $\Gamma_*=\sqrt{4D/\sigma^2}\Gamma$ is then
+simply zero, and no inverse of $D$ was used.
+
+\begin{proposition}\label{prop:local12}
+Conditional on the printed all-$H$ C1 certificate, its entire
+stated local domain has a universal SOS representation with
+individual root tensor rank at most twelve, over all labelled
+real closed extensions, all allowed source faces and all states.
+This is a local tensor-rank statement. It is not a bound for the
+full quantum set, since the other source and projective-testing
+domains have not been included in this calculation.
+\end{proposition}
+
+\section{Where a fixed testing dictionary is still lost}
+
+The twelve functions in \eqref{eq:h12} span the roots before
+strict-Gram factorization. The Gram itself depends on the testing
+variables. It is therefore not a PSD matrix of source coefficients
+for those twelve functions. Treating it as one would omit exactly
+the state-normal and angular corrections being certified.
+
+More explicitly, if $V=\operatorname{span}_{\R}\mathcal H_+$ and
+TF1 supplies the elementary root $a(c)b(t)$, a pre-Gram root in
+$K_c\otimes V$ is sent to $K_c\otimes bV$. This preserves the
+bound twelve on tensor rank, but does not in general preserve
+$V$. Different scalar coefficients may supply different $bV$.
+The proposition above asserts the rank bound only; it does not
+assert that all final roots lie in the twelve-function span.
+
+The post-TF1 factors are also not automatically in one finite
+testing space. In TF4 the scalar splitting chooses a real
+$M>|y|$ after the bounded testing element $y$ is given. Its
+testing square roots include $\sqrt{M+y}$ and $\sqrt{M-y}$.
+The real congruence and the positive scalar budgets may likewise
+be chosen separately at each source/test pair.
+
+\begin{lemma}\label{lem:independence}
+For distinct real $M_j>1$, the functions
+$\sqrt{M_j+t}$ on $-1<t<1$ are linearly independent over $\R$.
+Consequently the union of the allowable TF1 choices is not a
+finite-dimensional testing space, even for a linear testing factor.
+\end{lemma}
+\begin{proof}
+In $\R(t)^*/\R(t)^{*2}$ the classes of $M_j+t$ are independent:
+a product of a nonempty subset has odd valuation at each of its
+distinct zeros $t=-M_j$. The associated multiquadratic function
+field therefore has an automorphism changing the sign of one
+chosen square root and fixing the others. Apply that automorphism
+to a supposed real linear relation and subtract it from the
+original relation. Its chosen coefficient is zero. Repeat for
+each index. A relation between the analytic positive branches on
+an interval would also be a function-field relation, so the same
+conclusion applies to the displayed functions.
+\end{proof}
+
+This is an obstruction to taking the union of the displayed
+pointwise roots, not an obstruction to any possible finite lift.
+A different certificate can fix $M$ on a uniformly bounded box.
+Indeed, on a fixed rectangle
+$|x(c)|\le\varepsilon/M$, $|y(t)|\le M$, with fixed real
+$\varepsilon,M>0$, the identity
+\[
+ \varepsilon+x(c)y(t)=\tfrac12
+ \bigl[(\varepsilon/M+x(c))(M+y(t))
+       +(\varepsilon/M-x(c))(M-y(t))\bigr]
+\]
+has nonnegative separated factors. For this channel the only
+testing radicals are the two fixed functions $\sqrt{M+y(t)}$
+and $\sqrt{M-y(t)}$. Equality on either boundary is harmless.
+Thus multiplication of a fixed $d$-function testing span uses
+at most $2d$ functions for this channel. The unresolved step is
+to supply finitely many such rectangles and prove their coverage,
+not the scalar identity on any one of them.
+An auxiliary algebraic cover can also change the available
+functions, but then one must prove a global SOS identity on that
+fixed cover; an existential choice of its new coordinates at
+each source/test pair is insufficient.
+
+There is a second issue at precisely the same interface.
+The manuscript's conditions ``infinitesimal'', ``bounded unit''
+and ``unbounded'' refer to types over $\R$; they are not fixed
+real semialgebraic boxes. A finite list of such source cases is
+not yet an evaluated finite list of real source/test rectangles
+with fixed constants. Qualitative real-spectrum compactness can
+select those data if its universal premise is valid. A compiler
+must actually supply them.
+
+\section{A fixed-box compilation which removes that obstruction}
+
+The following statement gives an explicit target for completing
+one local box, rather than adjoining all possible TF1 radicals.
+
+\begin{lemma}[Fixed testing radicals]\label{lem:box}
+Let $h_1,\ldots,h_d$ be fixed testing functions on $Y$.
+Suppose a finite source-dependent quadratic form has been written
+as a sum of scalar channels times squares of source-linear
+combinations of the $h_i$. In every channel suppose
+\[
+ q(c,t)=q_0(c)+\sum_{j=1}^{m}a_j(c)b_j(t),\qquad
+ q_0(c)\ge c_0>0,\quad |a_j(c)|\le A,
+\]
+where $m\ge1$, the $b_j$ are a fixed list of testing functions and
+$c_0,A>0$ are fixed rational numbers. Put
+$\gamma=c_0/(mA)$ and assume $|b_j(t)|\le\gamma$ on $Y$.
+Then a common testing spanning list is
+\[
+ \{h_i\}_{i=1}^d\ \cup\
+ \{h_i\sqrt{\gamma+b_j},\ h_i\sqrt{\gamma-b_j}:
+                     1\le i\le d, 1\le j\le m\},
+\]
+with at most $d(1+2m)$ functions. All scalar multipliers are
+nonnegative source factors. The formula is an identity over all
+labelled real closed extensions satisfying the same finite bounds.
+\end{lemma}
+\begin{proof}
+Exactly
+\[
+ q=(q_0-c_0)+\frac12\sum_{j=1}^{m}
+ \bigl[(A+a_j)(\gamma+b_j)+(A-a_j)(\gamma-b_j)\bigr].
+\]
+All four factors in every bracket are nonnegative in their own
+fields. Take their separate square roots and multiply by the
+channel's source-linear combination of $h_i$. The source-only
+term uses no new testing function. The proposed list follows.
+\end{proof}
+
+For the bounded-$z$ C1 family, the accompanying
+\emph{Fixed testing functions at singular C1 contacts} carries out this
+construction on the independent rectangles
+\[
+0<x,\sigma\le2^{-160},\qquad 0<z\le1,
+\qquad |u|,|w|\le2^{-100},
+\]
+with the original source gaps and $D,\beta\ge0$. The ratio
+$H=h/\sigma$ is unrestricted. In the positive-angular case, twelve
+main roots and seven nonconstant testing monomials give
+$12(1+2\cdot7)=180$ functions by Lemma~\ref{lem:box}.
+The retained event, angular and circuit squares enlarge this list
+to 220. A source-only shear treats the nonpositive-angular case
+with 157 functions. Thus their union contains at most 377 functions
+for the complete real-state polynomial on this rectangle.
+
+The two constructions print every source bound, coefficient matrix,
+square factor and testing function. They include both testing axes,
+all real state signs and the permitted zero event weights.
+The JSON files supply the labelled lists and coefficient prescriptions.
+Extending these constructions across the remaining source and testing
+domains is the outstanding global selection problem.
+
+\section{The final finite matrix once a common cover is evaluated}
+
+Suppose one has actually printed a finitely generated real algebra
+$A$, a visible map $\phi:Y(\R)\to\R^8$, and finite subspaces
+$U_1,\ldots,U_s\subset A$ such that
+\[
+ \mathcal Q_{222}\subset\phi(Y(\R)),\qquad
+ \phi^*(P)\subset\R_{\ge0}+\sum_{i=1}^{s}\Sigma U_i^2,
+\]
+where $P$ is the full cone of nonnegative affine quantum slacks.
+Both inclusions must be proved for those actual data.
+Take bases $v_{i1},\ldots,v_{id_i}$ and a basis of
+\[
+ W=\operatorname{span}\{1,\phi_1,\ldots,\phi_8,
+                v_{i\alpha}v_{i\beta}:i,\alpha,\beta\}.
+\]
+For $\ell\in W^*$ impose
+\[
+ \ell(1)=1,\quad \ell(\phi_\nu)=q_\nu,\qquad
+ M_i(\ell)=[\ell(v_{i\alpha}v_{i\beta})]_{\alpha,\beta}
+                         \succeq0\quad(1\le i\le s).
+\]
+The printed product coefficients in the basis of $W$ are exactly
+the affine-pencil entries. Evaluation at a covering point proves
+the forward inclusion. If a feasible $q$ were outside the compact
+convex quantum set, a nonnegative affine slack $f$ with $f(q)<0$
+would give
+$\ell(\phi^*f)\ge0$ from the SOS identity, a contradiction.
+This proves the reverse inclusion without replacing the required
+global SOS identity by tests at finitely many real sources.
+
+This construction has total block order $N=\sum_i d_i$ and at
+most $\dim W-9$ auxiliary coordinates (the full quantum set has
+affine dimension eight). Its entries become evaluated only when
+the cover, features and product basis are evaluated. Neither the
+local rank bound twelve nor the 377-function local union
+supplies the missing global list $U_1,\ldots,U_s$.
+
+\end{document}

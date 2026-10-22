@@ -1,0 +1,31 @@
+{
+  "all_passed": true,
+  "charts": [
+    {
+      "state_sign": 1,
+      "elementary_roots": 19,
+      "angular_roots": 8,
+      "circuit_roots": 3,
+      "identities_checked": [
+        "full retained elementary polynomial",
+        "complete angular Delta including sign terms",
+        "circuit C_plus"
+      ],
+      "passed": true
+    },
+    {
+      "state_sign": -1,
+      "elementary_roots": 19,
+      "angular_roots": 11,
+      "circuit_roots": 1,
+      "identities_checked": [
+        "full retained elementary polynomial",
+        "complete angular Delta including sign terms",
+        "circuit C_plus"
+      ],
+      "passed": true
+    }
+  ],
+  "method": "Read exported coefficient matrices, multiply every printed root by itself, and compare complete state polynomials exactly after algebraic positive-source parameterization.",
+  "boundary_statement": "The final testing formulas are polynomial in quarter-angle/state coordinates. W=0, Z=0, u=0, and w=0 follow by polynomial specialization. c=0 and dG=0 follow without cancellation."
+}

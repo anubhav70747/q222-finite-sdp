@@ -1,0 +1,80 @@
+{
+  "source_cancellation": {
+    "Fx_coefficient_l1": 37,
+    "Fs": "r*sig*z + r - 1",
+    "identity_exact": true
+  },
+  "source_identities_BE3_BE4_exact": true,
+  "gram_majorant": {
+    "coefficient_l1": "8590",
+    "constant_testing_part_l1": "5030",
+    "testing_exponents_sqrt_u_w": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        1
+      ]
+    ],
+    "all_coefficients_nonnegative": true,
+    "constant_testing_part_divisible_by_s": true
+  },
+  "evaluated_constants": {
+    "epsilon": "1/1461501637330902918203684832716283019655932542976",
+    "delta": "1/1267650600228229401496703205376",
+    "scalar_c0": "1/256",
+    "scalar_A": 1073741824,
+    "gamma": "1/3848290697216",
+    "main_features": 348,
+    "reduced_main_features": 180,
+    "reduced_gamma": "1/1924145348608",
+    "all_margin_comparisons_exact": true
+  },
+  "nonempty_faces": {
+    "D_numerator": "H**3*t**6 - H**2*t**6/2 - 7*H**2*t**5/2 + H**2*t**4 + H*t**5/4 + H*t**4/2 - 6*H*t**3 - H*t**2 + 3*t**3/4 + 3*t**2",
+    "beta_numerator": "-H**3*t**5 + H**2*t**5/2 + 4*H**2*t**4 - H*t**3 + 4*H*t**2 + H*t - 3*t/2",
+    "D_remainder_bound_t3_H_0_4": "687/4",
+    "beta_remainder_bound_t2_H_0_4": "156",
+    "D_zero_bracket_H": [
+      2,
+      4
+    ],
+    "beta_zero_bracket_H": [
+      1,
+      2
+    ],
+    "IVT_brackets_valid_on_t_le_1_1024": true
+  },
+  "unbounded_H_path": {
+    "D_numerator": "-3*t**2*(6*t**5 - 61*t**4 + 608*t**3 - 7872*t**2 + 8192*t - 126976)/262144",
+    "beta_numerator": "3*(3*t**2 + 64)*(2*t**3 + 5*t**2 + 64)/16384",
+    "H": "3/(4t)",
+    "KA_comparison_term_exactly_zero": true
+  }
+}

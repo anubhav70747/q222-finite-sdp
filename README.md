@@ -31,6 +31,7 @@ The recovered files provide:
 | Tilted-CHSH projection | Exact order-4 pencil without auxiliaries; alternative order-5 pencil with one auxiliary; both inclusions |
 | Regular C2 contact box | Explicit local certificate: 785 order-2 blocks, 1,570 listed functions and 237 coefficient equations |
 | C1D source box | Explicit local library: 82,928 separated squares and 3,844 testing spanning functions |
+| Bounded-z C1 source box | Exact order-669 pencil for the specified local certificate cone; 120 blocks and 2,694 auxiliaries |
 | Global candidates of orders 8,368 and 10,736 | Strict outer approximations, with exact separation proofs |
 | Global candidate of order 13,744 | Forward inclusion; reverse inclusion remains unproved |
 | C160 candidate of order 63,888 | Reverse inclusion remains unproved; full forward inclusion uses the stated extremal-coverage theorem |
@@ -39,6 +40,36 @@ The explicit-construction note derives the exact projection, gives the local
 feature formulas and explains the global candidates. It also formulates an
 exact algebraic search that terminates if a finite lift exists. That search
 has not produced a full-set coefficient tuple.
+
+The [stationary-contact construction](extracted-lifts/contact-selector/candidate_adequacy.pdf)
+now supplies an exact certificate for the support that excluded the two
+smaller candidates. A rational Gram selector extends it to an explicit
+open five-parameter family in the order-13,744 construction. The restored
+inequalities hold for all quantum realizations. This proves a local part
+of the remaining converse; it does not cover every contact.
+
+The [fixed testing-space construction](extracted-lifts/fixed-features/fixed_box_c1.pdf)
+gives a complete local C1 certificate on an explicit source and testing
+rectangle, including an unbounded ratio of source scales. Its two angular
+cases use 220 and 157 labelled functions; their union has at most 377.
+The 14-page derivation includes the complete state polynomial, zero event
+weights, testing axes and all state signs. The accompanying JSON files
+contain the functions, fixed directions and symbolic coefficient matrices.
+This is a local construction; the remaining domains must still be covered
+to extract an exact global pencil.
+
+The [evaluated local pencil](extracted-lifts/local-order669/proof/Fixed_Family_Extraction.pdf)
+uses fixed algebraic functions to represent the corresponding source cone
+with rational matrices. Its 17-page derivation covers the larger source box
+`0<x,sigma<=2^-30`, `0<z<=1`, under the printed gap conditions, and an
+independent testing rectangle. The matrix arrays and a standard-library
+checker for all 682 coefficient equations are included. This supplies an
+actual local pencil while leaving the other global domains to be covered.
+
+The [tensor-rank note](extracted-lifts/fixed-features/uniform_feature_route.pdf)
+explains why a bound on each square's tensor rank differs from a common
+finite testing space, and derives the final matrix construction once such
+a global space is supplied.
 
 ## Build and reproduce
 

@@ -1,0 +1,130 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,mathrsfs,booktabs,longtable,array}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Sym}{\operatorname{Sym}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\cone}{\mathcal K}
+\allowdisplaybreaks[2]
+\setlength{\emergencystretch}{3em}
+\setlength{\parskip}{3pt}
+\title{A fixed finite C1 testing family\\and an evaluated rational local pencil}
+\author{Constructive extraction from the complete Q222 source identities}
+\date{23 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+The twelve-root C1 identity admits a source-independent finite testing family
+on an explicit source box, with no upper bound on $H=h/\sigma$.
+A fixed matrix reserve and two algebraic gate variables replace the
+point-dependent TF1 radicals. A complementary six-root identity treats
+$\lambda\le0$. Keeping both independent state normals and the complete
+retained squares gives an evaluated rational source-cone pencil of total
+order $669$, with $120$ blocks, maximum block order $12$, and $2694$
+auxiliaries. Both directions of its representation of the specified
+\emph{local certificate cone} are proved. The construction does not give
+an exact lift of the full eight-coordinate $\mathcal Q_{222}$: global
+source and independent testing coverage, including the other C1 and C2
+boundaries, remains to be extracted.
+\end{abstract}
+
+\section{The result and its exact scope}
+Write $\mathbf c=(d,m,C,A,D,\alpha,\beta)$ for the seven canonical
+coefficients of the reciprocal parent $F_{\mathbf c}$ in
+Section~\ref{sec:source-setup}. Let $\cone_{\rm POS}$ and
+$\cone_{\rm NEG}$ be the two fixed Gram cones constructed below on
+the state charts $W\ge0,Z\ge0$ and $W\ge0,Z\le0$, respectively.
+The names refer to state signs, not to the sign of $\lambda$.
+Let $\cone_{\rm SIX}$ be the fixed six-root certificate cone of
+Section~\ref{sec:six}. Define
+\[
+ \cone_{669}=(\cone_{\rm POS}\cap\cone_{\rm NEG})+\cone_{\rm SIX}.
+\]
+These cones are defined by identities in the full polynomial
+$F_{\mathbf c}$ and unrestricted positive semidefinite Gram blocks
+on the printed testing vectors. They do not impose the nonlinear
+stationary source formulas on their visible coordinates.
+
+\begin{theorem}[Explicit local fixed-family admission]\label{thm:main}
+Use the native rational stationary source (P1), with $d=1$, and impose
+\[
+ 0<x,\sigma\le2^{-30},\qquad 0<z\le1,\qquad
+ 0<b,h<1,\quad r=bz<1,\quad E,M,J>0,\quad D,\beta\ge0.
+ \tag{D}
+\]
+Then $\mathbf c\in\cone_{669}$. There is no restriction on the sign of
+$\lambda$ and no upper bound on $H=h/\sigma$.
+Every $\mathbf c\in\cone_{669}$ satisfies
+\[
+ F_{\mathbf c}(u,w;W,X,Y,Z)\ge0
+ \quad\text{for } |u|\le2^{-24},\ |w|\le2^{-12},
+ \quad (W,X,Y,Z)\in\R^4.
+ \tag{T}
+\]
+The statement extends to complex states by real and imaginary splitting.
+All testing axes and zero state coordinates are literal specializations.
+Both permitted source faces $D=0$ and $\beta=0$ are retained.
+Positive multiples of an admitted source are admitted as well.
+\end{theorem}
+
+\begin{theorem}[Evaluated local cone representation]\label{thm:pencil}
+The supplied rational matrix file defines a homogeneous
+affine pencil $L_{669}(\mathbf c,y)$ such that, for every real
+$\mathbf c$,
+\[
+ \boxed{\quad
+ \mathbf c\in\cone_{669}\ \Longleftrightarrow\
+ \exists\,y\in\R^{2694}:\ L_{669}(\mathbf c,y)\succeq0.
+ \quad}
+\]
+Its total order is $669$, its $120$ diagonal blocks have order at
+most $12$, and its upper triangle has $7716$ nonzero rational
+coefficient records. There are no unevaluated matrix entries.
+\end{theorem}
+
+\begin{center}
+\begin{tabular}{lrrrr}
+\toprule
+Fixed cone & Blocks & Total order & Largest block & Auxiliaries\\
+\midrule
+$\cone_{\rm POS}$ &52&268&12&1087\\
+$\cone_{\rm NEG}$ &49&240&11&934\\
+$\cone_{\rm POS}\cap\cone_{\rm NEG}$ &101&508&12&2021\\
+$\cone_{\rm SIX}$ &19&161&10&666\\
+$\cone_{669}$ &120&669&12&2694\\
+\bottomrule
+\end{tabular}
+\end{center}
+The matrix file is \path{C1_UNIFORM_LOCAL_ORDER669.coo.json}.
+The last line includes seven source-splitting variables.
+Theorems~\ref{thm:main}--\ref{thm:pencil} concern the independent
+testing box (T). Feasibility of this pencil does not prove validity
+on the other quantum testing regions. In particular this pencil
+cannot yet be polarized as an exact full-$\mathcal Q_{222}$ lift.
+
+\paragraph{Proof route.}
+Section~\ref{sec:source-setup} states the complete source and parent
+identities. Section~\ref{sec:explicit-twelve-roots} extracts the
+twelve-root Gram and every retained square.
+Section~\ref{sec:sourcebox} supplies numerical source bounds.
+Section~\ref{sec:fixed-principal} replaces TF1 by a fixed algebraic
+family. Section~\ref{sec:six} handles the complementary circuit
+sign. Section~\ref{sec:matrices} proves both local cone inclusions
+and specifies the evaluated files. The final section isolates the
+global obligation that remains.
+
+\input{source_setup}
+\input{twelve_root}
+\input{uniform_bounds}
+\input{fixed_compiler}
+\input{six_root}
+\input{matrix_scope}
+
+\end{document}
+

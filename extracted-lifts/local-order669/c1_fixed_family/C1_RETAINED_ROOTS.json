@@ -1,0 +1,1389 @@
+{
+  "schema": "Q222.C1.retained_roots.v1",
+  "testing_variables": [
+    "quarter_u",
+    "quarter_w",
+    "fourth_W",
+    "fourth_absZ",
+    "X",
+    "Y"
+  ],
+  "testing_substitution": {
+    "u": "quarter_u^4",
+    "w": "quarter_w^4",
+    "W": "fourth_W^4",
+    "absZ": "fourth_absZ^4"
+  },
+  "circuit_weight": "qC=1/2-c*dG/S0*(2/lambda+k+u)",
+  "source_relations": "source_definitions.json, plus k1 as printed in P4/SP3",
+  "charts": {
+    "1": {
+      "physical_state": "(W,X,Y,Z)=(fourth_W^4,X,Y,1*fourth_absZ^4)",
+      "feature_exponents": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          2,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          4,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          4,
+          0,
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          8,
+          0,
+          4,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          3,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          2,
+          2,
+          2,
+          0,
+          0
+        ],
+        [
+          1,
+          3,
+          1,
+          3,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          4,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          4,
+          0,
+          4,
+          0,
+          0
+        ],
+        [
+          3,
+          1,
+          1,
+          3,
+          0,
+          0
+        ],
+        [
+          3,
+          2,
+          2,
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          3,
+          3,
+          1,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          4,
+          0,
+          0,
+          4,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          4,
+          2,
+          2,
+          2,
+          0,
+          0
+        ],
+        [
+          4,
+          4,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          4,
+          4,
+          0,
+          4,
+          0,
+          0
+        ],
+        [
+          4,
+          4,
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          0,
+          4,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          6,
+          2,
+          2,
+          2,
+          0,
+          0
+        ],
+        [
+          6,
+          4,
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          8,
+          0,
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          8,
+          4,
+          4,
+          0,
+          0,
+          0
+        ]
+      ],
+      "roots": [
+        {
+          "name": "Eplus_beta_0",
+          "category": "elementary",
+          "entries": [
+            [
+              21,
+              "2*sqrt(beta)*h"
+            ],
+            [
+              1,
+              "2*sqrt(beta)"
+            ]
+          ]
+        },
+        {
+          "name": "Eplus_beta_w",
+          "category": "elementary",
+          "entries": [
+            [
+              25,
+              "2*sqrt(beta)*h"
+            ],
+            [
+              6,
+              "2*sqrt(beta)"
+            ]
+          ]
+        },
+        {
+          "name": "Eplus_Xe",
+          "category": "elementary",
+          "entries": [
+            [
+              26,
+              "sqrt(2)*h*k**2*sqrt(2*D + 1)/sigma"
+            ],
+            [
+              20,
+              "sqrt(2)*sqrt(2*D + 1)"
+            ]
+          ]
+        },
+        {
+          "name": "Eplus_Gamma",
+          "category": "elementary",
+          "entries": [
+            [
+              32,
+              "-2*q*sqrt(b*p)"
+            ],
+            [
+              21,
+              "2*q*sigma*sqrt(b*p)"
+            ]
+          ]
+        },
+        {
+          "name": "Eplus_JC_u",
+          "category": "elementary",
+          "entries": [
+            [
+              31,
+              "-2*sqrt(a)*b*q"
+            ],
+            [
+              19,
+              "2*sqrt(a)/q"
+            ]
+          ]
+        },
+        {
+          "name": "Eplus_JC_w",
+          "category": "elementary",
+          "entries": [
+            [
+              26,
+              "-2*sqrt(a)*b*q"
+            ],
+            [
+              5,
+              "2*sqrt(a)/q"
+            ]
+          ]
+        },
+        {
+          "name": "Eplus_JC_uw",
+          "category": "elementary",
+          "entries": [
+            [
+              32,
+              "-2*sqrt(a)*b*q"
+            ],
+            [
+              24,
+              "2*sqrt(a)/q"
+            ]
+          ]
+        },
+        {
+          "name": "Eplus_JL_u",
+          "category": "elementary",
+          "entries": [
+            [
+              31,
+              "-2*sqrt(ell)*q*(b - 1)"
+            ],
+            [
+              25,
+              "-2*sqrt(ell)/q"
+            ],
+            [
+              19,
+              "2*sqrt(ell)/q"
+            ]
+          ]
+        },
+        {
+          "name": "Eplus_JC_Cw",
+          "category": "elementary",
+          "entries": [
+            [
+              26,
+              "-2*sqrt(C)*b*q**2"
+            ],
+            [
+              5,
+              "2*sqrt(C)"
+            ]
+          ]
+        },
+        {
+          "name": "Nx_w_reserve",
+          "category": "elementary",
+          "entries": [
+            [
+              25,
+              "sqrt(2)*h*sqrt(2*m + 1)"
+            ],
+            [
+              6,
+              "sqrt(2)*sqrt(2*m + 1)"
+            ]
+          ]
+        },
+        {
+          "name": "JC_excess",
+          "category": "elementary",
+          "entries": [
+            [
+              22,
+              "-b*q*sqrt(4*C*q**2 + 4*a + 2*q**2 - 1)"
+            ],
+            [
+              0,
+              "sqrt(4*C*q**2 + 4*a + 2*q**2 - 1)/q"
+            ]
+          ]
+        },
+        {
+          "name": "JL_excess",
+          "category": "elementary",
+          "entries": [
+            [
+              22,
+              "-q*(b - 1)*sqrt(4*ell - 1)"
+            ],
+            [
+              7,
+              "-sqrt(4*ell - 1)/q"
+            ],
+            [
+              0,
+              "sqrt(4*ell - 1)/q"
+            ]
+          ]
+        },
+        {
+          "name": "Eyy_u",
+          "category": "elementary",
+          "entries": [
+            [
+              25,
+              "-sqrt(2)*b*sqrt(2*m + 1)"
+            ],
+            [
+              19,
+              "sqrt(2)*sqrt(2*m + 1)"
+            ]
+          ]
+        },
+        {
+          "name": "Eyy_w",
+          "category": "elementary",
+          "entries": [
+            [
+              8,
+              "-sqrt(2)*b*sqrt(2*D + 1)"
+            ],
+            [
+              5,
+              "sqrt(2)*sqrt(2*D + 1)"
+            ]
+          ]
+        },
+        {
+          "name": "ERR_u",
+          "category": "elementary",
+          "entries": [
+            [
+              31,
+              "-sqrt(2)*q**2*sqrt(4*D*b*h + 2*b**2*m + b**2 + 4*b*h*m + 2*b*h - 4*b*m + 4*b*p*sigma - 2*b + 2*beta*h**2 - 4*beta*h + 2*beta + 2*h**2*m + h**2 - 4*h*m - 2*h + 2*m + 1)"
+            ],
+            [
+              25,
+              "sqrt(2)*sqrt(4*D*b*h + 2*b**2*m + b**2 + 4*b*h*m + 2*b*h - 4*b*m + 4*b*p*sigma - 2*b + 2*beta*h**2 - 4*beta*h + 2*beta + 2*h**2*m + h**2 - 4*h*m - 2*h + 2*m + 1)"
+            ]
+          ]
+        },
+        {
+          "name": "ERR_w",
+          "category": "elementary",
+          "entries": [
+            [
+              26,
+              "-sqrt(2)*b*q**2*sqrt(2*D + 1)"
+            ],
+            [
+              8,
+              "sqrt(2)*b*sqrt(2*D + 1)"
+            ]
+          ]
+        },
+        {
+          "name": "FA",
+          "category": "elementary",
+          "entries": [
+            [
+              26,
+              "-sqrt(2)*sqrt(L0)*a0/2"
+            ],
+            [
+              21,
+              "sqrt(2)*sqrt(L0)/2"
+            ]
+          ]
+        },
+        {
+          "name": "angular_difference_u",
+          "category": "elementary",
+          "entries": [
+            [
+              31,
+              "sqrt(2)*q*sqrt(KA + c)/2"
+            ],
+            [
+              22,
+              "-sqrt(2)*k*q*sqrt(KA + c)/2"
+            ]
+          ]
+        },
+        {
+          "name": "angular_difference_s",
+          "category": "elementary",
+          "entries": [
+            [
+              28,
+              "q*sqrt(k*(KA + c))"
+            ],
+            [
+              13,
+              "-k*q*sqrt(k*(KA + c))"
+            ]
+          ]
+        },
+        {
+          "name": "angular_Delta_1",
+          "category": "angular",
+          "entries": [
+            [
+              25,
+              "sqrt(c*dG/S0)/q"
+            ],
+            [
+              3,
+              "-k**2*q*sqrt(c*dG/S0)"
+            ]
+          ]
+        },
+        {
+          "name": "angular_Delta_2",
+          "category": "angular",
+          "entries": [
+            [
+              22,
+              "-sqrt(2)*k*q*sqrt(c*dG/S0)"
+            ],
+            [
+              7,
+              "sqrt(2)*k*sqrt(c*dG/S0)/q"
+            ]
+          ]
+        },
+        {
+          "name": "angular_Delta_3",
+          "category": "angular",
+          "entries": [
+            [
+              26,
+              "-sqrt(c*dG/S0)*(a0*q0*sigma + k)/sqrt(q0*sigma)"
+            ],
+            [
+              21,
+              "sqrt(q0*sigma)*sqrt(c*dG/S0)"
+            ],
+            [
+              2,
+              "k*sigma*sqrt(c*dG/S0)/sqrt(q0*sigma)"
+            ]
+          ]
+        },
+        {
+          "name": "angular_Delta_4",
+          "category": "angular",
+          "entries": [
+            [
+              30,
+              "-sqrt(c*dG/S0)*(a0*q0*sigma + k)/(sqrt(k)*sqrt(q0*sigma))"
+            ],
+            [
+              27,
+              "sqrt(q0*sigma)*sqrt(c*dG/S0)/sqrt(k)"
+            ],
+            [
+              12,
+              "sqrt(k)*sigma*sqrt(c*dG/S0)/sqrt(q0*sigma)"
+            ]
+          ]
+        },
+        {
+          "name": "angular_Delta_5",
+          "category": "angular",
+          "entries": [
+            [
+              7,
+              "-k*sqrt(q0)*sqrt(c*dG/S0)/q"
+            ],
+            [
+              3,
+              "k**2*q*sqrt(q0)*sqrt(c*dG/S0)"
+            ]
+          ]
+        },
+        {
+          "name": "angular_Delta_6",
+          "category": "angular",
+          "entries": [
+            [
+              15,
+              "-k*sqrt(q0/k)*sqrt(c*dG/S0)/q"
+            ],
+            [
+              13,
+              "k**2*q*sqrt(q0/k)*sqrt(c*dG/S0)"
+            ]
+          ]
+        },
+        {
+          "name": "angular_Delta_7",
+          "category": "angular",
+          "entries": [
+            [
+              23,
+              "sqrt(2)*sqrt(k*q0)*sqrt(c*dG/S0)"
+            ],
+            [
+              4,
+              "-sqrt(2)*k*sqrt(k*q0)*sqrt(c*dG/S0)"
+            ]
+          ]
+        },
+        {
+          "name": "angular_Delta_8",
+          "category": "angular",
+          "entries": [
+            [
+              29,
+              "sqrt(2)*sqrt(q0)*sqrt(c*dG/S0)"
+            ],
+            [
+              14,
+              "-sqrt(2)*k*sqrt(q0)*sqrt(c*dG/S0)"
+            ]
+          ]
+        },
+        {
+          "name": "circuit_1",
+          "category": "circuit_unweighted",
+          "entries": [
+            [
+              18,
+              "-sqrt(2)*rho**(1/4)*sqrt(k*sqrt(lam))"
+            ],
+            [
+              16,
+              "sqrt(2)*L0**(1/4)*sqrt(k*sqrt(lam))"
+            ]
+          ]
+        },
+        {
+          "name": "circuit_2",
+          "category": "circuit_unweighted",
+          "entries": [
+            [
+              11,
+              "-sqrt(2)*sqrt(k*sqrt(lam))*sqrt(k*sqrt(lam)/q)"
+            ],
+            [
+              9,
+              "sqrt(2)*sqrt(k*sqrt(lam))*sqrt(sqrt(lam)*q)*Abs(k)"
+            ]
+          ]
+        },
+        {
+          "name": "circuit_3",
+          "category": "circuit_unweighted",
+          "entries": [
+            [
+              17,
+              "2*sqrt(k*sqrt(lam))*(k*lam)**(1/4)"
+            ],
+            [
+              10,
+              "-2*sqrt(k*sqrt(lam))*(k**3*lam)**(1/4)"
+            ]
+          ]
+        }
+      ],
+      "retained_roots_before_circuit_split": 30,
+      "maximum_source_testing_separation_rank": 3
+    },
+    "-1": {
+      "physical_state": "(W,X,Y,Z)=(fourth_W^4,X,Y,-1*fourth_absZ^4)",
+      "feature_exponents": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          2,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          4,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          4,
+          0,
+          4,
+          0,
+          0
+        ],
+        [
+          0,
+          8,
+          0,
+          4,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          4,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          4,
+          0,
+          4,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          4,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          4,
+          0,
+          0,
+          4,
+          0,
+          0
+        ],
+        [
+          4,
+          0,
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          4,
+          2,
+          2,
+          2,
+          0,
+          0
+        ],
+        [
+          4,
+          4,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          4,
+          4,
+          0,
+          4,
+          0,
+          0
+        ],
+        [
+          4,
+          4,
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          0,
+          4,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          6,
+          2,
+          2,
+          2,
+          0,
+          0
+        ],
+        [
+          6,
+          4,
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          8,
+          0,
+          4,
+          0,
+          0,
+          0
+        ],
+        [
+          8,
+          4,
+          4,
+          0,
+          0,
+          0
+        ]
+      ],
+      "roots": [
+        {
+          "name": "Eplus_beta_0",
+          "category": "elementary",
+          "entries": [
+            [
+              15,
+              "-2*sqrt(beta)*h"
+            ],
+            [
+              1,
+              "2*sqrt(beta)"
+            ]
+          ]
+        },
+        {
+          "name": "Eplus_beta_w",
+          "category": "elementary",
+          "entries": [
+            [
+              19,
+              "-2*sqrt(beta)*h"
+            ],
+            [
+              6,
+              "2*sqrt(beta)"
+            ]
+          ]
+        },
+        {
+          "name": "Eplus_Xe",
+          "category": "elementary",
+          "entries": [
+            [
+              20,
+              "sqrt(2)*h*k**2*sqrt(2*D + 1)/sigma"
+            ],
+            [
+              14,
+              "sqrt(2)*sqrt(2*D + 1)"
+            ]
+          ]
+        },
+        {
+          "name": "Eplus_Gamma",
+          "category": "elementary",
+          "entries": [
+            [
+              26,
+              "-2*q*sqrt(b*p)"
+            ],
+            [
+              15,
+              "-2*q*sigma*sqrt(b*p)"
+            ]
+          ]
+        },
+        {
+          "name": "Eplus_JC_u",
+          "category": "elementary",
+          "entries": [
+            [
+              25,
+              "-2*sqrt(a)*b*q"
+            ],
+            [
+              13,
+              "2*sqrt(a)/q"
+            ]
+          ]
+        },
+        {
+          "name": "Eplus_JC_w",
+          "category": "elementary",
+          "entries": [
+            [
+              20,
+              "-2*sqrt(a)*b*q"
+            ],
+            [
+              5,
+              "2*sqrt(a)/q"
+            ]
+          ]
+        },
+        {
+          "name": "Eplus_JC_uw",
+          "category": "elementary",
+          "entries": [
+            [
+              26,
+              "-2*sqrt(a)*b*q"
+            ],
+            [
+              18,
+              "2*sqrt(a)/q"
+            ]
+          ]
+        },
+        {
+          "name": "Eplus_JL_u",
+          "category": "elementary",
+          "entries": [
+            [
+              25,
+              "-2*sqrt(ell)*q*(b - 1)"
+            ],
+            [
+              19,
+              "2*sqrt(ell)/q"
+            ],
+            [
+              13,
+              "2*sqrt(ell)/q"
+            ]
+          ]
+        },
+        {
+          "name": "Eplus_JC_Cw",
+          "category": "elementary",
+          "entries": [
+            [
+              20,
+              "-2*sqrt(C)*b*q**2"
+            ],
+            [
+              5,
+              "2*sqrt(C)"
+            ]
+          ]
+        },
+        {
+          "name": "Nx_w_reserve",
+          "category": "elementary",
+          "entries": [
+            [
+              19,
+              "-sqrt(2)*h*sqrt(2*m + 1)"
+            ],
+            [
+              6,
+              "sqrt(2)*sqrt(2*m + 1)"
+            ]
+          ]
+        },
+        {
+          "name": "JC_excess",
+          "category": "elementary",
+          "entries": [
+            [
+              16,
+              "-b*q*sqrt(4*C*q**2 + 4*a + 2*q**2 - 1)"
+            ],
+            [
+              0,
+              "sqrt(4*C*q**2 + 4*a + 2*q**2 - 1)/q"
+            ]
+          ]
+        },
+        {
+          "name": "JL_excess",
+          "category": "elementary",
+          "entries": [
+            [
+              16,
+              "-q*(b - 1)*sqrt(4*ell - 1)"
+            ],
+            [
+              7,
+              "sqrt(4*ell - 1)/q"
+            ],
+            [
+              0,
+              "sqrt(4*ell - 1)/q"
+            ]
+          ]
+        },
+        {
+          "name": "Eyy_u",
+          "category": "elementary",
+          "entries": [
+            [
+              19,
+              "sqrt(2)*b*sqrt(2*m + 1)"
+            ],
+            [
+              13,
+              "sqrt(2)*sqrt(2*m + 1)"
+            ]
+          ]
+        },
+        {
+          "name": "Eyy_w",
+          "category": "elementary",
+          "entries": [
+            [
+              8,
+              "sqrt(2)*b*sqrt(2*D + 1)"
+            ],
+            [
+              5,
+              "sqrt(2)*sqrt(2*D + 1)"
+            ]
+          ]
+        },
+        {
+          "name": "ERR_u",
+          "category": "elementary",
+          "entries": [
+            [
+              25,
+              "-sqrt(2)*q**2*sqrt(4*D*b*h + 2*b**2*m + b**2 + 4*b*h*m + 2*b*h - 4*b*m + 4*b*p*sigma - 2*b + 2*beta*h**2 - 4*beta*h + 2*beta + 2*h**2*m + h**2 - 4*h*m - 2*h + 2*m + 1)"
+            ],
+            [
+              19,
+              "-sqrt(2)*sqrt(4*D*b*h + 2*b**2*m + b**2 + 4*b*h*m + 2*b*h - 4*b*m + 4*b*p*sigma - 2*b + 2*beta*h**2 - 4*beta*h + 2*beta + 2*h**2*m + h**2 - 4*h*m - 2*h + 2*m + 1)"
+            ]
+          ]
+        },
+        {
+          "name": "ERR_w",
+          "category": "elementary",
+          "entries": [
+            [
+              20,
+              "-sqrt(2)*b*q**2*sqrt(2*D + 1)"
+            ],
+            [
+              8,
+              "-sqrt(2)*b*sqrt(2*D + 1)"
+            ]
+          ]
+        },
+        {
+          "name": "FA",
+          "category": "elementary",
+          "entries": [
+            [
+              20,
+              "-sqrt(2)*sqrt(L0)*a0/2"
+            ],
+            [
+              15,
+              "-sqrt(2)*sqrt(L0)/2"
+            ]
+          ]
+        },
+        {
+          "name": "angular_difference_u",
+          "category": "elementary",
+          "entries": [
+            [
+              25,
+              "sqrt(2)*q*sqrt(KA + c)/2"
+            ],
+            [
+              16,
+              "-sqrt(2)*k*q*sqrt(KA + c)/2"
+            ]
+          ]
+        },
+        {
+          "name": "angular_difference_s",
+          "category": "elementary",
+          "entries": [
+            [
+              22,
+              "q*sqrt(k*(KA + c))"
+            ],
+            [
+              10,
+              "-k*q*sqrt(k*(KA + c))"
+            ]
+          ]
+        },
+        {
+          "name": "angular_Delta_1",
+          "category": "angular",
+          "entries": [
+            [
+              19,
+              "sqrt(c*dG/S0)/q"
+            ],
+            [
+              3,
+              "-k**2*q*sqrt(c*dG/S0)"
+            ]
+          ]
+        },
+        {
+          "name": "angular_Delta_2",
+          "category": "angular",
+          "entries": [
+            [
+              16,
+              "-sqrt(2)*k*q*sqrt(c*dG/S0)"
+            ],
+            [
+              7,
+              "sqrt(2)*k*sqrt(c*dG/S0)/q"
+            ]
+          ]
+        },
+        {
+          "name": "angular_Delta_3",
+          "category": "angular",
+          "entries": [
+            [
+              20,
+              "-sqrt(c*dG/S0)*(a0*q0*sigma + k)/sqrt(q0*sigma)"
+            ],
+            [
+              15,
+              "sqrt(q0*sigma)*sqrt(c*dG/S0)"
+            ],
+            [
+              2,
+              "k*sigma*sqrt(c*dG/S0)/sqrt(q0*sigma)"
+            ]
+          ]
+        },
+        {
+          "name": "angular_Delta_4",
+          "category": "angular",
+          "entries": [
+            [
+              24,
+              "-sqrt(c*dG/S0)*(a0*q0*sigma + k)/(sqrt(k)*sqrt(q0*sigma))"
+            ],
+            [
+              21,
+              "sqrt(q0*sigma)*sqrt(c*dG/S0)/sqrt(k)"
+            ],
+            [
+              9,
+              "sqrt(k)*sigma*sqrt(c*dG/S0)/sqrt(q0*sigma)"
+            ]
+          ]
+        },
+        {
+          "name": "angular_Delta_5",
+          "category": "angular",
+          "entries": [
+            [
+              7,
+              "-k*sqrt(q0)*sqrt(c*dG/S0)/q"
+            ],
+            [
+              3,
+              "k**2*q*sqrt(q0)*sqrt(c*dG/S0)"
+            ]
+          ]
+        },
+        {
+          "name": "angular_Delta_6",
+          "category": "angular",
+          "entries": [
+            [
+              12,
+              "-k*sqrt(q0/k)*sqrt(c*dG/S0)/q"
+            ],
+            [
+              10,
+              "k**2*q*sqrt(q0/k)*sqrt(c*dG/S0)"
+            ]
+          ]
+        },
+        {
+          "name": "angular_Delta_7",
+          "category": "angular",
+          "entries": [
+            [
+              17,
+              "sqrt(2)*sqrt(k*q0)*sqrt(c*dG/S0)"
+            ],
+            [
+              4,
+              "-sqrt(2)*k*sqrt(k*q0)*sqrt(c*dG/S0)"
+            ]
+          ]
+        },
+        {
+          "name": "angular_Delta_8",
+          "category": "angular",
+          "entries": [
+            [
+              23,
+              "sqrt(2)*sqrt(q0)*sqrt(c*dG/S0)"
+            ],
+            [
+              11,
+              "-sqrt(2)*k*sqrt(q0)*sqrt(c*dG/S0)"
+            ]
+          ]
+        },
+        {
+          "name": "angular_Delta_9",
+          "category": "angular",
+          "entries": [
+            [
+              11,
+              "2*k*sqrt(c*dG/S0)*sqrt(2*q0 + 4 + 1/q0)"
+            ]
+          ]
+        },
+        {
+          "name": "angular_Delta_10",
+          "category": "angular",
+          "entries": [
+            [
+              17,
+              "2*sqrt(k)*sqrt(c*dG/S0)*sqrt(2*q0 + 2 + 1/q0)"
+            ]
+          ]
+        },
+        {
+          "name": "angular_Delta_11",
+          "category": "angular",
+          "entries": [
+            [
+              23,
+              "2*sqrt(c*dG/S0)"
+            ]
+          ]
+        },
+        {
+          "name": "circuit_1",
+          "category": "circuit_unweighted",
+          "entries": [
+            [
+              11,
+              "2*k*sqrt(lam)"
+            ]
+          ]
+        }
+      ],
+      "retained_roots_before_circuit_split": 31,
+      "maximum_source_testing_separation_rank": 3
+    }
+  }
+}

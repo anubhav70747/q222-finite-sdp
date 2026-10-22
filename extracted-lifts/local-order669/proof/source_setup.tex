@@ -1,0 +1,141 @@
+\section{Source formulas and the complete parent}\label{sec:source-setup}
+The independent source parameters are $x,\sigma,b,z,h$. Source
+parameters and testing coordinates are independent throughout.
+Set
+\[
+ r=bz,\quad Q_b=1-b,\quad\theta=1-h,\quad H=h/\sigma,\quad
+ e=xH,\quad E=1-e,\quad K=1+x,
+\]
+\[
+ R_s=1+xr,\qquad M=R_s-xz\theta,\qquad
+ J=1+xh-\sigma(1-r),
+\]
+\[
+ P=\sigma+K+\sigma z(1+bx+2xh)
+              +\sigma bx^2hz^2+x^2h\theta z.
+\]
+The native domain has $x,\sigma,z>0$, $0<b,r,h<1$,
+$E,M,J>0$, and $D,\beta\ge0$. Put
+\[
+ \begin{split}
+ p&=\frac{z(1+xh)E+(1-r)(1+xhz)}{2P},\\
+ l&=\frac{(1+\sigma r)\{eR_s(1+\sigma z)+ME\}}{2P},\qquad
+ \kappa=\frac{K(1+\sigma r)(1+\sigma z)}{2MP}.
+ \end{split}
+\]
+The canonical source coefficients, with $d=1$, are
+\[
+ \begin{gathered}
+ m=\kappa x^2zH,\qquad C=\frac{Kz(1+\sigma r)E}{2(1-r)P},
+ \qquad A=p/r,\qquad \alpha=l/(zQ_b),\\
+ D=\frac{K(1+\sigma z)(1+\sigma r)-JP}{2JP},\qquad
+ \beta=\frac{K(1+\sigma r)(1+xhz)-\theta P}{2\theta P}.
+ \end{gathered}\tag{P1}
+\]
+In particular $a=Az=p/b$, $\ell=\alpha z=l/Q_b$,
+$k=\sqrt x>0$, and $q=\sqrt z>0$. The symbols $A$ and $\alpha$
+here are source coefficients; the capital testing gates $A_t,B_t$
+used in some displays below are unrelated.
+
+Two exact source identities will provide the bounds. Define
+\[
+ H_0=1+zQ_b,\qquad B_s=P+xz(J-\sigma),
+\]
+\[
+ \mathcal H=R_sH_0+z\{(1-r)xh(2+xr)
+       -e[2+x(1+h+r\theta)]+Ke^2\}.
+\]
+Direct multiplication of (P1) gives
+\[
+ 2\theta P\beta=hB_s-\sigma H_0,\qquad
+ 2P(JD+x\theta\beta)=\sigma^2\mathcal H. \tag{BE}
+\]
+
+For an arbitrary canonical vector $\mathbf c$ define the full
+four-state parent
+\begin{align*}
+ F_{\mathbf c}={}&4m(W-wX+uY-uwZ)^2
+    +4C(1+w^2)(uW-Y)^2\\
+ &+4A(1+u^2)(1+w^2)Y^2
+    +(4D+2d)(uwW+uX-wY-Z)^2\\
+ &+(4\alpha+2d)(1+u^2)(Y-wZ)^2
+    +(4\beta+2d)(1+w^2)(X+uZ)^2\\
+ &-2d(1+u^2)(1+w^2)Z^2.
+ \tag{P4}
+\end{align*}
+Thus $F_{\mathbf c}$ is linear in $\mathbf c$. Write $F_w=F_{\mathbf c}$
+for the source (P1), with $d=1$.
+
+Here are every source coefficient and every auxiliary form needed
+in the construction:
+\[
+ \begin{gathered}
+ g=h-Q_b,\quad \nu=(2D-2\beta\theta+h)/\sigma,\\
+ \lambda=(8Dh+4\beta\theta^2+2h^2)/\sigma-4bp\sigma z,\qquad
+ \lambda_0=\lambda-2H,\qquad K_A=4\kappa H-\lambda,\\
+ B_x=8\kappa e,\qquad
+ A_y=8(p-l)+4z\{(1+2m)g+2Dh+2p\sigma\},\\
+ R_x=-4\{2Db+(1+2m)g-2\beta\theta\},\qquad
+ R_0=-4\{2(C+D)(r-1)+2p+r-1\},\\
+ \chi=8(pb+lQ_b)-4h+4eh(2D+1)-8Dh\\
+ \hspace{14mm}
+     +4z\{4Dbh+4pb\sigma+(1+2m)g^2+2\beta\theta^2\},\\
+ k_1=2(1+2m)g^2+8Dhb+8pb\sigma+4\beta\theta^2 .
+ \end{gathered}\tag{SP3}
+\]
+Set $t=u^2$, $\xi_w=w^2$ and
+\[
+ \begin{gathered}
+ N_x=X+uhZ,\quad N_y=(Y-bwZ)/q,\quad
+ \Gamma=\sigma Z-uwW,\quad R=wZ/q-uqW,\\
+ A_\theta=q(t-x)W,\quad P_\beta=uZ-(x/\sigma)wW,\quad
+ X_e=X+ewW,\quad V=uw(t-x)W,\\
+ J_C=N_y+bR,\qquad J_\ell=N_y-Q_bR,\qquad R_\gamma=R_0-8pt.
+ \end{gathered}
+\]
+Define
+\[
+ \begin{split}
+ E_{yy}&=2z\{(1+2m)t+(1+2D)\xi_w\},\\
+ E_{RR}&=z\{8bD+8bp\sigma+4b\sigma(2C+2D+1)(r-1)
+                     +k_1t+2b^2(2D+1)\xi_w\},\\
+ E_{yR}&=4z\{t[2Dh+2p\sigma+(1+2m)g]+b(2D+1)\xi_w\\
+ &\hspace{22mm}+\sigma(2C+1)(r-1)
+                     +2D[1+\sigma(r-1)]+2p\sigma\},\\
+ \mathcal E_+&=4\beta(1+w^2)N_x^2+2(2D+1)(uX_e)^2
+       +4bpzt\Gamma^2\\
+ &\hspace{6mm}+4a[(1+t)(1+w^2)-1]J_C^2
+       +4\ell tJ_\ell^2+4Cz w^2J_C^2,\\
+ \mathscr S&=\lambda\sigma P_\beta^2+
+                 (\lambda x/\sigma)(t-x)(w^2-\sigma z)W^2 .
+ \end{split}
+\]
+The complete polynomial identity is
+\begin{align*}
+ F_w={}&\mathcal E_++[2(1+w^2)+4mw^2]N_x^2
+       +[4a+2z(2C+1)]J_C^2+4\ell J_\ell^2\\
+ &+E_{yy}N_y^2+E_{RR}R^2+E_{yR}N_yR+(4D/\sigma^2)\Gamma^2\\
+ &-4\nu N_x(u\Gamma)+R_\gamma(N_y+bR)(qw\Gamma)\\
+ &-4uqw(2m+2D+1)N_xN_y+uqwR_xN_xR\\
+ &+qwB_xN_xA_\theta+uA_yN_yA_\theta
+        +K_AA_\theta^2+\chi uA_\theta R+\mathscr S .
+ \tag{SP6}
+\end{align*}
+To verify (SP6), substitute the printed linear forms and collect the
+ten quadratic state monomials, then the powers of $u,w$. Substitute
+(P1) and clear the positive source denominators; each coefficient is
+zero. This is an algebraic identity, with both distinct $\Gamma$
+couplings displayed explicitly. The accompanying native-parent
+verifier performs this generic rational comparison, not numerical
+evaluation or a determinant comparison.
+
+The two transformations
+\[
+ (u,Y,Z)\mapsto(-u,-Y,-Z),\qquad
+ (w,X,Z)\mapsto(-w,-X,-Z)
+ \tag{SG}
+\]
+preserve (P4) for every $\mathbf c$. It therefore suffices to construct
+the certificate at $u,w\ge0$. An overall state sign permits $W\ge0$.
+Both signs of $Z$ will be included.
+

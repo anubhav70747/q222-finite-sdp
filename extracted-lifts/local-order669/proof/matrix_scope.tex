@@ -1,0 +1,183 @@
+\section{Exact affine compilation and both local inclusions}
+\label{sec:matrices}
+For each fixed chart, write the fixed testing blocks as $f_b(t)$.
+Expanding
+\[
+ \sum_b f_b(t)^{\mathsf T}G_b f_b(t)=F_{\mathbf c}(t)
+ \tag{CM}
+\]
+and reducing the explicitly printed gate equations gives a rational
+linear system
+\[
+ {\cal A}g={\cal B}\mathbf c.
+\]
+Here $g$ lists the upper-triangular entries of all symmetric $G_b$.
+An off-diagonal Gram entry contributes twice its coefficient to
+(CM); the matrix file stores the actual entry, not this doubled
+coefficient. All coefficients are rational because $\delta=2^{-12}$
+has rational quarter powers.
+
+The positive chart has $1368$ Gram variables and $281$ independent
+equations. The negative chart has $1155$ variables and $221$
+independent equations. The structured six-root cone has $846$
+variables and $180$ independent equations. The coefficient maps,
+ordered monomials, pivots, and every affine entry are supplied.
+Exact rational elimination expresses the pivot entries as affine
+functions of $\mathbf c$ and the remaining $1087$, $934$, or $666$
+free entries, respectively. The files verify these expressions by
+substitution into all the original coefficient equations.
+
+This gives both directions without any positivity inference from a
+determinant. If the affine pencil is positive semidefinite, its
+blocks are feasible Grams in (CM), hence give a fixed-family
+certificate on the entire chart. Conversely, any fixed-family
+certificate supplies a solution $g$ of (CM). Choose its free entries
+as the auxiliary coordinates. The pivot equations reconstruct its
+remaining entries exactly, so the affine pencil equals those same
+positive semidefinite blocks.
+
+Because the two state charts must both be certified, their pencils
+share the visible coordinates and are intersected:
+\[
+ L_{508}(\mathbf c,y_+,y_-)=
+ \diag(L_{\rm POS}(\mathbf c,y_+),L_{\rm NEG}(\mathbf c,y_-)).
+\]
+The two circuit-sign \emph{constructions} are alternative sufficient
+certificates on their common testing box. We include both by a
+source-cone sum. With a free split vector $z_c\in\R^7$ put
+\[
+ L_{669}(\mathbf c,z_c,y_+,y_-,y_6)
+   =\diag\bigl(L_{508}(z_c,y_+,y_-),
+                       L_{161}(\mathbf c-z_c,y_6)\bigr).
+ \tag{LP}
+\]
+This proves Theorem~\ref{thm:pencil} from the definition of
+$\cone_{669}$. The split is not a positivity-constrained source
+parameter: it is simply the visible vector of the first certificate
+summand.
+
+For Theorem~\ref{thm:main}, use $z_c=\mathbf c$ and the zero witness
+in the six-root cone when $\lambda>0$. The explicit twelve-root
+source assignment, numerical reserve, and retained squares provide
+both state-chart witnesses. If $\lambda\le0$, use $z_c=0$ and the
+six-root source assignment. The larger six-root bound
+$x,\sigma\le2^{-10}$ contains (D). For every feasible vector in the
+sum, add the two full-parent identities. Their common testing
+rectangle is (T), and each identity is nonnegative there. Apply
+(SG) and homogeneity in the state to finish the proof.
+
+\paragraph{Reading the actual matrices.}
+The primary file uses the tuple
+\[
+ [\,b,i,j,v,a\,]
+\]
+to mean that rational number $a$ multiplies coordinate $v$ in
+entry $(i,j)$ of block $b$. All indices are zero-based; $i\le j$.
+Mirror an off-diagonal entry once. Coordinates $0,\ldots,6$ are
+$(d,m,C,A,D,\alpha,\beta)$. The following $2694$ coordinates are
+listed in \texttt{auxiliary\_order}; their first seven are the
+components of $z_c$. There is no constant matrix. Thus the file is
+directly an evaluated collection of rational matrices
+\[
+ L_{669}(\mathbf c,y)=
+ \sum_{j=0}^6c_jA_j+\sum_{k=0}^{2693}y_kB_k.
+\]
+The source formulas and algebraic roots are used to \emph{prove}
+feasibility on (D), not to compute the entries of $A_j$ or $B_k$.
+
+\paragraph{Exact checks supplied with the proof.}
+The scripts independently check the generic P1-to-P4 parent
+identity, both conductor identities, all retained elementary,
+angular, and circuit roots at both state signs, and the final
+rational coefficient equations. The last check can be run using
+only Python's standard library; symbolic regeneration additionally
+uses SymPy. No archived checker is imported, and no numerical
+optimization or CHSH comparison is a premise of either theorem.
+The negative-state source congruence has the explicit signed
+column scaling printed in Section~\ref{sec:fixed-principal}.
+
+\section{What is still missing for the full eight-coordinate set}
+The local result resolves a concrete part of the constructive
+problem: pointwise bounded-residue arguments have been replaced
+by one fixed finite algebraic family on an explicit source and
+independent testing box. This does not supply the global Bell
+slack cone.
+
+A full extraction still needs a finite algebraic testing cover
+$\pi:\mathcal T\to\mathcal P$ onto every physical two-qubit testing
+strategy, together with fixed testing vectors $f_b$, for which
+every valid affine Bell slack satisfies an identity
+\[
+ \ell_{\mathbf a}(\pi(t))
+   =a_0+\sum_{\nu=1}^8a_\nu\Phi_\nu(\pi(t))
+   =\sum_b f_b(t)^{\mathsf T}G_b(\mathbf a)f_b(t),
+ \qquad G_b(\mathbf a)\succeq0 .
+ \tag{GLOBAL}
+\]
+The assignment $\mathbf a\mapsto G_b(\mathbf a)$ need not be affine;
+the coefficient equations in the Gram variables must be affine.
+The fixed functions and their algebraic domains must be independent
+of $\mathbf a$. A finite disjoint union of testing charts is allowed,
+provided every chart is checked and the resulting fixed cone
+contains every valid slack.
+
+For the present construction the uncovered obligations are the
+other source regimes, including $z>1$ and the other C1/C2 branches;
+literal source openings $x=0$, $\sigma=0$, or $z=0$; and independent
+tests outside (T). The state-coordinate zeros and both state signs
+\emph{within} (D)--(T) have already been handled. A local positive
+reserve cannot be extended across an uncovered source or testing
+boundary by merely asserting compactness.
+
+If (GLOBAL) is proved with evaluated finite product maps, physical
+evaluation gives the forward inclusion of its moment lift. For
+the reverse inclusion, the same Gram identity makes every valid
+Bell slack nonnegative on every feasible projected moment vector.
+A point outside the closed quantum set has a separating valid
+affine slack and is therefore excluded. This is the missing
+universal adequacy argument; a determinant identity, one stationary
+neighbourhood, or agreement on CHSH does not replace it.
+
+\paragraph{Why collecting the old TF1 radicals is not a finite solution.}
+For distinct real numbers $M_1,\ldots,M_N$, the square classes
+of $y+M_i$ are independent in
+$\R(y)^\times/\R(y)^{\times2}$: the valuation at $y=-M_i$ is odd
+in precisely the $i$th factor of any nonempty product. Hence
+\[
+ [\,\R(y)(\sqrt{y+M_1},\ldots,\sqrt{y+M_N}):\R(y)\,]=2^N.
+\]
+A fixed finite algebraic function field cannot contain all
+adaptive choices. This is an obstruction to keeping the original
+radicals unchanged, not a nonexistence result for another fixed
+SOS representation. The two-gate construction above is such a
+different representation on the explicit box.
+
+Pointwise boundedness also gives no uniform real rectangle without
+further estimates. For infinitesimal $x$ and any bounded testing
+element $y$, the scalar $1+x\otimes y$ has positive real residue.
+But every ordinary rectangle $0<x\le\epsilon$, $y\in\R$ contains
+points where $1+xy<0$. The numerical source inequalities proved
+here are therefore an essential additional step, not a
+consequence of a rank bound alone.
+
+No claim about the reverse inclusion of the existing order-$13744$
+or order-$63888$ candidates follows from this construction. The
+new evaluated matrices represent the local cone stated in
+Theorem~\ref{thm:pencil}, and the full-set extraction remains open.
+
+\section*{Primary source and reproducibility}
+The source identities are those of
+\texttt{latex/Uniform\_C1\_Certificate.tex} and the complete
+companion in the public repository
+\[
+ \text{\url{https://github.com/anubhav70747/q222-finite-sdp}}
+\]
+at commit
+\texttt{0c1ce2e15ed067a6845464e2468559cea5274f2c}.
+The present note supplies the evaluated local constants, fixed
+families, and rational elimination in addition to those identities.
+The source bundle contains the proof's \LaTeX, all fixed features,
+coefficient maps, rational pencils, exact verifiers, and input
+hashes. Its README gives one-command verification and regeneration
+instructions.
+

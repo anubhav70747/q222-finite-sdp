@@ -1,0 +1,669 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=21mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,mathrsfs}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\allowdisplaybreaks[2]
+\setlength{\emergencystretch}{2em}
+\title{A uniform C1 certificate}
+\author{}
+\date{23 October 2026}
+\begin{document}
+\maketitle
+The result below treats the complete state polynomial at a reciprocal
+measurement corner. Two nonnegative source weights control its state
+couplings through their sum, so either weight may vanish. The proof
+allows arbitrary relative size of $h$ and $\sigma$ while $1/(x\zeta)$
+is bounded. We first give the finite tensor sum-of-squares construction
+used to complete the argument.
+\section{Exact sums of squares in the separated tensor ring}
+\label{ch:tensor}
+\subsection{Two labelled fields and their residues}
+Let $K_c,K_t$ be real closed extensions of $\mathbb R$ and put
+\[
+ T=K_c\otimes_{\mathbb R}K_t,\qquad
+ B_i=\{x\in K_i: |x|<M\text{ for some }M\in\mathbb R_{>0}\},
+ \quad i\in\{c,t\}.
+\]
+Write $\mathfrak m_i$ for the elements whose absolute value is smaller
+than every positive real number. The order on $K_i$ is its unique field
+order. No order, embedding into a field, or algebraic-disjointness
+assumption is imposed on $T$.
+
+Every $x\in B_i$ has a unique real standard part $\bar x$ with
+$x-\bar x\in\mathfrak m_i$. Indeed, the real cut
+$\{r\in\mathbb R:r\le x\}$ is nonempty and bounded; its supremum
+has the claimed property. Two such real numbers differ by a real
+infinitesimal and hence agree. Infinitesimals form an ideal of $B_i$,
+so $x\mapsto\bar x$ is an $\mathbb R$-algebra homomorphism with
+kernel $\mathfrak m_i$. In particular
+$B_i=\mathbb R\oplus\mathfrak m_i$ as real vector spaces.
+
+Since tensoring real vector spaces preserves injections,
+$B:=B_c\otimes_{\mathbb R}B_t$ embeds into $T$. Its residue map is
+\[
+ \rho:B\longrightarrow\mathbb R,\qquad
+ \rho\Bigl(\sum_i a_i\otimes b_i\Bigr)=\sum_i\bar a_i\bar b_i.
+ \tag{TF1}
+\]
+The direct-sum decompositions above show that
+\[
+ \ker\rho=\mathfrak m_c\otimes B_t+B_c\otimes\mathfrak m_t.
+ \tag{TF2}
+\]
+Thus every tensor of zero residue has a finite expression in which
+each elementary term has at least one infinitesimal factor. None of
+these observations requires the two field extensions to be disjoint.
+
+\subsection{A strict real reserve gives an exact tensor sum of squares}
+\label{component:p25af2c58da7e}
+\label{p25af2c58da7e:sec:mechanism}
+\label{p25af2c58da7e:lem:residue}
+\paragraph{Lemma TF1 (positive residue).}
+If $a\in B$ and $\rho(a)>0$, then $a$ is a finite sum of squares in
+$T$. In fact its square roots may all be chosen to be elementary
+tensors.
+
+\begin{proof}
+By (TF2), write
+\[
+ a=\varepsilon+\sum_{j=1}^N x_j\otimes y_j,\qquad
+ \varepsilon=\rho(a)>0,
+ \tag{TF3}
+\]
+with bounded pure factors and an infinitesimal in at least one factor
+of each term. If $N=0$, the assertion is immediate. Otherwise choose
+positive real numbers $\varepsilon_j$ summing to $\varepsilon$.
+For a term with $x_j$ infinitesimal, choose a positive real
+$M_j>|y_j|$. Direct multiplication gives
+\[
+ \varepsilon_j+x_j\otimes y_j
+ =\frac12\left[
+  (\varepsilon_j/M_j+x_j)\otimes(M_j+y_j)
+ +(\varepsilon_j/M_j-x_j)\otimes(M_j-y_j)\right].
+ \tag{TF4}
+\]
+All four pure factors are strictly positive in their respective
+fields. Each elementary summand therefore is a square: for example
+$\tfrac12u\otimes v=(\sqrt{u/2}\otimes\sqrt v)^2$.
+If instead $y_j$ is infinitesimal, interchange the roles of the
+two factors in this calculation. Sum (TF4) over $j$. Every operation
+is a field operation in one labelled factor; no mixed radical or
+mixed inverse occurs.
+\end{proof}
+
+\label{p25af2c58da7e:lem:gram}
+\paragraph{Lemma TF2 (strict bounded Gram).}
+Let $Q\in\operatorname{Sym}_r(B)$ and suppose its entrywise real
+residue $\rho(Q)$ is positive definite. Then
+\[
+                 g^{\mathsf T}Qg\in\Sigma T^2
+                 \qquad\text{for every }g\in T^r.
+ \tag{TF5}
+\]
+The entries of $g$ need not be bounded, independent, or polynomial.
+
+\begin{proof}
+Choose a real invertible matrix $C$ with
+$C^{\mathsf T}\rho(Q)C=I$. Replacing $Q$ by
+$C^{\mathsf T}QC$ and $g$ by $C^{-1}g$ preserves the quadratic
+expression, so assume $\rho(Q)=I$. Choose a real $\delta>0$ such
+that $(r-1)\delta<1$. With $e_i$ the real coordinate vectors,
+\[
+\begin{split}
+ Q={}&\sum_i\bigl(Q_{ii}-(r-1)\delta\bigr)e_ie_i^{\mathsf T}\\
+ &+\sum_{i<j}\frac{\delta+Q_{ij}}2
+                (e_i+e_j)(e_i+e_j)^{\mathsf T}\\
+ &+\sum_{i<j}\frac{\delta-Q_{ij}}2
+                (e_i-e_j)(e_i-e_j)^{\mathsf T}.
+\end{split}
+ \tag{TF6}
+\]
+The off-diagonal entries agree because the last two contributions
+have difference $Q_{ij}$; their diagonal contributions sum to
+$\delta$ for every incident pair. The residues of all scalar
+coefficients in (TF6) are positive. Lemma TF1 expresses each
+coefficient as a finite sum of squares in $T$. Evaluation on $g$
+then expresses (TF5) as a finite sum of squares of those scalar roots
+times $g_i$ or $g_i\pm g_j$. This is a polynomial identity in the
+commutative ring $T$, so no size condition on $g$ is involved.
+\end{proof}
+
+
+\section{Large $\eta$ with bounded reciprocal $x\zeta$: one proof for every $h/\sigma$}
+\label{sec:c1-unification-bounded-z-all-H}
+
+Let $K_c,K_t$ be separately labelled real closed extensions of $\mathbb R$,
+$T=K_c\otimes_{\mathbb R}K_t$, and $\Sigma T^2$ the finite sums of
+squares in $T$. Bounded coefficients belong to $B_c\otimes B_t$ and
+their real residue is taken in both factors. We use the bounded-Gram
+fact: a bounded symmetric matrix with positive-definite real residue
+is a Gram matrix of a finite sum of squares in $T$. Roots in the Gram
+need not be bounded. A positive source or testing factor can be absorbed
+into a square using the real closedness of its own field.
+
+\begin{theorem}\label{thm:c1-unification-bounded-z-all-H}
+Use the stationary C1 source with $d=1$, $\lambda_{\rm ev}=n=0$,
+$m,C,A,\alpha>0$, $D,\beta\ge0$, and the native strict gaps. Assume
+explicitly that
+\[
+ x=k^2\in\operatorname{Inf}_{c,>0},\qquad
+ \sigma=1/\eta\in\operatorname{Inf}_{c,>0},\qquad
+ z=1/(x\zeta)>0\text{ is bounded}.
+\]
+There is no size restriction on $H=h/\sigma$. Then the complete
+reciprocal parent is in $\Sigma T^2$ for every independent pair
+$u,w\in\operatorname{Inf}_t$ and every real or complex state.
+There is no state-ratio or testing-ratio restriction. The literal
+faces $D=0$ and $\beta=0$ are included.
+
+Equivalently, the theorem applies to the rational source below under
+$0<b<1$, $0<r=bz<1$, $0<h<1$, $E,M,J>0$, $D,\beta\ge0$,
+and the stated assumptions on $x,\sigma,z$.
+\end{theorem}
+
+\paragraph{The source and its uniform estimates.}
+The rational identities and complete parent expansions below are
+algebraic for every positive $z$ with the native gaps. Only their
+boundedness estimates and the theorem require $z$ bounded.
+Put
+\[
+ r=bz,\quad Q=1-b,\quad 0<b,r<1,\quad \theta=1-h,\quad
+ e=xh/\sigma=xH,\quad E=1-e,\quad K=1+x,
+\]
+\[
+ R_s=1+xr,\quad M=R_s-xz\theta>0,\quad
+ J=1+xh-\sigma(1-r)>0,
+\]
+\[
+ P=\sigma+K+\sigma z(1+bx+2xh)
+              +\sigma bx^2hz^2+x^2h\theta z.
+\]
+Define the opening-cleared products
+\[
+\begin{split}
+ p&=\frac{z(1+xh)E+(1-r)(1+xhz)}{2P},\\
+ l&=\frac{(1+\sigma r)\{eR_s(1+\sigma z)+ME\}}{2P},\qquad
+ \kappa=\frac{K(1+\sigma r)(1+\sigma z)}{2MP}.
+\end{split}
+\]
+The event coefficients are
+\[
+\begin{gathered}
+ m=\kappa x^2zH,\quad
+ C=\frac{Kz(1+\sigma r)E}{2(1-r)P},\quad
+ A=p/r,\quad \alpha=l/(zQ),\\
+ D=\frac{K(1+\sigma z)(1+\sigma r)-JP}{2JP},\qquad
+ \beta=\frac{K(1+\sigma r)(1+xhz)-\theta P}{2\theta P}.
+\end{gathered}\tag{P1}\label{eq:c1-eta-large-source}
+\]
+Only the original nonnegative $D,\beta$ sources are considered.  Set
+$a=Az=p/b$, $\ell=\alpha z=l/Q$, and
+\[
+ H_0=1+zQ,\quad B_s=P+xz(J-\sigma),
+\]
+\[
+ \mathcal H=R_sH_0+z\{(1-r)xh(2+xr)
+       -e[2+x(1+h+r\theta)]+Ke^2\}.
+\]
+
+Direct multiplication gives the two exact source identities
+\begin{align}
+ 2\theta P\beta&=hB_s-\sigma H_0,\tag{BE3}\label{eq:c1-unification-source}\\
+ 2P(JD+x\theta\beta)&=\sigma^2\mathcal H.\tag{BE4}\label{eq:c1-unification-source-sphere}
+\end{align}
+They contain the entire scale estimate required below. Initially
+$0<e<1$ follows from $E>0$, so $\mathcal H$ is bounded; also
+$P,J,M,B_s\sim1$. Eliminating $\beta$ between the identities gives
+\begin{equation}\label{eq:c1-unification-e-bound}
+ eB_s=xH_0+\sigma\mathcal H-2PJD/\sigma
+       \le xH_0+\sigma\mathcal H.
+\end{equation}
+Thus $e=O(x+\sigma)$ is infinitesimal. Consequently
+\[
+ \mathcal H-H_0\in\operatorname{Inf}_c,\quad
+ D=O(\sigma^2),\quad \beta\theta=O(h+\sigma),\quad
+ p-H_0/2,\ l-1/2,\ \kappa-1/2\in\operatorname{Inf}_c,
+ \qquad H_0=1+zQ\ge1.
+\]
+The quantities $p,l,\kappa$ are bounded and positive, and
+$m=\kappa xze$ is infinitesimal. The individual positive coefficients
+$C,a=p/b,\ell=l/Q$ may be unbounded; they will stay in whole squares.
+
+The following estimates do not assume that $H$ is bounded. Set
+\[
+ \nu=(2D-2\beta\theta+h)/\sigma,\quad
+ \lambda=(8Dh+4\beta\theta^2+2h^2)/\sigma-4bp\sigma z,\quad
+ K_A=4\kappa H-\lambda,
+\]
+and define
+\[
+ \lambda_0=\lambda-2H,\quad d_G=4D/\sigma^2,\quad
+ \rho=\lambda x/\sigma,\quad L_0=\lambda\sigma.
+\]
+The source identities imply
+\begin{align}
+ \nu&=2D/\sigma+[H_0-ez(J-\sigma)]/P,\label{eq:c1-unification-nu}\\
+ \lambda&=2H+2e\theta z(J-\sigma)/P
+            -2\theta H_0/P+8Dh/\sigma-4bp\sigma z.
+            \label{eq:c1-unification-lambda}
+\end{align}
+Hence $\nu,d_G,\lambda_0$ are bounded,
+$\lambda_0+2\theta H_0$ is infinitesimal, and $L_0-2h$ is infinitesimal.
+For $K_A=4\kappa H-\lambda$ one also has
+\begin{equation}\label{eq:c1-unification-KA}
+ K_A-\{2\theta H_0-2h(1-r)\}\in\operatorname{Inf}_c.
+\end{equation}
+Here is a finite polynomial derivation of the only possible pole in
+this assertion. Put
+\[
+ N_\kappa=K(1+\sigma r)(1+\sigma z)-MP
+          =xF_x+\sigma F_\sigma,
+\]
+where $F_x=(N_\kappa-N_\kappa|_{x=0})/x$ and
+$F_\sigma=N_\kappa|_{x=0}/\sigma$ are polynomials in the bounded
+source arguments. Direct substitution gives
+$F_\sigma=r-1+\sigma rz$. Therefore
+$H(2\kappa-1)=(eF_x+hF_\sigma)/(MP)$ has residue $-h(1-r)$,
+which proves \eqref{eq:c1-unification-KA}. In particular $K_A$ is bounded.
+
+For later use write $R_\gamma=R_0-8pu^2$, where
+\[
+ R_0=-4\{2(C+D)(r-1)+2p+r-1\}.
+\]
+There is the uniform estimate
+\begin{equation}\label{eq:c1-unification-R0}
+ R_0=O(x+\sigma+e),\qquad
+ \lambda>0\ \Longrightarrow\ R_0\sqrt\lambda\in\operatorname{Inf}_c.
+\end{equation}
+To verify the first estimate without any source-pole division, temporarily
+treat $e$ as an independent variable. The product $N=JPR_0$ is the
+polynomial
+\[
+ -4\{-JKz(1+\sigma r)(1-e)
+ +(r-1)K(1+\sigma z)(1+\sigma r)
+ +J[z(1+xh)(1-e)+(1-r)(1+xhz)]\}.
+\]
+It vanishes identically at $x=\sigma=e=0$. Consecutive differences
+in $x,\sigma,e$ express it as $xN_x+\sigma N_\sigma+eN_e$, with
+bounded polynomial quotients. For the second estimate use
+$\lambda=O(1+H)$ from \eqref{eq:c1-unification-lambda} and
+$e=O(x+\sigma)$ from \eqref{eq:c1-unification-e-bound}. The bound
+\[
+ R_0^2\lambda=O((x+\sigma)^2(1+H)),\qquad
+ (x+\sigma)^2H=xe+2\sigma e+\sigma h
+\]
+has an infinitesimal right side. This proves the square-root estimate
+for every possible $H$.
+
+The same source formulas also give the identities used by the
+complementary testing charts. With $B=B_s$, put
+\[
+ d_0=\sqrt{2PJD/(\sigma^2\mathcal H)},\qquad
+ b_0=\sqrt{2Px\theta\beta/(\sigma^2\mathcal H)}.
+\]
+The source identity gives
+\[
+ D=O(\sigma^2),\quad x\theta\beta=O(\sigma^2),\quad
+ JD+x\theta\beta\asymp\sigma^2.\tag{BE5}
+\]
+Then exactly
+\[
+ d_0,b_0\ge0,\quad d_0^2+b_0^2=1,\quad
+ D={\sigma^2\mathcal H\over2PJ}d_0^2,\quad
+ \beta={\sigma^2\mathcal H\over2Px\theta}b_0^2.\tag{BE6}
+\]
+\[
+ H={H_0\over B}+{\sigma\over x}{\mathcal H\over B}b_0^2.\tag{BE7}
+\]
+\[
+ m=m_0+m_1b_0^2,\quad
+ m_0=\kappa x^2zH_0/B\asymp x^2z,\quad
+ m_1=\kappa x\sigma z\mathcal H/B\asymp x\sigma z.\tag{BE8}
+\]
+\[
+ {C(1-r)\over z}\sim\tfrac12,\qquad
+ Ar\sim H_0/2,\qquad \alpha Qz\sim\tfrac12.\tag{BE9}
+\]
+No inverse of a sphere coordinate is used. Another useful uniform
+source identity is $p-l\in zB_c$: with $e$ temporarily independent,
+$2P(p-l)$ is a polynomial in bounded $x,\sigma,z,b,h,e$, and
+at $z=0$ its two source numerators are both one
+($e+(1-e)=1$ for the second). Its finite quotient by $z$ is
+therefore polynomial and bounded. Restoring $e=xh/\sigma$ proves
+the assertion through both radial openings.
+
+\paragraph{The complete state polynomial.}
+Write $t=u^2$, $\xi=w^2$, $D_u=1+t$, $D_w=1+\xi$, $q=\sqrt z$,
+$g=h-Q$.  The original reciprocal parent is
+\[
+\begin{split}
+ F_w={}&4m(W-wX+uY-uwZ)^2+4CD_w(uW-Y)^2+4AD_uD_wY^2\\
+ &+(4D+2)(uwW+uX-wY-Z)^2+(4\alpha+2)D_u(Y-wZ)^2\\
+ &+(4\beta+2)D_w(X+uZ)^2-2D_uD_wZ^2.
+\end{split}\tag{P4}\label{eq:c1-reciprocal-parent}
+\]
+Use the homogeneous roots
+\[
+\begin{gathered}
+ N_x=X+uhZ,\quad N_y=(Y-bwZ)/q,\quad
+ \Gamma=\sigma Z-uwW,\quad R=wZ/q-uqW,\\
+ A_\theta=q(t-x)W,\quad P_\beta=uZ-(x/\sigma)wW,
+ \quad X_e=X+ewW,\quad V=uw(t-x)W,\\
+ J_C=N_y+bR,\qquad J_\ell=N_y-QR.
+\end{gathered}
+\]
+The following definitions collect every remaining coefficient:
+\[
+\begin{gathered}
+ \nu=(2D-2\beta\theta+h)/\sigma,\qquad
+ \lambda=(8Dh+4\beta\theta^2+2h^2)/\sigma-4bp\sigma z,\\
+ \lambda_0=\lambda-2H=4D(1+h)/\sigma-2\theta\nu-4bp\sigma z,\\
+ K_A=4\kappa H-\lambda,\qquad B_x=8\kappa e,\\
+ A_y=8(p-l)+4z\{(1+2m)g+2Dh+2p\sigma\},\\
+ R_x=-4\{2Db+(1+2m)g-2\beta\theta\},\\
+ R_\gamma=-4\{2(C+D)(r-1)+2p+r-1+2pt\},\\
+ \chi=8(pb+lQ)-4h+4eh(2D+1)-8Dh\\
+ \hspace{20mm}+4z\{4Dbh+4pb\sigma+(1+2m)g^2+2\beta\theta^2\},\\
+ k_1=2(1+2m)g^2+8Dhb+8pb\sigma+4\beta\theta^2,
+\end{gathered}\tag{SP3}\label{eq:c1-contact-coefficients}
+\]
+\[
+\begin{split}
+ E_{yy}&=2z\{(1+2m)t+(1+2D)\xi\},\\
+ E_{RR}&=z\{8bD+8bp\sigma+4b\sigma(2C+2D+1)(r-1)
+                                  +k_1t+2b^2(2D+1)\xi\},\\
+ E_{yR}&=4z\{t[2Dh+2p\sigma+(1+2m)g]+b(2D+1)\xi
+       +\sigma(2C+1)(r-1)+2D[1+\sigma(r-1)]+2p\sigma\}.
+\end{split}
+\]
+Direct expansion of the original parent, using only the displayed source
+identities, gives the full four-state identity
+\begin{align}
+ F_w={}&\mathcal E_++[2(1+\xi)+4m\xi]N_x^2
+       +[4a+2z(2C+1)]J_C^2+4\ell J_\ell^2\nonumber\\
+ &+E_{yy}N_y^2+E_{RR}R^2+E_{yR}N_yR
+        +(4D/\sigma^2)\Gamma^2\nonumber\\
+ &-4\nu N_x(u\Gamma)
+       +R_\gamma(N_y+bR)(qw\Gamma)\nonumber\\
+ &-4uqw(2m+2D+1)N_xN_y+uqwR_xN_xR
+           +qwB_xN_xA_\theta+uA_yN_yA_\theta\nonumber\\
+ &+K_AA_\theta^2+\chi uA_\theta R+\mathscr S,
+ \label{eq:compression-full-parent}\tag{SP6}\\
+ \mathscr S={}&\lambda\sigma P_\beta^2
+       +(\lambda x/\sigma)(t-x)(\xi-\sigma z)W^2,\nonumber
+\end{align}
+where all terms in the following remainder are retained tensor squares:
+\[
+\begin{split}
+ \mathcal E_+={}&4\beta D_wN_x^2+2(2D+1)(uX_e)^2
+              +4bpzt\Gamma^2\\
+ &+4a(D_uD_w-1)J_C^2+4\ell tJ_\ell^2+4Cz\xi J_C^2.
+\end{split}
+\]
+This identity includes all four state coordinates and both complete Gamma normal terms.  
+
+
+All $E$ coefficients are infinitesimal. The state-normal cross
+coefficients outside $\mathscr S$, namely
+$\nu,R_\gamma,R_x,B_x,A_y,\chi$, are bounded; so are $K_A,d_G$.
+The possibly unbounded scalar coefficient $\lambda$ is handled below.
+Indeed the only $C$ poles outside positive squares occur through
+$C(r-1)$; $\beta$ occurs there through the bounded product
+$\beta\theta$. Every non-Gamma cross coefficient has an explicit
+$u$ or $w$ factor and is infinitesimal. These conclusions use the
+uniform estimates just proved, not a bound on $H$.
+
+Since $4a,4\ell>1$, clip these two whole positive radial squares at
+one and retain their source excesses. The resulting radial form is
+\[
+ J_C^2+J_\ell^2=(N_y+bR)^2+(N_y-QR)^2,
+\]
+whose real residue is positive definite because $b+Q=1$.
+The $N_x$ coefficient has residue two. The exact testing sign gauges
+$(u,Y,Z)\mapsto(-u,-Y,-Z)$ and $(w,X,Z)\mapsto(-w,-X,-Z)$
+allow $u,w\ge0$; literal zero values are allowed.
+
+\paragraph{A single construction for $\lambda>0$.}
+In this paragraph $\rho>0$. Direct elimination of $\beta$ in
+\eqref{eq:c1-unification-source} gives the exact identity
+\begin{equation}\label{eq:c1-unification-S}
+\begin{split}
+ S:=d_G+\rho={}&2\mathcal H/P
+ +d_G(1-J+2hx)+2eH_0/P\\
+ &-2e^2z(J-\sigma)/P-4bpxz.
+\end{split}
+\end{equation}
+Thus $S-2H_0$ is infinitesimal. In particular $S$ is a positive
+bounded source unit and $d_G,\rho$ are both bounded. Also
+$q_0:=\lambda k$ is bounded, since $q_0^2=L_0\rho$, and
+$\lambda x=\rho\sigma$ is infinitesimal.
+
+Define the separated monomials, keeping the signs of $W,Z$,
+\[
+ B_1=\sqrt{\lambda\sigma}\,uZ,\quad
+ B_2=\sqrt\rho\,uwW,\quad
+ B_3=\sqrt\lambda\,x\sqrt zW,\quad
+ B_4=\sqrt{\lambda x}\,wZ/\sqrt z.
+\]
+Exactly
+\[
+ \mathscr C:=\mathscr S+\lambda xR^2
+        =\sum_i B_i^2-4\lambda xuwWZ.
+\]
+If $WZ>0$, change the overall state sign so $W,Z>0$, put
+$G=(B_1B_2B_3B_4)^{1/4}$ and $d_i=B_i-G$. Then
+\[
+ \mathscr C=\sum_i d_i^2+\mathscr C_+,
+\]
+\[
+ \mathscr C_+=2G\{(\sqrt{B_1}-\sqrt{B_2})^2
+ +(\sqrt{B_3}-\sqrt{B_4})^2
+ +2[(B_1B_2)^{1/4}-(B_3B_4)^{1/4}]^2\}\in\Sigma T^2.
+\]
+All radicals separate into factors in $K_c$ and $K_t$. If $WZ\le0$,
+put $d_i=B_i$ and $\mathscr C_+=-4\lambda xuwWZ\in\Sigma T^2$.
+In both cases the differences $d_i-d_j$ equal $B_i-B_j$.
+
+Put $T_\theta=k\sqrt z(u-k)W$ and $\Gamma_*=\sqrt{d_G}\Gamma$.
+The following exact conductors require no inverse of $D$ or sphere
+coordinate:
+\begin{align}
+ \sqrt\rho\,u\Gamma={}&k(d_1-d_2)-(u-k)(d_2-d_3)
+                      -\sqrt{\rho\sigma}\,T_\theta,\label{eq:c1-unification-conductor1}\\
+ \sqrt\rho\sqrt z w\Gamma={}&\sqrt\rho\sigma zR
+ -(\sqrt z w+z\sqrt\sigma)(d_2-d_3)\nonumber\\
+ &+\sqrt\rho(\sigma z/k+\sqrt\sigma\sqrt z w/k)T_\theta.
+ \label{eq:c1-unification-conductor2}
+\end{align}
+Use $1=(d_G+\rho)/S$ to write
+\[
+ u\Gamma={\sqrt{d_G}u\over S}\Gamma_*
+              +{\sqrt\rho\over S}(\sqrt\rho\,u\Gamma).
+\]
+After \eqref{eq:c1-unification-conductor1}, every coefficient on
+$(\Gamma_*,T_\theta,d_i)$ is infinitesimal. For the other complete
+normal use
+\[
+ \sqrt z wR_\gamma\Gamma=R_0\sqrt z w\Gamma
+                              -8p\sqrt z wu(u\Gamma),
+\]
+and apply the same identity $1=(d_G+\rho)/S$ only to the first term.
+In \eqref{eq:c1-unification-conductor2} its only potentially singular
+$T_\theta$ coefficients reduce exactly to
+\[
+ {R_0\rho\sigma z\over kS}={R_0q_0z\over S},\qquad
+ {R_0\rho\sqrt\sigma\sqrt z w\over kS}
+       ={(R_0\sqrt\lambda)\sqrt\rho\sqrt z w\over S}.
+\]
+They are infinitesimal by \eqref{eq:c1-unification-R0}; every other
+coefficient visibly is too. Thus both entire Gamma normal terms
+have infinitesimal coefficients on a single frame, including $D=0$.
+
+It remains to handle a possibly signed $K_A$. The same construction
+will work for every value of this source coefficient. Put
+\[
+ c=\max(0,1-K_A),\qquad a_0=k/\sigma,\qquad
+ J_A=\sqrt z(u-k)W,\quad F_A=u(Z-a_0wW),
+\]
+\[
+ E_u=\sqrt uJ_A,\quad E_k=\sqrt kJ_A,\qquad
+ U_* =\sqrt{q_0}E_u,\quad K_* =\sqrt{q_0}E_k.
+\]
+One direct multiplication gives, for every state and all source sizes,
+\begin{equation}\label{eq:c1-unification-US}
+ \mathscr S=L_0F_A^2+2q_0E_u^2+q_0E_k^2
+                                  +2q_0\sqrt uE_uR.
+\end{equation}
+Average this with $\mathscr S=\mathscr C-\lambda xR^2$:
+\[
+ \mathscr S=\tfrac12L_0F_A^2+U_*^2+\tfrac12K_*^2
+ +\sqrt{q_0u}\,U_*R+\tfrac12\mathscr C-\tfrac12\lambda xR^2.
+\]
+The two cross/radial coefficients are infinitesimal. The term
+$L_0F_A^2/2$ is retained as a positive square.
+
+If $c>0$, \eqref{eq:c1-unification-KA} implies that $h$ is a positive
+unit: in fact its residue is at least $1/4$. The inequality obtained
+from \eqref{eq:c1-unification-e-bound},
+\[
+ a_0^2(hB_s-\sigma H_0)\le\mathcal H,
+\]
+then proves $a_0$ bounded. Also $L_0\sim2h$ is a positive unit,
+so $\lambda$ is unbounded. The exact angular certificate proved
+below is
+\begin{equation}\label{eq:c1-unification-angular-budget}
+ \Delta_A:=\varepsilon_C\mathscr C+u^2R^2
+                         +\varepsilon_G\Gamma^2-A_\theta^2\in\Sigma T^2,
+\end{equation}
+where
+\[
+ \varepsilon_C=2/\lambda+u+k,\qquad
+ \varepsilon_G=2a_0u+(u+k)/L_0.
+\]
+Both coefficients are infinitesimal whenever $c>0$. Subtract
+$c(d_G/S)\Delta_A$ from the parent, keeping that nonnegative
+quantity separately. The angular part of the remainder is
+\[
+ (K_A+c)A_\theta^2-c(\rho/S)A_\theta^2.
+\]
+The first coefficient is a positive unit. The second square is an
+infinitesimal Gram correction on $(U_*,K_*)$, by the exact relation
+\begin{equation}\label{eq:c1-unification-weighted-angular}
+ \rho A_\theta^2=
+       (\sqrt{a_0u}\,U_*+\sqrt{a_0k}\,K_*)^2.
+\end{equation}
+The other subtractions have coefficients
+$c d_G\varepsilon_C/S$ on $\mathscr C$,
+$c d_Gu^2/S$ on $R^2$, and $c\varepsilon_G/S$ on $\Gamma_*^2$;
+all are infinitesimal. If $c=0$, none of these terms is used.
+This verifies the same construction in both situations without a
+new choice of roots or a source/test rate comparison.
+
+Finally split the positive angular coefficient between $A_\theta$
+and $T_\theta$, retaining the exact nonnegative difference
+\[
+ A_\theta^2-T_\theta^2=z(u-k)^2W^2(u^2+2uk)\in\Sigma T^2.
+\]
+The complete bounded Gram on
+\[
+ (N_x,N_y,R,\Gamma_*,A_\theta,T_\theta,d_1,\ldots,d_4,U_*,K_*)
+\]
+has positive-definite residue: its radial block is $J_C^2+J_\ell^2$,
+the $N_x$ pivot is two, the Gamma pivot is one, the angular pivots
+are positive, and the circuit and last two pivots are respectively
+$1/2,\ldots,1/2,1,1/2$. All other entries have zero residue.
+The remaining circuit coefficient
+$1/2-cd_G\varepsilon_C/S$ has positive real residue $1/2$.
+The one-dimensional bounded-Gram fact makes it a tensor SOS,
+so its product with the retained $\mathscr C_+$ is also a tensor SOS.
+Restore the retained positive squares and apply the bounded-Gram fact.
+
+\paragraph{Proof of the angular certificate, including state signs.}
+For $U,V,Z_*>0$ and positive separated $a_*$ set
+\[
+ \Psi=1+U^2V^2+U^2Z_*^2+V^2Z_*^2-4UVZ_*,\quad T_*=U^2-1,
+\]
+\[
+ Q_*=VZ_*-U,\quad R_*=Z_*-UV,\quad G_*=U(V-Z_*).
+\]
+The polynomial identity
+\begin{align*}
+ &[2+a_*(U+1)]\Psi+U^2Q_*^2
+       +[2U+(U+1)/a_*]R_*^2-T_*^2\\
+ &=(T_*+UQ_*)^2+2Q_*^2
+ +(U+1)(\sqrt{a_*}G_*-R_*/\sqrt{a_*})^2\\
+ &\quad+a_*(U+1)(1-VZ_*)^2
+       +2a_*(U+1)VZ_*(U-1)^2
+\end{align*}
+is verified by multiplication. Expand each $U+1$ factor before
+taking square roots. The right side is a finite separated SOS.
+For $W\ne0$ substitute
+\[
+ U=u/k,\quad V=w/(\sqrt\sigma\sqrt z),\quad
+ Z_*={\sqrt\sigma\over k\sqrt z}{Z\over W},\quad
+ a_*=\lambda k,\quad M_*=k^2\sqrt zW.
+\]
+Then $\mathscr C=\lambda M_*^2\Psi$,
+$A_\theta=M_*T_*$, $R=k\sqrt zWQ_*$ and
+$\Gamma=k\sqrt\sigma\sqrt zWR_*$. Multiplication by $M_*^2$
+gives \eqref{eq:c1-unification-angular-budget}. These are legitimate
+separated factors even when an intermediate ratio is unbounded.
+If $Z_*<0$, apply the displayed identity first to $|Z_*|$.
+Replacing $|Z_*|$ by $Z_*$ increases $\Psi$ by $8UV|Z_*|$ and
+each of $Q_*^2,R_*^2$ by $4UV|Z_*|$. The three resulting additional
+terms have positive separated coefficients and are SOS. Thus the
+same certificate holds for either state sign. At $Z_*=0$ the original
+identity applies directly. If $W=0$, $A_\theta=0$, so
+\eqref{eq:c1-unification-angular-budget} follows immediately from
+$\mathscr C\in\Sigma T^2$. No state coordinate is inverted there.
+
+\paragraph{The case $\lambda\le0$.}
+The definition of $\lambda$ gives
+$H^2\le2bpz$ and $\beta\theta^2/\sigma^2\le bpz$.
+Thus $H$ is bounded, $h$ is infinitesimal, $\theta\sim1$,
+$M_\beta=\beta\theta/\sigma^2$ is bounded and
+$H-H_0,d_G-2H_0$ are infinitesimal. In particular
+\[
+ L=\lambda/\sigma
+   =8(D/\sigma^2)h+4M_\beta\theta+2H^2-4bpz
+\]
+is bounded. Direct multiplication gives
+\[
+ u^2\Gamma+V=\sigma uP_\beta,
+\]
+\[
+ A_\theta^2+u\Gamma P_\beta+uA_\theta R
+      =\sigma P_\beta^2+(x/\sigma)(u^2-x)(w^2-\sigma z)W^2,
+\]
+where $V=uw(u^2-x)W$. Consequently
+\[
+ K_AA_\theta^2+\mathscr S
+ =4\kappa H A_\theta^2+Lu^2\Gamma^2+L\Gamma V
+                                      +\lambda uA_\theta R.
+\]
+Add $1+L^2$ times the exact zero
+\[
+ V^2-\sigma u^2A_\theta^2-u\sigma(u^2-x)A_\theta R
+                                      +(u^2-x)V\Gamma=0.
+\]
+The $(\Gamma,V)$ real residue block is
+\[
+ \begin{pmatrix}2\bar H_0&\bar L/2\\
+                 \bar L/2&1+\bar L^2\end{pmatrix},\qquad
+ \det=2\bar H_0+(2\bar H_0-1/4)\bar L^2>0.
+\]
+The $N_x$, radial and angular blocks are strict; every remaining
+cross coefficient, including both complete Gamma normal terms,
+is infinitesimal. The bounded-Gram fact proves this case, including
+$\lambda=0$.
+
+All constructions are literal on the testing axes. No inverse of
+$D$ or $\beta$ occurs, so both permitted source faces are included.
+The parent is real quadratic in the state; applying the proof to
+the real and imaginary parts proves the complex-state assertion.
+This completes the theorem.
+
+\end{document}

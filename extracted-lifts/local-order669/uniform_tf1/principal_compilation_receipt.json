@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "checks": {
+    "source_gram_monomial_support": true,
+    "fourteen_scalar_polynomial_identities": true,
+    "integer_coefficient_map": true,
+    "exact_rational_row_rank": 280
+  },
+  "counts": {
+    "blocks": 16,
+    "block_order": 12,
+    "total_block_order": 192,
+    "feature_slots": 192,
+    "distinct_features": 152,
+    "gram_variables": 1248,
+    "ambient_coefficients": 280,
+    "coefficient_map_rank": 280,
+    "gram_kernel_dimension": 968,
+    "nonzero_map_entries": 1872
+  },
+  "limits": [
+    "This does not certify every C1/C2 source.",
+    "This does not compile or prove a full-Q222 pencil.",
+    "Retained circuit/event/angular functions are not included in this principal-only export."
+  ]
+}

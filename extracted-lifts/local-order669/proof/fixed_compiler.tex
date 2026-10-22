@@ -1,0 +1,279 @@
+\section{A fixed algebraic compiler for the twelve-root C1 Gram}
+\label{sec:fixed-principal}
+This section removes the adaptive testing radicals from the principal
+$\lambda>0$ C1 Gram on one explicit testing box. The source admission
+condition is finite and algebraic. It is a sufficient condition, and no
+claim that it covers every stationary source is made.
+
+Let $\delta=2^{-12}$, $s=\sqrt u$, and write the complete principal Gram
+as
+\[
+ Q(c;s,w)=C_{00}(c)+\sum_{(p,q)\in I} C_{pq}(c)s^pw^q,
+ \qquad
+ I=\{(0,1),(0,2),(1,0),(2,0),(2,1),(4,0),(4,1)\}.
+\]
+Here $c$ denotes the source, rather than the angular compensation
+scalar; the printed source matrices retain both independent state
+normals. Their order is twelve. Define the source reference matrix
+$B(c)$ by the diagonal entries
+\[
+ (2,\,2,\,b^2+(1-b)^2,\,1,\,(K_A+c_A)/2,\,(K_A+c_A)/2,
+       1/2,1/2,1/2,1/2,1,1/2)
+\]
+and the single off-diagonal entry $B_{23}=B_{32}=2b-1$ in one-based
+indexing, where $c_A=\max(0,1-K_A)$. Its radial block has determinant
+one and trace at most three for $0\le b\le1$. Thus
+\[
+ B(c)\succeq\tfrac13I_{12}.
+\]
+An elementary exact verification of its radial reserve is
+\[
+ (N_y+bR)^2+(N_y-(1-b)R)^2
+ =\tfrac13(N_y^2+R^2)
+ +\tfrac53\left(N_y+\tfrac35(2b-1)R\right)^2
+ +\tfrac{1+6b(1-b)}{15}R^2.
+\]
+No source-dependent real whitening is used.
+
+For a symmetric source matrix $M$, put
+\[
+ n(M)=\max_i\sum_j|M_{ij}|.
+\]
+Every operation here is in the source real closed field, and absolute
+values and the finite maximum are semialgebraic functions. Set
+\[
+ E_0=C_{00}-B,\qquad
+ A_{pq}=\delta^{p+q}C_{pq},\qquad r_{pq}=n(A_{pq}).
+\]
+Our explicit source admission condition is
+\begin{equation}\label{eq:finite-admission}
+ n(E_0)+\sum_{(p,q)\in I}r_{pq}\le\tfrac16.
+\end{equation}
+It is imposed together with the printed rational stationary-source
+formulas, native positive denominators, $D,\beta\ge0$, and $\lambda>0$.
+The condition contains no unknown testing value, no choice of a real
+standard part, and no unspecified sufficiently small constant.
+
+The elementary inequality
+$2|x_ix_j|\le x_i^2+x_j^2$ proves
+$-n(M)I\preceq M\preceq n(M)I$ over every ordered real closed field.
+Consequently all the following are positive semidefinite source matrices:
+\[
+ H_0=C_{00}-\sum_I r_{pq}I\succeq\tfrac16I,
+ \qquad H_{pq}^{\pm}=\tfrac12(r_{pq}I\pm A_{pq})\succeq0.
+\]
+On the fixed testing rectangle $0\le s,w\le\delta$, let
+$a=s/\delta$, $b_t=w/\delta$. Direct expansion gives
+\begin{equation}\label{eq:fixed-matrix-split}
+ Q=H_0+\sum_I\bigl[H_{pq}^+(1+a^pb_t^q)
+                         +H_{pq}^-(1-a^pb_t^q)\bigr].
+\end{equation}
+This is a matrix polynomial identity, not a positivity approximation.
+
+
+\paragraph{A version with one numerical matrix envelope.}
+The same dictionary also applies on the more elementary sufficient domain
+\[
+ n(E_0)\le\tfrac1{12},\qquad n(C_{pq})\le128\quad((p,q)\in I).
+\]
+Indeed, put $T_\delta=2\delta+2\delta^2+\delta^3+\delta^4+\delta^5$.
+At $\delta=2^{-12}$, rational arithmetic gives
+$128T_\delta<1/12$. Replace the source matrices above by
+\[
+ H_0=C_{00}-128T_\delta I,\qquad
+ H_{pq}^{\pm}=\tfrac12\delta^{p+q}(128I\pm C_{pq}).
+\]
+They are positive semidefinite, with $H_0\succeq I/6$, and the
+same matrix identity holds. Here even the matrix envelope is a fixed
+numerical constant. Section~\ref{sec:sourcebox} establishes these inequalities throughout
+the printed source box. They are numerical source estimates, not
+a consequence of pointwise boundedness alone.
+
+\paragraph{Only two gate radicals.}
+Write $a=A_t^4$, $b_t=B_t^4$, and introduce
+\[
+ \xi^2=1-A_t^4,\qquad \eta^2=1-B_t^4.
+\]
+For every nonnegative integer pair $(p,q)$,
+\begin{align*}
+ 1+A_t^{4p}B_t^{4q}&=1+(A_t^{2p}B_t^{2q})^2,\\
+ 1-A_t^{4p}B_t^{4q}
+  &=\sum_{i=0}^{p-1}(\xi A_t^{2i})^2
+    +\sum_{j=0}^{q-1}(\eta A_t^{2p}B_t^{2j})^2.
+\end{align*}
+Empty sums mean zero. The second identity is a finite geometric sum.
+For the seven pairs in $I$, the resulting common multiplier list is
+\[
+\begin{split}
+\mathcal M=\{&1,B_t^2,B_t^4,A_t^2,A_t^4,A_t^4B_t^2,A_t^8,A_t^8B_t^2,\\
+             &\eta,\eta B_t^2,\eta A_t^4,\eta A_t^8,
+               \xi,\xi A_t^2,\xi A_t^4,\xi A_t^6\}.
+\end{split}
+\]
+In particular there is no new radical for each monomial, and no
+$\sqrt{M\pm y(t)}$ depending on an adaptively chosen $M$.
+
+\paragraph{A compact algebraic cover of the testing chart.}
+Set
+\[
+ u=\delta^2A_t^8,\quad w=\delta B_t^4,\quad W=\omega^4,\quad Z=\zeta^4,
+ \qquad \omega^8+\zeta^8+X^2+Y^2=1.
+\]
+Together with the two gate equations, these equations define a compact
+real algebraic testing set. They cover exactly the normalized real-state
+chart $W,Z\ge0$, $0\le\sqrt u,w\le\delta$. All signs of
+$A_t,B_t,\omega,\zeta,\xi,\eta$ are allowed. The common state sign takes
+the same-sign state chart $WZ\ge0$ to this chart. In particular
+\[
+ \sqrt{uwWZ}=\delta^{3/2}A_t^4B_t^2\omega^2\zeta^2
+\]
+is the nonnegative root for every real point of the cover. Since
+$\delta=2^{-12}$, every power $\delta^{j/4}$ appearing in the
+substitution is rational.
+
+A primitive rescaling of the twelve testing functions is
+\[
+\begin{split}
+ \chi=(&X,Y,\zeta^4,\omega^4,A_t^8\zeta^4,B_t^4\zeta^4,
+ A_t^8\omega^4,A_t^8B_t^4\omega^4,A_t^{16}\omega^4,\\
+ &A_t^{12}\omega^4,A_t^4\omega^4,A_t^4B_t^2\omega^2\zeta^2).
+\end{split}
+\]
+The circuit coordinates from the preceding section satisfy
+$u^{1/4}=\delta^{1/2}A_t^2$ and $w^{1/4}=\delta^{1/4}|B_t|$.
+Their squared identities remain valid when $|B_t|$ is replaced by
+$B_t$: every monomial in each root has the same parity in $B_t$.
+The same parity argument applies to $\omega$ and $\zeta$.
+
+The original twelve-root vector is $g=R(c)\chi$ for the printed
+source matrix, after multiplying its columns by
+\[
+ (1,1,1,1,\delta^2,\delta,\delta^2,\delta^3,
+                 \delta^4,\delta^3,\delta,\delta^{3/2}).
+\]
+On the negative-state chart use $Z=-\zeta^4$, delete the final
+coordinate of $\chi$, and take the first eleven columns of the
+negative root matrix $A_-$ from \texttt{C1\_ROOT\_MATRIX.json}.
+The exact source-to-feature map is
+\[
+ R_-=A_-[:,1{:}11]\,
+ \diag(1,1,-1,1,-\delta^2,-\delta,\delta^2,\delta^3,
+                                  \delta^4,\delta^3,\delta).
+\]
+Here $[:,1{:}11]$ means the first eleven columns in one-based
+notation, equivalently \texttt{A\_minus[:, :11]} in Python.
+These three negative column signs are necessary because the
+feature vector uses $\zeta^4$, whereas the source root formulas
+use the signed state coordinate $Z$.
+
+Combining repeated multipliers in \eqref{eq:fixed-matrix-split} yields
+\[
+ g^{\mathsf T}Qg
+   =\sum_{m\in\mathcal M}(m\chi)^{\mathsf T}G_m(c)(m\chi),
+ \qquad G_m(c)\succeq0.
+\]
+Each $G_m$ is a sum of congruences $R(c)^{\mathsf T}H R(c)$ of the
+explicit source matrices $H_0,H_{pq}^{\pm}$. Source-field square
+completion therefore gives a finite separated SOS in this one fixed
+testing family. Both state normals are preserved because the whole
+matrix $Q$ is used, rather than a determinant or a selected restriction.
+For the normalized physical slack, multiply every testing function by
+$\kappa_t$, with
+\[
+ \kappa_t^2(1+\delta^4A_t^{16})(1+\delta^2B_t^8)=1.
+\]
+The denominator is strictly positive on the entire testing set.
+This is a pure testing restoration, and the sign of $\kappa_t$ has
+no effect on the Gram identity.
+
+\paragraph{Evaluated rational matrices.}
+The source files print sixteen feature blocks of length twelve, hence
+192 feature slots. Exactly 152 polynomial functions are distinct.
+Using only the gate relations, the block products span 280 independent
+monomials. No state-sphere reduction is needed: every product is
+homogeneous of state degree two, so a relation on the normalized
+state chart would extend by radial scaling to an open cone and hence
+would already be a polynomial relation. There are 1248 symmetric Gram entries. The fully evaluated
+coefficient map has 1872 nonzero integer entries and exact row rank
+280. Rational elimination produces an affine pencil of sixteen
+$12\times12$ blocks in 280 coefficient variables and 968 auxiliary
+variables. It has 2854 nonzero affine entries, with denominators only
+one or two. Direct multiplication verifies all 280 coefficient equations.
+
+For precision, this evaluated pencil represents the principal Gram
+cone exactly: a coefficient vector is in that cone if and only if an
+auxiliary vector makes all sixteen blocks positive semidefinite.
+It is not a representation of the full quantum set. The retained
+circuit, event, and angular roots belong to additional fixed blocks,
+and a global extraction also requires source and testing coverage.
+
+\paragraph{The retained circuit scalar uses the same gates.}
+The scalar multiplying the nonnegative circuit remainder is
+\[
+ q_C=q_{C,0}-r_Cu,\qquad
+ q_{C,0}=\tfrac12-\frac{c_Ad_G}{S}\left(\frac2\lambda+k\right),
+ \quad r_C=\frac{c_Ad_G}{S}\ge0.
+\]
+The circuit diagonal of the principal Gram and
+\eqref{eq:finite-admission} give $q_{C,0}-r_C\delta^2\ge1/3$.
+Exactly,
+\[
+ q_C=(q_{C,0}-r_C\delta^2)
+             +r_C\delta^2\bigl[\xi^2+(\xi A_t^2)^2\bigr].
+\]
+Thus multiplying the three elementary circuit roots requires only the
+fixed multipliers $1,\xi,\xi A_t^2$; no adaptive radical is needed here
+either.
+
+
+\section{The evaluated full-parent local source pencils}
+The preceding fixed multiplier construction was applied to every
+principal term, and all retained roots from the complete C1 identity
+were then restored as their own source-positive Gram blocks.
+Each elementary or angular retained root has source/testing rank at
+most three. The circuit roots are multiplied by the three fixed
+functions $1,\xi,\xi A_t^2$ just derived. No guessed monomial extension
+is used in this compilation.
+
+For $Z\ge0$, the resulting fixed cone has 52 blocks, total matrix
+order 268, maximum block order 12, and 168 distinct testing functions.
+Its coefficient map has 281 independent rows and 1368 Gram entries.
+Substituting the full parent, linear in the seven canonical source
+coefficients $(d,m,C,A,D,\alpha,\beta)$, and eliminating the
+coefficient equations gives an evaluated rational pencil with 1087
+auxiliary variables. For $Z\le0$, the common circuit-centre term is
+absent from the principal root matrix, so its testing span has eleven
+functions. The corresponding fixed cone has 49 blocks, total order
+240, maximum block order 11, 143 distinct functions, 221 independent
+coefficient equations, and 934 auxiliaries.
+
+Block-diagonal concatenation gives one evaluated rational pencil of
+101 blocks and total order 508, in the same seven source coefficients
+and 2021 auxiliaries. Every one of its 5326 nonzero upper-triangle
+affine entries is printed. Direct rational multiplication verifies all
+502 full-parent coefficient equations after elimination.
+
+The equivalence proved by these matrices is exact and limited in
+scope: a canonical source belongs to both displayed fixed Gram cones
+if and only if this pencil admits a positive-semidefinite completion.
+Feasible Grams imply nonnegativity of its full slack on both testing
+state charts. Conversely, the uniform source estimates together with
+the explicit source Gram assignments prove membership for every
+admitted native source. The exact gauges
+\[
+ (u,Y,Z)\mapsto(-u,-Y,-Z),\qquad
+ (w,X,Z)\mapsto(-w,-X,-Z)
+\]
+preserve the full parent and extend the conclusion to
+$|u|\le2^{-24}$, $|w|\le2^{-12}$ and every real state. Applying the
+real quadratic identity to real and imaginary state parts covers
+complex states. The final polynomial identities specialize directly
+to testing axes and zero state coordinates. No state coordinate,
+$D$, or $\beta$ is inverted in the final family.
+
+These two pencils are full-state local certificates. They do not
+represent the full quantum set, and they do not establish that an
+arbitrary globally valid C1 or C2 source belongs to the same fixed
+cone. The uncovered source and testing regions remain a separate
+constructive obligation.
+

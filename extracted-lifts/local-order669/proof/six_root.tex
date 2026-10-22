@@ -1,0 +1,354 @@
+% Include as a chapter or section fragment. All matrices are printed in the JSON.
+\section{An explicit fixed family from the six-root identity}\label{sec:six}
+
+This construction represents the complete reciprocal C1 parent on an
+explicit source domain and an independent testing rectangle. It proves
+membership in a particular fixed Gram cone on that domain. It makes no
+assertion that the domain covers all C1 sources or any of the omitted C2
+source families.
+
+\paragraph{Source notation.}
+Use (P1), (SP3), $Q=Q_b=1-b$, and the source quantities
+\[
+ L=\lambda/\sigma,\qquad s=\sqrt{1+L^2},\qquad d_G=4D/\sigma^2.
+\]
+Within this section $s$ is this pure-source normalizer, not the
+testing square root used in the preceding section.
+
+
+\paragraph{The exact full-state Gram.}
+For independent testing coordinates $u,w,W,X,Y,Z$ set
+\[
+\begin{aligned}
+ N_x&=X+uhZ,&N_y&=(Y-bwZ)/q,&R&=wZ/q-uqW,\\
+ \Gamma&=\sigma Z-uwW,& A_\theta&=q(u^2-x)W,
+ &\widehat V&=suw(u^2-x)W.
+\end{aligned}
+\]
+Let $v=(N_x,N_y,R,\Gamma,A_\theta,\widehat V)^T$.
+The exact identity used here is
+\[
+ F_w=E_{\rm ret}+v^T\!\left(G_0+
+                  \sum_{\gamma\in\mathcal A}u^{\gamma_1}w^{\gamma_2}E_\gamma
+                          \right)v,\qquad
+ \mathcal A=\{00,10,01,11,20,02,21,30\}.
+ \tag{SR1}
+\]
+Here
+\[
+G_0=\begin{pmatrix}
+2&0&0&0&0&0\\
+0&2&2b-1&0&0&0\\
+0&2b-1&b^2+Q^2&0&0&0\\
+0&0&0&d_G&0&L/(2s)\\
+0&0&0&0&4\kappa H&0\\
+0&0&0&L/(2s)&0&1
+\end{pmatrix}.
+\]
+All unspecified entries of the symmetric matrices below are zero.
+Indices follow the six roots just printed, starting at 1.
+\[
+\begin{array}{c|c|l}
+\gamma&(i,j)&(E_\gamma)_{ij}\\\hline
+00&(3,3)&z[8bD+8bp\sigma+4b\sigma(2C+2D+1)(r-1)]\\
+00&(2,3)&2z[\sigma(2C+1)(r-1)+2D(1+\sigma(r-1))+2p\sigma]\\
+00&(4,6)&-sx/2\\\hline
+10&(1,4)&-2\nu\\
+10&(2,5)&A_y/2\\
+10&(3,5)&(\chi+\lambda+s^2\sigma x)/2\\\hline
+01&(2,4)&qR_0/2\\
+01&(3,4)&bqR_0/2\\
+01&(1,5)&qB_x/2\\\hline
+11&(1,2)&-2q(2m+2D+1)\\
+11&(1,3)&qR_x/2\\\hline
+20&(2,2)&2z(1+2m)\\
+20&(3,3)&zk_1\\
+20&(2,3)&2z[2Dh+2p\sigma+(1+2m)g]\\
+20&(4,4)&L\\
+20&(5,5)&-s^2\sigma\\
+20&(4,6)&s/2\\\hline
+02&(2,2)&2z(1+2D)\\
+02&(3,3)&2zb^2(2D+1)\\
+02&(2,3)&2zb(2D+1)\\\hline
+21&(2,4)&-4pq\\
+21&(3,4)&-4bpq\\\hline
+30&(3,5)&-s^2\sigma/2
+\end{array}
+\tag{SR2}
+\]
+In particular, the $N_x\Gamma$, $N_y\Gamma$, and $R\Gamma$
+entries retain both complete state-normal couplings. No determinant
+substitution has replaced the four-state parent.
+
+For completeness, define $X_e=X+ewW$,
+$J_C=Y/q-buqW$, and $J_\ell=(Y-wZ)/q+QuqW$. The retained form is
+\[
+\begin{aligned}
+E_{\rm ret}={}&4\beta N_x^2+(4\beta+2+4m)(wN_x)^2
+ +2(2D+1)(uX_e)^2+4bpz(u\Gamma)^2\\
+&+[4a+2z(2C+1)-1]J_C^2+(4\ell-1)J_\ell^2\\
+&+4a(uJ_C)^2+(4a+4Cz)(wJ_C)^2
+       +4a(uwJ_C)^2+4\ell(uJ_\ell)^2.
+\end{aligned}\tag{SR3}
+\]
+All ten coefficients are nonnegative when $4a,4\ell\ge1$.
+
+To prove (SR1), start with the full-parent identity SP6. With
+$V=uw(u^2-x)W$, direct multiplication gives
+\[
+\begin{aligned}
+ K_AA_\theta^2+\mathscr S
+ &=4\kappa H A_\theta^2+Lu^2\Gamma^2+L\Gamma V
+                                       +\lambda uA_\theta R,\\
+0&=V^2-\sigma u^2A_\theta^2-u\sigma(u^2-x)A_\theta R
+                                      +(u^2-x)V\Gamma.
+\end{aligned}
+\]
+Add $s^2=1+L^2$ times the second identity, replace $V$ by
+$\widehat V/s$, and collect the eight testing monomials. Clipping
+the two radial squares at one gives (SR3). This proves (SR1)--(SR3)
+algebraically at either sign of $\lambda$.
+
+\paragraph{Explicit source guards.}
+For a real symmetric matrix set
+$\|T\|_{\rm row}=\max_i\sum_j|T_{ij}|$. Choose the fixed rational
+constants
+\[
+ \delta=2^{-12}=1/4096,\qquad \eta=1/56.
+\]
+The source admission conditions, in addition to the native domain, are
+\[
+ 4a\ge1,\quad4\ell\ge1,\quad d_G\ge1,\quad4\kappa H\ge1,
+ \tag{SR4}
+\]
+\[
+ \|E_{00}\|_{\rm row}\le1/12,\qquad
+ \delta^{|\gamma|}\|E_\gamma\|_{\rm row}\le1/56
+                   \quad(\gamma\in\mathcal A\setminus\{00\}).
+ \tag{SR5}
+\]
+These are finite, explicit inequalities in source-only rational and
+algebraic functions; no testing point is used to select them.
+
+The radial block has determinant one and trace at most three, so it
+is at least $I_2/3$. An explicit pure-source proof is
+\[
+ (N_y+bR)^2+(N_y-QR)^2
+ =\frac{N_y^2+R^2}{3}
+ +\frac{5}{3}\left(N_y+\frac{3(2b-1)}{5}R\right)^2
+ +\frac{1+6bQ}{15}R^2.
+\]
+The $(\Gamma,\widehat V)$ block is at least $I_2/2$: its diagonals
+are at least one and $|L/s|\le1$. Thus $G_0\succeq I_6/3$.
+Consequently
+\[
+ B=G_0+E_{00}-I_6/8\succeq I_6/8.
+\]
+For the seven nonconstant monomials put
+\[
+ y_\gamma=(u/\delta)^{\gamma_1}(w/\delta)^{\gamma_2},\qquad
+ T_\gamma=\delta^{|\gamma|}E_\gamma.
+\]
+On the fixed independent testing box $0\le u,w\le\delta$ one has
+$0\le y_\gamma\le1$. The exact matrix identity is
+\[
+G_0+\sum_\gamma u^{\gamma_1}w^{\gamma_2}E_\gamma
+=B+\frac12\sum_{\gamma\ne00}
+ \{(\eta I_6+T_\gamma)(1+y_\gamma)
+       +(\eta I_6-T_\gamma)(1-y_\gamma)\}.
+\tag{SR6}
+\]
+The scalar equality $7\eta=1/8$ proves the constant coefficient.
+The source matrices $\eta I_6\pm T_\gamma$ are positive semidefinite
+by (SR5). All factors $1\pm y_\gamma$ are nonnegative in the testing
+field. Factor each source matrix over its own real closed field.
+This proves a separated tensor SOS with the \emph{fixed} fourteen
+testing radicals $\sqrt{1\pm y_\gamma}$. No adaptive constant $M$
+or source-dependent testing function occurs.
+
+\paragraph{A full uniform source rectangle for the nonpositive branch.}
+The guards hold for every native source satisfying
+\[
+ 0<x,\sigma\le\varepsilon:=2^{-10}=1/1024,\qquad
+ 0<z\le1,\qquad \lambda\le0.
+\tag{SR7}
+\]
+No inverse of $\beta$ occurs, so its literal zero face is included.
+The proof below forces $D>0$ on this nonpositive branch; the $D=0$
+source face is therefore assigned to the complementary positive
+branch, rather than being cancelled or omitted.
+
+Here are elementary bounds establishing the claim. From the
+definition of $p$, $P\ge1$ and $0<E<1$, one has $p\le1+\varepsilon<2$.
+Since every term preceding $-4bp\sigma z$ in $\lambda$ is nonnegative,
+\[
+ H\le2,\quad h\le2\sigma,\quad e\le2x,\quad
+ \beta\theta^2\le2\sigma^2,\quad -8\le L\le0,\quad1\le s\le9.
+\]
+In particular $\theta\ge1/2$ and $\beta\theta\le4\sigma^2$.
+The source formulas give
+\[
+ 1\le P\le1+4\varepsilon,\quad
+ 1-\varepsilon\le M\le1+\varepsilon,\quad
+ 1-\varepsilon\le J\le1+\varepsilon,\quad
+ B_s=P+xz(J-\sigma)\le1+6\varepsilon.
+\]
+The exact identity $2\theta P\beta=hB_s-\sigma H_0$, where
+$H_0=1+zQ\ge1$, implies $H\ge3/4$. Also
+\[
+ 3/8\le\kappa\le1,\quad1/4\le p\le2,\quad
+ 1/4\le l\le1,\quad C(1-r)\le1,\quad m\le1/8.
+\]
+For the lower bound on $l$, use
+$2Pl\ge M(1-e)\ge(1-\varepsilon)(1-2\varepsilon)$.
+Its upper bound follows from
+$eR_s(1+\sigma z)+M(1-e)\le(1+\varepsilon)^2$.
+These estimates already prove the first, second and fourth guards in
+(SR4).
+
+To bound $D$, use the exact BE4 identity
+\[
+ 2P(JD+x\theta\beta)=\sigma^2\mathcal H,
+\]
+where
+\[
+\mathcal H=R_sH_0+z\{(1-r)xh(2+xr)
+       -e[2+x(1+h+r\theta)]+Ke^2\}.
+\]
+The preceding inequalities give $1-5\varepsilon\le\mathcal H\le3$,
+and hence $D\le3\sigma^2$. Moreover
+\[
+ d_G\ge
+ \frac{2(1-5\varepsilon)/(1+4\varepsilon)-16\varepsilon}
+      {1+\varepsilon}\ge1;
+\]
+the last inequality follows from
+$1-31\varepsilon-68\varepsilon^2\ge0$. Thus (SR4) is proved.
+
+The remaining coefficient estimates are deliberately loose:
+\[
+ |\nu|\le3,\quad |R_0|\le29,\quad |A_y|\le22,
+ \quad|\chi|\le24,\quad |R_x|\le6.
+\]
+They follow by substituting the displayed bounds in the five explicit
+source formulas. For example $|g|\le1$ and
+$pb+lQ\le2$; all appearances of $C$ in (SR2) outside whole
+positive squares occur as $C(1-r)$, whose bound is one.
+Direct row sums in (SR2) then give
+\[
+ \|E_{00}\|_{\rm row}\le64\varepsilon,\qquad
+ \|E_\gamma\|_{\rm row}\le64\quad(\gamma\ne00).
+\]
+For the constant row, the sharper estimates are
+$|(E_{00})_{33}|+|(E_{00})_{23}|\le
+42\sigma+12D(1+\sigma)<43\varepsilon$ and
+$|(E_{00})_{46}|\le9x/2$.
+Thus $64\varepsilon=1/16<1/12$ and
+$64\delta^{|\gamma|}\le1/64<1/56$, proving (SR5).
+These are finite real inequalities, so they hold over arbitrary
+real closed source and testing fields by the same algebraic proof.
+
+\paragraph{The fixed testing span.}
+Set
+\[
+ \phi_{10}=(W,X,Y,Z,uZ,wZ,uW,uwW,u^2W,u^3wW)^T.
+\]
+The exact $6\times10$ source matrix $T$ satisfying $v=T\phi_{10}$ is
+\[
+T=\begin{pmatrix}
+0&1&0&0&h&0&0&0&0&0\\
+0&0&1/q&0&0&-b/q&0&0&0&0\\
+0&0&0&0&0&1/q&-q&0&0&0\\
+0&0&0&\sigma&0&0&0&-1&0&0\\
+-qx&0&0&0&0&0&0&0&q&0\\
+0&0&0&0&0&0&0&-sx&0&s
+\end{pmatrix}.
+\]
+The first principal block is $T^TBT$; the other fourteen principal
+blocks are
+\[
+ \tfrac12T^T(\eta I_6\pm T_\gamma)T
+ \quad(\gamma\ne00)
+\]
+on testing vectors $\sqrt{1\pm y_\gamma}\,\phi_{10}$.
+All these matrices are positive semidefinite by (SR4)--(SR6).
+
+The independent algebraic testing cover adds fourteen variables
+$\zeta_{\gamma,\pm}$ with
+\[
+ \zeta_{\gamma,\pm}^2=1\pm y_\gamma,\qquad
+ b_u^2=u(\delta-u),\qquad b_w^2=w(\delta-w),
+\]
+and the equations
+\[
+ W^2+X^2+Y^2+Z^2=1,\qquad
+ \kappa_t^2(1+u^2)(1+w^2)=1 .
+\]
+These eighteen equations in twenty-three real variables define a
+compact algebraic set covering the entire test rectangle and state
+sphere. Multiply every testing vector by $\kappa_t$ to obtain the
+normalized physical slack. Each radical multiplies a whole Gram
+block, so either sign of every radical is allowed. Axes and zero
+state coordinates are literal specializations. The gauges (SG)
+and real/imaginary splitting cover negative angles and complex states.
+
+\paragraph{Preserving the elementary root structure: the primary pencil.}
+Keep all fifteen
+principal blocks on $\phi_{10}$. Absorb the retained $N_x,J_C,J_\ell$
+squares into the first principal block; these three rows already lie
+in $\operatorname{span}\phi_{10}$. Group the seven remaining retained
+rows only as follows:
+\[
+\begin{array}{c|c|c}
+\text{fixed testing vector}&\text{retained roots}&\text{block order}\\\hline
+(wX,uwZ)&wN_x&2\\
+(uX,wY,uwW)&uX_e,\ wJ_C&3\\
+(uZ,uwY,u^2wW)&u\Gamma,\ uwJ_C&3\\
+(uY,uwZ,u^2W)&uJ_C,\ uJ_\ell&3
+\end{array}
+\]
+Each block is the sum of the nonnegative source multiples of the
+displayed coefficient-vector outer products. Thus every block is
+positive semidefinite over the source field. This compilation has
+exactly nineteen blocks, fifteen of order ten and four of orders
+$(2,3,3,3)$, with total order $161$ and maximum block order ten.
+It preserves the testing support of each existing root rather than
+adding arbitrary cross terms among all seventeen base monomials.
+
+The evaluated rational source pencil is
+\texttt{six\_root\_structured\_source\_pencil.coo.json}.
+Its visible coordinates are $(d,m,C,A,D,\alpha,\beta)$; it has
+666 free auxiliary coordinates and 2311 nonzero upper-triangular
+rational coefficient records. The common feature-product expansion
+has 180 coefficient equations and 846 raw upper-triangular Gram
+variables. Exact elimination has rank 180, leaving $846-180=666$
+free variables. The matching map and every resulting source and
+auxiliary coefficient are supplied and exactly checked.
+
+Here both directions of the local cone representation are algebraic.
+An affine-pencil witness supplies positive semidefinite Gram blocks;
+the checked coefficient map proves their weighted sum equals the
+complete parent. Conversely, any collection of Gram blocks giving
+that parent is a solution of the 180 printed linear equations. Take
+its entries at the printed free positions as the 666 auxiliaries.
+The exact pivot equations then reconstruct every other entry, so the
+printed affine pencil represents those same Gram blocks. Thus this
+pencil is exactly the specified local fixed Gram cone. This is a
+two-sided statement about that cone, not a quantum reverse-inclusion
+claim.
+
+An admitted rational source for the general guards is
+$\sigma=10^{-4}$, $x=10^{-8}$, $b=1/2$, $z=1$, $h=3/20000$.
+It has $\lambda>0$ and is therefore not an example from the
+$\lambda\le0$ subdomain. The nineteen source Gram matrices at
+this point are printed in the structured fixture, with $331$
+nonzero rational upper-triangle entries. The source radical
+$s$ cancels from their evaluated entries. This fixture is an
+additional exact consistency check; the uniform admission theorem
+is proved by the preceding inequalities.
+
+The result is a fixed local testing cone with a proved admission
+theorem. It is not a primal affine lift of the full eight-coordinate
+set. To obtain such a lift one still needs a finite cover of every
+valid source and every independent test by compatible fixed testing
+families, including the remaining C1 and C2 boundaries.
