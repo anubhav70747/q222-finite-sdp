@@ -144,7 +144,7 @@ K02square=2*(ell/2+delta*(2*delta/3+2*delta**2+F(1,2)))**2
 assert K02square<1
 assert 2*(ell/2)**2<1
 assert F(8,9)<1 # constant perturbation<=2sqrt(2)T/3<T
-gatebudget=F(1,2**37)+F(1,2**50)+F(1,2**74)
+gatebudget=F(9,4096)+F(1,256)+F(81,16777216)
 assert F(1,16)-delta-gatebudget>F(1,32)
 checks['Schur_and_margin_exact']={'N_correction':str(schurN),'M_correction':str(schurM),
  'aM_lower':str(f0/(4*Rdelta)),'aM_upper':str(aMupper),

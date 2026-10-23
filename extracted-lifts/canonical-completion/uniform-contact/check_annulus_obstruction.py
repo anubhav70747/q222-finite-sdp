@@ -20,6 +20,7 @@ original=(source['m']*(v*W-X+u*v*Y-u*Z)**2+source['n']*Du*Dv*X*X
           +f(1,2)*Dv*(X+u*Z)**2-f(1,2)*Du*Dv*Z*Z)
 assert original==0
 assert f(1,2**24)<u*u<f(2**24) and 0<v<f(1,2**25)
+assert abs(u)<f(9,256) and abs(v)<f(1,16)
 nX2=source['n']*X*X
 C_cE2=source['C']*(v*v/Dv)*(u*W-Y)**2/Du
 assert nX2>0 and C_cE2>0
@@ -28,7 +29,8 @@ assert v*v/Dv<f(1,2**52) # Bob-complement threshold is not reached
 out={'source_parameters':{str(a):str(b) for a,b in par.items()},
      'state':list(map(str,[W,X,Y,Z])),'u':str(u),'v':str(v),
      'source_weights':{a:str(b) for a,b in source.items()},
-     'original_parent_is_zero':True,'inside_testing_annulus':True,
+     'original_parent_is_zero':True,'inside_earlier_testing_annulus':True,
+     'inside_enlarged_contact_cap':True,
      'retained_nX_squared':str(nX2),'retained_CcE_squared':str(C_cE2),
      'scope':'The earlier separated Alice-arc Gram cannot admit this source; other completions are not excluded.'}
 (HERE/'annulus_obstruction.json').write_text(json.dumps(out,indent=2)+'\n',encoding='utf8',newline='\n')

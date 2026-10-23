@@ -1,4 +1,4 @@
-"""Reproduce the complete fixed-cap certificate and its rational matrices."""
+"""Reproduce the R1 cap and Bob-complement certificates and rational matrices."""
 from pathlib import Path
 import subprocess,sys
 HERE=Path(__file__).resolve().parent
@@ -10,7 +10,8 @@ for script in [
     'extraction/compile_affine.py',
     'extraction/check_fixed_grid.py',
     'check_annulus_obstruction.py',
+    'bob-complement/check_bob_complement.py',
 ]:
     print('\n'+script,flush=True)
     subprocess.run([sys.executable,'-B',str(HERE/script)],cwd=HERE,check=True)
-print('\nAll exact checks completed. Scope: the full-R1 fixed testing cap.')
+print('\nAll exact checks completed. Scope: the R1 testing cap and complementary Bob region.')

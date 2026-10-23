@@ -40,7 +40,7 @@ put $D_u=1+u^2$, $D_v=1+v^2$. The canonical Bell slack $S_c=F_h/4$ is
  +(\beta+d/2)D_v(X+uZ)^2-\tfrac d2D_uD_vZ^2 .
  \label{eq:slack}
 \end{align}
-All four state coordinates are independent. Use the testing change
+The coupled state directions become explicit after the rotation
 \begin{equation}
  t=\frac{X+uZ}{D_u},\quad r=\frac{Y-uW}{D_u},\quad
  w=\frac{W+uY}{D_u},\quad \zeta=\frac{Z-uX}{D_u},
@@ -48,7 +48,8 @@ All four state coordinates are independent. Use the testing change
  (W,X,Y,Z)=(w-ur,t-u\zeta,r+uw,\zeta+ut).
  \label{eq:rotation}
 \end{equation}
-Only the strictly positive testing factor $D_u$ is inverted.
+This change is invertible for every real $u$ and leaves all four state
+coordinates independent.
 
 The source family in this note has $(d,\lambda,\beta)=(1,0,0)$.
 Its rational coefficients are given in Appendix~\ref{app:source} in terms of
@@ -59,18 +60,23 @@ Its rational coefficients are given in Appendix~\ref{app:source} in terms of
  \label{eq:domain}
 \end{equation}
 The condition $n\geq0$ is imposed on the displayed rational coefficient.
-The ratios $j$ and $jT$ may tend to zero or infinity.
+Write $y=TB$. The ratios $j$ and $jT$ may tend to zero or infinity.
 
 \begin{theorem}\label{thm:cap}
 Every source in \eqref{eq:domain} satisfies $S_c\geq0$ for every state and
 \[
- |u|\leq u_0=2^{-12},\qquad |v|\leq v_0=2^{-25}.
+ |u|\leq u_0=9/256,\qquad |v|\leq v_0=1/16.
 \]
 On each required real sign chart the construction uses finitely many fixed
 testing functions and source-only positive Gram matrices. It includes
 $n=0$ literally and allows arbitrary nonnegative additions of the eight
 event coordinates. Source and testing parameters remain independent.
 \end{theorem}
+
+Every native contact lies strictly inside this cap: its angles satisfy
+$|u|=\sqrt{x}\leq1/32<9/256$ and
+$|v|=\sqrt{y}\leq1/1024<1/16$. The certificate also covers
+testing angles unrelated to that contact.
 
 The common source weight
 \[
@@ -147,8 +153,8 @@ term
  H_1=pv^2\bc,\qquad H_2=\sqrt T\,puv\bc .
  \label{eq:helpers}
 \end{equation}
-The exact identities and their simultaneous bounds are given in
-Appendix~\ref{app:purchases}; none introduces a moving testing radical.
+Appendix~\ref{app:purchases} gives their exact identities and simultaneous
+bounds. Separating the source factors leaves fixed testing radicals.
 
 \section{Both normals in one positive matrix}
 Set
@@ -207,7 +213,7 @@ $\Pi_{02}=\Pi_{22}$ project onto $(\widehat M,\widehat Q)$.
 These projections contain the exact supports of the three nonconstant
 coefficient matrices. The fixed monomials $P_{ab}=(u/u_0)^a(v/v_0)^b$, for
 $(a,b)=(1,1),(0,2),(2,2)$, have budgets
-$2^{-37},2^{-50},2^{-74}$. The identity
+$9/4096,1/256,81/16777216$. The identity
 \[
  K=K_{00}-\sum\rho_{ab}\Pi_{ab}+
  \sum_{a,b}\left[
@@ -216,7 +222,7 @@ $2^{-37},2^{-50},2^{-74}$. The identity
  \quad A_{ab}=u_0^av_0^bK_{ab},\quad\rho_{ab}=u_0^av_0^b
 \]
 has positive source matrices and a constant reserve greater than $I/32$,
-because $1/16-\delta-2^{-37}-2^{-50}-2^{-74}>1/32$.
+because $1/16-\delta-9/4096-1/256-81/16777216=929711/16777216>1/32$.
 
 \section{Restoring the scalar squares}
 The complete parent identity, written out in Appendix~\ref{app:parent}, is
@@ -233,8 +239,8 @@ The identities in Appendix~\ref{app:purchases} replace all negative terms
 in \eqref{eq:coreidentity} by positive remainders. Their total fractions
 $b_i$ of $(f_c\Ps,q_c\Qh^2,M_e\bc^2,r_c\Rh^2)$ satisfy
 \begin{equation}
- \|b_\Ps\|_*<9/16,\qquad \|b_Q\|_*<2^{-22},\qquad
- \|b_E\|_*<1/16,\qquad \|b_R\|_*<1/64 .
+ \|b_\Ps\|_*<3/4,\qquad \|b_Q\|_*<1/8,\qquad
+ \|b_E\|_*<1/8,\qquad \|b_R\|_*<1/2 .
  \label{eq:totalbounds}
 \end{equation}
 The norm sums absolute coefficients weighted by $u_0^av_0^b$.
@@ -271,13 +277,17 @@ also gives direct nonnegativity there.
 Adding nonnegative event coordinates in \eqref{eq:slack} preserves positivity.
 Complex states are covered by their independent real and imaginary parts.
 
-The theorem concerns this source corner and this fixed testing cap.
-Complementary testing regions and admission of all canonical sources require
-further arguments.
+For $|v|\geq1/16$, the source coefficients $C$ and $D$ absorb the
+negative state square directly. Appendix~\ref{app:bob} gives the
+corresponding ten-row matrix, valid for every Alice angle. Together
+the two certificates leave the R1 strip $|u|>9/256$, $|v|<1/16$,
+including Alice's projective endpoint, to be covered. An exact global lift also requires admission of the
+remaining canonical source families.
 
 \appendix
 \input{R1_Source}
 \input{R1_Purchases}
 \input{R1_Parent}
 \input{Fixed_Testing_Functions}
+\input{Bob_Complement}
 \end{document}

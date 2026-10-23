@@ -12,12 +12,12 @@ the surviving state directions and completes the resulting quadratic forms.
 
 The companion retains the complete singular-case argument. **An exact affine
 pencil for the full eight-coordinate quantum set has not yet been extracted.**
-The following construction isolates the remaining step in a small matrix problem.
+The construction below resolves a singular source family on an explicit testing region.
 
 ## One cancellation across the singular source limits
 
 The [uniform contact proof](extracted-lifts/canonical-completion/uniform-contact/Uniform_Contact_Certificate.pdf)
-has a three-page main argument and nine pages of analytical appendices.
+has a three-page main argument and eleven pages of analytical appendices.
 Two square completions contain coefficients that become singular in different
 source limits. The weight `phi = p^2 / (1-p+p^2)` combines them before either
 coefficient is bounded. Keeping the entire first-normal coupling preserves
@@ -25,16 +25,23 @@ the cancellation. Both state directions are then controlled by one positive
 matrix.
 
 This proves a fixed certificate for the broader stationary R1 source family
-on a specified measurement cap, including vanishing event weights and
+on `|u| <= 9/256`, `|v| <= 1/16`, including vanishing event weights and
 unbounded source ratios. Its [evaluated rational system](extracted-lifts/canonical-completion/uniform-contact/)
 has total PSD order 283. The proof gives every square, its fixed function
 span, the affine equations and a finite-grid proof of closedness.
 
-The larger source family also has exact zeros outside this cap. An
+The cap contains every native contact in this source box. A joint bound
+on the source coefficients makes that enlargement possible without adding
+matrix rows. A ten-row matrix covers `|v| >= 1/16` at every Alice angle.
+The [joined system](extracted-lifts/canonical-completion/uniform-contact/joined_certificate.json)
+has order 293 and leaves the R1 testing strip
+`|u| > 9/256`, `|v| < 1/16` unresolved.
+
+An
 [explicit rational example](extracted-lifts/canonical-completion/uniform-contact/Annulus_Obstruction.md)
-shows why the earlier separated arc matrix cannot cover those zeros:
-it retains positive squares where the full Bell slack vanishes. Extending
-the combined-normal completion to these tests remains necessary.
+shows why the earlier separated arc matrix fails for this source family:
+it retains positive squares where the full Bell slack vanishes.
+The enlarged contact certificate now includes this example.
 
 ## From canonical certificates to the full quantum set
 

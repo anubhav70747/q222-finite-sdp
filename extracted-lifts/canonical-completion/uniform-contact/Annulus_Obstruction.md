@@ -1,7 +1,8 @@
 # Why the earlier arc construction needs a different completion
 
-The larger source family has stationary zeros outside the fixed testing cap.
-An exact example shows which terms must be combined in extending the proof.
+An exact stationary zero shows why the earlier separated arc matrix fails
+for the larger source family. The uniform contact certificate now covers this
+zero: it lies inside the enlarged cap `|u| <= 9/256`, `|v| <= 1/16`.
 
 Use the source dictionary in the accompanying note with
 
@@ -45,7 +46,7 @@ A positive Gram for the remaining terms would therefore make the slack
 strictly positive, a contradiction. No choice of that construction's free
 auxiliaries repairs this source. An extension must combine these event
 directions with the other state directions so that every square vanishes at
-the contact. The combined-normal construction remains a possible route.
+the contact. The combined-normal certificate does so on the enlarged cap.
 
 `check_annulus_obstruction.py` verifies the zero, strict inequalities and
 source coefficients by exact rational arithmetic. The original argument for

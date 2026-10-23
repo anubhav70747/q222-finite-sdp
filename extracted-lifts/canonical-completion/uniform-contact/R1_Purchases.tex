@@ -114,21 +114,56 @@ Then the exact identity is
 \end{align}
 Expansion using \eqref{eq:elementary} and
 $Vw(U^2-1)=U\Zc(U^2-1)+(U^2-1)\Bh$ proves the identity.
-The following coefficientwise bounds are sufficient:
+The two fractions containing the strongest source dependence are best
+bounded together with their coefficients. Put $J=j+1$, $K=j+1-p$ and
+use the positive constants $f_0,R_0$ from Appendix~\ref{app:source}.
+The source bounds give $P/F\leq (R_0/f_0)J/K$.
+For $q=j-p>0$, direct expansion gives
+\begin{align}
+ 4jKD_p-J[j(1-p)+2p^2]
+  &=(4p^2-3p+3)q^2\notag\\
+  &\quad +(p+1)(4p^2-4p+3)q+3p(1-p)^2\geq0.
+ \label{eq:jointsource}
+\end{align}
+Both quadratic coefficients are positive for real $p$. Dividing by
+$jKD_p>0$ therefore proves
+\[
+ \frac JK\left(1-\phi+\frac{2\phi}{j}\right)\leq4.
+\]
+This retains the relation between the two source factors; bounding them
+separately would give a smaller testing region.
+
+Substitution of $f_c$ and $r_c$ in \eqref{eq:radialfractions} yields
+\begin{align}
+ r_\Ps&=\frac{8P}{F}\left[B(1-\phi)+\frac{2\phi\theta s}{j}\right]
+       +\frac{4\phi}{\Sigma}(x^2+xs+s^2),\notag\\
+ r_R&=\frac{8PEs}{D_p(1+x)(1+Hy)L}.
+ \label{eq:jointfractions}
+\end{align}
+The coefficients of these polynomials in $s$ are nonnegative.
+For any squared Alice cap $S\geq\delta$, their weighted coefficient
+norms obey
+\begin{align}
+ \|r_\Ps\|_*&\leq32(R_0/f_0)S
+                   +(512/3)(\delta^2+\delta S+S^2),\notag\\
+ \|r_R\|_*&\leq(64/3)R_0(1+\delta^2)S/f_0 .
+ \label{eq:jointradialbounds}
+\end{align}
+For the first inequality, use $B\leq\delta\leq S$, $\theta\leq1$
+and \eqref{eq:jointsource}. For the second, use $E\leq1+\delta^2$,
+$L\geq f_0K$, $J/K\leq2$ and $D_p\geq3/4$.
+The condition $S\geq\delta$ concerns the fixed cap, not individual
+testing points, so the inequalities include $u=0$.
+
+The other two radial fractions have coefficientwise majorants
 \begin{equation}
- \begin{split}
- r_\Ps&\leq_*32B+(256/3)s+(512/3)(\eta+s)^2,\\
- r_Q&\leq_*64Bs+(256/3)s^2,\qquad
- r_E\leq_*(1280/3)(\eta+s)^2,\qquad
- r_R\leq_*(128/3)s .
- \end{split}\label{eq:radialmajorants}
+ r_Q\leq_*64Bs+(256/3)s^2,\qquad
+ r_E\leq_*(1280/3)(\eta+s)^2.
+ \label{eq:radialmajorants}
 \end{equation}
-For example $x^2y/f_c\leq8B$, $xy/f_c\leq8/j$ and $y/q_c\leq8/j$.
-Apply $\phi/j\leq4/3$ to the terms containing $s$ or $s^2$,
-$\phi/\Sigma\leq128/3$ to the remaining terms, and
-$(1-\phi)/(1-p)\leq4/3$ to the $r_R$ term.
-For $(s-x)^2$, the coefficient majorant is $(s+x)^2$; their difference
-$4xs$ is itself a positive polynomial square.
+Indeed $xy/q_c\leq8B$ and $y/q_c\leq8/j$; then use
+$\phi/j\leq4/3$ and $\phi/\Sigma\leq128/3$.
+For $(s-x)^2$, the absolute-coefficient majorant is $(s+x)^2$.
 
 The bound \eqref{eq:Jpurchase} for $16J_\alpha^2$ includes
 $32(1-\phi)(\alpha/B)^2R_u^2$.
@@ -191,26 +226,26 @@ The radial term from \eqref{eq:Jpurchase} is included in $L_R$.
 
 For explicit rational upper bounds, set
 \[
- S=u_0^2=2^{-24},\qquad V_0=v_0^2=2^{-50},\qquad
+ S=u_0^2=81/65536,\qquad V_0=v_0^2=1/256,\qquad
  e=2\delta,\qquad D_0=e^2+S^2.
 \]
 Apply the nonnegative coefficient majorants at $s=S,v^2=V_0$.
 The four resulting sums are bounded by
 \begin{align}
- A_\Ps={}&17[32\delta+256S/3+512(e+S)^2/3]
+ A_\Ps={}&17[32(R_0/f_0)S+(512/3)(\delta^2+\delta S+S^2)]
  +16[8\delta e^2+32e^2S/3]\notag\\
  &+(2048/3)\delta V_0(1+2S)D_0
  +12\delta+48\delta S \notag\\
  &+256(\delta^2V_0+V_0^2+\delta^3S+\delta SV_0)
- +2(\delta^2+V_0)<9/16,\notag\\
- A_Q={}&17(64\delta S+256S^2/3)+512V_0^2D_0+18V_0<2^{-22},\notag\\
+ +2(\delta^2+V_0)<3/4,\notag\\
+ A_Q={}&17(64\delta S+256S^2/3)+512V_0^2D_0+18V_0<1/8,\notag\\
  A_E={}&(21760/3)(e+S)^2+(8192/3)\delta SV_0D_0
-       +96\delta S+256(V_0^2+\delta SV_0)<1/16,\notag\\
- A_R={}&(2176/3)S+(1024/3)e^2S
-                +(1024/3)\delta V_0D_0+6\delta<1/64 .
+       +96\delta S+256(V_0^2+\delta SV_0)<1/8,\notag\\
+ A_R={}&(1088/3)R_0(1+\delta^2)S/f_0+(1024/3)e^2S
+                +(1024/3)\delta V_0D_0+6\delta<1/2 .
  \label{eq:rationaltotals}
 \end{align}
-These are strict rational comparisons at the displayed powers of two.
+These are strict rational comparisons at the displayed cap endpoints.
 The last term in $A_\Ps$ is a conservative bound on $g_c/f_c\leq2y$.
 Thus \eqref{eq:rationaltotals} proves \eqref{eq:totalbounds} as coefficient
 norm bounds, not only as pointwise inequalities. In particular it proves

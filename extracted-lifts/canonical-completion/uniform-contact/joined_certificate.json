@@ -1,0 +1,32 @@
+{
+  "source_order": [
+    "d",
+    "lambda",
+    "n",
+    "m",
+    "C",
+    "A",
+    "D",
+    "alpha",
+    "beta"
+  ],
+  "cap_equations": "extraction/affine_system.json",
+  "cap_fixed_functions": "extraction/fixed_family.json",
+  "Bob_matrix": "bob-complement/bob_complement_order10.coo.json",
+  "constraints": [
+    "All nine source coordinates are nonnegative.",
+    "All 49 cap Gram blocks are positive semidefinite and obey the cap coefficient equations.",
+    "The source-affine ten-row Bob matrix is positive semidefinite."
+  ],
+  "free_Gram_variables": 2269,
+  "coefficient_equations": 554,
+  "cap_Gram_order": 274,
+  "Bob_order": 10,
+  "shared_sign_order": 9,
+  "total_PSD_order": 293,
+  "finite_testing_domain": "|u| <= 9/256 OR |v| >= 1/16",
+  "projective_endpoints": "Bob endpoints included; Alice endpoints included when |v|>=1/16.",
+  "admission": "Native sources of Theorem 1, their nonnegative conic combinations, eight event rays and finite limits.",
+  "remaining_R1_region": "|u|>9/256 and |v|<1/16, with Alice projective endpoints.",
+  "global_scope": "Other canonical source families also remain to be admitted."
+}

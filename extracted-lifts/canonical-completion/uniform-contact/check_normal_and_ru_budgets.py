@@ -3,7 +3,8 @@ from fractions import Fraction as F
 from pathlib import Path
 import json
 
-d=F(1,2**10); S=F(1,2**24); V=F(1,2**50); e=2*d; D=e*e+S*S
+d=F(1,1024); S=F(81,65536); V=F(1,256); e=2*d; D=e*e+S*S
+assert S>=d
 f0=1-d-d**3; l0=1+d+d*d+d**3
 R0=1+2*d+2*d*d+4*d**3+d**4*(1+2*d)
 basic={
@@ -19,9 +20,9 @@ basic={
     'effective_Ru_lt_17':16+32*e*e<17,
 }
 rows={
-    'Ru':[17*(32*d+F(256,3)*S+F(512,3)*(e+S)**2),
+    'Ru':[17*(32*R0/f0*S+F(512,3)*(d*d+d*S+S*S)),
           17*(64*d*S+F(256,3)*S*S),17*F(1280,3)*(e+S)**2,
-          17*F(128,3)*S],
+          17*F(64,3)*R0*(1+d*d)/f0*S],
     'Jalpha':[16*(8*d*e*e+F(32,3)*e*e*S),F(0),F(0),16*F(64,3)*e*e*S],
     'O':[16*F(128,3)*d*V*(1+2*S)*D,16*32*V*V*D,
          16*F(512,3)*d*S*V*D,16*F(64,3)*d*V*D],
@@ -30,14 +31,22 @@ rows={
     'e0':[2*(d*d+V),F(0),F(0),F(0)],
 }
 totals=[sum(row[i] for row in rows.values()) for i in range(4)]
-limits=[F(9,16),F(1,2**22),F(1,16),F(1,64)]
+limits=[F(3,4),F(1,8),F(1,8),F(1,2)]
 comparisons=[a<b for a,b in zip(totals,limits)]
-old64=[64*(360*d*d+81*S+360*S*S)<F(1,32),
-       64*(40*d*S+80*S*S)<F(1,2**22),
-       64*(180*d*d+900*S*S)<F(1,64)]
-assert all(basic.values()) and all(comparisons) and all(old64)
+# Polynomial identity proving the joint estimate, without sampling sources.
+import sympy as s
+p,q=s.symbols('p q'); j=p+q; J=j+1; K=J-p; Dp=1-p+p*p
+diff=4*j*K*Dp-J*(j*(1-p)+2*p*p)
+positive=(4*p*p-3*p+3)*q*q+(p+1)*(4*p*p-4*p+3)*q+3*p*(1-p)**2
+assert s.expand(diff-positive)==0
+assert s.expand(4*p*p-3*p+3-(4*(p-s.Rational(3,8))**2+s.Rational(39,16)))==0
+assert s.expand(4*p*p-4*p+3-(4*(p-s.Rational(1,2))**2+2))==0
+core=F(1,16)-d-F(9,4096)-V-S*V
+assert core>F(1,32)
+assert all(basic.values()) and all(comparisons)
 result={'scope':'R1 source/purchase estimates only; no core, parent, support or coverage assertion',
-        'basic_rational_checks':basic,'old_p_ge_half_64Ru_checks':old64,
+        'basic_rational_checks':basic,'joint_source_polynomial_identity':True,
+        'cap':{'u':'9/256','v':'1/16'},'core_reserve':str(core),
         'rows':{k:list(map(str,v)) for k,v in rows.items()},
         'totals':list(map(str,totals)),'limits':list(map(str,limits)),
         'strict_comparisons':comparisons}

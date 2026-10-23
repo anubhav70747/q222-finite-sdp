@@ -1,8 +1,8 @@
 \section{A fixed testing family and its affine equations}\label{app:functions}
-The preceding identities give an evaluated finite certificate cone.
-This section specifies its testing functions, including both state signs,
-and proves that the cone is closed. Its admission statement is precisely
-Theorem~\ref{thm:cap}; no complementary testing region is included here.
+We now turn the preceding squares into a fixed affine system for the cap
+in Theorem~\ref{thm:cap}. Their monomial supports determine each Gram
+block. A finite interpolation grid then proves that the resulting cone
+is closed.
 
 First take $u,v\geq0$ and use the common state sign to make $w\geq0$.
 There are two closed charts, $\sigma w\zeta\geq0$, with $\sigma=+1,-1$.
@@ -95,7 +95,7 @@ respectively. Their nonconstant loss supports are
 For each pivot row $f$ and each $(a,b)$ in its row of $(*)$, include
 $u^{a/2}v^{b/2}f$ in the base supports. Also form a separate block with
 rows $\sqrt{1-P_{ab}}\,f$, where
-$P_{ab}=(2^{12}u)^a(2^{25}v)^b$.
+$P_{ab}=((256/9)u)^a(16v)^b$.
 These rows implement both coefficient signs in the residual identity
 in the main text. Constant zero coefficients may be retained.
 
@@ -171,9 +171,7 @@ To cover signed angles, apply
 \]
 All nine $T_i$ are invariant. Reducing the angles to nonnegative
 values and then fixing the common state sign reaches one of the two
-charts. The testing axes and $w\zeta=0$ require no division and are
-included by the same formulas. This is a certificate cone for the
-stated cap, rather than a claim of adequacy on the remaining tests.
+charts. The same formulas include the testing axes and $w\zeta=0$.
 
 \subsection*{A fixed positive grid proves closedness}
 Every monomial in $m_b$ has individual degree at most

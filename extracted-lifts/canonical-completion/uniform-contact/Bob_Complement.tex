@@ -1,0 +1,90 @@
+\section{The complementary Bob angles}\label{app:bob}
+For Bob testing angles outside the contact cap, two positive source
+coefficients control the negative state square directly. This gives a
+second fixed certificate on $|v|\geq1/16$, for every Alice angle.
+
+Use the compact testing coordinates
+\[
+ (a,b)=\frac{(u,1)}{\sqrt{1+u^2}},\qquad
+ (c,e)=\frac{(v,1)}{\sqrt{1+v^2}},\qquad
+ a^2+b^2=c^2+e^2=1.
+\]
+They include the projective endpoints by continuity. In the original
+state coordinates of \eqref{eq:slack}, put
+\begin{gather*}
+ E_B=aW-bY,\quad K_B=aX-bZ,\quad J_B=eE_B+cK_B,\quad U_B=eZ-cY,\\
+ E_\lambda=eW+cX,\qquad L_A=bX+aZ,\qquad
+ M_B=b(cW-eX)+a(cY-eZ).
+\end{gather*}
+Then the Bell slack has the compact expression
+\begin{align}
+ S_c={}&\lambda E_\lambda^2+\beta L_A^2+nX^2+mM_B^2+CE_B^2+AY^2
+ +(D+d/2)J_B^2\notag\\
+ &+(\alpha+d/2)U_B^2+\tfrac d2(L_A^2-Z^2).
+ \label{eq:bobparent}
+\end{align}
+The identity $L_A^2-Z^2=X^2-K_B^2$ leaves one negative square to absorb.
+Because $J_B-eE_B=cK_B$, the terms with coefficients $C$ and $D$
+give exactly
+\begin{align}
+ CE_B^2+DJ_B^2-\tfrac d2K_B^2
+ &=C(cE_B)^2+(eE_B,J_B)S_B(eE_B,J_B)^T\notag\\
+ &\quad+\tau_B(c^2-1/257)K_B^2,\qquad
+ S_B=\begin{pmatrix}C-\tau_B&\tau_B\\\tau_B&D-\tau_B\end{pmatrix},
+ \quad \tau_B=257d/2.
+ \label{eq:boballocation}
+\end{align}
+The last square has nonnegative weight precisely when $|v|\geq1/16$.
+The remaining requirement is $S_B\succeq0$.
+
+For native sources, the estimates in Appendix~\ref{app:source} give
+\[
+ C\geq\frac{f_0}{4R_0HT},\qquad
+ D\geq\frac{1-\delta^2}{4R_0T(1-H)}.
+\]
+Since $f_0<1-\delta^2$, their reciprocal sum is at most
+$4R_0T[H+(1-H)]/f_0$. Thus
+\begin{equation}
+ \frac{CD}{C+D}\geq\frac{f_0}{4R_0T}
+ >\frac1{5T}\geq\frac{1024}{5}>\frac{257}{2}.
+ \label{eq:bobharmonic}
+\end{equation}
+Here $f_0/(4R_0)=140600049270784/564050540888577>1/5$.
+The left side of \eqref{eq:bobharmonic} is below both $C$ and $D$.
+Since $d=1$ on the native family, $S_B$ has positive diagonal entries
+and determinant $CD-\tau_B(C+D)>0$.
+
+Equations~\eqref{eq:bobparent}--\eqref{eq:boballocation} give the ten
+fixed functions
+\[
+ \Phi_B=(E_\lambda,L_A,X,M_B,Y,U_B,J_B,cE_B,eE_B,
+                          \sqrt{c^2-1/257}\,K_B)^T.
+\]
+Their matrix $Q_B(c)$ has diagonal
+\[
+ (\lambda,\beta,n+d/2,m,A,\alpha+d/2,
+                   D-128d,C,C-257d/2,257d/2)
+\]
+and the single off-diagonal pair $(Q_B)_{6,8}=(Q_B)_{8,6}=257d/2$,
+with indices starting at zero. It satisfies $S_c=\Phi_B^TQ_B(c)\Phi_B$.
+Its $(8,6)$ principal block is $S_B$ plus $d/2$ on row~6, and all
+other entries are nonnegative diagonal terms. At $d=0$ the same
+matrix admits each event ray. The formulas therefore include $n=0$,
+event additions and finite conic limits. They also apply when $b=0$
+or $e=0$, covering the projective endpoints in this testing region.
+
+Impose $Q_B(c)\succeq0$ together with the cap constraints of
+Appendix~\ref{app:functions}. The resulting system has total order
+$274+10+9=293$, with the nine source-sign blocks shared.
+It admits every native source and proves positivity whenever
+$|u|\leq9/256$ or $|v|\geq1/16$.
+The unaddressed R1 testing region is $|u|>9/256$, $|v|<1/16$,
+including Alice's projective endpoint in this strip.
+The joined cone is closed: the cap cone is closed, and $Q_B(c)$ is
+an affine matrix in the source coordinates with no additional variables.
+
+The fifteen upper-triangular rational records of $Q_B$ are in
+\path{bob-complement/bob_complement_order10.coo.json}; the adjoining
+checker verifies every source coefficient in the polynomial identity.
+\path{joined_certificate.json} specifies how this matrix and the cap
+equations share their source coordinates.

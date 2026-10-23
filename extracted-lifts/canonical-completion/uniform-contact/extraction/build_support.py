@@ -167,7 +167,7 @@ def times_gate(q,ex,sign):
     a,b=ex
     for m,c0 in q.items():
         n=list(m);n[0]+=a;n[1]+=b
-        out[tuple(n)]+=sign*c0*2**(12*a+25*b)
+        out[tuple(n)]+=sign*c0*F(256,9)**a*F(16)**b
     return {m:c0 for m,c0 in out.items() if c0}
 blocks=[]
 def block(chart,kind,cls,support,q,gate=None):
@@ -190,7 +190,7 @@ for sign in [1,-1]:
     chartcounts[sign]={kind:sum(len(b['monomials']) for b in blocks if b['chart']==sign and b['kind']==kind)
                        for kind in ['base','scalar-gate','matrix-gate']}
     chartcounts[sign]['total']=sum(chartcounts[sign].values())
-grid={'u':[str(F(i,6*2**12)) for i in range(1,6)],'v':[str(F(i,5*2**25)) for i in range(1,5)],
+grid={'u':[str(F(i,6)*F(9,256)) for i in range(1,6)],'v':[str(F(i,5)*F(1,16)) for i in range(1,5)],
       't':['1/3','2/3'],'r':['1/3','2/3'],'w':['1/3','2/3'],
       'zeta_positive':['1/3','2/3'],'zeta_negative':['-1/3','-2/3'],
       'points_per_chart':320,'maximum_individual_monomial_degrees':maxdeg,
@@ -203,7 +203,8 @@ source_definitions={'SX':'1/sqrt(x)','SY':'1/sqrt(y)','SZ':'1/sqrt(j*T)',
  'radical_symbols':{'suv':'sqrt(u*v)','suz':'sqrt(u*w*zeta)','svz':'sqrt(v*w*zeta)',
                     'sm':'sqrt(-u*v*w*zeta)'},
  'normalization':'Every fixed feature sqrt(q_b)*monomial is divided by sqrt(1+v^2).'}
-family={'test_variables':list(map(str,test)),'blocks':blocks,'counts':chartcounts,
+family={'testing_cap':{'u':'9/256','v':'1/16'},
+ 'test_variables':list(map(str,test)),'blocks':blocks,'counts':chartcounts,
  'total_PSD_order_with_nine_source_signs':9+sum(len(b['monomials']) for b in blocks),
  'gram_variables':sum(len(b['monomials'])*(len(b['monomials'])+1)//2 for b in blocks),
  'closure_grid':grid,'source_parameter_definitions':source_definitions}
