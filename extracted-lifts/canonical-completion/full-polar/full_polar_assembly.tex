@@ -1,0 +1,233 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\newtheorem{proposition}{Proposition}
+\newtheorem{theorem}[proposition]{Theorem}
+\newcommand{\R}{\mathbb R}
+\title{From the canonical source cone to the full quantum polar}
+\author{}\date{}
+\begin{document}\maketitle\vspace{-2em}
+
+Eight CHSH orientations recover every valid Bell inequality from one
+canonical source cone. This reduction is exact in both directions:
+combining orientations cannot repair a missing canonical certificate.
+We establish this geometry first and then convert a canonical semidefinite
+representation into a lift of the full quantum set.
+
+The expectation vector and its homogenization are
+\[
+ q=(A_0,A_1,B_0,B_1,E_{00},E_{01},E_{10},E_{11}),\qquad z=(1,q).
+\]
+Let $P=\{f\in\R^9:f^Tz\ge0\text{ for every }q\in\mathcal Q_{222}\}$.
+
+\paragraph{The canonical map.}
+Use $H=1-(E_{00}-E_{01}+E_{10}+E_{11})/2$ and
+\[
+ 4p(a,b\mid x,y)=1+aA_x+bB_y+abE_{xy}.
+\]
+In the source order $c=(d,\lambda,n,m,C,A,D,\alpha,\beta)$, the event
+labels are
+\[
+\begin{array}{c|cccccccc}
+ &\lambda&n&m&C&A&D&\alpha&\beta\\\hline
+ p_i&++|01&+-|00&+-|11&-+|10&-+|00&-+|11&--|01&+-|10
+\end{array}
+\]
+and $f_c=dH+4\sum_i c_i p_i$. In the expectation order above, with
+the constant first, the nine coefficients $f=Mc$ are exactly
+\begin{align}
+ f_0&=d+\lambda+n+m+C+A+D+\alpha+\beta,\notag\\
+ f_{A_0}&=\lambda+n-A-\alpha,&
+ f_{A_1}&=m-C-D+\beta,\notag\\
+ f_{B_0}&=-n+C+A-\beta,&
+ f_{B_1}&=\lambda-m+D-\alpha,\notag\\
+ f_{E_{00}}&=-d/2-n-A,& f_{E_{01}}&=d/2+\lambda+\alpha,\notag\\
+ f_{E_{10}}&=-d/2-C-\beta,& f_{E_{11}}&=-d/2-m-D.
+                                                               \label{eq:map}
+\end{align}
+The map is invertible, with $\det M=-32$. Its inverse has a direct
+evaluation formula. Let
+$r=(0,0,0,0,1,-1,1,1)$ be the canonical PR point and
+$h=\left(\begin{smallmatrix}1&-1\\1&1\end{smallmatrix}\right)$.
+For the losing event $(a,b\mid x,y)$, its deterministic neighbour is
+specified explicitly by
+\[
+ A_x=a,\quad B_y=b,\quad
+ B_{1-y}=h_{x,1-y}a,\quad A_{1-x}=h_{1-x,y}b,
+ \qquad E_{ij}=A_iB_j.
+\]
+These neighbours obey $H(v_i)=0$ and $p_j(v_i)=\delta_{ij}$;
+every event $p_i$ vanishes at $r$. Hence
+\begin{equation}
+ d=-f(r),\qquad c_i=f(v_i)/4.                            \label{eq:inverse}
+\end{equation}
+Equivalently, if $V$ has rows $(1,r)$ and $(1,v_i)$, then
+$VM=\operatorname{diag}(-1,4I_8)$ and
+$M^{-1}=\operatorname{diag}(-1,\tfrac14 I_8)V$.
+
+\paragraph{Eight exact relabelings.}
+For $(r_0,r_1,s_0)\in\{\pm1\}^3$, flip the outputs by
+$A_0\mapsto r_0A_0$, $A_1\mapsto r_1A_1$, $B_0\mapsto s_0B_0$,
+leaving $B_1$ unchanged. Both homogeneous expectations and coefficient
+vectors transform by
+\begin{equation}
+ R_g=\operatorname{diag}(1,r_0,r_1,s_0,1,r_0s_0,r_0,r_1s_0,r_1).
+                                                               \label{eq:flips}
+\end{equation}
+These are involutions preserving $\mathcal Q_{222}$. They send the
+canonical PR correlation pattern to
+\[
+                  (r_0s_0,-r_0,r_1s_0,r_1),
+\]
+giving all eight patterns with product $-1$.
+Thus the complete rational maps for chart $g$ are
+\begin{equation}
+ M_g=R_gM,\qquad c=M^{-1}R_gf,\qquad
+ M_g^Tz=M^TR_gz.                                        \label{eq:chart-map}
+\end{equation}
+No input interchange or party swap is required.
+
+\begin{proposition}\label{prop:polar-cover}
+Let $C_{\rm can}=\{c\ge0:Mc\in P\}$. Then
+\begin{equation}
+                     P=\sum_{g\in\{\pm1\}^3}M_gC_{\rm can},    \label{eq:polar-sum}
+\end{equation}
+where the right side is a Minkowski sum of eight convex cones.
+Every $f\in P$ belongs to one summand if it is negative at a PR point;
+otherwise it is a sum of elements from two opposite summands.
+\end{proposition}
+\begin{proof}
+The nonsignalling polytope has the sixteen deterministic vertices and
+the eight PR vertices. One short proof uses its sixteen probability
+inequalities. If all marginals are interior, each $2\times2$ outcome
+table has at most two zeros. A vertex needs eight independent active
+constraints, so every table has two opposite zeros and gives a perfect
+correlation or anticorrelation. An odd cycle parity forces all marginals
+to vanish, giving a PR point; even parity leaves a nontrivial segment
+of local mixtures. If any marginal is deterministic, sampling the other
+party's outcomes conditionally on the remaining local variable gives
+a local model, so such a vertex is deterministic.
+
+Two distinct PR points have a local midpoint. If their patterns are
+opposite, this is the uniform local correlation. Otherwise they agree
+on two edges of the measurement square; the uniform distribution over
+the four deterministic assignments satisfying those two edge relations
+has the required midpoint. Therefore a locally nonnegative $f$ can be
+negative at at most one PR point.
+
+If $f\in P$ is negative at $R_gr$, then $R_gf$ is valid and negative
+at $r$. Formula~\eqref{eq:inverse} gives $d>0$ and $c_i\ge0$, because
+every deterministic neighbour lies in $\mathcal Q_{222}$. Thus
+$f=M_gc$ with $c\in C_{\rm can}$.
+If $f$ is nonnegative at every PR point, it is nonnegative on the
+whole nonsignalling polytope. Polyhedral cone duality writes it as
+a nonnegative combination of the sixteen event probabilities.
+The losing events at $r$ and at $-r$ partition those sixteen events.
+Each event generator is therefore the image of a source with $d=0$
+in one of those two charts. Such sources are in $C_{\rm can}$.
+This proves the reverse inclusion in~\eqref{eq:polar-sum}; the forward
+inclusion follows from quantum validity and physical relabeling.
+\end{proof}
+
+An individual canonical cone does not contain all valid slacks: every
+$M_gc$ with $c\ge0$ takes value $-d\le0$ at its own PR point,
+whereas the constant slack $1$ is positive at all eight. The sum in
+\eqref{eq:polar-sum} is essential.
+
+\begin{theorem}[Exactness of the eight-orientation assembly]\label{prop:no-enlargement}
+Let $K\subseteq C_{\rm can}$ be a closed convex cone containing every
+nonnegative source with $d=0$. Put $P_K=\sum_gM_gK$ and
+$Q_K=\{q:(1,q)\in P_K^*\}$. Then $P_K$ is closed and
+\[
+                         P_K\cap M(\R_+^9)=MK.
+\]
+Moreover
+\[
+ \mathcal Q_{222}\subseteq Q_K\subseteq\mathrm{NS}_{222},\qquad
+ Q_K=\mathcal Q_{222}\quad\Longleftrightarrow\quad K=C_{\rm can}.
+\]
+\end{theorem}
+\begin{proof}
+The set inclusions follow from $P_K\subseteq P$ and the presence of
+all sixteen event generators in $P_K$.
+If $Mc\in P_K$ with $c\ge0$ and $d=0$, then $c\in K$ by assumption.
+For $d>0$, write $Mc=Mc^0+\sum_{g\ne0}f_g$, where
+$c^0\in K$ and $f_g=M_gc^g$.
+At the own PR point $r_g$, $f_g(r_g)=-d_g\le0$. Local midpoint
+positivity gives $f_g(r)\ge d_g\ge0$. In the base source coordinates,
+each $f_g$ therefore has $d$-coordinate at most zero and event
+coordinates $f_g(v_i)/4\ge0$. Write $c=(d,a)$ and $c^0=(d_0,a_0)$.
+Then $0<d\le d_0$ and $a\ge a_0$. Thus, with $\theta=d/d_0$,
+\[
+               c=\theta c^0+(0,a-\theta a_0)\in K.
+\]
+The reverse implication is immediate.
+For a convergent sequence of sums in $P_K$, their constant coefficients
+are $\sum_g\sum_kc_k^g$. Nonnegativity bounds each source sequence;
+closedness of $K$ gives convergent subsequences and a sum in $P_K$.
+If $K=C_{\rm can}$, Proposition~\ref{prop:polar-cover} gives $Q_K=\mathcal Q_{222}$.
+Otherwise every missing valid source has $d>0$ and so gives a valid
+slack outside the closed cone $P_K$. A strict separating vector $z$
+is in $P_K^*$. Since $P_K$ contains all probability generators,
+$z$ is in the homogenized nonsignalling cone; it is nonzero and has
+$z_0>0$. Normalizing $z_0=1$ gives a point outside $\mathcal Q_{222}$.
+\end{proof}
+
+\paragraph{Exact dualization.}
+Let a homogeneous canonical SDP cone be given by
+\[
+ \mathcal L(c,y)=\sum_{k=0}^8c_k A_k+\sum_{j=1}^{p}y_j B_j,
+ \qquad K=\{c:\exists y,\ \mathcal L(c,y)\succeq0\},
+\]
+where $y\in\R^p$. Suppose its total block order is $n$ and
+$\mathcal L(c_*,y_*)\succeq\epsilon I_n$ for some $\epsilon>0$.
+Then
+\begin{equation}
+ K^*=\{\mathcal A^*Y:\ Y\succeq0,\ \mathcal B^*Y=0\},\qquad
+ (\mathcal A^*Y)_k=\operatorname{Tr}(A_kY),\quad
+ (\mathcal B^*Y)_j=\operatorname{Tr}(B_jY),              \label{eq:dual}
+\end{equation}
+with $Y$ block diagonal in the same orders as $\mathcal L$ and no closure required.
+Indeed, a convergent sequence of full adjoint images
+$(\mathcal A^*Y_i,\mathcal B^*Y_i)$ satisfies
+\[
+ \epsilon\operatorname{Tr}Y_i
+ \le\langle Y_i,\mathcal L(c_*,y_*)\rangle
+ =c_*\cdot\mathcal A^*Y_i+y_*\cdot\mathcal B^*Y_i.
+\]
+This bounds the positive semidefinite $Y_i$ and gives a convergent
+subsequence. Thus the full adjoint image is closed. Taking the dual
+of the preimage cone and then the section $\mathcal B^*Y=0$ proves
+\eqref{eq:dual}.
+
+\begin{theorem}[Assembly from an exact canonical cone]\label{thm:conditional}
+Suppose $K=C_{\rm can}$ and the homogeneous pencil for $K$ has a strict
+feasible point. Then the full quantum set is exactly
+\begin{equation}
+ \mathcal Q_{222}=\{q:\ \exists Y_g\succeq0\text{ for every }g,\quad
+       \mathcal B^*Y_g=0,\quad\mathcal A^*Y_g=M_g^T(1,q)\}.
+                                                               \label{eq:generic-primal}
+\end{equation}
+It uses eight copies of the canonical dual blocks, of total order $8n$.
+If the canonical pencil is rational, so is this representation.
+\end{theorem}
+\begin{proof}
+By~\eqref{eq:dual}, the constraint for chart $g$ is exactly
+$M_g^Tz\in C_{\rm can}^*$. All eight constraints are therefore equivalent
+to $z\in(\sum_gM_gC_{\rm can})^*=P^*$ by
+Proposition~\ref{prop:polar-cover}. Since $\mathcal Q_{222}$ is compact and
+convex, $P^*\cap\{z_0=1\}=\{(1,q):q\in\mathcal Q_{222}\}$.
+The eight Gram copies and their linear adjoint equations give the
+claimed representation. These equations can be eliminated by fixed
+linear algebra. There are no residual affine restrictions on $q$:
+the homogenizations of the full-dimensional quantum set span $\R^9$,
+so the prescribed adjoint targets are linearly consistent for every $q$.
+\end{proof}
+
+For the quadratic half-line certificate cone, the exact adjoint equations
+give an outer approximation with total order $264$ and $384$ auxiliary
+variables. Its strict feasible point, rational coordinate maps and
+eliminated equations are supplied in the accompanying data. Theorem~2
+identifies its precise scope: it equals the quantum set exactly when
+the canonical half-line cone contains every valid source.
+\end{document}

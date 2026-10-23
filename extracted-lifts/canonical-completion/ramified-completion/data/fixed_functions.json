@@ -1,0 +1,93 @@
+{
+  "chart_parameters": {
+    "epsilon": [
+      -1,
+      1
+    ],
+    "u": "real",
+    "v": "epsilon*v>=0",
+    "W,X,Y,Z": "real; optionally W^2+X^2+Y^2+Z^2=1"
+  },
+  "positive_algebraic_variables": [
+    "a>0",
+    "b>0",
+    "tau>=0"
+  ],
+  "product_relations": [
+    "(1+u^2)*a^2=1",
+    "(1+v^2)*b^2=1",
+    "16*tau^4=epsilon*v"
+  ],
+  "s": "tau^2",
+  "native_Bob_variable": "v=16*s^2 on the positive chart",
+  "normalized_slack": "F_c/((1+u^2)*(1+v^2))",
+  "testing_multiplier": "u^2/(1+u^2)",
+  "feature_blocks": [
+    {
+      "block": "Q_G",
+      "size": 12,
+      "functions": [
+        "a^3*b*tau^0*(u*W+u^2*Y)",
+        "a^3*b*tau^0*(epsilon*(u*X+u^2*Z))",
+        "a^3*b*tau^0*(u^2*(u*W-Y))",
+        "a^3*b*tau^0*(u^2*(epsilon*(u*X-Z)))",
+        "a^3*b*tau^2*(u*W+u^2*Y)",
+        "a^3*b*tau^2*(epsilon*(u*X+u^2*Z))",
+        "a^3*b*tau^2*(u^2*(u*W-Y))",
+        "a^3*b*tau^2*(u^2*(epsilon*(u*X-Z)))",
+        "a^3*b*tau^4*(u*W+u^2*Y)",
+        "a^3*b*tau^4*(epsilon*(u*X+u^2*Z))",
+        "a^3*b*tau^4*(u^2*(u*W-Y))",
+        "a^3*b*tau^4*(u^2*(epsilon*(u*X-Z)))"
+      ]
+    },
+    {
+      "block": "R_G",
+      "size": 8,
+      "functions": [
+        "a^3*b*tau^1*(u*W+u^2*Y)",
+        "a^3*b*tau^1*(epsilon*(u*X+u^2*Z))",
+        "a^3*b*tau^1*(u^2*(u*W-Y))",
+        "a^3*b*tau^1*(u^2*(epsilon*(u*X-Z)))",
+        "a^3*b*tau^3*(u*W+u^2*Y)",
+        "a^3*b*tau^3*(epsilon*(u*X+u^2*Z))",
+        "a^3*b*tau^3*(u^2*(u*W-Y))",
+        "a^3*b*tau^3*(u^2*(epsilon*(u*X-Z)))"
+      ]
+    },
+    {
+      "block": "Q_H",
+      "size": 12,
+      "functions": [
+        "a^3*b*tau^0*(u*(u*W+u^2*Y))",
+        "a^3*b*tau^0*(u*(epsilon*(u*X+u^2*Z)))",
+        "a^3*b*tau^0*(u*(u*W-Y))",
+        "a^3*b*tau^0*(u*(epsilon*(u*X-Z)))",
+        "a^3*b*tau^2*(u*(u*W+u^2*Y))",
+        "a^3*b*tau^2*(u*(epsilon*(u*X+u^2*Z)))",
+        "a^3*b*tau^2*(u*(u*W-Y))",
+        "a^3*b*tau^2*(u*(epsilon*(u*X-Z)))",
+        "a^3*b*tau^4*(u*(u*W+u^2*Y))",
+        "a^3*b*tau^4*(u*(epsilon*(u*X+u^2*Z)))",
+        "a^3*b*tau^4*(u*(u*W-Y))",
+        "a^3*b*tau^4*(u*(epsilon*(u*X-Z)))"
+      ]
+    },
+    {
+      "block": "R_H",
+      "size": 8,
+      "functions": [
+        "a^3*b*tau^1*(u*(u*W+u^2*Y))",
+        "a^3*b*tau^1*(u*(epsilon*(u*X+u^2*Z)))",
+        "a^3*b*tau^1*(u*(u*W-Y))",
+        "a^3*b*tau^1*(u*(epsilon*(u*X-Z)))",
+        "a^3*b*tau^3*(u*(u*W+u^2*Y))",
+        "a^3*b*tau^3*(u*(epsilon*(u*X+u^2*Z)))",
+        "a^3*b*tau^3*(u*(u*W-Y))",
+        "a^3*b*tau^3*(u*(epsilon*(u*X-Z)))"
+      ]
+    }
+  ],
+  "endpoint_convention": "Separate closed half-line charts. Explicit projective endpoints are in proof/halfline_counterexample.tex and data/compact_fixed_functions.json.",
+  "scope": "Sufficient fixed family; exact certificates supplied for cstar and cbar, global adequacy not asserted."
+}

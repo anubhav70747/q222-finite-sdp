@@ -5,8 +5,9 @@ of the sources admitting a quadratic completion on v >= 0. Its four PSD
 blocks have orders 8, 8, 4, 4, with 44 auxiliaries. Nine scalar source-sign
 blocks give total order 33. All matrix coefficients are integers.
 
-Every represented source is quantum valid. Whether every valid canonical
-source belongs to this cone remains open.
+Every represented source is quantum valid. The cone is strictly smaller
+than the canonical valid-source cone: an exact all-positive counterexample
+and separating dual are given in [ramified-completion](../ramified-completion/).
 
 The auxiliaries satisfy |y_i| <= 16 sum(c), so the projected cone is closed.
 The source that excludes all global polynomial completions has the explicit

@@ -36,9 +36,20 @@ Its matrices are affine in all nine canonical source coefficients. The
 projected cone is closed, and an explicit rational witness certifies the
 source that defeats every global polynomial completion.
 
-Every source admitted by this pencil is valid. The remaining implication
-is whether every valid canonical source admits such a half-line completion.
-The exact arrays, rational witness and short proofs are together in
+The [exact separation and algebraic enlargement](extracted-lifts/canonical-completion/ramified-completion/Q222_Halfline_Order33_Counterexample.pdf)
+settle the half-line question: an all-positive rational valid source lies
+outside the order-33 cone. The matrix growth bound makes this an obstruction
+to polynomial half-line selectors of every degree. Adding the selector terms
+sqrt(v) and v^(3/2) certifies the excluded source. The resulting order-49
+cone has 148 auxiliaries and 40 fixed scalar functions on a compact
+algebraic cover. Universal coverage by this enlarged cone remains open.
+
+The [three-page assembly proof](extracted-lifts/canonical-completion/full-polar/Q222_Polar_Assembly.pdf)
+shows why that canonical question is decisive. Eight output relabellings
+give the full quantum polar, and combining them cannot repair a missing
+canonical certificate. A strictly feasible exact canonical pencil therefore
+gives the full eight-coordinate lift through eight adjoint copies.
+The exact coordinate maps, rational feasible points and matrix data are in
 [canonical-completion/](extracted-lifts/canonical-completion/).
 
 ## Other explicit results

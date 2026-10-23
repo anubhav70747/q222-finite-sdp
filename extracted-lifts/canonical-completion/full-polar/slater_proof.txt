@@ -1,0 +1,65 @@
+Rational strict feasible point of the canonical order-33 half-line pencil
+======================================================================
+
+Use source order (d,lambda,n,m,C,A,D,alpha,beta) and choose
+  c=(1/100,1,1,1,1,1,1,1,1),
+  J(v)=K(v)=[[4,4v],[4v,4+8v^2]],
+  BG=(1/100)[[-1,400,0,400],[-400,-1,0,0],
+             [0,400,-1,801],[0,0,1,-1]],
+  BH=(1/100)[[-1,-1,0,1],[-801,-1,401,0],
+             [0,1,-1,400],[401,0,-400,-1]].
+The evaluated compiler gives TG=TH=I4/50. All nine scalar source blocks
+are positive. The two eight-by-eight blocks are positive definite,
+as shown both by exact Sylvester minors and the following short bound.
+
+Put z=(a1,a2,b1,b2,va1,va2,vb1,vb2). At d=0, with all other source
+coefficients one and J=K, use the natural event-square Grams S_G^0,S_H^0.
+Each is four times the sum of outer products of these nine linear forms.
+The first six are common:
+  l1=va1-a2, l2=a2, l3=va2, l4=b1, l5=vb1, l6=b1+vb2.
+For G the remaining three are
+  l7=a1+b1+va2+vb2, l8=a2+b2, l9=va2+vb2.
+For H they are
+  l7=a1-b1, l8=va1-vb1, l9=va1-vb1-a2+b2.
+These are the roots of diag(P,N) plus the K(a+b) roots for G and the
+E(a-b) roots for H. They reproduce the full quadratic matrices exactly.
+
+For G, recover the eight coordinates as
+  z=(l7-l3-l6, l2, l4, l8-l2, l1+l2, l3, l5, l6-l4).
+Applying (sum_{i=1}^k t_i)^2<=k sum_i t_i^2 to each entry gives
+  ||z||^2 <= 5 sum_{i=1}^9 l_i^2,
+because the respective multiplicities are at most five. Thus S_G^0>=4I/5.
+For H the recovery is
+  z=(l7+l4, l2, l4, l9-l8+l2, l1+l2, l3, l5, l6-l4).
+The maximum multiplicity is six, giving S_H^0>=2I/3.
+
+The literal BG,BH above retain the skew parts of these natural Grams.
+They adjust their symmetric parts by (G1(d)-G1(0))/2-I/100 and
+(H1(d)-H1(0))/2-I/100, respectively. Their exact symmetric perturbation
+row norms, including the changes to the diagonal polynomial coefficients,
+are 1/25 for SG and 7/100 for SH. Hence
+  SG >= (4/5-1/25)I8 = 19I8/25,
+  SH >= (2/3-7/100)I8 = 179I8/300.
+For symmetric matrices the operator norm is bounded by the largest
+absolute row sum. This proves strict positivity with explicit margins.
+
+The naive symmetric choice B=G1/2-epsilon I discards these necessary skew
+parts and need not be positive. No existence or numerical optimization
+argument is needed for the repaired witness above.
+
+Reproduction
+------------
+Run `python slater_checker.py` (standard library only). It reads the actual
+order-33 full-symmetric COO file, substitutes the literal values, checks all
+thirteen blocks by exact rational Sylvester elimination, verifies the two
+perturbation row bounds, and writes slater_witness.json. All four Gram
+matrices, all source/auxiliary values, and every positive leading minor
+are retained. Optional `--pencil PATH` selects a copied order-33 data file.
+
+Scope
+-----
+This establishes Slater feasibility for the evaluated candidate cone only.
+It proves neither universal quadratic-selector adequacy nor equality with
+the full Q222 validity cone. Its strict feasible point licenses the usual
+conic dual representation of this particular source certificate cone
+without a closure caveat. Relabelled copies inherit strict feasibility.

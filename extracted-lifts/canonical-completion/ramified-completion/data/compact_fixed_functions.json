@@ -1,0 +1,152 @@
+{
+  "description": "Forty evaluated algebraic functions on one fixed compact cover; no source coordinates occur.",
+  "variables": [
+    "a0",
+    "a1",
+    "rho",
+    "tau",
+    "epsilon",
+    "kappa",
+    "W",
+    "X",
+    "Y",
+    "Z"
+  ],
+  "equations": [
+    "a0^2+a1^2=1",
+    "rho^2+tau^2=1",
+    "epsilon^2=1",
+    "kappa^2=tau^8+256*rho^8"
+  ],
+  "inequalities": [
+    "a0>=0",
+    "rho>=0",
+    "tau>=0",
+    "kappa>0"
+  ],
+  "state_domain": "All real W,X,Y,Z; one may restrict W^2+X^2+Y^2+Z^2=1 by homogeneity. Every sign is retained.",
+  "uniform_bounds": {
+    "kappa_squared": ">=1/8",
+    "absolute_value_of_each_feature_on_unit_states": "<3"
+  },
+  "finite_chart": {
+    "u": "a1/a0",
+    "v": "epsilon*16*(rho/tau)^4",
+    "s": "(rho/tau)^2"
+  },
+  "Bob_unit_angle": [
+    "tau^4/kappa",
+    "epsilon*16*rho^4/kappa"
+  ],
+  "physical_slack": "F_c^h=a0^2*b0^2*F_c(a1/a0,b1/b0;psi), interpreted by polynomial homogenization at endpoints.",
+  "represented_target": "a1^2*F_c^h",
+  "source_independent_multiplier": "a1^2",
+  "feature_blocks": [
+    {
+      "block": "A_G",
+      "size": 12,
+      "functions": [
+        "(tau^4)*(a0^2*a1*W+a0*a1^2*Y)/kappa",
+        "(tau^4)*(epsilon*(a0^2*a1*X+a0*a1^2*Z))/kappa",
+        "(tau^4)*(a1^3*W-a0*a1^2*Y)/kappa",
+        "(tau^4)*(epsilon*(a1^3*X-a0*a1^2*Z))/kappa",
+        "(rho^2*tau^2)*(a0^2*a1*W+a0*a1^2*Y)/kappa",
+        "(rho^2*tau^2)*(epsilon*(a0^2*a1*X+a0*a1^2*Z))/kappa",
+        "(rho^2*tau^2)*(a1^3*W-a0*a1^2*Y)/kappa",
+        "(rho^2*tau^2)*(epsilon*(a1^3*X-a0*a1^2*Z))/kappa",
+        "(rho^4)*(a0^2*a1*W+a0*a1^2*Y)/kappa",
+        "(rho^4)*(epsilon*(a0^2*a1*X+a0*a1^2*Z))/kappa",
+        "(rho^4)*(a1^3*W-a0*a1^2*Y)/kappa",
+        "(rho^4)*(epsilon*(a1^3*X-a0*a1^2*Z))/kappa"
+      ]
+    },
+    {
+      "block": "B_G",
+      "size": 8,
+      "functions": [
+        "(rho*tau^3)*(a0^2*a1*W+a0*a1^2*Y)/kappa",
+        "(rho*tau^3)*(epsilon*(a0^2*a1*X+a0*a1^2*Z))/kappa",
+        "(rho*tau^3)*(a1^3*W-a0*a1^2*Y)/kappa",
+        "(rho*tau^3)*(epsilon*(a1^3*X-a0*a1^2*Z))/kappa",
+        "(rho^3*tau)*(a0^2*a1*W+a0*a1^2*Y)/kappa",
+        "(rho^3*tau)*(epsilon*(a0^2*a1*X+a0*a1^2*Z))/kappa",
+        "(rho^3*tau)*(a1^3*W-a0*a1^2*Y)/kappa",
+        "(rho^3*tau)*(epsilon*(a1^3*X-a0*a1^2*Z))/kappa"
+      ]
+    },
+    {
+      "block": "A_H",
+      "size": 12,
+      "functions": [
+        "(tau^4)*(a0*a1^2*W+a1^3*Y)/kappa",
+        "(tau^4)*(epsilon*(a0*a1^2*X+a1^3*Z))/kappa",
+        "(tau^4)*(a0*a1^2*W-a0^2*a1*Y)/kappa",
+        "(tau^4)*(epsilon*(a0*a1^2*X-a0^2*a1*Z))/kappa",
+        "(rho^2*tau^2)*(a0*a1^2*W+a1^3*Y)/kappa",
+        "(rho^2*tau^2)*(epsilon*(a0*a1^2*X+a1^3*Z))/kappa",
+        "(rho^2*tau^2)*(a0*a1^2*W-a0^2*a1*Y)/kappa",
+        "(rho^2*tau^2)*(epsilon*(a0*a1^2*X-a0^2*a1*Z))/kappa",
+        "(rho^4)*(a0*a1^2*W+a1^3*Y)/kappa",
+        "(rho^4)*(epsilon*(a0*a1^2*X+a1^3*Z))/kappa",
+        "(rho^4)*(a0*a1^2*W-a0^2*a1*Y)/kappa",
+        "(rho^4)*(epsilon*(a0*a1^2*X-a0^2*a1*Z))/kappa"
+      ]
+    },
+    {
+      "block": "B_H",
+      "size": 8,
+      "functions": [
+        "(rho*tau^3)*(a0*a1^2*W+a1^3*Y)/kappa",
+        "(rho*tau^3)*(epsilon*(a0*a1^2*X+a1^3*Z))/kappa",
+        "(rho*tau^3)*(a0*a1^2*W-a0^2*a1*Y)/kappa",
+        "(rho*tau^3)*(epsilon*(a0*a1^2*X-a0^2*a1*Z))/kappa",
+        "(rho^3*tau)*(a0*a1^2*W+a1^3*Y)/kappa",
+        "(rho^3*tau)*(epsilon*(a0*a1^2*X+a1^3*Z))/kappa",
+        "(rho^3*tau)*(a0*a1^2*W-a0^2*a1*Y)/kappa",
+        "(rho^3*tau)*(epsilon*(a0*a1^2*X-a0^2*a1*Z))/kappa"
+      ]
+    }
+  ],
+  "Gram_product_equations": "linear_coefficient_equations.json",
+  "endpoint_values": {
+    "Bob_zero": {
+      "g": [
+        "1",
+        "0",
+        "0"
+      ],
+      "r": [
+        "0",
+        "0"
+      ]
+    },
+    "Bob_infinity": {
+      "g": [
+        "0",
+        "0",
+        "1/16"
+      ],
+      "r": [
+        "0",
+        "0"
+      ]
+    },
+    "Alice_zero": "Every feature equals zero; multiplier a1^2 is zero.",
+    "Alice_infinity": {
+      "P_G": [
+        "0",
+        "0",
+        "a1*W",
+        "a1*epsilon*X"
+      ],
+      "P_H": [
+        "a1*Y",
+        "a1*epsilon*Z",
+        "0",
+        "0"
+      ],
+      "a1": "either +1 or -1"
+    }
+  },
+  "scope": "The evaluated affine cone is a sufficient canonical certificate and strictly contains C33. Its equality with the full canonical valid cone remains unproved."
+}

@@ -171,10 +171,30 @@ for quadratic half-line selectors (order 33 including nine source signs),
 with 44 auxiliaries and integer coefficient arrays. Its projection is
 closed. The simple source excluding global polynomial selectors has an
 explicit rational half-line certificate, with full Gram and LDL data.
-Universal adequacy for all valid canonical sources remains unproved.
+The all-positive rational counterexample in
+`canonical-completion/ramified-completion/` proves that this cone is strictly
+smaller than the canonical valid-source cone.
 
 `canonical-completion/polynomial-obstruction/` proves that every fixed
 nonzero nonnegative separable polynomial multiplier fails for sufficiently
 small members of an explicit strictly valid source family. The full state
 pullback and exact determinant identity are provided. A square-root identity
 explains why this obstruction does not settle the half-line construction.
+
+## Algebraic completion and full-polar assembly
+
+`canonical-completion/ramified-completion/` gives an exact rational dual
+separating a valid source from the order-33 cone. A selector quartic in
+sqrt(v) repairs that source and has an evaluated order-49 pencil with
+148 auxiliaries. The complete compact testing cover has 40 scalar functions;
+all state signs and projective endpoints are retained. The literal dual,
+both repair certificates, complete affine matrices and standard-library
+replay scripts are included. This order-49 completion cone is distinct from
+the Laurent-coefficient cone. Its universal adequacy remains open.
+
+`canonical-completion/full-polar/` proves the exact eight-orientation
+assembly for any closed sound canonical cone containing the positive event
+terms. The assembled set is exact if and only if the canonical cone is exact.
+The source maps, rational adjoint kernel and strict feasible point are supplied.
+The order-33 specialization gives a strictly larger outer approximation of
+total order 264 with 384 auxiliaries.

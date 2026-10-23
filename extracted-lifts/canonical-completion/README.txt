@@ -18,18 +18,16 @@ Phi_c(u^2,v;a,b) is not a polynomial sum of squares.
 
 STATUS
 ------
-The new halfline/ directory gives the exact order-33 cone of quadratic
-half-line completions and a rational witness for the polynomial obstruction
-source. Its reverse inclusion for all valid canonical sources remains open.
-polynomial-obstruction/ proves that every fixed nonnegative separable
-polynomial multiplier fails on a strictly valid rational source family.
-
-No global affine lift is obtained. The order-8 data are POINTWISE pencils:
-the universal Bob quantifier has not been eliminated. The half-line cone
-eliminates that quantifier for quadratic selectors; its adequacy for all
-valid sources remains unresolved. The multiplier theorem excludes fixed
-nonnegative separable polynomial multipliers. A globally adequate algebraic
-testing family or another completion of the original slack remains possible.
+halfline/ gives the exact order-33 cone of quadratic half-line completions.
+ramified-completion/ proves that it excludes an all-positive valid source,
+with an exact separating dual. The degree bound excludes native-variable
+polynomial selectors of every degree. Allowing a selector quartic in sqrt(v)
+repairs that source and gives an order-49 affine cone with 148 auxiliaries.
+Its universal equality with the canonical valid-source cone remains open.
+polynomial-obstruction/ excludes every fixed nonnegative separable
+polynomial multiplier for a strictly valid rational source family.
+full-polar/ gives the three-page eight-orientation assembly: an exact
+canonical cone is necessary and sufficient for its full-set construction.
 
 CONTENTS
 --------
