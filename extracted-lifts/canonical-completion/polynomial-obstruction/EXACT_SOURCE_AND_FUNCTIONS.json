@@ -1,0 +1,192 @@
+{
+  "result": "No fixed nonzero globally nonnegative polynomial q(v) gives polynomial two-LMI completions for all valid canonical sources.",
+  "source_domain": "0 < T <= 1/100",
+  "source_coefficient_order": [
+    "d",
+    "lambda",
+    "n",
+    "m",
+    "C",
+    "A",
+    "D",
+    "alpha",
+    "beta"
+  ],
+  "source_family": {
+    "d": "2*T-4*T^3",
+    "lambda": "T^3",
+    "n": "1-T+T^3",
+    "m": "T^3",
+    "C": "(1-T)/2+T^3",
+    "A": "T^3",
+    "D": "1-T+T^3",
+    "alpha": "1-T+T^3",
+    "beta": "(1-T)/2+T^3"
+  },
+  "bell_operator": {
+    "source_parameters": {
+      "eta": "1-T",
+      "w": "4-2*T+4*T^3"
+    },
+    "canonical_slack": "w-(A0*B0-A0*B1+A1*B0+A1*B1+eta*(A1+B0))",
+    "standard_frame": "Swap Alice inputs; A0=B0=diag(1,-1), A1=c*Z+r*X, B1=e*Z+s*X.",
+    "relations": [
+      "c^2+r^2=1",
+      "e^2+s^2=1"
+    ],
+    "Omega": "1+c+e-c*e",
+    "H_matrix": [
+      [
+        "Omega+2*(1-T)",
+        "(1-c)*s",
+        "(1-e)*r",
+        "-r*s"
+      ],
+      [
+        "(1-c)*s",
+        "-Omega",
+        "-r*s",
+        "(e-1)*r"
+      ],
+      [
+        "(1-e)*r",
+        "-r*s",
+        "-Omega",
+        "(c-1)*s"
+      ],
+      [
+        "-r*s",
+        "(e-1)*r",
+        "(c-1)*s",
+        "Omega-2*(1-T)"
+      ]
+    ]
+  },
+  "critical_substitution": {
+    "T": "t^2",
+    "u": "-t*x",
+    "v": "t*y",
+    "W": "1+2/3*t^4*x^2*y^2",
+    "X": "-1/3*t^3*x^2*y",
+    "Y": "-t*x+2/3*t^3*x*y^2",
+    "Z": "-t^2*x*y-2/3*t^4*x^3*y"
+  },
+  "critical_slack_coefficient": "[t^6]F = 4/3*(x^4*y^2+x^2*y^4-3*x^2*y^2+3)",
+  "lower_coefficients": "[t^j]F=0 for 0<=j<6; only even t powers occur.",
+  "limiting_nonsos": "For first term q(v)=a*v^(2*k), a>0, t^(-8-2*k)*q(t*y)*(t*x)^2*(1+t^2*x^2)*F tends coefficientwise to 4*a/3*x^2*y^(2*k)*(M(x,y)+2).",
+  "halfline_identity": "M(x,s^2)=(x^2*s^2-1)^2+(x*s^2*(s^2-1))^2+2*(x*s*(s^2-1))^2",
+  "unresolved": "The half-line quadratic/algebraic selector may still be globally adequate; no global affine lift is asserted.",
+  "source_commit": "918523fc022bb7d1b0bf5304fcd485342528456f",
+  "stronger_result": "For each fixed pair of nonzero globally nonnegative polynomials p(u), q(v), p(u)*q(v)*F_c(T) is not polynomial SOS for every sufficiently small T>0 in the stated family.",
+  "quantifier_note": "The threshold delta_(p,q)>0 is proved to exist; no explicit bound for arbitrary p,q is evaluated. For each fixed t, x,y remain arbitrary independent testing variables.",
+  "critical_halfline_gram": {
+    "scope": "Only the critical polynomial M(x,y)+2 on y>=0; not the full canonical slack.",
+    "variables": [
+      "x",
+      "y"
+    ],
+    "domain": "x real, y>=0",
+    "features": [
+      "x^2*y-1",
+      "x*y*(y-1)",
+      "x*sqrt(y)*(y-1)",
+      "1"
+    ],
+    "dimension": 4,
+    "gram_matrix": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        2
+      ]
+    ],
+    "target": "x^4*y^2+x^2*y^4-3*x^2*y^2+3"
+  },
+  "halfline_selector": {
+    "scope": "Necessary form on C1; global adequacy remains unproved.",
+    "source_face": "lambda=n=0; all remaining source weights may vanish.",
+    "positive_domain": "v>=0",
+    "coefficient_order": [
+      "p1",
+      "p2",
+      "q2",
+      "r0",
+      "r1",
+      "r2",
+      "s1",
+      "s2"
+    ],
+    "J_plus": [
+      [
+        "p1*v+p2*v^2",
+        "q2*v^2"
+      ],
+      [
+        "r0+r1*v+r2*v^2",
+        "s1*v+s2*v^2"
+      ]
+    ],
+    "J_minus_on_v_le_0": [
+      [
+        "-p1*v+p2*v^2",
+        "-q2*v^2"
+      ],
+      [
+        "-r0+r1*v-r2*v^2",
+        "-s1*v+s2*v^2"
+      ]
+    ],
+    "reflection_matrix": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        -1
+      ]
+    ],
+    "global_functions": [
+      "abs(v)",
+      "v",
+      "v^2",
+      "v*abs(v)",
+      "sign(v)"
+    ],
+    "sign_at_zero": "Choose 0 by convex averaging of the two feasible endpoint values.",
+    "halfline_matrix_factor_functions": [
+      "1",
+      "v",
+      "sqrt(v)"
+    ]
+  },
+  "provenance": {
+    "critical_mechanism": "https://arxiv.org/abs/2607.14569v1",
+    "project": "https://github.com/anubhav70747/q222-finite-sdp/tree/918523fc022bb7d1b0bf5304fcd485342528456f",
+    "new_exact_content": [
+      "rational valid-source family and explicit domain",
+      "full polynomial state substitution and coefficients",
+      "fixed polynomial/separable multiplier obstruction",
+      "half-line form and explicit critical four-feature Gram"
+    ]
+  }
+}

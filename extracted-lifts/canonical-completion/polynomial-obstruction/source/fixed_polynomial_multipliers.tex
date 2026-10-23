@@ -1,0 +1,231 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,hyperref}
+\hypersetup{hidelinks,pdftitle={No fixed separable polynomial multiplier for canonical Bell slacks}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\R}{\mathbb R}
+\title{No fixed separable polynomial multiplier\\for canonical Bell slacks}
+\author{}\date{}
+\begin{document}
+\maketitle\vspace{-2em}
+
+A singular limit of doubly tilted CHSH produces the Motzkin
+polynomial~\cite{Chaturvedi}. We use an explicit strictly valid source
+family and a polynomial four-component state to exclude every fixed
+separable polynomial multiplier. The threshold obtained here is
+existential; the multiplier may be chosen arbitrarily before taking
+the limit.
+
+Put $D_u=1+u^2$, $D_v=1+v^2$, and let
+$\sigma_x=\left(\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\right)$,
+$\sigma_z=\operatorname{diag}(1,-1)$. On two qubits choose
+\[
+ A_0=\sigma_z\otimes I,\quad
+ A_1=\frac{(1-u^2)\sigma_z+2u\sigma_x}{D_u}\otimes I,
+ \qquad
+ B_0=I\otimes\sigma_z,\quad
+ B_1=I\otimes\frac{(1-v^2)\sigma_z+2v\sigma_x}{D_v}.
+\]
+For $0<T\le1/100$, set $\eta=1-T$, $w=4-2T+4T^3$, and define
+\begin{equation}
+ S=A_0B_0-A_0B_1+A_1B_0+A_1B_1,\qquad
+ F_T(u,v;\psi)=D_uD_v\,\psi^T
+       [wI-S-\eta(A_1+B_0)]\psi .                 \label{eq:parent}
+\end{equation}
+Here $\psi=(W,X,Y,Z)^T$ is an arbitrary unnormalised real state.
+Thus $F_T\in\R[u,v,W,X,Y,Z]$ is defined without denominators.
+In the canonical source convention of~\cite{Canonical}, its coefficients
+$c(T)=(d,\lambda,n,m,C,A,D,\alpha,\beta)$ are exactly
+\begin{equation}
+ d=2T-4T^3,\qquad \lambda=m=A=T^3,\qquad
+ n=D=\alpha=1-T+T^3,\qquad C=\beta=(1-T)/2+T^3.
+                                                        \label{eq:source}
+\end{equation}
+This follows by expanding
+$d=4-w$, $\lambda=m=A=(w-2-2\eta)/4$,
+$n=D=\alpha=(w-2+2\eta)/4$, and $C=\beta=(w-2)/4$.
+
+\begin{theorem}\label{thm:main}
+Every source \eqref{eq:source} is strictly valid for all states and
+all projective measurement angles, and all nine source coefficients
+are positive. For every fixed pair of nonzero polynomials
+$p\in\R[u]$, $q\in\R[v]$ nonnegative on the whole real line, there is
+$\delta_{p,q}>0$ such that
+\begin{equation}
+ p(u)q(v)F_T(u,v;W,X,Y,Z)
+ \quad\text{is not a polynomial sum of squares}
+ \qquad(0<T<\min\{\delta_{p,q},1/100\}).            \label{eq:main}
+\end{equation}
+In particular, the rational sources $T=1/n^2$ eventually exclude every
+prescribed pair $p,q$.
+\end{theorem}
+
+\begin{proof}
+\emph{Validity.}
+Swap Alice's inputs and rotate her first observable to $\sigma_z$.
+For real $c,r,e,s$ with $c^2+r^2=e^2+s^2=1$, the Bell operator becomes
+\begin{align*}
+ H_T={}&(1+c+e-ce)\,\sigma_z\otimes\sigma_z
+ +(1-c)s\,\sigma_z\otimes\sigma_x
+ +(1-e)r\,\sigma_x\otimes\sigma_z\\
+ &-rs\,\sigma_x\otimes\sigma_x
+ +(1-T)(\sigma_z\otimes I+I\otimes\sigma_z).
+\end{align*}
+Write $a=1-c$, $b=1-e$, so $a,b\in[0,2]$. Direct expansion gives
+\begin{align}
+ \det[(4-2T+\rho)I-H_T]
+ &=\rho P_T(\rho;a,b)+8abR_T(a,b),                 \label{eq:det}\\
+ P_T&=\rho^3+(16-8T)\rho^2+(84-88T+20T^2)\rho\notag\\
+ &\quad+144-240T+112T^2-16T^3+8ab(1-T)^2,\notag\\
+ R_T&=(3+2T-T^2)(a+b)-2ab-18T+12T^2-2T^3.\notag
+\end{align}
+At $\rho=4T^3$, $P_T\ge144-240T$. If $R_T\ge0$, the determinant
+is positive. Otherwise let $z=a+b$. Since $ab\le a+b$,
+$R_T\ge z-18T$ and hence $z<18T<2$. Now $2ab\le z^2/2\le z$
+gives $R_T\ge2z-18T$, so
+\[
+ 8abR_T\ge2z^2R_T\ge4z^3-36Tz^2\ge-432T^3;
+ \qquad
+ 4z^3-36Tz^2+432T^3=4(z-6T)^2(z+3T).
+\]
+Consequently
+$\det(wI-H_T)\ge(144-960T)T^3>0$ in this case also.
+At $c=e=1$, the four eigenvalues of $wI-H_T$ are
+\[
+ 4T^3,\quad6-2T+4T^3,\quad6-2T+4T^3,\quad4-4T+4T^3.
+\]
+They are positive. The angle torus is connected and the determinant
+never vanishes there, so its inertia is constant. This proves strict
+positivity for both independent sine signs, including commuting
+angles and projective endpoints. Real and imaginary state parts, and
+the standard two-observable qubit reduction, give validity on
+$Q_{222}$. Positivity of every coefficient in \eqref{eq:source} is literal.
+
+\emph{A polynomial full-state test.}
+Put $T=t^2$, $u=-tx$, $v=ty$ and take
+\begin{equation}
+ \psi_t(x,y)=
+ \begin{pmatrix}
+ 1+\frac23t^4x^2y^2\\
+ -\frac13t^3x^2y\\
+ -tx+\frac23t^3xy^2\\
+ -t^2xy-\frac23t^4x^3y
+ \end{pmatrix}.                                      \label{eq:state}
+\end{equation}
+The choice cancels the lower-order state contributions as follows.
+In the standard frame use half-angles $tx,ty$ and
+$\xi=(1,\mu t^3,\nu t^3,h t^2)^T$. The coefficient of $t^4$ in
+$\xi^T(wI-H_{t^2})\xi$ is $4(h+xy)^2$. At $h=-xy$, its coefficient
+of $t^6$ is
+\[
+ 6\left(\mu-\frac23x^2y\right)^2
+ +6\left(\nu-\frac23xy^2\right)^2
+ +\frac43\{M(x,y)+2\},\qquad
+ M=x^4y^2+x^2y^4-3x^2y^2+1.
+\]
+Choose the two displayed state amplitudes to cancel the first two squares.
+Multiplication by
+$\left(\begin{smallmatrix}1&-u\\u&1\end{smallmatrix}\right)\otimes I$
+then gives exactly \eqref{eq:state}. This polynomial rotation numerator
+and angle clearing multiply the expectation by $D_u^2D_v$, with constant
+term one. Direct polynomial expansion therefore gives
+\begin{equation}
+ F_{t^2}(-tx,ty;\psi_t)
+ =\frac43t^6\{M(x,y)+2\}+t^8R(t,x,y),
+ \qquad R\in\mathbb Q[t,x,y].                        \label{eq:pullback}
+\end{equation}
+Its total degree in $(x,y)$ is at most twelve.
+
+\emph{The fixed multiplier.}
+Write the first nonzero Taylor terms as
+$p(u)=a_0u^{2j}+O(u^{2j+1})$ and
+$q(v)=b_0v^{2k}+O(v^{2k+1})$. Global nonnegativity gives
+$a_0,b_0>0$. If the conclusion failed, there would be a sequence
+$t_i\downarrow0$ for which $pqF_{t_i^2}$ is SOS. Substitute
+\eqref{eq:state} and divide by $t_i^{6+2j+2k}>0$.
+The resulting SOS polynomials in the independent variables $x,y$
+have total degree at most $12+\deg p+\deg q$ and converge coefficientwise to
+\begin{equation}
+ \frac{4a_0b_0}{3}\,x^{2j}y^{2k}\{M(x,y)+2\}.          \label{eq:limit}
+\end{equation}
+The SOS cone of fixed degree is closed. Indeed, let $z(x,y)$ contain
+all monomials through the corresponding root degree. The matrix
+$B=\int_{[-1,1]^2}zz^T\,dx\,dy$ is positive definite.
+If $Q_i\succeq0$ represents the $i$th polynomial, coefficient
+convergence bounds its integral $\operatorname{Tr}(BQ_i)$ and hence
+$\operatorname{Tr}Q_i$. A convergent subsequence of Gram matrices
+then represents the limit by a positive semidefinite matrix.
+
+Thus \eqref{eq:limit} would be SOS. A square monomial can be cancelled
+from an SOS: evaluating a sum of squares at $x=0$ forces each root
+to be divisible by $x$, and repeated division removes $x^{2j}$;
+the same argument removes $y^{2k}$. After removing the positive scalar,
+$M+2$ would be SOS. Every root would have degree at most three.
+Since $M+2=3$ on either coordinate axis, each root is constant on
+both axes, hence has the form
+$a+bxy+cx^2y+dxy^2$. The coefficient of $x^2y^2$ in a sum of these
+squares is nonnegative, whereas it is $-3$ in $M+2$.
+This contradiction rules out every sequence approaching $T=0$ and
+proves the required sufficiently-small-$T$ statement.
+\end{proof}
+
+\begin{corollary}\label{cor:completion}
+No fixed nonzero polynomial $q\in\R[v]$ nonnegative on $\R$ permits
+the canonical two-LMI polynomial completion for every valid source.
+More precisely, for each such $q$, all sufficiently small sources
+\eqref{eq:source} admit no polynomial completion matrix.
+\end{corollary}
+\begin{proof}
+Use the canonical completion matrices $G_{q,Z}(v),H_{q,Z}(v)$
+of~\cite[Sections 1 and 4]{Canonical}: the prescribed source blocks
+are multiplied by $q$, and the off-diagonal completion is the
+polynomial matrix $Z$. Their exact splitting identity is
+\[
+ q\Phi_c(U,v;a,b)=
+ \binom a{Ub}^{\!T}G_{q,Z}(v)\binom a{Ub}
+ +U\binom ab^{\!T}H_{q,Z}(v)\binom ab.
+\]
+Here $\Phi_c$ is the canonical quadratic form in the transformed
+state coordinates $(a,b)$, and $\mathcal P_c$ below is its state matrix.
+If both univariate matrix polynomials were positive semidefinite
+on all of $\R$, polynomial matrix-SOS factorization~\cite[Theorem 1.2]{Zalar}
+would make $q\Phi_c(u^2,v;a,b)$ SOS. The exact polynomial inverse-numerator identity
+from~\cite[Section 1]{Canonical} is
+\[
+ (L(u)\psi)^T\mathcal P_c(u^2,v)(L(u)\psi)
+ =u^2(1+u^2)F_c(u,v;\psi),\qquad
+ L(u)=\begin{pmatrix}
+ u&0&u^2&0\\0&u&0&u^2\\u&0&-1&0\\0&u&0&-1
+ \end{pmatrix}.
+\]
+Substitution would therefore make $q(v)u^2(1+u^2)F_T$ SOS, contrary
+to Theorem~\ref{thm:main} with $p(u)=u^2(1+u^2)$.
+\end{proof}
+
+The obstruction concerns fixed separable polynomial multipliers;
+it does not address source-dependent or nonseparable multipliers.
+A square-root testing function already removes this particular limiting
+obstruction on a half-line: the exact identity
+\[
+ M(x,s^2)=(x^2s^2-1)^2
+ +\bigl(xs^2(s^2-1)\bigr)^2
+ +2\bigl(xs(s^2-1)\bigr)^2
+\]
+makes $M(x,s^2)+2$ SOS. This identity supplies no universal half-line
+completion or finite global semidefinite lift.
+
+\begin{thebibliography}{3}\small
+\bibitem{Chaturvedi} A.~Chaturvedi,
+\emph{No Finite NPA Level Characterizes the Complete Quantum Set
+in the Simplest Bell Scenario},
+\href{https://arxiv.org/abs/2607.14569}{arXiv:2607.14569v1} (2026),
+Sections S3 and S6--S7.
+\bibitem{Canonical} A.~Chaturvedi,
+\emph{Canonical Bell validity through two matrix inequalities},
+\href{https://github.com/anubhav70747/q222-finite-sdp/tree/main/extracted-lifts/canonical-completion}{q222-finite-sdp, canonical-completion note}.
+\bibitem{Zalar} A.~Zalar,
+\emph{Matrix Fej\'er--Riesz theorem with gaps},
+\href{https://arxiv.org/abs/1503.06034}{arXiv:1503.06034}, Theorem~1.2.
+\end{thebibliography}
+\end{document}

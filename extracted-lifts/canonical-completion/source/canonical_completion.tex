@@ -297,14 +297,19 @@ Fej\'er--Riesz and then a polynomial sum of squares through \eqref{split}.
 This proves the equivalence.
 \end{proof}
 
-\section{A fixed testing multiplier}
+\section{Polynomial multipliers and half-line completions}
 The endpoint constraint on $J_{12}$ distinguishes polynomials from algebraic
 functions. An odd algebraic function such as $v|v|$ can vanish quadratically
-at zero without vanishing identically. A fixed algebraic function space may
-therefore admit completions excluded by Theorem~\ref{thm:obstruction}.
+at zero without vanishing identically. This extra freedom suffices for the
+source in Theorem~\ref{thm:obstruction}: the
+\href{https://github.com/anubhav70747/q222-finite-sdp/tree/main/extracted-lifts/canonical-completion/halfline}{half-line construction}
+gives an explicit rational quadratic selector on $v\geq0$, extended to
+$v<0$ by reflection. Its four constant Gram blocks have orders $8,8,4,4$.
+Adding source nonnegativity gives an affine pencil of total order $33$,
+with $44$ auxiliaries. Its projection is closed.
 
-A second possibility is a fixed nonzero nonnegative polynomial $q(v)$.
-It would suffice to show that every valid source admits a polynomial
+A polynomial multiplier would instead require one fixed nonzero
+nonnegative $q(v)$ such that every valid source admits a polynomial
 $Z_c(v)$ satisfying
 \[
 \begin{pmatrix}q(P+K)&Z_c\\Z_c^T&q(N+K)\end{pmatrix}\PSD,\qquad
@@ -316,13 +321,19 @@ factorization would then give a fixed finite testing family for
 $q(v)u^2D_uF_c$, with coefficient equations affine in the source and Gram
 matrices. Since the multiplier is positive on a dense set, its certificate
 would also imply validity of $F_c$ at every angle by continuity.
-Theorem~\ref{thm:obstruction} excludes $q=1$ for this construction;
-existence of another fixed $q$, or of an adequate algebraic family, remains
-open. The exact statement proved here is \eqref{quantifiers}.
+The
+\href{https://github.com/anubhav70747/q222-finite-sdp/tree/main/extracted-lifts/canonical-completion/polynomial-obstruction}{fixed-multiplier theorem}
+rules this out for every such $q$. It supplies a strictly valid rational
+source family whose rescaled full-state slack tends to the Motzkin
+polynomial plus a constant. Every fixed separable polynomial multiplier
+leaves a square monomial in this limit, which can be cancelled from a
+hypothetical polynomial sum of squares to obtain a contradiction.
 
-The obstruction concerns $\Phi_c$ in its transformed state coordinates.
-An SOS for $u^2D_uF_c$ would acquire additional factors under
-\eqref{change}; their cancellation has not been established.
+A square-root factor on the half-line removes that limiting obstruction.
+The remaining question is whether every valid canonical source admits a
+quadratic half-line selector. The pointwise equivalence
+\eqref{quantifiers} and the explicit half-line cone express this question
+as a simultaneous matrix-completion problem.
 
 \begin{thebibliography}{1}
 \bibitem{Zalar} A. Zalar, \emph{Matrix Fej\'er--Riesz theorem with gaps},

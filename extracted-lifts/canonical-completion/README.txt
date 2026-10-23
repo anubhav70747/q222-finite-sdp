@@ -18,11 +18,18 @@ Phi_c(u^2,v;a,b) is not a polynomial sum of squares.
 
 STATUS
 ------
+The new halfline/ directory gives the exact order-33 cone of quadratic
+half-line completions and a rational witness for the polynomial obstruction
+source. Its reverse inclusion for all valid canonical sources remains open.
+polynomial-obstruction/ proves that every fixed nonnegative separable
+polynomial multiplier fails on a strictly valid rational source family.
+
 No global affine lift is obtained. The order-8 data are POINTWISE pencils:
-the universal Bob quantifier has not been eliminated. The obstruction does
-not exclude a fixed algebraic testing cover, an additional testing-only
-multiplier, or another completion of the original slack. It must not be
-read as a multiplier-removal theorem.
+the universal Bob quantifier has not been eliminated. The half-line cone
+eliminates that quantifier for quadratic selectors; its adequacy for all
+valid sources remains unresolved. The multiplier theorem excludes fixed
+nonnegative separable polynomial multipliers. A globally adequate algebraic
+testing family or another completion of the original slack remains possible.
 
 CONTENTS
 --------

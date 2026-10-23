@@ -162,3 +162,19 @@ The PDF derives the two-matrix characterization and the obstruction.
 nine for any full-set lift, with its exact Boolean checker. It excludes the
 historical three-block order-two input. The bound concerns total order,
 not the largest block in a product of PSD cones.
+
+
+## Half-line completion and polynomial obstruction
+
+`canonical-completion/halfline/` contains the exact order-24 Gram pencil
+for quadratic half-line selectors (order 33 including nine source signs),
+with 44 auxiliaries and integer coefficient arrays. Its projection is
+closed. The simple source excluding global polynomial selectors has an
+explicit rational half-line certificate, with full Gram and LDL data.
+Universal adequacy for all valid canonical sources remains unproved.
+
+`canonical-completion/polynomial-obstruction/` proves that every fixed
+nonzero nonnegative separable polynomial multiplier fails for sufficiently
+small members of an explicit strictly valid source family. The full state
+pullback and exact determinant identity are provided. A square-root identity
+explains why this obstruction does not settle the half-line construction.

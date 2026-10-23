@@ -1,0 +1,61 @@
+{
+  "exact_coefficient_reconstruction_checks": 318,
+  "method": "Every one of 53 coefficient-basis vectors at three rational testing values; determines all quadratic coefficients.",
+  "core_block_orders": [
+    8,
+    8,
+    4,
+    4
+  ],
+  "core_order": 24,
+  "canonical_block_orders": [
+    8,
+    8,
+    4,
+    4,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "canonical_order": 33,
+  "auxiliary_count": 44,
+  "source_count": 9,
+  "coefficient_equations_remaining": 0,
+  "core_full_symmetric_entries": 260,
+  "canonical_full_symmetric_entries": 269,
+  "zero_data_gives_zero_psd_pencil": true,
+  "trace_SG_source_coefficients": [
+    8,
+    16,
+    16,
+    8,
+    8,
+    0,
+    8,
+    0,
+    8
+  ],
+  "trace_SH_source_coefficients": [
+    8,
+    0,
+    0,
+    8,
+    8,
+    16,
+    8,
+    16,
+    8
+  ],
+  "S_gram_diagonals_source_only": true,
+  "middle_quadratic_coefficients_have_zero_diagonal": true,
+  "T_diagonals_equal_minus_twice_B_diagonals": true,
+  "feasible_auxiliary_supnorm_bound_constant": 16,
+  "bound_uses": "sum(c_i) for canonical orthant; sum(abs(c_i)) for unrestricted coefficient input",
+  "scope": "Exact half-line quadratic-selector cone only; no universal adequacy claim or solver run."
+}

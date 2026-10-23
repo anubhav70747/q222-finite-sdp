@@ -1,0 +1,250 @@
+\documentclass[11pt]{article}
+\usepackage[margin=21mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,hyperref}
+\hypersetup{hidelinks}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}[lemma]{Proposition}
+\newcommand{\diag}{\operatorname{diag}}
+\title{Half-line completion of the canonical Bell slack}
+\author{}\date{}
+\begin{document}\maketitle
+\vspace{-2em}
+
+A quadratic selector on each Bob half-line certifies a rational canonical
+source that no global polynomial selector can certify. The additional
+freedom has a simple Gram representation: a quadratic matrix positive on
+$v\ge0$ is a linear matrix square plus $v$ times a constant positive matrix.
+Applied to the canonical completion, this gives four constant positive
+semidefinite blocks and a closed source cone. We give the complete affine
+pencil and a rational certificate exhibiting the gain.
+
+\section{The canonical completion}
+
+Let $c=(d,\lambda,n,m,C,A,D,\alpha,\beta)\ge0$ and $D_v=1+v^2$.
+The canonical state change collects the source into four quadratic matrices:
+\begin{align*}
+ P(v)&=\begin{pmatrix}4mv^2&-4mv\\-4mv&4m+(4\beta+2d)D_v\end{pmatrix},&
+ N(v)&=\begin{pmatrix}4CD_v+4D+2d&(4D+2d)v\\(4D+2d)v&(4D+2d)v^2\end{pmatrix},\\
+ E(v)&=\begin{pmatrix}4AD_v+(4\alpha+2d)v^2&-(4\alpha+2d)v\\
+              -(4\alpha+2d)v&4\alpha-2dv^2\end{pmatrix},&
+ K(v)&=4\lambda\begin{pmatrix}1&v\\v&v^2\end{pmatrix}
+                  +4nD_v\begin{pmatrix}0&0\\0&1\end{pmatrix}.
+\end{align*}
+For $U=u^2$ and independent $a,b\in\mathbb R^2$, the reduced state form is
+\begin{equation}
+ \Phi_c=(1+U)a^TPa+U(1+U)b^TNb
+             +U(a-b)^TE(a-b)+(a+Ub)^TK(a+Ub).             \label{eq:normal}
+\end{equation}
+The substitution
+\[
+ W=a_1+Ub_1,\quad X=a_2+Ub_2,\quad
+ Y=u(a_1-b_1),\quad Z=u(a_2-b_2)
+\]
+gives the complete canonical parent $F_c=(1+u^2)\Phi_c$.
+It is invertible when $u\ne0$, with determinant $u^2(1+u^2)^2$.
+Thus positivity of this form covers all state directions; the finite
+axis follows by polynomial continuity. Homogenizing the parent to
+bidegree $(2,2)$ in the two projective angle pairs gives the infinite
+endpoints. Real state positivity also covers complex states by separating
+their real and imaginary parts.
+
+A real $2\times2$ selector $J$ gives the two completion matrices
+\begin{equation}
+ G_J=\begin{pmatrix}P+K&J\\J^T&N+K\end{pmatrix},\qquad
+ H_J=\begin{pmatrix}P+E&K-E-J\\K-E-J^T&N+E\end{pmatrix}.     \label{eq:GH}
+\end{equation}
+Their role is the exact cancellation
+\begin{equation}
+ \Phi_c=\binom a{Ub}^{\!T}G_J\binom a{Ub}
+                  +U\binom ab^{\!T}H_J\binom ab.           \label{eq:split}
+\end{equation}
+We seek $J_+(v)=J_0+vJ_1+v^2J_2$ making both matrices positive
+semidefinite for $v\ge0$. Their parity makes this sufficient for all Bob
+angles: with $T=\diag(1,-1)$, each of $P,N,E,K$ satisfies
+$M(-v)=TM(v)T$. For $v<0$ set $J_-(v)=TJ_+(-v)T$.
+Congruence by $\diag(T,T)$ then restores both inequalities on that half-line.
+At zero use $J_+(0)$; no continuity of the selector is needed.
+
+\section{Four constant Gram blocks}
+
+\begin{lemma}\label{lem:halfline}
+A real symmetric $4\times4$ quadratic $M(v)=M_0+vM_1+v^2M_2$
+is positive semidefinite on $v\ge0$ if and only if some unrestricted
+$4\times4$ matrix $B$ satisfies
+\[
+ S=\begin{pmatrix}M_0&B\\B^T&M_2\end{pmatrix}\succeq0,
+ \qquad T_M=M_1-B-B^T\succeq0.
+\]
+\end{lemma}
+\begin{proof}
+Sufficiency follows from $M(v)=[I\ vI]S[I\ vI]^T+vT_M$.
+For necessity, $M(t^2)$ is positive on the real line and has degree at
+most four. Matrix Fej\'er--Riesz gives polynomial factors of degree at most
+two, also for singular matrices. Taking real and imaginary parts and
+averaging under $t\mapsto-t$ gives
+\[
+ M(v)=(R_0+vR_2)^T(R_0+vR_2)+vR_1^TR_1.
+\]
+Take $S=[R_0\ R_2]^T[R_0\ R_2]$ and $T_M=R_1^TR_1$.
+The degree bounds are sharp: $vI$ requires the half-line term and $v^2I$
+requires a linear factor. No coefficient is divided out. The assertion
+transfers to real closed fields because its finite Gram formulation is
+first order. The real-line factorization used here is
+\cite[Theorem 1.2]{Zalar}.
+\end{proof}
+
+Write $G_j,H_j$ for the coefficients of $v^j$ in \eqref{eq:GH}, with
+$J=J_0+vJ_1+v^2J_2$. They are affine in $c$ and the selector entries.
+Introducing two unrestricted $4\times4$ matrices $B_G,B_H$ gives the pencil
+\begin{equation}
+\boxed{\begin{aligned}
+ S_G&=\begin{pmatrix}G_0&B_G\\B_G^T&G_2\end{pmatrix}\succeq0,&
+ S_H&=\begin{pmatrix}H_0&B_H\\B_H^T&H_2\end{pmatrix}\succeq0,\\
+ T_G&=G_1-B_G-B_G^T\succeq0,&
+ T_H&=H_1-B_H-B_H^T\succeq0.
+\end{aligned}}                                             \label{eq:pencil}
+\end{equation}
+Lemma~\ref{lem:halfline} proves both inclusions between this projection
+and the quadratic half-line selector cone. It also retains every singular
+case and every zero source face. There are $12+16+16=44$ auxiliary scalars
+and no remaining coefficient equations. The block orders $8,8,4,4$ total
+$24$; adding the nine scalar blocks $[c_i]$ gives total order $33$.
+
+There is an explicit strictly positive dual certificate. Set
+\[
+ W_S=\begin{pmatrix}I_4&I_4/2\\I_4/2&I_4\end{pmatrix},\qquad W_T=I_4/2.
+\]
+Every auxiliary coefficient cancels in the exact identity
+\begin{equation}
+ \langle W_S,S_G+S_H\rangle+\langle W_T,T_G+T_H\rangle
+      =16\sum_i c_i,                                      \label{eq:dual}
+\end{equation}
+where $\langle A,B\rangle=\operatorname{tr}(A^TB)$.
+Indeed the $B$ traces cancel, the middle coefficients $G_1,H_1$ have zero
+diagonal, and $\operatorname{tr}S_G+\operatorname{tr}S_H=16\sum c_i$.
+Both weights have minimum eigenvalue $1/2$, so feasibility implies
+\[
+ \operatorname{tr}S_G+\operatorname{tr}S_H+
+ \operatorname{tr}T_G+\operatorname{tr}T_H\le32\sum_i c_i.
+\]
+All $B_G,B_H,J_0,J_2$ entries are off-diagonal Gram entries.
+For a $J_1$ entry at distinct $G_1$ indices $r,t$, combining the local
+PSD entry bounds in $G_1=T_G+B_G+B_G^T$ gives
+$|(J_1)_{ij}|\le(\operatorname{tr}T_G+\operatorname{tr}S_G)/2$.
+Consequently every feasible auxiliary vector satisfies
+\begin{equation}
+ \|y\|_\infty\le16\sum_i c_i.                               \label{eq:bound}
+\end{equation}
+Bounded subsequences now prove the projection closed; replacing
+$\sum c_i$ by $\sum|c_i|$ covers unrestricted source inputs.
+The positive weights in \eqref{eq:dual} give strict feasibility of the
+dual auxiliary equations. Fixed-source feasibility cannot be weakly
+infeasible: an unbounded near-feasible sequence, normalized by its auxiliary
+norm, would give feasible source-zero data with a nonzero auxiliary vector,
+contradicting \eqref{eq:bound}; a bounded sequence gives a feasible limit.
+
+\clearpage
+\section{An exact source rescued by the half-line completion}
+
+Take
+\[
+ c_* =\left(359,0,0,\frac{75}{16},60,416,
+                   \frac{41}{2},\frac{831}{2},\frac{151}{2}\right).
+\]
+Dividing the source and every matrix below by $359$ gives $d=1$.
+An exact selector on $v\ge0$ is
+\begin{equation}
+ J_+(v)=\frac1{64}\begin{pmatrix}
+ 3043v-2109v^2&3875v^2\\
+ 1403+23874v+2306v^2&815v+43455v^2
+ \end{pmatrix}.                                           \label{eq:witnessJ}
+\end{equation}
+The two remaining auxiliary matrices are
+\begin{align}
+ B_G&=\frac1{256}\begin{pmatrix}
+ 0&0&0&0\\-4800&-48015&-27346&3260\\
+ 12172&186862&-21340&204800\\0&0&0&0
+ \end{pmatrix},                                           \label{eq:witnessBG}\\
+ B_H&=\frac1{18496}\begin{pmatrix}
+ -6910952&240550&5277344&1292578\\
+ -41117866&-4908665&35528504&2316913\\
+ 3043153&1489795&-7316324&276862\\
+ 36194938&-415582&-30578223&-3325523
+ \end{pmatrix}.                                           \label{eq:witnessBH}
+\end{align}
+Together with \eqref{eq:GH} and \eqref{eq:pencil}, these rational matrices
+specify the certificate completely. Their positive semidefiniteness is
+verified by the exact elimination in the appendix. Thus \eqref{eq:split}
+proves the full source valid for all states and all testing angles.
+
+The difference from a global polynomial completion is essential.
+If a polynomial $J(v)$ satisfies \eqref{eq:GH} on the real line, its entries
+have degree at most two: each squared entry is bounded by a product of
+two quadratic diagonal entries of $G_J$. Parity averaging makes its
+diagonal entries even and its off-diagonal entries odd. On the face
+$\lambda=n=0$, the zero diagonals of $G_J(0)$ and
+$|J_{12}(v)|^2\le4m(4D+2d)v^4$ then reduce it to
+\[
+ J(v)=\begin{pmatrix}pv^2&0\\rv&sv^2\end{pmatrix}.
+\]
+For this source the exact contact is
+$U=1/4$, $v=2$, $a=(17,2)^T$, $b=(12,-18)^T$.
+The nonnegative terms in \eqref{eq:split} vanish there, forcing
+$J(2)b=-4P(2)a$ and $J(2)^Ta=-N(2)b/4$.
+These equations uniquely give $(p,r,s)=(-100,2000,1200)$.
+At $v=1$ their $G_J$ principal submatrix on $(a_2,b_1,b_2)$ is
+\[
+ \begin{pmatrix}8235/4&2000&1200\\2000&1280&800\\1200&800&800\end{pmatrix},
+ \qquad \det=-412640000<0.
+\]
+Consequently no global polynomial selector works for this source.
+The reflected selector \eqref{eq:witnessJ} instead contains $|v|$ and
+$v|v|$: its upper entries are
+$(3043|v|-2109v^2)/64$ and $3875v|v|/64$; for $v\ne0$ the lower-left
+entry also contains $1403\operatorname{sign}(v)/64$.
+
+The result is an exact closed affine cone of quadratic half-line selectors,
+strictly more effective than global polynomial selectors on this example.
+Whether it contains every valid canonical source remains unresolved;
+the order-$33$ pencil is therefore an inner certificate cone, not an
+established affine representation of the full quantum set.
+
+\clearpage
+\appendix
+\section{Exact positivity of the rational Gram matrices}
+
+For the source above, $K=0$ and the three nonzero source matrices are
+\begin{gather*}
+ P=\begin{pmatrix}75v^2/4&-75v/4\\-75v/4&4155/4+1020v^2\end{pmatrix},\\
+ N=\begin{pmatrix}1040+240v^2&800v\\800v&800v^2\end{pmatrix},\qquad
+ E=\begin{pmatrix}1664+4044v^2&-2380v\\-2380v&1662-718v^2\end{pmatrix}.
+\end{gather*}
+Use \eqref{eq:pencil} with \eqref{eq:witnessJ}--\eqref{eq:witnessBH}.
+Unpivoted symmetric elimination gives $M=LDL^T$ with unit diagonal in $L$.
+At a positive residual pivot $d_i$, set $L_{ji}=R_{ji}/d_i$ and update
+$R_{jk}\leftarrow R_{jk}-R_{ji}R_{ik}/d_i$ for $j,k>i$.
+At every zero pivot the remaining row vanishes exactly, so it is left
+unchanged. The following table lists all zero positions (numbered from one)
+and the floors of the positive rational pivots, in order. Every positive
+pivot lies in $[k,k+1)$ for its printed integer $k$.
+\[
+\begin{array}{c|c|l|c}
+ M&\text{zero positions}&\text{floors of positive pivots}&\operatorname{rank}M\\\hline
+ S_G&1,4,8&1038,\ 1039,\ 16,\ 382,\ 162&5\\
+ S_H&8&1664,\ 2700,\ 1039,\ 639,\ 1562,\ 214,\ 67&7\\
+ T_G&1,3,4&375&1\\
+ T_H&4&747,\ 483,\ 430&3
+\end{array}
+\]
+For example,
+$T_G=(5335/128)(0,3,-2,0)^T(0,3,-2,0)$.
+The printed rational inputs and this recurrence give a pen-and-paper
+positivity test including all singular directions. The accompanying exact
+witness file also supplies every entry of $L,D$; the rational checker
+recomputes them from these inputs and verifies $M=LDL^T$.
+
+\begin{thebibliography}{1}
+\bibitem{Zalar} A. Zalar, \emph{Matrix Fej\'er--Riesz theorem with gaps},
+Theorem 1.2, \href{https://arxiv.org/abs/1503.06034}{arXiv:1503.06034}.
+\end{thebibliography}
+\end{document}
