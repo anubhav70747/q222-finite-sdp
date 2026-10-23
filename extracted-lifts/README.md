@@ -140,3 +140,25 @@ certificates for every Alice angle and `|w|<=2^-36`. The directory README
 gives the exact domains, matrix-entry convention and reproduction commands.
 Both pencils act on seven Bell-source coordinates. The full quantum-set
 pencil still requires the other source and Bob-angle regions.
+
+`canonical-completion/` eliminates the Alice angle exactly. For every fixed
+Bob angle, the resulting canonical validity condition is equivalent to two
+four-by-four PSD inequalities with four free completion entries. The exported
+integer arrays retain all nine source coefficients. The angle quantifier
+remains: these are pointwise matrices. A rational valid source rules out
+every globally polynomial completion in this form. Run from that directory:
+
+```text
+python check_selector_certificate.py
+python check_source_validity.py
+python check_simple_source.py
+python check_alice_quadratic_reduction.py
+```
+
+The first two checks use exact standard-library fractions; the last two use SymPy.
+The PDF derives the two-matrix characterization and the obstruction.
+
+`size-bound/` gives a probability-face chain proving total PSD order at least
+nine for any full-set lift, with its exact Boolean checker. It excludes the
+historical three-block order-two input. The bound concerns total order,
+not the largest block in a product of PSD cones.

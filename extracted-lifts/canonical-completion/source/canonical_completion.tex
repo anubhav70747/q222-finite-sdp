@@ -1,0 +1,332 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,hyperref}
+\hypersetup{hidelinks,pdftitle={Q222: exact canonical completion and polynomial-selector obstruction}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\PSD}{\succeq0}
+\newcommand{\R}{\mathbb R}
+\title{Canonical Bell validity through two matrix inequalities}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\vspace{-2em}
+\begin{abstract}
+A Bell inequality must hold for every state and both measurement angles.
+For the canonical $Q_{222}$ slack, a polynomial change of state coordinates
+eliminates one angle: validity is equivalent to two $4\times4$ matrix
+inequalities with a $2\times2$ completion depending on the remaining angle.
+The equivalence includes zero source weights and projective endpoints.
+We then give a rational valid inequality for which no polynomial completion
+exists. A contact fixes its three possible polynomial parameters, and a
+two-coordinate quadratic test excludes them. A fixed algebraic completion or a
+common testing multiplier would be needed to obtain a finite global
+certificate by this construction.
+\end{abstract}
+
+\section{Eliminating one measurement angle}
+Let $c=(d,\lambda,n,m,C,A,D,\alpha,\beta)\geq0$ and put
+$D_u=1+u^2$, $D_v=1+v^2$.  The established complete canonical parent is
+\begin{align}
+F_c={}&4\lambda D_u(W+vX)^2+4nD_uD_vX^2
+ +4m(vW-X+uvY-uZ)^2\notag\\
+&+4CD_v(uW-Y)^2+4AD_uD_vY^2
+ +(4D+2d)(uW+uvX-Y-vZ)^2\notag\\
+&+(4\alpha+2d)D_u(vY-Z)^2
+ +(4\beta+2d)D_v(X+uZ)^2-2dD_uD_vZ^2.\label{parent}
+\end{align}
+Define the symmetric
+$2\times2$ matrices
+\begin{align}
+P(v)&=\begin{pmatrix}
+4mv^2&-4mv\\-4mv&4m+(4\beta+2d)D_v
+\end{pmatrix},\notag\\
+N(v)&=\begin{pmatrix}
+4CD_v+4D+2d&(4D+2d)v\\(4D+2d)v&(4D+2d)v^2
+\end{pmatrix},\label{blocks}\\
+E(v)&=\begin{pmatrix}
+4AD_v+(4\alpha+2d)v^2&-(4\alpha+2d)v\\
+-(4\alpha+2d)v&4\alpha-2dv^2
+\end{pmatrix},\notag\\
+K(v)&=4\lambda\begin{pmatrix}1&v\\v&v^2\end{pmatrix}
+       +4nD_v\begin{pmatrix}0&0\\0&1\end{pmatrix}.\notag
+\end{align}
+All entries are affine in $c$ and quadratic in the testing variable $v$.
+For $a=(S,T)^T$, $b=(P_0,Q_0)^T$, and $U=u^2$, make the polynomial change
+\begin{equation}
+W=S+UP_0,\quad X=T+UQ_0,\quad
+Y=u(S-P_0),\quad Z=u(T-Q_0).\label{change}
+\end{equation}
+The state coordinates $P_0,Q_0$ are unrelated to the matrix $P(v)$.
+Direct substitution gives the exact identity
+\begin{equation}
+F_c=D_u\Phi_c(U,v;a,b),\qquad
+\boxed{\begin{aligned}
+\Phi_c={}&(1+U)a^TPa+U(1+U)b^TNb\\
+ &+U(a-b)^TE(a-b)+(a+Ub)^TK(a+Ub).
+\end{aligned}}\label{normal}
+\end{equation}
+For example, the $m,C,D,\alpha,\beta$ event roots in \eqref{parent}
+become respectively
+$D_u(vS-T)$, $uD_uP_0$, $uD_u(P_0+vQ_0)$,
+$u\{v(S-P_0)-(T-Q_0)\}$, and $D_uT$.
+These substitutions prove \eqref{normal} without a source-dependent inverse.
+
+Write $\psi=(W,X,Y,Z)^T$ and let $\mathcal P_c(U,v)$
+be the symmetric matrix of $\Phi_c$ in $(a,b)$. Its three coefficients are
+\begin{equation}
+\mathcal P_c=
+\begin{pmatrix}P+K&0\\0&0\end{pmatrix}
++U\begin{pmatrix}P+E&K-E\\K-E&N+E\end{pmatrix}
++U^2\begin{pmatrix}0&0\\0&N+K\end{pmatrix}.\label{quadratic}
+\end{equation}
+The change matrix has determinant $u^2D_u^2$.  Its polynomial inverse
+numerator is
+\begin{equation}
+L(u)=\begin{pmatrix}
+u&0&u^2&0\\0&u&0&u^2\\u&0&-1&0\\0&u&0&-1
+\end{pmatrix},\qquad
+\boxed{u^2D_uF_c(\psi)=(L(u)\psi)^T
+\mathcal P_c(u^2,v)(L(u)\psi).}\label{multiplier}
+\end{equation}
+To turn \eqref{multiplier} into squares, we first factor its quadratic dependence
+on $U$.
+
+\section{A pointwise matrix completion}
+\begin{theorem}\label{thm:selector}
+For any fixed real source $c$ and fixed real Bob test $v$, the following are
+equivalent:
+\begin{enumerate}
+\item $\mathcal P_c(U,v)\PSD$ for every $U\geq0$.
+\item There exists a real $2\times2$ matrix $J$ such that
+\begin{equation}
+\boxed{\mathcal G_J=
+\begin{pmatrix}P+K&J\\J^T&N+K\end{pmatrix}\PSD,
+\qquad
+\mathcal H_J=
+\begin{pmatrix}P+E&K-E-J\\K-E-J^T&N+E\end{pmatrix}\PSD.}\label{lmis}
+\end{equation}
+\end{enumerate}
+The equivalence also holds over every real closed field.  In particular,
+complete canonical validity is exactly
+\begin{equation}
+\boxed{\forall v\in\R\ \exists J\in\R^{2\times2}:
+\mathcal G_J(v)\PSD,\quad\mathcal H_J(v)\PSD.}\label{quantifiers}
+\end{equation}
+All source faces, including $d=0$ and arbitrary zero event weights, are retained.
+\end{theorem}
+\begin{proof}
+The reverse implication is the explicit identity
+\begin{equation}
+\Phi_c=
+\binom a{Ub}^{\!T}\mathcal G_J\binom a{Ub}
++U\binom ab^{\!T}\mathcal H_J\binom ab.\label{split}
+\end{equation}
+For the forward implication, $\mathcal P_c(t^2,v)$ is a positive semidefinite
+univariate matrix polynomial of degree at most four.  The real-line matrix
+Fej\'er--Riesz theorem gives a polynomial matrix factor of degree at most two;
+real and imaginary parts give a real sum of matrix squares
+\cite[Theorem 1.2]{Zalar}. Averaging its values at $t$ and $-t$ separates even
+and odd powers. Consequently
+\[
+\mathcal P_c(U,v)=(B_0+UB_2)^T(B_0+UB_2)+UB_1^TB_1
+\]
+for rectangular real matrices $B_0,B_1,B_2$.
+The constant coefficient in \eqref{quadratic} has its last two rows and columns
+zero, so $B_0=[R\ \ 0]$.  The coefficient of $U^2$ has its first two rows and
+columns zero, so $B_2=[0\ \ T]$.  This uses only the elementary fact that a
+zero diagonal entry of a positive semidefinite Gram matrix forces its entire
+row and column to vanish.  Setting $J=R^TT$ gives
+$\mathcal G_J=[R\ T]^T[R\ T]$ and
+$\mathcal H_J=B_1^TB_1$, proving \eqref{lmis}.
+
+This is a fixed finite-dimensional first-order assertion in the real closed
+field language: positivity is expressed by principal minors, and the
+half-line condition by quantification over $U$ and a four-vector.  Transfer
+therefore proves precisely the same assertion over every real closed field.
+
+For $u\ne0$, \eqref{change} is invertible and so positivity of $F_c$ is equivalent
+to positivity of $\mathcal P_c(u^2,v)$.  The excluded value $u=0$ is recovered
+by polynomial continuity; all $U>0$ are attained.  More explicitly,
+\eqref{parent} has bidegree at most $(2,2)$ in $(u,v)$, so
+\[
+F_c^{\mathrm h}(r,s;\psi)
+=r_0^2s_0^2F_c(r_1/r_0,s_1/s_0;\psi)
+\]
+is polynomial in the homogeneous angle pairs $r=(r_0,r_1)$ and
+$s=(s_0,s_1)$.  On their unit circles it equals the normalization
+$F_c/(D_uD_v)$.  Continuity recovers the Alice and Bob projective endpoints.
+Over a real closed field the same endpoint statement follows by the sign of
+the first nonzero coefficient in the corresponding local polynomial chart.
+No source coefficient was divided out.
+\end{proof}
+
+There is also an elementary check on the face $d=0$: then $E\PSD$, and
+$J=K$ makes both matrices in \eqref{lmis} sums of the positive diagonal blocks
+$P,N$ and a square block built from $K$ or $E$. More generally adding a
+nonnegative event source with $d=0$ preserves any certificate by adding its
+$K$ to $J$.  The unresolved completion is therefore associated with the signed
+core, not with adding positive events.
+
+The remaining angle enters the completion through $J(v)$. A finite global
+certificate would require these matrices to lie in one fixed function space.
+Pointwise transfer permits algebraic dependence on both the source and the
+angle; it supplies no such space in the tensor product of their independent
+fields. We therefore examine the simplest possibility, polynomial $J(v)$.
+
+\section{Why polynomial completions do not suffice}
+\begin{proposition}\label{prop:degree}
+If polynomial entries $J(v)$ satisfy \eqref{lmis} for every real $v$, they have
+degree at most two.  A selector can then be chosen of the form
+\[
+J(v)=\begin{pmatrix}p_0+p_2v^2&q_1v\\r_1v&s_0+s_2v^2\end{pmatrix}.
+\]
+On the entire C1 face $\lambda=n=0$, existence of any polynomial selector is
+equivalent to existence of one with just three scalar parameters:
+\begin{equation}
+\boxed{J(v)=\begin{pmatrix}pv^2&0\\rv&sv^2\end{pmatrix}.}\label{three}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Every $2\times2$ principal minor of $\mathcal G_J$ gives
+$|J_{ij}(v)|^2\leq(P+K)_{ii}(N+K)_{jj}$.  The right side has degree at most
+four, proving the degree bound, including cases where it is identically zero.
+With $T=\operatorname{diag}(1,-1)$, each matrix in \eqref{blocks} obeys
+$M(-v)=TM(v)T$.  Replace $J(v)$ by
+$\tfrac12\{J(v)+TJ(-v)T\}$; convexity of the positive semidefinite cone retains
+both inequalities and gives the displayed parity.
+
+On C1, $P(0)=\operatorname{diag}(0,4m+4\beta+2d)$ and
+$N(0)=\operatorname{diag}(4C+4D+2d,0)$.  Zero diagonal entries in
+$\mathcal G_J(0)$ force $p_0=s_0=0$. Finally
+\[
+q_1^2v^2=|J_{12}(v)|^2\leq4m(4D+2d)v^4
+\]
+for every $v$, so $q_1=0$. This proof does not assume any of the source weights
+is positive.
+\end{proof}
+
+A small rational example already excludes polynomial completions. Set
+$\lambda=n=0$ and
+\[
+ (d,m,C,A,D,\alpha,\beta)
+ =\left(359,\frac{75}{16},60,416,\frac{41}{2},
+                       \frac{831}{2},\frac{151}{2}\right).
+\]
+Let $P_*(u,v)$ be the four-dimensional state matrix of \eqref{parent}
+at this source. Its validity follows from four elementary AM--GM
+inequalities. Put $\xi=4u^2$, $\eta=v^2/4$, and
+\begin{align*}
+ M(\xi,\eta)={}&3757645(\xi+\xi^{-1}-2)
+       +14022297(\eta+\eta^{-1}-2)\\
+ &+3732435(\eta/\xi+\xi+\eta^{-1}-3)\\
+ &+8179670(\xi\eta+\xi^{-1}+\eta^{-1}-3).
+\end{align*}
+Each bracket is nonnegative for $\xi,\eta>0$: its positive terms have
+product one. Direct expansion gives
+\begin{equation}
+ \det P_*(u,v)=28800D_u^2D_v^2u^2v^2M(\xi,\eta).
+ \label{valid-det}
+\end{equation}
+The $Z=0$ principal block $B_*$ is strictly positive when $u\ne0$.
+Indeed, the positive $m,C,A$ terms of \eqref{parent} give
+\[
+ B_*\succeq T^T\operatorname{diag}(4m,4CD_v,4AD_uD_v)T,
+ \qquad
+ T=\begin{pmatrix}v&-1&uv\\u&0&-1\\0&0&1\end{pmatrix},
+ \quad \det T=u.
+\]
+All remaining terms on $Z=0$ are nonnegative. The scalar Schur complement
+therefore proves $P_*\succeq0$ for $uv\ne0$ from \eqref{valid-det}.
+Polynomial continuity supplies the finite axes, and the homogeneous
+angle charts supply the projective endpoints. Separating real and imaginary
+parts covers complex states as well.
+
+The contact has $u_*=1/2$, $v_*=2$ and
+$\psi_*=(2,-1/4,1/4,1)^T$. Under \eqref{change} it becomes
+\begin{equation}
+ U_*=\frac14,\qquad
+ a_*=\binom{17/10}{1/5},\qquad
+ b_*=\binom{6/5}{-9/5}.
+ \label{contact}
+\end{equation}
+Substitution verifies the full state equation
+$\mathcal P_c(U_*,v_*)(a_*,b_*)^T=0$.
+
+\begin{theorem}\label{thm:obstruction}
+This valid source has no polynomial selector satisfying \eqref{lmis} for all
+$v$. Equivalently, its polynomial $\Phi_c(u^2,v;a,b)$ is not a sum of polynomial
+squares in $(u,v,a,b)$.
+\end{theorem}
+\begin{proof}
+By Proposition~\ref{prop:degree}, a polynomial selector would have the form
+\eqref{three}. At the contact, both nonnegative terms in \eqref{split} vanish.
+Therefore
+\begin{equation}
+J(v_*)b_*=-P(v_*)a_*/U_*,\qquad
+J(v_*)^Ta_*=-U_*N(v_*)b_*.\label{kernel}
+\end{equation}
+The first coordinate of the first equation fixes $p$, and the second
+coordinate of the second fixes $s$. Either remaining coordinate then gives
+$r$. With \eqref{contact}, the unique solution is
+\begin{equation}
+ p=-100,\qquad r=2000,\qquad s=1200.
+ \label{forced}
+\end{equation}
+At $v=1$, the principal submatrix of $\mathcal G_J$ on
+$(a_2,b_1)$ would consequently be
+\[
+ \begin{pmatrix}
+ 8235/4&2000\\
+ 2000&1280
+ \end{pmatrix}.
+\]
+Its quadratic value on $(1,-1)$ is $-2645/4$, contradicting
+$\mathcal G_J(1)\PSD$.
+
+Finally, a polynomial sum of squares for $\Phi_c(u^2,v;a,b)$ can use roots
+of degree at most two in $u$, at most one in $v$, and homogeneous linear
+degree in the four state coordinates: higher terms cannot cancel in a sum
+of real squares. Averaging in $u\mapsto-u$ and using the constant and leading
+state supports exactly as in Theorem~\ref{thm:selector} would produce a
+polynomial selector. Conversely a polynomial selector gives polynomial
+matrix factorizations of its two positive univariate matrices by
+Fej\'er--Riesz and then a polynomial sum of squares through \eqref{split}.
+This proves the equivalence.
+\end{proof}
+
+\section{A fixed testing multiplier}
+The endpoint constraint on $J_{12}$ distinguishes polynomials from algebraic
+functions. An odd algebraic function such as $v|v|$ can vanish quadratically
+at zero without vanishing identically. A fixed algebraic function space may
+therefore admit completions excluded by Theorem~\ref{thm:obstruction}.
+
+A second possibility is a fixed nonzero nonnegative polynomial $q(v)$.
+It would suffice to show that every valid source admits a polynomial
+$Z_c(v)$ satisfying
+\[
+\begin{pmatrix}q(P+K)&Z_c\\Z_c^T&q(N+K)\end{pmatrix}\PSD,\qquad
+\begin{pmatrix}q(P+E)&q(K-E)-Z_c\\q(K-E)-Z_c^T&q(N+E)\end{pmatrix}\PSD
+\quad(v\in\R).
+\]
+The first inequality forces $\deg Z_c\leq\deg q+2$. Univariate matrix
+factorization would then give a fixed finite testing family for
+$q(v)u^2D_uF_c$, with coefficient equations affine in the source and Gram
+matrices. Since the multiplier is positive on a dense set, its certificate
+would also imply validity of $F_c$ at every angle by continuity.
+Theorem~\ref{thm:obstruction} excludes $q=1$ for this construction;
+existence of another fixed $q$, or of an adequate algebraic family, remains
+open. The exact statement proved here is \eqref{quantifiers}.
+
+The obstruction concerns $\Phi_c$ in its transformed state coordinates.
+An SOS for $u^2D_uF_c$ would acquire additional factors under
+\eqref{change}; their cancellation has not been established.
+
+\begin{thebibliography}{1}
+\bibitem{Zalar} A. Zalar, \emph{Matrix Fej\'er--Riesz theorem with gaps},
+Theorem 1.2, \href{https://arxiv.org/abs/1503.06034}{arXiv:1503.06034};
+\href{https://zalara.github.io/Papers/MatrixFejerRieszArxivOriginal.pdf}{author's full text}.
+\end{thebibliography}
+\end{document}

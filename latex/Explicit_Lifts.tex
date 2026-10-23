@@ -561,43 +561,131 @@ This proves the forward inclusion subject to
 universal adequacy theorem for this particular fixed 160-block space;
 neither the Dirac witnesses nor exact elimination supplies it.
 
-\section{The effective construction that remains unevaluated}
+\section{Size bounds and exact algebraic search}
+\label{sec:size-search}
 
-There is a precise finite search, conditional only on the independently
-established qualitative existence theorem. The full quantum set has a
-rational first-order membership formula using nine real two-qubit atoms:
-each atom has a unit real four-state vector and two unit measurement
-circles, and its eight outputs are Pauli expectation polynomials. Nine
-convex weights suffice by Carath\'eodory in $\R^8$. This gives 81
-existential variables, 36 equations, nine inequalities and degree at most
-five, covering complex mixed models by realification and direct sums.
+The full quantum set has a rational first-order membership formula
+$\operatorname{Phys}(q)$ using nine real two-qubit atoms: each atom has
+a unit real four-state vector and two unit measurement circles, and its
+eight outputs are Pauli expectation polynomials. Nine convex weights
+suffice by Carath\'eodory in $\R^8$. Realification and direct sums cover
+complex mixed models. The compact atom domain and weight simplex give
+compactness of $\Q$. The formula uses 81 existential variables, 36
+equations, nine inequalities and degree at most five.
 
-For a proposed single PSD order $N$, set $D=N(N+1)/2$. Any auxiliary
-matrix span compresses to at most $D$ variables. Let $c$ contain all
-unknown entries of $A_0,A_1,\ldots,A_8,B_1,\ldots,B_D$. The sentence
+We first exclude small pencils and remove redundant auxiliary variables.
+The order below is that of a single PSD cone; a product of blocks embeds
+into a block-diagonal cone whose order is the sum of the block orders.
+
+\begin{proposition}\label{prop:size-bound}
+Every affine semidefinite lift of $\Q$ through $\operatorname{Sym}_N^+$
+has $N\geq9$. A pencil of that order needs at most $D-9$ auxiliary
+directions, where $D=N(N+1)/2$.
+\end{proposition}
+\begin{proof}
+For output bits $a,b\in\{0,1\}$, the sixteen affine functionals
 \[
- \exists c\ \forall q\quad
- [\operatorname{Phys}(q)\ \longleftrightarrow\
-       \exists y\in\R^D:L_c(q,y)\succeq0]
+ p(a,b|x,y)=\tfrac14\bigl(1+(-1)^a a_x+(-1)^b b_y
+                                  +(-1)^{a+b}E_{xy}\bigr)
 \]
-is a rational first-order sentence, with PSD replaced by all principal
-minors. Quantifier elimination decides it. If true over $\R$, it is true
-over the real algebraic numbers, so exact algebraic coefficient witnesses
-can be extracted with real-root selection data. Enumerating $N=1,2,\ldots$
-terminates if some finite lift exists. This is an effective procedure;
-it supplies no evaluated order, coefficient tuple or useful running-time
-bound until executed.
+are nonnegative on $\Q$. Write a deterministic assignment as the four
+bits $(r_0,r_1,s_0,s_1)$; its event probability is one exactly when
+$r_x=a$ and $s_y=b$. Starting with $F_0=\Q$, successively impose the
+zero probabilities in the table. Each witness obeys all preceding zero
+conditions and has the newly listed probability equal to one.
+\begin{center}
+\begin{tabular}{clcc}
+\toprule
+$k$&added condition&removed witness&remaining deterministic vertices\\
+\midrule
+1&$p(1,0|0,0)=0$&1000&12\\
+2&$p(0,1|0,0)=0$&0010&8\\
+3&$p(1,1|0,1)=0$&1011&6\\
+4&$p(1,1|1,0)=0$&1110&5\\
+5&$p(1,1|0,0)=0$&1010&4\\
+6&$p(1,1|1,1)=0$&0101&3\\
+7&$p(0,1|0,1)=0$&0001&2\\
+8&$p(1,0|1,0)=0$&0100&1\\
+\bottomrule
+\end{tabular}
+\end{center}
+Each $F_k$ is an exposed face, being the zero set of a sum of
+nonnegative probabilities, and contains the deterministic assignment
+0000. Thus $F_0\supsetneq F_1\supsetneq\cdots\supsetneq F_8$ is a
+chain of nine nonempty faces. The constant and the eight coordinate
+functions on the sixteen assignments are distinct orthogonal sign
+characters, so $\Q$ has affine dimension eight. Hence a nonempty face
+chain cannot have more terms. The exact Boolean checker enumerates all
+$2^{16}$ event subsets and confirms this maximal chain.
 
-The stored three-block order-two instance has 162 unknown coefficients
-and nine auxiliaries and is explicitly unsolved. Existence of an arbitrary
-finite SDP lift does not ensure termination of an order-two-only search.
+Now let $\Q=\pi(T)$, where
+$T=\mathcal A\cap\operatorname{Sym}_N^+$ for an affine subspace
+$\mathcal A$ and an affine map $\pi$. For a nonempty face $C$ of $T$ put
+$U(C)=\sum_{X\in C}\operatorname{range}X$. An average of finitely many
+points of $C$ is positive definite on $U(C)$, because the kernel of a
+sum of PSD matrices is the intersection of their kernels. If nonempty
+faces $C\subsetneq C'$ had the same support, choose such an $X\in C$.
+For any $Y\in C'$ and sufficiently small $\theta\in(0,1)$,
+\[
+ Z=\frac{X-\theta Y}{1-\theta}\in T,\qquad
+ X=\theta Y+(1-\theta)Z.
+\]
+The face property would force $Y\in C$, a contradiction. Therefore
+proper face inclusions strictly increase the support dimension. This
+argument uses only the actual support and does not require a positive
+definite point in the ambient cone.
 
-The unevaluated global tasks are therefore concrete: E1 requires the
-selected global testing functions, product basis and dimensions; E2
-requires one fixed exact original-coordinate pencil; E3 requires both
-full-set inclusions for that same pencil. Local certificates, rejected
-outer candidates and an executable first-order input do not by themselves
-complete these tasks.
+Moreover $0\notin T$: otherwise $\mathcal A$ would be linear and $T$
+a cone, so its affine image could be compact only if it were a singleton.
+The inverse images $T_k=\{X\in T:\pi(X)\in F_k\}$ are strictly nested
+nonempty faces. Their support dimensions consequently satisfy
+\[
+ N\geq\dim U(T_0)>\dim U(T_1)>\cdots>\dim U(T_8)\geq1,
+\]
+which proves $N\geq9$.
+
+Finally write a pencil as
+$A_0+\sum_{i=1}^8q_iA_i+\sum_jy_jB_j$ and replace the $B_j$ by a basis
+of their span $V$, of dimension $r$. Compactness makes $A_1,\ldots,A_8$
+independent modulo $V$: any nonzero relation would give a full feasible
+line in $q$ while keeping the matrix fixed. Also
+$A_0\notin\operatorname{span}(A_1,\ldots,A_8,V)$. Otherwise the matrix
+would vanish at some $(q_*,y_*)$, and scaling any feasible matrix by
+$t\geq0$ would give $q_*+t(q-q_*)\in\Q$. Compactness would make $\Q$
+a singleton. Thus $r+9\leq D$, proving the auxiliary bound.
+\end{proof}
+
+Fix $N\geq9$ and put $p_N=D-9$. Let $c$ contain the entries of the
+$9+p_N$ symmetric coefficient matrices.
+There are $(9+p_N)D=D^2$ unknown coefficients. Quantifier elimination
+decides the rational sentence
+\begin{equation}
+ \exists c\in\R^{D^2}\ \forall q\in\R^8\quad
+ \left[\operatorname{Phys}(q)\ \longleftrightarrow\
+       \exists y\in\R^{p_N}:L_c(q,y)\succeq0\right],
+ \label{eq:exact-search}
+\end{equation}
+with PSD replaced by nonnegativity of all principal minors. A positive
+decision permits exact real algebraic coefficient witnesses with
+real-root selection data; transfer back to $\R$ gives the same identity
+for all real $q$. Given the qualitative finite-lift theorem, enumeration
+over $N=9,10,\ldots$ terminates. The first unexcluded template has
+$N=9$, $p_N=36$ and 2025 unknown coefficients. Its feasibility is not
+asserted, and no numerical upper order or coefficient tuple has yet been
+returned by this search.
+
+The stored three-block order-two input has total order six, nine
+auxiliaries and 162 unknown coefficients. Proposition~\ref{prop:size-bound}
+proves its sentence false: it is excluded, although its historical
+filenames retain \texttt{UNSOLVED}. The lower bound concerns total PSD
+order and leaves the possibility of more blocks of order two undecided.
+
+The tensor criterion supplies existence of a finite global testing
+space without an evaluated dimension here. Completing an explicit global
+construction requires selected testing functions, their product basis
+and dimensions (E1), one fixed original-coordinate pencil (E2), and both
+full-set inclusions for that pencil (E3). The algebraic search is an
+alternative route to E2--E3 once it returns a coefficient tuple.
 
 \section*{Scientific data and exact checks}
 

@@ -1,0 +1,121 @@
+{
+  "status": "Exact obstruction to every polynomial Bob selector in the new Alice quadratic normal form.",
+  "does_not_disprove": "A fixed algebraic testing family or an additional source-independent multiplier.",
+  "established_input": {
+    "repository_commit": "5fc0a0487bb94d7bdfa9929edb5f4f6f3ff50240",
+    "path": "extracted-lifts/outer-candidates/strict_outer_physical_source.json",
+    "sha256": "0479aeabc84cb1e3a71073d5162df83af8603c5f94609742498b0659ad793b75",
+    "validity": "Accepted established input: independently verified order-13744 rational certificate. No old certificate rebuilt."
+  },
+  "source_order": [
+    "d",
+    "m",
+    "C",
+    "A",
+    "D",
+    "alpha",
+    "beta"
+  ],
+  "source": [
+    "1",
+    "1166523000/31661820415017653",
+    "322803000/186199784281",
+    "218288946200/1359122513",
+    "90943434293/222507771414",
+    "248802430236/3300726103",
+    "205476973/51646655494"
+  ],
+  "contact": {
+    "u": "1/13",
+    "v": "16",
+    "state": [
+      "140",
+      "-1/32",
+      "1/50",
+      "1"
+    ]
+  },
+  "transformed_contact": {
+    "a": [
+      "69589/500",
+      "247/5440"
+    ],
+    "b": [
+      "69459/500",
+      "-70473/5440"
+    ],
+    "U": "1/169"
+  },
+  "forced_selector": {
+    "form": "[[p*v^2,0],[r*v,s*v^2]]",
+    "p": "-37168625/1489598274248",
+    "r": "622145600000/505399414477",
+    "s": "7465747200/3689046821"
+  },
+  "kernel_equations": {
+    "unknown_order": [
+      "p",
+      "r",
+      "s"
+    ],
+    "coefficient_matrix": [
+      [
+        "4445376/125",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "277836/125",
+        "-281892/85"
+      ],
+      [
+        "4453696/125",
+        "247/340",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "988/85"
+      ]
+    ],
+    "right_hand_side": [
+      "-1206047544/1359122513",
+      "-771870428160/194160359",
+      "7136376/1359122513",
+      "4567280640/194160359"
+    ],
+    "rank": 3,
+    "meaning": "J*b = -Aplus*a/U and J^T*a = -U*Aminus*b at the exact contact"
+  },
+  "negative_principal_minor": {
+    "testing_v": "1",
+    "zero_based_rows": [
+      1,
+      2,
+      3
+    ],
+    "value": "-69352124781612280381599769461934673920000000/32438294482980702952775476165756828843959807"
+  },
+  "determinant": {
+    "positive_prefactor": "9730776231384008125000000/14695872105047589575894241830391675255104512586944997",
+    "remaining_factor": "v^4*(v-16)*(v+16)*(1949306657149583773*v^2-44177987181070080)"
+  },
+  "hand_bounds": {
+    "a": "4m",
+    "b": "4beta+2d",
+    "c": "4C",
+    "e": "4D+2d",
+    "bounds": [
+      "3<e<4",
+      "0<c<1/100",
+      "0<a+2b<5",
+      "r<5/4",
+      "s>2"
+    ],
+    "minor": "2ec(a+2b)-e(r-s)^2-2cs^2 < 2/5-27/16 = -103/80 < 0"
+  },
+  "coo_full_nonzeros": 108,
+  "coo_c1_nonzeros": 80
+}

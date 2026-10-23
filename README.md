@@ -39,6 +39,8 @@ The recovered files provide:
 | All Alice angles, bounded-z source box | Exact order-731 intersection of the two specified local certificate cones; 139 blocks and 2,791 auxiliaries |
 | Canonical Bell validity at every angle | Exact order-49 pencil with a quartic source map; 24 order-two blocks, one scalar block and 48 auxiliaries |
 | Determinant-weighted full state polynomial | Exact order-133 fixed square certificate; 104 functions and 27 blocks |
+| Canonical completion at a fixed Bob angle | Two order-4 inequalities, with four completion variables; exact `for every v, there exists J` characterization |
+| Size of any full-set lift | Total PSD order at least 9; at order N, at most N(N+1)/2 - 9 auxiliary directions are needed |
 | Global candidates of orders 8,368 and 10,736 | Strict outer approximations, with exact separation proofs |
 | Global candidate of order 13,744 | Forward inclusion; reverse inclusion remains unproved |
 | C160 candidate of order 63,888 | Reverse inclusion remains unproved; full forward inclusion uses the stated extremal-coverage theorem |
@@ -103,6 +105,22 @@ It includes zero coefficients and minima approached only at infinity.
 This pencil is affine in the nine Laurent coefficients; their dependence
 on the Bell coefficients remains quartic. The order-133 construction
 additionally supplies the fixed square factors for the full state polynomial.
+
+The [five-page canonical-completion proof](extracted-lifts/canonical-completion/Q222_Canonical_Completion.pdf)
+eliminates one measurement angle by factoring a univariate matrix polynomial.
+Two four-by-four inequalities characterize the remaining pointwise completion,
+including all zero source weights and projective endpoints. Four elementary
+AM–GM inequalities certify a small rational source whose contact excludes
+every polynomial completion in this form. A two-coordinate vector gives
+the contradiction, without a large certificate archive. The supplied
+integer arrays contain the two matrices and the obstruction. A fixed algebraic
+function space for the remaining angle is still needed to obtain a global lift.
+
+The [size bound](extracted-lifts/size-bound/) uses a chain of nine nonempty
+probability faces to prove that any full-set lift has total PSD order at least
+nine. This excludes the stored three-block order-two proposal. The proof and
+the sharper auxiliary-variable bound appear in the explicit-representations
+note; the exact face-chain checker is included.
 
 The [bounded source-interval theorem](extracted-lifts/global-weighted/bridges/bounded_unit_L/bounded_unit_L_all_tests.pdf)
 extends a fixed testing family to every pair of measurement angles when

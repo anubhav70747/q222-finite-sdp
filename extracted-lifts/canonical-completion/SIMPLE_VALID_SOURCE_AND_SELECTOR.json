@@ -1,0 +1,255 @@
+{
+  "scope": "Explicit valid C1 source with no polynomial canonical Bob selector; no obstruction to algebraic selectors or an extra fixed multiplier.",
+  "source_order": [
+    "d",
+    "m",
+    "C",
+    "A",
+    "D",
+    "alpha",
+    "beta"
+  ],
+  "source": [
+    "359",
+    "75/16",
+    "60",
+    "416",
+    "41/2",
+    "831/2",
+    "151/2"
+  ],
+  "d1_source": [
+    "1",
+    "75/5744",
+    "60/359",
+    "416/359",
+    "41/718",
+    "831/718",
+    "151/718"
+  ],
+  "contact": {
+    "u": "1/2",
+    "v": "2",
+    "state": [
+      "2",
+      "-1/4",
+      "1/4",
+      "1"
+    ],
+    "equivalent_integer_state": [
+      "8",
+      "-1",
+      "1",
+      "4"
+    ]
+  },
+  "contact_state_matrix": [
+    [
+      "575",
+      "725/2",
+      "-1925/2",
+      "-3275/4"
+    ],
+    [
+      "725/2",
+      "23675/4",
+      "-3275/4",
+      "7675/8"
+    ],
+    [
+      "-1925/2",
+      "-3275/4",
+      "97275/4",
+      "-34875/8"
+    ],
+    [
+      "-3275/4",
+      "7675/8",
+      "-34875/8",
+      "47475/16"
+    ]
+  ],
+  "SG6_t": [
+    "400",
+    "16251/8",
+    "520",
+    "10803/8",
+    "510",
+    "2142",
+    "4155/8",
+    "1352"
+  ],
+  "Laurent_central": "-128333158200",
+  "Laurent_outer": {
+    "0,1": "5371791750",
+    "0,2": "839797875/2",
+    "1,0": "186727694400",
+    "1,2": "6310033650",
+    "2,1": "53928576000",
+    "2,2": "14723406000"
+  },
+  "balanced_weights_at_contact": {
+    "-1,0": "21487167000",
+    "-1,1": "6718383000",
+    "0,-1": "46681923600",
+    "0,1": "25240134600",
+    "1,0": "13482144000",
+    "1,1": "14723406000"
+  },
+  "balanced_circuit_identity": {
+    "scale": "1800",
+    "x": "4*U",
+    "y": "V/4",
+    "x+1/x-2": "3757645",
+    "y+1/y-2": "14022297",
+    "y/x+x+1/y-3": "3732435",
+    "x*y+1/x+1/y-3": "8179670"
+  },
+  "transformed_contact": {
+    "a": [
+      "17",
+      "2"
+    ],
+    "b": [
+      "12",
+      "-18"
+    ],
+    "U": "1/4",
+    "homogeneous_state_scale_relative_to_Z1": "10"
+  },
+  "selector_forcing": {
+    "unknown_order": [
+      "p",
+      "r",
+      "s"
+    ],
+    "coefficient_matrix": [
+      [
+        "48",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "24",
+        "-72"
+      ],
+      [
+        "68",
+        "4",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "8"
+      ]
+    ],
+    "rhs": [
+      "-4800",
+      "-38400",
+      "1200",
+      "9600"
+    ],
+    "rank": 3,
+    "solution": [
+      "-100",
+      "2000",
+      "1200"
+    ],
+    "P_contact": [
+      [
+        "75",
+        "-75/2"
+      ],
+      [
+        "-75/2",
+        "20475/4"
+      ]
+    ],
+    "N_contact": [
+      [
+        "2000",
+        "1600"
+      ],
+      [
+        "1600",
+        "3200"
+      ]
+    ]
+  },
+  "negative_principal_minor": {
+    "v": "1",
+    "zero_based_indices": [
+      1,
+      2,
+      3
+    ],
+    "matrix": [
+      [
+        "8235/4",
+        "2000",
+        "1200"
+      ],
+      [
+        "2000",
+        "1280",
+        "800"
+      ],
+      [
+        "1200",
+        "800",
+        "800"
+      ]
+    ],
+    "determinant": "-412640000"
+  },
+  "negative_two_minor": {
+    "v": "1",
+    "zero_based_indices": [
+      1,
+      2
+    ],
+    "matrix": [
+      [
+        "8235/4",
+        "2000"
+      ],
+      [
+        "2000",
+        "1280"
+      ]
+    ],
+    "determinant": "-1364800"
+  },
+  "negative_vector": {
+    "vector": [
+      "0",
+      "1",
+      "-1",
+      "0"
+    ],
+    "value": "-2645/4"
+  },
+  "exact_checks": 18,
+  "checks": {
+    "strictly positive six C1 event weights": true,
+    "complete four-state kernel": true,
+    "stationary Alice angle": true,
+    "stationary Bob angle": true,
+    "normalization to d=1": true,
+    "integer homogeneous state": true,
+    "m C A transverse frame determinant": true,
+    "Laurent value at contact": true,
+    "Laurent U balance": true,
+    "Laurent V balance": true,
+    "four elementary balanced circuits": true,
+    "entire four-state Laurent determinant": true,
+    "every forced-selector contact equation": true,
+    "rank-three forcing system": true,
+    "literal negative three-dimensional principal minor": true,
+    "smaller negative two-dimensional principal minor": true,
+    "two-coordinate negative quadratic witness": true,
+    "source/selector scaling of the three-minor": true
+  }
+}

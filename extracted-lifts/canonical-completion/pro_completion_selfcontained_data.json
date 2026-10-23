@@ -1,0 +1,106 @@
+{
+  "source_sha256": "0479aeabc84cb1e3a71073d5162df83af8603c5f94609742498b0659ad793b75",
+  "source_order": [
+    "d",
+    "m",
+    "C",
+    "A",
+    "D",
+    "alpha",
+    "beta"
+  ],
+  "source": [
+    "1",
+    "1166523000/31661820415017653",
+    "322803000/186199784281",
+    "218288946200/1359122513",
+    "90943434293/222507771414",
+    "248802430236/3300726103",
+    "205476973/51646655494"
+  ],
+  "zero_source_coordinates": {
+    "lambda": "0",
+    "n": "0"
+  },
+  "contact": {
+    "u": "1/13",
+    "v": "16",
+    "state": [
+      "140",
+      "-1/32",
+      "1/50",
+      "1"
+    ]
+  },
+  "k": "365997345792000000/806534883104527170621493981142180739537045858457",
+  "normalized_testing": {
+    "X": "169*u^2",
+    "Y": "v^2/256"
+  },
+  "integer_weights": [
+    {
+      "exponent": [
+        -1,
+        0
+      ],
+      "weight": "1347083645295592961374032847731"
+    },
+    {
+      "exponent": [
+        -1,
+        1
+      ],
+      "weight": "2737791187307806620394799996019"
+    },
+    {
+      "exponent": [
+        0,
+        -1
+      ],
+      "weight": "765091750295568657441489249147602"
+    },
+    {
+      "exponent": [
+        0,
+        1
+      ],
+      "weight": "762274793296209851400745596627083"
+    },
+    {
+      "exponent": [
+        1,
+        0
+      ],
+      "weight": "4005709020552400161419980319250"
+    },
+    {
+      "exponent": [
+        1,
+        1
+      ],
+      "weight": "79165812050999420348852524500"
+    }
+  ],
+  "sum_weights": "1535536293256985308005772511462185",
+  "identity": "det(P)=16*(1+u^2)^2*(1+v^2)^2*u^2*v^2*k*sum_e n_e*(X^e1*Y^e2-1)",
+  "strict_transverse_frame": [
+    [
+      "v",
+      "-1",
+      "u*v"
+    ],
+    [
+      "u",
+      "0",
+      "-1"
+    ],
+    [
+      "0",
+      "0",
+      "1"
+    ]
+  ],
+  "frame_determinant": "u",
+  "positive_frame_gram_determinant": "64*m*C*A*u^2*(1+u^2)*(1+v^2)^2",
+  "scope": "Self-contained all-state canonical validity of this one fixed rational source; no large certificate or global adequacy claim."
+}
