@@ -23,9 +23,12 @@ including the projective endpoints. Their intersection with this coefficient
 system has total PSD order **635**, with **4024 auxiliary variables** and
 **619 coefficient equations**.
 
-This gives a valid-source cone containing the displayed native family and its
-nonnegative event additions. Universal admission of all canonical sources
-remains open; these matrices do not yet give the exact full quantum set.
+This gives a closed valid-source cone containing the displayed native family,
+its nonnegative event additions, and all finite limits of their conic
+combinations. The proof bounds the contact Gram matrices by fixed evaluations
+and the three regional auxiliaries directly from the published pencil.
+Universal admission of all canonical sources remains open; these matrices
+do not yet give the exact full quantum set.
 
 ## Reading the matrices
 

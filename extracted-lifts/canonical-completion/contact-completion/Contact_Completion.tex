@@ -478,7 +478,6 @@ A common finite collection of chart evaluations therefore gives a positive
 definite evaluation Gram in each block. Summing \eqref{eq:affine} at these
 points bounds all PSD traces when the source coefficients converge; a
 subsequence of the Gram tuples then gives the limiting identity.
-This argument applies after the functions have been fixed.
 
 Finally the cap contains the complement left by the two preserved regional
 certificates of \cite{regional}:
@@ -491,9 +490,21 @@ certificates of \cite{regional}:
 Those certificates cover the remaining tests, including projective endpoints,
 on the same native envelope. Appending their unchanged order-20 and order-10
 pencils gives total order 635, 4024 variables and 619 equations.
-Consequently the weak envelope and its nonnegative event additions
-are admitted on all tests. This does not assert
-admission of every canonical source or an exact lift of the full quantum set.
+The joined cone $K_{635}$ is closed. The cap Grams are bounded along every
+convergent source sequence by the preceding evaluation argument. Put
+$\rho=\tau-d/2$ and $B_0=1-2^{-26}$. The order-20 pencil has diagonal
+entries $2\rho/B_0^2$, $q/2$, $p-q$, $d/2-p$ and a principal minor
+$\rho(2D-\rho)/B_0^2$. Their nonnegativity gives
+$0\leq\rho\leq2D$ and $0\leq q\leq p\leq d/2$, including $\rho=0$.
+Passing to a subsequence therefore preserves both regional pencils.
+Together with the strong-contact proof, we obtain
+\[
+ \overline{\mathcal E+\operatorname{cone}(\mathcal S_{\rm native})}
+ \subseteq K_{635}\subseteq C_{\rm can},
+\]
+Here $\mathcal E$ is the positive event cone, $\mathcal S_{\rm native}$
+the native envelope with $0<H_o<1$, and $C_{\rm can}$ the canonical
+valid-source cone. Whether $K_{635}=C_{\rm can}$ remains open.
 
 \appendix
 \section{Native coefficients and uniform source estimates}\label{app:source}
@@ -685,14 +696,12 @@ radicals included in Table~\ref{tab:features}.
 
 \begin{thebibliography}{2}
 \bibitem{companion}
-\emph{Finite semidefinite representation of the $(2,2,2)$ quantum set:
-proof companion}, preserved source
-\path{latex/certificates/c2_short.tex}, source dictionary RSR2--RSR19,
-full-parent identities RFN4--RFN12, RFN18b--RFN19, and sign completion
-SJ1--SJ7 (component \texttt{pf77de02d80c4}).
+\emph{Complete proof companion}, \path{latex/certificates/c2_short.tex}:
+source identities RSR2--RSR19, full-parent identities RFN4--RFN12 and
+RFN18b--RFN19, and sign completion SJ1--SJ7.
 \bibitem{regional}
-\emph{Two fixed regional completions for the C2 source},
-\path{extracted-lifts/canonical-completion/fixed-c2-gates/Fixed_C2_Completions.tex},
-regional identities and native-envelope estimates.
+\emph{Fixed square decompositions away from a singular contact},
+\href{../fixed-c2-gates/Fixed_C2_Completions.pdf}{regional identities
+and native-source estimates}.
 \end{thebibliography}
 \end{document}
