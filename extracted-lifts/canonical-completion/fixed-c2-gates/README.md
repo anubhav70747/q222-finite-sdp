@@ -37,6 +37,11 @@ With Python 3 and SymPy, run:
 
 The first command reconstructs both arrays from the square decompositions
 and checks all source and auxiliary coefficients against the homogeneous
-four-state parent. The second verifies the native contact zero exactly.
+four-state parent. The second verifies the full polynomial state change,
+the state kernel and both angular derivatives at the general native
+contact. These identities hold without fixing relative parameter rates.
+With nonnegative event weights, the contact lemma SG7 in
+[the complete proof](../../../latex/chapters/04_geometry.tex) establishes
+global validity. This does not supply the missing fixed Gram family.
 The analytic source estimates are proved in the PDF. Compile the TeX
 source twice with pdfLaTeX.
