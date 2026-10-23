@@ -1,6 +1,6 @@
 \documentclass[11pt]{article}
 \usepackage[margin=0.9in]{geometry}
-\usepackage{amsmath,amssymb,amsthm}
+\usepackage{amsmath,amssymb,amsthm,hyperref}
 \newtheorem{lemma}{Lemma}
 \newcommand{\R}{\mathbb R}
 \title{Necessary face and contact conditions for a ramified selector}
@@ -132,12 +132,19 @@ only the physical contact vector. Even these second-order conditions
 are not sufficient: $-(s-s_0)^4$ passes the corresponding scalar
 zero, first- and second-derivative tests but is negative nearby.
 
-Universal coverage requires
+Universal coverage by this fixed family would require
 \[
  \forall c\in C_{\rm can}\quad\exists J_0,\ldots,J_4\in\R^{2\times2}
  \quad\forall s\ge0:\quad G(s),H(s)\succeq0.
 \]
-The lemma reduces this question to a common quartic selector satisfying
-the endpoint and contact constraints while maintaining positivity between
-contacts. The existence of such a selector for every valid source remains open.
+The lemma gives necessary endpoint and contact conditions; a selector
+would also have to maintain positivity between contacts. The
+\href{../ramified-obstruction/Q222_Ramified_Quartic_Obstruction.pdf}{canonical symmetry counterexample}
+now disproves the displayed universal statement: an all-positive rational
+valid source has no quartic selector. Since the PSD growth bound forces
+every polynomial selector in $s$ to have degree at most four, this excludes
+all polynomial degrees in the same ramified coordinate. The conditions
+above remain valid necessary conditions for individual sources; finer
+ramifications, rational selectors or another fixed algebraic testing
+family are not ruled out by this result.
 \end{document}

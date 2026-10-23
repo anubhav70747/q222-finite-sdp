@@ -190,7 +190,12 @@ sqrt(v) repairs that source and has an evaluated order-49 pencil with
 all state signs and projective endpoints are retained. The literal dual,
 both repair certificates, complete affine matrices and standard-library
 replay scripts are included. This order-49 completion cone is distinct from
-the Laurent-coefficient cone. Its universal adequacy remains open.
+the Laurent-coefficient cone. The [new canonical symmetry counterexample](canonical-completion/ramified-obstruction/Q222_Ramified_Quartic_Obstruction.pdf)
+proves it strictly smaller than the canonical valid-source cone. An
+all-positive rational source excludes polynomial selectors of every degree
+in s = sqrt(v)/4, since the PSD growth bound forces degree at most four.
+This does not exclude finer ramifications, rational selectors or another
+fixed algebraic testing family.
 
 `canonical-completion/full-polar/` proves the exact eight-orientation
 assembly for any closed sound canonical cone containing the positive event
@@ -198,3 +203,5 @@ terms. The assembled set is exact if and only if the canonical cone is exact.
 The source maps, rational adjoint kernel and strict feasible point are supplied.
 The order-33 specialization gives a strictly larger outer approximation of
 total order 264 with 384 auxiliaries.
+The ramified order-49 specialization likewise gives a strictly larger outer
+approximation, of total order 392 with 640 auxiliaries.

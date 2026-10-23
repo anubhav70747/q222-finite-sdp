@@ -13,12 +13,15 @@ coefficient equations. Its 40 fixed scalar functions are defined on a
 compact algebraic cover, including every projective endpoint.
 
 The proved relation is C33 strictly contained in Cram, contained in the
-canonical valid-source cone. Universal equality for Cram remains open.
+canonical valid-source cone. The [new canonical symmetry counterexample](../ramified-obstruction/Q222_Ramified_Quartic_Obstruction.pdf)
+proves that the latter inclusion is also strict. Its all-positive rational
+source excludes polynomial selectors of every degree in s = sqrt(v)/4;
+the PSD growth bound forces any such polynomial to have degree at most four.
 This order-49 pencil is distinct from the Laurent-coefficient cone elsewhere
 in this repository.
 
-[Endpoint and contact constraints](Q222_Selector_Contacts.pdf) give a
-two-page reduction of the remaining selection problem. On the principal
+[Endpoint and contact constraints](Q222_Selector_Contacts.pdf) give
+necessary conditions for this fixed selector family. On the principal
 singular face, ramification adds only four coefficients; an interior
 contact leaves one scalar freedom in the selector value. The note also
 derives the necessary derivative conditions and covers literal zero faces.
@@ -41,8 +44,9 @@ Appendix B gives a positive moment weight annihilating all 148 auxiliary
 matrices and a rational strictly feasible point with margin I49/100.
 The projected source cone is closed. Its eight-orientation outer
 approximation has total order 392 and 640 free auxiliary variables.
-The assembly theorem makes equality with Q222 equivalent to universal
-coverage by this canonical cone.
+The assembly theorem and the new counterexample prove that this outer
+approximation is strictly larger than Q222. A different fixed testing
+family is still needed for an exact full-set extraction.
 
 Additional independent checks, from this directory:
 

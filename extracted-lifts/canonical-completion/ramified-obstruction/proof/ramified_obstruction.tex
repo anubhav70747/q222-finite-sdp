@@ -1,0 +1,285 @@
+\documentclass[10pt]{article}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,microtype,hyperref}
+\hypersetup{hidelinks,pdftitle={A canonical symmetry excludes the ramified quartic completion}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Cr}{\mathcal C_{\mathrm{ram}}}
+\newcommand{\Cc}{\mathcal C_{\mathrm{can}}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+\title{A canonical symmetry excludes the ramified quartic completion}
+\author{}\date{}
+\begin{document}
+\maketitle\vspace{-2.5em}
+\begin{abstract}
+An explicit all-positive valid source has no matrix selector polynomial
+in the square root of the Bob half-angle coordinate. Four positive-definite integer block
+Hankel matrices give an exact separating inequality. A physical exchange
+of Alice and Bob transports a source inside the ramified completion cone
+to this excluded source. The same transformation moves Bob quarter-power
+testing functions to Alice and produces two incomparable certificate cones.
+\end{abstract}
+
+\section{The counterexample and its validity}
+
+Use the source order
+$c=(d,\lambda,n,m,C,A,D,\alpha,\beta)\in\R_+^9$ and the complete
+canonical parent $F_c$. The cone $\Cc$ consists of sources valid at every
+state and every pair of projective measurement angles. The
+two-completion matrices are
+\[
+ G_J=\begin{pmatrix}P+K&J\\J^T&N+K\end{pmatrix},\qquad
+ H_J=\begin{pmatrix}P+E&K-E-J\\K-E-J^T&N+E\end{pmatrix}.
+\]
+Here $P,N,E,K$ are exactly the source-affine quadratic matrices in the
+canonical completion note~\cite{accepted}. The fixed cone $\Cr$ requires
+$v=16s^2$, $s\ge0$, and one matrix polynomial
+$J(s)=\sum_{k=0}^4J_ks^k$ making both matrices positive semidefinite.
+The resulting Gram pencil has order 49.
+
+The explicit Gram matrices in Ref.~\cite{accepted} give
+\[
+ \bar c=\left(1,2^{-34},2^{-14},2^{-24},\frac1{576},161,
+                   \frac12,76,\frac1{250}\right)\in\Cr\subseteq\Cc.
+ \tag{1}
+\]
+
+\begin{theorem}\label{thm:main}
+The all-positive rational source
+\[
+ \boxed{c^\dagger=\left(1,\frac1{576},161,2^{-24},2^{-34},2^{-14},
+                   \frac12,\frac1{250},76\right)}           \tag{2}
+\]
+belongs to $\Cc\setminus\Cr$. Consequently
+$\Cr\subsetneq\Cc$. The source $c^\dagger$ admits no selector polynomial
+in $s=\sqrt v/4$, of any degree. The order-392 eight-copy outer lift is
+strictly larger than $Q_{222}$ by the polar assembly theorem~\cite{assembly}.
+\end{theorem}
+
+Define the involution
+\[
+ \pi c=(d,C,A,m,\lambda,n,D,\beta,\alpha),\qquad
+ S(W,X,Y,Z)=(W,Y,X,Z).
+\]
+The full parent satisfies the exact identity
+\[
+ \boxed{u^2v^2F_{\pi c}(-1/v,-1/u;S\psi)=F_c(u,v;\psi).} \tag{3}
+\]
+The eight event packets, in the source
+order $(\lambda,n,m,C,A,D,\alpha,\beta)$, are carried respectively to
+$(C,A,m,\lambda,n,D,\beta,\alpha)$. The $m,D$ roots change sign.
+The $d$ coefficient is unchanged: its three positive packets are permuted
+or fixed, and $D_uD_vZ^2$ is unchanged after clearing the angles.
+Thus (3) holds for every source.
+
+With homogeneous angle pairs
+$a=(a_0,a_1)$, $b=(b_0,b_1)$, identity (3) is the polynomial identity
+\[
+ \boxed{F^h_{\pi c}\bigl((b_1,-b_0),(a_1,-a_0);S\psi\bigr)
+                       =F^h_c(a,b;\psi).}                 \tag{4}
+\]
+It holds on the complete product of angle circles, including literal zero
+coordinates. It permutes zero source weights exactly, keeps all state
+signs, and acts separately on source and testing coordinates. Real and
+imaginary state parts give the same conclusion for complex states.
+Thus $\pi\Cc=\Cc$. Since $c^\dagger=\pi\bar c$, (1) proves validity
+of (2). It remains to exclude its quartic completion.
+
+\section{An exact separating trace identity}
+
+For $\sigma=G,H$, let $N_{\sigma,0},\ldots,N_{\sigma,4}$ be the ten
+\emph{integer} symmetric $4\times4$ matrices in Appendix~\ref{app:data}.
+Form the four integer block Hankel matrices
+\[
+ \mathsf U_\sigma=(N_{\sigma,i+j})_{i,j=0}^{2},\qquad
+ \mathsf V_\sigma=(N_{\sigma,i+j+1})_{i,j=0}^{1}.           \tag{5}
+\]
+They have orders $12,8,12,8$ and are positive definite. Moreover,
+\[
+ (N_{G,k})_{\{1,2\},\{3,4\}}
+ =(N_{H,k})_{\{1,2\},\{3,4\}}
+ \qquad(0\le k\le4).                                    \tag{6}
+\]
+Positive definiteness follows from the rational pivots in
+Appendix~\ref{app:data}; the upper-right blocks agree entry by entry.
+
+Write $Q(s)=\sum_{k=0}^4Q_ks^k$ for either completed matrix. Its
+half-line Gram representation is
+\[
+ Q(s)=Z_2(s)^TA_QZ_2(s)+sZ_1(s)^TB_QZ_1(s),\quad
+ Z_2=(I_4,sI_4,s^2I_4)^T,\quad Z_1=(I_4,sI_4)^T,
+\]
+where $A_Q,B_Q\succeq0$. Expanding gives
+\[
+ \sum_{k=0}^4\ip{N_{\sigma,k}}{Q_k}
+ =\ip{\mathsf U_\sigma}{A_Q}+\ip{\mathsf V_\sigma}{B_Q}.
+                                                               \tag{7}
+\]
+Each $J_k$ occurs in opposite off-diagonal blocks of $G_k$ and $H_k$,
+so (6) cancels every selector coefficient. Consequently the sum of (7)
+is source-affine and nonnegative for every feasible certificate, including
+zero weights and singular Grams.
+
+The resulting integer functional in the stated source order is
+\[
+\begin{array}{c|r@{\qquad}c|r@{\qquad}c|r}
+ d&-97633735551856&\lambda&24154193783510329&n&85793705264\\
+ m&1787034292680750290&C&3303160925893294&A&16956553777510394\\
+ D&13682527570574&\alpha&670221724556174&\beta&366431361010
+\end{array}
+                                                               \tag{8}
+\]
+Denote the functional with these coefficients by $\ell(c)$.
+Substituting $P,N,E,K$, with $v=16s^2$, gives
+the exact identity
+\[
+ \boxed{12\ell(c)=
+ \ip{\mathsf U_G}{A_G}+\ip{\mathsf V_G}{B_G}
+ +\ip{\mathsf U_H}{A_H}+\ip{\mathsf V_H}{B_H}.}             \tag{9}
+\]
+Only the moments of degrees $0,2,4$ contribute to the nine source
+coefficients. If $Q_j^{(v)}(c,0)$ is the coefficient of $v^j$ with $J=0$,
+the left side of (9) is
+\[
+ \sum_{j=0}^2 16^j\bigl[
+ \ip{N_{G,2j}}{G_j^{(v)}(c,0)}+
+ \ip{N_{H,2j}}{H_j^{(v)}(c,0)}\bigr].                     \tag{10}
+\]
+Thus $\ell\ge0$ on $\Cr$. But direct rational evaluation yields
+\[
+ \boxed{\ell(c^\dagger)=
+ -\frac{32607070960447356138172589}{9663676416000}<0.}      \tag{11}
+\]
+The four PSD trace pairings in (9) cannot have a negative sum. This
+excludes the quartic selector.
+
+To exclude every polynomial degree in the same coordinate, suppose that
+a polynomial matrix $J(s)$ made both completions PSD on $s\geq0$.
+Their principal minors would give
+\[
+ |J_{ij}(s)|^2\leq(P+K)_{ii}(16s^2)(N+K)_{jj}(16s^2)=O(s^8).
+\]
+The source diagonal blocks have degree at most four in $s$, so
+$\deg J_{ij}\leq4$. Every quartic matrix polynomial PSD on the half-line
+has the displayed Gram representation: factor the even globally PSD
+matrix polynomial $Q(t^2)$, average its polynomial SOS at $t$ and $-t$,
+and separate the even and odd roots. With $s=t^2$, the even roots have the form
+$B_0+sB_1+s^2B_2$ and the odd roots have the form
+$t(C_0+sC_1)$, yielding $Z_2^TA_QZ_2+sZ_1^TB_QZ_1$.
+Thus every polynomial selector would give the same four Gram blocks,
+already excluded by (11). This proves Theorem~\ref{thm:main}.
+
+\section{The contact mechanism and the remaining problem}
+
+The separation already holds at the exact contact source $\pi c_*$
+underlying (1). Its contact in positive angle gauges is
+\[
+ u=\frac1{16},\qquad v=13,\qquad
+ \psi=\left(140,-\frac1{50},\frac1{32},1\right),
+\]
+and
+\[
+ \ell(\pi c_*)=
+ -\frac{4844338143654932884745484309348314410}
+        {802811514300974151343419}<0.                    \tag{12}
+\]
+In the full state variables, write
+\[
+ \eta=L(1/16)\psi=
+ \left(\frac{71681}{8192},\frac{17}{6400},
+       \frac{279}{32},-\frac{801}{800}\right).
+\]
+At $U=1/256$ and $s=\sqrt{13}/4$, any putative completion must satisfy
+\[
+ G(s)(\eta_1,\eta_2,U\eta_3,U\eta_4)^T=0,\qquad
+ H(s)\eta^T=0.                                          \tag{13}
+\]
+These follow from the split identity and positivity of both
+summands at a zero. The separator excludes such a global quartic
+completion and remains negative after opening both zero event weights to
+the all-positive source (2).
+
+The involution $\pi$ preserves canonical validity and transports its
+testing functions between the parties. The five compact Bob weights in
+affine coordinates are
+\[
+ \frac{(1,\sqrt{|v|}/4,|v|/16,|v|^{1/4}/2,|v|^{3/4}/8)}
+      {\sqrt{1+v^2}}.
+\]
+Under (3), they become the fixed Alice weights
+\[
+ \boxed{
+ \frac{(|u|,\sqrt{|u|}/4,1/16,|u|^{3/4}/2,|u|^{1/4}/8)}
+      {\sqrt{1+u^2}}.}                                  \tag{14}
+\]
+Their branches and normalization depend only on the test. The homogeneous
+pullback of the forty functions represents $b_0^2F^h_{\pi c}$,
+where the original family represented $a_1^2F^h_c$; both multipliers are
+nonnegative and positive on a dense testing chart.
+
+The transported functions lie outside the original testing span. Restrict to
+$u>0$, $v=1$, $\psi=(1,0,0,0)$. Every old compact feature is a constant
+times a polynomial of degree at most three divided by $(1+u^2)^{3/2}$,
+and is analytic at $u=0$. One transported feature is
+\[
+ -\frac{u^{1/4}}{16\sqrt2\sqrt{1+u^2}}.
+\]
+It has nonintegral order of vanishing and cannot lie in that span.
+Over the common multiplier $a_1^2b_0^2$, multiply old roots by $b_0$ and
+transported roots by $a_1$; the same feature becomes
+$-u^{5/4}/(16\sqrt2(1+u^2))$, so the distinction persists.
+
+In particular $\Cr$ and $\pi\Cr$ are incomparable: (1), (2), and
+$\pi^2=1$ give a point in each set difference. It remains open whether
+$\Cr+\pi\Cr=\Cc$, or whether further testing functions are required.
+
+A finite construction of the full cone requires a source-independent
+algebraic testing space whose Gram cone contains every valid slack,
+possibly after one fixed pure-testing multiplier. The contact and
+conductor identities and the qualitative tensor criterion of
+Ref.~\cite{companion} do not specify such a global space.
+
+\begin{thebibliography}{3}\small
+\bibitem{accepted} \emph{Canonical Bell validity through two matrix inequalities};
+\emph{An exact obstruction to the quadratic half-line completion},
+and the ramified order-49 data.
+\href{https://github.com/anubhav70747/q222-finite-sdp/tree/16b37f6deb198fa48134145b4d12b7cc7d37be36/extracted-lifts/canonical-completion}{Public repository, canonical-completion, commit 16b37f6}.
+\bibitem{assembly} \emph{Q222 Polar Assembly},
+\href{https://github.com/anubhav70747/q222-finite-sdp/tree/16b37f6deb198fa48134145b4d12b7cc7d37be36/extracted-lifts/canonical-completion/full-polar}{same commit, full-polar}.
+\bibitem{companion} Reconstructed R21 companion,
+\href{https://github.com/anubhav70747/q222-finite-sdp/tree/16b37f6deb198fa48134145b4d12b7cc7d37be36/latex}{same commit, latex},
+Chapters 3--6; in particular TF12, SG2, SG7, and CC1--CC6.
+\end{thebibliography}
+
+\clearpage
+\appendix
+\section{The complete integer moment certificate}\label{app:data}
+All matrices below are used as integers in (5)--(10).
+The normalized moment matrices are $N/(15\cdot2^{60})$; equations
+(5)--(10) use their integer numerators.
+
+For each matrix $R$ in (5), set
+\[
+ p_j=R_{jj}-\sum_{k<j}L_{jk}^2p_k,\qquad
+ L_{ij}=\frac{R_{ij}-\sum_{k<j}L_{ik}p_kL_{jk}}{p_j},
+ \quad L_{jj}=1\quad(i>j).
+\]
+It gives $R=L\operatorname{diag}(p_j)L^T$. The exact floors of the
+smallest pivots are
+\[
+\begin{array}{c|rrrr}
+ R&\mathsf U_G&\mathsf V_G&\mathsf U_H&\mathsf V_H\\\hline
+ \left\lfloor\min_jp_j\right\rfloor&794&12397&67408&1527738.
+\end{array}
+\]
+These positive pivot bounds prove that all four matrices are positive definite. The shared
+upper-right blocks in each pair
+$N_{G,k},N_{H,k}$ make (6) directly visible.
+
+\input{moments_g.tex}
+\clearpage
+\section*{The five $H$ moments}
+\input{moments_h.tex}
+\end{document}

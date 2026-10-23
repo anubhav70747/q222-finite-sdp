@@ -42,13 +42,19 @@ outside the order-33 cone. The matrix growth bound makes this an obstruction
 to polynomial half-line selectors of every degree. Adding the selector terms
 sqrt(v) and v^(3/2) certifies the excluded source. The resulting order-49
 cone has 148 auxiliaries and 40 fixed scalar functions on a compact
-algebraic cover. Universal coverage by this enlarged cone remains open.
+algebraic cover. A [canonical symmetry counterexample](extracted-lifts/canonical-completion/ramified-obstruction/Q222_Ramified_Quartic_Obstruction.pdf)
+now proves that this enlarged cone is also strictly smaller than the
+canonical valid-source cone. Its all-positive rational source excludes
+polynomial selectors of every degree in the same coordinate s = sqrt(v)/4:
+the PSD growth bound forces any such polynomial to have degree at most four.
 
 The [three-page assembly proof](extracted-lifts/canonical-completion/full-polar/Q222_Polar_Assembly.pdf)
 shows why that canonical question is decisive. Eight output relabellings
 give the full quantum polar, and combining them cannot repair a missing
 canonical certificate. A strictly feasible exact canonical pencil therefore
 gives the full eight-coordinate lift through eight adjoint copies.
+Applied to the ramified cone, the new counterexample makes its order-392
+eight-copy outer approximation strictly larger than Q222.
 The exact coordinate maps, rational feasible points and matrix data are in
 [canonical-completion/](extracted-lifts/canonical-completion/).
 

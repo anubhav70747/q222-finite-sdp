@@ -23,11 +23,18 @@ ramified-completion/ proves that it excludes an all-positive valid source,
 with an exact separating dual. The degree bound excludes native-variable
 polynomial selectors of every degree. Allowing a selector quartic in sqrt(v)
 repairs that source and gives an order-49 affine cone with 148 auxiliaries.
-Its universal equality with the canonical valid-source cone remains open.
+ramified-obstruction/Q222_Ramified_Quartic_Obstruction.pdf gives a new
+all-positive rational counterexample: the ramified cone is strictly smaller
+than the canonical valid-source cone. The PSD growth bound forces every
+polynomial selector in s=sqrt(v)/4 to have degree at most four, so the
+counterexample excludes all polynomial degrees in that same coordinate.
+Other fixed algebraic families remain outside this obstruction.
 polynomial-obstruction/ excludes every fixed nonnegative separable
 polynomial multiplier for a strictly valid rational source family.
 full-polar/ gives the three-page eight-orientation assembly: an exact
 canonical cone is necessary and sufficient for its full-set construction.
+Consequently the ramified order-392 eight-copy outer approximation is
+strictly larger than Q222.
 
 CONTENTS
 --------
