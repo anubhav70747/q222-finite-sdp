@@ -17,6 +17,12 @@ canonical valid-source cone. Universal equality for Cram remains open.
 This order-49 pencil is distinct from the Laurent-coefficient cone elsewhere
 in this repository.
 
+[Endpoint and contact constraints](Q222_Selector_Contacts.pdf) give a
+two-page reduction of the remaining selection problem. On the principal
+singular face, ramification adds only four coefficients; an interior
+contact leaves one scalar freedom in the selector value. The note also
+derives the necessary derivative conditions and covers literal zero faces.
+
 Run `python reproduce.py` from this directory. The standard-library checks
 verify the exact separation, both feasible repair certificates, every
 affine coefficient, the source-validity identity and the fixed-function
