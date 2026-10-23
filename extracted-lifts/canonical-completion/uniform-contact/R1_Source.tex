@@ -1,0 +1,175 @@
+\section{Source coefficients and their uniform bounds}\label{app:source}
+The source is the stationary RSR dictionary of the proof companion,
+RSR4--RSR6 and RSR15--RSR19. We give its polynomials here so that the
+bounds use only \eqref{eq:domain}. The symbol $F$ in this appendix is a
+source polynomial, distinct from the homogeneous slack $F_h$.
+Set $x=jB$, $y=TB$, $q_z=jT$, and define
+\input{source_dictionary_exact}
+The condition $n\geq0$ means $\mathsf N\geq0$.
+Every denominator in this dictionary is positive on \eqref{eq:domain}.
+In particular $1-HT>0$,
+$1-y[(1-H)j-p]\geq1-Tx>0$ and $E\geq1-\delta>0$.
+
+Put $J=j+1$, $K=J-p$, and
+\[
+ f_0=1-\delta-\delta^3,\quad
+ \ell_0=1+\delta+\delta^2+\delta^3,\quad
+ R_0=1+2\delta+2\delta^2+4\delta^3+\delta^4(1+2\delta).
+\]
+Because $p<\min(j,1)$, $J/2\leq K<J$ and $K>1$.
+Termwise bounds in the displayed polynomials give
+\begin{equation}
+ J\leq P\leq R_0J,\qquad
+ 1-\delta\leq E\leq1+\delta^2,\qquad
+ f_0K\leq L\leq\ell_0K,\qquad f_0K\leq F\leq2K.
+ \label{eq:fullsourcebounds}
+\end{equation}
+Here $P\geq J$ follows from its positive terms; in the upper bound use
+$BJ=B+x\leq2\delta$ to bound its successive corrections, divided by $J$,
+by $2\delta,2\delta^2,4\delta^3,\delta^4(1+2\delta)$.
+For $L$, use $W_0=K-Hj$ to obtain
+\[
+ L\geq K-T-BT^2\geq f_0K,\qquad
+ L\leq K[1+T+BT+BT^2]\leq\ell_0K.
+\]
+For $F$, the exact regrouping
+\begin{align*}
+ F_1={}&2Bjp(1-H)+BHj+2Bp(1-p)+(1-H)J-Hp+p(1-p)/j,\\
+ F_2={}&B^2Hjp(1-H)+B^2Hp(1-p)+BHj(1-H)-BH^2p+BHp(1-p)/j
+\end{align*}
+gives $F\geq K-Tp-BT^2p\geq f_0K$.
+For the upper bound,
+$F_1\leq(3+5\delta)K$ and $F_2\leq(2\delta+2\delta^2)K$,
+which yield $F<2K$ at $\delta=2^{-10}$.
+
+Write
+\[
+ G_q=\frac{(1+x)(1+Hy)(K+Hjy)}{1-HT}-xF,\qquad
+ q_c=\frac{TxG_q}{2P}.
+\]
+The first term in $G_q$ is at least $K$, so $G_q\geq(1-2\delta)K$.
+The dictionary consequently gives
+\begin{equation}
+ f_c/y>j^2B/5,\quad
+ f_c\geq Tx^2/8,\quad q_c\geq Tx/8,\quad
+ r_c\geq TjB^2(1-p)/8,\quad
+ \alpha\leq B(B+x),\quad c_0:=BTCH<B .
+ \label{eq:positivesourcebounds}
+\end{equation}
+For the first four inequalities use, respectively,
+\[
+ \frac{f_0}{4R_0}>\frac15,\qquad
+ \frac{f_0}{4R_0}>\frac18,\qquad
+ \frac{1-2\delta}{4R_0}>\frac18,\qquad
+ \frac{f_0}{4(1+\delta^2)R_0}>\frac18 .
+\]
+For $\alpha$, bound $(K+Hjy)/P\leq1+\delta^2$ and $L\leq\ell_0J$:
+\[
+ \alpha\leq B^2J\,\frac{(1+\delta^2)\ell_0}{2(1-\delta)}
+ \leq B(B+x).
+\]
+The last scalar factor is less than one. Also $c_0=BL/(2P)<B$.
+Directly,
+\begin{equation}
+ \mu/p\leq(1+\delta)(1+\delta^2)^2/2<2/3,\qquad
+ A/T\leq\frac{(1+\delta)(1+\delta^2)^2}{2(1-\delta)}<2/3 .
+ \label{eq:mubounds}
+\end{equation}
+
+\subsection*{The harmonic bound}
+Put $\rho=p/j<1$. Bounding the negative terms of $\mathsf N/j$ below
+and discarding only nonnegative terms gives
+\begin{gather}
+ \mathsf N/j\geq\rho-BD_N,\qquad
+ D_N=1+2j+T(1+j)+BT(2j+4j^2)+BT^2j(1+Bj),\notag\\
+ D_N/J\leq2+\delta+4\delta^2+\delta^3(1+\delta)<9/4.
+ \label{eq:Nlower}
+\end{gather}
+Since $\mathsf N/j=2(1-\rho)Pn$ and $\rho J=p+\rho<2$,
+\[
+ \rho^2\leq\frac{2\rho}{J}
+ \leq4(P/J)n+2B(D_N/J)
+ \leq5n+\tfrac92B .
+\]
+If $n\leq h_0$, $M_e\geq nj^2/2$, and hence
+\[
+ p^2\leq5nj^2+\tfrac92Bj^2
+ \leq10M_e+\tfrac{45}{2}f_c/y
+ \leq\tfrac{45}{2}\Sigma .
+\]
+If $n\geq h_0$, then $M_e\geq h_0j^2/2\geq j^2/4$ and $p^2<j^2\leq4M_e$.
+This proves \eqref{eq:harmonic}. At $n=0$ the positive term $f_c/y$
+is unchanged.
+
+\subsection*{Signed coefficients and the normal matrix}
+The exact positive expression
+\begin{align*}
+ \mathsf K-pW_0+Bp(1-p)J
+ ={}&B(1-p)[Hj(p+1)+H(1-p)+p^2]\\
+ &+TBH[(p+1)(1-H)j+(1-p)(BHj+p+1-H)]\\
+ &+T^2B^2H^2j(1-H)
+\end{align*}
+shows $\mathsf K>0$, since $BJ<1$ and $W_0\geq1-p$.
+For an upper bound, its four displayed lines contribute at most
+$p,B,B\delta(2+\delta),B\delta^3$ after division by $J$.
+Thus $\mathsf K/J\leq p+3B$ and $\kappa=-k_c>0$; the exact ratios imply
+\begin{equation}
+ \phi\kappa/f_c\leq3T,\quad
+ \phi\kappa/(\Sigma yx)\leq24T,\quad
+ \kappa/(q_cy)\leq3,\quad
+ (1-\phi)\kappa/r_c\leq3T,\quad
+ g_c/f_c=HyL/F\leq2y.
+ \label{eq:kappabounds}
+\end{equation}
+For example the four rational constants proving the first four bounds are
+bounded, respectively, by
+\[
+ \frac{8(1+\delta)(1+3\delta)}{3(1-\delta)f_0}<3,\quad
+ \frac{64(1+\delta)(1+3\delta)}{3(1-\delta)}<24,\quad
+ \frac{(1+\delta)(2+6\delta)}{(1-\delta)(1-2\delta)}<3,\quad
+ \frac{4(2+6\delta)}{3f_0}<3.
+\]
+They use \eqref{eq:phi}, $K\geq J/2$ and the exact source ratios.
+
+For the first normal, bounding the positive terms in $\mathsf N/j$ above
+and discarding its nonpositive terms gives
+\[
+ \mathsf N/j\leq1+4\delta+2\delta^2+6\delta^3+
+                       \delta^4(1+\delta)<2.
+\]
+In this bound use $Hj+H-j-1\leq0$ and
+$2Hjp-2jp\leq0$ before bounding the other terms.
+As $P\geq J$, it follows that
+$0\leq n(1-p/j)=\mathsf N/(2jP)<1$.
+Therefore $|K_c/j|\leq2$, and
+\[
+ |K_R|\leq \mu+(\alpha+\half)(1-p)+2T
+ \leq\tfrac23+2\delta^2+2\delta<1.
+\]
+For the second normal, the complementary $H$ and $1-H$ factors in $C,D$
+must be retained together:
+\[
+ a_M=TH(1-H)(C+D+\half+A),\qquad
+ \frac{f_0}{4R_0}\leq a_M
+ \leq\frac{\max\{\ell_0,(1+\delta^2)^3\}}2+\frac{\delta}{8}
+                              +\frac{\delta^2}{6}.
+\]
+The endpoints lie strictly between $1/8$ and $3/4$.
+Indeed $THC=L/(2P)$, while
+$T(1-H)D=(1+Hy)(K+Hjy)[1-y((1-H)j-p)]/(2P)$.
+Their lower bounds are $f_0/(4R_0)$ and
+$(1-\delta^2)/(4R_0)$, and their upper bounds are
+$\ell_0/2$ and $(1+\delta^2)^3/2$. The terms $\tau^2/2$ and $\tau^2 A$
+contribute at most $\delta/8$ and $\delta^2/6$.
+
+Finally $\rho_Q\leq\sqrt{8T}$ and $\tau\leq\sqrt T/2$.
+Reading the three cross coefficients in \eqref{eq:cross} gives
+\begin{gather*}
+ \|K_{11}\|^2\leq578T/9<1,\\
+ \|K_{02}\|\leq\sqrt2[\ell_0/2+
+                  \delta(2\delta/3+2\delta^2+\half)]<1,\qquad
+ \|K_{22}\|\leq\sqrt2\,\ell_0/2<1 .
+\end{gather*}
+The constant $\widehat M\widehat Q$ entry is at most
+$\tau\rho_QA/T\leq2\sqrt2\,T/3<T$.
+This proves every matrix bound used in the main argument.

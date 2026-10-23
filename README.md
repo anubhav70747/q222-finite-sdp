@@ -14,62 +14,51 @@ The companion retains the complete singular-case argument. **An exact affine
 pencil for the full eight-coordinate quantum set has not yet been extracted.**
 The following construction isolates the remaining step in a small matrix problem.
 
-## The completion approach
+## One cancellation across the singular source limits
 
-The [canonical reduction](extracted-lifts/canonical-completion/Q222_Canonical_Completion.pdf)
-eliminates Alice's angle. A Bell slack is valid exactly when two four-by-four
-matrices admit a common completion J at every Bob angle v. This includes
-zero source weights, all state signs and projective endpoints.
+The [uniform contact proof](extracted-lifts/canonical-completion/uniform-contact/Uniform_Contact_Certificate.pdf)
+has a three-page main argument and nine pages of analytical appendices.
+Two square completions contain coefficients that become singular in different
+source limits. The weight `phi = p^2 / (1-p+p^2)` combines them before either
+coefficient is bounded. Keeping the entire first-normal coupling preserves
+the cancellation. Both state directions are then controlled by one positive
+matrix.
 
-Choosing J as a polynomial on the full real line fails. A rational source
-and a two-coordinate negative quadratic form give a short exact obstruction.
-The [multiplier theorem](extracted-lifts/canonical-completion/polynomial-obstruction/Q222_Fixed_Polynomial_Multiplier_Obstruction.pdf)
-shows that no fixed nonnegative separable polynomial multiplier repairs
-this failure for every valid source. Its limiting polynomial is Motzkin plus
-a constant.
+This proves a fixed certificate for the broader stationary R1 source family
+on a specified measurement cap, including vanishing event weights and
+unbounded source ratios. Its [evaluated rational system](extracted-lifts/canonical-completion/uniform-contact/)
+has total PSD order 283. The proof gives every square, its fixed function
+span, the affine equations and a finite-grid proof of closedness.
 
-On a half-line, square-root factors change the problem. The
-[half-line construction](extracted-lifts/canonical-completion/halfline/Q222_Halfline_Completion.pdf)
-represents quadratic completions by four PSD blocks of orders 8, 8, 4, 4.
-With the source-sign constraints its total order is 33, with 44 auxiliaries.
-Its matrices are affine in all nine canonical source coefficients. The
-projected cone is closed, and an explicit rational witness certifies the
-source that defeats every global polynomial completion.
+The larger source family also has exact zeros outside this cap. An
+[explicit rational example](extracted-lifts/canonical-completion/uniform-contact/Annulus_Obstruction.md)
+shows why the earlier separated arc matrix cannot cover those zeros:
+it retains positive squares where the full Bell slack vanishes. Extending
+the combined-normal completion to these tests remains necessary.
 
-The [exact separation and algebraic enlargement](extracted-lifts/canonical-completion/ramified-completion/Q222_Halfline_Order33_Counterexample.pdf)
-settle the half-line question: an all-positive rational valid source lies
-outside the order-33 cone. The matrix growth bound makes this an obstruction
-to polynomial half-line selectors of every degree. Adding the selector terms
-sqrt(v) and v^(3/2) certifies the excluded source. The resulting order-49
-cone has 148 auxiliaries and 40 fixed scalar functions on a compact
-algebraic cover. A [canonical symmetry counterexample](extracted-lifts/canonical-completion/ramified-obstruction/Q222_Ramified_Quartic_Obstruction.pdf)
-now proves that this enlarged cone is also strictly smaller than the
-canonical valid-source cone. Its all-positive rational source excludes
-polynomial selectors of every degree in the same coordinate s = sqrt(v)/4:
-the PSD growth bound forces any such polynomial to have degree at most four.
+## From canonical certificates to the full quantum set
 
 The [three-page assembly proof](extracted-lifts/canonical-completion/full-polar/Q222_Polar_Assembly.pdf)
-shows why that canonical question is decisive. Eight output relabellings
-give the full quantum polar, and combining them cannot repair a missing
-canonical certificate. A strictly feasible exact canonical pencil therefore
-gives the full eight-coordinate lift through eight adjoint copies.
-Applied to the ramified cone, the new counterexample makes its order-392
-eight-copy outer approximation strictly larger than Q222.
-The exact coordinate maps, rational feasible points and matrix data are in
-[canonical-completion/](extracted-lifts/canonical-completion/).
+reduces the full quantum polar to eight output relabellings of one canonical
+cone. An exact canonical pencil gives the eight-coordinate lift through
+eight adjoint copies. The unresolved requirement is a single evaluated
+certificate family admitting every canonical source at every testing angle.
 
-The [contact completion](extracted-lifts/canonical-completion/contact-completion/)
-combines the two state normals before completing squares. Their shared
-positive coefficient controls the singular coupling even when one event
-weight vanishes. Uniform bounds then give fixed testing functions.
-Two compact proofs cover the weak and strong source regimes. Joining them
-to the [regional matrices](extracted-lifts/canonical-completion/fixed-c2-gates/Fixed_C2_Completions.pdf)
-gives an order-635 construction valid at every measurement setting for the
-stated native C2 source family. Radical-sign averaging reduces it to
-4024 auxiliaries and 619 coefficient equations. The evaluated rational
-arrays, exact source identities and coefficient estimates are included.
-Admission of every canonical source remains the unresolved requirement
-for the full exact lift.
+The earlier [contact completion](extracted-lifts/canonical-completion/contact-completion/)
+and [regional matrices](extracted-lifts/canonical-completion/fixed-c2-gates/Fixed_C2_Completions.pdf)
+already give an order-635 construction valid at all measurements for their
+smaller native source family. The long companion is retained because a
+short, complete global replacement has not yet been established.
+
+The [canonical reduction](extracted-lifts/canonical-completion/Q222_Canonical_Completion.pdf)
+also turns validity into a common completion of two four-by-four matrices
+at every Bob angle. Its simpler fixed-selector candidates are now understood:
+the [order-33 half-line cone](extracted-lifts/canonical-completion/halfline/)
+and the [order-49 ramified cone](extracted-lifts/canonical-completion/ramified-completion/)
+are strict sub-cones, with [exact counterexamples](extracted-lifts/canonical-completion/ramified-obstruction/).
+The [fixed polynomial multiplier obstruction](extracted-lifts/canonical-completion/polynomial-obstruction/)
+explains why increasing a separable polynomial degree does not repair the
+global construction. Their proofs and matrices remain available.
 
 ## Other explicit results
 

@@ -1,0 +1,283 @@
+\documentclass[10pt]{article}
+\usepackage[margin=.75in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,array,hyperref}
+\hypersetup{hidelinks}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newcommand{\half}{\tfrac12}
+\newcommand{\bc}{b_{\mathrm c}}
+\newcommand{\Zc}{Z_*}
+\newcommand{\Qh}{Q_*}
+\newcommand{\Rh}{R_*}
+\newcommand{\Bh}{B_*}
+\newcommand{\D}{\mathcal D}
+\newcommand{\Ps}{\Psi}
+\newcommand{\E}{\mathcal E}
+\newcommand{\W}{\mathcal W}
+\newcommand{\Aop}{\mathcal A}
+\newcommand{\Bop}{\mathcal B}
+\newcommand{\calP}{\mathcal P}
+\newcommand{\ps}{\succeq}
+\setlength{\jot}{3pt}
+\title{A uniform contact certificate with independent source and testing parameters}
+\author{}\date{}
+\begin{document}
+\maketitle\vspace{-2em}
+
+The Bell slack is quadratic in the state coordinates. At a zero, every
+square in a positive decomposition must vanish. To retain this zero
+throughout the source family, we combine two square completions before
+estimating their singular source coefficients.
+
+Write the source as $c=(d,\lambda,n,m,C,A,D,\alpha,\beta)\geq0$ and
+put $D_u=1+u^2$, $D_v=1+v^2$. The canonical Bell slack $S_c=F_h/4$ is
+\begin{align}
+ D_uD_vS_c={}&\lambda D_u(W+vX)^2+nD_uD_vX^2
+ +m(vW-X+uvY-uZ)^2 \notag\\
+ &+CD_v(uW-Y)^2+AD_uD_vY^2
+ +(D+d/2)(uW+uvX-Y-vZ)^2 \notag\\
+ &+(\alpha+d/2)D_u(vY-Z)^2
+ +(\beta+d/2)D_v(X+uZ)^2-\tfrac d2D_uD_vZ^2 .
+ \label{eq:slack}
+\end{align}
+All four state coordinates are independent. Use the testing change
+\begin{equation}
+ t=\frac{X+uZ}{D_u},\quad r=\frac{Y-uW}{D_u},\quad
+ w=\frac{W+uY}{D_u},\quad \zeta=\frac{Z-uX}{D_u},
+ \qquad
+ (W,X,Y,Z)=(w-ur,t-u\zeta,r+uw,\zeta+ut).
+ \label{eq:rotation}
+\end{equation}
+Only the strictly positive testing factor $D_u$ is inverted.
+
+The source family in this note has $(d,\lambda,\beta)=(1,0,0)$.
+Its rational coefficients are given in Appendix~\ref{app:source} in terms of
+\begin{equation}
+ \delta=2^{-10},\qquad
+ 0<B,T\leq\delta,\quad0<x=jB\leq\delta,\quad
+ 0<p<\min(j,1),\quad0<H<1,\quad n\geq0.
+ \label{eq:domain}
+\end{equation}
+The condition $n\geq0$ is imposed on the displayed rational coefficient.
+The ratios $j$ and $jT$ may tend to zero or infinity.
+
+\begin{theorem}\label{thm:cap}
+Every source in \eqref{eq:domain} satisfies $S_c\geq0$ for every state and
+\[
+ |u|\leq u_0=2^{-12},\qquad |v|\leq v_0=2^{-25}.
+\]
+On each required real sign chart the construction uses finitely many fixed
+testing functions and source-only positive Gram matrices. It includes
+$n=0$ literally and allows arbitrary nonnegative additions of the eight
+event coordinates. Source and testing parameters remain independent.
+\end{theorem}
+
+The common source weight
+\[
+ \phi=\frac{p^2}{1-p+p^2}
+\]
+makes the two available completions compatible. The factor $1-\phi$ cancels
+$1-p$ in one denominator; $\phi$ controls the other denominator through a
+harmonic coefficient. The first-normal expression $J_\alpha$ below is kept
+whole while this allocation is made.
+
+\section{One weight for the two denominators}
+Put $y=TB$, $q_z=jT$, $\mu=m(1-p)$ and define
+\begin{gather}
+ N=t-pvw,\quad M=-r-Hv\zeta,\quad
+ \bc=vw-u\zeta/j,\quad R=\zeta-uv\,w/B,\quad R_u=v(u^2-x)w,\notag\\
+ h_0=\mu+\half,\quad
+ M_e=\frac{nh_0j^2}{n+h_0},\quad
+ \widehat N=\sqrt{n+h_0}\left(N+\frac{nj}{n+h_0}\bc\right),\quad
+ E_*=\sqrt{M_e}\bc .
+ \label{eq:normal}
+\end{gather}
+Completing the square gives
+$h_0N^2+n(N+j\bc)^2=\widehat N^2+E_*^2$.
+The positive source masses $f_c,q_c,r_c$ in Appendix~\ref{app:source} satisfy
+\begin{equation}
+ \Sigma=M_e+f_c/y>0,\qquad p^2\leq32\Sigma,\qquad
+ \theta=M_e/\Sigma\in[0,1].
+ \label{eq:harmonic}
+\end{equation}
+Appendix~\ref{app:source} proves this estimate without a bound on $j$.
+Consequently, with $D_p=1-p+p^2\geq3/4$,
+\begin{equation}
+ \frac{1-\phi}{1-p}=\frac1{D_p}\leq\frac43,\qquad
+ \frac{\phi}{\Sigma}\leq\frac{128}{3},\qquad
+ \frac{\phi}{j}\leq\frac{4p}{3}\leq\frac43 .
+ \label{eq:phi}
+\end{equation}
+Every quantity in \eqref{eq:phi} depends only on the source.
+
+To identify the corresponding squares, put
+\begin{gather}
+ U=u/\sqrt x,\quad V=v/\sqrt y,\quad \Zc=\zeta/\sqrt{q_z},\quad
+ \Qh=Uw-V\Zc,\quad \Bh=Vw-U\Zc,\quad\Rh=\Zc-UVw,\notag\\
+ \Ps=(U-V)^2w^2+\Zc^2(1-UV)^2+2UV(w-\Zc)^2 .
+ \label{eq:circuit}
+\end{gather}
+Here $\bc=\sqrt y\,\Bh$ and $R=\sqrt{q_z}\Rh$.
+The first-normal term and its exact decomposition are
+\begin{equation}
+ J_\alpha=j\alpha\bc=-\frac{\alpha}{B}R_u-\alpha uR .
+ \label{eq:J}
+\end{equation}
+Let $A_1=(\alpha/B)R_u$, $B_1=\alpha uR$. Since
+$(1+U^2)\Ps-\Bh^2=\Rh^2+U^2\Qh^2+U^2(w-UV\Zc)^2$,
+\begin{align}
+ &2(1-\phi)(\alpha/B)^2R_u^2
+ +2(1-\phi)\alpha^2q_zu^2\Rh^2
+ +\phi j^2\alpha^2y(1+u^2/x)\Ps-J_\alpha^2 \notag\\
+ &\qquad=(1-\phi)(A_1-B_1)^2
+ +\phi j^2\alpha^2y[\Rh^2+U^2\Qh^2+U^2(w-UV\Zc)^2].
+ \label{eq:Jpurchase}
+\end{align}
+For $\eta=B+x$, the three coefficients on the left, relative respectively to
+$R_u^2$, $r_c\Rh^2$ and $f_c\Ps$, are at most
+\[
+ 2\eta^2,\qquad (64/3)\eta^2u^2,\qquad
+ 8B\eta^2+(32/3)\eta^2u^2 .
+\]
+Thus keeping $J_\alpha$ whole adds only a small coefficient to
+$R_u^2$, even as $p\to1$. The same $\phi$ gives bounds for $R_u$ and the second-normal
+term
+\begin{equation}
+ O=\sqrt T\,v(\alpha-BTCHu^2)R,\qquad
+ H_1=pv^2\bc,\qquad H_2=\sqrt T\,puv\bc .
+ \label{eq:helpers}
+\end{equation}
+The exact identities and their simultaneous bounds are given in
+Appendix~\ref{app:purchases}; none introduces a moving testing radical.
+
+\section{Both normals in one positive matrix}
+Set
+\[
+ a=(n+h_0)^{-1/2},\quad
+ b_0=\sqrt{\frac{n}{h_0(n+h_0)}},\quad
+ \tau=\sqrt{TH(1-H)},\quad \rho_Q=T\sqrt{x/q_c},
+\]
+\[
+ \widehat M=M/\tau,\quad
+ \widehat Q=(v\zeta-Tuw)/\rho_Q=-\sqrt{q_c}\Qh,\quad
+ \widehat R=\sqrt{r_c}\Rh,\qquad N=a\widehat N-b_0E_*.
+\]
+In particular $a^2+b_0^2=1/h_0\leq2$. Choose the three explicit factors
+$\psi_i$ of $f_c\Ps$ from \eqref{eq:circuit} and use the thirteen rows
+\[
+ f=(\widehat N,E_*,R_u,J_\alpha,H_1,\widehat M,O,H_2,
+                         \widehat Q,\widehat R,\psi_1,\psi_2,\psi_3)^T.
+\]
+The quadratic form $f^TKf$ is specified by its diagonal
+\begin{equation}
+ (1,\half,16,16,8,a_M,16,8,\half,\half,\tfrac14,\tfrac14,\tfrac14),
+ \qquad a_M=\tau^2(C+D+\half+A),
+ \label{eq:diag}
+\end{equation}
+and the following complete list of cross terms:
+\begin{align}
+ &2N(K_RR_u-J_\alpha+H_1/2)
+ +2\sqrt{H(1-H)}\,\widehat M\{O+(\mu/p)H_2\}\notag\\
+ &\quad+2uvN\{(K_c/j)\rho_Q\widehat Q
+                         +(\alpha+\half)\tau\widehat M\}
+ +2\tau\rho_Q C_q\,\widehat M\widehat Q, \label{eq:cross}\\
+ K_c&=p/2+j[H(\alpha+\half)-\half]+n(p-j),\notag\\
+ K_R&=-\mu-(\alpha+\half)(1-p)+(T/j)K_c,\qquad
+ C_q=A/T+Hv^2[C(1+u^2)+A+\alpha+\half].\notag
+\end{align}
+
+The source bounds give $|K_R|<1$, $\mu/p\leq2/3$ and $1/8<a_M<3/4$.
+For the constant matrix excluding the constant $\widehat M\widehat Q$
+entry, subtracting $I/16$ gives two Schur corrections at most
+\[
+ 2(32/255+4/127)=10168/32385<7/16,\qquad
+ 4/255+16/1143<1/16 .
+\]
+Its remaining rows are diagonal. It therefore dominates $I/16$.
+The excluded entry has norm at most $T$, and the exact support is
+\begin{equation}
+ K=K_{00}+uvK_{11}+v^2K_{02}+u^2v^2K_{22},\qquad
+ \|K_{11}\|,\|K_{02}\|,\|K_{22}\|\leq1.
+ \label{eq:Kbounds}
+\end{equation}
+The derivation is in Appendix~\ref{app:source}.
+Let $\Pi_{11}$ be the coordinate projection onto
+$(\widehat N,E_*,\widehat M,\widehat Q)$, and let
+$\Pi_{02}=\Pi_{22}$ project onto $(\widehat M,\widehat Q)$.
+These projections contain the exact supports of the three nonconstant
+coefficient matrices. The fixed monomials $P_{ab}=(u/u_0)^a(v/v_0)^b$, for
+$(a,b)=(1,1),(0,2),(2,2)$, have budgets
+$2^{-37},2^{-50},2^{-74}$. The identity
+\[
+ K=K_{00}-\sum\rho_{ab}\Pi_{ab}+
+ \sum_{a,b}\left[
+ \frac{\rho_{ab}\Pi_{ab}+A_{ab}}2(1+P_{ab})+
+ \frac{\rho_{ab}\Pi_{ab}-A_{ab}}2(1-P_{ab})\right],
+ \quad A_{ab}=u_0^av_0^bK_{ab},\quad\rho_{ab}=u_0^av_0^b
+\]
+has positive source matrices and a constant reserve greater than $I/32$,
+because $1/16-\delta-2^{-37}-2^{-50}-2^{-74}>1/32$.
+
+\section{Restoring the scalar squares}
+The complete parent identity, written out in Appendix~\ref{app:parent}, is
+\begin{equation}
+ D_vS_c=f^TKf+\calP+
+ \tfrac34 f_c\Ps+\half q_c\Qh^2+\half M_e\bc^2+\half r_c\Rh^2
+       -g_c\Ps-2\kappa V^2\Qh^2-2\kappa\Rh^2-\mathcal T ,
+ \label{eq:coreidentity}
+\end{equation}
+where $\kappa=-k_c>0$, $\calP$ is a displayed sum of retained positive
+squares, and
+$\mathcal T=16R_u^2+16J_\alpha^2+16O^2+8H_1^2+8H_2^2$.
+The identities in Appendix~\ref{app:purchases} replace all negative terms
+in \eqref{eq:coreidentity} by positive remainders. Their total fractions
+$b_i$ of $(f_c\Ps,q_c\Qh^2,M_e\bc^2,r_c\Rh^2)$ satisfy
+\begin{equation}
+ \|b_\Ps\|_*<9/16,\qquad \|b_Q\|_*<2^{-22},\qquad
+ \|b_E\|_*<1/16,\qquad \|b_R\|_*<1/64 .
+ \label{eq:totalbounds}
+\end{equation}
+The norm sums absolute coefficients weighted by $u_0^av_0^b$.
+The core uses fractions $(1/4,1/2,1/2,1/2)$, so each remaining scalar
+coefficient is strictly positive with a fixed coefficient reserve.
+
+More explicitly, write $b_i=c_{i0}+\sum_\nu c_{i\nu}P_\nu$, where the
+nonconstant exponents lie in
+\[
+ (2,0),(4,0),(0,2),(2,2),(4,2),(6,2),(0,4),(2,4),(4,4).
+\]
+Since these exponents are even, $0\leq P_\nu\leq1$ on the signed cap and
+$P_\nu$ is a polynomial square. With $c^\pm=\max(\pm c,0)$,
+\[
+ 1-d_i-b_i=
+ \underbrace{1-d_i-c_{i0}-\sum_\nu c_{i\nu}^+}_{>0}
+ +\sum_\nu c_{i\nu}^+(1-P_\nu)+\sum_\nu c_{i\nu}^-P_\nu .
+\]
+This uses only fixed scalar gates. Expanding the finitely many displayed
+roots separates their source coefficients from their testing monomials.
+Appendix~\ref{app:functions} records the resulting fixed lists.
+
+All expressions are literal at $n=0$: $b_0=M_e=E_*=0$ and
+$\Sigma=f_c/y>0$. On $u,v\geq0,w\zeta\leq0$, replace the three factors
+of $f_c\Ps$ by the five factors
+$\sqrt{f_c}(Uw,Vw,\Zc,UV\Zc,2\sqrt{-UVw\Zc})$.
+Only the three uncoupled diagonal rows change to five rows with the same
+coefficient $1/4$; every matrix bound remains valid.
+Appendix~\ref{app:parent} gives positive expansions of both radial forms
+on this state chart. The source-preserving angle gauges extend the two
+identities to all angle signs. All testing roots have their literal zero
+values on the axes; the independent core completion \eqref{eq:signcore}
+also gives direct nonnegativity there.
+Adding nonnegative event coordinates in \eqref{eq:slack} preserves positivity.
+Complex states are covered by their independent real and imaginary parts.
+
+The theorem concerns this source corner and this fixed testing cap.
+Complementary testing regions and admission of all canonical sources require
+further arguments.
+
+\appendix
+\input{R1_Source}
+\input{R1_Purchases}
+\input{R1_Parent}
+\input{Fixed_Testing_Functions}
+\end{document}
