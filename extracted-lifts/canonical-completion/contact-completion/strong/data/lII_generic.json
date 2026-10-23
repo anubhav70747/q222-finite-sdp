@@ -1,0 +1,62 @@
+{
+  "rho": "4*(-2*B*g*ss + 2*B*mu*q*v**2*z**2 - B*q + 2*H*aa*k**2*q*u**2*v**2 + 2*H*aa*k**2*q*u**2 + 2*H*aa*k**2*q*v**2 + 2*H*aa*k**2*q + 2*H*mu*q*u**2*v**2*z**2 + H*q*u**2*v**2 + H*q*v**2 + H*q - 2*al*q*u**2*v**2 - 2*al*q*v**2 - 2*cp*q*v**2 + 2*mu*q*r*v**2*z**3 - 2*mu*q*u**2*v**2*z**2 + q*r*v**2*z - q*u**2*v**2)/B",
+  "Axi": "4*(2*B*V*mu*q*z**2 - 2*B*g*ss - B*q + B + 2*H*U*V*aa*k**2*q + 2*H*U*V*mu*q*z**2 + H*U*V*q + 2*H*U*aa*k**2*q + 2*H*V*aa*k**2*q*z + 2*H*V*aa*k**2*q + 2*H*V*mu*q*z**3 + H*V*q*z + H*V*q + 2*H*aa*k**2*q*z + 2*H*aa*k**2*q - 2*H*mu*z**2 + H*q - H - 2*U*V*al*q - 2*U*V*mu*q*z**2 - U*V*q - 2*V*al*q*z - 2*V*al*q - 2*V*cp*q + 2*V*mu*q*r*z**3 - 2*V*mu*q*z**3 - 2*V*nu*z + V*q*r*z - V*q*z - V*r*z + 2*mu*z**2 - 2*nu*z + 1)/B",
+  "Bxi": "4*(2*B*mu*q*z**2 + 2*H*aa*k**2*q*z + 2*H*aa*k**2*q + 2*H*mu*q*z**3 + H*q*z + H*q - 2*al*q*z - 2*al*q - 2*cp*q + 2*mu*q*r*z**3 - 2*mu*q*z**3 - 2*nu*z - 2*nu + q*r*z - q*z - r*z - r)/B",
+  "Aze": "-4*(2*H*V*aa*k**2*q + 2*H*V*mu*q*z**2 + H*V*q + 2*H*aa*k**2*q + 2*H*mu*z**2 + H - 2*V*al*q - 2*V*mu*q*z**2 - V*q - 2*al - 2*mu*z**2 - 1)/B",
+  "Bze": "-4*q*(2*B*mu*z**2 + 2*H*aa*k**2*z + 2*H*aa*k**2 + 2*H*mu*z**3 + H*z + H - 2*al*z - 2*al - 2*cp + 2*mu*r*z**3 - 2*mu*z**3 + r*z - z)/B",
+  "An": "4*(2*H*V*aa*k**2 + 2*H*V*mu*z**2 + H*V + 2*H*aa*k**2 - 2*V*al - 2*V*mu*z**2 - V)/B",
+  "Bn": "4*(2*B*mu*z**2 + 2*H*aa*k**2*z + 2*H*aa*k**2 + 2*H*mu*z**3 + H*z + H - 2*al*z - 2*al - 2*cp + 2*mu*r*z**3 - 2*mu*z**3 + r*z - z)/B",
+  "As": "-2*(2*B**2*mu + 4*B*H*V*aa*k**2*q*ss + 4*B*H*V*mu*q*ss*z**2 + 2*B*H*V*q*ss + 4*B*H*aa*k**2*q*ss - 4*B*V*al*q*ss - 4*B*V*mu*q*ss*z**2 - 2*B*V*q*ss + 4*B*mu*r*z - 2*H**2*aa*k**2 - 2*H**2*mu*z**2 - H**2 + 2*H*al + 4*H*mu*z**2 + 2*H + 2*V*nu*r + V*r**2 - 2*al + 2*k**2*nu*r + k**2*r**2 + 2*mu*r**2*z**2 - 2*mu*z**2 + 2*nu*r + r**2 - 1)/B**2",
+  "Bs": "-2*(4*B**2*V*mu*q*ss*z**2 - 4*B**2*g*ss**2 - 4*B**2*mu*z - 2*B**2*q*ss + 4*B*H*V*aa*k**2*q*ss + 2*B*H*V*q*ss + 4*B*H*aa*k**2*q*ss - 4*B*H*mu*z**2 + 2*B*H*q*ss - 4*B*V*al*q*ss - 4*B*V*cp*q*ss + 4*B*V*mu*q*r*ss*z**3 + 2*B*V*q*r*ss*z - 8*B*mu*r*z**2 + 4*B*mu*z**2 + 2*B*r*z + 2*B - 2*H**2*aa*k**2 - H**2 + 2*H*al - 4*H*mu*r*z**3 - 2*H*r*z - 2*V*nu*r*z**2 - 4*V*nu*r*z - V*r**2*z**2 - 2*V*r**2*z - 2*al - 2*cp*k**2*ts - 2*k**2*nu*r*z**2 - 4*k**2*nu*r*z - k**2*r**2*z**2 - 2*k**2*r**2*z - 4*mu*r**2*z**3 + 4*mu*r*z**3 - 2*nu*r*z**2 - 4*nu*r*z - 2*r**2*z + 2*r*z)/B**2",
+  "Cs": "-2*(4*B**2*mu*q*ss*z**2 + 4*B*H*aa*k**2*q*ss*z + 4*B*H*aa*k**2*q*ss + 4*B*H*mu*q*ss*z**3 + 2*B*H*q*ss*z + 2*B*H*q*ss - 4*B*al*q*ss*z - 4*B*al*q*ss - 4*B*cp*q*ss + 4*B*mu*q*r*ss*z**3 - 4*B*mu*q*ss*z**3 + 2*B*q*r*ss*z - 2*B*q*ss*z - 2*nu*r*z**2 - 2*nu*r*z - r**2*z**2 - r**2*z)/B**2",
+  "Gram": [
+    [
+      "2*(2*aa*k**4*u**2*v**2 + 2*aa*k**4*u**2 + 2*aa*k**4*v**2 + 2*aa*k**4 + 2*als*k**2*u**2*v**2 + 2*als*k**2*v**2 + 2*k**2*mu*u**2*v**2*z**2 + k**2*u**2*v**2 + k**2*v**2 + k**2 + 2*ls)",
+      "2*k*u*v*(-2*B*mu*ss*z**2 + 2*B*mu*z**2 - B*ss + 2*H*aa*k**2*z + 2*H*aa*k**2 + 2*H*mu*z**3 + H*z + H - 2*al*z - 2*al - 2*cp + 2*mu*r*z**3 - 2*mu*z**3 + r*z - z)/(B*ss)",
+      "-2*k*v*(2*B*als*ss*u**2 + 2*B*als*ss + 2*B*mu*ss*u**2*z**2 + 2*B*mu*z**2 + B*ss*u**2 + 2*H*aa*k**2*z + 2*H*aa*k**2 + 2*H*mu*z**3 + H*z + H - 2*al*z - 2*al - 2*cp + 2*mu*r*z**3 - 2*mu*z**3 + r*z - z)/(B*ss)",
+      "-2*k**2*(-2*B*aa*k**2*q*ss*u**2*v**2 - 2*B*aa*k**2*q*ss*u**2 - 2*B*aa*k**2*q*ss*v**2 - 2*B*aa*k**2*q*ss - 2*B*als*q*ss*u**2*v**2 - 2*B*als*q*ss*v**2 - 2*B*mu*q*ss*u**2*v**2*z**2 + 2*B*mu*z**2 - B*q*ss*u**2*v**2 - B*q*ss*v**2 - B*q*ss + 2*H*aa*k**2*z + 2*H*aa*k**2 + 2*H*mu*z**3 + H*z + H - 2*al*z - 2*al - 2*cp + 2*mu*r*z**3 - 2*mu*z**3 + r*z - z)/(B*ss)",
+      "0",
+      "2*(2*H*aa*k**2*v**2 + 2*H*aa*k**2 + 2*H*mu*v**2*z**2 + H*v**2 - 2*al*v**2 - 2*mu*v**2*z**2 - v**2)/B"
+    ],
+    [
+      "2*k*u*v*(-2*B*mu*ss*z**2 + 2*B*mu*z**2 - B*ss + 2*H*aa*k**2*z + 2*H*aa*k**2 + 2*H*mu*z**3 + H*z + H - 2*al*z - 2*al - 2*cp + 2*mu*r*z**3 - 2*mu*z**3 + r*z - z)/(B*ss)",
+      "2*(2*B**2*mu*ss**2*z**2 + B**2*ss**2*u**2*v**2 + B**2*ss**2*v**2 + B**2*ss**2 - 4*B*nu*ss*u**2*v**2*z - 4*B*nu*ss*u**2*v**2 - 2*B*r*ss*u**2*v**2*z - 2*B*r*ss*u**2*v**2 + 2*nu*r*u**2*v**2*z**2 + 2*nu*r*u**2*v**2*z + r**2*u**2*v**2*z**2 + r**2*u**2*v**2*z)/(B**2*ss**2)",
+      "-2*u*(-2*B**2*mu*ss**2*z**2 - B**2*ss**2 - 2*B*nu*ss*v**2*z - 2*B*nu*ss*v**2 - B*r*ss*v**2*z - B*r*ss*v**2 + 2*nu*r*v**2*z**2 + 2*nu*r*v**2*z + r**2*v**2*z**2 + r**2*v**2*z)/(B**2*ss**2)",
+      "2*k*u*v*(-2*B**2*mu*q*ss**2*z**2 + 2*B**2*mu*q*ss*z**2 - B**2*q*ss**2 + 2*B*H*aa*k**2*q*ss*z + 2*B*H*aa*k**2*q*ss + 2*B*H*mu*q*ss*z**3 + B*H*q*ss*z + B*H*q*ss - 2*B*al*q*ss*z - 2*B*al*q*ss - 2*B*cp*q*ss + 2*B*mu*q*r*ss*z**3 - 2*B*mu*q*ss*z**3 + 2*B*nu*ss*z + 2*B*nu*ss + B*q*r*ss*z - B*q*ss*z + B*r*ss*z + B*r*ss - 2*nu*r*z**2 - 2*nu*r*z - r**2*z**2 - r**2*z)/(B**2*ss**2)",
+      "(-4*B**2*g*ss**2 + 4*B**2*k**2*mu*q*ss*z**2 - 2*B**2*mu*u**2 - 2*B**2*q*ss + 2*B**2*ss + 4*B*H*aa*k**4*q*ss*z + 4*B*H*aa*k**4*q*ss + 4*B*H*aa*k**2*q*ss*z + 4*B*H*aa*k**2*q*ss + 4*B*H*k**2*mu*q*ss*z**3 + 2*B*H*k**2*q*ss*z + 2*B*H*k**2*q*ss - 4*B*H*mu*ss*z**2 + 2*B*H*q*ss - 2*B*H*ss - 4*B*al*k**2*q*ss*z - 4*B*al*k**2*q*ss - 4*B*cp*k**2*q*ss + 4*B*k**2*mu*q*r*ss*z**3 - 4*B*k**2*mu*q*ss*z**3 - 4*B*k**2*nu*ss*z - 4*B*k**2*nu*ss + 2*B*k**2*q*r*ss*z - 2*B*k**2*q*ss*z - 2*B*k**2*r*ss*z - 2*B*k**2*r*ss - 4*B*mu*r*u**2*z + 4*B*mu*ss*z**2 + 4*B*nu*ss*v**2 - 4*B*nu*ss*z + 2*B*r*ss*v**2 + 2*B*ss + 2*H**2*aa*k**2*u**2 + 2*H**2*mu*u**2*z**2 + H**2*u**2 - 2*H*al*u**2 - 4*H*mu*u**2*z**2 - 2*H*u**2 + 2*al*u**2 - 2*k**2*nu*r*u**2 - k**2*r**2*u**2 - 2*mu*r**2*u**2*z**2 + 2*mu*u**2*z**2 - 2*nu*r*u**2*v**2 - 2*nu*r*u**2 - r**2*u**2*v**2 - r**2*u**2 + u**2)/(B**2*ss)",
+      "0"
+    ],
+    [
+      "-2*k*v*(2*B*als*ss*u**2 + 2*B*als*ss + 2*B*mu*ss*u**2*z**2 + 2*B*mu*z**2 + B*ss*u**2 + 2*H*aa*k**2*z + 2*H*aa*k**2 + 2*H*mu*z**3 + H*z + H - 2*al*z - 2*al - 2*cp + 2*mu*r*z**3 - 2*mu*z**3 + r*z - z)/(B*ss)",
+      "-2*u*(-2*B**2*mu*ss**2*z**2 - B**2*ss**2 - 2*B*nu*ss*v**2*z - 2*B*nu*ss*v**2 - B*r*ss*v**2*z - B*r*ss*v**2 + 2*nu*r*v**2*z**2 + 2*nu*r*v**2*z + r**2*v**2*z**2 + r**2*v**2*z)/(B**2*ss**2)",
+      "2*(2*B**2*als*ss**2*u**2 + 2*B**2*als*ss**2 + 2*B**2*mu*ss**2*u**2*z**2 + B**2*ss**2*u**2 + 2*nu*r*v**2*z**2 + 2*nu*r*v**2*z + r**2*v**2*z**2 + r**2*v**2*z)/(B**2*ss**2)",
+      "-2*k*v*(2*B**2*als*q*ss**2*u**2 + 2*B**2*als*q*ss**2 + 2*B**2*mu*q*ss**2*u**2*z**2 + 2*B**2*mu*q*ss*z**2 + B**2*q*ss**2*u**2 + 2*B*H*aa*k**2*q*ss*z + 2*B*H*aa*k**2*q*ss + 2*B*H*mu*q*ss*z**3 + B*H*q*ss*z + B*H*q*ss - 2*B*al*q*ss*z - 2*B*al*q*ss - 2*B*cp*q*ss + 2*B*mu*q*r*ss*z**3 - 2*B*mu*q*ss*z**3 + B*q*r*ss*z - B*q*ss*z - 2*nu*r*z**2 - 2*nu*r*z - r**2*z**2 - r**2*z)/(B**2*ss**2)",
+      "u*(2*B**2*mu - 4*B*H*mu*ss*z**2 - 2*B*H*ss + 4*B*al*ss + 4*B*mu*r*z + 4*B*mu*ss*z**2 + 2*B*ss - 2*H**2*aa*k**2 - 2*H**2*mu*z**2 - H**2 + 2*H*al + 4*H*mu*z**2 + 2*H - 2*al + 2*k**2*nu*r + k**2*r**2 + 2*mu*r**2*z**2 - 2*mu*z**2 + 2*nu*r*v**2 + 2*nu*r + r**2*v**2 + r**2 - 1)/(B**2*ss)",
+      "0"
+    ],
+    [
+      "-2*k**2*(-2*B*aa*k**2*q*ss*u**2*v**2 - 2*B*aa*k**2*q*ss*u**2 - 2*B*aa*k**2*q*ss*v**2 - 2*B*aa*k**2*q*ss - 2*B*als*q*ss*u**2*v**2 - 2*B*als*q*ss*v**2 - 2*B*mu*q*ss*u**2*v**2*z**2 + 2*B*mu*z**2 - B*q*ss*u**2*v**2 - B*q*ss*v**2 - B*q*ss + 2*H*aa*k**2*z + 2*H*aa*k**2 + 2*H*mu*z**3 + H*z + H - 2*al*z - 2*al - 2*cp + 2*mu*r*z**3 - 2*mu*z**3 + r*z - z)/(B*ss)",
+      "2*k*u*v*(-2*B**2*mu*q*ss**2*z**2 + 2*B**2*mu*q*ss*z**2 - B**2*q*ss**2 + 2*B*H*aa*k**2*q*ss*z + 2*B*H*aa*k**2*q*ss + 2*B*H*mu*q*ss*z**3 + B*H*q*ss*z + B*H*q*ss - 2*B*al*q*ss*z - 2*B*al*q*ss - 2*B*cp*q*ss + 2*B*mu*q*r*ss*z**3 - 2*B*mu*q*ss*z**3 + 2*B*nu*ss*z + 2*B*nu*ss + B*q*r*ss*z - B*q*ss*z + B*r*ss*z + B*r*ss - 2*nu*r*z**2 - 2*nu*r*z - r**2*z**2 - r**2*z)/(B**2*ss**2)",
+      "-2*k*v*(2*B**2*als*q*ss**2*u**2 + 2*B**2*als*q*ss**2 + 2*B**2*mu*q*ss**2*u**2*z**2 + 2*B**2*mu*q*ss*z**2 + B**2*q*ss**2*u**2 + 2*B*H*aa*k**2*q*ss*z + 2*B*H*aa*k**2*q*ss + 2*B*H*mu*q*ss*z**3 + B*H*q*ss*z + B*H*q*ss - 2*B*al*q*ss*z - 2*B*al*q*ss - 2*B*cp*q*ss + 2*B*mu*q*r*ss*z**3 - 2*B*mu*q*ss*z**3 + B*q*r*ss*z - B*q*ss*z - 2*nu*r*z**2 - 2*nu*r*z - r**2*z**2 - r**2*z)/(B**2*ss**2)",
+      "-2*(-2*B**2*aa*k**4*q**2*ss**2*u**2*v**2 - 2*B**2*aa*k**4*q**2*ss**2*u**2 - 2*B**2*aa*k**4*q**2*ss**2*v**2 - 2*B**2*aa*k**4*q**2*ss**2 - 2*B**2*als*k**2*q**2*ss**2*u**2*v**2 - 2*B**2*als*k**2*q**2*ss**2*v**2 - 2*B**2*g*ss**2 - 2*B**2*k**2*mu*q**2*ss**2*u**2*v**2*z**2 + 4*B**2*k**2*mu*q*ss*z**2 - B**2*k**2*q**2*ss**2*u**2*v**2 - B**2*k**2*q**2*ss**2*v**2 - B**2*k**2*q**2*ss**2 + 4*B*H*aa*k**4*q*ss*z + 4*B*H*aa*k**4*q*ss + 4*B*H*k**2*mu*q*ss*z**3 + 2*B*H*k**2*q*ss*z + 2*B*H*k**2*q*ss - 4*B*al*k**2*q*ss*z - 4*B*al*k**2*q*ss - 4*B*cp*k**2*q*ss + 4*B*k**2*mu*q*r*ss*z**3 - 4*B*k**2*mu*q*ss*z**3 + 2*B*k**2*q*r*ss*z - 2*B*k**2*q*ss*z - 2*k**2*nu*r*z**2 - 2*k**2*nu*r*z - k**2*r**2*z**2 - k**2*r**2*z)/(B**2*ss**2)",
+      "0",
+      "(2*B**2*mu + 4*B*H*aa*k**2*q*ss*v**2 + 4*B*H*aa*k**2*q*ss + 4*B*H*mu*q*ss*v**2*z**2 + 2*B*H*q*ss*v**2 - 4*B*al*q*ss*v**2 - 4*B*mu*q*ss*v**2*z**2 + 4*B*mu*r*z - 2*B*q*ss*v**2 - 2*H**2*aa*k**2 - 2*H**2*mu*z**2 - H**2 + 2*H*al + 4*H*mu*z**2 + 2*H - 2*al + 2*k**2*nu*r + k**2*r**2 + 2*mu*r**2*z**2 - 2*mu*z**2 + 2*nu*r*v**2 + 2*nu*r + r**2*v**2 + r**2 - 1)/(B**2*ss)"
+    ],
+    [
+      "0",
+      "(-4*B**2*g*ss**2 + 4*B**2*k**2*mu*q*ss*z**2 - 2*B**2*mu*u**2 - 2*B**2*q*ss + 2*B**2*ss + 4*B*H*aa*k**4*q*ss*z + 4*B*H*aa*k**4*q*ss + 4*B*H*aa*k**2*q*ss*z + 4*B*H*aa*k**2*q*ss + 4*B*H*k**2*mu*q*ss*z**3 + 2*B*H*k**2*q*ss*z + 2*B*H*k**2*q*ss - 4*B*H*mu*ss*z**2 + 2*B*H*q*ss - 2*B*H*ss - 4*B*al*k**2*q*ss*z - 4*B*al*k**2*q*ss - 4*B*cp*k**2*q*ss + 4*B*k**2*mu*q*r*ss*z**3 - 4*B*k**2*mu*q*ss*z**3 - 4*B*k**2*nu*ss*z - 4*B*k**2*nu*ss + 2*B*k**2*q*r*ss*z - 2*B*k**2*q*ss*z - 2*B*k**2*r*ss*z - 2*B*k**2*r*ss - 4*B*mu*r*u**2*z + 4*B*mu*ss*z**2 + 4*B*nu*ss*v**2 - 4*B*nu*ss*z + 2*B*r*ss*v**2 + 2*B*ss + 2*H**2*aa*k**2*u**2 + 2*H**2*mu*u**2*z**2 + H**2*u**2 - 2*H*al*u**2 - 4*H*mu*u**2*z**2 - 2*H*u**2 + 2*al*u**2 - 2*k**2*nu*r*u**2 - k**2*r**2*u**2 - 2*mu*r**2*u**2*z**2 + 2*mu*u**2*z**2 - 2*nu*r*u**2*v**2 - 2*nu*r*u**2 - r**2*u**2*v**2 - r**2*u**2 + u**2)/(B**2*ss)",
+      "u*(2*B**2*mu - 4*B*H*mu*ss*z**2 - 2*B*H*ss + 4*B*al*ss + 4*B*mu*r*z + 4*B*mu*ss*z**2 + 2*B*ss - 2*H**2*aa*k**2 - 2*H**2*mu*z**2 - H**2 + 2*H*al + 4*H*mu*z**2 + 2*H - 2*al + 2*k**2*nu*r + k**2*r**2 + 2*mu*r**2*z**2 - 2*mu*z**2 + 2*nu*r*v**2 + 2*nu*r + r**2*v**2 + r**2 - 1)/(B**2*ss)",
+      "0",
+      "2*(2*B**2*mu + 4*B*mu*r*z + 2*mu*r**2*z**2 + 2*nu*r*v**2 + 2*nu*r + r**2*v**2 + r**2)/B**2",
+      "0"
+    ],
+    [
+      "2*(2*H*aa*k**2*v**2 + 2*H*aa*k**2 + 2*H*mu*v**2*z**2 + H*v**2 - 2*al*v**2 - 2*mu*v**2*z**2 - v**2)/B",
+      "0",
+      "0",
+      "(2*B**2*mu + 4*B*H*aa*k**2*q*ss*v**2 + 4*B*H*aa*k**2*q*ss + 4*B*H*mu*q*ss*v**2*z**2 + 2*B*H*q*ss*v**2 - 4*B*al*q*ss*v**2 - 4*B*mu*q*ss*v**2*z**2 + 4*B*mu*r*z - 2*B*q*ss*v**2 - 2*H**2*aa*k**2 - 2*H**2*mu*z**2 - H**2 + 2*H*al + 4*H*mu*z**2 + 2*H - 2*al + 2*k**2*nu*r + k**2*r**2 + 2*mu*r**2*z**2 - 2*mu*z**2 + 2*nu*r*v**2 + 2*nu*r + r**2*v**2 + r**2 - 1)/(B**2*ss)",
+      "0",
+      "0"
+    ]
+  ]
+}

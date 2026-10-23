@@ -1,0 +1,527 @@
+{
+  "test_variables": [
+    "u",
+    "v"
+  ],
+  "matrix_order": 6,
+  "source_parameterization": "see source-box proof and extract_lII.py",
+  "upper_entries_by_test_monomial": [
+    [
+      0,
+      0,
+      [
+        2,
+        2
+      ],
+      "-kk**2*(-8*dA*hh**2*kk**2 - 8*dA*kk**2 - 8*dm*hh**2*zz**2 - 8*dm*zz**2 - hh**6 - hh**4 - 4*hh**2 - 4*kk**2 + 4*r*zz**2 - 4*zz**2 - 4)/(2*(hh**2 + 1))"
+    ],
+    [
+      0,
+      0,
+      [
+        2,
+        0
+      ],
+      "2*kk**4*(2*dA*hh**2 + 2*dA + 1)/(hh**2 + 1)"
+    ],
+    [
+      0,
+      0,
+      [
+        0,
+        2
+      ],
+      "kk**2*(8*dA*hh**2*kk**2 + 8*dA*kk**2 + hh**6 + hh**4 + 4*hh**2 + 4*kk**2 + 4)/(2*(hh**2 + 1))"
+    ],
+    [
+      0,
+      0,
+      [
+        0,
+        0
+      ],
+      "(4*dA*hh**2*kk**4 + 4*dA*kk**4 + 2*hh**2*kk**2 + hh**2 + 2*kk**4 + 2*kk**2 + 1)/(hh**2 + 1)"
+    ],
+    [
+      0,
+      1,
+      [
+        1,
+        1
+      ],
+      "-2*kk*(-2*dA*hh**6*kk**2*zz - 2*dA*hh**4*kk**2*zz - 2*dA*hh**4*kk**2 - 2*dA*hh**2*kk**2 + 2*dal*hh**8*zz + 2*dal*hh**6*zz + 2*dal*hh**6 + 2*dal*hh**4 + 2*db*dm*ds*hh**2*zz**2 + 2*db*dm*ds*zz**2 - 2*db*dm*hh**4*zz**2 + 2*db*dm*zz**2 + db*ds*hh**2 - db*ds*r*zz**2 + db*ds*zz**2 + db*ds + db*hh**2*r*zz**2 - db*hh**2*zz**2 + db*hh**2 - db*r*zz**2 + db*zz**2 + db + 2*dc*hh**4 + 2*dc*hh**2 + 2*dm*ds*hh**2*zz**2 + 2*dm*ds*zz**2 - 2*dm*hh**6*zz**3 - 2*dm*hh**4*r*zz**3 - 2*dm*hh**4*zz**2 - 2*dm*hh**2*r*zz**3 + 2*dm*hh**2*zz**3 + 2*dm*zz**2 + ds*hh**2 - ds*r*zz**2 + ds*zz**2 + ds - hh**4*kk**2*zz + hh**4*r*zz**3 - hh**4*r*zz - hh**4*zz**3 - hh**2*kk**2 + hh**2*r**2*zz**3 - 2*hh**2*r*zz**3 + hh**2*r*zz**2 - hh**2*r*zz + hh**2*zz**3 - hh**2*zz**2 + hh**2*zz + hh**2 - r*zz**2 + zz**2 + 1)/((db + 1)*(ds + 1)*(hh**2 + 1))"
+    ],
+    [
+      0,
+      2,
+      [
+        2,
+        1
+      ],
+      "kk*(-8*dA*hh**4*kk**2*zz - 8*dA*hh**2*kk**2*zz - 8*dA*hh**2*kk**2 - 8*dA*kk**2 + 8*dal*hh**6*zz + 8*dal*hh**4*zz + 8*dal*hh**4 + 8*dal*hh**2 - 8*db*dm*hh**2*zz**2 - 8*db*dm*zz**2 - db*ds*hh**4 - db*ds*hh**2 - db*hh**4 - db*hh**2 + 4*db*r*zz**2 - 4*db*zz**2 + 8*dc*hh**2 + 8*dc - 8*dm*hh**4*zz**3 - 8*dm*hh**2*r*zz**3 - 8*dm*hh**2*zz**2 - 8*dm*r*zz**3 + 8*dm*zz**3 - 8*dm*zz**2 - ds*hh**4 - ds*hh**2 - hh**4 - 4*hh**2*kk**2*zz + 4*hh**2*r*zz**3 - 4*hh**2*r*zz - 4*hh**2*zz**3 - hh**2 - 4*kk**2 + 4*r**2*zz**3 - 8*r*zz**3 + 4*r*zz**2 - 4*r*zz + 4*zz**3 - 4*zz**2 + 4*zz)/(2*(db + 1)*(ds + 1)*(hh**2 + 1))"
+    ],
+    [
+      0,
+      2,
+      [
+        0,
+        1
+      ],
+      "kk*(-8*dA*hh**4*kk**2*zz - 8*dA*hh**2*kk**2*zz - 8*dA*hh**2*kk**2 - 8*dA*kk**2 + 8*dal*hh**6*zz + 8*dal*hh**4*zz + 8*dal*hh**4 + 8*dal*hh**2 - 8*db*dm*hh**2*zz**2 - 8*db*dm*zz**2 - db*ds*hh**4 - db*ds*hh**2 - db*hh**4 - db*hh**2 + 4*db*r*zz**2 - 4*db*zz**2 + 8*dc*hh**2 + 8*dc - 8*dm*hh**4*zz**3 - 8*dm*hh**2*r*zz**3 - 8*dm*hh**2*zz**2 - 8*dm*r*zz**3 + 8*dm*zz**3 - 8*dm*zz**2 - ds*hh**4 - ds*hh**2 - hh**4 - 4*hh**2*kk**2*zz + 4*hh**2*r*zz**3 - 4*hh**2*r*zz - 4*hh**2*zz**3 - hh**2 - 4*kk**2 + 4*r**2*zz**3 - 8*r*zz**3 + 4*r*zz**2 - 4*r*zz + 4*zz**3 - 4*zz**2 + 4*zz)/(2*(db + 1)*(ds + 1)*(hh**2 + 1))"
+    ],
+    [
+      0,
+      3,
+      [
+        2,
+        2
+      ],
+      "-kk**2*(dq + tt)*(-8*dA*hh**2*kk**2 - 8*dA*kk**2 - 8*dm*hh**2*zz**2 - 8*dm*zz**2 - hh**6 - hh**4 - 4*hh**2 - 4*kk**2 + 4*r*zz**2 - 4*zz**2 - 4)/(2*(hh**2 + 1))"
+    ],
+    [
+      0,
+      3,
+      [
+        2,
+        0
+      ],
+      "2*kk**4*(dq + tt)*(2*dA*hh**2 + 2*dA + 1)/(hh**2 + 1)"
+    ],
+    [
+      0,
+      3,
+      [
+        0,
+        2
+      ],
+      "kk**2*(dq + tt)*(8*dA*hh**2*kk**2 + 8*dA*kk**2 + hh**6 + hh**4 + 4*hh**2 + 4*kk**2 + 4)/(2*(hh**2 + 1))"
+    ],
+    [
+      0,
+      3,
+      [
+        0,
+        0
+      ],
+      "2*kk**2*(2*dA*db*dq*ds*hh**2*kk**2 + 2*dA*db*dq*ds*kk**2 + 2*dA*db*dq*hh**2*kk**2 + 2*dA*db*dq*kk**2 + 2*dA*db*ds*hh**2*kk**2*tt + 2*dA*db*ds*kk**2*tt + 2*dA*db*hh**2*kk**2*tt + 2*dA*db*kk**2*tt + 2*dA*dq*ds*hh**2*kk**2 + 2*dA*dq*ds*kk**2 + 2*dA*dq*hh**2*kk**2 + 2*dA*dq*kk**2 + 2*dA*ds*hh**2*kk**2*tt + 2*dA*ds*kk**2*tt - 2*dA*hh**6*kk**2*zz - 2*dA*hh**4*kk**2*zz - 2*dA*hh**4*kk**2 + 2*dA*hh**2*kk**2*tt - 2*dA*hh**2*kk**2 + 2*dA*kk**2*tt + 2*dal*hh**8*zz + 2*dal*hh**6*zz + 2*dal*hh**6 + 2*dal*hh**4 - 2*db*dm*hh**4*zz**2 - 2*db*dm*hh**2*zz**2 + db*dq*ds*hh**2 + db*dq*ds*kk**2 + db*dq*ds + db*dq*hh**2 + db*dq*kk**2 + db*dq + db*ds*hh**2*tt + db*ds*kk**2*tt + db*ds*tt + db*hh**2*r*zz**2 + db*hh**2*tt - db*hh**2*zz**2 + db*kk**2*tt + db*tt + 2*dc*hh**4 + 2*dc*hh**2 - 2*dm*hh**6*zz**3 - 2*dm*hh**4*r*zz**3 - 2*dm*hh**4*zz**2 - 2*dm*hh**2*r*zz**3 + 2*dm*hh**2*zz**3 - 2*dm*hh**2*zz**2 + dq*ds*hh**2 + dq*ds*kk**2 + dq*ds + dq*hh**2 + dq*kk**2 + dq + ds*hh**2*tt + ds*kk**2*tt + ds*tt - hh**4*kk**2*zz + hh**4*r*zz**3 - hh**4*r*zz - hh**4*zz**3 - hh**2*kk**2 + hh**2*r**2*zz**3 - 2*hh**2*r*zz**3 + hh**2*r*zz**2 - hh**2*r*zz + hh**2*tt + hh**2*zz**3 - hh**2*zz**2 + hh**2*zz + kk**2*tt + tt)/((db + 1)*(ds + 1)*(hh**2 + 1))"
+    ],
+    [
+      0,
+      4,
+      [
+        1,
+        1
+      ],
+      "2*kk*(-2*dA*hh**6*kk**2*zz - 2*dA*hh**4*kk**2*zz - 2*dA*hh**4*kk**2 - 2*dA*hh**2*kk**2 + 2*dal*hh**8*zz + 2*dal*hh**6*zz + 2*dal*hh**6 + 2*dal*hh**4 + 2*db*dm*ds*hh**2*zz**2 + 2*db*dm*ds*zz**2 - 2*db*dm*hh**4*zz**2 + 2*db*dm*zz**2 + db*ds*hh**2 - db*ds*r*zz**2 + db*ds*zz**2 + db*ds + db*hh**2*r*zz**2 - db*hh**2*zz**2 + db*hh**2 - db*r*zz**2 + db*zz**2 + db + 2*dc*hh**4 + 2*dc*hh**2 + 2*dm*ds*hh**2*zz**2 + 2*dm*ds*zz**2 - 2*dm*hh**6*zz**3 - 2*dm*hh**4*r*zz**3 - 2*dm*hh**4*zz**2 - 2*dm*hh**2*r*zz**3 + 2*dm*hh**2*zz**3 + 2*dm*zz**2 + ds*hh**2 - ds*r*zz**2 + ds*zz**2 + ds - hh**4*kk**2*zz + hh**4*r*zz**3 - hh**4*r*zz - hh**4*zz**3 - hh**2*kk**2 + hh**2*r**2*zz**3 - 2*hh**2*r*zz**3 + hh**2*r*zz**2 - hh**2*r*zz + hh**2*zz**3 - hh**2*zz**2 + hh**2*zz + hh**2 - r*zz**2 + zz**2 + 1)/(hh*(db + 1)*(ds + 1)*(hh**2 + 1)**2)"
+    ],
+    [
+      0,
+      5,
+      [
+        0,
+        2
+      ],
+      "-2*(-2*dA*hh**4*kk**2 - 2*dA*hh**2*kk**2 + 2*dal*hh**6 + 2*dal*hh**4 - 2*dm*hh**4*zz**2 + 2*dm*zz**2 - hh**2*kk**2 + hh**2*r*zz**2 - hh**2*zz**2 - r*zz**2 + zz**2 + 1)/(hh**2*(db + 1)*(hh**2 + 1))"
+    ],
+    [
+      0,
+      5,
+      [
+        0,
+        0
+      ],
+      "2*kk**2*(2*dA*hh**2 + 2*dA + 1)/((db + 1)*(hh**2 + 1))"
+    ],
+    [
+      1,
+      1,
+      [
+        2,
+        2
+      ],
+      "2*(db**2*ds**2*hh**2 + db**2*ds**2 + 2*db**2*ds*hh**2 + 2*db**2*ds + db**2*hh**2 + db**2 - 4*db*dn*ds*hh**4*zz - 4*db*dn*ds*hh**2*zz - 4*db*dn*ds*hh**2 - 4*db*dn*ds - 4*db*dn*hh**4*zz - 4*db*dn*hh**2*zz - 4*db*dn*hh**2 - 4*db*dn + 2*db*ds**2*hh**2 + 2*db*ds**2 - 2*db*ds*hh**2*zz + 4*db*ds*hh**2 + 2*db*ds - 2*db*hh**2*zz + 2*db*hh**2 - 4*dn*ds*hh**4*zz - 4*dn*ds*hh**2*zz - 4*dn*ds*hh**2 - 4*dn*ds + 2*dn*hh**6*r*zz**2 + 2*dn*hh**4*r*zz**2 + 2*dn*hh**4*r*zz - 4*dn*hh**4*zz + 2*dn*hh**2*r*zz - 4*dn*hh**2*zz - 4*dn*hh**2 - 4*dn + ds**2*hh**2 + ds**2 - 2*ds*hh**2*zz + 2*ds*hh**2 + hh**4*r*zz**2 + hh**2*r*zz - 2*hh**2*zz + hh**2 - 1)/((db + 1)**2*(ds + 1)**2*(hh**2 + 1))"
+    ],
+    [
+      1,
+      1,
+      [
+        0,
+        2
+      ],
+      "2"
+    ],
+    [
+      1,
+      1,
+      [
+        0,
+        0
+      ],
+      "-2*(-2*dm*hh**2*zz**2 - 2*dm*zz**2 - hh**2 + r*zz**2 - zz**2 - 1)/(hh**2 + 1)"
+    ],
+    [
+      1,
+      2,
+      [
+        3,
+        2
+      ],
+      "-2*(db**2*ds**2*hh**2 + db**2*ds**2 + 2*db**2*ds*hh**2 + 2*db**2*ds + db**2*hh**2 + db**2 - 4*db*dn*ds*hh**4*zz - 4*db*dn*ds*hh**2*zz - 4*db*dn*ds*hh**2 - 4*db*dn*ds - 4*db*dn*hh**4*zz - 4*db*dn*hh**2*zz - 4*db*dn*hh**2 - 4*db*dn + 2*db*ds**2*hh**2 + 2*db*ds**2 - 2*db*ds*hh**2*zz + 4*db*ds*hh**2 + 2*db*ds - 2*db*hh**2*zz + 2*db*hh**2 - 4*dn*ds*hh**4*zz - 4*dn*ds*hh**2*zz - 4*dn*ds*hh**2 - 4*dn*ds + 2*dn*hh**6*r*zz**2 + 2*dn*hh**4*r*zz**2 + 2*dn*hh**4*r*zz - 4*dn*hh**4*zz + 2*dn*hh**2*r*zz - 4*dn*hh**2*zz - 4*dn*hh**2 - 4*dn + ds**2*hh**2 + ds**2 - 2*ds*hh**2*zz + 2*ds*hh**2 + hh**4*r*zz**2 + hh**2*r*zz - 2*hh**2*zz + hh**2 - 1)/(hh**2*(db + 1)**2*(ds + 1)**2*(hh**2 + 1))"
+    ],
+    [
+      1,
+      2,
+      [
+        1,
+        2
+      ],
+      "-2*(db**2*ds**2*hh**2 + db**2*ds**2 + 2*db**2*ds*hh**2 + 2*db**2*ds + db**2*hh**2 + db**2 - 2*db*dn*ds*hh**4*zz - 2*db*dn*ds*hh**2*zz - 2*db*dn*ds*hh**2 - 2*db*dn*ds - 2*db*dn*hh**4*zz - 2*db*dn*hh**2*zz - 2*db*dn*hh**2 - 2*db*dn + 2*db*ds**2*hh**2 + 2*db*ds**2 - db*ds*hh**2*zz + 4*db*ds*hh**2 + 3*db*ds - db*hh**2*zz + 2*db*hh**2 + db - 2*dn*ds*hh**4*zz - 2*dn*ds*hh**2*zz - 2*dn*ds*hh**2 - 2*dn*ds + 2*dn*hh**6*r*zz**2 + 2*dn*hh**4*r*zz**2 + 2*dn*hh**4*r*zz - 2*dn*hh**4*zz + 2*dn*hh**2*r*zz - 2*dn*hh**2*zz - 2*dn*hh**2 - 2*dn + ds**2*hh**2 + ds**2 - ds*hh**2*zz + 2*ds*hh**2 + ds + hh**4*r*zz**2 + hh**2*r*zz - hh**2*zz + hh**2)/(hh**2*(db + 1)**2*(ds + 1)**2*(hh**2 + 1))"
+    ],
+    [
+      1,
+      3,
+      [
+        1,
+        1
+      ],
+      "-2*kk*(-2*dA*db*dq*ds*hh**6*kk**2*zz - 2*dA*db*dq*ds*hh**4*kk**2*zz - 2*dA*db*dq*ds*hh**4*kk**2 - 2*dA*db*dq*ds*hh**2*kk**2 - 2*dA*db*dq*hh**6*kk**2*zz - 2*dA*db*dq*hh**4*kk**2*zz - 2*dA*db*dq*hh**4*kk**2 - 2*dA*db*dq*hh**2*kk**2 - 2*dA*db*ds*hh**6*kk**2*tt*zz - 2*dA*db*ds*hh**4*kk**2*tt*zz - 2*dA*db*ds*hh**4*kk**2*tt - 2*dA*db*ds*hh**2*kk**2*tt - 2*dA*db*hh**6*kk**2*tt*zz - 2*dA*db*hh**4*kk**2*tt*zz - 2*dA*db*hh**4*kk**2*tt - 2*dA*db*hh**2*kk**2*tt - 2*dA*dq*ds*hh**6*kk**2*zz - 2*dA*dq*ds*hh**4*kk**2*zz - 2*dA*dq*ds*hh**4*kk**2 - 2*dA*dq*ds*hh**2*kk**2 - 2*dA*dq*hh**6*kk**2*zz - 2*dA*dq*hh**4*kk**2*zz - 2*dA*dq*hh**4*kk**2 - 2*dA*dq*hh**2*kk**2 - 2*dA*ds*hh**6*kk**2*tt*zz - 2*dA*ds*hh**4*kk**2*tt*zz - 2*dA*ds*hh**4*kk**2*tt - 2*dA*ds*hh**2*kk**2*tt - 2*dA*hh**6*kk**2*tt*zz - 2*dA*hh**4*kk**2*tt*zz - 2*dA*hh**4*kk**2*tt - 2*dA*hh**2*kk**2*tt + 2*dal*db*dq*ds*hh**8*zz + 2*dal*db*dq*ds*hh**6*zz + 2*dal*db*dq*ds*hh**6 + 2*dal*db*dq*ds*hh**4 + 2*dal*db*dq*hh**8*zz + 2*dal*db*dq*hh**6*zz + 2*dal*db*dq*hh**6 + 2*dal*db*dq*hh**4 + 2*dal*db*ds*hh**8*tt*zz + 2*dal*db*ds*hh**6*tt*zz + 2*dal*db*ds*hh**6*tt + 2*dal*db*ds*hh**4*tt + 2*dal*db*hh**8*tt*zz + 2*dal*db*hh**6*tt*zz + 2*dal*db*hh**6*tt + 2*dal*db*hh**4*tt + 2*dal*dq*ds*hh**8*zz + 2*dal*dq*ds*hh**6*zz + 2*dal*dq*ds*hh**6 + 2*dal*dq*ds*hh**4 + 2*dal*dq*hh**8*zz + 2*dal*dq*hh**6*zz + 2*dal*dq*hh**6 + 2*dal*dq*hh**4 + 2*dal*ds*hh**8*tt*zz + 2*dal*ds*hh**6*tt*zz + 2*dal*ds*hh**6*tt + 2*dal*ds*hh**4*tt + 2*dal*hh**8*tt*zz + 2*dal*hh**6*tt*zz + 2*dal*hh**6*tt + 2*dal*hh**4*tt + 2*db**2*dm*dq*ds**2*hh**2*zz**2 + 2*db**2*dm*dq*ds**2*zz**2 - 2*db**2*dm*dq*ds*hh**4*zz**2 + 2*db**2*dm*dq*ds*hh**2*zz**2 + 4*db**2*dm*dq*ds*zz**2 - 2*db**2*dm*dq*hh**4*zz**2 + 2*db**2*dm*dq*zz**2 + 2*db**2*dm*ds**2*hh**2*tt*zz**2 + 2*db**2*dm*ds**2*tt*zz**2 - 2*db**2*dm*ds*hh**4*tt*zz**2 + 2*db**2*dm*ds*hh**2*tt*zz**2 + 4*db**2*dm*ds*tt*zz**2 - 2*db**2*dm*hh**4*tt*zz**2 + 2*db**2*dm*tt*zz**2 + db**2*dq*ds**2*hh**2 - db**2*dq*ds**2*r*zz**2 + db**2*dq*ds**2*zz**2 + db**2*dq*ds**2 + db**2*dq*ds*hh**2*r*zz**2 - db**2*dq*ds*hh**2*zz**2 + 2*db**2*dq*ds*hh**2 - 2*db**2*dq*ds*r*zz**2 + 2*db**2*dq*ds*zz**2 + 2*db**2*dq*ds + db**2*dq*hh**2*r*zz**2 - db**2*dq*hh**2*zz**2 + db**2*dq*hh**2 - db**2*dq*r*zz**2 + db**2*dq*zz**2 + db**2*dq + db**2*ds**2*hh**2*tt - db**2*ds**2*r*tt*zz**2 + db**2*ds**2*tt*zz**2 + db**2*ds**2*tt + db**2*ds*hh**2*r*tt*zz**2 - db**2*ds*hh**2*tt*zz**2 + 2*db**2*ds*hh**2*tt - 2*db**2*ds*r*tt*zz**2 + 2*db**2*ds*tt*zz**2 + 2*db**2*ds*tt + db**2*hh**2*r*tt*zz**2 - db**2*hh**2*tt*zz**2 + db**2*hh**2*tt - db**2*r*tt*zz**2 + db**2*tt*zz**2 + db**2*tt + 2*db*dc*dq*ds*hh**4 + 2*db*dc*dq*ds*hh**2 + 2*db*dc*dq*hh**4 + 2*db*dc*dq*hh**2 + 2*db*dc*ds*hh**4*tt + 2*db*dc*ds*hh**2*tt + 2*db*dc*hh**4*tt + 2*db*dc*hh**2*tt + 4*db*dm*dq*ds**2*hh**2*zz**2 + 4*db*dm*dq*ds**2*zz**2 - 2*db*dm*dq*ds*hh**6*zz**3 - 2*db*dm*dq*ds*hh**4*r*zz**3 - 4*db*dm*dq*ds*hh**4*zz**2 - 2*db*dm*dq*ds*hh**2*r*zz**3 + 2*db*dm*dq*ds*hh**2*zz**3 + 4*db*dm*dq*ds*hh**2*zz**2 + 8*db*dm*dq*ds*zz**2 - 2*db*dm*dq*hh**6*zz**3 - 2*db*dm*dq*hh**4*r*zz**3 - 4*db*dm*dq*hh**4*zz**2 - 2*db*dm*dq*hh**2*r*zz**3 + 2*db*dm*dq*hh**2*zz**3 + 4*db*dm*dq*zz**2 + 4*db*dm*ds**2*hh**2*tt*zz**2 + 4*db*dm*ds**2*tt*zz**2 - 2*db*dm*ds*hh**6*tt*zz**3 - 2*db*dm*ds*hh**4*r*tt*zz**3 - 4*db*dm*ds*hh**4*tt*zz**2 - 2*db*dm*ds*hh**2*r*tt*zz**3 + 2*db*dm*ds*hh**2*tt*zz**3 + 4*db*dm*ds*hh**2*tt*zz**2 + 8*db*dm*ds*tt*zz**2 - 2*db*dm*hh**6*tt*zz**3 - 2*db*dm*hh**4*r*tt*zz**3 - 4*db*dm*hh**4*tt*zz**2 - 2*db*dm*hh**2*r*tt*zz**3 + 2*db*dm*hh**2*tt*zz**3 + 4*db*dm*tt*zz**2 - 2*db*dn*ds*hh**4*zz - 2*db*dn*ds*hh**2*zz - 2*db*dn*ds*hh**2 - 2*db*dn*ds - 2*db*dn*hh**4*zz - 2*db*dn*hh**2*zz - 2*db*dn*hh**2 - 2*db*dn + 2*db*dq*ds**2*hh**2 - 2*db*dq*ds**2*r*zz**2 + 2*db*dq*ds**2*zz**2 + 2*db*dq*ds**2 - db*dq*ds*hh**4*kk**2*zz + db*dq*ds*hh**4*r*zz**3 - db*dq*ds*hh**4*r*zz - db*dq*ds*hh**4*zz**3 - db*dq*ds*hh**2*kk**2 + db*dq*ds*hh**2*r**2*zz**3 - 2*db*dq*ds*hh**2*r*zz**3 + 2*db*dq*ds*hh**2*r*zz**2 - db*dq*ds*hh**2*r*zz + db*dq*ds*hh**2*zz**3 - 2*db*dq*ds*hh**2*zz**2 + db*dq*ds*hh**2*zz + 4*db*dq*ds*hh**2 - 4*db*dq*ds*r*zz**2 + 4*db*dq*ds*zz**2 + 4*db*dq*ds - db*dq*hh**4*kk**2*zz + db*dq*hh**4*r*zz**3 - db*dq*hh**4*r*zz - db*dq*hh**4*zz**3 - db*dq*hh**2*kk**2 + db*dq*hh**2*r**2*zz**3 - 2*db*dq*hh**2*r*zz**3 + 2*db*dq*hh**2*r*zz**2 - db*dq*hh**2*r*zz + db*dq*hh**2*zz**3 - 2*db*dq*hh**2*zz**2 + db*dq*hh**2*zz + 2*db*dq*hh**2 - 2*db*dq*r*zz**2 + 2*db*dq*zz**2 + 2*db*dq + 2*db*ds**2*hh**2*tt - 2*db*ds**2*r*tt*zz**2 + 2*db*ds**2*tt*zz**2 + 2*db*ds**2*tt - db*ds*hh**4*kk**2*tt*zz + db*ds*hh**4*r*tt*zz**3 - db*ds*hh**4*r*tt*zz - db*ds*hh**4*tt*zz**3 - db*ds*hh**2*kk**2*tt + db*ds*hh**2*r**2*tt*zz**3 - 2*db*ds*hh**2*r*tt*zz**3 + 2*db*ds*hh**2*r*tt*zz**2 - db*ds*hh**2*r*tt*zz + db*ds*hh**2*tt*zz**3 - 2*db*ds*hh**2*tt*zz**2 + db*ds*hh**2*tt*zz + 4*db*ds*hh**2*tt - db*ds*hh**2*zz - 4*db*ds*r*tt*zz**2 + 4*db*ds*tt*zz**2 + 4*db*ds*tt - db*ds - db*hh**4*kk**2*tt*zz + db*hh**4*r*tt*zz**3 - db*hh**4*r*tt*zz - db*hh**4*tt*zz**3 - db*hh**2*kk**2*tt + db*hh**2*r**2*tt*zz**3 - 2*db*hh**2*r*tt*zz**3 + 2*db*hh**2*r*tt*zz**2 - db*hh**2*r*tt*zz + db*hh**2*tt*zz**3 - 2*db*hh**2*tt*zz**2 + db*hh**2*tt*zz + 2*db*hh**2*tt - db*hh**2*zz - 2*db*r*tt*zz**2 + 2*db*tt*zz**2 + 2*db*tt - db + 2*dc*dq*ds*hh**4 + 2*dc*dq*ds*hh**2 + 2*dc*dq*hh**4 + 2*dc*dq*hh**2 + 2*dc*ds*hh**4*tt + 2*dc*ds*hh**2*tt + 2*dc*hh**4*tt + 2*dc*hh**2*tt + 2*dm*dq*ds**2*hh**2*zz**2 + 2*dm*dq*ds**2*zz**2 - 2*dm*dq*ds*hh**6*zz**3 - 2*dm*dq*ds*hh**4*r*zz**3 - 2*dm*dq*ds*hh**4*zz**2 - 2*dm*dq*ds*hh**2*r*zz**3 + 2*dm*dq*ds*hh**2*zz**3 + 2*dm*dq*ds*hh**2*zz**2 + 4*dm*dq*ds*zz**2 - 2*dm*dq*hh**6*zz**3 - 2*dm*dq*hh**4*r*zz**3 - 2*dm*dq*hh**4*zz**2 - 2*dm*dq*hh**2*r*zz**3 + 2*dm*dq*hh**2*zz**3 + 2*dm*dq*zz**2 + 2*dm*ds**2*hh**2*tt*zz**2 + 2*dm*ds**2*tt*zz**2 - 2*dm*ds*hh**6*tt*zz**3 - 2*dm*ds*hh**4*r*tt*zz**3 - 2*dm*ds*hh**4*tt*zz**2 - 2*dm*ds*hh**2*r*tt*zz**3 + 2*dm*ds*hh**2*tt*zz**3 + 2*dm*ds*hh**2*tt*zz**2 + 4*dm*ds*tt*zz**2 - 2*dm*hh**6*tt*zz**3 - 2*dm*hh**4*r*tt*zz**3 - 2*dm*hh**4*tt*zz**2 - 2*dm*hh**2*r*tt*zz**3 + 2*dm*hh**2*tt*zz**3 + 2*dm*tt*zz**2 - 2*dn*ds*hh**4*zz - 2*dn*ds*hh**2*zz - 2*dn*ds*hh**2 - 2*dn*ds + 2*dn*hh**6*r*zz**2 + 2*dn*hh**4*r*zz**2 + 2*dn*hh**4*r*zz - 2*dn*hh**4*zz + 2*dn*hh**2*r*zz - 2*dn*hh**2*zz - 2*dn*hh**2 - 2*dn + dq*ds**2*hh**2 - dq*ds**2*r*zz**2 + dq*ds**2*zz**2 + dq*ds**2 - dq*ds*hh**4*kk**2*zz + dq*ds*hh**4*r*zz**3 - dq*ds*hh**4*r*zz - dq*ds*hh**4*zz**3 - dq*ds*hh**2*kk**2 + dq*ds*hh**2*r**2*zz**3 - 2*dq*ds*hh**2*r*zz**3 + dq*ds*hh**2*r*zz**2 - dq*ds*hh**2*r*zz + dq*ds*hh**2*zz**3 - dq*ds*hh**2*zz**2 + dq*ds*hh**2*zz + 2*dq*ds*hh**2 - 2*dq*ds*r*zz**2 + 2*dq*ds*zz**2 + 2*dq*ds - dq*hh**4*kk**2*zz + dq*hh**4*r*zz**3 - dq*hh**4*r*zz - dq*hh**4*zz**3 - dq*hh**2*kk**2 + dq*hh**2*r**2*zz**3 - 2*dq*hh**2*r*zz**3 + dq*hh**2*r*zz**2 - dq*hh**2*r*zz + dq*hh**2*zz**3 - dq*hh**2*zz**2 + dq*hh**2*zz + dq*hh**2 - dq*r*zz**2 + dq*zz**2 + dq + ds**2*hh**2*tt - ds**2*r*tt*zz**2 + ds**2*tt*zz**2 + ds**2*tt - ds*hh**4*kk**2*tt*zz + ds*hh**4*r*tt*zz**3 - ds*hh**4*r*tt*zz - ds*hh**4*tt*zz**3 - ds*hh**2*kk**2*tt + ds*hh**2*r**2*tt*zz**3 - 2*ds*hh**2*r*tt*zz**3 + ds*hh**2*r*tt*zz**2 - ds*hh**2*r*tt*zz + ds*hh**2*tt*zz**3 - ds*hh**2*tt*zz**2 + ds*hh**2*tt*zz + 2*ds*hh**2*tt - ds*hh**2*zz - 2*ds*r*tt*zz**2 + 2*ds*tt*zz**2 + 2*ds*tt - ds - hh**4*kk**2*tt*zz + hh**4*r*tt*zz**3 - hh**4*r*tt*zz + hh**4*r*zz**2 - hh**4*tt*zz**3 - hh**2*kk**2*tt + hh**2*r**2*tt*zz**3 - 2*hh**2*r*tt*zz**3 + hh**2*r*tt*zz**2 - hh**2*r*tt*zz + hh**2*r*zz + hh**2*tt*zz**3 - hh**2*tt*zz**2 + hh**2*tt*zz + hh**2*tt - hh**2*zz - r*tt*zz**2 + tt*zz**2 + tt - 1)/((db + 1)**2*(ds + 1)**2*(hh**2 + 1))"
+    ],
+    [
+      1,
+      4,
+      [
+        4,
+        0
+      ],
+      "2*hh/(ds + 1)"
+    ],
+    [
+      1,
+      4,
+      [
+        2,
+        2
+      ],
+      "-(2*db**2*ds**2*hh**2 + 2*db**2*ds**2 + 4*db**2*ds*hh**2 + 4*db**2*ds + 2*db**2*hh**2 + 2*db**2 - 8*db*dn*ds*hh**4*zz - 8*db*dn*ds*hh**2*zz - 8*db*dn*ds*hh**2 - 8*db*dn*ds - 8*db*dn*hh**4*zz - 8*db*dn*hh**2*zz - 8*db*dn*hh**2 - 8*db*dn + 4*db*ds**2*hh**2 + 4*db*ds**2 - 4*db*ds*hh**2*zz + 8*db*ds*hh**2 + 4*db*ds - 4*db*hh**2*zz + 4*db*hh**2 + 2*dn*ds*hh**4*r - 8*dn*ds*hh**4*zz + 4*dn*ds*hh**2*r - 8*dn*ds*hh**2*zz - 8*dn*ds*hh**2 + 2*dn*ds*r - 8*dn*ds + 4*dn*hh**6*r*zz**2 + 4*dn*hh**4*r*zz**2 + 4*dn*hh**4*r*zz + 2*dn*hh**4*r - 8*dn*hh**4*zz + 4*dn*hh**2*r*zz + 4*dn*hh**2*r - 8*dn*hh**2*zz - 8*dn*hh**2 + 2*dn*r - 8*dn + 2*ds**2*hh**2 + 2*ds**2 + ds*hh**2*r - 4*ds*hh**2*zz + 4*ds*hh**2 + ds*r + 2*hh**4*r*zz**2 + 2*hh**2*r*zz + hh**2*r - 4*hh**2*zz + 2*hh**2 + r - 2)/(hh*(db + 1)**2*(ds + 1)**2*(hh**2 + 1)**2)"
+    ],
+    [
+      1,
+      4,
+      [
+        2,
+        0
+      ],
+      "(2*dA*hh**6*kk**2 + 2*dA*hh**4*kk**2 - 2*dal*hh**8 + 2*dal*hh**4 - 2*db**2*dm*hh**2 - 2*db**2*dm - 2*db**2*hh**6*zz - 2*db**2*hh**4*zz + db**2*r - db**2 - 4*db*dm*hh**2*r*zz - 4*db*dm*hh**2 - 4*db*dm*r*zz - 4*db*dm - 4*db*hh**6*zz - 4*db*hh**4*zz + 2*db*r**2*zz - 2*db*r*zz + 2*db*r - 2*db + 2*dm*hh**6*zz**2 - 2*dm*hh**4*zz**2 - 2*dm*hh**2*r**2*zz**2 - 4*dm*hh**2*r*zz - 2*dm*hh**2*zz**2 - 2*dm*hh**2 - 2*dm*r**2*zz**2 - 4*dm*r*zz + 2*dm*zz**2 - 2*dm - 2*dn*hh**4*kk**2*r - 2*dn*hh**2*kk**2*r - 2*dn*hh**2*r - 2*dn*r - 2*hh**6*zz + hh**4*kk**2 - hh**4*r*zz**2 + hh**4*zz**2 - 2*hh**4*zz - hh**2*kk**2*r + 2*hh**2*r*zz**2 - 2*hh**2*zz**2 - hh**2 + r**3*zz**2 - r**2*zz**2 + 2*r**2*zz - r*zz**2 - 2*r*zz + zz**2)/(hh*(db + 1)**2*(ds + 1)*(hh**2 + 1))"
+    ],
+    [
+      1,
+      4,
+      [
+        0,
+        2
+      ],
+      "-2*(db - 2*dn*hh**2 - 2*dn)/(hh*(db + 1)*(hh**2 + 1))"
+    ],
+    [
+      1,
+      4,
+      [
+        0,
+        0
+      ],
+      "-2*(-2*dA*dq*hh**10*kk**4*zz - 4*dA*dq*hh**8*kk**4*zz - 2*dA*dq*hh**8*kk**4 - 2*dA*dq*hh**8*kk**2*zz - 2*dA*dq*hh**6*kk**4*zz - 4*dA*dq*hh**6*kk**4 - 4*dA*dq*hh**6*kk**2*zz - 2*dA*dq*hh**6*kk**2 - 2*dA*dq*hh**4*kk**4 - 2*dA*dq*hh**4*kk**2*zz - 4*dA*dq*hh**4*kk**2 - 2*dA*dq*hh**2*kk**2 - 2*dA*hh**10*kk**4*tt*zz - 4*dA*hh**8*kk**4*tt*zz - 2*dA*hh**8*kk**4*tt - 2*dA*hh**8*kk**2*tt*zz - 2*dA*hh**6*kk**4*tt*zz - 4*dA*hh**6*kk**4*tt - 4*dA*hh**6*kk**2*tt*zz - 2*dA*hh**6*kk**2*tt - 2*dA*hh**4*kk**4*tt - 2*dA*hh**4*kk**2*tt*zz - 4*dA*hh**4*kk**2*tt - 2*dA*hh**2*kk**2*tt + 2*dal*dq*hh**12*kk**2*zz + 4*dal*dq*hh**10*kk**2*zz + 2*dal*dq*hh**10*kk**2 + 2*dal*dq*hh**8*kk**2*zz + 4*dal*dq*hh**8*kk**2 + 2*dal*dq*hh**6*kk**2 + 2*dal*hh**12*kk**2*tt*zz + 4*dal*hh**10*kk**2*tt*zz + 2*dal*hh**10*kk**2*tt + 2*dal*hh**8*kk**2*tt*zz + 4*dal*hh**8*kk**2*tt + 2*dal*hh**6*kk**2*tt + 2*db*dg*ds*hh**6 + 4*db*dg*ds*hh**4 + 2*db*dg*ds*hh**2 + 2*db*dg*hh**6 + 4*db*dg*hh**4 + 2*db*dg*hh**2 - 2*db*dm*dq*hh**8*kk**2*zz**2 - 4*db*dm*dq*hh**6*kk**2*zz**2 - 2*db*dm*dq*hh**4*kk**2*zz**2 - 2*db*dm*hh**8*kk**2*tt*zz**2 - 4*db*dm*hh**6*kk**2*tt*zz**2 - 2*db*dm*hh**4*kk**2*tt*zz**2 + 2*db*dm*hh**2*zz**2 + 2*db*dm*zz**2 + db*dq*hh**6*kk**2*r*zz**2 - db*dq*hh**6*kk**2*zz**2 + db*dq*hh**6 + db*dq*hh**4*kk**2*r*zz**2 - db*dq*hh**4*kk**2*zz**2 + 2*db*dq*hh**4 + db*dq*hh**2 + db*ds*hh**4 + db*ds*hh**2 + db*hh**6*kk**2*r*tt*zz**2 - db*hh**6*kk**2*tt*zz**2 + db*hh**6*tt - db*hh**6 + db*hh**4*kk**2*r*tt*zz**2 - db*hh**4*kk**2*tt*zz**2 + 2*db*hh**4*tt - db*hh**4 + db*hh**2*tt + db*hh**2 - db*r*zz**2 + db*zz**2 + db + 2*dc*dq*hh**8*kk**2 + 4*dc*dq*hh**6*kk**2 + 2*dc*dq*hh**4*kk**2 + 2*dc*hh**8*kk**2*tt + 4*dc*hh**6*kk**2*tt + 2*dc*hh**4*kk**2*tt + 2*dg*ds*hh**6 + 4*dg*ds*hh**4 + 2*dg*ds*hh**2 + 2*dg*hh**6 + 4*dg*hh**4 + 2*dg*hh**2 - 2*dm*dq*hh**10*kk**2*zz**3 - 2*dm*dq*hh**8*kk**2*r*zz**3 - 2*dm*dq*hh**8*kk**2*zz**3 - 2*dm*dq*hh**8*kk**2*zz**2 - 4*dm*dq*hh**6*kk**2*r*zz**3 + 2*dm*dq*hh**6*kk**2*zz**3 - 4*dm*dq*hh**6*kk**2*zz**2 - 2*dm*dq*hh**4*kk**2*r*zz**3 + 2*dm*dq*hh**4*kk**2*zz**3 - 2*dm*dq*hh**4*kk**2*zz**2 - 2*dm*hh**10*kk**2*tt*zz**3 - 2*dm*hh**8*kk**2*r*tt*zz**3 - 2*dm*hh**8*kk**2*tt*zz**3 - 2*dm*hh**8*kk**2*tt*zz**2 - 4*dm*hh**6*kk**2*r*tt*zz**3 + 2*dm*hh**6*kk**2*tt*zz**3 - 4*dm*hh**6*kk**2*tt*zz**2 + 2*dm*hh**6*zz**2 - 2*dm*hh**4*kk**2*r*tt*zz**3 + 2*dm*hh**4*kk**2*tt*zz**3 - 2*dm*hh**4*kk**2*tt*zz**2 + 2*dm*hh**4*zz**2 + 2*dn*hh**8*kk**2*zz + 4*dn*hh**6*kk**2*zz + 2*dn*hh**6*kk**2 + 2*dn*hh**6*zz + 2*dn*hh**4*kk**2*zz + 4*dn*hh**4*kk**2 + 4*dn*hh**4*zz + 2*dn*hh**2*kk**2 + 2*dn*hh**2*zz - dq*hh**8*kk**4*zz + dq*hh**8*kk**2*r*zz**3 - dq*hh**8*kk**2*r*zz - dq*hh**8*kk**2*zz**3 - dq*hh**6*kk**4*zz - dq*hh**6*kk**4 + dq*hh**6*kk**2*r**2*zz**3 - dq*hh**6*kk**2*r*zz**3 + dq*hh**6*kk**2*r*zz**2 - 2*dq*hh**6*kk**2*r*zz - dq*hh**6*kk**2*zz**2 - dq*hh**4*kk**4 + dq*hh**4*kk**2*r**2*zz**3 - 2*dq*hh**4*kk**2*r*zz**3 + dq*hh**4*kk**2*r*zz**2 - dq*hh**4*kk**2*r*zz + dq*hh**4*kk**2*zz**3 - dq*hh**4*kk**2*zz**2 - dq*hh**4*kk**2 - dq*hh**2*kk**2 + ds*hh**4 + ds*hh**2 - hh**8*kk**4*tt*zz + hh**8*kk**2*r*tt*zz**3 - hh**8*kk**2*r*tt*zz - hh**8*kk**2*tt*zz**3 - hh**6*kk**4*tt*zz - hh**6*kk**4*tt + hh**6*kk**2*r**2*tt*zz**3 - hh**6*kk**2*r*tt*zz**3 + hh**6*kk**2*r*tt*zz**2 - 2*hh**6*kk**2*r*tt*zz - hh**6*kk**2*tt*zz**2 + hh**6*kk**2*zz - hh**6*r*zz - hh**4*kk**4*tt + hh**4*kk**2*r**2*tt*zz**3 - 2*hh**4*kk**2*r*tt*zz**3 + hh**4*kk**2*r*tt*zz**2 - hh**4*kk**2*r*tt*zz + hh**4*kk**2*tt*zz**3 - hh**4*kk**2*tt*zz**2 - hh**4*kk**2*tt + hh**4*kk**2*zz + hh**4*kk**2 - hh**4*r*zz**2 - 2*hh**4*r*zz + hh**4*zz**2 + hh**4*zz - hh**2*kk**2*tt + hh**2*kk**2 - hh**2*r*zz + hh**2*zz)/(hh*(db + 1)*(hh**2 + 1)**2)"
+    ],
+    [
+      2,
+      2,
+      [
+        4,
+        2
+      ],
+      "2*(db**2*ds**2*hh**2 + db**2*ds**2 + 2*db**2*ds*hh**2 + 2*db**2*ds + db**2*hh**2 + db**2 - 4*db*dn*ds*hh**4*zz - 4*db*dn*ds*hh**2*zz - 4*db*dn*ds*hh**2 - 4*db*dn*ds - 4*db*dn*hh**4*zz - 4*db*dn*hh**2*zz - 4*db*dn*hh**2 - 4*db*dn + 2*db*ds**2*hh**2 + 2*db*ds**2 - 2*db*ds*hh**2*zz + 4*db*ds*hh**2 + 2*db*ds - 2*db*hh**2*zz + 2*db*hh**2 - 4*dn*ds*hh**4*zz - 4*dn*ds*hh**2*zz - 4*dn*ds*hh**2 - 4*dn*ds + 2*dn*hh**6*r*zz**2 + 2*dn*hh**4*r*zz**2 + 2*dn*hh**4*r*zz - 4*dn*hh**4*zz + 2*dn*hh**2*r*zz - 4*dn*hh**2*zz - 4*dn*hh**2 - 4*dn + ds**2*hh**2 + ds**2 - 2*ds*hh**2*zz + 2*ds*hh**2 + hh**4*r*zz**2 + hh**2*r*zz - 2*hh**2*zz + hh**2 - 1)/(hh**4*(db + 1)**2*(ds + 1)**2*(hh**2 + 1))"
+    ],
+    [
+      2,
+      2,
+      [
+        2,
+        2
+      ],
+      "2*(db**2*ds**2*hh**2 + db**2*ds**2 + 2*db**2*ds*hh**2 + 2*db**2*ds + db**2*hh**2 + db**2 - 4*db*dn*ds*hh**4*zz - 4*db*dn*ds*hh**2*zz - 4*db*dn*ds*hh**2 - 4*db*dn*ds - 4*db*dn*hh**4*zz - 4*db*dn*hh**2*zz - 4*db*dn*hh**2 - 4*db*dn + 2*db*ds**2*hh**2 + 2*db*ds**2 - 2*db*ds*hh**2*zz + 4*db*ds*hh**2 + 2*db*ds - 2*db*hh**2*zz + 2*db*hh**2 - 4*dn*ds*hh**4*zz - 4*dn*ds*hh**2*zz - 4*dn*ds*hh**2 - 4*dn*ds + 4*dn*hh**6*r*zz**2 + 4*dn*hh**4*r*zz**2 + 4*dn*hh**4*r*zz - 4*dn*hh**4*zz + 4*dn*hh**2*r*zz - 4*dn*hh**2*zz - 4*dn*hh**2 - 4*dn + ds**2*hh**2 + ds**2 - 2*ds*hh**2*zz + 2*ds*hh**2 + 2*hh**4*r*zz**2 + 2*hh**2*r*zz - 2*hh**2*zz + hh**2 - 1)/(hh**4*(db + 1)**2*(ds + 1)**2*(hh**2 + 1))"
+    ],
+    [
+      2,
+      2,
+      [
+        2,
+        0
+      ],
+      "1/2"
+    ],
+    [
+      2,
+      2,
+      [
+        0,
+        2
+      ],
+      "2*r*zz*(hh**2*zz + 1)*(2*dn*hh**2 + 2*dn + 1)/(hh**2*(db + 1)**2*(ds + 1)**2*(hh**2 + 1))"
+    ],
+    [
+      2,
+      2,
+      [
+        0,
+        0
+      ],
+      "1/2"
+    ],
+    [
+      2,
+      3,
+      [
+        2,
+        1
+      ],
+      "kk*(-8*dA*db*dq*ds*hh**6*kk**2*zz - 8*dA*db*dq*ds*hh**4*kk**2*zz - 8*dA*db*dq*ds*hh**4*kk**2 - 8*dA*db*dq*ds*hh**2*kk**2 - 8*dA*db*dq*hh**6*kk**2*zz - 8*dA*db*dq*hh**4*kk**2*zz - 8*dA*db*dq*hh**4*kk**2 - 8*dA*db*dq*hh**2*kk**2 - 8*dA*db*ds*hh**6*kk**2*tt*zz - 8*dA*db*ds*hh**4*kk**2*tt*zz - 8*dA*db*ds*hh**4*kk**2*tt - 8*dA*db*ds*hh**2*kk**2*tt - 8*dA*db*hh**6*kk**2*tt*zz - 8*dA*db*hh**4*kk**2*tt*zz - 8*dA*db*hh**4*kk**2*tt - 8*dA*db*hh**2*kk**2*tt - 8*dA*dq*ds*hh**6*kk**2*zz - 8*dA*dq*ds*hh**4*kk**2*zz - 8*dA*dq*ds*hh**4*kk**2 - 8*dA*dq*ds*hh**2*kk**2 - 8*dA*dq*hh**6*kk**2*zz - 8*dA*dq*hh**4*kk**2*zz - 8*dA*dq*hh**4*kk**2 - 8*dA*dq*hh**2*kk**2 - 8*dA*ds*hh**6*kk**2*tt*zz - 8*dA*ds*hh**4*kk**2*tt*zz - 8*dA*ds*hh**4*kk**2*tt - 8*dA*ds*hh**2*kk**2*tt - 8*dA*hh**6*kk**2*tt*zz - 8*dA*hh**4*kk**2*tt*zz - 8*dA*hh**4*kk**2*tt - 8*dA*hh**2*kk**2*tt + 8*dal*db*dq*ds*hh**8*zz + 8*dal*db*dq*ds*hh**6*zz + 8*dal*db*dq*ds*hh**6 + 8*dal*db*dq*ds*hh**4 + 8*dal*db*dq*hh**8*zz + 8*dal*db*dq*hh**6*zz + 8*dal*db*dq*hh**6 + 8*dal*db*dq*hh**4 + 8*dal*db*ds*hh**8*tt*zz + 8*dal*db*ds*hh**6*tt*zz + 8*dal*db*ds*hh**6*tt + 8*dal*db*ds*hh**4*tt + 8*dal*db*hh**8*tt*zz + 8*dal*db*hh**6*tt*zz + 8*dal*db*hh**6*tt + 8*dal*db*hh**4*tt + 8*dal*dq*ds*hh**8*zz + 8*dal*dq*ds*hh**6*zz + 8*dal*dq*ds*hh**6 + 8*dal*dq*ds*hh**4 + 8*dal*dq*hh**8*zz + 8*dal*dq*hh**6*zz + 8*dal*dq*hh**6 + 8*dal*dq*hh**4 + 8*dal*ds*hh**8*tt*zz + 8*dal*ds*hh**6*tt*zz + 8*dal*ds*hh**6*tt + 8*dal*ds*hh**4*tt + 8*dal*hh**8*tt*zz + 8*dal*hh**6*tt*zz + 8*dal*hh**6*tt + 8*dal*hh**4*tt - 8*db**2*dm*dq*ds*hh**4*zz**2 - 8*db**2*dm*dq*ds*hh**2*zz**2 - 8*db**2*dm*dq*hh**4*zz**2 - 8*db**2*dm*dq*hh**2*zz**2 - 8*db**2*dm*ds*hh**4*tt*zz**2 - 8*db**2*dm*ds*hh**2*tt*zz**2 - 8*db**2*dm*hh**4*tt*zz**2 - 8*db**2*dm*hh**2*tt*zz**2 - db**2*dq*ds**2*hh**6 - db**2*dq*ds**2*hh**4 - 2*db**2*dq*ds*hh**6 - 2*db**2*dq*ds*hh**4 + 4*db**2*dq*ds*hh**2*r*zz**2 - 4*db**2*dq*ds*hh**2*zz**2 - db**2*dq*hh**6 - db**2*dq*hh**4 + 4*db**2*dq*hh**2*r*zz**2 - 4*db**2*dq*hh**2*zz**2 - db**2*ds**2*hh**6*tt - db**2*ds**2*hh**4*tt - 2*db**2*ds*hh**6*tt - 2*db**2*ds*hh**4*tt + 4*db**2*ds*hh**2*r*tt*zz**2 - 4*db**2*ds*hh**2*tt*zz**2 - db**2*hh**6*tt - db**2*hh**4*tt + 4*db**2*hh**2*r*tt*zz**2 - 4*db**2*hh**2*tt*zz**2 + 8*db*dc*dq*ds*hh**4 + 8*db*dc*dq*ds*hh**2 + 8*db*dc*dq*hh**4 + 8*db*dc*dq*hh**2 + 8*db*dc*ds*hh**4*tt + 8*db*dc*ds*hh**2*tt + 8*db*dc*hh**4*tt + 8*db*dc*hh**2*tt - 8*db*dm*dq*ds*hh**6*zz**3 - 8*db*dm*dq*ds*hh**4*r*zz**3 - 16*db*dm*dq*ds*hh**4*zz**2 - 8*db*dm*dq*ds*hh**2*r*zz**3 + 8*db*dm*dq*ds*hh**2*zz**3 - 16*db*dm*dq*ds*hh**2*zz**2 - 8*db*dm*dq*hh**6*zz**3 - 8*db*dm*dq*hh**4*r*zz**3 - 16*db*dm*dq*hh**4*zz**2 - 8*db*dm*dq*hh**2*r*zz**3 + 8*db*dm*dq*hh**2*zz**3 - 16*db*dm*dq*hh**2*zz**2 - 8*db*dm*ds*hh**6*tt*zz**3 - 8*db*dm*ds*hh**4*r*tt*zz**3 - 16*db*dm*ds*hh**4*tt*zz**2 - 8*db*dm*ds*hh**2*r*tt*zz**3 + 8*db*dm*ds*hh**2*tt*zz**3 - 16*db*dm*ds*hh**2*tt*zz**2 - 8*db*dm*hh**6*tt*zz**3 - 8*db*dm*hh**4*r*tt*zz**3 - 16*db*dm*hh**4*tt*zz**2 - 8*db*dm*hh**2*r*tt*zz**3 + 8*db*dm*hh**2*tt*zz**3 - 16*db*dm*hh**2*tt*zz**2 - 8*db*dn*ds*hh**4*zz - 8*db*dn*ds*hh**2*zz - 8*db*dn*ds*hh**2 - 8*db*dn*ds - 8*db*dn*hh**4*zz - 8*db*dn*hh**2*zz - 8*db*dn*hh**2 - 8*db*dn - 2*db*dq*ds**2*hh**6 - 2*db*dq*ds**2*hh**4 - 4*db*dq*ds*hh**6 - 4*db*dq*ds*hh**4*kk**2*zz + 4*db*dq*ds*hh**4*r*zz**3 - 4*db*dq*ds*hh**4*r*zz - 4*db*dq*ds*hh**4*zz**3 - 4*db*dq*ds*hh**4 - 4*db*dq*ds*hh**2*kk**2 + 4*db*dq*ds*hh**2*r**2*zz**3 - 8*db*dq*ds*hh**2*r*zz**3 + 8*db*dq*ds*hh**2*r*zz**2 - 4*db*dq*ds*hh**2*r*zz + 4*db*dq*ds*hh**2*zz**3 - 8*db*dq*ds*hh**2*zz**2 + 4*db*dq*ds*hh**2*zz - 2*db*dq*hh**6 - 4*db*dq*hh**4*kk**2*zz + 4*db*dq*hh**4*r*zz**3 - 4*db*dq*hh**4*r*zz - 4*db*dq*hh**4*zz**3 - 2*db*dq*hh**4 - 4*db*dq*hh**2*kk**2 + 4*db*dq*hh**2*r**2*zz**3 - 8*db*dq*hh**2*r*zz**3 + 8*db*dq*hh**2*r*zz**2 - 4*db*dq*hh**2*r*zz + 4*db*dq*hh**2*zz**3 - 8*db*dq*hh**2*zz**2 + 4*db*dq*hh**2*zz - 2*db*ds**2*hh**6*tt - 2*db*ds**2*hh**4*tt - 4*db*ds*hh**6*tt - 4*db*ds*hh**4*kk**2*tt*zz + 4*db*ds*hh**4*r*tt*zz**3 - 4*db*ds*hh**4*r*tt*zz - 4*db*ds*hh**4*tt*zz**3 - 4*db*ds*hh**4*tt - 4*db*ds*hh**2*kk**2*tt + 4*db*ds*hh**2*r**2*tt*zz**3 - 8*db*ds*hh**2*r*tt*zz**3 + 8*db*ds*hh**2*r*tt*zz**2 - 4*db*ds*hh**2*r*tt*zz + 4*db*ds*hh**2*tt*zz**3 - 8*db*ds*hh**2*tt*zz**2 + 4*db*ds*hh**2*tt*zz - 4*db*ds*hh**2*zz - 4*db*ds - 2*db*hh**6*tt - 4*db*hh**4*kk**2*tt*zz + 4*db*hh**4*r*tt*zz**3 - 4*db*hh**4*r*tt*zz - 4*db*hh**4*tt*zz**3 - 2*db*hh**4*tt - 4*db*hh**2*kk**2*tt + 4*db*hh**2*r**2*tt*zz**3 - 8*db*hh**2*r*tt*zz**3 + 8*db*hh**2*r*tt*zz**2 - 4*db*hh**2*r*tt*zz + 4*db*hh**2*tt*zz**3 - 8*db*hh**2*tt*zz**2 + 4*db*hh**2*tt*zz - 4*db*hh**2*zz - 4*db + 8*dc*dq*ds*hh**4 + 8*dc*dq*ds*hh**2 + 8*dc*dq*hh**4 + 8*dc*dq*hh**2 + 8*dc*ds*hh**4*tt + 8*dc*ds*hh**2*tt + 8*dc*hh**4*tt + 8*dc*hh**2*tt - 8*dm*dq*ds*hh**6*zz**3 - 8*dm*dq*ds*hh**4*r*zz**3 - 8*dm*dq*ds*hh**4*zz**2 - 8*dm*dq*ds*hh**2*r*zz**3 + 8*dm*dq*ds*hh**2*zz**3 - 8*dm*dq*ds*hh**2*zz**2 - 8*dm*dq*hh**6*zz**3 - 8*dm*dq*hh**4*r*zz**3 - 8*dm*dq*hh**4*zz**2 - 8*dm*dq*hh**2*r*zz**3 + 8*dm*dq*hh**2*zz**3 - 8*dm*dq*hh**2*zz**2 - 8*dm*ds*hh**6*tt*zz**3 - 8*dm*ds*hh**4*r*tt*zz**3 - 8*dm*ds*hh**4*tt*zz**2 - 8*dm*ds*hh**2*r*tt*zz**3 + 8*dm*ds*hh**2*tt*zz**3 - 8*dm*ds*hh**2*tt*zz**2 - 8*dm*hh**6*tt*zz**3 - 8*dm*hh**4*r*tt*zz**3 - 8*dm*hh**4*tt*zz**2 - 8*dm*hh**2*r*tt*zz**3 + 8*dm*hh**2*tt*zz**3 - 8*dm*hh**2*tt*zz**2 - 8*dn*ds*hh**4*zz - 8*dn*ds*hh**2*zz - 8*dn*ds*hh**2 - 8*dn*ds + 8*dn*hh**6*r*zz**2 + 8*dn*hh**4*r*zz**2 + 8*dn*hh**4*r*zz - 8*dn*hh**4*zz + 8*dn*hh**2*r*zz - 8*dn*hh**2*zz - 8*dn*hh**2 - 8*dn - dq*ds**2*hh**6 - dq*ds**2*hh**4 - 2*dq*ds*hh**6 - 4*dq*ds*hh**4*kk**2*zz + 4*dq*ds*hh**4*r*zz**3 - 4*dq*ds*hh**4*r*zz - 4*dq*ds*hh**4*zz**3 - 2*dq*ds*hh**4 - 4*dq*ds*hh**2*kk**2 + 4*dq*ds*hh**2*r**2*zz**3 - 8*dq*ds*hh**2*r*zz**3 + 4*dq*ds*hh**2*r*zz**2 - 4*dq*ds*hh**2*r*zz + 4*dq*ds*hh**2*zz**3 - 4*dq*ds*hh**2*zz**2 + 4*dq*ds*hh**2*zz - dq*hh**6 - 4*dq*hh**4*kk**2*zz + 4*dq*hh**4*r*zz**3 - 4*dq*hh**4*r*zz - 4*dq*hh**4*zz**3 - dq*hh**4 - 4*dq*hh**2*kk**2 + 4*dq*hh**2*r**2*zz**3 - 8*dq*hh**2*r*zz**3 + 4*dq*hh**2*r*zz**2 - 4*dq*hh**2*r*zz + 4*dq*hh**2*zz**3 - 4*dq*hh**2*zz**2 + 4*dq*hh**2*zz - ds**2*hh**6*tt - ds**2*hh**4*tt - 2*ds*hh**6*tt - 4*ds*hh**4*kk**2*tt*zz + 4*ds*hh**4*r*tt*zz**3 - 4*ds*hh**4*r*tt*zz - 4*ds*hh**4*tt*zz**3 - 2*ds*hh**4*tt - 4*ds*hh**2*kk**2*tt + 4*ds*hh**2*r**2*tt*zz**3 - 8*ds*hh**2*r*tt*zz**3 + 4*ds*hh**2*r*tt*zz**2 - 4*ds*hh**2*r*tt*zz + 4*ds*hh**2*tt*zz**3 - 4*ds*hh**2*tt*zz**2 + 4*ds*hh**2*tt*zz - 4*ds*hh**2*zz - 4*ds - hh**6*tt - 4*hh**4*kk**2*tt*zz + 4*hh**4*r*tt*zz**3 - 4*hh**4*r*tt*zz + 4*hh**4*r*zz**2 - 4*hh**4*tt*zz**3 - hh**4*tt - 4*hh**2*kk**2*tt + 4*hh**2*r**2*tt*zz**3 - 8*hh**2*r*tt*zz**3 + 4*hh**2*r*tt*zz**2 - 4*hh**2*r*tt*zz + 4*hh**2*r*zz + 4*hh**2*tt*zz**3 - 4*hh**2*tt*zz**2 + 4*hh**2*tt*zz - 4*hh**2*zz - 4)/(2*hh**2*(db + 1)**2*(ds + 1)**2*(hh**2 + 1))"
+    ],
+    [
+      2,
+      3,
+      [
+        0,
+        1
+      ],
+      "kk*(-8*dA*db*dq*ds*hh**4*kk**2*zz - 8*dA*db*dq*ds*hh**2*kk**2*zz - 8*dA*db*dq*ds*hh**2*kk**2 - 8*dA*db*dq*ds*kk**2 - 8*dA*db*dq*hh**4*kk**2*zz - 8*dA*db*dq*hh**2*kk**2*zz - 8*dA*db*dq*hh**2*kk**2 - 8*dA*db*dq*kk**2 - 8*dA*db*ds*hh**4*kk**2*tt*zz - 8*dA*db*ds*hh**2*kk**2*tt*zz - 8*dA*db*ds*hh**2*kk**2*tt - 8*dA*db*ds*kk**2*tt - 8*dA*db*hh**4*kk**2*tt*zz - 8*dA*db*hh**2*kk**2*tt*zz - 8*dA*db*hh**2*kk**2*tt - 8*dA*db*kk**2*tt - 8*dA*dq*ds*hh**4*kk**2*zz - 8*dA*dq*ds*hh**2*kk**2*zz - 8*dA*dq*ds*hh**2*kk**2 - 8*dA*dq*ds*kk**2 - 8*dA*dq*hh**4*kk**2*zz - 8*dA*dq*hh**2*kk**2*zz - 8*dA*dq*hh**2*kk**2 - 8*dA*dq*kk**2 - 8*dA*ds*hh**4*kk**2*tt*zz - 8*dA*ds*hh**2*kk**2*tt*zz - 8*dA*ds*hh**2*kk**2*tt - 8*dA*ds*kk**2*tt - 8*dA*hh**4*kk**2*tt*zz - 8*dA*hh**2*kk**2*tt*zz - 8*dA*hh**2*kk**2*tt - 8*dA*kk**2*tt + 8*dal*db*dq*ds*hh**6*zz + 8*dal*db*dq*ds*hh**4*zz + 8*dal*db*dq*ds*hh**4 + 8*dal*db*dq*ds*hh**2 + 8*dal*db*dq*hh**6*zz + 8*dal*db*dq*hh**4*zz + 8*dal*db*dq*hh**4 + 8*dal*db*dq*hh**2 + 8*dal*db*ds*hh**6*tt*zz + 8*dal*db*ds*hh**4*tt*zz + 8*dal*db*ds*hh**4*tt + 8*dal*db*ds*hh**2*tt + 8*dal*db*hh**6*tt*zz + 8*dal*db*hh**4*tt*zz + 8*dal*db*hh**4*tt + 8*dal*db*hh**2*tt + 8*dal*dq*ds*hh**6*zz + 8*dal*dq*ds*hh**4*zz + 8*dal*dq*ds*hh**4 + 8*dal*dq*ds*hh**2 + 8*dal*dq*hh**6*zz + 8*dal*dq*hh**4*zz + 8*dal*dq*hh**4 + 8*dal*dq*hh**2 + 8*dal*ds*hh**6*tt*zz + 8*dal*ds*hh**4*tt*zz + 8*dal*ds*hh**4*tt + 8*dal*ds*hh**2*tt + 8*dal*hh**6*tt*zz + 8*dal*hh**4*tt*zz + 8*dal*hh**4*tt + 8*dal*hh**2*tt - 8*db**2*dm*dq*ds*hh**2*zz**2 - 8*db**2*dm*dq*ds*zz**2 - 8*db**2*dm*dq*hh**2*zz**2 - 8*db**2*dm*dq*zz**2 - 8*db**2*dm*ds*hh**2*tt*zz**2 - 8*db**2*dm*ds*tt*zz**2 - 8*db**2*dm*hh**2*tt*zz**2 - 8*db**2*dm*tt*zz**2 - db**2*dq*ds**2*hh**4 - db**2*dq*ds**2*hh**2 - 2*db**2*dq*ds*hh**4 - 2*db**2*dq*ds*hh**2 + 4*db**2*dq*ds*r*zz**2 - 4*db**2*dq*ds*zz**2 - db**2*dq*hh**4 - db**2*dq*hh**2 + 4*db**2*dq*r*zz**2 - 4*db**2*dq*zz**2 - db**2*ds**2*hh**4*tt - db**2*ds**2*hh**2*tt - 2*db**2*ds*hh**4*tt - 2*db**2*ds*hh**2*tt + 4*db**2*ds*r*tt*zz**2 - 4*db**2*ds*tt*zz**2 - db**2*hh**4*tt - db**2*hh**2*tt + 4*db**2*r*tt*zz**2 - 4*db**2*tt*zz**2 + 8*db*dc*dq*ds*hh**2 + 8*db*dc*dq*ds + 8*db*dc*dq*hh**2 + 8*db*dc*dq + 8*db*dc*ds*hh**2*tt + 8*db*dc*ds*tt + 8*db*dc*hh**2*tt + 8*db*dc*tt - 8*db*dm*dq*ds*hh**4*zz**3 - 8*db*dm*dq*ds*hh**2*r*zz**3 - 16*db*dm*dq*ds*hh**2*zz**2 - 8*db*dm*dq*ds*r*zz**3 + 8*db*dm*dq*ds*zz**3 - 16*db*dm*dq*ds*zz**2 - 8*db*dm*dq*hh**4*zz**3 - 8*db*dm*dq*hh**2*r*zz**3 - 16*db*dm*dq*hh**2*zz**2 - 8*db*dm*dq*r*zz**3 + 8*db*dm*dq*zz**3 - 16*db*dm*dq*zz**2 - 8*db*dm*ds*hh**4*tt*zz**3 - 8*db*dm*ds*hh**2*r*tt*zz**3 - 16*db*dm*ds*hh**2*tt*zz**2 - 8*db*dm*ds*r*tt*zz**3 + 8*db*dm*ds*tt*zz**3 - 16*db*dm*ds*tt*zz**2 - 8*db*dm*hh**4*tt*zz**3 - 8*db*dm*hh**2*r*tt*zz**3 - 16*db*dm*hh**2*tt*zz**2 - 8*db*dm*r*tt*zz**3 + 8*db*dm*tt*zz**3 - 16*db*dm*tt*zz**2 - 2*db*dq*ds**2*hh**4 - 2*db*dq*ds**2*hh**2 - 4*db*dq*ds*hh**4 - 4*db*dq*ds*hh**2*kk**2*zz + 4*db*dq*ds*hh**2*r*zz**3 - 4*db*dq*ds*hh**2*r*zz - 4*db*dq*ds*hh**2*zz**3 - 4*db*dq*ds*hh**2 - 4*db*dq*ds*kk**2 + 4*db*dq*ds*r**2*zz**3 - 8*db*dq*ds*r*zz**3 + 8*db*dq*ds*r*zz**2 - 4*db*dq*ds*r*zz + 4*db*dq*ds*zz**3 - 8*db*dq*ds*zz**2 + 4*db*dq*ds*zz - 2*db*dq*hh**4 - 4*db*dq*hh**2*kk**2*zz + 4*db*dq*hh**2*r*zz**3 - 4*db*dq*hh**2*r*zz - 4*db*dq*hh**2*zz**3 - 2*db*dq*hh**2 - 4*db*dq*kk**2 + 4*db*dq*r**2*zz**3 - 8*db*dq*r*zz**3 + 8*db*dq*r*zz**2 - 4*db*dq*r*zz + 4*db*dq*zz**3 - 8*db*dq*zz**2 + 4*db*dq*zz - 2*db*ds**2*hh**4*tt - 2*db*ds**2*hh**2*tt - 4*db*ds*hh**4*tt - 4*db*ds*hh**2*kk**2*tt*zz + 4*db*ds*hh**2*r*tt*zz**3 - 4*db*ds*hh**2*r*tt*zz - 4*db*ds*hh**2*tt*zz**3 - 4*db*ds*hh**2*tt - 4*db*ds*kk**2*tt + 4*db*ds*r**2*tt*zz**3 - 8*db*ds*r*tt*zz**3 + 8*db*ds*r*tt*zz**2 - 4*db*ds*r*tt*zz + 4*db*ds*tt*zz**3 - 8*db*ds*tt*zz**2 + 4*db*ds*tt*zz - 2*db*hh**4*tt - 4*db*hh**2*kk**2*tt*zz + 4*db*hh**2*r*tt*zz**3 - 4*db*hh**2*r*tt*zz - 4*db*hh**2*tt*zz**3 - 2*db*hh**2*tt - 4*db*kk**2*tt + 4*db*r**2*tt*zz**3 - 8*db*r*tt*zz**3 + 8*db*r*tt*zz**2 - 4*db*r*tt*zz + 4*db*tt*zz**3 - 8*db*tt*zz**2 + 4*db*tt*zz + 8*dc*dq*ds*hh**2 + 8*dc*dq*ds + 8*dc*dq*hh**2 + 8*dc*dq + 8*dc*ds*hh**2*tt + 8*dc*ds*tt + 8*dc*hh**2*tt + 8*dc*tt - 8*dm*dq*ds*hh**4*zz**3 - 8*dm*dq*ds*hh**2*r*zz**3 - 8*dm*dq*ds*hh**2*zz**2 - 8*dm*dq*ds*r*zz**3 + 8*dm*dq*ds*zz**3 - 8*dm*dq*ds*zz**2 - 8*dm*dq*hh**4*zz**3 - 8*dm*dq*hh**2*r*zz**3 - 8*dm*dq*hh**2*zz**2 - 8*dm*dq*r*zz**3 + 8*dm*dq*zz**3 - 8*dm*dq*zz**2 - 8*dm*ds*hh**4*tt*zz**3 - 8*dm*ds*hh**2*r*tt*zz**3 - 8*dm*ds*hh**2*tt*zz**2 - 8*dm*ds*r*tt*zz**3 + 8*dm*ds*tt*zz**3 - 8*dm*ds*tt*zz**2 - 8*dm*hh**4*tt*zz**3 - 8*dm*hh**2*r*tt*zz**3 - 8*dm*hh**2*tt*zz**2 - 8*dm*r*tt*zz**3 + 8*dm*tt*zz**3 - 8*dm*tt*zz**2 + 8*dn*hh**4*r*zz**2 + 8*dn*hh**2*r*zz**2 + 8*dn*hh**2*r*zz + 8*dn*r*zz - dq*ds**2*hh**4 - dq*ds**2*hh**2 - 2*dq*ds*hh**4 - 4*dq*ds*hh**2*kk**2*zz + 4*dq*ds*hh**2*r*zz**3 - 4*dq*ds*hh**2*r*zz - 4*dq*ds*hh**2*zz**3 - 2*dq*ds*hh**2 - 4*dq*ds*kk**2 + 4*dq*ds*r**2*zz**3 - 8*dq*ds*r*zz**3 + 4*dq*ds*r*zz**2 - 4*dq*ds*r*zz + 4*dq*ds*zz**3 - 4*dq*ds*zz**2 + 4*dq*ds*zz - dq*hh**4 - 4*dq*hh**2*kk**2*zz + 4*dq*hh**2*r*zz**3 - 4*dq*hh**2*r*zz - 4*dq*hh**2*zz**3 - dq*hh**2 - 4*dq*kk**2 + 4*dq*r**2*zz**3 - 8*dq*r*zz**3 + 4*dq*r*zz**2 - 4*dq*r*zz + 4*dq*zz**3 - 4*dq*zz**2 + 4*dq*zz - ds**2*hh**4*tt - ds**2*hh**2*tt - 2*ds*hh**4*tt - 4*ds*hh**2*kk**2*tt*zz + 4*ds*hh**2*r*tt*zz**3 - 4*ds*hh**2*r*tt*zz - 4*ds*hh**2*tt*zz**3 - 2*ds*hh**2*tt - 4*ds*kk**2*tt + 4*ds*r**2*tt*zz**3 - 8*ds*r*tt*zz**3 + 4*ds*r*tt*zz**2 - 4*ds*r*tt*zz + 4*ds*tt*zz**3 - 4*ds*tt*zz**2 + 4*ds*tt*zz - hh**4*tt - 4*hh**2*kk**2*tt*zz + 4*hh**2*r*tt*zz**3 - 4*hh**2*r*tt*zz + 4*hh**2*r*zz**2 - 4*hh**2*tt*zz**3 - hh**2*tt - 4*kk**2*tt + 4*r**2*tt*zz**3 - 8*r*tt*zz**3 + 4*r*tt*zz**2 - 4*r*tt*zz + 4*r*zz + 4*tt*zz**3 - 4*tt*zz**2 + 4*tt*zz)/(2*(db + 1)**2*(ds + 1)**2*(hh**2 + 1))"
+    ],
+    [
+      2,
+      4,
+      [
+        5,
+        0
+      ],
+      "-2/(hh*(ds + 1))"
+    ],
+    [
+      2,
+      4,
+      [
+        3,
+        2
+      ],
+      "(2*db**2*ds**2*hh**2 + 2*db**2*ds**2 + 4*db**2*ds*hh**2 + 4*db**2*ds + 2*db**2*hh**2 + 2*db**2 - 8*db*dn*ds*hh**4*zz - 8*db*dn*ds*hh**2*zz - 8*db*dn*ds*hh**2 - 8*db*dn*ds - 8*db*dn*hh**4*zz - 8*db*dn*hh**2*zz - 8*db*dn*hh**2 - 8*db*dn + 4*db*ds**2*hh**2 + 4*db*ds**2 - 4*db*ds*hh**2*zz + 8*db*ds*hh**2 + 4*db*ds - 4*db*hh**2*zz + 4*db*hh**2 + 2*dn*ds*hh**4*r - 8*dn*ds*hh**4*zz + 4*dn*ds*hh**2*r - 8*dn*ds*hh**2*zz - 8*dn*ds*hh**2 + 2*dn*ds*r - 8*dn*ds + 4*dn*hh**6*r*zz**2 + 4*dn*hh**4*r*zz**2 + 4*dn*hh**4*r*zz + 2*dn*hh**4*r - 8*dn*hh**4*zz + 4*dn*hh**2*r*zz + 4*dn*hh**2*r - 8*dn*hh**2*zz - 8*dn*hh**2 + 2*dn*r - 8*dn + 2*ds**2*hh**2 + 2*ds**2 + ds*hh**2*r - 4*ds*hh**2*zz + 4*ds*hh**2 + ds*r + 2*hh**4*r*zz**2 + 2*hh**2*r*zz + hh**2*r - 4*hh**2*zz + 2*hh**2 + r - 2)/(hh**3*(db + 1)**2*(ds + 1)**2*(hh**2 + 1)**2)"
+    ],
+    [
+      2,
+      4,
+      [
+        3,
+        0
+      ],
+      "-(2*dA*hh**6*kk**2 + 2*dA*hh**4*kk**2 - 2*dal*hh**8 + 2*dal*hh**4 - 2*db**2*dm*hh**2 - 2*db**2*dm - 2*db**2*hh**6*zz - 2*db**2*hh**4*zz + 2*db**2*hh**4 + 2*db**2*hh**2 + db**2*r - db**2 - 4*db*dm*hh**2*r*zz - 4*db*dm*hh**2 - 4*db*dm*r*zz - 4*db*dm - 4*db*hh**6*zz - 4*db*hh**4*zz + 4*db*hh**4 + 4*db*hh**2 + 2*db*r**2*zz - 2*db*r*zz + 2*db*r - 2*db + 2*dm*hh**6*zz**2 - 2*dm*hh**4*zz**2 - 2*dm*hh**2*r**2*zz**2 - 4*dm*hh**2*r*zz - 2*dm*hh**2*zz**2 - 2*dm*hh**2 - 2*dm*r**2*zz**2 - 4*dm*r*zz + 2*dm*zz**2 - 2*dm - 2*dn*hh**4*kk**2*r - 2*dn*hh**2*kk**2*r - 2*dn*hh**2*r - 2*dn*r - 2*hh**6*zz + hh**4*kk**2 - hh**4*r*zz**2 + hh**4*zz**2 - 2*hh**4*zz + 2*hh**4 - hh**2*kk**2*r + 2*hh**2*r*zz**2 - 2*hh**2*zz**2 + hh**2 + r**3*zz**2 - r**2*zz**2 + 2*r**2*zz - r*zz**2 - 2*r*zz + zz**2)/(hh**3*(db + 1)**2*(ds + 1)*(hh**2 + 1))"
+    ],
+    [
+      2,
+      4,
+      [
+        1,
+        2
+      ],
+      "(2*db**2*ds**2*hh**2 + 2*db**2*ds**2 + 4*db**2*ds*hh**2 + 4*db**2*ds + 2*db**2*hh**2 + 2*db**2 - 4*db*dn*ds**2*hh**4 - 8*db*dn*ds**2*hh**2 - 4*db*dn*ds**2 - 4*db*dn*ds*hh**4*zz - 8*db*dn*ds*hh**4 - 4*db*dn*ds*hh**2*zz - 20*db*dn*ds*hh**2 - 12*db*dn*ds - 4*db*dn*hh**4*zz - 4*db*dn*hh**4 - 4*db*dn*hh**2*zz - 12*db*dn*hh**2 - 8*db*dn + 2*db*ds**2*hh**2 + 2*db*ds**2 - 2*db*ds*hh**2*zz + 4*db*ds*hh**2 + 2*db*ds - 2*db*hh**2*zz + 2*db*hh**2 - 4*dn*ds**2*hh**4 - 8*dn*ds**2*hh**2 - 4*dn*ds**2 + 2*dn*ds*hh**4*r - 4*dn*ds*hh**4*zz - 8*dn*ds*hh**4 + 4*dn*ds*hh**2*r - 4*dn*ds*hh**2*zz - 20*dn*ds*hh**2 + 2*dn*ds*r - 12*dn*ds + 4*dn*hh**6*r*zz**2 + 4*dn*hh**4*r*zz**2 + 4*dn*hh**4*r*zz + 2*dn*hh**4*r - 4*dn*hh**4*zz - 4*dn*hh**4 + 4*dn*hh**2*r*zz + 4*dn*hh**2*r - 4*dn*hh**2*zz - 12*dn*hh**2 + 2*dn*r - 8*dn + ds*hh**2*r - 2*ds*hh**2*zz + ds*r - 2*ds + 2*hh**4*r*zz**2 + 2*hh**2*r*zz + hh**2*r - 2*hh**2*zz + r - 2)/(hh**3*(db + 1)**2*(ds + 1)**2*(hh**2 + 1)**2)"
+    ],
+    [
+      2,
+      4,
+      [
+        1,
+        0
+      ],
+      "-(4*dA*db*dq*ds*hh**8*kk**4*zz + 4*dA*db*dq*ds*hh**6*kk**4*zz + 4*dA*db*dq*ds*hh**6*kk**4 + 4*dA*db*dq*ds*hh**6*kk**2*zz + 4*dA*db*dq*ds*hh**4*kk**4 + 4*dA*db*dq*ds*hh**4*kk**2*zz + 4*dA*db*dq*ds*hh**4*kk**2 + 4*dA*db*dq*ds*hh**2*kk**2 + 4*dA*db*dq*hh**8*kk**4*zz + 4*dA*db*dq*hh**6*kk**4*zz + 4*dA*db*dq*hh**6*kk**4 + 4*dA*db*dq*hh**6*kk**2*zz + 4*dA*db*dq*hh**4*kk**4 + 4*dA*db*dq*hh**4*kk**2*zz + 4*dA*db*dq*hh**4*kk**2 + 4*dA*db*dq*hh**2*kk**2 + 4*dA*db*ds*hh**8*kk**4*tt*zz + 4*dA*db*ds*hh**6*kk**4*tt*zz + 4*dA*db*ds*hh**6*kk**4*tt + 4*dA*db*ds*hh**6*kk**2*tt*zz + 4*dA*db*ds*hh**4*kk**4*tt + 4*dA*db*ds*hh**4*kk**2*tt*zz + 4*dA*db*ds*hh**4*kk**2*tt + 4*dA*db*ds*hh**2*kk**2*tt + 4*dA*db*hh**8*kk**4*tt*zz + 4*dA*db*hh**6*kk**4*tt*zz + 4*dA*db*hh**6*kk**4*tt + 4*dA*db*hh**6*kk**2*tt*zz + 4*dA*db*hh**4*kk**4*tt + 4*dA*db*hh**4*kk**2*tt*zz + 4*dA*db*hh**4*kk**2*tt + 4*dA*db*hh**2*kk**2*tt + 4*dA*dq*ds*hh**8*kk**4*zz + 4*dA*dq*ds*hh**6*kk**4*zz + 4*dA*dq*ds*hh**6*kk**4 + 4*dA*dq*ds*hh**6*kk**2*zz + 4*dA*dq*ds*hh**4*kk**4 + 4*dA*dq*ds*hh**4*kk**2*zz + 4*dA*dq*ds*hh**4*kk**2 + 4*dA*dq*ds*hh**2*kk**2 + 4*dA*dq*hh**8*kk**4*zz + 4*dA*dq*hh**6*kk**4*zz + 4*dA*dq*hh**6*kk**4 + 4*dA*dq*hh**6*kk**2*zz + 4*dA*dq*hh**4*kk**4 + 4*dA*dq*hh**4*kk**2*zz + 4*dA*dq*hh**4*kk**2 + 4*dA*dq*hh**2*kk**2 + 4*dA*ds*hh**8*kk**4*tt*zz + 4*dA*ds*hh**6*kk**4*tt*zz + 4*dA*ds*hh**6*kk**4*tt + 4*dA*ds*hh**6*kk**2*tt*zz + 4*dA*ds*hh**4*kk**4*tt + 4*dA*ds*hh**4*kk**2*tt*zz + 4*dA*ds*hh**4*kk**2*tt + 4*dA*ds*hh**2*kk**2*tt + 4*dA*hh**8*kk**4*tt*zz + 4*dA*hh**6*kk**4*tt*zz + 4*dA*hh**6*kk**4*tt + 4*dA*hh**6*kk**2*tt*zz + 2*dA*hh**6*kk**2 + 4*dA*hh**4*kk**4*tt + 4*dA*hh**4*kk**2*tt*zz + 4*dA*hh**4*kk**2*tt + 2*dA*hh**4*kk**2 + 4*dA*hh**2*kk**2*tt - 4*dal*db*dq*ds*hh**10*kk**2*zz - 4*dal*db*dq*ds*hh**8*kk**2*zz - 4*dal*db*dq*ds*hh**8*kk**2 - 4*dal*db*dq*ds*hh**6*kk**2 - 4*dal*db*dq*hh**10*kk**2*zz - 4*dal*db*dq*hh**8*kk**2*zz - 4*dal*db*dq*hh**8*kk**2 - 4*dal*db*dq*hh**6*kk**2 - 4*dal*db*ds*hh**10*kk**2*tt*zz - 4*dal*db*ds*hh**8*kk**2*tt*zz - 4*dal*db*ds*hh**8*kk**2*tt - 4*dal*db*ds*hh**6*kk**2*tt - 4*dal*db*ds*hh**6 - 4*dal*db*ds*hh**4 - 4*dal*db*hh**10*kk**2*tt*zz - 4*dal*db*hh**8*kk**2*tt*zz - 4*dal*db*hh**8*kk**2*tt - 4*dal*db*hh**6*kk**2*tt - 4*dal*db*hh**6 - 4*dal*db*hh**4 - 4*dal*dq*ds*hh**10*kk**2*zz - 4*dal*dq*ds*hh**8*kk**2*zz - 4*dal*dq*ds*hh**8*kk**2 - 4*dal*dq*ds*hh**6*kk**2 - 4*dal*dq*hh**10*kk**2*zz - 4*dal*dq*hh**8*kk**2*zz - 4*dal*dq*hh**8*kk**2 - 4*dal*dq*hh**6*kk**2 - 4*dal*ds*hh**10*kk**2*tt*zz - 4*dal*ds*hh**8*kk**2*tt*zz - 4*dal*ds*hh**8*kk**2*tt - 4*dal*ds*hh**6*kk**2*tt - 4*dal*ds*hh**6 - 4*dal*ds*hh**4 - 4*dal*hh**10*kk**2*tt*zz - 4*dal*hh**8*kk**2*tt*zz - 4*dal*hh**8*kk**2*tt - 2*dal*hh**8 - 4*dal*hh**6*kk**2*tt - 4*dal*hh**6 - 2*dal*hh**4 - 4*db**2*dg*ds**2*hh**4 - 4*db**2*dg*ds**2*hh**2 - 8*db**2*dg*ds*hh**4 - 8*db**2*dg*ds*hh**2 - 4*db**2*dg*hh**4 - 4*db**2*dg*hh**2 + 4*db**2*dm*dq*ds*hh**6*kk**2*zz**2 + 4*db**2*dm*dq*ds*hh**4*kk**2*zz**2 + 4*db**2*dm*dq*hh**6*kk**2*zz**2 + 4*db**2*dm*dq*hh**4*kk**2*zz**2 + 4*db**2*dm*ds*hh**6*kk**2*tt*zz**2 + 4*db**2*dm*ds*hh**4*kk**2*tt*zz**2 + 4*db**2*dm*hh**6*kk**2*tt*zz**2 + 4*db**2*dm*hh**4*kk**2*tt*zz**2 - 2*db**2*dm*hh**2 - 2*db**2*dm - 2*db**2*dq*ds*hh**4*kk**2*r*zz**2 + 2*db**2*dq*ds*hh**4*kk**2*zz**2 - 2*db**2*dq*ds*hh**4 - 2*db**2*dq*ds*hh**2 - 2*db**2*dq*hh**4*kk**2*r*zz**2 + 2*db**2*dq*hh**4*kk**2*zz**2 - 2*db**2*dq*hh**4 - 2*db**2*dq*hh**2 - 2*db**2*ds**2*hh**2 - 2*db**2*ds*hh**4*kk**2*r*tt*zz**2 + 2*db**2*ds*hh**4*kk**2*tt*zz**2 - 2*db**2*ds*hh**4*tt + 2*db**2*ds*hh**4 - 2*db**2*ds*hh**2*tt - 2*db**2*ds*hh**2 - 2*db**2*hh**6*zz - 2*db**2*hh**4*kk**2*r*tt*zz**2 + 2*db**2*hh**4*kk**2*tt*zz**2 - 2*db**2*hh**4*tt - 2*db**2*hh**4*zz + 2*db**2*hh**4 - 2*db**2*hh**2*tt + db**2*r - db**2 - 4*db*dc*dq*ds*hh**6*kk**2 - 4*db*dc*dq*ds*hh**4*kk**2 - 4*db*dc*dq*hh**6*kk**2 - 4*db*dc*dq*hh**4*kk**2 - 4*db*dc*ds*hh**6*kk**2*tt - 4*db*dc*ds*hh**4*kk**2*tt - 4*db*dc*hh**6*kk**2*tt - 4*db*dc*hh**4*kk**2*tt - 8*db*dg*ds**2*hh**4 - 8*db*dg*ds**2*hh**2 - 16*db*dg*ds*hh**4 - 16*db*dg*ds*hh**2 - 8*db*dg*hh**4 - 8*db*dg*hh**2 + 4*db*dm*dq*ds*hh**8*kk**2*zz**3 + 4*db*dm*dq*ds*hh**6*kk**2*r*zz**3 + 8*db*dm*dq*ds*hh**6*kk**2*zz**2 + 4*db*dm*dq*ds*hh**4*kk**2*r*zz**3 - 4*db*dm*dq*ds*hh**4*kk**2*zz**3 + 8*db*dm*dq*ds*hh**4*kk**2*zz**2 + 4*db*dm*dq*hh**8*kk**2*zz**3 + 4*db*dm*dq*hh**6*kk**2*r*zz**3 + 8*db*dm*dq*hh**6*kk**2*zz**2 + 4*db*dm*dq*hh**4*kk**2*r*zz**3 - 4*db*dm*dq*hh**4*kk**2*zz**3 + 8*db*dm*dq*hh**4*kk**2*zz**2 + 4*db*dm*ds*hh**8*kk**2*tt*zz**3 + 4*db*dm*ds*hh**6*kk**2*r*tt*zz**3 + 8*db*dm*ds*hh**6*kk**2*tt*zz**2 + 4*db*dm*ds*hh**4*kk**2*r*tt*zz**3 - 4*db*dm*ds*hh**4*kk**2*tt*zz**3 + 8*db*dm*ds*hh**4*kk**2*tt*zz**2 + 4*db*dm*hh**8*kk**2*tt*zz**3 + 4*db*dm*hh**6*kk**2*r*tt*zz**3 + 8*db*dm*hh**6*kk**2*tt*zz**2 + 4*db*dm*hh**4*kk**2*r*tt*zz**3 - 4*db*dm*hh**4*kk**2*tt*zz**3 + 8*db*dm*hh**4*kk**2*tt*zz**2 - 4*db*dm*hh**2*r*zz - 4*db*dm*hh**2 - 4*db*dm*r*zz - 4*db*dm - 4*db*dn*ds*hh**6*kk**2*zz - 4*db*dn*ds*hh**4*kk**2*zz - 4*db*dn*ds*hh**4*kk**2 - 4*db*dn*ds*hh**4*zz - 4*db*dn*ds*hh**2*kk**2 - 4*db*dn*ds*hh**2*zz - 4*db*dn*hh**6*kk**2*zz - 4*db*dn*hh**4*kk**2*zz - 4*db*dn*hh**4*kk**2 - 4*db*dn*hh**4*zz - 4*db*dn*hh**2*kk**2 - 4*db*dn*hh**2*zz + 2*db*dq*ds*hh**6*kk**4*zz - 2*db*dq*ds*hh**6*kk**2*r*zz**3 + 2*db*dq*ds*hh**6*kk**2*r*zz + 2*db*dq*ds*hh**6*kk**2*zz**3 + 2*db*dq*ds*hh**4*kk**4 - 2*db*dq*ds*hh**4*kk**2*r**2*zz**3 + 4*db*dq*ds*hh**4*kk**2*r*zz**3 - 4*db*dq*ds*hh**4*kk**2*r*zz**2 + 2*db*dq*ds*hh**4*kk**2*r*zz - 2*db*dq*ds*hh**4*kk**2*zz**3 + 4*db*dq*ds*hh**4*kk**2*zz**2 - 2*db*dq*ds*hh**4 + 2*db*dq*ds*hh**2*kk**2 - 2*db*dq*ds*hh**2 + 2*db*dq*hh**6*kk**4*zz - 2*db*dq*hh**6*kk**2*r*zz**3 + 2*db*dq*hh**6*kk**2*r*zz + 2*db*dq*hh**6*kk**2*zz**3 + 2*db*dq*hh**4*kk**4 - 2*db*dq*hh**4*kk**2*r**2*zz**3 + 4*db*dq*hh**4*kk**2*r*zz**3 - 4*db*dq*hh**4*kk**2*r*zz**2 + 2*db*dq*hh**4*kk**2*r*zz - 2*db*dq*hh**4*kk**2*zz**3 + 4*db*dq*hh**4*kk**2*zz**2 - 2*db*dq*hh**4 + 2*db*dq*hh**2*kk**2 - 2*db*dq*hh**2 - 4*db*ds**2*hh**2 + 2*db*ds*hh**6*kk**4*tt*zz - 2*db*ds*hh**6*kk**2*r*tt*zz**3 + 2*db*ds*hh**6*kk**2*r*tt*zz + 2*db*ds*hh**6*kk**2*tt*zz**3 + 2*db*ds*hh**4*kk**4*tt - 2*db*ds*hh**4*kk**2*r**2*tt*zz**3 + 4*db*ds*hh**4*kk**2*r*tt*zz**3 - 4*db*ds*hh**4*kk**2*r*tt*zz**2 + 2*db*ds*hh**4*kk**2*r*tt*zz - 2*db*ds*hh**4*kk**2*tt*zz**3 + 4*db*ds*hh**4*kk**2*tt*zz**2 - 2*db*ds*hh**4*kk**2*zz + 2*db*ds*hh**4*r*zz - 2*db*ds*hh**4*tt + 2*db*ds*hh**4 + 2*db*ds*hh**2*kk**2*tt - 2*db*ds*hh**2*kk**2 + 2*db*ds*hh**2*r*zz - 2*db*ds*hh**2*tt - 2*db*ds*hh**2*zz - 4*db*ds*hh**2 + 2*db*hh**6*kk**4*tt*zz - 2*db*hh**6*kk**2*r*tt*zz**3 + 2*db*hh**6*kk**2*r*tt*zz + 2*db*hh**6*kk**2*tt*zz**3 - 4*db*hh**6*zz + 2*db*hh**4*kk**4*tt - 2*db*hh**4*kk**2*r**2*tt*zz**3 + 4*db*hh**4*kk**2*r*tt*zz**3 - 4*db*hh**4*kk**2*r*tt*zz**2 + 2*db*hh**4*kk**2*r*tt*zz - 2*db*hh**4*kk**2*tt*zz**3 + 4*db*hh**4*kk**2*tt*zz**2 - 2*db*hh**4*kk**2*zz + 2*db*hh**4*r*zz - 2*db*hh**4*tt - 4*db*hh**4*zz + 2*db*hh**4 + 2*db*hh**2*kk**2*tt - 2*db*hh**2*kk**2 + 2*db*hh**2*r*zz - 2*db*hh**2*tt - 2*db*hh**2*zz + 2*db*r**2*zz - 2*db*r*zz + 2*db*r - 2*db - 4*dc*dq*ds*hh**6*kk**2 - 4*dc*dq*ds*hh**4*kk**2 - 4*dc*dq*hh**6*kk**2 - 4*dc*dq*hh**4*kk**2 - 4*dc*ds*hh**6*kk**2*tt - 4*dc*ds*hh**4*kk**2*tt - 4*dc*hh**6*kk**2*tt - 4*dc*hh**4*kk**2*tt - 4*dg*ds**2*hh**4 - 4*dg*ds**2*hh**2 - 8*dg*ds*hh**4 - 8*dg*ds*hh**2 - 4*dg*hh**4 - 4*dg*hh**2 + 4*dm*dq*ds*hh**8*kk**2*zz**3 + 4*dm*dq*ds*hh**6*kk**2*r*zz**3 + 4*dm*dq*ds*hh**6*kk**2*zz**2 + 4*dm*dq*ds*hh**4*kk**2*r*zz**3 - 4*dm*dq*ds*hh**4*kk**2*zz**3 + 4*dm*dq*ds*hh**4*kk**2*zz**2 + 4*dm*dq*hh**8*kk**2*zz**3 + 4*dm*dq*hh**6*kk**2*r*zz**3 + 4*dm*dq*hh**6*kk**2*zz**2 + 4*dm*dq*hh**4*kk**2*r*zz**3 - 4*dm*dq*hh**4*kk**2*zz**3 + 4*dm*dq*hh**4*kk**2*zz**2 + 4*dm*ds*hh**8*kk**2*tt*zz**3 + 4*dm*ds*hh**6*kk**2*r*tt*zz**3 + 4*dm*ds*hh**6*kk**2*tt*zz**2 + 4*dm*ds*hh**4*kk**2*r*tt*zz**3 - 4*dm*ds*hh**4*kk**2*tt*zz**3 + 4*dm*ds*hh**4*kk**2*tt*zz**2 + 4*dm*hh**8*kk**2*tt*zz**3 + 4*dm*hh**6*kk**2*r*tt*zz**3 + 4*dm*hh**6*kk**2*tt*zz**2 + 2*dm*hh**6*zz**2 + 4*dm*hh**4*kk**2*r*tt*zz**3 - 4*dm*hh**4*kk**2*tt*zz**3 + 4*dm*hh**4*kk**2*tt*zz**2 - 2*dm*hh**4*zz**2 - 2*dm*hh**2*r**2*zz**2 - 4*dm*hh**2*r*zz - 2*dm*hh**2*zz**2 - 2*dm*hh**2 - 2*dm*r**2*zz**2 - 4*dm*r*zz + 2*dm*zz**2 - 2*dm - 4*dn*ds*hh**6*kk**2*zz - 4*dn*ds*hh**4*kk**2*zz - 4*dn*ds*hh**4*kk**2 - 4*dn*ds*hh**4*zz - 4*dn*ds*hh**2*kk**2 - 4*dn*ds*hh**2*zz - 4*dn*hh**6*kk**2*zz - 2*dn*hh**4*kk**2*r - 4*dn*hh**4*kk**2*zz - 4*dn*hh**4*kk**2 - 4*dn*hh**4*zz - 2*dn*hh**2*kk**2*r - 4*dn*hh**2*kk**2 - 2*dn*hh**2*r - 4*dn*hh**2*zz - 2*dn*r + 2*dq*ds*hh**6*kk**4*zz - 2*dq*ds*hh**6*kk**2*r*zz**3 + 2*dq*ds*hh**6*kk**2*r*zz + 2*dq*ds*hh**6*kk**2*zz**3 + 2*dq*ds*hh**4*kk**4 - 2*dq*ds*hh**4*kk**2*r**2*zz**3 + 4*dq*ds*hh**4*kk**2*r*zz**3 - 2*dq*ds*hh**4*kk**2*r*zz**2 + 2*dq*ds*hh**4*kk**2*r*zz - 2*dq*ds*hh**4*kk**2*zz**3 + 2*dq*ds*hh**4*kk**2*zz**2 + 2*dq*ds*hh**2*kk**2 + 2*dq*hh**6*kk**4*zz - 2*dq*hh**6*kk**2*r*zz**3 + 2*dq*hh**6*kk**2*r*zz + 2*dq*hh**6*kk**2*zz**3 + 2*dq*hh**4*kk**4 - 2*dq*hh**4*kk**2*r**2*zz**3 + 4*dq*hh**4*kk**2*r*zz**3 - 2*dq*hh**4*kk**2*r*zz**2 + 2*dq*hh**4*kk**2*r*zz - 2*dq*hh**4*kk**2*zz**3 + 2*dq*hh**4*kk**2*zz**2 + 2*dq*hh**2*kk**2 - 2*ds**2*hh**2 + 2*ds*hh**6*kk**4*tt*zz - 2*ds*hh**6*kk**2*r*tt*zz**3 + 2*ds*hh**6*kk**2*r*tt*zz + 2*ds*hh**6*kk**2*tt*zz**3 + 2*ds*hh**4*kk**4*tt - 2*ds*hh**4*kk**2*r**2*tt*zz**3 + 4*ds*hh**4*kk**2*r*tt*zz**3 - 2*ds*hh**4*kk**2*r*tt*zz**2 + 2*ds*hh**4*kk**2*r*tt*zz - 2*ds*hh**4*kk**2*tt*zz**3 + 2*ds*hh**4*kk**2*tt*zz**2 - 2*ds*hh**4*kk**2*zz + 2*ds*hh**4*r*zz + 2*ds*hh**2*kk**2*tt - 2*ds*hh**2*kk**2 + 2*ds*hh**2*r*zz - 2*ds*hh**2*zz - 2*ds*hh**2 + 2*hh**6*kk**4*tt*zz - 2*hh**6*kk**2*r*tt*zz**3 + 2*hh**6*kk**2*r*tt*zz + 2*hh**6*kk**2*tt*zz**3 - 2*hh**6*zz + 2*hh**4*kk**4*tt - 2*hh**4*kk**2*r**2*tt*zz**3 + 4*hh**4*kk**2*r*tt*zz**3 - 2*hh**4*kk**2*r*tt*zz**2 + 2*hh**4*kk**2*r*tt*zz - 2*hh**4*kk**2*tt*zz**3 + 2*hh**4*kk**2*tt*zz**2 - 2*hh**4*kk**2*zz + hh**4*kk**2 - hh**4*r*zz**2 + 2*hh**4*r*zz + hh**4*zz**2 - 2*hh**4*zz - hh**2*kk**2*r + 2*hh**2*kk**2*tt - 2*hh**2*kk**2 + 2*hh**2*r*zz**2 + 2*hh**2*r*zz - 2*hh**2*zz**2 - 2*hh**2*zz - hh**2 + r**3*zz**2 - r**2*zz**2 + 2*r**2*zz - r*zz**2 - 2*r*zz + zz**2)/(hh**3*(db + 1)**2*(ds + 1)*(hh**2 + 1))"
+    ],
+    [
+      3,
+      3,
+      [
+        2,
+        2
+      ],
+      "-kk**2*(dq + tt)**2*(-8*dA*hh**2*kk**2 - 8*dA*kk**2 - 8*dm*hh**2*zz**2 - 8*dm*zz**2 - hh**6 - hh**4 - 4*hh**2 - 4*kk**2 + 4*r*zz**2 - 4*zz**2 - 4)/(2*(hh**2 + 1))"
+    ],
+    [
+      3,
+      3,
+      [
+        2,
+        0
+      ],
+      "2*kk**4*(dq + tt)**2*(2*dA*hh**2 + 2*dA + 1)/(hh**2 + 1)"
+    ],
+    [
+      3,
+      3,
+      [
+        0,
+        2
+      ],
+      "kk**2*(dq + tt)**2*(8*dA*hh**2*kk**2 + 8*dA*kk**2 + hh**6 + hh**4 + 4*hh**2 + 4*kk**2 + 4)/(2*(hh**2 + 1))"
+    ],
+    [
+      3,
+      3,
+      [
+        0,
+        0
+      ],
+      "2*(2*dA*db**2*dq**2*ds**2*hh**2*kk**4 + 2*dA*db**2*dq**2*ds**2*kk**4 + 4*dA*db**2*dq**2*ds*hh**2*kk**4 + 4*dA*db**2*dq**2*ds*kk**4 + 2*dA*db**2*dq**2*hh**2*kk**4 + 2*dA*db**2*dq**2*kk**4 + 4*dA*db**2*dq*ds**2*hh**2*kk**4*tt + 4*dA*db**2*dq*ds**2*kk**4*tt + 8*dA*db**2*dq*ds*hh**2*kk**4*tt + 8*dA*db**2*dq*ds*kk**4*tt + 4*dA*db**2*dq*hh**2*kk**4*tt + 4*dA*db**2*dq*kk**4*tt + 2*dA*db**2*ds**2*hh**2*kk**4*tt**2 + 2*dA*db**2*ds**2*kk**4*tt**2 + 4*dA*db**2*ds*hh**2*kk**4*tt**2 + 4*dA*db**2*ds*kk**4*tt**2 + 2*dA*db**2*hh**2*kk**4*tt**2 + 2*dA*db**2*kk**4*tt**2 + 4*dA*db*dq**2*ds**2*hh**2*kk**4 + 4*dA*db*dq**2*ds**2*kk**4 + 8*dA*db*dq**2*ds*hh**2*kk**4 + 8*dA*db*dq**2*ds*kk**4 + 4*dA*db*dq**2*hh**2*kk**4 + 4*dA*db*dq**2*kk**4 + 8*dA*db*dq*ds**2*hh**2*kk**4*tt + 8*dA*db*dq*ds**2*kk**4*tt - 4*dA*db*dq*ds*hh**6*kk**4*zz - 4*dA*db*dq*ds*hh**4*kk**4*zz - 4*dA*db*dq*ds*hh**4*kk**4 + 16*dA*db*dq*ds*hh**2*kk**4*tt - 4*dA*db*dq*ds*hh**2*kk**4 + 16*dA*db*dq*ds*kk**4*tt - 4*dA*db*dq*hh**6*kk**4*zz - 4*dA*db*dq*hh**4*kk**4*zz - 4*dA*db*dq*hh**4*kk**4 + 8*dA*db*dq*hh**2*kk**4*tt - 4*dA*db*dq*hh**2*kk**4 + 8*dA*db*dq*kk**4*tt + 4*dA*db*ds**2*hh**2*kk**4*tt**2 + 4*dA*db*ds**2*kk**4*tt**2 - 4*dA*db*ds*hh**6*kk**4*tt*zz - 4*dA*db*ds*hh**4*kk**4*tt*zz - 4*dA*db*ds*hh**4*kk**4*tt + 8*dA*db*ds*hh**2*kk**4*tt**2 - 4*dA*db*ds*hh**2*kk**4*tt + 8*dA*db*ds*kk**4*tt**2 - 4*dA*db*hh**6*kk**4*tt*zz - 4*dA*db*hh**4*kk**4*tt*zz - 4*dA*db*hh**4*kk**4*tt + 4*dA*db*hh**2*kk**4*tt**2 - 4*dA*db*hh**2*kk**4*tt + 4*dA*db*kk**4*tt**2 + 2*dA*dq**2*ds**2*hh**2*kk**4 + 2*dA*dq**2*ds**2*kk**4 + 4*dA*dq**2*ds*hh**2*kk**4 + 4*dA*dq**2*ds*kk**4 + 2*dA*dq**2*hh**2*kk**4 + 2*dA*dq**2*kk**4 + 4*dA*dq*ds**2*hh**2*kk**4*tt + 4*dA*dq*ds**2*kk**4*tt - 4*dA*dq*ds*hh**6*kk**4*zz - 4*dA*dq*ds*hh**4*kk**4*zz - 4*dA*dq*ds*hh**4*kk**4 + 8*dA*dq*ds*hh**2*kk**4*tt - 4*dA*dq*ds*hh**2*kk**4 + 8*dA*dq*ds*kk**4*tt - 4*dA*dq*hh**6*kk**4*zz - 4*dA*dq*hh**4*kk**4*zz - 4*dA*dq*hh**4*kk**4 + 4*dA*dq*hh**2*kk**4*tt - 4*dA*dq*hh**2*kk**4 + 4*dA*dq*kk**4*tt + 2*dA*ds**2*hh**2*kk**4*tt**2 + 2*dA*ds**2*kk**4*tt**2 - 4*dA*ds*hh**6*kk**4*tt*zz - 4*dA*ds*hh**4*kk**4*tt*zz - 4*dA*ds*hh**4*kk**4*tt + 4*dA*ds*hh**2*kk**4*tt**2 - 4*dA*ds*hh**2*kk**4*tt + 4*dA*ds*kk**4*tt**2 - 4*dA*hh**6*kk**4*tt*zz - 4*dA*hh**4*kk**4*tt*zz - 4*dA*hh**4*kk**4*tt + 2*dA*hh**2*kk**4*tt**2 - 4*dA*hh**2*kk**4*tt + 2*dA*kk**4*tt**2 + 4*dal*db*dq*ds*hh**8*kk**2*zz + 4*dal*db*dq*ds*hh**6*kk**2*zz + 4*dal*db*dq*ds*hh**6*kk**2 + 4*dal*db*dq*ds*hh**4*kk**2 + 4*dal*db*dq*hh**8*kk**2*zz + 4*dal*db*dq*hh**6*kk**2*zz + 4*dal*db*dq*hh**6*kk**2 + 4*dal*db*dq*hh**4*kk**2 + 4*dal*db*ds*hh**8*kk**2*tt*zz + 4*dal*db*ds*hh**6*kk**2*tt*zz + 4*dal*db*ds*hh**6*kk**2*tt + 4*dal*db*ds*hh**4*kk**2*tt + 4*dal*db*hh**8*kk**2*tt*zz + 4*dal*db*hh**6*kk**2*tt*zz + 4*dal*db*hh**6*kk**2*tt + 4*dal*db*hh**4*kk**2*tt + 4*dal*dq*ds*hh**8*kk**2*zz + 4*dal*dq*ds*hh**6*kk**2*zz + 4*dal*dq*ds*hh**6*kk**2 + 4*dal*dq*ds*hh**4*kk**2 + 4*dal*dq*hh**8*kk**2*zz + 4*dal*dq*hh**6*kk**2*zz + 4*dal*dq*hh**6*kk**2 + 4*dal*dq*hh**4*kk**2 + 4*dal*ds*hh**8*kk**2*tt*zz + 4*dal*ds*hh**6*kk**2*tt*zz + 4*dal*ds*hh**6*kk**2*tt + 4*dal*ds*hh**4*kk**2*tt + 4*dal*hh**8*kk**2*tt*zz + 4*dal*hh**6*kk**2*tt*zz + 4*dal*hh**6*kk**2*tt + 4*dal*hh**4*kk**2*tt + 2*db**2*dg*ds**2*hh**2 + 2*db**2*dg*ds**2 + 4*db**2*dg*ds*hh**2 + 4*db**2*dg*ds + 2*db**2*dg*hh**2 + 2*db**2*dg - 4*db**2*dm*dq*ds*hh**4*kk**2*zz**2 - 4*db**2*dm*dq*ds*hh**2*kk**2*zz**2 - 4*db**2*dm*dq*hh**4*kk**2*zz**2 - 4*db**2*dm*dq*hh**2*kk**2*zz**2 - 4*db**2*dm*ds*hh**4*kk**2*tt*zz**2 - 4*db**2*dm*ds*hh**2*kk**2*tt*zz**2 - 4*db**2*dm*hh**4*kk**2*tt*zz**2 - 4*db**2*dm*hh**2*kk**2*tt*zz**2 + db**2*dq**2*ds**2*hh**2*kk**2 + db**2*dq**2*ds**2*kk**4 + db**2*dq**2*ds**2*kk**2 + 2*db**2*dq**2*ds*hh**2*kk**2 + 2*db**2*dq**2*ds*kk**4 + 2*db**2*dq**2*ds*kk**2 + db**2*dq**2*hh**2*kk**2 + db**2*dq**2*kk**4 + db**2*dq**2*kk**2 + 2*db**2*dq*ds**2*hh**2*kk**2*tt + 2*db**2*dq*ds**2*kk**4*tt + 2*db**2*dq*ds**2*kk**2*tt + 2*db**2*dq*ds*hh**2*kk**2*r*zz**2 + 4*db**2*dq*ds*hh**2*kk**2*tt - 2*db**2*dq*ds*hh**2*kk**2*zz**2 + 4*db**2*dq*ds*kk**4*tt + 4*db**2*dq*ds*kk**2*tt + 2*db**2*dq*hh**2*kk**2*r*zz**2 + 2*db**2*dq*hh**2*kk**2*tt - 2*db**2*dq*hh**2*kk**2*zz**2 + 2*db**2*dq*kk**4*tt + 2*db**2*dq*kk**2*tt + db**2*ds**2*hh**2*kk**2*tt**2 + db**2*ds**2*kk**4*tt**2 + db**2*ds**2*kk**2*tt**2 + db**2*ds**2 + 2*db**2*ds*hh**2*kk**2*r*tt*zz**2 + 2*db**2*ds*hh**2*kk**2*tt**2 - 2*db**2*ds*hh**2*kk**2*tt*zz**2 + 2*db**2*ds*kk**4*tt**2 + 2*db**2*ds*kk**2*tt**2 + 2*db**2*ds + 2*db**2*hh**2*kk**2*r*tt*zz**2 + db**2*hh**2*kk**2*tt**2 - 2*db**2*hh**2*kk**2*tt*zz**2 + db**2*kk**4*tt**2 + db**2*kk**2*tt**2 + db**2 + 4*db*dc*dq*ds*hh**4*kk**2 + 4*db*dc*dq*ds*hh**2*kk**2 + 4*db*dc*dq*hh**4*kk**2 + 4*db*dc*dq*hh**2*kk**2 + 4*db*dc*ds*hh**4*kk**2*tt + 4*db*dc*ds*hh**2*kk**2*tt + 4*db*dc*hh**4*kk**2*tt + 4*db*dc*hh**2*kk**2*tt + 4*db*dg*ds**2*hh**2 + 4*db*dg*ds**2 + 8*db*dg*ds*hh**2 + 8*db*dg*ds + 4*db*dg*hh**2 + 4*db*dg - 4*db*dm*dq*ds*hh**6*kk**2*zz**3 - 4*db*dm*dq*ds*hh**4*kk**2*r*zz**3 - 8*db*dm*dq*ds*hh**4*kk**2*zz**2 - 4*db*dm*dq*ds*hh**2*kk**2*r*zz**3 + 4*db*dm*dq*ds*hh**2*kk**2*zz**3 - 8*db*dm*dq*ds*hh**2*kk**2*zz**2 - 4*db*dm*dq*hh**6*kk**2*zz**3 - 4*db*dm*dq*hh**4*kk**2*r*zz**3 - 8*db*dm*dq*hh**4*kk**2*zz**2 - 4*db*dm*dq*hh**2*kk**2*r*zz**3 + 4*db*dm*dq*hh**2*kk**2*zz**3 - 8*db*dm*dq*hh**2*kk**2*zz**2 - 4*db*dm*ds*hh**6*kk**2*tt*zz**3 - 4*db*dm*ds*hh**4*kk**2*r*tt*zz**3 - 8*db*dm*ds*hh**4*kk**2*tt*zz**2 - 4*db*dm*ds*hh**2*kk**2*r*tt*zz**3 + 4*db*dm*ds*hh**2*kk**2*tt*zz**3 - 8*db*dm*ds*hh**2*kk**2*tt*zz**2 - 4*db*dm*hh**6*kk**2*tt*zz**3 - 4*db*dm*hh**4*kk**2*r*tt*zz**3 - 8*db*dm*hh**4*kk**2*tt*zz**2 - 4*db*dm*hh**2*kk**2*r*tt*zz**3 + 4*db*dm*hh**2*kk**2*tt*zz**3 - 8*db*dm*hh**2*kk**2*tt*zz**2 + 2*db*dq**2*ds**2*hh**2*kk**2 + 2*db*dq**2*ds**2*kk**4 + 2*db*dq**2*ds**2*kk**2 + 4*db*dq**2*ds*hh**2*kk**2 + 4*db*dq**2*ds*kk**4 + 4*db*dq**2*ds*kk**2 + 2*db*dq**2*hh**2*kk**2 + 2*db*dq**2*kk**4 + 2*db*dq**2*kk**2 + 4*db*dq*ds**2*hh**2*kk**2*tt + 4*db*dq*ds**2*kk**4*tt + 4*db*dq*ds**2*kk**2*tt - 2*db*dq*ds*hh**4*kk**4*zz + 2*db*dq*ds*hh**4*kk**2*r*zz**3 - 2*db*dq*ds*hh**4*kk**2*r*zz - 2*db*dq*ds*hh**4*kk**2*zz**3 - 2*db*dq*ds*hh**2*kk**4 + 2*db*dq*ds*hh**2*kk**2*r**2*zz**3 - 4*db*dq*ds*hh**2*kk**2*r*zz**3 + 4*db*dq*ds*hh**2*kk**2*r*zz**2 - 2*db*dq*ds*hh**2*kk**2*r*zz + 8*db*dq*ds*hh**2*kk**2*tt + 2*db*dq*ds*hh**2*kk**2*zz**3 - 4*db*dq*ds*hh**2*kk**2*zz**2 + 2*db*dq*ds*hh**2*kk**2*zz + 8*db*dq*ds*kk**4*tt + 8*db*dq*ds*kk**2*tt - 2*db*dq*hh**4*kk**4*zz + 2*db*dq*hh**4*kk**2*r*zz**3 - 2*db*dq*hh**4*kk**2*r*zz - 2*db*dq*hh**4*kk**2*zz**3 - 2*db*dq*hh**2*kk**4 + 2*db*dq*hh**2*kk**2*r**2*zz**3 - 4*db*dq*hh**2*kk**2*r*zz**3 + 4*db*dq*hh**2*kk**2*r*zz**2 - 2*db*dq*hh**2*kk**2*r*zz + 4*db*dq*hh**2*kk**2*tt + 2*db*dq*hh**2*kk**2*zz**3 - 4*db*dq*hh**2*kk**2*zz**2 + 2*db*dq*hh**2*kk**2*zz + 4*db*dq*kk**4*tt + 4*db*dq*kk**2*tt + 2*db*ds**2*hh**2*kk**2*tt**2 + 2*db*ds**2*kk**4*tt**2 + 2*db*ds**2*kk**2*tt**2 + 2*db*ds**2 - 2*db*ds*hh**4*kk**4*tt*zz + 2*db*ds*hh**4*kk**2*r*tt*zz**3 - 2*db*ds*hh**4*kk**2*r*tt*zz - 2*db*ds*hh**4*kk**2*tt*zz**3 - 2*db*ds*hh**2*kk**4*tt + 2*db*ds*hh**2*kk**2*r**2*tt*zz**3 - 4*db*ds*hh**2*kk**2*r*tt*zz**3 + 4*db*ds*hh**2*kk**2*r*tt*zz**2 - 2*db*ds*hh**2*kk**2*r*tt*zz + 4*db*ds*hh**2*kk**2*tt**2 + 2*db*ds*hh**2*kk**2*tt*zz**3 - 4*db*ds*hh**2*kk**2*tt*zz**2 + 2*db*ds*hh**2*kk**2*tt*zz + 4*db*ds*kk**4*tt**2 + 4*db*ds*kk**2*tt**2 + 4*db*ds - 2*db*hh**4*kk**4*tt*zz + 2*db*hh**4*kk**2*r*tt*zz**3 - 2*db*hh**4*kk**2*r*tt*zz - 2*db*hh**4*kk**2*tt*zz**3 - 2*db*hh**2*kk**4*tt + 2*db*hh**2*kk**2*r**2*tt*zz**3 - 4*db*hh**2*kk**2*r*tt*zz**3 + 4*db*hh**2*kk**2*r*tt*zz**2 - 2*db*hh**2*kk**2*r*tt*zz + 2*db*hh**2*kk**2*tt**2 + 2*db*hh**2*kk**2*tt*zz**3 - 4*db*hh**2*kk**2*tt*zz**2 + 2*db*hh**2*kk**2*tt*zz + 2*db*kk**4*tt**2 + 2*db*kk**2*tt**2 + 2*db + 4*dc*dq*ds*hh**4*kk**2 + 4*dc*dq*ds*hh**2*kk**2 + 4*dc*dq*hh**4*kk**2 + 4*dc*dq*hh**2*kk**2 + 4*dc*ds*hh**4*kk**2*tt + 4*dc*ds*hh**2*kk**2*tt + 4*dc*hh**4*kk**2*tt + 4*dc*hh**2*kk**2*tt + 2*dg*ds**2*hh**2 + 2*dg*ds**2 + 4*dg*ds*hh**2 + 4*dg*ds + 2*dg*hh**2 + 2*dg - 4*dm*dq*ds*hh**6*kk**2*zz**3 - 4*dm*dq*ds*hh**4*kk**2*r*zz**3 - 4*dm*dq*ds*hh**4*kk**2*zz**2 - 4*dm*dq*ds*hh**2*kk**2*r*zz**3 + 4*dm*dq*ds*hh**2*kk**2*zz**3 - 4*dm*dq*ds*hh**2*kk**2*zz**2 - 4*dm*dq*hh**6*kk**2*zz**3 - 4*dm*dq*hh**4*kk**2*r*zz**3 - 4*dm*dq*hh**4*kk**2*zz**2 - 4*dm*dq*hh**2*kk**2*r*zz**3 + 4*dm*dq*hh**2*kk**2*zz**3 - 4*dm*dq*hh**2*kk**2*zz**2 - 4*dm*ds*hh**6*kk**2*tt*zz**3 - 4*dm*ds*hh**4*kk**2*r*tt*zz**3 - 4*dm*ds*hh**4*kk**2*tt*zz**2 - 4*dm*ds*hh**2*kk**2*r*tt*zz**3 + 4*dm*ds*hh**2*kk**2*tt*zz**3 - 4*dm*ds*hh**2*kk**2*tt*zz**2 - 4*dm*hh**6*kk**2*tt*zz**3 - 4*dm*hh**4*kk**2*r*tt*zz**3 - 4*dm*hh**4*kk**2*tt*zz**2 - 4*dm*hh**2*kk**2*r*tt*zz**3 + 4*dm*hh**2*kk**2*tt*zz**3 - 4*dm*hh**2*kk**2*tt*zz**2 + 2*dn*hh**6*kk**2*r*zz**2 + 2*dn*hh**4*kk**2*r*zz**2 + 2*dn*hh**4*kk**2*r*zz + 2*dn*hh**2*kk**2*r*zz + dq**2*ds**2*hh**2*kk**2 + dq**2*ds**2*kk**4 + dq**2*ds**2*kk**2 + 2*dq**2*ds*hh**2*kk**2 + 2*dq**2*ds*kk**4 + 2*dq**2*ds*kk**2 + dq**2*hh**2*kk**2 + dq**2*kk**4 + dq**2*kk**2 + 2*dq*ds**2*hh**2*kk**2*tt + 2*dq*ds**2*kk**4*tt + 2*dq*ds**2*kk**2*tt - 2*dq*ds*hh**4*kk**4*zz + 2*dq*ds*hh**4*kk**2*r*zz**3 - 2*dq*ds*hh**4*kk**2*r*zz - 2*dq*ds*hh**4*kk**2*zz**3 - 2*dq*ds*hh**2*kk**4 + 2*dq*ds*hh**2*kk**2*r**2*zz**3 - 4*dq*ds*hh**2*kk**2*r*zz**3 + 2*dq*ds*hh**2*kk**2*r*zz**2 - 2*dq*ds*hh**2*kk**2*r*zz + 4*dq*ds*hh**2*kk**2*tt + 2*dq*ds*hh**2*kk**2*zz**3 - 2*dq*ds*hh**2*kk**2*zz**2 + 2*dq*ds*hh**2*kk**2*zz + 4*dq*ds*kk**4*tt + 4*dq*ds*kk**2*tt - 2*dq*hh**4*kk**4*zz + 2*dq*hh**4*kk**2*r*zz**3 - 2*dq*hh**4*kk**2*r*zz - 2*dq*hh**4*kk**2*zz**3 - 2*dq*hh**2*kk**4 + 2*dq*hh**2*kk**2*r**2*zz**3 - 4*dq*hh**2*kk**2*r*zz**3 + 2*dq*hh**2*kk**2*r*zz**2 - 2*dq*hh**2*kk**2*r*zz + 2*dq*hh**2*kk**2*tt + 2*dq*hh**2*kk**2*zz**3 - 2*dq*hh**2*kk**2*zz**2 + 2*dq*hh**2*kk**2*zz + 2*dq*kk**4*tt + 2*dq*kk**2*tt + ds**2*hh**2*kk**2*tt**2 + ds**2*kk**4*tt**2 + ds**2*kk**2*tt**2 + ds**2 - 2*ds*hh**4*kk**4*tt*zz + 2*ds*hh**4*kk**2*r*tt*zz**3 - 2*ds*hh**4*kk**2*r*tt*zz - 2*ds*hh**4*kk**2*tt*zz**3 - 2*ds*hh**2*kk**4*tt + 2*ds*hh**2*kk**2*r**2*tt*zz**3 - 4*ds*hh**2*kk**2*r*tt*zz**3 + 2*ds*hh**2*kk**2*r*tt*zz**2 - 2*ds*hh**2*kk**2*r*tt*zz + 2*ds*hh**2*kk**2*tt**2 + 2*ds*hh**2*kk**2*tt*zz**3 - 2*ds*hh**2*kk**2*tt*zz**2 + 2*ds*hh**2*kk**2*tt*zz + 2*ds*kk**4*tt**2 + 2*ds*kk**2*tt**2 + 2*ds - 2*hh**4*kk**4*tt*zz + 2*hh**4*kk**2*r*tt*zz**3 - 2*hh**4*kk**2*r*tt*zz + hh**4*kk**2*r*zz**2 - 2*hh**4*kk**2*tt*zz**3 - 2*hh**2*kk**4*tt + 2*hh**2*kk**2*r**2*tt*zz**3 - 4*hh**2*kk**2*r*tt*zz**3 + 2*hh**2*kk**2*r*tt*zz**2 - 2*hh**2*kk**2*r*tt*zz + hh**2*kk**2*r*zz + hh**2*kk**2*tt**2 + 2*hh**2*kk**2*tt*zz**3 - 2*hh**2*kk**2*tt*zz**2 + 2*hh**2*kk**2*tt*zz + kk**4*tt**2 + kk**2*tt**2 + 1)/((db + 1)**2*(ds + 1)**2*(hh**2 + 1))"
+    ],
+    [
+      3,
+      4,
+      [
+        1,
+        1
+      ],
+      "2*kk*(-2*dA*db*dq*ds*hh**6*kk**2*zz - 2*dA*db*dq*ds*hh**4*kk**2*zz - 2*dA*db*dq*ds*hh**4*kk**2 - 2*dA*db*dq*ds*hh**2*kk**2 - 2*dA*db*dq*hh**6*kk**2*zz - 2*dA*db*dq*hh**4*kk**2*zz - 2*dA*db*dq*hh**4*kk**2 - 2*dA*db*dq*hh**2*kk**2 - 2*dA*db*ds*hh**6*kk**2*tt*zz - 2*dA*db*ds*hh**4*kk**2*tt*zz - 2*dA*db*ds*hh**4*kk**2*tt - 2*dA*db*ds*hh**2*kk**2*tt - 2*dA*db*hh**6*kk**2*tt*zz - 2*dA*db*hh**4*kk**2*tt*zz - 2*dA*db*hh**4*kk**2*tt - 2*dA*db*hh**2*kk**2*tt - 2*dA*dq*ds*hh**6*kk**2*zz - 2*dA*dq*ds*hh**4*kk**2*zz - 2*dA*dq*ds*hh**4*kk**2 - 2*dA*dq*ds*hh**2*kk**2 - 2*dA*dq*hh**6*kk**2*zz - 2*dA*dq*hh**4*kk**2*zz - 2*dA*dq*hh**4*kk**2 - 2*dA*dq*hh**2*kk**2 - 2*dA*ds*hh**6*kk**2*tt*zz - 2*dA*ds*hh**4*kk**2*tt*zz - 2*dA*ds*hh**4*kk**2*tt - 2*dA*ds*hh**2*kk**2*tt - 2*dA*hh**6*kk**2*tt*zz - 2*dA*hh**4*kk**2*tt*zz - 2*dA*hh**4*kk**2*tt - 2*dA*hh**2*kk**2*tt + 2*dal*db*dq*ds*hh**8*zz + 2*dal*db*dq*ds*hh**6*zz + 2*dal*db*dq*ds*hh**6 + 2*dal*db*dq*ds*hh**4 + 2*dal*db*dq*hh**8*zz + 2*dal*db*dq*hh**6*zz + 2*dal*db*dq*hh**6 + 2*dal*db*dq*hh**4 + 2*dal*db*ds*hh**8*tt*zz + 2*dal*db*ds*hh**6*tt*zz + 2*dal*db*ds*hh**6*tt + 2*dal*db*ds*hh**4*tt + 2*dal*db*hh**8*tt*zz + 2*dal*db*hh**6*tt*zz + 2*dal*db*hh**6*tt + 2*dal*db*hh**4*tt + 2*dal*dq*ds*hh**8*zz + 2*dal*dq*ds*hh**6*zz + 2*dal*dq*ds*hh**6 + 2*dal*dq*ds*hh**4 + 2*dal*dq*hh**8*zz + 2*dal*dq*hh**6*zz + 2*dal*dq*hh**6 + 2*dal*dq*hh**4 + 2*dal*ds*hh**8*tt*zz + 2*dal*ds*hh**6*tt*zz + 2*dal*ds*hh**6*tt + 2*dal*ds*hh**4*tt + 2*dal*hh**8*tt*zz + 2*dal*hh**6*tt*zz + 2*dal*hh**6*tt + 2*dal*hh**4*tt + 2*db**2*dm*dq*ds**2*hh**2*zz**2 + 2*db**2*dm*dq*ds**2*zz**2 - 2*db**2*dm*dq*ds*hh**4*zz**2 + 2*db**2*dm*dq*ds*hh**2*zz**2 + 4*db**2*dm*dq*ds*zz**2 - 2*db**2*dm*dq*hh**4*zz**2 + 2*db**2*dm*dq*zz**2 + 2*db**2*dm*ds**2*hh**2*tt*zz**2 + 2*db**2*dm*ds**2*tt*zz**2 - 2*db**2*dm*ds*hh**4*tt*zz**2 + 2*db**2*dm*ds*hh**2*tt*zz**2 + 4*db**2*dm*ds*tt*zz**2 - 2*db**2*dm*hh**4*tt*zz**2 + 2*db**2*dm*tt*zz**2 + db**2*dq*ds**2*hh**2 - db**2*dq*ds**2*r*zz**2 + db**2*dq*ds**2*zz**2 + db**2*dq*ds**2 + db**2*dq*ds*hh**2*r*zz**2 - db**2*dq*ds*hh**2*zz**2 + 2*db**2*dq*ds*hh**2 - 2*db**2*dq*ds*r*zz**2 + 2*db**2*dq*ds*zz**2 + 2*db**2*dq*ds + db**2*dq*hh**2*r*zz**2 - db**2*dq*hh**2*zz**2 + db**2*dq*hh**2 - db**2*dq*r*zz**2 + db**2*dq*zz**2 + db**2*dq + db**2*ds**2*hh**2*tt - db**2*ds**2*r*tt*zz**2 + db**2*ds**2*tt*zz**2 + db**2*ds**2*tt + db**2*ds*hh**2*r*tt*zz**2 - db**2*ds*hh**2*tt*zz**2 + 2*db**2*ds*hh**2*tt - 2*db**2*ds*r*tt*zz**2 + 2*db**2*ds*tt*zz**2 + 2*db**2*ds*tt + db**2*hh**2*r*tt*zz**2 - db**2*hh**2*tt*zz**2 + db**2*hh**2*tt - db**2*r*tt*zz**2 + db**2*tt*zz**2 + db**2*tt + 2*db*dc*dq*ds*hh**4 + 2*db*dc*dq*ds*hh**2 + 2*db*dc*dq*hh**4 + 2*db*dc*dq*hh**2 + 2*db*dc*ds*hh**4*tt + 2*db*dc*ds*hh**2*tt + 2*db*dc*hh**4*tt + 2*db*dc*hh**2*tt + 4*db*dm*dq*ds**2*hh**2*zz**2 + 4*db*dm*dq*ds**2*zz**2 - 2*db*dm*dq*ds*hh**6*zz**3 - 2*db*dm*dq*ds*hh**4*r*zz**3 - 4*db*dm*dq*ds*hh**4*zz**2 - 2*db*dm*dq*ds*hh**2*r*zz**3 + 2*db*dm*dq*ds*hh**2*zz**3 + 4*db*dm*dq*ds*hh**2*zz**2 + 8*db*dm*dq*ds*zz**2 - 2*db*dm*dq*hh**6*zz**3 - 2*db*dm*dq*hh**4*r*zz**3 - 4*db*dm*dq*hh**4*zz**2 - 2*db*dm*dq*hh**2*r*zz**3 + 2*db*dm*dq*hh**2*zz**3 + 4*db*dm*dq*zz**2 + 4*db*dm*ds**2*hh**2*tt*zz**2 + 4*db*dm*ds**2*tt*zz**2 - 2*db*dm*ds*hh**6*tt*zz**3 - 2*db*dm*ds*hh**4*r*tt*zz**3 - 4*db*dm*ds*hh**4*tt*zz**2 - 2*db*dm*ds*hh**2*r*tt*zz**3 + 2*db*dm*ds*hh**2*tt*zz**3 + 4*db*dm*ds*hh**2*tt*zz**2 + 8*db*dm*ds*tt*zz**2 - 2*db*dm*hh**6*tt*zz**3 - 2*db*dm*hh**4*r*tt*zz**3 - 4*db*dm*hh**4*tt*zz**2 - 2*db*dm*hh**2*r*tt*zz**3 + 2*db*dm*hh**2*tt*zz**3 + 4*db*dm*tt*zz**2 - 2*db*dn*ds*hh**4*zz - 2*db*dn*ds*hh**2*zz - 2*db*dn*ds*hh**2 - 2*db*dn*ds - 2*db*dn*hh**4*zz - 2*db*dn*hh**2*zz - 2*db*dn*hh**2 - 2*db*dn + 2*db*dq*ds**2*hh**2 - 2*db*dq*ds**2*r*zz**2 + 2*db*dq*ds**2*zz**2 + 2*db*dq*ds**2 - db*dq*ds*hh**4*kk**2*zz + db*dq*ds*hh**4*r*zz**3 - db*dq*ds*hh**4*r*zz - db*dq*ds*hh**4*zz**3 - db*dq*ds*hh**2*kk**2 + db*dq*ds*hh**2*r**2*zz**3 - 2*db*dq*ds*hh**2*r*zz**3 + 2*db*dq*ds*hh**2*r*zz**2 - db*dq*ds*hh**2*r*zz + db*dq*ds*hh**2*zz**3 - 2*db*dq*ds*hh**2*zz**2 + db*dq*ds*hh**2*zz + 4*db*dq*ds*hh**2 - 4*db*dq*ds*r*zz**2 + 4*db*dq*ds*zz**2 + 4*db*dq*ds - db*dq*hh**4*kk**2*zz + db*dq*hh**4*r*zz**3 - db*dq*hh**4*r*zz - db*dq*hh**4*zz**3 - db*dq*hh**2*kk**2 + db*dq*hh**2*r**2*zz**3 - 2*db*dq*hh**2*r*zz**3 + 2*db*dq*hh**2*r*zz**2 - db*dq*hh**2*r*zz + db*dq*hh**2*zz**3 - 2*db*dq*hh**2*zz**2 + db*dq*hh**2*zz + 2*db*dq*hh**2 - 2*db*dq*r*zz**2 + 2*db*dq*zz**2 + 2*db*dq + 2*db*ds**2*hh**2*tt - 2*db*ds**2*r*tt*zz**2 + 2*db*ds**2*tt*zz**2 + 2*db*ds**2*tt - db*ds*hh**4*kk**2*tt*zz + db*ds*hh**4*r*tt*zz**3 - db*ds*hh**4*r*tt*zz - db*ds*hh**4*tt*zz**3 - db*ds*hh**2*kk**2*tt + db*ds*hh**2*r**2*tt*zz**3 - 2*db*ds*hh**2*r*tt*zz**3 + 2*db*ds*hh**2*r*tt*zz**2 - db*ds*hh**2*r*tt*zz + db*ds*hh**2*tt*zz**3 - 2*db*ds*hh**2*tt*zz**2 + db*ds*hh**2*tt*zz + 4*db*ds*hh**2*tt - db*ds*hh**2*zz - 4*db*ds*r*tt*zz**2 + 4*db*ds*tt*zz**2 + 4*db*ds*tt - db*ds - db*hh**4*kk**2*tt*zz + db*hh**4*r*tt*zz**3 - db*hh**4*r*tt*zz - db*hh**4*tt*zz**3 - db*hh**2*kk**2*tt + db*hh**2*r**2*tt*zz**3 - 2*db*hh**2*r*tt*zz**3 + 2*db*hh**2*r*tt*zz**2 - db*hh**2*r*tt*zz + db*hh**2*tt*zz**3 - 2*db*hh**2*tt*zz**2 + db*hh**2*tt*zz + 2*db*hh**2*tt - db*hh**2*zz - 2*db*r*tt*zz**2 + 2*db*tt*zz**2 + 2*db*tt - db + 2*dc*dq*ds*hh**4 + 2*dc*dq*ds*hh**2 + 2*dc*dq*hh**4 + 2*dc*dq*hh**2 + 2*dc*ds*hh**4*tt + 2*dc*ds*hh**2*tt + 2*dc*hh**4*tt + 2*dc*hh**2*tt + 2*dm*dq*ds**2*hh**2*zz**2 + 2*dm*dq*ds**2*zz**2 - 2*dm*dq*ds*hh**6*zz**3 - 2*dm*dq*ds*hh**4*r*zz**3 - 2*dm*dq*ds*hh**4*zz**2 - 2*dm*dq*ds*hh**2*r*zz**3 + 2*dm*dq*ds*hh**2*zz**3 + 2*dm*dq*ds*hh**2*zz**2 + 4*dm*dq*ds*zz**2 - 2*dm*dq*hh**6*zz**3 - 2*dm*dq*hh**4*r*zz**3 - 2*dm*dq*hh**4*zz**2 - 2*dm*dq*hh**2*r*zz**3 + 2*dm*dq*hh**2*zz**3 + 2*dm*dq*zz**2 + 2*dm*ds**2*hh**2*tt*zz**2 + 2*dm*ds**2*tt*zz**2 - 2*dm*ds*hh**6*tt*zz**3 - 2*dm*ds*hh**4*r*tt*zz**3 - 2*dm*ds*hh**4*tt*zz**2 - 2*dm*ds*hh**2*r*tt*zz**3 + 2*dm*ds*hh**2*tt*zz**3 + 2*dm*ds*hh**2*tt*zz**2 + 4*dm*ds*tt*zz**2 - 2*dm*hh**6*tt*zz**3 - 2*dm*hh**4*r*tt*zz**3 - 2*dm*hh**4*tt*zz**2 - 2*dm*hh**2*r*tt*zz**3 + 2*dm*hh**2*tt*zz**3 + 2*dm*tt*zz**2 - 2*dn*ds*hh**4*zz - 2*dn*ds*hh**2*zz - 2*dn*ds*hh**2 - 2*dn*ds + 2*dn*hh**6*r*zz**2 + 2*dn*hh**4*r*zz**2 + 2*dn*hh**4*r*zz - 2*dn*hh**4*zz + 2*dn*hh**2*r*zz - 2*dn*hh**2*zz - 2*dn*hh**2 - 2*dn + dq*ds**2*hh**2 - dq*ds**2*r*zz**2 + dq*ds**2*zz**2 + dq*ds**2 - dq*ds*hh**4*kk**2*zz + dq*ds*hh**4*r*zz**3 - dq*ds*hh**4*r*zz - dq*ds*hh**4*zz**3 - dq*ds*hh**2*kk**2 + dq*ds*hh**2*r**2*zz**3 - 2*dq*ds*hh**2*r*zz**3 + dq*ds*hh**2*r*zz**2 - dq*ds*hh**2*r*zz + dq*ds*hh**2*zz**3 - dq*ds*hh**2*zz**2 + dq*ds*hh**2*zz + 2*dq*ds*hh**2 - 2*dq*ds*r*zz**2 + 2*dq*ds*zz**2 + 2*dq*ds - dq*hh**4*kk**2*zz + dq*hh**4*r*zz**3 - dq*hh**4*r*zz - dq*hh**4*zz**3 - dq*hh**2*kk**2 + dq*hh**2*r**2*zz**3 - 2*dq*hh**2*r*zz**3 + dq*hh**2*r*zz**2 - dq*hh**2*r*zz + dq*hh**2*zz**3 - dq*hh**2*zz**2 + dq*hh**2*zz + dq*hh**2 - dq*r*zz**2 + dq*zz**2 + dq + ds**2*hh**2*tt - ds**2*r*tt*zz**2 + ds**2*tt*zz**2 + ds**2*tt - ds*hh**4*kk**2*tt*zz + ds*hh**4*r*tt*zz**3 - ds*hh**4*r*tt*zz - ds*hh**4*tt*zz**3 - ds*hh**2*kk**2*tt + ds*hh**2*r**2*tt*zz**3 - 2*ds*hh**2*r*tt*zz**3 + ds*hh**2*r*tt*zz**2 - ds*hh**2*r*tt*zz + ds*hh**2*tt*zz**3 - ds*hh**2*tt*zz**2 + ds*hh**2*tt*zz + 2*ds*hh**2*tt - ds*hh**2*zz - 2*ds*r*tt*zz**2 + 2*ds*tt*zz**2 + 2*ds*tt - ds - hh**4*kk**2*tt*zz + hh**4*r*tt*zz**3 - hh**4*r*tt*zz + hh**4*r*zz**2 - hh**4*tt*zz**3 - hh**2*kk**2*tt + hh**2*r**2*tt*zz**3 - 2*hh**2*r*tt*zz**3 + hh**2*r*tt*zz**2 - hh**2*r*tt*zz + hh**2*r*zz + hh**2*tt*zz**3 - hh**2*tt*zz**2 + hh**2*tt*zz + hh**2*tt - hh**2*zz - r*tt*zz**2 + tt*zz**2 + tt - 1)/(hh*(db + 1)**2*(ds + 1)**2*(hh**2 + 1)**2)"
+    ],
+    [
+      3,
+      5,
+      [
+        2,
+        0
+      ],
+      "-2/(ds + 1)"
+    ],
+    [
+      3,
+      5,
+      [
+        0,
+        2
+      ],
+      "-(-4*dA*db*dq*ds*hh**4*kk**2 - 4*dA*db*dq*ds*hh**2*kk**2 - 4*dA*db*dq*hh**4*kk**2 - 4*dA*db*dq*hh**2*kk**2 - 4*dA*db*ds*hh**4*kk**2*tt - 4*dA*db*ds*hh**2*kk**2*tt - 4*dA*db*hh**4*kk**2*tt - 4*dA*db*hh**2*kk**2*tt - 4*dA*dq*ds*hh**4*kk**2 - 4*dA*dq*ds*hh**2*kk**2 - 4*dA*dq*hh**4*kk**2 - 4*dA*dq*hh**2*kk**2 - 4*dA*ds*hh**4*kk**2*tt - 4*dA*ds*hh**2*kk**2*tt - 4*dA*hh**4*kk**2*tt - 4*dA*hh**2*kk**2*tt + 4*dal*db*dq*ds*hh**6 + 4*dal*db*dq*ds*hh**4 + 4*dal*db*dq*hh**6 + 4*dal*db*dq*hh**4 + 4*dal*db*ds*hh**6*tt + 4*dal*db*ds*hh**4*tt + 4*dal*db*hh**6*tt + 4*dal*db*hh**4*tt + 4*dal*dq*ds*hh**6 + 4*dal*dq*ds*hh**4 + 4*dal*dq*hh**6 + 4*dal*dq*hh**4 + 4*dal*ds*hh**6*tt + 4*dal*ds*hh**4*tt + 4*dal*hh**6*tt + 4*dal*hh**4*tt - 4*db*dm*dq*ds*hh**4*zz**2 + 4*db*dm*dq*ds*zz**2 - 4*db*dm*dq*hh**4*zz**2 + 4*db*dm*dq*zz**2 - 4*db*dm*ds*hh**4*tt*zz**2 + 4*db*dm*ds*tt*zz**2 - 4*db*dm*hh**4*tt*zz**2 + 4*db*dm*tt*zz**2 - 2*db*dq*ds*hh**2*kk**2 + 2*db*dq*ds*hh**2*r*zz**2 - 2*db*dq*ds*hh**2*zz**2 - 2*db*dq*ds*r*zz**2 + 2*db*dq*ds*zz**2 + 2*db*dq*ds - 2*db*dq*hh**2*kk**2 + 2*db*dq*hh**2*r*zz**2 - 2*db*dq*hh**2*zz**2 - 2*db*dq*r*zz**2 + 2*db*dq*zz**2 + 2*db*dq - 2*db*ds*hh**2*kk**2*tt + 2*db*ds*hh**2*r*tt*zz**2 - 2*db*ds*hh**2*tt*zz**2 - 2*db*ds*r*tt*zz**2 + 2*db*ds*tt*zz**2 + 2*db*ds*tt - 2*db*hh**2*kk**2*tt + 2*db*hh**2*r*tt*zz**2 - 2*db*hh**2*tt*zz**2 - 2*db*r*tt*zz**2 + 2*db*tt*zz**2 + 2*db*tt - 4*dm*dq*ds*hh**4*zz**2 + 4*dm*dq*ds*zz**2 - 4*dm*dq*hh**4*zz**2 + 4*dm*dq*zz**2 - 4*dm*ds*hh**4*tt*zz**2 + 4*dm*ds*tt*zz**2 - 4*dm*hh**4*tt*zz**2 + 4*dm*tt*zz**2 - 2*dn*hh**2*r - 2*dn*r - 2*dq*ds*hh**2*kk**2 + 2*dq*ds*hh**2*r*zz**2 - 2*dq*ds*hh**2*zz**2 - 2*dq*ds*r*zz**2 + 2*dq*ds*zz**2 + 2*dq*ds - 2*dq*hh**2*kk**2 + 2*dq*hh**2*r*zz**2 - 2*dq*hh**2*zz**2 - 2*dq*r*zz**2 + 2*dq*zz**2 + 2*dq - 2*ds*hh**2*kk**2*tt + 2*ds*hh**2*r*tt*zz**2 - 2*ds*hh**2*tt*zz**2 - 2*ds*r*tt*zz**2 + 2*ds*tt*zz**2 + 2*ds*tt - 2*hh**2*kk**2*tt + 2*hh**2*r*tt*zz**2 - 2*hh**2*tt*zz**2 - 2*r*tt*zz**2 - r + 2*tt*zz**2 + 2*tt)/(hh**2*(db + 1)**2*(ds + 1)*(hh**2 + 1))"
+    ],
+    [
+      3,
+      5,
+      [
+        0,
+        0
+      ],
+      "-(-4*dA*db*dq*ds*hh**4*kk**2 - 4*dA*db*dq*ds*hh**2*kk**2 - 4*dA*db*dq*hh**4*kk**2 - 4*dA*db*dq*hh**2*kk**2 - 4*dA*db*ds*hh**4*kk**2*tt - 4*dA*db*ds*hh**2*kk**2*tt - 4*dA*db*hh**4*kk**2*tt - 4*dA*db*hh**2*kk**2*tt - 4*dA*dq*ds*hh**4*kk**2 - 4*dA*dq*ds*hh**2*kk**2 - 4*dA*dq*hh**4*kk**2 - 4*dA*dq*hh**2*kk**2 - 4*dA*ds*hh**4*kk**2*tt - 4*dA*ds*hh**2*kk**2*tt + 2*dA*hh**6*kk**2 - 4*dA*hh**4*kk**2*tt + 2*dA*hh**4*kk**2 - 4*dA*hh**2*kk**2*tt - 2*dal*hh**8 + 2*dal*hh**4 - 2*db**2*dm*hh**2 - 2*db**2*dm - 2*db**2*hh**6*zz - 2*db**2*hh**4*zz + db**2*r - db**2 - 4*db*dm*hh**2*r*zz - 4*db*dm*hh**2 - 4*db*dm*r*zz - 4*db*dm - 2*db*dq*ds*hh**2*kk**2 - 2*db*dq*hh**2*kk**2 - 2*db*ds*hh**2*kk**2*tt - 4*db*hh**6*zz - 4*db*hh**4*zz - 2*db*hh**2*kk**2*tt + 2*db*r**2*zz - 2*db*r*zz + 2*db*r - 2*db + 2*dm*hh**6*zz**2 - 2*dm*hh**4*zz**2 - 2*dm*hh**2*r**2*zz**2 - 4*dm*hh**2*r*zz - 2*dm*hh**2*zz**2 - 2*dm*hh**2 - 2*dm*r**2*zz**2 - 4*dm*r*zz + 2*dm*zz**2 - 2*dm - 2*dn*hh**4*kk**2*r - 2*dn*hh**2*kk**2*r - 2*dn*hh**2*r - 2*dn*r - 2*dq*ds*hh**2*kk**2 - 2*dq*hh**2*kk**2 - 2*ds*hh**2*kk**2*tt - 2*hh**6*zz + hh**4*kk**2 - hh**4*r*zz**2 + hh**4*zz**2 - 2*hh**4*zz - hh**2*kk**2*r - 2*hh**2*kk**2*tt + 2*hh**2*r*zz**2 - 2*hh**2*zz**2 - hh**2 + r**3*zz**2 - r**2*zz**2 + 2*r**2*zz - r*zz**2 - 2*r*zz + zz**2)/(hh**2*(db + 1)**2*(ds + 1)*(hh**2 + 1))"
+    ],
+    [
+      4,
+      4,
+      [
+        4,
+        0
+      ],
+      "-4/((ds + 1)*(hh**2 + 1))"
+    ],
+    [
+      4,
+      4,
+      [
+        2,
+        2
+      ],
+      "2*(db**2*ds**2*hh**2 + db**2*ds**2 + 2*db**2*ds*hh**2 + 2*db**2*ds + db**2*hh**2 + db**2 - 4*db*dn*ds*hh**4*zz - 4*db*dn*ds*hh**2*zz - 4*db*dn*ds*hh**2 - 4*db*dn*ds - 4*db*dn*hh**4*zz - 4*db*dn*hh**2*zz - 4*db*dn*hh**2 - 4*db*dn + 2*db*ds**2*hh**2 + 2*db*ds**2 - 2*db*ds*hh**2*zz + 4*db*ds*hh**2 + 2*db*ds - 2*db*hh**2*zz + 2*db*hh**2 + 2*dn*ds*hh**4*r - 4*dn*ds*hh**4*zz + 4*dn*ds*hh**2*r - 4*dn*ds*hh**2*zz - 4*dn*ds*hh**2 + 2*dn*ds*r - 4*dn*ds + 2*dn*hh**6*r*zz**2 + 2*dn*hh**4*r*zz**2 + 2*dn*hh**4*r*zz + 2*dn*hh**4*r - 4*dn*hh**4*zz + 2*dn*hh**2*r*zz + 4*dn*hh**2*r - 4*dn*hh**2*zz - 4*dn*hh**2 + 2*dn*r - 4*dn + ds**2*hh**2 + ds**2 + ds*hh**2*r - 2*ds*hh**2*zz + 2*ds*hh**2 + ds*r + hh**4*r*zz**2 + hh**2*r*zz + hh**2*r - 2*hh**2*zz + hh**2 + r - 1)/(hh**2*(db + 1)**2*(ds + 1)**2*(hh**2 + 1)**3)"
+    ],
+    [
+      4,
+      4,
+      [
+        2,
+        0
+      ],
+      "-2*(2*dA*hh**6*kk**2 + 2*dA*hh**4*kk**2 - 2*dal*hh**8 + 2*dal*hh**4 - 2*db**2*dm*hh**2 - 2*db**2*dm + 2*db**2*ds*hh**6 + 4*db**2*ds*hh**4 + 2*db**2*ds*hh**2 - 2*db**2*hh**6*zz + 2*db**2*hh**6 - 2*db**2*hh**4*zz + 4*db**2*hh**4 + 2*db**2*hh**2 + db**2*r - db**2 - 4*db*dm*hh**2*r*zz - 4*db*dm*hh**2 - 4*db*dm*r*zz - 4*db*dm + 4*db*ds*hh**6 + 8*db*ds*hh**4 + 4*db*ds*hh**2 - 4*db*hh**6*zz + 4*db*hh**6 - 4*db*hh**4*zz + 8*db*hh**4 + 4*db*hh**2 + 2*db*r**2*zz - 2*db*r*zz + 2*db*r - 2*db + 2*dm*hh**6*zz**2 - 2*dm*hh**4*zz**2 - 2*dm*hh**2*r**2*zz**2 - 4*dm*hh**2*r*zz - 2*dm*hh**2*zz**2 - 2*dm*hh**2 - 2*dm*r**2*zz**2 - 4*dm*r*zz + 2*dm*zz**2 - 2*dm - 2*dn*hh**4*kk**2*r - 2*dn*hh**2*kk**2*r - 2*dn*hh**2*r - 2*dn*r + 2*ds*hh**6 + 4*ds*hh**4 + 2*ds*hh**2 - 2*hh**6*zz + 2*hh**6 + hh**4*kk**2 - hh**4*r*zz**2 + hh**4*zz**2 - 2*hh**4*zz + 4*hh**4 - hh**2*kk**2*r + 2*hh**2*r*zz**2 - 2*hh**2*zz**2 + hh**2 + r**3*zz**2 - r**2*zz**2 + 2*r**2*zz - r*zz**2 - 2*r*zz + zz**2)/(hh**2*(db + 1)**2*(ds + 1)*(hh**2 + 1)**2)"
+    ],
+    [
+      4,
+      4,
+      [
+        0,
+        2
+      ],
+      "2*(db**2 - 4*db*dn*hh**2 - 4*db*dn + 2*dn*hh**4*r + 4*dn*hh**2*r - 4*dn*hh**2 + 2*dn*r - 4*dn + hh**2*r + r - 1)/(hh**2*(db + 1)**2*(hh**2 + 1)**2)"
+    ],
+    [
+      4,
+      4,
+      [
+        0,
+        0
+      ],
+      "-2*(4*dA*db*dq*hh**10*kk**4*zz + 8*dA*db*dq*hh**8*kk**4*zz + 4*dA*db*dq*hh**8*kk**4 + 4*dA*db*dq*hh**8*kk**2*zz + 4*dA*db*dq*hh**6*kk**4*zz + 8*dA*db*dq*hh**6*kk**4 + 8*dA*db*dq*hh**6*kk**2*zz + 4*dA*db*dq*hh**6*kk**2 + 4*dA*db*dq*hh**4*kk**4 + 4*dA*db*dq*hh**4*kk**2*zz + 8*dA*db*dq*hh**4*kk**2 + 4*dA*db*dq*hh**2*kk**2 + 4*dA*db*hh**10*kk**4*tt*zz + 8*dA*db*hh**8*kk**4*tt*zz + 4*dA*db*hh**8*kk**4*tt + 4*dA*db*hh**8*kk**2*tt*zz + 4*dA*db*hh**6*kk**4*tt*zz + 8*dA*db*hh**6*kk**4*tt + 8*dA*db*hh**6*kk**2*tt*zz + 4*dA*db*hh**6*kk**2*tt + 4*dA*db*hh**4*kk**4*tt + 4*dA*db*hh**4*kk**2*tt*zz + 8*dA*db*hh**4*kk**2*tt + 4*dA*db*hh**2*kk**2*tt + 4*dA*dq*hh**10*kk**4*zz + 8*dA*dq*hh**8*kk**4*zz + 4*dA*dq*hh**8*kk**4 + 4*dA*dq*hh**8*kk**2*zz + 4*dA*dq*hh**6*kk**4*zz + 8*dA*dq*hh**6*kk**4 + 8*dA*dq*hh**6*kk**2*zz + 4*dA*dq*hh**6*kk**2 + 4*dA*dq*hh**4*kk**4 + 4*dA*dq*hh**4*kk**2*zz + 8*dA*dq*hh**4*kk**2 + 4*dA*dq*hh**2*kk**2 + 4*dA*hh**10*kk**4*tt*zz + 8*dA*hh**8*kk**4*tt*zz + 4*dA*hh**8*kk**4*tt + 4*dA*hh**8*kk**2*tt*zz + 4*dA*hh**6*kk**4*tt*zz + 8*dA*hh**6*kk**4*tt + 8*dA*hh**6*kk**2*tt*zz + 4*dA*hh**6*kk**2*tt + 4*dA*hh**4*kk**4*tt + 4*dA*hh**4*kk**2*tt*zz + 8*dA*hh**4*kk**2*tt + 4*dA*hh**2*kk**2*tt - 4*dal*db*dq*hh**12*kk**2*zz - 8*dal*db*dq*hh**10*kk**2*zz - 4*dal*db*dq*hh**10*kk**2 - 4*dal*db*dq*hh**8*kk**2*zz - 8*dal*db*dq*hh**8*kk**2 - 4*dal*db*dq*hh**6*kk**2 - 4*dal*db*hh**12*kk**2*tt*zz - 8*dal*db*hh**10*kk**2*tt*zz - 4*dal*db*hh**10*kk**2*tt - 4*dal*db*hh**8*kk**2*tt*zz - 8*dal*db*hh**8*kk**2*tt - 4*dal*db*hh**6*kk**2*tt - 4*dal*dq*hh**12*kk**2*zz - 8*dal*dq*hh**10*kk**2*zz - 4*dal*dq*hh**10*kk**2 - 4*dal*dq*hh**8*kk**2*zz - 8*dal*dq*hh**8*kk**2 - 4*dal*dq*hh**6*kk**2 - 4*dal*hh**12*kk**2*tt*zz - 8*dal*hh**10*kk**2*tt*zz - 4*dal*hh**10*kk**2*tt - 4*dal*hh**8*kk**2*tt*zz - 8*dal*hh**8*kk**2*tt - 4*dal*hh**6*kk**2*tt - 4*db**2*dg*ds*hh**6 - 8*db**2*dg*ds*hh**4 - 4*db**2*dg*ds*hh**2 - 4*db**2*dg*hh**6 - 8*db**2*dg*hh**4 - 4*db**2*dg*hh**2 + 4*db**2*dm*dq*hh**8*kk**2*zz**2 + 8*db**2*dm*dq*hh**6*kk**2*zz**2 + 4*db**2*dm*dq*hh**4*kk**2*zz**2 + 4*db**2*dm*hh**8*kk**2*tt*zz**2 + 8*db**2*dm*hh**6*kk**2*tt*zz**2 - 2*db**2*dm*hh**6 + 4*db**2*dm*hh**4*kk**2*tt*zz**2 - 6*db**2*dm*hh**4 - 2*db**2*dm*hh**2*zz**2 - 6*db**2*dm*hh**2 - 2*db**2*dm*zz**2 - 2*db**2*dm - 2*db**2*dq*hh**6*kk**2*r*zz**2 + 2*db**2*dq*hh**6*kk**2*zz**2 - 2*db**2*dq*hh**6 - 2*db**2*dq*hh**4*kk**2*r*zz**2 + 2*db**2*dq*hh**4*kk**2*zz**2 - 4*db**2*dq*hh**4 - 2*db**2*dq*hh**2 - 2*db**2*ds*hh**4 - 2*db**2*ds*hh**2 - 2*db**2*hh**6*kk**2*r*tt*zz**2 + 2*db**2*hh**6*kk**2*tt*zz**2 - 2*db**2*hh**6*tt + 2*db**2*hh**6 - 2*db**2*hh**4*kk**2*r*tt*zz**2 + 2*db**2*hh**4*kk**2*tt*zz**2 + db**2*hh**4*r - 4*db**2*hh**4*tt + db**2*hh**4 + 2*db**2*hh**2*r - 2*db**2*hh**2*tt - 3*db**2*hh**2 + db**2*r*zz**2 + db**2*r - db**2*zz**2 - 2*db**2 - 4*db*dc*dq*hh**8*kk**2 - 8*db*dc*dq*hh**6*kk**2 - 4*db*dc*dq*hh**4*kk**2 - 4*db*dc*hh**8*kk**2*tt - 8*db*dc*hh**6*kk**2*tt - 4*db*dc*hh**4*kk**2*tt - 8*db*dg*ds*hh**6 - 16*db*dg*ds*hh**4 - 8*db*dg*ds*hh**2 - 8*db*dg*hh**6 - 16*db*dg*hh**4 - 8*db*dg*hh**2 + 4*db*dm*dq*hh**10*kk**2*zz**3 + 4*db*dm*dq*hh**8*kk**2*r*zz**3 + 4*db*dm*dq*hh**8*kk**2*zz**3 + 8*db*dm*dq*hh**8*kk**2*zz**2 + 8*db*dm*dq*hh**6*kk**2*r*zz**3 - 4*db*dm*dq*hh**6*kk**2*zz**3 + 16*db*dm*dq*hh**6*kk**2*zz**2 + 4*db*dm*dq*hh**4*kk**2*r*zz**3 - 4*db*dm*dq*hh**4*kk**2*zz**3 + 8*db*dm*dq*hh**4*kk**2*zz**2 + 4*db*dm*hh**10*kk**2*tt*zz**3 + 4*db*dm*hh**8*kk**2*r*tt*zz**3 + 4*db*dm*hh**8*kk**2*tt*zz**3 + 8*db*dm*hh**8*kk**2*tt*zz**2 + 8*db*dm*hh**6*kk**2*r*tt*zz**3 - 4*db*dm*hh**6*kk**2*tt*zz**3 + 16*db*dm*hh**6*kk**2*tt*zz**2 - 4*db*dm*hh**6*r*zz - 4*db*dm*hh**6*zz**2 - 4*db*dm*hh**6 + 4*db*dm*hh**4*kk**2*r*tt*zz**3 - 4*db*dm*hh**4*kk**2*tt*zz**3 + 8*db*dm*hh**4*kk**2*tt*zz**2 - 12*db*dm*hh**4*r*zz - 4*db*dm*hh**4*zz**2 - 12*db*dm*hh**4 - 12*db*dm*hh**2*r*zz - 12*db*dm*hh**2 - 4*db*dm*r*zz - 4*db*dm - 4*db*dn*hh**8*kk**2*zz - 8*db*dn*hh**6*kk**2*zz - 4*db*dn*hh**6*kk**2 - 4*db*dn*hh**6*zz - 4*db*dn*hh**4*kk**2*zz - 8*db*dn*hh**4*kk**2 - 8*db*dn*hh**4*zz - 4*db*dn*hh**2*kk**2 - 4*db*dn*hh**2*zz + 2*db*dq*hh**8*kk**4*zz - 2*db*dq*hh**8*kk**2*r*zz**3 + 2*db*dq*hh**8*kk**2*r*zz + 2*db*dq*hh**8*kk**2*zz**3 + 2*db*dq*hh**6*kk**4*zz + 2*db*dq*hh**6*kk**4 - 2*db*dq*hh**6*kk**2*r**2*zz**3 + 2*db*dq*hh**6*kk**2*r*zz**3 - 4*db*dq*hh**6*kk**2*r*zz**2 + 4*db*dq*hh**6*kk**2*r*zz + 4*db*dq*hh**6*kk**2*zz**2 - 2*db*dq*hh**6 + 2*db*dq*hh**4*kk**4 - 2*db*dq*hh**4*kk**2*r**2*zz**3 + 4*db*dq*hh**4*kk**2*r*zz**3 - 4*db*dq*hh**4*kk**2*r*zz**2 + 2*db*dq*hh**4*kk**2*r*zz - 2*db*dq*hh**4*kk**2*zz**3 + 4*db*dq*hh**4*kk**2*zz**2 + 2*db*dq*hh**4*kk**2 - 4*db*dq*hh**4 + 2*db*dq*hh**2*kk**2 - 2*db*dq*hh**2 - 4*db*ds*hh**4 - 4*db*ds*hh**2 + 2*db*hh**8*kk**4*tt*zz - 2*db*hh**8*kk**2*r*tt*zz**3 + 2*db*hh**8*kk**2*r*tt*zz + 2*db*hh**8*kk**2*tt*zz**3 + 2*db*hh**6*kk**4*tt*zz + 2*db*hh**6*kk**4*tt - 2*db*hh**6*kk**2*r**2*tt*zz**3 + 2*db*hh**6*kk**2*r*tt*zz**3 - 4*db*hh**6*kk**2*r*tt*zz**2 + 4*db*hh**6*kk**2*r*tt*zz + 4*db*hh**6*kk**2*tt*zz**2 - 2*db*hh**6*kk**2*zz + 2*db*hh**6*r*zz - 2*db*hh**6*tt + 2*db*hh**6 + 2*db*hh**4*kk**4*tt - 2*db*hh**4*kk**2*r**2*tt*zz**3 + 4*db*hh**4*kk**2*r*tt*zz**3 - 4*db*hh**4*kk**2*r*tt*zz**2 + 2*db*hh**4*kk**2*r*tt*zz - 2*db*hh**4*kk**2*tt*zz**3 + 4*db*hh**4*kk**2*tt*zz**2 + 2*db*hh**4*kk**2*tt - 2*db*hh**4*kk**2*zz - 2*db*hh**4*kk**2 + 2*db*hh**4*r**2*zz + 2*db*hh**4*r*zz**2 + 2*db*hh**4*r*zz + 2*db*hh**4*r - 4*db*hh**4*tt - 2*db*hh**4*zz**2 - 2*db*hh**4*zz + 2*db*hh**2*kk**2*tt - 2*db*hh**2*kk**2 + 4*db*hh**2*r**2*zz - 2*db*hh**2*r*zz + 4*db*hh**2*r - 2*db*hh**2*tt - 2*db*hh**2*zz - 4*db*hh**2 + 2*db*r**2*zz - 2*db*r*zz + 2*db*r - 2*db - 4*dc*dq*hh**8*kk**2 - 8*dc*dq*hh**6*kk**2 - 4*dc*dq*hh**4*kk**2 - 4*dc*hh**8*kk**2*tt - 8*dc*hh**6*kk**2*tt - 4*dc*hh**4*kk**2*tt - 4*dg*ds*hh**6 - 8*dg*ds*hh**4 - 4*dg*ds*hh**2 - 4*dg*hh**6 - 8*dg*hh**4 - 4*dg*hh**2 + 4*dm*dq*hh**10*kk**2*zz**3 + 4*dm*dq*hh**8*kk**2*r*zz**3 + 4*dm*dq*hh**8*kk**2*zz**3 + 4*dm*dq*hh**8*kk**2*zz**2 + 8*dm*dq*hh**6*kk**2*r*zz**3 - 4*dm*dq*hh**6*kk**2*zz**3 + 8*dm*dq*hh**6*kk**2*zz**2 + 4*dm*dq*hh**4*kk**2*r*zz**3 - 4*dm*dq*hh**4*kk**2*zz**3 + 4*dm*dq*hh**4*kk**2*zz**2 + 4*dm*hh**10*kk**2*tt*zz**3 + 4*dm*hh**8*kk**2*r*tt*zz**3 + 4*dm*hh**8*kk**2*tt*zz**3 + 4*dm*hh**8*kk**2*tt*zz**2 + 8*dm*hh**6*kk**2*r*tt*zz**3 - 4*dm*hh**6*kk**2*tt*zz**3 + 8*dm*hh**6*kk**2*tt*zz**2 - 2*dm*hh**6*r**2*zz**2 - 4*dm*hh**6*r*zz - 4*dm*hh**6*zz**2 - 2*dm*hh**6 + 4*dm*hh**4*kk**2*r*tt*zz**3 - 4*dm*hh**4*kk**2*tt*zz**3 + 4*dm*hh**4*kk**2*tt*zz**2 - 6*dm*hh**4*r**2*zz**2 - 12*dm*hh**4*r*zz - 4*dm*hh**4*zz**2 - 6*dm*hh**4 - 6*dm*hh**2*r**2*zz**2 - 12*dm*hh**2*r*zz + 2*dm*hh**2*zz**2 - 6*dm*hh**2 - 2*dm*r**2*zz**2 - 4*dm*r*zz + 2*dm*zz**2 - 2*dm - 4*dn*hh**8*kk**2*zz - 8*dn*hh**6*kk**2*zz - 4*dn*hh**6*kk**2 - 2*dn*hh**6*r - 4*dn*hh**6*zz - 4*dn*hh**4*kk**2*zz - 8*dn*hh**4*kk**2 - 6*dn*hh**4*r - 8*dn*hh**4*zz - 4*dn*hh**2*kk**2 - 6*dn*hh**2*r - 4*dn*hh**2*zz - 2*dn*r + 2*dq*hh**8*kk**4*zz - 2*dq*hh**8*kk**2*r*zz**3 + 2*dq*hh**8*kk**2*r*zz + 2*dq*hh**8*kk**2*zz**3 + 2*dq*hh**6*kk**4*zz + 2*dq*hh**6*kk**4 - 2*dq*hh**6*kk**2*r**2*zz**3 + 2*dq*hh**6*kk**2*r*zz**3 - 2*dq*hh**6*kk**2*r*zz**2 + 4*dq*hh**6*kk**2*r*zz + 2*dq*hh**6*kk**2*zz**2 + 2*dq*hh**4*kk**4 - 2*dq*hh**4*kk**2*r**2*zz**3 + 4*dq*hh**4*kk**2*r*zz**3 - 2*dq*hh**4*kk**2*r*zz**2 + 2*dq*hh**4*kk**2*r*zz - 2*dq*hh**4*kk**2*zz**3 + 2*dq*hh**4*kk**2*zz**2 + 2*dq*hh**4*kk**2 + 2*dq*hh**2*kk**2 - 2*ds*hh**4 - 2*ds*hh**2 + 2*hh**8*kk**4*tt*zz - 2*hh**8*kk**2*r*tt*zz**3 + 2*hh**8*kk**2*r*tt*zz + 2*hh**8*kk**2*tt*zz**3 + 2*hh**6*kk**4*tt*zz + 2*hh**6*kk**4*tt - 2*hh**6*kk**2*r**2*tt*zz**3 + 2*hh**6*kk**2*r*tt*zz**3 - 2*hh**6*kk**2*r*tt*zz**2 + 4*hh**6*kk**2*r*tt*zz + 2*hh**6*kk**2*tt*zz**2 - 2*hh**6*kk**2*zz + 2*hh**6*r*zz + 2*hh**4*kk**4*tt - 2*hh**4*kk**2*r**2*tt*zz**3 + 4*hh**4*kk**2*r*tt*zz**3 - 2*hh**4*kk**2*r*tt*zz**2 + 2*hh**4*kk**2*r*tt*zz - 2*hh**4*kk**2*tt*zz**3 + 2*hh**4*kk**2*tt*zz**2 + 2*hh**4*kk**2*tt - 2*hh**4*kk**2*zz - 2*hh**4*kk**2 + hh**4*r**3*zz**2 - hh**4*r**2*zz**2 + 2*hh**4*r**2*zz + 2*hh**4*r*zz**2 + 2*hh**4*r*zz - 2*hh**4*zz**2 - 2*hh**4*zz - hh**4 + 2*hh**2*kk**2*tt - 2*hh**2*kk**2 + 2*hh**2*r**3*zz**2 - 2*hh**2*r**2*zz**2 + 4*hh**2*r**2*zz - 2*hh**2*r*zz - 2*hh**2*zz - hh**2 + r**3*zz**2 - r**2*zz**2 + 2*r**2*zz - r*zz**2 - 2*r*zz + zz**2)/(hh**2*(db + 1)**2*(hh**2 + 1)**3)"
+    ],
+    [
+      5,
+      5,
+      [
+        0,
+        0
+      ],
+      "4"
+    ]
+  ],
+  "testing_support": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      5,
+      0
+    ]
+  ]
+}

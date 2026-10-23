@@ -49,7 +49,7 @@
     }
   ],
   "scope": "Exact pointwise completion and polynomial-selector obstruction; the universal angle quantifier remains.",
-  "publication_changes": "Mathematical transitions shortened; direct determinant proof added; simpler independently derived rational counterexample used in the note. Original recovered matrices and source retained.",
+  "publication_changes": "Mathematical transitions shortened; direct determinant proof added; simpler independently derived rational counterexample used in the note. Original recovered matrices and source retained.\nAdded the verified native contact completion, its weak and strong proofs, exact coefficient bounds and parity-reduced rational arrays; universal canonical coverage remains open.",
   "published_files": [
     {
       "file": "build_selector_data.py",
@@ -570,6 +570,150 @@
     {
       "file": "fixed-c2-gates/check_native_contact.json",
       "sha256": "9e99d787a8f24e6766fbc52b7f53a3cdc92f9b15112a731774e19fa8aefcbde0"
+    },
+    {
+      "file": "contact-completion/checks.json",
+      "sha256": "8a6a285a0cd18044627fc377b782315c1f5d77653cd96a1ac7c8bd99af2f7c24"
+    },
+    {
+      "file": "contact-completion/contact_affine_independent.json",
+      "sha256": "e717ce08f32a49806fef7810792f8a3c5294eb1e57d803b750a0cf457b8b2826"
+    },
+    {
+      "file": "contact-completion/contact_affine_parity_reduced.json",
+      "sha256": "3cd02231114f76f22f418dc8474c853db1171186af170df23e5345693bd7f26d"
+    },
+    {
+      "file": "contact-completion/Contact_Completion.pdf",
+      "sha256": "3cefcf9b203530f5d900d78dcd9e7405bb8344ff8e35ed816d816bc70f602110"
+    },
+    {
+      "file": "contact-completion/Contact_Completion.tex",
+      "sha256": "628bfd585028b3829edd0fb22e5c09cec1e6cbafc8afe334807fe538cb33397f"
+    },
+    {
+      "file": "contact-completion/parity_reduction_checks.json",
+      "sha256": "90b301682a2e8b2c481060e96669fa348babcf99890f4f97af7d20361d0b3f82"
+    },
+    {
+      "file": "contact-completion/README.md",
+      "sha256": "72011b168fe5052f13fda85bec53a54368fabc9913c855ae1b3dd4ad19b0adf8"
+    },
+    {
+      "file": "contact-completion/reconstruct.py",
+      "sha256": "e040ebe8cfbd36034ebc3831f091e23906064334cdf1fc8625eee3262399e32d"
+    },
+    {
+      "file": "contact-completion/reduce_parity.py",
+      "sha256": "56ec5eada63150b4e5073b26dbad3ee3384b30df36ee31a34af8854ca32fae13"
+    },
+    {
+      "file": "contact-completion/strong/.gitignore",
+      "sha256": "dc1072ea43f9a7135a84239db8d2ce05e3fa0663cc738fac4eadce9b5a3aef9b"
+    },
+    {
+      "file": "contact-completion/strong/algebra_checks.json",
+      "sha256": "c8b11f7dc4115e45f576abe208dcb4829bf6e317921c2ee4c68ef018a37f47a3"
+    },
+    {
+      "file": "contact-completion/strong/check_bound_receipts.py",
+      "sha256": "59d8756d9388d8f42f70f81a33927b0387fec545ae78ab1e3c18bc01132e6b2d"
+    },
+    {
+      "file": "contact-completion/strong/check_strong_algebra.py",
+      "sha256": "62fef6cd36f82afab60cc85054f2dcdc3d529867aae704c13395bb28df2b99a6"
+    },
+    {
+      "file": "contact-completion/strong/data/LII_FIXED_GATE_BUDGETS.json",
+      "sha256": "5a21b703e88161d89ca9e70eecd79026400b6c82243580f2646e405d1eef1f0b"
+    },
+    {
+      "file": "contact-completion/strong/data/lII_generic.json",
+      "sha256": "eb55f4292985ea04556e80d4aa8d5578e48dd706083ffb04b9b6dbd476cac447"
+    },
+    {
+      "file": "contact-completion/strong/data/LII_NORMALIZED_SOURCE_WITNESS.json",
+      "sha256": "333b79d472f8858434fba7fe1092f9730579cfabd10bb06790ea5bb233d0a619"
+    },
+    {
+      "file": "contact-completion/strong/data/lII_uniform_bound.json",
+      "sha256": "081ec61bc017bda76d549183d04e93888d149cf0676b7a9daea56759d0082283"
+    },
+    {
+      "file": "contact-completion/strong/data/NATIVE_CONTACT_VERIFICATION.json",
+      "sha256": "e31ccb81981d1ec445cc927eb506e5226311cb3ecbd5609ffae6dec4bd0e3b02"
+    },
+    {
+      "file": "contact-completion/strong/scripts/strong/bound_lII.py",
+      "sha256": "bf4dd1eafd5dba05635498fee0a86bf2a3ed91d90fc7e582a777157c62c11e83"
+    },
+    {
+      "file": "contact-completion/strong/scripts/strong/export_source_witness.py",
+      "sha256": "f79d08c3f75d8a9375e50f1645839ea1f89dc5f8507caecb7e60085290bd67cd"
+    },
+    {
+      "file": "contact-completion/strong/scripts/strong/extract_lII.py",
+      "sha256": "2fb6cca000e4e5f6c7482c66f5ee977f0b45d3be877a83b27e5251d0fc6a65ad"
+    },
+    {
+      "file": "contact-completion/strong/scripts/strong/monomial_budgets.py",
+      "sha256": "aada6c561c4e87db3134a9e40f6886cae4cc26dfc8b64faa35cb664c4619a5d8"
+    },
+    {
+      "file": "contact-completion/strong/scripts/strong/verify_native_contact.py",
+      "sha256": "344a50167d07e08a30825b895baa894f9ac1d6d60f0065e3249bae78cf62100e"
+    },
+    {
+      "file": "contact-completion/strong/strong_bound_receipt_audit.json",
+      "sha256": "a0779eb7e550b16e0ff4a4cddf9fcd893471ea256c1084a05091a97c698a9e6e"
+    },
+    {
+      "file": "contact-completion/Strong_Contact_Completion.pdf",
+      "sha256": "daef3d4ebb2e8fc1e1900e49a53dc91ac4a58e1875cc6b6cc0745eb632c7cb06"
+    },
+    {
+      "file": "contact-completion/Strong_Contact_Completion.tex",
+      "sha256": "de5082d414077804558f9400c8ee2fa4993ac9bab77699518fcc89b8d6025157"
+    },
+    {
+      "file": "contact-completion/weak/check_source_bounds.py",
+      "sha256": "456860fcac3ce41f1a35991b4d3df7aee56eda7f7ca42d3e5be4445e23eb69f9"
+    },
+    {
+      "file": "contact-completion/weak/check_spans.py",
+      "sha256": "e0ea63ea178869528eb4646776ec138b79e1205583d961ecd61db72c6f73f253"
+    },
+    {
+      "file": "contact-completion/weak/check_weak.py",
+      "sha256": "bb65dbd34ef2e4aacbe9299bd75e5f7a40742dbeace48ed304e486a465ce4148"
+    },
+    {
+      "file": "contact-completion/weak/identity_checks.json",
+      "sha256": "7ba879abcc3c0a8fecc7c4b3b04ec47628427b815d81ed089414347cb6861d6c"
+    },
+    {
+      "file": "contact-completion/weak/received_generator.py",
+      "sha256": "3037be17c8f098b1e19942d484e8b4c5db038a32c8819859f40b77353aae7cfd"
+    },
+    {
+      "file": "contact-completion/weak/received_records.txt",
+      "sha256": "2c20f83e74216422557f8836fe169d5b020cba1a33c21bdfb93687f31924e7a1"
+    },
+    {
+      "file": "contact-completion/weak/records.json",
+      "sha256": "8edb19fe9c04dbaefed5f164d71ab2a5d6bf0ba891999287d6a6de0f9923cf38"
+    },
+    {
+      "file": "contact-completion/weak/span_checks.json",
+      "sha256": "b24bd6f5838adbd5af292edb2a800b9a67f144bde0430c04414d5eb44275dcbd"
+    },
+    {
+      "file": "contact-completion/weak/weak_recovery_source_envelopes_check.json",
+      "sha256": "bddbced952239d43dc4200fa36ae3291aacfe3d7d287a27a3e6689077a7dbac7"
+    },
+    {
+      "file": "contact-completion/PROVENANCE.json",
+      "sha256": "a8c9b00819e1ded0a235e06f0f2ed282c1463cc1d5c45a18de8a83316db973d8"
     }
   ],
   "additional_source_archives": [

@@ -2,12 +2,15 @@
 
 **No file in this directory is an evaluated exact lift of the full eight-coordinate Q222 set.**
 
-The new [fixed-C2 construction](canonical-completion/fixed-c2-gates/)
-gives affine matrices of orders 20 and 10 on two explicit testing regions.
-Its four-page proof derives the cancellation, fixes the testing functions,
-proves uniform native source bounds and identifies the omitted contact.
-Both sparse rational arrays and exact full-parent reconstruction code are
-included. Global canonical coverage remains unresolved.
+The [contact completion](canonical-completion/contact-completion/) now covers
+the singular contact for the native C2 source envelope. The two proofs retain
+both state normals and derive fixed-function Gram matrices uniformly over
+independently vanishing source parameters. Combined with the
+[order-20 and order-10 regional matrices](canonical-completion/fixed-c2-gates/),
+the construction has total order 635, 4024 auxiliaries and 619 equations.
+Radical-sign averaging reduces the coefficient system without changing its
+projected cone. All source identities, rational matrices and coefficient bounds
+are included. Global canonical coverage remains unresolved.
 
 `tilted-projection/` gives an exact lift of
 
