@@ -58,6 +58,14 @@ eight-copy outer approximation strictly larger than Q222.
 The exact coordinate maps, rational feasible points and matrix data are in
 [canonical-completion/](extracted-lifts/canonical-completion/).
 
+A [four-page fixed-function construction](extracted-lifts/canonical-completion/fixed-c2-gates/Fixed_C2_Completions.pdf)
+uses a cancellation between the state normals to obtain affine Gram
+matrices of orders 20 and 10. Explicit source bounds admit the native C2
+family on two testing regions, with all positive openings free to vanish
+at independent rates. The omitted region contains the exact contact,
+where a retained square must be recombined with the other state terms.
+Its completion remains necessary for the full lift.
+
 ## Other explicit results
 
 | Construction | Representation |

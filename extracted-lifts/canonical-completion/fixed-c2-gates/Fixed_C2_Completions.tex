@@ -1,0 +1,308 @@
+\documentclass[10pt]{article}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,microtype,hyperref}
+\hypersetup{hidelinks,pdftitle={Fixed square decompositions away from a singular contact}}
+\newtheorem{proposition}{Proposition}
+\newcommand{\R}{\mathbb R}
+\title{Fixed square decompositions away from a singular contact}
+\author{}\date{}
+\begin{document}
+\maketitle\vspace{-2.5em}
+
+The coefficients of a Bell inequality may enter a Gram matrix, while its
+testing functions must stay fixed. The cancellation below achieves this
+separation on two complementary regions of the measurement space. It
+combines the two state directions before completing squares, so every
+testing square root has a fixed argument.
+
+Write the source as
+$\mathbf c=(d,\lambda,n,m,C,A,D,\alpha,\beta)\in\R_+^9$.
+The compact testing coordinates satisfy
+\[
+ a^2+b^2=c^2+e^2=1,\qquad b\geq0.
+\]
+For finite angles they are $(a,b)=(u,1)/\sqrt{1+u^2}$ and
+$(c,e)=(v,1)/\sqrt{1+v^2}$. The circle coordinates also include the
+projective endpoints. All four real state components $W,X,Y,Z$ are free.
+Define the state-linear expressions
+\begin{align*}
+ E&=aW-bY,& K&=aX-bZ,& J&=eE+cK,& U&=eZ-cY,\\
+ E_\lambda&=eW+cX,& L_A&=bX+aZ,&
+ M&=b(cW-eX)+a(cY-eZ).
+\end{align*}
+The compact canonical Bell slack is
+\begin{equation}
+ P=\lambda E_\lambda^2+\beta L_A^2+nX^2+mM^2
+   +CE^2+AY^2+(D+d/2)J^2+(\alpha+d/2)U^2
+   +\frac d2(L_A^2-Z^2).
+ \label{eq:parent}
+\end{equation}
+Thus $P=F_h/4$, with the compact homogeneous normalization of the
+canonical parent. The only negative term is explicit.
+
+\section{A fixed family on an Alice arc}
+
+Fix $0<B<1$ and restrict the tests to $0\leq b\leq B$.
+For a source scalar $\tau$ put
+\[
+ S_\tau=\begin{pmatrix}C-\tau&\tau\\ \tau&D-\tau\end{pmatrix},
+ \qquad \rho=\tau-d/2,\qquad
+ h=\sqrt{\frac{2\alpha}{2\alpha+d}},\qquad
+ \vartheta=\frac h{1+h}.
+\]
+Set $h=0$ if $\alpha=d=0$, and write $P_B=B-\vartheta B^2$.
+
+\begin{proposition}
+If
+\begin{equation}
+ S_\tau\succeq0,\qquad \rho\geq0,\qquad
+ 4A\rho\geq d^2P_B^2,                         \label{eq:admission}
+\end{equation}
+then $P$ has a positive semidefinite Gram representation on the following
+twenty fixed testing functions:
+\begin{align}
+ \mathcal H_B=\big(&E_\lambda,L_A,X,M,cE,eE,J,R,ab\ell,U,b\ell,\ell,
+ \nonumber\\[-2pt]
+ &b\sqrt{1-b}\,\ell,\ b(1-b)\ell,\ cX,Y_0,bV,bY_0,
+ \sqrt{b(B-b)}V,\sqrt{b(B-b)}Y_0\big),        \label{eq:features}
+\end{align}
+where $R=beX+aU$, $\ell=cY$, $V=cK$, and $Y_0=eY$.
+Its matrix is affine in the nine source coordinates and three free
+auxiliaries $\tau,p,q$.
+\end{proposition}
+
+\begin{proof}
+Since $J-eE=cK$, the exact identity
+\[
+ CE^2+DJ^2=C(cE)^2+(eE,J)S_\tau(eE,J)^T+\tau(cK)^2
+\]
+keeps the large source coefficients in one positive block. Also
+$L_A^2-Z^2=X^2-K^2$. Removing the first four event squares in
+\eqref{eq:parent}, $C(cE)^2$, the $S_\tau$ block and $dJ^2/2$ leaves
+\begin{equation}
+ G=\frac d2R^2+\alpha U^2+A\ell^2+\frac d2b^2\ell^2
+       +\frac d2(cX)^2+\rho V^2+AY_0^2+dbVY_0.
+ \label{eq:residual}
+\end{equation}
+The coupling between $V$ and $Y_0$ can be redistributed because
+\begin{equation}
+ bVY_0=aR\ell-U\ell-b^2\ell^2.              \label{eq:cancellation}
+\end{equation}
+Using the fraction $\vartheta b$ of this identity gives
+\begin{align}
+G={}&\frac d2(R+\vartheta ab\ell)^2
+ +\left(\sqrt\alpha\,U-
+       \sqrt{\frac{d(1-h)}{2(1+h)}}\,b\ell\right)^2
+ +A\ell^2+\frac d2(cX)^2 \nonumber\\
+ &+\frac{dh}{(1+h)^2}(b\sqrt{1-b}\,\ell)^2
+ +\frac{dh^2}{2(1+h)^2}(b(1-b)\ell)^2
+ +\rho V^2+AY_0^2+d(b-\vartheta b^2)VY_0. \label{eq:squares}
+\end{align}
+The relation $2\alpha(1-h^2)=dh^2$ verifies this identity,
+including $d=0$ and $\alpha=0$.
+
+It remains to complete the last two-variable form. Its matrix has the
+fixed interpolation
+\begin{equation}
+ \begin{pmatrix}\rho&d(b-\vartheta b^2)/2\\
+ d(b-\vartheta b^2)/2&A\end{pmatrix}
+ =\frac{b^2}{B^2}H_+
+  +\frac{(B-b)^2}{B^2}H_0+b(B-b)Q_*,
+ \label{eq:interpolation}
+\end{equation}
+where
+\[
+ H_+=\begin{pmatrix}\rho&dP_B/2\\dP_B/2&A\end{pmatrix},
+ \qquad H_0=\begin{pmatrix}\rho&0\\0&A\end{pmatrix},
+ \qquad Q_*=\begin{pmatrix}2\rho/B^2&d/(2B)\\d/(2B)&2A/B^2\end{pmatrix}.
+\]
+Condition \eqref{eq:admission} makes $H_+$ and $H_0$ positive
+semidefinite. Since $0\leq\vartheta\leq1/2$, $P_B\geq B/2$, and hence
+$\det Q_*=4A\rho/B^4-d^2/(4B^2)\geq0$ as well.
+All factors in \eqref{eq:squares}--\eqref{eq:interpolation} belong to
+the span \eqref{eq:features}. Their only testing radicals are
+$\sqrt{1-b}$ and $\sqrt{b(B-b)}$.
+
+To obtain an affine pencil, expand the displayed Gram and replace
+$d\vartheta$ by $p$ and $d\vartheta^2$ by $q$.
+For example the two square blocks on $(R,ab\ell)$ and $(U,b\ell)$ are
+\[
+ \begin{pmatrix}d/2&p/2\\p/2&q/2\end{pmatrix},
+ \qquad
+ \begin{pmatrix}\alpha&-p/2\\-p/2&d/2-p\end{pmatrix}.
+\]
+The other coefficients in \eqref{eq:squares} are $p-q$ and $q/2$.
+In \eqref{eq:interpolation}, the off-diagonal of $H_+$ becomes
+$(dB-pB^2)/2$. Each coefficient is now affine in
+$(\mathbf c,\tau,p,q)$, and direct substitution of the testing functions
+cancels all three auxiliary coefficients. Thus
+\[
+ P=\mathcal H_B^TQ_{20}(\mathbf c,\tau,p,q)\mathcal H_B
+ \quad\hbox{for every }\tau,p,q\in\R.
+\]
+The nonlinear choices $p=d\vartheta$, $q=d\vartheta^2$ establish one
+positive semidefinite witness; they impose no equations on the pencil.
+\end{proof}
+
+\section{The complementary Bob region}
+
+Fix $\delta_0>0$ and restrict to $|c|\geq\delta_0$. Put
+$\tau_0=d/(2\delta_0^2)$. The identity
+\[
+ CE^2+DJ^2-\frac d2K^2
+ =C(cE)^2+(eE,J)S_{\tau_0}(eE,J)^T
+    +\tau_0(c^2-\delta_0^2)K^2
+\]
+uses a third fixed radical. Substitution in \eqref{eq:parent} yields
+\[
+ P=\lambda E_\lambda^2+\beta L_A^2+(n+d/2)X^2+mM^2+AY^2
+ +(\alpha+d/2)U^2+\frac d2J^2
+ +C(cE)^2+(eE,J)S_{\tau_0}(eE,J)^T
+ +\tau_0(c^2-\delta_0^2)K^2.
+\]
+Consequently $S_{\tau_0}\succeq0$ gives a source-affine Gram matrix on
+\[
+ \Psi=(E_\lambda,L_A,X,M,Y,U,J,cE,eE,
+                     \sqrt{c^2-\delta_0^2}K).
+\]
+This matrix has order ten and no auxiliaries. Both constructions retain
+all state signs and are valid at their testing boundaries. Adding the
+nine scalar source-sign blocks gives total orders 29 and 19.
+
+\section{A uniform native source domain}
+
+The admission conditions can be verified without fixing the relative
+rates of the source parameters. Normalize $d=1$ and
+$\lambda=\beta=0$. Let
+\[
+ 0<H<1,\quad 0<z,y\leq\epsilon H,\quad 0<r<1,\quad
+ L=yt>0,\quad 0<t<a_s:=1+zr,\quad j=a_s-t.
+\]
+Write $B_s=H+L$, $T=B_s+zr$, $U_s=B_s-zyr$, $S=a_s+L$, and
+\begin{align*}
+ \Delta={}&z+(1+z)B_s+(1+z)B_s^2+2z(1+z)B_sr
+       +z^3r^2+2z^2r\\
+ &+y\{(1+z)B_s+z+z^2r(2-r)\},\\
+ G_s={}&B_s+z(H+r-1),\\
+ M_s={}&(1+z)TH+yG_s+yzj+zrL(1+y).
+\end{align*}
+The native C2 source coefficients are
+\begin{align}
+ n&=\frac{Ta_sS-r\Delta}{2r\Delta},&
+ m&=\frac{z^2(1+y)(1-r)a_sS}{2G_s\Delta},&
+ C&=\frac{a_sM_s}{2L\Delta},\nonumber\\
+ A&=\frac{ya_sTS}{2H\Delta},&
+ D&=\frac{(1+z)TU_sS}{2yj\Delta},&
+ \alpha&=\frac{TM_s}{2(1-H)\Delta}.             \label{eq:native}
+\end{align}
+Require $n\geq0$. For $0<\epsilon\leq1/100$, the other displayed
+denominators and coefficients are positive.
+
+Here are bounds that remain uniform as any positive opening tends to
+zero. Since $L<ya_s$, setting $q_\epsilon=1+\epsilon+\epsilon^2$ gives
+\[
+ H\leq B_s\leq q_\epsilon H,\quad
+ 1\leq a_s\leq1+\epsilon,\quad
+ H\leq T\leq H(1+\epsilon)^2,\quad
+ 1\leq S\leq(1+\epsilon)^2,\quad U_s\geq H(1-\epsilon^2).
+\]
+In the positive polynomial for $\Delta$, substitution of these bounds
+gives
+\[
+ 0\leq\Delta-H(1+H)
+ \leq\epsilon H(3+7H+2H^2)
+ \leq6\epsilon H(1+H).
+\]
+For $M_s$, use $G_s\leq H(1+\epsilon)^2$ and $j\leq1+\epsilon$:
+\[
+ H^2\leq M_s
+ \leq H^2(1+4\epsilon+7\epsilon^2+5\epsilon^3+\epsilon^4)
+ \leq H^2(1+5\epsilon).
+\]
+These estimates first give $A\leq\epsilon$.
+For $\eta=CD/(C+D)$ the reciprocal cancels the separate small openings:
+\begin{align*}
+ \frac1\eta
+ &=2y\Delta\left\{\frac{t}{a_sM_s}
+             +\frac{j}{(1+z)TU_sS}\right\}
+ \leq\frac{4\epsilon(1+6\epsilon)}{1-\epsilon}
+ \leq5\epsilon,\\
+ \frac1{4A\eta}
+ &=H\Delta^2\left\{\frac{t}{a_s^2TSM_s}
+             +\frac{j}{(1+z)a_sT^2U_sS^2}\right\}
+ \leq(1+H)^2\frac{(1+6\epsilon)^2}{1-\epsilon}.
+\end{align*}
+As $(1+6\epsilon)^2/(1-\epsilon)\leq1+14\epsilon$, it follows that
+\[
+ \eta\geq\frac1{5\epsilon},\qquad
+ 4A\eta\geq(1+H)^{-2}-14\epsilon.
+\]
+The square root entering the Gram witness is equally well controlled.
+Put $\nu=TM_s/H^3$ and $\omega=\Delta/[H(1+H)]$.
+Then $1\leq\nu\leq1+8\epsilon$, $1\leq\omega\leq1+6\epsilon$, and
+\[
+ \frac{h^2}{H^2}=
+ \frac{\nu}{H^2\nu+(1-H^2)\omega}.
+\]
+Thus $H(1-3\epsilon)\leq h\leq H(1+4\epsilon)$, so
+$|h-H|\leq4\epsilon$.
+
+Now choose, once and for all,
+\[
+ \delta_0=2^{-26},\qquad B=1-\delta_0,\qquad
+ \epsilon=\frac{\delta_0^2}{4096}=2^{-64}.
+\]
+Set $\tau=\eta-1/4$ and $\rho=\eta-3/4$.
+For positive $C,D$, $S_\tau\succeq0$ whenever $0\leq\tau\leq\eta$;
+indeed its determinant is $CD-\tau(C+D)$.
+The bound on $\eta$ ensures this condition, $\rho>0$, and also
+$S_{\tau_0}\succeq0$ for $\tau_0=1/(2\delta_0^2)$.
+
+Finally, $h/(1+h)$ is $1$-Lipschitz on $[0,1]$. Replacing $h$ by
+$H$ changes $P_B^2$ by at most $8\epsilon$. Therefore
+\begin{align*}
+ 4A\rho-P_B^2
+ &\geq(1+H)^{-2}
+       -\left(B-\frac{H}{1+H}B^2\right)^2-25\epsilon\\
+ &\geq\frac{\delta_0^2}{4}-25\epsilon
+   >\frac{\delta_0^2}{8}.
+\end{align*}
+The second inequality uses
+$B(1+H\delta_0)\leq1-\delta_0^2$ and $(1+H)^2\leq4$.
+This proves both regional certificates on the entire displayed source
+envelope. Arbitrary nonnegative $\lambda,\beta$ may then be restored as
+their whole event squares. Literal $n=0$ is included. The rational
+parametrization \eqref{eq:native} concerns positive openings; undefined
+zero denominators are not assigned limiting values.
+
+
+\section{Why the contact requires a different completion}
+
+At an exact contact, every square in a positive decomposition must vanish.
+For the native C2 contact parametrization, let
+$z=u_c^2>0$, $y=v_c^2>0$, $0<H<1$ and $L=yt>0$. Its contact is
+\[
+ (u_c,v_c)=(\sqrt z,\sqrt y),\qquad
+ (W_c,X_c,Y_c,Z_c)=
+ \left(\frac{H+L}{\sqrt{zy}},-\sqrt z\,r,\frac H{\sqrt y},1\right).
+\]
+The native source equations give $P=0$ there, whereas
+\[
+ cE=\frac{L}{\sqrt{(1+z)(1+y)}}>0.
+\]
+For the source envelope above the contact lies in the omitted cap, since
+\[
+ b_c=(1+z)^{-1/2}\geq1-z/2>B,\qquad
+ |c_c|=\sqrt{\frac{y}{1+y}}<\frac{\delta_0}{64}.
+\]
+For $C>0$, both displayed decompositions retain the strictly positive
+term $C(cE)^2$. They therefore cannot remain positive semidefinite
+through that contact. A completion covering it must redistribute this
+term with the remaining state directions.
+
+In general, if $P(t)=\Phi(t)^TQ\Phi(t)$ with $Q\succeq0$ and
+$P(t_c)=0$, then $Q\Phi(t_c)=0$. This follows from
+$P(t_c)=\|Q^{1/2}\Phi(t_c)\|^2$ and is a necessary constraint on any
+replacement. It keeps the exact contact in the construction before
+positivity is proved.
+\end{document}

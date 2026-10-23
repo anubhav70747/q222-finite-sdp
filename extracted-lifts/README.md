@@ -2,6 +2,13 @@
 
 **No file in this directory is an evaluated exact lift of the full eight-coordinate Q222 set.**
 
+The new [fixed-C2 construction](canonical-completion/fixed-c2-gates/)
+gives affine matrices of orders 20 and 10 on two explicit testing regions.
+Its four-page proof derives the cancellation, fixes the testing functions,
+proves uniform native source bounds and identifies the omitted contact.
+Both sparse rational arrays and exact full-parent reconstruction code are
+included. Global canonical coverage remains unresolved.
+
 `tilted-projection/` gives an exact lift of
 
 ```
