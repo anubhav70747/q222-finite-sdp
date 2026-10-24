@@ -15,6 +15,11 @@ they are unchanged from the snapshot the review started on. Three folders under
 page, with two diagrams. GitHub shows HTML as source, so download it and open it
 in a browser.
 
+[`PEN_AND_PAPER.md`](PEN_AND_PAPER.md) reorganizes the proof so that it can be
+followed by hand. It isolates the single hard lemma and adds physical
+interpretations: Landau's identity for the one violating direction, and
+validity as an effective resistance.
+
 ## Verdict
 
 - **Existence proof: sound wherever it was tested.** Every core lemma held under
@@ -170,6 +175,7 @@ with SymPy 1.14 (as pinned in the repo), from the script's own folder.
 | `r6-remote-charts/` | rebuilds the unprinted R6.5–R6.7 and checks the source residues (RB4) and each strictness or determinant claim | `python src_check.py`, `python remote_charts.py`, `python r66_minors.py` | all claims hold |
 | `thin-layer/` | TL3 differences, R10.2, TL2, TL5, TL6, and zero value and first jet of both parents at the OP4 contact | `python tl3.py`, `python tl6.py` | all residuals 0 |
 | `tilted-chsh/` | the order-4 projection pencil against its set on a grid, and on random two-qubit behaviours (floating point) | `ruby chsh_check.rb` | 0 mismatches, 0 violations |
+| `physics/` | identities behind `PEN_AND_PAPER.md`. Landau's identity and the spectrum of I − Ŝ/2; events as product-state projectors; the Thomson flow identity and the effective-resistance test; Cauchy–Binet for adj(T) and det(T); `det(T)·F = (Pψ)ᵀadj(T)(Pψ) + det(P)s²`; which determinant coefficients the CHSH term reaches; a C2 source whose formal C1 image is not positive | `python check6_tsirelson.py`, `check4_thomson.py`, `check3_cauchy_binet.py`, `check12_decomp_sos.py`, `check5_monomials.py`, `check_c2_to_c1_counterexample.py` | all true; counterexample confirmed |
 
 The repo's own checkers were also run on Python 3.9 with SymPy 1.14, and all
 passed. Three needed a small compatibility shim:
