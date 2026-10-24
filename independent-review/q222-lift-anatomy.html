@@ -1,0 +1,449 @@
+<title>Q222 Lift Anatomy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column (~68ch) with full-width figures; tables scroll inside their own frame. */
+:root {
+  --bg: #f4f6f7;
+  --panel: #ffffff;
+  --fg: #16212b;
+  --muted: #56636e;
+  --rule: #d5dde2;
+  --accent: #0d6d7c;      /* verified / holds */
+  --warn: #a8600c;        /* where the hard work sits; sketched steps */
+  --gap: #a8344a;         /* missing link */
+  --accent-soft: #e2f0f2;
+  --warn-soft: #f6ecdf;
+  --gap-soft: #f6e4e8;
+  --display: "Spectral", Georgia, "Times New Roman", serif;
+  --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1519; --panel: #162026; --fg: #dbe4e9; --muted: #93a2ad; --rule: #2a3740;
+    --accent: #55b9c8; --warn: #e3a453; --gap: #e57e8f;
+    --accent-soft: #15323a; --warn-soft: #3a2b18; --gap-soft: #3b1f27;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1519; --panel: #162026; --fg: #dbe4e9; --muted: #93a2ad; --rule: #2a3740;
+  --accent: #55b9c8; --warn: #e3a453; --gap: #e57e8f;
+  --accent-soft: #15323a; --warn-soft: #3a2b18; --gap-soft: #3b1f27;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--fg);
+  font-family: var(--body); font-size: 16px; line-height: 1.6;
+}
+.wrap {
+  max-width: 1040px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 48px 72px;
+  display: grid; gap: 56px;
+}
+.col { max-width: 70ch; min-width: 0; }
+header { display: grid; gap: 14px; }
+.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+h1 { font-family: var(--display); font-weight: 600; font-size: clamp(2rem, 4.6vw, 3.1rem); line-height: 1.1; margin: 0; text-wrap: balance; }
+h2 { font-family: var(--display); font-weight: 600; font-size: 1.7rem; line-height: 1.2; margin: 0 0 14px; text-wrap: balance; }
+h3 { font-family: var(--body); font-weight: 600; font-size: 1.02rem; margin: 22px 0 6px; }
+p { margin: 0 0 12px; }
+.lede { font-size: 1.12rem; color: var(--fg); }
+.muted { color: var(--muted); }
+code, .m { font-family: var(--mono); font-size: .86em; }
+a { color: var(--accent); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+section { display: grid; gap: 6px; min-width: 0; }
+
+.verdict { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+.vcard { background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; padding: 16px 18px; display: grid; gap: 6px; align-content: start; }
+.chip { display: inline-block; font-family: var(--mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; padding: 2px 8px; border-radius: 3px; justify-self: start; }
+.chip.ok { background: var(--accent-soft); color: var(--accent); }
+.chip.warn { background: var(--warn-soft); color: var(--warn); }
+.chip.gap { background: var(--gap-soft); color: var(--gap); }
+.vcard strong { font-size: 1.02rem; }
+
+.thesis { border-left: 3px solid var(--accent); padding: 4px 0 4px 18px; font-family: var(--display); font-size: 1.22rem; line-height: 1.5; }
+
+figure { margin: 8px 0 0; display: grid; gap: 10px; min-width: 0; }
+.scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; border: 1px solid var(--rule); border-radius: 6px; background: var(--panel); }
+.scroll svg { display: block; width: 100%; min-width: 760px; height: auto; color: var(--fg); }
+figcaption { font-size: .92rem; color: var(--muted); max-width: 80ch; }
+svg text { font-family: var(--body); }
+.d-box { fill: var(--panel); stroke: var(--fg); stroke-width: 1.2; }
+.d-soft { fill: var(--bg); stroke: var(--rule); stroke-width: 1.2; }
+.d-hot { fill: var(--warn-soft); stroke: var(--warn); stroke-width: 2; }
+.d-ok { fill: var(--accent-soft); stroke: var(--accent); stroke-width: 1.6; }
+.d-gapbox { fill: var(--gap-soft); stroke: var(--gap); stroke-width: 1.4; stroke-dasharray: 5 4; }
+.d-line { stroke: var(--fg); stroke-width: 1.3; fill: none; }
+.d-dash { stroke: var(--muted); stroke-width: 1.3; fill: none; stroke-dasharray: 5 4; }
+.d-gapline { stroke: var(--gap); stroke-width: 2; fill: none; stroke-dasharray: 6 4; }
+.t-main { font-size: 14px; font-weight: 600; fill: var(--fg); }
+.t-sub { font-size: 12px; fill: var(--muted); }
+.t-lab { font-size: 11.5px; fill: var(--muted); font-style: italic; }
+.t-gap { font-size: 12px; fill: var(--gap); font-weight: 600; }
+.t-warn { font-size: 12px; fill: var(--warn); font-weight: 600; }
+.t-lane { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; fill: var(--muted); }
+.ah { fill: var(--fg); }
+.ah-gap { fill: var(--gap); }
+.ah-muted { fill: var(--muted); }
+
+.tbl { overflow-x: auto; border: 1px solid var(--rule); border-radius: 6px; background: var(--panel); }
+table { border-collapse: collapse; width: 100%; min-width: 720px; font-size: .92rem; }
+th, td { text-align: left; vertical-align: top; padding: 10px 14px; border-bottom: 1px solid var(--rule); }
+th { font-family: var(--mono); font-size: 11px; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+tr:last-child td { border-bottom: 0; }
+td.n { font-variant-numeric: tabular-nums; }
+.status { white-space: nowrap; }
+
+.formula { font-family: var(--mono); font-size: .9rem; background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; overflow-x: auto; white-space: pre; line-height: 1.55; }
+ul.tight { margin: 0 0 12px; padding-left: 1.2em; }
+ul.tight li { margin: 4px 0; }
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+.two > div { min-width: 0; }
+footer { font-size: .88rem; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 18px; }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+</style>
+
+<div class="wrap">
+
+<header class="col">
+  <div class="eyebrow">anubhav70747/q222-finite-sdp · latex/ at ee85fd1 · reviewed 23–24 Oct 2026</div>
+  <h1>How the Q222 finite-lift proof is built, and how far the lift can be extracted</h1>
+  <p class="lede">The repo proves that the quantum correlation set of the simplest Bell scenario (two parties, two binary measurements each, eight coordinates) is the projection of one fixed spectrahedron. This page breaks the proof into its stages, states the idea that organizes it, records what was checked and what was found, and follows the explicit lift as far as it currently goes.</p>
+</header>
+
+<section aria-labelledby="v">
+  <h2 id="v">Verdict</h2>
+  <div class="verdict">
+    <div class="vcard">
+      <span class="chip ok">existence proof</span>
+      <strong>Sound wherever it was tested.</strong>
+      <span>Every core lemma held under adversarial review, and the key determinant identity was re-derived symbolically. The 31,000-line appendix audit found no mathematical gap, only editorial defects.</span>
+    </div>
+    <div class="vcard">
+      <span class="chip warn">sketched steps</span>
+      <strong id="sketch-headline">Every sketched step holds when checked.</strong>
+      <span id="sketch-body">The thin-layer reuse of C1 certificates on a negative-β source holds, R10's contact chart is fully covered, and the HI pivots have a positive-definite residue.</span>
+    </div>
+    <div class="vcard">
+      <span class="chip gap">explicit lift</span>
+      <strong>No exact pencil for all eight coordinates exists yet.</strong>
+      <span>The job reduces exactly to one 9-dimensional cone. Every family tried so far is provably too small. The best full-set pencils (orders 264 and 392) are strictly larger than Q222.</span>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="i" class="col">
+  <h2 id="i">The organizing insight</h2>
+  <p class="thesis">A finite lift needs positivity that ignores how fast things degenerate. Q222 only ever needs two certificates with that property, AM–GM on monomials and Gram matrices with a strictly positive real part. Its geometry turns each Bell contact into an AM–GM identity.</p>
+  <p><strong>Why rates matter.</strong> Scheiderer's criterion (2021, Cor.&nbsp;3.19) says a closed convex semialgebraic set has a finite lift exactly when every valid slack, evaluated at every point, is a sum of squares in <span class="m">K⊗K</span> for every real closed field <span class="m">K ⊇ ℝ</span>. The paper uses two separately labelled fields: <span class="m">K_c</span> for the Bell inequality and <span class="m">K_t</span> for the experiment. Their infinitesimals are the inequality and the measurement angles collapsing at independent, unrelated rates. A certificate may take roots and inverses inside one field only, never of a mixed source–test quantity.</p>
+  <p><strong>Two rate-blind engines.</strong> (1) <em>Strict real residue:</em> a Gram matrix with bounded entries whose standard-part matrix is positive definite is a tensor sum of squares, whatever its infinitesimal parts do (Lemma TF2, via <span class="m">a + x⊗y = ½[(a/M+x)⊗(M+y) + (a/M−x)⊗(M−y)]</span>). (2) <em>Monomial AM–GM:</em> a monomial <span class="m">X = U_c⁻¹ ⊗ U</span> is a pure tensor, so its cube and fourth roots split cleanly across the two fields.</p>
+  <p><strong>Why Q222 fits.</strong> Each nonlocal slack has exactly one negative square, the CHSH core <span class="m">−2d·D_u·D_v·Z²</span>, and three positive transverse directions. So the 4×4 state matrix is positive semidefinite exactly when its determinant is nonnegative. That determinant is a Laurent polynomial in <span class="m">(u², v²)</span> supported on the 3×3 exponent square <span class="m">{−1,0,1}²</span>, which has a single interior point. The eight boundary coefficients are products of event weights and are never negative, so only the centre can be. At a stationary contact the weighted boundary terms balance around the origin, split into 12 small circuits, and each circuit is an exact AM–GM sum of squares.</p>
+  <p><strong>Where the work is.</strong> AM–GM certifies the determinant, not the full quadratic form. Recovering the form needs a Schur complement, whose inverse is a mixed quantity and therefore forbidden. The appendices replace it chart by chart. They keep event squares whole, write contact factors in the circuit roots with division-free "conductor" identities, and rescale until the leftover Gram has a strictly positive residue, at which point engine (1) applies. That accounts for most of the 343-page companion.</p>
+</section>
+
+<section aria-labelledby="a">
+  <h2 id="a" class="col">Architecture of the proof</h2>
+  <figure>
+    <div class="scroll">
+      <svg viewBox="0 0 1000 650" role="img" aria-label="Proof architecture. The quantum side reduces Q222 to at most nine real two-qubit atoms. The Bell side reduces any valid slack to at most nine extreme sources: events, two closed faces, or C1 and C2 stationary contacts. Each atom-source pair gives a parent quadratic form. Its determinant is certified by balanced AM-GM; the full form at singular contacts is certified by the appendix chart cover feeding the strict-residue Gram lemma. Mixtures combine the pair certificates, and Scheiderer's criterion turns the universal statement into a finite lift.">
+        <defs>
+          <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker>
+        </defs>
+        <text x="20" y="26" class="t-lane">QUANTUM SIDE · TEST FIELD K_t</text>
+        <text x="980" y="26" class="t-lane" text-anchor="end">BELL SIDE · SOURCE FIELD K_c</text>
+
+        <rect x="20" y="40" width="300" height="56" rx="4" class="d-box"/>
+        <text x="170" y="64" class="t-main" text-anchor="middle">Q222 ⊂ ℝ⁸</text>
+        <text x="170" y="83" class="t-sub" text-anchor="middle">any dimension, any binary POVMs</text>
+        <line x1="170" y1="96" x2="170" y2="138" class="d-line" marker-end="url(#ar)"/>
+        <text x="180" y="122" class="t-lab">dilation + Jordan blocks + real states (Ch 2)</text>
+        <rect x="20" y="140" width="300" height="56" rx="4" class="d-box"/>
+        <text x="170" y="164" class="t-main" text-anchor="middle">conv Φ(S¹ × S¹ × S³)</text>
+        <text x="170" y="183" class="t-sub" text-anchor="middle">≤ 9 real two-qubit atoms (Carathéodory)</text>
+        <line x1="170" y1="196" x2="170" y2="238" class="d-line" marker-end="url(#ar)"/>
+        <text x="180" y="222" class="t-lab">half-angles u, v; state ψ = (W,X,Y,Z)</text>
+        <rect x="20" y="240" width="300" height="56" rx="4" class="d-box"/>
+        <text x="170" y="264" class="t-main" text-anchor="middle">test atom (u, v, ψ)</text>
+        <text x="170" y="283" class="t-sub" text-anchor="middle">entries in K_t</text>
+
+        <rect x="680" y="40" width="300" height="56" rx="4" class="d-box"/>
+        <text x="830" y="64" class="t-main" text-anchor="middle">valid slack f ≥ 0 on Q222</text>
+        <text x="830" y="83" class="t-sub" text-anchor="middle">a Bell inequality, as an affine function</text>
+        <line x1="830" y1="96" x2="830" y2="138" class="d-line" marker-end="url(#ar)"/>
+        <text x="820" y="122" class="t-lab" text-anchor="end">PR-vertex simplex, Farkas (SG1)</text>
+        <rect x="680" y="140" width="300" height="56" rx="4" class="d-box"/>
+        <text x="830" y="164" class="t-main" text-anchor="middle">f = dH + 4 Σ cᵢ pᵢ</text>
+        <text x="830" y="183" class="t-sub" text-anchor="middle">CHSH weight d, 8 losing events; ≤ 9 extremes</text>
+        <line x1="830" y1="196" x2="830" y2="238" class="d-line" marker-end="url(#ar)"/>
+        <text x="820" y="222" class="t-lab" text-anchor="end">6 contact equations vs 9 coefficients (Ch 4)</text>
+        <rect x="680" y="240" width="300" height="56" rx="4" class="d-box"/>
+        <text x="830" y="264" class="t-main" text-anchor="middle">events · 2 closed faces · C1, C2</text>
+        <text x="830" y="283" class="t-sub" text-anchor="middle">entries in K_c</text>
+
+        <path d="M320,268 C390,268 420,300 452,328" class="d-line" marker-end="url(#ar)"/>
+        <path d="M680,268 C610,268 580,300 548,328" class="d-line" marker-end="url(#ar)"/>
+        <rect x="350" y="330" width="300" height="56" rx="4" class="d-box"/>
+        <text x="500" y="354" class="t-main" text-anchor="middle">parent form F = ψᵀ P(u, v) ψ</text>
+        <text x="500" y="373" class="t-sub" text-anchor="middle">one negative square: −2d·D_u·D_v·Z²</text>
+
+        <line x1="440" y1="386" x2="330" y2="438" class="d-line" marker-end="url(#ar)"/>
+        <text x="372" y="420" class="t-lab" text-anchor="end">P ⪰ 0 ⇔ det P ≥ 0</text>
+        <line x1="560" y1="386" x2="670" y2="438" class="d-line" marker-end="url(#ar)"/>
+        <text x="628" y="420" class="t-lab">but the form itself</text>
+
+        <rect x="170" y="440" width="300" height="66" rx="4" class="d-ok"/>
+        <text x="320" y="464" class="t-main" text-anchor="middle">det P = 16D_u²D_v²u²v² · L(u², v²)</text>
+        <text x="320" y="483" class="t-sub" text-anchor="middle">balanced AM–GM over 12 circuits</text>
+        <text x="320" y="499" class="t-sub" text-anchor="middle">roots are pure tensors</text>
+
+        <rect x="530" y="440" width="300" height="66" rx="4" class="d-hot"/>
+        <text x="680" y="464" class="t-main" text-anchor="middle">full form at singular contacts</text>
+        <text x="680" y="483" class="t-warn" text-anchor="middle">chart cover: App A · B · C, Thm 6.2</text>
+        <text x="680" y="499" class="t-sub" text-anchor="middle">≈ 31k lines, audited</text>
+
+        <line x1="320" y1="506" x2="230" y2="566" class="d-line" marker-end="url(#ar)"/>
+        <line x1="680" y1="506" x2="250" y2="566" class="d-line" marker-end="url(#ar)"/>
+        <text x="470" y="548" class="t-lab" text-anchor="middle">strict-residue Gram ⇒ tensor SOS (TF2)</text>
+
+        <rect x="40" y="568" width="280" height="56" rx="4" class="d-box"/>
+        <text x="180" y="592" class="t-main" text-anchor="middle">[fⱼ, qᵢ] ∈ Σ T² per pair</text>
+        <text x="180" y="611" class="t-sub" text-anchor="middle">T = K_c ⊗ K_t</text>
+        <line x1="320" y1="596" x2="358" y2="596" class="d-line" marker-end="url(#ar)"/>
+        <rect x="360" y="568" width="280" height="56" rx="4" class="d-box"/>
+        <text x="500" y="592" class="t-main" text-anchor="middle">[f, q] ∈ Σ T² for all f, q</text>
+        <text x="500" y="611" class="t-sub" text-anchor="middle">mixtures: (√aⱼ ⊗ √wᵢ)·hᵢⱼₖ (M2)</text>
+        <line x1="640" y1="596" x2="678" y2="596" class="d-line" marker-end="url(#ar)"/>
+        <rect x="680" y="568" width="300" height="56" rx="4" class="d-box"/>
+        <text x="830" y="592" class="t-main" text-anchor="middle">finite lift exists</text>
+        <text x="830" y="611" class="t-sub" text-anchor="middle">Scheiderer 3.19; algebraic entries (Tarski)</text>
+      </svg>
+    </div>
+    <figcaption>Each side of the problem shrinks to finitely many atoms in its own field, and a source–test pair meets in one 4×4 quadratic form. Its determinant is certified by AM–GM alone (teal). The full form near compatible measurements needs the appendix chart cover (amber), where nearly all the length of the proof sits.</figcaption>
+  </figure>
+</section>
+
+<section aria-labelledby="s">
+  <h2 id="s" class="col">The proof, stage by stage</h2>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Stage</th><th>What it establishes</th><th>Where</th><th>Status after review</th></tr></thead>
+      <tbody>
+        <tr><td>1 · Model</td><td>Q222 = conv Φ(S¹×S¹×S³) with A₀=B₀=Z, A₁=c_A Z+s_A X, B₁=c_B Z+s_B X; at most 9 atoms; same formula over any real closed field.</td><td class="m">02_model.tex</td><td class="status"><span class="chip ok">proved</span></td></tr>
+        <tr><td>2 · Criterion</td><td>Finite lift ⇔ [f,q] is a sum of squares in K⊗K for all K, f, q. The paper proves the stronger two-field version.</td><td class="m">Proof.tex §1; arXiv 2004.04196</td><td class="status"><span class="chip ok">matches source</span></td></tr>
+        <tr><td>3 · Engine</td><td>Bounded Gram with positive-definite real residue ⇒ tensor SOS (TF1–TF2); pure-field units may be cancelled (TF3).</td><td class="m">03_tensor.tex</td><td class="status"><span class="chip ok">holds</span></td></tr>
+        <tr><td>4 · Sources</td><td>Slack negative at a PR box = dH + 4Σcᵢpᵢ; extreme sources are events, two closed faces with small explicit lifts, or contacts of type C1 (λ=n=0) or C2 (λ=β=0).</td><td class="m">04_geometry.tex</td><td class="status"><span class="chip ok">holds</span></td></tr>
+        <tr><td>5 · Determinant</td><td>det P = 16D_u²D_v²u²v²·L(u²,v²) with L on {−1,0,1}²; the 8 outer coefficients are nonnegative.</td><td class="m">SG5–SG6</td><td class="status"><span class="chip ok">re-derived</span></td></tr>
+        <tr><td>6 · AM–GM</td><td>At a contact the weights balance (Σwₑe = 0) and split into 12 circuits with weights (1,1), (1,1,1), (1,1,2).</td><td class="m">Proof.tex §2</td><td class="status"><span class="chip ok">holds</span></td></tr>
+        <tr><td>7 · Full form</td><td>Canonical assertion 𝒞: the whole parent form is a tensor SOS at every source scale and every test chart.</td><td class="m">App A, B, C; noncommuting_refined.tex</td><td class="status" id="stage7"><span class="chip ok">audited · holds</span></td></tr>
+        <tr><td>8 · Assembly</td><td>Mixtures (M2) preserve certificates; Scheiderer gives the lift; Tarski transfer gives real algebraic entries.</td><td class="m">Proof.tex §4; 07_cover.tex</td><td class="status"><span class="chip ok">holds</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="two" style="margin-top:22px">
+    <div>
+      <h3>The eight losing events</h3>
+      <p class="muted">With S = E₀₀ − E₀₁ + E₁₀ + E₁₁ and H = 1 − S/2, every slack negative at the PR box is fixed by its value there (d = −f(PR)) and at its eight deterministic neighbours.</p>
+      <div class="formula">λ (++|01)   n (+−|00)   m (+−|11)   C (−+|10)
+A (−+|00)   D (−+|11)   α (−−|01)   β (+−|10)
+
+C1:  λ = n = 0,  d,m,C,A,α &gt; 0,  D,β ≥ 0,  D+β &gt; 0
+C2:  λ = β = 0,  d,m,C,A,D,α &gt; 0,  n ≥ 0</div>
+    </div>
+    <div>
+      <h3>The determinant's corner coefficients</h3>
+      <p class="muted">Re-derived symbolically for all nonnegative weights. Each corner switches off with one pair of events, which is why C1 and C2 remove specific corners.</p>
+      <div class="formula">q(+1,+1) = 4Cβ (2A+2α+d+2m)(2D+d+2λ+2n)
+q(−1,−1) = 4αλ (2A+2C+2D+d)(2β+d+2m+2n)
+q(−1,+1) = 4Dm (2A+2C+2α+d)(2β+d+2λ+2n)
+q(+1,−1) = 4An (2C+2D+d+2λ)(2α+2β+d+2m)
+centre h  contains −d⁴, the only sign-indefinite term</div>
+    </div>
+  </div>
+
+  <h3 class="col">The AM–GM identities that close a contact</h3>
+  <div class="formula">p + p⁻¹ − 2                    = (√p − 1/√p)²
+a³ + b³ + c³ − 3abc            = ½(a+b+c)[(a−b)² + (b−c)² + (c−a)²]
+a⁴ + b⁴ + c⁴ + d⁴ − 4abcd      = (a²−b²)² + (c²−d²)² + 2(ab−cd)²
+
+with X = U_c⁻¹ ⊗ U, Y = V_c⁻¹ ⊗ V, so every root is taken separately in each field</div>
+</section>
+
+<section aria-labelledby="g">
+  <h2 id="g" class="col">What the audit found</h2>
+  <div class="two">
+    <div>
+      <h3>Editorial defects, content present or rebuilt</h3>
+      <ul class="tight">
+        <li>The C2 appendix ends with "the only remaining task is the contact chart u,v,w_test &gt; 0 infinitesimal, Z = 1". That chart is already proved: by R10.1 when n/e² is not infinitesimal, by the thin layer C.17.3 when it is positive infinitesimal, and through OP4 to C1 when n = 0. The sentence is stale. <span class="m">c2_short.tex:14268–14278</span></li>
+        <li>R6.5–R6.7, the remote-chart matrices for the R6 sector, are cited as printed but appear nowhere, not even in the PDF. They were rebuilt from the parent and all three claims verified exactly at 10 R6 sources. The stated reason for R6.5 is incomplete, and R6.7 needs the redundant roots pZ, qZ. <span class="m">c2_short.tex:12397–12423</span></li>
+        <li>Nine bare <span class="m">\label</span> lines with no content close the C2 appendix; the whole-R10 theorem promised at line 13888 is never stated as one result.</li>
+        <li>"Narrowed but not closed" for the HI leaf is contradicted by the proof printed earlier in C.9.2. <span class="m">c2_short.tex:7074 vs 6712–6915</span></li>
+        <li>Undefined tags NSR3–5, WS3, UZ4–6 and CL7. In each case the content is printed under another heading, or it is not needed.</li>
+        <li>Stale phrases in C1 ("subject to the exact checks … recorded alongside", "revision-6", sentences missing their antecedent). The mathematics is printed and was recomputed.</li>
+        <li>The two copies of <span class="m">Explicit_Lifts.tex</span> differ, and the README says the C1 pencil has four blocks where its file has five.</li>
+      </ul>
+    </div>
+    <div>
+      <h3 id="sk-title">Steps printed only as sketches</h3>
+      <ul class="tight" id="sk-list">
+        <li><strong>Thin-layer import.</strong> C.17.3 maps a C2 source to a formal C1 point with negative β, reuses the C1 constructions CA, CS and SE, and checks their premises in prose. Both R8 and R10 depend on it. <span class="chip ok">holds</span> The C1 text uses β ≥ 0 in exactly two places, and the text replaces both explicitly. TL3, TL5, TL6 and the zero value and jet at contact were checked exactly.</li>
+        <li><strong>R10 coverage.</strong> No R10 source and test with u, v infinitesimal and Z = 1 escapes the three-way split on n/e². <span class="chip ok">holds</span></li>
+        <li><strong>HI radical division.</strong> The "finite average supplies positive pivots" step asserts positive pivots without printing the Gram matrix. <span class="m">c2_short.tex:6849–6909</span> <span class="chip ok">holds</span> A 10×10 Gram on the stated roots has a positive-definite residue for every r₀ ≥ 0, including R₀ = 0 and n ≈ 0.</li>
+        <li><strong>IW16 arrays.</strong> The residues of r_c and k_c rest on second-order cancellations the reader must compute. They were recomputed and are correct. <span class="m">c1_short.tex:3676–3687</span></li>
+        <li>Large identities (EN8, EN16, NC14) are said to follow by "direct multiplication". The repo ships no scripts for them.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="l">
+  <h2 id="l" class="col">The finite lift, end to end</h2>
+  <div class="col">
+    <p>The existence proof gives no matrices. Scheiderer's criterion yields a lift through compactness, so the finite space of testing functions it implicitly uses is never named. The repo instead builds an exact route that reduces the whole problem to one 9-dimensional cone. Every step of that route is proved and machine-checked except one: an exact pencil for the cone itself.</p>
+  </div>
+  <figure>
+    <div class="scroll">
+      <svg viewBox="0 0 1000 400" role="img" aria-label="Extraction pipeline. The existence proof gives no explicit testing space. The canonical reduction turns the problem into the 9-dimensional canonical cone. An exact, strictly feasible pencil for that cone would yield the full Q222 lift through eight relabelled adjoint copies, but that pencil is missing. Three inner cones were tried; each is strictly smaller than the canonical cone, and the two semidefinite ones assemble to outer pencils of order 264 and 392 that are strictly larger than Q222. The next candidate, the sum of the ramified cone and its mirror image, is untested.">
+        <defs>
+          <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker>
+          <marker id="ar2g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah-gap"/></marker>
+          <marker id="ar2m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah-muted"/></marker>
+        </defs>
+        <rect x="20" y="40" width="180" height="64" rx="4" class="d-box"/>
+        <text x="110" y="66" class="t-main" text-anchor="middle">existence proof</text>
+        <text x="110" y="86" class="t-sub" text-anchor="middle">no explicit testing space</text>
+        <line x1="200" y1="72" x2="258" y2="72" class="d-dash" marker-end="url(#ar2m)"/>
+        <text x="229" y="62" class="t-lab" text-anchor="middle">eliminate</text>
+        <text x="229" y="92" class="t-lab" text-anchor="middle">Alice's angle</text>
+
+        <rect x="260" y="30" width="250" height="84" rx="4" class="d-ok"/>
+        <text x="385" y="55" class="t-main" text-anchor="middle">canonical cone C_can ⊂ ℝ⁹</text>
+        <text x="385" y="75" class="t-sub" text-anchor="middle">valid ⇔ ∀v ∃J: G_J ⪰ 0, H_J ⪰ 0</text>
+        <text x="385" y="93" class="t-sub" text-anchor="middle">(two 4×4 matrices, one common J)</text>
+
+        <line x1="510" y1="72" x2="608" y2="72" class="d-gapline" marker-end="url(#ar2g)"/>
+        <text x="559" y="60" class="t-gap" text-anchor="middle">missing:</text>
+        <text x="559" y="94" class="t-gap" text-anchor="middle">exact pencil</text>
+
+        <rect x="610" y="40" width="180" height="64" rx="4" class="d-box"/>
+        <text x="700" y="66" class="t-main" text-anchor="middle">8 adjoint copies</text>
+        <text x="700" y="86" class="t-sub" text-anchor="middle">relabellings R_g, order 8n</text>
+        <line x1="790" y1="72" x2="828" y2="72" class="d-line" marker-end="url(#ar2)"/>
+        <rect x="830" y="40" width="150" height="64" rx="4" class="d-gapbox"/>
+        <text x="905" y="66" class="t-main" text-anchor="middle">exact Q222</text>
+        <text x="905" y="86" class="t-sub" text-anchor="middle">pencil</text>
+
+        <text x="20" y="170" class="t-lane">INNER CONES TRIED, EACH ⊊ C_can</text>
+        <rect x="20" y="182" width="215" height="66" rx="4" class="d-soft"/>
+        <text x="127" y="206" class="t-main" text-anchor="middle">J polynomial on ℝ</text>
+        <text x="127" y="225" class="t-gap" text-anchor="middle">fails: Motzkin + 2</text>
+        <text x="127" y="241" class="t-sub" text-anchor="middle">degree ≤ 2 forced</text>
+        <rect x="255" y="182" width="215" height="66" rx="4" class="d-soft"/>
+        <text x="362" y="206" class="t-main" text-anchor="middle">half-line, order 33</text>
+        <text x="362" y="225" class="t-gap" text-anchor="middle">fails: source c̄</text>
+        <text x="362" y="241" class="t-sub" text-anchor="middle">44 auxiliaries</text>
+        <rect x="490" y="182" width="215" height="66" rx="4" class="d-soft"/>
+        <text x="597" y="206" class="t-main" text-anchor="middle">ramified √v, order 49</text>
+        <text x="597" y="225" class="t-gap" text-anchor="middle">fails: c† = πc̄</text>
+        <text x="597" y="241" class="t-sub" text-anchor="middle">148 auxiliaries</text>
+        <rect x="725" y="182" width="255" height="66" rx="4" class="d-gapbox"/>
+        <text x="852" y="206" class="t-main" text-anchor="middle">C_ram + πC_ram, order 98</text>
+        <text x="852" y="225" class="t-sub" text-anchor="middle">untested next candidate</text>
+        <text x="852" y="241" class="t-sub" text-anchor="middle">784 after assembly</text>
+
+        <line x1="127" y1="182" x2="300" y2="116" class="d-dash" marker-end="url(#ar2m)"/>
+        <line x1="362" y1="182" x2="372" y2="116" class="d-dash" marker-end="url(#ar2m)"/>
+        <line x1="597" y1="182" x2="460" y2="116" class="d-dash" marker-end="url(#ar2m)"/>
+        <line x1="790" y1="182" x2="505" y2="112" class="d-dash" marker-end="url(#ar2m)"/>
+
+        <line x1="362" y1="248" x2="420" y2="318" class="d-line" marker-end="url(#ar2)"/>
+        <line x1="597" y1="248" x2="540" y2="318" class="d-line" marker-end="url(#ar2)"/>
+        <rect x="290" y="320" width="380" height="56" rx="4" class="d-box"/>
+        <text x="480" y="344" class="t-main" text-anchor="middle">outer pencils of order 264 and 392</text>
+        <text x="480" y="363" class="t-sub" text-anchor="middle">384 / 640 auxiliaries · both strictly larger than Q222</text>
+      </svg>
+    </div>
+    <figcaption>The route from the existence proof to matrices. Everything except the red link is proved and machine-checked. Each inner cone tried is strictly smaller than the canonical cone, witnessed by an explicit rational source, so its eight-copy assembly is an outer approximation of Q222 rather than Q222 itself.</figcaption>
+  </figure>
+
+  <div class="two" style="margin-top:12px">
+    <div>
+      <h3>Step 1 · Canonical reduction (exact)</h3>
+      <p>Write the parent in U = u² with W = S + U·P₀, X = T + U·Q₀, Y = u(S−P₀), Z = u(T−Q₀). Then F_c = D_u·Φ_c, and for fixed source c and Bob angle v, positivity for all U ≥ 0 holds exactly when some 2×2 matrix J gives</p>
+      <div class="formula">G_J = [ P+K   J   ]  ⪰ 0     H_J = [ P+E      K−E−J ]  ⪰ 0
+      [ Jᵀ    N+K ]               [ K−E−Jᵀ   N+E   ]</div>
+      <p class="muted">The forward direction is the split identity; the converse uses the matrix Fejér–Riesz theorem. <span class="m">canonical_completion.tex:98–163</span></p>
+    </div>
+    <div>
+      <h3>Step 2 · Full-polar assembly (exact)</h3>
+      <p>With the eight output relabellings R_g, g ∈ {±1}³, and the invertible 9×9 map M (det M = −32), an order-n canonical pencil with a strictly feasible point gives</p>
+      <div class="formula">Q222 = { q : ∃ Y_g ⪰ 0,  ℬ*Y_g = 0,
+              𝒜*Y_g = M_gᵀ(1, q),  g ∈ {±1}³ }</div>
+      <p class="muted">q enters affinely, only in 72 scalar blocks. Other orientations cannot repair a missing canonical certificate, so the cone must be exact. <span class="m">full_polar_assembly.tex:137–225</span></p>
+    </div>
+  </div>
+
+  <h3 class="col">Why each selector family fails</h3>
+  <div class="tbl">
+    <table>
+      <thead><tr><th>Family for J(v)</th><th>Order</th><th>Witness outside it (c = d, λ, n, m, C, A, D, α, β)</th><th>Mechanism</th></tr></thead>
+      <tbody>
+        <tr><td>Polynomial on ℝ</td><td class="n">8</td><td>(d,m,C,A,D,α,β) = (359, 75/16, 60, 416, 41/2, 831/2, 151/2) on the C1 face; a forced J gives a minor of −2645/4</td><td>|J| bounds force degree ≤ 2. No fixed multiplier rescues it, because the limit is Motzkin + 2, which is not SOS.</td></tr>
+        <tr><td>Half-line quadratic</td><td class="n">33</td><td>c̄ = (1, 2⁻³⁴, 2⁻¹⁴, 2⁻²⁴, 1/576, 161, 1/2, 76, 1/250)</td><td>Integer dual moments separate it. The growth bound rules out every polynomial degree.</td></tr>
+        <tr><td>Ramified, √v and v^{3/2}</td><td class="n">49</td><td>c† = πc̄ = (1, 1/576, 161, 2⁻²⁴, 2⁻³⁴, 2⁻¹⁴, 1/2, 1/250, 76)</td><td>It is the Alice↔Bob mirror of the previous witness. Selectors in Bob's angle alone cannot see it.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="two" style="margin-top:22px">
+    <div>
+      <h3>Exact pieces available now</h3>
+      <ul class="tight">
+        <li><strong>Tilted-CHSH projection</strong>, exact with no auxiliaries. With t = a₀ and s = E₀₀+E₀₁+E₁₀−E₁₁:
+          <div class="formula" style="margin-top:6px">[ √2+t   s/2  ]
+[ s/2    √2−t ]  ⊕  (1−t)  ⊕  (1+t)  ⪰ 0</div>
+          Checked here at 417k grid points and 300k random quantum behaviours.</li>
+        <li><strong>Size bound:</strong> any lift of Q222 has total PSD order at least 9. The first undecided template, N = 9, already has 2,025 unknowns.</li>
+        <li><strong>Local pencils</strong> of orders 62, 669 and 731 for specified source boxes, plus an exact order-49 pencil for the angular Laurent cone. None of these is Q222.</li>
+        <li><strong>New since the snapshot, not audited here.</strong> A fixed certificate of order 283 for the stationary R1 family on |u| ≤ 9/256, |v| ≤ 1/16, joined to order 293 with a Bob complement. An order-635 construction valid at all measurements for the native C2 source envelope. The repo itself states that global canonical coverage remains open.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>What would finish the extraction</h3>
+      <ul class="tight">
+        <li><strong>Quantifier elimination.</strong> It terminates in principle, since the theorem guarantees some size works, but at N = 9 it is far beyond practical reach.</li>
+        <li><strong>Next concrete step.</strong> Build C_ram + πC_ram (order 98, 784 after assembly), which restores the Alice↔Bob symmetry the failed families lack, and run a separation search against C_can. Aim it at multiscale sources and the C1/C2 contact charts, using λ_min of the canonical state matrix as the oracle.</li>
+        <li><strong>Testing space from the proof.</strong> In parallel, a Newton–Puiseux analysis of the contact selectors on those charts could predict a finite exponent set. That set would fix a joint testing space in u, v and ψ, which is exactly the object the existence proof never names.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="c" class="col">
+  <h2 id="c">What was checked, and how</h2>
+  <ul class="tight" id="checks">
+    <li><strong>Determinant identity:</strong> exact division and nonnegativity of all eight outer coefficients, symbolically for all weights (sympy), and with exact rationals in Ruby.</li>
+    <li><strong>Core lemmas:</strong> the Scheiderer criterion (against the arXiv text), the strict Gram lemma, balanced AM–GM with the circuit list, and the assembly steps were each checked line by line. All held.</li>
+    <li><strong>Appendix audit:</strong> R10, R8, R6 (with the missing matrices rebuilt), and the C1 and C2 loose ends, with key identities recomputed exactly. All are closed in substance.</li>
+    <li><strong>Sketched steps:</strong> the thin-layer import, R10 coverage and the HI pivots were each re-derived. All hold.</li>
+    <li><strong>Reproducible checks:</strong> the exact scripts behind these results are in <span class="m">independent-review/checks/</span> on the <span class="m">independent-review</span> branch.</li>
+    <li><strong>Repo verifiers:</strong> every cheap checker passes on Python 3.9 with sympy 1.14, three of them with a small compatibility shim. These include the size bound, the outer data, regular C2 local (111,823 assertions), local-order669, global-weighted, inverse-Alice, c1d-local, fixed-features, the C160 event Grams, the canonical-completion checkers, and the ramified obstruction. These confirm the author's algebra, not any reverse inclusion.</li>
+    <li><strong>Not covered:</strong> a line-by-line re-derivation of all ~31k appendix lines, and the noncommuting-residue theorem (Thm 6.2) in detail.</li>
+  </ul>
+</section>
+
+<footer>
+  <div class="wrap" style="padding:0;gap:6px">
+    <span>Source: <a href="https://github.com/anubhav70747/q222-finite-sdp" target="_blank" rel="noopener">github.com/anubhav70747/q222-finite-sdp</a>. Line references are to <span class="m">latex/</span> and <span class="m">extracted-lifts/</span> in that repo. Scheiderer, <em>Second-order cone representation for convex sets in the plane</em>, SIAM J. Appl. Algebra Geom. 5 (2021), arXiv:2004.04196.</span>
+  </div>
+</footer>
+
+</div>
