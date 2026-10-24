@@ -8,10 +8,41 @@ excluded. The natural repair is the order-98 cone `C_ram + πC_ram`, whose
 eight-copy assembly would be an order-784 candidate for Q222. Here
 `π` swaps λ↔C, n↔A and α↔β, and fixes d, m and D.
 
-**Finding.** `C_ram + πC_ram` is strictly smaller than `C_can`, and by a wide
-margin on multiscale sources. This is established numerically, with
-high-precision solves and one dual certificate in ball arithmetic. It is not yet
-an exact rational certificate.
+**Finding.** `C_ram + πC_ram` is strictly smaller than `C_can`. An exact
+rational certificate proves this for one source (next section).
+High-precision solves show the gap is wide on multiscale sources.
+
+## Exact certificate
+
+The rational source, in the order `(d, λ, n, m, C, A, D, α, β)`, is
+
+    c_sep = (481/10⁶, 1, 123/10⁵, 11/(125·10⁶), 1, 123/10⁵, 17/(25·10⁶), 89/10⁹, 89/10⁹),
+
+a rationalized version of "sym 49" below with `d ≈ 0.88·d*`. It is π-symmetric.
+[`checks/lift-experiment/verify_cert.py`](checks/lift-experiment/verify_cert.py)
+checks the following in exact rational arithmetic, from
+[`cert_data.json`](checks/lift-experiment/cert_data.json) and the repo's pencil.
+All 17 checks pass.
+
+**(A) c_sep is valid.** The determinant is divided exactly into the
+`u²v²·L(u²,v²)` form. Five AM–GM circuits with rational coefficients cover the
+outer coefficients. Each circuit minimum `Π(c_e/β_e)^{β_e}` has a rational lower
+bound `m_k`, proved by comparing integer powers. Then
+`h + Σ m_k = 1.845·10⁻⁷ > 0`, so `L > 0` for all `U, V > 0`.
+
+Exact LDLᵀ shows `P_c` is positive definite at one point in each sign quadrant.
+`det P_c` never vanishes inside a quadrant, so `P_c ≻ 0` on every open quadrant,
+and `P_c ⪰ 0` everywhere by closure. This part does not rely on the paper's
+"P ⪰ 0 ⇔ det ≥ 0" lemma.
+
+**(B) c_sep is not in C_ram + πC_ram.** Rational 49×49 matrices `Y` and `Y′`
+follow the pencil's block structure. Their four blocks are positive definite by
+exact LDLᵀ, and their nine scalar entries are nonnegative. Both annihilate all
+148 auxiliary matrices exactly. Together they define one functional `ℓ` with
+`ℓ_k = Tr(A_k Y)` and `ℓ_{π(k)} = Tr(A_k Y′)`. So `ℓ ≥ 0` on `C_ram` and on
+`πC_ram`, hence on their sum. But `ℓ(c_sep) = −5.548·10⁻⁵ < 0`.
+
+To run it: `python verify_cert.py <repo>/extracted-lifts/canonical-completion/ramified-completion/data/ramified_order49_pencil.json`. It takes about 5 s.
 
 ## Method
 
@@ -74,15 +105,13 @@ returned `d_sum = d*` to within 1.4·10⁻⁸.
 
 ## Caveats
 
-- Only sym 49 has a dual certificate. The other brackets come from
+- Apart from the exact certificate, the brackets in the table come from
   high-precision primal–dual solves, with duality gaps of at most 10⁻⁷.
 - The C1 and C2 face samples replace exact zeros by 10⁻¹⁸.
 - The float screen is not reliable across all 302 vectors, so lower ratios may
   exist among the unverified ones.
-- Turning the sym 49 or sym 36 separation into an exact rational certificate
-  needs two pieces. The first is a rational dual matrix that is exactly positive
-  semidefinite. The second is an exact AM–GM validity certificate for a rational
-  `d` between `d_sum` and `d*`. Both are routine follow-ups.
+- The exact certificate takes the repo's pencil file as the definition of
+  `C_ram`.
 
 The high-precision results are recorded in
 [`checks/lift-experiment/hp_results.jsonl`](checks/lift-experiment/hp_results.jsonl).

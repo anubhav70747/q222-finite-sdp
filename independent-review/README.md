@@ -158,10 +158,11 @@ explicit rational source:
 
 **The symmetric repair also fails.** The order-98 cone `C_ram + πC_ram`
 restores the Alice↔Bob symmetry and would assemble to order 784. It is strictly
-smaller than `C_can`. On a π-symmetric multiscale source it reaches only 0.588
-of the valid CHSH weight. See [`LIFT_EXPERIMENT.md`](LIFT_EXPERIMENT.md): the
-evidence is high-precision numerics, with one dual certificate in ball
-arithmetic.
+smaller than `C_can`. An exact rational certificate proves it: a valid rational
+source is separated by a rational functional built from exactly positive
+semidefinite dual matrices. High-precision solves show the cone reaches only
+0.588 of the valid CHSH weight on a π-symmetric multiscale source. See
+[`LIFT_EXPERIMENT.md`](LIFT_EXPERIMENT.md).
 
 In four of the seven gap cases the mirror adds nothing, so the missing testing
 functions concern scale rather than symmetry. A next candidate family should add
@@ -183,6 +184,7 @@ with SymPy 1.14 (as pinned in the repo), from the script's own folder.
 | `r6-remote-charts/` | rebuilds the unprinted R6.5–R6.7 and checks the source residues (RB4) and each strictness or determinant claim | `python src_check.py`, `python remote_charts.py`, `python r66_minors.py` | all claims hold |
 | `thin-layer/` | TL3 differences, R10.2, TL2, TL5, TL6, and zero value and first jet of both parents at the OP4 contact | `python tl3.py`, `python tl6.py` | all residuals 0 |
 | `tilted-chsh/` | the order-4 projection pencil against its set on a grid, and on random two-qubit behaviours (floating point) | `ruby chsh_check.rb` | 0 mismatches, 0 violations |
+| `lift-experiment/` | exact rational proof that `C_ram + πC_ram ≠ C_can`: an AM–GM validity certificate for a rational source, and an exactly positive semidefinite rational dual that excludes it; plus the high-precision results | `python verify_cert.py ../../../extracted-lifts/canonical-completion/ramified-completion/data/ramified_order49_pencil.json` | 17/17 PASS |
 | `physics/` | identities behind `PEN_AND_PAPER.md`. Landau's identity and the spectrum of I − Ŝ/2; events as product-state projectors; the Thomson flow identity and the effective-resistance test; Cauchy–Binet for adj(T) and det(T); `det(T)·F = (Pψ)ᵀadj(T)(Pψ) + det(P)s²`; which determinant coefficients the CHSH term reaches; a C2 source whose formal C1 image is not positive | `python check6_tsirelson.py`, `check4_thomson.py`, `check3_cauchy_binet.py`, `check12_decomp_sos.py`, `check5_monomials.py`, `check_c2_to_c1_counterexample.py` | all true; counterexample confirmed |
 
 The repo's own checkers were also run on Python 3.9 with SymPy 1.14, and all
