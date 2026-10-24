@@ -12,7 +12,9 @@ for k in (2,3):
             circ.append((S,tuple(w)))
 for c in circ: print(c)
 print(len(circ))
+assert len(circ) == 12, 'expected 12 minimal circuits'
 # AM-GM identities
 a,b,c,dd=sp.symbols('a b c d')
-print(sp.expand(a**3+b**3+c**3-3*a*b*c-sp.Rational(1,2)*(a+b+c)*((a-b)**2+(b-c)**2+(c-a)**2)))
-print(sp.expand(a**4+b**4+c**4+dd**4-4*a*b*c*dd-((a**2-b**2)**2+(c**2-dd**2)**2+2*(a*b-c*dd)**2)))
+r3 = sp.expand(a**3+b**3+c**3-3*a*b*c-sp.Rational(1,2)*(a+b+c)*((a-b)**2+(b-c)**2+(c-a)**2)); print(r3); assert r3 == 0
+r4 = sp.expand(a**4+b**4+c**4+dd**4-4*a*b*c*dd-((a**2-b**2)**2+(c**2-dd**2)**2+2*(a*b-c*dd)**2)); print(r4); assert r4 == 0
+print('PASS: 12 circuits, cubic and quartic AM-GM identities')

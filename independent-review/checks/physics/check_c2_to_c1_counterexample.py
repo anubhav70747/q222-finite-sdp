@@ -54,7 +54,10 @@ for nm,H in (('F2',H2),('F1',H1)):
         wr=sp.Matrix([sp.nsimplify(round(x/np.abs(vv).max(),3)) for x in vv])
         q=(wr.T*H*wr)[0]
         print('rational direction',list(wr),' w^T H1 w =',q,'=',float(q))
+        assert q < 0, 'expected a negative Hessian direction for the formal C1 parent'
         wd=sp.Matrix(wr)
         eps=sp.Rational(1,1000)
         ptn={x:(s0[i]+eps*wr[i]) for i,x in enumerate(vars_)}
-        print('F1 at contact + eps*w (eps=1/1000):',float(F1.subs(ptn)))
+        val = F1.subs(ptn); print('F1 at contact + eps*w (eps=1/1000):', float(val))
+        assert val < 0, 'expected the formal C1 parent to be negative near the contact'
+        print('PASS: formal C1 image of this C2 source is not positive near the contact')

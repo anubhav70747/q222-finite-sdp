@@ -1,235 +1,316 @@
-# The finite lift of Q222, from first principles
+# The finite lift of Q222: a proof you can follow
 
-**Theorem.** The quantum correlation set of two parties with two binary
-measurements each, Q222 ⊂ ℝ⁸, is the linear projection of a spectrahedron.
+**Theorem** (the paper's main result). The set Q222 ⊂ ℝ⁸ of quantum
+correlations of two parties, each with two binary measurements, is the linear
+projection of a spectrahedron. The matrices can be chosen with real algebraic
+entries.
 
-This note gives the proof in the order a physicist would tell it. It starts
-from the kinematics of two measurements, then the structure of Bell
-inequalities, then positivity at fixed measurements, and finally uniformity
-across all measurements, which is where the difficulty lives. Every step is
-marked:
+This note proves the theorem from five imported results, [I1]–[I5]. [I1] is a
+published theorem of Scheiderer. [I2]–[I5] are proved in the paper and its
+companion, and were audited in this review. Everything else is proved here in a
+few lines.
 
-- **[here]**: proved in this note, by hand;
-- **[paper]**: proved in the paper or its companion, and audited in this review;
-- **[checked]**: verified exactly by a script in [`checks/`](checks/);
-- **[conjecture]**: supported by evidence, not proved.
+**The idea, in three sentences.** A finite lift exists exactly when every Bell
+inequality's positivity can be certified by sums of squares that stay valid
+however the inequality and the experiment degenerate, independently of each
+other. Both sides reduce to finitely many atoms: qubit experiments, and a few
+extreme Bell inequalities, each of which is CHSH plus penalties on the eight
+outcomes the PR box never produces. What remains is one lemma: such
+certificates exist for the extreme inequalities that touch the quantum set at a
+point. Its physics is a single violating direction stabilized by those
+penalties, and it carries all of the paper's long appendix.
 
-Notation: `q = (a₀, a₁, b₀, b₁, E₀₀, E₀₁, E₁₀, E₁₁)`; `u = tan(a/2)`,
-`v = tan(b/2)`; `D_u = 1+u²`, `D_v = 1+v²`.
+Part A is the proof. Part B explains why it works and what the hard lemma is
+about; none of Part B is used in Part A. Part C records related results that are
+not used.
+
+Tags: **[I1]–[I5]** imported, stated below; **[checked: …]** verified exactly by
+a script in [`checks/`](checks/).
+
+## Notation
+
+| symbol | meaning |
+|---|---|
+| `q = (a₀, a₁, b₀, b₁, E₀₀, E₀₁, E₁₀, E₁₁)` | a behaviour: marginals and correlators |
+| `θ`, `φ` | Alice's and Bob's measurement angles; `u = tan(θ/2)`, `v = tan(φ/2)` |
+| `D_u = 1+u²`, `D_v = 1+v²` | denominators of the half-angle parametrization |
+| `σ_z`, `σ_x`, `ε = [[0,−1],[1,0]]` | real Pauli matrices; `ε` is the real form of σ_y |
+| `ψ = (W, X, Y, Z)` | a real two-qubit state, amplitudes in the basis `|00⟩, |01⟩, |10⟩, |11⟩` |
+| `Φ^± = (|00⟩ ± |11⟩)/√2`, `Ψ^± = (|01⟩ ± |10⟩)/√2` | the Bell basis |
+| `H = 1 − S/2`, `S = E₀₀ − E₀₁ + E₁₀ + E₁₁` | the CHSH slack |
+| PR box | `E₀₀ = E₁₀ = E₁₁ = 1`, `E₀₁ = −1`, zero marginals; there `S = 4` and `H = −1` |
+| `c = (d, λ, n, m, C, A, D, α, β) ≥ 0` | a canonical source: CHSH weight `d` and eight event weights |
+| `K_c`, `K_t` | real closed fields containing ℝ, carrying the source and the test |
+| `𝕋 = K_c ⊗_ℝ K_t` | the ring where certificates live; `Σ𝕋²` is its sums of squares |
+| `[f, q] = f₀⊗1 + Σ_ν f_ν⊗q_ν` | the separated evaluation of an affine function `f` at `q` |
+
+The eight event weights name the outcomes `(ab|xy)` that the PR box never
+produces. These are the outcomes with `ab = −E_xy` at the PR box. Each of the
+eight deterministic boxes adjacent to the PR box produces exactly one of them.
+
+| weight | λ | n | m | C | A | D | α | β |
+|---|---|---|---|---|---|---|---|---|
+| event `(ab\|xy)` | (++\|01) | (+−\|00) | (+−\|11) | (−+\|10) | (−+\|00) | (−+\|11) | (−−\|01) | (+−\|10) |
+
+## Imported results
+
+- **[I1] Scheiderer's criterion** (SIAM J. Appl. Algebra Geom. 5 (2021),
+  Cor. 3.19). A closed convex semialgebraic set `K ⊂ ℝⁿ` is a spectrahedral
+  shadow if and only if, for every real closed field `R ⊇ ℝ`, every affine `f`
+  nonnegative on `K_R` and every `q ∈ K_R`, `[f, q]` is a sum of squares in
+  `R ⊗_ℝ R`.
+- **[I2] The model** (paper, Ch. 2). Q222 is the convex hull of the behaviours of
+  real two-qubit atoms, with `A₀ = B₀ = σ_z`, `A₁ = cos θ·σ_z + sin θ·σ_x` and
+  `B₁ = cos φ·σ_z + sin φ·σ_x`. Every behaviour is a mixture of at most nine
+  atoms, by Jordan's lemma, the real/imaginary split and Carathéodory. This is a
+  first-order formula over ℚ, so it holds verbatim over every real closed field.
+- **[I3] Extreme sources** (paper, Ch. 4). A slack that is nonnegative at every
+  PR box is a nonnegative combination of event probabilities. Otherwise, after
+  relabelling outcomes, which preserves Q222, it is negative at the PR box above.
+  It then has the unique form `f = d·H + 4Σ c_i p_i`, and is a nonnegative
+  combination of at most nine sources of these kinds:
+  - events (single outcome probabilities);
+  - extreme sources of the two noncoercive closed faces, `λ = m = 0` and
+    `λ = α = 0`;
+  - contact sources of type C1: `λ = n = 0`; `d, m, C, A, α > 0`; `D, β ≥ 0`;
+    `D + β > 0`;
+  - contact sources of type C2: `λ = β = 0`; `d, m, C, A, D, α > 0`; `n ≥ 0`.
+
+  A *contact* is a finite stationary zero with `uv ≠ 0`:
+  `P(u_c,v_c)ψ_c = 0` and `ψ_cᵀ ∂_u P ψ_c = ψ_cᵀ ∂_v P ψ_c = 0`, where `P` is
+  the state matrix of Insight 1. The classification is first-order, so it holds
+  over every real closed field.
+- **[I4] Closed faces** (paper, Ch. 4, SG11–SG14). On the face `λ = m = 0` the
+  parent is a Gram form built from one 3×3 matrix polynomial in `v` (SG12). On
+  the face `λ = α = 0` it uses two 3×3 blocks with one free parameter (SG13).
+  Both are strictly feasible, and conic duality makes every extreme source of
+  these faces a separated sum of squares (SG14).
+- **[I5] The hard lemma 𝒞** (paper, Proof.tex Prop. 4 and the C1/C2 appendices;
+  audited in this review). Let `K_c` and `K_t` be any real closed fields
+  containing ℝ. For a C1 or C2 source over `K_c` with a contact, the parent
+  form `F_c` (Insight 1) is a sum of squares in `𝕋`, at every projective
+  testing pair and every real state over `K_t`.
 
 ---
 
-## I. Kinematics of two measurements
+## Part A. The proof
 
-**1. Real qubits [paper, Ch. 2].** Two ±1 observables generate an algebra whose
-centre contains `½{A₀,A₁}` and `[A₀,A₁]²`. Jordan's lemma diagonalizes this
-centre. Every block has dimension at most two, and on it
+**Step 1. What suffices.** By [I1] it is enough to show `[f, q] ∈ Σ𝕋²` for all
+real closed `K_c, K_t ⊇ ℝ`, every valid `f` over `K_c` and every `q ∈ Q222`
+over `K_t`. Taking `K_c = K_t = R` (two labelled copies) gives [I1]'s
+condition.
 
-    A₀ = Z,   A₁ = cos a·Z + sin a·X,   ½{A₀,A₁} = cos a,   [A₀,A₁]² = −4 sin²a.
+Certificates must be identities in the ring `𝕋`, which is not a field. Roots
+and inverses are therefore available only for positive elements of one factor;
+for example, `1⊗1 + x⊗y` with `x`, `y` infinitesimal has no inverse in `𝕋`.
 
-So a measurement pair is characterized by one angle, and its **incompatibility**
-is `sin a`. The observables are real, so complex states mix real ones.
-Carathéodory's theorem in ℝ⁸ then gives `Q222 = conv Φ(S¹×S¹×S³)`, with at most
-nine atoms.
+**Step 2. Reduce to atoms.** By [I3] over `K_c`, after a relabelling that maps
+sums of squares to sums of squares, write `f = Σ_j r_j f_j` with `r_j ≥ 0` and
+extreme `f_j`. By [I2] over `K_t`, write `q = Σ_i w_i q_i` with `w_i ≥ 0`,
+`Σ w_i = 1` and qubit atoms `q_i`. Bilinearity gives
 
-**2. Parity and the two-mode picture [checked: `physics/check7_parity.py`,
-`physics/check8_two_mode.py`].** Let `Γ = Y⊗Y`. It commutes with every
-correlator `A_x⊗B_y` and anticommutes with every marginal `A_x`, `B_y`. In the
-Bell basis it splits ℝ⁴ into two planes: `{Φ⁺, Ψ⁻}` (Γ = +1) and `{Φ⁻, Ψ⁺}`
-(Γ = −1). Write the state as two complex amplitudes,
-`z₊ = ⟨Φ⁺|ψ⟩ + i⟨Ψ⁻|ψ⟩` and `z₋ = ⟨Φ⁻|ψ⟩ + i⟨Ψ⁺|ψ⟩`. Then every Bell
-operator `f₀ + Σ f_xy A_xB_y + Σ f_x A_x + Σ g_y B_y` has the form
+    [f, q] = Σ_{i,j} (r_j ⊗ w_i)·[f_j, q_i].
 
-    f₀(|z₊|² + |z₋|²) + Re(W₊ z̄₊²) + Re(W₋ z̄₋²) + 2 Re(Ω z₊ z̄₋) + 2 Re(N z₊ z₋),
+The constant term matches because `Σ w_i = 1`. If `[f_j, q_i] = Σ_k σ_{ijk}²`
+with `σ_{ijk} ∈ 𝕋`, then `[f, q] = Σ_{i,j,k} ((√r_j ⊗ √w_i)·σ_{ijk})²`, since
+`√r_j ∈ K_c` and `√w_i ∈ K_t`.
 
-with
+**Step 3. Atoms reduce to parent forms.** For a qubit atom with half-angles
+`u, v` and state `ψ`, `F_c(u,v,ψ) = D_uD_v‖ψ‖² · [f_c, q(u,v,ψ)]`. The
+prefactor `D_uD_v‖ψ‖²` is a positive element of `K_t`, so `[f_c, q] ∈ Σ𝕋²`
+exactly when `F_c ∈ Σ𝕋²`. Angles with `u` or `v ∈ {0, ∞}` are covered by the
+homogeneous form of the parent.
 
-    W₊ = Σ f_xy e^{i(β_y − α_x)},   W₋ = Σ f_xy e^{i(α_x + β_y)},
-    Ω  = Σ f_x e^{iα_x},           N  = Σ g_y e^{−iβ_y}.
+**Step 4. Each extreme source.**
+- **Events.** An event term is the square of a linear form times a positive
+  element of `K_t`.
+- **Closed faces.** These are [I4].
+- **Contact sources.** These are [I5], which covers every test.
 
-Read physically, this is a two-mode quadratic Hamiltonian:
+**Step 5. Conclusion.** By Steps 2–4, `[f, q] ∈ Σ𝕋²` in every case. By Step 1
+and [I1], Q222 is a spectrahedral shadow. For fixed sizes, "this LMI projects
+onto Q222" is a first-order sentence over ℚ in the matrix entries. A real
+solution therefore implies a real algebraic one (Tarski). ∎
 
-| term | origin | role |
-|---|---|---|
-| W₊ | correlators, angle differences | single-mode squeezing |
-| W₋ | correlators, angle sums | single-mode squeezing |
-| Ω | Alice's marginals | beam-splitter coupling |
-| N | Bob's marginals | two-mode squeezing |
+---
 
-**Corollary (Tsirelson–Landau–Masanes) [here].** Each mode alone has energies
-`f₀ ± |W|`. A correlation-only Bell expression is therefore valid exactly when
-`f₀ ≥ |W₊|` and `f₀ ≥ |W₋|` for all angles. For CHSH,
+## Part B. Why it works
 
-    |W| ≤ 2|cos((α₀−α₁)/2)| + 2|sin((α₀−α₁)/2)| ≤ 2√2.
+Nothing below is used in Part A. It explains the objects in [I3]–[I5], and why
+[I5] is the hard part.
 
-**All of the difficulty of Q222 comes from the marginals**, which are the only
-couplings between the two modes.
+**Insight 1. The Bell operator [checked: `physics/check6_tsirelson.py`,
+`physics/check12_decomp_sos.py`].** For a canonical source, the parent form
+(paper, Proof.tex eq. insight-parent) is
 
-## II. Bell inequalities
+    F_c = 4λD_u(W+vX)² + 4nD_uD_vX² + 4m(vW−X+uvY−uZ)² + 4CD_v(uW−Y)²
+        + 4AD_uD_vY² + (4D+2d)(uW+uvX−Y−vZ)² + (4α+2d)D_u(vY−Z)²
+        + (4β+2d)D_v(X+uZ)² − 2d·D_uD_v·Z².
 
-**3. CHSH plus penalties [here; paper, Ch. 4].** Let `H = 1 − S/2` with
-`S = E₀₀ − E₀₁ + E₁₀ + E₁₁`. The PR box and its eight deterministic neighbours
-are affinely independent. So every slack that is negative at the PR box is
-uniquely
+It equals `D_uD_v·⟨ψ| d(I − Ŝ/2) + 4 Σ c_i Π_i |ψ⟩`, where `Ŝ` is the CHSH
+operator for `S`, and each `Π_i` projects onto the product state of event `i`,
+so it has rank one. Write `F_c = ψᵀPψ = ψᵀM₊ψ − s²`:
 
-    f = d·H + 4 Σᵢ cᵢ pᵢ,   d = −f(PR) > 0,   cᵢ = f(vᵢ)/4 ≥ 0,
+- `M₊ = Σ_k κ_k g_k g_kᵀ` collects the eight positive squares, with
+  conductances `κ = (4λ, 4n, 4m, 4C, 4A, 4D+2d, 4α+2d, 4β+2d)`;
+- `ℓ = √(2d·D_uD_v)·(0,0,0,1)` is the violating direction, and `s = ℓ·ψ`.
 
-where `pᵢ` is the probability of the event lost by neighbour `vᵢ`. Each event
-`(a,b|x,y)` is the projector `(1+aA_x)(1+bB_y)/4`, a rank-one product state, and
-it contributes to every term of the two-mode form. A slack that is nonnegative
-at every PR box is a sum of event probabilities, which are already squares.
-Up to symmetry, the extreme sources are:
+**Insight 2. Two coupled modes [checked: `physics/check7_parity.py`,
+`physics/check8_two_mode.py`].**
+- **Parity.** Let `Γ = ε⊗ε`. Then Γ commutes with every correlator `A_x⊗B_y`
+  and anticommutes with every marginal `A_x`, `B_y`.
+- **Two modes.** Let θ_x and φ_y be the setting angles, so `θ₀ = φ₀ = 0`,
+  `θ₁ = θ` and `φ₁ = φ`. Set `z₊ = ⟨Φ⁺|ψ⟩ + i⟨Ψ⁻|ψ⟩` and
+  `z₋ = ⟨Φ⁻|ψ⟩ + i⟨Ψ⁺|ψ⟩`; for real ψ these simply repackage the four
+  amplitudes. Then every Bell operator
+  `f₀ + Σ f_xy A_xB_y + Σ f_x A_x + Σ g_y B_y` reads
 
-- events;
-- two closed faces with small explicit lifts;
-- contact sources of type **C1** (λ = n = 0) or **C2** (λ = β = 0) [paper].
+      f₀(|z₊|² + |z₋|²) + Re(W₊ z̄₊²) + Re(W₋ z̄₋²) + 2Re(Ω z₊ z̄₋) + 2Re(N z₊ z₋),
 
-**4. One violating direction [here; checked: `physics/check6_tsirelson.py`].**
-Landau's identity gives `Ŝ² = 4 + [A₀,A₁]⊗[B₀,B₁] = 4 + 4 sin a sin b·Γ`. The
-spectrum of `I − Ŝ/2` is
+  with `W₊ = Σ f_xy e^{i(φ_y−θ_x)}`, `W₋ = Σ f_xy e^{i(θ_x+φ_y)}`,
+  `Ω = Σ f_x e^{iθ_x}` and `N = Σ g_y e^{−iφ_y}`.
+- **Physical reading.** Correlators squeeze each mode, through angle
+  differences in one and angle sums in the other. Alice's marginals act as a
+  beam splitter, and Bob's as two-mode squeezing.
+- **Corollary (Tsirelson–Landau–Masanes).** Each mode alone has energies
+  `f₀ ± |W|`. A correlation-only expression is therefore valid exactly when
+  `f₀ ≥ |W₊|` and `f₀ ≥ |W₋|` at all angles. For CHSH,
+  `|W| ≤ 2|cos(θ/2)| + 2|sin(θ/2)| ≤ 2√2`.
+- **The point.** The marginals are the only coupling between the modes, and
+  all of Q222's difficulty comes from them.
 
-    1 ± √(1 + sin a sin b)  (one sector),    1 ± √(1 − sin a sin b)  (the other).
+**Insight 3. One violating direction [checked: `physics/check7_parity.py`].**
+Landau's identity gives `Ŝ² = 4I + [A₀,A₁]⊗[B₀,B₁] = 4I + 4 sin θ sin φ·Γ`.
+So `I − Ŝ/2` has eigenvalues `1 ± √(1 + sin θ sin φ)` in one parity sector and
+`1 ± √(1 − sin θ sin φ)` in the other.
 
-- **Exactly one eigenvalue is negative.** It is `1 − √(1 + |sin a sin b|)`,
-  about `−½|sin a|·|sin b|`.
-- **Penalties cannot create more.** They are positive semidefinite, so the
-  Bell operator keeps at most one negative direction.
-- **Hence positivity is one scalar inequality**, `det ≥ 0`, because the
-  three-dimensional transverse block is positive definite [paper].
+- **The violation.** At most one eigenvalue is negative, about
+  `−½|sin θ|·|sin φ|`. The penalties are positive semidefinite, so `P` keeps at
+  most one negative direction.
+- **Why det ≥ 0 suffices.** Positivity of `P` is equivalent to `det P ≥ 0`
+  only because, for `d > 0` and `uv ≠ 0`, the `(W,X,Y)` block of `P` is
+  positive definite (paper, SG3). At `sin θ sin φ = 0`, the measurements of one
+  party commute and the CHSH slack is directly nonnegative.
+- **The classical limit.** At compatible measurements each sector has one soft
+  mode, near `∓½ sin θ sin φ`, while the two hard modes stay at eigenvalue ≥ 1.
+  Near this limit, validity is the stability of two soft modes coupled by the
+  marginals.
 
-At compatible measurements each sector has one **soft mode**, at about
-`∓½ sin a sin b`, while the two **hard modes** stay at eigenvalue ≥ 1. The
-only hard regime is the classical limit. There, the violation lives in one soft
-mode, the marginals couple it to the other, and validity is the stability of
-this two-level system. The violation depth is a product of two
-incompatibilities, and each can vanish at its own rate. That is the physical
-origin of the two independent scales in step 7.
+**Insight 4. Effective resistance [checked: `physics/check4_thomson.py`].** For
+any currents `τ` with `Σ_k τ_k g_k = ℓ`,
 
-## III. Positivity at fixed measurements
+    F = Σ_k κ_k (g_k·ψ − (τ_k/κ_k)·s)² + s²·(1 − Σ_k τ_k²/κ_k).
 
-**5. Effective resistance [here; checked: `physics/check4_thomson.py`].** Write
-the parent form, `F = D_uD_v·⟨ψ|f̂|ψ⟩`, as `F = ψᵀTψ − (ℓ·ψ)²`. Here
-`T = Σₖ aₖ gₖgₖᵀ` collects the positive squares, and `ℓ = √(2dD_uD_v)·|11⟩` is
-the violating direction. For any flow `Σₖ tₖgₖ = ℓ`:
+The least dissipation `Σ τ_k²/κ_k` is `ℓᵀM₊⁻¹ℓ` (Thomson's principle, for
+`M₊ ≻ 0`). So, at fixed measurements, a Bell inequality holds exactly when the
+violating direction has effective resistance at most 1 through the network of
+penalized events.
 
-    F = Σₖ aₖ (gₖ·ψ − (tₖ/aₖ)·s)² + s²·(1 − Σₖ tₖ²/aₖ),   s = ℓ·ψ.
-
-The minimal cost `Σ tₖ²/aₖ` is `ℓᵀT⁻¹ℓ` (Thomson's principle). So **a Bell
-inequality holds at given measurements exactly when the violating direction has
-effective resistance ≤ 1 through the network of losing events**, whose
-conductances are the Bell coefficients.
-
-**6. The determinant, and AM–GM as force balance [here; checked:
-`determinant/`, `circuits/`].**
+**Insight 5. The determinant is an AM–GM object [checked: `determinant/`,
+`circuits/`].**
 
     det P = 16 D_u² D_v² u² v² · L(u², v²),
-    L(U,V) = h + Σ_{e ∈ {−1,0,1}²∖0} q_e U^{e₁} V^{e₂},
+    L(U, V) = η₀ + Σ_{e ∈ {−1,0,1}²∖0} η_e U^{e₁} V^{e₂}.
 
-where all eight outer `q_e ≥ 0` and only the centre `h` can be negative.
+Each outer `η_e` is a product of event weights and positive linear forms, for
+example `η₍₁,₁₎ = 4Cβ(2A+2α+d+2m)(2D+d+2λ+2n)`. Only the centre `η₀` can be
+negative (paper, SG5–SG6).
 
-- **Balance.** At a stationary contact `(U_c, V_c)`, the weights
-  `w_e = q_e U_c^{e₁} V_c^{e₂}` satisfy `h = −Σ w_e` and `Σ w_e e = 0`. This is
-  a force balance in the plane of log half-angles: each losing event pushes the
-  optimal measurement one way, and self-testing is the unique equilibrium.
-- **Circuits.** The balanced weights split into the 12 minimal circuits of the
-  3×3 square: opposite pairs, and triangles with weights (1,1,1) or (1,1,2).
-- **Squares.** Each circuit becomes squares through `p + 1/p − 2`, the cubic
-  AM–GM identity and the quartic one.
-- **Hurwitz (1891).** x⁶ + y⁶ + z⁶ − 3x²y²z² is a plain sum of squares. So
-  every circuit is a sum of squares of fractional monomials in `u^{1/6}` and
-  `v^{1/6}`. The (1,1,1) circuits need sixth roots of `U = u²`, which is
-  `u^{1/3}`. The (1,1,2) circuits need fourth roots, which is `u^{1/2}`.
+- **Contact gives a balanced minimum.** At a contact, the `(W,X,Y)` block is
+  positive definite, so `adj P ∝ ψ_cψ_cᵀ`. Jacobi's formula then gives
+  `L = ∂_U L = ∂_V L = 0`. With `μ_e = η_e U_c^{e₁} V_c^{e₂}` this reads
+  `η₀ = −Σ μ_e` and `Σ μ_e·e = 0`.
+- **Convexity makes it global.** `Σ η_e e^{e·x}` is convex in
+  `x = (log U, log V)`, so the stationary point is the global minimum. Hence
+  `L ≥ 0` everywhere: a single contact certifies validity at every angle. The
+  balance `Σ μ_e e = 0` is a force balance in log-angle space.
+- **Circuits.** A balanced nonnegative vector peels, greedily, into the 12
+  minimal circuits of the 3×3 square: opposite pairs, and triangles with
+  weights (1,1,1) or (1,1,2).
+- **Squares.** Each circuit is a sum of squares through
 
-## IV. Uniformity: the heart of the proof
+      p + 1/p − 2 = (√p − 1/√p)²,
+      a³ + b³ + c³ − 3abc = ½(a+b+c)·[(a−b)² + (b−c)² + (c−a)²],
+      a⁴ + b⁴ + c⁴ + d⁴ − 4abcd = (a²−b²)² + (c²−d²)² + 2(ab−cd)²,
 
-**7. What has to hold [paper; Scheiderer, Cor. 3.19].** A finite lift exists
-exactly when the following holds. For every valid slack f with coefficients in a
-real closed field `K_c`, and every behaviour q in a real closed field `K_t`,
-`[f,q]` must be a sum of squares in `K_c ⊗ K_t`. Infinitesimals in the two
-fields describe the inequality and the experiment degenerating at unrelated
-rates. Roots and inverses are therefore allowed only inside one field.
+  applied to the monomials `U_c⁻¹⊗U` and `V_c⁻¹⊗V`. These are positive pure
+  tensors, so their roots are taken separately in each field.
+- **Conclusion.** `L`, and hence `det P`, is a separated sum of squares at
+  every contact source.
 
-Fractional monomials are the natural currency here. Rescaling the angles
-multiplies `u^{i/6}v^{j/6}` by a constant, so a certificate written in monomials
-holds at every scale at once. The circuit certificates of step 6 are of this
-kind.
+**Insight 6. Everything except one multiplier [checked:
+`physics/check12_decomp_sos.py`, `physics/check3_cauchy_binet.py`].** From
+`P = M₊ − ℓℓᵀ` and the matrix determinant lemma,
+`det P = det M₊·(1 − ℓᵀM₊⁻¹ℓ)`. Expanding `(Pψ)ᵀM₊⁻¹(Pψ)` then gives
 
-**8. A uniform identity [here; checked: `physics/check12_decomp_sos.py`,
-`physics/check3_cauchy_binet.py`].**
+    det(M₊)·F = (Pψ)ᵀ adj(M₊) (Pψ) + det(P)·s².
 
-    det(T) · F = (Pψ)ᵀ adj(T) (Pψ) + det(P) · s²,   adj(T) = Σ_{|S|=3} a_S w_S w_Sᵀ.
+By Cauchy–Binet, `adj(M₊) = Σ_{|Λ|=3} κ_Λ w_Λ w_Λᵀ`. Here `Λ` runs over 3-sets
+of events, `κ_Λ` is the product of their conductances (a positive element of
+`K_c`), and `w_Λ` is the vector of 3×3 minors of their event vectors, an
+element of `K_t⁴`. So the first term is a sum of squares in `𝕋`, and so is the
+second, by Insight 5.
 
-The first term is a sum of squares, with pure source weights and pure test-side
-vectors. The second is a sum of squares by step 6. So `det(T)·F` is certified
-for every contact source with no case analysis. The only obstruction left is the
-multiplier `det(T) = Σ_S a_S det[g_S]²`, which mixes the two fields.
+**`det(M₊)·F` is therefore certified with no case analysis.** [I5] is exactly
+the removal of the multiplier `det M₊ = Σ_{|Λ|=4} κ_Λ det[g_Λ]²`, which mixes
+the two fields and has no inverse in `𝕋`.
 
-**9. The hard lemma 𝒞 [paper; audited].** For every C1 or C2 contact source and
-every test, `F` itself is a sum of squares in `K_c ⊗ K_t`.
+**Insight 7. Why [I5] is long.** Two independent degenerations meet at the
+multiplier.
 
-- **How the companion proves it.** It partitions by scale regime, about 31,000
-  lines. On each regime it rescales by pure quantities until the residual Gram
-  matrix has a strictly positive real part, keeps unbounded penalties as whole
-  squares, and joins regimes with division-free conductor identities.
-- **Audit.** Every sketched step was re-derived in this review and holds; the
-  defects are editorial.
-- **The split is necessary [checked:
-  `physics/check_c2_to_c1_counterexample.py`].** A C2 source's formal C1 image
-  can fail positivity, so C1 and C2 cannot be merged.
-- **Physically,** the regimes are the scales of the two-level soft-mode problem
-  of step 4.
+- **The source and the test** approach the boundary at unrelated rates. This
+  is why the fields are separate.
+- **Inside the test,** Alice's and Bob's incompatibilities, `sin θ` and
+  `sin φ`, vanish at unrelated rates. This is the depth `½ sin θ sin φ` of
+  Insight 3.
 
-**10. A chart-free route [conjecture; checked numerically: `gram-lift/`].** The
-sextic Puiseux–Gram lift asks for `F_c = Zᵀ G Z` with `G ⪰ 0` in the fixed
-basis `Z = {u^{i/6} v^{j/6} ψ_l}`. Scale covariance (step 7), Hurwitz's identity
-(step 6) and the soft-mode amplitude `√(uv)` (step 4) motivated this basis.
-They do not explain it: the scalar circuit structure does not predict which
-sources the half-root version certifies.
-On 302 test sources it never falls below 0.999 of the validity limit, while
-half-roots fail on 9. See [`EXACT_LIFT_CANDIDATE.md`](EXACT_LIFT_CANDIDATE.md).
+The companion proves [I5] regime by regime, about 31,000 lines. On each regime
+it rescales by pure quantities until the remaining Gram matrix has a strictly
+positive real part. It then applies its residue lemma (paper, Ch. 3, TF1–TF2):
+a bounded Gram matrix in `𝕋` whose real residue is positive definite is a sum
+of squares. This review audited the regimes and re-derived the steps that are
+only sketched; the defects found are editorial.
 
-If it is exact, "every valid source has such a G" is a statement over ℝ. Tarski
-transfer and a Cholesky factor over `K_c` then give 𝒞 at once, and the lift is
-explicit.
+One natural shortcut fails. The paper's map OP4 (`c2_short.tex:8796–8825`)
+sends a C2 source to a formal C1 source at the same contact, but the resulting
+parent can be nonpositive [checked: `physics/check_c2_to_c1_counterexample.py`].
 
-What is already proved:
+---
 
-- the lift is sound and closed;
-- exactness reduces to the extreme sources;
+## Part C. Not used in the proof
+
+**A chart-free route to [I5] (conjecture).** The sextic Puiseux–Gram lift asks
+for `F_c = Zᵀ G Z` with `G ⪰ 0`, in the fixed basis `Z = {u^{i/6} v^{j/6} ψ_l}`,
+which is unchanged in shape by rescaling. Proved so far:
+
+- it is sound and closed;
+- it is exact if and only if it contains the extreme sources;
 - four genuine C1/C2 boundary sources have exact rational certificates;
 - a continuation theorem reduces the C1/C2 families to one nondegeneracy
   property, (ND).
 
-What remains is (ND) and the two closed faces.
+Numerically, no tested source falls below 0.999 of the validity limit. If (ND)
+holds, it replaces [I5] and gives an explicit lift. See
+[`EXACT_LIFT_CANDIDATE.md`](EXACT_LIFT_CANDIDATE.md).
 
-## V. Assembly [here]
+**The explicit lift.** The tilted-CHSH projection has an exact order-4 lift.
+The canonical reduction and the eight-copy assembly are exact [paper].
 
-A valid slack is a nonnegative combination of at most nine extreme sources, and
-a behaviour is a mixture of at most nine qubit atoms. If each pair is certified,
-`[Σ aⱼfⱼ, Σ wᵢqᵢ] = Σ ((√aⱼ ⊗ √wᵢ)·hᵢⱼₖ)²`, where `Σ wᵢ = 1` preserves the
-constant term. Scheiderer's criterion then gives a finite lift, and Tarski
-transfer gives one with real algebraic entries. ∎
-
-## VI. The explicit lift
-
-| object | status |
+| candidate cone for the canonical sources | status |
 |---|---|
-| Tilted-CHSH projection, `[[√2+t, s/2],[s/2, √2−t]] ⊕ (1−t) ⊕ (1+t) ⪰ 0` | exact [paper; checked] |
-| Canonical reduction: valid ⇔ ∀v ∃J with two 4×4 matrices PSD | exact [paper; checked] |
-| Full-polar assembly: an exact canonical pencil of order n gives Q222 at order 8n | exact [paper; checked] |
-| Fixed-function cones: polynomial, half-line (33), ramified (49) | strictly too small [paper] |
-| Ramified cone plus its mirror (98; 784 assembled) | strictly too small, by an exact rational certificate [checked: `lift-experiment/`] |
-| Sextic Puiseux–Gram lift `L₆` (Gram 196 per copy) | candidate exact lift [conjecture] |
+| fixed-function cones (polynomial, half-line 33, ramified 49) | strictly too small [paper] |
+| ramified cone plus its mirror (98) | strictly too small, by an exact rational certificate [checked: `lift-experiment/`] |
+| sextic lift `L₆` | candidate exact lift, conjectural |
 
-## The whole proof in one paragraph
+## The proof in one paragraph
 
-Two measurements per party reduce to one angle each, and a Bell operator becomes
-a two-mode quadratic Hamiltonian. Correlators squeeze each mode; marginals
-couple the two. The CHSH part has a single violating direction whose depth is
-the product of the two parties' incompatibilities. Event penalties stabilize
-it, with Bell coefficients acting as conductances. At the optimal measurements,
-the penalties balance like forces, and AM–GM, in Hurwitz's sum-of-squares form,
-certifies positivity. What remains is to keep these certificates valid as the
-inequality and the experiment approach the classical limit at unrelated rates.
-The paper does this regime by regime. A single fixed basis of sixth-root
-monomials, which are blind to scale, appears to do it in one stroke.
+Scheiderer turns "finite lift" into "certificates that survive independent
+degenerations of the inequality and the experiment". Qubit atoms and finitely
+many extreme Bell inequalities reduce this to parent forms of CHSH plus event
+penalties. Events and the two closed faces are immediate. For an inequality
+touching the quantum set at a point, the CHSH part has a single violating
+direction, stabilized by the penalties like current through a resistor network.
+The determinant balances like forces, and AM–GM certifies it everywhere at
+once. What remains is to remove one mixed multiplier; that is the companion's
+hard lemma. Part C records a conjectural way to do it in one stroke, with a
+scale-blind basis of sixth-root monomials.

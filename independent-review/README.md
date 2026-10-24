@@ -15,15 +15,20 @@ they are unchanged from the snapshot the review started on. Three folders under
 page, with two diagrams. GitHub shows HTML as source, so download it and open it
 in a browser.
 
-[`PEN_AND_PAPER.md`](PEN_AND_PAPER.md) is the whole proof from first
-principles, in physics order. Each step is marked as proved there, proved in the
-paper, checked by script, or conjectural. Along the way:
+[`PEN_AND_PAPER.md`](PEN_AND_PAPER.md) is the proof you can follow, in three
+parts:
 
-- Bell operators become two-mode quadratic forms.
-- Landau's identity gives a single violating direction.
-- Validity at fixed measurements is an effective resistance.
-- AM–GM appears as a force balance.
-- The single hard lemma is isolated.
+- **Part A, the proof.** Five short steps from five imported results, each
+  stated exactly: Scheiderer's criterion, the qubit model, the extreme-source
+  classification, the closed faces, and the hard lemma.
+- **Part B, why it works.** Not used in Part A:
+  - Bell operators as two coupled modes;
+  - Landau's single violating direction;
+  - validity as an effective resistance;
+  - AM–GM as a force balance;
+  - one identity that certifies everything except a single mixed multiplier.
+- **Part C, results not used.** The conjectural sextic lift and the status of
+  the explicit lift.
 
 ## Verdict
 
