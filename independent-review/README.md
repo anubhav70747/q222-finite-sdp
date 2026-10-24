@@ -156,11 +156,19 @@ explicit rational source:
   the native C2 source envelope. The repo itself states that global canonical
   coverage remains open.
 
-**Suggested next step.** Build `C_ram + πC_ram`, which restores the Alice↔Bob
-symmetry the failed families lack (order 98, or 784 after assembly). Then run a
-separation search against `C_can`, aimed at multiscale sources and the C1/C2
-contact charts. Quantifier elimination terminates in principle, but already the
-first undecided size, N = 9, has 2,025 unknowns.
+**The symmetric repair also fails.** The order-98 cone `C_ram + πC_ram`
+restores the Alice↔Bob symmetry and would assemble to order 784. It is strictly
+smaller than `C_can`. On a π-symmetric multiscale source it reaches only 0.588
+of the valid CHSH weight. See [`LIFT_EXPERIMENT.md`](LIFT_EXPERIMENT.md): the
+evidence is high-precision numerics, with one dual certificate in ball
+arithmetic.
+
+In four of the seven gap cases the mirror adds nothing, so the missing testing
+functions concern scale rather than symmetry. A next candidate family should add
+cube-root-type functions in both angles, which the existence proof's AM–GM
+certificates use, and be tested on those seven sources first. Quantifier
+elimination terminates in principle, but already the first undecided size,
+N = 9, has 2,025 unknowns.
 
 ## Checks in this folder
 

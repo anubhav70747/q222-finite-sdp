@@ -311,7 +311,7 @@ with X = U_c⁻¹ ⊗ U, Y = V_c⁻¹ ⊗ V, so every root is taken separately i
   </div>
   <figure>
     <div class="scroll">
-      <svg viewBox="0 0 1000 400" role="img" aria-label="Extraction pipeline. The existence proof gives no explicit testing space. The canonical reduction turns the problem into the 9-dimensional canonical cone. An exact, strictly feasible pencil for that cone would yield the full Q222 lift through eight relabelled adjoint copies, but that pencil is missing. Three inner cones were tried; each is strictly smaller than the canonical cone, and the two semidefinite ones assemble to outer pencils of order 264 and 392 that are strictly larger than Q222. The next candidate, the sum of the ramified cone and its mirror image, is untested.">
+      <svg viewBox="0 0 1000 400" role="img" aria-label="Extraction pipeline. The existence proof gives no explicit testing space. The canonical reduction turns the problem into the 9-dimensional canonical cone. An exact, strictly feasible pencil for that cone would yield the full Q222 lift through eight relabelled adjoint copies, but that pencil is missing. Three inner cones were tried; each is strictly smaller than the canonical cone, and the two semidefinite ones assemble to outer pencils of order 264 and 392 that are strictly larger than Q222. The sum of the ramified cone and its mirror image also fails, on multiscale sources.">
         <defs>
           <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker>
           <marker id="ar2g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah-gap"/></marker>
@@ -354,10 +354,10 @@ with X = U_c⁻¹ ⊗ U, Y = V_c⁻¹ ⊗ V, so every root is taken separately i
         <text x="597" y="206" class="t-main" text-anchor="middle">ramified √v, order 49</text>
         <text x="597" y="225" class="t-gap" text-anchor="middle">fails: c† = πc̄</text>
         <text x="597" y="241" class="t-sub" text-anchor="middle">148 auxiliaries</text>
-        <rect x="725" y="182" width="255" height="66" rx="4" class="d-gapbox"/>
+        <rect x="725" y="182" width="255" height="66" rx="4" class="d-soft"/>
         <text x="852" y="206" class="t-main" text-anchor="middle">C_ram + πC_ram, order 98</text>
-        <text x="852" y="225" class="t-sub" text-anchor="middle">untested next candidate</text>
-        <text x="852" y="241" class="t-sub" text-anchor="middle">784 after assembly</text>
+        <text x="852" y="225" class="t-gap" text-anchor="middle">fails: multiscale sources</text>
+        <text x="852" y="241" class="t-sub" text-anchor="middle">as low as 0.588 of valid d</text>
 
         <line x1="127" y1="182" x2="300" y2="116" class="d-dash" marker-end="url(#ar2m)"/>
         <line x1="362" y1="182" x2="372" y2="116" class="d-dash" marker-end="url(#ar2m)"/>
@@ -420,7 +420,8 @@ with X = U_c⁻¹ ⊗ U, Y = V_c⁻¹ ⊗ V, so every root is taken separately i
       <h3>What would finish the extraction</h3>
       <ul class="tight">
         <li><strong>Quantifier elimination.</strong> It terminates in principle, since the theorem guarantees some size works, but at N = 9 it is far beyond practical reach.</li>
-        <li><strong>Next concrete step.</strong> Build C_ram + πC_ram (order 98, 784 after assembly), which restores the Alice↔Bob symmetry the failed families lack, and run a separation search against C_can. Aim it at multiscale sources and the C1/C2 contact charts, using λ_min of the canonical state matrix as the oracle.</li>
+        <li><strong>The symmetric repair fails too.</strong> C_ram + πC_ram (order 98, 784 after assembly) restores the Alice↔Bob symmetry, yet on a π-symmetric source with event weights spread over seven orders of magnitude it reaches only 0.588 of the valid CHSH weight. This is shown by high-precision solves, with one dual certificate in ball arithmetic. In four of the seven gap cases the mirror adds nothing, so the missing functions concern scale, not symmetry.</li>
+        <li><strong>Next concrete step.</strong> The existence proof's AM–GM certificates use cube-root-type functions of both angles; the ramified family uses only √v. Add such functions in both angles and test the new cone on the seven gap sources first.</li>
         <li><strong>Testing space from the proof.</strong> In parallel, a Newton–Puiseux analysis of the contact selectors on those charts could predict a finite exponent set. That set would fix a joint testing space in u, v and ψ, which is exactly the object the existence proof never names.</li>
       </ul>
     </div>
