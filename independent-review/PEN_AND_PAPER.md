@@ -182,13 +182,25 @@ every test, `F` itself is a sum of squares in `K_c ⊗ K_t`.
 **10. A chart-free route [conjecture; checked numerically: `gram-lift/`].** The
 sextic Puiseux–Gram lift asks for `F_c = Zᵀ G Z` with `G ⪰ 0` in the fixed
 basis `Z = {u^{i/6} v^{j/6} ψ_l}`. Scale covariance (step 7), Hurwitz's identity
-(step 6) and the soft-mode amplitude `√(uv)` (step 4) all point to this basis.
+(step 6) and the soft-mode amplitude `√(uv)` (step 4) motivated this basis.
+They do not explain it: the scalar circuit structure does not predict which
+sources the half-root version certifies.
 On 302 test sources it never falls below 0.999 of the validity limit, while
 half-roots fail on 9. See [`EXACT_LIFT_CANDIDATE.md`](EXACT_LIFT_CANDIDATE.md).
 
 If it is exact, "every valid source has such a G" is a statement over ℝ. Tarski
 transfer and a Cholesky factor over `K_c` then give 𝒞 at once, and the lift is
 explicit.
+
+What is already proved:
+
+- the lift is sound and closed;
+- exactness reduces to the extreme sources;
+- four genuine C1/C2 boundary sources have exact rational certificates;
+- a continuation theorem reduces the C1/C2 families to one nondegeneracy
+  property, (ND).
+
+What remains is (ND) and the two closed faces.
 
 ## V. Assembly [here]
 

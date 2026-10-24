@@ -37,6 +37,127 @@ and define
 
 **Conjecture.** `L₆ = C_can`.
 
+## What is proved
+
+**Proposition 1 (soundness).** `L_k ⊆ C_can` for every k. See the bullets
+above.
+
+**Proposition 2 (closedness).** Each `L_k` is a closed convex cone.
+
+*Proof.* Let μ be the uniform probability measure on `[½, 2]² × S³`. Distinct
+fractional monomials `u^{i/k}v^{j/k}` are real-analytic functions with distinct
+exponents. They are therefore linearly independent on any open subset of
+`(0,∞)²`, so `M = ∫ Z Zᵀ dμ` is positive definite. If `F_c = Zᵀ G Z`, then
+`Tr G ≤ Tr(G M)/λ_min(M) = ∫ F_c dμ / λ_min(M)`, and the right-hand side is
+linear in `c`. Take a convergent sequence `c_n → c` with certificates `G_n`. The
+`G_n` are then bounded. A subsequence converges to some `G ⪰ 0`, and the linear
+identity passes to the limit. ∎
+
+**Proposition 3 (reduction to extreme sources).** `L₆ = C_can` if and only if
+`L₆` contains every extreme point of the compact base
+`B = {c ∈ C_can : d + λ + n + m + C + A + D + α + β = 1}`.
+
+*Proof.* `L₆ ⊆ C_can` is closed and convex. By Krein–Milman, `B` is the closed
+convex hull of its extreme points. ∎
+
+**Proposition 4 (events).** Every single-event source lies in `L₁ ⊆ L₆`.
+
+*Proof.* An event term is `c_k·(h_k·ψ)²`, where `c_k` is one of
+`1, D_u, D_v, D_uD_v`, and `h_k·ψ` has degree at most 1 in each of `u` and `v`.
+Expanding `D_u = 1² + u²` and `D_v = 1² + v²` writes it as a sum of squares of
+elements of the span of `Z₁`. ∎
+
+By the classification of extreme sources (paper, Ch. 4), the conjecture is
+therefore **equivalent** to one statement:
+
+> **Remaining lemma.** The extreme sources of the two closed faces, and every
+> C1 and C2 contact source, have a Gram certificate in `Z₆`.
+
+This lemma is over the reals and involves no infinitesimals. The contact sources
+form explicit rational families, parametrized by their contact point
+(`c2_short.tex:263–292`, `c1_short.tex:696–748`). A proof could take the form
+of a Gram matrix whose entries are rational functions of those parameters,
+verified symbolically.
+
+One natural route is ruled out. Building the matrix certificate circuit by
+circuit from the determinant's AM–GM certificate cannot work, because the
+circuit types do not predict which sources `L₂` certifies (see "Why sixth roots,
+physically"). A proof must use the matrix structure directly.
+
+## Exact certificates at extreme sources
+
+Four genuine boundary sources have exact rational certificates in `L₆`:
+two C1 sources (C1A, C1B) and two C2 sources (C2A, C2B). Each is a contact
+source from the paper's rational families, with `d = d*` and every non-forced
+weight strictly positive. The contact angles are chosen to be sixth powers of
+rationals, which makes the contact vector rational.
+
+The checker ([`checks/gram-lift/boundary/`](checks/gram-lift/boundary/), 56/56
+exact checks) proves three things for each source:
+
+1. **Valid, on the boundary.** `F_c ≥ 0`, by a weighted AM–GM bound on the
+   determinant plus exact positive-definite points in every quadrant, and
+   `F_c` vanishes with zero gradient at the contact.
+2. **Exact Gram identity.** `F_c` equals a Gram form in `Z₆` exactly, as
+   Puiseux polynomials.
+3. **Positive definite after reduction.** The Gram matrix is positive definite
+   after removing only the contact vector `z_c`.
+
+At all four sources the certificate has the same structure:
+
+- **Kernel.** The Gram kernel is exactly `z_c` in each of the four parity
+  blocks, and nothing else.
+- **Rank.** The coefficient system has 412 equations of rank 406. The 6 missing
+  ranks are exactly the conditions a contact imposes: value, two angle
+  derivatives and three independent state derivatives.
+
+## A continuation theorem
+
+For a support pattern σ (C1: λ = n = 0; C2: λ = β = 0), let `Θ_σ` be the open
+orthant of its six remaining weights, and for `w ∈ Θ_σ` let `c(w) = (d*(w), w)`.
+`Θ_σ` is connected, and the contact `x_c(w)` depends analytically on `w`
+(paper, Ch. 5). Call a certificate for `c(w)` **nondegenerate** if two things
+hold: its reduced Gram matrix (contact vector removed in each parity block) is
+positive definite, and the reduced coefficient map has rank `N − 6`, where N is
+the number of coefficient equations.
+
+**Lemma (openness).** If `c(w₀)` has a nondegenerate certificate, so does
+`c(w)` for every `w` near `w₀`.
+
+*Proof.* Every reduced Gram form vanishes with zero gradient at `x_c(w)`, so the
+image of the reduced map lies in the space `C_w` of forms that do. The six
+contact conditions are independent at `w₀` (rank `N − 6`), hence near `w₀`, so
+`dim C_w = N − 6`. By lower semicontinuity the rank stays at least `N − 6`, so
+it equals `N − 6` and the image is all of `C_w`. Now `F_{c(w)} ∈ C_w`, because
+`c(w)` has a contact at `x_c(w)`. Under constant rank, the minimal-norm solution
+of the reduced system depends continuously on `w`, so the reduced Gram stays
+positive definite near `w₀`. ∎
+
+**Theorem (conditional).** Assume:
+
+> **(ND)** For σ = C1 and σ = C2, every `w ∈ Θ_σ` that is a limit of points
+> with nondegenerate certificates itself has a nondegenerate certificate.
+
+Then every C1 and C2 contact source lies in `L₆`.
+
+*Proof.* The set `S_σ` of `w ∈ Θ_σ` with a nondegenerate certificate is open by
+the lemma, closed in `Θ_σ` by (ND), and nonempty by the seeds C1A and C2A.
+Since `Θ_σ` is connected, `S_σ = Θ_σ`. The C1 and C2 sources with `D = 0`,
+`β = 0` or `n = 0` are limits of these sources, so they lie in the closed cone
+`L₆` too. ∎
+
+With Propositions 1–4, **`L₆ = C_can` follows from (ND) together with the
+extreme sources of the two closed faces.** The closed faces are noncoercive,
+with no finite contact, so the continuation argument does not cover them.
+Numerically they lie in `L₆` on 18 of 20 sampled sources; the other two are
+noise-limited, not gaps.
+
+So the conjecture now rests on a single nondegeneracy property of the Gram
+certificates, (ND), plus the closed faces. (ND) asks that no accidental
+degeneracy appears as one moves through each connected family of contact
+sources. The four exact seeds and the 302-source sweep are consistent with it:
+there, margins grow in proportion to the distance from the boundary.
+
 If it holds, the repo's full-polar assembly (eight relabelled copies) turns it
 into an explicit lift of Q222. The PSD order is 8·196 = 1568, plus 72 scalar
 sign blocks and about 22,000 auxiliary variables. The assembly needs a strictly
@@ -76,13 +197,16 @@ it from `C_can`.
   analysis. The half-powers in both angles together supply √u·√v ∝ √(uv), the
   soft-mode amplitude. Ramification in one angle at a time misses it, which is
   why the ramified cone plus its mirror fails.
-- **Hurwitz.** The determinant's AM–GM circuits with weights (1,1,1) are
-  x⁶ + y⁶ + z⁶ − 3x²y²z² in sixth roots. Hurwitz (1891) showed this is a sum of
-  squares. Circuits with weights (1,1,2) need only square roots. The common grid
-  is therefore ⅙, and k = 2 is expected to fail on sources whose certificate
-  needs a (1,1,1) circuit, which is what the sweep shows. The same substitution
-  turns the Motzkin polynomial behind the repo's polynomial obstruction into a
-  Hurwitz form.
+- **Hurwitz, as motivation only.** The determinant's AM–GM circuits with
+  weights (1,1,1) are x⁶ + y⁶ + z⁶ − 3x²y²z² in sixth roots. Hurwitz (1891)
+  showed this is a sum of squares, and circuits with weights (1,1,2) need only
+  square roots. That suggested the ⅙ grid, and the same substitution turns the
+  Motzkin polynomial behind the repo's polynomial obstruction into a Hurwitz form.
+  **It is not the mechanism.** All 9 sources that defeat `L₂` need (1,1,1)
+  circuits at their contact, but so do 252 of the 293 sources that `L₂`
+  certifies (`checks/gram-lift/circuit_types.py`). Neither the contact location
+  nor the spread of scales separates the two groups. Whatever distinguishes `L₂`
+  from `L₆` lives in the 4×4 matrix structure, not in the scalar determinant.
 
 ## What exactness would give
 
