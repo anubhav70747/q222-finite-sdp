@@ -15,10 +15,15 @@ they are unchanged from the snapshot the review started on. Three folders under
 page, with two diagrams. GitHub shows HTML as source, so download it and open it
 in a browser.
 
-[`PEN_AND_PAPER.md`](PEN_AND_PAPER.md) reorganizes the proof so that it can be
-followed by hand. It isolates the single hard lemma and adds physical
-interpretations: Landau's identity for the one violating direction, and
-validity as an effective resistance.
+[`PEN_AND_PAPER.md`](PEN_AND_PAPER.md) is the whole proof from first
+principles, in physics order. Each step is marked as proved there, proved in the
+paper, checked by script, or conjectural. Along the way:
+
+- Bell operators become two-mode quadratic forms.
+- Landau's identity gives a single violating direction.
+- Validity at fixed measurements is an effective resistance.
+- AM–GM appears as a force balance.
+- The single hard lemma is isolated.
 
 ## Verdict
 
@@ -191,7 +196,7 @@ with SymPy 1.14 (as pinned in the repo), from the script's own folder.
 | `tilted-chsh/` | the order-4 projection pencil against its set on a grid, and on random two-qubit behaviours (floating point) | `ruby chsh_check.rb` | 0 mismatches, 0 violations |
 | `lift-experiment/` | exact rational proof that `C_ram + πC_ram ≠ C_can`: an AM–GM validity certificate for a rational source, and an exactly positive semidefinite rational dual that excludes it; plus the high-precision results | `python verify_cert.py ../../../extracted-lifts/canonical-completion/ramified-completion/data/ramified_order49_pencil.json` | 17/17 PASS |
 | `gram-lift/` | the Puiseux–Gram lift `L_k`: standalone checker for d_k/d* and the δ-margin test, the symmetry check, and the k = 2 and k = 6 sweep results over 302 sources | `python gram_lift.py --k 6 --case <name>`, `python symcheck.py` | k = 2: 9 gaps; k = 6: none below 0.999 |
-| `physics/` | identities behind `PEN_AND_PAPER.md`. Landau's identity and the spectrum of I − Ŝ/2; the parity Γ = Y⊗Y that commutes with correlators and anticommutes with marginals (`check7_parity.py`); events as product-state projectors; the Thomson flow identity and the effective-resistance test; Cauchy–Binet for adj(T) and det(T); `det(T)·F = (Pψ)ᵀadj(T)(Pψ) + det(P)s²`; which determinant coefficients the CHSH term reaches; a C2 source whose formal C1 image is not positive | `python check6_tsirelson.py`, `check4_thomson.py`, `check3_cauchy_binet.py`, `check12_decomp_sos.py`, `check5_monomials.py`, `check_c2_to_c1_counterexample.py` | all true; counterexample confirmed |
+| `physics/` | identities behind `PEN_AND_PAPER.md`. Landau's identity and the spectrum of I − Ŝ/2; the parity Γ = Y⊗Y that commutes with correlators and anticommutes with marginals (`check7_parity.py`); the two-mode normal form of every Bell operator in the Bell basis (`check8_two_mode.py`); events as product-state projectors; the Thomson flow identity and the effective-resistance test; Cauchy–Binet for adj(T) and det(T); `det(T)·F = (Pψ)ᵀadj(T)(Pψ) + det(P)s²`; which determinant coefficients the CHSH term reaches; a C2 source whose formal C1 image is not positive | `python check6_tsirelson.py`, `check4_thomson.py`, `check3_cauchy_binet.py`, `check12_decomp_sos.py`, `check5_monomials.py`, `check_c2_to_c1_counterexample.py` | all true; counterexample confirmed |
 
 The repo's own checkers were also run on Python 3.9 with SymPy 1.14, and all
 passed. Three needed a small compatibility shim:

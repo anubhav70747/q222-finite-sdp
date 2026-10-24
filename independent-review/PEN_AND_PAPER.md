@@ -1,209 +1,223 @@
-# A pen-and-paper route through the finite-lift proof
+# The finite lift of Q222, from first principles
 
-The existence proof splits into a short core that can be checked by hand and one
-isolated lemma that carries the long appendices. This note gives the core in
-eight steps, each with the computation a reader can do on paper, and states the
-remaining lemma precisely. Every displayed identity was also checked by script
-(`checks/determinant`, `checks/circuits`, `checks/physics`).
+**Theorem.** The quantum correlation set of two parties with two binary
+measurements each, Q222 ⊂ ℝ⁸, is the linear projection of a spectrahedron.
 
-## 0. What has to be shown
+This note gives the proof in the order a physicist would tell it. It starts
+from the kinematics of two measurements, then the structure of Bell
+inequalities, then positivity at fixed measurements, and finally uniformity
+across all measurements, which is where the difficulty lives. Every step is
+marked:
 
-Q222 ⊂ ℝ⁸ is the set of behaviours `q = (a₀,a₁,b₀,b₁,E₀₀,E₀₁,E₁₀,E₁₁)` from
-finite-dimensional states and binary measurements. Scheiderer's criterion
-(SIAM J. Appl. Algebra Geom. 5, 2021, Cor. 3.19) reduces "Q222 is the projection
-of a spectrahedron" to one algebraic statement. For every real closed field
-`K ⊇ ℝ`, every affine `f ≥ 0` on `Q_K` and every `q ∈ Q_K`:
+- **[here]**: proved in this note, by hand;
+- **[paper]**: proved in the paper or its companion, and audited in this review;
+- **[checked]**: verified exactly by a script in [`checks/`](checks/);
+- **[conjecture]**: supported by evidence, not proved.
 
-    [f, q] = f₀⊗1 + Σ fᵥ⊗qᵥ  is a sum of squares in  K ⊗_ℝ K.
+Notation: `q = (a₀, a₁, b₀, b₁, E₀₀, E₀₁, E₁₀, E₁₁)`; `u = tan(a/2)`,
+`v = tan(b/2)`; `D_u = 1+u²`, `D_v = 1+v²`.
 
-Infinitesimals in the left factor describe a Bell inequality approaching a
-degenerate limit, and those in the right factor an experiment doing the same,
-at an unrelated rate. A certificate may take roots and inverses only of
-elements of one factor. It may never divide by a quantity that mixes the
-inequality with the experiment.
+---
 
-## 1. Real qubits suffice
+## I. Kinematics of two measurements
 
-By Jordan's lemma, two binary observables per party decompose into blocks of
-size at most two, in which `A₀ = B₀ = Z`, `A₁ = cos a·Z + sin a·X` and
-`B₁ = cos b·Z + sin b·X`. The observables are real, so a complex state is a
-mixture of its real and imaginary parts. By Carathéodory, Q222 is the convex
-hull of at most nine points `Φ(a, b, ψ)` with `ψ ∈ S³`. Write `u = tan(a/2)`,
-`v = tan(b/2)`, `D_u = 1+u²` and `D_v = 1+v²`. (Chapter 2 of the companion.)
+**1. Real qubits [paper, Ch. 2].** Two ±1 observables generate an algebra whose
+centre contains `½{A₀,A₁}` and `[A₀,A₁]²`. Jordan's lemma diagonalizes this
+centre. Every block has dimension at most two, and on it
 
-## 2. Every Bell inequality is CHSH plus event penalties
+    A₀ = Z,   A₁ = cos a·Z + sin a·X,   ½{A₀,A₁} = cos a,   [A₀,A₁]² = −4 sin²a.
 
-Let `S = E₀₀ − E₀₁ + E₁₀ + E₁₁` and `H = 1 − S/2`, so `H = −1` at the PR box.
-The PR box and its eight deterministic neighbours are affinely independent, so
-every slack that is negative at the PR box has a unique form
+So a measurement pair is characterized by one angle, and its **incompatibility**
+is `sin a`. The observables are real, so complex states mix real ones.
+Carathéodory's theorem in ℝ⁸ then gives `Q222 = conv Φ(S¹×S¹×S³)`, with at most
+nine atoms.
 
-    f = d·H + 4 Σᵢ cᵢ·pᵢ,   d = −f(PR) > 0,   cᵢ = f(vᵢ)/4 ≥ 0,
+**2. Parity and the two-mode picture [checked: `physics/check7_parity.py`,
+`physics/check8_two_mode.py`].** Let `Γ = Y⊗Y`. It commutes with every
+correlator `A_x⊗B_y` and anticommutes with every marginal `A_x`, `B_y`. In the
+Bell basis it splits ℝ⁴ into two planes: `{Φ⁺, Ψ⁻}` (Γ = +1) and `{Φ⁻, Ψ⁺}`
+(Γ = −1). Write the state as two complex amplitudes,
+`z₊ = ⟨Φ⁺|ψ⟩ + i⟨Ψ⁻|ψ⟩` and `z₋ = ⟨Φ⁻|ψ⟩ + i⟨Ψ⁺|ψ⟩`. Then every Bell
+operator `f₀ + Σ f_xy A_xB_y + Σ f_x A_x + Σ g_y B_y` has the form
 
-where `pᵢ` is the probability of the event lost by neighbour `vᵢ`:
+    f₀(|z₊|² + |z₋|²) + Re(W₊ z̄₊²) + Re(W₋ z̄₋²) + 2 Re(Ω z₊ z̄₋) + 2 Re(N z₊ z₋),
 
-| weight | λ | n | m | C | A | D | α | β |
-|---|---|---|---|---|---|---|---|---|
-| event `(ab\|xy)` | (++\|01) | (+−\|00) | (+−\|11) | (−+\|10) | (−+\|00) | (−+\|11) | (−−\|01) | (+−\|10) |
+with
 
-A slack nonnegative at every PR box is a nonnegative combination of
-probabilities, which are already squares. (Chapter 4.)
+    W₊ = Σ f_xy e^{i(β_y − α_x)},   W₋ = Σ f_xy e^{i(α_x + β_y)},
+    Ω  = Σ f_x e^{iα_x},           N  = Σ g_y e^{−iβ_y}.
 
-## 3. The Bell operator has one violating direction
+Read physically, this is a two-mode quadratic Hamiltonian:
 
-For a state `ψ = (W,X,Y,Z)` in the basis `|00⟩,|01⟩,|10⟩,|11⟩`, after clearing
-denominators, `F = D_u D_v ‖ψ‖² f(q)` is a quadratic form `ψᵀPψ` with
+| term | origin | role |
+|---|---|---|
+| W₊ | correlators, angle differences | single-mode squeezing |
+| W₋ | correlators, angle sums | single-mode squeezing |
+| Ω | Alice's marginals | beam-splitter coupling |
+| N | Bob's marginals | two-mode squeezing |
 
-    P = Σₖ aₖ gₖgₖᵀ − ℓℓᵀ,    ℓ = √(2d D_u D_v)·(0,0,0,1).
+**Corollary (Tsirelson–Landau–Masanes) [here].** Each mode alone has energies
+`f₀ ± |W|`. A correlation-only Bell expression is therefore valid exactly when
+`f₀ ≥ |W₊|` and `f₀ ≥ |W₋|` for all angles. For CHSH,
 
-Each event contributes `aₖgₖgₖᵀ`, a product projector. The weights are
-`a = (4λ, 4n, 4m, 4C, 4A, 4D+2d, 4α+2d, 4β+2d)`, and the vectors are
+    |W| ≤ 2|cos((α₀−α₁)/2)| + 2|sin((α₀−α₁)/2)| ≤ 2√2.
 
-    g_λ = √D_u (1,v,0,0)        g_n = √(D_uD_v) (0,1,0,0)
-    g_m = (v,−1,uv,−u)          g_C = √D_v (u,0,−1,0)
-    g_A = √(D_uD_v) (0,0,1,0)   g_D = (u,uv,−1,−v)
-    g_α = √D_u (0,0,v,−1)       g_β = √D_v (0,1,0,u).
+**All of the difficulty of Q222 comes from the marginals**, which are the only
+couplings between the two modes.
 
-The terms proportional to `d` add up to `d·D_uD_v·(I − B/2)`, with the CHSH
-operator `B = A₀B₀ − A₀B₁ + A₁B₀ + A₁B₁`. Landau's identity gives
-`B² = 4I + 4 sin a sin b·(Y⊗Y)` with the real `Y = [[0,−1],[1,0]]`. Hence the
-eigenvalues of `I − B/2` are
+## II. Bell inequalities
 
-    1 ∓ √(1 ± sin a sin b).
+**3. CHSH plus penalties [here; paper, Ch. 4].** Let `H = 1 − S/2` with
+`S = E₀₀ − E₀₁ + E₁₀ + E₁₁`. The PR box and its eight deterministic neighbours
+are affinely independent. So every slack that is negative at the PR box is
+uniquely
 
-Exactly one is negative when `sin a sin b ≠ 0`. Its depth `√(1 + |sin a sin b|) − 1`
-is about half the product of Alice's and Bob's incompatibilities. Those two
-factors vanish independently as each party's measurements become compatible.
-This is the physical origin of the two independent infinitesimals and of every
-singular case in the proof.
+    f = d·H + 4 Σᵢ cᵢ pᵢ,   d = −f(PR) > 0,   cᵢ = f(vᵢ)/4 ≥ 0,
 
-Restricted to `Z = 0`, the positive part is positive definite whenever `d > 0`
-and `uv ≠ 0`. So `P ⪰ 0` holds exactly when `det P ≥ 0`. (Proof.tex §2.)
+where `pᵢ` is the probability of the event lost by neighbour `vᵢ`. Each event
+`(a,b|x,y)` is the projector `(1+aA_x)(1+bB_y)/4`, a rank-one product state, and
+it contributes to every term of the two-mode form. A slack that is nonnegative
+at every PR box is a sum of event probabilities, which are already squares.
+Up to symmetry, the extreme sources are:
 
-## 4. Validity is an effective-resistance bound
+- events;
+- two closed faces with small explicit lifts;
+- contact sources of type **C1** (λ = n = 0) or **C2** (λ = β = 0) [paper].
 
-Let `T = Σ aₖgₖgₖᵀ` and `s = ℓ·ψ`. For any "flow" `t ∈ ℝ⁸` with
-`Σ tₖgₖ = ℓ`, expanding the squares gives
+**4. One violating direction [here; checked: `physics/check6_tsirelson.py`].**
+Landau's identity gives `Ŝ² = 4 + [A₀,A₁]⊗[B₀,B₁] = 4 + 4 sin a sin b·Γ`. The
+spectrum of `I − Ŝ/2` is
 
-    F = Σₖ aₖ (gₖ·ψ − (tₖ/aₖ)·s)²  +  s²·(1 − Σₖ tₖ²/aₖ).
+    1 ± √(1 + sin a sin b)  (one sector),    1 ± √(1 − sin a sin b)  (the other).
 
-By Thomson's principle, the smallest cost `Σ tₖ²/aₖ` is the effective resistance
-`ℓᵀT⁻¹ℓ` of the violating direction, in a network whose edges are the event
-vectors with conductances `aₖ`. So, for fixed measurements:
+- **Exactly one eigenvalue is negative.** It is `1 − √(1 + |sin a sin b|)`,
+  about `−½|sin a|·|sin b|`.
+- **Penalties cannot create more.** They are positive semidefinite, so the
+  Bell operator keeps at most one negative direction.
+- **Hence positivity is one scalar inequality**, `det ≥ 0`, because the
+  three-dimensional transverse block is positive definite [paper].
 
-- a Bell slack is valid exactly when `ℓᵀT⁻¹ℓ ≤ 1`;
-- any flow of cost at most 1 is an explicit sum-of-squares certificate;
-- the matrix determinant lemma gives `det P = det T·(1 − ℓᵀT⁻¹ℓ)`.
+At compatible measurements each sector has one **soft mode**, at about
+`∓½ sin a sin b`, while the two **hard modes** stay at eigenvalue ≥ 1. The
+only hard regime is the classical limit. There, the violation lives in one soft
+mode, the marginals couple it to the other, and validity is the stability of
+this two-level system. The violation depth is a product of two
+incompatibilities, and each can vanish at its own rate. That is the physical
+origin of the two independent scales in step 7.
 
-## 5. The determinant is an AM–GM object
+## III. Positivity at fixed measurements
+
+**5. Effective resistance [here; checked: `physics/check4_thomson.py`].** Write
+the parent form, `F = D_uD_v·⟨ψ|f̂|ψ⟩`, as `F = ψᵀTψ − (ℓ·ψ)²`. Here
+`T = Σₖ aₖ gₖgₖᵀ` collects the positive squares, and `ℓ = √(2dD_uD_v)·|11⟩` is
+the violating direction. For any flow `Σₖ tₖgₖ = ℓ`:
+
+    F = Σₖ aₖ (gₖ·ψ − (tₖ/aₖ)·s)² + s²·(1 − Σₖ tₖ²/aₖ),   s = ℓ·ψ.
+
+The minimal cost `Σ tₖ²/aₖ` is `ℓᵀT⁻¹ℓ` (Thomson's principle). So **a Bell
+inequality holds at given measurements exactly when the violating direction has
+effective resistance ≤ 1 through the network of losing events**, whose
+conductances are the Bell coefficients.
+
+**6. The determinant, and AM–GM as force balance [here; checked:
+`determinant/`, `circuits/`].**
 
     det P = 16 D_u² D_v² u² v² · L(u², v²),
-    L(U,V) = h + Σ_{e ∈ {−1,0,1}² ∖ 0} q_e U^{e₁} V^{e₂}.
+    L(U,V) = h + Σ_{e ∈ {−1,0,1}²∖0} q_e U^{e₁} V^{e₂},
 
-The eight outer coefficients are polynomials in the weights with nonnegative
-coefficients. The corners factor, for example
-`q₍₁,₁₎ = 4Cβ(2A+2α+d+2m)(2D+d+2λ+2n)`. Only the centre `h` can be negative.
-Both `det T` and `ℓᵀ adj(T) ℓ` contribute to all nine monomials, and their
-negative parts cancel everywhere except at the centre.
+where all eight outer `q_e ≥ 0` and only the centre `h` can be negative.
 
-At a stationary contact `(U_c, V_c)`, the weights `wₑ = qₑ U_c^{e₁} V_c^{e₂}`
-satisfy `h = −Σ wₑ` and `Σ wₑ·e = 0`. A balanced nonnegative vector splits into
-minimal circuits. On the 3×3 square there are twelve:
+- **Balance.** At a stationary contact `(U_c, V_c)`, the weights
+  `w_e = q_e U_c^{e₁} V_c^{e₂}` satisfy `h = −Σ w_e` and `Σ w_e e = 0`. This is
+  a force balance in the plane of log half-angles: each losing event pushes the
+  optimal measurement one way, and self-testing is the unique equilibrium.
+- **Circuits.** The balanced weights split into the 12 minimal circuits of the
+  3×3 square: opposite pairs, and triangles with weights (1,1,1) or (1,1,2).
+- **Squares.** Each circuit becomes squares through `p + 1/p − 2`, the cubic
+  AM–GM identity and the quartic one.
+- **Hurwitz (1891).** x⁶ + y⁶ + z⁶ − 3x²y²z² is a plain sum of squares. So
+  every circuit is a sum of squares of fractional monomials in `u^{1/6}` and
+  `v^{1/6}`. The (1,1,1) circuits need sixth roots of `U = u²`, which is
+  `u^{1/3}`. The (1,1,2) circuits need fourth roots, which is `u^{1/2}`.
 
-- four opposite pairs;
-- four triangles made of a corner and the two axis points opposite it, with
-  weights (1,1,1);
-- four triangles made of two adjacent corners and the axis point opposite,
-  with weights (1,1,2).
+## IV. Uniformity: the heart of the proof
 
-Three identities turn each circuit into squares:
+**7. What has to hold [paper; Scheiderer, Cor. 3.19].** A finite lift exists
+exactly when the following holds. For every valid slack f with coefficients in a
+real closed field `K_c`, and every behaviour q in a real closed field `K_t`,
+`[f,q]` must be a sum of squares in `K_c ⊗ K_t`. Infinitesimals in the two
+fields describe the inequality and the experiment degenerating at unrelated
+rates. Roots and inverses are therefore allowed only inside one field.
 
-    p + p⁻¹ − 2 = (√p − 1/√p)²
-    a³ + b³ + c³ − 3abc = ½(a+b+c)[(a−b)² + (b−c)² + (c−a)²]
-    a⁴ + b⁴ + c⁴ + d⁴ − 4abcd = (a²−b²)² + (c²−d²)² + 2(ab−cd)²
+Fractional monomials are the natural currency here. Rescaling the angles
+multiplies `u^{i/6}v^{j/6}` by a constant, so a certificate written in monomials
+holds at every scale at once. The circuit certificates of step 6 are of this
+kind.
 
-Write `X = U_c⁻¹ ⊗ U` and `Y = V_c⁻¹ ⊗ V`. These are pure tensors, so their
-cube and fourth roots are taken separately in each field. Hence `L`, and with
-it `det P`, is a separated sum of squares at every contact source. Physically,
-stationarity is a balance of forces in the plane of log half-angles. (Chapter 4.)
+**8. A uniform identity [here; checked: `physics/check12_decomp_sos.py`,
+`physics/check3_cauchy_binet.py`].**
 
-## 6. One identity certifies the whole form, up to one multiplier
+    det(T) · F = (Pψ)ᵀ adj(T) (Pψ) + det(P) · s²,   adj(T) = Σ_{|S|=3} a_S w_S w_Sᵀ.
 
-With `y = Tψ − s·ℓ`, the matrix determinant lemma gives
+The first term is a sum of squares, with pure source weights and pure test-side
+vectors. The second is a sum of squares by step 6. So `det(T)·F` is certified
+for every contact source with no case analysis. The only obstruction left is the
+multiplier `det(T) = Σ_S a_S det[g_S]²`, which mixes the two fields.
 
-    det(T) · F = yᵀ adj(T) y + det(P) · s².
+**9. The hard lemma 𝒞 [paper; audited].** For every C1 or C2 contact source and
+every test, `F` itself is a sum of squares in `K_c ⊗ K_t`.
 
-To prove it, use `yᵀT⁻¹y = ψᵀTψ − 2s² + s²·ℓᵀT⁻¹ℓ`. Multiply by `det T`, add
-`det(P)s² = det(T)·s²·(1 − ℓᵀT⁻¹ℓ)`, and the result is `det(T)·(ψᵀTψ − s²)`.
+- **How the companion proves it.** It partitions by scale regime, about 31,000
+  lines. On each regime it rescales by pure quantities until the residual Gram
+  matrix has a strictly positive real part, keeps unbounded penalties as whole
+  squares, and joins regimes with division-free conductor identities.
+- **Audit.** Every sketched step was re-derived in this review and holds; the
+  defects are editorial.
+- **The split is necessary [checked:
+  `physics/check_c2_to_c1_counterexample.py`].** A C2 source's formal C1 image
+  can fail positivity, so C1 and C2 cannot be merged.
+- **Physically,** the regimes are the scales of the two-level soft-mode problem
+  of step 4.
 
-By Cauchy–Binet for the adjugate:
+**10. A chart-free route [conjecture; checked numerically: `gram-lift/`].** The
+sextic Puiseux–Gram lift asks for `F_c = Zᵀ G Z` with `G ⪰ 0` in the fixed
+basis `Z = {u^{i/6} v^{j/6} ψ_l}`. Scale covariance (step 7), Hurwitz's identity
+(step 6) and the soft-mode amplitude `√(uv)` (step 4) all point to this basis.
+On 302 test sources it never falls below 0.999 of the validity limit, while
+half-roots fail on 9. See [`EXACT_LIFT_CANDIDATE.md`](EXACT_LIFT_CANDIDATE.md).
 
-    adj(T) = Σ_{|S| = 3} a_S · w_S w_Sᵀ.
+If it is exact, "every valid source has such a G" is a statement over ℝ. Tarski
+transfer and a Cholesky factor over `K_c` then give 𝒞 at once, and the lift is
+explicit.
 
-Here `a_S` is a product of three Bell coefficients, which is pure and
-nonnegative. `w_S` is the generalized cross product of three event vectors,
-which is pure on the test side. So `yᵀ adj(T) y` is a separated sum of squares
-for every source and test. By Step 5, so is `det(P)·s²` at every contact
-source.
+## V. Assembly [here]
 
-**Hence `det(T)·F` is a separated sum of squares for every contact source, with
-no case analysis.**
+A valid slack is a nonnegative combination of at most nine extreme sources, and
+a behaviour is a mixture of at most nine qubit atoms. If each pair is certified,
+`[Σ aⱼfⱼ, Σ wᵢqᵢ] = Σ ((√aⱼ ⊗ √wᵢ)·hᵢⱼₖ)²`, where `Σ wᵢ = 1` preserves the
+constant term. Scheiderer's criterion then gives a finite lift, and Tarski
+transfer gives one with real algebraic entries. ∎
 
-## 7. The one hard lemma: removing det(T)
+## VI. The explicit lift
 
-Also by Cauchy–Binet, `det T = Σ_{|S|=4} a_S·det[g_S]²`, a quantity that mixes
-the inequality with the experiment. `K⊗K` is not a field, so this multiplier
-cannot be divided out. The criterion of Step 0 forbids exactly this division.
-In the fraction field, every valid slack is a sum of squares by Artin's
-theorem; the whole content of the criterion is the absence of mixed
-denominators.
+| object | status |
+|---|---|
+| Tilted-CHSH projection, `[[√2+t, s/2],[s/2, √2−t]] ⊕ (1−t) ⊕ (1+t) ⪰ 0` | exact [paper; checked] |
+| Canonical reduction: valid ⇔ ∀v ∃J with two 4×4 matrices PSD | exact [paper; checked] |
+| Full-polar assembly: an exact canonical pencil of order n gives Q222 at order 8n | exact [paper; checked] |
+| Fixed-function cones: polynomial, half-line (33), ramified (49) | strictly too small [paper] |
+| Ramified cone plus its mirror (98; 784 assembled) | strictly too small, by an exact rational certificate [checked: `lift-experiment/`] |
+| Sextic Puiseux–Gram lift `L₆` (Gram 196 per copy) | candidate exact lift [conjecture] |
 
-**Lemma 𝒞 (canonical assertion).** For every C1 or C2 contact source over `K_c`
-and every test over `K_t`, `F` itself is a separated sum of squares.
+## The whole proof in one paragraph
 
-In flow language (Step 4), the optimal flow `t*ₖ = aₖ·gₖᵀT⁻¹ℓ` carries the
-forbidden denominator `det T`. A flow supported on four events `S` is pure,
-because `det[g_S]` lives on the test side alone. But at a contact the cost
-must be exactly 1, so the flow must be the optimal one. The optimal flow is
-unique, and at a generic contact it uses every event with positive weight. So
-no fixed choice of four events works throughout.
-
-The companion proves 𝒞 by a partition into charts by the relative scale of
-source and test. On each chart, conductor identities and strict-residue Gram
-matrices (Lemma TF2) produce the certificate. The review found this argument
-complete in substance; see `README.md` for the editorial defects and the steps
-it re-derived.
-
-**A route to a short proof.** Find, uniformly over sources and tests, a flow
-`t ∈ (K_c ⊗ K_t)⁸` with `Σ tₖgₖ = ℓ` and `1 − Σ tₖ²/aₖ` a separated sum of
-squares. This is open.
-
-One constraint on any such route is known. The C1/C2 split cannot be removed.
-The source `c = 1/4, v_c/u_c = 2, b = 3/2, t = 1/13, r = 1/32` in the native C2
-coordinates of `c2_short.tex` has formal C1 image with `π ≈ 0.27`, and that
-image has a negative Hessian direction at the contact. So C2 does not reduce to
-a C1 theorem with negative β, except in the thin-n slices the companion already
-uses.
-
-## 8. Assembly
-
-Every valid slack is a nonnegative combination of at most nine extreme
-sources, and every behaviour is a mixture of at most nine qubit atoms. If
-`[fⱼ, qᵢ] = Σₖ hᵢⱼₖ²`, then
-
-    [Σ aⱼfⱼ, Σ wᵢqᵢ] = Σ (√aⱼ ⊗ √wᵢ · hᵢⱼₖ)²,
-
-because `Σ wᵢ = 1` preserves the constant term. Scheiderer's criterion then
-gives a finite lift. Tarski transfer gives one with real algebraic entries.
-
-## What a reader checks, and how
-
-| Step | By hand | By script |
-|---|---|---|
-| 1 Real qubits | Jordan blocks, real/imaginary split | none needed |
-| 2 CHSH plus penalties | affine independence of nine vertices | none needed |
-| 3 One violating direction | Landau's identity, a 4×4 spectrum | `checks/physics` |
-| 4 Effective resistance | expand one square | `checks/physics` |
-| 5 Determinant and AM–GM | three identities, list of 12 circuits | `checks/determinant`, `checks/circuits` |
-| 6 Uniform identity | determinant lemma, Cauchy–Binet | `checks/physics` |
-| 7 Lemma 𝒞 | the chart argument, as a reference | companion appendices; `checks/r6-remote-charts`, `checks/thin-layer` |
-| 8 Assembly | one line | none needed |
+Two measurements per party reduce to one angle each, and a Bell operator becomes
+a two-mode quadratic Hamiltonian. Correlators squeeze each mode; marginals
+couple the two. The CHSH part has a single violating direction whose depth is
+the product of the two parties' incompatibilities. Event penalties stabilize
+it, with Bell coefficients acting as conductances. At the optimal measurements,
+the penalties balance like forces, and AM–GM, in Hurwitz's sum-of-squares form,
+certifies positivity. What remains is to keep these certificates valid as the
+inequality and the experiment approach the classical limit at unrelated rates.
+The paper does this regime by regime. A single fixed basis of sixth-root
+monomials, which are blind to scale, appears to do it in one stroke.
