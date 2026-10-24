@@ -5,10 +5,16 @@ correlations of two parties, each with two binary measurements, is the linear
 projection of a spectrahedron. The matrices can be chosen with real algebraic
 entries.
 
-This note proves the theorem from five imported results, [I1]–[I5]. [I1] is a
-published theorem of Scheiderer. [I2]–[I5] are proved in the paper and its
-companion, and were audited in this review. Everything else is proved here in a
-few lines.
+This note proves the theorem from five ingredients, [I1]–[I5].
+
+- **[I1]** is a published theorem of Scheiderer, used as stated.
+- **[I2]–[I4]** come from the paper, and their short proofs are given below.
+- **[I5]** is the hard lemma. It is proved in the paper's companion by a
+  case analysis of about 31,000 lines, which this review audited. Its structure
+  is outlined below, and Part B explains what it does. No short proof of [I5]
+  is known (Part C).
+
+Everything else is proved here in a few lines.
 
 **The idea, in three sentences.** A finite lift exists exactly when every Bell
 inequality's positivity can be certified by sums of squares that stay valid
@@ -64,6 +70,25 @@ eight deterministic boxes adjacent to the PR box produces exactly one of them.
   `B₁ = cos φ·σ_z + sin φ·σ_x`. Every behaviour is a mixture of at most nine
   atoms, by Jordan's lemma, the real/imaginary split and Carathéodory. This is a
   first-order formula over ℚ, so it holds verbatim over every real closed field.
+
+  *Proof.*
+  1. **Dilate.** Dilate each party's two binary effects to projections on one
+     common space. For an effect E, use
+     `[[E, √(E(I−E))], [√(E(I−E)), I−E]]` on `ℋ⊕ℋ`, with the isometry
+     `h ↦ (h, 0)`.
+  2. **Split into blocks (Jordan).** Two ±1 observables A₀, A₁ split the space
+     into invariant blocks of dimension at most two. The unitary `A₀A₁` is
+     conjugated to its inverse by A₀, so its eigenvectors pair up. On a
+     two-dimensional block, a real change of basis gives `A₀ = σ_z` and
+     `A₁ = cos θ·σ_z + sin θ·σ_x`. One-dimensional blocks are commuting ±1
+     values.
+  3. **Reduce to atoms.** Expectations depend only on the diagonal blocks of
+     the state, so every behaviour is a mixture of block atoms. Because the
+     observables are real, a complex vector `r + is` contributes the real
+     states `r` and `s`: the cross terms cancel.
+  4. **Bound the number of atoms.** Carathéodory in ℝ⁸ gives at most nine
+     atoms.
+  5. **Converse.** Every atom is a quantum behaviour. ∎
 - **[I3] Extreme sources** (paper, Ch. 4). A slack that is nonnegative at every
   PR box is a nonnegative combination of event probabilities. Otherwise, after
   relabelling outcomes, which preserves Q222, it is negative at the PR box above.
@@ -80,11 +105,44 @@ eight deterministic boxes adjacent to the PR box produces exactly one of them.
   `P(u_c,v_c)ψ_c = 0` and `ψ_cᵀ ∂_u P ψ_c = ψ_cᵀ ∂_v P ψ_c = 0`, where `P` is
   the state matrix of Insight 1. The classification is first-order, so it holds
   over every real closed field.
+
+  *Proof (paper, Ch. 4).*
+  1. **Slacks nonnegative at every PR box.** The no-signalling polytope has 16
+     deterministic and 8 PR vertices. If `f ≥ 0` at all of them, then `f ≥ 0`
+     on the polytope, and Farkas's lemma writes it as a nonnegative combination
+     of outcome probabilities.
+  2. **At most one negative PR box.** Any two PR boxes have a local midpoint,
+     where `f ≥ 0`. So `f` is negative at no more than one of them, and a
+     relabelling makes it the one above.
+  3. **The canonical form.** That PR box and its eight deterministic neighbours
+     `v_i` are affinely independent and span the no-signalling space. So `f` is
+     determined by its nine values there, which gives `d = −f(PR) > 0` and
+     `c_i = f(v_i)/4 ≥ 0`.
+  4. **Extreme rays.** The canonical sources form a closed cone in ℝ⁹ with a
+     compact base, so every source is a combination of at most nine extreme
+     rays. An extreme ray with `d = 0` is an event.
+  5. **Coercive supports.** For `d > 0`, call the support *coercive* when the
+     outer terms of the determinant (Insight 5) grow in every direction of
+     log-angle space. An extreme source with coercive support must attain zero;
+     otherwise opposite small perturbations stay valid. That zero is a contact.
+     It imposes six homogeneous linear equations on the nine coefficients, so
+     extremality leaves at most six positive event weights. The omitted events
+     must be pairwise compatible on the eight-cycle of events, which leaves at
+     least five. Up to the dihedral symmetries of the cycle, the possible
+     patterns are exactly C1 and C2.
+  6. **Noncoercive supports.** These form the two closed faces. ∎
 - **[I4] Closed faces** (paper, Ch. 4, SG11–SG14). On the face `λ = m = 0` the
   parent is a Gram form built from one 3×3 matrix polynomial in `v` (SG12). On
   the face `λ = α = 0` it uses two 3×3 blocks with one free parameter (SG13).
   Both are strictly feasible, and conic duality makes every extreme source of
   these faces a separated sum of squares (SG14).
+
+  *Proof idea.* On each face the parent depends on one angle through a matrix
+  polynomial of low degree. A univariate positive semidefinite matrix
+  polynomial is a Gram form, so validity is an explicit LMI with a strictly
+  feasible point. Duality then writes the parent as `Σ X_ij·Y_ij`, with `X ⪰ 0`
+  over `K_c` and `Y ⪰ 0` over `K_t`, and such a sum is a separated sum of
+  squares: factor X over K_c and Y over K_t. ∎
 - **[I5] The hard lemma 𝒞** (paper, Proof.tex Prop. 4 and the C1/C2 appendices;
   audited in this review). Let `K_c` and `K_t` be any real closed fields
   containing ℝ. For a C1 or C2 source over `K_c` with a contact, the parent
