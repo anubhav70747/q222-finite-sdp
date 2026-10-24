@@ -165,11 +165,16 @@ semidefinite dual matrices. High-precision solves show the cone reaches only
 [`LIFT_EXPERIMENT.md`](LIFT_EXPERIMENT.md).
 
 In four of the seven gap cases the mirror adds nothing, so the missing testing
-functions concern scale rather than symmetry. A next candidate family should add
-cube-root-type functions in both angles, which the existence proof's AM–GM
-certificates use, and be tested on those seven sources first. Quantifier
-elimination terminates in principle, but already the first undecided size,
-N = 9, has 2,025 unknowns.
+functions concern scale rather than symmetry.
+
+**A candidate exact lift.** [`EXACT_LIFT_CANDIDATE.md`](EXACT_LIFT_CANDIDATE.md)
+proposes the sextic Puiseux–Gram lift: one Gram matrix in the fixed basis
+u^{i/6}v^{j/6}ψ, with no charts. With half-powers (k = 2) it is not exact; 9 of
+302 test sources fall short. With sixth roots (k = 6) no tested source falls
+below 0.999 of the validity limit, including every source that defeats the
+earlier candidates. This is numerical evidence for exactness, not a proof. If it
+holds, it gives an explicit lift of Q222, and it reduces the whole theorem to
+one lemma over the reals.
 
 ## Checks in this folder
 
@@ -185,7 +190,8 @@ with SymPy 1.14 (as pinned in the repo), from the script's own folder.
 | `thin-layer/` | TL3 differences, R10.2, TL2, TL5, TL6, and zero value and first jet of both parents at the OP4 contact | `python tl3.py`, `python tl6.py` | all residuals 0 |
 | `tilted-chsh/` | the order-4 projection pencil against its set on a grid, and on random two-qubit behaviours (floating point) | `ruby chsh_check.rb` | 0 mismatches, 0 violations |
 | `lift-experiment/` | exact rational proof that `C_ram + πC_ram ≠ C_can`: an AM–GM validity certificate for a rational source, and an exactly positive semidefinite rational dual that excludes it; plus the high-precision results | `python verify_cert.py ../../../extracted-lifts/canonical-completion/ramified-completion/data/ramified_order49_pencil.json` | 17/17 PASS |
-| `physics/` | identities behind `PEN_AND_PAPER.md`. Landau's identity and the spectrum of I − Ŝ/2; events as product-state projectors; the Thomson flow identity and the effective-resistance test; Cauchy–Binet for adj(T) and det(T); `det(T)·F = (Pψ)ᵀadj(T)(Pψ) + det(P)s²`; which determinant coefficients the CHSH term reaches; a C2 source whose formal C1 image is not positive | `python check6_tsirelson.py`, `check4_thomson.py`, `check3_cauchy_binet.py`, `check12_decomp_sos.py`, `check5_monomials.py`, `check_c2_to_c1_counterexample.py` | all true; counterexample confirmed |
+| `gram-lift/` | the Puiseux–Gram lift `L_k`: standalone checker for d_k/d* and the δ-margin test, the symmetry check, and the k = 2 and k = 6 sweep results over 302 sources | `python gram_lift.py --k 6 --case <name>`, `python symcheck.py` | k = 2: 9 gaps; k = 6: none below 0.999 |
+| `physics/` | identities behind `PEN_AND_PAPER.md`. Landau's identity and the spectrum of I − Ŝ/2; the parity Γ = Y⊗Y that commutes with correlators and anticommutes with marginals (`check7_parity.py`); events as product-state projectors; the Thomson flow identity and the effective-resistance test; Cauchy–Binet for adj(T) and det(T); `det(T)·F = (Pψ)ᵀadj(T)(Pψ) + det(P)s²`; which determinant coefficients the CHSH term reaches; a C2 source whose formal C1 image is not positive | `python check6_tsirelson.py`, `check4_thomson.py`, `check3_cauchy_binet.py`, `check12_decomp_sos.py`, `check5_monomials.py`, `check_c2_to_c1_counterexample.py` | all true; counterexample confirmed |
 
 The repo's own checkers were also run on Python 3.9 with SymPy 1.14, and all
 passed. Three needed a small compatibility shim:
