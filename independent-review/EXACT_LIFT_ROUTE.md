@@ -305,8 +305,11 @@ C2 contact, a [uniform identity](C2_MULTIPLIED_CERTIFICATE.md) writes
 The positive multiplier depends on both source and testing variables, so
 it cannot be cancelled to obtain the affine lift. Independently, the
 [contact scalar](CONTACT_SCALAR_GRAM.md) has at most three squares in the
-fixed span `{1,u,v,uv}`, without a multiplier. Its three couplings to the
-remaining state coordinates still require a uniform completion.
+fixed span `{1,u,v,uv}`, without a multiplier. Its three-by-three Gram is
+positive definite at every finite native C1/C2 contact, including the
+permitted zero-event faces, so its source-only inverse is available.
+The three couplings to the remaining state coordinates still require
+a uniform completion.
 
 The C1 family also needs additional certificates. Two globally valid
 [rational C1 extreme sources](C1_NPA_OBSTRUCTION.md), including one with
