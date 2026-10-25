@@ -285,6 +285,22 @@ This is a loss of scale, not of positivity:
   vanishes and the weight `D` of event (−+|11) diverges. So this end runs into
   the closed face `A = 0` of C2.
 
+`B₁` is one minor of a larger forced structure, with a physical reading. At
+`u → ∞`, that is `θ = π`, Alice's two observables are opposite and so jointly
+measurable. There the leading coefficient of the C2 parent is
+
+`[u²]F = 4C(1+v²)W² + 4n(1+v²)X² + K(vY − Z)² + 4A(1+v²)Y² + (4D+2d)(W + vX)²`.
+
+At `A = 0` it vanishes on the whole curve `W = X = 0, Z = vY`: the Bell
+functional is then tight on a continuum of classical strategies, not only at the
+contact. Only pairs of basis elements on the `θ = π` face contribute to `[u²]F`.
+So on the span of the moment vectors of that curve, every Gram certificate
+equals `4A(1+v²)` along the curve, and by Cauchy–Schwarz it is `O(A)`
+throughout the span. For k = 6 the span is 7-dimensional (`v^{j/6}Y`,
+`j = 0, …, 6`, with `vZ` tied to `vY`). The a → 0 end therefore has at least 7
+directions whose Gram weight vanishes like `a²`, for every certificate, and
+`B₁` is the 2×2 minor at `j = 6`.
+
 **Not settled.** After the three forced directions are scaled out, with
 diagonal weights `c_k·a²`, the next margin at P2 still decays, roughly like
 `0.53·a^{2/3}` between `a = 3·10⁻²` and `3·10⁻³`. About 11–14 directions are

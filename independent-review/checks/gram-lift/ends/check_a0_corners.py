@@ -33,6 +33,14 @@ assert sp.simplify(rho(B1) - 4*A/(K + 4*A)) == 0
 assert sp.simplify(rho(B2) - (d + 2*n)/(2*D + d + 2*n)) == 0
 print('PASS: B1, B2 and their determinants; on C2 rho1 = 4A/(K+4A), rho2 = (d+2n)/(2D+d+2n)')
 
+# B1 sits inside the theta = pi face (u -> infinity): on C2 its leading coefficient vanishes, at A = 0,
+# on the whole curve W = X = 0, Z = vY, and equals 4A(1 + v^2)Y^2 there.
+top = sp.Poly(sp.expand(gl.form(gl.PAR).subs(c2)), u).coeff_monomial(u**2)
+assert sp.expand(top - (4*C*(1 + v**2)*W**2 + 4*n*(1 + v**2)*X**2 + K*(v*Y - Z)**2
+                        + 4*A*(1 + v**2)*Y**2 + (4*D + 2*d)*(W + v*X)**2)) == 0
+assert sp.expand(top.subs({W: 0, X: 0, Z: v*Y}) - 4*A*(1 + v**2)*Y**2) == 0
+print('PASS: theta = pi face [u^2]F; at A = 0 it vanishes on the curve W = X = 0, Z = vY')
+
 # native C2 chart (c2_short.tex:275-292, as in ../../physics/check_c2_to_c1_counterexample.py), d = 1
 a = sp.symbols('a', positive=True)
 def c2_native(c, b, t, r):
