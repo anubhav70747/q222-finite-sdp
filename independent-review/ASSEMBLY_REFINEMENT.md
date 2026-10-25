@@ -29,6 +29,34 @@ affine inequality, and equals Q222 by separation. Join the finite SDP blocks
 using the same eight coordinates `q`; their auxiliary variables remain
 independent. This gives one finite lift. ∎
 
+The closure in the hypothesis can be omitted when the finitely many
+certificate cones are closed in Bell-coefficient space. There is a direct
+bound on every valid summand. Write
+
+`f = t + b·χ`, where `χ=(A0,A1,B0,B1,A0B0,A0B1,A1B0,A1B1)`.
+
+Average over the 16 deterministic assignments of four independent signs.
+The constant and the eight distinct sign monomials are orthonormal, so
+
+`t = E f(χ)`, and `b_i = E[χ_i f(χ)]`.
+
+Nonnegativity at these assignments gives `|b_i|≤t`. If a sequence of sums
+converges, every summand's constant lies between zero and the total constant;
+all its other coefficients are therefore bounded too. A common subsequence
+converges within the respective closed cones. Their sum is the desired
+limit. This argument applies outside a single nonnegative canonical
+coordinate orthant. Closedness of a parametrizing PSD cone alone would
+not suffice: its image in Bell-coefficient space must be closed.
+
+For a fixed NPA word list, that image is closed by a trace bound. Choose
+distinct reduced words modulo the universal involution and cross-party
+commutation relations. The identity coefficient of `w_i†w_j` is
+`δ_ij`; hence exact coefficient matching in `W†GW=f` gives
+`tr G=t`. A convergent sequence of certified slacks has bounded PSD
+Grams in this one fixed space. A subsequence preserves positivity and
+every coefficient equation, including the unwanted-word zeros. This
+proves closedness without a numerical margin or a contact restriction.
+
 It suffices to prove the cone equality on all extreme rays of a compact
 normalized base, including their limiting faces. Every additional source
 must be certified at **all** independent measurement angles and states.

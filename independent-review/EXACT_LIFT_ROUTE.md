@@ -136,13 +136,34 @@ multiple of `c`. This is the definition of an extreme ray, applied to each
 summand and the sum of the others. Consequently, a sum of sound certificate
 cones covers this ray only if at least one summand cone covers the ray.
 
-For finitely many closed cones in the nonnegative canonical source orthant,
-the sum is closed. Indeed, if their sums converge, each summand is bounded
-coordinatewise by the total. Subsequence limits remain in the respective
-cones and give a decomposition of the limit. Thus closure does not remove
-the extreme-ray requirement in this setting. This argument uses canonical
-nonnegative coordinates; it is not an assertion that arbitrary projected
-cone sums are closed.
+For the positive-parameter equal-angle C2 sources, extremality also holds
+in the full cone of quantum-valid affine slacks. The eight canonical event
+coefficients of any valid slack are nonnegative: each is one quarter of
+the slack's value at its corresponding deterministic facet vertex. Only
+the core coefficient `d` could have either sign. At a tight quantum
+strategy with `H<0`, however, a valid summand cannot have `d<0`:
+its core term would be strictly positive and its event terms nonnegative.
+Every summand therefore lies in the same nonnegative canonical cone,
+where extremality has already been proved.
+
+The required strict inequality holds throughout that contact family.
+Its state is proportional to `(1,−sqrt(rx),sqrt(rx),1)`, so
+`p_A=rx/[2(1+rx)]>0`. Since `A>0` and the slack vanishes,
+`H=−4Σ a_i p_i≤−4A p_A<0`. This includes `n=0`.
+Thus the extreme-ray requirement also applies when the added NPA cone is
+allowed arbitrary Bell coefficients. Limits where `H=0` require their
+own argument.
+
+The sum of finitely many closed, globally sound certificate cones is closed,
+even outside one nonnegative canonical orthant. Write a slack as
+`f=t+b·q`. Averaging over the 16 deterministic assignments gives
+`|b_i|≤t`: its constant is the average of its nonnegative values, and each
+other coefficient is their signed average. If a sequence of sums converges,
+each summand has a bounded constant and hence bounded coefficients.
+Subsequence limits give the required decomposition. Thus closure does not
+remove the extreme-ray requirement. The
+[assembly proof](ASSEMBLY_REFINEMENT.md) also proves closedness of the fixed
+NPA source cone directly from `tr G=t`.
 
 There is a related test before any proposed decomposition: if a valid slack
 vanishes at a strategy, every valid summand vanishes there too. Their values
