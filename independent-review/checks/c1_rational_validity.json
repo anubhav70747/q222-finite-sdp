@@ -1,0 +1,221 @@
+{
+  "checks": {
+    "Pauli_vs_full_parent_column_0": true,
+    "Pauli_vs_full_parent_column_1": true,
+    "Pauli_vs_full_parent_column_2": true,
+    "Pauli_vs_full_parent_column_3": true,
+    "Pauli_vs_full_parent_column_4": true,
+    "Pauli_vs_full_parent_column_5": true,
+    "Pauli_vs_full_parent_column_6": true,
+    "Pauli_vs_full_parent_column_7": true,
+    "Pauli_vs_full_parent_column_8": true,
+    "AMGM_product_M1": true,
+    "AMGM_product_M2": true,
+    "interior_native_dictionary_and_all_gaps": true,
+    "interior_four_kernel_and_two_stationary_identities": true,
+    "interior_full_determinant_AMGM_identity": true,
+    "interior_origin_PSD_diagonal": true,
+    "interior_full_Bell_contact_rank_eight": true,
+    "interior_source_in_full_contact_nullspace": true,
+    "boundary_native_dictionary_and_all_gaps": true,
+    "boundary_four_kernel_and_two_stationary_identities": true,
+    "boundary_full_determinant_AMGM_identity": true,
+    "boundary_origin_PSD_diagonal": true,
+    "boundary_full_Bell_contact_rank_eight": true,
+    "boundary_source_in_full_contact_nullspace": true
+  },
+  "number_of_checks": 23,
+  "sources": [
+    {
+      "case": "interior",
+      "active_order": [
+        "d",
+        "m",
+        "C",
+        "A",
+        "D",
+        "alpha",
+        "beta"
+      ],
+      "active_source": [
+        "1",
+        "20/29",
+        "12/29",
+        "13/58",
+        "51/58",
+        "3/29",
+        "3/58"
+      ],
+      "contact_state": [
+        "1",
+        "-1/2",
+        "1/2",
+        "1"
+      ],
+      "native_gaps": {
+        "E": "3/4",
+        "Q": "3/4",
+        "M": "1/2",
+        "J": "1/2",
+        "B5": "51/32",
+        "Bbeta": "3/16"
+      },
+      "determinant_prefactor": "18432/707281",
+      "determinant_identity": "det P = prefactor*(1+u^2)^2*(1+v^2)^2*G(u^2,v^2,4*v^2)",
+      "full_Bell_column_order": [
+        "1",
+        "A0",
+        "A1",
+        "B0",
+        "B1",
+        "E00",
+        "E01",
+        "E10",
+        "E11"
+      ],
+      "row_order": [
+        "four normalized operator-kernel rows",
+        "u scalar jet",
+        "v scalar jet",
+        "v_lambda",
+        "v_n"
+      ],
+      "first_eight_columns_minor": "-576/125",
+      "claimed_minor_matches": true,
+      "full_Bell_source": [
+        "195/58",
+        "-19/58",
+        "-16/29",
+        "17/29",
+        "5/58",
+        "-21/29",
+        "35/58",
+        "-28/29",
+        "-60/29"
+      ],
+      "H_at_normalized_contact": "-8/25",
+      "origin_matrix": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "144/29",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "234/29",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "12/29"
+        ]
+      ]
+    },
+    {
+      "case": "boundary",
+      "active_order": [
+        "d",
+        "m",
+        "C",
+        "A",
+        "D",
+        "alpha",
+        "beta"
+      ],
+      "active_source": [
+        "1",
+        "5/6",
+        "3/10",
+        "1/3",
+        "2",
+        "1/13",
+        "0"
+      ],
+      "contact_state": [
+        "1",
+        "-1/2",
+        "3/8",
+        "1"
+      ],
+      "native_gaps": {
+        "E": "3/4",
+        "Q": "13/16",
+        "M": "3/8",
+        "J": "1/4",
+        "B5": "7/4",
+        "Bbeta": "0"
+      },
+      "determinant_prefactor": "64/585",
+      "determinant_identity": "det P = prefactor*(1+u^2)^2*(1+v^2)^2*G(u^2,v^2,4*v^2)",
+      "full_Bell_column_order": [
+        "1",
+        "A0",
+        "A1",
+        "B0",
+        "B1",
+        "E00",
+        "E01",
+        "E10",
+        "E11"
+      ],
+      "row_order": [
+        "four normalized operator-kernel rows",
+        "u scalar jet",
+        "v scalar jet",
+        "v_lambda",
+        "v_n"
+      ],
+      "first_eight_columns_minor": "-273/100",
+      "claimed_minor_matches": true,
+      "full_Bell_source": [
+        "886/195",
+        "-16/39",
+        "-22/15",
+        "19/30",
+        "85/78",
+        "-5/6",
+        "15/26",
+        "-4/5",
+        "-10/3"
+      ],
+      "H_at_normalized_contact": "-218/765",
+      "origin_matrix": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "16/3",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "188/15",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "4/13"
+        ]
+      ]
+    }
+  ],
+  "scope": "Direct global quantum validity and full nine-coordinate Bell-polar extremality of two sources; universal seven-root separator excluded from this audit."
+}

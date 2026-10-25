@@ -220,6 +220,13 @@ evaluation functionals alone likewise do not exhaust this dual cone.
 
 ## The shortest remaining target
 
+The C1 family also needs additional certificates. Two globally valid
+[rational C1 extreme sources](C1_NPA_OBSTRUCTION.md), including one with
+`beta=0`, violate a necessary linear inequality for the seven-root NPA
+Gram. Its integer dual matrix is positive definite; both global validity
+proofs reduce to AM--GM. Thus `1+AB` alone cannot supply the C1 part of
+the construction, even on a strict native neighborhood.
+
 For maximally entangled C2 sources, a change of contact coordinates gives
 an [exact order-four source pencil at every fixed pair of parameters](C2_FIXED_FIBERS.md).
 Its nontrivial block is only two-by-two. Every source in that cone is a
