@@ -299,6 +299,15 @@ evaluation functionals alone likewise do not exhaust this dual cone.
 
 ## The shortest remaining target
 
+Two explicit constructions now isolate the state-matrix step. At every native
+C2 contact, a [uniform identity](C2_MULTIPLIED_CERTIFICATE.md) writes
+`det(H3) F` as at most 183 squares from 676 fixed third-root features.
+The positive multiplier depends on both source and testing variables, so
+it cannot be cancelled to obtain the affine lift. Independently, the
+[contact scalar](CONTACT_SCALAR_GRAM.md) has at most three squares in the
+fixed span `{1,u,v,uv}`, without a multiplier. Its three couplings to the
+remaining state coordinates still require a uniform completion.
+
 The C1 family also needs additional certificates. Two globally valid
 [rational C1 extreme sources](C1_NPA_OBSTRUCTION.md), including one with
 `beta=0`, violate a necessary linear inequality for the seven-root NPA
