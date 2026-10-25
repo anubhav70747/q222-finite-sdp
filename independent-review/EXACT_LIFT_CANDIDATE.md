@@ -234,6 +234,27 @@ exactly. A complete proof would combine three pieces:
 
 This is substantial work, and it is where the paper's 31,000 lines also live.
 
+**The near-commuting end is a singular perturbation.** Along the C2 family with
+Bob's contact angle `v_c = a·c → 0`, the native formulas give the following
+asymptotics:
+
+- the weights `C` and `D` grow like `a⁻²`, and `A` vanishes like `a²`;
+- `n`, `m` and `α` tend to finite limits;
+- the contact amplitudes `W_c` and `Y_c` grow like `a⁻¹`.
+
+After rescaling to the contact, the leading order `a⁻⁴` of the parent is a
+single square, `(C₀ + D₀)(cb)²(u′W′ − Y′)²`, where `C₀ = lim a²C` and
+`D₀ = lim a²D`. It vanishes at the contact. So the limit is not a
+nondegenerate one-angle problem: it collapses to rank one, and every direction
+transverse to it has to be certified at lower orders in `a`.
+
+Handling the ends of the contact families therefore needs a multi-scale
+analysis. Near each end, find the exponents with which the Gram entries must
+scale, then check that the rescaled limit problem is strictly feasible. This is
+the systematic, tropical version of the companion's chart analysis. It looks
+mechanizable, but it covers many ends: `a → 0`, `r → 0`, `r → 1`, `c → ∞`,
+and their combinations.
+
 So the conjecture now rests on a single nondegeneracy property of the Gram
 certificates, (ND), plus the closed faces. (ND) asks that no accidental
 degeneracy appears as one moves through each connected family of contact
