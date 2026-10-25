@@ -166,6 +166,85 @@ vanishes at a strategy, every valid summand vanishes there too. Their values
 are nonnegative and sum to zero. A generic positive NPA certificate cannot
 therefore be subtracted from a tight inequality while preserving validity.
 
+## Only the strict contact families need new admission proofs
+
+The finite boundary cases follow from the open families once the certificate
+cones are fixed and closed. This removes the need to reconstruct a new lift
+at each third omission.
+
+Here is the source reduction behind that statement. The cleared determinant
+has the form
+
+`det P = 16 D_u² D_v² u²v² L(u²,v²)`,
+
+`L(U,V)=h+Σ_e q_e U^{e₁}V^{e₂}`, with `q_e≥0` and
+`e∈{−1,0,1}²\{0}`. The coefficients and the positive three-state block are
+given in [SG3–SG6](../latex/chapters/04_geometry.tex).
+If zero lies inside the active exponent polygon, the logarithmic Laurent
+sum is coercive. An extreme source then has a finite zero: a strictly positive
+minimum permits small opposite source perturbations while preserving all
+coefficients' signs and global positivity.
+
+At a zero, the four state-kernel equations and two angular derivatives are
+six homogeneous linear source equations. More than six positive event
+weights would leave a nonradial perturbation preserving them. Such a
+perturbation remains globally valid: stationarity gives
+`Σ_e q_e U_c^{e₁}V_c^{e₂} e=0`, and weighted AM–GM makes `L` nonnegative
+at every independent test. Hence an extreme contact has at most six
+positive event weights.
+
+The lower bound comes from the eight event cycle
+`(λ,D,C,A,α,m,β,n)`. The product formulas in SG6 show that a noncoercive
+support omits a pair of cyclic distance three or four. Physical relabeling
+puts it on one of the two exact closed faces. Otherwise omitted events are
+pairwise compatible, extend to a deterministic assignment, and number at
+most three. The surviving extreme contacts therefore have five or six
+positive event weights: precisely C1 or C2 and their third-omission faces.
+
+To open a third omission, fix the other event weights and replace the missing
+weight by `ε>0`. Normalize the contact state by `Z=1`, put
+`z=(W,X,Y,u,v)`, and solve `(∇_zF,F)=0` for `(z,d)`. At the original
+contact the Jacobian is
+
+```
+[ Hess_z F    ∂_d∇_z F ]
+[     0         F_H    ].
+```
+
+The contact is nondegenerate: `Hess_z F≻0` by the positive state block and
+the angular Hessian `Σ_e q_e U_c^{e₁}V_c^{e₂} eeᵀ≻0`.
+The core matrix is nonsingular at noncommuting angles. If every positive event
+row vanished on the contact state, the full kernel equation would force the
+core to annihilate that state. Hence some event contributes, and `F_H<0`
+follows from `F=0` and `d>0`. These facts are proved in
+SG17–SG21. The Jacobian is invertible, so the
+implicit-function theorem gives an analytic branch of strict contacts with
+`d>0` and positive angles. Stationarity proves their global validity as
+above. This opens `D=0` or `β=0` in C1, or `n=0` in C2, while retaining
+the family's two prescribed omissions and an actual contact throughout.
+
+Consequently, a fixed finite union of closed, globally sound certificate
+cones covering **all strict six-event C1 and C2 contacts** covers these
+finite boundary contacts as well. Take the limit in one cone along a
+subsequence. Together with the event and closed-face cones, the extreme-source
+classification then supplies every canonical source.
+
+Escaping contacts also have a short characterization. For convergent normalized
+sources with `d` bounded away from zero and coercive limiting support, there
+are `δ,a>0` such that
+
+`Σ_e q_e exp(e·t) ≥ δ exp(a‖t‖)`.
+
+At a contact this sum equals `−h`, which stays bounded. Thus both angles
+stay bounded above and away from zero; the positive state block also bounds
+the state with `Z=1`. An escaping sequence must approach an event combination
+or one of the noncoercive closed faces.
+
+This reduction needs pointwise admission throughout the two strict families
+in **one fixed finite collection of cones**. It requires no uniform positive
+Gram margin as a source approaches a boundary. A separate finite cone chosen
+for each source would not suffice.
+
 ## One fixed dual problem for each contact family
 
 At an open native contact, first remove the 42 features excluded by the
