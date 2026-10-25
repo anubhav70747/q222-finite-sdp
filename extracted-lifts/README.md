@@ -2,12 +2,12 @@
 
 **No file in this directory is an evaluated exact lift of the full eight-coordinate Q222 set.**
 
-The [quadratic C2 family](c2-quadratic-family/) has an exact source cone and
-dual block of total PSD order three. Every positive-parameter source is an
-extreme canonical ray outside NPA `1+AB`; adding the new block therefore
-strictly sharpens that relaxation. The construction includes all parameters
-`0≤z≤2/5`, both endpoint limits, a short AM–GM validity proof, and exact
-coefficient checks. Coverage of the other contact sources remains unresolved.
+The [equal-angle C2 cone](c2-equal-angle-cone/) covers two independent contact
+parameters with total PSD order seven. It contains the earlier
+[order-three curve](c2-quadratic-family/) and strictly sharpens NPA `1+AB`.
+The source and behavior pencils are explicit rational matrices; their proof
+reduces every source to one contact ray plus two event terms. All finite
+endpoints are included. General C1/C2 coverage remains unresolved.
 
 The [contact completion](canonical-completion/contact-completion/) now covers
 the singular contact for the native C2 source envelope. The two proofs retain

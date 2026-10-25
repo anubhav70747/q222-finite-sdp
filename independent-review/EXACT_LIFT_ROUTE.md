@@ -5,14 +5,17 @@ already proves and add certificates for the boundary it misses. The new
 mathematics belongs in that second step. The final lift joins the corresponding
 finite PSD blocks on the same eight correlation coordinates.
 
-The [quadratic C2 family](../extracted-lifts/c2-quadratic-family/) now gives
-a complete example of this construction. Every positive-parameter source
-is an extreme canonical ray outside `1+AB`. Yet its entire continuous family
-has an exact block of total PSD order three. A positive rescaling makes the
-source coefficients quadratic, so two interval moments and one localizing
-inequality replace the large state-polynomial Gram. Four AM–GM terms prove
-global quantum validity; a two-atom formula proves the source lift exactly.
-The dual block strictly sharpens `1+AB`.
+The [equal-angle C2 cone](../extracted-lifts/c2-equal-angle-cone/) now covers
+two independent contact parameters with an exact order-seven block.
+Its source matrices are `[[m,A−m],[A−m,C]]` and `[[D,A−D],[A−D,α]]`,
+with `A−m,A−D,m+D−A≥0`, `d=4A−2m−2D`, `n=m+D−A` and `λ=β=0`.
+Every feasible source decomposes into one tight source and the nonnegative
+excesses of `C` and `α`. Four AM–GM terms prove validity at every test.
+
+This cone includes the [quadratic curve](../extracted-lifts/c2-quadratic-family/),
+whose sources lie outside `1+AB`. The order-seven block therefore strictly
+sharpens `1+AB`; there is no need to append the contained order-three curve
+block separately. Both constructions avoid the large state-polynomial Gram.
 
 ## A concrete starting relaxation
 
@@ -41,7 +44,7 @@ successively larger lists; see [Navascués, Pironio and Acín](https://arxiv.org
 | Positive event rays | Event-projector squares in `1+AB` | None |
 | CHSH and one-sided tilted CHSH | Exact SOS in `1+AB` | Retain globally; these familiar slacks cannot contribute to the native contact sources below |
 | The two canonical closed faces | SG12: one order-6 Gram; SG13: two order-3 Grams | Retain their finite relabeling orbits |
-| The quadratic C2 curve, `0<z≤2/5` | Exact order-3 source and dual blocks; every positive-parameter ray lies outside `1+AB` | Retain its finite physical relabeling orbits |
+| Equal-angle C2 contacts, two independent parameters | Exact order-7 source and behavior pencils, including the NPA-hard quadratic curve | Retain finite physical relabeling orbits; the curve block is already included |
 | Open C1/C2 contact sources | Four exact sixth-root certificates; constant coefficient rank | Prove admission of every source left by the retained cones |
 | Zero-weight limits of admitted contacts | Closedness of the fixed sixth-root cone | Establish admission before taking the limit |
 | The R1 contact cap and Bob complement | Exact regional certificates | Cover the remaining tests before using this as a global cone |
@@ -191,12 +194,11 @@ evaluation functionals alone likewise do not exhaust this dual cone.
 
 ## The shortest remaining target
 
-The coefficient-curve construction shows that a missing NPA family can have
-a much smaller direct source lift than its full state-polynomial Gram.
-The next useful extension must cover a larger contact family uniformly;
-additional isolated examples do not establish that coverage. In particular,
-the new curve's order-three representation does not settle the remaining
-independently varying C1/C2 source parameters.
+The direct source-cone construction now covers a whole two-parameter
+surface of extreme rays. The next extension must retain further independent
+contact parameters, including unequal measurement angles and changes in
+Schmidt coefficients. The order-seven cone does not yet cover those
+general C1/C2 sources.
 
 For the sixth-root route, prove `μσ(c)≥0` for every still-required C1/C2 source.
 Strict positivity would give a convenient continuation proof, but it is not

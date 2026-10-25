@@ -10,9 +10,11 @@ For the current construction route, read
 [`EXACT_LIFT_ROUTE.md`](EXACT_LIFT_ROUTE.md): a fixed NPA baseline, the
 seven-root reduction forced by two classical zeros, the existing closed-face
 pencils, and the precise dual inequality still needed for the contact sources.
-The new [quadratic C2 family](../extracted-lifts/c2-quadratic-family/) supplies
-an exact order-three block for a continuous family of extreme sources that
-`1+AB` misses, with complete elementary proofs and exact reproduction code.
+The new [equal-angle C2 cone](../extracted-lifts/c2-equal-angle-cone/) covers
+two independent contact parameters with total PSD order seven. It contains
+the earlier order-three curve, whose extreme sources lie outside `1+AB`.
+Both source and behavior matrices have complete elementary proofs and exact
+reproduction code.
 
 The proof sources under `latex/` were reviewed as they stand at commit `ee85fd1`;
 they are unchanged from the snapshot the review started on. Three folders under

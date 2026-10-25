@@ -1,0 +1,68 @@
+{
+  "source_order": [
+    "d",
+    "lambda",
+    "n",
+    "m",
+    "C",
+    "A",
+    "D",
+    "alpha",
+    "beta"
+  ],
+  "native_surface_specialization_exact": true,
+  "linear_relations_exact": true,
+  "both_surface_determinants_zero": true,
+  "inverse_contact_parameters_exact": true,
+  "physicality_domain_identity": "1-r-x-3*r*x = 4*A*(m+D-A)/((A+m)*(A+D))",
+  "C_axis_limit": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "1",
+    "0",
+    "0",
+    "0",
+    "0"
+  ],
+  "alpha_axis_limit": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "1",
+    "0"
+  ],
+  "axis_path_native_domain_gap": "e-e^2+3*e^3/4 > 0 for 0<e<1",
+  "strict_source_point": {
+    "d": "1",
+    "n": "1/2",
+    "m": "3/4",
+    "C": "1",
+    "A": "1",
+    "D": "3/4",
+    "alpha": "1",
+    "lambda": "0",
+    "beta": "0"
+  },
+  "strict_matrix_determinants": [
+    "11/16",
+    "11/16"
+  ],
+  "strict_scalar_values": [
+    "1/4",
+    "1/4",
+    "1/2"
+  ],
+  "dual_identity_exact": true,
+  "behavior_pairing_coefficients_exact": true,
+  "primal_total_PSD_order": 7,
+  "dual_total_PSD_order": 7,
+  "dual_auxiliary_count": 4,
+  "no_solver_or_numerical_sweep": true,
+  "scope": "Closed hull of the a=b_source=1, t_source=1-r native C2 surface; not full C2 or full Q222."
+}
