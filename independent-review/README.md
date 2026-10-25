@@ -30,6 +30,11 @@ twelve free source coefficients.
 For C1, a [triangle inequality](C1_POLYNOMIAL_OBSTRUCTION.md) excludes
 ordinary polynomial SOS on a nonempty open set of strict native sources.
 Its rational counterexample has all retained event coefficients positive.
+The [common-multiplier obstruction](NATIVE_MULTIPLIER_OBSTRUCTION.md)
+goes further: one fixed separable polynomial multiplier cannot cover both
+native families. On all physical relabelings, even a nonseparable multiplier
+positive at the commuting origin fails. Thus a fixed rational testing span
+regular there cannot complete the native families.
 
 The [unequal-angle equations](C2_CONTACT_GEOMETRY.md) expose an additional
 fourth-degree contact relation and two exact obstructions to simpler

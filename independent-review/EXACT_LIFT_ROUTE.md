@@ -328,6 +328,16 @@ An exact strict native source violates it, excluding ordinary polynomial
 SOS on a nonempty open part of C1 as well. Neither obstruction applies
 directly to fractional powers on a positive testing chart.
 
+A [tight-contact decomposition](NATIVE_MULTIPLIER_OBSTRUCTION.md) also
+transfers the doubly tilted CHSH multiplier obstruction to the native
+families. It excludes a common fixed separable polynomial multiplier for
+both representative families, and any fixed polynomial multiplier positive
+at the commuting origin for all their physical relabelings. In particular,
+fixed rational angular spans regular at that origin cannot supply universal
+native coverage. The proof retains a finite noncommuting contact throughout
+the source decomposition, so it needs no polynomial-SOS representation of
+the two closed faces. Fractional testing functions remain outside its scope.
+
 The C1 family also needs additional certificates. Two globally valid
 [rational C1 extreme sources](C1_NPA_OBSTRUCTION.md), including one with
 `beta=0`, violate a necessary linear inequality for the seven-root NPA
