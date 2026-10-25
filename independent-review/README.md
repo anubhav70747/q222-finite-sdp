@@ -40,6 +40,10 @@ the fixed 36-feature candidate on an open part of strict native C2.
 A rational contact and 90 integer moments give an exact positive
 compressed dual with negative full-parent pairing. The sixth-root
 admission problem remains open.
+The [fractional-feature analysis](SIXTH_ROOT_FEATURES.md) separates the scalar
+Motzkin limit, which already admits half-powers, from the full state-matrix
+problem. A separate exact biquadratic example shows why retaining thirds
+and halves need not replace all sixth-root functions.
 
 The [unequal-angle equations](C2_CONTACT_GEOMETRY.md) expose an additional
 fourth-degree contact relation and two exact obstructions to simpler
