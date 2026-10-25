@@ -22,6 +22,16 @@ characterizations. An [order-six curve cone](../extracted-lifts/c2-unequal-angle
 has explicit source and behavior pencils and an elementary three-atom proof.
 The full unequal-angle hull remains open in this construction.
 
+The [fixed-fiber construction](C2_FIXED_FIBERS.md) now gives an order-four
+source pencil for each fixed parameter pair in the maximally entangled C2
+family. The [full-family obstruction](C2_MAXIMAL_NPA_OBSTRUCTION.md) proves
+that every finite native contact in that family requires certificates beyond
+`1+AB`, including unequal angles and `n=0`. The
+[C1 obstruction](C1_NPA_OBSTRUCTION.md) and
+[partially entangled C2 obstruction](C2_NONMAXIMAL_NPA_OBSTRUCTION.md)
+identify further sources that the additional cones must cover. The remaining
+construction must supply a fixed finite set of blocks for these whole families.
+
 The proof sources under `latex/` were reviewed as they stand at commit `ee85fd1`;
 they are unchanged from the snapshot the review started on. Three folders under
 `extracted-lifts/canonical-completion/` (`uniform-contact`, `contact-completion`,

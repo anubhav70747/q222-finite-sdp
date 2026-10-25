@@ -1,0 +1,82 @@
+{
+  "seven_roots_span_two_deterministic_evaluation_kernels": true,
+  "Pauli_action_T_and_scaled_T0_exact": true,
+  "pivot_columns_one_based": [
+    1,
+    2,
+    3,
+    5
+  ],
+  "scaled_pivot_determinant": "-2*r^2*(a+1)*K/(U*V)",
+  "unscaled_pivot_determinant": "-32*r^2*z^2*(a+1)*K/(U*V)",
+  "all_twelve_T0N_entries_zero": true,
+  "free_kernel_rows_one_based": [
+    4,
+    6,
+    7
+  ],
+  "forbidden_word_order": [
+    "B0B1",
+    "A0A1",
+    "A0A1B0",
+    "A0A1B0B1",
+    "A0A1B1",
+    "A0A1B1B0"
+  ],
+  "all_six_displayed_word_equations_have_exact_normalization": true,
+  "S_coordinate_order": [
+    "S11",
+    "S22",
+    "S33",
+    "S12",
+    "S13",
+    "S23"
+  ],
+  "determinant_reduction": "det(M)=-N31*det(M4)",
+  "reduced_row_factors": [
+    "2/(r*(a + 1)**2*(z + 1)**2*(a**2*z + 1)*(a*r*z + a + r - 1))",
+    "2/(r*(a + 1)**2*(z + 1)*(a**2*z + 1)**2*(a*r*z + a + r - 1))",
+    "2/(r*(a + 1)*(z + 1)*(a**2*z + 1)**2*(a*r*z + a + r - 1))",
+    "2/((a + 1)*(a**2*z + 1)*(a*r*z + a + r - 1))"
+  ],
+  "reduced_column_factors": [
+    "(a + r)*(z + 1)*(a*r*z - 1)",
+    "(r - 1)*(a**2*z + 1)**2*(r*z + 1)",
+    "a*r*z + a + r - 1",
+    "(a**2*z + 1)*(a*r*z + a + r - 1)"
+  ],
+  "reduced_polynomial_matrix": [
+    [
+      "a**3*r*z**2 + a**3*r*z + a**3*z + a**3 + a**2*r**2*z**2 + a**2*r**2*z + a**2*r*z + a**2*r - a*r**2*z**2 - a*r**2*z + a*r*z**2 + a*r*z + r*z + r - z - 1",
+      "a*r**2*z - 2*a*r*z - a - r**2*z - 2*r + 1",
+      "a**4*r**2*z**3 + a**4*r**2*z**2 - a**4*r*z**3 + a**4*r*z - a**4*z**2 - a**4*z + a**3*r**3*z**3 + a**3*r**3*z**2 - 2*a**3*r**2*z**3 - a**3*r**2*z**2 + a**3*r**2*z - 3*a**3*r*z**2 - 3*a**3*r*z - a**3*z - a**3 - 2*a**2*r**3*z**3 - 2*a**2*r**3*z**2 + 2*a**2*r**2*z**3 - 2*a**2*r**2*z - a**2*r*z**3 - a**2*r*z**2 - a**2*r*z - a**2*r + a*r**3*z**3 + a*r**3*z**2 - a*r**2*z**3 + a*r**2*z**2 + 2*a*r**2*z - 3*a*r*z**2 - 3*a*r*z + a*z**2 + a*z - r**2*z**2 - r**2*z + r*z**2 - r + z + 1",
+      "-a**2*r**3*z**2 + 3*a**2*r**2*z**2 - a**2*r*z**2 + 3*a**2*r*z + a**2*r - a**2*z + 2*a*r**3*z**2 - 3*a*r**2*z**2 + 3*a*r**2*z + 2*a*r*z**2 - 2*a*r*z + 2*a*r + a*z - a - r**3*z**2 - 3*r**2*z + r*z**2 + 3*r*z - r + 1"
+    ],
+    [
+      "-a**3*r**2*z**2 - a**3*r**2*z + 2*a**3*r*z**2 + 2*a**3*r*z + a**3*z + a**3 + a**2*r**2*z**2 + a**2*r**2*z + 2*a**2*r*z + 2*a**2*r - a**2*z - a**2",
+      "-a**3*r*z - a**3 - a**2*r**2*z - a**2*r + a*r**2*z - a*r*z - r + 1",
+      "a**6*r*z**3 + a**6*r*z**2 + 2*a**5*r*z**3 + 2*a**5*r*z**2 - a**4*r**3*z**3 - a**4*r**3*z**2 + 3*a**4*r**2*z**3 + 3*a**4*r**2*z**2 - a**4*r*z**3 + 2*a**4*r*z**2 + 3*a**4*r*z - a**4*z**2 - a**4*z + 2*a**3*r**3*z**3 + 2*a**3*r**3*z**2 - 3*a**3*r**2*z**3 + 3*a**3*r**2*z - 2*a**3*r*z**2 - 2*a**3*r*z + a**3*z**2 - a**3 - a**2*r**3*z**3 - a**2*r**3*z**2 - 3*a**2*r**2*z**2 - 3*a**2*r**2*z + 3*a**2*r*z**2 + 2*a**2*r*z - a**2*r + a**2*z + a**2 + 2*a*r*z + 2*a*r + r*z + r",
+      "a**4*r**2*z**2 - a**4*r*z**2 + a**4*r*z - a**4*z + a**3*r**3*z**2 - 2*a**3*r**2*z**2 + a**3*r**2*z - 3*a**3*r*z - a**3 - 2*a**2*r**3*z**2 + 2*a**2*r**2*z**2 - 2*a**2*r**2*z - a**2*r*z**2 - a**2*r + a*r**3*z**2 - a*r**2*z**2 + 2*a*r**2*z - 3*a*r*z + a*z - r**2*z + r*z - r + 1"
+    ],
+    [
+      "-a**3*r*z**2 - a**3*r*z - a**2*r**2*z**2 - a**2*r**2*z + a**2*z + a**2 + a*r*z + a*r",
+      "-a**2*r*z - a**2 - a*r**2*z + a*r*z - a*r + a + r - 1",
+      "-a**4*r**2*z**3 - a**4*r**2*z**2 + a**4*r*z**3 + a**4*r*z**2 - a**3*r**3*z**3 - a**3*r**3*z**2 + 2*a**3*r**2*z**3 + 2*a**3*r**2*z**2 + 2*a**3*r*z**2 + 2*a**3*r*z - a**3*z**2 - a**3*z + a**2*r**3*z**3 + a**2*r**3*z**2 + 2*a**2*r**2*z**2 + 2*a**2*r**2*z - 2*a**2*r*z**2 - 2*a**2*r*z - a**2*z - a**2 - a*r**2*z**2 - a*r**2*z - a*r*z - a*r",
+      "a**3*r**2*z**2 - a**3*r*z**2 + a**3*r*z - a**3*z + a**2*r**3*z**2 - 3*a**2*r**2*z**2 + a**2*r**2*z + a**2*r*z**2 - 4*a**2*r*z + a**2*z - a**2 - a*r**3*z**2 + a*r**2*z**2 - 3*a*r**2*z + 4*a*r*z - a*r - a*z + a + r**2*z - r*z + r - 1"
+    ],
+    [
+      "-a",
+      "0",
+      "-a**3*z - a**2*r*z + a*r*z - 1",
+      "0"
+    ]
+  ],
+  "reduced_polynomial_determinant": "-2*a**2*r*(a + 1)**3*(a + r)*(z + 1)**3*(a**2*z + 1)*(a*r*z - 1)*(a*r*z + a + r - 1)",
+  "full_determinant_formula_9_exact": true,
+  "full_determinant": "32*a^2*(a+r)^2*(1-r)*(1+r*z)*(1-a*r*z)^2*(1+z*(a+r-a*r))/(r^3*(a+1)^3*(1+z)*(1+a^2*z)^3)",
+  "strict_domain": "a,z>0;0<r<1; a*r*z<1; K=a+r-1+a*r*z>0",
+  "includes_n_zero": true,
+  "final_determinant_worker_timeout_seconds": 30,
+  "scope": "Full nine-word nonmembership for ME C2 contacts in the strict finite native chart; not singular limits, not general partially entangled C2, and not the appended C1 seed.",
+  "no_numerical_optimizer_or_parameter_sweep": true
+}

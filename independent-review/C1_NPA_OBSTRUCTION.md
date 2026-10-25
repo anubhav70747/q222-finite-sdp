@@ -148,3 +148,110 @@ not classify every C1 source or supply their uniform finite lift.
 Exact, self-contained checks reconstruct the
 [global determinants and contact systems](checks/c1_rational_validity.py)
 and the [universal word functional](checks/c1_npa_separator.py).
+
+## Exclusion on an open dense strict C1 parameter set
+
+A contact-kernel calculation gives a stronger generic statement. Consider
+the additional source, in the same active order as (1),
+
+$$c_*=(27/2,4,2,9,5/4,13/4,9/4),
+\qquad (u_c,v_c;\psi_c)=(1,1;1,-1/2,1/4,1).\tag{6}$$
+
+It is the exact seed EN9 of the native contact construction. Its coordinates
+are $k=S=v_c=1$, $r=1/4$, $\theta=1/2$, hence
+$\eta=\zeta=1$, $a=3/4$, $t=1/2$. The native gaps are
+$E=1/2$, $Q=M=J=3/4$, $B_5=25/32$ and $B_\beta=15/16$;
+all six retained event weights are strictly positive.
+
+There is a direct global validity check. With $U=u^2,V=v^2$, the full
+cleared state matrix has determinant
+
+$$
+\det P_*=1152(1+u^2)^2(1+v^2)^2UV
+\left(\frac{494}{U}+\frac{210V}{U}+\frac{845}{V}
+       +451V+520U+184UV-2704\right).
+$$
+
+The six coefficients sum to $2704$, and their exponent-weighted sums
+in both $U$ and $V$ vanish. Weighted AM--GM therefore makes the bracket
+nonnegative for all $U,V>0$. The positive three-state block, followed
+by continuity at compatible measurements and projective endpoints,
+proves global quantum validity as above. The four state-kernel equations
+and both scalar angular derivatives vanish at the contact in (6).
+
+Let $T$ have columns $R_i\psi_c$. Its first four columns have determinant
+$27/32$, so $\operatorname{rank}T=4$. An exact basis of its kernel is
+
+$$
+N=\begin{pmatrix}
+1&5/3&2\\
+-7/4&-4/3&-17/4\\
+-5/3&-16/9&-5\\
+-3/4&-7/3&-13/4\\
+1&0&0\\
+0&1&0\\
+0&0&1
+\end{pmatrix}.\tag{7}
+$$
+
+Positivity and the zero expectation at the quantum contact force every
+possible seven-root Gram to have the form $Q=NSN^T$, $S\succeq0$.
+Reduce $R^\dagger NSN^TR$ in universal words, and take the coefficients of
+
+$$
+(B_0B_1,\ A_0B_0B_1,\ A_0A_1,\ A_0A_1B_0,
+  \ A_0A_1B_0B_1,\ A_0A_1B_1).
+$$
+
+All six must vanish in a Bell functional. In coordinate order
+$(S_{11},S_{22},S_{33},S_{12},S_{13},S_{23})$, their coefficient matrix
+$M$ satisfies
+
+$$\det M=\frac{7360}{243}\ne0.\tag{8}$$
+
+Thus $S=Q=0$, contradicting the nonzero source. This is a second
+exact exclusion argument, independent of the separating functional (4).
+
+To extend it, use the five independent strict native contact coordinates
+
+$$
+p=(k,\ell,S,r,\theta),\qquad
+(u_c,v_c)=(k,\ell),\qquad
+\psi_c=(S,k(\theta-1),kSr,1).
+$$
+
+Here $\eta=\ell/(kS)$ and $\zeta=S\ell/k$; the native coefficient
+formulas are rational in $p$. Strict positivity of the native gaps and
+retained event weights defines an open five-dimensional parameter domain.
+The contact action $T(p)$ is rational. Multiplication by
+$(1+k^2)(1+\ell^2)$ gives a polynomial matrix $\widehat T(p)$.
+Put $\Delta(p)=\det\widehat T_{[:,1:4]}$. Where $\Delta\ne0$, choose
+
+$$
+N(p)=\begin{pmatrix}
+-\widehat T_{[:,1:4]}^{-1}\widehat T_{[:,5:7]}\\ I_3
+\end{pmatrix}
+$$
+
+and form $M(p)$ by the same six universal coefficients. Its entries have
+denominators dividing $\Delta^2$, so
+$J(p)=\Delta(p)^{12}\det M(p)$ is a polynomial. At (6),
+$\Delta=216$ and (8) holds; neither polynomial is identically zero.
+Consequently $\Delta J\ne0$ is open and dense in every nonempty open
+component of the strict parameter domain. Each such point is excluded
+from `1+AB` by the same contact compression. No connectedness assumption
+is needed: a nonzero polynomial cannot vanish on an open parameter set.
+If the orientation $k\le1$ is imposed, the result holds on its open part
+$k<1$ and is relatively dense up to $k=1$; all other seed inequalities
+are strict, so the seed is approached from that open part.
+
+This is a generic exclusion in the strict **contact parameter domain**,
+not an open subset of the ambient source space. The selected exceptional
+sets $\Delta=0$ or $J=0$ are not classified. A vanishing selected minor
+does not imply admission, and this argument makes no assertion on the
+literal $D=0$ or $\beta=0$ faces or on degenerate contacts. A uniform
+additional C1 certificate cone remains unresolved.
+
+The [exact seed checker](checks/c1_generic_seed.py) reconstructs (6)--(8),
+the native gaps and the complete determinant identity. It uses the local
+universal-word reduction helper and performs no numerical optimization.

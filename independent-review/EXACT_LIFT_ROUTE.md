@@ -224,8 +224,11 @@ The C1 family also needs additional certificates. Two globally valid
 [rational C1 extreme sources](C1_NPA_OBSTRUCTION.md), including one with
 `beta=0`, violate a necessary linear inequality for the seven-root NPA
 Gram. Its integer dual matrix is positive definite; both global validity
-proofs reduce to AM--GM. Thus `1+AB` alone cannot supply the C1 part of
-the construction, even on a strict native neighborhood.
+proofs reduce to AM--GM. A further rational contact has an invertible
+six-word coefficient matrix. Rationality of the contact action extends
+this exclusion to an open dense subset of the strict five-dimensional
+C1 contact parameter domain. Thus `1+AB` alone cannot supply the C1 part
+of the construction. The selected exceptional algebraic sets remain unclassified.
 
 For maximally entangled C2 sources, a change of contact coordinates gives
 an [exact order-four source pencil at every fixed pair of parameters](C2_FIXED_FIBERS.md).
@@ -233,6 +236,12 @@ Its nontrivial block is only two-by-two. Every source in that cone is a
 sum of at most two contact rays, and the same formulas give a unique
 inverse and branch condition for individual generators. Combining the
 continuum of these cones into one fixed affine lift remains unresolved.
+
+The need for additional certificates holds on the entire finite maximally
+entangled C2 native family: [six forbidden-word equations](C2_MAXIMAL_NPA_OBSTRUCTION.md)
+have a strictly positive determinant throughout its contact domain. This
+excludes `1+AB` also at unequal angles and on `n=0`, without an exceptional
+interior locus. Singular contact limits require separate analysis.
 
 An explicit partially entangled extreme source also lies outside `1+AB`.
 Its global validity follows from one weighted AM--GM determinant identity;
