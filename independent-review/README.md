@@ -27,6 +27,9 @@ The [polynomial obstruction](C2_POLYNOMIAL_OBSTRUCTION.md) proves that
 this completion requires more than ordinary polynomial squares for
 generic C2 sources; it also reduces a polynomial coupling choice to
 twelve free source coefficients.
+For C1, a [triangle inequality](C1_POLYNOMIAL_OBSTRUCTION.md) excludes
+ordinary polynomial SOS on a nonempty open set of strict native sources.
+Its rational counterexample has all retained event coefficients positive.
 
 The [unequal-angle equations](C2_CONTACT_GEOMETRY.md) expose an additional
 fourth-degree contact relation and two exact obstructions to simpler

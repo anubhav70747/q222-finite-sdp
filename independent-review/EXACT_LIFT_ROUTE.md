@@ -322,6 +322,12 @@ native stationary identities give the unsquared ratio. They agree only
 on $h=a^2r$, which reduces to equal angles in the maximally entangled
 family. A fractional-power completion remains the direct target.
 
+In C1, the same signed-contact argument leaves three coefficient vectors.
+Their norms must obey a [triangle inequality](C1_POLYNOMIAL_OBSTRUCTION.md).
+An exact strict native source violates it, excluding ordinary polynomial
+SOS on a nonempty open part of C1 as well. Neither obstruction applies
+directly to fractional powers on a positive testing chart.
+
 The C1 family also needs additional certificates. Two globally valid
 [rational C1 extreme sources](C1_NPA_OBSTRUCTION.md), including one with
 `beta=0`, violate a necessary linear inequality for the seven-root NPA

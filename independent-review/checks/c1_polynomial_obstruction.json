@@ -1,0 +1,77 @@
+{
+  "checks": {
+    "forced_zero_coefficients": true,
+    "invariant_character_diagonals": true,
+    "uv_character_diagonals": true,
+    "all_original_retained_events_positive": true,
+    "native_gaps_and_contact_amplitudes": true,
+    "actual_six_stationary_equations": true,
+    "signed_contact_(-1, -1)": true,
+    "signed_contact_(-1, 1)": true,
+    "signed_contact_(1, -1)": true,
+    "signed_contact_(1, 1)": true,
+    "strict_invariant_triangle_violation": true
+  },
+  "all_pass": true,
+  "source_order": [
+    "d",
+    "lambda",
+    "n",
+    "m",
+    "C",
+    "A",
+    "D",
+    "alpha",
+    "beta"
+  ],
+  "source_C_equals_2": {
+    "d": "7301/540",
+    "lambda": "0",
+    "n": "0",
+    "m": "40/9",
+    "C": "2",
+    "A": "2891/135",
+    "D": "4699/1080",
+    "alpha": "81/40",
+    "beta": "49/1080"
+  },
+  "source_d_equals_1": {
+    "d": "1",
+    "lambda": "0",
+    "n": "0",
+    "m": "2400/7301",
+    "C": "1080/7301",
+    "A": "236/149",
+    "D": "4699/14602",
+    "alpha": "2187/14602",
+    "beta": "1/298"
+  },
+  "native_parameters": {
+    "k": "1",
+    "f": "1",
+    "g": "1",
+    "a": "7/8",
+    "t": "3/5"
+  },
+  "contact": [
+    "1",
+    "1",
+    "1",
+    "-2/5",
+    "1/8",
+    "1"
+  ],
+  "invariant_scaled_diagonal": [
+    "196/45",
+    "2891/2160",
+    "49/270"
+  ],
+  "uv_scaled_diagonal": [
+    "8",
+    "161/80",
+    "81/10"
+  ],
+  "invariant_Heron": "-10994179/1555200",
+  "uv_Heron": "388751/6400",
+  "scope": "One strict native C1 source is not an ordinary polynomial SOS. General necessary triangle inequalities, not a dense generic exclusion theorem."
+}
