@@ -220,6 +220,13 @@ evaluation functionals alone likewise do not exhaust this dual cone.
 
 ## The shortest remaining target
 
+For maximally entangled C2 sources, a change of contact coordinates gives
+an [exact order-four source pencil at every fixed pair of parameters](C2_FIXED_FIBERS.md).
+Its nontrivial block is only two-by-two. Every source in that cone is a
+sum of at most two contact rays, and the same formulas give a unique
+inverse and branch condition for individual generators. Combining the
+continuum of these cones into one fixed affine lift remains unresolved.
+
 An explicit partially entangled extreme source also lies outside `1+AB`.
 Its global validity follows from one weighted AM--GM determinant identity;
 six forbidden-word coefficients give an invertible matrix of determinant
