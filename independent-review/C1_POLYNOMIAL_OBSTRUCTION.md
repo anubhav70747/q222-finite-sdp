@@ -119,3 +119,37 @@ possibilities.
 The [exact checker](checks/c1_polynomial_obstruction.py) reconstructs this
 source from SD1 and verifies all six stationary equations, four signed
 contacts, coefficient norms and the negative value in (2).
+
+## A local square completion must preserve the other zeros
+
+The same source rules out a natural attempt to turn a contact completion
+into a global certificate. Shift the state by its contact value,
+$\psi=(\xi+\xi_c Z,Z)$, and write
+$F=\xi^TH\xi+2Z\xi^T\zeta+Z^2\gamma$. Put
+$s=u-1$, $t=v-1$. In the scalar contact Gram, let $K\succ0$ be the
+two-by-two block for $(s,t)$.
+
+One completion extracts
+$(hZ+K^{-1}B^T\xi)^TK(hZ+K^{-1}B^T\xi)$, choosing its second
+coupling column as $B_2=J_t+b t$, where $J_t$ and $b$ are the
+coefficients of $t$ and $t^2$ in $\zeta$. For the $W$ component,
+direct differentiation of SG2 at the displayed contact gives
+
+$$
+(J_t)_W=-\frac{170}{9},\qquad b_W=27,
+\qquad (B_2)_W(0,0)=-\frac{413}{9}.
+$$
+
+But $F(0,0;e_W)=H_{WW}(0,0)=0$. At this test $Z=0$ and
+$\xi=e_W$, so the extracted term equals
+$(B^Te_W)^TK^{-1}(B^Te_W)>0$. Its matrix remainder therefore has
+a negative $WW$ entry. Continuity preserves the failure at nearby
+positive angles.
+
+This excludes this coupling allocation, not the fractional feature
+space. A globally positive decomposition must make every extracted
+square vanish at every zero of the parent. Positive definiteness of
+the remainder near one contact does not establish that condition.
+The [exact reconstruction](checks/c1_local_completion_zero.py) checks
+the full three-channel identity and its negative remainder at this
+deterministic zero.

@@ -22,7 +22,10 @@ the entire finite equal-angle maximally entangled C2 family, including
 [unequal-angle certificate](C2_W2_UNEQUAL_CERTIFICATE.md) gives one extreme
 ray admitted by that larger NPA space. The [contact-scalar construction](CONTACT_SCALAR_GRAM.md)
 also has a positive-definite three-by-three Gram at every finite native
-C1/C2 contact. Completing its three state couplings remains open.
+C1/C2 contact. The [compact-family construction](COMPACT_NATIVE_CONTACT_COVER.md)
+completes the full state form on a fixed finite testing grid for any
+compact strict native subfamily. Extending this coverage uniformly to
+singular source limits remains open.
 The [polynomial obstruction](C2_POLYNOMIAL_OBSTRUCTION.md) proves that
 this completion requires more than ordinary polynomial squares for
 generic C2 sources; it also reduces a polynomial coupling choice to
@@ -30,6 +33,9 @@ twelve free source coefficients.
 For C1, a [triangle inequality](C1_POLYNOMIAL_OBSTRUCTION.md) excludes
 ordinary polynomial SOS on a nonempty open set of strict native sources.
 Its rational counterexample has all retained event coefficients positive.
+The same source also shows why a local square completion must preserve
+the other deterministic zeros: a natural coupling allocation leaves
+a negative remainder there.
 The [common-multiplier obstruction](NATIVE_MULTIPLIER_OBSTRUCTION.md)
 goes further: one fixed separable polynomial multiplier cannot cover both
 native families. On all physical relabelings, even a nonseparable multiplier
