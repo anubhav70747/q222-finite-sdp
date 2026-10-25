@@ -35,6 +35,11 @@ goes further: one fixed separable polynomial multiplier cannot cover both
 native families. On all physical relabelings, even a nonseparable multiplier
 positive at the commuting origin fails. Thus a fixed rational testing span
 regular there cannot complete the native families.
+The [half-power obstruction](C2_HALF_POWER_OBSTRUCTION.md) also excludes
+the fixed 36-feature candidate on an open part of strict native C2.
+A rational contact and 90 integer moments give an exact positive
+compressed dual with negative full-parent pairing. The sixth-root
+admission problem remains open.
 
 The [unequal-angle equations](C2_CONTACT_GEOMETRY.md) expose an additional
 fourth-degree contact relation and two exact obstructions to simpler

@@ -338,6 +338,18 @@ native coverage. The proof retains a finite noncommuting contact throughout
 the source decomposition, so it needs no polynomial-SOS representation of
 the two closed faces. Fractional testing functions remain outside its scope.
 
+Half-powers alone are also insufficient. The
+[exact C2 counterexample](C2_HALF_POWER_OBSTRUCTION.md) has rational
+native parameters $(13/600,101/1000,47/15,27/35,13/154)$. The two omitted
+events reduce the 36 half-power features to 30; contact annihilation leaves
+four Gram blocks of orders 13, 5, 5 and 3. An explicit 90-integer functional
+is strictly positive on these blocks but has a negative pairing with the
+complete parent. This excludes every half-power allocation on an open
+native C2 region. The proof uses the full forced contact face, so it does
+not depend on a chosen numerical Gram or coupling. The sixth-root grid
+retains half-powers and adds the third-root functions used by cubic circuits;
+uniform admission in that larger space remains to be proved.
+
 The C1 family also needs additional certificates. Two globally valid
 [rational C1 extreme sources](C1_NPA_OBSTRUCTION.md), including one with
 `beta=0`, violate a necessary linear inequality for the seven-root NPA
