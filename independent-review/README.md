@@ -16,6 +16,12 @@ the earlier order-three curve, whose extreme sources lie outside `1+AB`.
 Both source and behavior matrices have complete elementary proofs and exact
 reproduction code.
 
+The [unequal-angle equations](C2_CONTACT_GEOMETRY.md) expose an additional
+fourth-degree contact relation and two exact obstructions to simpler
+characterizations. An [order-six curve cone](../extracted-lifts/c2-unequal-angle-curve/)
+has explicit source and behavior pencils and an elementary three-atom proof.
+The full unequal-angle hull remains open in this construction.
+
 The proof sources under `latex/` were reviewed as they stand at commit `ee85fd1`;
 they are unchanged from the snapshot the review started on. Three folders under
 `extracted-lifts/canonical-completion/` (`uniform-contact`, `contact-completion`,

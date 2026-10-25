@@ -9,6 +9,13 @@ The source and behavior pencils are explicit rational matrices; their proof
 reduces every source to one contact ray plus two event terms. All finite
 endpoints are included. General C1/C2 coverage remains unresolved.
 
+The [unequal-angle curve](c2-unequal-angle-curve/) has exact source and
+behavior pencils of order six. Its elementary moment proof reconstructs
+every feasible source with at most three contact points. The
+[three-parameter contact equations](../independent-review/C2_CONTACT_GEOMETRY.md)
+include an additional fourth-degree relation and exact tests of simpler
+proposals. The full unequal-angle convex hull remains unresolved.
+
 The [contact completion](canonical-completion/contact-completion/) now covers
 the singular contact for the native C2 source envelope. The two proofs retain
 both state normals and derive fixed-function Gram matrices uniformly over

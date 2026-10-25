@@ -20,6 +20,13 @@ Every feasible source is one tight contact source plus two nonnegative
 event terms. This gives the source and behavior matrices directly and
 strictly improves `1+AB` while retaining every quantum behaviour.
 
+An [order-six block](extracted-lifts/c2-unequal-angle-curve/) now covers a
+compact curve with unequal measurement angles. Its exact moment
+representation needs at most three contact points. The
+[general contact equations](independent-review/C2_CONTACT_GEOMETRY.md)
+identify an additional fourth-degree relation; a fixed lift for their full
+three-parameter convex hull remains unresolved.
+
 ## One cancellation across the singular source limits
 
 The [uniform contact proof](extracted-lifts/canonical-completion/uniform-contact/Uniform_Contact_Certificate.pdf)

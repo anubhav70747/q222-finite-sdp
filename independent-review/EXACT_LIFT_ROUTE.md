@@ -17,6 +17,14 @@ whose sources lie outside `1+AB`. The order-seven block therefore strictly
 sharpens `1+AB`; there is no need to append the contained order-three curve
 block separately. Both constructions avoid the large state-polynomial Gram.
 
+The [unequal-angle contact equations](C2_CONTACT_GEOMETRY.md) now give a
+symmetric three-parameter family and a fourth-degree identity that fixes a
+direction missed by its quadratic relations. An
+[exact order-six cone](../extracted-lifts/c2-unequal-angle-curve/) covers one
+compact unequal-angle curve. Its proof reconstructs every feasible moment
+vector from at most three contact points. The convex hull with all three
+parameters varying remains unresolved.
+
 ## A concrete starting relaxation
 
 Fix the nine words
@@ -45,6 +53,7 @@ successively larger lists; see [Navascués, Pironio and Acín](https://arxiv.org
 | CHSH and one-sided tilted CHSH | Exact SOS in `1+AB` | Retain globally; these familiar slacks cannot contribute to the native contact sources below |
 | The two canonical closed faces | SG12: one order-6 Gram; SG13: two order-3 Grams | Retain their finite relabeling orbits |
 | Equal-angle C2 contacts, two independent parameters | Exact order-7 source and behavior pencils, including the NPA-hard quadratic curve | Retain finite physical relabeling orbits; the curve block is already included |
+| A compact unequal-angle C2 curve | Exact order-6 source and behavior pencils, including all interval endpoints | Extend from this curve to independent contact parameters |
 | Open C1/C2 contact sources | Four exact sixth-root certificates; constant coefficient rank | Prove admission of every source left by the retained cones |
 | Zero-weight limits of admitted contacts | Closedness of the fixed sixth-root cone | Establish admission before taking the limit |
 | The R1 contact cap and Bob complement | Exact regional certificates | Cover the remaining tests before using this as a global cone |

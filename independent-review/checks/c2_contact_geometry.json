@@ -1,0 +1,122 @@
+{
+  "checks": {
+    "eq1_native_source_0": true,
+    "eq1_native_source_1": true,
+    "eq1_native_source_2": true,
+    "eq1_native_source_3": true,
+    "eq1_native_source_4": true,
+    "eq1_native_source_5": true,
+    "eq1_native_source_6": true,
+    "native_positive_root_excludes_s_ge_1": true,
+    "eq2_angle_recovery": true,
+    "eq3_minor_mU_DV": true,
+    "eq3_minor_mGamma_BV": true,
+    "eq3_minor_DGamma_BU": true,
+    "eq4_summed_minors": true,
+    "eq6_full_contact_quartic": true,
+    "eq5_invariant_0": true,
+    "eq5_invariant_1": true,
+    "eq5_invariant_2": true,
+    "eq5_invariant_3": true,
+    "eq5_invariant_4": true,
+    "eq5_invariant_5": true,
+    "eq5_invariant_6": true,
+    "eq5_invariant_7": true,
+    "eq7_weighted_CHSH_factorization": true,
+    "eq7_two_root_factorization_modulo_eq4": true,
+    "both_signed_mixtures": true,
+    "base_full_state_kernel_and_two_angular_derivatives": true,
+    "invalid_source_positive_and_preserves_eq2_eq3": true,
+    "invalid_source_normalized_slack_and_quartic_residual": true
+  },
+  "signed_mixtures": [
+    {
+      "a1": 1,
+      "a2": 2,
+      "rs1": [
+        "1/8",
+        "1/16"
+      ],
+      "rs2": [
+        "1/16",
+        "1/8"
+      ],
+      "source1": [
+        "1",
+        "101/104",
+        "119/104",
+        "17/182",
+        "153/104",
+        "135/104",
+        "3/130"
+      ],
+      "source2": [
+        "1",
+        "2939/2911",
+        "19975/110618",
+        "1989/29110",
+        "8789/2911",
+        "7238/55309",
+        "11583/40754"
+      ],
+      "determinant": "-16557677/50331190"
+    },
+    {
+      "a1": 1,
+      "a2": 2,
+      "rs1": [
+        "1/16",
+        "1/8"
+      ],
+      "rs2": [
+        "1/8",
+        "1/16"
+      ],
+      "source1": [
+        "1",
+        "101/104",
+        "135/104",
+        "3/130",
+        "153/104",
+        "119/104",
+        "17/182"
+      ],
+      "source2": [
+        "1",
+        "2939/2911",
+        "7238/55309",
+        "11583/40754",
+        "8789/2911",
+        "19975/110618",
+        "1989/29110"
+      ],
+      "determinant": "16557677/50331190"
+    }
+  ],
+  "invalid_source": {
+    "a": 2,
+    "base": [
+      "1",
+      "43/299",
+      "77/1495",
+      "891/598",
+      "385/299",
+      "119/598",
+      "9/598"
+    ],
+    "shifted": [
+      "1001/1000",
+      "128701/897000",
+      "77/1495",
+      "890701/598000",
+      "1155299/897000",
+      "119/598",
+      "8701/598000"
+    ],
+    "normalized_slack": "-963/1105000",
+    "quartic_residual": "899901143099/106923596000000"
+  },
+  "branch": "Native sources select x_plus=(a+1)^2*t*(k+1)*theta; the squared equation also has x_minus.",
+  "scope": "Exact displayed identities and witnesses. No converse, full conic hull, or standalone global-validity theorem.",
+  "dependencies": "Python standard library and SymPy only; no private files or recovered source ZIP."
+}
