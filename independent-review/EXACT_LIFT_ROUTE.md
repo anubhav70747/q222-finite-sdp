@@ -5,6 +5,15 @@ already proves and add certificates for the boundary it misses. The new
 mathematics belongs in that second step. The final lift joins the corresponding
 finite PSD blocks on the same eight correlation coordinates.
 
+The [quadratic C2 family](../extracted-lifts/c2-quadratic-family/) now gives
+a complete example of this construction. Every positive-parameter source
+is an extreme canonical ray outside `1+AB`. Yet its entire continuous family
+has an exact block of total PSD order three. A positive rescaling makes the
+source coefficients quadratic, so two interval moments and one localizing
+inequality replace the large state-polynomial Gram. Four AM–GM terms prove
+global quantum validity; a two-atom formula proves the source lift exactly.
+The dual block strictly sharpens `1+AB`.
+
 ## A concrete starting relaxation
 
 Fix the nine words
@@ -32,6 +41,7 @@ successively larger lists; see [Navascués, Pironio and Acín](https://arxiv.org
 | Positive event rays | Event-projector squares in `1+AB` | None |
 | CHSH and one-sided tilted CHSH | Exact SOS in `1+AB` | Retain globally; these familiar slacks cannot contribute to the native contact sources below |
 | The two canonical closed faces | SG12: one order-6 Gram; SG13: two order-3 Grams | Retain their finite relabeling orbits |
+| The quadratic C2 curve, `0<z≤2/5` | Exact order-3 source and dual blocks; every positive-parameter ray lies outside `1+AB` | Retain its finite physical relabeling orbits |
 | Open C1/C2 contact sources | Four exact sixth-root certificates; constant coefficient rank | Prove admission of every source left by the retained cones |
 | Zero-weight limits of admitted contacts | Closedness of the fixed sixth-root cone | Establish admission before taking the limit |
 | The R1 contact cap and Bob complement | Exact regional certificates | Cover the remaining tests before using this as a global cone |
@@ -181,7 +191,14 @@ evaluation functionals alone likewise do not exhaust this dual cone.
 
 ## The shortest remaining target
 
-For the sixth-root route, prove `μσ(c)≥0` for every required C1/C2 source.
+The coefficient-curve construction shows that a missing NPA family can have
+a much smaller direct source lift than its full state-polynomial Gram.
+The next useful extension must cover a larger contact family uniformly;
+additional isolated examples do not establish that coverage. In particular,
+the new curve's order-three representation does not settle the remaining
+independently varying C1/C2 source parameters.
+
+For the sixth-root route, prove `μσ(c)≥0` for every still-required C1/C2 source.
 Strict positivity would give a convenient continuation proof, but it is not
 required for exactness. Sources with zero margin may have valid singular
 certificates. Alternatively, retain another finite, globally sound certificate

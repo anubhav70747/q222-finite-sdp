@@ -14,6 +14,12 @@ The companion retains the complete singular-case argument. **An exact affine
 pencil for the full eight-coordinate quantum set has not yet been extracted.**
 The construction below resolves a singular source family on an explicit testing region.
 
+On the review branch, a new [exact order-three block](extracted-lifts/c2-quadratic-family/)
+handles a continuous family of extreme inequalities outside NPA `1+AB`.
+Their coefficients become quadratic after a positive rescaling, giving an
+elementary moment representation and an explicit dual constraint. This block
+strictly improves `1+AB` while retaining every quantum behaviour.
+
 ## One cancellation across the singular source limits
 
 The [uniform contact proof](extracted-lifts/canonical-completion/uniform-contact/Uniform_Contact_Certificate.pdf)

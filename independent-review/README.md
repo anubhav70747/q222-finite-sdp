@@ -1,8 +1,8 @@
 # Independent review of the finite-lift proof
 
 This folder records an outside review of the existence proof in `latex/` and of
-the explicit-lift material in `extracted-lifts/`. It adds no claims of its own to
-the paper. It breaks the argument into stages, states the idea that organizes it,
+the explicit-lift material in `extracted-lifts/`, followed by new constructions
+on the review branch. The paper remains unchanged. The review breaks the argument into stages, states the idea that organizes it,
 lists what was checked and what was found, and follows the explicit lift as far
 as it currently goes.
 
@@ -10,6 +10,9 @@ For the current construction route, read
 [`EXACT_LIFT_ROUTE.md`](EXACT_LIFT_ROUTE.md): a fixed NPA baseline, the
 seven-root reduction forced by two classical zeros, the existing closed-face
 pencils, and the precise dual inequality still needed for the contact sources.
+The new [quadratic C2 family](../extracted-lifts/c2-quadratic-family/) supplies
+an exact order-three block for a continuous family of extreme sources that
+`1+AB` misses, with complete elementary proofs and exact reproduction code.
 
 The proof sources under `latex/` were reviewed as they stand at commit `ee85fd1`;
 they are unchanged from the snapshot the review started on. Three folders under
