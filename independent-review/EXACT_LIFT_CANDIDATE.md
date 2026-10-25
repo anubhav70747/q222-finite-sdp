@@ -33,7 +33,13 @@ and define
 |---|---|---|---|
 | 1 | {1, u}⊗{1, v}⊗ψ | 4, 4, 4, 4 | n/a |
 | 2 | {1, √u, u}⊗{1, √v, v}⊗ψ | 16, 8, 8, 4 | 128 |
-| 6 | sixth-root grid | 64, 48, 48, 36 | 2763 |
+| 6 | sixth-root grid | 64, 48, 48, 36 | 4608 |
+
+The full sixth-root system has 5098 symmetric Gram variables and 490
+coefficient equations. On either open C1 or C2 support face, forced zero
+rows reduce it to blocks of orders 52, 36, 36, 30: 3175 Gram variables,
+412 equations and 2763 free auxiliaries. The smaller count applies only
+after the source face has been fixed.
 
 **Conjecture.** `L₆ = C_can`.
 
@@ -79,10 +85,10 @@ form explicit rational families, parametrized by their contact point
 of a Gram matrix whose entries are rational functions of those parameters,
 verified symbolically.
 
-One natural route is ruled out. Building the matrix certificate circuit by
-circuit from the determinant's AM–GM certificate cannot work, because the
-circuit types do not predict which sources `L₂` certifies (see "Why sixth roots,
-physically"). A proof must use the matrix structure directly.
+The determinant's circuit types alone do not predict which sources `L₂`
+certifies (see "Why sixth roots, physically"). A construction using the
+circuits would also have to recover the state matrix and its coefficients.
+The numerical comparison does not rule out such a construction.
 
 ## Exact certificates at extreme sources
 
@@ -100,26 +106,35 @@ exact checks) proves three things for each source:
    `F_c` vanishes with zero gradient at the contact.
 2. **Exact Gram identity.** `F_c` equals a Gram form in `Z₆` exactly, as
    Puiseux polynomials.
-3. **Positive definite after reduction.** The Gram matrix is positive definite
-   after removing only the contact vector `z_c`.
+3. **Positive definite after reduction.** First remove the 42 monomials forced
+   out by the source support face. In each remaining parity block, remove the
+   contact vector `z_c`. The resulting four Gram matrices are positive definite.
 
 At all four sources the certificate has the same structure:
 
-- **Kernel.** The Gram kernel is exactly `z_c` in each of the four parity
-  blocks, and nothing else.
-- **Rank.** The coefficient system has 412 equations of rank 406. The 6 missing
-  ranks are exactly the conditions a contact imposes: value, two angle
-  derivatives and three independent state derivatives.
+- **Kernel.** In the 154-function support-face basis there is exactly one
+  contact vector in each parity block. Embedded in the full 196-function
+  basis, the Gram matrix also has the 42 forced null directions, so its rank
+  is 150 and its kernel has dimension 46.
+- **Rank.** After contact reduction, the coefficient map has 412 rows and
+  exact rank 406. The six missing dimensions are the four state derivatives
+  and two angle derivatives; homogeneity makes the value condition
+  redundant. The exact rank calculation and its extension to all nonzero
+  contacts are in [`ASSEMBLY_REFINEMENT.md`](ASSEMBLY_REFINEMENT.md).
 
 ## A continuation theorem
 
 For a support pattern σ (C1: λ = n = 0; C2: λ = β = 0), let `Θ_σ` be the open
 orthant of its six remaining weights, and for `w ∈ Θ_σ` let `c(w) = (d*(w), w)`.
 `Θ_σ` is connected, and the contact `x_c(w)` depends analytically on `w`
-(paper, Ch. 5). Call a certificate for `c(w)` **nondegenerate** if two things
-hold: its reduced Gram matrix (contact vector removed in each parity block) is
-positive definite, and the reduced coefficient map has rank `N − 6`, where N is
-the number of coefficient equations.
+(paper, Ch. 5). Fix the 154-function support-face basis described above.
+Call a certificate for `c(w)` **nondegenerate** if its four Gram matrices
+are positive definite after their contact vectors have been removed.
+The reduced coefficient map has rank `412 − 6 = 406` throughout the native
+charts with nonzero contact coordinates, by monomial scaling and the exact
+rank calculation. This definition is relative to the support face. It
+cannot use the full 196-function basis: for example `λ=0` forces the row
+of the constant feature `W` to vanish before any contact is imposed.
 
 **Lemma (openness).** If `c(w₀)` has a nondegenerate certificate, so does
 `c(w)` for every `w` near `w₀`.
@@ -129,9 +144,12 @@ image of the reduced map lies in the space `C_w` of forms that do. The six
 contact conditions are independent at `w₀` (rank `N − 6`), hence near `w₀`, so
 `dim C_w = N − 6`. By lower semicontinuity the rank stays at least `N − 6`, so
 it equals `N − 6` and the image is all of `C_w`. Now `F_{c(w)} ∈ C_w`, because
-`c(w)` has a contact at `x_c(w)`. Under constant rank, the minimal-norm solution
-of the reduced system depends continuously on `w`, so the reduced Gram stays
-positive definite near `w₀`. ∎
+`c(w)` has a contact at `x_c(w)`. Choose continuous bases of the contact
+complements and write the reduced coefficient map as `A(w)`. Its
+constant-rank pseudoinverse corrects the existing positive definite
+certificate `G₀` by
+`G(w)=G₀+A(w)†(F_{c(w)}−A(w)G₀)`. The correction tends to zero at `w₀`,
+so each reduced Gram remains positive definite nearby. ∎
 
 **Theorem (conditional).** Assume:
 
@@ -149,8 +167,11 @@ Since `Θ_σ` is connected, `S_σ = Θ_σ`. The C1 and C2 sources with `D = 0`,
 With Propositions 1–4, **`L₆ = C_can` follows from (ND) together with the
 extreme sources of the two closed faces.** The closed faces are noncoercive,
 with no finite contact, so the continuation argument does not cover them.
-Numerically they lie in `L₆` on 18 of 20 sampled sources; the other two are
-noise-limited, not gaps.
+Numerical tests support membership on 18 of 20 sampled sources; the other
+two results are inconclusive at the available precision. Membership of the
+closed faces in `L₆` is unnecessary for an exact hybrid lift: their existing
+exact pencils can be added directly, as explained in
+[`ASSEMBLY_REFINEMENT.md`](ASSEMBLY_REFINEMENT.md).
 
 So the conjecture now rests on a single nondegeneracy property of the Gram
 certificates, (ND), plus the closed faces. (ND) asks that no accidental
@@ -160,8 +181,13 @@ there, margins grow in proportion to the distance from the boundary.
 
 If it holds, the repo's full-polar assembly (eight relabelled copies) turns it
 into an explicit lift of Q222. The PSD order is 8·196 = 1568, plus 72 scalar
-sign blocks and about 22,000 auxiliary variables. The assembly needs a strictly
-feasible point, which is still to be checked.
+sign blocks. Each canonical pencil has 4608 free Gram coefficients; the
+eight-copy dual assembly imposes the corresponding adjoint constraints.
+A rational strictly feasible point is now explicit:
+`c*=(1/21,1,1,1,1,1,1,1,1)`. Its full positive definite Gram matrix is given
+in [`checks/gram-lift/strict_feasibility.json`](checks/gram-lift/strict_feasibility.json).
+Strict feasibility settles this assembly hypothesis; exactness still needs
+the contact admission theorem.
 
 ## Evidence
 
@@ -229,11 +255,14 @@ faces, and the C1/C2 contact sources), `F_c` has a Gram certificate in `Z₆`.
 - **The evidence is numerical.** Clarabel was combined with a δ-margin test. The
   confirmed k = 2 gaps use a 192–320-bit solver. A high-precision solve at
   k = 6 would take about 10 hours per case, so none was run.
-- **Fourteen sources were settled indirectly.** They have noise-level k = 6
-  margins and are settled by inclusion: their k = 2 ratios are at least
-  0.99999999 by high precision, and `L₂ ⊆ L₆`.
-- **Untested properties.** Closedness of `L₆`, strict feasibility for the
-  assembly, and the boundary sources themselves are not yet verified.
+- **Fourteen sources have indirect numerical support.** Their k = 6 margins
+  are at numerical noise level, while their high-precision k = 2 ratios are
+  at least 0.99999999 and `L₂ ⊆ L₆`. This supplies numerical evidence, not
+  exact certificates for those sources.
+- **Remaining proof.** Closedness, four exact contact certificates, constant
+  rank on the native contact charts and a global strictly feasible point
+  are established. Persistence of positive definite reduced Grams, (ND),
+  remains unproved. The closed faces can instead use their existing pencils.
 - **Sampling limits.** 302 samples, including the adversarial ones from earlier
   experiments, are not a proof. A targeted search for sources that minimize
   `d₆/d*` is the next test.

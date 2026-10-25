@@ -194,6 +194,17 @@ Part of exactness is now proved:
 
 What remains open is (ND) and the two closed faces.
 
+The [assembly refinement](ASSEMBLY_REFINEMENT.md) makes this target more
+precise. Continuation takes place in the 154-function support-face basis,
+after 42 forced null directions have been removed. Its coefficient rank
+is exactly 406 throughout the native contact charts. The full candidate
+also has a rational strictly feasible point, with all event weights one
+and CHSH weight `1/21`. Both statements now have exact reproduction code.
+For a hybrid lift, the two closed faces can use their existing exact
+pencils, so their membership in the sixth-root cone is unnecessary.
+The unresolved step is global admission of the remaining contact sources;
+the nondegeneracy condition concerns positivity of the reduced Grams.
+
 ## Checks in this folder
 
 Every script uses exact rational or symbolic arithmetic unless noted. Run Python
@@ -210,6 +221,8 @@ with SymPy 1.14 (as pinned in the repo), from the script's own folder.
 | `lift-experiment/` | exact rational proof that `C_ram + πC_ram ≠ C_can`: an AM–GM validity certificate for a rational source, and an exactly positive semidefinite rational dual that excludes it; plus the high-precision results | `python verify_cert.py ../../../extracted-lifts/canonical-completion/ramified-completion/data/ramified_order49_pencil.json` | 17/17 PASS |
 | `gram-lift/` | the Puiseux–Gram lift `L_k`: standalone checker for d_k/d* and the δ-margin test, the symmetry check, the k = 2 and k = 6 sweep results over 302 sources, and the test showing the scalar circuit structure does not predict `L₂` | `python gram_lift.py --k 6 --case <name>`, `python symcheck.py`, `python circuit_types.py` | k = 2: 9 gaps; k = 6: none below 0.999 |
 | `gram-lift/boundary/` | exact rational `L₆` certificates at four genuine C1/C2 boundary (contact) sources: validity, exact zero at contact, exact Gram identity, positive definite after removing the contact vector | `python verify_boundary.py` | 4/4 sources, 56/56 checks |
+| `gram-lift/strict_feasibility.py` | exact positive definite full196 Gram at `c*=(1/21,1,...,1)`; source signs and coefficient identity | `python strict_feasibility.py` | rational witness, no solver |
+| `gram-lift/contact_rank.py` | six independent contact conditions and matching modular rank; both native support faces | `python contact_rank.py` | rank406 for both families |
 | `physics/` | identities behind `PEN_AND_PAPER.md`. Landau's identity and the spectrum of I − Ŝ/2; the parity Γ = Y⊗Y that commutes with correlators and anticommutes with marginals (`check7_parity.py`); the two-mode normal form of every Bell operator in the Bell basis (`check8_two_mode.py`); events as product-state projectors; the Thomson flow identity and the effective-resistance test; Cauchy–Binet for adj(T) and det(T); `det(T)·F = (Pψ)ᵀadj(T)(Pψ) + det(P)s²`; which determinant coefficients the CHSH term reaches; a C2 source whose formal C1 image is not positive | `python check6_tsirelson.py`, `check4_thomson.py`, `check3_cauchy_binet.py`, `check12_decomp_sos.py`, `check5_monomials.py`, `check_c2_to_c1_counterexample.py` | all true; counterexample confirmed |
 
 The repo's own checkers were also run on Python 3.9 with SymPy 1.14, and all
