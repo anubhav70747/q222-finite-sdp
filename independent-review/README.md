@@ -6,6 +6,11 @@ the paper. It breaks the argument into stages, states the idea that organizes it
 lists what was checked and what was found, and follows the explicit lift as far
 as it currently goes.
 
+For the current construction route, read
+[`EXACT_LIFT_ROUTE.md`](EXACT_LIFT_ROUTE.md): a fixed NPA baseline, the
+seven-root reduction forced by two classical zeros, the existing closed-face
+pencils, and the precise dual inequality still needed for the contact sources.
+
 The proof sources under `latex/` were reviewed as they stand at commit `ee85fd1`;
 they are unchanged from the snapshot the review started on. Three folders under
 `extracted-lifts/canonical-completion/` (`uniform-contact`, `contact-completion`,
