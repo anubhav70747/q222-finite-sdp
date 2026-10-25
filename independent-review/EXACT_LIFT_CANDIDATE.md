@@ -249,11 +249,54 @@ nondegenerate one-angle problem: it collapses to rank one, and every direction
 transverse to it has to be certified at lower orders in `a`.
 
 Handling the ends of the contact families therefore needs a multi-scale
-analysis. Near each end, find the exponents with which the Gram entries must
-scale, then check that the rescaled limit problem is strictly feasible. This is
-the systematic, tropical version of the companion's chart analysis. It looks
-mechanizable, but it covers many ends: `a → 0`, `r → 0`, `r → 1`, `c → ∞`,
-and their combinations.
+analysis. The first plan was this: near each end, find the exponents with which
+the Gram entries must scale, then check that the rescaled limit problem is
+strictly feasible. That is the tropical version of the companion's chart
+analysis, and there are many ends: `a → 0`, `r → 0`, `r → 1`, `c → ∞` and
+their combinations. The `a → 0` end shows that diagonal exponents alone cannot
+work.
+
+**The `a → 0` end, analysed.** Two blocks of every Gram certificate, at every
+k, are fixed by single monomials of `F_c`:
+
+- on the pair `(uZ, uvY)`, `B₁ = [[K + 4β, −K], [−K, K + 4A]]`, where
+  `K = 4m + 4α + 2d`;
+- on the pair `(uvX, vZ)`, `B₂ = [[4D + 2d + 4λ + 4n, 4β − 4D], [4β − 4D, 4D]]`.
+
+On C2 their relative determinants are `ρ₁ = 4A/(K + 4A)` and
+`ρ₂ = (d + 2n)/(2D + d + 2n)`. At this end `A ~ a²` and `D ~ a⁻²`, so both are
+of order `a²`. Hence no Gram certificate, at any k, has a normalized margin
+bounded below at this end, and no diagonal rescaling of the basis changes that.
+
+A survey at three interior points P1–P3, with `a = 10⁻¹ … 10⁻⁸`, finds that the
+margin is exactly this bound: `t(a) = 1 − √(1 − ρ₁) ≈ c·a²`, with
+`c = 0.198, 0.124, 0.063`. At `a = 0` both rescaled blocks have rank exactly
+one. The null vector of `B₁` is `c²b·e(u′Z′) + e(u′v′Y′)`, because
+`v_cY_c/Z_c → c²b`.
+
+This is a loss of scale, not of positivity:
+
+- In the sheared basis `(uZ − uvY, uvY)`, `B₁` is `diag(K, 4A)` (when β = 0),
+  which is positive for every `a > 0`. `B₂` has the same structure, a large
+  rank-one part `4D(uvX − vZ)²` plus an O(1) remainder.
+- The contact itself does not degenerate. Its Hessian keeps four positive O(1)
+  eigenvalues, one eigenvalue of order `a⁻⁴`, and the exact zero.
+- What degenerates is the source weights: the weight `A` of event (−+|00)
+  vanishes and the weight `D` of event (−+|11) diverges. So this end runs into
+  the closed face `A = 0` of C2.
+
+**Not settled.** After the three forced directions are scaled out, with
+diagonal weights `c_k·a²`, the next margin at P2 still decays, roughly like
+`0.53·a^{2/3}` between `a = 3·10⁻²` and `3·10⁻³`. About 11–14 directions are
+forced, and no plateau was resolved. So this end needs facial reduction (a
+cascade of Schur complements in sheared bases, with fractional orders) rather
+than one diagonal rescaling, and the depth of that cascade is unknown.
+
+Membership is unaffected: `L₆` is closed, and every tested `a > 0` satisfies
+(ND) with a positive margin. What fails is the covering plan as stated, which
+cannot close this end with a uniform margin plus compactness. The exact part is
+checked by
+[`checks/gram-lift/ends/check_a0_corners.py`](checks/gram-lift/ends/check_a0_corners.py).
 
 So the conjecture now rests on a single nondegeneracy property of the Gram
 certificates, (ND), plus the closed faces. (ND) asks that no accidental
