@@ -173,6 +173,67 @@ closed faces in `L₆` is unnecessary for an exact hybrid lift: their existing
 exact pencils can be added directly, as explained in
 [`ASSEMBLY_REFINEMENT.md`](ASSEMBLY_REFINEMENT.md).
 
+**The rank half of (ND) holds everywhere [proved].** The reduced coordinates
+`p_i = z_i/z_{c,i} − z_{i0}/z_{c,i0}` are invariant under the torus rescaling
+`u → u_c·u′`, `v → v_c·v′`, `ψ_l → ψ_{c,l}·ψ′_l`: the basis picks up a diagonal
+factor that cancels in each ratio. C1/C2 contacts have all four amplitudes
+nonzero (paper, strict sign lemma). So the reduced coefficient map at any
+contact equals the map at the standard point `(1, 1; 1, 1, 1, 1)`, up to a
+diagonal rescaling of coefficients. Its rank is therefore constant on each
+family, and equals `N − 6` by the exact seeds.
+
+What (ND) still needs is strict positivity of the reduced Gram matrix.
+
+**The forced zeros, physically.** `f(v_i) = 4c_i`, so a zero event weight means
+the inequality is tight on a local deterministic strategy. Such strategies sit
+at commuting angles, the corners of the Newton square. Newton pruning removes
+exactly these, and the seeds show nothing else is forced besides the contact
+vector.
+
+**A fixed-cone formulation.** After the rescaling, every contact parent `F̃`
+lies in one fixed space `C_std` of dimension `N − 6`. Let `K_std` be the fixed
+cone of reduced Gram forms at the standard point.
+
+- Exactness on the C1/C2 families is equivalent to `F̃ ∈ K_std` for every
+  contact source.
+- By continuation, it is enough that no `F̃` meets `∂K_std`.
+- A boundary point needs a nonzero positive pseudo-moment `Λ` with `Λ(F̃) = 0`.
+  Point evaluations inside the domain are excluded, because the contact is the
+  unique zero there. Corner evaluations are removed by pruning.
+
+So the remaining statement is a **sextic flat-extension property**: every
+positive pseudo-moment on the pruned sixth-root basis that annihilates a contact
+parent is the point evaluation at its contact.
+
+**Survey of (ND).** 351 C1/C2 contact sources were tested, in bulk, near chart
+walls, and along 8-decade gap scans.
+
+- **Rank.** It is `N − 6` at every source, with a singular-value gap above
+  10¹³.
+- **Strict positivity.** It is certified with margin, at least 10 times the
+  solver noise, on 49 of 81 C2 and 24 of 79 C1 sources. No failure was
+  confirmed.
+- **Walls.** At the walls `g`, `j`, `1 − zh` and `Qc`, the margin scales
+  linearly with the gap. The product of the margin and the diverging weight is
+  constant to about 3 digits, so this is a normalization effect, not a loss of
+  positivity. At the `h` and `Lc` walls the margin stays flat down to gaps of
+  10⁻⁸.
+- **Unresolved.** Double precision could not decide sources with contacts
+  very near commuting measurements (`v_c ≲ 10⁻⁴`), nor the walls `r → 0`,
+  `r → 1` and `c → ∞`.
+
+**A route to a complete proof (not carried out).** As a contact approaches
+commuting measurements, the rescaled parent tends to a limit with one live
+angle. For a single variable, a positive semidefinite matrix polynomial on a
+half-line is a square-root Gram form, so these limit regimes should be provable
+exactly. A complete proof would combine three pieces:
+
+1. a rigorous interval-arithmetic covering of the compact middle region;
+2. exact univariate certificates for the limit regimes;
+3. uniform margins that join the two.
+
+This is substantial work, and it is where the paper's 31,000 lines also live.
+
 So the conjecture now rests on a single nondegeneracy property of the Gram
 certificates, (ND), plus the closed faces. (ND) asks that no accidental
 degeneracy appears as one moves through each connected family of contact
