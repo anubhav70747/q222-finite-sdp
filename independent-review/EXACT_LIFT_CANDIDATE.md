@@ -255,23 +255,36 @@ analysis. The first plan was this: near each end, find the exponents with which
 the Gram entries must scale, then check that the rescaled limit problem is
 strictly feasible. That is the tropical version of the companion's chart
 analysis, and there are many ends: `a → 0`, `r → 0`, `r → 1`, `c → ∞` and
-their combinations. The `a → 0` end shows that diagonal exponents alone cannot
-work.
+their combinations. The `a → 0` end imposes the following exact constraints on
+such a construction.
 
-**The `a → 0` end, analysed.** Two blocks of every Gram certificate, at every
-k, are fixed by single monomials of `F_c`:
+**The `a → 0` end, analysed.** On C2, two blocks of every PSD Gram certificate
+in `Z_k`, at every positive integer k, are fixed by single monomials of `F_c`:
 
-- on the pair `(uZ, uvY)`, `B₁ = [[K + 4β, −K], [−K, K + 4A]]`, where
+- on the pair `(uZ, uvY)`, `B₁ = [[K, −K], [−K, K + 4A]]`, where
   `K = 4m + 4α + 2d`;
-- on the pair `(uvX, vZ)`, `B₂ = [[4D + 2d + 4λ + 4n, 4β − 4D], [4β − 4D, 4D]]`.
+- on the pair `(uvX, vZ)`, `B₂ = [[4D + 2d + 4n, −4D], [−4D, 4D]]`.
+
+Indeed, setting `W=X=Y=0` gives `F/Z²=4α+Ku²+4Dv²`. Its Newton polygon
+forces every `Z` feature with `i+j>k` to have zero Gram row: a square containing
+such a feature would have an uncancellable highest-weight monomial outside
+this polygon. The coefficients of `u²vYZ` and `uv²XZ` then each have a unique
+surviving feature pair. This proves the displayed blocks are fixed. The
+argument uses `β=0`; with a nonzero `u²v²Z²` coefficient, the same pruning
+does not follow.
 
 On C2 their relative determinants are `ρ₁ = 4A/(K + 4A)` and
 `ρ₂ = (d + 2n)/(2D + d + 2n)`. At this end `A ~ a²` and `D ~ a⁻²`, so both are
-of order `a²`. Hence no Gram certificate, at any k, has a normalized margin
-bounded below at this end, and no diagonal rescaling of the basis changes that.
+of order `a²` along the stated strict native paths. Each relative determinant
+is invariant under diagonal congruence, and its block, normalized to unit
+diagonal, has least eigenvalue `1−√(1−ρ_i)`. Relating this to the reduced Gram
+margin also requires controlling the projection off the moving contact kernel.
+A small principal minor alone does not provide that control: the projector
+`I−wwᵀ/(wᵀw)`, with `w=(1,1,ε)`, has nonzero eigenvalues `1,1`, although
+its first two-coordinate block has determinant `ε²/(2+ε²)`.
 
-A survey at three interior points P1–P3, with `a = 10⁻¹ … 10⁻⁸`, finds that the
-margin is exactly this bound: `t(a) = 1 − √(1 − ρ₁) ≈ c·a²`, with
+A numerical survey at three interior points P1–P3, with `a = 10⁻¹ … 10⁻⁸`,
+reports agreement with `t(a) = 1 − √(1 − ρ₁) ≈ c·a²`, with
 `c = 0.198, 0.124, 0.063`. At `a = 0` both rescaled blocks have rank exactly
 one. The null vector of `B₁` is `c²b·e(u′Z′) + e(u′v′Y′)`, because
 `v_cY_c/Z_c → c²b`.
@@ -284,8 +297,9 @@ This is a loss of scale, not of positivity:
 - The contact itself does not degenerate. Its Hessian keeps four positive O(1)
   eigenvalues, one eigenvalue of order `a⁻⁴`, and the exact zero.
 - What degenerates is the source weights: the weight `A` of event (−+|00)
-  vanishes and the weight `D` of event (−+|11) diverges. So this end runs into
-  the closed face `A = 0` of C2.
+  vanishes and the weight `D` of event (−+|11) diverges. In the `d=1`
+  normalization there is no finite source at `a=0`. A projective normalization
+  reaches a boundary with additional zero coefficients.
 
 `B₁` is one minor of a larger forced structure, with a physical reading. At
 `u → ∞`, that is `θ = π`, Alice's two observables are opposite and so jointly
@@ -298,9 +312,11 @@ functional is then tight on a continuum of classical strategies, not only at the
 contact. Only pairs of basis elements on the `θ = π` face contribute to `[u²]F`.
 So on the span of the moment vectors of that curve, every Gram certificate
 equals `4A(1+v²)` along the curve, and by Cauchy–Schwarz it is `O(A)`
-throughout the span. For k = 6 the span is 7-dimensional (`v^{j/6}Y`,
-`j = 0, …, 6`, with `vZ` tied to `vY`). The a → 0 end therefore has at least 7
-directions whose Gram weight vanishes like `a²`, for every certificate, and
+throughout the span: evaluate at k+1 fixed distinct positive values of v to
+obtain a basis, then bound its mixed Gram entries by their diagonal values.
+For k = 6 the span is 7-dimensional (`uv^{j/6}Y`, `j = 0, …, 6`, with
+`uZ` tied to `uvY`). Along the stated paths these seven directions have Gram
+weight `O(a²)` in a fixed unscaled basis, for every certificate, and
 `B₁` is the 2×2 minor at `j = 6`.
 
 **Classical states are nearly tight.** On product states `ψ = W(1, v, u, uv)`,
@@ -339,10 +355,11 @@ intrinsic obstruction was found.
   `(6, j, X)`–`(0, j, Z)` pair raises the margin at `a = 10⁻²` by a factor of
   about 2 (reproduced at P1–P3).
 
-**The limit's forced kernel, exactly.** Every forced direction of the limit
-comes from one family, the product states `ψ = w(1, v′, uv′)` with `Y = uW`.
-On that family the limit form is `2w²(1+u²)(p u² + q v′²)`, where `p, q > 0`.
-Its Newton polygon is `hull{(0,2), (2,0), (4,0), (2,2)}`.
+**A proposed complete kernel for the limit.** The endpoint calculation proposes
+that all forced directions come from the product states
+`ψ = w(1, v′, uv′)` with `Y = uW`. The reported restriction of the transformed
+limit form is `2w²(1+u²)(p u² + q v′²)`, where `p, q > 0`, with Newton polygon
+`hull{(0,2), (2,0), (4,0), (2,2)}`.
 
 The argument takes any Gram certificate `G` and works in three steps:
 
@@ -352,17 +369,18 @@ The argument takes any Gram certificate `G` and works in three steps:
 3. Hence the sum of the basis elements that map to that monomial lies in
    `ker G`.
 
-This gives 57 forced directions plus the 4 contact vectors, 61 of the 126. The
-span contains every direction listed above. With exactly these 61 imposed, the
-limit problem is strictly feasible: margin 0.16, 0.18 and 0.09 at P1–P3, with
+The reported count is 57 forced directions plus the 4 contact vectors, 61 of
+the 126. Verifying this count requires the transformed limit form, the explicit
+monomial map and its exact rank. With these 61 directions imposed, numerical
+solves report margins 0.16, 0.18 and 0.09 at P1–P3, with
 solver status "Solved" and residual 10⁻¹³. The earlier figure of about 10⁻⁴,
 reached by removing only 17–19 directions, was an artefact. The directions it
 missed had diagonals from 10⁻⁹ to 10⁻¹.
 
-**Transversality, by grading.** At finite `a`, the Gram weight on a forced
-direction scales like `s^{k/6} = a^{k/3}`, for k = 1, …, 6. The value of k is
-read off the lower convex envelope of the order in `s` over a hexagon. The
-classes at k = 1, …, 6 number 12, 11, 10, 9, 8 and 7.
+**Proposed grading for transversality.** The candidate scaling of a forced
+direction is `s^{k/6} = a^{k/3}`, for k = 1, …, 6. The proposed value of k
+comes from the lower convex envelope of the order in `s` over a hexagon, with
+class counts 12, 11, 10, 9, 8 and 7. A full finite-`a` construction is still needed.
 
 - **The 7 classes of order `s` are exactly positive.** `B₁` carries `4A₁s`.
   `B₂` and `v′X` carry `s(4n₀+2)`. The five Z-edge elements lie on an edge
@@ -381,10 +399,12 @@ classes at k = 1, …, 6 number 12, 11, 10, 9, 8 and 7.
 Double-precision solves at `a ≤ 3·10⁻³` broke down, so this was not tested
 numerically.
 
-Membership is unaffected: `L₆` is closed, and every tested `a > 0` satisfies
-(ND) with a positive margin. What fails is the covering plan as stated, which
-cannot close this end with a uniform margin plus compactness. The exact part is
-checked by
+The resolved numerical cases support (ND); the unresolved cases and the full
+native domain remain open. Closedness of `L₆` passes established membership
+to finite limits, but supplies no admission proof for this endpoint. The checker
+below verifies the corner identities, the projective-face identity and three
+rational path asymptotics. The proposed 61-dimensional kernel and graded Schur
+completion require further derivation:
 [`checks/gram-lift/ends/check_a0_corners.py`](checks/gram-lift/ends/check_a0_corners.py).
 
 So the conjecture now rests on a single nondegeneracy property of the Gram
