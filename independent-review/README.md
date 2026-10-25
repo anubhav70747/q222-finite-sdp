@@ -44,6 +44,16 @@ The [fractional-feature analysis](SIXTH_ROOT_FEATURES.md) separates the scalar
 Motzkin limit, which already admits half-powers, from the full state-matrix
 problem. A separate exact biquadratic example shows why retaining thirds
 and halves need not replace all sixth-root functions.
+More generally, the [smooth-feature theorem](SMOOTH_FEATURE_OBSTRUCTION.md)
+extends the cubic-scale NPA obstruction to every fixed finite angular-state
+Gram library with a polynomial Peano expansion through order three at the
+commuting origin. Its coefficients may vary freely with the source. The
+common testing frame is essential; the theorem does not exclude arbitrary
+finite SDP lifts.
+For the strict native C2 counterexample, a further [necessary condition](SIXTH_ROOT_NECESSARY_CROSS_TERMS.md)
+forces complementary fractional cross terms in any sixth-root Gram. Its
+exact rational bounds constrain a possible construction; they establish
+neither admission nor exclusion in the sixth-root space.
 
 The [unequal-angle equations](C2_CONTACT_GEOMETRY.md) expose an additional
 fourth-degree contact relation and two exact obstructions to simpler
