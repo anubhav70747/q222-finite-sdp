@@ -301,12 +301,48 @@ throughout the span. For k = 6 the span is 7-dimensional (`v^{j/6}Y`,
 directions whose Gram weight vanishes like `a²`, for every certificate, and
 `B₁` is the 2×2 minor at `j = 6`.
 
-**Not settled.** After the three forced directions are scaled out, with
-diagonal weights `c_k·a²`, the next margin at P2 still decays, roughly like
-`0.53·a^{2/3}` between `a = 3·10⁻²` and `3·10⁻³`. About 11–14 directions are
-forced, and no plateau was resolved. So this end needs facial reduction (a
-cascade of Schur complements in sheared bases, with fractional orders) rather
-than one diagonal rescaling, and the depth of that cascade is unknown.
+**Classical states are nearly tight.** On product states `ψ = W(1, v, u, uv)`,
+which are `(1, u) ⊗ (1, v)` up to scale, the parent is exactly
+
+`F = 2W²(1+u²)(1+v²)(2Au² + 2λ(1+v²) + v²(d + 2n + 2β(1+u²)))`.
+
+On C2 this is `2W²D_uD_v(2Au² + (d+2n)v²)`, which is `O(a²)` near `v ~ a`. At
+k = 4–6 the optimal dual of the margin problem is (to about 10⁻³) a point
+evaluation on this product cone.
+
+**Facial reduction, three independent attempts.** Each attempt was then checked
+by a separate reproduction at another point. All three end at "unclear"; no
+intrinsic obstruction was found.
+
+- **Complete the square** (with `s = a²`, `P = uW′ − Y′` and `Q = v′(uX − Z)` in
+  contact-scaled variables). Exactly,
+  `F = λ₀s⁻²(P + sκQ)² + s⁻¹(4C₀v′² + c₁)P² + G₀ + O(s)`.
+  - `G₀` has closed-form coefficients in `(c, b, t, r)`. On a grid it is ≥ 0,
+    and its only interior zero is the contact.
+  - **Exact forced kernel, 11 directions.** Seven faces of its Newton polytope
+    have real zero families. They give: 4 contact vectors, `B₁`, `B₂`, and 5
+    Z-edge elements `e(i, 6−i, Z)` that are forced to zero.
+  - **6–8 more forced directions,** found only numerically.
+  - **Strictly feasible once all are removed.** With all of these imposed, the
+    limit problem is strictly feasible on that face: margin about 10⁻⁴ against
+    solver noise of 10⁻⁸, reproduced at P3.
+  - **Transversality is proved only for `B₁` and `B₂`.** That is, the `a²`
+    corrections are shown to be positive on those two directions only.
+- **Exact shears.** Three exact shears remove every block fixed by single
+  monomials that is `O(a²)`; the smallest remaining minor is 0.62–0.89 at
+  P1–P3. The margin still decays, about like `a^{1.9}` over `a = 10⁻²…10⁻³`.
+  - **Mechanism.** In the limit form with the stiff square removed, the scaled
+    smallest eigenvalue falls like `v′⁻²` across a wedge of large `v′`. Only the
+    `a`-dependent terms cut this off, at `v′ ~ 1/a`.
+- **Boundary layer.** There is no single intermediate scale. Along `v = a^h`
+  the dominant balance is `u ~ a^{−(1−h)}`, a continuum of scales. A frozen
+  `a^{j/6}` ansatz shows no plateau. One positive lead: shearing every
+  `(6, j, X)`–`(0, j, Z)` pair raises the margin at `a = 10⁻²` by a factor of
+  about 2 (reproduced at P1–P3).
+
+**Not settled.** Closing this end needs exact forms for the numerically forced
+directions, transversality on all of them, and a depth-2 shear hierarchy over
+the continuum of scales `1 ≲ v′ ≲ 1/a`. The depth of that cascade is unknown.
 
 Membership is unaffected: `L₆` is closed, and every tested `a > 0` satisfies
 (ND) with a positive margin. What fails is the covering plan as stated, which
