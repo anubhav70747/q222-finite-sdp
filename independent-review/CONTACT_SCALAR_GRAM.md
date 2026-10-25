@@ -135,3 +135,9 @@ VG_\gamma^{-1}V^T-\frac{\zeta\zeta^T}{\gamma}
 $$
 
 Thus the scalar certificate isolates the remaining three couplings; it does not complete the uniform state-matrix certificate.
+
+The [native polynomial obstruction](C2_POLYNOMIAL_OBSTRUCTION.md) further
+restricts this completion: an ordinary polynomial SOS for the full C2
+parent requires $h=a^2r$. For generic sources, polynomial choices of $V$
+cannot leave an ordinary polynomial SOS remainder. Fractional-power
+certificates remain possible.

@@ -23,6 +23,10 @@ the entire finite equal-angle maximally entangled C2 family, including
 ray admitted by that larger NPA space. The [contact-scalar construction](CONTACT_SCALAR_GRAM.md)
 also has a positive-definite three-by-three Gram at every finite native
 C1/C2 contact. Completing its three state couplings remains open.
+The [polynomial obstruction](C2_POLYNOMIAL_OBSTRUCTION.md) proves that
+this completion requires more than ordinary polynomial squares for
+generic C2 sources; it also reduces a polynomial coupling choice to
+twelve free source coefficients.
 
 The [unequal-angle equations](C2_CONTACT_GEOMETRY.md) expose an additional
 fourth-degree contact relation and two exact obstructions to simpler

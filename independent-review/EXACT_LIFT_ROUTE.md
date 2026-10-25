@@ -315,6 +315,13 @@ permitted zero-event faces, so its source-only inverse is available.
 The three couplings to the remaining state coordinates still require
 a uniform completion.
 
+The [polynomial obstruction](C2_POLYNOMIAL_OBSTRUCTION.md) explains why
+ordinary polynomial squares cannot supply that completion generically.
+Four sign-related contacts force a squared coefficient ratio, while the
+native stationary identities give the unsquared ratio. They agree only
+on $h=a^2r$, which reduces to equal angles in the maximally entangled
+family. A fractional-power completion remains the direct target.
+
 The C1 family also needs additional certificates. Two globally valid
 [rational C1 extreme sources](C1_NPA_OBSTRUCTION.md), including one with
 `beta=0`, violate a necessary linear inequality for the seven-root NPA
