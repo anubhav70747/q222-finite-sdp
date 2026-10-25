@@ -319,13 +319,10 @@ intrinsic obstruction was found.
   `F = λ₀s⁻²(P + sκQ)² + s⁻¹(4C₀v′² + c₁)P² + G₀ + O(s)`.
   - `G₀` has closed-form coefficients in `(c, b, t, r)`. On a grid it is ≥ 0,
     and its only interior zero is the contact.
-  - **Exact forced kernel, 11 directions.** Seven faces of its Newton polytope
-    have real zero families. They give: 4 contact vectors, `B₁`, `B₂`, and 5
-    Z-edge elements `e(i, 6−i, Z)` that are forced to zero.
-  - **6–8 more forced directions,** found only numerically.
-  - **Strictly feasible once all are removed.** With all of these imposed, the
-    limit problem is strictly feasible on that face: margin about 10⁻⁴ against
-    solver noise of 10⁻⁸, reproduced at P3.
+  - **Forced kernel.** Seven faces of its Newton polytope have real zero
+    families, which force 4 contact vectors, `B₁`, `B₂` and 5 Z-edge elements
+    `e(i, 6−i, Z)`. Interior-point duals suggested 6–8 more. The complete
+    kernel is given below.
   - **Transversality is proved only for `B₁` and `B₂`.** That is, the `a²`
     corrections are shown to be positive on those two directions only.
 - **Exact shears.** Three exact shears remove every block fixed by single
@@ -340,9 +337,47 @@ intrinsic obstruction was found.
   `(6, j, X)`–`(0, j, Z)` pair raises the margin at `a = 10⁻²` by a factor of
   about 2 (reproduced at P1–P3).
 
-**Not settled.** Closing this end needs exact forms for the numerically forced
-directions, transversality on all of them, and a depth-2 shear hierarchy over
-the continuum of scales `1 ≲ v′ ≲ 1/a`. The depth of that cascade is unknown.
+**The limit's forced kernel, exactly.** Every forced direction of the limit
+comes from one family, the product states `ψ = w(1, v′, uv′)` with `Y = uW`.
+On that family the limit form is `2w²(1+u²)(p u² + q v′²)`, where `p, q > 0`.
+Its Newton polygon is `hull{(0,2), (2,0), (4,0), (2,2)}`.
+
+The argument takes any Gram certificate `G` and works in three steps:
+
+1. Push `G` forward to the image monomials of the family. The result is
+   positive semidefinite and represents that restriction.
+2. So any image monomial outside half the polygon gets zero weight.
+3. Hence the sum of the basis elements that map to that monomial lies in
+   `ker G`.
+
+This gives 57 forced directions plus the 4 contact vectors, 61 of the 126. The
+span contains every direction listed above. With exactly these 61 imposed, the
+limit problem is strictly feasible: margin 0.16, 0.18 and 0.09 at P1–P3, with
+solver status "Solved" and residual 10⁻¹³. The earlier figure of about 10⁻⁴,
+reached by removing only 17–19 directions, was an artefact. The directions it
+missed had diagonals from 10⁻⁹ to 10⁻¹.
+
+**Transversality, by grading.** At finite `a`, the Gram weight on a forced
+direction scales like `s^{k/6} = a^{k/3}`, for k = 1, …, 6. The value of k is
+read off the lower convex envelope of the order in `s` over a hexagon. The
+classes at k = 1, …, 6 number 12, 11, 10, 9, 8 and 7.
+
+- **The 7 classes of order `s` are exactly positive.** `B₁` carries `4A₁s`.
+  `B₂` and `v′X` carry `s(4n₀+2)`. The five Z-edge elements lie on an edge
+  whose polynomial is a positive binomial.
+- **The other 50 classes enter at fractional orders,** `a^{1/3}` to `a^{5/3}`.
+  This is consistent with the `a^{2/3}` rate seen earlier.
+- **No sign obstruction on the product family.** There the form is strictly
+  positive at finite `a`.
+
+**Not settled.** Two things are missing:
+
+- the six-level graded basis `a^{k/3}`, checked on the full finite-`a`
+  problem;
+- the Schur correction for the directions outside the product family.
+
+Double-precision solves at `a ≤ 3·10⁻³` broke down, so this was not tested
+numerically.
 
 Membership is unaffected: `L₆` is closed, and every tested `a > 0` satisfies
 (ND) with a positive margin. What fails is the covering plan as stated, which
