@@ -16,6 +16,14 @@ the earlier order-three curve, whose extreme sources lie outside `1+AB`.
 Both source and behavior matrices have complete elementary proofs and exact
 reproduction code.
 
+The stronger [13-word NPA exclusion](C2_W2_EXCLUSION.md) now shows that
+the entire finite equal-angle maximally entangled C2 family, including
+`n=0`, is missed even after all local words of length two are retained. A separate
+[unequal-angle certificate](C2_W2_UNEQUAL_CERTIFICATE.md) gives one extreme
+ray admitted by that larger NPA space. The [contact-scalar construction](CONTACT_SCALAR_GRAM.md)
+also has a positive-definite three-by-three Gram at every finite native
+C1/C2 contact. Completing its three state couplings remains open.
+
 The [unequal-angle equations](C2_CONTACT_GEOMETRY.md) expose an additional
 fourth-degree contact relation and two exact obstructions to simpler
 characterizations. An [order-six curve cone](../extracted-lifts/c2-unequal-angle-curve/)

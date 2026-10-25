@@ -12,10 +12,14 @@ with `A−m,A−D,m+D−A≥0`, `d=4A−2m−2D`, `n=m+D−A` and `λ=β=0`.
 Every feasible source decomposes into one tight source and the nonnegative
 excesses of `C` and `α`. Four AM–GM terms prove validity at every test.
 
-This cone includes the [quadratic curve](../extracted-lifts/c2-quadratic-family/),
-whose sources lie outside `1+AB`. The order-seven block therefore strictly
-sharpens `1+AB`; there is no need to append the contained order-three curve
-block separately. Both constructions avoid the large state-polynomial Gram.
+This cone includes the [quadratic curve](../extracted-lifts/c2-quadratic-family/).
+In fact, every finite equal-angle maximally entangled C2 contact lies outside
+the larger 13-word NPA space containing all words of length at most two.
+The [exact exclusion proof](C2_W2_EXCLUSION.md) includes the `n=0` boundary.
+Appending the order-seven block therefore strictly sharpens this NPA
+relaxation on a whole two-parameter family. The contained order-three curve
+block need not be appended separately. Both constructions avoid the large
+state-polynomial Gram.
 
 The [unequal-angle contact equations](C2_CONTACT_GEOMETRY.md) now give a
 symmetric three-parameter family and a fourth-degree identity that fixes a
@@ -333,6 +337,18 @@ entangled C2 native family: [six forbidden-word equations](C2_MAXIMAL_NPA_OBSTRU
 have a strictly positive determinant throughout its contact domain. This
 excludes `1+AB` also at unequal angles and on `n=0`, without an exceptional
 interior locus. Singular contact limits require separate analysis.
+
+Adding the four local products `A0A1,A1A0,B0B1,B1B0` gives the fixed
+13-word space `W2`. Its [equal-angle obstruction](C2_W2_EXCLUSION.md)
+reduces any putative Gram to seven contact roots. Universal coefficient
+identities then force a zero diagonal entry beside a strictly positive
+off-diagonal entry, contradicting positivity. All elimination pivots are
+nonzero throughout the native equal-angle domain, including `n=0`.
+By contrast, an [explicit unequal-angle extreme ray](C2_W2_UNEQUAL_CERTIFICATE.md)
+has a rational positive-definite seven-by-seven Gram in this same space.
+Thus `W2` admits some of the sources missed by `1+AB`, while the existing
+order-seven cone supplies its entire equal-angle omission. Coverage of
+the remaining independently varying contact parameters is still open.
 
 An explicit partially entangled extreme source also lies outside `1+AB`.
 Its global validity follows from one weighted AM--GM determinant identity;
