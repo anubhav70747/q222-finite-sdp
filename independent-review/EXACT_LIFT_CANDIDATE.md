@@ -180,7 +180,9 @@ factor that cancels in each ratio. C1/C2 contacts have all four amplitudes
 nonzero (paper, strict sign lemma). So the reduced coefficient map at any
 contact equals the map at the standard point `(1, 1; 1, 1, 1, 1)`, up to a
 diagonal rescaling of coefficients. Its rank is therefore constant on each
-family, and equals `N − 6` by the exact seeds.
+family. In the 154-function support-face basis it is `412 − 6 = 406`, proved
+exactly in [`checks/gram-lift/contact_rank.py`](checks/gram-lift/contact_rank.py)
+(see [`ASSEMBLY_REFINEMENT.md`](ASSEMBLY_REFINEMENT.md)).
 
 What (ND) still needs is strict positivity of the reduced Gram matrix.
 
@@ -386,7 +388,8 @@ checked by
 [`checks/gram-lift/ends/check_a0_corners.py`](checks/gram-lift/ends/check_a0_corners.py).
 
 So the conjecture now rests on a single nondegeneracy property of the Gram
-certificates, (ND), plus the closed faces. (ND) asks that no accidental
+certificates, (ND), plus the closed faces; a hybrid lift needs only (ND), since
+the closed faces can use their exact pencils. (ND) asks that no accidental
 degeneracy appears as one moves through each connected family of contact
 sources. The four exact seeds and the 302-source sweep are consistent with it:
 there, margins grow in proportion to the distance from the boundary.
