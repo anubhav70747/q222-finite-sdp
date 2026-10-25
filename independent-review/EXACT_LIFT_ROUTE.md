@@ -136,23 +136,19 @@ multiple of `c`. This is the definition of an extreme ray, applied to each
 summand and the sum of the others. Consequently, a sum of sound certificate
 cones covers this ray only if at least one summand cone covers the ray.
 
-For the positive-parameter equal-angle C2 sources, extremality also holds
-in the full cone of quantum-valid affine slacks. The eight canonical event
+Every extreme canonical ray with `d>0` is also extreme in the full cone
+`P` of quantum-valid affine slacks. Indeed, the eight canonical event
 coefficients of any valid slack are nonnegative: each is one quarter of
-the slack's value at its corresponding deterministic facet vertex. Only
-the core coefficient `d` could have either sign. At a tight quantum
-strategy with `H<0`, however, a valid summand cannot have `d<0`:
-its core term would be strictly positive and its event terms nonnegative.
-Every summand therefore lies in the same nonnegative canonical cone,
-where extremality has already been proved.
+its value at the corresponding deterministic facet vertex. Since
+`d=−f(PR)`, the canonical cone is exactly `P ∩ {d≥0}`.
 
-The required strict inequality holds throughout that contact family.
-Its state is proportional to `(1,−sqrt(rx),sqrt(rx),1)`, so
-`p_A=rx/[2(1+rx)]>0`. Since `A>0` and the slack vanishes,
-`H=−4Σ a_i p_i≤−4A p_A<0`. This includes `n=0`.
-Thus the extreme-ray requirement also applies when the added NPA cone is
-allowed arbitrary Bell coefficients. Limits where `H=0` require their
-own argument.
+Suppose `f=g+h`, with `g,h∈P` and `d(f)>0`. For sufficiently small
+`ε>0`, both `f±=(1±ε)g+(1∓ε)h` remain valid and have positive `d`.
+They lie in the canonical cone and have average `f`. Canonical extremality
+forces them, and hence `g,h`, to be proportional to `f`. This applies to
+all positive-core C1/C2 extreme rays, including zero-event faces, and
+allows the other cones to use arbitrary Bell coefficients. It uses no
+strict inequality at a particular quantum contact.
 
 The sum of finitely many closed, globally sound certificate cones is closed,
 even outside one nonnegative canonical orthant. Write a slack as
@@ -223,6 +219,17 @@ restriction on the dual variable and can miss an obstruction. Physical
 evaluation functionals alone likewise do not exhaust this dual cone.
 
 ## The shortest remaining target
+
+An explicit partially entangled extreme source also lies outside `1+AB`.
+Its global validity follows from one weighted AM--GM determinant identity;
+six forbidden-word coefficients give an invertible matrix of determinant
+`-405`, excluding every nine-word Gram. The same obstruction holds on a
+relative Zariski-open dense subset of the strict native C2 interior.
+The [complete rational proof](C2_NONMAXIMAL_NPA_OBSTRUCTION.md) includes
+the contact, all coefficients and a full-polar extremality argument.
+Thus the additional cones must cover generic changes in Schmidt coefficients,
+not only the maximally entangled surface. Exceptional parameter loci are
+not classified by this generic argument.
 
 The direct source-cone construction now covers a whole two-parameter
 surface of extreme rays. The next extension must retain further independent
