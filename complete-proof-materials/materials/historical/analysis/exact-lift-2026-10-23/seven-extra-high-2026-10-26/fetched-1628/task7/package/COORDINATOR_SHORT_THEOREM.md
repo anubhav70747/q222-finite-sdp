@@ -1,0 +1,23 @@
+# Coordinator theorem: fixed-cone entrance at all singular canonical sources
+
+**Conditional input.** Let `K` be one globally sound **closed convex** certificate cone in the *original Bell coefficient space* with a fixed finite source-independent sixth-root Gram library. Suppose every actual strict physical C1 source in A1 (both D, beta positive) and every actual strict physical six-event C2 source in Omega (n positive) belongs to `K`. Assume the original physical source classification SG9–SG10, exact native entry EN1–EN16, and the already-proved event/SG12/SG13 source cones.
+
+**Conclusion.** Every five-event finite noncommuting canonical extreme source (C1 D=0 or beta=0, C2 n=0) lies in `K`. There is no further singular *extreme finite-contact* stratum requiring another Gram cone. The complete quantum-valid affine source cone equals the **closed finite sum** of event rays, the finite physical relabeling copies of `K`, and the relabeling copies of the physical SG12/SG13 closed-face cones. This is not the closure of their union: nonextreme sources require convex assembly. The conclusion and the resulting finite hybrid dual lift remain conditional on the two universal strict PSD admission claims.
+
+## One coefficient-space perturbation
+
+At any five-event physical contact `(u,v;W,X,Y,1)` let `s=(W,X,Y,u,v)`. The SG6 Laurent coefficients `q01,q10,q12,q21` are **strictly positive**: they contain respectively the positive products `alpha*m`, `alpha*A`, `(beta*m + C*D)`, and `C*A`. Hence the contact angular Hessian is positive definite. The original `Z=0` state block is positive definite (SG3), and its Schur angular Hessian agrees, up to a strictly positive factor, with the determinant Laurent Hessian. Therefore `H=∇²_s F ≻0`. The signed core at contact satisfies `F_H<0`, since otherwise all positive event amplitudes would vanish and contradict `det P_H≠0` (SG20).
+
+Open the **one missing event** `a_j=epsilon>0`, keep all other event weights (including the two forced zeros) fixed, and solve `F=0, ∇_s F=0` for `(s,d)`. The 6x6 Jacobian is `[[H, ∇F_H],[0,F_H]]`, hence invertible. The implicit-function theorem supplies analytic `s(epsilon),d(epsilon)`, with `d(epsilon)>0` and `d'(0)=-E_j(s0)/F_H(s0)>=0`. All event weights are nonnegative and the source has its actual stationary zero; SG7 proves physicality, rather than assuming perturbative positivity. EN13 (C1) and EN14 (C2) invert the contacts exactly, with strict gaps inherited from EN2, even at the third omission. Thus each positive epsilon belongs to **the actual A1 or Omega**, with every other omission unchanged. Normalizing by `d(epsilon)+sum a_i(epsilon)` gives coefficient convergence.
+
+## Why nothing else is needed
+
+SG9–SG10 reduce each normalized coercive extreme with d>0 to five or six positive events in C1/C2. Six are admitted conditionally; five enter by the perturbation and closedness of `K`. More omissions mean an exclusive pair and an SG12/SG13 face. `d=0` gives event rays. Compatible/projective zeros, escaping contact scales and vanishing contact coordinates cannot define another extreme class: apply SG10 to the *limiting coefficients*, not to limiting chart coordinates. Nonextreme sources are finite sums of at most nine extreme atoms, with literal omitted coefficients preserved termwise by nonnegativity.
+
+The sum of globally sound closed cones is closed **in this particular Bell affine space**. For any sound `f=t+sum b_i chi_i`, average over 16 deterministic assignments. Orthogonality gives `t=E f>=0`, `b_i=E[chi_i f]`, and `|b_i|<=t`. In a convergent sequence of finite sums, each summand therefore has bounded coefficients; take termwise subsequences. This closes the sum without assuming that arbitrary Minkowski sums of closed cones are closed. A fixed sixth-root cone itself is closed by its fixed compact full-rank feature moment/trace bound.
+
+All assertions of coefficient density and Gram closedness are finite first-order real algebraic statements (the analytic real proof establishes the required universal first-order density sentence), so they transfer to arbitrary real closed coefficient fields. There is no requirement to compare testing and source infinitesimal rates. Global soundness of the original fixed feature identity already covers the full four-state parent and all projective tests.
+
+**Still open:** the universal strict C1 eight-gauge PSD feasibility and strict C2 24-term dual inequality. **No** new local certificate, numerical sweep, or additional uniform Gram bound has been proved or assumed.
+
+Full proof: `FIXED_CONE_SINGULAR_SOURCE_DENSITY_THEOREM.md`. Exact source-map checker: `verify_native_entrances.py`.

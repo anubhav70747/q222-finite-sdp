@@ -1,0 +1,77 @@
+{
+  "archives": {
+    "task3": {
+      "members": 10,
+      "files": 10,
+      "crc_first_bad": null,
+      "extracted_byte_mismatches": [],
+      "archive_sha256": "453747b1d025d9180498e046e00b80e9fdad17b961f05de126fce50603e545c0"
+    },
+    "task5": {
+      "members": 24,
+      "files": 24,
+      "crc_first_bad": null,
+      "extracted_byte_mismatches": [],
+      "archive_sha256": "ea4bb6c1a95ca5440520977043afbefbf850f689dcaa4cdc57dcc3566e3f0367"
+    },
+    "task7": {
+      "members": 8,
+      "files": 8,
+      "crc_first_bad": null,
+      "extracted_byte_mismatches": [],
+      "archive_sha256": "6ad5f5de03aacb38069d70a528a89fc878c745c090ca36304d642fdc20e09649"
+    }
+  },
+  "hashes": {
+    "task3": {
+      "count": 9,
+      "mismatches": []
+    },
+    "task5": {
+      "count": 23,
+      "mismatches": []
+    },
+    "task7": {
+      "count": 7,
+      "mismatches": []
+    }
+  },
+  "runs": [
+    {
+      "check": "c2_corner",
+      "seconds": 2.449,
+      "exit": 0
+    },
+    {
+      "check": "c1_schur",
+      "seconds": 1.018,
+      "exit": 0
+    },
+    {
+      "check": "c1_no16",
+      "seconds": 0.961,
+      "exit": 0
+    },
+    {
+      "check": "c1_family",
+      "seconds": 14.246,
+      "exit": 0
+    },
+    {
+      "check": "density_entrances",
+      "seconds": 0.743,
+      "exit": 0
+    }
+  ],
+  "regenerated": {
+    "C2_CORNER_AFFINE_18.json": {
+      "json_equal": true,
+      "byte_equal": false
+    },
+    "C2_AFFINE_BRIDGE_17_PLUS_1.json": {
+      "json_equal": true,
+      "byte_equal": false
+    }
+  },
+  "total_seconds": 19.668
+}

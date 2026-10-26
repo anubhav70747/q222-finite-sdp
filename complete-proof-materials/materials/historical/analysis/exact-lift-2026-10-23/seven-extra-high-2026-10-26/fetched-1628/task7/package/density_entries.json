@@ -1,0 +1,78 @@
+{
+  "verified_entrance": "conditional_density_to_fixed_closed_cone",
+  "source_refs": {
+    "geometry": "latex/chapters/04_geometry.tex SG1-SG22",
+    "native": "latex/chapters/05_entry.tex EN1-EN16",
+    "source_snapshot": "INPUT_07_FIXED_CONE_DENSITY_sources.txt",
+    "strict_C1": "A1; A2; A3 in supplied new C1 proof",
+    "strict_C2": "Omega (1); weights (2); contact (4) in supplied new C2 proof"
+  },
+  "entrances": [
+    {
+      "family": "C1",
+      "literal_zero": "D",
+      "other_forced_zero": [
+        "lambda",
+        "n"
+      ],
+      "positive_retained": [
+        "m",
+        "C",
+        "A",
+        "alpha",
+        "beta"
+      ],
+      "perturbation": "D=epsilon>0, hold other events fixed, solve 6 complete stationary equations for d and s; normalize source",
+      "exact_domain": "A1",
+      "original_source_boundary": "D=0, beta>0"
+    },
+    {
+      "family": "C1",
+      "literal_zero": "beta",
+      "other_forced_zero": [
+        "lambda",
+        "n"
+      ],
+      "positive_retained": [
+        "m",
+        "C",
+        "A",
+        "D",
+        "alpha"
+      ],
+      "perturbation": "beta=epsilon>0, hold other events fixed, solve 6 complete stationary equations for d and s; normalize source",
+      "exact_domain": "A1",
+      "original_source_boundary": "beta=0, D>0"
+    },
+    {
+      "family": "C2",
+      "literal_zero": "n",
+      "other_forced_zero": [
+        "lambda",
+        "beta"
+      ],
+      "positive_retained": [
+        "m",
+        "C",
+        "A",
+        "D",
+        "alpha"
+      ],
+      "perturbation": "n=epsilon>0, hold other events fixed, solve 6 complete stationary equations for d and s; normalize source",
+      "exact_domain": "Omega (N_n>0)",
+      "original_source_boundary": "n=0"
+    }
+  ],
+  "conditional_PSD_inputs": [
+    "all strict physical C1 in A1 are in the same fixed global sound closed K",
+    "all strict physical C2 in Omega are in the same fixed global sound closed K"
+  ],
+  "non_contact_routes": [
+    "d=0 event rays",
+    "noncoercive incompatible-pair SG12/SG13 physical closed faces",
+    "nonextreme finite convex combinations via SG10"
+  ],
+  "closure_type": "coefficient-space K plus finite closed Minkowski sum; not closure of a union",
+  "no_new_PSD_claim": true,
+  "all_projective_tests": "inherited from global fixed-parent certificate soundness; no chart Gram used"
+}

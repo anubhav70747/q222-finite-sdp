@@ -36,7 +36,7 @@ These are completion conditions, not a requirement to execute every possible pro
 
 - [ ] **R03 — Prove complete strict C2 admission.** Cover arbitrary finite native c and the source parameters outside the verified open-end neighborhoods. Retain the known obstruction to universal use of the smaller half-power library. **Maps to L08.**
 
-- [ ] **R04 — Include all singular source limits in the same finite construction.** Include permitted zero weights, additional omissions, compatible-contact limits, vanishing state coordinates and simultaneous openings at independent relative rates. Full strict-source admission plus a proved density statement and closedness may settle these limits together. Otherwise supply genuine neighborhood certificates, not only limiting Grams. **Maps to L09.**
+- [x] **R04 — Prove singular-source closure conditional on complete strict-source admission.** L15 verifies the coefficient-space density and finite closed-sum implication for the hybrid construction. Actual singular admission follows when R02 and R03 hold in the same fixed closed globally sound cone; no uniform Gram margin or separate limiting-chart proof is needed. Event and SG12/SG13 cones remain separate. **Conditional implication resolved; strict hypotheses remain open.**
 
 - [ ] **R05 — Establish complete testing and canonical-source coverage.** Every cone used globally must certify all independent measurements and states, including projective endpoints. Join regional testing certificates for the same source before global use. Then apply the existing canonical classification and include event and closed-face orbits. **Maps to L09.**
 
@@ -58,14 +58,14 @@ These are completion conditions, not a requirement to execute every possible pro
 
 | Work | Present assignment or next dependency |
 |---|---|
-| R02 strict C1 | Existing Extra High C1 assignment; preserve its current run. |
-| R03 strict C2 | Existing Extra High C2 assignment; preserve its current run. |
-| R01/R04/R05 | Consolidate completed outputs before choosing direct global admission, finite boundary-neighborhood coverage or a proved alternative. |
+| R02 strict C1 | Universal Z16 admission on A1 is refuted (L16); seek a proved oriented, enlarged or reflected finite construction. |
+| R03 strict C2 | The full dual inequality remains open; the new signed-edge allocation does not prove it. |
+| R01/R04/R05 | The conditional singular-density/closed-sum implication R04 is verified. Fix a common closed sound construction and prove its strict-family admission. |
 | R06–R08 | Require an exact canonical construction from R01–R05. |
 | R09 | Can develop alongside the new mechanism, but closure requires a complete replacement for the imported long argument. |
 | R10–R12 | Integrate and release only the proved final construction; keep existing original evidence available. |
 
-At **20:53 IST** on 26 October both assignments supplied complete normal answers and original packages. Independent analytical reviews and exact data replay validate the C1 eight-gauge coefficient reduction (L13) and the C2 compact-dual reduction (L14). Neither proves the remaining universal PSD inequality. The next work therefore starts from the explicit reduced problems; R02 and R03 remain open. The earlier interrupted C2 state has ended.
+At **22:00 IST** the three complete responses and original packages were recovered. L15 closes the conditional singular-density and hybrid-assembly implication; L16 refutes universal admission to the small C1 cone on A1. The C2 dual inequality remains open. Independent analytical reviews and exact replays are recorded in [Verified scope and corrections](DENSITY_AND_CONSTRUCTION_UPDATE.md). The construction must now prove strict admission using an adequate fixed cone; repeating the disproved full-A1 eight-gauge target is not a valid continuation.
 
 ## Route-dependent work and work already superseded
 

@@ -1,0 +1,86 @@
+Fixed-cone singular-source density: bounded analytical verification
+26 October 2026
+
+Reviewed:
+analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1628/task7/package/FIXED_CONE_SINGULAR_SOURCE_DENSITY_THEOREM.md
+and COORDINATOR_SHORT_THEOREM.md in the same directory. Compared the
+specific interfaces with current latex/chapters/04_geometry.tex SG3,
+SG7,SG9–SG10,SG18–SG22 and05_entry.tex EN1–EN16. Also checked the
+strict A1 domain actually included in INPUT_07_FIXED_CONE_DENSITY_sources.txt.
+No fresh full-body audit or computational replay is claimed.
+
+Verdict: the coefficient-density and conditional finite-cone assembly
+arguments are supported. Under universal strict-source admission into
+one fixed closed globally sound cone, no additional singular-source
+admission theorem is needed for the resulting hybrid construction.
+This does not establish the strict-source admission hypothesis, select
+an evaluated pencil or prove that the closed faces belong to Z6.
+
+1. Curvature and IFT.
+The four axial SG6 coefficients remain strictly positive at each allowed
+third omission: q01 uses alpha*m, q10 alpha*A, q21 C*A, and q12 uses
+beta*m or C*D. Thus their positive balanced weights give a strictly
+positive angular Hessian. SG3 and the exact state Schur identity SG19
+upgrade this to the full five-variable state/angle Hessian; positive
+scalar curvature alone would not suffice, but the required mixed-block
+argument is supplied. SG20 excludes a contact where all positive event
+amplitudes vanish, so the signed-core value is strictly negative.
+The displayed six-by-six IFT Jacobian is therefore invertible.
+
+Opening exactly the one additional omission, while adjusting d and the
+full contact, preserves d>0 and every original positive event weight.
+The state Euler identity supplies the fourth kernel equation after Z=1.
+SG7 then proves global physicality of the perturbed source, rather than
+assuming positivity survives arbitrary perturbations. This is independent
+of the PSD-admission problem. EN entry identifies the actual strict
+native chart and coefficient formulas. The supplied A1 has no k<=1
+restriction, so no unmentioned source-reflection invariance of K is
+needed for this opening. Positive normalization converges to the given
+normalized source. No uniform IFT radius or Hessian margin is required.
+
+2. All other source degenerations.
+The density statement itself handles only finite five-event contacts.
+Its global consequence correctly also uses SG9–SG10: coercive extremes
+have five or six events and finite noncommuting contacts; further
+omissions or noncoercive supports enter the existing closed-face orbits;
+d=0 enters the event cone. Apply this classification to limiting
+coefficient sources, not to possibly escaping native coordinates.
+Nonextreme sources require finite conic sums. A union-density assertion
+would be false; the note explicitly avoids it.
+
+3. Closedness, quantifiers and scope.
+The fixed original-feature integration bound proves Gram-image
+closedness without moving-contact normalizations. For the finite sum,
+global soundness at the16 deterministic assignments gives t>=0 and
+|b_i|<=t. A convergent sum bounds each summand's t and hence all its
+coefficients, giving termwise convergent subsequences in the closed
+cones. This is a valid special closed-sum argument, not a general rule
+for spectrahedral shadows. The faces here mean the original physical
+canonical faces, including their nonnegative source-coordinate constraints.
+
+Real coefficient density, fixed-cone membership/closedness and the
+finite-atom source assertion are first-order semialgebraic statements.
+Their transfer does not transfer analytic connectedness or rely on
+non-Archimedean sequential compactness. Admission must hold for EVERY
+strict real source into the SAME fixed cone (or a proved fixed finite
+closed sum), not merely on each compact family with its own library.
+Under that strong hypothesis, closedness removes all additional singular
+admission tasks for the hybrid cone. Independent testing rates remain
+covered by the original fixed full-parent identity.
+
+4. Two repairable presentation issues.
+Section6's statement that the source cone's dual is simply A*y>=0
+suppresses its coefficient map. If K={c:Tc=A(G),G>=0}, the moment
+condition A*y>=0 is in polynomial-coefficient dual space; the Bell-source
+dual additionally requires z=T*y, with the appropriate adjoints and any
+source-sign dual variables. Exact source-side projection requires the
+stated Slater/facial-duality justification. The supplied snapshot already
+includes the known full-Z6 rational strictly feasible point, so the
+established full-polar assembly supplies this interface. State it explicitly;
+the density and conic equality do not depend on this shorthand.
+
+Also use a consistent event convention: section1 writes F=d*F_H+4*sum
+a_i*E_i, whereas D5 uses sum a_i*E_i and section2 defines E_j=partial
+F/partial a_j. D5/D8 are correct with E_i defined as the derivative
+(four times the raw event packet). This is a factor-of-four notation
+repair, not a failure of the opening argument.

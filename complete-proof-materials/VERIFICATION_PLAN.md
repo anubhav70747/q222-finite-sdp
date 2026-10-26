@@ -14,3 +14,6 @@ L08-L10 remain open. No file count, successful symbolic identity, positive endpo
 
 
 The 15:23 UTC completed batch supplies original, independently checked reductions L13/L14. Continue directly with the C1 eight-gauge Schur completion and the C2 nonnegative 24-term dual inequality. Repeating stationarity, map rank, or strict physical curvature will not settle these obligations. A separate coefficient-space density/closed-cone implication can address singular limits conditionally on the same fixed cone admitting all strict native sources. Do not mark that implication complete before proving its exact density hypotheses.
+
+
+The 16:30 UTC batch changes the next task: universal C1 Z16 feasibility on A1 is refuted by an exact strict source. Do not retry that statement. Resolve admission on a justified oriented domain or an enlarged/reflected fixed cone, with exact physical relabeling. C2 still needs the full nonnegative dual inequality; its signed bridge is not PSD. L15 verifies singular density and closed hybrid assembly conditional on the strict hypotheses. Use [Verified scope and corrections](DENSITY_AND_CONSTRUCTION_UPDATE.md) for the source-dual projection and event-normalization conventions.

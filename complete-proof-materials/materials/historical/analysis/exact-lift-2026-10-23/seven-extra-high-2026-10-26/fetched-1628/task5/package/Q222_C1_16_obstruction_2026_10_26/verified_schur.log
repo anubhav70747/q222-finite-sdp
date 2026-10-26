@@ -1,0 +1,4 @@
+PASS: source-independent forced Gram entries and gauge 7, including all zeros needed for the 4x4 Schur.
+PASS: full 7x7 -> strict 2x2 + strict 1x1 + conditional scalar + 3x3 reduction.
+        d0 = (256*A*C*beta*m*uc**2*vc**2*wc**4 + 128*A*C*d*m*uc**2*vc**2*wc**4 + 256*A*D*beta*m*uc**2*vc**2*wc**4 + 128*A*D*d*m*uc**2*vc**2*wc**4 + 128*A*beta*d*m*uc**2*vc**2*wc**4 - 4*A*beta*gamma**2 + 64*A*d**2*m*uc**2*vc**2*wc**4 - 2*A*d*gamma**2 - 4*A*gamma**2*m - 4*C*beta*gamma**2 - 2*C*d*gamma**2 - 4*C*gamma**2*m - 4*D*beta*gamma**2 - 2*D*d*gamma**2 - 4*D*gamma**2*m - 2*beta*d*gamma**2 - d**2*gamma**2 - 2*d*gamma**2*m)/(16*m*vc**2*wc**2*(2*beta + d)*(2*A + 2*C + 2*D + d))
+PASS: full 5x5 -> strict 1x1 + exact 4x4 Schur; no additional coefficient assumption.

@@ -1,0 +1,138 @@
+BOUNDED ANALYTICAL VERIFICATION: STRICT C1 Z16 OBSTRUCTION
+26 October 2026
+
+Scope: mathematical reading of the recovered original package, its exact
+checker expressions, the previous Z16 reduction, and the specific native
+source/physicality/reflection identities. No new numerical samples, SDP,
+parameter sweep, whole-proof re-audit, browser action, or repository edit.
+The supplied logs were read as receipts; no checker was rerun in this audit.
+
+PACKAGE
+analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1628/
+task5/package/Q222_C1_16_obstruction_2026_10_26/
+All PROOF.md line references below refer to this package.
+
+VERDICT
+The negative resolution of OPEN-C1-16 on the previously printed unoriented
+strict A1 domain is supported. The exhibited source has k=4. No obstruction
+to the separately oriented k<=1 claim, positive Z18/full-Z6 admission,
+evaluated global pencil, or qualitative finite-SDP existence follows.
+There is one material scope correction to the claimed separating-functional
+extension at PROOF.md:277: restrict its positivity assertion to the canonical
+Bell coefficient slice with the sign congruences and coefficient constraints
+used in the proof. An arbitrary represented polynomial with only one contact
+zero has not been shown to satisfy that assertion. This correction does not
+affect the explicit native-source impossibility certificate.
+
+1. GENUINE STRICT SOURCE AND GLOBAL VALIDITY
+PROOF.md:25-81 gives k=4,f=1/1000,g=1/8,a=t=1, all strict native signs,
+the original seven positive nonomitted weights, and contact
+(u,v;W,X,Y,Z)=(4,1/2000;125,-63/16,999999/2000,1).
+original_baseline/c1_native.py:6-24 agrees termwise with current repository
+latex/certificates/c1_short.tex:696-747 (coquotients and SD1). In particular
+lambda=n=0, C=2 and D,beta are the actual positive physical event weights,
+not formal negative coefficients or omitted boundary values.
+verify_exact_no16.py:17-29 evaluates the complete list of source signs;
+:40-45 substitutes all four state derivatives and both angular derivatives
+of the full parent, rather than a scalar contact restriction.
+Its sym_parent at original_baseline/c1_small_map.py:39-41 retains the signed
+core, all four state coordinates and all seven physical coefficients.
+Current latex/chapters/04_geometry.tex:198-218 explicitly states and proves
+the SG7 contact-to-physicality implication under d>0 and nonnegative event
+weights, at all angles/states including homogeneous endpoints. Therefore
+invoking it here is legitimate, relative to that retained proved module.
+
+2. FOUR-SIGN/Fourier LOWER BOUND
+PROOF.md:85-134 uses an invertible source-only rescaling and separates the
+ordinary integer-polynomial square sum from gamma*UV*(W-Z)^2. The contact
+kernel of the fractional 2x2 PSD block forces precisely this one root.
+After removing integer/fractional cross blocks, the identity is polynomial,
+so its evaluation at negative U or V is legitimate; no real square root of
+a negative testing coordinate is being evaluated. At the two sign-related
+zeros with UV=-1 the fractional polynomial equals -4 gamma. The integer
+root norms are consequently 2 sqrt(gamma), while they vanish at the other
+two zeros. The only trivial sign characters among the fourteen integer
+features are V X, U Y and UV Z, as read directly from the feature list and
+verify_exact_no16.py:112-128. Averaging and the triangle inequality give
+gamma >= max(0,sqrt(S_b)-sqrt(S_c)-sqrt(S_e))^2.
+The three norms in (11) have unique feature-square coefficients. Cross
+terms cannot alter them. The rational comparisons in (18)-(20) have the
+correct direction and yield gamma>81/4000000.
+
+3. FORCED SCHUR UPPER BOUND AND CONTRADICTION
+PROOF.md:138-180 and verify_forced_schur.py:14-48 tie the required entries
+and zeros to the retained 42-row map and all eight gauge directions.
+The block on indices 1,2 is strictly positive, with determinant
+8m(2 beta+d)v_c^2 W_c^2 X_c^2. Eliminating it in indices 0,1,2,4 leaves
+H00-gamma^2 H22/(4 delta), H04, H44. Since H44>0, its determinant gives
+exactly (17), including u_c^2 v_c^2 W_c^4; there is no missing contact
+normalization factor. At the witness, U_theta<1/100000^2. With gamma>=0
+this gives gamma<1/100000, contradicting the Fourier lower bound.
+The complete Schur rules in PROOF.md:319-380 correctly retain zero-pivot
+range conditions b=0, not division by a zero pivot. These are reductions,
+not a positive-admission construction for other sources.
+
+4. RATIONAL SEPARATOR: VALID WITNESS; NARROW ITS STATED AMBIENT SCOPE
+PROOF.md:229-274 gives the valid linear Cauchy consequence
+gamma >= S_b/3-S_c-S_e. The fixed rational q0 is the minimizing vector
+for the two forced strictly positive subblocks at gamma0=1/100000.
+Its quadratic value is affine with slope -a0 in gamma. Adding
+a0*(gamma-L_lin) cancels the sole gauge exactly and leaves the displayed
+strictly negative rational value. This is an exact algebraic separation
+of the native coefficient-matching PSD feasibility problem.
+However, PROOF.md:277 says positivity holds for every Z16-represented
+parent on the single exposed contact-zero face. The preceding proof uses
+the original Bell sign congruences at :99-107, hence four sign-related
+zeros, not merely the zero at (1,1;1,1,1,1). The forced-entry formulas also
+come from the canonical coefficient subspace. Arbitrary polynomial squares
+vanishing at this one contact need not possess the other three zeros.
+Use: 'a rational separator on the canonical Bell coefficient slice of the
+contact-zero face, with the displayed sign congruences.' Do not assert the
+larger ambient-face positivity without an additional proof.
+
+5. FAMILY, ORIENTATION AND ENLARGEMENT
+The leading orders at PROOF.md:281-315 have the correct scaling:
+S_b~(536/17)f^2, S_c,S_e=O(f^4), U_theta~(270144/18479)f^4.
+Consequently the squared lower bound and squared upper bound disagree
+strictly for all sufficiently small positive f; continuity with strict
+source signs supplies open native neighborhoods. The limiting f=0 source
+is not asserted to be a strict native source.
+Current c1_short.tex:104 and :580 use oriented k<=1, whereas :696-698
+expressly preserves the coquotient/contact identities for arbitrary
+positive parameters before the bounded-Gram application. Thus the k=4
+witness is admissible for the recovered A1 but does not settle the
+oriented representative-only version. PROOF.md:7-21 and :407 correctly
+retain that qualification.
+PROOF.md:386-398 correctly distinguishes necessary new noninteger rows,
+strict ambient-cone enlargement by sqrt(uv)X,Y, and unproved physical-source
+admission. Integer root degrees above one cannot occur in a degree-(2,2)
+sum of ordinary polynomial squares; the absent W^2 and u^2 X^2 target
+coefficients eliminate W and uX. The other fourteen integer features are
+already present. The example uv(X-Y)^2 proves strict ambient enlargement,
+not membership of the actual counterexample or universal Z18 sufficiency.
+
+6. MOST USEFUL CONSTRUCTIVE CONTINUATION
+Do not continue catalogue-building on Z16. Ask for a positive admission
+construction on an explicitly fixed reflection-compatible feature space,
+with the oriented source domain and exact transport settled first.
+The shortest targeted question is whether the oriented Z16 construction
+can be completed and transported into one fixed finite cone, using the
+new Z18 fractional state directions where necessary. Keep full Z6 as the
+declared target if that smaller cone does not close under transport.
+
+Critical transport constraint: current latex/chapters/05_entry.tex:162-170
+gives the actual reflection, whose state matrix satisfies G^T G=D_v I,
+and u^2 F_ref(1/u,v;G psi)=D_v F_original(u,v;psi). Its matrix depends on
+the testing coordinate v. A 'reflection-orbit cone' is therefore not
+automatically the monomial union Z16 plus reflected names, or a subcone of
+the original 196-feature frame. Specify homogeneous clearing and retained
+D_v multiplier, or the corresponding normalized rational features, before
+claiming equality to the original candidate admission problem. A proof of
+D_v F as polynomial SOS must not silently be reported as F in unchanged Z6.
+After that frame is fixed, seek source-dependent PSD Gram/Schur allocations
+on the oriented strict source domain and exact coefficient restoration.
+Neither local witness feasibility alone nor more obstructions constitute
+the required universal constructive continuation.
+
+The earlier qualitative C1/C2 existence chain is outside this bounded audit
+and is unaffected by failure of this particular sixteen-feature cone.

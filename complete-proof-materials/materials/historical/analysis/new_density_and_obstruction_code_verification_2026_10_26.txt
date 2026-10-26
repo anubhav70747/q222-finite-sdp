@@ -1,0 +1,24 @@
+New density/obstruction packages: sequential exact-code verification
+26 October 2026
+
+Inputs: fetched-1628/task3/package/C2_Dual_Pairing_Audit_20261026,
+task5/package/Q222_C1_16_obstruction_2026_10_26, and task7/package,
+under analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26.
+
+Integrity. The three original ZIPs pass every CRC check, and every extracted file equals its corresponding archive member byte-for-byte. C2 task3 has exactly 10 members, all files, NOT 11: nine manifest-listed files plus MANIFEST.json. Thus the supplied 10-file package is complete relative to its manifest; the external eleven-member claim is incorrect. Task5 has 24 files and task7 eight. All 39 listed SHA-256/byte-count entries match (9 C2, 23 C1, 7 density). These are local package-integrity checks, not external authentication of remote claims. Archive hashes and complete records are in the replay JSON.
+
+Safety/replay. I inspected all five selected scripts and their imports first. They use deterministic exact SymPy algebra, with no SDP solve, network, witness search or parameter sweep. Each package was copied into analysis/new-density-obstruction-replay-2026-10-26/ before execution, because the C2 checker regenerates files beside its own script. All checks ran sequentially with OPENBLAS_NUM_THREADS=OMP_NUM_THREADS=MKL_NUM_THREADS=1, PYTHONDONTWRITEBYTECODE=1 and individual 60-second timeouts. Supplied originals, manifests and Git were not modified. Old baseline verify_all/end-theorem checks were not repeated; C1 baseline modules were only imported as dependencies.
+
+Results and actual scope:
+
+* C2 verify_corner_pairing.py: PASS, 2.449 s. It rebuilds the 14-corner/13-contact-difference map, verifies ranks 72 overall, 54 off-target and 18 in the supported target image. The 19 individually supported edge squares form three K4 components plus K2 and have rank 17. The exact missing coefficient factors by h-a^2 r. A rational right inverse and 17-edge-plus-one-bridge identity reconstruct the full 18-dimensional stationary target space. The bridge compression has eigenvalues +2,-2,0,0, while all those edge squares vanish on that quotient. Two explicitly checked strict native sources give both signs of h-a^2 r. These are signed AFFINE decompositions and a failure of this particular positive-edge/bridge architecture, not a sixth-root admission proof or general obstruction. Both regenerated JSON objects equal the supplied JSON data; their bytes differ, so no byte-identity claim is made.
+
+* C1 verify_forced_schur.py: PASS, 1.018 s. It recovers the forced entries and zeros, verifies their invariance under the other gauges, and checks the exact conditional scalar Schur expression. Remaining full-block PSD conditions are not inferred from those forced positive pivots.
+
+* C1 verify_exact_no16.py: PASS, 0.961 s. The rational source at (k,f,g,a,t)=(4,1/1000,1/8,1,1) satisfies the printed strict native signs and all full-state/angle contact identities. Exact Fourier bounds force gamma>81/4000000, whereas the forced principal Schur block forces gamma<1/100000. The script also verifies the stronger rational face-local linear separator. Scope: exclusion from the specified 16-feature cone on the recovered domain permitting k>1. It does NOT exclude a k<=1 representative-only construction, an enlarged 18-feature cone, or the full sixth-root cone.
+
+* C1 verify_analytic_family.py: PASS, 14.246 s. It verifies the five stated native coefficient limits and the incompatible gamma asymptotics as f decreases to zero at fixed (k,g,a,t)=(4,1/8,1,1). The asymptotic source itself is not a finite native contact; the obstruction concerns sufficiently small positive f, as stated in the proof.
+
+* Density verify_native_entrances.py: PASS, 0.743 s. It checks 20 symbolic native inverse/gap identities and the deterministic Bell-feature orthogonality matrix V^T V=16 I9. These validate the algebraic entrance interface. This script alone does not prove the separate geometric density theorem, compactness argument or fixed-cone admission hypothesis.
+
+All five exit codes are zero; aggregate replay time including copying/integrity checks was 19.668 seconds, with no timeout or memory failure. Logs and verification_results.json are in analysis/new-density-obstruction-replay-2026-10-26/.
