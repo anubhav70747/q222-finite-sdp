@@ -553,6 +553,15 @@ to this folder.
     exact rational Grams with kernel exactly the contact at 8 wall points,
     and positive numerical margins at 26 further points
     ([`checks/gram-lift/ends/check_c2_n0_wall_k2.py`](checks/gram-lift/ends/check_c2_n0_wall_k2.py)).
+    Over the whole wall the weights have short closed forms, and 18 features
+    of the `k = 2` lift suffice. Solving the Gram identity and `G y_c = 0`
+    symbolically in `(c, a, b, r)` turns the whole wall into one explicit
+    16-parameter affine family of Grams, with rational entries. A member of
+    this family is positive definite with kernel exactly the contact at 22
+    rational wall points
+    ([`checks/gram-lift/ends/n0-wall/`](checks/gram-lift/ends/n0-wall/)).
+    Choosing the free parameters as explicit functions with provably
+    positive pivots on the whole wall is the next step.
   - The C1 walls behave the same way. `β = 0` is the graph `a = a_w(k,f,g,t)`.
     `D = 0` is the graph `ζ = ζ_D(κ, η, r, θ)` in paper coordinates. The
     remaining weights are explicit on both walls. The vanishing weight is a
