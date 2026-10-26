@@ -455,3 +455,10 @@ The bounded matrix implication remains under independent review. No
 counterexample to it has been established. Neither the unextracted pencil
 nor failure of a stronger uniform-cap construction disproves the original
 existence claim; neither establishes its missing verification.
+
+The [explicit bounded conductor](SE_BOUNDED_CONDUCTOR.md) now supplies the
+general eight-root identity under stated support, divisibility and boundedness
+hypotheses. It includes both complete first-normal rows and constructs every
+matrix entry by formal polynomial division. Applying it to the actual TL6
+stress still requires those hypotheses and the separate strict-base proof;
+the conductor itself makes no positivity or global-existence claim.
