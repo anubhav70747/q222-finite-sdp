@@ -536,9 +536,27 @@ wall. Each reduction has exact checks, which are not yet in this folder.
   wall. `R̃₀ + μ q_e` is strictly admitted for a modest `μ` (10–30). Exact
   certificates exist at one point per wall.
 
+- **C2, `c → ∞` and `c → 0`: the limit problem is solved on the whole open
+  face.** Rescale as `c⁻²F_c(cU, cV, W, X/c, Y/c, Z)`. The limit form is
+  then an exact sum of four squares with explicit positive coefficients:
+  `F₀ = c_X(UVX + L_X)² + c_Y(UVY + L_Y)² + p²(VW − a²tUZ)² + q²(UW − tVZ)²`.
+  It has a one-parameter `k = 2` Gram,
+  `F₀ = Q_κ(UW, UVX, VZ, VW, UZ, UVY) + κ·UV(W − atZ)²`.
+  An explicit LDLᵀ shows that this Gram has kernel exactly the contact iff
+  `0 < κ < κ_max = 4a·p²q²/(q² + a²p²)`. Every coefficient and pivot is
+  positive on the open face, so `κ = κ_max/2` works at every face point.
+  The `c → 0` face has the same structure. This is proved, by
+  [`checks/gram-lift/ends/check_c2_c_limits.py`](checks/gram-lift/ends/check_c2_c_limits.py).
+  - Exact pointwise `k = 2` certificates (hence `L₆`) exist at finite `c`:
+    36 of 36 points for `c` up to 10⁸, and 22 of 24 for `c` down to 10⁻⁸.
+    The two misses are double-precision failures, not infeasibility.
+  - Still open: the finite-`c` perturbation step. In charge-graded
+    coordinates the limit is only feasible on the boundary, because the
+    contact escapes. A multi-level reduction is needed.
+
 Each reduction ends at the same gap. Strict feasibility of a limit problem
 on a wall is proved at finitely many points of that wall, not at all of its
-points. Closing that gap needs certificates that are explicit functions of
+points, except at the `c` ends just described. Closing that gap needs certificates that are explicit functions of
 the wall parameters, and the wall's own corners recur one dimension lower.
 The `c → ±∞` ends and `a → 0` are also open, with the mechanisms described
 above.
