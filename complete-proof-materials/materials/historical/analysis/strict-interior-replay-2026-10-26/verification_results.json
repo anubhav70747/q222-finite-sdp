@@ -1,0 +1,64 @@
+{
+  "hashes": {
+    "C1": {
+      "checked": 13,
+      "mismatches": []
+    },
+    "C2": {
+      "checked": 14,
+      "mismatches": []
+    }
+  },
+  "runs": [
+    {
+      "name": "c1_verify_all",
+      "seconds": 6.359,
+      "exit": 0
+    },
+    {
+      "name": "c2_native_jets",
+      "seconds": 5.064,
+      "exit": 0
+    },
+    {
+      "name": "c2_map",
+      "seconds": 0.935,
+      "exit": 0
+    },
+    {
+      "name": "c2_rank",
+      "seconds": 0.946,
+      "exit": 1
+    },
+    {
+      "name": "c2_curvature",
+      "seconds": 0.901,
+      "exit": 0
+    },
+    {
+      "name": "c2_targets",
+      "seconds": 7.174,
+      "exit": 0
+    },
+    {
+      "name": "c2_rank_single_thread",
+      "seconds": 3.421,
+      "exit": 0
+    }
+  ],
+  "regenerated": {
+    "C2_154_CONTACT_MAP.json": {
+      "json_equal": true,
+      "byte_equal": true
+    },
+    "C2_CLEARED_POLYNOMIAL_TARGET.json": {
+      "json_equal": true,
+      "byte_equal": true
+    },
+    "C2_RANK406_MODULAR_PIVOTS.json": {
+      "json_equal": true,
+      "byte_equal": false
+    }
+  },
+  "total_seconds": 21.473
+}

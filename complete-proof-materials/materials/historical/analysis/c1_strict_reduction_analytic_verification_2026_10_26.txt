@@ -1,0 +1,113 @@
+Native strict C1 fixed-feature reduction: bounded analytical verification
+26 October 2026
+
+VERDICT
+The corrected original package supports an exact universal native-source
+coefficient-matching reduction in 16 fixed sixth-root-compatible features,
+with eight source-only free Gram gauges. No substantive error was found
+in that analytical reduction. It does NOT establish a positive-semidefinite
+completion for every strict native C1 source. The universal eight-gauge
+PSD implication OPEN-C1-16 remains unproved.
+
+ARTIFACT AND METHOD
+Read:
+analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1522/
+task5/package/Q222_C1_exact/PROOF.md, c1_native.py, c1_small_map.py,
+verify_c1_map_exact.py, and the stated forced-entry identities.
+This is a bounded analytical source/map review, not a fresh execution
+of all exact checkers. No numerical test, parameter sweep, Git operation,
+browser action, or change to the original artifacts was performed.
+
+The initially downloaded loose fetched-1522/task5/PROOF.md is unrelated
+historical C2 R3/R4/R6/R7 material. It is not the source of this finding.
+The relevant corrected original is package/Q222_C1_exact/PROOF.md.
+
+1. EXACT SOURCE DOMAIN
+PROOF.md:19-64 and c1_native.py:6-24 use the genuine C1 coquotients and
+complete four-state parent, with C normalized to 2. A1 imposes the native
+strict gap/coquotient inequalities and both strict D,beta inequalities.
+Consequently d,m,C,A,D,alpha,beta are positive, lambda=n=0, and the
+displayed source denominators do not vanish. The contact has nonzero
+state coordinates; Xc<0 and the remaining contact coordinates are positive.
+This construction concerns the strict source interior. It does not itself
+prove admission at literal D=0 or beta=0, nor a uniform bound approaching
+those walls. Those limits require membership plus an appropriate closedness
+argument or their separate fixed-library certificates.
+
+2. FIXED FEATURE SPAN AND CONTACT REDUCTION
+PROOF.md:68-98 lists 16 original, source-independent features with angular
+exponents 0,1/2,1. They belong to Z6. B2 and feature normalization use
+only invertible source-side scalings by nonzero genuine contact entries.
+The difference rows therefore remain in that same fixed original span;
+they are not source-dependent new testing functions or state slices.
+The two integer parity groups yield seven and five contact differences,
+and the half-power group yields h=sqrt(UV)(W-Z).
+
+3. EXACT RANK AND ALL-SOURCE INDEFINITE COEFFICIENT MATCHING
+PROOF.md:101-166 and verify_c1_map_exact.py:35-46 give a constant
+42x44 integer reduced map, a specified 36x36 minor with determinant
+-2^24, and six independent contact-jet functionals with a 6x6 minor
+of determinant 4. The derivative functionals annihilate every product
+of contact differences. The matching lower and upper rank bounds give
+rank 36 and an eight-dimensional nullspace. Hence its image is exactly
+the six-jet-zero subspace of its actual 42-dimensional coefficient support.
+The normalized genuine native parent belongs to that subspace by its
+complete state/angle stationarity identities. A constant rational inverse
+on the fixed image yields a source-rational particular solution; all other
+solutions are the particular one plus the eight displayed kernel gauges.
+This proves coefficient matching, not positivity of that affine Gram fibre.
+
+SUPPORT WORDING CLARIFICATION: 42 VERSUS 46
+PROOF.md:110 should be read as the invariant coefficient support generated
+by the selected features, not the entire parity-compatible bidegree-(2,2)
+space. The latter has 46 monomials: five even angular pairs times six
+even state pairs, plus four odd angular pairs times four odd state pairs.
+The selected feature span excludes four parity-compatible monomials:
+W^2, WZ, U^2 X^2 and U^2 XY. Its actual invariant support has 42 keys.
+c1_small_map.py:34-35 explicitly generates only supported keys and
+verify_c1_map_exact.py:35-40 then selects invariant rows. Thus the code
+and rank statement use the correct support; the prose needs only this
+scope clarification. No unsupported monomial equation is silently dropped
+from the genuine parent: coefficients() rejects unrepresented target terms.
+
+4. FORCED ENTRIES AND STRICT SMALL MINORS
+PROOF.md:170-209 determines the twelve reduced diagonals by unique
+angular/state-square coefficients. They are strictly positive on A1.
+The forced mixed entries H12,H04,H03 yield respectively
+8m(2beta+d)vc^2 Wc^2 Xc^2,
+8A(2C+2D+d)uc^2 Wc^2 Yc^2,
+8C(2D+d)uc^4 vc^2 Wc^2 Xc^2.
+These determinant reductions follow directly from the displayed diagonal
+and mixed entries. They are positive on the strict native domain but
+do not control every remaining principal minor of H7 or H5.
+
+5. EIGHT-GAUGE PSD EQUIVALENCE
+PROOF.md:213-239 correctly separates the fixed affine coefficient cone
+from the source-contact parametrization. Integer/half-power cross blocks
+produce fractional angular powers; their contribution to an integer-power
+parent vanishes separately, so removing them preserves the parent and
+retains positive principal Grams. Averaging the exact simultaneous sign
+symmetry separates the two integer parity blocks. At the genuine zero,
+each PSD principal block annihilates its own contact evaluation vector.
+Source normalization and contact differences then give precisely H7,H5
+and the scalar odd coefficient. Thus fixed-feature PSD admission is
+equivalent to existence of the eight gauge values with H7>=0,H5>=0,g>=0.
+The converse is immediate from the exact complete-parent identity.
+
+PRECISE REMAINING IMPLICATION
+For every source parameter tuple satisfying all of A1, find eight real
+source-only gauges such that both complete blocks H7,H5 are PSD and
+s7=g>=0. Neither the forced positive entries/minors, contact stationarity,
+constant rank, coefficient reachability, nor source connectedness proves
+that implication. Failure of this 16-feature subcone would not disprove
+admission to the full 196-feature sixth-root library or qualitative
+finite-SDP existence.
+
+FOCUSED NEXT TASK
+Address OPEN-C1-16 directly: eliminate the universally strict forced
+H7[{1,2}] block and one forced positive H5 diagonal, then construct exact
+source-dependent gauges making the remaining Schur blocks PSD, or give
+one exact admissible native source with a rigorous separating witness
+refuting this specific subcone. Do not repeat stationarity, map rank,
+or positive-diagonal checks. This is a proposed next task, not a result
+established by the present review.

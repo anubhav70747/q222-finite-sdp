@@ -65,7 +65,7 @@ These are completion conditions, not a requirement to execute every possible pro
 | R09 | Can develop alongside the new mechanism, but closure requires a complete replacement for the imported long argument. |
 | R10–R12 | Integrate and release only the proved final construction; keep existing original evidence available. |
 
-At the single status observation on 26 October at **20:24 IST**, neither active assignment supplied a complete new verified admission theorem. The C2 response explicitly retained the global PSD gap and reported affine coefficient-map results; its connection was interrupted with the run still showing Stop. Computation progress during the interruption is unconfirmed. The C1 response reported a smaller coefficient-map/gauge reduction and forced positive blocks, while still investigating the remaining Schur complement. These are provisional reports pending complete artifacts and independent checking. No completion box is based on them. Neither run was interrupted or re-prompted.
+At **20:53 IST** on 26 October both assignments supplied complete normal answers and original packages. Independent analytical reviews and exact data replay validate the C1 eight-gauge coefficient reduction (L13) and the C2 compact-dual reduction (L14). Neither proves the remaining universal PSD inequality. The next work therefore starts from the explicit reduced problems; R02 and R03 remain open. The earlier interrupted C2 state has ended.
 
 ## Route-dependent work and work already superseded
 

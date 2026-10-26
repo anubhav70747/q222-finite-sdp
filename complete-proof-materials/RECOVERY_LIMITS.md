@@ -24,3 +24,6 @@ The final V01 theorem and dependency CSV were downloaded as original file-card a
 
 
 The original new finite-c ZIP link did not initiate a download. Every manifest-listed file was recovered separately and verified against its original hash. The published `C2_open_end_verified_delivery.zip` is explicitly a local assembly of those originals, independent verification notes, exact stdout and the targeted interface checker; it is not mislabelled as the original remote ZIP. The earlier incomplete recovery remains preserved as historical material.
+
+
+Both 15:23 UTC strict-interior packages were recovered as their original ZIP downloads and safely extracted, retaining all supplied scientific files. The generic PROOF.md file card first selected an unrelated older C2 proof; that loose file is retained privately and excluded from this new C1 evidence. The C1 archive contains the correct named current proof and data. [Recovery receipt](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1522/RECOVERY_RECEIPT.json) records this correction. No result relies on the mistaken file.

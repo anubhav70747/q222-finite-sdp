@@ -1,0 +1,23 @@
+Strict-interior C1/C2 reductions: targeted code verification
+26 October 2026
+
+Packages inspected before execution:
+ fetched-1522/task5/package/Q222_C1_exact
+ fetched-1522/task3/package/interior
+under analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26.
+
+Integrity. All 13 C1 FILE_HASHES.json entries and all 14 C2 MANIFEST.json included-file entries match their supplied SHA-256 and byte counts. Their native source conventions cite repository commit 1ad5125dbfc9c56881c283724b04994e3d50ec00. This verifies package integrity against those records, not independent authenticity of the downloaded chat archive. No source, manifest, or Git file was changed.
+
+C1: verify_all.py passed in 6.36 seconds. Inspection confirms that it runs four deterministic exact SymPy checks only. They establish the positive-source scaling between SD2 and the full canonical parent, all four native state derivatives and both angular derivatives, the complete fixed-feature coefficient-space constraints, and the forced diagonal/minor identities. Specifically, the unrestricted contact coefficient map has rank 66; the simultaneous-sign invariant map has shape 42x44, rank 36 and eight gauge directions, with exact pivot determinant -2^24 and jet minor 4. The forced-positivity checker identifies twelve fixed diagonal masses and three positive 2x2 principal determinants. These are partial principal blocks, not a PSD completion of the full 7x7 and 5x5 blocks plus the scalar odd block. Neither the checker nor the eight-gauge constructor solves that remaining quantified PSD problem. No source input or gauge search was performed.
+
+C2: the six native-contact polynomial numerator identities passed in 5.06 seconds. The fixed-map checks passed in 0.94 seconds: support orders (52,36,36,30), 412 coefficient rows, 3021 symmetric contact-reduced columns, all six independent jet annihilators, and support of the complete parent. Regenerated C2_154_CONTACT_MAP.json matches the supplied file byte-for-byte.
+
+The modular rank replay initially failed during OpenBLAS startup with memory-allocation errors, before producing any rank result. One retry with OPENBLAS_NUM_THREADS=OMP_NUM_THREADS=MKL_NUM_THREADS=1 passed in 3.42 seconds. Its rank-406 lower bound modulo 65521 combines with the separately checked six independent annihilators to prove rank 406 over Q. The regenerated pivot JSON equals the supplied JSON as parsed data; it is not byte-identical. No floating-point rank or SDP solve is involved.
+
+The curvature checker passed in 0.90 seconds: its exact calculation is the abstract six-positive-weight Laurent Hessian [[A+C,-C],[-C,B+C]] with determinant AB+C(A+B)>0. Its displayed exponential local bound is an accompanying analytical statement, not an additional native parameter elimination or PSD-admission check.
+
+Regenerating the cleared native target took 7.17 seconds. All 24 supported target coefficient polynomials have the stated positive source denominator 2a^4 t r g h j(1-c^2h)Delta; the other 388 target rows are zero. The resulting C2_CLEARED_POLYNOMIAL_TARGET.json is byte-identical to the supplied data. This establishes a fully specified polynomial right-hand side, not a PSD preimage.
+
+Scope and costs. Completed replays used approximately 25 aggregate seconds, sequentially. The expensive 406x406 rational affine-preimage inversion was deliberately not run. verify_exact_certificates.py was inspected but not run without a supplied full-interior primal/dual witness; prior end witnesses were not repeated. The actual open C2 gate remains nonnegativity of the cleared native target against every normalized positive dual block functional. Rank, contact jets and physical curvature do not prove that gate or universal strict/native admission.
+
+Fresh logs, regenerated data and timings are in analysis/strict-interior-replay-2026-10-26/verification_results.json and adjacent .log files. Supplied package artifacts were preserved.

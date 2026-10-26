@@ -1,0 +1,76 @@
+Strict C2 sixth-root reduction: bounded analytic verification, 26 October 2026
+
+Reviewed artifact:
+C:/Users/anubh/OneDrive/Documents/ChatGPT/ManuscriptWriting/q222/analytical-paper-2026-10-22/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1522/task3/STRICT_C2_INTERIOR_THEOREM_AND_OPEN_GATE.md
+
+Exact package/data directory:
+C:/Users/anubh/OneDrive/Documents/ChatGPT/ManuscriptWriting/q222/analytical-paper-2026-10-22/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1522/task3/package/interior/
+The coefficient data there are C2_154_CONTACT_MAP.json,
+C2_RANK406_MODULAR_PIVOTS.json and C2_CLEARED_POLYNOMIAL_TARGET.json.
+This review addresses the mathematical implications
+of the displayed reduction. It is conditional on separate exact replay
+of its native-jet, coefficient-map, rank-minor and cleared-target data;
+it does not substitute a prose review for those computational checks.
+Original files were not modified.
+
+Supported conclusions, conditional on that data replay:
+
+1. The six contact annihilators and exact rank406 imply
+im(A)=ker(N). A fixed rational nonsingular minor therefore gives an
+exact source-rational affine coefficient-matching Gram for every source
+in the stated domain. It may be indefinite. This is not PSD admission.
+
+2. The PSD Gram image is closed. Integrating on one fixed positive-angle
+compact rectangle and the real state sphere gives a positive-definite
+moment matrix for each linearly independent difference-feature list.
+Coefficient convergence bounds the sum of all PSD Gram traces, so a
+Gram subsequence converges and preserves every coefficient identity.
+
+3. The dual gauge is exact: ker(A*)=im(N^T), so imposing N*y=0 removes
+only directions invisible to both the moment matrices and the target.
+On ker(N), the moment map is injective. PSD matrices with trace sum1
+have bounded entries; injectivity makes the normalized dual set bounded
+and hence compact. A nonzero evaluation functional, projected away from
+im(N^T) and trace-normalized, establishes nonemptiness.
+
+4. Bipolarity for the closed Gram cone gives f in K iff delta(f)>=0,
+and exclusion iff delta(f)<0. Strictly positive Gram blocks imply
+delta(f)>0. Conversely, with e=A(I,I,I,I), every normalized dual
+functional has pairing1 with e. If delta(f)>0, subtract a sufficiently
+small positive multiple of e, apply nonstrict membership, and add that
+multiple of the identity to each Gram block. This proves the stated
+strict-PD equivalence without a hidden Slater assumption.
+
+5. Clearing by the displayed positive source denominator makes
+membership equivalent to nonnegativity of the24-term polynomial pairing
+over the compact dual set. The reduction does not prove that inequality.
+Physical angular Hessian positivity controls evaluation functionals, not
+all truncated PSD pseudo-moments; the note correctly separates these.
+
+Exact source scope:
+The theorem works over positive real parameters (a,b,c,t,r), with
+0<r<1 and h,g,j,1-c^2*h,b-a^2*c^2*r,N_*,N_n all strictly positive.
+Thus all six retained C2 event weights are positive, d=1,lambda=beta=0,
+and in particular n>0. It does not include literal n=0, zero native gaps,
+or uniform admission through coupled singular source limits. The preserved
+open-end theorem supplies its own narrower PSD membership result, not a
+strict-PD continuation theorem on the full154-feature contact face.
+
+Fixed-library and separated-field qualification:
+For real source parameters the diagonal angular/state normalization is
+invertible and preserves the original Z6 testing span by source-only
+coefficient changes. The constant normalized coefficient map is therefore
+a legitimate fixed-library reduction. For nonreal source parameters in
+an independently labelled real closed field, U=u/c and V=v/(a*c) are
+separated tensor expressions; they are not literally new elements of the
+testing field. Their fractional powers can be implemented as products of
+pure-source factors and pure-testing powers. No order on mixed tensors
+or identification of the source and testing fields is authorized.
+This review certifies the displayed real-domain reduction, not a new
+independent-field tensor-SOS admission theorem. Such admission would
+require the remaining PSD inequality or another proved construction.
+
+The focused continuation is nonstrict inequality(13), using the explicit
+moment matrices and native gap factors. Strict delta>0 or representing
+measures for all dual points would be stronger than necessary. No global
+finite-lift construction or new closure of L08–L10 is claimed here.

@@ -1,0 +1,56 @@
+{
+  "package_type": "recovered_saved_complete_C2_finite_c_endpoint_theorem",
+  "source": "existing local /mnt/data/C2_FiniteC_End_Theorem files; mathematical scripts not rerun",
+  "scope": "Every strict face a,t,eta,rho>0, 0<rho<t, 0<t-rho<1, 0<eta<1, a^2*t+eta>1; for each fixed point epsilon in (0,epsilon0), with compact uniform bound; other c end via source inversion",
+  "mathematical_status": "The saved analytical proof claims full exact finite-epsilon positive definite 12x12 reduced Gram and positive odd scalar for sufficiently small epsilon; no new audit or verification run on recovery",
+  "excluded": "no all finite native c and no walls or full-Q222 universal fixed grid",
+  "dependencies": {
+    "system": "Python3 + SymPy",
+    "internal": [
+      "map_core.py",
+      "two_kernel.py"
+    ],
+    "main_checker": "verify_finite_c.py",
+    "inversion_checker": "verify_inversion.py",
+    "individual_rational_witness": "construct_exact_witness.py",
+    "stored_exact_example": "EXAMPLE_EXACT_GRAM.json",
+    "external_runtime_dependencies": "none; no pkl files needed"
+  },
+  "files": [
+    {
+      "name": "FINITE_C_THEOREM_AND_PROOF.md",
+      "bytes": 18375,
+      "sha256": "fd344e0410479104eb811eb4a254e2ca5da7dc2f886d0554b83d5655b7b1caae"
+    },
+    {
+      "name": "map_core.py",
+      "bytes": 3623,
+      "sha256": "7550e8eae8029fa422f2608d97e4d787943c8f189534132c8368afde90d6f0c9"
+    },
+    {
+      "name": "two_kernel.py",
+      "bytes": 1068,
+      "sha256": "61e4ba5a7cceb642677b3dad24231d05dc9954cf00c22f18579bc76d2305de0f"
+    },
+    {
+      "name": "verify_finite_c.py",
+      "bytes": 7940,
+      "sha256": "66e920c3391e3fc82372d0712cbbad0adbf9bcd284b011db53ea3ea3efeed552"
+    },
+    {
+      "name": "verify_inversion.py",
+      "bytes": 1537,
+      "sha256": "9785f0bb5c073951deb9f338a8a3720ec89e4424288cdee34a1de996ea386535"
+    },
+    {
+      "name": "construct_exact_witness.py",
+      "bytes": 3873,
+      "sha256": "b7f822b2af97e6a250ef40f355d772d8f6dd708379d79f97b2446dc81ad2de13"
+    },
+    {
+      "name": "EXAMPLE_EXACT_GRAM.json",
+      "bytes": 3657,
+      "sha256": "17a52809e5e0b4b126d7f70578c3cd8c0ab1eddea16ab758e66c7334e1851c77"
+    }
+  ]
+}

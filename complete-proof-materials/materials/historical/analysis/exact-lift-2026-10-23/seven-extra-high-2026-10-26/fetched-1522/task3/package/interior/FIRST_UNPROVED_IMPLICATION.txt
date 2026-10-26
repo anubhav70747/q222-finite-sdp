@@ -1,0 +1,25 @@
+EXACT INTERIOR PSD GATE FOR C2, NOT YET PROVED
+
+Let theta=(a,b,c,t,r) range over the strict native domain (1) of
+STRICT_C2_INTERIOR_THEOREM_AND_OPEN_GATE.md. Let the source-independent
+integer map have rows 412, rank406, four 51/35/35/29 contact-reduced
+blocks. Let N be its six contact derivative rows and P(theta) the 24
+nonzero polynomial numerator entries in C2_CLEARED_POLYNOMIAL_TARGET.json.
+
+For y in R^412 put M_q(y)_{ij}=L_y(d_{q,i}d_{q,j}). Define
+Y={y:N y=0, M_q(y)>=0 all four blocks, sum tr M_q(y)=1}.
+This is a nonempty compact fixed spectrahedron (independent of theta).
+
+FIRST UNSOLVED PSD IMPLICATION:
+    for all theta strict, for all y in Y:
+       SUM_k P_k(theta)*y_k >= 0.
+It is precisely equivalent to full strict-native C2 membership in the
+fixed globally sound sixth-root cone L6. Replacing >= by > is equivalent
+to a positive definite Gram on ALL 150 contact-reduced rows, the stronger
+nondegeneracy continuation condition. The previous verified 16-root
+open-end PSD proof implies >= there but does not itself imply > on all 150.
+
+A witness y with negative pairing would disprove L6 admission for that
+native source. A zero pairing would disprove full reduced-Gram strictness
+but would NOT by itself disprove nonstrict L6 admission. Positive scalar
+physical angular Hessian or affine rank406 does not prove this gate.
