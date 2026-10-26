@@ -1,0 +1,65 @@
+## verify_sd_source.py
+SD9.1 OK 1
+SD9.2 OK 1
+SD9.3 OK 1
+SD10.Y OK 1
+SD10.S OK 1
+SD10.V OK 1
+
+## verify_sphere.py
+sphere beta relation True
+sphere total relation True
+FM D numerator factor S True
+
+## verify_parent.py
+NU12 scalar graph OK
+NU19 first X normal OK
+NU19 first Y normal OK
+NU19 hard XX OK
+NU19 hard YY OK
+NU19 hard XY OK
+done
+
+## verify_el_parent_verified.py
+EL3 full scalar graph OK
+EL11 Y linear OK
+EL12 N hard OK
+EL12 Ny hard OK
+EL12 mixed hard OK
+raw L_N width 347
+EL13 modulo native contact jet OK
+
+## check_el20.py
+H(a,0): -S*a**2*ell*kappa*la0*nu*r**2 - 2*S*a*ell*kappa*la0*nu*r - S*ell*kappa*la0*nu + a*alpha + alpha
+H_aa(a,0)/2: -S*ell*kappa*la0*nu*r**2
+H cubic: S**2*nu**2*p**2*(2*D + 1)*(a*r + 1)**2/2
+difference cubic: 0
+
+## verify_budgets.py
+NU10.1 True
+NU10.2 True
+NU15 True
+EL7.1 True
+EL7.2 True
+EL8 budget exact True
+EL9 True
+EL10 True
+EL11 True
+EL18 True
+
+## verify_ce.py
+CE2 True
+CE6 True
+
+## verify_eb_fu.py
+EB5 identity: True
+EB6 m amplitude: True
+EB6 D amplitude: True
+EB6 alpha amplitude: True
+NU25 FU factor: True
+NU26 m limit: (2*y**2*z - 4*y*z + y + 2*z)/4
+FU8 all scalar: True
+FU9 full first normal: True
+FU9 full hard: True
+
+ALL EXACT CHECKS PASSED
