@@ -479,3 +479,19 @@ needed for the second division, so no angular parity condition is required.
 Both normal rows and every entry of the eight-root matrix remain explicit. These must
 be exact factorizations with bounded coquotients; small evaluated values
 alone do not suffice.
+
+The local certificate at an ordinary--small C2 contact uses six rows.
+The complete source polynomial first gives the bounded scalar and normal
+factors; the exact identities UI1 then lift them without dividing by a
+small testing angle. A real zero identity separates the two angular
+Schur diagonals after the matched Hessian is proved strict. The source
+proof now displays the scalar allocation and explains its bounded-ring
+premise in
+[c2_short.tex](../latex/certificates/c2_short.tex#L6086).
+The full local argument, finite-cap boundary passage and complementary
+testing charts have been independently checked when C and alpha have
+positive real lower bounds, the first contact angle is a bounded unit,
+and the second is infinitesimal.
+This closes that source branch. The other C2 branches and the formal
+CA/SE base remain separate requirements; an evaluated global pencil has
+not yet been extracted.

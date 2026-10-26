@@ -6085,8 +6085,12 @@ use only the bounded pure-source inverse $1/s$.
 
 \paragraph{Complete scalar and normal lifting.}
 On the graph $E_X=E_Z=E_r=0$, write $G=\phi(u,\xi)W^2$.
-Its bounded polynomial coefficients and the original parity imply
-$\phi\in(k^2,\xi)$. The exact contact identities give
+Here $r_{\rm amp}=\rho k^2W$, $Q=svW$, and $M,p,B$ are bounded
+polynomials times $vW$. In (UR13)--(UR16), every scalar term
+therefore contains $k^2$ or $\xi=v^2$ with a bounded coquotient:
+the canceled products (UR9)--(UR11) bound the $C,D$ terms, and
+$A/k^2$ is bounded by (UR5). Thus $\phi\in(k^2,\xi)$ in the
+bounded source polynomial ring. The exact contact identities give
 $\phi=\phi_u=\phi_\xi=0$ at $(u,\xi)=(a,k^2)$.
 Successive monic Taylor division gives
 \[
@@ -6097,8 +6101,14 @@ with bounded coefficients. To see the asserted first factor directly,
 divide first in $u-a$; the second $u$ coquotient stays in
 $(k^2,\xi)$. The constant and first $u$ terms are then divided in
 $\xi-k^2$. No source infinitesimal is inverted by these operations.
-Equations (UI1) allocate the three terms of (UI2) on
-$(S,T,R_h,E_X,E_Z)$.
+Equations (UI1) give the allocation explicitly:
+\[
+ \phi W^2=A_0T^2+A_1S^2
+       +\frac{B}{s}(R_hT-SQ_N)
+       +\frac{C_0}{s^2}(kR_h-vQ_N)^2.
+\]
+Every coefficient is bounded, and the last term contributes only
+zero-residue coefficients to the Gram on $(R_h,E_X,E_Z)$.
 
 The full first $E_X,E_Z$ coefficients are $vL_X(u,\xi)$ and
 $vL_Z(u,\xi)$. Exact contact gives $L_i(a,k^2)=0$, so they are
@@ -6107,7 +6117,12 @@ $vL_Z(u,\xi)$. Exact contact gives $L_i(a,k^2)=0$, so they are
 \]
 The first summand is allocated on $S$, and the second uses
 $vkR=v(kR_h-vQ_N)/s$. The entire $E_r$ coefficient belongs to
-$(k^2,\xi)$ and vanishes at contact. The same division writes it as
+$(k^2,\xi)$ with bounded coquotients and vanishes at contact.
+Indeed, differentiating (UR13) gives bounded multiples of $k^2$
+and $v^2$; the derivatives of $M,p$ contain $v$, and the
+$A$ term contains $k^2$. For the signed core,
+$\tfrac12\partial_{E_r}\mathcal K=2J-2D_uvp$ on this graph,
+which has the same factors. The same division writes the coefficient as
 \[
  w(k^2L_{r0}+\xi L_{r1})+(\xi-k^2)L_{r2}.
 \]
