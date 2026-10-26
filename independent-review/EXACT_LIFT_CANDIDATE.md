@@ -530,6 +530,13 @@ to this folder.
     For every compact `K ⊂ T` there is `r₀` such that every source in
     `K × (0, r₀)` is admitted.
   - The checker also proves `μ > 0` at native sources down to `r = 10⁻¹⁰`.
+  - The limit needs exactly the half-power features. Integer powers (`k = 1`)
+    are impossible at every face point: `u²Y²` comes only from the diagonal
+    entry of `uY`, whose coefficient `4A > 0` the contact forces to vanish.
+    In the `k = 2` lift the limit has exact strictly feasible Grams at 9
+    rational face points, including points near the `h`, `t`, `a` and
+    `1 − zh` walls, and numerically at all 210 sampled face points
+    ([`checks/gram-lift/ends/check_c2_r0_face_k2.py`](checks/gram-lift/ends/check_c2_r0_face_k2.py)).
 - **One weight → 0** (C1 `D = 0` and `β = 0`, C2 `n = 0`).
   - The contact stays finite and nondegenerate at all three walls. This is
     proved in general: `Hess_z F ≻ 0`, `F_H < 0`, and the Jacobian is
@@ -540,6 +547,12 @@ to this folder.
     strict admission at 16 wall points. Near the wall the vanishing feature
     decouples, so each such point gives admission of the nearby sources with
     `w > 0`.
+  - The C2 wall `n = 0` is the explicit graph `t = t_w(c, a, b, r)`, with
+    all five remaining weights explicit rational functions. Its wall sources
+    are already admitted by the `k = 2` lift on a 27-feature support face:
+    exact rational Grams with kernel exactly the contact at 8 wall points,
+    and positive numerical margins at 26 further points
+    ([`checks/gram-lift/ends/check_c2_n0_wall_k2.py`](checks/gram-lift/ends/check_c2_n0_wall_k2.py)).
 - **One weight blows up** (C1 `M`, `J`; C2 `1 − zh`). The naive split
   `F = w_e q_e + R` fails, because `R` keeps a nonzero gradient at the
   contact. Shift each event form by a monomial so that it vanishes exactly
