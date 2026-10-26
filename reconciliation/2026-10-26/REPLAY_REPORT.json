@@ -1,0 +1,75 @@
+{
+  "baseline": "1ad5125dbfc9c56881c283724b04994e3d50ec00",
+  "independence": "same-assistant computations; not external review or formal certification",
+  "executed": [
+    {
+      "name": "existing EL/NU endpoint runner",
+      "command": "python3 independent-review/checks/el-nu-endpoints/run_exact_checks.py",
+      "exit_code": 0,
+      "outcome": "ALL EXACT CHECKS PASSED",
+      "modules": [
+        "verify_sd_source.py",
+        "verify_sphere.py",
+        "verify_parent.py",
+        "verify_el_parent_verified.py",
+        "check_el20.py",
+        "verify_budgets.py",
+        "verify_ce.py",
+        "verify_eb_fu.py"
+      ],
+      "scope": "Exact identities/budgets on the modules' stated source domains; not full global branch certification."
+    },
+    {
+      "name": "new angular checker",
+      "runtime": "JavaScript/V8; same pure function shipped with Node print guard",
+      "outcome": "passed",
+      "circuits": 12,
+      "affine_basis_identities": 22,
+      "scope": "Exact coefficient, span and fixed-diagonal checks; global proof and closure are in accompanying note."
+    },
+    {
+      "name": "new contact checker",
+      "runtime": "JavaScript/V8; exact BigInt rational arithmetic",
+      "outcome": "passed",
+      "selected_minors": [
+        "69120",
+        "184320"
+      ],
+      "contact_CHSH": [
+        "103/37",
+        "46/17"
+      ],
+      "exposing_CHSH": [
+        "107/39",
+        "8/3"
+      ],
+      "scope": "Two example contacts; universal exposure imports EN1–EN16."
+    },
+    {
+      "name": "L12 half-power dictionary",
+      "runtime": "exact integer index enumeration in JavaScript/V8",
+      "outcome": "passed",
+      "rows": 16,
+      "scope": "Dictionary/inversion only; published L12 theorem supplies admission."
+    },
+    {
+      "name": "newly published text integrity",
+      "matched_sha256": 1353,
+      "mismatches": 0,
+      "scope": "Subset of byte integrity, not mathematical verification."
+    },
+    {
+      "name": "indexed local links",
+      "paths": 2488,
+      "missing": 0,
+      "scope": "Path existence, not fragment or proof validation."
+    }
+  ],
+  "not_executed": [
+    "all remaining repository scripts",
+    "all historical inherited checkers and archive checksums",
+    "a final LaTeX build/render",
+    "a full exact global affine Q222 lift"
+  ],
+  "initial_snapshot": "ca4fb5e4acaadb234aa3f6a523b630e25ca99502"
+}
