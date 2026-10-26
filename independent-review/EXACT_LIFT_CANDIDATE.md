@@ -553,6 +553,16 @@ to this folder.
     exact rational Grams with kernel exactly the contact at 8 wall points,
     and positive numerical margins at 26 further points
     ([`checks/gram-lift/ends/check_c2_n0_wall_k2.py`](checks/gram-lift/ends/check_c2_n0_wall_k2.py)).
+  - The C1 walls behave the same way. `β = 0` is the graph `a = a_w(k,f,g,t)`.
+    `D = 0` is the graph `ζ = ζ_D(κ, η, r, θ)` in paper coordinates. The
+    remaining weights are explicit on both walls. The vanishing weight is a
+    single diagonal Gram entry (`vZ` for `D`, `uvZ` for `β`), so admission
+    takes place on the 27-feature support face.
+    - The `k = 2` lift admits the wall sources there, with exact rational Grams
+      (kernel exactly the contact) at 9 points of `β = 0` and 8 of `D = 0`,
+      including points near `Lc`, `Qc`, `M`, `θ = 1` and the fold `k = 1`.
+    - Numerical margins are positive at 34 further points
+      ([`checks/gram-lift/ends/check_c1_zero_walls_k2.py`](checks/gram-lift/ends/check_c1_zero_walls_k2.py)).
 - **One weight blows up** (C1 `M`, `J`; C2 `1 − zh`). The naive split
   `F = w_e q_e + R` fails, because `R` keeps a nonzero gradient at the
   contact. Shift each event form by a monomial so that it vanishes exactly
