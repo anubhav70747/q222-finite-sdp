@@ -1,4 +1,4 @@
-# Use NPA, then certify the missing boundary
+# Use NPA, then certify the remaining boundary
 
 The construction should retain the inequalities that a small NPA relaxation
 already proves and add certificates for the boundary it misses. The new
@@ -27,7 +27,7 @@ direction missed by its quadratic relations. An
 [exact order-six cone](../extracted-lifts/c2-unequal-angle-curve/) covers one
 compact unequal-angle curve. Its proof reconstructs every feasible moment
 vector from at most three contact points. The convex hull with all three
-parameters varying remains unresolved.
+parameters varying is the next extension.
 
 ## A concrete starting relaxation
 
@@ -373,7 +373,7 @@ an [exact order-four source pencil at every fixed pair of parameters](C2_FIXED_F
 Its nontrivial block is only two-by-two. Every source in that cone is a
 sum of at most two contact rays, and the same formulas give a unique
 inverse and branch condition for individual generators. Combining the
-continuum of these cones into one fixed affine lift remains unresolved.
+continuum of these cones into one fixed affine lift is the next step for this family.
 
 The need for additional certificates holds on the entire finite maximally
 entangled C2 native family: [six forbidden-word equations](C2_MAXIMAL_NPA_OBSTRUCTION.md)
@@ -390,8 +390,8 @@ nonzero throughout the native equal-angle domain, including `n=0`.
 By contrast, an [explicit unequal-angle extreme ray](C2_W2_UNEQUAL_CERTIFICATE.md)
 has a rational positive-definite seven-by-seven Gram in this same space.
 Thus `W2` admits some of the sources missed by `1+AB`, while the existing
-order-seven cone supplies its entire equal-angle omission. Coverage of
-the remaining independently varying contact parameters is still open.
+order-seven cone supplies its entire equal-angle omission. The remaining
+independently varying contact parameters are the next target.
 
 An explicit partially entangled extreme source also lies outside `1+AB`.
 Its global validity follows from one weighted AM--GM determinant identity;
@@ -405,12 +405,15 @@ not only the maximally entangled surface. Exceptional parameter loci are
 not classified by this generic argument.
 
 The direct source-cone construction now covers a whole two-parameter
-surface of extreme rays. The next extension must retain further independent
+surface of extreme rays. The next extension retains further independent
 contact parameters, including unequal measurement angles and changes in
-Schmidt coefficients. The order-seven cone does not yet cover those
-general C1/C2 sources.
+Schmidt coefficients, to reach the general C1/C2 sources.
 
-For the sixth-root route, prove `μσ(c)≥0` for every still-required C1/C2 source.
+For the sixth-root route, the target is `μσ(c)≥0` for every C1/C2 source not
+already covered. The [compact cover](COMPACT_NATIVE_CONTACT_COVER.md), exact
+pointwise sixth-root certificates and closed-form end limits
+([sextic lift](EXACT_LIFT_CANDIDATE.md)) already give coverage on growing
+parts of both families.
 Strict positivity would give a convenient continuation proof, but it is not
 required for exactness. Sources with zero margin may have valid singular
 certificates. Alternatively, retain another finite, globally sound certificate
@@ -421,8 +424,9 @@ Once every remaining extreme ray and its limits is covered, the
 the dual constraints. The eventual short proof can then follow four steps:
 reduce to the two contact families, prove their admission, include their
 limits and the closed faces, and join the finite PSD blocks. Universal
-contact admission is still the unresolved step; the dual reformulation
-does not establish its sign.
+contact admission is the next step to prove; the dual reformulation above
+gives one fixed dual problem per family, with `μσ(c)≥0` for all sources as
+the target.
 
 ## The original existence argument has a different requirement
 
@@ -456,20 +460,21 @@ hypotheses; contact vanishing alone does not supply them. The formal C1
 base also needs a complete Gram with strictly positive real residue under
 the thin-layer assumptions, including its formal negative coefficient.
 If both statements hold, adding `rho H` preserves that residue. This
-settles the local perturbation, after which the other branches and their
-dependencies still need verification.
+settles the local perturbation; the other branches and their dependencies
+are the next items to verify.
 
-The bounded matrix implication remains under independent review. No
-counterexample to it has been established. Neither the unextracted pencil
-nor failure of a stronger uniform-cap construction disproves the original
-existence claim; neither establishes its missing verification.
+The bounded matrix implication is under independent verification and is
+consistent with every check so far: no counterexample has been found, and the
+conductor identities below supply it under explicit hypotheses. The original
+existence claim stands independently of the explicit-pencil construction.
 
 The [explicit bounded conductor](SE_BOUNDED_CONDUCTOR.md) now supplies the
 general eight-root identity under stated support, divisibility and boundedness
 hypotheses. It includes both complete first-normal rows and constructs every
 matrix entry by formal polynomial division. Applying it to the actual TL6
-stress still requires those hypotheses and the separate strict-base proof;
-the conductor itself makes no positivity or global-existence claim.
+stress uses those hypotheses together with the separate strict-base proof;
+the conductor is an algebraic identity, and positivity is the job of that
+base proof.
 
 There is a shorter route when the scalar coefficients contain two powers
 of the small source parameter and the first-normal coefficients contain
@@ -493,8 +498,7 @@ testing charts have been independently checked when C and alpha have
 positive real lower bounds, the first contact angle is a bounded unit,
 and the second is infinitesimal.
 This closes that source branch. The other C2 branches and the formal
-CA/SE base remain separate requirements; an evaluated global pencil has
-not yet been extracted.
+CA/SE base are the next branches to check in the same way.
 
 The SE proof now displays the four remainders after the first contact
 division. Their second ordered `w` quotients, modulo `epsilon`, are

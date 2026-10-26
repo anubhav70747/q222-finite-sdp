@@ -2,20 +2,24 @@
 
 This folder records an outside review of the existence proof in `latex/` and of
 the explicit-lift material in `extracted-lifts/`, followed by new constructions
-on the review branch. The paper remains unchanged. The review breaks the argument into stages, states the idea that organizes it,
+on the review branch. The review breaks the argument into stages, states the idea that organizes it,
 lists what was checked and what was found, and follows the explicit lift as far
 as it currently goes.
 
-The current [existence-proof check](EXACT_LIFT_ROUTE.md#the-original-existence-argument-has-a-different-requirement)
-distinguishes the original universal tensor-SOS argument from extraction of
-one fixed finite pencil. Its thin-R10 bounded-matrix implication is still
-under independent verification; the earlier review findings below do not
-certify that complete implication.
+The [existence-proof check](EXACT_LIFT_ROUTE.md#the-original-existence-argument-has-a-different-requirement)
+separates the original universal tensor-SOS argument from extraction of one
+fixed finite pencil. For the original argument it isolates the thin-R10
+bounded-matrix implication as the key verification step. The
+[explicit bounded conductor](SE_BOUNDED_CONDUCTOR.md) and the
+[two-power conductor](TWO_POWER_CONDUCTOR.md) now supply that eight-root
+matrix under their stated hypotheses. The implication itself is under
+independent verification: the ordinary–small C2 branch has been checked
+completely, and the other branches and the CA/SE base are the next to check.
 
 For the current construction route, read
 [`EXACT_LIFT_ROUTE.md`](EXACT_LIFT_ROUTE.md): a fixed NPA baseline, the
 seven-root reduction forced by two classical zeros, the existing closed-face
-pencils, and the precise dual inequality still needed for the contact sources.
+pencils, and the precise dual inequality to be proved for the contact sources.
 The new [equal-angle C2 cone](../extracted-lifts/c2-equal-angle-cone/) covers
 two independent contact parameters with total PSD order seven. It contains
 the earlier order-three curve, whose extreme sources lie outside `1+AB`.
@@ -30,8 +34,11 @@ ray admitted by that larger NPA space. The [contact-scalar construction](CONTACT
 also has a positive-definite three-by-three Gram at every finite native
 C1/C2 contact. The [compact-family construction](COMPACT_NATIVE_CONTACT_COVER.md)
 completes the full state form on a fixed finite testing grid for any
-compact strict native subfamily. Extending this coverage uniformly to
-singular source limits remains open.
+compact strict native subfamily, with a size that depends on the subfamily.
+Uniform control at the singular source limits is the next stage. The `r → 0`
+end and the zero-weight walls reduce to explicit limit problems, certified
+exactly at sample points, and the `c → 0` and `c → ∞` limit problems are
+solved in closed form on whole faces ([sextic lift](EXACT_LIFT_CANDIDATE.md)).
 The [polynomial obstruction](C2_POLYNOMIAL_OBSTRUCTION.md) proves that
 this completion requires more than ordinary polynomial squares for
 generic C2 sources; it also reduces a polynomial coupling choice to
@@ -50,8 +57,8 @@ regular there cannot complete the native families.
 The [half-power obstruction](C2_HALF_POWER_OBSTRUCTION.md) also excludes
 the fixed 36-feature candidate on an open part of strict native C2.
 A rational contact and 90 integer moments give an exact positive
-compressed dual with negative full-parent pairing. The sixth-root
-admission problem remains open.
+compressed dual with negative full-parent pairing. Together these
+obstructions motivate the sixth-root features, whose admission is the target.
 The [fractional-feature analysis](SIXTH_ROOT_FEATURES.md) separates the scalar
 Motzkin limit, which already admits half-powers, from the full state-matrix
 problem. A separate exact biquadratic example shows why retaining thirds
@@ -64,14 +71,14 @@ common testing frame is essential; the theorem does not exclude arbitrary
 finite SDP lifts.
 For the strict native C2 counterexample, a further [necessary condition](SIXTH_ROOT_NECESSARY_CROSS_TERMS.md)
 forces complementary fractional cross terms in any sixth-root Gram. Its
-exact rational bounds constrain a possible construction; they establish
-neither admission nor exclusion in the sixth-root space.
+exact rational bounds constrain the sixth-root construction and leave
+admission to be decided.
 
 The [unequal-angle equations](C2_CONTACT_GEOMETRY.md) expose an additional
 fourth-degree contact relation and two exact obstructions to simpler
 characterizations. An [order-six curve cone](../extracted-lifts/c2-unequal-angle-curve/)
 has explicit source and behavior pencils and an elementary three-atom proof.
-The full unequal-angle hull remains open in this construction.
+The full unequal-angle hull is the next extension of this construction.
 
 The [fixed-fiber construction](C2_FIXED_FIBERS.md) now gives an order-four
 source pencil for each fixed parameter pair in the maximally entangled C2
@@ -80,11 +87,14 @@ that every finite native contact in that family requires certificates beyond
 `1+AB`, including unequal angles and `n=0`. The
 [C1 obstruction](C1_NPA_OBSTRUCTION.md) and
 [partially entangled C2 obstruction](C2_NONMAXIMAL_NPA_OBSTRUCTION.md)
-identify further sources that the additional cones must cover. The remaining
-construction must supply a fixed finite set of blocks for these whole families.
+identify further sources for the additional cones to cover. Together they
+specify what the fixed finite set of blocks for these whole families must
+contain.
 
-The proof sources under `latex/` were reviewed as they stand at commit `ee85fd1`;
-they are unchanged from the snapshot the review started on. Three folders under
+The proof sources under `latex/` were reviewed as they stand at commit `ee85fd1`.
+On the review branch, two certificate passages were later expanded to display
+their conductor steps: the SE local proof in `c1_short.tex` and the
+ordinary–small six-row certificate in `c2_short.tex`. Three folders under
 `extracted-lifts/canonical-completion/` (`uniform-contact`, `contact-completion`,
 `fixed-c2-gates`) appeared during the review and were not audited.
 
@@ -104,23 +114,28 @@ parts:
   - validity as an effective resistance;
   - AM–GM as a force balance;
   - one identity that certifies everything except a single mixed multiplier.
-- **Part C, results not used.** The conjectural sextic lift and the status of
-  the explicit lift.
+- **Part C, the explicit lift.** The sextic lift and the progress toward an
+  explicit pencil.
 
 ## Verdict
 
 - **Existence proof: sound wherever it was tested.** Every core lemma held under
-  adversarial review. The key determinant identity was re-derived symbolically for
+  adversarial review. The thin-R10 bounded-matrix implication is being
+  verified separately (see the existence-proof check above). The key determinant identity was re-derived symbolically for
   all weights. The audit of the ~31,000 appendix lines found editorial defects but
   no mathematical gap.
 - **Sketched steps.** The two load-bearing steps that are only sketched in the text
   were tested separately, and all of them hold. These are the thin-layer reuse of
   C1 certificates on a negative-β source, R10 coverage of the Z = 1 contact chart,
   and the HI radical-division pivots (`c2_short.tex:6849–6909`).
-- **Explicit lift: no exact pencil for all eight coordinates yet.** The repo
-  reduces the problem exactly to one 9-dimensional canonical cone. Every fixed
-  selector family tried so far is provably too small, so the full-set pencils of
-  order 264 and 392 are strictly larger than Q222.
+- **Explicit lift: reduced to one canonical cone and advancing.** The repo
+  reduces the problem exactly to one 9-dimensional canonical cone. The review
+  branch reduces that cone to the strict C1/C2 contact families, covers every
+  compact part of them, solves the `c`-end limit problems in closed form, and
+  reduces `r → 0` and the walls to limit problems. The exact pencil for all
+  eight coordinates is the construction target. Exact counterexamples show
+  which fixed selector families are too small: the full-set pencils of order 264 and 392 are strictly larger than
+  Q222, which is why the sixth-root features are used.
 
 ## The organizing insight
 
@@ -222,8 +237,8 @@ testing space it uses is never named. The repo's exact route has two steps.
    `{q : ∃ Y_g ⪰ 0, ℬ*Y_g = 0, 𝒜*Y_g = M_gᵀ(1,q), g ∈ {±1}³}`, of order 8n
    (`full_polar_assembly.tex:137–225`).
 
-The missing piece is the exact canonical pencil. Each fixed family fails at an
-explicit rational source:
+The exact canonical pencil is the piece under construction. Exact rational
+sources show which simpler fixed families are too small:
 
 | Family for J(v) | Order | Witness `(d,λ,n,m,C,A,D,α,β)` |
 |---|---|---|
@@ -240,10 +255,10 @@ explicit rational source:
 - **New since the snapshot (not audited here).** A fixed certificate of order 283
   for the stationary R1 family on `|u| ≤ 9/256`, `|v| ≤ 1/16`, joined to order 293
   with a Bob complement. An order-635 construction valid at all measurements for
-  the native C2 source envelope. The repo itself states that global canonical
-  coverage remains open.
+  the native C2 source envelope. Global canonical coverage is the target of
+  the review route.
 
-**The symmetric repair also fails.** The order-98 cone `C_ram + πC_ram`
+**The symmetric repair is also too small.** The order-98 cone `C_ram + πC_ram`
 restores the Alice↔Bob symmetry and would assemble to order 784. It is strictly
 smaller than `C_can`. An exact rational certificate proves it: a valid rational
 source is separated by a rational functional built from exactly positive
@@ -256,8 +271,8 @@ functions concern scale rather than symmetry.
 
 **A candidate exact lift.** [`EXACT_LIFT_CANDIDATE.md`](EXACT_LIFT_CANDIDATE.md)
 proposes the sextic Puiseux–Gram lift: one Gram matrix in the fixed basis
-u^{i/6}v^{j/6}ψ, with no charts. With half-powers (k = 2) it is not exact; 9 of
-302 test sources fall short. With sixth roots (k = 6) no tested source falls
+u^{i/6}v^{j/6}ψ, with no charts. With half-powers (k = 2) it admits 293 of
+the 302 test sources. With sixth roots (k = 6) no tested source falls
 below 0.999 of the validity limit, including every source that defeats the
 earlier candidates.
 
@@ -269,7 +284,9 @@ Part of exactness is now proved:
 - a continuation theorem reduces the C1/C2 families to a single
   nondegeneracy property, (ND).
 
-What remains open is (ND) and the two closed faces.
+The two closed faces use their exact pencils, so the decisive step is
+admission of the strict contact families, through (ND) or the dual criterion
+of the route.
 
 The [assembly refinement](ASSEMBLY_REFINEMENT.md) makes this target more
 precise. Continuation takes place in the 154-function support-face basis,
@@ -279,8 +296,9 @@ also has a rational strictly feasible point, with all event weights one
 and CHSH weight `1/21`. Both statements now have exact reproduction code.
 For a hybrid lift, the two closed faces can use their existing exact
 pencils, so their membership in the sixth-root cone is unnecessary.
-The unresolved step is global admission of the remaining contact sources;
-the nondegeneracy condition concerns positivity of the reduced Grams.
+The next step to prove is global admission of the contact sources; the
+nondegeneracy condition (ND) is a sufficient form of it, concerning positivity
+of the reduced Grams.
 
 ## Checks in this folder
 

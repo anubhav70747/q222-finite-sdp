@@ -11,8 +11,8 @@ This note proves the theorem from five ingredients, [I1]–[I5].
 - **[I2]–[I4]** come from the paper, and their short proofs are given below.
 - **[I5]** is the hard lemma. It is proved in the paper's companion by a
   case analysis of about 31,000 lines, which this review audited. Its structure
-  is outlined below, and Part B explains what it does. No short proof of [I5]
-  is known (Part C).
+  is outlined below, and Part B explains what it does. A short proof of [I5]
+  is the goal of the chart-free candidate route in Part C.
 
 Everything else is proved here in a few lines.
 
@@ -335,9 +335,9 @@ parent can be nonpositive [checked: `physics/check_c2_to_c1_counterexample.py`].
 
 ---
 
-## Part C. Not used in the proof
+## Part C. Toward an explicit lift (not used in Part A)
 
-**A chart-free route to [I5] (conjecture).** The sextic Puiseux–Gram lift asks
+**A chart-free candidate route to [I5] (conjecture).** The sextic Puiseux–Gram lift asks
 for `F_c = Zᵀ G Z` with `G ⪰ 0`, in the fixed basis `Z = {u^{i/6} v^{j/6} ψ_l}`,
 which is unchanged in shape by rescaling. Proved so far:
 
@@ -345,10 +345,14 @@ which is unchanged in shape by rescaling. Proved so far:
 - it is exact if and only if it contains the extreme sources;
 - four genuine C1/C2 boundary sources have exact rational certificates;
 - a continuation theorem reduces the C1/C2 families to one nondegeneracy
-  property, (ND).
+  property, (ND);
+- it has an explicit rational strictly feasible point and coefficient rank
+  406 on both contact families;
+- the hardest sources found have exact certificates, and the limit problems
+  at the C2 ends `c → 0` and `c → ∞` are solved in closed form on whole faces.
 
-Numerically, no tested source falls below 0.999 of the validity limit. If (ND)
-holds, it replaces [I5] and gives an explicit lift. See
+Numerically, every tested source reaches at least 0.999 of the validity limit.
+If (ND) holds, it replaces [I5] and gives an explicit lift. See
 [`EXACT_LIFT_CANDIDATE.md`](EXACT_LIFT_CANDIDATE.md).
 
 **The explicit lift.** The tilted-CHSH projection has an exact order-4 lift.
@@ -358,7 +362,7 @@ The canonical reduction and the eight-copy assembly are exact [paper].
 |---|---|
 | fixed-function cones (polynomial, half-line 33, ramified 49) | strictly too small [paper] |
 | ramified cone plus its mirror (98) | strictly too small, by an exact rational certificate [checked: `lift-experiment/`] |
-| sextic lift `L₆` | candidate exact lift, conjectural |
+| sextic lift `L₆` | candidate exact lift: sound, closed, strictly feasible; exact certificates at the hardest sources |
 
 ## The proof in one paragraph
 
@@ -370,5 +374,5 @@ touching the quantum set at a point, the CHSH part has a single violating
 direction, stabilized by the penalties like current through a resistor network.
 The determinant balances like forces, and AM–GM certifies it everywhere at
 once. What remains is to remove one mixed multiplier; that is the companion's
-hard lemma. Part C records a conjectural way to do it in one stroke, with a
+hard lemma. Part C records a candidate chart-free way to do it in one stroke, with a
 scale-blind basis of sixth-root monomials.

@@ -7,14 +7,15 @@ parameters with total PSD order seven. It contains the earlier
 [order-three curve](c2-quadratic-family/) and strictly sharpens NPA `1+AB`.
 The source and behavior pencils are explicit rational matrices; their proof
 reduces every source to one contact ray plus two event terms. All finite
-endpoints are included. General C1/C2 coverage remains unresolved.
+endpoints are included. General C1/C2 coverage is the next extension
+([review route](../independent-review/EXACT_LIFT_ROUTE.md)).
 
 The [unequal-angle curve](c2-unequal-angle-curve/) has exact source and
 behavior pencils of order six. Its elementary moment proof reconstructs
 every feasible source with at most three contact points. The
 [three-parameter contact equations](../independent-review/C2_CONTACT_GEOMETRY.md)
 include an additional fourth-degree relation and exact tests of simpler
-proposals. The full unequal-angle convex hull remains unresolved.
+proposals. The full unequal-angle convex hull is the next extension.
 
 The [contact completion](canonical-completion/contact-completion/) now covers
 the singular contact for the native C2 source envelope. The two proofs retain
@@ -24,7 +25,8 @@ independently vanishing source parameters. Combined with the
 the construction has total order 635, 4024 auxiliaries and 619 equations.
 Radical-sign averaging reduces the coefficient system without changing its
 projected cone. All source identities, rational matrices and coefficient bounds
-are included. Global canonical coverage remains unresolved.
+are included. Global canonical coverage is the target of the
+[review route](../independent-review/EXACT_LIFT_ROUTE.md).
 
 `tilted-projection/` gives an exact lift of
 
@@ -80,7 +82,7 @@ source pencil, its four rational PSD factorizations, and a new rational
 selector on an explicit open five-parameter contact region. The compressed
 Gram orders are 13, 14, 13 and 14. The proof restores the complete Bell
 operator and all quantum realizations. The same fixed-free selector fails
-outside the certified region; universal adequacy of order 13744 remains open.
+outside the certified region; universal adequacy of order 13744 is a separate question.
 The seven JSON files contain the source arrays, inverse coefficient map,
 open-domain selector and rational one-parameter family. Reproduce with:
 

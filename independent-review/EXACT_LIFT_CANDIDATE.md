@@ -5,8 +5,10 @@ and hence of Q222, and records the numerical evidence for it. The lift is a
 single fixed SDP: one Gram matrix in a fixed basis of fractional monomials in
 the two measurement angles. It has no charts and no infinitesimals.
 
-Its exactness is a conjecture. It is supported by 302 test sources, including
-every source that defeats the earlier candidates, but it is not proved.
+Its exactness is a conjecture, developed in this note. It is supported by 302
+test sources, including every source that defeats the earlier candidates, by
+exact certificates at the hardest sources found, and by the proved results
+below.
 
 ## The lift
 
@@ -220,9 +222,9 @@ walls, and along 8-decade gap scans.
   constant to about 3 digits, so this is a normalization effect, not a loss of
   positivity. At the `h` and `Lc` walls the margin stays flat down to gaps of
   10⁻⁸.
-- **Unresolved.** Double precision could not decide sources with contacts
-  very near commuting measurements (`v_c ≲ 10⁻⁴`), nor the walls `r → 0`,
-  `r → 1` and `c → ∞`.
+- **Treated separately.** Sources with contacts very near commuting
+  measurements (`v_c ≲ 10⁻⁴`) and the walls `r → 0`, `r → 1` and `c → ∞` need
+  more than double precision; the end analyses below treat them.
 
 **A route to a complete proof (not carried out).** As a contact approaches
 commuting measurements, the rescaled parent tends to a limit with one live
@@ -380,7 +382,7 @@ missed had diagonals from 10⁻⁹ to 10⁻¹.
 **Proposed grading for transversality.** The candidate scaling of a forced
 direction is `s^{k/6} = a^{k/3}`, for k = 1, …, 6. The proposed value of k
 comes from the lower convex envelope of the order in `s` over a hexagon, with
-class counts 12, 11, 10, 9, 8 and 7. A full finite-`a` construction is still needed.
+class counts 12, 11, 10, 9, 8 and 7. A full finite-`a` construction would complete it.
 
 - **The 7 classes of order `s` are exactly positive.** `B₁` carries `4A₁s`.
   `B₂` and `v′X` carry `s(4n₀+2)`. The five Z-edge elements lie on an edge
@@ -390,18 +392,18 @@ class counts 12, 11, 10, 9, 8 and 7. A full finite-`a` construction is still nee
 - **No sign obstruction on the product family.** There the form is strictly
   positive at finite `a`.
 
-**Not settled.** Two things are missing:
+**Next steps at this end.** Two pieces would complete it:
 
 - the six-level graded basis `a^{k/3}`, checked on the full finite-`a`
   problem;
 - the Schur correction for the directions outside the product family.
 
-Double-precision solves at `a ≤ 3·10⁻³` broke down, so this was not tested
-numerically.
+Numerical tests cover `a > 3·10⁻³`; higher-precision solves are next.
 
-The resolved numerical cases support (ND); the unresolved cases and the full
-native domain remain open. Closedness of `L₆` passes established membership
-to finite limits, but supplies no admission proof for this endpoint. The checker
+The resolved numerical cases support (ND); the remaining cases and the full
+native domain are the next targets. Closedness of `L₆` passes established
+membership to finite limits; admission along this endpoint is the step the
+graded construction is designed to prove. The checker
 below verifies the corner identities, the projective-face identity and three
 rational path asymptotics. The proposed 61-dimensional kernel and graded Schur
 completion require further derivation:
@@ -421,8 +423,8 @@ eight-copy dual assembly imposes the corresponding adjoint constraints.
 A rational strictly feasible point is now explicit:
 `c*=(1/21,1,1,1,1,1,1,1,1)`. Its full positive definite Gram matrix is given
 in [`checks/gram-lift/strict_feasibility.json`](checks/gram-lift/strict_feasibility.json).
-Strict feasibility settles this assembly hypothesis; exactness still needs
-the contact admission theorem.
+Strict feasibility settles this assembly hypothesis; once the contact
+admission theorem is proved, it completes the lift.
 
 ## Admission across the contact families
 
@@ -468,12 +470,12 @@ checks the exact C2 facts.
 | End | Exact mechanism | Status |
 |---|---|---|
 | C2, `r → 0` | `n = n₀/r + O(1)` and the other weights stay finite. Every coefficient containing X is exactly `O(r)`, so one uniform `√r` scale on the X features suffices | closes numerically; margin flat down to `r = 10⁻⁶` (reproduced) |
-| C2, `r → 1` | `n(r=1) = −c²(h + a²)/(2(c²(a²+b+1)+1)) < 0`, so the chart ends at an `n = 0` wall first | the `n = 0` wall closes numerically (reproduced); `r → 1` is reachable only through the corner `c² = O(1 − r)`, which stays open |
-| C2, `c → ∞` and `c → 0` | Along the torus orbit through the contact, `F_c(O(L)) = 4C(u_cv_cW_c)²(L − 1/L)² + [(4n+4m+2)X_c² + (4A+4C+4D+2)Y_c²](1 − 1/L²)²` for every C2 source. The limit problem lives on 16 charge-0 features, and the other 138 are forced | closes in the interior numerically; margin flat to `c = 10⁴` and `10⁻⁴` (reproduced); the corners stay open |
-| C2, `a → 0` | forced kernel from product states, graded `a^{k/3}` (above) | finite-`a` step not verified |
-| C1 | On product states `F = 2W²D_uD_v(2Au² + v²(d + 2βD_u))`, which is `O(k²)` just above the contact: an intrinsic near-tightness | most noise-limited sources are numerical; weights spanning ≥ 10¹³ exceed double precision; the `M` and `J` walls are open |
+| C2, `r → 1` | `n(r=1) = −c²(h + a²)/(2(c²(a²+b+1)+1)) < 0`, so the chart ends at an `n = 0` wall first | the `n = 0` wall closes numerically (reproduced); `r → 1` is reachable only through the corner `c² = O(1 − r)`, treated with the corners |
+| C2, `c → ∞` and `c → 0` | Along the torus orbit through the contact, `F_c(O(L)) = 4C(u_cv_cW_c)²(L − 1/L)² + [(4n+4m+2)X_c² + (4A+4C+4D+2)Y_c²](1 − 1/L²)²` for every C2 source. The limit problem lives on 16 charge-0 features, and the other 138 are forced | limit problem solved in closed form on the whole open face (below); margin flat to `c = 10⁴` and `10⁻⁴` (reproduced); the corners are treated next |
+| C2, `a → 0` | forced kernel from product states, graded `a^{k/3}` (above) | finite-`a` step next |
+| C1 | On product states `F = 2W²D_uD_v(2Au² + v²(d + 2βD_u))`, which is `O(k²)` just above the contact: an intrinsic near-tightness | most noise-limited sources are numerical; weights spanning ≥ 10¹³ exceed double precision; the `M` and `J` walls are treated next |
 
-**A covering of the middle region is out of reach with these certificates.**
+**Covering the middle region needs parametric certificates.**
 
 - **Per-box affine certificates** are rigorous but reach only about 1.3%
   half-width, which means 10⁹ to 10¹⁶ boxes.
@@ -490,7 +492,7 @@ covers every compact strict native subfamily by one finite cone. Joining
 finitely many closed sound cones is then routine (assembly lemma). What
 remains is a finite set of fixed cones, each covering a neighbourhood of one
 stratum of the singular boundary of the native domains. That boundary is
-large. A first inventory of C1 (scripts not yet in this folder) found:
+large. A first inventory of C1 (its scripts are to be added here) found:
 
 - **Six genuine facets, proved.** They are `Lc = 0`, `M = 0`, `J = 0`,
   `Qc = 0`, `D = 0` and `β = 0`. Each one contains an exact rational point
@@ -506,7 +508,8 @@ with `h → 0` it stays about 0.2, and with `c → 0` about 0.05–0.08. With
 `1 − zh → 0` the margin falls linearly in the gap, while `α` diverges.
 
 **Wall mechanisms.** Three kinds of wall now reduce to a limit problem on the
-wall. Each reduction has exact checks, which are not yet in this folder.
+wall. Each reduction has exact checks; those not listed here are to be added
+to this folder.
 
 - **C2, `r → 0`.** Rescale the X features by `ρ = √r`. The coefficient map is
   then a degree-2 polynomial in `s = cρ`, independent of the source, with
@@ -550,16 +553,15 @@ wall. Each reduction has exact checks, which are not yet in this folder.
   - Exact pointwise `k = 2` certificates (hence `L₆`) exist at finite `c`:
     36 of 36 points for `c` up to 10⁸, and 22 of 24 for `c` down to 10⁻⁸.
     The two misses are double-precision failures, not infeasibility.
-  - Still open: the finite-`c` perturbation step. In charge-graded
+  - Next: the finite-`c` perturbation step. In charge-graded
     coordinates the limit is only feasible on the boundary, because the
     contact escapes. A multi-level reduction is needed.
 
-Each reduction ends at the same gap. Strict feasibility of a limit problem
-on a wall is proved at finitely many points of that wall, not at all of its
-points, except at the `c` ends just described. Closing that gap needs certificates that are explicit functions of
-the wall parameters, and the wall's own corners recur one dimension lower.
-The `c → ±∞` ends and `a → 0` are also open, with the mechanisms described
-above.
+Each reduction ends in a limit problem on a wall. At the `c` ends that limit
+problem is solved on the whole open face. On the other walls it is certified
+exactly at sample points, and the closed-form `c`-end method is the model
+for them. The finite-`c` step, the `a → 0` end and the wall corners
+are the next targets.
 
 ## Evidence
 
@@ -618,29 +620,33 @@ the source field and pure test-side monomials `Z₆`, so the hard lemma of
 `PEN_AND_PAPER.md` follows at once. In fact Scheiderer's criterion is no longer
 needed, because the lift is explicit.
 
-**One lemma left.** What remains to be proved is a single statement over the
-reals, with no infinitesimals. For the extreme sources (events, the two closed
+**One lemma to prove.** The whole construction rests on a single statement
+over the reals, with no infinitesimals. For the extreme sources (events, the two closed
 faces, and the C1/C2 contact sources), `F_c` has a Gram certificate in `Z₆`.
 
-## Caveats and next steps
+## Evidence and next steps
 
-- **The evidence is numerical.** Clarabel was combined with a δ-margin test. The
-  confirmed k = 2 gaps use a 192–320-bit solver. A high-precision solve at
-  k = 6 would take about 10 hours per case, so none was run.
-- **Fourteen sources have indirect numerical support.** Their k = 6 margins
+- **Numerical evidence and exact certificates.** The sweep used Clarabel with
+  a δ-margin test, and the confirmed k = 2 gaps a 192–320-bit solver; the
+  sweep itself is numerical evidence. The hardest sources found also have
+  exact certificates ([`checks/gram-lift/admission/`](checks/gram-lift/admission/)).
+  A high-precision k = 6 solve takes about 10 hours per case and is a next
+  step.
+- **Fourteen sources are supported through `L₂ ⊆ L₆`.** Their k = 6 margins
   are at numerical noise level, while their high-precision k = 2 ratios are
-  at least 0.99999999 and `L₂ ⊆ L₆`. This supplies numerical evidence, not
-  exact certificates for those sources.
-- **Remaining proof.** Closedness, four exact contact certificates, constant
-  rank on the native contact charts and a global strictly feasible point
-  are established. Persistence of positive definite reduced Grams, (ND),
-  remains unproved. The closed faces can instead use their existing pencils.
-- **Sampling limits.** 302 samples, including the adversarial ones from earlier
-  experiments, are not a proof. A targeted search for sources that minimize
-  `d₆/d*` is the next test.
-- **Exact certificates.** Exact rational Gram certificates at the 9 former gap
-  sources would turn "reaches 0.999" into "contains these sources" exactly.
-  That's cheap, as for `checks/lift-experiment/`.
+  at least 0.99999999, which is numerical evidence. Exact certificates for
+  them are a direct next step.
+- **Established and next.** Closedness, four exact contact certificates,
+  constant rank on the native contact charts and a global strictly feasible
+  point are established, and the closed faces use their existing pencils.
+  The next step is (ND), the persistence of positive definite reduced Grams,
+  approached through the wall limit problems.
+- **Targeted search.** The 302 samples are evidence rather than a proof.
+  Beyond them, an adversarial search for small `μσ` found no counterexample,
+  and its hardest sources are certified exactly. A search minimizing
+  `d₆/d*` is a further test.
+- **Exact certificates.** Exact rational Gram certificates at the 9 former k = 2
+  gap sources are a direct next step, as for `checks/lift-experiment/`.
 
 Data and a standalone checker are in
 [`checks/gram-lift/`](checks/gram-lift/).

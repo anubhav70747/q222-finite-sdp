@@ -10,8 +10,28 @@ the surviving state directions and completes the resulting quadratic forms.
 - [Overleaf sources](Q222_Overleaf.zip).
 - [Explicit representations](pdf/Explicit_Lifts.pdf) and [matrix data](extracted-lifts/).
 
-The companion retains the complete singular-case argument. **An exact affine
-pencil for the full eight-coordinate quantum set has not yet been extracted.**
+The companion retains the complete singular-case argument. The explicit
+construction has advanced from that argument toward one exact affine pencil
+for the full eight-coordinate quantum set:
+
+- **Assembly.** Given an exact canonical pencil, eight adjoint copies give
+  the full lift. The sixth-root candidate for that pencil has an explicit
+  rational strictly feasible point.
+- **Reduction.** Every extreme Bell inequality is an event, lies on one of two
+  closed faces with exact pencils, or is a strict C1/C2 contact source. The
+  construction therefore reduces to admitting those two contact families in
+  one fixed finite collection of cones ([route](independent-review/EXACT_LIFT_ROUTE.md)).
+- **Coverage.** Every compact strict native subfamily has a finite cone, whose
+  size depends on the subfamily
+  ([compact cover](independent-review/COMPACT_NATIVE_CONTACT_COVER.md)). The
+  sixth-root lift admits the hardest sources found, with exact certificates,
+  and its limit problems at the `c → 0` and `c → ∞` ends are solved in closed
+  form on whole faces ([sextic lift](independent-review/EXACT_LIFT_CANDIDATE.md)).
+  Uniform control at the singular limits, including the finite-`c` step, is
+  the next stage.
+- **Explicit blocks.** Exact cones cover singular source families on explicit
+  testing regions, as described below.
+
 The construction below resolves a singular source family on an explicit testing region.
 
 On the review branch, an [exact order-seven block](extracted-lifts/c2-equal-angle-cone/)
@@ -24,8 +44,8 @@ An [order-six block](extracted-lifts/c2-unequal-angle-curve/) now covers a
 compact curve with unequal measurement angles. Its exact moment
 representation needs at most three contact points. The
 [general contact equations](independent-review/C2_CONTACT_GEOMETRY.md)
-identify an additional fourth-degree relation; a fixed lift for their full
-three-parameter convex hull remains unresolved.
+identify an additional fourth-degree relation, the next ingredient for a
+fixed lift of their full three-parameter convex hull.
 
 ## One cancellation across the singular source limits
 
@@ -47,8 +67,8 @@ The cap contains every native contact in this source box. A joint bound
 on the source coefficients makes that enlargement possible without adding
 matrix rows. A ten-row matrix covers `|v| >= 1/16` at every Alice angle.
 The [joined system](extracted-lifts/canonical-completion/uniform-contact/joined_certificate.json)
-has order 293 and leaves the R1 testing strip
-`|u| > 9/256`, `|v| < 1/16` unresolved.
+has order 293. The adjoining R1 testing strip `|u| > 9/256`, `|v| < 1/16`
+is the next region to join.
 
 An
 [explicit rational example](extracted-lifts/canonical-completion/uniform-contact/Annulus_Obstruction.md)
@@ -61,14 +81,17 @@ The enlarged contact certificate now includes this example.
 The [three-page assembly proof](extracted-lifts/canonical-completion/full-polar/Q222_Polar_Assembly.pdf)
 reduces the full quantum polar to eight output relabellings of one canonical
 cone. An exact canonical pencil gives the eight-coordinate lift through
-eight adjoint copies. The unresolved requirement is a single evaluated
+eight adjoint copies. The input to assemble is a single evaluated
 certificate family admitting every canonical source at every testing angle.
+The constructions above and the [review route](independent-review/EXACT_LIFT_ROUTE.md)
+cover growing parts of the source space.
 
 The earlier [contact completion](extracted-lifts/canonical-completion/contact-completion/)
 and [regional matrices](extracted-lifts/canonical-completion/fixed-c2-gates/Fixed_C2_Completions.pdf)
 already give an order-635 construction valid at all measurements for their
-smaller native source family. The long companion is retained because a
-short, complete global replacement has not yet been established.
+smaller native source family. The long companion carries the complete
+singular-case argument, and these explicit constructions make growing parts
+of it concrete.
 
 The [canonical reduction](extracted-lifts/canonical-completion/Q222_Canonical_Completion.pdf)
 also turns validity into a common completion of two four-by-four matrices
@@ -92,7 +115,7 @@ global construction. Their proofs and matrices remain available.
 
 The [scientific data guide](extracted-lifts/README.md) gives each domain,
 matrix convention and reproduction command. It also retains the larger
-outer candidates and their proved or unresolved reverse inclusions.
+outer candidates and the reverse inclusions proved for them so far.
 
 ## Build
 

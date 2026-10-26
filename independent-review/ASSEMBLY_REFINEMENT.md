@@ -1,8 +1,8 @@
 # Exact certificates for the remaining sources
 
 A shorter proof can retain the bounds already obtained exactly and concentrate
-on the Bell inequalities they leave unresolved. The additional construction
-then has a precise job: supply the missing supporting inequalities. This
+on the Bell inequalities they leave. The additional construction then has a
+precise job: supply the remaining supporting inequalities. This
 also allows the existing closed-face pencils to be used directly, without
 forcing them into the sixth-root Gram basis.
 
@@ -180,6 +180,8 @@ do so.
 This isolates the proof target. The known face pencils and the strictly
 feasible assembly can be retained. The new analytical work is the admission
 of every remaining contact source, possibly after using one finite NPA
-level to remove families it already certifies exactly. The short guide's
-imported hard lemma and the numerical sweep do not yet provide that
-admission theorem.
+level to remove families it already certifies exactly. The imported hard
+lemma and the numerical sweep support existence and give evidence; the
+admission theorem itself is the target. The compact cover, the exact
+pointwise certificates and the wall reductions in
+[`EXACT_LIFT_CANDIDATE.md`](EXACT_LIFT_CANDIDATE.md) are its first parts.
