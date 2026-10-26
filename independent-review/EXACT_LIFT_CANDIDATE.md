@@ -548,7 +548,11 @@ to this folder.
   An explicit LDLᵀ shows that this Gram has kernel exactly the contact iff
   `0 < κ < κ_max = 4a·p²q²/(q² + a²p²)`. Every coefficient and pivot is
   positive on the open face, so `κ = κ_max/2` works at every face point.
-  The `c → 0` face has the same structure. This is proved, by
+  The `c → 0` face has the same three-dimensional completion, with
+  rescaling `c⁻²F_c(cU,cV,W,cX,cY,Z)`.
+  [One short completion lemma](C2_END_GRAM_LEMMA.md) gives the positive
+  pivots and exact contact kernels at both ends. The full native identities
+  are checked by
   [`checks/gram-lift/ends/check_c2_c_limits.py`](checks/gram-lift/ends/check_c2_c_limits.py).
   - Exact pointwise `k = 2` certificates (hence `L₆`) exist at finite `c`:
     36 of 36 points for `c` up to 10⁸, and 22 of 24 for `c` down to 10⁻⁸.

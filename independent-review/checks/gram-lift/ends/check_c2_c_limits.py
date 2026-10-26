@@ -1,6 +1,7 @@
 """check_c2_c_limits.py -- exact (sympy) proofs for the limit problems of the two C2 ends c -> infinity and c -> 0
 of the native chart (c,a,b,t,r), d=1, lam=beta=0.  The finite-c perturbation step is NOT proved here.
-Run:  python check_c2_c_limits.py   (about 90 seconds; prints PASS lines, asserts everything)
+Run:  python check_c2_c_limits.py   (exact symbolic checks only; prints PASS lines and asserts every identity)
+Optional numerical sanity check: add --numeric-sanity. No solver is used.
 
 What is proved here (all identities are exact rational-function / polynomial identities, all positivity statements are
 'every numerator and denominator has only positive coefficients in positive coordinates of the open face'):
@@ -16,7 +17,11 @@ What is proved here (all identities are exact rational-function / polynomial ide
        => with kappa = kappa_max/2 the k=2 limit Gram has kernel EXACTLY the contact (rank 5 + 1 of 6 + 2 features), on the whole open face.
  c -> 0  (b,a,t,r fixed;  face = {0<r<1, 0<t<1, b+r>1, b>a^2 t}) : the same chain (Z1)-(Z5).
 """
-import sympy as sp, itertools, random, sys, time
+import argparse
+import sympy as sp, time
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--numeric-sanity', action='store_true', help='also sample 4000 face points; not part of the proof')
+args = parser.parse_args()
 T0 = time.time()
 def say(s): print('[%6.1fs] %s' % (time.time() - T0, s), flush=True)
 
@@ -157,17 +162,19 @@ for nm, ex in (('kappa/a', kk/a), ('kappa a t^2', kk*a*t**2), ('Aq/q2', Aq_/q2),
 say('PASS (I5f): kappa = kappa_max/2 > 0 and all pivots (kappa a t^2, Aq, Bq - kappa^2/(16 Aq)) > 0 on the whole open face.  CONSEQUENCE: for every face point the c=infinity limit form F_0 has a k=2 Gram')
 say('        (6 + 2 features: blocks (UW,UVX,VZ,VW,UZ,UVY) and (sqrt(UV)W, sqrt(UV)Z)) that is PSD with kernel EXACTLY the contact in each block (strictly feasible in the k=2 limit problem).')
 # numerical sanity of the closed form against an independent evaluation (not part of the proof)
-GEf = sp.lambdify((a, t, eta, rho, kap), GE, 'numpy'); kkf = sp.lambdify((a, t, eta, rho), kk, 'numpy')
-import numpy as np
-random.seed(11); bad = 0
-for _ in range(4000):
-    rr = random.uniform(1e-2, 3); w_ = random.uniform(1e-2, 1 - 1e-2); tt = rr + w_; e_ = random.uniform(1e-2, 1 - 1e-2); ss = random.uniform(1e-2, 5)
-    # a^2 t + eta - 1 = ss  ->  a^2 = (ss + 1 - eta)/t,  eta = 1 - e_
-    aa = ((ss + e_)/tt)**0.5; et = 1 - e_
-    ev = np.linalg.eigvalsh(np.array(GEf(aa, tt, et, rr, kkf(aa, tt, et, rr)), float))
-    if ev[0] < -1e-9*max(1, ev[-1]) or ev[1] < 1e-12*max(1, ev[-1]): bad += 1
-say('numerical sanity (not a proof): 4000 random face points: G_E(kappa_max/2) PSD with exactly one zero eigenvalue in %d/4000 cases failing' % bad)
-assert bad == 0
+if args.numeric_sanity:
+    import random
+    import numpy as np
+    GEf = sp.lambdify((a, t, eta, rho, kap), GE, 'numpy'); kkf = sp.lambdify((a, t, eta, rho), kk, 'numpy')
+    random.seed(11); bad = 0
+    for _ in range(4000):
+        rr = random.uniform(1e-2, 3); w_ = random.uniform(1e-2, 1 - 1e-2); tt = rr + w_; e_ = random.uniform(1e-2, 1 - 1e-2); ss = random.uniform(1e-2, 5)
+        # a^2 t + eta - 1 = ss -> a^2 = (ss + 1 - eta)/t, eta = 1 - e_
+        aa = ((ss + e_)/tt)**0.5; et = 1 - e_
+        ev = np.linalg.eigvalsh(np.array(GEf(aa, tt, et, rr, kkf(aa, tt, et, rr)), float))
+        if ev[0] < -1e-9*max(1, ev[-1]) or ev[1] < 1e-12*max(1, ev[-1]): bad += 1
+    say('numerical sanity (not a proof): 4000 random face points: G_E(kappa_max/2) PSD with exactly one zero eigenvalue in %d/4000 cases failing' % bad)
+    assert bad == 0
 
 # =====================================================================================================  C -> 0
 b, t0, r0 = sp.symbols('b t0 r0', positive=True)    # b,t,r of the c=0 chart (a is shared)
