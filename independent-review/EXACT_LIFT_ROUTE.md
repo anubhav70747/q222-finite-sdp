@@ -66,6 +66,14 @@ The closed-face pencils can be added directly. They need not be represented
 again in the sixth-root basis. Their derivations and dual attainment are in
 [`04_geometry.tex`, SG12–SG14](../latex/chapters/04_geometry.tex).
 
+The [canonical source reduction](CANONICAL_SOURCE_REDUCTION.md) explains
+why events, those two closed faces, and the C1/C2 contact families exhaust
+the sources. A stationary full-state contact makes the Laurent determinant
+globally nonnegative; six linear contact equations then restrict extreme
+support. The proof includes strict native entry and the permitted third
+omissions. This identifies the sources that the remaining full-parent
+tensor certificates must cover.
+
 ## Two classical zeros reduce the NPA test to seven roots
 
 Every native C1 source has `λ=n=0`, and every native C2 source has
