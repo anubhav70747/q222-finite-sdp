@@ -9,6 +9,7 @@ The 22 October full analytical review supports qualitative finite-SDP existence.
 - [All published material](INVENTORY.md), [machine-readable checklist](CHECKLIST.json), and [file hashes](MANIFEST.json)
 - [What the earlier work already completed](RECONCILIATION.md)
 - [Recovery limits](RECOVERY_LIMITS.md) and [the next verification pass](VERIFICATION_PLAN.md)
+- [Library audit and actionable remaining steps](REMAINING_STEPS.md)
 
 ## Foundations, full local proof and delivery
 

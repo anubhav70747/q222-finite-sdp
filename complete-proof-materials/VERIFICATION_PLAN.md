@@ -1,5 +1,7 @@
 # Verification status and remaining construction
 
+The [library audit and remaining steps](REMAINING_STEPS.md) expand L08–L10 into explicit construction, proof-compression and delivery requirements. They retain the completed qualitative conjunction and distinguish current research reports from verified results.
+
 The current qualitative-existence verification is complete in V01-V06 relative to the recovered substantive body reviews. The source conjunction supplies the precise native-atom statement required by the independently checked global implication. The checklist links the original proofs, source comparisons and separate verification notes. No unchanged leaf was rederived in this pass.
 
 1. Preserve the current mathematical sources and the original 215-component proof with the 45 C1 and 49 C2 case records. A subsequent revision requires checking its changed equations and imports.
