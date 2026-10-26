@@ -495,3 +495,16 @@ and the second is infinitesimal.
 This closes that source branch. The other C2 branches and the formal
 CA/SE base remain separate requirements; an evaluated global pencil has
 not yet been extracted.
+
+The SE proof now displays the four remainders after the first contact
+division. Their second ordered `w` quotients, modulo `epsilon`, are
+`(0, 0, E v q_s(v^2), 0)`. This proves the required membership in
+`(epsilon,v)` for every coefficient of the scalar, while each full
+normal needs only one division. The compensating factor `k` comes
+from the original `D_0^2` term, so the contact-jet relation introduces
+no inverse of a small source parameter. The complete CA and SE
+coefficient identities, native balances and conductor identities have
+also been replayed exactly. These are local constructions under the
+printed native contact and retained-packet assumptions; complementary
+testing joins, the other C2 leaves and uniform fixed-library PSD
+admission still require their separate arguments.

@@ -6151,8 +6151,8 @@ whenever $T_w=\varepsilon U+vV$, the bounded conductor is
 \]
 No division by $\varepsilon,j,k,r,a,t$, or a contact difference occurs.
 
-Here is the full rational membership argument required for applying
-(SE7), not only a finite truncation. At zero normals let
+To apply (SE7), first express the scalar in the four raw monomials.
+At zero normals let
 $V_0=1-puv w$. Then
 \[
  q_A=D_u wv,\quad q_B=D_uvV_0,\quad
@@ -6170,24 +6170,56 @@ factor $\varepsilon^2$; modulo $\varepsilon$ they are independent of
 $w$ and even in $u,v$. Both complete first normals are in $(A,B,C)$
 with bounded coefficients by the same exact formulas.
 
-Clear the finitely many unit denominators, chosen even in $u,v$ and
-independent of $w$, and use the unchanged scalar square-lift algorithm.
-For its first scalar conductor, the only $w$-dependent coefficient
-$T_w$ is divisible by $\varepsilon$ (in fact by $\varepsilon^2$).
-At $\varepsilon=u=0$, its residual polynomial $S$ is even in $v$,
-and contact makes its constant zero; thus $S\in(v^2)$ there.
-More explicitly, modulo $\varepsilon$ the first divided differences
-satisfy $T_u\in(u)$, $T_w=0$, and $T_v\in(v)$ after the preceding
-monic substitutions. It follows
-that after this first conductor, the sole possible $w$ dependence
-modulo $\varepsilon,u$ in the four second-stage remainders is of the
-form $w v$ times a polynomial in $v$. Hence their $T_w$ all belong to
-$(\varepsilon,v)$, exactly the hypothesis of (SE7). The complete
-normal raw coefficients are independent of $w$ modulo $\varepsilon$,
-so their one conductor has $T_w\in(\varepsilon)$. The retained contact
-squares and the original native balances supply the exact contact
-value and first-jet identities throughout. This proves the full
-scalar-square and complete first-normal lifts over the bounded ring.
+Write $\mathcal L_x(S),\mathcal L_y(S),\mathcal L_z(S)$ for the three
+coefficients produced by (SE7), using monic divisions in the order
+$u,w,v$. Substitution of $A=y+kC$, $B=x+C$, and $D_0=kC-h_0$
+leaves the scalar coefficient
+\[
+ S=k^2f_A+f_{BB}+f_{BC}+f_{CC}+k^2\rho.
+\]
+It vanishes at contact, and $T_w(S)\in(\varepsilon^2)$, so (SE7)
+applies with $U=T_w(S)/\varepsilon$ and $V=0$. Let
+\[
+ H=(2f_{BB}+f_{BC}+\mathcal L_x(S),\,
+       2kf_A+\mathcal L_y(S),\,\mathcal L_z(S),\,-2k\rho),
+ \qquad J=H-2k\rho_c(-2k,1,1,-1),
+\]
+where the subscript $c$ denotes exact contact evaluation. The native
+contact jets and the identity $kC(y+z-h_0-2kx)=q_1^2-yz$ give
+$J_i|_c=0$ for all four coefficients. The factor $k$ needed for this
+identity comes from the original $\rho D_0^2$ term.
+The contact Jacobian of $(x,y,z)$ has determinant
+$-E^2\varepsilon^3j^4\ne0$; its independence proves these vanishing
+statements without introducing its inverse into a coefficient.
+
+It remains to check the second conductor. In this paragraph a bar
+means reduction modulo $\varepsilon$ only. Write
+$\bar S=s(u^2,v^2)$ and put
+\[
+ p_s(U,V)=\frac{s(U,V)-s(0,V)}{U},\qquad
+ q_s(V)=\frac{s(0,V)}{V}.
+\]
+These are polynomial quotients: parity gives the first, and contact
+gives $s(0,0)=0$. Direct substitution into (SE7) yields
+\[
+ \bar J_x=\overline{2f_{BB}+f_{BC}}-u^2p_s(u^2,v^2),\quad
+ \bar J_y=Ejv q_s(v^2),\quad
+ \bar J_z=u p_s(u^2,v^2)+Ewv q_s(v^2),\quad \bar J_h=0.
+\]
+The ordered $w$ division first sets $u=k$, which is zero modulo
+$\varepsilon$. Consequently
+\[
+ (\overline{T_w(J_x)},\overline{T_w(J_y)},
+   \overline{T_w(J_z)},\overline{T_w(J_h)})
+       =(0,0,Ev q_s(v^2),0).
+\]
+Every second-stage $T_w$ therefore belongs to $(\varepsilon,v)$,
+as required by (SE7), with bounded polynomial coquotients. The complete
+normal raw coefficients are independent of $w$ modulo $\varepsilon$;
+their single conductor has $T_w\in(\varepsilon)$. Thus both scalar
+divisions and both full normal lifts stay in the bounded coefficient
+ring. All denominators used here are the separated units already
+displayed in (SE3)--(SE4).
 
 \paragraph{Finite residues of that full lift.}
 Give $(\varepsilon,j,u,w,v,N,M_B)$ weights $(1,1,2,1,3,5,3)$;
