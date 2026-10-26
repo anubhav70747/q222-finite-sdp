@@ -1,0 +1,60 @@
+{
+  "scope": "Three original exact modules plus exact sign congruences and endpoint range determinant. No universal H1 or middle-angle PSD verification.",
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "sympy": "1.14.0",
+  "manifest_files": 10,
+  "archive_members": 11,
+  "original_zip_sha256": "f4792346f9b9a54af934de33d59dfb0a119d86953083859a7bbd2a6283362ead",
+  "manifest_verified": [
+    "PROOF.md",
+    "README.md",
+    "REFERENCE.md",
+    "run_exact_checks.py",
+    "source_refs/PREVIOUS_Z18_SCOPE.md",
+    "source_refs/c1_native.py",
+    "verification.log",
+    "verify_anchor_interpolation.py",
+    "verify_boundary_schur.py",
+    "verify_full_parent_bob.py"
+  ],
+  "archive_verified": [
+    "MANIFEST.json",
+    "PROOF.md",
+    "README.md",
+    "REFERENCE.md",
+    "run_exact_checks.py",
+    "source_refs/PREVIOUS_Z18_SCOPE.md",
+    "source_refs/c1_native.py",
+    "verification.log",
+    "verify_anchor_interpolation.py",
+    "verify_boundary_schur.py",
+    "verify_full_parent_bob.py"
+  ],
+  "runs": [
+    {
+      "script": "verify_full_parent_bob.py",
+      "exit_code": 0,
+      "seconds": 5.085258699999031
+    },
+    {
+      "script": "verify_boundary_schur.py",
+      "exit_code": 0,
+      "seconds": 5.340363999999681
+    },
+    {
+      "script": "verify_anchor_interpolation.py",
+      "exit_code": 0,
+      "seconds": 5.030474199998935
+    }
+  ],
+  "additional_checks": {
+    "Alice_sign_congruence": true,
+    "Bob_sign_congruence": true,
+    "G0_exact_kernel_from_positive_rows": "span(W0,X1)",
+    "G0_range_determinant": "1024*A**2*alpha**2*(2*C + 2*D + d)*(2*beta + d + 2*m)",
+    "fixed_features": 40,
+    "even_features": 24,
+    "odd_features": 16
+  },
+  "original_package_unchanged": true
+}

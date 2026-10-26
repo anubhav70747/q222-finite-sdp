@@ -2,6 +2,8 @@
 
 The new C1 and C2 packages supply exact reductions. Neither proves universal admission to a fixed Gram cone. Their original files are preserved unchanged; the qualifications below govern their use.
 
+The later [C1 endpoint and boundary construction](C1_BOUNDARY_AND_WALL_UPDATE.md) adds a full 8x8 polynomial-matrix route and verifies the exact scope of the merged wall certificates. Its intermediate-angle PSD and universal wall selection remain open.
+
 ## C1: two coupled Schur conditions
 
 Adding sqrt(uv)X and sqrt(uv)Y gives a fixed 18-feature library contained in Z6. The generated 46-by-49 coefficient map has rank 40. Matching its four forbidden parity coefficients leaves the 42-by-45 invariant map, rank 36, with nine free gauges. Its invariant linear image is unchanged. The enlargement adds PSD freedom through a second nonnegative half-power charge delta alongside gamma.

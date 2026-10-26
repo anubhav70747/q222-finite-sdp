@@ -1,0 +1,169 @@
+C1 BOB-HARMONIC CONSTRUCTION: INDEPENDENT ANALYTICAL VERIFICATION
+Reviewed 27 October 2026; filename follows the current batch convention.
+
+Material
+--------
+Original package: exact-lift-2026-10-23/seven-extra-high-2026-10-26/
+fetched-1959/task5/{original-package.zip,package/}.
+Reviewed PROOF.md, REFERENCE.md, source_refs/c1_native.py and all three
+symbolic modules. Original scientific files were preserved unchanged.
+
+Verdict
+-------
+The stated scoped result is supported: a fixed 40-feature sufficient
+construction, simultaneous full 8-by-8 positivity near both Bob endpoints
+for each strict source, and a compatible positive-semidefinite contact
+anchor. None of these proves positivity at every intermediate Bob angle.
+Equation (18), hence this sufficient route to H1, remains unproved.
+H1 and H2 are not promoted.
+
+1. Parent, physicality and the sign issue
+---------------------------------------
+Equation (1) is the literal SG2 parent with lambda=n=0, not a restriction
+to the contact state. The endpoint expansions retain all four independent
+state coordinates and both angle variables. Their identities hold for
+seven algebraically independent positive weights.
+
+Physical global nonnegativity is needed only for the contact PSD anchor.
+It is imported for genuine native sources from SG7 and the original
+native stationary formulas; it is not inferred from positivity of seven
+arbitrary weights. SG7 assumes the actual state kernel and both angular
+stationarity equations. Its previously reviewed domain remains the
+domain of this import.
+
+For the actual parent, direct simultaneous substitution gives exactly
+ F(-u,v; W,X,-Y,-Z)=F(u,v; W,X,Y,Z),
+ F(u,-v; W,-X,Y,-Z)=F(u,v; W,X,Y,Z).
+The additive verifier checks both polynomial identities, without changing
+the source. Thus positive-angle physicality extends to negative Alice u
+at the fixed positive contact Bob v. The leading u coefficient in (3)
+supplies the homogeneous endpoint u=infinity. Consequently the
+homogenized fixed-Bob parent is nonnegative for every real two-vector
+and every real four-state vector, as required by the 2-by-4 theorem.
+
+2. Endpoint matrices and the complete soft Schur calculation
+----------------------------------------------------------
+All four endpoint formulas (3) are exact. P0(v)>0 for v>0 follows by
+successively forcing X,Y,Z,W to zero in its positive-weight roots.
+For P2(v)>0, the roots force W,Y,Z,X to zero. At v=0 the kernels are,
+respectively, W and X.
+
+G0 is a positive sum of six independent squared linear forms on
+R=span(X0,Y0,Z0,W1,Y1,Z1), with kernel span(W0,X1).
+Its range determinant is
+ 256 A^2 alpha^2 (4C+4D+2d)(4m+4beta+2d)>0.
+Positivity follows from the independent positive-weight rows, rather
+than from the determinant alone. Ginf is positive definite: its d rows
+first force X0,X1,Y0,Y1 to zero, and the remaining positive rows then
+force W0,W1,Z0,Z1 to zero.
+
+With the stated S1, the kernel-to-range derivative has precisely the
+two rows -4m(X0+Z1) and (4D+2d)(W1-Y0). They lie in disjoint blocks of
+G0 restricted to R. Hence their inverse-Gram mixed product is zero.
+The two Schur corrections are
+ (4m)^2/(4m+4beta+2d),
+ (4D+2d)^2/(4C+4D+2d).
+Subtracting them from the direct second-order entries 4m and 4D+2d gives
+ 4m(2beta+d)/(2beta+d+2m),
+ 4C(2D+d)/(2C+2D+d).
+The order-v kernel block vanishes. The only potential order-v^2 mixed
+entry is removed by (S2)_WX=0. All other S2 and S3 entries remain free.
+
+For each fixed strict real source and fixed finite S2,S3 satisfying that
+one constraint, continuity keeps the six-dimensional range positive.
+The full Schur complement is v^2(Sigma0+O(v)), with Sigma0>0. This proves
+the full 8-by-8 matrix is positive definite for sufficiently small
+positive v. Its v^4 coefficient is Ginf>0, which proves positive
+definiteness for sufficiently large v. These source-dependent
+neighbourhoods do not imply a uniform cutoff over singular source
+limits, nor do they cover the remaining interval.
+
+3. The contact anchor and source-only interpolation
+--------------------------------------------------
+Calderon's 2-by-n theorem applies to the physical homogeneous fixed-Bob
+form just established. A bilinear SOS gives an 8-by-8 PSD Gram. Its
+diagonal blocks must equal the prescribed D_* P0 and D_* P2 by coefficient
+comparison; its cross block has prescribed symmetric part D_* P1/2.
+Its remaining freedom is exactly a skew matrix S_c. The factor D_*>0
+is absorbed by scaling the Gram. The zero contact vector lies in the
+kernel of this PSD Gram.
+
+The explicit rational S_c^ker in (16) supplies only a kernel; no PSD
+property is claimed for it. The proof correctly uses a possibly
+different PSD S_c from the biquadratic theorem in (17).
+
+The feasible skew matrices are described by finitely many polynomial
+equalities and principal-minor inequalities over the source coefficient
+field. A nonempty real feasible set has a point in that field's real
+closure by real-closed-field transfer. This is enough for source-only
+algebraic coefficients. No global-in-v algebraic selection follows.
+
+The interpolation formula exactly matches any selected S_c at v_*>0,
+keeps S0,S1,S4 unchanged, and enforces (S2)_WX=0. All its denominators
+are positive nonzero source contact coordinates. The same polynomial
+therefore retains both endpoint positivity results and its contact PSD
+anchor. No neighbourhood of the possibly singular contact is proved.
+
+4. The fixed 40-feature implication and precise external import
+-------------------------------------------------------------
+If the quartic H(v) is PSD for every v>=0, H(t^2) is a real symmetric
+univariate polynomial matrix PSD for every real t. Hanselka and Sinn,
+"Positive Semidefinite Univariate Matrix Polynomials," Corollary 2.8,
+gives a polynomial matrix SOS also when the matrix is singular:
+ https://arxiv.org/html/1707.08261v1
+
+The following degree bound is an independent deduction, not an extra
+unstated hypothesis of that theorem. Each diagonal of R(t)^T R(t) is a
+sum of real polynomial squares. Its largest-degree nonzero squares have
+positive leading coefficients and cannot cancel. Since H(t^2) has
+degree at most eight, every entry of R has degree at most four.
+
+Write R(t)=E(t^2)+t O(t^2). Averaging its square identities at t and -t
+cancels the mixed term. It gives
+ H(v)=E(v)^T E(v)+v O(v)^T O(v),
+ deg E<=2, deg O<=1.
+Substitution of x=(psi,u psi) therefore gives 24 even features and 16
+half-integer Bob features. Their sixth-root indices are
+ i in {0,6}, j in {0,3,6,9,12}, four state components.
+They are a fixed source-independent subset of the 364-row grid.
+The polynomial equality extends from v=t^2 to all v by coefficient
+identity. Coefficient Gram feasibility has only finitely many
+polynomial constraints, so the same real-closure argument gives
+source-algebraic coefficients. There is no testing-dependent Gram
+coefficient or division by a source/testing multiplier.
+
+For the contact anchor, Calderon's original statement was checked
+against the publisher's indexed abstract:
+ https://www.sciencedirect.com/science/article/pii/0024379573900529
+ DOI 10.1016/0024-3795(73)90052-9.
+The publisher full proof was not retrieved; the standard theorem is
+an explicit external import, not independently reproved here.
+See c1_bob_harmonic_external_imports_2026_10_26.txt for the primary-source
+retrieval record.
+
+5. What the replay does and does not establish
+----------------------------------------------
+All three original symbolic modules passed once in a private copy.
+They check the full coefficient identities, endpoint Grams, complete
+two-by-two Schur matrix and source-only interpolation, including free
+higher skew entries. Independent added checks verified the two sign
+congruences, range determinant and 24+16 feature indexing.
+
+These exact identities support the analytical argument above. They
+do not prove the imported biquadratic theorem, the matrix-factorization
+theorem, the source physicality theorem, or global intermediate-angle
+PSD by themselves. Ten manifest payload hashes and all eleven original
+ZIP member bytes/CRCs matched. The original package stayed unchanged.
+Evidence: c1-bob-harmonic-exact-verification-2026-10-26/.
+
+Remaining constructive target
+-----------------------------
+The new finite matrix problem is a sufficient route:
+for every genuine strict oriented source, choose source-only skew S2,S3
+with (S2)_WX=0 such that H(v)>=0 for every v>=0.
+Endpoint and contact control leave that implication open. It is
+stronger than direct H1 admission into K364; its failure would not
+refute H1. Existing reflection, density and conditional global pencil
+results remain at their previously verified scopes. No Git file was
+edited in this review.
+

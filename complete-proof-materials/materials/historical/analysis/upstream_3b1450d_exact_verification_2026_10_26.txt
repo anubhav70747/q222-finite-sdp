@@ -1,0 +1,27 @@
+Upstream label 3b1450d: four bounded exact end/wall checkers
+Local replay date: 2026-10-27; requested report filename retained.
+
+SOURCE AND EXECUTION SCOPE
+Read the four new source checkers under github-q222-finite-sdp/independent-review/checks/gram-lift/ends and their materialized witness structure before running. Separate evidence folder: analysis/upstream-3b1450d-exact-verification-2026-10-26/.
+Executed each once, sequentially, in an isolated copy. Only SymPy, Python Fractions and standard-library imports are used. Symbolic solve and exact rational linear repair use the supplied algebraic equations and stored proposal data; no fresh SDP/numerical optimization, parameter generation or sweep occurs. Float conversions format times, corrections and pivot displays; coefficient identities and LDL sign decisions are exact. Python 3.14.3; SymPy 1.14.0; numerical thread limits 1; bytecode disabled. No missing dependency or failure.
+Original file identities (five source/data files) were recorded by byte count and SHA256, then verified unchanged after execution. No archive/manifest claim is applicable to these repository source files. No Git command was used; 3b1450d is the supplied upstream context label.
+
+RESULTS
+check_c2_r0_face_k2.py: exit 0; 2.051148 seconds; 9 stored rational limit-face witnesses; 13 PASS lines, including four symbolic groups and nine witness lines. All 44 coefficient equations (rank 39) hold for each reconstructed witness. Four Gram parity blocks have sizes 10,4,4,3 and reduced sizes 9,3,3,2. Every reduced block passed exact rational LDL positivity.
+check_c2_n0_wall_k2.py: exit 0; 11.358277 seconds; 8 stored rational n=0 wall witnesses; 9 PASS lines. Symbolic numerator is linear in t and the wall graph substitution cancels n exactly. At each witness, domain/contact jets, all coefficient equations, full polynomial identity and contact kernels pass; 66 independent coefficient equations; four blocks 13,5,5,4 with all reduced blocks PD.
+check_c1_zero_walls_k2.py: exit 0; 16.496436 seconds; 9 beta=0 plus 8 D=0 stored witnesses; 20 PASS lines. Symbolic forced diagonals and rational wall-graph formulas pass. Each witness passes native/closed-weight agreement, strict remaining domain/weights, contact value and all six derivatives, full polynomial identity, contact kernels, and four reduced-block exact LDL tests.
+n0-wall/check_c2_n0_wall_family.py with data18.json: exit 0; 76.634540 seconds; 22 stored rational n=0 wall witnesses; 25 PASS lines. Short wall-weight identities and g+k=b+r pass. The 18-feature coefficient family has 100 symmetric Gram entries, 72 determined, 28 free and an exact full-parent coefficient identity. Kernel matrix and augmented matrix both have rank 12 over Q(c,a,b,r). At all 22 supplied points, contact equations, full polynomial identity and all three reduced-block LDL tests pass.
+Across these checkers: 56 materialized witness certifications and 202 reduced-block PD checks. The eight n=0 points in the 27-feature checker recur among the 22 points in the 18-feature checker; these are repeated sources on different supports, not 56 independent source points.
+
+WHAT THE PASSES ESTABLISH
+The r->0 script concerns the three-amplitude limit form F_WYZ, not a full four-state strict-interior source. It verifies symbolic value/five-derivative contact, the positive-coefficient source identities, polynomial relations and the Newton/symmetry forced-diagonal obstruction to its integer-power k=1 Gram. Its k=2 positive certificates are the nine listed face points.
+The n=0 and C1 zero-wall certificates are exact finite rational witnesses on their stated boundary supports. Exact repair of stored candidate matrices followed by complete coefficient comparison and LDL makes their finite-point certificates independent of the quality of the original numerical proposals. These pointwise certificates do not give a Gram formula positive on an entire wall or on the strict interior.
+The 18-feature coefficient identity holds symbolically in the weights and 28 free entries. Its rank-12 consistency calculation is over a rational function field: it establishes generic rational consistency and generic dimension 16. It does NOT, by itself, prove rank 12/consistency at EVERY admissible physical wall point. A globally nonvanishing pivot/minor or denominator-controlled parameterization is not exhibited. The checker's stronger whole-wall phrasing must be qualified accordingly.
+'Kernel exactly the contact' means one contact direction per parity block: total nullity four on the four-block 27-feature supports, and three on the three-block 18-feature support. It does not mean global Gram nullity one.
+No successful finite witness test or generic coefficient/rank result proves universal boundary/interior PSD feasibility. H1/H2 and the unconditional finite-SDP conclusion are not closed by these checks.
+
+ARTIFACTS
+results.json records Python/SymPy versions, exact original file SHA256/length identities, point counts, timings, exit codes, PASS counts and final original-preservation checks.
+check_c2_r0_face_k2.log, check_c2_n0_wall_k2.log, check_c1_zero_walls_k2.log, check_c2_n0_wall_family.log contain all fresh stdout/stderr.
+run_targeted_replay.py records the bounded orchestration; private-copy contains the exact inspected executable/data inputs.
+No old global suite, solver, sweep, repository edit or browser action was performed. Scope caveats were coordinated with the analytical reviewer.

@@ -1,0 +1,151 @@
+Bounded analytical review of upstream8259231..3b1450d
+Reviewed 27 October 2026; requested record dated 26 October 2026
+
+Scope: the32 new lines of independent-review/EXACT_LIFT_CANDIDATE.md and
+the four new ends/ checkers plus n0-wall/data18.json. No earlier cases
+were rederived. Independent exact replay is reported separately.
+
+VERDICT
+
+These additions supply useful universal polynomial/rational identities,
+an integer-power impossibility theorem on the C2 r->0 face, and finite
+exact half-power PSD witnesses. They do not establish PSD on an entire
+wall/face or settle strict admission H1/H2. The new18-feature family is
+a useful generic rational candidate; the claim of an everywhere
+16-dimensional whole-wall contact family needs qualification because
+the rank calculation is over a rational-function field.
+
+1. C2 r->0 face: universal identities versus finite PSD
+
+The limiting W,Y,Z form and its contact/value/first-derivative identities
+are symbolic in c,a,b,t. Its physical face domain is
+  Phi={c,a>0,0<t<1,h=b-a^2t>0,
+       g0=(1+c^2)b-(1+a^2c^2t)>0,1-c^2h>0}.
+The N0 decomposition and positive Delta0 coefficients justify positive
+remaining limiting weights there. The elementary five-form decomposition
+and two polynomial relations are identities before imposing native weights.
+
+The integer-power no-go is genuinely universal on Phi: Newton pruning
+and symmetry averaging isolate uY in a singleton character block; its
+sole diagonal must equal4A>0, while the nonzero contact u_cY_c forces
+that diagonal to vanish for a PSD Gram. This excludes an integer-power
+polynomial SOS for this WYZ limiting form. It does not prove that a
+half-power Gram exists everywhere on Phi or that every possible useful
+library must contain exactly the displayed half-power rows.
+
+Half-power PSD is certified at the9 stored rational face points only.
+The reported210 numerical points are additional numerical evidence,
+not a universal proof and not a sweep performed for this review.
+'The limit needs exactly the half-power features' should therefore be
+read as universal integer-power insufficiency plus half-power success
+at the certified points, not universal half-power sufficiency.
+
+This is a3-state limiting form. The original C2 n coefficient diverges
+like n0/r, and the X contact amplitude tends to zero; n0 here is not
+the literal n=0 wall. The new face certificates alone do not control
+the full X normal or prove full-source admission for small positive r.
+The separately proved strict open-end theorem retains its own scope.
+
+2. C2 n=0 and C1 zero-wall graph identities
+
+The exact C2 n numerator is linear in t with strictly positive slope
+  a^2 c^2(b+r)(1+c^2r).
+Thus the graph t=t_w is valid throughout the physical wall. Its actual
+domain is the subset with0<r<1, c,a,b>0, t_w>0 and all native positive
+gaps h,g,j,1-c^2h,B=b-a^2c^2r. Arbitrary positive c,a,b,r do not define
+a physical wall point. The short five weight formulas and g+k=b+r,
+k=1-c^2h, are exact rational identities on this graph. Their denominators
+are positive on that domain. The five retained weights are then positive.
+
+The C1 beta wall graph and D wall graph are likewise rational identities
+on their actual native domains. C1 samples are oriented0<k<=1, with all
+strict gaps retained and precisely the selected event coefficient zero.
+They use d=1 normalization and correctly compare it with the original
+C=2 native source through its positive dB scale. In particular beta's
+linear-a numerator has slope -kappa eta G T<0 on that domain, so its
+graph division has no physical zero denominator. For the D wall, the
+linear-zeta equation is interpreted on the actual D=0 branch with its
+remaining strict gaps; its zero coefficient cannot coincide with its
+zero constant on the strict native domain.
+
+The identities coeff(v^2 Z^2)=4D and coeff(u^2v^2 Z^2)=4beta are universal
+in the C1 source polynomial. Their unique diagonals are vZ and uvZ in
+the36-row half-power grid. PSD makes the corresponding row vanish at
+the relevant zero wall. This is an actual support constraint that a
+future Gram must respect, not merely a sampled observation.
+
+The stored exact PSD witnesses cover8 C2 n=0 points,9 C1 beta=0 points
+and8 C1 D=0 points. Their rational coefficient identities, annihilated
+contact vectors and positive reduced LDL pivots certify those points.
+The additional26/34 numerical points do not upgrade this to whole-wall
+PSD. The source graph identities themselves have broader scope than
+these finite PSD certificates.
+
+3. The new18-feature C2 n=0 family
+
+The coefficient matching identity with100 independent Gram entries,
+72 determined and28 free is universal algebra: it holds for arbitrary
+five retained source weights, with no PSD claim. The18 rows comprise
+13 integer rows,3 sqrt(v) rows and2 sqrt(uv) rows. This is NOT the older
+18-row C1 library called Z18 elsewhere; only their dimensions coincide.
+Both are subspaces of fullZ6, so their certified PSD sources enter K364
+by multiplying the Gram with Dv through the two standard embeddings.
+
+The symbolic contact equations are18 linear equations in the28 free
+Gram variables. Rank12=augmented rank12 OVER Q(c,a,b,r) proves rational
+consistency and dimension16 GENERICALLY. It does not by itself prove
+rank12 or consistency at every physical specialization: a pivot minor
+or a rational denominator can vanish at an exceptional wall point.
+The checker does not exhibit a globally nonvanishing rank12 minor or
+an everywhere regular16-parameter contact parameterization. Accordingly
+'whole wall is one explicit16-parameter family' should be qualified as
+a generic rational-function family pending this domain control.
+
+This distinction need not obstruct the constructive route: prove PSD
+on a dense physical open set with the fixed library, then the established
+coefficient-space closedness can cover exceptional physical limits.
+It would establish whole-wall PSD without establishing constant family
+dimension at every point. At present even the generic universal PSD
+selection remains unproved.
+
+The22 rational data18 points give exact PSD witnesses in this smaller
+support. 'Kernel exactly the contact' means one contact direction in
+EACH parity block: total nullity3 for this18-feature Gram, and nullity4
+for the27-feature four-block Grams. They are positive definite on the
+reduced complements, not positive definite ambient Grams with global
+nullity1.
+
+4. Consequences for the actual admission work
+
+The n=0 C2 source has lambda=n=beta=0 and is the C1 beta=0 triple face
+in the same canonical source coordinates. It is a boundary case, not
+the strict six-event C2 family required by H2. L15 runs from universal
+strict admission in a fixed closed cone to allowed third-omission
+walls; finite wall admissions do not reverse that implication. Nor do
+the new point checkers themselves supply a uniform neighborhood theorem
+or a Schur estimate for opening the missing event.
+
+Useful next constraints are therefore concrete:
+  - use the exact graph substitutions and short positive wall weights;
+  - retain the forced zero vZ/uvZ rows and all contact-kernel equations;
+  - use the new18-row n=0 affine family as a boundary candidate, choosing
+    its16 free coefficients by source-algebraic formulas with proved PSD,
+    including exceptional parameter values or a closedness argument;
+  - if opening into strict sources, prove the new-feature/normal Schur
+    estimates over the actual domain rather than infer them from samples;
+  - keep full H1/H2 as domain-wide sufficient Gram/SOS obligations in
+    the fixed K364 cone. The r0 integer-power obstruction justifies
+    retaining fractional freedom; it is not an obstruction to K364.
+
+For a strict C2 construction, one further exact constraint follows
+immediately: coeff(u^2 X^2)=4n, whose unique half-grid diagonal is uX.
+The new18-row wall library omits uX; it must be restored when n>0,
+with coupling to the other rows to enforce the moving contact kernel.
+Simply adding the positive n-event squares to a PSD wall Gram cannot
+work at a strict contact where X_c=-cr is nonzero. The universal
+coefficient-family data are useful as a boundary condition for that
+coupled full-K364 construction, not as a claimed globally sufficient
+19-feature half-power ansatz.
+
+No whole-wall PSD or global exactness claim is cleared by these additions.
+No repo files, original checkers, or prior review conclusions were edited.

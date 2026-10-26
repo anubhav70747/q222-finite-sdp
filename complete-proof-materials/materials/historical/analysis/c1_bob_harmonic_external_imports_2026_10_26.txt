@@ -1,0 +1,28 @@
+Primary-source check of the two external SOS imports
+Checked 26 October 2026 UTC.
+
+Calderon, A note on biquadratic forms, Linear Algebra Appl. 7 (1973), 175-177:
+https://www.sciencedirect.com/science/article/pii/0024379573900529
+The indexed publisher abstract confirms the nonnegative 2-by-n biquadratic
+sum-of-bilinear-squares statement. Direct publisher access returned403;
+the full original three-page proof was not retrieved. Applying this theorem
+still requires the genuine parent to be nonnegative for the complete
+homogeneous Alice pair and every state at the fixed Bob contact.
+
+Hanselka and Sinn, Positive Semidefinite Univariate Matrix Polynomials:
+https://arxiv.org/html/1707.08261v1
+Corollary2.8 states polynomial matrix SOS factorization for every real
+symmetric univariate PSD matrix, including the identically singular case.
+Its proof explicitly reduces the singular case to a nondegenerate block.
+No nonzero-determinant hypothesis is needed for this cited corollary.
+
+Independent degree argument for this application: each diagonal of
+H(t^2)=Q(t)^T Q(t) is a sum of real polynomial squares of degree at most8.
+Therefore every entry of Q has degree at most4. Averaging the factorizations
+at t and -t removes odd cross terms. With v=t^2 this yields a matrix SOS
+plus v times a matrix SOS, with row degrees2 and1 respectively. Multiplying
+those rows by (psi,u psi) gives the stated fixed40-feature span.
+
+These imports prove the contact-anchor existence and the conditional
+half-line-to-Gram step only. Neither proves H(v) PSD for all v>=0,
+universal C1 admission, or the global reverse inclusion.

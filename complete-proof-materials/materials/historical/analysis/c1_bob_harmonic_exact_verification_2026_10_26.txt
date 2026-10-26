@@ -1,0 +1,37 @@
+C1 BOB-HARMONIC EXACT REPLAY
+27 October 2026; preserved batch filename convention.
+
+Source: analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/
+fetched-1959/task5/{original-package.zip,package/}.
+
+Integrity: original ZIP CRC passed; all 11 regular members were byte-
+identical to extracted originals; all 10 manifest payload sizes and
+SHA-256 values matched. The originals remained unchanged.
+
+The three original exact symbolic modules ran once each in a private
+copy under Python 3.14 and SymPy 1.14:
+ verify_full_parent_bob.py: exit 0, approximately 5.09 seconds.
+ verify_boundary_schur.py: exit 0, approximately 5.34 seconds.
+ verify_anchor_interpolation.py: exit 0, approximately 5.03 seconds.
+
+The additive driver independently checked the exact Alice and Bob sign
+congruences of the unrestricted parent, the endpoint range determinant,
+and the 24+16 fixed feature coordinates. It did not run an SDP, sample
+sources, or attempt a numerical sweep.
+
+Evidence folder: c1-bob-harmonic-exact-verification-2026-10-26/
+ - replay_and_additive_checks.py
+ - receipt.json
+ - verify_full_parent_bob.log
+ - verify_boundary_schur.log
+ - verify_anchor_interpolation.log
+
+The private-package/ subdirectory is an execution copy and should not
+be published as duplicate original science. Expanded __pycache__ files
+should also be excluded.
+
+Scope: symbolic identities and finite coordinate checks only. The
+analytical note gives the positivity and external theorem arguments.
+Neither H1 nor H2, and no universal intermediate-angle PSD claim, was
+proved by these runs.
+

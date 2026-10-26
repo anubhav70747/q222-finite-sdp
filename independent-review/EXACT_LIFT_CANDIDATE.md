@@ -530,13 +530,13 @@ to this folder.
     For every compact `K ⊂ T` there is `r₀` such that every source in
     `K × (0, r₀)` is admitted.
   - The checker also proves `μ > 0` at native sources down to `r = 10⁻¹⁰`.
-  - The limit needs exactly the half-power features. Integer powers (`k = 1`)
+  - Integer powers (`k = 1`)
     are impossible at every face point: `u²Y²` comes only from the diagonal
     entry of `uY`, whose coefficient `4A > 0` the contact forces to vanish.
-    In the `k = 2` lift the limit has exact strictly feasible Grams at 9
+    In the `k = 2` lift the limit has exact Grams, positive on each contact-kernel complement, at 9
     rational face points, including points near the `h`, `t`, `a` and
     `1 − zh` walls, and numerically at all 210 sampled face points
-    ([`checks/gram-lift/ends/check_c2_r0_face_k2.py`](checks/gram-lift/ends/check_c2_r0_face_k2.py)).
+    ([`checks/gram-lift/ends/check_c2_r0_face_k2.py`](checks/gram-lift/ends/check_c2_r0_face_k2.py)). Half-power sufficiency over the whole face remains unproved.
 - **One weight → 0** (C1 `D = 0` and `β = 0`, C2 `n = 0`).
   - The contact stays finite and nondegenerate at all three walls. This is
     proved in general: `Hess_z F ≻ 0`, `F_H < 0`, and the Jacobian is
@@ -548,27 +548,28 @@ to this folder.
     decouples, so each such point gives admission of the nearby sources with
     `w > 0`.
   - The C2 wall `n = 0` is the explicit graph `t = t_w(c, a, b, r)`, with
-    all five remaining weights explicit rational functions. Its wall sources
-    are already admitted by the `k = 2` lift on a 27-feature support face:
-    exact rational Grams with kernel exactly the contact at 8 wall points,
-    and positive numerical margins at 26 further points
+    all five remaining weights explicit rational functions. At 8 wall points,
+    the `k = 2` lift has exact rational Grams on a 27-feature support face,
+    with one contact-kernel direction in each of four parity blocks.
+    Numerical margins are positive at 26 further points
     ([`checks/gram-lift/ends/check_c2_n0_wall_k2.py`](checks/gram-lift/ends/check_c2_n0_wall_k2.py)).
-    Over the whole wall the weights have short closed forms, and 18 features
-    of the `k = 2` lift suffice. Solving the Gram identity and `G y_c = 0`
-    symbolically in `(c, a, b, r)` turns the whole wall into one explicit
-    16-parameter affine family of Grams, with rational entries. A member of
-    this family is positive definite with kernel exactly the contact at 22
-    rational wall points
+    The wall weights have short closed forms. On 18 features of the `k = 2`
+    lift, solving the Gram identity and `G y_c = 0` over the rational-function
+    field gives a generic 16-parameter affine family. Exceptional physical
+    specializations still require denominator or rank control. At 22
+    rational wall points this family has exact PSD members, positive on
+    each of the three parity blocks' contact-kernel complements
     ([`checks/gram-lift/ends/n0-wall/`](checks/gram-lift/ends/n0-wall/)).
-    Choosing the free parameters as explicit functions with provably
-    positive pivots on the whole wall is the next step.
-  - The C1 walls behave the same way. `β = 0` is the graph `a = a_w(k,f,g,t)`.
-    `D = 0` is the graph `ζ = ζ_D(κ, η, r, θ)` in paper coordinates. The
-    remaining weights are explicit on both walls. The vanishing weight is a
-    single diagonal Gram entry (`vZ` for `D`, `uvZ` for `β`), so admission
-    takes place on the 27-feature support face.
-    - The `k = 2` lift admits the wall sources there, with exact rational Grams
-      (kernel exactly the contact) at 9 points of `β = 0` and 8 of `D = 0`,
+    Choosing the free parameters with provably positive pivots on a dense
+    physical domain, and covering exceptional limits by closedness, would
+    establish whole-wall admission. This remains open.
+  - The C1 walls have analogous exact graphs: `β = 0` gives `a = a_w(k,f,g,t)`,
+    and `D = 0` gives `ζ = ζ_D(κ, η, r, θ)` in paper coordinates.
+    The remaining weights are explicit on both walls. The vanishing weight
+    is a single diagonal Gram entry (`vZ` for `D`, `uvZ` for `β`), so any PSD
+    certificate on this grid lies on the corresponding 27-feature support face.
+    - The `k = 2` lift admits 9 points of `β = 0` and 8 of `D = 0` there,
+      with exact rational Grams having one contact kernel per parity block,
       including points near `Lc`, `Qc`, `M`, `θ = 1` and the fold `k = 1`.
     - Numerical margins are positive at 34 further points
       ([`checks/gram-lift/ends/check_c1_zero_walls_k2.py`](checks/gram-lift/ends/check_c1_zero_walls_k2.py)).

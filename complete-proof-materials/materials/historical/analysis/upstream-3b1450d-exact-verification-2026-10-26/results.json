@@ -1,0 +1,137 @@
+{
+  "upstream_label": "3b1450d",
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "sympy": "1.14.0",
+  "input_files": [
+    {
+      "path": "check_c2_r0_face_k2.py",
+      "bytes": 34884,
+      "sha256": "3937d2e21ffa4d023345e791a82757ea5df01aab8b8b524f19fb9920afc124fd",
+      "assert_statements": 19,
+      "imports": [
+        "import sympy as sp, itertools, json, time",
+        "from fractions import Fraction as Fr"
+      ],
+      "materialized_points": 9,
+      "original_preserved": true
+    },
+    {
+      "path": "check_c2_n0_wall_k2.py",
+      "bytes": 23488,
+      "sha256": "88e50d2eb925bf15af3511f258d482079329e890537261eb848017c99a26c43d",
+      "assert_statements": 13,
+      "imports": [
+        "import sys, time, json",
+        "from fractions import Fraction as Fr",
+        "import sympy as sp"
+      ],
+      "materialized_points": 8,
+      "original_preserved": true
+    },
+    {
+      "path": "check_c1_zero_walls_k2.py",
+      "bytes": 45703,
+      "sha256": "dcbbc471c382ce1cb16c29dc5d1ebd73d9277afecbf50557334e7de5e1c8d9dc",
+      "assert_statements": 25,
+      "imports": [
+        "import sys, time, json, math",
+        "from fractions import Fraction as Fr",
+        "import sympy as sp"
+      ],
+      "materialized_points": {
+        "beta": 9,
+        "D": 8
+      },
+      "original_preserved": true
+    },
+    {
+      "path": "n0-wall/check_c2_n0_wall_family.py",
+      "bytes": 12994,
+      "sha256": "7f10e2226f9c9ce77d27c0865077d77644b1aae243dd769adea0747a53e95e50",
+      "assert_statements": 13,
+      "imports": [
+        "import sys, time, json, os",
+        "from fractions import Fraction as Fr",
+        "import sympy as sp",
+        "from sympy.polys.matrices import DomainMatrix"
+      ],
+      "original_preserved": true
+    },
+    {
+      "path": "n0-wall/data18.json",
+      "bytes": 9640,
+      "sha256": "856af757ba7db2c4e0c7e84285371a20ba48a2745e92782500ea83df95fb862e",
+      "materialized_points": 22,
+      "free_coordinates": 28,
+      "original_preserved": true
+    }
+  ],
+  "runs": [
+    {
+      "file": "check_c2_r0_face_k2.py",
+      "exit_code": 0,
+      "elapsed_seconds": 2.051148,
+      "log": "check_c2_r0_face_k2.log",
+      "pass_lines": 13,
+      "final_line": "[   1.3s] ALL ASSERTIONS PASSED",
+      "independent_coefficient_row_counts": []
+    },
+    {
+      "file": "check_c2_n0_wall_k2.py",
+      "exit_code": 0,
+      "elapsed_seconds": 11.358277,
+      "log": "check_c2_n0_wall_k2.log",
+      "pass_lines": 9,
+      "final_line": "[  10.6s] ALL ASSERTIONS PASSED",
+      "independent_coefficient_row_counts": [
+        66
+      ]
+    },
+    {
+      "file": "check_c1_zero_walls_k2.py",
+      "exit_code": 0,
+      "elapsed_seconds": 16.496436,
+      "log": "check_c1_zero_walls_k2.log",
+      "pass_lines": 20,
+      "final_line": "[  15.7s] ALL ASSERTIONS PASSED",
+      "independent_coefficient_row_counts": [
+        66
+      ]
+    },
+    {
+      "file": "n0-wall/check_c2_n0_wall_family.py",
+      "exit_code": 0,
+      "elapsed_seconds": 76.63454,
+      "log": "check_c2_n0_wall_family.log",
+      "pass_lines": 25,
+      "final_line": "[  75.8s] DONE (partial).  NOT proved: PD of the 16-dim family at every wall point.",
+      "independent_coefficient_row_counts": []
+    }
+  ],
+  "environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONUTF8": "1"
+  },
+  "witness_counts": {
+    "r0_limit": 9,
+    "n0_27_features": 8,
+    "C1_beta_wall": 9,
+    "C1_D_wall": 8,
+    "n0_18_features": 22,
+    "total_witness_certifications": 56,
+    "n0_points_in_both_supports": 8,
+    "distinct_n0_points": 22,
+    "total_reduced_blocks_PD_checks": 202
+  },
+  "scope_notes": [
+    "Family fraction-field rank12 gives generic rational consistency; global nonvanishing pivot/minor not established.",
+    "Kernel exactly contact means one per parity block, not one globally.",
+    "Only stored witness lists were replayed; no parameter generation or solver work."
+  ]
+}
