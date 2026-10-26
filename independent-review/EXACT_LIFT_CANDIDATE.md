@@ -424,6 +424,67 @@ in [`checks/gram-lift/strict_feasibility.json`](checks/gram-lift/strict_feasibil
 Strict feasibility settles this assembly hypothesis; exactness still needs
 the contact admission theorem.
 
+## Admission across the contact families
+
+The open step is universal contact admission, `μσ(c) ≥ 0` for every native
+C1/C2 contact source (see [`EXACT_LIFT_ROUTE.md`](EXACT_LIFT_ROUTE.md)). The
+ends of the charts, an adversarial search and an exact pointwise test now
+give the following picture.
+
+**Exact pointwise certificates.** [`checks/gram-lift/admission/`](checks/gram-lift/admission/)
+proves `μσ > 0` at a given rational source in four steps:
+
+1. Solve the equilibrated SDP in double precision.
+2. Project the solution exactly, in rationals, onto all 412 coefficient
+   equations.
+3. Check that no coefficient equation has a nonzero residual.
+4. Prove each of the four reduced blocks positive definite by 400-bit ball
+   Cholesky.
+
+It certifies the hardest sources found:
+
+- the three worst C1 sources, whose double-precision margins are only
+  5·10⁻¹¹ to 10⁻⁹;
+- the C2 corner `b ≈ 1 − r`, down to a gap of 0.00125;
+- the minimizers of 14 wall scans.
+
+A control source with `n < 0` is rejected, and the dual side then gives an
+exact separator.
+
+**No counterexample.** The search ran 69 SDPs and about 1.2·10⁵ surrogate
+samples. No source returned `μ < 0`. Every apparent negative fell into one of
+two groups:
+
+- a double-precision artefact, with source weights spanning 10¹² to 10³³;
+- a dual vector that failed exact repair.
+
+Two spots remain undecided because their weights span more than 10¹¹: C1
+sources with `g ≲ 0.012`, and one C2 source near the `g` wall.
+
+**The ends.** Each analysis was reproduced independently where marked.
+[`checks/gram-lift/ends/check_c2_ends.py`](checks/gram-lift/ends/check_c2_ends.py)
+checks the exact C2 facts.
+
+| End | Exact mechanism | Status |
+|---|---|---|
+| C2, `r → 0` | `n = n₀/r + O(1)` and the other weights stay finite. Every coefficient containing X is exactly `O(r)`, so one uniform `√r` scale on the X features suffices | closes numerically; margin flat down to `r = 10⁻⁶` (reproduced) |
+| C2, `r → 1` | `n(r=1) = −c²(h + a²)/(2(c²(a²+b+1)+1)) < 0`, so the chart ends at an `n = 0` wall first | the `n = 0` wall closes numerically (reproduced); `r → 1` is reachable only through the corner `c² = O(1 − r)`, which stays open |
+| C2, `c → ∞` and `c → 0` | Along the torus orbit through the contact, `F_c(O(L)) = 4C(u_cv_cW_c)²(L − 1/L)² + [(4n+4m+2)X_c² + (4A+4C+4D+2)Y_c²](1 − 1/L²)²` for every C2 source. The limit problem lives on 16 charge-0 features, and the other 138 are forced | closes in the interior numerically; margin flat to `c = 10⁴` and `10⁻⁴` (reproduced); the corners stay open |
+| C2, `a → 0` | forced kernel from product states, graded `a^{k/3}` (above) | finite-`a` step not verified |
+| C1 | On product states `F = 2W²D_uD_v(2Au² + v²(d + 2βD_u))`, which is `O(k²)` just above the contact: an intrinsic near-tightness | most noise-limited sources are numerical; weights spanning ≥ 10¹³ exceed double precision; the `M` and `J` walls are open |
+
+**A covering of the middle region is out of reach with these certificates.**
+
+- **Per-box affine certificates** are rigorous but reach only about 1.3%
+  half-width, which means 10⁹ to 10¹⁶ boxes.
+- **One linear map from the source data to Gram matrices** is valid on boxes
+  of about 10%. The rigorous positivity check on such a box, however,
+  certifies only about 0.3–0.4%, which means 10¹¹ to 10¹⁸ boxes.
+
+A proof over the whole continuum therefore needs certificates that are
+explicit functions of the source parameters. The paper's charts are of this
+kind, and so are the explicit cones of `EXACT_LIFT_ROUTE.md`.
+
 ## Evidence
 
 The ratio `d_k(e)/d*(e)` compares the largest CHSH weight the lift admits with
