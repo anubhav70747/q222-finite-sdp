@@ -462,3 +462,12 @@ hypotheses. It includes both complete first-normal rows and constructs every
 matrix entry by formal polynomial division. Applying it to the actual TL6
 stress still requires those hypotheses and the separate strict-base proof;
 the conductor itself makes no positivity or global-existence claim.
+
+There is a shorter route when the scalar coefficients contain two powers
+of the small source parameter and the first-normal coefficients contain
+one. The [two-power conductor](TWO_POWER_CONDUCTOR.md) uses one factor at
+each division. The corrected scalar coefficients still contain the factor
+needed for the second division, so no angular parity condition is required.
+Both normal rows and every entry of the eight-root matrix remain explicit. These must
+be exact factorizations with bounded coquotients; small evaluated values
+alone do not suffice.
