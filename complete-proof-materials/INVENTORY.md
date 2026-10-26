@@ -2054,3 +2054,22 @@ Expanded Python bytecode is omitted; its original bytes remain in the unchanged 
 | analysis/c2-direct-syzygy-exact-verification-2026-10-26/run_targeted_replay.py | [file](materials/historical/analysis/c2-direct-syzygy-exact-verification-2026-10-26/run_targeted_replay.py) | 3254 |
 | analysis/c2-direct-syzygy-exact-verification-2026-10-26/verify_bounded_coverage.py | [file](materials/historical/analysis/c2-direct-syzygy-exact-verification-2026-10-26/verify_bounded_coverage.py) | 3739 |
 | analysis/c2-direct-syzygy-exact-verification-2026-10-26/verify_syzygy.log | [file](materials/historical/analysis/c2-direct-syzygy-exact-verification-2026-10-26/verify_syzygy.log) | 824 |
+
+
+## Scoped complete polynomial u-jet and frozen-top evidence
+
+| Source | Public material | Bytes |
+|---|---|---:|
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1939/task3/original-package.zip | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1939/task3/original-package.zip) | 7977 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1939/task3/package/EXACT_RESULTS.json | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1939/task3/package/EXACT_RESULTS.json) | 474 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1939/task3/package/MANIFEST.json | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1939/task3/package/MANIFEST.json) | 523 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1939/task3/package/PROOF_AND_STATUS.md | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1939/task3/package/PROOF_AND_STATUS.md) | 8184 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1939/task3/package/verify_exact.py | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1939/task3/package/verify_exact.py) | 7207 |
+| analysis/c2_complete_jet_analytic_verification_2026_10_26.txt | [file](materials/historical/analysis/c2_complete_jet_analytic_verification_2026_10_26.txt) | 6390 |
+| analysis/c2_complete_jet_exact_verification_2026_10_26.txt | [file](materials/historical/analysis/c2_complete_jet_exact_verification_2026_10_26.txt) | 5021 |
+| analysis/c2-complete-jet-exact-verification-2026-10-26/bounded_parent_budget_results.json | [file](materials/historical/analysis/c2-complete-jet-exact-verification-2026-10-26/bounded_parent_budget_results.json) | 745 |
+| analysis/c2-complete-jet-exact-verification-2026-10-26/bounded_parent_budgets.log | [file](materials/historical/analysis/c2-complete-jet-exact-verification-2026-10-26/bounded_parent_budgets.log) | 747 |
+| analysis/c2-complete-jet-exact-verification-2026-10-26/integrity_and_replay_results.json | [file](materials/historical/analysis/c2-complete-jet-exact-verification-2026-10-26/integrity_and_replay_results.json) | 1782 |
+| analysis/c2-complete-jet-exact-verification-2026-10-26/run_targeted_replay.py | [file](materials/historical/analysis/c2-complete-jet-exact-verification-2026-10-26/run_targeted_replay.py) | 3112 |
+| analysis/c2-complete-jet-exact-verification-2026-10-26/verify_bounded_parent_budgets.py | [file](materials/historical/analysis/c2-complete-jet-exact-verification-2026-10-26/verify_bounded_parent_budgets.py) | 2411 |
+| analysis/c2-complete-jet-exact-verification-2026-10-26/verify_exact.log | [file](materials/historical/analysis/c2-complete-jet-exact-verification-2026-10-26/verify_exact.log) | 381 |

@@ -1,0 +1,42 @@
+C2 complete-jet package: original integrity, one exact replay and bounded capacity check
+Report requested under 2026-10-26 filename; package/replay local date 2026-10-27.
+
+SOURCE / EVIDENCE
+Original: analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1939/task3/.
+Evidence: analysis/c2-complete-jet-exact-verification-2026-10-26/.
+Read the entire checker, proof, original result and manifest. Checker uses only exact SymPy algebra and local JSON output. No solver, network, search or external input. Original files were preserved; one checker execution occurred in an isolated private copy, with Python bytecode disabled and numerical thread limits set to 1. Python 3.14.3; SymPy 1.14.0. No missing dependency or execution failure.
+
+INTEGRITY
+ZIP: 7,977 bytes; SHA256 62d9e33216aa669fb15e7f66fb4f8fb3a52d4d15ab2d2d78ab849bb07a0cabe3.
+CRC passed; all four extracted files match archive bytes exactly, including MANIFEST.json. All three original manifest entries match both byte length and SHA256. Original Downloads/K364_C2_CompleteJet_Audit_20261027.zip matches recovered ZIP bytes. These establish package integrity rather than independent mathematical provenance.
+
+EXACT REPLAY
+verify_exact.py: exit 0, 2.826957 seconds, five PASS lines including final status; 18 assert statements, several applied to full matrices or loops.
+Fresh EXACT_RESULTS.json matches the original semantically and after CRLF normalization. Its raw byte difference is the final Windows newline.
+Checked complete four-state contact and all six state/angular contact derivatives at the fixed source; exact 29 syzygies and extra high syzygy; corrected contact interpolation and a complete full-state normal-completion identity; initial u-jet energy 1523/40; the complete 45x192 polynomial syzygy constraint map and rank-six jet annihilator row space; sharp weighted jet energy 289/24; the frozen-top 38-parameter rational affine family; its nonsingular weighted 38x38 Gram and exact least-squares minimum; and both relaxed aggregate-budget optima.
+
+MACHINE RESULTS
+Native coordinates: (a,b,c,t,r)=(1,1,1,3/4,1/4).
+Event weights (n,m,C,A,D,alpha)=(1/8,3/8,1/6,5/8,3/8,1/6).
+Initial u-jet energy: 1523/40. Sharp u-jet energy: 289/24.
+Frozen complete high-degree packet combined-budget maximum: -44072179/6288328800.
+All degree-(1,2) corrections allowed: combined-budget maximum 19/9.
+Only uv^2 freezing retained: combined-budget maximum 41983/29952.
+
+BOUNDED INDEPENDENT CHECK
+The supplied checker inserts the decisive capacities 409/48 and 2/3 as constants without deriving them from its parent. A separate verify_bounded_parent_budgets.py closes this input gap without rerunning the module/projection suite. Runtime 0.054880 seconds; all checks passed.
+It evaluates the rational native source formulas at the one stated seed, recovering every quoted weight, contact and strict gap: h=1/4, g=j=1/2, 1-c^2h=3/4, b-a^2c^2r=3/4, N_star=2, N_n=5/8, Delta=10. It independently expands the direct complete SG2 parent times (1+v^2), rather than importing packet rows, and obtains [u^2] at v=0 on the physical contact state =409/48, and the origin Z-only capacity =2/3. Their sum is 147/16 and yields exactly the stated negative rational margin after subtracting the recorded minimum.
+
+PRECISE SCOPE
+The negative maximum is a no-go for the specified 32-row polynomial normal-completion family when its old complete v^2 and uv^2 allocation is frozen, at this one genuine strict native source. It is not a separating pseudo-moment functional for K364, and does not exclude unrestricted K364 membership. The full fixed library includes fractional-feature and other Gram allocations outside this restricted packet family.
+The relaxed positive aggregate margins only remove this particular sum-of-two-budgets obstruction. They do not prove simultaneous satisfaction of each budget, scalar nonnegativity at every angle, scalar SOS, or PSD admission.
+The checker computes a six-dimensional jet-annihilator row space and an attained sharp jet through exact linear systems. The proof's explicit rank-99 sentence for [A;E;U] is not a separately asserted numeric rank output. This does not change the checked rank-six projection or frozen-family solve.
+Successful replay establishes the displayed finite rational identities and scoped exclusion. Universal strict C2 admission H2, full K364 exclusion, and the unconditional global SDP claim are not established.
+
+OUTPUTS / EXCLUSIONS
+integrity_and_replay_results.json: integrity, timing, assertion count, machine comparison.
+verify_exact.log: fresh checker stdout/stderr.
+run_targeted_replay.py: integrity and one-run orchestration.
+verify_bounded_parent_budgets.py, bounded_parent_budgets.log, bounded_parent_budget_results.json: independent one-seed and direct-budget evidence.
+private-copy/EXACT_RESULTS.json: fresh machine-readable result.
+No old suite, solver, sample/time sweep, native parameter search, Git/browser action or manuscript/repository edit was performed. Originals remain untouched.

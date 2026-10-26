@@ -49,6 +49,17 @@ A repair must change the contact roots' angular derivatives through additional a
 - [Independent exact obstruction checker](materials/historical/analysis/c2_direct_syzygy_exact_obstruction_2026_10_26.py)
 - [Exact strict-source obstruction data](materials/historical/analysis/c2_direct_syzygy_exact_obstruction_2026_10_26.json)
 
+## Complete polynomial u-jet at the strict seed
+
+The follow-up package exhausts the 192 coefficients of all 32 polynomial charge rows of bidegree (1,2), at the same strict source. Six linear constraints describe the attainable 32-component first u derivative. The exact weighted projection reaches the sharp parent energy 289/24, so every nonnegative completion in this ansatz must attain that derivative. This result concerns the first u derivative at one source; both angular derivatives and global positivity remain to be controlled.
+
+Keeping the old complete v^2 and uv^2 allocations fixed, the full system leaves 38 lower-degree gauges. Exact least squares proves that their two necessary budgets have sum at most -44072179/6288328800. Thus all lower polynomial syzygies together cannot repair that frozen top allocation. Releasing v^2 gives positive optimal combined margins for the tested relaxed systems, which only removes this sum obstruction: it does not establish simultaneous nonnegativity of the two budgets or scalar SOS. A sufficient construction must allow the high-Bob charge vector to vary or use another full K364 Gram. H2 remains open; this seed calculation does not exclude K364.
+
+- [Original complete polynomial u-jet and frozen-top result](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1939/task3/package/PROOF_AND_STATUS.md)
+- [Original complete-jet package](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1939/task3/original-package.zip)
+- [Independent first-u-jet and frozen-top analytical review](materials/historical/analysis/c2_complete_jet_analytic_verification_2026_10_26.txt)
+- [Independent exact replay and direct-parent capacities](materials/historical/analysis/c2_complete_jet_exact_verification_2026_10_26.txt)
+
 ## Next implication
 
 The next C1 task is a simultaneous native-domain PSD gauge construction; the next C2 task is full Gram admission or its equivalent dual positivity statement. Another coefficient-rank calculation or isolated carrier is insufficient. A different fixed globally sound library remains an admissible route if it gives a complete proof. A separating witness against Z6 is not a prerequisite for choosing one.

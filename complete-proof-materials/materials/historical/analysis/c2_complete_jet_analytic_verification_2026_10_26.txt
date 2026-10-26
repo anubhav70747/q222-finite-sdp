@@ -1,0 +1,114 @@
+Bounded analytical clearance: complete polynomial C2 u-jet and frozen-top no-go
+Reviewed 27 October 2026; requested record dated 26 October 2026
+
+Package: analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/
+fetched-1939/task3/package
+
+VERDICT
+
+The mathematical reductions in PROOF_AND_STATUS.md and verify_exact.py
+are supported. They establish, at the one stated genuine strict C2 seed,
+the complete attainable first u-jet of the polynomial 32-packet ansatz
+and the claimed exhaustive frozen-top family exclusion, conditional on
+the quoted finite rational elimination/projection values replaying as
+reported. I inspected the exact matrix construction and projection logic;
+this analytical pass did not rerun the large rational eliminations.
+No full-domain H2 certificate or K364 separating moment is provided.
+
+Two scope clarifications matter:
+  1. The 'full jet repair' concerns all32 components of the FIRST u-jet
+     at this one source. It does not repair both angular first jets,
+     the full angular Hessian, or all sources in Omega.
+  2. Releasing the high-Bob vector removes the negative combined-budget
+     bound. A positive maximum of M_u+M_0 does not establish simultaneous
+     feasibility of M_u>=0 and M_0>=0, still less global scalar positivity.
+
+1. Full-state/source conventions and exhaustive jet model
+
+The native seed, its six positive event weights and actual contact are
+the same exact physical source independently checked in the preceding
+syzygy review. The weighted 32-row expansion is the complete Dv F parent.
+This package's t is the normalized charge vector: the completed root
+numerator is k_i^2 r_i.psi+t_i and its square is divided by k_i^2.
+The scalar formula S=-2DuDv^2-2 sum r_iZ t_i-sum t_i^2/k_i^2 is correct
+in this convention. There is no missing source scaling or state normal.
+
+There are precisely192 coefficients for32 polynomials of bidegree(1,2).
+R^Tt has three state components and angular bidegree at most(2,4), giving
+the45-row coefficient map used by the checker. E evaluates every contact
+value; U takes every u derivative at u=v=1. Both are correctly assembled.
+The polynomial model therefore does not omit another lower polynomial
+syzygy with these degree bounds.
+
+For delta t with A delta x=E delta x=0, the u-jet annihilators are exactly
+the U portions of the left kernel of [A;E;U]. This is necessary and
+sufficient by finite-dimensional linear algebra. The selected six
+independent rows L characterize the reported26-dimensional jet image.
+The pure-source weighted projection
+  G*=K^2 L^T(L K^2 L^T)^(-1)L G0
+is the unique minimum-energy representative, since K^2>0 and L has full
+row rank. The reported energy289/24 equals the parent curvature budget;
+strict convexity then forces this SAME u-jet for any nonnegative scalar
+completion. The subsequent consistent polynomial linear system supplies
+an actual degree-admissible syzygy attaining it, rather than only a formal
+tangent vector. This is a necessary local repair, not an SOS certificate.
+
+2. Frozen-top no-go and the meaning of all38 gauges
+
+The Hu/Hv selectors freeze respectively each uv^2 and v^2 coefficient
+to the old tau=2 charge. The affine system includes all45 syzygy equations,
+32 contact values,32 optimal u-jet values and64 top-coefficient values.
+Gauss-Jordan parameterization of this full system makes its38 free
+parameters exhaustive within exactly that ansatz. Its nullspace basis
+does not stand in for arbitrary K364 Grams or variable-top assemblies.
+
+At v=0, the original parent on the contact state is independently
+  Dv F(u,0;psi_c)=23(u-1/4)^2/3+41(1+u^2)/48.
+Thus its u^2 capacity is409/48. At the origin, using state(0,0,0,1),
+the scalar capacity is4alpha=2/3. These are the two capacities used by
+the checker. The corresponding completed-root selectors and offsets
+are correctly formed from the full source rows and t0, not an unrelated
+scalar restriction. Both are necessary for S>=0 on positive tests:
+literal zeros follow by continuity and the leading u^2 coefficient by
+letting u increase at v=0.
+
+The stacked selector has full column rank as reported, so its weighted
+Gram is positive definite. The exact least-squares expression is the
+global minimum over every real38-vector, not a local optimization result.
+The arithmetic from the quoted minimum is correct:
+  409/48+2/3 =147/16,
+  147/16-57818093029/6288328800=-44072179/6288328800<0.
+Consequently the frozen-top ansatz cannot have a nonnegative scalar
+remainder at this genuine strict source, even after all its lower gauges
+and the necessary u-jet repair. The scope stated in the proof is correct.
+
+3. Released top charge and useful next construction
+
+The reported relaxed projections correctly target larger affine spaces.
+Their combined margins19/9 and41983/29952 are arithmetically consistent
+with the capacities. They remove THIS two-budget sum exclusion only;
+they do not prove a source Gram or either separate budget simultaneously.
+Allowing the v^2 charge vector to vary, while retaining only constraints
+actually forced by positivity, avoids the frozen target refuted above.
+The full fixed K364 Gram, including fractional features, also avoids
+that ansatz restriction. Neither option is excluded by this package.
+
+A useful seed check for the next constructive formula follows from the
+sharp jet result: S has u-degree<=2, value and first u derivative zero at
+(1,1), and forced second u derivative zero. Hence S(u,1) is identically
+zero. If S is nonnegative for all positive tests, its v derivative also
+vanishes on that interior line, so (v-1)^2 divides the scalar polynomial.
+This is a necessary diagnostic at this seed, not a universal-source
+factorization theorem.
+
+The next H2 assignment should request a SUFFICIENT source-algebraic PSD
+Gram or scalar SOS across the complete native domain Omega, allowing an
+independent high-Bob charge vector or a non-packet/fractional-feature
+Gram. It should supply all four-state coefficient identities, actual
+source-only denominators and domain-wide positivity proof. Passing the
+seed's full two-angular local conditions is an early check of that
+construction; another necessary-budget calculation is not H2 progress
+on its own. The current package supplies a precise constraint to stop
+reusing the old frozen top allocation, not a new universal admission.
+
+No original package, published review, repository or browser was edited.
