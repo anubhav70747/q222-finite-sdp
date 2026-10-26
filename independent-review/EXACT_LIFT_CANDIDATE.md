@@ -503,8 +503,45 @@ large. A first inventory of C1 (scripts not yet in this folder) found:
 
 C2 has a comparable structure. Along `r → 0`, two corners keep a flat margin:
 with `h → 0` it stays about 0.2, and with `c → 0` about 0.05–0.08. With
-`1 − zh → 0` the margin falls linearly in the gap, while `α` diverges. Only
-the four C2 ends above have known mechanisms, and none is yet a proof.
+`1 − zh → 0` the margin falls linearly in the gap, while `α` diverges.
+
+**Wall mechanisms.** Three kinds of wall now reduce to a limit problem on the
+wall. Each reduction has exact checks, which are not yet in this folder.
+
+- **C2, `r → 0`.** Rescale the X features by `ρ = √r`. The coefficient map is
+  then a degree-2 polynomial in `s = cρ`, independent of the source, with
+  rank 406. The right-hand side is analytic in `ρ`, so the reduced problem
+  extends analytically to `ρ = 0`. Its limit is explicit:
+  `F_lim = F_WYZ + 4n₀(1+u²)(1+v²)ξ²`.
+  - Exact certificates prove strict feasibility of the limit at 10 face
+    points, including points with `h = 0.002` and `c = 0.01`.
+  - Let `T` be the set of face points where the limit is strictly feasible.
+    For every compact `K ⊂ T` there is `r₀` such that every source in
+    `K × (0, r₀)` is admitted.
+  - The checker also proves `μ > 0` at native sources down to `r = 10⁻¹⁰`.
+- **One weight → 0** (C1 `D = 0` and `β = 0`, C2 `n = 0`).
+  - The contact stays finite and nondegenerate at all three walls. This is
+    proved in general: `Hess_z F ≻ 0`, `F_H < 0`, and the Jacobian is
+    invertible.
+  - In the full 154-feature basis the wall margin is exactly 0. One Gram
+    diagonal entry is fixed to `4w`, where `w` is the vanishing weight.
+  - On the wall's own support face (133 features), exact certificates prove
+    strict admission at 16 wall points. Near the wall the vanishing feature
+    decouples, so each such point gives admission of the nearby sources with
+    `w > 0`.
+- **One weight blows up** (C1 `M`, `J`; C2 `1 − zh`). The naive split
+  `F = w_e q_e + R` fails, because `R` keeps a nonzero gradient at the
+  contact. Shift each event form by a monomial so that it vanishes exactly
+  at the contact. Then `F = w_e Σ(l_i^e)² + R̃`, and `R̃` stays regular at the
+  wall. `R̃₀ + μ q_e` is strictly admitted for a modest `μ` (10–30). Exact
+  certificates exist at one point per wall.
+
+Each reduction ends at the same gap. Strict feasibility of a limit problem
+on a wall is proved at finitely many points of that wall, not at all of its
+points. Closing that gap needs certificates that are explicit functions of
+the wall parameters, and the wall's own corners recur one dimension lower.
+The `c → ±∞` ends and `a → 0` are also open, with the mechanisms described
+above.
 
 ## Evidence
 
