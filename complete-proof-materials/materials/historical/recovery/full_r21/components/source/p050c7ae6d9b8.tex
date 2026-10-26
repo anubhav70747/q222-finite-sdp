@@ -1,0 +1,98 @@
+\section{C1 UI: a positive Laurent model and the remaining lift}
+\label{sec:c1-ui-leading}
+This section concerns the leading three-state model. It is not yet a
+certificate for the exact parent at independent source and test rates.
+Write $x=k^2$, $r=1-a\eta$, $K=1+x$, $R=1+xr$ and
+\[
+ E_0=1-x\eta,\quad J=K-a,\quad
+ P_4=KE_0+x(1-r),\quad P_d=1+2x+rx^2.
+\]
+At a real interior source point the leading coefficients of the
+parent divided by $a$ are
+\[
+\begin{aligned}
+ h&=\frac{2x\eta}{RE_0},& C&=\frac2a,&
+ A&=\frac{2\eta^2P_4}{Kr(r+\eta)E_0},\\
+ d&=\frac{4\eta P_d}{K(r+\eta)E_0},&
+ D&=\frac2{JE_0}-\frac d2,&
+ \alpha&=\frac{2x^2\eta R}{KE_0}.
+\end{aligned}                                                     \tag{CL1}
+\]
+All are positive except $D\ge0$, including its literal zero. Here
+$\alpha$ is the coefficient after extracting the weak $g^2$ scale.
+For a test $(u,V)$ put $D_u=1+u^2$ and define
+\begin{align*}
+f={}&4hV^2(W+uY)^2+4C(uW-Y)^2+4AD_uY^2\\
+ &+(4D+2d)(uW-Y-VD_uZ)^2+4\alpha D_uZ^2\\
+ &-4dD_uVYZ-2dD_uV^2Z^2.                           \tag{CL2}
+\end{align*}
+Let $M_f$ be its symmetric three-state matrix and set $U=u^2$, $T=V^2$.
+Direct collection gives
+\[
+ \det M_f=64D_u^2UT\,\mathcal L(U,T),                 \tag{CL3}
+\]
+where
+\begin{align*}
+\mathcal L={}&AC(D+d/2)U+
+ \frac{h\alpha(A+C+D+d/2)}U+\frac{A\alpha(C+D+d/2)}T\\
+ &+hD(A+C+d/2)\frac TU+hC(D+d/2)UT\\
+ &+h(AD+2CD+Ad/2+Cd/2+Dd/2+d^2/4)T+L_0,\\
+L_0={}&ACD-ADd/2+h\alpha(C+D+d/2)
+                         -d^2(A+C+D)/4-d^3/8.       \tag{CL4}
+\end{align*}
+Every nonconstant coefficient is nonnegative. The coefficients of
+$U,U^{-1},T,T^{-1}$ are strictly positive, also when $D=0$.
+Thus in coordinates $(\log U,\log T)$ the Hessian is strictly
+positive and the function is coercive. Substitution of (CL1) gives
+\[
+ \mathcal L(x,x\eta)=\partial_U\mathcal L(x,x\eta)
+                   =\partial_T\mathcal L(x,x\eta)=0. \tag{CL5}
+\]
+Strict convexity proves that $\mathcal L$ is positive away from this
+single contact. The $(W,Y)$ principal block of (CL2) is strictly
+positive for $U,T>0$, because its $C$ and $A$ terms already have
+trivial common kernel. Hence $f$ is positive semidefinite everywhere
+and positive definite off the contact locus. Literal endpoints follow
+by continuity. This proof uses no numerical determinant table.
+
+There is a useful corrected formula at the large-$D$ boundary.
+Impose its hard equation $uW-Y-VD_uZ=0$, eliminating $W$.
+The resulting two-state determinant is $16D_u^2T\mathcal L_D$, where
+\begin{align*}
+\mathcal L_D={}&hT\{(C+A+d/2)/U+(2C+A+d/2)+CU\}\\
+ &+h\alpha(1+1/U)+AC(U+1)+A\alpha/T-Ad/2-d^2/4.
+                                                               \tag{CL6}
+\end{align*}
+In particular the coefficients of $T/U$ and $UT$ are
+$h(C+A+d/2)$ and $hC$, respectively. Interchanging these coefficients
+is incorrect. The accompanying checker verifies (CL3), (CL5) and
+(CL6) by exact rational identities.
+
+\paragraph{The remaining exact lift.}
+For the original source let $\zeta=g^2$, $p=t/R$, and
+$Q=W+uY$, $B=X+uZ$. The two strong-event normals may be written
+\[
+ N=(B-pvQ)/g,\qquad L=vQ/g.
+\]
+Put
+\[
+ h_2=\frac{2x\eta(1-tg^2)(1+x\eta g^2)}E,\qquad
+ h_\beta=\frac{2x\eta[1+(1-t)g^2]}E,
+ \qquad h_\beta-h_2=2x\eta g^2.
+\]
+After retaining the exact positive packets
+$4h_2t\,N^2/(MR)$ and $4h_\beta M D_vN^2/(tR)$, their remaining
+quadratic is
+\[
+ \frac4R\{(h_2+h_\beta D_v)N^2
+ +2(h_\beta D_v-h_2)LN
+ +[h_2(1-p)+h_\beta pD_v]L^2\}.                    \tag{CL7}
+\]
+This is a promising bounded full-state starting point. To complete
+the ordinary/small testing strip one still must do all of the following:
+retain the centered excess $C,A,D$ packets with their actual centers;
+print every first-normal coefficient after that subtraction; lift
+all contact-vanishing scalar and normal terms to admissible roots;
+and prove strictness uniformly when $a$, $r$ or $J$ tends to zero.
+The leading determinant and contact Hessian alone do not discharge
+these obligations. No all-tests C1 UI admission is recorded here.

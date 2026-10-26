@@ -1,0 +1,42 @@
+Ordinary polynomial SOS obstruction for the native C2 parent
+Independent direct audit of section 1, 2026-10-26
+
+Input: analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/06_contact_completion_followup_COMPLETE.txt, lines 6-70. Compared directly with current SG2 and the n,A entries of the original native source formulas in c2_short.tex. No solver or broad expansion was needed.
+
+Verdict: the necessary condition h=a^2 r is correct. It also holds on the literal n=0 face under the other original strict native gaps. Nothing in the proof divides by n. It is only necessary: sources on h=a^2 r are not certified by this argument.
+
+Here is the direct proof. Fix one native real source and suppose F=sum_j R_j^2 with arbitrary ordinary real polynomial roots in u,v,W,X,Y,Z. Since F has degree at most two separately in u and v, each root has degree at most one separately in those variables: a higher leading degree would contribute a sum of squares of nonzero leading coefficient polynomials, which cannot cancel identically. The same leading-homogeneous argument in the four state variables gives state degree at most one. Since F(u,v,0,0,0,0)=0, every root's state-independent term vanishes. Consequently
+  R_j=sum_{l=W,X,Y,Z}(A_jl+B_jl u+C_jl v+D_jl uv) psi_l.
+This rules out any higher-degree escape, irrespective of the number or source dependence of the roots.
+
+SG2 with lambda=beta=0 has zero coefficients at the monomials W^2 and u^2 v^2 Z^2. In the proposed SOS these coefficients are respectively sum_j A_jW^2 and sum_j D_jZ^2. Thus A_jW=D_jZ=0 for every j.
+
+The exact sign congruences are
+  (u;W,X,Y,Z)->(-u;W,X,-Y,-Z),
+  (v;W,X,Y,Z)->(-v;W,-X,Y,-Z).
+They give four zeros from the positive native contact
+  (u_c,v_c;psi_c)=(c,ac;b/a,-cr,ch/a,1).
+Every root vanishes at all four. Averaging its evaluations over the two sign actions keeps only W,vX,uY,uvZ. The first and last already have zero coefficients. Therefore
+  v_c X_c C_jX+u_c Y_c B_jY=0,
+  B_jY=(a^2 r/h) C_jX.
+This uses Y_c>0 and h>0, not n>0. No assumption of an even scalar root or a qubit-only polynomial identity is made.
+
+Direct expansion of the actual complete SG2 parent gives
+  [u^2 Y^2]F=4A,     [v^2 X^2]F=4n+2d.
+In the root squares these are exactly sum_j B_jY^2 and sum_j C_jX^2, with no cross contributions at those monomials. Hence
+  4A/(4n+2d)=(a^2 r/h)^2.
+
+Normalize d=1 and put Xi=(b+r)(1+c^2 r)(1+c^2 r+a^2 c^2 t)>0. The original stationary source formulas, with their positive Delta, are
+  n=(Xi-r Delta)/(2r Delta),     A=a^2 Xi/(2h Delta).
+They give the exact independent identity
+  4n+2=2Xi/(r Delta)>0,
+  4A/(4n+2)=a^2 r/h.
+The positive number a^2 r/h must equal its own square and therefore equals one. Thus h=a^2 r. Common positive scaling proves the same statement for arbitrary d>0.
+
+The named strict witness is consistent: a=1,b=5/4,c=1,t=3/4,r=1/4 gives h=1/2, and original source
+  (d,n,m,C,A,D,alpha)=(1,7/66,5/33,5/22,10/33,16/33,9/22).
+Its actual coefficient ratio is 1/2, whereas the contact constraint would require 1/4. This source and contact were also verified exactly in the earlier multiplied-certificate check; no new validity assumption is introduced here.
+
+Maximally entangled corollary. For native ME C2, b=a and t_source=(1-r)/a, so h=ar. The necessary condition h=a^2 r therefore forces a=1. Every finite unequal-angle ME native parent is non-SOS in ordinary polynomial variables, including permitted n=0 sources. This is compatible with an admitted W2 source: the word operators have the measurement denominators Du,Dv. Clearing a W2 root's common denominator produces an ordinary polynomial SOS for Du Dv F, not necessarily for F. Positive multipliers, rational roots and fractional-power testing functions are outside this non-SOS theorem.
+
+Completion scope. A source-only invertible state congruence preserves ordinary polynomial SOS. Thus, when h!=a^2 r, no polynomial coupling choice can produce a polynomial matrix-SOS remainder that assembles to the complete parent. A merely pointwise PSD remainder is not excluded, nor is a completion using fractional powers or a fixed positive testing multiplier. G_gamma is now known positive definite at every finite native contact, so the response's later generic-rank/singular-G caveat is outdated; it does not affect section 1.

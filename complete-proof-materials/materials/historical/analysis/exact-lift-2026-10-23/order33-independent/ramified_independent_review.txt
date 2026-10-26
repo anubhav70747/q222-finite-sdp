@@ -1,0 +1,99 @@
+Independent bounded review: ramified order-49 completion and two exact rescues
+23 October 2026
+
+VERDICT. No mathematical blocker found in the ramified construction, its
+coefficient elimination, the sparse pencil, either rational rescue, or the
+forty-function compact representation. This review does not audit the
+order-33 separating functional and does not establish universal adequacy.
+
+1. Exact cone and elimination
+
+For a symmetric quartic Q(s) positive semidefinite on s>=0, apply real-line
+matrix Fejer--Riesz to Q(t^2), of degree <=8. Degree <=4 factors, followed
+by real/imaginary splitting and t-parity averaging, give
+ Q(s)=R_even(s)^T R_even(s)+s R_odd(s)^T R_odd(s),
+with degrees <=2 and <=1. Their coefficient Grams have orders 12 and 8.
+This proof includes singular, degree-deficient, and zero matrices. Thus the
+two Gram pairs are equivalent to the specified quartic-in-s selector
+condition, not merely sufficient for it. The package could add these two
+sentences where it currently invokes matrix half-line factorization.
+
+The displayed parameterization solves all five coefficient identities:
+Q0=A00, Q1=A01+A01^T+B00, Q2=A02+A02^T+A11+B01+B01^T,
+Q3=A12+A12^T+B11, Q4=A22. The two skew matrices are needed and present.
+The 64 freedoms per side plus 20 selector coefficients give 148 auxiliaries.
+After selector elimination there are 80 equations in 228 symmetric Gram
+entries; no additional equations remain in the actual affine pencil.
+I checked the orders (12,8,12,8), source signs, upper-triangle convention,
+411 rational coefficient records, and the exported auxiliary reconstruction.
+
+Both inclusions hold for this specified cone. Positive Gram matrices imply
+the two-LMI identity for s>=0 and hence the full parent. Conversely a
+quartic selector with PSD completion matrices has the stated half-line
+Grams, and their coefficient entries have exactly the displayed free
+parameterization. A C33 certificate embeds directly after v=16s^2:
+its [I,vI] square uses the 0 and 2 coefficient slots of A, and its vT term
+is the PSD addition 16T to A11; B may be zero. No strictness is needed.
+
+2. The exact rescues
+
+The bundled source JSON matches the current public
+strict_outer_physical_source.json byte for byte; the ramified cstar vector
+equals those coefficients with lambda=n=0 inserted. The cbar data match the stated
+all-positive source. I independently reconstructed all four congruence
+Grams from the face matrices, checked their rational reduced LDL factors
+with every pivot >2^-18, and checked both 148-coordinate affine lifts.
+Every diagonal scaling inverted in this reconstruction is a nonzero fixed
+rational constant. The cbar Grams equal the cstar Grams plus the supplied
+nonnegative rational event outer products; the other two Grams are unchanged.
+No solver status or old large certificate is used in this PSD argument.
+
+3. Forty compact functions and the exact target
+
+I rederived the finite features from eta=L(u)psi and the split with
+D_U=diag(1,1,u^2,u^2). Their unnormalized Gram sum is u^2*Du*F.
+Dividing by Du^(3/2)*sqrt(Dv) gives (u^2/Du)*F/(Du*Dv).
+For the compact cover, s=(rho/tau)^2, and the five Bob factors become
+g=(tau^4,rho^2*tau^2,rho^4)/kappa and
+r=(rho*tau^3,rho^3*tau)/kappa. The printed P_G,P_H are exactly the
+corresponding cubic Alice numerators. Thus the target is a1^2*Fh on
+a0^2+a1^2=1, not the unmultiplied physical slack.
+
+My checker imports no archive code. It independently expands the original
+homogeneous SG2 parent and the 40 literal JSON functions as multivariate
+Fraction polynomials. For all 157 source/auxiliary basis matrices and both
+epsilon signs it proves the stronger polynomial identity before imposing
+the Alice circle:
+ kappa^2*featureGram = a1^2*(a0^2+a1^2)*kappa^2*Fh.
+All 314 coefficient-basis identities pass; there are no numerical angle tests.
+
+The cover is complete for the two projective angle pairs. Its denominator
+is pure testing and kappa^2>=rho^8+tau^8>=1/8. Each Alice component has
+coefficient-vector norm <=1 on the Alice circle; each Bob monomial numerator
+has modulus <=1. Hence every feature is bounded by sqrt(8)<3 on unit states.
+The endpoint g/r values and Alice polynomial specializations are correct.
+At a1=0 every feature vanishes: validity there follows by continuity from
+the dense a1!=0 set, not by cancellation of this zero multiplier. Both
+epsilon sectors and all state signs are retained, including complex states
+by real/imaginary splitting. All testing functions and their algebraic cover
+are source-independent; no mixed inverse is introduced.
+
+4. Reproduction and one documentation repair
+
+I read every invoked script before execution. The selected archive verifiers
+use only the standard library. They were run in the private ramified_run
+copy: verify_ramified.py, both pencil verifiers, and the function/equation
+builder in --check mode. All pass. My separate checker and results are
+independent_ramified_check.py and independent_ramified_results.json.
+All original package hashes remain unchanged. No public files were edited.
+
+One stale pointer should be repaired: data/fixed_functions.json says the
+endpoint formulas are in ramified_family.tex, which is absent. The formulas
+are actually present in proof/halfline_counterexample.tex and
+data/compact_fixed_functions.json. This is a documentation error, not a
+missing mathematical endpoint argument.
+
+Safe conclusion: the evaluated affine order-49 pencil exactly represents
+the specified quartic-in-s completion cone, supplies two exact rational
+rescues, and gives a source-independent four-block 40-function certificate
+of a1^2*Fh. Equality with the full canonical valid cone remains unproved.

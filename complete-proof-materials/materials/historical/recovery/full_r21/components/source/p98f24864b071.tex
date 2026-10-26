@@ -1,0 +1,585 @@
+\section{The complete positive-scale C1 reciprocal terminal}
+\label{sec:c1-reciprocal-rederived}
+
+\paragraph{Theorem and exact scope.}
+Let the canonical C1 source be physical, with an actual finite
+noncommuting zero contact, and normalize $d=1$. Suppose every source
+coefficient is bounded, $\lambda=n=0$, $C,A,\alpha$ are positive
+bounded units, $m>0$ and $D\geq0$ are infinitesimal, and
+$\beta\geq0$ is arbitrary bounded. Retain the original canonical
+source gaps and intersections. Then the entire parent has a finite
+sum-of-squares representation in $K_c\otimes_{\mathbb R}K_t$ for
+every independent projective test and every real or complex state.
+The assertion includes literal $D=0$ and literal $\beta=0$ when
+permitted by the actual contact; they cannot both vanish.
+
+We use $O(1)$ and $o(1)$ for bounded and infinitesimal elements of
+one of the two fields, and $a\asymp b$ for positive source quantities
+whose ratio is a bounded unit. A bounded tensor Gram with a strictly
+positive real residue is a sum of squares by the actual separated
+strict-Gram lemma. Its rows need not be bounded. No order on the tensor
+product, mixed inverse, or cancellation of a determinant multiplier is
+used below.
+
+\subsection{Source entry before any state-ratio division}
+
+Write the actual contact angles as $u_c=k>0$, $b_c=1/v_c=p>0$,
+and put $U=k^2$, $P=p^2$. The actual C1 source balances SP2--SP3
+give $U,P$ positive infinitesimals and
+\[
+ D/P^2=O(1),\qquad \beta U/P^2=O(1),\qquad
+ m/U^2\asymp1+\beta/P.
+ \tag{CR1}
+\]
+Indeed the two stationarity equations are
+\[
+\begin{aligned}
+ U^2(a_6+\beta a_7/P)&=m(a_1+a_2D/P),\\
+ a_3&=P^{-2}(mDa_2/U+\beta ma_4+Da_5+\beta a_7U),
+\end{aligned}
+\]
+where every $a_i$ is a positive bounded unit. Positivity bounds
+each term of the second equation; then $D/P=o(1)$ and the
+parentheses in the first give CR1. In particular
+\[
+ m/U=o(1),\qquad D/P=o(1),\qquad \beta U/P=o(1).
+ \tag{CR2}
+\]
+The original source partition proves $U,P$ infinitesimal in exactly
+the present $m,D$ weak branch. Only those displayed source balances,
+not its absent terminal references, are an input here.
+
+At a physical noncommuting contact the signed core is negative, and
+the exact core Schur identity SE9 gives $W_cZ_c>0$. Normalize $W_c=1$
+and write $Z_c=q>0$. Define
+\[
+ Q=q^2,\quad L=PQ,\qquad
+ r=\frac{k}{pq},\quad y=\frac{Y_c}{pq},\quad
+ x=\frac{X_c}{pq^2}.
+ \tag{CR3}
+\]
+We now prove these divisions are bounded wherever they are used.
+In the reciprocal quarter-parent CR9 below the hard $X,Y$ matrix at
+the source has residue
+$\operatorname{diag}(\bar\beta+1/2,H_0)$, where
+$H=C+A+\alpha+1/2$ is a positive unit. Eliminate this two-by-two
+block inside the source field. Its Schur block on $W,Z$ satisfies
+\[
+ \frac{S_{WW}}{U}\sim a:=C-C^2/H>0,\qquad
+ -\frac{S_{WZ}}{kp}\sim b_*:=1/2+C\alpha/H>0.
+ \tag{CR4}
+\]
+Here and below a displayed positive expression in an asymptotic
+formula is evaluated in residue. To check CR4 without a shape
+assumption, the original hard couplings are
+\[
+\begin{aligned}
+ P_{XW}&=p\{-m+(D+1/2)U\},&
+ P_{YW}&=k\{m-C(1+P)-(D+1/2)P\},\\
+ P_{XZ}&=k\{\beta-D+P(m+\beta+1/2)\},&
+ P_{YZ}&=p\{D-\alpha-U(m+\alpha+1/2)\},\\
+ P_{WZ}&=-(m+D+1/2)kp.
+\end{aligned}
+\]
+CR2 shows that the $X$ corrections in CR4 vanish in residue and
+the $Y$ corrections are respectively $C^2/H$ and $C\alpha/H$.
+The kernel equation gives $q=S_{WW}/(-S_{WZ})$, so $r$ is a
+positive bounded unit.
+
+The scaled $X,Y$ kernel equations in the unknowns $x,y$ have
+bounded entries and a diagonal positive residue. For example their
+$X$ equation is exactly
+\[
+\begin{split}
+ 0={}&\{(\beta+1/2)(1+P)+Pm+(D+1/2)r^2PQ\}x\\
+ &+r\{\beta-D+P[\beta+1/2-m(y-1)+(D+1/2)(r-y)]\}-m/Q.
+\end{split}\tag{CR5}
+\]
+The quantity $m/Q=(m/U)r^2P$ is bounded before this equation is
+used. The $y$ coefficient in CR5 is infinitesimal; the $x$
+coefficient in the scaled $Y$ equation is $O(PQ)$ and its $y$
+pivot is $H+o(1)$. Thus $x,y$ are bounded. Taking the $Y$ and
+$Z$ kernel equations in residue, using CR1--CR2, yields
+\[
+ Hy\sim Cr+\alpha,\qquad C(r-y)\sim1/2,
+ \qquad \alpha(1-y)\sim r/2.
+ \tag{CR6}
+\]
+Consequently $y,r-y,1-y$ are positive bounded units. Equivalently
+their real residues satisfy
+\[
+ C_0=\frac1{2(r_0-y_0)},\quad
+ A_0=\frac{1+r_0-y_0}{2y_0},\quad
+ \alpha_0=\frac{r_0}{2(1-y_0)}.
+ \tag{CR7}
+\]
+For the last equation in CR6, divide the original $Z$ kernel
+equation by $Pq$. Its extra $X$ contribution is
+$O(x\beta Q+xPQ)$; CR1 and the already proved unit $r$ give
+$\beta Q=O(P)$, while $PQ=U/r^2$ is infinitesimal. All the
+omitted terms therefore vanish in residue. This proves CR6 in the
+unbounded-$q$ case as well.
+
+In CR5, $D=o(P)$ and $m/Q=o(P)$. Its numerator for $-x$ is
+the sum of $r\beta$ and a positive-unit multiple of $P$, up to
+$o(P)$. Hence the following bounds hold on the whole source domain:
+\[
+\begin{gathered}
+ L=PQ=o(1),\qquad \beta Q/P=O(1),\qquad
+ -x\asymp P+\beta,\qquad r+x\text{ is a positive unit},\\
+ m\asymp PQ^2(P+\beta),\qquad
+ m/(PQ)=O(PQ+\beta Q)=o(1),\qquad xQ=o(1).
+\end{gathered}\tag{CR8}
+\]
+The statement about $r+x$ follows directly from CR5:
+$x/r=-\beta/(\beta+1/2)+o(1)$.
+
+\subsection{The entire scalar and all normal coefficients}
+
+Use $b=1/v$, $D_u=1+u^2$, $D_b=1+b^2$. The full reciprocal
+quarter-parent is
+\[
+\begin{aligned}
+ F={}&m(W-bX+uY-ubZ)^2+CD_b(uW-Y)^2+AD_uD_bY^2\\
+ &+(D+1/2)(ubW+uX-bY-Z)^2
+ +(\alpha+1/2)D_u(Y-bZ)^2\\
+ &+(\beta+1/2)D_b(X+uZ)^2-D_uD_bZ^2/2.
+\end{aligned}\tag{CR9}
+\]
+All further local identities are expansions of this full expression.
+In the chart $W=1$, $Z=z$ put
+\[
+ u_g=rbz,\qquad X_g=xbz^2,\qquad Y_g=ybz,
+ \qquad V=b^2,\quad T=z^2.
+ \tag{CR10}
+\]
+Its entire scalar restriction is
+\[
+ \Phi=m+DT+hVT+\mathcal C V^2T+EVT^2+
+ \mathcal F V^2T^2+GV^3T^2+JV^2T^3,
+ \tag{CR11}
+\]
+where
+\[
+\begin{aligned}
+ \mathcal C&=Ay^2+(C+D+1/2)(r-y)^2,\\
+ E&=\beta(r+x)^2+x^2/2-2Drx,\qquad
+ G=Ar^2y^2,\qquad J=(D+1/2)r^2x^2,\\
+ \mathcal F&=Ar^2y^2+(\alpha+1/2)r^2(y-1)^2
+       +\beta(r+x)^2+m[r(y-1)-x]^2\\
+ &\hspace{12mm}+(2D+1)rx(r-y)+rx+x^2/2,\\
+ h&=Ay^2+C(r-y)^2+\alpha(y-1)^2+y^2/2-r
+          -2D(r-y)+2m[r(y-1)-x].
+\end{aligned}\tag{CR12}
+\]
+In particular $\mathcal C,G$ are positive units,
+$E\asymp\beta+P^2>0$, $J\geq0$, and all these coefficients
+are bounded. If $\beta$ is infinitesimal, $\mathcal F$ is a
+positive unit, with residue $r_0^2(1+r_0-y_0)/2$.
+For unit $\beta$, $\mathcal F$ can have either sign; it is not
+discarded or assumed positive.
+
+Actual contact and its two angular/state jets give
+$\Phi(P,Q)=\Phi_V(P,Q)=\Phi_T(P,Q)=0$. Therefore
+\[
+\begin{aligned}
+ D&=P^2\mathcal C-PQE+P^3QG-P^2Q^2J,\\
+ m&=PQ^2E+P^2Q^2\mathcal F+P^3Q^2G+2P^2Q^3J,\\
+ h&=-2P\mathcal C-QE-2PQ\mathcal F-3P^2QG-2PQ^2J.
+\end{aligned}\tag{CR13}
+\]
+Set
+\[
+ \delta=D/P^2\geq0,\qquad \theta=EQ/P>0.
+ \quad \delta,\theta=O(1),\qquad
+ \delta+\theta=\mathcal C+GL-JQ^2=\mathcal C+o(1),
+ \tag{CR14}
+\]
+where $L=PQ$. The bounds follow either from CR1 and CR8 or from CR13;
+$JQ^2=O((xQ)^2)=o(1)$. At least one of $\delta,\theta$
+is a unit. Define
+\[
+ R=z(V-P),\quad K=VT-PQ,\quad
+ M=V^2T+(P/Q)VT^2+P^2Q-3PVT.
+\]
+The exact complete balanced scalar is
+\[
+\begin{aligned}
+ \Phi={}&\delta R^2+\theta M+\mathcal F K^2
+       +G\{PK^2+VzRK\}\\
+       &+J\{(QR-zK)^2+2QK^2\}.
+\end{aligned}\tag{CR15}
+\]
+The entire $J$ line is retained as positive squares.
+
+Here are full, rather than selected, normal formulas. Let $L_u,L_X,L_Y$
+be half the first derivatives of CR9 at CR10. Then
+\[
+ L_u=bz A_u(V,T),\quad L_Y=bz A_y(V,T),\quad
+ L_X=b\{-m+TB_X(V,T)\},
+ \tag{CR16}
+\]
+where
+\[
+\begin{aligned}
+ A_u&=a_{00}+a_{10}V+a_{01}T+a_{11}VT+a_{21}V^2T+a_{12}VT^2,\\
+ A_y&=e_{00}+e_{10}V+e_{11}VT+e_{21}V^2T,\\
+ B_X&=c_0+c_1V+c_2VT,\\
+ c_0&=-Dr+\beta(r+x)+x/2,\\
+ c_1&=(D+1/2)r(r-y)+(\beta+1/2)(r+x)
+                        +m[x-r(y-1)],\\
+ c_2&=(D+1/2)r^2x.
+\end{aligned}\tag{CR17}
+\]
+Every displayed coefficient is bounded. The only bounds beyond this
+needed below are
+\[
+ a_{01}=\beta(r+x)-Dx=O(E),\quad
+ a_{12}=(D+1/2)rx^2,\quad a_{12}Q=O(1),
+ \qquad c_2=O(P+E).
+ \tag{CR18}
+\]
+They follow from CR8 and CR12. The other coefficients are given
+unambiguously by expanding CR9; the checker compares the entire
+polynomials, not a support truncation.
+
+State and angle stationarity give
+$A_u(P,Q)=A_y(P,Q)=0$ and $B_X(P,Q)=m/Q$.
+Put $E_T=bz(T-Q)$. Finite monic division therefore gives exactly
+\[
+\begin{aligned}
+ L_i&=A_{i,V}(V,T)bR+B_i(T)E_T,\
+ B_u(T)&=a_{01}+P\{a_{11}+Pa_{21}+a_{12}(T+Q)\},\\
+ B_y(T)&=P(e_{11}+Pe_{21}),\\
+ L_X&=b\{[m/(PQ)+c_2T]K+z[c_1-m/(PQ)]R\}.
+\end{aligned}\tag{CR19}
+\]
+The first line is for $i=u,y$ and
+$A_{i,V}=[A_i(V,T)-A_i(P,T)]/(V-P)$, an exact polynomial.
+In particular, using $P(T-Q)=K-zR$, each of $L_u,L_Y,L_X$
+is a bounded linear combination of
+\[
+ bR,\qquad bzK,\qquad b[m/(PQ)+c_2T]K,
+ \qquad E E_T.
+ \tag{CR20}
+\]
+Every occurrence of $K$ outside the last product has an
+infinitesimal coefficient. CR19 remains literal at $b=0$ or $z=0$.
+
+\subsection{The cubic conductors and the bounded source-ratio chart}
+
+All radicals in this subsection are products of radicals in the
+separate fields. Set
+\[
+ \mathsf A=(V^2T)^{1/3},\quad
+ \mathsf B=((P/Q)VT^2)^{1/3},\quad
+ \mathsf C=(P^2Q)^{1/3},\qquad \rho=(P/Q)^{1/3}.
+\]
+Because $\mathsf A\mathsf B\mathsf C=PVT$,
+\[
+ M=\tfrac12(\mathsf A+\mathsf B+\mathsf C)
+ [ (\mathsf A-\mathsf B)^2+(\mathsf A-\mathsf C)^2
+                         +(\mathsf B-\mathsf C)^2].
+ \tag{CR21}
+\]
+Let $\mathcal Z$ be its nine roots multiplied by $\sqrt\theta$,
+so that $\theta M=\frac12\sum_{j=1}^9\mathcal Z_j^2$.
+For nonnegative testing $b,z$, the following exact identities hold:
+\[
+\begin{aligned}
+ bR={}&b\sqrt{\mathsf A}(\mathsf A-\mathsf B)
+       +\rho b^{1/3}z^{2/3}\sqrt{\mathsf A}(\mathsf A-\mathsf C),\\
+ E E_T={}&\sqrt E\,z\,[\sqrt\theta\sqrt{\mathsf B}
+                                      (\mathsf B-\mathsf A)]\\
+ &+\theta^{1/3}E^{1/6}b^{2/3}z^{1/3}
+       [\sqrt\theta\sqrt{\mathsf B}(\mathsf B-\mathsf C)].
+\end{aligned}\tag{CR22}
+\]
+Negative signs are handled by the exact testing gauges; absolute
+values give the same monomial identities if desired. If $\theta$
+is a unit, the first line has infinitesimal coefficients on
+$\mathcal Z$: $\rho=(E/\theta)^{1/3}$ is bounded and $b$ is
+infinitesimal. If $\delta$ is a unit, $bR$ instead has the
+infinitesimal coefficient $b$ on the strict row $R$. The second
+line has infinitesimal coefficients whenever $E$ is infinitesimal
+or $z$ is infinitesimal. Its displayed coefficients use no
+comparison of a source rate with a testing rate.
+
+Suppose first that actual $q$ is bounded and $\beta$ is
+infinitesimal. Use $K$ and $\mathcal Z$, with $R$ added when
+$\delta$ is a unit. If only $\theta$ is a unit, retain
+$\delta R^2$ as a separate positive square. In CR15 the $K$
+pivot $\mathcal F$ is a positive unit. The only signed extra
+term is
+$GVzRK=Gbz(bR)K$, an infinitesimal Gram correction by CR22.
+The term $GPK^2$ is nonnegative. Thus CR15 has a strict residue
+Gram on the stated roots. CR19--CR22 give infinitesimal lifts of
+all three complete first normals to these same roots.
+
+If $\beta$ is a unit, CR8 forces $Q$ infinitesimal and $E$ a
+unit. The only chart still requiring CR10 will be $z$ infinitesimal.
+The second line of CR22 still has infinitesimal coefficients.
+When $\delta$ is a unit, use the exact identity
+\[
+ 2QM+TR^2-K^2=(K-zR)^2+2QR^2.
+ \tag{CR23}
+\]
+Choose a positive real $a$ with $\overline{\mathcal F}+a>1$.
+Subtracting $a$ times the corresponding zero identity changes the
+first three terms of CR15 into
+\[
+ (\delta-aT+2aQ)R^2+(1-2aP/E)\theta M
+       +(\mathcal F+a)K^2+a(K-zR)^2.
+ \tag{CR24}
+\]
+The first three pivots have strictly positive residues; both costs
+$T$ and $P/E$ are infinitesimal. This handles the signed
+$\mathcal F$ exactly.
+
+When instead $\theta$ is a unit, $\rho$ is also a unit and
+\[
+ K=\rho^{-1}\{\sqrt{\mathsf A}\,
+       [\sqrt{\mathsf A}(\mathsf B-\mathsf C)]
+       +\sqrt{\mathsf C}\,
+       [\sqrt{\mathsf C}(\mathsf A-\mathsf C)]\}.
+ \tag{CR25}
+\]
+Both coefficients on $\mathcal Z$ are infinitesimal. Thus the
+entire signed $\mathcal F K^2$ is an infinitesimal correction on
+the strict circuit Gram. The $G$ cross term and every first normal
+are controlled by CR22 and CR25; $\delta R^2$ and the $J$ line
+remain positive squares. No inverse of $\delta$ is used.
+
+\subsection{An unbounded actual state ratio in the same testing chart}
+
+Now let actual $q$ be unbounded. CR8 and CR12 imply
+\[
+ \beta/P=O(1/Q)=o(1),\quad -x\asymp P,\quad
+ m\asymp L^2,\quad E/P=o(1),\quad JQ^2=O(L^2)=o(1).
+ \tag{CR26}
+\]
+Here $\beta$ is infinitesimal and $\mathcal F$ is a positive
+unit. In the testing chart $W=1$, $z$ bounded, the exact relation
+\[
+ \theta M=\theta R^2+(E/P)(K^2-zRK)
+ \tag{CR27}
+\]
+makes CR15 a strict two-row Gram on $R,K$, plus its whole positive
+$J$ line. Its residue is
+$\operatorname{diag}(\overline{\delta+\theta},\overline{\mathcal F})$.
+Every correction coefficient is infinitesimal: $E/P$, $P$ and
+$Vz$ are infinitesimal. In CR19, $B_u/P$ and $B_y/P$ are bounded,
+because $a_{01}/P=O(\beta/P+Dx/P)$ and $a_{12}Q$ are bounded.
+Using $P E_T=bzK-bz^2R$ shows that all three full normals are
+infinitesimal linear combinations of $R,K$.
+
+\subsection{The complementary testing state chart}
+
+Use $Z=1$, $W=w$ infinitesimal, and write $a=u/r$. The graph is
+\[
+ b=aw,\qquad X=xa,\qquad Y=yaw.
+ \tag{CR28}
+\]
+The entire scalar is
+\[
+ \Phi'=D+mw^2+Ea^2+ha^2w^2+\mathcal C a^4w^4
+       +\mathcal F a^4w^2+Ga^6w^4+Ja^4.
+ \tag{CR29}
+\]
+First assume actual $q$ bounded and $\beta$ infinitesimal. If
+$\delta$ is a unit, use the three strict rows
+$P,a^2w,\sqrt E\,a$. The sole signed cross in CR29 is
+$h a^2w^2=(h/P)w\,P(a^2w)$, and $h/P$ is bounded by CR13.
+Every other term is positive or has the positive-unit $\mathcal F$
+pivot. If $\theta$ is a unit, $P/E=Q/\theta$ is bounded;
+use instead $\sqrt E\,a,a^2w$ and retain $D,mw^2$ whole.
+The same signed term is the infinitesimal correction
+$(h/E)w^2(\sqrt E\,a)^2$.
+
+Here are the complete complementary first normals, which also prove
+the bounds for unbounded actual $q$. Define
+\[
+ R'=a^2w^2-P,\qquad K'=w(a^2-L).
+ \tag{CR30}
+\]
+Half the $b,Y$ derivatives of the original full CR9 at CR28 have
+the respective forms
+\[
+ L_i'=aw(d_{i0}+d_{i1}a^2+d_{i2}a^2w^2+d_{i3}a^4w^2),
+ \qquad i=b,Y,
+ \tag{CR31}
+\]
+with bounded coefficients. At the actual contact
+$a^2=L,w^2=1/Q$, they satisfy
+$d_{i0}+Ld_{i1}+Pd_{i2}+PLd_{i3}=0$.
+Consequently the entire, exact divisions are
+\[
+ L_i'=(d_{i1}+Pd_{i3})aK'
+                   +(d_{i2}+a^2d_{i3})awR'.
+ \tag{CR32}
+\]
+The full $X$ derivative is
+\[
+ L_X'=a(c_0+c_2a^2-mw^2+c_1a^2w^2),\qquad
+ c_0+c_2L-m/Q+c_1P=0.
+ \tag{CR33}
+\]
+For bounded $Q$, $c_0/P$ and $m/P$ are bounded, and
+$c_2\in P B_c+E B_c$ by CR18. The products $aK'$ and
+$awR'$ are infinitesimal linear combinations of $P,a^2w$.
+Expanding CR33 gives infinitesimal coefficients on
+$P,a^2w,\sqrt E\,a$. If $\theta$ is a unit, use $P/E=O(1)$:
+$c_0/\sqrt E=o(1)$, $c_2=O(E)$ and $m/E=O(1)$, giving the
+same assertion on the two rows $\sqrt E\,a,a^2w$.
+These are pure-source bounded quotients; no testing $w$ is inverted.
+
+For unbounded actual $q$, CR29 has the exact alternative form
+\[
+\begin{aligned}
+ \Phi'={}&\delta R'^2+\theta M'+\mathcal F K'^2
+       +G\{PK'^2+a^2wR'K'\}\\
+       &+J\{a^4(Qw^2-1)^2+2QK'^2\},\\
+ M'={}&a^4w^4+(P/Q)a^2+P^2Qw^2-3Pa^2w^2.
+\end{aligned}\tag{CR34}
+\]
+Define nonnegative elementary radicals
+\[
+ \mathsf A'=|aw|^{4/3},\quad
+ \mathsf B'=(P/Q)^{1/3}|a|^{2/3},\quad
+ \mathsf C'=(P^2Q)^{1/3}|w|^{2/3}.
+\]
+They give the same nine-square cubic identity for $M'$. The exact
+conductor needed for the complete normals is
+\[
+ |a|R'=|a|\sqrt{\mathsf A'}(\mathsf A'-\mathsf C')
+          +\sqrt L\sqrt{\mathsf B'}(\mathsf A'-\mathsf B').
+ \tag{CR35}
+\]
+Its coefficients are infinitesimal. If $\delta$ is a unit, use
+$R',K'$ and retain the circuit as positive squares. If $\theta$
+is a unit, use its scaled nine roots and $K'$, retaining
+$\delta R'^2$ whole. In either case CR34 is strict: its sole
+signed cross is $Gaw(aR')K'$, controlled by CR35, and its last
+line is retained as squares.
+
+CR26 implies $c_2/P=O(1)$ and
+$c_0/P=m/(PQ)-Qc_2-c_1=O(1)$. The full exceptional normal
+has the exact division
+\[
+\begin{aligned}
+ L_X'={}&-[c_0/P+(c_2/P)a^2]\,aR'\\
+ &+[(c_2/P)(a^2+L)+c_0/P+c_1]\,awK'.
+\end{aligned}\tag{CR36}
+\]
+Together with CR32, this uses only bounded multiples of
+$aR',awR',aK'$. Each has infinitesimal coefficients on the strict
+soft rows by CR35. This also proves the result at literal $w=0$.
+
+\subsection{All higher normals and the remaining unit-beta states}
+
+The preceding scalar and first-normal formulas certify the entire
+parent. Here are the required hard blocks and the justification for
+every higher term. Normalize the testing state so its coordinates
+are bounded with at least one unit. At the reciprocal angle corner
+$u,b=o(1)$ the state residue hard block is
+$(\bar\beta+1/2)X^2+H_0Y^2$. If $X$ or $Y$ is a unit, the
+entire parent has positive real residue and the strict-element lemma
+applies immediately. Otherwise $X,Y$ are infinitesimal and one of
+$W,Z$ is a unit.
+
+The exact sign gauges make $u,b\geq0$. If $WZ\leq0$, the signed
+core is a nonnegative pure-testing scalar by the full core Schur
+identity SE9 and its literal homogeneous endpoints, so its source
+multiple and all event packets are separated squares. Otherwise
+choose either $W=1$, $z=Z$ bounded, or $Z=1$, $w=W$
+infinitesimal. Both have $X,Y$ infinitesimal.
+
+In the $W=1$ chart, set
+$N_u=u-rbz$, $N_X=X-xbz^2$, $N_Y=Y-ybz$.
+They are infinitesimal. The complete expansion of CR9 is its scalar
+CR11, twice the three first normals CR16, and a polynomial quadratic
+Gram in $N_u,N_X,N_Y$. Terms of normal degree at least three
+have infinitesimal Gram entries. For weak $\beta$, or for unit
+$\beta$ with $z$ infinitesimal, the hard residue is
+\[
+ C_0(N_u-N_Y)^2+(A_0+\alpha_0+1/2)N_Y^2
+                         +(\beta_0+1/2)N_X^2\succ0.
+ \tag{CR37}
+\]
+All first-normal lifts established above have infinitesimal
+coefficients. The full hard-and-soft residue is therefore positive
+definite. In the $Z=1$ chart use
+$N_b=b-aw$, $N_X=X-xa$, $N_Y=Y-yaw$.
+For weak $\beta$ its hard residue is
+\[
+ N_X^2/2+H_0N_Y^2-2\alpha_0N_bN_Y+\alpha_0N_b^2\succ0,
+ \tag{CR38}
+\]
+since $H_0-\alpha_0=C_0+A_0+1/2>0$.
+The same finite expansion handles every higher normal term. Thus
+none of CR15, CR27 or CR34 is being used merely as a scalar
+restriction.
+
+It remains only unit $\beta$ and a testing state with $Z$ a unit
+relative to $W$. Normalize $Z=1$ and $W=\omega$ bounded. Retain
+the entire $m,D$ packets. The remainder belongs exactly to the
+square of the ideal $(u,b,X,Y)$. Its quadratic real residue is
+\[
+\begin{aligned}
+ &(\beta_0+1/2)\left(X+\frac{\beta_0}{\beta_0+1/2}u\right)^2
+      +\frac{\beta_0}{1+2\beta_0}u^2\\
+ &\quad+H_0\left(Y-\frac{C_0\omega u+\alpha_0 b}{H_0}\right)^2
+      +a_0(\omega u-r_0b)^2,
+ \qquad a_0=C_0-C_0^2/H_0>0.
+\end{aligned}\tag{CR39}
+\]
+CR7 is precisely the critical relation needed for this identity.
+The expression is positive definite in $(u,b,X,Y)$ for every
+real $\omega$, including zero. Its complete bounded polynomial
+matrix is consequently strict; every higher degree is an
+infinitesimal correction. This completes all local states, including
+the unit-beta case where $\mathcal F$ was signed.
+
+\subsection{Every other test and restoration}
+
+The exact outer identities RC18--RC25 from the newly rederived
+C2 reciprocal theorem apply here as polynomial identities, with
+$n=0$ and the entire extra $\beta$ packet retained. Their strictness
+uses only $C,A,\alpha$ positive units and the critical residue
+relations CR7; no C2 source membership is used. Explicitly:
+\begin{itemize}
+\item For bounded original $u,v$, the four rows $(uW,Y,X,Z)$
+give RC18. After CR7 its real determinant is
+$ (r_0+u^2v^2)D_u^2D_v^2(1+r_0-y_0)^2/
+[16y_0(r_0-y_0)(1-y_0)]>0$.
+\item For Alice reciprocal and Bob bounded, use the four rows
+$(W,Y,vX,sX+Z)$ and the full core RC20. Its real residue RC21
+is strict using $C,A>0$.
+\item For Bob reciprocal and Alice a bounded unit, use
+$(uW-Y,Y,X,bZ,\sqrt D\,Z)$ and the entire $D$ packet as in
+RC22--RC23. CR7 makes the three-by-three angular determinant
+strict. Literal $D=0$ causes its last row to be zero, which is
+allowed in a strict coefficient Gram.
+\item For both angles reciprocal, RC24--RC25 give the five rows
+$(W,X,Y,bZ,\sqrt D\,sZ)$ and a strictly positive real residue.
+\end{itemize}
+The only remaining angle chart is exactly $u,b=o(1)$, treated
+above. These are whole-parent identities with every omitted event
+packet retained, and include all literal axes and infinities.
+The exact source and testing sign gauges, positive pure-field
+homogeneous normalization factors and real/imaginary state splitting
+restore the stated projective tensor-SOS theorem.
+
+\paragraph{Dependencies and verification boundary.}
+The mathematical inputs are the actual full physical parent, the
+displayed SP2--SP3 balance proof, SE9 and the exact sign gauges,
+the separated strict-Gram lemma, and only the explicit outer
+polynomial identities RC18--RC25 with their real residue tests.
+No unavailable October theorem or claimed historical admission is
+a premise. The focused checker verifies the full scalar, all first
+normals with explicit contact-jet remainders, the complementary
+divisions, the radical and pivot identities, and the complete hard
+residues. Source boundedness, sign, the quantified chart cover and
+strictness are the analytical arguments above. Other positive-scale
+source types, weak-source families and global finite-lift existence
+remain separate obligations.

@@ -1,0 +1,217 @@
+\section{Specific findings in the August rank-two proof}
+
+The August base and all six replacements must be read together.
+The general diagonal mechanism is sound under its hypotheses.
+The issue is showing that every required quantum contact has the
+actual lifts, exact identities, strict real residues and rank control
+needed for its application. The full August audit is delivered separately.
+
+\subsection{The mixed denominator in (9.11)}
+
+The printed completion uses
+\[
+ e(1+u^2)+\beta
+\]
+and says the denominator lies wholly in one tensor factor.
+Under the manuscript's own typing, \(e,\beta\) are source parameters
+and \(u\) is a testing parameter. That assertion is false as written.
+
+For its pair \(e(1+u^2)X^2+\beta(X+uB)^2\), a source-only repair is,
+with \(c=e+\beta>0\),
+\begin{equation}
+ c\left(X+\frac{\beta}{c}uB\right)^2
+ +\frac{e\beta}{c}u^2B^2+eu^2X^2.
+ \label{eq:repair}
+\end{equation}
+Expansion proves equality. If \(c=0\), nonnegativity gives
+\(e=\beta=0\), and the pair is zero. For testing \(X,u,B\),
+the roots have ranks at most \(2,1,1\).
+The last term must remain: with \(N=X+(\beta/c)uB\), it becomes
+\[
+ eu^2N^2-2e(\beta/c)u^3BN+e(\beta/c)^2u^4B^2.
+\]
+A pairwise repair does not by itself repair the subsequent exact
+critical center and all degenerate allocations. \src{A0, \S9.1; FP}
+
+\subsection{A reciprocal exact-versus-residue mismatch}
+
+Equations (13.0o)--(13.0q) give
+\[
+ \frac d\lambda=2\zeta U_d,\qquad
+ U_d=\frac{JN_d}{D_0D_1},\qquad \overline{U_d}=1.
+\]
+After setting \(\lambda=1\), \(z=\varepsilon/c=\zeta\), the later
+equation (13.2) calls \(d=2z\) a complete contact equation.
+A unit with residue one need not equal one.
+
+Appendix A makes the discrepancy checkable by hand.
+Put \(x=r^2\). The constant terms of \(D_0,D_1,N_d\) are \(J\),
+so the coefficient of \(x\) is
+\[
+\begin{aligned}
+ [x](JN_d-D_0D_1)
+ &=J\bigl(N_1-D_{0,1}-D_{1,1}\bigr)\\
+ &=J\bigl[J^2(1+z)+Kc^2\bigr]>0
+\end{aligned}
+\]
+on the real strict chamber. Thus \(JN_d=D_0D_1\) is not a
+polynomial identity. The exact formula has the nonconstant factor
+\(U_d\); \(d=2z\) must be identified as an initial-layer formula or
+supplied with an exact reparametrization and restoration argument.
+
+This identifies an inconsistency in the printed identities' scope.
+It is not a quantum counterexample and does not establish failure
+of the separate October formulas. \src{A0, \S13 and Appendix A;
+current August audit}
+
+\subsection{Exact children and real cotangent validity}
+
+Further application obligations remain explicit in the audit:
+\begin{itemize}
+\item Zero residue is not literal zero. A positive infinitesimal
+coefficient remains a term in the parent. A child stratum requires
+an exact reduction or a collar that retains transverse terms.
+\item The lexicographic invariant
+\((N_{\rm act},d_{\rm stratum})\) proves termination only after
+every genuine recursive arrow is shown to decrease it.
+Loss of a positive residue alone decreases neither entry.
+\item In terminal \(F_3\),
+\(z_2=R^4p^4(1+Wh)/h^2\) has \(dz_2=0\) at the real residue \(R=0\),
+while the proposed cotangent change contains \(R/(4z_2)\).
+Invertibility for nonzero valued-field \(R\) is not invertibility
+of the ordinary cotangent map at the real boundary.
+\item A Laurent layer \(A\tau^2+B\tau^{-2}+C\) with an interior zero
+has the stated strict curvature only after the identically zero
+layer is excluded or routed to a retained next layer.
+\end{itemize}
+
+These concerns belong to the August theorem application, not to
+E1--E3. They do not negate the general diagonal lemma. They explain
+why the August order-two conclusion should not be imported into
+the October qualitative route solely from a lock label.
+
+\section{Precise status and next verification obligations}
+
+\begin{longtable}{@{}L{0.10\textwidth}L{0.22\textwidth}L{0.60\textwidth}@{}}
+\toprule ID & Status in this recovery & Exact finding or remaining task\\
+\midrule\endhead
+R1 & Recovered &
+Complete 798-page manuscript, original R21 source ZIP and 215-component
+index. The historical 549-page object remains unrecovered.\\
+R2 & File identity checked &
+ZIP integrity, all 4,689 bound files and 445 dependency bindings
+checked without mismatch. These are not mathematical certificates.\\
+R3 & Recovered &
+August base, all six corrections and the three later guides;
+original files preserved.\\
+A1 & Analytically checked &
+Finite physical model, nine-atom convexification, compactness,
+semialgebraicity and transfer interface.\\
+A2 & Analytically checked &
+Pure-factor restoration, matrix pairing, positive residue,
+strict bounded Gram and finite mixture closure.\\
+A3 & Examined analytically &
+Finite-contact source reduction, closed faces and native entry;
+no concrete defect found in this pass.\\
+A4 & Scoped positive review &
+Later R1 full-parent mechanism, outer identities and state/endpoint
+join. Large coefficient expansions remain named inputs.\\
+A5 & Scoped positive review &
+JC4/SN source fit and full-state local/remote join.
+Other C1 cells and some expansions were not independently rederived.\\
+A6 & Scoped positive reviews &
+Noncommuting constrained geometry and C2 dispatch.
+Exact checked steps and inherited premises are listed in the notes.\\
+A7 & Conditional implication checked &
+Complete universal C1/C2 parent certificates imply universal
+slack SOS and qualitative finite SDP-lift existence.\\
+A8 & Not fully repeated &
+Independent verification of every remaining local identity,
+normalization, remote test and source boundary in all 215 components.
+This is an audit workload, not a demonstrated mathematical gap.\\
+B1 & Pairwise correction available &
+August (9.11) has a source-only replacement; propagate its full retained
+higher term through the subsequent branch.\\
+B2 & Clarification/repair required &
+Restore \(U_d\) in August \S13 or justify a complete exact
+reparametrization and restoration.\\
+B3 & Application proof required &
+August common-child lifts, real-residue cotangent validity and
+strict decrease for all actual descent arrows.\\
+E1--E3 & Separate constructive work &
+Evaluate the global feature/dimension list, affine pencil/projection,
+and both-inclusion proof for those actual matrices.
+These are not premises of qualitative existence.\\
+\bottomrule
+\end{longtable}
+
+A complete independent audit should give every leaf its exact source
+predicate, testing domain, full-parent identity, legal factors and
+boundary restoration. It should check all invoked identities and
+prove that the actual source dispatch is exhaustive and acyclic.
+The existing index and the present focused reviews make that task
+concrete. They do not replace it with status counts.
+
+The supported recovery conclusion is therefore:
+\textbf{a real analytical existence-proof manuscript has been recovered,
+its central architecture and selected difficult components have been
+examined with positive findings, and the precise residual audit scope
+has been preserved.} The stronger August route has separate,
+specific repair obligations. No claim that \(\Q\) has no finite lift
+follows from these findings.
+
+\section{Source key and reproducibility}
+
+All paths in the machine-readable component index refer to unchanged
+sources inside the recovered R21 archive. The table below gives short
+keys used in this report.
+
+\begin{longtable}{@{}L{0.10\textwidth}L{0.81\textwidth}@{}}
+\toprule Key & Source\\ \midrule\endhead
+O & R21 \texttt{publication/opening\_assembly.tex}, FA1--FA13.\\
+RFA & \texttt{fresh\_physical\_normalization\_conditional\_assembly.tex}.\\
+G & \texttt{bridge/strict\_gram.tex}.\\
+SE & \texttt{finite\_contact\_source\_reduction\_REDERIVED.tex}.\\
+CF & \texttt{closed\_faces\_short.tex}.\\
+LC & \texttt{complete\_source\_routing\_REDERIVED.tex}.\\
+R1N & \texttt{r1\_all\_sources\_all\_tests.tex}.\\
+FN & \texttt{fn\_reconstructed.tex}.\\
+SJ & \texttt{full\_state\_sign\_join\_REDERIVED.tex}.\\
+RM & Computer-free map, \texttt{latex/r1\_simplification.tex}.\\
+TF & Computer-free map, \texttt{latex/tensor\_foundations.tex}.\\
+A0 & August 30 \texttt{Q222\_SXDEG2\_CONSOLIDATED\_PARCHMENT\_FINAL},
+used with the six August 31 replacements.\\
+FP & First-principles guide and
+\texttt{Q222\_9\_11\_Source\_Only\_Replacement.tex}.\\
+S1 & C. Scheiderer, \emph{Second-order cone representation for convex
+sets in the plane}, arXiv:2004.04196v2, Theorem 3.10 and Corollary 3.19.
+\url{https://arxiv.org/pdf/2004.04196}\\
+S2 & C. Scheiderer, \emph{Smooth hyperbolicity cones are second-order
+cone representable}, arXiv:2509.17121v2, Proposition 3.11 and Lemma 3.12.
+\url{https://arxiv.org/pdf/2509.17121}\\
+S3 & Ll. Masanes, \emph{Extremal quantum correlations for N parties
+with two dichotomic observables per site}, quant-ph/0512100.
+\url{https://arxiv.org/abs/quant-ph/0512100}\\
+\bottomrule
+\end{longtable}
+
+\newpage
+\subsection*{Review method and preservation}
+\textbf{Method.}
+The mathematical review used direct reading, analytical derivations
+and selected hand expansions. No numerical solver or symbolic checker
+was used as a proof premise. File hashing, archive verification and
+PDF rendering concern identity and presentation only.
+
+\textbf{Scope of the reviewers.}
+The focused audits were performed by additional agents within the
+same model system, alongside the lead review. They are not external
+peer review or proof-assistant formalization. The individual notes
+state which mathematical inputs were checked and which were retained.
+
+\textbf{Preservation.}
+The recovered PDF and source ZIP, August composite source, and
+three guides remain unchanged. This report and the new audit files
+are separate. The complete deliverable includes those sources, so
+the reader can examine the arguments behind every finding.
+

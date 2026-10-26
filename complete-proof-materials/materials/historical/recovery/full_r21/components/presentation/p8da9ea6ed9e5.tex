@@ -1,0 +1,269 @@
+\chapter{The complete ordered weak-C2 shape R5 is admitted}
+\label{component:p8da9ea6ed9e5}
+\noindent\textbf{Component }\path{p8da9ea6ed9e5}\par
+{\small\noindent Source: \path{R17/proofs/weak_gaps/r5_all_tests.tex}\par}
+{\small\noindent SHA256: \path{8da9ea6ed9e5a0f8863a59ee27fef3ce89b422aa4d584ae0fe2152e8dc934acd}\par}
+{\small\noindent Inventory use: R5.1-R5.17\par}
+\medskip
+\section{The complete ordered weak-C2 shape R5 is admitted}
+\label{p8da9ea6ed9e5:sec:r17-r5}
+
+\begin{theorem}
+Normalize $d=1$. Retain the original physical C2 source, its stationary contact, every strict
+source gap, all coefficient signs, the positive-infinitesimal total-scale
+intersection and every original prior-admission exclusion. Suppose
+$B,z,y,r>0$ are infinitesimal and $t=y/B$, $h=H/B$, $l=1-h=L/B$,
+and $j=1+zr-l/t$ are positive bounded units. Then the entire original
+four-state parent is a finite tensor SOS at every independently chosen
+projective testing pair, with both signs, literal zero/infinite angles,
+and real or complex states. These are precisely the unchanged R5 source
+hypotheses. There is no comparison of source and testing rates.
+\end{theorem}
+
+\paragraph{Source entry and all gaps.}
+Put $a=z/B$ and $g=G/B=1-a(1-r-H)$. Since $r,H$ are infinitesimal,
+$g>0$ implies $a$ bounded and $a_0\in[0,1]$. Write $\rho=a_0$,
+$\chi=h_0\in(0,1)$, $\tau=t_0>1-\chi$ and $\ell=1-\chi$,
+$\delta=\tau-\ell>0$. The inequality for $\tau$ follows from $j$
+being a positive unit. The exact source formulas WE1 give jointly
+\[
+\begin{gathered}
+ (nr)_0={1\over2(1+\rho)},\quad
+ A_0={\tau\over2\chi(1+\rho)},\quad
+ C_0={\chi+\tau-\rho\ell\over2\ell(1+\rho)},\\
+ D_0={1\over2(1+\rho)\delta},\quad
+ (\alpha/B^2)_0={\chi+\tau-\rho\ell\over2(1+\rho)}.
+\end{gathered}       \tag{R5.1}
+\]
+All displayed quantities are positive units; $n$ is unbounded and
+$\alpha$ infinitesimal. Thus literal $n=0$ is impossible on this shape,
+by the exact identity $r(2n+1)\asymp1$, rather than being discarded.
+If $\rho<1$, $\mu=m/a^2$ is bounded with residue
+$1/[2(1-\rho^2)]$. If $\rho=1$, $g$ is infinitesimal,
+$m$ unbounded and $(mg)_0=1/4$. These statements retain arbitrary
+independent $r,g,B$ openings. In particular the source is automatically
+in the positive-infinitesimal total-scale regime. No nonemptiness of
+the residual intersection is asserted.
+
+\paragraph{An exact centered-excess identity for the entire Gram.}
+Use the unnormalized version of the established complete WA3--WA8 identity,
+with roots
+\[
+ \xi=X+ruZ,\quad\eta=Y-huW,\quad
+ R_1=uW-t^{-1}vZ,\quad R_2=vW-a^{-1}uZ,\quad T=uvW-BZ.
+\]
+Let $G$ be its five-by-five matrix, so $F/4={\cal R}^TG{\cal R}$.
+Both complete normal rows and the complete hard block are included.
+Write the original $m$ event as $M=vW-X+uvY-uZ$. Its centered row is
+\[
+ R_{mc}=M-gvW=-\xi+uv\eta+(1-g)R_2+huT.             \tag{R5.2}
+\]
+The equality uses $1-g=a(1-r-H)$ and $H=hB$. It vanishes at the
+actual contact. Put $L_m=(-1,uv,0,1-g,hu)^T$.
+For any positive real $K<m$, there is the exact matrix identity
+\[
+ G=G\big|_{m=K}+(m-K)L_mL_m^T+(m-K)g\,H_m,          \tag{R5.3}
+\]
+where the only nonzero entries of $H_m$ are
+\[
+ (H_m)_{14}=(H_m)_{41}=-1,\quad
+ (H_m)_{25}=(H_m)_{52}=v,\quad
+ (H_m)_{44}=2-g,\quad
+ (H_m)_{45}=(H_m)_{54}=hu.                           \tag{R5.4}
+\]
+All other actual source coefficients, especially $\alpha/B^2$, remain
+fixed in $G|_{m=K}$. This is a formal matrix substitution, not an assertion
+that a modified source is physical or satisfies contact. Equivalently,
+at the original event level,
+\[
+ mM^2-(m-K)R_{mc}^2
+ =KM^2+2(m-K)g\,vWM-(m-K)g^2v^2W^2.                \tag{R5.5}
+\]
+The retained square contains every radial and normal jet of the excess.
+Equations R5.3--R5.4 prove boundedness of the remainder directly; no
+Hessian-subtraction premise is imported.
+
+\paragraph{All infinitesimal or zero testing angles.}
+If $\rho\in(0,1)$, apply the pure-source congruence replacing $\xi$ by
+$\widehat\xi=\sqrt n\xi$. Every coefficient is bounded: $nr$ is
+bounded, $nr^2$ infinitesimal, $a,t$ bounded units, and $A,C,D,m$ and
+$\alpha/B^2$ bounded. At $u=v=0$ the full residue consists of a unit
+$\widehat\xi$ pivot, a positive $m_0$ pivot on $R_2$, a positive
+$(\alpha/B^2)_0$ pivot on $T$, and the $\eta,R_1$ block
+\[
+ \begin{pmatrix}
+ A_0+C_0+D_0+1/2&-(C_0+D_0+1/2)(1-\chi)+A_0\chi\\
+ -(C_0+D_0+1/2)(1-\chi)+A_0\chi&
+ (C_0+D_0+1/2)(1-\chi)^2+A_0\chi^2
+ \end{pmatrix}.                                    \tag{R5.6}
+\]
+Its determinant is $A_0(C_0+D_0+1/2)>0$.
+
+If $\rho=0$, replace $R_2$ by $aR_2$ as in WE4--WE5.
+The exact divisibility $(b_2-\alpha/B^2)/a$ from WE3 holds for arbitrary
+$h$ and $r$; its canceled denominator is a unit at $a=r=B=0$ with
+$h,l,t,j$ units. Hence every coefficient remains bounded, including
+all full normal entries. The $R_2$ pivot becomes $\mu_0=1/2$;
+R5.6 and the other pivots remain positive. No $h/a$ bound is used.
+
+If $\rho=1$, retain $(m-K)R_{mc}^2$ using R5.3, for any fixed
+positive real $K$. Since $a$ is a unit, all coefficients in the
+remainder are bounded after $\widehat\xi=\sqrt n\xi$.
+The constant $\widehat\xi,R_2$ coupling is infinitesimal, while
+its $R_2$ pivot has residue $K+2(mg)_0=K+1/2$.
+All other zero-angle pivots are R5.6, $1$, and $(\alpha/B^2)_0$.
+Thus the complete remainder has strict residue in every source case.
+The finite separated Gram lift WA10 applies for independent infinitesimal
+$u,v$, including zeros and either sign. Adding the retained exact square
+proves the complete local parent without any state restriction.
+
+\paragraph{The finite remote determinant when $\rho<1$.}
+For bounded tests, normalize $\widehat X=\sqrt nX$ in the original
+parent. Its hard residue is $(1+U)(1+V)\widehat X^2$, and the remaining
+three-state form on $(W,Y,Z)$ is
+\[
+\begin{split}
+ P={}&m_0(vW+uvY-uZ)^2+C_0(1+V)(uW-Y)^2
+   +A_0(1+U)(1+V)Y^2+D_0(uW-Y-vZ)^2\\
+ &+\tfrac12\{(uW-Y-vZ)^2+(1+U)(vY-Z)^2
+        +(1+V)U Z^2-(1+U)(1+V)Z^2\},                
+\end{split}\tag{R5.7}
+\]
+where here $u,v$ denote the real testing residues and $U=u^2,V=v^2$.
+Set
+$\mathcal D=8\chi(1-\rho)(1+\rho)^3\ell\delta>0$.
+The exact determinant of its symmetric matrix is
+\[
+ { (1+U)(1+V)\over\mathcal D}
+ \left[(\chi+\tau)(\tau U-\rho V)^2
+ +(\chi+\tau-\rho\ell)
+ \{\tau\delta U^2V+[\chi+(1-\rho)\tau]UV^2\}\right]. \tag{R5.8}
+\]
+For $U,V>0$ it is strictly positive. For $U>0,V=0$ it is strictly
+positive; for $U=0,V>0$ it is strictly positive when $\rho>0$.
+The restriction of R5.7 to $Z=0$ is strictly positive in these cases:
+its signed core there is
+$\tfrac12[(uW-Y)^2+(1+U)VY^2]$, and the $A,C,m$ packets supply
+the stated two-state rank. This restriction and R5.8 prove strict
+positive definiteness of the entire three-state residue. All source
+coefficients are bounded, so WA10 around the real testing residues
+proves these complete remote charts.
+
+\paragraph{Finite remote tests with the unbounded m opening.}
+Let $\rho=1$ and extract the exact square in R5.5 before normalizing
+$\widehat X=\sqrt nX$. Its remainder has bounded coefficients.
+At a real testing pair, its three-state residue is
+\[
+ B_{\rm fin}+K M_0^2+2\kappa vW M_0,\qquad
+ M_0=vW+uvY-uZ,\quad\kappa=1/4,                     \tag{R5.9}
+\]
+where $B_{\rm fin}$ is R5.7 with the $m_0$ packet omitted and
+$A_0,C_0,D_0$ evaluated at $\rho=1$.
+For $U,V>0$, restrict to $M_0=0$, so $W=uZ/v-uY$.
+Its two-state determinant equals $V^{-1}\lim_{\rho\uparrow1}
+\det(P)/m_0$. Formula R5.8 gives
+\[
+ { (1+U)(1+V)\over16\chi\ell\delta V}
+ \left[(\chi+\tau)(\tau U-V)^2
+ +(\chi+\tau-\ell)\{\tau\delta U^2V+\chi UV^2\}\right]>0.\tag{R5.10}
+\]
+At $Z=0$ on that kernel, $W=-uY$ and the positive $A,C$ terms,
+together with the nonnegative signed-core restriction, give a positive
+$Y^2$ coefficient. Hence $B_{\rm fin}|_{M_0=0}$ is positive definite.
+When $u=0,v\ne0$, the kernel is $W=0$ and its form is
+$(A_0+C_0+1/2)(1+V)Y^2+D_0(Y+vZ)^2\succ0$.
+When $v=0,u\ne0$, the kernel is $Z=0$ and its form is
+$(C_0+D_0+1/2)(uW-Y)^2+A_0(1+U)Y^2\succ0$.
+For each such real test pair, elementary real completion on the
+transverse coordinate $M_0$ now gives a sufficiently large positive
+real $K$ for which R5.9 is strictly positive definite. This choice is
+legal: $m$ is unbounded, so $m-K>0$ for every real $K$; $K$ never
+compares a source rate with a testing rate. Use that $K$ in the exact
+full-parent identity R5.5 and apply WA10 to the bounded remainder.
+
+\paragraph{The small-a first-axis chart.}
+The only finite remote case left is $\rho=0$, $u_0=0$, $v_0\ne0$.
+Use the five roots
+\[
+ S=aW,\quad R=uW,\quad \widehat X=\sqrt nX,\quad Y,\quad Z
+\]. Write the original $m$ packet as
+$\mu(vS-aX+auvY-auZ)^2$ and replace $uW$ everywhere else by $R$.
+This is exactly the complete identity WE8 with unnormalized $Y$ and
+$A(1+u^2)(1+v^2)Y^2$ retained. All coefficients are bounded.
+The residue has separate pivots $\mu_0v_0^2$ on $S$ and
+$1+v_0^2$ on $\widehat X$. Its remaining $(R,Y,Z)$ form is
+\[
+ C_0(1+V)(R-Y)^2+A_0(1+V)Y^2+D_0(R-Y-vZ)^2
+ +\tfrac12\{(R-Y)^2+VY^2-2vRZ\}.                  \tag{R5.11}
+\]
+Its restriction to $Z=0$ is positive definite and its determinant is
+\[
+ {V^2(\chi+\tau)^2(1+V)\over8\chi\ell\delta}>0.    \tag{R5.12}
+\]
+This supplies the required strict full residue at the literal axis too.
+
+\paragraph{Every reciprocal chart and literal infinity.}
+For unbounded $u$ put $p=1/u$ and use the polynomial parent $p^2F$.
+If $v$ is bounded, the $\widehat X$ residue is $1+V$ and the other
+three-state residue is exactly
+\[
+ [C_0(1+V)+D_0+1/2]W^2+A_0(1+V)Y^2
+                         +(m_*+1/2)(vY-Z)^2,         \tag{R5.13}
+\]
+which is strict for every real $v$. Here $m_*=m_0$ when bounded,
+and $m_*=K$ after centered extraction if $g$ is infinitesimal.
+The additional centered correction in R5.5 has a factor $p$ and
+vanishes in residue. This covers $p=0$ literally.
+
+For unbounded $v$, write $q=1/v$ and use $q^2F$. If $u$ is bounded,
+the $\widehat X$ pivot is $1+U$ and the other residue is
+\[
+ m_*(W+uY)^2+C_0(uW-Y)^2+(A_0+1/2)(1+U)Y^2+D_0Z^2.\tag{R5.14}
+\]
+For $\rho<1$ this is strict unless $\rho=u_0=0$. For $\rho=1$,
+the bounded correction is $2\kappa W(W+uY)$; its restriction to
+$W+uY=0$ is strict, and a sufficiently large real $K$ again makes
+the entire residue strict. If $\rho=u_0=0$, use $S=aW,R=uW$,
+$\widehat X,Y,Z$ as above in the complete WE10 identity. Its residue is
+\[
+ \widehat X^2+\mu_0S^2+C_0(R-Y)^2+(A_0+1/2)Y^2+D_0Z^2\succ0.
+                                                               \tag{R5.15}
+\]
+Every coefficient of this entire polynomial chart is bounded.
+
+Finally, if both angles are unbounded, use $p=1/u,q=1/v$ and
+$p^2q^2F$, with the five roots $\widehat X,W,Y,P=pZ,Q=qZ$.
+The exact signed-core part after homogeneity is one half of
+\[
+ (qW+X-pqY-P)^2+(1+p^2)(Y-Q)^2
+                    +(1+q^2)(p^2X^2+2XP-P^2).       \tag{R5.16}
+\]
+All other original packets are retained in their homogeneous forms;
+in particular the $m$ packet is $(pW-pqX+Y-Q)^2$ and its centered
+row subtracts $gpW$. After $\widehat X=\sqrt nX$ and any needed
+centered extraction, the complete residue is
+\[
+ \widehat X^2+C_0W^2+A_0Y^2+D_0P^2
+                                  +(m_*+1/2)(Y-Q)^2\succ0.       \tag{R5.17}
+\]
+Its coefficients are bounded; the centered correction again contains
+$p$ and vanishes in residue. Both $p=0$ and $q=0$ are literal
+polynomial values. The roots $P,Q$ need not be independent to use
+this positive Gram.
+
+\paragraph{Join and tensor legality.}
+The local chart, finite remote cases, the one small-a finite axis,
+each single reciprocal chart and the double reciprocal chart exhaust
+all independently chosen testing types. Every use of WA10 whitens a
+strict pure-source matrix at real testing residues and splits finitely
+many bounded-source times infinitesimal-testing coefficients into
+positive pure-source/pure-testing products. There is no mixed inverse
+or radical. The roots themselves use only pure-source radicals such
+as $\sqrt n$ and pure-testing monomials. Exact positive excess squares
+are restored in every chart. Away from literal endpoints, homogeneous
+restoration uses only pure-testing squares; at the endpoints the
+polynomial value is used. The real identities apply separately to real
+and imaginary state parts. All four original state coordinates, both
+normal directions, all hard couplings, arbitrary source openings and
+the unchanged physicality/total-scale/prior-exclusion intersection
+have therefore been retained. This is an all-tests admission of R5.

@@ -1,0 +1,175 @@
+\chapter{C14.2: bounded $h/\sigma$ with positive $\lambda$, all states}
+\label{component:p021ed4a9e0db}
+\noindent\textbf{Component }\path{p021ed4a9e0db}\par
+{\small\noindent Source: \path{BASE/inherited_r19/proofs/c142_sphere/bounded_H_positive_lambda_all_states.tex}\par}
+{\small\noindent SHA256: \path{021ed4a9e0dbaff0b9efaa87cabf5620db15d898efbbf031f113139ada5cf141}\par}
+{\small\noindent Inventory use: HP1--HP10 | C14\_\allowbreak{}ENTIRE\_\allowbreak{}ORIGINAL\_\allowbreak{}PARENT\_\allowbreak{}GRAPH; precise subordinate uses retained below\par}
+\medskip
+\section{C14.2: bounded $h/\sigma$ with positive $\lambda$, all states}
+\label{p021ed4a9e0db:sec:r19-c142-positive-lambda}
+
+Retain the original C14.2 source and all its intersections, and the
+complete small-angle corner $u,w\in\mathrm{Inf}$.  Suppose
+$H=h/\sigma$ is bounded and $\lambda>0$.  This section proves the
+entire original parent for every testing state.  It retains literal
+$D=0$, every source-sphere opening, and every allowed coefficient
+boundary.  The source case $\lambda\le0$ is a separate obligation.
+
+Use the exact SP6/BS2 parent, with the complete C-opening extraction
+LC3 and the actual radial frame HG7.  The source estimates proved
+in HG3--HG5 and the SP definitions give
+\[
+ \rho=\lambda x/\sigma\ge0,\quad \rho\in\mathcal O_c,
+ \quad d=4D/\sigma^2,\quad
+ d+\rho\sim2H_0,
+ \quad K_A=4\kappa H-\lambda\sim2H_0>0.
+ \tag{HP1}
+\]
+Here $\lambda,\chi,\nu$ are bounded and $\lambda x=\rho\sigma$
+is infinitesimal.  The source $q=\sqrt z$ is a unit.  The complete
+parent outside already positive rows consists of its strict hard/radial
+frame, $d\Gamma^2+K_A A_\theta^2+\chi uA_\theta R$, the complete
+Gamma normals, and the signed packet
+\[
+ \mathscr P=\lambda\sigma P_\beta^2+
+      \rho(u^2-x)(w^2-\sigma z)W^2.
+ \tag{HP2}
+\]
+No source or testing rate is compared across the two fields.
+
+\paragraph{A ternary circuit that supplies an actual difference pivot.}
+The original-core sign exit and exact testing gauges reduce the
+remaining real states to $u,w,W,Z>0$.  Literal axes and $WZ\le0$
+already have direct original-core SOS.  Let
+\[
+ a=\sqrt{\lambda\sigma}\,uZ,\qquad
+ b=\sqrt\rho\,uwW,\qquad
+ c=\sqrt{\lambda z}\,xW,\qquad g=(abc)^{1/3},
+ \qquad r^3=\frac{wZ}{zuW}.
+\]
+Every radical and quotient is a product of explicitly positive
+pure-source and pure-testing factors.  Direct expansion gives
+\[
+ \boxed{\quad
+ \mathscr P+\lambda xR^2
+ =a^2+b^2+c^2-3g^2
+  +\lambda xzu^2W^2 r^2(r-1)^2(r^2+2r+3).
+ \quad} \tag{HP3}
+\]
+The last term is a finite legal SOS since $r^2+2r+3=(r+1)^2+2$.
+There is a stronger exact decomposition of the first term:
+\[
+ a^2+b^2+c^2-3g^2
+ =\tfrac12\{(a-b)^2+(b-c)^2+(c-a)^2\}
+       +(ab+bc+ca-3g^2).
+ \tag{HP4}
+\]
+The final parenthesis is itself a finite legal SOS.  Indeed, put
+$\alpha=(ab)^{1/3}$, $\beta=(bc)^{1/3}$,
+$\gamma=(ca)^{1/3}$.  It is exactly
+\[
+ \tfrac12(\alpha+\beta+\gamma)
+    \{(\alpha-\beta)^2+(\beta-\gamma)^2+(\gamma-\alpha)^2\}.
+ \tag{HP5}
+\]
+Expand the positive prefactor into its three monomial terms before
+taking square roots; there is no radical of a mixed sum.  Thus HP3
+supplies a genuine unit-weight pivot
+$D_1=(a-b)/\sqrt2$, with every other displayed row retained.
+The small subtraction $-\lambda xR^2$ is an infinitesimal Gram
+perturbation of the strict radial frame.
+
+\paragraph{The source-sphere split.}
+If $d_0$ is a positive unit, $d\Gamma^2$ supplies a strict Gamma
+pivot.  Every complete Gamma normal in SP6/LC3 carries $u$, $w$
+or $\sigma$ and has a bounded remaining coefficient.  Hence all
+these normals are infinitesimal entries on the strict hard/radial,
+Gamma and angular frame.  Retain all of HP3 as separate SOS.
+Together with $K_A\sim2H_0$ this closes this source case for every
+state, without any state quotient.
+
+It remains that $d_0$ is infinitesimal, including $D=0$.
+Then $\rho$ is a positive unit by HP1.  If $W/Z$ is unbounded,
+the full-parent HG certificate applies.  Thus consider bounded
+$f=W/Z$.  The next argument supplies every missing Gamma normal
+without imposing a positive pivot on $\Gamma$.
+
+\paragraph{A quadratic domination conductor, without a mixed inverse.}
+Put $k=\sqrt x$, and define
+\[
+ T=q u(u-k)W,\qquad \delta=w/q>0,
+ \qquad T_1=\sqrt\delta\,T.
+\]
+All these roots are separated and $\delta$ is infinitesimal.
+The exact circuit and angular identities are
+\[
+ u\Gamma=\frac{\sqrt2 k}{\sqrt\rho}D_1-\delta T,
+ \tag{HP6}
+\]
+\[
+ A_\theta^2-T^2
+   =q^2(u-k)^2W^2(k^2+2uk)
+   =(qk(u-k)W)^2+2(q\sqrt u\sqrt k(u-k)W)^2.
+ \tag{HP7}
+\]
+Reserve the infinitesimal part $\delta A_\theta^2$ of the strict
+angular diagonal.  Exactly,
+\[
+ K_A A_\theta^2=(K_A-\delta)A_\theta^2
+         +T_1^2+\delta(A_\theta^2-T^2).
+ \tag{HP8}
+\]
+The final term is a legal SOS by HP7; the first coefficient has
+unchanged positive residue.  Thus $T_1$ is a genuine additional
+unit-weight pivot, paid for exactly once from the angular row.
+HP6 becomes the bounded infinitesimal allocation
+\[
+ u\Gamma=\frac{\sqrt2 k}{\sqrt\rho}D_1
+                   -\sqrt\delta\,T_1.
+ \tag{HP9}
+\]
+This avoids division by $u+k$.  A pointwise bound on
+$u/(u+k)$ alone would not be a legal tensor allocation.
+
+The other full Gamma normal has the exact state conductor
+\[
+ qw\Gamma=qzf\,u\Gamma+z(\sigma-uwf)R.
+ \tag{HP10}
+\]
+Its first coefficient is bounded and the second is infinitesimal.
+Together HP9--HP10 allocate both $u\Gamma$ and $qw\Gamma$ with
+infinitesimal coefficients on $(D_1,T_1,R)$.  The only state
+inverse used is the pure-testing $Z^{-1}$ in the bounded quotient
+$f$; no source/testing expression is inverted.
+
+\paragraph{Full-parent reassembly.}
+The entire Gamma coupling in SP6 is
+\[
+ -4\nu N_x(u\Gamma)+R_\gamma(N_y+bR)(qw\Gamma).
+\]
+LC3 adds only its recorded bounded-$t_C$ correction to the same
+$qw\Gamma$ normal and to $\sigma R$.  Substitution of HP9--HP10
+makes every one of these couplings infinitesimal on the strict frame
+\[
+ (N_x,J_C,J_\ell,A_\theta,D_1,T_1).
+\]
+HG7 supplies the radial/hard positive source rows; all divergent
+$a,\ell$ angle-dependent excesses and the centered C excess are
+retained as in HG.  The other complete SP5 couplings and
+$\chi uA_\theta R$ are bounded infinitesimals.  The subtraction
+$-\lambda xR^2$ is infinitesimal by HP1.  Consequently the whole
+frame has strict positive residue.
+
+Retain exactly once every remaining positive row: $d\Gamma^2$,
+$4bpzu^2\Gamma^2$, $2(2D+1)(uX_e)^2$, the original beta packet,
+the unused HP3--HP5 circuit rows, the HP7 remainder from HP8, and
+all source-cap excesses.  In particular the $(a-b)^2/2$ row and
+the angular fraction used for $T_1$ are not counted twice.
+The separated bounded-Gram lemma now proves the complete parent.
+
+The two sphere cases exhaust the source, and the bounded/unbounded
+$W/Z$ alternatives exhaust the states after the direct sign/zero
+exits.  Real/imaginary splitting gives all complex states.  Thus all
+remaining C14.2 tests are admitted on bounded $H$ and $\lambda>0$.
+The result is conditional only on the explicitly stated source split,
+not on an unproved state-rate comparison.

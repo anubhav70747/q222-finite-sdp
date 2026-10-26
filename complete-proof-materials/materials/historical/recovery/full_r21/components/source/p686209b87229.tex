@@ -1,0 +1,212 @@
+\section[C1 with both L and eta units]{C1 with both $L$ and $\eta$ units}
+\label{sec:r7-c1-L-eta-unit}
+
+\begin{theorem}
+For the original C1 source with $x\in\Inf_{>0}$ and both
+$L=x\zeta$ and $\eta$ positive bounded units, the entire original
+parent is tensor-SOS for every independent projective testing pair.
+All original positive openings and literal $\beta=0$ are included.
+\end{theorem}
+
+The exact source formulas force $D$ strong on this subdomain, so
+$D=0$ is absent by source implication.  No opening is removed by
+an extra hypothesis, and the proof does not invoke a table or atlas.
+
+\paragraph{The source and the only testing strip left by four events.}
+Use the exact shared geometry (LC1), and write $\rho=r_n$ for the
+native shape parameter and $r=1-\theta$ for the geometric one.
+Thus
+\[
+ B=L,\quad y=B\eta,\quad H=B\rho=B-yt,\quad
+ t=(1-\rho)/\eta,\quad j=1+zr-t,
+ \quad z=x\in\Inf_{>0}.
+\]
+Here $B,y,\eta$ are units.  For the boundary coefficient formulas
+below set
+\[
+ P=1+B+y,\qquad P_4=1+B(1-\rho),\qquad S=H+y=P-P_4.
+                                                               \tag{LU1}
+\]
+All three quantities are positive units, uniformly through
+$\rho\to0$, $1-\rho\to0$, $j\to0$, and $1-H\to0$.
+The native formulas imply that $D,C,A,\alpha$ are strong.
+One forward cyclic relabeling sends these four consecutive events
+to $C,A,\alpha,m$ and sends testing coordinates to
+$(u',v')=(v,1/u)$.  The full-parent four-consecutive theorem
+(CE11)--(CE16) therefore covers every test except
+\[
+                    u\in\Inf,\qquad v\text{ a bounded nonzero unit}.
+                                                               \tag{LU2}
+\]
+The cycle is the inverse of (CE9)--(CE10), so its literal endpoint
+scope is the original homogeneous parent's scope.
+
+It remains to prove (LU2).  All roots and coefficients used below
+are valid for both testing signs, including literal $u=0$.
+
+\paragraph{A bounded full-parent remainder with every opening retained.}
+Use the graph, harmonic roots and gauge (LII2)--(LII8), with
+$k=\sqrt y$ now a source unit.  The bounded source data are
+\[
+ c=Cyt,\quad d_p=Dyj,\quad
+ \mu=m/z^2,\quad \sigma=\alpha(1-H),\quad
+ \tau=\beta(1-r),\quad A_H=AH.
+\]
+They are bounded; $c,d_p,\mu,\sigma,A_H$ are units.  In residue,
+with the boundary symbols of (LU1), their exact values are
+\[
+ c=\frac S{2P},\quad d_p=\frac{BP_4}{2P},\quad
+ \mu=\frac{Sr(1+y)}{2B^2P},\quad
+ \sigma=\frac{BS}{2P},\quad A_H=\frac{yP_4}{2P},\quad
+ \tau=\frac S{2P}-\frac{1-r}{2}.                         \tag{LU3}
+\]
+These are residue identities, not substitutions of source and
+testing fields.  They are obtained after multiplying away every
+possibly small opening in the exact native formulas.
+Since $\tau\ge0$, $r\ge P_4/P$ in residue and is a positive unit.
+Also $t+j\sim1$, so $\ell=y(C+D)$ has a positive lower bound,
+$q=D/(C+D)$ is bounded in $[0,1]$, and
+$g=yCD/(C+D)$ is a positive unit.
+
+Choose positive bounded caps $\ell_*\le\ell$,
+$A_*\le A$, and $\alpha_*\le\alpha$.  Choose a bounded cap
+$0\le\beta_*\le\beta$ as specified below.  Retain the five
+contact-centered positive packets
+\[
+\begin{gathered}
+ 4(\ell-\ell_*)N^2,\qquad 4CV\eta_t^2,\qquad
+ 4(A-A_*)D_uD_v\eta_t^2,\qquad
+ 4(\alpha-\alpha_*)D_u(v\eta_t-\zeta)^2,\\
+ 4(\beta-\beta_*)D_v(\xi+u\zeta+R/B)^2,
+ \qquad \eta_t=k(N+qR_h),\quad R=v(U-z)W.
+                                                               \tag{LU4}
+\end{gathered}
+\]
+The exact remainder is (LII6), with its $n$ line deleted, its $A$
+packet replaced by
+\[
+ 4A_*D_uD_v\eta_t^2
+ +\frac{8A_H}B D_uD_vuW\eta_t
+ +\frac{4A_HH}{B^2}D_uD_vUW^2,
+                                                               \tag{LU5}
+\]
+and with (LC4) plus $4\beta_*D_v(\xi+u\zeta+R/B)^2$ added.
+This specifies every coefficient of the full remainder.  Only
+bounded source products occur, even at an unbounded original weight.
+
+The same dependent-root gauge and exact contact equations give
+(LII9)--(LII13).  The new constant scalar coefficients are
+\[
+ \frac{d_s+e_sV}{z^2}=
+ \frac4{B^2}\left[
+ \mu(B+zr)^2+
+ \left\{\frac{r^2}{2}-\tau(1+r)+\beta_*\right\}(1+V)
+ \right].                                                   \tag{LU6}
+\]
+The support $P_\xi\in(U,z)$ and scalar degree at most two in $U$
+remain exact.  Apply all of (LII15).  As $v$ is a unit, eliminate
+$T$ by the exact pure-factor identity
+\[
+                        T=(uk/v)R.                         \tag{LU7}
+\]
+Its coefficient is a bounded infinitesimal tensor.  Thus the entire
+remainder has a bounded Gram on
+$(N,\zeta,R_h,\xi,R)$.  No source/testing ratio or mixed inverse
+has been introduced.  We now verify its complete residue.
+
+\paragraph{A three-square identity supplies all three state/angle normals.}
+The following boundary computation is an exact rational identity
+before taking any opening limit.  Define
+\[
+\begin{aligned}
+ C_0&=\frac{\rho+\eta}{2(1-\rho)P},&
+ A_0&=\frac{\eta P_4}{2\rho P},\\
+ D_0&=\frac{P_4}{2(\eta-1+\rho)P},&
+ \alpha_0&=\frac{B^2(\rho+\eta)}{2(1-B\rho)P}.
+\end{aligned}
+\]
+These may have unbounded openings; only the final capped identity
+below is used as a bounded Gram.  For an indeterminate $p$, put
+\[
+ e=Y-\rho p,\qquad f=Z-vp/B,\qquad T_v=(V-y)p.
+\]
+The entire leading three-state form is exactly
+\[
+\begin{split}
+ &4C_0D_v(p-Y)^2+4A_0D_vY^2
+ +(4D_0+2)(p-Y-vZ)^2+(4\alpha_0+2)(vY-Z)^2-2D_vZ^2\\
+ &\quad=\frac{4D_0}{B^2}(T_v+Be+Bvf)^2
+       +4\alpha_0(f-ve)^2+4(C_0+A_0+\tfrac12)D_ve^2.
+\end{split}                                                    \tag{LU8}
+\]
+This identity holds for every $v$, not only near the actual Bob
+angle.  In the contact allocation at $z=u=0$,
+$e=k(N+qR_h)$ and $T_v=-B(kR_h+v\zeta)$.
+Subtract the residue contributions of the retained packets (LU4).
+The harmonic identity then gives the complete three-normal block
+\[
+ \boxed{4\ell_*N^2+4gR_h^2
+ +4(A_*+\tfrac12)D_vy(N+qR_h)^2
+ +4\alpha_*\{\zeta-vk(N+qR_h)\}^2.}                     \tag{LU9}
+\]
+It has strictly positive residue on $(N,\zeta,R_h)$ because
+$\ell_*,g,\alpha_*$ are positive units.  No normal has been
+suppressed.  Every rational cancellation used to obtain (LU9)
+has bounded source products on both sides, so the identity extends
+continuously through every opening listed after (LU1).
+
+\paragraph{The remaining two-root block and a finite cap.}
+There is no finite residue coupling between these three roots and
+$(\xi,R)$.  Such terms carry $u$, $z$, or the coefficient in (LU7).
+For completeness, the exact first-normal support gives this block
+without dropping a term.  To first order in $(U,z)$ write
+$P_\xi=UA(V)+zZ(V)$; both coefficient functions are affine in $V$,
+and
+\[
+ Z(V)=\frac{D_v}{B}(-4r+8\tau-8\beta_*).
+\]
+The exact contact equation gives $A(y)+Z(y)=0$ in residue.
+After the first allocation of (LII15), the coefficient of $\xi R$
+is therefore $A(V)-(V-y)(A'+Z')=-Z(V)$.
+Using (LU3) and (LU6), the complete block is
+\[
+ M_{\xi R}=
+ \begin{pmatrix}
+ 2D_v(1+2\beta_*)&\dfrac{2D_v}{B}(P_4/P+2\beta_*)\\[1mm]
+ \dfrac{2D_v}{B}(P_4/P+2\beta_*)&
+ \dfrac2{B^2}\{(P_4/P+2\beta_*)D_v-(S/P)r(V-y)\}
+ \end{pmatrix}.                                           \tag{LU10}
+\]
+Here all letters denote real residues when positivity is assessed.
+
+If $\beta$ is bounded, take $\beta_*=\beta$.  The native relation
+$(1-r)(2\beta+1)=S/P$ follows from (LU3), and (LU10) has determinant
+\[
+ \frac{4S D_v}{B^2P}(1+2\beta)r(1+y)>0.                 \tag{LU11}
+\]
+Its first diagonal entry is positive, including $\beta=0$.
+If $\beta$ is unbounded, take $\beta_*$ to be a sufficiently large
+positive real cap.  Increasing it adds the positive square
+$4\beta_*D_v(\xi+R/B)^2$.  On its kernel $\xi=-R/B$,
+the uncapped block equals
+\[
+          \frac{2S}{B^2P}\{1+ry+(1-r)V\}R^2>0.           \tag{LU12}
+\]
+The elementary real two-by-two Schur argument therefore supplies
+a finite cap making (LU10) strictly positive.  Unboundedness of the
+original $\beta$ permits that cap.
+
+Together (LU9)--(LU12) prove strict positive residue of the full
+five-root Gram.  The bounded Gram lemma gives its tensor SOS;
+restoring (LU4) proves (LU2).  The cyclic four-event complement
+completes every testing chart and original projective endpoint.
+
+\paragraph{Verification scope.}
+The checker verifies the exact three-square state identity, all three
+capped normals, both explicit two-root positivity formulas, the scalar
+coefficient and support assertions, and prints the full extracted
+first-normal and scalar polynomials.  The exact source contact and
+monic contact divisions are the unchanged full-parent argument of
+(LII7)--(LII15), with the bounded modifications (LU4)--(LU6).
+This theorem closes the $L$-unit, $\eta$-unit subdomain of C1.4;
+the $\eta$-unbounded subdomain is not included.

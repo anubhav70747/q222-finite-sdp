@@ -1,0 +1,64 @@
+ChatGPT said:
+
+EL/NU Endpoint Proof, Part 2 of 2
+The following is the complete remaining text from lines 357–377 of the saved EL_NU_Endpoint_Proof.md, including the external dependencies, reproducibility record, and independent whole-parent checks.
+
+External dependencies for these two endpoints: the actual native source/contact equations SD9–SD11 and the source sphere SE2–SE3; the already explicit CE2–CE10 adjacent-event whole-parent identity; EB4–EB7 homogeneous unmatched-Bob whole-parent identity; and FU8–FU9 plus FU14–FU15 whole-parent finite-Bob Schur allocation. The last three are complementary tests, not unproved local endpoint normal coefficients. None depends on the CA/SE base, BN/UN, or the other C1 partition cells. The qualitative tensor claim for these two endpoints is proved, but no assertion about other C1 sectors or the global finite lift is made.
+Reproducibility
+verify_el_parent.py and verify_parent_blocks.py expand the complete original quarter parent, including both state normals and all hard coefficients, before any source specialization. verify_budgets.py checks both NU10 identities, NU15, MB3, the explicit EL8 nonnegative SOS difference, EL7, EL9–11 and EL18. verify_el_quotients.py checks all four exact EL20 divided-coefficient identities. verify_nu_outer.py checks the NU25/NU26 strict finite-Bob factorization. The checker uses symbolic rational identities and no numerical tests or solver sweeps. The source-field contact jets invoked in the proof are established using the original SD9–SD11 stationary equations and exact contact-zero packets, not by selecting an independent testing angle.
+Independent whole-parent checks for the complementary identities
+For the adjacent-event exit, introduce $B_t=X+uZ$, $R_t=uW-Y$, $V_t=vZ$. The original complete signed core $K$, prior to any event cap, obeys the exact identity
+$K=(R_t+uvB_t)^2+D_vB_t^2+D_uv^2Y^2+D_uu^2V_t^2-2D_uuV_t(W+vB_t),$
+which is CE2 and is checked by substitution in verify_remote_core.py. Homogenizing at Bob infinity gives the complete CE6 polynomial, also verified by that script. The real constrained kernel of the two original strong $C,A$ event rows is strictly positive at every noninfinitesimal Alice residue; adding sufficiently large finite real event caps supplies a strict bounded Gram, with each excess retained as its original square. This is the only ingredient imported into the first remote exit.
+The exact Bob-homogeneous unmatched frame used for EL may be verified without a scalar-det shortcut: with $c^2+s^2=1$, the normalized pure-testing core is
+$K_B=[c(uW-Y)+s(uX-Z)]^2+D_u(sY-cZ)^2+(X+uZ)^2-D_uZ^2.$
+Completing its $(X+uZ,usZ)$ block gives EB5's exact $N_b,N_r$ squares. The original $m,D,\alpha$ rows expand to EB6's three complete event squares; the residual harmonic $C,A$ completion is $N_y^2+a_hp^2$ with $a_h=SCA/(C+A)\sim1/2$. Thus EB7 is the entire quarter-parent and has the six-root matrix quoted above, not a state-normal restriction.
+For the NU finite-Bob join one can likewise verify FU8–FU9 directly, independently of any source value: write $B_0=X+uZ$, $Y=ruW+s_yN_y$ with $s_y^2=Sr(1-r)$, $T=\kappa W$, $U=uZ$, $P=uW/\sqrt S$, $Q=\sqrt S Z$. The original $D$-event becomes exactly
+$\left[
+(1-r)\sqrt S P+uvB_0
+-\frac{(1+u^2)vQ}{\sqrt S}
+-s_yN_y
+\right]^2,$
+and the original capped $m$-event is
+$\left[
+\frac{v(1+ru^2)T}{\kappa}
+-B_0+uvs_yN_y
+\right]^2.$
+Expansion of all seven terms in (P), together with $C=c_0/[S(1-r)]$, $A=a_0/(Sr)$, $D=Sd_0$, $\alpha=Sa_1$, gives FU8's scalar, FU9's entire $N_y$ linear row, and FU9's $N_y^2$ hard coefficient. verify_fu_parent.py checks these three polynomial equalities without stationarity substitutions. In the NU source the canceled coefficients have bounded residue as specified above, so the strict finite-real-gauge criterion from NU25 applies to an actual full-state Gram.
+
+Verification boundary of the recovered proof
+The saved proof distinguishes the following levels of evidence:
+Dependencies
+Status in recovered package
+
+CE2, CE6
+Explicit full-core identities, with saved symbolic checker
+
+EB4–EB7
+Complete homogeneous parent expansion and residue argument recorded
+
+FU8–FU9
+Complete scalar and $N_y$-normal identities, with saved checker
+
+FU14–FU15, NU25–NU26
+Real Schur criterion and specialized factorization, with saved checker
+
+SD9–SD11, SE2–SE3
+External native source/contact inputs, not independently reconstructed in this recovery
+
+Other C1 sectors, CA/SE, BN/UN
+Outside this EL/NU proof
+
+
+
+
+The checker scripts were preserved, but not rerun during this recovery. Accordingly, the saved statement that both endpoint certificates are proved is the conclusion of the recovered mathematical package, conditional on its stated native dependencies, rather than a claim of fresh independent verification.
+This completes Part 2 of 2.
+
+
+
+
+
+
+
+

@@ -1,0 +1,63 @@
+R10 all-tests join: bounded independent audit, 26 October 2026
+
+Read 03_R10_ALL_TESTS_JOIN_RENDERED.txt against public
+latex/certificates/c2_short.tex:7750–7920 (BA4–BA15), 13648–13864
+(R10 source/weighted pivot), 13890–14153 (TL), 14154–14275 (UW),
+and latex/certificates/c1_short.tex:6361–6404 (SEO10–SEO13).
+The thin local gate was treated as the designated hypothesis.
+
+Verdict: supported conditional closure of the stated strict native R10
+sector. No additional R10-specific coverage gap was found in this bounded
+review. The conclusion remains conditional on that gate and the explicitly
+imported exact CA/SE full-parent lifts and SEO/SJ identities; it does not
+verify the conductor by restating its conclusion or certify other sectors.
+
+Source entry. R10.2 is used before assuming b bounded. Its sign gives
+b/w=O(1), hence b,n*a^2 bounded, with no testing variable involved.
+The lambda_circ cancellation is legitimate polynomial division: after
+unit-denominator clearing, the numerator vanishes at b=0 for all remaining
+source variables. Its divided residue is t/2. Thus lambda_circ~1/2 even
+when b is infinitesimal. The displayed BA5 coefficients are then bounded:
+Ah is a unit, an and aq are infinitesimal, and neither n nor m is inverted.
+All small/zero source weights remain inside their original square roots.
+
+Remote parents. The identities retain the original state directions and
+whole positive packets. BA11's selected frame includes sqrt(n)*X and
+sqrt(alpha)*pX, so their small coefficients are not discarded before
+residue. Its W,vX block has the stated positive determinant using the
+exact relation 2c0(d0+1/2)=c0+d0+1/2. BA12's sqrt(m)*W row keeps a strict
+S,X block even at m0=0; its other determinant is c0*d0*v0^4. BA13,
+BA14 and BA15 match their homogeneous source identities. The double
+reciprocal frame uses pZ,qZ as roots, never their inverses; vanishing at
+literal endpoints is allowed. Finite units, reciprocal-infinitesimals and
+axes exhaust the remote testing charts without a source/test comparison.
+
+Thick local branch. The full BA7 hard quadratic is retained, including
+all Ny and xi couplings. The Q,xi Schur pivot equals
+H-m^2/(a^2*q) exactly. For noninfinitesimal positive rho its displayed
+lower bound has positive residue, also when rho is unbounded. The other
+surviving off-diagonal is the E,RD block with determinant
+1/[4(t0-1)]>0. The BA5 table shows every remaining coupling bounded and
+zero-residue after its printed testing/source factors. This proves a
+complete bounded-Gram statement, not positivity on the contact graph.
+
+Unit-W wall. The UW polynomial numerator vanishes identically at s=0
+and at w=0 after b=w*z, so divisibility by s*w is valid in the polynomial
+ring, with no division by a small opening. At s=h=0 its remaining
+denominator is 16t, a positive unit. Therefore epsilon/m is infinitesimal
+even for infinitesimal m. SEO's critical full parent has a strict five-root
+Gram: its radial residues are2 and2/t0. The exact testing identity
+V=Z*(Rm+B_t)/(1+uY) expresses the entire negative correction on that
+frame plus sqrt(m)*Rm. All coefficients are infinitesimal, including the
+last through sqrt(epsilon/m). Bounded signed Z and literal Z=0 are covered.
+
+Remaining local entry. rho=0 is an exact physical C1 polynomial identity,
+not continuity from positive n; the CA/SE alternatives require their
+actual full-parent conductor lifts, including retained packets. For
+positive infinitesimal rho, R10.2 supplies the opening ratio needed by
+the designated gate. Normalizing a testing state by its largest coordinate
+leaves either a positive pure-testing core, the unit-W wall, or Z=1 with
+positive infinitesimal omega, exactly the gate's chart. SJ treats the
+other core sign, literal axes, and homogeneous endpoints. Complex states
+split into real and imaginary parts. No uniform cap across distinct
+positive-real testing residues is needed anywhere in this join.

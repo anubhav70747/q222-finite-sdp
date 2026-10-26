@@ -1,0 +1,116 @@
+\section{The other Bob testing charts for $q$ infinitesimal}
+\label{sec:r7-c1-q-inf-remote}
+\begin{theorem}
+The original C1.1 source with $q=k^2\eta$ infinitesimal is tensor SOS
+at every independent test. Together with the $q$-unit theorem this
+closes the entire original C1.1 source.
+\end{theorem}
+The inherited $C,A$-large admission already handles $u$ not
+infinitesimal. The preceding local theorem handles $u,v$
+infinitesimal. Here are the two remaining $v$ charts. Every positive
+opening rate and the literal permitted coefficient boundary is kept.
+
+\paragraph{Ordinary $v$: the full normal residue is strict.}
+Let $v$ be a positive bounded unit, use $Z=1$ on the negative-core
+chart, and retain the roots of (QI1). Normalize $N$ by $H_0$ as
+before, but now restore the positive packet $4h_b(vN)^2/t$.
+Write
+\[
+ \tau=\operatorname{res}t,\qquad
+ \rho=\operatorname{res}(t/e^2),\qquad
+ a^2=\frac{\tau}{2(1+\tau)},\quad
+ \gamma^2=\frac{\rho}{2(1+\tau)}.
+\]
+The original $\beta\ge0$ equation implies $0\le\rho\le1$;
+$0\le\tau\le1$ follows from $M=R-t>0$ and $R\sim1$.
+The entire residue on $(\widehat N,B,C)$ has diagonal entries
+\[
+ 1+\frac{v^2}{1+\tau},\qquad 2(1+\tau v^2),\qquad 2,
+\]
+and polynomial cross coefficients
+\[
+ 4av^2,\qquad -4\gamma v,\qquad -4\sqrt{\tau\rho}\,v.
+\]
+Its exact square decomposition is
+\begin{align*}
+ &2(C-\gamma v\widehat N-\sqrt{\tau\rho}\,vB)^2
+       +\widehat N^2+2B^2\\
+ &\qquad +(1-\rho)v^2
+    \left(\frac{\widehat N}{\sqrt{1+\tau}}+
+                         \sqrt{2\tau}\,B\right)^2.
+ \tag{QR1}
+\end{align*}
+Thus it is strictly positive definite, also at $\rho=1$, the
+possible $\beta=0$ endpoint, and at $\tau=0$ or $1$.
+The other residue blocks are exactly
+\[
+                       2E_*^2+2(vh)^2+4D_vN_y^2.
+\]
+There are no nonzero leading cross entries with these blocks.
+
+For completeness, the boundedness check uses the entire raw scalar
+(QI2) and both full normal formulas (SC14), with (QI9) restored.
+Terms containing $u h$ use $u h=uE_*+bC$; all their coefficients
+are infinitesimal. The $N$--$B$ and $N$--$C$ coefficients with
+nonzero residue are precisely those retained in (QR1). The harmonic
+normal has infinitesimal coefficient on $h$ for bounded $v$:
+after the opening cancellation its coefficient lies in
+$(b^2,q,u^2)$ with bounded arrays on this chart. Its other
+coefficients are infinitesimal as well.
+All remaining source-constant terms and weak monomials enter the
+same strict Gram through the exact bounded pure-testing identities
+\[
+                   h=(vh)/v,\qquad
+                   1=((vh)-vE_*)/v^2.
+\]
+For example $A=ch$ and $D=qg$ are infinitesimal-coefficient
+combinations of these two roots. Consequently the actual full Gram
+has the positive residue just displayed. Restore all retained
+packets. The same sign, $Z=0$, and complex-state joins as in the
+local theorem apply; no restriction on the size of the normalized
+state was used.
+
+\paragraph{Unbounded $v$: a five-root endpoint frame.}
+Put $w=1/v$, so $w$ is infinitesimal, and multiply the original
+parent by $w^2$. The exact source formulas give positive real
+constants $\mu,d_0$ with
+\[
+ C/d\ge\mu/b^2,\qquad A/d\ge\mu/b^2,\qquad
+ D/d\ge d_0 b^2.
+\]
+For instance sufficiently small fixed constants below $1/4$ work,
+since $b^2C/d,b^2A/d$ are uniformly bounded below and
+$D/(db^2)\sim1/2$. Retain all excesses and the entire $m,\alpha,
+\beta$ packets. No assumption on $e$ is needed.
+Use the five roots
+\[
+              P=uW/b,\quad Q=Y/b,\quad X,\quad J_b'=bZ,
+                     \quad V_b=uwZ.
+\]
+The homogenized signed core is exactly
+\begin{align*}
+ K={}&V_b^2-2buV_bQ-2wPJ_b'+2wV_bX+b^2w^2P^2
+       +2buwPX-2b^2w^2PQ\\
+ &+(D_u+w^2)(X^2+b^2Q^2)-2buwXQ.
+ \tag{QR2}
+\end{align*}
+The three selected event packets are
+\[
+ 4\mu D_w(P-Q)^2+4\mu D_uD_wQ^2,
+ \qquad
+ 4d_0(b^2wP+buX-b^2wQ-J_b')^2.
+ \tag{QR3}
+\]
+Combining these with $2K$, the bounded Gram has strictly positive
+residue
+\[
+ 4\mu\{(P-Q)^2+Q^2\}+4d_0(J_b')^2+2X^2+2V_b^2.
+\]
+All other displayed coefficients have zero residue. This is a full
+state-quadratic certificate, not a restriction to a contact graph.
+It includes the homogeneous endpoint $w=0$ directly and uses no
+inverse involving independent source and testing variables.
+
+The infinitesimal, unit, and unbounded $v$ charts exhaust all tests
+remaining after the inherited $C,A$ admission. Hence the entire
+$q$-infinitesimal C1.1 source, and consequently C1.1 itself, is closed.

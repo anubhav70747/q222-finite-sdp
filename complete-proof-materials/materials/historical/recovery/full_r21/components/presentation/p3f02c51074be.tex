@@ -1,0 +1,382 @@
+\chapter{All testing charts for the unit-$\kappa,\nu,\ell$ source}
+\label{component:p3f02c51074be}
+\noindent\textbf{Component }\path{p3f02c51074be}\par
+{\small\noindent Source: \path{NEW/c1/c144_unit_kappa_all_tests_rederived.tex}\par}
+{\small\noindent SHA256: \path{3f02c51074beaad6ba4c99cea8fb710f31d0573f6bd28a7a49bb2457f076cbf7}\par}
+{\small\noindent Inventory use: FU1--FU31 | FU6-FU23 exact finite-Bob parent/circuit identities, used only with freshly checked NU source limits | Fresh FU1-FU31 full unmatched and endpoint-testing proof; source endpoint restrictions retained\par}
+\medskip
+\section{All testing charts for the unit-$\kappa,\nu,\ell$ source}
+\label{p3f02c51074be:sec:new-c144-unit-kappa-all-tests}
+
+\paragraph{Exact scope and conclusion.}
+Retain the original physical C14.4 source, its strict source gaps,
+and its original prior-complement intersections. Assume
+\[
+ S=\sigma+L\in\operatorname{Inf}_{>0},\qquad
+ \kappa=x/S,\quad\nu=\sigma/S,\quad\ell=L/S
+ \quad\hbox{are positive bounded units},\qquad\nu+\ell=1.
+ \tag{FU1}
+\]
+Together with the matched theorem UKR1--UKR21, the argument below
+proves that the complete original parent is a finite separated tensor
+SOS for every projective test and every state on FU1. It includes
+arbitrary openings of $M,\theta,r,1-r$, literal $D=0$ and $\beta=0$,
+and independent source and testing infinitesimals. It makes no claim
+at the $\nu$- or $\ell$-infinitesimal source endpoints.
+
+All normalizations are pure-source or pure-testing operations.
+All real Schur complements below prove strictness of a real residue
+matrix; no such inverse is used as a tensor-ring coefficient. The
+strict bounded-Gram lemma is the one in the surviving
+\path{inherited_r19/parent_reference.tex}.
+
+\paragraph{The full parent and opening-safe source bounds.}
+Write $D_u=1+u^2,D_v=1+v^2$, and divide the parent by $4$:
+\[
+\begin{split}
+ F/4={}&m(vW-X+uvY-uZ)^2+CD_v(uW-Y)^2+AD_uD_vY^2\\
+ &+(D+\tfrac12)(uW-Y+uvX-vZ)^2
+ +(\alpha+\tfrac12)D_u(vY-Z)^2\\
+ &+(\beta+\tfrac12)D_v(X+uZ)^2-\tfrac12D_uD_vZ^2.
+\end{split}\tag{FU2}
+\]
+Keep the exact FM2--FM3 source formulas, with
+$c_0=SC(1-r)$, $a_0=SAr$, $d_0=D/S$, and $a_1=\alpha/S$.
+These four coefficients and $\beta\theta$ are bounded, with no
+inverse of the possibly small $M$ or $\theta$ in their normalized
+formulas. The $D/S$ numerator has its factor $S$ canceled exactly.
+
+The following letters refer only to real residues:
+\[
+ A_* =\nu-\kappa h=\nu E,\quad R=1-A_*,\quad
+ \nu=A_*+\kappa h,\quad\ell=1-A_*-\kappa h.
+ \tag{FU3}
+\]
+The exact source yields
+\[
+\begin{gathered}
+ E\ge1/18,\qquad h-A_*\ge0,\qquad
+ A_*^2-\kappa(h-A_*)\ge0,\qquad R-\kappa\ge0,\\
+ c_0=a_0=E/2,\qquad
+ d_0=\{A_*^2-\kappa(h-A_*)\}/2,\\
+ a_1=\frac{\ell\{\kappa h+(R-\kappa)A_*\}}{2\nu},
+ \qquad 2\beta\theta=h-A_*.
+\end{gathered}\tag{FU4}
+\]
+In particular $h\ge\nu/(1+\kappa)$, so $h,E,a_1,c_0,a_0$
+have positive real lower bounds. The actual source has $m$ bounded
+below by a positive real, while $C,A$ are unbounded. Here $m$
+can be unbounded, and so can $\beta$. They cannot both be unbounded:
+$m$ unbounded forces $R=\kappa$, whence
+$\ell=\kappa\theta$ makes $\theta$ a unit; $\beta$ unbounded
+forces $\theta=0$, whence $R-\kappa=\ell$ makes $M$ a unit.
+For bounded $m,\beta$ their real values are
+\[
+ m=\frac{\kappa^2h}{2\nu(R-\kappa)},\qquad
+ \beta=\frac{h-A_*}{2(1-h)}.
+ \tag{FU5}
+\]
+These formulas are used only when the indicated real denominators
+are positive. Every estimate below for the actual parent uses
+bounded normalized source coefficients before taking residues.
+
+\paragraph{A complete finite-Bob frame, including the state normals.}
+Assume $u$ is infinitesimal and $v$ is finite. We may cap $m$ and
+$\beta$ by finite pure-source values $m_c>0,\beta_c\ge0$ and
+retain the complete excesses in their original event squares.
+When a weight is bounded, keep it unchanged. When it is unbounded,
+the sufficiently large real cap is chosen below. Define
+\[
+ B_0=X+uZ,\quad N_y=\frac{Y-ruW}{\sqrt{Sr(1-r)}},\qquad
+ T=\kappa W,\ U=uZ,\ P=\frac{uW}{\sqrt S},\ Q=\sqrt S Z.
+ \tag{FU6}
+\]
+All six rows are legal separated expressions, and $TU=\kappa PQ$
+holds exactly. No restriction is placed on their values or on state
+ratios. Set $a=u^2$, $s_y=\sqrt{Sr(1-r)}$, and
+\[
+\begin{split}
+ M_0&=(v/\kappa)(1+ra)T-B_0,\\
+ A_P&=D_v\{c_0(1-r)+a_0r(1+a)\}\\
+ &\hspace{5mm}+S\{(D+\tfrac12)(1-r)^2
+       +(\alpha+\tfrac12)(1+a)r^2v^2\}.
+\end{split}\tag{FU7}
+\]
+The entire capped parent is $F_0+2L_yN_y+H_yN_y^2$, where
+\[
+\begin{split}
+ F_0={}&m_cM_0^2+A_PP^2+(1+a)\{d_0(1+a)v^2+a_1\}Q^2
+                   +\tfrac12(1+a)v^2U^2\\
+ &-2(D+\tfrac12)(1+a)v^2B_0U
+ -(1+a)v\{1+2D(1-r)+2\alpha r\}PQ\\
+ &+\{(\beta_c+\tfrac12)D_v+(D+\tfrac12)av^2\}B_0^2
+ +2(D+\tfrac12)(1-r)uv\sqrt S\,B_0P,
+\end{split}\tag{FU8}
+\]
+\[
+\begin{split}
+ L_y={}&m_cuvs_yM_0
+ +\sqrt{r(1-r)}D_v\{-c_0+a_0(1+a)\}P\\
+ &+S\sqrt{r(1-r)}\{-(D+\tfrac12)(1-r)
+          +(\alpha+\tfrac12)(1+a)rv^2\}P\\
+ &-(D+\tfrac12)uvs_yB_0
+       +\sqrt{r(1-r)}v(1+a)(D-\alpha)Q,\\
+ H_y={}&rc_0D_v+(1-r)a_0(1+a)D_v\\
+ &+Sr(1-r)\{m_cu^2v^2+D+\tfrac12
+                      +(\alpha+\tfrac12)(1+a)v^2\}.
+\end{split}\tag{FU9}
+\]
+These are exact identities in the two unrestricted original state
+coordinates $X,Y$; $B_0$ is not set to zero. Their coefficients are
+bounded across all source openings. In $L_y$ every coefficient has
+zero residue, since $c_0,a_0$ have the same residue, and the other
+terms contain $u$ or $S$. The $N_y$ pivot has residue $ED_v/2>0$.
+Thus it suffices to make the remaining five-row real residue strict.
+
+\paragraph{Finite nonzero unmatched Bob residue.}
+Take $v>0$ with a positive finite residue different from
+$b=\sqrt{\ell/\nu}$. The complete real residue of FU8--FU9 is
+\[
+\begin{split}
+ &m_c\{(v/\kappa)T-B_0\}^2+qD_vB_0^2-v^2B_0U
+       +\tfrac12v^2U^2-vPQ\\
+ &\hspace{8mm}+\tfrac E2D_vP^2+(d_0v^2+a_1)Q^2
+             +\tfrac E2D_vN_y^2,\qquad q=\beta_c+\tfrac12.
+\end{split}\tag{FU10}
+\]
+For the moment use the uncapped finite values $m,\beta$ from FU5.
+Eliminating $B_0$ in this real matrix, and using $TU=\kappa PQ$
+only to name the adjusted cross coefficient, gives
+\[
+ a_TT^2+a_UU^2+a_PP^2+a_QQ^2-2fPQ,
+ \tag{FU11}
+\]
+where, for $c=v^2$ and $H=m+q(1+c)$,
+\[
+\begin{gathered}
+ a_T=\frac{mq(1+c)c}{\kappa^2H},\quad
+ a_U=\frac{c(2H-c)}{4H},\quad a_P=E(1+c)/2,\quad
+ a_Q=d_0c+a_1,\\
+ f=\frac{v}{2}(1+mc/H).
+\end{gathered}\tag{FU12}
+\]
+The replacement of the real Schur cross term $TU$ by $\kappa PQ$
+is implemented in the actual bounded Gram by a real multiple of
+the exact zero $TU-\kappa PQ$. The elimination of $B_0$ itself
+is only a real strictness test. Every diagonal is positive,
+including when $D$ or $\beta$ is zero.
+The reduced determinant in a formal positive real variable $y$ is
+\[
+ \Delta(y,c)=(a_T\kappa^2+a_Py)(a_Uy+a_Q)-f^2y.
+ \tag{FU13}
+\]
+It obeys $4H\Delta/(1+c)=\mathcal P(y,c)$ with
+\[
+ \mathcal P=p_{22}y^2c^2+p_{21}y^2c+p_{12}yc^2
+              +p_{11}yc+p_{10}y+p_{02}c^2+p_{01}c,
+ \tag{FU14}
+\]
+\[
+\begin{array}{ll}
+ p_{22}=E\beta,&p_{21}=E(m+q),\\
+ p_{12}=2m\beta+2qEd_0,&
+ p_{11}=-m-q+2E\{(m+q)d_0+qa_1\},\\
+ p_{10}=2(m+q)Ea_1,&p_{02}=4mqd_0,\quad p_{01}=4mqa_1.
+\end{array}\tag{FU15}
+\]
+All coefficients except possibly $p_{11}$ are nonnegative, and
+$p_{21},p_{10},p_{01}$ are strictly positive. Direct substitution of
+FU3--FU5 gives the exact three contact identities
+\[
+ \mathcal P(\kappa,\ell/\nu)=
+ \mathcal P_y(\kappa,\ell/\nu)=
+ \mathcal P_c(\kappa,\ell/\nu)=0.
+ \tag{FU16}
+\]
+These finite rational identities can also be checked without
+radicals. For positive real $y,c$,
+\[
+ \frac{\mathcal P(y,c)}{yc}
+ =p_{22}yc+p_{21}y+p_{12}c+p_{11}
+                     +p_{10}/c+p_{02}c/y+p_{01}/y.
+ \tag{FU17}
+\]
+As a real function of $(\log y,\log c)$, this is strictly convex:
+each nonconstant summand has nonnegative Hessian, and
+$p_{21}y+p_{10}/c$ alone has positive definite Hessian. FU16 says
+its value and gradient vanish at the contact. It is consequently
+positive at every other positive point. This real argument is only
+a way to determine a finite residue matrix, not a use of logarithms
+or mixed inverses in the tensor ring.
+
+Since $c\ne\ell/\nu$, FU13 is positive for all $y>0$.
+Minimizing its quotient by $y$ gives
+\[
+ f<\kappa\sqrt{a_Ta_U}+\sqrt{a_Pa_Q}.
+ \tag{FU18}
+\]
+Indeed the minimum of
+$a_Pa_Uy+a_T\kappa^2a_Q/y$ is
+$2\kappa\sqrt{a_Ta_Ua_Pa_Q}$, attained at a positive $y$;
+equality in FU18 would give a zero of FU13. Choose a real
+$\lambda$ with $|\lambda|<\sqrt{a_Ta_U}$ and
+$|f-\kappa\lambda|<\sqrt{a_Pa_Q}$. Adding the exact zero
+$-2\lambda(TU-\kappa PQ)$ makes both $2\times2$ blocks in
+FU11 strictly positive. Restoring the positive real $B_0$ pivot
+and the $N_y$ pivot proves strictness of the complete six-row
+residue. All actual Gram entries were bounded in FU8--FU9, so
+the strict bounded-Gram lemma gives the tensor SOS.
+
+\paragraph{Unbounded $m$ or $\beta$ in the unmatched chart.}
+The preceding strictness persists under a sufficiently large
+finite cap in the one possible unbounded weight. This assertion
+has an opening-safe direct verification. If $m\to\infty$,
+divide FU14--FU15 by $m$ before taking the real limit. Then
+\[
+ (p_{22},p_{21},p_{12},p_{11},p_{10},p_{02},p_{01})/m
+ \longrightarrow
+ (0,E,2\beta,-1+2Ed_0,2Ea_1,4qd_0,4qa_1).
+ \tag{FU19}
+\]
+At $R=\kappa$, the three contact identities FU16 remain exact
+for this limit polynomial. The strict convexity proof FU17 still
+applies because its $y$ and $1/c$ coefficients are positive.
+The Schur coefficients tend to
+\[
+ a_T\to q(1+c)c/\kappa^2,\qquad
+ a_U\to c/2,\qquad f\to v(1+c)/2,
+ \tag{FU20}
+\]
+with $a_P,a_Q$ unchanged. Therefore FU18 is strict at the limit,
+and continuity makes it strict for a sufficiently large finite
+real $m_c$.
+
+If $\beta\to\infty$, divide instead by $q$ before taking the
+limit at $h=1$. The corresponding coefficient vector is
+\[
+ (E,E,2m+2Ed_0,-1+2E(d_0+a_1),
+                         2Ea_1,4md_0,4ma_1),
+ \tag{FU21}
+\]
+again with the three exact contact identities and the two strictly
+positive convexity coefficients. Now
+$a_T\to mc/\kappa^2$, $a_U\to c/2$, $f\to v/2$.
+A sufficiently large finite $\beta_c$ therefore works.
+All the other normalized actual coefficients have their real
+residues with bounded unit denominators; no $O(S)$ term was
+divided by $M$ or $\theta$. Restore the complete excesses
+$(m-m_c)(vW-X+uvY-uZ)^2$ and
+$(\beta-\beta_c)D_v(X+uZ)^2$. These caps are used only on the
+unmatched chart and need not vanish at the actual contact.
+
+\paragraph{Infinitesimal or zero Bob coordinate.}
+If $v$ is infinitesimal, use FU8--FU9 with the six rows
+\[
+ (B_0,T_v,U_v,P,Q,N_y),\qquad T_v=vT,\quad U_v=vU.
+ \tag{FU22}
+\]
+Cap $m$ at any sufficiently small fixed positive real $m_c\le m$,
+and discard no excess. One may set $\beta_c=0$ and retain its
+whole event. The exact coefficients remain bounded: the $B_0U$
+coefficient is now a multiple of $vB_0U_v$, and $M_0$ becomes
+$(1+ra)T_v/\kappa-B_0$. Their real residue is
+\[
+ m_c(T_v/\kappa-B_0)^2+\tfrac12B_0^2+\tfrac12U_v^2
+                      +\tfrac E2(P^2+N_y^2)+a_1Q^2>0.
+ \tag{FU23}
+\]
+This also covers literal $v=0$. The rows need not be independent
+coordinates on the state space.
+
+\paragraph{Infinitesimal reciprocal Bob coordinate.}
+Put $w=1/v$ and use the homogeneous parent $w^2F$ at $w=0$ as
+well as for nonzero infinitesimal $w$. The complete signed core
+in the quarter-parent is $K_w/2$, with
+\[
+\begin{split}
+ K_w={}&u^2H^2-2u^2HY-2uHW+2uwHX+u^2w^2W^2\\
+ &+2u^2wWX-2uw^2WY+(1+u^2+w^2)(X^2+Y^2)-2uwXY,
+ \qquad H=wZ.
+\end{split}\tag{FU24}
+\]
+This is the exact CE6 full core, so all state normals are present.
+FU4 gives the real alternative
+\[
+ d_0+\kappa\beta\theta=(\nu E)^2/2>0.
+ \tag{FU25}
+\]
+Thus either $D/S$ has a positive real lower bound, or $\beta$
+has one. Both cases allow independent rates for $u,w,S$.
+
+If $\beta$ is strong, use the four rows $(W,X,Y,U)$, $U=uZ$,
+in FU24 by replacing $uH$ with $wU$. Every coefficient is bounded
+and the core residue is $X^2+Y^2$. The exact $m$ event is
+$(W-wX+uY-wU)^2$, and the $\beta$ event is
+$D_w(X+U)^2$. Positive finite caps give the strict residue
+\[
+ m_cW^2+\tfrac12(X^2+Y^2)+\beta_c(X+U)^2>0.
+ \tag{FU26}
+\]
+All other event packets and both excesses remain whole.
+
+If $D/S$ is strong, choose positive real $c,d,m_c$ with
+$c\le c_0,a_0$, $d\le D/S$, and $m_c\le m$. Select exactly
+\[
+ C_c=c/[S(1-r)],\qquad A_c=c/(Sr),\qquad D_c=dS.
+ \tag{FU27}
+\]
+Retain all excesses, including the whole $A_cu^2D_wY^2$.
+Writing $Y=ruW+\sqrt{Sr(1-r)}N_y$, the other two selected
+$C,A$ terms have the exact harmonic identity
+\[
+ C_cD_w(uW-Y)^2+A_cD_wY^2=cD_w(P^2+N_y^2).
+ \tag{FU28}
+\]
+Use six rows $(W,V,X,P,N_y,Q)$ with $V=uwZ$ and the exact
+monomial identity $VW=wPQ$. Replacing $uH$ by $V$ in FU24,
+the potentially non-small cross term $-2VW$ is exactly $-2wPQ$.
+Every other off-diagonal core coefficient is infinitesimal after
+$Y=\sqrt S\{rP+\sqrt{r(1-r)}N_y\}$; its residue is $V^2+X^2$.
+The selected $m$ and $D$ events are the complete squares
+\[
+ m_c(W-wX+uY-V)^2,\qquad
+ d\{uw\sqrt S W+u\sqrt S X-w\sqrt S Y-Q\}^2.
+ \tag{FU29}
+\]
+The full selected residue is strictly positive:
+\[
+ m_c(W-V)^2+\tfrac12(V^2+X^2)+c(P^2+N_y^2)+dQ^2>0.
+ \tag{FU30}
+\]
+The strict bounded-Gram lemma applies to the exact complete
+forms, and all unselected positive packets are restored. Both
+reciprocal proofs include literal $w=0$ and $u=0$.
+
+\paragraph{Exhaustion of tests and exact joins.}
+If $u$ is noninfinitesimal, $C,A$ are unbounded by FU4. The
+surviving two-adjacent-events theorem CE1--CE10 in
+\path{common_remote.tex}
+therefore applies to the original full parent and all states.
+Its hypotheses require only nonnegative event weights and these
+two unbounded coefficients; no small-$\kappa$ source statement
+is imported.
+
+For infinitesimal $u$, every positive projective $v$ is either
+infinitesimal, a finite unit, or has infinitesimal reciprocal.
+FU22--FU30 cover the two end cases. A finite unit has either the
+matched residue, covered by UKR1--UKR21, or a different residue,
+covered by FU10--FU21. The transformations
+\[
+ (u,Y,Z)\mapsto(-u,-Y,-Z),\qquad
+ (v,X,Z)\mapsto(-v,-X,-Z)
+ \tag{FU31}
+\]
+preserve FU2 exactly and handle both signs. Literal axes and
+projective endpoints were included in the displayed raw frames.
+Complex states split into real and imaginary parts. No proof in
+this exhaustion bounds, normalizes, or relates the testing-state
+ratios $W/Z$, $X/Z$, or $Y/Z$.
+
+Consequently every testing chart is covered on exactly FU1,
+with every original source predicate retained. The remaining
+source endpoints are separate from this conclusion.

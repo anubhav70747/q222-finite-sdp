@@ -1,0 +1,473 @@
+\chapter{Strong C2 pitchfork with arbitrary complementary scales}
+\label{component:pf7943b34a7dc}
+\noindent\textbf{Component }\path{pf7943b34a7dc}\par
+{\small\noindent Source: \path{R13/baseline/baseline/baseline/baseline/advances/c2_strong/strong_complement_pitchfork.tex}\par}
+{\small\noindent SHA256: \path{f7943b34a7dce78326e3e9ae90456999195c03136f243662c3381e74e9e416bb}\par}
+{\small\noindent Inventory use: SC1--SC23 unbounded C or alpha and all upper event scales, full three normals, strict real boundary Schur, complete cap/corner outer proof\par}
+\medskip
+\section[Strong C2 pitchfork with arbitrary complementary scales]{Strong C2 pitchfork with arbitrary complementary scales}
+\label{pf7943b34a7dc:sec:strong-complement-pitchfork}
+
+\begin{theorem}[No upper bound on the two complementary events]
+\label{pf7943b34a7dc:thm:strong-complement-pitchfork}
+Let $K_c,K_t\supset\mathbb R$ be independent real closed fields.
+Let the original canonical C2 parent be physical over $K_c$, with
+$\lambda=\beta=0$, $d$ a positive bounded unit, $C,\alpha>0$
+having bounded reciprocals, and $n,m,A,D\geq0$ arbitrary.
+Suppose it has an actual finite noncommuting stationary zero with
+$u_c=k>0$ infinitesimal and $v_c=a>0$ a bounded unit.
+Then the entire original parent is tensor SOS at every independent
+projective measurement pair and every real or complex projective state.
+There is no upper bound or relative-scale condition on any event weight.
+\end{theorem}
+
+The case of bounded $C,\alpha$ is the existing three-large-event
+theorem. We prove both remaining cases, without modifying the parent
+or identifying the source and testing fields. We use
+\[
+\begin{gathered}
+ D_u=1+u^2,\quad D_v=1+v^2,\quad r=uW-Y,\quad p=vY-Z,\\
+ J=uW+uvX-Y-vZ,\quad R_2=vW-X+up,\quad B=X+uZ,\\
+ H=2\{J^2+D_up^2+D_vB^2-D_uD_vZ^2\},\\
+ F=dH+4nD_uD_vX^2+4mR_2^2+4CD_vr^2
+       +4AD_uD_vY^2+4DJ^2+4\alpha D_up^2.              
+\end{gathered}
+\tag{SC1}
+\]
+Every square in this formula retains its original coefficient.
+
+\paragraph{Necessary reductions from the full parent.}
+Cap only $C,\alpha$ at positive bounded units in the initial hard
+state estimate. At the actual angles the bounded selected form is
+bounded below by
+$b(X^2+Y^2+Z^2)-B_0k^2W^2$, with positive real $b,B_0$.
+Every retained packet is nonnegative. Hence the contact has $W_c\ne0$;
+on setting $W_c=1$,
+\[
+ X_c,Y_c,Z_c=O(k),\qquad m=O(k^2).
+\]
+Each positive event packet is $O(k^2)$ as well. Thus, writing
+$y=Y_c/k$, $z=Z_c/k$, $x_1=X_c/k$, $j=J_c/k$,
+\[
+ Ay^2,\ Dj^2,\ C(1-y)^2,\ \alpha(ay-z)^2=O(1),\qquad
+ j=1-y-az+aX_c.                                      \tag{SC2}
+\]
+If $C$ is unbounded then $\bar y=1$, so $A$ is bounded. If $D$
+were also unbounded, $j,z$ would be infinitesimal, and the residue of
+\[
+ H_c/(2k^2)=j^2+(1+k^2)(ay-z)^2
+            +(1+a^2)(x_1+Z_c)^2-(1+k^2)(1+a^2)z^2
+\]
+would be $\bar a^2+(1+\bar a^2)\bar x_1^2>0$.
+This contradicts $H_c\leq0$ at the zero of (SC1). Therefore
+$C$ unbounded forces both $A,D$ bounded. If $\alpha$ is unbounded
+and $A$ were unbounded, (SC2) would make $y,z$ infinitesimal and
+$\bar j=1$; the same residue would instead be
+$1+(1+\bar a^2)\bar x_1^2>0$. Thus $\alpha$ unbounded forces $A$
+bounded. It remains to prove precisely
+\[
+ \text{(I) } C\text{ unbounded},\ A,D\text{ bounded};\qquad
+ \text{(II) } C\text{ bounded},\ \alpha\text{ unbounded},\ A\text{ bounded}.
+                                                               \tag{SC3}
+\]
+
+\paragraph{Uniform stationary scale entry.}
+Set $U=k^2$, $V=a^2$, $N=d+2n$, $\theta=n/N$, and
+\[
+\begin{gathered}
+ t_2=d+2(\alpha+m+A),\quad T=t_3=d+2(C+D),\quad
+ t_4=d+2(\alpha+m),\\
+ t_6=d+2(\alpha+C+A),\quad t_8=d+2(C+A+D).
+\end{gathered}
+\]
+The exact original Laurent stationary equations are
+\[
+\begin{split}
+ U^2 A t_4\{\theta T+C(1+2D/N)V\}
+     &=mV\{\alpha t_8+Dt_6V\},\\
+ \alpha A(1+2m/N)T+\theta A Tt_4U
+     &=\{mDt_6/U+CDt_2\}V^2.                         
+\end{split}\tag{SC4}
+\]
+Define only pure coefficient quantities
+\[
+ \delta=CD/T,\quad e=(D/T)(t_6/\alpha),\quad b=t_2/\alpha,
+ \quad \mathcal B=\theta+(C/T)(1+2D/N)V,
+ \quad \mathcal G=t_8/T+eV.
+\]
+Because one of $C,D$ is bounded in either case (SC3),
+$\delta\leq\min(C,D)/2$ is bounded. The identities
+\[
+ e=(D/T)\{2+(d+2A)/\alpha\}+2\delta/\alpha,
+ \quad \mathcal G=1+2A/T+eV,
+ \quad \mathcal B=\theta+(C/T)V+(2\delta/N)V
+\]
+show boundedness of all these quantities. The quantities
+$b,\mathcal G,t_4/\alpha$ are positive bounded units. So is
+$\mathcal B$: since $C,N$ have bounded reciprocals and $d$ is
+bounded,
+\[
+ \frac{T}{C(N+2D)}\leq\frac d{CN}+\frac2N+\frac1C=O(1),
+\]
+and consequently
+\[
+ \theta+(C/T)(1+2D/N)
+ =\frac{n+C(N+2D)/T}{d+2n}
+ \geq\frac{n+c_0}{d+2n}
+\]
+for a positive real $c_0$. The bounded-unit factor $V$ preserves
+this lower bound. Dividing (SC4) by $\alpha T$ gives exactly
+\[
+ \frac m{U^2}=A\rho,\qquad
+ A\mathcal H=\delta bV^2,\qquad
+ \rho=\frac{(t_4/\alpha)\mathcal B}{V\mathcal G},\quad
+ \mathcal H=1+2m/N+\theta(t_4/\alpha)U-U\rho eV^2.      \tag{SC5}
+\]
+Here $\rho$ is a positive bounded unit and $\mathcal H=1+O(U)$.
+These identities were obtained before inverting $A$ or $D$.
+They show $A\asymp\delta$. Since $C$ has a bounded reciprocal,
+$\delta$ infinitesimal implies $D$ infinitesimal.
+If $A$ were infinitesimal, therefore, so would $D,m$ be.
+But the exact physical test
+\[
+ u=v=1,\qquad (W,X,Y,Z)=(1,0,1,1)
+\]
+has $X=r=p=0$, $R_2=1$, $J=-1$, $H=-2$, and hence
+$F=-2d+4m+16A+4D$. Its residue would be negative. We conclude
+\[
+ A\asymp1,\qquad D^{-1}=O(1),\qquad
+ m/k^4\asymp1,\qquad \gamma=4ma^2/k^4\asymp1.        \tag{SC6}
+\]
+In case (I), $D$ is a bounded unit; in case (II), it may be
+arbitrarily large. In both cases $\delta$ is a positive bounded unit.
+
+\paragraph{Full state equations and bounded graph data.}
+For later use, the three entire state derivatives of (SC1) are
+\[
+\begin{split}
+ F_X/4={}&D_v[d+2nD_u]X+(d+2D)uvJ+d uD_vZ-2mR_2,\\
+ F_Y/4={}&-(d+2D)J+(d+2\alpha)vD_up-2CD_vr
+                  +2AD_uD_vY+2muvR_2,\\
+ F_Z/4={}&-(d+2D)vJ-(d+2\alpha)D_up+d uD_vB
+                  -dD_uD_vZ-2muR_2.                
+\end{split}\tag{SC7}
+\]
+In case (I), the $Z$ equation first yields $\alpha p_c=O(k)$,
+because $D$ is bounded and every core coordinate is $O(k)$.
+Then the $Y$ equation yields $Cr_c=O(k)$. In case (II), $C,A$
+are bounded, so the $Y,Z$ equations are a system with bounded right
+side $O(k)$ and unit coefficient matrix
+\[
+ \begin{pmatrix}-1&a\\-a&-1\end{pmatrix}
+\]
+on $((d+2D)J_c,(d+2\alpha)(1+k^2)p_c)$.
+They yield $DJ_c,\alpha p_c=O(k)$. Finally the $X$ equation in
+either case yields $NX_c=O(k^2)$. Thus put $x=X_c/k^2$ and
+\[
+\begin{array}{ll}
+ \text{(I)}&r_0=r_c/k,\ p_0=p_c/k,
+       \qquad Nx,Cr_0,\alpha p_0=O(1),\\
+ \text{(II)}&j_0=J_c/k,\ p_0=p_c/k,
+       \qquad Nx,Dj_0,\alpha p_0=O(1).
+\end{array}                                                    \tag{SC8}
+\]
+All unweighted graph constants are bounded as well. The reciprocals
+of $N,C,D,\alpha$ used below are bounded pure coefficient elements.
+
+\paragraph{Two exact graphs retaining the large packets.}
+For independent finite testing angles, case (I) uses
+\[
+ X_g=xu^2W,\quad r_g=r_0uW,\quad p_g=p_0uW,
+ \quad Y_g=(1-r_0)uW,\quad Z_g=\{v(1-r_0)-p_0\}uW.    \tag{SC9}
+\]
+Its exact normals and inverse are
+\[
+\begin{gathered}
+ E_X=\sqrt N(X-xu^2W),\quad E_r=\sqrt C(r-r_0uW),
+ \quad E_p=\sqrt\alpha(p-p_0uW),\\
+ X=xu^2W+E_X/\sqrt N,\quad
+ Y=(1-r_0)uW-E_r/\sqrt C,\quad
+ Z=vY-p_0uW-E_p/\sqrt\alpha.                         
+\end{gathered}
+\tag{SC10}
+\]
+Case (II) uses
+\[
+ X_g=xu^2W,\quad J_g=j_0uW,\quad p_g=p_0uW,
+ \quad Y_g=\frac{u(1-j_0+vp_0+xu^2v)}{D_v}W,
+ \quad Z_g=vY_g-p_0uW.                              \tag{SC11}
+\]
+Here the exact normals and inverse are
+\[
+\begin{gathered}
+ E_X=\sqrt N(X-xu^2W),\quad E_J=\sqrt D(J-j_0uW),
+ \quad E_p=\sqrt\alpha(p-p_0uW),\\
+ X=xu^2W+E_X/\sqrt N,\quad J=j_0uW+E_J/\sqrt D,
+ \quad p=p_0uW+E_p/\sqrt\alpha,\\
+ Y=(uW+uvX+vp-J)/D_v,\qquad Z=vY-p.                 
+\end{gathered}
+\tag{SC12}
+\]
+Both graphs match the entire actual contact. All denominators in
+these formulas are pure coefficient factors or the pure testing
+unit $D_v$. No inverse of a mixed tensor element occurs.
+The possibly unbounded packets become respectively
+\[
+\begin{array}{ll}
+ \text{(I)}&4(n/N)D_uD_vE_X^2,quad4D_vE_r^2,quad4D_uE_p^2,\\
+ \text{(II)}&4(n/N)D_uD_vE_X^2,quad4E_J^2,quad4D_uE_p^2
+\end{array}
+\]
+in the quadratic normal remainder. Their graph and first-normal
+coefficients are bounded by (SC8), for example
+$nx,nx^2,Cr_0^2,\sqrt C r_0,\alpha p_0^2,\sqrt\alpha p_0$
+in case (I), and $Dj_0^2,\sqrt D j_0$ in case (II).
+Every remaining source coefficient is bounded.
+
+\paragraph{Entire scalar and entire first-normal division.}
+Set $W=1$, $K=k^2$, and
+$R=u^2-(K/a)v$, $T_s=u(v-a)$.
+Since $R_2|_g=v+(p_0-x)u^2$ for both graphs, the entire scalar has
+the exact shape
+\[
+ \Phi=F|_g=4mv^2+u^2H_0(u^2,v),                    \tag{SC13}
+\]
+with bounded polynomial coefficients in case (I), and bounded
+coefficients in $B_c[v,D_v^{-1}]$ in case (II).
+The three scalar contact jets give
+$H_0(K,a)=-\gamma K$, $H_{0,U}(K,a)=\gamma$, and
+$H_{0,v}(K,a)=-2\gamma K/a$. In particular the explicit expression
+\[
+ \Psi=H_0-\gamma u^2+2\gamma(K/a)v
+\]
+satisfies $\Phi-\gamma R^2=u^2\Psi$, and its value and both first
+derivatives vanish at $(u^2,v)=(K,a)$. Finite Taylor division of
+$\Psi$ therefore gives
+\[
+ \Phi=\gamma R^2+u^2\{(u^2-K)^2H_{20}
+       +(u^2-K)(v-a)H_{11}+(v-a)^2H_{02}\},           \tag{SC14}
+\]
+with bounded coquotients. This is an exact bounded Gram on
+$(R,T_s)$, with separate residue pivot $\bar\gamma$ on $R$.
+For the rational case, Taylor division is legitimate because
+\[
+ D_v^{-r}-D_a^{-r}
+ =-(v-a)(v+a)
+   \frac{\sum_{i=0}^{r-1}D_v^iD_a^{r-1-i}}{D_a^rD_v^r}.
+\]
+Iterating this identity gives the second-order division; only pure
+factors have been inverted.
+
+Here are the full first normals, rather than initial forms. In
+case (I) they are
+\[
+ \mathcal N_X=F_X|_g,\quad
+ \mathcal N_r=-(F_Y+vF_Z)|_g,\quad
+ \mathcal N_p=-F_Z|_g,                              \tag{SC15}
+\]
+and in case (II) they are
+\[
+ \mathcal N_X=\{F_X+(uv/D_v)(F_Y+vF_Z)\}|_g,\quad
+ \mathcal N_J=-(F_Y+vF_Z)|_g/D_v,\quad
+ \mathcal N_p=(vF_Y-F_Z)|_g/D_v.                     \tag{SC16}
+\]
+The derivatives in (SC7) specify every term. In particular the
+following exact packet expressions expose the cancellations:
+\[
+\begin{split}
+ -(F_Y+vF_Z)/(4D_v)
+   &=(d+2D)J+2Cr-2AD_uY-duvB+dvD_uZ,\\
+ (vF_Y-F_Z)/(4D_v)
+   &=(d+2\alpha)D_up-2Cvr+2AvD_uY+2muR_2-duB+dD_uZ.
+\end{split}\tag{SC17}
+\]
+The actual coefficients of the normal roots are obtained by dividing
+these rows by $\sqrt N,\sqrt C,\sqrt\alpha$ in case (I), and by
+$\sqrt N,\sqrt D,\sqrt\alpha$ in case (II).
+Using (SC8), their exact forms after those divisions are
+\[
+ \mathcal N_X/\sqrt N=-8mv/\sqrt N+u^2L_X(u^2,v),
+ \qquad \mathcal N_i/\sqrt{w_i}=uL_i(u^2,v),          \tag{SC18}
+\]
+where all $L_i$ have bounded coefficients in the indicated ring.
+The contact equations give
+$L_X(K,a)=8ma/(K\sqrt N)$ and $L_i(K,a)=0$.
+Writing $L_X=L_X(K,a)+(u^2-K)L_{X1}+(v-a)L_{X2}$, and similarly
+for $L_i$, gives the full exact row identities
+\[
+\begin{split}
+ \mathcal N_X/\sqrt N
+  &=(8ma/(K\sqrt N)+u^2L_{X1})R
+       +u\{(K/a)L_{X1}+L_{X2}\}T_s,\\
+ \mathcal N_i/\sqrt{w_i}
+  &=uL_{i1}R+\{(K/a)L_{i1}+L_{i2}\}T_s.             
+\end{split}\tag{SC19}
+\]
+Thus the $X$ row has infinitesimal couplings to both soft roots,
+and the other rows have infinitesimal couplings to $R$.
+The exact state degree is two, so the bounded quadratic remainder
+already accounts for every higher-normal term. Equations
+(SC10)--(SC19) give an exact full-parent bounded five-root Gram.
+
+\paragraph{A common exact real Schur certificate.}
+The $X$ and $R$ residue pivots are $2(1+\bar a^2)$ and
+$\bar\gamma$. The unscaled boundary hard form on $Y,Z$ is
+\[
+ \mathsf B(v)[Y,Z]
+ =sD_vY^2+4D(Y+vZ)^2+4\alpha(vY-Z)^2,
+ \qquad s=4(C+A)+2d.                               \tag{SC20}
+\]
+In case (I), $Y=-E_r/\sqrt C$,
+$Z=-vE_r/\sqrt C-E_p/\sqrt\alpha$ at $u=0$.
+The form has the explicit pivots $4D_vE_r^2+4E_p^2$ plus a
+bounded nonnegative form. In case (II),
+$Y=(vE_p/\sqrt\alpha-E_J/\sqrt D)/D_v$ and
+$Z=(-E_p/\sqrt\alpha-vE_J/\sqrt D)/D_v$.
+The explicit pivots are $4E_J^2+4E_p^2$, again with a bounded
+nonnegative remainder. The hard residue is strict in both cases.
+
+The determinant and the exact boundary Schur numerator are
+\[
+\begin{gathered}
+ \det\mathsf B(v)=4(1+v^2)\{s(D\,v^2+\alpha)+4D\alpha(1+v^2)\},\\
+ Q_{10}=4\alpha A[d+2(C+D)],\qquad
+ Q_{12}=4CD[d+2(\alpha+A)],\\
+ Q_0=8ACD+8AC\alpha-4ADd-2Ad^2-2Cd^2-4Cd\alpha
+       -2Dd^2-4Dd\alpha-d^3-2d^2\alpha.             
+\end{gathered}
+\tag{SC21}
+\]
+Put $S=\alpha T$. Every coefficient of $\det\mathsf B/S$ and of
+$Q_{10}/S,Q_0/S,Q_{12}/S$ is bounded. This follows directly from
+(SC21), bounded $A$, bounded $C/T,D/T,\delta$, and bounded
+$1/\alpha$. Moreover
+\[
+ Q_{10}/S=4A\asymp1,\qquad
+ Q_{12}/S=4\delta[d+2(\alpha+A)]/\alpha\asymp1.       \tag{SC22}
+\]
+The normalized determinant has a positive lower bound for every
+bounded unit real $v$. Indeed it equals $C/T$ times the determinant
+of the scaled hard form in case (I), and equals
+$(D/T)D_v^2$ times that determinant in case (II). The factors
+$C/T$ and $D/T$, respectively, are positive units in their cases.
+
+We now take residues of these bounded coefficients and use an
+ordinary real variable $v$. The exact real hard Schur function is
+\[
+ \bar f(v)=
+ \frac{8(1+v^2)}{\overline{\det\mathsf B/S}(v)}
+ \left\{\overline{Q_{10}/S}+\overline{Q_0/S}v^2
+                      +\overline{Q_{12}/S}v^4\right\}.          \tag{SC23}
+\]
+This formula is an ordinary real Schur calculation, never an
+inverse of $\det\mathsf B(v)$ in $K_c\otimes K_t$.
+The contact first-normal identities identify the graph at $\bar a$
+with the unique minimizer of the scaled real hard form. The scalar
+contact jets give $\bar f(\bar a)=\bar f'(\bar a)=0$.
+Because $\bar a\ne0$, the quartic bracket in (SC23) is exactly
+\[
+ \overline{Q_{12}/S}(v^2-\bar a^2)^2.
+\]
+Its strict second derivative supplies the soft Schur pivot
+\[
+ \tfrac12\bar f''(\bar a)=
+ \frac{32(1+\bar a^2)\bar a^2\overline{Q_{12}/S}}
+      {\overline{\det\mathsf B/S}(\bar a)}>0.
+\]
+The entire five-root Gram therefore has strictly positive residue
+when $u$ is infinitesimal or zero and $\bar v=\bar a$.
+The strict-residue Gram lemma proves tensor SOS. The exact identity
+\[
+ F(u,-v;W,-X,Y,-Z)=F(u,v;W,X,Y,Z)
+\]
+supplies $\bar v=-\bar a$.
+
+\paragraph{All other independent tests, including literal endpoints.}
+If $u$ is infinitesimal and $v$ is a bounded unit with
+$\bar v\ne\pm\bar a$, retain the full original $m,n$ packets.
+In case (I) use the roots
+\[
+ X,\quad K_C=\sqrt C r,\quad K_\alpha=\sqrt\alpha p,\quad uW
+\]
+and the exact inverse
+$Y=uW-K_C/\sqrt C$, $Z=vY-K_\alpha/\sqrt\alpha$.
+In case (II) use
+\[
+ X,\quad K_D=\sqrt D J,\quad K_\alpha=\sqrt\alpha p,\quad uW
+\]
+and the inverse in (SC12), with unshifted $J,p$.
+The entire remaining parent is a bounded quadratic Gram on these
+four roots. Its separate $X$ residue pivot is
+$2\bar d(1+\bar v^2)$; its hard pair is the strict form (SC20)
+in the scaled coordinates just displayed, and its soft Schur
+complement is $\bar f(\bar v)>0$ by (SC23).
+
+For the two endpoint neighborhoods $u,v\sim0$ and
+$u,q=1/v\sim0$, divide by $d$, choose
+\[
+ \mu=\min(1,C/d,A/d,D/d,\alpha/d)>0,
+\]
+a bounded unit by (SC6), and retain all excesses together with
+the full $m,n$ packets. The selected bounded parent has signed
+weight one, $C=A=D=\alpha=\mu$, and $m=n=0$.
+In the finite chart it is exactly a Gram on $(X,Y,Z,uW)$.
+At $(u,v)=(0,0)$ its hard block is positive and its soft Schur
+complement is $8Q_{10,\mu}/\det\mathsf B_\mu(0)>0$.
+For the reciprocal chart use the polynomial homogeneous parent
+$q^2F_\mu(u,1/q)$, on the same four roots. At $(u,q)=(0,0)$
+its hard block is
+$\operatorname{diag}(2,4(C+A+\alpha)+2,4D)$ in the
+$(X,Y,Z)$ variables, evaluated at the capped weights, and its
+soft Schur complement is
+$8Q_{12,\mu}/\det\mathsf B_{\mu,\infty}>0$.
+These are bounded polynomial Grams, so they include the full
+infinitesimal neighborhoods and literal $v=0$ or $q=0$.
+
+For completeness, the other open commuting axes use the same cap;
+here the other angle has a nonzero finite residue.
+At $v=0$ the core is $2\{(uW-Y)^2+(X+uZ)^2\}$ and the
+$A,\alpha$ packets force $Y=Z=0$; finite nonzero $u$ then forces
+$W=X=0$. At $u=\infty$ the homogeneous core is
+$2\{(W+vX)^2+(vY-Z)^2\}$; the $C,A$ packets force $W=Y=0$,
+and finite nonzero $v$ forces $X=Z=0$. At $v=\infty$ the core
+is $2(1+u^2)(X^2+Y^2)$; the $C,D$ packets force $W=Z=0$
+for finite nonzero $u$. Thus these complete state matrices are strict.
+
+Only the two corners with $u=\infty$ remain. Put $p_u=1/u$.
+At $(p_u,v)=(0,0)$ the selected state form is
+$(2+8\mu)W^2+4\mu Y^2+(2+4\mu)Z^2$.
+Its sole zero ray is $X$. In the chart $X=1$, the five small
+variables $(p_u,v,W,Y,Z)$ have exact quadratic part
+\[
+ (2+4\mu)(W+v)^2+2(Z+p_u)^2+4\mu(W^2+Y^2+Z^2)\succ0.
+\]
+At $(p_u,q)=(0,0)$ the selected state form is
+$4\mu W^2+(2+4\mu)X^2+(2+8\mu)Y^2$.
+In its sole zero-ray chart $Z=1$, the variables
+$(p_u,q,W,X,Y)$ have exact quadratic part
+\[
+ 2X^2+(2+4\mu)(Y-q)^2+4\mu\{W^2+Y^2+(X-p_u)^2\}\succ0.
+\]
+There are no lower-order terms. Allocating every higher monomial
+to two coordinate roots leaves an infinitesimal factor, giving a
+strict-residue Gram for the entire selected polynomial at each
+corner. Retain the original excess packets throughout.
+After pure testing projective normalization, states outside each
+displayed zero ray have positive residue value and are covered by
+the scalar strict-residue lemma.
+
+Noncommuting-residue tests use the inherited arbitrary-physical-source
+theorem. This exhausts all independent projective tests. Finally
+homogenize the local graph identities in $W$, replacing $R,T_s$
+by $RW,T_sW$; they then include $W=0$. Restore all pure positive
+coefficient and testing factors, and split complex states into real
+and imaginary parts. No source infinitesimal was compared with an
+independent testing infinitesimal anywhere in the argument.
+
+\paragraph{Exact scope.}
+This completes the strong C2 finite pitchfork for $C/d,\alpha/d$
+bounded below, with arbitrary upper scales of all six events.
+The reflected actual-contact domain follows by the established C2
+reflection. It does not cover other actual-angle residue types or
+sources in which either complementary ratio has no positive real
+lower bound; no exhaustive global C2 join is asserted here.

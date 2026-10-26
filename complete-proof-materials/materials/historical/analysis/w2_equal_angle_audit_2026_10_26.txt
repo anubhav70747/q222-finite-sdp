@@ -1,0 +1,29 @@
+Full equal-angle maximally entangled C2 obstruction to the thirteen-word W2 cone
+Independent exact audit, 2026-10-26
+
+Input: analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/05_w2_me_followup_COMPLETE.txt and 05_w2_THEOREM_RENDERED.txt. The linked received checker was not available and was not used. The separate unequal-angle positive Gram is outside this audit.
+
+VERDICT: the complete two-parameter family exclusion is correct, including n=0. There is no generic-specialization gap in the independently verified elimination. Source normalization, universal adjoints, the printed eleven-by-seven N, the rank-four pivot, all nine essential coefficient consequences, and both seed values agree.
+
+Files:
+  analysis/w2_equal_angle_audit_2026_10_26.py and .json: independent construction/result.
+  analysis/exact-lift-2026-10-23/w2-equal-angle-staging/README.md: publication-ready proof with the full source/root/kernel formulas, all nine consequences and the explicit23-row triangular elimination table.
+  Same staging directory, verify.py and exact_checks.json: standalone exact checker/result, with no public repository edits.
+
+Full word-space scope. The thirteen words are distinct group words. The two deterministic evaluations are independent, and the eleven printed roots span their entire common annihilator. This was independently checked as a thirteen-by-eleven coefficient matrix, rather than assumed from the number of roots. A complex Hermitian Gram can be averaged with its conjugate. Every W2 certificate therefore has a real eleven-root PSD Gram.
+
+Contact action. Direct Pauli multiplication gives all28 zero entries of TN for the printed N, its free rows are I7, and the pivot in columns(1,2,3,5) is -64r^3z^2/(1+z). Thus every contact-compatible PSD Gram has the printed seven-coordinate form. The last four roots are not Hermitian; the independent universal coefficient map correctly uses h_i^dagger h_j, reversing each same-party word. No qubit-specific anticommutation relation is used for coefficient matching.
+
+Sources. Substitution of a=b=1,t_source=1-r into the current original native rational formulas agrees identically with all seven displayed surface coefficients. The rational strict seed r=1/4,z=1 and literal n=0 seed r=1/3,z=1 reproduce the displayed source tuples exactly. Native physicality is the established stationary-contact theorem, not a numerical inference.
+
+Elimination. The first dense fraction-free attempt was stopped at60 seconds. A separate sparse triangular method succeeded within its30-second worker cap. From K=RN and the independently expanded universal products, it constructs41 word equations in28 symmetric Gram coordinates. It rescales by the positive source denominator D=4r(1-r)(1-rz)(1+z+2rz), so the polynomial equations are A U=R^2 D b, U=D S. Its23 explicit pivot steps leave exactly U44,U56,U57,U66,U77 free. Back substitution yields all nine stated necessary identities, including
+  S35=r(1+r)(1+z)^2/[32(1-r)(1+z+2rz)].
+The complete pivot word/variable/coefficient list is in JSON and the staged human proof.
+
+Specialization. Every ACTUAL pivot numerator and denominator was factored and its nonvanishing verified over the entire domain, not just the final solution denominators. The factors are r,1-r,1+r,1-rz,1+rz,1+z,1+r^2z. Back substitution also uses 1+z+2rz. The domain r,z>0,r+rz+3r^2z<=1 gives r<1 and rz<1. Therefore no pivot degenerates anywhere in the claimed family, including n=0. No coefficient n is divided by.
+
+PSD contradiction. For v=e1+e5+e7, the necessary identities give v^T S v=0. Hence Sv=0. Its sixth component gives S56=-S55=0. PSD then makes the fifth row zero, contrary to S35>0. The fourth component and S77=0 are unnecessary to this shortest contradiction. The seed values are exactly1/48 and1/32. This is a full W2 exclusion, not a failure of one restricted Gram ansatz.
+
+Closedness/persistence. The distinct unitary word property was checked coefficientwise: wi^dagger wj equals the identity iff i=j. Thus a universal W2 PSD Gram has trace equal to the target identity coefficient, proving closedness by bounded Gram subsequences. The claimed n-boundary derivative at r=1/3,z=1 is exactly -9/8. Together with the full native coefficient map's analyticity and strict remaining gaps, this supports persistence at nearby unequal-angle n=0 contacts. The staged note confines itself to the directly verified equal-angle theorem.
+
+Publication scope: W2 alone misses this entire family. Adding the existing exact order-seven source cone consequently strengthens W2; that cone is not uniquely necessary, because a different sound certificate cone may supply the same inequalities. No coverage or obstruction for all unequal-angle C2, any larger word list, or all Q222 is inferred here. No solver, numerical feasibility claim, or continuous parameter sweep was used.

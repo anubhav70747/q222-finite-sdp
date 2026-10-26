@@ -1,0 +1,82 @@
+\section{Reconstructed small normal budgets for R1 unbounded-$q$}
+\label{sec:reconstructed-r1-qo-small-normal-budgets}
+
+\paragraph{Scope and provenance.}
+This is a fresh proof from the actual compact source RSR1--RSR9 and
+the exact circuit identity RSR23. It replaces the needed mathematics
+of the lost NS helper; it is not an assertion of original file bytes.
+Use all notation of \texttt{r1\_qo\_actual\_source\_and\_scalar.tex}.
+The testing variables $u,v>0$ are arbitrary independent infinitesimals,
+and $z>0$ is arbitrary. Put
+\[
+ b=v-uz/j=\sqrt y\,B_*,\qquad
+ h_0=\mu+\tfrac12,\qquad
+ M_e=\frac{nh_0j^2}{n+h_0},\qquad J_c=M_ey.
+ \tag{NSR1}
+\]
+The two rows
+\[
+       p v^2b,\qquad \sqrt T\,\mu u v b
+ \tag{NSR2}
+\]
+can be given any fixed real positive square coefficient at
+infinitesimal cost from $f_c\Psi+J_cB_*^2$. The same holds after
+multiplying either row by any bounded separated coefficient.
+No coefficient in the budget depends on $z$.
+
+\paragraph{The infinitesimal-$\eta_*$ source case.}
+By RSR9, $n>0$ and
+$n\sim p/[2(j-p)(j+1)]$. The exact identity
+\[
+ \frac{p^2}{M_e}
+ =\frac{p^2}{h_0j^2}+\frac{p^2}{nj^2}
+ \tag{NSR3}
+\]
+is bounded: the first term is bounded since $p/j<1$; the second
+is comparable to $p(j-p)(j+1)/j^2$. If $j\leq1$ this last expression
+is at most $2p/j$, and if $j\geq1$ it is at most $2p$.
+Thus the direct costs of the squared rows in NSR2, relative to
+$J_cB_*^2=M_eb^2$, are
+\[
+ \frac{p^2}{M_e}v^4\in\mathrm I,\qquad
+ \frac{T\mu^2}{M_e}u^2v^2\in\mathrm I.
+ \tag{NSR4}
+\]
+Here $\mu/p$ is bounded by RSR6--RSR7. No use of the circuit is
+needed in this case, and no positive lower bound on $j$ is imposed.
+
+\paragraph{The positive-unit-$\eta_*$ source case.}
+The remaining possibility is that $\eta_*$ has a positive real lower
+bound, since RSR9 already proves it bounded. The exact relation
+\[
+ \frac{p^2}{j^2B}=\frac{p+p/j}{\eta_*}
+\]
+and RSR16--RSR17 imply $p^2y/f_c$ bounded. Apply
+\[
+ (1+V^2)\Psi-V^2B_*^2
+       =Q_*^2+R_*^2+V^2(1-UVZ_*)^2.
+ \tag{NSR5}
+\]
+The first row in NSR2 costs exactly
+\[
+ \frac{p^2y}{f_c}v^2(y+v^2)\in\mathrm I
+\]
+on $f_c\Psi$. Indeed the difference between that multiple of the
+circuit packet and $(pv^2b)^2$ is $p^2y^3V^2$ times the SOS on
+the right of NSR5. The second row costs exactly
+\[
+ \frac{T\mu^2y}{f_c}u^2(y+v^2)\in\mathrm I;
+\]
+its difference is $T\mu^2xy^2U^2$ times the same SOS. Every
+multiplier is a product of nonnegative pure-source and pure-testing
+factors. These formulas include literal $n=0$, since they never
+divide by the current mass. The two source cases exhaust the source.
+
+\paragraph{Use in the full normal conductor.}
+The first row pays the $(p/2)v^2b$ term in the complete half-$N$
+derivative. The second pays the $\mu uvb$ term in the half-$M$
+derivative after its source normalization by
+$\sqrt{TH(1-H)}$: the omitted factor $\sqrt{H(1-H)}$ is bounded.
+This is only a square-budget lemma. The exact full-normal identities
+and the retained hard block are required separately to infer a
+full-parent local certificate.

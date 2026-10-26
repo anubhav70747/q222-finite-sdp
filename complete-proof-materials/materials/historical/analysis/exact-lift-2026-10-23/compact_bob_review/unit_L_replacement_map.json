@@ -1,0 +1,53 @@
+{
+  "scope": "Original C14.2 only: x and sigma=1/eta positive infinitesimal, L=x*zeta a positive bounded unit, original native gaps and nonnegative event coefficients; all tests and states.",
+  "quantitative_theorem": "bounded_unit_L_all_tests.tex: theorem thm:bounded-unit",
+  "qualitative_replacement": "unit_L_qualitative_replacement.tex",
+  "replace_whole_subsections": [
+    {
+      "component_id": "pb0d9d28d0849",
+      "title": "Unit L: noninfinitesimal Alice tests",
+      "source": "latex/certificates/c1_short.tex:7989",
+      "formulas": ["LA1", "LA2", "LA3", "LA4", "LA5", "LA6", "LA7"],
+      "replacement": "New single unit-L theorem; annulus proof handles bounded tests outside the double corner, endpoint raw frames handle projective Alice.",
+      "hypotheses_preserved": "All original source intersections, D=0 and beta=0; no positive lower bound on individual source openings.",
+      "old_imports_no_longer_needed_for_this_subsection": ["noncommuting-residue theorem for finite unit u,v", "separate LA4 reciprocal strip", "common remote theorem as an endpoint black box"]
+    },
+    {
+      "component_id": "pda4a21937f64",
+      "title": "Unit L: bounded Bob tests",
+      "source": "latex/certificates/c1_short.tex:8148",
+      "formulas": ["LB1", "LB2", "LB2a", "LB3", "LB4", "LB5"],
+      "replacement": "One moving event-coordinate annulus with fixed source clipping; no testing-residue-selected Bob parameter or moving-alpha freeze is needed.",
+      "hypotheses_preserved": "Original unit-L source, all openings, both permitted event-zero faces, all literal angle/state endpoints.",
+      "old_imports_no_longer_needed_for_this_subsection": ["residue-selected s0 Gram and inverse LB2a", "contact-independent moving state substitution LB3"]
+    }
+  ],
+  "retarget_source_partition": [
+    {
+      "source": "latex/certificates/c1_short.tex:144",
+      "old": "For unit L and unbounded eta: local all-H theorem plus references to both LA/LB subsections.",
+      "new": "One reference to the new unit-L all-tests theorem; its double-corner paragraph explicitly imports the existing local all-H theorem."
+    }
+  ],
+  "manual_tag_scan": {
+    "root": "latex/**/*.tex",
+    "patterns": ["LA1--LA7", "LB1--LB5", "component:pb0d9d28d0849", "component:pda4a21937f64"],
+    "result": "All LA/LB manual-tag uses are internal to the two replaced subsections. Only external formal uses are the two c1 source-partition references at lines146--147."
+  },
+  "retained_inputs": [
+    {"id": "P1 / eq:c1-eta-large-source", "role": "Exact native source formulas; self-contained in quantitative note, referenced in qualitative replacement."},
+    {"id": "BE3--BE9", "role": "Native source identities, opening-safe leading ratios and e bound. They remain indispensable; the qualitative unit-L theorem may cite them."},
+    {"id": "thm:c1-unification-bounded-z-all-H", "role": "Existing B23 full-state tensor certificate at the double infinitesimal testing corner; retained in qualitative replacement."},
+    {"id": "SP3 / SP6 plus retained angular/root identities", "role": "Remain operative inside the inner fixed-family proof. They are not deleted by the new annulus or endpoint theorem."},
+    {"id": "bounded_R_bridge.tex", "role": "Only the general quantitative [ell,U] fixed-family theorem imports this R-dependent inner admission. It is not needed for the qualitative replacement or the optimized ell>=1 quantitative version."},
+    {"id": "p89fd3edb3edd CE4--CE8", "role": "Full algebraic endpoint identities are reprinted in the new proof, so this component is not an external unit-L import; it remains operative for other C1 sources."}
+  ],
+  "do_not_delete": [
+    {"id": "p080aa62de16d", "reason": "Unit L with infinitesimal eta has sigma not infinitesimal and is outside the new source domain."},
+    {"id": "p686209b87229", "reason": "Unit L with unit eta is outside the new source domain."},
+    {"id": "thm:c1-unification-bounded-z-all-H and its technical proof", "reason": "Still needed for the inner corner and for non-unit-L consumers, notably unbounded L."},
+    {"id": "p23a094ff816d", "reason": "Global three-event wall/contact exclusion and selected-cone lift have other uses; the compact-Bob defect is diagnostic, not a replacement for the full CAP component."},
+    {"id": "common TF1/TF2, noncommuting source theorem, LII/RR and other C1/C2 source components", "reason": "No global deletion follows from this source-domain replacement."}
+  ],
+  "global_limit": "One fixed family is proved for every specified compact source interval. No single family uniform in ell down to0 and U up to infinity, and no full-Q222 affine pencil, is claimed."
+}

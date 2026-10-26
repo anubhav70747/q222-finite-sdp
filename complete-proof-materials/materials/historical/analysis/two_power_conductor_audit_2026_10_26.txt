@@ -1,0 +1,16 @@
+Two-power conductor: bounded audit
+2026-10-26
+
+Verdict: Theorem A is sound under its exact bounded-factor hypotheses. It is a useful filtered specialization of the earlier general SE conductor: it replaces the parity argument and the second(epsilon,v) test by direct factor tracking. Both normal rows and the full hard block are preserved. The public standalone proof is independent-review/TWO_POWER_CONDUCTOR.md.
+
+Filtration. Supplied f_i=epsilon^2 fhat_i gives S=epsilon^2 S2. Ordered divided differences preserve this source factor, so the first U=epsilon*T_w(S2) belongs to epsilon R. Formula(A1) then gives Lx,Lz in epsilon^2 R and Ly in epsilon R. Since k=epsilon*j, Hh and lambda are in epsilon^3 R. Subtracting lambda(-2k,1,1,-1) therefore gives exactly(A5). Each Ji has an explicit epsilon factor, so its second U is T_w(Ji/epsilon) with a bounded polynomial coquotient. V=0 works at both stages for arbitrary polynomial angular dependence. No parity condition has been used.
+
+Contact algebra. F0 inJ^2 first gives Sc=0. The contact-gradient relation, Jh,c=0 and the nonzero determinant -E^2 epsilon^3 j^4 prove every Ji,c=0 by domain cancellation. This introduces no determinant inverse into the coefficients. The scalar identity(A8) follows from the previously checked circuit relations.
+
+Normals/matrix. g_Tbullet=epsilon*ghat_Tbullet gives ST in epsilon R; G_T inJ gives ST,c=0. The same one-stage formula lifts BOTH full normals, with no discarded constant or D0 term. The explicit matrix(A10) has the correct cross factors: equal splitting of q1^2-yz=q2^2+zh reproduces2varpi_c times the circuit, and the hard-normal blocks give2N G_N+2M G_M. Positivity is not a conclusion.
+
+Boundedness. The coefficient domain is explicitly a subring of bounded source elements; all supplied factor coquotients remain in that domain's polynomial ring. Contact substitution uses bounded k,j,v0. Consequently each finite divided difference, source-factor extraction and matrix operation stays bounded. This avoids the earlier ambiguous assertion that bounded raw arrays alone control coquotients. Valuation-small coefficients without the stated exact bounded factorizations are insufficient.
+
+Unit rescaling. For positive delta, all CA soft monomials and both q roots are delta times their SE versions; hard normals are unchanged. The diagonal congruence printed in the response is correct. Boundedness and strict residue transfer only when delta and its inverse are bounded units; the separate SE base is still needed when delta is unbounded.
+
+Native scope. Theorem B continues to depend on exact TL3/source-contact identities and the separately proved formal negative-beta base. The shorter conductor does not establish those inputs, other charts, a global cover or a finite SDP lift.

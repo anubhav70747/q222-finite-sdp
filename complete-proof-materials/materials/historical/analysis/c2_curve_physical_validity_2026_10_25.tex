@@ -1,0 +1,146 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{proposition}{Proposition}
+\newcommand{\Id}{\mathbb I}
+\begin{document}
+\begin{center}\large A quantum-valid extreme curve with two deterministic zeros\end{center}
+
+Let $A_0,A_1,B_0,B_1$ be binary observables, with the two parties
+commuting, and put
+\[
+ S=A_0B_0-A_0B_1+A_1B_0+A_1B_1,\qquad H=\Id-S/2.
+\]
+Write $p_{ab|xy}$ for the joint event probability, with $a,b\in\{+,-\}$.
+Our canonical slack is
+\begin{align*}
+ f={}&dH+4\lambda p_{++|01}+4n p_{+-|00}+4m p_{+-|11}
+       +4C p_{-+|10}\\
+    &+4A p_{-+|00}+4D p_{-+|11}
+       +4\alpha p_{--|01}+4\beta p_{+-|10}.
+\end{align*}
+Define the canonical valid cone as the set of its nonnegative coefficient
+vectors for which $f\geq0$ on every quantum behaviour.
+
+\begin{proposition}
+For $0<z\leq2/5$, the source $d=1$, $\lambda=\beta=0$,
+\begin{align*}
+ n&=\frac{2-5z}{8(1+2z)},&
+ m&=\frac{2+z}{8(1+2z)},&
+ C&=\frac{2+z}{2(1+2z)},\\
+ A&=\frac{3(2+z)}{8(1+2z)},&
+ D&=\frac{3(2-z)}{8(1+2z)},&
+ \alpha&=\frac{3z^2}{2(2-z)(1+2z)}
+\end{align*}
+is quantum-valid and generates an extreme ray of the canonical valid cone.
+The assertion includes $z=2/5$, where $n=0$.
+\end{proposition}
+
+\begin{proof}
+We prove validity by an explicit determinant decomposition.
+Multiplication by $K=8(2-z)(1+2z)>0$ gives the polynomial source
+\[
+\begin{split}
+ (d,\lambda,n,m,C,A,D,\alpha,\beta)
+ =\bigl(&8(2-z)(1+2z),0,(2-z)(2-5z),\,4-z^2,\\
+       &4(4-z^2),\,3(4-z^2),\,3(2-z)^2,\,12z^2,0\bigr).
+\end{split}                                                    \tag{1}
+\]
+All entries are nonnegative, and $d>0$. Use real two-qubit coordinates
+\[
+ A_0=B_0=Z,\quad
+ A_1=\frac{(1-u^2)Z+2uX}{1+u^2},\quad
+ B_1=\frac{(1-v^2)Z+2vX}{1+v^2}.
+\]
+For a real state $\psi=(W,X_s,Y,Z_s)$, put $D_u=1+u^2$, $D_v=1+v^2$.
+The entire cleared slack for the source (1) is the quadratic form
+\begin{align*}
+ F={}&4nD_uD_vX_s^2+4m(vW-X_s+uvY-uZ_s)^2
+       +4CD_v(uW-Y)^2+4AD_uD_vY^2\\
+ &+(4D+2d)(uW+uvX_s-Y-vZ_s)^2
+ +(4\alpha+2d)D_u(vY-Z_s)^2\\
+ &+2dD_v(X_s+uZ_s)^2-2dD_uD_vZ_s^2.
+                                                               \tag{2}
+\end{align*}
+Thus $F=D_uD_v\|\psi\|^2 f(q)$, and we write $P_z(u,v)$ for its
+symmetric state matrix. Its $Z_s=0$ principal block is positive definite
+when $uv\ne0$: the terms proportional to $d$ alone give
+\[
+ 2d\bigl[(uW+uvX_s-Y)^2+D_uv^2Y^2+D_vX_s^2\bigr].       \tag{3}
+\]
+Consequently $P_z$ has three positive eigenvalues; the sign of its fourth
+eigenvalue is the sign of its determinant.
+
+Here the determinant has a particularly short exact form. Set
+$U=u^2$, $V=v^2$, $G_z=432(2-z)^3(z+2)^3$. Direct expansion of (2) gives
+\[
+ \det P_z=16G_zD_u^2D_v^2u^2v^2 R_z(U,V),                \tag{4}
+\]
+where
+\begin{align*}
+R_z(U,V)={}&14z^2-96z-24+\frac{16z^2}{U}
+ +(6-z)(2-z)\frac VU+\frac{48z^2}{V}\\
+ &+16(2-z)V+3(z+2)(2-5z)\frac UV+16(z+2)U.
+                                                               \tag{5}
+\end{align*}
+For completeness, (4) can be checked without a four-dimensional
+determinant expansion by comparing the six outer coefficients in (5)
+and the constant coefficient after setting $u=v=1$. The accompanying
+exact checker also expands the full polynomial determinant in $(u,v,z)$.
+
+Put $x=U/z$, $y=V/z$. The whole Laurent polynomial is
+\begin{align*}
+R_z(zx,zy)={}&16z(x+x^{-1}-2)
+ +16z(2-z)(y+y^{-1}-2)\\
+ &+3(z+2)(2-5z)(x/y+y/x-2)\\
+ &+16z(z+1)(y/x+x+y^{-1}-3).                              \tag{6}
+\end{align*}
+Every coefficient is nonnegative on the stated interval. The first three
+brackets are nonnegative reciprocal-pair expressions. The last is
+nonnegative by three-term AM--GM, because $(y/x)x y^{-1}=1$.
+This also exhibits balance and a zero at $U=V=z$ directly.
+Equations (3)--(6) give $P_z(u,v)\succeq0$ for $uv\ne0$.
+Continuity of $P_z/(D_uD_v)$ gives positivity on the axes and at projective
+half-angle endpoints. Any two binary observables decompose into blocks of dimension
+at most two; in each block a local basis gives the displayed real
+half-angle form. Positivity of its real state matrix also gives positivity
+on complex state vectors. Hence this proves quantum validity for all
+states and binary measurements.
+
+It remains to establish extremality. Return to the unscaled source
+and let $c=\sqrt z$. At $u=v=c$ its Bell operator has the kernel vector
+\[
+ \psi_c=(1,-c/2,c/2,1)^T.                                 \tag{7}
+\]
+Substitution into (2), or into the Bell operator before clearing, verifies
+the four state-kernel equations and the two angular first-derivative
+equations. To check their independence, regard them as linear equations
+in the seven active coordinates $(d,n,m,C,A,D,\alpha)$, holding (7)
+fixed while differentiating the measurement angles. More precisely, let
+$\mathcal B(u,v)$ be the uncleared Bell operator $f$, and define $M(c)$
+as the coefficient matrix, in that ordered source basis, of
+\[
+ \left.\begin{pmatrix}
+ \mathcal B\psi_c\\
+ \psi_c^T(\partial_u\mathcal B)\psi_c\\
+ \psi_c^T(\partial_v\mathcal B)\psi_c
+ \end{pmatrix}\right|_{u=v=c}.
+\]
+Here $\psi_c$ is unnormalised, the first four rows are state-kernel
+entries rather than doubled quadratic gradients, and the final two rows
+are scalar angular derivatives. Then
+\[
+ \det M(c)_{[:,\,(d,n,m,C,A,D)]}
+       =-\frac{768c^{10}}{(1+c^2)^5}\ne0.                 \tag{8}
+\]
+Thus their solution space is exactly the one-dimensional span of our
+source. Now split it as a sum of two canonical valid sources.
+Nonnegativity preserves $\lambda=\beta=0$ in both summands. Each summand
+has zero value at (7), since it is valid and their sum vanishes there.
+Its positive semidefinite Bell operator therefore annihilates $\psi_c$;
+its two angular derivatives vanish at this interior minimum. By (8),
+each summand is proportional to the original source. The proportion is
+nonnegative because its $d$ coordinate is nonnegative. This proves that
+the ray is extreme, including the additional face $n=0$.
+\end{proof}
+\end{document}

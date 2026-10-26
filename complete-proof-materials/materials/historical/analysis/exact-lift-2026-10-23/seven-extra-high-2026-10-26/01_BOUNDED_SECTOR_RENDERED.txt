@@ -1,0 +1,93 @@
+      Q222 Bounded Canonical Sector Proof 2026 10 26
+
+
+
+ 
+
+
+Bounded canonical sources: one complete separated tensor-SOS sector
+Date: 26 October 2026. Scope: The bounded positive-core canonical sector, conditional only on native contact entry: the source is physical and has an actual finite noncommuting contact in C1 or C2 with the native signs/gaps. This is not the full global existence proof and does not assert anything about unbounded normalized event coefficients, R1/R10, or explicit fixed finite Gram dictionaries.
+Pinned primary source: https://github.com/anubhav70747/q222-finite-sdp/blob/0565db3414e4fb2366fe4596fd2ff3c62867bbdf/latex/certificates/group_02.tex (AU14–AU18, FE/FR, S, CU, WA, WN, PP, RC, CR). Also latex/chapters/03_tensor.tex (TF1–TF3) and latex/chapters/noncommuting_refined.tex (NC1–NC26). All calculations below refer to the complete four-state Bell parent and not just its determinant. The accompanying exact checker tests several of the longest polynomial coefficients.
+Theorem
+Let K_c,K_t be independently labelled real-closed extensions of R, and T=K_c⊗_R K_t. Let
+c=(d,lambda,n,m,C,A,D,alpha,beta)
+be a canonical physical source over K_c with d>0, delta_tot = d/(d+lambda+n+m+C+A+D+alpha+beta) a positive bounded unit, and an actual finite noncommuting stationary contact. Assume either:
+C1: lambda=n=0, m,C,A,alpha>0, D,beta>=0, D+beta>0;
+C2: lambda=beta=0, m,C,A,D,alpha>0, n>=0.
+Then, for every independent projective pair of testing measurements and every testing real or complex state, the homogeneous source/test slack is a finite SOS in T. This includes all native permitted literal zero weights and every relative valuation of source and testing openings. No mixed tensor element is inverted or square-rooted.
+Proof follows. Divide by the pure-source positive d and write d=1; all eight other weights are bounded. Use the quarter-parent F/4 when referencing WA, WN, PP, RC and CR, and the full parent F in FE/FR/S/CU. The factor four is a pure positive square.
+Three mechanisms used in every leaf
+Strict bounded Gram. For a bounded matrix Q over B_c⊗B_t, if res(Q)≻0, then z^TQz is tensor-SOS for arbitrary rows z∈T^r (TF1–TF2). A retained positive event packet is itself a separated square. Exact finite monic division by u-u_c, v-v_c, etc., before tensor evaluation produces bounded coefficients and never uses a mixed inverse. Pure-source denominators require a proved nonzero real residue, as verified below in the leaves.
+Noncommuting residues. The complete NC1 parent admits the hard/soft polynomial form NC7. A finite positive hard block, strict constrained angular Hessian and exact source-field stationary center give NC9, with a positive-residue matrix on all soft and hard deviations. The relevant source-free proof is NC7–NC26: hard event normals form a matching in the eight-cycle, at most three such normals are state-independent, and the four-event case has an exact radial completion NC17–NC26. Its recursion terminates after at most three additional event activations. This establishes every test with both local measurement pairs noncommuting in residue, without a condition linking coefficient scales to testing scales.
+Quartic degeneracies. For a finite commuting-edge contact, substitute X=u²x,Y=ua,Z=ub after normalizing the nonzero event amplitude. The complete parent is exactly 4m+u²K; the three-state Hessian is strict, the first missing angular derivative has strictly positive pivot gamma in FE3, and the higher hard row has positive coefficient FE2. For a finite-ratio zero-corner contact with weak alpha, normalize vY-Z=-1, set (X,Y,u,W,V)=(vx,vy,vt,w,v²), and use the exact identity F=4alpha+v²K. The positive state complement, double squared-angle zero and the next determinant coefficient give the strict four-variable Hessian and gamma>0 in FR2. In both cases a source-field semialgebraic implicit center yields FC1–FC3. The complete first-state-normal rows are obtained by monic differences; at the ratio corner the actual undivided rows are (X-vx_c,Y-vy_c,u-vt_c,v(W-w_c),v²-V_c) (no division by an independently infinitesimal test v). If the source scalar kappa is nonnegative, retain kappa u² or kappa v²; if negative, a source-field stationary center with nonnegative physical value absorbs it. The resulting full Gram has a strictly positive real residue.
+Exhaustive source routing and forbidden faces
+Every source coefficient is nonnegative bounded, so is either a unit or has zero residue. In the residue Laurent polynomial SG5–SG6, the two forbidden faces are exactly
+h|_{lambda=beta=A=0}=-(1+2n)(2D+2C+1)(2alpha+2m+1), and
+h|_{lambda=n=m=C=0}=-(2D+1)(2beta+1)(2A+2alpha+1).
+The first face’s remaining positive Laurent terms, at U=t²,V=t^{-1}, tend to zero; the other face has just a positive q10/V and one sends V→∞. These are real residue contradictions to source physicality, so C2 A is a unit, and C1 at least one of m,C is a unit. The analogous WA1/WA2 residue tests (including the exact state witness F=16epsilon((1+n+m+A+D)epsilon-1) at u=v=1 when C=alpha=0) force C,A,D to be units whenever alpha is weak, in either family. Angular stationarity WA4 then gives U,V infinitesimal and the bounded source shape equations WA7–WA10. These are source-field facts and do not constrain independent tests.
+The exhaustive disjoint routing is:
+Family and source conditionLeaf
+C2: alpha weak, n,m unitsCU
+C2: alpha weak, n unit, m weakWA
+C2: alpha,n weak, m arbitraryWN
+C2: C weakreflect by exact AU13, then the same three rows
+C2: C,A,alpha units, D unitS
+C2: C,A,alpha units, D weak, m unitreflect AU13 then S
+C2: C,A,alpha units, D,m weakRC
+C1: alpha weakWN
+C1: A weakreflect by exact AU12, then WN
+C1: A,alpha units, orient C unit and D unitS
+C1: A,alpha,C,m,beta units, D weakreflect AU12 then S
+C1: A,alpha,C,m units, D,beta weakPP
+C1: A,alpha,C units, m,D weak, beta arbitraryCR
+
+
+
+
+For C2 with C,A,alpha units, the contact balances in AU16 give DV² ~ 1 and U² ~ m (their positive unit coefficient multipliers are explicit products of the SG6 t_i). For C1 with A,alpha,C units, AU17 gives m unit iff U unit; if m weak, D must be a unit or the reciprocal CR regime applies. These statements establish exhaustion even when allowed n,D,beta are literally zero. Symmetries AU12/AU13 are identities of the whole parent with positive pure-testing homogeneous factors.
+The regular strong leaf S and weak-alpha CU
+S assumes d,C,A,D,alpha units. At finite u=0,v_0!=0, after removing the whole weak m packet, the determinant is U E(V)+U² B(V); its q10=4alpha A t7t3 and q12=4CD t5t2 are units, and B(v_0²)>0 because q21>=4CA t1t4 is a unit. Physicality implies E(V)>=0, hence a zero at v_0² is double. The explicit strictly positive three-state block M0(v0) and FE1–FE3 above finish the complete finite-edge form. Every other finite one-commuting test has positive-definite state residue except the zero ray at a double corner. The complete corner residue Grams from S are, respectively:
+(0,0): 2(1+2n+2beta) X² + (4C+4D+2)(u-Y)²+4A Y²+4alpha Z²;
+(∞,0): 4C W²+4A Y²+(4D+2)(W+v)²+4alpha Z²+[4(m+beta)+2](p+Z)²;
+(0,∞): (4n+4beta+2)X²+4C(u-Y)²+[4(A+alpha)+2]Y²+4D Z²;
+(∞,∞): 4C W²+4A Y²+4D(X-p)²+(2+4n)X²+[2+4(m+alpha)](Y-q)².
+Each represents the full remainder after retaining the displayed original positive whole squares, and has a trivial square kernel. The row substitutions involve only positive-unit angles or reciprocal homogeneous coordinates. Literal axes are polynomial values.
+CU has n,m,C,A,D units and weak alpha. The same complementary faces remain strict except the joint zero-angle corner. In the W=1 chart its full quadratic residue in (X,Y,u,v) is (4n+2)X²+4m(v-X)²+[4(C+D)+2](u-Y)²+4A Y², strictly positive. In the Z=1 chart, its complete quadratic jet Q_w is (source, Eq. CU (2)):
+4n X²+4m(vw-X-u)²+4C(uw-Y)²+4A Y²+4D(uw-Y-v)²+2[(uw-Y)²+(X+u)²-2uvw].
+If strict, apply the bounded Gram lemma. If singular, its state block is positive and its angular kernel has a finite nonzero ratio; q20=4nAt3t4, q02=4mDt5t6 and q21,q12 are strict, supplying precisely the FR1–FR2 hypotheses. This handles all independent tested u/v rates and includes alpha positive infinitesimal, and the literal measurement axes.
+The weak-alpha leaves WA and WN
+WA: Weak alpha, n unit and m weak. The exact source balances WA4 imply m~Q², alpha~P², P,Q infinitesimal, and positive units C,A,D,r,y,r-y,1+y-r. At W=1, substitute u=rvz,X=xvz²,Y=yvz. The full quarter-parent scalar has coefficients WA14; the three contact equations solve m,alpha,h explicitly (WA16). On
+R=z(v²-P), S=v(z²-Q), Psi=QR²+PS²+vzRS, 
+the identity WA18 is exact: Phi=calC R²+E S²+calF Psi+G B32+J B23+calK B33. calC,E are strict units, and all other terms are infinitesimal Gram corrections or explicit circuit squares. All three first normals come from half derivatives of the full WA12 parent: L_u=vz A_u, L_Y=vz A_y, L_X=v[-m+z² B_X]. Monic division by the source contact values gives WA20 with infinitesimal coefficients on R,S; the quadratic hard residue is K0(N_u-N_Y)²+A0 N_Y²+(n0+1/2)N_X² ≻0 (WA21). The complementary Z=1 local chart has the strict four-normal Schur form WA22. Outside the double-zero corner the exact four-root determinant WA23 is positive; WA24–WA26 are positive full reciprocal residues. This proves WA27 with no fixed ratio of testing openings.
+WN: C2 weak n,alpha or C1 weak alpha and n=0, with arbitrary bounded m,beta as appropriate. The same WA14/WA19 are used, including beta. The source X-jet WN4 gives a source-only exact square E=alpha r²+c0²/H_X+nH0r²/H_X. For bounded Q, the scalar retains calC R²+calF Psi, now with both calC and calF positive units. WN5 expresses Psi in six separated cubic roots, WN6 certifies the entire degree-(3,3) packet, and WN7–WN8 purchase a real pivot on PS. Every complete first normal is obtained by WA20; WN11 bounds its soft coefficients. The complementary Z=1 scalar WN14 has strict rows P,a²w,sqrt(E)a and the complete normal polynomials WN15–WN16 have infinitesimal allocations.
+When Q is unbounded, the source-only bounds WN17 give epsilon=1/Q, Lambda=PQ, tau=Lambda/epsilon=PQ², nu=n/epsilon² bounded. The scalar exactly becomes WN23:
+calC K1²+N A1²+calF M+G{2 Lambda K1²+UT²(U-Lambda)²}+J{(U-Lambda)²+2 Lambda A1²/epsilon²}+calK B33, 
+where K1=UT-Lambda epsilon, A1=a(T-epsilon), N=E/epsilon². The circuits M and B33 are explicitly SOS by WN5–WN6. The monomial substitutions WN24 produce four exact divisibilities WN25, and the quadratic conductor WN26: Lambda(U-Lambda)K1 = Lambda M-(tau sqrt(epsilon) A1)². In the nu/m-unit case WN32 is strict. In the thin case, including literal n=0, WN33 shifts the complete X normal; the resulting scalar 2(m/H_X) A1 P_X is retained and allocated through WN35–WN36, not dropped. The nonnegative D_X N_X² is kept whole (WN37), the remaining mixed normals are WN38, and their real hard residue is WN39 positive definite. WN40–WN43 provide all remaining finite and reciprocal projective charts, including the sign-gauged WZ<=0 exit. Therefore WN44 holds with all beta and n openings stated in the theorem.
+The two reciprocal leaves PP and RC
+PP (C1; m,C,A,alpha units and D,beta weak): At the source U=u_c² is a unit and V=v_c^{-2} is infinitesimal. AU17 gives the exact source bounds D=V² delta, beta=V² eta, delta+eta a unit (PP1–PP2). The hard residue PP4 is a positive quadratic in (W,Y,X), so its state equations prove that p=W_c/w_c, y=Y_c/w_c, x=X_c/V are bounded. PP5 gives a double real zero of the angular determinant. In the complete reciprocal parent PP6 use normals
+N_W=W-pwZ, N_Y=Y-ywZ, N_X=X-xw²Z, Q=w(u-c)Z, L=(w²-V)Z.
+PP9–PP10 are exact monic divisions for all three first normals (the apparent (beta-D)/V is bounded because of PP2). The scalar has E(u,0)=D+beta u² and first contact jets zero. PP11–PP14 therefore give the exact quadratic form in Q,L by dividing the polynomial E(u,b)-(delta+eta u²)(b-V)² monically by b, then the two contact differences. The last pivot is delta+eta c², a unit. The hard-and-angular 4×4 residue has hard block PP4 and angular Schur pivot [(1+c²)² q21 c²]/[4 det H_c]>0 (PP15–PP17). PP18–PP19 and the polynomial reciprocal RC20/RC24 supply the other projective charts. This is an SOS for the entire PP6 including both normal rows and the X normal, not simply a determinant bound.
+RC (C2; C,A,alpha units and m,D weak, n arbitrary): The exact angular source balances give U=u_c², V=v_c^{-2} both infinitesimal, m=mu U², D=delta V² with mu,delta positive units (RC1). The source-field hard equations, using the actual C2 native formulas, yield positive units S,y,S-y,1-y,R, and the residues RC4. This extraction is independent of U/V: the six rational native coefficients have denominators with nonzero constant parts after canceling their indicated monomials. In the complete reciprocal parent RC6 put
+N_x=X+u R w² Z, N_y=Y-ywZ, rho=uW-SwZ, k=UW-SuwZ, ell=(w²-V)Z.
+The whole hard block is RC10. For unrestricted W,Z, its exact first-normal rows are RC11–RC12. A direct algebraic check gives L_x-L_x^(RC11)=uw² Z E_X/(UV) and L_y-L_y^(RC12)=wZ E_Y, with E_X=E_Y=0 the original two contact-state kernel equations. Thus no first-normal term is omitted. The scalar F0 minus RC13 is the polynomial E(a,b)Z², where a=u²,b=w²; it has E(a,0)=D, zero contact value and both angle jets, and E_2(b)=R²b²[n(1+b)+D+1/2]. Monic division gives E_0=(b-V)²J0, E_1=b(b-V)J1, yielding exactly RC16. Therefore the complete five-root Gram has residue
+(n0+1/2)N_x²+H0 N_y²-2C0 N_y rho+C0 rho²+mu0 k²+delta0 ell² ≻0,
+because C0(H0-C0)=C0(A0+alpha0+1/2)>0. RC18–RC25 check every independent remaining finite, single-reciprocal and double-reciprocal measurement, retaining event squares whole. Their strict determinants are RC19 and RC23; at reciprocal infinity their full rows are RC20 and RC24. Literal endpoints are polynomial values.
+The C1 reciprocal leaf CR
+Here C,A,alpha are units, m,D weak, and beta is any bounded nonnegative element. Source balances give U=u_c² and P=v_c^{-2} infinitesimal, and D/P², beta U/P² bounded (CR1). The original X,Y source equations, after taking the positive two-by-two source-field Schur complement, establish bounded r,x,y and the critical unit shape equations CR6–CR7. No mixed Schur inverse occurs. Put Q=Z_c², L=PQ, and choose the reciprocal quarter-parent CR9.
+At W=1 with u=rbz, X=xbz²,Y=ybz the entire scalar is CR11 (verified directly), and the three contact balances CR13 give the balanced identity CR15:
+Phi=delta R²+theta M+calF K²+G{PK²+Vz R K}+J{(QR-zK)²+2QK²},
+with R=z(V-P), K=VT-PQ, delta=D/P², theta=EQ/P and delta+theta=calC+o(1) a positive unit. M is a cubic AM-GM circuit. The three complete first normals are CR16–CR19, divided monically: each is a bounded combination of bR, bzK, b[m/(PQ)+c2 T]K and E b z(T-Q) (CR20). The exact cubic conductors CR22 control these with infinitesimal Gram coefficients whenever theta is a unit; when delta is a unit, R is kept directly. For signed calF the precise allocation is CR23–CR25, which purchases a real K pivot or represents K with infinitesimal coefficients in cubic roots. For unbounded source ratio Q, CR26–CR27 reduce the entire scalar to a strictly positive real-residue two-row Gram on (R,K) plus retained positive squares, and CR19 controls the normals.
+At the other state chart Z=1 the entire scalar is CR29 or its exact cubic identity CR34. All three first normals have explicit finite divided-difference forms CR31–CR36; CR35 controls the otherwise exceptional X normal. The hard residues are CR37 and CR38 (strict), and the unit-beta state case has the complete positive quadratic residue CR39 in (u,b,X,Y), including all beta terms. The remaining angle charts reuse the polynomial RC18–RC25 expressions with the actual critical C1 shape CR7; no claim of C2 membership is made. C1 literal D=0 or beta=0 is allowed wherever the actual contact exists; they cannot both be zero. This closes CR39 and its all-tests restoration.
+Endpoints, independence and scope
+The listed frames use only (i) positive pure-source normalization by d, bounded source coquotients whose denominators have positive unit residue, and positive pure-testing coordinates such as 1+u², 1+v²; (ii) polynomial/monic changes of testing roots; and (iii) source-only centers when a quartic point demands one. All listed positive-residue matrices act on the complete scalar, normal and quadratic state expansion. Any zero row at a literal endpoint is harmless: a positive-definite coefficient matrix remains SOS on an arbitrary, possibly dependent, row vector. The two testing half-angle sign gauges are exact congruences; real and imaginary parts of the state add as two nonnegative contributions. Source and testing infinitesimals were never identified.
+Thus the bounded canonical-source theorem is proved at the native contact-entry interface. What it does not prove is the exhaustive global SG/EN source decomposition, any unbounded normalised source (R1/R10 included), the separated SOS for all other leaves, Scheiderer's full global hypothesis, or a printed exact full-Q222 affine pencil.
+Independent checks: Q222_bounded_sector_exact_check.py checks the AU14 forbidden-face witness, the full WA14 and CR11 graph expansions, WA18/WN23/CR15 scalar balances, the WN26 conductor and WN6 decic square identity, the full RC11/RC12 first-normal rows modulo actual source kernel equations, RC23 strict determinant, and the CR39 complete hard jet. RC19 was independently factored separately from the 4×4 state matrix; its direct naive symbolic determinant is omitted from the short checker to keep runtime brief.
+
+
+
+
+
+
+
+
+

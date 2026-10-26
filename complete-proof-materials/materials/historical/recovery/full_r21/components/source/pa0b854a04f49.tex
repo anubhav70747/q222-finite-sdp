@@ -1,0 +1,339 @@
+\section{C1 UI: completion of the ordinary/small strip}
+\label{sec:r6-c1-ui}
+Use the unchanged native C1 source in the representative of (NI7):
+$k,\eta$ are positive bounded units and $\zeta=g^2$ is positive
+infinitesimal. All original openings and $D=0$ are retained.
+The exact stabilizer recovers the other representative; no condition
+$k\le1$ is imposed after that change. This section proves the missing
+ordinary/small testing strip, and joins the remote theorem (CR1)--(CR13).
+
+\paragraph{Exact bounded remainder.}
+Normalize by the positive pure-source $a$. Write $x=k^2$,
+$r=1-a\eta$, $K=1+x$, $R=1+xr$, $M=R-t$, and
+\[
+ J_s=K-xtg^2-a,\quad E=1-x\eta+tx\eta g^2,\quad
+ Q_c=1-xg^2r,\quad y=x\eta g^2.
+\]
+Here $a,t,r,1-r,M,J_s$ are positive bounded openings; $E,Q_c,R,K,r+\eta$
+are positive units. The exact polynomials $P_4,P_d,P_\alpha$ are (NC2).
+The coefficients after division by $a$ are
+\[
+\begin{aligned}
+ c&=2/a,& A_0&=\frac{2\eta^2P_4}{Kr(r+\eta)E},&
+ d_0&=\frac{4\eta P_d}{K(r+\eta)E},\\
+ D_0&=\frac{2(1+y)}{J_sE}-d_0/2,&
+ \alpha_0&=\frac{2x^2\eta P_\alpha}{KQ_cE},&
+ \alpha/a&=g^2\alpha_0.
+\end{aligned}                                                     \tag{CU1}
+\]
+In particular $c,A_0$ are strong; $d_0,\alpha_0$ are units; and
+$ca,A_0r,D_0J_s$ are bounded with continuous rational expressions
+through every opening. Put
+\[
+ h_2=\frac{2x\eta(1-tg^2)(1+y)}E,\qquad
+ h_b=\frac{2x\eta[1+(1-t)g^2]}E,
+ \qquad h_b-h_2=2x\eta g^2.
+\]
+Both $h_2,h_b$ are positive units. The exact coefficients are
+$m/a=h_2/(g^2M)$ and $\beta/a+d_0/2=h_b/(g^2t)$.
+
+For the test put $D_u=1+u^2,D_v=1+v^2$ and
+\[
+ Q=W+uY,\quad B=X+uZ,\quad p=t/R,
+ \quad N=(B-pvQ)/g,\quad L=vQ/g.
+\]
+The inverse $W=Q-uY$, $X=gN+pvQ-uZ$ is polynomial.
+Retain the two positive squares
+\[
+ \frac{4h_2t}{MR}N^2,\qquad
+ \frac{4h_bM}{tR}D_vN^2.                            \tag{CU2}
+\]
+Their remainder is exactly (CL7). Choose bounded caps
+$c_*\le c$, $A_*\le A_0$, $D_*\le D_0$, with $c_*,A_*>0$,
+$D_*\ge0$; bounded original weights can be kept unchanged.
+Retain the three positive centered excesses
+\[
+\begin{aligned}
+ &4(c-c_*)D_v(r_t-avZ)^2,\quad
+ 4(A_0-A_*)D_uD_v(Y-rvZ/\eta)^2,\\
+ &4(D_0-D_*)(J_t+J_svZ)^2,
+\end{aligned}                                                     \tag{CU3}
+\]
+where
+\[
+ r_t=uQ-D_uY,\quad J_t=r_t-D_uvZ+ugvN+upv^2Q.
+\]
+All five retained rows vanish at the actual contact
+\[
+ (u,v)=(k,k\sqrt\eta g),\quad
+ (W,X,Y,Z)=(g/\sqrt\eta,k(tg^2-1),krg/\sqrt\eta,1).
+                                                               \tag{CU4}
+\]
+Set $c_a=2-c_*a$, $A_r=A_0r-A_*r$, $D_J=D_0J_s-D_*J_s$.
+After removing (CU2)--(CU3), the entire parent divided by $a$ is
+\begin{align*}
+G={}&\frac4R\{(h_2+h_bD_v)N^2+2(h_bD_v-h_2)LN
+              +[h_2(1-p)+h_bpD_v]L^2\}\\
+ &+4c_*D_vr_t^2+8c_aD_vvZr_t-4c_aaD_vv^2Z^2\\
+ &+4A_*D_uD_vY^2+\frac{8A_r}{\eta}D_uD_vvZY
+                   -\frac{4A_rr}{\eta^2}D_uD_vv^2Z^2\\
+ &+4D_*J_t^2-8D_JvZJ_t-4D_JJ_sv^2Z^2\\
+ &+4\alpha_0D_u(gvY-gZ)^2
+       +2d_0\{J_t^2+D_u(v^2Y^2-2vYZ-v^2Z^2)\}.
+                                                               \tag{CU5}
+\end{align*}
+Thus $G$ is an exact bounded Gram on $(N,Q,Y,vZ,gZ,L)$ whenever
+$u$ is a bounded unit and $v$ infinitesimal. Every source denominator
+in its coefficients is a unit. Formula (CU5), rather than a scalar
+restriction, supplies all normal terms below.
+
+\paragraph{Local contact lifting with all first normals.}
+Put $\kappa=k\sqrt\eta$, $\varepsilon=\kappa g$,
+$s=R/(k\eta)$, $\delta=u-k$, and define
+\[
+ E_Q=Q-svZ,\quad E_Y=Y-rvZ/\eta,\quad
+ R_h=(vQ-s\varepsilon^2Z)/\varepsilon,
+ \quad S=v\delta Z,\quad T=\varepsilon\delta Z.
+\]
+Let $c_L=4[h_2(1-p)+h_bpD_v]/R$, a positive bounded unit.
+The sole potentially unbounded $L$ row can be replaced exactly:
+\[
+ L=\kappa R_h+kR gZ,\qquad
+ L^2-\kappa^2R_h^2=2kR vQZ-k^2R^2g^2Z^2.           \tag{CU6}
+\]
+Consequently (CU5) equals $c_L\kappa^2R_h^2$
+plus $8\kappa(h_bD_v-h_2)NR_h/R$ and a polynomial $G_0$.
+Explicitly, in (CU5) replace its first line by
+\[
+ \frac4R(h_2+h_bD_v)N^2+8k(h_bD_v-h_2)gNZ
+                 +c_L(2kRvQZ-k^2R^2g^2Z^2).        \tag{CU7}
+\]
+All coefficients of $G_0$ are bounded polynomials in $u,v,g$ with
+pure-source unit denominators. The coefficient of $NR_h$ is
+infinitesimal, since $h_bD_v-h_2=2x\eta g^2+h_bv^2$.
+
+Here are exact prescriptions for every normal coefficient, avoiding
+any implicit omission. Substitute $Q=E_Q+svZ$ and
+$Y=E_Y+rvZ/\eta$ in $G_0$ and collect the quadratic polynomial
+in $(N,E_Q,E_Y)$. The constant coefficient is $\phi(u,\xi)Z^2$,
+where $\xi=v^2$ and $\phi\in(g^2,\xi)$. The linear coefficients
+of $E_Q,E_Y$ are $vL_Q(u,\xi)Z,vL_Y(u,\xi)Z$; that of $N$ is
+$gL_N(u,\xi)Z$, where $L_N\in(g^2,\xi)$. These parity and ideal
+assertions follow term by term in (CU5),(CU7). The remaining quadratic
+normal block is the full coefficient collection of the same expression.
+For explicit pen-and-paper formulas, set
+\[
+ b=r/\eta,\quad F_0=us-D_ub,\quad
+ G_0^{\rm sc}=F_0-D_u+up\xi s,\quad
+ H_0=(8D_*+4d_0)G_0^{\rm sc}-8D_J.
+\]
+Then, writing $D_v=1+\xi$ in these polynomials,
+\begin{align*}
+ L_Q={}&2c_LkR+8D_vu(c_*F_0+c_a)+u(1+p\xi)H_0,\\
+ L_Y={}&-8D_vD_u(c_*F_0+c_a)
+       +8D_uD_v(A_*b+A_r/\eta)-D_uH_0\\
+      &+8\alpha_0D_ug^2(b\xi-1)+4d_0D_u(b\xi-1),\\
+ L_N={}&8k(h_bD_v-h_2)+u\xi H_0.
+\end{align*}
+The complete scalar coefficient is
+\begin{align*}
+ \phi={}&c_L(2kRs\xi-k^2R^2g^2)
+   +4c_*D_vF_0^2\xi+8c_aD_vF_0\xi-4c_aaD_v\xi\\
+ &+4A_*D_uD_vb^2\xi+8(A_r/\eta)D_uD_vb\xi
+                    -4A_rrD_uD_v\xi/\eta^2\\
+ &+4D_*(G_0^{\rm sc})^2\xi-8D_JG_0^{\rm sc}\xi-4D_JJ_s\xi\\
+ &+4\alpha_0D_ug^2(b\xi-1)^2
+   +2d_0\{(G_0^{\rm sc})^2\xi+D_u(b^2\xi^2-2b\xi-\xi)\}.
+\end{align*}
+These formulas display the two asserted ideals directly. They also
+give a short explicit input for the monic divisions, without an
+unprinted state-normal computation.
+
+The source is an exact stationary zero and every removed square
+vanishes there. Therefore
+\[
+ \phi=\phi_u=\phi_\xi=0,\qquad L_Q=L_Y=L_N=0
+                       \quad\text{at }(u,\xi)=(k,\varepsilon^2).
+\]
+Successive monic polynomial division gives, with bounded coefficients,
+\[
+ \phi=\delta^2(\varepsilon^2B_0+\xi B_1)
+       +\delta(\xi-\varepsilon^2)B_2
+       +(\xi-\varepsilon^2)^2B_3,                  \tag{CU8}
+\]
+\[
+ L_i=\delta L_{i0}+(\xi-\varepsilon^2)L_{i1} (i=Q,Y),\quad
+ L_N=\delta(g^2L_{N0}+\xi L_{N1})
+                         +(\xi-\varepsilon^2)L_{N2}.
+\]
+For clarity, each quotient is obtained by subtracting the value at
+$u=k$ and dividing by the monic $u-k$, then by the monic
+$\xi-\varepsilon^2$. The second $u$ quotient of $\phi$ stays in
+$(g^2,\xi)$; its constant and first $u$ terms have the stated double
+and simple zeros in $\xi$. The same argument gives the $L_N$ ideal.
+No small source number is inverted in these divisions.
+
+Put $R_s=(v^2-\varepsilon^2)Z/\varepsilon$. The exact root identities
+\[
+ \varepsilon R_s=(\varepsilon R_h-vE_Q)/s,\quad
+ R_sT=(R_hT-SE_Q)/s,\quad
+ S^2-T^2=\delta(R_hT-SE_Q)/s                       \tag{CU9}
+\]
+allocate (CU8) and every first normal on the six roots
+$(N,E_Q,E_Y,R_h,S,T)$. For example $v\delta Z=S$,
+$\delta(\xi-\varepsilon^2)Z^2=(R_hT-SE_Q)/s$, and
+$(\xi-\varepsilon^2)^2Z^2=(\varepsilon R_h-vE_Q)^2/s^2$.
+The $N$ normal has only infinitesimal couplings. All quadratic normal
+coefficients are already bounded. This is the required exact full lift.
+
+\paragraph{Strict matched Hessian and source boundary caps.}
+First take finite interior source residues. The leading form is
+(CL2). Put $V=k\sqrt\eta V_1$, $W=W_1/\sqrt\eta$,
+$Y=kY_1/\sqrt\eta$, $Z=1$. At the contact
+$(W_1,Y_1,V_1,u)=(1,r,1,k)$, the Schur complement of the two state
+coordinates in half the Hessian, in coordinates $(V_1,u)$, is
+\[
+\begin{aligned}
+ G_{11}&=\frac{32\eta x^2P_4}{KE_0},&
+ G_{12}&=\frac{16\eta k^3(R^2-2KE_0)}{KE_0R},\\
+ G_{22}&=\frac{32\eta x(P_4+xrP_d)}{R^2P_4},&
+ \det G&=\frac{256\eta^2x^3(4K^2E_0-R^2)}{K^2E_0^2}.
+\end{aligned}                                                     \tag{CU10}
+\]
+Here $E_0=1-x\eta$, $P_4=KE_0+x(1-r)$, $P_d=1+2x+rx^2$.
+There are no opening denominators. The leading $D\ge0$ condition is
+\[
+ K(2+xr)E_0-R^2\ge0,
+\]
+so $4K^2E_0-R^2\ge K(4K-2-xr)E_0>0$.
+The state block is uniformly bounded below since $c,A_0$ are strong.
+Thus the matched Hessian is strict, uniformly through every permitted
+source boundary after the appropriate hard directions are retained.
+
+We give the boundary justification explicitly. Divergences can occur
+only at $a=0$, $r=0$, or $J_s=0$, for $c,A_0,D_0$, respectively.
+Since $a+J_s\sim K$, $c$ and $D_0$ cannot both diverge. If $a=0$,
+then $r=1$, so $c$ is the only divergent weight. The only possible
+divergent pair is $A_0,D_0$. Their hard-state rows are $E_Y$ and
+$kE_Q-KE_Y$, with nonzero determinant $k$. All angular parts of
+these centered rows are bounded. Solving these at most two real
+linear equations therefore supplies a bounded competitor for the
+minimizing state vector. The bounded finite part and (CU10) imply
+that the state minimizer is bounded as well, by completing its
+positive state square. The full matched Hessian hence has a uniform
+positive lower bound on the Euclidean norm in a nearby finite-source
+family. On a vector in the limiting hard kernel, adjust only the two
+state coordinates to annihilate the nearby exact hard rows. This
+adjustment tends to zero, and the divergent penalties vanish exactly.
+The bounded finite part is consequently strictly positive on that
+kernel. The elementary real finite-penalty lemma supplies finite caps.
+
+Every allowed residue is approachable by such finite sources. For
+fixed $x>0$, the real leading inequalities are
+\[
+ 0\le r\le1,\qquad
+ \eta_{\min}(r)=\frac{1-r}{K}\le\eta\le
+ \eta_{\max}(r)=\frac{1-R^2/[K(2+xr)]}{x},
+\]
+with positive interval width $R/[xK(2+xr)]$. Perturb $r$ into
+$(0,1)$ and its interval coordinate into $(0,1)$.
+This makes $a,r,J$ and the $D$ numerator strictly positive while
+converging to the given residue. Taking $t=R/2$ and then sufficiently
+small real $g>0$ restores all original source signs, including
+$\beta>0$. This construction, rather than substitution into a
+singular leading denominator, justifies the boundary limit.
+
+In the six-root residue Gram, $N$ is an isolated positive pivot.
+The $(E_Q,E_Y)$ block is strict, $R_h$ has positive pivot
+$c_L\kappa^2$, $S$ couples only to $E_Q,E_Y$, and $T$ only to $R_h$.
+Setting $S=T$ is the matched Hessian under an invertible real change
+of coordinates: $R_h/g$ has relative-angle derivative $2s\kappa\ne0$,
+and $T/g=\kappa\delta$ supplies the ordinary-angle derivative.
+After the hard Schur complements, the sum of the $S,T$ diagonals is
+therefore strictly positive. Add a real multiple of the last zero
+in (CU9) to redistribute this sum into two positive diagonals.
+The extra coefficients contain $\delta$ and vanish in the residue.
+The bounded strict-residue Gram lemma proves the full parent at
+$u-k$ and $v$ infinitesimal, including every source opening.
+
+\paragraph{Ordinary angles away from contact.}
+Let now $\bar u^2\ne\bar k^2$, with $u$ a unit and $v$ infinitesimal.
+Use the bounded frame $(N,r_t,Y,vZ,gZ,L)$ of (CU5), and the exact zero
+\[
+ L(gZ)-Q(vZ)=0,\qquad Q=(r_t+D_uY)/u.              \tag{CU11}
+\]
+For finite leading source weights, $N$ is an isolated positive pivot.
+The remaining residue is
+\[
+ q^TPq+2Ub^Tq+c_2U^2+4hL^2+c_0T^2,
+ \quad q=(r_t,Y)^T,\ U=vZ,\ T=gZ,
+\]
+where the source coefficients are (CL1) and
+\[
+\begin{gathered}
+ s_D=4D+2d,\quad s_C=4C+s_D,\quad
+ P=\operatorname{diag}(s_C,4AD_u),\\
+ \ell=(1/u,D_u/u)^T,\quad b=(-s_DD_u,-2dD_u)^T,\\
+ c_0=4\alpha D_u,\qquad c_2=s_DD_u^2-2dD_u.
+\end{gathered}                                                     \tag{CU12}
+\]
+Apply the real rank-one allocation lemma (UA1)--(UA3), using (CU11).
+We verify its hypotheses uniformly through all source boundaries.
+Writing $d_a=\ell^TP^{-1}\ell$, $e_a=\ell^TP^{-1}b$,
+$h_a=c_2-b^TP^{-1}b$, direct inversion yields
+\[
+\begin{aligned}
+ d_a&=\frac{aJE_0}{8u^2(JE_0+a)}+\frac{D_u}{4Au^2},\\
+ e_a&=-\frac{aD_u}{u(JE_0+a)}-\frac{dD_u}{2Au},\\
+ h_a&=\frac{8D_u^2}{JE_0+a}-2dD_u-\frac{d^2D_u}{A},\\
+ P^{-1}b&=(-aD_u/(JE_0+a),-d/(2A))^T.
+\end{aligned}                                                     \tag{CU13}
+\]
+All are bounded continuous, since $JE_0+a$ is a positive unit and
+$1/A$ has a continuous bounded formula proportional to $r$.
+The same holds for $P^{-1}\ell$.
+
+Normalize the Laurent polynomial (CL4) by $As_C$.
+Its $U$ and $T^{-1}$ coefficients are, respectively,
+$1/[2(JE_0+a)]$ and $\alpha/4$, positive units.
+Its $T$ coefficient is
+\[
+ h\{(D+d/2)/s_C+2CD/(As_C)+d/(8A)\},
+\]
+also a positive unit: when $1/A=0$, $r=0$ forces $a$ a unit,
+so $(D+d/2)/s_C=a/[4(JE_0+a)]$ is a unit; otherwise the last term
+is positive. The $U^{-1}$ coefficient is
+$h\alpha(1/s_C+1/(4A))$. If it vanishes, $r=0$ and $J=0$,
+and the $T/U$ coefficient has the positive term $hD/s_C=h/4$.
+All remaining normalized nonconstant coefficients are bounded and
+nonnegative. The constant is bounded by the exact contact equation.
+Thus strict convexity and coercivity in logarithmic coordinates
+persist at every boundary. The normalized Laurent function retains
+its unique stationary zero $(U,T)=(x,x\eta)$.
+
+For fixed $u^2\ne x$, the rank-one determinant polynomial is
+\[
+ p(T)=c_0+(h_a+4hd_ac_0)T+4h(d_ah_a+e_a^2)T^2
+      =\frac{16D_u}{As_C}T\mathcal L(u^2,T)>0.
+\]
+Its constant and leading coefficients are positive units by the
+preceding coefficient bounds. The strict allocation interval
+therefore survives at every source boundary. The two real Gram
+blocks have a uniform positive lower bound; (CU13) controls their
+state minimizers even if $P$ is unbounded. The centered divergent
+rows have hard parts $r_t$, $Y$, $r_t$; the only simultaneous pair
+is $Y,r_t$, whose determinant is one. Exact small state corrections
+annihilate the large rows in the nearby finite family. The same
+finite-penalty argument as above supplies caps in (CU3). The exact
+bounded remainder (CU5), after (CU11), has strict residue.
+This proves every ordinary/small test away from contact.
+
+\paragraph{Exhaustive admission.}
+The two arguments cover the whole ordinary/small testing strip;
+the exact gauges cover negative contact signs. The remote theorem
+(CR1)--(CR13), including CR5a, covers its complement.
+All transformations are homogeneous in the state; no state coordinate
+was divided out in the tensor proof. Real and imaginary state parts
+are treated separately. Hence the entire actual UI subdomain of C1.5,
+and its exact stabilizer images, has an all-tests tensor-SOS proof.
+The actual UH subdomain of C1.5 remains a separate obligation.

@@ -1,0 +1,321 @@
+\chapter{The outer and unit-state join for infinitesimal $e$}
+\label{component:p05a86be0046c}
+\noindent\textbf{Component }\path{p05a86be0046c}\par
+{\small\noindent Source: \path{R13/baseline/baseline/baseline/advances/c1_scales/outer_small_e/outer_small_e.tex}\par}
+{\small\noindent SHA256: \path{05a86be0046c9b9ee011ff502597dbc9f6c3153d2ee20ef81aa92d23d11a005b}\par}
+{\small\noindent Inventory use: SEO1--SEO20 and all exact endpoint/critical-current proofs | SEO1-SEO20, full critical-wall/current identities and endpoints | C1\_\allowbreak{}BARE\_\allowbreak{}OTHER\_\allowbreak{}TERMINALS; precise subordinate uses retained below\par}
+\medskip
+\section[The outer and unit-state join for infinitesimal e]{The outer and unit-state join for infinitesimal $e$}
+\label{p05a86be0046c:sec:small-e-outer}
+
+\begin{lemma}
+Use the unchanged physical native C1 source with $c=2$,
+$\lambda=n=0$, positive original openings, and nonnegative original
+event coefficients. Suppose $k,\zeta,e=k\sqrt{\eta/\zeta}$ are positive
+infinitesimals, $\eta$ is a positive bounded unit, and
+$r=1-a\eta>0$. Then every independent projective test and state is
+tensor SOS except possibly the chart
+\[
+ u,v,w>0\text{ infinitesimal},\qquad Z=1,
+ \qquad w=(W+uY)/(1+u^2).
+ \tag{SEO1}
+\]
+There is no restriction on the positive relative scales of $a,r,J$
+or on $k^2/r$. This lemma supplies a join, not a certificate for the
+remaining chart (SEO1).
+\end{lemma}
+
+\paragraph{The small weak-event scale.}
+Put $\kappa=k^2$, $K=1+\kappa$, $H=r+\eta$,
+$V_c=\kappa\eta\zeta$, $S=1-\kappa\eta+tV_c$,
+$R=1+\kappa r$, $T=K-\kappa\zeta t$,
+$M=R-t$, and $J=T-a$. Let $P_4,P_d$ be the short native
+polynomials printed in the centered-A outer lemma. All of
+$K,H,S,P_4,P_d$ are positive bounded units. Set
+\[
+ L=KHS,\quad N=KH(1+V_c)-J\eta P_d,\quad
+ d_0=4\eta P_d,\quad A_0=2\eta^2P_4,\quad D_0=2N.
+\]
+After exact cancellation of the native $r$ factors, the source is
+\[
+ d=\frac{ad_0}{L},\qquad A=\frac{aA_0}{rL},\qquad
+ D=\frac{aD_0}{JL},\qquad
+ \frac{m}{ae^2}=
+ \frac{2(1-t\zeta)(1+V_c)}{MS}.                 \tag{SEO2}
+\]
+Here $\bar N=1$. Native $\beta\ge0$ gives the exact bound
+\[
+ \frac{t}{e^2}\le\frac{2c_b}{\eta c_d}
+ =\frac{K[1+(1-t)\zeta]H}{\eta P_d}.
+\]
+Thus $t$ is infinitesimal, $M\sim1$, and $m/(ae^2)\sim2$.
+In particular
+\[
+ \frac{k^2}{e^2}=\frac\zeta\eta
+ \quad\hbox{is infinitesimal}.                       \tag{SEO3}
+\]
+The ratios $d/a,A/a,D/a$ have positive real lower bounds, while
+$d/a$ is a bounded unit. These statements allow arbitrary positive
+opening rates and literal $\beta=0$.
+
+\paragraph{Choose the critical parameter without a small denominator.}
+There are two source cases. If $a$ is a bounded unit, keep $A,D,d$
+and replace $c=2$ by the critical number
+\[
+ c_* =\frac{d(d+2A)(d+2D)}{2(4AD-d^2)}.
+ \tag{SEO4}
+\]
+This is positive and bounded, and $c_*-2=O(k^2)$.
+Here is an exact short verification of the potentially delicate bound.
+Define
+\[
+ Q=4A_0D_0-rJd_0^2,
+\]
+so $\bar Q=16\bar\eta^2\bar a\bar H>0$. Then
+\[
+ c_*-2=
+ \frac{ad_0(d_0r+2A_0)(d_0J+2D_0)-4QL}{2QL}.
+ \tag{SEO5}
+\]
+After $r=1-a\eta$ is inserted, its polynomial numerator vanishes
+identically at $\kappa=0$, with $\zeta$ still free. It is therefore
+$\kappa$ times a polynomial in bounded native variables; its
+denominator is a positive unit. No inverse of $r$ or $J$ occurs.
+
+If $a$ is infinitesimal, then $r,J\sim1$. Divide the whole parent
+by $a$ and replace the original $A$ by
+\[
+ A_* =\frac{d^2(4+d+2D)}{2(8D-2dD-d^2)}.       \tag{SEO6}
+\]
+The denominator is positive. In this case
+$A_*/a,D/a,d/a$ are positive bounded units, $c/a=2/a$ is
+unbounded, and $(A_*-A)/a=O(k^2)$. To verify this without a
+rate comparison, put
+\[
+ B_0=8D_0L-a(2d_0D_0+d_0^2J).
+\]
+Its residue is $16\bar H>0$, and
+\[
+ \frac{A_*-A}{a}=
+ \frac{r d_0^2\{4JL+a(d_0J+2D_0)\}-2A_0B_0}
+ {2rLB_0}.                                           \tag{SEO7}
+\]
+Again the numerator vanishes identically at $\kappa=0$, so it has
+an exact polynomial factor $\kappa$, with a unit denominator.
+
+Use $\sigma=1$ in the first case and $\sigma=a$ in the second,
+and henceforth normalize all parent coefficients by $\sigma$.
+Let $\epsilon$ be the positive part of the critical increase in the
+chosen normalized coefficient. From (SEO2)--(SEO7),
+\[
+ \epsilon\text{ is infinitesimal},\qquad
+ \frac{\epsilon}{m/\sigma}=O(\zeta)\text{ is infinitesimal}.
+ \tag{SEO8}
+\]
+If the chosen critical value is smaller than the actual coefficient,
+retain the positive excess packet instead. In either source case
+the chosen critical parent obeys
+\[
+ 2c(4AD-d^2)=d(d+2A)(d+2D),                  \tag{SEO9}
+\]
+with the letters in (SEO9) now denoting the normalized critical
+coefficients. In the first case $c,d$ are units and $A,D$ are
+bounded below by positive units; in the second $A,D,d$ are units
+and $c$ may be unbounded.
+
+\paragraph{A critical-wall frame permitting the large coefficients.}
+Write $D_u=1+u^2$, $D_v=1+v^2$ and
+\[
+ B=X+uZ,\quad U=uW,\quad V=vZ,\quad J_t=U-Y,
+ \quad C=4D+2d,
+\]
+and define the pure-coefficient numbers
+\[
+ y=\frac d{2A},\quad
+ b=\frac{4AD-d^2}{AC},\quad s=1-b,\quad q=y+b.
+\]
+The critical identity gives the useful exact relations
+\[
+ b=\frac C{4c+C},\quad Cs=4cb,\quad
+ cb=\frac{d(2A+d)}{4A}.                         \tag{SEO10}
+\]
+In both source cases, $y,b,s,q$ are bounded and $b,s>0$.
+The entire signed core plus the three critical packets is exactly
+\begin{align*}
+ F_*={}&4cD_vJ_t^2+4AD_uD_vY^2
+       +C(J_t+uvB-D_uV)^2+2dD_vB^2\\
+       &+2dD_u\{v^2Y^2-2YV-V^2\}.              \tag{SEO11}
+\end{align*}
+
+In the first source case use
+\[
+ H_A=\sqrt A(Y-yV),\qquad
+ H_D=\sqrt C(J_t+uvB-(b+u^2)V).
+ \tag{SEO12}
+\]
+The inverse is $Y=yV+H_A/\sqrt A$ and
+$J_t=(b+u^2)V-uvB+H_D/\sqrt C$.
+All coefficients in (SEO11) after this substitution are bounded.
+Indeed the large $A,C$ occur only in the normalized squares and in
+the bounded combinations $Ay^2$, $\sqrt A\,y$, $Cs^2$,
+$\sqrt C\,s$; use $Cs=4cb$ and bounded $c$ for the last two.
+At $u=v=0$, the hard block on $(B,H_A,H_D)$ is
+\[
+ \operatorname{diag}(2d,4,1+4c/C)\succ0.
+\]
+On its exact zero section the scalar coefficient of $V^2$ is
+\[
+ g u^2+\gamma v^2+4cu^4+g(y+2)u^2v^2+4cu^4v^2,
+ \quad g=\frac{d(2A+d)}A,\quad
+ \gamma=\frac{Dd(2A+d)^2}{A^2(2D+d)}.             \tag{SEO13}
+\]
+Both $g,\gamma$ are positive bounded units. Every hard-$V$ entry
+has angular degree at least two, with bounded coefficients; this is
+an exact full-parent polynomial statement. Allocate it on $uV,vV$,
+leaving a factor $u$ or $v$ in its coefficient. The resulting exact
+five-root Gram on $(B,H_A,H_D,uV,vV)$ therefore has strict residue.
+
+In the second source case set $L_c=4c+C$ and instead use
+\[
+ H_A=\sqrt A(Y-yV),\qquad
+ H_c=\sqrt{L_c}(J_t-bV).                         \tag{SEO14}
+\]
+Its coefficients are bounded because $A,D,d$ are units and
+$c/L_c$, $cb/\sqrt{L_c}$ and $cb^2$ are bounded by (SEO10).
+Its hard block is $\operatorname{diag}(2d,4,1)$.
+The exact zero-section scalar is
+\[
+ g u^2+\gamma v^2+C u^4+gy\,u^2v^2.
+ \tag{SEO15}
+\]
+The same complete hard-$V$ allocation gives a strict five-root
+Gram on $(B,H_A,H_c,uV,vV)$. Thus this is a full critical-wall
+certificate in both source cases, even with the stated unbounded
+coefficients. Every radical and denominator used in the roots is
+pure coefficient; no mixed inverse is used.
+
+\paragraph{All unit-$W$ states at the small-angle corner.}
+Normalize $W=1$, with $Z,Y,X$ bounded, and take $u,v$ infinitesimal.
+Retain the complete original $\alpha,\beta$ packets. Put
+\[
+ R_m=v-X+uvY-uZ=v(1+uY)-B,\qquad
+ V=\frac{Z}{1+uY}(R_m+B).                        \tag{SEO16}
+\]
+The displayed denominator is a positive pure-testing unit.
+In the first source case the only negative correction to the
+critical parent is $-4\epsilon D_vJ_t^2$; (SEO12) and (SEO16)
+express $\sqrt\epsilon J_t$ as a bounded combination of the five
+critical roots and $\sqrt{m/\sigma}\,R_m$, with every coefficient
+having zero residue. In the second case the only negative
+correction is $-4\epsilon D_uD_vY^2$; use
+$Y=yV+H_A/\sqrt A$ and (SEO16) for the identical conclusion.
+The only possibly delicate coefficient is a bounded testing
+multiple of $\sqrt{\epsilon/(m/\sigma)}$, and it is infinitesimal
+by (SEO8). The extra original $m$ square contributes the strict
+diagonal $4$. Hence the complete perturbed Gram remains strict.
+This includes unit or infinitesimal $Z$, literal $Z=0$, and both
+signs of the bounded testing state. It uses the entire original
+weak $m$ event, without a false positive-unit lower bound on $m$.
+
+\paragraph{Finite outer angles without the weak event.}
+The same critical parent also gives the two finite outer charts.
+In (SEO11) regard $B,Y,J_t,V$ as independent roots. Exactly,
+\[
+ F_*(0,v)=F_*(0,0)
+       +v^2\{2dB^2+(4A+2d)Y^2+4cJ_t^2\}.       \tag{SEO17}
+\]
+The zero-angle form has three positive hard pivots and null ray
+$(B,Y,J_t,V)=(0,y,b,1)V$. On this null ray the additional
+coefficient is $\gamma v^2>0$. The normalized hard frames
+(SEO12) or (SEO14) keep every coefficient bounded. Thus when
+$u$ is infinitesimal and $v$ a bounded unit the full four-root
+residue is strict. The infinitesimal critical-parameter deficit
+is absorbed directly on these four roots; retain the entire
+$m,\alpha,\beta$ packets.
+
+For bounded-unit $u$ and infinitesimal $v$, set $V'=D_uV$.
+The other exact identity is
+\[
+ F_*(u,0)=F_*(0,0;V')
+        +u^2\{4AY^2+2d(V')^2/D_u\}.             \tag{SEO18}
+\]
+Use the same normalized critical roots with $V'$ in place of $V$.
+In the first source case include $uvB$ in the $H_D$ root so that
+the unbounded $D$ event remains isolated for nonzero small $v$.
+The extra null mass in (SEO18) is positive in residue because
+$d$ and $u$ are units. The bounded full four-root Gram is strict,
+and the deficit is again a zero-residue correction. These two
+identities include every state, not merely the normal restriction.
+
+For completeness the same argument covers both finite angles of
+nonzero residue, without a separate physical-source admission.
+The exact determinant of (SEO11) on $(B,Y,J_t,V)$ is
+\[
+ 64cdD_u^2D_v^2
+ \{A(2D+d)u^2+D(2A+d)v^2\}.                    \tag{SEO20}
+\]
+The determinant in the normalized frame (SEO12) is this number
+divided by $AC$, namely
+\[
+ 32cdD_u^2D_v^2
+ \left\{u^2+\frac{D(2A+d)}{A(2D+d)}v^2\right\}.
+\]
+It is a positive unit whenever at least one finite angle has
+nonzero residue. The hard restriction $V=0$ is explicitly
+\[
+ \left(4D_uD_v+\frac{2dD_uv^2}{A}\right)H_A^2
+ +H_D^2+4cD_v(H_D/\sqrt C-uvB)^2+2dD_vB^2,
+\]
+which has a strict bounded residue. Hence its full residue Gram
+is positive definite by (SEO20). In frame (SEO14), the determinant
+is (SEO20) divided by $A(4c+C)$. Here $A,D,d$ are units and
+$c/(4c+C)\sim1/4$, so it too is a positive unit. Its hard
+restriction is
+\[
+ \left(4D_uD_v+\frac{2dD_uv^2}{A}\right)H_A^2
+ +\frac{4cD_v}{4c+C}H_c^2
+ +C(H_c/\sqrt{4c+C}+uvB)^2+2dD_vB^2,
+\]
+again strict. All entries of both full transformed Grams are
+bounded as already proved. The infinitesimal deficit is a
+zero-residue correction on these four roots. This settles every
+finite angle pair outside the double-infinitesimal corner.
+
+\paragraph{Projective infinity charts.}
+For these charts normalize by $a$, clip the positive coefficients
+$c/a,A/a,D/a$ at suitable positive real lower bounds, and retain
+their positive original excess squares. Retain the whole original
+$m,\alpha,\beta$ packets. The normalized $d/a$ is a unit.
+All the infinity-infinity and infinity-zero four-root identities
+in (BE2) and the subsequent outer routing apply without $m$.
+For $u=\infty$ in residue and $v$ a bounded unit, the signed-core
+residue itself retains
+$2d\{(W+vX)^2+(vY-Z)^2\}$; together with $cW^2,AY^2$ it is
+strict, so no $m(vY-Z)^2$ lower bound is needed.
+For $v=\infty$ and $u$ a bounded unit the old signed-core and
+$c,D$ root argument is unchanged.
+At the remaining $(u,1/v)=(0,0)$ corner, replace the obsolete
+state-$W$ mass argument by the exact root ideal
+$(X,Y,U=uW,Z)^2$ after retaining $m$. In $q^2F(u,1/q)$ its
+complete selected residue is
+\[
+ 2dX^2+4c(U-Y)^2+(4A+2d)Y^2+4DZ^2\succ0.
+ \tag{SEO19}
+\]
+Every remaining occurrence of $W$ carries $u$, so this is a full
+bounded Gram including all states. Literal infinity is included
+by these homogeneous identities. Literal zero axes have their
+unchanged original-event SOS. Finite tests with both noncommuting
+residues were included directly in (SEO20).
+
+\paragraph{The residual state chart.}
+Only $u,v$ infinitesimal remain. Normalize the state by a maximal
+coordinate. On a negative pure-testing-core branch, $X,Y$ have
+zero residue. The unit-$W$ chart was just proved for every bounded
+$Z$. Otherwise $Z$ is a unit, so normalize $Z=1$ and $W$ is
+infinitesimal. Then $w=(W+uY)/D_u$ is infinitesimal. The inherited
+exact testing Schur identity and sign gauges give (SEO1).
+Complex states split into their real and imaginary evaluations.
+The exact checker accompanying this lemma verifies its source
+cancellations, critical roots, full hard-normal orders, both finite
+outer identities, and the repaired projective-corner identity.

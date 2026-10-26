@@ -1,0 +1,65 @@
+Exact strict native C2 exclusion from the 36-feature half-power cone
+Target: native C2 with lambda=beta=0, the complete real state vector (W,X,Y,Z), arbitrary independent positive testing half-angles u,v, and fixed features$Z_{1/2}=(u^{i/2}v^{j/2}\psi_\ell)_{0\le i,j\le2,\ \ell=0,\ldots,3}$.
+Result. An exact strict rational native contact has no PSD Gram in this 36-feature basis. The certificate is a 90-integer dual vector. Its four compressed adjoints have strictly positive rational LDL pivots, whereas its pairing with the entire physical parent is negative. The proof is finite, exact and source/test separated. Execute the companion standard-library Python checker for a complete independent replay.
+1. Rational native source
+Take
+$(a,b,c,t,r)=\left(\frac{13}{600},\frac{101}{1000},\frac{47}{15},\frac{27}{35},\frac{13}{154}\right),\quad z=c^2.$Set
+$A_c=1+zr,\quad h=b-a^2t,\quad g=(1+z)b-(1-r+a^2zt),\quad j=1+zr-t,$$\begin{split}
+\Delta={}&1+(1+z)b+z(1+z)b^2+2z(1+z)br+z^2r^2+2zr\\
+&+a^2z\bigl((1+z)b+1+zr(2-r)\bigr),\\
+N={}&(1+z)(b+r)(b+a^2(1-t))-a^2(1+a^2z)(1-r)t,\\
+\Xi={}&(b+r)A_c(A_c+a^2zt).
+\end{split}$The complete native stationary source, with d=1, is
+$\begin{aligned}
+n&=(\Xi-r\Delta)/(2r\Delta),&m&=(1+a^2z)(1-r)A_c(A_c+a^2zt)/(2g\Delta),\\
+C&=A_cN/(2a^2t\Delta),& A&=a^2\Xi/(2h\Delta),\\
+D&=(1+z)(b+r)(b-a^2zr)(A_c+a^2zt)/(2a^2j\Delta),&
+\alpha&=z^2(b+r)N/(2(1-zh)\Delta).
+\end{aligned}$All are positive, including $n>0$. The strict inequalities hold:
+$\begin{gathered}
+h=140893/1400000,\quad g=601024007/3465000000,\quad j=36637/34650,\\
+1-zh=3767363/315000000,\quad
+b-a^2zr=1255020827/12474000000.
+\end{gathered}$The contact is
+$(u_c,v_c;\psi_c)=\left(c,ac;\frac ba,-cr,c\left(\frac ba-at\right),1\right).$The checker expands the entire source parent and directly verifies $F=F_u=F_v=F_W=F_X=F_Y=F_Z=0$ at this contact, exactly.
+2. Equivalent compressed Gram problem
+Write $u=x^2,v=y^2$. The parent is even in each variable and quadratic in its four state coordinates. An SOS can be sign-averaged into four parity blocks with raw orders $(16,8,8,4)$.
+The $WW$ diagonal coefficient is $4mv^2+(4C+4D+2d)u^2+4Cu^2v^2$, whose half Newton polygon requires $i+j\ge2$ for a feature $x^iy^jW$. The $ZZ$ diagonal is $4\alpha+(4\alpha+2d+4m)u^2+4Dv^2$, requiring $i+j\le2$ for $x^iy^jZ$. This is necessary for each SOS root, since a sum of real leading squares cannot cancel. The six forbidden features are $W$ at $(i,j)=(0,0),(0,1),(1,0)$ and $Z$ at $(1,2),(2,1),(2,2)$. The retained parity block orders are $(14,6,6,4)$.
+Set $u=u_cU,v=v_cV,\psi_\ell=(\psi_c)_\ell\phi_\ell$, an invertible diagonal source-dependent change used only to construct the separator, not an SDP product auxiliary. Any half-power Gram remains a half-power Gram under this rescaling. The contact is now $U=V=1,\phi=(1,1,1,1)$. Every individual parity block vanishes at this point, so selecting the first lexicographic basis feature $z_p$ as pivot, the kernel-complement roots are $q_e=z_e-z_p$. This gives four orders $(13,5,5,3)$ and loses no feasible positive Gram.
+Order the 90 coefficient coordinates as $(A,B;\ell,k)$, $0\le A,B\le2$, $0\le\ell\le k\le3$. The state-pair order for each $(A,B)$ is
+$(WW,WX,WY,WZ,XX,XY,XZ,YY,YZ,ZZ).$Define the integer functional $Y$ by the following nine rows, indexed $(A,B)=(0,0),(0,1),(0,2),(1,0),\ldots,(2,2)$:
+Plain text
+
+
+
+(0,0)  161019792           0          0          0 -121999126  -51597381  -92880749  198288996  63902153  19654676
+(0,1)  187856424   -46850180  181090964   93807406  104512504  -51884026 -170947993  104746412  60911824  56523337
+(0,2)  198410875  -202408890  134972214  153970197 2021367851 -131764329 -929567199  102173701  98542620 600959153
+(1,0)  187856424   -20723372  228808703   94672500   -8876925  -32301218  -55239329  117094417  62928564  26333033
+(1,1)  211714865   -20971443  135517649   91673664  -66738426  -13877461 -150724699  104061701  67646572 392762321
+(1,2)  165685625  -100092162  132934774  129085407  872170933 -110726908 -814152246  108962482  438514151 328748742
+(2,0)  259329330    -1150608  147851759   93736392  966590370  -12339807  -94532325  112427108  80542993 535327210
+(2,1)  166289097    16862629  134869776   98549977  120025352  -54544777 -527190917  121915289  582567055 328748742
+(2,2)  163696817   -79616153  139866971          0  703323270  -491353386          0   629878509         0 493123113
+
+For two features $e=(i,j,\ell),f=(i',j',k)$ in the same parity block, put
+$\mathfrak m(e,f)=Y_{(i+i')/2,(j+j')/2,\min(\ell,k),\max(\ell,k)}.$The complete compressed adjoint of this functional is the four fixed matrices
+$\boxed{Q^{(p)}_{ef}=\mathfrak m(e,f)-\mathfrak m(e,p)-\mathfrak m(p,f)+\mathfrak m(p,p)}$for retained nonpivot features $e,f$. No uncompressed PSD test is used. The blocks have orders $(13,5,5,3)$. An exact rational $LDL^T$ decomposition verifies every diagonal pivot, with strict lower bounds
+$\boxed{\text{block 1: }d_k>90,\quad
+       \text{block 2: }d_k>118,\quad
+       \text{block 3: }d_k>369,\quad
+       \text{block 4: }d_k>2\,000\,000.}$Hence all four compressed adjoints are positive definite.
+3. Negative pairing with the entire native parent
+The original source-parent polynomial is exactly
+$\begin{aligned}
+F_c={}&4nD_uD_vX^2+4m(vW-X+uvY-uZ)^2+4CD_v(uW-Y)^2+4AD_uD_vY^2\\
+&+(4D+2d)(uW+uvX-Y-vZ)^2+(4\alpha+2d)D_u(vY-Z)^2\\
+&+2dD_v(X+uZ)^2-2dD_uD_vZ^2,
+\end{aligned}$with $D_u=1+u^2,D_v=1+v^2$. Let $b_{AB,\ell k}$ be the coefficients of $\widetilde F(U,V,\phi)=F_c(u_cU,v_cV,\operatorname{diag}(\psi_c)\phi)$. The exact rational contraction is
+$\boxed{\langle Y,b\rangle=-\frac{31917121340091771507320448459210586965990611717744093996544823253}{1129383645613305483559298619423160947865086012060000000000}<0.}$The right side comes from all state cross terms as well as all testing monomials, without specializing $U,V$.
+If a half-power PSD Gram existed, Newton pruning, sign averaging and contact annihilation would give compressed PSD matrices $G^{(p)}$ matching every coefficient, and hence
+$\langle Y,b\rangle=\sum_p\operatorname{tr}(Q^{(p)}G^{(p)})\ge0,$a contradiction. Thus this strict native C2 source is excluded from the full 36-feature cone. The dual can equivalently be pulled back to original coefficients using$Y^{\rm original}_{AB,\ell k}=u_c^Av_c^B(\psi_c)_\ell(\psi_c)_kY_{AB,\ell k}$, giving a rational separator in original fixed-source coordinates.
+4. Consequence and boundary
+The 36-feature half-power cone is sound, closed and affine in the original source coordinates, but it does not admit the complete strict native C2 family. No admission of its $n=0$ limits follows from this failed cone; other already constructed globally sound cones may cover some native contacts. The next justified fixed basis is the existing sixth-root grid, which retains half-power roots and accommodates cubic Hurwitz circuits; it is a candidate, not a proven minimum-size or uniformly admitting construction.
+The first unproved positive implication is still the universal compressed-sixth-root admission $\mu_{C2}(c)\ge0$ for every strict native C2 source, or an alternative fixed finite globally sound affine cone covering all strict native C2 sources missed by previously retained cones. The present exact separator settles the smaller half-power question in the negative, not global representability.
+

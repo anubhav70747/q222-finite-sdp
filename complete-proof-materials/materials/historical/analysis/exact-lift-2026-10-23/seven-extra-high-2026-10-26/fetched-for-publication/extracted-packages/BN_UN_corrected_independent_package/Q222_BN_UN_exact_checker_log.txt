@@ -1,0 +1,50 @@
+
+=== verify_bn_un_independent.py ===
+PASS source BN beta/q
+PASS source sphere
+PASS source SN mu
+PASS ES5 d0²+b0²=1
+PASS ES7 source sphere
+PASS UN3 bounded zn identity
+PASS T kappa monic remainder
+PASS UN4 bounded radial A00
+PASS UN15 X pole
+PASS correct N0 = N/ell
+PASS radial conductor SN7
+PASS cross product SN14 conductor
+PASS SN8 normalized helper identity
+PASS BN14 wB helper
+PASS BN17 bBu helper
+PASS UN20 Bu helper
+PASS UN21 N0 pivot
+PASS UN16 exact square exchange
+All source/circuit identities PASSED
+
+=== verify_bn_un_parent_full.py ===
+PASS SN18 H_X
+PASS SN18 H_Y
+PASS SN18 H_XY
+PASS SN9 complete scalar
+PASS SN15 full X first normal
+PASS SN18 full Y first normal before conductor
+PASS UN hard Nx
+PASS UN hard Ny
+PASS UN hard NxNy
+PASS UN9 complete scalar
+PASS UN X first normal raw
+PASS UN17/18 Y first normal raw
+ALL full-parent checks passed
+
+=== verify_bn_un_structural_coeffs.py ===
+PASS SN12 CR exact
+PASS SN12 H02 exact
+PASS BN L prime - L
+PASS BN H prime shift
+PASS UN13 CG exact
+PASS UN13 CN exact
+PASS UN13 CR exact
+PASS BN12 source-safe CN cancellation
+PASS SN13 full contact coquotient identity
+All universal structural identities proved exactly
+
+ALL THREE BN/UN EXACT CHECKERS PASSED.

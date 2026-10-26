@@ -1,0 +1,138 @@
+EXACT SEVEN-WORD GRAM ELIMINATION AND A NATIVE C2 EXCLUSION
+25 October 2026; repo HEAD31789f0. No SDP, numerical approximation, or sweep.
+
+1. Complete affine elimination
+
+Use the C1/C2 seven-root lists in npa_hard_source_map_2026_10_25.txt and
+independent-review/EXACT_LIFT_ROUTE.md. Write f=h_sigma^T Q h_sigma,
+Q=(q_ij) real symmetric, indices1,...,7. The defining universal relations
+are Ax^2=By^2=I and [Ax,By]=0; no relation is imposed within a party.
+The nine Bell target coefficients are printed in the preceding note.
+
+In either family, the 28 symmetric entries have 15 independent affine
+coefficient equations and 13 free parameters. There are 25 reduced group
+words in the product expansion; the equations include every word, not only
+the nine Bell words. The complete upper-triangular formula for each Q is
+given below; the JSON contains its literal symmetric7-by-7 expansion.
+Every PSD certificate is one of these matrices, and conversely a PSD
+matrix in this affine family is an exact 1+AB certificate.
+
+The script npa_seven_gram_elimination_2026_10_25.py constructs the universal
+word map, solves it over the source coefficient field, and independently
+re-expands every product to check all25 coefficients. Both ranks are15.
+
+2. A short exact lower-level consequence
+
+Suppose the root space is restricted to linear observables (the five-word
+NPA1 level). In C1 the available roots are h1,h4,h5. The affine equations
+force
+ alpha=A, C=beta+d/2, m=D+d/2,
+ Q_lin=[[A,-tau,tau],[-tau,C,0],[tau,0,m]], tau=(2A+d)/4.
+It is PSD exactly when A>=tau^2(1/C+1/m), since C,m>0. This supplies an
+exact source subclass and a complete admission criterion in this restricted
+root space. For example d=1,A=alpha=1/2,C=m=1,D=beta=1/2 admits it.
+
+However no member has a nonzero interior two-qubit contact with distinct
+Bob observables. Completing the square forces at any zero
+ B0 psi=A1 psi+(tau/C)(A0-I)psi,
+ B1 psi=A1 psi-(tau/m)(A0-I)psi.
+Thus A1 psi is a strict convex combination of the unit vectors B0 psi
+and B1 psi. Equality in the triangle inequality forces B0 psi=B1 psi.
+For finite positive native v, B0-B1 is invertible on Bob's two-dimensional
+block, a contradiction. A positive Schur residual only adds another square.
+
+In C2 the linear root space is h1,h2,h5. The affine identity q17=
+(2C+d)/8-q47 forces C=-d/2 when all bilinear-root rows vanish, impossible
+for d,C>0. Hence NPA1 cannot admit any actual interior native C1/C2 contact.
+This is a lower-level statement, not an exclusion from the nine-word cone.
+
+3. A continuous ACTUAL C2 family excluded from the full nine-word cone
+
+Let c>0, z=c^2<=2/5, d=1, lambda=beta=0, and
+ n=(2-5z)/(8(1+2z)), m=(2+z)/(8(1+2z)),
+ C=(2+z)/(2(1+2z)), A=3(2+z)/(8(1+2z)),
+ D=3(2-z)/(8(1+2z)), alpha=3z^2/[2(2-z)(1+2z)].
+All required native event weights are positive, and n>=0, including n=0
+at z=2/5. In the SG2 Pauli convention
+ A0=B0=Z, A1=((1-u^2)Z+2uX)/(1+u^2),
+ B1=((1-v^2)Z+2vX)/(1+v^2),
+the contact is u=v=c, psi=(1,-c/2,c/2,1).
+Direct rational substitution gives f_c(A,B)psi=0 and both angular first
+derivatives zero. The checker verifies these six identities. Consequently
+SG7 ('Stationary zeros and physicality', 04_geometry.tex) proves global
+validity from these equations and the nonnegative source weights. This is
+an actual valid native source family, not merely a positive parameter box.
+
+We now prove that none of these sources has a 1+AB certificate.
+Put
+ a=3(2-z)/[2(1+z)], b=-(z+4)/[2(1+z)],
+ d0=-b, e=-(z+2)/[2(1+z)]. Then ae-b*d0=1.
+For the seven C2 roots h, their actions on psi have rank4: columns
+(h1,h2,h3,h5) have determinant -8c^4/(1+c^2). Their kernel has basis
+ N1=(0,0,-1,1,0,0,0)^T,
+ N2=(a,b,-a,0,0,1,0)^T,
+ N3=(d0,e,-e,0,-1,0,1)^T.
+At a zero, positivity forces Q T^T=0, where T contains the seven root
+actions. Hence Q=N S N^T for a symmetric3-by-3 S, N=(N1,N2,N3).
+
+Four homogeneous relations in the complete affine coefficient solution are
+ q34=q67=0, q13=q57+q77, q23=-q56.
+In S coordinates these imply
+ S23=0, S11=-a*S12-e*S13,
+ a(S12+a*S22)+d0(S13+e*S33)=0,
+ b(S12+a*S22)+ e(S13+e*S33)=0.
+Since ae-b*d0=1, it follows that
+ S12=-a*S22, S13=-e*S33, S11=a^2*S22+e^2*S33.
+Writing k=N^T h, the entire candidate polynomial is therefore
+ S22(k2-a*k1)^2+S33(k3-e*k1)^2.
+The two roots factor exactly as
+ k2-a*k1=(I-B1)(a*A1-A0-b*I),
+ k3-e*k1=(A1-I)(B0-e*B1+d0*I).
+Their A0A1 and B0B1 universal-word coefficients are respectively
+ -2a*S22 and -2e*S33; the other square cannot contribute to those words.
+These words do not occur in a Bell functional, so both coefficients must
+vanish. Since a>0 and e<0 throughout 0<z<=2/5, S22=S33=0. Hence Q=0,
+contradicting d=1. In fact, there is no symmetric Gram satisfying both
+the coefficient identities and this contact kernel; PSD is needed only
+to infer that the Gram annihilates the contact.
+
+A particularly small rational example is c=1/2:
+ (d,lambda,n,m,C,A,D,alpha,beta)
+   =(1,0,1/16,3/16,3/4,9/16,7/16,1/28,0).
+It is globally quantum-valid by the six checked contact equations and SG7,
+but is outside the fixed nine-word 1+AB certificate cone.
+
+The short checker npa_seven_c2_family_2026_10_25.py verifies the source
+equations, nonzero rank minor, null basis, determinant1, four homogeneous
+constraints (their four-by-four elimination determinant is -1), and both
+forbidden coefficients exactly over Q(c). Its JSON records these outputs.
+
+4. Scope
+
+This supplies an entire hard source family for the proposed hybrid using
+NPA1+AB. A sound additional cone must admit each of its extreme rays
+directly when extremality is established; no extremality claim is required
+for the 1+AB exclusion itself. Nothing here excludes a larger fixed NPA
+level, a different testing-function dictionary, or a general finite lift.
+The complete13-parameter formulas below remain valid independently of this
+one family. No universal C1/C2 admission classification is asserted.
+
+COMPLETE UPPER TRIANGLES (q_ji=q_ij; unlisted free entries retain their names)
+
+C1 free parameters: q17, q26, q34, q37, q44, q45, q46, q55, q56, q57, q66, q67, q77
+q11=A/2 + alpha/2 - q66 - 2*q67 - q77; q12=q46 + q56 + q66 + q67; q13=-q56 + q57 + q67 + q77; q14=-A/4 - alpha/4 - d/4 - q17 + q26; q15=alpha/2 + d/4 + q17 + q37; q16=A/4 - alpha/4 - q17; q17=q17
+q22=C/2 + beta/2 + d/4 - q44 - 2*q46 - q66; q23=-q45 - q67; q24=-C/4 + beta/4 + d/8 - q26; q25=-q34; q26=q26; q27=0
+q33=D/2 + d/4 + m/2 - q55 - 2*q57 - q77; q34=q34; q35=-D/4 - d/8 + m/4 - q37; q36=0; q37=q37
+q44=q44; q45=q45; q46=q46; q47=-q56
+q55=q55; q56=q56; q57=q57
+q66=q66; q67=q67
+q77=q77
+
+C2 free parameters: q14, q24, q36, q37, q44, q45, q46, q47, q55, q56, q57, q66, q77
+q11=C/2 + D + d/4 - 2*q14 - q44 - q77; q12=-D/2 - d/4 - m/2 + q14 + q24 + q44; q13=q57 + q77; q14=q14; q15=-C/4 - d/8 + q37 - q45; q16=q45 + q46 + q47; q17=C/4 + d/8 - q47
+q22=alpha/2 + d/4 + m - 2*q24 - q44 - q66; q23=-q56; q24=q24; q25=-q36 - q47; q26=-alpha/4 - d/8 - q46; q27=-q45
+q33=A/2 + d/4 + n/2 - q55 - 2*q57 - q77; q34=0; q35=-A/4 + d/8 + n/4 - q37; q36=q36; q37=q37
+q44=q44; q45=q45; q46=q46; q47=q47
+q55=q55; q56=q56; q57=q57
+q66=q66; q67=0
+q77=q77

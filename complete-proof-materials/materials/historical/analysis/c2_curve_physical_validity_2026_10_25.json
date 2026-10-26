@@ -1,0 +1,61 @@
+{
+  "positive_source_multiplier": "-8*(z - 2)*(2*z + 1)",
+  "scaled_source_order_d_lambda_n_m_C_A_D_alpha_beta": [
+    "(16 - 8*z)*(2*z + 1)",
+    "0",
+    "(2 - 5*z)*(2 - z)",
+    "(2 - z)*(z + 2)",
+    "(8 - 4*z)*(z + 2)",
+    "(6 - 3*z)*(z + 2)",
+    "3*(2 - z)**2",
+    "12*z**2",
+    "0"
+  ],
+  "scaled_t": {
+    "1": "-24*(z - 2)",
+    "2": "24*(z + 2)",
+    "3": "-18*(z - 2)*(z + 2)",
+    "4": "6*(z + 2)**2",
+    "5": "-6*(z - 2)*(z + 2)",
+    "6": "-6*(z - 6)*(z + 2)",
+    "7": "-8*(z - 2)*(z + 2)",
+    "8": "-24*(z - 2)*(z + 2)"
+  },
+  "scaled_q": {
+    "(0, 1)": "-6912*z**2*(z - 2)**3*(z + 2)**3",
+    "(0, 2)": "-432*(z - 6)*(z - 2)**4*(z + 2)**3",
+    "(1, 0)": "-20736*z**2*(z - 2)**3*(z + 2)**3",
+    "(1, 2)": "6912*(z - 2)**4*(z + 2)**3",
+    "(2, 0)": "1296*(z - 2)**3*(z + 2)**4*(5*z - 2)",
+    "(2, 1)": "-6912*(z - 2)**3*(z + 2)**4"
+  },
+  "scaled_h": "-864*(z - 2)**3*(z + 2)**3*(7*z**2 - 48*z - 12)",
+  "scaled_contact_weights": {
+    "(0, 1)": "-6912*z*(z - 2)**3*(z + 2)**3",
+    "(0, 2)": "-432*(z - 6)*(z - 2)**4*(z + 2)**3",
+    "(1, 0)": "-20736*z*(z - 2)**3*(z + 2)**3",
+    "(1, 2)": "6912*z*(z - 2)**4*(z + 2)**3",
+    "(2, 0)": "1296*(z - 2)**3*(z + 2)**4*(5*z - 2)",
+    "(2, 1)": "-6912*z*(z - 2)**3*(z + 2)**4"
+  },
+  "triangle_weight_scaled": "-6912*z*(z - 2)**3*(z + 1)*(z + 2)**3",
+  "unscaled_pair_horizontal": "-27*z*(z + 2)**3/(16*(z - 2)*(2*z + 1)**4)",
+  "unscaled_pair_vertical": "27*z*(z + 2)**3/(16*(2*z + 1)**4)",
+  "unscaled_pair_diagonal": "81*(z + 2)**4*(5*z - 2)/(256*(z - 2)*(2*z + 1)**4)",
+  "unscaled_triangle_weight": "-27*z*(z + 1)*(z + 2)**3/(16*(z - 2)*(2*z + 1)**4)",
+  "full_polynomial_determinant_identity_verified": true,
+  "three_balance_and_value_identities_verified": true,
+  "four_AMGM_terms_identity_verified": true,
+  "normalized_q_by_common_factor": {
+    "(0, 1)": "16*z**2",
+    "(0, 2)": "(z - 6)*(z - 2)",
+    "(1, 0)": "48*z**2",
+    "(1, 2)": "-16*(z - 2)",
+    "(2, 0)": "-3*(z + 2)*(5*z - 2)",
+    "(2, 1)": "16*(z + 2)"
+  },
+  "normalized_h": "14*z**2-96*z-24",
+  "common_determinant_factor": "432*(2 - z)**3*(z + 2)**3",
+  "contact_rank_six_minor_delete_alpha": "-768*c**10/(c**2 + 1)**5",
+  "all_six_contact_equations_verified": true
+}

@@ -1,0 +1,79 @@
+% Include-able proof; requires amsmath and amssymb.
+\section*{Closedness and strict feasibility of the ramified cone}
+The ramified pencil has nine scalar source-sign blocks followed by
+$(A_G,B_G,A_H,B_H)$ of orders $(12,8,12,8)$. With
+$Z_2(s)=[I_4\ sI_4\ s^2I_4]$ and $Z_1(s)=[I_4\ sI_4]$, its coefficient
+identities are
+\[
+ Q_G(s)=Z_2(s)A_GZ_2(s)^T+sZ_1(s)B_GZ_1(s)^T,
+ \qquad Q_H(s)=Z_2(s)A_HZ_2(s)^T+sZ_1(s)B_HZ_1(s)^T.
+\]
+These encode the two completion matrices in the coordinate $v=16s^2$.
+
+\paragraph{An integral bound and closedness.}
+For indices starting at zero, put
+\[
+ (H_3)_{ij}=\frac1{i+j+1}\quad(0\le i,j\le2),\qquad
+ (H'_2)_{ij}=\frac1{i+j+2}\quad(0\le i,j\le1),
+\]
+and $W=\operatorname{diag}(H_3\otimes I_4,H'_2\otimes I_4,
+H_3\otimes I_4,H'_2\otimes I_4)$. This is positive definite: its factors
+are the moment matrices of $1,s,s^2$ and of $1,s$ with weights $1$ and
+$s$ on $[0,1]$. Their inverse traces are $381$ and $54$, respectively,
+so $W\succeq I_{40}/381$. The completion terms cancel in the trace, giving
+the exact coefficient identity
+\begin{equation}
+ \left\langle W,\operatorname{diag}(A_G,B_G,A_H,B_H)\right\rangle
+ =\int_0^1\operatorname{Tr}(Q_G(s)+Q_H(s))\,ds
+ =8\int_0^1(1+256s^4)\,ds\sum_{k=0}^8c_k
+ =\frac{2088}{5}\sum_{k=0}^8c_k.                    \label{eq:ramified-moment}
+\end{equation}
+Thus $W$ annihilates all $148$ auxiliary coefficient matrices.
+If all four Gram blocks are positive semidefinite, bounded source
+coordinates bound their total trace and hence every entry. The auxiliary
+variables are recovered by fixed linear operations: the $J_k$ are the
+upper-right $2\times2$ blocks of the coefficients of $Q_G$;
+$B_{00},B_{11},B_{01},A_{02}$ are Gram subblocks; and $K_{01},K_{12}$
+are the skew parts of $A_{01},A_{12}$. Bounded sources therefore admit
+bounded feasible auxiliary witnesses. Taking a subsequence proves that
+the projected source cone is closed. For a strictly positive weight
+on the whole pencil, use $\widetilde W=\operatorname{diag}(I_9,W)$;
+it still annihilates the auxiliaries, and its nine source contractions
+are all $2093/5$.
+
+\paragraph{A strict primal point.}
+Use the rational order-$33$ strict feasible point
+$c_*=(1/100,1,1,1,1,1,1,1,1)$ and $J(v)=K(v)$.
+For either of its completion polynomials $Q(v)=Q_0+vQ_1+v^2Q_2$,
+write its established certificate as
+\[
+ S=\begin{pmatrix}Q_0&B\\B^T&Q_2\end{pmatrix},\qquad
+ T=Q_1-B-B^T=I_4/50.
+\]
+The two old bounds are $S_G\succeq19I_8/25$ and
+$S_H\succeq179I_8/300$. Consequently
+\[
+ A^0=\begin{pmatrix}
+ Q_0&0&16B\\0&16T&0\\16B^T&0&256Q_2
+ \end{pmatrix}\succeq\frac8{25}I_{12}.
+\]
+Set $B^{\rm new}=I_8/100$, and replace the $01$ and $12$ blocks of
+$A^0$, and their transposes, by $-I_4/200$. These changes cancel
+the additional coefficients $sI_4/100+s^3I_4/100$ from
+$sZ_1B^{\rm new}Z_1^T$, preserving the exact polynomial $Q(16s^2)$.
+The symmetric perturbation has maximum absolute row sum $1/100$.
+Hence $A^{\rm new}\succeq31I_{12}/100$ for both $Q=G,H$.
+The full order-$49$ pencil is therefore at least $I_{49}/100$.
+
+In the actual $148$-coordinate parametrization, this point has
+\[
+ (J_0,J_1,J_2,J_3,J_4)=
+ \left(4I_2,0,
+       \begin{pmatrix}0&64\\64&0\end{pmatrix},0,
+       \begin{pmatrix}0&0\\0&2048\end{pmatrix}\right),
+\]
+and, on each side,
+$B_{00}=B_{11}=I_4/100$, $B_{01}=0$, $A_{02}=16B$,
+$K_{01}=K_{12}=0$. The literal auxiliary vector and the four Gram
+blocks are supplied in the accompanying rational data. These
+regularity statements assert no universal adequacy of the ramified cone.

@@ -1,0 +1,507 @@
+{
+  "chapter_repairs": [
+    {
+      "file": "chapters/07_cover.tex",
+      "find": "by the actual extreme-source reduction SE15.",
+      "replace": "by the extreme-source lemma and SG10 in Chapter~\\ref{ch:geometry}.",
+      "reason": "Old global SE15 is omitted; the refined source geometry prints the exact two canonical patterns."
+    },
+    {
+      "file": "chapters/07_cover.tex",
+      "find": "Its proof uses SE's coercive Laurent support, strict single-field\ncontact Hessian, contact sufficiency and event-row deletion implication.",
+      "replace": "Its proof uses the contact lemma and SG17--SG22 in Chapter~\\ref{ch:geometry}: coercive Laurent support, the strict single-field contact Hessian, contact sufficiency, positive $W_c$ after $Z_c=1$ normalization, and the event-row deletion implication.",
+      "reason": "Name the actual printed SG structural inputs to native entry; do not point to omitted old global SE."
+    },
+    {
+      "file": "chapters/07_cover.tex",
+      "find": "\\ \\Longrightarrow\\ {\\rm SE,\\ EN},",
+      "replace": "\\ \\Longrightarrow\\ \\text{the source/contact reduction and EN},",
+      "reason": "Repair the global dependency display LC8; this SE is the omitted global source reduction, not the retained local C14.4 SE."
+    },
+    {
+      "file": "chapters/07_cover.tex",
+      "find": "point in \\path{closed_faces_short.tex}.",
+      "replace": "point in Chapter~\\ref{ch:geometry}, equations SG11--SG14.",
+      "reason": "The two closed-face lifts and strict feasible points are now printed in the refined geometry chapter."
+    },
+    {
+      "file": "chapters/07_cover.tex",
+      "find": "conductors and the actual completed \\(j\\) conductor;",
+      "replace": "conductors and the completed \\(J\\)-row conductor;",
+      "reason": "CJ is the completed J row, not the source gap j."
+    },
+    {
+      "file": "chapters/06_mechanisms.tex",
+      "find": "CT requires only $f=Z/W$ infinitesimal and",
+      "replace": "On its unchanged unbounded-$H$ source, CT requires only\n$f=Z/W$ infinitesimal and",
+      "reason": "Keep the CT source hypothesis explicit while broadening only its pure-testing unit-ratio condition."
+    },
+    {
+      "file": "chapters/06_mechanisms.tex",
+      "find": "state chart.  CS5--CS6 may be omitted; retain CS1--CS4 for extreme\nratios, CF for bounded $W/Z$, and HG/HP for bounded $H$.",
+      "replace": "state chart. CS1--CS4 cover the extreme ratios, CF covers bounded\n$W/Z$ on the unbounded-$H$ source, and HG/HP together with the\n$\\lambda\\le0$ CF case cover bounded $H$.",
+      "reason": "Replace editorial references to omitted CS5\u2013CS6 by the actual retained coverage, including the lambda nonpositive branch."
+    },
+    {
+      "file": "chapters/06_mechanisms.tex",
+      "find": "SN is therefore not a separate\nterminal.  Its exact polynomial dictionary remains a dependency of\nBN and UN and must be retained or copied into their proof.",
+      "replace": "The exact SN polynomial dictionary in Section~\\ref{component:p1de5b12d1927} supplies the formulas used by BN and UN.",
+      "reason": "The SN dictionary is already retained. Replace the prospective preservation instruction by its actual location; SN8 and SN10\u2013SN18 references remain valid."
+    },
+    {
+      "file": "chapters/05_entry.tex",
+      "find": "seven-coquotient formulas of \\path{native_formulas.tex}, together\nwith the source coefficients in SD1 of \\path{source_definitions.tex},",
+      "replace": "seven coquotients and source coefficients SD1 in Section~\\ref{component:p0acdb66bba2f}, with their exact stationarity identities SD9--SD11,",
+      "reason": "107 is redundant because126 prints the same coquotients and exact balances; replace the omitted filename by the retained full dictionary. The next sentence already states that no asymptotic hypothesis is used."
+    }
+  ],
+  "prose_repairs": [
+    {
+      "file": "certificates/group_07.tex",
+      "kind": "required_reference_repair",
+      "reason": "Ordinal 16 is omitted; ordinal 20 already prints the complete full-parent identity, with the exact normal-coordinate conversion."
+    },
+    {
+      "file": "certificates/group_07.tex",
+      "kind": "recommended_tag_reroute",
+      "reason": "Removes the remaining wording importing absent RC2--RC13 bodies; the preceding crosswalk already makes this safe, but the replacement makes actual inputs explicit."
+    },
+    {
+      "file": "certificates/group_07.tex",
+      "kind": "recommended_tag_reroute",
+      "reason": "The former BS2 source is omitted (ordinal 58); its exact polynomials are printed in BA9."
+    },
+    {
+      "file": "certificates/group_07.tex",
+      "kind": "recommended_tag_reroute",
+      "reason": "BS1 is now BA9."
+    },
+    {
+      "file": "certificates/group_07.tex",
+      "kind": "recommended_tag_reroute",
+      "reason": "Identifies the retained native source dictionary instead of an unspecified R15 appendix."
+    },
+    {
+      "file": "certificates/group_07.tex",
+      "kind": "recommended_tag_reroute",
+      "reason": "The former GR remote body (ordinal 57) is omitted. BA11--BA15 plus the explicit axes provide its required algebra; this preserves the actual R10 bounded-m extension."
+    },
+    {
+      "file": "certificates/group_07.tex",
+      "kind": "recommended_tag_reroute",
+      "reason": "GR5 is replaced by the explicit BA12 block."
+    },
+    {
+      "file": "certificates/group_07.tex",
+      "kind": "recommended_tag_reroute",
+      "reason": "GR6 is replaced by BA13."
+    },
+    {
+      "file": "certificates/group_07.tex",
+      "kind": "recommended_tag_reroute",
+      "reason": "Avoids a final GR2 axis reference; the current BA proof prints both exact literal-axis decompositions."
+    },
+    {
+      "file": "certificates/group_07.tex",
+      "kind": "recommended_tag_reroute",
+      "reason": "Replaces RC7--RC9 with the explicitly printed generic BA full-parent calculation."
+    },
+    {
+      "file": "certificates/group_07.tex",
+      "kind": "recommended_dependency_clarification",
+      "reason": "Replaces an archived-checker assertion by the current printed hard quadratic. No new algebraic assertion is needed."
+    },
+    {
+      "file": "certificates/group_07.tex",
+      "kind": "recommended_tag_reroute",
+      "reason": "Removes the RC2 and RC7--RC10 tags whose old bodies are omitted; BA7 is the complete independently established identity."
+    },
+    {
+      "file": "certificates/group_07.tex",
+      "kind": "recommended_tag_reroute",
+      "reason": "Makes the retained array source explicit."
+    },
+    {
+      "file": "certificates/group_07.tex",
+      "kind": "recommended_dependency_clarification",
+      "reason": "The BA proof itself prints the remote join; it does not import the omitted GR body."
+    },
+    {
+      "file": "certificates/group_07.tex",
+      "kind": "recommended_dependency_clarification",
+      "reason": "Removes an apparent BA-to-R10-to-BA predecessor loop. The existing proof is already direct; the replacement says so explicitly."
+    },
+    {
+      "file": "chapters/07_cover.tex",
+      "kind": "required_reference_repair",
+      "reason": "Ordinal 214 (BSR) is omitted. Ordinal 215 current HJ establishes the actual source partition and exact leaf scopes; BA and explicit R10 split replace the old WC/R9/status routing."
+    },
+    {
+      "file": "chapters/07_cover.tex",
+      "kind": "recommended_scope_cleanup",
+      "reason": "Replaces historical unavailable-label/frontier comparisons and external input-list wording by the current directed proof assembly, while preserving CT16 and all following actual scope reasoning."
+    }
+  ],
+  "linked_mathematical_sources": [
+    {
+      "file": "chapters/05_entry.tex",
+      "old_path": "source_formulas.tex",
+      "label": "component:p6e5d41ed80b3"
+    },
+    {
+      "file": "chapters/07_cover.tex",
+      "old_path": "ui_all_tests.tex",
+      "label": "component:pa0b854a04f49"
+    },
+    {
+      "file": "chapters/07_cover.tex",
+      "old_path": "c1_source_formulas.tex",
+      "label": "component:p42ee07a067c1"
+    },
+    {
+      "file": "chapters/07_cover.tex",
+      "old_path": "uh_all_tests.tex",
+      "label": "component:pf7ffa921793c"
+    },
+    {
+      "file": "chapters/07_cover.tex",
+      "old_path": "arbitrary_state_ratio.tex",
+      "label": "component:p9f00f949fc8c"
+    },
+    {
+      "file": "chapters/07_cover.tex",
+      "old_path": "bounded_e_all_tests.tex",
+      "label": "component:p69995d829bb2"
+    },
+    {
+      "file": "chapters/07_cover.tex",
+      "old_path": "centered_a_unit_e.tex",
+      "label": "component:p3763434080c2"
+    },
+    {
+      "file": "chapters/07_cover.tex",
+      "old_path": "unit_eta_unbounded_e.tex",
+      "label": "component:p890eea5f538b"
+    },
+    {
+      "file": "chapters/07_cover.tex",
+      "old_path": "large_l_unit.tex",
+      "label": "component:pd4b92bf7de71"
+    },
+    {
+      "file": "chapters/07_cover.tex",
+      "old_path": "lunit_eta_small.tex",
+      "label": "component:p080aa62de16d"
+    },
+    {
+      "file": "chapters/07_cover.tex",
+      "old_path": "eta_unit.tex",
+      "label": "component:p686209b87229"
+    },
+    {
+      "file": "chapters/07_cover.tex",
+      "old_path": "chart_free_c2.tex",
+      "label": "component:p534f57e1da6f"
+    },
+    {
+      "file": "chapters/07_cover.tex",
+      "old_path": "c2_unified.tex",
+      "label": "component:p9f1235511111"
+    },
+    {
+      "file": "chapters/07_cover.tex",
+      "old_path": "c2_y_current.tex",
+      "label": "component:p53752031d16c"
+    },
+    {
+      "file": "chapters/07_cover.tex",
+      "old_path": "c2_radial_corner.tex",
+      "label": "component:p163e0ebf59f6"
+    },
+    {
+      "file": "chapters/07_cover.tex",
+      "old_path": "c2_radial_all_tests.tex",
+      "label": "component:pc7dacaa3258e"
+    },
+    {
+      "file": "chapters/07_cover.tex",
+      "old_path": "c2_matching_strength.tex",
+      "label": "component:p8b53b68d8af6"
+    },
+    {
+      "file": "chapters/07_cover.tex",
+      "old_path": "angle_reductions.tex",
+      "label": "component:pe56fb394b522"
+    },
+    {
+      "file": "chapters/07_cover.tex",
+      "old_path": "bounded_second_angle_exclusion.tex",
+      "label": "component:pb7189b9c1f6e"
+    },
+    {
+      "file": "chapters/07_cover.tex",
+      "old_path": "c2_bounded_state_entry.tex",
+      "label": "component:p7294aae40ee2"
+    },
+    {
+      "file": "chapters/07_cover.tex",
+      "old_path": "general_single_angle.tex",
+      "label": "component:pec59340d644f"
+    },
+    {
+      "file": "chapters/07_cover.tex",
+      "old_path": "unbounded_b_reduction.tex",
+      "label": "component:pb60046a37191"
+    },
+    {
+      "file": "chapters/07_cover.tex",
+      "old_path": "unbounded_b_small_B.tex",
+      "label": "component:pab6222b899ef"
+    },
+    {
+      "file": "chapters/07_cover.tex",
+      "old_path": "strong_complement_pitchfork.tex",
+      "label": "component:pf7943b34a7dc"
+    },
+    {
+      "file": "chapters/07_cover.tex",
+      "old_path": "local_strong_ii.tex",
+      "label": "component:pe16499ccc4c6"
+    },
+    {
+      "file": "chapters/07_cover.tex",
+      "old_path": "strong_ii_remote.tex",
+      "label": "component:p590112f102bd"
+    },
+    {
+      "file": "chapters/07_cover.tex",
+      "old_path": "full_parent_reduction.tex",
+      "label": "component:pc3daa35e9a9b"
+    },
+    {
+      "file": "chapters/07_cover.tex",
+      "old_path": "ui_all_tests_recovered.tex",
+      "label": "component:p6b22e944bd7c"
+    },
+    {
+      "file": "certificates/group_06.tex",
+      "old_path": "general_single_angle.tex",
+      "label": "component:pec59340d644f"
+    },
+    {
+      "file": "certificates/group_07.tex",
+      "old_path": "inherited_r19/parent_reference.tex",
+      "label": "component:p472f434581f3"
+    },
+    {
+      "file": "certificates/group_07.tex",
+      "old_path": "weak_c2_source_formulas.tex",
+      "label": "component:pd709027c7805"
+    },
+    {
+      "file": "certificates/group_07.tex",
+      "old_path": "fn_reconstructed.tex",
+      "label": "component:p261f71af685d"
+    },
+    {
+      "file": "certificates/group_07.tex",
+      "old_path": "penpaper_noncommuting.tex",
+      "label": "component:p2c3fc22497a5"
+    },
+    {
+      "file": "certificates/group_07.tex",
+      "old_path": "weak_r8_small_r/r8_small_r_local.tex",
+      "label": "component:p482fcad1a2e2"
+    },
+    {
+      "file": "certificates/group_07.tex",
+      "old_path": "baseline/baseline/baseline/advances/c1_scales/small_e_all_tests.tex",
+      "label": "component:p29aeda9b68a4"
+    },
+    {
+      "file": "certificates/group_07.tex",
+      "old_path": "centered_a_bounded_delta.tex",
+      "label": "component:pccaa793fd0bf"
+    },
+    {
+      "file": "certificates/group_07.tex",
+      "old_path": "r1_all_sources_all_tests.tex",
+      "label": "component:pbaab204a8ab1"
+    },
+    {
+      "file": "certificates/group_07.tex",
+      "old_path": "r2_all_original_sources_all_tests.tex",
+      "label": "component:p913a09bcdcda"
+    },
+    {
+      "file": "certificates/group_07.tex",
+      "old_path": "r34_e_inf_all_sources_all_tests.tex",
+      "label": "component:p1de8b5ffab69"
+    },
+    {
+      "file": "certificates/group_02.tex",
+      "old_path": "POSITIVE_D_FINITE_EDGE_TERMINAL.md",
+      "label": "component:p4ec1a51262f9"
+    },
+    {
+      "file": "certificates/group_02.tex",
+      "old_path": "POSITIVE_D_FINITE_EDGE_TERMINAL.md",
+      "label": "component:p4ec1a51262f9"
+    },
+    {
+      "file": "certificates/group_02.tex",
+      "old_path": "POSITIVE_D_FINITE_RATIO_CORNER_TERMINAL.md",
+      "label": "component:p03b551f2a9a0"
+    },
+    {
+      "file": "certificates/group_02.tex",
+      "old_path": "finite_pitchfork_fit.tex",
+      "label": "component:pfb0cf454f653"
+    },
+    {
+      "file": "certificates/group_04.tex",
+      "old_path": "baseline/advances/c1_common/common_remote.tex",
+      "label": "component:p89fd3edb3edd"
+    },
+    {
+      "file": "certificates/group_04.tex",
+      "old_path": "noninfinitesimal_alice.tex",
+      "label": "component:pb0d9d28d0849"
+    },
+    {
+      "file": "certificates/group_04.tex",
+      "old_path": "bounded_bob.tex",
+      "label": "component:pda4a21937f64"
+    },
+    {
+      "file": "certificates/group_04.tex",
+      "old_path": "inherited_r17/proofs/c1_sphere/sphere_pole_reduction.tex",
+      "label": "component:pfeca652aef94"
+    },
+    {
+      "file": "certificates/group_04.tex",
+      "old_path": "advances/c1_lunit_eta_large/source_frontier.tex",
+      "label": "component:p57d751e20564"
+    },
+    {
+      "file": "certificates/group_04.tex",
+      "old_path": "advances/c1_eta_large_source/beta_shared_source_normalization.tex",
+      "label": "component:p10ee3d96a3f1"
+    },
+    {
+      "file": "certificates/group_04.tex",
+      "old_path": "baseline/advances/c1_common/common_remote.tex",
+      "label": "component:p89fd3edb3edd"
+    },
+    {
+      "file": "certificates/group_04.tex",
+      "old_path": "parent_reference.tex",
+      "label": "component:p472f434581f3"
+    },
+    {
+      "file": "certificates/group_04.tex",
+      "old_path": "parent_reference.tex",
+      "label": "component:p472f434581f3"
+    },
+    {
+      "file": "certificates/group_04.tex",
+      "old_path": "inherited_r19/parent_reference.tex",
+      "label": "component:p472f434581f3"
+    },
+    {
+      "file": "certificates/group_04.tex",
+      "old_path": "parent_reference.tex",
+      "label": "component:p472f434581f3"
+    },
+    {
+      "file": "certificates/group_04.tex",
+      "old_path": "parent_reference.tex",
+      "label": "component:p472f434581f3"
+    },
+    {
+      "file": "certificates/group_04.tex",
+      "old_path": "proofs/c144/small_e_unmatched_bob.tex",
+      "label": "component:p8c30238a5f7d"
+    },
+    {
+      "file": "certificates/group_04.tex",
+      "old_path": "c144_matched_bob_budget.tex",
+      "label": "component:pe55ec4890781"
+    },
+    {
+      "file": "certificates/group_04.tex",
+      "old_path": "inherited_r19/parent_reference.tex",
+      "label": "component:p472f434581f3"
+    },
+    {
+      "file": "certificates/group_04.tex",
+      "old_path": "common_remote.tex",
+      "label": "component:p89fd3edb3edd"
+    },
+    {
+      "file": "certificates/group_03.tex",
+      "old_path": "centered_a_unit_e.tex",
+      "label": "component:p3763434080c2"
+    },
+    {
+      "file": "certificates/group_03.tex",
+      "old_path": "centered_a_outer.tex",
+      "label": "component:p364e14238053"
+    },
+    {
+      "file": "certificates/group_03.tex",
+      "old_path": "outer_small_e.tex",
+      "label": "component:p05a86be0046c"
+    },
+    {
+      "file": "certificates/group_03.tex",
+      "old_path": "small_e_all_r_contact.tex",
+      "label": "component:pa7e744614f49"
+    },
+    {
+      "file": "certificates/group_03.tex",
+      "old_path": "bounded_e_all_tests.tex",
+      "label": "component:p69995d829bb2"
+    },
+    {
+      "file": "certificates/group_03.tex",
+      "old_path": "centered_a_outer.tex",
+      "label": "component:p364e14238053"
+    },
+    {
+      "file": "certificates/group_03.tex",
+      "old_path": "c1_uniform_all_tests.tex",
+      "label": "component:p6cad7544d1b8"
+    },
+    {
+      "file": "certificates/group_03.tex",
+      "old_path": "bounded_delta_body.tex",
+      "label": "component:p41b39e2f94e1"
+    },
+    {
+      "file": "certificates/group_03.tex",
+      "old_path": "endpoint_source.tex",
+      "label": "component:p7d4e5164e84a"
+    },
+    {
+      "file": "certificates/group_03.tex",
+      "old_path": "endpoint_source.tex",
+      "label": "component:p7d4e5164e84a"
+    },
+    {
+      "file": "certificates/group_03.tex",
+      "old_path": "product_repair.tex",
+      "label": "component:p05180564ed05"
+    },
+    {
+      "file": "certificates/group_03.tex",
+      "old_path": "endpoint_source.tex",
+      "label": "component:p7d4e5164e84a"
+    },
+    {
+      "file": "certificates/group_03.tex",
+      "old_path": "endpoint_hermite.tex",
+      "label": "component:p935c9d6318ea"
+    }
+  ]
+}

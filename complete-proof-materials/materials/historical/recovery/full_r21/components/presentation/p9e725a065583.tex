@@ -1,0 +1,448 @@
+\chapter{Reconstructed R1 unbounded-$q$ source and scalar certificate}
+\label{component:p9e725a065583}
+\noindent\textbf{Component }\path{p9e725a065583}\par
+{\small\noindent Source: \path{REC/c144/rederived/r1_qo_actual_source_and_scalar.tex}\par}
+{\small\noindent SHA256: \path{9e725a065583e84a9b9d9e29ea2cca9362ea0c6eb616fc223c08505839d10ace}\par}
+{\small\noindent Inventory use: RSR1-RSR29\par}
+\medskip
+\section{Reconstructed R1 unbounded-$q$ source and scalar certificate}
+\label{p9e725a065583:sec:reconstructed-r1-qo-source-scalar}
+
+\paragraph{Provenance and scope.}
+This is a fresh proof reconstructed from the original stationary source
+formulas and the retained contact substitution. It is not represented as
+the original bytes of the former R21 file. Its finite identities are
+checked by \path{check_r1_qo_compact_source.py}; the uniform estimates
+are proved below. The conclusion concerns the complete scalar on the
+two-normal graph. Both state normals and the outer testing charts remain
+separate obligations. No historical review receipt is used as a premise.
+Source quantities lie in a real closed extension $K_c$ and tests and
+states in an independent real closed extension $K_t$; every SOS assertion
+is in $K_c\otimes_{\mathbb R}K_t$, without imposing an order on that
+tensor ring or identifying its two fields.
+
+The native source formulas are the unchanged formulas in
+\path{inherited_r19/inherited_r18/inherited_r17/definitions/}
+\path{weak_c2_source_formulas.tex}. We use their actual common-II
+source, with $d=1$, $\lambda=\beta=0$, all original strict gaps and
+$n\geq0$. In the original R1 sector $B_s,t_s,a_sB_s,t_sB_s$ are
+positive infinitesimals. Write $r,h\in(0,1)$ for its two native source
+parameters, $c_s=1+a_sB_sr$, $R_s=1+ha_sB_s$, and $K_s=1+a_sB_s$.
+The sector treated here is
+\[
+ q_{\rm old}=\frac{R_s^2}{a_st_sK_s^2}\quad\hbox{unbounded}.
+ \tag{RSR1}
+\]
+The original positive gap $c_s-(1-h)/t_s$ implies $1-h$ infinitesimal;
+therefore $h\sim1$. Since $R_s,c_s,K_s\sim1$, RSR1 is equivalent to
+$a_st_s$ infinitesimal. No condition on the size of $a_s$ itself is
+introduced. The independent testing variables below are $u,v>0$
+infinitesimal and $z>0$ arbitrary.
+
+\subsection{The exact compact source and its uniform bounds}
+
+Define pure-source quantities
+\[
+\begin{gathered}
+ j=\frac{a_sc_s}{R_s},\quad B=\frac{B_sR_s}{c_s},\quad
+ T=\frac{t_sc_s}{R_s},\\
+ p=\frac{a_s(1-r)}{R_s},\quad H=\frac{1-h}{t_sc_s},\\
+ x=jB,\quad y=TB,\quad q_z=jT .
+\end{gathered}
+ \tag{RSR2}
+\]
+The native gaps give $0<p<\min(1,j)$ and $0<H<1$.
+Here $B,T,x,y,q_z$ are positive infinitesimals, while $j$ is arbitrary
+positive. Direct inversion gives
+\[
+ r=\frac{j-p}{j+px},\quad h=\frac{1-HT}{1+HTx},\quad
+ a_s=\frac{j+px}{1+HTx},\quad
+ B_s=\frac{B(1+HTx)}{1+pB},\quad
+ t_s=\frac{T(1+pB)}{1+HTx}.
+ \tag{RSR3}
+\]
+In particular the compact variables describe the actual source,
+including its $r\to0$, $p\to1$, $H\to0$, and $H\to1$ openings.
+Set
+\[
+ K=j+1-p,\qquad E=1+B(HT+p-1),\qquad
+ W_0=(1-H)j+1-p.
+ \tag{RSR4}
+\]
+Then $\tfrac12(j+1)<K<j+1$, $E\sim1$, and $W_0>0$.
+The following polynomials contain the entire stationary dictionary:
+\begin{align*}
+\mathcal P={}&j+1+B\{(j+1)^2-p\}\\
+ &+TB\{Hj+j+1+B[Hj(2j+2-p)+p(2j+1-p)]\}\\
+ &+HjT^2B^2(1+Bp+BHj),\\
+\mathcal L={}&K+T(W_0-H)+BT[pK+Hj(1-p)]+BHT^2(W_0-1),\\
+\mathcal N={}&p+B(-j^2+3jp-j-p^2+p)\\
+ &+BT(Hj^2+Hj-j^2+jp-j+p)\\
+ &+B^2T(2Hj^2p-Hj^2-Hjp^2+2Hjp
+             -2j^2p+3jp^2-jp-p^3+p^2)\\
+ &+B^2HT^2j(Hj-j+p)(1+Bp).
+ \tag{RSR5}
+\end{align*}
+With $\mu=m(1-p)$, the exact six original stationary weights are
+\[
+\begin{aligned}
+ \mu&=\frac{jp(1+y)(1+x)(1+Hy)}{2\mathcal P},&
+ n&=\frac{\mathcal N}{2(j-p)\mathcal P},\\
+ C&=\frac{\mathcal L}{2HT\mathcal P},&
+ A&=\frac{T(1+x)(1+Hy)(K+Hjy)}{2(1-HT)\mathcal P},\\
+ D&=\frac{(1+Hy)(K+Hjy)\{1-y[(1-H)j-p]\}}
+             {2T(1-H)\mathcal P},&
+ \alpha&=\frac{B^2(K+Hjy)\mathcal L}{2E\mathcal P}.
+\end{aligned}
+ \tag{RSR6}
+\]
+For example, the original stationary denominator and its source mass
+satisfy
+\[
+ \Delta=\frac{(1+x)\mathcal P}{(1+Bp)(1+HTx)},\qquad
+ M=\frac{(1+x)\mathcal L}{(1+HTx)^2}.
+\]
+The two native strict gaps become
+\[
+ g=\frac{(1-p)(1+x)}{1+HTx},\qquad
+ j_{\rm gap}=\frac{(1-H)(1+x)}{1+Bp}.
+\]
+These equations verify the source origin of RSR6 directly; no new
+stationary solution has been substituted for the original one.
+
+Every term after $j+1$ in $\mathcal P$, divided by $j+1$, is
+infinitesimal: use $B(j+1)=B+x\in\mathrm I$, $T\in\mathrm I$,
+$p<1$, and $H<1$. The same termwise estimate, using
+$K>(j+1)/2$, applies to $\mathcal L-K$. Thus
+\[
+ \mathcal P\sim j+1,\qquad \mathcal L\sim K.
+ \tag{RSR7}
+\]
+These are relative equivalences, valid also when $j$ is infinitesimal
+or unbounded. They show, in particular, that $A/T$, $THC$, and
+$T(1-H)D$ are positive bounded units, $\mu/p$ is bounded, and
+$h_0=\mu+1/2$ is a positive bounded unit. Moreover $\alpha/B$ is
+infinitesimal. Only the displayed source openings can make $m,n,C,D$
+unbounded.
+
+The original physicality condition gives a useful uniform restriction.
+Regroup the exact polynomial $\mathcal N$ as
+\[
+\mathcal N=p\{1+B(3j+1-p)+BT(j+1)\}
+ -Bj(j+1)\{1+(1-H)T\}+\mathcal R.
+ \tag{RSR8}
+\]
+Here $\mathcal R$ is precisely the last two lines of $\mathcal N$
+in RSR5. Since $0<p<\min(1,j)$, each coefficient in its $B^2T$
+line is bounded in absolute value by a fixed multiple of $j(j+1)$.
+The $B^2HT^2$ line has the same bound, multiplied by the bounded
+factor $T(1+Bp)$. Consequently
+\[
+ |\mathcal R|\leq C_0BT\,Bj(j+1)
+\]
+for a fixed real $C_0$. All corrections multiplying $p$ and
+$Bj(j+1)$ in RSR8 are infinitesimal. As $n\geq0$ is exactly
+$\mathcal N\geq0$, it follows that
+\[
+ \eta_*:=\frac{Bj(j+1)}p\ \hbox{is bounded},\qquad
+ \eta_*\in\mathrm I\ \Longrightarrow\
+ n\sim\frac{p}{2(j-p)(j+1)}>0.
+ \tag{RSR9}
+\]
+Indeed $\mathcal N=p(1+\varepsilon_1)-Bj(j+1)(1+\varepsilon_2)$
+with $\varepsilon_i\in\mathrm I$. This proves both assertions without
+dividing by $n$ and includes literal $n=0$ in the bounded-$\eta_*$
+alternative. It also gives $nr$ bounded.
+
+\subsection{The complete graph and its actual contact circuit}
+
+The quarter-parent, before any packet is removed, is
+\begin{align*}
+\mathscr P={}&m\{vW+uvY-X-uZ\}^2
+ +CD_v(uW-Y)^2+AD_uD_vY^2\\
+&+(D+\tfrac12)(uW+uvX-Y-vZ)^2
+ +(\alpha+\tfrac12)D_u(vY-Z)^2+nD_uD_vX^2\\
+&+\tfrac12D_v(X+uZ)^2-\tfrac12D_uD_vZ^2,
+\qquad D_u=1+u^2,\ D_v=1+v^2.
+ \tag{RSR10}
+\end{align*}
+The source-free rotated state coordinate is $w=(W+uY)/D_u$.
+On its nonzero chart set $w=1$ and $z=(Z-uX)/D_u$. Define
+the two complete state normals
+\[
+ N=X+uZ-pD_uv,\qquad M=uW-Y-HD_uvz.
+\]
+Their exact inverse is
+\[
+\begin{aligned}
+ X&=N/D_u+pv-uz,& Z&=z+uN/D_u+puv,\\
+ Y&=u-M/D_u-Hvz,& W&=1+uM/D_u+uHvz.
+\end{aligned}
+ \tag{RSR11}
+\]
+The scalar studied here is exactly
+$F_{\rm full}=(\mathscr P/D_u)|_{N=M=0}$.
+No $n$ packet, $m$ packet, or state-normal term is silently removed.
+Substitution of RSR11 into RSR10 gives the complete graph RB2 of
+\path{r1_qo_contact_circuit_budgets.tex}. The independent generic
+parent calculation in the checker verifies that equality before
+specializing any stationary weight.
+
+Use the separated rows
+\[
+ U=u/\sqrt x,\quad V=v/\sqrt y,\quad Z_*=z/\sqrt{q_z},\qquad
+ Q_*=U-VZ_*,\quad B_*=V-UZ_*,\quad R_*=Z_*-UV,
+\]
+\[
+ \Psi=U^2+V^2+Z_*^2+U^2V^2Z_*^2-4UVZ_*.
+ \tag{RSR12}
+\]
+These are rows; $U,V,Z_*$ are not assumed bounded coefficients.
+The actual contact is $(U,V,Z_*;N,M)=(1,1,1;0,0)$.
+The exact native formulas make the complete parent value and all five
+first derivatives vanish there. On the positive core,
+\[
+ \Psi=(U-V)^2+Z_*^2(1-UV)^2+2UV(1-Z_*)^2
+ \tag{RSR13}
+\]
+is a legal separated sum of squares: the last root is
+$\sqrt2\,(uv)^{1/2}(xy)^{-1/4}(1-Z_*)$, with its radicals in
+the two separate real closed fields.
+
+Let the ten positive monomial coefficients and the seven circuit
+masses be exactly RB6--RB8. In particular
+\[
+ M_a=Ax,\quad M_b=\{\mu(1-p)+(n+\tfrac12)p^2\}y,\quad
+ M_c=\alpha q_z,\quad M_{ac}=nj^2y,
+\]
+\[
+ f_c=M_b-M_{ac},\quad q_c=M_a-f_c,\quad
+ e_c=(n+\tfrac12)p^2y^2-g_c,\quad d_c=M_{b^2c}-k_c.
+\]
+The original contact balances give the exact scalar identity
+\begin{align*}
+ F_{\rm full}={}&q_cQ_*^2+M_{ac}B_*^2+r_cR_*^2
+  +d_cV^2Q_*^2+e_cV^2B_*^2\\
+ &+f_c\Psi+g_cV^2\Psi+k_cZ_*^2(V^2-1)^2.
+ \tag{RSR14}
+\end{align*}
+The identities RB7 and the two odd coefficient balances are independently
+checked on the actual source. Thus RSR14 is a finite polynomial identity,
+not a Taylor approximation to the contact.
+
+Here is an explicit source-only formula for its radial mass. Put
+$\mathcal F=K+T\mathcal F_1+T^2\mathcal F_2$, where
+\begin{align*}
+\mathcal F_1={}&-2BHjp+BHj+2Bjp-2Bp^2+2Bp\\
+ &-Hj-Hp-H+j+1-p^2/j+p/j,\\
+\mathcal F_2={}&-B^2H^2jp+B^2Hjp-B^2Hp^2+B^2Hp\\
+ &-BH^2j-BH^2p+BHj-BHp^2/j+BHp/j.
+ \tag{RSR15}
+\end{align*}
+Every displayed term divided by $K$ is bounded, using $p/j<1$;
+terms containing $Bj$ are even infinitesimal. Hence $\mathcal F\sim K$.
+Direct source substitution yields
+\[
+\begin{aligned}
+ f_c&=\frac{Tx^2\mathcal F}{2\mathcal P}>0,&
+ q_c&=Ax-f_c\sim\frac{TxK}{2(j+1)}>0,\\
+ r_c&=\frac{B^2jT(1-p)(1+x)(1+Hy)\mathcal L}
+                {2E\mathcal P}>0,&
+ g_c&=\frac{HT^2j^2B^3\mathcal L}{2\mathcal P}>0.
+\end{aligned}
+ \tag{RSR16}
+\]
+In particular
+\[
+ f_c\sim\frac{Tx^2K}{2(j+1)},\qquad
+ \frac{r_c}{f_c}\sim\frac{1-p}{j},\qquad
+ \frac{g_c}{f_c}=Hy\frac{\mathcal L}{\mathcal F}.
+ \tag{RSR17}
+\]
+
+For the remaining signed mass define
+\begin{align*}
+\mathcal K={}&pW_0+
+ B(1-p)\{j[H(p+1)-p]-(1-p)(p-H)\}\\
+ &+TBH\{(p+1)(1-H)j+(1-p)(BHj+p+1-H)\}\\
+ &+T^2B^2H^2j(1-H).
+ \tag{RSR18}
+\end{align*}
+Then
+\[
+ k_c=-\frac{T^2B^2j(1+x)\mathcal K}{2E\mathcal P}.
+\]
+The identity
+\begin{align*}
+\mathcal K-pW_0+Bp(1-p)(j+1)
+={}&B(1-p)\{Hj(p+1)+H(1-p)+p^2\}\\
+ &+TBH\{(p+1)(1-H)j+(1-p)(BHj+p+1-H)\}\\
+ &+T^2B^2H^2j(1-H)
+ \tag{RSR19}
+\end{align*}
+has a nonnegative right side. Since $W_0\geq1-p$ and
+$B(j+1)\in\mathrm I$, it proves $\mathcal K>0$ and $k_c<0$.
+The displayed finite arrays also give
+\[
+ \mathcal K/K=O(p+B),\qquad
+ |k_c|/(q_cy)=O(p+B).
+ \tag{RSR20}
+\]
+All constants in these estimates are real and uniform over the source
+openings; neither $j-p$ nor $1-H$ has been bounded below.
+
+\subsection{Paying the signed masses, with the full current reserved}
+
+Put
+\[
+ h_0=\mu+\tfrac12,\qquad
+ M_e=\frac{nh_0j^2}{n+h_0},\qquad J_c=M_ey,
+ \qquad e_0=\tfrac12p^2y^2-g_c.
+ \tag{RSR21}
+\]
+These are pure-source quantities and $0\leq J_c\leq M_{ac}$.
+Writing $e_c=np^2y^2+e_0$ preserves the entire second correlated
+current packet. The conclusion is the following precise scalar
+statement: after subtracting the reserved positive packets
+\[
+ (M_{ac}-J_c)B_*^2+np^2y^2V^2B_*^2,
+ \tag{RSR22}
+\]
+the remainder is a separated SOS and retains, for example, one half
+of $q_cQ_*^2+r_cR_*^2+f_c\Psi+J_cB_*^2$.
+When $n=0$ the two reserved packets and $J_c$ vanish literally.
+This assertion supplies precisely the effective current mass needed
+when the full $N$ normal is later completed against the original $n$
+packet. It is not a completion of that normal itself.
+
+Here and below ``infinitesimal cost'' means that the budget multiplies
+the original positive packet by a bounded separated Gram coefficient
+with zero residue. Finite sums of such costs can be paid while retaining
+any fixed fraction smaller than one. Multiplication of the explicit
+SOS identities by pure-source nonnegative scalars and pure-testing
+squares is legal. The remaining diagonal coefficients are of the form
+$1-\varepsilon$, with $\varepsilon$ infinitesimal in the bounded tensor
+algebra, so the inherited bounded-Gram completion applies. Its actual
+text is the paragraph ``Why a strict bounded Gram suffices'' in
+\path{inherited_r19/parent_reference.tex}; only that field-independent
+lemma is imported, not the C14.2 source assumptions in the same file.
+For clarity, the elementary step is, for a pure-source infinitesimal
+$s$ and bounded pure-testing $t$, to choose real $a,\varepsilon>0$
+with $|t|<a$ and $|s|<\varepsilon/a$ and use
+\[
+ \varepsilon\pm st=\tfrac12\{(\varepsilon/a+s)(a\pm t)
+                         +(\varepsilon/a-s)(a\mp t)\}.
+\]
+Every summand has separated nonnegative factors and hence a separated
+square root. Interchange the fields for the other type of infinitesimal
+entry and use a finite real diagonal budget. This proves the exact
+SOS lifting step used here. No square root or inverse of a mixed sum
+is used.
+
+First $e_0^-\leq g_c$. The exact budget
+\[
+ (1+V^2)\Psi-V^2B_*^2
+ =Q_*^2+R_*^2+V^2(1-UVZ_*)^2
+ \tag{RSR23}
+\]
+pays its negative part from the circuit at cost
+\[
+ \frac{e_0^-}{f_c}+\frac{e_0^-}{f_cy}v^2
+ \ \leq\ Hy\frac{\mathcal L}{\mathcal F}
+       +H\frac{\mathcal L}{\mathcal F}v^2\in\mathrm I.
+\]
+Its positive part is retained as a square. Also $d_c>0$ because
+$M_{b^2c}>0$ and $k_c<0$; the $d_c$ and $g_c$ terms cause no loss.
+
+For $k_c$, use the exact identity
+\[
+ Z_*(V^2-1)=-VQ_*-R_*.
+ \tag{RSR24}
+\]
+The $VQ_*$ part is paid from $q_cQ_*^2$ with coefficient
+$2|k_c|v^2/(q_cy)$, which is infinitesimal by RSR20. The remaining
+$R_*$ part is paid in the following exhaustive three cases. Fixed
+real multipliers such as the factor two do not change any cost claim.
+
+\paragraph{Case 1: $1-p$ has a positive real lower bound.}
+The exact ratio is
+\[
+ \frac{|k_c|}{r_c}
+ =\frac{T\mathcal K}{(1-p)(1+Hy)\mathcal L}\in\mathrm I.
+ \tag{RSR25}
+\]
+This uses only $\mathcal K/\mathcal L=O(p+B)$ and $T\in\mathrm I$.
+Neither current mass nor a bound on $j$ is required.
+
+\paragraph{Case 2: $1-p\in\mathrm I$ and $\eta_*$ has a positive real
+lower bound.}
+Here $p\sim1$, so $Bj(j+1)$ is a bounded positive unit. Since $B$ is
+infinitesimal, $j$ is unbounded and $j^2B$ is a positive bounded unit.
+Equations RSR16--RSR20 give
+\[
+ \frac{|k_c|}{f_c}\in\mathrm I,\qquad
+ \frac{|k_c|}{f_cx}
+ =O\!\left(\frac{T(p+B)}{j^2B}\right)\in\mathrm I.
+ \tag{RSR26}
+\]
+The exact circuit budget
+\[
+ (1+U^2)\Psi=R_*^2+B_*^2+U^2Q_*^2+U^2(1-UVZ_*)^2
+ \tag{RSR27}
+\]
+therefore pays $|k_c|R_*^2$ at cost
+$|k_c|/f_c+(|k_c|/(f_cx))u^2\in\mathrm I$.
+This case includes any intersection with literal $n=0$.
+
+\paragraph{Case 3: $1-p,\eta_*\in\mathrm I$.}
+Now $p\sim1$, $j>p$, and RSR9 gives $n>0$ together with its exact
+relative estimate. The source mass $M_e$ is a positive bounded unit.
+For the lower bound use
+\[
+ \frac{p^2}{M_e}
+ =\frac{p^2}{h_0j^2}+\frac{p^2}{nj^2}=O(1).
+\]
+For the upper bound use $M_e\leq h_0j^2$ when $j$ is bounded,
+and $M_e\leq nj^2\sim p/2$ when $j$ is unbounded. In particular,
+\[
+ \frac{|k_c|}{f_c}\in\mathrm I,\qquad
+ \frac{|k_c|}{q_cy}=O(1),\qquad
+ \frac{|k_c|}{J_cx}
+ =O\!\left(\frac{T(p+B)(1+1/n)}{j^2}\right)=O(1).
+ \tag{RSR28}
+\]
+The last bound follows directly from
+$1/n\sim2(j-p)(j+1)/p$, with $p\sim1$ and $j>p$.
+There is an exact separated SOS budget
+\[
+ 2\{\Psi+V^2Q_*^2+U^2B_*^2\}-R_*^2\quad\hbox{is SOS}.
+ \tag{RSR29}
+\]
+For completeness, set $t_*=UV$, $\delta_*=U-V$,
+$E_*=Z_*(1-t_*)$, $T_*=t_*(1-Z_*)$, and
+$J_*=T_*-\delta_*^2Z_*$. Its SOS decomposition is
+\[
+ (E_*+T_*)^2+2\delta_*^2+4t_*(1-Z_*)^2
+                       +2J_*^2+4t_*\delta_*^2Z_*^2.
+\]
+All roots are separated as in RSR13. Applying RSR29 costs a multiple
+of $|k_c|/f_c$ on the circuit, $|k_c|v^2/(q_cy)$ on $Q_*$,
+and $|k_c|u^2/(J_cx)$ on $B_*$. Each is infinitesimal by RSR28.
+
+The three cases exhaust the source because $0<1-p<1$ and $\eta_*$
+is bounded. A finite number of the displayed allocations therefore
+proves the scalar assertion following RSR22 with a strict retained
+fraction. All coefficient bounds depend only on the source and
+$u,v$; no bound on the independent state coordinate $z$ was used.
+The proof allows arbitrary relative rates of all source and testing
+infinitesimals. Literal $n=0$ is covered by Cases 1 and 2; Case 3
+excludes it by the original physicality equation itself.
+
+\paragraph{What remains outside this lemma.}
+The scalar identity is exact for the complete graph of RSR10. A
+full-parent local theorem must also allocate both first-normal arrays
+and the complete quadratic block from RSR11, using the reserved
+current before applying signed scalar costs. The outer testing charts,
+the state chart $w=0$, the sign exits and complex-state splitting must
+be supplied by their own exact arguments. This file makes none of
+those additional admissions by implication.

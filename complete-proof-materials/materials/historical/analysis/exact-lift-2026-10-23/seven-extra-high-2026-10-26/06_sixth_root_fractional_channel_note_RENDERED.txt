@@ -1,0 +1,56 @@
+      Q222 C2 Sixth Root Fractional Channel Necessity
+
+
+
+ 
+
+
+Native C2: a quantitative sixth-root channel-necessity theorem
+Status. An exact analytical necessary condition on every possible sixth-root Gram for an open set of strict native C2 sources. This does not prove admission or exclusion from the full sixth-root cone. All arithmetic is exact, with a standalone standard-library checker in Q222_C2_sixth_root_fractional_channel_necessity.py.
+Native rational contact and old separator
+Fix the strict native C2 parameters
+$(a,b,c,t,r)=(13/600,101/1000,47/15,27/35,13/154),\quad d=1,\quad\lambda=\beta=0.$The six event coefficients are given by the exact rational C2 stationary formulas in latex/certificates/c2_short.tex and reconstructed directly in the checker. The contact is
+$(u_c,v_c;\psi_c)=(c,ac; b/a,-cr,c(b/a-at),1),$with every state component nonzero. Put $\widehat F(x,y,\phi)=F(u_c x,v_c y,\mathrm{diag}(\psi_c)\phi)$. Then $\widehat F(1,1,\boldsymbol1)=0$. The contact normalization is an invertible source-only diagonal congruence on any fixed Puiseux feature Gram, never a new variable in an affine lift.
+Let $Y_{pq,\ell m}$, $0\le p,q\le2$, $\ell\le m$, denote the 90 integer moments in the independently verified half-power obstruction. The included checker repeats their complete table. The exact pairing is
+$\langle Y,\widehat F\rangle=-\delta,
+\quad \delta=\frac{31917121340091771507320448459210586965990611717744093996544823253}{1129383645613305483559298619423160947865086012060000000000}>0.$The four Newton-restricted half-power blocks have sizes $(14,6,6,4)$, and the integer compressed dual moments are strictly positive definite on all four sum-zero subspaces. Safe audited exact LDL pivot lower bounds are $(89,100,360,2000000)$.
+Extension to the entire sixth-root coefficient space
+Use $r=x^{1/6}$, $s=y^{1/6}$ and retained C2 features $r^is^j\phi_\ell$, $0\le i,j\le6$, with $i+j\ge6$ for $W$, $i+j\le6$ for $Z$. Split the 154 retained functions:
+$\mathcal O=\{r^is^j\phi_\ell:i,j\in\{0,3,6\}\}\cap\text{retained},\qquad
+\mathcal N=\text{retained}\setminus\mathcal O.$They have cardinalities $|\mathcal O|=30$ and $|\mathcal N|=124$. The 4 parity-block sizes are $(52,36,36,30)$. After their forced contact kernels they are $(51,35,35,29)$. Define a linear functional on every fractional monomial of the sixth-root coefficient space by
+$\Lambda_T(r^ps^q\phi_\ell\phi_m)=
+\begin{cases}
+Y_{p/6,q/6,\min(\ell,m),\max(\ell,m)}+T,&p,q\in\{0,6,12\},\\
+0,&\text{otherwise},
+\end{cases}$where $T=24000000000000$ is an exact integer. This is a functional on coefficients, not a moment evaluation measure and not a dual PSD certificate for the full sixth-root cone. The added $T$ contributes $T\widehat F(1,1,\boldsymbol1)=0$, so
+$\Lambda_T(\widehat F)=-\delta.\tag{1}$For any feature pair $e,f$, let $M_{ef}=\Lambda_T(ef)$. Averaging under $r\to-r$ and $s\to-s$ permits every sixth-root Gram to be block diagonal by parity. The matrix $M$ has the exact old/new decomposition
+$M=\begin{pmatrix}M_{\mathcal O}&0\\0&M_{\mathcal N}\end{pmatrix}.
+\tag{2}$Indeed, an old index $0,3,6$ plus a new index $1,2,4,5$ is never divisible by six. In $M_{\mathcal O}$, the four parity blocks equal the old half-power moments plus $T\boldsymbol1\boldsymbol1^T$.
+To prove strict positivity without dropping the contact direction, take the old pivot $e_0$ and differences $e_i-e_0$ in each parity block. If the moment matrix has pivot entry $a$, first-row difference vector $b$, and reduced matrix $Q\succ0$, adding $T\boldsymbol1\boldsymbol1^T$ changes its congruence to
+$\begin{pmatrix}a+T&b^T\\b&Q\end{pmatrix}.$The exact Schur gaps $a+T-b^TQ^{-1}b$ exceed, respectively,
+$(400000000000,\ 15000000000000,\ 19000000000000,\ 23000000000000).$The checker verifies these with rational Gaussian elimination. Hence
+$M_{\mathcal O}\succ0.\tag{3}$All diagonal entries of $M_{\mathcal N}$ vanish, because $2i\not\equiv0\pmod6$ or $2j\not\equiv0\pmod6$ for every genuinely new feature. Its nonzero off-diagonal entries only join complementary exponents, with angular sums divisible by six in both coordinates; the genuine fractional complement pairs are $1+5=6$ and $2+4=6$. Every entry has modulus at most
+$B=\max_{p,q,\ell,m}|Y_{pq,\ell m}+T|=24002021367851.\tag{4}$Forced positive mass and forced complementary correlations
+Theorem. Suppose (hypothetically) that a positive semidefinite Gram $G$ on the full 196 sixth-root features represents the complete native $\widehat F$. Prune its 42 Newton-forced zero rows and parity-average it. Partition it by $\mathcal O,\mathcal N$. Then necessarily
+$\boxed{\operatorname{tr}G_{\mathcal N\mathcal N}\ge \frac{\delta}{124 B}>9.49\cdot10^{-9}.}\tag{5}$Furthermore, over the complementary new-feature pairs $e<f$ with $(i_e+i_f,j_e+j_f)\in 6\mathbb Z^2$, one has
+$\boxed{\sum_{e<f,\mathrm{complementary}}|G_{ef}|\ge\frac{\delta}{2B}>5.88\cdot10^{-7}.}\tag{6}$Proof. Every Gram satisfying the identity has
+$-\delta=\langle\Lambda_T,\widehat F\rangle
+=\operatorname{tr}(M_{\mathcal O}G_{\mathcal O\mathcal O})+
+\operatorname{tr}(M_{\mathcal N}G_{\mathcal N\mathcal N}).$The first term is nonnegative by (3) and positive semidefiniteness of the principal Gram block. Each entry of $M_{\mathcal N}$ has modulus at most $B$, so its operator norm is at most $124B$, giving (5). Its diagonal vanishes; only complementary offdiagonal pairs contribute to its trace pairing. Taking absolute values yields (6). $\square$
+All inequalities remain valid under a nearby strict native C2 source by using that source's own invertible contact normalization. The old and new moment matrices above are fixed in normalized coordinates, while $\delta(c)=-\Lambda_T(\widehat F_c)$ varies continuously with native parameters and is positive in a nonempty open neighborhood of the displayed rational contact. Thus an open set has a uniform positive lower bound on necessary new-channel mass (e.g. half the displayed bound on a sufficiently small neighborhood).
+What the theorem does and does not establish
+This is a sixth-root structural result: an SOS, if one exists, cannot be supported only on old half-power channels, nor can its genuine fractional channels appear without cross-correlations of complementary sixth-root exponents. The cubic Hurwitz exponents $(2,4)$ are permitted, as are $(1,5)$; the theorem does not decide which are sufficient.
+It is not a negative separator for the full $Z_6$ cone: $M_{\mathcal N}$ is generally indefinite. The unproved implication is the existence, for every strict native source, of four PSD Gram blocks with their complete integer/fractional coefficient identities. In particular, the new complementary correlations must be large enough to overcome every coarse conditional dual while simultaneously cancelling all unwanted fractional monomials. Neither the positive contact scalar Gram, local coupling completion, coefficient rank 406, nor this necessary-channel bound establishes those global PSD blocks.
+A second exact form of the candidate
+Set $U=u^{1/3}$, $V=v^{1/3}$. By parity averaging, admission to the fixed sixth-root cone is equivalent to
+$F(U^3,V^3,\psi)=\sigma_{00}(U,V,\psi)+U\sigma_{10}+V\sigma_{01}+UV\sigma_{11},$where each $\sigma_{\epsilon\eta}$ is an SOS of polynomials linear in all four state amplitudes, with $\deg_U\le 3-\epsilon$, $\deg_V\le3-\eta$ in each square root. This is a finite degree-three matrix quadratic-module problem. Its square-root feature block sizes are exactly $(64,48,48,36)$, and the C2 Newton/contact reductions recover $(51,35,35,29)$. The equivalence is an algebraic reformulation, not an admission theorem.
+Reproducibility: Run python Q222_C2_sixth_root_fractional_channel_necessity.py; no SDP solver or numerical PSD decision is used.
+
+
+
+
+
+
+
+
+

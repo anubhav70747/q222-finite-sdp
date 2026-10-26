@@ -1,0 +1,178 @@
+Independent bounded review: normalized inverse-Alice completion
+23 October 2026
+
+Scope: the new source-leading identity, native source bounds, complete
+error, fixed testing span, and fixed-P extension communicated by the
+existence-audit agent. No public files edited, no global atlas reviewed.
+The original weaker draft's cross-sign correction is acknowledged in
+inverse_alice_independent_review.txt. All calculations here use the raw
+CE20 sign +4qwS(G-F), hence -4qwS(J-QG).
+
+1. Exact leading identity.
+Let Q=1-b,r=bz,H0=1+zQ, q=sqrt(z), J=F-bG, B=H0/(bQ),
+ C0=z/[2(1-r)], A0=H0/(2bz), alpha0=1/(2Qz).
+For E=qW,F=Y/q,G=wZ/q,R=X+wW,S=pX, direct expansion gives
+
+2z(G-F)^2+2p^2zF^2-4pEG
+ +2/(1-r)(E-pzF)^2
+ +2H0/b(1+p^2)F^2+2/Q(1+p^2)(F-G)^2
+=2/(1-r)(E-pzJ-pG)^2+2B(1+p^2)J^2+2H0G^2.
+
+This identity is exact for all z>0,r<1. I independently expanded both
+sides; it is not an asymptotic or determinant-only identity.
+
+2. Normalized contraction and reserve.
+Write J*=sqrt(B)J,G*=sqrt(H0)G,a=z/sqrt(B),c=1/sqrt(H0),
+L=aJ*+cG*=zJ+G. Exactly
+ 1-a^2-c^2=zQ(1-r)/H0>=0.
+Thus a,c and the contraction deficit are bounded nonnegative pure-source
+quantities even when z,B,H0 are unbounded. The leading square coefficient
+2/(1-r) is at least2 and its excess is retained whole.
+
+An especially useful reserve retains2p^2 J*^2, rather than clipping it.
+Set g=(R,S,E,J*,G*) and
+ Qclip=2R^2+2S^2+2(E-pL)^2+2(1+p^2)J*^2+2G*^2.
+The exact identity is
+
+Qclip-|g|^2/2
+= (3/2)(R^2+S^2)+(3/2)(E-4pL/3)^2
+ +(3/2)J*^2+(5/6)G*^2+(2/3)(1-p^2)G*^2
+ +(4/3)p^2J*^2
+ +(2/3)p^2[(1-a^2-c^2)(J*^2+G*^2)+(cJ*-aG*)^2].
+
+Every term is a square with nonnegative source coefficient or testing
+coefficient1-p^2. This gives a coefficient-level reserve, not merely
+pointwise positive definiteness. It also avoids introducing Y sqrt(1-p^2):
+only wZ sqrt(1-p^2) is needed in the fixed testing span.
+
+3. Native coefficient admission, with explicit inequalities.
+Fix eta<=2^-30 and assume0<x,sigma<=eta/(1+z), all native gaps,
+D,beta>=0, and0<h,b,r<1. Then xz,sigma*z,x,sigma<=eta,
+ |M-1|<=eta, |J_s-1|<=eta, and1<=P<=1+4eta.
+For the last bound, P-1<=2eta+4eta^2+eta^3<4eta follows by grouping
+its positive terms using r=bz<1. J_s-sigma>0, so B_s>=1.
+Initially0<e<1; dropping the negative term in calH gives
+ calH<=(1+eta)(1+z)+(1+4eta)z<=4(1+z).
+The exact BE identity implies
+ eB_s=xH0+sigma calH-2PJ_sD/sigma<=5eta,
+since H0<=1+z. Thus e<=5eta. No bound on H=h/sigma is used.
+
+The exact coefficient ratios are
+ rC=C/C0=K(1+sigma r)(1-e)/P,
+ rA=A/A0=[H0-ze+xhz(2-r-e)]/(P H0),
+ rAlpha=alpha/alpha0=(1+sigma r)[M+e xz theta+e R_s sigma z]/P.
+Crucially H0=1+z-r>=max(1,z). Therefore
+ 1-9eta<=rC<=1+3eta,
+ 1-9eta<=rA<=1+2eta,
+ 1-5eta<=rAlpha<=1+5eta.
+For rAlpha's upper bound use
+ (1+eta)(1+eta+10eta^2+5eta^3)<=1+3eta at eta<=2^-30.
+The lower bound follows from numerator>=1-eta and P<=1+4eta.
+Hence the claimed10eta,10eta,5eta bounds hold. One may simply choose
+the fixed real f=1-25eta>0; then C>=f C0,A>=f A0,alpha>=f alpha0.
+An adaptive absolute-value/minimum definition of f is unnecessary.
+All these bounds hold for every z>0 under the stated coupled source box.
+
+4. Complete parent and error.
+Split the three whole events at fC0,fA0,falpha0. Relative to f times
+the exact leading identity in item1, the only signed remainder is
+ -4(1-f)pEG-4pw^2EF+4qwS(G-F).
+Every other remainder is nonnegative: the whole m,D,beta events;
+the three cap excesses with their original measurement factors;
+2(1-f)(R^2+S^2),2w^2S^2,2(1-f)z(G-F)^2,
+2(1-f)p^2zF^2,2p^2w^2zF^2;
+the C cap's additional w^2 factor and A cap's additional w^2 factor;
+and the retained leading-square coefficient excesses from item2.
+Thus both full state couplings and every state coordinate remain.
+
+On normalized roots, the three signed matrices at p,pw^2,w have entries
+ A1_EG=-2(1-f)/sqrt(H0),
+ A2_EJ=-2/sqrt(B), A2_EG=-2b/sqrt(H0),
+ A3_SJ=-2q/sqrt(B), A3_SG=+2qQ/sqrt(H0).
+Their maximum absolute row sums are bounded by50eta,4,4. For the last,
+ q^2/B=rQ/H0<=1 and q^2Q^2/H0<=Q<=1.
+There is no missing sign or factor2 in these full-parent coefficients.
+
+5. Fixed-P extension.
+For a fixed real Pmax>=1 set t=p/Pmax,Ebar=E/Pmax,
+ eta=2^-30/Pmax^2, delta=2^-12/Pmax,
+and0<=p<=Pmax,0<=w<=delta. The exact leading first square becomes
+ 2Pmax^2/(1-r)(Ebar-tL)^2.
+Its coefficient is at least2. Retain2t^2J*^2 in the clipped baseline;
+the additional2(Pmax^2-1)t^2J*^2 is positive. Thus item2 applies with
+Ebar,t, unchanged. The error rows at t,t w^2,w are bounded by
+50eta Pmax^2,4Pmax^2,4. Using gates
+ y1=t,y2=t(w/delta)^2,y3=w/delta,
+the actual row budgets are
+ r1=50eta Pmax^2,r2=4Pmax^2delta^2,r3=4delta.
+Their sum is at most50*2^-30+2^-22+2^-10<1/512.
+The source-only matrices rj I+/-Aj are PSD by their row bounds.
+Exactly fI/2+sum yj Aj decomposes as
+ (f/2-sum rj)I+sum[(1+yj)(rjI+Aj)/2+(1-yj)(rjI-Aj)/2].
+The constant term is strictly positive. Factor only source matrices;
+take only the six fixed testing radicals sqrt(1+/-yj).
+This is a valid separated tensor SOS, including zero source coefficients.
+
+6. Fixed testing span and endpoints.
+The same51-function pattern suffices for each fixed Pmax and delta:
+ phi6=(X,Y,W,wW,wZ,pX) times1 and sqrt(1+/-yj), giving42;
+ plus pwZ,pY,pwY,wY,pwX,pW,pZ,Z,wZ sqrt(1-t^2).
+All leading, baseline, cap, original event, and residual roots in items
+1--5 are source-linearly spanned by these functions. In particular
+Ebar-4tL/3 uses W,pY,pwZ; t(cJ*-aG*) uses pY,pwZ. The positive
+source contraction deficit has its radical in the source factor only.
+There is no adaptive testing function, mixed inverse or mixed radical.
+All identities are polynomial in p,w before the fixed gate roots, so
+p=0,w=0 and every zero state coordinate specialize literally. D,beta
+are never inverted. For normalized physical states restore1/(DpDw);
+for homogeneous nonzero states also restore the pure-testing state norm.
+Complex states follow by real and imaginary splitting.
+
+7. Coverage consequence and limit of this review.
+At Pmax=2^24, the inverse chart covers u>=2^-24 and w<=2^-36.
+For0<z<=1 it overlaps Pro's inner chart u<=2^-24. The common small-w
+corner therefore has all projective Alice tests once the stronger source
+bound x,sigma<=2^-78/(1+z) is imposed. Literal source coordinates x,sigma
+infinitesimal and bounded z satisfy this bound. This observation does
+not cover independent Bob tests outside the small-w corner or source
+domains with x,sigma not small. It does not prove a global Q222 lift.
+
+VERDICT: the new exact identity, coefficient ratios, complete error,
+fixed source-only Gram factorization and51-function span pass the bounded
+independent analytical check. The same is true for the fixed-P extension.
+This report does not certify serialized matrices or a forthcoming draft's
+transcription; it records the equations checked directly above.
+
+LATER LITERAL-DATA ADDENDUM.
+The serialized inverse_alice_all_z_blocks.json is now available and was
+independently parsed without running or reading the author's checker.
+I reconstructed the total weighted polynomial from its literal vectors,
+multipliers and source Grams. It equals the entire raw inverse-Alice
+parent, with d=1, after only the stated pure-source relations tB^2=B and
+tH^2=H0. The six remaining nontrivial coefficient residuals all reduce
+exactly to zero. All114 off-diagonal symmetry pairs agree exactly, all
+source Gram entries are independent of testing variables, and the file
+has19 blocks,total order62,maximal order6,51 scalar functions.
+
+Additionally every one of the19 source matrices was compared entrywise
+with independently reconstructed PSD congruences or positive rank-one
+sums. For main0 and mainj+/- these are Cmap^T H Cmap with H as in item5.
+For positive_EL they are the baseline Ebar-4tL/3 square and retained
+leading-square excess; for positive_JG they are f(3/2)J*^2,
+f(5/6)G*^2 and2(1-f)z(G-F)^2. For positive_pJG they are the explicit
+positive contraction-deficit/cross-square terms, leading t^2J* excess
+and2(1-f)zF^2. The other blocks are positive scalars/diagonal matrices
+or the named original event excesses. All19 comparisons are exact.
+The independent result is saved in inverse_alice_all_z_literal_independent.json.
+No mismatch was found. The separately compiled affine source-cone pencil
+was not reaudited here; its coefficient elimination is a separate check.
+
+REPLACEMENT BODY ADDENDUM.
+c1_c141_replacement.tex gives the private three-page replacement of
+B.24--B.26 without depending on the order669 cone. Its full-parent,
+three-square, contraction, complete remainder, clipping, reserve and
+entire normal-matrix identities were independently replayed in
+check_c1_c141_replacement.py. The existence-audit agent also independently
+passed its domains, field separation and remote Bob join. The preview
+compiles to3pages without overfull warnings. Its external references
+resolve only after integration into the companion, as intended.

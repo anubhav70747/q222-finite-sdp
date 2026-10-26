@@ -1,0 +1,56 @@
+Uniform payment of the first R-normal row
+24 October 2026
+
+Result. The proposed g_A purchase works uniformly on the full R1 domain
+delta=2^-10, 0<B,jB,T<=delta, 1/2<=p<min(j,1), 0<H<1, n>=0.
+No lower bound on1-p or current mass is required. This establishes only
+this purchase and coupling replacement, not positivity of the complete Gram.
+
+Write x=jB,y=TB,J=j+1,K=J-p and use the actual RSR dictionary
+ alpha=B^2(K+Hjy)L/(2EP),  fc=Tj^2B^2 F/(2P).
+The previously proved lower bounds are P>=J, E>=1-delta,
+F>=(1-delta-delta^3)K. An independent upper bound for L follows directly:
+W0=K-Hj<=K and j<=K, so
+ L<=K+TK+BT[pK+Hj(1-p)]+BT^2K
+   <=K(1+delta+delta^2+delta^3).
+Also K+Hjy<=K(1+delta^2).
+
+Consequently, with
+ Xi=(1+delta^2)^2(1+delta+delta^2+delta^3)^2/
+       [2(1-delta)^2(1-delta-delta^3)]<1,
+ alpha^2*jT/fc <=Xi*B^2*K^3/(jJ).
+The exact rational value of Xi is
+1270132534392173937780327450625/2527880809057907160468028391424.
+Since j>1/2 and K<=j+1/2,
+ (j+1/2)^3<=j(j+1)^2
+(the difference is j^2/2+j/4-1/8>0). Hence
+ A0:=alpha^2*jT/fc <=B^2J=Bx+B^2<=2delta^2,
+ A1:=alpha^2*jT/(fc*x)<=B*J/j<=3B<=3delta.
+
+Exact separated payment. Put Rphys=sqrt(jT)Rstar and
+g_A=alpha*u*Rphys. The homogeneous RSR27 identity
+ A27=(1+U^2)Psi-Rstar^2
+     =Bstar^2+U^2 Qstar^2+U^2(w-UVZstar)^2
+gives, with U=u/sqrt(x),
+ fc(A0*u^2+A1*u^4)Psi-g_A^2
+    =alpha^2*jT*u^2 A27.
+The right side is an explicit separated SOS, and every coefficient is
+pure source. On |u|<=2^-12, the circuit fraction is at most
+2delta^2*2^-24+3delta*2^-48
+ =32771/288230376151711744 <2^-42.
+It therefore has an exact fixed-gate decomposition using only
+1-2^24u^2 and1-2^48u^4. A prescribed positive multiple of g_A^2 is
+paid by the same multiple of this identity.
+
+Exact normal-coupling replacement. In the recovered weak Gram,
+rho_R=sqrt(jT/rc), f5=Rphys/rho_R. Its two u-cross entries are
+a_N*alpha*rho_R and-b_N*alpha*rho_R, so their whole contribution is
+ 2alpha*u*Rphys(a_N f1-b_N f4)
+   =2g_A(a_N f1-b_N f4).
+Delete those two old entries, append row g_A, and insert constant
+source-only cross entries a_N and-b_N to rows1 and4. The quadratic
+form is unchanged; no rc inverse remains in this coupling.
+Its appended positive diagonal must be funded by the displayed payment.
+At n=0, b_N=0 and the same formulas are literal. No claim is made here
+about the other R-normal coupling or simultaneous Gram reserves.
+

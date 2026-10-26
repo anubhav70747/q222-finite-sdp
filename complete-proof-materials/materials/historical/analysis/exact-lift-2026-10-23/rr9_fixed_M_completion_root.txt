@@ -1,0 +1,39 @@
+23 October 2026 — independent root calculation while Pro extraction runs
+
+This treats only the M_k term of RR9, not the full parent or its negative
+Bob-dependent correction. It does not prove universal source coverage.
+
+Let a²+b²=1, beta0>0, h0²=2beta0/(2beta0+1), eta=h0/2,
+k=-1+eta b, and y=z0-ell. Define
+ Q0=[[beta0,-eta/2],[-eta/2,(1-eta²)/2]],
+ Q1=diag(0,-eta).
+Direct completion of the x square gives exactly
+
+ M_k = (x+a(z0+k ell))²/2
+       + (y,b ell)^T (Q0+b Q1) (y,b ell)
+       + eta² (b² ell)²/2.
+
+No division by a,b or a state coordinate occurs. One way to check is to
+take the Schur complement of the x pivot1/2: its entries on(z0,ell) are
+ beta0, -beta0-(k+1)/2, beta0+(1-k²a²)/2.
+Replacing z0=y+ell gives cross coefficient-eta b and ell² coefficient
+ b²(k²-eta²)/2, yielding the displayed identity.
+
+For |b|<=1/3, write
+ Q0+bQ1=(1+3b)(Q0+Q1/3)/2+(1-3b)(Q0-Q1/3)/2.
+Both endpoint matrices are positive definite. The smaller determinant is
+
+ det(Q0+Q1/3)
+ = beta0((1-eta²)/2-eta/3)-eta²/4
+ = h0²(3-4h0/3)/(16(1-h0²)) >0.
+
+The first diagonal beta0 is positive; the other endpoint adds2eta/3 to
+the second diagonal. This constructs fixed gates sqrt(1+3b),sqrt(1-3b)
+on that entire Alice arc, including b=0. All h0/eta dependence is source
+only; the square containing k can be expanded in a fixed test span.
+The step removes the testing-residue choice of k in the M_k term alone.
+The full RR9 still contains gamma V²+(A/y_source)Dv q²-kDv bVq and the
+negative term -v²(beta0+1/2)(ell-z0)², plus the RR7 retained squares.
+Their joint certificate, particularly for unrestricted Bob v, is a
+separate required identity. Pro has announced such an identity but its
+completed source has not yet been recovered as of this calculation.

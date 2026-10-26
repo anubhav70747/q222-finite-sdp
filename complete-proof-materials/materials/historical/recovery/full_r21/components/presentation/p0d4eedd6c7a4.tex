@@ -1,0 +1,215 @@
+\chapter{A direct all-tests join for the five-root A-unbounded subchart}
+\label{component:p0d4eedd6c7a4}
+\noindent\textbf{Component }\path{p0d4eedd6c7a4}\par
+{\small\noindent Source: \path{R13/advances/weak_A/five_root_remote.tex}\par}
+{\small\noindent SHA256: \path{0d4eedd6c7a4226bd797b288d93901cec2bcdae6b3ffe11bc5e98a60609914b4}\par}
+{\small\noindent Inventory use: WR1-WR7\par}
+\medskip
+\section{A direct all-tests join for the five-root A-unbounded subchart}
+\label{p0d4eedd6c7a4:sec:r9-weak-A-remote}
+
+\paragraph{Revision 10 scope update.}
+Section~\ref{p296e824cb97a:sec:r10-weak-boundary} extends this admission to $z/B$
+positive infinitesimal with all other source hypotheses retained.
+The unit-ratio restriction below records the original revision-9 theorem.
+
+This section supplies a new direct join for exactly the source
+hypotheses (WA1). It does not import the strong-II remote theorem
+or any other weak-C2 remote admission. All source physicality,
+strict-gap and contact hypotheses from the local theorem remain
+in force. No membership in the residual complement is needed;
+applications to the original residual problem retain that intersection
+without asserting that it is nonempty.
+
+\begin{theorem}
+Under the source hypotheses of the five-root local theorem, including
+the positive-unit assumptions on $z/B$ and $1-r$, the entire original
+parent is tensor SOS for every independent projective testing angle
+pair and every real or complex projective state. Literal zero and
+infinite half-angles and all signed charts are included.
+This is an all-tests source-subdomain admission; it does not assert
+nonemptiness of its intersection with the previous residual complement.
+\end{theorem}
+
+\paragraph{The limiting source is explicit and all four finite weights are strict.}
+Put
+\[
+ \rho=\operatorname{st}(z/B)>0,\qquad
+ \tau=\operatorname{st}(y/B)>0,\qquad
+ r_0=\operatorname{st}(r)\in(0,1).
+\]
+The original unit gaps give
+$g_0=1-\rho(1-r_0)>0$ and
+$j_0=1-1/\tau>0$, hence $\tau>1$.
+Exact reduction of the unchanged source formulas gives
+\[
+ \begin{gathered}
+ n_0=\frac{1-r_0}{2r_0(1+\rho)},\qquad
+ m_0=\frac{\rho^2(1-r_0)}{2g_0(1+\rho)},\\
+ C_0=\frac{\tau(1+\rho r_0)-\rho(1-r_0)}{2(1+\rho)},\qquad
+ D_0=\frac{1+\rho r_0}{2(1+\rho)(\tau-1)}.             
+ \end{gathered}
+\tag{WR1}
+\]
+Every displayed coefficient is strictly positive. For $C_0$ the
+numerator equals $\tau g_0+\rho(\tau-1)+\rho r_0>0$.
+In particular $n$ is a positive bounded unit on this subchart;
+the stronger fact is used at one remote endpoint. The formulas
+are joint regular reductions under $B\to0$, $H/B\to0$, with
+the other source ratios tending to their residues; they do not
+compare the two infinitesimal rates. Also
+$\alpha\in\operatorname{Inf}$ and $A^{-1/2}\in\operatorname{Inf}$.
+
+Normalize the hard state by $\widehat Y=\sqrt A\,Y$ in each
+remote chart. This is a pure-source state change, and no parent
+term is removed. On bounded testing charts its matrix has bounded
+pure-source polynomial coefficients; all couplings of
+$\widehat Y$ to $W,X,Z$ have zero residue. Its hard diagonal
+residue is the positive angle factor multiplying $AY^2$.
+It remains to check the complete three-state residue on $Y=0$.
+
+\paragraph{Finite angles outside the local corner.}
+For finite real angle residues $u_0,v_0$, write $U=u_0^2$,
+$V=v_0^2$, $D_u=1+U$, $D_v=1+V$. Let $\mathsf P_3$ be the
+matrix of the following complete residue of $F/4$ on $Y=0$:
+\[
+ \begin{split}
+ F_3={}&n_0D_uD_vX^2+m_0(v_0W-X-u_0Z)^2
+                    +C_0D_vU W^2\\
+ &+(D_0+\tfrac12)(u_0W+u_0v_0X-v_0Z)^2
+       +\tfrac12D_v(X+u_0Z)^2-\tfrac12D_uVZ^2.
+ \end{split}                                           \tag{WR2}
+\]
+No hard-state relaxation term remains in this residue, because
+the normalized $\widehat Y$ cross row is infinitesimal. Define
+the strictly positive real constants
+\[
+ a_*=\frac{D_0m_0(2n_0+1)}2,\quad
+ c_* =\frac{C_0(2m_0+1)(2D_0+2n_0+1)}4,\quad
+ d_* =\frac{C_0D_0(2n_0+1)}2.
+\]
+The exact residue determinant is
+\[
+ \det\mathsf P_3=D_uD_v
+ \left\{a_*\left(V-\frac\tau\rho U\right)^2
+                         +c_*U^2V+d_*UV^2\right\}.    \tag{WR3}
+\]
+The checker obtains this directly from the full three-state
+polynomial and (WR1), not from a numerical table. It is strictly
+positive whenever $U+V>0$, including either axis. The restriction
+of (WR2) to $Z=0$ is positive definite on $(W,X)$: its positive
+$n_0,m_0,C_0$ event squares already have no common nonzero kernel
+when $U+V>0$, and the core restriction is nonnegative. The real
+Schur criterion and (WR3) therefore give
+$\mathsf P_3\succ0$. Together with the hard $\widehat Y$ pivot,
+the entire four-state residue is strictly positive definite.
+
+For independent bounded testing angles with these residues,
+expand the normalized full matrix around the real pair
+$(u_0,v_0)$. Its nonconstant monomials in $u-u_0,v-v_0$ are
+pure-testing infinitesimals. The finite separated Gram construction
+(WA10) applies verbatim. If $u_0=v_0=0$, use the local five-root
+theorem instead. Thus every bounded testing pair is covered.
+
+\paragraph{One infinite angle.}
+For $u$ unbounded use $p=1/u$ and the full homogeneous parent
+$p^2F(1/p,v)$; at literal $u=\infty$ use its polynomial value
+at $p=0$. If $v$ is bounded, the complete three-state residue on
+$Y=0$ is
+\[
+ C_0(1+v_0^2)W^2+n_0(1+v_0^2)X^2
+       +(D_0+\tfrac12)(W+v_0X)^2+(m_0+\tfrac12)Z^2.
+                                                               \tag{WR4}
+\]
+It is positive definite for every finite real $v_0$, including
+$v_0=0$. The hard $\widehat Y$ pivot is $1+v_0^2>0$.
+For $v$ unbounded and $u$ bounded, put $q=1/v$ and use the
+polynomial parent $q^2F(u,1/q)$. Its complete three-state residue is
+\[
+ (m_0+C_0u_0^2)W^2+(n_0+\tfrac12)(1+u_0^2)X^2
+                                      +D_0(u_0X-Z)^2, \tag{WR5}
+\]
+again positive definite, with hard pivot $1+u_0^2$.
+Both identities are verified directly against the original parent.
+The same bounded separated Gram lift applies in the infinitesimal
+variables $p,v-v_0$ or $u-u_0,q$. This includes literal infinity
+and literal zero of the other half-angle.
+
+\paragraph{Both infinite angles: keep the exact null state.}
+Put $p=1/u$, $q=1/v$, and work with the full polynomial parent
+$\widehat F=p^2q^2F(1/p,1/q)$. Introduce the five roots
+\[
+ (W,X,\widehat Y,P,Q),\qquad
+ \widehat Y=\sqrt A\,Y,\quad P=pZ,\quad Q=qZ.
+\]
+Write $Y=A^{-1/2}\widehat Y$ in the following exact quadratic
+identity, interpreted as a polynomial in these five roots:
+\[
+ \begin{split}
+ \widehat F/4={}&n(1+p^2)(1+q^2)X^2
+   +m(pW-pqX+Y-Q)^2+C(1+q^2)(W-pY)^2\\
+ &+(1+p^2)(1+q^2)\widehat Y^2
+   +D(qW+X-pqY-P)^2+\alpha(1+p^2)(Y-Q)^2\\
+ &+\tfrac12\left\{(qW+X-pqY-P)^2+(1+p^2)(Y-Q)^2
+       +p^2(1+q^2)X^2\right.\\
+ &\hspace{39mm}\left.+2(1+q^2)XP-(1+q^2)P^2\right\}.
+ \end{split}                                           \tag{WR6}
+\]
+The checker verifies this as the complete original four-state
+parent after $P=pZ$, $Q=qZ$, not only to leading order.
+All matrix coefficients in (WR6) are bounded source polynomials
+in $p,q$. Its residue, in the printed root order, is
+\[
+ \begin{pmatrix}
+ C_0&0&0&0&0\\
+ 0&n_0+D_0+1/2&0&-D_0&0\\
+ 0&0&1&0&0\\
+ 0&-D_0&0&D_0&0\\
+ 0&0&0&0&m_0+1/2
+ \end{pmatrix}\succ0,                                 \tag{WR7}
+\]
+because the nontrivial determinant is $D_0(n_0+1/2)>0$.
+The separated lift (WA10) therefore gives a finite tensor SOS
+for arbitrary independently infinitesimal $p,q$, of either sign
+or zero. At $p=q=0$ both $P,Q$ vanish, respecting the original
+exact null direction $W=X=Y=0$; no positive $Z$ pivot is invented.
+
+\paragraph{Coverage and restoration.}
+Every finite element of an ordered extension is either bounded or
+unbounded in absolute value. A bounded testing pair is covered by
+(WA1)--(WA10) if both residues vanish, and by (WR2)--(WR3)
+otherwise. A single unbounded coordinate is covered by (WR4) or
+(WR5); two unbounded coordinates are covered by (WR6)--(WR7).
+Literal projective endpoints use the polynomial chart values with
+$p=0$ or $q=0$. For nonzero reciprocal coordinates, restoring
+$F$ multiplies the established identity by the pure-testing
+square $p^{-2}$, $q^{-2}$, or $(pq)^{-2}$; at literal infinity
+no division is performed. All four homogeneous state coordinates
+were retained in every chart, and splitting real and imaginary
+state parts gives the complex-state statement. Thus the join
+exhausts all independent testing types without a source/testing
+rate assumption or an imported strong-face theorem.
+
+\begin{corollary}[The polynomial obstruction family is nevertheless admitted]
+The entire two-parameter physical family (SO1),
+\[
+ B=\varepsilon,\quad z=\varepsilon/2,\quad y=2\varepsilon,
+ \quad r=9/10,\quad H=\varepsilon\eta,
+ \quad L=\varepsilon(1-\eta),
+\]
+with independent positive infinitesimals $\varepsilon,\eta$, is
+all-tests tensor SOS for the original full parent.
+\end{corollary}
+\begin{proof}
+It has $z/B=1/2$, $1-r=1/10$, $H/y=\eta/2$ infinitesimal,
+and $y/B,L/B,r,G/B,j$ positive bounded units. Its global
+physicality and all original source signs were proved in the
+obstruction module. It therefore satisfies every hypothesis of
+the present all-tests theorem.
+\end{proof}
+The strict $K_1<0$ and (JG13) failures and the nonexistence of a
+global polynomial SOS of its scalar graph remain correct.
+The local tensor roots use pure-testing radicals as in (WA10),
+so these facts are compatible. The whole family is now a proved
+admission and is removed from the residual complement. No claim
+that any other residual intersection is nonempty is implied.

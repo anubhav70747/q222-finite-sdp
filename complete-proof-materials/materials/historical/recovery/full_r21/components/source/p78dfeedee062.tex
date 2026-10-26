@@ -1,0 +1,277 @@
+\section{The positive-unit $e$ subdomain of weak-C2 R4}
+\label{sec:r17-r4-eunit}
+
+\begin{theorem}
+Keep the original physical stationary C2 source, $d=1$, literal
+$\lambda_{\rm event}=\beta=0$, $n\ge0$, all strict source gaps, the
+positive-infinitesimal total-scale intersection, and every inherited
+prior-admission exclusion. Suppose the ordered source is in R4 and
+$e=1-r$ is a positive bounded unit. Then the entire original four-state
+parent is a finite tensor SOS for every independent projective testing
+pair and every real or complex state. This admits precisely the
+$e$-unit subdomain of R4; the $e$-infinitesimal part is not claimed.
+\end{theorem}
+
+\paragraph{Source entry.}
+Use the exact WE1 source parameters
+\[
+ a=z/B,\quad t=y/B,\quad h=H/B,\quad l=1-h,
+ \quad g=1-ae+haB,\quad j=1+aBr-l/t.
+\]
+On R4, $B,z,y,j$ are positive infinitesimals and $t,h,l$ positive
+bounded units. Since $e$ is a unit, $g>0$ forces $a$ bounded.
+The exact $j$ identity gives $t_0=l_0$. In the following residue
+formulas the letters on the right denote their real residues, with
+$h+l=1$, $e=1-r$, and $g=1-ae\ge0$. Put
+$M_*=1+ar-ael=g+a(r+eh)>0$. Joint regular reduction of WE1 gives
+\[
+ (nr)_0={e\over2(1+a)},\quad
+ (mg)_0={a^2e\over2(1+a)},\quad
+ (Ah)_0={l(1+ar)\over2(1+a)},\quad
+ (Dj)_0={1+ar\over2l(1+a)},                         \tag{R4E1}
+\]
+\[
+ C_0={M_*\over2l(1+a)},\qquad
+ \alpha_{*,0}:=(\alpha/B^2)_0={(1+ar)M_*\over2(1+a)}.\tag{R4E2}
+\]
+Thus $A,C,\alpha_*,Dj$ are positive bounded units, while $D$ is
+unbounded. The coefficient $n$ is either a positive unit or unbounded,
+according as $r$ is a unit or infinitesimal. In particular literal
+$n=0$ is impossible here by R4E1. No coefficient boundary was discarded.
+If $g$ is a unit then $\mu=m/a^2$ is a positive bounded unit with
+\[
+                 \mu_0={e\over2g(1+a)}.              \tag{R4E3}
+\]
+If $g$ is infinitesimal, $a$ is a unit, $m$ unbounded, and $mg$ a
+positive unit. These are joint regular formulas: after clearing $r,g,j$
+by the displayed products, the remaining WE1 denominators are products
+of $t,l,1-hB,\Delta$, with $\Delta_0=1+a>0$. No relative gap rates
+are imposed. Write $N_*=n+1/2$, so $N_*^{-1}$ and $N_*^{-1/2}$ are
+bounded and $nr$ is bounded in all source cases.
+
+\paragraph{Exact removal of the divergent D channel.}
+Use the complete WA3--WA8 identity in the scaled roots
+\[
+ {\cal R}=(\xi,\eta,R_1,R_2',T)^T,
+ \quad \xi=X+ruZ,\quad\eta=Y-huW,
+\]
+\[
+ R_1=uW-vZ/t,\quad R_2'=avW-uZ,\quad T=uvW-BZ,
+ \qquad F/4={\cal R}^TG{\cal R}.
+\]
+The exact full-matrix identity RD3--RD6, proved independently of any
+small-$h$ hypothesis in the R17 small-$r$ R8 lemma, gives
+\[
+ L_D=uv\xi-\eta+lR_1+ruvR_2'-arvT
+     =uW+uvX-Y-vZ+jvZ,
+\]
+\[
+ F/4=D L_D^2+{\cal R}^T(G|_{D=0}+DjH_D){\cal R}.       \tag{R4E4}
+\]
+Here the only nonzero symmetric entries of $H_D$ are
+$(13)=tuv$, $(15)=-tu$, $(34)=rtuv$, $(35)=-artv$.
+The underlying root syzygy is exact, and this identity contains the
+full hard block and both complete first normals. Formal $D=0$ does
+not assert a physical modified source. Put $\widehat D=\sqrt D L_D$
+and solve the source-unit coefficient $l$:
+\[
+ R_1={1\over l}\left(D^{-1/2}\widehat D+\eta
+       -uvN_*^{-1/2}\widehat\xi-ruvR_2'+arvT\right),
+ \qquad\widehat\xi=\sqrt{N_*}\xi.                  \tag{R4E5}
+\]
+Every coefficient is bounded and separated, with no mixed inverse.
+
+\paragraph{All local tests when g is a unit.}
+The $D$-free matrix after the $\widehat\xi$ normalization has bounded
+pure-source coefficients. Indeed all scalar occurrences of $n$ are
+through $nr^2$, and all normal occurrences through $nr$; the hard
+coefficient $n/N_*$ is bounded. $A,C,m,\alpha_*,\mu$ are bounded,
+and $t,l,g$ have unit inverse. The only possible $a$ pole after using
+$R_2'$ is
+\[
+ Q_*={b_2-\alpha_*\over a},\quad
+ b_2=2a^2\mu h+Cl^2+(Ah)h+(B^2\alpha_*+1/2)h^2.     \tag{R4E6}
+\]
+The exact WE3 numerator vanishes at $a=0$ for arbitrary $B,h,r,t$.
+After cancellation its denominator has only unit factors on this
+$g$-unit chart; no $D$ or $j$ occurs. All other scaled WA coefficients
+have the same regular rewrites as RD7. Thus R4E5 and bounded $Dj$
+give a bounded full five-root Gram on
+$(\widehat\xi,\eta,\widehat D,R_2',T)$.
+
+At the local testing residue $u=v=0$, $D^{-1/2}$ vanishes and
+$R_1=\eta/l$. The complete residue has independent pivots
+$A_0/l_0^2$, $1$, $\alpha_{*,0}$ on $\eta,\widehat D,T$.
+Its remaining $\widehat\xi,R_2'$ block is
+\[
+ \begin{pmatrix}
+ 1+a_0^2\mu_0\nu&-a_0\mu_0\sqrt\nu\\
+ -a_0\mu_0\sqrt\nu&\mu_0
+ \end{pmatrix},\qquad
+ \nu=(N_*^{-1})_0\ge0.                              \tag{R4E7}
+\]
+The determinant is exactly $\mu_0>0$. This includes $r$ infinitesimal
+($\nu=0$), $a$ infinitesimal, and every independent relative rate.
+For reference, the $\eta$ pivot is the exact cancellation
+\[
+ (A+C+1/2)+{2[-(C+1/2)l+Ah]\over l}
+       +{(C+1/2)l^2+Ah^2\over l^2}=A/l^2.
+\]
+No scalar or normal term is omitted in this computation.
+
+\paragraph{All local tests when g is infinitesimal.}
+Here $a$ is a unit. Use the unscaled $R_2=vW-uZ/a$, substituting
+$R_2'=aR_2$ in R4E4--R4E5, and the exact
+centered-$m$ matrix identity R5.2--R5.4 before R4E4. Namely, retain
+\[
+ (m-K)R_{mc}^2,\qquad R_{mc}=-\xi+uv\eta+(1-g)R_2+huT,
+\]
+and replace the remaining matrix by
+$G|_{m=K}+\tau H_m$, where $\tau=(m-K)g$ is bounded with positive
+residue and
+\[
+ (H_m)_{14}=-1,\quad(H_m)_{25}=v,\quad
+ (H_m)_{44}=2-g,\quad(H_m)_{45}=hu.
+\]
+Choose a sufficiently large positive real $K$; $m-K>0$ for every
+such $K$ since $m$ is unbounded. This identity and R4E4 commute,
+as $H_m$ has no $D$ dependence. All remaining coefficients are
+bounded: $a$ is a unit, $m$ has been replaced by $K$, $\tau$ is
+bounded, and the only unbounded $n,D$ are treated by R4E5.
+The same three residue pivots remain. The other block is now
+\[
+ \begin{pmatrix}
+ 1+K\nu&-(K+\tau_0)\sqrt\nu\\
+ -(K+\tau_0)\sqrt\nu&K+2\tau_0
+ \end{pmatrix},\qquad
+ \det=K+2\tau_0-\tau_0^2\nu.                         \tag{R4E8}
+\]
+Since $0\le\nu\le2$, any real $K>2\tau_0^2+1$ makes it strict.
+No source opening is compared with a testing rate. Restore the exact
+retained square. Equations R4E7--R4E8 and WA10 therefore prove the
+entire local parent for all independent infinitesimal or zero $u,v$,
+with arbitrary states and either sign. The finite separated lift
+whitens the strict pure-source matrix and handles its finitely many
+infinitesimal testing monomials; it introduces no mixed radicals.
+
+\paragraph{Finite remote tests.}
+If both finite angles have nonzero residue, use the inherited
+all-noncommuting-residues theorem, at arbitrary coefficient scales
+(the precise entry is the inherited \texttt{penpaper\_noncommuting.tex}).
+Its hypotheses apply to this unchanged physical parent. It remains
+to give the two one-unit-angle charts. In these remote charts,
+positive original event coefficients may be clipped at positive real
+lower bounds and their exact positive excess packets retained; no
+contact assertion is made for the clipped polynomial.
+
+If $u$ is a bounded unit and $v$ infinitesimal or zero, clip $n,A,C$
+at positive real lower bounds $n_*,A_*,C_*$, and retain all their
+excesses, the entire $m$ and $\alpha$ packets. Normalize the original
+$D$ event by $\widehat J=\sqrt D(uW+uvX-Y-vZ)$ and solve
+\[
+ W={D^{-1/2}\widehat J+Y+vZ-uvX\over u}.
+\]
+The whole remainder has bounded coefficients on
+$(\widehat J,X,Y,Z)$. Its residue is
+\[
+ \widehat J^2+n_*D_uX^2+\tfrac12(X+uZ)^2+A_*D_uY^2\succ0,
+ \qquad D_u=1+u_0^2.                                \tag{R4E9}
+\]
+Here and in the remaining residue displays the tests denote their real
+residues. Positivity is strict because $u_0\ne0$. All source cases,
+including unbounded $n,m$, have been covered by exact excess packets.
+
+If $u$ is infinitesimal or zero, $v$ a bounded unit, and $a$ a unit,
+$m$ has a positive real lower bound even when it is unbounded.
+Clip $n,m,A,C$ at positive real bounds and retain their excesses and
+$\alpha$. Solve instead
+$Z=(uW+uvX-Y-D^{-1/2}\widehat J)/v$. The bounded remainder residue is
+\[
+ \widehat J^2+(n_*+1/2)D_vX^2+m_*(vW-X)^2
+                  +(A_*+C_*+1/2)D_vY^2\succ0.       \tag{R4E10}
+\]
+This is strict since $m_*>0$ and $v_0\ne0$.
+
+Finally let $a$ be infinitesimal in this chart. Then $g_0=1$,
+$\mu=m/a^2$ is a unit, and
+\[
+       A_0={l\over2h},\qquad C_0={1\over2l}.          \tag{R4E11}
+\]
+Keep $S=aW$ as an extra legal root and write $R=uW$ everywhere
+else. Clip only $n$ at a positive real $n_*$, retaining its excess
+and the $\alpha$ packet. Retain the actual $A,C,m,D$ and the whole
+signed core. Use
+\[
+ R=Y+vZ-uvX+D^{-1/2}\widehat J,\qquad
+ mM^2=\mu(vS-aX+auvY-auZ)^2.                         \tag{R4E12}
+\]
+There is no inverse of $a$ or $u$ here. The complete remainder is
+a bounded matrix on $(S,X,Y,\widehat J,Z)$. Its separate residue
+pivots are $\mu_0V$, $(n_*+1/2)D_v$, and $1$ on
+$S,X,\widehat J$. The remaining $Y,Z$ matrix is
+\[
+ \begin{pmatrix}
+ (l+V)/(2h)&-v/2\\
+ -v/2&V(h+V)/(2l)
+ \end{pmatrix},\qquad
+ \det={V^2(1+V)\over4hl}>0,
+ \quad V=v_0^2>0.                                   \tag{R4E13}
+\]
+This exact computation retains the entire signed core; it is not a
+state-slice argument. The possibly dependent extra root $S$ causes
+no difficulty for a positive Gram. WA10 at the real angle residues
+now proves each complete finite remote chart.
+
+\paragraph{Projective endpoints and the join.}
+The source bounds give positive real lower bounds for $n,C,A,D$.
+Clip them at $n_*,C_*,A_*,D_*>0$, retain their whole positive
+excess packets, and retain the entire original $m,\alpha$ packets.
+All remaining source coefficients are real constants. The following
+three exact homogeneous charts give the complete endpoint join,
+without any further source hypothesis.
+
+For $u$ unbounded put $p=1/u$ and use $p^2F/4$. If $v$ is bounded,
+the selected residue at $p=0$ is
+\[
+ n_*D_vX^2+C_*D_vW^2+A_*D_vY^2
+       +(D_*+1/2)(W+vX)^2+\tfrac12(vY-Z)^2\succ0.     \tag{R4E14}
+\]
+It is strict on $(X,W,Y,Z)$ for every real $v$, including zero.
+The full homogeneous selected matrix has bounded polynomial entries.
+
+For $v$ unbounded put $q=1/v$ and use $q^2F/4$. If $u$ is bounded,
+write $R=uW$; every remaining occurrence of $W$ is through $R$.
+The selected residue at $q=0$ is
+\[
+ (n_*+1/2)D_uX^2+C_*(R-Y)^2
+       +(A_*+1/2)D_uY^2+D_*(uX-Z)^2\succ0.           \tag{R4E15}
+\]
+It is strict on $(X,R,Y,Z)$ for every real $u$, including zero,
+and the exact selected polynomial uses no inverse of $u$.
+
+If both tests are unbounded use $p=1/u,q=1/v$ and $p^2q^2F/4$,
+with the legal roots $P=pZ,Q=qZ$. The exact half-core becomes
+\[
+ \tfrac12\{(qW+X-pqY-P)^2+(1+p^2)(Y-Q)^2
+                       +(1+q^2)(p^2X^2+2XP-P^2)\}.
+\]
+Together with the selected event packets its residue is
+\[
+ (n_*+1/2)X^2+C_*W^2+A_*Y^2+D_*(X-P)^2
+                                  +\tfrac12(Y-Q)^2\succ0,       \tag{R4E16}
+\]
+strict on $(X,W,Y,P,Q)$. Dependent roots do not affect positivity.
+All finite reciprocal deviations are pure testing infinitesimals,
+so the separated strict-Gram lift applies in all three charts.
+Restore the original positive excesses and $m,\alpha$ packets.
+Homogeneous restoration uses pure-testing squares off the endpoints;
+literal $p=0$ or $q=0$ uses the polynomial endpoint value itself.
+
+The finite local, finite noncommuting, both finite one-unit-angle
+charts, and the homogeneous infinity charts exhaust all independent
+tests. All four original state coordinates and both normal directions
+were retained. Polynomial axis values, sign gauges, and application to
+real and imaginary state parts supply the literal axes, both signs,
+and complex states. The result is an all-tests admission of the
+positive-unit-$e$ source subdomain of R4, with its original physicality,
+strict gaps, coefficient signs, and residual intersections unchanged.

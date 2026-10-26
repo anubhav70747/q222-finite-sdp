@@ -1,0 +1,81 @@
+Bounded independent review: source symmetry, contact, and fixed-family transport
+23 October 2026
+
+Verdict. No mathematical blocker found in the requested parts of
+proof/ramified_obstruction.tex. The source permutation, full parent identity,
+homogeneous endpoints, contact eta, fractional-weight transport, non-span
+argument, and logical incomparability implication are correct. The new dual
+certificate and the order-392 polar-assembly conclusion are outside this review.
+
+1. Full source symmetry
+
+The involution is exactly
+ pi=(d,C,A,m,lambda,n,D,beta,alpha).
+Direct expansion of the original nine-source homogeneous SG2 parent gives
+ Fh_pi(c)((b1,-b0),(a1,-a0);W,Y,X,Z)=Fh_c(a,b;W,X,Y,Z)
+coefficientwise in all nine source coordinates. Thus it includes the signed
+d core, not just the eight nonnegative event packets. Setting a0=b0=1
+recovers u^2*v^2 F_pi(c)(-1/v,-1/u;W,Y,X,Z)=F_c(u,v;psi).
+The homogeneous version is a polynomial identity at literal zero coordinates.
+The angle map squares to (a,b)->(-a,-b), which is the identity projectively;
+the source permutation and state swap square to the identity. Nonnegative
+source coordinates and their zero faces are permuted exactly. This proves
+pi(Ccan)=Ccan, including all states and projective endpoints; complex states
+follow by real/imaginary splitting.
+
+2. Contact and eta
+
+The original contact maps first to negative angles (-1/16,-13) with state
+(140,1/50,-1/32,1). The two standard angle sign gauges give the printed
+positive-angle state (140,-1/50,1/32,1). I independently evaluated the full
+parent at pi(cstar): its value and all six first derivatives (four state,
+two angle) vanish exactly. L(1/16) applied to this state gives precisely
+(71681/8192,17/6400,279/32,-801/800). U=1/256 and s^2=13/16 are correct.
+For a putative PSD completion, the accepted split is a sum of two
+nonnegative quadratic forms with U>0. At this zero each PSD matrix therefore
+annihilates its displayed vector, proving both equations (13). No state
+direction or first normal was omitted in this inference.
+
+3. Fixed functions, common multiplier, and non-span
+
+Substituting old v=-1/u into each Bob factor multiplies by
+|u|/sqrt(1+u^2). The five resulting |u| exponents are
+(1,1/2,0,3/4,1/4), with denominators (1,4,16,2,8), exactly (14).
+This is a source-independent algebraic transport. Globally the family is
+understood on its pulled-back compact cover, with finite projective sign
+rephasings if needed; the original a0>=0 chart is not asserted invariant.
+The homogeneous identity gives literal endpoints on that cover.
+
+The multiplier transport is also exact: old a1'=-b0, so pulling back
+a1^2 Fh_c gives b0^2 Fh_pi(c). Multiplying old roots by b0 and transported
+roots by a1 gives the common target a1^2*b0^2*Fh. This is a pure testing
+multiplier, positive on a dense set; recovering validity at its zeros uses
+continuity, not formal cancellation of an SOS identity there.
+
+On the stated restriction u>0,v=1,psi=(1,0,0,0), every original feature is
+a polynomial of degree <=3 divided by (1+u^2)^(3/2), hence analytic at zero.
+For the transported feature, the old Alice component is -1/(2sqrt(2))
+and the last transported Bob factor is u^(1/4)/(8sqrt(1+u^2)). Their product
+is exactly -u^(1/4)/(16sqrt(2)sqrt(1+u^2)). It cannot belong to that analytic
+span. After the common multiplier, old roots are still analytic (b0=1/sqrt2
+on this restriction), while this transported root is
+-u^(5/4)/(16sqrt(2)(1+u^2)). Thus non-span survives. This proves noninvariance
+of the specified function span, not uniqueness or necessity of one particular
+quarter-power repair; the package distinguishes those conclusions correctly.
+
+4. Incomparability and checks
+
+Given the independently established admission cbar in Cram and the new
+separator's exclusion pi(cbar) not in Cram, incomparability follows:
+pi(cbar) lies in pi(Cram)\Cram, while cbar lies in Cram\pi(Cram), since
+membership in pi(Cram) would imply pi(cbar) in Cram. No symmetry invariance
+of the restricted completion cone is assumed. This implication is conditional
+only on the admission/exclusion inputs, whose dual-matrix verification is
+assigned to the other reviewer.
+
+check_symmetry_transport.py imports no package code and uses only Fraction
+polynomial arithmetic. It proves all nine homogeneous packet identities,
+the projective involution, the complete contact equations, eta and exponent
+transport. Results are in symmetry_transport_checks.json. No dual files or
+Pro verifier were read or run. Proof/source inputs remain hash-identical;
+no public files were edited.

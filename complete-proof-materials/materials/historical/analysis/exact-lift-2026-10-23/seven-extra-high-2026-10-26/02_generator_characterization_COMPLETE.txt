@@ -1,0 +1,251 @@
+ChatGPT said:
+
+Q222 2/7: Exact characterization of maximally entangled C2 generators
+Converse established with explicit branch inequalities
+Main result. The angle law, three minors, and quartic become sufficient once four explicit inequalities selecting the physical branch are added. The inverse map is rational, unique, and works also at $a=1$. Without these inequalities, the proposed converse is false, even for strictly positive rational source weights.
+This establishes an intrinsic characterization of individual C2 generators, not their convex hull or an SDP lift of the full quantum set.
+1. Exact theorem
+Fix $a>0$. Let $d>0$, $n\geq0$, and $m,C,A,D,\alpha>0$, with $\lambda=\beta=0$. Define
+$\begin{gathered}
+B=A+n,\quad U=C+\frac d2,\quad V=\alpha+\frac d2,\\
+S=U+V,\quad M=m+D,\quad N=n+\frac d2,\\
+P=B+\frac d2,\qquad
+\tau=\frac MS,\qquad
+\chi=1+(1-a^2)\tau .
+\end{gathered}$
+Theorem. The source is $d$ times exactly one member of the stated native maximally entangled C2 family, with $0<r,s<1$, $g>0$, and $B_0\leq0$, if and only if all the following hold:
+1. The angle law
+\[
+a(d+2n)=2A.
+\]
+2. The three minors vanish:
+\[
+\operatorname{rank}
+\begin{pmatrix}
+m&D&B\
+V&U&a^2(B+S)-B
+\end{pmatrix}=1.
+\]
+3. The quartic holds:
+\[
+\boxed{
+S^2\left(B+\frac d2\right)
+\left(M+\frac d2\right)
+=(a+1)^2UVM(B+S).
+}
+\]
+4. The physical branch inequalities hold:
+\[
+\boxed{
+(1-a)\tau N<\min{m,D},
+\qquad
+a\max{m,D}<\chi N.
+}\tag{1}
+\]
+Here $\chi>0$ follows from conditions 1–2 and the positivity assumptions.
+The unique inverse formulas are
+$\boxed{
+r=\frac{\chi N-am}{N+m},
+\qquad
+s=\frac{\chi N-aD}{N+D}.
+}\tag{2}$
+Indeed, (1) is equivalent to $0<r,s<1$.
+The reconstructed native parameters and contact are
+$b_{\mathrm{source}}=a,\qquad
+t_{\mathrm{source}}=1-r,\qquad
+z=\frac{s}{ar},$
+$u=\sqrt{\frac{s}{ar}},\qquad v=au,\qquad
+\psi=(1,-ru,ru,1).$
+There is no ambiguity from choosing a quadratic root. The quartic and the physical branch select a unique native generator.
+2. Proof of the converse
+The decisive reduction is to one scalar equation.
+Write $k=B/S$. The minors, together with positivity, imply
+$m=\tau V,\qquad D=\tau U,
+\qquad a^2\tau(k+1)=k(\tau+1).$
+Consequently,
+$\boxed{
+k=\frac{a^2\tau}{\chi},
+\qquad
+\chi=\frac{1+\tau}{1+k}>0.
+}\tag{3}$
+The angle law gives $P=(a+1)N$. Substituting these relations into the quartic, and cancelling strictly positive factors, gives precisely
+$\boxed{
+\mathcal E=
+(a+1)\chi\tau N^2
++(1-a^2)\tau(1+\tau)MN
+-(a+1)(1+\tau)mD=0.
+}\tag{4}$
+Now define $r,s$ by (2). Direct expansion gives the exact identity
+$\begin{aligned}
+&(1-r)(1-s)\\
+&\quad -(a+1)\tau(a+r+s-1)
+=-\frac{a+1}{(N+m)(N+D)}\mathcal E.
+\end{aligned}\tag{5}$
+Therefore the quartic implies
+$\boxed{
+\tau=\frac{(1-r)(1-s)}
+{(a+1)(a+r+s-1)}.
+}\tag{6}$
+By the branch inequalities $0<r,s<1$. Since $\tau>0$, equation (5) also proves
+$g=a+r+s-1>0.$
+Set $h=(1-r)(1-s)$. The native polynomial $L$ has the elementary representation
+$L=a(r+s-rs)+rs=g+(1-a)h.$
+Using (6),
+$L=g\chi,\qquad
+k=\frac{a^2h}{(a+1)L}.
+\tag{7}$
+It remains to prove that the recovered parameters actually reproduce all source weights.
+From (2),
+$(\chi-r)N=(a+r)m,\qquad
+(\chi-s)N=(a+s)D.$
+Equation (6) and the definition of $\chi$ give
+$\begin{aligned}
+(\chi-r)(1-s)&=(a+1)\tau(as+r),\\
+(\chi-s)(1-r)&=(a+1)\tau(ar+s).
+\end{aligned}$
+Using $P=(a+1)N$, $m=\tau V$, $D=\tau U$, we obtain
+$\boxed{
+\frac PU=\frac{(1-r)(a+s)}{ar+s},
+\qquad
+\frac PV=\frac{(1-s)(a+r)}{as+r}.
+}\tag{8}$
+Equations (6)–(8) are exactly the four independent ratios obtained from the given native formulas:
+$\begin{array}{c|c}
+\text{Invariant}&\text{Native expression}\\ \hline
+M/S&h/[(a+1)g]\\
+B/S&a^2h/[(a+1)L]\\
+P/U&(1-r)(a+s)/(ar+s)\\
+P/V&(1-s)(a+r)/(as+r)
+\end{array}$
+These ratios determine the entire source ray. Indeed, $P/U$ and $P/V$ determine $U:V:P$; $B/S$ determines $B$; $d=2(P-B)$ fixes the scale; and then
+$m=\tau V,\quad D=\tau U,\quad
+A=\frac{aP}{a+1},\quad
+n=\frac{P}{a+1}-\frac d2.$
+Thus the input source is exactly $d$ times the native formula, rather than merely a point satisfying some necessary polynomial identities.
+Finally,
+$\Delta
+=a^3rs+a^2(r^2+rs+s^2)
++ars(2r+2s-rs)+(rs)^2>0.$
+The reconstructed source has $n=-daB_0/[2(a+1)\Delta]$. Hence $n\ge0$ proves $B_0\le0$.
+This proves both inclusions.
+3. Which quartic root is physical?
+Put
+$y=\frac{d}{2S}>0,\qquad
+\theta=\frac{UV}{S^2}>0.$
+The quartic becomes
+$(k+y)(\tau+y)=(a+1)^2\theta\tau(k+1).$
+By (3),
+$\sqrt{k\tau(k+1)(\tau+1)}
+=a\tau(k+1).$
+Therefore
+$(k+y)(\tau+y)
+=\theta\left[
+2k\tau+k+\tau
++2\sqrt{k\tau(k+1)(\tau+1)}
+\right].$
+The quartic selects the upper algebraic root of the weighted-CHSH support equation. Its positive $y$-solution is unique. But this alone does not establish that the corresponding stationary measurement angles are real and interior.
+The branch inequalities supply precisely the missing geometric information. Define
+$\theta_A=2\arctan u,\quad
+\theta_B=2\arctan v,\quad
+\phi=2\arctan(ru).$
+The reconstructed conditions $0<r,s<1$ and $g>0$ imply
+$\boxed{
+0<\phi<\theta_A<\theta_B+\phi<\pi.
+}$
+Here $r<1$ gives $\phi<\theta_A$, $s=rvu<1$ gives $\theta_B+\phi<\pi$, and $g>0$ gives $\theta_A<\theta_B+\phi$.
+Consequently all four angular gaps of the weighted-CHSH contact are strictly positive. Its stationary equations are
+$P\sin\phi
+=U\sin(\theta_A-\phi)
+=T\sin(\theta_B+\phi-\theta_A)
+=V\sin(\theta_B+\phi).$
+In particular the stationary Bob cosine is
+$\cos\theta_B=\frac{r-as}{r+as}\in(-1,1).$
+This proves that the selected root belongs to the physical interior, rather than to an algebraic continuation outside the allowed angular domain.
+4. Exact rational obstruction without the branch
+Take
+$\boxed{
+a=\frac32,\qquad
+(d,n,m,C,A,D,\alpha)
+=\left(1,\frac{39}{2},\frac92,\frac76,30,1,7\right).
+}$
+Every source weight is strictly positive, and
+$a(d+2n)=\frac32(40)=60=2A.$
+The minors vanish because the matrix is
+$\begin{pmatrix}
+9/2&1&99/2\\
+15/2&5/3&165/2
+\end{pmatrix},$
+whose first row is $3/5$ times the second. Both sides of the quartic equal
+$\frac{75625}{3}.$
+Nevertheless,
+$N=20,\qquad \tau=\frac35,\qquad
+\chi=\frac14,$
+and the unique inverse gives
+$\boxed{r=-\frac1{14},\qquad s=\frac16.}$
+So this source does not belong to the native physical family. The missing inequality is already visible as
+$am=\frac{27}{4}>\chi N=5.$
+For an independent geometric diagnosis, the weighted-CHSH stationary cosine is
+$c_*=
+\frac{(UT)^2(P^2+V^2)-(PV)^2(U^2+T^2)}
+{2PVUT(PV+UT)}
+=-\frac95,$
+which lies outside $[-1,1]$.
+Thus positive weights, the angle law, all three minors, and the quartic do not suffice. The extra branch conditions are essential.
+5. The $a=1$ exception
+When $a=1$, equation (3) gives $B=M$. Together with the angle law,
+$n=m+D-A,\qquad d=4A-2m-2D.$
+The minors and quartic simplify exactly to the two Schur equalities
+$\boxed{
+mC=(A-m)^2,\qquad
+D\alpha=(A-D)^2.
+}$
+The inverse reduces to
+$\boxed{
+r=\frac{A-m}{A+m},\qquad
+s=\frac{A-D}{A+D}.
+}$
+Hence the interior generator conditions are simply
+$A>m,\qquad A>D,\qquad n\ge0,$
+with the other standing positivity assumptions. In contact coordinates the last inequality is
+$r+s+3rs\le1.$
+This recovers the individual tight sources of the published equal-angle family. Replacing the two Schur equalities by PSD inequalities describes its larger convex cone, not its individual generators.
+6. Finite endpoints and singular limits
+For fixed $a>0$ and normalized $d=1$, there are finite boundary limits with $r=0$ or $s=0$, as well as the regular $n=0$ boundary.
+For $r\to0$, $s=x$, with $0<x<1$ and $a+x>1$, the limiting weights are
+$\begin{aligned}
+n&=\frac{a(1-x)}{2(a+1)x},&
+m&=\frac{a+x}{2(a+1)(a+x-1)},\\
+C&=0,&
+A&=\frac{a(a+x)}{2(a+1)x},\\
+D&=\frac{1-x}{2(a+1)(a+x-1)},&
+\alpha&=\frac{a+2x-1}{2(1-x)}.
+\end{aligned}$
+For $s\to0$, $r=x$, the endpoint is obtained by interchanging $m\leftrightarrow D$ and $C\leftrightarrow\alpha$, leaving $n,A$ unchanged.
+These are finite source limits but degenerate measurement contacts: $u\to\infty$ in the first case and $u\to0$ in the second.
+The boundary $B_0=0$ corresponds to $n=0$; it is finite and retains an interior contact whenever $0<r,s<1$ and $g>0$. It must not be discarded.
+For fixed $a>0$, approaching $r=1$, $s=1$, or $g=0$ makes at least one normalized coefficient diverge. The simultaneous $r,s\to0$, when allowed by the domain, also gives divergent normalized coefficients. Such paths may yield separate $d=0$ conic limits after rescaling, but are not additional finite $d=1$ generators.
+Conclusion
+The strongest result for this task is an exact necessary-and-sufficient semialgebraic characterization of the positive maximally entangled C2 generators:
+$\boxed{
+\text{Angle law}
++\text{three minors}
++\text{quartic}
++\text{branch inequalities (1)}
+\iff
+\text{native physical generator}.
+}$
+The converse and uniqueness use only rational elimination, and the singular finite endpoints follow by direct limits. The new quartic removes the spurious direction left by the quadrics, while the branch inequalities remove algebraically continued, nonphysical solutions.
+This result does not imply an exact convex-hull pencil for the full unequal-angle family. In particular, rank-one conditions and the quartic are not mixing-stable, and the pinned constructive global-lift coverage problem remains unresolved. 
+
+GitHub
+
+
+
+
+
+
+
+
+
+
+

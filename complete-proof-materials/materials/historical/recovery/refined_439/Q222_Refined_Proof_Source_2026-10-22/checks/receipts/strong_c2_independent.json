@@ -1,0 +1,244 @@
+{
+  "sympy": "1.14.0",
+  "scope": "Fresh algebra only; analytical audit separate",
+  "checks": [
+    {
+      "name": "k m-term exact cancellation",
+      "passed": true
+    },
+    {
+      "name": "GE positive numerator identity",
+      "passed": true
+    },
+    {
+      "name": "GE n numerator at r=1",
+      "passed": true
+    },
+    {
+      "name": "strong IH simultaneous nu/rho",
+      "passed": true,
+      "denominator_residue": "B**2"
+    },
+    {
+      "name": "strong IH simultaneous nr/rho",
+      "passed": true,
+      "denominator_residue": "2*B**2"
+    },
+    {
+      "name": "strong IH simultaneous D/rho^2",
+      "passed": true,
+      "denominator_residue": "2*B**3"
+    },
+    {
+      "name": "strong IH simultaneous CL",
+      "passed": true,
+      "denominator_residue": "2*B**2"
+    },
+    {
+      "name": "strong IH simultaneous Bm/z^2",
+      "passed": true,
+      "denominator_residue": "2*B**3"
+    },
+    {
+      "name": "strong IH simultaneous AH",
+      "passed": true,
+      "denominator_residue": "2*B**2"
+    },
+    {
+      "name": "strong IH simultaneous alpha(1-H)",
+      "passed": true,
+      "denominator_residue": "2*B**2"
+    },
+    {
+      "name": "strong IH simultaneous k/(B rho)",
+      "passed": true,
+      "denominator_residue": "B**4"
+    },
+    {
+      "name": "weak IH rho0 simultaneous nu/rho",
+      "passed": true,
+      "denominator_residue": "1"
+    },
+    {
+      "name": "weak IH rho0 simultaneous nr/rho",
+      "passed": true,
+      "denominator_residue": "2"
+    },
+    {
+      "name": "weak IH rho0 simultaneous D/rho^2",
+      "passed": true,
+      "denominator_residue": "2"
+    },
+    {
+      "name": "weak IH rho0 simultaneous BC",
+      "passed": true,
+      "denominator_residue": "-2"
+    },
+    {
+      "name": "weak IH rho0 simultaneous Bm/z^2",
+      "passed": true,
+      "denominator_residue": "2"
+    },
+    {
+      "name": "weak IH rho0 simultaneous AH/B",
+      "passed": true,
+      "denominator_residue": "2"
+    },
+    {
+      "name": "weak IH rho0 simultaneous alpha(1-H)/B",
+      "passed": true,
+      "denominator_residue": "2"
+    },
+    {
+      "name": "weak IH rho0 simultaneous k/(B rho)",
+      "passed": true,
+      "denominator_residue": "1"
+    },
+    {
+      "name": "weak IH rho1 simultaneous De",
+      "passed": true,
+      "denominator_residue": "-4"
+    },
+    {
+      "name": "weak IH rho1 simultaneous nu",
+      "passed": true,
+      "denominator_residue": "2"
+    },
+    {
+      "name": "weak IH rho1 simultaneous nr",
+      "passed": true,
+      "denominator_residue": "4"
+    },
+    {
+      "name": "weak IH rho1 simultaneous BC",
+      "passed": true,
+      "denominator_residue": "-4"
+    },
+    {
+      "name": "weak IH rho1 simultaneous Bm/z^2",
+      "passed": true,
+      "denominator_residue": "4"
+    },
+    {
+      "name": "weak IH rho1 simultaneous AH/B",
+      "passed": true,
+      "denominator_residue": "4"
+    },
+    {
+      "name": "weak IH rho1 simultaneous alpha(1-H)/B",
+      "passed": true,
+      "denominator_residue": "4"
+    },
+    {
+      "name": "weak IH rho1 simultaneous kappa/B",
+      "passed": true,
+      "denominator_residue": "2"
+    },
+    {
+      "name": "IC8 toric conductor",
+      "passed": true
+    },
+    {
+      "name": "IC8a positive T pivot",
+      "passed": true
+    },
+    {
+      "name": "SL3 C packet relation",
+      "passed": true
+    },
+    {
+      "name": "IC7 residual has only four contact-jet monomials",
+      "passed": true
+    },
+    {
+      "name": "IC7 exact reconstruction from native contact jets",
+      "passed": true
+    },
+    {
+      "name": "IC10 full X normal",
+      "passed": true
+    },
+    {
+      "name": "IC12 full Y normal",
+      "passed": true
+    },
+    {
+      "name": "IC normal X contact remainder is native state jet",
+      "passed": true
+    },
+    {
+      "name": "IC normal Y contact remainder is native state jet",
+      "passed": true
+    },
+    {
+      "name": "UI leading contact None",
+      "passed": true
+    },
+    {
+      "name": "UI leading contact xx",
+      "passed": true
+    },
+    {
+      "name": "UI leading contact zz",
+      "passed": true
+    },
+    {
+      "name": "UI leading contact vv",
+      "passed": true
+    },
+    {
+      "name": "UI leading contact uu",
+      "passed": true
+    },
+    {
+      "name": "UI4 full Schur uu",
+      "passed": true
+    },
+    {
+      "name": "UI full Schur Vu",
+      "passed": true
+    },
+    {
+      "name": "UI full Schur VV",
+      "passed": true
+    },
+    {
+      "name": "UI5 full Schur determinant",
+      "passed": true
+    },
+    {
+      "name": "UA12 det P normalization",
+      "passed": true
+    },
+    {
+      "name": "UA12 d",
+      "passed": true
+    },
+    {
+      "name": "UA12 e",
+      "passed": true
+    },
+    {
+      "name": "UA12 h",
+      "passed": true
+    },
+    {
+      "name": "UA12 dh+e^2",
+      "passed": true
+    },
+    {
+      "name": "UA12 minimizer equation1",
+      "passed": true
+    },
+    {
+      "name": "UA12 minimizer equation2",
+      "passed": true
+    },
+    {
+      "name": "UI valid real interior approximation",
+      "passed": true
+    }
+  ],
+  "complete": true,
+  "all_passed": true
+}

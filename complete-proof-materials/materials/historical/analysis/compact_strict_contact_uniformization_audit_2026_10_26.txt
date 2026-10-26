@@ -1,0 +1,67 @@
+COMPACT STRICT-CONTACT UNIFORMIZATION: SECTION 4 AUDIT
+26 October 2026. Scope: the compact-strict-K theorem only.
+
+Verdict: no substantive algebraic obstruction found. With the two chart/
+normalization clarifications below, section4 proves an existential finite,
+closed, globally sound SDP certificate cone containing cone(K). It does
+not give an evaluated N_K or a bound uniform near singular sources.
+
+The native zero list is correct for strict six-event sources. SG6 gives
+q01,q10>0, so the balanced Laurent polynomial is strictly convex in log
+angles and its finite positive zero is unique. Direct SG2 endpoint
+matrices have rank3 exactly at(0,0;W), and additionally(infinity,0;X)
+for C1 or(infinity,infinity;Z) for C2. Elsewhere on compatible edges,
+the core and retained event rows have no common kernel. Third-omission
+faces are NOT part of this strict theorem.
+
+Equations(12) are the exact frozen-kernel scalar polynomials, with d=1.
+Their three diagonal scalar Gram coefficients are positive. Expanding
+SG5 after reciprocal clearing gives exactly(13): the respective leading
+pairs are(q10,q01),(q10,q21),(q12,q21). They are positive on the stated
+strict families. Together with the positive complementary state block,
+these positive determinant quadratics give a positive state-normal/
+angular Hessian. The moving-contact Hessian follows from SG18--19.
+Thus the source-only completion(14)--(16) is valid, including the choice
+w=A0 J^{-1}k. Multiplication of V by(s,t,st) reproduces every coupling
+coefficient exactly, and its bidegree remains at most(1,1).
+
+The Bernstein estimate is valid: on any cell contained in |s|,|t|<=2rho,
+a degree-two Bernstein coefficient of s^i t^j has absolute value at
+most(2rho)^(i+j). Since2rho<=1, the nonconstant coefficient error is
+at most2rho M. Formula(17) bounds this by Lambda/2. The mesh in(18)
+also makes the positive-matrix coefficient estimate on remote cells
+strict; its constants are conservative. Compactness supplies all the
+finite maxima and positive minima once the charts are fixed correctly.
+
+The fixed36-feature claim is sound. In(15), V and q are bilinear, so
+its square roots lie in the polynomial span of b0,b2 in each cell
+coordinate. Positive Bernstein coefficients of R give roots b_i b_j
+times a source-only linear state form. Both parts therefore lie in
+exactly the displayed36-dimensional span. Moving contact shifts enter
+only source coefficients; no moving branch point is retained. Arbitrary
+PSD cross terms in this basis need additional algebraic coefficient
+cancellations, but the constructed Gram already satisfies them.
+
+Cellwise coefficient matching is affine in Bell/source coefficients.
+The36 features are linearly independent on the cell interior times
+the state sphere. Their integral moment matrix is positive definite,
+so coefficient convergence bounds PSD Gram traces and proves each
+projected cell cone closed. A finite intersection is closed and has
+one block-diagonal SDP representation. Covering all four projective
+charts plus the exact sign gauges gives global soundness. Regional
+identities do not assert a global polynomial/half-power SOS; hence no
+conflict with the proved polynomial or half-power exclusions.
+
+Required clarifications before treating the statement as proved:
+1. State d=1 explicitly, or replace every constant2 in(12) by2d.
+2. Include the moving contact in EVERY relevant coordinate chart,
+   even just outside that chart's unit square. Otherwise a contact
+   crossing u=1 or v=1 can invalidate the claimed uniform remote kappa.
+   Simplest fix: use its finite coordinate images in all four charts;
+   compact strict K keeps them bounded. Alternatively use extended,
+   overlapping charts and include every zero neighborhood meeting a
+   grid cell. Then choose Lambda,M,kappa,M1 over those fixed families.
+
+First remaining obligation is genuinely singular: find source-only
+normalizations giving uniform full-matrix remainder bounds and fixed
+features as K approaches its boundary. Section4 proves no such bound.

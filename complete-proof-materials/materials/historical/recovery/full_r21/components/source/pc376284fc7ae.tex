@@ -1,0 +1,220 @@
+\section{The $q$-infinitesimal C1.1 source at both small testing angles}
+\label{sec:r7-c1-q-inf-local}
+\begin{theorem}
+On the original C1.1 source with $q=k^2\eta$ infinitesimal, the entire
+original parent is tensor SOS whenever both independent testing
+half-angles $u,v$ are infinitesimal. All original opening rates and
+$\beta=0$ are retained. The boundary $D=0$ is empty here because
+$D_b$ has residue $1/2$.
+\end{theorem}
+This statement includes every state; it does not yet assert the
+ordinary or unbounded $v$ testing charts.
+
+Use the preceding source notation and put $c=\sqrt q$, $e=c/g$,
+$h=H/R$, and $E_*=h-v$. Work first with $Z=1$ and $u,v,h>0$.
+Define
+\[
+ A=ch,\quad B=cL/R,\quad C=uv/b,\quad D=qg,\quad
+ \Gamma=(ABCD)^{1/4},\quad d_i=A_i-\Gamma.
+\]
+Then
+\[
+ \Gamma^2=qhv,\qquad BC=e v^2h,\qquad
+ u h=uE_*+bC.
+ \tag{QI1}
+\]
+Here $h=u(W+uY)/(Rb^2)$ is separated into a positive pure-source
+factor and a positive pure-testing factor. Every radical below is
+therefore legal; no mixed inverse or order comparison is used.
+The exact original inequality $\beta\ge0$ gives $t=O(e^2)$, while
+$t$ is bounded. Hence $t/e$ and $\sqrt{t/e}$ are bounded.
+
+\paragraph{Exact scalar, with the $D$ packet restored.}
+Write $U=u^2,V=v^2$, $D_u=1+U,D_v=1+V$, and
+$a_t=1-\rho_0+(t/R)V$. At both state normals zero the entire original
+scalar is
+\[
+ a h^2+b_*hv+c_*v^2+P_L L^2+2D_uC^2+4\alpha_b g^2D_u,
+ \tag{QI2}
+\]
+where
+\begin{align*}
+ a={}&4D_vR^2\{c_b(1-\rho_0)^2+a_b\rho_0^2/D_u\}
+ +2b^2R^2\{a_t^2+V\rho_0^2/D_u\}\\
+ &+4\alpha_b g^2b^4VR^2\rho_0^2/D_u
+ +4D_bb^4R^2a_t^2,\\
+ b_*={}&-4R\{D_u(1+tV/R)-U\rho_0\}
+ -8\alpha_b g^2b^2R\rho_0-8D_bb^2Ra_tD_u,\\
+ c_*={}&4D_bD_u^2.
+\end{align*}
+All these rational functions have bounded source coefficient arrays;
+only $D_u$ and positive pure-source units occur in their denominators.
+The $r$ openings cancel exactly as in (SC12).
+In particular
+\[
+ D_b=\frac{N_D}{2JP_d},\qquad
+ N_D=\frac{K(1+qg^2)(1+b^2r)-JP_d}{b^2}
+\]
+has a polynomial numerator: the numerator before division vanishes
+identically at $b^2=0$, where $P_d=1+qg^2$. This is a finite monic
+division, so it introduces no unbounded source coefficient array.
+Also $\alpha_b/q^2$, $h_2/q$, and $h_b/q$ have explicit bounded
+arrays from their source formulas. These observations justify the
+$q$ coquotients below uniformly through both source openings.
+
+Use formal specialization at $q=0$ only to construct finite polynomial
+coquotients; it is not a new physical source. Put $z=b^2$,
+$J_0=1-z(1-r)$, and $S=1-r+tV$. The three specialized coefficients are
+\begin{align*}
+ a_0={}&2D_v\{(1+zr)(1-r)+r/D_u\}
+       +2z\{S^2+Vr^2/D_u\}+2z^2S^2/J_0,\\
+ b_0={}&-4\{D_u(1+tV)-Ur\}-4zSD_u/J_0,\\
+ c_0={}&2D_u^2/J_0.
+\end{align*}
+Define $\widetilde b_0=b_0+4tD_uV$, and the bounded finite
+coquotients
+\[
+ X=a_0+\widetilde b_0+c_0=U X_U+V X_V,
+ \qquad Y=-\widetilde b_0-2c_0=U Y_U+V Y_V.
+ \tag{QI3}
+\]
+For definiteness, first subtract the value at $U=0$, divide by $U$,
+and then divide that value by $V$. Their two $V$ coquotients are
+\[
+ X_V=2+2zr(1-2t)+\frac{2z(1+zr)t^2V}{J_0},
+ \qquad Y_V=\frac{4zt}{J_0}.
+ \tag{QI4}
+\]
+Thus $X_V=2+\varepsilon_V$, $\varepsilon_V\in B_{\rm Inf}$;
+$X_U,Y_U$ have bounded arrays. Likewise write
+$a=a_0+qa_1$, $b_*=b_0+qb_1$, $c_*=c_0+qc_1$ by finite numerator
+division. All $a_1,b_1,c_1$ have bounded arrays. Direct source
+specialization gives
+\[
+ \overline{a_1-c_1}=2,\qquad
+ \overline{b_1+2c_1}=-8,\qquad
+ \overline{R^2P_L/q}=2,\qquad
+ \overline{4\alpha_bD_u/q^2}=2.
+ \tag{QI5}
+\]
+
+The following is the exact scalar identity to be allocated:
+\begin{align*}
+ (\mathrm{QI2})={}&(c_0+qc_1)E_*^2+2D_uC^2
+ +X_U(uE_*+bC)^2+Y_Uu(uE_*+bC)E_*\\
+ &+X_V(vh)^2+Y_Vv(vh)E_*
+ -4(t v/e)D_uBC\\
+ &+(a_1-c_1)A^2+(b_1+2c_1)\Gamma^2
+ +(R^2P_L/q)B^2+(4\alpha_bD_u/q^2)D^2.
+ \tag{QI6}
+\end{align*}
+It uses only (QI1) and $qv^2=2\Gamma^2-A^2+qE_*^2$.
+In particular the apparently dangerous negative $t$ term is already
+an infinitesimal-coefficient $BC$ term, since $v$ is infinitesimal.
+
+\paragraph{Two extra contact squares and their finite first jets.}
+Set
+\[
+ F_*=vh-gD,\quad
+ R_F=\frac{\sqrt{g\Gamma}}{c}(\Gamma-D),\quad
+ V_0=cv,\quad R_E=\sqrt\Gamma(\sqrt A-\sqrt{V_0}).
+\]
+All four roots vanish at actual contact. Exact multiplication gives
+\begin{align*}
+ (vh)^2&=F_*^2+2R_F^2+2gF_*d_4+g^2D^2-4g^2\Gamma d_4,\\
+ c\Gamma E_*&=2\Gamma d_1-R_E^2,\\
+ \Gamma F_*&=-2g\Gamma d_4+R_F^2/g.
+ \tag{QI7}
+\end{align*}
+The root $R_E$ receives a strict real square pivot from $E_*^2$:
+\[
+ qE_*^2=(A-V_0)^2
+       =4R_E^2+(\sqrt A-\sqrt{V_0})^4.
+ \tag{QI8}
+\]
+Reserve this fraction $q$ of the strict $E_*$ pivot; the remaining
+coefficient still has positive real residue. The leading $2(vh)^2$
+in (QI6), by (QI7), gives strict $F_*$ and $R_F$ pivots, with only
+infinitesimal quadratic corrections and the printed first-jet term.
+The remaining leading angular form is $2(\sum A_i^2-4\Gamma^2)$,
+with the strict finite toric square list from (SC16).
+
+For precision, the only additional bare-$\Gamma$ normal couplings
+left by (QI6), apart from ordinary toric first jets, have the form
+$\Gamma E_*a_*+\Gamma F_*b_*'$ with
+\[
+ a_*=bu(2X_U+Y_U)+Y_Vvg,
+ \qquad b_*'=2\varepsilon_Vg.
+\]
+At contact $u=bc,v=cg$ these satisfy
+\[
+ a_{*0}/c=b^2(2X_{U0}+Y_{U0})+Y_{V0}g^2\in B_{\rm Inf},
+ \qquad b_{*0}'/g=2\varepsilon_{V0}\in B_{\rm Inf}.
+\]
+Their differences from contact have finite bounded monic Taylor
+arrays. The conductors (SC18) allocate those differences against
+$E_*,F_*$ with infinitesimal coefficients. Apply (QI7) to their
+constant terms. What remains is a bounded infinitesimal toric
+quadratic plus $\Gamma\sum\mu_i d_i+\Gamma^2\sigma$.
+The exact scalar value and three original first jets imply its
+contact value and first-jet balances. The same two finite divisions
+as in (SC17)--(SC20), or the Hadamard contact-lift identity, allocate
+it on the strict toric root list. No infinite series or unsupported
+ideal-membership assertion is used: (QI3), the $q$ coquotients,
+and the two displayed contact coefficient ratios are the finite
+certificates needed for the additional roots.
+Every coefficient function in these Taylor steps depends only on
+$u,v$. Thus only the first two conductors in (SC18)--(SC20) are
+used; the third state-coordinate jet supplies the inactive Hadamard
+balance. No bound on $(W+uY)/R$ after $Z$ normalization is assumed.
+
+\paragraph{Both complete state normals.}
+Use $\widehat N=\sqrt{H_0}N$, $H_0=4h_2/R+4h_b/t$, as in the
+preceding uniform-normal lemma. Add back the centered $D$ packet
+from (SC10), including its normals. Its scalar root is exactly
+\[
+ J_*=(T+b^2tV)h-D_uv
+ =E_*+b^2c(1-tg^2)A-buC+b^2tvF_*+b^2tvgD.
+ \tag{QI9}
+\]
+Its full root is $J_*+ubvgN-b^2N_y/\sqrt s$.
+All additional hard coefficients are infinitesimal after the
+$\widehat N$ normalization.
+
+For the first $N$ normal in (SC14), its $H$ term is a bounded
+infinitesimal multiple of $u h=uE_*+bC$; its other terms are
+infinitesimal multiples of $B,C$. For the harmonic normal, multiply
+its $H$ coefficient by $\sqrt s$. After the exact opening
+cancellations, its value at $q=U=V=0$ is zero. Finite numerator
+coquotients therefore give
+\[
+ \sqrt s\,[H\text{-coefficient in }\mathcal L_y]
+       =qK_q+UK_U+VK_V
+ \tag{QI10}
+\]
+with bounded arrays. Use
+\[
+ qH=RcA,\quad u^2H=Ru(uE_*+bC),\quad
+ v^2H=Rv(F_*+gD).
+\]
+The two remaining terms of $\mathcal L_y$ have infinitesimal
+coefficients on $C,D$ since $\alpha_b/q^2$ is bounded. Thus both
+complete first normals, including (QI9), are infinitesimal
+combinations of $E_*,F_*,A,B,C,D$. Their exact contact zeros make
+the coefficient sum of $A,B,C,D$ zero at contact. One finite monic
+division and (SC18) allocate these on the same strict square list.
+The hard block has residue $\operatorname{diag}(1,4)$ and all its
+other entries have zero residue. This proves a bounded positive
+residue Gram for the entire original parent, after restoring all
+retained positive packets.
+
+\paragraph{States and signs.}
+The restriction $Z=0$ is positive by the original pure-testing state
+restriction. For $Z\ne0$, divide the state by the pure-testing $Z$;
+its size is immaterial, since every coefficient array above depends
+only on $u,v$. On the negative-core chart, exact sign gauges give
+$u,v>0$ and the inherited pure-testing Schur identity forces
+$W+uY>0$. Hence $h>0$, as required. The other core-sign chart and
+literal testing axes are direct original exits. Complex states
+split into real and imaginary parts. This completes the asserted
+small-$u$, small-$v$ theorem.

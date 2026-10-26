@@ -1,0 +1,64 @@
+Exact R6/R7 C2 coefficient audit (no SDP optimizer, no numerical sweeps)
+==== verify_arrays.py ====
+PASS 12 / 12
+==== verify_fast_divisibility.py ====
+PASS: AN_num in (s*b), F0_num in (b), native coquotient residues h+t and (h+t)/2
+==== check_jets.py ====
+C coeffs: [-(h + t)/(2*(h - 1)), s*(t + 1)/(2*(h - 1)), -s**2*(t + 1)/(2*(h - 1))]
+Ah coeffs: [t/2, -s*t/2, s**2*t/2]
+betaD coeffs: [1/(2*t), -s/(2*t), s*(-b*t - b + s)/(2*t)]
+n1 coeffs: [0, s/2, -s*(b*h + b*t + s)/2]
+==== check_b_unit_jets.py ====
+n/s² residue -(b*h + b*t - 1)/2
+mg residue 1/2
+C residue -(h + t)/(2*(h - 1))
+Ah residue t/2
+D residue 1/(2*(h + t - 1))
+alpha/s³b² residue (h + t)/2
+first s mg (b*h - 1)/2 expected difference 0
+first s C (t + 1)/(2*(h - 1)) expected difference 0
+first s Ah -t/2 expected difference 0
+first s D -(b*h*t + b*t**2 + h + t - 1)/(2*(h + t - 1)**2) expected difference 0
+==== verify_source_jets_table.py ====
+RI_BB0 0
+RI_BC0 0
+RI_CC0 0
+RI_BB_u2 0
+RI_BC_u2 0
+RI_CC_u2 0
+RU_BB0 0
+RU_BC0 0
+RU_CC0 0
+RU_BB_u2 0
+RU_BC_u2 0
+RU_CC_u2 0
+12 exact jet identities verified
+==== verify_unit_b_RU.py ====
+BB0 res 1/t diff expected 0
+first s -(b*t + 2*b + 2)/(2*t) diff expected 0
+BC0 res -2/t diff expected 0
+first s -(b*t - 3*b - 2)/t diff expected 0
+CC0 res 1/t diff expected 0
+first s -(2*b + 1)/t diff expected 0
+BBu2 res 1/2 diff expected 0
+BCu2 res -1/t diff expected 0
+CCu2 res 1/t diff expected 0
+unit-b R7 9 tests done
+BB0 res difference 0 k² coefficient diff 0
+BC0 res difference 0 k² coefficient diff 0
+CC0 res difference 0 k² coefficient diff 0
+BBu diff 0
+BCu diff 0
+CCu diff 0
+RB17 9 coefficient equations EXACT
+RI14 0 True
+RI14 1 True
+RI14 2 True
+RI14 3 True
+RI15 True
+T4 strict circuit: True
+separated monomial product: True
+gradient determinant candidate: -E**2*eps**3*j**4
+det computing
+K det -v**2*(h + t)*(u**2 + 1)**2*(v**2 + 1)**2*(h*t*u**4 + h*u**2*v**2 + t**2*u**4 + v**2)/(8*h*(h - 1)*(h + t - 1))
+RB24 claimed diff 0

@@ -1,0 +1,377 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=25mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\sigs}{\sigma}
+\begin{document}
+\title{Finite source bounds beyond $z=1$ and the effect of retained squares}
+\author{}\date{23 October 2026}\maketitle
+
+This note concerns the local C1 certificate in the recovered order669
+construction. Its equations (P1), (SP3), (SP6), and the positive twelve-root
+and six-root quadratic forms are used with their literal definitions.
+The conclusion is source admission to those local certificates. It is
+not an inclusion theorem for the full quantum correlation set.
+
+\begin{theorem}[A common finite-$R$ box]\label{thm:R}
+Fix $R\ge1$, put $T=1+R$, and set
+\[
+ \eps_R=2^{-96}T^{-16},\qquad
+ \delta_R=2^{-28}T^{-4},\qquad M_R=2^{16}T^4.
+\]
+Suppose that (P1) is evaluated on
+\[
+ 0<x,\sigs\le\eps_R,\quad 0<z\le R,\quad
+ 0<b,h<1,\quad r=bz<1,\quad E,M,J>0,\quad D,\beta\ge0.
+\]
+There is no bound on $H=h/\sigs$.
+For $\lambda>0$ the complete twelve-root Gram has
+\[
+ Q(v,w)=Q_0+\sum_{\mathcal A}C_{ij}v^iw^j,
+ \quad v=\sqrt u,\quad
+ \mathcal A=\{(0,1),(0,2),(1,0),(2,0),(2,1),(4,0),(4,1)\},
+\]
+with reference $B\succeq I/3$ and
+\begin{equation}\label{eq:mainbounds}
+ \|Q_0-B\|_\infty\le M_R\sqrt{\eps_R},\qquad
+ \|C_{ij}\|_\infty\le M_R.
+\end{equation}
+Consequently its separated testing construction is valid on
+$0\le\sqrt u,w\le\delta_R$.
+For $\lambda\le0$ the six-root construction satisfies all its source
+guards, with the same testing box. In particular $d_G\ge1$ and
+$4\kappa H\ge1$. The assertion is literal at $\beta=0$ and, on the
+positive branch, at $D=0$. On the nonpositive branch $D=0$ is excluded by
+$d_G\ge1$, rather than by cancellation of $D$.
+\end{theorem}
+
+All constants above are real constants shared by the source and testing
+fields; no source parameter is identified with a testing coordinate.
+For rational data one may first replace $R$ by an integer majorant.
+The finite testing list and its degrees do not increase with $R$;
+its testing interval changes.
+
+\paragraph{Source estimates.}
+Write $\eps=\eps_R$, $Q_b=1-b$, $\theta=1-h$, $k=\sqrt x$,
+$q=\sqrt z$, $e=xh/\sigs$, and $H_0=1+zQ_b$. The following deliberately
+loose bounds imply the theorem:
+\begin{align}
+ &1\le P\le1+4T\eps,\quad |J-1|\le\eps,\quad |M-1|\le T\eps,
+ \quad 1\le B_s\le1+6T\eps,\quad 1\le H_0\le T,\label{eq:src1}\\
+ &e\le5T\eps,\quad |\mathcal H-H_0|\le32T^2\eps,
+ \quad D\le3T\sigs^2,\quad \beta\theta\le h,\label{eq:src2}\\
+ &\tfrac13\le p\le T,\quad \tfrac13\le l,\kappa\le1,
+ \quad pb\le2,\quad C(1-r)\le T,\quad m\le5T^2\eps^2,\label{eq:src3}\\
+ &|\nu|\le2T,\quad |\lambda_0|\le4T,\quad
+ |\lambda_0+2\theta H_0|\le64T^2\eps,\label{eq:src4}\\
+ &|K_A-(2\theta H_0-2h(1-r))|\le1024T^4\eps,\label{eq:src5}\\
+ &|R_0|\le64T(x+\sigs),\quad |B_x|\le40T\eps,\quad
+ |A_y|,|\chi|\le64T^2,\quad |R_x|\le24T,\quad |k_1|\le16T^2.
+ \label{eq:src6}
+\end{align}
+Here and below an expression such as $C(1-r)$ is bounded before taking
+absolute values, so no lower bound on $1-r$ is assumed.
+
+For completeness, these estimates follow from the native identities by
+the following inequalities. The positive expansion of $P$ gives
+$P-1\le2T(x+\sigs)$, using $bz=r<1$ in the term
+$\sigs bx^2hz^2$. Also $J-\sigs>0$ and
+$|MP-1|\le6T\eps$, so $(MP)^{-1}\le2$ and
+$|(MP)^{-1}-1|\le12T\eps$. Initially $e<1$ and
+$\mathcal H\le4T$. The two exact identities
+\[
+ 2\theta P\beta=hB_s-\sigs H_0,\qquad
+ 2P(JD+x\theta\beta)=\sigs^2\mathcal H
+\]
+give
+\[
+ eB_s\le xH_0+\sigs\mathcal H\le Tx+4T\sigs.
+\]
+Expansion of $\mathcal H$ then yields
+\[
+ |\mathcal H-H_0|\le4Tx+3Te+2Te^2\le32T^2\eps.
+\]
+The second identity gives $D\le3T\sigs^2$, and the first gives
+$\beta\theta\le hB_s/(2P)\le h$. The numerator of $p$ is at least
+$H_0(1-e)$, and its product by $b$ is at most $1+2\eps$.
+The numerator of $l$ is bounded below by $M(1-e)$ and above by
+$(1+\sigs r)\max\{M,(1+xr)(1+\sigs z)\}$.
+These prove \eqref{eq:src3}; in particular the bounds for $p$ and $pb$
+are used separately.
+
+The pole-free formulas
+\begin{align*}
+ \nu&=2D/\sigs+\{H_0-ez(J-\sigs)\}/P,\\
+ \lambda_0&=2e\theta z(J-\sigs)/P-2\theta H_0/P
+                         +8Dh/\sigs-4bp\sigs z
+\end{align*}
+give \eqref{eq:src4}. Put
+\[
+ N_\kappa=(1+x)(1+\sigs r)(1+\sigs z)-MP=xF_x+\sigs F_\sigs,
+ \quad F_\sigs=r-1+\sigs rz.
+\]
+The polynomial $F_x$ has coefficient absolute sum $37$ and degree at
+most three in $z$. Thus $|F_x|\le37T^3$. To verify this finite bound
+without any rational expansion, its coefficients in $x$ are
+\begin{align*}
+ F_x={}&b\sigs^2z^2-b\sigs z^2-b\sigs z-bz
+ -h\sigs z^2-3h\sigs z-hz+\sigs z^2+2\sigs z+z\\
+ &+x\{-b^2\sigs z^2-4bh\sigs z^2+b\sigs z^2-bz
+ -2h^2\sigs z^2+h^2z+2h\sigs z^2-2hz+z\}\\
+ &+x^2\{-b^2h\sigs z^3-bh^2\sigs z^3+bh^2z^2
+ +bh\sigs z^3-bhz^2+h^3z^2-2h^2z^2+hz^2\}.
+\end{align*}
+The exact cancellation
+$H(2\kappa-1)=(eF_x+hF_\sigs)/(MP)$ gives
+\[
+ |H(2\kappa-1)-h(r-1)|\le384T^4\eps.
+\]
+Together with $K_A=2H(2\kappa-1)-\lambda_0$ this proves
+\eqref{eq:src5} for arbitrary $H$.
+Finally use the exact cancellation
+\begin{align*}
+ -PR_0/4={}&z(1-e)\{1+xh-(1+x)(1+\sigs r)\}\\
+ &+(1-r)\{1+xhz-P\}-2DP(1-r).
+\end{align*}
+The three terms are bounded respectively by
+$T(x+2\sigs)$, $3Tx+2T\sigs$, and $T\sigs$.
+This proves the $R_0$ bound. Substitution in (SP3), with
+$|h+b-1|\le1$, proves the remaining \eqref{eq:src6}; no negative
+power of $z$, $b$, $Q_b$, or $\theta$ is used in those estimates.
+
+\paragraph{Positive branch and angular coefficients.}
+Put $d_G=4D/\sigs^2$, $\rho=\lambda x/\sigs$,
+$S=d_G+\rho$, $L_0=\lambda\sigs$, $q_0=\lambda k$, and
+$c=\max(0,1-K_A)$. The exact source relation
+\begin{align*}
+ S={}&2\mathcal H/P+d_G(1-J+2hx)+2eH_0/P\\
+ &-2e^2z(J-\sigs)/P-4bpxz
+\end{align*}
+gives
+\[
+ |S-2H_0|\le128T^2\eps,\quad H_0\le S\le3T,
+ \quad L_0\le3,\quad q_0^2=L_0\rho\le9T.
+\]
+Indeed the five respective errors from $2H_0$ are at most
+$72T^2\eps$, $36T\eps$, $10T^2\eps$,
+$T^2\eps$, and $8T\eps$.
+The ratios $\sqrt{d_G}/S$, $\sqrt\rho/S$, $d_G/S$, and
+$\rho/S$ are at most one.
+Also
+\[
+ (x+\sigs)^2H=xe+2\sigs e+\sigs h\le2\eps,
+ \qquad |R_0\sqrt\lambda|\le256T\sqrt\eps.
+\]
+Although $a_0=k/\sigs$ need not be bounded, the angular factors obey
+\begin{equation}\label{eq:angular}
+ 0\le c\le4,\quad
+ \frac{ca_0}{S}\le32,\quad
+ \frac{c}{SL_0}\le32,\quad
+ \frac c\lambda\le32\sigs.
+\end{equation}
+If $c>0$, \eqref{eq:src5} forces $h>1/8$; otherwise its reference
+value is at least $3/2$. Then $L_0\ge h>1/8$ and
+\[
+ a_0^2(hB_s-\sigs H_0)\le\mathcal H,\quad
+ hB_s-\sigs H_0\ge1/16,\quad
+ a_0^2\le32H_0.
+\]
+Since $S\ge H_0\ge1$, these imply \eqref{eq:angular}.
+If $c=0$, each coefficient in \eqref{eq:angular} is exactly zero.
+
+\paragraph{A finite bound on the complete twelve-root correction.}
+Here is an explicit coefficient accounting, so the powers of $T$ do
+not rest on a continuity argument. Treat the twelve root labels
+\[
+ (N_x,N_y,R,\Gamma_*,A_\theta,T_\theta,d_1,d_2,d_3,d_4,U_*,K_*)
+\]
+as formal independent variables, solely to extract Gram coefficients.
+Let $\mathcal N$ be the sum of absolute coefficients over both the
+testing monomials in $v,w$ and quadratic root monomials. Let
+$\mathcal N_0$ retain only testing degree zero. The symmetric-matrix
+row norm of every coefficient is at most $\mathcal N$.
+The exact conductor expressions are
+\begin{align*}
+ F_1={}&\frac{\sqrt{d_G}}S u\Gamma_*
+ +\frac{\sqrt\rho}S\{k d_1-u d_2+(u-k)d_3\}
+ -\frac\rho S\sqrt\sigs T_\theta,\\
+ F_2={}&\frac{R_0\sqrt{d_G}}S qw\Gamma_*
+ +\frac{R_0\rho\sigs z}S R
+ -\frac{R_0\sqrt\rho}S(qw+z\sqrt\sigs)(d_2-d_3)\\
+ &+\left(\frac{R_0q_0z}S+
+                \frac{R_0\sqrt\lambda\sqrt\rho}S qw\right)T_\theta
+ -8pquwF_1 .
+\end{align*}
+They satisfy
+\[
+ \mathcal N(F_1)\le4,\quad \mathcal N_0(F_1)\le3\sqrt\eps,
+ \quad \mathcal N(F_2)\le128T^3,\quad
+ \mathcal N_0(F_2)\le1024T^3\eps.
+\]
+Put $J_C=N_y+bR$ and $a_C=cd_G/S$. The full correction is
+\begin{align*}
+ \mathcal E={}&E_{yy}N_y^2+E_{RR}R^2+E_{yR}N_yR
+ -4\nu N_xF_1+J_CF_2\\
+ &-4uqw(2m+2D+1)N_xN_y+uqwR_xN_xR+qwB_xN_xA_\theta\\
+ &+uA_yN_yA_\theta+\chi uA_\theta R
+ -\tfrac12\rho\sigs R^2+\sqrt{q_0}\sqrt u\,U_*R\\
+ &-a_C(2/\lambda+u+k)\sum_{i=1}^4d_i^2-a_Cu^2R^2\\
+ &-\frac cS\{2a_0u+(u+k)/L_0\}\Gamma_*^2
+ -\frac cS\{\sqrt{a_0u}\,U_*+\sqrt{a_0k}\,K_*\}^2.
+\end{align*}
+The reference $B$ is precisely the one in the order669 construction:
+$N_x$ entry two; radial block
+$\bigl(\begin{smallmatrix}2&2b-1\\2b-1&b^2+Q_b^2\end{smallmatrix}\bigr)$;
+$\Gamma_*$ entry one; angular entries $(K_A+c)/2$; four entries $1/2$;
+and final entries $1,1/2$. The radial determinant is one and trace at
+most three, proving $B\succeq I/3$.
+The definitions of $E_{yy},E_{RR},E_{yR}$ in (SP6) give the following
+complete bounds; each row follows by multiplication of the preceding
+displayed inequalities:
+\[
+\begin{array}{l|c|c}
+ \text{part of }\mathcal E&\mathcal N&\mathcal N_0/\sqrt\eps\\\hline
+ E_{yy}N_y^2+E_{RR}R^2+E_{yR}N_yR&64T^3&128T^3\\
+ -4\nu N_xF_1&32T&24T\\
+ J_CF_2&256T^3&2048T^3\\
+ \text{three terms containing }qwN_x&64T^2&0\\
+ uA_yN_yA_\theta+\chi uA_\theta R&128T^2&0\\
+ -\rho\sigs R^2/2+\sqrt{q_0u}\,U_*R&3T&2T\\
+ -a_C(2/\lambda+u+k)\sum d_i^2&32&272\\
+ -a_Cu^2R^2&4&0\\
+ -c\{2a_0u+(u+k)/L_0\}\Gamma_*^2/S&128&32\\
+ -c\{\sqrt{a_0u}U_*+\sqrt{a_0k}K_*\}^2/S&128&32
+\end{array}
+\]
+For example the constant radial coefficients obey
+$|E_{RR,0}|,|E_{yR,0}|\le64T^3\eps$ after grouping
+$C(1-r)$; their nonconstant coefficients have total at most $32T^3$.
+The circuit row uses $2a_C/\lambda\le64\sigs$; the final two rows use
+\eqref{eq:angular}. The sum of either column is less than
+$2^{12}T^4<M_R$. This proves \eqref{eq:mainbounds}, including every
+coefficient, rather than only a pointwise value of $Q$.
+
+Set $r_*=M_R\sum_{\mathcal A}\delta_R^{i+j}$.
+Then $r_*\le7M_R\delta_R=7/4096<1/12$ and
+$M_R\sqrt\eps_R=2^{-32}T^{-4}<1/12$. Hence
+\[
+ Q_0-r_*I\succ I/6,\qquad
+ \frac{\delta_R^{i+j}}2(M_RI\pm C_{ij})\succeq0.
+\]
+Multiplication by the testing squares
+$1\pm(v/\delta_R)^i(w/\delta_R)^j$ gives the exact separated identity
+for $Q(v,w)$.
+
+\paragraph{The nonpositive branch.}
+If $\lambda\le0$, its defining equation and $pb\le2$ imply
+\[
+ H^2\le2pbz\le4T,\quad \beta\theta^2\le2T\sigs^2,
+ \quad \theta\ge\tfrac12,\quad -8T\le L=\lambda/\sigs\le0.
+\]
+Thus $s_L=\sqrt{1+L^2}\le9T$ and
+$H\ge H_0/B_s\ge3/4$, so $4\kappa H\ge1$.
+The second source identity gives the quantitative bound
+\[
+ d_G=\frac{2\mathcal H/P-4x\theta\beta/\sigs^2}{J}
+       \ge 2H_0-128T^2\eps\ge1.
+\]
+Also $4a,4\ell\ge4/3$. In the six-root form use the roots
+$(N_x,N_y,R,\Gamma,A_\theta,\widehat V)$, with
+$\widehat V=s_Luw(u^2-x)W$.
+Its reference has the same radial block, $N_x$ entry two,
+$\Gamma$ entry $d_G$, $A_\theta$ entry $4\kappa H$,
+$\widehat V$ entry one, and off-diagonal $L/(2s_L)$ between
+$\Gamma$ and $\widehat V$. It is at least $I/3$.
+For its seven corrections the coefficient bounds, using the complete
+six-root list, are
+\[
+\begin{array}{c|rrrrrrrr}
+ (i,j)&(0,0)&(1,0)&(0,1)&(1,1)&(2,0)&(0,2)&(2,1)&(3,0)\\\hline
+ \mathcal N&256T^3\eps&256T^2&512T^2&32T^2&32T^3&11T&16T^2&81T^2
+\end{array}
+\]
+The $(0,0)$ entries are $E_{RR,0}$, $E_{yR,0}/2$, and
+$-s_Lx/2$; the latter contributes at most $9T\eps$ to
+$\mathcal N$. For $(1,0)$ the three quadratic coefficients are
+$-4\nu$, $A_y$, and $\chi+\lambda+s_L^2\sigs x$.
+For $(2,0)$ they are the three radial coefficients, $L$,
+$-s_L^2\sigs$, and $s_L$. These observations prove the largest
+entries in the table directly; the others follow from
+$q\le T$, $p\le T$, and \eqref{eq:src6}.
+Every nonconstant row is below $M_R$, and the constant row below
+$M_R\sqrt\eps_R$. At $0\le u,w\le\delta_R$ every normalized
+nonconstant correction is at most $M_R\delta_R=1/4096<1/56$.
+The six-root source guards and its separated construction therefore
+hold. The positive branch's box has $u\le\delta_R^2\le\delta_R$,
+so it is a common testing box for both branches.
+
+\begin{lemma}[A limitation of discarding retained roots]\label{lem:retained}
+No positive testing interval in $u$, independent of $R$, makes the
+unchanged extracted twelve-root principal Gram positive on all the
+above source boxes merely by decreasing $\eps_R$.
+This obstruction disappears in the complete parent's $w=0$ slice.
+\end{lemma}
+\begin{proof}
+Fix $z=R>1$, $b=1/(2R)$, $h=1/2$, $\sigs=t$, $x=t^2$, and let
+$t\downarrow0$. All native gaps are positive for sufficiently small
+$t$; in particular
+\[
+ D/t^2\to R/2,\quad \beta\to1/2,\quad t\lambda\to1,
+ \quad d_G\to2R,\quad\rho\to1,\quad
+ \nu\to R+1/2,\quad K_A\to R.
+\]
+Thus $c=0$ eventually. At $w=0$ the free-root principal block on
+$(N_x,\Gamma_*)$ tends to
+\[
+ \begin{pmatrix}2&-u\sqrt{2R}\\-u\sqrt{2R}&1\end{pmatrix},
+ \qquad \det\longrightarrow2(1-Ru^2).
+\]
+For any fixed $u>0$, choose $R>u^{-2}$ and then $t$ small enough to
+enter any proposed positive source box. This proves the restricted
+principal-Gram assertion.
+
+It is essential that this is not an obstruction to the complete
+certificate. At $w=0$, the complete parent is exactly
+\begin{align*}
+ F_w|_{w=0}={}&4m(W+uY)^2+4C(uW-Y)^2
+       +4(A+\alpha)(1+u^2)Y^2\\
+ &+2(1+u^2)(X^2+Y^2)
+       +4D(uX-Z)^2+4\beta(X+uZ)^2 .
+\end{align*}
+This is a separated square identity for all $u$ and $z$; its testing
+features may be chosen from $W,X,Y,Z,uW,uX,uY,uZ$.
+The retained forms preserve linear relations between the roots that
+are lost when the principal Gram is tested on free root variables.
+For example, for arbitrary $w$,
+\[
+ uX_e=uN_x-Hu^2\Gamma-(Huw/q)A_\theta.
+\]
+The final angular term is a genuine additional coupling. No uniformly
+bounded full-$w$ frame follows just by adding a scalar to the old
+$(N_x,\Gamma_*)$ block.
+\end{proof}
+
+For a precise further target, the complete parent is quadratic in $w$:
+$F_w=F_0+wF_1+w^2F_2$, where $F_0$ is the square identity above and
+\begin{align*}
+ F_1={}&-8m(W+uY)(X+uZ)
+ +2(4D+2)(uX-Z)(uW-Y)\\
+ &-2(4\alpha+2)(1+u^2)YZ,\\
+ F_2={}&4m(X+uZ)^2+(4C+4D+2)(uW-Y)^2
+ +4A(1+u^2)Y^2\\
+ &+4\alpha(1+u^2)Z^2+(4\beta+2)(X+uZ)^2.
+\end{align*}
+Both $F_0$ and $F_2$ are separated squares with no $z$ restriction.
+An $R$-independent testing extension therefore requires a uniform
+completion of precisely the displayed cross form $F_1$, keeping
+the native source relations and the testing identities. The present
+note does not supply it, nor prove it impossible.
+
+\paragraph{Exact ancillary checks.}
+The adjacent script checks the two full-parent identities, all seven
+source-path limits, the limiting minor, and the coefficient sum and
+$z$ degree of $F_x$. Those exact algebraic checks do not replace the
+inequality arguments above. No numerical semidefinite solve is used.
+\end{document}

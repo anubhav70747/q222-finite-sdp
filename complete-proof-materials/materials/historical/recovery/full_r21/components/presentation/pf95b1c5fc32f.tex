@@ -1,0 +1,176 @@
+\chapter{Weak-$C$ IH: the open testing axis}
+\label{component:pf95b1c5fc32f}
+\noindent\textbf{Component }\path{pf95b1c5fc32f}\par
+{\small\noindent Source: \path{R13/baseline/baseline/advances/ih/root/weak_ih_open_axis.tex}\par}
+{\small\noindent SHA256: \path{f95b1c5fc32fc0fe354c7c23bcc642ba08597a5178297f8cdcf2898f01ae9e0d}\par}
+{\small\noindent Inventory use: OA1--OA9 missing open-axis full product-pivot construction, including both rho endpoints\par}
+\medskip
+\section{Weak-$C$ IH: the open testing axis}
+\label{pf95b1c5fc32f:sec:weak-ih-open-axis}
+This argument is reconstructed on 19 October 2026.  Its algebraic identities
+are replayed by \path{check_weak_ih_open_axis.py}; it does not rely on an
+unrecovered historical verification receipt.
+
+\paragraph{Domain and source input.}
+The source and testing real closed fields are independent.  Let $B_c,B_t$
+be their rings of bounded elements and use $B=B_c\otimes_{\mathbb R}B_t$
+for Gram coefficients.  Source square roots and testing square roots are
+always taken in their respective fields.  In the weak-$C$ IH source chart,
+write $z=u_c^2$ infinitesimal, $y=v_c^2$ unbounded,
+$H=zh\in(0,1)$, $B_*=zb$ unbounded and $\rho=B_*/y$ bounded.
+The source entry calculation gives
+\[
+ 0\leq\rho_0\leq1,\qquad
+ (B_*C)_0=\left(\frac{AH}{B_*}\right)_0
+ =\left(\frac{\alpha(1-H)}{B_*}\right)_0
+ =c:=\frac1{2(1+\rho_0)}.
+\tag{OA1}
+\]
+In particular $C$ is infinitesimal and $A,\alpha$ are unbounded.
+For $0<\rho_0<1$,
+\[
+ D_0=\frac{\rho_0^2}{2(1-\rho_0^2)};
+\tag{OA2}
+\]
+for $\rho_0=0$, $D$ is positive infinitesimal; for $\rho_0=1$, $D$ is
+unbounded.  These statements follow from
+$D\sim\rho^2/[2e(1+\rho)]$ and $e_0=1-\rho_0$.
+No lower bound on $n\geq0$ is imposed.
+
+\paragraph{Statement.}
+For every testing $u$ with nonzero finite residue and every infinitesimal
+$w=1/v$, including $w=0$, the complete reciprocal-$v$ canonical C2 parent
+is a tensor sum of squares for every state.  The same assertion holds for
+complex states by applying the real quadratic form to real and imaginary
+parts separately.
+
+\paragraph{Exact parent and retained squares.}
+Put $D_u=1+u^2$, $D_w=1+w^2$ and
+\[
+ M=W-wX+uY-uwZ,\qquad J=uwW+uX-wY-Z.
+\]
+The parent is
+\begin{align*}
+\widehat F={}&4nD_uD_wX^2+4mM^2+4CD_w(uW-Y)^2
+ +4AD_uD_wY^2+4DJ^2+4\alpha D_u(Y-wZ)^2\\
+&+2\{J^2+D_u(Y-wZ)^2+D_w(X+uZ)^2-D_uD_wZ^2\}.
+\end{align*}
+Retain the entire $n,m$ packets. When $\rho_0=0$, retain the entire
+$D$ packet as well and set $d=0$. When $0<\rho_0<1$, set $d=D$.
+When $\rho_0=1$, choose a sufficiently large positive real $d$ below $D$
+and retain $4(D-d)J^2$.  Denote the remainder by $F_*$.  All retained
+terms are tensor squares or sums of tensor squares.
+
+Use the graph $X=0$, $Y=HwZ$, and define
+\[
+ P=\frac{uW}{\sqrt{B_*}},\quad E=\sqrt{B_*}\,wZ,
+ \quad V=uwW,\quad
+ E_Y=\sqrt{\frac{B_*}{H(1-H)}}(Y-HwZ).
+\tag{OA3}
+\]
+Crucially, the exact root relation is
+\[
+ PE=VZ.\tag{OA4}
+\]
+On the graph, the $C$, $A,\alpha$, $d$ packets are respectively
+\begin{align*}
+ &4B_*CD_w(P-HE/B_*)^2,\\
+ &\frac{4D_u}{B_*}\{AH^2D_w+\alpha(1-H)^2\}E^2,\\
+ &4d\{V-(1+Hw^2)Z\}^2.
+\end{align*}
+The remaining core is exactly
+\[
+ 2V^2-4(1+Hw^2)PE
+ +\frac{2}{B_*}\{H^2+u^2(1-H)^2+H^2w^2\}E^2.
+\tag{OA5}
+\]
+Thus every graph coefficient is bounded.  The last $E^2$ coefficient is
+infinitesimal, uniformly for all $0<H<1$.
+
+\paragraph{Restoring the $Y$ normal.}
+Let $L=B_*/[H(1-H)]$ and $Y_*=HwZ$.
+The first normal, divided by four, is
+\begin{align*}
+ L_Y:=\frac14\partial_YF_*\big|_{X=0,Y=Y_*}
+={}&2CD_w(Y_*-uW)+2D_u\{AH D_w-\alpha(1-H)\}wZ\\
+&-2dw\{V-(1+Hw^2)Z\}
+ -w\{V-(1+Hw^2)Z\}+D_u(H-1)wZ.
+\tag{OA6}
+\end{align*}
+Every coefficient of $L_Y/\sqrt L$ in $(P,E,V,Z)$ is infinitesimal
+when $d$ is bounded, including $d=0$.  Indeed the only potentially finite contribution is
+\[
+ 2D_u\frac{AH-\alpha(1-H)}{B_*}\sqrt{H(1-H)}E,
+\]
+and it has zero residue by (OA1); the additional $w^2$ contribution is
+infinitesimal.  The other terms contain $C$, $w/\sqrt L$ or $1/B_*$.
+The quadratic $E_Y$ coefficient has residue $4cD_{u,0}>0$, and the
+$X E_Y$ coefficient has zero residue.  These statements remain valid
+when $H$ or $1-H$ is infinitesimal.  No inverse of $d$, $H$ or $1-H$ enters a Gram coefficient
+unaccompanied by its compensating factor.
+
+\paragraph{The strict residue when $0<\rho_0<1$.}
+Write $s=\sqrt{1+u_0^2}>1$ and $r=\rho_0$.
+Using (OA4), split the core cross term as
+$-4PE=-4aPE-4(1-a)VZ$, where $a$ is any real number satisfying
+\[
+ \frac{s}{s+r}<a<\min\left\{\frac{s}{1+r},\frac{s}{s-r}\right\}.
+\tag{OA7}
+\]
+The interval is nonempty: both upper endpoints exceed $s/(s+r)$.
+The residue Gram splits into the positive $E_Y$ pivot, a $(P,E)$ block
+\[
+ G_{PE}=\begin{pmatrix}2/(1+r)&-2a\\-2a&2s^2/(1+r)\end{pmatrix},
+\]
+and a $(V,Z,X)$ block
+\[
+ G_{VZX}=\begin{pmatrix}
+ 2+4d_0&-4d_0-2(1-a)&2u_0(1+2d_0)\\
+ -4d_0-2(1-a)&4d_0&-4d_0u_0\\
+ 2u_0(1+2d_0)&-4d_0u_0&2s^2+4d_0u_0^2
+ \end{pmatrix}.
+\tag{OA8}
+\]
+The $(V,X)$ principal block is positive definite.  Its Schur complement
+is positive exactly when
+\[
+ \frac{s}{s+r}<a<\frac{s}{s-r},
+\]
+as direct substitution of $d_0=r^2/[2(1-r^2)]$ shows.  Hence (OA7)
+makes both blocks strictly positive.  This checks the entire $X$ normal,
+not merely the scalar graph.
+
+\paragraph{The endpoint $r=1$.}
+For finite $d>0$, positivity of the $(V,Z,X)$ block is equivalent to
+$a_-<a<a_+$, where
+\[
+ a_\pm(d)=
+ \frac{(2d+1)s^2\pm s\sqrt{2d(2d+1)}}{(2d+1)u_0^2+1}.
+\]
+As $d\to\infty$, the lower endpoint tends to $s/(s+1)$ and the upper
+endpoint to $s/(s-1)$.  Choose first a real $a$ strictly between
+$s/(s+1)$ and $\min\{s/2,s/(s-1)\}$, then a sufficiently large finite
+$d$.  The interval is nonempty because $s>1$.  Since source $D$ is
+unbounded this cap is admissible, and the full residue is strict.
+
+\paragraph{The endpoint $r=0$.}
+Take $a=1$, $d=0$, having retained the whole $D$ packet, and omit
+$Z$ from the root list. The residue is the direct sum of
+\[
+ 2(P-E)^2+2u_0^2E^2,
+ \qquad 2(V+u_0X)^2+2X^2,
+ \qquad 2D_{u,0}E_Y^2.
+\tag{OA9}
+\]
+It is strictly positive. The exact rewriting has bounded coefficients:
+(OA5) uses only $P,E,V$, and the first $X$ normal from the core is
+$uV+u(1-H)w^2Z=uV+u(1-H)wE/\sqrt{B_*}$.
+Thus no unscaled $Z$ or inverse of $D$ remains.
+
+\paragraph{Conclusion.}
+In all three cases the original remainder has a bounded Gram matrix with
+strictly positive real residue.  The bounded-Gram lifting lemma therefore
+makes it a tensor sum of squares.  Adding the retained source-positive
+packets proves the assertion.  The argument is valid for arbitrary $n\geq0$,
+including $n=0$, and literal projective $w=0$; no comparison between source
+and testing infinitesimals was used.

@@ -1,0 +1,126 @@
+\section{The physical geometry of the canonical reduction}\label{sec:physical}
+Fix the CHSH orientation
+\[S=E_{00}-E_{01}+E_{10}+E_{11},\qquad H=1-S/2,\]
+with PR point $(0,0,0,0,1,-1,1,1)$. The eight losing events, in the parent order, are as follows. The last column is their unique deterministic neighbor on $S=2$.
+\begin{center}\small
+\begin{tabular}{ccc}\toprule
+Coefficient & Event $(a,b\mid x,y)$ & Assignment $(a_0,a_1,b_0,b_1)$\\\midrule
+$\lambda$ & $(+,+\mid0,1)$ & $(+,+,+,+)$\\
+$n=e_1$ & $(+,-\mid0,0)$ & $(+,-,-,-)$\\
+$m=e_2$ & $(+,-\mid1,1)$ & $(+,+,+,-)$\\
+$c=e_3$ & $(-,+\mid1,0)$ & $(+,-,+,-)$\\
+$A=e_4$ & $(-,+\mid0,0)$ & $(-,+,+,+)$\\
+$D=e_5$ & $(-,+\mid1,1)$ & $(-,-,-,+)$\\
+$\alpha$ & $(-,-\mid0,1)$ & $(-,-,-,-)$\\
+$\beta$ & $(+,-\mid1,0)$ & $(-,+,-,+)$\\\bottomrule
+\end{tabular}\end{center}
+Set $E_i=4p(e_i)$, explicitly fixing the event normalization. At the PR point, $H=-1$ and every $E_i=0$; at neighbor $v_j$, $H=0$ and $E_i=4\delta_{ij}$. These nine evaluations prove that $H,E_1,\ldots,E_8$ form an affine basis. Consequently
+\[
+f=dH+\sum_i c_iE_i,\qquad d=-f(\mathrm{PR}),\quad c_i=f(v_i)/4.
+\]
+For a quantum-valid support negative at this PR point, $d>0$ and all $c_i\ge0$.
+
+For completeness, the nonsignaling vertices are the sixteen deterministic points and eight PR points. If a local marginal is deterministic, condition on the other measurement at that site and sample the two remote outcomes with their observed conditional marginals; this constructs a local model. Such an extreme point must be deterministic. If all marginals are strictly nondeterministic, a two-by-two joint table has at most two zero cells. A vertex in the eight-dimensional nonsignaling affine space needs eight independent active positivity constraints, so each table has exactly two zeros and fixes perfect correlation or anticorrelation. Even parity of these four signs leaves a free marginal; odd parity fixes unbiased marginals and gives a PR point. Thus any quantum-valid support not valid on the full nonsignaling polytope is negative at some PR point.
+
+\subsection{Every parent packet is a measurement amplitude}
+Use half-angle coordinates
+\[
+A_1=\frac{(1-u^2)\sigma_z+2u\sigma_x}{D_u},\quad
+B_1=\frac{(1-v^2)\sigma_z+2v\sigma_x}{D_v},\quad
+D_u=1+u^2,\ D_v=1+v^2.
+\]
+The local plus and minus eigenvectors are $(1,u)/\sqrt{D_u}$ and $(u,-1)/\sqrt{D_u}$, respectively, and similarly for Bob. For a normalized state $(W,X,Y,Z)$, the eight event probabilities are
+\begin{align*}
+p_\lambda&=\frac{(W+vX)^2}{D_v},&p_n&=X^2,\\
+p_m&=\frac{(vW-X+uvY-uZ)^2}{D_uD_v},&p_c&=\frac{(uW-Y)^2}{D_u},\\
+p_A&=Y^2,&p_D&=\frac{(uW+uvX-Y-vZ)^2}{D_uD_v},\\
+p_\alpha&=\frac{(vY-Z)^2}{D_v},&p_\beta&=\frac{(X+uZ)^2}{D_u}.
+\end{align*}
+These formulas can be checked one entry at a time from the product eigenvectors. Direct Pauli multiplication gives
+\begin{align*}
+D_uD_v\langle H\rangle=2\big[&(uW+uvX-Y-vZ)^2+D_u(vY-Z)^2\\
+&+D_v(X+uZ)^2-D_uD_vZ^2\big].
+\end{align*}
+The complete homogeneous parent is therefore
+\begin{align*}
+F={}&4\lambda D_u(W+vX)^2+4nD_uD_vX^2
+ +4m(vW-X+uvY-uZ)^2\\
+&+4cD_v(uW-Y)^2+4AD_uD_vY^2\\
+&+(4D+2d)(uW+uvX-Y-vZ)^2+(4\alpha+2d)D_u(vY-Z)^2\\
+&+(4\beta+2d)D_v(X+uZ)^2-2dD_uD_vZ^2.\tag{P}\label{eq:parent}
+\end{align*}
+For normalized states, $F=D_uD_v f(q)$. For arbitrary nonzero states, divide by the additional positive testing factor $\norm{\psi}^2$. This fixes the signs, the factor four and the restoration factor.
+
+If $d>0$ and $uv\ne0$, the signed part restricted to $Z=0$ contains
+\[2d\big[(uW+uvX-Y)^2+D_uv^2Y^2+D_vX^2\big],\]
+which is positive definite. Thus the parent matrix $P$ has at least three positive eigenvalues, and $P\succeq0$ is equivalent to $\det P\ge0$. Commuting angle axes and projective ends have $H\succeq0$ directly: when one party's reflections commute, their common eigenspaces reduce CHSH to $\pm2$ times one remote reflection. The case $d=0$ is an event-square sum.
+
+\subsection{A Newton square and classical consistency}
+Define
+\begin{align*}
+t_1&=d+2(\lambda+n+D),&t_2&=d+2(\alpha+m+A),\\
+t_3&=d+2(\lambda+c+D),&t_4&=d+2(\alpha+\beta+m),\\
+t_5&=d+2(\lambda+\beta+n),&t_6&=d+2(\alpha+c+A),\\
+t_7&=d+2(\beta+n+m),&t_8&=d+2(c+A+D).
+\end{align*}
+The exact determinant identity is
+\[
+\det P=16D_u^2D_v^2\sum_{i,j=0}^2q_{ij}u^{2i}v^{2j},
+\]
+where
+\begin{align*}
+q_{00}&=4\lambda\alpha t_7t_8,&q_{01}&=4(\lambda Dt_7t_6+\alpha mt_5t_8),\\
+q_{02}&=4mDt_5t_6,&q_{10}&=4(\alpha At_7t_3+\lambda nt_8t_4),\\
+q_{12}&=4(\beta mt_1t_6+cDt_5t_2),&q_{20}&=4nAt_3t_4,\\
+q_{21}&=4(\beta nt_3t_2+cAt_1t_4),&q_{22}&=4\beta ct_1t_2.
+\end{align*}
+The remaining coefficient is explicitly $h=q_{11}=\det P(1,1)/256-\sum_{(i,j)\ne(1,1)}q_{ij}$. This identity is a finite $4\times4$ determinant calculation from \eqref{eq:parent}; it can also be expanded by Cauchy--Binet from its eight positive rank-one packets and one negative packet. The complete polynomial identity was reconstructed exactly in the companion checks; that check verifies the displayed identity and does not replace the following argument.
+
+For $U=u^2,V=v^2>0$, divide by $UV$:
+\[L(U,V)=h+\sum_{(i,j)\ne(1,1)}q_{ij}U^{i-1}V^{j-1}.\]
+All eight outer coefficients are nonnegative. In logarithmic variables this is a constant plus positive exponentials. It is convex and is coercive exactly when zero is interior to the convex hull of its active exponent vectors. If zero is interior, the largest exponent has a uniform positive slope in every unit direction; the exponential sum tends to infinity. Otherwise a separating direction makes every term nonincreasing along a ray.
+
+\begin{proposition}[Coercivity is compatibility of omitted events]\label{prop:compat}
+For $d>0$, the logarithmic Laurent polynomial is coercive if and only if the omitted losing events are pairwise nonexclusive, meaning they never assign opposite outcomes to the same local measurement.
+\end{proposition}
+\begin{proof}
+The available exponents are the eight boundary points of the $3\times3$ square. The separating directions can be chosen among $(\pm1,0),(0,\pm1),(\pm1,\pm1)$: directions between two consecutive such rays give the same signs, and a boundary ray only weakens the vanishing conditions.
+
+For $(1,0)$, the forbidden half-plane requires
+$\lambda\alpha=\lambda D=\alpha m=mD=0$. Its minimal zero sets are $\{\lambda,m\}$ and $\{\alpha,D\}$. The four axis directions give
+\[
+(\lambda,m),(\alpha,D),(n,c),(A,\beta),
+(\lambda,A),(n,\alpha),(m,c),(D,\beta).
+\]
+The diagonal $(1,1)$ has minimal zero sets
+$\{\lambda,m,A\},\{\lambda,\alpha\},\{n,D,\alpha\}$.
+The first and last already contain an axis zero set, leaving only $(\lambda,\alpha)$. The remaining diagonals add $(m,D),(n,A),(c,\beta)$. These twelve pairs are exactly the exclusive pairs in the event table. Hence failure of coercivity is equivalent to omitting an exclusive pair.
+\end{proof}
+
+Pairwise nonexclusive events give a consistent partial assignment to the four local measurements, so extend to a deterministic assignment. A deterministic assignment loses one or three CHSH inputs, never four. Thus there are at most three compatible omitted losing events. No list of support masks is needed: omission of an exclusive pair characterizes the noncoercive case, and Section~\ref{sec:closed-faces-short} gives explicit lifts for its two symmetry types.
+
+\subsection{Extreme sources make finite contacts}
+Normalize the nonnegative source vector by $d+\sum c_i=1$. Its physical subset is compact and convex over $\R$. For a coercive support, $L$ attains its minimum at finite positive $U,V$.
+
+Suppose a physical extreme ray had minimum $\mu>0$. A small coefficient perturbation inside the exact active face changes each positive outer coefficient by relative error at most $\varepsilon$ and $h$ by absolute error at most $\varepsilon$. Uniformly over all angles,
+\[L'\ge(1-\varepsilon)L+\varepsilon h-\varepsilon
+\ge(1-\varepsilon)\mu+\varepsilon h-\varepsilon>0
+\]
+for sufficiently small $\varepsilon$. Opposite nonradial perturbations remain physical, contradicting extremality. Thus an extreme coercive source has a finite noncommuting zero contact.
+
+At that contact, a kernel vector $\psi\ne0$ satisfies six linear equations in the source coefficients:
+\[P\psi=0,\qquad\psi^T(\partial_uP)\psi=0,\qquad\psi^T(\partial_vP)\psi=0.\]
+If more than six event weights are positive, there are at least eight active coordinates including $d$. The nullspace of these six equations contains a nonradial perturbation. Small opposite perturbations retain all active signs and the same contact. The three complementary eigenvalues stay positive. Since the adjugate is a positive multiple of $\psi\psi^T$, the determinant remains stationary at zero; logarithmic convexity makes that zero its global minimum. The perturbed sources are physical, again contradicting extremality. No generic-rank assumption is used.
+
+A coercive extreme support consequently has five or six active events. Its compatible omitted pair either shares one local setting or shares neither; these are the two relabeling classes
+\[C_1:\lambda=n=0,\qquad C_2:\lambda=\beta=0.\]
+For a finite check of transitivity, CHSH-preserving maps on $(x,y,a,b)$ are
+\begin{align*}
+g_A&:(x,y,a,b)\mapsto(1-x,y,a,(-1)^yb),\\
+g_B&:(x,y,a,b)\mapsto(x,1-y,(-1)^{1-x}a,b),\\
+g_T&:(x,y,a,b)\mapsto(y,x,(-1)^yb,(-1)^xa).
+\end{align*}
+On the cyclic event order $(\lambda,D,c,A,\alpha,m,\beta,n)$ these maps act as $i\mapsto5-i,3-i,2-i$ modulo eight. Hence they generate a one-step rotation and a reflection. Compatible pairs have cyclic distance one or two; the rotations are transitive on each kind. Their representatives are precisely the two omitted pairs above, so no mask table is required.
+A compatible triple omission lies below one of these six-event faces by dropping one omission. Every other support is contained in a noncoercive omission face.
+
+Finally, the normalized coefficient base has affine dimension at most eight, so every vector is a convex combination of at most nine extreme points. This conclusion, the midpoint definition of extremality, and finite contact attainment all admit fixed first-order formulas in real arithmetic. They transfer to every real closed coefficient field. Logarithms and real compactness were proof devices over $\R$ only. Nonnegative summands preserve literal event zeros. This completes the coefficient reduction to the closed faces and the two contact families; it does not yet prove their separated-field tensor certificates.

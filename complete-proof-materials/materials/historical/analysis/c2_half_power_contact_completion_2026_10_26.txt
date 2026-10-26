@@ -1,0 +1,159 @@
+HALF-POWER CONTACT COMPLETION: AN EXACT FINITE NORMAL FORM
+26 October 2026. Private bounded result. No universal admission is asserted.
+
+Result. Restricting a proposed polynomial block completion to u,v>0
+does not remove its bilinear degree bound. More importantly, freezing
+the scalar certificate to the three unweighted gamma squares omits two
+positive-quadrant scalar channels. The complete degree-compatible
+half-power SOS has the exact four-block contact form below. Its scalar
+freedom is a two-dimensional spectrahedron, while the remaining
+coupled Gram feasibility is genuinely additional. Local pointwise
+completion at every finite native contact can be constructed explicitly.
+
+1. Precise class and degree/parity reduction.
+
+Use the source-only contact congruence of CONTACT_SCALAR_GRAM.md:
+ F=(eta,z)^T [[H,zeta],[zeta^T,gamma]] (eta,z),
+ eta in R^3, gamma=q^T G q, q=(s,t,st), s=u-u_c,t=v-v_c.
+The contact is eta=0,z=1 after harmless source-only state rescaling;
+G>0 throughout the finite native domain, including n=0.
+
+By 'half-power SOS' mean F(x^2,y^2;eta,z) is polynomial SOS in the
+independent real x,y and state amplitudes. Separate angle degrees are
+at most four after substitution. Each root has x,y degree at most two
+and is homogeneous linear in state. Average its Gram under independent
+x and y sign changes. The four parities yield exactly
+ F=sum R00(u,v;eta,z)^2
+   +u sum R10(v;eta,z)^2
+   +v sum R01(u;eta,z)^2
+   +uv sum R11(eta,z)^2.                           (1)
+Here R00 is bilinear in u,v, R10 affine in v, R01 affine in u,
+and R11 independent of testing. This equivalence does not assume an
+a priori root degree: leading-square positivity supplies the bounds.
+Nonnegativity on the quadrant ALONE does not imply (1).
+
+All four weights are strictly positive at the source contact. Since
+F(0,1)=0 there, every root's z coefficient vanishes at contact.
+Consequently the four exact root spaces have ordered generating columns
+ f00=(eta,s eta,t eta,st eta,sz,tz,stz),       size15;
+ f10=(eta,t eta,tz),                        size7;
+ f01=(eta,s eta,sz),                        size7;
+ f11=eta,                                  size3.
+Thus (1) is equivalent to f00^T Q0 f00+u f10^T Q1 f10+
+v f01^T Q2 f01+uv eta^T Q3 eta with all four Q positive semidefinite.
+This is the full contact-adapted half-power class, not just a proposed
+choice of V. Fractional branches are only at the FIXED testing axes.
+
+2. Exactly two scalar allocation parameters.
+
+Partition Q0=[[X0,Y0],[Y0^T,G0]], Q1=[[X1,y1],[y1^T,alpha]],
+Q2=[[X2,y2],[y2^T,beta]], Q3=X3. The scalar lower block is exactly
+ gamma=q^T G0 q+alpha*u*t^2+beta*v*s^2,
+ alpha,beta>=0,
+ G0=G-alpha Mu-beta Mv>=0,                         (2)
+ Mu=[[0,0,0],[0,u_c,1/2],[0,1/2,0]],
+ Mv=[[v_c,0,1/2],[0,0,0],[1/2,0,0]].
+Uniqueness of the biquadratic contact Gram proves that (2) is necessary
+and sufficient for the scalar part of this parity form. In particular
+0<=alpha<=G22/u_c, 0<=beta<=G11/v_c; this scalar feasible set is compact.
+It has positive interior parameters. An explicit source-only choice is
+ alpha=beta=epsilon,
+ epsilon=1/[4 Tr(G^{-1})(u_c+v_c+2)]>0.
+Indeed lambda=1/Tr(G^{-1})<=lambda_min(G),
+||Mu||<=u_c+1, ||Mv||<=v_c+1, and therefore
+G0>=G-(lambda/4)I>0. This does NOT imply the coupled Gram blocks exist.
+No division by a vanishing event coefficient occurs.
+
+3. Explicit finite coupled condition.
+
+Let A=(I,sI,tI,stI)^T, B=(I,tI)^T, C=(I,sI)^T, using I=I3.
+The four PSD blocks above represent the COMPLETE parent exactly iff
+ H=A^T X0 A+u B^T X1 B+v C^T X2 C+uv X3,
+ zeta=A^T Y0 q+u*t*B^T y1+v*s*C^T y2,             (3)
+ G=G0+alpha Mu+beta Mv.
+These are finite polynomial coefficient identities, affine in all Gram
+unknowns for a fixed source. They and Q0,Q1,Q2,X3>=0 are necessary and
+sufficient for (1). They are only sufficient for actual quadrant PSD.
+The scalar two-parameter feasibility (2) is not a solution of (3).
+
+For one coupling row, write its two weighted cross polynomials as
+ell(t),m(s), both affine. Its equation is
+ zeta_i=V_i(s,t)q+u*t*ell(t)+v*s*m(s),
+with bilinear V_i. There are16 coefficients and rank8, hence8 free
+coefficients per row (24 altogether), in addition to the scalar
+allocation. The four old syzygies of Vq remain, and the four new
+channels can be canceled by Delta V2=-u*ell(t), Delta V1=-v*m(s).
+When alpha=beta=0, PSD forces y1=y2=0, and this reduces to the old
+12-parameter bilinear coupling ansatz. Thus freezing alpha=beta=0
+really removes allowable coupling channels, not merely a scalar
+rewriting. A literal coefficient-matching SDP is still required.
+
+4. Fixed testing span and the native support pruning.
+
+Although the displayed coordinates use the source contact, every root
+lies in the fixed original-state span of the following36 functions:
+ {1,u,v,uv} psi_l;
+ sqrt(u){1,v} psi_l;
+ sqrt(v){1,u} psi_l;
+ sqrt(uv) psi_l,                 l=W,X,Y,Z.
+Source-only shifts and state congruences change only source Gram
+coefficients. No sqrt(u-u_c), sqrt(v-v_c), or mixed source/testing
+square root appears. Equations (3) are therefore a genuine fixed-feature
+sufficient condition. In the original coordinates its unpruned Gram
+blocks have fixed orders16,8,8,4 and affine coefficient matching in the
+nine canonical source coordinates; the contact coordinates are a way
+to prove membership, not additional source equalities for the lift.
+
+C2's literal support zeros reduce the source-contact dimensions further.
+In the ordinary x,y half-power roots write monomials x^i y^j psi_l,
+0<=i,j<=2. SG2 with lambda=beta=0 forces W terms with i+j<2 to vanish,
+and Z terms with i+j>2 to vanish. For W, first the constant square
+coefficient is zero, then its x^2,y^2 coefficients remove xW,yW. For Z,
+first the top x^4y^4 square coefficient removes x^2y^2Z, then the next
+top x^4y^2,x^2y^4 coefficients remove x^2yZ,xy^2Z. These are actual
+sums-of-squares support implications, not determinant support.
+The parity sizes become14,6,6,4. Contact evaluation is a nonzero linear
+functional in each sector (all source amplitudes and u_c,v_c are
+nonzero), so its kernel has sizes13,5,5,3: total26. These extra six
+linear support constraints must be imposed on the readable32-feature
+contact form; they need not be guessed from its mixed source basis.
+A small positive scalar allocation need not survive those full coupled
+support/PSD constraints. No feasibility is inferred from the counts.
+
+5. A constructive local completion, but no source-uniform radius.
+
+Even the unweighted V ansatz has NO obstruction at the contact itself.
+Write G=[[K,g],[g^T,f]], K of order2, and J=(zeta_s,zeta_t)_contact.
+The strict native full-contact Hessian gives
+ [[H_c,J],[J^T,K]]>0.
+Choose the value of the third column of V at contact to be J K^{-1}g,
+while its first two columns are necessarily J. Thus
+ V_c=J K^{-1}[K,g],
+ V_c G^{-1} V_c^T=J K^{-1}J^T,
+ H_c-V_cG^{-1}V_c^T>0.
+The old syzygy (-t,0,1) permits this arbitrary constant third-column
+choice without changing zeta=Vq or the first two contact columns.
+Therefore one explicit source-only bilinear V has strictly positive
+remainder throughout SOME source-dependent neighborhood of every
+finite native contact, including n=0. This is an exact local statement;
+neither a common angular radius nor global quadrant positivity follows.
+
+If a polynomial V satisfies the stronger block-PSD condition for all
+u,v>0, growth as either variable tends to +infinity still forces
+separate degrees at most one. Restricting from all real tests to the
+positive quadrant does not evade that degree reduction. Also, the old
+equal-coefficient polarization is not rescued merely by that restriction:
+at the previously audited strict source (1,7/66,5/33,5/22,10/33,16/33,
+9/22), its remainder at u=0,v=1 equals
+-6975688592/51747662835<0 and stays negative for small positive u.
+This excludes that allocation only; it does not exclude the24-parameter
+weighted coupling equations (3).
+
+First remaining implication. One must prove or refute feasibility of
+(2)--(3), with the six support constraints, for every finite native C2
+source and its independent positive tests. Local Hessian positivity
+and G>0 do not prove that global Gram feasibility. A pointwise PSD
+remainder without a fixed-feature certificate is likewise insufficient.
+The known polynomial and fixed-multiplier obstructions do not exclude
+this half-power class, whose testing functions have fixed algebraic
+branches at the angular axes. No universal admission is established.

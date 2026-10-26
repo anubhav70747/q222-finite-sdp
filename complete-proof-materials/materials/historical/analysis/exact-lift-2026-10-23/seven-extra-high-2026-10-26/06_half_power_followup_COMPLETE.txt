@@ -1,0 +1,217 @@
+ChatGPT said:
+
+Q222: Exact exclusion of the 36-feature half-power cone
+The half-power candidate fails. I obtained an exact, strict, five-parameter native C2 source outside
+$L_2=\left\{c:F_c=Z_{\mathrm{half}}^TQZ_{\mathrm{half}},\ Q\succeq0\right\},$
+where
+$Z_{\mathrm{half}}
+=\{u^{i/2}v^{j/2}\psi_\ell:
+0\le i,j\le2,\ \ell=W,X,Y,Z\}.$
+This is a universal dual exclusion, not a failed Gram allocation. The certificate is an explicit table of 90 integers. Its compressed adjoint has four positive-definite blocks, verified by exact rational $LDL^T$, while its pairing with the complete native C2 parent is strictly negative.
+1. Exact native counterexample
+Use the five rational native parameters
+$\boxed{
+(a,b,c,t,r)=
+\left(
+\frac{13}{600},
+\frac{101}{1000},
+\frac{47}{15},
+\frac{27}{35},
+\frac{13}{154}
+\right).
+}
+\tag{1}$
+All strict native inequalities hold. Writing $z=c^2$ and $h=b-a^2t$, the critical source gaps are
+$\begin{array}{c|c}
+\text{Quantity}&\text{Exact value}\\ \hline
+h&140893/1400000\\
+g=(1+z)b-(1-r+a^2zt)&601024007/3465000000\\
+j=1+zr-t&36637/34650\\
+1-zh&3767363/315000000\\
+b-a^2zr&1255020827/12474000000
+\end{array}$
+The exact stationary formulas generate the strictly positive source
+$\begin{aligned}
+(d,n,m,C,A,D,\alpha)\approx
+(&1,\ 0.0007990771,\ 1.2090569282,\\
+&69.5679898324,\ 0.00019720094,\\
+&50.6884047227,\ 20.5861525155),
+\end{aligned}$
+with $\lambda=\beta=0$.
+Its native contact is
+$(u_c,v_c;\psi_c)=
+\left(c,ac;\frac ba,-cr,
+c\left(\frac ba-at\right),1\right).$
+The complete parent satisfies, exactly,
+$F_c(u_c,v_c,\psi_c)=0,\qquad
+\nabla_{u,v,\psi}F_c(u_c,v_c,\psi_c)=0.$
+Both identities, the six source weights, and every chart inequality are reproduced in the exact checker.
+2. Why the full 36-feature Gram reduces exactly
+Write $u=x^2,v=y^2$. A putative SOS can first be averaged under $x\mapsto-x$ and $y\mapsto-y$, giving four parity blocks of orders
+$(16,8,8,4).$
+For native C2, the two relevant diagonal state coefficients are
+$\begin{aligned}
+[P]_{WW}
+&=4mv^2+(4C+4D+2d)u^2+4Cu^2v^2,\\
+[P]_{ZZ}
+&=4\alpha+(4\alpha+2d+4m)u^2+4Dv^2.
+\end{aligned}
+\tag{2}$
+In any polynomial SOS, each root's monomial support lies inside half the Newton polygon of the sum of squares. Applying this separately to the $W$ and $Z$ state coefficients forces
+$\begin{array}{ll}
+W:&i+j\ge2,\\
+Z:&i+j\le2.
+\end{array}
+\tag{3}$
+There is no corresponding additional deletion for $X,Y$.
+Thus six feature rows are forced to vanish, leaving parity blocks
+$(14,6,6,4).$
+Apply the invertible rescaling
+$u=u_cU,\quad v=v_cV,\quad
+\psi_\ell=(\psi_c)_\ell\phi_\ell.$
+This changes no cone membership. The new contact is $U=V=1,\ \phi=(1,1,1,1)$.
+Every parity block must annihilate its contact evaluation vector. If $z_e=U^{i/2}V^{j/2}\phi_\ell$, choose the first feature $z_p$ of each block as pivot and use the roots $z_e-z_p$. The exact compressed Gram block sizes are therefore
+$\boxed{(13,5,5,3).}
+\tag{4}$
+Every possible PSD Gram for all 36 original features is represented in these compressed blocks. No uncompressed PSD shortcut is used.
+3. Explicit integer dual separator
+Order the ten state monomials as
+$(WW,WX,WY,WZ,XX,XY,XZ,YY,YZ,ZZ).$
+For each angular coefficient pair $(p,q)\in\{0,1,2\}^2$, define the ten dual moments by the corresponding row below.
+Each row contains ten integers, in the state-monomial order above.
+Plain text
+
+
+
+(0,0):
+161019792 0 0 0 -121999126 -51597381 -92880749 198288996 63902153 19654676
+
+(0,1):
+187856424 -46850180 181090964 93807406 104512504 -51884026 -170947993 104746412 60911824 56523337
+
+(0,2):
+198410875 -202408890 134972214 153970197 2021367851 -131764329 -929567199 102173701 98542620 600959153
+
+(1,0):
+187856424 -20723372 228808703 94672500 -8876925 -32301218 -55239329 117094417 62928564 26333033
+
+(1,1):
+211714865 -20971443 135517649 91673664 -66738426 -13877461 -150724699 104061701 67646572 392762321
+
+(1,2):
+165685625 -100092162 132934774 129085407 872170933 -110726908 -814152246 108962482 438514151 328748742
+
+(2,0):
+259329330 -1150608 147851759 93736392 966590370 -12339807 -94532325 112427108 80542993 535327210
+
+(2,1):
+166289097 16862629 134869776 98549977 120025352 -54544777 -527190917 121915289 582567055 328748742
+
+(2,2):
+163696817 -79616153 139866971 0 703323270 -491353386 0 629878509 0 493123113
+
+
+
+Write these integers as $Y_{pq,\ell k}$. For two features $e=(i,j,\ell)$ and $f=(i',j',k)$ of the same parity block, define
+$\mathfrak m(e,f)=
+Y_{\frac{i+i'}2,\frac{j+j'}2,
+\min(\ell,k),\max(\ell,k)}.$
+With $p_0$ denoting the first feature of the given parity block, the complete compressed dual matrices are explicitly
+$\boxed{
+Q_{ef}=
+\mathfrak m(e,f)
+-\mathfrak m(e,p_0)
+-\mathfrak m(p_0,f)
++\mathfrak m(p_0,p_0).
+}
+\tag{5}$
+Exact positive-definiteness verification. Performing rational $LDL^T$ on these four matrices gives the following strict bounds for every diagonal pivot:
+Block
+Order
+All exact $LDL^T$ pivots
+
+Even-even
+13
+$>90$
+
+Even-odd
+5
+$>118$
+
+Odd-even
+5
+$>369$
+
+Odd-odd
+3
+$>2{,}000{,}000$
+
+
+
+
+Thus every $Q$ is positive definite. The bounds are checked using integer and rational arithmetic only.
+4. Exact negative pairing
+Expand the complete rescaled native parent as
+$\widetilde F(U,V,\phi)
+=
+\sum_{\substack{0\le p,q\le2\\\ell\le k}}
+b_{pq,\ell k}U^pV^q\phi_\ell\phi_k.$
+Pairing all its coefficients, including every state cross term, with the explicit dual vector gives
+$\boxed{
+\langle Y,b\rangle
+=
+-\frac{
+31917121340091771507320448459210586965990611717744093996544823253
+}{
+1129383645613305483559298619423160947865086012060000000000
+}<0.
+}
+\tag{6}$
+This rational identity is obtained by expanding the original SG2 physical parent with its exact native stationary coefficients. No independent testing variables are specialized.
+If a half-power Gram existed, the reductions in Section 2 would produce compressed PSD matrices $G_1,\ldots,G_4$ satisfying all coefficient equations. Consequently,
+$\langle Y,b\rangle
+=\sum_{j=1}^{4}\operatorname{tr}(Q_jG_j)\ge0,$
+because $Q_j\succ0$ and $G_j\succeq0$.
+This contradicts (6).
+$\boxed{
+F_c\notin L_2.
+}$
+The certificate is rational in the original coefficient coordinates as well. Pulling the dual functional back through the invertible contact normalization gives
+$Y^{\mathrm{orig}}_{pq,\ell k}
+=u_c^pv_c^q(\psi_c)_\ell(\psi_c)_k
+Y_{pq,\ell k}.$
+All of those factors are source constants, not additional mixed products in a proposed affine LMI.
+Moreover, the obstruction is stable on an open neighborhood of strict native C2 parameters: the normalized compressed adjoints remain the same, while the negative dual pairing varies continuously.
+5. Complete reproducible files
+Mathematical proof note
+Native rational source, Newton support reduction, all 90 dual integers, compressed adjoints, exact negative pairing and implications.
+
+
+Exact standalone checker
+Uses Python's standard library only. Reconstructs the full parent, verifies native stationarity and source signs, performs exact rational LDL checks, and reproduces equation (6). No SDP solver.
+
+
+
+The checker executed successfully, establishing positivity of every compressed block and the exact negative pairing.
+6. Consequence for the finite-lift programme
+The proposed fixed 36-feature cone is sound and closed, but cannot cover every strict native C2 contact. Its failure cannot be repaired by choosing a different Gram allocation inside the same features.
+The smallest natural next refinement supported by the existing construction is to retain the half-power features and add third-root monomials, using the common sixth-root grid $Z_6$. This accommodates the cubic Hurwitz circuits and preserves the already established exact sixth-root certificates. It is not a proof that denominator six is minimal.
+The first remaining positive implication is
+$\boxed{
+\forall c\in\mathcal C_{2,\mathrm{strict}}^{\mathrm{native}},
+\qquad \mu_{C2}^{(6)}(c)\ge0,
+}$
+or coverage of the missing rays by another fixed finite collection of globally sound affine SDP cones.
+Final mathematical status: The smaller half-power question is conclusively settled in the negative, by an explicit strict native C2 source and a reproducible universal compressed dual separator. This does not obstruct the sixth-root cone or a different exact finite lift.
+
+
+
+
+
+
+   Q222_C2_half_power_exact_obstruction.mdDocumentOpen fileQ222_C2_half_power_exact_separator.pyCodeOpen file
+
+
+
+
+

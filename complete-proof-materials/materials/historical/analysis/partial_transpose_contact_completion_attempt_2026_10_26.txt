@@ -1,0 +1,118 @@
+THE CONTACT SCALAR HAS A FIXED FOUR-FUNCTION SOS; COUPLING REMAINS
+26 October 2026. One bounded construction attempt; no publication.
+
+Completed result. In the source-only contact-Hankel coordinates, gamma
+has an exact source/testing-separated SOS on the FIXED testing span
+{1,u,v,uv}, with at most three squares, and no multiplier. This applies
+to every globally valid finite native C2 source, including n=0 (and to
+the analogous finite C1 contacts). The attempted completion of its
+three couplings demands a strictly stronger inequality than pointwise
+positivity; that step remains unproved. No full-parent T was obtained.
+
+1. Elementary scalar lemma.
+
+Let g(u,v) be a real polynomial of separate degree at most two in each
+variable, nonnegative for ALL real u,v, and zero at (u0,v0). Put
+s=u-u0,t=v-v0. Nonnegativity makes its two first derivatives zero, so
+uniquely
+ g=A s^2+B t^2+2C st+2D s^2t+2E st^2+F s^2t^2
+  =(s,t,st) G (s,t,st)^T,
+ G=[[A,C,D],[C,B,E],[D,E,F]].                         (1)
+Then G>=0. Indeed, for any (x,y,z) with xyz!=0, choose
+lambda=z/(xy), s=z/y, t=z/x. Thus (s,t,st)=lambda(x,y,z), so
+(x,y,z)G(x,y,z)^T=lambda^(-2)g(s+u0,t+v0)>=0.
+Such vectors are dense; continuity gives G>=0 on all real vectors.
+The converse follows directly from (1). This proves the lemma without
+Hilbert's ternary-quartic theorem or a pointwise testing factorization.
+The argument also holds over a real closed field.
+
+The coefficients are explicit source-only derivatives at the zero:
+ A=g_uu/2, B=g_vv/2, C=g_uv/2,
+ D=g_uuv/4, E=g_uvv/4, F=g_uuvv/4.                   (2)
+There is no missing coefficient or affine Gram freedom in this
+three-root representation. Semidefinite/singular G is allowed.
+
+2. Application to the actual native parent.
+
+Let psi_c=vec(Psi_c) be the source contact, delta=det(Psi_c)!=0, and
+use the source-only local congruence of the preceding contact note.
+The fourth coefficient in its symmetric/antisymmetric state split is
+ gamma_c(u,v)=psi_c^T P_c(u,v)psi_c/(4 delta^2).
+The raw canonical P_c has separate degree at most two in u,v. At the
+contact P_c psi_c=0, so gamma vanishes there. Global validity makes
+gamma nonnegative on the ENTIRE real testing plane, not merely its
+positive quadrant. Explicitly, the parent satisfies
+ P(-u,v)=Su P(u,v)Su, Su=diag(1,1,-1,-1),
+ P(u,-v)=Sv P(u,v)Sv, Sv=diag(1,-1,1,-1).
+Thus positivity for positive testing angles and every state extends
+to negative signs by changing the state, and to axes by continuity.
+Gamma itself need not be even: psi_c stays fixed, while its transformed
+state under these identities is also an allowed test state.
+
+Take g=gamma in (1)--(2), with u0=u_c,v0=v_c. If phi=(1,u,v,uv)^T,
+ define D_c=[[-u_c,1,0,0],[-v_c,0,1,0],
+             [u_c v_c,-v_c,-u_c,1]].
+Then the EVALUATED coefficient matrix
+ Q_gamma(c)=D_c^T G_gamma(c) D_c>=0
+gives gamma=phi^T Q_gamma(c) phi for all independent testing angles.
+It has order four and rank at most three. Factoring G_gamma over the
+source field yields at most three separated squares. The source-only
+shifts introduce no new testing functions or mixed square roots.
+
+For native C2, delta=(b+zr h)/a>0, z=c^2, h=b-a^2t. For native C1,
+delta=S(1+k^2r(1-theta))>0. Neither (1), (2) nor D_c divides by n,D
+or beta. Thus the permitted literal zero-event faces remain included.
+This is a genuine fixed-library result for gamma, with T=1. It is
+stronger than merely knowing a rank bound for pointwise factorizations.
+
+3. One explicit coupling completion and its exact unresolved condition.
+
+After the same source-only contact congruence, write the full state
+matrix in a constant symmetric/antisymmetric basis as
+ K=[[H,zeta],[zeta^T,gamma]], H_02=H_11-gamma.
+Each component zeta_i has separate testing degree <=2, with zero
+constant after shifting to (s,t)=(0,0). Let
+ zeta_i=sum_{j,k=0}^2 a_(jk)^(i) s^j t^k, a_(00)^(i)=0.
+An exact finite polynomial division gives zeta=V(s,t) q, q=(s,t,st)^T:
+ V_i1=a10+a20 s,
+ V_i2=a01+a02 t,
+ V_i3=a11+a21 s+a12 t+a22 st.                        (3)
+All entries lie in the same fixed bilinear testing span. Other V can
+give the same zeta and may permit a better allocation.
+
+For a chosen V, suppose V annihilates ker G_gamma and set the
+SOURCE-only generalized inverse G_gamma^dagger. Then exactly
+ K=diag(H-V G_gamma^dagger V^T,0)
+   +[V; q^T G_gamma] G_gamma^dagger [V^T,G_gamma q].   (4)
+The second term is a separated SOS with a fixed finite polynomial
+feature list. Equation (4) avoids the mixed inverse gamma^(-1).
+But it leaves the explicit condition
+ H-V G_gamma^dagger V^T >=0                         (5)
+as a polynomial-matrix assertion at every independent test, together
+with a separated certificate for that remainder. Neither the range
+condition nor (5) follows automatically from native stationarity.
+
+The distinction from the ordinary Schur condition is exact. If G>0
+and gamma=q^TGq>0, put a=G^(1/2)q. Then
+ V G^(-1)V^T-zeta zeta^T/gamma
+ =V G^(-1/2)[I-aa^T/(a^Ta)]G^(-1/2)V^T >=0.
+Thus (5) asks for MORE budget than the pointwise Schur complement,
+not a consequence of it. The projector version gives the same fact
+on im(G) in the singular case. No ordinary polynomial full-state
+completion is asserted.
+
+4. Residual implication and multiplier scope.
+
+The new lemma certifies precisely the scalar gamma and supplies a
+finite algebraic representation of all three couplings. To finish this
+route one must choose a compatible coupling Gram/allocation and prove
+a fixed-feature separated SOS for the remainder, uniformly over all
+native rates, zero faces and independent tests. Enlarging the features
+to fractional powers may change the available allocation; no such
+uniform completion is established here.
+
+No fixed pure-testing multiplier for the FULL F is proved. The earlier
+optimal-current calculation only rules out a finite testing dictionary
+for that particular reconstruction; it does not exclude other currents
+or a native-C2-specific multiplier. Likewise det(H3)F being SOS does not
+provide (5) or permit cancellation of that mixed multiplier.

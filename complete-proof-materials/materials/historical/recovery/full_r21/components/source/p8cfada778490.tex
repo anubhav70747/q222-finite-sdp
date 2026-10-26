@@ -1,0 +1,107 @@
+\section{The damped frame also enlarges the pure-testing state chart}
+
+\begin{proposition}
+On the entire unchanged C14.3b source, with no condition on $x/\eta$,
+the complete local parent is tensor SOS on
+\[
+ Z\ne0,\qquad X/Z\text{ bounded},\qquad
+                         u^2W/Z\text{ bounded}.       \tag{DS1}
+\]
+No bound on $Y/Z$ is imposed. The literal $Z=0$ endpoint is already
+covered by the direct sign-core theorem. This extends R16's local
+bounded-$W/Z,X/Z$ state chart, since $u$ is infinitesimal.
+\end{proposition}
+
+Use the exact damped identity DG3 with $s=x+\eta$. Its strictly
+positive source frame and all residual allocations except DG10 are
+valid without the source restriction $x/\eta$ bounded. Thus only
+$\epsilon uvQ\xi$ requires a new allocation. Put
+$\phi=\xi/Z=X/Z+hu$, which is bounded on DS1. There is the exact
+identity
+\[
+ \boxed{\quad
+ \epsilon uvQ\xi
+ =\epsilon U(W/Z)E\xi
+       -\epsilon u\phi E^2/\eta-\epsilon uvP\xi.
+ \quad}                                                   \tag{DS2}
+\]
+It follows from $Q=E/\eta-P$ and $vZ=\eta uW-E$; its only testing
+inverse is $Z^{-1}$.
+
+On the DG8 source frame, $P$ has a bounded allocation and
+$\sqrt{\eta s}\,Q$ has a bounded allocation with unit coefficient.
+Use $E=\eta P+\eta Q$ and $\epsilon=O(s)$. The first term of DS2
+has coefficients $O(\eta s)U(W/Z)$ and
+$O(\sqrt{\eta s})U(W/Z)$ on $PN_x$ and $N_QN_x$, respectively;
+these are infinitesimal under DS1. In the second term, the three
+coefficients after expanding $E^2/\eta$ are
+\[
+ O(\eta s)u\phi,\qquad O(\sqrt{\eta s})u\phi,
+                                      O(1)u\phi
+\]
+on $P^2$, $PN_Q$, and $N_Q^2$. They are all infinitesimal, since
+$u$ is infinitesimal and $\phi$ bounded. The last term of DS2 has
+coefficient $O(suv)$ on $PN_x$, also infinitesimal. This allocates
+the complete missing normal on the existing strict frame; no old
+$E/\sqrt\eta$ pivot is reintroduced. The same retained positive
+rows and sign-core join used in DG3 prove the assertion.
+
+\paragraph{A direct state exit and the resulting frontier.}
+For $Z\ne0$, if $X/Z$ is unbounded, then
+$(X+uZ)/Z$ is unbounded. The following portion of the original signed
+half core is strictly positive in the pure testing field:
+\[
+ \frac{1+v^2}{2}\big\{(X+uZ)^2-(1+u^2)Z^2\big\}>0.
+                                                               \tag{DS3}
+\]
+Every remaining original packet has a nonnegative pure-source
+coefficient, including the other two half-core squares. A real
+closed testing field therefore gives a direct tensor-SOS certificate.
+This exit uses no contact or source estimate. Consequently the
+remaining nontrivial real state chart, after the sign gauges, can be
+restricted to
+\[
+ WZ>0,\quad Z\ne0,\quad X/Z\text{ bounded},\quad
+                              u^2W/Z\text{ unbounded}.         \tag{DS4}
+\]
+After normalizing a $W$-unit state by $W=1$, DS4 says
+$Z/u^2$ is positive infinitesimal. In addition, the separate DG
+source admission removes every source with $x/\eta$ bounded. These
+are pure-source and pure-testing reductions, not a comparison of
+their rates.
+
+For a complex state satisfying the modulus version of DS1, use a
+common testing phase to make nonzero $Z$ real. Its real part satisfies
+DS1 and its imaginary part has $Z=0$; each has the indicated complete
+certificate. All displayed formulas include the local axes by their
+literal values. The focused checker verifies DS2 and the exact
+original-parent packet accounting used in DS3. No all-tests claim is
+made for the remaining source chart $x/\eta$ unbounded.
+
+\paragraph{Precise remaining normalized corner and residual.}
+Combine DG1, DS3--DS4, the inherited reciprocal-angle local theorem,
+and the negative-core consequence $uvW/Z$ bounded from this
+revision's sign-core Schur formula. On a normalized $W$-unit state,
+the only remaining C14.3b corner has
+\[
+ \begin{gathered}
+ x/\eta\text{ unbounded},\qquad
+ u,v>0\text{ infinitesimal},\quad v/u\text{ infinitesimal},\\
+ W=1,\quad Z>0,\quad Z/u^2\text{ infinitesimal},\quad
+ X/Z\text{ bounded},\quad uv/Z\text{ bounded}.
+ \end{gathered}                                             \tag{DS5}
+\]
+All original source openings and $\beta\ge0$ remain. The two last
+terms of DS2 are already infinitesimal Grams on the strict damped
+frame throughout DS5. The sole unallocated expression is exactly
+\[
+                         \epsilon U(W/Z)E\xi.               \tag{DS6}
+\]
+As $s\asymp x$ on this pure-source branch, its coefficients after
+$E=\eta P+\eta Q$ have orders
+$\eta x\,UW/Z$ and $\sqrt{\eta x}\,UW/Z$ on $PN_x$ and
+$N_QN_x$. The negative-core bound on $uvW/Z$ only rewrites the second
+as $O(\sqrt{\eta x}\,u/v)$; it does not bound it in independent
+source/testing fields. Thus DS5 is a genuine remaining chart and
+DS6 a precise remaining complete normal. No source/testing ordering
+or additional strict pivot is claimed to remove it.

@@ -1,0 +1,133 @@
+THE NATIVE C1/C2 CONTACT-SCALAR GRAM HAS RANK THREE
+26 October 2026. Private bounded structural result.
+
+Statement. For every finite native C1 or C2 contact with the original
+strict gaps and permitted zero-event coefficients, the unique three-by-
+three contact-scalar Gram G_gamma is POSITIVE DEFINITE. It does not lose
+rank on the C2 maximally entangled subfamily, on n=0, or on either
+permitted C1 face D=0 or beta=0. No source-uniform numerical lower
+bound is claimed, and no conclusion about the full state-coupling Gram
+follows. The proof uses the explicit determinant geometry, not a generic
+five-parameter determinant expansion.
+
+Definitions for C2. Keep d=1,lambda=beta=0 and the actual contact
+ u_c=c>0, v_c=ac>0,
+ psi_c=(b/a,-cr,c h/a,1), h=b-a^2t>0,
+ delta=det(Psi_c)=(b+zr h)/a>0, z=c^2.
+Let P(u,v) be the complete raw state matrix SG2. Put
+ gamma=psi_c^T P(u,v)psi_c/(4delta^2), s=u-u_c,t'=v-v_c.
+Its unique Gram on (s,t',s t') is
+ G_gamma=[[A0,C0,D0],[C0,B0,E0],[D0,E0,F0]],
+with A0=gamma_uu/2, B0=gamma_vv/2, C0=gamma_uv/2,
+D0=gamma_uuv/4, E0=gamma_uvv/4, F0=gamma_uuvv/4, all at contact.
+The preceding scalar lemma proves G_gamma>=0, including all zero-face
+cases, from global physical validity and separate degree <=2.
+For C1 use lambda=n=0, d,m,C,A,alpha>0, D,beta>=0,
+D+beta>0 and the original strict gaps. EN13/NC1 give
+ psi_c=(S,k(theta-1),kSr,1), S,k>0, 0<r,theta<1,
+ delta=S(1+k^2 r(1-theta))>0.
+Thus all four contact amplitudes are nonzero also on D=0 or beta=0.
+This uses only the cited native signs, without a generic expansion.
+
+1. The fixed-state scalar has exactly one finite zero.
+
+SG5--SG6 give det P=16 Du^2Dv^2 u^2v^2 L(u^2,v^2). Two outer
+coefficients are strictly positive on EVERY stipulated native C1/C2 source:
+ q_01=4alpha m t5 t8>0 and q_10=4alpha A t7 t3>0.
+Their Laurent exponents (-1,0),(0,-1) are independent. Consequently
+the Hessian of L(exp(x),exp(y)) is positive definite everywhere:
+it is sum_e q_e exp(e dot (x,y)) e e^T. The actual contact gives a
+stationary zero, so it is the unique zero in squared-angle space.
+This remains true at n=0, D=0 or beta=0, since neither displayed
+positive coefficient has these quantities as a factor; the t_i remain
+strictly positive from d>0.
+
+For uv!=0, if gamma vanishes then positivity makes psi_c a kernel
+vector of P(u,v). The determinant must vanish, so
+(u,v)=(+/-u_c,+/-v_c). SG3 gives exactly one kernel direction at each
+such point. The sign congruences make it the corresponding sign change
+of psi_c. Since W_c,X_c,Y_c,Z_c are ALL nonzero, no nontrivial sign
+change is proportional to psi_c. Hence only (+u_c,+v_c) is a zero of
+gamma. At compatible angles the next argument also excludes zeros.
+
+2. The angular Hessian is strictly positive.
+
+The positive log-Hessian of L makes Hess(det P) positive definite at
+the contact: the prefactor is positive and L and its first derivatives
+vanish there. The coordinate map from (u,v) to (log u^2,log v^2)
+has invertible derivative at the contact.
+Let H3 be the positive WXY principal block, with off-column beta3.
+For the FIXED contact state psi_c=(xi_c,1), near contact one has the
+ordinary real-matrix identity
+ psi_c^T P psi_c
+ =(xi_c+H3^{-1}beta3)^T H3(xi_c+H3^{-1}beta3)
+   +det(P)/det(H3).
+The first term is nonnegative and vanishes at contact; the second
+has strictly positive Hessian there. Thus Hess(gamma)>0. In particular
+the leading two-by-two block of G_gamma is positive definite. This
+pointwise identity is used ONLY to prove a source-only rank statement;
+it is not division inside the source/testing tensor ring.
+
+3. The scalar is strictly positive at every projective boundary.
+
+If either measurement pair commutes, H_CHSH>=0 as an operator. All
+event penalties are nonnegative, including the A-event at fixed
+settings 00. It gives, for the fixed source state,
+ gamma/(DuDv)>=A Y_c^2/delta^2>0
+at every such compatible testing pair. This includes u=0, v=0 and
+all projective u=infinity or v=infinity endpoints, interpreted in
+the homogeneous normalized state matrix. This needs A>0,Y_c!=0,
+which hold on both native domains, including the permitted zero faces.
+
+4. Every possible Gram kernel is excluded.
+
+Suppose G_gamma w=0 for a nonzero real w=(x,y,zeta).
+If xyzeta!=0, (s,t',s t') is proportional to w at
+s=zeta/y,t'=zeta/x. This gives a SECOND finite zero of gamma,
+contradicting part 1.
+If zeta=0, the strict two-by-two block from part 2 excludes w.
+The remaining cases have zeta!=0 and x=0 or y=0. If x=0,y!=0,
+put s=zeta/y and let t' tend to infinity. Then
+ gamma/t'^2 -> (0,1,s) G_gamma (0,1,s)^T=0,
+contradicting strict positivity at the v-projective endpoint. The
+case y=0,x!=0 is the corresponding u-endpoint. If x=y=0, the
+u,v joint-projective leading coefficient is F0=0, again contradicting
+part 3. Thus ker G_gamma={0}, proving rank three.
+
+Equivalently, its derivative coefficients satisfy the strict
+SOURCE-only inequalities
+ A0>0, A0 B0-C0^2>0,
+ (A0 B0-C0^2)F0 > B0 D0^2-2C0 D0 E0+A0 E0^2.
+In particular G_gamma^{-1} exists over the source field; no division
+by n, D or beta is needed. These are qualitative strict inequalities, with no
+fixed real conditioning margin asserted near degenerating sources.
+The hypotheses and conclusion are first-order polynomial/rational
+conditions (global physicality is positivity of P at all real tests).
+The real theorem therefore transfers to real closed source fields.
+Its inverse is a legitimate pure-SOURCE inverse, not an inverse of
+an element mixing source and testing fields.
+
+5. Exact named contacts; no scan.
+
+The accompanying short checker reconstructs the scalar from SG2,
+then verifies its Gram identity and all three positive leading minors
+at three previously specified contacts:
+ - nonME: source (1,7/66,5/33,5/22,10/33,16/33,9/22),
+   contact (1,1;5/4,-1/4,1/2,1),
+   det G_gamma=22341120/214358881;
+ - ME equal-angle: source (1,1/16,3/16,3/4,9/16,7/16,1/28),
+   contact (1/2,1/2;1,-1/4,1/4,1),
+   det G_gamma=1536000/4092529;
+ - ME unequal-angle: source
+   (1,43/299,77/1495,891/598,385/299,119/598,9/598),
+   contact (1/4,1/2;1,-1/8,1/8,1),
+   det G_gamma=1184333071122432/2385816269809375.
+Source order is (d,n,m,C,A,D,alpha). These checks illustrate the
+general rank theorem; they are not its proof.
+
+Consequence for the ongoing construction. There are always THREE
+effective scalar angular channels. A maximally entangled reduction
+cannot discard one by claiming det G_gamma=0. The coupling completion
+may use an ordinary source-only inverse, rather than a pseudoinverse
+or a rank case split, but still must establish its remainder inequality
+with a fixed testing library. Nothing here removes that obligation.

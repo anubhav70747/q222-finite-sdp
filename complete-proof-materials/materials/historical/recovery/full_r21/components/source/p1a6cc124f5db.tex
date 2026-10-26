@@ -1,0 +1,187 @@
+\section{C14.4 at large $\zeta$: every unmatched Bob residue}
+\label{sec:r18-c144-bob-residue}
+
+\paragraph{Precise admission.}
+Retain the entire original C14.4 source: $x,L>0$ infinitesimal,
+$\eta$ unbounded, $\zeta=L/x$ noninfinitesimal, all original physical
+intersections, every positive opening, and either permitted literal
+$D=0$ or $\beta=0$. This section additionally assumes $\zeta$
+unbounded. Put
+\[
+ \sigma=1/\eta,\qquad S=\sigma+L,\qquad
+ \nu=\sigma/S,\qquad \ell=L/S=1-\nu.
+\]
+For a real projective Bob test choose its normalized homogeneous
+coordinates $(c,s)$, so $c^2+s^2=1$; on the finite chart these are
+$c=(1+v^2)^{-1/2}$, $s=vc$. The complete original parent is tensor SOS
+at every independent test and state satisfying
+\[
+                         \overline{s^2}\ne\overline\ell.       \tag{EB1}
+\]
+Bars mean real residues of bounded elements in their respective fields.
+This compares real residues only, not independent infinitesimal rates.
+The adjacent-$C,A$ theorem already covers noninfinitesimal Alice
+tests. Hence only $u$ infinitesimal is proved below. No all-tests
+closure of C14.4 is asserted: the matched residue and bounded-unit
+$\zeta$ source remain.
+
+\paragraph{Source limits, including both sphere endpoints.}
+Use ES1--ES10 without changing their source entry. Since
+$x/S\le x/L=1/\zeta$ is infinitesimal, ES7 gives
+$e=xh/\sigma$ infinitesimal, and hence $E\sim1$.
+Moreover $M=1+xr-\theta/\zeta\sim1$. ES8 then gives $m$ infinitesimal.
+The exact equation ES6, divided by $S$, is
+\[
+ e(B/S)=(x/S)H_0+\nu\mathcal H b_0^2.
+\]
+Both summands are nonnegative; $B/S$ and $\mathcal H$ tend to one.
+Consequently $\nu b_0^2$ is infinitesimal. Therefore ES5 yields
+\[
+ \frac DS-\frac{\nu^2}{2}\in\operatorname{Inf},\qquad
+ \frac\alpha S-\frac{\ell^2}{2}\in\operatorname{Inf},
+ \qquad m\in\operatorname{Inf}_{>0}.                         \tag{EB2}
+\]
+For the second formula, divide the exact ES9 expression by $S$:
+\[
+ \frac\alpha S=
+ \frac{(1+\sigma r)\{\ell R e+\ell^2ME\}}
+ {2Q(P/S)}.
+\]
+All displayed denominator factors tend to one. These are additive
+residue assertions, valid also when $\nu$ or $\ell$ is infinitesimal.
+In particular no division by either sphere coordinate is used.
+
+The opening-cleared ES8 bounds give
+\[
+ c_*=SC(1-r)\sim\tfrac12,\qquad
+ a_*=SAr\sim\tfrac12.
+\]
+Define the pure-source harmonic quantities
+\[
+ H=S(C+A),\qquad \rho=C/(C+A),\qquad
+ a_h=SCA/(C+A)=\frac{c_*a_*}{c_*r+a_*(1-r)}.
+                                                               \tag{EB3}
+\]
+Then $1/\sqrt H$ is bounded, $0<\rho<1$, and $a_h\sim1/2$,
+uniformly through both $r$ openings. No upper bound on $C$ or $A$
+has been assumed.
+
+\paragraph{An exact all-state frame for every Bob chart.}
+Let $D_u=1+u^2$ and $A_u=1+u^2s^2$, both positive testing units.
+Use the separated roots
+\[
+ p=\frac{uW}{\sqrt S},\quad q=\sqrt S Z,\quad
+ y=\frac Y{\sqrt S},\quad N_y=\sqrt H(y-\rho p),
+ \quad N_m=\sqrt m\,sW,
+\]
+\[
+ N_b=\sqrt{A_u}\left(X+\frac{uc^2}{A_u}Z\right),
+ \qquad N_r=\frac{\sqrt{D_u}\,usc}{\sqrt{A_u}}Z.
+                                                               \tag{EB4}
+\]
+Only pure-source and pure-testing radicals or inverses occur.
+In particular no inverse of $c$, $s$, $u$, or a state coordinate is
+needed. The inverse harmonic allocation
+$y=\rho p+N_y/\sqrt H$ has bounded coefficients.
+
+Write $b=X+uZ$. The exact original signed core $K/D_v$ in finite
+Bob coordinates equals the following homogeneous expression:
+\[
+\begin{split}
+ K_B={}&N_b^2+N_r^2-2D_usc\,pq
+       +Sc^2(p-y)^2+SD_us^2y^2\\
+ &+\frac{2\sqrt S\,usc}{\sqrt{A_u}}(p-y)N_b
+  +\frac{2\sqrt S\,us^2\sqrt{D_u}}{\sqrt{A_u}}(p-y)N_r.
+\end{split}                                                    \tag{EB5}
+\]
+Here $D_us$ denotes $D_u\,s$, and similarly in the other products.
+One derivation starts with CE2 divided by $D_v$, sets
+$R=usZ$, and completes its entire $(b,R)$ block:
+\[
+ A_ub^2-2D_us\,bR+D_uR^2=N_b^2+N_r^2.
+\]
+The cross term from
+$[\sqrt S\,c(p-y)+usb]^2$ is allocated by
+$cb=cN_b/\sqrt{A_u}+\sqrt{D_u}sN_r/\sqrt{A_u}$.
+This proves EB5 without deleting a first state normal.
+
+The original positive event roots have the exact bounded expressions
+\[
+ \begin{split}
+ M_B={}&N_m-\frac{\sqrt m\,c}{\sqrt{A_u}}N_b
+       -\frac{\sqrt{mD_u}\,s}{\sqrt{A_u}}N_r
+       +\sqrt{mS}\,us\,y,\\
+ D_B={}&\sqrt{DS}\,c(p-y)
+       +\frac{\sqrt D\,us}{\sqrt{A_u}}N_b
+       -\sqrt{D/S}\,\frac{D_us}{A_u}q,\\
+ A_B={}&\sqrt{\alpha D_uS}\,s y
+       -\sqrt{\alpha D_u/S}\,c q.
+ \end{split}                                                   \tag{EB6}
+\]
+They are, respectively, the normalized original $m,D,\alpha$ event
+amplitudes. The formulas are valid at $D=0$ as well. In the $D$ row,
+the identity
+$usb-D_usZ=usN_b/\sqrt{A_u}-D_usZ/A_u$
+avoids an apparent reciprocal-$c$ pole.
+
+Consequently the full original quarter-parent, divided by $D_v$ on
+the finite chart, is exactly
+\[
+ \mathcal P_B=N_y^2+a_hp^2+ASu^2y^2
+              +M_B^2+D_B^2+A_B^2+\beta b^2+\tfrac12K_B.
+                                                               \tag{EB7}
+\]
+The two explicit positive rows $ASu^2y^2$ and $\beta b^2$ can be
+retained unchanged. All other rows in EB7 use EB4 once. The formula
+is a full four-state identity and is not a restriction to a state ray.
+
+\paragraph{Strictness precisely off the matched residue.}
+Every coefficient of EB5 except the printed $pq$ term is either
+its fixed positive pivot or infinitesimal after EB3. In EB6, the
+$m$ row is $N_m$ plus infinitesimal coefficients; the $D$ and
+$\alpha$ rows have only their $q$ coefficients at residue.
+Use EB2, $A_u,D_u\sim1$, and EB3. The resulting residue Gram on
+$(N_y,N_m,N_b,N_r,p,q)$ is the direct sum of
+$\operatorname{diag}(1,1,1/2,1/2)$ and
+\[
+ \frac12
+ \begin{pmatrix}
+ 1&-\bar s\bar c\\
+ -\bar s\bar c&\bar\nu^2\bar s^2+\bar\ell^2\bar c^2
+ \end{pmatrix}.                                                \tag{EB8}
+\]
+The determinant of this last block is
+\[
+             \frac14(\bar s^2-\bar\ell)^2.                    \tag{EB9}
+\]
+Thus EB1 makes the entire bounded finite Gram strictly positive.
+The separated bounded-Gram lemma gives tensor SOS, and restoring the
+two retained positive rows proves the complete parent. The roots are
+allowed to be dependent or even identically zero at an endpoint; the
+claim concerns the coefficient Gram, so this does not affect the
+argument.
+
+The same homogeneous formulas allow $c=0$ and $s=0$ literally.
+They include every Bob projective endpoint, every sign, and every
+local Alice axis. Nonlocal Alice charts use the inherited adjacent
+$C,A$ theorem. The real and imaginary state parts are treated
+separately. Every normalization is pure source or pure testing.
+
+\paragraph{The exact remaining obstacle.}
+The leading scalar has the useful two-square identity
+\[
+ \tfrac12p^2-sc\,pq
+ +\tfrac12(\nu^2s^2+\ell^2c^2)q^2
+ =\tfrac12(p-scq)^2+\tfrac12(s^2-\ell)^2q^2.                  \tag{EB10}
+\]
+It does not complete the matched-residue chart: there the second
+pivot collapses, and the actual source corrections must be allocated
+through exact contact conductors. Arbitrary small positive $D$ or
+$\beta$ openings do not supply a missing fixed pivot. Unit $\zeta$
+also requires new source limits because $e$ can have nonzero residue.
+These two obligations are retained, not declared empty.
+
+The focused checker verifies EB5--EB7 as complete homogeneous
+quadratic identities and EB9--EB10 algebraically. Source estimates
+EB2--EB3 are the analytical consequences of the already proved
+ES identities given above. This is a partial-domain admission only.

@@ -1,0 +1,85 @@
+ONE UNEXTRACTED GLOBAL INPUT AFTER QUANTITATIVE R1: THE C2 R2 BRANCH
+
+Conclusion. The printed assembly does not reduce all canonical sources
+to finitely many copies of the quantitative R1 family. R1 is one branch
+of that assembly. A concrete additional input is the actual C2 R2
+bounded-a theorem RL1--RL24. A different finite generation/relabeling
+theorem might eventually replace it; no such theorem has been proved
+by the current cap/Bob results. In particular this note does not assert
+that a R2 source is outside the existing affine cone, only that its
+admission is not established by the quantitative R1 theorem.
+
+Exact references, current github-q222-finite-sdp sources:
+* latex/chapters/07_cover.tex, LC3 and the canonical-certificate proof
+  (lines35--77): bounded coefficient sources and both C1/C2 contact
+  partitions are separate inputs; no finite R1-generation identity occurs.
+* latex/certificates/c2_short.tex, component:p393d3faa269a,
+  section 'Two small actual angles: the R2 sector', RL1--RL24
+  (lines10064--10375). The premise is t_s positive unbounded, with
+  B_s,a_s B_s,t_s B_s infinitesimal, and bounded a_s or infinitesimal p.
+* The same file, component:p8f8780350b13, R2O1--R2O24
+  (lines11256--11599), supplies complementary tests. Its opening
+  explicitly states that the reflected source is NOT asserted to be
+  an original R1 source. Reflection reuses algebra, not R1 admission.
+
+An actual source path makes the distinction concrete.
+
+In the common RSR dictionary set, for0<s<=2^-10,
+ B=s^2, T=1/s, j=1, p=1/2, H=s/2.
+Then x=jB=s^2,y=TB=s. The inverse native coordinates RSR3 are
+ a_s=1, B_s=s^2, t_s=1/s, r=h=1/(2+s^2).
+Thus this is precisely RL1's bounded-a R2 branch as s becomes
+infinitesimal. T is not merely near the R1 cutoff: it is>=1024.
+Both contacts nevertheless lie INSIDE the new testing cap:
+sqrt(x)=s<=1/1024 and sqrt(y)<=1/32. Testing coverage alone
+therefore cannot supply the missing source admission.
+
+This path is physical, not just a list of positive shape variables.
+Direct substitution in the actual source formulas gives
+ E=1, L=s+1/2+3/(2s), HT=1/2,
+ 8N=s^6-s^5+5s^4-7s^3+6s^2-8s+4>3.
+The last inequality holds throughout the displayed range by dropping
+positive terms. Hence n=N/[2(j-p)P]=N/P>0. P>0 and all remaining
+RSR6 weights and strict native gaps are positive; the D numerator's
+additional bracket is1-s/2+s^2/2>0. Stationarity is the original RSR
+identity, so the existing SG7 theorem proves global physical validity.
+For orientation, C,A~3/(4s), D~3s/8, alpha~9s^3/16;
+the d=1 source is not in the bounded-coefficient LC3 branch either.
+
+The first precise universal implication still needed for this branch
+is a fixed finite source-independent testing library and source-only
+PSD Gram witnesses for these R2 sources (ultimately the whole RL1
+domain), at EVERY independent testing/state point, with literal axes,
+projective endpoints and permitted zero faces. Alternatively one must
+prove a finite, explicitly evaluated source-cone reduction to families
+already admitted. Neither follows from applying a source-dependent
+angle rescaling or from equality of scalar determinant identities.
+
+What is already short and directly extractable here.
+
+SH1 in c2_short.tex (lines10402ff) is an exact opposite-square identity
+with the fixed rational choice a=3/2,K=3. On the gauged chart
+u,v>=0,w*zeta>=0, after restoring the homogeneous state factor,
+all its square roots lie in the following ELEVEN fixed testing functions:
+
+ u*w, v*w, zeta, u*v*zeta, u*v*w,
+ sqrt(u*v)*w, sqrt(u*v)*zeta, v^2*w, v^2*zeta,
+ u*v*sqrt(w*zeta), v^2*sqrt(w*zeta).
+
+Indeed U=u/sqrt(x),V=v/sqrt(y),Zstar=zeta/sqrt(jT) introduce
+only source factors; homogenizing the last SH1 term gives
+2K*w*Zstar*(UV-V^2)^2. Its root uses sqrt(w*zeta), with a
+pure-source factor(jT)^(-1/4). There is no moving testing branch
+point. This primitive can be compiled directly, but it does not pay
+the two complete state normals by itself.
+
+The actual full R2 proof additionally uses the source-only shear
+Lnormal=M0+Hq (RL11), the entire correlated n block (RL13), the
+shifted q diagonal (RL14), and every helper/normal in RL18--RL24.
+Those paragraphs give asymptotic O-bounds, sufficiently large real
+helper pivots and a strict-residue Gram; no evaluated uniform numeric
+budget for them on a real source box is printed. The outer join is
+likewise a distinct R2 theorem. Quantifying that complete mechanism,
+rather than the already finite SH1 identity alone, is the unextracted
+admission step identified here. This is a source-coverage requirement
+of the current proof, not an impossibility claim about other reductions.

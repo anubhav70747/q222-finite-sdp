@@ -1,0 +1,166 @@
+{
+  "examples": [
+    {
+      "case": "nonME",
+      "active_order": [
+        "d",
+        "n",
+        "m",
+        "C",
+        "A",
+        "D",
+        "alpha"
+      ],
+      "source": [
+        "1",
+        "7/66",
+        "5/33",
+        "5/22",
+        "10/33",
+        "16/33",
+        "9/22"
+      ],
+      "u_contact": "1",
+      "v_contact": "1",
+      "state": [
+        "5/4",
+        "-1/4",
+        "1/2",
+        "1"
+      ],
+      "det_Psi": "11/8",
+      "G_gamma": [
+        [
+          "136/121",
+          "-900/1331",
+          "-52/1331"
+        ],
+        [
+          "-900/1331",
+          "130/121",
+          "590/1331"
+        ],
+        [
+          "-52/1331",
+          "590/1331",
+          "538/1331"
+        ]
+      ],
+      "positive_leading_minors": [
+        "136/121",
+        "1329280/1771561",
+        "22341120/214358881"
+      ],
+      "rank": 3
+    },
+    {
+      "case": "ME_equal_angles",
+      "active_order": [
+        "d",
+        "n",
+        "m",
+        "C",
+        "A",
+        "D",
+        "alpha"
+      ],
+      "source": [
+        "1",
+        "1/16",
+        "3/16",
+        "3/4",
+        "9/16",
+        "7/16",
+        "1/28"
+      ],
+      "u_contact": "1/2",
+      "v_contact": "1/2",
+      "state": [
+        "1",
+        "-1/4",
+        "1/4",
+        "1"
+      ],
+      "det_Psi": "17/16",
+      "G_gamma": [
+        [
+          "2",
+          "-270/289",
+          "8/289"
+        ],
+        [
+          "-270/289",
+          "6/7",
+          "744/2023"
+        ],
+        [
+          "8/289",
+          "744/2023",
+          "1600/2023"
+        ]
+      ],
+      "positive_leading_minors": [
+        "2",
+        "491952/584647",
+        "1536000/4092529"
+      ],
+      "rank": 3
+    },
+    {
+      "case": "ME_unequal_angles",
+      "active_order": [
+        "d",
+        "n",
+        "m",
+        "C",
+        "A",
+        "D",
+        "alpha"
+      ],
+      "source": [
+        "1",
+        "43/299",
+        "77/1495",
+        "891/598",
+        "385/299",
+        "119/598",
+        "9/598"
+      ],
+      "u_contact": "1/4",
+      "v_contact": "1/2",
+      "state": [
+        "1",
+        "-1/8",
+        "1/8",
+        "1"
+      ],
+      "det_Psi": "65/64",
+      "G_gamma": [
+        [
+          "4352/1495",
+          "-722304/1263275",
+          "744448/1263275"
+        ],
+        [
+          "-722304/1263275",
+          "11968/37375",
+          "1396736/6316375"
+        ],
+        [
+          "744448/1263275",
+          "1396736/6316375",
+          "9381888/6316375"
+        ]
+      ],
+      "positive_leading_minors": [
+        "4352/1495",
+        "193173815296/319172745125",
+        "1184333071122432/2385816269809375"
+      ],
+      "rank": 3
+    }
+  ],
+  "all_three_exact_Gram_identities_and_strict_positive_minors_pass": true,
+  "general_rank_result": "rank G_gamma=3 for every finite native C2 contact with strict gaps, including n=0; see the analytical proof in the matching .txt",
+  "scope": "No uniform eigenvalue bound, complete state-coupling certificate, or multiplier removal."
+}

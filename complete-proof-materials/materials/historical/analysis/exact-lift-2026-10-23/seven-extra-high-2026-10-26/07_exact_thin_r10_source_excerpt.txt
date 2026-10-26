@@ -1,0 +1,518 @@
+Source: group_07.tex:7758-8023
+\section{\texorpdfstring{The positive-$n$ thin R10 layer: an exact extra row and a bounded conductor perturbation}{The positive-n thin R10 layer: an exact extra row and a bounded conductor perturbation}}
+\label{component:pef37475d831e}
+% Scoped mathematical certificate; see local_identity_audit.closure.json for exact changes.
+
+
+\paragraph{Domain.}
+All polynomial identities below use the convention $F/4$, as in
+R10.9; in particular the original $n$ packet is $nD_uD_vX^2$.
+All parent and packet identities in this section use the common normalization $F/4$.
+Keep every original R10 condition and assume
+$\rho=n/e^2>0$ infinitesimal. Use $s,w,b,x,B$ from R10.2.
+Dividing that exact identity by $w$ gives
+\[
+ Q_*-(b/w)K_*=2r\Delta_*\rho w,
+ \qquad b/w\sim1/t.
+\tag{TL1}
+\]
+Thus $\psi=w/b$ is a positive bounded unit. No testing rate occurs.
+The formal native C1 map OP4 is
+\[
+ x_1=x,\quad\eta_1=t,\quad\zeta_1=s,\quad r_1=h,\quad
+ \theta_1=e,\quad t_1=\theta_1/\zeta_1=w.
+\]
+Write $P_d=P_n/B$. OP3--OP5 give the exact slack
+\[
+ s_n=2r\Delta_*\rho w/P_d,\quad
+ \beta_1=-s_n/2,\quad \pi=1-s_n=1+2\beta_1>0,\quad
+ \kappa=(1+2n)/\pi.
+\tag{TL2}
+\]
+Hence $s_n/w=O(\rho)$, $\beta_1$ is infinitesimal, and
+$\kappa\sim1$. The formal C1 parent is used through its explicit
+identities, not imported as a physical C1 source theorem.
+
+\paragraph{Exact coefficient comparison.}
+Let $F_1$ be the native C1 parent at this same contact, normalized by
+$d_1=1$, and $F_2$ the actual C2 parent, with $d_2=1$.
+For a coefficient $L$ put $\delta L=L_2-\kappa L_1$.
+Set $K=1+x$, $c_a=1+xr$, $S_c=1+B(1-h)+xr$, $Q_c=1-hB$,
+and $\Theta=n/B=\rho w\psi$. The following short polynomials are
+bounded with the displayed unit denominators:
+\[
+ P_\kappa=c_a^2+sx(1+t)+sx^2(r+he+t),
+\]
+\[
+ P_D=tx^2r^2+x\{t-1+e(1-h-2t)\}-1,\quad
+ P_\alpha=1+s-2e+x\{r^2+s(r+he)\}.
+\]
+Exact cancellation of the original C2 and native C1 formulas gives
+\[
+\begin{array}{c|l}
+ \delta m&0\\
+ \delta C&-\Theta c_a/(1-h)\\
+ \delta(Ah)&-\Theta t c_aS_c/[K(h+t)]\\
+ \delta D&\Theta S_cP_D/[K(h+t)tj]\\
+ \delta\alpha&-nxP_\alpha/(KQ_c)\\
+ \delta d=1-\kappa&-2\Theta P_\kappa/[K(h+t)]\\
+ \delta\beta+\delta d/2&-n.
+\end{array}
+\tag{TL3}
+\]
+In particular $\delta C,\delta D,\delta d,\delta(Ah)=O(\rho w)$,
+while $\delta\alpha=O(nx)$. There is no surviving $1/h$ after the
+large $A$ event is centered.
+
+\paragraph{The formal C1 local identities still supply a strict base.}
+The native $\eta_1$ is a unit, $k_1,\zeta_1,r_1$ are infinitesimal,
+and $e_{1,\mathrm{scale}}^2=tb$ is bounded. Separate its positive-unit
+and infinitesimal types. Use respectively the exact centered-$A$
+CA5/CA8 construction (or its CS1 scaling) and the SE4/SE9--SE11
+construction. This use concerns the printed formulas and conductor
+lemmas; the physical-source theorem is not being invoked at $\beta_1<0$.
+Here are all changes to their source premises:
+
+The formulas and native stationary identities are rational identities,
+valid at the formal OP4 contact. All native gaps remain positive; $M=g$
+and $J=j$ are units. The other native event coefficients are positive,
+with $C_1,D_1,A_1h$ positive units and $A_1$ unbounded. The opening
+ratio $t_1/e_{1,\mathrm{scale}}^2=w/(tb)$ is a positive bounded unit
+by TL1, which supplies the only scale bound previously obtained from
+$\beta_1\ge0$. All four retained packets SD3 involve the positive
+paired coefficient $\beta_1+1/2=\pi/2$, never a standalone
+$\beta_1$ square. In SE4, the coefficient of the reserved normal packet
+is $(2+4\beta_1)\nu$, so its subtraction of $\nu$ is still positive,
+since $\beta_1$ is infinitesimal. The remaining source bounds, finite
+coquotients and strict residue matrices are unchanged. A positive-unit
+normalization to $C_1=2$, when used by those formulas, changes none of
+these bounds. Consequently their exact local construction yields the
+same strict bounded eight-root Gram and positive retained packets for
+$\kappa F_1$ on its contact chart.
+
+\paragraph{A new positive contact-zero $n$ row.}
+Use the inherited pure-testing coordinate and normals
+\[
+ \mathfrak w=(W+uY)/D_u,\quad A_t=v\mathfrak w,\quad
+ X=N+pD_uA_t-uZ,\quad p=t_1/R_1,
+\]
+with $D_u=1+u^2,D_v=1+v^2$. In the exact CA chart the contact is
+\[
+ (u,\mathfrak w,v)=(k,\delta k,\delta k^2E),\quad
+ K_c=\delta^2Ek^2=\zeta_1K/Q.
+\]
+Here $Q,E$ denote the inherited CA source letters, not the angular
+weight of R10. The SE chart has $k=\varepsilon j$,
+$\delta=1/\varepsilon$, so $K_c=j^2E$.
+Put $\gamma=r/K_c$ and retain the entire state-linear square
+\[
+ \boxed{\quad \mathcal N^2=nD_uD_v(X+\gamma A_t)^2.\quad}
+\tag{TL4}
+\]
+At the actual contact $A_t=K_ck$ and $X=-rk$, so its value and
+all first derivatives vanish exactly. The square root of $D_uD_v$ is
+pure testing; every other radical or inverse is pure source or pure
+testing. The following entire-parent identity includes its full normal:
+\[
+\begin{split}
+ nD_uD_vX^2-\mathcal N^2
+ ={}&2n\gamma D_uD_vuA_tZ
+ -(2n\gamma pD_u+n\gamma^2)D_uD_vA_t^2\\
+ &-2n\gamma D_uD_vA_tN.
+\end{split}
+\tag{TL5}
+\]
+There is no remaining hard quadratic from this subtraction. This row
+is necessary: without it the scalar $nu^2$ lies outside the old raw
+square ideal, even if $n/k^4$ is infinitesimal.
+
+\paragraph{Exact bounded stress after the positive packets.}
+Let $A_{*,1}$ be the inherited bounded centered-$A$ cap. In the actual
+parent retain $(A_2-\kappa A_{*,1})D_uD_v(Y-huW)^2$, which is positive
+because $A_2$ is unbounded and $\kappa A_{*,1}$ bounded. Comparing with
+the corresponding retained packet of $\kappa F_1$ replaces the whole
+$A$ difference by
+\[
+ \delta(Ah)D_uD_v(2uWY-hu^2W^2).
+\]
+After retaining TL4, the full difference of the bounded remainders is
+exactly
+\[
+\begin{split}
+ \mathscr E={}&\bigl[nD_uD_vX^2-\mathcal N^2\bigr]
+   -nD_v(X+uZ)^2+\delta C D_v(uW-Y)^2\\
+ &+(\delta D+\delta d/2)R_{D,\mathrm{event}}^2
+   +\delta\alpha D_u(vY-Z)^2\\
+ &+(\delta d/2)D_u\{(vY-Z)^2-D_vZ^2\}\\
+ &+\delta(Ah)D_uD_v(2uWY-hu^2W^2),
+\end{split}
+\tag{TL6}
+\]
+where $R_{D,\mathrm{event}}=uW+uvX-Y-vZ$ is the original event
+row. This follows from TL3; in particular the paired beta difference
+is exactly $-n$. Every scalar, first-normal and hard-normal term is
+present. The full expression and its first derivatives vanish at the
+unchanged source contact, because both full parents and every retained
+square do.
+
+\paragraph{Finite support and bounds for the unchanged conductor.}
+Work on the local chart $Z=1$, with $u,v,\mathfrak w$ positive
+infinitesimal. At zero normals set
+\[
+ V_0=1-puv\mathfrak w,\quad q_B=D_uvV_0,\quad
+ uW=u\mathfrak w+u^2h_1vV_0,\quad
+ Y=u\mathfrak w-h_1vV_0,\quad h_1=a_1/T_1.
+\tag{TL7}
+\]
+These are exact inherited state inverses. The rows $uW-Y$ and
+$R_{D,\mathrm{event}}$ are in $(v)$ at zero normals;
+$X+u=pD_uA_t$. The centered $A$ expression in TL6 is a quadratic
+in $(v,u\mathfrak w)$ with bounded coefficients. The signed-core
+line has no constant: $(vY-1)^2-D_v$ is explicitly
+$(vY)^2-2vY-v^2$. The sole state-constant term is
+$\delta\alpha D_u$. Finally TL5 is a combination of
+$uA_t=(v)(u\mathfrak w)$ and $A_t^2$, with first normal in $(A_t)$.
+Thus this is an explicit raw allocation, not an ideal-membership guess.
+
+For the unit-$e_{1,\mathrm{scale}}$ chart use
+\[
+ (A,B_c,C_c,D_0)
+ =(\mathfrak wv,\delta v,\delta E u\mathfrak w,\delta^2k^3E).
+\]
+Every scalar coefficient of $\mathscr E/\rho$ in
+$(A,B_c,C_c)^2+(D_0^2)$ is bounded with unit denominators. Both complete
+first normals belong to $(A,B_c,C_c)$ with bounded coefficients, and
+the hard-normal entries are bounded. The decisive source coquotients
+are
+\[
+ \Theta/\rho=\delta^2QEw^2/K,\quad
+ n\gamma^2/\rho=w^2r^2Q^2/K^2,\quad
+ nx/(\rho D_0^2)=Q^2w^2/K^2.
+\tag{TL8}
+\]
+The remaining $n\gamma$ coquotient has an additional $\delta^2k^2E$.
+All apparent negative $k$ powers have therefore canceled before the
+conductor is used.
+
+For the infinitesimal-$e_{1,\mathrm{scale}}$ chart use the exact SE
+parameters $w=t_1=\varepsilon^2\tau$,
+$\zeta_1=j^2QE/K$, $k=\varepsilon j$, and
+\[
+ (A,B_c,C_c,D_0)
+ =(\varepsilon\mathfrak wv,v,Eu\mathfrak w,\varepsilon^2j^3E).
+\]
+The full raw scalar allocation of $\mathscr E/\rho$ is
+\[
+ f_AA^2+f_{BB}B_c^2+f_{BC}B_cC_c+f_{CC}C_c^2+f_0D_0^2.
+\tag{TL9}
+\]
+All five coefficients are bounded; after division by $\rho$ each has a
+factor $\varepsilon^2$. The $A^2$ coefficient has this factor by TL10;
+all its other terms carry $p=\varepsilon^2\tau/R_1$, because
+$\delta m=0$. The coefficients of $B_c^2,B_cC_c,C_c^2$ have it
+from $\Theta/\rho$, and the constant coefficient from the final
+identity in TL10. In particular
+\[
+ \Theta/\rho=\varepsilon^2\tau^2QE/K,
+\]
+\[
+ \frac{n\gamma^2}{\rho\varepsilon^2}
+ =\frac{\varepsilon^2\tau^2r^2Q^2}{K^2},\quad
+ \frac{n\gamma}{\rho\varepsilon}
+ =\frac{\varepsilon^3j^2E\tau^2rQ^2}{K^2},\quad
+ \frac{nx}{\rho D_0^2}
+ =\frac{\varepsilon^2\tau^2Q^2}{K^2}.
+\tag{TL10}
+\]
+The first-normal coefficients are in $(A,B_c,C_c)$ with bounded
+arrays, also divisible by $\varepsilon^2$ after division by $\rho$;
+the new $A$ coefficient has the stronger $\varepsilon^3j^2$ factor
+printed in TL10. The extra term $-nD_v(X+u)^2$ has scalar coefficient
+$-np^2D_u^2D_v$ on $A_t^2$, first normal
+$-2npD_uD_vA_tN$, and hard term $-nD_vN^2$; TL10 and
+$p=\varepsilon^2\tau/R_1$ bound each normalized coefficient.
+
+Exactly as in SE8, all dependence of the raw coefficients on
+$\mathfrak w$ comes through $V_0$ and has a factor
+$p=O(\varepsilon^2)$. The additional TL5 coefficients are independent
+of $\mathfrak w$. Modulo $\varepsilon$, scalar raw coefficients are
+even in $u,v$; the normal raw coefficients are independent of
+$\mathfrak w$. Clearing powers of $D_u$ and the source unit
+denominators preserves these properties. These are precisely the
+finite divisibility premises of SE7: the first scalar conductor has
+$T_{\mathfrak w}\in(\varepsilon)$, the second-stage remainders have
+$T_{\mathfrak w}\in(\varepsilon,v)$, and each full normal has
+$T_{\mathfrak w}\in(\varepsilon)$.
+
+For either chart, TL6 has exact contact value and first-jet zero.
+Apply the inherited monic contact lift to $\mathscr E/\rho$:
+CC3--CC6 in the first chart and the division-free SE7 lift in the
+second. The raw support restriction retains only $D_0^2$, not arbitrary
+mixed $D_0$ products. The proofs use only finite monic division and
+bounded unit denominators; extending their coefficient ring by the
+bounded source letters in TL8--TL10 changes nothing. They give a
+bounded Gram matrix on the same eight inherited roots for
+$\mathscr E/\rho$. Hence the exact stress $\mathscr E$ has an
+infinitesimal Gram matrix on that list. No inverse of $\rho$ occurs in
+its final coefficients: division by $\rho$ here records the common
+positive source factor before a linear finite lift.
+
+Adding this infinitesimal matrix to the strict formal-C1 base Gram
+preserves its positive residue. Restore all its retained packets,
+the modified positive centered-$A$ packet, and TL4. This proves the
+full actual C2 parent on the thin-layer contact chart, with both
+complete normals, all hard couplings and every independent rate.
+The direct actual-C2 outer/state argument and the all-R10 remote
+argument are required for the all-tests join; no negative formal-beta
+packet is used in either join.
+Source: group_07.tex:9377-9409
+\paragraph{Exact source and parent.}
+Put $x=aB$, $y=tB$, $l=1-h$, and
+\[
+ c_a=1+xr,\quad S_c=1+B(l+ar),\quad g=1-ae+hx,\quad
+ j=c_a-l/t,
+\]
+\[
+ \Delta=a+(1+x)+(1+x)B+2x(1+x)r+a^3B^2r^2+2a^2Br
+             +tB[1+a+x+a^2Br(2-r)],
+\]
+\[
+ M=(1+x)(1+ar)(h+t)-a(1+tB)el.
+\]
+The unchanged stationary weights are
+\[
+ \begin{aligned}
+ n&=\frac{(1+ar)c_aS_c-r\Delta}{2r\Delta},&
+ m&=\frac{a^2(1+tB)e c_aS_c}{2g\Delta},\\
+ C&=\frac{c_aM}{2l\Delta},&
+ Ah&=\frac{t c_a(1+ar)S_c}{2\Delta},\\
+ D&=\frac{(1+x)(1+ar)(1-txr)S_c}{2tj\Delta},&
+ \alpha&=\frac{B^2(1+ar)M}{2(1-hB)\Delta}.
+ \end{aligned}                                                     \tag{BA1}
+\]
+Writing $D_u=1+u^2$, $D_v=1+v^2$ and
+$J_D=uW+uvX-Y-vZ$, the quarter-parent is
+\[
+ \begin{split}
+ P={}&m(vW-X+uvY-uZ)^2+nD_uD_vX^2+CD_v(uW-Y)^2
+       +AD_uD_vY^2\\
+    &+(D+\tfrac12)J_D^2+(\alpha+\tfrac12)D_u(vY-Z)^2
+      +\tfrac12D_v(X+uZ)^2-\tfrac12D_uD_vZ^2.
+ \end{split}                                                       \tag{BA2}
+Source: group_07.tex:7525-7586
+\paragraph{Scope and result.}
+Retain the original weak-C2 R10 physical stationary source, every strict
+source gap, $n\ge0$, the positive-infinitesimal total-scale intersection,
+and every inherited exclusion. Thus $t,g,j$ are positive bounded units,
+$B,h,e$ are infinitesimal, $a$ is unbounded, and $x=aB$ is infinitesimal.
+The new all-tests admission proved here is the source subdomain
+\[
+                         n/e^2\notin\operatorname{Inf}.
+\tag{R10.1}
+\]
+Every nonlocal independent testing chart is also proved on all of R10.
+The positive-$n$, infinitesimal-$n/e^2$ local complement is handled by the following thin-layer and state-entry sections; it is not covered by this weighted pivot.
+The literal $n=0$ boundary is already an inherited C1 admission, by the
+exact map specified below. These statements retain all independent rates.
+
+\paragraph{The decisive exact source scale.}
+Use the pure-source variables
+\[
+ s=1/a,\qquad w=ae,\qquad b=a^2B=x/s,
+ \quad B=s^2b,\quad x=sb,\quad e=sw,\quad r=1-sw.
+\]
+Initially $b$ is not assumed bounded. The gap $g=1-w+hx$ makes $w$
+bounded and $1-w$ a positive unit in residue. In the exact positive
+polynomials $Q_s,K_s$ printed in BA9 put
+\[
+ Q_*=1+B(1+t+ah+2ar+at)
+ +B^2\{a(h+t)+a^2[h(r+1)+t(1+r-r^2)]\},
+\]
+\[
+ K_*=(1+s)(h+t)(1+x),\qquad \Delta_*=s\Delta.
+\]
+Before imposing a bound on $b$, $Q_*\sim1$ and $\Delta_*\sim1$:
+write them using bounded $w$, infinitesimal $s,x,h$; their only
+nonconstant monomials contain $s$ or $x$. BA9 gives exactly
+\[
+ \boxed{\quad 2r\Delta_*\,n/s^2=wQ_*-bK_* .\quad}
+\tag{R10.2}
+\]
+Consequently
+\[
+ 0<b/w\le Q_*/K_*,\qquad
+ 0\le n/s^2\le wQ_*/(2r\Delta_*).
+\tag{R10.3}
+\]
+In particular $b=O(w)$ is bounded, $n=O(s^2w)$, $an$ is
+infinitesimal, and $ck=\sqrt{b/t}$ is bounded for
+$c=\sqrt{a/t}$, $k=\sqrt{x}$. This is an original-source bound,
+including equality $n=0$, not a comparison with either testing angle.
+
+After this bound every displayed source denominator is a unit in
+$(s,b,w,h,t)$ except the explicit positive monomials already canceled.
+Direct finite rational cancellation in the source formulas gives
+\[
+ \begin{gathered}
+ m/w\sim\frac1{2(1-w)},\quad
+ C\sim Ah\sim t/2,\quad D\sim\frac1{2(t-1)},\quad
+ \alpha/(s^3b^2)\sim t/2,\\
+ \lambda=\frac{m-a^2q}{ta^2B}\sim\frac12,\qquad
+ c_F\sim\frac{t-w+tb}{2t^2}>0,\qquad
+ q=nr^2+(m+\tfrac12)e^2+\alpha.
+ \end{gathered}
+\tag{R10.4}
+Source: group_07.tex:659-721
+Use the original weak-C2 variables $B=H+L$, $z,y>0$ and $0<r<1$,
+with the unchanged source gaps and nonnegative $n$. Write $e=1-r$,
+$K=1+z$, $T_c=B+zr$, and let $\delta$ be the original positive
+C2 denominator. Define the positive source polynomial
+\[
+ P_n=B+B^2+2Bzr+BHz+yB(1+z)+Hrz^2+yz^2re.
+ \tag{OP1}
+\]
+Then the following identity holds on the entire original source:
+\[
+ \boxed{\quad eP_n=(1+z)(H+y)(B+zr)+2r\delta n.\quad}
+ \tag{OP2}
+\]
+Every factor in the first summand is positive, and the second summand
+is nonnegative, including literal $n=0$. In particular the pure-source
+weights
+\[
+ q={ (1+z)(H+y)(B+zr)\over eP_n}>0,
+ \qquad s_n={2r\delta n\over eP_n}\ge0
+ \quad\hbox{satisfy}\quad q+s_n=1.                   \tag{OP3}
+\]
+Both square roots are legitimate source-field elements. Neither weight
+is assumed to have nonzero residue.
+
+\begin{proof}
+The unchanged formula for $n$ is
+\[
+ 2r\delta n=(B+zr)(1+zr)(1+zr+B-H)-r\delta.
+\]
+Substitution of the printed polynomial for $\delta$, followed by
+collecting terms, gives OP2. This is a polynomial identity, so no
+source boundary is obtained by continuity and no opening has been
+inverted except the displayed positive pure-source factors.
+\end{proof}
+
+\paragraph{Exact correspondence of the source contacts.}
+Use a subscript $1$ for native C1 notation in this paragraph. The map
+\[
+ x_1=z,\qquad \eta_1={y\over B},\qquad
+ \zeta_1={B\over z},\qquad r_1={H\over B},\qquad
+ \theta_1=e,
+ \tag{OP4}
+\]
+with $k_1=\sqrt z$ and the native parameter
+$\Delta_1=B/(z\sqrt y)$, gives
+\[
+ (u_c,v_c;W_c,X_c,Y_c,Z_c)
+ =\left(\sqrt z,\sqrt y;{B\over\sqrt{zy}},
+                       -r\sqrt z,{H\over\sqrt y},1\right)
+\]
+from the original native C1 contact formula. Thus it is the same
+contact, including all state coordinates. Direct substitution in the
+native positive polynomial $P_d$ gives $BP_d=P_n$.
+The native C1 beta coefficient at this formal contact therefore obeys
+\[
+ \beta_1=-{r\delta n\over eP_n}=-{s_n\over2},
+ \qquad \beta_1+\tfrac12={q\over2}>0.                 \tag{OP5}
+\]
+For $n=0$, the original C2 parent has
+$\lambda=n=\beta=0$. It is literally an original C1 parent,
+up to an optional positive normalization of $C$. The native source
+entry and uniqueness at stationary contact identify its coefficients
+with OP4. For $n>0$, OP5 makes the formal C1 beta negative. Hence
+Source: group_03.tex:2414-2467
+\paragraph{The source entry forced by the original sign.}
+Keep $K,Q,E,\ell,\delta$ from (CA3), with $E=b^2$ and
+$\ell=Qr=K-aE$. Here $E$ is a positive unit, $0<\ell<K$, and no lower
+bound on $a$ or $\ell$ is assumed. Put
+\[
+ \varepsilon=1/\delta,\qquad j=\delta k,\qquad t=\varepsilon^2\tau.
+\]
+Both $\varepsilon,j$ are infinitesimal: $e=\varepsilon K/Q$ and
+$\zeta=j^2QE/K$. The original condition $\beta\ge0$ gives
+\[
+ \frac{t}{e^2}\le\frac{2c_b}{\eta c_d},
+\]
+whose right side is bounded after cancelling the common native $r$
+factor. Thus $\tau$ is positive bounded. The exact chart is
+\[
+ k=\varepsilon j,\quad K=1+\varepsilon^2j^2,\quad
+ Q=K^2-\ell\varepsilon^2j^2,\quad a=(K-\ell)/E,
+\]
+\begin{align*}
+ \eta&=KE/Q,\quad r=\ell/Q,\quad H=r+\eta,\quad
+ e^2=\varepsilon^2K^2/Q^2,\\
+ \zeta&=j^2QE/K,\quad R=K^2/Q,\quad T=K-k^2t\zeta. \tag{SE1}
+\end{align*}
+All denominators displayed here are positive units. The cancelled
+coquotients $\widetilde c_i=c_i/\ell$ are the same short exact formulas
+as in (CA3); the cancellation introduces no inverse of $\ell$.
+Their residues are $2(E+\ell)$ for $i=2,b,3,5,\alpha$, and $4$ for
+$i=d$; $c_4$ has residue $2$. These formulas hold uniformly as
+$\ell$ tends to zero or to one.
+
+\paragraph{One bounded centered remainder, including both normals.}
+Set
+\[
+ A_* =\frac{ArH}{1+rH},\qquad
+ A-A_* =\frac{A}{1+rH}>0.                              \tag{SE2}
+\]
+Retain the entire square $4(A-A_*)D_uD_v(Y-r uW)^2$.
+It and its full first derivative vanish at exact native contact.
+Divide the remaining parent by the positive pure coefficient $a$;
+every factor $a$ cancels before coefficients are used. Write
+\[
+ \begin{array}{ll}
+ b_2=8\widetilde c_2e^2/(R\widetilde c_3),&
+ b_b=8\widetilde c_be^2/(R\widetilde c_3),\\
+ b_3=8/T,&b_5=8\widetilde c_5/(T\widetilde c_3),\\
+ L=Ar/a=2\eta^2c_4/(Q\widetilde c_3),&
+ d_0=d/a=2\eta\widetilde c_d/\widetilde c_3,\\
+ A_0=A_*/a=LH/(1+rH),&
+ \alpha_0=\alpha/a=2\varepsilon^4j^6Q^2\eta^2
+       \widetilde c_\alpha/(K^2\widetilde c_3).
+ \end{array}                                                     \tag{SE3}
+\]
+Every quantity in (SE3) is bounded with unit denominators, and
+$b_2,b_b$ contain $\varepsilon^2$.
+Source: group_03.tex:3126-3139
+\paragraph{A source chart with no hidden $k^2/r$ quotient.}
+Keep the exact contact variables $\delta,k,E=b^2$ from (SD6), and put
+\[
+ K=1+k^2,\quad \ell=K-aE=Qr>0,\quad
+ Q=K^2-\ell k^2,\quad a=(K-\ell)/E.
+\]
+Here $\delta,E,a$ are positive bounded units and $k,\ell$ are positive
+infinitesimals. The exact source substitution is
+\[
+ \eta=KE/Q,\quad r=\ell/Q,\quad
+ \Delta=\delta Q/K,\quad \zeta=\delta^2k^2QE/K,
+ \quad R=K^2/Q,\quad T=K-k^2t\zeta.                    \tag{CA3}
+\]
+All denominators in (CA3) are positive pure coefficient units.
+Source: group_03.tex:3195-3213
+\paragraph{The exact low-weight collection.}
+The outer/state lemma in Section~\ref{component:p364e14238053} reduces the
+independent tests to $Z=1$ and $u,w,v$ infinitesimal, with $w>0$ on
+the negative pure-core branch. Use the unchanged circuit monomials
+\[
+ A_0=wv,\quad B_0=\delta v,\quad C_0=\delta Euw,
+ \quad D_0=\delta^2k^3E,
+\]
+\[
+ x=B_0-C_0,\quad y=A_0-kC_0,\quad
+ z=uB_0-kC_0,\quad h_0=kC_0-D_0.
+\]
+Let $q_1,q_2$ be the same two separated radical pairings as in the
+contact--conductor proof, and let
+\[
+ T_4=y^2+z^2+h_0^2-2yz+2q_1^2.
+\]
+Give $(\delta,k,E,\ell,t,u,w,v)$ weights $(0,1,0,1,0,1,1,2)$.
+Then $x$ has weight two and $y,z,h_0,q_1,q_2$ have weight three.

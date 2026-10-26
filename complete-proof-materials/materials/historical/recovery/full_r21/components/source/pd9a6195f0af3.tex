@@ -1,0 +1,259 @@
+\section{All closed faces from two elementary matrix lifts}
+\label{sec:closed-faces-short}
+
+The noncoercive faces do not require a list of support masks. The
+physical classification in Proposition~\ref{prop:compat} leaves just
+two kinds of omitted exclusive pairs, and both admit short exact lifts.
+
+\begin{lemma}[Two kinds of exclusive pair]
+\label{lem:closed-face-orbits}
+Every pair of exclusive losing events is CHSH-equivalent either to
+$\{\lambda,\alpha\}$ or to $\{\lambda,m\}$. Consequently every
+noncoercive source belongs to a relabeling of one of these two closed
+coefficient faces.
+\end{lemma}
+\begin{proof}
+If the two events have the same input pair, they are the two opposite
+losing outcomes at that input. There are four such pairs. Applying
+$g_A,g_B$ from Section~\ref{sec:physical} to
+$\{\lambda,\alpha\}$ gives $\{m,D\}$ and $\{n,A\}$; applying
+$g_A$ after $g_B$ gives $\{c,\beta\}$.
+
+Otherwise exclusivity means opposite outcomes at one shared local
+measurement and different remote settings. Each of the four local
+measurements gives two such pairs. Starting from $\{\lambda,m\}$,
+the words
+\[
+ 1,\quad B,\quad T,\quad BA,\quad BT,\quad TA,\quad TB,\quad BAB
+\]
+in $g_A,g_B,g_T$, applied from left to right, give respectively
+\[
+ \{\lambda,m\},\ \{A,\beta\},\ \{c,m\},\ \{c,n\},\
+ \{\alpha,n\},\ \{A,\lambda\},\ \{D,\beta\},\ \{D,\alpha\}.
+\]
+These are all eight possibilities. Every noncoercive omission set
+contains an exclusive pair by Proposition~\ref{prop:compat}; deleting
+further coefficients only takes a closed subface.
+\end{proof}
+
+We use the following elementary matrix fact. Its proof is included to
+avoid importing a matrix factorization theorem.
+
+\begin{lemma}[An exact quadratic matrix lift]
+\label{lem:quadratic-matrix-lift}
+Let $K(t)=K_0+tK_1+t^2K_2$ be a real symmetric $r$ by $r$ matrix
+polynomial. Then $K(t)\succeq0$ for every real $t$ if and only if
+there is a skew-symmetric $S$ such that
+\[
+ \begin{pmatrix}
+ K_0&K_1/2+S\\ K_1/2-S&K_2
+ \end{pmatrix}\succeq0.                         \tag{CF1}
+\]
+\end{lemma}
+\begin{proof}
+The reverse direction is obtained by evaluation on $(z,tz)$.
+For the forward direction let $\mathcal C$ be the cone of coefficient
+triples produced by positive semidefinite Gram matrices. This cone is
+closed: for a convergent sequence of coefficient triples the Gram
+trace equals $\operatorname{tr}(K_0+K_2)$, so a sequence of realizing
+positive semidefinite Grams is bounded and has a convergent subsequence.
+
+A linear functional nonnegative on $\mathcal C$ has the form
+\[
+ \ell(K)=\operatorname{tr}(U K_0)+\operatorname{tr}(V K_1)
+                         +\operatorname{tr}(W K_2),\qquad
+ H=\begin{pmatrix}U&V\\V&W\end{pmatrix}\succeq0,
+                                                        \tag{CF2}
+\]
+where $U,V,W$ are symmetric. Positivity of $H$ implies
+$\operatorname{ran}V\subseteq\operatorname{ran}U$ and
+$W-VU^+V\succeq0$, where $U^+$ is its inverse on its range and
+zero on its kernel. On $\operatorname{ran}U$ diagonalize the symmetric
+matrix $U^{+/2}VU^{+/2}$. If $(t_j,e_j)$ are its orthonormal
+eigenpairs and $z_j=U^{1/2}e_j$, then
+\[
+ \begin{pmatrix}U&V\\V&VU^+V\end{pmatrix}
+   =\sum_j\binom{z_j}{t_jz_j}\binom{z_j}{t_jz_j}^{\!T}.       \tag{CF3}
+\]
+The remaining block $W-VU^+V$ is a sum of $w_iw_i^T$. Thus
+\[
+ \ell(K)=\sum_j z_j^TK(t_j)z_j+\sum_iw_i^TK_2w_i\ge0,
+\]
+because $K_2\succeq0$ follows by taking the leading coefficient at
+infinity. Finite-dimensional separation of the closed convex cone
+$\mathcal C$ now gives membership in $\mathcal C$, which is (CF1).
+This proof also handles $U=0$ and singular $U$ literally.
+\end{proof}
+
+For each fixed matrix size the lemma is a first-order statement in
+ordered-field arithmetic. It therefore holds over every real closed
+coefficient field as well. All changes of variables used below are
+within that one field; no inverse in a tensor product is introduced.
+
+\begin{theorem}[The missing closed face has a six-dimensional lift]
+\label{thm:closed-face-adjacent}
+On the closed canonical face $\lambda=m=0$, with every remaining
+event coefficient and $d$ nonnegative, physicality is equivalent to
+(CF1) for $r=3$ and
+\begin{align*}
+ K_0&=\operatorname{diag}(4c+4D+2d,\ 4A,\ 4\alpha),\\
+ K_2&=\operatorname{diag}(4c,\ 4A+4\alpha+2d,\ 4D),\\
+ K_1&=\begin{pmatrix}
+ 0&0&-(4D+2d)\\
+ 0&0&-(4\alpha+2d)\\
+ -(4D+2d)&-(4\alpha+2d)&0
+ \end{pmatrix}.                                           \tag{CF4}
+\end{align*}
+There are only three auxiliary variables, the independent entries of
+$S$. In particular this is an affine semidefinite lift, with no
+nonlinear inequalities in the source coefficients.
+\end{theorem}
+\begin{proof}
+The case $d=0$ is immediate from the original event-square sum and
+from the positive-square expression below, so first suppose $d>0$.
+In the parent set $W=a/u$ and send $u$ to zero while holding
+$a,X,Y,Z,v$ fixed. Put $R=a-Y$. The limiting form is a nonnegative
+multiple $2t_5(1+v^2)X^2$, with
+$t_5=d+2(\beta+n)>0$, plus
+\[
+ \begin{split}
+ G_v(R,Y,Z)={}&4c(1+v^2)R^2+4A(1+v^2)Y^2
+                  +(4D+2d)(R-vZ)^2\\
+ &+(4\alpha+2d)(vY-Z)^2-2d(1+v^2)Z^2.
+ \end{split}                                             \tag{CF5}
+\]
+Its matrix is precisely $K(v)$ from (CF4). Homogeneity of the state
+makes this limiting test legitimate. Hence physicality implies
+$K(v)\succeq0$ for every real $v$.
+
+Conversely, in this face the Laurent determinant is
+\[
+ L(U,V)=h+q_{10}/V+q_{12}V
+                   +U(q_{20}/V+q_{21}+q_{22}V),             \tag{CF6}
+\]
+and every displayed $q$ is nonnegative. The same boundary limit in
+the determinant identity of Section~\ref{sec:physical} gives exactly
+\[
+ \det K(v)=\frac{8(1+v^2)}{t_5}
+                (q_{10}+hv^2+q_{12}v^4).                  \tag{CF7}
+\]
+Indeed the transformed parent matrix has determinant
+$\det P/u^2$, and its limit is
+$2t_5(1+v^2)\det K(v)$. Thus (CF7) requires no expansion of a
+new determinant. If $K(v)\succeq0$, (CF7) makes the first three
+terms of (CF6) nonnegative for $V>0$; all the terms multiplied by
+$U$ are nonnegative. The determinant criterion, whose three hard
+eigenvalues are positive for $d>0$ and $uv\ne0$, proves positivity
+of the full parent. Polynomial continuity supplies every finite or
+projective angle endpoint. Lemma~\ref{lem:quadratic-matrix-lift}
+now proves the asserted lift.
+
+For clarity, no strictness or nonzero event coefficient was needed.
+When $d=0$, (CF5) is itself a sum of squares linear in $v$, so it
+directly supplies a Gram in (CF1). Literal zeros are therefore
+included without a limiting source argument.
+\end{proof}
+
+The lift also has a strictly feasible coefficient point. Set
+$c=A=2$, $D=\alpha=d=n=\beta=1$, and $S=0$. A permutation of
+its six coordinates gives two three-dimensional blocks. In each,
+the two diagonal hard pivots are $14,8$ and their Schur complement
+is
+\[
+ 4-\frac9{14}-\frac98=\frac{125}{56}>0.                    \tag{CF8}
+\]
+Thus the usual attained polar-duality argument applies to this lift;
+it does not require an approximate or numerical certificate.
+
+\begin{theorem}[The opposite-outcome face has two three-dimensional blocks]
+\label{thm:closed-face-opposite}
+On the closed canonical face $\lambda=\alpha=0$, define
+\[
+ p=4c+4D+2d,\qquad q=4m+4\beta+2d,\qquad r=4D+2d.
+\]
+Physicality is equivalent to the existence of one real $\zeta$ with
+\[
+ \begin{pmatrix}
+ 4m&-4m&\zeta\\
+ -4m&q+4n&q\\
+ \zeta&q&q
+ \end{pmatrix}\succeq0,\qquad
+ \begin{pmatrix}
+ p+4A&4D&-p\\
+ 4D&4D&-(4m+r)-\zeta\\
+ -p&-(4m+r)-\zeta&p
+ \end{pmatrix}\succeq0.                                  \tag{CF9}
+\]
+All original coefficient signs are retained.
+\end{theorem}
+\begin{proof}
+Set $u=\epsilon s$, $v=\epsilon$ and
+$(W,Z)=(w,z)/\epsilon$, while $X=x,Y=y$. The finite limit of
+the parent as $\epsilon$ tends to zero is
+\[
+\begin{split}
+G_s={}&4nx^2+4m(w-x-sz)^2+4c(sw-y)^2+4Ay^2\\
+ &+r(sw-y-z)^2+(4\beta+2d)(x+sz)^2-4dyz-2dz^2.
+\end{split}                                               \tag{CF10}
+\]
+The divergent terms cancel between the positive signed packet and
+the negative core. Write $J(s)$ for the matrix of $G_s$ on
+$(w,x,y,z)$. Its leading coefficient is
+$\operatorname{diag}(p,0,0,q)$, and its determinant is
+\[
+ \det J(s)=16(q_{02}+hs^2+q_{20}s^4).                      \tag{CF11}
+\]
+Again this follows directly from the original determinant identity:
+the state change multiplies the determinant by $\epsilon^{-4}$,
+and only the displayed three lowest-order terms survive.
+
+Physicality implies $J(s)\succeq0$ for every real $s$. Conversely,
+if $d>0$ and $J(s)\succeq0$, (CF11) implies
+$q_{02}/s^2+h+q_{20}s^2\ge0$ for $s\ne0$. The full Laurent
+polynomial in this face is
+\[
+ h+q_{02}V/U+q_{20}U/V+q_{12}V+q_{21}U+q_{22}UV.
+\]
+Take $s^2=U/V$. Its first three terms are nonnegative and its
+remaining coefficients are nonnegative. The determinant criterion
+and continuity prove positivity of the entire parent. If $d=0$,
+the parent and (CF10) are event-square sums, so the same equivalence
+is immediate.
+
+Apply Lemma~\ref{lem:quadratic-matrix-lift} to $J(s)$. Its Gram
+initially acts on $(w,x,y,z,sw,sx,sy,sz)$. The two diagonal entries
+for $sx,sy$ are zero; positivity makes their entire rows and columns
+zero. The coefficient equations leave only one free off-diagonal
+entry, $\zeta$. Permuting the remaining coordinates into
+$(w,x,sz)$ and $(y,z,sw)$ gives exactly the two blocks (CF9).
+Equivalently, direct multiplication of the displayed blocks gives
+the exact identity
+\[
+ G_s=(w,x,sz)B_1(w,x,sz)^T+(y,z,sw)B_2(y,z,sw)^T,
+\]
+where $B_1,B_2$ are those blocks. The terms involving $\zeta$
+cancel because $w(sz)=z(sw)$. This completes necessity as well
+as sufficiency of the affine lift.
+\end{proof}
+
+This lift is strictly feasible too: take
+$c=A=n=\beta=2$, $m=D=d=1$, and $\zeta=-5$. The leading
+principal minors of the two blocks are respectively
+$(4,72,234)$ and $(22,72,234)$, all positive integers.
+
+\begin{corollary}[The entire closed-face part is explicit]
+\label{cor:all-closed-faces}
+Every noncoercive canonical source belongs to a closed coefficient
+face with an explicit affine semidefinite lift. The two representatives
+are the two three-dimensional blocks (CF9) for $\lambda=\alpha=0$
+and the single six-dimensional block (CF1)--(CF4) for $\lambda=m=0$.
+All further literal event zeros are included by linear restriction.
+\end{corollary}
+\begin{proof}
+Apply Lemma~\ref{lem:closed-face-orbits} and
+Theorems~\ref{thm:closed-face-adjacent}--\ref{thm:closed-face-opposite}.
+Relabeling is an invertible
+linear change in the original Bell coordinates. The finite union of
+these coefficient faces is used only in the canonical source
+reduction; no union of spectrahedra is asserted to be convex.
+\end{proof}

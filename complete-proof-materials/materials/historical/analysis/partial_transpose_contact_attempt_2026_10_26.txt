@@ -1,0 +1,117 @@
+PARTIAL TRANSPOSE AND AN ENTANGLED CONTACT: AN ELEMENTARY REDUCTION
+26 October 2026. Private structural result; no global admission claim.
+
+Precise result. Every real PSD canonical Bell state matrix is a sum of
+at most four REAL physical-party product squares. At an entangled kernel
+it is, by a source-only local congruence, exactly a 3x3 PSD Hankel moment
+matrix and needs at most three product squares. The latter applies to
+all strict native C1/C2 contacts, including their permitted literal
+zero-event faces. The physical-party product factors are not automatically
+separated between source and independent testing data.
+
+1. Elementary real separability; no PPT theorem is imported.
+
+Use row-major vec[[W,X],[Y,Z]]=(W,X,Y,Z). Set
+ epsilon=[[0,-1],[1,0]], J=epsilon tensor epsilon.
+For a real vector z, z^T J z=2 det(mat(z)). Hence z is a real product
+vector iff z^T J z=0. Real symmetric 4x4 matrices split as
+ Sym_2 tensor Sym_2 plus span{J}.
+Partial transpose fixes the first summand and negates J. The canonical
+Pauli parent lies in Sym_2 tensor Sym_2, so Tr(PJ)=0 exactly, at all
+source/test values, and P is invariant under partial transpose.
+
+Suppose P>=0 and rank(P)=r. Factor P=RR^T with R of size 4xr and full
+column rank. H=R^TJR is real symmetric and Tr H=Tr PJ=0. There is an
+orthogonal Q with diag(Q^THQ)=0: if a diagonal is nonzero, the zero
+trace gives diagonals of opposite signs; rotate their two coordinates
+to make one diagonal zero. The remaining compression still has trace
+zero. Induction proves the assertion. Each rotation needs only the
+real root of a quadratic (or the elementary intermediate-value argument).
+Then P=sum_j z_j z_j^T, z_j=RQ e_j, and every z_j has zero determinant.
+Thus z_j=x_j tensor y_j. There are at most r<=4 terms. This also covers
+singular and zero matrices. The same argument works over a real closed
+field, but a factorization over a joint field is not a factorization in
+the source/testing tensor ring.
+
+2. Exact fixed-contact Hankel cone and transformation conventions.
+
+Let the real kernel vector be psi=vec(Psi), det(Psi)=delta!=0. Define
+ L=epsilon Psi^T, A=I tensor L^{-1}, P'=A P A^T.
+If P psi=0, then
+ (I tensor L^T)psi=vec(Psi L)=delta vec(epsilon).
+Consequently P' kills h=vec(epsilon)=(0,-1,1,0) and is supported on
+the symmetric subspace. Real local congruence preserves partial-transpose
+invariance. With
+ E=(e00, e01+e10, e11),
+there is a UNIQUE symmetric H with P'=E H E^T, and P'>=0 iff H>=0.
+Here
+ E^T J E=[[0,0,1],[0,-2,0],[1,0,0]].
+Therefore Tr(P'J)=0 is exactly H_02=H_11. Equivalently
+ H=[[m0,m1,m2],[m1,m2,m3],[m2,m3,m4]] >=0.             (HC)
+This proves both directions: all matrices with this entangled kernel
+and partial-transpose invariance are precisely the source-only local
+congruences of (HC). No extra moment inequality is missing.
+
+For completeness, (HC) is EXACTLY the degree-four real projective
+moment cone. Apply part 1 to EHE^T. Its at-most-three rank-one product
+vectors lie in the symmetric subspace, so their two factors are
+proportional. Absorbing scale and sign into their squared weights yields
+ H=sum_j w_j (p_j^2,p_j q_j,q_j^2)(p_j^2,p_j q_j,q_j^2)^T,
+ w_j>=0, with at most rank(H)<=3 terms. This includes p_j=0 (the
+projective point at infinity) and all singular Hankel boundary matrices.
+Conversely each such atom is PSD Hankel. At a finite noncommuting
+canonical contact SG3 gives rank(P)=3, hence H is positive definite;
+the three atoms are independent. A product atom in the original state
+coordinates is x tensor (Lx), where x=(p,q).
+
+3. Native contact coverage.
+
+For C1 the actual normalized state is
+ psi_c=(S,k(theta-1),kSr,1), h_s=1-theta,
+so det(Psi_c)=S(1+k^2 r h_s)>0.
+For C2 it is
+ psi_c=(b/a,-cr,c h_s/a,1), h_s=b-a^2t, z=c^2,
+so det(Psi_c)=(b+zr h_s)/a>0.
+All quantities here belong to the source field. The strict native gaps
+give these inequalities even for the allowed D=0/beta=0 C1 faces and
+n=0 C2 face. Thus the contact congruence never divides by such an event
+weight, and its three-atom construction uses only source operations.
+
+4. What remains at independent testing angles.
+
+Freeze the source contact Psi_c and the same source-only congruence A,
+but now keep arbitrary independent testing angles. Set C0=(E,h), an
+invertible constant four-column matrix, and write
+ P'(u,v)=C0 [[H(u,v),zeta(u,v)],[zeta(u,v)^T,gamma(u,v)]] C0^T.
+Partial-transpose invariance gives the exact relation
+ H_02=H_11-gamma,
+ gamma=psi_c^T P(u,v) psi_c/[4 det(Psi_c)^2].          (NC)
+Indeed E^TJh=0 and h^TJh=2. At the source contact gamma=zeta=0,
+recovering (HC). Away from contact one must retain the scalar gamma
+and ALL three couplings zeta; H is generally not Hankel. For a globally
+valid source they form a PSD four-by-four block pointwise, which is
+exactly the positivity still requiring a uniform certificate. As a
+pointwise consequence H+gamma(1,0,1)(1,0,1)^T is PSD Hankel, but
+subtracting its added square and restoring the couplings is not a
+source/test-separated certificate.
+
+The quantifiers supplied by part 1 are
+ for every c and testing t, there exist <=4 product factors depending
+ jointly on c,t.
+What extraction needs is a fixed finite testing family phi_i(t,psi)
+such that for every valid c there is a SOURCE-only Gram G(c)>=0 with
+ F_c(t,psi)=phi(t,psi)^T G(c) phi(t,psi) for every independent t,psi.
+The zero-diagonal rotations and Cholesky factors at arbitrary t act
+on mixed source/testing coefficients; their square roots and inverses
+are not justified inside K_c tensor K_t. The at-contact construction
+avoids that problem only by evaluating the angles at their SOURCE
+contact values. Substituting this evaluation for independent tests
+would change the quantifiers.
+
+Thus (HC) is a rigorous fixed-contact reduction, and (NC) identifies
+the precise additional scalar/coupling data a uniform construction must
+handle. No bounded common product-factor dictionary, source/test
+separation of those factors, or global finite-lift admission follows
+from pointwise separability alone. This distinction is between the
+physical Alice/Bob tensor product and the unrelated source/testing
+tensor product.

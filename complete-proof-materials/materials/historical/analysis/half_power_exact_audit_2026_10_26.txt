@@ -1,0 +1,35 @@
+Exact half-power native C2 obstruction: independent audit
+2026-10-26
+
+Source: analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/06_half_power_followup_COMPLETE.txt. The supplied linked checker was not used. The independent standard-library checker and complete exact output are half_power_exact_audit_2026_10_26.py/.json in this directory.
+
+VERDICT. The native source, necessary reductions, four compressed-dual positive-definiteness claims and exact negative pairing are correct. They exclude the full36-feature half-power cone, not just one allocation. One order-dependent numerical bound needs qualification, described below. There is no defect in the exclusion.
+
+Source reconstruction. From (a,b,c,t,r)=(13/600,101/1000,47/15,27/35,13/154), the checker independently evaluates the current original six native rational coefficient formulas with d=1,lambda=beta=0. It verifies all six retained event weights strictly positive, all five printed source gaps exactly equal to the claimed fractions, Delta,N>0, and all four state amplitudes nonzero. It independently reconstructs the full SG2 parent by its eight positive/negative square packets, including every core and cross term. At the native contact it verifies F=0 and all four state and both angular derivatives exactly. The full exact source tuple is in JSON; no rounded coefficient was used. Global physical validity then follows from the established stationary-contact theorem.
+
+Full feature scope. Put u=x^2,v=y^2. Any ordinary polynomial SOS of F(x^2,y^2,psi) must have roots linear homogeneous in state and of separate degree at most2 in x,y: higher leading powers cannot cancel in real squares, and F(x,y,0)=0 kills state-independent terms. Thus the36 functions are exhaustive even if arbitrary higher polynomial degree in sqrt(u),sqrt(v) were proposed. Averaging the formal x,y signs gives parity orders16,8,8,4, without altering the source or testing state.
+
+Exact support reduction. The independent SG2 diagonal polynomials agree with displayed equation(2). For W, the lowest total x,y degree is4, forcing each W-root polynomial to have minimum total degree2. For Z, the highest total degree is4, forcing root total degree at most2. In the box0<=i,j<=2 these are exactly i+j>=2 for W and i+j<=2 for Z. They delete precisely six features. This short leading-term proof supplies the needed Newton-polytope implication without an additional numerical hull test. X,Y have the full square support since the relevant original coefficients are positive. The parity block sizes are14,6,6,4.
+
+Contact normalization. Rescale u=uc U,v=vc V,psi_l=(psi_c)_l phi_l. The source constants are nonzero, so this preserves existence of any half-power Gram. At U=V=1,phi_l=1, each parity block's feature evaluation is its all-ones vector. The whole SOS has zero expectation and all four summands are nonnegative, forcing each PSD block to annihilate that vector. Differences z_e-z_p span its full orthogonal complement. Thus every possible36-feature PSD Gram has the claimed compressed representation of sizes13,5,5,3.
+
+Dual arithmetic. All90 printed integer moments were transcribed as literal integer data. The independent convention is: states W,X,Y,Z outermost, then i,j lexicographic within each parity; the first retained feature is the pivot. The matrix entry is exactly the moment of (z_e-z_p)(z_f-z_p). There is NO extra factor2 in an off-diagonal dual entry; trace pairing supplies the two ordered terms. Exact rational LDL reconstructs every entry of every dual block, with all diagonal pivots strictly positive.
+
+Ordering caveat. In this explicit feature order, the received thresholds>90 and>369 for the first/third blocks do not hold. The exact minimum pivots are
+  5984115055082746729498665580018739789854450318816/
+  67026120629548484559433315165681824425843944923;
+  8144464589663091169/68250588130574792;
+  7268161317853756907869278769411/20138325272509776052793170448;
+  747390225711099087787/356395987482224.
+They exceed respectively89,100,360,2000000, as verified by exact fraction comparison. A different root/pivot order can change LDL pivots. This does not weaken positive definiteness or the theorem. The JSON preserves both the received bound checks and the corrected bounds.
+
+Exact pairing. Expanding the entire contact-rescaled original parent, including each state cross term with its full quadratic-polynomial coefficient, gives exactly
+ -31917121340091771507320448459210586965990611717744093996544823253/
+ 1129383645613305483559298619423160947865086012060000000000.
+This is the received equation(6), with no normalization correction. Each compressed dual is positive definite, so every putative PSD Gram on that necessary contact face would give a nonnegative trace pairing. The strict negative value is a contradiction.
+
+Scope. The90-vector is a dual functional on the FORCED SUPPORT/CONTACT FACE; it need not have a PSD unrestricted36-feature adjoint (indeed some raw diagonal moments are negative). The face reduction, proved above, is essential and makes the conclusion full36-feature nonmembership nonetheless. The original-coordinate pullback multiplies each moment by uc^p vc^q (psi_c)_l(psi_c)_k, as printed, and is rational. It is not the inverse factor.
+
+Stability is valid in the native parameter space: nearby strict contacts have the same support and admit the same invertible normalization; the compressed matrices remain the same fixed integer matrices while the rescaled target pairing varies continuously. Thus a native open neighborhood is excluded. This does not prove nonmembership for every native C2 source. It also does not obstruct sixth-root features, rational functions, fixed multipliers or a different finite exact lift.
+
+Execution: the independent checker uses only Python's standard library and completed in0.21seconds, with all13 theorem checks passing. No SDP solver, parameter sweep or numerical eigenvalue test was used. No public repository file was edited.

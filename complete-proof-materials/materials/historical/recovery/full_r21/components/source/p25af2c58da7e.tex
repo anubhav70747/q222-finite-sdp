@@ -1,0 +1,36 @@
+\section{The elementary mechanism: positive residue pays for errors}\label{sec:mechanism}
+Take real closed fields $K_c,K_t\supset\R$. Let $B_c,B_t$ be their rings of elements bounded in absolute value by a real number, with ideals $\mathfrak m_c,\mathfrak m_t$ of infinitesimals. Every bounded element has a unique real residue. Define
+\[
+T=K_c\otimes_{\R}K_t,\quad B=B_c\otimes_{\R}B_t,\quad
+\mathfrak n=\mathfrak m_c\otimes B_t+B_c\otimes\mathfrak m_t.
+\]
+The residue map $B\to\R$ has kernel $\mathfrak n$. No order is assigned to $T$.
+
+\begin{lemma}[Positive residue]\label{lem:residue}
+If $a\in B$ and $\res(a)>0$, then $a\in\Sigma T^2$.
+\end{lemma}
+\begin{proof}
+Expanding each bounded factor into its real residue plus an infinitesimal writes
+\[a=\varepsilon+\sum_{j=1}^N x_j\otimes y_j,\qquad\varepsilon>0,
+\]
+with all factors bounded and at least one infinitesimal in every term. Divide $\varepsilon$ into positive real reserves $\varepsilon_j$. If $x_j$ is infinitesimal, choose real $M_j>|y_j|$. Exactly
+\[
+\varepsilon_j+x_j\otimes y_j=\frac12\left[
+(\varepsilon_j/M_j+x_j)\otimes(M_j+y_j)+
+(\varepsilon_j/M_j-x_j)\otimes(M_j-y_j)\right].
+\]
+Each of the four pure factors is positive. Their separate field square roots turn each elementary tensor into a square. Swap the two factors when required. The case $N=0$ is immediate.
+\end{proof}
+
+\begin{lemma}[Strict bounded Gram]\label{lem:gram}
+If $Q\in\Sym_r(B)$ has $\overline Q\succ0$, then $g^TQg\in\Sigma T^2$ for every $g\in T^r$. The entries of $g$ need not be bounded.
+\end{lemma}
+\begin{proof}
+A real congruence makes $\overline Q=I$. Choose real $\delta>0$ with $(r-1)\delta<1$. The exact decomposition
+\begin{align*}
+Q={}&\sum_i[Q_{ii}-(r-1)\delta]e_ie_i^T\\
+ &+\sum_{i<j}\frac{\delta+Q_{ij}}2(e_i+e_j)(e_i+e_j)^T
+ +\sum_{i<j}\frac{\delta-Q_{ij}}2(e_i-e_j)(e_i-e_j)^T
+\end{align*}
+has scalar coefficients of positive real residue. Lemma~\ref{lem:residue}, followed by evaluation on $g$, proves the claim.
+\end{proof}

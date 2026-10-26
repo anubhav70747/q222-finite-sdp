@@ -1,0 +1,210 @@
+\section[Bounded unit native state scale and bounded unit e]{Bounded unit native state scale and bounded unit $e$}
+
+\begin{theorem}
+Use the unchanged physical native C1 source, $c=2$, $\lambda=n=0$,
+with all original event signs and positive openings $a,t,M,J$.
+Suppose $k,\zeta$ are positive infinitesimals, and
+\[
+ \eta,\quad r=1-a\eta,\quad e=k\sqrt{\eta/\zeta}
+\]
+are positive bounded units. Then the complete original parent is tensor
+SOS at every independent projective test and every real or complex state.
+The openings may be arbitrarily small, and $\beta=0$ is included.
+\end{theorem}
+
+\paragraph{Correction of the previously recorded outer obstruction.}
+The claimed critical determinant in \texttt{BOUNDED\_E\_LOCAL\_FRONTIER.md}
+omitted the term $2dq^2$. There is no equality corner of the stated kind.
+Indeed, with $p=1/u$, $q=1/v$, the exact homogeneous parent is
+\begin{align*}
+F_{\infty\infty}={}&4m(pW-pqX+Y-qZ)^2
+ +4c(1+q^2)(W-pY)^2+4A(1+p^2)(1+q^2)Y^2\\
+&+(4D+2d)(qW+X-pqY-pZ)^2
+ +(4\alpha+2d)(1+p^2)(Y-qZ)^2\\
+&+(4\beta+2d)(1+q^2)(pX+Z)^2
+ -2d(1+p^2)(1+q^2)Z^2.
+\end{align*}
+At $Z=1$, after retaining $\alpha,\beta$, its complete quadratic part is
+\[
+ 4cW^2+2dX^2+4D(X-p)^2+4AY^2+(4m+2d)(Y-q)^2.
+ \tag{BE1}
+\]
+In particular the $(Y,q)$ determinant is $4A(4m+2d)>0$.
+This is an exact full-parent expansion; no physicality argument or
+opening assumption repairs the erroneous smaller quadratic.
+
+An even shorter full-parent certificate retains every event except
+$c,A$. The remaining polynomial belongs to $(W,X,Y,qZ)^2$, with bounded
+coefficients at $p,q=0$. Its residue Gram is the quadratic form
+\[
+ 4cW^2+2dX^2+4AY^2+2d(Y-qZ)^2.                 \tag{BE2}
+\]
+It is strictly positive when $c/d,A/d$ are bounded below by positive
+units. All cross terms of the complete polynomial are allocated on
+these four roots, so (BE2) handles arbitrary states and both literal
+projective endpoints, without a normal restriction.
+
+\paragraph{Uniform lower bounds and outer tests.}
+Write $H=r+\eta$. The short coquotients have residues $2rH$ for
+$c_2,c_b,c_3,c_5,c_\alpha$, $2$ for $c_4$, and $4r$ for $c_d$.
+The source identities imply
+\[
+ \frac md=\frac{e^2c_2}{M\eta c_d},\quad
+ \frac cd=\frac{c_3}{a\eta c_d},\quad
+ \frac Ad=\frac{\eta c_4}{c_d},\quad
+ \frac Dd=\frac{2c_5-J\eta c_d}{2J\eta c_d}.
+ \tag{BE3}
+\]
+Every ratio is bounded below by a positive real number. For the last,
+$J+a=T\sim1$ and
+\[
+ \overline{2c_5-J\eta c_d}=4\bar r(\bar H-\bar J\bar\eta)
+ =4\bar r>0.
+\]
+No reciprocal of an opening is required to be bounded. Choose positive
+real lower bounds for the four ratios, cap these four coefficients at
+the corresponding multiples of $d$, and retain their nonnegative
+excess event squares. All selected-parent Gram coefficients divided
+by $d$ are then bounded.
+
+The physical-source theorem covers every noncommuting residue test.
+For $u$ infinitesimal and $v$ a bounded unit, the selected residue form is
+\[
+ 4m(vW-X)^2+2d(1+v^2)(X^2+Y^2)
+ +4(c+A)(1+v^2)Y^2+4D(Y+vZ)^2\succ0.
+\]
+For $u=\infty$ in residue and $v$ a bounded unit, retain the signed
+core at that commuting residue and use the four positive squares
+$cW^2$, $AY^2$, $m(vY-Z)^2$, $D(W+vX)^2$; their common kernel is zero.
+For $v=\infty$ in residue and $u$ a bounded unit, use the core
+$2d(1+u^2)(X^2+Y^2)$ and the $c(uW-Y)^2,D(uX-Z)^2$ packets.
+The $(0,\infty)$ corner has the strictly positive state residue
+\[
+ 4mW^2+2dX^2+\{4(c+A)+2d\}Y^2+4DZ^2.
+\]
+The $(\infty,\infty)$ corner is (BE2).
+At $(\infty,0)$ retain all events except $c,A$ and use the exact
+four-root allocation on
+\[
+ (pX+Z,\,W,\,Y,\,vX),\qquad p=1/u.
+\]
+Its residue is
+\[
+ 2d(pX+Z)^2+2d(W+vX)^2+4cW^2+4AY^2\succ0.
+\]
+The full selected polynomial lies in the square of this displayed
+root ideal; the pure-testing change $Z=(pX+Z)-pX$ makes this immediate.
+The other coefficients have zero residue. These homogeneous
+identities include literal infinities. Literal zero axes have a
+nonnegative pure-testing core and are immediate original-event SOS.
+Only bounded $u$ and infinitesimal $v$ remain.
+
+\paragraph{State entry and the $W$ endpoint.}
+Normalize the state by a maximal coordinate. Set
+$D_u=1+u^2$ and $w=(W+uY)/D_u$. On the negative pure-core branch,
+if $w$ is infinitesimal then $Z$ is a unit: otherwise the residue core
+$2\{(X+uZ)^2+(uW-Y)^2\}$ forces every normalized state coordinate
+to have zero residue. Normalize $Z=1$; the exact pure-testing Schur
+identity in (SD5) gives $w>0$ after the standard angle gauges.
+
+If $w$ is a unit and $u$ is a unit, a zero of that core residue has
+$Y=uw\ne0$. The positive lower bound for $A/d$ gives a strict state
+residue after clipping the positive events. Thus only $u,v$
+infinitesimal and $W\sim w$ a unit need an additional state check.
+When $Z$ is infinitesimal, retain all events except clipped $m,A$ and
+use the roots $(X,Y,uW,vW)$. Since $Z/W$ is a pure-testing
+infinitesimal, the complete selected polynomial has residue
+\[
+ 2d\{X^2+(uW-Y)^2\}+4m(vW-X)^2+4AY^2\succ0.
+ \tag{BE4}
+\]
+Every remaining coefficient contains $u$, $v$ or $Z/W$; there is no
+constant or first-normal term outside this frame. This includes
+literal $Z=0$. If $Z$ is a unit, normalize $Z=1$ and use the next
+raw scalar frame with $w$ a unit.
+
+\paragraph{The exact remainder and its complete normals.}
+Use exactly (SD3)--(SD8), their four positive packets, and the positive
+clearing factor $\mathcal C$. Put
+\[
+ \delta=\Delta R/K,\quad E=b^2=\eta K/R,\quad
+ A_0=wv,\ B_0=\delta v,\ C_0=\delta Euw,
+ \ D_0=\delta^2k^3E,\quad x=B_0-C_0.
+\]
+Here $\delta,E$ are positive bounded units, and $a,t$ are bounded.
+The factored five-term scalar is in
+$(A_0,B_0,C_0)^2+(D_0^2)$, and the two complete first normals are
+in $(A_0,B_0,C_0)$. These are the full formulas, without restricting
+normals or replacing native coefficients by leading surrogates.
+
+At $k=v=0$ and at the relevant small-$w$ or small-$u$ endpoint, put
+$r_0=1-aE$ and $H_0=r_0+E$. Direct collection of the short formulas
+gives the raw scalar residue
+\[
+ 8r_0H_0D_u^2 A_0^2+
+ 8D_u\{x^2+u^2r_0H_0B_0^2\}+8r_0H_0D_uD_0^2.
+ \tag{BE5}
+\]
+The hard block on $(N,\delta M_B)$ is
+\[
+ \operatorname{diag}(16r_0H_0,16r_0H_0+8E^2/D_u),
+\]
+and the complete first normals have residues $0,16Ex$.
+The coupled $(\delta M_B,x)$ determinant is
+$128D_ur_0H_0>0$.
+
+If $u$ is a unit and $w$ infinitesimal, (BE5) is a strict Gram on
+$(A_0,x,B_0,D_0,N,\delta M_B)$. If $u$ is infinitesimal and $w$ a
+unit, use the exact relations
+\[
+ B_0=(\delta/w)A_0,\qquad C_0=(\delta/w)A_0-x.
+\]
+The factor $\delta/w$ is a product of a pure-coefficient unit and a
+pure-testing unit; it is not a mixed inverse. The resulting residue
+is the strict form
+\[
+ 8r_0H_0A_0^2+8x^2+8r_0H_0D_0^2
+ +16r_0H_0N^2+(16r_0H_0+8E^2)(\delta M_B)^2
+ +16E(\delta M_B)x.                                  \tag{BE6}
+\]
+This supplies precisely the unit-$w$ chart for which the older
+$\Delta$-small retained-current argument is not applicable.
+
+For transparency, the only nontrivial raw coefficient collection in
+(BE5) is
+\[
+ r_0H_0D_u+a^2E^2+r_0E(2a-1)=1+u^2r_0H_0,
+ \qquad aE+r_0=1.
+\]
+The cross coefficient is $-16D_u(aE+r_0)=-16D_u$.
+In the full normal formula $S_B$ has residue $-16E$ and $S_C$ has
+residue $16E$. These prove the claimed full normal residues directly.
+
+\paragraph{The sole contact chart.}
+For $u,w,v$ infinitesimal and $Z=1$, use the unchanged monic
+contact--conductor identities and the two-pairing circuit. Use weights
+\[ (\delta,k,b,a,t,u,w,v):\quad(0,1,0,0,0,1,1,2). \]
+The exact source collection is
+\[
+ (E_0)_{\le6}=8\rho T_4-8(\rho+E)k^2x^2,
+ \quad (L_1)_{\le3}=0,\quad (L_2)_{\le3}=16Ex,
+ \qquad \rho=r_0H_0-1.
+\]
+The source/contact substitutions preserve this grading. After the
+displayed terms are removed, the scalar and normal lift coefficients
+have positive weights, hence zero residues. The term $k^2x^2$ also
+has a zero-residue coefficient. Thus the soft leading form is
+$8x^2+8r_0H_0T_4$, with the same strict two-pairing circuit frame.
+The hard block and its only first-normal coupling are those of (BE6),
+and their determinant is $128r_0H_0>0$. Retain the old positive
+$g_4^2$ square. The full eight-root remainder Gram is strict.
+This invokes only the polynomial monic conductor already proved;
+no opening or contact difference is inverted.
+
+Finally restore the four complete positive packets, the retained
+positive square, and all pure-coefficient and pure-testing factors.
+The cases above exhaust both projective angle lines and every
+projective state. Complex states split into their real and imaginary
+evaluations. Neither this theorem nor the correction of (BE1) asserts
+coverage when $r$ is infinitesimal, $\eta$ unbounded, or $e$
+infinitesimal; those are separate source domains.

@@ -1,0 +1,135 @@
+BALANCED DETERMINANTS AND THE FULL PARENT: THE ADJUGATE DENOMINATOR
+24 October 2026
+
+Conclusion. SG3 and the finite SG5 circuit list give an exact fixed-family
+SOS for a SOURCE-DEPENDENT-WEIGHTED parent. The direct adjugate/Schur
+construction does not remove that weight. Its precise remaining factor
+is sqrt(det A_c(u,v)), where A_c is the positive three-dimensional state
+block. It is neither a pure source factor nor one fixed pure testing
+factor. A source-dependent Gram cancellation or a different normal
+allocation is still required; this is not a no-go theorem for those routes.
+
+Locators: latex/chapters/04_geometry.tex, SG2--SG6 and 'The twelve elementary
+angular identities'; c2_full_contact_congruence.txt, first state map and
+the displayed full normal polynomial. No public files were edited.
+
+1. Exact identity and what the determinant circuits do provide
+
+In the notation of SG2 write the full state matrix and polynomial as
+ P_c(t)=[[A_c(t),b_c(t)],[b_c(t)^T,e_c(t)]],
+ F_c(t;xi,Z)=xi^T A_c xi+2Z b_c^T xi+e_c Z^2,
+ t=(u,v), xi=(W,X,Y), D_c(t)=det A_c(t).
+For d>0 and uv!=0, SG3 proves A_c positive definite, hence D_c>0.
+A direct polynomial identity, with no inverse, is
+ D_c F_c=(A_c xi+b_c Z)^T adj(A_c)(A_c xi+b_c Z)
+                            +det(P_c) Z^2.                       (1)
+Indeed A adj(A)=D I and det(P)=D e-b^T adj(A)b.
+
+The three-dimensional block already has a finite separated Gram.
+The SG3 core is the sum of three squares; all other restricted terms
+are the nonnegative event squares. Its rows have source coefficients
+times fixed polynomial/testing-root rows (only fixed factors such as
+sqrt(1+u^2), sqrt(1+v^2)). For a Gram A=sum_i r_i r_i^T in dimension
+three, Cauchy--Binet gives the exact matrix identity
+ adj(A)=sum_{i<j}(r_i cross r_j)(r_i cross r_j)^T.
+Thus the first summand in (1) has a finite source-independent testing
+span: products of the original fixed rows with the polynomial entries
+of A and b. Source products/radicals remain in the source Gram witness.
+
+For a stationary-contact source, SG5 and its twelve balanced circuits
+likewise give det(P) a finite source-independent testing span after
+expanding each circuit square. Source contact scales enter only as
+source coefficients; testing roots are fixed monomial rational powers.
+The factor 16(1+u^2)^2(1+v^2)^2 u^2v^2 is pure testing. Therefore (1)
+really supplies a finite fixed testing family for D_c F_c.
+
+This is not an affine certificate for F_c: D_c depends on c and is
+cubic in c. The target D_c F_c is generally quartic in c. Treating
+these source products as free variables does not impose their nonlinear
+identities in an SDP. Dividing the SOS in (1) by sqrt(D_c) introduces
+a source-and-testing-dependent factor into every root. Pure testing
+projective normalization removes none of this source dependence.
+
+2. The full contact-normal congruence retains the same factor
+
+For the full C2 state change with T0=0, the three normal columns are
+ W=N1+N2, X=u^2 v N3, Y=u N2, Z=0.
+The 3-by-3 change has determinant -u^3 v. If A_N is the normal block
+of the transformed F/4, then exactly
+ det A_N=u^6 v^2 det(A_c/4)=x^3 w D_c/64,
+ x=u^2, w=v^2.
+Thus the contact-adapted congruence changes the problematic denominator
+only by a fixed pure testing monomial. The facts that its normal/T0
+couplings vanish at (x,w)=(z,y), and hence belong to the contact ideal,
+do not imply divisibility by D_c. SG3--SG5 contain no identity canceling
+this determinant from (1).
+
+3. A valid-source family exhibits the genuinely moving denominator
+
+Fix any globally valid d=1 C2 source with lambda=beta=0 and m>0,
+for example one of the explicitly certified positive GE1 families
+in c2_kernel_scalar_repair_audit.txt, Section 5. Increase C to C+tau,
+tau>=0, leaving all other source coordinates fixed. This preserves
+validity because the added term is the nonnegative event square.
+It preserves the two zero event weights, but need NOT preserve the
+native stationary-boundary parametrization. The following calculation
+therefore concerns the literal full-source Schur construction; it is
+not a proof against first retaining event excesses separately.
+
+Let a(t)=(u,0,-1)^T. The three-dimensional block is
+ A_tau=A_0+4tau(1+v^2) a a^T,
+ D_tau=D_0+tau D_1,
+ D_1=4(1+v^2) a^T adj(A_0) a.
+This exact denominator does not factor as a source scalar times one
+fixed testing function. To see it inside the C2 zero-event pattern,
+set v=1 and compute the logarithmic slope in C:
+ at u=0, D_1/D_0=1/[C+A+(D+alpha+1)/2];
+ as u tends to infinity,
+ D_1/D_0 ->1/[C+n(D+1/2)/(2n+D+1/2)].               (2)
+For the first formula the u=0 normal block is the direct sum of
+ m(W-X)^2+(2n+1)X^2 and
+ [2(C+A)+D+alpha+1]Y^2, in F/4 units.
+For the second, its leading u^2 block is
+ [[2C+D+1/2,D+1/2,0],
+  [D+1/2,2n+D+1/2,0],
+  [0,0,m+2A+alpha+1/2]].
+These two computations prove (2) directly.
+
+The limits differ strictly:
+ n(D+1/2)/(2n+D+1/2)<D/2+1/4,
+whereas A+(D+alpha+1)/2>=D/2+1/2.
+Hence h(u)=D_1(u,1)/D_0(u,1) is nonconstant, even though every
+source along this family is valid. The positive mixed denominator
+is present on the ordinary finite-angle chart; this is not an
+endpoint-zero or a vanishing-source-gap artifact.
+
+The literal normalization functions D_tau(u,1)^(-1/2) do not lie in
+one finite-dimensional pure-testing span as tau varies. Divide by the
+fixed function D_0(u,1)^(-1/2), and use a local interval on which the
+nonconstant rational function h(u) is a coordinate. The remaining
+functions are (1+tau h)^(-1/2). For any distinct tau_i>=0, taking the
+first N derivatives in h at an interior point gives a Vandermonde
+matrix with distinct nodes tau_i/(1+tau_i h_0); all derivative
+prefactors are nonzero. Thus any N such functions are linearly
+independent. Source scalars cannot absorb this varying normalization.
+
+4. Exact remaining implication
+
+The direct polynomial construction stops at (1), with source-dependent
+multiplier D_c. To obtain the unweighted parent and an affine pencil in
+the original nine source coordinates, one still needs an exact
+source-only Gram allocation canceling this mixed denominator, or a
+different completion avoiding it. Merely knowing D_c>0 permits
+pointwise division in one real closed field, not finite separated
+division in a fixed tensor/testing library.
+
+This does not exclude a different choice of retained events/core,
+a common fixed testing multiplier with an additional proof, or a
+polynomial identity exploiting all state-normal/contact equations.
+The valid-source variation above in particular can be handled
+differently by retaining its added event square before applying any
+Schur argument. No universal impossibility of a fixed family follows.
+The balanced determinant identities and positive three-dimensional
+core, by themselves, supply the weighted identity and not its required
+unweighted, source-affine cancellation.
+

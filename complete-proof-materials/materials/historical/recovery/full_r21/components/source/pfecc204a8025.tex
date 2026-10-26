@@ -1,0 +1,96 @@
+\section{C1 native formulas and exact stationarity}
+\label{app:c1-native}
+These are polynomial identities for arbitrary positive $k,f,g$;
+the small-$k$ assumptions of the earlier conductor application are not
+needed for these identities. For the ordinary-angle theorem set
+$f^2=\eta$, $g^2=\zeta=s^2\eta$, and $\Delta=s/k$.
+Write $K=1+k^2$, $R=K-ak^2\eta$, $T=K-k^2\zeta t$,
+$M=R-t$, and $J=T-a$.
+\[
+ \kappa=k^2,\quad \eta=f^2,\quad \zeta=g^2,
+ \quad V_c=\kappa\eta\zeta,\quad
+ L_c=1-a\eta,\quad H_c=1+(1-a)\eta,\quad Q_c=1-\kappa\zeta+aV_c.
+\]
+Define
+\begin{align*}
+P_4={}&1+\kappa+\eta\kappa(a-\kappa-1)-\zeta\kappa t
+ +V_c[-\zeta\kappa t^2+2\kappa t+a(1-t)+t],\\
+P_\alpha={}&1+\kappa-a\eta\kappa
+ +\zeta[(1+\kappa)-(2+\kappa)t]
+ +V_c[-\zeta t^2+a(t-1)+t],\\
+P_d={}&(1+\kappa)^2-a\eta\kappa^2
+ +\zeta\kappa[(\kappa+1)-(\kappa+2)t]\\
+ &+V_c[-\zeta\kappa t^2+\kappa a(t-1)+\kappa t+\kappa+1].
+\end{align*}
+The complete seven coquotients are
+\begin{align*}
+c_2&=2(1+\kappa)(1-t\zeta)L_c(1+V_c)H_cQ_c,\\
+c_b&=2(1+\kappa)L_c[1+(1-t)\zeta]H_cQ_c,\\
+c_3&=2(1+\kappa)L_cH_cQ_c(1-\kappa\eta+tV_c),\\
+c_5&=2(1+\kappa)L_cH_cQ_c(1+V_c),\\
+c_4&=2Q_cP_4,\qquad c_\alpha=2L_cH_cP_\alpha,
+ \qquad c_d=4L_cQ_cP_d.
+\end{align*}
+
+Use the source coefficients (OA2), and let
+$\Lambda=RTc_3/(2a)$, $\Phi=\Delta^2\Lambda F$.
+For the following verification only, write
+$r=uW-Y$, $B=X+uZ$, $r_2=vW-X+uvY-uZ$,
+$r_5=uW+uvX-Y-vZ$, and $D=1+u^2$.
+The symbol $r$ in this paragraph is not the C2 source gap.
+\paragraph{Short native proof of the exact contact identities.}
+Write $V=1+V_c$ and $K=1+\kappa$ in this paragraph. The factored
+coquotients above give immediately
+\[
+ c_b-c_2=\zeta c_3,\qquad c_3-c_5=-\kappa\eta c_b,
+ \qquad c_2=(1-t\zeta)c_5.                            \tag{SD9}
+\]
+Hence $Vc_b-c_2=\zeta c_5$ and
+$Vc_3-c_5=-\kappa\eta c_2$.
+The remaining three balances are the following short polynomial
+identities; substituting the displayed $P_4,P_\alpha,P_d$ proves them
+by multiplication and collecting terms:
+\begin{align*}
+\mathfrak Y:={}&2\kappa c_2+2VL_cc_4
+                 -2\kappa^2\zeta Q_cc_\alpha-Q_cc_d=0,\\
+\mathfrak S:={}&\kappa L_cc_2+c_5+VL_c^2c_4+\kappa Q_c^2c_\alpha
+                 +\tfrac12(\kappa\zeta L_c^2-2L_c-\eta)c_d=0,\\
+\mathfrak V:={}&\kappa Rc_2+t\kappa V_cc_b+aV_cc_3+Tc_5
+ +KV_cL_c^2c_4-\kappa^2\zeta KQ_cL_cc_\alpha
+ -\tfrac K2(Q_cL_c+\eta)c_d=0.                        \tag{SD10}
+\end{align*}
+For example, after the common factor $4L_cQ_c$ is removed,
+the first balance is just
+\[
+ \kappa K(1-t\zeta)VH_c+VP_4
+       -\kappa^2\zeta H_cP_\alpha-Q_cP_d=0.
+\]
+The two other balances are equally direct identities in the same three
+short polynomials; no expanded scalar or ideal calculation enters.
+
+The exact contact, in the original state coordinates, is
+\[
+ u=k,\quad v=\Delta k^2\eta,\qquad
+ (W,X,Y,Z)=(\Delta k,-k(1-t\zeta),\Delta k^2L_c,1).      \tag{SD11}
+\]
+At this point
+\[
+ r_2=Mk\zeta,\quad B=tk\zeta,\quad r=av,\quad
+ r_5=-Jv,\quad vY-1=-Q_c,\quad D=K,\quad D_v=V.
+\]
+Set $\Psi=\Phi/(4RT)$ and let $E_s=\tfrac12\partial_s\Psi$,
+with all other original testing coordinates held fixed.
+Direct differentiation of the seven terms of the full parent (OA5), followed by (SD9),
+gives at (SD11)
+\begin{align*}
+ \Psi&=K\zeta^2\mathfrak S,\\
+ E_W&=kv\{\zeta c_2+\Delta^2(Vc_3-c_5)\}=0,\\
+ E_X&=k\zeta\{Vc_b-c_2-\zeta c_5\}=0,\\
+ E_Y&=\tfrac12K\Delta^3\kappa\eta^2\mathfrak Y,\\
+ E_u&=k\zeta^2\{\mathfrak S-c_2+(1-t\zeta)c_5\},\\
+ E_v&=v\Delta^2\mathfrak V.
+\end{align*}
+They all vanish by (SD9)--(SD10). Homogeneity in $(W,X,Y,Z)$ also gives
+$E_Z=0$. This proves contact and full first-order stationarity directly
+in the native source.
+

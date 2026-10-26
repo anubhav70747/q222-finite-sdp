@@ -1,0 +1,205 @@
+\section{A fixed testing family and its affine equations}\label{app:functions}
+The preceding identities give an evaluated finite certificate cone.
+This section specifies its testing functions, including both state signs,
+and proves that the cone is closed. Its admission statement is precisely
+Theorem~\ref{thm:cap}; no complementary testing region is included here.
+
+First take $u,v\geq0$ and use the common state sign to make $w\geq0$.
+There are two closed charts, $\sigma w\zeta\geq0$, with $\sigma=+1,-1$.
+All functions below are divided by $\sqrt{D_v}$. Their squared arguments
+are the following fixed polynomials:
+\[
+ q_0=1,\quad q_1=uv,\quad q_2=uw\zeta,\quad q_3=vw\zeta
+       \quad(\sigma=+1),\qquad
+ q_0=1,\quad q_1=uv,\quad q_4=-uvw\zeta
+       \quad(\sigma=-1).
+\]
+These weights are nonnegative on their respective charts. All source
+radicals in a row are coefficients; for example
+$\sqrt{UV}=x^{-1/4}y^{-1/4}\sqrt{uv}$ and
+$\sqrt{Uw\Zc}=x^{-1/4}q_z^{-1/4}\sqrt{uw\zeta}$.
+Thus no source parameter occurs in a testing-function argument.
+
+\subsection*{A finite support prescription}
+For a row $f$ with just one testing radical $\sqrt{q_k}$, let
+$\operatorname{supp}_k f$ be the monomials in $u,v,t,r,w,\zeta$ that
+remain after removing that radical and expanding. In taking this
+support, source-only coefficients are formal symbols: possible
+specializations to zero never delete a monomial. This convention makes
+the family independent of the source, including at $n=0$.
+
+Here is a complete finite prescription for the rows whose supports
+are used. The ten noncircuit rows of $f$ in the main text are included,
+as are the three circuit factors on the positive chart or the five
+factors
+\[
+ Uw,\quad Vw,\quad\Zc,\quad UV\Zc,\quad2\sqrt{-UVw\Zc}
+\]
+on the negative chart. The latter identity is
+$\Ps=U^2w^2+V^2w^2+\Zc^2+U^2V^2\Zc^2-4UVw\Zc$.
+The retained squares in Appendix~\ref{app:parent} have row supports
+\begin{gather*}
+ N,\ uN,\ vN,\ v(N+p\bc),\ uM,\ vM,\ uvM,\quad
+ V\Qh,\ V\Bh,\ V(w-UV\Zc),\ V\Qh-\Rh,\ \Qh,\ \Rh .
+\end{gather*}
+Every coefficient of these squares is nonnegative on the source domain.
+
+Let $\mathbf A,\mathbf B,\mathbf E$ be the displayed square-root
+vectors of $\Aop,\Bop,\E$ in \eqref{eq:elementary}--\eqref{eq:opposite};
+let $\mathbf B_0=(\Rh,U\Qh,U(w-UV\Zc))$.
+Let $\mathbf W_\sigma,\mathbf W^\pi_\sigma$ be the vectors in
+\eqref{eq:W19} and \eqref{eq:negativeW}; on the positive chart their
+constant positive blocks are $G_7,1,G_3$. Include every row of
+\begin{gather*}
+ \mathbf W_\sigma,\quad U\mathbf A,\quad
+ U\mathbf W^\pi_\sigma,\quad (U^2-1)(U\Zc-\Bh),\quad
+ (\alpha/B)R_u-\alpha uR,\quad\mathbf B_0,\\
+ v\mathbf A,\quad u^2v\mathbf A,\quad
+ v\mathbf B,\quad u^2v\mathbf B,\quad
+ \sqrt T\,v(\alpha+c_0u^2)R,\quad
+ \mathbf A,\quad\mathbf B,\quad v\mathbf E,\quad u\mathbf E,
+ \qquad c_0=BTCH.
+\end{gather*}
+This list contains every positive remainder of the radial, $J_\alpha$,
+$O$, signed-mass and helper identities. In particular, $\bar a$ is
+split into its $v^2$ and $u^4v^2$ terms before taking roots; no
+$\sqrt{\alpha^2+c_0^2u^4}$ is introduced.
+
+The eight event coordinates are represented by the following rows,
+with the squared rows in each group summed:
+\[
+\begin{array}{c|l}
+ \lambda&W+vX\\
+ n&X,\ vX\\
+ m&vw-t,\ u(vw-t)\\
+ C&r,\ ur,\ vr,\ uvr\\
+ A&Y,\ vY\\
+ D&r+v\zeta,\ u(r+v\zeta)\\
+ \alpha&vY-Z\\
+ \beta&t,\ ut,\ vt,\ uvt
+\end{array}
+\]
+Here $W,X,Y,Z$ are the testing polynomials in \eqref{eq:rotation}.
+These rows allow arbitrary nonnegative event additions literally.
+
+For the four residual pivots take the rows of $\Ps,\Qh^2,\bc^2,\Rh^2$,
+respectively. Their nonconstant loss supports are
+\[
+\begin{array}{c|l}
+ \Ps&(0,2),(0,4),(2,0),(2,2),(4,0),(4,2),(6,2)\\
+ Q&(0,2),(0,4),(2,0),(4,0),(4,4)\\
+ E&(0,4),(2,0),(2,2),(4,0),(6,2)\\
+ R&(0,2),(2,0),(4,2).
+\end{array}\tag{\(*\)}
+\]
+For each pivot row $f$ and each $(a,b)$ in its row of $(*)$, include
+$u^{a/2}v^{b/2}f$ in the base supports. Also form a separate block with
+rows $\sqrt{1-P_{ab}}\,f$, where
+$P_{ab}=(2^{12}u)^a(2^{25}v)^b$.
+These rows implement both coefficient signs in the residual identity
+in the main text. Constant zero coefficients may be retained.
+
+Finally the two signs of the three matrix gates have respective
+polynomial supports
+\[
+ \begin{array}{c|c|l}
+ (a,b)&\hbox{weight}&\hbox{monomial vector}\\
+ (1,1)&1\pm P_{11}&(t,r,vw,u\zeta,v\zeta,uw)\\
+ (0,2),(2,2)&1\pm P_{ab}&(r,v\zeta,uw).
+ \end{array}
+\]
+All rows participating in each nonconstant core coefficient lie in
+the indicated span; the circuit rows do not participate.
+
+For each chart and each radical class, collect the union of its base
+supports into one monomial vector. For each scalar gate collect the
+supports belonging to that exponent and class into a separate vector.
+The matrix gates are the six vectors just displayed. A block with
+vector $m_b$ and weight $q_b$ represents
+\[
+        D_v^{-1}q_b\,m_b^TQ_bm_b,\qquad Q_b\succeq0.
+\]
+This support prescription is an explicit finite construction, using
+only polynomial expansion and collection of distinct monomials.
+Its evaluated vectors and rational weights are in
+\texttt{fixed\_family.json}; the full row list is in
+\texttt{root\_catalog.json}. They give
+\[
+\begin{array}{c|rrr|r}
+ \hbox{chart}&\hbox{base}&\hbox{scalar gates}&\hbox{matrix gates}&\hbox{sum}\\
+ +&63&56&24&143\\
+ -&58&49&24&131.
+\end{array}
+\]
+There are $49$ Gram blocks, $2269$ upper-triangular Gram variables,
+and total positive-semidefinite order $143+131+9=283$, including the
+nine scalar source-sign blocks. A constant positive Gram block such
+as $G_7$ is transferred to its monomial vector by a congruence with
+source-only coefficients. Sums of such contributions remain positive.
+Thus grouping rows does not change any identity or require a mixed inverse.
+
+\subsection*{The rational affine system and its scope}
+Let $T_c=D_vS_c$ after \eqref{eq:rotation}. Its nine coefficient columns are
+\begin{gather*}
+ T_\lambda=(W+vX)^2,\quad T_n=D_vX^2,\quad
+ T_m=D_u(vw-t)^2,\quad T_C=D_uD_vr^2,\quad T_A=D_vY^2,\\
+ T_D=D_u(r+v\zeta)^2,\quad T_\alpha=(vY-Z)^2,\quad
+ T_\beta=D_uD_vt^2,\qquad
+ T_d=(T_D+T_\alpha+T_\beta-D_vZ^2)/2.
+\end{gather*}
+For each chart impose the polynomial coefficient equations
+\[
+       \sum_{b\ {m in\ chart}}q_bm_b^TQ_bm_b
+          =\sum_{i=1}^9 c_iT_i .
+\]
+The file \texttt{affine\_system.json} records these $554$ equations
+($277$ per chart): $2707$ Gram coefficients and $132$ source coefficients.
+Indices start at zero; off-diagonal entries are actual symmetric Gram
+entries and hence contribute twice. Every record is rational.
+
+These equations and positive-semidefinite constraints define a cone
+$K_{283}$ in the nine source coefficients. The displayed identities
+and coefficient reserves prove that it contains every native source
+in \eqref{eq:domain}, including $n=0$, and the eight event rays.
+Conversely, each of its sources has $S_c\geq0$ for all states on the
+closed testing cap: all block weights are nonnegative there.
+To cover signed angles, apply
+\[
+ (u,v,t,r,w,\zeta)\longmapsto
+ (a u,b v,t,ab r,bw,a\zeta),\qquad a,b\in\{-1,1\}.
+\]
+All nine $T_i$ are invariant. Reducing the angles to nonnegative
+values and then fixing the common state sign reaches one of the two
+charts. The testing axes and $w\zeta=0$ require no division and are
+included by the same formulas. This is a certificate cone for the
+stated cap, rather than a claim of adequacy on the remaining tests.
+
+\subsection*{A fixed positive grid proves closedness}
+Every monomial in $m_b$ has individual degree at most
+$(4,3,1,1,1,1)$ in $(u,v,t,r,w,\zeta)$.
+On either chart choose the $320$ rational points in
+\[
+ \left\{\frac{i u_0}{6}:1\leq i\leq5\right\}
+ \times\left\{\frac{k v_0}{5}:1\leq k\leq4\right\}
+ \times\{1/3,2/3\}^{3}\times\sigma\{1/3,2/3\}.
+\]
+All weights $q_b$ are strictly positive at these points. Distinct
+monomials with the displayed individual degree bounds are independent
+on this Cartesian grid by successive univariate interpolation.
+Consequently the rational matrix
+\[
+       H_b=\sum_{a\ \rm in\ grid}
+              \frac{q_b(a)}{1+v(a)^2}\,m_b(a)m_b(a)^T
+\]
+is positive definite for every block.
+
+Suppose $c^{(k)}\in K_{283}$ converges to $c$. Evaluate its identity
+on these finitely many points and sum. Each summand from each Gram
+block is nonnegative, so $\operatorname{tr}(H_bQ_b^{(k)})$ is bounded
+above by the sum of the target values. These target sums converge
+because they depend linearly on $c^{(k)}$. Since $H_b\succ0$, every
+$Q_b^{(k)}$ is bounded. There are finitely many blocks, so a common
+subsequence converges to positive-semidefinite matrices satisfying
+the same coefficient equations at $c$. Hence $K_{283}$ is closed.
+This argument also handles dependencies between different blocks;
+it needs only independence within each explicitly chosen monomial vector.

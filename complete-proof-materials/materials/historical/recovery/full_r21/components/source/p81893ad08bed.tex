@@ -1,0 +1,281 @@
+\section{The one-weak C2 family with three arbitrarily small openings}
+\label{sec:c2-three-openings}
+
+This theorem removes three unit assumptions from the source of
+Theorem~\ref{thm:c2-general-single-angle}.  Both positive openings $h$
+and $b-h$ may approach zero, and $r$ may approach zero, making $n$
+arbitrarily large.  The conclusions concern the entire original parent
+and every independent test.  Source physicality remains an explicit
+hypothesis; no new source classification is claimed.
+
+\begin{theorem}[Three-opening single-angle source]
+\label{thm:c2-three-openings}
+Use exactly the rational C2 source and contact of
+Section~\ref{sec:c2-general-single-angle}.  Suppose $x>0$ is
+infinitesimal, $k,b$ are positive bounded units,
+\[
+             0<r<1,\qquad 0<h<b,
+\]
+and $g=b-1+r+xh$ is a positive bounded unit.  Assume $n\geq0$
+and physicality of the original source.  There is no lower bound on
+$r,h,b-h$.  Then the entire original parent has tensor SOS at all
+independent projective measurement pairs and all real or complex
+projective states.  Literal $n=0$ is included.
+\end{theorem}
+
+We write $\rho=\sqrt x$, $\eta=h/b$, and retain the exact source
+quantities $A_c,S_c,\Delta$ from that section.  All arguments below
+take place over the independent coefficient and testing fields.
+Every coefficient inverse used below is pure coefficient or pure
+testing, as specified; no mixed denominator is inverted.
+
+\paragraph{Entry and the two complementary openings.}
+First the former assumptions that $1-r$ and $b-k^2r$ are units follow
+from $n\geq0$.  Indeed all quantities in
+\[
+                 (b+r)A_cS_c\geq r\Delta
+\]
+are bounded, and $\Delta_0=(1+k_0^2)(b_0+1)$.  Taking residues yields
+\[
+ r_0\leq\frac{b_0}{b_0+k_0^2(b_0+1)}<1,
+ \qquad
+ b_0-k_0^2r_0\geq
+ \frac{b_0^2(1+k_0^2)}{b_0+k_0^2(b_0+1)}>0.
+\]
+Thus $m$ is a positive bounded unit, and $D/x,\alpha/x$ are positive
+bounded units, regardless of whether $r$ has zero residue.
+
+Set
+\[
+ T_C=xC(b-h),\qquad T_A=xAh,\qquad H=x(C+A).
+\]
+The original source formulas, with their apparent opening denominators
+cancelled, show that $T_C,T_A$ are bounded positive units and have the
+same residue
+\[
+ T_0=\frac{k_0^2(b_0+r_0)}{2\Delta_0}>0.
+\]
+Consequently $H$ is bounded below by a positive real, although it may
+be unbounded.  The four identities
+\begin{align*}
+ xC(1-\eta)&=T_C/b,&xA\eta&=T_A/b,\\
+ xC(1-\eta)^2&=T_C(b-h)/b^2,&
+ xA\eta^2&=T_Ah/b^2                                      \tag{CO1}
+\end{align*}
+are the reason no new scalar singularity appears when either opening
+collapses.  In particular their last two terms add to a bounded unit,
+with residue $T_0/b_0$.  The effective scalar coefficient is
+\[
+                         Q=4T_0/b_0>0.                  \tag{CO2}
+\]
+It is independent of the limiting value of $h$.
+
+\paragraph{A bounded $n$: restoration with the normalized hard root.}
+If $r$ is a unit, the exact formula for $n$ makes $n$ bounded.  Use the
+contact graph $X_g,Y_g=\eta uW$ of the prior theorem.  All of its scalar
+coefficients remain bounded: the only potentially unbounded weights
+are $C,A$, and on the graph they occur solely through the last two
+products in (CO1), divided by $x$ and multiplied by $u^2W^2$.
+Its leading scalar is exactly the scalar in that theorem with $Q$
+replaced by (CO2).  The quantities $n_0,m_0,D_*,E_*$ have their former
+values.  Hence the entire six-term Laurent identity, its balanced
+AM--GM decomposition, global equality characterization, and positive
+contact Hessian apply without change.
+
+Replace the old hard root $N_Y=(Y-Y_g)/\rho$ by
+\[
+        \widehat N_Y=\sqrt H\,N_Y=\sqrt{C+A}(Y-Y_g).
+                                                               \tag{CO3}
+\]
+Its exact hard coefficient from the $C,A$ packets is
+\[
+             4D_v\frac{C+AD_u}{C+A}
+       =4D_v\left(1+\frac{A}{C+A}u^2\right),             \tag{CO4}
+\]
+which is bounded and has residue $4D_{v,0}$ on the finite $u=0$
+residue axis.  The other packet contributions to this coefficient
+and to the mixed hard entry are bounded: $1/(C+A)=x/H$ and
+$1/\sqrt{C+A}=\rho/\sqrt H$ are bounded and infinitesimal.
+
+For clarity the complete first-normal verification is also retained.
+The previous unnormalized $Y$ derivative has exactly the form
+\[
+ L_Y=P(B_2+xe_w)+B(\rho u e_z)+E e_*,\qquad
+ B_2=8D_v\{(xA)\eta D_u-(xC)(1-\eta)\},
+ \quad e_*=8v(D-\alpha).                                \tag{CO5}
+\]
+Here $P=uW/\rho$, $B=uZ$, $E=\rho Z$.  The functions $e_w,e_z$
+come only from the bounded $n,m,D,\alpha$ packets and the signed
+core, so remain bounded.  Equation (CO1) makes $B_2$ bounded with
+identically zero residue for every finite $v$ on $u=0$; $e_*$ has
+the same property.  The coefficient of $\widehat N_Y$ is exactly
+$L_Y/\sqrt H$, so its bounded zero-residue lifts are preserved.
+The $X$ derivative contains neither $C$ nor $A$ and is unchanged.
+Thus all four-root remote certificates restore both full normals.
+
+For matched finite-angle residues the scalar has exactly the old
+form $f=p^2Q_b/x+B_b$, with
+\[
+ Q_b=4D_v\{(xC)(1-\eta)^2+(xA)\eta^2D_u\}.
+\]
+Both $Q_b$ and $B_b$ have bounded coefficients by (CO1).  The monic
+divisions in $u^2-x$, $W^2-\kappa^2x$, $uW-\kappa x$, and $v-k$,
+where $\kappa=b/k$, therefore give precisely the same bounded Gram
+on $R,S,U,T$.  Its residue is unchanged.  The old first-normal
+contact divisions use only bounded $B_2,e_w,e_z$ and exact stationary
+contact; multiplication by the pure coefficient $1/\sqrt H$
+preserves their zero-residue lifts.  Hence the complete six-root
+Gram has strictly positive residue.
+
+If $n_0=0$ at the double-zero test, use the previous exact graph
+with $\eta_c=C/(C+A)$.  Now
+\[
+ xC(1-\eta_c)=xA\eta_c=\frac{xCA}{C+A},
+ \qquad
+ \left(\frac{xCA}{C+A}\right)_0=T_0/b_0.                \tag{CO6}
+\]
+These quantities are bounded units even when $H$ is unbounded.
+Thus the exact $\epsilon$ reserve and five scalar roots in that
+proof remain valid.  Its $Y$ normal is again divided by $\sqrt H$,
+and its hard $Y$ residue is now $4$ rather than $4(C_*+A_*)$.
+This proves the literal $n=0$ case as well as its infinitesimal
+neighborhood without deleting a state coordinate.
+
+\paragraph{An infinitesimal $r$: the opposite event can be unbounded.}
+Suppose now $r$ is infinitesimal.  Let $N=4n+2$.  The exact source
+formula gives
+\[
+             Nr=\frac{2(b+r)A_cS_c}{\Delta}.             \tag{CO7}
+\]
+Thus $Nr$ is a bounded positive unit, $N$ is unbounded, and both
+$nr$ and $nr^2$ are bounded.  Use the exact-contact graph
+\[
+ X_g=-ruZ,\qquad Y_g=\eta uW,
+ \qquad
+ \widehat N_X=\sqrt N(X+ruZ),\quad
+ \widehat N_Y=\sqrt{C+A}(Y-\eta uW).                    \tag{CO8}
+\]
+At the original contact $u=\rho,v=k,W=\rho b/k,Z=1$ this graph
+has exactly the required $X,Y$ values.  The potentially large $n$
+packet contributes $4nr^2D_uD_vu^2Z^2$ to the graph scalar, and
+$-8nrD_uD_vuZ$ to its unscaled $X$ derivative.  Equation (CO7)
+therefore controls the entire scalar and every full first normal,
+not only their values at contact.
+
+The hard residue on $(\widehat N_X,\widehat N_Y)$ is
+\[
+                  \operatorname{diag}(D_{v,0},4D_{v,0}). \tag{CO9}
+\]
+Indeed $H_{XX}/N=D_uD_v+O(1/N)$, since the remaining source
+weights that enter $H_{XX}$ are $m,D$; (CO4) controls $H_{YY}$.
+The mixed entry is bounded times
+$1/(\sqrt N\sqrt{C+A})$ and has zero residue.
+
+The five exact scalar monic divisions on $P,B,V,E$ from the previous
+proof still apply.  Their residues, with $z=v^2$, are now
+\[
+ q=Q(1+z),\quad b_s=2\mu,\quad c_s=2(\mu-1)z,
+ \quad d_s=4\mu v,\quad e=E_2z+E_0,                    \tag{CO10}
+\]
+where $\mu=2m_0+1>1$, $E_2=4(D/x)_0>0$,
+$E_0=4(\alpha/x)_0>0$, and $Q$ is given by (CO2).
+Define
+$\mathcal D(s,z)=(qs+c_s)(b_ss+e)-d_s^2s/4$.
+Exactly,
+\begin{align*}
+ \frac{\mathcal D(s,z)}{sz}={}&
+ 2Q\mu s/z+2Q\mu s
+ +2(\mu-1)E_2z/s+2(\mu-1)E_0/s\\
+ &+QE_0/z+QE_2z+Q(E_0+E_2)-4\mu.                    \tag{CO11}
+\end{align*}
+All six nonconstant Laurent coefficients are positive.  Exact
+stationary contact, applied after the bounded graph substitution
+$u=\rho s_1,W=\rho w_1$, gives a stationary zero at
+$(s,z)=(1,k_0^2)$.  Alternatively this follows by direct substitution
+of
+\[
+ m_0=\frac1{2(b_0-1)(b_0+1)},\quad
+ Q=\frac{2k_0^2}{\Delta_0},\quad
+ E_2=\frac{2b_0^2}{k_0^2\Delta_0},\quad
+ E_0=\frac{2k_0^2b_0^2}{\Delta_0}.
+\]
+Here $b_0>1$ follows from $g_0=b_0-1>0$.
+Rescale $z=k_0^2t$ and use exactly the balanced reciprocal-pair and
+three-cycle identity of the previous theorem.  Its $s+1/s-2$ and
+$t+1/t-2$ coefficients are strictly positive.  Thus (CO11) has a
+unique zero in the positive quadrant and a positive definite Hessian
+there.  This proves remote scalar strictness and the matched-contact
+Schur inequality, with no appeal to numerical evidence.
+
+For the full $X$ normal, direct differentiation and parity give
+\[
+ \left.F_X\right|_g=V A_X+B B_X,
+\]
+where the complete coefficients are
+\begin{align*}
+ A_X={}&-8m(1+\eta u^2)+(8D+4)(1-\eta)u^2,\\
+ B_X={}&-8nrD_uD_v+8m(1-r)
+       -(8D+4)v^2(1+ru^2)+4D_v(1-r).
+\end{align*}
+These are bounded polynomials in the bounded testing coordinates.
+Consequently the coefficient of $\widehat N_X$ has bounded
+zero-residue coefficients on $V,B$ because $1/\sqrt N$ is
+infinitesimal.  The full $Y$ normal is (CO5), with the bounded
+graph (CO8); (CO1) gives all of its required bounds and zero residues.
+Its complete residual coefficients are
+\begin{align*}
+ e_w={}&8mv^2(1+\eta u^2)-(8D+4)(1-\eta)
+                     +(8\alpha+4)D_uv^2\eta,\\
+ e_z={}&v\{-8m(1-r)+(8D+4)r-(8\alpha+4)\}.
+\end{align*}
+This restores the remote scalar certificates, including $v_0=0$,
+where (CO10) has strictly positive coefficients on $P,B,V,E$ and
+zero cross residues.  No special $n_0=0$ corner occurs in this case.
+
+At a matched residue write, exactly,
+\[
+ \frac{F_X|_g}{\sqrt N}=uA_1+WB_1
+   =-\kappa B_1S+u(A_1+\kappa B_1).
+\]
+Both $A_1,B_1$ have identically zero residue for every finite $v$;
+their finite monic coquotients also retain the factor $1/\sqrt N$.
+Exact normal contact makes $A_1+\kappa B_1$ vanish at the source
+contact.  The same four conductors $R,S,U,T$ therefore give bounded
+zero-residue coefficients, exactly as in the bounded-$n$ argument.
+For the $Y$ normal the previous division
+$L_Y=RB_2+\rho E_2'$ has bounded $B_2,E_2'$ with identically zero
+leading functions; division by $\sqrt H$ preserves those properties.
+All quadratic normal coefficients are already bounded by
+(CO4),(CO7),(CO9).  Thus the matched-contact Gram for the entire
+parent is strictly positive in residue.  The other state charts and
+the simultaneous sign copy use precisely the previous proof.
+
+\paragraph{Every other commuting test.}
+Choose the pure coefficient
+\[
+                         \sigma=\min(1,xC,xA).
+\]
+It is a positive bounded unit, since $T_C,T_A$ are units while
+$h,b-h$ are bounded.  Retain the nonnegative excess packets
+\[
+ 4(C-\sigma/x)D_v(uW-Y)^2,
+ \qquad4(A-\sigma/x)D_uD_vY^2,
+\]
+and use the four outer core identities in the previous theorem with
+$C=A=\sigma/x$.  These identities retain the entire $n$ packet;
+they never use boundedness of $n$.  Their displayed hard entries
+$4C_*,4A_*$ are simply replaced by $4\sigma_0$, while $m_0>0$
+and $(D/x)_0>0$ are unchanged.  Every residue Gram stays strictly
+positive.  This covers the finite-unit $u$ axis, both reciprocal
+axes and their double corners, including literal projective ends.
+
+The finite $u=0$ axis, those outer axes, and the inherited theorem for
+noncommuting-residue tests exhaust all independent measurements.
+Restore the retained packets and positive homogeneous factors, and
+split complex states into real and imaginary parts.  This proves
+Theorem~\ref{thm:c2-three-openings}.  In particular the newly admitted
+source scales permit either $A$ or $C$ to be arbitrarily larger than
+$x^{-1}$, independently of an arbitrarily large $n$.  They cannot
+both have unbounded ratios to this scale because $h+(b-h)=b$ is a unit.  There is no
+prescribed comparison between these coefficient scales and any
+testing infinitesimal.

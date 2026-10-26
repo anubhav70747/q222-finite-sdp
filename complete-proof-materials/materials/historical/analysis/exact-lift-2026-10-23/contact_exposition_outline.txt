@@ -1,0 +1,188 @@
+CONTACT CONSTRUCTION: SIX-PAGE PROOF CORE
+Private exposition plan, 24 October 2026. No new admission theorem is asserted.
+
+Inputs read: pro_contact_completed_reply.txt; pro_contact_recovery_reply.txt;
+contact-cap-independent/findings.txt. This outline separates the construction
+reported by Pro from the portions independently checked in the supplied findings.
+The weak identity/bound audit and recovery of the strong scripts remain external
+prerequisites.
+
+Opening statement (page 1)
+--------------------------
+State the source domain before discussing matrices. Normalize d=1 and use the
+exact GE1 dictionary, with lambda=beta=0,
+  0<Ho<1, 0<zo,yo<=2^-64 Ho, 0<ro<1,
+  Lo=yo to>0, jo=1+zo ro-to>0, n>=0.
+There is no lower bound on Ho,ro,to,jo,1-Ho and no comparison of source and test
+openings. Nonnegative event additions and finite source-coefficient limits are
+separate consequences, not substitutions into undefined GE1 denominators.
+
+The target admission statement concerns this native envelope, not all canonical
+sources. The fixed testing cap is |u|<=2^-12, |v|<=2^-25; the old complement
+b>1-2^-26, |c_test|<2^-26 lies inside it. The source split Ho<=2^-12 /
+Ho>=2^-12 selects two witnesses in one fixed direct-sum family; it is not an SDP
+constraint. All state coordinates remain independent.
+
+Give the contact in one display:
+  u=sqrt(zo), v=sqrt(yo),
+  (W,X,Y,Z)=((Ho+Lo)/sqrt(zo yo),-ro sqrt(zo),Ho/sqrt(yo),1).
+Here Fh/4=0 but c_test(aW-bY)=Lo/sqrt((1+zo)(1+yo))>0.
+This explains why an individually positive event square cannot simply be
+discarded from a signed contact cancellation. It motivates the complete-parent
+calculation without recounting previous failed certificates.
+
+Lemma 1: Complete the two full state normals (pages 1-2)
+------------------------------------------------------
+Introduce the invertible pure-testing rotation
+  t=(X+uZ)/(1+u^2), r=(Y-uW)/(1+u^2),
+  w=(W+uY)/(1+u^2), zeta=(Z-uX)/(1+u^2).
+Print its inverse. Put N0=t-pvw, M0=-r-Hv zeta.
+Use the exact RSR2-RSR19 source change once in a compact displayed dictionary:
+  Bs=Ho+yo to, hs=Ho/Bs, cs=1+zo ro, Rs=1+hs zo,
+  B=Bs Rs/cs, j=zo cs/(Bs Rs), T=yo cs/(Bs Rs),
+  p=zo(1-ro)/(Bs Rs), H=to/cs; x=jB=zo, y=TB=yo.
+On the weak branch: B<2^-11, j,T<2^-63, 0<p<j, 0<H<1.
+
+Keep the full RFN8/RFN12 parent and both normal couplings. A short table may
+define their scalar coefficients; neither an on-contact identity nor elimination
+of M0 is an acceptable substitute. The proof's displayed invariant is equality
+for all t,r,w,zeta, not only on the contact state.
+
+For h0=m(1-p)+1/2 and bcur=vw-u zeta/j, show the exact identity
+  h0 N0^2+n(N0+j bcur)^2=Nhat^2+Me bcur^2,
+  Nhat=sqrt(n+h0)(N0+nj bcur/(n+h0)),
+  Me=n h0 j^2/(n+h0).
+The denominator n+h0 is source-only and >=1/2. State explicitly that literal
+n=0 gives Me=0 and Nhat=sqrt(h0)N0. This is a full-normal completion, not a
+division by a current mass that might vanish.
+
+Lemma 2: A harmonic budget pays for all dangerous purchases (pages 2-3)
+---------------------------------------------------------------------
+Define Sigma=Me+fc/y>0. The decisive estimate is p^2<=8 Sigma.
+Present its short proof from rho=p/j<=5(n+B)/2, rho<=1 and fc/y>=j^2 B/3:
+  n<=h0: Me>=n j^2/2 and p^2<=5Me+(15/2)fc/y;
+  n>=h0: Me>=j^2/4 and p^2<=4Me.
+Thus gamma=p^2/Sigma<=8, including n=0. The circuit mass, rather than a
+positive lower bound on n, supplies the missing reserve.
+
+Define U=u/sqrt(x), V=v/sqrt(y), Zcal=zeta/sqrt(jT),
+Q*=Uw-V Zcal, B*=Vw-U Zcal, R*=Zcal-UVw, and Psi_h as in RFN18b.
+Print the explanatory circuit identity
+  (1+V^2)Psi_h-V^2 B*^2
+    =Q*^2+R*^2+V^2(w-UV Zcal)^2.
+Then print the two exact purchases from the reply, including their source
+coefficients; these are polynomial identities after clearing the displayed
+positive source denominators. Do not derive the second by dividing by v^2
+at a literal test endpoint. Give also the signed gc and negative-kc
+recombinations. These formulas explain the cancellation; the remaining 44
+coefficient records merely implement it while retaining both normal couplings.
+
+Lemma 3: Uniform reserves give a finite fixed gate family (pages 3-4)
+------------------------------------------------------------------
+Prove once the elementary matrix rule. If Q=Q0+sum A_k p_k, |p_k|<=1,
+Q0>=mu I, alpha_k I +/- A_k>=0 and sum alpha_k<mu, then
+ Q=(Q0-sum alpha_k I)
+   +sum [(alpha_k I+A_k)(1+p_k)+(alpha_k I-A_k)(1-p_k)]/2.
+Only sqrt(1+/-p_k) is a testing radical; alpha_k and A_k are source-only
+Gram entries. This is the exact reason variable source thresholds disappear.
+
+For the weak branch use the eight exponent pairs
+ (1,0),(0,1),(2,0),(0,2),(1,1),(2,1),(2,2),(0,4),
+p_ij=(4096u)^i(33554432v)^j.
+A single table gives bounds 1,1,512,8,16,4,16,128, Q00>=I/4,
+and total budget<1/1024; the reserve is >=255I/1024.
+Explain which scaled source inequalities prove these bounds; reproducing
+44 symbolic entries in the narrative obscures the mechanism.
+
+Treat the strong branch as a second application of this SAME lemma.
+Print its six-row shear and baseline, with baseline>=I/2. Put its 13
+nonconstant exponent pairs, coefficient bounds and claimed <1/8 total
+perturbation in a table. Do not present those numerical bounds as established
+until SC10-SC11, extract_lII.py, bound_lII.py, monomial_budgets.py,
+export_source_witness.py and verify_native_contact.py have been recovered
+and independently checked. The strong scaled symbols differ from the weak
+ones; a shared letter must not silently identify them.
+
+Lemma 4: Signs, literal axes, and remote tests (pages 4-5)
+--------------------------------------------------------
+Use the exact gauge (u,v,W,X,Y,Z)->(epsilon u,eta v,W,eta X,
+epsilon eta Z). Give the pure-testing core completion from findings.txt:
+its remaining scalar form is proportional to
+  u^2 v^2(w^2+zeta^2)-2uv(1+u^2+v^2)w zeta.
+Hence a negative core forces uvw zeta>0; after gauging u,v positive,
+w zeta>0 makes all weak radicals real. If the core is nonnegative, use its
+pointwise nonnegative value plus the eight event packets directly.
+The axes u=0,v=0,w=0,zeta=0 already have nonnegative core and require no
+division by those variables. This is a positivity argument on the
+complementary state set, not a claim that the contact Gram identity extends
+there with imaginary radicals. Complex states follow by adding the real and
+imaginary parts of the real quadratic form.
+
+Show the two rational cap-containment inequalities. State exactly the
+preserved Alice/Bob chart admission assumptions, citing their identities:
+the mere existence of their arrays is not their source admission proof.
+Projective infinities belong to those charts. This yields all-testing native
+admission only once all three chart admissions have been proved.
+
+Affine formulation and scope (page 6)
+------------------------------------
+Give the product-to-coefficient recipe in one display, with weak product
+weight Du, strong weight 1, and fixed signed gates. Include the nine source
+signs. The native nonlinear dictionary selects witnesses; it is not imposed
+as nonlinear constraints in the affine coefficient system.
+
+State the exact inventories in a table, not as a proof. Before symmetry reduction,
+strong 20+26x11 and weak 34+16x16 have order596, 4697 Gram variables and
+948 coefficient equations. Present the following exact reduction in the main
+formulation instead. In the ring su^2=u, sv^2=v, sz^2=w*zeta, average the
+eight independent formal sign changes of su,sv,sz. Each feature has a fixed
+character, whereas target and gates are polynomial. Conjugating each Gram by
+its diagonal character signs and averaging preserves PSD and the identity,
+while killing cross-character entries. Conversely the resulting blocks embed
+in the original blocks. This proves equivalence, not more source admission.
+The weak34 splits into 26+2+4+2 and each weak16 into14+2; strong blocks remain.
+Thus use63 Gram blocks, order596, 4021 Gram variables,619 equations; adding
+the nine source signs gives72 PSD blocks and order605. Appending the remote
+order20+order10 pencils gives order635,4024 variables and619 equations.
+The equation count is not a rank assertion. Provide the literal family and sparse
+rational coefficient table as the reproducible definition, with a few sample
+rows sufficient to explain the convention.
+
+After fixing the functions, finite source-coefficient limits are admitted by
+a finite-evaluation PSD Gram bound; this closure argument neither chooses the
+family nor supplies missing native admission. End once with the precise scope:
+conditional on completed admission checks,
+ E+cone(S_GE1) subset K635 subset C_can.
+No implication C_can subset K635, no full Q222 lift, and no invariance of this
+family under source permutations has been proved here.
+
+Reproducible dependencies outside the six-page core
+--------------------------------------------------
+A. Exact GE1/RSR dictionary and four source cancellation identities.
+B. Literal full-parent restoration, all 44 weak and 51 strong coefficient
+   records, and finite rational source-bound tables with numerator estimates.
+C. Complete fixed function lists, gate monomials, coefficient-ring conventions,
+   rational affine rows and preserved remote arrays.
+D. Exact sign/core and event-ray identities; finite-evaluation closure proof.
+These must remain accessible mathematical evidence, not unnamed checker PASS
+claims. They need not be narrated record by record.
+
+Keep the broader R1 estimate p^2<=32 Sigma in a separate optional lemma:
+the completed reply explicitly says it does NOT complete the full-parent Gram
+on that larger corner. It cannot enlarge the main theorem's domain.
+
+Current evidence boundary
+-------------------------
+The independent findings establish counts, coefficient conventions/sample
+rows, event rays, sign/core extension, cap containment, weak gate-budget
+arithmetic, strong baseline positivity, and fixed-family limit closure.
+They do not verify quantitative native admission from those structural facts.
+Recovery now supplies the weak dictionary/44-record transcription for the
+other agents' audit. The strong perturbation and source-substitution evidence
+is still pending. The six-page plan is therefore a rigorous route for the
+eventual proof, not a declaration that every prerequisite has been checked.
+The radical-sign reduction was separately checked algebraically for this
+outline; reduce_parity.py and parity_reduction_checks.json provide the exact
+filtered arrays. Their reported20610 Gram records and120 source records are
+an implementation inventory, not an additional proof of native admission.
+

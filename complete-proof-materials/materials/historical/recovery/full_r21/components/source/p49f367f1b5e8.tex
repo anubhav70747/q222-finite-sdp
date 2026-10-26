@@ -1,0 +1,426 @@
+% Fresh scope proof, 2026-10-22.  Retained proof bytes are unchanged.
+\section{The actual hypotheses used by the retained weak-C2 leaves}
+\label{sec:weak-c2-bare-source-audit}
+
+This section proves the scope extension needed for the source join.
+Several retained theorem statements were written on a complement of
+earlier admissions.  Such a complement is not a mathematical
+assumption in the coefficient calculations below.  The extension is
+justified by checking the entire proofs, including the state normals
+and the remote joins; it is not inferred from their historical
+admission labels.
+
+\paragraph{Common source hypotheses.}
+Throughout this section use the original physical stationary C2
+source, with \(d=1\), \(\lambda_{\rm event}=\beta=0\), its actual
+contact, and all original strict gaps and nonnegative event
+coefficients.  In particular \(n\geq0\), including equality.
+Put
+\[
+\begin{gathered}
+ z=aB,\quad y=tB,\quad H=hB,\quad L=lB,\quad
+ l=1-h,\quad e=1-r,\\
+ g=1-ae+haB,\quad j=1+aBr-l/t .
+\end{gathered}
+ \tag{BSR1}
+\]
+Here \(B,z,y\) are positive source infinitesimals, \(0<h,r<1\),
+\(g,j>0\), and \(B-zyr>0\).
+The full quarter-parent is the polynomial HJ2 in the following
+source-assembly section.  All the retained identities cited here
+are identities for that polynomial, not only for its value on a
+contact graph.
+A \emph{unit} below is positive, bounded, and has positive real
+residue.  The source and testing fields are arbitrarily chosen,
+separately labelled real closed extensions of \(\mathbb R\);
+no algebraic-disjointness assumption is made.  They may be
+two labelled copies of the same extension.  The source and
+testing choices are independent in the universal quantifiers.
+The positive-infinitesimal total-scale condition may be retained;
+on every row with an unbounded original coefficient it follows
+already from that coefficient.
+
+\subsection{Regular A-opening exits}
+
+On \(t,g,j\) unit and \(h\) infinitesimal, the four actual
+source exits have exactly the following hypotheses:
+\[
+\begin{array}{c|l|l}
+ &\text{additional source conditions}&\text{complete bodies}\\ \hline
+ {\rm WA}&r,e,a\text{ unit}&
+       \texttt{five\_root\_local},\ \texttt{five\_root\_remote}\\
+ {\rm WE}&r,e\text{ unit},\ a\text{ infinitesimal}&
+       \texttt{extension}\\
+ {\rm SL}&r\text{ infinitesimal},\ a\text{ bounded}&
+       \texttt{local\_small\_r},\ \texttt{remote\_small\_r}\\
+ {\rm WC}&e\text{ infinitesimal},\ a\text{ unit}&
+       \texttt{centered\_circuit\_closure},\
+       \texttt{remote\_reduction}.
+\end{array}
+\tag{BSR2}
+\]
+The WA, WE and SL statements explicitly require no residual
+membership premise.  Their source bounds use the original formulas,
+and their complete five-root identities keep both state normals.
+WE uses the exact monic \(a\)-division of
+\((b_2-\alpha/B^2)/a\); its canceled denominator is a unit.
+It requires no bound on \(h/a\).
+SL uses \(nr\), \(Ah\) and the normalized roots
+\(\sqrt n\,\xi,\sqrt A\,\eta,aR_2\); it requires no bound on
+\(r/h\), \(a/r\), or a testing/source ratio.
+Their printed homogeneous remote identities restore every
+projective test.
+
+For WC the precise extra scale bound is proved, rather than
+assumed.  The exact original identity is
+\[
+ 2r\Delta n=eQ-BK,\qquad
+ K=(1+a)(h+t)(1+aB),
+ \tag{BSR3}
+\]
+\[
+ \begin{split}
+ Q={}&1+B(1+t+ah+2ar+at)\\
+    &+B^2\{a(h+t)+a^2[h(r+1)+t(1+r-r^2)]\}.
+ \end{split}
+\]
+On the WC domain \(Q,K,\Delta\) are positive units.  Thus
+\(B/e\) and \(n/e\) are bounded, including \(n=0\).
+These are exactly BS1--BS3, not an unprinted assumption
+about the relative rates of \(B,e,h\).
+WC3 and WC13--WC18 prove the full scalar and normal coquotient
+bounds; its reciprocal testing-ratio argument uses the same
+physical \(n/m\) bound.  The finite three-circuit lift is used
+only after these complete coefficient checks.  GR1--GR7 give
+the remote parent, including the additional \(\sqrt m W\)
+root.  None of these four exits calls a later weak-C2 row
+or the present source join.
+
+\subsection{Unit-\(e\) parts of R3 and R4}
+
+The actual bodies \texttt{r3\_e\_unit\_all\_tests} and
+\texttt{r4\_e\_unit\_all\_tests} apply on their explicit
+row conditions together with \(e\) unit, without an earlier-exit
+premise.  Indeed \(g>0\) first gives bounded \(a\).  In their
+source calculations all denominators are units after replacing
+the potentially divergent coefficients by
+\[
+ nr,\quad mg,\quad Cl\ \text{in R3},\qquad
+ nr,\quad mg,\quad Dj\ \text{in R4}.
+ \tag{BSR4}
+\]
+The full \(\xi\)-row is normalized by \(\sqrt{n+1/2}\).
+R3 keeps \(\sqrt C\,\eta\); R4 uses the exact complete
+centered-\(D\) identity RD3--RD6 and solves its \(l\)-unit
+coefficient.  The only apparent \(a\)-pole is the same exact
+WE monic quotient used in BSR2.  For \(g\) infinitesimal
+the centered \(m\) excess is retained and the remainder
+depends on bounded \(mg\), rather than on \(1/g\).
+The strict two-by-two blocks R3E5--R3E6 and
+R4E7--R4E8 include all these openings.
+The remote proofs use only the printed positive lower bounds
+and the complete selected-parent identities R4E14--R4E16.
+Their source estimate \(nr\sim e/[2(1+a)]>0\)
+proves that \(n=0\) is impossible on these particular domains.
+It is not removed from a neighboring source branch.
+
+\subsection{R5}
+
+On bare R5, \(t,h,l,j\) are units and \(r\) is
+infinitesimal.  Positivity of \(g\) gives bounded \(a\)
+with real residue \(\rho\in[0,1]\).
+Writing \(\chi=h_0\), \(\ell=1-\chi\), and \(\tau=t_0>\ell\),
+the actual source calculation R5.1 gives
+\[
+ \begin{gathered}
+ (nr)_0=\frac1{2(1+\rho)},\qquad
+ A_0=\frac{\tau}{2\chi(1+\rho)},\\
+ C_0=\frac{\chi+\tau-\rho\ell}{2\ell(1+\rho)},\qquad
+ D_0=\frac1{2(1+\rho)(\tau-\ell)},\\
+ (\alpha/B^2)_0
+       =\frac{\chi+\tau-\rho\ell}{2(1+\rho)}.
+ \end{gathered}
+ \tag{BSR5}
+\]
+Every displayed pivot is positive.  For \(\rho<1\),
+\(m/a^2\) is bounded; for \(\rho=1\), \(mg\sim1/4\)
+and \(m\) is unbounded.  These alternatives are exhaustive,
+and \(nr\) proves \(n=0\) impossible here.
+
+The complete local proof uses \(\sqrt n\,\xi\), the
+exact WE quotient when \(\rho=0\), and the centered
+excess R5.2--R5.5 when \(\rho=1\).
+For clarity, that last identity is
+\[
+ mM^2-(m-K)(M-gvW)^2
+ =KM^2+2(m-K)g\,vWM-(m-K)g^2v^2W^2,
+ \tag{BSR6}
+\]
+where \(M=vW-X+uvY-uZ\) and \(K>0\) is real.
+It is an entire-event identity; it does not change the source
+coefficients in any other packet.
+The full \((\eta,R_1)\) determinant is
+\(A_0(C_0+D_0+1/2)>0\).
+The finite remote determinants R5.8 and R5.10, the
+\(\rho=0\) extra root \(aW\), and R5.13--R5.17
+cover all remaining states and projective tests.
+Their entries use precisely BSR5, \(nr\), and \(mg\).
+No earlier-admission condition or relative opening rate
+occurs in this chain.  Therefore it proves bare R5.
+
+\subsection{R6}
+
+On bare R6, \(t,h,l,j,r\) are units and \(g\) is
+infinitesimal.  The exact equality
+\(a(e-H)=1-g\) excludes infinitesimal \(a\).
+For bounded \(a\), \(e\) is a unit and \(a_0=1/e_0\).
+R6.1 gives positive-unit \(n,A,C,D,\alpha/B^2,mg\).
+The entire proof consists of BSR6 followed by the strict
+local block R6.2, the full kernel determinant R6.4,
+and the homogeneous matrices R6.5--R6.7.
+Only these actual residues are used; no prior-complement
+condition is needed.
+
+For unbounded \(a\), put \(s=1/a\) and \(b=a^2B\).
+The exact physical identity BSR3, in the original variables,
+proves \(b\) bounded before any contact normalization.
+The literal zero of \(n\) is retained in that inequality.
+The positive bounded \(b\) is either a unit or infinitesimal:
+\[
+ \begin{array}{c|l}
+ b\text{ unit}&\texttt{r6\_b\_unit\_all\_tests}
+                       \quad({\rm RB1\!-\!RB24})\\
+ b\text{ infinitesimal}&\texttt{r6\_b\_inf\_all\_tests}
+                       \quad({\rm RI1\!-\!RI20}).
+ \end{array}
+ \tag{BSR7}
+\]
+Both proofs retain the actual centered \(m\) packet and,
+where required, the whole actual \(n\) packet before forming
+the bounded remainder.  RB5--RB9 give its full polynomial
+inverse and actual contact.  RB13--RB18 and RI8--RI15
+verify the raw scalar support and both complete first-normal
+modules before applying the restricted CC1--CC6 conductor.
+The infinitesimal-\(b\) proof verifies the additional
+\(\varepsilon,\mathfrak j\) filtrations on the full coefficients;
+it does not import an unrestricted contact-ideal inclusion.
+Its strict leading block is RI19.
+The adjacent unit-state charts retain the original \(n\)
+packet when that is the needed pivot.
+
+The remote inputs in the two dependency manifests are
+selected full-parent identities: BE4, the BE infinity/zero
+identity, R5.5, RT10, and R6.5--R6.7.
+Their lower bounds are verified from the actual R6 source.
+The C1 source theorem and a bounded-\(a\) R6 source
+theorem are not transported to this domain.
+Hence the three actual R6 bodies prove its entire bare
+source.  \(n=0\) remains in the unit-\(b\) component;
+where a positive residue excludes it, that exclusion is
+proved by the original formula.
+
+\subsection{R7 and its one genuine source exclusion}
+
+Bare R7 has \(t\) unit and \(h,g\) infinitesimal, with
+\(r,j\) not both infinitesimal.  This last condition
+is used and must be kept.
+For bounded \(a\), \(a_0=1/e_0\), and R7.1 gives
+\[
+ C_0=\frac{t_0-e_0}{2(1+e_0)},\qquad
+ (\alpha/B^2)_0=\frac{t_0-e_0}{2e_0(1+e_0)},\qquad
+ (Ah)_0=\frac{t_0}{2(1+e_0)}.
+ \tag{BSR8}
+\]
+Here \(t_0\geq1\), \(0<e_0\leq1\).
+The retained exclusion is exactly what prevents
+\(t_0=e_0=1\); it makes the first two pivots strict.
+The full proof \texttt{r7\_bounded\_a\_all\_tests}
+uses the centered \(m\) identity and the exact
+centered \(D\) event
+\[
+ L_D=uW+uvX-Y-vZ+jvZ .
+ \tag{BSR9}
+\]
+Its five-root matrix identity R7.3 includes the zero
+syzygy and both normals.  After extracting \(DL_D^2\),
+the remaining coefficients involve bounded \(nr,Ah,mg,Dj\).
+The appropriate hard rows are normalized jointly.
+The remote cap lemma, full kernel matrices, and
+R7.6--R7.12 use the same bounds, with no comparison
+between the four divergent coefficients.
+
+For unbounded \(a\), the actual source gives \(r\sim1\);
+thus the retained \(r,j\) exclusion is automatic.
+The body \texttt{r7\_unbounded\_a\_body} derives bounded
+\(b=a^2B\), \(n=O(s^2)\), and bounded positive
+\(mg,Ah,D(1-c)\) directly from the source formulas.
+RU7 is the entire bounded remainder after all four
+actual positive packets have been removed.
+RU13--RU16 check its full raw support and normal modules;
+RU20 verifies the coefficient filtrations before reusing
+the restricted RI14--RI15 algorithm.
+The complete strict block RU24 has determinant
+\((t_0+2)/(4t_0)>0\), including \(t_0=1\).
+RU26--RU30 and the selected BE identities supply the
+remote and projective join.  No earlier-exit condition
+is used.
+
+The source join below proves exactly
+\[
+ r,g,h,j\text{ infinitesimal},\ t\text{ unit}
+ \quad\Longrightarrow\quad C\text{ infinitesimal}.
+ \tag{BSR10}
+\]
+Consequently the excluded R7 intersection cannot occur
+on the directed strong-\(C\) input.  One must not extend
+BSR8 across that intersection by deleting the condition.
+
+\subsection{R8}
+
+Bare R8 has \(t,g\) units and \(h,j\) infinitesimal;
+the exact gap gives \(t_0=1\).
+There are two exhaustive cases for \(r\).
+For \(r\) a unit, \texttt{joint\_D\_R8\_closure}
+gives the complete local proof JD1--JD18.
+The centered-\(D\) identity JD4 removes the whole
+divergent rank-one block, including both normal terms.
+It then splits the actual source into bounded \(a\)
+with \(e\) unit, bounded \(a\) with \(e\) infinitesimal,
+and unbounded \(a\).
+The latter uses the positive source quantity
+\(\rho=n/e^2\): its noninfinitesimal part has the
+strict weighted pivot, its positive infinitesimal
+part has the exact paired-\(D\) thin lift, and
+\(n=0\) has the physical map described below.
+JD14--JD17 verify the new \(D\)-dependent coquotients;
+no inverse of \(j\) remains in their bounded arrays.
+This is an algebraic comparison with a formal source,
+not application of a physical C1 theorem at negative beta.
+
+For \(r\) infinitesimal, the independent body
+\texttt{r8\_small\_r\_local} derives
+\[
+ (nr)_0=(Ah)_0=(Dj)_0=\frac1{2(1+a_0)},\qquad
+ 0\leq a_0<1 .
+ \tag{BSR11}
+\]
+It jointly normalizes \(\sqrt n\,\xi\), \(\sqrt A\,\eta\),
+and \(\sqrt D\,L_D\), using the exact matrix syzygy
+RD3--RD6.  RD7 checks every full remaining coefficient,
+including the monic \(a\)-quotient at \(a_0=0\).
+Its five strict residue pivots are printed in RD9--RD11.
+No relative rate among \(r,h,j\) is required.
+JD19--JD24 and the exact homogeneous selected-parent
+identities cover the remote complement for both cases
+of \(r\).  Thus their union proves bare R8; it uses no
+historical residual-exclusion premise.
+
+\subsection{R9 and R10}
+
+Bare R9 has \(t,g,j\) units and \(h,e,a\)
+infinitesimal.  Its exact source denominator has unit
+residue \(2(t_0-1)>0\).
+The R9 source appendix proves the cancellations
+\[
+ \lambda=\frac{m-a^2q}{ta^2B}\sim\frac12,\qquad
+ c_F\sim\frac1{2t_0},\qquad
+ C\sim Ah\sim\frac{t_0}2,\qquad
+ D\sim\frac1{2(t_0-1)}.
+ \tag{BSR12}
+\]
+The body \texttt{reciprocal\_contact\_closure},
+RC1--RC13, contains the entire scalar, both complete
+first normals, and the hard block.  Its coupled circuit
+removes the apparent unbounded testing-ratio coefficient;
+the final homogeneous roots have no such inverse.
+The R13 frontier's R9 extension of GR1--GR7 uses
+the actual bounds \(B/e,n/e\) and \(m/(a^2e)\),
+the full additional \(\sqrt m W\) row, and the
+printed homogeneous endpoints.
+All these estimates are on the explicit bare source,
+including \(n=0\).
+
+Bare R10 has \(t,g,j\) units, \(h,e\) infinitesimal,
+and \(a\) unbounded.  The R10 source-and-weighted proof puts
+\(s=1/a,w=ae,b=a^2B\) and proves
+\[
+ b/w=O(1),\qquad n=O(s^2w),\qquad
+ m/w\sim\frac1{2(1-w_0)},\qquad w_0<1 .
+ \tag{BSR13}
+\]
+The bound on \(b/w\) comes from the original inequality
+BSR3 before any normalized circuit is introduced.
+The same source proof gives the full remote parent,
+retaining bounded \(m\) as a whole packet where needed.
+The actual all-tests join has three local source cases:
+\(\rho=n/e^2\) noninfinitesimal, \(n=0\), and
+\(0<\rho\) infinitesimal.
+The first is the complete weighted identity R10.9
+and strict source Schur cases R10.11--R10.12.
+The last is the whole thin-parent identity TL4--TL10
+together with \texttt{r10\_unit\_W\_join}.
+The latter proves the exact critical deficit divided
+by \(m\) equals \(s\) times a bounded source coefficient;
+it includes every bounded normalized \(Z\), including zero.
+The maximal-coordinate state partition supplies exactly
+that chart and its complementary \(Z\)-unit chart.
+The restricted CA/CS/SE conductors are used only after
+the full raw supports, both normal arrays, and the
+required scaled divisibilities have been checked.
+No bound on \(e/B\), \(h/e\), or an independent
+testing/source ratio is inserted.
+
+\paragraph{The literal zero boundary in R8 and R10.}
+The only physical C1 source import just used is
+at literal \(n=0\).
+The exact OP4 map is
+\[
+ x_1=z,\quad \eta_1=t,\quad \zeta_1=1/a,\quad
+ r_1=h,\quad \theta_1=1-r .
+ \tag{BSR14}
+\]
+It gives the identical four contact state coordinates.
+OP2 and OP5 prove that the formal beta is exactly zero
+on this boundary.  The original C2 parent is therefore
+the actual C1 parent, up to its allowed positive
+coefficient normalization.
+In the unbounded-\(a\) cases where this import is used,
+\[
+ k_1=\sqrt z,\ \zeta_1,\ r_1\text{ are infinitesimal},
+ \qquad \eta_1=t\text{ is a unit},\qquad
+ e_{1,\mathrm{scale}}^2=t\,a^2B
+ \text{ is positive bounded}.
+ \tag{BSR15}
+\]
+If the last scale is infinitesimal, apply the actual
+theorem \texttt{small\_e\_all\_tests}.
+Otherwise apply \texttt{centered\_a\_bounded\_delta}.
+The former covers every positive native \(r_1\);
+the latter covers the present infinitesimal native \(r_1\).
+Both statements retain every original positive opening
+and literal \(\beta_1=0\), and neither has an
+earlier-complement premise.
+Their full centered-parent and both-normal proofs,
+outer/state lemmas, and homogeneous endpoints are
+the stated imports.  No whole-C1 routing theorem
+or later weak-C2 result is a dependency.
+For \(n>0\), OP5 gives negative formal beta;
+BSR14 is then never used as a physical-source theorem.
+
+\paragraph{Conclusion of the scope proof.}
+Every use of a retained source theorem has now been
+matched to its explicit algebraic hypotheses.
+Every use outside its old source label is an exact
+selected-parent identity or a restricted conductor
+whose complete coefficient hypotheses have been proved
+in the importing body.
+In particular all full hard blocks and both state-normal
+rows remain in the respective identities.
+The only retained source exclusion needed by the
+ten-row join is the simultaneous \(r,j\) condition
+in R7, and BSR10 dispatches it explicitly.
+Thus the listed bodies prove the bare-source versions
+needed for HJ, without a circular appeal to the
+union being assembled.  Every file and the exact
+imported locations are pinned in the accompanying
+used-input manifest.

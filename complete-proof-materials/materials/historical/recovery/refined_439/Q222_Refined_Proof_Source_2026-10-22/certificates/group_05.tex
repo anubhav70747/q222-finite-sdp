@@ -1,0 +1,1387 @@
+\chapter{C2: both complementary events weak}
+\label{ch:cert-5}
+Formula tags are local to their certificate section. All source and testing fields remain separately labelled.
+
+\section{\texorpdfstring{Two weak complementary events force the C2 radial certificate}{Two weak complementary events force the C2 radial certificate}}
+\label{component:p534f57e1da6f}
+
+\label{p534f57e1da6f:sec:chart-free-c2}
+
+Here weak means infinitesimal after division by the original positive
+signed coefficient \(d\). All source calculations take place in one real
+closed coefficient field. Testing fields remain independent.
+
+\begin{theorem}[C2 entry without a contact-chart hypothesis]
+\label{p534f57e1da6f:thm:chart-free-c2}
+Let the physical canonical parent have \(\lambda=\beta=0\), \(d>0\),
+and nonnegative original event coefficients. Suppose it has an actual
+finite noncommuting stationary zero contact, and
+\[
+                    C/d,\ \alpha/d\quad\text{are infinitesimal}.
+\]
+Then its full parent is tensor SOS at every independent real or complex
+projective test. No hypothesis on the other four event weights, on the
+contact-angle ratio, or on the signs of the source gaps is imposed.
+
+More precisely, normalize \(d=1\). After local real sign gauges and at
+most the exact C2 reflection,
+the actual contact enters the positive rational C2 source with
+\[
+ c\text{ bounded},\qquad a,b,t\longrightarrow1,\qquad
+ r,h,g,j>0\text{ infinitesimal}.
+\]
+In particular all four matching weights are unbounded and both
+complementary weights are strictly positive on this finite-contact domain.
+\end{theorem}
+
+The proof has three ingredients: a finite physical witness makes the
+matching weights large; the quadratic CHSH excess controls the contact
+amplitudes at the scale of the actual angles; stationarity fixes their
+signs. This last step establishes the source chart rather than assuming it.
+
+\subsubsection*{The physical bound at the correct angular scale}
+For \(u,v>0\), put \(D_u=1+u^2,D_v=1+v^2\), and let \(M(u,v)\) be the
+real symmetric matrix of the signed core
+\[
+H=2\{R_D^2+D_u(vY-Z)^2+D_v(X+uZ)^2-D_uD_vZ^2\},
+\]
+where
+\[
+R_m=vW-X+uvY-uZ,\qquad R_D=uW+uvX-Y-vZ.
+\]
+Write \(L=D_uD_v\). Direct matrix multiplication gives
+\begin{equation}
+(M-LI)^2=L^2I+4uvLJ,\qquad
+J=\begin{pmatrix}0&0&0&1\\0&0&-1&0\\0&-1&0&0\\1&0&0&0\end{pmatrix},
+\qquad J^2=I.                                      \label{p534f57e1da6f:eq:cf-core-square}
+\end{equation}
+For a unit real state \(\psi\), Cauchy--Schwarz therefore gives
+\[
+\psi^TM\psi\ge L-\sqrt{L^2+4uvL}\ge-2uv.
+\]
+The last inequality follows by squaring the positive quantities
+\(L+2uv\) and \(\sqrt{L^2+4uvL}\); their squared difference is
+\(4u^2v^2\). Homogeneity proves
+\begin{equation}
+                         H\ge-2uv\,\|\psi\|^2.        \label{p534f57e1da6f:eq:cf-core-bound}
+\end{equation}
+This is an exact ordered-field inequality, not a truncated expansion.
+It is the usual quadratic CHSH excess in the present normalization.
+
+At a normalized zero contact, every event term is nonnegative. Define
+the four matching amplitudes, in the fixed order \((n,A,m,D)\), by
+\[
+\mathcal L=(\sqrt{D_uD_v}X,\sqrt{D_uD_v}Y,R_m,R_D).
+\]
+Equation~\eqref{p534f57e1da6f:eq:cf-core-bound} gives, for each matching event,
+\begin{equation}
+                   e_i\mathcal L_i^2\le uv/2.         \label{p534f57e1da6f:eq:cf-amplitude-bound}
+\end{equation}
+All square roots and inequalities in this paragraph are coefficient-side.
+
+\subsubsection*{Matching weights and the compact contact geometry}
+First every matching weight is unbounded. To see the mechanism for
+\(D\), use the coefficient-field experiment
+\[
+ u=1,\quad v=\sqrt{1+\delta},\quad
+ (W,X,Y,Z)=(1,0,0,\sqrt{1+\delta}),\qquad\delta>0.
+\]
+The \(n,A,m\) packets vanish, and the full eight-event parent is exactly
+\[
+4D\delta^2-2\delta+8\lambda+4(2+\delta)C
+ +8(1+\delta)\alpha+4(2+\delta)(1+\delta)\beta.
+\]
+If \(D\le B\) for a positive real \(B\), choose the positive real
+\(\delta=1/[4(B+1)]\). The first two terms have a strictly negative
+real upper bound, whereas the complementary terms are infinitesimal.
+This contradicts physicality. The exact even rotations of the event
+cycle give the same argument for \(n,A,m\), preserving the sum of the
+four complementary weights. The accompanying checker also supplies
+the four witnesses directly. Hence \(1/n,1/A,1/m,1/D\) are infinitesimal.
+
+Normalize the actual state to norm one and use positive actual
+half-angles, obtainable by local real basis gauges. The weaker
+bound \(H/(D_uD_v)\ge-2\) shows that all normalized matching
+probabilities vanish in residue. In particular \(X,Y\to0\).
+Put
+\[
+c_u=(1+u^2)^{-1/2},\ s_u=uc_u,\qquad
+c_v=(1+v^2)^{-1/2},\ s_v=vc_v.
+\]
+If \(\sigma=\operatorname{res}(c_us_v)\) and
+\(\tau=\operatorname{res}(s_uc_v)\), the two remaining matching
+equations read
+\[
+\sigma\overline W-\tau\overline Z=0,\qquad
+\tau\overline W-\sigma\overline Z=0.
+\]
+At least one of \(\overline W,\overline Z\) is nonzero. Thus
+\(\sigma=\tau\ge0\). If positive, the two actual half-angles are
+bounded units with the same residue. If zero, both are infinitesimal
+or both unbounded, by the two unit-circle identities. The exact C2
+reflection sends \((u,v)\) to \((1/v,1/u)\) and exchanges
+\((C,\alpha)\) and \((m,D)\), preserving the hypotheses. We may
+therefore assume either ordinary bounded-unit angles or two
+infinitesimal angles.
+
+\subsubsection*{Relative coalescence when both angles vanish}
+Suppose \(u,v\) are infinitesimal. From
+\eqref{p534f57e1da6f:eq:cf-amplitude-bound}, all four
+\(\mathcal L_i/\sqrt{uv}\) are infinitesimal. In particular
+\(X/\sqrt{uv},Y/\sqrt{uv}\to0\). Set \(a=v/u>0\).
+Dividing the two other matching amplitudes by \(\sqrt{uv}\) gives
+\[
+\sqrt a\,W-\frac Z{\sqrt a}\longrightarrow0,\qquad
+\frac W{\sqrt a}-\sqrt a\,Z\longrightarrow0.
+\]
+The discarded terms are \(X/\sqrt{uv},Y/\sqrt{uv}\) and
+\(\sqrt{uv}X,\sqrt{uv}Y\), all infinitesimal.
+If \(a\) were unbounded, these equations would force both \(W,Z\)
+infinitesimal; the same follows if \(a\) is infinitesimal.
+Both contradict normalization. Thus \(a\) is a bounded unit.
+Taking residues now yields \(a\to1\) and \(W/Z\to1\), with
+both \(W,Z\) units. Consequently
+\[
+                  X/u,\ Y/u,\ R_m/u,\ R_D/u\longrightarrow0.
+\]
+This is relative coalescence, which the compact-angle argument alone
+does not establish.
+
+Normalize \(W=1\) by a pure coefficient factor. Write
+\[
+x=X/u,\quad y=Y/u,\quad q=v/u,\qquad
+(u,x,y,Z,q)\longrightarrow(0,0,0,1,1).
+\]
+The core divided by \(u^2\) is the polynomial
+\begin{align}
+\mathcal H:=H/u^2=2\{&
+(1-y-qZ+u^2qx)^2+(1+u^2q^2)(x+Z)^2 \notag\\
+&+(1+u^2)(u^2q^2y^2-2qyZ-q^2Z^2)\}. \label{p534f57e1da6f:eq:cf-scaled-core}
+\end{align}
+It has zero residue at this point. The nonnegative alpha packet and
+the zero-contact equation give
+\[
+0\le4\frac{\alpha}{u^2}(1+u^2)(u^2qy-Z)^2
+                   \le-\mathcal H.
+\]
+Its square factor is a positive unit. Hence
+\begin{equation}
+                         \alpha/u^2\longrightarrow0. \label{p534f57e1da6f:eq:cf-alpha-scale}
+\end{equation}
+This estimate is derived before the scaled stationary equations are used.
+
+\subsubsection*{Stationarity fixes the source signs}
+In the small-angle case introduce the four exact local coordinates
+\[
+\ell=\left(\sqrt{D_uD_v}\,x,\sqrt{D_uD_v}\,y,
+ q-x+u^2qy-Z,\ 1+u^2qx-y-qZ\right).
+\]
+Their Jacobian with respect to \((x,y,Z,q)\) has residue
+\[
+J_0=\begin{pmatrix}
+1&0&0&0\\0&1&0&0\\-1&0&-1&1\\0&-1&-1&-1
+\end{pmatrix},\qquad \det J_0=2.
+\]
+Thus its inverse and the transformed derivatives are bounded at the
+actual contact. Only this pointwise coefficient-field inverse is used.
+Direct differentiation of \eqref{p534f57e1da6f:eq:cf-scaled-core} gives
+\[
+\operatorname{res}(\nabla_\ell\mathcal H)=2(1,-1,-1,1).
+\]
+The full parent divided by \(u^2\) is exactly
+\[
+4\sum_i e_i\ell_i^2
+ +4C(1+u^2q^2)(1-y)^2
+ +4(\alpha/u^2)(1+u^2)(u^2qy-Z)^2+\mathcal H.
+\]
+The two complementary-gradient terms have zero residue, by weak \(C\)
+and \eqref{p534f57e1da6f:eq:cf-alpha-scale}. The original stationary equations imply
+stationarity in \(\ell\), with \(u\) fixed. These equations first show
+that every \(e_i\ell_i\) is bounded, so its residue is defined. Consequently
+\begin{equation}
+\operatorname{res}(n\ell_n,A\ell_A,m\ell_m,D\ell_D)
+                         =\tfrac14(-1,1,1,-1).        \label{p534f57e1da6f:eq:cf-sign-residue}
+\end{equation}
+Every matching weight is positive, so \(X<0,Y>0,R_m>0,R_D<0\)
+as exact source inequalities.
+
+For ordinary angles the argument is shorter. Normalize \(W=1\);
+the actual contact has residue
+\((X,Y,Z,v)=(0,0,1,u)\), where \(u\) is a bounded unit.
+Use the unscaled \(\mathcal L\) coordinates. Their Jacobian determinant
+at that residue is \(2u(1+u^2)^2\), and
+\[
+\nabla_{\mathcal L}H=2u(1,-1,-1,1)
+\]
+there. All complementary gradients are bounded times \(C,\alpha\),
+hence infinitesimal. Stationarity gives
+\(\operatorname{res}(e_i\mathcal L_i)
+ =\overline u\,(-1,1,1,-1)/4\), with the same exact signs.
+
+\subsubsection*{The original source and all independent tests}
+In either case \(W/Z\to1\), \(v/u\to1\), and \(X/u,Y/u\to0\).
+Set, using the original actual contact,
+\[
+c=u,\quad a=v/u,\quad b=aW/Z,\quad
+r=-X/(uZ),\quad t=(uW-Y)/(vZ).
+\]
+Then \(a,b,t\to1\) and
+\[
+h=b-a^2t=\frac{aY}{uZ}>0,\qquad
+g=\frac{R_m}{uZ}>0,\qquad j=-\frac{R_D}{vZ}>0.
+\]
+All four \(r,h,g,j\) are infinitesimal, so \(0<r<1\).
+The remaining chart boundaries are positive units:
+\[
+1-c^2h=\frac{Z-vY}{Z}>0,\qquad
+b-a^2c^2r=\frac{a(W+vX)}Z>0.
+\]
+These definitions give exactly
+\[
+h=b-a^2t,\qquad
+g=(1+c^2)b-(1-r+a^2c^2t),\qquad j=1+c^2r-t.
+\]
+There is no remaining sign-entry assumption.
+
+Finally the stationary coefficient matrix has the nonzero determinant
+\[
+4^6[-64ac^6rgt\,hj(1-c^2h)(1+c^2)^2(1+a^2c^2)^2\Delta].
+\]
+The inherited short three-by-three reduction proves this formula.
+For \(z=c^2\), its positive expansion is
+\[
+\Delta=1+(1+z)b+z(1+z)b^2+2z(1+z)br+z^2r^2+2zr
+       +a^2z\{(1+z)b+1+zr(2-r)\}\ge1.
+\]
+The original coefficients
+therefore equal the unique positive rational C2 source formulas.
+In particular their positive numerator identity forces \(C,\alpha>0\).
+If \(c\) is infinitesimal, the complete small-angle radial theorem,
+including its outer-test corollary, applies. If \(c\) is a unit,
+the inherited ordinary-angle radial corollary applies. The precise
+source files are identified in the reproduction paragraph below. These certificates concern
+the full parent and arbitrary independent testing fields. Reflect back
+when required and restore \(d\) by a pure coefficient square root.
+This proves Theorem~\ref{p534f57e1da6f:thm:chart-free-c2}.
+
+The conclusion closes the full two-weak-complementary-event
+\emph{finite-contact} C2 branch, not just a preselected rational chart.
+It does not assert that every weak-\(C\) source has weak \(\alpha\).
+The explicit one-weak escape family in the following supplement shows
+why that remaining implication fails.
+
+
+\section{\texorpdfstring{Matching both weak C2 packets to the four strong packets}{Matching both weak C2 packets to the four strong packets}}
+\label{component:p8b53b68d8af6}
+
+\label{p8b53b68d8af6:sec:c2-matching-strength}
+
+A coefficient condition symmetric in the two weak packets closes both
+commuting angle corners at once.  It also gives a second exact radial
+source family whose contact angles have ordinary positive residue.
+
+\begin{theorem}[Two matched weak packets]
+\label{p8b53b68d8af6:thm:c2-matching-strength}
+Let the original physical C2 parent have $d=1$, $\lambda=\beta=0$,
+and event weights $(n,m,C,A,D,\alpha)$.  Suppose $C,\alpha>0$ are
+infinitesimal, all four other weights are positive, and each of
+\[
+ Cn,\ Cm,\ CA,\ CD,\qquad
+ \alpha n,\ \alpha m,\ \alpha A,\ \alpha D
+\]
+has bounded reciprocal in the coefficient field.  Then the full parent
+is tensor SOS at every independent projective test and every real or
+complex state.
+\end{theorem}
+\begin{proof}
+Lemma~\ref{pc7dacaa3258e:lem:c2-four-strong-outer} applies directly to every commuting
+residue test except the finite zero-zero corner.
+For that corner use the exact reflection
+\begin{equation}
+ (u,v;W,X,Y,Z;n,m,C,A,D,\alpha)
+ \longmapsto
+ (1/v,1/u;Z,X,Y,W;n,D,\alpha,A,m,C).
+\label{p8b53b68d8af6:eq:c2ms-reflection}
+\end{equation}
+More explicitly, if $F$ denotes the full parent with its indicated
+arguments, then
+\begin{equation}
+ F(u,v;W,X,Y,Z;n,m,C,A,D,\alpha)
+ =u^2v^2F(1/v,1/u;Z,X,Y,W;n,D,\alpha,A,m,C).
+\label{p8b53b68d8af6:eq:c2ms-reflection-identity}
+\end{equation}
+This is a homogeneous polynomial identity, so its interpretation in
+reciprocal charts includes literal zero and infinity endpoints.
+
+For a short verification, the reflected $R_2,R_5$ amplitudes, after
+multiplication by $uv$, are $-R_5,-R_2$.  The reflected $C$ and
+$\alpha$ packets exchange, while the $n,A$ packets are fixed.
+If $\mathcal H$ is the signed core, its common expanded form is
+\begin{align*}
+ \mathcal H/2={}&u^2(W^2+Z^2)+(1+v^2+u^2v^2)(X^2+Y^2)\\
+ &+2u^2v(WX-YZ)+2u(XZ-WY)-2uv(WZ+XY).
+\end{align*}
+Multiplying its reflected expression by $u^2v^2$ fixes the first,
+second and last terms, and exchanges the middle two.  This proves the
+whole-parent identity, including its signed part.
+
+The reflected weak weight is $\alpha$, its four strong weights are
+$n,D,A,m$, and its other nonnegative weak packet is $C$.
+Thus all hypotheses of Lemma~\ref{pc7dacaa3258e:lem:c2-four-strong-outer} hold for
+the reflected parent.  Its infinity-infinity chart is precisely the
+original zero-zero chart.  Restore the homogeneous pure-testing
+factors to obtain the certificate there as well.
+
+Every noncommuting residue test is covered by the already-established
+physical-source theorem, after positive pure-coefficient normalization
+if a coefficient is unbounded.  Undoing that normalization preserves
+SOS.  These alternatives exhaust the tests, and real/imaginary splitting
+handles complex states.  No coefficient scale was compared with an
+independent testing scale.
+\end{proof}
+
+\begin{corollary}[Radial C2 source with ordinary contact angles]
+\label{p8b53b68d8af6:cor:c2-ordinary-angle-radial}
+Use the same rational source \eqref{p9f1235511111:eq:c2u-source}, now with source
+half-angle $c$ a positive bounded unit.  Suppose $h=b-a^2t,r,g,j$ are
+positive infinitesimals and $a,1-r,t$ are positive bounded units.
+Then the full parent is tensor SOS at every independent projective test
+and every real or complex state.
+\end{corollary}
+\begin{proof}
+Put $z=c^2$ and continue to write $C=e_3$ for the weak event weight.
+The exact source identities
+\[
+ b-1=-r+g-zh,\qquad t-1=zr-j,\qquad
+ a-1=\frac{g+j-(1+z)(r+h)}{t(a+1)}
+\]
+remain valid for this ordinary source angle.  Thus $a,b,t$ have residue
+one.  The positive source identity
+\[
+ N=(1+z)(b+r)h+a^2\{g+j+rt(1+a^2z)\}
+\]
+shows that $N>0$ is infinitesimal and $h/N,r/N,g/N,j/N$ are bounded:
+each of the four positive coefficients in this sum is a bounded unit.
+
+Here is the entire normalized coefficient calculation.  Write
+$z_0=\overline z>0$.  Substitution of $a=b=t=1,r=0$ in the bounded
+source numerators and unit denominators gives
+\begin{gather}
+ \overline\Delta=2(1+z_0)^2,\qquad
+ \overline{C/N}=\frac1{4(1+z_0)^2},\qquad
+ \overline{\alpha/C}=z_0^2,\notag\\
+ \overline{rn}=\overline{hA}=\frac1{4(1+z_0)},\qquad
+ \overline{gm}=\overline{jD}=\frac14.
+\label{p8b53b68d8af6:eq:c2ms-ordinary-residues}
+\end{gather}
+For example, the exact quotients used in the first line are
+\[
+ \frac CN=\frac{1+zr}{2a^2t\Delta},\qquad
+ \frac\alpha C=\frac{z^2(b+r)a^2t}{(1-zh)(1+zr)}.
+\]
+The four strong normalized products use the numerators of
+\eqref{p9f1235511111:eq:c2u-source} after multiplication by $r,h,g,j$, respectively;
+no vanishing source gap is inverted in this calculation.
+All six weights are therefore positive, $C,\alpha$ are infinitesimal,
+and their normalized quotients displayed above are bounded units.
+For instance
+\[
+ \frac1{Cn}=\frac{r/N}{(C/N)(rn)},\qquad
+ \frac1{\alpha n}=\frac{C/\alpha}{Cn};
+\]
+the other six product bounds follow in the same way from $g/N,h/N,j/N$.
+These are exactly the hypotheses of Theorem~\ref{p8b53b68d8af6:thm:c2-matching-strength}.
+
+For completeness, the source is physical by the unchanged exact contact
+argument.  The rational stationary identities
+\eqref{p9f1235511111:eq:c2u-contact} are valid at this value of $c$ as well.
+At that noncommuting contact the state matrix has a nonzero kernel
+vector.  Its restriction to $Z=0$ is positive definite: the signed core
+is nonnegative there and the positive event packets have zero common
+kernel.  Hence the other three eigenvalues are positive.  The exact
+contact and angular stationarity give the stationary zero of the
+Laurent determinant; its constant-plus-positive-exponentials form makes
+this its global minimum.  The determinant criterion and homogeneous
+continuity prove physicality, exactly as for the small-angle source.
+Theorem~\ref{p8b53b68d8af6:thm:c2-matching-strength} now applies.
+
+This corollary concerns the stated radial subfamily of the ordinary
+source-angle cell.  It does not assert that every ordinary-angle C2
+source has the required matching strengths or enters this subfamily.
+\end{proof}
+
+
+\section{\texorpdfstring{All outer tests for the all-small C2 radial family}{All outer tests for the all-small C2 radial family}}
+\label{component:pc7dacaa3258e}
+
+\label{pc7dacaa3258e:sec:c2-radial-all-tests}
+
+\noindent\textbf{Scope of retained extract.} This component retains the complete four-strong outer theorem and the radial-source corollary with both proofs. The final broader bounded-shape corollary, whose unit-$N$ branch is not used in the current source routing, is outside the mathematical scope used in this rederivation and is omitted here. The entire original file and the exact omitted span remain in the source archive and presentation manifest.
+
+
+The radial corner has four strong event packets and one weak packet.
+The weak packet must be retained at its exact scale at the opposite
+commuting corner.  An elementary conductor identity makes that scale
+sufficient; it does not compare coefficient and testing infinitesimals.
+Throughout this section $C$ denotes the event weight $e_3$, whereas $c$
+continues to denote the source half-angle in \eqref{p9f1235511111:eq:c2u-source}.
+
+\begin{lemma}[Four strong packets and a weak opposite-corner pivot]
+\label{pc7dacaa3258e:lem:c2-four-strong-outer}
+Consider the full parent \eqref{p9f1235511111:eq:c2u-parent}, with
+\[
+ (e_1,e_2,e_3,e_4,e_5)=(n,m,C,A,D),\qquad \alpha\geq0.
+\]
+Suppose $C>0$ is infinitesimal and the four positive pure coefficient
+quantities $Cn,Cm,CA,CD$ have bounded reciprocals.  Then the full parent
+is tensor SOS at every commuting residue test outside the finite
+zero-zero corner, for every real or complex projective state.
+The four strong coefficients and the roots in the proof may be unbounded.
+\end{lemma}
+
+\begin{proof}
+The hypotheses imply that $1/n,1/m,1/A,1/D$ are infinitesimal.
+First consider the outer axes other than the infinity-infinity corner.
+Choose $\mu=\min(1,n,m,A,D)$, a positive bounded unit.  Retain the
+nonnegative excess of each strong packet, together with the whole
+$C$ and $\alpha$ packets.  The remaining parent consists of the signed
+core and the four packets with common weight $\mu$.
+
+Here are the four kernel calculations, with positive factors
+$1+u^2$ or $1+v^2$ omitted only from the packet amplitudes.
+At $u=0$, finite nonzero $v$, the four amplitudes are
+$(X,vW-X,Y,-Y-vZ)$; at $v=0$, finite nonzero $u$, they are
+$(X,-X-uZ,Y,uW-Y)$.  Their common kernels are zero, and half the
+signed core is, respectively,
+\[
+ D_v(X^2+Y^2),\qquad (uW-Y)^2+(X+uZ)^2.
+\]
+At $u=\infty$, finite $v$, the four homogenized amplitudes are
+$(X,vY-Z,Y,W+vX)$; at $v=\infty$, finite $u$, they are
+$(X,W+uY,Y,uX-Z)$.  These common kernels are zero even when the
+finite angle is zero.  Half the homogenized signed core is, respectively,
+\[
+ (W+vX)^2+(vY-Z)^2,\qquad D_u(X^2+Y^2).
+\]
+Thus the selected state Gram has strict positive residue.  Its
+coefficients are bounded in each indicated local testing chart, so the
+strict-residue Gram lemma proves the whole chart.  This includes the
+mixed zero-infinity endpoints and either sign of every finite angle.
+
+It remains to treat $u=v=\infty$ at residue.  Put $p=1/u$, $q=1/v$,
+using the homogeneous reciprocal coordinates at exact infinity, and
+write $D_p=1+p^2$, $D_q=1+q^2$.  Thus $p,q$ are infinitesimal or zero.
+The homogeneous full parent in this chart is exactly
+\begin{align}
+\widehat F={}&4nD_pD_qX^2+4mM^2+4CD_q(W-pY)^2
+       +4AD_pD_qY^2+4DJ^2+4\alpha D_p(Y-qZ)^2+H,\notag\\
+ M={}&pW-pqX+Y-qZ,\qquad
+ J=qW+X-pqY-pZ,\notag\\
+ H={}&2\{J^2+D_p(Y-qZ)^2+D_q(pX+Z)^2-D_pD_qZ^2\}.
+\label{pc7dacaa3258e:eq:c2ro-parent}
+\end{align}
+For finite nonzero $u,v$ this is $p^2q^2F$; homogeneous interpretation
+also gives the exact endpoint polynomial.
+
+Set $L=1+p^2+p^2q^2$.  The needed conductor identity is
+\begin{equation}
+\frac H2=qWJ-qZM+L(X^2+Y^2)-2pqXY
+             +q(W+pqZ)X-q(pqW+Z)Y.
+\label{pc7dacaa3258e:eq:c2ro-core-conductor}
+\end{equation}
+For a direct check, put $M_0=pW-qZ$, $J_0=qW-pZ$.  The scalar part
+of $H/2$ is
+\[
+ J_0^2+(q^2-p^2)Z^2=qWJ_0-qZM_0.
+\]
+Its linear $X,Y$ part is
+$2q(W+pqZ)X-2q(pqW+Z)Y$, and its quadratic part is
+$L(X^2+Y^2)-2pqXY$.  Substitution of
+$M=M_0-pqX+Y$, $J=J_0+X-pqY$ gives
+\eqref{pc7dacaa3258e:eq:c2ro-core-conductor}.
+
+First normalize $W=1$ and assume $Z$ bounded.  No bound is required
+on $X$ or $Y$.  Retain the $\alpha$ packet and use the five roots
+\[
+ K_1=\sqrt nX,\quad K_2=\sqrt mM,\quad
+ K_4=\sqrt AY,\quad K_5=\sqrt DJ,\quad T_C=\sqrt C\,W.
+\]
+Here $T_C=\sqrt C$ in this state chart.  Equations
+\eqref{pc7dacaa3258e:eq:c2ro-parent}--\eqref{pc7dacaa3258e:eq:c2ro-core-conductor} give the following
+\emph{exact} Gram expression for the remainder:
+\begin{align}
+\widehat F-4\alpha D_p(Y-qZ)^2={}&
+ 4D_pD_q(K_1^2+K_4^2)+4K_2^2+4K_5^2
+ +4D_q\left(T_C-p\sqrt{C/A}\,K_4\right)^2\notag\\
+&+2L\left(\frac{K_1^2}{n}+\frac{K_4^2}{A}\right)
+ -\frac{4pq}{\sqrt{nA}}K_1K_4\notag\\
+&+2qT_C\left\{
+ \frac{K_5}{\sqrt{CD}}-\frac{ZK_2}{\sqrt{Cm}}
+ +\frac{(1+pqZ)K_1}{\sqrt{Cn}}
+ -\frac{(pq+Z)K_4}{\sqrt{CA}}\right\}.
+\label{pc7dacaa3258e:eq:c2ro-Wunit-Gram}
+\end{align}
+Every denominator is pure coefficient.  The four inverse square roots
+$1/\sqrt{Ce_i}$ are bounded by hypothesis, and
+$\sqrt{C/A}=C/\sqrt{CA}$ is infinitesimal.
+All coefficients of this Gram are therefore in the bounded tensor
+ring.  Every displayed correction has zero residue, whereas its five
+positive packet pivots have residue $4$.  Thus its residue is exactly
+\[
+             4(K_1^2+K_2^2+K_4^2+K_5^2+T_C^2)\succ0.
+\]
+The strict-residue Gram lemma applies without any bound on the roots.
+In particular it makes no comparison between $C$ and $p$ or $q$.
+
+The other state chart is $Z=1$, $W$ infinitesimal or zero.  Here the
+exact pure-testing conductor is a unit:
+\begin{equation}
+ q=\Gamma:=\frac{M+WJ+(pq-W)X+(Wpq-1)Y}{W^2-1}.
+\label{pc7dacaa3258e:eq:c2ro-Zunit-conductor}
+\end{equation}
+Indeed $M+WJ=q(W^2-1)+(W-pq)X+(1-Wpq)Y$.
+Substitution in \eqref{pc7dacaa3258e:eq:c2ro-core-conductor} gives
+\begin{equation}
+ \frac H2=L(X^2+Y^2)-2pqXY
+ +\Gamma\{WJ-M+(W+pq)X-(pqW+1)Y\}.
+\label{pc7dacaa3258e:eq:c2ro-Zunit-core}
+\end{equation}
+This is an exact quadratic form on $X,M,Y,J$, with bounded pure-testing
+coefficients.  Retain the whole $C$ and $\alpha$ packets separately.
+Scale the four remaining roots as before.  Every coefficient of the
+scaled core has zero residue, because each contains two inverse strong
+packet square roots.  Adding the four strong packets consequently
+produces the strict residue
+$4(K_1^2+K_2^2+K_4^2+K_5^2)$.  Again only the Gram coefficients,
+not $X,Y$ or the packet roots, needed boundedness.
+
+These two state charts are exhaustive when $(W,Z)\ne(0,0)$: if
+$W\ne0$ and $Z/W$ is bounded use the first; otherwise $Z\ne0$ and
+$W/Z$ is infinitesimal, giving the second.  Normalization and restoration
+use pure-testing factors.  When $W=Z=0$,
+\eqref{pc7dacaa3258e:eq:c2ro-core-conductor} is just the bounded quadratic form
+$H/2=L(X^2+Y^2)-2pqXY$; after the same four-root scaling its
+coefficients have zero residue, so the four retained strong packets
+again give a strict Gram.  This includes the zero state.  Splitting a
+complex state into real and imaginary parts completes the proof.
+\end{proof}
+
+\begin{corollary}[The radial source has no missing outer commuting chart]
+\label{pc7dacaa3258e:cor:c2-radial-outer}
+Use the unchanged exact source \eqref{p9f1235511111:eq:c2u-source} under the hypotheses
+of Theorem~\ref{p163e0ebf59f6:thm:c2-radial-corner}: $h,r,g,j$ are positive
+infinitesimals and $a,1-r,t$ are positive bounded units.
+Then the full parent is tensor SOS at every commuting residue test and
+every real or complex state.  Together with the physical-source
+noncommuting-residue theorem, this proves all tests for this exact
+radial source family.
+\end{corollary}
+\begin{proof}
+The source identities and positive decomposition of $N$ proved in
+Section~\ref{p163e0ebf59f6:sec:c2-radial-corner} give
+\[
+ N\asymp h+r+g+j,\qquad
+ U_1=re_1,\ U_2=ge_2,\ U_4=he_4,\ U_5=je_5>0
+ \quad\hbox{bounded units},
+\]
+where $N/(h+r+g+j)$ has residue $1$.  Moreover, directly from
+\eqref{p9f1235511111:eq:c2u-source},
+\[
+ \frac CN=\frac{A_c}{2a^2t\Delta}>0
+ \quad\hbox{is a bounded unit}.
+\]
+For example,
+\[
+ \frac1{Ce_1}=\frac{r/N}{(C/N)U_1},
+\]
+and the three analogous formulas use $g/N,h/N,j/N$.
+Thus all four product reciprocals in
+Lemma~\ref{pc7dacaa3258e:lem:c2-four-strong-outer} are bounded, while $C$ is positive
+infinitesimal.  That lemma covers every outer commuting chart, and
+Theorem~\ref{p163e0ebf59f6:thm:c2-radial-corner} covers the zero-zero chart.
+
+The final noncommuting join uses only the already-established
+physicality of the exact source and the physical-source
+noncommuting-residue theorem.  In particular the exact contact and
+Laurent-determinant physicality argument used for the unit-$N$ source
+requires $N>0$, not that $N$ have positive residue.  All five event
+weights are positive.  On the three-dimensional state subspace $Z=0$
+the signed core is nonnegative, and the positive event packets have
+zero common kernel at the noncommuting contact; hence the state
+restriction is positive definite.  The exact stationary state is a
+nonzero kernel vector, so the other three state eigenvalues are positive.
+Determinant stationarity remains exact, and the same Laurent-determinant
+argument proves physicality.
+No coefficient-entry claim is made here for C2 sources outside the
+stated radial family.
+\end{proof}
+
+
+
+\section{\texorpdfstring{The last bounded-shape C2 corner: a weighted radial root}{The last bounded-shape C2 corner: a weighted radial root}}
+\label{component:p163e0ebf59f6}
+
+\label{p163e0ebf59f6:sec:c2-radial-corner}
+
+It remains to treat the corner in which $h,r,g,j$ are all positive
+infinitesimals.  The radial coefficient then tends to zero, but the
+positive source identity gives exactly the weight needed to normalize it.
+
+\begin{theorem}[The all-small radial corner]
+\label{p163e0ebf59f6:thm:c2-radial-corner}
+Use the unchanged source \eqref{p9f1235511111:eq:c2u-source}.  Suppose that $c>0$ and
+$h=b-a^2t,r,g,j>0$ are infinitesimal, while $a,1-r,t$ are positive
+bounded units.  For every independent infinitesimal or zero testing pair
+$u,v$ and every real or complex projective state, the full parent is a
+finite sum of squares in $K_c\otimes_{\mathbb R}K_t$.
+\end{theorem}
+
+\subsubsection*{The small source ideal controls all coefficients}
+Write $z=c^2$ and $D_c=1+c^2$.  The source identities give
+\begin{equation}
+b-1=-r+g-zh,\qquad t-1=zr-j,\qquad
+a-1=\frac{g+j-D_c(r+h)}{t(a+1)}.
+\label{p163e0ebf59f6:eq:c2r-source-ideal}
+\end{equation}
+Thus $a,b,t$ all have residue $1$.  Let $I=(h,r,g,j)$ in the ring of
+bounded source coefficients used below.  By
+\eqref{p53752031d16c:eq:c2y-N-positive}, $N>0$ and $N/(h+r+g+j)$ has residue $1$.
+In particular
+\begin{equation}
+h/N,\quad r/N,\quad g/N,\quad j/N
+\text{ are bounded},\qquad
+4\alpha/(c^4N)\text{ has residue }1.
+\label{p163e0ebf59f6:eq:c2r-weight-bounds}
+\end{equation}
+
+All rational coefficient functions in the retained remainder have
+denominators with nonzero residue: the possibly small denominators
+$r,g,j,h$ have been absorbed into $U_1,U_2,U_5,U_4$.  Specialize a
+bounded rational coefficient by putting $h=r=g=j=0$ and $a=b=t=1$,
+leaving $c$ untouched.  Its difference from this specialization lies in
+$I$, with bounded coquotients.  Indeed finite polynomial subtraction
+factors the differences by $r,g,j,a-1$, and
+\eqref{p163e0ebf59f6:eq:c2r-source-ideal} replaces $a-1$ by bounded multiples of the
+four generators.  Subtraction of fractions only uses unit denominators.
+The monic polynomial divisions in the preceding proofs preserve this
+property.  Pure-testing denominators $D_u,D_v$ do so as well.
+Consequently every coefficient in $I$, divided by the pure coefficient
+$N$, remains bounded.  This observation involves no comparison with
+the independent testing infinitesimals.
+
+\subsubsection*{An explicit additional zero correction}
+Use the four retained packets and six-root Gram from
+Section~\ref{p53752031d16c:sec:c2-y-current}, including its zero correction
+\eqref{p53752031d16c:eq:c2y-zero-correction}.  That construction required only that
+$e_3$ be bounded; it still gives an exact bounded Gram here.  Two of its
+current coefficients simplify exactly to
+\begin{equation}
+Q(u^2)=h-a^2ru^2,\qquad Q(u^2)+a^2D_ur=h+a^2r.
+\label{p163e0ebf59f6:eq:c2r-QJ}
+\end{equation}
+Both belong to $I$.  The coefficient of $T$ in the exact relation
+$\zeta$ is therefore $u(h+a^2r)$.
+
+We record the one base calculation needed for the new correction.
+On the scalar normal graph, after specialization modulo $I$, put
+\[
+Y_*=uW-v,\qquad G_*=D_uvW-D_vu.
+\]
+The entire bounded scalar remainder becomes
+\begin{equation}
+f_*=2uG_*+\frac{2}{D_c}D_uD_vuY_*
+ +2\{D_u(vY_*-1)^2+D_vu^2-D_uD_v\}.
+\label{p163e0ebf59f6:eq:c2r-base-polynomial}
+\end{equation}
+Here $U_2=1/4$, $U_4=1/(4D_c)$; all terms containing a generator of
+$I$, $e_3$, or $\alpha$ vanish.  Direct differentiation gives
+\begin{equation}
+\begin{gathered}
+f_*(u,u,1)=0,\\
+(f_*)_W(u,u,1)=\frac{2u^2(u^2-c^2)D_u}{D_c},\qquad
+(f_*)_v(u,u,1)=-\frac{2u(u^2-c^2)D_u}{D_c}.
+\end{gathered}
+\label{p163e0ebf59f6:eq:c2r-base-derivatives}
+\end{equation}
+
+Use the division order of the preceding proof: first restrict to $v=au$,
+then expand at $W_c$, and retain the finite second-order remainder in
+$v-au$ as an $R^2$ coefficient.  The first two derivatives in
+\eqref{p163e0ebf59f6:eq:c2r-base-derivatives} imply that the $ST$ coefficient is
+$2uD_u/D_c$ and the direct $RT$ coefficient is $2uD_u/D_c$.
+Modulo $I$, elimination of $S$ reads
+\[
+S=\frac{H_2+(1-u^2v^2)H_1+uvH_5
+ +(D_uW-u(v+u))R}{D_u}.
+\]
+Hence the full scalar $RT$ coefficient after elimination is exactly
+\begin{equation}
+\frac{2u}{D_c}(D_uW+1-uv).
+\label{p163e0ebf59f6:eq:c2r-base-RT}
+\end{equation}
+The earlier zero correction adds no $RT$ term at this specialization,
+because \eqref{p163e0ebf59f6:eq:c2r-QJ} vanishes there.  Meanwhile the coefficient of
+$R$ in $\zeta$ specializes to $-(D_uW+1-uv)$.  Add one more exact zero:
+\begin{equation}
+\frac{2u}{D_c}\,\zeta T=0.
+\label{p163e0ebf59f6:eq:c2r-final-correction}
+\end{equation}
+By \eqref{p163e0ebf59f6:eq:c2r-base-RT}, the corrected $RT$ coefficient now lies in
+$I$.  All radial cross coefficients still contain an explicit factor $u$.
+
+\subsubsection*{Weighted boundedness and the strict residue}
+Replace the radial root by the pure-coefficient rescaling
+\[
+T_N=\sqrt N\,(u^2-c^2).
+\]
+We check every type of coefficient of the resulting Gram.  The hard
+block and the hard--$R$ block were already bounded.  A hard--$T$
+coefficient contains $u/\sqrt{e_i}$, times bounded factors, for
+$i=1,2,4,5$: this follows from the odd-parity normal division, the pure
+current elimination, and the two displayed zero corrections.  Dividing
+it by $\sqrt N$ remains bounded, with zero residue, because
+\[
+\frac1{\sqrt{Ne_1}}=\frac{\sqrt{r/N}}{\sqrt{U_1}},\quad
+\frac1{\sqrt{Ne_2}}=\frac{\sqrt{g/N}}{\sqrt{U_2}},\quad
+\frac1{\sqrt{Ne_4}}=\frac{\sqrt{h/N}}{\sqrt{U_4}},\quad
+\frac1{\sqrt{Ne_5}}=\frac{\sqrt{j/N}}{\sqrt{U_5}}.
+\]
+The corrected $RT$ coefficient lies in $I$ and contains $u$, so its
+quotient by $\sqrt N$ is bounded and has zero residue.
+
+For the $T^2$ coefficient, the graph identity $f_*(u,u,1)=0$ says that
+its monic scalar quotient $C_2(u^2)$ vanishes modulo $I$.  Every other
+$T^2$ contribution contains $Q$ or $h+a^2r$, hence belongs to $I$ too.
+Its quotient by $N$ is therefore bounded.  All such extra terms have
+an explicit factor $u^2$.  At $u=0$ the scalar quotient is exactly
+$4\alpha/c^4$, so \eqref{p163e0ebf59f6:eq:c2r-weight-bounds} makes the weighted radial
+pivot equal to $1$ at residue.  In particular the new correction adds
+$2u^2(h+a^2r)/(D_cN)$ to that coefficient, which is bounded and has
+zero residue.
+
+The residue of the final Gram, in the roots
+$(K_1,K_2,K_4,K_5,R,T_N)$, is therefore
+\begin{equation}
+4K_1^2+4K_2^2+4K_4^2+4K_5^2
+ +(1+\overline W)^2R^2+T_N^2\succ0.
+\label{p163e0ebf59f6:eq:c2r-strict-residue}
+\end{equation}
+Here the relation $\zeta$ has residue $-(1+\overline W)R$, since all
+four inverse packet scales are infinitesimal.  The strict-residue Gram
+lemma proves the full bounded $Z=1,W\geq0$ chart.  The $W=1,Z$
+infinitesimal proof of the preceding section also applies unchanged:
+it uses boundedness, not a positive residue, of $e_3$.  Its four packet
+roots have strict residue.  Sign dispatch and homogeneous restoration
+therefore prove the theorem for all projective states.
+
+\begin{corollary}[Complete bounded-shape C2 source family]
+\label{p163e0ebf59f6:cor:c2-bounded-shape}
+In the unchanged C2 source let $c>0$ be infinitesimal, $r,g,j>0$
+bounded, and $a,1-r,t$ positive bounded units.  Assume only
+$h=b-a^2t>0$.  Then every independent zero-zero test and every projective
+state have tensor-SOS parent.
+\end{corollary}
+\begin{proof}
+The gap $h$ is bounded.  If it is a unit,
+\eqref{p53752031d16c:eq:c2y-N-positive} makes $N$ a unit, so Theorem~\ref{p9f1235511111:thm:c2u}
+applies.  If $h$ is infinitesimal and one of $r,g,j$ is a unit, use
+Theorem~\ref{p53752031d16c:thm:c2-y-current}.  If all four are infinitesimal, use
+Theorem~\ref{p163e0ebf59f6:thm:c2-radial-corner}.  These alternatives are exhaustive.
+\end{proof}
+
+
+\section{\texorpdfstring{The C2 boundary: one uniform five-root proof}{The C2 boundary: one uniform five-root proof}}
+\label{component:p9f1235511111}
+
+\label{p9f1235511111:sec:c2-unified}
+
+The argument below proves the entire original parent for one explicit
+C2 source domain and every independent zero-zero test.  Three source
+parameters may approach their boundary at arbitrary relative rates.
+Exact contact, parity, and a retained current replace polynomial tables.
+
+\subsubsection*{The unchanged source and its domain}
+Let $K_c,K_t$ be independent real closed extensions of $\mathbb R$.
+In the coefficient field take $c>0$ infinitesimal and $a,r,g,j>0$ bounded.
+Define
+\[
+ z=c^2,\quad k=1+z,\quad t=1+zr-j,\quad
+ B=1-r+g+a^2zt,\quad b=B/k,\quad A_c=1+zr,
+\]
+and define
+\begin{align*}
+\Delta={}&(1+z)zb^2+2z(1+z)br+(1+z)(1+a^2z)b\\
+ &+z^2(1-a^2)r^2+2z(1+a^2z)r+1+a^2z,\\
+N={}&(1+z)(b+r)(b+a^2(1-t))-a^2(1+a^2z)(1-r)t.
+\end{align*}
+Take $d=1$, $\lambda=\beta=0$, and
+\begin{align}
+e_1&=\frac{(b+r)A_c(A_c+a^2zt)-r\Delta}{2r\Delta},&
+e_2&=\frac{(1+a^2z)(1-r)A_c(A_c+a^2zt)}{2g\Delta},\notag\\
+e_3&=\frac{A_cN}{2a^2t\Delta},&
+e_4&=\frac{a^2A_c(b+r)(A_c+a^2zt)}{2(b-a^2t)\Delta},\notag\\
+e_5&=\frac{(1+z)(b+r)(b-a^2zr)(A_c+a^2zt)}{2a^2j\Delta},&
+\alpha&=\frac{z^2(b+r)N}{2(1-z(b-a^2t))\Delta}.
+\label{p9f1235511111:eq:c2u-source}
+\end{align}
+Require the following unit conditions:
+\begin{equation}
+\begin{gathered}
+c>0\text{ is infinitesimal},\\
+r,g,j>0\text{ are bounded},\\
+a,\quad 1-r,\quad t,\quad b-a^2t,\quad N
+\text{ are positive bounded units}.
+\end{gathered}\label{p9f1235511111:eq:c2u-hyp}
+\end{equation}
+Any of $r,g,j$ may have zero or positive residue; no relative-rate
+comparison is assumed.
+
+The quantities $b,\Delta$ are positive bounded units.  The source formulas
+show that
+\begin{equation}
+U_1=re_1,\qquad U_2=ge_2,\qquad U_5=je_5,
+\qquad e_3,e_4,\qquad \alpha/c^4
+\label{p9f1235511111:eq:c2u-units}
+\end{equation}
+are positive bounded units.  For example, after setting $c=0$ their
+first three values are
+\[
+\frac{b_0(1-r)}{2(b_0+1)},\qquad
+\frac{1-r}{2(b_0+1)},\qquad
+\frac{b_0(b_0+r)}{2a^2(b_0+1)},\qquad b_0=1-r+g.
+\]
+Consequently $e_1,e_2,e_5$ have positive bounded reciprocals, whether or
+not the coefficients themselves are bounded.  All six event coefficients
+are positive.
+
+\begin{theorem}[Uniform C2 unit-gap zero-zero theorem]
+\label{p9f1235511111:thm:c2u}
+Assume \eqref{p9f1235511111:eq:c2u-hyp}.  For every independent testing pair
+$u,v\in K_t$ that is infinitesimal or zero, and every independent real
+or complex projective state, the entire parent
+\eqref{p9f1235511111:eq:c2u-parent} is a finite sum of squares in
+$K_c\otimes_{\mathbb R}K_t$.
+\end{theorem}
+
+\subsubsection*{Full parent, contact, and retained squares}
+Write $D_u=1+u^2,D_v=1+v^2$, and
+\[
+\begin{gathered}
+R_2=vW-X+uvY-uZ,\qquad R_3=uW-Y,\\
+R_5=uW+uvX-Y-vZ,\qquad R_\alpha=vY-Z,\qquad R_\beta=X+uZ.
+\end{gathered}
+\]
+The full homogeneous parent is
+\begin{align}
+F={}&4e_1D_uD_vX^2+4e_2R_2^2+4e_3D_vR_3^2
+ +4e_4D_uD_vY^2+4e_5R_5^2+4\alpha D_uR_\alpha^2\notag\\
+ &+2(R_5^2+D_uR_\alpha^2+D_vR_\beta^2-D_uD_vZ^2).
+\label{p9f1235511111:eq:c2u-parent}
+\end{align}
+Its exact coefficient-field stationary zero is
+\begin{equation}
+(u_c,v_c;W_c,X_c,Y_c,Z_c)
+=\left(c,ac;\frac ba,-cr,c\left(\frac ba-at\right),1\right).
+\label{p9f1235511111:eq:c2u-contact}
+\end{equation}
+Substitution of \eqref{p9f1235511111:eq:c2u-source} in the four state derivatives and
+two angle derivatives of \eqref{p9f1235511111:eq:c2u-parent} gives zero. These are six
+rational identities: one can check them before substituting for $b$ by
+using $g=(1+c^2)b-(1-r+a^2c^2t)$ and $j=1+c^2r-t$.
+The four state identities imply $F=0$ by homogeneity. Thus this contact
+statement is a finite direct calculation, without an asymptotic premise.
+
+First work in the chart $Z=1$, $W\ge0$ bounded. Center three event amplitudes:
+\[
+ H_1=X+ru,\qquad H_2=R_2-gu,\qquad H_5=R_5+jv.
+\]
+Put $n_x=H_1,n_y=H_5$. Then, exactly,
+\begin{align}
+X&=-ru+n_x,&
+Y&=uW-(1-j+ru^2)v+uvn_x-n_y,\label{p9f1235511111:eq:c2u-normal-sub}\\
+H_2&=G-(1-u^2v^2)n_x-uvn_y,&
+G&=D_uvW-[1-r+g+(1-j+ru^2)v^2]u.\label{p9f1235511111:eq:c2u-current}
+\end{align}
+Define the \emph{entire} remainder
+\begin{equation}
+\mathcal R=F-4e_1D_uD_vH_1^2-4e_2H_2^2-4e_5H_5^2.
+\label{p9f1235511111:eq:c2u-remainder}
+\end{equation}
+It has bounded coefficient-field coefficients. Indeed the three packet
+differences are
+\begin{gather*}
+-8re_1D_uD_vuH_1+4r^2e_1D_uD_vu^2,\\
+8ge_2uH_2+4g^2e_2u^2,\qquad
+-8je_5vH_5+4j^2e_5v^2,
+\end{gather*}
+and \eqref{p9f1235511111:eq:c2u-units} bounds their coefficients. All remaining
+packets already have bounded coefficients. Quadratic state degree gives
+the exhaustive expansion
+\begin{equation}
+\mathcal R=f+L_xn_x+L_yn_y
+ +Q_{xx}n_x^2+Q_{xy}n_xn_y+Q_{yy}n_y^2,
+\label{p9f1235511111:eq:c2u-normal-expansion}
+\end{equation}
+where all six coefficients are polynomials in $u,v,W$ with bounded
+coefficient-field coefficients. There is no higher-normal remainder.
+
+\subsubsection*{Exact parity and Taylor division}
+The three soft roots will be
+\begin{equation}
+ R=au-v,\qquad S=u(W-W_c),\qquad T=u^2-c^2.
+\label{p9f1235511111:eq:c2u-soft}
+\end{equation}
+We prove, with bounded polynomial coefficients,
+\begin{equation}
+ f\in(R,S,T)^2,\qquad L_x,L_y\in(R,S,T).
+\label{p9f1235511111:eq:c2u-membership}
+\end{equation}
+The parent and its centered substitutions are invariant under
+$(u,v,n_x,n_y)\mapsto(-u,-v,-n_x,-n_y)$ with $W$ fixed.
+Thus $f(u,au,W)=f_0(u^2,W)$ is even in $u$, whereas
+$f_v(u,au,W)$ and $L_i(u,au,W)$ are odd. The polynomial $f_0(\xi,W)$
+has degree at most two in $W$. At $u=v=n_x=n_y=0$, the parent is
+$4\alpha$, independent of $W$. Hence the nonconstant $W$ coefficients
+of $f_0$ are divisible by $\xi$.
+
+At \eqref{p9f1235511111:eq:c2u-contact} every $H_i$ vanishes. Consequently $f$ and
+all its first derivatives vanish there, as do both $L_i$. Write
+\[
+ f_0(\xi,W)=A(\xi)(W-W_c)^2+B_1(\xi)(W-W_c)+C_1(\xi).
+\]
+Then $\xi\mid A,B_1$, $B_1(c^2)=0$, and
+$C_1(c^2)=C_1'(c^2)=0$. Since $c\ne0$, there are polynomials with
+bounded coefficients such that
+\[
+ A=\xi A_1,\qquad B_1=\xi(\xi-c^2)B_2,\qquad
+ C_1=(\xi-c^2)^2C_2.
+\]
+All divisions here are by a monomial or a monic polynomial.
+Synthetic division uses only powers of the bounded coefficient $c^2$;
+in particular no quotient contains $1/c$. It follows that
+\[
+ f(u,au,W)=A_1S^2+uB_2ST+C_2T^2.
+\]
+Next write $f_v(u,au,W)=u\ell(u^2,W)$. Contact stationarity gives
+$\ell(c^2,W_c)=0$. Subtracting the value at $W_c$ and dividing that
+value by $\xi-c^2$ gives
+\[
+ f_v(u,au,W)=S\ell_1+uT\ell_2
+\]
+with bounded coefficients. Exact finite Taylor expansion in $v=au-R$
+proves the scalar assertion of \eqref{p9f1235511111:eq:c2u-membership}. The same
+odd-parity argument applies to each $L_i(u,au,W)$, and finite division
+by $v-au$ proves the normal assertions. This accounts for all scalar,
+first-normal, and quadratic-normal terms in the original parent.
+
+\subsubsection*{Eliminate one soft root by a pure tensor unit}
+Put $K=1-j+ru^2$ and
+\[
+Q(\xi)=aW_c-a^2(1-j)-a^2r(\xi+c^2).
+\]
+The source definition of $b$ gives the exact identity
+\begin{equation}
+G=-[D_uW-Ku(v+au)]R+aD_uS+uTQ(u^2).
+\label{p9f1235511111:eq:c2u-current-soft}
+\end{equation}
+Indeed $(\xi-c^2)Q(\xi)$ equals
+$a(1+\xi)W_c-(1-r+g)-a^2(1-j+r\xi)\xi$.
+Together with \eqref{p9f1235511111:eq:c2u-current}, this yields
+\begin{equation}
+S=\frac{H_2+(1-u^2v^2)H_1+uvH_5
+ +[D_uW-Ku(v+au)]R-uTQ(u^2)}{aD_u}.
+\label{p9f1235511111:eq:c2u-eliminate-S}
+\end{equation}
+The denominator is a product of a pure coefficient unit and a pure
+testing unit.  Thus this is an allowed exact substitution in the tensor
+ring.  Take the five roots
+\begin{equation}
+K_1=\sqrt{e_1}H_1,\quad K_2=\sqrt{e_2}H_2,\quad
+K_5=\sqrt{e_5}H_5,\quad R,\quad T.
+\label{p9f1235511111:eq:c2u-five-roots}
+\end{equation}
+All inverse square roots used to substitute for the $H_i$ are bounded
+pure coefficient quantities.  Adding the three retained packets back
+therefore gives a bounded exact Gram matrix for the entire parent on
+\eqref{p9f1235511111:eq:c2u-five-roots}.
+
+\subsubsection*{A uniform positive residue calculation}
+Here is a calculation using only small quadratic forms.  It proves
+strictness even when any of the first three source coefficients diverges.
+Set $c=0$ formally in the bounded source formulas, and put
+\[
+\begin{gathered}
+b_0=1-r+g,\qquad t_0=1-j,\qquad w_0=b_0/a,\\
+N_0=(b_0+r)(b_0+a^2(1-t_0))-a^2(1-r)t_0.
+\end{gathered}
+\]
+Define pure coefficient quantities
+\begin{align*}
+n&=\frac{b_0(1-r)}{2r(b_0+1)},&
+m&=\frac{1-r}{2g(b_0+1)},&
+C&=\frac{N_0}{2a^2t_0(b_0+1)},\\
+A&=\frac{a^2(b_0+r)}{2(b_0-a^2t_0)(b_0+1)},&
+D&=\frac{b_0(b_0+r)}{2a^2j(b_0+1)}.
+\end{align*}
+The letters $n,m,C,A,D$ in this calculation denote these reference
+weights, not additional assumptions or altered source coefficients.
+The quantities $C,A,w_0$ are positive bounded units; $n,m,D$ and their
+reciprocals are positive, with the reciprocals bounded.
+
+The quadratic angular and hard-state part of the parent at $c=0$ is
+\begin{align}
+F_2={}&4nX^2+4m(vW-X-u)^2+4C(uW-Y)^2
+ +4AY^2+4D(uW-Y-v)^2\notag\\
+&+2\bigl((uW-Y)^2-2uvW+X^2+2uX+u^2\bigr).
+\label{p9f1235511111:eq:c2u-F2}
+\end{align}
+Write
+\[
+\begin{gathered}
+h_x=4n+4m+2,\qquad h_y=4C+4A+4D+2,\\
+p=\frac{(4C+4D+2)4A}{h_y},\quad
+q=\frac{4m(4n+2)}{h_x}.
+\end{gathered}
+\]
+Completing the two hard squares and using the source identities gives
+\begin{align}
+F_2={}&h_x\left[n_x+\frac{4m}{h_x}(WR-aS)\right]^2
+ +h_y\left[-n_y+\frac{4A}{h_y}(S+w_0R/a)\right]^2\notag\\
+&+p(S+w_0R/a)^2+q(WR-aS)^2.
+\label{p9f1235511111:eq:c2u-F2-factor}
+\end{align}
+Here the linearized centered substitutions are
+$X=-ru+n_x$, $Y=uW-t_0v-n_y$,
+$R=au-v$, and $S=u(W-w_0)$.  This identity can be checked by two
+square completions and the following five elementary rational identities:
+\begin{gather*}
+\frac{(4m+2)4n}{h_x}=qa^2w_0^2,\qquad
+\frac{4D(4C+4A+2)}{h_y}=p w_0^2/a^2,\\
+4m+4D+2-\frac{(4m+2)4m}{h_x}
+ -\frac{(4C+4D+2)4D}{h_y}
+ =w_0(p/a+qa),\\
+(4m+2)-4maw_0=rh_x,\qquad
+\frac{4A}{h_y}w_0+\left(\frac{4D}{h_y}-t_0\right)a=0.
+\end{gather*}
+Their denominators are explicit pure coefficient factors, and direct
+substitution of the five displayed weights proves each identity.
+
+At residue level the exact current relation says
+$H_2=-WR+aS-n_x$.  Substituting
+$S=(H_2+n_x+WR)/a$ in \eqref{p9f1235511111:eq:c2u-F2-factor} cancels the
+hard-completion denominators and gives the particularly simple form
+\begin{equation}
+(4n+2)n_x^2+4mH_2^2+(4C+4D+2)n_y^2
+ +4A\left(\frac{(W+w_0)R+n_x+H_2}{a}-n_y\right)^2.
+\label{p9f1235511111:eq:c2u-pre-scaled}
+\end{equation}
+Scale the reference roots by $\sqrt n,\sqrt m,\sqrt D$ and denote
+the resulting abstract Gram coordinates by $K_1,K_2,K_5$.  The reference
+scaled Gram is
+\begin{align}
+\mathcal E={}&(4+2/n)K_1^2+4K_2^2
+ +\bigl(4+(4C+2)/D\bigr)K_5^2\notag\\
+&+\frac{4A}{a^2}\left[
+(W+w_0)R+\frac{K_1}{\sqrt n}+\frac{K_2}{\sqrt m}
+-\frac{aK_5}{\sqrt D}\right]^2.
+\label{p9f1235511111:eq:c2u-reference}
+\end{align}
+Every coefficient of this Gram matrix is bounded, including when
+$r,g,j$ have zero residue.  Its residue is strictly positive definite:
+the first three square coefficients are at least $4$, and after those
+roots vanish the last square has strictly positive coefficient on $R$
+because $A,a,w_0$ are positive units and $W\geq0$.
+
+We justify carefully that this is the residue of the exact Gram just
+constructed.  First $re_1-rn$, $ge_2-gm$, and $je_5-jD$ are
+infinitesimal, as are $e_3-C$, $e_4-A$, and $W_c-w_0$.
+Moreover $e_1/n=U_1/(rn)$, $e_2/m=U_2/(gm)$, and
+$e_5/D=U_5/(jD)$ are positive bounded units with residue $1$.
+Thus the reference root scaling and the actual scaling in
+\eqref{p9f1235511111:eq:c2u-five-roots} induce the same residue coordinates.
+After retention and scaling, every coefficient involving the possibly
+unbounded packets is a polynomial combination of bounded quantities
+such as
+\[
+U_1,\quad rU_1,\quad \frac1{\sqrt{e_1}}=
+\frac{\sqrt r}{\sqrt{U_1}},\quad
+\frac{U_1}{\sqrt{e_1}}=\sqrt r\sqrt{U_1},
+\]
+and the corresponding quantities for $g,j$.  All square-root
+denominators here have positive residue.  Their residues thus agree
+with those obtained using $rn,gm,jD$.  Monic division, followed by
+\eqref{p9f1235511111:eq:c2u-eliminate-S}, also commutes with residue, since its
+only further denominator is $aD_u$.  Hence the four-root block is
+exactly the residue of \eqref{p9f1235511111:eq:c2u-reference}.
+
+The radial pivot has an equally short exact computation.  On the scalar
+graph $v=au,W=W_c$ the remainder is
+$(u^2-c^2)^2C_2(u^2)$.  At $u=0$ it equals $4\alpha$; hence
+$C_2(0)=4\alpha/c^4$.  The latter is a positive bounded unit by
+\eqref{p9f1235511111:eq:c2u-units}.  All radial cross coefficients contain
+an explicit factor $u$, by the parity division above; the elimination
+\eqref{p9f1235511111:eq:c2u-eliminate-S} adds only further such factors.
+Thus the entire five-root residue is
+\begin{equation}
+\overline{\mathcal E}
+ +4\overline{\alpha/c^4}\,T^2\succ0.
+\label{p9f1235511111:eq:c2u-strict-residue}
+\end{equation}
+The strict-residue Gram lemma proves the full bounded $Z=1,W\geq0$
+chart, without any restriction on the size of $X,Y$ or of the roots.
+
+\subsubsection*{The other state chart and endpoint dispatch}
+For $W=1$, $Z$ infinitesimal, retain the $\alpha$ packet and the three
+original squares in $X,R_2,R_5$. The exact identities
+\[
+Y=uvX-R_5+u-vZ,\qquad R_3=-uvX+R_5+vZ,
+\]
+\begin{equation}
+v=\frac{R_2+(1-u^2v^2)X+uD_vZ+uvR_5}{D_u}
+\label{p9f1235511111:eq:c2u-wunit-root}
+\end{equation}
+express the entire bounded remainder as a bounded quadratic form on
+$X,R_2,R_5,u$. For clarity, this does not require a division by any
+root: $D_u$ is pure testing. The exact signed-core completion
+\[
+\begin{split}
+H={}&2\left[C_*^2+D_vQ_*^2+D_uv^2Y^2
+ +\frac{D_uu^2v^2(1-u^2v^2)}{D_v}Z^2\right]-4D_uuvZ,\\
+C_*={}&u+uvR_\beta-Y,\qquad
+Q_*=R_\beta-\frac{D_uuv^2}{D_v}Z
+\end{split}
+\]
+shows quadraticity directly after \eqref{p9f1235511111:eq:c2u-wunit-root}: every
+displayed amplitude is linear in the four roots, and the last indefinite
+term is $u$ times the same linear expression for $v$. All coefficients
+are bounded. Adding the three retained packets and using roots
+$K_1=\sqrt{e_1}X$, $K_2=\sqrt{e_2}R_2$,
+$K_5=\sqrt{e_5}R_5$, and $u$, the residue is the residue of
+\[
+(4+2/e_1)K_1^2+4K_2^2+
+\bigl(4+(4e_3+2)/e_5\bigr)K_5^2
++4e_4\left(u-\frac{K_5}{\sqrt{e_5}}\right)^2.
+\]
+It is strictly positive because $e_4$ is a positive bounded unit.  This
+proves the whole chart, including arbitrary $X,Y$: only the Gram
+coefficients, not the roots, needed boundedness.
+
+Finally the testing-only involutions
+\[
+(u,W,X,Y,Z)\mapsto(-u,-W,-X,Y,Z),\qquad
+(v,W,X,Y,Z)\mapsto(-v,-W,X,-Y,Z)
+\]
+preserve the full parent and allow $u,v\ge0$. Put
+$L=1+v^2+u^2v^2$. The $X,Y$ block of half the signed core has eigenvalues
+$L\pm uv>0$, and its exact Schur complement is
+\begin{equation}
+ \frac{uvD_uD_v[uv(W^2+Z^2)-2LWZ]}{L^2-u^2v^2}.
+\label{p9f1235511111:eq:c2u-core-schur}
+\end{equation}
+If $WZ\le0$, the pure-testing core is nonnegative and is a square in
+$K_t$; every event is already a tensor square. This includes exact zero
+state or angle endpoints. If $WZ>0$, either $W/Z$ is bounded, giving
+the first chart, or $Z/W$ is infinitesimal, giving the second. Restoring
+the state scale is pure testing multiplication. Splitting a complex
+state into real and imaginary parts completes the proof of
+Theorem~\ref{p9f1235511111:thm:c2u}.
+
+\paragraph{Scope.}
+This theorem includes all eight ordinary or infinitesimal combinations
+of $r,g,j$ under \eqref{p9f1235511111:eq:c2u-hyp}; S38 is one special case.
+A vanishing residue of $a$, $1-r$, $t$, $b-a^2t$, or $N$ requires
+an additional argument.  Complementary testing-angle corners and
+entry of every C2 source into this domain are separate obligations.
+The proof uses no archived scalar or normal coefficient arrays.
+
+
+\section{\texorpdfstring{The next C2 boundary: retain the fourth event current}{The next C2 boundary: retain the fourth event current}}
+\label{component:p53752031d16c}
+
+\label{p53752031d16c:sec:c2-y-current}
+
+The gap $h=b-a^2t$ need not stay a unit.  When it becomes
+infinitesimal, the fourth event is strong.  Its centered current supplies
+an exact zero relation which repairs the preceding Gram matrix.
+
+\subsubsection*{Source positivity and the precise remaining corner}
+Keep the exact source \eqref{p9f1235511111:eq:c2u-source}, with $c>0$ infinitesimal,
+$r,g,j>0$ bounded, and $a,1-r,t$ positive bounded units.  This section
+assumes
+\begin{equation}
+h=b-a^2t>0\text{ infinitesimal},\qquad N\text{ a positive bounded unit}.
+\label{p53752031d16c:eq:c2y-domain}
+\end{equation}
+There is a useful exact positive identity:
+\begin{equation}
+N=(1+c^2)(b+r)h+a^2\bigl[g+j+rt(1+a^2c^2)\bigr].
+\label{p53752031d16c:eq:c2y-N-positive}
+\end{equation}
+It follows by writing $b+a^2(1-t)=h+a^2$ in the definition of $N$
+and using the definitions of $b,t$.  Thus all source coefficients are
+positive.  Under the other unit hypotheses, $N$ is a unit exactly when
+at least one of $h,r,g,j$ has positive residue.  In
+\eqref{p53752031d16c:eq:c2y-domain}, therefore, at least one of $r,g,j$ is ordinary.
+As before, $re_1,ge_2,je_5,e_3$ are positive bounded units, and now
+\begin{equation}
+U_4=he_4=\frac{a^2A_c(b+r)(A_c+a^2c^2t)}{2\Delta},\qquad
+\frac{\alpha}{c^4}=\frac{(b+r)N}{2(1-c^2h)\Delta}
+\label{p53752031d16c:eq:c2y-units}
+\end{equation}
+are positive bounded units.  Hence $e_4$ is strong and
+$1/\sqrt{e_4}$ is infinitesimal.
+
+\begin{theorem}[Full parent at the fourth-event boundary]
+\label{p53752031d16c:thm:c2-y-current}
+For the exact source under \eqref{p53752031d16c:eq:c2y-domain}, every independent
+testing pair $u,v$ that is infinitesimal or zero, and every real or
+complex projective state, the entire parent \eqref{p9f1235511111:eq:c2u-parent} is a
+finite sum of squares in $K_c\otimes_{\mathbb R}K_t$.
+\end{theorem}
+
+\subsubsection*{The exact zero relation}
+First take $Z=1$ and bounded $W\geq0$.  In addition to the three currents
+already defined, put
+\[
+H_4=Y-\frac ha u.
+\]
+This current vanishes at the exact stationary contact, since
+$W_c-at=h/a$.  Retain the extra packet $4e_4D_uD_vH_4^2$.
+Its difference from the original fourth event is
+\[
+4e_4D_uD_v(Y^2-H_4^2)
+=\frac{8U_4}{a}D_uD_vuH_4+
+\frac{4hU_4}{a^2}D_uD_vu^2.
+\]
+Thus the entire remainder after retaining four packets has bounded
+coefficients.  Its exact contact, parity, quadratic state degree, and
+value $4\alpha$ at $u=v=H_1=H_5=0$ are unchanged.  The complete
+monic-division argument in Section~\ref{p9f1235511111:sec:c2-unified} therefore gives
+a bounded quadratic form on $(H_1,H_5,R,S,T)$.  Eliminate $S$ by
+\eqref{p9f1235511111:eq:c2u-eliminate-S} and restore the four retained packets.  This
+gives a bounded exact Gram on the six roots
+\begin{equation}
+K_1=\sqrt{e_1}H_1,\quad K_2=\sqrt{e_2}H_2,\quad
+K_4=\sqrt{e_4}H_4,\quad K_5=\sqrt{e_5}H_5,\quad R,\quad T.
+\label{p53752031d16c:eq:c2y-roots}
+\end{equation}
+
+There is one exact relation among these roots.  With
+$K=1-j+ru^2$ and $Q$ as in Section~\ref{p9f1235511111:sec:c2-unified}, direct
+substitution gives
+\[
+H_4=S+KR-ar uT+uvH_1-H_5.
+\]
+Combining this with the current formula for $S$ yields
+\begin{align}
+\zeta={}&aD_uH_4-H_2-(1-u^2v^2+aD_uuv)H_1
+ +(aD_u-uv)H_5\notag\\
+&-[D_uW+(a-uv)K]R+u[Q(u^2)+a^2D_ur]T=0.
+\label{p53752031d16c:eq:c2y-zero-relation}
+\end{align}
+In the scaled roots every coefficient here is bounded.  Its residue is
+\begin{equation}
+\overline\zeta=-\frac{K_2}{\sqrt m}-\frac{K_1}{\sqrt n}
++\frac{aK_5}{\sqrt D}-(W+at_0)R,
+\label{p53752031d16c:eq:c2y-zero-residue}
+\end{equation}
+where, here and in residue calculations below, coefficient expressions
+mean their residues; $n,m,C,A,D,t_0,w_0$ are the reference quantities
+defined in the preceding section.  The $K_4$ and $T$ coefficients
+vanish at residue.  The coefficient of $R$ is a nonzero real number,
+since $W\geq0$ and $a,t_0$ are positive units.
+
+\subsubsection*{The corrected residue is visibly strict}
+Let $h_0=b_0-a^2t_0$.  The definitions give
+\begin{equation}
+h_0=(1+c^2)h+a^2c^2r>0,
+\label{p53752031d16c:eq:c2y-h0}
+\end{equation}
+so $h_0$ is infinitesimal too.  The reference fourth weight satisfies
+$h_0A>0$ with unit residue, and $U_4-h_0A$ is infinitesimal.
+The ratio $e_4/A$ need not have residue one.  It is unnecessary:
+the bounded retained remainder depends on $U_4,h$, while the fourth
+scaled packet has coefficient $4D_uD_v$ and
+$1/\sqrt{e_4}=\sqrt h/\sqrt{U_4}$ has zero residue.  These facts
+justify the reference comparison even when $h\ll c^2r$.
+
+For a transparent calculation, start from
+\eqref{p9f1235511111:eq:c2u-pre-scaled}.  The linearized fourth current is
+\[
+H_{4,0}=S+t_0R-H_5
+=\frac{(W+at_0)R+H_1+H_2-aH_5}{a}.
+\]
+The last term of that reference quadratic form is exactly
+\[
+4A\left(H_{4,0}+\frac{h_0}{a^2}R\right)^2.
+\]
+Subtract the fourth retained square $4AH_{4,0}^2$ and restore
+$4K_4^2$.  The resulting four-hard-root part is
+\[
+\begin{split}
+&(4+2/n)K_1^2+4K_2^2+4K_4^2
+ +\bigl(4+(4C+2)/D\bigr)K_5^2\\
+&\hspace{12mm}+\frac{8h_0A}{a^2}H_{4,0}R
+ +\frac{4h_0^2A}{a^4}R^2.
+\end{split}
+\]
+At residue, the last square coefficient vanishes,
+$H_{4,0}=-\overline\zeta/a$, and $h_0A$ has the same residue as $U_4$.
+The radial calculation is unchanged: its pivot is
+$4\overline{\alpha/c^4}>0$ and all radial cross coefficients vanish.
+Thus the entire Gram residue is the residue of
+\begin{equation}
+\mathcal D+4(\alpha/c^4)T^2-\frac{8U_4}{a^3}\zeta R,
+\quad
+\mathcal D=(4+2/n)K_1^2+4K_2^2+4K_4^2
++\bigl(4+(4C+2)/D\bigr)K_5^2.
+\label{p53752031d16c:eq:c2y-uncorrected}
+\end{equation}
+All these residue comparisons use bounded normalized coefficients and
+monic division, exactly as in the preceding proof.
+
+Now add the following identically zero polynomial to the exact Gram:
+\begin{equation}
+\frac{8U_4}{a^3}\zeta R+\zeta^2=0.
+\label{p53752031d16c:eq:c2y-zero-correction}
+\end{equation}
+Its coefficients are bounded, and the equality follows from the exact
+relation \eqref{p53752031d16c:eq:c2y-zero-relation}.  The corrected residue is
+\[
+\overline{\mathcal D}
++4\overline{\alpha/c^4}\,T^2+\overline\zeta^{\,2}\succ0.
+\]
+Indeed the first four diagonal coefficients are at least $4$, the radial
+pivot is positive, and after those five roots vanish
+$\overline\zeta^{\,2}$ has positive coefficient on $R$ by
+\eqref{p53752031d16c:eq:c2y-zero-residue}.  The strict-residue Gram lemma proves the
+full bounded $Z=1,W\geq0$ chart.
+
+\subsubsection*{The other projective chart}
+For $W=1$, $Z$ infinitesimal, retain the original packets in
+$X,R_2,Y,R_5$ and the $\alpha$ packet.  The exact pure-testing identity
+\begin{equation}
+u=\frac{D_uY+[Z(1-u^2v^2)-D_uuv]X+(D_u+uvZ)R_5+ZR_2}
+{D_u-D_vZ^2}
+\label{p53752031d16c:eq:c2y-Wunit}
+\end{equation}
+follows from the two amplitude definitions.  Its denominator is a
+positive pure-testing unit.  Together with \eqref{p9f1235511111:eq:c2u-wunit-root},
+it expresses $u,v$ linearly in $X,R_2,Y,R_5$, with bounded testing
+coefficients.  The signed-core completion in the preceding section
+then makes the whole remaining part a bounded quadratic form on the
+four scaled packet roots.  Its residue is
+\[
+(4+2/e_1)K_1^2+4K_2^2+4K_4^2+
+\bigl(4+(4e_3+2)/e_5\bigr)K_5^2\succ0.
+\]
+This proves the chart for arbitrary $X,Y$.  The same testing-only sign
+gauges, signed-core Schur complement, homogeneous restoration, and
+real/imaginary splitting complete all projective states.
+
+The only remaining corner of this particular bounded-shape source
+family has $h,r,g,j$ all infinitesimal.  Then $a^2$ has residue $1$,
+$N$ is infinitesimal, and the radial pivot used here vanishes.
+Neither this theorem nor the preceding unit-gap theorem asserts a
+certificate for that further degeneration.
+

@@ -1,0 +1,65 @@
+{
+  "purpose": "Small final chapter reference replacements; no generated file is edited by this JSON.",
+  "apply_note": "Apply exact find/replace pairs only where the original text remains; some may already have been superseded by root reference remapping.",
+  "edits": [
+    {
+      "file": "chapters/07_cover.tex",
+      "find": "by the actual extreme-source reduction SE15.",
+      "replace": "by the extreme-source lemma and SG10 in Chapter~\\ref{ch:geometry}.",
+      "reason": "Old global SE15 is omitted; the refined source geometry prints the exact two canonical patterns."
+    },
+    {
+      "file": "chapters/07_cover.tex",
+      "find": "Its proof uses SE's coercive Laurent support, strict single-field\ncontact Hessian, contact sufficiency and event-row deletion implication.",
+      "replace": "Its proof uses the contact lemma and SG17--SG22 in Chapter~\\ref{ch:geometry}: coercive Laurent support, the strict single-field contact Hessian, contact sufficiency, positive $W_c$ after $Z_c=1$ normalization, and the event-row deletion implication.",
+      "reason": "Name the actual printed SG structural inputs to native entry; do not point to omitted old global SE."
+    },
+    {
+      "file": "chapters/07_cover.tex",
+      "find": "\\ \\Longrightarrow\\ {\\rm SE,\\ EN},",
+      "replace": "\\ \\Longrightarrow\\ \\text{the source/contact reduction and EN},",
+      "reason": "Repair the global dependency display LC8; this SE is the omitted global source reduction, not the retained local C14.4 SE."
+    },
+    {
+      "file": "chapters/07_cover.tex",
+      "find": "point in \\path{closed_faces_short.tex}.",
+      "replace": "point in Chapter~\\ref{ch:geometry}, equations SG11--SG14.",
+      "reason": "The two closed-face lifts and strict feasible points are now printed in the refined geometry chapter."
+    },
+    {
+      "file": "chapters/07_cover.tex",
+      "find": "conductors and the actual completed \\(j\\) conductor;",
+      "replace": "conductors and the completed \\(J\\)-row conductor;",
+      "reason": "CJ is the completed J row, not the source gap j."
+    },
+    {
+      "file": "chapters/06_mechanisms.tex",
+      "find": "CT requires only $f=Z/W$ infinitesimal and",
+      "replace": "On its unchanged unbounded-$H$ source, CT requires only\n$f=Z/W$ infinitesimal and",
+      "reason": "Keep the CT source hypothesis explicit while broadening only its pure-testing unit-ratio condition."
+    },
+    {
+      "file": "chapters/06_mechanisms.tex",
+      "find": "state chart.  CS5--CS6 may be omitted; retain CS1--CS4 for extreme\nratios, CF for bounded $W/Z$, and HG/HP for bounded $H$.",
+      "replace": "state chart. CS1--CS4 cover the extreme ratios, CF covers bounded\n$W/Z$ on the unbounded-$H$ source, and HG/HP together with the\n$\\lambda\\le0$ CF case cover bounded $H$.",
+      "reason": "Replace editorial references to omitted CS5\u2013CS6 by the actual retained coverage, including the lambda nonpositive branch."
+    },
+    {
+      "file": "chapters/06_mechanisms.tex",
+      "find": "SN is therefore not a separate\nterminal.  Its exact polynomial dictionary remains a dependency of\nBN and UN and must be retained or copied into their proof.",
+      "replace": "The exact SN polynomial dictionary in Section~\\ref{component:p1de5b12d1927} supplies the formulas used by BN and UN.",
+      "reason": "The SN dictionary is already retained. Replace the prospective preservation instruction by its actual location; SN8 and SN10\u2013SN18 references remain valid."
+    },
+    {
+      "file": "chapters/05_entry.tex",
+      "find": "seven-coquotient formulas of \\path{native_formulas.tex}, together\nwith the source coefficients in SD1 of \\path{source_definitions.tex},",
+      "replace": "seven coquotients and source coefficients SD1 in Section~\\ref{component:p0acdb66bba2f}, with their exact stationarity identities SD9--SD11,",
+      "reason": "107 is redundant because126 prints the same coquotients and exact balances; replace the omitted filename by the retained full dictionary. The next sentence already states that no asymptotic hypothesis is used."
+    }
+  ],
+  "do_not_replace": [
+    "The local C14.4 SE/EB references in LC4b and scoped183 refer to retained168/153. They stay unchanged.",
+    "The SN8 helper and SN10\u2013SN18 dictionary references refer to retained189 and stay unchanged."
+  ],
+  "closure_result": "All branch packets in C1_REQUIRED_CERTIFICATE_PACKETS are selected. Shared1/12/15 are inlined;107 is supplied by126; the needed64 source bounds are supplied by the explicit DI7 corollary inserted at72. No omitted136/144/151/166/167 body is needed after the stated GS/DS references and explicit183 join are used."
+}

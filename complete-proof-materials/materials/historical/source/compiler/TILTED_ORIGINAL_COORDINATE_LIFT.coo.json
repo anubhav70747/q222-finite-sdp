@@ -1,0 +1,159 @@
+{
+  "auxiliary_dimension_m": 1,
+  "block_orders": [
+    2,
+    1,
+    1,
+    1
+  ],
+  "coefficient_field": "Q(sqrt(2))",
+  "coo_semantics": "Upper records are actual entries. Mirror each off-diagonal entry; do not double it.",
+  "coordinate_order": [
+    "a0",
+    "a1",
+    "b0",
+    "b1",
+    "E00",
+    "E01",
+    "E10",
+    "E11"
+  ],
+  "index_base": 0,
+  "matrices": {
+    "E00": [
+      {
+        "column": 1,
+        "row": 0,
+        "value": {
+          "rational": "1/2",
+          "sqrt2": "0"
+        }
+      }
+    ],
+    "E01": [
+      {
+        "column": 1,
+        "row": 0,
+        "value": {
+          "rational": "1/2",
+          "sqrt2": "0"
+        }
+      }
+    ],
+    "E10": [
+      {
+        "column": 1,
+        "row": 0,
+        "value": {
+          "rational": "1/2",
+          "sqrt2": "0"
+        }
+      }
+    ],
+    "E11": [
+      {
+        "column": 1,
+        "row": 0,
+        "value": {
+          "rational": "-1/2",
+          "sqrt2": "0"
+        }
+      }
+    ],
+    "a0": [
+      {
+        "column": 0,
+        "row": 0,
+        "value": {
+          "rational": "1",
+          "sqrt2": "0"
+        }
+      },
+      {
+        "column": 2,
+        "row": 2,
+        "value": {
+          "rational": "-1",
+          "sqrt2": "0"
+        }
+      },
+      {
+        "column": 3,
+        "row": 3,
+        "value": {
+          "rational": "-1",
+          "sqrt2": "0"
+        }
+      },
+      {
+        "column": 4,
+        "row": 4,
+        "value": {
+          "rational": "1",
+          "sqrt2": "0"
+        }
+      }
+    ],
+    "a1": [],
+    "b0": [],
+    "b1": [],
+    "constant": [
+      {
+        "column": 0,
+        "row": 0,
+        "value": {
+          "rational": "0",
+          "sqrt2": "1"
+        }
+      },
+      {
+        "column": 2,
+        "row": 2,
+        "value": {
+          "rational": "0",
+          "sqrt2": "1"
+        }
+      },
+      {
+        "column": 3,
+        "row": 3,
+        "value": {
+          "rational": "1",
+          "sqrt2": "0"
+        }
+      },
+      {
+        "column": 4,
+        "row": 4,
+        "value": {
+          "rational": "1",
+          "sqrt2": "0"
+        }
+      }
+    ],
+    "y": [
+      {
+        "column": 1,
+        "row": 1,
+        "value": {
+          "rational": "1",
+          "sqrt2": "0"
+        }
+      },
+      {
+        "column": 2,
+        "row": 2,
+        "value": {
+          "rational": "-1",
+          "sqrt2": "0"
+        }
+      }
+    ]
+  },
+  "matrix_order_N": 5,
+  "schema": "exact-symmetric-upper-coo-v1",
+  "scope": "Inverse image of T under t=a0, s=E00+E01+E10-E11; not the full Q222 set.",
+  "sqrt2_root": "positive root of X^2-2",
+  "status": "EXACT_FOR_TILTED_PROJECTION_ONLY",
+  "upper_record_count": 14
+}

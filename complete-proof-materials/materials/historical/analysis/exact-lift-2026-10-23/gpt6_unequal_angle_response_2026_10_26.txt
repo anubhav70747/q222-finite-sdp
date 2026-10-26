@@ -1,0 +1,202 @@
+ChatGPT said:
+
+Unequal-angle C2 contacts: a new exact reduction and finite SDP subcone
+The full three-parameter conic hull remains unresolved. However, the unequal-angle family has a substantially simpler structure than its original native formulas suggest.
+I established three results:
+An exact symmetric polynomial parametrization of every positive native maximally entangled C2 contact, including $n=0$.
+
+
+
+A new identity showing that the relative measurement angle is determined by the Bell-source coefficients, together with a proof that every open contact ray is extreme and globally quantum-valid.
+
+
+
+An exact rational SDP of total PSD order six for a continuous unequal-angle subfamily, with both inclusions and all its conic limits proved.
+
+
+
+I also verified that the supplied quadratic relation takes both signs after convex mixing, so neither determinant inequality describes the full hull.
+Complete proof and reproducible package
+Four-page analytical proof
+
+
+
+LaTeX, exact symbolic checker, rational matrix data, and proof
+
+
+
+ZIP SHA-256: 9830a683ca8ced582e725897ff882c1a83e1356a0fc3b5020dd43b03e43ae3db
+1. The new symmetric coordinates
+Start with the native C2 maximally entangled contact
+$b=a>0,\qquad t=\frac{1-r}{a},\qquad
+u_c=c,\quad v_c=ac,$
+$\psi_c=(1,-cr,cr,1).$
+The decisive substitution is
+$\boxed{s=ar c^2.}$
+Introduce
+$e=r+s,\qquad p=rs,\qquad g=a+r+s-1,$
+$L=a(e-p)+p,\qquad Q=ag+L,$
+and the two polynomials
+$\begin{aligned}
+\Delta_0={}&a^3p+a^2(e^2-p)+ap(2e-p)+p^2,\\
+B_0={}&a^3p+a^2(e^2+p-e)\\
+&+a\bigl((3e-2)p-p^2\bigr)+p^2.
+\end{aligned}$
+The exact complete native source, with $d=1,\lambda=\beta=0$, becomes
+$\boxed{
+\begin{aligned}
+n&=-\frac{aB_0}{2(a+1)\Delta_0},\\
+A&=\frac{a(a+r)(a+s)L}{2(a+1)\Delta_0},\\
+m&=\frac{(a+s)(1-r)(as+r)L}{2(a+1)g\Delta_0},\\
+D&=\frac{(a+r)(1-s)(ar+s)L}{2(a+1)g\Delta_0},\\
+C&=\frac{r^2(a+s)Q}{2(1-r)\Delta_0},\\
+\alpha&=\frac{s^2(a+r)Q}{2(1-s)\Delta_0}.
+\end{aligned}}
+\tag{1}$
+All six identities were verified symbolically against the original native C2 formulas.
+The complete positive native domain is simply
+$\boxed{
+a>0,\quad 0<r,s<1,\quad
+a+r+s>1,\quad B_0\le0.
+}
+\tag{2}$
+Here $B_0=0$ includes the genuine $n=0$ face. Moreover, $B_0\le0$ implies $r+s<1$.
+The remaining denominators are positive because
+$L>0,\qquad Q=ag+L>0,$
+$\Delta_0=a^3p+a^2(e^2-p)+ap(2e-p)+p^2>0.$
+This eliminates the nested rational native source parameters in favor of three independent real variables and one cubic sign condition.
+2. A new angle-ratio law
+The most useful cancellation is
+$\boxed{d+2n=\frac{2A}{a}.}
+\tag{3}$
+Therefore, on every individual positive maximally entangled C2 contact ray,
+$\boxed{\frac{v_c}{u_c}=a=\frac{2A}{d+2n}.}$
+The measurement-angle ratio is encoded directly in the Bell coefficients, without solving the contact equations.
+Define
+$\kappa=\frac{(a+1)(a+r+s-1)}{(1-r)(1-s)}.$
+Then the second pair of exact identities is
+$C+\frac d2=\kappa D,\qquad
+\alpha+\frac d2=\kappa m,$
+and hence
+$\boxed{m(C+d/2)=D(\alpha+d/2).}
+\tag{4}$
+This explains the supplied rank-four, signature-$(2,2)$ quadratic relation geometrically: each source produces a nonnegative rank-one matrix
+$\begin{pmatrix}
+m&D\\
+\alpha+d/2&C+d/2
+\end{pmatrix}
+=
+\begin{pmatrix}1\\\kappa\end{pmatrix}(m,D).$
+There is another useful exact identity:
+$m-D=-\frac{(r-s)LQ}{2(a+1)g\Delta_0},$
+$C-\alpha=\frac{(r-s)LQ}{2(1-r)(1-s)\Delta_0}.$
+Thus
+$\boxed{m=D\iff C=\alpha\iff r=s\iff u_cv_c=1.}
+\tag{5}$
+This identifies the reciprocal-angle subfamily precisely. It does not validate the false shortcut of checking only $P(1,1)$.
+Global validity and extremality
+Every source in (1)–(2) is globally quantum-valid. The proof uses the full $4\times4$ parent.
+Its $(W,X,Y)$ principal block is positive definite at $uv\ne0$, already from the $d$-weighted core. The accepted R21 Laurent determinant has nonnegative noncentral coefficients. At the native contact, the determinant and both logarithmic derivatives vanish. Convexity in $(\log u^2,\log v^2)$ makes the determinant nonnegative everywhere. Schur complementation then proves the full state matrix PSD. Signed tests and projective endpoints follow by the established gauge and continuity argument.
+The six stationary equations also have a nonzero rank-six minor:
+$-\frac{16384c^6r^2(r-1)(s-1)g^2\Delta_{\rm nat}}
+{(1+c^2)^4(1+a^2c^2)^4},
+\qquad
+\Delta_{\rm nat}=\frac{(a+1)\Delta_0}{a^2r^2}>0.$
+Consequently, every positive native ray in (2), including $n=0$, is extreme in the canonical valid-source cone.
+3. A genuinely unequal-angle subcone with an exact SDP
+Fix
+$r=\frac14,\qquad s=\frac18,\qquad
+\frac34\le a\le2.$
+The contact angles vary as
+$u_c=\frac1{\sqrt{2a}},\qquad
+v_c=\sqrt{\frac a2}.$
+Thus their ratio varies continuously from $3/4$ to $2$, while $u_cv_c=1/2$.
+For this interval,
+$B_0=\frac{32a^3-208a^2-29a+1}{1024}.$
+Its four Bernstein coefficients after mapping the interval to $[0,1]$ are
+$-\frac{497}{4096},\quad
+-\frac{1463}{6144},\quad
+-\frac{1737}{4096},\quad
+-\frac{633}{1024}.$
+All are strictly negative. Therefore every parameter in the interval produces a globally valid contact source.
+After multiplying each source by a positive polynomial factor, the resulting source ray is a polynomial of degree five in $a$.
+Exact source-affine SDP
+Let $y_0,\ldots,y_5$ be unrestricted auxiliary variables and set
+$y=(y_0,y_1,y_2,y_3,y_4,y_5)^T.$
+In active source order $(d,n,m,C,A,D,\alpha)$, impose
+$\boxed{
+\begin{pmatrix}d\\n\\m\\C\\A\\D\\\alpha\end{pmatrix}
+=\frac1{262144}\,T y,\qquad \lambda=\beta=0,
+}$
+where
+$T=
+\begin{pmatrix}
+-210&-4704&-20286&15120&41664&10752\\
+0&105&-3213&-16968&38304&-5376\\
+126&2457&12285&5544&0&0\\
+-35&56&1435&-9856&3136&14336\\
+0&-105&-2247&-13356&-9408&59136\\
+147&2499&10878&12936&0&0\\
+-15&84&39&-2076&1056&3072
+\end{pmatrix}.$
+The only PSD constraints are
+$\boxed{
+\begin{pmatrix}
+y_1-\frac34y_0&y_2-\frac34y_1&y_3-\frac34y_2\\
+y_2-\frac34y_1&y_3-\frac34y_2&y_4-\frac34y_3\\
+y_3-\frac34y_2&y_4-\frac34y_3&y_5-\frac34y_4
+\end{pmatrix}\succeq0,
+}$
+$\boxed{
+\begin{pmatrix}
+2y_0-y_1&2y_1-y_2&2y_2-y_3\\
+2y_1-y_2&2y_2-y_3&2y_3-y_4\\
+2y_2-y_3&2y_3-y_4&2y_4-y_5
+\end{pmatrix}\succeq0.
+}$
+Total PSD order: 6. Auxiliary moments: 6. All data: rational and source-affine.
+Both inclusions follow exactly. A positive mixture of contact rays supplies moments $y_j=\int a^j\,d\mu(a)$. Conversely, the degree-five Markov–Lukács representation of polynomials nonnegative on $[3/4,2]$ shows that the two PSD blocks characterize precisely its truncated moment cone. Every feasible moment vector therefore represents a positive measure, equivalently a finite mixture of at most six contact rays.
+Compactness of the fixed interval and strict positivity of the clearing factor prove closedness and include all endpoint and singular-moment limits.
+This is an exact finite lift of a nontrivial continuous unequal-angle source cone, not of the full three-parameter hull.
+4. Why the rank-one determinant cannot characterize the hull
+For two genuine valid rays,
+$\det(R_1+R_2)
+=(\kappa_2-\kappa_1)(m_1D_2-D_1m_2).$
+Take $a_1=1,a_2=2$, and use the two parameter assignments
+$(r,s)=\left(\frac18,\frac1{16}\right),
+\qquad
+(r,s)=\left(\frac1{16},\frac18\right).$
+Both rays have $n>0$. Assigning these ordered pairs to $a_1,a_2$ in one order and then reversing them gives
+$\boxed{
+\det(R_1+R_2)=
+-\frac{16557677}{50331190}
+\quad\text{or}\quad
++\frac{16557677}{50331190}.
+}$
+The two signs were checked using exact rational arithmetic.
+Therefore even restricting to positive combinations of globally valid contact sources, the quadratic determinant is neither universally nonnegative nor universally nonpositive. Its rank-one structure must be incorporated through a coupled moment representation, not imposed as a source-only determinant constraint.
+5. First unresolved implication for the full hull
+The entire three-parameter hull now has a precise polynomial description. Multiply (1) by the positive source-only factor
+$k(a,r,s)=2(a+1)g(1-r)(1-s)\Delta_0.$
+All seven resulting source coordinates are integer polynomials of total degree at most nine. Thus the exact closed hull is
+$K_{\rm ME}
+=
+\overline{\operatorname{cone}}
+\left\{\widetilde c(a,r,s):
+a>0,\ 0<r,s<1,\ g>0,\ B_0\le0\right\}.$
+This eliminates all source denominators. But it is a polynomial moment-cone description, not yet an SDP lift.
+The missing step for this constructive route is a fixed finite-dimensional certificate for nonnegativity of the explicit degree-nine source-linear polynomial
+$P_\ell(a,r,s)=\ell\cdot\widetilde c(a,r,s)$
+throughout the cubic domain (2), including its limiting strata. The one-variable interval certificate proves that such uniformization is possible along genuine unequal-angle curves. It does not establish a multivariate uniform degree bound or representability for the full hull.
+Final status: the new angle-ratio identity, symmetric domain, contact-extremality theorem, explicit order-six unequal-angle moment pencil, and indefinite-hull witnesses are proved and symbolically checked. The three-parameter exact conic hull and the full eight-coordinate $Q_{222}$ lift remain open.
+
+
+
+
+
+Unequal_ME_Contact_Theorem.pdfPDFOpen file
+
+
+
+
+

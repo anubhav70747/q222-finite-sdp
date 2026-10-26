@@ -1,0 +1,143 @@
+\chapter{Matching both weak C2 packets to the four strong packets}
+\label{component:p8b53b68d8af6}
+\noindent\textbf{Component }\path{p8b53b68d8af6}\par
+{\small\noindent Source: \path{CORE/prior/inherited/c2_matching_strength.tex}\par}
+{\small\noindent SHA256: \path{8b53b68d8af6a308d041e96a3bf10b86a1c991010146e95da907ad2d40e15ec0}\par}
+{\small\noindent Inventory use: Exact complete-parent reflection, both product-bound corner joins, and full ordinary-angle radial source proof\par}
+\medskip
+\section{Matching both weak C2 packets to the four strong packets}
+\label{p8b53b68d8af6:sec:c2-matching-strength}
+
+A coefficient condition symmetric in the two weak packets closes both
+commuting angle corners at once.  It also gives a second exact radial
+source family whose contact angles have ordinary positive residue.
+
+\begin{theorem}[Two matched weak packets]
+\label{p8b53b68d8af6:thm:c2-matching-strength}
+Let the original physical C2 parent have $d=1$, $\lambda=\beta=0$,
+and event weights $(n,m,C,A,D,\alpha)$.  Suppose $C,\alpha>0$ are
+infinitesimal, all four other weights are positive, and each of
+\[
+ Cn,\ Cm,\ CA,\ CD,\qquad
+ \alpha n,\ \alpha m,\ \alpha A,\ \alpha D
+\]
+has bounded reciprocal in the coefficient field.  Then the full parent
+is tensor SOS at every independent projective test and every real or
+complex state.
+\end{theorem}
+\begin{proof}
+Lemma~\ref{pc7dacaa3258e:lem:c2-four-strong-outer} applies directly to every commuting
+residue test except the finite zero-zero corner.
+For that corner use the exact reflection
+\begin{equation}
+ (u,v;W,X,Y,Z;n,m,C,A,D,\alpha)
+ \longmapsto
+ (1/v,1/u;Z,X,Y,W;n,D,\alpha,A,m,C).
+\label{p8b53b68d8af6:eq:c2ms-reflection}
+\end{equation}
+More explicitly, if $F$ denotes the full parent with its indicated
+arguments, then
+\begin{equation}
+ F(u,v;W,X,Y,Z;n,m,C,A,D,\alpha)
+ =u^2v^2F(1/v,1/u;Z,X,Y,W;n,D,\alpha,A,m,C).
+\label{p8b53b68d8af6:eq:c2ms-reflection-identity}
+\end{equation}
+This is a homogeneous polynomial identity, so its interpretation in
+reciprocal charts includes literal zero and infinity endpoints.
+
+For a short verification, the reflected $R_2,R_5$ amplitudes, after
+multiplication by $uv$, are $-R_5,-R_2$.  The reflected $C$ and
+$\alpha$ packets exchange, while the $n,A$ packets are fixed.
+If $\mathcal H$ is the signed core, its common expanded form is
+\begin{align*}
+ \mathcal H/2={}&u^2(W^2+Z^2)+(1+v^2+u^2v^2)(X^2+Y^2)\\
+ &+2u^2v(WX-YZ)+2u(XZ-WY)-2uv(WZ+XY).
+\end{align*}
+Multiplying its reflected expression by $u^2v^2$ fixes the first,
+second and last terms, and exchanges the middle two.  This proves the
+whole-parent identity, including its signed part.
+
+The reflected weak weight is $\alpha$, its four strong weights are
+$n,D,A,m$, and its other nonnegative weak packet is $C$.
+Thus all hypotheses of Lemma~\ref{pc7dacaa3258e:lem:c2-four-strong-outer} hold for
+the reflected parent.  Its infinity-infinity chart is precisely the
+original zero-zero chart.  Restore the homogeneous pure-testing
+factors to obtain the certificate there as well.
+
+Every noncommuting residue test is covered by the already-established
+physical-source theorem, after positive pure-coefficient normalization
+if a coefficient is unbounded.  Undoing that normalization preserves
+SOS.  These alternatives exhaust the tests, and real/imaginary splitting
+handles complex states.  No coefficient scale was compared with an
+independent testing scale.
+\end{proof}
+
+\begin{corollary}[Radial C2 source with ordinary contact angles]
+\label{p8b53b68d8af6:cor:c2-ordinary-angle-radial}
+Use the same rational source \eqref{p9f1235511111:eq:c2u-source}, now with source
+half-angle $c$ a positive bounded unit.  Suppose $h=b-a^2t,r,g,j$ are
+positive infinitesimals and $a,1-r,t$ are positive bounded units.
+Then the full parent is tensor SOS at every independent projective test
+and every real or complex state.
+\end{corollary}
+\begin{proof}
+Put $z=c^2$ and continue to write $C=e_3$ for the weak event weight.
+The exact source identities
+\[
+ b-1=-r+g-zh,\qquad t-1=zr-j,\qquad
+ a-1=\frac{g+j-(1+z)(r+h)}{t(a+1)}
+\]
+remain valid for this ordinary source angle.  Thus $a,b,t$ have residue
+one.  The positive source identity
+\[
+ N=(1+z)(b+r)h+a^2\{g+j+rt(1+a^2z)\}
+\]
+shows that $N>0$ is infinitesimal and $h/N,r/N,g/N,j/N$ are bounded:
+each of the four positive coefficients in this sum is a bounded unit.
+
+Here is the entire normalized coefficient calculation.  Write
+$z_0=\overline z>0$.  Substitution of $a=b=t=1,r=0$ in the bounded
+source numerators and unit denominators gives
+\begin{gather}
+ \overline\Delta=2(1+z_0)^2,\qquad
+ \overline{C/N}=\frac1{4(1+z_0)^2},\qquad
+ \overline{\alpha/C}=z_0^2,\notag\\
+ \overline{rn}=\overline{hA}=\frac1{4(1+z_0)},\qquad
+ \overline{gm}=\overline{jD}=\frac14.
+\label{p8b53b68d8af6:eq:c2ms-ordinary-residues}
+\end{gather}
+For example, the exact quotients used in the first line are
+\[
+ \frac CN=\frac{1+zr}{2a^2t\Delta},\qquad
+ \frac\alpha C=\frac{z^2(b+r)a^2t}{(1-zh)(1+zr)}.
+\]
+The four strong normalized products use the numerators of
+\eqref{p9f1235511111:eq:c2u-source} after multiplication by $r,h,g,j$, respectively;
+no vanishing source gap is inverted in this calculation.
+All six weights are therefore positive, $C,\alpha$ are infinitesimal,
+and their normalized quotients displayed above are bounded units.
+For instance
+\[
+ \frac1{Cn}=\frac{r/N}{(C/N)(rn)},\qquad
+ \frac1{\alpha n}=\frac{C/\alpha}{Cn};
+\]
+the other six product bounds follow in the same way from $g/N,h/N,j/N$.
+These are exactly the hypotheses of Theorem~\ref{p8b53b68d8af6:thm:c2-matching-strength}.
+
+For completeness, the source is physical by the unchanged exact contact
+argument.  The rational stationary identities
+\eqref{p9f1235511111:eq:c2u-contact} are valid at this value of $c$ as well.
+At that noncommuting contact the state matrix has a nonzero kernel
+vector.  Its restriction to $Z=0$ is positive definite: the signed core
+is nonnegative there and the positive event packets have zero common
+kernel.  Hence the other three eigenvalues are positive.  The exact
+contact and angular stationarity give the stationary zero of the
+Laurent determinant; its constant-plus-positive-exponentials form makes
+this its global minimum.  The determinant criterion and homogeneous
+continuity prove physicality, exactly as for the small-angle source.
+Theorem~\ref{p8b53b68d8af6:thm:c2-matching-strength} now applies.
+
+This corollary concerns the stated radial subfamily of the ordinary
+source-angle cell.  It does not assert that every ordinary-angle C2
+source has the required matching strengths or enters this subfamily.
+\end{proof}

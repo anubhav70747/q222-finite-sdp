@@ -1,0 +1,103 @@
+{
+  "C2_assertion_count_context": {
+    "encoding_checks": 99116,
+    "total": 111823,
+    "warning": "Overlapping individual comparisons, mostly encoding checks. Not independent mathematical theorem counts."
+  },
+  "QE_encoding_checks": 20,
+  "QE_status": "UNSOLVED; quantifier elimination was not run; no global coefficient tuple was extracted.",
+  "Schur_check_groups": 28,
+  "archive_integrity": "Performed separately after packaging; the final archive digest is recorded outside the ZIP.",
+  "checklist": {
+    "open": 7,
+    "scoped_completed": 13,
+    "total": 20
+  },
+  "checklist_evidence_paths": 34,
+  "diagonal_check_groups": [
+    {
+      "checks": 4,
+      "name": "separated positive coefficient identities",
+      "status": "PASS"
+    },
+    {
+      "checks": 4,
+      "name": "denominator-free frame corroboration",
+      "status": "PASS"
+    },
+    {
+      "checks": 15,
+      "name": "B0 displayed coefficient module",
+      "status": "PASS"
+    },
+    {
+      "checks": 26,
+      "name": "event stationary-contact cofactors",
+      "status": "PASS"
+    }
+  ],
+  "global_exact_extraction_complete": false,
+  "historical_549_page_proof_recreated_or_reaudited": false,
+  "local_C2_counts": {
+    "PSD2_blocks": 785,
+    "Taylor_remainder_monomials": 1193,
+    "ambient_monomials": 237,
+    "frames": 25,
+    "listed_features": 1570,
+    "mixed_products": 735,
+    "product_records": 27747,
+    "source_target_records": 295
+  },
+  "open_items": [
+    "B03",
+    "A01",
+    "G1",
+    "G2",
+    "E1",
+    "E2",
+    "E3"
+  ],
+  "pdf": {
+    "bytes": 447840,
+    "compile_diagnostics": {
+      "duplicate_destinations": 0,
+      "missing_glyphs": 0,
+      "overfull_boxes": 0,
+      "underfull_boxes": 0,
+      "unresolved_references": 0
+    },
+    "file": "Q222_Analytical_Extraction_Refinement_REGENERATED_2026-10-22.pdf",
+    "pages": 31,
+    "sha256": "db07ab77c834778cc9cc3d29eaecac036f0c0cb510c0669abbd72582688ae4df",
+    "visual_review": "PASS_ALL_31"
+  },
+  "release": "Q222 Analytical Extraction Refinement - regenerated 2026-10-22",
+  "replay": {
+    "changed_manifest_bound_outputs": 0,
+    "construction_verification_suites": 6,
+    "manifest_bound_files_at_replay": 87,
+    "report": "verification/ISOLATED_REPLAY.json",
+    "report_sha256": "87eb5460d6b741ec722921b1d693a9d0f336ad02c9c35e6f9a86b2718e9a21c8",
+    "separate_review_suites": 3,
+    "status": "PASS",
+    "suite_count": 9
+  },
+  "retained_archive": {
+    "bytes": 8884930,
+    "crc_status": "PASS",
+    "path": "recovered/Q222_Extraction_Continuation_Package_2026-10-22.zip",
+    "sha256": "9dcf9554b1a2578bb6b9fd909e7d194d82636fe61a0035da0694eb2e44f441a3"
+  },
+  "review_limitations": [
+    "All analytical and separate-agent reviews are within the same model system.",
+    "No external peer review or proof-assistant formal verification.",
+    "Inherited source hashes do not certify all inherited mathematical claims.",
+    "No full-set exact pencil, global feature bound, or full-set order-two representation is asserted."
+  ],
+  "source_custody_report": {
+    "path": "inputs/SOURCE_CUSTODY.json",
+    "sha256": "02ac223e38c382d2f76fad89852363194726de60e55b62941c68014b1a7e96be"
+  },
+  "status": "PASS_FOR_STATED_SCOPES",
+  "tilted_checks": 38
+}

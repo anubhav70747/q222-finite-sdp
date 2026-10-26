@@ -1,0 +1,116 @@
+Physical C1 stabilizer: exact finite reduction attempt, 23 October 2026
+
+RESULT
+There is no new generic C1 relabelling beyond the existing AS3--AS5
+reflection. After orienting k<=1, it gives no new source satisfying the
+small-x hypotheses of inverse62 or the bounded-unit-L all-tests theorem.
+The exact branch exchanges already used for ordinary Alice are confirmed.
+
+1. PHYSICAL GROUP, NOT A DETERMINANT SYMMETRY
+Use S=A0B0-A0B1+A1B0+A1B1 and the losing events of latex/Proof.tex:91--98.
+In cycle order (lambda,D,C,A,alpha,m,beta,n), the128 physical relabellings
+(two local input permutations, four independent output signs, optional
+party exchange) have exactly16 S-preservers. Their faithful event action
+is i -> eps*i+j mod8, eps=+/-1. The adjacent zero edge is {0,7}.
+Its set stabilizer has order2: identity and
+  h:(A0,A1,B0,B1) -> (A0,-A1,-B1,-B0).
+The latter acts by i->7-i and swaps
+  (lambda n)(m C)(A alpha)(D beta).
+Arbitrary CHSH rotations followed by recanonicalizing this same zero
+edge still give one of these two elements. They do not create independent
+Alice/Bob reciprocal normalizations within canonical C1.
+If S is not required to stay fixed, the128 physical relabellings have
+four set stabilizers of these two raw events: independent choices of
+A1 sign reversal and (B0,B1)->(-B1,-B0). Each factor separately changes
+S and sends some losing events to winning events. They are not symmetries
+of the fixed signed-CHSH C1 parent; their product is h. Restoring the
+negative PR orientation returns to the16-element group used above.
+
+Its exact half-angle/state transport is the printed AS3--AS4:
+  u'=1/u, v'=v,
+  psi'=(vW-X,-W-vX,Z-vY,Y+vZ),
+  u^2 F(hc;1/u,v;psi')=(1+v^2)F(c;u,v;psi).
+The state matrix satisfies T(v)^T T(v)=(1+v^2)I and detT=(1+v^2)^2.
+Thus after pure-testing normalization it is orthogonal and preserves
+the physical full parent, all states and every projective endpoint.
+The homogeneous state matrix stays invertible at v=infinity. d is
+unchanged; the six d-normalized native coefficients have exactly the
+displayed pair permutation, including D=0 <-> beta=0.
+The total scale d/(d+sum event weights) is invariant. The C1 zero pair
+is an adjacent cycle edge, whereas the C2 pair {lambda,beta} has cycle
+distance2; no S-preserver exchanges these two patterns.
+
+2. COMPLETE NATIVE TRANSPORT
+Write x=k^2, theta=1-h, a=(1-r)/eta, t=theta/zeta and
+  rho=r+eta, G=h+zeta, V=1+x*eta*zeta,
+  E=1-x*eta*h, Q=1-x*zeta*r,
+  M=1+x*r-t, J=1+x*h-a.
+Then h has the exact rational action
+  x'=1/x,
+  eta'=x*zeta*rho/G,   zeta'=x*eta*G/rho,
+  r'=Q/G,             h'=E/rho,
+  a'=M/(x*rho),       t'=J/(x*G),
+  M'=a*V/(x*G),       J'=t*V/(x*rho),
+  E'=h*V/G,           Q'=r*V/rho.
+All strict native gaps are preserved. In particular r',h' are in(0,1)
+because G-Q=zeta*M>0 and rho-E=eta*J>0. The transformation is an
+involution. The extra oriented estimates a,t<2 need not survive when
+x'>1; positivity of the exact gaps does survive.
+
+For the native contact psi=(S,-kh,kSr,1), S=sqrt(zeta/eta),
+the unnormalized transformed state is (kG,-SE,Q,kS*rho). Its last
+coordinate is positive, and normalization gives S'=G/(S*rho), k'=1/k,
+with precisely r',h' above. This proves actual-contact transport.
+The useful invariant and scale identities are
+  v_c'^2=x'*eta'*zeta'=x*eta*zeta=v_c^2,
+  L'=x'*zeta'=eta*G/rho,
+  (x*eta)'=zeta*rho/G,
+  e'=rho/(e*G), where e=k*sqrt(eta/zeta).
+These show why eta and zeta cannot generally be interchanged without
+their shape factors.
+
+3. ACTION ON EXISTING SIZE BRANCHES
+I=positive infinitesimal,U=positive bounded unit,O=unbounded.
+For k I, h sends k to O, outside every canonically oriented partition
+row. Applying the orientation again returns the original source.
+This includes every small-k C1.1/C1.4 branch, whatever L or eta does.
+
+For k U the physically permitted eta/zeta types in the first source
+partition and NI7--NI10 transform as follows:
+  (I,I) -> (I,I), exchanging relative state scale up to positive units;
+  (U,I) <-> (I,U), the already-used NI7 representative exchange;
+  (U,U) -> (U,U), already in the five-consecutive-event exit;
+  (O,U) -> (O,U), since rho~eta and G is a unit;
+  (U,O) -> (U,O), since rho is a unit and G~zeta;
+  (O,O) -> (O,O), since rho~eta and G~zeta.
+In the first row rho,G are units and Delta'=G/(Delta*rho), so its
+unbounded/bounded reciprocal state subcases are precisely the AS5
+exchange already used. The non-unit shape factors in the last rows
+prevent a naive eta<->zeta swap.
+
+4. APPLICABILITY AND LIMIT
+Both new completions require x small (quantitatively x<=a fixed
+epsilon/(1+z), or qualitatively x infinitesimal). But every oriented
+source has 0<x<=1, hence its only nontrivial stabilizer image has x'>=1.
+It therefore fails their x hypothesis for every source, independently
+of the other openings. A formal change from small L to unit L' does
+not repair this failure. There is no symmetry-based deletion of another
+small-k source branch. Since v'=v, inverse62's reciprocal-Bob strip is
+also unchanged; only its Alice testing interval is inverted. The
+all-tests theorem already needs no further Alice testing reduction.
+
+This is the stabilizer of the designated generic zero edge {lambda,n}.
+Choosing another edge on an additional-zero boundary is a different
+entry problem, not a third generic stabilizer; no extra reduction on
+such faces is claimed here. The present map exchanges the two retained
+event-zero faces exactly.
+
+EVIDENCE AND LOCATORS
+Proof.tex:91--124; c1_short.tex:96--183,194--269,489--552,575--619 and
+AS3--AS5 at1688--1717. The finite checker c1_symmetry_check.py enumerates
+the physical128 relabellings and confirms the16/2 counts. Its23 exact
+checks cover the full nine-coefficient parent, orthogonal congruence,
+all native gap identities/involution, and every NC4 coefficient swap.
+Results, including all16 physical relabellings, are in
+c1_symmetry_check.json. No numerical fit, source truncation or omitted
+state normal is used. No repository file was changed.

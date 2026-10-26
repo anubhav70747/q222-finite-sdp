@@ -1,0 +1,45 @@
+EL/NU recovery and targeted helper audit, 26 October 2026
+
+Both normal-answer parts are now recovered. Part2 is03_EL_NU_INLINE_PART2.txt.
+The recovery itself is not an independent approval of the complete theorem.
+
+Independent exact replay: check_el_nu_helper_budgets.py verifies CE2 on the
+full four-state signed core, N10, both N13 identities, E13, the entire E15
+SOS remainder and all three E16 identities. All nine polynomial identities
+passed without a numerical sample or solver. The parameter substitutions
+only identify pure-source quantities: S=s0^2, x=k*S, ell=k*zeta for NU;
+x=a0^2, k=x/S, q=b^2 and ell=nu*b^2 for EL.
+
+The helper order is mathematically meaningful. In NU, the source sphere
+makes d_s or n_s a positive unit. Use that root to purchase the first helper
+with infinitesimal cost, then acquire the second with finite cost on the
+first. Choose the first pivot after the necessary second-stage finite cost
+is known. Delta=w^2-q is infinitesimal in the bounded tensor ring; all
+mixed costs have a delta or w factor. This covers a literal zero of the
+other sphere weight without dividing by it.
+
+In EL, Lambda=v*Gamma+nu*B. Thus E15 spends only infinitesimal coefficients
+on the main roots: k/j=(k/ell)*b and k/ell is bounded. The Rv readback and
+B budget in E16 have infinitesimal costs, since x^2/(q*S)=k*S*(k/q).
+R0 is then acquired from Rv and B. The bounded negative R0 diagonal in E14
+can be handled by this triangular order. No mixed testing-source inverse
+is introduced by these budgets.
+
+Wording correction needed in the recovered generic allocation lemma:
+"any bounded symmetric quadratic error on (z,H)" is too broad if it allows
+an arbitrary main-main error. Require that the main-main residue is already
+positive definite (equivalently, the added main-main error has zero residue
+relative to the chosen positive main block). Bounded main-helper and
+helper-helper entries are then handled by sufficiently large helper
+pivots. The printed EL/NU applications claim precisely this stronger
+main-block hypothesis; this wording issue alone is not a counterexample.
+
+Native dependency references must identify their components, because SE2
+and SE3 occur twice in c1_short.tex. Here they mean the source-sphere
+formulas in component p8c30238a5f7d, around10967--10990 in the current
+source, NOT the earlier formal/physical SE conductor around6068--6084.
+The original contact and first jets are SD9--SD11 around820--867.
+Source formulas S and their EL/NU bounds, the complete N7/N8 and E4/E10--12
+normal readback, EB/FU complementary joins and the exact map from those
+native contact coordinates remain to receive the full independent audit.
+No global or complete EL/NU theorem status is inferred from these checks.

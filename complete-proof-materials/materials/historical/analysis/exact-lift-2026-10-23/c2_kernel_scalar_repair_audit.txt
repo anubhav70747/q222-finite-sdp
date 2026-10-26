@@ -1,0 +1,209 @@
+C2 KERNEL SCALAR-SQUARE REPAIR: TWO EXACT FAILURES
+24 October 2026
+
+SCOPE. The two families below satisfy the positive GE1 parameter envelope,
+all printed positive gaps, n>=0, and the FULL stationary-contact equations.
+Section 5 verifies the three state-normal couplings as well as the scalar
+contact and angular derivatives. The exact contact lemma SG7 therefore
+certifies full-parent global validity, including endpoints. These are
+counterexamples to the two SPECIFIED matrix allocations even when restricted
+to globally valid native sources. They do not exclude a different fixed
+testing library or a full-normal completion.
+
+Inputs: c2_contact_kernel_reduction.txt/.py and GE1 in
+github-q222-finite-sdp/latex/certificates/c2_short.tex:4530.
+Exact accompanying files: c2_kernel_scalar_repair_check.py/.json and
+c2_kernel_family_contact_check.py/.json.
+The checker uses two symbolic univariate families, no numerical solver,
+candidate sweep, or degree search. Original/public files were unchanged.
+
+1. Exact determinant factorization
+
+Write B_s=H+L, k0=m B_s^2/z^2, and let
+ Pker=p2(x)w^2+p1(x)w+p0(x)
+     =k0*w*(x-z)^2+x[g2(x)w^2+g1(x)w+g0(x)],
+where
+ g0(x)=a+b*x, a=(C+D+1/2)L^2+A H^2, b=A H^2,
+ g2(x)=D+[2Dr+(n+1/2)r^2]x+f*x^2,
+ f=(D+n+1/2)r^2,
+ c=n r^2,
+ g1(x)=[p1(x)-k0(x-z)^2]/x.
+The last quotient is polynomial since p1(0)=k0*z^2.
+The matrix in question is M(x)=[[g0,g1/2],[g1/2,g2]].
+
+Put G=g2(z), Gp=g2'(z), delta=x-z. Exact contact and first stationarity
+give
+ g0(z)=y^2 G, g1(z)=-2yG,
+ g0'(z)+y g1'(z)+y^2 Gp=0.
+Thus, since g1 has quadratic coefficient c,
+ g0=y^2G+b*delta,
+ g2=G+Gp*delta+f*delta^2,
+ g1=-2yG-(b/y+yGp)*delta+c*delta^2.
+Direct multiplication proves
+ 4 det M(x)=(x-z)^2 [Q0+Q1(x-z)-c^2(x-z)^2],          (1)
+ Q0=4y^2Gf+4yGc-(b/y-yGp)^2,
+ Q1=4bf+2c(b/y+yGp).
+Here Q1>=0 but Q0 need not be nonnegative. The negative leading
+coefficient is -n^2 r^4 when n>0.
+
+2. The proposed original subtraction already fails next to contact
+
+A simple limiting explanation: hold admissible positive z,y,H,t fixed
+and let r tend to zero through positive values. GE1 has n=O(1/r),
+while A,D approach positive finite values. Consequently c,f,Gp tend
+to zero but b/y stays positive. Hence Q0 tends to -(b/y)^2<0.
+All printed gaps and n>0 hold near r=0 when the other positive
+parameters are chosen as in the following exact family.
+
+For a completely rational one-parameter specialization take
+ H=t=1/2, z=y=r=s, L=s/2, 0<s<=min(epsilon/2,1/1024).
+Then
+ a_s=1+s^2, j=G_source=1/2+s^2,
+ B_s=(1+s)/2,
+ U=B_s-zyr=(1+s)/2-s^3>0,
+ Delta=3s^4+19s^3/4+17s^2/4+13s/4+3/4,
+ M_source=(1+s)(1+3s)(1+2s^2)/4.
+All denominators are positive. In particular
+ n=[1-2s^2-5s^3-4s^4-4s^5+2s^6]/
+       [s(1+s)(1+3s)(4s^2+s+3)]>0,
+since its numerator is >=1-15s^2>0. The factors 1-s in m,D
+are positive, and the GE1 formulas make m,C,A,D,alpha positive.
+The source rates satisfy z,y<=epsilon H.
+
+Exact substitution in (1) gives
+ Q0= -(1+s^2)(2s^2+s+1)(2s^2+s+2) R(s) /
+       [16(1+s)^2(1+3s)^2(1+2s^2)(4s^2+s+3)^2],
+where
+ R(s)=2-45s-147s^2-231s^3-103s^4+226s^5+682s^6
+       +708s^7+484s^8+8s^9-56s^10-96s^11+32s^12.
+For 0<s<=1/1024,
+ R(s)>=2-(45+147+231+103+56+96)s=2-678s>1.
+Thus Q0<0. For every one of these sources, M(x) is indefinite
+for x!=z sufficiently close to z. There is no common positive
+x interval for this matrix on the whole positive GE1 envelope:
+given any interval [0,X], choose s<X/2 and then such an x near s.
+The rational choice s=2^-65 is already inside the stated envelope
+when epsilon=2^-64. The checker also provides a negative exact
+determinant at x=2s.
+
+This is a failure of the positive matrix after subtraction; Pker itself
+has the additional nonnegative k0*w*(x-z)^2. Its nonnegativity was
+not refuted by this calculation.
+
+3. One linear correction: positive contact curvature, still no fixed cap
+
+Now replace the subtracted square by
+ w*(x-z)^2*(k0-sigma_c*x).
+Then the residual g1 is replaced by g1+sigma_c*(x-z)^2, so only
+c is replaced by c+sigma_c in the preceding shifted-contact formula.
+For
+ B0=b/y, V0=yGp, T0=yG,
+ sigma_c=(B0+V0)^2/T0+c+yf,
+the corrected determinant quotient is
+ Qcorr(delta)=Q0corr+Q1corr*delta-(c+sigma_c)^2*delta^2,
+ Q0corr=3B0^2+10B0 V0+3V0^2+8T0(c+yf)>0,
+ Q1corr=4bf+2(c+sigma_c)(B0+V0)>=0.                   (2)
+Thus this correction really does repair the sign at the contact.
+It does not make a fixed whole x interval possible on the positive
+GE1 envelope.
+
+Take instead H=h tending to zero and
+ z=y=h^2, r=t=1/2, L=h^2/2, 0<h<=epsilon.
+These are again in the envelope. Explicit gaps are
+ a_s=1+h^2/2, j=(1+h^2)/2,
+ B_s=h+h^2/2, T=B_s+zr=h+h^2,
+ U=B_s-zyr=h+h^2/2-h^4/2>0,
+ G_source=B_s+z(H+r-1)=h+h^3>0.
+Furthermore Delta/h tends to1 and M_source/h^2 tends to1.
+The exact GE1 formulas therefore give, by division of leading powers,
+ n ->1/2, m/h^2 ->1/4, hC ->1, A/h ->1/2,
+ hD ->1, alpha/h^2 ->1/2, k0 ->1/4.
+Thus all event weights and gaps are positive for sufficiently small h.
+The full contact verification in Section 5 completes the separate proof
+of global full-parent validity.
+
+For the quantities in (2),
+ c ->1/8,
+ B0/h ->1/2, T0/h ->1, V0/h ->1, yf/h ->1/4,
+ sigma_c ->1/8,
+ Q0corr/h ->1, Q1corr/h ->3/4.
+These limits are also replayed exactly in the checker. Consequently,
+at every FIXED testing x=X>0,
+ Qcorr(X-z) -> -X^2/16,
+ det Mcorr(X) -> -X^4/64<0.                          (3)
+At the same time, for every fixed 0<X<2,
+ k0-sigma_c*X ->1/4-X/8>0.
+The subtractand is therefore nonnegative on [0,X] for sufficiently
+small h, so its own sign is not the cause of (3).
+Given any proposed positive interval, choose X inside it with X<1
+and then h sufficiently small. This disproves the proposed corrected
+matrix assertion on the entire positive GE1 envelope.
+
+4. Exact residual condition and limits of the conclusion
+
+For any source-only correction sigma_c>=0 and a proposed cap X>0,
+positivity of the subtracted coefficient requires sigma_c*X<=k0.
+Since g0,g2 remain positive and the determinant quotient is concave,
+the corrected matrix is PSD on [0,X] precisely when the two endpoint
+quotients are nonnegative:
+ Q0corr-z Q1corr-(c+sigma_c)^2 z^2 >=0,
+ Q0corr+(X-z)Q1corr-(c+sigma_c)^2(X-z)^2 >=0.
+(The quotient values at a contact endpoint follow by continuity.)
+Neither the proposed original subtraction nor the one corrected choice
+satisfies these inequalities uniformly on the positive GE1 envelope.
+
+Section 5 certifies global validity of both families, so restricting to
+globally valid native sources does not rescue either specified allocation.
+The n=0 face has not been classified by these n>0 families.
+
+Nor is an indefinite two-by-two matrix by itself a negative value of
+its scalar quadratic for w>=0: half-line scalar positivity allows more
+than an unrestricted Gram in (1,w). The full four-state normal
+couplings are used below to certify the SOURCES; no positive full-normal
+completion has been constructed or excluded. No finite testing-family
+obstruction or global quantum-set coverage follows.
+
+5. Full contact verification and actual physicality
+
+This step uses the proved contact lemma SG7 in
+latex/chapters/04_geometry.tex, Section 'Stationary zeros and physicality'.
+It states that d>0, nonnegative event weights, a full state kernel at a
+positive contact, and both angular first derivatives zero imply global
+validity. Its proof includes commuting and projective endpoints; the
+statement holds over every real closed field.
+
+The invertible full-state congruence from c2_full_contact_congruence.txt is
+ W=N1+N2+B_s*T0, X=u^2*v*(N3-r*T0),
+ Y=u*(N2+H*T0), Z=u*v*T0.
+Its determinant is +/-u^4*v^2. At the positive source contact x=z,w=y,
+the state with N1=N2=N3=0,T0=1 is the kernel state used above, and the
+state map is invertible. Put K=B_s+x(H+r-1), J=L-w(1+rx). The three
+normal/T0 symmetric entries of the full transformed F/4 are exactly
+ E1=m*w*K+C*(1+w)*x*L+(D+1/2)*x*J,
+ E2=m*w*(1+x)*K+A*(1+x)*(1+w)*x*H
+        +(alpha+1/2)*(1+x)*x*w*(H-1),
+ E3=-n*r*(1+x)*(1+w)*x^2*w-m*w*x*K
+        +(D+1/2)*x^2*w*J+(1/2)*(1+w)*x^2*w*(1-r).
+
+Substituting each of the two one-parameter GE1 families gives the exact
+rational identities
+ [E1,E2,E3,Pker,partial_x Pker,partial_w Pker] at (z,y)
+       =[0,0,0,0,0,0].
+The companion c2_kernel_family_contact_check.py reconstructs these six
+expressions independently for each family and reduces every numerator
+to the zero polynomial; the literal results are saved in its JSON.
+No inequality or numerical tolerance is involved.
+
+The first four identities say that the full transformed state matrix
+annihilates e4. Invertibility of the state map therefore gives the full
+physical state-kernel equation, not merely a zero scalar value.
+Differentiating the scalar restriction also differentiates its moving
+state, but those extra terms vanish by the state-kernel equation.
+Since u_c,v_c>0, the two last identities are precisely equivalent to
+the two angular first-derivative conditions in SG7, up to nonzero
+factors 2u_c,2v_c. Nonnegative event weights and d=1 were proved above.
+SG7 thus makes each sufficiently small positive member of both families
+a globally valid source at all states and all physical testing angles.
+This certifies the exact scope claimed at the start, without assuming
+that positive GE1 gaps alone would have been sufficient.
+

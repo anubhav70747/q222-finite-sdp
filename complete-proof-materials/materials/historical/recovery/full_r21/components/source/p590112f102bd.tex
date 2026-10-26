@@ -1,0 +1,192 @@
+\section{The entire remote complement of strong C2 II}
+\label{sec:r7-c2-remote}
+
+This section is a full-parent tensor-SOS admission.  It applies to the
+original C2 positive chart with $z,y$ infinitesimal and $B=H+L$ a
+positive unit, and to every testing pair for which at least one testing
+angle is not infinitesimal.  Literal testing axes and projective
+infinities are included in the assertions below.  The local case in
+which both testing angles are infinitesimal is not asserted here.
+
+\paragraph{Source constants, including all openings.}
+Put $t=L/y$, $j=1+zr-t$, and write $h=\operatorname{res}H$.
+Then $0<h\leq1$, $t+j=1+zr\sim1$, and the exact source formulas give
+\[
+ Cyt\sim Dyj\sim\frac{h}{2(1+h)},\qquad
+ \frac Ay\sim\frac1{2h(1+h)}.
+\]
+Consequently $C,D$ are unbounded, and the positive pure-source quantity
+\[
+ \gamma=\frac{yCD}{C+D}
+ =\frac{(Cyt)(Dyj)}{(Cyt)j+(Dyj)t}
+ \sim\frac{h}{2(1+h)}.                                      \tag{RR1}
+\]
+These statements are uniform when either $t$ or $j$ tends to zero.
+If $h<1$, then
+\[
+ \alpha\sim\frac{h^2}{2(1-h^2)};
+\]
+if $h=1$, then $\alpha$ is unbounded.  Thus, for every real
+$0<h_0<h$, the positive real number
+\[
+ \beta_0=\frac{h_0^2}{2(1-h_0^2)}<\alpha                     \tag{RR2}
+\]
+is an admissible cap.  No lower bound on $r,j,t,1-H$ is imposed,
+and $n=0$ is retained.
+
+\paragraph{Homogeneous testing coordinates.}
+For finite $u,v$ define
+\[
+ a=\frac{u}{\sqrt{1+u^2}},\quad b=\frac1{\sqrt{1+u^2}},\qquad
+ c=\frac{v}{\sqrt{1+v^2}},\quad d=\frac1{\sqrt{1+v^2}}.
+\]
+Use the same homogeneous formulas at infinity, with $(a,b)=(1,0)$
+or $(c,d)=(1,0)$.  These are the original parent's homogeneous
+endpoint values.  In particular no raised-degree graph is being
+specialized at an endpoint.  Put
+\[
+ E=aW-bY,\quad K=aX-bZ,\quad L=bX+aZ,
+ \quad J=dE+cK,\quad Q=cY-dZ.
+\]
+The original parent divided by $4(1+u^2)(1+v^2)$ is exactly
+\[
+ nX^2+m\{bcW-bdX+acY-adZ\}^2+CE^2+AY^2
+ +(D+\tfrac12)J^2+(\alpha+\tfrac12)Q^2
+ +\tfrac12(L^2-Z^2).                                    \tag{RR3}
+\]
+At projective endpoints this equation means the original homogeneous
+form, not a division by an infinite number.  All radicals and
+normalizations used here belong to a single testing field.
+
+\begin{proposition}[All tests with $v$ not infinitesimal]
+For every such $v$, including $v=\infty$, and every $u$, including
+$u=0,\infty$, the original full parent is tensor-SOS.
+\end{proposition}
+\begin{proof}
+Here $c$ is a unit.  Set $P=bL$, $R_1=\sqrt C E$, and
+$R_2=\sqrt D J$.  Orthogonality gives
+\[
+ L^2-Z^2=P^2+2aKP-b^2K^2,
+ \qquad
+ K=\frac{R_2}{c\sqrt D}-\frac{dR_1}{c\sqrt C}.            \tag{RR4}
+\]
+Both coefficients on the right are infinitesimal bounded tensors:
+$1/c$ is bounded in the testing field, while $1/\sqrt C$ and
+$1/\sqrt D$ are infinitesimal in the source field.  Therefore
+\[
+ R_1^2+R_2^2+\tfrac12P^2+aKP-\tfrac12b^2K^2
+\]
+has a bounded Gram with residue $\operatorname{diag}(1,1,1/2)$.
+It is tensor-SOS by the strict bounded-Gram lemma.  Every other term
+of (RR3), namely the retained $n,m,A,\alpha$ packets and
+$J^2/2+Q^2/2$, is already SOS.  This uses all four state coordinates.
+\end{proof}
+
+\paragraph{An exact harmonic identity for the remaining remote strip.}
+Now let $v$ be infinitesimal, possibly zero, and let $u$ not be
+infinitesimal, possibly infinity.  Thus $a$ is a unit.
+Write $D_v=1+v^2$, and put
+\[
+ s=C+D,\quad\theta=D/s,\quad
+ N=\sqrt{s}(E+\theta vK),\quad
+ V=\frac{vK}{\sqrt y},\quad q=\sqrt yY.
+\]
+No comparison between $v$ and $\sqrt y$ is made.  The roots may be
+unbounded; their Gram coefficients below are bounded.  The exact
+pure-source harmonic identity is
+\[
+ CD_vE^2+D(E+vK)^2=N^2+\gamma V^2+Cv^2E^2.               \tag{RR5}
+\]
+Also set $x=bX$, $z_0=Z$, and $\ell=vY$.  The single toric relation
+needed below is the polynomial identity
+\[
+ a x\ell-b^2z_0\ell=bVq.                                \tag{RR6}
+\]
+For a real cap $0<\beta_0<\alpha$, the original parent divided
+by $4(1+u^2)$ is the sum of the explicitly positive packets
+\[
+ \begin{split}
+ &nD_vX^2+m\{b(vW-X)+a(vY-Z)\}^2+N^2+Cv^2E^2\\
+ &\hspace{15mm}+\tfrac12(E+vK)^2+(\alpha-\beta_0)(\ell-z_0)^2
+ \end{split}                                             \tag{RR7}
+\]
+and the following exact bounded quadratic form:
+\[
+ G=\gamma V^2+\frac AyD_vq^2
+ +(\beta_0+\tfrac12)(\ell-z_0)^2
+ +\frac{D_v}{2}(x^2+2axz_0-b^2z_0^2).                   \tag{RR8}
+\]
+This decomposition is valid also at $u=\infty$, by the original
+homogeneous convention.  It has used no state graph or state inverse.
+
+\begin{proposition}[All tests with $u$ not infinitesimal and $v$ infinitesimal]
+The full original parent is tensor-SOS for all these tests, including
+$v=0$ and $u=\infty$.
+\end{proposition}
+\begin{proof}
+For a real constant $k$ define
+\[
+ M_k=(\beta_0+\tfrac12)(\ell-z_0)^2
+ +\tfrac12(x^2+2axz_0-b^2z_0^2)
+ +k(ax\ell-b^2z_0\ell).
+\]
+By (RR6), the exact form (RR8) equals
+\[
+ \boxed{G=D_vM_k+
+ \gamma V^2+\frac AyD_vq^2-kD_vbVq
+ -v^2(\beta_0+\tfrac12)(\ell-z_0)^2.}                   \tag{RR9}
+\]
+This is a full-parent identity; every state-normal term is present.
+
+First suppose $b$ has positive residue $b_0$.  Since $a$ is a unit,
+$0<b_0<1$.  Choose $0<h_0<h$ sufficiently close to $h$ that
+\[
+ b_0(1+h-h_0)<1,
+\]
+and take the admissible cap (RR2).  There exists a positive real
+$\kappa$ satisfying
+\[
+ \frac1{1+b_0h_0}<\kappa<
+ \min\left\{\frac1{1-b_0h_0},\frac1{b_0(1+h)}\right\}.
+                                                               \tag{RR10}
+\]
+Set $k=-\kappa$.  The Gram of $M_k$ on $(x,z_0,\ell)$ has
+first pivot $1/2$, second Schur pivot $\beta_0$, and determinant
+\[
+ \det M_k=\frac{2\beta_0 b^2k^2-(2\beta_0+1)(k+1)^2}{8}.
+                                                               \tag{RR11}
+\]
+Its residue is strictly positive by the first two inequalities in
+(RR10), because $h_0^2=2\beta_0/(2\beta_0+1)$.  The Gram on $(V,q)$
+in (RR9) has positive diagonal residues and determinant residue
+\[
+ \frac14\left\{\frac1{(1+h)^2}-k^2b_0^2\right\}>0.       \tag{RR12}
+\]
+Thus both blocks have strictly positive residue.  The final term in
+(RR9) is a bounded infinitesimal perturbation on $(x,z_0,\ell)$,
+so the combined bounded Gram remains strict and is tensor-SOS.
+
+If $b$ is infinitesimal, including $b=0$, choose any positive real
+cap $\beta_0<\alpha$ and take $k=-1$.  There is now an exact
+three-square identity
+\[
+ M_{-1}=\tfrac12\{x+a(z_0-\ell)\}^2
+       +\beta_0(z_0-\ell)^2+\tfrac12(b\ell)^2.           \tag{RR13}
+\]
+On these three roots and $(V,q)$, (RR9) has positive diagonal
+residue; the only off-block term is $D_vbVq$, whose coefficient
+is infinitesimal.  The negative perturbation changes only the
+$(z_0-\ell)^2$ coefficient by an infinitesimal.  Its Gram is again
+strict.  Formula (RR7) restores all retained positive packets.
+The argument does not divide by $u,v,b$, or any state coordinate,
+so the asserted literal boundaries are included.
+\end{proof}
+
+\paragraph{Scope and join.}
+The two propositions cover precisely the complement of the region
+where both testing angles are infinitesimal, for every strong-II
+source with $B$ a unit.  They preserve independent source and testing
+fields, arbitrary source openings, testing signs, and literal $n=0$.
+Combined with a separately verified full-parent admission of that
+local region, they close the strong II/HH orbit by the exact C2
+reflection.  They do not close the $B$-infinitesimal weak face.

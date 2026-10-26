@@ -1,0 +1,435 @@
+\section{Fresh reconstruction of the physical model and conditional assembly}
+\label{sec:fresh-r21-conditional-assembly}
+
+\paragraph{Status of this source.}
+This is a newly derived proof, not a transcription of the missing final
+R21 manuscript. The physical-model theorem, the homogeneous normalization
+identity, the separated conic/convex closure lemma, and the matrix-pairing
+lemma below are proved here. The final existence implication is expressly
+conditional on the local-certificate hypothesis (LC). Neither a historical
+admission nor a remembered checksum is used to discharge (LC).
+
+\subsection{An exact finite-dimensional physical model}
+
+Let $Q\subset\mathbb R^8$ be the set of correlations obtained from arbitrary
+finite-dimensional complex bipartite tensor-product states and two binary
+measurements per party. The coordinates are
+\[
+ (a_0,a_1,b_0,b_1,E_{00},E_{01},E_{10},E_{11}).
+ \tag{RFA1}
+\]
+A binary measurement is represented by an effect $0\preceq E\preceq I$,
+with observable $2E-I$. Put
+$Z=\operatorname{diag}(1,-1)$ and
+$X=\left(\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\right)$.
+For $(c_A,s_A),(c_B,s_B)\in S^1$ and $\psi\in S^3\subset\mathbb R^4$,
+let $\Phi$ be the eight expectations of
+\[
+ A_0=B_0=Z,\qquad A_1=c_AZ+s_AX,\qquad B_1=c_BZ+s_BX
+ \tag{RFA2}
+\]
+in the state $\psi$. Every coordinate of $\Phi$ is polynomial in these
+eight real parameters.
+
+\begin{theorem}[Fresh physical reduction]
+With $\mathcal Z=S^1\times S^1\times S^3$,
+\[
+ Q=\operatorname{conv}\Phi(\mathcal Z)
+   =\left\{\sum_{i=1}^{9}w_i\Phi(z_i):
+       z_i\in\mathcal Z,\ w_i\geq0,\ \sum_iw_i=1\right\}.
+ \tag{RFA3}
+\]
+In particular $Q$ is compact, convex and semialgebraic over the real field.
+\end{theorem}
+
+\begin{proof}
+First, both effects of a party can be dilated with the same embedding.
+For an effect $E$ on $\mathcal H$ define, on $\mathcal H\oplus\mathcal H$,
+\[
+ \widehat P_E=
+ \begin{pmatrix}E&\sqrt{E(I-E)}\\
+                 \sqrt{E(I-E)}&I-E\end{pmatrix},
+ \qquad Vh=(h,0).
+ \tag{RFA4}
+\]
+The square root commutes with $E$ by its spectral construction. Direct
+block multiplication gives $\widehat P_E^2=\widehat P_E$ and
+$V^*\widehat P_EV=E$. Thus for both measurement settings the same $V$
+compresses the two projections to the original effects. Applying this
+construction to each party and replacing $\rho$ by
+$(V_A\otimes V_B)\rho(V_A\otimes V_B)^*$ preserves every marginal and
+joint expectation. We may therefore assume the two observables of each
+party are Hermitian involutions.
+
+Here is the needed two-dimensional block decomposition. If $U,V$ are
+Hermitian involutions, $C=UV$ is unitary and $UCU=C^*$. For an eigenvector
+$e$ of $C$ with nonreal eigenvalue $\lambda$, $Ue$ has eigenvalue
+$\overline\lambda$. The vectors are orthogonal and their span is invariant
+under $U$ and $V=UC$. Its orthogonal complement is invariant too. Repeating
+on orthogonal eigenvectors gives two-dimensional blocks. On the real
+eigenvalue spaces $\lambda=\pm1$ one has $V=\pm U$; diagonalizing $U$ gives
+one-dimensional blocks. This proves the decomposition in finite dimension
+without an assumption on multiplicities.
+
+On a two-dimensional block $U$ has eigenvalues $1,-1$. In its eigenbasis,
+the other nontrivial involution has the form
+$\left(\begin{smallmatrix}c&\overline z\\z&-c\end{smallmatrix}\right)$,
+where $c$ is real and $c^2+|z|^2=1$. A diagonal change of phase leaves
+$U=Z$ and makes $z$ real. Thus the pair has the form $Z,cZ+sX$.
+A one-dimensional block with outcomes $a_0,a_1\in\{\pm1\}$ embeds into
+this form: use the $a_0$ eigenvector of $Z$ and take
+$c=a_0a_1,s=0$. The unused basis vector does not affect the experiment.
+
+Apply both local decompositions. All measurement operators are block
+diagonal, so their expectations depend only on the diagonal blocks of
+the state. The traces of these positive blocks are nonnegative weights
+summing to one. Every nonzero block, after normalization and the harmless
+one-dimensional embedding, is a two-qubit state with real measurement
+matrices. Decompose that state into finitely many complex pure states.
+For a real symmetric matrix $M$ and a vector $r+is$,
+\[
+ (r+is)^*M(r+is)=r^TMr+s^TMs,\qquad
+ \|r+is\|^2=\|r\|^2+\|s\|^2.
+ \tag{RFA5}
+\]
+The cross terms cancel by symmetry. The nonzero real and imaginary parts,
+normalized separately, are real pure states with their squared norms as
+weights. This proves $Q\subseteq\operatorname{conv}\Phi(\mathcal Z)$.
+
+Conversely each atom is a physical two-qubit experiment. A finite convex
+combination is realized by a finite direct sum on each party and a state
+with the corresponding classical diagonal weights in matching summands.
+Therefore the reverse inclusion holds.
+
+Any convex combination of more than nine points in $\mathbb R^8$ can be
+shortened. The augmented vectors $(1,q_i)\in\mathbb R^9$ are linearly
+dependent, so there are $\alpha_i$, not all zero, with
+$\sum_i\alpha_i=0$ and $\sum_i\alpha_iq_i=0$. Change their common sign if
+needed so that some $\alpha_i>0$, and replace the positive weights $w_i$
+by $w_i-\tau\alpha_i$, where
+$\tau=\min_{\alpha_i>0}w_i/\alpha_i$. They remain nonnegative, keep the
+same sum and point, and at least one vanishes. Iterate. Zero weights
+allow a fixed list of nine atoms. The right side of (RFA3) is the
+continuous image of the compact product of a simplex and nine copies of
+$\mathcal Z$, hence is compact. It is semialgebraic by the projection
+theorem for real closed fields applied to its displayed finite polynomial
+formula. Convexity has already been proved.
+\end{proof}
+
+For any real closed extension $K\supset\mathbb R$, define $Q_K$ by
+(RFA3) with all variables in $K$. Define
+$P=\{f\in\mathbb R[q]_{\leq1}:f\geq0\text{ on }Q\}$.
+The defining formula
+$\forall q\,(q\in Q\Rightarrow f(q)\geq0)$, together with quantifier
+elimination and elementary transfer, gives exactly
+\[
+ P_K=\{f\in K[q]_{\leq1}:f\geq0\text{ on }Q_K\}.
+ \tag{RFA6}
+\]
+Compactness was used only over $\mathbb R$. No compactness assertion for
+the order topology of a non-Archimedean field is needed.
+
+\subsection{Separated fields and the full homogeneous parent}
+
+Fix arbitrary real closed extensions $K_c,K_t\supset\mathbb R$ and put
+$T=K_c\otimes_{\mathbb R}K_t$. The factors are labelled; they may be two
+copies of the same extension. There is no assumption of algebraic
+disjointness and no chosen ordering on $T$. For
+$f=f_0+\sum_{\nu=1}^8f_\nu q_\nu$ define
+\[
+ \mathscr S(f,q)=f_0\otimes1+\sum_{\nu=1}^8f_\nu\otimes q_\nu.
+ \tag{RFA7}
+\]
+
+The event and CHSH convention in the recovered physical core is
+\[
+ S=E_{00}-E_{01}+E_{10}+E_{11},\quad H=1-S/2,\quad
+ f=dH+4\sum_{\xi}\xi\,p_\xi,
+ \quad \xi\in\{\lambda,n,m,C,A,D,\alpha,\beta\}.
+ \tag{RFA8}
+\]
+Its original full parent is recovered as actual source text, not merely
+a remembered identity. We give its homogeneous form explicitly.
+
+Choose projective angle pairs $(a_0,a_1)$ and $(b_0,b_1)$ in $K_t^2$,
+each nonzero, and set
+$\Delta_A=a_0^2+a_1^2>0$, $\Delta_B=b_0^2+b_1^2>0$.
+The corresponding circle coordinates are
+\[
+ c_A=(a_0^2-a_1^2)/\Delta_A,\quad s_A=2a_0a_1/\Delta_A,
+ \tag{RFA9}
+\]
+and similarly for Bob. These cover every circle point over $K_t$:
+if $c\ne-1$ use $(1+c,s)$, and if $c=-1$ use $(0,1)$.
+No affine half-angle chart is therefore needed at infinity.
+For $\Psi=(W,X,Y,Z)$ put
+\[
+ \begin{split}
+ L_m&=a_0b_1W-a_0b_0X+a_1b_1Y-a_1b_0Z,\\
+ L_D&=a_1b_0W+a_1b_1X-a_0b_0Y-a_0b_1Z.
+ \end{split}
+\]
+Products of a coefficient-field element with a testing-field expression
+in the next identity mean their separated tensor product. The complete
+homogeneous parent is
+\[
+ \begin{split}
+ \mathcal F={}&4\lambda\Delta_A(b_0W+b_1X)^2
+       +4n\Delta_A\Delta_BX^2+4mL_m^2\\
+ &+4C\Delta_B(a_1W-a_0Y)^2+4A\Delta_A\Delta_BY^2\\
+ &+(4D+2d)L_D^2
+       +(4\alpha+2d)\Delta_A(b_1Y-b_0Z)^2\\
+ &+(4\beta+2d)\Delta_B(a_0X+a_1Z)^2
+       -2d\Delta_A\Delta_BZ^2.
+ \end{split}                                                    \tag{RFA10}
+\]
+For a nonzero state let $N=\|\Psi\|^2>0$ and let $z$ be the atom
+with the circle coordinates (RFA9) and unit state $\Psi/\sqrt N$.
+Then
+\[
+ \mathcal F=(1\otimes\Delta_A\Delta_BN)\,
+                 \mathscr S(f,\Phi(z)).
+ \tag{RFA11}
+\]
+
+To check the normalization, first take $a_0=b_0=1$, $u=a_1$ and
+$v=b_1$. The plus/minus measurement eigenvectors are
+$(1,u)/\sqrt{1+u^2}$ and $(u,-1)/\sqrt{1+u^2}$.
+Their product amplitudes give, in the order of (RFA8),
+\[
+ \frac{(W+vX)^2}{1+v^2},\quad X^2,\quad
+ \frac{(vW-X+uvY-uZ)^2}{(1+u^2)(1+v^2)},\quad
+ \frac{(uW-Y)^2}{1+u^2},\quad Y^2,
+\]
+\[
+ \frac{(uW+uvX-Y-vZ)^2}{(1+u^2)(1+v^2)},\quad
+ \frac{(vY-Z)^2}{1+v^2},\quad
+ \frac{(X+uZ)^2}{1+u^2}.
+ \tag{RFA12}
+\]
+For a normalized state these are exactly the eight selected event
+probabilities. For a general state they are multiplied by $N$.
+Substitution of the matrices (RFA2) into $H$ gives its numerator
+\[
+ 2\{(uW+uvX-Y-vZ)^2+(1+u^2)(vY-Z)^2
+       +(1+v^2)(X+uZ)^2-(1+u^2)(1+v^2)Z^2\}.
+\]
+This proves (RFA11) in the affine chart. Homogenization gives (RFA10);
+it is a polynomial identity and therefore also gives the zero and
+infinite projective coordinates without dividing by $a_0$ or $b_0$.
+The zero state has zero parent separately.
+
+If $\mathcal F$ or $(s\otimes1)\mathcal F$ has an exact finite SOS
+certificate, with $s\in K_c^{>0}$, the original slack is restored by
+multiplying each root by
+\[
+ s^{-1/2}\otimes(\Delta_A\Delta_BN)^{-1/2}.
+ \tag{RFA13}
+\]
+All these inverses are taken within one field before forming a tensor.
+The identity does not permit cancellation of an arbitrary mixed tensor.
+Additional positive source gauges are handled in the same way. A state
+chart or a change of frame must first prove its own denominator nonzero.
+
+\paragraph{Literal commuting tests.}
+These require no limiting local certificate. If one party's two
+involutions commute, on a simultaneous eigenspace the CHSH operator
+$S=A_0(B_0-B_1)+A_1(B_0+B_1)$ is either $\pm2B_0$ or $\pm2B_1$.
+Thus $H=I-S/2$ is positive semidefinite in the testing field. For
+$d\geq0$, its contribution is a pure-source square times a
+pure-testing square. Every nonnegative event packet is also separated
+SOS. This covers the actual commuting angle axes and infinities for
+every nonnegative canonical coefficient tuple. It does not cover merely
+infinitesimal nonzero angles, which remain in (LC).
+
+\subsection{The closed faces and the surviving source reduction}
+
+Two recovered sources supply actual mathematical inputs:
+\emph{physical\_core.tex} gives the canonical event basis, the
+determinant/coercivity argument, the finite-contact extreme-source
+reduction and the nine-term source decomposition;
+\emph{closed\_faces\_short.tex} gives the two explicit matrix lifts
+for the omitted exclusive pairs. Their exact recovered paths and hashes
+are recorded in the reconstruction map. Their roles are not supplied
+by the historical R21 review narrative.
+
+We state the precise source-generation conclusion used below. Every
+transferred valid affine functional is either an event sum or a finite
+nonnegative conic combination of the following types, with finite real
+Bell relabelings restored:
+\begin{itemize}
+\item event sources and noncoercive closed-face sources;
+\item physical C1 sources with $\lambda=n=0$, $d,m,C,A,\alpha>0$,
+      $D,\beta\geq0$, $D+\beta>0$, and an actual finite positive
+      noncommuting stationary contact;
+\item physical C2 sources with $\lambda=\beta=0$,
+      $d,m,C,A,D,\alpha>0$, $n\geq0$, and the same actual-contact
+      condition.
+\end{itemize}
+The source sum is formed before choosing $d=1$ or $C=2$.
+This is a source-field assertion; source contacts are not testing points.
+
+For completeness, the logical content of the recovered reduction is as
+follows. A functional nonnegative on the nonsignaling polytope is a
+nonnegative combination of its sixteen event inequalities. Otherwise it
+is negative at a PR vertex, because deterministic vertices are physical.
+The explicit nonsignaling vertex classification and the nine evaluations
+in the recovered event table give (RFA8) with nonnegative event
+coefficients and $d>0$. Normalize their total sum to one. The physical
+coefficient section is compact and convex in a space of affine dimension
+at most eight and hence is a convex combination of at most nine extreme
+points. The recovered determinant has nonnegative outer Laurent
+coefficients. Its coercive cases have a finite positive minimum; the
+printed opposite-perturbation argument makes an extreme minimum zero.
+The four kernel and two angular equations leave a nonradial perturbation
+if more than six event coefficients are active. The complementary state
+pivots, exact adjugate identity and convex Laurent profile preserve
+physicality under that perturbation. Coercivity requires at least five
+active events by the explicit exclusive-pair classification. Compatible
+omissions have precisely the two C1/C2 orientations above; every
+noncoercive support lies on one of the two closed faces. The finite
+source decomposition and these contact assertions have fixed first-order
+formulas, so their real proofs transfer. This is the actual content
+required of the recovered source proof; merely naming a C1 or C2 row
+would not suffice.
+
+Here is a direct separated-tensor consequence of the recovered
+closed-face lifts. Write a given lift, including all free nonnegative
+source-coordinate diagonal blocks, as the homogeneous matrix
+\[
+ M(c,y)=\sum_\nu c_\nu A_\nu+\sum_jy_jB_j\succeq0.
+\]
+The supplied matrices have an explicit strict feasible point in the
+free source coordinates and auxiliaries. If a linear functional
+$\ell(c)$ is nonnegative on the projected cone, there exists $Y\succeq0$
+with
+\[
+ \operatorname{tr}(A_\nu Y)=\ell_\nu,\qquad
+ \operatorname{tr}(B_jY)=0.                          \tag{RFA14}
+\]
+One can prove this without leaving an attainment issue implicit.
+For the linear map $M$, its adjoint image $M^*(\mathrm{PSD})$ is
+closed: at a fixed strict point $z_*$, $M(z_*)\succeq\epsilon I$,
+so convergence of $M^*(Y_i)$ for $Y_i\succeq0$ bounds
+$\epsilon\operatorname{tr}(Y_i)$ and thus bounds $Y_i$.
+A convergent subsequence supplies the limiting witness. Separation
+of this closed cone proves that its dual is exactly
+$\{z:M(z)\succeq0\}$, yielding (RFA14).
+
+Apply this over the real field with $\ell$ equal to a testing
+evaluation. The fixed existential statement for $Y$ transfers to $K_t$;
+source feasibility transfers independently to $K_c$. For a source
+witness $X=M(c,y)\succeq0$, factor $X=BB^T$ in $K_c$ and
+$Y=CC^T$ in $K_t$. Positive semidefinite matrices over a real closed
+field have such finite factorizations, including singular matrices,
+by symmetric diagonalization or the pivoted quadratic-form algorithm.
+Then
+\[
+ \sum_{i,k}X_{ik}\otimes Y_{ik}
+  =\sum_{a,b}\left(\sum_iB_{ia}\otimes C_{ib}\right)^2.
+ \tag{RFA15}
+\]
+The adjoint equations (RFA14) cancel the auxiliary variables and identify
+the left side with the original slack. This proves the closed-face
+tensor conclusion from the actual explicit face lifts.
+
+Event slacks also need no local certificate: for a real unit atom,
+the joint event projector $R$ satisfies
+$p=\psi^TR\psi=\|R\psi\|^2$ over $K_t$. Its entries are testing-field
+elements, so this is a finite pure-testing SOS. A nonnegative source
+weight contributes its own square root. Constants and the zero
+functional are included because outcomes of one input pair sum to one.
+
+\subsection{The missing local premise, stated without a status substitution}
+
+\paragraph{Local-certificate hypothesis (LC).}
+For every pair of real closed extensions $K_c,K_t$, every physical
+canonical C1 or C2 source in the source-generation statement above,
+and every independent projective angle pair and testing state, the
+complete original parent (RFA10) has a finite SOS certificate in $T$,
+possibly after multiplication by a proved strictly positive pure-source
+factor. Every source coefficient face and gap, all testing signs,
+all state coordinates, and all projective endpoints must be included.
+When local charts are used, their union and restoration must be proved.
+
+The reconstruction does not yet establish (LC). In particular the
+missing positive-scale completion, original weak-scale entry/scoping
+proofs, uniform-C1 local replacements and the C14 and weak-C2 local
+closures cannot be replaced by their historical admission summaries.
+The accompanying map separates exact surviving inputs, alternate
+candidate proofs, fragmentary statements and absent certificate bodies.
+
+One sufficient way to prove (LC) is to restore a finite implication
+tree, valid for every actual source and test, whose leaves are
+proved full-parent certificates or proved impossible domains.
+The branch predicates must carry the actual source equations and
+literal boundaries. This description is a proof obligation, not an
+assertion that the missing tree has been recovered.
+
+\subsection{Conditional conic/convex closure and finite-lift implication}
+
+\begin{lemma}[Fresh separated assembly]
+Let $f=\sum_{j=1}^r a_jg_j$ in the source field, with $a_j\geq0$,
+and let $q=\sum_{i=1}^s w_iq_i$ in the testing field, with
+$w_i\geq0$ and $\sum_iw_i=1$. If every elementary slack has a
+finite certificate
+$\mathscr S(g_j,q_i)=\sum_kh_{ijk}^2$ in $T$, then
+\[
+ \mathscr S(f,q)=
+ \sum_{i,j,k}\bigl((\sqrt{a_j}\otimes\sqrt{w_i})h_{ijk}\bigr)^2.
+ \tag{RFA16}
+\]
+\end{lemma}
+\begin{proof}
+Affineness in the testing point, including its constant term, gives
+$\mathscr S(f,q)=\sum_i(1\otimes w_i)\mathscr S(f,q_i)$.
+Linearity in the source gives
+$\mathscr S(f,q_i)=\sum_j(a_j\otimes1)\mathscr S(g_j,q_i)$.
+Substitute the finite certificates. The required nonnegative square
+roots exist in the separate real closed fields. Zero weights give
+zero roots; no weight is inverted. This proves the displayed identity
+in the tensor ring, without identifying its two factors.
+\end{proof}
+
+\begin{theorem}[Fresh conditional universal theorem]
+Assume (LC), with the actual source reduction and explicit closed-face
+lifts specified above. Then for all real closed $K_c,K_t\supset\mathbb R$,
+all $f\in P_{K_c}$ and all $q\in Q_{K_t}$,
+$\mathscr S(f,q)$ is a finite sum of squares in
+$K_c\otimes_{\mathbb R}K_t$. Consequently $Q$ has a finite
+semidefinite lift.
+\end{theorem}
+\begin{proof}
+Use the finite source decomposition. Event and closed-face slacks
+were proved above. For every other source atom apply (LC), then
+(RFA11)--(RFA13) to restore its exact affine slack.
+Use the nine-atom testing decomposition (RFA3) and the assembly
+lemma. Real/complex states, mixed states, the zero functional and
+zero weights were already included.
+
+For the final implication take two labelled copies of an arbitrary
+single real closed extension $K$. The set and valid-affine cone are
+exactly their transfers by (RFA3) and (RFA6). The resulting SOS is
+in $K\otimes_{\mathbb R}K$. The factor flip converts the
+coefficient-first convention to the point-first convention of
+Claus Scheiderer's Corollary 3.19, which applies to a closed convex
+semialgebraic set in arbitrary finite ambient dimension. It proves
+finite semidefinite-lift existence.
+\end{proof}
+
+\paragraph{Exact boundary of the new conclusion.}
+The last theorem is conditional until actual proofs establish (LC).
+No unconditional finite-lift conclusion is claimed by this reconstruction.
+Even after (LC) is proved, this criterion gives existence, not evaluated
+matrices, a numerical size bound, or a common separation-rank bound.
+The explicit feature, affine-pencil and coefficient-validation items
+E1--E3 remain subsequent constructive tasks.
+
+\paragraph{Primary external criterion.}
+C. Scheiderer, \emph{Second-order cone representation for convex sets
+in the plane}, arXiv:2004.04196v2, Corollary 3.19 and its proof,
+printed page 15, \url{https://arxiv.org/pdf/2004.04196}.
+The primary text has been reopened during this reconstruction.
+Theorem 3.10 in the same source distinguishes a common tensor-rank
+bound from unrestricted finite SOS. Neither local square counts nor
+the number of routing branches supplies that stronger bound.

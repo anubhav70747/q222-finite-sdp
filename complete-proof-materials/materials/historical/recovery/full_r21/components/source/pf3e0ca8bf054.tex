@@ -1,0 +1,93 @@
+\section{Strong IH: the complete local corner}
+\label{sec:strong-ih-local}
+Assume the strong IH source entry of \S\ref{sec:strong-angle-entry}:
+$z$ is infinitesimal, $y$ unbounded, $B=H+L$ a bounded positive unit,
+$0<H<1$, $L>0$, and $C,\alpha$ strong. The source parameter
+$\rho=B/y$ is infinitesimal, $s=r/\rho$ bounded, and $c_s=(1+L)/B$
+is a positive unit. Testing $u,w=1/v$ are infinitesimal or zero.
+We use the exact graph, five roots and both full normal identities
+(IC3)--(IC12) of the preserved corner calculation; none of those
+algebraic identities assumes $C$ weak.
+
+The source quantities obey (GE3), and direct rational simplification
+gives additionally
+\[
+ \frac{k}{B\rho}\longrightarrow
+ \frac{2(B^2s+BHs+BH-Bs-H^2+H)}{B^2}.
+\tag{SL1}
+\]
+No opening denominator occurs in this normalized expression.
+
+Set $T_\rho=\rho T$ and
+$\eta=\sqrt{H(1-H)/B}$, so $Y=HwZ+\eta E_Y$.
+The full Gram's entire explicit dependence on $C$ is exactly
+\[
+ 4C(U_1^2+U_2^2),\quad
+ U_1=uW-Y-LwZ=\sqrt B R_0-\eta E_Y,
+\]
+\[
+ U_2=w(uW-Y)-(L/y)Z
+       =R_2-\sqrt{H/B}E-w\eta E_Y.
+\tag{SL2}
+\]
+The scalar and normal identities verifying this assertion use
+\[
+ \sqrt H R_2-\sqrt{BH}\,wR_0-\sqrt B E=0.
+\tag{SL3}
+\]
+Choose a positive real cap $c_*\le C$ and retain
+$4(C-c_*)(U_1^2+U_2^2)$. In the remaining exact Gram replace explicit
+$C$ by $c_*$, leaving $k$ and all other original source quantities
+unchanged. The distinction matters: this is an exact square
+subtraction from the complete Gram, not a perturbation of the source.
+Add $\lambda$ times the exact zero (WIE2), where $\lambda>0$ is a
+real number to be chosen. All resulting coefficients are bounded,
+using (GE3), (SL1), and the opening-normalized roots.
+
+We display the entire residue. The roots $R_1$ and $E_X$ have isolated
+positive pivots $2c_s$ and $1$. The $(R_0,E_Y)$ block is
+\[
+ \begin{pmatrix}
+ 4Bc_*&-4c_*\sqrt{H(1-H)}\\
+ -4c_*\sqrt{H(1-H)}&
+ (4c_*+4A+4\alpha+2)H(1-H)/B
+ \end{pmatrix}.
+\tag{SL4}
+\]
+Here and below all expressions in a residue matrix mean their bounded
+residues; products such as $AH$ are evaluated by (GE3), even when
+$A$ itself is unbounded. Its determinant is exactly $8c_*(1+L)>0$.
+Put $a_*=2(2c_*+1)$. The $(R_2,E)$ block is
+\[
+ \begin{pmatrix}
+ a_*&-a_*\sqrt{H/B}\\
+ -a_*\sqrt{H/B}&H(4A+a_*)/B
+ \end{pmatrix},
+\tag{SL5}
+\]
+with determinant $2a_*c_s>0$. The only remaining coupling is between
+$R_2$ and $T_\rho$, whose Gram entry is
+$c_s(H/B-s)$. The $T_\rho$ diagonal is $\lambda+2c_s s$.
+Choose $\lambda$ larger than the finite Schur-complement threshold
+of the positive block (SL5). This produces a strictly positive
+residue matrix. Since this choice is made after taking a real
+residue, it is a real scalar and introduces no mixed inverse.
+
+We spell out why no normal term is hidden in this block description.
+In (IC11), $f_X/\rho$ is bounded by (GE3) and every scalar-root
+multiplier contains $u$ or $w$. In (IC12), the only nonzero limiting
+term is the explicit $C$ contribution to $R_0E_Y$, already included
+in (SL2)--(SL4). After the cap, all other normal multipliers contain
+$z$, $u$, or $w$. The unbounded factors $A$ and $\alpha$ always occur
+as $AH$ and $\alpha(1-H)$ after normalization, hence remain bounded
+also at $H_0=0,1$. The normal $X$ coefficient divided by $N=4n+2$
+has residue one, and its coupling to $E_Y$ vanishes. The remaining
+$Y$ coefficient is exactly the lower-right entry of (SL4).
+These facts follow directly from the displayed exact normal
+factorizations, not from scalar-graph positivity.
+
+The bounded positive-residue Gram lemma now gives tensor SOS for the
+complete original parent, after restoring the retained positive
+$C-c_*$ squares. This holds for all states and all independent local
+tests, for both opening endpoints, for arbitrary $n\ge0$, and at
+literal $u=0$ or $w=0$.

@@ -1,0 +1,307 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=26mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,longtable,hyperref}
+\newcommand{\Q}{{\mathcal Q_{222}}}
+\newcommand{\R}{\mathbb R}
+\newcommand{\T}{\mathcal T}
+\newcommand{\Id}{\mathbb I}
+\newcommand{\tr}{\operatorname{tr}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\title{Exact extraction for the tilted--CHSH projection\\A regenerated, scoped component of the Q222 project}
+\author{Analytical derivation and exact coefficient record}
+\date{22 October 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We give an exact description of the two-dimensional projection of the finite-dimensional bipartite quantum set onto one marginal and one CHSH expression. We evaluate fixed testing functions, separate the source and testing factors in a tensor sum of squares, and export every matrix coefficient. The resulting lift has order five with one auxiliary variable; elimination gives a direct order-four block diagonal pencil. Both representations describe this projection exactly. A rational behavior satisfying all probability constraints and every relabeled tilted--CHSH inequality is nevertheless nonquantum, so these coefficients do not constitute an exact representation of the full eight-dimensional quantum set. Every computational result stated here was regenerated using exact rational arithmetic. No previous verification status is inherited.
+\end{abstract}
+
+\section{Coordinates, scope, and the extracted set}
+Write a behavior in the order
+\[
+ q=(a_0,a_1,b_0,b_1,E_{00},E_{01},E_{10},E_{11})\in\R^8.
+\]
+Here $a_x=\langle A_x\rangle$, $b_y=\langle B_y\rangle$, and $E_{xy}=\langle A_xB_y\rangle$. The parties' observables commute, and after a finite-dimensional projective dilation they satisfy $A_x^2=B_y^2=\Id$. Define
+\[
+ t=a_0,\qquad s=E_{00}+E_{01}+E_{10}-E_{11}.
+\]
+The full quantum set $\Q$ is the collection of such behaviors obtained from finite-dimensional tensor-product quantum models, including mixed states and binary positive operator valued measurements.
+
+\begin{theorem}[Exact tilted projection]\label{thm:projection}
+The image of $\Q$ under $q\mapsto(t,s)$ is
+\[
+ \T=\{(t,s)\in\R^2: -1\le t\le1,\quad t^2+s^2/4\le2\}.
+\]
+Its support function in the direction $(\alpha,\epsilon)$, where $\epsilon\in\{-1,1\}$, is
+\begin{equation}\label{eq:support}
+ h(\alpha)=\max_{(t,s)\in\T}(\alpha t+\epsilon s)
+ =\begin{cases}
+ \sqrt{8+2\alpha^2},&|\alpha|\le2,\\
+ 2+|\alpha|,&|\alpha|\ge2.
+ \end{cases}
+\end{equation}
+The two formulas agree at $\alpha=\pm2$.
+\end{theorem}
+
+The theorem is proved directly below. Its purpose is to identify precisely the domain for which the following finite extraction is complete. A lift written in the original eight coordinates describes the inverse image of $\T$ under this projection, not $\Q$ itself.
+
+\section{The quantum upper bound and attainment}
+\subsection{Reflection identity}
+Let
+\begin{align*}
+ S&=A_0(B_0+B_1)+A_1(B_0-B_1),\\
+ S'&=A_0(B_0-B_1)+A_1(B_0+B_1),\\
+ T_\alpha&=\alpha A_0+S,\qquad R_\alpha=\alpha A_1-S'.
+\end{align*}
+Using only the reflection relations and cross-party commutation gives
+\begin{equation}\label{eq:reflection}
+ T_\alpha^2+R_\alpha^2=(8+2\alpha^2)\Id.
+\end{equation}
+For completeness, the terms independent of $\alpha$ satisfy $S^2+(S')^2=8\Id$. The terms linear in $\alpha$ cancel because
+\begin{align*}
+ \{A_0,S\}&=2(B_0+B_1)+\{A_0,A_1\}(B_0-B_1),\\
+ \{A_1,S'\}&=2(B_0+B_1)+\{A_0,A_1\}(B_0-B_1).
+\end{align*}
+The quadratic terms total $2\alpha^2\Id$.
+With $\beta=\sqrt{8+2\alpha^2}>0$, equation~\eqref{eq:reflection} implies
+\begin{equation}\label{eq:operator-sos}
+ \beta\Id-T_\alpha
+ =\frac{(\beta\Id-T_\alpha)^2+R_\alpha^2}{2\beta}\succeq0.
+\end{equation}
+This is the first tilted--CHSH sum of squares of Bamps and Pironio, equation (27) in the arXiv version~\cite{BP}. The regenerated checker expands both sides in reduced noncommutative words and checks equality exactly.
+
+Every binary observable before dilation is a self-adjoint contraction $C$. The block operator
+\[
+ \widehat C=\begin{pmatrix}C&\sqrt{\Id-C^2}\\
+ \sqrt{\Id-C^2}&-C\end{pmatrix}
+\]
+is a reflection on a doubled local space and compresses to $C$ under the same fixed embedding. Applying this separately to each observable on each party preserves all of the eight coordinates. Thus the bound covers arbitrary binary measurements. A mixed state may be used directly by taking traces of the positive operator in~\eqref{eq:operator-sos}.
+
+We obtain $\alpha t+s\le\sqrt{8+2\alpha^2}$ for every real $\alpha$, as well as $|t|\le1$. For a given $t\in[-1,1]$, take
+\[
+ h_t=\sqrt{2-t^2},\qquad \alpha=\frac{2t}{h_t}.
+\]
+Then $|\alpha|\le2$ and the preceding bound gives
+\[
+ s\le\frac4{h_t}-\frac{2t^2}{h_t}=2h_t.
+\]
+Flipping both Bob outcomes gives $-s\le2h_t$. Consequently $(t,s)\in\T$.
+
+\subsection{Explicit attainment and both boundary points}
+Fix $t\in[-1,1]$ and set $r=\sqrt{1-t^2}$ and $h_t=\sqrt{2-t^2}$. On two qubits choose
+\begin{align*}
+ |\psi_t\rangle&=\sqrt{\frac{1+t}{2}}\,|00\rangle
+                    +\sqrt{\frac{1-t}{2}}\,|11\rangle,\\
+ A_0&=Z,\qquad A_1=X,\\
+ B_0&=\frac{Z+rX}{h_t},\qquad B_1=\frac{Z-rX}{h_t}.
+\end{align*}
+The anticommutation of $X$ and $Z$ implies $B_0^2=B_1^2=\Id$. Direct evaluation gives
+\begin{equation}\label{eq:attainment}
+ q_t=\left(t,0,\frac{t}{h_t},\frac{t}{h_t},
+           \frac1{h_t},\frac1{h_t},
+           \frac{1-t^2}{h_t},-\frac{1-t^2}{h_t}\right).
+\end{equation}
+Its projection is $(t,2h_t)$. Flipping both Bob observables gives $(t,-2h_t)$ without changing $t$. A classical mixture of those two finite-dimensional models realizes every intermediate value $s\in[-2h_t,2h_t]$. The construction retains $t=\pm1$: the state is then a computational-basis product state, $r=0$, and $h_t=1$. No division by a vanishing quantity occurs. This proves both inclusions in Theorem~\ref{thm:projection}.
+
+To compute the support function, maximize
+\[
+ \alpha t+2\sqrt{2-t^2}\qquad(-1\le t\le1).
+\]
+Its unconstrained stationary point is
+\[
+ t_* =\frac{\sqrt2\,\alpha}{\sqrt{4+\alpha^2}}.
+\]
+This point lies in the interval exactly when $|\alpha|\le2$, and its value is $\sqrt{8+2\alpha^2}$. For $|\alpha|\ge2$, the maximum occurs at $t=\operatorname{sgn}(\alpha)$ and is $2+|\alpha|$. The symmetry $s\mapsto-s$ covers both signs of $\epsilon$.
+
+\section{One fixed collection of testing functions}
+Let $K_t\supseteq\R$ be a real closed extension and $(t,s)\in\T_{K_t}$. All square roots below mean the nonnegative root in $K_t$. Define
+\begin{align}\label{eq:features}
+ u_1&=\sqrt{\sqrt2+t},&
+ u_2&=\frac{s}{2u_1},&
+ u_3&=\sqrt{\sqrt2-t-u_2^2},\\
+ u_4&=\sqrt{1-t},&u_5&=\sqrt{1+t}.&&\notag
+\end{align}
+These functions are defined throughout $\T_{K_t}$. In fact,
+\[
+ \sqrt2+t\ge\sqrt2-1>0,
+\]
+and
+\[
+ (\sqrt2+t)(\sqrt2-t-u_2^2)=2-t^2-s^2/4\ge0.
+\]
+Their definition depends only on the testing point, not on a supporting functional. The four fixed square spaces are
+\[
+ U_1=\operatorname{span}_{\R}(u_1,u_2),\quad
+ U_2=\R u_3,\quad U_3=\R u_4,\quad U_4=\R u_5.
+\]
+The constant function is already available as a sum of squares:
+\begin{equation}\label{eq:constant}
+ 1=\frac{u_4^2+u_5^2}{2}.
+\end{equation}
+
+\subsection{Separated source and testing fields}
+Let $K_c\supseteq\R$ be another real closed extension. For $\alpha\in K_c$ and $\epsilon\in\{-1,1\}$ define in the source field
+\begin{align*}
+ \gamma&=\sqrt{4+\alpha^2},&\beta&=\sqrt2\,\gamma,\\
+ v_0&=\sqrt{\frac{\gamma-\alpha}{2}},&
+ v_1&=-\epsilon\sqrt{\frac{\gamma+\alpha}{2}}.
+\end{align*}
+Here $\gamma>|\alpha|$, and
+\[
+ v_0^2+v_1^2=\gamma,\quad v_0^2-v_1^2=-\alpha,
+ \quad v_0v_1=-\epsilon.
+\]
+The last identity uses $\gamma^2-\alpha^2=4$ and the specified root signs. Expanding squares in the commutative tensor-product ring gives
+\begin{equation}\label{eq:tensor-sos}
+ \begin{aligned}
+ &\beta\otimes1-\alpha\otimes t-1\otimes\epsilon s\\
+ &\qquad=(v_0\otimes u_1+v_1\otimes u_2)^2
+                 +(v_1\otimes u_3)^2
+       \quad\text{in }K_c\otimes_{\R}K_t.
+ \end{aligned}
+\end{equation}
+Indeed, the right side equals
+\[
+ v_0^2\otimes(\sqrt2+t)+2v_0v_1\otimes(s/2)
+       +v_1^2\otimes(\sqrt2-t).
+\]
+The displayed source identities give the left side. No product of a source variable with a testing variable is identified with a product inside either field. There is no disjointness assumption: $K_c$ and $K_t$ may be two separately labelled copies of the same field.
+
+For $|\alpha|\le2$, equation~\eqref{eq:tensor-sos} certifies the optimal support slack. For $|\alpha|\ge2$, set $\sigma=\operatorname{sgn}(\alpha)$. The exact endpoint completion is
+\begin{equation}\label{eq:endpoint}
+ \begin{aligned}
+ 2+|\alpha|-\alpha t-\epsilon s
+ &=4-2\sigma t-\epsilon s\\
+ &\quad+(|\alpha|-2)(1-\sigma t).
+ \end{aligned}
+\end{equation}
+The first term has the certificate~\eqref{eq:tensor-sos} at $\alpha=2\sigma$. The second is a nonnegative source multiple of $u_4^2$ if $\sigma=1$, or $u_5^2$ if $\sigma=-1$. Its coefficient square root is taken in $K_c$. Equality $|\alpha|=2$ merely makes that coefficient zero. The case $\alpha=0$ is already contained in~\eqref{eq:tensor-sos}. Thus every real tilt, including every endpoint and unbounded source tilts in real closed extensions, uses these same fixed testing spaces.
+
+\subsection{All affine nonnegative functions on this projection}
+Let $f=c_0+c_1t+c_2s$ be nonnegative on $\T$ (or its transfer), with coefficients in the source field. If $c_2\ne0$, put
+\[
+ \lambda=|c_2|,\quad \alpha=-c_1/\lambda,
+ \quad\epsilon=-\operatorname{sgn}(c_2).
+\]
+Equation~\eqref{eq:support} implies $c_0-\lambda h(\alpha)\ge0$, and
+\[
+ f=(c_0-\lambda h(\alpha))
+       +\lambda\bigl(h(\alpha)-\alpha t-\epsilon s\bigr).
+\]
+The first term is handled by~\eqref{eq:constant}; the second uses~\eqref{eq:tensor-sos} and, where necessary,~\eqref{eq:endpoint}. If $c_2=0$, nonnegativity is equivalent to $c_0\ge|c_1|$, and
+\[
+ f=(c_0-|c_1|)+|c_1|\bigl(1+\operatorname{sgn}(c_1)t\bigr)
+\]
+when $c_1\ne0$; the constant case is immediate. This verifies coverage of all affine supports of $\T$, rather than only a bounded subinterval of the tilt parameter. It does not assert coverage of all affine supports of $\Q$.
+
+\section{Product table and every affine pencil coefficient}
+Set $y=u_2^2$. The products within the four square spaces have the following complete table in the linear coordinates $(1,t,s,y)$.
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Product&Value\\\midrule
+$u_1^2$&$\sqrt2+t$\\
+$u_1u_2$&$s/2$\\
+$u_2^2$&$y$\\
+$u_3^2$&$\sqrt2-t-y$\\
+$u_4^2$&$1-t$\\
+$u_5^2$&$1+t$\\\bottomrule
+\end{tabular}
+\end{center}
+The evaluated block diagonal pencil is
+\begin{equation}\label{eq:lift}
+ L(t,s,y)=
+ \begin{pmatrix}
+ \sqrt2+t&s/2&0&0&0\\
+ s/2&y&0&0&0\\
+ 0&0&\sqrt2-t-y&0&0\\
+ 0&0&0&1-t&0\\
+ 0&0&0&0&1+t
+ \end{pmatrix}.
+\end{equation}
+
+\begin{proposition}[Both lift inclusions]\label{prop:lift}
+The identity
+\[
+ \T=\{(t,s):\exists y\in\R,\ L(t,s,y)\succeq0\}
+\]
+holds. Thus the evaluated lift has $N=5$, $m=1$, and block orders $(2,1,1,1)$.
+\end{proposition}
+\begin{proof}
+If $(t,s)\in\T$, choose $y=s^2/[4(\sqrt2+t)]$. The upper-left block is the Gram matrix of $(u_1,u_2)$, hence is positive semidefinite; the other diagonal blocks are $u_3^2,u_4^2,u_5^2$. Conversely, positivity forces $|t|\le1$, so $d=\sqrt2+t>0$. The Schur complement of the upper-left entry gives $y\ge s^2/(4d)$, while the next scalar block gives $y\le\sqrt2-t$. Therefore
+\[
+ s^2/4\le(\sqrt2+t)(\sqrt2-t)=2-t^2,
+\]
+which proves $(t,s)\in\T$.
+\end{proof}
+
+Eliminating $y$ gives the direct pencil
+\begin{equation}\label{eq:direct}
+ D(t,s)=\operatorname{diag}\left(
+ \begin{pmatrix}\sqrt2+t&s/2\\s/2&\sqrt2-t\end{pmatrix},
+ 1-t,1+t\right).
+\end{equation}
+It has $N=4,m=0$, with block orders $(2,1,1)$. Under $|t|\le1$, the diagonal entries of its $2\times2$ block are strictly positive, and its determinant is $2-t^2-s^2/4$. Hence $D\succeq0$ is exactly the defining condition for $\T$.
+
+For the original coordinates substitute $t=a_0$ and $s=E_{00}+E_{01}+E_{10}-E_{11}$ into~\eqref{eq:lift}. Every coefficient matrix is specified by the following upper-triangular entries, using zero-based matrix indices. Each off-diagonal entry is mirrored once; the tabulated value is the actual entry, not a doubled Gram coefficient.
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Coefficient&Index&Value\\\midrule
+constant&$(0,0),(2,2)$&$\sqrt2,\sqrt2$\\
+constant&$(3,3),(4,4)$&$1,1$\\
+$a_0$&$(0,0),(2,2),(3,3),(4,4)$&$1,-1,-1,1$\\
+$E_{00},E_{01},E_{10}$&$(0,1)$ in each matrix&$1/2$\\
+$E_{11}$&$(0,1)$&$-1/2$\\
+$y$&$(1,1),(2,2)$&$1,-1$\\\bottomrule
+\end{tabular}
+\end{center}
+All unlisted entries, including the matrices multiplying $a_1,b_0,b_1$, are zero. There are exactly 14 nonzero upper-triangular records. The eliminated pencil has 12 such records. The two JSON coefficient files encode every number as a pair of rational strings $(r_0,r_1)$ representing $r_0+r_1\sqrt2$, where $\sqrt2$ is the positive root of $X^2-2$. No approximate coefficient or numerical reconstruction is used.
+
+\section{A strict scope witness}
+Consider the rational behavior
+\begin{equation}\label{eq:scope}
+ q_*=(0,0,0,0,1,1,1/4,-1/4).
+\end{equation}
+For outcomes $a,b\in\{-1,1\}$, its probabilities are
+\[
+ p(a,b\mid x,y)=\frac{1+a a_x+b b_y+abE_{xy}}4
+               =\frac{1+abE_{xy}}4.
+\]
+They are nonnegative and normalized for each setting, and the marginal distributions are uniform and nonsignalling. Every CHSH relabeling has an odd number of negative signs among its four correlator coefficients. Enumerating the eight sign patterns gives maximum absolute value $5/2<2\sqrt2$. Relabeling settings, outcomes, or parties leaves all marginal biases zero. Consequently every standard relabeled single-marginal tilted--CHSH expression has value at most $5/2$, while its quantum support bound satisfies $h(\alpha)\ge2\sqrt2$ for every real $\alpha$. Thus all those inequalities and all probability inequalities accept $q_*$.
+
+Nevertheless $q_*$ is nonquantum. In any putative realization, projectively dilate and purify the state to $|\psi\rangle$. The equalities $E_{00}=E_{01}=1$ give
+\[
+ \|(A_0-B_y)|\psi\rangle\|^2=2-2E_{0y}=0
+       \qquad(y=0,1).
+\]
+Here the identity factors on the other local systems are implicit. Subtracting the resulting vector equalities gives $(B_0-B_1)|\psi\rangle=0$. It follows that
+\[
+ E_{10}-E_{11}=\langle\psi|A_1(B_0-B_1)|\psi\rangle=0,
+\]
+contradicting $E_{10}-E_{11}=1/2$ in~\eqref{eq:scope}. This argument applies to mixed states through purification and to general binary measurements through the stated dilation. It is an exact algebraic obstruction, not the result of a numerical infeasibility test.
+
+The witness even lies strictly inside the ellipse at its projected point: $t=0,s=5/2$ gives $t^2+s^2/4=25/16<2$. Therefore intersecting every standard relabeled tilted-family lift with the probability constraints still does not recover $\Q$. Global feature extraction, a global affine pencil, and verification of the full-set inclusions remain open in this regeneration.
+
+\section{Fresh verification and reproducibility}
+In this directory, run
+\begin{quote}\small\ttfamily
+python3 build\_and\_check\_tilted\_extraction.py
+\end{quote}
+The program uses only Python's standard library. The helper implements rational sparse-polynomial expansion and reduced reflection words; no floating-point arithmetic, optimization solver, or quantifier elimination is used.
+
+The regenerated receipt records 38 named checks. They include the noncommutative reflection and SOS identities, all eight Pauli expectation numerators in~\eqref{eq:attainment}, the source and testing identities, the endpoint completion, reconstruction of the original-coordinate matrices, both coefficient record counts, the eliminated determinant, exact probability normalization and positivity for the scope witness, and enumeration of all eight CHSH sign patterns. The checker does not mechanize the analytical inequalities, quantum reduction arguments, or proofs over arbitrary real closed extensions. Those arguments are given above. The manifest binds the checker and its generated data by SHA-256.
+
+This newly regenerated component is mathematically scoped and independently replayable. It is not a byte-for-byte restoration of an unavailable historical 549-page release, and its successful replay makes no assertion about the missing global existence proof.
+
+\begin{thebibliography}{9}
+\bibitem{BP} C. Bamps and S. Pironio,
+\emph{Sum-of-squares decompositions for a family of CHSH-like inequalities and their application to self-testing},
+Physical Review A \textbf{91}, 052111 (2015),
+\href{https://arxiv.org/abs/1504.06960}{arXiv:1504.06960}.
+The operator SOS used here is equation (27) in arXiv version 1.
+\end{thebibliography}
+\end{document}

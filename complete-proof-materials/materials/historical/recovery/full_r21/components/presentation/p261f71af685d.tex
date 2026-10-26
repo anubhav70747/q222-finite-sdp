@@ -1,0 +1,555 @@
+\chapter{Reconstructed full R1 conductor in the unbounded source-ratio sector}
+\label{component:p261f71af685d}
+\noindent\textbf{Component }\path{p261f71af685d}\par
+{\small\noindent Source: \path{REC/weak_c2/fn_reconstructed.tex}\par}
+{\small\noindent SHA256: \path{261f71af685d3738c43fd565d11e383655bfe4f1ff1273a13023b75815b06434}\par}
+{\small\noindent Inventory use: RFN1-RFN24\par}
+\medskip
+% Fresh reconstruction from retained formulas and independently rederived algebra.
+% This is NOT a recovered byte stream of r1_unbounded_q_full_conductor.tex.
+\section{Reconstructed full R1 conductor in the unbounded source-ratio sector}
+\label{p261f71af685d:sec:fn-reconstructed}
+
+\paragraph{Provenance and precise dependency.}
+This is a newly written reconstruction of the late R21 conductor, not a
+claim of byte identity with the lost final file.  The complete parent,
+the radial Gram matrices, and the normal formulas were retained in the
+conversation; every displayed polynomial identity below is checked
+again against the recovered original source equations.  The companion
+\path{check_fn_reconstruction.py} is also new.  The source dictionary
+is the independently rederived
+\path{c144/rederived/r1_qo_compact_source.py}.
+The uniform source bounds and the scalar allocation stated in the next
+paragraph are the explicit interface to the reconstructed actual-source
+scalar lemma (RS).  The source input is now supplied by the freshly reconstructed
+\path{c144/rederived/r1_qo_actual_source_and_scalar.tex},
+RSR1--RSR29, with its independent current review.  The full-normal
+argument below has now received an independent current analytical review
+by the lead agent, separate from the review of its scalar input.  Neither
+the old admission record nor the old checksum substitutes for it.
+
+\paragraph{Fields, source scope, and notation.}
+Let $K_c,K_t\supset\mathbb R$ be real closed fields, with bounded rings
+$B_c,B_t$ and infinitesimal ideals $\mathfrak m_c,\mathfrak m_t$.
+The ring of certificate expressions is
+$\mathcal T=K_c\otimes_{\mathbb R}K_t$, and its bounded coefficient ring
+is $\mathcal B=B_c\otimes_{\mathbb R}B_t$.  A bounded coefficient with
+zero real residue belongs to
+$\mathfrak n=\mathfrak m_c\otimes B_t+B_c\otimes\mathfrak m_t$.
+Every radical or inverse used below is pure source, pure testing, or
+an explicitly separated product of such factors.  No order on
+$\mathcal T$ and no inverse of a mixed expression is used.
+
+Use the positive compact source coordinates
+\[
+ x=jB,\qquad y=TB,\qquad q_z=jT,\qquad
+ 0<p<\min\{1,j\},\qquad 0<H<1,                         \tag{RFN1}
+\]
+where $B,T,x,y,q_z\in\mathfrak m_c$.  These are the compact coordinates
+of the original R1 sector with unbounded source ratio.  The original
+strict source gaps remain in force and $n\geq0$, including $n=0$.
+For reference, their native substitution is
+\[
+ r=\frac{j-p}{j+px},\quad
+ h=\frac{1-HT}{1+HTx},\quad
+ a_s=\frac{j+px}{1+HTx},\quad
+ B_s=\frac{B(1+HTx)}{1+pB},\quad
+ t_s=\frac{T(1+pB)}{1+HTx}.                              \tag{RFN2}
+\]
+The six weights $n,m,C,A,D,\alpha$ are always the original source
+weights at (RFN2), rather than weights of an auxiliary stationary
+source.  Put $\mu=m(1-p)$, $h_0=\mu+\tfrac12$,
+$k=(j+1-p)/(j+1)$, and $\eta_*=Bj(j+1)/p$.
+In this source sector RS proves
+\begin{gather}
+ \tfrac12<k<1,\quad \eta_*=O(1),\quad
+ \mu=O(p),\quad h_0\asymp1,\quad A=O(T),\quad
+ \alpha\asymp B^2(j+1),                                  \tag{RFN3a}\\
+ TCH\sim k/2,\qquad T(D+\tfrac12)(1-H)\sim k/2,\qquad
+ \frac{n(j-p)}j=O(1),                                   \tag{RFN3b}\\
+ f_c\asymp Tx^2,\qquad q_c\asymp Tx,\qquad
+ r_c\asymp TjB^2(1-p),                                  \tag{RFN3c}\\
+ \eta_*\in\mathfrak m_c\quad\Longrightarrow\quad
+ n\sim\frac{p}{2(j-p)(j+1)}>0.                           \tag{RFN3d}
+\end{gather}
+Here $\asymp$ means that the ratio is a positive bounded unit, and
+$\sim$ means that the ratio has residue one.  All estimates are uniform
+at the independent openings $H$, $1-H$, $j-p$, and $1-p$.
+In particular $B(j+1)=B+x$ and $\alpha$ are infinitesimal.
+No comparison between source and testing infinitesimals is allowed.
+
+\paragraph{The local conclusion.}
+For all positive independent $u,v\in\mathfrak m_t$, normalize the pure
+testing coordinate $w=(W+uY)/(1+u^2)$ to one and allow the other pure
+testing coordinate $z=(Z-uX)/(1+u^2)>0$ to be arbitrary.  The conclusion
+is a finite tensor sum of squares for the complete original parent,
+with both state normals unrestricted.  In particular $z$ need not be
+bounded.  The separate full-state sign reduction and outer-testing join
+are needed to pass from this local conclusion to the whole R1 row.
+
+\subsection{The complete parent and the correlated source mass}
+
+Write $D_u=1+u^2$, $D_v=1+v^2$.  The original quarter-parent is
+\begin{align}
+ \mathcal P={}&m(vW-X+uvY-uZ)^2+nD_uD_vX^2
+  +CD_v(uW-Y)^2+AD_uD_vY^2\\
+ &+(D+\tfrac12)(uW+uvX-Y-vZ)^2
+  +(\alpha+\tfrac12)D_u(vY-Z)^2\\
+ &+\tfrac12D_v(X+uZ)^2-\tfrac12D_uD_vZ^2.               \tag{RFN4}
+\end{align}
+Use the two mixed normal rows
+\[
+ N_0=\frac{X+uZ-pD_uv}{D_u},\qquad
+ M_0=\frac{uW-Y-HD_uvz}{D_u}.                            \tag{RFN5}
+\]
+Their exact inverse, with $w=1$, is
+\[
+ \begin{aligned}
+ X&=N_0+pv-uz,&Z&=z+uN_0+puv,\\
+ W&=1+u(M_0+Hvz),&Y&=u-M_0-Hvz.
+ \end{aligned}                                           \tag{RFN6}
+\]
+Only the pure testing unit $D_u$ is inverted.  Retain the nonnegative
+packet $mpD_u^2N_0^2$ and define
+$G=(\mathcal P-mpD_u^2N_0^2)/D_u$.  Direct substitution gives the
+\emph{entire} expression
+\begin{align}
+ G={}&\mu D_u\{N_0^2-2vN_0+(1-p)v^2\}
+       +nD_v(N_0+pv-uz)^2\\
+ &+CD_uD_v(M_0+Hvz)^2+A D_v(u-M_0-Hvz)^2\\
+ &+(D+\tfrac12)D_u(M_0-(1-H)vz)^2\\
+ &+(\alpha+\tfrac12)
+   \{u(1-p)v-(1+Hv^2)z-uN_0-vM_0\}^2\\
+ &+\tfrac12D_uD_v(N_0+pv)^2
+       -\tfrac12D_v(z+uN_0+puv)^2.                      \tag{RFN7}
+\end{align}
+Thus $G$ is exactly quadratic in $(N_0,M_0)$:
+\[
+ G=F+2L_NN_0+2L_MM_0+H_NN_0^2+H_MM_0^2
+                  +2(\alpha+\tfrac12)uvN_0M_0,          \tag{RFN8}
+\]
+where $F=G|_{N_0=M_0=0}$ and
+\[
+ \begin{split}
+ H_N&=h_0D_u+\tfrac12v^2+\alpha u^2+nD_v,\\
+ H_M&=D_u(CD_v+D+\tfrac12)+AD_v+(\alpha+\tfrac12)v^2.
+ \end{split}                                           \tag{RFN9}
+\]
+There are no omitted higher state-normal terms.
+
+\paragraph{Exact scalar interface, before spending the $n$-mass.}
+Set
+\[
+ U=\frac u{\sqrt x},\quad V=\frac v{\sqrt y},\quad
+ Z_* =\frac z{\sqrt{q_z}},\qquad
+ Q_*=U-VZ_*,\quad B_*=V-UZ_*,\quad R_*=Z_*-UV,
+\]
+\[
+ \Psi=U^2+V^2+Z_*^2+U^2V^2Z_*^2-4UVZ_*.                 \tag{RFN10}
+\]
+All three normalized testing variables are positive, but none is
+assumed bounded.  A legal separated certificate is
+\[
+ \Psi=(U-V)^2+Z_*^2(1-UV)^2+2UV(1-Z_*)^2.               \tag{RFN11}
+\]
+For example, $\sqrt{UV}$ is the product of the source factor
+$(xy)^{-1/4}$ and the testing factor $\sqrt{uv}$.
+
+The exact RS/RB scalar identity for the actual source is
+\begin{align}
+ F={}&q_cQ_*^2+nj^2y B_*^2+r_cR_*^2+d_cV^2Q_*^2
+   +(np^2y^2+e_0)V^2B_*^2\\
+   &+f_c\Psi+g_cV^2\Psi+k_cZ_*^2(V^2-1)^2,
+ \qquad e_0=\tfrac12p^2y^2-g_c.                        \tag{RFN12}
+\end{align}
+For an entirely algebraic definition of the masses, put
+$K_0=CH^2+(D+\tfrac12)(1-H)^2$ and
+\[
+\begin{array}{ll}
+ M_a=Ax,&M_b=\{\mu(1-p)+(n+\tfrac12)p^2\}y,\\
+ M_c=\alpha q_z,&
+ M_{ab}=\{A+\alpha(1-p)^2+\mu(1-p)+\tfrac12(1-p)^2\}xy,\\
+ M_{ac}=nxq_z=nj^2y,&
+ M_{bc}=\{K_0+AH^2+2H\alpha+H-\tfrac12\}yq_z,\\
+ M_{b^2}=(n+\tfrac12)p^2y^2,&M_{abc}=(K_0+n)xyq_z,\\
+ M_{b^2c}=H^2(A+C+\alpha+\tfrac12)y^2q_z,&
+ M_{ab^2c}=CH^2xy^2q_z.
+\end{array}
+\]
+Then
+\[
+\begin{split}
+ k_c&=(M_a-M_b+M_{ac}+M_{ab^2c}-M_{bc})/2,\\
+ r_c&=M_c-M_b+M_{ac}-k_c,\quad f_c=M_b-M_{ac},\quad q_c=M_a-f_c,\\
+ d_c&=M_{b^2c}-k_c,\qquad g_c=M_{ab^2c}.
+\end{split}
+\]
+The source contact identities make (RFN12) exact, including both odd
+monomials of $F$.  It is checked coefficientwise against (RFN7), not
+only at the contact point.
+
+Define the unnormalized current $b=v-uz/j=\sqrt y B_*$ and the
+pure source quantities
+\[
+ c_b=\frac{nj}{n+h_0},\qquad M_e=\frac{nh_0j^2}{n+h_0}.
+                                                               \tag{RFN13}
+\]
+The whole scalar pieces $nj^2b^2+np^2v^2b^2$ in (RFN12) must be kept
+until their correlations with $N_0$ have been completed.  The full
+$N_0$-linear term below contains $njb+npv^2b$, so these pieces and the
+corresponding hard terms give
+\[
+ n(N_0+jb)^2+n v^2(N_0+pb)^2.
+\]
+Complete only the first square, using a pure source inverse:
+\[
+ h_0N_0^2+n(N_0+jb)^2
+   =(n+h_0)(N_0+c_bb)^2+M_e b^2.                       \tag{RFN14}
+\]
+Keep $nv^2(N_0+pb)^2$ whole.  Put
+$\widehat N=\sqrt{n+h_0}(N_0+c_bb)$.
+The other hard terms in (RFN9) are the nonnegative whole squares
+\[
+ h_0(uN_0)^2+\tfrac12(vN_0)^2+\alpha(uN_0)^2.             \tag{RFN15}
+\]
+They are still kept whole after the shift; no term $nu^2$ or $nv^2$
+is treated as a bounded perturbation.
+
+For $n>0$ one has the exact bounded-shift identity
+\[
+ \frac{c_b^2}{M_e}=\frac{n}{h_0(n+h_0)}=O(1).
+                                                               \tag{RFN16}
+\]
+At $n=0$, set $c_b=M_e=0$ and omit the effective current row.  Formula
+(RFN14) remains literal, and no division by $n$ or $\sqrt{M_e}$ is
+made in that case.
+
+RS pays the signed $e_0$ and $k_c$ terms in (RFN12) at infinitesimal
+cost after (RFN14), with the effective current mass $M_e y$, and leaves
+fixed positive real fractions of
+\[
+ q_cQ_*^2,\qquad M_e b^2,\qquad r_cR_*^2,\qquad f_c\Psi. \tag{RFN17}
+\]
+The second term is omitted when $n=0$.  This is the precise scalar
+allocation needed here; an allocation that spends the raw $nj^2y$
+mass before (RFN14) would not suffice.
+
+\subsection{Finite exact budgets for the full normal rows}
+
+In the rest of the proof, a row is called free if any prescribed fixed
+real multiple of its square can be purchased at infinitesimal cost
+from (RFN17).  This has an exact meaning: a finite SOS identity writes
+its square below a finite sum of those retained squares, with bounded
+separated coefficients in $\mathfrak n$.  Subtracting any fixed real
+multiple changes their strict Gram diagonals only infinitesimally.
+
+\paragraph{Three elementary circuit budgets.}
+Direct expansion gives
+\begin{align}
+ (1+U^2)\Psi-R_*^2
+     &=B_*^2+U^2Q_*^2+U^2(1-UVZ_*)^2,                  \tag{RFN18a}\\
+ (1+V^2)\Psi-V^2B_*^2
+     &=Q_*^2+R_*^2+V^2(1-UVZ_*)^2.                   \tag{RFN18b}
+\end{align}
+There is also a useful opposite-current budget.  Put
+$t_*=UV$, $\delta_*=U-V$, $E_*=Z_*(1-t_*)$,
+$T_*=t_*(1-Z_*)$, and $J_*=T_*-\delta_*^2Z_*$.  Then
+\begin{align}
+ 2(\Psi+V^2Q_*^2+U^2B_*^2)-R_*^2
+ ={}&(E_*+T_*)^2+2\delta_*^2+4t_*(1-Z_*)^2\\
+   &+2J_*^2+4t_*\delta_*^2Z_*^2.                      \tag{RFN18c}
+\end{align}
+Every term on the right is a legal separated square.  Thus a
+nonnegative multiplier $a$ buys $aR_*^2$ at infinitesimal cost whenever
+\[
+ a/f_c\in\mathfrak n,\qquad a/(q_cy)=O(1),\qquad
+ a/(M_e yx)=O(1),                                      \tag{RFN18d}
+\]
+since the last two diagonal costs have the additional testing factors
+$v^2$ and $u^2$.  This criterion is used only when $M_e>0$.
+
+\paragraph{An exact radial budget.}
+The row $R_u=v(u^2-x)$ is free in all source subcases, including the
+weak opening $1-p\in\mathfrak m_c$.  Here is an explicit finite
+certificate, so that this assertion does not rest on pointwise
+nonnegativity.  Write $D_*=V(U^2-1)$ and
+\[
+\begin{split}
+ t_7={}&(Z_*-U^2V,\ V-U^2V,\ U-U^2V,\ UZ_*-U^2V,\\
+       &\hspace{25mm}UV-U^2V,\ UVZ_*-U^2V,\ U^2-U^2V)^T,\\
+ t_3={}&(1-UV,\ V-UV,\ U-UV)^T,
+\end{split}
+\]
+\[
+ G_7=\begin{pmatrix}
+ 4&-2&-3/2&0&-1/2&0&1/2\\
+ -2&3&0&-3/2&0&-1&2\\
+ -3/2&0&4&3/2&-2&-3&0\\
+ 0&-3/2&3/2&4&-3/2&0&-3/2\\
+ -1/2&0&-2&-3/2&3&2&-1\\
+ 0&-1&-3&0&2&8&-4\\
+ 1/2&2&0&-3/2&-1&-4&4
+ \end{pmatrix},\qquad
+ G_3=\begin{pmatrix}3&-2&-2\\-2&2&2\\-2&2&3\end{pmatrix}.
+\]
+The exact identity is
+\[
+ 4\Psi+4U^2Q_*^2+4U^2R_*^2-D_*^2
+   =t_7^TG_7t_7+4VZ_*(1-U)^2+UZ_*t_3^TG_3t_3.         \tag{RFN19}
+\]
+The leading principal minors of $G_7$ are
+$4,8,101/4,1049/16,907/16,3279/16,743/16$; those of $G_3$ are
+$3,2,2$.  Both are positive definite real matrices.  Their real
+Cholesky factors and the separated square roots of $VZ_*$ and $UZ_*$
+therefore make the right side a finite legal SOS.  Denote it by
+$\mathcal W(U,V,Z_*)$.
+
+Since $R_u=x\sqrt y D_*$, the exhaustive source cases are as follows.
+
+\emph{Case 1: $1-p$ is a positive unit.}
+Multiply (RFN19) by $x^2y$.  The costs relative to
+$f_c\Psi,q_cQ_*^2,r_cR_*^2$ are, respectively,
+\[
+ O(B),\qquad O(Bu^2),\qquad O(u^2/(1-p)).
+\]
+All belong to $\mathfrak n$.
+
+\emph{Case 2: $p\sim1$ and $\eta_*$ is a positive unit.}
+Then $j$ has a positive real lower bound, and $j^2B$ is a positive
+unit.  Adding $4U^2$ times (RFN18a) to (RFN19) gives
+\[
+ D_*^2\ \preceq_{\rm sos}\
+ 4(1+U^2+U^4)\Psi+4U^2Q_*^2.
+\]
+After multiplication by $x^2y$, the costs are
+\[
+ O\!\left(B+u^2/j+u^4/(j^2B)\right),\qquad O(Bu^2),
+\]
+again infinitesimal.  The notation $a\preceq_{\rm sos}b$ means
+$b-a\in\Sigma\mathcal T^2$ and is only shorthand for the displayed
+exact identities.
+
+\emph{Case 3: $p\sim1$ and $\eta_*\in\mathfrak m_c$.}
+Formula (RFN3d) gives $n>0$ and $1/M_e=O(1)$; it also gives
+$p^2/M_e=O(1)$.  Put $E^{\rm rad}=Z_*(U^2-1)$.
+Permuting $V$ and $Z_*$ in (RFN19) yields
+\[
+ \mathcal W(U,Z_*,V)
+   =4\Psi+4U^2Q_*^2+4U^2B_*^2-(E^{\rm rad})^2.
+\]
+The identity $D_*=UE^{\rm rad}+(U^2-1)B_*$ then gives, exactly,
+\begin{align}
+ &8U^2\Psi+8U^4Q_*^2+
+   \{8U^4+2(U^2-1)^2\}B_*^2-D_*^2\\
+ &\hspace{10mm}=2U^2\mathcal W(U,Z_*,V)
+                 +\{UE^{\rm rad}-(U^2-1)B_*\}^2.        \tag{RFN20}
+\end{align}
+After multiplication by $x^2y$, the three costs are
+\[
+ O(u^2/j),\qquad O(u^4/j),\qquad
+ \frac{8u^4+2(u^2-x)^2}{M_e}.
+\]
+They are infinitesimal.  These three cases prove the asserted free
+radial row without assuming a rate for any testing variable.
+
+\paragraph{The smaller current helpers.}
+If $\eta_*\in\mathfrak m_c$, (RFN3d) implies
+\[
+ \frac{p^2}{M_e}
+ =\frac{p^2}{h_0j^2}+\frac{p^2}{nj^2}=O(1),
+\]
+because $p/j<1$ and
+$p(j-p)(j+1)/j^2\leq p+p/j$.
+Thus $(pv^2b)^2$ costs only $(p^2/M_e)v^4$ of the effective current.
+If $\eta_*$ is a positive unit instead, then
+\[
+ \frac{p^2y}{f_c}=O\!\left(\frac{p+p/j}{\eta_*}\right)=O(1).
+\]
+Multiply (RFN18b) by $p^2y^2v^2$.  This buys $(pv^2b)^2$ with circuit
+cost
+\[
+ \frac{p^2y}{f_c}(yv^2+v^4)\in\mathfrak n.
+\]
+The same identity multiplied by $Tp^2u^2y^2$ shows that
+$\sqrt T\,puvb$ is free: its cost is either
+$(p^2/M_e)Tu^2v^2$ or
+$(p^2y/f_c)Tu^2(y+v^2)$.
+
+\subsection{The entire two-normal conductor}
+
+\paragraph{First normal: exact source cancellation and allocation.}
+Put
+\[
+ q=vz-Tu,\qquad R=z-uv/B,\qquad R_u=v(u^2-x),
+\]
+\[
+ K_c=\frac p2+j\{H(\alpha+\tfrac12)-\tfrac12\}+n(p-j),
+ \qquad
+ K_R=-\mu-(\alpha+\tfrac12)(1-p)+\frac TjK_c.
+\]
+Both $K_c/j$ and $K_R$ are bounded by (RFN3).  The complete first normal
+is exactly
+\[
+ L_N=\{j(n-\alpha)+p(n+\tfrac12)v^2\}b
+                  +K_RR_u+\frac{K_c}{j}uvq.            \tag{RFN21}
+\]
+In particular the sign of the $\mu$ term in $K_R$ is negative.
+For a direct source check, the difference between this formula and
+the derivative of (RFN7) is $vS_N$, where
+\[
+ S_N=np-\mu+\tfrac p2+
+       \{-\mu-(\alpha+\tfrac12)(1-p)\}x
+       +j(\alpha-n)+yK_c=0.
+\]
+The last equality is an exact rational identity of the actual native
+source under (RFN2), not an asymptotic contact equation.
+
+After the two correlated $n$-squares are formed, the remaining linear
+coefficient is
+\[
+ L_N^{\rm rem}=-j\alpha b+\tfrac12pv^2b
+                       +K_RR_u+\frac{K_c}{j}uvq.
+\]
+The $q$ row is strict because
+$q_cQ_*^2=(q_c/(Tx))(q^2/T)$, with $q_c/(Tx)$ a positive unit.
+Its coefficient in $L_N^{\rm rem}$ relative to $q/\sqrt T$ is
+$(K_c/j)uv\sqrt T\in\mathfrak n$.
+The $pv^2b$ helper is free by the preceding paragraph.
+For the remaining small row, the exact identity
+\[
+ j\alpha b=-\frac\alpha B R_u-\alpha uR
+\]
+has $\alpha/B=O(B+x)\in\mathfrak m_c$.
+When $1-p$ is a unit, the square of $\alpha uR$ costs
+$O(B^2(j+1)^2u^2/(1-p))\in\mathfrak n$ against $r_cR_*^2$.
+When $p\sim1$, use $B_*^2\preceq_{\rm sos}(1+U^2)\Psi$ from
+(RFN18a).  The circuit cost of $(j\alpha b)^2$ is
+\[
+ O\!\left(B^3(j+1)^2+B^2(j+1)^2u^2/j\right)\in\mathfrak n,
+\]
+since $j$ is bounded below and $B(j+1)=B+x$ is infinitesimal.
+Finally, $K_RR_u$ has bounded coefficient; buy an arbitrarily large
+fixed real $R_u^2$ pivot using (RFN19)--(RFN20).
+
+The shift $N_0=\widehat N/\sqrt{n+h_0}-c_bb$ introduces no new
+unbounded Gram coefficient: $1/\sqrt{n+h_0}=O(1)$, and for $n>0$
+$c_b/\sqrt{M_e}=O(1)$ by (RFN16).  The only bounded, potentially
+non-infinitesimal couplings are therefore those of $R_u$ to
+$\widehat N$ and $\sqrt{M_e}b$.  A sufficiently large fixed real radial
+pivot absorbs both while preserving a strict positive real residue.
+For $n=0$ the latter coupling is exactly absent.
+
+\paragraph{Second normal: cancellation of both source openings.}
+Define
+\[
+ K_d=CH-(D+\tfrac12)(1-H),\qquad
+ C_q=K_d+AH+\tfrac12
+       +v^2\{CH(1+u^2)+AH+(\alpha+\tfrac12)H\}.
+\]
+The complete second normal is
+\[
+ L_M=C_q q+\mu uvb+v(\alpha-BTCHu^2)R.                  \tag{RFN22}
+\]
+The actual source satisfies the three exact identities
+\[
+\begin{split}
+ S_0&=T(K_d+AH+\tfrac12)-A=0,\\
+ S_1&=jK_d+\mu+xTCH=0,\\
+ S_2&=jK_d+xTCH+T\{CH+AH+(\alpha+\tfrac12)H\}
+          -A-(\alpha+\tfrac12)(1-p)+\alpha/B=0.
+\end{split}
+\]
+Before imposing these identities, the complete derivative minus
+(RFN22) is exactly
+$uS_0+u^2vzS_1/j+uv^2(S_2-S_1)$.
+This records all state terms and rules out a hidden $j$-weighted
+radial error.  In particular $S_1$ gives
+$K_d=-\mu/j-BTCH=O(1)$ even when $C$ or $D$ is unbounded.
+Consequently $TC_q=O(T+v^2)\in\mathfrak n$.
+
+Normalize
+\[
+ M_0=\sqrt{TH(1-H)}\,\widehat M.
+\]
+The full diagonal (RFN9), not only its zero-angle value, obeys
+\[
+ TH(1-H)H_M\sim k/2>0.                                 \tag{RFN23}
+\]
+Indeed the $C$ and $D$ terms contribute
+$(k/2)D_u\{(1-H)D_v+H\}$ up to infinitesimal bounded coefficients,
+and all remaining terms are infinitesimal after this normalization.
+This is uniform at both independent openings.
+The normalized $C_qq$ coupling has coefficient
+$T\sqrt{H(1-H)}C_q\in\mathfrak n$ on the strict row $q/\sqrt T$.
+The normalized $\mu uvb$ row is free because $\mu=O(p)$ and
+$\sqrt T\,puvb$ has already been purchased.
+
+It remains to allocate the entire opposite row, including its
+higher testing terms.  Put
+\[
+ J=B(j+1)+u^2\in\mathfrak n,\qquad
+ a_R=Tq_zv^2(\alpha-BTCHu^2)^2.
+\]
+The factor $H(1-H)$ may be discarded from the cost bound, since it is
+bounded.  Since $\alpha-BTCHu^2=O(BJ)$, the exact squared multiplier
+$a_R$ satisfies
+\[
+ \frac{a_R}{f_c}=O((T/j)v^2J^2),\qquad
+ \frac{a_R}{q_cy}=O(v^2J^2).                            \tag{RFN24a}
+\]
+If $1-p$ is a unit, its direct cost against $r_cR_*^2$ is
+$O(Tv^2J^2/(1-p))\in\mathfrak n$.
+If $p\sim1$ and $\eta_*$ is a unit, apply (RFN18a); the cost is
+$(a_R/f_c)(1+u^2/x)\in\mathfrak n$, using that $j^2B$ is a unit.
+If $p\sim1$ and $\eta_*\in\mathfrak m_c$, (RFN3d) gives
+\[
+ \frac{a_R}{M_e yx}
+     =O\!\left(\frac{T(1+1/n)}{j^2}v^2J^2\right)=O(1),  \tag{RFN24b}
+\]
+because $(1+1/n)/j^2=O(1)$ in this source case.  The other two
+conditions in (RFN18d) follow from (RFN24a).  The exact budget
+(RFN18c) therefore buys this row at infinitesimal cost as well.
+These estimates treat the whole square
+$(\alpha-BTCHu^2)^2$; there is no truncation at a testing degree.
+
+\paragraph{Full Gram, legal roots, and restoration.}
+After the normalizations, the entire remaining mixed hard term is
+\[
+ 2(\alpha+\tfrac12)uv\sqrt{TH(1-H)}
+    \left(\frac{\widehat N}{\sqrt{n+h_0}}-c_bb\right)\widehat M.
+\]
+Its coefficients relative to $\widehat N$, $\widehat M$, and, when
+present, $\sqrt{M_e}b$ are infinitesimal; (RFN16) controls the shift.
+All other remaining normal couplings were allocated above.  Choose a
+fixed sufficiently large radial pivot, and then purchase all the
+finitely many free helpers.  Their scalar costs lie in $\mathfrak n$,
+so fixed positive fractions of (RFN17) survive.  The complete bounded
+Gram has strict positive real residue: the $\widehat N$ pivot is one,
+the $\widehat M$ pivot has residue $\overline{k}/2$, the retained scalar pivots
+are positive, and the only bounded radial off-diagonals have been
+absorbed by the chosen real radial pivot.
+
+The separated strict bounded-Gram lemma now gives a finite sum of
+squares in $\mathcal T$.  Its row entries need not be bounded.  All
+budget remainders are explicit finite separated sums of squares, all
+source-only completions use positive pure source denominators, and
+all state-coordinate inverses are pure testing.  Restore the whole
+squares (RFN15), the retained $nv^2(N_0+pb)^2$ square, the scalar
+budget remainders, the $mpD_u^2N_0^2$ packet, and the pure testing
+factor $D_u$.  This certifies the complete original parent (RFN4).
+Every bounded coefficient used in the argument depends only on the
+source and on $u,v$.  The arbitrary state ratio $z$ remains inside
+retained rows throughout.  Hence the proof has no bounded-state
+restriction, and it includes literal $n=0$ without any limiting
+argument.
+
+\paragraph{Audit boundary.}
+The exact checker validates the complete parent, both full normals,
+all hard coefficients, the actual source cancellations, the scalar
+circuit, and the finite Gram/current budget identities.  The source
+bounds and the signed scalar allocation are the separately stated RS
+input; the analytical argument above proves the full normal lift
+from that input.  A separate state/sign proof and a separate outer
+angular join remain necessary for a whole-source all-testing claim.
+No explicit global LMI, optimized lift size, or external formal proof
+is claimed here.

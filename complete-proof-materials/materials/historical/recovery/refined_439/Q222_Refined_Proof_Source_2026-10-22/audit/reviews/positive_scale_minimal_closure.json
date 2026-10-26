@@ -1,0 +1,117 @@
+{
+  "scope": "Bounded coefficients after d=1 on the physical native canonical finite-contact interface. Native entry and weak-total-scale leaves are separate.",
+  "required_components": [
+    173,
+    174,
+    175,
+    176,
+    193,
+    196,
+    198,
+    200,
+    201,
+    202,
+    205
+  ],
+  "branches": {
+    "strong_and_finite_edge": {
+      "components": [
+        175,
+        173
+      ],
+      "required_formulas": [
+        "full parent and M0 state complement, determinant coefficients and finite-edge divided x pivot",
+        "source-only critical-center system with positive next coefficient",
+        "all first-normal factorizations and undivided rows",
+        "175 full projective corner forms"
+      ]
+    },
+    "unit_m_unit_n_weak_alpha": {
+      "components": [
+        176,
+        174
+      ],
+      "required_formulas": [
+        "finite-ratio full parent, jet complement and determinant double root",
+        "all-state finite-ratio rows and full tail ideal",
+        "176 source fitting and complete remote charts"
+      ]
+    },
+    "unit_n_weak_m_alpha": {
+      "components": [
+        200
+      ],
+      "required_formulas": [
+        "WA1-WA27 including source entry, full graph, first-normal coefficients and all complementary charts"
+      ]
+    },
+    "weak_n_or_C1_weak_alpha": {
+      "components": [
+        201
+      ],
+      "required_formulas": [
+        "WN1-WN44 including bounded/unbounded source Q, both state charts, all cubic conductors",
+        "entire WN37 positive mass and WN38 higher-normal shift correction"
+      ]
+    },
+    "C1_reciprocal": {
+      "components": [
+        193
+      ],
+      "required_formulas": [
+        "CR1-CR39 full source estimates, signed unit-beta completion, all full normal lifts and remote identities"
+      ]
+    },
+    "C1_projective_pitchfork": {
+      "components": [
+        202
+      ],
+      "required_formulas": [
+        "PP4 state block, PP7 full roots, PP9-PP19 exact polynomial quotients and all remote forms"
+      ]
+    },
+    "C2_reciprocal": {
+      "components": [
+        205
+      ],
+      "required_formulas": [
+        "RC2-RC5 source estimates and soft pivots",
+        "RC7-RC17 all state normals, monic scalar quotients and strict Gram",
+        "RC20,RC22,RC24 original homogeneous outer identities"
+      ]
+    },
+    "union": {
+      "components": [
+        196
+      ],
+      "required_formulas": [
+        "AU source unit/weak partition, exact symmetry maps, positive-d regular lemma and complete source dispatch"
+      ]
+    },
+    "three_event_wall": {
+      "components": [
+        198
+      ],
+      "required_formulas": [
+        "explicit 3x3 pencil, exact determinant Schur relation, real closed duality and source contact exclusion"
+      ]
+    }
+  },
+  "safe_compression": [
+    "Replace repeated source-only implicit-center arguments by PA1 with K_q=0 along the critical branch and a positive real angular Schur complement.",
+    "Replace repeated bounded monic-division explanations by one lemma.",
+    "Drop historical import receipts, source-file status labels and checker narratives as proof premises.",
+    "Merge theorem wrappers and all-tests dispatch prose while retaining every named full-state certificate and all source/unit hypotheses."
+  ],
+  "replacement_status": "positive_scale_audit.tex is an independent explanatory proof audit with some complete replacement lemmas (critical centers, Hessian reasoning, reciprocal soft-pivot derivation); it is not a standalone substitute for the eleven original certificate bodies. The complete explicit formulas above must be retained or inlined.",
+  "verified_algebra": "positive_scale_independent.py / .json: 34 targeted exact identities from a freshly built full parent; no archive engine.",
+  "finding": "No mathematical failure found at the stated native finite-contact interface. Arbitrary supporting-functional entry is a separate theorem.",
+  "component4_commuting_dependency_review": {
+    "required": false,
+    "checked_scope": "components173-176,193,196,198,200-202,205",
+    "reason": "175 supplies all four explicit full corner forms and square-ideal allocation;176 reuses175 and174 plus its own zero-zero jets;173/174 are self-contained full-tail critical-center terminals;198 supplies an independent global cone/duality wall theorem;193/200/201/202/205 give their own outer/core and local-normal formulas.",
+    "replacement_for_A6": "noncommuting_refined.tex supplies all noncommuting references in these retained bodies.",
+    "safe_omissions": "The commuting leading inequality, strict commuting certificate, and local critical-wall theorem at the end of component4 can be omitted from this closure.",
+    "integration_note": "The repeated NC parent/determinant dictionary may be replaced by exact references to the retained SG2 and SG5-SG6 identities; retain NC aliases needed by the proof."
+  }
+}

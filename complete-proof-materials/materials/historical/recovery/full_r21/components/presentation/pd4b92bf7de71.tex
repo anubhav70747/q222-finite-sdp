@@ -1,0 +1,304 @@
+\chapter{C1.4: unbounded $L=x\zeta$, bounded-unit $\sigma=1/\eta$}
+\label{component:pd4b92bf7de71}
+\noindent\textbf{Component }\path{pd4b92bf7de71}\par
+{\small\noindent Source: \path{R13/advances/c1_large_l_eta_unit/large_l_unit.tex}\par}
+{\small\noindent SHA256: \path{d4b92bf7de710d88bc5573c42f6166cc28551992da3378645013dea8c9352474}\par}
+{\small\noindent Inventory use: whole theorem and raw/capped full-parent proof | C14\_\allowbreak{}ENTIRE\_\allowbreak{}ORIGINAL\_\allowbreak{}PARENT\_\allowbreak{}GRAPH; precise subordinate uses retained below\par}
+\medskip
+\section[C1.4: unbounded L, bounded-unit sigma]{C1.4: unbounded $L=x\zeta$, bounded-unit $\sigma=1/\eta$}
+\label{pd4b92bf7de71:sec:c14-large-l-unit}
+This section proves this full original-parent subdomain, retaining every
+state normal and every independent source/testing rate. It makes no claim
+for infinitesimal $\sigma$. The inherited common remote theorem leaves
+$u$ bounded and $w=1/v$ infinitesimal; both $u$ infinitesimal and $u$ a
+bounded unit are covered below. All calculations use the exact NC source,
+with $d=1$, $n=\lambda=0$, and its original nonnegative $D,\beta$ faces.
+
+\paragraph{Source chart and bounded products.}
+Put $x=k^2$, $z=q^2=L^{-1}$, $r=bz$, $Q=1-b$, $\theta=1-h$,
+$K=1+x$, $R=1+xbz$, $M=R-xz\theta$, and
+\[
+ J=1+xh-\sigma(1-bz),\qquad E=1-xh/\sigma.
+\]
+Here $x,z$ are positive infinitesimals, $0<b<1$, and $\sigma$ is a positive
+bounded unit. The NC source gives exactly
+\begin{align*}
+ P&=\sigma+K+\sigma z(1+bx+2xh)+\sigma bx^2hz^2+x^2h\theta z,\\
+ V_0&=z(1+xh)E+(1-bz)(1+xhz),\\
+ C&=cz,&c&=\frac{K(1+\sigma bz)E}{2(1-bz)P},\\
+ m&=\mu x^2z,&\mu&=\frac{K(1+\sigma bz)h(1+\sigma z)}{2\sigma MP},\\
+ A&=a/z,&a&=\frac{V_0}{2bP},\\
+ \alpha&=\ell/z,&\ell&=\frac{(1+\sigma bz)[(x/\sigma)Rh(1+\sigma z)+ME]}{2QP},\\
+ D&=\frac{K(1+\sigma z)(1+\sigma bz)}{2JP}-\frac12,&
+ \beta&=\frac{K(1+\sigma bz)(1+xhz)}{2\theta P}-\frac12.
+\end{align*}
+In particular $c,\mu,ab,\ell Q,DJ,\beta\theta$ are bounded,
+$c,\mu,ab,\ell Q,DJ$ are positive units, and $ab-\ell Q\in z\mathcal O$.
+At $x=z=0$ their residues are
+\[
+\begin{gathered}
+c_0=\frac1{2(1+\sigma)},\quad
+\mu_0=\frac h{2\sigma(1+\sigma)},\quad
+(ab)_0=(\ell Q)_0=\frac1{2(1+\sigma)},\\
+(DJ)_0=\frac{\sigma^2}{2(1+\sigma)},\quad
+(\beta\theta)_0=\frac{(1+\sigma)h-\sigma}{2(1+\sigma)}.
+\end{gathered}
+\]
+Source nonnegativity gives $0<\sigma\leq1$ and
+$h\geq\sigma/(1+\sigma)$ at residue. Thus $h$ is a positive unit.
+The openings $b,Q,J,\theta$ remain independent; $\beta=0$ is retained.
+The face $D=0$ cannot occur here since $DJ$ is a positive unit.
+
+Write $D_u=1+u^2$, $D_w=1+w^2$ and
+\begin{gather*}
+ M_w=W-wX+uY-uwZ,\quad R_w=uW-Y,\quad
+ J_w=uwW+uX-wY-Z,\quad B_w=X+uZ,\\
+ K_w=J_w^2+D_u(Y-wZ)^2+D_wB_w^2-D_uD_wZ^2.
+\end{gather*}
+The complete reciprocal parent is
+\[
+ F_w=4mM_w^2+4czD_wR_w^2+4(a/z)D_uD_wY^2
+ +4DJ_w^2+4(\ell/z)D_u(Y-wZ)^2+4\beta D_wB_w^2+2K_w.
+\]
+Choose bounded positive-unit caps $a_*\leq a$, $\ell_*\leq\ell$,
+$D_*\leq D$, and a bounded nonnegative cap $\beta_*\leq\beta$.
+Keep as nonnegative squares the four centered excesses
+\begin{gather*}
+4(a-a_*)D_uD_wN_y^2,\quad4(\ell-\ell_*)D_uN_y^2,\\
+4(D-D_*)(J_w+JZ)^2,\quad4(\beta-\beta_*)D_wN_x^2,\\
+N_x=X+uhZ,\qquad N_y=(Y-bwZ)/q.
+\end{gather*}
+These roots vanish at the exact source contact
+\[
+u=k,\quad w=q\sqrt\sigma,\quad
+(W,X,Y,Z)=(\sqrt\sigma/(kq),-kh,bq\sqrt\sigma,1).
+\]
+Set $d_J=(D-D_*)J$ and $b_\theta=\beta\theta$.
+Their coefficients and the centered excesses preserve the original parent.
+
+\paragraph{Bounded full-normal remainder.}
+Define $G=wZ/q$, $R_h=G-uqW$ and
+\[
+c_N=8D_u[abD_w-\ell Q],\qquad c_G=4D_u[ab^2D_w+\ell Q^2].
+\]
+The $A,\alpha$ remainder is
+$4D_u(a_*D_w+\ell_*)N_y^2+c_NN_yG+c_GG^2$.
+Here $c_N\in(z,w^2)\mathcal O$ and $c_G$ is a positive unit.
+Keep $c_GR_h^2+c_NN_yR_h$ in the bounded Gram and use
+$G^2-R_h^2=2uwWZ-u^2zW^2$. The rest is the bounded polynomial
+\begin{align*}
+G_0={}&4D_u(a_*D_w+\ell_*)N_y^2+c_NuqWN_y+c_G(2uwWZ-u^2zW^2)\\
+&+4mM_w^2+4czD_wR_w^2+4D_*J_w^2-8d_JZJ_w-4d_JJZ^2\\
+&+4\beta_*D_wB_w^2+8(b_\theta-\beta_*\theta)uD_wZB_w
+ -4(b_\theta-\beta_*\theta)u^2\theta D_wZ^2+2K_w.
+\end{align*}
+All its coefficients are bounded. Put $N_z=Z-uwW/\sigma$ and substitute
+$Z=N_z+uwW/\sigma$, $X=N_x-uhZ$, $Y=qN_y+bwZ$.
+For $t=u^2$, $\xi=w^2$, define
+\[
+ T_0=1+th+b\xi,\quad M_0=1+t(h-Q)\xi/\sigma,\quad
+ R_f=1-b\xi/\sigma,\quad J_f=1-T_0/\sigma.
+\]
+In the formulas below $c_N,c_G$ mean their even-polynomial expressions.
+The exact expansion is
+\[
+G_0=\phi W^2+wL_xWN_x+uqL_yWN_y+uwL_zWN_z+H(N_x,N_y,N_z),
+\]
+where
+\begin{align*}
+\phi={}&4\mu x^2zM_0^2+4cz(1+\xi)tR_f^2+c_Gt(2\xi/\sigma-z)\\
+ &+4D_*t\xi J_f^2-8d_Jt\xi J_f/\sigma-4d_JJt\xi/\sigma^2
+ +4b_\theta\theta(1+\xi)t^2\xi/\sigma^2\\
+ &+2[t\xi J_f^2+(1+t)tQ^2\xi^2/\sigma^2
+ +(1+\xi)t^2\theta^2\xi/\sigma^2-(1+t)(1+\xi)t\xi/\sigma^2],\\
+L_x={}&-8\mu x^2zM_0+t[(8D_*+4)J_f-8d_J/\sigma
+ +(8b_\theta+4\theta)(1+\xi)/\sigma],\\
+L_y={}&8\mu x^2zM_0-8cz(1+\xi)R_f+c_N-(8D_*+4)\xi J_f
+ +8d_J\xi/\sigma-4(1+t)Q\xi/\sigma,\\
+L_z={}&8\mu x^2z(h-Q)M_0-8cz(1+\xi)bR_f+2c_G
+ -(8D_*+4)T_0J_f-8d_JJ_f+8d_J(T_0-J)/\sigma\\
+ &+8b_\theta\theta(1+\xi)t/\sigma+4(1+t)Q^2\xi/\sigma
+ +4(1+\xi)t\theta^2/\sigma-4(1+t)(1+\xi)/\sigma.
+\end{align*}
+For a compact explicit specification of the entire quadratic block, put
+\[
+\begin{gathered}
+m_N=-wN_x+uqN_y+uw(h-Q)N_z,\quad
+r_N=-qN_y-bwN_z,\\
+j_N=uN_x-wqN_y-T_0N_z,\quad
+b_N=N_x+u\theta N_z.
+\end{gathered}
+\]
+Then every quadratic normal coefficient is retained by the finite formula
+\begin{align*}
+H={}&4D_u(a_*D_w+\ell_*)N_y^2+4mm_N^2+4czD_wr_N^2
+ +(4D_*+2)j_N^2-8d_JN_zj_N-4d_JJN_z^2\\
+&+(4\beta_*+2)D_wb_N^2+8(b_\theta-\beta_*\theta)uD_wN_zb_N
+ -4(b_\theta-\beta_*\theta)u^2\theta D_wN_z^2\\
+&+2D_u(qN_y-QwN_z)^2-2D_uD_wN_z^2.
+\end{align*}
+The exact source substitutions give, at $(t,\xi)=(x,\sigma z)$,
+\[
+\phi=\phi_t=\phi_\xi=L_x=L_y=L_z=0.
+\]
+Moreover $\phi(0,\xi)=4\mu x^2z$,
+$L_x(0,\xi)=-8\mu x^2z$, and $\phi(t,\sigma z)\in z\mathcal O[t]$.
+The checker verifies all six source jets and these supports separately.
+
+\paragraph{Exact six-root lift in the critical strip $u$ infinitesimal.}
+Monic division, first by $\xi-\sigma z$ and then by $t-x$, gives bounded
+polynomial coefficients satisfying
+\begin{align*}
+\phi&=z(t-x)^2 A+t(t-x)(\xi-\sigma z)B+t(\xi-\sigma z)^2C,\\
+L_x&=(t-x)(tA_x+zB_x)+t(\xi-\sigma z)C_x,\\
+L_y&=(t-x)A_y+(\xi-\sigma z)B_y,\\
+L_z&=(t-x)A_z+(\xi-\sigma z)B_z.
+\end{align*}
+For example, the constant coefficient of
+$L_x(t,\sigma z)/(t-x)$ equals $8\mu xz$, giving its $(t,z)$ support.
+No small or mixed inverse enters these monic quotients. Also $A(0)=4\mu$.
+Take the six finite separated roots
+\[
+ N_x,\quad N_y,\quad N_z,\quad R_h,\quad
+ A_\theta=q(t-x)W,\quad V=uw(t-x)W.
+\]
+The complete scalar lift follows from
+\begin{align*}
+ z(t-x)^2W^2&=A_\theta^2,\\
+ t(t-x)(\xi-\sigma z)W^2&=u\sigma A_\theta R_h-\sigma VN_z,\\
+ t(\xi-\sigma z)^2W^2&=\sigma^2(qR_h-wN_z)^2.
+\end{align*}
+All first normals lift by the following finite list, which includes their
+whole coefficient support:
+\begin{align*}
+wt(t-x)W&=uV,&wz(t-x)W&=qwA_\theta,\\
+wt(\xi-\sigma z)W&=u\sigma qwR_h-u\sigma w^2N_z,\\
+uq(t-x)W&=uA_\theta,&uq(\xi-\sigma z)W&=\sigma zR_h-\sigma qwN_z,\\
+uw(t-x)W&=V,&uw(\xi-\sigma z)W&=\sigma qwR_h-\sigma w^2N_z.
+\end{align*}
+Together with the displayed $H$ these give an exact bounded six-root Gram,
+not merely a restriction to the contact line. At residue its first five
+diagonal pivots are respectively
+\[
+2+4\beta_*,\quad4(a_*+\ell_*),\quad
+4[D_*+d_J(1+\sigma)],\quad \frac2{1+\sigma},\quad4\mu_0.
+\]
+They are positive units through all allowed openings. The only potentially
+nonzero remaining cross entry is $N_zV$. The exact relation
+\[
+ V^2=\sigma tA_\theta^2+u\sigma(t-x)A_\theta R_h
+       -\sigma(t-x)VN_z
+\]
+introduces an arbitrarily large finite positive $V^2$ pivot with only
+infinitesimal changes to all other entries. Its real Schur complement
+therefore makes the residue strictly positive definite. The exact bounded
+Gram is positive definite by the standard finite-dimensional local
+criterion. All excess squares are nonnegative with separated coefficients.
+
+\paragraph{Away from the angular contact: $u$ a bounded unit.}
+The same source chart has a positive-unit angular gap at every such real
+residue. A convenient raw finite frame is
+$E_t=qW,F_t=Y/q,G_t=wZ/q,R_t=wW,X,Z$; products obey $E_tG_t=R_tZ$.
+The residue parent divided by $2/(1+\sigma)$ is exactly
+\[
+u^2E_t^2+D_u\{F_t^2/b+(F_t-G_t)^2/Q\}
+ +\frac{(uR_t+uX-Z)^2}{J_0}
+ +\frac{(X+uZ)^2}{\theta}-(1+\sigma)D_uZ^2,
+\quad J_0=1-\sigma.
+\]
+Eliminate the positive $F_t$ and $X$ directions and allocate
+the common product between the remaining two quadratic blocks. Up to a
+common positive factor the two blocks have diagonal products $AB,CD_0$
+and total off-diagonal magnitude $E_0$, with $U=u^2>0$ and
+\[
+\begin{gathered}
+\delta=1-\sigma+\theta U,\qquad
+A=U,\quad B=1+U,\quad C=U/\delta,\\
+D_0=(1+U)[(1+U)/\delta-(1+\sigma)],\quad
+E_0=\sqrt U(1+U)/\delta.
+\end{gathered}
+\]
+Both diagonal products are strictly positive, since
+$1+U-(1+\sigma)\delta=\sigma^2+U[(1+\sigma)h-\sigma]>0$.
+All square roots in this sentence are real-residue quantities used to
+choose real allocation constants, not mixed tensor radicals.
+The required strict inequality is $E_0<\sqrt{AB}+\sqrt{CD_0}$.
+Set $N=U(2\sigma-\theta U)$. Directly,
+\[
+E_0^2-AB-CD_0=(1+U)N/\delta,\quad
+N^2-4U^2[1+U-(1+\sigma)\delta]
+ =U^3(\theta^2U-4h).
+\]
+If $N\leq0$ strictness is immediate. If $N>0$, then
+$\theta^2U<2\sigma\theta\leq2h<4h$, again giving strictness.
+The single-opening faces follow by their constrained limits. At the only
+double opening $J=\theta=0$, so $\sigma=h=1$, the exact limit is
+$E_0-\sqrt{CD_0}\longrightarrow\sqrt U$, whereas $AB-U=U^2>0$.
+Here is a full-frame square completion which also justifies those cap
+limits. For clarity first take $u>0$ and select a finite real
+$\rho$ in the nonempty interval
+\[
+\max\{-\sqrt{AB},E_0-\sqrt{CD_0}\}<\rho
+ <\min\{\sqrt{AB},E_0+\sqrt{CD_0}\}.
+\]
+Its nonemptiness follows from the strict allocation inequality above.
+Put
+\[
+r_\rho=D_u/u-\rho\delta/U,\qquad
+s_\rho=D_u[2\rho/u-(1+\sigma)]-\rho^2\delta/U>0.
+\]
+The preceding complete residue form equals
+\begin{align*}
+&UE_t^2+D_uG_t^2-2\rho E_tG_t
+ +\frac{D_u}{bQ}(F_t-bG_t)^2\\
+&\quad+\frac{\delta}{J_0\theta}
+ \left[X+\frac{U\theta R_t+u(J_0-\theta)Z}{\delta}\right]^2
+ +\frac U\delta(R_t-r_\rho Z)^2+s_\rho Z^2.
+\end{align*}
+The equality uses only $E_tG_t=R_tZ$ and is checked exactly.
+For $u<0$ take the correspondingly signed $\rho$; all sign choices are
+real constants in this allocation. All triangular minimizer coefficients
+are bounded through every opening because $U$ is a unit and
+$\delta=J_0+U\theta$. Their positive hard weights stay bounded below.
+At the double face choose $|u|<|\rho|<\sqrt{U(1+U)}$, with matching
+sign; then $s_\rho$ has a positive-unit limit. This proves uniform
+coercivity of the constrained residue, not just determinant positivity.
+
+For completeness the exact centered cap rows in the raw frame are
+\[
+ F_t-bG_t,\quad
+ uR_t+uX-qwF_t+(J-1)Z,\quad X+uhZ.
+\]
+Only one of $b,Q$ can tend to zero. The other two rows have hard parts
+on $(R_t,X)$ with determinant $u$, a unit; each single row has a unit
+hard entry. Their simultaneous kernel is solved exactly by
+\[
+F_t=bG_t,\qquad X=-uhZ,\qquad
+R_t=\{(u^2h-J+1)Z+qwbG_t\}/u.
+\]
+More generally, prescribed changes $(e_F,e_D,e_\beta)$ in these three
+rows are produced by
+$\Delta F_t=e_F$, $\Delta X=e_\beta$,
+$\Delta R_t=(e_D-u e_\beta+qw e_F)/u$.
+This is a bounded separated right inverse: its only inversion is the
+pure-testing unit $u$. For the finite-cap existence argument fix $u$
+at its ordinary real residue, so the same inverse is an ordinary real
+finite-dimensional right inverse. No order on the tensor product is
+used. It lifts the limiting constrained kernel to the exact centered
+kernel while keeping every opening independent. The
+bounded residual form restricted to that kernel is the strictly positive
+constrained form just computed. An elementary block Schur complement
+then provides finite sufficiently large caps on every divergent row;
+bounded rows retain their full coefficients. This is the finite-cap
+lemma used in the UH proof. It yields a strictly positive bounded
+full-frame Gram. Exact coefficients differ from their residues
+infinitesimally, completing this strip.
+All divisions by $\delta$ and radicals in this paragraph belong only
+to the ordinary real residue calculation and its face limits. The exact
+tensor Gram uses the polynomial raw frame, real allocation constants,
+and finite source caps; it introduces no mixed inverse or radical.
+
+Consequently this section closes the $L$ unbounded, $\sigma$ bounded-unit
+subdomain of C1.4 under the original parent, including all state normals,
+all independent opening rates, and $\beta=0$. It does not close the
+$\sigma$ infinitesimal subdomain or claim a whole-row count change.

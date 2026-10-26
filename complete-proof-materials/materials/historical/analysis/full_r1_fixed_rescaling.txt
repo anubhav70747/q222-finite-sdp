@@ -1,0 +1,85 @@
+FIXED HALF-ANGLE RESCALING: AN EXACT DIAGONAL-CONGRUENCE OBSTRUCTION
+
+Conclusion. A universal identity on the nine canonical source columns
+implementing u->a u,v->b v by a constant source-linear map, a fixed
+invertible diagonal state scaling, and one common positive testing
+multiplier exists only for a=b=1 when a,b>0. This rules out this direct
+way of transporting finitely many rescaled cap copies. It does not
+rule out non-diagonal or more general rational state transformations,
+new Gram witnesses, or a special map defined only on a nonlinear source
+subfamily. It is not a failure of cap adequacy.
+
+1. Exact columns and state convention.
+
+Start with uniform-contact/extraction/compile_affine.py and invert its
+rotation:
+ t=(X+uZ)/(1+u^2), r=(Y-uW)/(1+u^2),
+ w=(W+uY)/(1+u^2), zeta=(Z-uX)/(1+u^2).
+Multiplying its target by Du=1+u^2 gives the original polynomial
+quarter-parent. Write Dv=1+v^2. Its eight event columns are
+ f_lambda=Du(W+vX)^2,        f_n=Du Dv X^2,
+ f_m=(vW-X+uvY-uZ)^2,       f_C=Dv(uW-Y)^2,
+ f_A=Du Dv Y^2,             f_D=[Y+vZ-u(W+vX)]^2,
+ f_alpha=Du(vY-Z)^2,        f_beta=Dv(X+uZ)^2,
+and f_d=(f_D+f_alpha+f_beta-Du Dv Z^2)/2.
+These are identities of the actual affine source family, before any
+stationary-source substitution. Standard angle normalizations may
+be absorbed into the common testing multiplier below.
+
+2. The only pure-X^2 source combination.
+
+Take an arbitrary real linear combination of these nine columns and
+put Dbar=D+d/2, alphabar=alpha+d/2, betabar=beta+d/2.
+If every state coefficient other than X^2 is zero, the WY,WX,YZ,XZ
+coefficients, respectively, force
+ m=C, Dbar=-C; lambda=m; alphabar=Dbar; betabar=-m.
+For example WY/(2u)=m v^2-C(1+v^2)-Dbar and
+ WX/(2v)=lambda(1+u^2)-m+u^2 Dbar.
+The WW coefficient is then C Du Dv, so C=0. The remaining form is
+ Du Dv[n X^2+A Y^2-(d/2)Z^2].
+Thus A=d=0 and only f_n remains. This proves uniqueness over all
+real source coefficients; no source-positivity assumption is used.
+
+3. The two-column obstruction.
+
+Suppose, for a constant real source map M, constant invertible
+diagonal S=diag(sW,sX,sY,sZ), and positive scalar h(u,v),
+ f(c;au,bv,S psi)=h(u,v) f(Mc;u,v,psi)                  (*)
+holds for all source vectors and all testing/state variables on an
+open rectangle. Set c to the n column. By section2 its image under
+M must be k times that same column, k!=0. Hence necessarily
+ h(u,v)=(sX^2/k)(1+a^2u^2)(1+b^2v^2)/(Du Dv).          (**)
+Now set c to the D column and compare only its WW coefficient.
+The left coefficient is a^2u^2 sW^2. The right coefficient is h times
+a polynomial in u,v, because Mc is a constant source vector. Thus
+ u^2 Du Dv/[(1+a^2u^2)(1+b^2v^2)]
+must be a polynomial (up to a nonzero real constant).
+
+In R[u,v], 1+a^2u^2 can divide u^2(1+u^2)(1+v^2) only if
+a^2=1: it is coprime to u and to every nonzero polynomial in v.
+Likewise the v factor forces b^2=1. Positivity gives a=b=1.
+Equation (**) also shows that allowing an arbitrary common testing
+multiplier does not evade this coefficient obstruction.
+
+Optional extension within diagonal congruences. The same cross-state
+calculation shows that every diagonal member of the nine-column span
+is Du Dv times a constant diagonal matrix: before imposing WW=0 it is
+Du Dv diag(C,n,A,-C-d/2). Thus each of the four pure state squares
+occurs uniquely up to scale. If S is instead a positive diagonal
+testing-dependent matrix, applying (*) to those four source vectors
+forces all ratios si(u,v)^2/sX(u,v)^2 to be constant. Its common
+testing factor can be absorbed into h, reducing to the case just
+proved. This covers positive diagonal rational rescalings as well;
+it says nothing about general non-diagonal testing-dependent matrices.
+
+4. Relation to the source dictionary and finite coverage.
+
+At the level of zero locations alone, dividing testing angles by a,b
+would send a contact (sqrt(x),sqrt(y)) to
+(sqrt(x)/a,sqrt(y)/b). This does not produce a source-linear map of
+the above event columns or preserve the RSR source dictionary by
+itself. In particular source_dictionary.py's x=jB,y=TB do not supply
+the missing identity (*). A source-dependent rescaling also does not
+give fixed testing gates. Therefore a cap enlargement or a different
+exact covariance is needed; the simple fixed diagonal rescaling route
+cannot justify the desired finite source/test cover.

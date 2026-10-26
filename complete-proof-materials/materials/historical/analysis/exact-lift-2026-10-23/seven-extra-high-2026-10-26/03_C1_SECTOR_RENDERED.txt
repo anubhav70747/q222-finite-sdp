@@ -1,0 +1,100 @@
+      C1 Independent Sector Audit
+
+
+
+ 
+
+
+C1 infinitesimal-total-scale: exact full-state audit and FM repair
+Pinned source: latex/certificates/c1_short.tex at commit 0565db3414e4fb2366fe4596fd2ff3c62867bbdf. This note is not a complete proof of the native C1 sector. It gives exact directly checked lemmas, an error and its repair, and a precise remaining obligation. The CA5/CA6/CA8 and SE4/SE9–SE11 bases are deliberately not assumed proved here.
+Native hypotheses and allowed tensor operations
+Take real closed coefficient and test fields K_c,K_t independently, d=1, lambda=n=0, original nonnegative event coefficients m,C,A,alpha>0, D,beta>=0, D+beta>0, a genuine finite stationary native contact, and the strict native gaps. The source-only coordinates are x=k^2, 0<k<=1, eta,zeta>0, r=1-a eta and theta=t zeta, h=1-theta; E=1-x eta h, Q=1-x zeta r, M=1+xr-t, J=1+xh-a are strictly positive. Source total scale delta_tot is infinitesimal. No testing variable is set equal to its coefficient-side contact, and no mixed-field inverse is introduced.
+The complete quarter-parent, valid identically for all real states and independent tests, is
+
+
+
+
+F/4 = m(vW-X+uvY-uZ)^2 + C Dv(uW-Y)^2 + A Du Dv Y^2
+    + (D+1/2)(uW+uvX-Y-vZ)^2
+    + (alpha+1/2)Du(vY-Z)^2 + (beta+1/2)Dv(X+uZ)^2
+    - (1/2)Du Dv Z^2.
+
+1. Independently checked native and remote lemmas
+Gap lemma. With P_d=p_0+eta p_1 and B_5=K(1+y)(r+eta)-(eta T-1+r)P_d, define mathcal A, mathcal B, mathcal C as in NC6. The exact identity h B_5=-mathcal A E^2+mathcal B E-mathcal C was expanded symbolically with x eta h=1-E and theta=1-h. Since B_5>=0, mathcal C>=G=h+zeta, mathcal B<=18G, one obtains E>=1/18, independently of all testing coordinates and also at D=0 or beta=0.
+Unbounded adjacent-event lemma. For C,A unbounded, retain real caps C=A=mu and their positive excess squares. The exact whole signed core in the raw state frame B=X+uZ, V=vZ is
+K=(uW-Y+uvB)^2 + Dv B^2 + Du v^2 Y^2 + Du u^2 V^2 - 2 Du u V(W+vB).
+At a nonzero real Alice residue, its restriction to the kernel W=Y=0 of the event caps has matrix
+[[1+v^2 Du, -Du u v],[-Du u v, Du u^2]], determinant Du u^2>0.
+A real finite-penalty lemma gives a positive strict residue Gram on (W,Y,B,V); the reciprocal charts are the exact CE4, CE6 and CE7 identities with the printed state transformations, which can be checked termwise. This provides independent-test remote coverage whenever Alice has noninfinitesimal half angle, without a lower bound on D or beta.
+Large-eta, bounded-inverse-L remote lemma. On the genuine C14.1 subdomain x, sigma=1/eta infinitesimal, z=1/(x zeta) bounded, the exact P1 source identities yield e=xh/sigma=O(x+sigma) and the three leading coefficient ratios C/C0,A/A0,alpha/alpha0 ~ 1. In inverse-Alice coordinates p=1/u bounded, w=1/v infinitesimal, set
+E0=sqrt(z)W, F0=Y/sqrt(z), G0=wZ/sqrt(z), R0=X+wW, S0=pX, J0=F0-bG0, with r=bz, Q=1-b, H0=1+zQ, B=H0/(bQ).
+The direct exact completion IA3 is
+
+
+
+
+2z(G0-F0)^2+2p^2 z F0^2-4p E0 G0
++2/(1-r)(E0-pzF0)^2+2H0/b (1+p^2)F0^2+2/Q (1+p^2)(F0-G0)^2
+=2/(1-r)(E0-pzJ0-pG0)^2+2B(1+p^2)J0^2+2H0 G0^2.
+
+After retaining whole original event excess squares, the full original four-state identity IA6 becomes Ftilde=f Qform+Pi+Error, where Pi consists solely of retained positive event/core squares, f=min(1,C/C0,A/A0,alpha/alpha0)~1, and
+Error=-4(1-f)p E0 G0-4p w^2 E0 F0+4 sqrt(z) w S0(G0-F0).
+For fixed real P>=max(1,st(p)), t=p/P in [0,1], E*=E0/P, J*=sqrt(B)J0, G*=sqrt(H0)G0, the exact IA8 five-root reserve satisfies
+Bform >= (1/2)(R0^2+S0^2+E*^2+J*^2+G*^2)
+as a separated SOS, using only 1-a^2-c^2=zQ(1-r)/H0>=0. Every coefficient of Error is bounded with zero separate residue (source factor 1-f or testing factor w). Thus the strict-residue tensor lemma certifies the complete inverse-Alice remote parent, including full states, at any independent rate. It does not prove the different double-infinitesimal Alice/Bob local subchart.
+2. Exact defect and repair in the matched-Bob FM leaf
+Source domain S,kappa positive infinitesimal, nu,ell positive bounded units, nu+ell=1, with the native physical conditions, including beta=0; in this domain D/S~nu^2/2 so D=0 has empty intersection. Put x=kappa S, theta=1-h, b1=beta theta, j=sqrt(nu ell).
+Use N_x=X+h uZ, N_y=(Y-r uW)/sqrt(Sr(1-r)), T=kappa W, U=uZ, P=uW/sqrt S, Q=sqrt S Z, N=T-jU, G=P-jQ.
+The original FM17 prints -(b1+theta/2)(1+v^2) in the coefficient L_U. The correct sign is plus. The exact complete-parent differentiation gives
+
+
+
+
+L_x_actual = -m v(1+r u^2) W + (D+1/2)u^2 v(1-r) W
+           + u Z [m theta -(D+1/2)v^2(1+h u^2)
+                     +(b1+theta/2)(1+v^2)].
+
+The printed FM18, when based on printed FM17, differs by
+L_x_actual-L_x_printed = 2(beta+1/2)theta(1+v^2) uZ.
+This is a nonzero universal four-state polynomial even at strict native sources. At the actual contact, where the physical normal derivative vanishes and N=G=0, the printed L_U(x,b)=-2(beta+1/2)theta(1+b^2)<0. Therefore its claimed monic divisibility in FM19 fails as printed.
+Repair: set
+
+
+
+
+L_U_correct = m theta -(m j/kappa)v(1+r u^2)
+ - (D+1/2)v^2(1+h u^2) +(b1+theta/2)(1+v^2)
+ + (D+1/2)(1-r)vjS.
+
+Exact direct coefficient comparison now verifies the full original parent: FM10's graph scalar, both first state-normal rows FM18, and all three hard entries FM16, identically, before using any source contact equations. Source stationarity makes L_U_correct(x,b)=0. Its residue at u^2=0 is (ell-nu v^2)/2, hence the required monic quotient has residue l_v=-nu b=-j. The other normal coefficients retain their printed values.
+After the unchanged exact MB3 monomial-zero budget, the corrected full six-root Gram in (N_x,N_y,N,G,B,B_u) has residue
+
+
+
+
+(Nx^2+Ny^2)/(2nu) + h N^2/(2nu^2)
++G^2/(2nu)+(ell-nu)GB+nu B^2/2
++theta N Bu-2j Nx Bu+4Bu^2.
+
+Its (G,B) block has determinant nu ell>0. The final normal Schur pivot is
+4-2 nu j^2-theta^2 nu^2/(2h)>0,
+because j^2=nu ell<=1/4, h>=nu>0, and 0<=theta<=1 in residue. This validates the corrected local FM matched Bob certificate at all independent relative rates, with positive beta packet retained whole. The unmatched and reciprocal Bob joins additionally use the whole-identity EB5–EB7. I independently replayed EB5 and the actual m,D,alpha,C,A event amplitude decompositions; their unmatched scalar block has determinant (s^2-ell)^2/4, so it is strict precisely off the matched residue. Positive event packets and projective homogeneous factors are pure-field throughout.
+3. Propagation into the unit-kappa source leaf
+The UKR10 replacement recipe reuses FM17/FΜ18. It therefore must use L_U_correct, with positive (b1+theta/2)D_v; keeping the printed negative sign prevents exact four-state coefficient matching. The UKR8 identity for capping the full m contact-zero event and UKR9's beta theta cross terms are exact. The UKR2 angular budget was directly replayed modulo TU=kappa PQ.
+For positive-unit kappa,nu,ell, UKR14's real Schur identity and UKR15's numerator factorization were checked exactly (using R=1-A, nu=A+kappa h, ell=1-A-kappa h, b^2=ell/nu). The positive bracket decomposes into
+A^3 R(4-A) + A^4(R-kappa) + A^2 R(h-A)(3+A+2kappa) + R^2(h-A)(A^2-kappa(h-A)),
+which is strictly positive on the actual native residue domain A,R positive units, 0<A<1, R>=kappa, h>=A, A^2>=kappa(h-A). This calculation includes the allowed D=0 and beta=0 source faces, subject to the native gaps. Correcting FM17 is necessary before this Schur argument constitutes a certificate of the original full parent.
+4. What remains unresolved in this independent audit
+The full C1 infinitesimal-total-scale sector is not yet independently proved by this note. Its trichotomy is a finite ordered-source partition, but this alone does not establish the tensor SOS of every local leaf. In particular, the full two-normal divided-coefficient matrices at the ell-infinitesimal source endpoint (EL5–EL21), the nu-infinitesimal endpoint (NU14–NU21), and the double-infinitesimal kappa,nu source under both bounded and unbounded tau (BN13–BN17 / UN14–UN21) require actual independent coefficient replay if they are to be counted as verified, rather than invoked by section title. Likewise several k-unit and eta-unit source leaves have not been rederived here.
+The first exact incorrect implication found is FM17 as printed => FM18 universal parent identity => FM19 monic contact divisor. The sign correction closes this defect in the FM leaf and must propagate to UKR10. No counterexample to tensor-SOS or to global qualitative existence follows from this printing error; the corrected residue is strict.
+Reproducibility
+Run the enclosed SymPy scripts; they use symbolic polynomial identities, source-side algebraic relations, and real Schur algebra only, with no numerical sampling. verify_FM_normals_corrected.py checks FM18 against the original parent, verify_FM10_generic.py checks the full graph scalar, verify_FU8_FU9.py checks the alternative capped full-parent frame, verify_EB5.py checks the normalized remote core, and verify_structural.py, verify_UKR14.py check source gaps, inverse-Alice reserves, monomial budgets and real strictness.
+
+
+
+
+
+
+
+
+

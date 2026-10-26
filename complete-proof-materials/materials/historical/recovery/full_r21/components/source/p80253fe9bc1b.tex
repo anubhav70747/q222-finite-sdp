@@ -1,0 +1,138 @@
+\section[Five consecutive lower-bounded event packets]{Five consecutive lower-bounded event packets}
+\label{sec:five-retained-events}
+
+The following argument permits every retained event coefficient to be
+unbounded. It requires no canonical omission, actual-contact coordinates,
+or source-shape entry. Five consecutive events in the eight-cycle suffice.
+
+\begin{theorem}[Five consecutive lower bounds]
+\label{thm:five-retained-events}
+Let the original canonical source be physical, with $d>0$ and all eight
+event coefficients nonnegative. Suppose
+\[
+ d/m,\ d/c,\ d/A,\ d/D,\ d/\alpha
+ \quad\hbox{are positive bounded coefficient elements}.
+\]
+Then the entire original parent is tensor SOS at every independent
+projective measurement pair and every real or complex projective state.
+There is no upper bound on any event coefficient divided by $d$.
+By exact CHSH relabeling the same conclusion holds if any five
+consecutive event coefficients in the cycle
+$(\lambda,D,c,A,\alpha,m,\beta,n)$ have these lower bounds.
+\end{theorem}
+
+\begin{proof}
+Divide by the positive pure coefficient $d$, so $d=1$.
+Let $\mu=\min(1,m,c,A,D,\alpha)$. It is a positive bounded unit.
+Select the parent $F_\mu$ with $m=c=A=D=\alpha=\mu$ and
+$\lambda=n=\beta=0$. Keep every nonnegative excess and all three
+unselected coefficients as their original event squares. This uses only
+pure coefficient square roots. It makes no assertion that $F_\mu$ is
+globally physical.
+
+At noncommuting residue tests apply
+the inherited noncommuting-residue theorem to the full physical source. It
+performs its own positive coefficient normalization if the event
+weights are unbounded.
+It remains to certify $F_\mu$ near every commuting residue test. Its
+coefficients are bounded, so a positive-definite real residue Gram is
+sufficient by the bounded positive-residue Gram lemma.
+
+Write $\mathcal H$ for the signed core with $d=1$ and
+$D_u=1+u^2,D_v=1+v^2$. On the four open commuting axes its exact
+homogeneous restrictions are
+\[
+\begin{aligned}
+\mathcal H|_{u=0}&=2D_v(X^2+Y^2),\\
+\mathcal H|_{v=0}&=2\{(uW-Y)^2+(X+uZ)^2\},\\
+\mathcal H|_{u=\infty}&=2\{(W+vX)^2+(vY-Z)^2\},\\
+\mathcal H|_{v=\infty}&=2D_u(X^2+Y^2).
+\end{aligned}                                                   \tag{NW1}
+\]
+The remaining finite angle has nonzero residue. At $u=0$, the retained
+$m,D$ packets force $W=Z=0$ on the core kernel. At $v=0$, the retained
+$A,\alpha$ packets force $Y=Z=0$, and then $W=X=0$. At $u=\infty$,
+the retained $c,A$ packets force $W=Y=0$, and then $X=Z=0$. At
+$v=\infty$, the retained $c,D$ packets force $W=Z=0$ after the core
+has forced $X=Y=0$. Thus the
+selected residue state matrix is positive definite on every open axis,
+for either sign of the other finite angle.
+
+Normalize a nonzero testing state by a coordinate of largest absolute
+value. Its coordinates are then bounded and one is a unit. At the four
+double corners, write $F_{ab}$ for the homogeneous restriction of
+$F_\mu$ to $(u,v)=(a,b)$. Directly,
+\[
+\begin{aligned}
+F_{00}&=(2+4\mu)X^2+(2+12\mu)Y^2+4\mu Z^2,\\
+F_{\infty0}&=(2+8\mu)(W^2+Z^2)+4\mu Y^2,\\
+F_{0\infty}&=4\mu(W^2+Z^2)+2X^2+(2+12\mu)Y^2,\\
+F_{\infty\infty}&=4\mu W^2+(2+4\mu)X^2+(2+12\mu)Y^2.
+\end{aligned}                                                    \tag{NW2}
+\]
+Here infinity means the polynomial homogeneous chart, obtained by
+dividing the finite parent by the appropriate pure-testing squared
+angle. Every form is strict except its explicitly missing state
+coordinate. Consequently the only nontrivial residue states are the
+$W$ ray at $(0,0)$, the $X$ ray at $(\infty,0)$,
+and the $Z$ ray at $(\infty,\infty)$.
+
+At $(0,0)$ normalize $W=1$. The five local coordinates
+$(u,v,X,Y,Z)$ are infinitesimal. The complete polynomial $F_\mu$
+has no constant or linear term, and its degree-two part is
+\[
+ (2+8\mu)(u-Y)^2+2X^2
+       +4\mu\{(v-X)^2+Y^2+Z^2\}.                    \tag{NW3}
+\]
+Its residue is positive definite: vanishing successively gives
+$X=Y=Z=v=u=0$.
+
+At the corner $(\infty,0)$ normalize $X=1$ and put $p=1/u$.
+The five infinitesimal coordinates are $(p,v,W,Y,Z)$. The complete
+homogeneous polynomial again has no terms below degree two, and its
+quadratic part is
+\[
+ (2+4\mu)(W+v)^2+(2+4\mu)(p+Z)^2
+                         +4\mu(W^2+Y^2+Z^2).        \tag{NW4}
+\]
+This is positive definite. At the corner $(\infty,\infty)$,
+normalize $Z=1$ and put $p=1/u,q=1/v$. On $(p,q,W,X,Y)$ the exact
+quadratic part is
+\[
+ (2+8\mu)(q-Y)^2+2X^2
+                         +4\mu\{(p-X)^2+Y^2+W^2\}. \tag{NW5}
+\]
+It is positive definite as well. One can obtain (NW5) directly from
+(NW3) by the exact symmetry
+$(u,v;W,X,Y,Z)\mapsto(1/v,1/u;Z,X,Y,W)$, which permutes the five
+equal retained weights.
+
+For completeness, these quadratic calculations control the entire
+polynomial. In each local chart, allocate every higher monomial to a
+product of two of the five coordinate roots. The remaining monomial
+has positive degree, hence is infinitesimal; its coefficient is bounded
+because it is a real polynomial in the bounded unit $\mu$. Symmetrizing
+gives an exact finite five-root Gram whose residue is (NW3), (NW4), or
+(NW5). No inversion, root, or comparison mixing the two fields occurs.
+The bounded positive-residue Gram lemma therefore certifies the full
+selected polynomial, including all higher terms.
+
+Restore the excess event squares, the positive pure-testing homogeneous
+and projective state factors, and the positive coefficient $d$. The
+zero state is immediate. Splitting a complex state into real and
+imaginary parts proves the complex assertion.
+
+Finally the exact full-parent Alice reflection acts on the displayed
+cycle indices as $i\mapsto7-i$, and the swap/reflection
+$(u,v;W,X,Y,Z)\mapsto(1/v,1/u;Z,X,Y,W)$ acts as $i\mapsto6-i$.
+Their composition gives a one-step cycle rotation. Their full-parent
+identities have only positive pure-testing homogeneous factors, so they
+transport the five-packet conclusion to every cyclic translate.
+\end{proof}
+
+This theorem is a sufficient source domain, not an exhaustive zero-$d$
+source cover. It requires five selected events to be positive and
+noninfinitesimal relative to $d$. Its all-tests conclusion is independent
+of actual contact angles and of all original event hierarchies. In
+particular, it contains both C1 and C2 sources with all six retained
+events bounded below relative to $d$.

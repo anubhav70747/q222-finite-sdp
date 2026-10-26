@@ -1,0 +1,144 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{lemma}{Lemma}
+\newcommand{\R}{\mathbb R}
+\title{Necessary face and contact conditions for a ramified selector}
+\author{}\date{}
+\begin{document}\maketitle\vspace{-2em}
+Use the canonical source order
+$c=(d,\lambda,n,m,C,A,D,\alpha,\beta)\ge0$ and the matrices $P,N,E,K$
+of the canonical-completion note. Put $v=16s^2$ and let
+$J(s)\in(\R[s]_{\le4})^{2\times2}$. Write $R=K-E-J$ and
+\[
+ G=\begin{pmatrix}P+K&J\\J^T&N+K\end{pmatrix},\qquad
+ H=\begin{pmatrix}P+E&R\\R^T&N+E\end{pmatrix}.
+\]
+The nine source coordinates remain independent. The conditions below
+are necessary for positivity on $s\ge0$ and do not suffice for a completion.
+
+\begin{lemma}[Endpoint support and contact interpolation]\label{lem:necessary}
+Let $D_i^M(s)$ be diagonal entry $i$ of $M=G,H$. With $\delta=d/2$,
+$D_i^M(s)=4(a_i^M+256b_i^Ms^4)$, where
+\[
+\begin{array}{c|cc|cc}
+ i&a_i^G&b_i^G&a_i^H&b_i^H\\\hline
+ 1&\lambda&m&A&m+A+\alpha+\delta\\
+ 2&m+\beta+n+\delta&\beta+\lambda+n+\delta
+   &m+\beta+\alpha+\delta&\beta\\
+ 3&C+D+\lambda+\delta&C&C+D+A+\delta&C+A+\alpha+\delta\\
+ 4&n&D+\lambda+n+\delta&\alpha&D
+\end{array}
+\]
+For $i,j\in\{1,2\}$, an entry $Z_{ij}$, with $Z=J$ for $G$ and
+$Z=R$ for $H$, vanishes identically if either $D_i^M$ or $D_{j+2}^M$
+does. Otherwise every exponent $k$ occurring in it satisfies
+\begin{equation}
+ \frac{\operatorname{ord}_0D_i^M+\operatorname{ord}_0D_{j+2}^M}{2}
+ \le k\le
+ \frac{\deg D_i^M+\deg D_{j+2}^M}{2}.                \label{eq:support}
+\end{equation}
+Here the orders and degrees of a nonzero diagonal are $0$ or $4$.
+Thus these conditions are explicit affine restrictions on the twenty
+coefficients of $J$, on every source face.
+
+At an interior full-state contact $(U_0,s_0;a,b)$, where $U_0>0$,
+$s_0>0$, and the canonical form $\Phi_c(U_0,16s_0^2;a,b)=0$, put
+$g=(a,U_0b)^T$, $h=(a,b)^T$. Then
+\begin{align}
+ G(s_0)g&=0,& H(s_0)h&=0,\notag\\
+ J(s_0)b&=-(P+K)(s_0)a/U_0,&
+ J(s_0)^Ta&=-U_0(N+K)(s_0)b,                       \label{eq:values}\\
+ 2U_0a^TJ'(s_0)b
+ &=-a^T(P+K)'(s_0)a-U_0^2b^T(N+K)'(s_0)b.         \label{eq:derivative}
+\end{align}
+Primes mean differentiation with respect to $s$. These formulas require
+no positive source coefficient and no nonzero state component.
+\end{lemma}
+\begin{proof}
+The displayed diagonals follow by direct substitution; in particular
+the signed $d$ terms cancel in the leading coefficients of $H_{22}$
+and $H_{44}$. All table entries are nonnegative.
+Every $2\times2$ principal minor gives
+$|Z_{ij}(s)|^2\le D_i^M(s)D_{j+2}^M(s)$.
+The lowest and highest powers as $s\downarrow0$ and $s\to\infty$
+prove \eqref{eq:support}, including all literal zero cases.
+
+The exact identity
+\[
+ \Phi_c(U,16s^2;a,b)=
+ \binom a{Ub}^{\!T}G(s)\binom a{Ub}
+ +U\binom ab^{\!T}H(s)\binom ab
+\]
+makes both terms zero at a contact, so each PSD matrix kills its
+displayed vector. This gives \eqref{eq:values}.
+For a fixed kernel vector, the corresponding scalar quadratic form
+has a minimum at the interior point $s_0$; differentiating $g^TG(s)g$
+gives \eqref{eq:derivative}.
+The analogous derivative from $H$ is consistent: its sum with the
+$G$ derivative, weighted by $U_0$, is $\partial_s\Phi_c=0$.
+\end{proof}
+
+On C1, $\lambda=n=0$, $d,m,C>0$, the first support restriction gives
+\begin{equation}
+ J(s)=\begin{pmatrix}
+ p_2s^2+p_3s^3+p_4s^4&q_4s^4\\
+ r_0+r_1s+r_2s^2+r_3s^3+r_4s^4&\ell_2s^2+\ell_3s^3+\ell_4s^4
+ \end{pmatrix}.                                    \label{eq:c1-form}
+\end{equation}
+Only four coefficients are added to an unramified quadratic selector:
+$p_3,\ell_3,r_1,r_3$. The second support restriction also retains
+the literal source faces. If $D=0$, necessarily
+$J_{12}=0$ and $J_{22}=\ell_2s^2+512ds^4$.
+If $\beta=0$, necessarily $\deg J_{21}\le2$ and
+$J_{22}=\ell_2s^2+512ds^4$.
+If both vanish, $J_{22}=512ds^4$.
+Additional zero sources are handled directly by the table; no passage
+to a strictly positive source is needed.
+
+\paragraph{The remaining local positivity condition.}
+The linear contact equations do not establish even local matrix
+positivity. For either $M=G,H$ at an interior contact, let $V$ span
+$\ker M(s_0)$ and let $T$ span a complementary subspace. Then
+$D=T^TM(s_0)T\succ0$ and local positivity necessarily implies
+\begin{equation}
+ V^TM'(s_0)V=0,\qquad
+ \frac12V^TM''(s_0)V
+ -(T^TM'(s_0)V)^TD^{-1}(T^TM'(s_0)V)\succeq0.       \label{eq:schur-jet}
+\end{equation}
+This follows by expanding the Schur complement to second order.
+If the complementary space is empty, the inverse term is zero.
+At $s=0$ only the one-sided condition $V^TM'(0)V\succeq0$ is
+automatic; if that matrix vanishes, the second condition above applies.
+The same boundary rule holds at infinity after reversing the polynomial
+as $\tau^4M(1/\tau)$.
+
+The physical kernel compatibility makes the value equations exact:
+if $\mathcal P_c h=0$ for the state matrix of $\Phi_c$, then $Gg=0$
+implies $Hh=0$ by its matrix splitting identity.
+When $a,b\ne0$, the value equations impose three independent linear
+conditions. The difference of any two solutions is exactly
+$t\,a_\perp b_\perp^T$, where $a_\perp=(-a_2,a_1)^T$ and similarly
+for $b$. If $a=0,b\ne0$, the homogeneous freedom is
+$w b_\perp^T$; if $b=0,a\ne0$, it is $a_\perp w^T$, with $w\in\R^2$.
+The prescribed right sides must of course be compatible.
+The first jets impose scalar kernel expectations, not $G'g=0$ or
+$H'h=0$. The same twenty polynomial
+coefficients must satisfy these conditions at every contact, the two
+endpoint support restrictions, and the coupled Schur inequalities
+\eqref{eq:schur-jet}. Rank drops use the full kernel $V$, rather than
+only the physical contact vector. Even these second-order conditions
+are not sufficient: $-(s-s_0)^4$ passes the corresponding scalar
+zero, first- and second-derivative tests but is negative nearby.
+
+The unresolved quantifier is therefore still
+\[
+ \forall c\in C_{\rm can}\quad\exists J_0,\ldots,J_4\in\R^{2\times2}
+ \quad\forall s\ge0:\quad G(s),H(s)\succeq0.
+\]
+Pointwise completion fixes neither the required derivatives nor a common
+quartic interpolant. Factorization of an already positive quartic
+matrix also does not supply that interpolant. The lemma gives necessary
+conditions for a universal proof; it proves neither universal adequacy
+nor a counterexample to it.
+\end{document}

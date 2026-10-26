@@ -1,0 +1,130 @@
+% Replacement for the rational-source example and its obstruction proof.
+% Inputs: parent, change, normal, split, lmis, three, and prop:degree
+% from canonical_completion.tex.  No additional scientific input is used.
+Consider the C1 source $\lambda=n=0$ with
+\begin{equation}
+ (d,m,C,A,D,\alpha,\beta)
+ =\left(359,\frac{75}{16},60,416,
+              \frac{41}{2},\frac{831}{2},\frac{151}{2}\right).
+ \label{simple:source}
+\end{equation}
+All six event weights are strictly positive. Dividing this tuple by $359$
+gives the same inequality with $d=1$; the scaling in
+\eqref{simple:source} keeps the following calculations short.
+
+\paragraph{Validity of the source.}
+Let $M_*(u,v)$ be the symmetric matrix of the full parent
+\eqref{parent} in $(W,X,Y,Z)$. Put $\xi=4u^2$ and $\eta=v^2/4$.
+Direct expansion gives, for $uv\ne0$,
+\begin{align}
+ \det M_*(u,v)
+ &=28800D_u^2D_v^2u^2v^2\,\mathcal L(\xi,\eta),
+ \label{simple:determinant}\\
+ \mathcal L(\xi,\eta)
+ &=3757645(\xi+\xi^{-1}-2)
+   +14022297(\eta+\eta^{-1}-2)\notag\\
+ &\quad+3732435(\eta/\xi+\xi+\eta^{-1}-3)
+   +8179670(\xi\eta+\xi^{-1}+\eta^{-1}-3).
+ \label{simple:balanced}
+\end{align}
+Each bracket is nonnegative by the two- or three-term arithmetic--geometric
+mean inequality: its positive monomials have product one.
+Thus the full state determinant is nonnegative.
+
+The $Z=0$ principal block $B_*$ is strictly positive for $u\ne0$.
+Indeed, its three positive $m,C,A$ terms give
+\[
+ B_*\succeq
+ T^T\operatorname{diag}(4m,4CD_v,4AD_uD_v)T,
+ \qquad
+ T=\begin{pmatrix}v&-1&uv\\u&0&-1\\0&0&1\end{pmatrix},
+ \qquad \det T=u.
+\]
+All remaining terms restricted to $Z=0$ are nonnegative.
+The scalar Schur complement therefore proves $M_*\succeq0$ whenever
+$uv\ne0$. Polynomial continuity gives both finite axes. Homogenizing
+the parent to bidegree $(2,2)$ in the two projective angle pairs gives
+their infinite endpoints as well. Both angle signs are included, and
+separating real and imaginary state amplitudes gives the same conclusion
+for complex states. This proves complete validity of the source.
+
+An exact contact is
+\begin{equation}
+ u_*=\frac12,\qquad v_*=2,\qquad
+ (W_*,X_*,Y_*,Z_*)=\left(2,-\frac14,\frac14,1\right).
+ \label{simple:physical-contact}
+\end{equation}
+The full state equation $M_*(u_*,v_*)\psi_*=0$ and both angle
+derivatives of the parent vanish exactly. In the change of coordinates
+\eqref{change}, the homogeneous state $10\psi_*$ is
+\begin{equation}
+ U_*=\frac14,\qquad
+ a_* =\binom{17}{2},\qquad b_* =\binom{12}{-18}.
+ \label{contact}
+\end{equation}
+
+\begin{theorem}\label{thm:obstruction}
+The valid source \eqref{simple:source} has no polynomial selector satisfying
+\eqref{lmis} for every real $v$. Equivalently, its polynomial
+$\Phi_c(u^2,v;a,b)$ is not a sum of polynomial squares in $(u,v,a,b)$.
+\end{theorem}
+\begin{proof}
+By Proposition~\ref{prop:degree}, a polynomial selector can be chosen as
+\eqref{three}. At the contact, both nonnegative summands in
+\eqref{split} vanish. Since a positive semidefinite matrix kills every
+vector on which its quadratic form vanishes, this forces
+\begin{equation}
+ J(2)b_*=-P(2)a_*/U_*=\binom{-4800}{-38400},\qquad
+ J(2)^Ta_*=-U_*N(2)b_*=\binom{1200}{9600}.
+ \label{kernel}
+\end{equation}
+For completeness, the two matrices here are
+\[
+ P(2)=\begin{pmatrix}75&-75/2\\-75/2&20475/4\end{pmatrix},
+ \qquad
+ N(2)=\begin{pmatrix}2000&1600\\1600&3200\end{pmatrix}.
+\]
+Writing $J(2)=\bigl(\begin{smallmatrix}4p&0\\2r&4s\end{smallmatrix}\bigr)$,
+the first coordinate of the first equation, and the two coordinates of
+the second, give
+\[
+ 48p=-4800,\qquad 68p+4r=1200,\qquad 8s=9600.
+\]
+The remaining equation $24r-72s=-38400$ is then satisfied.
+Consequently the unique possible polynomial selector is
+\begin{equation}
+ p=-100,\qquad r=2000,\qquad s=1200.
+ \label{forced}
+\end{equation}
+At $v=1$, the principal submatrix of $\mathcal G_J$ on coordinates
+$(a_2,b_1,b_2)$ is therefore
+\begin{equation}
+ \begin{pmatrix}
+ 8235/4&2000&1200\\
+ 2000&1280&800\\
+ 1200&800&800
+ \end{pmatrix},
+ \qquad \det=-412640000<0.
+ \label{minor}
+\end{equation}
+This contradicts $\mathcal G_J(1)\succeq0$.
+Positive scaling of the source scales $P,N,E,J$ by the same factor;
+thus the normalized $d=1$ source has selector parameters
+$(-100,2000,1200)/359$ and the negative minor
+$-412640000/359^3$.
+
+Finally, a polynomial sum of squares for $\Phi_c(u^2,v;a,b)$ can use
+roots of degree at most two in $u$, at most one in $v$, and homogeneous
+linear degree in the state coordinates: higher leading degrees cannot
+cancel in a sum of real squares. Averaging under $u\mapsto-u$ and using
+the constant and leading state supports, as in
+Theorem~\ref{thm:selector}, then produces a polynomial selector.
+Conversely, a polynomial selector gives polynomial matrix factorizations
+of its two positive univariate matrices and hence a polynomial sum of
+squares through \eqref{split}. This proves the stated equivalence.
+\end{proof}
+
+This obstruction is specific to polynomial selectors in this completion.
+It excludes neither an algebraic selector nor a certificate after an
+additional fixed testing multiplier, and does not exclude a finite
+semidefinite lift.

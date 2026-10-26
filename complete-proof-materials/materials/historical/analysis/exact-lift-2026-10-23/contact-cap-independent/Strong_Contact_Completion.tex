@@ -1,0 +1,438 @@
+\documentclass[10pt]{article}
+\usepackage[a4paper,margin=19mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,array}
+\newtheorem{theorem}{Theorem}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\Du}{D_u}
+\newcommand{\Dv}{D_v}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\coef}[1]{[#1]}
+\title{Fixed testing functions for the strong contact branch}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\vspace{-7mm}
+The complete state quadratic form can be completed uniformly when the
+native contact parameter has a fixed positive lower bound. The construction
+below gives its six by six Gram matrix by polynomial division, then assigns
+source-only positive matrices to fixed testing functions. It complements
+the weak-contact construction in \emph{Completing the state quadratic form
+at a singular contact}. All source and testing variables are independent.
+
+\paragraph{Native source.}
+Throughout this note \(H,z,y,r,t\) mean the original native source parameters,
+rather than the compact variables used for the weak branch. Put
+\[
+ \begin{gathered}
+ \eps=2^{-64},\quad 2^{-12}\le H<1,\quad
+ 0<z,y\le\eps H,\quad 0<r<1,\quad t>0,\\
+ a_c=1+zr,\quad j=a_c-t>0,\quad B=H+yt,\quad S=a_c+yt.
+ \end{gathered}
+\]
+Define
+\begin{align}
+ \Delta={}&z+(1+z)B+(1+z)B^2+2z(1+z)Br+z^3r^2+2z^2r
+       +y\{(1+z)B+z+z^2r(2-r)\},\nonumber\\
+ G_s={}&B+z(H+r-1),\qquad
+ M_s=(1+z)(B+zr)(H+y)-z(1+y)(1-r)yt,                 \label{eq:sourcepolys}\\
+ n={}&\frac{(B+zr)a_cS-r\Delta}{2r\Delta}\ge0,\qquad
+ m=\frac{z^2(1+y)(1-r)a_cS}{2G_s\Delta},\nonumber\\
+ C={}&\frac{a_cM_s}{2yt\Delta},\qquad
+ A=\frac{ya_c(B+zr)S}{2H\Delta},\qquad
+ D=\frac{(1+z)(B+zr)(B-zyr)S}{2yj\Delta},\qquad
+ \alpha=\frac{(B+zr)M_s}{2(1-H)\Delta}.              \label{eq:source}
+\end{align}
+The condition \(n\ge0\) is the physical source restriction.
+We normalize \(d=1,\lambda=\beta=0\).
+For independent real testing angles and state coordinates set
+\[
+ \Du=1+u^2,\quad \Dv=1+v^2,\quad
+ J=uW+uvX-Y-vZ,\qquad M=vW-X+uvY-uZ
+\]
+and write the complete, unnormalized slack as
+\begin{equation}
+\begin{split}
+ F={}&4n\Du\Dv X^2+4mM^2+4C\Dv(uW-Y)^2+4A\Du\Dv Y^2\\
+ &+4DJ^2+4\alpha\Du(vY-Z)^2
+       +2\{J^2+\Du(vY-Z)^2+\Dv(X+uZ)^2-\Du\Dv Z^2\}.
+\end{split}\label{eq:fullparent}
+\end{equation}
+Its compact value is \(S_{\mathbf c}=F/(4\Du\Dv)\).
+
+\begin{theorem}\label{thm:strong}
+Every source \eqref{eq:source} in the displayed domain has a Gram
+representation of \(S_{\mathbf c}\), for all real state coordinates and
+\[
+ |u|\le2^{-12},\qquad |v|\le2^{-25},
+\]
+in the following fixed testing family. Its base consists of the twenty
+functions \(\mathcal H_{20}/\sqrt{\Du\Dv}\) specified below. For each of the
+thirteen nonconstant exponents in Table~\ref{tab:budgets}, append the two
+eleven-function blocks
+\[
+ \frac{\sqrt{1\pm(4096u)^i(33554432v)^j}}{\sqrt{\Du\Dv}}\,
+ \mathcal H_{11}.
+\]
+All Gram entries depend only on the source. The representation includes
+literal \(n=0\) and arbitrary nonnegative additions of the eight event
+terms.
+\end{theorem}
+
+\section{The complete remainder and its polynomial Gram}
+
+Let \(k=\sqrt y\) and define the pure-source quantities
+\begin{equation}
+\begin{gathered}
+ s=a_c/B,\quad c_*=Cyt,\quad d_*=Dyj,\quad
+ \ell=y(C+D),\quad q=D/(C+D),\quad g=yCD/(C+D),\\
+ \ell_*=H/4,\quad \alpha_*=H^2/8,\quad
+ \mu=m/z^2,\quad \nu=nr,\quad a_\alpha=\alpha(1-H),\quad a_A=A/y .
+\end{gathered}\label{eq:scaledsource}
+\end{equation}
+The testing rows are
+\begin{align}
+ \xi&=X+zrvW/B,& \eta&=Y-HuW/B,& \zeta&=Z-uvW/B,\nonumber\\
+ R_h&=(uvX-vZ+syuW)/k,&
+ N&=\{Y-quvX+qvZ-(H/B+qsy)uW\}/k,\nonumber\\
+ R&=v(u^2-z)W,& T&=uk(u^2-z)W.                     \label{eq:rows}
+\end{align}
+In particular \(\eta=k(N+qR_h)\).
+The four terms
+\begin{equation}
+ \mathcal R_+=4(\ell-\ell_*)N^2+4Cv^2\eta^2
+       +4n\Du\Dv\xi^2+4(\alpha-\alpha_*)\Du(v\eta-\zeta)^2
+                                                               \label{eq:retained}
+\end{equation}
+remain whole. Their coefficients are nonnegative by Section~3.
+
+Here is a polynomial prescription for every entry of the remaining Gram.
+In the following expression regard \(N,\xi,\zeta,R_h,W\) as indeterminates,
+and abbreviate
+\[
+ X_0=\xi-zrvW/B,\quad Y_0=k(N+qR_h)+HuW/B,\quad
+ Z_0=\zeta+uvW/B,\quad K=ukW,
+\]
+\[
+ J_0=uW-Y_0+v(uX_0-Z_0),\qquad
+ M_0=vW-X_0+uvY_0-uZ_0.
+\]
+The complete remainder is
+\begin{equation}
+\begin{split}
+ \mathcal G={}&4\ell_*N^2+4gR_h^2
+ +\frac{8(d_*-c_*)}{B}KN-8gsKR_h
+ +\frac{4(c_*t+d_*j)}{B^2}K^2\\
+ &+\frac{4c_*t}{B^2}v^2K^2-\frac{8c_*}{B}v^2K(N+qR_h)\\
+ &+4\nu\Du\Dv\left(\frac{z^2rv^2}{B^2}W^2-\frac{2zv}{B}W\xi\right)\\
+ &+4\alpha_*\Du(vk(N+qR_h)-\zeta)^2\\
+ &+4a_\alpha\Du\left\{\frac{(1-H)u^2v^2}{B^2}W^2
+       -\frac{2uv}{B}W(vk(N+qR_h)-\zeta)\right\}\\
+ &+4z^2\mu M_0^2+4ya_A\Du\Dv Y_0^2
+ +2\{J_0^2+\Du(vY_0-Z_0)^2+\Dv(X_0+uZ_0)^2-\Du\Dv Z_0^2\}.
+\end{split}\label{eq:G}
+\end{equation}
+Expanding the event squares gives \(F=\mathcal G+\mathcal R_+\) at
+\eqref{eq:rows}. Thus both state normals are still present.
+
+Put \(U=u^2,V=v^2\). Coefficients below refer to the five state
+indeterminates in \(\mathcal G\). Define
+\begin{align}
+ \rho&=\frac{\coef{R_hW}\mathcal G}{uk},&
+ p_\xi&=\frac{\coef{\xi W}\mathcal G}{v}+u^2\rho,&
+ p_\zeta&=\frac{\coef{\zeta W}\mathcal G}{uv}-\rho,\nonumber\\
+ p_N&=\frac{\coef{NW}\mathcal G}{uk},&
+ \phi&=\coef{W^2}\mathcal G-su^2(v^2-y)\rho.          \label{eq:coeff}
+\end{align}
+Each division in \eqref{eq:coeff} is exact polynomial cancellation;
+the resulting four expressions \(p_\xi,p_\zeta,p_N,\phi\) are
+polynomials in \(U,V\). They define their values also on \(u=0\) or \(v=0\).
+Take the following monic divisions, which uniquely define all quotients
+and remainders:
+\begin{align}
+ p_\xi&=(U-z)A_\xi+z\{(V-y)B_\xi+r_\xi\},\nonumber\\
+ p_\zeta&=(U-z)A_\zeta+(V-y)B_\zeta+r_\zeta,\qquad
+ p_N=(U-z)A_N+(V-y)B_N+r_N,                         \label{eq:divnormal}\\
+ d_{\mathrm{rad}}&=\frac4{B^2}\{z^2\mu(B+zr)^2+(\nu r+r^2/2)z^2\},\quad
+ e_s=\frac4{B^2}(\nu r+r^2/2)z^2,\nonumber\\
+ \phi-\frac{d_{\mathrm{rad}}+e_{\mathrm{rad}}V}{z^2}V(U-z)^2
+       &=a_2(V)U^2+a_1(V)U,\nonumber\\
+ a_2&=(V-y)A_s+r_a,\qquad a_1=(V-y)B_s+r_b,\qquad
+ B_s+zA_s=(V-y)C_s+r_c.                            \label{eq:divscalar}
+\end{align}
+The symbol \(B_s\) in the last line is a quotient polynomial, unrelated
+to the native scalar \(B\). No division by a testing value is used.
+
+To explain why the six remainders vanish, the native stationary contact is
+\[
+ u=\sqrt z,\quad v=\sqrt y,\quad
+ (W,X,Y,Z)=\left(B/\sqrt{zy},-r\sqrt z,H/\sqrt y,1\right).
+\]
+At this point \(N=\xi=\zeta=R_h=R=T=0\).
+The rational weights \eqref{eq:source} give zero parent value and zero
+first derivatives in the three independent normal directions and in
+\(u,v\). After the \(\rho\)-elimination, the three normal derivatives give
+\(p_\xi(z,y)=p_\zeta(z,y)=p_N(z,y)=0\).
+The value and two angle derivatives give
+\(\phi(z,y)=\phi_U(z,y)=\phi_V(z,y)=0\).
+Equations \eqref{eq:divnormal}--\eqref{eq:divscalar} then give
+\begin{equation}
+ r_\xi=r_\zeta=r_N=r_a=r_b=r_c=0.                    \label{eq:zero}
+\end{equation}
+Indeed the scalar value and derivatives are respectively
+$z^2r_a+zr_b$, $2zr_a+r_b$ and $zr_c$; since $z>0$,
+their vanishing determines all three scalar remainders.
+These are exact source identities: equivalently, substitute
+\eqref{eq:source} in the six explicitly defined remainders and clear
+their positive source denominators.
+
+Let \(\mathcal G_0\) be the part of \(\mathcal G\) quadratic in
+\(N,\xi,\zeta,R_h\), with no \(W\). In the next formula evaluate every
+quotient at \(U=u^2,V=v^2\), and put \(Q_n=u\xi-\zeta\):
+\begin{equation}
+\begin{split}
+ \mathcal O={}&\mathcal G_0+
+ \{A_\xi-(v^2-y)B_\xi\}R\xi
+ +\frac{B_\xi}{s}(uv^2Q_n-uvkR_h)\xi\\
+ &+uA_\zeta R\zeta+\frac{B_\zeta}{s}(v^2Q_n-vkR_h)\zeta
+ +A_NTN+\frac{B_N}{s}(vkQ_n-yR_h)N\\
+ &+\frac{d_{\mathrm{rad}}+e_{\mathrm{rad}}v^2}{z^2}R^2
+ +\frac{A_s}{s}(-R_hT+uRQ_n)
+ +\frac{C_s}{s^2}(v^2Q_n^2-2vkR_hQ_n+yR_h^2).
+\end{split}\label{eq:O}
+\end{equation}
+This explicitly defines the symmetric six by six matrix
+\[
+ f=(N,\xi,\zeta,R_h,R,T)^T,\qquad
+ Q=\tfrac12\nabla_f^2\mathcal O,\qquad \mathcal O=f^TQf.
+\]
+Indeed, using \(kR_h=vQ_n+su(y-v^2)W\), direct monic division gives
+\begin{equation}
+ \mathcal G-\mathcal O=
+ vzr_\xi\xi W+uvr_\zeta\zeta W+ukr_NNW+
+ \{u^4r_a+u^2r_b+u^2(v^2-y)r_c\}W^2.               \label{eq:exactdifference}
+\end{equation}
+Together with \eqref{eq:zero}, this proves the entire parent identity.
+In particular \(d_*,t,j\) occur only in the vanishing remainders and
+need no interval replacement in \(Q\).
+
+\section{Removing the degenerate contact directions}
+
+The exact testing relation
+\begin{equation}
+ \mathcal C=T^2-u^2R^2-\frac{u^2-z}{s}R_hT
+                 +\frac{u(u^2-z)}sR(u\xi-\zeta)=0             \label{eq:conductor}
+\end{equation}
+follows at once from \eqref{eq:rows}. Add \(4\mathcal C/H\) to
+\(f^TQf\), and use
+\begin{equation}
+ \widehat f=\left(\sqrt HN,\ \xi+u\zeta+\frac R{H(1+H)},\
+ H\zeta,\ \sqrt HR_h,\ R/\sqrt H,\ T/\sqrt H\right)^T. \label{eq:newroots}
+\end{equation}
+If \(h=\sqrt H\), the matrix taking \(\widehat f\) to \(f\) has diagonal
+\((h^{-1},1,H^{-1},h^{-1},h,h)\) and additional entries
+\(L_{23}=-u/H,\ L_{25}=-1/[h(1+H)]\).
+Thus the exact normalized matrix is
+\begin{equation}
+ \widehat Q=L^T\left(Q+\frac4H\,
+                      \frac{\nabla_f^2\mathcal C}{2}\right)L. \label{eq:normalized}
+\end{equation}
+Its coefficients are obtained from the displayed polynomial operations;
+no entries are chosen by a semidefinite feasibility problem.
+
+The leading source matrix is
+\begin{equation}
+ Q_*=\operatorname{diag}
+ \left(1,2,\tfrac12,\frac2{1+H},\frac2{(1+H)^2},4\right)
+ +\frac{e_4e_6^T+e_6e_4^T}{1+H}\succeq\tfrac12 I_6. \label{eq:baseline}
+\end{equation}
+For the last inequality, the fifth diagonal after subtraction of
+\(I_6/2\) is \((1-H)(3+H)/[2(1+H)^2]\). The fourth/sixth block has
+positive first pivot and determinant
+\([17+7H(2-H)]/[4(1+H)^2]\); the other entries are nonnegative.
+
+\section{Uniform source and coefficient bounds}
+
+Set \(a_0=1/[2(1+H)]\). The nine errors are defined by
+\begin{equation}
+\begin{array}{lll}
+ B/H=1+e_B,&sH=1+e_s,&c_*/H=a_0+e_C,\\
+ g/H=a_0+e_g,&a_\alpha/H^2=a_0+e_\alpha,&AH/y=a_0+e_A,\\
+ mH^2/z^2=(1-r)a_0+e_m,&nr=a_0-r/2+e_n,&q=t+e_q.
+\end{array}\label{eq:errors}
+\end{equation}
+They satisfy
+\begin{equation}
+ |e_B|\le2\eps,\quad |e_s|\le4\eps,\quad
+ |e_C|,|e_\alpha|,|e_A|,|e_m|,|e_n|\le16\eps,\quad
+ |e_g|,|e_q|\le64\eps.                              \label{eq:errorbounds}
+\end{equation}
+Here is a factorwise proof uniform in \(r,t,j,1-H\).
+Writing \(T_s=B+zr\) and \(U_s=B-zyr\), the source formulas give
+\begin{equation}
+\begin{gathered}
+ 1\le T_s/H,\ S\le(1+\eps)^2,\qquad
+ 1-\eps^2\le U_s/H\le(1+\eps)^2,\\
+ 1-\eps\le G_s/H\le1+3\eps,\quad
+ 1\le M_s/H^2\le(1+\eps)^4,\quad
+ 1\le\Delta/[H(1+H)]\le1+10\eps .                  \label{eq:envelopes}
+\end{gathered}
+\end{equation}
+The lower bound for \(M_s\) uses
+\[
+ M_s=(1+z)T_sH+yG_s+yzj+zr(yt)(1+y);
+\]
+its upper bound uses its first expression in \eqref{eq:sourcepolys}
+and drops the nonnegative subtracted term. The other elementary bounds
+follow from \(t<a_c\le1+\eps\).
+For completeness, \(B\le q_0H\) with \(q_0=1+\eps+\eps^2\).
+Termwise bounds in \(\Delta\) give
+\[
+ \Delta-H(1+H)\le H(a+bH+cH^2),\quad
+ a=2\eps+\eps^2\le3\eps,
+\]
+\[
+ b=6\eps+10\eps^2+6\eps^3+\eps^4\le7\eps,\quad
+ c=\eps+5\eps^2+8\eps^3+5\eps^4+\eps^5\le2\eps .
+\]
+Since \(3+7H+2H^2\le6(1+H)\) for \(0\le H\le1\), this even
+gives the stronger upper bound \(1+6\eps\).
+
+The ratios of \(c_*/H,d_*/H,a_\alpha/H^2,AH/y\) to \(a_0\)
+have lower bound \((1-\eps^2)/(1+10\eps)\) and respective upper
+bounds \((1+\eps)^5,(1+\eps)^7,(1+\eps)^6,(1+\eps)^5\).
+Their relative errors are at most \(12\eps\).
+The ratio of \(mH^2/z^2\) to \((1-r)a_0\) lies between
+\[
+ \frac1{(1+3\eps)(1+10\eps)}
+ \quad\hbox{and}\quad \frac{(1+\eps)^4}{1-\eps},
+\]
+and \(nr+r/2=AH/y\) exactly. These imply the corresponding
+\(16\eps\) bounds. Also
+\(|e_B|\le\eps(1+\eps)\) and \(|e_s|\le3\eps\).
+If \(c_*/H=a_0(1+\delta_C)\), \(d_*/H=a_0(1+\delta_D)\),
+put \(\delta_w=(j\delta_C+t\delta_D)/a_c\).
+Then \(|\delta_w|\le12\eps\) and
+\[
+ q=\frac t{a_c}\frac{1+\delta_D}{1+\delta_w},\qquad
+ \frac gH=\frac{a_0}{a_c}
+           \frac{(1+\delta_C)(1+\delta_D)}{1+\delta_w}.
+\]
+The endpoint ratios give \(|q-t|<26\eps\) and
+\(|g/H-a_0|<37\eps/2\), proving \eqref{eq:errorbounds}.
+In particular
+\[
+ \ell\ge4g\ge H(1-256\eps)>H/4,\qquad
+ \alpha\ge H^2(1/4-16\eps)>H^2/8.
+\]
+This proves positivity of every coefficient in \eqref{eq:retained}.
+
+The following finite majorant specifies the coefficient estimates
+without long rational-entry lists. In \eqref{eq:normalized} substitute
+\[
+ H=h^2,\quad B=h^2(1+e_B),\quad s=(1+e_s)/h^2,\quad
+ z=h^2z_1,\quad k=hk_1,
+\]
+and replace the other quantities by \eqref{eq:errors}, with
+\(\ell_*=h^2/4,\alpha_*=h^4/8\). Expand
+\(\widehat Q=\sum C_{ij}u^iv^j\).
+Absorb any positive rational constant in a denominator into its numerator.
+Every remaining denominator factors into
+\(h^a(1+h^2)^b(1+e_B)^c(1+e_s)^d\).
+For a numerator monomial with \(h\)-exponent \(a'\), bound its \(h\)
+factor by \(64^{\max(a-a',0)}\), its remaining source factors using
+\eqref{eq:errorbounds},
+\[
+ |r|\le1,\quad |t|\le2,\quad |z_1|\le\eps,\quad
+ |k_1|\le2^{-32},
+\]
+and its denominator by \(2^{c+d}\). Sum absolute coefficients and
+count symmetric off-diagonal entries twice. The triangle inequality
+bounds the operator norm by this explicitly defined finite sum.
+The result for \(C_{00}-Q_*\), and for each
+\(2^{-12i-25j}C_{ij}\), is bounded by Table~\ref{tab:budgets}.
+It uses only the divisions \eqref{eq:divnormal}--\eqref{eq:divscalar}
+and the two Hessians above; thus it also specifies every rational
+coefficient estimate.
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{c*{7}{c}}
+\toprule
+\((i,j)\)&00&01&02&10&11&12&20\\
+\(\alpha_{ij}\)&\(2^{-40}\)&\(2^{-50}\)&\(2^{-33}\)&\(2^{-4}\)&\(2^{-55}\)&\(2^{-41}\)&\(2^{-18}\)\\
+\midrule
+\((i,j)\)&21&22&30&32&40&42&50\\
+\(\alpha_{ij}\)&\(2^{-62}\)&\(2^{-48}\)&\(2^{-28}\)&\(2^{-65}\)&\(2^{-42}\)&\(2^{-72}\)&\(2^{-51}\)\\
+\bottomrule
+\end{tabular}
+\caption{Fixed rational coefficient budgets. The constant entry bounds
+\(\|C_{00}-Q_*\|_2\); all others bound
+\(\|2^{-12i-25j}C_{ij}\|_2\).}\label{tab:budgets}
+\end{table}
+There are exactly fourteen monomials and fifty-one nonzero
+upper-triangular coefficient records. Their full exact definition is
+\[
+ (i,j,a,b)\longmapsto
+ [u^av^b]\left\{
+ L^T\left(\tfrac12\nabla_f^2\mathcal O
+        +\tfrac4H\,\tfrac12\nabla_f^2\mathcal C\right)L
+ \right\}_{ij},
+\]
+after the displayed source substitution. Off-diagonal entries are
+actual symmetric entries.
+
+\section{Positive fixed Gram blocks and state restoration}
+
+The sum of all fourteen budgets is
+\[
+ \frac{295165937727343559809}{4722366482869645213696}<\frac18.
+\]
+For each nonconstant exponent set
+\[
+ p_{ij}=(4096u)^i(33554432v)^j,\qquad
+ A_{ij}=2^{-12i-25j}C_{ij},\qquad
+ Q_{\rm res}=C_{00}-\sum_{(i,j)\ne(0,0)}\alpha_{ij}I_6 .
+\]
+Then \(Q_{\rm res}\succeq3I_6/8\),
+\((\alpha_{ij}I_6\pm A_{ij})/2\succeq0\), and the exact identity
+\[
+ \widehat Q=Q_{\rm res}+
+ \sum_{(i,j)\ne(0,0)}
+ \left\{\frac{\alpha_{ij}I_6+A_{ij}}2(1+p_{ij})
+       +\frac{\alpha_{ij}I_6-A_{ij}}2(1-p_{ij})\right\}
+\]
+proves positivity on the closed testing rectangle.
+
+All six roots \eqref{eq:newroots} are linear combinations, with source-only
+coefficients, of
+\[
+ \mathcal H_{11}=(X,Y,Z,vW,uvW,uW,uvX,vZ,u^2vW,u^3W,uZ).
+\]
+The retained terms \eqref{eq:retained} use this list together with
+\[
+ (uX,vX,v^2W,uv^2W,vY,uvY,W,uvZ,uY),
+\]
+giving \(\mathcal H_{20}\). For example the \(n\)-term uses
+\(\xi,u\xi,v\xi,uv\xi\), and the last retained term uses
+\(v\eta-\zeta,u(v\eta-\zeta)\). The source expansions are polynomial
+in the original state coordinates, so arbitrary state signs and
+zero state coordinates are included.
+
+Push the six-dimensional positive matrices to these fixed spans,
+restore \(\mathcal R_+\), divide the Gram coefficients by four and
+the testing functions by \(\sqrt{\Du\Dv}\).
+This gives precisely \(S_{\mathbf c}\), proving Theorem~\ref{thm:strong}.
+No formula divides by \(n\), so \(n=0\) is literal.
+The event roots already belong to \(\mathcal H_{20}\); their nonnegative
+addition preserves the representation.
+
+Together with the weak-contact family and the two preserved remote
+testing matrices, this supplies the native source envelope with one
+fixed certificate of total PSD order \(635\), including nine source
+signs. The remote matrices provide the projective testing endpoints.
+Admission of every canonical source is a separate requirement; the
+present theorem establishes no equality with the full canonical cone.
+\end{document}
+

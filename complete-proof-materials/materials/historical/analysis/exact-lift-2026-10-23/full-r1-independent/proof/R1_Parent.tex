@@ -1,0 +1,156 @@
+\section{The complete parent and its positive remainders}\label{app:parent}
+For a direct expansion of \eqref{eq:slack}, put
+\[
+ q=v\zeta-Tuw=-T\sqrt x\,\Qh,\qquad
+ m_p=\frac{\mu p}{1-p},
+\]
+and use the two independent normals $N,M$ in \eqref{eq:normal}.
+Let
+\begin{align}
+ F_s={}&q_c\Qh^2+nj^2y\Bh^2+r_c\Rh^2+d_cV^2\Qh^2
+ +(np^2y^2+\half p^2y^2-g_c)V^2\Bh^2\notag\\
+ &+f_c\Ps+g_cV^2\Ps+k_c\Zc^2(V^2-1)^2,\notag\\
+ L_N={}&nj\bc+npv^2\bc-j\alpha\bc+\half pv^2\bc
+                         +K_RR_u+(K_c/j)uvq,\notag\\
+ L_M={}&C_qq+\mu uv\bc+v(\alpha-BTCHu^2)R,\notag\\
+ H_N={}&h_0(1+u^2)+\half v^2+\alpha u^2+n(1+v^2),\notag\\
+ H_M={}&(1+u^2)[C(1+v^2)+D+\half]+A(1+v^2)+(\alpha+\half)v^2 .
+ \label{eq:parentcoeff}
+\end{align}
+The full parent is the polynomial identity
+\begin{equation}
+ D_vS_c=F_s+2L_NN+2L_MM+H_NN^2+H_MM^2+
+              2(\alpha+\half)uvNM+m_p(1+u^2)N^2 .
+ \label{eq:fullparent}
+\end{equation}
+It follows by inserting \eqref{eq:rotation} into \eqref{eq:slack} and
+using \eqref{eq:polys}--\eqref{eq:source}.
+Equivalently these are the homogeneous RFN8/RFN12 identities of the
+preserved companion source \texttt{latex/certificates/c2\_short.tex}.
+The four scalar cancellations needed in this expansion are, with
+$K_d=CH-(D+\half)(1-H)$,
+\begin{align*}
+ 0&=T(K_d+AH+\half)-A,\\
+ 0&=jK_d+\mu+xTCH,\\
+ 0&=jK_d+xTCH+T[CH+AH+(\alpha+\half)H]
+                   -A-(\alpha+\half)(1-p)+\alpha/B,\\
+ 0&=np-\mu+p/2+[-\mu-(\alpha+\half)(1-p)]x+j(\alpha-n)+yK_c .
+\end{align*}
+They are exact rational identities in the printed source dictionary.
+
+The retained positive term in \eqref{eq:coreidentity} is explicitly
+\begin{align}
+ \calP={}&m_p(1+u^2)N^2+(h_0+\alpha)(uN)^2
+             +\half(vN)^2+n[v(N+p\bc)]^2\notag\\
+ &+(C+D+\half)(uM)^2+(C+A+\alpha+\half)(vM)^2+C(uvM)^2\notag\\
+ &+d_c(V\Qh)^2+\half p^2v^2\bc^2
+            +g_c[V(w-UV\Zc)]^2+\kappa(V\Qh-\Rh)^2
+            +g_c(\Qh^2+\Rh^2).
+ \label{eq:retainedall}
+\end{align}
+In particular $d_c=H^2(A+C+\alpha+\half)y^2q_z+\kappa>0$.
+Combining
+\[
+ h_0N^2+n(N+j\bc)^2=\widehat N^2+E_*^2,\quad
+ g_cV^2(\Ps-\Bh^2)=g_c(\E-\Ps),\quad
+ -\kappa(V\Qh+\Rh)^2
+ =\kappa(V\Qh-\Rh)^2-2\kappa V^2\Qh^2-2\kappa\Rh^2
+\]
+with \eqref{eq:fullparent} gives precisely \eqref{eq:coreidentity}
+and the complete cross terms \eqref{eq:cross}.
+Thus the decomposition is an identity for all four state coordinates.
+
+\subsection*{The two radial sums of squares}
+The radial polynomials used in \eqref{eq:radialpurchase} are
+\begin{align}
+ \W&=4\Ps+4U^2\Qh^2+4U^2\Rh^2-V^2(U^2-1)^2w^2,\notag\\
+ \W^\pi&=4\Ps+4U^2\Qh^2+4U^2\Bh^2-\Zc^2(U^2-1)^2 .
+ \label{eq:radialpolys}
+\end{align}
+Here is their complete positive Gram representation on the chart
+$U,V\geq0$, $w\Zc\geq0$.
+Put
+\[
+ t_7=\begin{pmatrix}
+ \Zc-U^2Vw\\Vw-U^2Vw\\Uw-U^2Vw\\U\Zc-U^2Vw\\
+ UVw-U^2Vw\\UV\Zc-U^2Vw\\U^2w-U^2Vw
+ \end{pmatrix},\qquad
+ t_3=\begin{pmatrix}1-UV\\V-UV\\U-UV\end{pmatrix}
+\]
+and
+\[
+ t_7^\pi=\begin{pmatrix}
+ Vw-U^2\Zc\\\Zc-U^2\Zc\\Uw-U^2\Zc\\UVw-U^2\Zc\\
+ U\Zc-U^2\Zc\\UV\Zc-U^2\Zc\\U^2w-U^2\Zc
+ \end{pmatrix},\qquad
+ t_3^\pi=\begin{pmatrix}w-U\Zc\\\Zc-U\Zc\\Uw-U\Zc\end{pmatrix}.
+\]
+With the following two fixed rational matrices,
+\[
+ G_7=\begin{pmatrix}
+4&-2&-3/2&0&-1/2&0&1/2\\
+-2&3&0&-3/2&0&-1&2\\
+-3/2&0&4&3/2&-2&-3&0\\
+0&-3/2&3/2&4&-3/2&0&-3/2\\
+-1/2&0&-2&-3/2&3&2&-1\\
+0&-1&-3&0&2&8&-4\\
+1/2&2&0&-3/2&-1&-4&4
+\end{pmatrix},\qquad
+ G_3=\begin{pmatrix}3&-2&-2\\-2&2&2\\-2&2&3\end{pmatrix},
+\]
+the identities are
+\begin{align}
+ \W&=t_7^TG_7t_7+4Vw\Zc(1-U)^2+Uw\Zc\,t_3^TG_3t_3,\notag\\
+ \W^\pi&=(t_7^\pi)^TG_7t_7^\pi+4Vw\Zc(1-U)^2
+                                      +UV(t_3^\pi)^TG_3t_3^\pi .
+ \label{eq:W19}
+\end{align}
+Their leading principal minors are
+$(4,8,101/4,1049/16,907/16,3279/16,743/16)$ and $(3,2,2)$.
+Both matrices are therefore positive definite. These explicit polynomial
+identities are the homogeneous RFN19 and permuted RFN19 identities.
+All extra square roots have fixed testing arguments.
+
+For $w\Zc\leq0$, one instead uses the following direct expansions:
+\begin{align}
+ \W={}&(4U^2+3V^2+4U^4+3U^4V^2+2U^2V^2)w^2
+ +(4+4U^2+8U^2V^2)\Zc^2
+             -16UV(1+U^2)w\Zc,\notag\\
+ \W^\pi={}&(4U^2+4V^2+4U^4+4U^2V^2)w^2
+ +(3+2U^2+3U^4+8U^2V^2)\Zc^2
+             -16UV(1+U^2)w\Zc .
+ \label{eq:negativeW}
+\end{align}
+Every displayed monomial is a nonnegative coefficient times a square,
+using the fixed radical $\sqrt{-UVw\Zc}$ for the last terms.
+Together with the five-factor expansion of $\Ps$ in the main text, these
+give a direct sum-of-squares identity also on the negative state chart.
+
+\subsection*{The state signs and testing axes}
+Let $K_d^{\mathrm{test}}$ denote the $d=1$ core in the numerator
+of \eqref{eq:slack}, put $h=1+u^2+v^2$,
+$\Delta=h^2-u^2v^2>0$, and set
+\[
+ A_0=\half\begin{pmatrix}h&-uv\\-uv&h\end{pmatrix},\qquad
+ B_0=\half\begin{pmatrix}-u^2v&-uv^2\\uv^2&u^2v\end{pmatrix}.
+\]
+The exact core completion is
+\begin{align}
+ K_d^{\mathrm{test}}/D_u
+ ={}&\left[\binom tr+A_0^{-1}B_0\binom w\zeta\right]^TA_0
+ \left[\binom tr+A_0^{-1}B_0\binom w\zeta\right]\notag\\
+ &+\frac{D_uD_v}{2\Delta}
+      [u^2v^2(w^2+\zeta^2)-2uvh\,w\zeta] .
+ \label{eq:signcore}
+\end{align}
+Since $A_0\succ0$, a negative core requires $uvw\zeta>0$.
+Each of the nine original source summands is invariant under the gauges
+\[
+ (u,v,W,X,Y,Z)\longmapsto
+ (\varepsilon u,\eta v,W,\eta X,\varepsilon Y,\varepsilon\eta Z).
+\]
+Thus a negative core can always be reduced to $u,v>0,w\zeta>0$.
+At $u=0,v=0,w=0$ or $\zeta=0$, the remainder in \eqref{eq:signcore}
+is nonnegative. The positive-chart proof and direct nonnegativity on the
+complementary state set establish the theorem on the closed cap.
+

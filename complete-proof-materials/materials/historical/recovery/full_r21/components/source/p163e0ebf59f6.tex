@@ -1,0 +1,168 @@
+\section{The last bounded-shape C2 corner: a weighted radial root}
+\label{sec:c2-radial-corner}
+
+It remains to treat the corner in which $h,r,g,j$ are all positive
+infinitesimals.  The radial coefficient then tends to zero, but the
+positive source identity gives exactly the weight needed to normalize it.
+
+\begin{theorem}[The all-small radial corner]
+\label{thm:c2-radial-corner}
+Use the unchanged source \eqref{eq:c2u-source}.  Suppose that $c>0$ and
+$h=b-a^2t,r,g,j>0$ are infinitesimal, while $a,1-r,t$ are positive
+bounded units.  For every independent infinitesimal or zero testing pair
+$u,v$ and every real or complex projective state, the full parent is a
+finite sum of squares in $K_c\otimes_{\mathbb R}K_t$.
+\end{theorem}
+
+\subsection{The small source ideal controls all coefficients}
+Write $z=c^2$ and $D_c=1+c^2$.  The source identities give
+\begin{equation}
+b-1=-r+g-zh,\qquad t-1=zr-j,\qquad
+a-1=\frac{g+j-D_c(r+h)}{t(a+1)}.
+\label{eq:c2r-source-ideal}
+\end{equation}
+Thus $a,b,t$ all have residue $1$.  Let $I=(h,r,g,j)$ in the ring of
+bounded source coefficients used below.  By
+\eqref{eq:c2y-N-positive}, $N>0$ and $N/(h+r+g+j)$ has residue $1$.
+In particular
+\begin{equation}
+h/N,\quad r/N,\quad g/N,\quad j/N
+\text{ are bounded},\qquad
+4\alpha/(c^4N)\text{ has residue }1.
+\label{eq:c2r-weight-bounds}
+\end{equation}
+
+All rational coefficient functions in the retained remainder have
+denominators with nonzero residue: the possibly small denominators
+$r,g,j,h$ have been absorbed into $U_1,U_2,U_5,U_4$.  Specialize a
+bounded rational coefficient by putting $h=r=g=j=0$ and $a=b=t=1$,
+leaving $c$ untouched.  Its difference from this specialization lies in
+$I$, with bounded coquotients.  Indeed finite polynomial subtraction
+factors the differences by $r,g,j,a-1$, and
+\eqref{eq:c2r-source-ideal} replaces $a-1$ by bounded multiples of the
+four generators.  Subtraction of fractions only uses unit denominators.
+The monic polynomial divisions in the preceding proofs preserve this
+property.  Pure-testing denominators $D_u,D_v$ do so as well.
+Consequently every coefficient in $I$, divided by the pure coefficient
+$N$, remains bounded.  This observation involves no comparison with
+the independent testing infinitesimals.
+
+\subsection{An explicit additional zero correction}
+Use the four retained packets and six-root Gram from
+Section~\ref{sec:c2-y-current}, including its zero correction
+\eqref{eq:c2y-zero-correction}.  That construction required only that
+$e_3$ be bounded; it still gives an exact bounded Gram here.  Two of its
+current coefficients simplify exactly to
+\begin{equation}
+Q(u^2)=h-a^2ru^2,\qquad Q(u^2)+a^2D_ur=h+a^2r.
+\label{eq:c2r-QJ}
+\end{equation}
+Both belong to $I$.  The coefficient of $T$ in the exact relation
+$\zeta$ is therefore $u(h+a^2r)$.
+
+We record the one base calculation needed for the new correction.
+On the scalar normal graph, after specialization modulo $I$, put
+\[
+Y_*=uW-v,\qquad G_*=D_uvW-D_vu.
+\]
+The entire bounded scalar remainder becomes
+\begin{equation}
+f_*=2uG_*+\frac{2}{D_c}D_uD_vuY_*
+ +2\{D_u(vY_*-1)^2+D_vu^2-D_uD_v\}.
+\label{eq:c2r-base-polynomial}
+\end{equation}
+Here $U_2=1/4$, $U_4=1/(4D_c)$; all terms containing a generator of
+$I$, $e_3$, or $\alpha$ vanish.  Direct differentiation gives
+\begin{equation}
+\begin{gathered}
+f_*(u,u,1)=0,\\
+(f_*)_W(u,u,1)=\frac{2u^2(u^2-c^2)D_u}{D_c},\qquad
+(f_*)_v(u,u,1)=-\frac{2u(u^2-c^2)D_u}{D_c}.
+\end{gathered}
+\label{eq:c2r-base-derivatives}
+\end{equation}
+
+Use the division order of the preceding proof: first restrict to $v=au$,
+then expand at $W_c$, and retain the finite second-order remainder in
+$v-au$ as an $R^2$ coefficient.  The first two derivatives in
+\eqref{eq:c2r-base-derivatives} imply that the $ST$ coefficient is
+$2uD_u/D_c$ and the direct $RT$ coefficient is $2uD_u/D_c$.
+Modulo $I$, elimination of $S$ reads
+\[
+S=\frac{H_2+(1-u^2v^2)H_1+uvH_5
+ +(D_uW-u(v+u))R}{D_u}.
+\]
+Hence the full scalar $RT$ coefficient after elimination is exactly
+\begin{equation}
+\frac{2u}{D_c}(D_uW+1-uv).
+\label{eq:c2r-base-RT}
+\end{equation}
+The earlier zero correction adds no $RT$ term at this specialization,
+because \eqref{eq:c2r-QJ} vanishes there.  Meanwhile the coefficient of
+$R$ in $\zeta$ specializes to $-(D_uW+1-uv)$.  Add one more exact zero:
+\begin{equation}
+\frac{2u}{D_c}\,\zeta T=0.
+\label{eq:c2r-final-correction}
+\end{equation}
+By \eqref{eq:c2r-base-RT}, the corrected $RT$ coefficient now lies in
+$I$.  All radial cross coefficients still contain an explicit factor $u$.
+
+\subsection{Weighted boundedness and the strict residue}
+Replace the radial root by the pure-coefficient rescaling
+\[
+T_N=\sqrt N\,(u^2-c^2).
+\]
+We check every type of coefficient of the resulting Gram.  The hard
+block and the hard--$R$ block were already bounded.  A hard--$T$
+coefficient contains $u/\sqrt{e_i}$, times bounded factors, for
+$i=1,2,4,5$: this follows from the odd-parity normal division, the pure
+current elimination, and the two displayed zero corrections.  Dividing
+it by $\sqrt N$ remains bounded, with zero residue, because
+\[
+\frac1{\sqrt{Ne_1}}=\frac{\sqrt{r/N}}{\sqrt{U_1}},\quad
+\frac1{\sqrt{Ne_2}}=\frac{\sqrt{g/N}}{\sqrt{U_2}},\quad
+\frac1{\sqrt{Ne_4}}=\frac{\sqrt{h/N}}{\sqrt{U_4}},\quad
+\frac1{\sqrt{Ne_5}}=\frac{\sqrt{j/N}}{\sqrt{U_5}}.
+\]
+The corrected $RT$ coefficient lies in $I$ and contains $u$, so its
+quotient by $\sqrt N$ is bounded and has zero residue.
+
+For the $T^2$ coefficient, the graph identity $f_*(u,u,1)=0$ says that
+its monic scalar quotient $C_2(u^2)$ vanishes modulo $I$.  Every other
+$T^2$ contribution contains $Q$ or $h+a^2r$, hence belongs to $I$ too.
+Its quotient by $N$ is therefore bounded.  All such extra terms have
+an explicit factor $u^2$.  At $u=0$ the scalar quotient is exactly
+$4\alpha/c^4$, so \eqref{eq:c2r-weight-bounds} makes the weighted radial
+pivot equal to $1$ at residue.  In particular the new correction adds
+$2u^2(h+a^2r)/(D_cN)$ to that coefficient, which is bounded and has
+zero residue.
+
+The residue of the final Gram, in the roots
+$(K_1,K_2,K_4,K_5,R,T_N)$, is therefore
+\begin{equation}
+4K_1^2+4K_2^2+4K_4^2+4K_5^2
+ +(1+\overline W)^2R^2+T_N^2\succ0.
+\label{eq:c2r-strict-residue}
+\end{equation}
+Here the relation $\zeta$ has residue $-(1+\overline W)R$, since all
+four inverse packet scales are infinitesimal.  The strict-residue Gram
+lemma proves the full bounded $Z=1,W\geq0$ chart.  The $W=1,Z$
+infinitesimal proof of the preceding section also applies unchanged:
+it uses boundedness, not a positive residue, of $e_3$.  Its four packet
+roots have strict residue.  Sign dispatch and homogeneous restoration
+therefore prove the theorem for all projective states.
+
+\begin{corollary}[Complete bounded-shape C2 source family]
+\label{cor:c2-bounded-shape}
+In the unchanged C2 source let $c>0$ be infinitesimal, $r,g,j>0$
+bounded, and $a,1-r,t$ positive bounded units.  Assume only
+$h=b-a^2t>0$.  Then every independent zero-zero test and every projective
+state have tensor-SOS parent.
+\end{corollary}
+\begin{proof}
+The gap $h$ is bounded.  If it is a unit,
+\eqref{eq:c2y-N-positive} makes $N$ a unit, so Theorem~\ref{thm:c2u}
+applies.  If $h$ is infinitesimal and one of $r,g,j$ is a unit, use
+Theorem~\ref{thm:c2-y-current}.  If all four are infinitesimal, use
+Theorem~\ref{thm:c2-radial-corner}.  These alternatives are exhaustive.
+\end{proof}

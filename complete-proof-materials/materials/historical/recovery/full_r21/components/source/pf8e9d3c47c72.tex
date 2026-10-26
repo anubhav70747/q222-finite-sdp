@@ -1,0 +1,131 @@
+\section{All matching-strong C2 sources in the positive contact chart}
+\label{sec:matching-source-entry}
+
+We now remove the bounded-angle and bounded-ratio assumptions from the
+weak-event entry lemma, provided the four matching packets are strong.
+All source hypotheses refer to the same exact positive rational C2 chart;
+this is not an assertion that every canonical C2 source has that chart.
+Write $C$ for its event weight and $c$ for its contact half-angle.
+
+\begin{theorem}[A complete matching-strong C2 source domain]
+Use the physical C2 source with $d=1$, $\lambda=\beta=0$,
+\begin{gather*}
+ c,a,b,t>0,\qquad 0<r<1,\qquad h=b-a^2t>0,\\
+ g=(1+c^2)b-(1-r+a^2c^2t)>0,\qquad j=1+c^2r-t>0,
+\end{gather*}
+and the original positivity conditions
+$1-c^2h>0$, $b-a^2c^2r>0$, with $n,m,A,D>0$.
+Suppose $C,\alpha$ are infinitesimal and
+\[
+ 1/n,\quad1/m,\quad1/A,\quad1/D
+ \quad\hbox{are bounded}.
+\]
+Then every independent projective test and real or complex state has
+ tensor-SOS full parent. No bound is assumed on $a,c,b,g$ and no
+comparability is assumed between $C$ and $\alpha$.
+After at most the exact C2 reflection, its actual source has
+\[
+ c\text{ bounded},\qquad a,b,t\longrightarrow1,
+ \qquad r,h,g,j\longrightarrow0.
+\]
+The arrows denote coefficient residues.
+\end{theorem}
+\begin{proof}
+Let $\mu=\min(n,m,A,D)$. The previously proved matching budget, applied
+with $T=C+\alpha$, makes $1/[\mu(C+\alpha)]$ bounded. Since
+$C+\alpha$ is infinitesimal, $1/\mu$ is infinitesimal. Thus all four
+matching weights are unbounded.
+
+Normalize the actual contact state to have Euclidean norm one. At the exact contact,
+\[
+ 0=4\sum_i e_i p_i+\frac{H}{D_uD_v},\qquad
+ \frac{H}{D_uD_v}\ge-2Z^2\ge-2,
+\]
+where $p_n=X^2$, $p_A=Y^2$ and the other $p_i$ are the normalized
+squared event amplitudes. Thus $0\le p_i\le1/(2e_i)$ for each matching
+event. Every matching probability has zero residue; in particular
+$X,Y$ have zero residue.
+Put
+\[
+ c_u=(1+u_c^2)^{-1/2},\quad s_u=u_c c_u,\qquad
+ c_v=(1+v_c^2)^{-1/2},\quad s_v=v_c c_v.
+\]
+These are bounded positive coefficient quantities with
+$c_u^2+s_u^2=c_v^2+s_v^2=1$. Write
+$\sigma=\overline{c_us_v}$ and $\tau=\overline{s_uc_v}$.
+The two other vanishing matching probabilities give
+\[
+ \sigma\overline W-\tau\overline Z=0,\qquad
+ \tau\overline W-\sigma\overline Z=0.
+\]
+At least one of $\overline W,\overline Z$ is nonzero, so
+$\sigma^2=\tau^2$. Both are nonnegative, hence $\sigma=\tau$.
+If they are positive, both contact half-angles are bounded units with
+the same residue. If they vanish, either both contact half-angles are
+infinitesimal or both are unbounded. Indeed
+$c_us_v=s_uc_v=0$ in residue, together with the two unit-circle
+identities, permits precisely these two endpoint alternatives.
+
+The exact reflection sends $(u_c,v_c)$ to $(1/v_c,1/u_c)$.
+It therefore reduces the two endpoint cases to the infinitesimal one.
+It preserves the positive source domain: for $z=c^2$ its parameters are
+\[
+ c'=\frac1{ac},\quad a'=a,\quad b'=\frac{a^2}{b},\quad
+ r'=\frac{a^2zr}{b},\quad t'=\frac{1-zh}{b},
+\]
+\[
+ h'=\frac{a^2zh}{b},\quad g'=\frac{a^2j}{b},\quad j'=\frac gb.
+\]
+In particular
+\[
+ 1-r'=\frac{b-a^2zr}{b}>0,\qquad
+ 1-z'h'=\frac{a^2t}{b}>0,\qquad
+ b'-a^2z'r'=\frac{a^2(1-r)}b>0.
+\]
+Direct substitution in the rational source gives
+\[
+ \Delta'=\frac{\Delta}{b^2z^2},\quad N'=\frac{a^2N}{b^2},\qquad
+ (n',m',C',A',D',\alpha')=(n,D,\alpha,A,m,C).
+\]
+Consequently every hypothesis is retained. These are pure-coefficient
+operations. In testing coordinates the reflection is the full homogeneous
+parent identity with factor $u^2v^2$, interpreted in projective charts.
+
+It remains to bound $a$ after this orientation. At an ordinary contact
+residue $a=v_c/u_c$ is a bounded unit. In the other case both $c$ and
+$ac$ are infinitesimal. Suppose for contradiction that $q=a^2$ is
+unbounded. Then $z$ and $qz$ are infinitesimal; also
+$0<t<1+zr$ is bounded. The numerator in
+\[
+ m=\frac{(1+qz)(1-r)(1+zr)(1+zr+qzt)}{2g\Delta}
+\]
+is bounded. Since $1/m$ is bounded, $g\Delta$ is bounded.
+The positive expansion of $\Delta$ in the entry lemma gives
+$\Delta\ge1$. Thus $g$ is bounded, and
+\[
+ b=\frac{1-r+g+qzt}{1+z}
+\]
+is bounded. Positivity of $h=b-qt$ gives $0<t<b/q$, so $t$ is
+infinitesimal and $j=1+zr-t$ has residue one. But then
+\[
+ D=\frac{(1+z)(b+r)(b-qzr)(1+zr+qzt)}{2qj\Delta}
+\]
+is infinitesimal: the numerator is bounded, since $0<b-qzr<b$,
+whereas $1/q$ is infinitesimal, $j$ is a unit, and $\Delta\ge1$.
+This contradicts boundedness of $1/D$.
+
+We have proved that $a,c$ are bounded in the oriented source. Its
+weak event $C$ is infinitesimal, so the weak-event entry lemma applies:
+$a,b,t$ have residue one and $r,h,g,j$ are infinitesimal. If $c$ is
+infinitesimal, the completed small-angle radial theorem gives all
+independent tests. If $c$ is a bounded unit, the completed ordinary-angle
+radial theorem gives all tests. Reflect back when necessary. Restore the
+positive pure coefficient normalization if the original $d$ was not one.
+\end{proof}
+
+The conclusion strengthens the earlier comparable-weak-packet corollary
+on this exact positive contact chart. It covers unbounded ratios
+$\alpha/C$ and $C/\alpha$, while preserving independence of actual and
+testing parameters. Within the branch where $C,\alpha$ are both infinitesimal, the remaining
+C2 sources have at least one weak matching event or have not yet been
+entered into this positive contact chart. The theorem does not remove that source-chart obligation.

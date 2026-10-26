@@ -1,0 +1,526 @@
+             Completing the state quadratic form at a singular contact
+
+    A positive decomposition must retain the kernel at an exact zero. For the contact considered here, one event
+square is strictly positive at that zero. The construction below combines it with both independent state normals.
+Completing one normal combines its two positive coefficients. The result, together with the coefficient of the scalar
+form Ψ defined below, gives a positive reserve even at n = 0. Uniform bounds on the remaining matrix then give fixed
+testing functions.
+    Write the source coordinates as c = (d, λ, n, m, C, A, D, α, β) ≥ 0, put Du = 1 + u2 , Dv = 1 + v 2 , and define the
+canonical Bell slack Sc = Fh /4 by
+
+                   Du Dv Sc = λDu (W + vX)2 + nDu Dv X 2 + m(vW − X + uvY − uZ)2
+                                + CDv (uW − Y )2 + ADu Dv Y 2 + (D + d/2)(uW + uvX − Y − vZ)2
+                                + (α + d/2)Du (vY − Z)2 + (β + d/2)Dv (X + uZ)2 − d2 Du Dv Z 2 .                           (1)
+
+All four state coordinates are independent. For complex states we add the same real quadratic form on the real and
+imaginary parts.
+Theorem 1. Take the native source defined in Appendix A, normalized by (d, λ, β) = (1, 0, 0), on the domain
+
+                   0 < Ho ≤ 2−12 ,     0 < zo , yo ≤ 2−64 Ho ,     0 < ro < 1,    0 < to < 1 + zo ro ,   n ≥ 0.            (2)
+
+There is a fixed finite family of testing functions, given in Table 2, whose source-dependent positive Gram matrices
+represent Sc on
+                                      0 ≤ u ≤ 2−12 ,     0 ≤ v ≤ 2−25 ,   wζ ≥ 0.
+The representation is exact at n = 0. It implies Sc ≥ 0 for every state and all |u| ≤ 2−12 , |v| ≤ 2−25 . Nonnegative
+additions to any of the eight event coordinates are admitted by the fixed enlarged encoding in Section 5.
+    The source parameters are independent of u, v; no lower bound on an opening and no comparison with a testing
+opening is assumed. At the native contact, with Bs = Ho + yo to ,
+                                                                  (︃                         )︃
+                                   √ √                                 Bs         √     Ho
+                         (u, v) = ( zo , yo ),     (W, X, Y, Z) = √          , −ro zo , √ , 1 ,                      (3)
+                                                                       zo yo             yo
+                                                    √︁                                            √
+we have√ Sc = 0, whereas ctest (aW − bY ) = y2o to / (1 + zo )(1 + yo ) > 0. Here (a, b) = (u, 1)/ Du and (ctest , e) =
+(v, 1)/ Dv . Thus retaining C[ctest (aW − bY )] separately would lose this contact.
+
+
+1     The two normals and their common reserve
+Use the invertible change
+      X + uZ            Y − uW            W + uY            Z − uX
+ t=          ,     r=          ,     w=          ,     ζ=          ;      (W, X, Y, Z) = (w − ur, t − uζ, r + uw, ζ + ut). (4)
+        Du                Du                Du                Du
+The source change in Appendix A gives positive B, T, j, p, H satisfying
+
+                 B < 2−11 ,    j, T < 2−63 ,   0 < p < j,    0 < H < 1,           x = jB = zo ,   y = T B = yo .           (5)
+
+Put
+
+    N = t − pvw,    M = −r − Hvζ,         bc = vw − uζ/j,        q = vζ − T uw,  R = ζ − uv w/B, Ru = v(u2 − x)w,          (6)
+                                                                      2
+                                                                                       (︃           )︃
+                                                             nh0 j        ˆ︁ = n + h0 N + nj bc .
+                                                                              √︁
+                    µ = m(1 − p),     h0 = µ + 12 ,   Me =          ,     N                                                (7)
+                                                             n + h0                          n + h0
+The positive scalar masses fc , qc , rc , and the signed masses gc , kc , dc , are defined explicitly in Appendix A.
+
+
+                                                                  1
+Lemma 1. Let Σ = Me + fc /y. Then
+
+                                 h0 N 2 + n(N + jbc )2 = N
+                                                         ˆ︁ 2 + Me b2c ,             Σ > 0,        p2 ≤ 8Σ.                                 (8)
+
+These formulas hold literally at n = 0.
+Proof. The first identity is completion of a square. The source estimates proved below give, for ρ = p/j < 1,
+
+                                                    ρ ≤ 25 (n + B),          fc /y ≥ j 2 B/3.
+
+If n ≤ h0 , then Me ≥ nj 2 /2 and p2 = j 2 ρ2 ≤ (5/2)j 2 (n+B) ≤ 5Me +(15/2)fc /y. If n ≥ h0 , then Me ≥ h0 j 2 /2 ≥ j 2 /4,
+                                        √
+so p2 ≤ 4Me . At n = 0, Me = 0, N  ˆ︁ = h0 N and Σ = fc /y > 0. No division by n or Me occurs.
+
+      To use this reserve, scale only by source quantities:
+                   √              √            √︁
+           U = u/ x, V = v/ y, Z = ζ/ jT ,                Q∗ = U w − V Z,                  B∗ = V w − U Z,             R∗ = Z − U V w,
+                                 2   2   2                2                    2
+                  Ψ = (U − V ) w + Z (1 − U V ) + 2U V (w − Z) ,                       E = Q2∗ + R∗2 + V 2 (w − U V Z)2 .                   (9)
+
+Direct expansion gives E = (1 + V 2 )Ψ − V 2 B∗2 . Writing γ = p2 /Σ ≤ 8, we obtain
+
+                                           γMe v 4 b2c + γfc (yv 2 + v 4 )Ψ − (pv 2 bc )2 = γfc yv 2 E,
+                                                                           √
+                                γT Me u2 v 2 b2c + γT fc u2 (y + v 2 )Ψ − ( T puvbc )2 = γT fc yu2 E.                                      (10)
+
+Both are polynomial identities in the testing variables; the second is valid at v = 0 without dividing the first by v 2 .
+The signed scalar terms combine through
+
+       gc V 2 (Ψ − B∗2 ) = gc (E − Ψ),       −κ(V Q∗ + R∗ )2 = −2κV 2 Q2∗ − 2κR∗2 + κ(V Q∗ − R∗ )2 ,                     κ = −kc > 0.      (11)
+
+These identities retain the contact while redistributing its positive masses.
+
+
+2       An exact eleven-row completion
+Set                                          √︃
+                                                       n                √︁                               √︁                   √︁
+            aN = (n + h0 )−1/2 ,     bN =                      ,   τ=        T H(1 − H),        ρQ = T        x/qc ,   ρR =     jT /rc ,
+                                                  h0 (n + h0 )
+and define the column                                   ⎛                        ⎞
+                                                                    N
+                                                                    ˆ︁
+                                                       ⎜
+                                                       ⎜          M/τ            ⎟
+                                                                                 ⎟
+                                                                 √q/ρQ
+                                                       ⎜                         ⎟
+                                                       ⎜                         ⎟
+                                                       ⎜
+                                                       ⎜           M e bc        ⎟
+                                                                                 ⎟
+                                                              √ R/ρR
+                                                       ⎜                         ⎟
+                                                       ⎜                         ⎟
+                                                   f = ⎜ √︁ fc (U − V )w
+                                                       ⎜                         ⎟.
+                                                                                 ⎟                                                         (12)
+                                                       ⎜√ fc /(jT )(1
+                                                       ⎜                − U V )ζ ⎟
+                                                                      √
+                                                       ⎜ 2fc (xy)−1/4 uv(w − Z)⎟
+                                                                                 ⎟
+                                                       ⎜                         ⎟
+                                                       ⎜
+                                                       ⎜           Ru            ⎟
+                                                                                 ⎟
+                                                                    2
+                                                                √ pv bc
+                                                       ⎝                         ⎠
+                                                                  T puvbc
+                                                                                    Qab ua v b be the symmetric matrix
+                                                                                 ∑︁
+All its coefficients outside testing monomials are source-only. Let Q(u, v) =
+specified in Table 1. Each displayed off-diagonal value is a matrix entry, so its contribution to f T Qf is twice the
+displayed value. Define
+                              (︃              )︃
+                    µp            µp
+             R=         N2 +          + h0 + α (uN )2 + 12 (vN )2 + n[v(N + pbc )]2
+                   1−p           1−p
+                    + (C + D + 21 )(uM )2 + (C + A + α + 21 )(vM )2 + C(uvM )2 + dc (V Q∗ )2 + 12 p2 y 2 (V B∗ )2
+                    + gc [V (w − U V Z)]2 + κ(V Q∗ − R∗ )2 .                                                                               (13)
+
+All coefficients in R are nonnegative, including dc = H 2 (A + C + α + 21 )y 2 jT + κ. Put
+
+                                          W = 4Ψ + 4U 2 (Q2∗ + R∗2 ) − V 2 (U 2 − 1)2 w2 .                                                 (14)
+
+
+                                                                        2
+Table 1: All 44 upper-triangular records of Q. Unlisted entries vanish. Within a row each pair (i, j) has the indicated
+value. Write kR = KR + α/B, with KR , Kc as in (30).
+                     Exponent         Entries of Qab
+                   (0, 0) diagonal    1, τ 2 (C + D + 12 + A), 1 + gc /qc , 1, 1 + (gc − 2κ)/rc ,
+                                      1 − gc /fc − 64x2 y/fc (rows 6,7,8), 16, 8, 1
+                     (0, 0) cross     (1, 9) : aN kR , (4, 9) : −bN kR , (1,√︁10) : aN /2, (4, 10) : −bN /2,
+                                      (2, 3) : τ ρQ A/T, (2, 11) : (µ/p) H(1 − H)
+                        (1, 0)        (1, 5) : aN αρR , (4, 5) : −bN αρR
+                        (0, 1)        (2, 5) : τ αρR
+                        (2, 0)        (3, 3) : −64xy/qc , (5, 5) : −64xy/rc , (i, i) : −γT y (i = 6, 7, 8)
+                        (0, 2)        (3, 3) : −2κ/(yqc ), (2, 3) : τ ρQ H(C + A + α + 21 ),
+                                      (i, i) : −8γy (i = 6, 7, 8)
+                        (1, 1)        (1, 3) : aN (Kc /j)ρQ , (3, 4) : −bN (Kc /j)ρQ ,
+                                      (1, 2) : (α + 12 )τ aN , (2, 4) : −(α + 12 )τ bN
+                        (2, 1)        (2, 5) : −τ BT CHρR
+                        (2, 2)        (2, 3) : τ ρQ HC, (i, i) : −γT (i = 4, 6, 7, 8)
+                        (0, 4)        (i, i) : −8γ (i = 4, 6, 7, 8)
+
+
+The explicit positive Gram representation of W is in Appendix B. The full completion is
+
+                                 Dv Sc = f T Qf + R + 16x2 yW + 8γfc yv 2 E + γT fc yu2 E.                        (15)
+
+One verifies this equality by substituting Table 1 and (8)–(11) into the complete two-normal expansion (31). Thus it
+retains both N and M and every original state direction.
+
+
+3    Uniform bounds and fixed gates
+Lemma 2. On (2), the matrix in Table 1 satisfies Q00 ⪰ I/4 and
+
+                          (a, b)        (1, 0)   (0, 1) (2, 0)      (0, 2)   (1, 1) (2, 1)   (2, 2) (0, 4)
+                                                                                                                  (16)
+                      ∥Qab ∥op ≤ rab         1        1   512            8      16       4      16 128.
+
+The bounds hold for n = 0 and unbounded n.
+Proof. The explicit source formulas in Appendix A give
+                     1  A                            α   µ   fc     qc    rc      2
+                       ≤ , T HC, T (D + 12 )(1 − H), 2 ,   ,    2
+                                                                  ,    , 2
+                                                                                 ≤ .                              (17)
+                     3  T                           B    jp T x T x T jB (1 − p)  3
+
+Here a list between two bounds means that every member satisfies both. The polynomial estimate (29) gives n(j −
+p)/j ≤ 1, ρ ≤ 5(n + B)/2. The signed numerator K in (25) gives 0 < K ≤ 2(p + B), whence
+                       κ                      κ                     gc
+                          ≤ 3T (p + B),           ≤ 4(p + B),          ≤ 2y,     |Kc /j| ≤ 2,   |kR | ≤ 1.        (18)
+                       rc                    qc y                   fc
+
+For the last two bounds use Kc /j = p/(2j) + H(α + 21 ) − 12 − n(j − p)/j and
+
+                                         |kR | ≤ 21 + 43 δ 2 + 38 δ < 1,      δ = 2−10 .
+
+The normalizations therefore satisfy
+
+                     a2N + b2N = 1/h0 ≤ 2, aN + bN ≤ 2, τ ρQ ≤ T, BρR < 2, αρR ≤ 2B,
+                                         √                √
+                         |(Kc /j)ρQ | ≤ 4 T , (α + 12 )τ ≤ T /3, T H(C + A + α + 12 ) < 1.                        (19)
+
+
+
+
+                                                                3
+                                                                                              √
+Table 2: The ordered polynomial/radical list ψ of length 34. Divide every entry by Dv to obtain the base test-
+ing
+√ functions.√ The principal list I∗ = (1, 5, 10, 11, 13, 15, 16, 17, 18, 19, 20, 22, 23, 24, 27, 28) has length 16. Include
+  1 ± pab ψI∗ / Dv for each of the eight exponent pairs.
+                                              Factor          Multipliers, in order
+                                                 t            1, v, u, uv
+                                                r             1, v, u, uv
+                                                w             1, v, u, v 2 , uv, u2 , v 3 , uv 2 , u2 v
+                                          √     ζ√            1, v, u, v 2 , uv, uv 2 , u2 v, uv 3 , u2 v 2
+                                            uv√
+                                              w, uv ζ         1 for each
+                                              √uwζ            1, v, u, uv
+                                                vwζ           1, u
+
+                    √              √
+For example ρQ ≤        3T , τ ≤       T /2, and α + 12 < 2/3. Reading the absolute row sums of Table 1 gives
+
+                                                u         4B
+                                                v         B
+                                                u2        max{192B, 192/(1 − p), 8T y}
+                                                v2        max{1
+                                                           √     + 8(p + B), 64y}
+                                                uv        8√T
+                                               u2 v       2 T /3
+                                               u2 v 2     max{2/3, 8T }
+                                                v4        64.
+
+Each is below the corresponding fixed bound in (16).
+   For the constant matrix, rows (1, 4, 9, 10) have diagonal (1, 1, 16, 8) and cross columns (aN , −bN )T kR , (aN , −bN )T /2.
+After subtracting I/2, their Schur correction has norm at most 2(2/31 + 1/30) = 91/465 < 1/2. Rows (2, 3, 11) have
+diagonal at least (1/3, 1, 1): indeed
+
+                                        T H(1 − H)(C + D + 12 ) ≥ (1 − H)/3 + H/3 = 1/3.
+
+Their two cross entries have absolute values at most T, j/3. Since T + j/3 < 1/12, this block is at least I/4. Row 5
+has diagonal at least 1 − 6T (p + B) > 7/8; rows 6–8 have diagonal at least 1 − 2y − 192B > 7/8. These disjoint blocks
+prove Q00 ⪰ I/4.
+                                                                                  √
+Lemma 3. The matrix Q has a positive decomposition using only the fixed gates 1 ± pab , where pab = (212 u)a (225 v)b
+and (a, b) runs through (16).
+Proof. Set ϵab = 2−12a−25b , αab = rab ϵab , Aab = ϵab Qab . Then αab I ± Aab ⪰ 0 and
+                                  ∑︂           ∑︂ {︃ αab I + Aab              αab I − Aab
+                                                                                                    }︃
+                     Q = Q00 −       αab I +                     (1 + pab ) +             (1 − pab ) .                      (20)
+                                                           2                        2
+                                                        a,b
+
+On the fixed cap, 0 ≤ pab ≤ 1. Moreover
+                     ∑︂
+                         αab = 2−12 + 2−25 + 2−15 + 2−47 + 2−33 + 2−47 + 2−70 + 2−93 < 2−10 .
+
+The constant reserve is therefore at least 255I/1024. All matrices in (20) depend only on the source.
+
+
+4     Fixed functions and the other state signs
+Every row of f lies in the source span of ψI∗ : its eleven supports are respectively
+
+          {1, 10, 20}, {5, 19}, {11, 19}, {10, 20}, {13, 18}, {10, 11}, {18, 22}, {27, 28}, {10, 17}, {15, 23}, {16, 24}.
+
+The roots in R, vE 1/2 and uE 1/2 lie in the source span √                 √ seven polynomial roots of W in Appendix B
+                                                         of ψ by (6)–(9). The
+also lie there. Its remaining roots are proportional to vwζ(1 − U ) and uwζ(1 − U V, V − U V, U − U V ), using indices
+29–34. Thus (15) and (20) yield the fixed 34-dimensional base block and sixteen 16-dimensional gate blocks.
+
+
+                                                                       4
+Lemma 4. The positive-chart certificate implies the cap conclusion of Theorem 1, including its literal axes.
+Proof. Every source packet in (1) is invariant under
+
+                                          (u, v, W, X, Y, Z) ↦−→ (εu, ηv, W, ηX, εY, εηZ).
+
+The rotated coordinates transform as (t, r, w, ζ) ↦→ (ηt, εr, w, εηζ). Let K be the d = 1 core in the numerator of (1),
+and put h = 1 + u2 + v 2 , ∆ = h2 − u2 v 2 > 0,
+                                          (︃          )︃               (︃ 2         2
+                                                                                      )︃
+                                       1     h   −uv                  1 −u v −uv
+                                A0 = 2                   ,     B0 = 2                    .
+                                            −uv    h                     uv 2   u2 v
+
+Direct completion, also printed as SJ5 in the companion [1], gives
+                                        [︃(︃ )︃           (︃ )︃]︃T    [︃(︃ )︃         (︃ )︃]︃
+                                            t        −1     w             t        −1   w
+                                 K/Du =         + A 0 B0           A0         + A0 B0
+                                            r               ζ             r             ζ
+                                            Du Dv 2 2 2
+                                                     u v (w + ζ 2 ) − 2uvh wζ .
+                                                   [︁                           ]︁
+                                        +                                                                                         (21)
+                                              2∆
+Since A0 ≻ 0, K < 0 forces uvwζ > 0. The gauges then put u, v > 0 and wζ > 0, where (15) proves positivity. If
+K ≥ 0, the core and all eight event packets are already nonnegative. At u = 0, v = 0, w = 0 or ζ = 0, (21) has
+nonnegative remainder; no limiting division by an axis is needed.
+
+
+5    The affine encoding and its scope
+A fixed enlargement makes all event additions transparent. Set
+
+                                   H11 = (X, Y, Z, vW, uvW, uW, uvX, vZ, u2 vW, u3 W, uZ)
+                          2    2
+                                                                                   √
+and
+√ append to√it (uX, vX, v W, uv W, vY, uvY, W, uvZ, uY ), obtaining H20 . Use H20 / Du Dv as one base block and
+  1 ± pab H11 / Du Dv for
+
+               (a, b) = (0, 1), (0, 2), (1, 0), (1, 1), (1, 2), (2, 0), (2, 1), (2, 2), (3, 0), (3, 2), (4, 0), (4, 2), (5, 0).
+
+These extra gate blocks may all be zero for the weak native witness. They encode no asserted admission for Ho > 2−12 .
+The eight event rays have Gram witnesses in the base H20 alone:
+
+                                      λ    e18 + e13 , e6 + e7            n    e1 , e12 , e13 , e7
+                                      m    e4 − e1 + e17 − e11            C    e6 − e2 , e5 − e16
+                                                                                                                                  (22)
+                                      A    e2 , e20 , e16 , e17           D    e6 + e7 − e2 − e8
+                                      α    e16 − e3 , e17 − e11           β    e1 + e11 , e13 + e19 .
+
+Each table entry specifies roots; their outer products are added to the corresponding source Gram. This proves the
+addition claim, including d = 0.
+   For clarity the affine equations can be specified without the nonlinear source dictionary. Let Tk be the nine
+polynomial coefficients of ck on the right of (1), after (4). For each block let hb be its undivided list. Its cleared
+product weight is 1 for the H20 block, 1 ± pab for an H11 gate block, Du for the weak base, and Du (1 ± pab ) for a weak
+gate block. Equating every coefficient in
+                                    ∑︂                 ∑︂
+                                        ωb hTb Gb hb =    ck Tk ,   Gb ⪰ 0, c ≥ 0                                    (23)
+                                           b                    k
+
+defines a rational affine system. Off-diagonal Gram variables enter with factor two. Reduce products modulo s2u =
+u, s2v = v, s2z = wζ, where the three symbols denote the nonnegative square roots. Their square classes are independent,
+so this coefficient comparison is exact on the positive open chart.
+    One may average the eight formal sign changes of su , sv , sz in (23). They fix all targets and weights and preserve
+PSD by diagonal conjugation. Cross-character entries vanish. The weak base splits as 26+2+4+2 and each weak gate
+as 14 + 2; the other blocks are unchanged. There are then 63 Gram blocks, total Gram order 596, 4021 Gram variables
+and 619 coefficient equations. Nine scalar source signs give order 605. These are counts of the specified system, not
+ranks or additional admission hypotheses. The literal rational arrays and their character reduction accompany this
+note.
+
+
+                                                                      5
+   The same fixed system admits finite limits of its feasible source coefficients. Indeed every block’s feature list is
+independent on the strict chart. A common finite collection of chart evaluations therefore gives a positive definite
+evaluation Gram in each block. Summing (23) at these points bounds all PSD traces when the source coefficients
+converge; a subsequence of the Gram tuples then gives the limiting identity. This argument applies after the functions
+have been fixed.
+   Finally the cap contains the complement left by the two preserved regional certificates of [2]:
+
+                                                                                                           2−52
+           b > 1 − 2−26 =⇒ u2 < (1 − 2−26 )−2 − 1 < 2−24 ,                  |ctest | < 2−26 =⇒ v 2 <              < 2−50 .
+                                                                                                         1 − 2−52
+Those certificates cover the remaining tests, including projective endpoints, on the same native envelope. Appending
+their unchanged order-20 and order-10 pencils gives total order 635, 4024 variables and 619 equations. Consequently
+the weak envelope, its nonnegative event additions and its finite coefficient limits are admitted on all tests. This does
+not assert admission of every canonical source or an exact lift of the full quantum set.
+
+
+A     Native coefficients and uniform source estimates
+The following dictionary specifies the native source used above; it is the RSR source change of [1]. Put
+
+                              Bs = Ho + yo to ,    hs = Ho /Bs ,       cs = 1 + zo ro ,   Rs = 1 + hs zo ,
+            B = Bs Rs /cs ,      j = zo cs /(Bs Rs ),   T = yo cs /(Bs Rs ),     p = zo (1 − ro )/(Bs Rs ),    H = to /cs .   (24)
+
+Then x = jB = zo , y = T B = yo , p/j = (1 − ro )/cs and (5) follows directly. Define the polynomials
+
+     K = j + 1 − p,     E = 1 + B(HT + p − 1),            W0 = (1 − H)j + 1 − p,
+                                2
+      P = j + 1 + B((j + 1) − p) + T B[Hj + j + 1 + B(Hj(2j + 2 − p) + p(2j + 1 − p))]
+             + HjT 2 B 2 (1 + Bp + BHj),
+      L = K + T (W0 − H) + BT [pK + Hj(1 − p)] + BHT 2 (W0 − 1),
+      N = p + B(−j 2 + 3jp − j − p2 + p) + BT (Hj 2 + Hj − j 2 + jp − j + p)
+          + B 2 T (2Hj 2 p − Hj 2 − Hjp2 + 2Hjp − 2j 2 p + 3jp2 − jp − p3 + p2 ) + B 2 HT 2 j(Hj − j + p)(1 + Bp),
+     F1 = −2BHjp + BHj + 2Bjp − 2Bp2 + 2Bp − Hj − Hp − H + j + 1 − p2 /j + p/j,
+     F2 = −B 2 H 2 jp + B 2 Hjp − B 2 Hp2 + B 2 Hp − BH 2 j − BH 2 p + BHj − BHp2 /j + BHp/j,
+      F = K + T F 1 + T 2 F2 ,
+      K = pW0 + B(1 − p)[j(H(p + 1) − p) − (1 − p)(p − H)]
+          + T BH[(p + 1)(1 − H)j + (1 − p)(BHj + p + 1 − H)] + T 2 B 2 H 2 j(1 − H).                                          (25)
+
+The six native weights and the scalar masses are
+
+                     jp(1 + y)(1 + x)(1 + Hy)                                                   µ
+                µ=                               ,                                          m=     ,
+                                    2P                                                         1−p
+                          N                                                                      L
+                 n=               ,                                                         C=       ,
+                     2(j − p)P                                                                 2HT P
+                     T (1 + x)(1 + Hy)(K + Hjy)
+                A=                                 ,
+                               2(1 − HT )P
+                     (1 + Hy)(K + Hjy)[1 − y((1 − H)j − p)]                                      B 2 (K + Hjy)L
+                D=                                          ,                               α=                  ,
+                                       2T (1 − H)P                                                     2EP
+                     T x2 F
+                fc =         ,                                                              qc = Ax − fc ,
+                      2P
+                     B 2 jT (1 − p)(1 + x)(1 + Hy)L
+                rc =                                  ,
+                                      2EP
+                     HT 2 j 2 B 3 L                                                                  T 2 B 2 j(1 + x)K
+                gc =                ,                                                       kc = −                     ,
+                          2P                                                                                2EP
+                dc = H (A + C + α + 12 )y 2 jT − kc .
+                       2
+                                                                                                                              (26)
+
+
+                                                                   6
+The condition n ≥ 0 is exactly N ≥ 0.
+   Here are explicit finite estimates sufficient for all bounds in the proof. For a polynomial after p = js, let its
+δ-envelope be the sum of the absolute coefficients weighted by δ degB + degT + degj , with δ = 1/1024 and 0 ≤ H, s ≤ 1.
+The polynomials in (25) give
+                                     P −1                  L−1                 F −1                 F1            F2 /B
+                              1155174955302256641         2149057539     5633901886178307       1612711427      1077937155      (27)
+              envelope ≤     590295810358705651712       549755813888   1152921504606846976     536870912       1073741824
+
+The first three are below 1/128, the last two below 4, 2. In particular 1 ≤ P ≤ 129/128, 127/128 ≤ L, F ≤ 129/128,
+and 1 − δ ≤ E ≤ 1. Put ℓ = 127/128, h = 129/128, a− = 1/(2h), a+ = (1 + δ 2 )2 (1 + 2δ)/[2(1 − δ)] and d+ =
+(1 + δ 2 )(1 + 2δ)(1 + δ 3 )/2 + δ/2. Termwise substitution into (26) yields
+                                          ratio                lower               upper
+                                          A/T                    a−                   a+
+                                         T HC                 ℓ/(2h)                 h/2
+                                  T (D + 12 )(1 − H)      (1 − δ 3 )/(2h)             d+
+                                         α/B 2                ℓ/(2h)       (1 + 2δ)h/[2(1 − δ)]                                 (28)
+                                         µ/(jp)                  a−            (1 + δ 2 )3 /2
+                                       fc /(T x2 )            ℓ/(2h)                 h/2
+                                        qc /(T x)          a− − 2δ 2 /3               a+
+                                  rc /[T jB 2 (1 − p)]        ℓ/(2h)      (1 + δ 2 )2 h/[2(1 − δ)]
+
+Every lower endpoint exceeds 1/3 and every upper endpoint is below 2/3. For example use x, y ≤ δ 2 , 1 ≤ K + Hjy ≤
+1 + 2δ and 1 − δ 3 ≤ 1 − y[(1 − H)j − p] ≤ 1 + δ 3 ; for qc use qc /(T x) = A/T − xfc /(T x2 ).
+   For the only estimate involving n, write
+                        N = p[1 + B(3j + 1 − p) + BT (j + 1)] − Bj(j + 1)[1 + (1 − H)T ] + RN ,
+       RN
+             = H(2s − 1) − s + s2 + j(2Hs − Hs2 − 2s + 3s2 − s3 ) + HT (H − 1 + s)(1 + Bjs),                         s = p/j.   (29)
+      B2T j2
+The last expression has absolute value at most 5 + 9δ + δ(1 + δ 2 ) < 6. Thus N ≥ p − 2Bj(j + 1) and N/j ≤
+1 + B(3j + 1) + BT (j + 1) + 6B 2 T (j + 1) < 2. These give n(j − p)/j ≤ 1 and p/j ≤ (5/2)(n + B). Finally
+                K − pW0 + Bp(1 − p)(j + 1) = B(1 − p)[Hj(p + 1) + H(1 − p) + p2 ]
+                                                      + T BH[(p + 1)(1 − H)j + (1 − p)(BHj + p + 1 − H)]
+                                                      + T 2 B 2 H 2 j(1 − H) ≥ 0.
+It follows that K > 0; its displayed polynomial bounds it above by (1+δ)p+(1+3δ+3δ 2 +δ 3 +δ 4 )B ≤ 2(p+B). Inserting
+these two bounds into (26) gives (18). All source denominators remain strictly positive; undefined zero-denominator
+native parameter values are not assigned values.
+
+
+B     The full parent and the retained circuit
+For a direct verification of (15), set
+       Kc = p/2 + j[H(α + 12 ) − 12 ] + n(p − j),                                   KR = −µ − (α + 12 )(1 − p) + (T /j)Kc ,
+       Cq = A/T + v 2 [CH(1 + u2 ) + AH + (α + 12 )H],
+       LN = njbc + npv 2 bc − jαbc + 12 pv 2 bc + KR Ru + (Kc /j)uvq,
+      LM = Cq q + µuvbc + v(α − BT CHu2 )R,
+      HN = h0 (1 + u2 ) + 21 v 2 + αu2 + n(1 + v 2 ),
+      HM = (1 + u2 )[C(1 + v 2 ) + D + 21 ] + A(1 + v 2 ) + (α + 12 )v 2 .                                                      (30)
+The scalar part and both full normals are
+                  Fs = qc Q2∗ + nj 2 yB∗2 + rc R∗2 + dc V 2 Q2∗ + (np2 y 2 + 21 p2 y 2 − gc )V 2 B∗2
+                         + fc Ψ + gc V 2 Ψ + kc Z 2 (V 2 − 1)2 ,
+                                                                                                        µp
+               Dv Sc = Fs + 2LN N + 2LM M + HN N 2 + HM M 2 + 2(α + 12 )uvN M +                            (1 + u2 )N 2 .       (31)
+                                                                                                       1−p
+
+
+                                                                   7
+Substitution of (26) and (4) in (1) proves (31) coefficient by coefficient, equivalently RFN8/RFN12 of [1]. The
+cancellations needed for this substitution, with Kd = CH − (D + 21 )(1 − H), include
+
+                     0 = T (Kd + AH + 12 ) − A,
+                     0 = jKd + µ + xT CH,
+                     0 = jKd + xT CH + T [CH + AH + (α + 21 )H] − A − (α + 12 )(1 − p) + α/B,
+                     0 = np − µ + p/2 + [−µ − (α + 21 )(1 − p)]x + j(α − n) + yKc .
+
+These are rational identities in the printed dictionary; no contact equation on the state is imposed.
+   For completeness the RFN19 remainder has the following literal Gram form. Let
+
+                                             Z − U 2V w
+                                         ⎛                ⎞
+                                         ⎜ V w − U 2V w ⎟
+                                         ⎜                ⎟
+                                         ⎜ U w − U 2V w ⎟
+                                                                       ⎛         ⎞
+                                         ⎜                ⎟              1 − UV
+                                                     2
+                                         ⎜ U Z − U 2V w ⎟ ,
+                                    t7 = ⎜                        t3 = ⎝V − U V ⎠ .
+                                                          ⎟
+                                         ⎜U V w − U V w ⎟                U − UV
+                                         ⎜                ⎟
+                                         ⎝U V Z − U 2 V w⎠
+                                            U 2w − U 2V w
+
+Then
+                                    W = tT7 G7 t7 + 4V wZ(1 − U )2 + U wZ tT3 G3 t3 ,                              (32)
+where                ⎛                                         ⎞
+                       4       −2  −3/2        0   −1/2 0  1/2
+                    ⎜ −2       3     0        −3/2   0  −1  2 ⎟
+                    ⎜                                          ⎟                        ⎛            ⎞
+                    ⎜−3/2      0     4        3/2   −2 −3   0 ⎟                        3     −2   −2
+                    ⎜                                          ⎟
+                    ⎜ 0
+               G7 = ⎜         −3/2 3/2         4   −3/2 0 −3/2⎟⎟,                G3 = ⎝−2     2    2 ⎠.
+                    ⎜−1/2      0    −2        −3/2   3  2  −1 ⎟                        −2     2    3
+                    ⎜                                          ⎟
+                    ⎝ 0        −1   −3         0     2   8 −4 ⎠
+                      1/2       2    0        −3/2 −1 −4    4
+Their leading principal minors are respectively (4, 8, 101/4, 1049/16, 907/16, 3279/16, 743/16) and (3, 2, 2). Thus both
+matrices are positive definite. Since U, V ≥ 0 and wZ ≥ 0, (32) is a sum of squares in precisely the radicals included
+in Table 2.
+
+
+References
+[1] Finite semidefinite representation of the (2, 2, 2) quantum set: proof companion, preserved source latex/
+    certificates/c2_short.tex, source dictionary RSR2–RSR19, full-parent identities RFN4–RFN12, RFN18b–
+    RFN19, and sign completion SJ1–SJ7 (component pf77de02d80c4).
+
+[2] Two fixed regional completions for the C2 source, extracted-lifts/canonical-completion/fixed-c2-gates/
+    Fixed_C2_Completions.tex, regional identities and native-envelope estimates.
+
+
+
+
+                                                           8
+

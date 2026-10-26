@@ -1,0 +1,156 @@
+\section{A full-parent remote theorem for strong HI sources}
+\label{sec:hi-remote}
+\begin{theorem}[All tests outside the HI critical corner]
+Let $K_c,K_t$ be independent real closed extensions of $\mathbb R$.
+Consider the original C2 parent with $d=1$, $\lambda=\beta=0$,
+$n,A\geq0$, and $m,C,D,\alpha$ positive unbounded source numbers.
+Then at every projective testing pair except possibly
+$1/u$ and $v$ both nonzero infinitesimal, and every real or complex testing
+state, the
+original parent is a sum of squares in $K_c\otimes_{\mathbb R}K_t$.
+No comparison of source and testing rates is made.
+\end{theorem}
+
+\begin{proof}
+For any positive real $\mu$, retain the four nonnegative event
+packets with coefficients $m-\mu,C-\mu,D-\mu,\alpha-\mu$, and
+retain the $n$ and $A$ packets in their entirety. It suffices to
+prove the capped parent obtained by setting
+$m=C=D=\alpha=\mu$ and $n=A=0$ is tensor SOS at the given test.
+The real constant $\mu$ may be chosen after the real testing
+residue is fixed, since each of the original four source
+coefficients is larger than every real number.
+
+Write $D_u=1+u^2$, $D_v=1+v^2$.
+First suppose $v$ is infinitesimal, including zero. Use the roots
+\[
+ S=vW,\qquad E=Y-uW,\qquad X,\quad Z.
+\]
+All four capped event amplitudes are bounded linear forms in
+these roots:
+\[
+ M=D_uS-X-uZ+uvE,\quad uW-Y=-E,\quad
+ J=-E+uvX-vZ,\quad vY-Z=uS+vE-Z.
+\]
+The remaining core depends only on the same four roots, so the
+exact capped parent has a bounded four-root Gram.
+Let $a=\bar u$ and $d_a=1+a^2$. Its residue is
+\[
+ (8\mu+2)E^2+
+ 4\mu(d_aS-X-aZ)^2+(4\mu+2)d_a(aS-Z)^2
+       +2(X+aZ)^2-2d_aZ^2.
+\]
+Put $T=X+aZ$ and $R=aS-Z$; this is an invertible real change of
+coordinates. The last three-variable form is
+\[
+ 4\mu(d_aS-T)^2+4\mu d_aR^2+2T^2
+       -2d_a a^2S^2+4d_a aSR.
+\]
+The $T$ and $R$ pivots are $4\mu+2$ and $4\mu d_a$.
+The remaining Schur pivot is exactly
+\[
+ \frac{d_a[4\mu^2-a^2(4\mu+1)]}{\mu(2\mu+1)}.
+\]
+Taking $\mu=1+a^2$ makes its numerator positive, because
+$4\mu^2-a^2(4\mu+1)=3a^2+4$.
+Thus this bounded Gram has strictly positive real residue and
+is tensor SOS by the inherited strict-residue Gram lemma.
+
+Next suppose $v$ is a bounded unit. At the real residues
+$(a,b)=(\bar u,\bar v)$ the four event forms have common kernel
+\[
+ (W,X,Y,Z)=W(1,b,a,ab).
+\]
+The core restricted to this line is
+$2(1+a^2)(1+b^2)b^2W^2$, which is strictly positive away from zero.
+Consequently a sufficiently large positive real $\mu$ makes the
+whole capped residue form positive definite. For completeness,
+this elementary assertion has a direct quantitative proof.
+Let $E_0\succeq0$ be the event Gram, split the state space into
+$\ker E_0$ and its orthogonal complement, and let $\sigma>0$ be
+its smallest eigenvalue on that complement. Let $\kappa>0$ be
+the core's eigenvalue on the one-dimensional kernel and bound
+the norms of the two remaining core blocks by $M$.
+Then $4\mu\sigma>M+M^2/\kappa$ gives a positive Schur
+complement. Every constant here belongs to $\mathbb R$.
+The exact state Gram is bounded and has this positive residue.
+
+Finally suppose $v$ is unbounded, including the projective
+endpoint. Set $w=1/v$, homogenizing before setting $w=0$.
+The four event forms become
+\[
+ W-wX+uY-uwZ,\quad uW-Y,\quad
+ uwW+uX-wY-Z,\quad Y-wZ,
+\]
+with bounded positive factors $D_w$ or $D_u$ where appropriate.
+At $w=0$ their common kernel is
+$(W,X,Y,Z)=(0,X,0,aX)$, on which the homogenized core is
+$2(1+a^2)X^2$. The same real Schur argument gives a positive
+residue Gram for a sufficiently large $\mu$.
+For finite unbounded $v$, undo homogenization by the pure
+positive testing square $v^2$; for the projective endpoint the
+homogeneous expression is already the required parent.
+These three cases exhaust every projective Bob test when $u$ is bounded.
+
+It remains to consider $p=1/u$ infinitesimal, after homogenizing
+by $p^2$. If $v$ is a bounded unit, use the four roots
+\[
+ S=pY,\qquad T=vY-Z,\qquad W,\quad X.
+\]
+The exact event amplitudes are
+\[
+ W-S,\quad J=W+vX-D_vS+pvT,\quad
+ M=pvW-pX+T,\quad T.
+\]
+The signed core also has bounded coefficients in these roots:
+\[
+ 2J^2+2D_pT^2+2D_v
+ [p^2X^2+2vSX-2pXT-v^2S^2+2pvST-p^2T^2].
+\]
+At $p=0$, set $b=\bar v\ne0$, $A_0=W-S$, and
+$B_0=X-bS$. The full capped residue is
+\[
+ (8\mu+2)T^2+4\mu(1+b^2)A_0^2
+ +(4\mu+2)(A_0+bB_0)^2
+ +4(1+b^2)bSB_0+2(1+b^2)b^2S^2.
+\]
+As $\mu$ grows, the first three positive penalties constrain
+$T=A_0=B_0=0$, and the residual kernel has positive coefficient
+$2(1+b^2)b^2S^2$. The quantitative real Schur argument above
+therefore gives a finite $\mu$ with a strictly positive residue.
+
+If $u,v$ are both projectively unbounded, put $w=1/v$ and
+homogenize by $p^2w^2$. Use $P=Y-wZ$, $S=pZ$, $W,X$.
+Now the exact event amplitudes are
+\[
+ M=pW-pwX+P,\quad W-pP-wS,\quad
+ J=wW+X-pwP-D_wS,\quad P.
+\]
+The exact core is
+\[
+ 2J^2+2D_pP^2+2D_w[p^2X^2+2SX-S^2].
+\]
+At $p=w=0$ the capped residue is exactly
+\[
+ 4\mu W^2+(8\mu+2)P^2+4\mu(X-S)^2+2X^2,
+\]
+which is strict for every $\mu>0$. The literal projective
+endpoints cause no division. The literal critical axes also have direct exact certificates:
+\begin{align*}
+ F|_{p=0}={}&4nD_vX^2+(4m+4\alpha+2)(vY-Z)^2
+ +4CD_vW^2+4AD_vY^2+(4D+2)(W+vX)^2,\\
+ F|_{v=0}={}&4nD_pX^2+(4m+2)(pX+Z)^2
+ +(4C+4D+2)(W-pY)^2+4AD_pY^2+4\alpha D_pZ^2.
+\end{align*}
+Thus only $p,v$ both nonzero infinitesimal remain untreated.
+Applying the real-state result separately to real and imaginary
+state components proves the complex-state claim.
+\end{proof}
+
+For a strong C2 HI source, the exact source-entry lemma below proves
+that all four coefficients in the theorem are unbounded. Hence the
+theorem applies without any additional source-shape assumption.
+Its precise uncovered complement is the critical testing corner
+$1/u$ and $v$ both nonzero infinitesimal. Exact sign gauges may
+make both positive.
+The original HI source leaf is therefore narrowed but not closed.

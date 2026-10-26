@@ -1,0 +1,272 @@
+\section{A source-exact projective pitchfork for C1}
+\label{sec:new-c1-projective-pitchfork}
+
+\paragraph{Theorem and precise source domain.}
+Take a bounded physical canonical C1 source with $d=1$,
+$\lambda=n=0$, $m,C,A,\alpha$ positive bounded units and
+$D,\beta\geq0$ infinitesimal. Assume the original actual finite
+noncommuting stationary zero contact, and retain every original
+source gap and intersection. Then the entire parent has a finite
+sum-of-squares certificate in $K_c\otimes_{\mathbb R}K_t$ for
+every independent projective test and every real or complex state.
+This includes literal $D=0$ or $\beta=0$ whenever allowed by the
+source domain. The two cannot vanish together at an actual contact.
+
+\subsection{Opening-safe source entry}
+
+Write the positive source contact as $(u_c,w_c)=(c,1/v_c)$,
+and $V=w_c^2$. The retained positive-$d$ balance proof gives
+$c$ a positive bounded unit and $V$ a positive infinitesimal.
+Its second stationarity equation, in the notation of that proof, is
+\[
+ a_3=V^{-2}\{mDa_2/c^2+\beta ma_4+Da_5+\beta a_7c^2\},
+ \tag{PP1}
+\]
+where all $a_i$ are positive bounded units. Therefore
+\[
+ D=V^2\delta,\quad\beta=V^2\eta,\qquad
+ \delta,\eta\geq0\text{ bounded},\qquad
+ \delta+\eta\text{ a positive unit}.
+ \tag{PP2}
+\]
+No inverse of either opening is used.
+
+Normalize the source state by $Z_c=1$. Set
+\[
+ p=W_c/w_c,\qquad y=Y_c/w_c,\qquad x=X_c/V.
+ \tag{PP3}
+\]
+All three are bounded source elements. To prove this without a
+shape hypothesis, restrict the reciprocal full parent PP6 to
+$(W,Y,X)$ at $w=0$, and then take residues. Its positive hard form is
+\[
+ H_u(W,Y,X)=m(W+uY)^2+C(uW-Y)^2
+       +(A+\alpha+1/2)(1+u^2)Y^2+(1+u^2)X^2/2.
+ \tag{PP4}
+\]
+It is positive definite for every bounded real $u$. Scale the two
+$W,Y$ kernel equations at the source by $w_c$, and the $X$
+equation by $V$. In the unknowns $(p,y,x)$ the resulting bounded
+matrix has a block triangular residue: its $p,y$ block is the
+positive $W,Y$ block of PP4, and its $x$ pivot is $(1+c^2)/2$.
+The terms $(\beta-D)/V=V(\eta-\delta)$ are bounded. All right
+hand sides are bounded, proving PP3 by an ordinary source-field
+matrix inverse with unit determinant.
+
+Let $q_{01},q_{10},q_{21},h$ be the original Laurent coefficients.
+Their first three residues are positive units because $m,C,A,\alpha$
+are units. The actual zero and angular stationarity equations,
+using PP2, give
+\[
+ \bar q_{01}=\bar q_{21}\bar c^{\,4},\qquad
+ \bar h=-2\bar q_{21}\bar c^{\,2}.
+ \tag{PP5}
+\]
+Every other nonconstant Laurent contribution apart from $q_{10}w^2$
+vanishes in this residue calculation. These are equations wholly in
+the coefficient field followed by its real residue map.
+
+\subsection{A complete local normal and divided-difference argument}
+
+It remains locally to treat testing $w$ infinitesimal or zero and
+$u$ with the same positive real residue as $c$. The full reciprocal
+quarter-parent is
+\[
+\begin{split}
+ F={}&m(W-wX+uY-uwZ)^2+CD_w(uW-Y)^2+AD_uD_wY^2\\
+ &+(D+1/2)(uwW+uX-wY-Z)^2
+       +(\alpha+1/2)D_u(Y-wZ)^2\\
+ &+(\beta+1/2)D_w(X+uZ)^2-D_uD_wZ^2/2,
+ \qquad D_u=1+u^2,\quad D_w=1+w^2.
+\end{split}\tag{PP6}
+\]
+Use three unrestricted normals and two scalar conductors
+\[
+ N_W=W-pwZ,\quad N_Y=Y-ywZ,\quad N_X=X-xw^2Z,
+ \qquad Q=w(u-c)Z,\quad L=(w^2-V)Z.
+ \tag{PP7}
+\]
+The centers agree with the actual source contact; no equation is
+imposed on an independent state. Write the full normal expansion
+\[
+ F=N^TH(u,w)N+2Z\sum_iN_i\ell_i(u,w)+E(u,w^2)Z^2,
+ \quad N=(N_W,N_Y,N_X)^T.
+ \tag{PP8}
+\]
+It is an exact expansion of every term of PP6. The matrix $H$ has
+bounded entries and residue PP4 at $u=\bar c$. Parity and direct
+inspection of PP6 give bounded polynomials $a_W,a_Y,a_X$ such that
+\[
+ \ell_W=w a_W(u,b),\qquad \ell_Y=w a_Y(u,b),\qquad
+ \ell_X=u(\beta-D)+b a_X(u,b),\quad b=w^2.
+ \tag{PP9}
+\]
+Actual state stationarity gives $a_W(c,V)=a_Y(c,V)=0$ and
+$\ell_X(c,w_c)=0$. Finite monic division thus gives bounded
+polynomials $A_i,B_i$ with
+\[
+ a_i(u,b)=(u-c)A_i(u,b)+(b-V)B_i(b),\qquad i=W,Y.
+\]
+Consequently the entire first two normal couplings are
+$Z\ell_i=A_iQ+wB_iL$.
+
+For the third normal put
+$r(u)=u(\beta-D)/V+a_X(u,V)$. This is a bounded source
+polynomial by PP2, and $r(c)=0$. Hence $r=(u-c)R(u)$ for
+a bounded polynomial $R$. Division in $b$ gives another bounded
+polynomial $B_X$ with
+\[
+ Z\ell_X=\{B_X(u,b)-(u-c)R(u)\}L+wR(u)Q.
+ \tag{PP10}
+\]
+Here the identity $V(u-c)Z=wQ-(u-c)L$ is exact. Moreover
+$B_X(c,0)$ has zero residue: the source equation
+$u(\beta-D)+Va_X(u,V)=0$ at $u=c$, divided by $V$,
+gives $a_X(c,V)$ infinitesimal, and $B_X(c,0)$ has the same
+residue. Thus the third normal has no residue coupling to $L$
+or $Q$. The first two have no residue coupling to $L$.
+
+For completeness, the scalar coefficient obeys
+\[
+ E(u,0)=D+\beta u^2,\qquad
+ E(c,V)=E_u(c,V)=E_b(c,V)=0.
+ \tag{PP11}
+\]
+The first assertion follows by setting $w=0$ in the entire PP6
+after the graph substitution. The other three follow from the
+actual full source contact and its two angle derivatives; neither
+normal term is discarded in making this inference.
+Define $d(u)=\delta+\eta u^2$ and the bounded polynomial
+\[
+ J(u,b)=\{E(u,b)-d(u)(b-V)^2\}/b.
+ \tag{PP12}
+\]
+This notation means exact monic division: PP11--PP2 make the
+constant term zero. No testing $b$ is inverted. At $(c,V)$
+the value and both first derivatives of $J$ vanish. A second
+finite monic Taylor division gives bounded polynomials $J_{20}$,
+$J_{11},J_{02}$ with
+\[
+ J(u,b)=(u-c)^2J_{20}(u,b)
+       +(u-c)(b-V)J_{11}(b)+(b-V)^2J_{02}(b).
+ \tag{PP13}
+\]
+Substitution yields the complete exact scalar identity
+\[
+ E(u,w^2)Z^2=J_{20}(u,w^2)Q^2+wJ_{11}(w^2)QL
+                     +\{d(u)+w^2J_{02}(w^2)\}L^2.
+ \tag{PP14}
+\]
+All divisions preceded tensor evaluation, with monic divisors and
+bounded source coefficients. These formulas hold literally at $w=0$.
+
+Equations PP8--PP14 represent the entire parent by a bounded
+Gram on the five rows $N_W,N_Y,N_X,Q,L$. Its $L$ pivot in
+residue is $\bar\delta+\bar\eta\bar c^2>0$, and its $L$
+crosses have zero residue. It remains to check the four-row hard
+and angular residue; the following exact determinant computation
+provides that check without taking a mixed inverse.
+
+\subsection{Strictness of the angular residue}
+
+At $D=\beta=0$, replace $Z$ by $T/w$ in the whole reciprocal
+parent and take its polynomial value at $w=0$. This gives a real
+four-state quadratic form $B_u(W,Y,X,T)$, with hard block PP4.
+The original determinant identity gives
+\[
+ \det B_u=\frac{(1+u^2)^2}{16}
+                  (q_{01}+hu^2+q_{21}u^4).
+ \tag{PP15}
+\]
+Using PP5, its real Schur coefficient at $T$ is
+\[
+ g(u)=\frac{(1+u^2)^2q_{21}}{16\det H_u}
+                       (u^2-c^2)^2.
+ \tag{PP16}
+\]
+Here all entries and inverses are real residues; this calculation
+proves positivity of a real matrix and does not factor a matrix in
+the tensor ring. The contact centers PP3 give the unique real
+kernel of $B_c$, so the four-row residue in PP8--PP14 is precisely
+the quadratic Taylor coefficient in hard normals and the change
+$u-c$. Its angular Schur pivot is
+\[
+ g''(c)/2=\frac{(1+c^2)^2q_{21}c^2}{4\det H_c}>0.
+ \tag{PP17}
+\]
+The hard block is PP4 and is positive definite. Thus this full
+four-row residue is positive definite, as is the independent $L$
+pivot. The separated strict bounded-Gram lemma proves that PP6
+is tensor SOS in the complete local chart. The rows may be
+unbounded or linearly dependent at a literal endpoint; only the
+coefficient Gram needs a strict real residue.
+
+\subsection{Explicit testing complement and projective endpoints}
+
+If $u,v$ are bounded original testing coordinates, use the ordinary
+state matrix except near the double zero corner. At finite nonzero
+real residues, the residue Laurent polynomial is
+\[
+ q_{21}(u^2-c^2)^2/u^2+q_{10}/v^2>0,
+ \tag{PP18}
+\]
+so its state matrix is positive definite by the hard $Z=0$ block.
+At $u=0$, $v\ne0$ the real quarter-parent is
+\[
+ m(vW-X)^2+(C+A+1/2)(1+v^2)Y^2
+                       +\alpha(vY-Z)^2+(1+v^2)X^2/2\succ0.
+\]
+At $v=0$, $u\ne0$ it is
+$m(X+uZ)^2+(C+1/2)(uW-Y)^2+A(1+u^2)Y^2
++\alpha(1+u^2)Z^2+(X+uZ)^2/2$, which is likewise strict.
+These are residue identities; the bounded full matrices therefore
+give tensor SOS on their respective charts.
+
+When both $u,v$ are infinitesimal or zero, use the five rows
+$(uW,vW,X,Y,Z)$ in the entire original finite parent. The exact
+polynomial substitution is bounded and its residue is
+\[
+ m(vW-X)^2+(C+1/2)(uW-Y)^2+AY^2+\alpha Z^2+X^2/2\succ0
+ \tag{PP19}
+\]
+as a coefficient Gram on those five rows. This treats that corner
+with no state normalization.
+
+For reciprocal Alice and bounded Bob, the complete core identity
+RC20 applies unchanged with all $m,D,\alpha,\beta$ event packets
+retained whole. Its residue RC21 is strict using only $C,A>0$.
+For two reciprocal testing angles, retain those positive packets
+and use RC24 for the four rows $W,X,Y,wZ$. The residue
+$CW^2+AY^2+X^2/2+(Y-wZ)^2/2$ is strictly positive.
+These identities allow the reciprocal coordinate to be literally zero.
+
+For Bob reciprocal and bounded Alice, retain the whole $D,\beta$
+packets, put $T=wZ$, and use the full four-row expression
+\[
+\begin{split}
+ m(W-wX+uY-uT)^2+CD_w(uW-Y)^2
+          +AD_uD_wY^2+\alpha D_u(Y-T)^2+K/2,
+\end{split}
+\]
+where $K$ is the full core RC22 with $\rho_*=uW-Y$.
+Its residue is exactly $B_u$. By PP15--PP16 it is strictly
+positive whenever $u^2$ has residue different from $\bar c^2$,
+including $u$ infinitesimal. The remaining matched residues are
+PP7--PP17 after the exact Alice sign gauge if necessary.
+
+Both signs of either angle are allowed by the exact simultaneous
+state sign gauges of the original parent. Every normalization is
+a positive square in a single source or testing field. Complex
+states split into real and imaginary parts. The finite and
+reciprocal homogeneous identities include all literal axes and
+projective endpoints. This completes the all-tests theorem on the
+stated positive-$d$ C1 projective source domain.
+
+\paragraph{Scope of verification.}
+The focused checker expands the full parent, verifies the normal
+support and finite divisions with explicit contact-jet remainders,
+and checks PP15 and the complete outer identities. Source
+boundedness, vanishing contact jets, real-residue strictness and
+the exhaustive join are the analytical arguments above. No
+inference is made from a scalar certificate alone, from a
+historical checklist, or from mixed multiplier cancellation.

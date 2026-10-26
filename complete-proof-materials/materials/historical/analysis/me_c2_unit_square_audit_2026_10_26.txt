@@ -1,0 +1,23 @@
+ME-C2 unit-square moment reduction: bounded independent audit
+2026-10-26
+
+Verdict: the displayed algebra and fixed-fiber moment/dual theorem are correct. They give an exact measure-cone description, not a finite affine SDP. A focused follow-up on the remaining bivariate positivity problem is justified; no finite-lift implication is established yet.
+
+1. Parameter change. Put sigma=1-u^2, xi=1-uv, tau=1-v^2 and B=u^2+sigma h. The old coordinates become
+ a=u/v, k=v^(-2), x=B/(uv), y=u/(vB).
+Thus xy=k; k>max(1,a^2) is equivalent to 0<u,v<1. Since k/a-a=sigma/(uv)>0, x>a,y>a are equivalent to0<h<1. The displayed inverse formulas for r,s follow exactly. Substituting the public fixed-fiber equations with A=1 gives n=N/B. Hence its n>=0 condition is exactly N>=0; the other strict native conditions follow through that already-proved dictionary. These are source parameters, never testing variables.
+
+2. Source map and congruence. Independent exact rational simplification verifies all seven coordinates after multiplication by u^2 v tau B, and each has h-degree at most two. For an arbitrary moment vector y, substitution into the old source expressions X,Y verifies precisely
+ [[X,kA],[kA,kY]]=u tau R [[y0,y1],[y1,y2]] R^T,
+ R=[[u^2,sigma],[u/v,0]], det R=-u sigma/v !=0.
+Thus this is a common source-only congruence on the open square, not a formal substitution of variable parameters into an affine SDP.
+
+3. Exact moment cone. N(0)=u^3v>0 and N(1)=uv>0, while its quadratic coefficient xi sigma>0. Any forbidden set is therefore either empty or one open interval(alpha,beta) inside(0,1). Normalize nonzero moments by y0=1. PSD imposes y2>=y1^2; y1-y2>=0 supplies y2<=y1 and forces0<=y1<=1. If a forbidden interval exists, the N-localizer imposes
+ y2>=(alpha+beta)y1-alpha beta,
+the secant of the parabola across that interval. The maximum of this secant and y1^2 is exactly the lower convex envelope of the admissible parabola; the upper envelope is y2=y1. This proves both inclusions, including singular moments. If y0=0, PSD and the first localizer force y1=y2=0. The cone is closed.
+
+4. Exact pointwise dual. The cone in(3) has a strictly feasible moment at every fixed open-square point: choose y0=1,y1=1/2,y2=1/2-epsilon, with epsilon>0 sufficiently small. The matrix is PD, the first localizer is epsilon, and the N-localizer tends to[N(0)+N(1)]/2>0. Conic Slater duality therefore gives exactly(6), with attained Q>=0,rho,eta>=0. The displayed coefficient signs are correct: rho multiplies h-h^2 and eta multiplies N. At u=v=1/3,h=1/2, N=-11/81 and tilde n=-88/19683 exactly; the additional localizer cannot be omitted.
+
+5. Scope and remaining bottleneck. Formula(5) is correct after closure and finite integrability are understood. In its converse, h=0,1 give limits of native generators, rather than literal finite strict contacts; the outer closure already handles them. Finite sums of Dirac masses suffice to generate a dense subcone, and every integrable mixture lies in its closed hull.
+
+The unresolved quantifier is FOR EVERY(u,v), THERE EXIST Q,rho,eta. Neither the common2x2 matrix nor pointwise dual attainment supplies one fixed finite source-independent collection of SDP variables or bounded-degree coefficient functions valid over the whole square. That is the exact new bottleneck. This reduction organizes the full three-parameter hull into a special explicit bivariate positivity problem; it does not prove that problem has a finite SDP representation.

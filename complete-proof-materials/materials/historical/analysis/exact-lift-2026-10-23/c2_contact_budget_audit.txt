@@ -1,0 +1,198 @@
+AUDIT OF THE NEW CONTACT-CAP SOURCE BUDGET
+24 October 2026
+
+Scope: pro_contact_completed_reply.txt, compared with c2_short.tex
+RSR2--RSR6, RSR15--RSR21, RFN13--RFN16, and LII2--LII20.
+Only the saved reply, not its claimed ZIP proof/record files, was available
+for this pass. No numerical search, public edit, or broad case audit.
+
+Verdict. The restricted source change, rho bound, positive circuit lower
+bound, p^2<=8Sigma, literal n=0 completion, and both displayed purchases
+all check analytically. The strong source caps and displayed baseline
+lower bound also check. The reply alone does NOT establish the weak
+eleven-row coefficient bounds or the strong six-row error bounds: it
+does not print the matrices/records needed to verify those assertions.
+The full cap-admission claim therefore remains pending those bodies.
+
+1. Restricted native source -> exact R1 coordinates
+
+Write epsilon=2^-64 and use suffix o for the original GE1 source:
+ 0<H_o<1, 0<z_o,y_o<=epsilon H_o, L_o=y_o t_o,
+ 0<r_o<1, 0<t_o<c_s=1+z_o r_o, B_s=H_o+L_o.
+Set h_s=H_o/B_s, R_s=1+h_s z_o. Then the stated change is exactly RSR2:
+ B=B_s R_s/c_s, j=z_o c_s/(B_s R_s),
+ T=y_o c_s/(B_s R_s), p=z_o(1-r_o)/(B_s R_s), H=t_o/c_s.
+Indeed the original weak-II ratios are a_s=z_o/B_s and
+t_s=y_o/B_s, and (1-h_s)/(t_s c_s)=t_o/c_s.
+Thus x=jB=z_o and y=TB=y_o exactly; no stationary source has changed.
+
+Since L_o<=epsilon H_o(1+epsilon), B_s<=H_o(1+epsilon+epsilon^2),
+and 1<=R_s,c_s<=1+epsilon,
+ B<=H_o(1+epsilon+epsilon^2)(1+epsilon)<2H_o,
+ j,T<=epsilon(1+epsilon)<2epsilon.
+Therefore H_o<=2^-12 implies
+ B<2^-11, 0<j,T<2^-63, 0<p<j<1, 0<H<1.
+Also rho=p/j=(1-r_o)/c_s lies strictly between zero and one.
+These are exact numerical source estimates, not residue statements.
+
+2. Explicit finite bounds from the original RSR polynomials
+
+Use delta=1/64. The preceding source box lies in
+ 0<B,j,T<=delta, 0<p<j, 0<H<1.
+Use the exact polynomials P,N,F in RSR5 and RSR15, with
+ K=1+j-p>=1, n=N/[2(j-p)P],
+ f_c=T x^2 F/(2P).
+
+The positive polynomial P satisfies
+ P <=1+delta+delta(1+delta)^2
+       +delta^2[1+2delta+delta^2(4delta+3)]
+       +delta^5(1+2delta^2)
+   <1+3delta+2delta^2+2delta^5 <5/4.                  (1)
+This follows termwise from p<=j,H<=1 in its printed formula.
+All its denominators remain pure source and P>0.
+
+For N/j, drop its positive terms and use p^2/j<=p<=j and
+p^3/j<=p^2. Its four correction lines give respectively
+ N/j >=rho-B D_N,
+ D_N=1+2j+T(1+j)+BT(2j+4j^2)+BT^2j(1+Bj).
+In particular
+ D_N<=1+3delta+delta^2+2delta^3+5delta^4+delta^6
+     <=1+4delta<5/4.
+Since N/j=2(1-rho)P n and n>=0,
+ rho<=2(1-rho)P n+(5/4)B
+     <=(5/2)n+(5/4)B <=(5/2)(n+B).                   (2)
+This argument never divides by n.
+
+For F=K+T F1+T^2 F2, the negative terms in printed RSR15 give
+ F1>=-[1+3delta+2delta^3]>-2,
+ F2>=-[3delta^2+2delta^4]>-1.
+Thus
+ F>=1-2T-T^2>=1-2delta-delta^2>5/6.
+Together with (1) and x=jB,y=TB,
+ f_c/y=j^2 B F/(2P)>=j^2 B/3>0.                     (3)
+No residue substitution, or lower bound on j,p,j-p,H,1-H, was used.
+
+3. Combined current and the n=0 boundary
+
+Let mu=m(1-p)>=0 and h0=mu+1/2>=1/2. RSR21/RFN14 give exactly
+ h0 N0^2+n(N0+j bcur)^2=Nhat^2+Me bcur^2,
+ Nhat=sqrt(n+h0)[N0+nj bcur/(n+h0)],
+ Me=n h0 j^2/(n+h0).
+This completes only the first correlated current; the other whole
+square n v^2(N0+p bcur)^2 must still be retained in the full identity.
+
+Let Sigma=Me+f_c/y. If n<=h0, Me>=n j^2/2. By rho^2<=rho and (2)--(3),
+ p^2=j^2 rho^2 <=(5/2)j^2(n+B)
+      <=5Me+(15/2)f_c/y <=8Sigma.
+If n>=h0, Me>=h0 j^2/2>=j^2/4, so p^2<=j^2<=4Me.
+At n=0, Me=0, Nhat=sqrt(h0)N0, Sigma=f_c/y>0.
+Therefore gamma=p^2/Sigma is source-only and 0<gamma<=8,
+including the literal n=0 face. No inverse of Me is required.
+
+4. The two new purchases are exact
+
+Use the homogeneous rows in the reply and y=TB,x=jB. Then
+ bcur=v w-u zeta/j=sqrt(y) B_*.
+The polynomial identity
+ E_h=(1+V^2)Psi_h-V^2 B_*^2
+    =Q_*^2+R_*^2+V^2(w-UV Zcal)^2
+holds by direct expansion. On the stated sign chart its right side
+is a legal separated SOS; its coefficients and radicals are pure
+source, pure testing, or their explicit products.
+
+Since gamma Sigma=p^2,
+ gamma Me-p^2=-gamma f_c/y.
+Consequently the first purchase reduces identically to
+ gamma f_c[(y v^2+v^4)Psi_h-v^4 bcur^2/y]
+ =gamma f_c y v^2 E_h.
+The second reduces identically to
+ gamma T f_c u^2[(y+v^2)Psi_h-v^2 bcur^2/y]
+ =gamma T f_c y u^2 E_h.
+Thus both printed identities are correct at arbitrary state scale,
+including n=0. Their coefficients consume gamma v^4 and
+gamma T u^2v^2 of the available current mass; their explicit circuit
+costs are the displayed polynomials, not an appeal to TF1/TF2.
+
+The signed scalar recombinations in the reply also are identities:
+ g_c V^2(Psi_h-B_*^2)=g_c(E_h-Psi_h);
+ -kappa(VQ_*+R_*)^2
+ =-2kappa V^2Q_*^2-2kappa R_*^2+kappa(VQ_*-R_*)^2.
+They do not alone bound the aggregate subsequent expenditure.
+On this restricted box kappa=-k_c>0 follows from RSR19:
+ K_script>=p(1-p)[1-B(j+1)]>0; E=1+B(HT+p-1)>0.
+
+5. Two readily checked strong-branch claims
+
+The strong caps ell_*=H_o/4 and alpha_*=H_o^2/8 are valid.
+The prior exact GE1 estimates give
+ 1/eta <=4(y_o/H_o)(1+6epsilon)/(1-epsilon),
+ eta=CD/(C+D).
+Since C+D>=4eta,
+ ell=y_o(C+D)>=H_o(1-epsilon)/(1+6epsilon)>H_o/4.
+Also N=(B_s+z_o r_o)M>=H_o^3 and
+Delta<=H_o(1+H_o)(1+6epsilon), hence
+ alpha>=H_o^2/[2(1-H_o^2)(1+6epsilon)]>H_o^2/8.
+These include independent t_o,j_o,r_o,1-H_o openings.
+
+The printed strong baseline is indeed >=I/2. Its only off-diagonal
+block is indices 4,6:
+ [[2/(1+H_o),1/(1+H_o)],
+  [1/(1+H_o),4]].
+It is diagonally dominant with lower Gershgorin endpoint
+1/(1+H_o)>=1/2; all other diagonal entries are >=1/2.
+The stated shear/source scalings introduce no moving testing radical.
+The roots lie in the claimed eleven-function polynomial testing span,
+as can be seen from LII2--LII3 and R,T in LII14.
+
+6. What is actually printed, and what must be requested
+
+WEAK GRAM. The reply prints a support/norm table and states Q00>=I/4,
+but does not give:
+ (a) the ordered ELEVEN root column and its source-only normalizations;
+ (b) the literal symmetric polynomial matrix Q(u,v), or all its 44
+     source witness records and the convention turning them into entries;
+ (c) the explicit constant block/couplings behind 91/465, including
+     every row omitted from the stated substantial four-row block;
+ (d) inequalities bounding each source rational coefficient uniformly
+     at j-p,H,1-H,p,B,j,T openings, after every signed-mass/radial
+     expenditure and both state-normal corrections.
+The displayed expressions for L_N^rem,L_M contain additional coefficient
+symbols K_R,K_c,C_q whose full definitions are not in the reply.
+The original RSR/RFN proof has qualitative O(.) and infinitesimal-cost
+arguments; those do not by themselves prove the new numerical table.
+
+Conditional on the displayed eight operator bounds and Q00>=I/4, the
+fixed-gate identity is correct. Its budget is
+ 2^-12+2^-25+2^-15+2^-47+2^-33+2^-47+2^-70+2^-93
+ <2^-10,
+so the claimed reserve 255/1024 follows. This checks the final gate
+arithmetic, not its unprinted input bounds.
+
+STRONG GRAM. The reply supplies the source caps, source-only shear,
+baseline, support, and a claimed constant error <=2^-40, but not:
+ (e) the actual six-by-six polynomial matrix and its 51 coefficient
+     records, including the exact relation between the record basis,
+     the sheared root column, and each original parent term;
+ (f) explicit monic coquotients/contact remainders or an equivalent
+     finite coefficient-extraction prescription that reproduces them;
+ (g) the rational absolute/operator coefficient inequalities proving
+     the numerical error and total gate budget below1/8, uniformly
+     with no lower bound on r_o,t_o,j_o,1-H_o.
+Its original LII counterpart proves bounded coquotients/strict residue
+when H is a unit. It does not print these numerical bounds on
+H_o>=2^-12,z_o,y_o<=2^-64 H_o.
+
+REQUEST BEFORE THE NEXT GLOBAL CONSTRUCTION:
+Recover and inspect the exact proof source containing (a)--(g), not
+merely the affine coefficient-system data or replay statuses. If the
+package already contains them, request the file names and theorem/
+equation locators, plus the full weak/strong witness reconstruction.
+Otherwise request those missing proofs now. Reconstructing an affine
+target and listing functions cannot establish PSD admission without
+these quantitative inequalities.
+
+The further broad R1 corner at the end of the reply has deliberately
+not been audited here. The verified restricted budget is genuine
+progress; it does not by itself certify either complete contact Gram,
+the order635 native-envelope claim, or universal canonical coverage.
+

@@ -1,0 +1,306 @@
+\section{The unbounded-$h/q$ part of the doubly small endpoint}
+\label{sec:new-c144-unbounded-h-ratio}
+
+\paragraph{Exact scope.}
+Retain the full original entered C14.4 source, all its strict gaps and
+prior-complement intersections. Suppose $S,\kappa,\nu$ are positive
+infinitesimals, $\ell=1-\nu$, $q=\nu/\ell$, and
+\[
+ \tau=h/q\ \hbox{is unbounded},\qquad
+ \theta=1-h>0,\quad e=\kappa h/\nu\in\operatorname{Inf},\quad
+ \zeta=\ell/\kappa.
+ \tag{UN1}
+\]
+This section proves finite separated tensor SOS for the complete
+parent at every projective test and every state on UN1. The opening
+$\theta\in\operatorname{Inf}$ is included. There is no state-ratio
+restriction or source/testing relative-rate assumption.
+
+\paragraph{Normalized source estimates and a canceled radial mass.}
+Keep $c_0=SC(1-r)$, $a_0=SAr$, $d_s=D/(Sq^2)$,
+$a_1=\alpha/S$, $P_0=P/S$, and the exact SE2--SE3 source sphere.
+Define
+\[
+ d=D+\tfrac12,\quad
+ n=\beta\theta^2+2Dh+\tfrac12h^2>0,\quad
+ z_n=\kappa n/q^2,\quad A_{00}=m\zeta^2-n/q.
+ \tag{UN2}
+\]
+Here $n$ is a scalar coefficient, not an omitted event weight.
+It is bounded even when $\beta$ is unbounded. The exact source gives
+\[
+\begin{gathered}
+ m\zeta^2=\frac{\tau(1+x)(1+\sigma r)}{2MP_0},\qquad
+ m\zeta\in\operatorname{Inf},\quad D,\alpha,m\in\operatorname{Inf},\quad
+ c_0,a_0,a_1\sim\tfrac12,\\
+ e\tau=\frac{\ell\{eH_0+h\mathcal H b_0^2\}}{B/S}\ \hbox{is bounded},\\
+ z_n=\frac{\ell^2\mathcal H\theta b_0^2}{2P_0}
+ +\frac{\ell^2(eH_0+h\mathcal H b_0^2)}{2(B/S)}
+ +2\kappa S d_s h.
+\end{gathered}\tag{UN3}
+\]
+Consequently $d_s,z_n$ are bounded and
+$d_s+z_n\sim1/2$; at least one is a positive bounded unit. This
+includes literal $D=0$. Literal $\beta=0$ has no points on UN1,
+because $\beta\ge0$ has the exact boundary equation
+$\tau(B/S)=\ell H_0$ when $\beta=0$.
+
+For completeness, the following finite source division proves the
+bound on $A_{00}$ without dividing an error by $\theta$ or $q$.
+Put $U=(1+x)(1+\sigma r)$ and
+$M_*=\ell(1+xr)-\kappa\theta=\ell M$, and form the bounded
+source polynomial
+\[
+ T=\ell JU+JM_*P_0-JM_*\kappa\theta(J-\sigma)-2M_*U.
+\]
+In this expression $P_0,J,U,M_*$ are their exact native polynomial
+formulas in $\kappa,\nu,S,h,r$, with $\ell=1-\nu$. Thus
+\[
+\begin{gathered}
+ T=\kappa T_\kappa+\ell\nu S T_\nu,\qquad
+ T_\nu=r-1-\nu-\nu S(1-r)(r+\ell),\\
+ T_\kappa=\{T-T|_{\kappa=0}\}/\kappa
+             \quad\hbox{is a bounded source polynomial},\\
+ A_{00}=\frac{\theta\ell H_0}{2P_0}
+            +\frac{eT_\kappa+h\ell S T_\nu}{2JMP_0}.
+\end{gathered}\tag{UN4}
+\]
+The quotient is a finite monic polynomial division in a pure source
+variable. All denominator factors are positive bounded units.
+Hence $A_{00}$ is bounded and $A_{00}-\theta/2$ is infinitesimal.
+Moreover $n/q=m\zeta^2-A_{00}\sim\tau/2$ is positive unbounded.
+If $\theta$ is infinitesimal, then $n\sim1/2$ and
+$\kappa/q=e\ell/h$ is infinitesimal. These facts supply the two
+source subcases used below.
+
+\paragraph{The actual circuit and three reserved positive rows.}
+Use the complete original reciprocal quarter-parent SN5. For
+infinitesimal $u,w\ge0$, including zero, retain the unrestricted
+normals
+\[
+ N_x=X+huZ,\qquad N_y=(Y-ruW)/\sqrt{Sr(1-r)}.
+ \tag{UN5}
+\]
+Put $a=u^2,c=w^2,x=\kappa S,\delta=c-q$ and
+\[
+\begin{gathered}
+ N_0=W/\zeta-uwZ,\quad G=uW/\sqrt S-\ell\sqrt S\,wZ,\\
+ B=\sqrt S\delta Z,\quad B_u=u\delta Z,\quad
+ R=w(a-x)Z=\sqrt S\,G/\zeta-uN_0,\quad
+ G_h=h(a-xc/q)Z.
+\end{gathered}\tag{UN6}
+\]
+Define $A_1,A_2,A_3,A_4$ by BN4 with $\beta$ replaced by the
+positive $n$, and set
+\[
+ \Psi_n=\sum_iA_i^2-4nuwWZ/(\zeta q),\qquad
+ E_1=A_1-A_2,\quad E_2=A_3-A_4,\quad E_3=A_1-A_3.
+ \tag{UN7}
+\]
+The explicit separated AM--GM square decompositions in BN6 give
+\[
+             \Psi_n-\tfrac14(E_1^2+E_2^2+E_3^2)\in\Sigma T^2.
+ \tag{UN8}
+\]
+To verify the simultaneous reserve, average BN6 with the pairing
+$\Psi_n-(A_1-A_3)^2-(A_2-A_4)^2\in\Sigma T^2$.
+For the latter pairing the products $A_1A_3,A_2A_4$ are nonnegative;
+if $WZ<0$, the additional signed cross term is a positive separated
+monomial. Thus UN8 holds for both signs of $WZ$, as well as its
+zero face. No radical of a general mixed sum is used.
+
+\paragraph{Exact scalar subtraction and radial cancellation.}
+The complete scalar graph at $N_x=N_y=0$ is
+\[
+ F_0=m(1+ra)^2W^2+A_PP^2+F_ZZ^2-2KuwWZ,
+ \quad P=uW/\sqrt S,
+ \tag{UN9}
+\]
+where
+\[
+\begin{split}
+ A_P={}&(1+c)\{c_0(1-r)+a_0r(1+a)\}
+       +S\{d(1-r)^2c+(\alpha+\tfrac12)(1+a)r^2\},\\
+ K={}&m\theta(1+ra)+d(1-r)(1+ha)
+                         +(\alpha+\tfrac12)(1+a)r,\\
+ F_Z={}&D+\alpha c+na+
+          \{m\theta^2+\alpha+(\beta+\tfrac12)\theta^2\}ac
+                                                 +dh^2a^2.
+\end{split}\tag{UN10}
+\]
+Subtract $\Psi_n$, put
+\[
+\begin{gathered}
+ A=m\zeta^2(1+ra)^2-n/q,\quad A_P'=A_P-z_nc/\ell^2,\\
+ K'=K-2n/(\zeta q),\quad J'=K'-\ell A_P',\quad
+ L'=J'-A/\zeta,\\
+ H'=F_Z-na-nxc/q-\ell^2ScA_P'+ac(A-2\zeta J').
+\end{gathered}\tag{UN11}
+\]
+The exact residual graph is $A N_0^2+A_P'G^2-
+2\zeta uwZL'N_0+H'Z^2$. At the actual source contact
+$L'(x,q)=H'(x,q)=H'_a(x,q)=H'_c(x,q)=0$.
+Also $H'(a,0)=D+dh^2a^2$. Finite monic contact division gives
+\[
+\begin{gathered}
+ L'=(a-x)L_a+\delta L_c,\\
+ H'=(D+dh^2x^2)\delta^2/q^2
+       +(a-x)\delta(-2dh^2x/q+cH_{11})
+       +(a-x)^2(dh^2+cH_{20}).
+\end{gathered}\tag{UN12}
+\]
+The otherwise possible third-$c$ quotient is exactly zero.
+Define $P_1(a)$ to be the coefficient of $c$ in $A_P$. The complete
+combined coefficients have short bounded formulas:
+\[
+\begin{split}
+ L_a={}&m\theta r+dh(1-r)+(\alpha+\tfrac12)r
+       -\ell\{(1+c)a_0r+S(\alpha+\tfrac12)r^2\}\\
+       &-m\zeta r\{2+r(a+x)\},\\
+ C_R={}&H_{20}+2\zeta L_a=-m\zeta^2r(2+ra),\\
+ C_G={}&H_{11}/\zeta=2\ell P_1(x)+\ell x a_0r-2z_n/\ell,\\
+ C_N={}&-H_{11}-2\zeta L_c=-Sa_0\ell^2r.
+\end{split}\tag{UN13}
+\]
+Only $C_R$ may be unbounded separately. Its entire contribution
+must be combined before estimating: $A+aC_R=A_{00}$ exactly.
+Using $R=\sqrt S\,G/\zeta-uN_0$ therefore gives
+\[
+\begin{split}
+ F_0={}&\Psi_n+A_{00}N_0^2+\widetilde A_PG^2
+             +2u\sqrt S\,(L_a-C_R/\zeta)N_0G\\
+ &+d_sB^2+dG_h^2+C_GG(wB)+C_NN_0(wB_u),\\
+ \widetilde A_P={}&A_P'+SC_R/\zeta^2-2SL_a/\zeta\sim\tfrac12.
+\end{split}\tag{UN14}
+\]
+Every coefficient in UN14 is bounded after this combination:
+$C_R/\zeta=-m\zeta r(2+ra)$ is infinitesimal and
+$C_R/\zeta^2=-mr(2+ra)$ is bounded. The $N_0G$ coefficient
+is infinitesimal. No estimate of an unbounded isolated radial
+coefficient is used.
+
+\paragraph{Complete $X$ conductor and its exact positive completion.}
+The full $N_x$ hard coefficient is
+$H_X=mc+da+(\beta+1/2)(1+c)$. Its complete half-linear
+coefficient, after using the actual contact identity, is
+\[
+\begin{split}
+ L_X={}&-m\zeta wN_0+d\tau a(wN_0+B_u)
+        +uw\sqrt S\{d(1-r-e)-mr\}G+t_0B_u,\\
+ t_0={}&\frac{D+h/2-\beta\theta}{q}
+       =D/q+\frac{\ell H_0-\kappa\tau(J-\sigma)}{2P_0}
+          \sim\tfrac12.
+\end{split}\tag{UN15}
+\]
+The exact source identity in the second line cancels the potential
+$1/q$ pole. Here $D/q=S q\,d_s$ is infinitesimal. The single
+unbounded $\tau$ term is removed with the actual square $dG_h^2$,
+not estimated. Namely
+\[
+ G_h=-\tau u(wN_0+B_u)+ew\sqrt S\,G,\quad
+ N_x+\tau(wN_0+B_u)=X+ewW,
+\]
+\[
+\begin{split}
+ &dG_h^2+daN_x^2+2d\tau a(wN_0+B_u)N_x\\
+ &\quad=da(X+ewW)^2
+       -2de\tau uw\sqrt S\,(wN_0+B_u)G+de^2Sw^2G^2.
+\end{split}\tag{UN16}
+\]
+The remainder has bounded infinitesimal coefficients on $N_0,G,wB_u$
+because $e\tau$ is bounded. Retain the entire positive square on the
+right and also the whole packet $\beta(1+c)N_x^2$. The remaining
+$N_x$ diagonal is $mc+(1+c)/2\sim1/2$. The remaining $L_X$ is
+UN15 with its $d\tau a$ term removed; all its direct coefficients
+are infinitesimal except the bounded coefficient $t_0$ on $B_u$.
+The construction thus includes arbitrarily large $\beta$.
+
+\paragraph{The unrestricted $Y$ normal and cross coefficient.}
+Put
+\[
+\begin{split}
+ Y_P={}&(1+c)\{-c_0+a_0(1+a)\}
+ +S\{m(1+ra)-d(1-r)c+(\alpha+\tfrac12)(1+a)r\},\\
+ Y_C={}&\ell Y_P-m\theta a+d(1+ha)-(\alpha+\tfrac12)(1+a).
+\end{split}\tag{UN17}
+\]
+The actual source has $Y_C(x,q)=0$, so finite monic division gives
+$Y_C=(a-x)Y_a+\delta Y_c$ with bounded polynomial coefficients.
+The complete remaining entries are
+\[
+\begin{split}
+ L_Y={}&\sqrt{r(1-r)}\{Y_PG+\sqrt S\,Y_aR+Y_c(wB)\},\\
+ H_Y={}&rc_0(1+c)+(1-r)a_0(1+a)(1+c)\\
+ &+Sr(1-r)\{ma+dc+(\alpha+\tfrac12)(1+a)\}\sim\tfrac12,\\
+ H_{XY}={}&-uw\sqrt{Sr(1-r)}(m+d)\in\operatorname{Inf}.
+\end{split}\tag{UN18}
+\]
+In particular $Y_P$ is infinitesimal. Every coefficient is bounded
+through $r=0$ and $r=1$ openings; no inverse of $r$ or $1-r$ remains
+after the displayed pure-source normal scaling. UN14--UN18 account
+for all terms of SN5, including both independent state normals.
+
+\paragraph{Free pivots, including the $\theta$-infinitesimal opening.}
+Reserve the three actual circuit rows in UN8. In either sphere
+chart, $wB$ is free at infinitesimal cost: use $\sqrt{d_s}B$ when
+$d_s$ is a unit, and otherwise use the exact identity
+\[
+ wB=-\frac{w+\sqrt q}{\sqrt{z_n}}E_2
+                 -\frac{w(w+\sqrt q)}\ell G.
+ \tag{UN19}
+\]
+If $\theta$ is a unit, $A_{00}$ already supplies a strict $N_0$
+pivot. Since $q/n$ is infinitesimal, the exact identity
+\[
+ B_u=-(w+\sqrt q)\sqrt{q/n}\,E_1-(w+\sqrt q)N_0
+ \tag{UN20}
+\]
+buys any fixed $B_u$ pivot at infinitesimal cost. Then $wB_u$ is
+free by multiplication by the pure-testing infinitesimal $w$.
+
+If $\theta$ is infinitesimal, first buy the missing $N_0$ pivot
+from the actual circuit, using
+\[
+ N_0=\sqrt{q/n}(E_2-E_1)
+       -\frac{w-\sqrt q}{\sqrt n}E_3
+       +\frac{\sqrt{\kappa/q}}\ell\,wG.
+ \tag{UN21}
+\]
+All coefficients are infinitesimal: $n\sim1/2$ and $\kappa/q$
+is infinitesimal by UN4. Identity UN21 holds without requiring
+$z_n$ to be a unit; the apparent source factor in UN19 has
+canceled exactly before estimating. After this purchase, UN20
+buys $B_u$, and multiplication by $w$ buys $wB_u$. Thus the
+order of purchases involves no circular use of a missing pivot.
+The bounded, possibly signed $A_{00}$ in this source subcase
+has zero residue and is absorbed after the strict $N_0$ pivot is
+bought. No inverse of $\theta$ is introduced.
+
+\paragraph{Final allocation and unchanged testing joins.}
+Use the strict rows $G,N_x,N_y$, the applicable $N_0$ pivot, and
+fixed retained fractions of $E_1,E_2,E_3,\sqrt{d_s}B$ wherever
+nonzero. Purchase sufficiently large real pivots on $B_u,wB,wB_u$
+by UN19--UN21. Every purchase has infinitesimal Gram cost on
+the preceding strict rows. All signed terms in UN14--UN18 are
+then either infinitesimal matrix perturbations or bounded
+couplings to those freely purchased helper pivots. A fixed
+sufficiently large choice makes the complete residue matrix
+strictly positive definite. The separated strict bounded-Gram
+lemma proves finite SOS. Restore the positive packets retained
+in UN8 and UN16, including $\beta(1+c)N_x^2$; nothing from the
+original parent is omitted.
+
+This proves all infinitesimal $u,w$, their literal zero faces and
+arbitrary states. Noninfinitesimal Alice tests use CE1--CE10 because
+$C,A$ are unbounded. The other Bob tests use the surviving SE10--SE12
+unmatched certificate, since $e$ is infinitesimal and
+$\overline\ell=1$. The original sign gauges and real/imaginary state
+split are exact; the circuit argument treats both signs of $WZ$.
+These joins give the claimed all-tests theorem on UN1.
+
+\paragraph{Status and corroboration.}
+This fresh proof is pending independent lead review. Its focused
+exact checker verifies the original full parent, the source division
+UN4, all actual contact jets, the complete scalar cancellation,
+both unrestricted normal conductors, and the actual circuit helper
+identities. No former completion marker is used as a proof premise.

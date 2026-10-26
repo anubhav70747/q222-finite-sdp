@@ -1,0 +1,169 @@
+ChatGPT said:
+
+Q222: Full native C2, a uniform positive construction
+Result: I obtained an exact, uniform finite-degree SOS certificate for the complete five-parameter native C2 parent, preserving independent testing angles and all four state coordinates. It covers $n=0$ directly.
+The limitation is important: the certificate applies to $\det(H_3)F_c$, not to $F_c$ itself. Its positive multiplier mixes source and testing variables, so this is not yet the required fixed affine SDP lift.
+I also found an exact native counterexample to a natural attempt to globalize the four contact-normal squares from the radial proof.
+1. Native hypotheses
+Use $d=1,\lambda=\beta=0$, and the exact stationary source formulas in c2_short.tex.
+With $z=c^2$, set
+$\begin{gathered}
+a,b,c,t>0,\qquad 0<r<1,\\
+h=b-a^2t,\qquad
+g=(1+z)b-(1-r+a^2zt),\\
+j=1+zr-t.
+\end{gathered}$
+The required native inequalities are
+$h,g,j,1-zh,b-a^2zr>0,\qquad n\geq0.$
+The remaining source weights $m,C,A,D,\alpha$ are strictly positive by their rational stationary formulas. The exact contact is
+$(u_c,v_c;\psi_c)
+=
+\left(c,ac;\frac ba,-cr,c\left(\frac ba-at\right),1\right).$
+Everything below uses these native coefficients, not an arbitrary nonnegative form with the same contact.
+2. The C2 determinant has only five possible circuits
+Let $P(u,v)$ denote the complete $4\times4$ state matrix, so $F=\psi^TP\psi$. The native determinant takes the form
+$\det P=16D_u^2D_v^2u^2v^2L(u^2,v^2),
+\qquad D_u=1+u^2,\quad D_v=1+v^2.$
+Because $\lambda=\beta=0$, the noncentral Laurent support consists of exactly six possible exponents:
+$e_1=(-1,0),\quad e_2=(-1,1),\quad
+e_3=(0,-1),\quad e_4=(0,1),\quad
+e_5=(1,-1),\quad e_6=(1,0).$
+Write $s_i=q_{e_i}U_c^{(e_i)_1}V_c^{(e_i)_2}$, where $U_c=c^2,V_c=a^2c^2$, and the $q_e$ are the explicit SG6 coefficients.
+The exact C2 stationarity equations imply
+$s_1-s_6=s_5-s_2=s_4-s_3=:\varepsilon.$
+Set $\tau_+=\max(\varepsilon,0)$, $\tau_-=\max(-\varepsilon,0)$ and
+$\begin{aligned}
+\rho_1&=s_1-\tau_+=s_6-\tau_-,\\
+\rho_2&=s_5-\tau_+=s_2-\tau_-,\\
+\rho_3&=s_4-\tau_+=s_3-\tau_-.
+\end{aligned}$
+All five coefficients are nonnegative. With $x=(u^2/U_c,v^2/V_c)$,
+$\boxed{
+\begin{aligned}
+L={}&\sum_{i=1}^{3}\rho_i(x^{e_i}+x^{-e_i}-2)\\
+&+\tau_+(x^{e_1}+x^{e_4}+x^{e_5}-3)\\
+&+\tau_-(x^{e_2}+x^{e_3}+x^{e_6}-3).
+\end{aligned}}$
+Only one of the last two terms can be active.
+The opposite pairs are squares:
+$u^2v^2(x^e+x^{-e}-2)
+=\bigl[uv(x^{e/2}-x^{-e/2})\bigr]^2.$
+For either triangle $f_1+f_2+f_3=0$, the cubic Hurwitz identity gives
+$u^2v^2\left(\sum_i x^{f_i}-3\right)
+=
+\frac12\sum_{h=1}^3\sum_{i<j}
+\left[uv\,x^{f_h/6}
+(x^{f_i/3}-x^{f_j/3})\right]^2.$
+Therefore
+$\boxed{u^2v^2L(u^2,v^2)=\sum_{\ell=1}^{12}\ell_\ell(u,v)^2}$
+with at most 12 squares, all supported on the fixed third-root monomial grid of angular degrees at most two.
+This is an exact source-test-separated scalar identity for all native parameters, including $n=0$.
+3. Full four-state polynomial SOS after one multiplier
+Write $\xi=(W,X,Y)^T$ and block the state matrix as
+$P=\begin{pmatrix}H_3&b\\b^T&\gamma\end{pmatrix}.$
+The off-diagonal column is explicitly
+$b=
+\begin{pmatrix}
+-uv(4m+4D+2d)\\
+u(4m+2d-4Dv^2)\\
+v[4(D-\alpha)-(4m+4\alpha+2d)u^2]
+\end{pmatrix}.$
+Here $D$ is the source event coefficient.
+The matrix $H_3$ has an explicit 19-row Gram $H_3=R^TR$. Its rows, grouped by source weight, are
+$\begin{array}{c|l}
+\text{Weight}&\text{Rows before multiplying by the displayed square root}\\ \hline
+\sqrt{2d}&
+(u,uv,-1),(0,0,v),(0,0,uv),(0,1,0),(0,v,0)\\
+2\sqrt n&(0,1,0),(0,u,0),(0,v,0),(0,uv,0)\\
+2\sqrt m&(v,-1,uv)\\
+2\sqrt C&(u,0,-1),(uv,0,-v)\\
+2\sqrt A&(0,0,1),(0,0,u),(0,0,v),(0,0,uv)\\
+2\sqrt D&(u,uv,-1)\\
+2\sqrt\alpha&(0,0,v),(0,0,uv)
+\end{array}$
+Let these rows be $\varrho_1,\ldots,\varrho_{19}$, and set $\delta_H=\det H_3$.
+The core alone implies
+$\delta_H\geq8d^3u^2v^2D_uD_v>0$
+for all independent $u,v>0$.
+Cauchy–Binet gives the explicit polynomial matrix identity
+$\operatorname{adj}H_3
+=
+\sum_{i<j}
+(\varrho_i\times\varrho_j)
+(\varrho_i\times\varrho_j)^T.$
+Now put $\eta=H_3\xi+bZ$. The fraction-free Schur identity, followed by the scalar circuit decomposition, yields
+$\boxed{
+\begin{aligned}
+\delta_H F
+={}&\sum_{i<j}
+\big[(\varrho_i\times\varrho_j)\cdot\eta\big]^2\\
+&+\sum_{\ell=1}^{12}
+\big[4D_uD_v\,\ell_\ell(u,v)Z\big]^2.
+\end{aligned}}
+\tag{*}$
+This is a polynomial identity, not merely a pointwise positivity argument.
+It has at most $171+12=183$ squares. All four state coordinates are retained, and every square belongs to the fixed feature span
+$\boxed{
+\mathcal Z=
+\{u^{i/3}v^{j/3}\psi_l:
+0\leq i,j\leq12,\ l=1,\ldots,4\},
+}$
+of size $676$.
+There are no source/testing rate assumptions, no angle restrictions beyond $u,v>0$, and no division by a mixed expression inside the square roots of (*). When $n=0$, its four associated Gram rows vanish and the identity remains exact.
+4. A native obstruction to the simplest contact-normal construction
+Consider the strict native source
+$(d,n,m,C,A,D,\alpha)
+=
+\left(1,\frac7{66},\frac5{33},\frac5{22},
+\frac{10}{33},\frac{16}{33},\frac9{22}\right),$
+with contact parameters
+$(a,b,c,t,r)=\left(1,\frac54,1,\frac34,\frac14\right).$
+Here $h=1/2,g=1,j=1/2$.
+Define the natural contact normals
+$\begin{aligned}
+H_n&=X+ruZ,\\
+H_m&=vW-X+uvY-uZ-guZ,\\
+H_A&=Y-(h/a)uZ,\\
+H_D&=uW+uvX-Y-vZ+jvZ.
+\end{aligned}$
+Each vanishes at the exact physical contact. Nevertheless the proposed global subtraction
+$F-4nD_uD_vH_n^2-4mH_m^2
+-4AD_uD_vH_A^2-4DH_D^2$
+at the independent test $u=2,v=1$ and state $(W,X,Y,Z)=(0,0,0,1)$ equals
+$\boxed{-\frac{31}{11}<0.}$
+Thus retaining these four entire contact-normal squares, as one might extrapolate from radial arguments, does not leave a globally positive remainder, even for a genuine strict native C2 source. A universal construction needs nontrivial coupled corrections.
+5. Why (*) is not yet the desired SDP
+The multiplier $\delta_H=\det H_3$ is cubic in the affine source coefficients and depends jointly on source and testing variables.
+It cannot even be factored as a source-only scalar times one fixed testing polynomial throughout native C2. For example,
+$\frac{\delta_H(2,1)}{\delta_H(1,1)}
+=
+\begin{cases}
+22125/1408,&\text{the partially entangled source above},\\
+460405/31648,&\text{the exact native seed C2A}.
+\end{cases}$
+These different exact ratios obstruct that simple separation.
+The first surviving unproved implication is therefore
+$\boxed{
+\delta_H(c;u,v)F_c\in\Sigma
+\quad\stackrel{?}{\Longrightarrow}\quad
+F_c\in L_6
+\qquad
+\text{for every native C2 source}.
+}$
+Alternatively, it would suffice to establish a finite SOS for $T(u,v)F_c$ with one fixed positive pure-testing multiplier $T$ and one fixed feature list, since the resulting coefficient identity would be affine in the source.
+Neither step follows merely from (*), and I do not claim it.
+The exact derivation, all six native stationary coefficient formulas, the complete 19-row matrix, and the two rational obstructions are collected here:
+Q222 C2 uniform localized certificate, mathematical note
+Bottom line: The full native C2 parent now has an explicit, finite, globally valid localized SOS construction with independent testing and full state dependence. The remaining problem is not scalar AM–GM positivity or physical contact stability. It is removing the source-dependent multiplier while retaining one fixed affine PSD coefficient map.
+
+
+
+
+
+
+   Q222_C2_uniform_localized_certificate_2026-10-26.mdDocumentOpen file
+
+
+
+
+

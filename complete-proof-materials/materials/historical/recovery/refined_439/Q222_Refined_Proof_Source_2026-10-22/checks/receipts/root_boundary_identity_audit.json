@@ -1,0 +1,79 @@
+{
+  "engine": "SymPy 1.14.0",
+  "checks": {
+    "SF15 first normal": true,
+    "SF15 second normal": true,
+    "SF13 angular domination": true,
+    "US8 four-monomial circuit": true,
+    "US13 fourth-monomial normal": true,
+    "US fourth-monomial angular conductor": true,
+    "US6 complete scalar": true,
+    "GA5 reserve algebra": true,
+    "GA3 first": true,
+    "GA3 second": true,
+    "GA4 exact SOS domination": true,
+    "JR6": true,
+    "JR8 Schur complement": true,
+    "CF core matrix identity": true,
+    "A6 nonnegative outer coefficient lambda,c (4, 4)": true,
+    "A6 nonnegative outer coefficient lambda,c (4, 2)": true,
+    "A6 nonnegative outer coefficient lambda,c (2, 4)": true,
+    "A6 nonnegative outer coefficient lambda,c (2, 0)": true,
+    "A6 nonnegative outer coefficient lambda,c (0, 4)": true,
+    "A6 nonnegative outer coefficient lambda,c (0, 2)": true,
+    "A6 nonnegative outer coefficient lambda,c (0, 0)": true,
+    "A6 nonnegative outer coefficient lambda,m (4, 4)": true,
+    "A6 nonnegative outer coefficient lambda,m (4, 2)": true,
+    "A6 nonnegative outer coefficient lambda,m (4, 0)": true,
+    "A6 nonnegative outer coefficient lambda,m (2, 4)": true,
+    "A6 nonnegative outer coefficient lambda,m (2, 0)": true,
+    "A6 nonnegative outer coefficient lambda,m (0, 4)": true,
+    "A6 nonnegative outer coefficient lambda,m (0, 2)": true,
+    "A6 nonnegative outer coefficient lambda,m (0, 0)": true,
+    "A6 nonnegative outer coefficient lambda,alpha (4, 4)": true,
+    "A6 nonnegative outer coefficient lambda,alpha (4, 2)": true,
+    "A6 nonnegative outer coefficient lambda,alpha (4, 0)": true,
+    "A6 nonnegative outer coefficient lambda,alpha (2, 4)": true,
+    "A6 nonnegative outer coefficient lambda,alpha (2, 0)": true,
+    "A6 nonnegative outer coefficient lambda,alpha (0, 4)": true,
+    "A6 nonnegative outer coefficient lambda,alpha (0, 2)": true,
+    "A6 nonnegative outer coefficient lambda,alpha (0, 0)": true
+  },
+  "constrained_outer_coefficients": {
+    "lambda,c": {
+      "(1, 1)": "2*beta*(2*A + 2*alpha + 2*m + 1)",
+      "(1, 0)": "2*A*(2*alpha + 2*beta + 2*m + 1)",
+      "(0, 1)": "2*(2*A*D + 2*D*alpha + 2*D*m + D + 2*beta*m)",
+      "(0, -1)": "2*n*(2*alpha + 2*beta + 2*m + 1)",
+      "(-1, 1)": "4*D*m",
+      "(-1, 0)": "2*(2*D*beta + 2*D*m + 2*D*n + D + 2*alpha*m)",
+      "(-1, -1)": "2*alpha*(2*beta + 2*m + 2*n + 1)"
+    },
+    "lambda,m": {
+      "(1, 1)": "4*beta*c",
+      "(1, 0)": "4*(A*c + beta*n)",
+      "(1, -1)": "4*A*n",
+      "(0, 1)": "2*(2*A*beta + 2*D*c + 2*alpha*beta + 2*beta*c + beta)",
+      "(0, -1)": "2*(2*A*alpha + 2*A*n + 2*D*n + 2*c*n + n)",
+      "(-1, 1)": "2*D*(2*A + 2*alpha + 2*c + 1)",
+      "(-1, 0)": "2*(2*A*D + 2*A*alpha + 4*D*alpha + 2*D*c + D + 2*alpha*c + alpha)",
+      "(-1, -1)": "2*alpha*(2*A + 2*D + 2*c + 1)"
+    },
+    "lambda,alpha": {
+      "(1, 1)": "4*beta*c",
+      "(1, 0)": "4*(A*c + beta*n)",
+      "(1, -1)": "4*A*n",
+      "(0, 1)": "4*(D*c + beta*m)",
+      "(0, -1)": "2*(2*A*beta + 2*A*m + 4*A*n + A + 2*D*n + 2*c*n + n)",
+      "(-1, 1)": "4*D*m",
+      "(-1, 0)": "2*(2*A*m + 2*D*beta + 4*D*m + 2*D*n + D + 2*c*m + m)",
+      "(-1, -1)": "(2*A + 2*D + 2*c + 1)*(2*beta + 2*m + 2*n + 1)"
+    }
+  },
+  "scope": "Exact identities and coefficient signs only; coverage and estimates require the written proof.",
+  "support_truth_tables": {
+    "lambda,c": true,
+    "lambda,m": true,
+    "lambda,alpha": true
+  }
+}

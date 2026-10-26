@@ -1,0 +1,65 @@
+C1 all-zero sixth-root reduction: bounded analytical audit, 26 October 2026
+
+Input: analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/
+04_C1_ALL_ZERO_REDUCTION_RENDERED.txt. No global PSD claim was checked.
+
+1. The scalar construction is correct. With a=r^6-1 and b=s^6-1,
+a^2+b^2+a^2*b^2=a^2*(1+b^2/2)+b^2*(1+a^2/2). The displayed D5 and Q7
+represent their stated polynomials. For Q7, eliminate its even-degree
+indices 2 and 4, whose diagonal entries are 1/16: the remaining even block
+is [[47/32,-9/16],[-9/16,15/32]], with determinant 381/1024>0. The three
+odd-degree entries are 1/16. Thus Q7 is positive definite. The 70-to-45
+map has full column rank because the chosen 45 independent polynomials
+are literally among its rows. Its congruence therefore gives a PD Gram
+on the entire truncated contact-zero space E45. Adding the source-only
+residual Gram preserves strictness in all four parity blocks. This uses
+the established strict native scalar G; it does not prove that premise
+again or give a uniform spectral bound at source limits. “Contact ideal”
+here must mean its bidegree-(6,6) subspace, not the infinite ideal.
+
+2. Newton supports and dimensions check out. The strict W diagonal has
+half-Newton triangle i+j>=6; X has i<=j; Y permits the full 7x7 square.
+After parity averaging, the four lifted contact zeros impose one scalar
+condition in each parity, giving E dimensions (15,11,11,8). Combined
+WXY/E block orders are (51,35,35,29), totaling150. The corner conditions
+are homogeneous leading-face conditions, not limits of diverging test
+values. These are necessary linear support/contact restrictions within
+Z6; they are not themselves an SOS-admission theorem. Source-scaled r,s
+and the state shear are moving proof coordinates. Their features map
+source-linearly into the original fixed 196-function testing span Z6;
+they are not a new source-independent basis literally shared by contacts.
+
+3. Coupling matching is valid. SG2 has zero W row at (0,0), and its
+complete X row has no u^2*v^0 coefficient, so c_W,00=c_X,20=0 after the
+source shear. Contact gives the coefficient-sum condition. Every listed
+anchor contains both vertices in its unit square, respects W's or X's
+support restriction, and yields a scalar factor of bidegree <=(6,6)
+vanishing at all signed contacts. Monic division expresses it in E00.
+Consequently the coefficient-linear B_* matches all three full coupling
+polynomials exactly. The displayed H expansion is an exact PSD Gram on
+the 36 even-even WXY features. These claims require no mixed inverse and
+do not identify source parameters with independent tests.
+
+4. The Schur implication is correct, but emphatically not an equivalence
+with Z6 admission. Fixing B_* discards cross-block syzygies; restricting
+WXY roots to even-even discards other parity allocations; fixing the PD
+scalar Gram can itself preclude a certificate. The last issue is real:
+F=(xi+(r^6-1)Z)^2 is SOS, and gamma=(r^6-1)^2 has a PD Gram on
+(r^2-1)*(1,r,...,r^4), using D5. Yet any full SOS has constant xi
+coefficients because their squared sum is1. Equality in Cauchy-Schwarz
+forces every Z coefficient to be that same constant times r^6-1.
+Hence every compatible scalar Gram has rank1, not5. This example is not
+a native C1 counterexample; it disproves automatic extendibility of an
+arbitrarily chosen strict scalar Gram. A failed C1-36 test would exclude
+only its specified allocation. The recovered text correctly acknowledges
+this and asserts no completed admission.
+
+5. Recommended next theorem: uniformly for every finite strict native C1
+source, find four source-field PSD matrices of orders51,35,35,29 whose
+sum in these exact bases equals the full sheared parent coefficientwise.
+Allow every scalar block, cross block and H block to vary subject to the
+fixed polynomial coefficient equations. This is precisely the remaining
+C1 Z6-admission claim after exhaustive support/contact reduction. The
+proposed free-B 51-order LMI is a useful smaller sufficient target, but
+should be tested as such, not assigned as an equivalent missing theorem.
+Boundary native faces, C2 and source assembly remain separate obligations.

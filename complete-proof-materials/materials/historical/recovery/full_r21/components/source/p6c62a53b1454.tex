@@ -1,0 +1,229 @@
+\section{C2 pitchfork with three arbitrary event weights}
+\label{sec:c2-three-large}
+
+\begin{theorem}[All scales of the three retained events]
+\label{thm:c2-three-large}
+Let $K_c,K_t$ be independent real closed extensions of $\mathbb R$.
+Let a physical canonical C2 source over $K_c$ have $\lambda=\beta=0$,
+with $d,C,\alpha$ positive bounded units and
+$n,m,A,D\geq0$ arbitrary. Suppose an actual finite noncommuting
+stationary zero has $u_c=k>0$ infinitesimal and $v_c=a>0$ a bounded
+unit. Then the entire original parent is tensor SOS at every
+independent projective measurement pair and every real or complex
+projective state. No ratios among $n,A,D$ are restricted.
+\end{theorem}
+
+The bounded-$A$ result is a special case. The mechanism is to keep
+all three possibly large event amplitudes as state coordinates.
+The exact parent and its amplitudes are (TD1); in particular
+$J=uW+uvX-Y-vZ$.
+
+\paragraph{Source entry with three large weights.}
+The initial coercivity estimate in the preceding proof uses only
+$d,C,\alpha$, not $A$. Thus after $W_c=1$,
+\[
+ X_c,Y_c,Z_c=O(k),\qquad m=O(k^2).
+\]
+Now use $F_Z=0$ first. The $A$ and $n$ packets do not enter this
+state equation. Every term other than $-8DvJ$ is $O(k)$, because
+$v_c=a$ is a unit and the just displayed bounds hold. Therefore
+$DJ_c=O(k)$. The $Y$ equation then gives $AY_c=O(k)$, and the $X$
+equation gives $(d+2n)X_c=O(k^2)$. Write
+\[
+ N=d+2n,\quad T_A=d+2A,\quad L=d+2D,\qquad
+ x=X_c/k^2,\quad y=Y_c/k,\quad j=J_c/k.
+\]
+Consequently
+\[
+ x,y,j,Nx,Ay,Dj\ \hbox{are bounded},\qquad N^{-1}\ \hbox{bounded}.
+                                                               \tag{TA1}
+\]
+These estimates do not yet invert $A$ or $D$.
+
+Use the exact stationary equations (TD3) and divide both by
+$T_A L$. Now $t_2/T_A,t_6/T_A,t_3/L,t_4$ are positive bounded
+units. In the first equation the coefficient multiplying $U^2$ is
+$(A/T_A)$ times a positive bounded unit: its remaining bracket is
+\[
+ 4t_4\left\{\theta\frac{t_3}{L}
+            +CV\frac{1+2D/N}{L}\right\},
+\]
+whose lower bound follows from (TD4). The coefficient multiplying
+$m$ is also a positive bounded unit:
+\[
+ 4V\left\{\alpha\frac{t_8}{T_A L}
+              +\frac{D}{L}\frac{t_6}{T_A}V\right\}.             \tag{TA2}
+\]
+Indeed, if $D/L$ is bounded below, the second summand is a unit.
+Otherwise $D$ is infinitesimal and $L$ is a unit, while
+$t_8/T_A=1+2(C+D)/T_A$ is a unit. All displayed factors have
+bounded upper bounds in either case. Hence
+\[
+ \frac{m}{U^2}=\frac{A}{T_A}\cdot(\hbox{positive bounded unit}). \tag{TA3}
+\]
+The second stationary equation becomes
+\[
+ \frac{A}{T_A}\cdot(\hbox{positive unit})
+       +O\left(\frac{A}{T_A}U\right)
+ =\frac{D}{L}\cdot(\hbox{positive unit})
+       +O\left(\frac{A}{T_A}U\right).                          \tag{TA4}
+\]
+Thus $A/T_A$ and $D/L$ are comparable. If they were infinitesimal,
+$A,D,m$ would all be infinitesimal, contradicting exactly the
+physicality test printed after (TD5). Therefore
+\[
+ A/T_A,\ D/L,\ m/k^4\quad\hbox{are positive bounded units}.       \tag{TA5}
+\]
+In particular $A,D$ have bounded reciprocals, but may be arbitrarily
+large. Set $\gamma=4ma^2/k^4$, also a positive bounded unit.
+
+\paragraph{The three-packet graph.}
+On the local testing domain $\bar v=\bar a\ne0$, put
+$b=1-j-y$ and use
+\[
+ X_g=xu^2W,\qquad Y_g=yuW,\qquad J_g=juW,\qquad
+ Z_g=u\left(\frac b v+xu^2\right)W.                            \tag{TA6}
+\]
+This graph matches the whole actual contact: the definition of $J_c$
+gives $Z_c/k=b/a+xk^2$. Its three hard normals are
+\[
+ E_X=\sqrt N(X-xu^2W),\quad
+ E_Y=\sqrt A(Y-yuW),\quad E_J=\sqrt D(J-juW).                    \tag{TA7}
+\]
+The exact inverse is
+\[
+ X=xu^2W+E_X/\sqrt N,\quad Y=yuW+E_Y/\sqrt A,
+\quad Z=\frac{uW+uvX-Y-juW-E_J/\sqrt D}{v}.                    \tag{TA8}
+\]
+Every denominator is either pure coefficient or the pure testing
+unit $v$. All graph coefficients and all scaled normal coefficients
+are bounded. For the three large packets this follows explicitly
+from
+\[
+ n x^2,\ nx,\ n/N,\quad A y^2,\ \sqrt A\,y,\quad
+ D j^2,\ \sqrt D\,j\quad\hbox{bounded},                       \tag{TA9}
+\]
+using (TA1),(TA5). Their quadratic normal contributions are exactly
+$4(n/N)D_uD_v E_X^2$, $4D_uD_vE_Y^2$, and $4E_J^2$.
+Every other original source coefficient is bounded, including $m$.
+
+For clarity, the finite Taylor division used below works in the
+bounded Laurent polynomial ring in $v$: for positive integer $r$,
+\[
+ v^{-r}-a^{-r}
+ =-(v-a)\frac{\sum_{i=0}^{r-1}v^i a^{r-1-i}}{a^rv^r}.
+\]
+Thus a Laurent polynomial vanishing at $(U,v)=(K,a)$ belongs to
+$(U-K,v-a)$ with bounded Laurent coquotients; repeating the same
+identity gives the second-order division. There is no localization
+at a difference of the two fields.
+
+Set $K=k^2$, $R=u^2-(K/a)v$ and $T=u(v-a)$. The entire graph
+scalar is again $4mv^2+u^2H_0(u^2,v)$, now with bounded Laurent
+coefficients in $v$. Its three scalar contact jets give (TD10),
+and hence an exact bounded Gram on $(R,T)$ with $R$ residue pivot
+$\bar\gamma$. The full first normals before their pure source
+scale divisions are
+\[
+\begin{split}
+ (F_X+uF_Z)|_g&=-8mv+u^2L_X(u^2,v),\\
+ (F_Y-F_Z/v)|_g&=uL_Y(u^2,v),\\
+ (-F_Z/v)|_g&=uL_J(u^2,v).                                     \end{split} \tag{TA10}
+\]
+Divide the rows by $\sqrt N,\sqrt A,\sqrt D$, respectively.
+The scaled coefficients are bounded by (TA9). At contact they
+vanish. Laurent Taylor division gives exactly the root membership
+and infinitesimal $R$ couplings proved in (TD11)--(TD12).
+The $X$ row has infinitesimal coefficients on both $R,T$ because
+$m/K=O(K)$; the other rows have infinitesimal coefficients on $R$.
+The exact quadratic state remainder is bounded by (TA8)--(TA9),
+so the entire original parent has a bounded five-root Gram on
+$(E_X,E_Y,E_J,R,T)$.
+
+\paragraph{Uniform strictness without a largest-event choice.}
+The $X$ and $R$ residue pivots are $2(1+\bar a^2)$ and
+$\bar\gamma$. The remaining hard state form is still (TD13).
+At $u=0$, (TA8) gives
+\[
+ Y=E_Y/\sqrt A,\qquad
+ Z=-\frac{E_Y}{v\sqrt A}-\frac{E_J}{v\sqrt D}.
+\]
+In these coordinates (TD13) is the sum of the two explicit pivots
+\[
+ 4(1+v^2)E_Y^2+4E_J^2
+\]
+and the nonnegative bounded form
+$(4C+2d)(1+v^2)Y^2+4\alpha(vY-Z)^2$.
+Its residue is therefore positive definite for every combination of
+bounded or unbounded $A,D$.
+
+The boundary Schur function is the exact expression
+\[
+ f(v)=\frac{8(1+v^2)}{\det B(v)/(T_A L)}
+ \left(\frac{Q_{10}}{T_A L}+
+       \frac{Q_0}{T_A L}v^2+\frac{Q_{12}}{T_A L}v^4\right),     \tag{TA11}
+\]
+with $Q_{10},Q_{12}$ as in (TD14). For $v$ a bounded unit all its
+coefficients and denominator are bounded, and
+\[
+ \frac{Q_{10}}{T_A L}=4\alpha\frac A{T_A}\frac{t_3}{L},\qquad
+ \frac{Q_{12}}{T_A L}=4C\frac D L\frac{t_2-2m}{T_A}
+\]
+are positive units. The determinant has the positive term
+$16AD(1+v^2)v^2$, so its quotient by $T_A L$ has a positive lower
+bound. Its other terms are bounded after that division.
+The exact middle coefficient is polynomial of degree at most one
+in each of $A,D$, so $Q_0/(T_A L)$ is bounded too.
+
+The contact normal equations and scalar jets give
+$\bar f(\bar a)=\bar f'(\bar a)=0$ as before. Therefore the real
+quartic bracket equals
+$\overline{Q_{12}/(T_A L)}(v^2-\bar a^2)^2$.
+Its strict second derivative gives the positive soft Schur pivot on
+$T$. The whole five-root residue Gram is strict. This proves the
+local all-state certificate; the Bob sign identity gives its negative
+sign copy. Homogenization in $W$ includes $W=0$.
+
+\paragraph{Outer tests when both $A$ and $D$ are large.}
+For $u$ infinitesimal and $v$ a bounded unit with
+$\bar v\ne\pm\bar a$, retain the entire $m,n$ packets and use the
+four roots
+\[
+ X,\quad K_A=\sqrt A Y,\quad K_D=\sqrt D J,\quad uW.
+\]
+Substitute $Y=K_A/\sqrt A$ and
+$Z=(uW+uvX-K_A/\sqrt A-K_D/\sqrt D)/v$.
+The exact remainder is a bounded quadratic Gram. Its hard residue
+has the positive $X$ pivot $2\bar d(1+\bar v^2)$ and the two
+explicit pivots just displayed; its soft Schur complement is
+$\bar f(\bar v)>0$ by (TA11).
+
+At $u,v$ both infinitesimal, and at $u,1/v$ both infinitesimal,
+one need not divide by $v$. Cap $C,A,D,\alpha$ at the positive
+unit $\mu=\min(1,C/d,A/d,D/d,\alpha/d)$ after division by $d$,
+and retain all excesses and the full $m,n$ packets. The bounded
+selected parent has an exact Gram on $(X,Y,Z,uW)$ in the finite
+chart and on the same four roots in the homogeneous reciprocal
+chart. At $(u,v)=(0,0)$ its soft Schur complement is
+$8Q_{10,\mu}/\det B_\mu(0)>0$; at $(u,1/v)=(0,0)$ it is
+$8Q_{12,\mu}/\det B_{\mu,\infty}>0$. The hard blocks are positive
+by (TD13) and its homogeneous limit. Hence both entire endpoint
+neighborhoods have strict-residue Grams, including literal zeros
+and infinities. These expressions use only the bounded selected
+parent; no residue of an unbounded $A$ or $D$ is taken.
+
+All other commuting tests use the same cap and the already printed
+open-axis and corner forms in the preceding all-tests proof. Their
+hypotheses require only the four lower bounds supplied by (TA5).
+Noncommuting residue tests use the retained arbitrary-physical-source
+theorem. Restore the positive pure factors and split complex states
+into real and imaginary parts. This completes every independent
+test for the stated source domain.
+
+\paragraph{Coverage gained and remaining restriction.}
+The theorem removes every relative-scale restriction among $n,A,D$
+from the finite pitchfork. Its reflected form covers the corresponding
+ordinary--infinite actual contacts. It still assumes $C/d$ and
+$\alpha/d$ are bounded units and this actual-angle residue type.
+Unbounded $C/d$ or $\alpha/d$, other actual-angle types, and the
+exhaustive C2 join remain outside this theorem.

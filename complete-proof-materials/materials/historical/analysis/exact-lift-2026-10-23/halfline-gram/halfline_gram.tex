@@ -1,0 +1,150 @@
+\documentclass[10pt]{article}
+\usepackage[margin=20mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}[lemma]{Proposition}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\off}{\operatorname{off}}
+\begin{document}
+\begin{center}\large An exact finite Gram cone for quadratic half-line selectors\end{center}
+
+Fix the published canonical source
+$c=(d,\lambda,n,m,C,A,D,\alpha,\beta)\ge0$. Let $P(v),N(v),E(v),K(v)$
+be the four symmetric $2\times2$ matrices of the canonical-completion note.
+The cone considered here consists precisely of sources for which some
+$J(v)=J_0+vJ_1+v^2J_2$, with unrestricted real $2\times2$ coefficients,
+makes
+\[
+ G_J(v)=\begin{pmatrix}P+K&J\\J^T&N+K\end{pmatrix},\qquad
+ H_J(v)=\begin{pmatrix}P+E&K-E-J\\K-E-J^T&N+E\end{pmatrix}
+ \succeq0\quad(v\ge0).                                      \tag{1}
+\]
+Equality of this cone with all valid canonical sources is not assumed.
+
+\begin{lemma}[Quadratic matrix polynomials on a half-line]
+For real symmetric $4\times4$ matrices $M_0,M_1,M_2$, the polynomial
+$M(v)=M_0+vM_1+v^2M_2$ is positive semidefinite for all $v\ge0$ if and
+only if there are an $8\times8$ Gram matrix $S\succeq0$ and a
+$4\times4$ Gram matrix $T\succeq0$ with
+\[
+ S=\begin{pmatrix}M_0&B\\B^T&M_2\end{pmatrix},\qquad
+ T=M_1-B-B^T.                                               \tag{2}
+\]
+Here $B$ is an unrestricted real $4\times4$ matrix.
+\end{lemma}
+\begin{proof}
+The reverse implication is the identity
+$M(v)=[I\ vI]S[I\ vI]^T+vT$.
+Conversely $M(t^2)$ is a real matrix polynomial of degree at most four
+which is positive semidefinite on the real line. The real-line matrix
+Fej\'er--Riesz theorem (Zalar, \emph{Matrix Fej\'er--Riesz theorem with gaps},
+Theorem~1.2) gives a polynomial matrix factor of degree at most
+two; taking real and imaginary parts gives real matrix squares.
+Averaging their values at $t$ and $-t$ yields
+\[
+ M(v)=(R_0+vR_2)^T(R_0+vR_2)+vR_1^TR_1.
+\]
+Set $S=[R_0\ R_2]^T[R_0\ R_2]$ and $T=R_1^TR_1$.
+The degree bounds are sharp: $M(v)=vI$ needs the half-line term,
+and $M(v)=v^2I$ needs a linear factor. No strict positivity, invertibility,
+or nonzero leading coefficient is used. The result also holds over real
+closed fields by transfer of this finite first-order assertion.
+\end{proof}
+
+Here are the evaluated integer coefficient formulas. Write
+$D(a,b)=\diag(a,b)$ and $O(a)=\left(\begin{smallmatrix}0&a\\a&0\end{smallmatrix}\right)$.
+In the coefficient order $1,v,v^2$,
+\begin{align*}
+ (P_0,P_1,P_2)&=(D(0,4m+4\beta+2d),O(-4m),D(4m,4\beta+2d)),\\
+ (N_0,N_1,N_2)&=(D(4C+4D+2d,0),O(4D+2d),D(4C,4D+2d)),\\
+ (E_0,E_1,E_2)&=(D(4A,4\alpha),O(-4\alpha-2d),D(4A+4\alpha+2d,-2d)),\\
+ (K_0,K_1,K_2)&=(D(4\lambda,4n),O(4\lambda),D(0,4\lambda+4n)).
+\end{align*}
+For $j=0,1,2$ define
+\[
+ G_j=\begin{pmatrix}P_j+K_j&J_j\\J_j^T&N_j+K_j\end{pmatrix},\qquad
+ H_j=\begin{pmatrix}P_j+E_j&K_j-E_j-J_j\\
+                         K_j-E_j-J_j^T&N_j+E_j\end{pmatrix}.    \tag{3}
+\]
+These are affine linear with integer coefficients in the source and selector
+entries. In addition to the twelve selector entries, introduce unrestricted
+$4\times4$ matrices $B_G,B_H$. The complete coefficient elimination is
+\[
+ \boxed{\begin{aligned}
+ S_G&=\begin{pmatrix}G_0&B_G\\B_G^T&G_2\end{pmatrix}\succeq0,
+ &S_H&=\begin{pmatrix}H_0&B_H\\B_H^T&H_2\end{pmatrix}\succeq0,\\
+ T_G&=G_1-B_G-B_G^T\succeq0,
+ &T_H&=H_1-B_H-B_H^T\succeq0.
+ \end{aligned}}                                             \tag{4}
+\]
+\begin{proposition}
+Projection of (4) onto $c\ge0$ is exactly the cone in (1), including every
+zero or degenerate source face. It has four Gram blocks of orders
+$8,8,4,4$, total order $24$, and $12+16+16=44$ auxiliary scalars, with no
+remaining coefficient equations. Including the nine scalar blocks $[c_i]$
+gives an ambient affine semidefinite representation of total order $33$.
+\end{proposition}
+\begin{proof}
+If (4) holds, (2) reconstructs each matrix in (1) for every $v\ge0$.
+If (1) holds, apply the lemma independently to its two quadratic matrices;
+their off-diagonal Gram blocks give $B_G,B_H$ in (4). Thus no selector has
+been discarded and no extra source condition introduced. All operations
+are coefficient identities without division, so zeros and singular Gram
+matrices remain literal cases. In particular the all-zero data are feasible.
+\end{proof}
+
+For comparison, retaining all Gram entries would give $72+20+12=104$
+unknowns and $60$ scalar coefficient equations. Formula (4) solves these
+equations explicitly, leaving $44$ unknowns; it makes no symmetry assumption
+on either $B$ or any $J_j$.
+
+\begin{lemma}[Bounded auxiliaries and closed projection]
+Put $s=\sum_i c_i$. Every feasible auxiliary vector satisfies
+$\|y\|_\infty\le16s$, and the projected source cone is closed. More precisely,
+\begin{align*}
+ g:=\operatorname{tr}S_G&=8d+16\lambda+16n+8m+8C+8D+8\beta,\\
+ h:=\operatorname{tr}S_H&=8d+8m+8C+8D+8\beta+16A+16\alpha,
+ \qquad \operatorname{tr}T_G\le g,\quad\operatorname{tr}T_H\le h.
+\end{align*}
+\end{lemma}
+\begin{proof}
+All diagonals of $S_G,S_H$ depend only on $c$, and $g,h\le16s$.
+Their PSD principal minors bound every $B_G,B_H,J_0,J_2$ entry by
+$g/2$ or $h/2$. Put $a_i=(S_G)_{ii}+(S_G)_{i+4,i+4}$, $0\le i<4$.
+Since $(G_1)_{ii}=0$, positivity gives
+$0\le(T_G)_{ii}=-2(B_G)_{ii}\le a_i$; summing gives the trace bound,
+and likewise for $H$. For each selector entry $(J_1)_{ij}$, its position
+in $G_1$ has distinct indices $r=i$, $t=j+2$. The PSD entry bounds give
+$|(J_1)_{ij}|\le |(T_G)_{rt}|+|(B_G)_{rt}|+|(B_G)_{tr}|
+\le a_r+a_t\le g$.
+This bounds all 44 auxiliaries. Along a convergent sequence of feasible
+sources the auxiliaries therefore have a convergent subsequence, whose
+limit remains feasible by closedness of the PSD cones. With arbitrary
+signed source inputs the same proof uses $16\sum_i|c_i|$, so the order-24
+projection is closed as well.
+Moreover fixed-source feasibility cannot be weakly infeasible. Otherwise a
+sequence approaching the PSD cones would either have bounded auxiliaries,
+giving a feasible limit, or an unbounded subsequence. Dividing the latter by
+its auxiliary norm and taking a subsequence would give feasible homogeneous
+data with source zero and a nonzero auxiliary vector, contradicting the bound.
+\end{proof}
+
+For each feasible source, put $T_2=\diag(1,-1)$. The published matrices obey
+$M(-v)=T_2M(v)T_2$. Define the selector on $v<0$ by
+$J_-(v)=T_2J_+(-v)T_2$. Congruence by $\diag(T_2,T_2)$ carries both
+inequalities from $-v>0$ to $v<0$. Thus (4) implies canonical validity by
+the pointwise completion theorem; finite axes and projective endpoints
+follow from the full homogeneous parent. This argument asserts only this
+inclusion. It does not prove that every valid source admits a quadratic
+half-line selector. The reflected selector is generally piecewise
+polynomial, so the global polynomial-selector counterexample does not
+contradict this construction.
+
+The two accompanying COO files evaluate (3)--(4) exactly. They use all
+53 ordered parameters (nine source and 44 auxiliary entries), full symmetric
+COO indexing, and respectively omit or include the external source-sign
+blocks. The standard-library checker reconstructs both original matrix
+quadratics for every parameter basis vector at three rational testing
+values; hence it checks every coefficient. It performs no solver call,
+numerical search, or universal-adequacy test.
+\end{document}

@@ -1,0 +1,352 @@
+INDEPENDENT ANALYTICAL AUDIT OF THE AUGUST 30/31 COMPUTER-FREE Q222 ROUTE
+2026-10-22
+
+Scope and result
+================
+
+I read the entire 2,415-line August 30 base and the six August 31 replacements,
+then compared the principal findings with the newly recovered first-principles
+audit and its source-only replacement for equation (9.11). This is an analytical
+review of that particular historical route, not a verdict on all later October
+proofs. No program execution, status label, checksum, numerical test, or symbolic
+checker output is being used as evidence of a mathematical theorem here.
+
+The August route contains a sound and useful general proof architecture. Its
+physical reduction, support-cone argument, positive-residue exit, and the properly
+formulated exact diagonal mechanism explain how a computer-free existence proof
+could work. Its claimed conclusion is the stronger assertion sxdeg(Q222)=2,
+not merely existence of an arbitrary finite semidefinite lift.
+
+The printed August text cannot be freshly certified as a complete end-to-end
+proof from this reading. There are literal tensor-typing and exact-versus-initial-
+form problems, and the common-chart/child passage needs more than the displayed
+termination invariant. Several of these can be repaired locally; none of them
+constitutes a counterexample to Q222 having a finite lift. In particular, failure
+of this historical rank-two presentation would not invalidate a later independent
+qualitative tensor-SOS proof. Missing evaluated matrix data E1--E3 are a separate
+constructive question and are not the reason for this assessment.
+
+Authoritative sources
+=====================
+
+A0: q222_regenerated_2026-10-22/inputs/canonical_august30/
+    Q222_SXDEG2_CONSOLIDATED_PARCHMENT_FINAL_2026-08-30.md
+    SHA256 e268a6ae1c11dd02b5819064fa7e8187173074050d92f3204e703dd46f574731
+
+A1: q222_regenerated_2026-10-22/inputs/frozen_august31/
+    Q222_SXDEG2_CORRECTION_PATCH_AND_FREEZE_2026-08-31.md
+
+The analysis applies the six replacements in A1. In particular, the B0 factors
+are interpreted as separately point-side and support-side, and the A17 pivots
+are the centered K3-free expressions. The reader route and lock files express
+the author's claimed status; they are not additional mathematical arguments.
+
+External primary results checked directly:
+
+S21: C. Scheiderer, Second-order cone representation for convex sets in the plane,
+     arXiv:2004.04196v2, Proposition 3.5, Theorem 3.10, Corollary 3.19.
+     https://arxiv.org/pdf/2004.04196
+
+S25: C. Scheiderer, Smooth hyperbolicity cones are second-order cone representable,
+     arXiv:2509.17121v2, Proposition 3.11 and Lemma 3.12.
+     https://arxiv.org/pdf/2509.17121
+
+S21's tensor criterion is stated for arbitrary finite ambient dimension. Its
+planar main theorem is different from that criterion. S25's local diagonal
+argument requires an exact tensor on a smooth one-copy space, evaluated at two
+points specializing to the same real point, with a strictly positive intrinsic
+quadratic form. Its main smooth-boundary theorem is not automatically a theorem
+about the singular Q222 boundary.
+
+1. Recovered logical spine
+==========================
+
+1.1 Physical finite model (A0 38--62)
+
+Binary contractions have involution dilations. Two projective binary observables
+admit Jordan blocks of dimension at most two. Both observables in each two-
+dimensional local block can be placed in a real plane. The measured operators
+are then real; taking the real part of the state and its real spectral
+decomposition preserves all eight expectations. Hence Q222 is the convex hull
+of a compact semialgebraic real two-qubit family. Finite Caratheodory gives a
+fixed nine-atom formula in R^8, establishing compactness, convexity and
+semialgebraicity and making transfer to real closed fields precise.
+
+1.2 Polar reduction (A0 64--130; A1 Repair 1)
+
+The central positivity polytope G and eight CHSH apices give the local polar.
+The visible-facet calculation and pairwise-midpoint property reduce the quantum
+polar to G and eight Bell-related compact stars. Once one star has a finite
+lift of the desired block size, finite convex-hull closure and polarity finish
+the upper bound. These closure operations do not need a printed solver-ready
+pencil to establish existence.
+
+1.3 Complete support family (A0 134--210)
+
+A common strictly interior point provides a normalization of all physical and
+simplex supports. The compact generator family E includes the constant support.
+The separation argument proves P_Kstar=cone(E), with at most nine generators.
+The extreme-point set is semialgebraic and its convex hull is Kstar. Thus the
+primitive target really does suffice for all affine supports and all points.
+
+1.4 Exact universal target (A0 equation (2.1))
+
+For every real closed extension R of the reals, e in E_R and extreme x in Kstar_R,
+the tensor evaluation must be SOS with every root of tensor rank at most two.
+The two labelled copies of R remain independent. Ordinary nonnegativity after
+multiplication of the tensor factors does not prove this target.
+
+1.5 Positive residue and exact support entry (A0 2167--2176)
+
+Positive real residual slack is handled by S21 Proposition 3.5. At zero residue,
+an exact supporting functional at the extreme source decomposes through E and
+supplies an exact active generator g. This establishes g(x)=0. It does not
+identify the independently tested e with g, nor does it by itself construct
+the two separate lifts into a common contact chart.
+
+1.6 Remaining substantive input
+
+The common-chart and complete-parent assertions in Sections 5--14 must hold for
+every primitive pairing and every relative infinitesimal scale. Only then can
+the local diagonal or exceptional identities be applied and the universal
+criterion invoked. That is the central mathematical content of the existence
+proof, not an explicit extraction task.
+
+2. The diagonal mechanism is valid with the correct algebraic hypotheses
+=======================================================================
+
+A0 Lemma 3.1 (lines 212--280) follows the idea of S25 Lemma 3.12. A safe formulation
+avoids a mixed localization. Let B be a smooth affine real coordinate ring,
+A=B tensor_R B, J the diagonal ideal, p a real point, and M the maximal ideal
+of (p,p). Suppose tau belongs to J^2 and its image in J^2/MJ^2 is a positive-
+definite quadratic form on T_pY. Choose global algebra generators f_i of B and
+put v_i=delta(f_i). The v_i generate J. Their differentials span the cotangent
+space; therefore the intrinsic positive form extends to a real positive-
+definite matrix Q0 on the full generator coordinate space. Consequently
+
+    tau - v^T Q0 v belongs to M J^2,
+
+and the generators v_i v_j give an exact symmetric matrix E with entries in M:
+
+    tau = v^T (Q0+E) v.
+
+Upon independent evaluation at two bounded points with residue p, E has zero
+real residue. A finite real square-frame decomposition leaves strictly positive
+coefficient reserves. Proposition 3.5 expresses each such coefficient as a
+finite sum of nonnegative pure tensors. Every resulting root is a real linear
+combination of divided differences multiplied by a pure tensor, and therefore
+has tensor rank at most two.
+
+This proves an exact local theorem. It requires the actual tau to belong to
+the square of the appropriate ideal and the complete quadratic residue to be
+strictly positive. A positive Hessian over a non-Archimedean field can have a
+singular real residue and is insufficient. An invertible weighted coordinate
+change over that field need not be invertible on the real cotangent fiber.
+
+The phrase in A0 allowing localization at functions of positive residue must
+be interpreted with care. A mixed function can have positive residue without
+its inverse belonging to the unlocalized tensor product. The global-generator
+argument above repairs the general mechanism without that inverse. It does
+not, by itself, prove the hypotheses for all exceptional Bell charts.
+
+3. Literal tensor typing in equation (9.11), and its exact local repair
+=====================================================================
+
+Locator: A0 Section 9.1, lines 1078--1091. The displayed completion has denominator
+
+    e1(1+u^2)+beta.
+
+With the assignment in Section 4, e1 and beta are Bell point/source coefficients
+and u is the independent physical support parameter. Thus this expression is
+
+    e1 tensor (1+u^2) + beta tensor 1,
+
+which is mixed. The sentence saying it lies wholly in one factor is false under
+the printed typing. As a one-field identity, the completion is correct; using
+its roots directly in the tensor ring needs a different argument.
+
+The newly recovered source-only repair is exact and can be checked by hand.
+For e=e1, c=e+beta>0, k=beta/c, h=e beta/c,
+
+    e(1+u^2)X^2 + beta(X+uB)^2
+      = c(X+k uB)^2 + h u^2 B^2 + e u^2 X^2.
+
+The three roots are
+
+    sqrt(c) tensor X + beta/sqrt(c) tensor uB,
+    sqrt(h) tensor uB,
+    sqrt(e) tensor uX.
+
+Their ranks are at most two, one and one. If c=0 the original pair is zero.
+The calculation uses ck=beta and ck^2+h=beta. This is a complete correction
+to the pair, including its boundary c=0.
+
+It does not automatically repair every subsequent scalar-envelope claim. With
+N=X+k uB, the last retained term is
+
+    e u^2 X^2 = e u^2 N^2 - 2 e k u^3 B N + e k^2 u^4 B^2.
+
+Its higher-order contribution and cross term belong to the full parent and
+must remain in the exact critical-center analysis. The later R1/C2 work should
+be assessed on its own complete identities, not inferred from this repair.
+
+The absolute values in the following matrix decomposition (9.12) also require
+either an actual matrix over one ordered factor or a replacement by an exact
+bounded tensor Gram with positive real residue. No absolute-value operation on
+general mixed tensor coefficients has been specified in the August text.
+
+4. Exact reciprocal identity versus an initial-layer identity
+============================================================
+
+This pass found an additional internal inconsistency not resolved by the six
+August31 changes.
+
+Locators: A0 lines 1881--1897, equations (13.0o)--(13.0q); lines 1901--1923,
+equations (13.1)--(13.2); Appendix A, equations (A.1)--(A.8).
+
+The text first states the exact Cramer relation
+
+    D0 D1 d = 2 J zeta Nd lambda,
+
+hence
+
+    d/lambda = 2 zeta Ud,  Ud=J Nd/(D0 D1),  residue(Ud)=1.
+
+It then normalizes lambda=1, sets z=epsilon/c=zeta, and says the complete
+contact equations give d=2z. These two assertions are not the same exact
+identity: the printed Appendix A does not have Ud identically one.
+
+Here is a hand derivation using only the first displayed coefficients. Put x=r^2.
+Write
+
+    D0 = J + a x + O(x^2),
+    D1 = J + b x + O(x^2),
+    Nd = J + n x + O(x^2),
+
+where Appendix A gives
+
+    a = J c^2 z + J c^2 - K c^2,
+    b = J^2 + J c^2 + J - K c^2 + c^2,
+    n = J^2 z + 2 J^2 + J c^2 z + 2 J c^2 + J - K c^2 + c^2.
+
+Therefore
+
+    [x](J Nd - D0 D1)
+       = J(n-a-b)
+       = J[J^2(1+z)+K c^2].
+
+This is strictly positive for real strict-chamber data J>1, z>0, K>=0. In
+particular it is 10 at J=2, z=1/4, c=1, K=0. Thus Ud is a unit of residue one
+with a generally nonzero r^2 correction, not the constant one. The formula
+d=2z can describe the initial/residue layer, or it could be made exact after
+a declared reparametrization, but it cannot simultaneously be the printed
+complete formula with the unchanged z=epsilon/c and the preceding Cramer
+identity.
+
+This observation does not show that a reciprocal tensor certificate is
+impossible. It identifies precisely what a corrected proof must do: retain
+the exact Ud correction and all companion coefficients, or define a new
+coordinate and rederive their formulas. If only the initial layer is used to
+calculate a Hessian, the proof must connect it to the exact centered parent
+and bound the correction. An initial Hessian can be sufficient after those
+steps; it is not itself the claimed exact identity.
+
+5. Common incidence and descent: exact points versus residue strata
+===================================================================
+
+Locators: A0 Section 14.1, lines 2081--2137; Section 14.2, lines 2139--2161;
+Section 15, especially lines 2176--2186.
+
+The endpoint paragraph of Lemma 14.1 first establishes coordinate vanishing
+at the common residue point, then refers to a proper common coordinate child
+and repeats the coefficient filtration inside it. In a real closed extension,
+these are different assertions:
+
+    residue(a)=0  does not imply  a=0.
+
+A positive infinitesimal is the elementary example. Thus the child must be
+specified either as an exact restriction of the actual source, or as a residue
+stratum together with all retained transverse parameters. In the second case
+an exact parent-to-chart identity or collar theorem is required. A shared
+residue does not itself give independent lifts of the two actual copies into
+a proposed smaller exact variety.
+
+The invariant kappa=(N_act,d_stratum) is well founded. It proves termination
+provided every recursive arrow actually deletes an original coefficient or
+imposes a further exact equation without restoring previous ones. Loss of a
+positive real residue alone changes neither entry. Consequently the list of
+possible residue nodes and the invariant do not replace the proof that each
+actual degeneration is covered with its transverse terms intact.
+
+Section 7 equation (7.5) illustrates the right type of successful bridge:
+the complete two-copy parent is exactly multiplied by a pure point factor
+and a pure support square and transported by the same one-copy gauge. Repair4
+correctly routes exact denominator zeros before division. Positive infinitesimal
+approaches still require the full-parent argument on the declared open chart.
+
+6. Other scope-sensitive applications
+=====================================
+
+Terminal F3 (A0 941--964, equations (8.7)--(8.8)) uses
+
+    z2=R^4 p^4(1+Wh)/h^2.
+
+At the terminal real residue R=0, dz2 vanishes on the ordinary cotangent space
+of the displayed smooth chart, while R/(4z2) has a pole of order three. The
+change is invertible over a field when R is nonzero, but is not a real-residue
+cotangent isomorphism there. A more suitable cover or normalized exact Gram
+may repair it; that construction must preserve the actual parent and separate
+rates. The general diagonal lemma does not justify this application merely
+from field-level invertibility.
+
+A17 (A0 equation (10.23)) asserts weighted J^2 membership using cancellation
+triples. The triples do sum to zero, but the text does not list a full
+coefficient-to-monomial correspondence for the claimed below-cost terms.
+Thus this audit verifies the displayed cancellations, not the entire weighted
+ideal membership claim. The literal weighted ideal and all normalizations
+must be checked against a complete exact parent before importing that claim.
+
+B0 (A0 1629--1650, equation (12.1); A1 Repair5) is an explicit tensor-SOS
+matrix once its scalar source coefficients are nonnegative: after absorbing
+1+U^2, 1+V^2 and U^2 on the support side, its displayed terms are literal
+separated squares. But the claimed pure-point congruence and common clearing
+which connect S0 to the original complete physical parent are not printed
+as actual matrices/maps in this section. Those are local theorem hypotheses,
+distinct from the much later extraction of one global finite matrix pencil.
+
+The Laurent statement (A0 1171--1180, (9.20)--(9.21)) needs a nonzero-layer
+hypothesis: R(tau)=A1 tau^2+B1 tau^-2+C1 can be identically zero. Under
+nonnegativity, a nonzero such polynomial with an interior zero has A1,B1>0,
+and its stationary relation gives R''=8A1. For a zero layer, the next retained
+layer or exact child must be specified.
+
+7. Assessment and use in the recovered proof project
+=====================================================
+
+Established in this pass:
+  * The correct general tensor criterion and its arbitrary-dimensional scope.
+  * The logical separation between qualitative finite-SOS existence, rank-two
+    SOS/block-order existence, and explicit matrix extraction.
+  * The short diagonal mechanism under exact membership, common-lift and
+    positive-real-residue hypotheses.
+  * The exact source-only correction of the displayed pair (9.11), including
+    the higher-order term which must remain in the complete parent.
+  * The explicit first-order incompatibility between the printed exact
+    reciprocal Cramer identity and the unqualified exact claim d=2z.
+
+Not established by this pass:
+  * Universal common-node coverage of every independent primitive pair.
+  * Full exact restoration through all singular and projective charts.
+  * Every cancellation, cofactor formula or complete terminal Gram.
+  * The August universal rank-two theorem or any later independent October
+    qualitative theorem.
+
+The constructive omissions E1--E3 do not weaken an otherwise established
+existence proof. Conversely, removing those explicit extraction requirements
+does not resolve the theorem-stage issues identified above. The next review
+should assess the actual later proof bodies that claim to replace this route,
+especially their source reduction, full R1 state-normal argument, all-rate
+testing coverage, exact parent restorations and universal tensor assembly.
+One should neither transfer the August defects to those independent bodies
+without reading them, nor treat their completion labels as substitutes for
+their analytic arguments.

@@ -1,0 +1,162 @@
+\section{A C1 extension: $L$ a unit and $\eta$ infinitesimal}
+\label{sec:r7-c1-L-unit-eta-small}
+
+\begin{theorem}
+The entire original C1 source subdomain
+\[
+ x=k^2\in\Inf_{>0},\qquad L=x\zeta\text{ a positive bounded unit},
+ \qquad \eta\in\Inf_{>0}
+\]
+has a full-parent tensor-SOS certificate for every independent
+projective testing pair.  All original openings and the retained
+boundaries $D=0$ or $\beta=0$ remain allowed whenever they occur
+in this source subdomain.
+\end{theorem}
+
+The proof is an exact adapter to the strong-II local and remote
+certificates.  Its additional event is retained with a centered
+square; it is not deleted from the parent.
+
+\paragraph{The native source in the shared contact geometry.}
+Keep the native notation of (NC1)--(NC4), but in this section denote
+its $r,h,a$ by $r_n,h_n,a_n$ to avoid collisions.  Normalize $d=1$.
+The exact native contact with $Z_c=1$ is
+\[
+ (u_c,v_c;W_c,X_c,Y_c,Z_c)
+ =\left(\sqrt x,\sqrt{x\eta\zeta};
+ \sqrt{\zeta/\eta},-\sqrt x\,h_n,
+ \sqrt x\,r_n\sqrt{\zeta/\eta},1\right).
+\]
+It therefore has the same contact geometry used in (LII2), with
+\[
+ z=x,\quad y=L\eta,\quad B=L,\quad H=Lr_n=B-a_ny,
+ \quad r=h_n=1-\theta,\quad t=a_n,\quad
+ j=1+zr-t=J_n.                                           \tag{LC1}
+\]
+In particular $z,y$ are positive infinitesimals.  Here $r_n\sim1$,
+$0<Lr_n<1$, and hence $b_0:=\operatorname{res}B$ satisfies
+$0<b_0\le1$.  We use $b_0$ only for this source residue.
+
+Set, as in the local strong-II proof,
+\[
+ c=Cyt,\quad d_p=Dyj,\quad
+ \mu=m/z^2,\quad a_A=A/y,\quad
+ \sigma=\alpha(1-H),\quad \tau=\beta(1-r)=\beta\theta.
+\]
+These are bounded source quantities, and $c,d_p,\mu,a_A,\sigma$
+are positive units.  Writing $r_0=\operatorname{res}r$, exact
+substitution in (NC2)--(NC4), with opening factors canceled first,
+gives
+\[
+\begin{gathered}
+ c,d_p\sim\frac{b_0}{2(1+b_0)},\qquad
+ a_A\sim\frac1{2b_0(1+b_0)},\\
+ \mu\sim\frac{r_0}{2b_0(1+b_0)},\qquad
+ \sigma\sim\frac{b_0^2}{2(1+b_0)},\\
+ \operatorname{res}\tau=
+ \frac{b_0}{2(1+b_0)}-\frac{1-r_0}{2}.                    \tag{LC2}
+\end{gathered}
+\]
+Since $\tau\ge0$, the last identity implies
+$r_0\ge1/(1+b_0)>0$, proving the asserted unit lower bound for
+$\mu$.  Also $t+j=1+zr\sim1$, and $c,d_p$ being units proves
+$C,D$ unbounded uniformly through either opening $t=0$ or $j=0$
+in residue.  Thus $D=0$ is in fact absent from this specific
+subdomain by the exact source implications; it has not been excluded
+by an additional hypothesis.  Literal $\beta=0$ is included.
+
+The source-harmonic quantity $yCD/(C+D)$ and the cap behavior of
+$\alpha$ have precisely the residues (RR1)--(RR2), with
+$h=b_0$.  The remote proof (RR3)--(RR13) therefore applies unchanged,
+retaining the extra positive packet
+$4\beta D_v(X+uZ)^2$ throughout.  This covers every test outside
+the local region where $u,v$ are both infinitesimal, including the
+original projective endpoints.
+
+\paragraph{The additional event and its exact local remainder.}
+For the local region use exactly the graph, roots, harmonic pair,
+and caps (LII2)--(LII4), with the source quantities (LC1)--(LC2).
+Put
+\[
+ R=v(U-z)W,\qquad
+ E_\beta=\xi+u\zeta+R/B
+          =(X+uZ)-\frac{z(1-r)v}{B}W.                    \tag{LC3}
+\]
+This root vanishes at the actual contact.  Retain the entire
+positive packet $4\beta D_vE_\beta^2$, in addition to the first,
+second and fourth packets of (LII5); there is no $n$ packet since
+$n=0$.  The exact remainder from the $\beta$ event is
+\[
+ \begin{split}
+ \Delta_\beta={}&
+ \frac{8\tau z}{B}D_vvW(\xi+u\zeta)\\
+ &+\frac{4\tau z}{B^2}D_vV\{2U-z(1+r)\}W^2.
+ \end{split}                                             \tag{LC4}
+\]
+All its coefficients are bounded even if $\beta$ is unbounded:
+only $\tau=\beta(1-r)$ occurs.  The exact full remainder is (LII6)
+with its $n$ line deleted, plus (LC4).  Thus no state normal,
+boundary coefficient, or first contact jet has been omitted.
+
+The $R_hW$ gauge (LII7) is unchanged, because (LC4) contains no
+$R_h$.  The coefficient representation (LII8), its exact contact
+and first-normal vanishings (LII9)--(LII10), and its bounded monic
+divisions (LII12)--(LII13) all remain valid.  Explicitly, (LC4)
+adds $8\tau z(1+V)/B$ to $P_\xi$ and $P_\zeta$, adds zero to
+$P_N$, and adds its printed scalar line to $\phi$.  Hence the
+essential support $P_\xi\in(U,z)$ and $\deg_U\phi\le2$ remain
+literal polynomial statements.
+
+The only changed data in (LII11) are
+\[
+\begin{split}
+ d_s&=\frac{4z^2}{B^2}
+   \left\{\mu(B+zr)^2+\frac{r^2}{2}-\tau(1+r)\right\},\\
+ e_s&=\frac{4z^2}{B^2}
+   \left\{\frac{r^2}{2}-\tau(1+r)\right\}.
+\end{split}                                             \tag{LC5}
+\]
+Both quotients by $z^2$ are bounded; $e_s$ need not be positive.
+Its contribution to the final Gram has an infinitesimal coefficient
+because it is multiplied by $V$.  The decisive exact residue
+cancellation, using (LC2), is
+\[
+ \begin{split}
+ \operatorname{res}\left\{
+ \mu B^2+\frac{r^2}{2}-\tau(1+r)\right\}
+ &=\frac{b_0r_0}{2(1+b_0)}+\frac{r_0^2}{2}
+ -\left\{\frac{b_0}{2(1+b_0)}-\frac{1-r_0}{2}\right\}(1+r_0)\\
+ &=\frac1{2(1+b_0)}.
+ \end{split}                                             \tag{LC6}
+\]
+Consequently
+\[
+ \operatorname{res}(d_s/z^2)=\frac2{b_0^2(1+b_0)},\qquad
+ \operatorname{res}A_\xi=\frac4{b_0(1+b_0)}.              \tag{LC7}
+\]
+The second equality is unchanged from (LII18): the new $P_\xi$
+term is a bounded multiple of $z$ independent of $U$, so it has
+zero $U$-quotient residue.  The four hard-normal residues (LII17)
+are unchanged as well.
+
+Apply the exact allocations (LII15) to all the coefficients,
+including (LC4).  They give the same bounded six-root Gram
+$(N,\xi,\zeta,R_h,R,T)$ as in (LII16).  Its finite $(\xi,R)$
+block is exactly (LII19), with $h=b_0$, and has strictly positive
+Schur complement $2/[b_0(1+b_0)^2]$.  The same exact conductor
+(LII20) supplies an arbitrarily large real $T^2$ pivot while
+changing every other residue entry by zero.  The complete bounded
+Gram is strict.  Restoring the four retained packets, including
+$4\beta D_vE_\beta^2$, proves the local tensor SOS for all
+independent rates and literal affine axes.  The remote admission
+above completes the theorem.
+
+\paragraph{Verification and exact frontier effect.}
+The accompanying checker reconstructs the entire original C1 parent
+from this remainder and all four retained packets, verifies the new
+centered-event identity, the unchanged contact-ideal support, every
+new source residue, the finite block, and the conductor.  Stationarity
+itself is the unchanged native source identity, not an added
+restriction.  The result removes the whole $L$-unit, $\eta$-infinitesimal
+subdomain from C1.4.  It does not assert the other $L$-unit source
+regimes or the entire C1.4 row.

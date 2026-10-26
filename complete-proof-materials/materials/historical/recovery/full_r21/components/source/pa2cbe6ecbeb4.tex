@@ -1,0 +1,103 @@
+\subsection{A matching terminal independent of its internal coefficient scales}
+\begin{theorem}[Four matching weights at arbitrary scales]\label{thm:matching-flag-terminal}
+Let the source be physical, let its four positive matching weights be $n,m,A,D$, and put
+$\mu=\min(n,m,A,D)$, and suppose
+\[
+d/\mu\in\mathfrak m_c,\qquad
+\lambda/\mu,c/\mu,\alpha/\mu,\beta/\mu\in\mathfrak m_c.
+\]
+Then the full parent is tensor SOS at every noncommuting residue test annihilating those four events. The same statement holds for the other perfect matching by CHSH symmetry.
+\end{theorem}
+\begin{proof}
+The cases $d=0$ and positive slack residue are immediate. Cycle symmetries let the smallest matching weight be $D=\mu$. Set
+\[
+\eta_1=\mu/n,\qquad\eta_2=\mu/A,\qquad\eta_3=\mu/m;
+\quad 0<\eta_i\le1.
+\]
+All three may have different residues, including zero. Use the exact state coordinates and functions $f,L$ from Proposition~\ref{prop:fourth-edge-promotion}, so that the strong packets are
+\[
+4nD_uD_vX^2+4AD_uD_vY^2+4mR^2,
+\]
+and the fourth amplitude is $f+L$. Put $\tau=\max(\lambda,c,\alpha,\beta)$. The exact scalar test $x=0$, $u=1$, $v=\sqrt{1+d/(4\mu)}$ again proves $\tau>0$ and boundedness of
+\[
+\rho=d^2/(\mu\tau),\qquad \varepsilon=d/\mu.
+\]
+If $\bar\rho=0$, the direct Gram on
+\[
+\left(\sqrt{n/\tau}X,\sqrt{A/\tau}Y,\sqrt{m/\tau}R,
+\sqrt{\mu/\tau}(v-u),1\right)
+\]
+has positive residue. Its four-normal block is
+\[
+4B^2z_1^2+4B^2z_2^2+4z_3^2+
+4\{-2z_4+B\sqrt{\bar\eta_1}z_1
+ -B\sqrt{\bar\eta_2}z_2+\sqrt{\bar\eta_3}z_3\}^2\succ0,
+\]
+where $B=1+u_0^2$. The constant residue is the positive complementary-event value on the matching curve. The signed linear terms have coefficients $\sqrt{\rho\eta_i}$ and $\sqrt\rho$, hence vanish in residue.
+
+Assume now $\bar\rho>0$. In the coefficient-field stationary equations put
+\[
+X=\varepsilon\eta_1s_1,\quad
+Y=\varepsilon\eta_2s_2,\quad
+R=\varepsilon\eta_3s_3,\quad
+v-u=\varepsilon r,\quad u=t.
+\]
+Divide the three state equations by $d$, the $v-u$ equation by $d$, and the $t$ equation by $\tau$. Every coefficient is bounded after a pure unit clearing in $t$; the factors $\eta_i$ in the state substitution cancel the large coefficients $\mu/\eta_i$. In residue define
+\[
+B=1+t^2,\quad \ell=(B,-B,1),\quad
+b=(B^2,B^2,1),\quad
+k=-2r+\sum_{i=1}^3\bar\eta_i\ell_i s_i.
+\]
+The four normal equations are
+\[
+8b_i s_i+8k\ell_i+(4tB,-4tB,0)_i=0,
+\qquad -16k-4t=0.
+\]
+Their Jacobian in $(s_1,s_2,s_3,r)$ has determinant
+$32\cdot8^3B^4>0$: eliminate its final row from the first three to leave the diagonal entries $8b_i$. Their unique solution is
+\[
+s_1^*(t)=-\frac{t}{4B},\quad
+s_2^*(t)=\frac{t}{4B},\quad
+s_3^*(t)=\frac t4,\quad
+r^*(t)=\frac t8(1-\bar\eta_1-\bar\eta_2+\bar\eta_3).
+\]
+
+Write $P=\overline{(\lambda+\alpha)/\tau}$ and
+$Q=\overline{(c+\beta)/\tau}$, so $P+Q>0$. The normalized residue objective is
+\begin{align*}
+\Psi(s,r,t)={}&\bar\rho\left[
+4\sum_i\bar\eta_i b_i s_i^2+4k^2
+ +4tB(\bar\eta_1s_1-\bar\eta_2s_2)-4tr\right]\\
+&+4(1+t^2)(P+Qt^2).
+\end{align*}
+Completing its four normal squares leaves
+\[
+g(t)=4(1+t^2)(P+Qt^2)
+ -\frac{\bar\rho t^2}{4}(1+\bar\eta_1+\bar\eta_2+\bar\eta_3).
+\]
+This identity remains valid when some $\bar\eta_i=0$; the corresponding scaled normal equation still has its diagonal pivot $8b_i$. Physicality gives $g(t)\ge0$. At a zero its quotient by $4t^2$ is a one-variable Laurent circuit, whose logarithmic Hessian is $P/t^2+Qt^2>0$. Thus $g''(t_0)>0$.
+
+If $g(t_0)>0$, shift by the four explicit normal minimizers above; the positive constant and the positive four-normal block give a strict Gram. Otherwise append the tangent equation to the four scaled normal equations. Its Jacobian has Schur complement $g''(t_0)>0$, so the coefficient-field implicit-function theorem supplies an exact stationary center with the displayed normal residues and tangent residue $t_0$. Physicality makes its normalized value nonnegative.
+
+For completeness the exact Taylor roots at that center are
+\[
+\left(\sqrt{n/\tau}(X-X_c),\sqrt{A/\tau}(Y-Y_c),
+\sqrt{m/\tau}(R-R_c),\sqrt{\mu/\tau}(\delta-\delta_c),t-t_c\right).
+\]
+Their coefficient bounds use only $\varepsilon$, $\rho$, $1/\rho$, $\eta_i$ and their square roots, all bounded. One can check this without estimating an inverse matrix: in each strong packet its coefficient times the squared center is
+\[
+\frac{a_i x_{ci}^2}{\tau}=\rho\eta_i s_{ci}^2,
+\qquad
+\frac{a_i x_{ci}}{\sqrt{a_i\tau}}=\sqrt{\rho\eta_i}\,s_{ci}.
+\]
+The fourth packet has the analogous factors $\rho r_c^2$ and $\sqrt\rho r_c$. The signed and complementary packets have the same or smaller bounded factors. Each packet is at most quadratic in the state coordinates; after allocating its two normal factors, remaining higher factors are actual angle or state deviations and have zero residue. Denominators are powers of the pure testing unit $t$.
+
+The residue normal Gram is the positive form displayed above. Its tangent Schur complement is $g''(t_0)/2>0$, as follows either by differentiating the four completed squares or by the explicit normal minimizers. Hence the entire exact Taylor Gram is strict. Adding the nonnegative pure coefficient value at the center and restoring the separately positive factors proves the claim.
+\end{proof}
+
+\paragraph{Why this is a finite induction rule.}
+For at most three event constraints the exact state-linear event coordinates make the hard form diagonal. If their positive weights are $a_i$ and the next coefficient scale is $\sigma\ll a_i$, the proof of Lemma~\ref{lem:weighted-contact} works with
+$x_i=(\sigma/a_i)s_i$ and roots $\sqrt{a_i/\sigma}x_i$.
+Its residue Jacobian has positive diagonal normal entries, and its soft block is the Hessian of the constrained next-scale residue. Thus the three-event Laurent theorem does not require the hard weights to be comparable.
+
+If the next-scale signed coefficient still vanishes in residue, a zero of the event sum adds matching edges to the same entangled kernel. There are at most four such edges. On reaching four edges before $d$ becomes comparable, the theorem above gives a terminal independent of their internal scales. The following two constrained determinant arguments handle the intervening cases with one or two hard events for which $d$ first becomes comparable to the remaining coefficients.

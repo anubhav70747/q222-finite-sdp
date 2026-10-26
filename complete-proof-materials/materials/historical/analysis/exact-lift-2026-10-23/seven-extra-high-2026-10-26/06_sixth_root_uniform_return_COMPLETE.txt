@@ -1,0 +1,159 @@
+ChatGPT said:
+
+Q222: Full native C2 sixth-root admission
+Status: unresolved. I cannot establish $\mu_{C2}^{(6)}(c)\ge0$ throughout the full strict native C2 family, nor produce a negative dual separator for the complete 196-feature cone. The positive contact scalar Gram and local coupling completion do not establish either conclusion.
+I did obtain a new exact theorem about the sixth-root construction itself:
+On a nonempty open set of strict native C2 sources, every admitting sixth-root Gram must contain a quantitatively nonzero contribution from genuinely fractional features, with nonzero correlations between complementary sixth-root exponents.
+This goes beyond the half-power exclusion. It identifies specific Gram correlations that every proposed sixth-root completion must supply, rather than merely showing that the smaller cone fails.
+1. A smaller exact formulation of the target
+Set
+$U=u^{1/3},\qquad V=v^{1/3}.$
+Parity averaging in the sixth-root variables shows that $F_c\in L_6$ is equivalent to the fixed-degree matrix quadratic-module identity
+$\boxed{
+F_c(U^3,V^3,\psi)
+=\sigma_{00}+U\sigma_{10}
++V\sigma_{01}+UV\sigma_{11}.
+}
+\tag{1}$
+Each $\sigma_{\epsilon\eta}$ is an SOS of polynomials linear in all four state amplitudes. Its square roots have degrees at most
+$\deg_U\le3-\epsilon,\qquad
+\deg_V\le3-\eta.$
+The four Gram orders are exactly $64,48,48,36$. The C2 Newton support and contact reductions recover the familiar $51,35,35,29$ blocks.
+Thus the uniform C2 question is equivalently a degree-three matrix quadratic-module theorem on the positive quadrant. This reformulation retains a fixed affine coefficient map in the original source coordinates.
+2. New theorem: fractional correlations are compulsory
+Use the previously audited strict native source
+$(a,b,c,t,r)=
+\left(\frac{13}{600},\frac{101}{1000},
+\frac{47}{15},\frac{27}{35},\frac{13}{154}\right).$
+Apply its invertible source-only contact normalization, putting the contact at $u=v=1$ with state $(1,1,1,1)$. Let $\widehat F$ denote the resulting complete four-state parent.
+Among the 154 Newton-retained sixth-root features, partition
+$\mathcal O=\{u^{i/6}v^{j/6}\psi_l:
+i,j\in\{0,3,6\}\}\cap\text{retained}$
+and $\mathcal N=\text{retained}\setminus\mathcal O$.
+Then
+$|\mathcal O|=30,\qquad|\mathcal N|=124.$
+The old features are precisely the retained half-power features. The new ones contain at least one exponent index from $\{1,2,4,5\}$.
+Extending the exact half-power functional
+Let $Y_{pq,lm}$ be the 90 audited integer dual moments from the published half-power obstruction. Define a linear functional on the full sixth-root coefficient space by
+$\Lambda_T(u^{p/6}v^{q/6}\psi_l\psi_m)
+=
+\begin{cases}
+Y_{p/6,q/6,lm}+T,
+& p,q\in\{0,6,12\},\\
+0,&\text{otherwise},
+\end{cases}$
+with the exact integer
+$T=24\,000\,000\,000\,000.$
+The added constant contributes $T\widehat F(1,1,\mathbf1)=0$. Consequently,
+$\Lambda_T(\widehat F)=-\delta,$
+where
+$\delta=
+\frac{
+31917121340091771507320448459210586965990611717744093996544823253
+}{
+1129383645613305483559298619423160947865086012060000000000
+}>0.$
+Key observation: The adjoint of $\Lambda_T$ splits exactly into old and new feature sectors,
+$A_6^*\Lambda_T=
+\begin{pmatrix}
+M_{\mathcal O}&0\\
+0&M_{\mathcal N}
+\end{pmatrix}.
+\tag{2}$
+The mixed block vanishes because an old index $0,3,6$ plus a genuinely new index $1,2,4,5$ cannot be divisible by six.
+The old matrix is strictly positive definite:
+$\boxed{M_{\mathcal O}\succ0.}
+\tag{3}$
+To establish this without losing the contact direction, choose the first old feature as pivot in each parity block. The four audited compressed matrices $Q_b$ are positive definite. In the basis consisting of the pivot and its differences, adding $T$ changes each old matrix to
+$\begin{pmatrix}
+a_b+T&b_b^T\\
+b_b&Q_b
+\end{pmatrix}.$
+Exact rational Schur-complement calculations give the following strict lower bounds.
+Old parity block
+Schur gap greater than
+
+Even-even
+$4\times10^{11}$
+
+Even-odd
+$1.5\times10^{13}$
+
+Odd-even
+$1.9\times10^{13}$
+
+Odd-odd
+$2.3\times10^{13}$
+
+
+
+
+In contrast, every diagonal entry of $M_{\mathcal N}$ is zero. Its only potentially nonzero entries couple features whose angular exponent sums are multiples of six, including the complementary fractional pairs
+$\boxed{1+5=6,\qquad 2+4=6.}
+\tag{4}$
+Every entry has absolute value at most the exact integer
+$B=24\,002\,021\,367\,851.$
+Quantitative consequence
+Suppose $G\succeq0$ is any sixth-root Gram representing $\widehat F$. Partition its retained rows into $\mathcal O,\mathcal N$. Then
+$-\delta
+=\operatorname{tr}(M_{\mathcal O}G_{\mathcal O\mathcal O})
++\operatorname{tr}(M_{\mathcal N}G_{\mathcal N\mathcal N}).$
+The first term is nonnegative. Since the operator norm of the 124-dimensional $M_{\mathcal N}$ is at most $124B$,
+$\boxed{
+\operatorname{tr}G_{\mathcal N\mathcal N}
+\ge\frac{\delta}{124B}
+>9.49\times10^{-9}.
+}
+\tag{5}$
+Moreover, because $M_{\mathcal N}$ has zero diagonal and only complementary off-diagonal entries,
+$\boxed{
+\sum_{\substack{e<f\\\text{complementary new features}}}
+|G_{ef}|
+\ge\frac{\delta}{2B}
+>5.88\times10^{-7}.
+}
+\tag{6}$
+These are necessary conditions for every admissible sixth-root Gram, including allocations not contemplated by the contact-scalar or Bell-sector constructions.
+All calculations use rational arithmetic. The argument is stable under small strict-native perturbations: the normalized moment matrices are fixed, and the negative pairing varies continuously. Hence an open neighborhood of this source has a positive lower bound of the same form.
+3. What this says about the cubic-circuit construction
+Equations (4)–(6) give a concrete design constraint.
+A proposed completion that merely appends isolated fractional squares to the old half-power Gram cannot succeed on this open native set. It must contain off-diagonal interactions between complementary fractional monomials.
+The cubic Hurwitz channels naturally supply exponent pairs $2,4$, corresponding to thirds of the testing exponents. Sixth-root-only pairs $1,5$ are another possibility.
+However, this argument does not prove that the cubic channels suffice. In particular, it does not solve the cancellation of unwanted noninteger monomials in the complete four-state polynomial.
+The extended functional is not a negative dual separator for $L_6$: $M_{\mathcal N}$ is generally indefinite. Its negative directions are precisely what allow a sixth-root certificate, if one exists, to overcome the old separator.
+4. First surviving algebraic implication
+The exact missing theorem is now expressible in either of two equivalent ways:
+$\boxed{
+\forall c\in\mathcal C_{2,\mathrm{strict}}^{\mathrm{native}},
+\quad
+F_c(U^3,V^3,\psi)
+\in\Sigma_{00}+U\Sigma_{10}
++V\Sigma_{01}+UV\Sigma_{11}
+}$
+with the fixed degree limits of Section 1, or
+$\boxed{
+\mu_{C2}^{(6)}(c)\ge0
+\quad\text{for every strict native C2 source}.
+}$
+The new necessity theorem shows that a proof cannot generally set the complementary fractional correlations to zero, even when the contact scalar Gram is positive definite and the local coupling completion exists.
+What remains is a globally positive matrix completion of those fractional channels satisfying all polynomial coefficient identities, not merely the contact jets. Neither the existing native identities nor this new dual extension establishes that implication.
+If it is proved for the strict family in the one fixed cone, the published closure argument handles the finite $n=0$ boundary.
+5. Exact proof artifacts
+The note contains the complete argument, source conditions, and the relationship to the cube-root quadratic module. The standalone checker embeds all 90 dual integers, reconstructs the complete native parent, verifies every compressed matrix with exact rational arithmetic, and checks the new sixth-root block decomposition and bounds.
+Mathematical proof note
+
+Standalone exact checker
+
+
+Coordinator conclusion: Uniform sixth-root admission remains open. The new exact result identifies an unavoidable fractional correlation mechanism on a full-dimensional open native C2 set and gives numerical-free, rational lower bounds on its Gram contribution. It is a necessary structural condition for a successful uniform construction, not a proof of the construction itself.
+
+
+
+
+
+   Q222_C2_sixth_root_fractional_channel_necessity.mdDocumentOpen fileQ222_C2_sixth_root_fractional_channel_necessity.pyCodeOpen file
+
+
+
+
+

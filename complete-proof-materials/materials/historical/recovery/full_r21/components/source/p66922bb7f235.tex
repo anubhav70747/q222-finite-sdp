@@ -1,0 +1,107 @@
+\section{Small-$L$, unbounded eta: uniform source weights}
+\label{sec:r13-small-L-eta-large-bounds}
+
+This is a source theorem, not an additional all-tests admission.
+Use the original physical C1 source with $x,L=x\zeta>0$
+infinitesimal, $\zeta$ noninfinitesimal and $\eta$ unbounded.
+Put $\sigma=1/\eta$, $S=\sigma+L$, and retain the original
+$0<r,h<1$, $\theta=1-h$, $M>0$, and $D,\beta\ge0$.
+The native gap gives $E=1-xh/\sigma\ge1/18$. Set
+\[
+ e={xh\over\sigma}=1-E,\quad
+ P=\sigma P_d,\quad J=1+xh-\sigma(1-r),\quad
+ H_0=1+L(1-r),\quad B=P+x(J-\sigma),
+\]
+\[
+ \mathcal H=R H_0+(1-r)xh(2+xr)
+ -e\{2+x(1+h+r\theta)\}+Ke^2,
+ \quad R=1+xr,\quad K=1+x.                           \tag{ES1}
+\]
+No $E\sim1$ assumption is made here. The original source formulas
+give the two exact identities
+\[
+ 2\theta P\beta=hB-\sigma H_0,\qquad
+ 2P(JD+x\theta\beta)=\sigma^2\mathcal H.             \tag{ES2}
+\]
+They are the beta-shared identities with the reciprocal-$L$ factors
+cleared. In particular their use does not require bounded $1/L$.
+
+The positive denominator is exactly
+\[
+ P=\sigma(1+L+2xh+rxL+rx^2h)+KL+x^2h\theta.
+                                                               \tag{ES3}
+\]
+Since $x/L=1/\zeta$ is bounded and $x^2h=x\sigma e$,
+all terms beyond $\sigma+L$ in (ES3), divided by $S$, are
+infinitesimal. Consequently
+\[
+ {P\over S}\sim1,\qquad J\sim1,\qquad
+ {B\over S}-(1+x/S)\in\Inf,\qquad
+ H_0\sim1,\qquad \mathcal H-E^2\in\Inf.             \tag{ES4}
+\]
+Here $x/S$ is bounded. Both $B/S$ and $\mathcal H$ are
+positive bounded units, uniformly through all original openings;
+for the latter use the actual bound $E\ge1/18$.
+
+Define nonnegative pure-source sphere coordinates
+\[
+ d_0^2={2PJD\over\sigma^2\mathcal H},\qquad
+ b_0^2={2Px\theta\beta\over\sigma^2\mathcal H}.
+\]
+Then
+\[
+ d_0^2+b_0^2=1,\qquad
+ D={\sigma^2\mathcal H\over2PJ}d_0^2,\qquad
+ x\theta\beta={\sigma^2\mathcal H\over2P}b_0^2.
+                                                               \tag{ES5}
+\]
+Thus $D=O(\sigma^2/S)=O(\sigma)$ and
+$x\theta\beta=O(\sigma^2/S)$, including either literal coefficient
+boundary. The first identity of (ES2) becomes
+\[
+ eB=xH_0+\sigma\mathcal H b_0^2.                     \tag{ES6}
+\]
+Put $\kappa=x/S$ and $\nu=\sigma/S$. Multiplying
+$e(B/S)=\kappa H_0+\nu\mathcal H b_0^2$ by $e$ and using
+$e\nu=\kappa h$ gives
+\[
+ e^2(B/S)=\kappa\{eH_0+h\mathcal H b_0^2\}.
+                                                               \tag{ES7}
+\]
+All factors in braces are bounded and nonnegative. Hence
+$e^2=O(x/S)$, and (ES6) also gives $x/S=O(e)$.
+In particular $\zeta$ unbounded implies $e$ infinitesimal,
+since $x/S\le1/\zeta$. The unit-$\zeta$ cases may have
+$e$ a positive bounded unit; (SN7) and (SN12) are not imported.
+
+The other original coefficients have the opening-cleared bounds
+\[
+ {CS(1-r)\over E}\sim\tfrac12,\qquad
+ {ASr\over E}\sim\tfrac12,\qquad
+ m={K(1+\sigma r)eS\over2M\zeta P},                  \tag{ES8}
+\]
+\[
+ \alpha={(1+\sigma r)\{LR eS+L^2ME\}\over2QP}
+       =O(L),\qquad Q=1-Lr\sim1.                   \tag{ES9}
+\]
+For $A$ use $P_4=(1+xh)E+(1-r)(xh+L)\sim E$.
+The bound on $\alpha$ follows because $0<M<R$ is bounded and
+$L/S\le1$. Thus $C,A$ are unbounded while $D,\alpha$ are
+infinitesimal on the entire stated source domain. No bound on $m$
+is asserted through $M=0$, and no bound on beta is asserted through
+$\theta=0$.
+
+Finally put $\mu=K(1+\sigma r)S/(2M\zeta P)>0$. The
+original $m$ packet has the exact shared-sphere split
+\[
+ m=m_0+m_1b_0^2,\qquad
+ m_0={\mu xH_0\over B},\qquad
+ m_1={\mu\sigma\mathcal H\over B}.                  \tag{ES10}
+\]
+The remaining source opening $M$ is displayed explicitly. These
+identities provide valid weights for C14.4 and the boundedness step
+missing from its earlier checklist. A full-parent allocation for every
+residual infinitesimal-$u$ test is still required. The narrow checker
+verifies (ES2), (ES3), (ES6)--(ES10) algebraically; the inequalities
+above are the ordered-field argument. No mixed inverse, mixed order,
+or source/testing rate comparison is used.

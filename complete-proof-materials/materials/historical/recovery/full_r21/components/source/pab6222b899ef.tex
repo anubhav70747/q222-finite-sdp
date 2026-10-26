@@ -1,0 +1,324 @@
+\section[The unbounded-b source with xb infinitesimal]{The unbounded-$b$ source with $xb$ infinitesimal}
+\label{sec:c2-unbounded-b-small-B}
+
+\begin{theorem}[The remaining unbounded-state rational C2 source]
+Use the exact original rational C2 source.  Suppose $x>0$ is
+infinitesimal, $k$ is a positive bounded unit, $b$ is positive
+unbounded, $B=xb$ is infinitesimal, $0<r<1$, $0<h<b$, and all
+original positive-chart inequalities hold.  Assume $n\geq0$ and
+physicality of the source.  Then the full original parent has tensor
+SOS for every independent real or complex projective state and
+every independent projective pair of measurement angles.
+\end{theorem}
+
+The conclusion includes $n=0$, arbitrarily large $n$, arbitrary
+complementary openings, and every value of the pure coefficient
+ratio $B/\sigma$, where $\sigma=1/b$.  In particular, the actual
+contact ratio $W/Z=k^{-1}\sqrt{B/\sigma}$ need not be bounded.
+This proof uses the homogeneous scalar lemma in
+Section~\ref{sec:unbounded-b-homogeneous-scalar}; it restores both
+full state normals and exhausts the other testing charts.
+
+\paragraph{Exact source scales.}
+Put
+\[
+ \sigma=1/b,\quad x=\sigma B,\quad \eta=h/b,\quad
+ y=B\eta,\quad z=B(1-\eta),\quad
+ A_c=1+\sigma Br,\quad S_c=A_c+z.
+\]
+The positive chart gives $0<\eta<1$; both $y,z$ are infinitesimal.
+Let $\widehat\Delta=\sigma\Delta$,
+$\widehat N=\sigma^2 B N_{\rm src}$,
+$\widehat g=\sigma g=1+\sigma(r-1+B\eta)$ and
+$j=A_c-z/k^2$.  The cancelled exact formulas are
+\begin{align*}
+ nr&=\frac{(1+\sigma r)A_cS_c-r\widehat\Delta}
+                       {2\widehat\Delta},\\
+ m&=\frac{\sigma^2(1+k^2)(1-r)A_cS_c}
+                       {2\widehat g\widehat\Delta},\\
+ C&=\frac{A_c\widehat N}{2z\widehat\Delta},\qquad
+ A=\frac{k^2A_c(1+\sigma r)S_c}{2y\widehat\Delta},\\
+ D&=\frac{B(1+\sigma B)(1+\sigma r)(1-\sigma k^2r)S_c}
+                       {2k^2j\widehat\Delta},\\
+ \alpha&=\frac{B(1+\sigma r)\widehat N}
+                       {2(1-y)\widehat\Delta}.
+                                                               \tag{UB1}
+\end{align*}
+Here $\widehat\Delta,\widehat N,\widehat g,j,1-y$ are bounded
+positive units.  Write $K=k_0>0$ and $D_K=1+K^2$.  Their relevant
+residues imply
+\begin{gather*}
+ (nr)_0=\tfrac12(D_K^{-1}-r_0),\quad
+ (m/\sigma^2)_0=(1-r_0)/2,\\
+ (Cz)_0=(Ay)_0=K^2/(2D_K),\quad
+ (D/B)_0=1/(2K^2D_K),\quad
+ (\alpha/B)_0=K^2/(2D_K).                            \tag{UB2}
+\end{gather*}
+Since $n\geq0$, $r_0\leq D_K^{-1}<1$, so $1-r$ is a unit.
+Set $N=4n+2\geq2$.  Exactly,
+\[
+ Nr=\frac{2(1+\sigma r)A_cS_c}{\widehat\Delta},      \tag{UB3}
+\]
+which is a bounded positive unit.  Thus $nr,nr^2$ are bounded even
+when $n$ is unbounded, while $1/N$ and $1/\sqrt N$ are bounded.
+
+All opening cancellations needed below are uniform:
+\[
+ BC(1-\eta)=Cz,\quad BA\eta=Ay,\quad
+ BC(1-\eta)^2=Cz(1-\eta),\quad BA\eta^2=Ay\eta.
+                                                               \tag{UB4}
+\]
+The quantity $H_B=B(C+A)$ is bounded below by a positive real;
+its reciprocal and reciprocal square root are bounded.  No
+assumption that $\eta$ or $1-\eta$ is a unit is made.
+
+\paragraph{The whole finite $u=0$ axis.}
+Use the original parent and the exact-contact graph
+\[
+ X_g=-ruZ,\qquad Y_g=\eta uW,
+ \qquad E_X=\sqrt N(X+ruZ),\quad
+ E_Y=\sqrt{C+A}(Y-\eta uW).                          \tag{UB5}
+\]
+The actual contact is
+\[
+ u=\sqrt{\sigma B},\quad v=k,\quad
+ W=k^{-1}\sqrt{B/\sigma},\quad Z=1.
+\]
+Let $\xi=u^2$ and $f=F|_g$.  Exact polynomial coquotients give
+\[
+ f=a(\xi,v)W^2+2u d(\xi,v)WZ+c(\xi,v)Z^2,
+ \quad a=\frac\xi B Q+\sigma^2a_0,\quad c=B e+\xi b.
+                                                               \tag{UB6}
+\]
+Every coefficient of $Q,a_0,d,e,b$ is bounded by (UB3)--(UB4).
+For example $a_0=4(m/\sigma^2)v^2$,
+$e=4(D/B)v^2+4\alpha/B$, and
+$Q=B(a-a|_{u=0})/u^2$.  These are monic polynomial divisions.
+The full leading functions at $u=0$ are
+\begin{align*}
+ q(v)&=2K^2(1+v^2)/D_K,& d_0(v)&=-2v,\\
+ e_0(v)&=2(v^2/K^2+K^2)/D_K,&
+ (a_0)_0(v)&=2(1-r_0)v^2,\\
+ b_0(v)&=2r_0(1+v^2)/D_K-4r_0+2.                  \tag{UB7}
+\end{align*}
+
+For remote tests use
+\[
+ P=uW/\sqrt B,\quad B_u=uZ,\quad
+ V=\sigma vW,\quad E=\sqrt B Z.
+\]
+Then (UB6) has the exact bounded Gram
+\[
+ QP^2+b B_u^2+(a_0/v^2)V^2+eE^2+2dPE,             \tag{UB8}
+\]
+where $a_0/v^2$ is a polynomial coquotient.  The $(P,E)$ residue
+block is strictly positive whenever $v_0^2\ne K^2$, since
+\[
+ q(v)e_0(v)-4v^2=4(v^2-K^2)^2/D_K^2.               \tag{UB9}
+\]
+This is a global identity for every finite residue $v$, not a
+local-contact positivity inference.
+
+\paragraph{Both complete state normals.}
+The exact quadratic normal expansion is
+\[
+ F=f+E_X L_X+E_Y L_Y+H_{XX}E_X^2
+                       +2H_{XY}E_XE_Y+H_{YY}E_Y^2.
+                                                               \tag{UB10}
+\]
+Its entire hard block is bounded with residue
+$\operatorname{diag}(D_{v,0},4D_{v,0})$.
+Indeed the $X$ pivot is $ND_uD_v+O(1)$ before division by $N$,
+with the remaining terms either infinitesimal in $u$ or of order
+$m$; the $Y$ pivot from the strong packets is exactly
+$4D_v(1+[A/(C+A)]u^2)$.  All mixed entries have zero residue and
+contain no $C,A$ contribution.
+
+The complete unnormalized $X$ derivative has the form
+\[
+ F_X|_g=uZ A_X+W(\xi B_1+\sigma^2 B_0),             \tag{UB11}
+\]
+with bounded polynomial coefficients, where
+\begin{align*}
+ B_0&=-8(m/\sigma^2)v(1+\eta\xi),\\
+ B_1&=v(8D+4)(1-\eta),\\
+ A_X&=-8nrD_uD_v+8m(1-r)
+       -(8D+4)v^2(1+r\xi)+4D_v(1-r).
+\end{align*}
+Thus in the remote roots its $P,V$ coefficients have zero residue;
+its only possible nonzero residue coupling is to $B_u$.
+The exact residue Schur expression for the $(B_u,E_X)$ block is
+\[
+ (N r^2D_v-4r+2)
+       -\frac{(4-2NrD_v)^2}{4ND_v}
+                 =2-\frac4{ND_v}.                  \tag{UB12}
+\]
+It is strictly positive for every finite nonzero residue $v$,
+because $N\geq2$.  At $v_0=0$ it is strict if $n$ is unbounded
+or has positive residue.  The sole zero case $n_0=v_0=0$ is
+treated below.
+
+For the other complete first normal,
+\[
+ L_Y=\frac1{\sqrt{H_B}}
+ \{P(B_2+B e_w)+B_u(\sqrt B\,u e_z)+E e_*\},       \tag{UB13}
+\]
+where $e_w,e_z$ are bounded,
+\[
+ B_2=8D_v\{(BA)\eta D_u-(BC)(1-\eta)\},\qquad
+ e_*=8v(D-\alpha).
+\]
+All coefficients have zero residue, by (UB4), $B\to0$, and
+$u\to0$.  This verifies both full normals and proves the full
+parent at every remote finite-axis test covered by (UB12).
+
+\paragraph{Matched residues without any state-ratio restriction.}
+For $v_0=K$, apply the homogeneous scalar lemma to (UB6).  Its
+contact and full stationarity hypotheses hold exactly because the
+graph (UB5) passes through the original stationary contact.
+Use the homogeneous roots
+\[
+ R=\frac{uW-(B/k)Z}{\sqrt B},\quad
+ S=uZ-\sigma kW,\quad
+ U=\sqrt B(v-k)Z,\quad T=u(v-k)Z.                  \tag{UB14}
+\]
+They satisfy
+\[
+ (\xi-x)W=u\sqrt B R+(B/k)S,\qquad
+ (\xi-x)Z=uS+\sigma k\sqrt B R.                    \tag{UB15}
+\]
+The lemma constructs an exact bounded scalar Gram, valid for
+every $W,Z$ simultaneously.  Its $(R,U)$ residue is
+\[
+ 2K^2R^2+\frac{4(K^2-1)}{D_K}RU+\frac2{K^2}U^2,
+\]
+whose Schur margin is $8/D_K^2>0$.  Its radial $S^2$ residue is
+$s_0=2(1-r_0)>0$; its only other possible residue coupling is
+$\ell ST$, with a bounded real residue $\ell$.
+
+To lift the full $X$ normal, set
+\[
+ L=A_X+(B/k)B_1+(\sigma/k)B_0.
+\]
+Equations (UB11) and (UB15) give exactly
+\[
+ F_X|_g=u\sqrt B B_1R-(\sigma/k)B_0S+uZL.
+\]
+At the source contact $L(x,k)=0$, because $F_X=0$ there.
+Write its bounded monic differences as
+$L=(\xi-x)L_\xi+(v-k)L_v$.  Then
+\[
+ F_X|_g=
+ u\sqrt B(B_1+\sigma kL_\xi)R
+ +\{\xi L_\xi-(\sigma/k)B_0\}S+L_vT.             \tag{UB16}
+\]
+After division by $\sqrt N$, all coefficients are bounded.
+The $R,S$ coefficients have zero residue; the $T$ coefficient
+may have a finite residue $\gamma$ (it is
+$-8K/(D_K\sqrt{N_0})$ when $N$ is bounded).
+This nonzero full-normal coupling is retained, not silently
+discarded.
+
+For (UB13), put $A_Y=B_2+B e_w$ and
+$L_Y'=A_Y/k+\xi e_z+e_*$.  Its numerator is exactly
+$RA_Y+\sqrt B ZL_Y'$.  Exact normal contact gives
+$L_Y'(x,k)=0$.  Monic differences and (UB15) yield bounded
+coefficients on $R,S,U$, all of zero residue: the $R,S$ corrections
+carry factors $\sigma B$ or $u\sqrt B$, and the $U$ coefficient
+is the angular coquotient of an identically zero leading function.
+Division by $\sqrt{H_B}$ preserves these bounds.
+
+Finally add $\delta$ times the exact zero
+\[
+       T^2-\sigma U^2-ST(v-k)-\sigma kRU(v-k)=0.    \tag{UB17}
+\]
+Choose a real $\delta>\ell^2/(4s_0)+\gamma^2/(4D_K)$.
+This supplies a $T^2$ residue $\delta$ at zero residue cost to
+the $U^2$ coefficient, since $\sigma$ is infinitesimal.  The block
+on $(S,E_X,T)$ has strictly positive Schur complement; the $(R,U)$
+block and $E_Y$ diagonal are already strict.  Thus the complete
+six-root Gram on $(R,S,U,T,E_X,E_Y)$ is strictly positive in
+residue.  The calculation is homogeneous in all four state
+coordinates and needs no bound on $W/Z$, no comparison of $B$ with
+$\sigma$, and no state endpoint exclusion.  The exact simultaneous
+sign copy treats $v_0=-K$.
+
+\paragraph{The double-zero test, including literal $n=0$.}
+Suppose now $n_0=v_0=0$.  Use the pure coefficient quantities
+\[
+ H_c=4n+4m+2,\quad \zeta=(4m+2)/H_c,\quad
+ \xi_c=4m/H_c,\quad \eta_c=C/(C+A),
+\]
+and graph $X_g=\xi_cvW-\zeta uZ$, $Y_g=\eta_cuW$.
+Normalize its $X$ normal by $\sqrt{H_c}$ and its $Y$ normal by
+$\sqrt{C+A}$.  Put
+\[
+ \epsilon=4\alpha+4n(4m+2)/H_c>0.
+\]
+Then $\epsilon$ is infinitesimal, $n/\epsilon$ and $B/\epsilon$
+are bounded, and the harmonic product $BCA/(C+A)$ is a unit.
+Use the five scalar roots
+\[
+ P=uW/\sqrt B,\quad V=\sigma vW,\quad E=\sqrt B Z,
+ \quad B_\epsilon=\sqrt\epsilon\,uZ,\quad T_0=uvZ.
+\]
+The exact inherited identity, with its original coefficients,
+is
+\[
+ f_{zz}=4\alpha+\epsilon u^2+4n\zeta^2u^4
+                       +4Dv^2+u^2v^2 B_b,
+ \qquad (B_b)_0=2.
+\]
+The $W^2$ coefficient at $u=0$ is exactly
+\[
+ \frac{4m(2n+1)}{2n+2m+1}v^2
+              +(4n+2)\xi_c^2v^4.
+\]
+Therefore its coefficient on $V^2$ has positive residue
+$4(m/\sigma^2)_0=2(1-r_0)$.  The scalar residue on the five roots
+is strictly diagonal, with entries
+\[
+ \left(\frac{2K^2}{D_K},\ 2(1-r_0),\
+        \frac{2K^2}{D_K},\ 1,\ 2\right).
+\]
+The cross term is allocated using $uvWZ=vPE$, so it has zero residue.
+
+Both full normals are restored, including when $n=0$ exactly.
+At $v=0$ the $X$ derivative is $-8n\zeta u^3Z$, whose coefficient
+on $B_\epsilon$ is infinitesimal since $n/\epsilon$ is bounded.
+Its remaining $Z$ coefficient is $uv^2$ times a bounded function,
+so it has zero residue on $T_0$.  Its $W$ coefficient is a sum of
+$u^2vW$ times a bounded function and $mvW$ times a bounded
+function divisible by $v^2$ at $u=0$.  Allocate the former to
+$P$ with coefficient $u\sqrt B\,v$, and the latter to $V$ with
+coefficient $m/\sigma$; both have zero residue.  In particular one
+must not divide the former by $\sigma$.
+The $Y$ derivative is the inherited harmonic-opening identity:
+$B_2=8D_v(BA)\eta_cu^2$, with bounded residual coquotients.
+Its coefficients on $P,T_0,E$ all have zero residue.  The hard
+residue is $\operatorname{diag}(1,4)$.  This proves the full-parent
+corner without deleting a state coordinate.
+
+\paragraph{All remaining projective tests.}
+For the other commuting charts use the four original outer-core
+identities with $\rho$ replaced by $\sqrt B$, and cap $C,A$ at
+$s/B$, where $s=\min(1,BC,BA)$ is a positive bounded unit.
+Retain both original nonnegative excess packets and the entire
+original $n$ packet.  No positive lower bound on $m$ is needed:
+the first two outer pivots are $4m_0+2=2$, while the other two
+charts retain the whole $m$ packet and do not use it for strictness.
+The reciprocal-$v$ chart uses $(D/B)_0>0$ exactly as before.
+Thus the finite unit $u$ axis, both reciprocal axes, all double
+corners, and literal projective endpoints have strict bounded
+Grams.  The inherited physical noncommuting-residue theorem covers
+all remaining testing pairs.
+
+The finite-axis certificates above are homogeneous in the state,
+including the previously problematic unbounded actual state
+ratio.  Splitting a complex state into its real and imaginary
+parts proves the complex assertion without an additional chart.
+All inverses and radicals used in coefficients are pure coefficient
+or pure testing operations; every displayed mixed quotient is
+explicit monic polynomial division.  The roots may be unbounded.
+The strict bounded tensor Gram lemma and restoration of the retained
+packets complete the all-tests proof.

@@ -1,0 +1,233 @@
+STRONG CONTACT SOURCE ESTIMATES AND THE NORMALIZED 51-RECORD BOUNDS
+Independent quantitative audit, 24 October 2026
+
+Verdict. SC10--SC11 hold uniformly on the stated native GE1 envelope.
+The inspected bound_lII.py, monomial_budgets.py and export_source_witness.py
+were each run ONCE against the single shared generic reconstruction.
+All constants pass: source-error sum<2^-40, all fourteen claimed dyadic
+budgets reproduced exactly, total<1/8, 51 upper coefficient records and
+fourteen testing monomials. No quantitative gap or corrected constant
+was found in this scope.
+
+Scope separation. The companion findings.txt/algebra_checks.json owns
+the full parent, six native contact remainders, exact conductor/shear,
+and fixed testing spans. This audit proves the native error box and
+the interval/coefficient bounds, not those identities by repetition.
+No numerical source sampling, SDP search or public edit was used.
+
+1. Source envelopes independent of all small native openings
+
+Use the native domain
+ epsilon=2^-64, 2^-12<=H<1, 0<z,y<=epsilon H,
+ 0<r<1, 0<t<a_c=1+zr, j=a_c-t>0, n>=0.
+Put L=yt, B_s=H+L, T_s=B_s+zr, U_s=B_s-zyr, S_c=a_c+L.
+The exact GE1 polynomials M,G,Delta are those in verify_native_contact.py.
+The previously derived GE1 majorant (c2_fixed_gates_source_audit.txt,
+Section2) gives the stronger Delta bound with6epsilon; the looser
+bound needed here is
+ 1<=w_Delta:=Delta/[H(1+H)]<=1+10epsilon.             (1)
+That proof is a direct positive-polynomial majorant and uses no
+lower bound on H,r,t,j,1-H.
+
+Since t<a_c,
+ L/H<=(y/H)(1+zr)<=epsilon(1+epsilon).
+It follows directly that
+ 1<=B_s/H<=1+epsilon+epsilon^2,
+ 1<=T_s/H<=(1+epsilon)^2,
+ 1<=S_c<=(1+epsilon)^2,
+ 1-epsilon^2<=U_s/H<=(1+epsilon)^2,
+ 1-epsilon<=G/H<=1+3epsilon.                         (2)
+For the last bound use G=B_s+z(H+r-1): its lower bound is H-z,
+and its upper bound is B_s+zH.
+
+The positive expression
+ M=(1+z)T_s H+yG+yzj+zrL(1+y)
+proves M>=H^2. Its equivalent first expression is
+ M=(1+z)T_s(H+y)-z(1+y)(1-r)L.
+Dropping its nonnegative second term and using (2) proves the sharper
+upper bound printed in SC11:
+ 1<=M/H^2<=(1+epsilon)^4.                            (3)
+In particular no n>=0 or source-gap lower bound is needed for (1)--(3).
+Nonnegativity of n remains part of the actual native source domain.
+
+2. Every SC10 error and its exact quantitative bound
+
+Let a0=1/[2(1+H)]. The GE1 formulas give the following exact normalized
+multipliers, where all listed ratios involve only source quantities:
+ (c_*/H)/a0
+   =a_c(M/H^2)/w_Delta,
+ (d_*/H)/a0
+   =(1+z)(T_s/H)(U_s/H)S_c/w_Delta,
+ [alpha(1-H)/H^2]/a0
+   =(T_s/H)(M/H^2)/w_Delta,
+ (AH/y)/a0
+   =a_c(T_s/H)S_c/w_Delta.                          (4)
+Their upper bounds are respectively
+ (1+epsilon)^5, (1+epsilon)^7,
+ (1+epsilon)^6, (1+epsilon)^5.
+Their lower bounds are at least
+ (1-epsilon^2)/(1+10epsilon).
+For epsilon<=1/1024, these lie between1-12epsilon and1+12epsilon.
+Hence the relative errors e_c',e_d' in c_*/H=a0(1+e_c'),
+d_*/H=a0(1+e_d') satisfy |e_c'|,|e_d'|<=12epsilon.
+The absolute errors of c_*/H, alpha(1-H)/H^2 and AH/y are
+at most6epsilon, since a0<=1/2; this is stronger than16epsilon.
+
+For m, the exact multiplier is
+ [mH^2/z^2]/[(1-r)a0]
+ = (1+y)a_c S_c /[(G/H)w_Delta].
+It lies between
+ 1/[(1+3epsilon)(1+10epsilon)]
+ and (1+epsilon)^4/(1-epsilon).
+On epsilon<=1/1024 these lie between1-14epsilon and1+6epsilon.
+Thus the absolute error e_m is <=7epsilon<16epsilon.
+The other correlated coefficient has the exact cancellation
+ nr+r/2=AH/y.
+Therefore its SC10 absolute error e_n equals e_A, and is <=6epsilon.
+This explicitly handles unbounded n when r tends to zero; only nr
+occurs in the normalized matrix.
+
+The first two errors obey
+ |B_s/H-1|<=2epsilon,
+ |sH-1|=|a_c/(B_s/H)-1|<=3epsilon<4epsilon.
+Here s=a_c/B_s. No inverse of a source opening has been estimated
+by an unproved constant.
+
+For the harmonic pair, define
+ e_w'=(j e_c'+t e_d')/a_c, so |e_w'|<=12epsilon
+because t,j>0 and t+j=a_c. Then exactly
+ q=(t/a_c)(1+e_d')/(1+e_w'),
+ g/H=(a0/a_c)(1+e_c')(1+e_d')/(1+e_w').              (5)
+The relative multiplier of a0 in g/H lies between
+ (1-12epsilon)^2/[(1+epsilon)(1+12epsilon)]
+ and (1+12epsilon)^2/(1-12epsilon).
+For epsilon<=1/1024 these endpoints differ from1 by at most37epsilon:
+for the upper bound, the required inequality is588epsilon<=1;
+for the lower bound subtract the numerator from the denominator.
+Consequently |e_g|<=37epsilon/2<64epsilon.
+Also
+ |q-t|<=[24epsilon/(1-12epsilon)]+epsilon
+       <26epsilon<64epsilon,
+using t/a_c<1 and |a_c-1|<=epsilon.
+
+These prove the full SC11 box, with room:
+ |e_B|<=2epsilon, |e_s|<=4epsilon,
+ |e_C|,|e_alpha|,|e_A|,|e_m|,|e_n|<=16epsilon,
+ |e_g|,|e_q|<=64epsilon.
+The errors are actual source-only quantities. They may subsequently
+be bounded independently in a larger rectangular error box, as the
+script does. These arguments are uniform at every positive opening
+r,t,j,1-H; undefined zero-denominator native formulas are not assigned
+limiting values.
+
+The source caps are legitimate. Since ell=y(C+D)>=4g,
+ ell>=4H(a0-64epsilon)>=H(1-256epsilon)>H/4.
+Also
+ alpha>=H^2(a0-16epsilon)/(1-H)
+      >=H^2(1/4-16epsilon)>H^2/8.
+All retained LII5 excesses therefore have nonnegative coefficients.
+
+3. Why the inspected interval-bound code is mathematically valid
+
+After the exact conductor and shear, set hh=sqrt(H). The admitted source
+lies in hh in[1/64,1], |r|<=1, |tt|<=2, and the SC11 error box.
+The replacements zz=z/H and kk=sqrt(y/H) have bounds epsilon and
+sqrt(epsilon)=2^-32. Every native source substitution in bound_lII.py
+matches SC10 exactly.
+
+For each rational entry, source=entry-lead and testing=lead-base split
+the actual difference from Q_*. The script expands their numerators
+only after rational cancellation. The ONLY surviving denominator
+factors are
+ const * hh^a*(1+hh^2)^b*(1+db)^c*(1+ds)^d.
+The complete replay found no unexpected factor (the code raises on one).
+Here const is positive in every nonzero bound, as also verified by
+nonnegative exact receipts. All factors are positive; 1+hh^2>=1 and
+1+db,1+ds>=1/2 on the proved source box.
+
+For each numerator monomial, the code subtracts the denominator
+hh exponent before bounding. A negative net exponent is maximized
+at hh=1/64; a nonnegative one is bounded by1. Every other variable
+is bounded by its displayed rational absolute endpoint. The sum of
+absolute term bounds is therefore a rigorous rational upper bound,
+including errors of either sign. No cancellation in a sign-changing
+testing variable is presumed.
+
+For each symmetric coefficient matrix, summing diagonal bounds once
+and off-diagonal bounds twice dominates its operator norm. That is
+exactly how rational_bound and groups aggregate their records. The
+latter also collects each testing exponent separately and includes
+the corresponding testing-cap scale in its bound. This justifies
+the coefficient norms, not merely a pointwise PSD test.
+
+The independent source/identity reviewer confirmed that dp,ts,js
+occur only in exact contact remainders and not in generic Q, so their
+absence from the bound script's substitution is legitimate. Native
+remainder checks justify dropping them on the actual source.
+
+4. Exact results from the single shared reconstruction
+
+Generated outputs are under data/:
+ lII_uniform_bound.json:21 upper matrix-entry source/testing bounds;
+ lII_normalized_full.pkl:normalized Q, baseline, variables and bounds;
+ LII_FIXED_GATE_BUDGETS.json:all exact raw/dyadic monomial bounds;
+ LII_NORMALIZED_SOURCE_WITNESS.json:51 upper coefficient records.
+
+The source_sum is an exact rational (preserved in the receipt) and is
+strictly below2^-40. It bounds the sum of ALL source-error entries
+over the testing box, not merely the constant error.
+The exact testing_sum is
+ 1227909905347937253761219/38685626227668133590597632.
+Approximate console printing was not used in any comparison.
+
+The fourteen monomial budgets reproduce the claimed SC7 list exactly:
+ exponent    dyadic operator budget
+ (0,0)       2^-40  [constant error from Q_*]
+ (0,1)       2^-50
+ (0,2)       2^-33
+ (1,0)       2^-4
+ (1,1)       2^-55
+ (1,2)       2^-41
+ (2,0)       2^-18
+ (2,1)       2^-62
+ (2,2)       2^-48
+ (3,0)       2^-28
+ (3,2)       2^-65
+ (4,0)       2^-42
+ (4,2)       2^-72
+ (5,0)       2^-51.
+Each raw bound is nonnegative and no larger than its dyadic budget.
+The literal source witness has51 records and exactly these14 monomials.
+
+Their exact total is
+ 295165937727343559809/4722366482869645213696 <1/8.
+Subtracting all budgets from the baseline bound I/2 leaves the
+stronger exact reserve
+ 2066017303707479047039/4722366482869645213696 >3/8.
+There is no constant gate: alpha00 bounds A00-Q_* and is included
+only in the reserve estimate. For every other monomial use the fixed
+p_ij=(2^12 u)^i(2^25 v)^j and source-only PSD matrices
+ (alpha_ij I +/- 2^(-12i-25j)C_ij)/2.
+Since |p_ij|<=1 on the prescribed signed testing box, both fixed
+testing radicals sqrt(1+p_ij),sqrt(1-p_ij) are defined. Thresholds
+do not depend on the source.
+
+The exact receipt check_bound_receipts.py/strong_bound_receipt_audit.json
+independently checks the rational source bound, nonnegative records,
+all claimed dyads, their exact sum, support/count, and reserve. It does
+not rerun symbolic extraction or repeat the full-identity review.
+
+5. Limits of the audited result
+
+This verifies the quantitative strong Gram admission on precisely
+H>=2^-12,z,y<=2^-64H and the fixed small testing box. The formulas
+introduce no lower bounds on r,t,j,1-H or on n; n=0 is literal because
+the scaled variable nu=nr is never inverted. The full source-only
+radicals and row entries need not be bounded.
+
+Combining this quantitative result with the separately checked
+algebra/contact/conductor/shear/span chain validates the strong
+local certificate. It does not enlarge the native source envelope,
+change its endpoint conventions, prove a new global fixed family,
+or establish universal canonical coverage. Public files were untouched.
+

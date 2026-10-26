@@ -1,5 +1,7 @@
 # Finite semidefinite representation of the simplest quantum correlation set
 
+**Complete material publication, 26 October:** [proofs, data and exhaustive checklist](complete-proof-materials/). This adds the original 215-component source archive, all 45 C1 and 49 C2 case records with direct proof links, the complete historical analytical reviews, and newly fetched proof/checker packages. The [reconciliation](complete-proof-materials/RECONCILIATION.md) distinguishes already completed qualitative-existence work from later version checks and the still-open evaluated global lift.
+
 The central difficulty lies where measurements become compatible. There,
 the state matrix loses rank while the Bell coefficients and measurement
 angles can approach their limits at independent rates. The proof follows

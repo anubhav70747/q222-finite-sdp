@@ -1,0 +1,52 @@
+\paragraph{Seven short source polynomials.}
+The following definitions make the endpoint input reproducible without a stored expansion. Put
+\[
+K=k^2,\quad \eta=e^2b^2,\quad\zeta=k^2b^2,\quad V_c=K\eta\zeta.
+\]
+\[
+L_c=1-a\eta,\qquad H_c=1+(1-a)\eta,\qquad Q_c=1-K\zeta+aV_c.
+\]
+Define
+\begin{align*}
+P_4={}&1+K+\eta K(a-K-1)-\zeta Kt
+ +V_c[-\zeta Kt^2+2Kt+a(1-t)+t],\\
+P_\alpha={}&1+K-a\eta K+\zeta[(1+K)-(2+K)t]
+ +V_c[-\zeta t^2+a(t-1)+t],\\
+P_d={}&(1+K)^2-a\eta K^2+\zeta K[(K+1)-(K+2)t]\\
+&+V_c[-\zeta Kt^2+Ka(t-1)+Kt+K+1].
+\end{align*}
+The seven coquotients are
+\begin{align*}
+c_2&=2(1+K)(1-t\zeta)L_c(1+V_c)H_cQ_c,\\
+c_\beta&=2(1+K)L_c[1+(1-t)\zeta]H_cQ_c,\\
+c_3&=2(1+K)L_cH_cQ_c(1-K\eta+tV_c),\\
+c_5&=2(1+K)L_cH_cQ_c(1+V_c),\\
+c_4&=2Q_cP_4,\qquad c_\alpha=2L_cH_cP_\alpha,
+\qquad c_d=4L_cQ_cP_d.
+\end{align*}
+Their residues are respectively $2,2,2,2,2,2,4$, so all are positive coefficient units on this domain. With $M=R_c-t$ and $J=T_0-a$, the unchanged source is
+\begin{gather*}
+\lambda=n=0,\quad c=2,\qquad
+d=\frac{2a\eta c_d}{c_3},\quad m=\frac{2ae^2c_2}{Mc_3},\quad
+A=\frac{2a\eta^2c_4}{c_3},\quad
+\alpha=\frac{2aK^2\eta\zeta c_\alpha}{c_3},\\
+D+\frac d2=\frac{2ac_5}{Jc_3},\qquad
+\beta+\frac d2=\frac{2ae^2c_\beta}{tc_3},\qquad
+\Lambda=\frac{R_cT_0c_3}{2a}>0.
+\end{gather*}
+The theorem retains the hypothesis $D,\beta\ge0$. Write
+\[
+r_2=v-X+uvY-uZ,\quad r_\beta=X+uZ,\quad r_3=u-Y,
+\quad r_5=u+uvX-Y-vZ,\quad r_\alpha=vY-Z,
+\]
+and put $q_0=v_g$, $z_0=\eta u$. Then $G$ is exactly the sum of
+\begin{align*}
+G_2&=4T_0e^2c_2[(r_2+tq_0)^2-tR_cq_0^2],\\
+G_\beta&=4T_0e^2c_\beta(1+v^2)[(r_\beta+Mq_0)^2-R_cMq_0^2],\\
+G_3&=4R_cc_3(1+v^2)[(r_3+Jz_0)^2-T_0Jz_0^2],\\
+G_5&=4R_cc_5[(r_5-az_0)^2-aT_0z_0^2],\\
+G_4&=4R_cT_0\eta^2c_4(1+u^2)(1+v^2)Y^2,\\
+G_\alpha&=4R_cT_0K^2\eta\zeta c_\alpha(1+u^2)r_\alpha^2,\\
+G_d&=2R_cT_0\eta c_d(1+u^2)[r_\alpha^2-(1+v^2)Z^2].
+\end{align*}
+These seven factored expressions agree separately with the defining source. Their proof requires multiplication of short polynomials only.

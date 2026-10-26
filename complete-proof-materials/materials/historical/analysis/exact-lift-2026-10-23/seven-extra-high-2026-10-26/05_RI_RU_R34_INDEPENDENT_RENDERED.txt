@@ -1,0 +1,290 @@
+      Proof
+
+
+
+ 
+
+
+Independent exact audit: native C2 R3/R4 and R6/R7
+Source pinned: latex/certificates/c2_short.tex, commit 8960b3fead3ce6b185bb1387d148fb87d05d3d23. 26 October 2026. Audited on the supplied recovered R34 and R6/R7 proof manuscripts. The separately assigned IC/LII proofs are not used.
+Theorem (precise conditional all-test admission)
+Let K_c,K_t be independently labelled real closed extensions of R. Take an actual native stationary C2 source with d=1, the literal omissions lambda=beta=0, n>=0, m,C,A,D,alpha>0, the original strict contact gaps, and noninfinitesimal total-scale inverse (i.e. the unbounded-coefficient branch). Suppose its source belongs to one of the following disjoint leaves:
+R3: weak-II with a_s unbounded, t_s,h bounded positive units, e=1-r infinitesimal, B_s,a_s B_s,t_s B_s infinitesimal, and 1-h infinitesimal;
+R4: the same common premises, 1-h a bounded positive unit, with native gap 1+a_s B_s r-(1-h)/t_s infinitesimal;
+R6: weak-II, a=z/B unbounded, t=y/B, h,1-h,j_R positive bounded units, g,B,z,y infinitesimal, and either b=a^2B a bounded unit or an infinitesimal;
+R7: weak-II, a=z/B unbounded, t=y/B a bounded positive unit, h,g,B,z,y infinitesimal, and either bounded-unit or infinitesimal b=a^2B.
+Assume the noncircular imported purely algebraic contact conductor CC1–CC6/SE5–SE7, the exact RFN18–RFN20 circuit identities, the bounded positive-residue tensor lemma (TF1–TF2/WA10), the signed-core state chart identity and the identified homogeneous selected-frame identities for complementary tests. Their hypotheses are itemized below. Then the whole four-state parent, with both unrestricted state normals, is a finite sum of squares in K_c tensor_R K_t at every independent projective testing pair. All independent relative infinitesimal rates are allowed. In these source leaves literal n=0 is included; m can be infinitesimal in R3/R4. This theorem neither proves unexamined C2 leaves nor extracts an evaluated affine finite SDP.
+Lemma A. Bounded-gram and real-cap mechanism
+Write B_i for the bounded subring of K_i, and B=B_c tensor_R B_t. For G in Sym_N(B) with positive-definite real residue, choose a real congruence making res(G)=I, then a real delta>0 with (N-1)delta<1. The exact identity
+
+
+
+
+G = sum_i [G_ii-(N-1)delta] e_i e_i^T
+  + sum_{i<j} [(delta+G_ij)/2](e_i+e_j)(e_i+e_j)^T
+  + sum_{i<j} [(delta-G_ij)/2](e_i-e_j)(e_i-e_j)^T
+
+has only positive-real-residue scalar coefficients. Each is a separated tensor sum of squares by the positive-residue scalar lemma. This applies to arbitrary, even unbounded, testing roots; no mixed inverse is used.
+For exact SOS budgets S_j - h_j^2 in Sigma(T)^2, with S_j a sum of already retained positive square packets spent at zero-residue relative cost, add any pair-dependent finite real multiple L_j h_j^2, retaining L_j(S_j-h_j^2) as an SOS. A finite real Schur complement permits a large enough choice of L_j to make the entire real residue Gram strict. There is no requirement that one real cap work for all independent source/testing pairs. If an event coefficient is exactly zero, omit its row; never invert it.
+Lemma B. R6/R7 exact source quotient admission
+Put, using only source quantities,
+
+
+
+
+s=1/a, b=a^2 B, x=s b, B=s^2 b, l=1-h,
+R=1+h x, w_s=a(1-r)=R-g, r=1-s w_s,
+K=1+x, T=1+x r, j_R=T-l/t, S_c=1+B(l+r/s), Delta_*=s Delta.
+M_*=K(s+r)(h+t)-s w_s(1+t B)l,
+Q_*=1+B(1+t+h/s+2r/s+t/s)
+       +B^2[(h+t)/s+(h(r+1)+t(1+r-r^2))/s^2],
+K_*=(1+s)(h+t)K, calN=w_s Q_*-b K_*.
+
+All expressions are polynomials after replacing B=s^2 b. Direct substitution in the original six native, not formal, stationary weights gives
+
+
+
+
+n/s^2 = calN/(2r Delta_*),
+mg=(1+tB)w_s T S_c/(2 Delta_*),
+C=T M_*/[2l Delta_*],       Ah=t T(s+r)S_c/(2 Delta_*),
+D j_R/T=K(s+r)(1-txr)S_c/[2tT Delta_*],
+alpha/(s^3 b^2)=(s+r)M_*/[2(1-h B)Delta_*].
+
+Here Q_*,Delta_*~1, K_*~h+t (R6) or ~t (R7) before a bound on b: all nonconstant terms contain s or x, both infinitesimal. Physical n>=0 implies b<=w_s Q_*/K_*, hence b=O(1) and n=O(s^2) without dividing by n. All displayed denominators are bounded positive units on their stated leaves. In particular mg, Ah, D j_R/T, n gamma, n gamma^2, alpha/(s^3b^2) are bounded at simultaneous source openings. gamma=rK/(sR) may itself be unbounded, but no Gram coefficient contains it uncanceled.
+Set mu1=mg/R, mu2=mg*g/R^2, p=w_s/R, n1=n gamma, n2=n gamma^2, and
+
+
+
+
+F0=p^2/2-n2-2*n1*p+mu2,      AN=p-2*mu1-2*n1.
+UN=w_s[Delta_*-(1+tB)T S_c]-sK calN,
+UF=w_s^2 Delta_*-(rK^2+2sK w_s)calN+(1+tB)w_s T S_c g.
+
+Then, as exact polynomial numerator identities, not asymptotic estimates,
+
+
+
+
+Delta_* R AN = UN,          2 Delta_* R^2 F0 = UF,
+UN in (s b),               UF in (b).
+
+The divisibilities follow by evaluation at b=0 (both vanish) and s=0 (the UN polynomial also vanishes); all unit denominators were canceled beforehand. Their leading coefficients at g=0 are [sb]UN=h+t, [b]UF|s=0=h+t. With source epsilon=K sqrt(bt)/R, the seemingly singular terms in the entire scalar and both normal rows satisfy
+
+
+
+
+F0/epsilon^2 = (R^2/(K^2 t)) (F0/b),
+AN/epsilon    = (epsilon R^2 s/(K^2 t))(AN/(bs)),
+alpha/(s^3b^2) bounded,
+
+so none involves an inverse of epsilon, g, h, j_R, or a testing difference. For infinitesimal b, physicality gives n/s^2~1/2, so n>0; literal n=0 belongs only to the unit-b branch, where its entire retained row is simply absent.
+Lemma C. R6/R7 complete-parent readback and monic conductor
+Work in the negative-core Z=1 chart and set Du=1+u^2, Dv=1+v^2,
+
+
+
+
+q_A=Du v omega, q_B=v(1-uX),
+N=X+u-p q_A, M_B=uW-Y-c q_B, c=l/(tT), q=1-c.
+X=N+p q_A-u,
+q_B=v(Du-uN-pu q_A),
+W=omega+u(M_B+c q_B)/Du,
+Y=u omega-(M_B+c q_B)/Du.
+
+The original quarter-parent P=F/4 is exactly decomposed into the R6 two retained packets (m-K_m)N^2+n DuDv(X+gamma v omega)^2 (with fixed real 0<K_m<m), or the R7 four retained packets mN^2+nDuDv(X+gamma v omega)^2+A DuDv(Y-huW)^2+D M_B^2, plus an entire remainder G. Its finite coefficient-extraction recipe is
+
+
+
+
+G0=G|N=M_B=0, L_N=partial_N G|0, L_M=partial_MB G|0,
+H_ij=(1/2)partial_i partial_j G|0, i,j in {N,M_B}.
+
+All state variables are free when differentiated. The twelve full-parent identities checked in the companion program establish, in both sources,
+
+
+
+
+G0=f_A mathsfA^2+f_BB mathsfB^2+f_BC mathsfB mathsfC
+     +f_CC mathsfC^2 + varrho mathsfD^2,
+L_N=R_A mathsfA+R_B mathsfB+R_C mathsfC,
+L_M=S_B mathsfB+S_C mathsfC,
+
+with bounded coefficients and all three hard entries. Here
+
+
+
+
+mathsfA=epsilon omega v, mathsfB=v, mathsfC=E u omega,
+mathsfD=epsilon^2 jmath^3 E, E=tK/R, k=epsilon jmath=sqrt(x).
+
+The only potentially singular coefficients are the three bounded coquotients from Lemma B. The source-dependent terms A and D in R7 occur only through Ah and D j_R/T; they are never inserted unbounded into the corrected Gram.
+For the explicit bounded contact lift, put
+
+
+
+
+mathsfx=mathsfB-mathsfC,  mathsfy=mathsfA-k mathsfC,
+mathsfz=u mathsfB-k mathsfC,  mathsfh=k mathsfC-mathsfD.
+
+Direct multiplication gives the four polynomial identities
+
+
+
+
+mathsfC(u-k)=mathsfz-u mathsfx,
+epsilon mathsfC(omega-jmath)=mathsfy-epsilon omega mathsfx,
+mathsfC(v-epsilon jmath^2 E)
+ =E(omega mathsfz+jmath mathsfy-k omega mathsfx),
+mathsfC v(omega-jmath)
+ =E omega(omega-jmath)mathsfz+E jmath omega mathsfy-E k omega^2 mathsfx.
+
+If a contact-zero polynomial coefficient S is divided monically in u-k, omega-jmath, v-epsilon jmath^2E and its omega quotient has the form epsilon U+vV, these identities give exactly
+
+
+
+
+mathsfC S = mathsfx[-u T_u-epsilon omega U-E k omega^2 V-E k omega T_v]
+          + mathsfy[U+E jmath omega V+E jmath T_v]
+          + mathsfz[T_u+E omega(omega-jmath)V+E omega T_v].
+
+No contact-coordinate difference is inverted. The raw coefficient support and parity checked directly from the above whole remainder give: in the scalar, omega appears only through uv omega or v^2 omega^2; the first omega divided difference is in (epsilon v,v^2) and the second in (epsilon,v). In each normal, the omega divided difference is in (epsilon,v) after its exact contact value is removed. These are coefficient-ideal assertions and do not follow merely from contact stationarity. The scalar has raw support (mathsfA,mathsfB,mathsfC)^2+(mathsfD^2); the normals have contact-zero linear support. A first monic lift cancels the scalar mathsfC^2 coefficient, the zero first jets remove its three independent gradient components, and the remaining one is repaired by the exact syzygy
+
+
+
+
+k mathsfC(mathsfy+mathsfz-mathsfh-2k mathsfx)=Q1^2-mathsfy mathsfz,
+
+where Q1=(a1*a2-a3*a4), Q2=(a1*a3-a2*a4), and (a1^2,a2^2,a3^2,a4^2)=(mathsfA,u mathsfB,k mathsfC,mathsfD). The two normal rows each require one monic lift. This is the exact bounded algebraic content of CC1–CC6/SE5–SE7 being imported; their physical C1 source theorem is not imported.
+The toric square is the exact finite identity
+
+
+
+
+T4=mathsfA^2+(u mathsfB)^2+(k mathsfC)^2+mathsfD^2-4k^2 mathsfB mathsfC
+  =[(mathsfy-mathsfz)^2+mathsfh^2+mathsfy^2+(mathsfz+mathsfh)^2]/2
+     +Q1^2+Q2^2.
+
+Every factor a_i is an elementary separated positive-root monomial in its stated positive chart. The same matrix identities are used for either testing sign after an exact parent sign congruence.
+The leading bounded Gram residues are strict:
+R6, b unit: strict circuit coefficient b(h+t)/2, normal K_m+1/2, and coupled (mathsfx,epsilon^{-1}M_B) block with determinant b^2t(C_*+D_*+1/2)/(2h)>0;
+R6, b infinitesimal: circuit (h+t)/(2t), normal K_m+1/2, and (mathsfx,M_B) block determinant (C_*+D_*+1/2)/(2ht)>0;
+R7, either b type: circuit 1/2, normal 1/2, hard M_B residue (t+1)/2, and coupled block [[1/t,1/2],[1/2,(t+1)/2]] of determinant (t+2)/(4t)>0.
+For R6 use C_*=(h+t)/(2(1-h)), A_*=t/(2h), D_*=1/[2(t-1+h)] (all real positive). The exact source Taylor coefficients up to degree two are
+
+
+
+
+C=(h+t)/(2l)-(t+1)s/(2l)+(t+1)s^2/(2l)+O_degree(3),
+Ah=t(1-s+s^2)/2+O_degree(3),
+D j_R/T=[1-s+s^2-(t+1)sb]/(2t)+O_degree(3),
+n gamma=[s-s^2-(h+t)sb]/2+O_degree(3).
+
+They hold at g=0 as coefficientwise polynomial divisibility statements. The unit-b first-s coefficients also match the source formulas. R7 is the specialization h=g=0 only in the filtered leading model, never in the physical source. After subtraction of the displayed leading model, every scalar and normal correction has strictly larger positive weight in the infinitesimal source/test variables, or a factor h,g. The monic lift above preserves this filtration without negative small-parameter powers. Hence the entire correction Gram is bounded with zero real residue for all simultaneous opening rates. Lemma A then proves the complete local tensor SOS, with all retained packets restored.
+Lemma D. R3/R4 exact native balances and both unrestricted normals
+Use the actual RSR2–RSR6 source coordinates j,B,T,p,H, with x=jB,y=TB, K=j+1-p and E=1+B(HT+p-1). The native R3/R4 domain has j unbounded, B,x,y,p/j infinitesimal, T and 1-HT positive units, 0<p<1, 0<H<1. R3 has H infinitesimal; R4 has 1-H infinitesimal and T_0<1.
+Let calP,calL,calN be the explicit finite polynomials RSR5 and V=(1+y)(1+x)(1+Hy), U=(1+x)(1+Hy)(K+H j y). The following are short exact polynomial identities (not residue checks):
+
+
+
+
+calP = p V + B calL + U,
+K_d:=CH-(D+1/2)(1-H) = -mu/j-B T CH,
+0=-j p V+(1+Hy)(K+Hjy)(1-y[(1-H)j-p])
+     -calP(1-p)+B(K+Hjy)calL,
+0=(1+y)(calP p-calN)-j p V(1+x)
+     +j B^2(K+Hjy)calL+jB calP[-(1-p)+T(H-1)].
+
+These, directly with RSR6, prove the four source balances S_N=S_0=S_1=S_2=0; the independent checker verifies their polynomial numerators. Physical n=calN/[2(j-p)calP]>=0 and the exact grouping of calN imply eta_*:=Bj(j+1)/p=O(1), and n=O(p/[j(j+1)]); no division by n is needed. The remaining source limits are
+
+
+
+
+calP/(j+1)~1, calL/(j+1)~sigma=1+(1-H)T,
+mu/p~1/2, A~T/[2(1-HT)], CH~sigma/(2T),
+D(1-H)~1/(2T), alpha/[B^2(j+1)]~sigma/2.
+
+The proof is termwise: B(j+1)=B+x is infinitesimal, every correction to the denominators contains B or x, and p/j is infinitesimal. R3 therefore has C unbounded, A_0=T_0/2,D_0=1/(2T_0)>0; R4 has D unbounded, C_0=1/(2T_0),A_0=T_0/[2(1-T_0)]>0. The coefficient m=mu/(1-p) may be small, finite, or large, and is not placed uncanceled in a bounded Gram.
+For the negative-core independent-testing chart set omega=(W+uY)/Du=1, z=(Z-uX)/Du>0; the full, invertible normal change is
+
+
+
+
+X=N0+pv-uz; Z=z+uN0+puv;
+W=1+u(M0+Hvz); Y=u-M0-Hvz.
+
+Subtract the whole positive mp Du^2 N0^2 packet from the quarter-parent and divide by Du. The exact complete parent, keeping both normals, is
+
+
+
+
+G=mu Du[N0^2-2vN0+(1-p)v^2]+n Dv(N0+pv-uz)^2
+ +C DuDv(M0+Hvz)^2+A Dv(u-M0-Hvz)^2
+ +(D+1/2)Du(M0-(1-H)vz)^2
+ +(alpha+1/2)[u(1-p)v-(1+Hv^2)z-uN0-vM0]^2
+ +DuDv(N0+pv)^2/2-Dv(z+uN0+puv)^2/2.
+
+The hard entries are exactly
+
+
+
+
+H_N=(mu+1/2)Du+v^2/2+alpha u^2+nDv,
+H_M=Du(CDv+D+1/2)+A Dv+(alpha+1/2)v^2,
+H_NM=(alpha+1/2)uv.
+
+The exact derivatives of this displayed polynomial minus RFN21/RFN22 are, respectively,
+
+
+
+
+v*S_N,
+ u*S_0+(u^2 v z/j)*S_1+u v^2(S_2-S_1).
+
+The four short native identities above annihilate both expressions exactly. This is an unrestricted-normal readback, not contact-only positivity. The source limits ensure each normalized hard coefficient is bounded. In the selected strict frame the N residue pivot is one; with M0=sqrt(T H(1-H)) Mhat, the full second hard pivot is (1+T_0)/2 (R3) or 1/2 (R4). Their cross entry is zero-residue.
+Lemma E. R3/R4 signed masses, five helper rows, and all rates
+Use the separated angular coordinates U=u/sqrt(x),V=v/sqrt(y),Z=z/sqrt(jT) (these are testing roots scaled by pure-source factors), and let Q=U-VZ, Bv=V-UZ, R=Z-UV. The exact circuit
+
+
+
+
+Psi=U^2+V^2+Z^2+U^2 V^2 Z^2-4UVZ
+   =(U-V)^2+Z^2(1-UV)^2+2UV(1-Z)^2
+
+has separated square roots on the positive test chart. The full zero-normal scalar is exactly RFN12 with positive masses q_c,r_c,f_c,d_c and potentially signed e_0,k_c. The native source polynomials yield
+
+
+
+
+f_c~T*x^2*sigma/2, q_c~T*x/[2(1-HT)],
+r_c~T*j*B^2*(1-p)*sigma/2,
+g_c/f_c infinitesimal; k_c<0,
+abs(k_c)/(q_c y)=O(p+B), abs(k_c)/f_c=O((p+B)/j).
+
+The e_0^- cost is bounded by g_c, and the exact circuit identity (1+V^2)Psi-V^2 Bv^2 in Sigma(T)^2 spends an infinitesimal fraction of f_c. For -k_c, use Z(V^2-1)=-VQ-R. Its VQ component costs O((p+B)v^2). For the R component, the exhaustive source cases are: p infinitesimal (spend from r_c); p unit with eta_* unit (j^2B unit, spend RFN18a); p unit with eta_* infinitesimal (n>0, M_e~p/2 unit, spend RFN18c). In the last case the current M_e is automatically nonzero; at literal n=0 omit its row and use one of the first two cases. The exact identities RFN18–RFN20 have no unproved positivity factor: RFN19 has Gram G7,G3 with positive leading minors (4,8,101/4,1049/16,907/16,3279/16,743/16) and (3,2,2), independently replayed in the checker.
+Complete the entire correlated current by
+
+
+
+
+h0 N0^2+n(N0+j b0)^2
+ =(n+h0)(N0+c_b b0)^2+M_e b0^2,
+c_b=n j/(n+h0), M_e=n h0 j^2/(n+h0),
+
+and retain the other positive n squares and the m p square whole. The normalized N root sqrt(n+h0)(N0+c_b b0) has unit pivot; the normalized M root has the strict pivot from Lemma D. Five auxiliary rows are purchased by the exact circuit identities: R_u=v(u^2-x), j alpha b0, p v^2 b0, sqrt(T)mu uv b0, and v(alpha-BTCHu^2)R. Their source costs are bounded by B(j+1)=B+x infinitesimal, p/j infinitesimal, and the source split above; any finite costs gain independent testing u^2 or v^2. The source coefficient of the final opposite row obeys alpha-BTCHu^2=O(B[B(j+1)+u^2]), with no H,1-H,1-p inverse left uncanceled. The full remaining hard cross terms are bounded zero-residue. The finite real Schur rule (Lemma A) gives one positive-definite real residue Gram per source/test pair on both unrestricted normals and all purchased rows. This proves the local complete parent.
+All-testing joins and exact dependency discipline
+The original signed-core Schur identity gives a direct SOS whenever its core is nonnegative (including Z=0). On the remaining branch pure-testing sign congruences permit positive testing angles, Z=1, and positive normalized rotated state omega; omega=1 uses a pure-testing factor, not a source/test mixing. Literal zero axes use the original homogeneous core/event squares. Complex states split into real and imaginary parts.
+R3/R4: For all other testing residues, one of C,D is unbounded while the other and A have positive real residues. Retain their positive excesses over pair-dependent real caps, keep n,alpha whole, and use m_tilde=m/(1+m) for the possibly weak m, retaining its excess. The exact EN21–EN25 frames apply, with the stated three-by-three kernel leading minors strictly positive at finite nonzero Bob residue; EN23 handles bounded-unit Alice/infinitesimal Bob; EN24–EN25 are original homogeneous projective polynomials. Their hypotheses need no lower bound on m.
+R6/R7: R6 has positive real lower bounds on C,A,D and unbounded m; R7 has C a positive unit, unbounded m,A, and D either a positive unit or unbounded. This supplies the actual positive-real caps required by RB22/RB24, RU25–RU30 and the exceptional BE4 homogeneous frame, with the original n,alpha packets retained. At t_0=1 in R7 choose a sufficiently large finite real D cap after the testing residues: the determinant coefficient D(V+U^2)/2+(U^2-U)/4 is then positive for every fixed V>0; the V=0 chart is separate RU27. Those projective identities apply to whole selected state forms and do not require n>0. At noninfinitesimal testing omega the original nX^2 replaces the centered n square; direct coefficient extraction has a bounded strict frame without 1/epsilon.
+Unavoidable external inputs: (i) independent native SG/EN contact entry and exact weights; (ii) the polynomial-only CC/SE conductor with raw ideal/monic divisibility premises explicitly checked above, not the physical C1 theorem; (iii) the elementary tensor strict-Gram lemma, with its proof above; (iv) the exact RFN18–20 polynomial SOS identities, checked here independently, not the R1 all-tests conclusion; (v) the pure-testing signed-core congruences and the specified BE/RB/RU/EN original homogeneous selected-frame identities, used only after proving their positive-real-cap hypotheses. No result from the global qualitative existence theorem, no unreviewed IC/LII leaf, and no numerical sampling is invoked.
+Verification record: The checkers in checks/ replay (a) all six source numerator/divisibility/Taylor statements for R6/R7, including the original native stationary dictionary; (b) twelve exact full-parent coefficient identities on the unrestricted R6/R7 two-normal frame; (c) all four toric conductor identities, the exact circuit, RFN19–20 and their positive rational principal minors; (d) the full R3/R4 original-parent identity and three hard coefficients; and (e) all four original R3/R4 normal-balance identities as short exact polynomial consequences of RSR5–6. The order estimates, case splits, Schur argument, and imported remote identities are supplied analytically above and in the pinned references, not promoted merely from successful check counts.
+Verdict: No new R3/R4 or R6/R7 coefficient admission obstruction was found. The two recovered proofs are compatible with, and can be completed using, the precisely scoped algebraic inputs listed. This is a conditional all-testing theorem for these four assigned leaves, not a verification of the unassigned sectors and not an existential or evaluated full-Q222 finite SDP theorem.
+
+
+
+
+
+
+
+
+

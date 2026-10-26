@@ -1,0 +1,255 @@
+\section{An exact beta-shared normalization for the two eta-large C1.4 charts}
+\label{sec:r8-c1-large-eta-source-normalization}
+This section proves an exact source reduction, not an all-tests admission.
+It applies simultaneously to C14.1 and C14.2: the original native C1
+source has $x=k^2$ positive infinitesimal, $L=x\zeta$ bounded below by a
+positive real, and $\eta$ unbounded. All original physicality and
+residual-complement conditions are retained. We normalize $d=1$.
+The conclusion includes every positive source opening and the literal
+faces $D=0$ and $\beta=0$. No testing variable occurs in the source
+normalization.
+
+\paragraph{A uniform strengthening of the source gap.}
+Write $\sigma=\eta^{-1}$, $\theta=1-h$, $K=1+x$, and
+$e=xh/\sigma=1-E$. The exact coefficients in (LH1), with no size
+specialization, give
+\[
+ B_5=-xh\{KL+x\theta(1+xh)\}\eta^2+x b_1\eta+a_0,
+\]
+where
+\begin{align*}
+ b_1={}&-Lhrx-Lh-Lr+L-h^2rx^2+h^2rx-3h^2x\\
+ &-2hrx+hx-3h+1,\\
+ a_0={}&Kr+(1-r)\{1+L+2xh+rxL+rx^2h\}.
+\end{align*}
+Since $0<r,h<1$, $Lr<1$, and $L$ is bounded below,
+$b_1/L$ and $a_0/L$ are bounded uniformly in all openings; the second
+is positive. Dividing the inequality $B_5\ge0$ by $L\eta>0$ gives
+\[
+ e\{K+x\theta(1+xh)/L\}
+ \le x(b_1/L)+\sigma(a_0/L)\le O(x)+O(\sigma).
+ \tag{BE1}
+\]
+The bracket is at least one. Therefore $e\in\Inf_{>0}$ and $E\sim1$
+on both eta-large charts. This proof does not assume $x/\sigma$ bounded,
+and does not infer that $xh/\sigma^2$ is bounded.
+
+\paragraph{Two exact identities and their bounded coefficients.}
+Set
+\[
+ z=L^{-1},\quad b=Lr,\quad Q=1-b,\quad
+ R=1+xr,\quad M=R-xz\theta,\quad J=1+xh-\sigma(1-r).
+\]
+Here $z>0$ is bounded, $0<b,r<1$, and $r=bz$.
+The opening-cleared denominator is
+\[
+ P=\sigma zP_d
+ =\sigma+K+\sigma z(1+bx+2xh)
+   +\sigma bx^2hz^2+x^2h\theta z.
+\]
+In particular $P,M,J\sim1$. Introduce
+\[
+ H_0=1+z-r=1+zQ,\qquad B=P+xz(J-\sigma)
+\]
+and
+\[
+ \mathcal H=RH_0+z\left[(1-r)xh(2+xr)
+ -e\{2+x(1+h+r\theta)\}+Ke^2\right].
+ \tag{BE2}
+\]
+Then $B\sim1$, and $\mathcal H-H_0\in\Inf$, while $H_0\ge1$ is
+bounded. Thus $B$ and $\mathcal H$ are positive bounded units.
+The original NC coefficients satisfy exactly
+\begin{align*}
+ 2\theta P\beta&=hB-\sigma H_0,                    \tag{BE3}\\
+ 2P(JD+x\theta\beta)&=\sigma^2\mathcal H.         \tag{BE4}
+\end{align*}
+To verify these without any cancellation of an opening, use
+\[
+ N_D=K(1+\sigma z)(1+\sigma r)-JP=2JPD,
+ \quad
+ N_\beta=K(1+\sigma r)(1+xhz)-\theta P=2\theta P\beta.
+\]
+Expansion gives $N_\beta=hB-\sigma H_0$. The identity
+$N_D+xN_\beta=\sigma^2\mathcal H$ follows on inserting
+$\sigma e=xh$. These are polynomial identities after multiplication
+by $\sigma^2$; no resultant, opening inverse, or approximation is used.
+As an immediate consequence,
+\[
+ D=O(\sigma^2),\qquad x\theta\beta=O(\sigma^2),\qquad
+ JD+x\theta\beta\asymp\sigma^2.
+ \tag{BE5}
+\]
+In particular the collapsing $D$ pivot cannot be given a fixed positive
+unit cap in this source chart. The estimate is stronger than bounding
+$D$ by $O(\sigma^2+x\sigma)$ before using original beta nonnegativity.
+
+\paragraph{A source sphere retaining both coefficient boundaries.}
+All radicals below are pure source. Define
+\[
+ d_0=\sqrt{\frac{2PJD}{\sigma^2\mathcal H}},\qquad
+ b_0=\sqrt{\frac{2Px\theta\beta}{\sigma^2\mathcal H}}.
+\]
+Then exactly
+\[
+ d_0,b_0\ge0,\quad d_0^2+b_0^2=1,
+ \quad D=\frac{\sigma^2\mathcal H}{2PJ}d_0^2,
+ \quad \beta=\frac{\sigma^2\mathcal H}{2Px\theta}b_0^2.
+ \tag{BE6}
+\]
+No inverse of $D$, $\beta$, $d_0$, or $b_0$ occurs. In particular
+$D=0$ corresponds to $(d_0,b_0)=(0,1)$, and $\beta=0$ to $(1,0)$.
+Equation (BE3) now becomes the exact positive decomposition
+\[
+ \frac h\sigma=\frac{H_0}{B}
+       +\frac\sigma x\frac{\mathcal H}{B}b_0^2.
+ \tag{BE7}
+\]
+It displays, rather than discards, the possibly unbounded factor
+$h/\sigma$. The latter is bounded below by a positive unit, but may
+be unbounded when $\sigma/x$ is unbounded.
+
+Put
+\[
+ \kappa=\frac{K(1+\sigma r)(1+\sigma z)}{2MP}\sim\frac12,
+ \qquad m_0=\kappa x^2z\frac{H_0}{B},\qquad
+ m_1=\kappa x\sigma z\frac{\mathcal H}{B}.
+\]
+The original $m$ coefficient has the exact split
+\[
+ m=m_0+m_1b_0^2,\qquad
+ m_0\asymp x^2z,\quad m_1\asymp x\sigma z.
+ \tag{BE8}
+\]
+Thus the same nonnegative source coordinate $b_0$ occurs in the beta
+packet and in the extra part of $m$. This is an exact beta-aware
+replacement for an assumed bounded $\mu=h/\sigma$.
+All factors hidden in the two comparisons in (BE8) are bounded positive
+units uniformly in the original openings.
+For the other three positive coefficients the opening-cleared products
+are also units:
+\[
+ \frac{C(1-r)}z\sim\frac12,\qquad Ar\sim\frac{H_0}{2},
+ \qquad \alpha Qz\sim\frac12.
+ \tag{BE9}
+\]
+Indeed their exact expressions are those in the original large-$L$
+source chart, which are algebraic for bounded $z$ as well; use (BE1).
+For example $Ar=[z(1+xh)E+(1-r)(1+xhz)]/(2P)$.
+No lower bound on $r$, $1-r$, $Q$, or $\theta$ was imposed.
+
+\paragraph{Exact full-parent preservation.}
+For arbitrary independent reciprocal testing coordinates $u,w$, put
+$D_u=1+u^2$, $D_w=1+w^2$ and
+\begin{gather*}
+ M_w=W-wX+uY-uwZ,\quad R_w=uW-Y,\\
+ J_w=uwW+uX-wY-Z,\quad B_w=X+uZ,\\
+ K_w=J_w^2+D_u(Y-wZ)^2+D_wB_w^2-D_uD_wZ^2.
+\end{gather*}
+The entire original reciprocal parent is exactly
+\begin{align*}
+ F_w={}&4m_0M_w^2+4m_1(b_0M_w)^2
+       +4CD_wR_w^2+4AD_uD_wY^2\\
+ &+\frac{2\sigma^2\mathcal H}{PJ}(d_0J_w)^2
+       +4\alpha D_u(Y-wZ)^2
+       +\frac{2\sigma^2\mathcal H}{Px\theta}D_w(b_0B_w)^2
+       +2K_w.                                      \tag{BE10}
+\end{align*}
+This is an equality in the complete four-state quadratic form.
+It therefore preserves every first state normal and every hard
+quadratic coupling; it is not a restriction to a contact line or a
+leading form. Every new coefficient or radical is pure source, and all
+$D_u,D_w$ factors expand as finite testing sums of squares.
+The identity is polynomial in $u,w,W,X,Y,Z$ and therefore includes all
+signs and every independent testing rate. It holds at literal $u=0$
+and $w=0$. Bihomogenizing $u$ and $w$ gives the corresponding identity
+at their other literal projective endpoints, without division by a
+testing coordinate. Applying the real identity to real and imaginary
+state parts gives the complex-state identity as well.
+
+The source sphere, (BE7), and (BE8) do not make $2K_w$ nonnegative.
+They leave a precise full-parent allocation problem: use the common
+$b_0$ packet in (BE10) together with the $d_0$ packet, uniformly through
+$d_0=0$ and $b_0=0$. Consequently neither C14.1 nor C14.2 is admitted
+by this section. The sigma-unit six-root proof's positive-unit $D$
+pivot cannot be imported unchanged. No claim of nonemptiness of any
+residual-complement source domain is made.
+
+\paragraph{Verification scope.}
+The accompanying narrow checker verifies (BE1)'s polynomial input,
+(BE3), (BE4) in both reciprocal and native notation, the exact $m$
+split, the opening-cleared coefficient products, and (BE10) as the
+complete quadratic polynomial, including its bihomogenization.
+The asymptotic deductions use the ordered-field inequalities above;
+checker success alone is not an all-tests certificate.
+
+\paragraph{Targeted full-normal extension and the exact null direction.}
+Here is a test of the proposed normalization on the normal block, with
+no source opening omitted. At $w=0$, put $X=N_x-uhZ$ and $t=u^2$.
+The original parent splits into its manifestly nonnegative $(W,Y)$
+block and the following complete $(N_x,Z)$ block:
+\begin{align*}
+ Q_{xz}={}&[4Dt+4\beta+2(1+t)]N_x^2\\
+ &+4u[-2D(1+th)+2\beta\theta-h(1+t)]N_xZ\\
+ &+[4D(1+th)^2+4\beta t\theta^2+2t(1+t)h^2]Z^2.
+ \tag{BE11}
+\end{align*}
+At the literal endpoint $u=w=0$ this is $(4\beta+2)X^2+4DZ^2$.
+Thus when $D=0$, the vector $(W,X,Y,Z)=(0,0,0,1)$ is an
+\emph{exact} null direction of the full parent. The old six-root
+argument cannot impose a strictly positive pivot on $\sigma N_z$
+at this face. This is an obstruction to that proof architecture,
+not to positivity; $w=0$ itself already has an elementary SOS.
+
+The sphere suggests the legal replacement roots
+\[
+ \Gamma=\sigma Z,\qquad Z_d=d_0\Gamma,\qquad
+ Z_b=b_0(u/k)\Gamma,\qquad Z_e=\sqrt e\,(u/k)\Gamma.
+\]
+Set $p=\sigma b_0/k$. Equation (BE7) implies $p$ bounded, since
+$hB=\sigma H_0+\mathcal H p^2$. Also
+\[
+ \frac{xh^2}{\sigma^2}
+   =\frac{eH_0}{B}+\frac{\mathcal Hh}{B}b_0^2.
+\]
+Consequently the entire $Z^2$ line of (BE11) equals
+\[
+ \frac{2\mathcal H}{PJ}(1+th)^2Z_d^2
+ +2\mathcal H\left\{\frac\theta P+\frac{(1+t)h}{B}\right\}Z_b^2
+ +\frac{2(1+t)H_0}{B}Z_e^2.                       \tag{BE12}
+\]
+For $u$ infinitesimal each displayed coefficient has a positive-unit
+residue, including $\theta\to0$, because $\theta+h=1$.
+To retain the first normal exactly, define
+\[
+ A_x=\frac{H_0}{B}\left\{\frac{xz(J-\sigma)}P-t\right\}
+       -\frac{H_0}P,
+\]
+\begin{align*}
+ c_d&=4ud_0\left\{A_x-\frac{\sigma\mathcal H}{PJ}(1+th)\right\},\\
+ c_b&=4kb_0\left\{A_x+\frac{\mathcal H}{B}
+                       \frac{\sigma z(J-\sigma)}P\right\}
+                      -4tp\frac{\mathcal H}{B}.
+\end{align*}
+The middle line of (BE11) is exactly
+$c_dN_xZ_d+c_bN_xZ_b$. Both coefficients are infinitesimal when
+$u$ is infinitesimal, through every source opening and either sphere
+endpoint. Extracting $4(\beta-\beta_*)N_x^2$ for any bounded
+$0\le\beta_*\le\beta$ leaves a bounded Gram on
+$(N_x,Z_d,Z_b,Z_e)$ with strictly positive diagonal residue. Hence
+this normal block has the standard bounded positive-Gram lift.
+No inverse of $d_0,b_0,u$, or $\theta$ enters these coefficients.
+At $d_0=0,u=0$ all three $Z$ roots vanish, as the exact null direction
+requires. At $b_0=0$, the $Z_b$ root and its cross coefficient vanish.
+
+For the full $w\ne0$ contact conductor the corresponding proposed
+roots are $d_0(\sigma Z-uwW)$,
+$b_0(u/k)(\sigma Z-uwW)$, and
+$\sqrt e\,(u/k)(\sigma Z-uwW)$, together with the existing radial
+root and angular roots. Equations (BE11)--(BE12) verify the formerly
+collapsed normal direction and its first-normal coupling, but do not
+allocate the scalar contact polynomial and the $w$-dependent radial
+couplings. Their \emph{joint} allocation is the remaining step for
+this proposed frame. No positivity claim for that uncomputed Gram is
+made here, and no endpoint already known to be elementary is counted
+as a new source-domain admission.

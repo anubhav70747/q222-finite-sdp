@@ -1,0 +1,102 @@
+\chapter{The genuine directed IH weak-$C$ frontier}
+\label{component:p93b05ea6ad1e}
+\noindent\textbf{Component }\path{p93b05ea6ad1e}\par
+{\small\noindent Source: \path{R13/baseline/baseline/advances/ih/weak/inherited_ih_source_frontier.tex}\par}
+{\small\noindent SHA256: \path{93b05ea6ad1e767dea93fe62bf27c28f839db7f81157a435eb35dbf353487678}\par}
+{\small\noindent Inventory use: Only WI1--WI3 actual weak-IH source entry and opening-normalized coefficient formulas; optional special-curve claims and old open-status statements not imported\par}
+\medskip
+\section[The genuine directed IH weak-C frontier]{The genuine directed IH weak-$C$ frontier}
+\label{p93b05ea6ad1e:sec:c2-weak-ih-frontier}
+
+\noindent\textbf{Scope of retained extract.} The current proof imports the complete exact source and opening/coquotient argument (WI1)--(WI3) below. Optional rational-curve examples and historical frontier prose are outside the mathematical scope used in this rederivation and are omitted from this presentation. The complete original file and the exact omitted spans remain in the source archive and presentation manifest.
+
+
+
+Write $z=u_c^2$, $y=v_c^2$, and use the exact contact quantities
+\[
+ H=v_cY_c=zh,\quad L=v_c(u_cW_c-Y_c)=yt,\quad
+ B=H+L=u_cv_cW_c=zb,\quad R=-u_cX_c=zr.
+\]
+Thus $0<H<1$, $0<R<z$, $L>0$, and
+\[
+ L<y(1+R),\quad B>yR,\quad
+ G=B+R-z(1-H)>0.
+\]
+Set $S=1+R+L$ and
+\begin{align*}
+ \widetilde\Delta={}&(1+z)B^2+2(1+z)BR+(1+z)(1+y)B\\
+ &+(z-y)R^2+2z(1+y)R+z(1+y),\\
+ \widehat N={}&(1+z)(B+R)(H+y)-(1+y)(z-R)L.
+\end{align*}
+These are exactly $z\Delta,z^2N_{\rm src}$. In particular,
+\[
+ \widehat N=(1+z)(B+R)H+yG+z\{y(1+R)-L\}+RL(1+y)>0.
+\]
+The original coefficients, without an approximation, are
+\begin{align*}
+ C&=\frac{(1+R)\widehat N}{2L\widetilde\Delta},&
+ \alpha&=\frac{(B+R)\widehat N}{2(1-H)\widetilde\Delta},\\
+ A&=\frac{y(1+R)(B+R)S}{2H\widetilde\Delta},&
+ D&=\frac{(1+z)(B+R)(B-yR)S}
+ {2\{y(1+R)-L\}\widetilde\Delta},\\
+ m&=\frac{z(1+y)(z-R)(1+R)S}{2G\widetilde\Delta},&
+ n+\frac12&=\frac{z(B+R)(1+R)S}{2R\widetilde\Delta}.
+                                                        \tag{WI1}
+\end{align*}
+The checker verifies all six against the unchanged original source.
+
+\paragraph{Uniform source reduction for IH.}
+Suppose $z$ is positive infinitesimal, $y$ is positive unbounded,
+and $n\ge0$. Then $C$ is weak if and only if $B$ is unbounded.
+To prove the nontrivial direction, suppose $B$ is bounded. Since
+$R<z$ and $G>0$, one has $z\le4(B+R)$: use $B\ge1/2$
+or, otherwise, $B+R>z(1-H)>z/2$. Direct division in (WI1)
+gives bounded $\widetilde\Delta/[y(B+R)]$. Moreover,
+\[
+ \frac{\widehat N}{y(B+R)}
+ =(1+z)(1+H/y)
+ -(1+1/y)\frac{(z-R)L}{B+R}
+\]
+has residue $1$, since $L\le B$ and $z$ is infinitesimal.
+Consequently $C\ge c/L$ for a positive real $c$, which is strong
+because $L$ is bounded.
+
+Now let $B$ be unbounded. Put
+\[
+ \rho=B/y,\qquad e=1+R-L/y>0.
+\]
+Here $0<\rho<1+R+H/y$, so $\rho$ is bounded and its residue
+lies in $[0,1]$. The following exact normalized quantities have
+residue $1$:
+\[
+ \frac{\widetilde\Delta}{B(B+y)},\qquad
+ \frac{\widehat N}{yB},\qquad
+ \frac{L}{B},\qquad \frac{S}{B},\qquad\frac{G}{B}.
+                                                        \tag{WI2}
+\]
+They give
+\[
+ n+\tfrac12=\frac{\rho}{2r(1+\rho)}(1+o(1)).
+\]
+The inequality $n\ge0$ therefore gives $r/\rho$ bounded and
+$r\le\rho/[1+\rho](1+o(1))\le1/2+o(1)$.
+In particular $1-r$ is a positive unit, and
+$R/\rho=z(r/\rho)$ is infinitesimal. The normalized leading
+relations, uniform at arbitrary openings $H,1-H,e$, are
+\begin{align*}
+ C&=\frac{1+o(1)}{2B(1+\rho)},&
+ A&=\frac{B(1+o(1))}{2H(1+\rho)},\\
+ \alpha&=\frac{B(1+o(1))}{2(1-H)(1+\rho)},&
+ m&=\frac{z^2(1-r)(1+o(1))}{2B(1+\rho)},\\
+ D&=\frac{\rho^2(1+o(1))}{2e(1+\rho)}.
+                                                        \tag{WI3}
+\end{align*}
+Here each $1+o(1)$ means a positive coefficient unit of residue one;
+it never denotes a comparison with a testing infinitesimal. In
+particular $A,\alpha$ are unbounded, $m,C$ are infinitesimal, and
+$Cm$ is infinitesimal for every weak-$C$ IH source. Thus the four
+reciprocal-product exit can never admit this entire directed leaf.
+If $\rho$ is infinitesimal then $e$ is a unit and $D$ is weak;
+if $\rho$ is a unit then $D$ is strong. Literal $n=0$ remains
+allowed throughout the reduction. No lower bound on $r$ was used.
+

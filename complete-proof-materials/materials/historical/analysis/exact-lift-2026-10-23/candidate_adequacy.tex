@@ -1,0 +1,533 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,microtype}
+\usepackage[T1]{fontenc}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\one}{\mathbf 1}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\tr}{tr}
+\title{Exact C1 certificates in the order-13744 candidate}
+\author{}
+\date{23 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+An exact rational certificate places the previously separated C1 support
+inside the canonical cone used by the order-13744 candidate.  A rational
+selector extends this certificate to an open five-parameter contact family:
+its compressed Grams have margin $2^{-22}$ at the reference source and
+remain positive for target variation below $1/3284140032$.
+A displayed one-parameter subfamily is certified on
+$|\sigma-140|\leq2^{-42}$.  The same selector fails at other regular
+sources, so universal adequacy remains unresolved.
+\end{abstract}
+
+The canonical C1 cone used by the order-13744 outer approximation contains
+the physical support that separates the two smaller candidates.  More
+generally, an explicit rational selector proves membership for an open
+five-parameter family of stationary sources around that support.  The
+selector does not work on the entire regular contact domain.  Neither a
+universal converse for order 13744 nor a converse for C160 is proved here.
+
+\section{The canonical polynomial and its finite Gram representation}
+
+Write $c=(d,m,C,A,D,\alpha,\beta)$ and $\psi=(W,X,Y,Z)^T$.
+Set $D_u=1+u^2$, $D_v=1+v^2$, and define the entire scalar parent by
+\begin{align}
+ F_c={}&4m(vW-X+uvY-uZ)^2+4CD_v(uW-Y)^2
+             +4AD_uD_vY^2 \notag\\
+ &+(4D+2d)(uW+uvX-Y-vZ)^2
+ +(4\alpha+2d)D_u(vY-Z)^2 \notag\\
+ &+(4\beta+2d)D_v(X+uZ)^2-2dD_uD_vZ^2.
+ \label{eq:parent}
+\end{align}
+The symbol $\mathcal P_c$ denotes the symmetric matrix such that
+$F_c=\psi^T\mathcal P_c\psi$.  All source coordinates are fixed before
+the independent testing variables $u,v,\psi$ are introduced.
+
+For each of the four weights
+\[
+ (\alpha_g,\beta_g)=(0,0),(0,1),(1,0),(1,1),
+ \qquad g=0,1,2,3,
+\]
+start with the ordered features $u^rv^s\psi_i$, ordered lexicographically
+by $(i,r,s)\in\{0,1,2,3\}\times\{0,1\}^2$.
+Remove the following features:
+\[
+\begin{array}{c|c|c}
+ g&\text{removed features}&n_g\\\hline
+ 0&W,\ uX&14\\
+ 1&W&15\\
+ 2&W,\ uX&14\\
+ 3&uX&15
+\end{array}
+\]
+Let $V_g$ be the retained feature vector.  Define $K_1$ by
+$d\geq0$ and the existence of $G_g\succeq0$ satisfying the polynomial
+identity
+\begin{equation}
+ (1+u)(1+v)F_c
+  =\sum_{g=0}^3u^{\alpha_g}v^{\beta_g}V_g^TG_gV_g.
+ \label{eq:gram}
+\end{equation}
+There are 450 upper-triangular entries and 148 coefficient equations.
+Each Gram entry contributes to one scalar monomial, so the coefficient
+equations have disjoint supports.  Solving for one entry in each support
+leaves 302 free entries.  These are the actual auxiliary coordinates in
+\path{C1_ENLARGED_PRIMAL.coo.json}.  The four Gram blocks and $[d]$
+have total order 59.  The global compiler additionally imposes the six
+event signs and retains both canonical C1 orientations.
+
+Equation \eqref{eq:gram} proves $F_c\geq0$ for every $u,v\geq0$ and every
+state vector.  Its multiplier is strictly positive there.  The exact sign
+gauges $(u,Y,Z)\mapsto(-u,-Y,-Z)$ and
+$(v,X,Z)\mapsto(-v,-X,-Z)$ extend this conclusion to signed finite angles.
+Continuity of the normalized physical operator gives the projective
+endpoints.  Thus membership in $K_1$ is an all-state certificate, rather
+than a test restricted to its source contact.
+
+\section{An exact certificate for the separated support}
+
+The source is
+\begin{equation}
+\begin{aligned}
+ c_*={}&\left(1,
+ \frac{1166523000}{31661820415017653},
+ \frac{322803000}{186199784281},
+ \frac{218288946200}{1359122513},\right.\\[-1mm]
+ &\left.\hspace{13mm}
+ \frac{90943434293}{222507771414},
+ \frac{248802430236}{3300726103},
+ \frac{205476973}{51646655494}\right),\\
+ &\theta_*=(1/13,16,140,-1/32,1/50).
+\end{aligned}
+\label{eq:seed}
+\end{equation}
+Its homogeneous contact vector is $(140,-1/32,1/50,1)$, with last
+coordinate fixed to one.  It is not a unit vector; dividing by its
+Euclidean norm gives the corresponding pure quantum state.
+The data file
+\path{C1_REPAIRED_TWO_FRAME_COUNTEREXAMPLE.json}
+supplies all 302 rational auxiliary entries $y_*$, all four actual Gram
+matrices, and rational factorizations
+\begin{equation}
+ G_g(c_*,y_*)=F_g\Lambda_gF_g^T,
+ \qquad \Lambda_g\succ0,
+ \qquad \operatorname{rank}F_g=n_g-1.
+ \label{eq:seedfact}
+\end{equation}
+The first $n_g-1$ rows of each $F_g$ are lower triangular with nonzero
+diagonal.  Substitution into the current source pencil gives these exact
+matrices.  Their quadratic forms give \eqref{eq:gram}, and the four state
+kernel equations and both fixed-state angular derivatives vanish at
+\eqref{eq:seed}.  These are rational identities and positive rational
+diagonal entries; no optimization status is used.
+
+The canonical source pencil is byte-identical to the source array used
+by the current order-13744 construction; its SHA256 is
+\begin{center}\small\ttfamily
+1e1eb340077940be9c466f176efc4816d95c5271d448b7b52e94aa6a6542e344.
+\end{center}
+Consequently $c_*\in K_1$.  The separator for the old two-frame cone
+does not separate this enlarged cone.
+
+For clarity, its support inequality in the eight observable coordinates is
+$\ell_{c_*}\geq0$, where for a general $c$
+\begin{align}
+\ell_c={}&d\left[1-\frac{E_{00}-E_{01}+E_{10}+E_{11}}2\right]
+ +m(1+a_1-b_1-E_{11})\notag\\
+ &+C(1-a_1+b_0-E_{10})+A(1-a_0+b_0-E_{00})\notag\\
+ &+D(1-a_1+b_1-E_{11})
+ +\alpha(1-a_0-b_1+E_{01})\notag\\
+ &+\beta(1+a_1-b_0-E_{10}).
+ \label{eq:visible}
+\end{align}
+The exact nine affine coefficients are included in the selector data.
+
+Here is the full physical restoration of this inequality.  On a real
+two-qubit block choose
+\[
+ A_0=B_0=\sigma_z,\qquad
+ A_1=\frac{(1-u^2)\sigma_z+2u\sigma_x}{1+u^2},\qquad
+ B_1=\frac{(1-v^2)\sigma_z+2v\sigma_x}{1+v^2}.
+\]
+Replace the observable coordinates in \eqref{eq:visible} by the
+corresponding operators, denoting the result by $\ell_c(A,B)$.
+In the computational basis $\psi=(W,X,Y,Z)^T$, direct substitution gives
+\begin{equation}
+ (1+u^2)(1+v^2)\psi^T\ell_c(A,B)\psi=F_c(u,v;\psi).
+ \label{eq:physicalrestoration}
+\end{equation}
+For example, the six positive-event amplitudes are proportional to
+$vW-X+uvY-uZ$, $uW-Y$, $Y$,
+$uW+uvX-Y-vZ$, $vY-Z$, and $X+uZ$, respectively.
+Thus \eqref{eq:gram}, with its nonnegative weights on the explicit testing
+domain $u,v\geq0$, proves the operator inequality on every such block.
+The sign gauges and continuity cover all angles and endpoints.  Real
+operator positivity implies complex operator positivity by separating
+the real and imaginary parts of a state vector.
+
+Finally, two projective binary observables on one party decompose into
+invariant subspaces of dimension at most two: if $U=A_0A_1$, then
+$A_0UA_0=U^*$, so the spectral subspaces of $U$ pair at conjugate
+eigenvalues.  On each resulting subspace the displayed Pauli form
+applies, including the one-dimensional endpoints.  Applying this on
+both parties proves $\ell_c\geq0$ for all quantum behaviors.  Binary
+POVMs are covered by a common local projective dilation.  Thus the
+source certificates here restore full-Q222 Bell inequalities.
+The positive-coordinate requirements specify the native source chart;
+validity follows from the restored full-parent identity, rather than
+from those coordinate signs alone.
+
+There is also a full-dimensional cone with a linear auxiliary selector.
+Let $e_i$, $i=1,\ldots,6$, be the unit event rays and $y_i$ their exact
+new-frame auxiliary vectors.  For
+\begin{equation}
+ \mathcal W=\{c:d\geq0,\quad c_i-d(c_*)_i\geq0,
+                           \ i=1,\ldots,6\},
+ \label{eq:chamber}
+\end{equation}
+set
+\begin{equation}
+ y(c)=d y_*+\sum_{i=1}^6(c_i-d(c_*)_i)y_i.
+ \label{eq:chamberselector}
+\end{equation}
+The corresponding matrices are the same nonnegative combination of the
+seven verified PSD matrices, proving $\mathcal W\subseteq K_1$.
+The exact $302\times7$ selector is supplied in
+\path{C1_REPAIRED_CHAMBER_AUXILIARY_MAP.json}.
+
+\section{A rational selector on an open contact domain}
+
+Put $\theta=(p,q,a,b,t)$, $\phi=(a,b,t,1)^T$, and require
+$p,q>0$ and $abt\ne0$.
+Define the $6\times7$ polynomial contact matrix $\mathcal J(\theta)$
+as follows: its first four rows give $\mathcal P_c(p,q)\phi/4$, and
+its last two rows give
+$\phi^T\mathcal P_{c,u}(p,q)\phi/4$ and
+$\phi^T\mathcal P_{c,v}(p,q)\phi/4$.
+These expressions are linear in $c$.
+Writing $\mathcal J=(\mathcal J_d\mid\mathcal J_e)$, set
+\begin{equation}
+ c(\theta)=\bigl(1,-\mathcal J_e(\theta)^{-1}
+                         \mathcal J_d(\theta)\bigr),
+ \qquad
+ \Omega=\{p,q>0, abt\ne0, \det\mathcal J_e\ne0,
+                          c_1,\ldots,c_6>0\}.
+ \label{eq:sourcechart}
+\end{equation}
+This is a rational definition from the entire parent.  The data print
+all 42 entries of $\mathcal J$; each was independently rederived from
+\eqref{eq:parent}.  At the source in \eqref{eq:seed},
+\begin{equation}
+ \det\mathcal J_e
+   =-\frac{7033805705872535849475830606568681}
+                  {344646229622500000000}\ne0.
+ \label{eq:minor}
+\end{equation}
+
+Make the source-only change of variables
+\begin{equation}
+ u=pU,\qquad v=qV,\qquad \psi=\diag(\phi)\chi.
+ \label{eq:normalize}
+\end{equation}
+In sector $g$, let $D_g=\diag(p^rq^s\phi_i)$ on the retained features.
+The normalized Gram is
+$\widetilde G_g=p^{\alpha_g}q^{\beta_g}D_gG_gD_g$.
+Its contact feature vector is $\one$.
+For $S_g=[I_{n_g-1}\mid-\one]$, the matrices with this kernel are exactly
+\begin{equation}
+ \widetilde G_g=S_g^TH_gS_g,
+ \qquad H_g\in\mathbb S^{n_g-1},
+ \qquad H_g\succeq0\ \Longleftrightarrow\
+                              \widetilde G_g\succeq0.
+ \label{eq:compress}
+\end{equation}
+Here $H_g$ is the leading principal submatrix of $\widetilde G_g$.
+The equivalence follows also directly from the surjectivity of $S_g$.
+
+Let $h\in\R^{392}$ list the upper entries of the four $H_g$, in
+lexicographic order $(g,i,j)$.  Let $\mathfrak M$ be the 148 scalar
+monomials $U^rV^s\chi_i\chi_j$ present in \eqref{eq:gram}, in
+lexicographic order $(r,s,i,j)$, $i\leq j$.
+Denote by $E$ the $148\times7$ source coefficient matrix of
+$(1+u)(1+v)F_c$.  The normalized target is
+\begin{equation}
+ b(\theta)_{r,s,i,j}
+     =p^rq^s\phi_i\phi_j(Ec(\theta))_{r,s,i,j}.
+ \label{eq:b}
+\end{equation}
+The difference features $(V_{g,i}-V_{g,n_g})$ define a constant rational
+coefficient matrix $R\in\Q^{148\times392}$ such that the entire matching
+equation is $Rh=b(\theta)$.
+
+Here are the exact linear identities needed below.  Let $C$ have columns
+\begin{equation}
+ C_{:,r,s,i,j}=
+  (\delta_{0i}+\delta_{0j},\ldots,
+        \delta_{3i}+\delta_{3j},r,s)^T.
+ \label{eq:C}
+\end{equation}
+Then
+\begin{equation}
+ CR=0,\quad \operatorname{rank}C=6,\quad
+ \operatorname{rank}R=142,\quad \operatorname{im}R=\ker C.
+ \label{eq:rank}
+\end{equation}
+The first identity follows because a product of two difference features
+has zero value and first derivatives at the contact.  For an explicit
+certificate of the rank assertion, choose the lexicographically first
+142 independent rows $I$ of $R$ and the first 142 independent columns
+$J$ of $R_I$.  The supplied rational matrix
+\begin{equation}
+ B=R_{I,J},\qquad P=B^{-1}
+ \label{eq:inverse}
+\end{equation}
+obeys $BP=I_{142}$.  Its 1387 nonzero entries and the complete coefficient
+maps are in
+\path{C1_ENLARGED_REGULAR_CONTACT_SYSTEM.json}.
+Thus \eqref{eq:rank} is certified by explicit finite matrix identities.
+Since the complete contact equations vanish,
+\begin{equation}
+ Cb(\theta)=0\qquad(\theta\in\Omega).
+ \label{eq:compatible}
+\end{equation}
+The multiplier derivatives contribute zero because the parent value is
+zero at the contact.  In particular no state equation has been omitted.
+
+Let $h_*$ be obtained from \eqref{eq:seedfact} by
+\eqref{eq:normalize}--\eqref{eq:compress}, let $b_*=b(\theta_*)$, and
+let $J^c$ be the remaining 250 columns.  Define the rational selector
+\begin{equation}
+ h_{J^c}(\theta)=(h_*)_{J^c},\qquad
+ h_J(\theta)=(h_*)_J+P\bigl(b(\theta)_I-(b_*)_I\bigr).
+ \label{eq:selector}
+\end{equation}
+Equations \eqref{eq:rank}--\eqref{eq:compatible} imply $Rh=b(\theta)$:
+the difference has zero $I$ rows and lies in the 142-dimensional space
+$\operatorname{im}R$, on which those rows are injective.
+
+\begin{theorem}[Explicit open domain]
+Let
+\begin{equation}
+ \mathcal U=\left\{\theta\in\Omega:
+       \|b(\theta)-b_*\|_\infty<\frac1{3284140032}\right\}.
+ \label{eq:U}
+\end{equation}
+For every $\theta\in\mathcal U$, \eqref{eq:selector} gives four positive
+definite compressed Grams and hence an exact certificate
+$c(\theta)\in K_1$.  The set $\mathcal U$ contains an open neighborhood
+of $\theta_*$, and its image contains a five-dimensional family of
+distinct stationary sources.
+\end{theorem}
+
+\begin{proof}
+The first $n_g-1$ rows of the factors in \eqref{eq:seedfact} are invertible.
+The source normalizations are invertible too, so every $(H_g)_*$ is
+positive definite.  Exact rational inverse traces give the bounds
+\[
+\begin{array}{c|rrrr}
+g&0&1&2&3\\\hline
+\tr((H_g)_*^{-1})\leq&2^{12}&2^{17}&2^{22}&2^{17}\\
+L_g&364&437/2&409/2&783/2
+\end{array}
+\]
+The exact inverse traces are supplied with the selector data.
+Since $\lambda_{\min}(H)\geq1/\tr(H^{-1})$ for $H\succ0$,
+\begin{equation}
+ (H_g)_*\succeq2^{-22}I.
+ \label{eq:margin}
+\end{equation}
+For completeness, the displayed row bounds use the following explicit
+definition.  For a pivot entry indexed by $(g,i,j)$, put
+$a_{gij}=\sum_{k=1}^{142}|P_{\operatorname{pos}(g,i,j),k}|$; put
+$a_{gij}=0$ for a fixed free entry and reflect it symmetrically.
+Then $L_g=\max_i\sum_j a_{gij}$.
+Thus \eqref{eq:selector} gives
+\[
+ \|H_g(\theta)-(H_g)_*\|_2
+ \leq\|H_g(\theta)-(H_g)_*\|_\infty
+ \leq\frac{783}{2}\|b(\theta)-b_*\|_\infty<2^{-23}.
+\]
+Together with \eqref{eq:margin}, this proves
+$H_g(\theta)\succ2^{-23}I$.
+
+Restore the original Grams by the explicit rational formula
+\begin{equation}
+ G_g(\theta)=p^{-\alpha_g}q^{-\beta_g}
+ D_g^{-1}S_g^TH_g(\theta)S_gD_g^{-1}.
+ \label{eq:restore}
+\end{equation}
+All denominators are nonzero on $\Omega$.  They depend only on the
+source; the restored matrices satisfy the formal polynomial identity
+\eqref{eq:gram} in independent $u,v,\psi$.
+The original auxiliary $y_j(\theta)$ is the entry of $G_g(\theta)$ at
+the $j$th listed free position of the literal source pencil.
+
+The inequalities defining $\Omega$ are strict at \eqref{eq:seed} and
+the target is continuous there, so $\mathcal U$ contains an open
+neighborhood.  Differentiating the six contact equations gives
+\[
+ \partial_{\theta_k}c_e
+ =-\mathcal J_e^{-1}(\partial_{\theta_k}\mathcal J)c.
+\]
+At the seed this $6\times5$ rational matrix has rank five.  This proves
+the asserted local dimension without identifying testing variables with
+source variables.
+\end{proof}
+
+\section{A short rational source family and the selector's limitation}
+
+Fix the four contact coordinates
+$(p,q,b,t)=(1/13,16,-1/32,1/50)$ and vary $a=\sigma$.
+Put $Q_\sigma=83200\sigma^2+17476053\sigma+119$.  Solving the entire
+contact system gives $d=1$ and
+\begin{align}
+ m(\sigma)&=\frac{3499569000}
+ {(166400\sigma-219)Q_\sigma},\notag\\
+ C(\sigma)&=\frac{177021000(2\sigma-1)}
+ {(50\sigma-13)Q_\sigma},\notag\\
+ A(\sigma)&=\frac{2600(12800\sigma^2+7122\sigma-5219)}{Q_\sigma},\notag\\
+ D(\sigma)&=-\frac{2080000\sigma^3+2680525\sigma^2
+                         -218723632\sigma-621061}
+                    {2(25\sigma-5219)Q_\sigma},\notag\\
+ \alpha(\sigma)&=\frac{3204(83200\sigma^2+53\sigma+119)}{17Q_\sigma},\notag\\
+ \beta(\sigma)&=-\frac{13(121600\sigma^2-17362101\sigma-83623)}
+                         {38Q_\sigma}.
+ \label{eq:family}
+\end{align}
+These formulas are exact stationary-source identities, including all
+four state equations and both angular equations.
+Their contact minor is
+\begin{equation}
+ \det\mathcal J_e(\sigma)=
+ \frac{6165476003(25\sigma-5219)(50\sigma-13)
+                       (166400\sigma-219)Q_\sigma}
+      {344646229622500000000},
+ \label{eq:familyminor}
+\end{equation}
+which is nonzero throughout $139\leq\sigma\leq141$.
+
+All six coefficients are positive for $139\leq\sigma\leq141$.
+Here is a direct uniform sign verification.  Write each displayed
+fraction as $N_i(s)/D_i(s)$ after $\sigma=140+s$ and expand the
+numerator and denominator, without cancelling their displayed integer
+factors.  Each constant has greater absolute value than the sum of
+the remaining coefficient magnitudes.  The positive differences are
+\[
+\begin{array}{c|r|r}
+ i& |N_i(0)|-\sum_{k\geq1}|N_{ik}|
+    &|D_i(0)|-\sum_{k\geq1}|D_{ik}|\\\hline
+ m&3499569000&93348433945876566\\
+ C&49034817000&27997200202682\\
+ A&645496641400&4036512286\\
+ D&5605722176566&13952538819296\\
+ \alpha&5149943908344&68620708862\\
+ \beta&397933432&153387466868
+\end{array}
+\]
+The constant numerator and denominator have the same sign in every row.
+This proves the assertion on $|s|\leq1$.
+
+For an explicit interval on which the selector is guaranteed to work,
+write each target entry in \eqref{eq:b} as a reduced fraction
+$N(s)/D(s)$.  Let $\|N\|_1=\sum|N_k|$ and
+$\|N'\|_1=\sum k|N_k|$, and set
+$d_0=|D_0|-\sum_{k\geq1}|D_k|>0$.
+For $|s|\leq1$,
+\[
+ \left|\frac{\dd}{\dd s}\frac{N(s)}{D(s)}\right|
+ \leq\frac{\|N'\|_1\|D\|_1+\|N\|_1\|D'\|_1}{d_0^2}.
+\]
+Taking the maximum over the explicit target entries gives the exact bound
+\[
+ B=\frac{18674611204409407977433140269829677208000}
+          {37399703413558479094297615998554952613}<500.
+\]
+Therefore every rational or real $\sigma$ satisfying
+\begin{equation}
+ |\sigma-140|\leq2^{-42}
+ \label{eq:familyinterval}
+\end{equation}
+has $\|b(\sigma)-b_*\|_\infty\leq B2^{-42}
+<1/(2\cdot3284140032)$ and is certified by
+\eqref{eq:selector}--\eqref{eq:restore}.
+
+The same fixed choice of 250 free entries cannot be asserted on the
+whole regular contact domain.  For example, \eqref{eq:family} at
+$\sigma=70$ has six strictly positive coefficients and a nonsingular
+contact matrix.  The restored compressed selector has
+\begin{equation}
+ (H_2(70))_{00}
+ =-\frac{4276129302757499074690240852689277812474790802751901913517}
+ {9456495976921764179751029215348840318787988500000000000}<-400.
+ \label{eq:selectorfailure}
+\end{equation}
+It is thus not PSD.  Even at $\sigma=141$, the first nonpositive
+Schur pivot in $H_0$ is its sixth pivot and is strictly negative;
+the exact rational value is supplied.  These calculations refute the
+universal use of \emph{this selector}.  They do not refute membership in
+$K_1$: other values of the 250 free coordinates remain available.
+
+\section{The precise remaining adequacy question}
+
+The general C1 contact problem has an explicit finite form.  For an
+arbitrary regular contact, let $h_{J^c}=z\in\R^{250}$ and set
+\begin{equation}
+ h_J=P\bigl(b_I-R_{I,J^c}z\bigr).
+ \label{eq:general}
+\end{equation}
+Its four matrices have orders $(13,14,13,14)$.  The other canonical
+orientation is the rational contact map
+\begin{equation}
+ \tau(p,q,a,b,t)=\left(p^{-1},q,
+       \frac{qa-b}{t+q},\frac{-a-qb}{t+q},\frac{1-qt}{t+q}\right),
+ \label{eq:reflection}
+\end{equation}
+with source permutation
+$\sigma c=(d,C,m,\alpha,\beta,A,D)$.
+The exact parent congruence behind this map is
+\[
+ u^2(1+v^2)\mathcal P_{\sigma c}(1/u,v)
+     =G(v)\mathcal P_c(u,v)G(v)^T,
+\quad
+G(v)=\begin{pmatrix}v&-1&0&0\\-1&-v&0&0\\
+0&0&-v&1\\0&0&1&v\end{pmatrix}.
+\]
+On the regular two-orientation domain, the universal statement still
+needed is that for every contact there is an orientation and a value
+of $z$ for which all four matrices in \eqref{eq:general} are PSD.
+The construction above proves this statement on $\mathcal U$ with one
+explicit value of $z$.  It supplies no uniform selector on the
+complement.  Completing C1 would also leave the independent whole-C2
+converse needed by the order-13744 compiler.
+
+In particular, a positive Gram margin at one contact establishes an
+open family, but it neither gives a finite cover of escaping or singular
+contacts nor licenses a constant free-coordinate choice everywhere.
+Equation \eqref{eq:selectorfailure} identifies this limitation exactly.
+No conclusion about C160 reverse inclusion is inferred from the C1
+certificate.
+
+\section*{Exact data and reproduction}
+
+The directory \path{c1_contact_selector_data/} contains the literal
+source pencil, the repaired source's full auxiliary vector and four
+positive factorizations, the event-ray selector, the complete constant
+contact coefficient maps, and the newly evaluated open-domain and
+one-parameter selectors.  The independent exact reproduction script
+\path{check_c1_contact_selector.py} uses rational arithmetic and
+SymPy, and invokes no numerical optimizer.  It directly checks the
+current source-array substitution, all seven full-parent source
+columns, all six contact equations, the difference-feature coefficient
+map, its inverse-minor certificate, the strict Gram bounds, and the
+stated rational family and failures.  The script and data also work
+without the historical archive when kept together.
+
+\end{document}

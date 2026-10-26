@@ -1,0 +1,123 @@
+\section{The small-gap weak-C2 source reduces to two infinitesimal tests}
+\label{sec:r12-small-gap-remote}
+\begin{theorem}
+Under the source hypotheses of Section~\ref{sec:r12-small-gap-scale},
+the entire original parent is finite tensor SOS at every independent
+projective testing pair except possibly when both $u,v$ are bounded
+with zero residue. All signs, literal projective endpoints, real and
+complex states, and literal $n=0$ are included. This is a remote-testing
+reduction, not an all-tests source admission.
+\end{theorem}
+Write $\rho=\operatorname{st}(z/B)>0$ and
+$\tau=\operatorname{st}(y/B)>1$. The exact source formulas give
+\[
+ n,m,\alpha\in\Inf_{\ge0},\quad A^{-1/2}\in\Inf_{>0},
+ \qquad C_0=\tau/2,\quad D_0=1/[2(\tau-1)].             \tag{GR1}
+\]
+The source-scale lemma retains all nonnegative openings, including
+$n=0$. Normalize only $\widehat Y=\sqrt A Y$ and put
+$Y=A^{-1/2}\widehat Y$ in every full-parent identity below.
+All remaining event coefficients are bounded. The strict-residue
+lift is (WA10), expanded around the relevant real testing residues;
+no mixed inverse or radical is used.
+
+\paragraph{A six-root identity removes the second axis degeneracy.}
+If $u$ is a bounded unit or unbounded, use $p=1/u$, which is
+bounded, and the polynomial homogeneous parent $F_p=p^2F(1/p,v)$.
+Literal $u=\infty$ means $p=0$. Suppose $v$ is infinitesimal or zero.
+Put $D_p=1+p^2$, $D_v=1+v^2$, and use the six roots
+\[
+ N=\sqrt n X,\quad V_x=vX,\quad K=pX+Z,\quad
+ R=\sqrt\alpha\,pX,\quad W,\quad\widehat Y.
+\]
+The roots with zero source weight are simply zero; no division by
+$n$ or $\alpha$ occurs. Define $J=W+D_pV_x-pY-pvK$.
+There is the exact complete-parent identity
+\[
+\begin{split}
+ F_p/4={}&D_pD_vN^2+m(pvW+vY-K)^2+C D_v(W-pY)^2
+                         +D_pD_v\widehat Y^2\\
+ &+DJ^2+D_p[R+\sqrt\alpha(vY-K)]^2\\
+ &+\tfrac12\{J^2+(1-p^2v^2)K^2\\
+ &\hspace{15mm}+D_p[v^2Y^2-2vYK+2pYV_x+2pvKV_x-p^2V_x^2]\}.
+\end{split}                                                   \tag{GR2}
+\]
+This identity follows by $Z=K-pX$ and $vX=V_x$ in the original
+signed core and all original event packets. In particular the $m$
+packet loses its apparent separate $pX$ term exactly. The $\alpha$
+packet is retained in the extra root $R$ rather than discarded.
+All coefficients in (GR2) are bounded pure-source polynomials in
+bounded $p,v$ after the normalization of $Y$.
+
+At $p_0=\operatorname{st}(p)$, $v_0=0$, write $d_p=1+p_0^2$.
+The full six-root residue is
+\[
+ d_p(N^2+R^2+\widehat Y^2)+\tfrac12K^2
+ +C_0W^2+(D_0+\tfrac12)(W+d_pV_x)^2
+                  -\tfrac12d_pp_0^2V_x^2.            \tag{GR3}
+\]
+Its last two-state block has positive first diagonal and determinant
+\[
+ d_p C_0(D_0+\tfrac12)>0,                            \tag{GR4}
+\]
+because $C_0(D_0+1/2)=(C_0+D_0+1/2)/2$.
+Every other displayed pivot is strictly positive. Thus the full
+parent is covered for all bounded $p$ and infinitesimal or zero $v$,
+including both signed finite $p$ and literal $p=0$.
+
+\paragraph{The other axis retains the small m packet.}
+For $u$ infinitesimal or zero and $v$ a bounded unit, use
+\[
+ (S,R_u,X,\widehat Y,Z)=(\sqrt m W,uW,X,\sqrt A Y,Z).
+\]
+The entire identity (WE8) applies with its $m$ packet written
+$(vS-\sqrt m X+\sqrt m\,uvY-\sqrt m\,uZ)^2$.
+Every other packet is unchanged. The complete residue has separate
+pivots $v_0^2,(1+v_0^2)/2,1+v_0^2$ on
+$(S,X,\widehat Y)$; its remaining $(R_u,Z)$ block is
+\[
+ \begin{pmatrix}
+ C_0(1+v_0^2)+D_0+1/2&-(D_0+1/2)v_0\\
+ -(D_0+1/2)v_0&D_0v_0^2
+ \end{pmatrix},\qquad \det=C_0D_0v_0^4>0.           \tag{GR5}
+\]
+For $v$ unbounded, put $q=1/v$ and use the complete identity
+(WE10) with the same $m$-packet change. At $u=q=0$ its five-root
+residue is diagonal with pivots
+\[
+ (1,C_0,1/2,1,D_0)>0.                              \tag{GR6}
+\]
+These bounded-coefficient identities also cover literal $u=0$ and
+$q=0$. All first normals and the full hard state block are retained.
+
+\paragraph{The remaining remote charts are strict directly.}
+For two bounded unit angles, the full three-state residue (WR2)
+with $n_0=m_0=0$ has determinant, with $U=u_0^2$, $V=v_0^2$,
+\[
+ (1+U)(1+V)UV\left\{
+ \frac{C_0(2D_0+1)}4U+\frac{C_0D_0}2V\right\}>0.    \tag{GR7}
+\]
+Its restriction to $Z=0$ is positive definite from the positive
+$C_0U(1+V)W^2$ and $(1+V)X^2/2$ terms. Including the normalized
+hard $\widehat Y$ pivot gives a strict full-parent Gram residue.
+For $u$ unbounded and $v$ a bounded unit, (WR4) has a strict
+$(W,X)$ block from $C_0(1+V)W^2+(D_0+1/2)(W+v_0X)^2$,
+a $Z$ pivot $1/2$, and a hard pivot $1+V$.
+For $v$ unbounded and $u$ a bounded unit, (WR5) is strict:
+its $W$ pivot is $C_0U>0$ and its $(X,Z)$ block is
+$(1+U)X^2/2+D_0(u_0X-Z)^2$.
+For both angles unbounded, the exact five-root identity (WR6)
+has residue (WR7) with $n_0=m_0=0$. Its nontrivial block determinant
+is $D_0/2>0$, and the remaining pivots are $C_0,1,1/2$.
+The coefficients in each identity are still bounded under (GR1),
+so this use of the algebra does not import an incompatible source-domain
+admission.
+
+These charts exhaust every test pair except both bounded with zero
+residue. Literal infinity uses polynomial chart values; restoration
+elsewhere uses only pure-testing squares. Splitting real and imaginary
+state parts gives the complex assertion. On the printed source chart,
+the exact remaining task is therefore the entire local parent with
+$u,v$ independently infinitesimal or zero, retaining the physical
+constraint $(1-r)Q\ge BK$ and every equality case. No comparison
+between a source scale and a testing scale has been introduced.

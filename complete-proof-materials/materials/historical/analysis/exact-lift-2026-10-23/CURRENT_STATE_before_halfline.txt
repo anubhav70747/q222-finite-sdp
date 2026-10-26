@@ -1,0 +1,87 @@
+Q222 — current verified public delivery, 23 October 2026
+
+LATEST PUBLIC COMMIT
+b2bfe64cd81a951b7bbe33a84b9dedd5d4ba162c
+Repository: https://github.com/anubhav70747/q222-finite-sdp
+The repository is authoritative; older paper-human copies are stale.
+All 267 public files downloaded and byte-compared to committed Git blobs.
+Hashes checked: original50, contact7, local66963, inverse18,
+global-weighted45, canonical-completion17. All19 Overleaf TEX members match
+committed sources. Repository clean after publication.
+Complete scientific ZIP: delivery-human/Q222_Complete_Scientific_Package.zip
+Bytes: 12984581
+SHA256: e47cf7ce7038f648d6b1f42bb4fda86cc09939ae786e0ccf7dc00fe8ab16925a
+
+CURRENT DOCUMENTS
+Article7pages; complete companion343pages; Explicit_Lifts10pages.
+New canonical-completion note5pages; angular-cone note3pages.
+Accepted article abstract unchanged:
+ac7edca81f30c5ee10ca91e378b2f34253cc7bc83dca3790ca3c42e6af80a5eb
+Article and companion were not rewritten or recompiled this turn.
+Both changed notes compiled twice cleanly. All5 new completion pages and
+new Explicit_Lifts pages8–10 were visually inspected.
+
+NEW SELF-CONTAINED COMPLETION RESULT
+extracted-lifts/canonical-completion/ contains the full nine-source state
+change and two4x4 inequalities G_J,H_J. Canonical validity is exactly
+forall Bob angle v exists2x2 J(v). The universal angle quantifier remains.
+Matrix Fejer-Riesz degree bound, zero-block forcing, all zero source weights,
+state signs and homogeneous endpoints independently reviewed.
+Pointwise order8 arrays:108 full symmetric integer entries; C1 polynomial
+restriction:80 entries. These are not a finite global Q222 lift.
+
+Every globally polynomial selector on C1 reduces to
+J(v)=[[p*v²,0],[r*v,s*v²]]. A newly simplified valid source is
+(d,m,C,A,D,alpha,beta)=(359,75/16,60,416,41/2,831/2,151/2), lambda=n=0.
+Contact: u=1/2,v=2,psi=(2,-1/4,1/4,1), equivalently(8,-1,1,4).
+Transformed a=(17/10,1/5), b=(6/5,-9/5), U=1/4.
+Contact forces(p,r,s)=(-100,2000,1200). On(a2,b1), G_J(1) has block
+[[8235/4,2000],[2000,1280]], with value-2645/4 on(1,-1).
+The three-dimensional minor is also exactly-412640000.
+Validity follows from four positive AM-GM circuits in xi=4u²,eta=v²/4,
+plus the strict m,C,A transverse block. No large Gram certificate needed.
+check_simple_source.py passes18 exact checks, including the full determinant.
+The original recovered rational source, arrays and independent direct
+determinant proof are preserved alongside the simpler primary example.
+Generic full-state identity and original108/80 coefficient checks also pass.
+
+PSD SIZE BOUND
+extracted-lifts/size-bound/ gives an exact nine-face chain of probability
+zeros. Lifted supports strictly decrease, and compactness excludes zero.
+Thus any single PSD cone lift has N>=9 (sum of orders for product blocks,
+not a bound on maximum block order). Auxiliaries compress to D-9,
+D=N(N+1)/2. First unexcluded template N9,p36,2025 matrix coefficients;
+feasibility at N9 remains open. The stored three-order2 input is excluded.
+Proof is in Explicit_Lifts. Exact65536-subset enumeration passes.
+
+OTHER RECENT RESULTS, RETAINED
+The order49 angular Laurent-cone pencil is exact,48auxiliaries and24order2
+blocks plus one scalar. The source substitution is quartic, not affine.
+The order133 determinant-weighted state certificate has104functions27blocks.
+Inverse-Alice order62/all-Alice order731 and the bounded-unit-L all-testing
+local construction remain unchanged. The343-page companion's latest changes
+unified three C14.1 tests and two unit-L tests; all corresponding dependencies
+were checked. These have not yet yielded a drastic global proof reduction.
+
+ACTIVE GOAL AND PRO TASK
+Goal remains active: complete exact finite lift with minimum usage and update git.
+No complete eight-coordinate affine pencil has been extracted; do not mark
+the goal complete or present the five-page reduction as a complete replacement.
+The previous Pro task completed; its response was recovered and audited:
+message c867686c-926c-5729-95b7-1a64bcbed8ea.
+Original ZIP SHA256667ff221dc1207dc8e26ab70f8b20656731ef28593efa6d5519e3bb350b9b039.
+Review: analysis/pro_completion_review.txt.
+
+One new authorized task is active in the same Recover manuscript chat:
+6ada2928-d9d8-83eb-a982-a73ce2b936b3
+User turn36fb521f-d0bc-4bed-8ecf-2e9cd3312ba2.
+Dispatch: analysis/exact-lift-2026-10-23/halfline_completion_dispatch.json
+Prompt: next_halfline_completion_task.txt in the same directory.
+It investigates a fixed half-line algebraic completion or source-independent
+testing multiplier. Last read_thread status active; browser showed responding.
+DO NOT interrupt or send a duplicate. Recover the completed response, check
+the exact quantifiers and source-independent family, audit and integrate only
+proved improvements. Share the newly simplified source at commit b2bfe64
+after completion if useful. Do not launch large SDP sweeps.
+
+All local subagent tasks are completed; no unfinished repo edits remain.

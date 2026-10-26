@@ -1,0 +1,71 @@
+FIXED SYMBOLIC ANGLE RATIO: COMPLETE QUADRATIC IDENTITIES
+26 October 2026. One coefficient calculation over Q(a), no parameter sweep.
+Reproducer/data: c2_fixed_a_quadrics_2026_10_26.py/.json.
+The script reads the frozen general-angle source dictionary from
+c2_maxentangled_general_angles_2026_10_25.json. Final replay took about14s.
+
+Prerequisite: direct substitution in that dictionary verifies exactly
+                    2A=a(d+2n).
+Throughout, a is symbolic and fixed. Eliminate A by this identity, leaving
+the six homogeneous source coordinates(d,n,m,C,D,alpha). The r,z testing
+here refers to independent SOURCE parameters, not independent physical
+testing angles. No Gram positivity or full-hull inference is used.
+
+GENERIC ANSWER
+
+Put
+ A=a(d+2n)/2, b=A+n, P=C+d/2, Q=alpha+d/2,
+ Gamma=a^2(b+P+Q)-b.
+For a>0,a!=1, the full space of homogeneous quadratic identities has
+dimension3, with the compact basis
+
+              mP-DQ=0,
+              mGamma-bQ=0,
+              DGamma-bP=0.                           (F1)
+
+These are exactly the2-by-2 minors of the source-linear matrix
+                    [[m,D,b],[Q,P,Gamma]].
+The first identity is the previously known D(alpha+d/2)=m(C+d/2);
+the other two are genuinely additional once a is treated as a fixed
+coefficient, rather than as another variable with constant coefficients.
+The script checks all three against the complete polynomial coefficient
+map and verifies their independence over Q(a).
+
+EXACT RANK AND ALL EXCEPTIONS
+
+After clearing the same positive source denominator as in the prior note,
+the21 products of six source coordinates have75 distinct(r,z) coefficient
+rows over Q[a]. Their generic coefficient rank is18. One explicit maximal
+minor, with row/column indices recorded in the JSON, factors as
+                 256*a^47*(a-1)^33*(a+1)^28.
+Together with the three independent exact identities, this proves rank18
+at EVERY a except the three roots0,1,-1. No sampling is involved.
+
+The only admissible positive exception is a=1. There the rank is13 and
+the quadratic identity space has dimension8. Write A=d/2+n and
+                  L=m+D-d/2-2n.
+A full basis consists of the six products L times each of
+                  d,n,m,C,D,alpha
+and the two equal-angle Schur identities
+                  mC-(A-m)^2,
+                  Dalpha-(A-D)^2.
+All eight are checked, independent, and exhaust the specialized nullspace.
+This recovers the extra equal-angle linear relation and the two PSD
+epigraph boundary identities without assuming their previous derivation.
+
+For completeness, the FORMAL cleared-polynomial maps at a=0 and a=-1
+both have rank3 and quadratic-nullity18. These are outside the stipulated
+a>0 native chart; they are not claims about a valid limiting source
+dictionary at the singular parameter value a=-1.
+
+LIMIT OF THE RESULT
+
+The factored identities supply a useful rectangular rank-one structure,
+not a symmetric PSD representation or a description of the convex hull.
+Indeed, all three quadrics are unchanged along the source direction
+ (delta d,delta n,delta m,delta C,delta D,delta alpha)
+                =(1,-a/[2(a+1)],0,-1/2,0,-1/2),
+which fixes b,P,Q,m,D. Additional information is needed to recover the
+actual stationary surface or its closed conic hull along that direction.
+No higher-degree elimination, moment construction, or full cone claim is
+made in this bounded calculation.

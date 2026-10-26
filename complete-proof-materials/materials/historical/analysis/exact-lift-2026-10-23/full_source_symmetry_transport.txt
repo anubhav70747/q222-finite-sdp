@@ -1,0 +1,33 @@
+Exact full-source symmetry used for contact-family transport
+
+For c=(d,lambda,n,m,C,A,D,alpha,beta), define
+Tc=(d,beta,n,D,alpha,A,m,C,lambda).
+For the published full canonical polynomial F,
+u^2 v^2 F_c(1/v,1/u; Z,X,Y,W)
+= F_{Tc}(u,v; W,X,Y,Z).
+The map is an involution and preserves nonnegative source coordinates.
+
+This was checked by independently rebuilding all nine coefficient
+polynomials, substituting simultaneously, and solving the unique linear
+source map. All coefficients agree exactly; no source face was imposed.
+
+A direct proof transports the lambda/beta, m/D, C/alpha terms in pairs.
+The n and A terms stay fixed. For the d coefficient, use the exact identity
+TD^2+Du(vY-Z)^2+Dv(X+uZ)^2-DuDv Z^2
+= Tm^2+Dv(uW-Y)^2+Du(W+vX)^2-DuDv W^2,
+where TD=uW+uvX-Y-vZ and Tm=vW-X+uvY-uZ.
+It follows by expansion, and proves the d coefficient is unchanged.
+
+Homogenizing replaces the multiplied reciprocal identity by a literal
+identity under (a0,a1;b0,b1)->(b1,b0;a1,a0), W<->Z.
+Thus zero and infinite angles are included by the same polynomial identity.
+
+This establishes validity transport, not membership in a prescribed
+certificate cone. A testing family using fractional powers only of Bob's
+angle generally transports to functions involving Alice's angle.
+A source reduction may therefore require adjoining its transported testing
+family; one cannot assume the original 40 functions already contain it.
+
+Status: exact symmetry proved. No global adequacy conclusion.
+The Pro task is currently preparing a purported separated counterexample
+at a symmetry image; its actual source and dual are not yet recovered.

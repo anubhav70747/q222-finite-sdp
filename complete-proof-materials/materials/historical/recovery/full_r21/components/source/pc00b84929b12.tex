@@ -1,0 +1,260 @@
+\section[An exact full-parent Gram at the interior IH double corner]{An exact full-parent Gram at the interior IH double corner}
+\label{sec:c2-weak-ih-interior-corner}
+
+This is a local testing-chart theorem. It does not admit its source
+subdomain at all independent tests. In particular, no conclusion for
+remote commuting testing corners is included below.
+
+\begin{theorem}[Full-parent IH corner, interior shape]
+Use the exact positive C2 source with $d=1$, the omitted original
+$\lambda,\beta$ coefficients zero, and $n\ge0$. Suppose its actual
+angles have type IH, and $C$ is weak. Use the source notation of
+\S\ref{sec:c2-weak-ih-frontier}; thus $z$ is infinitesimal and
+$B$ unbounded. Write $\rho=B/y$ (a shape parameter, not an event
+coefficient). Assume
+\[
+ \rho,\quad1-\rho
+ \quad\hbox{are positive bounded units}.                 \tag{IC1}
+\]
+At every independent testing pair for which $u$ and the homogeneous
+reciprocal coordinate $w=1/v$ are infinitesimal or zero, the entire
+original parent has a separated-field tensor-SOS certificate, for
+all real or complex state coordinates. The source openings $H,1-H$ and the positive radial parameter $r$
+are arbitrary; $n$ may be unbounded. Literal
+testing $u=0$ and $v=\infty$, either testing sign, and literal source
+$n=0$ are included.
+No state coordinate or certificate root is required to be bounded.
+\end{theorem}
+
+\begin{proof}
+Put $N=4n+2$ and $\nu=Nr$. Source reduction (WI1)--(WI3)
+shows that $\nu$ and $1-r$ are bounded positive units, even when
+$N$ is unbounded. In residue,
+\[
+ \nu_0=\frac{2\rho_0}{1+\rho_0},\qquad 2r_0\le\nu_0,
+ \qquad D_0=\frac{\rho_0^2}{2(1-\rho_0^2)}.             \tag{IC2}
+\]
+All assumptions and divisions in this sentence concern the coefficient
+field alone.
+The uniform coefficient estimates needed below are
+\[
+ BC\asymp1,\quad \frac{Bm}{z^2}\asymp1,\quad
+ \frac{AH}B\asymp1,\quad\frac{\alpha(1-H)}B\asymp1,
+ \quad D\asymp1,\quad nr\le\nu/4.
+\]
+In particular $C,m$ are infinitesimal, $nr,nr^2$ are bounded,
+$mB/z\asymp z$, and $m\sqrt B/z\asymp z/\sqrt B$.
+These estimates are uniform in $r,H,1-H$ and do not assert that
+$A/B$ or $\alpha/B$ is bounded at an opening.
+
+The homogeneous testing parent is exactly
+\begin{align*}
+ \widehat F={}&4nD_uD_wX^2+4mM^2+4CD_w(uW-Y)^2
+     +4AD_uD_wY^2+4DJ^2+4\alpha D_u(Y-wZ)^2\\
+ &+2\{J^2+D_u(Y-wZ)^2+D_w(X+uZ)^2-D_uD_wZ^2\},\\
+ M={}&W-wX+uY-uwZ,\qquad
+ J=uwW+uX-wY-Z,
+ \qquad D_u=1+u^2,\quad D_w=1+w^2.
+                                                               \tag{IC3}
+\end{align*}
+For $w\ne0$ it is $w^2F(u,1/w)$; (IC3) defines the literal
+projective endpoint as well. Let $G$ be (IC3) restricted to the graph
+\[
+                         X=-ruZ,\qquad Y=HwZ.
+\tag{IC4}
+\]
+Use the following five scalar roots, all defined using only pure
+coefficient radicals and inverses:
+\begin{align*}
+ R_0&=(uW-BwZ)/\sqrt B,&
+ R_1&=(zW-BuwZ)/\sqrt B,\\
+ R_2&=uwW-\rho Z,&
+ T&=(u^2-z)Z,&
+ E&=\sqrt{BH}\,(w^2-1/y)Z.                               \tag{IC5}
+\end{align*}
+They vanish at every signed exact source contact. Define the pure
+coefficient quantities
+\begin{align*}
+ K={}&4AH^2+8DHr+4\alpha(1-H)^2
+      +4m(H+r-1)^2+2(H+r-1)^2+4nr^2,\\
+ k={}&K-4B^2m/z^2+8znr^2+8AH^2/y.                      \tag{IC6}
+\end{align*}
+The exact source formulas and state/angular stationarity give the
+following finite polynomial Gram identity:
+\begin{align*}
+G={}&\left(4BC-\frac{kz}{B}\right)R_0^2
+     +\frac{4Bm}{z^2}R_1^2+2(2C+2D+1)R_2^2\\
+ &+r^2\{4nw^2+2(2D+2n+1)\}T^2
+  +\frac H B\{4Au^2+2(2A+2C+2D+1)\}E^2\\
+ &+\frac{ku}{B}R_0R_1
+  +\left\{-4r(2D+1)+\frac{k}{B}\right\}R_2T
+  -\frac{4\sqrt H(2C+2D+1)}{\sqrt B}R_2E.                   \tag{IC7}
+\end{align*}
+For clarity, the only non-obvious algebraic step is the exact toric
+conductor
+\[
+ B(u^2-z)(w^2-1/y)Z^2
+ =(u^2-z)ZR_2-zR_0^2+uR_0R_1.                         \tag{IC8}
+\]
+Before (IC8), the last mixed radial term is
+$k(u^2-z)(w^2-1/y)Z^2$. Expanding (IC7), its difference from
+$G$ has only the four monomials $uwWZ,u^2Z^2,w^2Z^2,Z^2$;
+the unchanged original source sets all four coefficients exactly to
+zero. The supplied checker verifies these four rational identities,
+not just a specialization or a leading-order equality.
+
+All coefficients of (IC7) are bounded: $BC$, $Bm/z^2$, $AH/B$,
+$\alpha(1-H)/B$, $nr,D$ and $k/B$ are bounded. No inverse of $r$
+is used, and $1/\sqrt N$ is bounded because $N\ge2$. Moreover,
+\[
+ (k/B)_0=\frac{2r_0}{1+\rho_0}.
+\]
+Add to the right side of (IC7) the following exact zero, obtained
+by one more toric conductor:
+\[
+ \rho T^2+(u^2-z)TR_2
+       -u(zR_0-uR_1)(uR_0-R_1)=0.                    \tag{IC8a}
+\]
+The new $T^2$ term has positive unit residue $\rho_0$. Every other
+coefficient introduced by (IC8a) is infinitesimal. This step is what
+makes the proof uniform when $r$ is infinitesimal and $n$ unbounded.
+
+Suppress residue bars temporarily. The $R_0,R_1,E$ diagonal
+residues are respectively
+\[
+ \frac2{1+\rho},\qquad
+ \frac{2(1-r)}{1+\rho},\qquad
+ \frac2{1+\rho},
+\]
+which are positive. The only surviving off-diagonal block is
+\[
+ (R_2,T):\qquad
+ \begin{pmatrix}
+ \dfrac2{1-\rho^2}&-\dfrac r{1-\rho}\\[3pt]
+ -\dfrac r{1-\rho}&\rho+r\nu+4Dr^2
+ \end{pmatrix}.                                      \tag{IC9}
+\]
+Using (IC2), its determinant is exactly
+\[
+ \frac{2\rho}{1-\rho^2}
+  +\frac{r\{4\rho-r(3\rho+1)\}}
+       {(1-\rho)(1+\rho)^2}>0.
+\]
+Indeed $0\le r\le\rho/(1+\rho)$, and consequently
+$4\rho-r(3\rho+1)\ge\rho(3+\rho)/(1+\rho)>0$.
+The first determinant summand is already strictly positive, including
+$r_0=0$. Thus (IC7) after the exact zero (IC8a) has strictly positive
+definite residue, including literal $n=0$ and unbounded $n$.
+
+It remains to restore the full state normals; the graph certificate
+alone is not the claimed conclusion. Put
+\[
+ E_X=\sqrt N(X+ruZ),\qquad E_Y=\sqrt{B/[H(1-H)]}(Y-HwZ).
+\]
+We give exact factorizations of both linear normal terms. Let
+$U=u^2,V=w^2,s=1/y$ and define $L_X,L_Y$ by
+$4L_X=\partial_X\widehat F|_{\rm graph}$ and
+$4L_Y=\partial_Y\widehat F|_{\rm graph}$. Direct expansion gives
+\begin{align*}
+ L_X={}&(2D+1)uR_2-\frac{2m\sqrt B}{z}wR_1+uZP_X(U,V),\\
+ P_X={}&(2D+1)\rho-\frac{2mB}{z}V
+    -2nr(1+U)(1+V)-r(2D+1)U-2D-r\\
+ &+V\{1-H-r-2DH-2m(H+r-1)\}.                         \tag{IC10}
+\end{align*}
+Every coefficient of $P_X$ is bounded, and source stationarity gives
+$P_X(z,s)=0$. Write its exact monic division as
+\[
+ P_X=(U-z)f_X(V)+(V-s)g_X.
+\]
+Both $f_X,g_X$ have bounded coefficients. Explicitly,
+\begin{align*}
+ f_X(V)&=-2nr(1+V)-r(2D+1),\\
+ g_X&=-2mB/z-2nr(1+z)+1-H-r-2DH-2m(H+r-1).
+\end{align*}
+Thus no inverse of $r$ or of either opening is introduced. We obtain
+\[
+ L_X=\left(2D+1+\frac{g_X}B\right)uR_2
+       -\frac{2m\sqrt B}{z}wR_1
+       +u f_X(V)T
+       -\frac{uwg_X}{\sqrt B}R_0.                       \tag{IC11}
+\]
+Here we used the exact identity
+$B(V-s)Z=R_2-\sqrt B\,wR_0$; this avoids dividing by $\sqrt H$
+when $H$ is infinitesimal. Every displayed multiplier is infinitesimal
+in the bounded tensor ring; in particular $m\sqrt B/z\asymp z/\sqrt B$.
+
+For the other normal, put
+\begin{align*}
+ f(V)={}&2m-2C(1+V)-(2D+1)V,\\
+ P_Y(U,V)={}&Bf(V)+2AH(1+U)(1+V)+2CH(1+V)
+       +2DHV+2DrU+2D\\
+ &-2\alpha(1-H)(1+U)+2m(H+r-1)U
+       +(H+r-1)U+H(V+1).
+\end{align*}
+Then
+\[
+ L_Y=\sqrt B f(V)R_0+wZP_Y(U,V),\qquad P_Y(z,s)=0.
+\]
+The coefficients of $P_Y/B$ are bounded. Write
+$P_Y=(U-z)f_Y(V)+(V-s)g_Y$. The two quotient coefficients are explicitly
+\begin{align*}
+ f_Y(V)&=2AH(1+V)+2Dr-2\alpha(1-H)
+                   +(2m+1)(H+r-1),\\
+ g_Y&=-B(2C+2D+1)+2AH(1+z)+2CH+2DH+H.
+\end{align*}
+The displayed source estimates show directly that $f_Y/B$ and
+$g_Y/B$ have bounded coefficients, including both opening limits.
+The elementary exact identity
+\[
+          (U-z)\sqrt B\,wZ=zR_0-uR_1
+\]
+therefore gives
+\[
+ \frac{L_Y}{\sqrt{B/[H(1-H)]}}
+ =\sqrt{H(1-H)}\left\{f(V)+\frac{z f_Y(V)}B\right\}R_0
+       -\frac{\sqrt{H(1-H)}u f_Y(V)}B R_1
+       +\frac{\sqrt{1-H}w g_Y}B E.          \tag{IC12}
+\]
+Again every displayed multiplier is infinitesimal. This argument
+retains the full $X,Y$ linear terms; none is estimated on the graph
+and then discarded.
+
+Finally the normal quadratic block, in $(E_X,E_Y)$, is bounded.
+Its residue is diagonal with entries
+\[
+             1,\qquad \frac2{1+\rho_0}>0.
+\]
+Indeed the $X^2$ coefficient before scaling is
+$4nD_uD_w+4mw^2+(4D+2)u^2+2D_w$; the $Y^2$ coefficient is
+$4CD_w+4AD_uD_w+(4D+2)w^2+(4\alpha+2)D_u+4mu^2$.
+Their mixed coefficient is $-4uw(2m+2D+1)$.
+For the $Y$ normalization, if $L=B/[H(1-H)]$, then $A/L$ and
+$\alpha/L$ are bounded and
+\[
+ \frac{4(A+\alpha)}L
+ =4\left\{\frac{AH}B(1-H)
+               +\frac{\alpha(1-H)}B H\right\}
+ \longrightarrow\frac2{1+\rho_0}.
+\]
+Thus the stated normal residue remains strict even when $H_0=0$
+or $H_0=1$; no denominator involving a vanishing opening was dropped.
+Equations (IC11)--(IC12) show that all cross terms from these normals
+to the five scalar roots have zero residue. Thus the exact seven-root
+Gram for the entire (IC3) is bounded and has positive definite
+residue. The bounded positive-residue Gram lemma yields tensor SOS.
+Its roots may be unbounded; it uses no mixed inverse or radical.
+The homogeneous chart and real/imaginary splitting give all endpoints
+and states stated in the theorem.
+\end{proof}
+
+\paragraph{Precise boundary of this result.}
+The theorem covers only the independent testing corner $(u,v)=(0,\infty)$
+in residue. It neither assumes nor concludes all-tests admission.
+The proof does not cover source $\rho$ infinitesimal or
+$1-\rho$ infinitesimal. The positive radial parameter $r$ and both
+positive openings $H,1-H$ may be arbitrarily infinitesimal; $n$ may
+be unbounded.
+The local proof does include literal $n=0$, but a remote
+infinity-infinity joining Gram has a pivot proportional to $n$;
+that join has not been made uniform as $n\to0$. No source leaf is
+removed from the all-tests frontier on the basis of this theorem.

@@ -1,0 +1,489 @@
+\chapter{R3 and R4 at infinitesimal \(e\), with all source ratios and tests}
+\label{component:p1de8b5ffab69}
+\noindent\textbf{Component }\path{p1de8b5ffab69}\par
+{\small\noindent Source: \path{NEW/weak_c2/r34_e_inf_all_sources_all_tests.tex}\par}
+{\small\noindent SHA256: \path{1de8b5ffab6931a4c77de0ccdd50f8bd5de94b1fcbbce66030129714ae3bbd84}\par}
+{\small\noindent Inventory use: EN1-EN25\par}
+\medskip
+% Fresh proof, 2026-10-22; all frozen reconstruction inputs are unchanged.
+\section{R3 and R4 at infinitesimal \(e\), with all source ratios and tests}
+\label{p1de8b5ffab69:sec:new-r34-all-tests}
+
+\paragraph{Statement and exact domain.}
+Use the original common-II stationary source, its six native weights
+$n,m,C,A,D,\alpha$, all its strict source gaps, $d=1$,
+$\lambda=\beta=0$, and $n\geq0$. Suppose $B_s,a_sB_s,t_sB_s$
+are positive infinitesimals, $t_s,h$ are positive bounded units,
+and $e=1-r$ is positive infinitesimal. In addition impose either
+\[
+ \begin{array}{ll}
+ \mathrm{R3}:&1-h\text{ is infinitesimal},\\
+ \mathrm{R4}:&1-h\text{ is a positive unit and }
+       1+a_sB_sr-(1-h)/t_s\text{ is infinitesimal}.
+ \end{array}                                                    \tag{EN1}
+\]
+There is no condition on the size of $a_s$, $a_s^2B_s$,
+$a_s e$, or their ratios. The conclusion is finite separated tensor
+SOS for the entire original parent at every independent projective
+testing pair and every state, including signs, axes, and literal $n=0$.
+The already recovered positive-unit-$e$ proofs then complete the
+whole original R3 and R4 rows. No other weak-C2 row is inferred.
+
+The source and testing fields are independent real closed extensions
+$K_c,K_t\supset\mathbb R$. A bounded coefficient means an element
+of $B_c\otimes B_t$; its residue is the homomorphism to $\mathbb R$.
+The strict bounded-Gram lemma is used only for matrices with positive
+definite real residue. Row entries may be arbitrarily large.
+Every inverse and radical below is pure source, pure testing, or a
+product of such factors.
+
+\subsection{One exact compact source for both ends}
+
+Use the exact compact variables of the reconstructed actual-source
+dictionary RSR2--RSR6:
+\[
+\begin{aligned}
+c_s&=1+a_sB_sr,\quad R_s=1+ha_sB_s,\quad
+j=a_sc_s/R_s,\quad B=B_sR_s/c_s,\quad T=t_sc_s/R_s,\\
+p&=a_s e/R_s,\quad H=(1-h)/(t_sc_s),\qquad
+x=jB=a_sB_s,\quad y=TB=t_sB_s,\quad q_z=jT .
+\end{aligned}                                                    \tag{EN2}
+\]
+Thus $0<p<\min(1,j)$, $0<H<1$, and
+\[
+B,x,y\in\mathrm I_c,\quad T\in\mathrm U_c,\quad
+1-HT\in\mathrm U_c,\quad p/j\in\mathrm I_c.              \tag{EN3}
+\]
+The last assertion is exact source entry:
+$e=p(1+x)/(j+px)\sim p/j$.
+In R3, $H$ is infinitesimal. In R4, $1-H$ is infinitesimal
+and $0<\overline T<1$. In particular
+$H(1-H)\in\mathrm I_c$ in both rows.
+The native inverse is
+\[
+r=\frac{j-p}{j+px},\quad h=\frac{1-HT}{1+HTx},\quad
+a_s=\frac{j+px}{1+HTx},\quad
+B_s=\frac{B(1+HTx)}{1+pB},\quad
+t_s=\frac{T(1+pB)}{1+HTx}.                              \tag{EN4}
+\]
+The exact six weights are RSR6 at this substitution.
+Those rational identities, including every contact first jet, were
+checked against the native source without size restrictions. Their
+former R1 size hypothesis is not imported.
+
+Put $\sigma=1+(1-H)T$, $K=j+1-p$, $E=1+B(HT+p-1)$, and
+use the explicit polynomials $\mathcal P,\mathcal L,\mathcal N,
+\mathcal F,\mathcal K$ in RSR5, RSR15, RSR18. Then
+\[
+\frac{\mathcal P}{j+1}\sim1,\qquad
+\frac{\mathcal L}{j+1}\sim\sigma,\qquad
+\frac{\mathcal F}{j+1}\sim\sigma.                       \tag{EN5}
+\]
+Here $T,\sigma,(1-HT)^{-1}$ are bounded positive units.
+To prove these uniform statements, divide the printed finite
+polynomials by $j+1$. The corrections in $\mathcal P$ contain
+$B+x$ or $TB$; those in $\mathcal L$ after
+$(j+1)\sigma$ contain $p/(j+1)$ or $B+x$.
+In $\mathcal F$ the only additional quotient is
+$p(1-p)/(j(j+1))$, infinitesimal by (EN3).
+Every other term contains $B$ or $Bj/(j+1)$.
+Thus no restriction on $j$ or $jT$ is needed.
+
+The exact physicality numerator has the grouping
+\[
+\mathcal N=p\{1+B(3j+1-p)+BT(j+1)\}
+-Bj(j+1)\{1+(1-H)T\}+\mathcal R,\quad
+|\mathcal R|\le C_0BT\,Bj(j+1).                         \tag{EN6}
+\]
+The bound follows termwise from RSR5 using $p<\min(1,j)$ and
+bounded $T$. Since $n=\mathcal N/[2(j-p)\mathcal P]\ge0$,
+\[
+\begin{aligned}
+&\eta_*=\frac{Bj(j+1)}p=O(1),\qquad
+0\le n=O\!\left(\frac{p}{j(j+1)}\right)\in\mathrm I_c,\\
+&\eta_*\in\mathrm I_c\Longrightarrow
+n\sim\frac{p}{2(j-p)(j+1)}>0 .
+\end{aligned}                                                    \tag{EN7}
+\]
+This includes $\mathcal N=0$ literally.
+
+Write $\mu=m(1-p)$, $h_0=\mu+1/2$. The full source formulas give
+\[
+\begin{aligned}
+&\mu=O(p),\quad h_0\asymp1,\quad
+\alpha/[B^2(j+1)]\sim\sigma/2,\quad \alpha/B\in\mathrm I_c,\\
+&A\sim\frac{T}{2(1-HT)},\qquad
+CH\sim\frac{\sigma}{2T},\qquad
+D(1-H)\sim\frac1{2T}.
+\end{aligned}                                                    \tag{EN8}
+\]
+Consequently $A$ and the finite one of $C,D$ have positive real
+lower bounds. The other coefficient is unbounded. The exact
+normalized source limits are
+\[
+\begin{array}{c|c|c|c}
+ & C&A&D\\ \hline
+R3&+\infty&T/2&1/(2T)\\
+R4&1/(2T)&T/[2(1-T)]&+\infty .
+\end{array}                                                    \tag{EN9}
+\]
+Only real residues of the bounded entries are meant in this table.
+The coefficient $m$ may be infinitesimal, a unit, or unbounded.
+
+\subsection{The scalar allocation in the complete two-normal frame}
+
+Use the entire parent RFN4 and the exact full-state change RFN5--RFN9,
+with $w=(W+uY)/(1+u^2)=1$ and arbitrary $z=(Z-uX)/(1+u^2)>0$.
+The identities are rational identities of (EN4), so they retain
+both complete normals and every state term in the present source.
+The tests in this subsection satisfy $u,v>0$ infinitesimal.
+For clarity, the inverse is
+\[
+X=N_0+pv-uz,\quad Z=z+uN_0+puv,\quad
+W=1+u(M_0+Hvz),\quad Y=u-M_0-Hvz.                       \tag{EN10}
+\]
+Retain the actual positive packet $mpD_u^2N_0^2$, and divide the
+remaining entire parent by the pure testing factor $D_u=1+u^2$.
+Its exact expansion is RFN7--RFN9. In particular the hard entries are
+\[
+\begin{aligned}
+&H_N=h_0D_u+\tfrac12v^2+\alpha u^2+nD_v,\\
+&H_M=D_u(CD_v+D+\tfrac12)+AD_v+(\alpha+\tfrac12)v^2,\qquad
+H_{NM}=(\alpha+\tfrac12)uv .
+\end{aligned}                                                    \tag{EN11}
+\]
+
+Keep the separated rows
+$U=u/\sqrt{x}$, $V=v/\sqrt{y}$, $Z_*=z/\sqrt{q_z}$,
+$Q_*=U-VZ_*$, $B_*=V-UZ_*$, $R_*=Z_*-UV$, and
+\[
+\Psi=U^2+V^2+Z_*^2+U^2V^2Z_*^2-4UVZ_*
+=(U-V)^2+Z_*^2(1-UV)^2+2UV(1-Z_*)^2.                 \tag{EN12}
+\]
+The last radical is separated, for example
+$\sqrt{UV}=(xy)^{-1/4}\sqrt{uv}$.
+The exact scalar identity is RFN12 with the same actual circuit
+masses. From (EN5), the closed formulas RSR16--RSR20 now give
+\[
+\begin{aligned}
+&f_c\sim Tx^2\sigma/2,\quad
+q_c\sim\frac{Tx}{2(1-HT)},\quad
+r_c\sim TjB^2(1-p)\sigma/2,\\
+&g_c/f_c=Hy\,\mathcal L/\mathcal F\in\mathrm I_c,\quad
+k_c<0,\quad |k_c|/(q_cy)=O(p+B).
+\end{aligned}                                                    \tag{EN13}
+\]
+In particular all three displayed positive masses are positive.
+The sign of $k_c$ follows from the same exact positive-surplus
+identity RSR19: its error bound uses $B(j+1)\in\mathrm I_c$,
+not $T$ infinitesimal.
+
+Before spending any current mass, perform the exact source-only
+completion
+\[
+\begin{aligned}
+h_0N_0^2+n(N_0+jb)^2
+&=(n+h_0)(N_0+c_bb)^2+M_eb^2,\\
+b&=v-uz/j,\quad c_b=\frac{nj}{n+h_0},\quad
+M_e=\frac{nh_0j^2}{n+h_0}.
+\end{aligned}                                                    \tag{EN14}
+\]
+Keep $nv^2(N_0+pb)^2$ and the positive extra hard terms RFN15
+as whole squares. This reserves exactly the correlated $n$ packets
+of the complete parent. If $n=0$, set $c_b=M_e=0$ and omit that
+row. For $n>0$, $c_b^2/M_e=n/[h_0(n+h_0)]$ is bounded.
+
+The signed scalar allocation differs from R1 in one source split.
+The $e_0$ cost is unchanged: its negative part is at most $g_c$,
+and RFN18b buys it at cost
+$H(\mathcal L/\mathcal F)(y+v^2)\in\mathrm I$.
+Also $d_c>0$. Use $Z_*(V^2-1)=-VQ_*-R_*$ for $k_c$.
+The $VQ_*$ cost is $O((p+B)v^2)$, infinitesimal.
+For its opposite-row part the exhaustive cases are:
+\[
+\begin{array}{c|l}
+p\in\mathrm I_c&
+ |k_c|/r_c=
+ T\mathcal K/[(1-p)(1+Hy)\mathcal L]=O(p+B)\in\mathrm I_c\\
+p\in\mathrm U_c,\ \eta_*\in\mathrm U_c&
+ j\text{ unbounded},\ j^2B\in\mathrm U_c,\ 
+ |k_c|/f_c\in\mathrm I_c,\ |k_c|/(f_cx)=O(1)\\
+p\in\mathrm U_c,\ \eta_*\in\mathrm I_c&
+ j\text{ unbounded},\ M_e\in\mathrm U_c,\ 
+ |k_c|/f_c\in\mathrm I_c,\\
+& |k_c|/(q_cy)=O(1),\ |k_c|/(M_eyx)=O(1).
+\end{array}                                                    \tag{EN15}
+\]
+In the second case $j$ is unbounded because $p/j$ is infinitesimal;
+$j^2B\asymp p\eta_*$. In the third,
+$nj^2\sim p/2$ and $n$ is infinitesimal, so $M_e\sim p/2$.
+The closed formulas show
+$|k_c|/f_c=O((p+B)/j)$ in the last two cases and
+$|k_c|/(M_eyx)=O((p+B)(1+1/n)/j^2)$ in the third.
+These bounds are uniform through $p\to1$.
+
+Case two uses RFN18a:
+$R_*^2\preceq_{\rm sos}(1+U^2)\Psi$.
+Case three uses RFN18c:
+$R_*^2\preceq_{\rm sos}2(\Psi+V^2Q_*^2+U^2B_*^2)$.
+The non-infinitesimal source ratios in (EN15) acquire the testing
+factors $u^2$ or $v^2$. Thus all costs are infinitesimal.
+Literal $n=0$ lies in the first or second case; it is not discarded.
+After this finite allocation, fixed positive fractions of
+\[
+q_cQ_*^2,\quad r_cR_*^2,\quad f_c\Psi,\quad M_eb^2       \tag{EN16}
+\]
+remain, with the last row absent exactly at $n=0$.
+
+\subsection{Both complete normal arrays, with the new endpoint weights}
+
+The exact derivatives RFN21--RFN22, and their exact source cancellations
+$S_N=S_0=S_1=S_2=0$, hold unchanged. Let
+$q=vz-Tu$, $R=z-uv/B$, $R_u=v(u^2-x)$. In particular
+\[
+\begin{aligned}
+L_N^{\rm rem}
+&=-j\alpha b+\tfrac12pv^2b+K_RR_u+(K_c/j)uvq,\\
+L_M&=C_qq+\mu uvb+v(\alpha-BTCHu^2)R,\\
+K_c&=p/2+j\{H(\alpha+1/2)-1/2\}+n(p-j),\\
+K_R&=-\mu-(\alpha+1/2)(1-p)+(T/j)K_c,\\
+K_d&=CH-(D+1/2)(1-H)=-\mu/j-BTCH,\\
+C_q&=K_d+AH+1/2+
+v^2\{CH(1+u^2)+AH+(\alpha+1/2)H\}.
+\end{aligned}                                                    \tag{EN17}
+\]
+Every displayed coefficient other than a retained row is bounded:
+$p/j$ and $n$ are infinitesimal, $\mu/j=O(p/(j+1))$ is bounded,
+and $A,CH,D(1-H),T$ are bounded by (EN8).
+In particular $K_R$, $K_c/j$, and $C_q$ are bounded.
+
+Here is an explicit audit of all costs, to avoid importing the former
+$T\in\mathrm I_c$ hypothesis of RFN.
+The exact radial Gram RFN19--RFN20 purchases $R_u^2$ at infinitesimal
+cost from (EN16). Its three cases are still $1-p$ a unit;
+$p\sim1,\eta_*$ a unit; and $p\sim1,\eta_*$ infinitesimal.
+Their costs are respectively
+\[
+\begin{array}{c|l}
+1-p\in\mathrm U_c&O(B),\ O(Bu^2),\ O(u^2/(1-p))\\
+p\sim1,\eta_*\in\mathrm U_c&
+ O(B+u^2/j+u^4/(j^2B)),\ O(Bu^2)\\
+p\sim1,\eta_*\in\mathrm I_c&
+ O(u^2/j),\ O(u^4/j),\
+ [8u^4+2(u^2-x)^2]/M_e .
+\end{array}                                                    \tag{EN18}
+\]
+They require only $T$ bounded above and below, because $T$ cancels
+between $y=TB$ and the masses (EN13).
+The small-current budgets NSR3--NSR5 likewise apply unchanged:
+both $pv^2b$ and $\sqrt T\,\mu uvb$ are free.
+For $\eta_*$ infinitesimal their coefficients are
+$O(v^4)$ and $O(Tu^2v^2)$, using $p^2/M_e=O(1)$.
+For $\eta_*$ a unit the coefficients are
+$O(v^2(y+v^2))$ and $O(Tu^2(y+v^2))$, using
+$p^2y/f_c=O(1)$. Each is infinitesimal.
+
+The row $q/\sqrt T$ is strict by (EN13).
+Its $N$ coupling has coefficient $(K_c/j)uv\sqrt T$ infinitesimal.
+The identity $j\alpha b=-(\alpha/B)R_u-\alpha uR$ handles
+the remaining $N$ term. For $1-p$ a unit the latter square costs
+$O(B^2(j+1)^2u^2/(1-p))$ against $r_cR_*^2$.
+For $p\sim1$, RFN18a bounds the entire $j\alpha b$ square by
+$O(B^3(j+1)^2+B^2(j+1)^2u^2/j)$ of the circuit.
+These are infinitesimal. A sufficiently large fixed real radial
+pivot pays the bounded $K_R$ coupling, including the bounded shift
+$c_b/\sqrt{M_e}$ from (EN14).
+
+Normalize the complete second normal by
+$M_0=\sqrt{TH(1-H)}\,\widehat M$. The full hard diagonal (EN11)
+then has residue
+\[
+\overline{TH(1-H)H_M}=
+\begin{cases}
+(1+\overline T)/2,&R3,\\
+1/2,&R4 .
+\end{cases}                                                    \tag{EN19}
+\]
+Every term of the complete diagonal is bounded: the only divergent
+factors occur in $CH$ and $D(1-H)$.
+The normalized $q$ coupling is
+$T\sqrt{H(1-H)}C_q$, now infinitesimal because
+$H(1-H)$ is infinitesimal. This is the replacement for the
+$T$-infinitesimal argument in R1.
+The normalized current coupling is a bounded multiple of the
+already purchased $\sqrt T\,\mu uvb$.
+
+For the entire remaining opposite row put $J=B(j+1)+u^2$ and
+$a_R=Tq_zv^2(\alpha-BTCHu^2)^2$.
+Since $\alpha-BTCHu^2=O(BJ)$, its costs are
+\[
+\begin{aligned}
+a_R/f_c&=O((T/j)v^2J^2),&
+a_R/(q_cy)&=O(v^2J^2),\\
+a_R/r_c&=O(Tv^2J^2/(1-p)),&
+a_R/(M_eyx)&=O(T(1+1/n)v^2J^2/j^2).
+\end{aligned}                                                    \tag{EN20}
+\]
+The direct $r_c$ cost applies for $1-p$ a unit.
+For $p\sim1,\eta_*$ a unit, RFN18a applies using $j^2B$ a unit.
+For $p\sim1,\eta_*$ infinitesimal, RFN18c applies using
+$(1+1/n)/j^2=O(1)$. Thus the entire square, including every
+higher testing degree, is free. No state ratio occurs in a cost.
+
+Finally the complete mixed hard term is
+$2(\alpha+1/2)uv\sqrt{TH(1-H)}
+(\widehat N/\sqrt{n+h_0}-c_bb)\widehat M$.
+Its bounded coefficients have zero residue.
+The strict bounded-Gram argument therefore applies exactly as in
+the final paragraph of RFN: choose a large fixed radial pivot, buy
+the finitely many free rows, and retain positive fractions of
+(EN16). The two hard pivots are $1$ and the positive number
+(EN19). Restore all whole packets in (EN14), RFN15, and
+$mpD_u^2N_0^2$, and the pure testing factor $D_u$.
+This proves the full local parent for all infinitesimal $u,v>0$
+and arbitrary $z>0$, with both unrestricted state normals.
+The exact SJ state/sign reduction supplies every state and the
+literal axes in this local chart.
+
+\subsection{Every other testing angle, with weak \(m\) retained}
+
+This outer join uses only (EN9), positivity of the six native
+weights, and exact full-parent identities. Set
+$\widetilde m=m/(1+m)$, a bounded positive source coefficient below
+$m$, and retain the difference as the whole original $m$ square.
+Keep the entire $n$ and $\alpha$ events throughout.
+For the single unbounded coefficient $C$ or $D$, retain its excess
+over a sufficiently large positive real cap. Other selected
+coefficients have the actual bounded positive residues (EN9).
+
+\paragraph{Finite Bob with nonzero residue and bounded Alice.}
+Let $v$ have nonzero finite residue, $u$ be bounded, and use the
+five full-state rows
+\[
+P=uW,\quad Y,\quad X,\quad Z,\quad S=\sqrt{\widetilde m}\,W.
+                                                               \tag{EN21}
+\]
+The selected $m$ event is the entire square
+$[vS-\sqrt{\widetilde m}(X-uvY+uZ)]^2$.
+All other terms use $P,Y,X,Z$ with bounded coefficients.
+In R3 the strong row is $P-Y$; on its kernel the selected remaining
+form on $(Y,X,Z)$ is
+\[
+\frac T2D_uD_vY^2+\frac{1+T}{2T}v^2(uX-Z)^2+K_0 .
+\]
+In R4 the strong row is $P+uvX-Y-vZ$; on its kernel it is
+\[
+\frac{D_vv^2}{2T}(Z-uX)^2+
+\frac{T}{2(1-T)}D_uD_vY^2+K_0 ,
+\quad
+K_0=\frac{D_u(vY-Z)^2+D_v(X+uZ)^2-D_uD_vZ^2}{2}.
+\]
+The leading principal minors in the order $(Y,X,Z)$ are
+\[
+\begin{array}{c|c|c}
+ &R3&R4\\ \hline
+1&
+\dfrac{D_u(TD_v+v^2)}2&
+\dfrac{D_u(T+v^2)}{2(1-T)}\\[4pt]
+2&
+\dfrac{D_u(TD_v+v^2)(Tu^2v^2+Tv^2+T+u^2v^2)}{4T}&
+\dfrac{D_uD_v(T+v^2)(T+u^2v^2)}{4T(1-T)}\\[4pt]
+3&
+\dfrac{v^2(1+T)D_u^2D_v(Tu^2+v^2)}{8T}&
+\dfrac{v^2D_u^2D_v^2(Tu^2+v^2)}{8T(1-T)} .
+\end{array}                                                    \tag{EN22}
+\]
+All are strictly positive at the real residues, even $u=0$.
+The $S$ direction has the positive coefficient $v^2$ in the
+selected $m$ event. A sufficiently large real cap on the strong
+row makes the entire five-row residue positive definite.
+This is the real finite-cap Schur lemma: if a bounded real
+quadratic form is positive on the kernel of a linear map, adding
+a sufficiently large real multiple of the squared map makes it
+positive definite. The unbounded actual coefficient permits
+every such cap. This argument includes $m$ infinitesimal.
+
+\paragraph{Infinitesimal Bob and Alice a finite positive unit.}
+Use $R=uW-Y$, $B_t=X+uZ$, $V_Z=vZ$, and $Y$; the testing inverse
+$1/u$ is bounded. The full selected parent is a bounded quadratic
+on these four rows because
+$v(W+uY)=(v/u)(R+D_uY)$ and
+$J=R+uvB_t-D_uV_Z$.
+Its residue splits off $(\widetilde m+1/2)B_t^2$ and the form
+\[
+CR^2+AD_uY^2+(D+1/2)(R-D_uV_Z)^2
+-D_uYV_Z-\tfrac12D_uV_Z^2.                            \tag{EN23}
+\]
+In R3 restrict to the strong-row kernel $R=0$.
+After removing a positive factor $D_u$, the matrix on $(Y,V_Z)$ is
+$\left(\begin{smallmatrix}T/2&-1/2\\-1/2&
+(1+T)D_u/(2T)-1/2\end{smallmatrix}\right)$;
+its determinant is $(1+T)u^2/4>0$.
+In R4 the strong kernel is $R=D_uV_Z$.
+On $(R,Y)$ its first diagonal is $1/(2T)-1/(2D_u)>0$,
+and its determinant is $u^2/[4(1-T)]>0$.
+A large real cap again makes (EN23) strict.
+
+\paragraph{Infinite Bob and bounded Alice.}
+Put $w=1/v$, divide the homogeneous parent by $v^2$, and use
+the five rows (EN21). Select any fixed positive real lower caps
+$c_0,a_0,d_0$ below $C,A,D$, and the actual $\widetilde m$ event.
+The full quadratic is bounded; its residue is
+\[
+[S+\sqrt{\widetilde m}\,uY]^2+
+c_0(P-Y)^2+(a_0+\tfrac12)D_uY^2+
+d_0(uX-Z)^2+\tfrac12D_uX^2.                           \tag{EN24}
+\]
+This is positive definite on the five rows, for every bounded
+residue of $u$. It includes $u=0$ and $m$ infinitesimal.
+
+\paragraph{Infinite Alice.}
+Let $s=1/u$ and keep the entire $m,n,\alpha$ events.
+For finite $v$ of nonzero residue, after division by $u^2$
+the selected residue on $(W,Y,X,Z)$ is
+\[
+c_0D_vW^2+a_0D_vY^2+
+(d_0+\tfrac12)(W+vX)^2+\tfrac12(vY-Z)^2,
+\]
+which is positive definite. For $v$ infinitesimal use instead
+$(N,W,Y,V)=(sX+Z,W,Y,vX)$.
+The complete signed core after division by $u^2$ is
+\[
+\frac12\{W+(1+s^2)V-sY-svN\}^2
++\frac12(1+s^2)v^2Y^2
+-(1+s^2)Y(vN-sV)-\frac12(1+s^2)(vN-sV)^2
++\frac12D_vN^2 .
+\]
+Adding the selected $C,A,D$ packets gives strict residue
+$c_0W^2+a_0Y^2+(d_0+1/2)(W+V)^2+N^2/2$.
+Every full coefficient is bounded; no $s/v$ is used.
+If also Bob is infinite, divide by $u^2v^2$ and use
+$(W,X,Y,S_Z,T_Z)=(W,X,Y,sZ,wZ)$.
+The complete selected residue is
+\[
+c_0W^2+a_0Y^2+d_0(X-S_Z)^2+\tfrac12X^2
++\tfrac12(Y-T_Z)^2,                                   \tag{EN25}
+\]
+again positive definite. The full quadratic follows directly from
+$J/(uv)=wW+X-swY-S_Z$ and the exact signed core;
+its coefficients are bounded polynomials in $s,w$.
+
+These charts exhaust all nonnegative projective angles:
+both infinitesimal are the complete local theorem, and every other
+pair is one of (EN21)--(EN25) or (EN23).
+All strict-matrix coefficients use only bounded pure source or
+pure testing factors. Restore every selected excess, the untouched
+$m,n,\alpha$ packets, and the homogeneous testing squares.
+The exact SJ sign gauges, literal projective endpoints and
+real/imaginary state split finish the asserted all-tests theorem.
+
+\paragraph{Audit scope and dependencies.}
+The source dictionary and exact scalar/normal identities are the
+freshly reconstructed RSR, NSR, RFN sources; only their explicitly
+rechecked algebraic identities and finite SOS budgets are used.
+Equations (EN3)--(EN20) prove all changed source and coefficient
+bounds afresh. The entire outer join (EN21)--(EN25) is new.
+The focused checker corroborates source coefficient limits,
+full-parent expressions, complete hard entries, and every printed
+positive kernel matrix. Analytical uniform estimates and the
+exhaustive join are the proof above, not an inference from its receipt.

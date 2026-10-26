@@ -1,0 +1,181 @@
+\section[A uniform native C1 cap and an ordinary-angle admission]{A uniform native C1 cap and an ordinary-angle admission}
+\label{sec:c1-global-native-cap}
+
+This section uses the original canonical C1 source, not an enlarged
+formal parameter family. Thus $\lambda=n=0$, $d>0$, $m,C,A,\alpha>0$,
+$D,\beta\ge0$ with at most one zero, and the source has its actual
+finite noncommuting stationary contact. Use the inherited global sign
+entry and normalize $C=2$. The exact full-parent Alice reflection
+permits $0<k\le1$. Put
+\[
+ x=k^2,\quad r=1-a\eta,\quad\theta=t\zeta,\quad
+ h=1-\theta,\quad y=v_c^2=x\eta\zeta,
+\]
+\[
+ K=1+x,\ R=1+xr,\ T=1+xh,\ G=h+\zeta,
+ \quad M=R-t,\ J=T-a,\ E=1-x\eta h,\ Q=1-x\zeta r.
+ \tag{NC1}
+\]
+The inherited exact signs give $0<r,\theta<1$, $E,Q,M,J>0$ and
+$0<a,t<2$. There is no size assumption on $\eta,\zeta,e$ or a
+positive lower bound on any opening.
+
+\paragraph{Three short positive source identities.}
+The original coquotient polynomials obey
+\begin{align*}
+ P_4&=TE+x(1-r)G,\\
+ P_\alpha&=Rh(1+y)+\zeta ME,\\
+ P_d&=p_0+\eta p_1,\qquad
+ p_0=1+2xh+rx^2G+x\zeta,\quad
+ p_1=x\{K\zeta+xh\theta\}.
+ \tag{NC2}
+\end{align*}
+These are obtained by substituting $a\eta=1-r$ and $t\zeta=\theta$
+in the unchanged seven native coquotients. In particular $P_d\ge1$.
+The original nonnegative $D,\beta$ are precisely the inequalities
+\[
+ B_5:=K(1+y)(r+\eta)-(\eta T-1+r)P_d\ge0,
+ \qquad B_\beta:=Kx(r+\eta)G-\theta P_d\ge0.
+ \tag{NC3}
+\]
+The exact relative coefficients are
+\begin{align*}
+ \frac C d&=\frac{K(r+\eta)E}{2(1-r)P_d},&
+ \frac A d&=\frac{\eta P_4}{2rP_d},\\
+ \frac m d&=\frac{Kx(r+\eta)h(1+y)}{2M\zeta P_d},&
+ \frac\alpha d&=\frac{x^2\zeta(r+\eta)P_\alpha}{2QP_d},\\
+ \frac Dd&=\frac{B_5}{2J\eta P_d},&
+ \frac\beta d&=\frac{B_\beta}{2\theta P_d}.
+ \tag{NC4}
+\end{align*}
+All denominators have their original positive signs; no denominator is
+silently declared a unit.
+
+\begin{lemma}[A uniform native gap]
+On every physical native C1 contact oriented by $0<k\le1$,
+\[
+                         E\ge\frac1{18}.             \tag{NC5}
+\]
+This includes the literal boundaries $D=0$ or $\beta=0$.
+\end{lemma}
+\begin{proof}
+Define
+\[
+ \mathcal A=\theta T+K\zeta>0,\qquad
+ \mathcal C=RG(1+rxh),
+\]
+\begin{align*}
+ \mathcal B={}&h^2rx^2+hrx(2-h)+h^2x+hrx^2\zeta
+             +hx\zeta+hx+h\\
+             &+rx\zeta+x\zeta+2\zeta+1.
+\end{align*}
+Direct multiplication of (NC2)--(NC3), using $x\eta h=1-E$,
+gives the polynomial identity
+\[
+                  hB_5=-\mathcal A E^2+\mathcal B E-\mathcal C.
+ \tag{NC6}
+\]
+Every summand in $\mathcal B$ is nonnegative. Since
+$0<x,r,h\le1$ and $h(2-h)\le1$, its six terms without $\zeta$
+sum to at most $6$ and the coefficients of $\zeta$ sum to at most
+$6$. Hence $\mathcal B\le6(1+\zeta)$. The native inequality
+$\theta=t\zeta<2\zeta$ gives $1<h+2\zeta$, so
+$1+\zeta<3G$. Also $\mathcal C\ge G>0$. From $B_5\ge0$ and
+(NC6),
+\[
+ G\le\mathcal C\le\mathcal B E\le18GE.
+\]
+Cancel the positive pure source $G$. This proves (NC5) without
+inverting an opening or assuming any of $\eta,\zeta$ bounded.
+\end{proof}
+
+\paragraph{An elementary division-free elimination.}
+Keep $p_0,p_1$ from (NC2), and set
+\begin{align*}
+ a_2&=Kx\zeta-Tp_1,&
+ a_1&=K(1+x\zeta r)-Tp_0+(1-r)p_1,&
+ a_0&=Kr+(1-r)p_0,\\
+ b_1&=KxG-\theta p_1,&
+ b_0&=KxrG-\theta p_0.
+\end{align*}
+Then $B_5=a_2\eta^2+a_1\eta+a_0$ and
+$B_\beta=b_1\eta+b_0$. Expanding these two expressions, or just
+eliminating their quadratic and linear terms successively, gives
+\begin{align*}
+ &b_1^2B_5-a_2B_\beta^2-(b_1a_1-2a_2b_0)B_\beta\\
+ &\qquad=b_1^2a_0-b_1a_1b_0+a_2b_0^2\\
+ &\qquad=x^2h^2K^2RG^2
+       \{1+2xh+rx^2h^2+(1-r)x\zeta\}.
+ \tag{NC7}
+\end{align*}
+The last equality is a short polynomial identity in $x,r,h,\zeta$;
+all five of its input coefficients are printed above. No inverse of
+$b_1$, no resultant premise, and no localization is used. For reference,
+$b_1=xh\{K(1+\zeta)-x\theta^2\}>0$ as well.
+
+\begin{theorem}[Actual unit/unit C1 contacts enter the five-event exit]
+If both actual C1 half-angles $k,v_c$ are positive bounded units,
+the original source has five consecutive events bounded below relative
+to $d$. Consequently its entire original parent has the inherited
+all-tests tensor-SOS certificate. All upper event scales and the
+retained zero-coefficient boundaries are allowed.
+\end{theorem}
+\begin{proof}
+After the exact Alice orientation, $x,y$ are bounded positive units.
+Thus $\eta\zeta=y/x$ is a bounded positive unit. If $\eta$ were
+unbounded, $\zeta$ would be infinitesimal. Then $\theta=t\zeta$
+would be infinitesimal, contradicting $x\eta(1-\theta)<1$.
+If $\zeta$ were unbounded, $\eta$ would be infinitesimal and
+$r=1-a\eta$ would have residue one, contradicting $x\zeta r<1$.
+Therefore $\eta,\zeta$ are both bounded positive units.
+
+All polynomials in (NC2)--(NC3) now have bounded coefficients and
+bounded arguments. If $h$ were infinitesimal, the exact specialization
+\[
+             B_\beta\big|_{\theta=1}
+                    =-1-x\zeta(1-r)\le-1
+\]
+would contradict $B_\beta\ge0$. Thus $h$ is a positive bounded
+unit. The uniform cap gives that $E$ is a unit. Equations (NC2) make
+$P_4,P_\alpha,P_d$ positive bounded units: use $P_4\ge E$,
+$P_\alpha\ge Rh(1+y)$, and $P_d\ge1$.
+
+The first four equations of (NC4) now show that
+$C,A,m,\alpha$ are all strong relative to $d$. Their denominators
+are positive bounded quantities; they may be infinitesimal. Suppose
+both $D/d$ and $\beta/d$ were infinitesimal, including a possible
+literal zero. Their last two bounded denominator products in (NC4)
+would make $B_5,B_\beta$ infinitesimal. Every coefficient on the
+left of (NC7) is bounded, so that side would be infinitesimal. Its
+right side is a positive unit, since $x,h,K,R,G$ are units and the
+last bracket is at least one. This is a contradiction.
+
+Thus $D$ or $\beta$ is strong. The original cycle
+$(\lambda,D,C,A,\alpha,m,\beta,n)$ has respectively the five
+consecutive strong events $(D,C,A,\alpha,m)$ or
+$(C,A,\alpha,m,\beta)$. Apply the inherited five-consecutive-event
+theorem, whose stated scope allows arbitrary upper weights and every
+independent testing chart. No independent test is identified with
+an actual source angle in this source-entry argument.
+\end{proof}
+
+\paragraph{Exact intersection with the revision-3 residual rows.}
+The new all-tests theorem closes the actual $(U,U)$ subcase of
+\textbf{C1.5}. It does not close the whole C1.5 row. It has no
+intersection with C1.1 or C1.4, where $k$ is infinitesimal. In C1.1,
+the inherited $q=x\eta\le1/2+\operatorname{Inf}$ bound and
+$\zeta$ infinitesimal already force $v_c^2=q\zeta$ infinitesimal.
+The uniform cap (NC5), unlike the new all-tests consequence, applies
+to every original C1.1, C1.4 and C1.5 source. All statements may
+be intersected with positive infinitesimal $\delta_{\rm tot}$ and
+the complement of every earlier admission without altering their
+proofs. No remaining typed intersection is asserted nonempty.
+
+\paragraph{Verification scope.}
+The accompanying checker reconstructs $P_4,P_\alpha,P_d$ from the
+original native formulas and checks (NC2), (NC6), (NC7), all six
+ratios in (NC4), and the $\theta=1$ specialization exactly. It
+corroborates these sixteen short identities. The ordered-field bounds and invocation of the full-parent
+five-event theorem are the mathematical proof above; a checker PASS
+alone is not an all-tests admission. The root's separate scoped
+mathematical review found no blocking gap.

@@ -1,0 +1,139 @@
+% Fresh reconstruction, 2026-10-22.  This is not a recovered original WS file.
+\section{A freshly derived full-state sign and projective join}
+\label{sec:rederived-state-join}
+
+This section is a new proof derived from the complete weak-C2 parent retained
+in the earlier R21 checkpoint.  It does not claim byte identity with the
+missing late-R21 state-join file.  Its conclusion is a reduction of the full
+parent to one positive state-ratio chart.  The certificate in that remaining
+chart is a separate hypothesis; no global finite-lift conclusion is drawn
+here.
+
+Let $K_c,K_t\supset\mathbb R$ be real closed fields, occupying separately
+labelled tensor factors.  All quantities $u,v,W,X,Y,Z$ below belong to $K_t$;
+all six coefficients $n,m,A,C,D,\alpha$ belong to $K_c$ and are nonnegative.
+Write $D_u=1+u^2$, $D_v=1+v^2$, and define the complete parent
+\begin{align}
+ F={}&nD_uD_vX^2+m\{v(W+uY)-X-uZ\}^2
+       +AD_uD_vY^2+CD_v(uW-Y)^2\\
+    &+D(uW+uvX-Y-vZ)^2+\alpha D_u(vY-Z)^2+K,\tag{SJ1}\\
+ K={}&\tfrac12(uW+uvX-Y-vZ)^2
+       +\tfrac12D_u(vY-Z)^2
+       +\tfrac12D_v(X+uZ)^2-\tfrac12D_uD_vZ^2.\tag{SJ2}
+\end{align}
+Products involving source and testing quantities mean tensor products.
+For example, $nD_uD_vX^2$ means
+$n\otimes(D_uD_vX^2)$; a testing-only term means $1\otimes K$.
+The positive packets in (SJ1) are sums of squares in
+$K_c\otimes_{\mathbb R}K_t$, since each coefficient and each testing
+multiplier has a square root in its own real closed field.
+
+\paragraph{Sign gauges preserve the entire parent.}
+For $\varepsilon,\eta\in\{1,-1\}$, the substitution
+\[
+ (u,v,W,X,Y,Z)\longmapsto
+ (\varepsilon u,\eta v,W,\eta X,\varepsilon Y,
+  \varepsilon\eta Z)                                      \tag{SJ3}
+\]
+preserves every summand of (SJ1), including (SJ2).  Indeed the roots of the
+$m,C,D,\alpha$ packets acquire, respectively, the signs
+$\eta,\varepsilon,\varepsilon,\varepsilon\eta$, and the other roots also
+change only by a sign.  Thus $u,v$ may both be taken nonnegative without
+altering the source coefficients or the full expression.
+
+\paragraph{An exact positive hard block.}
+Set
+\[
+ t=\frac{X+uZ}{D_u},\qquad r=\frac{Y-uW}{D_u},\qquad
+ w=\frac{W+uY}{D_u},\qquad z=\frac{Z-uX}{D_u}.             \tag{SJ4}
+\]
+The inverse transformation is
+$X=t-uz$, $Z=z+ut$, $Y=r+uw$, $W=w-ur$.
+Let $H=1+u^2+v^2$ and $d=H^2-u^2v^2$.  Both
+$H-uv=1+(u-v)^2+uv$ and $H+uv$ are positive for $u,v\geq0$;
+in fact $H>|uv|$ for arbitrary $u,v$.  Consequently $d>0$.
+Define
+\[
+ \mathsf A=\frac12\begin{pmatrix}H&-uv\\-uv&H\end{pmatrix},\qquad
+ \mathsf B=\frac12\begin{pmatrix}-u^2v&-uv^2\\uv^2&u^2v\end{pmatrix}.
+\]
+The matrix $\mathsf A$ is positive definite.  Direct expansion and square
+completion give the exact identity
+\begin{align}
+ \frac K{D_u}
+ ={}&\left(\binom tr+\mathsf A^{-1}\mathsf B\binom wz\right)^{\!T}
+       \mathsf A
+       \left(\binom tr+\mathsf A^{-1}\mathsf B\binom wz\right)\\
+    &+\frac{D_uD_v}{2d}
+       \{u^2v^2(w^2+z^2)-2uvH wz\}.                    \tag{SJ5}
+\end{align}
+The rational matrix used in the shift is explicitly
+\[
+ \mathsf A^{-1}\mathsf B=
+ \frac1d\begin{pmatrix}
+ -u^2v(1+u^2)&-uv^2(1+v^2)\\
+ uv^2(1+v^2)&u^2v(1+u^2)
+ \end{pmatrix}.                                         \tag{SJ6}
+\]
+For any $a,b\in K_t$, the hard quadratic form is
+\[
+ \binom{a}{b}^{\!T}\mathsf A\binom{a}{b}
+   =\frac{H-uv}{4}(a+b)^2+\frac{H+uv}{4}(a-b)^2.         \tag{SJ7}
+\]
+This also gives an explicit square decomposition of the first term of
+(SJ5), with square roots taken only in $K_t$.
+
+If $u,v\geq0$ and $wz\leq0$, the second term of (SJ5) is nonnegative.
+It too is a square in $K_t$ (or can be split into its three nonnegative
+terms).  Hence $K\geq0$, and (SJ1) is a tensor sum of squares immediately.
+In particular the axes $w=0$ and $z=0$ are included, without division by
+either state coordinate.  The same identity, without sign gauges, proves
+the sharper implication $K<0\Longrightarrow uvwz>0$.
+
+\paragraph{Reduction of the remaining states.}
+The only remaining case after (SJ3) is $K<0$, $u,v>0$, $wz>0$.
+Then $w\ne0$.  Divide all four state coordinates by $w$.  Equation (SJ4)
+now has $w'=1$ and $z'=z/w>0$.  The ratio $z'$ is arbitrary: it may be
+infinitesimal, bounded, or unbounded in $K_t$.  No estimate in this
+reduction replaces $z'$ by a bounded coefficient.
+
+The parent is homogeneous of degree two in the state coordinates, so
+\[
+ F(u,v;W,X,Y,Z)=w^2F(u,v;W/w,X/w,Y/w,Z/w).               \tag{SJ8}
+\]
+If the parent on the right has a certificate $\sum_i h_i^2$ in
+$K_c\otimes_{\mathbb R}K_t$, then the parent on the left has certificate
+$\sum_i((1\otimes w)h_i)^2$.  This proves that certificates for the full
+parent with $u,v>0$, $w=1$, and arbitrary positive $z$ suffice for all
+finite affine testing parameters and all real states.
+
+\paragraph{Literal projective endpoints.}
+For clarity, the projective endpoints can be checked without a limiting
+argument.  Homogenize $u=U_1/U_0$, $v=V_1/V_0$, and put
+$D_U=U_0^2+U_1^2$, $D_V=V_0^2+V_1^2$, with neither pair identically zero.
+Multiplication by $U_0^2V_0^2$ turns (SJ2) into
+\begin{align}
+ K_h={}&\tfrac12(U_1V_0W+U_1V_1X-U_0V_0Y-U_0V_1Z)^2\\
+       &+\tfrac12D_U(V_1Y-V_0Z)^2
+        +\tfrac12D_V(U_0X+U_1Z)^2-\tfrac12D_UD_VZ^2.     \tag{SJ9}
+\end{align}
+At the four axes this is, exactly,
+\begin{align}
+ U_0=0:\quad &K_h=\tfrac12U_1^2\{(V_0W+V_1X)^2+(V_1Y-V_0Z)^2\},\\
+ V_0=0:\quad &K_h=\tfrac12V_1^2D_U(X^2+Y^2),\\
+ U_1=0:\quad &K_h=\tfrac12U_0^2D_V(X^2+Y^2),\\
+ V_1=0:\quad &K_h=\tfrac12V_0^2\{(U_1W-U_0Y)^2+(U_0X+U_1Z)^2\}.
+                                                               \tag{SJ10}
+\end{align}
+All other homogenized packets in (SJ1) retain nonnegative coefficients
+and are sums of squares.  Thus the endpoints are admitted directly,
+including the intersections of these axes.  Equations (SJ3)--(SJ10)
+establish the stated full-state, sign, and endpoint reduction.  They do
+not establish the still-required positive-ratio chart certificate.
+
+\paragraph{Verification scope.}
+The companion exact checker verifies the inverse transformation, the
+entire parent under all four gauges, the hard-block and Schur identities,
+homogeneity, homogenization, and all four endpoint formulas.  These are
+algebraic corroborations of the proof above; they are not a formal proof
+of the complete R21 theorem and do not certify other missing components.

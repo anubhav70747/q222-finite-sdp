@@ -1,0 +1,252 @@
+{
+  "checks": {
+    "full_W2_two_classical_zero_compression": true,
+    "printed_kernel_all_28_entries": true,
+    "rank_four_contact_pivot": true,
+    "seven_identity_free_rows": true,
+    "surface_source_equals_original_native_formulas": true,
+    "strict_seed_source": true,
+    "n_zero_seed_source": true,
+    "both_S35_seed_values": true,
+    "n_boundary_derivative": true,
+    "unitary_distinct_words_trace_bound": true,
+    "symbolic_universal_elimination": true
+  },
+  "all_pass": true,
+  "universal_elimination": {
+    "word_rows": 41,
+    "coefficient_rank": 23,
+    "free_entries_one_based": [
+      [
+        4,
+        4
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        6,
+        6
+      ],
+      [
+        7,
+        7
+      ]
+    ],
+    "all_nine_essential_relations": true,
+    "denominator_factors": [
+      "2*r*z + z + 1",
+      "r",
+      "r + 1",
+      "r - 1",
+      "r*z + 1",
+      "r*z - 1",
+      "z + 1"
+    ],
+    "all_pivots_nonzero_throughout_domain": true,
+    "pivot_factors": [
+      "r",
+      "r + 1",
+      "r - 1",
+      "r**2*z + 1",
+      "r*z + 1",
+      "r*z - 1",
+      "z + 1"
+    ],
+    "triangular_elimination": [
+      {
+        "word": "((), (0, 1, 0, 1))",
+        "entry": [
+          6,
+          7
+        ],
+        "pivot": "r**2*(z + 1)**2"
+      },
+      {
+        "word": "((0, 1, 0, 1), ())",
+        "entry": [
+          4,
+          5
+        ],
+        "pivot": "r**2*(z + 1)**2"
+      },
+      {
+        "word": "((0,), (1, 0, 1))",
+        "entry": [
+          2,
+          6
+        ],
+        "pivot": "2*r**2*(z + 1)**2"
+      },
+      {
+        "word": "((0, 1, 0), (1,))",
+        "entry": [
+          2,
+          5
+        ],
+        "pivot": "2*r**2*(z + 1)**2"
+      },
+      {
+        "word": "((1,), (0, 1, 0))",
+        "entry": [
+          3,
+          7
+        ],
+        "pivot": "2*r**2*(z + 1)**2"
+      },
+      {
+        "word": "((1,), (1, 0, 1))",
+        "entry": [
+          1,
+          6
+        ],
+        "pivot": "2*r**2*(z + 1)**2"
+      },
+      {
+        "word": "((1, 0, 1), (0,))",
+        "entry": [
+          3,
+          4
+        ],
+        "pivot": "2*r**2*(z + 1)**2"
+      },
+      {
+        "word": "((1, 0, 1), (1,))",
+        "entry": [
+          1,
+          4
+        ],
+        "pivot": "2*r**2*(z + 1)**2"
+      },
+      {
+        "word": "((), (0, 1, 0))",
+        "entry": [
+          4,
+          7
+        ],
+        "pivot": "-2*r**2*(z + 1)**2"
+      },
+      {
+        "word": "((0, 1, 0), ())",
+        "entry": [
+          5,
+          5
+        ],
+        "pivot": "-2*r**2*(z + 1)**2"
+      },
+      {
+        "word": "((0, 1), (1, 0))",
+        "entry": [
+          2,
+          3
+        ],
+        "pivot": "r**2*(z + 1)**2"
+      },
+      {
+        "word": "((0,), (0, 1, 0))",
+        "entry": [
+          1,
+          7
+        ],
+        "pivot": "-2*r**2*(z + 1)**2"
+      },
+      {
+        "word": "((0, 1, 0), (0,))",
+        "entry": [
+          1,
+          5
+        ],
+        "pivot": "-2*r**2*(z + 1)**2"
+      },
+      {
+        "word": "((), (1, 0, 1))",
+        "entry": [
+          3,
+          6
+        ],
+        "pivot": "2*r*(r - 1)*(z + 1)*(r*z + 1)"
+      },
+      {
+        "word": "((1, 0, 1), ())",
+        "entry": [
+          2,
+          4
+        ],
+        "pivot": "-2*r*(r + 1)*(z + 1)*(r*z - 1)"
+      },
+      {
+        "word": "((0,), (1,))",
+        "entry": [
+          2,
+          2
+        ],
+        "pivot": "4*r*(z + 1)*(r**2*z + 1)"
+      },
+      {
+        "word": "((0, 1), (1,))",
+        "entry": [
+          1,
+          2
+        ],
+        "pivot": "-r**2*(z + 1)**2"
+      },
+      {
+        "word": "((0,), (0,))",
+        "entry": [
+          4,
+          6
+        ],
+        "pivot": "4*(r**2*z + 1)**2"
+      },
+      {
+        "word": "((0,), (0, 1))",
+        "entry": [
+          3,
+          5
+        ],
+        "pivot": "8*(r - 1)*(r*z + 1)"
+      },
+      {
+        "word": "((1,), (0, 1))",
+        "entry": [
+          1,
+          3
+        ],
+        "pivot": "-2*r**2*(z + 1)**2"
+      },
+      {
+        "word": "((1,), ())",
+        "entry": [
+          3,
+          3
+        ],
+        "pivot": "-4*r**2*(z + 1)**2"
+      },
+      {
+        "word": "((1,), (1,))",
+        "entry": [
+          2,
+          7
+        ],
+        "pivot": "-8*(r - 1)*(r + 1)*(r*z - 1)*(r*z + 1)/(r**2*z + 1)"
+      },
+      {
+        "word": "((0, 1), (0, 1))",
+        "entry": [
+          1,
+          1
+        ],
+        "pivot": "-r**2*(z + 1)**2"
+      }
+    ],
+    "S35": "r*(r + 1)*(z + 1)**2/((32 - 32*r)*(2*r*z + z + 1))"
+  },
+  "scope": "Full 13-word W2 exclusion on r,x>0,r+x+3rx<=1; x=r*z. Unequal-angle positive Gram is not audited here.",
+  "worker_timeout_seconds": 30,
+  "no_solver_or_parameter_sweep": true
+}

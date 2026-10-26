@@ -1,5 +1,7 @@
 # Use NPA, then certify the remaining boundary
 
+**26 October reconciliation:** The [complete earlier proof sources and analytical reviews](../complete-proof-materials/) are now public. Later local verification questions in this route must be read against that completed baseline. See the [material checklist](../complete-proof-materials/CHECKLIST.md) for separate qualitative-proof, version-reconciliation and explicit-lift obligations.
+
 The construction should retain the inequalities that a small NPA relaxation
 already proves and add certificates for the boundary it misses. The new
 mathematics belongs in that second step. The final lift joins the corresponding

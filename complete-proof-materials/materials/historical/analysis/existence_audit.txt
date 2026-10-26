@@ -1,0 +1,266 @@
+Q222: bounded independent audit of finite-lift existence
+Date: 22 October 2026
+LATER RECOVERY UPDATE: The complete October R21 source volume has now been
+recovered under recovery/full_r21. Its LC body and operative dependencies
+are present. The missing-R21-body conclusion in Section 6 is superseded;
+see analysis/r21_c2_independent_audit.txt for the newer bounded audit.
+The August-specific gaps below are not a refutation of October R21.
+Scope: some finite SDP lift of the full eight-coordinate body. Evaluated
+coefficient matrices, an explicit dimension, and block order two are not
+requirements for this audit. No manuscript was edited or numerical search run.
+
+VERDICT (updated after inspecting the additional nested R21 selection)
+
+The inspected sources do not presently give a complete verified proof of
+existence. A newly located R21 opening makes a distinct unrestricted-SOS
+existence claim, but its cited complete local-certificate body is not in the
+selected nested payload inspected here; see Section 6. The August argument's
+gaps below do not refute that different proposed proof.
+This verdict does NOT follow from the missing E1--E3 extraction
+deliverables. The historical nonconstructive route would suffice if its
+universal tensor-SOS premise were proved. Its unresolved steps occur inside
+that premise: residue-contact routing/descent, and restoration of local
+exceptional modules to the full physical tensor. Dropping the bound two on
+root separation rank does not by itself establish these steps.
+
+No counterexample to finite SDP representability of Q222 is established here.
+The counterexample below concerns a residue-to-exact inference. The failure
+of particular previously proposed pencils also does not refute existence.
+
+SOURCE KEY
+
+A = source/inputs/canonical_august30/
+    Q222_SXDEG2_CONSOLIDATED_PARCHMENT_FINAL_2026-08-30.md
+B = source/inputs/frozen_august31/
+    Q222_SXDEG2_CORRECTION_PATCH_AND_FREEZE_2026-08-31.md
+C = source/compiler/effective_algebraic_extraction.tex
+D = source/diagonal/diagonal_proofs.tex
+P = source/inputs/prior_summary/physical_core.tex
+R = source/inputs/prior_summary/current_global_candidate_correction.tex
+
+Line numbers refer to these present files, not a historical PDF. The August
+31 six-part overlay was read together with A. The relevant nested August
+freeze inside the continuation ZIP contains the same freeze lineage, not a
+separate replacement existence proof. I inspected its listing and provenance
+README in memory. Further nested inspection later recovered the R21 selection
+described in Section 6. No replay or expensive computation was necessary.
+
+1. VALID IMPLICATIONS AND WHY CONSTRUCTION IS A SEPARATE QUESTION
+
+(a) Physical reduction. C:67--90 supplies a complete compact rational atom
+model Q222 = conv Phi(Z): simultaneous binary-observable dilation, Jordan
+blocks, realification, real pure-state decomposition and nine-atom
+Caratheodory reduction. This proves compactness, convexity and rational
+semialgebraicity. It does not imply semidefinite representability.
+
+(b) Scheiderer's exact criterion. A:182--205 correctly retains all real
+closed extensions and both independently varying arguments. Fresh primary
+verification: C. Scheiderer, Second-order cone representation for convex sets
+in the plane, arXiv:2004.04196v2, Theorem 3.10, printed pp. 12--15, and
+Corollary 3.19, printed p. 15 (https://arxiv.org/pdf/2004.04196).
+The latter gives a finite lift from universal tensor SOS, without a prescribed
+rank bound. Its proof obtains a finite function space; evaluated matrices or
+a user-supplied finite atlas are not extra hypotheses. Proposition 3.5 only
+handles strictly positive residue, leaving zero-residue contacts to prove.
+
+(c) Global geometry. The star/polar route A:64--129, its corrected visible
+facet argument B:R1, the normalized support cone A:134--178 and semialgebraic
+extreme-point choice A:192--196 form a valid route to a smaller criterion.
+In the support-cone proof, compactness of normalized E and e(x*)=1 make its
+conic hull closed (with the finite-dimensional Caratheodory bound understood).
+The asserted finite conic representation is first order and transfers.
+Once the universal tensor premise for each star is actually established,
+finite convex hull and polarity give the full quantum body, A:2205--2215.
+These conclusions are not impeded by the absence of printed affine matrices.
+
+(d) Coefficient descent. C:123--159 is valid conditionally on existence of
+a fixed finite block pattern. Compress the auxiliary span to dimension at
+most the ambient symmetric matrix space. Existence/equality of the lift is
+then a rational first-order sentence. Real-closed-field transfer to the real
+algebraic numbers, followed by elementarity back to R, gives algebraic
+coefficients. Enumerating single-block orders with exact decisions terminates
+under an independently proved finite-lift premise. This does not prove that
+premise, and an unrestricted lift does not ensure an order-two search works.
+
+(e) Fixed features from supplied local identities. D:359--440 proves the
+finite-rectangle assembly and moment-pencil separation argument. The algebra
+is sound under its explicitly listed hypotheses. For existence, neither
+evaluating a basis nor printing product coefficient tables is essential;
+choosing a finite basis suffices. Conversely, compactness is only useful once
+the local identities really cover the required incidence pairs and retain
+all clearing and coordinate maps. A cover of ordinary real points by residue
+formulae is not automatically a cover of all infinitesimal lifts.
+
+2. DECISIVE UNRESOLVED IMPLICATION: RESIDUE CHILD VERSUS EXACT CHILD
+
+A:2083--2091 makes common-node incidence the bridge from arbitrary independent
+arguments to the local modules. The proof's simultaneous-projective case
+uses leading cofactor packets A:2101--2132. At A:2134 it derives coordinate
+vanishing at the RESIDUE point. A:2134--2135 then invokes a proper common
+coordinate child and repeats the coefficient filtration. A:2141--2159 proves
+termination only for children imposing EXACT coefficient zeros or EXACT
+proper stratum equations. A:2173--2186 invokes that termination to close the
+universal tensor claim.
+
+There is a missing bridge. Vanishing of a nonnegative product in the residue
+field implies residue vanishing of the required factor, not exact vanishing
+in R. For a positive infinitesimal epsilon, bar(epsilon)=0 but epsilon != 0.
+An earlier positive packet annihilates a residue state; its actual amplitude
+need not be zero. Deleting its coefficient, restricting its amplitude to
+zero, or treating its residue face as an exact child changes the actual
+tensor unless an exact reconstruction/decomposition is proved.
+
+This distinction survives extremality. For example, on the compact convex
+semialgebraic set K={(s,t): 0<=s<=1, s^2<=t<=1}, the point
+(epsilon,epsilon^2) is extreme over a real closed extension. Both coordinates
+have zero residue but are nonzero, and the exact tangent
+t-2 epsilon s+epsilon^2 vanishes there. Thus exact supporting contact plus
+extremality does not generally upgrade a residue face to an exact face.
+This example refutes that general inference; it is not a Q222 counterexample.
+
+The text presents Bell-specific leading cofactor identities, but supplies no
+identity transporting the full tensor, including its nonzero infinitesimal
+coefficients, to the asserted exact common child. If "child" means only a
+residue stratum, the termination argument A:2143--2155 no longer proves a
+strict decrease of the exact invariant. Normalizing to a later coefficient
+layer is not the deletion of a nonzero original coefficient. Finiteness of
+the set in A:2156--2158 only proves termination after each arrow has been
+shown valid and strictly decreasing.
+
+A further local occurrence is A:1925--1936: the reciprocal unit-or-child
+firewall declares the z-, P-, or R-residue-zero cases earlier positive EVENT
+packets, then uses positive residues in A:2042. Positivity/earlier order can
+identify an initial face. It does not by itself furnish an exact SOS for the
+remaining full tensor or a strictly smaller exact problem. This is the
+unproved all-rates collar step, irrespective of the printed firewall label.
+
+The August 31 overlay repairs visible facets, chart definitions, gauge
+typing, zero-denominator wording, B0 coefficient factor typing and reader
+pivots. It does not supply this missing residue-to-exact reconstruction.
+
+3. INDEPENDENT MISSING LOCAL INPUT: THE B0 RESTORATION
+
+A:1542--1561 defines point scaling, and A:1624--1631 states the transverse
+comparison. A:1633 then asserts a pure-point radial congruence and positive
+clearing that convert the exact full 4x4 physical strict transform to S0,
+whose four-square formula is A:1641--1648. Neither that congruence matrix nor
+the clearing factor nor the complete source-to-parent substitution is given.
+B:R5 fixes factor typing of the displayed formula; it does not provide those
+maps or prove the claimed parent identity.
+
+D:197--291 verifies the exact coefficient module itself and explicitly
+records the absent restoration at D:286--291. This is mathematically the
+right scope: a finite SOS for S0 proves a finite SOS for the actual tensor
+only after an exact allowed transformation between them is proved. Merely
+being a finite displayed identity does not identify S0 with the original
+slack. This is an existence-premise defect, not a demand to export global
+matrix dimensions or evaluate E1--E3.
+
+Do not call the full theorem false from this omission. The claimed maps
+could exist. What is absent is their pen-and-paper derivation and the exact
+identity preserving the tensor. Conditional local identities remain usable.
+
+4. WHY DROPPING THE ORDER-TWO CLAIM DOES NOT CLOSE THE PROOF
+
+An incorrect separation-rank estimate might cease to matter for plain SDP
+existence if the same displayed roots were still finite elements of R tensor R.
+That relaxation is legitimate. Here, however, the unproved steps concern
+whether the actual universal tensor has any SOS certificate supplied by the
+argument. Residue restriction discards data; a missing restoration map fails
+to identify the tensor being certified. Allowing larger finite ranks does
+neither operation for free.
+
+The local diagonal implication, with genuine diagonal-square membership and
+positive tangential quadratic class, is supported by Scheiderer's 2025
+Proposition 3.11/Lemma 3.12 (https://arxiv.org/pdf/2509.17121), and D:89--195
+gives an explicit denominator-free local construction with these hypotheses.
+It does not prove that all physical contacts satisfy those hypotheses.
+In particular, a positive eliminated scalar Hessian does not itself supply
+the full independently evaluated tensor identity. Uncontrolled mixed
+inversion is also not a harmless enlargement of finite root rank: D:174--190
+shows why 1/(1-xy) cannot have finite separation rank on an open rectangle.
+
+R:284--285 explicitly limits its strictness result to the actual previous
+pencils and leaves other enlarged constructions and arbitrary finite-lift
+existence untouched. It is not an obstruction theorem for all SDP lifts.
+
+5. SMALLEST SUFFICIENT MISSING LEMMA FOR THE EXISTENCE TARGET
+
+An all-rates zero-contact lemma would suffice, without a block bound:
+
+For every real closed R/R_real, every normalized physical extreme point
+x of the canonical star, and every pure real strategy p whose slack has
+zero multiplication residue, the ACTUAL tensor
+  1 tensor 1 - sum_i x_i tensor Phi_i(p)
+(up to the existing pure-side positive normalizations) is a finite sum of
+squares in R tensor_{R_real} R.
+
+It is enough to prove this locally at each real zero-incidence pair, allowing
+arbitrary independent infinitesimal rates. A practical proof must retain
+positive infinitesimal coefficients, give exact centering/restoration to the
+full parent tensor, and use only identities living in the tensor product.
+For every proposed child transition it must either:
+  (i) prove an exact zero and a genuine decrease of the exact invariant; or
+  (ii) exhibit an exact SOS decomposition retaining the transverse terms and
+       reducing a stated residual problem under a proved well-founded measure.
+The B0 case additionally needs its actual congruence, clearing and complete
+parent identity. Root separation ranks and number of squares may be arbitrary
+finite integers for this existence lemma.
+
+Positive-residue Proposition 3.5 then handles all remaining pairs, and
+Corollary 3.19 plus the valid global geometric reductions yields a finite
+SDP lift. Its compactness/finite-function-space step supplies finiteness
+nonconstructively. No evaluated pencil is needed to finish that theorem.
+
+Audit boundary: this is a bounded source-and-implication audit, not a claim
+that every displayed high-degree identity has been freshly expanded by hand.
+The identified missing implications suffice to prevent validation of the
+supplied global existence proof, independently of such expansions.
+
+6. IMPORTANT ADDENDUM: THE DIFFERENT R21 UNRESTRICTED-SOS CLAIM
+
+New inspected source: recovery/r21_selected/opening_assembly.tex, recovered
+from continuation ZIP -> baseline/provenance/preceding extraction update ZIP
+-> previous_release/finite-lift extraction package ZIP -> inputs/r21_selected.
+The opening has 372 lines and expressly claims qualitative finite-SDP
+existence, with no rank-two or evaluated-pencil conclusion. Its final
+assembly at lines 239--332 is a valid conditional application of the exact
+criterion: if its local-certificate proposition LC holds for all physical
+C1/C2 sources and independent tests, the pure-side restoration, finite
+source/testing combinations, and criterion give full finite-lift existence.
+
+The body claimed to prove LC is cited at lines 14--22 and 233--236 as
+LC1--LC10 / LCH1--LCH3, component pe1088004af65. The opening's lines 184--236
+refer to EN1--EN16, AU1--AU19, AS, NC7, CU/CR, UH, JC, C1.1/C1.4, HJ,
+CT1--CT16 and A6 full-parent constructions. Those exact bodies are required
+to audit LC. This opening is not itself their derivation.
+
+The selected finite-lift extraction archive contains only four
+inputs/r21_selected files: this opening, criterion_interface_rechecked.tex,
+weak_alpha_source_and_unit_n_REDERIVED.tex, and
+weak_alpha_weak_n_and_c1_REDERIVED.tex. A literal scan of the actual text
+members finds LC1, LC10 and pe1088004af65 only in opening_assembly.tex.
+The one additional nested ZIP in that selected archive is the September 27
+ramified recovery/diagnostic package, not a complete R21 volume. This is an
+inventory observation, not a proof that no fuller archive exists elsewhere.
+
+The two selected weak-alpha bodies are substantial actual mathematics.
+In particular weak_alpha_weak_n_and_c1_REDERIVED.tex:4--19 states a precise
+d=1, bounded-coefficient source domain and promises arbitrary independent
+tests there; its cubic and higher circuit identities at lines 56--112 are
+actual separated radicals, not polynomial-only roots. This is a meaningful
+different technique and must not be rejected using an old polynomial-feature
+obstruction or by demanding rank two. It is a restricted source domain,
+however, and does not supply the missing tiny-total-scale C1/C2 global join.
+
+The other recovered source,
+recovery/r21_selected/fresh_physical_normalization_conditional_assembly.tex,
+proves physical normalization and closure. Its lines 343--367 explicitly
+state LC and distinguish missing local bodies; lines 394--426 correctly
+state the final theorem conditionally. The selected
+criterion_interface_rechecked.tex:36--85 gives the same valid interface and
+expressly does not prove the exhaustive source/testing cover.
+
+Required next action: recover and read the actual LC component and its
+local full-parent dependencies, if they survive. The newer opening is
+evidence of a different claimed proof, not a discharge of those dependencies.

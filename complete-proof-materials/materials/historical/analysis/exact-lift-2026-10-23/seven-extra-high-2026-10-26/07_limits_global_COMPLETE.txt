@@ -1,0 +1,262 @@
+ChatGPT said:
+
+Q222 7/7: Singular limits and global assembly audit
+Verdict so far: The global assembly step admits a short, rigorous theorem, stronger than the coordinatewise closure argument in the repository. It does not establish an exact lift until every required extreme source has been admitted. The classification and singular-boundary steps must be audited independently of that assembly theorem.
+1. A general closed-sum theorem
+Let
+$\mathcal P=\{f(q)=f_0+b\cdot q:\ f(q)\ge0
+\text{ for every }q\in\mathcal Q_{222}\}
+\subset\mathbb R^9.$
+Lemma 1 (closed sums of sound certificate cones). If $K_1,\ldots,K_r$ are closed convex cones contained in $\mathcal P$, then
+$K_1+\cdots+K_r$
+is closed.
+Proof. The origin is an interior point of the local Bell polytope, hence of $\mathcal Q_{222}$. Choose $\rho>0$ such that $B_\rho(0)\subseteq\mathcal Q_{222}$. For every $f=f_0+b\cdot q\in\mathcal P$,
+$f_0\ge\rho\|b\|,\qquad f_0\ge0.$
+In particular, $f_0=0$ forces $f=0$.
+Suppose $f^{(j)}=\sum_{i=1}^r f_i^{(j)}\to f$, with $f_i^{(j)}\in K_i$. Since every summand is globally sound,
+$0\le f_{i,0}^{(j)}\le f_0^{(j)}.$
+The ball inequality therefore bounds every coefficient vector $f_i^{(j)}$. Passing to a common subsequence gives limits $f_i\in K_i$, and $f=\sum_i f_i$. $\square$
+This is stronger than assuming the cones lie in one nonnegative canonical coordinate orthant. It also applies to sound NPA certificate cones whose canonical coefficients need not all be nonnegative.
+The hypotheses matter: closedness of each summand and global soundness are essential. A cone of inequalities valid only on a restricted testing region does not qualify. Nor does this argument imply that an arbitrary projection of a PSD cone is closed.
+Corollary (extreme-ray obstruction). If $\mathbb R_+f$ is an extreme ray of $\mathcal P$, or of a fixed canonical source cone in which all the summands lie, and $f\in\sum_iK_i$, then $f\in K_i$ for at least one $i$.
+Indeed, every nonzero summand must be proportional to $f$. Thus a missing extreme ray cannot be manufactured by adding several sound certificate blocks.
+2. Exhaustive canonical-source classification
+Fix the canonical PR orientation and write
+$f_c=dH+4\sum_{\xi}\xi p_\xi,\qquad
+c=(d,\lambda,n,m,C,A,D,\alpha,\beta)\ge0.$
+Let $\mathcal K_{\rm can}$ be the cone of these globally quantum-valid sources.
+Lemma 2 (complete extreme-source reduction). Every extreme ray of $\mathcal K_{\rm can}$ is one of the following:
+Type
+Exact condition
+Event
+$d=0$, with an event-ray generator
+Noncoercive
+A physical relabeling of $\lambda=m=0$ or $\lambda=\alpha=0$
+C1
+$\lambda=n=0$, $d,m,C,A,\alpha>0$, $D,\beta\ge0$, $D+\beta>0$, with an actual finite stationary contact
+C2
+$\lambda=\beta=0$, $d,m,C,A,D,\alpha>0$, $n\ge0$, with an actual finite stationary contact
+
+
+
+The claim is that these classes exhaust extreme rays, not that every parameter choice satisfying the displayed sign conditions is extreme.
+Proof
+The eight noncentral coefficients $q_e$ in SG5–SG6 are nonnegative. For $d>0$, every $t_i$ appearing in their factorizations is strictly positive.
+Consequently, whether $q_e$ vanishes depends entirely on products of event weights, without possible cancellation.
+Consider the event cycle
+$(\lambda,D,C,A,\alpha,m,\beta,n).$
+A direct elimination of the product conditions in SG6 gives:
+The twelve exclusive pairs have cyclic distance three or four.
+
+
+
+The sixteen compatible pairs have cyclic distance one or two.
+
+
+
+The only pairwise compatible triples are the eight consecutive triples.
+
+
+
+To see why this is exhaustive rather than merely a list, noncoercivity is equivalent to the active Newton exponents lying in a closed half-plane through the origin. For the eight-point exponent square, it suffices to test the eight normals
+$(\pm1,0),\quad(0,\pm1),\quad(\pm1,\pm1).$
+For example, one axis condition imposes
+$\lambda\alpha=\lambda D=\alpha m=mD=0,$
+whose inclusion-minimal omitted sets are $\{\lambda,m\}$ and $\{\alpha,D\}$. Applying the other normals and the exact dihedral event actions produces precisely the twelve pairs above.
+Thus, a noncoercive source lies on one of the two relabeling orbits of exact closed faces.
+Now assume the Newton support is coercive. The Laurent determinant polynomial has a finite minimum. If this minimum were strictly positive, sufficiently small opposite perturbations of the active source coefficients would preserve positivity at every noncommuting test. At compatible measurements, $H$ and every event term are already nonnegative. The source would therefore fail to be extreme.
+Hence an extreme coercive source has a finite zero.
+At that zero, the $3\times3$ state block is positive definite by SG3. Its kernel is one-dimensional and gives the six stationary equations SG7: four state equations and two angular derivatives. These are homogeneous linear equations in the source coefficients, with the contact held fixed.
+If seven or more event weights were positive, the active source space would have dimension at least eight. The six equations, together with the normalization, would leave a nonzero two-sided source perturbation. Crucially, SG7 implies global physicality, so these perturbations remain physical at every independent test, not merely at the chosen contact.
+Therefore at most six event weights are positive. Coercivity requires at least five, since at most three omitted events can be pairwise compatible.
+Exactly two or three weights are consequently omitted. The dihedral action has two orbits of compatible pairs, represented by
+$\{\lambda,n\},\qquad\{\lambda,\beta\}.$
+Their possible third omissions yield precisely C1 and C2. In particular, $n=0$ in C2 is also a C1 triple-omission orbit. $\square$
+This establishes the classification dependency of SG5–SG10 in chapter 04 without treating the case inventory itself as sufficient evidence.
+An important global-extremality lemma
+There is a subtle distinction between being extreme in a canonical cone and extreme in the complete Bell-valid cone. Here it disappears for the hard sources.
+Lemma 3. Every extreme canonical ray with $d>0$ is also an extreme ray of $\mathcal P$.
+Indeed,
+$\mathcal K_{\rm can}
+=\mathcal P\cap\{f:f(\mathrm{PR})\le0\},
+\qquad d=-f(\mathrm{PR}).$
+Suppose $f=g+h$ with $g,h\in\mathcal P$, and $d(f)>0$. For sufficiently small $\varepsilon>0$,
+$f_\pm=(1\pm\varepsilon)g+(1\mp\varepsilon)h$
+remain globally valid and satisfy $d(f_\pm)>0$. Thus they belong to the canonical cone. Canonical extremality forces $f_+,f_-$, and hence $g,h$, to be proportional to $f$.
+This proves the claim.
+Consequence: A missing C1/C2 extreme ray cannot be supplied indirectly by summing globally sound certificates from other PR orientations. It must itself belong to at least one retained certificate cone.
+3. Singular limits
+The classification permits a short general limit argument.
+Lemma 4 (no unexplained escaping contact). Let $c_j$ be normalized physical sources with actual coercive contacts $(u_j,v_j,\psi_j)$, and suppose $c_j\to c_\infty$. If $d_\infty>0$ and the limiting Newton support remains coercive, then the positive contact angles stay bounded above and away from zero. After normalizing $Z_j=1$, the contact states are bounded as well.
+Proof. Let $E_\infty$ be the active limiting exponent set. Coercivity implies
+$0\in\operatorname{int}\operatorname{conv}(E_\infty).$
+Hence some $a>0$ satisfies
+$\max_{e\in E_\infty}e\cdot t\ge a\|t\|
+\quad(t\in\mathbb R^2).$
+Since the active limiting $q_e$ are positive, their corresponding coefficients along the sequence are eventually bounded below by a common $\delta>0$. Therefore
+$\sum_e q_e(c_j)e^{e\cdot t}\ge
+\delta e^{a\|t\|}.$
+The central coefficients $h(c_j)$ stay bounded. A zero minimum of $L$ is therefore impossible at $\|t\|\to\infty$, where $t=(\log u_j^2,\log v_j^2)$.
+The angles remain in a compact positive interval. SG3 now provides a uniformly invertible limiting $3\times3$ state block, and its Schur kernel formula bounds $W_j,X_j,Y_j$ when $Z_j=1$. $\square$
+Thus an escaping sequence of contact angles must approach either $d=0$ or a noncoercive source. Both are independently covered by event certificates or the exact SG12/SG13 faces.
+The remaining singular cases follow as follows.
+Degeneracy
+Rigorous treatment
+$d\to0$
+The canonical source becomes a nonnegative event combination
+Simultaneous zero event weights
+Either the remaining omissions fit C1/C2, or an exclusive pair puts the limit on SG12/SG13
+C1: $D=0$ or $\beta=0$
+The finite-contact implicit-function continuation EN4 opens the missing weight while preserving a physical contact
+C2: $n=0$
+Already a C1 triple-omission orbit; also approachable from the regular C2 branch
+Vanishing source-contact coordinates
+SG21 and EN2 give $W,Z>0$, $X<0<Y$ in normalized positive gauges at native finite contacts
+Vanishing testing state coordinates
+Retain the complete homogeneous four-state polynomial; do not divide by a testing coordinate
+Commuting measurements
+$H\succeq0$ directly; all event packets are nonnegative
+Projective angle endpoints
+Use homogeneous $(a_0,a_1),(b_0,b_1)$, with nonzero squared norms
+Divergent native ratios
+Lemma 4 confines genuinely escaping contacts to already classified degeneracies; infinitesimal but nonzero source parameters are not replaced by zero
+
+
+
+The strict native coordinate signs and denominators appear in EN1–EN16 of chapter 05.
+For the sixth-root cone, the required limiting argument is especially simple. With
+$Z_6=\bigl(u^{i/6}v^{j/6}\psi_\ell\bigr)_{
+0\le i,j\le6,\ 1\le\ell\le4},$
+fix a positive testing rectangle and the unit state sphere, and set
+$M=\int Z_6Z_6^T\,d\mu\succ0.$
+Every matching PSD Gram satisfies
+$\lambda_{\min}(M)\operatorname{tr}G
+\le\int F_c\,d\mu.$
+For a convergent normalized source sequence, the right side is bounded, so a bounded Gram subsequence exists. Its limit remains PSD and satisfies every coefficient identity.
+This proves admission of limits of already admitted sources. It does not prove that all regular C1/C2 sources were admitted in the first place.
+4. The retained exact blocks and their duals
+The two noncoercive faces require no contact-admission hypothesis.
+For $\lambda=m=0$, SG12 is the exact source pencil
+$M_{12}(c,S)=
+\begin{pmatrix}
+K_0&K_1/2+S\\
+K_1/2-S&K_2
+\end{pmatrix}\succeq0,
+\quad S^T=-S,$
+where
+$\begin{aligned}
+K_0&=\operatorname{diag}(4C+4D+2d,4A,4\alpha),\\
+K_2&=\operatorname{diag}(4C,4A+4\alpha+2d,4D),\\
+K_1&=
+\begin{pmatrix}
+0&0&-4D-2d\\
+0&0&-4\alpha-2d\\
+-4D-2d&-4\alpha-2d&0
+\end{pmatrix}.
+\end{aligned}$
+For $\lambda=\alpha=0$, define
+$p=4C+4D+2d,\quad
+q_*=4m+4\beta+2d,\quad r=4D+2d.$
+SG13 is
+$\begin{pmatrix}
+4m&-4m&\xi\\
+-4m&q_*+4n&q_*\\
+\xi&q_*&q_*
+\end{pmatrix}\succeq0,$
+$\begin{pmatrix}
+p+4A&4D&-p\\
+4D&4D&-4m-r-\xi\\
+-p&-4m-r-\xi&p
+\end{pmatrix}\succeq0.$
+In each case the seven unrestricted source coordinates retain their nonnegative scalar constraints. The pencils are respectively order six with three skew auxiliaries, and two order-three blocks with one scalar auxiliary.
+Both inclusions follow from SG11–SG13: physicality implies positivity of the limiting quadratic matrix polynomial, which yields the displayed Gram; conversely the Gram makes the relevant univariate determinant part nonnegative, while every remaining Laurent term is nonnegative. SG4 and the direct commuting-test argument give global physicality. The quadratic matrix lemma includes singular matrices.
+The equal-angle C2 source cone supplies another independently exact block:
+$\begin{pmatrix}m&A-m\\A-m&C\end{pmatrix}\succeq0,\qquad
+\begin{pmatrix}D&A-D\\A-D&\alpha\end{pmatrix}\succeq0,$
+with $\lambda=\beta=0$, $d=4A-2m-2D$, $n=m+D-A$, and $A-m,A-D,m+D-A\ge0$. Its proved order-seven source and four-auxiliary behavior pencils may be retained unchanged.
+Exact polar and dual attainment
+For any of these face-reduced source lifts, write
+$M_i(c,z)=\sum_jc_jA_{ij}+\sum_kz_kB_{ik}\succeq0,$
+including the nonnegative source coordinates as diagonal PSD blocks.
+A strictly feasible point in the correctly reduced source space gives
+$K_i^*=
+\left\{y:\exists Y_i\succeq0,\
+\langle Y_i,A_{ij}\rangle=y_j,\
+\langle Y_i,B_{ik}\rangle=0\right\}.$
+This dual representation is attained. To see it, pair a convergent adjoint-image sequence with the fixed positive definite source matrix $M_i(c_*,z_*)$. This bounds $\operatorname{tr}Y_i$, so a PSD subsequence converges. Separation then gives the equality.
+One must first delete forced zero source directions. Applying full-dimensional Slater to a matrix with structurally zero rows would be invalid.
+For the sixth-root cone, the source representation is explicitly
+$c\ge0,\qquad G\succeq0,\qquad
+\mathcal A(G)=\mathcal B(c),$
+where $\mathcal A$ is coefficient matching in $r=u^{1/6},s=v^{1/6}$ and $\mathcal B(c)$ is the full SG2 polynomial with $u=r^6,v=s^6$. Its polar has the attained form
+$L_6^*=
+\left\{y:\exists\zeta,\tau\ge0,\
+\mathcal A^*\zeta\succeq0,\
+y=\mathcal B^*\zeta+\tau\right\}.$
+The strict global Gram witness in ASSEMBLY_REFINEMENT establishes the requisite Slater condition. Individual contact Grams may still be singular.
+For the fixed NPA $1+AB$ block, take
+$W=(I,A_0,A_1,B_0,B_1,A_0B_0,A_0B_1,A_1B_0,A_1B_1).$
+The affine moment matrix is
+$\Gamma(q,z)_{ij}
+=\mathcal L_{q,z}(W_i^\dagger W_j),
+\qquad \Gamma(q,z)\succeq0,$
+with the observed moments fixed by $q$, algebraically identical words identified, and all remaining moments represented by auxiliary variables $z$.
+This fixed NPA source cone is closed: uniform averaging over the sixteen deterministic assignments gives $\mathbb E[W_iW_j]=\delta_{ij}$, so its Gram trace is bounded by the affine constant coefficient.
+5. Conditional global assembly theorem
+Let $\{H_i\}_{i=1}^r$ consist of the fixed NPA source cone, the exact SG12/SG13 source cones, the retained exact C2 cone and any other closed, globally sound, finite SDP source cones, all transported to the nine-dimensional affine-function space. Include their finite physical relabeling orbits.
+Assume:
+Each source cone has the claimed exact attained SDP polar, using Slater in its correct face or an explicit facial reduction.
+
+
+
+The event rays and all noncoercive canonical sources are covered by the retained blocks.
+
+
+
+Every coercive extreme C1/C2 source with an actual contact belongs to at least one of the retained globally sound cones.
+
+
+
+Then
+$\boxed{\mathcal P=H_1+\cdots+H_r.}$
+Proof. Take any $f\in\mathcal P$. If it is nonnegative on all eight PR vertices, it is nonnegative on the nonsignalling polytope, so it is an event combination.
+Otherwise choose a PR vertex with $f(\mathrm{PR})<0$. Its canonical expansion has $d>0$ and nonnegative event weights. Normalize $d+\sum a_i=1$. By finite-dimensional Minkowski–Carathéodory, the source is a convex combination of at most nine extreme sources. Lemma 2 classifies each. Hypotheses 2–3 certify all of them. Undo normalization and relabeling.
+Thus $\mathcal P\subseteq\sum H_i$. Global soundness gives the reverse inclusion. $\square$
+Taking polars,
+$\mathcal P^*=\bigcap_iH_i^*.$
+Since
+$\mathcal P^*=\operatorname{cone}\{(1,q):q\in\mathcal Q_{222}\},$
+we obtain
+$\boxed{
+\mathcal Q_{222}
+=\left\{q:(1,q)\in\bigcap_iH_i^*\right\}.
+}$
+For an explicit affine pencil, let $T_i$ be the fixed linear map from each source coordinate vector to the affine Bell coefficient vector. Its block constraints are
+$Y_i\succeq0,\qquad
+\langle Y_i,A_{ij}\rangle
+=\bigl[T_i^T(1,q)\bigr]_j,\qquad
+\langle Y_i,B_{ik}\rangle=0,$
+together with the single fixed NPA matrix and the corresponding Gram-cone polar constraints. All auxiliaries $Y_i,z_i,\zeta_i,\tau_i$ are independent between blocks. This is one finite affine SDP construction, conditional on hypothesis 3.
+The forward inclusion $\mathcal Q_{222}\subseteq$ candidate follows from global soundness. The reverse inclusion follows from $\mathcal P=\sum H_i$ and separation, not from matrix matching or sampled certificates.
+Physical relabelings form a finite group: 128 local input/output/party relabelings act on the eight PR vertices, with a sixteen-element stabilizer of one PR vertex. Thus orbit assembly cannot introduce an infinite-family issue.
+6. Exact remaining dependency
+First unproved implication:
+$\boxed{
+\operatorname{Ext}_{\rm contact}(\mathcal K_{\rm can})
+\subseteq
+\bigcup_i H_i.
+}$
+This is the precise uniform admission statement for the remaining native C1/C2 extreme sources after retaining NPA and the exact source cones.
+The four sixth-root boundary certificates, the constant contact-complement rank 406, and the global Slater point do not prove this inclusion. A full-rank coefficient map can retain constant rank while every feasible Gram at some intermediate source becomes singular or ceases to be PSD.
+Additional gap? None is needed in the abstract assembly theorem once the stated hypotheses hold. For the proposed concrete construction, however, any supplementary regional R21 or cap/Bob block must first be proved globally sound at every independent testing angle and state. A local testing-region inequality is not a permissible summand.
+The strongest established result for this assigned task is therefore the combination of exhaustive extreme-source reduction, the nonescaping-coercive-contact lemma, exact singular closed-face pencils with attained duals, and the closed-sum/global-extremality theorem.
+Final status: conditional assembly proved; global Q222 finite-SDP extraction not yet proved. The outstanding mathematical work is genuinely contact admission, not another unaccounted-for closure, relabeling, or projective-limit operation.
+
+
+
+
+
+
+
+
+

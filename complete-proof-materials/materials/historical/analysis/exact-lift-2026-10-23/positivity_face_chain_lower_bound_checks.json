@@ -1,0 +1,411 @@
+{
+  "method": "Exact Boolean enumeration and rational Gaussian elimination",
+  "event_convention": "event=(x,y,a,b), vertex=(a0,a1,b0,b1), bits in {0,1}",
+  "event_subsets_enumerated": 65536,
+  "distinct_survivor_sets_including_empty": 1722,
+  "distinct_nonempty_survivor_sets": 1721,
+  "maximum_strict_nonempty_inclusions": 8,
+  "maximum_nonempty_faces_in_chain": 9,
+  "deterministic_hull_affine_dimension": 8,
+  "single_psd_cone_order_lower_bound": 9,
+  "first_unexcluded_order": 9,
+  "first_unexcluded_template": {
+    "order": 9,
+    "symmetric_dimension": 45,
+    "auxiliary_directions_at_most": 36,
+    "matrix_coefficients_at_most": 2025
+  },
+  "flag": [
+    {
+      "added_zero_event_xyab": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "removed_deterministic_witness_a0a1b0b1": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "remaining_deterministic_vertices": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "remaining_count": 12,
+      "classical_face_affine_dimension": 7
+    },
+    {
+      "added_zero_event_xyab": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "removed_deterministic_witness_a0a1b0b1": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "remaining_deterministic_vertices": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "remaining_count": 8,
+      "classical_face_affine_dimension": 6
+    },
+    {
+      "added_zero_event_xyab": [
+        0,
+        1,
+        1,
+        1
+      ],
+      "removed_deterministic_witness_a0a1b0b1": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "remaining_deterministic_vertices": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          1,
+          0
+        ]
+      ],
+      "remaining_count": 6,
+      "classical_face_affine_dimension": 5
+    },
+    {
+      "added_zero_event_xyab": [
+        1,
+        0,
+        1,
+        1
+      ],
+      "removed_deterministic_witness_a0a1b0b1": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "remaining_deterministic_vertices": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0
+        ]
+      ],
+      "remaining_count": 5,
+      "classical_face_affine_dimension": 4
+    },
+    {
+      "added_zero_event_xyab": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "removed_deterministic_witness_a0a1b0b1": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "remaining_deterministic_vertices": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ]
+      ],
+      "remaining_count": 4,
+      "classical_face_affine_dimension": 3
+    },
+    {
+      "added_zero_event_xyab": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "removed_deterministic_witness_a0a1b0b1": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "remaining_deterministic_vertices": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ]
+      ],
+      "remaining_count": 3,
+      "classical_face_affine_dimension": 2
+    },
+    {
+      "added_zero_event_xyab": [
+        0,
+        1,
+        0,
+        1
+      ],
+      "removed_deterministic_witness_a0a1b0b1": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "remaining_deterministic_vertices": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ]
+      ],
+      "remaining_count": 2,
+      "classical_face_affine_dimension": 1
+    },
+    {
+      "added_zero_event_xyab": [
+        1,
+        0,
+        1,
+        0
+      ],
+      "removed_deterministic_witness_a0a1b0b1": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "remaining_deterministic_vertices": [
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "remaining_count": 1,
+      "classical_face_affine_dimension": 0
+    }
+  ],
+  "scope": "The chain gives a necessary order bound, not an upper bound or a bound on maximum block size in a product lift."
+}

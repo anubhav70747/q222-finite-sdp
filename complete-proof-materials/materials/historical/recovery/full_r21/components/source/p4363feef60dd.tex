@@ -1,0 +1,107 @@
+\section{Full HI extension by the exact nonnegative \texorpdfstring{$n$}{n} packet}
+\label{sec:r7-hi-full-retained}
+The preceding contact lift extends to every original $n\geq0$; no
+additional comparison of source and testing scales is required. Retain
+all notation in (N0M.2)--(N0M.5), except for the coefficient replacements
+specified below. To distinguish the original source data from the four
+toric roots, write $A_{\rm src}$ for the original coefficient $A$ and
+$B_{\rm src}=H+yt$ for the original source $B$. Put
+\[
+ \nu=2nR=\frac{(B_{\rm src}+R)(1+R)S_c-R\Delta}{\Delta},
+ \qquad h=H-\nu,\qquad \zeta=R+\nu.
+\]
+The source quantity $\nu$ is nonnegative and bounded, even when $R$ is
+infinitesimal and $n$ is unbounded. Exact source identities are
+\[
+ \frac{2A_{\rm src}H}{qy}=\zeta,\qquad
+ c-d=\frac y2\{\zeta(1+q)-t\},\qquad
+ \mu-a_*=\frac q2\{E-\zeta(1+y)\}.             \tag{HI7.1}
+\]
+
+In addition to all four opening-excess squares $\mathcal E$ in
+(N0M.3), retain the actual nonnegative square packet
+\[
+ \mathcal N=4nd_pd_vx^2,\qquad
+ x=X+\frac RHpvY
+   =-g s+(H+R)TQ+v\sqrt y\,N_c-p\sqrt q\,N_m.
+                                                               \tag{HI7.2}
+\]
+This packet is zero at the original source contact. Its exact difference
+from the original $4nd_pd_vX^2$ is
+\begin{align*}
+ 4nd_pd_v(X^2-x^2)={}&4\nu d_pd_vg\,TsQ
+ -2\nu(2H+R)d_pd_vT^2Q^2\\
+ &-4\nu d_pd_vTQ(v\sqrt y\,N_c-p\sqrt q\,N_m).
+\end{align*}
+Every coefficient on the right is bounded. The unbounded coefficient
+$n$ occurs only in the retained positive square.
+
+The full exact identity (N0M.4) therefore holds with
+$F-\mathcal E$ replaced by $F-\mathcal E-\mathcal N$, with the same
+$h_c,h_m,f_A,f_B$, and with
+\begin{align}
+ C_s&=4d_v\left[y\{\zeta(1+q)-d_pg\}
+                       +\frac{2dt}{S_c}\delta_v\right],\notag\\
+ M_s&=4d_p\left[q\{d_vg-\zeta(1+y)\}
+                       -\frac{2\mu E}{S_c}\delta_p\right],\notag\\
+ \beta_c&=4h\sqrt y\,v d_pd_v,
+ &\beta_m&=-4h\sqrt q\,p d_pd_v,\notag\\
+ f_C&=2\{H^2-\nu(2H+R)\}d_pd_v,
+ &f_D&=2H(R+\nu)d_pd_v,\notag\\
+ e&=4h d_pd_vg.                                  \tag{HI7.3}
+\end{align}
+In this notation the complete first-normal couplings are
+$N_c(C_sB+\beta_cC)+N_m(M_sA+\beta_mC)$, and the graph is
+$\sum_i f_iA_i^2-eG^2$ on the positive sign chart. Every coefficient
+is a polynomial in $p,v$ with bounded source coefficients. The normal
+coupling coefficients are infinitesimal. Their exact contact sums vanish.
+
+Let $r=\bar R\in[0,1]$. The original source formulas give
+\[
+ \bar\nu=\frac{1-r}{3+r},\qquad
+ \bar c=\bar d=\bar\mu=\bar a_*
+        =\frac{1+r}{2(3+r)}.
+\]
+Consequently all four graph coefficients have the same strictly positive
+residue
+\[
+ \bar f_A=\bar f_B=\bar f_C=\bar f_D
+       =\lambda(r)=\frac{2(1+r)^2}{3+r}\in[2/3,2],
+ \qquad \bar e=4\lambda(r).                       \tag{HI7.4}
+\]
+The two state-normal diagonal coefficients have residue
+$4/(3+r)\in[1,4/3]$.
+These statements remain valid at $r=0$, where $n$ can be unbounded.
+
+All exact contact jets (N0M.6) hold unchanged for the new coefficients;
+also $C_s^*+\beta_c^*=M_s^*+\beta_m^*=0$. They can either be obtained
+by subtracting the contact-vanishing packets from the original parent,
+or checked directly using (HI7.1). The accompanying checker verifies
+them as rational identities for the complete source, without imposing
+$n=0$ and without replacing $R$ by $r$.
+
+Choose $k=(f_C^*+f_D^*)/2$, now a positive bounded source unit with
+residue $\lambda(r)$. The exact half-angle contact lift (N0M.8)--(N0M.9)
+then applies verbatim. The coefficient errors are infinitesimal bounded
+tensors, the finite circuit supplies strictly positive pivots on every
+conductor root, and the state-normal block has a strictly positive
+scalar residue. On
+the opposite-sign or zero-state charts the direct strict raw Gram
+argument applies as before. The strict bounded-Gram lemma supplies an
+exact tensor SOS for $F-\mathcal E-\mathcal N$; adding the five retained
+positive packets gives an exact SOS for the unchanged full original
+parent throughout the critical HI testing corner.
+
+No inversion or order on a mixed tensor is used. The only radicals of
+state expressions are taken in the pure-testing real closed field after
+a pure-testing sign choice. The result is a tensor SOS at each testing
+state, not a claim of an SOS with the original polynomial degree in the
+state amplitudes. Together with the already established remote tests
+and literal axes, this supplies the remaining strong C2 HI admission.
+
+\paragraph{Exact verification.}
+\texttt{check\_full\_hi\_contact\_module.py} first reuses the 18 exact
+normal-module checks, then verifies the $n$-packet identity, all new
+source and contact identities, and the common-residue formulas. The
+finite-radical bounded lift is proved above and in the independently
+reviewed four-term contact-lift lemma.

@@ -1,0 +1,91 @@
+{
+  "global_E1_E2_E3": "OPEN",
+  "historical_549_page_existence_proof_reaudited": false,
+  "manifest_bound_files": 87,
+  "manifest_status": "PASS",
+  "mismatches": [],
+  "replay": {
+    "isolation": "All suites run in a temporary copied package; delivered files are not rewritten.",
+    "manifest_bound_output_changes": [],
+    "status": "PASS",
+    "suite_count": 9,
+    "suites": [
+      {
+        "exit_code": 0,
+        "name": "regular C2 construction",
+        "script": "c2/regular_c2_build.py",
+        "status": "PASS",
+        "stderr": "",
+        "stdout": "computed radius 510101005/350806159660744 matches prior specification True\n{\n  \"status\": \"PASS\",\n  \"counts\": {\n    \"frames\": 25,\n    \"mixed_products\": 735,\n    \"PSD2_blocks\": 785,\n    \"listed_features\": 1570,\n    \"ambient_monomials\": 237,\n    \"product_records\": 27747,\n    \"source_target_records\": 295,\n    \"maximum_product_degree\": 6\n  },\n  \"files\": [\n    {\n      \"file\": \"regular_c2_frames.json\",\n      \"bytes\": 1692864,\n      \"sha256\": \"9543cbe723c11fd777d5c67521d5bc13f3e5aefd46ae19e290f8192be52eaa8c\"\n    },\n    {\n      \"file\": \"regular_c2_product_map.json\",\n      \"bytes\": 1574950,\n      \"sha256\": \"cf653ac20a6692bcb5169f5ece53f39316c7035194220761141f4eed9576ae2a\"\n    },\n    {\n      \"file\": \"regular_c2_feature_list.json\",\n      \"bytes\": 1229288,\n      \"sha256\": \"8a67754cb93a916da818afd7eb752ecc392ff3562d109d4bc5116b4c1e01e51c\"\n    }\n  ]\n}"
+      },
+      {
+        "exit_code": 0,
+        "name": "regular C2 independent Fraction verification",
+        "script": "c2/regular_c2_check.py",
+        "status": "PASS",
+        "stderr": "",
+        "stdout": "{\n  \"assertions_by_group\": {\n    \"LDL\": 5,\n    \"Taylor\": 62,\n    \"assembly\": 2,\n    \"bounds\": 5,\n    \"contact\": 17,\n    \"encoding\": 99116,\n    \"explicit_features\": 7067,\n    \"features\": 1598,\n    \"frame\": 126,\n    \"normalization\": 4,\n    \"positivity\": 785,\n    \"products\": 6,\n    \"separation\": 3015,\n    \"targets\": 15\n  },\n  \"contact_graph_box_bound\": {\n    \"interpretation\": \"Less than one implies source Jacobian invertible on the entire declared contact box.\",\n    \"relative_Jacobian_infinity_norm_upper_bound\": \"11650604933999/11225797109143808\",\n    \"relative_Jacobian_row_coefficient_norm\": \"114199/160\"\n  },\n  \"counts\": {\n    \"PSD2_blocks\": 785,\n    \"Taylor_remainder_monomials\": 1193,\n    \"ambient_monomials\": 237,\n    \"frames\": 25,\n    \"listed_features\": 1570,\n    \"mixed_products\": 735,\n    \"product_records\": 27747,\n    \"source_target_records\": 295\n  },\n  \"files_checked\": [\n    {\n      \"bytes\": 1692864,\n      \"file\": \"regular_c2_frames.json\",\n      \"sha256\": \"9543cbe723c11fd777d5c67521d5bc13f3e5aefd46ae19e290f8192be52eaa8c\"\n    },\n    {\n      \"bytes\": 1574950,\n      \"file\": \"regular_c2_product_map.json\",\n      \"sha256\": \"cf653ac20a6692bcb5169f5ece53f39316c7035194220761141f4eed9576ae2a\"\n    },\n    {\n      \"bytes\": 1229288,\n      \"file\": \"regular_c2_feature_list.json\",\n      \"sha256\": \"8a67754cb93a916da818afd7eb752ecc392ff3562d109d4bc5116b4c1e01e51c\"\n    }\n  ],\n  \"method\": \"Independent standard-library Fraction dictionary implementation; no builder import.\",\n  \"scope\": \"Regular-C2 local normalized contact graph/testing box only; global E1-E3 remain open.\",\n  \"status\": \"PASS\",\n  \"total_assertions\": 111823\n}"
+      },
+      {
+        "exit_code": 0,
+        "name": "diagonal B0 event reconstruction",
+        "script": "diagonal/regenerate_diagonal.py",
+        "status": "PASS",
+        "stderr": "",
+        "stdout": "{\"global_extraction_complete\": false, \"groups\": 4, \"outputs\": [\"SEPARATED_COEFFICIENT_EXACT.json\", \"DIAGONAL_FRAME_EXACT.json\", \"B0_EXACT.json\", \"EVENT_CONTACT_EXACT.json\"], \"status\": \"PASS\"}"
+      },
+      {
+        "exit_code": 0,
+        "name": "tilted projection extraction",
+        "script": "compiler/build_and_check_tilted_extraction.py",
+        "status": "PASS",
+        "stderr": "",
+        "stdout": "{\"auxiliary_dimensions\": [1, 0], \"check_count\": 38, \"matrix_orders\": [5, 4], \"scope\": \"tilted projection only\", \"status\": \"PASS\", \"upper_coo_records\": [14, 12]}"
+      },
+      {
+        "exit_code": 0,
+        "name": "rational full-set QE encoding",
+        "script": "compiler/generate_q222_qe_problem.py",
+        "status": "PASS",
+        "stderr": "",
+        "stdout": "{\"candidate_auxiliaries\": 9, \"candidate_coefficients\": 162, \"check_count\": 20, \"equalities\": 36, \"inequalities\": 9, \"maximum_degree\": 5, \"physical_variables\": 81, \"qe_status\": \"UNSOLVED\", \"status\": \"PASS_FOR_ENCODING_ONLY\"}"
+      },
+      {
+        "exit_code": 0,
+        "name": "literal Schur remainder identities",
+        "script": "c2/schur_remainder_check.py",
+        "status": "PASS",
+        "stderr": "",
+        "stdout": "{\"check_groups\": 28, \"data_sha256\": \"357fd1740230020c48208e0bbe2a724d86c91ec792b5a54cde8a2a69e2da568d\", \"status\": \"PASS\"}"
+      },
+      {
+        "exit_code": 0,
+        "name": "separate C2 SymPy review",
+        "script": "diagonal/review_regular_c2.py",
+        "status": "PASS",
+        "stderr": "",
+        "stdout": "{\"status\": \"PASS\", \"scope\": \"regular-C2 local data and proof\", \"product_records\": 27747, \"global_extraction_complete\": false}"
+      },
+      {
+        "exit_code": 0,
+        "name": "separate B0 and event review",
+        "script": "c2/regular_c2_cross_review.py",
+        "status": "PASS",
+        "stderr": "",
+        "stdout": "{\n  \"status\": \"PASS_WITH_STATED_LOCAL_AND_CONDITIONAL_SCOPE\",\n  \"B0_checks\": 50,\n  \"event_checks\": 9,\n  \"receipt\": \"regular_c2_diagonal_cross_review.json\"\n}"
+      },
+      {
+        "exit_code": 0,
+        "name": "separate Schur packet-matrix review",
+        "script": "compiler/review_schur_remainder.py",
+        "status": "PASS",
+        "stderr": "",
+        "stdout": "{\"fresh_checks\": 17, \"requested_changes\": 0, \"status\": \"PASS_WITH_STATED_SCOPE\"}"
+      }
+    ]
+  },
+  "retained_archive_integrity": "PASS",
+  "retained_archive_sha256": "9dcf9554b1a2578bb6b9fd909e7d194d82636fe61a0035da0694eb2e44f441a3",
+  "scope": "Integrity and the named finite exact checks; no global extraction completion, external peer review, or proof-assistant verification.",
+  "status": "PASS"
+}

@@ -1,0 +1,123 @@
+% Fresh derivation, 2026-10-22. Structural lemmas, not whole R2 closure.
+\section{Two exact circuit budgets and the complete R2 opposite normal}
+
+Use the compact actual-source dictionary of RSR1--RSR8.  In the R2
+source put \(S=1/T\), \(x=jSy\), \(B=Sy\), and \(H=S\ell\), where
+\(0<\ell<1\).  Both testing angles \(u,v\) are positive
+infinitesimals.  Normalize the rotated testing coordinate \(w=1\);
+the other rotated coordinate \(z>0\) is arbitrary, including
+unbounded values.  No coefficient estimate below involves \(z\).
+
+Set
+\[
+ U=\frac{u}{\sqrt x},\quad V=\frac v{\sqrt y},\quad
+ Z_*=\frac z{\sqrt{j/S}},\quad
+ Q_*=U-VZ_*,\quad B_*=V-UZ_*,\quad R_*=Z_*-UV,
+\]
+\[
+ \Psi=U^2+V^2+Z_*^2+U^2V^2Z_*^2-4UVZ_*.
+\]
+All monomials and radicals separate between the two fields.
+
+\paragraph{A parameterized opposite-square identity.}
+For every positive real \(a>1\), let \(K=a/(a-1)\),
+\(d=U-V\), \(t=UV\), \(E=Z_*(1-t)\), \(T_*=t(Z_*-1)\).
+Exact multiplication gives
+\[
+\begin{split}
+ a\Psi+K V^2(Q_*^2+B_*^2)-R_*^2
+ ={}&a d^2+(a-1)(E-T_*/(a-1))^2\\
+ &+(2at+KV^4)(1-Z_*)^2+2KZ_*(t-V^2)^2 .
+\end{split}                                                     \tag{SH1}
+\]
+The right side is a finite legal separated SOS.  For example
+\(a=3/2\) gives \(K=3\).  This is a different budget from the
+older one with \(U^2B_*^2\); neither budget dominates the other
+uniformly at independent source and testing rates.
+
+The two symmetric current budgets are
+\[
+\begin{split}
+ (1+U^2)\Psi&=R_*^2+B_*^2+U^2Q_*^2
+                         +U^2(1-UVZ_*)^2,\\
+ (1+V^2)\Psi&=Q_*^2+R_*^2+V^2B_*^2
+                         +V^2(1-UVZ_*)^2 .
+\end{split}                                                     \tag{SH2}
+\]
+In particular the two actual rows
+\[
+ E_u=u(uvz-jy),\qquad E_v=v(uvz-jy)                       \tag{SH3}
+\]
+are free from a fixed positive fraction of \(f_c\Psi\) whenever
+\(f_c\asymp j^2y^2\).  Their respective relative circuit costs
+are \(O(x+u^2)\) and \(O(y+v^2)\), both infinitesimal.  Here
+\emph{free} means that an arbitrarily large fixed real multiple of
+the row square can be inserted at infinitesimal cost in the
+strict circuit Gram.  It is not a pointwise bound without an
+SOS witness: multiply (SH2) by \(j^2y^2x\) or \(j^2y^3\).
+
+\paragraph{The full opposite row after the harmonic shift.}
+Let
+\[
+ \begin{gathered}
+ q=vz-u/S,\quad R=z-\frac{uv}{Sy},\quad R_v=u(v^2-y),\\
+ d_s=\frac{BCH(1-p)(1+x)}{E},\qquad E=1+B(HT+p-1).
+ \end{gathered}
+\]
+The exact actual source identity is
+\[
+                 \frac{\alpha}{y}-CHx=d_s.             \tag{SH4}
+\]
+Indeed it is equivalent to
+\((K+Hjy)-jE=(1-p)(1+x)\), after canceling the displayed
+positive source factors in the RSR dictionary.
+The two exact testing identities
+\[
+ u(u^2-x)=S E_u-Su^2q,\qquad
+ v(u^2-x)=S E_v-Suvq                                  \tag{SH5}
+\]
+now give the complete identity
+\[
+\begin{split}
+ \sqrt S\,v(\alpha-yCHu^2)R
+ ={}&[\alpha-yCHu^2-CHu^2(v^2-y)]\,(\sqrt S q)\\
+ &+\sqrt S\,CH(v^2-y)E_u-\frac{d_s}{\sqrt S}R_v .
+\end{split}                                                     \tag{SH6}
+\]
+There is no restriction on \(z\), and no normal has been set to
+zero.  The first coefficient in (SH6) is infinitesimal, because
+\(CH=O(1)\), \(y,u,v\) are infinitesimal, and
+\(\alpha=O(Sy^2(j+1))\) is infinitesimal by \(jy\in\mathrm I\).
+The second coefficient is infinitesimal and (SH3) is free.
+
+For the last term write
+\[
+ R_v=-\sqrt x\,y(Q_*+VR_*),\qquad
+ \frac{d_s}{\sqrt S}
+   =\sqrt S\,y\,CH(1-p)(1+x)/E.                         \tag{SH7}
+\]
+Suppose the scalar has retained strict pivots of respective orders
+\(jy\) and \(jy^2(1-p)\) on \(Q_*^2,R_*^2\), as in the actual
+R2 source.  Twice Young's identity and (SH7) buy this row at
+relative costs
+\[
+ O(S^2y^4(1-p)^2),\qquad
+ O(S^2y^2(1-p)v^2),                                   \tag{SH8}
+\]
+respectively.  Both are infinitesimal even when \(1-p\) has
+arbitrarily small positive order.  No inverse of that opening
+remains.  Multiplication by the additional bounded source
+factor \(\sqrt{\ell(1-\ell)}\), used to normalize the complete
+second normal, preserves the estimate.
+
+Thus the entire opposite term in that normal is controlled
+uniformly through all R2 source ratios, once the stated scalar
+pivots have been retained.  This lemma resolves that normal
+allocation only.  It does not assert the signed scalar allocation
+or all-source R2 positivity.
+
+\paragraph{Verification.}
+The companion checker proves (SH1)--(SH7), including (SH4) from
+the actual rational source module, as exact identities.  The
+ordered-field estimates and the conditional scalar-pivot
+hypotheses in (SH8) are explicit analytical statements.

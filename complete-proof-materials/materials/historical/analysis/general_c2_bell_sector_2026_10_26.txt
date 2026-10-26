@@ -1,0 +1,142 @@
+GENERAL C2 BELL-SECTOR REDUCTION: BOUNDED INDEPENDENT CHECK
+26 October 2026. Source: seven-extra-high-2026-10-26/03_general_c2_COMPLETE.txt.
+No public edits, numerical optimization, parameter sweep or NPA-witness replay.
+
+Verdict
+-------
+All displayed core matrices, six C2 event rows, cross-block entries,
+determinant/pivot, Schur identities and native contact coordinates are
+correct. The six native coefficient formulas match c2_short.tex,
+eq:c2-native-source, without a changed normalization. The independent
+checker also verifies the four general native state-kernel entries after
+termwise denominator cancellation. Two presentation qualifications matter:
+the two q coordinates are Bell-sector coordinates, not two independent
+Schmidt quantities; the stated Schmidt discriminant belongs to a*Psi,
+as displayed, and has an a^-4 factor for the unscaled matrix Psi.
+
+This is the existing two-sector/positive-sector structural reduction,
+also discussed in independent-review/PEN_AND_PAPER.md. It is not a new
+uniform affine-Gram admission proof.
+
+1. Full independent-source, independent-testing identity
+-------------------------------------------------------
+Write p=(W+Z,X-Y), q=(W-Z,X+Y). The inverse is
+
+ W=(p1+q1)/2, X=(p2+q2)/2, Y=(-p2+q2)/2, Z=(p1-q1)/2.
+
+For the complete canonical parent, including its negative signed-core
+term, independent source coefficients give exactly
+
+ F=p^T Kplus p+2p^T E q+q^T Kminus q,
+ Kplus/minus=d*Kplus/minus0+sum_i e_i*k_i*lplus/minus_i*lplus/minus_i^T,
+ E=sum_i e_i*k_i*lplus_i*lminus_i^T.
+
+The core cross-block is ZERO. Its other blocks are
+
+ Kplus0=[[u(u-v),u(1+uv)],
+         [u(1+uv),1+v^2+u^2v^2+uv]],
+ Kminus0=[[u(u+v),u(uv-1)],
+          [u(uv-1),1+v^2+u^2v^2-uv]].
+
+Every event row in the received table agrees exactly with 2R_i under the
+inverse transformation. The checker includes all eight canonical events:
+
+ event  k_i       lplus                 lminus
+ lambda Du        (1,v)                 (1,v)
+ n      DuDv      (0,1)                 (0,1)
+ m      1         (v-u,-1-uv)           (u+v,uv-1)
+ C      Dv        (u,1)                 (u,-1)
+ A      DuDv      (0,-1)                (0,1)
+ D      1         (u-v,1+uv)            (u+v,uv-1)
+ alpha  Du        (-1,-v)               (1,v)
+ beta   Dv        (u,1)                 (-u,1).
+
+Thus the result extends algebraically to nonnegative lambda,beta as well;
+the native C2 chart in the received text sets those two weights to zero.
+No contact specialization is used to check these full-parent block identities.
+
+2. The exact Schur domain and boundary limitation
+------------------------------------------------
+The determinant and first pivot are
+
+ det(Kminus0)=uv(1+u^2)(1+v^2),  (Kminus0)11=u(u+v).
+
+They are strictly positive for u,v>0. Hence Kminus is positive definite
+whenever d>0, u,v>0 and every event weight is nonnegative, since its event
+additions are PSD. All literal zero-event faces are allowed. Under these
+hypotheses the received Schur completion is valid, and
+
+ F>=0 for every real state
+ iff S=Kplus-E*Kminus^-1*E^T>=0
+ iff Tcal=det(Kminus)*Kplus-E*adj(Kminus)*E^T>=0.
+
+The independent generic polynomial identity is
+
+ det(Kminus)*F
+ =(Kminus*q+E^T*p)^T adj(Kminus)(Kminus*q+E^T*p)
+   +p^T Tcal p.
+
+It checks the signs and all off-diagonal factors without a mixed inverse.
+It does not make Tcal source affine: its source entries are cubic. Nor does
+it remove the universal independent-testing quantifier. A finite affine
+SDP does not follow from this pointwise equivalence.
+
+At u=0,v=0,d=0 or in projective limiting charts, the asserted strict pivot
+can disappear. If Kminus becomes singular, Tcal>=0 alone is not the same
+criterion without the missing range/kernel conditions. The same positive
+block is also not asserted for arbitrary signed u,v. Full native validity
+at such tests uses the existing parent gauges and continuity, rather than
+substitution into the displayed inverse. No boundary admission for a new
+Gram cone is inferred.
+
+3. Native contact and the Schmidt statement
+------------------------------------------
+Put h=b-a^2 t, z=c^2 and
+
+ psi=(b/a,-cr,ch/a,1), u_c=c, v_c=ac.
+
+The eight evaluated event roots are, in table order,
+
+ (b-a^2zr)/a, -cr, cg, act, ch/a, -acj, -(1-zh), c(1-r).
+
+Multiplying each root by its own native coefficient cancels the g,h,j,
+t,1-zh denominator before clearing the common factor a*Delta. Direct
+polynomial expansion then gives P(u_c,v_c)psi=0 in all four entries. This
+is a general five-parameter exact identity, not an evaluated source check.
+The positive identity for N agrees with the current source as well.
+
+The resulting Bell coordinates are exactly
+
+ p_c=((b+a)/a,-c(ar+h)/a),
+ q_c=((b-a)/a,c(h-ar)/a).
+
+The block kernel equations give Kminus*q_c=-E^T*p_c and S*p_c=0 on the
+strict Schur domain. They do not allow the coupling E^T*p_c to be omitted
+for a nonmaximally entangled contact.
+
+For M=a*Psi=[[b,-acr],[ch,a]], the Gram discriminant is exactly
+
+ Dsch=[b^2+zh^2-a^2(1+zr^2)]^2+4a^2z(h-br)^2.
+
+It is the squared difference of eigenvalues of M^T M. For Psi itself it
+is Dsch/a^4; the normalized Schmidt probabilities divide additionally by
+the squared total norm. Both terms are nonnegative. Their vanishing first
+gives h=br and then (b^2-a^2)(1+zr^2)=0. Positivity of a,b implies b=a,
+and h=ar becomes at=1-r. Conversely those two conditions make M^T M
+scalar. Therefore
+
+ maximal entanglement iff b=a and at=1-r iff q_c=0
+
+in this native sign chart. The components of q_c measure departure from
+the fixed p Bell sector. They are two coordinates, not two independent
+Schmidt parameters or entanglement invariants. A pure two-qubit state's
+Schmidt imbalance is captured by the single discriminant above.
+
+Files
+-----
+general_c2_bell_sector_2026_10_26.py reconstructs the complete parent and
+all eight rows, checks every block and determinant, the generic polynomial
+Schur identity, the factored general native kernel, Bell contact coordinates
+and Schmidt discriminant. The matching JSON contains the exact core/event
+data and results. Exact execution completed in 1.26 seconds. The rational
+NPA witness and generic nonmembership claims are outside this report.

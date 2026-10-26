@@ -1,0 +1,210 @@
+\chapter{All outer tests for the all-small C2 radial family}
+\label{component:pc7dacaa3258e}
+\noindent\textbf{Component }\path{pc7dacaa3258e}\par
+{\small\noindent Source: \path{CORE/prior/inherited/c2_radial_all_tests.tex}\par}
+{\small\noindent SHA256: \path{c7dacaa3258ed63c64024d672c622717ee267fefaebc871a4becf6f9f789cce5}\par}
+{\small\noindent Inventory use: Complete four-strong/weak-pivot outer theorem and radial-source corollary; the broader unit-N/bounded-shape final corollary is not imported\par}
+\medskip
+\section{All outer tests for the all-small C2 radial family}
+\label{pc7dacaa3258e:sec:c2-radial-all-tests}
+
+\noindent\textbf{Scope of retained extract.} This component retains the complete four-strong outer theorem and the radial-source corollary with both proofs. The final broader bounded-shape corollary, whose unit-$N$ branch is not used in the current source routing, is outside the mathematical scope used in this rederivation and is omitted here. The entire original file and the exact omitted span remain in the source archive and presentation manifest.
+
+
+The radial corner has four strong event packets and one weak packet.
+The weak packet must be retained at its exact scale at the opposite
+commuting corner.  An elementary conductor identity makes that scale
+sufficient; it does not compare coefficient and testing infinitesimals.
+Throughout this section $C$ denotes the event weight $e_3$, whereas $c$
+continues to denote the source half-angle in \eqref{p9f1235511111:eq:c2u-source}.
+
+\begin{lemma}[Four strong packets and a weak opposite-corner pivot]
+\label{pc7dacaa3258e:lem:c2-four-strong-outer}
+Consider the full parent \eqref{p9f1235511111:eq:c2u-parent}, with
+\[
+ (e_1,e_2,e_3,e_4,e_5)=(n,m,C,A,D),\qquad \alpha\geq0.
+\]
+Suppose $C>0$ is infinitesimal and the four positive pure coefficient
+quantities $Cn,Cm,CA,CD$ have bounded reciprocals.  Then the full parent
+is tensor SOS at every commuting residue test outside the finite
+zero-zero corner, for every real or complex projective state.
+The four strong coefficients and the roots in the proof may be unbounded.
+\end{lemma}
+
+\begin{proof}
+The hypotheses imply that $1/n,1/m,1/A,1/D$ are infinitesimal.
+First consider the outer axes other than the infinity-infinity corner.
+Choose $\mu=\min(1,n,m,A,D)$, a positive bounded unit.  Retain the
+nonnegative excess of each strong packet, together with the whole
+$C$ and $\alpha$ packets.  The remaining parent consists of the signed
+core and the four packets with common weight $\mu$.
+
+Here are the four kernel calculations, with positive factors
+$1+u^2$ or $1+v^2$ omitted only from the packet amplitudes.
+At $u=0$, finite nonzero $v$, the four amplitudes are
+$(X,vW-X,Y,-Y-vZ)$; at $v=0$, finite nonzero $u$, they are
+$(X,-X-uZ,Y,uW-Y)$.  Their common kernels are zero, and half the
+signed core is, respectively,
+\[
+ D_v(X^2+Y^2),\qquad (uW-Y)^2+(X+uZ)^2.
+\]
+At $u=\infty$, finite $v$, the four homogenized amplitudes are
+$(X,vY-Z,Y,W+vX)$; at $v=\infty$, finite $u$, they are
+$(X,W+uY,Y,uX-Z)$.  These common kernels are zero even when the
+finite angle is zero.  Half the homogenized signed core is, respectively,
+\[
+ (W+vX)^2+(vY-Z)^2,\qquad D_u(X^2+Y^2).
+\]
+Thus the selected state Gram has strict positive residue.  Its
+coefficients are bounded in each indicated local testing chart, so the
+strict-residue Gram lemma proves the whole chart.  This includes the
+mixed zero-infinity endpoints and either sign of every finite angle.
+
+It remains to treat $u=v=\infty$ at residue.  Put $p=1/u$, $q=1/v$,
+using the homogeneous reciprocal coordinates at exact infinity, and
+write $D_p=1+p^2$, $D_q=1+q^2$.  Thus $p,q$ are infinitesimal or zero.
+The homogeneous full parent in this chart is exactly
+\begin{align}
+\widehat F={}&4nD_pD_qX^2+4mM^2+4CD_q(W-pY)^2
+       +4AD_pD_qY^2+4DJ^2+4\alpha D_p(Y-qZ)^2+H,\notag\\
+ M={}&pW-pqX+Y-qZ,\qquad
+ J=qW+X-pqY-pZ,\notag\\
+ H={}&2\{J^2+D_p(Y-qZ)^2+D_q(pX+Z)^2-D_pD_qZ^2\}.
+\label{pc7dacaa3258e:eq:c2ro-parent}
+\end{align}
+For finite nonzero $u,v$ this is $p^2q^2F$; homogeneous interpretation
+also gives the exact endpoint polynomial.
+
+Set $L=1+p^2+p^2q^2$.  The needed conductor identity is
+\begin{equation}
+\frac H2=qWJ-qZM+L(X^2+Y^2)-2pqXY
+             +q(W+pqZ)X-q(pqW+Z)Y.
+\label{pc7dacaa3258e:eq:c2ro-core-conductor}
+\end{equation}
+For a direct check, put $M_0=pW-qZ$, $J_0=qW-pZ$.  The scalar part
+of $H/2$ is
+\[
+ J_0^2+(q^2-p^2)Z^2=qWJ_0-qZM_0.
+\]
+Its linear $X,Y$ part is
+$2q(W+pqZ)X-2q(pqW+Z)Y$, and its quadratic part is
+$L(X^2+Y^2)-2pqXY$.  Substitution of
+$M=M_0-pqX+Y$, $J=J_0+X-pqY$ gives
+\eqref{pc7dacaa3258e:eq:c2ro-core-conductor}.
+
+First normalize $W=1$ and assume $Z$ bounded.  No bound is required
+on $X$ or $Y$.  Retain the $\alpha$ packet and use the five roots
+\[
+ K_1=\sqrt nX,\quad K_2=\sqrt mM,\quad
+ K_4=\sqrt AY,\quad K_5=\sqrt DJ,\quad T_C=\sqrt C\,W.
+\]
+Here $T_C=\sqrt C$ in this state chart.  Equations
+\eqref{pc7dacaa3258e:eq:c2ro-parent}--\eqref{pc7dacaa3258e:eq:c2ro-core-conductor} give the following
+\emph{exact} Gram expression for the remainder:
+\begin{align}
+\widehat F-4\alpha D_p(Y-qZ)^2={}&
+ 4D_pD_q(K_1^2+K_4^2)+4K_2^2+4K_5^2
+ +4D_q\left(T_C-p\sqrt{C/A}\,K_4\right)^2\notag\\
+&+2L\left(\frac{K_1^2}{n}+\frac{K_4^2}{A}\right)
+ -\frac{4pq}{\sqrt{nA}}K_1K_4\notag\\
+&+2qT_C\left\{
+ \frac{K_5}{\sqrt{CD}}-\frac{ZK_2}{\sqrt{Cm}}
+ +\frac{(1+pqZ)K_1}{\sqrt{Cn}}
+ -\frac{(pq+Z)K_4}{\sqrt{CA}}\right\}.
+\label{pc7dacaa3258e:eq:c2ro-Wunit-Gram}
+\end{align}
+Every denominator is pure coefficient.  The four inverse square roots
+$1/\sqrt{Ce_i}$ are bounded by hypothesis, and
+$\sqrt{C/A}=C/\sqrt{CA}$ is infinitesimal.
+All coefficients of this Gram are therefore in the bounded tensor
+ring.  Every displayed correction has zero residue, whereas its five
+positive packet pivots have residue $4$.  Thus its residue is exactly
+\[
+             4(K_1^2+K_2^2+K_4^2+K_5^2+T_C^2)\succ0.
+\]
+The strict-residue Gram lemma applies without any bound on the roots.
+In particular it makes no comparison between $C$ and $p$ or $q$.
+
+The other state chart is $Z=1$, $W$ infinitesimal or zero.  Here the
+exact pure-testing conductor is a unit:
+\begin{equation}
+ q=\Gamma:=\frac{M+WJ+(pq-W)X+(Wpq-1)Y}{W^2-1}.
+\label{pc7dacaa3258e:eq:c2ro-Zunit-conductor}
+\end{equation}
+Indeed $M+WJ=q(W^2-1)+(W-pq)X+(1-Wpq)Y$.
+Substitution in \eqref{pc7dacaa3258e:eq:c2ro-core-conductor} gives
+\begin{equation}
+ \frac H2=L(X^2+Y^2)-2pqXY
+ +\Gamma\{WJ-M+(W+pq)X-(pqW+1)Y\}.
+\label{pc7dacaa3258e:eq:c2ro-Zunit-core}
+\end{equation}
+This is an exact quadratic form on $X,M,Y,J$, with bounded pure-testing
+coefficients.  Retain the whole $C$ and $\alpha$ packets separately.
+Scale the four remaining roots as before.  Every coefficient of the
+scaled core has zero residue, because each contains two inverse strong
+packet square roots.  Adding the four strong packets consequently
+produces the strict residue
+$4(K_1^2+K_2^2+K_4^2+K_5^2)$.  Again only the Gram coefficients,
+not $X,Y$ or the packet roots, needed boundedness.
+
+These two state charts are exhaustive when $(W,Z)\ne(0,0)$: if
+$W\ne0$ and $Z/W$ is bounded use the first; otherwise $Z\ne0$ and
+$W/Z$ is infinitesimal, giving the second.  Normalization and restoration
+use pure-testing factors.  When $W=Z=0$,
+\eqref{pc7dacaa3258e:eq:c2ro-core-conductor} is just the bounded quadratic form
+$H/2=L(X^2+Y^2)-2pqXY$; after the same four-root scaling its
+coefficients have zero residue, so the four retained strong packets
+again give a strict Gram.  This includes the zero state.  Splitting a
+complex state into real and imaginary parts completes the proof.
+\end{proof}
+
+\begin{corollary}[The radial source has no missing outer commuting chart]
+\label{pc7dacaa3258e:cor:c2-radial-outer}
+Use the unchanged exact source \eqref{p9f1235511111:eq:c2u-source} under the hypotheses
+of Theorem~\ref{p163e0ebf59f6:thm:c2-radial-corner}: $h,r,g,j$ are positive
+infinitesimals and $a,1-r,t$ are positive bounded units.
+Then the full parent is tensor SOS at every commuting residue test and
+every real or complex state.  Together with the physical-source
+noncommuting-residue theorem, this proves all tests for this exact
+radial source family.
+\end{corollary}
+\begin{proof}
+The source identities and positive decomposition of $N$ proved in
+Section~\ref{p163e0ebf59f6:sec:c2-radial-corner} give
+\[
+ N\asymp h+r+g+j,\qquad
+ U_1=re_1,\ U_2=ge_2,\ U_4=he_4,\ U_5=je_5>0
+ \quad\hbox{bounded units},
+\]
+where $N/(h+r+g+j)$ has residue $1$.  Moreover, directly from
+\eqref{p9f1235511111:eq:c2u-source},
+\[
+ \frac CN=\frac{A_c}{2a^2t\Delta}>0
+ \quad\hbox{is a bounded unit}.
+\]
+For example,
+\[
+ \frac1{Ce_1}=\frac{r/N}{(C/N)U_1},
+\]
+and the three analogous formulas use $g/N,h/N,j/N$.
+Thus all four product reciprocals in
+Lemma~\ref{pc7dacaa3258e:lem:c2-four-strong-outer} are bounded, while $C$ is positive
+infinitesimal.  That lemma covers every outer commuting chart, and
+Theorem~\ref{p163e0ebf59f6:thm:c2-radial-corner} covers the zero-zero chart.
+
+The final noncommuting join uses only the already-established
+physicality of the exact source and the physical-source
+noncommuting-residue theorem.  In particular the exact contact and
+Laurent-determinant physicality argument used for the unit-$N$ source
+requires $N>0$, not that $N$ have positive residue.  All five event
+weights are positive.  On the three-dimensional state subspace $Z=0$
+the signed core is nonnegative, and the positive event packets have
+zero common kernel at the noncommuting contact; hence the state
+restriction is positive definite.  The exact stationary state is a
+nonzero kernel vector, so the other three state eigenvalues are positive.
+Determinant stationarity remains exact, and the same Laurent-determinant
+argument proves physicality.
+No coefficient-entry claim is made here for C2 sources outside the
+stated radial family.
+\end{proof}
+

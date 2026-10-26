@@ -1,0 +1,29 @@
+R10 source algebra and formal C1 local base — bounded independent audit
+26 October 2026
+
+Verdict. The new TL3 source calculation is correct. The negative-beta formal-base extension is compatible with the actual CA/SE formulas and has the stated strict residue matrices. Its full bounded-Gram conclusion imports the original CA6/SE9 coefficient collections and contact-lift argument; those are supplied exact, reproducible proof dependencies, not consequences of the TL3 replay or of a PASS count. This audit did not independently replay their complete scalar/normal collections. Neither document proves TL6, remote joins, or global admission.
+
+1. Exact native dictionary. Original c2_short.tex, “Stationary coefficients and contact”, lines 263–290, uses (a0,z0,b0,t0,r0). Substituting
+  a0^2=t/a, z0=aB=x, b0=1/a, t0=(1-h)/t, r0=r
+gives precisely the six printed R10 source coefficients, Delta0=Delta/a, and the positive numerator M/a^2. Its contact is
+  (sqrt(x),sqrt(tB); 1/sqrt(at), -r sqrt(x), h sqrt(B/t),1).
+This equals both rendered contact (6) and the original C1 contact under
+  k^2=x, eta=t, zeta=1/a, r1=h, theta1=1-r, t1=a(1-r), a1=(1-h)/t.
+The physical C1 sign restriction beta>=0 is deliberately NOT inherited: the rational NC2/NC4 identities and all six contact identities still make sense for this formal tuple.
+
+2. All seven TL3 rows were checked from the original formulas, not from their asserted table. With Theta=n/B and kappa=(1+2n)/pi, the differences are
+  dm=0; dC=-Theta ca/(1-h);
+  d(Ah)=-Theta t ca Sc/[K(h+t)];
+  dD=Theta Sc[ca t j-K(h+t)]/[K(h+t)t j];
+  dalpha=-n x[(r+1/a)ca-(1-r)Qc]/(K Qc);
+  dd=-2Theta[ca Sc+KB(h+t)]/[K(h+t)];
+  dbeta+dd/2=-n.
+The common numerator bridges, including N=(1-r)Pd-KB(h+t)(1+ar), also vanish identically. The private script reconstructs both native dictionaries and checks these identities by exact rational arithmetic; its JSON records the limited scope.
+
+3. Bounded-b premise is established, without assuming b bounded. Put s=1/a, w=a(1-r), b=a^2B. The literal polynomial identity is
+  2r Delta_* n/s^2 = w Q_*-b K_*.
+The printed Q_*,Delta_* contain only bounded s,x,h,r,t and have residue 1; K_* has positive unit residue t. Since g=1-w+hx is a positive unit, 0<w<1+hx and 1-w has positive residue. Thus n>=0 gives b<=w Q_*/K_*. In the thin regime n=rho s^2w^2, rho infinitesimal, b/w~1/t, pi=1-sn~1, beta1=-sn/2, Theta=O(rho w), kappa~1. Consequently tb is either a positive unit or infinitesimal. No rate comparison with independent testing variables enters.
+
+4. Formal-base positivity and normalization. j unit implies t-1 has positive residue. The NC formulas yield C1~t/2, A1 h~t/2, m1>0, D1~1/[2(t-1)]>0, alpha1>0. The paired coefficient beta1+1/2=pi/2 is positive. In SE, reserving nu from its original 2pi nu packet leaves (2pi-1)nu>0; this replaces the relevant beta>=0 coefficient-positivity use. The other original use was bounded tau, now supplied by tau=w R1^2/(tb K^2)~1. Scaling to C=2 uses sigma=2/C1>0 unit; returning to kappa F1/4 multiplies every Gram and retained square by kappa/(4sigma), a pure-source positive unit.
+
+5. Exact dependency boundary. Original CA5–CA8 (c1_short.tex 5271–5477) and SE4–SE11 (6012–6227) provide the full rational parent, coefficient extraction, monic conductor identities, and weighted filtration. CA6 and SE9 are printed finite coefficient identities, not merely references to missing numerical files. SE8 explains the crucial Tw in (epsilon,v) divisibility. The new render restates their residues and checks the negative-beta interface; it does not supply an independent expansion of those collections. Their displayed strict determinants check exactly: CA coupled determinant 256/(E^3 delta^2), SE thin determinant 64(1+4/E), and the circuit block has leading minors 1,3/4,1/2. These validate strictness once the original full coefficient-lift identities are accepted; residue positivity alone cannot replace those identities.

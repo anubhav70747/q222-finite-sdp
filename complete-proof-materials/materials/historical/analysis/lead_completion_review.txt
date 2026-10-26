@@ -1,0 +1,322 @@
+Q222: lead review of the foundations, positive-total cases and assembly
+22 October 2026
+
+Target
+------
+Some finite real symmetric semidefinite lift of the full eight-coordinate
+finite-dimensional tensor-product quantum set. No block-size bound, evaluated
+pencil, or second-order-cone claim is inferred. The C1 and C2 weak-total
+closures are assigned separately; this note is not their substitute.
+
+Evidence
+--------
+The baseline is the 798-page recovered R21 rederivation. Component references
+below identify actual retained proof bodies, not status prose. Original and
+presentation copies are bound by the recovered index and verified hashes.
+The companion exact scripts were written independently from the displayed
+physical parent. None calls an SDP solver or samples a parameter domain.
+
+1. Physical set and transferred formulas
+---------------------------------------
+For each party, the same enlarged Hilbert space can dilate both binary effects
+to projections, with the initial state in the common input subspace. Jordan's
+two-projection decomposition then gives blocks of dimension at most two. The
+block-diagonal observables see only diagonal state blocks, so a correlation is
+a convex combination of two-qubit correlations. In each block local basis
+choices put both observables in a real plane. A complex vector r+is has the
+same expectations of real symmetric Bell matrices as the sum of the real
+vector contributions r and s, with their squared norms as weights. Spectral
+decomposition handles mixed states. Degenerate one-dimensional blocks are
+included by two-dimensional extensions and deterministic state support.
+
+The polynomial map Phi on S1 x S1 x S3 therefore generates exactly Q222.
+Caratheodory in eight real coordinates gives at most nine atoms. Conversely a
+finite direct sum realizes each finite convex combination. Compactness of the
+parameter space and the nine-atom simplex gives compactness of Q222, and the
+fixed finite polynomial formula gives semialgebraicity. This formula, rather
+than an assertion about arbitrary Hilbert spaces over a field, defines Q_K.
+Validity of an affine function, extremality of a finite-dimensional source
+base, and nine-term convex decomposition are fixed first-order formulas.
+Their transfer to any real closed extension is legitimate.
+
+Bodies: p9b00698ff36a, p0c8f420148b7, p477c0ac30750.
+
+2. Tensor algebra
+-----------------
+For Kc,Kt real closed over R, use T=Kc tensor_R Kt. Positivity and radicals
+refer only to either factor. Every bounded pure factor is its real standard
+part plus an infinitesimal. If a bounded tensor has positive residue eps,
+write it as eps plus finitely many bounded elementary tensors with at least
+one infinitesimal factor in each. Divide eps into positive real reserves.
+For each summand x tensor y, with x infinitesimal and |y|<M real, the exact
+identity
+
+ eps_j+x tensor y = [(eps_j/M+x) tensor (M+y)
+                    +(eps_j/M-x) tensor (M-y)]/2
+
+expresses it through positive pure factors. Separate field square roots
+give tensor squares. A real congruence turns a strictly positive residue
+matrix into I; fixed real diagonal-dominance reserves express the full
+matrix as finitely many fixed real rank-one matrices with positive-residue
+tensor coefficients. Evaluation on any tensor roots gives SOS; the roots
+need not be bounded. This proves the precise strict-Gram lemma actually
+used in the local arguments. There is no order or inverse on T here.
+
+Body: p25af2c58da7e.
+
+3. Parent, determinant and source geometry
+-----------------------------------------
+The nine event/core packets in LC2 reproduce the original Bell matrix
+entrywise. check_foundations_exact.py reconstructs this matrix and computes
+its entire determinant independently by Cauchy--Binet, including the central
+signed coefficient. The same script checks all 256 support patterns and the
+Hardy/matching witnesses used to exclude noncoercive contact supports.
+The Z=0 state block is positive definite at finite positive angles. Its
+Schur complement reduces physicality there to nonnegativity of the determinant.
+After division by U V, the determinant is a constant plus nonnegative
+exponentials in log U,log V. The coefficient support has coercivity exactly
+when zero lies in the interior of its exponent hull. At a zero minimum its
+Hessian is positive definite. The state Schur block and angular Hessian then
+give strict curvature in all five independent variables W,X,Y,u,v with Z=1.
+The same Laurent convexity proves contact sufficiency: a stationary zero of
+this nonnegative-coefficient profile is its global minimum. Homogeneous
+endpoint identities supply the remaining tests.
+
+For a canonical valid functional, the eight deterministic neighbours of a
+violated PR vertex give its nonnegative event coefficients. The source
+normalization has a compact convex base. At a regular contact the six linear
+contact equations leave a perturbation whenever more than six retained event
+weights are active; strict curvature and contact sufficiency preserve
+physicality under the corresponding small perturbations. An extreme contact
+source has at most six retained events. Support incidence then gives exactly
+C1/C2 or the two closed-face alternatives. The first-order finite source
+decomposition transfers to the coefficient field; it does not require order-
+topological compactness over that field.
+
+Bodies: p0c8f420148b7, p477c0ac30750, pe25c50379365.
+
+4. Native entry, including coefficient-zero faces
+-------------------------------------------------
+With all six retained weights positive and C=2, their remaining five weights
+range over a connected positive orthant. The maximal signed coefficient d*
+is positive and finite. Strict logarithmic convexity gives a unique positive
+squared-angle contact; the positive Z=0 block gives the unique state with Z=1.
+The six-equation Jacobian is triangular in the five contact coordinates and
+d: the contact Hessian is positive definite and the signed-core value is
+strictly negative. The real implicit-function theorem therefore gives local
+analytic branches, which agree by uniqueness. This supplies the connected
+analytic contact graph, rather than assuming a choice of native signs.
+
+For C1, the exact positive cofactor gives X+u>0. Deleting a retained zero
+event row would produce an excluded omission support, hence Y and uW-Y
+never vanish. The Cramer identity EN7 extends from a dense nonzero-minor
+subset by analyticity. It excludes X=0. Signs are fixed by the exact seed,
+and the full Bell symmetry gives the remaining amplitude signs. For D=0 or
+beta=0 the same strict Jacobian opens that coefficient at the fixed real
+contact; the deletion arguments keep all necessary limiting signs strict.
+The whole real implication is first order and transfers without asserting
+that its positive gaps have positive residue.
+
+check_native_entry_exact.py rederives the full EN8 determinant, the
+cross-multiplied EN7 Cramer identity and every EN9 seed equation.
+check_foundations_exact.py rederives EN6. For C2, deletion excludes all
+retained-amplitude walls, including X=0 through the already proved C1 triple
+face. Its cofactor update proves the omitted-row sign. The exact symmetry
+gives the other sign. check_c2_entry_exact.py reconstructs all 36 entries of
+the six-event gradient matrix and its full EN16 determinant. Delta is positive
+on the proved native domain, so the stationary source coefficients are unique.
+
+Bodies: paf13bbf8fd32, p61209c7390b0; native coefficient identities remain
+with the respective C1/C2 formula audits.
+
+5. Closed source faces
+----------------------
+The real univariate quadratic matrix lemma is proved by closed-cone separation.
+The PSD block [[K0,K1/2+S],[K1/2-S,K2]], with S skew, represents the quadratic
+matrix. The dual proof includes singular leading blocks. Applied to the two
+exclusive-omission supports, it gives respectively the printed 6x6 block and
+two 3x3 blocks. Each homogeneous coefficient cone has a displayed strictly
+feasible pencil, including its free-coefficient sign blocks. Strict feasibility
+bounds the trace of PSD dual witnesses when their adjoint images are bounded;
+the adjoint image is therefore closed. Separation gives an attained dual
+witness for every nonnegative evaluation. The fixed witness statement
+transfers to Kt. Its trace against the source pencil over Kc is a tensor SOS:
+Tr(BB^T tensor CC^T)=sum_ab(sum_i B_ia tensor C_ib)^2. Auxiliary equations
+cancel, leaving the original Bell slack. Singular factors are allowed.
+
+Body: pd9a6195f0af3.
+
+6. Noncommuting testing residues
+-------------------------------
+A positive residue of the signed coefficient gives an ordinary strict contact
+Hessian. Source-field stationary centres and Taylor expansion give a full
+quadratic remainder on contact differences, with positive real residue.
+When the signed coefficient has zero residue, the event rows surviving in
+the residue form a matching, otherwise their common kernel cannot be the
+required entangled contact. The largest remaining scale is chosen in Kc.
+Each newly dominant row is retained as an exact hard constraint, not replaced
+by its residue. The induction adds a matching edge and terminates after at
+most four edges. The one-, two- and three-hard-event constrained Laurent
+profiles have strict curvature when the signed coefficient first appears.
+Rank-zero/rank-one exceptions are excluded by the printed Hardy or matching
+witnesses. The four-edge terminal treats arbitrary internal weight ratios.
+Exact source centres and weighted normal completion preserve the full parent.
+
+Bodies: pe25c50379365, p24f8a75e651e, pa2cbe6ecbeb4,
+pb16e5066334b, pf47f6a4e3a60, p94dfbc8a5970.
+
+The underlying matching classification in p76173e99815f was also checked:
+an invertible real two-qubit state matrix gives a unique orthogonal Bob ray
+for each Alice ray, so vanishing events cannot share a cycle vertex. Any
+three distinct event product vectors are independent. The two perfect
+matchings have the printed one-dimensional zero loci and four independent
+full state/angle normals. Product residue states have strictly positive
+CHSH slack at two noncommuting measurement pairs, so they give a direct
+separated square. The full-state join pf77de02d80c4 uses only testing-field
+Schur completion. Its positive hard block has H>|uv|, giving K<0 only if
+uvwz>0. A pure-testing rescaling then gives the positive state-ratio chart.
+All four literal projective endpoints are evaluated as exact homogeneous
+squares. None of these arguments restricts an independent source rate.
+
+7. Positive-total source union
+------------------------------
+Keep delta_tot=d/(d+sum event weights) before choosing d=1. If it is a
+positive bounded unit, all normalized event coefficients are bounded; this
+is exactly the AU input. The AU source partition uses only source-field
+unit/infinitesimal alternatives and the derived native equations. Its strong
+corners, finite positive edges, finite-ratio distance-four corners, weak-alpha
+unit-n and weak-n cases, C1 projective pitchfork and both reciprocal corners
+cover the possible commuting residues. The noncommuting complement uses
+the independent construction in section 6. Literal commuting measurements
+are handled directly by their nonnegative testing-field signed core.
+
+Finite edge and finite-ratio bodies: the complete state-normal coefficients
+and scalar Taylor remainder belong to the displayed squared root ideal.
+If the centre is interior, physicality makes its scalar value nonnegative;
+if it meets the endpoint, the printed endpoint construction replaces it.
+The finite-ratio source equation K+V K_V=0 is solved only in the source field.
+No cross-field comparison is made. The strong finite-pitchfork fit and
+weak-alpha unit-n,m fit check the precise unit pivots needed by these bodies.
+
+WA source entry first proves the source ratios bounded using the hard-state
+Schur equations. WA19/20 contain both full first normals; WA22 and WA23--26
+cover the other state normalization and outer tests. WN separates bounded
+and unbounded source ratios. Its cubic/quintic identities use separated
+radicals. The thin normal-shift scalar in WN33--39 is retained in full;
+the coefficient budget remains positive even at literal n=0. WN40--43
+provide the outer rows. The projective pitchfork PP9--14 uses exact monic
+division on five roots, with scalar and first-jet vanishing at the actual
+source centre. Its opening coefficient is divided only after its exact
+factor has been proved. All endpoint and unmatched-residue exits are stated.
+
+The C1 reciprocal proof derives its source ratios before using them in the
+testing frame. In CR15 the coefficient of K^2 may have either sign when beta
+is a unit. CR23/24 transfers a fixed real pivot using an exact zero identity;
+in the alternative chart CR25 makes K an infinitesimal combination of the
+existing circuit roots. Thus no unsigned replacement of that coefficient is
+needed. CR19 includes all three first-normal polynomials. The unbounded
+source-ratio and complementary-state formulas CR27--39 retain their whole
+normal shifts and the literal D=0 boundary. check_c1_positive_reciprocal.py
+independently verifies the full CR9 graph scalar, all three contact balances,
+the complete CR15 identity, both CR22 conductors, CR23, CR25 and CR27.
+
+The C2 reciprocal proof likewise keeps both complete first normals, divides
+the exact scalar differences on five roots and obtains a strict residue Gram.
+RC18--25 give all remote/projective tests and state normalizations. The
+source inequalities required by each branch are derived before changing
+state normalization. There is no claim that a bounded-coefficient theorem
+also covers an unbounded-coefficient source.
+
+Bodies: pc0b2849f8d09, p4ec1a51262f9, p03b551f2a9a0,
+pfb0cf454f653, pf31e38136e03, p3a3949869b9e, p0db05df21ad1,
+p2cdf6197677b, p98f24864b071, p10686597065a.
+
+The preceding source partition pfb270019c56f was checked in full. Its two
+stationarity balances yield the exact weak/unit alternatives used by AU.
+Historical terminal references there are not independently assumed: AU
+prints the replacement full corner forms and invokes the actual later
+terminals listed above. The three-event wall p23a094ff816d has an explicit
+3x3 source pencil with determinant 8 Delta and a strict feasible point.
+Its full four-state determinant is strictly positive at finite noncommuting
+angles whenever Delta>=0. Adding omitted nonnegative events preserves this
+strict positivity, so an actual finite zero forces all eight cyclic wall
+quantities negative. This justifies the source exclusion without any
+historical admission predicate. The smaller fourth-edge promotion
+p4e9ae18b7af4 was read as well; the arbitrary-scale matching theorem already
+contains its needed conclusion. The explanatory noncommuting synthesis
+p2c3fc22497a5 agrees with the operative weighted proofs.
+
+Additional checked shared sources: p268520f6cc26 proves the weak-II source
+coefficient alternatives and the exact four-large/two-weak intersection,
+but does not itself certify the directed weak case; CT/HJ does. The C2
+source appendix p6e5d41ed80b3 displays the unique six coefficients and the
+positive numerator identity N=(1+z)(b+r)h+a^2(g+j+rt(1+a^2 z)). The C2
+reviewer separately checks its full six stationary equations. The older
+sign proof pe31b9ef5ec43 agrees with EN and is superseded for global use by
+that consolidated entry theorem. Its extra extremality conclusion follows
+from the six-column minor and the exact contact-face equations. The direct
+testing sign exit p894ae380fb8a has a positive X,Y hard block; its Schur
+complement is nonnegative for uvWZ<=0. All event packets can be restored
+separately. Thus positive W/Z local charts are sufficient after exact sign
+gauges, with no comparison to a source parameter.
+
+8. Shared restricted contact lift
+----------------------------------
+pfabc29e28ab3 proves the actual unlocalized algebraic mechanism CC1--CC8.
+For M=(A,B,C), J the contact ideal, the first-order membership is
+M intersect J subset (x,y,z). The second-order membership is specifically
+(M^2+(D0^2)) intersect J^2 subset (x,y,z,h,q)^2.
+It is not asserted for all mixed products involving D0. Monic differences
+give C J subset (x,y,z). First-order vanishing reduces the last obstruction
+to 2 k rho_c C r*, and k C r*=q^2-yz supplies its original circuit square.
+Cancellation in the polynomial coefficient domain establishes zero identities;
+no reciprocal of the contact Jacobian occurs in any coefficient. Homogeneous
+contact substitutions and the monic geometric-sum divisions preserve the
+grading after root weights are accounted for. Each application must still
+verify its raw scalar support, both raw normal supports, contact jets and
+positive coefficient-degree bounds. Those source-specific checks belong in
+the C1/C2 coverage records.
+
+9. Global closure after the two weak-total reviews
+-------------------------------------------------
+The LC split keeps the physical source, the exact native domain and the
+original total scale. Positive-total is section 7. The other branch is the
+union of the disjoint C1 source cells and the complete C2 CT/HJ cells.
+Their only cross-family calls must be the separately proved bare C1
+terminals at n=0; they cannot invoke the final LC theorem. The reviewers'
+closure records are required to establish this part, including every
+allowed coefficient-zero face and remote/state complement.
+
+Once LC holds, divide its homogeneous parent certificate only by proved
+positive pure-source/pure-testing factors. Multiply each root by their
+separate inverse square roots. This yields [f,Phi(z)] for each source and
+testing atom. Finite nonnegative source coefficients a_j and the nine
+testing weights w_i give
+
+ [f,q] = sum_ijk [(sqrt(a_j) tensor sqrt(w_i)) h_ijk]^2.
+
+The sum of w_i is one, so the affine constant is preserved. Zero weights
+are never inverted. Real/imaginary splitting already includes complex states.
+This gives the universal tensor statement. Choose two labelled copies of
+one arbitrary real closed extension K. Scheiderer's Corollary 3.19 applies
+to a closed convex semialgebraic subset of arbitrary R^n and requires this
+unrestricted finite SOS statement. It imposes no uniform bound on the number
+or rank of the local square roots. The factor flip reconciles the evaluation
+conventions. Thus it gives some finite semidefinite lift, with no evaluated
+size or coefficient matrix inferred from these local root lists.
+
+Primary criterion: https://arxiv.org/pdf/2004.04196, Corollary 3.19.
+
+This lead note records analytical checks, not proof-assistant formalization.
+Its global conclusion depends on the separately completed C1/C2 closure
+records; read their actual findings and limitations before using that conclusion.
+
+
+10. Final reconciliation
+------------------------
+The C1 and C2 completion reports and refined-source delta reviews are now
+complete. Their operative leaves, boundary cases and cross-family imports
+have been reconciled with the lead foundations and global assembly above.
+coverage_union.json accounts for all 215 indexed components. No unresolved
+operative gap was found. The resulting analytical review supports the
+qualitative finite-SDP theorem, with the limitations in final_audit.txt.

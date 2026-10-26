@@ -1,0 +1,66 @@
+OPTIMIZING THE OLD ALICE-ARC SUFFICIENT ADMISSION STILL FAILS
+
+Conclusion. The actual R1 relations, including n>=0, do not imply the
+stated Alice admission conditions at tau=eta=CD/(C+D), even with the
+new bcap=256/sqrt(65617). An explicit source family below fails its
+last inequality by a fixed margin. This is a failure of that sufficient
+source-witness scheme, NOT a proof that every auxiliary choice in the
+actual Q20 pencil is non-PSD. In particular S_tau>=0 is not necessary
+for the whole Q20 Gram. The earlier private necessity error is not used.
+
+1. Exact native source inside the quantitative R1 box.
+
+Take j=1,p=H=1/2,B=T=s, with0<s<=delta=2^-10. Thus
+x=jB=s,y=TB=s^2. The exact RSR4--6 dictionary reduces to
+
+ P=2+(7/2)s+(5/2)s^2+3s^3+s^4/2+s^5/2,
+ L=3/2+s/2+s^2,
+ Q=(1+s^2/2)(3/2+s^2/2), E=1-s/2+s^2/2,
+ A=s(1+s)Q/[(2-s)P], C=L/(sP), D=Q/(sP),
+ alpha=s^2(3/2+s^2/2)L/(2EP),
+ N=1/2-s/4-s^3/4, n=N/P>0.
+
+All remaining event coefficients and strict native gaps are positive;
+the D numerator's additional bracket is exactly1. Stationarity is the
+original RSR identity. Thus these are actual valid sources by SG7,
+not independently chosen positive weights. Their contacts are
+u_c=sqrt(s)<=1/32<9/256, v_c=s<=1/1024<1/16. No contact lies in
+the proposed arc, so the old contact-inside-arc obstruction is irrelevant.
+For one entirely fixed rational example choose s=2^-10.
+
+2. The first two sufficient conditions pass at the optimum.
+
+For positive C,D, S_eta is PSD with determinant0 and positive diagonal.
+P<3 and L,Q>=3/2 give C,D>1/(2s), hence eta>1/(4s)>1/2.
+Consequently rho=eta-1/2>0. Choosing tau=eta maximizes rho among
+the choices tau<=eta allowed by the separate S_tau>=0 condition.
+
+3. The final sufficient inequality fails uniformly on this family.
+
+Using4CD<=(C+D)^2,
+ 4A rho<4A eta<=A(C+D)
+   =(1+s)Q(L+Q)/[(2-s)P^2]
+   <=(1+s)(3/2+s)^2/[2(2-s)]
+   <=(1+delta)(3/2+delta)^2/[2(2-delta)]<5/8.          (1)
+Here L,Q<=3/2+s and P>=2; the final comparison is rational.
+
+The established source estimate alpha<=B(B+x)=2s^2 yields
+ h_arc=sqrt[2alpha/(2alpha+1)]<=2s,
+ theta=h_arc/(1+h_arc)<=2delta.
+Meanwhile bcap>15/16 and bcap^2<=1. Therefore
+ (bcap-theta*bcap^2)^2
+   >(15/16-2delta)^2=(479/512)^2>3/4.                 (2)
+Equations(1),(2) contradict the proposed last condition
+4A rho>=(bcap-theta*bcap^2)^2. No choice satisfying the separate
+S_tau>=0 premise can improve on tau=eta and repair this condition.
+
+For intuition only, as s->0 one has4Aeta->9/16, alpha->0,
+and the right side tends to bcap^2=65536/65617. The proof above
+is finite and exact; it does not infer failure from a numerical fit.
+
+All source/constant comparisons were checked once with Fraction
+arithmetic at the endpoint s=2^-10, including rho>0 and the stated
+monotone upper bound. This leaves open a different Q20 witness or
+another completion that uses more of the actual parent. No general
+necessity to combine particular event terms or global obstruction
+is claimed.

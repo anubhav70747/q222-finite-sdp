@@ -1,0 +1,139 @@
+\section{C14.2: bounded Bob tests at every local Alice angle}
+\label{sec:r18-c142-bounded-bob}
+
+\begin{proposition}
+Retain the unchanged full C14.2 source and every original intersection
+as in the preceding noninfinitesimal-Alice proposition.  For every
+infinitesimal or zero Alice test $u$ and every bounded Bob test $v$,
+the entire original parent is finite tensor SOS for all real or
+complex states.  Every source opening and both $D=0$, $\beta=0$
+are included.  Together with that proposition this leaves exactly
+$u$ infinitesimal and $v$ projectively unbounded, equivalently
+$u,w=1/v$ infinitesimal, as the remaining C14.2 testing corner.
+\end{proposition}
+
+\paragraph{The same source weights and a pure-source strict matrix.}
+Keep the opening-safe positive source weights from LA1,
+\[
+ C_0=\frac1{2L(1-r)},\quad
+ A_0=\frac{1+L(1-r)}{2Lr},\quad
+ a_0=\frac L{2(1-Lr)}.
+\]
+Let $c=(1+v^2)^{-1/2}$, $s=vc$, so $c^2+s^2=1$.
+Since $v$ is bounded, $c$ is a positive testing unit.  Write
+$s_0=\operatorname{res}s\in(-1,1)$ and $c_0^2=1-s_0^2>0$.
+These are real numbers, not source/testing comparisons.  Consider
+the pure-source quadratic form in three placeholder variables
+\[
+ M_0(P,Y,T)=
+  (C_0+c_0^2/2)(P-Y)^2+(A_0+s_0^2/2)Y^2
+          +a_0(s_0Y-T)^2-s_0PT.                    \tag{LB1}
+\]
+Its Gram has first leading minor $C_1=C_0+c_0^2/2>0$,
+second leading minor $C_1[A_0+s_0^2(a_0+1/2)]>0$, and
+\[
+ \det M_0=
+ \frac{c_0^2\{1+L(1-r)\}^2}
+                {8Lr(1-r)(1-Lr)}>0.               \tag{LB2}
+\]
+This is an exact source identity, not just a limiting determinant.
+Moreover $M_0^{-1}$ has bounded entries through every opening.
+Indeed every cofactor is a sum of bounded multiples of
+$C_0A_0,C_0a_0,A_0a_0,C_0,A_0,a_0,1$; terms involving a square
+of a single divergent weight cancel.  Multiplication by
+$8L^2r(1-r)(1-Lr)$ makes every cofactor polynomial in bounded
+$L,r,s_0$.  Division by LB2 therefore leaves only the source-unit
+denominators $L$, $c_0^2$, and $1+L(1-r)$.
+Explicitly, with $e=1-r$ and $B_L=1+Le$,
+\[
+ M_0^{-1}=\frac1{c_0^2B_L}
+ \begin{pmatrix}
+ 2L&2Lr&2s_0\\
+ 2Lr&2Lr(1-s_0^2e)&2s_0r(1+Le c_0^2)\\
+ 2s_0&2s_0r(1+Le c_0^2)&
+       2(1-Lr c_0^2)(1+Le c_0^2)/L
+ \end{pmatrix}.                                      \tag{LB2a}
+\]
+
+Choose any exact positive pure-source congruence
+$M_0=N_1^2+N_2^2+N_3^2$.  Its inverse allocation of $P,Y,T$
+on these three roots is bounded: each inverse-row norm squared is
+the corresponding diagonal of $M_0^{-1}$.  This uses only a
+pure-source Gram, with the fixed real number $s_0$ as parameter;
+no mixed matrix is inverted or square-rooted.
+
+\paragraph{Freeze the only divergent Bob-dependent event exactly.}
+Use the legal raw roots
+\[
+ P=uW,\quad X,\quad Y,\quad
+ T=cZ-(s-s_0)Y,
+ \qquad d_s=s-s_0\in\operatorname{Inf}_{\rm test}.
+                                                               \tag{LB3}
+\]
+In particular the entire alpha event satisfies
+$sY-cZ=s_0Y-T$ exactly.  Thus no product of an unbounded alpha
+weight with $d_s$ is ever estimated.  No inverse of $c$, $u$, or
+a state coordinate is needed in these root definitions.
+
+Let $B_0=c_0^2(P-Y)^2+s_0^2Y^2-2s_0PT$.
+The complete original half-core after Bob normalization is
+$K_B/2$, where
+\[
+ K_B=\{c(P-Y)+usX-sZ\}^2
+       +(1+u^2)(sY-cZ)^2+(X+uZ)^2-(1+u^2)Z^2.
+\]
+It has the following exact, division-free allocation on LB3:
+\[
+\begin{split}
+ K_B={}&X^2+B_0
+       +d_sP\{-(s+s_0)P+2s_0Y-2T\}\\
+       &+2ucX(sP-s_0Y+T)
+       +u^2s^2X^2+u^2(s_0Y-T)^2.
+\end{split} \tag{LB4}
+\]
+This keeps the full signed core and all $u$-dependent hard normals.
+
+\paragraph{Exact actual-parent reassembly.}
+Use exactly LA4's pure-source factor
+$f=1-(|C/C_0-1|+|A/A_0-1|+|\alpha/a_0-1|)>0$.
+Retain the actual original event excesses
+$C-fC_0$, $A-fA_0$, $\alpha-fa_0$, and the whole $m,D,\beta$
+packets.  On the finite Bob chart the original quarter-parent divided
+by $1+v^2$ is then the sum of those positive packets and exactly
+\[
+ S=f\{C_0(P-Y)^2+A_0(1+u^2)Y^2
+                         +a_0(1+u^2)(s_0Y-T)^2\}+K_B/2.
+\]
+Substitution of LB1 and LB4 gives
+\[
+\begin{split}
+ S={}&fM_0+\tfrac12X^2
+       +fA_0u^2Y^2+fa_0u^2(s_0Y-T)^2\\
+    &+\tfrac12u^2s^2X^2+\tfrac12u^2(s_0Y-T)^2\\
+    &+\tfrac12(1-f)B_0
+       +\tfrac12d_sP\{-(s+s_0)P+2s_0Y-2T\}\\
+    &+ucX(sP-s_0Y+T).
+\end{split} \tag{LB5}
+\]
+The first two lines consist of a strict source-normalized Gram on
+$(N_1,N_2,N_3,X)$ and exact retained positive squares.  All terms
+in the last two lines have infinitesimal bounded coefficients on
+that same frame: $1-f$ is source infinitesimal, $d_s,u$ are testing
+infinitesimals, $c,s,s_0$ bounded, and LB2 supplies a bounded inverse
+allocation for all three raw roots.  Since $f\sim1$, the resulting
+complete Gram has residue $\operatorname{diag}(1,1,1,1/2)$.
+The separated bounded-Gram lemma and restoration of every retained
+packet prove the full original parent.  The normalization factor
+$1+v^2$ is pure testing and positive.
+
+Both coefficient-boundary packets were retained rather than capped
+or inverted.  The argument works literally at $u=0$ or $v=0$,
+allows signed testing angles, and extends to complex states by
+real/imaginary splitting.  It gives no claim for $c$ infinitesimal:
+there $c_0=0$, the determinant in LB2 vanishes, and the reciprocal
+two-small-angle corner remains a separate obligation.
+
+The new focused checks establish LB2, opening-regular cofactors,
+the complete original-core identity LB4 and the entire selected-parent
+identity LB5.  They do not rerun prior source identities or assert
+the remaining C14.2 corner closed.

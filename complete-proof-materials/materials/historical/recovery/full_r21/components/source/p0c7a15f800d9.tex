@@ -1,0 +1,281 @@
+\section{C2 pitchfork with two arbitrarily large retained events}
+\label{sec:c2-two-large}
+
+\begin{theorem}[The $n,D$-unbounded C2 pitchfork]
+\label{thm:c2-two-large}
+Let the physical canonical C2 source over a real closed coefficient
+field have $\lambda=\beta=0$, with $d,C,\alpha$ positive bounded
+units, $A\geq0$ bounded, and $n,m,D\geq0$ arbitrary. Suppose there is
+an actual finite noncommuting stationary zero with $u_c=k>0$
+infinitesimal and $v_c=a>0$ a bounded unit. Then the entire original
+parent is tensor SOS at every independent projective measurement
+pair and every real or complex projective state.
+There is no bound on $n,D$, or on their ratio. In fact physicality and
+contact force $A$ to be a positive unit, $D$ to be bounded below by
+a positive real, and $m/k^4$ to be a positive bounded unit.
+\end{theorem}
+
+This extends the preceding pitchfork by removing the upper bound on
+$D$. A bound on $m$ need not be assumed: it follows from physicality.
+The original $D$ packet supplies a state normal, so an unbounded
+weight is not put into a bounded Gram coefficient.
+
+Write the unchanged parent as
+\[
+\begin{split}
+F={}&dH+4nD_uD_vX^2+4mR_2^2+4CD_vr^2
+       +4AD_uD_vY^2+4DJ^2+4\alpha D_up^2,\\
+H={}&2\{J^2+D_up^2+D_vB^2-D_uD_vZ^2\},\\
+R_2={}&vW-X+uvY-uZ,\quad r=uW-Y,\quad
+J=uW+uvX-Y-vZ,\\
+p={}&vY-Z,\quad B=X+uZ,\quad D_u=1+u^2,\quad D_v=1+v^2.
+\end{split}                                                    \tag{TD1}
+\]
+
+\paragraph{Entry and bounded contact coordinates.}
+At $u=0,v=a$, the state block on $(X,Y,Z)$ of
+$dH+4CD_vr^2+4\alpha D_up^2$ has positive definite residue.
+Its $W$ column is $O(k)$ and its $W^2$ entry is $O(k^2)$.
+Completing this ordinary bounded hard block gives, for positive
+real constants $b,B_0$, the coefficient-field inequality
+\[
+ dH+4CD_vr^2+4\alpha D_up^2
+ \geq b(X^2+Y^2+Z^2)-B_0 k^2W^2
+\]
+at the actual angles. All omitted packets are nonnegative.
+Thus an actual zero has $W\ne0$ and, on setting $W=1$,
+$X,Y,Z=O(k)$. Since $R_2=a+O(k)$ is a unit, the same inequality
+and its retained $m$ packet give $m=O(k^2)$.
+
+The state equation $F_Y=0$ gives $DJ=O(k)$: every other term is
+$O(k)$, using bounded $A,C,\alpha,d$, $m=O(k^2)$ and the bounds
+just obtained. The equation $F_X=0$ then gives
+$(d+2n)X=O(k^2)$, since the $J$ contribution is $O(kDJ)$ and the
+$m$ contribution is $O(m)$, while $Z=O(k)$. Consequently, with
+\[
+ N=d+2n,\qquad x=X_c/k^2,\quad z=Z_c/k,\quad j=J_c/k,
+\]
+we have
+\[
+ Nx,\ z,\ j,\ Dj\quad\hbox{bounded},\qquad N^{-1}\ \hbox{bounded}.
+                                                               \tag{TD2}
+\]
+The bound on $j$ follows directly from $X,Y,Z=O(k)$, even before a
+lower bound for $D$ has been obtained. No inverse of $D$ has yet
+been used.
+
+For the scale entry, put $U=k^2,V=a^2$, $L=d+2D$,
+$\theta=n/N$ and use
+\[
+\begin{gathered}
+t_2=d+2(\alpha+m+A),\quad t_3=d+2(C+D),\quad
+ t_4=d+2(\alpha+m),\\
+t_6=d+2(\alpha+C+A),\quad t_8=d+2(C+A+D).
+\end{gathered}
+\]
+The original Laurent-determinant stationary equations, divided only
+by $N$, are
+\[
+\begin{split}
+U^2\{4\theta A t_3t_4+4CA(1+2D/N)t_4V\}
+ &=mV\{4\alpha t_8+4Dt_6V\},\\
+4\alpha A(1+2m/N)t_3+4\theta A t_3t_4U
+ &=\{4mDt_6/U+4CDt_2\}V^2.
+\end{split}                       \tag{TD3}
+\]
+Here $t_2,t_4,t_6,t_3/L,t_8/L$ are positive bounded units.
+After division by $L$, the braces in the first equation are
+$A$ times a positive unit on the left and a positive unit on the
+right. To check the lower bound uniformly when both $n,D$ diverge,
+observe
+\[
+ \theta+\frac{1+2D/N}{L}
+ =\frac{n+1}{N}+\frac{2n}{NL},                    \tag{TD4}
+\]
+which is a positive bounded unit; all its neighboring factors in
+(TD3) have positive upper and lower real bounds. Thus
+$m/U^2$ is $A$ times a positive unit. The second equation, again
+divided by $L$, has the form
+\[
+ A\cdot(\hbox{positive unit})+O(AU)
+    =(D/L)\cdot(\hbox{positive unit})+O(AU).       \tag{TD5}
+\]
+If $A$ were infinitesimal, then $D/L$ and hence $D$ would be
+infinitesimal, as would $m$. This is incompatible with physicality:
+on the test state $(W,X,Y,Z)=(1,0,u,zu)$ the $n$ packet vanishes
+exactly, and at the residue source $m=A=D=0$ choose
+\[
+ z=\frac{v(2\bar\alpha+\bar d)}{2\bar\alpha}.
+\]
+The coefficient of $u^2$ in the full polynomial is then
+$-\bar d v^2(2\bar\alpha+\bar d)/\bar\alpha<0$ for real $v\ne0$.
+The bounded residue polynomial cannot be nonnegative for all real
+small $u$. Therefore $A$ is a unit. Equations (TD3)--(TD5) now prove
+that $D/L$ and $m/k^4$ are positive bounded units. In particular
+$D>0$ and $D^{-1}$ is bounded. Set $\gamma=4ma^2/k^4$.
+
+\paragraph{A graph that keeps both large packets bounded.}
+For arbitrary independent testing angles use the exact graph
+\[
+ X_g=xu^2W,\qquad Z_g=zuW,\qquad J_g=juW,
+\]
+which fixes
+\[
+ Y_g=u(1-j-vz+xu^2v)W.                            \tag{TD6}
+\]
+It matches the entire actual contact, including its $Y$ coordinate.
+The three exact state normals are
+\[
+ E_X=\sqrt N(X-xu^2W),\qquad
+ E_J=\sqrt D(J-juW),\qquad E_Z=Z-zuW.             \tag{TD7}
+\]
+The inverse uses only pure coefficient inverses:
+\[
+ X=xu^2W+E_X/\sqrt N,\quad Z=zuW+E_Z,\quad
+ Y=u(1-j)W+uvX-vZ-E_J/\sqrt D.                   \tag{TD8}
+\]
+The $n$ packet on the graph is
+$4nx^2u^4D_uD_vW^2$, and the $D$ packet is
+$4Dj^2u^2W^2$. Both have bounded coefficients by (TD2).
+Their linear coefficients are bounded too, since $nx$ and
+$\sqrt D\,j=(Dj)/\sqrt D$ are bounded. The exact quadratic
+normal block is bounded: its only large packets become
+$4(n/N)D_uD_vE_X^2$ and $4E_J^2$.
+
+Set $W=1$, $K=k^2$, and
+\[
+ R=u^2-(K/a)v,\qquad T=u(v-a).
+\]
+The entire graph scalar has the exact shape
+\[
+ F|_g=4mv^2+u^2H_0(u^2,v),\qquad H_0\in B_c[u^2,v].             \tag{TD9}
+\]
+The three contact scalar jets give exactly the same monic division
+as for the preceding pitchfork:
+\[
+ F|_g=\gamma R^2+u^2\{(u^2-K)^2H_{20}
+                   +(u^2-K)(v-a)H_{11}+(v-a)^2H_{02}\},         \tag{TD10}
+\]
+with bounded polynomial coquotients. After
+$u^2-K=R+(K/a)(v-a)$ this is a bounded Gram on $(R,T)$.
+Its $R$ residue pivot is $\bar\gamma>0$.
+
+The full first normals, before the indicated scale divisions, have
+exact shapes
+\[
+ (F_X+uvF_Y)|_g=-8mv+u^2L_X(u^2,v),\quad
+ (-F_Y)|_g=uL_J(u^2,v),\quad
+ (F_Z-vF_Y)|_g=uL_Z(u^2,v).                       \tag{TD11}
+\]
+The coefficient of $E_X$ is the first expression divided by
+$\sqrt N$; that of $E_J$ is the second divided by $\sqrt D$.
+These scaled polynomials have bounded coefficients, as shown above.
+Contact makes $L_X(K,a)=8ma/K$, and makes the scaled $J,Z$ functions
+vanish at $(K,a)$. Monic division by $u^2-K,v-a$ therefore puts
+every first normal in $(R,T)$ with bounded coquotients.
+Every coefficient coupling $E_X$ to $R,T$ is infinitesimal; the
+$R$ coefficients in the $E_J,E_Z$ rows are infinitesimal.
+For example, the $X$ row is exactly
+\[
+\frac1{\sqrt N}\left[
+ (8ma/K+u^2L_{X1})R
+ +u\{(K/a)L_{X1}+L_{X2}\}T\right],              \tag{TD12}
+\]
+and the other two rows have form
+$uL_{i1}R+\{(K/a)L_{i1}+L_{i2}\}T$ after their scale division.
+State degree is two, so there are no omitted higher-normal terms.
+Equations (TD7)--(TD12) give an exact bounded full-parent Gram on
+$(E_X,E_J,E_Z,R,T)$.
+
+\paragraph{The residue Gram is strict.}
+The $X$ pivot has residue $2(1+\bar a^2)$ and the $R$ pivot has
+residue $\gamma$. For the remaining hard pair the unscaled state
+form is
+\[
+ B(v)[Y,Z]=\{4(C+A)+2d\}(1+v^2)Y^2
+           +4D(Y+vZ)^2+4\alpha(vY-Z)^2.           \tag{TD13}
+\]
+In the scaled coordinates $Y=-vE_Z-E_J/\sqrt D$, $Z=E_Z$ its
+coefficients are bounded and its residue is positive definite.
+If $D$ is bounded, this follows from the invertible residue change
+and the positive form (TD13). If $D$ is unbounded, its residue is
+\[
+ 4E_J^2+\bigl(\{4(\bar C+\bar A)+2\bar d\}(1+v^2)v^2
+                  +4\bar\alpha(1+v^2)^2\bigr)E_Z^2\succ0.
+\]
+The exact minimized boundary coefficient of $u^2$, before residue,
+is
+\[
+ f(v)=\frac{8(1+v^2)}{\det B(v)/L}
+       \left(\frac{Q_{10}}L+\frac{Q_0}L v^2+\frac{Q_{12}}L v^4\right),
+                                                               \tag{TD14}
+\]
+where
+\[
+ Q_{10}=4\alpha A[d+2(C+D)],\qquad
+ Q_{12}=4CD[d+2(\alpha+A)].
+\]
+The middle coefficient $Q_0$ is defined by the exact Schur numerator;
+its explicit value is unnecessary. All quantities in (TD14) are
+bounded, $\det B/L$ is a positive unit for bounded real $v$, and
+$Q_{10}/L,Q_{12}/L$ are positive units. One may verify boundedness
+of $Q_0/L$ directly from the determinant expansion, which is affine
+in $D$. This is only a residue calculation of a real hard Schur
+complement, not inversion of a mixed tensor element.
+
+The full contact normal and scalar equations imply that the residue
+of (TD6) at $v=\bar a$ minimizes the hard form, and that
+$\bar f(\bar a)=\bar f'(\bar a)=0$. Thus the real quartic bracket
+in (TD14) equals
+\[
+ \overline{Q_{12}/L}\,(v^2-\bar a^2)^2.
+\]
+Its second derivative at $\bar a$ is strictly positive. This is
+exactly the Schur complement on $T$ of the remaining residue block
+$(E_J,E_Z,T)$. Hence the whole five-root residue Gram is positive
+definite. The bounded strict-residue Gram lemma proves the local
+certificate at $\bar u=0,\bar v=\bar a$. The Bob sign copy covers
+$\bar v=-\bar a$.
+
+\paragraph{All other independent tests.}
+For $u$ infinitesimal and $v$ bounded with
+$\bar v\ne\pm\bar a$, retain the original $m,n$ packets. Set
+$K_J=\sqrt D J$ and substitute
+\[
+ Y=uW+uvX-vZ-K_J/\sqrt D.
+\]
+The exact remainder is a bounded quadratic Gram on
+$(X,Z,K_J,uW)$. Its hard residue is the block just considered with
+$X$ pivot $2\bar d(1+\bar v^2)$; its soft Schur complement is
+$\bar f(\bar v)>0$. This includes $v=0$ and all infinitesimal $v$.
+For $u,q=1/v$ infinitesimal use the homogeneous parent $q^2F(u,1/q)$.
+Here $J_h=quW+uX-qY-Z$. Retain $m,n$ and substitute
+$Z=quW+uX-qY-K_J/\sqrt D$ with $K_J=\sqrt D J_h$.
+The remainder is a bounded Gram on $(X,Y,K_J,uW)$. Its soft residue
+is $\lim_{q\to0}q^2\bar f(1/q)>0$, since
+$\overline{Q_{12}/L}>0$ and
+$\overline{\det B_\infty/L}>0$.
+These are polynomial homogeneous expressions, so literal projective
+endpoints are included.
+
+At every other commuting test the capping proof from the preceding
+all-tests corollary applies verbatim: choose
+$\mu=\min(1,C/d,A/d,D/d,\alpha/d)$, a positive unit, retain every
+excess and the whole $m,n$ packets, and use its displayed open-axis
+state forms and two corner quadratic forms. That proof used lower
+bounds, not upper bounds, on these four source weights. Noncommuting
+residue tests use the retained arbitrary-physical-source theorem.
+Finally homogenize (TD6)--(TD12) in $W$, replacing $R,T$ by $RW,TW$;
+restore pure testing projective factors and split complex states into
+real and imaginary parts. This proves the theorem for all states,
+including $W=0$, without comparing $k,n,D$ with independent testing
+infinitesimals.
+
+\paragraph{Exact scope.}
+This is an all-tests theorem for the stated actual-contact domain.
+It does not bound or remove the residual regimes where $C/d$ or
+$\alpha/d$ is unbounded, $A/d$ is unbounded, or the actual contact
+has a different angle-residue type. The C2 reflection
+$(m,C,D,\alpha;u_c,v_c)\mapsto(D,\alpha,m,C;1/v_c,1/u_c)$ supplies
+its corresponding reflected domain. No exhaustive C2 join follows
+from these two domains alone.

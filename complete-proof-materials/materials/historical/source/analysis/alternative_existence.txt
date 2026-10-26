@@ -1,0 +1,210 @@
+Alternative existence route: two measurement circles
+22 October 2026. Bounded analytical investigation; no solver calls.
+
+Conclusion
+
+The two-circle representation gives a global finite polynomial SOS certificate
+for EACH valid full eight-coordinate support. It does not yet give ONE common
+finite feature space for all supports. Moreover, an ambient uniform-degree
+theorem based only on matrix order four and trigonometric bidegree (1,1) is
+false. An explicit counterfamily and proof appear below. The counterfamily is
+outside the nine-dimensional Bell-operator subspace, so it does not disprove a
+finite SDP lift of Q222, or even a common polynomial degree on that subspace.
+
+1. Exact full-set operator reduction
+
+Write an affine functional on all eight coordinates as
+
+ f(q)=c+sum_x a_x <A_x>+sum_y b_y <B_y>
+          +sum_xy e_xy <A_x B_y>.
+
+For z,w on the complex unit circle put
+
+ R(z)=((z+z^-1)/2) Z+((z-z^-1)/(2i)) X,
+ A_0=B_0=Z, A_1=R(z), B_1=R(w),
+
+and define the Hermitian 4 by 4 matrix
+
+ B_f(z,w)=c I4+sum_x a_x A_x tensor I2
+                 +sum_y b_y I2 tensor B_y
+                 +sum_xy e_xy A_x tensor B_y.
+
+This is a Laurent matrix polynomial of bidegree at most (1,1), and its
+coefficients depend linearly on the nine coefficients of f. The real-qubit
+atom reduction in compiler/effective_algebraic_extraction.tex proves exactly
+
+ f>=0 on Q222  iff  B_f(z,w)>=0 for every (z,w) in T^2.                 (1)
+
+No restriction to correlators is made. Positivity against real state vectors
+suffices because these physical matrices are real symmetric at each pair of
+angles; it is equivalent to positivity against complex state vectors. Thus the
+state sphere has been eliminated by matrix positivity, with all measurement
+circle endpoints and singular matrices retained.
+
+2. The verified imported theorem, and what it actually gives
+
+Primary source: Michael A. Dritschel, Factoring non-negative operator valued
+trigonometric polynomials in two variables, Mathematische Annalen 391 (2025),
+515-537, Theorem 4.1:
+https://link.springer.com/article/10.1007/s00208-024-02895-9
+Public full PDF: https://d-nb.info/1348962968/34
+
+The theorem applies to finite matrix size and nonnegative, rather than merely
+strictly positive, Laurent matrix polynomials on T^2. At bidegree (1,1), it
+supplies at most two analytic matrix-square summands, with degree (N,1) for
+some finite N depending on the input matrix polynomial. The paragraphs before
+Theorem 4.1 explicitly distinguish this conclusion from a degree bound uniform
+over inputs. The September 2024 correction concerns the missing word finite in
+the abstract; it does not strengthen the degree quantifier.
+
+Combining this theorem with (1) proves, for every valid f, an identity
+
+ B_f=F_1^* F_1+F_2^* F_2,
+
+where the F_j are analytic 4 by 4 matrix polynomials of some degree (N(f),1).
+If one measurement variable is absent, ordinary matrix Fejer-Riesz gives the
+corresponding one-variable assertion. Hence the conclusion covers every valid
+support, including degenerate supports, without an atlas of contact strata.
+
+3. Precise finite SDP consequence, conditional only on a common degree
+
+Let A_N={0,...,N} times {0,1}, and form the block column
+
+ V_N(z,w)=(z^i w^j I4 : (i,j) in A_N)^T.
+
+Define K_N to consist of those affine supports f for which
+
+ B_f(z,w)=V_N(z,w)^* H V_N(z,w),   H>=0.                            (2)
+
+Here H has complex Hermitian order 8(N+1). Matching all Fourier coefficients
+is a finite system of REAL LINEAR equations in f and the real and imaginary
+parts of H. For a frequency (k,l), the matched block is
+
+ sum_{beta-alpha=(k,l)} H_{alpha,beta}.
+
+It equals the corresponding coefficient of B_f, including zero whenever
+|k|>1. Complex positivity can be replaced by the usual real symmetric
+realification, of order 16(N+1). Thus K_N is an evaluated finite Gram SDP cone.
+
+Let K be the cone of all affine supports nonnegative on the full Q222. Then
+
+ K_1 subset K_2 subset ... subset K,      K=union_{N>=1} K_N.        (3)
+
+Every K_N is closed. Indeed, the constant Fourier coefficient in (2) gives
+tr(H)=tr(B_f,00). For a convergent sequence of f's, feasible H's therefore
+have bounded trace; positive semidefinite H's with bounded trace form a compact
+set. A convergent subsequence supplies a feasible Gram matrix at the limit.
+
+A proof that K=K_N for SOME fixed N would establish a finite SDP lift of
+Q222 by finite Gram duality, equivalently by applying the fixed-feature
+assembly argument to the real and imaginary parts of V_N(z,w) psi. This is
+an alternative sufficient target that avoids the unresolved singular atlas.
+Equation (3) alone is not that proof. Existence of some arbitrary finite SDP
+lift is also not known to imply stabilization of this polynomial hierarchy.
+
+4. Ambient obstruction: matrix order four and bidegree (1,1) do not bound N
+
+We first give an elementary scalar family. For 0<t<1 let
+
+ a(theta)=1-cos(theta),  b(phi)=1-cos(phi),
+ p_t(theta,phi)=a^2 b+a b^2+t^6-3t^2 ab.                            (4)
+
+This has trigonometric bidegree (2,2) and is nonnegative. In fact a,b>=0,
+and AM-GM on a^2 b, a b^2, t^6 gives their sum at least 3t^2 ab.
+
+Claim: the p_t do not have trigonometric SOS representations with one common
+finite frequency bound, even if the number of squares is unrestricted.
+
+Proof. Suppose a common frequency bound existed. The corresponding Gram
+space has fixed finite dimension, so each representation can be chosen with
+a fixed maximum number of real trigonometric square summands g_{j,t}^2.
+Complex square summands can first be split into real and imaginary parts.
+Integration of p_t=sum_j g_{j,t}^2 over T^2 bounds each summand's L2 norm.
+In this fixed frequency space, all Fourier coefficients and derivatives up
+to order four are consequently bounded uniformly in t.
+
+Set theta=sqrt(2)t X, phi=sqrt(2)t Y. Then, uniformly on each bounded
+rectangle in (X,Y),
+
+ t^-6 p_t(sqrt(2)t X,sqrt(2)t Y)
+     -> M(X,Y)=1+X^4 Y^2+X^2 Y^4-3X^2 Y^2.                        (5)
+
+Taylor-expand each g_{j,t} at (0,0) through total degree three. After this
+substitution and division by t^3, the degree-four remainder is O(t), because
+of the uniform fourth-derivative bound. Since the squared sum of the scaled
+g's is bounded on a fixed rectangle by (5), the resulting cubic Taylor
+polynomials are bounded there. Norm equivalence in the finite-dimensional
+space of cubics bounds their coefficients. Along a common subsequence they
+converge to real cubic polynomials h_j, and (5) yields
+
+ M=sum_j h_j^2.                                                     (6)
+
+This is impossible. To see it directly, the zero coefficients of X^6,Y^6
+in M first remove X^3,Y^3 from every h_j. The zero coefficients of X^4,Y^4
+then remove X^2,Y^2, and those of X^2,Y^2 remove X,Y. Each h_j can therefore
+contain only 1, XY, X^2Y, XY^2. The coefficient of X^2Y^2 in their squared
+sum is a sum of squares of XY coefficients, hence nonnegative, whereas it
+is -3 in M. This proves the claim. Adding t^7 to (4) gives a strictly positive
+family with the same obstruction and the same limiting argument.
+
+Now reduce the scalar bidegree while increasing matrix order only to four.
+For z on T set
+
+ U(z)=[[0,z],[1,0]],     C(z)=(U(z)+U(z)^*)/2.
+
+U(z) is unitary, U(z)^2=z I2, and
+
+ C(z)^2=((2+z+z^-1)/4) I2.
+
+Put C=C(z), D=C(w), and define
+
+ Q_t(z,w)=(I2-C)^2 tensor (I2-D)
+             +(I2-C) tensor (I2-D)^2+t^6 I4
+             -3t^2 (I2-C) tensor (I2-D).                            (7)
+
+Every entry of Q_t has Laurent bidegree at most (1,1). Its eigenvalues
+are the four values of (4) obtained by choosing square roots of z and w:
+U(z) has eigenvalues zeta and -zeta, with zeta^2=z. Thus Q_t>=0 on T^2.
+
+If every such Q_t had SOS factors of a common bidegree bound, then p_t would
+also have a common bound. Explicitly, h(zeta)=(zeta,1)^T satisfies
+
+ U(zeta^2) h(zeta)=zeta h(zeta),    ||h(zeta)||^2=2.
+
+For h_total=h(zeta) tensor h(eta), one has
+
+ p_t(zeta,eta)=h_total^* Q_t(zeta^2,eta^2) h_total /4.
+
+Inserting a matrix SOS identity for Q_t therefore gives a scalar SOS for
+p_t, with degrees increased only by the fixed substitution and multiplication
+by h_total. For factors of degree (N,1), the scalar degree is at most
+(2N+1,3). This contradicts the proved scalar claim. Hence no uniform finite
+polynomial Gram degree exists for all PSD 4 by 4 Laurent matrix polynomials
+of bidegree (1,1).
+
+5. The physical scope is narrower, and remains essential
+
+The Q_t in (7) are NOT Bell operators of the form in Section 1. For a Bell
+operator B_f the trace is the angle-independent constant 4c, since each
+nonidentity Pauli observable and each product term is traceless. In contrast,
+write alpha(z)=(2+z+z^-1)/4 and beta(w)=(2+w+w^-1)/4. Directly from (7),
+
+ tr Q_t=4(2+alpha(z)+beta(w)+t^6-3t^2),
+
+which depends on the angles. No reduction of this counterfamily into the
+physical Bell subspace has been established here. Nor does a failure of
+uniform polynomial degrees by itself rule out an SDP lift using other fixed
+semialgebraic features.
+
+Consequently the usable global result is (3), and the exact failed shortcut
+is replacing its per-support degree by a bound inferred from matrix order,
+bidegree, or compactness alone. Any completion through this route must exploit
+the nine Bell coefficients to prove a common finite feature space, or must
+provide a separate finite factorization theorem tailored to that subspace.
+The determinant/Newton structure may provide such additional information;
+it was left to the lead investigation to avoid duplicating that route.
+
+Files inspected: inputs/prior_summary/physical_core.tex;
+compiler/effective_algebraic_extraction.tex;
+diagonal/diagonal_proofs.tex (smooth-diagonal and conditional assembly parts).
+No manuscript source was edited. Only this analytical note was added.

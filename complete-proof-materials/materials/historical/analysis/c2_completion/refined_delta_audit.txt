@@ -1,0 +1,223 @@
+REFINED 439-PAGE SOURCE: BOUNDED C2 DELTA AUDIT
+22 October 2026
+
+Baseline: the completed 93-body C2 review in this directory is retained.
+New source root:
+recovery/refined_439/Q222_Refined_Proof_Source_2026-10-22/
+
+VERDICT
+
+The new BA1-BA15 certificate is a valid substantive simplification of the
+bounded-a, small-e weak-C2 corner. It supplies an exact full-parent local
+certificate and a complete homogeneous remote join, including source
+a infinitesimal in residue, literal n=0, all state directions, both angle
+signs and projective endpoints. No new mathematical gap was found in the
+examined weak-C2 scope/reference changes.
+
+The replacement removes the operative need for the older WC/R9 circuit
+conductor chains and their GR/BS source-domain bodies. R8 and unbounded-a
+R10 retain their own source bounds and use only the generic BA polynomial
+identities. The baseline universal theorem and global criterion were not
+redone in this follow-up.
+
+One nonblocking notation/reference defect remains: certificates/group_07.tex
+line 603 says to clear \mathcal D, but the local definition of that common
+denominator was removed from the native dictionary. The later uses of
+\mathcal D at lines 4986 and 5189 name different determinant denominators.
+The displayed native rational denominators suffice for the proof, and the
+six new RC1/RC6 balances are exact, so this is not an unproved inference.
+Restore the old definition or change this sentence to 'clear the displayed
+source denominators' when editing the exposition.
+
+ACTUAL MATERIAL EXAMINED
+
+- certificates/group_07.tex lines 9365-9740: the entire new certificate.
+- Lines 550-645: native six-weight/scalar/normal dictionary and the newly
+  printed RC1/RC6 balances.
+- Lines 733-766 and 1181-1188: revised compact R1 and full-normal scope.
+- Lines 7062-7110 and 7512-7522: R8/R10 replacement crosswalks and actual
+  input statements.
+- Lines 9121-9362: complete directed-source HJ scoping and row joins.
+- Lines 648-723: retained exact OP1-OP5 source overlap.
+- chapters/07_cover.tex lines 952-953: current BA routing destination.
+- audit/weak_c2_scoping_manifest.json and component_crosswalk.json were
+  navigation only, not evidence of correctness.
+
+THE NEW FULL-PARENT ARGUMENT
+
+1. Actual domain and source regularity.
+
+The domain at lines 9368-9375 is B,h,e>0 infinitesimal, a>0 bounded,
+r=1-e, and t a positive unit with t_0>1, together with the original
+stationary physical source and n>=0. Thus g has residue one, j has
+positive residue 1-1/t_0, and all native denominators apart from the
+printed monomial factors are units. No lower bound on a or n is inserted.
+
+BA1 is the same six rational source coefficients already checked against
+all six complete-parent stationary equations in the baseline review.
+The new cancellation lambda=(m-a^2 q)/(t a^2 B),
+q=nr^2+(m+1/2)e^2+alpha, was checked directly again. Its canceled
+denominator at B=h=0,r=1 is 2*t*(a+1), including a=0 in residue, and its
+residue is 1/2. This verifies the opening-uniform cancellation claimed at
+lines 9417-9425, not just a formal B=0 vanishing. BA3's C,Ah,D,alpha/B^2,
+m,n residues are correct. In particular m,n,alpha and mu are infinitesimal,
+Ah is a unit, and A may be unbounded.
+
+2. Full state restoration and the explicit hard quadratic.
+
+BA4-BA7, lines 9432-9503, are identities for all four homogeneous state
+coordinates. The printed H0 is the complete hard quadratic; it is not a
+scalar-graph or Hessian substitute. Writing eta=sqrt(h)*N_y makes every
+occurrence of A occur through bounded Ah, sqrt(h)*Ah, or h*Ah. The
+remaining hard coefficients have no testing inverse or negative power of
+a. The xi, eta and E normal directions remain unrestricted.
+
+A fresh checker, check_refined_ba.py, reconstructs P directly from BA2,
+expands the entire BA7 in W,X,Y,Z,u,v, and substitutes BA1. Its seven
+distinct residual coefficients all vanish identically. For the radical
+packet R^2+T^2+lambda J^2 it uses the printed exact polynomial expansion
+at lines 9493-9496. For -2 sigma Q xi it cancels the same pure-source
+sqrt(q) symbolically. Thus the test includes the complete hard quadratic,
+both complete first-normal rows, and the scalar, rather than checking
+only a restricted state slice.
+
+The hard residue is BA8. The E,R_D block has determinant
+1/[4(t_0-1)]>0. The remaining potentially nontrivial Q,xi block has
+diagonal entries 1 and 1/2-mu with off-diagonal -sigma. N^2 and T^2
+are retained whole, so a vanishing n causes no division and an unbounded
+coefficient inside T's root is not treated as a bounded Gram entry.
+
+3. The new physical Schur bound.
+
+BA9, lines 9516-9545, is the unchanged exact physical numerator
+2r Delta n=e Q_s-B K_s. Its positive terms give
+e/B>=K_s/Q_s, with K_s/Q_s tending to t_0(1+a_0).
+Since q>=e^2/2+alpha, lambda tends to 1/2, and
+alpha/B^2 tends to t_0(1+a_0)/2,
+
+  st(sigma^2) <= t_0*a_0^2 /
+                 [2(1+a_0)(1+t_0(1+a_0))].
+
+When e/B is unbounded, sigma has zero residue. Otherwise the displayed
+bound follows by dividing only in the source field. Subtraction from
+1/2 gives exactly
+
+  [1+a_0+t_0(1+2a_0)] /
+  [2(1+a_0)(1+t_0(1+a_0))] > 0.
+
+This is BA10 and proves bounded sigma and a strict Q,xi Schur residue
+for every bounded a_0>=0. The argument uses n>=0 and never n^{-1}; at
+n=0 the physical inequality is an equality but the strict Schur bound
+still holds. The other residues are t_0/2, 1/(2t_0), 1/2 and 1.
+Consequently the exact remaining finite Gram is bounded and strict.
+
+4. Tensor legality, states and testing signs.
+
+All radicals and inverses in BA4 are pure-source or pure-testing factors.
+sqrt(uv) is taken only after the exact sign gauges make u,v positive.
+There is no testing-ratio inverse or state-coordinate inverse in the
+final local roots. Literal u=0 or v=0 uses the separately printed exact
+positive event-square identities, lines 9560-9575. Real/imaginary splitting
+is legitimate because the full parent matrix is real. The finite strict-
+Gram proof at lines 9580-9598 diagonalizes only pure-source matrices and
+splits scalar factors into separated positive factors. It does not take
+a root of a mixed tensor coefficient. Source/test infinitesimals are
+independent throughout.
+
+5. Complete remote and projective complements.
+
+Lines 9600-9724 reproduce the operative complete GR identities directly:
+
+- BA11 handles noninfinitesimal u with infinitesimal v, using bounded
+  p=1/u and six roots. sqrt(n)X and sqrt(alpha)pX are legal even at zero
+  weights. The W,vX determinant is positive for every finite p_0,
+  including p=0 (literal u=infinity).
+- BA12 handles infinitesimal u and a unit v with sqrt(m)W retained as
+  an extra root. No inverse of m or u occurs. Its remaining 2x2 determinant
+  is c_0*d_0*V^2>0.
+- BA13 treats infinitesimal u and unbounded v using the polynomial
+  reciprocal chart, including its literal endpoint.
+- BA14 covers both finite residues nonzero; the full three-state
+  determinant and its strict Z=0 restriction give positive definiteness.
+- The two displayed one-infinity forms retain all four state directions.
+- BA15 is the complete double-homogeneous polynomial. The extra pZ,qZ
+  roots vanish at the literal double endpoint, respecting the original
+  null state. Its nontrivial residue determinant is d_0/2>0.
+
+These cases, the local certificate and the literal-axis identities exhaust
+all independent projective testing pairs. The complete BA11 and BA15
+polynomial equalities were rebuilt afresh without stationary source
+specialization, and BA12's determinant was checked directly. The remaining
+remote matrices are the same algebraic forms inspected in the baseline GR
+review, now valid directly under the BA3 source residues. Every nearby
+homogeneous chart has bounded coefficients after normalizing sqrt(A)Y.
+
+SCOPE AND REFERENCE DELTAS AGAINST THE AUDITED BASELINE
+
+compare_refined_weak_math.py compares displayed formulas in all 33 scoped
+weak-C2 fragments against the actual recovered original bodies. It removes
+only whitespace and equation/label tags when comparing. The result is
+saved in refined_display_comparison.json. Thirty components preserve every
+original display. The six changed/deleted displays occur only in:
+
+- p9e725a065583: the old unbounded-q restriction becomes a definition
+  without the size restriction, and the same coordinate definition is
+  reformatted in gathered form. Lines 733-750 explicitly invoke R1N1-11
+  for the already audited enlarged R1 estimates. This does not delete a
+  necessary assumption silently. RFN's scope makes the same explicit
+  reference; its actual full-normal and hard-block formulas are unchanged.
+- pd709027c7805: the old R9-only common-denominator/asymptotic paragraph
+  is removed. The generic weight, scalar and complete normal arrays are
+  preserved, and all six exact RC1/RC6 contact balances are now displayed
+  at lines 624-645. Each terminal supplies its own source bounds. The
+  undefined local name \mathcal D at line 603 is the minor defect noted
+  above; it is not used as a positivity premise.
+- pc024f5300388: obsolete OP6's particular bounded-a WC boundary
+  application is removed. OP1-OP5 remain intact, including physical C1
+  identification only at literal n=0 and the warning that positive n
+  yields negative formal beta. The removed WC boundary application is
+  unnecessary because BA now proves n=0 directly.
+
+Actual HJ routing at lines 9184-9358 retains the ten source rows and
+explicit ordered split. In the regular small-e opening, bounded a goes
+to BA, while unbounded a goes to R10. The WA/WE/SL unit-e exits and
+R1-R8 bodies retain their already audited source conditions. R10 still
+splits n/e^2 into noninfinitesimal, positive infinitesimal and literal zero;
+the last case uses OP4 and the appropriate retained physical C1 theorem.
+BSR's old status/scope module is not an operative premise. The historical
+prior-admission wording still present in some retained theorem statements
+is explicitly discharged by the actual source/identity use at lines
+9241-9246, consistent with the baseline body-level audit.
+
+The replacement paragraphs at lines 7062-7072 (R8) and 7512-7522 (R10)
+identify the generic BA4-BA7 algebra and BA9 physical identity. Their
+algebra is valid before bounded-a assumptions; the importing bodies retain
+their own bounds, including the necessary positive lambda and the joint
+D normalization in R8. They do not import BA3's bounded-a residue
+assumptions into unbounded a or the t_0=1 R8 boundary. References to the
+former GR formulas refer to the reproduced polynomial identities, not
+the omitted source theorem. The native dictionary now explicitly says
+this at lines 639-645. No remaining direct reference to the omitted
+WC/R9/BSR component IDs was found in the active chapters/certificates.
+
+R1's separate RB and NS helper bodies are also omitted from this reduced
+route, but the full formulas/budgets needed by R1 are retained inside
+RSR/RFN as already checked in the baseline. The old R6 thin predecessor
+and R10 join wrapper are unnecessary because RB/RI and the rewritten HJ
+join now supply those exact splits. This follow-up does not re-audit
+unrelated strong-angle or C1 refinement choices.
+
+FRESH VERIFICATION AND LIMITS
+
+check_refined_ba.py/.json records 19 exact equality checks, completed in
+5.58 seconds: full BA7 coefficient identity, lambda cancellation/residue,
+BA3 source residues, exact physical numerator, Schur algebra, full BA11 and
+BA15 homogeneous identities and BA12 determinant. No solver or numerical
+sweep was used. Display preservation is a comparison aid, not a proof of
+source scope; the changed scope and import conditions were read directly.
+
+Conclusion: the new five-page certificate preserves the required tensor
+quantifiers and closes its entire claimed source/testing domain. The
+examined reduced weak-C2 route keeps the operative proof dependencies
+needed by the completed baseline audit. The only detected defect is the
+nonblocking undefined common-denominator name at group_07 line 603.

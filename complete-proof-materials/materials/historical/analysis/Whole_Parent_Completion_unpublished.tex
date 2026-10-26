@@ -1,0 +1,165 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,hyperref}
+\newtheorem{proposition}{Proposition}
+\newcommand{\R}{\mathbb R}
+\title{Preserving cancellation in a finite semidefinite certificate}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\vspace{-2.2em}
+
+A positive quadratic form can be completed square by square at each
+measurement. A finite semidefinite certificate requires more: the same
+finite family of testing functions must work for every Bell inequality.
+The following elementary obstruction explains why eliminating the state
+variables first can lose this property.
+
+\begin{proposition}\label{prop:poles}
+Let $I$ be a nonempty open interval in $(0,\infty)$. If a family of
+functions on $I$ contains nonzero multiples of
+\[
+                    \frac{s}{s+r}
+\]
+for infinitely many distinct $r>0$, it has no representation
+$g_c(s)=f(s)^TQ_c f(s)$ with one finite vector $f$ independent of $c$.
+The matrices $Q_c$ may depend arbitrarily on $c$.
+\end{proposition}
+\begin{proof}
+For distinct $r_1,\ldots,r_k$, a linear relation between
+$s/(s+r_i)$ on $I$ is a rational identity. Multiplication by
+$\prod_i(s+r_i)$ and evaluation at $s=-r_i$ makes each coefficient
+zero. These functions are therefore linearly independent. A Gram
+representation with $m$ fixed functions would place all of them in the
+span of the $m(m+1)/2$ products $f_i f_j$, which is impossible.
+\end{proof}
+
+\section{The cancellation in the Bell slack}
+
+Consider the stationary C2 source family used in the uniform contact
+certificate, with $d=1$ and $\lambda=\beta=0$. At the testing angle
+$v=0$, write the state as
+\[
+ W=w+uM,\quad Y=uw-M,\qquad
+ X=N-u\zeta,\quad Z=\zeta+uN.
+\]
+The complete homogeneous slack numerator is
+\begin{align}
+ T={}&(C+D+\tfrac12)(1+u^2)M^2+A(-M+uw)^2 \nonumber\\
+ &+(m+\tfrac12)(1+u^2)N^2
+       +n(N-u\zeta)^2+\alpha(\zeta+uN)^2 .       \label{eq:whole}
+\end{align}
+All six source coefficients are nonnegative. Thus this restriction
+already has a finite polynomial sum of squares, including $n=0$.
+The two normals $M,N$ need not be eliminated.
+
+To see what elimination changes, collect the $N$ terms. Set
+\[
+ A_N=n+m+\tfrac12,\qquad B_N=m+\alpha+\tfrac12,
+ \qquad h_N=A_N+B_Nu^2.
+\]
+Their exact completion is
+\begin{align}
+ &h_NN^2+2(\alpha-n)uN\zeta+(nu^2+\alpha)\zeta^2 \nonumber\\
+ &\quad=h_N\left(N+\frac{(\alpha-n)u\zeta}{h_N}\right)^2
+ +\left(nu^2+\alpha-
+       \frac{(n-\alpha)^2u^2}{h_N}\right)\zeta^2.       \label{eq:split}
+\end{align}
+Both terms on the right are nonnegative, since the original
+two-variable form is positive semidefinite. Their rational parts cancel
+in the sum. Keeping the first term separately introduces a moving
+denominator that was absent from~\eqref{eq:whole}.
+
+Indeed, restrict the state to $W=Y=0$, $X=-u$, $Z=1$. This choice is
+independent of the source and gives $N=M=w=0$, $\zeta=1$. The first
+term of~\eqref{eq:split} becomes
+\begin{equation}
+ g_c(s)=\frac{(n-\alpha)^2}{B_N}\frac{s}{s+r_c},
+ \qquad s=u^2,\quad r_c=\frac{A_N}{B_N}.             \label{eq:moving}
+\end{equation}
+Normalizing the state multiplies every $g_c$ by the same positive
+function $1/(1+s)$ and does not change the argument.
+
+\section{The obstruction occurs at actual stationary sources}
+
+Use the native source parameters
+\begin{equation}
+ j=1,\qquad H=\tfrac12,\qquad B=T=\varepsilon>0,
+ \qquad \tfrac14\leq p\leq\tfrac12 .              \label{eq:path}
+\end{equation}
+The rational source dictionary has the following uniform limits as
+$\varepsilon\downarrow0$:
+\[
+ n\longrightarrow\frac{p}{4(1-p)},\qquad
+ m\longrightarrow\frac{p}{4(1-p)},\qquad
+ \alpha\longrightarrow0,
+ \qquad r_c\longrightarrow\frac{2}{2-p}.
+\]
+The denominators remain nonzero on this compact $p$ interval. Hence
+$n>0$ for all sufficiently small positive $\varepsilon$, uniformly in
+$p$; the other event weights and native gaps are positive by the
+source formulas. In particular these are admissible stationary
+sources, not independently chosen event coefficients.
+
+At the endpoints, the limiting ratios are $8/7$ and $4/3$. For every
+sufficiently small fixed positive $\varepsilon$, the rational function
+$p\mapsto r_c$ is therefore nonconstant and $n-\alpha$ is nonzero.
+It takes infinitely many positive values. Proposition~\ref{prop:poles}
+applies to~\eqref{eq:moving} on any open interval of $s>0$, including
+the remaining region $s>(9/256)^2$.
+
+Thus the separated positive Schur term has no finite fixed testing
+family, even though its sum with the second term has the polynomial
+certificate~\eqref{eq:whole}. A finite certificate for the full slack
+must preserve this cancellation before choosing its positive pieces.
+This result excludes the separated Schur construction; it places no
+obstruction on a different Gram representation of the full slack.
+
+\section{What remains for the global construction}
+
+The uniform contact certificate and the ten-row Bob completion admit
+the quantitative R1 sources on
+\[
+ |u|\leq9/256\quad\hbox{or}\quad |v|\geq1/16.
+\]
+The strip $|u|>9/256$, $|v|<1/16$ still needs a certificate for the
+complete slack. The calculation above identifies a cancellation that
+such a construction should retain.
+
+Source coverage is a separate requirement. For example, the same
+native dictionary has the admissible path
+\begin{equation}
+ B=s^2,\quad T=1/s,\quad j=1,\quad p=\tfrac12,
+ \quad H=s/2,\qquad 0<s\leq2^{-10}.                \label{eq:r2}
+\end{equation}
+Its contact angles satisfy $u_c=s$ and $v_c=\sqrt{s}$, both inside
+the testing cap. Nevertheless $T\geq1024$, outside the R1 source
+domain. Its physicality numerator is
+\[
+ 8N=s^6-s^5+5s^4-7s^3+6s^2-8s+4>3.
+\]
+The positive source denominators and gaps follow directly from
+$E=1$, $L=s+1/2+3/(2s)$, $HT=1/2$ and
+$1-s/2+s^2/2>0$. In native coordinates this is the bounded-ratio R2
+branch, $a_s=1$, $t_s=1/s$, $B_s=s^2$,
+$r=h=1/(2+s^2)$.
+
+A global evaluated pencil requires admission of these R2 sources as
+well as the remaining R1 strip. The long proof treats R2 separately;
+testing coverage of its contact does not establish its source
+admission. A finite source-cone reduction could replace a separate
+R2 construction, but such a reduction is not supplied by the current
+quantitative certificates.
+
+\paragraph{Sources and reproduction.}
+The native dictionary and full parent are printed in
+\texttt{../uniform-contact/Uniform\_Contact\_Certificate.pdf}.
+The complete normal calculation is given in
+\texttt{normal\_elimination.txt}; \texttt{check\_completion.py}
+verifies its identities, the limits above and an exact fixed positive
+value of $\varepsilon$. The R2 branch is RL1--RL24 and R2O1--R2O24
+in \texttt{latex/certificates/c2\_short.tex}. These references concern
+the algebra and source domains used here; no global evaluated-lift
+claim follows from this note.
+\end{document}

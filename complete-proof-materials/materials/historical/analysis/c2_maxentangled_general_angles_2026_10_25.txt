@@ -1,0 +1,111 @@
+GENERAL MAXIMALLY ENTANGLED C2 CONTACTS: EXACT SOURCE AND ONE OBSTRUCTION
+25 October 2026. One symbolic attempt; no numerical evaluation or sweep.
+Scripts/data: matching .py/.json. Source order below is(d,n,m,C,A,D,alpha),
+with lambda=beta=0. Canonical Bell/event conventions match the preceding
+c2_maxentangled_surface note and repo c2-equal-angle-cone.
+
+1. Full stationary source and exact domain
+
+At u=c,v=a*c, psi=(1,-c*r,c*r,1), z=c^2, solve the four UNcleared Bell
+operator kernel entries plus the two scalar angular derivatives, holding
+this UNnormalised state fixed. With d=1, the exact unique solution is:
+
+ Q=1+[a(1-r)+r]z,
+ L=a+r-1+ar z, J=1-ar z, R=L+rQ,
+ W=1+(a^2+a+2r)z+[a^2+ar(2-r)+r^2]z^2,
+ N=(1-r)+[a-r(a^2+3a)+r(2-3r)]z
+                                      -r[a^2+ar(3-r)+r^2]z^2;
+
+ n=aN/[2r(a+1)W],
+ m=(1-r)(1+a^2z)(1+rz)Q/[2(a+1)LW],
+ C=(1+rz)R/[2(1-r)W],
+ A=a(a+r)(1+rz)Q/[2r(a+1)W],
+ D=(a+r)(1+z)JQ/[2(a+1)LW],
+ alpha=a z^2(a+r)R/[2JW].
+
+The EXACT native positive-source domain for this chart is
+ a>0, 0<r<1, z>0, L>0, N>=0.
+Here Q,W>0 directly. The quadratic N has negative leading coefficient
+and positive constant1-r, hence exactly one positive root. Since
+ N(1/(ar))=-(a+1)^2(a+r)/a^2<0,
+N>=0 and z>0 imply J>0. Also R=L+rQ>0. Thus m,C,A,D,alpha are
+positive and n>=0. Conversely m>0 requires L>0, and n>=0 requires N>=0.
+This domain has a genuine three-dimensional open part, for example near
+a=1,r=1/2,z=1/4. The a=1 specialization is the published equal-angle cone.
+
+The six-by-six contact minor deleting d is
+ 16384*c^6*r^2*(a+1)*(r-1)*(a*c^2*r-1)
+ *(a*c^2*r+a+r-1)^2
+ *[-a^2*c^4-a^2*c^2+a*c^4*r^2-2a*c^4*r-a*c^2
+                                      -c^4*r^2-2c^2*r-1]
+ /[(1+c^2)^4(1+a^2*c^2)^4].
+Its factors are nonzero throughout the native domain: the bracket is -W,
+the preceding gaps are -J and L. Therefore the source solution is unique
+there, including N=0. Every one of the six contact residuals is identically
+zero in the exact checker. With nonnegative event weights, the already
+proved elementary stationary-zero determinant argument (SG3,SG5-SG7)
+establishes physical validity; no new full-set existence inference is made.
+
+2. The source-only quadratic structure is genuinely different
+
+The two simple equal-angle linear relations no longer hold. There is one
+particularly short new homogeneous quadratic identity:
+
+             D(alpha+d/2)=m(C+d/2).                 (G1)
+
+For d=1 it follows directly from
+ C+1/2=(a+r)(1+z)Q/[2(1-r)W],
+ alpha+1/2=(1+a^2z)(1+rz)Q/[2JW].
+Both products in(G1) equal
+ (a+r)(1+z)(1+a^2z)(1+rz)Q^2/[4(a+1)LW^2].
+
+This is the ONLY homogeneous quadratic identity on the full three-
+parameter surface. Exact proof: clear the positive common denominator
+ K=2r(a+1)(1-r)LJW.
+The seven scaled weights are polynomials, of degree at most(5,6,4) in
+(a,r,z). Expand their28 homogeneous pair products. The coefficient matrix
+has509 rows and rank27. A primitive integer null vector is
+ d(D-m)-2mC+2Dalpha=0.
+The checker verifies this relation identically, proving rank<=27. It
+exports27 independent coefficient rows and27 columns with a nonzero
+minor modulo the prime1000003, proving rank>=27 overQ. This is exact
+coefficient algebra, not evaluation at selected parameter values. Since
+the native domain has nonempty interior, the result applies to identities
+on that domain. There is no homogeneous linear identity either: multiplying
+one by d would give a quadratic identity divisible by d, whereas(G1) is
+not divisible by d.
+
+In the independent linear coordinates P=C+d/2,Q'=alpha+d/2,m,D,
+the quadratic in(G1) is mP-DQ'. Its quadratic-form rank is4 and its
+signature is(2,2). By contrast the determinant of a symmetric2-by-2
+matrix of source-linear forms has rank at most3, since it depends on at
+most three linear forms. Thus no nontrivial such determinant can vanish
+on the whole surface: it would have to be a multiple of(G1), which has
+the wrong rank. This excludes a direct generalization of the previous
+source-only rank-one2-by-2 Schur-epigraph identities. It does NOT exclude
+2-by-2 blocks with auxiliary variables, larger coupled PSD blocks, or any
+general finite lifted representation.
+
+3. Concrete failure of the old order7 source cone
+
+Fix a=2,r=1/2 and take sufficiently small positive z. The domain holds
+because N(0)=1/2,L(0)=3/2; all active weights except possibly n are
+strictly positive, and n is also positive for small z. The source limits are
+ (d,n,m,C,A,D,alpha) -> (1,1/3,1/18,2,5/3,5/18,0).
+Consequently the old second Schur block has determinant
+ D*alpha-(A-D)^2 -> -625/324<0.
+Therefore actual positive stationary sources of the enlarged family fail
+that old block for every sufficiently small z>0. This is a structural
+failure of that proposed import, not failure of physical validity.
+
+4. Precise remaining constructive obligation
+
+No exact finite cone for all three parameters is derived in this bounded
+attempt. The old two-epigraph decomposition cannot supply it, because its
+linear and rank-one identities fail, and(G1) cannot be a source-linear
+symmetric2-by-2 rank-one determinant. The next proof needs an evaluated
+auxiliary-variable or larger coupled PSD representation of the CLOSED
+conic hull of the exact source dictionary in section1, with both inclusions
+proved. No claim about its existence or nonexistence follows from the
+quadratic obstruction alone. The previously established order7 equal-angle
+cone remains valid and exactly represented; it is the a=1 subfamily only.

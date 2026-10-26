@@ -1,0 +1,309 @@
+\section{Self-contained C1 source definitions and contact verification}
+\label{app:c1-source-definitions}
+
+The letter $d$ in the contact--conductor proof denotes the new parameter
+$\delta$, not the Bell coefficient. Here the latter is denoted $d_{\rm B}$,
+and the original event coefficient $e_5$ is denoted $D_{\rm e}$.
+The testing factor is always $D=1+u^2$. The conductor monomial
+$C=\delta b^2uw$ is distinct from the clearing multiplier
+$\mathcal C=K^6Q^4T_n$.
+
+\paragraph{Domain and seven native coquotients.}
+The coefficient field and testing field are independent real closed
+fields. On this C1 source branch, $k,f,g>0$ are coefficient
+infinitesimals, $e=kf/g$ is positive unbounded, and
+$\Delta=e^{-1}$. The shapes $a,t$ are positive bounded elements;
+\[
+ R=1+k^2(1-af^2),\qquad T=1+k^2-k^2g^2t,
+ \qquad M=R-t>0,\quad J=T-a>0.
+\]
+All original event coefficients are assumed nonnegative. In particular,
+the formulas below retain the requirements $D_{\rm e},\beta\ge0$.
+No relation compares a testing rate with a coefficient rate.
+Put
+\[
+ \kappa=k^2,\quad \eta=f^2,\quad \zeta=g^2,
+ \quad V_c=\kappa\eta\zeta,\quad
+ L_c=1-a\eta,\quad H_c=1+(1-a)\eta,\quad Q_c=1-\kappa\zeta+aV_c.
+\]
+Define
+\begin{align*}
+P_4={}&1+\kappa+\eta\kappa(a-\kappa-1)-\zeta\kappa t
+ +V_c[-\zeta\kappa t^2+2\kappa t+a(1-t)+t],\\
+P_\alpha={}&1+\kappa-a\eta\kappa
+ +\zeta[(1+\kappa)-(2+\kappa)t]
+ +V_c[-\zeta t^2+a(t-1)+t],\\
+P_d={}&(1+\kappa)^2-a\eta\kappa^2
+ +\zeta\kappa[(\kappa+1)-(\kappa+2)t]\\
+ &+V_c[-\zeta\kappa t^2+\kappa a(t-1)+\kappa t+\kappa+1].
+\end{align*}
+The complete seven coquotients are
+\begin{align*}
+c_2&=2(1+\kappa)(1-t\zeta)L_c(1+V_c)H_cQ_c,\\
+c_b&=2(1+\kappa)L_c[1+(1-t)\zeta]H_cQ_c,\\
+c_3&=2(1+\kappa)L_cH_cQ_c(1-\kappa\eta+tV_c),\\
+c_5&=2(1+\kappa)L_cH_cQ_c(1+V_c),\\
+c_4&=2Q_cP_4,\qquad c_\alpha=2L_cH_cP_\alpha,
+ \qquad c_d=4L_cQ_cP_d.
+\end{align*}
+Their residues, in this order, are $2,2,2,2,2,2,4$.
+Here $c_b$ is the original $c_\beta$, and the subscript on $c_d$ is a
+name rather than the conductor parameter.
+
+\paragraph{Original source and full parent.}
+The original event coefficients and multiplier are
+\[
+\begin{gathered}
+\lambda=n=0,\qquad c=2,\qquad
+ d_{\rm B}=\frac{2a\eta c_d}{c_3},\qquad
+ m=\frac{2ae^2c_2}{Mc_3},\qquad A=\frac{2a\eta^2c_4}{c_3},\\
+\alpha=\frac{2a\Delta^2k^6\eta^2c_\alpha}{c_3},\qquad
+D_{\rm e}+\frac{d_{\rm B}}2=\frac{2ac_5}{Jc_3},\qquad
+\beta+\frac{d_{\rm B}}2=\frac{2ae^2c_b}{tc_3},\qquad
+\Lambda=\frac{RTc_3}{2a}.
+\end{gathered}                                                    \tag{SD1}
+\]
+Let $F$ denote the original complete parent, including its signed core.
+For a testing state $(W,X,Y,Z)$ define
+\[
+\begin{gathered}
+ D=1+u^2,\quad D_v=1+v^2,\quad B=X+uZ,\quad Q_A=W+uY,\\
+ r=uW-Y,\quad r_2=vQ_A-B,\quad r_5=r-v(Z-uX).
+\end{gathered}
+\]
+With $H_2=4Tc_2$, $H_b=4Tc_b$, $H_3=4Rc_3$, $H_5=4Rc_5$,
+the exact entire parent is
+\begin{align*}
+\Phi:=\Delta^2\Lambda F={}&H_2\frac RM r_2^2
+ +H_b\frac RtD_v B^2+\Delta^2H_3\frac TaD_vr^2
+ +\Delta^2H_5\frac TJr_5^2\\
+ &+4RT\Delta^2\eta^2c_4DD_vY^2
+ +4RT\Delta^4k^6\eta^2c_\alpha D(vY-Z)^2\\
+ &+2RT\Delta^2\eta c_dD\{(vY-Z)^2-D_vZ^2\}.
+                                                               \tag{SD2}
+\end{align*}
+Thus every original source event is accounted for.
+
+\paragraph{Retained packets and state coordinates.}
+In the remaining chart $Z=1$ with $u,v,W,X,Y$ infinitesimal, put
+\[
+ p=t/R,\quad h=a/T,\quad q_A=v(W+uY),\quad q_B=v(1-uX),
+ \quad N=B-pq_A,\quad M_B=r-hq_B.
+\]
+Retain the four nonnegative packets
+\[
+ \Pi_1=H_2\frac tM N^2,\quad
+ \Pi_2=H_b\frac MtD_vN^2,\quad
+ \Pi_3=\Delta^2H_3\frac JaD_vM_B^2,\quad
+ \Pi_4=\Delta^2H_5\frac aJM_B^2.                         \tag{SD3}
+\]
+Their subtraction is the exact identity
+\begin{align*}
+G=\Phi-\sum_j\Pi_j={}&H_2\{N^2-2q_AN+(1-p)q_A^2\}
+ +H_bD_v\{N^2+2q_AN+pq_A^2\}\\
+ &+\Delta^2H_3D_v\{M_B^2+2q_BM_B+hq_B^2\}
+ +\Delta^2H_5\{M_B^2-2q_BM_B+(1-h)q_B^2\}
+ +\mathcal W,\\
+\mathcal W={}&4RT\Delta^2\eta^2c_4DD_vY^2
+ +4RT\Delta^4k^6\eta^2c_\alpha D(vY-1)^2\\
+ &+2RT\Delta^2\eta c_dD\{(vY-1)^2-D_v\}.
+                                                               \tag{SD4}
+\end{align*}
+The testing coordinate $w=(W+uY)/D$ has the full inverse
+\[
+\begin{gathered}
+ X=N+pDvw-u,\qquad q_B=v(D-uN-puDvw),\\
+ W=w+\frac{u(M_B+hq_B)}D,\qquad
+ Y=uw-\frac{M_B+hq_B}D.
+\end{gathered}                                \tag{SD5}
+\]
+Its only testing denominator is the positive unit $D$.
+On the negative-core branch, sign gauges give $u,v>0$, and $w>0$:
+after eliminating the two positive core squares the remaining scalar is
+\[
+ \frac{uvDD_v}{\mathcal D}\{Duv w^2-2DD_vw+uv\},\qquad
+ \mathcal D=u^2v^4+u^2v^2+u^2+v^4+2v^2+1>0,
+\]
+which is nonnegative if $w\le0$. The eliminated matrix is
+$\left(\begin{smallmatrix}1+v^2+u^2v^2&uv\\uv&(D+v^2)/D\end{smallmatrix}\right)\succ0$.
+The nonnegative-core branch and literal axes already give direct SOS.
+Thus the radicals in the conductor proof separate between the two fields.
+
+\paragraph{Coefficient substitution and complete first normals.}
+Put
+\[
+ K=1+k^2,\quad \delta=\Delta R/K,\quad b^2=\eta K/R,
+ \quad Q=K+ak^2b^2,\quad T_n=K^2-t\delta^2k^4Qb^2.
+\]
+Then $\delta,k,b$ are positive infinitesimals, and
+\[
+ \eta=Kb^2/Q,\quad \Delta=\delta Q/K,\quad
+ \zeta=\delta^2k^2Qb^2/K,\quad R=K^2/Q,\quad T=T_n/K.     \tag{SD6}
+\]
+All displayed denominators are positive pure-coefficient units.
+Set $C_i=K^2Q^3c_i$ after this substitution. Explicitly, a native monomial
+$c\,k^jf^{2r}g^{2s}a^\alpha t^\tau$ becomes
+\[
+ c\,\delta^{2s}k^{j+2s}b^{2(r+s)}a^\alpha t^\tau
+       K^{2+r-s}Q^{3-r+s}.                            \tag{SD7}
+\]
+The native coquotients have $-2\le r-s\le3$, so these are polynomials
+with no negative exponents or shape inverses.
+Define $V_n,Y_n,B_0,A_c$ as in the conductor proof and
+$\mathcal C=K^6Q^4T_n$. The factored scalar printed there is exactly
+$F_0=(\mathcal CG)|_{N=M_B=0}$. For completeness put
+\[
+ S_n=8\delta^2K^2b^4C_4D_vY_n
+ +8\delta^4Q^2k^6b^4C_\alpha vB_0
+ +4\delta^2KQb^2C_dvB_0.
+\]
+The complete coefficients on the hard normals $N,\delta M_B$ are
+\begin{align*}
+ L_1={}&8K^3QT_n^2(C_bD_v-C_2)Dvw
+       -8\delta^2K^2Q^2uD v^2V_nA_c+K^3auvS_n,\\
+ L_2={}&8\delta K^2Q^2T_nD vV_n(C_3D_v-C_5)-K^2T_nS_n/\delta.
+                                                               \tag{SD8}
+\end{align*}
+The quotient in the last line is polynomial because $S_n$ contains
+$\delta^2$. These formulas follow by substituting (SD5) into (SD4),
+channel by channel; they include all normal terms of degree one.
+
+\paragraph{Short native proof of the exact contact identities.}
+Write $V=1+V_c$ and $K=1+\kappa$ in this paragraph. The factored
+coquotients above give immediately
+\[
+ c_b-c_2=\zeta c_3,\qquad c_3-c_5=-\kappa\eta c_b,
+ \qquad c_2=(1-t\zeta)c_5.                            \tag{SD9}
+\]
+Hence $Vc_b-c_2=\zeta c_5$ and
+$Vc_3-c_5=-\kappa\eta c_2$.
+The remaining three balances are the following short polynomial
+identities; substituting the displayed $P_4,P_\alpha,P_d$ proves them
+by multiplication and collecting terms:
+\begin{align*}
+\mathfrak Y:={}&2\kappa c_2+2VL_cc_4
+                 -2\kappa^2\zeta Q_cc_\alpha-Q_cc_d=0,\\
+\mathfrak S:={}&\kappa L_cc_2+c_5+VL_c^2c_4+\kappa Q_c^2c_\alpha
+                 +\tfrac12(\kappa\zeta L_c^2-2L_c-\eta)c_d=0,\\
+\mathfrak V:={}&\kappa Rc_2+t\kappa V_cc_b+aV_cc_3+Tc_5
+ +KV_cL_c^2c_4-\kappa^2\zeta KQ_cL_cc_\alpha
+ -\tfrac K2(Q_cL_c+\eta)c_d=0.                        \tag{SD10}
+\end{align*}
+For example, after the common factor $4L_cQ_c$ is removed,
+the first balance is just
+\[
+ \kappa K(1-t\zeta)VH_c+VP_4
+       -\kappa^2\zeta H_cP_\alpha-Q_cP_d=0.
+\]
+The two other balances are equally direct identities in the same three
+short polynomials; no expanded scalar or ideal calculation enters.
+
+The exact contact, in the original coordinates of (SD2), is
+\[
+ u=k,\quad v=\Delta k^2\eta,\qquad
+ (W,X,Y,Z)=(\Delta k,-k(1-t\zeta),\Delta k^2L_c,1).      \tag{SD11}
+\]
+At this point
+\[
+ r_2=Mk\zeta,\quad B=tk\zeta,\quad r=av,\quad
+ r_5=-Jv,\quad vY-1=-Q_c,\quad D=K,\quad D_v=V.
+\]
+Set $\Psi=\Phi/(4RT)$ and let $E_s=\tfrac12\partial_s\Psi$,
+with all other original testing coordinates held fixed.
+Direct differentiation of the seven terms in (SD2), followed by (SD9),
+gives at (SD11)
+\begin{align*}
+ \Psi&=K\zeta^2\mathfrak S,\\
+ E_W&=kv\{\zeta c_2+\Delta^2(Vc_3-c_5)\}=0,\\
+ E_X&=k\zeta\{Vc_b-c_2-\zeta c_5\}=0,\\
+ E_Y&=\tfrac12K\Delta^3\kappa\eta^2\mathfrak Y,\\
+ E_u&=k\zeta^2\{\mathfrak S-c_2+(1-t\zeta)c_5\},\\
+ E_v&=v\Delta^2\mathfrak V.
+\end{align*}
+They all vanish by (SD9)--(SD10). Homogeneity in $(W,X,Y,Z)$ also gives
+$E_Z=0$. This proves contact and full first-order stationarity directly
+in the native source.
+
+In (SD5)--(SD6), this point is exactly
+\[
+ (u,w,v,N,M_B)=(k,\delta k,\delta k^2b^2,0,0).
+\]
+All four packets (SD3) and their first derivatives vanish there.
+Changing coordinates and multiplying by $\mathcal C$ therefore gives
+$(F_0)_c=(\partial_uF_0)_c=(\partial_wF_0)_c
+=(\partial_vF_0)_c=(L_1)_c=(L_2)_c=0$.
+The leading polynomial $P$ is a sum of circuit squares vanishing at
+this contact, so $P\in J^2$. This proves every identity (CC7) without
+using the expanded-source checker as a premise.
+
+\paragraph{Positive correction weight without a large expansion.}
+Use the weights $(2,2,6,0,0,2,4,18)$ on
+$(\delta,k,b,a,t,u,w,v)$. Write $O_{\rm wt}(s)$ for a polynomial all
+of whose monomials have weight at least $s$. Native $\eta$ and $\zeta$
+have weights at least $12$ and $20$. Setting them to zero in the seven
+short coquotients, and then applying (SD7), gives
+\[
+ C_i=2K^6+O_{\rm wt}(12)\quad(i=2,b,3,5,4,\alpha),\qquad
+ C_d=4K^7+O_{\rm wt}(12).
+\]
+Also
+\[
+ Q=K+O_{\rm wt}(16),\quad T_n=K^2+O_{\rm wt}(24),\quad
+ V_n=K^2+O_{\rm wt}(24),\quad D_v=1+O_{\rm wt}(36),
+\]
+\[
+ Y_n=O_{\rm wt}(6),\quad B_0=-K^3+O_{\rm wt}(24),\quad
+ A_c=2K^8+O_{\rm wt}(12),\quad
+ \mathcal C=K^{12}+O_{\rm wt}(16).
+\]
+In the five factored scalar terms, discard only coefficients carrying
+weight at least $12$. The surviving expression is exactly
+\[
+ 8K^{14}D\{D(A^2+B^2)+K(C^2+D_0^2)-2K^2BC\}
+       =8K^{14}DP.
+\]
+Here $A^2,D_0^2$ have weight $44$, while $B^2,C^2,BC$ have weight $40$.
+Consequently $E_0=O_{\rm wt}(52)$, sufficient for every scalar lift
+coefficient to have weight at least $8$.
+For the normals use (SD9) in its polynomial forms
+\[
+ K(C_b-C_2)=\delta^2k^2Qb^2C_3,\qquad
+ Q(C_3-C_5)=-k^2Kb^2C_b.
+\]
+Since $K,Q$ have constant term one, these show weights at least $20,16$
+for the two differences, respectively, without putting their inverses
+in any lifting coefficient. The displayed $S_B,S_C$ in the conductor
+proof have weight at least $12$. Its factored normal formulas now give
+$L_1=O_{\rm wt}(42)$ and $L_2=O_{\rm wt}(32)$.
+The monic lift therefore has positive coefficient weights at least
+$8,20,10$. The stronger exact checker bounds $12,20,12$ are optional.
+
+\paragraph{Full hard block and restoration.}
+There are no state-normal terms above degree two. Put
+\[
+ C_B=H_3D_vh+H_5(1-h),\qquad
+ B_Y=4RT\Delta^2\eta^2c_4DD_v
+ +4RT\Delta^4k^6\eta^2c_\alpha Dv^2
+ +2RT\Delta^2\eta c_dDv^2.
+\]
+Before multiplication by $\mathcal C$, the exact quadratic block on
+$(N,\delta M_B)$ has entries
+\begin{align*}
+ A_{11}&=H_2+H_bD_v+\Delta^2C_Bu^2v^2+B_Yh^2u^2v^2/D^2,\\
+ A_{12}&=-\frac{\Delta^2}{\delta}(H_3D_v-H_5)uv
+                  -\frac{B_Y}{\delta D^2}huv,\\
+ A_{22}&=\frac{\Delta^2}{\delta^2}(H_3D_v+H_5)
+                  +\frac{B_Y}{\delta^2D^2}.
+\end{align*}
+The displayed ratios cancel coefficient monomials exactly:
+$\Delta/\delta=Q/K$ is a positive unit and
+$B_Y/\delta^2$ is bounded infinitesimal. Thus this full block has
+residue $16I_2$, also after multiplication by $\mathcal C$.
+The conductor proof and the positive circuit frame give the bounded
+strict-residue Gram for $\mathcal CG$. Restore the four full positive
+packets $\mathcal C\Pi_j$ from (SD3), then undo
+$\mathcal C\Delta^2\Lambda$. This recovers the entire original parent;
+retained gap ratios need not be bounded and are never placed in that
+bounded Gram. The complementary state and outer-angle charts require
+the already proved C1 chart arguments. This appendix makes no claim of
+an exhaustive global source cover.

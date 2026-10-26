@@ -1,0 +1,28 @@
+Bounded SE conductor: independent algebra and specialization audit
+2026-10-26
+
+Verdict. The two-stage ideal calculation and the explicit eight-root matrix are correct with a minor congruence correction. Boundedness is valid when the formal source generators have bounded images and localized denominators have nonzero real residue, or when every displayed output product is separately proved bounded. Bounded raw arrays and bounded monic coquotients alone do not imply this for arbitrary unbounded source-generator specialization. TL6 applicability remains an independent obligation.
+
+Exact algebra checked. Direct polynomial expansion verifies r_* in(2), all four generating identities behind(12)-(13), the contact Jacobian determinant -E^2 epsilon^3 j^4, the restricted-support expansion(14), both circuit identities(3), and the symmetric half-splitting used in(27). The contact-value cancellation is valid in the formal integral domain, without dividing by any specialized small quantity. The gradient determinant is nonzero formally, so its cancellation proves all four J_i contact values vanish before specialization, including later specializations where that determinant becomes zero.
+
+The second stage. S1 gives T_w(S) in epsilon^2 R and hence U=T_w(S)/epsilon in epsilon R. The congruences needed downstream are
+ T_u(S)=u p modulo epsilon,
+ T_v(S)=v q modulo epsilon.
+Consequently(21)-(22) hold. After first setting u=k as prescribed by the ordered quotient, reduction modulo epsilon sets u=0 and yields exactly
+ (T_w(J_x),T_w(J_y),T_w(J_z),T_w(J_h))
+   =(0,0,E v q(v^2),0) modulo epsilon.
+Thus every second-stage quotient is in(epsilon,v), as required. N1 gives the analogous first-normal divisibility in epsilon; the two normal lifts(26) retain their whole raw rows.
+
+Correction to(20). If its displayed modulus epsilon^2 is intended to cover T_u(S)=up, that congruence is false and must be weakened to modulo epsilon. A concrete example satisfying S0/S1 is F0=C^2(u-k)^2, with only f_CC=(u-k)^2 nonzero. Then S=(u-k)^2, p=1, q=0 and T_u(S)=u-k=u-epsilon j, which is not congruent to u modulo epsilon^2. The proof of(21)-(23) needs only modulo epsilon, so the correction leaves the conductor intact.
+
+Minimal direct test. The claimed equivalence in section7 must explicitly reduce modulo epsilon: it is (J_i modulo epsilon)(0,w,0) that must be independent of w, in (D/(epsilon))[w]. Retaining epsilon makes the stated equivalence false. For example J_i=epsilon(w-j) has contact value zero and T_w(J_i)=epsilon in(epsilon,v), but J_i(0,w,0)=epsilon(w-j) still depends on w. This correction agrees with, and does not alter, the second-stage proof(23).
+
+Radicals and matrix. For nonnegative testing angles and positive source epsilon,j,E, their definitions simplify to
+ q1=sqrt(epsilon)*sqrt(uw)*(v-v0),
+ q2=epsilon*sqrt(jE)*sqrt(uv)*(w-j).
+Their squared forms are epsilon*u*w*(v-v0)^2 and epsilon^2*jE*u*v*(w-j)^2. These verify the signs of both identities in(3). In(27), the two radical diagonals contribute varpi_c(q1^2+q2^2), and the two cross entries contribute -varpi_c*y*z+varpi_c*z*h. Together these equal 2varpi_c(q1^2-yz), exactly(25). The symmetrized ell terms have the correct factor1/2; the hard-normal entries reproduce2N G_N,2M_B G_M and preserve the hard2x2 block. Real-radical specialization must preserve the stated radicand signs; arbitrary signed bounded source images are not covered merely by the polynomial calculation.
+
+Boundedness clarification/counterexample to the weaker reading. In the direct polynomial ring, if every formal generator and testing variable has bounded image, finite sums/products and all monic polynomial quotients are bounded. The permitted localization preserves this when its denominator inverses are bounded. But the literal B1 list of raw coefficients plus coquotients does not itself bound factors E,j appearing in(13).
+For example take F0=0, G_N=C(v-v0), g_NC=v-v0 and all other arrays/hard entries zero. S0,S1,N1 hold. Specialize epsilon=eta^2,j=eta^(-1),E=1 for positive infinitesimal eta. Then v0=1,k=eta; G_N=uw(v-1), all raw arrays and all monic quotients(T_v=1,others0) are bounded on bounded tests. Yet(26) constructs gamma_Ny=Ej=eta^(-1), unbounded. Thus an explicit bounded-generator hypothesis, or bounds on all output products, is essential. If 'all displayed coefficients' in the opening paragraph already includes these products, this example is excluded; B1 should make that interpretation explicit.
+
+Scope. The theorem constructs a bounded symmetric identity, not a PSD matrix. The actual TL6 stress must still provide restricted scalar support, both complete normal arrays, formal jets, the epsilon^2 first-stage condition, allowed unit denominators/coquotient bounds, and the separate strict-base/infinitesimal-perturbation argument. Nothing in this general lemma proves those native hypotheses or supplies the formal negative-beta base.

@@ -1,0 +1,440 @@
+\documentclass[10pt]{article}
+\usepackage[margin=0.82in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,array,microtype,hyperref}
+\hypersetup{hidelinks,pdftitle={An exact obstruction to the quadratic half-line completion}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newcommand{\R}{\mathbb R}
+\newcommand{\V}{\mathcal V_9}
+\newcommand{\Cq}{\mathcal C_{33}}
+\newcommand{\Cr}{\mathcal C_{\rm ram}}
+\newcommand{\ip}[2]{\langle #1,#2\rangle}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\sgn}{\operatorname{sgn}}
+\newcommand{\co}{\operatorname{coeff}}
+\title{An exact obstruction to the quadratic half-line completion}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\vspace{-2.5em}
+\begin{abstract}
+The proposed order-33 cone is a proper subcone of the full nonnegative
+canonical valid-slack cone. We give an all-positive rational source and an
+explicit rational separating functional, certified by four positive definite
+dual matrices. A fixed enlargement, obtained by allowing a selector quartic
+in the square root of the Bob variable, contains the excluded source. Its
+order-49 affine pencil and exact feasible matrices are supplied. This proves
+strict enlargement, not global adequacy of the new family.
+\end{abstract}
+
+\section{The two cones and the counterexample}
+Use the source order
+\[
+c=(d,\lambda,n,m,C,A,D,\alpha,\beta)\in\R_+^9,
+\qquad D_u=1+u^2,\quad D_v=1+v^2.
+\]
+The full canonical cone $\V$ consists of the sources for which the established
+canonical numerator
+\begin{align}
+F_c={}&4\lambda D_u(W+vX)^2+4nD_uD_vX^2
+ +4m(vW-X+uvY-uZ)^2\notag\\
+&+4CD_v(uW-Y)^2+4AD_uD_vY^2
+ +(4D+2d)(uW+uvX-Y-vZ)^2\notag\\
+&+(4\alpha+2d)D_u(vY-Z)^2
+ +(4\beta+2d)D_v(X+uZ)^2-2dD_uD_vZ^2                       \label{eq:F}
+\end{align}
+is nonnegative for every real state vector and every pair of measurement
+angles, including their projective endpoints. Complex states are included
+by separating real and imaginary parts of this real symmetric quadratic form.
+
+For clarity, the accepted two-LMI definitions are recorded here:
+\begin{align}
+P&=\begin{pmatrix}4mv^2&-4mv\\-4mv&4m+(4\beta+2d)D_v\end{pmatrix},&
+N&=\begin{pmatrix}4CD_v+4D+2d&(4D+2d)v\\(4D+2d)v&(4D+2d)v^2\end{pmatrix},\notag\\
+E&=\begin{pmatrix}4AD_v+(4\alpha+2d)v^2&-(4\alpha+2d)v\\
+-(4\alpha+2d)v&4\alpha-2dv^2\end{pmatrix},&
+K&=4\lambda\begin{pmatrix}1&v\\v&v^2\end{pmatrix}
+       +4nD_v\begin{pmatrix}0&0\\0&1\end{pmatrix},            \label{eq:PNEK}\\
+G_J&=\begin{pmatrix}P+K&J\\J^T&N+K\end{pmatrix},&
+H_J&=\begin{pmatrix}P+E&K-E-J\\K-E-J^T&N+E\end{pmatrix}.  \label{eq:GH}
+\end{align}
+Let $\Cq$ be the cone obtained by requiring a quadratic selector
+$J(v)=J_0+vJ_1+v^2J_2$ on $v\geq0$. Equivalently, writing
+$Q(v)=Q_0+vQ_1+v^2Q_2$ for $Q=G_J,H_J$, its four PSD blocks are
+\begin{equation}
+S_Q=\begin{pmatrix}Q_0&B_Q\\B_Q^T&Q_2\end{pmatrix}\succeq0,
+\qquad T_Q=Q_1-B_Q-B_Q^T\succeq0.                         \label{eq:primal}
+\end{equation}
+The nine source-sign blocks give total order $8+8+4+4+9=33$ and 44
+auxiliaries. The accepted two-LMI identity gives $\Cq\subseteq\V$.
+Reflection by $T=\diag(1,-1)$ supplies the negative half-line; homogeneous
+continuity supplies the projective endpoints. No restriction on state signs
+is made.
+
+\begin{theorem}\label{thm:main}
+The all-positive rational source
+\begin{equation}
+\boxed{\bar c=
+ \left(1,2^{-34},2^{-14},2^{-24},\frac1{576},161,
+                     \frac12,76,\frac1{250}\right)}         \label{eq:cbar}
+\end{equation}
+belongs to $\V$ but not to $\Cq$. Moreover, the fixed quartic-in-$\sqrt v$
+completion cone $\Cr$ defined in Section~\ref{sec:enlargement} satisfies
+\[
+\boxed{\Cq\subsetneqq\Cr\subseteq\V,\qquad
+       \bar c\in\Cr\setminus\Cq.}
+\]
+It has an evaluated rational affine pencil of order 49 with nine source
+coordinates and 148 auxiliaries. Equality $\Cr=\V$ is not asserted.
+\end{theorem}
+
+\section{The exact separating inequality}
+Here is the integer linear functional that separates \eqref{eq:cbar}:
+\begin{align}
+\ell(c)={}&-23803618d+906393494300170\lambda+2744379904n\notag\\
+ &+1378590360912m+5935589516C+20425A\notag\\
+ &+2600028D+91248\alpha+278104928\beta.                    \label{eq:ell}
+\end{align}
+Its exact value is
+\begin{equation}
+\boxed{\ell(\bar c)=-\frac{5417798011632274183}{9663676416000}
+                    <-560635.}                            \label{eq:negative}
+\end{equation}
+We prove $\ell\geq0$ on the entire cone $\Cq$, rather than only on a
+collection of test instances.
+
+\begin{lemma}[Dual trace identity]\label{lem:dual}
+For $\sigma=G,H$, let $U_\sigma,R_\sigma,W_\sigma$ be symmetric $4\times4$
+matrices satisfying
+\begin{equation}
+M_\sigma=\begin{pmatrix}U_\sigma&R_\sigma\\R_\sigma&W_\sigma\end{pmatrix}
+\succeq0,\qquad R_\sigma\succeq0.                         \label{eq:dualPSD}
+\end{equation}
+For each of the three pairs $(U_G,U_H)$, $(R_G,R_H)$, $(W_G,W_H)$, require
+their upper-right $2\times2$ blocks to agree. These are twelve scalar
+equations. Put $M_{\sigma,0}=U_\sigma$, $M_{\sigma,1}=R_\sigma$,
+$M_{\sigma,2}=W_\sigma$. Then
+\begin{equation}
+f(c)=\sum_{k=0}^2\left[\ip{M_{G,k}}{G_k(c,0)}
+                         +\ip{M_{H,k}}{H_k(c,0)}\right]    \label{eq:f}
+\end{equation}
+is nonnegative on $\Cq$. Here $G_k(c,0),H_k(c,0)$ mean the coefficients
+with $J=0$, and $\ip AB=\tr(AB)$.
+\end{lemma}
+\begin{proof}
+For each side, expand \eqref{eq:primal} to obtain
+\[
+\ip{M_\sigma}{S_\sigma}+\ip{R_\sigma}{T_\sigma}
+=\ip{U_\sigma}{Q_0}+\ip{R_\sigma}{Q_1}+\ip{W_\sigma}{Q_2}.
+\]
+The unrestricted $B_\sigma$ cancels because $R_\sigma$ is symmetric.
+The coefficients $J_k$ enter $G_k,H_k$ through opposite off-diagonal blocks,
+so the twelve overlap equations cancel every entry of $J_0,J_1,J_2$.
+Consequently
+\begin{equation}
+f(c)=\ip{M_G}{S_G}+\ip{R_G}{T_G}
+     +\ip{M_H}{S_H}+\ip{R_H}{T_H}\geq0.                  \label{eq:pairing}
+\end{equation}
+This is a direct trace identity; no dual-attainment assertion is needed.
+\end{proof}
+
+Appendix~\ref{app:dual} displays six rational $4\times4$ matrices satisfying
+\eqref{eq:dualPSD} and the twelve overlap equations, with
+\begin{equation}
+                         f(c)=2^{-42}\ell(c).              \label{eq:scale}
+\end{equation}
+Their four PSD blocks are in fact positive definite. The source-sign dual
+variables are all zero. Equations \eqref{eq:negative}--\eqref{eq:scale}
+therefore prove $\bar c\notin\Cq$ by finite rational arithmetic.
+
+This also excludes a polynomial half-line selector of any degree. Indeed,
+every $2\times2$ principal minor of $G_J$ gives
+\[
+|J_{ij}(v)|^2\leq(P+K)_{ii}(v)(N+K)_{jj}(v)=O(v^4)
+\qquad(v\longrightarrow+\infty).
+\]
+Every polynomial entry must therefore have degree at most two, already
+excluded by the certificate above. The obstruction requires genuinely
+nonpolynomial dependence on the native variable $v$.
+
+\section{Validity of the source}
+We reuse the established rational source
+\begin{equation}
+\begin{aligned}
+(d,\lambda,n)&=(1,0,0),\\
+(m,C,A)&=\left(\frac{1166523000}{31661820415017653},
+\frac{322803000}{186199784281},\frac{218288946200}{1359122513}\right),\\
+(D,\alpha,\beta)&=\left(\frac{90943434293}{222507771414},
+\frac{248802430236}{3300726103},\frac{205476973}{51646655494}\right),
+\end{aligned}                                               \label{eq:cstar}
+\end{equation}
+denoted $c_*$. Its exact contact is
+$(u,v,\psi)=(1/13,16,(140,-1/32,1/50,1))$.
+The public source-validity certificate is retained verbatim in the supplied
+data. For a self-contained analytical check, let $\Pi_*(u,v)$ be the
+$4\times4$ state matrix of \eqref{eq:F}, and set
+$x=169u^2$, $y=v^2/256$. The retained determinant identity can be written
+\begin{equation}
+\det\Pi_*=16\kappa D_u^2D_v^2u^2v^2\,\mathcal A(x,y),
+\quad
+\kappa=\frac{365997345792000000}
+ {806534883104527170621493981142180739537045858457}>0,        \label{eq:det}
+\end{equation}
+where
+\begin{align*}
+\mathcal A(x,y)={}&\rho_1(x+x^{-1}-2)+\rho_2(y+y^{-1}-2)\\
+&+\rho_3(y/x+x+y^{-1}-3)+\rho_4(xy+x^{-1}+y^{-1}-3),
+\end{align*}
+and the positive integer coefficients are
+\[
+\begin{array}{c|r}
+\rho_1&1267917833244593541025180323231\\
+\rho_2&762274793296209851400745596627083\\
+\rho_3&2737791187307806620394799996019\\
+\rho_4&79165812050999420348852524500
+\end{array}
+\]
+Each bracket is nonnegative by the two- or three-term AM--GM inequality.
+To pass from determinant positivity to all-state positivity, the $Z=0$
+principal block $B_*$ satisfies
+\begin{equation}
+B_*\succeq T_*^T\diag(4m,4CD_v,4AD_uD_v)T_*\succ0,
+\qquad
+T_* =\begin{pmatrix}v&-1&uv\\u&0&-1\\0&0&1\end{pmatrix},
+\quad\det T_*=u                                           \label{eq:transverse}
+\end{equation}
+when $u\ne0$. All omitted terms of \eqref{eq:F} are nonnegative on $Z=0$.
+Thus the scalar Schur complement and \eqref{eq:det} give
+$\Pi_*\succeq0$ for $uv\ne0$. Polynomial continuity recovers the axes;
+bihomogenization in the two angle pairs recovers every projective endpoint.
+This is the full state matrix argument, not a determinant-only test.
+
+Direct rational comparison gives $\bar c-c_*\geq0$, with the $d$ coordinate
+unchanged. Every other coordinate in \eqref{eq:F} multiplies a nonnegative
+event form. Therefore
+\[
+                       F_{\bar c}=F_{c_*}+F_{\bar c-c_*}\geq0
+\]
+for all states and tests. This proves $\bar c\in\V$. The unrounded contact
+source itself is also separated:
+\begin{equation}
+\ell(c_*)=-\frac{303722700569565123211387668040}
+                    {267603838100324717114473}<0.           \label{eq:oldnegative}
+\end{equation}
+
+\section{One fixed enlargement that repairs the obstruction}
+\label{sec:enlargement}
+Set $v=16s^2$ on the positive half-line. Allow a selector
+$J(s)=\sum_{k=0}^4J_ks^k$. This adds the selector powers $\sqrt v$ and
+$v^{3/2}$; their coefficients are auxiliary variables, not functions of the
+test. Put
+\[
+Z_2(s)=\begin{pmatrix}I_4\\sI_4\\s^2I_4\end{pmatrix},
+\qquad Z_1(s)=\begin{pmatrix}I_4\\sI_4\end{pmatrix}.
+\]
+For $Q=G_J,H_J$, impose the identity
+\begin{equation}
+Q(16s^2)=Z_2(s)^TA_QZ_2(s)+sZ_1(s)^TB_QZ_1(s),
+\qquad A_Q\succeq0,\quad B_Q\succeq0.                    \label{eq:ramGram}
+\end{equation}
+Here the notation on the left means substitution in the source blocks,
+with $J=J(s)$. The block orders are $12,8,12,8$ and nine scalar source
+blocks. This defines $\Cr$ and immediately proves $\Cr\subseteq\V$
+using the accepted two-LMI identity. Matrix half-line factorization also
+shows that \eqref{eq:ramGram} captures exactly the quartic-in-$s$ selector
+condition, including singular matrices. Substituting $v=16s^2$ in any
+quadratic half-line certificate gives one of these Grams, proving
+$\Cq\subseteq\Cr$.
+
+\paragraph{An actual affine pencil.}
+There is no unresolved coefficient-matching problem in this enlargement.
+For a prescribed quartic $Q(s)=\sum_{k=0}^4Q_ks^k$, write
+$A=(A_{ij})_{i,j=0}^2$ and $B=(B_{ij})_{i,j=0}^1$ in $4\times4$ blocks.
+Choose $B_{00},B_{11}$ symmetric, $B_{01},A_{02}$ arbitrary, and
+$K_{01},K_{12}$ skew-symmetric. Set
+\begin{align}
+A_{00}&=Q_0,& A_{22}&=Q_4,\notag\\
+A_{01}&=\tfrac12(Q_1-B_{00})+K_{01},&
+A_{12}&=\tfrac12(Q_3-B_{11})+K_{12},\notag\\
+A_{11}&=Q_2-A_{02}-A_{02}^T-B_{01}-B_{01}^T.               \label{eq:param}
+\end{align}
+Transpose the lower blocks. These formulas parametrize every coefficient
+solution of \eqref{eq:ramGram}. They use $10+10+16+16+6+6=64$ variables
+per side, in addition to the 20 selector coefficients. Thus the final
+pencil has 148 auxiliaries and no coefficient equations. The exported
+49-dimensional pencil has 411 nonzero upper-triangular rational coefficient
+entries, with every source and auxiliary coefficient evaluated.
+
+\paragraph{Exact repair of both sources.}
+The supplied data give rational face matrices $V_i$ and positive definite
+rational matrices $X_i$ of orders $7,3,11,7$. Their congruences give the
+four Gram matrices in \eqref{eq:ramGram} at $c_*$. Every unpivoted LDL
+pivot of $X_i$ is greater than $2^{-18}$; all 80 coefficient conditions
+after selector elimination are checked exactly. The full rational Grams for
+$\bar c$ are also exported, together with their 148 affine-pencil
+auxiliaries. Their PSD proof is the same four positive congruences plus
+nonnegative rational event outer products.
+
+The extension from $c_*$ to $\bar c$ is elementary. For $\delta=\bar c-c_*$,
+one has $d_\delta=0$, and $P_\delta,N_\delta,E_\delta,K_\delta$ are sums of
+polynomial event outer products. Taking $J_\delta=K_\delta$ gives
+\begin{align*}
+G_\delta&=\diag(P_\delta,N_\delta)
+    +\begin{pmatrix}K_\delta&K_\delta\\K_\delta&K_\delta\end{pmatrix},\\
+H_\delta&=\diag(P_\delta,N_\delta)
+    +\begin{pmatrix}E_\delta&-E_\delta\\-E_\delta&E_\delta\end{pmatrix}.
+\end{align*}
+These additions lie in the same quartic-in-$s$ family. This also proves that
+the entire $d=0$ source face is included, with arbitrary zero event weights.
+For example, the new selector at $c_*$ has the nonzero odd coefficient
+\[
+[s]J_{21}(s)=
+\frac{444900885879842604203466822371109}
+     {390926447097959500000000000000000}.
+\]
+The explicit certificate uses odd powers of $s$; it is not another
+quadratic-in-$v$ selector. The separation proves that at least one function
+outside that quadratic span is necessary. It does not prove uniqueness or
+minimality of the particular enlargement chosen here.
+
+\paragraph{The fixed scalar testing family.}
+For an explicit connection to the canonical slack, use the accepted identity
+with $\psi=(W,X,Y,Z)^T$,
+\[
+\eta=L(u)\psi,
+\quad
+L(u)=\begin{pmatrix}u&0&u^2&0\\0&u&0&u^2\\u&0&-1&0\\0&u&0&-1\end{pmatrix},
+\quad U=u^2,\quad D_U=\diag(1,1,U,U).
+\]
+For $v\ne0$ put $s=\sqrt{|v|/16}$ and
+$\eta_\sigma=\diag(1,\sigma,1,\sigma)\eta$, where $\sigma=\sgn(v)$.
+At $v=0$ choose $\sigma=1$. The four groups of fixed functions are
+\begin{equation}
+\boxed{
+Z_2(s)D_U\eta_\sigma,\quad
+\sqrt{s}\,Z_1(s)D_U\eta_\sigma,\quad
+uZ_2(s)\eta_\sigma,\quad
+u\sqrt{s}\,Z_1(s)\eta_\sigma.}                            \label{eq:features}
+\end{equation}
+They have sizes $12,8,12,8$ and their block Gram form equals $u^2D_uF_c$.
+The Bob factors are exactly
+$\{1,s,s^2,\sqrt{s},s^{3/2}\}$, so the added Gram factors are fixed quarter
+powers of $|v|$. Source and testing variables remain independent.
+Dividing every function by $D_u^{3/2}\sqrt{D_v}$ represents
+\begin{equation}
+\frac{u^2}{D_u}\,\frac{F_c}{D_uD_v}.                       \label{eq:normalized}
+\end{equation}
+This division involves only testing variables. Here is a literal compact
+algebraic cover, including every endpoint. Take
+\[
+a_0^2+a_1^2=1,\quad a_0\geq0,\qquad
+\rho^2+\tau^2=1,\quad\rho,\tau\geq0,\qquad\epsilon\in\{-1,1\},
+\]
+and put
+\[
+\kappa=\sqrt{\tau^8+256\rho^8},\quad
+b=\frac{(\tau^4,16\epsilon\rho^4)}{\kappa},\quad
+g=\frac{(\tau^4,\rho^2\tau^2,\rho^4)}{\kappa},\quad
+r=\frac{(\rho\tau^3,\rho^3\tau)}{\kappa}.
+\]
+These are source-independent algebraic functions with
+$\kappa^2\geq\tau^8+\rho^8\geq1/8$.
+In the interiors, $u=a_1/a_0$, $v=16\epsilon(\rho/\tau)^4$.
+Define the homogeneous cubic vectors
+\begin{align*}
+P_G&=\left(\begin{smallmatrix}
+a_0^2a_1W+a_0a_1^2Y\\
+\epsilon(a_0^2a_1X+a_0a_1^2Z)\\
+a_1^3W-a_0a_1^2Y\\
+\epsilon(a_1^3X-a_0a_1^2Z)
+\end{smallmatrix}\right),&
+P_H&=\left(\begin{smallmatrix}
+a_0a_1^2W+a_1^3Y\\
+\epsilon(a_0a_1^2X+a_1^3Z)\\
+a_0a_1^2W-a_0^2a_1Y\\
+\epsilon(a_0a_1^2X-a_0^2a_1Z)
+\end{smallmatrix}\right).
+\end{align*}
+The forty functions on this closed cover are
+\[
+                 g\otimes P_G,\quad r\otimes P_G,
+                 \quad g\otimes P_H,\quad r\otimes P_H.
+\]
+Their Gram sum is $a_1^2f_c(a,b;\psi)$, where $f_c$ is the bihomogeneous
+normalized physical slack. This follows from \eqref{eq:normalized} on the
+interior and is an algebraic identity everywhere. Each function has absolute
+value less than $3$ when $\|\psi\|=1$. At Bob's endpoints,
+$(g,r)=((1,0,0),0)$ or $((0,0,1/16),0)$; the Alice endpoints are literal
+polynomial substitutions in $P_G,P_H$. The multiplier $a_1^2$ is positive
+on a dense testing set. Consequently every state sign and every endpoint
+is retained in the validity converse.
+
+\paragraph{The precise unresolved implication.}
+The question settled here is $\V\subseteq\Cq$, which is false. The next
+unproved implication would be $c\in\V\Rightarrow c\in\Cr$: equivalently,
+every valid canonical source would need a selector in the one fixed span
+$\{1,s,s^2,s^3,s^4\}$. The two exact repaired sources do not establish that
+statement. The present order-49 pencil is an affine certificate for
+$\Cr$, not a lift of the full canonical polar or of the full
+eight-coordinate quantum set. The existing complete companion is not
+replaced by this result.
+
+\appendix
+\section{Six rational matrices proving the separation}\label{app:dual}
+Put $q=2^{30}$. The following are the hatted moment matrices. The lower
+triangles are displayed as well so that there is no storage convention
+ambiguity.
+\input{dual_six_matrices.tex}
+Set
+\[
+\Delta_G=\diag(128,1/32,1/2,1/32),\qquad
+\Delta_H=\diag(1/512,1/16,1/512,1/32).
+\]
+The moments used in Lemma~\ref{lem:dual} are
+\[
+U_\sigma=\Delta_\sigma\widehat U_\sigma\Delta_\sigma,
+\quad R_\sigma=16\Delta_\sigma\widehat R_\sigma\Delta_\sigma,
+\quad W_\sigma=256\Delta_\sigma\widehat W_\sigma\Delta_\sigma.
+\]
+The twelve upper-right-block equalities follow entry by entry. For positive
+definiteness, apply the rational recurrence
+\[
+p_j=A_{jj}-\sum_{k<j}L_{jk}^2p_k,\qquad
+L_{ij}=\frac{A_{ij}-\sum_{k<j}L_{ik}L_{jk}p_k}{p_j},\quad L_{jj}=1.
+\]
+For $\widehat M_\sigma=\left(\begin{smallmatrix}
+\widehat U_\sigma&\widehat R_\sigma\\
+\widehat R_\sigma&\widehat W_\sigma\end{smallmatrix}\right)$,
+the exact floors of $2^{30}p_j$ are
+\[
+\begin{array}{c|l}
+\widehat M_G&(3376576,82695,48553,117468710,16,14,14,31)\\
+\widehat R_G&(2570,5564,1593,10646)\\
+\widehat M_H&(142545776,16,32,17,29078313,12,24,11)\\
+\widehat R_H&(201343592,8,15,8).
+\end{array}
+\]
+The first scaled pivot in every row equals the listed integer; each later
+pivot lies strictly between its listed integer and that integer plus one.
+In particular, every pivot is greater than $2^{-27}$. The supplied rational
+LDL factors give exact equalities, not numerical approximations.
+Finally, direct coefficient pairing with \eqref{eq:PNEK} gives
+\eqref{eq:scale}. These six small matrices, the stated recurrence, and one
+rational substitution prove the separation.
+
+\section*{Source and reproducibility}
+The source-validity identity is retained from the public project at commit
+\begin{center}\texttt{b2bfe64cd81a951b7bbe33a84b9dedd5d4ba162c},\end{center}
+under
+\texttt{extracted-lifts/canonical-completion/}. The new package contains the
+rational dual matrices and LDL factors, both repaired-source Gram
+certificates, the evaluated sparse affine pencil and feasible auxiliaries,
+the fixed function and product specifications, and standard-library exact
+verifiers. Run \texttt{python3 reproduce.py} from the package root.
+No SDP solver is required to verify any claimed result. The order-49 pencil
+here concerns the ramified two-LMI completion; it is distinct from the
+previously solved order-49 Laurent-coefficient cone.
+\end{document}

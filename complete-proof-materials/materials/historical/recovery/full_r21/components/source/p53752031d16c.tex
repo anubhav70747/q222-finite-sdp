@@ -1,0 +1,187 @@
+\section{The next C2 boundary: retain the fourth event current}
+\label{sec:c2-y-current}
+
+The gap $h=b-a^2t$ need not stay a unit.  When it becomes
+infinitesimal, the fourth event is strong.  Its centered current supplies
+an exact zero relation which repairs the preceding Gram matrix.
+
+\subsection{Source positivity and the precise remaining corner}
+Keep the exact source \eqref{eq:c2u-source}, with $c>0$ infinitesimal,
+$r,g,j>0$ bounded, and $a,1-r,t$ positive bounded units.  This section
+assumes
+\begin{equation}
+h=b-a^2t>0\text{ infinitesimal},\qquad N\text{ a positive bounded unit}.
+\label{eq:c2y-domain}
+\end{equation}
+There is a useful exact positive identity:
+\begin{equation}
+N=(1+c^2)(b+r)h+a^2\bigl[g+j+rt(1+a^2c^2)\bigr].
+\label{eq:c2y-N-positive}
+\end{equation}
+It follows by writing $b+a^2(1-t)=h+a^2$ in the definition of $N$
+and using the definitions of $b,t$.  Thus all source coefficients are
+positive.  Under the other unit hypotheses, $N$ is a unit exactly when
+at least one of $h,r,g,j$ has positive residue.  In
+\eqref{eq:c2y-domain}, therefore, at least one of $r,g,j$ is ordinary.
+As before, $re_1,ge_2,je_5,e_3$ are positive bounded units, and now
+\begin{equation}
+U_4=he_4=\frac{a^2A_c(b+r)(A_c+a^2c^2t)}{2\Delta},\qquad
+\frac{\alpha}{c^4}=\frac{(b+r)N}{2(1-c^2h)\Delta}
+\label{eq:c2y-units}
+\end{equation}
+are positive bounded units.  Hence $e_4$ is strong and
+$1/\sqrt{e_4}$ is infinitesimal.
+
+\begin{theorem}[Full parent at the fourth-event boundary]
+\label{thm:c2-y-current}
+For the exact source under \eqref{eq:c2y-domain}, every independent
+testing pair $u,v$ that is infinitesimal or zero, and every real or
+complex projective state, the entire parent \eqref{eq:c2u-parent} is a
+finite sum of squares in $K_c\otimes_{\mathbb R}K_t$.
+\end{theorem}
+
+\subsection{The exact zero relation}
+First take $Z=1$ and bounded $W\geq0$.  In addition to the three currents
+already defined, put
+\[
+H_4=Y-\frac ha u.
+\]
+This current vanishes at the exact stationary contact, since
+$W_c-at=h/a$.  Retain the extra packet $4e_4D_uD_vH_4^2$.
+Its difference from the original fourth event is
+\[
+4e_4D_uD_v(Y^2-H_4^2)
+=\frac{8U_4}{a}D_uD_vuH_4+
+\frac{4hU_4}{a^2}D_uD_vu^2.
+\]
+Thus the entire remainder after retaining four packets has bounded
+coefficients.  Its exact contact, parity, quadratic state degree, and
+value $4\alpha$ at $u=v=H_1=H_5=0$ are unchanged.  The complete
+monic-division argument in Section~\ref{sec:c2-unified} therefore gives
+a bounded quadratic form on $(H_1,H_5,R,S,T)$.  Eliminate $S$ by
+\eqref{eq:c2u-eliminate-S} and restore the four retained packets.  This
+gives a bounded exact Gram on the six roots
+\begin{equation}
+K_1=\sqrt{e_1}H_1,\quad K_2=\sqrt{e_2}H_2,\quad
+K_4=\sqrt{e_4}H_4,\quad K_5=\sqrt{e_5}H_5,\quad R,\quad T.
+\label{eq:c2y-roots}
+\end{equation}
+
+There is one exact relation among these roots.  With
+$K=1-j+ru^2$ and $Q$ as in Section~\ref{sec:c2-unified}, direct
+substitution gives
+\[
+H_4=S+KR-ar uT+uvH_1-H_5.
+\]
+Combining this with the current formula for $S$ yields
+\begin{align}
+\zeta={}&aD_uH_4-H_2-(1-u^2v^2+aD_uuv)H_1
+ +(aD_u-uv)H_5\notag\\
+&-[D_uW+(a-uv)K]R+u[Q(u^2)+a^2D_ur]T=0.
+\label{eq:c2y-zero-relation}
+\end{align}
+In the scaled roots every coefficient here is bounded.  Its residue is
+\begin{equation}
+\overline\zeta=-\frac{K_2}{\sqrt m}-\frac{K_1}{\sqrt n}
++\frac{aK_5}{\sqrt D}-(W+at_0)R,
+\label{eq:c2y-zero-residue}
+\end{equation}
+where, here and in residue calculations below, coefficient expressions
+mean their residues; $n,m,C,A,D,t_0,w_0$ are the reference quantities
+defined in the preceding section.  The $K_4$ and $T$ coefficients
+vanish at residue.  The coefficient of $R$ is a nonzero real number,
+since $W\geq0$ and $a,t_0$ are positive units.
+
+\subsection{The corrected residue is visibly strict}
+Let $h_0=b_0-a^2t_0$.  The definitions give
+\begin{equation}
+h_0=(1+c^2)h+a^2c^2r>0,
+\label{eq:c2y-h0}
+\end{equation}
+so $h_0$ is infinitesimal too.  The reference fourth weight satisfies
+$h_0A>0$ with unit residue, and $U_4-h_0A$ is infinitesimal.
+The ratio $e_4/A$ need not have residue one.  It is unnecessary:
+the bounded retained remainder depends on $U_4,h$, while the fourth
+scaled packet has coefficient $4D_uD_v$ and
+$1/\sqrt{e_4}=\sqrt h/\sqrt{U_4}$ has zero residue.  These facts
+justify the reference comparison even when $h\ll c^2r$.
+
+For a transparent calculation, start from
+\eqref{eq:c2u-pre-scaled}.  The linearized fourth current is
+\[
+H_{4,0}=S+t_0R-H_5
+=\frac{(W+at_0)R+H_1+H_2-aH_5}{a}.
+\]
+The last term of that reference quadratic form is exactly
+\[
+4A\left(H_{4,0}+\frac{h_0}{a^2}R\right)^2.
+\]
+Subtract the fourth retained square $4AH_{4,0}^2$ and restore
+$4K_4^2$.  The resulting four-hard-root part is
+\[
+\begin{split}
+&(4+2/n)K_1^2+4K_2^2+4K_4^2
+ +\bigl(4+(4C+2)/D\bigr)K_5^2\\
+&\hspace{12mm}+\frac{8h_0A}{a^2}H_{4,0}R
+ +\frac{4h_0^2A}{a^4}R^2.
+\end{split}
+\]
+At residue, the last square coefficient vanishes,
+$H_{4,0}=-\overline\zeta/a$, and $h_0A$ has the same residue as $U_4$.
+The radial calculation is unchanged: its pivot is
+$4\overline{\alpha/c^4}>0$ and all radial cross coefficients vanish.
+Thus the entire Gram residue is the residue of
+\begin{equation}
+\mathcal D+4(\alpha/c^4)T^2-\frac{8U_4}{a^3}\zeta R,
+\quad
+\mathcal D=(4+2/n)K_1^2+4K_2^2+4K_4^2
++\bigl(4+(4C+2)/D\bigr)K_5^2.
+\label{eq:c2y-uncorrected}
+\end{equation}
+All these residue comparisons use bounded normalized coefficients and
+monic division, exactly as in the preceding proof.
+
+Now add the following identically zero polynomial to the exact Gram:
+\begin{equation}
+\frac{8U_4}{a^3}\zeta R+\zeta^2=0.
+\label{eq:c2y-zero-correction}
+\end{equation}
+Its coefficients are bounded, and the equality follows from the exact
+relation \eqref{eq:c2y-zero-relation}.  The corrected residue is
+\[
+\overline{\mathcal D}
++4\overline{\alpha/c^4}\,T^2+\overline\zeta^{\,2}\succ0.
+\]
+Indeed the first four diagonal coefficients are at least $4$, the radial
+pivot is positive, and after those five roots vanish
+$\overline\zeta^{\,2}$ has positive coefficient on $R$ by
+\eqref{eq:c2y-zero-residue}.  The strict-residue Gram lemma proves the
+full bounded $Z=1,W\geq0$ chart.
+
+\subsection{The other projective chart}
+For $W=1$, $Z$ infinitesimal, retain the original packets in
+$X,R_2,Y,R_5$ and the $\alpha$ packet.  The exact pure-testing identity
+\begin{equation}
+u=\frac{D_uY+[Z(1-u^2v^2)-D_uuv]X+(D_u+uvZ)R_5+ZR_2}
+{D_u-D_vZ^2}
+\label{eq:c2y-Wunit}
+\end{equation}
+follows from the two amplitude definitions.  Its denominator is a
+positive pure-testing unit.  Together with \eqref{eq:c2u-wunit-root},
+it expresses $u,v$ linearly in $X,R_2,Y,R_5$, with bounded testing
+coefficients.  The signed-core completion in the preceding section
+then makes the whole remaining part a bounded quadratic form on the
+four scaled packet roots.  Its residue is
+\[
+(4+2/e_1)K_1^2+4K_2^2+4K_4^2+
+\bigl(4+(4e_3+2)/e_5\bigr)K_5^2\succ0.
+\]
+This proves the chart for arbitrary $X,Y$.  The same testing-only sign
+gauges, signed-core Schur complement, homogeneous restoration, and
+real/imaginary splitting complete all projective states.
+
+The only remaining corner of this particular bounded-shape source
+family has $h,r,g,j$ all infinitesimal.  Then $a^2$ has residue $1$,
+$N$ is infinitesimal, and the radial pivot used here vanishes.
+Neither this theorem nor the preceding unit-gap theorem asserts a
+certificate for that further degeneration.

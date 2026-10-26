@@ -1,0 +1,472 @@
+\chapter{The inverse-$b$ uniform C1 source: a complete local conductor}
+\label{component:pabbcd0905dcd}
+\noindent\textbf{Component }\path{pabbcd0905dcd}\par
+{\small\noindent Source: \path{NEW/weak_c2/c1_inverse_b_full_local.tex}\par}
+{\small\noindent SHA256: \path{abbcd0905dcdf27b0b1e63c23704b4e5b12a9731bd3242c8a542a08e881f1263}\par}
+{\small\noindent Inventory use: fresh complete IW1--24 inverse-b all-state local proof\par}
+\medskip
+% Fresh derivation, 2026-10-22. No missing historical IW witness is imported.
+\section{The inverse-$b$ uniform C1 source: a complete local conductor}
+\label{pabbcd0905dcd:sec:c1-inverse-b-local-new}
+
+\paragraph{Statement and certificate ring.}
+Let $K_c,K_t$ be independent real closed extensions of $\mathbb R$,
+with bounded rings $B_c,B_t$ and infinitesimal ideals
+$\mathfrak m_c,\mathfrak m_t$. The certificate ring is
+$\mathcal T=K_c\otimes_{\mathbb R}K_t$, with bounded coefficient ring
+$\mathcal B=B_c\otimes_{\mathbb R}B_t$ and zero-residue ideal
+$\mathfrak n=\mathfrak m_c\otimes B_t+B_c\otimes\mathfrak m_t$.
+We use the finite strict-residue Gram lemma in this ring.
+All radicals and inverses below are pure source, pure testing, or
+products of separately specified such factors.
+
+Use the actual uniform native C1 stationary source, with
+$\lambda=n=0$, $d>0$, and the original nonnegative event coefficients.
+Normalize $d=1$ by a positive pure-source scale. Suppose
+\[
+ k,f,g>0\text{ are infinitesimal},\qquad k/g\in\mathfrak m_c,
+ \qquad r=1-af^2,\quad h=1-tg^2,
+\]
+\[
+ R=1+k^2r,\quad T_0=1+k^2h,\quad
+ 0<a<T_0,\quad 0<t<R,\quad \beta\geq0.                 \tag{IW1}
+\]
+All original strict gaps remain imposed. Then the complete original
+parent is tensor-SOS whenever the independent positive testing angles
+$u,v$ are infinitesimal, for every real or complex testing state.
+The proof below works in the rotated chart $w=1,z>0$ with $z$ arbitrary;
+in particular it includes the previously missing original
+$W$-unit, $Z$-infinitesimal chart. It uses no bound on $g/f$ and no
+comparison between any testing and source infinitesimals.
+The exact sign, zero-axis and state reductions are given at the end.
+
+\subsection{The actual C1 source and bounded source arrays}
+
+For clarity, the six weights used here come from the following
+unchanged native formulas. Put $x_n=k^2$, $\eta=f^2$, $\zeta=g^2$,
+$y_n=x_n\eta\zeta$, $K=1+x_n$, $G=h+\zeta$, and
+\[
+ M=R-t,\quad J=T_0-a,\quad E_n=1-x_n\eta h,
+ \quad Q_n=1-x_n\zeta r,\quad \theta=t\zeta.
+\]
+Define
+\[
+ P_d=1+2x_nh+rx_n^2G+x_n\zeta
+       +\eta x_n(K\zeta+x_nh\theta),
+\]
+\[
+ P_4=T_0E_n+x_n(1-r)G,\qquad
+ P_\alpha=Rh(1+y_n)+\zeta M E_n.
+\]
+The actual relative coefficients, now with $d=1$, are
+\[
+\begin{array}{ll}
+ m=\dfrac{Kx_n(r+\eta)h(1+y_n)}{2M\zeta P_d},&
+ C=\dfrac{K(r+\eta)E_n}{2(1-r)P_d},\\[4pt]
+ A=\dfrac{\eta P_4}{2rP_d},&
+ D+\tfrac12=\dfrac{K(1+y_n)(r+\eta)}{2J\eta P_d},\\[4pt]
+ \beta+\tfrac12=\dfrac{Kx_n(r+\eta)G}{2\theta P_d},&
+ \alpha=\dfrac{x_n^2\zeta(r+\eta)P_\alpha}{2Q_nP_d}.
+\end{array}                                                     \tag{IW2}
+\]
+No auxiliary C2 stationary source is used.
+Since $a,t$ are bounded and $k,f,g$ are infinitesimal,
+$r,h,P_d,R,T_0$ have residue one. The inequality
+$\beta+\tfrac12\geq\tfrac12$ in (IW2) gives
+$t=O(k^2/g^2)$. Thus $t$ and $p=t/R$ are infinitesimal, and
+$M=R(1-p)$ is a positive unit. The two independent openings
+$a$ and $J=T_0-a$ are not capped.
+
+Introduce the exact compact coordinates
+\[
+ j=\frac{T_0}{g^2R},\quad B=\frac{k^2g^2R}{T_0},\quad
+ T=\frac{f^2T_0}{R},\quad p=\frac tR,\quad H=\frac a{T_0},
+ \qquad x=jB,\quad y=TB,\quad q_z=jT.                    \tag{IW3}
+\]
+Here $j$ is unbounded, $0<H<1$, and
+\[
+ T,x,B,p,\sigma:=1/j,\delta:=j^2B\in\mathfrak m_c,
+ \qquad \delta\sim k^2/g^2,\qquad p=O(\delta).
+                                                               \tag{IW4}
+\]
+The quantity $q_z$ can have any positive size. The exact inverse is
+\[
+\begin{gathered}
+ R=\frac{1+x}{1+HTx},\quad T_0=\frac{1+x}{1+Bp},\quad
+ r=\frac{1-HT}{1+HTx},\quad h=\frac{j-p}{j(1+Bp)},\\
+ f^2=\frac{T(1+Bp)}{1+HTx},\quad
+ g^2=\frac{1+HTx}{j(1+Bp)},\quad a=HT_0,\quad t=pR.
+\end{gathered}                                                   \tag{IW5}
+\]
+In particular both strict gaps are retained exactly.
+
+Here is a short rational dictionary sufficient to check every source
+estimate. Write $D_+=D+\tfrac12$, $b_+=\beta+\tfrac12$,
+$\mu=m(1-p)$, and set
+\[
+\begin{split}
+ P={}&1+B(j+1-p)+BT(1+Hj)\\
+ &+B^2T(Hj+jp-p^2+p)+B^2HT^2j(1+Bp),\\
+ L={}&1+T(1-H+Bp),\qquad E=1+B(HT+p-1),\\
+ F_\alpha={}&j+1-2p+BHTj(1-p)+BTp(j-p).
+\end{split}
+\]
+Substitution of (IW5) in (IW2) gives exactly
+\[
+\begin{split}
+ \mu&=\frac{Bj(j-p)(1+y)(1+Bp)L}{2(1+x)P},\\
+ C&=\frac{(1+Bp)L[1+BTp-BTj(1-H)]}{2HT(1+x)P},\\
+ A&=\frac{T(1+Bp)[1+BT(2Hj-Hp+H-j+p)+B^2H^2T^2j]}
+              {2(1-HT)P},\\
+ D_+&=\frac{(1+y)(1+Bp)(1+HTx)L}{2T(1-H)(1+x)P},\\
+ b_+&=\frac{Bj(1+Bp)L(j+1-p+HTx)}{2p(1+x)P},\\
+ \alpha&=\frac{B^2LF_\alpha}{2EP}.
+\end{split}                                                     \tag{IW6}
+\]
+The denominators $P,E,1+x,1-HT$ are positive bounded units.
+After $j=1/\sigma$, $B=\delta\sigma^2$, each of the following
+normalized arrays is a rational function with polynomial numerator
+and denominator in the bounded variables $\sigma,\delta,T,p,H$;
+its denominator has a nonzero real constant at
+$\sigma=\delta=T=p=0$, independently of $H$:
+\[
+ \frac{2\mu}{\delta},\quad\frac{2b_+p}{\delta},\quad
+ 2TCH,\quad2TD_+(1-H),\quad\frac{2A}{T},\quad
+ \frac{2\alpha}{B^2j}\quad\hbox{all have residue }1.
+                                                               \tag{IW7}
+\]
+This finite polynomial criterion proves boundedness and the stated
+residues at every relative rate and at both $H$ openings. It also
+shows $\beta p\leq b_+p=O(\delta)$, including $\beta=0$.
+A useful exact cancellation is
+\[
+                  K_d:=CH-D_+(1-H)=-\frac{b_+p}{j}.    \tag{IW8}
+\]
+
+\subsection{The entire parent and both state normals}
+
+Put $D_u=1+u^2$, $D_v=1+v^2$. The quarter-parent is
+\[
+\begin{split}
+ \mathcal P={}&m(vW-X+uvY-uZ)^2+CD_v(uW-Y)^2+AD_uD_vY^2\\
+ &+D_+(uW+uvX-Y-vZ)^2
+ +(\alpha+\tfrac12)D_u(vY-Z)^2\\
+ &+b_+D_v(X+uZ)^2-\tfrac12D_uD_vZ^2.
+\end{split}                                                     \tag{IW9}
+\]
+On the rotated chart
+$w=(W+uY)/D_u=1$, $z=(Z-uX)/D_u>0$, use the two unrestricted normals
+\[
+ N=\frac{X+uZ-pD_uv}{D_u},\qquad
+ M_0=\frac{uW-Y-HD_uvz}{D_u}.
+\]
+Their exact inverse is
+\[
+ X=N+pv-uz,\quad Z=z+uN+puv,\quad
+ W=1+u(M_0+Hvz),\quad Y=u-M_0-Hvz.                     \tag{IW10}
+\]
+Only the pure-testing unit $D_u$ is inverted. Retain the positive
+packet $mpD_u^2N^2$, and put $G=(\mathcal P-mpD_u^2N^2)/D_u$.
+Direct substitution, before any state specialization, gives
+\[
+\begin{split}
+ G={}&\mu D_u[N^2-2vN+(1-p)v^2]
+      +CD_uD_v(M_0+Hvz)^2+A D_v(u-M_0-Hvz)^2\\
+ &+D_+D_u(M_0-(1-H)vz)^2\\
+ &+(\alpha+\tfrac12)
+       [u(1-p)v-(1+Hv^2)z-uN-vM_0]^2\\
+ &+b_+D_uD_v(N+pv)^2-\tfrac12D_v(z+uN+puv)^2.
+\end{split}                                                     \tag{IW11}
+\]
+In particular $G$ is exactly quadratic in the two normals:
+\[
+ G=F+2L_NN+2L_MM_0+H_NN^2+H_MM_0^2
+                         +2(\alpha+\tfrac12)uvNM_0,
+                                                               \tag{IW12}
+\]
+where $F=G|_{N=M_0=0}$ and
+\[
+\begin{split}
+ h_0&=\mu+b_+\geq\tfrac12,\\
+ H_N&=h_0D_u+b_+v^2+\beta u^2v^2+\alpha u^2,\\
+ H_M&=D_u(CD_v+D_+)+AD_v+(\alpha+\tfrac12)v^2.
+\end{split}                                                     \tag{IW13}
+\]
+The potentially unbounded $\beta$ is fully retained in (IW11)--(IW13).
+There is no omitted higher-normal polynomial.
+
+\subsection{An exact separated scalar circuit}
+
+Define the rows
+\[
+ U=u/\sqrt x,\quad V=v/\sqrt y,\quad Z_*=z/\sqrt{q_z},
+ \quad Q_*=U-VZ_*,\quad B_*=V-UZ_*,\quad R_*=Z_*-UV,
+\]
+\[
+ \Phi=U^2+V^2+Z_*^2+U^2V^2Z_*^2-4UVZ_*.
+\]
+None of $U,V,Z_*$ is assumed bounded. On the positive chart,
+\[
+ \Phi=(U-V)^2+Z_*^2(1-UV)^2+2UV(1-Z_*)^2             \tag{IW14}
+\]
+is a legal separated SOS; for example
+$\sqrt{UV}=(xy)^{-1/4}\sqrt{uv}$.
+
+For an explicit finite definition of the actual masses, put
+$K_0=CH^2+D_+(1-H)^2$ and
+\[
+\begin{array}{ll}
+ M_a=Ax,&M_b=[\mu(1-p)+b_+p^2]y,\\
+ M_c=\alpha q_z,&
+ M_{bc}=[K_0+AH^2+2H\alpha+H-\tfrac12]yq_z,\\
+ M_{b^2}=b_+p^2y^2,&
+ M_{b^2c}=H^2(A+C+\alpha+\tfrac12)y^2q_z,\\
+ M_{ab^2c}=CH^2xy^2q_z,&M_{ab^2}=\beta p^2xy^2.
+\end{array}
+\]
+Set
+\[
+\begin{gathered}
+ f_c=M_b,\quad h_c=M_{ab^2},\quad
+ k_c=(M_a-M_b+M_{ab^2c}-M_{bc}+h_c)/2,\\
+ r_c=M_c-M_b-k_c,\quad q_c=M_a-f_c,\quad
+ g_c=M_{ab^2c},\quad d_c=M_{b^2c}-k_c,
+ \quad e_c=b_+p^2y^2-g_c.
+\end{gathered}
+\]
+The complete scalar from (IW11) satisfies the exact identity
+\[
+\begin{split}
+ F={}&q_cQ_*^2+r_cR_*^2+d_cV^2Q_*^2+e_cV^2B_*^2\\
+ &+f_c\Phi+g_cV^2\Phi+k_cZ_*^2(V^2-1)^2+h_cV^2R_*^2.
+\end{split}                                                     \tag{IW15}
+\]
+The last term is the extra nonnegative square supplied by the actual
+$\beta$ event. The checker verifies all scalar monomials of the
+original parent and the four remaining source coefficient identities;
+(IW15) is not merely an identity at the contact.
+
+The same finite bounded-array criterion as (IW7), with the displayed
+mass definitions, gives
+\[
+ \frac{2f_c}{Tx^2}\sim1,\quad
+ \frac{2q_c}{Tx}\sim1,\quad
+ \frac{2r_c}{TjB^2}\sim1,\quad
+ \frac{k_c}{T^2B^2j}\in\mathfrak m_c,\quad
+ \frac{g_c}{f_c}\in\mathfrak m_c.                     \tag{IW16}
+\]
+Here $\sim1$ means residue one. In particular the three principal
+masses $f_c,q_c,r_c$ are positive, and
+$|k_c|/r_c$, $|k_c|/(q_cy)$ are infinitesimal.
+All normalized mass denominators remain units after
+$j=1/\sigma$, $B=\delta\sigma^2$; the companion finite-array
+checks test their residues independently of $H$.
+
+For the signed terms use the exact identities
+\[
+\begin{split}
+ (1+U^2)\Phi&=R_*^2+B_*^2+U^2Q_*^2+U^2(1-UVZ_*)^2,\\
+ (1+V^2)\Phi&=Q_*^2+R_*^2+V^2B_*^2+V^2(1-UVZ_*)^2,\\
+ Z_*(V^2-1)&=-VQ_*-R_*.
+\end{split}                                                     \tag{IW17}
+\]
+The $e_c,g_c$ combination in (IW15) is exactly
+\[
+ b_+p^2y^2V^2B_*^2-g_c\Phi
+       +g_c[Q_*^2+R_*^2+V^2(1-UVZ_*)^2].
+\]
+A $k_c$ of either sign costs at most
+$3|k_c|V^2Q_*^2+2|k_c|R_*^2$, including its occurrence in $d_c$.
+The corresponding relative costs are
+$3|k_c|v^2/(q_cy)$ and $2|k_c|/r_c$, both in $\mathfrak n$.
+Every inequality here abbreviates a finite SOS identity, using
+$2A^2+2B^2-(A+B)^2=(A-B)^2$ and nonnegative pure-source factors.
+Consequently the scalar supplies strict fixed real fractions of
+\[
+                       q_cQ_*^2,\qquad r_cR_*^2,
+                       \qquad f_c\Phi.                \tag{IW18}
+\]
+All other nonnegative packets remain available as whole squares.
+
+\subsection{Finite budgets for the complete normal rows}
+
+Call a row free if any fixed positive real multiple of its square can
+be subtracted at infinitesimal cost from (IW18), by a finite separated
+SOS identity. This definition allows a bounded normal coupling to be
+absorbed by a sufficiently large fixed real helper pivot.
+Put
+\[
+ q=vz-Tu,\quad b=v-uz/j,\quad R_z=z-uv/B,\quad
+ R_u=v(u^2-x),\quad R_v=u(v^2-y),
+\]
+\[
+ J_u=u(u^2-x),\qquad J_v=v(v^2-y),\qquad
+ \widehat q=q/\sqrt T.
+\]
+Since $Q_*=-q/(T\sqrt x)$, the first mass in (IW18) has a positive
+unit coefficient on $\widehat q^2$.
+
+First, $R_u=\sqrt y\,x(-B_*-UR_*)$. Applying the first identity
+of (IW17) to $B_*^2$, and the actual $r_c$ pivot to $U^2R_*^2$,
+shows that $R_u$ is free. The three relative costs are bounded by
+constant multiples of
+\[
+                         B,\qquad u^2/j,\qquad u^2,
+                                                               \tag{IW19}
+\]
+all infinitesimal. Second,
+$R_v=\sqrt x\,y(-Q_*-VR_*)$, so $\sqrt T R_v$ is free;
+its two costs are $O(y^2)$ and $O(Tv^2)$.
+
+The same-angle rows have exact decompositions
+\[
+\begin{split}
+ J_v&=\sqrt y\,v(v+\sqrt{y/x}\,u)(V-U)+(y/x)R_u,\\
+ J_u&=\sqrt x\,u(u+\sqrt{x/y}\,v)(U-V)+(x/y)R_v.
+\end{split}                                                     \tag{IW20}
+\]
+If $\rho=O(\delta)$ is a nonnegative source factor, then
+$\rho J_v$ is free. Indeed $\rho\sqrt{y/f_c}=O(\sqrt\delta)$,
+$\sqrt{y/x}=\sqrt{T/j}$ is bounded, and
+$\rho y/x$ is infinitesimal. Thus every coefficient after division
+by the strict $\sqrt{f_c}(V-U)$ pivot is infinitesimal.
+Also $\sqrt T\,TxJ_u$ is free: the two coefficients of its
+first summand relative to $\sqrt{f_c}(U-V)$ are bounded multiples of
+\[
+                  T\sqrt x\,u^2,\qquad\sqrt{T\delta}\,uv,
+\]
+and its second summand is exactly
+$\delta(\sqrt T R_v)$, because $Tx^2/y=j^2B=\delta$.
+This last use of $\delta\in\mathfrak m_c$ is the additional
+source fact specific to the inverse-$b$ sector.
+
+Finally,
+\[
+ j\alpha b=-(\alpha/B)R_u-\alpha uR_z.                \tag{IW21}
+\]
+Here $\alpha/B=O(x)$, and the square of $\alpha uR_z$ costs
+$O(x^2u^2)$ relative to $r_cR_*^2$. Hence the entire left side
+of (IW21) is free. These identities involve no bound on $z$.
+
+\paragraph{The unrestricted first normal.}
+Define the bounded source quantities
+\[
+ K_z=H(\alpha+\tfrac12)-\tfrac12,\qquad
+ K_R=-\mu-\alpha(1-p)-\tfrac12+b_+p+TK_z,
+\]
+\[
+ \rho=b_+p+\beta px\geq0.
+\]
+Direct differentiation of the entire (IW11), followed by the actual
+source contact identity, gives
+\[
+ L_N=-j\alpha b+(K_R+\beta pv^2)R_u
+                   +\rho J_v+K_zuvq.                 \tag{IW22}
+\]
+For completeness, before imposing the source, the remainder is
+$v S_N$, with
+\[
+ S_N=j\alpha-\mu+b_+p+K_Rx+b_+py+\beta pxy=0
+\]
+identically under (IW6). Thus no constant or first-normal term is
+silently dropped. Equations (IW7) imply
+$K_R\sim-\tfrac12$, $\rho=O(\delta)$ and
+$\beta p=O(\delta)$. The first three terms in (IW22) are free by
+(IW19)--(IW21); the last has coefficient
+$K_z\sqrt T\,uv\in\mathfrak n$ on $\widehat q$.
+Dividing by $\sqrt{h_0}$ preserves all these bounds because
+$h_0\geq\tfrac12$.
+
+\paragraph{The unrestricted second normal.}
+Use the exact $K_d$ from (IW8), and put
+\[
+\begin{split}
+ C_q={}&K_dD_u+AH+\alpha+\tfrac12
+        +v^2[CHD_u+AH+(\alpha+\tfrac12)H],\\
+ c_2={}&T[CH+AH+(\alpha+\tfrac12)H]
+                      -A-(\alpha+\tfrac12)(1-p).
+\end{split}
+\]
+The complete second normal has the exact division
+\[
+ L_M=C_qq+(c_2+TCHu^2)R_v+T(K_d+CHy)J_u.             \tag{IW23}
+\]
+Before substituting the actual source its only remainder is $uS_M$,
+where
+\[
+\begin{split}
+ c_0&=T[K_d+AH+\alpha+\tfrac12]-A,\\
+ S_M&=c_0+TK_dx+yc_2+TCHxy=0.
+\end{split}
+\]
+The last equality is an exact identity from (IW6). Furthermore
+$c_2$ is bounded (in fact infinitesimal), $TCH$ is a unit, and
+$(K_d+CHy)/x$ is bounded with residue $-\tfrac12$.
+It follows from the two free rows in (IW20) that
+\[
+ \sqrt{TH(1-H)}[(c_2+TCHu^2)R_v+T(K_d+CHy)J_u]
+\]
+is free with bounded coefficients. For the other term,
+\[
+ \sqrt{TH(1-H)}C_qq
+     =T\sqrt{H(1-H)}C_q\widehat q.
+\]
+Its coefficient is in $\mathfrak n$: multiplying $C_q$ by $T$
+clears the only $CH$ pole, and every term then contains either
+$T$ or $v^2$. This statement is made on the full expression in
+(IW23), before any relative source/testing rate is considered.
+
+\subsection{Strict full Gram and state restoration}
+
+Normalize the hard rows by pure-source factors,
+\[
+ \widehat N=\sqrt{h_0}\,N,\qquad
+ M_0=\sqrt{TH(1-H)}\,\widehat M.
+\]
+Their full hard matrix is bounded: $b_+/h_0\leq1$,
+$\beta/h_0\leq1$, $\alpha/h_0=O(\alpha)$, and the two
+source poles of $H_M$ are exactly cleared by $TH(1-H)$.
+Equations (IW7), (IW13) give its real residue
+\[
+                           \operatorname{diag}(1,\tfrac12).
+                                                               \tag{IW24}
+\]
+Its off-diagonal coefficient has the factor
+$uv\sqrt{TH(1-H)}/\sqrt{h_0}$ and is infinitesimal.
+The $\widehat q$ couplings in (IW22)--(IW23) are infinitesimal.
+All remaining complete-normal couplings are bounded coefficients
+of free rows. Buy sufficiently large fixed real pivots on the
+finitely many free rows, use the elementary real Young square
+completion, and apply the strict-residue Gram lemma to the
+remaining finite matrix. The strict scalar pivots (IW18) lose only
+infinitesimal amounts. This proves $G\in\Sigma\mathcal T^2$.
+No state normal has been set to zero in this conclusion.
+Restoring $mpD_u^2N^2$, the pure-testing factor $D_u$, and the
+positive source scale $d$ proves the assertion for (IW9).
+
+The proof has used $u,v>0$ and $w=1,z>0$, with arbitrary $z$.
+The exact sign/state lemma SJ1--SJ10 applies to the same original
+core: sign gauges make $u,v$ nonnegative while preserving every
+packet; a negative core at positive angles forces the rotated
+$w,z$ to have the same nonzero sign. Dividing all state coordinates
+by the nonzero pure-testing $w$ gives precisely this chart.
+When the core is nonnegative it is itself a pure-testing square,
+and every event packet is already positive. Zero angles have the
+direct core SOS exits. The zero state is immediate, and a complex
+state splits into its real and imaginary quadratic evaluations.
+Thus (IW1) is proved for all states at the double-infinitesimal
+angles. The existing two-current outer-angle identities give the
+separate all-tests join if needed; they are not required as a premise
+of the local conductor proved here.
+
+\paragraph{Verification and scope.}
+The new module \path{iw_actual_source.py} prints the finite
+actual C1 source dictionary. The independent-formula checks in
+\path{check_c1_inverse_b_local.py} compare it with (IW2),
+verify the entire original parent and both normals, all scalar
+monomials and the exact circuit, the elementary helper identities,
+and the finite normalized source arrays. The ordered-field
+estimates and finite Gram allocation are the proof above; a checker
+receipt alone does not establish them. No lost historical IW
+coefficient witness, R21 admission label, formal negative-$\beta$
+source, mixed inverse, or additional source-rate restriction is used.

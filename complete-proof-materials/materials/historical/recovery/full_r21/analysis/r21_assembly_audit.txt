@@ -1,0 +1,260 @@
+Q222 R21 ANALYTICAL ASSEMBLY AUDIT
+Date: 2026-10-22
+Scope: independent source/assembly and selected C1 analysis, not an end-to-end audit of all 215 components.
+
+RECOVERED OBJECT
+The release examined is Q222_R21_Rederived_Release_2026-10-22, inside
+Q222_R21_Rederived_Proof_Package_2026-10-22.zip.
+Its README explicitly identifies a fresh 798-page, 215-component rederivation.
+It does not purport to recover the missing 549-page original or the original late-R21 archive bytes.
+This distinction is essential: recovery of this actual later argument is substantial, but it is not recovery of the historical object.
+
+All paths below are relative to this release root.
+
+1. ACTUAL GLOBAL ARGUMENT, NOT JUST A STATUS LEDGER
+
+The readable opening is:
+rederivation_2026-10-22/publication/opening_assembly.tex
+
+Its claimed theorem is FA9 (lines 241–249):
+for all separately labelled real closed extensions K_c,K_t of R,
+all f in the transferred valid-affine cone P_(K_c), and all q in Q_(K_t),
+[f,q] = f_0 tensor 1 + sum f_nu tensor q_nu lies in Sigma(K_c tensor_R K_t)^2.
+
+The fields may be labelled copies of the same field; no algebraic-disjointness or ordering of their tensor product is assumed (lines 62–75).
+The finite list of roots is allowed to depend on the fields, source and test.
+This is exactly the appropriate qualitative target, not an assertion of a fixed number of roots or rank-two roots.
+
+The theorem-level chain is:
+physical finite formula -> canonical source reduction -> full C1/C2 local certificates -> pure-side normalization restoration -> finite source and testing closure -> Scheiderer Corollary 3.19.
+
+The actual local dispatcher is:
+rederivation_2026-10-22/global/complete_source_routing_REDERIVED.tex
+Its LC1 specifies physical actual-contact sources, including allowed literal zeros.
+Its LC3 separates positive-unit total scale from positive-infinitesimal total scale before later gauges.
+LC5 is a ten-row weak-total C1 source partition, with ordinary-angle and C1.4 refinements.
+LC4a–LC4b print the C1.4 five-cell normalization.
+The C2 proof is delegated to actual CT/HJ/BSR bodies.
+LC9–LC10 (lines 574–621) perform the universal finite assembly.
+
+This is materially more than a checklist saying COMPLETE. It is a written mathematical assembly with explicit source predicates and actual cited leaf bodies. Its correctness nevertheless depends on the validity and exact scope of every leaf.
+
+2. ANALYTICALLY CHECKED PHYSICAL REDUCTION
+
+Read in full:
+reconstruction/restored_context/routing/fresh_physical_normalization_conditional_assembly.tex
+
+RFA3 is Q = conv Phi(S^1 x S^1 x S^3), with at most nine atoms (lines 34–117).
+The written proof is adequate:
+- Both binary effects use the same local dilation embedding h -> (h,0).
+- The two-involution decomposition uses the unitary UV and U(UV)U=(UV)*, producing one- or two-dimensional invariant blocks.
+- Local phase changes make the two qubit observables real.
+- For a real symmetric observable matrix, complex pure states split exactly into real and imaginary pure-state contributions.
+- Finite convex combinations are realized by a finite direct sum.
+- Caratheodory elimination shortens any convex combination to at most nine points in R^8.
+- The resulting fixed polynomial formula is a compact real image and is semialgebraic.
+
+RFA6 (119–130) correctly identifies the transferred valid-affine cone using a fixed first-order formula. Real compactness is not assumed in the non-Archimedean order topology.
+
+RFA9–RFA13 (154–232) print the homogeneous physical parent and the pure-testing normalization factor. Literal projective endpoints are included polynomially.
+RFA13 removes only strictly positive one-field factors. It does not cancel an arbitrary mixed tensor.
+The literal commuting-test argument (234–243) correctly reduces CHSH to +/-2B_0 or +/-2B_1 and supplies a direct separated certificate. It explicitly does not cover merely infinitesimal nonzero angles.
+
+These are computer-free arguments. Matrix multiplication and finite polynomial expansions can be checked by hand; symbolic replay is corroborative, not a logical premise.
+
+3. ANALYTICALLY CHECKED SOURCE REDUCTION
+
+Read in full:
+rederivation_2026-10-22/global/finite_contact_source_reduction_REDERIVED.tex
+
+SE1–SE10 give a genuine argument for:
+- the factored determinant with nonnegative outer Laurent coefficients;
+- positivity of the three-state complement at uv != 0;
+- coercivity at every physical finite zero;
+- strict single-field contact Hessian;
+- contact sufficiency via the convex logarithmic Laurent profile;
+- exclusion of event-row walls by deletion.
+
+The support proof is finite and explicit. A stationary noncoercive support must be empty or lie on one of four lines. Horizontal/vertical supports activate off-line products; the two alternating diagonal matchings have the printed negative test SE4; the empty case has a negative test supported on an allowed event triple.
+
+The important distinction is made in the source itself: a positive definite Hessian over K_c does not automatically have positive definite real residue under degeneration. The source reduction does not use that invalid implication.
+
+SE11–SE15 (220–339) give the correct finite source logic:
+- a valid affine functional is an event sum, or is negative at a PR vertex;
+- its nine evaluations yield the canonical nonnegative coefficient representation;
+- incompatible omissions belong to two explicit closed-face orbits;
+- a coercive extreme source has an actual finite contact, since a strictly positive minimum permits opposite source perturbations;
+- six contact equations allow a nonradial perturbation if seven or eight events are positive;
+- hence a coercive extreme source has five or six positive events and lies in C1 or C2 up to actual Bell symmetries;
+- a normalized compact real source base has a nine-extreme-point representation;
+- the fixed finite statement then transfers to arbitrary real closed source fields.
+
+The source proof's final corollary is correctly conditional on full C1 and C2 all-tests certificates. Its historical wording that those were not yet proved is not itself a present gap once later leaf proofs are supplied.
+
+4. CLOSED-FACE LIFTS AND TENSOR DUALITY
+
+Read the retained closed_faces_short.tex, under the inherited R19/R18/R17/R16 chain.
+It supplies:
+- the exact quadratic matrix Gram lemma CF1, proved through a closed Gram cone and a finite matrix-moment decomposition;
+- a 6-by-6 lift for lambda=m=0;
+- two 3-by-3 blocks for lambda=alpha=0;
+- explicit strictly feasible points, CF8 and the two positive-minor lists.
+
+The argument in RFA14–RFA15 (physical assembly lines 296–334) correctly explains attained duality. A strictly feasible homogeneous matrix M(z*) >= epsilon I bounds tr(Y) whenever M*(Y) stays bounded, so the PSD adjoint image is closed. The finite witness statement transfers to the testing field independently of source feasibility in K_c.
+
+For X=BB^T in K_c and Y=CC^T in K_t,
+sum X_ij tensor Y_ij = sum_ab (sum_i B_ia tensor C_ib)^2.
+The adjoint equations eliminate auxiliary variables. Singular matrices cause no problem.
+Thus the closed-face tensor step does not hide a mixed inverse or an unattained dual limit.
+
+5. NATIVE ENTRY AND SOURCE SIGNS
+
+Read in full:
+rederivation_2026-10-22/global/global_native_entry_REDERIVED.tex
+
+The proof uses a real connected maximal-contact graph and then transfers a fixed first-order implication.
+The strictly positive source orthant has a unique positive squared-angle contact because the logarithmic Laurent profile is coercive and strictly convex.
+The augmented contact Jacobian is nonsingular: its blocks are the strict contact Hessian and the strictly negative core expectation.
+The displayed seed fixes signs. Exact cofactor identities, event deletion and actual full-parent reflections exclude sign walls.
+Literal third-omission faces are handled at a fixed real finite contact by the implicit-function theorem and then the same strict wall exclusions.
+EN13–EN16 identify the native source formulas through a nonzero stationary linear-system determinant.
+
+No concrete logical defect was found in this source-entry argument. In particular its real compactness/analytic-continuation steps are performed before transfer, not assumed directly over arbitrary non-Archimedean fields.
+
+6. JC4 -> SN SOURCE TRANSITION AND SELECTED FULL-PARENT CHECK
+
+Read:
+rederivation_2026-10-22/c1/c144_all_sources_and_c145_join_rederived.tex
+rederivation_2026-10-22/c1/c144_small_nu_bounded_beta_rederived.tex
+rederivation_2026-10-22/c1/c144_finite_matched_rederived.tex
+reconstruction/salvaged_checkpoint/.../proofs/c144/small_e_unmatched_bob.tex
+
+The source transition is valid on the printed formulas.
+
+In the last JC3 cell, S,kappa,nu are positive infinitesimals, ell=1-nu,
+q=nu/ell, and n_s=beta/q^2 is bounded.
+The generic small-e source identities imply
+P/S,J,B/S,H_0,Hcal -> 1.
+The sphere identity then gives
+b_0^2 = O(kappa theta n_s) -> 0,
+D/(S q^2) -> 1/2,
+e/kappa -> 1,
+h/nu -> 1,
+theta -> 1,
+m/kappa^2 -> 1/2.
+Literal beta=0 is retained. Literal D=0 is excluded by the strict limiting value of D/(S q^2).
+No comparison of the independent infinitesimal scales S,nu,kappa is required.
+
+Notation caution: e in this C14 chart means xh/sigma = kappa h/nu, as explicitly defined in SE1 and SN2. It is not the earlier LC4 native parameter k sqrt(eta/zeta). Replacing one by the other would be an error, but the actual local formula definitions avoid that substitution.
+
+The SN body provides a substantive full-parent construction:
+- exact reciprocal parent SN5;
+- both unrestricted normals X_e,N_y;
+- rows N,G,B,B_u,R with the exact relation making R an infinitesimal-coefficient combination of N,G;
+- helper identity SN8, which buys a strict pivot on wB_u at infinitesimal Gram cost;
+- monic polynomial division SN10, not inversion of a mixed difference;
+- explicitly combined bounded coefficients SN11–SN13, rather than assuming individual terms with 1/kappa poles are bounded;
+- both complete first-normal expansions SN15–SN18;
+- a strict bounded-Gram allocation on the enlarged root list.
+
+The budget mechanism is analytically legitimate: one uses the exact SN8 identity to exchange infinitesimal costs on N,G,B for a positive helper pivot plus a genuine tensor square. Cross terms with wB and wB_u have bounded coefficients and can be absorbed with fixed real pivots. Those pivot costs have zero residue. The base diagonal residues are all strictly positive, and the n_s=0 row is omitted without dividing by n_s.
+
+I did not independently expand every polynomial coefficient in SN9–SN18, nor re-audit every inherited remote-testing terminal. The proof is written in a computer-free form, but this scoped review is not a new certification of all its algebra and every subordinate body.
+
+7. THE FINITE ASSEMBLY ITSELF IS SOUND
+
+Assume the complete all-tests C1/C2 proposition.
+If f=sum_j a_j f_j and q=sum_i w_i Phi(z_i), with nonnegative weights and sum_i w_i=1, then
+[f,q]=sum_ijk ((sqrt(a_j) tensor sqrt(w_i)) h_ijk)^2
+whenever the elementary pairings equal sum_k h_ijk^2.
+Affineness preserves the constant term precisely because the testing weights sum to one.
+Zero weights are never inverted.
+The target permits a finite certificate for each pair; it does not require a common root count.
+
+Choosing labelled copies of one arbitrary real closed field gives the qualitative Corollary 3.19 hypothesis.
+The paper's title refers to a separate planar theorem; its criterion itself applies in arbitrary finite ambient dimension.
+A missing evaluated global feature list or matrix pencil is not an obstruction to this implication.
+
+8. AUDIT VERDICT AND LIMIT
+
+Established by direct examination in this audit:
+the physical reduction, transfer interface, pure-factor restoration, finite conic/convex closure, closed-face duality mechanism, canonical source reduction, native entry structure, JC4->SN source bounds, and the structure of the SN full-parent Gram construction.
+
+Not established by this scoped audit:
+a fresh end-to-end validation of all 215 components, every C1/C2 local polynomial identity, every remote-testing argument, or the claimed global LC theorem independently of all imported leaf proofs.
+
+No specific counterexample or demonstrated assembly error was found in the examined R21 rederived argument.
+The correct conclusion is that a real analytical existence-proof manuscript has been recovered, with a logically appropriate global assembly. Its asserted unconditional theorem depends on the full local proof bodies, which require separate detailed checking. It must neither be accepted solely from completion labels nor rejected solely because E1–E3 remain unextracted.
+
+The historical August rank-two/SOC claim and this later unrestricted finite-SOS existence claim are different. An error in preservation of rank two need not invalidate qualitative existence. Conversely, generic nonnegative scalar slack or a single-field Hessian does not by itself establish tensor SOS.
+
+This audit does not certify the missing original 549-page release.
+
+
+9. FOLLOW-UP: FULL SN STATE AND REMOTE COVERAGE
+
+After the initial audit, the following inherited bodies were read in full:
+- proofs/c144/small_e_unmatched_bob.tex (SE1–SE12), in the salvaged R21 checkpoint;
+- proofs/shared/inherited_eb_full_parent.tex (EB1–EB10), same checkpoint;
+- advances/c1_common/common_remote.tex (CE1–CE10 needed here), in the inherited R13 chain.
+
+This follow-up confirms that SN's testing/state coverage is not just an asserted source fit.
+
+9.1 Arbitrary state ratios in the matched local chart.
+SN5 is a quadratic polynomial in the four unrestricted state coordinates.
+SN6 translates X,Y into the two full normals; it does not set those normals to zero.
+SN18 gives the full X_e^2, N_y^2, X_e N_y, X_e, N_y coefficients, restoring the terms omitted in the temporary scalar graph.
+All state dependence is retained in tensor roots. Boundedness claims concern coefficient polynomials only, so W/Z and every other state ratio may be unbounded or undefined.
+
+The exact relation
+R=(kappa sqrt(S) G-uN)/ell
+puts R in the span of strict rows with infinitesimal bounded coefficients.
+Thus the CR R^2 and sqrt(S) La G R terms are genuine zero-residue Gram perturbations.
+
+The non-small coefficients occur only against the helper rows:
+CG G(wB), CN N(wB_u), and Yc N_y(wB).
+The helper identity SN8 has the precise usable form
+Cost = ell^2(wB_u)^2 + (kappa delta W)^2,
+where every coefficient of Cost on N,G,B has zero residue.
+For a fixed real t>0, subtract (t/ell^2) Cost from the existing Gram and add
+t(wB_u)^2 + (t/ell^2)(kappa delta W)^2.
+This leaves the polynomial exactly unchanged. It creates the required helper pivot and a genuine extra tensor square while costing only zero-residue coefficients on the strict base rows.
+Similarly w^2 B^2=(wB)^2 buys a pivot on wB at zero-residue cost.
+The extra square root sqrt(t)/ell is pure-source times a real scalar; no mixed square root occurs.
+
+The base residues are 1/2 on N,G,B,X_e,N_y and 1 on sqrt(n_s)B_u.
+All direct first-normal couplings in LX have zero residue:
+w Ahat_X, uw sqrt(S) Xhat_a/ell, d_s sqrt(S) q, q sqrt(n_s), and w Xc.
+In LY, YP has zero residue and sqrt(S) Ya R is small after the exact R identity. The bounded Yc term is absorbed by the purchased wB pivot.
+If n_s=0, the sqrt(n_s)B_u row is omitted and its cross term is zero; no division by n_s is required.
+Choosing sufficiently large real helper pivots yields a positive definite real residue on the complete root list. The strict bounded-Gram lemma applies even when the roots themselves are dependent, zero, or unbounded.
+
+This is a concrete finite all-state Gram mechanism, not an appeal to scalar positivity or a truncated Taylor jet.
+
+9.2 Noninfinitesimal Alice tests.
+SN4 implies C,A are unbounded, regardless of the openings r and 1-r.
+CE1–CE10 prove the full parent at every projective test with u not infinitesimal, using four explicit raw state frames:
+unit u / bounded v;
+unbounded u / bounded v;
+unit u / unbounded v;
+unbounded u / unbounded v.
+A finite real cap C=A=mu is selected below the actual unbounded source weights; every excess packet is restored unchanged.
+The selected residue Gram is strict in each frame. These are complete quadratic state forms, so this exit imposes no state-ratio restriction and keeps both first-normal terms automatically.
+
+9.3 Infinitesimal Alice, unmatched Bob.
+SE10–SE12 imports the literal EB4–EB7 full homogeneous parent.
+It uses normalized Bob coordinates c^2+s^2=1 and bounded harmonic source coefficients to retain all states.
+The six-root residue consists of diag(1,1,1/2,1/2) and a 2-by-2 scalar block whose determinant is
+(s_bar^2-ell_bar)^2/4.
+This is strictly positive precisely away from the matched Bob residue.
+On SN, ell_bar=1. Therefore the only remaining Bob tests have s_bar^2=1, hence c infinitesimal and w=c/s infinitesimal; s is a unit, so this chart change is allowed inside K_t.
+Those are exactly the local SN5–SN18 tests already handled.
+Literal axes and signs are included by the homogeneous formulas and the local polynomial identities; complex states split into real and imaginary parts.
+
+9.4 Exact limit of this follow-up.
+The source, full-normal allocation, helper-pivot mechanism, and logical three-way testing cover of SN have been directly examined and found coherent.
+The formula identities have transparent finite algebraic definitions that are hand-reproducible; this audit did not replace that mathematical argument by a software PASS count.
+I have not personally expanded and rechecked every coefficient of all imported polynomial dictionaries, nor audited the other four JC3 cells or all LC5 leaf proofs.
+Accordingly this is a strong scoped validation of SN and its joins, not a fresh certification of the complete global LC theorem.
+
+

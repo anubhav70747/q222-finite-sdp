@@ -1,0 +1,398 @@
+\section{State-free normal conductors at the large-$L$ corner}
+\label{sec:c141-state-free}
+
+\paragraph{Claims and retained input.}
+Keep the original physical stationary C1 source, its positive $d$,
+strict gaps, nonnegative event coefficients, original infinitesimal
+total scale, and the complement of the previously admitted domains.
+Normalize $d=1$. Source quantities belong to a real closed extension
+$K_c$ and testing angles and states to an independent extension $K_t$.
+The conclusion is a finite sum of squares in
+$K_c\otimes_{\mathbb R}K_t$, not pointwise positivity after identifying
+the fields. In this section $x,z=1/L,\sigma=1/\eta$ are all positive
+infinitesimals. All original source openings are retained, including
+the allowed literal faces $D=0$ and $\beta=0$.
+
+The first theorem closes the entire original C14.1a residual. The
+second closes a proper part of C14.1b. The precise remaining C14.1b
+complement is stated at the end. No global theorem is claimed.
+
+\begin{theorem}[C14.1a]
+If $H=h/\sigma$ is bounded, the complete original parent is tensor
+SOS for every independent projective test and every real or complex
+state. In particular the previously unresolved C14.1a domain,
+$M_\beta=\beta\theta/\sigma^2$ unbounded, is admitted completely.
+\end{theorem}
+
+\begin{theorem}[A further C14.1b subdomain]
+If $H$ is unbounded and the real residue of $h$ is strictly less
+than $1/2$, the same full-parent conclusion holds. This includes
+every infinitesimal $h$ and every positive unit $h$ with residue
+less than $1/2$, but does not include residue $1/2$ or greater.
+\end{theorem}
+
+The proof uses the exact complete P4--P8/SP6 parent in the inherited
+\texttt{parent\_reference.tex}, the BE1--BE9 source identities, and the
+already admitted remote and literal-angle exits. The new argument
+settles the remaining $u,w=1/v$ infinitesimal corner directly; it does
+not reclassify any source outside the original C14.1 domains.
+
+\subsection{Source bounds with $z$ infinitesimal}
+
+Write $q=\sqrt z$, $k=\sqrt x$, $b=Lr$, $Q=1-b$,
+$\theta=1-h$, $e=xh/\sigma$, and retain the exact source letters
+$J,M,P,B,\mathcal H,p,l,\kappa$ from P1--P2. Since $r=bz$ and
+$0<b<1$, $r$ is infinitesimal and $1-r$ is a unit. BE1 applies
+because it requires only that $L$ have a positive real lower bound;
+it gives $e=O(x+\sigma)$ and $E=1-e\sim1$. Consequently
+\[
+ P,J,M,B,\mathcal H\sim1,\qquad
+ p,l\sim\tfrac12,\qquad C=O(z),\qquad\kappa\sim\tfrac12.
+ \tag{SF1}
+\]
+The possible $b^{-1},Q^{-1}$ poles occur only in the two original
+positive source weights $a=Az=p/b$ and $\ell=\alpha z=l/Q$.
+Both have positive real lower bounds. They need not be bounded above.
+No cap of an individual unbounded matrix entry is used below.
+
+Let $d_0,b_0$ be the exact source sphere from P2, and put
+\[
+ d=4D/\sigma^2,\qquad
+ \lambda=2H+\lambda_0,\qquad
+ \rho=\lambda x/\sigma,\qquad
+ K_A=4\kappa H-\lambda.
+ \tag{SF2}
+\]
+The identities SP9--SP10 show that $\nu,\lambda_0,\chi,K_A$ are
+bounded even when $H$ is unbounded. This is a polynomial
+divisibility argument, not multiplication of an uncontrolled error
+by $H$. More precisely their source residues give
+\[
+ (\nu)_0=1,\qquad (\lambda_0)_0=-2(1-h_0),\qquad
+ (K_A)_0=2-4h_0.
+ \tag{SF3}
+\]
+For example the SP10 polynomial $F_\sigma$ has residue $-1$ at
+$x=z=\sigma=0$, whereas $eF_x$ has zero residue. Thus
+$\alpha_\kappa=2H(2\kappa-1)$ has residue $-2h_0$, which proves
+the last equality without assuming a rate for $2\kappa-1$.
+
+The source-sphere calculations HG3--HG5 are algebraic for bounded
+$z$ and do not require it to be a unit. They give
+\[
+ \rho\text{ is bounded},\qquad
+ (\rho)_0=2(b_0^2)_0,\qquad (d+\rho)_0=2.
+ \tag{SF4}
+\]
+One way to check the delicate assertion is to use both exact identities
+\[
+ \rho=\frac D{\sigma^2}(8hx-4\theta J)
+       +\frac{2xh^2}{\sigma^2}
+       +\frac{2\theta\mathcal H}{P}-4bpxz,
+ \qquad
+ \frac{xh^2}{\sigma^2}=\frac{eH_0}{B}
+                         +\frac{h\mathcal H}{B}b_0^2.
+ \tag{SF5}
+\]
+These include $D=0$ and $\beta=0$. Throughout the positive-$\lambda$
+case $\lambda x=\rho\sigma$ is infinitesimal.
+
+When $H$ is bounded, $h$ is infinitesimal, $K_A\sim2$, and
+$\lambda$ is bounded. If $\lambda\le0$, its exact defining formula
+implies
+\[
+ 8Dh+4\beta\theta^2+2h^2\le4bp\sigma^2z.
+\]
+Since $\theta\sim1$, this forces bounded $M_\beta$; the inherited
+JB bounded-$M_\beta$ all-tests theorem applies. On the actual
+C14.1a remainder $M_\beta$ is unbounded, so $\lambda>0$.
+
+If $d_0$ is infinitesimal, including literal $D=0$, SF4 makes
+$\rho$ a positive bounded unit. The positive sphere identity
+\[
+ H=H_0/B+(\sigma/x)(\mathcal H/B)b_0^2
+ \tag{SF6}
+\]
+then gives the source bounds needed for the two theorems:
+\[
+ \begin{array}{ll}
+ H\text{ bounded}:&\sigma/x\text{ bounded};\\
+ H\text{ unbounded}:&x/\sigma\text{ infinitesimal},\quad
+                    xh/\sigma^2\text{ a positive unit},\quad
+                    \sigma/k\asymp\sqrt h\text{ bounded}.
+ \end{array}
+ \tag{SF7}
+\]
+For the second line use $\lambda/H\sim2$ and $\rho\sim2$.
+None of these is a comparison between a source rate and a testing rate.
+
+\subsection{The full source-opening-safe radial block}
+
+The roots are the original ones:
+\[
+ N_x=X+uhZ,\quad N_y=(Y-bwZ)/q,\quad
+ \Gamma=\sigma Z-uwW,\quad R=wZ/q-uqW,\quad
+ A_\theta=q(u^2-x)W.
+\]
+Put $J_C=N_y+bR$ and $J_\ell=N_y-QR$. The exact CT7--CT7a
+radial extraction, with every $a,\ell$ excess restored, has leading
+pure-source form
+\[
+ [4a+2z(2C+1)]J_C^2+4\ell J_\ell^2.
+ \tag{SF8}
+\]
+Retain the nonconstant positive $u^2,w^2$ packets and all positive
+source-weight excesses. Clipping the two coefficients in SF8 at
+positive real lower bounds gives a strict bounded Gram on $(N_y,R)$,
+since
+\[
+ R=J_C-J_\ell,\qquad N_y=QJ_C+bJ_\ell,
+ \qquad b+Q=1.
+\]
+This is uniform through $b\to0$ and $Q\to0$. The remaining three
+radial coefficients are precisely CT7a. They are infinitesimal
+because $z$ is infinitesimal, $C=O(z)$, and all their other source
+letters are bounded. In particular the $z$-unit argument's possible
+$C$ pole does not occur here.
+
+The $N_x^2$ diagonal has residue $2$. The complete remaining
+non-Gamma cross terms of SP6 are
+\[
+ \begin{split}
+ &-4uqw(2m+2D+1)N_xN_y+uqwR_xN_xR\\
+ &\hspace{4mm}+qwB_xN_xA_\theta+uA_yN_yA_\theta
+                         +\chi uA_\theta R.
+ \end{split}
+ \tag{SF9}
+\]
+Every coefficient is a bounded infinitesimal on $u,w$ infinitesimal.
+Here $m,D,C,\beta\theta,p,l$ are bounded, $B_x=8\kappa e$ is
+infinitesimal, and $A_y$ is bounded. The entire $N_yR$ term was
+already included in SF8 and CT7a. No first normal was suppressed.
+
+\subsection{A scalar circuit and two normal conductors with no state quotient}
+
+The original-core sign exit and exact testing sign gauges leave
+$u,w,W,Z>0$. Literal $u=0,w=0,W=0,Z=0$ and the opposite-sign
+cases have their inherited direct core SOS. Suppose $\lambda>0$.
+Define separated nonnegative monomials
+\[
+ a_c=\sqrt{\lambda\sigma}\,uZ,\qquad
+ b_c=\sqrt\rho\,uwW,\qquad
+ c_c=\sqrt\lambda\,xqW,\qquad
+ g_c=(a_cb_cc_c)^{1/3},\qquad
+ s_c^3=\frac{wZ}{zuW}.
+ \tag{SF10}
+\]
+Each radical is taken separately in its source and testing factors.
+The exact full angular packet in SP6 is
+\[
+ K_AA_\theta^2+\chi uA_\theta R+\mathscr P,
+ \qquad
+ \mathscr P=\lambda\sigma P_\beta^2
+       +\rho(u^2-x)(w^2-\sigma z)W^2.
+\]
+The same algebraic HP3 identity is valid for infinitesimal $z$:
+\[
+ \mathscr P+\lambda xR^2
+ =a_c^2+b_c^2+c_c^2-3g_c^2
+   +\lambda xzu^2W^2s_c^2(s_c-1)^2(s_c^2+2s_c+3).
+ \tag{SF11}
+\]
+No bound on $s_c$ or any state ratio is asserted or required. The last
+term is a legal SOS after writing $s_c^2+2s_c+3=(s_c+1)^2+2$.
+Furthermore
+\[
+ a_c^2+b_c^2+c_c^2-3g_c^2
+ =\tfrac12\{(a_c-b_c)^2+(b_c-c_c)^2+(c_c-a_c)^2\}
+      +(a_cb_c+b_cc_c+c_ca_c-3g_c^2).
+ \tag{SF12}
+\]
+The last parenthesis is the elementary cubic AM--GM SOS applied to
+$(a_cb_c)^{1/3},(b_cc_c)^{1/3},(c_ca_c)^{1/3}$. Expand its
+positive monomial prefactor before taking square roots. Thus
+\[
+ D_1=(a_c-b_c)/\sqrt2,\qquad
+ D_2=(b_c-c_c)/\sqrt2
+\]
+are two genuine unit-weight pivots; all other SF11--SF12 squares
+are retained separately.
+
+The new root is
+\[
+ T=kq(u-k)W.
+\]
+Its legal quadratic domination is exact:
+\[
+ A_\theta^2-T^2=q^2(u-k)^2W^2(u^2+2uk).
+ \tag{SF13}
+\]
+Both summands on the right are squares, using the separated root
+$\sqrt u\sqrt k$. If $K_A$ has positive residue, allocate its
+diagonal exactly once as
+\[
+ K_AA_\theta^2=\tfrac12K_AA_\theta^2+\tfrac12K_AT^2
+                        +\tfrac12K_A(A_\theta^2-T^2).
+ \tag{SF14}
+\]
+The last term is retained SOS and the first two supply strict
+positive source pivots for $A_\theta,T$.
+
+Here are the decisive two identities, valid for arbitrary states
+without a state division:
+\[
+ \boxed{\begin{aligned}
+ u\Gamma={}&\frac{\sqrt2 k}{\sqrt\rho}D_1
+       -\frac{\sqrt2(u-k)}{\sqrt\rho}D_2-\sqrt\sigma T,\\
+ qw\Gamma={}&\sigma zR
+       -\frac{\sqrt2(qw+z\sqrt\sigma)}{\sqrt\rho}D_2
+       +\left(\frac{\sigma z}{k}
+                  +\frac{\sqrt\sigma qw}{k}\right)T.
+ \end{aligned}}
+ \tag{SF15}
+\]
+All divisions are pure source. In particular neither $q$ nor a
+testing coordinate is inverted in a conductor coefficient. These
+replace the $\lambda(Z/W)/q$ and $w/q$ coefficients that obstruct a
+literal transport of the R19 $z$-unit proof.
+
+\subsection{Completion when $H$ is bounded}
+
+Here $K_A\sim2$ and $\lambda$ is bounded. If $d_0$ has positive
+residue, the original $d\Gamma^2$ diagonal gives a strict Gamma
+pivot. Its two complete normals are
+\[
+ -4\nu N_x(u\Gamma)
+       +R_\gamma(N_y+bR)(qw\Gamma).
+ \tag{SF16}
+\]
+Their coefficients are infinitesimal on $(N_x,N_y,R,\Gamma)$.
+Keep SF11 entirely as SOS; its sole cost $-\lambda xR^2$ is an
+infinitesimal bounded radial correction. The frame
+$(N_x,N_y,R,\Gamma,A_\theta)$ has strict positive residue.
+
+If $d_0$ is infinitesimal, $\rho$ is a unit by SF4 and
+$\sigma/x$ is bounded by SF7. All coefficients in both lines of
+SF15 are bounded infinitesimals. Indeed $\sqrt\sigma/k$ is
+bounded, $\sigma/k=k(\sigma/x)$ is infinitesimal, and $q,w,z$
+are bounded infinitesimals. Use SF14 and the two unit circuit
+pivots. After substituting SF15 into SF16, the complete frame
+\[
+ (N_x,N_y,R,A_\theta,T,D_1,D_2)
+ \tag{SF17}
+\]
+has strictly positive residue. Its radial block is SF8, its angular
+and $T$ pivots come from SF14, and the circuit pivots from SF12.
+Every correction is a bounded infinitesimal. The diagonal
+$d\Gamma^2$ is retained separately, including at $d=0$.
+
+In both cases retain exactly once $4\beta(1+w^2)N_x^2$,
+$2(2D+1)(uX_e)^2$, $4bpzu^2\Gamma^2$, the unused circuit rows,
+and all positive radial and coefficient-cap excesses. Equations
+SP6, SF8--SF16 list every original scalar, normal and hard coupling.
+The separated bounded-Gram lemma proves the entire parent.
+
+The $d_0$ split exhausts the source sphere. The bounded-$M_\beta$
+and bounded nonzero-unit Alice-angle exits are the inherited JB
+theorems; their CE remote join includes all other projective tests.
+Together with the literal-axis and sign exits, this closes the
+complete original C14.1a residual and the full bounded-$H$ source
+domain. Apply the real argument independently to real and imaginary
+state parts and restore only positive pure-source and pure-testing
+normalizations.
+
+\subsection{A source factor restores the second normal when $H$ is unbounded}
+
+Assume now $H$ unbounded and $h_0<1/2$. SF3 gives a positive-unit
+$K_A$, so the same angular allocation is available. Also
+$\lambda>0$, $\lambda/H\sim2$, $\rho$ bounded and
+$\lambda x=\rho\sigma$ infinitesimal. The positive-$d_0$ case is
+closed exactly as before: $\lambda$ occurs only inside the retained
+scalar circuit, not as an unbounded coefficient of the remaining Gram.
+
+For infinitesimal $d_0$, $\rho$ is a unit, but $\sqrt\sigma/k$
+can be unbounded. One must use the actual second normal in SF16,
+not claim boundedness of its factor $qw\Gamma$ by itself. Exactly
+\[
+ R_\gamma=R_0-8pu^2,\qquad
+ R_0=-4\{2(C+D)(r-1)+2p+r-1\}.
+ \tag{SF18}
+\]
+The required source bound is $R_0/\sigma$ bounded. Here is a
+reproducible polynomial proof that retains every opening. In the
+P1 formulas temporarily leave $e$ independent, and put
+$N=JP R_0$. The cancellation of $1-r$ in $C(r-1)$ shows that $N$
+is a polynomial in $x,\sigma,z,b,h,e$. Moreover
+$N|_{x=\sigma=e=0}=0$. Define the polynomial quotients
+\[
+ F_x=\frac{N-N|_{x=0}}x,\quad
+ F_\sigma=\frac{N|_{x=0}-N|_{x=\sigma=0}}\sigma,\quad
+ F_e=\frac{N|_{x=\sigma=0}}e.
+\]
+All their source arguments are bounded and the denominators $JP$
+are units. Restoring $e=xh/\sigma$ gives the exact expression
+\[
+ \frac{R_0}{\sigma}
+ =\frac{(x/\sigma)F_x+F_\sigma+(xh/\sigma^2)F_e}{JP}.
+ \tag{SF19}
+\]
+The two ratios on the right are bounded by SF7; this proves the
+claim. The checker prints the three actual polynomials in its receipt
+so that this is not an unverifiable divisibility assertion.
+
+Use the first conductor in SF15 unchanged. For the entire other
+normal use the exact identity
+\[
+ qwR_\gamma\Gamma=R_0(qw\Gamma)-8p qwu(u\Gamma).
+ \tag{SF20}
+\]
+Substitute both SF15 expressions into SF20. Every resulting
+coefficient is infinitesimal. The only apparently dangerous ones are
+\[
+ R_0\frac{\sigma z}{k},\qquad
+ R_0\frac{\sqrt\sigma qw}{k}.
+\]
+Write $R_0=\sigma C_0$ with bounded pure-source $C_0$. SF7 makes
+$\sigma/k$ bounded, so these are respectively
+$C_0\sigma z(\sigma/k)$ and
+$C_0\sqrt\sigma qw(\sigma/k)$, both infinitesimal. The other
+term in SF20 has the explicit infinitesimal factor $qwu$.
+
+Thus SF17 again has strict positive residue, now using SF20 for the
+complete second Gamma normal. All retained squares and every other
+SP6 term are accounted for as in the bounded-$H$ proof. The inherited
+R17 bounded-state and R18 unit-Alice admissions, together with the
+unchanged remote joins, complete all independent projective tests on
+this stated source subdomain. The argument never inverts a sphere
+coordinate and remains literal at $D=0$.
+
+\subsection{Exact remaining complement and verification boundary}
+
+C14.1a has no remaining mathematical domain after this proof is
+combined with the recorded inherited testing exits. C14.1b remains
+open on its actual inherited complement intersected with
+\[
+ H\text{ unbounded},\qquad \operatorname{res}(h)\ge\tfrac12.
+ \tag{SF21}
+\]
+The earlier bounded-$W/Z$, sign, literal-axis and nonzero-unit-$u$
+admissions still remove their stated parts. Thus its real residual
+still has $u,w>0$ infinitesimal, $WZ>0$ and $W/Z$ unbounded,
+as well as every original source intersection.
+
+The specific obstruction to extending this proof is the angular
+diagonal: $K_A$ has residue $2-4h_0$, which is zero or negative on
+SF21. Consequently SF14 supplies no strict positive angular or $T$
+pivot there. A new allocation of this signed angular packet is
+required. This failed frame is not a counterexample to tensor SOS
+and does not establish that SF21 is nonempty.
+
+The focused file \texttt{check\_state\_free\_conductors.py} checks the
+two state-free identities, the entire second normal substitution,
+the exact once-paid angular budget, the complete scalar circuit,
+its pair-difference pivots, and the source cancellation in SF19.
+It reports fifteen exact assertions. The complete original SP6 and
+CT7a identities remain inherited checked inputs. The analytical
+argument above, not the assertion count, establishes the quantified
+admissions. Review is same-system mathematical review, not external
+peer review or formal verification.

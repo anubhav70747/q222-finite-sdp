@@ -1,0 +1,503 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,longtable}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Splus}{\mathbb S_+}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\norm}[1]{\lVert #1\rVert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\title{Exact regular-C2 local extraction\\\large Full parent, fixed features, and rational coefficient maps}
+\author{Regenerated mathematical record}
+\date{22 October 2026}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This record gives an evaluated finite positive-semidefinite certificate for one
+regular-C2 contact graph and an independent testing box. All coefficients are
+rational, all square-root radicands have explicit sign certificates, and the
+delivered coefficient maps contain every term of the original seven-source
+parent. The extraction has 25 linear frames, 785 blocks in $\Splus^2$, 1,570
+listed features including repetitions, and 237 ambient testing monomials.
+There are 27,747 nonzero product records and 295 nonzero records in the seven
+source target columns. These are local data. A finite global cover and a pencil
+projecting onto the full eight-coordinate quantum set are not supplied here;
+the global extraction items E1--E3 remain open.
+\end{abstract}
+
+\section{Complete parent and the precise domain}
+
+The seven source coordinates, in their fixed order, are
+\[
+  (d,n,m,C,A,D,\alpha).
+\]
+Write $D_u=1+u^2$, $D_v=1+v^2$. The complete homogeneous quarter-parent is
+\begin{align}
+\widetilde P={}&nD_uD_vX^2
+ +m(vW-X+uvY-uZ)^2\notag\\
+ &+CD_v(uW-Y)^2+AD_uD_vY^2\notag\\
+ &+(D+d/2)(uW+uvX-Y-vZ)^2\notag\\
+ &+(\alpha+d/2)D_u(vY-Z)^2
+ +(d/2)D_v(X+uZ)^2-(d/2)D_uD_vZ^2.
+ \label{eq:parent}
+\end{align}
+Every term in \eqref{eq:parent} is retained. For the local certificate set
+$d=Z=1$, let $c=(n,m,C,A,D,\alpha)$ and $z=(u,v,W,X,Y)$, and denote the resulting
+polynomial by $P_c(z)$. The testing-variable order is fixed throughout.
+
+The source/contact anchor is
+\begin{equation}
+ c_*=(7/8,9/8,1/18,11/8,9/8,1/18),\qquad
+ \theta_*=(1,1,1,-1/10,1/10).
+ \label{eq:anchor}
+\end{equation}
+For $\theta=(p,q,a,b,r)$ define the six contact equations
+\begin{equation}
+  F(c,\theta)=\bigl(P_c(\theta),\partial_uP_c(\theta),
+  \partial_vP_c(\theta),\partial_WP_c(\theta),
+  \partial_XP_c(\theta),\partial_YP_c(\theta)\bigr)=0.
+  \label{eq:contact}
+\end{equation}
+These equations impose the complete value and gradient conditions. In the
+original homogeneous state variables, the value equation and the three
+displayed state derivatives also imply the missing $Z$ derivative by Euler's
+identity for a homogeneous quadratic. No state-kernel condition is discarded.
+
+Let the eleven centered source/contact variables and five independently
+centered testing variables be
+\begin{equation}
+ s=(c-c_*,h),\qquad h=\theta-\theta_*,\qquad
+ t=z-\theta_*.
+ \label{eq:center}
+\end{equation}
+Their order is the six coordinates of $c$, followed by the five coordinates
+of $h$; the order of $t$ is that of $z$. Set
+\begin{equation}
+ \rho=\frac{510101005}{350806159660744}.
+ \label{eq:rho}
+\end{equation}
+The source domain used in this record is exactly
+\begin{equation}
+ \mathcal S_\rho=\{(c,\theta):F(c,\theta)=0, |s_i|\leq\rho
+ \ (1\leq i\leq11)\},
+ \qquad
+ \mathcal T_\rho=\{t:|t_i|\leq\rho\ (1\leq i\leq5)\}.
+ \label{eq:domain}
+\end{equation}
+The source/contact point and the testing point vary independently. Stationarity
+alone is not asserted to imply global physical validity of a source.
+
+\begin{theorem}[Evaluated local certificate]\label{thm:main}
+For each $(c,\theta)\in\mathcal S_\rho$ there are 785 positive semidefinite
+matrices $Q_b(c,\theta)\in\Splus^2$. There are 785 fixed two-component testing
+feature vectors $\psi_b(t)$, independent of $(c,\theta)$, such that
+\begin{equation}
+ P_c(\theta_*+t)=\sum_{b=0}^{784}\psi_b(t)^TQ_b(c,\theta)\psi_b(t)
+ \qquad(t\in\mathcal T_\rho).
+ \label{eq:main}
+\end{equation}
+All radicands, multipliers, and source Gram factors are explicitly evaluated in
+the accompanying JSON files. The symmetric products of these features are
+polynomials in the 237 listed monomials, of degree at most six. The complete
+seven-source parent has the coefficient matching map stated in
+Section~\ref{sec:compiler}.
+\end{theorem}
+
+\section{The contact graph is regular}
+
+Substitution in \eqref{eq:contact} gives $F(c_*,\theta_*)=0$. The derivative
+with respect to the six coordinates of $c$, at the anchor, is
+\begin{equation}
+ J_*=
+ \begin{pmatrix}
+ 1/25&1/25&81/50&1/25&1/25&81/50\\
+ 1/25&-9/25&18/5&1/25&-9/25&81/50\\
+ 1/25&11/25&81/50&1/25&11/25&-9/25\\
+ 0&2/5&18/5&0&-2/5&0\\
+ -4/5&-2/5&0&0&-2/5&0\\
+ 0&2/5&-18/5&4/5&2/5&-18/5
+ \end{pmatrix},\qquad
+ \det J_*=\frac{114048}{78125}\ne0.
+ \label{eq:jacobian}
+\end{equation}
+Thus the contact equations define a five-dimensional graph near the anchor.
+There is also a direct uniform regularity check on the declared contact box.
+Since $F$ is affine in $c$, its source Jacobian $J(\theta)$ depends only on
+$\theta$. Put $E(h)=J_*^{-1}J(\theta_*+h)-I_6$. Its entries are rational
+polynomials with zero constant term. Direct exact coefficient collection gives
+\begin{equation}
+ \max_i\sum_j\sum_{\beta\ne0}|[h^\beta]E_{ij}(h)|
+   =\frac{114199}{160}.
+ \label{eq:jacnorm}
+\end{equation}
+Consequently, for $|h_i|\leq\rho\leq1$,
+\begin{equation}
+ \norm{E(h)}_\infty\leq
+ \frac{11650604933999}{11225797109143808}<1.
+ \label{eq:jacbound}
+\end{equation}
+If $(I+E)x=0$ and $x\ne0$, choosing a component of $x$ of maximal absolute
+value contradicts \eqref{eq:jacbound}. Hence $J(\theta)$ is invertible on the
+whole contact box. Equivalently, the source coordinates are the unique
+rational solution of the six affine contact equations for each fixed contact
+point in that box; the definition of $\mathcal S_\rho$ further retains the
+source-coordinate bounds. No global property of that rational graph follows
+from this local statement.
+
+\section{Exact polynomial Taylor matrix}
+
+Expand $P_c(\theta+\Delta)$ in $\Delta=(\Delta_1,\ldots,\Delta_5)$, retaining
+polynomial coefficients in $(c,\theta)$. Remove the terms of $\Delta$ degree
+zero and one. For each remaining monomial apply the following deterministic
+allocation rule. If an exponent is at least two, use the first such coordinate
+and divide out its square, adding the result to the corresponding diagonal
+entry. Otherwise use the first two occupied coordinates and add half of the
+divided monomial to each of the two symmetric off-diagonal entries. This
+defines a symmetric polynomial matrix $H(c,\theta,\Delta)$ and proves the
+exact identity
+\begin{equation}
+ P_c(\theta+\Delta)=P_c(\theta)+\nabla P_c(\theta)^T\Delta
+                 +\Delta^TH(c,\theta,\Delta)\Delta.
+ \label{eq:taylor}
+\end{equation}
+There is no asymptotic remainder in \eqref{eq:taylor}. All fifteen upper
+entries, both before and after substituting $\Delta=t-h$, are supplied as
+complete sparse rational polynomials.
+
+At the anchor the matrix is half the Hessian:
+\begin{equation}
+ H_0=
+ \begin{pmatrix}
+ 10201/3600&-1089/400&121/360&14/5&-253/90\\
+ -1089/400&10201/3600&-9/40&-14/5&253/90\\
+ 121/360&-9/40&103/36&1/2&-11/18\\
+ 14/5&-14/5&1/2&29/4&-11/4\\
+ -253/90&253/90&-11/18&-11/4&341/36
+ \end{pmatrix}.
+ \label{eq:hessian}
+\end{equation}
+Its exact factorization $H_0=LD_0L^T$ is
+\begin{equation}
+ L=\begin{pmatrix}
+ 1&0&0&0&0\\
+ -9801/10201&1&0&0&0\\
+ 1210/10201&8991/20002&1&0&0\\
+ 10080/10201&-5040/10001&79/1010&1&0\\
+ -10120/10201&5060/10001&-119/1010&2/81&1
+ \end{pmatrix},
+ \label{eq:L}
+\end{equation}
+\begin{equation}
+ D_0=\operatorname{diag}\left(
+ \frac{10201}{3600},\frac{20002}{91809},\frac{27775}{10001},
+ \frac{891}{202},\frac{1067}{162}\right)>0.
+ \label{eq:pivots}
+\end{equation}
+In particular $H_0$ is positive definite. Define the rational linear functions
+$f=L^Tz$, and put $\widehat H=L^{-1}HL^{-T}$. This orientation is essential:
+$\Delta f=L^T\Delta$ and
+\begin{equation}
+ \Delta^TH\Delta=(\Delta f)^T\widehat H(\Delta f).
+ \label{eq:orientation}
+\end{equation}
+
+\section{Twenty-five fixed linear frames}
+
+Set
+\begin{equation}
+ \eps=\frac1{20}\min_i(D_0)_{ii}=\frac{10001}{918090}.
+ \label{eq:eps}
+\end{equation}
+Use the five frame functions $f_i$ and, for every pair $i<j$, the two frame
+functions $f_i+f_j$ and $f_i-f_j$. Their respective coefficient polynomials
+are
+\begin{equation}
+ \widehat H_{ii}-8\eps,\qquad
+ \eps+\tfrac12\widehat H_{ij},\qquad
+ \eps-\tfrac12\widehat H_{ij}.
+ \label{eq:coefficients}
+\end{equation}
+Order the five individual functions first; then order the pairs
+lexicographically, with the plus function preceding the minus function.
+The exact frame identity is
+\begin{align}
+ \Delta^TH\Delta={}&
+ \sum_i(\widehat H_{ii}-8\eps)(\Delta f_i)^2\notag\\
+ &+\sum_{i<j}\left(\eps+\tfrac12\widehat H_{ij}\right)
+                   (\Delta f_i+\Delta f_j)^2\notag\\
+ &+\sum_{i<j}\left(\eps-\tfrac12\widehat H_{ij}\right)
+                   (\Delta f_i-\Delta f_j)^2.
+ \label{eq:frame}
+\end{align}
+Indeed each pair adds $2\eps$ to each of its two diagonal entries, and its
+cross coefficient is $2\widehat H_{ij}$. Every coordinate participates in
+four pairs, giving the subtraction $8\eps$.
+
+After inserting $c=c_*+s_{1:6}$, $\theta=\theta_*+h$, and $\Delta=t-h$, denote
+the 25 coefficient polynomials by $\gamma_k(s,t)$ and the 25 linear testing
+functions by $\ell_k(t)$. Their constant terms satisfy
+\begin{equation}
+ \gamma_k(0,0)\geq\eps.
+ \label{eq:constantpositive}
+\end{equation}
+For the ten plus and ten minus functions the constant is $\eps$; for the
+five individual functions it is $(D_0)_{ii}-8\eps\geq12\eps$.
+
+For a rational polynomial let its nonconstant coefficient norm mean the sum
+of the absolute values of all its nonconstant coefficients, with every
+source and testing monomial distinct. Exact coefficient collection gives
+\begin{equation}
+ B_*:=\max_k\sum_{(a,b)\ne(0,0)}|[s^at^b]\gamma_k|
+   =\frac{43803942777143}{46827180450}.
+ \label{eq:B}
+\end{equation}
+The radius in \eqref{eq:rho} is exactly
+\begin{equation}
+ \rho=\min\left(\frac12,\frac{\eps}{8(1+B_*)}\right).
+ \label{eq:radiusformula}
+\end{equation}
+In particular $\rho B_*<\eps/8$. The radius is also smaller than half the
+absolute value of each nonzero anchor coordinate in \eqref{eq:anchor}.
+
+\section{Positive separation of the two variable groups}
+
+Fix one frame and omit its index. Partition its complete coefficient support
+uniquely as
+\begin{equation}
+ \gamma(s,t)=\gamma_0+G(s)+T(t)
+              +\sum_{\beta\ne0}A_\beta(s)t^\beta,
+ \label{eq:grouping}
+\end{equation}
+where $G,T$, and every $A_\beta$ have zero constant term. The sum ranges only
+over the nonzero mixed groups. Define
+\begin{equation}
+ \sigma_\beta=\sum_a|[s^a]A_\beta|,\quad
+ U_\beta(s)=A_\beta(s)+\sigma_\beta\rho,\quad
+ V_\beta(t)=t^\beta+\rho^{|\beta|},\quad
+ B=\sum_\beta\sigma_\beta\rho^{|\beta|+1}.
+ \label{eq:shifts}
+\end{equation}
+The two pure remainders are the following explicit polynomials:
+\begin{align}
+ p(s)&=\gamma_0/2-B/2+G(s)
+                -\sum_\beta\rho^{|\beta|}A_\beta(s),\notag\\
+ q(t)&=\gamma_0/2-B/2+T(t)
+                -\sum_\beta\sigma_\beta\rho\,t^\beta.
+ \label{eq:remainders}
+\end{align}
+Expanding every product proves, coefficient by coefficient,
+\begin{equation}
+ \gamma(s,t)=p(s)+q(t)+\sum_\beta U_\beta(s)V_\beta(t).
+ \label{eq:separation}
+\end{equation}
+The constant $B$ is subtracted exactly once through the two halves $B/2$.
+
+\begin{lemma}[Uniform sign certificates]\label{lem:sign}
+On the independent boxes in \eqref{eq:domain}, all $U_\beta$ and $V_\beta$
+are nonnegative, and for every frame
+\begin{equation}
+ p(s),q(t)\geq\frac{5\eps}{16}
+              =\frac{10001}{2937888}>0.
+ \label{eq:remainderbound}
+\end{equation}
+\end{lemma}
+\begin{proof}
+Every source monomial of $A_\beta$ has positive degree. Since $0<\rho\leq1$,
+$|A_\beta(s)|\leq\sigma_\beta\rho$, proving $U_\beta\geq0$. Also
+$|t^\beta|\leq\rho^{|\beta|}$, proving $V_\beta\geq0$.
+
+Let $g$ and $r$ be the coefficient norms of $G$ and $T$, and write
+$M=\sum_\beta\sigma_\beta$. The nonconstant norm of this frame is exactly
+$g+r+M\leq B_*$. The losses in $p$ obey
+\[
+ p(s)\geq\gamma_0/2-\rho g-\tfrac32 B.
+\]
+The corresponding bound for $q$ is
+$q(t)\geq\gamma_0/2-\rho r-\tfrac32B$. Because $|\beta|\geq1$ and
+$\rho\leq1$, we have $B\leq\rho M$. Thus either lower bound is at least
+\[
+ \gamma_0/2-\tfrac32\rho(g+r+M)
+ >\eps/2-3\eps/16=5\eps/16.
+\]
+The stated weak inequality follows. This proof uses finite polynomial
+inequalities, with no numerical approximation or compactness step.
+\end{proof}
+
+\section{Explicit blocks and tensor certificates}
+
+For a given frame $\ell_k$, regard $\ell_k(h)$ and $\ell_k(t)$ as the same
+rational linear form evaluated in its respective variable group. There are
+two pure separated pairs and one pair for each mixed group:
+\begin{equation}
+ (U,V)=(p_k,1),\quad(1,q_k),\quad
+ (U_{k,\beta},V_{k,\beta}).
+ \label{eq:pairs}
+\end{equation}
+For each such pair define
+\begin{equation}
+ \psi(t)=\sqrt{V(t)}\binom{1}{\ell_k(t)},\qquad
+ Q(s)=U(s)
+ \begin{pmatrix}
+ \ell_k(h)^2&-\ell_k(h)\\
+ -\ell_k(h)&1
+ \end{pmatrix}.
+ \label{eq:gram}
+\end{equation}
+Lemma~\ref{lem:sign} makes $\psi$ well defined and $Q$ positive semidefinite.
+Moreover,
+\begin{equation}
+ \psi(t)^TQ(s)\psi(t)
+   =U(s)V(t)\bigl(\ell_k(t)-\ell_k(h)\bigr)^2.
+ \label{eq:gramidentity}
+\end{equation}
+Combining \eqref{eq:separation}, \eqref{eq:frame}, and \eqref{eq:taylor}, and
+then imposing all six contact equations, proves Theorem~\ref{thm:main}.
+No truncated Taylor term or contact remainder survives this assembly.
+
+The evaluated grouping gives 735 mixed pairs. The two pure pairs for each
+of 25 frames add 50 more pairs. Therefore
+\begin{equation}
+ 735+50=785\text{ blocks},\qquad 2\cdot785=1570
+ \text{ listed features}.
+ \label{eq:counts}
+\end{equation}
+Repeated features are retained with their block labels; no unsupported claim
+of feature linear independence is made.
+
+The same construction works over independently labelled real closed field
+extensions $K_c,K_t\supset\R$. Put $(c,\theta)$ in the declared source domain
+over $K_c$, and $t$ in the testing box over $K_t$. Every separated term is the
+square in $K_c\otimes_\R K_t$ of
+\begin{equation}
+ (\sqrt{U(s)}\otimes\sqrt{V(t)})
+ \bigl(1\otimes\ell_k(t)-\ell_k(h)\otimes1\bigr).
+ \label{eq:tensorsquare}
+\end{equation}
+Square roots are taken separately in their own real closed fields. This is a
+local tensor sum-of-squares statement on the displayed domains. It does not
+extend these domains or provide the missing global finite cover.
+
+\section{Complete product compiler and seven source columns}
+\label{sec:compiler}
+
+For every block in \eqref{eq:gram}, its three symmetric feature products are
+exactly
+\begin{equation}
+ \psi_0^2=V,\qquad \psi_0\psi_1=V\ell_k,\qquad
+ \psi_1^2=V\ell_k^2.
+ \label{eq:products}
+\end{equation}
+Their supports have 237 distinct monomials. Fix the lexicographic ordering
+of their five-component exponent vectors and write these monomials as
+$m_0(t),\ldots,m_{236}(t)$. The maximum degree is six. Define the complete
+coefficient array $p_{b,ij,k}$ by
+\begin{equation}
+ \psi_{b,i}(t)\psi_{b,j}(t)=\sum_{k=0}^{236}p_{b,ij,k}m_k(t),
+ \qquad 0\leq i\leq j\leq1.
+ \label{eq:productmap}
+\end{equation}
+Every nonzero coefficient is supplied; there are 27,747 records. The number
+237 is an ambient monomial count, not a separately asserted rank of the
+product span.
+
+For the target retain all seven source variables in \eqref{eq:parent}; set
+only $Z=1$ and $z=\theta_*+t$. Because the parent is linear in these seven
+variables, there is a complete rational array $T_{k\nu}$ such that
+\begin{equation}
+ \widetilde P_{(d,n,m,C,A,D,\alpha)}(\theta_*+t,1)
+ =\sum_{k=0}^{236}\sum_{\nu=0}^6 T_{k\nu}\lambda_\nu m_k(t),
+ \quad\lambda=(d,n,m,C,A,D,\alpha).
+ \label{eq:target}
+\end{equation}
+All seven columns lie in the listed ambient monomial space. Their 295
+nonzero coefficients are delivered, including the full $d$ column.
+
+The resulting conic coefficient matching system is
+\begin{equation}
+ \sum_{b=0}^{784}\sum_{0\leq i\leq j\leq1}
+       (2-\delta_{ij})p_{b,ij,k}Q_{b,ij}
+  =\sum_{\nu=0}^6T_{k\nu}\lambda_\nu,\quad 0\leq k\leq236,
+ \qquad Q_b\succeq0.
+ \label{eq:matching}
+\end{equation}
+There are 2,355 scalar upper-triangular Gram variables and 237 coefficient
+equations. The factor two on the off-diagonal entries is part of the trace
+pairing and must be retained. For a coefficient functional $\eta$ on the
+ambient monomials, the corresponding dual block has entries
+\begin{equation}
+ M_b(\eta)_{ij}=\sum_{k=0}^{236}p_{b,ij,k}\eta_k.
+ \label{eq:dualblock}
+\end{equation}
+Equations \eqref{eq:matching} and \eqref{eq:dualblock} are evaluated local
+coefficient data. They are not an evaluated projection onto the eight original
+quantum coordinates. Nor is it asserted that every polynomial nonnegative
+on the box belongs to this particular finite certificate cone.
+
+\section{Files, exact replay, and verification limits}
+
+The reconstruction has no external Python dependency. Use Python 3.10 or
+later and run the following commands in this file's directory:
+\begin{verbatim}
+python regular_c2_build.py
+python regular_c2_check.py
+\end{verbatim}
+The builder uses exact rational sparse polynomial arithmetic and writes
+deterministically ordered JSON. The checker uses a separately written
+dictionary implementation and does not import the builder. The three
+coefficient files are:
+\begin{itemize}
+ \item \path{regular_c2_frames.json}: all six contact equations, the source
+ Jacobian, both Taylor-matrix polynomial representations, the exact LDL data,
+ all 25 frame coefficient polynomials, every shifted positive factor and
+ remainder, and the complete block indexing.
+ \item \path{regular_c2_feature_list.json}: all 1,570 feature entries with
+ rational polynomial radicands and multipliers, plus all 785 source Gram
+ factorizations $Uvv^T$.
+ \item \path{regular_c2_product_map.json}: all 27,747 symmetric product
+ records, all 295 target records, all seven full source-column polynomials,
+ and the shared monomial indexing.
+\end{itemize}
+The fresh builder receipt is
+\path{regular_c2_build_verification.json}; the independently implemented replay
+receipt is \path{regular_c2_independent_verification.json}. Each records the
+actual SHA-256 hashes of the data read or generated. No status from a lost
+archive is used as evidence of a successful replay.
+
+The independent checker reconstructs the complete parent directly, derives
+the contact equations and their nonzero minor, checks regularity over the
+contact box, checks the half-Hessian and the LDL orientation, reconstructs
+the prescribed polynomial Taylor allocation, and verifies all 25 frame and
+separation identities. It checks the 50 strictly positive remainder bounds
+and each mixed-factor bound. Its final parent-minus-contact Taylor remainder
+has exactly 1,193 nonzero monomials and agrees with the assembled frame
+certificate as a complete coefficient dictionary. It then reconstructs every
+feature, source Gram factor, product coefficient, and seven-source target
+coefficient. Encoding checks are reported separately from mathematical identity
+groups; a large assertion count is not a count of independently proved
+theorems.
+
+This is a reproducible exact algebra check together with the analytic sign
+and assembly proof above. The independent implementation was produced within
+the same model-assisted reconstruction process. It is not external peer
+review and is not proof-assistant formal verification.
+
+\section{Boundary of the result}
+
+This record completes the stated regular-C2 local coefficient extraction. It
+retains the exact contact equations and all state and angular terms of the
+complete normalized parent. Its testing radicals are certified on the stated
+box. To obtain a global lift extraction one must still assemble an appropriate
+finite global source and testing cover, handle every boundary and projective
+chart with compatible data, and evaluate the final pencil and projection in
+the original eight coordinates. Those steps are not consequences of the
+local coefficient counts. No new completion of the global E1--E3 checklist
+is claimed here.
+
+\end{document}

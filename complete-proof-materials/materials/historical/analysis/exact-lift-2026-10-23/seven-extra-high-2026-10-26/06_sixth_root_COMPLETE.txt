@@ -1,0 +1,114 @@
+ChatGPT said:
+
+Q222 6/7: Uniform sixth-root admission
+Verdict: Uniform sixth-root admission for all native C1/C2 sources remains unproved. I have not established a negative compressed dual margin for a genuine native source, so the sixth-root conjecture is neither proved nor disproved.
+There is, however, a precise analytical obstruction to a tempting continuation argument:
+Global nonnegativity, a unique nondegenerate physical contact, and constant rank $406$ of the compressed coefficient map do not together imply sixth-root admission or a strictly positive Gram margin.
+Below I give an exact counterexample inside the same fixed C1/C2 coefficient spaces, with a rational compressed dual separator. It is deliberately not a native nine-coefficient source, so it identifies the missing mathematical mechanism without falsely refuting the proposed lift.
+The positive result retained from the repository is also substantial. SG17–SG19 already establish that native finite contacts have a strictly positive physical contact Hessian. Thus ordinary contact uniqueness and second-order physical stability are available. What remains is positivity against every compressed pseudomoment functional, not merely physical evaluations and their tangent limits.
+1. Exact obstruction inside the compressed maps
+Set $r=u^{1/6}$, $s=v^{1/6}$, and normalize the contact to $r=s=1$, $\psi=(1,1,1,1)$. Consider
+$M(r,s)=1+r^4s^2+r^2s^4-3r^2s^2$
+and
+$\boxed{
+F_\star
+=Y^2M(r,s)
++s^{12}(W-X)^2
++(X-Y)^2+(Y-Z)^2 .
+}$
+Every monomial product belongs to the retained support basis for both C1 and C2. In particular, $s^6W,s^6X,X,Y,Z,r^2sY,rs^2Y,rsY$ are permitted features. The first-contact equations also vanish, so its coefficient vector $b_\star$ belongs to each fixed $406$-dimensional space $V_\sigma$.
+Physical positivity and uniqueness. AM–GM gives $M\geq0$, with equality for positive $r,s$ only at $r=s=1$. The remaining squares then force $W=X=Y=Z$. Thus $F_\star$ has exactly one positive-angle projective contact.
+In the chart $Y=1$, its angular Hessian is
+$\nabla^2 M(1,1)=
+\begin{pmatrix}
+8&4\\4&8
+\end{pmatrix}\succ0.$
+The three state-square gradients are independent, and mixed state-angle Hessian terms vanish at contact. Therefore the complete five-variable contact Hessian is positive definite.
+Yet $F_\star\notin L_6$. At the constant state $\psi=(1,1,1,1)$, it reduces to $M(r,s)$. If $F_\star$ had a sixth-root Gram, $M$ would be an SOS polynomial in $r,s$.
+But the half Newton polygon of $M$ permits only $1,rs,r^2s,rs^2$ in its hypothetical square roots. Their squared sum must have a nonnegative coefficient of $r^2s^2$, contradicting the coefficient $-3$. Hence no PSD Gram exists.
+This already establishes an exact obstruction to the general continuation inference.
+2. An actual compressed dual separator
+It is possible to exhibit the separator rather than relying on abstract separation.
+Define a rational moment functional $\ell(r^as^b)=m_{ab}$. Initially set all moments of total degree at most six to zero except
+$\begin{gathered}
+m_{00}=1,\quad m_{20}=m_{02}=5,\\
+m_{40}=m_{04}=49,\quad m_{60}=m_{06}=2300,\\
+m_{22}=2,\quad m_{42}=m_{24}=1.
+\end{gathered}$
+Then
+$\ell(M)=1+1+1-3(2)=-3.$
+The order-three moment matrix is positive definite. Its parity blocks consist of
+$\begin{pmatrix}1&5&5\\5&49&2\\5&2&49\end{pmatrix},
+\qquad
+\begin{pmatrix}5&49&2\\49&2300&1\\2&1&1\end{pmatrix}$
+with the second occurring twice, plus the scalar block $2$. Their Schur complements establish strict positivity exactly.
+Extend the moments through degree $24$ recursively. At each order $d=3,\ldots,11$, set the new odd-total-degree moments to zero. Let $B_d$ be the resulting cross block and $K_d$ the positive definite homogeneous Gaussian moment matrix at degree $d+1$. Set
+$L_d=1+\operatorname{tr}(K_d^{-1})
+\operatorname{tr}(B_d^\top H_d^{-1}B_d)$
+and assign the degree-$2d+2$ moments to $L_d$ times the corresponding Gaussian moments.
+The Schur complement proves $H_{d+1}\succ0$. Thus $\ell(p^2)\geq0$ for every polynomial $p$ supported on the entire $7\times7$ sixth-root grid.
+For each compressed parity block, let $e_0$ be its contact pivot and write $e=(i_e,j_e,l_e)$. Define
+$y(F)=\ell(F(r,s,1,1,1,1)).$
+The compressed adjoint is explicitly
+$\begin{aligned}
+(A_\sigma^*y)_{ef}
+={}&m_{i_e+i_f,j_e+j_f}
+-m_{i_e+i_0,j_e+j_0}\\
+&-m_{i_0+i_f,j_0+j_f}
++m_{2i_0,2j_0}.
+\end{aligned}$
+Every block is PSD, being a moment Gram of differences of grid monomials. Its combined trace $T$ is strictly positive.
+Consequently,
+$\boxed{
+y/T\in D_\sigma,\qquad
+\langle y/T,b_\star\rangle=-3/T<0
+}$
+for both C1 and C2 compressed maps.
+This is a genuine nonphysical pseudomoment: it is positive on every compressed square, yet negative on the pointwise nonnegative $F_\star$. It therefore cannot be replaced by a combination of physical evaluations.
+3. Exact failure of an unrestricted continuation argument
+Take either exact positive-definite seed from the repository and normalize its contact, obtaining $b_0$. Interpolate
+$b_t=(1-t)b_0+tb_\star,\qquad 0\leq t\leq1.$
+Every polynomial on this path is globally nonnegative and has the same unique nondegenerate positive-angle contact. The coefficient map remains the same surjective rank-$406$ map.
+At $t=0$, a positive-definite reduced Gram exists. At $t=1$, the explicit dual separator proves nonadmission.
+Because the Gram image is closed and convex, there is a first exit $t_\star\in(0,1)$, where
+$\mu_\sigma(b_{t_\star})=0,$
+and no positive-definite reduced Gram exists, despite the strictly positive physical contact Hessian.
+Qualification: this path leaves the native Bell-source subspace. It disproves unrestricted continuation from contact geometry, not continuation restricted to the special native coefficient identities.
+4. Strongest positive lemma for the native problem
+Let $G_0\succeq\gamma I$ be any exact reduced seed Gram, with rational $\gamma>0$, and choose a fixed rational right inverse $R_\sigma$ of $A_\sigma$.
+Then every normalized native contact satisfies the rigorous lower bound
+$\boxed{
+\mu_\sigma(c)\geq
+\gamma-
+\left\|R_\sigma\bigl(b_\sigma(c)-b_0\bigr)\right\|_{\mathrm{op}} .
+}$
+Indeed,
+$G(c)=G_0+R_\sigma(b_\sigma(c)-b_0)$
+matches the complete polynomial coefficient identity exactly, and its smallest eigenvalue is bounded by the displayed expression.
+This converts each of the four exact boundary seeds into a quantitatively certified open admission neighborhood, without an SDP solve.
+5. First exact unproved implication
+The remaining statement is specifically
+$\boxed{
+\forall c\in\mathcal C_\sigma^{\mathrm{native}},
+\quad
+\forall y\in D_\sigma,\qquad
+\langle y,b_\sigma(c)\rangle\geq0 .
+}$
+The geometry establishes the necessary physical positivity and nondegenerate contacts. The constructed separator shows why those properties alone do not establish this universal inequality.
+A proof must exploit additional identities of the native C1/C2 parent, or produce a different globally sound finite block for any source that fails sixth-root admission. Singular zero-margin sources may still be admitted; once admission holds throughout the open native families, their limits follow from closedness.
+The complete derivation, including the rational moment extension and compressed adjoint formula, is saved here:
+Download the exact obstruction note
+
+Coordinator takeaway: The genuine native uniformity question remains open. The new exact result isolates why strict physical contact geometry, even supplemented by rank $406$, is insufficient, and supplies an explicit nonphysical compressed separator demonstrating the missing mathematical distinction.
+
+
+
+
+
+
+   Q222_6of7_uniform_sixth_root_dual_obstruction.mdDocumentOpen file
+
+
+
+
+

@@ -1,0 +1,258 @@
+% Include after the positive-angular main-Gram construction.
+% Requires amsmath, amssymb, amsthm and mathrsfs; theorem is already defined.
+\section{Fixed testing functions for the complete positive-angular parent}
+Retain the preceding source/testing rectangle and $\lambda>0$.
+Compose the testing functions with the angle gauge already defined, then
+multiply all four state coordinates by $\operatorname{sgn}_+(W)$,
+where $\operatorname{sgn}_+(0)=1$. Thus $W\ge0$.
+Put $Z_+=\max(Z,0)$ and $Z_-=\max(-Z,0)$. The common state sign
+preserves the quadratic parent. Every testing function below is pulled
+back through this one fixed map.
+
+\subsection{The exact whole-parent decomposition}
+
+All symbols $g,G,N_x,N_y,R,\Gamma,A_\theta,T_\theta,J_C,J_\ell$
+have their explicit definitions in \texttt{fixed\_box\_c1.tex}.
+Set $F_A=u(Z-a_0wW)$, $X_e=X+ewW$, and
+\[
+ a_C=cd_G/S,\quad q_C^{(0)}=\tfrac12-a_C(2/\lambda+k),\quad
+ p_C=q_C^{(0)}-a_C\delta.
+\]
+The proved bounds give $0\le a_C\le6$ and $p_C>1/4$.
+The circuit remainder satisfies
+\[
+ \mathscr C=\sum_{i=1}^4d_i^2+\mathscr C_+,
+\]
+and the angular difference is
+\[
+ \Delta_A=(2/\lambda+u+k)\mathscr C+u^2R^2
+       +\{2a_0u+(u+k)/L_0\}\Gamma^2-A_\theta^2.
+\]
+The complete parent is exactly
+\begin{align*}
+ F_w={}&g^{\mathsf T}Gg+\mathcal E_+
+ +(2+4m)w^2N_x^2
+ +\{4a+2z(2C+1)-1\}J_C^2+(4\ell-1)J_\ell^2\\
+ &+\tfrac12L_0F_A^2
+ +{K_A+c-1\over2}(A_\theta^2+T_\theta^2)
+ +{K_A+c\over2}(A_\theta^2-T_\theta^2)\\
+ &+{cd_G\over S}\Delta_A
+ +\{p_C+a_C(\delta-u)\}\mathscr C_+,
+\end{align*}
+where
+\[
+\begin{split}
+ \mathcal E_+={}&4\beta(1+w^2)N_x^2+2(2D+1)(uX_e)^2
+                 +4bpzu^2\Gamma^2\\
+ &+4a(u^2+w^2+u^2w^2)J_C^2+4\ell u^2J_\ell^2
+                                             +4Czw^2J_C^2.
+\end{split}
+\]
+After the expansions below, every square coefficient outside $G$
+is nonnegative and source-only, except the explicitly separated
+testing factor $\delta-u$, which is nonnegative on the fixed
+testing rectangle. This equality
+is the full-state identity, not its restriction to a stationary
+state or a determinant. No inverse of $D$ or $\beta$ occurs.
+
+\subsection{Ordinary retained squares: seven additional functions}
+
+Let $\mathcal V$ be the twelve pre-Gram functions
+\[
+ \{X,Y,Z,W,uZ,wZ,uW,uwW,u^2W,
+                     u^{3/2}W,u^{1/2}W,\sqrt{uwWZ_+}\}.
+\]
+All ordinary retained roots are source-linear combinations of
+$\mathcal V$ and the seven functions
+\[
+                   wX,\ uwZ,\ uX,\ u^2wW,\ uY,\ wY,\ uwY.
+\]
+Here are all seventeen roots; every displayed square root of a
+coefficient is source-only:
+\[
+\begin{array}{c|l}
+\text{family}&\text{square roots}\\\hline
+\mathcal E_+&2\sqrt\beta N_x,\quad2\sqrt\beta\,wN_x,\quad
+ \sqrt{2(2D+1)}\,uX_e,\quad2\sqrt{bpz}\,u\Gamma\\
+ &2\sqrt a\,uJ_C,\quad2\sqrt a\,wJ_C,\quad2\sqrt a\,uwJ_C,\quad
+ 2\sqrt\ell\,uJ_\ell,\quad2\sqrt{Cz}\,wJ_C\\
+N_x\text{ excess}&\sqrt{2+4m}\,wN_x\\
+\text{radial excess}&\sqrt{4a+2z(2C+1)-1}\,J_C,\quad
+                              \sqrt{4\ell-1}\,J_\ell\\
+\text{averaged square}&\sqrt{L_0/2}\,F_A\\
+\text{angular excess}&\sqrt{(K_A+c-1)/2}\,A_\theta,\quad
+                       \sqrt{(K_A+c-1)/2}\,T_\theta\\
+\text{angular difference}&\sqrt{(K_A+c)/2}\,qu(u-k)W,\\
+ &\sqrt{(K_A+c)/2}\,q\sqrt{2k}\sqrt u(u-k)W.
+\end{array}
+\]
+For example $J_C=Y/q-bquW$ and
+$J_\ell=Y/q-wZ/q+QquW$, so multiplying by $u,w,uw$ adds
+exactly the stated functions. All other rows follow by substitution.
+The last two squares use
+$A_\theta^2-T_\theta^2=z(u-k)^2W^2(u^2+2uk)$.
+
+\subsection{The angular difference: nineteen functions}
+
+The following calculation clears the intermediate state ratio
+completely. Define positive source constants
+\[
+ A_u=1/k,\quad A_v=1/(\sqrt\sigma q),\quad
+ A_z=\sqrt\sigma/(kq),\quad M_0=k^2q,\quad a_*=\lambda k,
+\]
+and write $r_* =\sqrt{wW|Z|}$. Eight cleared roots are
+\[
+\begin{split}
+ f_1={}&M_0(A_uA_vA_zuw|Z|-W),\\
+ f_2={}&\sqrt2 M_0(A_vA_zw|Z|-A_uuW),\\
+ f_3={}&M_0\{(\sqrt{a_*}+1/\sqrt{a_*})A_uA_vuwW
+                   -\sqrt{a_*}A_uA_zu|Z|-A_z|Z|/\sqrt{a_*}\},\\
+ f_4={}&\sqrt{A_u}\sqrt u\,f_3,\\
+ f_5={}&\sqrt{a_*}M_0(W-A_vA_zw|Z|),\qquad
+ f_6=\sqrt{A_u}\sqrt u\,f_5,\\
+ f_7={}&\sqrt{2a_*A_vA_z}M_0(A_uu-1)r_*,\qquad
+ f_8=\sqrt{A_u}\sqrt u\,f_7.
+\end{split}
+\]
+For $Z\ge0$, $\Delta_A=\sum_{i=1}^8f_i^2$. To verify this,
+put $U=A_uu$, $V=A_vw$, $Z_*=A_z|Z|/W$, $M=M_0W$;
+the roots are $M$ times the eight roots obtained by expanding
+every $U+1$ factor in the identity
+\begin{align*}
+ &[2+a_*(U+1)]\Psi+U^2Q_*^2
+       +[2U+(U+1)/a_*]R_*^2-T_*^2\\
+ &=(T_*+UQ_*)^2+2Q_*^2
+ +(U+1)(\sqrt{a_*}U(V-Z_*)-R_*/\sqrt{a_*})^2\\
+ &\quad+a_*(U+1)(1-VZ_*)^2
+                         +2a_*(U+1)VZ_*(U-1)^2,
+\end{align*}
+where $\Psi=1+U^2V^2+U^2Z_*^2+V^2Z_*^2-4UVZ_*$,
+$Q_*=VZ_*-U$, $R_*=Z_*-UV$, and $T_*=U^2-1$.
+It is a polynomial identity by multiplication.
+
+For $Z<0$, add three squares. Put
+\[
+ C_2=4,\quad C_1=8a_*+8+4/a_*,\quad C_0=16+8a_*+4/a_*.
+\]
+Their roots are
+\[
+ M_0\sqrt{A_uA_vA_z}\,\boldsymbol1_{Z<0}
+ \bigl(\sqrt{C_2}A_u u^{3/2}r_*,\quad
+       \sqrt{C_1A_u}\,u r_*,\quad
+       \sqrt{C_0}\sqrt u\,r_*\bigr).
+\]
+Indeed changing $Z_*$ to $-Z_*$ increases the left side by
+$M^2UV|Z_*|(C_2U^2+C_1U+C_0)$. This also proves the exact
+negative-state-sector coefficients. Every displayed source
+factor is a real closed field square root in the source factor.
+
+The resulting nineteen testing functions, including overlaps
+with $\mathcal V$, are
+\[
+\begin{split}
+ \mathcal A=\{&W,uw|Z|,w|Z|,uW,uwW,u|Z|,|Z|,
+ u^{3/2}wW,u^{3/2}|Z|,\sqrt u|Z|,\sqrt uW,\sqrt u w|Z|,\\
+ &ur_*,r_*,u^{3/2}r_*,\sqrt u r_*,
+ \boldsymbol1_{Z<0}u^{3/2}r_*,
+ \boldsymbol1_{Z<0}ur_*,\boldsymbol1_{Z<0}\sqrt u r_*\}.
+\end{split}
+\]
+Multiply the eleven root formulas above by the pure-source factor
+$\sqrt{cd_G/S}$ for their contribution to $F_w$.
+Every cleared formula is defined at $W=0$ and $Z=0$. After
+substituting squares for $u,w,W,|Z|$, the identities are polynomial;
+therefore they include those literal boundaries, without a limit
+or a state-coordinate inverse in the final formulas.
+
+\subsection{The circuit remainder: fourteen functions}
+
+Set the positive source constants
+\[
+ s_1=\sqrt{\lambda\sigma},\quad s_2=\sqrt\rho,\quad
+ s_3=\sqrt\lambda\,xq,\quad s_4=\sqrt{\lambda x}/q,
+ \qquad g_0=\sqrt{\lambda x}.
+\]
+Define seven testing functions
+\[
+\begin{array}{ll}
+ t_1=u^{3/4}w^{1/4}W^{1/4}Z_+^{3/4},&
+ t_2=u^{3/4}w^{3/4}W^{3/4}Z_+^{1/4},\\
+ t_3=u^{1/4}w^{1/4}W^{3/4}Z_+^{1/4},&
+ t_4=u^{1/4}w^{3/4}W^{1/4}Z_+^{3/4},\\
+ t_5=u^{3/4}w^{1/2}W^{1/2}Z_+^{1/2},&
+ t_6=u^{1/4}w^{1/2}W^{1/2}Z_+^{1/2},\\
+ t_7=\sqrt{uwWZ_-}.&
+\end{array}
+\]
+An explicit full-sector SOS is
+\[
+ \mathscr C_+=r_1^2+r_2^2+r_3^2+r_4^2,
+\]
+\[
+\begin{gathered}
+ r_1=\sqrt{2g_0}(\sqrt{s_1}t_1-\sqrt{s_2}t_2),\quad
+ r_2=\sqrt{2g_0}(\sqrt{s_3}t_3-\sqrt{s_4}t_4),\\
+ r_3=2\sqrt{g_0}\{(s_1s_2)^{1/4}t_5-(s_3s_4)^{1/4}t_6\},
+ \qquad r_4=2\sqrt{\lambda x}\,t_7.
+\end{gathered}
+\]
+The first three roots vanish for $Z\le0$ and the last vanishes
+for $Z\ge0$. They also vanish wherever $WZ=0$. On $Z>0$ they
+are precisely the separated two-pairing four-monomial identity;
+on $Z<0$ the remainder is $4\lambda xuwWZ_-$.
+
+There is no point-dependent scalar reserve at this step:
+\[
+ (p_C+a_C(\delta-u))\mathscr C_+
+      =\sum_{j=1}^4(\sqrt{p_C}r_j)^2
+        +\sum_{j=1}^4(\sqrt{a_C}\sqrt{\delta-u}\,r_j)^2.
+\]
+Thus the fixed circuit feature list is exactly the seven $t_i$
+and their seven products with $\sqrt{\delta-u}$.
+
+\subsection{The evaluated union and machine-readable data}
+
+For the main Gram take the seven nonconstant monomials
+\[
+ \mathcal B=\{w,w^2,\sqrt u,u,uw,u^2,u^2w\},\qquad
+ \gamma_7={1\over7\,2^{38}}.
+\]
+The main list is $\mathcal V$ times the fifteen fixed factors
+$1,\sqrt{\gamma_7+b},\sqrt{\gamma_7-b}$ for $b\in\mathcal B$,
+giving $180$ functions. Its $144$ fixed directions are $e_i$,
+$e_i+e_j$, and $e_i-e_j$, with the exact scalar-channel formulas
+of \texttt{fixed\_box\_c1.tex}, using $7A_*\gamma_7=c_0$.
+
+\begin{theorem}
+On the stated independent rectangle, the full real-state parent
+$F_w$ is a sum of squares of source-linear combinations of one
+fixed list of $220$ labelled testing functions: the $180$ main
+functions, the seven ordinary functions, the nineteen angular
+functions, and the fourteen circuit functions. Repeated functions
+are harmless; the real dimension of their span is at most $220$.
+There is an explicit construction using at most $2196$ square
+roots: $144\cdot15$ main roots, seventeen ordinary roots, eleven
+angular roots, and eight circuit roots. The same list, composed
+with the fixed gauges above, includes all real state-sign sectors,
+both testing axes, and the source faces $D=0$ and $\beta=0$.
+\end{theorem}
+
+This theorem follows from the displayed exact decomposition and
+the separated coefficient formulas. It needs no Gram factorization
+with mixed radicals. Without using the physical reality reduction,
+apply the theorem separately to the real and imaginary state
+amplitudes; their union has at most $440$ functions and $4392$
+roots. The parent is real quadratic in the state, so those two
+contributions sum to its complex-state value.
+
+The adjacent \texttt{c1\_retained\_union\_checks.py} writes all
+$220$ labelled features, all $144$ main directions, the main
+coefficient matrix and root formulas to
+\texttt{c1\_positive\_lambda\_local220.json}. It verifies the two
+normal identities, the angular identity and signed correction,
+the circuit identity, the scalar circuit split, the whole-parent
+assembly, the main matrix support, the fixed-direction identity,
+and the feature/root counts by exact symbolic arithmetic.
+This is an evaluated local testing dictionary, not a global
+full-set affine pencil: the other branches and global cover
+selection remain outside its scope.

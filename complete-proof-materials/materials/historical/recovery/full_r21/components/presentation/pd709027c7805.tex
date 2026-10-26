@@ -1,0 +1,116 @@
+\chapter{R9 source data and the finite coefficient calculation}
+\label{component:pd709027c7805}
+\noindent\textbf{Component }\path{pd709027c7805}\par
+{\small\noindent Source: \path{R17/definitions/weak_c2_source_formulas.tex}\par}
+{\small\noindent SHA256: \path{d709027c7805a97b112dd559ec1ac3a749c903cad55d59d6be0fab43ebd5227d}\par}
+{\small\noindent Inventory use: complete original source coefficients; scalar and all first-normal arrays | complete original formulas and all first-normal arrays\par}
+\medskip
+\section{R9 source data and the finite coefficient calculation}
+This appendix fixes all coefficient arrays used in the local theorem.
+It can be read with the original physical-source entry in the supplied
+R13 frontier audit. Every displayed formula is source-only.
+Put $r=1-e$, $z=aB$, $y=tB$, and
+\[
+ c_a=1+aBr,\quad S_c=1+B(1-h+ar),\quad
+ g=1+a(hB+r-1),\quad j=c_a-(1-h)/t,
+\]
+\begin{align*}
+\Delta={}&a+(1+aB)+(1+aB)B+2aB(1+aB)r+a^3B^2r^2+2a^2Br\\
+ &+tB\{1+a+aB+a^2Br(2-r)\},\\
+M={}&(1+aB)(1+ar)(h+t)-a(1+tB)e(1-h).
+\end{align*}
+The physical stationary event coefficients are
+\[
+\begin{aligned}
+n&=\frac{(1+ar)c_aS_c-r\Delta}{2r\Delta},&
+m&=\frac{a^2(1+tB)e c_aS_c}{2g\Delta},\\
+C&=\frac{c_aM}{2(1-h)\Delta},&
+Ah&=\frac{t c_a(1+ar)S_c}{2\Delta},\\
+D&=\frac{(1+aB)(1+ar)(1-atBr)S_c}{2tj\Delta},&
+\alpha&=\frac{B^2(1+ar)M}{2(1-hB)\Delta}.
+\end{aligned}
+\]
+On R9, $B,a,h,e$ are positive infinitesimals and $t,g,j$ are
+positive units. In particular $t_0>1$. The exact physical constraint
+$n\ge0$ is retained, including equality. The unit common denominator
+\[
+\mathcal D=2rg(1-h)(1-hB)(t-1+h+aBtr)\Delta
+\]
+has residue $2(t_0-1)>0$.
+
+\paragraph{Scalar arrays.}
+The notation $Ah$ in these formulas means the product of $A$ and $h$.
+\[
+\begin{aligned}
+q_s&=nr^2+(m+\tfrac12)e^2,\qquad q=q_s+\alpha,\\
+a_w&=(C+D+\tfrac12)(1-h)^2+Ah\,h,\\
+b_2&=2mh+C(1-h)^2+Ah\,h+(\alpha+\tfrac12)h^2,\\
+b_4&=h^2(m+\alpha+\tfrac12)+Ah\,h,\\
+d_2&=(n+\tfrac12)r^2+2Dr,\qquad
+d_4=(n+D+\tfrac12)r^2,\\
+e_0&=me+D(1-h)+\alpha h+\tfrac12,\\
+e_1&=mhe+r(D+\tfrac12)(1-h)+(\alpha+\tfrac12)h,\\
+c_F&=(b_2-a^2nr^2)/t^2,\qquad
+\lambda=(m-a^2q)/(ta^2B),\\
+f_{A0}&=Ah\,h/t^2+d_2-2e_1/t+2anr^2/t,\\
+f_{C0}&=(\alpha-c_Ft^2B^2)/(taB^2),\\
+f_G'&=-\{a_w/t^2+D-2e_0/t+2aq/t+2c_FtB\}/(aB).
+\end{aligned}
+\]
+The potentially singular $a,B$ factors cancel in the combinations
+used in RC1. One direct proof is to clear $\mathcal D$ and the printed
+monomials and expand; all three resulting numerator polynomials are
+zero. Equivalently, the original value and two first derivatives at
+contact give precisely RC1. Thus RC1 is an exact identity, including
+arbitrarily small $a$ and literal $n=0$.
+
+The needed size statements also follow by finite monic division.
+The R14 regularity calculation gives
+$f_B^{\rm old}=(m-a^2q_s)/(ta^2B)\sim1/2$ jointly at
+$B=a=h=0,r=1$. Since
+\[
+\lambda=f_B^{\rm old}-\frac{\alpha}{tB},\qquad
+\frac{\alpha}{tB}=\frac Bt\frac{\alpha}{B^2},\qquad
+\frac{\alpha}{B^2}\sim t_0/2,
+\]
+we obtain $\lambda\sim1/2>0$ without any division by $n$ or $e$.
+Likewise $c_F\sim1/(2t_0)$, $d_4\sim t_0/[2(t_0-1)]$,
+$b_4\sim0$. Direct substitution gives
+$C\sim Ah\sim t_0/2$, $D\sim1/[2(t_0-1)]$ and
+$m,n,\alpha\sim0$. These are positive-unit denominators and
+polynomial cancellations, rather than asymptotic replacements in
+the proof identity.
+
+\paragraph{All first-normal arrays.}
+For the angular weight $q=q_s+\alpha$ define
+\[
+\begin{aligned}
+K_X'&=-nr+(m+\tfrac12)e-aq,\\
+K_E'&=a_w/t^2-e_0/t+aq/t,\\
+K_Y&=\{-(C+D+\tfrac12)(1-h)+Ah\}/t+D-\alpha,\\
+x_3&=2\{(D+\tfrac12)[(1-h)/t-1]+e/2-nr(1+a/t)-mh/t\},\\
+x_5&=-2r(n+D+\tfrac12),\\
+a_E&=2Ah\,h/t^2-2e_1/t,\qquad b_E=2b_2/t^2,\qquad c_E=2b_4/t^2,\\
+a_Y&=2\{Ah/t-me+r(D+\tfrac12)-\alpha-\tfrac12\},\\
+b_Y&=2\{-C(1-h)+Ah+m+(\alpha+\tfrac12)h\}/t,\\
+c_Y&=2\{Ah+h(m+\alpha+\tfrac12)\}/t.
+\end{aligned}
+\]
+Every array is bounded on R9; the only nonzero cross-term residue
+used in the final Gram is $a_E\to-1/(t_0-1)$.
+Direct differentiation of the original parent after the printed
+state substitution gives RC7--RC9. Their source contact balances
+RC6 follow by the same common-denominator calculation as RC1.
+These full-parent identities are also checked by reconstructing the
+parent independently in the short audit script.
+
+\paragraph{Inherited input needed for the all-tests join.}
+The R13 frontier audit explicitly extends the remote certificate to
+R9 with $a$ infinitesimal. Its exact homogeneous endpoint identities
+cover the complement of both angles infinitesimal. The new local
+roots have no testing inverse and include the zero axes directly;
+the original two sign gauges are retained.
+No R14 testing-ratio split is needed by the new local certificate.
+The provenance map names the unchanged remote, frontier, source and
+bounded-Gram modules used here. The complete global routing proof
+still depends on the unresolved source branches in the checklist.

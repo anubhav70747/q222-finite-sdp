@@ -18,7 +18,12 @@ have been checked. The [EL/NU endpoint proof](C1_EL_NU_ENDPOINTS.md) now
 supplies the complete scalar, both state normals, bounded coefficient
 construction, and complementary testing charts for those two physical C1
 source domains. Its eight symbolic modules have been replayed locally.
-The remaining C1/C2 source domains and their assembly still require verification.
+The completed 22 October C1/C2 reviews and original proof bodies have now been
+[recovered and published](../complete-proof-materials/). They already cover the
+remaining source domains and global assembly. The later reports below are
+scoped rechecks, not evidence that those earlier proofs were absent. Specific
+version and interface questions remain for the
+[consolidated verification pass](../complete-proof-materials/VERIFICATION_PLAN.md).
 
 For the current construction route, read
 [`EXACT_LIFT_ROUTE.md`](EXACT_LIFT_ROUTE.md): a fixed NPA baseline, the

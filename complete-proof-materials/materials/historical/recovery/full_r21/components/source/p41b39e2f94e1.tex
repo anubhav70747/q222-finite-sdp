@@ -1,0 +1,545 @@
+
+
+\section{Uniform C1: the bounded-reciprocal repair and its scope}
+
+The preserved uniform-source theorem explicitly assumes $e$ infinitesimal.
+The preserved contact--conductor theorem explicitly assumes $e$ unbounded.
+This note proves the missing unit-$e$ case by extending the latter proof
+to bounded $\Delta=e^{-1}$ and bounded testing $w$. The extension uses
+the same exact complete parent, the same retained packets, and the same
+unlocalized conductor. The new work is a weight estimate that remains
+strict when both $\delta$ and $w$ have weight zero, followed by an
+exhaustive testing-chart join. An old all-$e$ status assertion is not a
+premise.
+
+\begin{theorem}[Uniform C1, bounded reciprocal $e$]
+\label{thm:bounded-delta}
+Let the coefficient and testing fields be independent real closed
+extensions of $\mathbb R$. Use the original canonical uniform C1 source
+defined below, with $k,f,g>0$ infinitesimal, $e=kf/g>0$, and
+$\Delta=1/e$ bounded. The shapes $a,t>0$ are bounded and satisfy the
+original strict gaps $M=R-t>0$, $J=T-a>0$. Retain every original
+coefficient sign, including $D_{\rm e},\beta\geq0$, and every literal
+coefficient zero. Then the complete parent is tensor-SOS at every
+independent projective measurement pair and every real or complex
+testing state.
+\end{theorem}
+
+Together with the preserved infinitesimal-$e$ theorem, this proves the
+whole positive-$e$ uniform source. It does not prove an unlisted source
+chart or close any remaining C14 or weak-C2 row. We use the already
+admitted separated bounded strict-Gram lemma: a finite bounded separated
+Gram with strictly positive real residue gives tensor-SOS. No inversion
+of a mixed element and no comparison between an independent coefficient
+and testing rate enters the proof.
+
+\section{Original source and complete parent}
+
+Put $\kappa=k^2$, $\eta=f^2$, $\zeta=g^2$, $K=1+k^2$, and
+\[
+ V_c=\kappa\eta\zeta,\quad L_c=1-a\eta,\quad
+ H_c=1+(1-a)\eta,\quad Q_c=1-\kappa\zeta+aV_c,
+\]
+\[
+ R=1+k^2(1-a\eta),\qquad T=1+k^2-k^2\zeta t,
+ \qquad M=R-t>0,\quad J=T-a>0.
+\]
+The native coquotients are defined by the following short polynomials:
+\begin{align*}
+ P_4={}&1+\kappa+\eta\kappa(a-\kappa-1)-\zeta\kappa t
+ +V_c[-\zeta\kappa t^2+2\kappa t+a(1-t)+t],\\
+ P_\alpha={}&1+\kappa-a\eta\kappa
+ +\zeta[(1+\kappa)-(2+\kappa)t]
+ +V_c[-\zeta t^2+a(t-1)+t],\\
+ P_d={}&(1+\kappa)^2-a\eta\kappa^2
+ +\zeta\kappa[(\kappa+1)-(\kappa+2)t]\\
+ &+V_c[-\zeta\kappa t^2+\kappa a(t-1)+\kappa t+\kappa+1],\\
+ c_2={}&2K(1-t\zeta)L_c(1+V_c)H_cQ_c,\\
+ c_b={}&2KL_c[1+(1-t)\zeta]H_cQ_c,\\
+ c_3={}&2KL_cH_cQ_c(1-\kappa\eta+tV_c),\\
+ c_5={}&2KL_cH_cQ_c(1+V_c),\\
+ c_4={}&2Q_cP_4,\qquad c_\alpha=2L_cH_cP_\alpha,
+ \qquad c_d=4L_cQ_cP_d.
+\end{align*}
+Their residues are $2,2,2,2,2,2,4$. The original source is
+\begin{gather}
+ \lambda=n=0,\quad C=2,\quad
+ d_{\rm B}=\frac{2a\eta c_d}{c_3},\quad
+ m=\frac{2ae^2c_2}{Mc_3},\quad
+ A=\frac{2a\eta^2c_4}{c_3},\quad
+ \alpha=\frac{2a\Delta^2k^6\eta^2c_\alpha}{c_3},\notag\\
+ D_{\rm e}+\frac{d_{\rm B}}2=\frac{2ac_5}{Jc_3},\qquad
+ \beta+\frac{d_{\rm B}}2=\frac{2ae^2c_b}{tc_3},\qquad
+ \Lambda=\frac{RTc_3}{2a}.                                      \tag{1}
+\end{gather}
+The original event $D_{\rm e}$ is distinct from the testing factor
+$D=1+u^2$. For a testing state $(W,X,Y,Z)$ put
+\[
+ D=1+u^2,\quad D_v=1+v^2,\quad B=X+uZ,\quad Q_A=W+uY,
+ \quad r=uW-Y,
+\]
+\[
+ r_2=vQ_A-B,\qquad r_5=r-v(Z-uX).
+\]
+The original full parent on this source is
+\begin{align*}
+ F={}&4mr_2^2+8D_vr^2+4ADD_vY^2+(4D_{\rm e}+2d_{\rm B})r_5^2\\
+ &+(4\alpha+2d_{\rm B})D(vY-Z)^2
+ +(4\beta+2d_{\rm B})D_vB^2-2d_{\rm B}DD_vZ^2.
+\end{align*}
+With $H_2=4Tc_2$, $H_b=4Tc_b$, $H_3=4Rc_3$, $H_5=4Rc_5$,
+equation (1) gives exactly
+\begin{align}
+ \Phi:=\Delta^2\Lambda F={}&H_2\frac RM r_2^2
+ +H_b\frac RtD_vB^2+\Delta^2H_3\frac TaD_vr^2
+ +\Delta^2H_5\frac TJr_5^2\notag\\
+ &+4RT\Delta^2\eta^2c_4DD_vY^2
+ +4RT\Delta^4k^6\eta^2c_\alpha D(vY-Z)^2\notag\\
+ &+2RT\Delta^2\eta c_dD\{(vY-Z)^2-D_vZ^2\}.             \tag{2}
+\end{align}
+
+\section{The \texorpdfstring{$Z$}{Z}-unit chart with bounded \texorpdfstring{$W$}{W}}
+
+Assume $u,v,X,Y$ are infinitesimal, $Z$ is a unit, and the state has
+bounded coordinates. Normalize $Z=1$ in the testing field. The new
+argument allows arbitrary bounded $W$. Put
+\[
+ p=t/R,\quad h_s=a/T,\quad q_A=v(W+uY),\quad q_B=v(1-uX),
+ \quad N=B-pq_A,\quad M_B=r-h_sq_B.
+\]
+Subtract only the four nonnegative packets
+\[
+ \Pi_1=H_2\frac tM N^2,\quad \Pi_2=H_b\frac MtD_vN^2,
+ \quad \Pi_3=\Delta^2H_3\frac JaD_vM_B^2,
+ \quad \Pi_4=\Delta^2H_5\frac aJM_B^2.
+\]
+No boundedness of their gap ratios is assumed. The exact remainder is
+\begin{align}
+ G:=\Phi-\sum_i\Pi_i={}&H_2\{N^2-2q_AN+(1-p)q_A^2\}
+ +H_bD_v\{N^2+2q_AN+pq_A^2\}\notag\\
+ &+\Delta^2H_3D_v\{M_B^2+2q_BM_B+h_sq_B^2\}\notag\\
+ &+\Delta^2H_5\{M_B^2-2q_BM_B+(1-h_s)q_B^2\}
+ +\mathcal W,                                                   \tag{3}
+\end{align}
+where $\mathcal W$ is the last three terms of (2), with $Z=1$.
+Use the pure-testing coordinate $w=(W+uY)/D$. Its full inverse is
+\begin{gather}
+ X=N+pDvw-u,\qquad q_B=v(D-uN-puDvw),\notag\\
+ W=w+\frac{u(M_B+h_sq_B)}D,\qquad
+ Y=uw-\frac{M_B+h_sq_B}D.                               \tag{4}
+\end{gather}
+The only testing denominator is the positive unit $D$.
+
+If the pure-testing signed core is nonnegative, its product with
+$d_{\rm B}>0$ is already a separated square and all event packets are
+nonnegative. Otherwise the sign symmetries allow $u,v>0$. Explicitly,
+changing $u$ to $-u$ and $(Y,Z)$ to $(-Y,-Z)$, or changing $v$ to
+$-v$ and $(X,Z)$ to $(-X,-Z)$, preserves every event square and the
+core. The negative-core branch then forces $w>0$: completing the two
+positive core squares leaves
+\[
+ \frac{uvDD_v}{\mathcal D}
+ \{D u v\,w^2-2DD_vw+uv\},\qquad
+ \mathcal D=u^2v^4+u^2v^2+u^2+v^4+2v^2+1>0,
+\]
+which is nonnegative for $w\leq0$. The eliminated matrix is
+\[
+ \begin{pmatrix}1+v^2+u^2v^2&uv\\uv&(D+v^2)/D\end{pmatrix}\succ0.
+\]
+Thus all radicals used below have nonnegative pure-field factors.
+Literal angle axes already have a nonnegative core.
+
+\subsection{Polynomial source change and exact scalar}
+
+Define pure-source quantities
+\[
+ \delta=\Delta R/K,\quad b^2=\eta K/R,\quad
+ Q=K+ak^2b^2,\quad T_n=K^2-t\delta^2k^4Qb^2.
+\]
+Here $\delta$ is positive bounded, $k,b$ are infinitesimal, and
+\begin{equation}
+ \eta=Kb^2/Q,\quad \Delta=\delta Q/K,\quad
+ \zeta=\delta^2k^2Qb^2/K,\quad R=K^2/Q,\quad T=T_n/K.       \tag{5}
+\end{equation}
+Every denominator in (5) is a positive source unit. After this
+substitution put $C_i=K^2Q^3c_i$. These are polynomials: each native
+monomial $c k^jf^{2r}g^{2s}a^\alpha t^\tau$ maps to
+\[
+ c\delta^{2s}k^{j+2s}b^{2(r+s)}a^\alpha t^\tau
+ K^{2+r-s}Q^{3-r+s},\qquad -2\leq r-s\leq3.
+\]
+No negative exponent or shape inverse occurs. Put
+\[
+ V_n=K^2-tQuvw,\quad Y_n=KT_nuw-avV_n,\quad B_0=vY_n-KT_n,
+\]
+\[
+ A_c=C_5T_n+aK(C_3D_v-C_5),\qquad \mathcal C=K^6Q^4T_n.
+\]
+Use different letters for the conductor monomials and the event weights:
+\[
+ A_m=wv,\quad B_m=\delta v,\quad C_m=\delta b^2uw,
+ \quad D_0=\delta^2k^3b^2.
+\]
+Direct substitution of (4) into (3), retaining every term, gives
+\begin{align}
+ F_0:=(\mathcal CG)|_{N=M_B=0}={}&
+ 4KQT_n^2[C_2(K^2-tQ)+C_bD_vtQ]D^2 A_m^2\notag\\
+ &+4Q^2A_cD^2V_n^2B_m^2\notag\\
+ &+4K^3C_4DD_v(KT_nC_m-ab^2B_mV_n)^2\notag\\
+ &+4KQ^2C_\alpha DB_0^2D_0^2\notag\\
+ &+2K^2QC_dD\{b^2B_m^2(Y_n^2-K^2T_n^2+2aKT_nV_n)
+                         -2K^2T_n^2B_mC_m\}.             \tag{6}
+\end{align}
+Define the leading polynomial and its complete error by
+\[
+ P=D(A_m^2+B_m^2)+K(C_m^2+D_0^2)-2K^2B_mC_m,
+ \qquad E_0=F_0-8K^2D\mathcal CP.
+\]
+The full first coefficients on $(N,\delta M_B)$ are
+\begin{align}
+ S_B={}&-8aK^2b^4C_4D_vV_n
+       +8\delta^2Q^2k^6b^4C_\alpha B_0+4KQb^2C_dB_0,\notag\\
+ S_C={}&8K^3T_nb^2C_4D_v,\notag\\
+ L_1={}&A_m[8K^3QT_n^2(C_bD_v-C_2)D]\notag\\
+ &+B_m[-8\delta K^2Q^2uD\,vV_nA_c+\delta K^3auvS_B]
+   +C_m[\delta K^3auvS_C],\notag\\
+ L_2={}&B_m[8K^2Q^2T_nDV_n(C_3D_v-C_5)-K^2T_nS_B]
+          -C_mK^2T_nS_C.                               \tag{7}
+\end{align}
+In particular $E_0\in(A_m,B_m,C_m)^2+(D_0^2)$ and
+$L_1,L_2\in(A_m,B_m,C_m)$ without ideal division.
+
+\subsection{Exact contact and the unlocalized conductor}
+
+Work in $\mathcal R=\Rc[u,w,v]$ and put
+\[
+ \begin{gathered}
+ \mathfrak J=(u-k,w-\delta k,v-\delta k^2b^2),\\
+ x=B_m-C_m,\quad y=A_m-kC_m,\quad z=uB_m-kC_m,
+ \quad h=kC_m-D_0.
+ \end{gathered}
+\]
+The original source contact is
+\[
+ u=k,\quad v=\Delta k^2\eta,\quad
+ (W,X,Y,Z)=(\Delta k,-k(1-t\zeta),\Delta k^2L_c,1).
+\]
+It becomes $(u,w,v,N,M_B)=(k,\delta k,\delta k^2b^2,0,0)$.
+For completeness, its exact contact and derivative identities follow
+from the six native balances
+\[
+ c_b-c_2=\zeta c_3,\qquad c_3-c_5=-\kappa\eta c_b,
+ \qquad c_2=(1-t\zeta)c_5,
+\]
+\begin{align*}
+ 0={}&2\kappa c_2+2(1+V_c)L_cc_4
+         -2\kappa^2\zeta Q_cc_\alpha-Q_cc_d,\\
+ 0={}&\kappa L_cc_2+c_5+(1+V_c)L_c^2c_4+\kappa Q_c^2c_\alpha
+         +\tfrac12(\kappa\zeta L_c^2-2L_c-\eta)c_d,\\
+ 0={}&\kappa Rc_2+t\kappa V_cc_b+aV_cc_3+Tc_5
+       +KV_cL_c^2c_4-\kappa^2\zeta KQ_cL_cc_\alpha
+       -\tfrac K2(Q_cL_c+\eta)c_d.
+\end{align*}
+They follow by multiplying the short $P_4,P_\alpha,P_d$ polynomials.
+Substitution into the derivatives of (2) proves that its value and all
+first derivatives vanish at the displayed contact. The four packets
+also vanish there to second order. Consequently
+\[
+ E_0\in\mathfrak J^2,\qquad L_1,L_2\in\mathfrak J.       \tag{8}
+\]
+Here $P\in\mathfrak J^2$ follows also from its exact square identity
+below. No asymptotic contact replacement is made.
+
+Adjoin only the separated radicals
+\[
+ a_1=\sqrt{wv},\quad a_2=\sqrt\delta\sqrt{uv},\quad
+ a_3=b\sqrt{\delta k}\sqrt{uw},\quad
+ a_4=\delta k^{3/2}b,\qquad q=a_1a_2-a_3a_4.
+\]
+Only $q^2\in\mathcal R$ is needed in the polynomial lift. Direct
+multiplication gives
+\begin{align}
+ C_m(u-k)&=z-ux,\notag\\
+ C_m(w-\delta k)&=\delta y-wx,\notag\\
+ C_m(v-\delta k^2b^2)&=b^2(wz+\delta ky-kwx),\notag\\
+ r_*:=y+z-h-2kx
+ &=(v-\delta k^2b^2)[(w-\delta k)+\delta(u-k)]
+       -\delta kb^2(u-k)(w-\delta k),\notag\\
+ kC_mr_*&=q^2-yz.                                      \tag{9}
+\end{align}
+For any polynomial $S$ successive monic divisions give
+\[
+ S=S_c+(u-k)T_u+(w-\delta k)T_w
+              +(v-\delta k^2b^2)T_v.
+\]
+If $S_c=0$, (9) yields the explicit polynomial lift
+\begin{equation}
+ C_mS=x(-uT_u-wT_w-b^2kwT_v)
+      +y(\delta T_w+\delta kb^2T_v)+z(T_u+b^2wT_v).      \tag{10}
+\end{equation}
+Thus
+\begin{equation}
+ (A_m,B_m,C_m)\cap\mathfrak J\subset(x,y,z),\qquad
+ [(A_m,B_m,C_m)^2+(D_0^2)]\cap\mathfrak J^2
+                      \subset(x,y,z,h,q)^2.            \tag{11}
+\end{equation}
+The restriction to the unmixed generator $D_0^2$ is substantive.
+For clarity, here is the complete constructive argument. In the first
+inclusion write $F=R_AA_m+R_BB_m+R_CC_m$ and substitute
+$A_m=y+kC_m$, $B_m=x+C_m$. The remaining coefficient of $C_m$ is
+$S=kR_A+R_B+R_C$. The contact equality implies $S_c=0$ by cancellation
+in the polynomial domain $\Rc$, so apply (10).
+
+For the second inclusion write
+$F=\sum_{i\le j}f_{ij}m_im_j+\rho D_0^2$, with
+$(m_1,m_2,m_3)=(A_m,B_m,C_m)$. Substitute the same formulas and
+$D_0=kC_m-h$ to obtain
+\[
+ F=Q_2+C_m(xH_x+yH_y+zH_z+hH_h)+C_m^2S,
+ \quad Q_2\in(x,y,h)^2,\quad H_h=-2k\rho,\quad H_z=0.
+\]
+The contact value implies $S_c=0$. Absorb $C_m^2S$ into the four
+$H$ coefficients by (10). Since $F\in\mathfrak J^2$, its first
+derivatives vanish at contact, while
+\[
+ \det\left(\frac{\partial(x,y,z)}{\partial(u,w,v)}\right)_c
+        =-\delta^4k^4b^4\ne0.
+\]
+The relation $r_*\in\mathfrak J^2$ has gradient coefficients
+$(-2k,1,1,-1)$. Put
+\[
+ \lambda=2k\rho_c,\qquad J_i=H_i-\lambda(-2k,1,1,-1)_i.
+\]
+The last $J_i$ has zero contact
+value; the determinant and the first derivative equations imply the
+other three do too. This uses the adjugate and cancellation only to
+prove zero polynomial identities; no determinant inverse is a lifting
+coefficient. Finally
+\[
+ F=Q_2+2\rho_c(q^2-yz)+\sum_{i=1}^4r_i(C_mJ_i),
+ \qquad(r_1,r_2,r_3,r_4)=(x,y,z,h),
+\]
+and each $C_mJ_i$ is lifted by (10). This proves (11), including all
+coefficient-zero strata, in the unlocalized ring.
+
+\subsection{The new positive-weight estimate}
+
+Assign weights
+\begin{equation}
+ (\delta,k,b,a,t,u,w,v)=(0,2,6,0,0,2,0,16).             \tag{12}
+\end{equation}
+The zero-weight variables are bounded; every positive-weight variable
+is infinitesimal in its own field. Positive weight of every polynomial
+coefficient therefore makes it a bounded separated infinitesimal,
+without any comparison of independent rates. A polynomial
+$\Ow(s)$ has all monomials of weight at least $s$.
+
+The short coquotients and (5) give
+\begin{align*}
+ C_i&=2K^6+\Ow(12)\quad(i=2,b,3,5,\alpha),&
+ C_4&=2K^6+\Ow(16),& C_d&=4K^7+\Ow(12),\\
+ Q&=K+\Ow(16),& T_n&=K^2+\Ow(20),& V_n&=K^2+\Ow(18),\\
+ D_v&=1+\Ow(32),&Y_n&=\Ow(2),&B_0&=-K^3+\Ow(18),\\
+ A_c&=2K^8+\Ow(12),&&\mathcal C=K^{12}+\Ow(16).
+\end{align*}
+The stronger $C_4$ estimate follows because every $\eta$-term in
+$P_4$ also contains $\kappa$, and the clearing correction $Q-K$
+has weight $16$. The two exact difference identities are
+\[
+ K(C_b-C_2)=\delta^2k^2Qb^2C_3,\qquad
+ Q(C_3-C_5)=-k^2Kb^2C_b.
+\]
+Both differences therefore have weight at least $16$; since $K,Q$
+have constant term one, this conclusion is polynomial and introduces
+no inverse into a lifting coefficient.
+
+The monomial weights of $(A_m,B_m,C_m,D_0)$ are $(16,16,14,18)$.
+In the five lines of (6), keep the respective leading terms
+\[
+ 8K^{14}D^2A_m^2,\quad 8K^{14}D^2B_m^2,\quad
+ 8K^{15}DC_m^2,\quad 8K^{15}DD_0^2,\quad
+ -16K^{16}DB_mC_m.
+\]
+The first two errors have weight at least $44$. The third error has
+weight at least $42$: its only possibly smaller cross term contains
+$b^2B_mC_m$, of weight $42$. The fourth error has weight at least
+$48$. In the fifth line the coefficient error on $B_mC_m$ has weight
+at least $42$, and the separate $b^2B_m^2$ term has weight at least
+$44$. Their sum is $8K^{14}DP+\Ow(42)$. Since $\wt(P)\geq28$
+and $\mathcal C-K^{12}=\Ow(16)$, this proves
+\[
+ E_0=\Ow(42).
+\]
+Also $S_B,S_C=\Ow(12)$, and (7) gives
+\begin{equation}
+ L_1=\Ow(32),\qquad L_2=\Ow(26).                       \tag{13}
+\end{equation}
+
+It remains to check that the explicit conductor divisions preserve
+strict positivity of coefficient weights. The contact substitutions
+$u\mapsto k$, $w\mapsto\delta k$, $v\mapsto\delta k^2b^2$
+never decrease weight; their weights change respectively as
+$2\mapsto2$, $0\mapsto2$, $16\mapsto16$.
+For $S=\Ow(s)$, its monic quotients obey
+\[
+ \wt(T_u)\geq s-2,\quad \wt(T_w)\geq s,\quad
+ \wt(T_v)\geq s-16.
+\]
+The coefficients in (10) on $(x,y,z)$ consequently have weights
+at least $(s-2,s-2,s-4)$.
+
+For a first-normal polynomial of weight $p$, monomial division by
+$(A_m,B_m,C_m)$ gives quotient weights at least
+$(p-16,p-16,p-14)$. Hence $S=kR_A+R_B+R_C$ has weight at least
+$p-16$, and the completed lift has coefficient weights at least
+$p-20$. From (13) these bounds are $12$ for $L_1$ and $6$ for $L_2$.
+
+For $E_0$ of weight at least $42$, its monomial quotients on
+\[
+ A_m^2,A_mB_m,A_mC_m,B_m^2,B_mC_m,C_m^2,D_0^2
+\]
+have weights at least $(10,10,12,10,12,14,6)$. Thus the initial
+$Q_2$ coefficients have weight at least $6$, the initial
+$(H_x,H_y,H_h)$ have bounds $(10,10,8)$, and $S$ has bound $10$.
+The first use of (10) leaves bounds $(8,8,6,8)$ on
+$(H_x,H_y,H_z,H_h)$. Since $\rho_c$ has weight at least $6$ and
+$\lambda=2k\rho_c$ at least $8$, subtracting the gradient relation
+leaves the same bounds on $(J_x,J_y,J_z,J_h)$. A second use of
+(10) therefore leaves every scalar-lift coefficient with weight at
+least $2$. The separate coefficient $2\rho_c$ of $q^2$ has bound
+$6$. Every correction coefficient is thus strictly infinitesimal.
+
+\subsection{The full strict Gram and restoration}
+
+The eleven original soft roots are $g_0=x$, $g_4=uwv-\delta^2k^4b^2$,
+the six differences $a_i^2-a_j^2$, and the three differences
+$a_ia_j-a_\ell a_m$ over the three pairings of four indices.
+They satisfy the exact identity
+\begin{equation}
+ P=g_0^2+g_4^2+\frac13\sum_{i<j}(a_i^2-a_j^2)^2
+       +\frac23\sum_{\{ij,\ell m\}}(a_ia_j-a_\ell a_m)^2. \tag{14}
+\end{equation}
+The conductor roots $x,y,z,h,q$ are respectively
+$g_0,a_1^2-a_3^2,a_2^2-a_3^2,a_3^2-a_4^2,a_1a_2-a_3a_4$.
+Thus (8)--(13) express the complete scalar correction and both full
+first normals as infinitesimal perturbations on this same finite
+root frame. The leading diagonal in (14), multiplied by
+$8K^2D\mathcal C$, has strictly positive residue.
+
+There are no state-normal terms above degree two. To display the
+entire hard block before multiplication by $\mathcal C$, put
+\[
+ C_B=H_3D_vh_s+H_5(1-h_s),
+\]
+\[
+ B_Y=4RT\Delta^2\eta^2c_4DD_v
+      +4RT\Delta^4k^6\eta^2c_\alpha D\,v^2
+      +2RT\Delta^2\eta c_dD\,v^2.
+\]
+The entries on $(N,\delta M_B)$ are
+\begin{align*}
+ A_{11}&=H_2+H_bD_v+\Delta^2C_Bu^2v^2
+                         +B_Yh_s^2u^2v^2/D^2,\\
+ A_{12}&=-\frac{\Delta^2}{\delta}(H_3D_v-H_5)uv
+                         -\frac{B_Y}{\delta D^2}h_suv,\\
+ A_{22}&=\frac{\Delta^2}{\delta^2}(H_3D_v+H_5)
+                         +\frac{B_Y}{\delta^2D^2}.
+\end{align*}
+Every apparent negative power of $\delta$ cancels: $\Delta/\delta=Q/K$
+is a source unit, and $B_Y/\delta^2$ is bounded infinitesimal even
+when $\delta$ is a unit. Hence this exact hard block has residue
+$16I_2$. Its denominators are only positive pure-source or
+pure-testing units. Together with (14) and the positive-weight
+corrections, the full thirteen-root Gram for $\mathcal CG$ is bounded
+and has strictly positive residue. Apply the admitted separated
+strict-Gram lemma, restore all four packets $\mathcal C\Pi_i$,
+and undo the positive source multiplier $\mathcal C\Delta^2\Lambda$.
+This proves the entire original parent in the $Z$-unit chart with
+bounded $W$, retaining both strict gaps and every original event.
+
+\section{Every remaining testing chart}
+
+\paragraph{Outer angle charts.}
+The two preserved outer-angle identities require only
+$d_{\rm B}/C,d_{\rm B}/D_{\rm e}$ infinitesimal and the harmonic
+mass $\gamma=A[CD_{\rm e}/(C+D_{\rm e})]/d_{\rm B}^2$ bounded
+with residue at least $1/4$. These hypotheses are independent of the
+size of $e$. Indeed, put $B_c=2c_5-J\eta c_d$. The original source gives
+\[
+ D_{\rm e}=\frac{aB_c}{Jc_3},\quad
+ \frac{d_{\rm B}}{D_{\rm e}}=\frac{2J\eta c_d}{B_c},\quad
+ \frac{d_{\rm B}}C=\frac{a\eta c_d}{c_3},
+\]
+and
+\[
+ \gamma=\frac{c_4c_3B_c}{c_d^2(2Jc_3+aB_c)}.
+\]
+Here $\overline B_c=4$, $J+a=T$ has residue one, the denominator
+has residue $64$, and the numerator has residue $16$. Thus both
+strength ratios are infinitesimal and $\overline\gamma=1/4$.
+The exact retained-current identities in
+\texttt{c1\_uniform\_all\_tests.tex}, Lemmas 1--2, cover respectively
+$1/v$ bounded and $v$ infinitesimal with $1/u$ bounded, with all
+homogeneous infinity endpoints. Consequently only $u,v$
+infinitesimal remain. The literal axes have a nonnegative core.
+
+\paragraph{State charts.}
+Normalize a nonzero state by a coordinate of maximal absolute value.
+All its coordinates are then bounded and at least one is a unit. If
+$X$ or $Y$ is a unit, the signed core has positive residue
+$2(X^2+Y^2)$ and gives a direct separated square; restore all event
+squares. Otherwise $X,Y$ are infinitesimal. If $Z$ is a unit, the
+preceding section applies, including bounded unit $W$.
+
+The only remaining case has $Z$ infinitesimal and $W$ a unit.
+Normalize $W=1$ and put $Q_A=1+uY$, a pure-testing unit. Use
+\[
+ z=(r_2,B,\Delta r,\Delta r_5,\Delta\eta Y).
+\]
+In (2), retain the four nonnegative excess packets obtained from
+$R/M=1+t/M$, $R/t=1+M/t$, $T/a=1+J/a$, $T/J=1+a/J$,
+the complete $\alpha$ packet, and the positive $v^2Y^2$ part of the
+last line. The remaining diagonal is
+\[
+ H_2z_1^2+H_bD_vz_2^2+H_3D_vz_3^2+H_5z_4^2
+                   +4RTc_4DD_vz_5^2,
+\]
+and its complete negative correction is exactly
+\[
+ -4RTc_dD\frac{\Delta Z}{Q_A}z_5(z_1+z_2)
+ -2RTc_dD\frac{\Delta^2\eta Z^2}{Q_A^2}(z_1+z_2)^2.
+\]
+This is the preserved $W$-unit identity, now on the larger domain:
+$\Delta$ is bounded and $Z$ is infinitesimal, so both corrections
+are infinitesimal. The diagonal residue is $8I_5$. The separated
+strict-Gram lemma and restoration of all six packets prove this
+last chart. There is no need for $\Delta$ itself to be infinitesimal.
+
+The zero state is immediate. A complex state splits into its real and
+imaginary quadratic evaluations because the parent matrix is real
+symmetric. Every normalization and projective clearing factor is
+pure testing. This completes the proof of Theorem~\ref{thm:bounded-delta}.
+
+\section*{Provenance and focused exact check}
+
+The source coquotients, full parent, retained packets, contact balances,
+and normal formulas are those preserved in
+\texttt{prior/prior\_core/c1/source\_definitions.tex}; the polynomial
+conductor is from its adjacent \texttt{contact\_conductor\_proof.tex}.
+The eleven-root identity and full hard block are in the preserved
+\texttt{c1\_unbounded\_e\_z\_obligation.tex}. Their exact identities
+do not require the old infinitesimal-$\delta$ hypothesis. The new
+weight argument (12)--(13), the bounded-$W$ use, and the final
+$W$-unit/$Z$-infinitesimal join are the scope extension proved here.
+Exact paths and inherited hashes are in the companion routing ledger.
+
+The adjacent standard-library checker reconstructs the source from
+the seven short coquotients, performs only monic contact division and
+exact removal of displayed monomial factors, and multiplies back the
+complete scalar and both first-normal lifts. Its 33 assertions pass.
+The actual minimum weights are $44,32,26$ on $(E_0,L_1,L_2)$ and
+$12,14,12$ on the constructed correction families, stronger than the
+human bounds above. No Gr\"obner basis, numerical positivity test,
+parameter inversion, or prerecorded source expansion is used.
+The checker corroborates the proof; it does not replace the displayed
+conductor or the complete-parent chart join.

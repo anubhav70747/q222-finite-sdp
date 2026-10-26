@@ -1,0 +1,60 @@
+CLOSEDNESS OF THE HYBRID CERTIFICATE CONE
+
+This is an independent elementary refinement of the closed-sum lemma posted
+by web task7 while that run was still active. It proves closure and compact
+normalization, not admission of the remaining native contacts.
+
+For s=(A0,A1,B0,B1) in {+1,-1}^4, write
+chi(s)=(A0,A1,B0,B1,A0B0,A0B1,A1B0,A1B1).
+Let f(q)=t+b.q be nonnegative at these16 deterministic behaviors.
+Averaging over the16 assignments gives
+        t=E_s f(chi(s)),     b_i=E_s chi_i(s) f(chi(s)).
+Indeed, the eight displayed nonconstant monomials and the constant1 are
+orthonormal under the uniform sign measure: a product of two distinct
+monomials contains an independent sign to an odd power.
+
+Since f(chi(s))>=0 and |chi_i(s)|=1, it follows that
+        t>=0,              |b_i|<=t, i=1,...,8.             (1)
+Thus t=0 forces f=0, and t=1 defines a compact section of every closed cone
+of such slacks. No canonical nonnegative source coordinates are required.
+
+Let K1,...,Kr be finitely many closed cones consisting of slacks nonnegative
+at these deterministic behaviors. Suppose sum_i f_ij converges.
+The constants obey 0<=t_ij<=sum_i t_ij, and (1) bounds all other coefficients.
+A common subsequence of the finitely many summands converges, with limits
+in Ki. Their sum is the required limit. Hence K1+...+Kr is closed.
+For quantum certificate cones global soundness implies the required
+deterministic positivity. Closure alone does not establish global soundness.
+
+The fixed NPA SOS cone itself has a particularly short closedness proof.
+Choose distinct reduced words w1,...,wN in the universal group generated
+by the four observable involutions, commuting between parties. The
+identity coefficient in wi^* wj is delta_ij. Therefore the identity
+coefficient of W^* G W is trG, for real symmetric or complex Hermitian G.
+Exact matching to an affine Bell slack tI+sum_i b_i chi_i, with all other
+word coefficients zero, gives
+                         trG=t.                          (2)
+If a sequence of NPA-certified slacks converges, (2) bounds the PSD Grams
+in this one fixed finite-dimensional space. A convergent subsequence
+preserves PSD and every coefficient equation, proving the cone is closed.
+Redundant or algebraically identical word entries must first be removed;
+the argument uses universal coefficient matching, not evaluation at a
+single state or at one qubit strategy.
+
+Consequently, for a finite hybrid of this fixed NPA cone and other closed,
+globally sound cones, no closure is needed around their sum. Coverage of
+every extreme ray of the full valid-slack cone is equivalent to equality
+with it: its t=1 section is compact by (1), and finite-dimensional convex
+geometry generates that section from its extreme points. In this assertion
+each added cone must be a subcone of the same full valid-slack cone.
+Canonical extreme-ray tests require their separate classification and
+cannot silently be replaced by full-polar extreme-ray tests.
+
+If f is an extreme ray and is a sum of sound summands in the same cone,
+every nonzero summand is proportional to f, so some summand cone contains
+f. This direct-coverage condition remains necessary. Once coverage is
+proved, the polar of the sum is the intersection of the duals; joining
+their already attained finite PSD representations yields the global lift.
+This argument does not prove any of the missing coverage or dual-attainment
+hypotheses for a newly proposed block.
+

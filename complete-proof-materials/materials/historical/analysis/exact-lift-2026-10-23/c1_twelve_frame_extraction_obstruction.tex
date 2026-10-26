@@ -1,0 +1,247 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=1in]{geometry}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\sgn}{\operatorname{sgn}}
+\title{The fixed testing span and a nonuniform clipped Gram at one C1 contact}
+\author{}\date{}
+\begin{document}\maketitle
+
+\paragraph{Scope.}
+Consider only the bounded-$z$, positive-angular-coefficient C1 frame of
+\texttt{latex/certificates/c1\_short.tex}, equations P1 and SP3--SP6
+and the twelve-root conclusion at lines 7672--7687.
+The exact clipped matrix considered below is the matrix $G$ defined in
+\texttt{analysis/exact-lift-2026-10-23/fixed\_box\_c1.tex},
+Section~3, by $g^{\mathsf T}Gg=g^{\mathsf T}D_*g+\mathcal E$.
+Its fixed-box realization is an existing result. The new conclusion here
+concerns extending this particular matrix beyond that box; it is not an
+obstruction to its fixed function span or to a different Gram matrix.
+
+\paragraph{The fixed testing span before the coefficient argument.}
+Use nonnegative testing angles $u,w$. The exact angle gauges are
+\[
+ (u,w)=(|u_s|,|w_s|),\quad
+ (W,X,Y,Z)=(W_s,\sgn_+(w_s)X_s,\sgn_+(u_s)Y_s,
+             \sgn_+(u_s)\sgn_+(w_s)Z_s),
+\]
+where $\sgn_+(0)=1$. Put
+\[
+ \omega=\sgn(W)\sqrt{uw\max(WZ,0)},\qquad \omega=0\text{ at }W=0.
+\]
+The twelve fixed pure-testing functions are
+\[
+ \mathcal V=\{X,Y,Z,W,uZ,wZ,uW,uwW,u^2W,u^{3/2}W,u^{1/2}W,\omega\}.
+ \tag{1}
+\]
+Indeed, write $q=\sqrt z$, $k=\sqrt x$, $Q=1-b$ and use the
+source quantities
+\[
+ d_G=4D/\sigma^2,\quad \rho=\Lambda x/\sigma,\quad q_*=\Lambda k,
+ \qquad \Lambda>0.
+\]
+The roots are source-linear combinations of (1), since
+\[
+\begin{gathered}
+ N_x=X+uhZ,\quad N_y=(Y-bwZ)/q,\quad
+ R=wZ/q-uqW,\quad \Gamma_*=\sqrt{d_G}(\sigma Z-uwW),\\
+ J_C=N_y+bR,\qquad J_\ell=N_y-QR,\\
+ A_\theta=q(u^2-k^2)W,\qquad T_\theta=kq(u-k)W,\\
+ B_1=\sqrt{\Lambda\sigma}\,uZ,\quad
+ B_2=\sqrt\rho\,uwW,\quad B_3=\sqrt\Lambda\,xqW,\quad
+ B_4=\sqrt{\Lambda x}\,wZ/q,\\
+ d_i=B_i-\sqrt{\Lambda x}\,\omega,\qquad
+ U_*=\sqrt{q_*}\,q(u^{3/2}-ku^{1/2})W,\qquad
+ K_*=\sqrt{q_*k}\,q(u-k)W.
+\end{gathered} \tag{2}
+\]
+Here the zero $D=0$ simply sets $\Gamma_*=0$; no inverse of $D$ is used.
+In particular $u-k$ is outside every radical. There is no
+source-dependent testing branch point in (2). The testing branch loci
+$u=0$ and $WZ=0$ in (1), and the angle sign partition, are fixed.
+All divisions and radicals involving only $z,k,\sigma,D,\Lambda$
+are source coefficients.
+
+For unit states, the physical slack is $F_w/[(1+u^2)(1+w^2)]$.
+Thus its roots acquire only the fixed pure-testing factor
+$[(1+u^2)(1+w^2)]^{-1/2}$. One may either restrict the state to the
+unit sphere or, away from the zero state, add its inverse norm as a
+fixed testing normalization. The homogeneous identity itself includes
+the zero state.
+
+What remains after (2) is a coefficient Gram problem. The generic
+TF4 operation in \texttt{03\_tensor.tex}, lines 58--72, introduces
+testing gates $\sqrt{M_j\pm y_j}$ with thresholds chosen for the
+individual bounded tensor. A moving threshold is not absorbed by
+a source coefficient: the functions $\sqrt{M+t}$ for distinct positive
+$M$ are linearly independent on a common interval about zero, as follows
+by differentiation and a Vandermonde matrix. A fixed replacement
+therefore needs an additional uniform allocation or a new identity.
+
+\paragraph{What was already evaluated.}
+The earlier note \texttt{fixed\_box\_c1.tex} and
+\texttt{c1\_retained\_feature\_union\_body.tex} give fixed gates on
+\[
+ 0<x,\sigma\le2^{-160},\quad 0<z\le1,\quad
+ 0<b<1,\quad bz<1,\quad 0<h<1,\quad
+ E,M,J>0,\quad D,\beta\ge0,\quad \Lambda>0,
+ \qquad 0\le u,w\le2^{-100}.
+ \tag{3}
+\]
+There is no upper bound on $h/\sigma$, and both event-zero faces are
+included. With
+\[
+ \mathcal B=\{w,w^2,\sqrt u,u,uw,u^2,u^2w\},\qquad
+ \gamma=(7\,2^{38})^{-1},
+\]
+the main library is
+$\mathcal V\{1,\sqrt{\gamma+b},\sqrt{\gamma-b}:b\in\mathcal B\}$,
+with 180 labelled functions. The retained squares enlarge it to 220.
+The subsequent published local-order669 construction is not a new
+consequence of this note. In particular (3) already answers the fixed
+library question affirmatively on one numerical source box.
+
+\paragraph{Exact native source and a family beyond that box.}
+For completeness the source formulas used in the calculation are
+\[
+\begin{gathered}
+ r=bz,\quad \theta=1-h,\quad e=xh/\sigma,\quad E=1-e,\quad K=1+x,\\
+ R_s=1+xr,\quad M=R_s-xz\theta,\quad
+ J=1+xh-\sigma(1-r),\\
+ P=\sigma+K+\sigma z(1+bx+2xh)
+       +\sigma bx^2hz^2+x^2h\theta z,\\
+ p=\frac{z(1+xh)E+(1-r)(1+xhz)}{2P},\\
+ l=\frac{(1+\sigma r)\{eR_s(1+\sigma z)+ME\}}{2P},\qquad
+ \kappa=\frac{K(1+\sigma r)(1+\sigma z)}{2MP},\\
+ m=\kappa x^2zh/\sigma,\quad
+ C=\frac{Kz(1+\sigma r)E}{2(1-r)P},\quad
+ A=p/r,\quad \alpha=l/(zQ),\\
+ D=\frac{K(1+\sigma z)(1+\sigma r)-JP}{2JP},\qquad
+ \beta=\frac{K(1+\sigma r)(1+xhz)-\theta P}{2\theta P}.
+\end{gathered} \tag{4}
+\]
+Fix any real $R>4$ and let $\tau\downarrow0$ in
+\[
+ z=R,\quad b=\frac1{2R},\quad r=\frac12,\quad
+ h=\frac34,\quad \theta=\frac14,\quad
+ \sigma=\tau,\quad x=\tau^3.
+ \tag{5}
+\]
+This is inside the original bounded-$z$ source type when $\tau$ is
+infinitesimal, for every fixed finite $R$. No common upper bound on
+all such real $R$ is part of that type.
+
+The six displayed event weights are strictly positive for sufficiently
+small positive $\tau$; the two omitted C1 weights remain zero.
+The threshold may depend on $R$.
+Indeed $0<b,r,h,\theta<1$, $E=1-3\tau^2/4>0$,
+$M=1+(1/2-R/4)\tau^3\to1$, and
+$J=1-\tau/2+3\tau^3/4\to1$. Also $P\to1$ and
+\[
+ H_0=1+zQ=R+\tfrac12,\quad
+ p\longrightarrow H_0/2,\quad l,\kappa\longrightarrow\tfrac12,
+ \quad \beta\longrightarrow\tfrac32,\quad
+ \frac D{\tau^2}\longrightarrow\frac{H_0}{2}>0.
+ \tag{6}
+\]
+The last limit also follows without expanding (4): put
+$B_s=P+xz(J-\sigma)$ and use the exact source identities
+\[
+ 2\theta P\beta=hB_s-\sigma H_0,\qquad
+ 2P(JD+x\theta\beta)=\sigma^2\mathcal H,
+ \quad \mathcal H\longrightarrow H_0.
+\]
+Thus $m,C,A,\alpha,D,\beta$ are positive in (5) for small $\tau$.
+
+The angular quantities are
+\[
+ \Lambda=\frac{8Dh+4\beta\theta^2+2h^2}{\sigma}
+                  -4bp\sigma z,\quad
+ K_A=4\kappa h/\sigma-\Lambda,\quad c=\max(0,1-K_A).
+\]
+Direct substitution, or first-order expansion of (4), gives
+\[
+ \tau\Lambda\longrightarrow\tfrac32,\quad
+ K_A\longrightarrow\tfrac{R-1}{2}>1,\quad
+ \rho\longrightarrow0,\quad \Lambda x\longrightarrow0.
+ \tag{7}
+\]
+Hence $\Lambda>0$ and $c=0$ identically for sufficiently small $\tau$.
+
+\paragraph{The two-by-two limit.}
+The literal clipped matrix uses
+\[
+ g=(N_x,J_C,J_\ell,\Gamma_*,A_\theta,T_\theta,d_1,\ldots,d_4,U_*,K_*),
+ \qquad
+ D_*=\diag(2,1,1,1,\tfrac12,\tfrac12,
+                    \tfrac12,\tfrac12,\tfrac12,\tfrac12,1,\tfrac12).
+\]
+Write $g_s=h-Q$. The entries involving $J_C,A_\theta$ are determined by
+\[
+\begin{split}
+ A_y&=8(p-l)+4z\{(1+2m)g_s+2Dh+2p\sigma\},\\
+ \chi&=8(pb+lQ)-4h+4eh(2D+1)-8Dh\\
+ &\hspace{8mm}+4z\{4Dbh+4pb\sigma+(1+2m)g_s^2+2\beta\theta^2\}.
+\end{split} \tag{8}
+\]
+The cross terms are $uA_yN_yA_\theta+\chi uA_\theta R$.
+Since $N_y=QJ_C+bJ_\ell$ and $R=J_C-J_\ell$, the symmetric
+$J_C,A_\theta$ entry is $u(QA_y+\chi)/2$. Equations (5)--(6) give
+\[
+ g_s\to-\tfrac14+\frac1{2R},\qquad
+ A_y\to3R,\qquad \chi\to R+2,\qquad
+ (QA_y+\chi)/2\to2R+\tfrac14. \tag{9}
+\]
+At $w=0$ the radial coefficients have limits
+\[
+ E_{yy}\to2Ru^2,\quad
+ E_{RR}\to(R/2-1/2+1/(2R))u^2,\quad
+ E_{yR}\to(-R+2)u^2.
+\]
+Consequently
+\[
+ Q^2E_{yy}+E_{RR}+QE_{yR}\longrightarrow\tfrac32Ru^2.
+\]
+The remaining radial correction $-\Lambda xR^2/2$ tends to zero.
+The second-normal radial correction also tends to zero; its coefficient
+is $R_0\rho\sigma z/S$, where
+$R_0\to0$ and $S=d_G+\rho\to2H_0>0$.
+No other term contributes to this principal block. Because $c=0$,
+its $A_\theta$ diagonal is exactly $1/2$. Thus, for each fixed $u$,
+\[
+ G[\{J_C,A_\theta\}]\longrightarrow
+ \begin{pmatrix}
+  1+\frac32Ru^2 &(2R+\frac14)u\\
+  (2R+\frac14)u&\frac12
+ \end{pmatrix},
+ \quad
+ \det\longrightarrow
+ \frac12-\left(4R^2+\frac R4+\frac1{16}\right)u^2.
+ \tag{10}
+\]
+For any proposed real cutoff $\delta>0$, fix
+$0<u\le\min(\delta,1/2)$ and then choose a finite $R>4$ making
+(10) negative. Continuity makes the actual determinant negative for
+all sufficiently small positive $\tau$. Therefore this exact clipped
+matrix is not positive semidefinite on any common real testing box
+$0\le u,w\le\delta$ over all sources (5).
+
+\paragraph{Exact remaining dependence.}
+The source-to-root map (2) has a fixed testing span. What fails
+uniformly is this clipped matrix's allocation after positive source
+excesses have been retained separately: the mixed coefficient grows
+as $2Ru$ while its clipped angular pivot stays $1/2$.
+For each fixed finite $R$, independent infinitesimal $u,w$ still make
+that entry infinitesimal, so (10) does not contradict the qualitative
+strict-residue argument. It shows why that argument does not supply
+one numerical cutoff as $R$ varies over all finite values.
+
+A different source-dependent Gram in the same testing span, a
+completion retaining the omitted positive excesses, or a further
+source normalization might remove this dependence. Neither (10)
+nor the independence of moving TF4 gates excludes those possibilities.
+In particular this note proves no failure of a finite library for the
+whole native C1 family, no exclusion from the forty-function
+ramified-completion library, and no global coverage statement.
+\end{document}
+

@@ -1,0 +1,44 @@
+{
+  "auxiliary_definition": "y=u2^2",
+  "constant_certificate": "1=(u4^2+u5^2)/2",
+  "domain": "|t|<=1 and t^2+s^2/4<=2",
+  "fixed_testing_functions": {
+    "u1": "sqrt(sqrt(2)+t)",
+    "u2": "s/(2*u1)",
+    "u3": "sqrt(sqrt(2)-t-u2^2)",
+    "u4": "sqrt(1-t)",
+    "u5": "sqrt(1+t)"
+  },
+  "nonvanishing_denominator": "sqrt(2)+t >= sqrt(2)-1 > 0",
+  "product_coordinate_order": [
+    "1",
+    "t",
+    "s",
+    "y"
+  ],
+  "products": {
+    "u1*u2": "s/2",
+    "u1^2": "sqrt(2)+t",
+    "u2^2": "y",
+    "u3^2": "sqrt(2)-t-y",
+    "u4^2": "1-t",
+    "u5^2": "1+t"
+  },
+  "radical_convention": "Unique nonnegative square root in the testing real closed field",
+  "square_spaces": [
+    [
+      "u1",
+      "u2"
+    ],
+    [
+      "u3"
+    ],
+    [
+      "u4"
+    ],
+    [
+      "u5"
+    ]
+  ],
+  "status": "EXACT_FOR_TILTED_PROJECTION_ONLY"
+}

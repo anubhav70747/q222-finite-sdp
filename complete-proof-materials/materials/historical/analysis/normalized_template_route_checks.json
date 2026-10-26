@@ -1,0 +1,24 @@
+{
+  "native_family": {
+    "B": "1/4096",
+    "T": "1/4096",
+    "H": "1/2",
+    "j": "[2,3]",
+    "p": "[3/4,1)"
+  },
+  "jB_lt_delta": true,
+  "physicality_N_error_upper": "25898448180015119/4611686018427387904",
+  "physicality_N_gt_p_minus_24B": true,
+  "m_times_1_minus_p_equals_positive_mu": true,
+  "complete_parent_m_coefficient_exact": true,
+  "normalized_m_root": "etaW*t*(j/33554432 + 1) + etaX*(j - p) + 8191*etaY*j*s*t/33554432 - etaZ*j*s*(p/4096 + 1)",
+  "limit_root": "etaW*t*(j/33554432 + 1) + etaX*(j - 1) + 8191*etaY*j*s*t/33554432 - 4097*etaZ*j*s/4096",
+  "fixed_two_root_decomposition_exact": true,
+  "fixed_roots": [
+    "etaW*t - etaX",
+    "etaW*t/33554432 + etaX + 8191*etaY*s*t/33554432 - 4097*etaZ*s/4096"
+  ],
+  "rank_one_direction_minor": "(j-k)*(1+B)",
+  "finite_fixed_PSD_template_conic_hull_impossible": true,
+  "scope": "Obstruction to a finite polyhedral positive-template cover of all normalized native targets; not an obstruction to fixed functions or L6."
+}

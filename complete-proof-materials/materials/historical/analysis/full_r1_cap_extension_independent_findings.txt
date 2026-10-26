@@ -1,0 +1,81 @@
+INDEPENDENT CHECK OF THE ENLARGED FULL-R1 CAP INEQUALITIES
+
+Scope. Read full_r1_cap_extension.txt, its exact checks.py/json, and
+the relevant published R1_Purchases.tex identities/total-loss formula.
+No full-parent, support-list, affine compiler or closedness replay was
+performed. The source domain is unchanged. No defect found in the
+new source inequalities, weighted coefficient estimates or totals.
+
+1. The joint source estimate is exact.
+
+Let Dp=1-p+p^2,phi=p^2/Dp,J=j+1,K=j+1-p,q=j-p>0.
+Multiplying (J/K)(1-phi+2phi/j)<=4 by j K Dp yields exactly
+
+ (4p^2-3p+3)q^2+(p+1)(4p^2-4p+3)q+3p(1-p)^2>=0.
+
+I independently expanded the difference; the residual is zero.
+The first coefficient is4(p-3/8)^2+39/16>0, the second contains
+4(p-1/2)^2+2>0, and the constant is nonnegative. This uses only
+j>p>0,p<1, and covers every allowed j opening.
+
+2. The new Psi bound is a coefficient-norm estimate.
+
+The exact fraction is
+ rPsi(s)=8(P/F)[B(1-phi)+2phi theta s/j]
+             +4(phi/Sigma)(x^2+xs+s^2), s=u^2.
+Every coefficient in s is nonnegative and pure source. Therefore
+its weighted absolute coefficient norm for cap |u|<=sqrt(S) is
+EXACTLY rPsi(S), independently of the testing state and the actual u.
+For S>=delta and B<=delta, theta<=1,
+ B(1-phi)+2phi theta S/j <=S(1-phi+2phi/j).
+Use P/F<=(R0/f0)J/K and the preceding joint estimate; the remaining
+term has phi/Sigma<=128/3,x<=delta. This proves
+ ||rPsi||_S<=32(R0/f0)S+(512/3)(delta^2+delta S+S^2).
+Here S>=delta is a condition on the REAL CAP, not on a testing point.
+In particular it does not exclude testing u=0. This is not a switch
+from pointwise positivity to positivity in a tensor product.
+
+3. The sharper opposite-radial bound is exact.
+
+Substitute rc=TjB^2(1-p)(1+x)(1+Hy)L/(2EP) into
+rR=(1-phi)4xy s/rc, with xy=jTB^2. The opening cancels before
+any estimate, giving
+ rR=8PEs/[Dp(1+x)(1+Hy)L].
+Then E<=1+delta^2,P<=R0J,L>=f0K,J/K<=2,Dp>=3/4 prove
+ ||rR||_S<=(64/3)R0(1+delta^2)S/f0.
+This is a bound on its sole nonnegative source coefficient times S.
+No condition on jT,n,1-p,H or1-H has been added.
+
+4. The remaining rows still apply on the enlarged cap.
+
+Set delta=1/1024,S=81/65536,V=1/256,e=2delta,D=e^2+S^2.
+S>delta as required. The other published majorants are polynomial
+coefficient majorants valid without an old small-cap premise; replacing
+their cap weights by these S,V is legitimate. In particular:
+- rE's negative coefficient is handled by (s+x)^2, not by deleting it.
+- The O bound uses the published exact square residual
+  bar(a)Rstar^2-O^2=jT^2v^2(alpha+c0s)^2Rstar^2; it is not an
+  unsupported coefficientwise replacement of (alpha-c0s)^2.
+- The effective Ru multiplier includes16Jalpha's additional funding
+  and stays below17, independently of the testing cap.
+- The gc row2(delta^2+V) is conservative; actual gc/fc is smaller.
+
+Fresh rational recomputation agrees with every supplied row and total:
+ Psi=13691734369401991808945157/19323923629888189704962048<3/4,
+ Q=40594954657/549755813888<1/8,
+ E=2102056720292849/27021597764222976<1/8,
+ R=825045110233813523858785/1811617840302017784840192<1/2.
+The normalized scalar monomials remain in[0,1]; their supports are
+unchanged. Thus the fixed coefficient-sign gate identity applies.
+
+For the already established matrix-coefficient norms<=1, the new
+budgets are u0v0=9/4096,V=1/256,SV=81/16777216. Including the
+source perturbation delta leaves929711/16777216>1/32. The available
+scalar fractions remain(3/4,1/2,1/2,1/2), so all margins are positive.
+Literal n=0 introduces no new inverse because Sigma=fc/y>0.
+
+The extension is consequently supported at the level of the existing
+identity/Gram mechanism and these newly checked inequalities. Literal
+old numerical gate arrays are insufficient: the fixed arguments must
+be regenerated with (u/u0,v/v0)=((256/9)u,16v). No complementary-test
+or global canonical admission follows from this review.

@@ -1,0 +1,54 @@
+Independent exact check: maximally entangled C2 exclusion from the nine-word NPA SOS space
+2026-10-26
+
+Source checked: analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/05_npa_coverage_RECOVERED_COMPLETE.txt, lines 18-227. The appended C1 calculation was not checked here. Companion independent implementation/results: c2_me_npa_full_audit_2026_10_26.py and .json in this directory.
+
+VERDICT
+The claimed maximally entangled C2 nonmembership proof is algebraically correct on its stated finite strict contact domain. In particular, the action matrix (4), pivot (5), explicit kernel (6), six universal-word equations and determinant (9) all agree exactly with independent reconstruction. No factor-of-two or sign correction is needed. The argument includes the literal n=0 boundary and unequal angles. It does not establish nonmembership on singular contact limits or on general partially entangled C2 contacts.
+
+FULL NINE-WORD SCOPE
+Let W=(I,A0,A1,B0,B1,A0B0,A0B1,A1B0,A1B1). The two deterministic evaluation vectors at (1,1,1,1) and (-1,1,-1,1) are independent. The seven roots in source (2), lines 41-61, vanish at both and are independent: each has a distinct coefficient on one of the seven words other than I,A0. They therefore span the entire common annihilator. A PSD Gram vanishing at both evaluations has its range in that annihilator and hence compresses to these seven roots. Thus the calculation excludes the full nine-word space, rather than a selected seven-root ansatz.
+
+A complex Hermitian Gram causes no additional case. Universal reduction has real structure constants and the target has real coefficients; averaging a Gram with its entrywise conjugate gives a real symmetric PSD Gram for the same target. It suffices to do the following argument over real symmetric matrices.
+
+CONTACT ACTION AND KERNEL
+For a,z>0, 0<r<1, arz<1, and K=a+r-1+arz>0, put U=1+z and V=1+a^2 z. The source uses A0=B0=sigma_z, A1=M(sqrt(z)), B1=M(a sqrt(z)), and psi=(1,-r sqrt(z),r sqrt(z),1). Direct Kronecker-product Pauli action independently reproduces all 28 entries of T in lines 62-85, with
+  T=diag(2z,2sqrt(z),2sqrt(z),2) T0.
+The pivot in columns (1,2,3,5) is exactly
+  det(T0_pivot)=-2r^2(a+1)K/(UV),
+  det(T_pivot)=-32r^2 z^2(a+1)K/(UV).
+Both are nonzero. All twelve entries of T0 N are identically zero for the printed N in lines 100-141. These identities were verified after common polynomial denominator clearing, not by parameter sampling. Rows (4,6,7) of N form I3, so N is a basis of ker T.
+
+If Q is a contact-compatible seven-root PSD Gram, tr(T Q T^T)=0 forces T Q^(1/2)=0. Consequently Q=N S N^T for some S>=0. This is the only step needing PSD; the remaining contradiction is linear in all six symmetric entries of S.
+
+UNIVERSAL COEFFICIENT EQUATIONS
+Products were reconstructed using only A_x^2=B_y^2=I and cross-party commutation. Same-party words were not commuted. For the seven-root ordering of (2), the actual coefficients of the six forbidden universal words are exactly
+  B0B1:       Q25+Q36+Q47;
+  A0A1:      -Q15-Q16-Q17+Q37+Q46;
+  A0A1B0:     Q13-Q57-Q67-Q77;
+  A0A1B0B1:   Q34;
+  A0A1B1:     Q16-Q45-Q46-Q47;
+  A0A1B1B0:   Q67.
+Thus the displayed equations at lines 145-183 have precisely the coefficient normalization claimed. In coordinates (S11,S22,S33,S12,S13,S23), the row corresponding to a word w is (B11,B22,B33,2B12,2B13,2B23), where B=N^T C_w N and (C_w)ij=([w](h_i h_j)+[w](h_j h_i))/2.
+
+COMPACT FACTORED DETERMINANT PROOF
+Let M be this six-by-six matrix and E=1+z(a+r-ar). Its last row is (0,0,0,0,0,1), since Q67=S23. Its fourth row is (N31,0,0,N32,N33,0), since Q34=N31 S11+N32 S12+N33 S13. Here N31=-K E/(r U V), which is nonzero. Eliminate S23 and S11. In zero-based notation, the remaining matrix is
+  M4_ij=M_ij-M_i0 M_3j/N31,
+  i in (0,1,2,4), j in (1,2,3,4),
+and det M=-N31 det M4.
+
+Clearing row denominators and extracting polynomial row/column common factors gives a four-by-four polynomial matrix P4. All its entries and individual factors are retained in the JSON. Their combined factor is
+  det M4 = F det P4,
+  F=16(a+r)(1-r)(1-arz)(1+rz)/[r^3(a+1)^6 U^3 V^3 K^2].
+An exact fraction-free polynomial determinant, evaluated in a subprocess with a 30-second hard time limit, gives
+  det P4=2a^2 r(a+1)^3(a+r)U^3 V(1-arz)K.
+Therefore
+  det M=32a^2(a+r)^2(1-r)(1+rz)(1-arz)^2 E
+        /[r^3(a+1)^3 U V^3],
+exactly the source's equation (9), lines 184-203. All factors are strictly positive on the stated domain; E=1+z[a(1-r)+r]>0. Hence M is invertible, so S=Q=0. That contradicts a nonzero native target (in particular d>0) in the independent affine Bell basis.
+
+DOMAIN AND LIMITATIONS
+The native implications b=a, a*t=1-r, h=ar, g=K and j=K/a are stated in source lines 25-40. This check verifies the resulting exact algebraic obstruction for every triple in that domain, conditional only on the target having the stated two deterministic zeros and quantum contact. It does not independently reclassify all native contacts or reprove global validity of their Bell functionals. No coefficient n was divided by, so n=0 causes no exception; a=1 is also not exceptional. The loci r=0, r=1, arz=1, z=0, a=0, and K=0 are outside the proof. Nonmembership cannot be transferred to such limits merely because the NPA SOS cone is closed.
+
+EXECUTION
+The independent checker completed in 8.04 seconds. It uses exact symbolic arithmetic, no SDP solver, no floating-point feasibility assertion and no parameter sweep. The expensive step is restricted to the denominator-cleared four-by-four polynomial determinant. Both native-source physicality and the appended C1 seed remain outside this audit.

@@ -1,0 +1,107 @@
+\section[A reciprocal contact completion for a singular angle]{A reciprocal contact completion for a singular angle}
+\label{sec:ui-reciprocal-contact}
+
+The following exact algebraic lemma isolates a useful mechanism. It
+does not assert a complete C2 all-tests theorem.
+
+\begin{lemma}[Reciprocal contact completion]
+Let $A_0,A_2$ be symmetric matrices over a real closed field, let
+$q_0$ be a column vector, and consider
+\[
+ f(q,V,W)=q^T(A_0+V^2A_2)q+2VW b^Tq+(c_0+c_2V^2)W^2.
+\]
+Suppose $(q,V,W)=(q_0,1,1)$ is a zero with all first derivatives
+zero. Then
+\[
+ b=-(A_0+A_2)q_0,\qquad
+ c_0=q_0^TA_2q_0,\qquad c_2=q_0^TA_0q_0,
+\]
+and the entire polynomial has the exact decomposition
+\[
+ \boxed{f=(q-Vq_0W)^TA_0(q-Vq_0W)
+             +(Vq-q_0W)^TA_2(Vq-q_0W).}             \tag{RC1}
+\]
+Consequently $A_0,A_2\succeq0$ imply a sum of squares. If
+$A_0\succ0$ and $q_0^TA_2q_0>0$, its nonzero zero states have
+$V=\pm1$ and $q=Vq_0W$.
+\end{lemma}
+\begin{proof}
+The $q$ equation gives the displayed value of $b$. The $V$
+equation then gives $c_2=q_0^TA_0q_0$, and the $W$ equation gives
+$c_0=q_0^TA_2q_0$. Expanding the right side of (RC1) proves the
+identity. The zero statement follows first from the strictly positive
+$A_0$ term and then from $(V^2-1)^2W^2q_0^TA_2q_0$.
+\end{proof}
+
+\paragraph{Homogeneous form without a mixed inverse.}
+For a positive pure-coefficient $k$, substitute $q=Q/k$ and
+$V=v/k$, and multiply (RC1) by $k^2$. It becomes
+\[
+ (Q-vq_0W)^TA_0(Q-vq_0W)
+ +\frac1{k^2}(vQ-k^2q_0W)^TA_2(vQ-k^2q_0W).       \tag{RC2}
+\]
+Thus its roots use only the pure-coefficient factor $1/k$.
+There is no inverse or radical of a mixed tensor element and no
+comparison between a testing rate and $k$.
+
+\paragraph{The bounded-source C2 UI leading model.}
+Here $u_c=a$ is a positive bounded unit and $v_c=k$ is
+infinitesimal, with $d=1$. To state a residue model, first restrict
+to the subdomain where the original $n,m,\alpha$ are bounded and
+the source parameters $r,g,1-a^2b$ have nonzero residues. In the
+following formulas $a,b,r$ denote those residues, $z=a^2$, and
+\[
+ A_c=1+zr,\quad g=(1+z)b-1+r,\quad
+ \Delta=1+(1+z)b+z(1+z)b^2+2z(1+z)br+z^2r^2+2zr.
+\]
+The source formulas give
+\[
+\begin{gathered}
+ n=\frac{(b+r)A_c^2-r\Delta}{2r\Delta},\qquad
+ m=\frac{(1-r)A_c^2}{2g\Delta},\qquad
+ \alpha=\frac{z^2(1+z)b(b+r)^2}{2(1-zb)\Delta},\\
+ H_0=\overline{k^2CD/(C+D)}
+       =\frac{z(1+z)(b+r)b}{2\Delta},\qquad
+ A_0^{\rm weak}=\overline{A/k^2}
+       =\frac{A_c^2(b+r)}{2zb\Delta}.
+\end{gathered}                                                   \tag{RC3}
+\]
+Normalize the actual contact by $W=1$. With $v=kV$, $X=k\xi$,
+$Z=k\zeta$ and the leading constraint $Y=aW$, the leading
+polynomial of $F/k^2$ is
+\begin{align*}
+ f={}&4n(1+a^2)\xi^2
+ +4m\{V(1+a^2)W-\xi-a\zeta\}^2
+ +4H_0V^2(a\xi-\zeta)^2\\
+ &+4A_0^{\rm weak}(1+a^2)a^2W^2
+ +(4\alpha+2)(1+a^2)(VaW-\zeta)^2\\
+ &+2(\xi+a\zeta)^2-2(1+a^2)\zeta^2.               \tag{RC4}
+\end{align*}
+It has the form of the lemma, with $q=(\xi,\zeta)^T$,
+\[
+ q_0=(-r/b,1/(ab))^T,
+\]
+\[
+ q^TA_0q=4n(1+a^2)\xi^2+(4m+2)(\xi+a\zeta)^2
+                      +4\alpha(1+a^2)\zeta^2,
+ \qquad q^TA_2q=4H_0(a\xi-\zeta)^2.
+\]
+Here $A_0\succ0$ and $H_0>0$. Put
+$s_0=aq_{0,1}-q_{0,2}=-(1+a^2r)/(ab)\ne0$.
+The exact source identities (RC3) verify all three coefficient
+relations in the lemma. Hence the apparently problematic relative
+normal and scale difference combine into the single root
+\[
+             \frac{v(aX-Z)-s_0k^2W}{k}.             \tag{RC5}
+\]
+The ordinary centered normals $(X,Z)-vq_0W$ supply the remaining
+positive directions. Requiring separate positive pivots for the
+relative normal and the scale difference would obscure this
+completion.
+
+This proves an exact leading-model identity on its stated bounded
+subdomain. It does not discard the additional large source scales:
+those are handled algebraically by the centered-packet reduction in
+Section~\ref{sec:ui-full-parent-reduction}. The complete local lifted
+Gram is proved in Section~\ref{sec:local-ui-certificate}; the outer
+projective join remains a separate obligation.

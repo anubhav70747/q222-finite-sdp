@@ -1,0 +1,25 @@
+Native C2 contact-normal kernel, unnormalized F/4.
+
+Normal kernel vector psi=(H+L,-r*u^2*v,H*u,u*v).
+
+For x=u^2,w=v^2, all state normals N1,N2,N3 vanish exactly.
+
+Pkernel=p2(x)w^2+p1(x)w+p0(x):
+
+p2(x) = x*(2*D*r**2*x**2 + 4*D*r*x + 2*D + 2*n*r**2*x**2 + 2*n*r**2*x + r**2*x**2 + r**2*x)/2
+
+p1(x) = (2*A*H**2*x**2 + 2*A*H**2*x + 2*C*L**2*x - 4*D*L*r*x**2 - 4*D*L*x + 2*H**2*alpha*x**2 + 2*H**2*alpha*x + 2*H**2*m*x**2 + 4*H**2*m*x + 2*H**2*m + H**2*x**2 + H**2*x + 4*H*L*m*x + 4*H*L*m - 4*H*alpha*x**2 - 4*H*alpha*x + 4*H*m*r*x**2 + 4*H*m*r*x - 4*H*m*x**2 - 4*H*m*x - 2*H*x**2 - 2*H*x + 2*L**2*m + 4*L*m*r*x - 4*L*m*x - 2*L*r*x**2 - 2*L*x + 2*alpha*x**2 + 2*alpha*x + 2*m*r**2*x**2 - 4*m*r*x**2 + 2*m*x**2 + 2*n*r**2*x**3 + 2*n*r**2*x**2 + r**2*x**2 - 2*r*x**2 + x**2)/2
+
+p0(x) = x*(2*A*H**2*x + 2*A*H**2 + 2*C*L**2 + 2*D*L**2 + L**2)/2
+
+The nonnegative w^2 coefficient is x times a degree-two polynomial:
+
+Poly((D*r**2 + n*r**2 + r**2/2)*x**2 + (2*D*r + n*r**2 + r**2/2)*x + D, x, domain='QQ[r,n,D]')
+
+The constant coefficient is x*((C+D+1/2)*L^2 + A*H^2*(1+x)).
+
+Both p0,p2 have a common x factor. At x=0 the residual is m*(H+L)^2*w, so the w coefficient alone survives; do not divide by x on that axis.
+
+The exact coefficient array is included below; no universal PSD assertion is made.
+
+Poly((D*r**2 + n*r**2 + r**2/2)*x**3*w**2 + n*r**2*x**3*w + (2*D*r + n*r**2 + r**2/2)*x**2*w**2 + (A*H**2 - 2*D*L*r + H**2*alpha + H**2*m + H**2/2 - 2*H*alpha + 2*H*m*r - 2*H*m - H - L*r + alpha + m*r**2 - 2*m*r + m + n*r**2 + r**2/2 - r + 1/2)*x**2*w + A*H**2*x**2 + D*x*w**2 + (A*H**2 + C*L**2 - 2*D*L + H**2*alpha + 2*H**2*m + H**2/2 + 2*H*L*m - 2*H*alpha + 2*H*m*r - 2*H*m - H + 2*L*m*r - 2*L*m - L + alpha)*x*w + (A*H**2 + C*L**2 + D*L**2 + L**2/2)*x + (H**2*m + 2*H*L*m + L**2*m)*w, x, w, domain='QQ[r,m,n,A,C,D,H,L,alpha]')

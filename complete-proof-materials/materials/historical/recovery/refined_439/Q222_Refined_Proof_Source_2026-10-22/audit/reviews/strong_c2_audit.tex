@@ -1,0 +1,369 @@
+% Independent mathematical review; source originals are unchanged.
+\section{Independent review of the strong C2, IH, HI and UI closure}
+\label{sec:independent-strong-c2-review}
+
+\paragraph{Scope and conclusion.}
+This review reads the mathematical bodies of components
+40--43, 64, 67--78, 83--87, 96 and the corresponding joins in 194.
+It does not treat a historical verification receipt as evidence.
+Within the stated physical native C2 source interface, no mathematical
+defect was found in these retained branches. The conclusion is about
+their complete tensor-SOS constructions, including all state normals,
+source openings, arbitrary independent testing rates and literal
+$n=0$. It is not a claim that their scalar graph identities alone are
+sufficient. Native canonical entry, the detailed noncommuting-testing
+theorem A6, matching/two-weak entry, the single-angle chain, the weak-II
+HJ/BSR chain, and the positive-total-scale terminal are separate inputs
+reviewed by other members of this audit.
+
+The fresh script \texttt{strong\_c2\_independent.py} constructs the
+source formulas and the homogeneous parent independently of the archive
+checkers. Its 53 successful exact checks and denominator residues are recorded in the
+adjacent JSON file. Those checks supplement the order, boundedness,
+cap and coverage arguments below; they do not replace them.
+
+\subsection{Common conventions and source estimates}
+
+Let $K_c,K_t$ be independently quantified real closed extensions of
+$\mathbb R$. A source division or radical belongs only to $K_c$;
+a testing radical belongs only to $K_t$. A certificate row may be
+unbounded and may depend on the other rows. Only the final Gram
+coefficients must belong to the bounded tensor ring and have a strictly
+positive definite real residue. The foundational strict-Gram lemma then
+gives an actual finite tensor SOS. Finite real caps are chosen after the
+source and testing residues have been fixed. These quantifiers are
+compatible with Corollary 3.19 and supply no uniform block-size bound.
+
+Write $z=u_c^2$, $y=v_c^2$, $H=zh$, $L=yt$, $B=H+L$ and
+$A_c=1+zr$. Component72 gives the exact six source coefficients GE1.
+Its positive decomposition
+\[
+ M=(1+z)(B+zr)H+y\{B+z(H+r-1)\}+yzj+zrL(1+y)
+\]
+is especially useful: it does not estimate a difference of positive
+terms. For infinitesimal $z$, strong $C,\alpha$ force $B$ to be a
+bounded positive unit. The inequalities $CL=O(1)$ and
+$\alpha(1-H)\le(B+zr)(1+z)/2$ prove the upper and lower assertions.
+Nonnegativity of $n$ gives $yr\le A_c(A_c+L)$, hence the denominators
+used in GE2 are units after their displayed compensating factors.
+The exact identity
+\[
+ [(B+zr)A_c(A_c+L)-r\delta]_{r=1}
+ =-(H+y)(B+z)(1+z)
+\]
+proves that $1-r$ is a unit; this argument requires neither a lower
+bound on $r$ nor strict positivity of $n$.
+
+For weak-$C$ IH, component77's WI1--WI3 show instead that $B$ is
+unbounded. If $B$ were bounded, $\widehat N/[y(B+zr)]\to1$ and
+$\widetilde\Delta/[y(B+zr)]$ would be bounded, forcing $C\ge c/L$
+for a positive real $c$. With $B$ unbounded, $\rho=B/y$ has residue in
+$[0,1]$, $r/\rho$ is bounded, and $1-r$ is a unit. The five normalized
+products in WI3 absorb every occurrence of $H$, $1-H$ and the endpoint
+gap $e=1+zr-L/y$. The illustrative curves and former frontier statements
+in that component are not premises of the closure.
+
+\subsection{Strong II: the dependent row and the missing angular pivot}
+
+The local construction in component40 uses the graph
+\[
+ X=-zr vW/B+\xi,\qquad Y=HuW/B+\eta,\qquad Z=uvW/B+\zeta.
+\]
+This is a polynomial change of all four homogeneous state coordinates.
+It differs from the graph in component64; the latter graph is not
+needed by this local proof. The harmonic completion has denominator
+$cj+dt$, which is a positive unit because $c,d$ are units and
+$t+j=A_c$ is a unit. Thus the opening limits $t=0$ or $j=0$ in residue
+do not insert a singular bounded-Gram coefficient.
+
+The delicate step is correctly handled by LII7. The row
+$R_h=(vQ_n-su(V-y)W)/k$ is dependent. Before using the physical state
+jet, the entire formal $R_hW$ coefficient is eliminated using
+\[
+ (ukW)R_h=uvWQ_n-sU(V-y)W^2.
+\]
+The $\eta$ derivative then forces the formal $N$ coefficient to vanish,
+and the $\xi,\zeta$ derivatives force the two remaining formal
+coefficients. Without this gauge, physical stationarity would not by
+itself imply all the separate formal coefficient vanishings claimed in
+LII9. With the gauge, LII9--LII10 are valid.
+
+The support statement $P_\xi\in(U,z)$ is bounded-coefficient ideal
+membership: its possible source factors are $m=O(z^2)$,
+$nzr=z(nr)$ and $zr$. Monic division therefore produces
+$P_\xi=(U-z)A_\xi+z(V-y)B_\xi$ without a hidden small inverse.
+The corresponding scalar decomposition LII13 follows by two monic
+divisions and the exact value and angular first derivatives. LII15
+then allocates every scalar and first-normal term on the six rows
+$(N,\xi,\zeta,R_h,R,T)$. No state normal or higher testing term is
+discarded.
+
+The five-row block excluding $T$ is strict: its only nontrivial
+two-row Schur complement is $2/[h(1+h)^2]>0$. Finally the polynomial
+zero LII20 adds arbitrary positive real mass to $T^2$ while changing
+all other residue entries by zero. A sufficiently large real multiple
+therefore closes the final Schur complement. This is lawful even when
+$r_0=0$, $n=0$ or $h=1$.
+
+Component41 treats the original homogeneous parent directly. It does
+not homogenize the higher-degree local graph. Its remote harmonic
+frames have only bounded coefficients; for the remaining two blocks,
+RR10 is a nonempty real interval because $0<b_0<1$ and $h_0$ can be
+chosen sufficiently close to $h$. At $b_0=0$ the exact three-square
+identity RR13 replaces that interval argument. Thus literal projective
+endpoints, arbitrary states and all source openings are covered.
+
+\subsection{IH: one exact current calculation and three source shapes}
+
+Components76 and75 retain the entire reciprocal-Bob parent IC3.
+The graph $X=-ruZ$, $Y=HwZ$ has two unrestricted state normals.
+The five currents in IC5, the exact scalar identity IC7, both toric
+identities IC8/IC8a, and the full normal formulas IC10--IC12 are
+polynomial identities at the original source. Their use by the strong
+IH branch imports these identities only, not the weak-source bounds.
+
+An especially helpful cancellation makes the endpoint estimates
+transparent. Put $q=H+r-1$ and $S=A_c+B-H$. With $M,\delta$ as in GE1,
+the coefficient $k$ in IC6 is exactly
+\[
+\begin{split}
+k={2\over\delta}\bigl[&HA_c(B+zr)S(y+2)
+ +(1-H)(B+zr)M\\
+ &+(1+y)(1-r)A_cS(zq-B)\\
+ &+r(1+2z)\{(B+zr)A_cS-r\delta\}+q^2\delta\bigr]
+ +8DHr.
+\end{split}
+\]
+Indeed the two $m$ terms combine by
+$z^2q^2-B^2=(zq-B)(zq+B)$ and $zq+B=G$. This cancels the apparent
+$1/G$ before any source endpoint is taken.
+
+For strong IH, substitute $y=B/\rho$, $r=s\rho$ with $B$ a unit.
+For weak IH at $\rho_0=0$, substitute
+$B=1/\tau$, $y=1/(\tau\rho)$, $r=s\rho$.
+For weak IH at $\rho_0=1$, use
+\[
+ B=1/\tau,\qquad
+ \rho={1+zr-e\over1-H\tau},\qquad y={1\over\tau\rho}.
+\]
+The independent calculation cancels the resulting rational functions
+before specializing the simultaneous infinitesimals. Every displayed
+normalized source quantity in GE3, WIE1 and WIE3 has a nonzero
+denominator residue, including $H_0=0,1$. In particular,
+\[
+ \left({k\over B\rho}\right)_0
+ ={2(B^2s+BHs+BH-Bs-H^2+H)\over B^2}
+\]
+in strong IH, it is $2s$ in the weak $\rho=0$ case, and
+$((k-8DHr)/B)_0=r$ at the weak $\rho=1$ endpoint.
+These are simultaneous limits, not iterated limits. They exclude the
+possible hidden ratios $z/\rho$ and uncompensated opening poles.
+
+For interior weak IH, the positive term added by IC8a gives the $T$
+row a unit pivot even at $r_0=0$. The displayed two-row determinant
+is positive for $0\le r\le\rho/(1+\rho)$; the other scalar pivots
+are positive. The full normals are divided by
+$\sqrt{4n+2}$ and $\sqrt{B/[H(1-H)]}$. The exact quotient formulas
+IC11--IC12 make all their scalar couplings infinitesimal, while the
+normal residue is $\operatorname{diag}(1,2/(1+\rho))$. This uses the
+compensated products $AH/B$ and $\alpha(1-H)/B$, so both opening
+endpoints are included.
+
+At $\rho_0=0$, replace $T$ by $T_\rho=\rho T$ and multiply IC8a
+by $\rho$. The remaining two-row block is
+\[
+ \begin{pmatrix}2&-s\\-s&1+2s\end{pmatrix},\qquad 0\le s\le1,
+\]
+whose determinant is at least two. The coefficient $f_X/\rho$
+remains bounded, so this rescaling does not lose the first $X$ normal.
+At $\rho_0=1$, retain the whole full-state square
+$4D(J+eZ)^2$. The D-removed normal quotients have only bounded
+$De$ constants. The exact relation WIE5 eliminates $R_2$ using the
+pure-source infinitesimal $1/\sqrt D$. The final seven-row residue
+is the strictly positive diagonal in WIE6. Subtracting only a scalar
+graph square instead would not justify this step; the retained square
+here is explicitly a full-state square.
+
+For strong IH, the entire explicit $C$ dependence is precisely the
+two full-state squares SL2. Retaining their excess and capping $C$
+does not alter the original coefficient $k$. The two finite blocks
+have determinants $8c_*(1+L)$ and $2a_*c_s$, both positive at all
+allowed openings. A real multiple of the scaled IC8a identity buys
+the remaining $T_\rho$ pivot. This establishes the whole parent,
+not only the graph.
+
+\paragraph{Remote IH and the open axis.}
+Component74's remote corners include the entire normal restoration;
+their $\sqrt d$ rows never create an inverse of a weak $d$ in a
+Gram coefficient. Component69 is indispensable. On the open axis
+$u_0\ne0$, $w\sim0$, its exact identity $PE=VZ$ splits the cross
+term between two blocks. The interval OA7 is nonempty for every
+$s=\sqrt{1+u_0^2}>1$ and $0<\rho_0<1$. At $\rho_0=1$ a finite
+real cap on the unbounded $D$ is sufficient; at $\rho_0=0$ the entire
+$D$ packet is retained and the unscaled $Z$ row disappears from the
+exact remainder. In particular its first $X$ coefficient then is
+$uV+u(1-H)wE/\sqrt B$, with no omitted $Z$ dependence.
+
+The strong remote theorem71 treats the same endpoint forms with
+its own source estimates. At opening boundaries its real penalty
+argument is valid because the constrained residue forms are explicitly
+strict. In the both-infinite testing chart the core contribution to
+the $E^2$ pivot is retained; the potentially finite normal coefficient
+$2\{AH-\alpha(1-H)\}-(1-H)$ has zero residue. Its sole external
+testing input is A6 in the unit/unit cell. Together these bodies cover
+the full nine testing-type cells; the stand-alone join73 adds no new
+mathematical ingredient.
+
+\subsection{HI: source exclusion, four-term circuit and arbitrary state}
+
+Components87 and67 derive the source normalization from $n\ge0$.
+Their positive remainder in WE3 makes the contradiction for unbounded
+$R=r/q$ rigorous: dividing by $r^2(H+yr)$ leaves a positive unit
+minus infinitesimals. If $r$ is weak, the gap $g>0$ forces $H_0=1$;
+if $r$ is a unit, the necessary quotient is bounded by $1/r$.
+This handles both alternatives and literal $n=0$.
+Consequently $R$ is bounded, $H\sim1$, and all four coefficients
+$m,C,D,\alpha$ are unbounded. Component68 can therefore choose
+arbitrarily large finite real caps after fixing the testing residue.
+Its strict kernel/penalty forms cover the entire complement of the
+critical nonzero infinitesimal $p=1/u,v$ corner, including its literal
+axes.
+
+At the critical corner, component43's state coordinates
+$(s,Q,N_c,N_m)$ are a full linear state parametrization with only
+pure-source divisions. Both $s$ and $Q$ are decomposable tensors.
+The sign of $sQ$ is determined by a pure-testing expression $-SY$,
+so the case split and every positive fourth root in the circuit are
+lawful. No order or radical is taken on a general mixed tensor.
+The graph roots $A=Ps$, $B=Vs$, $C=PVQ$, $D=Q$ and
+$G=(ABCD)^{1/4}$ satisfy the exact finite circuit decompositions
+N0M8. A finite positive average supplies simultaneous strict pivots
+on every listed variance and conductor row.
+
+The exact half-angle identities
+\[
+ G(\sqrt p-q^{1/4})=q^{1/4}(\sqrt{AC}-G),\qquad
+ G(\sqrt v-y^{1/4})=y^{1/4}(\sqrt{BC}-G)
+\]
+are the decisive conductors. Finite polynomial Taylor expansion in
+$\sqrt p,\sqrt v$ has bounded coefficients. Its degree-two and
+higher terms become infinitesimal bounded quadratic forms on the
+conductor rows. The potentially dangerous degree-zero and degree-one
+$G$ terms cancel by the exact state and angle jets N0M6. The displayed
+identity for that cancellation is algebraically correct. Both first
+state-normal sums vanish at contact and are allocated by the same
+conductors; their complete raw terms are present.
+
+For arbitrary $n\ge0$, component42 retains the entire actual packet
+$4n d_p d_v x^2$, with its centered full-state root $x$.
+The remaining coefficients depend on $n$ only through the bounded
+$\nu=2nR$. All four graph coefficients have common residue
+$2(1+r)^2/(3+r)\in[2/3,2]$, and both normal pivots are
+$4/(3+r)>0$, including $r=0$. Thus the predecessor's finite circuit
+argument applies without an inference from $n=0$ to $n>0$.
+For $sQ<0$ or $sQ=0$ the raw-root diagonal Gram is already strict.
+The proof is a pointwise tensor SOS for each testing state; the roots
+need not remain linear polynomials in state coordinates. That is
+exactly sufficient for the qualitative criterion being used.
+
+\subsection{UI: all normals, the matched Hessian and finite caps}
+
+Component83 supplies the entire centered-packet identity UR16.
+In particular, it cancels $Ct-Dj$ before estimating the harmonic
+normal and keeps every signed-core term. The denominators of the
+compensated products in UR9--UR11 are positive units. Their continuity
+through allowed residue openings is therefore algebraic.
+
+The local proof84 gives a polynomial inverse for all state normals.
+Its scalar and first-normal divisions are monic in $u-a$ and
+$v^2-k^2$. The identities UI1 allocate them without a mixed inverse.
+The $E_r$ first-normal coefficients have zero residue. The remaining
+bounded Gram has six rows, with the ordinary-angle rows $S,T$
+separate. Setting $S=T$ gives the matched full leading Hessian after
+an invertible bounded coordinate change. The Schur formulas UI4--UI5
+are checked directly from the independently rebuilt RC4 leading
+polynomial, including both state directions before elimination.
+Their positivity follows from
+\[
+ Q_n=(1-(z+1)r)(1+zr)-zr g\ge0
+ \quad\Longrightarrow\quad r\le1/(z+1).
+\]
+Every denominator in these Schur formulas is a unit. The exact zero
+in UI1 subsequently distributes the positive total Schur mass between
+$S^2$ and $T^2$; its other residue contributions vanish.
+
+For diverging $n,m,\alpha$, the cap argument is sound but requires
+the real-interior approximation supplied in component78. It is not
+lawful to substitute an actual $b$ directly into a leading formula
+with denominator $1-zb$ when that denominator changes sign at an
+infinitesimal rate. Instead use
+$b_s=sb+(1-s)/(1+z)$, $r_s=sr$ and the exact identity
+\[
+ f(b_s,r_s)=(1-s)(1+s-sr)+s^2f(b,r).
+\]
+Small further perturbations make the remaining gaps strict. This
+approaches every allowed boundary by valid finite real leading
+sources. At most two hard-state penalties diverge, and every possible
+pair of their hard rows is independent with a unit determinant.
+One can therefore adjust the hard coordinates into their exact
+nearby kernels. The positive matched Schur form and bounded minimizing
+hard vector give a uniform positive lower bound on the complete
+Hessian. Taking the kernel limit and applying the real finite-penalty
+lemma yields lawful finite caps below the original coefficients.
+
+The ordinary-angle complement in78 is genuinely all-state. The
+exact relation $R_0K_0-(uX-Z)V_0=0$ permits the real rank-one
+allocation UA1--UA3. The normalized Laurent determinant UA11 has
+nonnegative nonconstant coefficients, including strictly positive
+$U^{-1}$ and $T$ coefficients. In logarithmic coordinates these
+already span both directions, so its stationary zero is the unique
+minimum and it is strictly positive away from the contact. UA12
+shows that the inverse expressions used only in this real residue
+calculation extend through the divergent source boundaries. The
+same valid real-interior approximation justifies the cap limit there.
+
+Every remaining UI endpoint is treated by the original homogeneous
+parent in UA13--UA16. The displayed forms have strict residue in
+their stated complete roots; roots themselves may be unbounded.
+Literal axes and projective endpoints require no testing division.
+Together with the local certificate and the ordinary complement this
+closes UI and, by exact reflection, OU.
+
+\subsection{Angle exclusions, five-event terminal and assembly}
+
+Component96's ordinary/ordinary argument shows $m,A,D$ strong and
+proves that weak $C$ or weak $\alpha$ forces both complementary
+events weak. Its three directed exclusions use exact source
+inequalities and positive numerators; the small/ordinary exclusion
+also uses the separately audited bounded-state/unbounded-$b$ entry.
+Component87 rules out weak $C$ at an unbounded first actual angle
+and a bounded second one. These exclusions concern actual source
+angles only and impose no testing-rate restriction.
+
+In component86, the selected five-event capped parent is used only
+on commuting testing strata. NW1--NW5 give strict full-state or
+coordinate Hessian forms there, and every higher monomial has an
+infinitesimal bounded Gram allocation. The noncommuting residue case
+uses A6 on the original physical source; the capped parent is never
+assumed physical. This is an essential distinction and is respected
+by the proof.
+
+The source table and reflection in194 assemble these branches with
+the separate matching, single-angle and weak-II chains. All source
+types and independent testing types are exhausted. No branch above
+uses the global C2 conclusion as a premise. Its old frontier remarks
+are historical scope descriptions, not mathematical hypotheses of
+the retained local identities.
+
+\paragraph{Minimal closure and honest compression.}
+The exact equation-level closure and safe deletions are in
+\texttt{strong\_c2\_minimal\_closure.json}. In particular, 64's
+unused alternate graph, 73's duplicate join, example curves, old
+frontier paragraphs and verification-status prose can be removed.
+The all-$n$ HI proof should merge43 and42. The UI boundary
+approximation in78, the IH open-axis proof69, the full normal
+formulas and the source endpoint calculations cannot be removed.
+This review fragment is a mathematical audit and compression map.
+It is not a replacement for the exact certificate equations named
+above unless those equations are incorporated into the refined
+manuscript's explicit certificate appendix.

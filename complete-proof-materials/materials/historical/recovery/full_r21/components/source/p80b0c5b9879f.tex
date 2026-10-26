@@ -1,0 +1,239 @@
+\section{The entire bounded-$h/q$ part of the doubly small endpoint}
+\label{sec:new-c144-bounded-h-ratio}
+
+\paragraph{Source scope and result.}
+Retain the original entered physical C14.4 source, all strict gaps and
+all original prior-complement intersections. Assume
+\[
+ S=\sigma+L,\ \kappa=x/S,\ \nu=\sigma/S
+       \in\operatorname{Inf}_{>0},\qquad
+ \ell=1-\nu,\quad q=\nu/\ell,\quad
+ \tau=h/q\ \hbox{is bounded}.
+ \tag{BN1}
+\]
+The complete original parent is a finite separated tensor SOS for
+every test and every real or complex state on BN1. The quantity
+$\beta/q^2$ is unrestricted, including zero and unbounded values.
+The proof below is a fresh circuit completion of SN, not an import of
+a missing historical endpoint proof.
+
+\paragraph{Exact source estimates.}
+Use the definitions of SN2, except that $n_s=\beta/q^2$ need not be
+bounded. The exact sphere SN3 remains valid. Put $b=\beta/q$ and
+$z=\kappa\beta/q^2$. Then
+\[
+\begin{gathered}
+ h=q\tau\in\operatorname{Inf},\quad\theta\sim1,\quad
+ e=\kappa\tau/\ell\in\operatorname{Inf},\quad M\sim1,\\
+ b=\frac{\tau(B/S)-\ell H_0}{2\theta(P/S)},\qquad
+ \mu\ell^2=\frac{\tau(1+x)(1+\sigma r)}{2M(P/S)},\\
+ Jd_s+\theta z=\frac{\ell^2\mathcal H}{2(P/S)}\sim\tfrac12.
+\end{gathered}\tag{BN2}
+\]
+In particular $b,z,d_s,\mu,\tau$ are bounded, $\tau$ and $\mu$
+have positive real lower bounds, and at least one of $d_s,z$ is a
+positive bounded unit. The exact inequality $\beta\ge0$ supplies
+the lower bound on $\tau$. Also
+$c_0,a_0,a_1\sim1/2$, $D,\alpha,m,\beta$ are infinitesimal.
+Although the two terms below need not have small difference before
+subtraction, their displayed bounded formulas in BN2 give
+\[
+                  A_{00}:=\mu\ell^2-b\sim\tfrac12.
+ \tag{BN3}
+\]
+This argument takes residues only of bounded source coefficients and
+never uses an estimate divided by $q$. It allows arbitrary relative
+rates of $S,\kappa,q$.
+
+\paragraph{A retained circuit and two actual positive rows.}
+Use the full reciprocal parent SN5, the two unrestricted normals SN6,
+and the shifted exact scalar dictionary SN9. Let $\zeta=\ell/\kappa$,
+$a=u^2,c=w^2$, $x=\kappa S$, and assume $u,w\ge0$ by the original
+sign gauges. Both may be zero. For every state define
+\[
+\begin{array}{ll}
+ A_1=\sqrt\beta\,uZ,&A_2=\sqrt\beta\,W/(\zeta\sqrt q),\\
+ A_3=\sqrt\beta\sqrt{x/q}\,wZ,
+ &A_4=\sqrt\beta\,uwW/(\zeta q\sqrt x),
+\end{array}\tag{BN4}
+\]
+\[
+ \Psi=\sum_{i=1}^4 A_i^2-\frac{4\beta}{\zeta q}uwWZ,
+ \qquad E_1=A_1-A_2,\quad E_2=A_3-A_4.
+ \tag{BN5}
+\]
+Every monomial and its radical is a product of a pure-source and a
+pure-testing element. This remains true if $x/q$ is unbounded.
+The exact inequality meant here is a separated SOS certificate:
+\[
+                    \Psi-\tfrac12(E_1^2+E_2^2)\in\Sigma T^2.
+ \tag{BN6}
+\]
+Indeed, if $WZ\ge0$, then $A_1A_2,A_3A_4\ge0$ and
+\[
+ \Psi=E_1^2+E_2^2+
+              2(\sqrt{A_1A_2}-\sqrt{A_3A_4})^2.
+\]
+The radicals displayed here split into pure-source and pure-testing
+radicals. If $WZ<0$, use instead
+\[
+ \Psi-\tfrac12(E_1^2+E_2^2)
+ =\tfrac12(A_1+A_2)^2+\tfrac12(A_3+A_4)^2
+                  +\frac{4\beta}{\zeta q}|uwWZ|.
+\]
+The last positive separated monomial is a square. Thus BN6 is valid
+for all states, including $WZ=0$. At the actual source contact every
+$A_i$ agrees, so $\Psi$ and its first contact derivatives vanish.
+
+\paragraph{The exact scalar after circuit subtraction.}
+Write $N_0=W/\zeta-uwZ=N/\ell$, where $N$ is SN7, and keep
+$G,B,B_u,R$ from SN7. Thus
+\[
+ R=\frac{\sqrt S}{\zeta}G-uN_0.
+ \tag{BN7}
+\]
+Subtract the entire circuit BN5 from the exact scalar graph in SN9.
+Define
+\[
+\begin{gathered}
+ A=\zeta^2 A_N-b,\qquad A_P'=A_P-zc/\ell^2,\\
+ K'=K-2\beta/(\zeta q),\quad J'=K'-\ell A_P',
+ \quad L'=J'-A/\zeta,\\
+ H'=F_Z-\beta a-\beta xc/q-\ell^2ScA_P'
+                          +ac(A-2\zeta J').
+\end{gathered}\tag{BN8}
+\]
+Then $F_0-\Psi=A N_0^2+A_P'G^2-2\zeta uwZL'N_0+H'Z^2$.
+All coefficients of $A$ and $A_P'$ are bounded:
+\[
+ A=\mu\ell^2(1+ra+ec)^2
+       +(\beta+\tfrac12)\tau^2c(1+c)-b,
+ \qquad \overline A=\overline{A_P'}=\tfrac12.
+ \tag{BN9}
+\]
+Here and below the residue is taken at infinitesimal $u,w$.
+
+The circuit subtraction has especially simple exact effects on the
+SN10 quotient dictionary:
+\[
+\begin{gathered}
+ L'_a=L_a,\qquad L'_c=L_c+\kappa n_s/\ell,\qquad
+ H'_{20}=H_{20},\quad H'_{02}=H_{02},\quad
+ H'_{11}=H_{11}-2n_s,\\
+ H'=S\delta^2(d_s+cH_{02})
+               +c(a-x)\delta H'_{11}+c(a-x)^2H_{20}.
+\end{gathered}\tag{BN10}
+\]
+In particular no coefficient $n_s$ remains on its own in the final
+conductors. With $C_R$ and $L_a$ from SN11--SN13 put
+\[
+ C_G'=\kappa(H_{11}-2n_s)/\ell,\qquad
+ C_N'=-H_{11}-2\ell L_c/\kappa.
+ \tag{BN11}
+\]
+These are bounded. The cancellation for the second coefficient is
+explicit:
+\[
+ C_N'=-Sa_0\ell^2r+(\beta+m+\tfrac12)\tau^2(c+1/\ell)
+                 +2\ell\kappa\mu\tau-m\tau^2.
+ \tag{BN12}
+\]
+For $C_G'$ use the bounded formula SN13 and $\kappa n_s=z$.
+The exact full scalar is consequently
+\[
+\begin{split}
+ F_0={}&\Psi+A N_0^2+A_P'G^2+d_sB^2+H_{02}(wB)^2
+       +C_RR^2-2\sqrt S\,L_aGR\\
+ &+C_G'G(wB)+C_N'N_0(wB_u).
+\end{split}\tag{BN13}
+\]
+This is an identity in unrestricted state coordinates, not a
+restriction to a contact graph in the full parent.
+
+\paragraph{Free helper rows across the whole source sphere.}
+First reserve the positive rows $E_1,E_2$ from BN6. If $d_s$ is a
+unit, $wB$ has infinitesimal cost on $\sqrt{d_s}B$. Otherwise
+$z$ is a positive bounded unit. The exact identity
+\[
+ E_2=-\sqrt z\,\{(w/\ell)G+
+                          \sqrt S\,w(w-\sqrt q)Z\}
+\]
+then gives
+\[
+ wB=-\frac{w+\sqrt q}{\sqrt z}E_2
+                   -\frac{w(w+\sqrt q)}\ell G.
+ \tag{BN14}
+\]
+Every coefficient in BN14 is infinitesimal, so any fixed real pivot
+on $wB$ is free at infinitesimal Gram cost. Only the chosen pure-source
+unit $\sqrt z$ is inverted. Literal $\beta=0$ uses the first branch.
+
+After this pivot has been purchased, the normalized SN8 identity is
+\[
+ \delta^2N_0^2+\frac{2\kappa\delta}{\ell}G(wB)
+          +2\kappa(wB)^2-(wB_u)^2
+                         =(\delta W/\zeta)^2.
+ \tag{BN15}
+\]
+It buys any fixed pivot on $wB_u$ at infinitesimal cost. The order of
+these two purchases is deliberate; no weak $B$ diagonal is needed
+in the second step.
+
+\paragraph{Both full normals and their only additional row.}
+Use the complete $H_X,H_Y,H_{XY},Y_P,Y_a,Y_c$ from SN18 and its
+bounded $\widehat A_X,\widehat X_a,X_c$ from SN17. These formulas
+only require $\tau,\mu,\beta$ bounded, not $n_s$ bounded.
+The entire first-normal part is
+\[
+\begin{split}
+ L_X={}&\ell w\widehat A_XN_0
+       +\frac{uw\sqrt S}{\ell}\widehat X_aG
+       +d_s\sqrt S\,quB-bB_u+wX_c(wB_u),\\
+ L_Y={}&\sqrt{r(1-r)}\{Y_PG+\sqrt S\,Y_aR+Y_c(wB)\}.
+\end{split}\tag{BN16}
+\]
+The apparent extra $B_u$ coupling is paid by the actual circuit row
+$E_1$, using the exact, zero-face-safe identity
+\[
+ bB_u=-(w+\sqrt q)\sqrt b\,E_1-b(w+\sqrt q)N_0.
+ \tag{BN17}
+\]
+All coefficients on the right have zero residue because $b$ is
+bounded. No inverse of $b$ or $\beta$ is used. In the $B$ term in
+$L_X$, write $d_sB=\sqrt{d_s}(\sqrt{d_s}B)$; this is likewise
+face-safe when $D=0$. All direct normal coefficients are
+infinitesimal, and $H_X,H_Y\sim1/2$, $H_{XY}$ is infinitesimal.
+There is no missing $X$ or $Y$ normal and no imposed state ratio.
+
+\paragraph{Allocation and all-tests conclusion.}
+Keep a fixed positive fraction of each circuit row in BN6.
+Use the strict base rows $(N_0,G,X_e,N_y,\sqrt{d_s}B,E_1,E_2)$,
+omitting any zero row. Their main four diagonal residues are $1/2$;
+the last three have fixed positive pivots wherever their rows are
+nonzero. Terms containing $R$ are infinitesimal matrix perturbations
+by BN7. Purchase sufficiently large fixed pivots on $wB,wB_u$ by
+BN14--BN15, and use them for the bounded cross terms in BN13 and
+BN16. Formula BN17 pays the remaining first-normal row at
+infinitesimal cost. Every purchase is taken from an explicitly
+retained positive square or from the exact SOS remainder BN6.
+The resulting bounded Gram has strictly positive definite real
+residue. The surviving strict bounded-Gram lemma therefore gives
+finite tensor SOS for SN5 with both unrestricted normals restored.
+
+This proves all infinitesimal $u,w$, including the literal axes.
+For noninfinitesimal Alice use the unchanged adjacent-$C,A$ theorem
+CE1--CE10; $C,A$ are unbounded on BN1. For the other Bob charts use
+the surviving small-$e$ unmatched theorem SE10--SE12, since
+$\overline\ell=1$. The sign gauges and real/imaginary state split
+are the original exact ones. The local argument already handles
+either sign of $WZ$, so no state normalization or state-chart
+exclusion is required. Both literal $D=0$ and $\beta=0$ are covered
+whenever they intersect BN1.
+
+\paragraph{Verification status.}
+The accompanying exact checker is
+\texttt{check\_c144\_bounded\_h\_ratio.py}. Bounds and separated
+SOS legality are the analytical argument above. At creation this
+theorem is a candidate pending independent lead review. The source
+case $h/q$ unbounded and the $\ell$-infinitesimal endpoint remain
+separate; no whole-C14.4 conclusion is asserted here.

@@ -1,0 +1,149 @@
+\section{A limit of literal Schur-remainder extraction}
+\label{sec:schur-remainder}
+
+The complete parent and a scalar expression obtained by eliminating state
+coordinates have different feature requirements. This section gives an exact
+example: the literal Schur remainders of one physical C2 family span an
+infinite-dimensional vector space, although the complete family already has
+five fixed testing features. The obstruction therefore concerns one extraction
+procedure, and supplies no obstruction to a finite lift of the complete parent.
+
+Use the complete quarter-parent $P_c$ in the regular-C2 section, with
+$D_u=1+u^2$, $D_v=1+v^2$, state column
+$\psi=(W,X,Y,Z)^T$, and source order $(d,n,m,C,A,D,\alpha)$.
+Consider
+\[
+ c(t)=\left(1,\frac78+t,\frac98,\frac1{18},
+                  \frac{11}8,\frac98,\frac1{18}\right),
+ \qquad t\geq0,
+ \qquad P_{c(t)}=\psi^TM_t(u,v)\psi.
+\]
+The full identity, before any state elimination, is
+\begin{equation}
+ P_{c(t)}=P_{c(0)}+tD_uD_vX^2.
+ \label{eq:schur-parent-increment}
+\end{equation}
+
+\subsection{Positivity of the entire source family}
+
+For $uv\ne0$, the upper $WXY$ block of $M_0$ is positive definite.
+Indeed, all event packets have positive coefficients, and the restriction of
+the signed $d$-packet to $Z=0$ is
+\[
+ \frac12\bigl[(uW+uvX-Y)^2+D_uv^2Y^2+D_vX^2\bigr].
+\]
+The three unweighted rows $(u,uv,-1)$, $(0,0,v)$, $(0,1,0)$ have
+determinant $-uv$. Thus their positive weighted Gram matrix is positive
+definite. With $U=u^2$, $V=v^2$, direct expansion gives
+\[
+ \det M_0=D_u^2D_v^2UV L_0(U,V),
+\]
+where
+\begin{equation}
+\begin{split}
+ L_0(U,V)=\frac{121}{331776}\bigl(&880U+9317U/V+720V\\
+                  &+880/V+9477V/U+720/U-21994\bigr).
+\end{split}
+\label{eq:seed-laurent}
+\end{equation}
+This is nonnegative for $U,V>0$ by weighted arithmetic--geometric mean.
+The six positive integer weights sum to $21994$, and their weighted
+exponent vectors sum to $(0,0)$:
+\[
+ 880+9317-9477-720=0,
+ \qquad -9317+720-880+9477=0.
+\]
+Consequently the weighted geometric mean of
+$U,U/V,V,1/V,V/U,1/U$ is $1$. The determinant is nonnegative, and
+the positive upper block makes its scalar Schur complement nonnegative.
+Hence $M_0\succeq0$ for $uv\ne0$.
+
+Continuity includes either angle equal to zero. Bihomogenizing the parent
+to degree two in each angle pair includes the projective endpoints by the
+same argument. Equivalently, signs are covered by the exact gauges
+\[
+ (u,v;W,X,Y,Z)\longmapsto
+ (\epsilon u,\eta v;W,\eta X,\epsilon Y,\epsilon\eta Z),
+ \qquad \epsilon,\eta\in\{-1,1\}.
+\]
+The additional term in \eqref{eq:schur-parent-increment} is nonnegative
+for $t\geq0$, so the entire family is positive on all states and angles.
+A complex state gives the sum of the values on its real and imaginary
+parts; mixtures are handled by linearity. The same assertions hold over
+real closed fields by their first-order polynomial formulations.
+
+\subsection{The literal scalar remainders}
+
+Restrict to $v=1$ and let $U=u^2>0$. Let $A_t$ denote the upper
+$3\times3$ principal state block. Define
+\begin{align*}
+ A(U)&=26883U^2+105314U+29403,\\
+ B(U)&=29000U^2+50384U+21384,\\
+ D_t(U)&=A(U)+tB(U),\\
+ N_t(U)&=112167(U-1)^2+t(121000U^2-189648U+81576).
+\end{align*}
+The determinant identities are
+\[
+ \det A_t=\frac{11}{20736}(U+1)D_t(U),\qquad
+ \det M_t=\frac{11}{82944}(U+1)^2N_t(U).
+\]
+The literal Schur remainder after minimizing over $W,X,Y$ with $Z=1$
+is therefore
+\begin{equation}
+ S_t(U)=\frac{(U+1)N_t(U)}{4D_t(U)}.
+ \label{eq:literal-schur-remainder}
+\end{equation}
+Each coefficient of $D_t$ is positive for $t\geq0$, so these rational
+functions are defined for all $U>0$.
+
+The following exact identities control every possible cancellation:
+\begin{align*}
+ \operatorname{Res}_U(A,B)&=1386911105418617856,\\
+ \operatorname{Res}_U(D_t,N_t)
+   &=10441728(8t+11)(1000t+927)(33677t+55550)^2,\\
+ D_t(-1)&=-49028,\\
+ \operatorname{disc}_U(D_t)
+   &=448(129472t^2+10942118t+17699275).
+\end{align*}
+In particular $D_t$ is coprime to $(U+1)N_t$ for every $t\geq0$.
+For distinct $s,t$, a common divisor of $D_s,D_t$ would divide
+$(s-t)B$ and then $A$, contradicting the first resultant.
+
+\begin{proposition}
+The functions $S_t:(0,\infty)\to\mathbb R$, $t\geq0$, are linearly
+independent in the sense that every finite family with distinct parameters
+is linearly independent. They cannot all be sums of squares from a single
+fixed finite-dimensional space of functions of $U$.
+\end{proposition}
+\begin{proof}
+Suppose $\sum_{i=1}^r\lambda_iS_{t_i}=0$ on $(0,\infty)$, with distinct
+$t_i$. Multiplication by $4\prod_iD_{t_i}$ yields a polynomial identity.
+Reduce it modulo $D_{t_i}$. Every term except the $i$th vanishes. Its
+remaining product consists of $(U+1)N_{t_i}$ and the other denominators,
+each coprime to $D_{t_i}$, so it is a unit in
+$\mathbb R[U]/(D_{t_i})$. It follows that $\lambda_i=0$.
+
+If $V$ is a finite-dimensional function space, the linear span of all
+products of two elements of $V$ is finite dimensional, of dimension at
+most $(\dim V)(\dim V+1)/2$. Every sum of squares from $V$ belongs to
+that product span. The established linear independence rules out a
+single such space for all $S_t$.
+\end{proof}
+
+\subsection{Why the complete parent avoids this obstruction}
+
+The complete family already has five fixed testing features. Since $M_0$
+is positive semidefinite, take the four entries of
+$M_0(u,v)^{1/2}\psi$ together with $\sqrt{D_uD_v}X$. The coefficients
+are $1,1,1,1,t$, respectively. This is a fixed finite feature
+representation of \eqref{eq:schur-parent-increment}, including arbitrary
+nonnegative source parameter $t$. The unique positive semidefinite square
+root can be chosen as a semialgebraic testing function.
+
+Thus substituting a source-dependent state minimizer into a previously
+fixed feature space need not preserve that space. The literal-remainder
+argument cannot be used to reject the complete-parent local construction,
+nor does the five-feature example supply a global atlas for arbitrary
+quantum supports. The file \nolinkurl{c2/schur_remainder_check.py}
+recomputes the complete parent, determinants, gauges, resultants and
+contact identities; its receipt records the precise finite checks.

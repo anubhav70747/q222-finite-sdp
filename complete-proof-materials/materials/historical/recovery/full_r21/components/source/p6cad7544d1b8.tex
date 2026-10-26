@@ -1,0 +1,165 @@
+\section{All tests for the uniform infinitesimal C1 source}
+\label{sec:c1-uniform-all-tests}
+
+The two state charts can be joined without importing an all-tests atlas
+label. We first record two short outer-angle identities.
+
+\begin{lemma}[Two strong currents]
+Suppose the original event coefficients are nonnegative, $d>0$, and
+$d/c,d/D$ are infinitesimal, where $c=e_3$, $D=e_5$.
+Then every testing chart with $1/v$ bounded is tensor-SOS, for every
+other angle and every state.
+\end{lemma}
+\begin{proof}
+Put $g=cD/(c+D)$, $h=D/(c+D)$, $R=uW-Y$,
+$C=v(uX-Z)$, $B=X+uZ$, and $N=R+hC$.
+Let $D_u=1+u^2$, $D_v=1+v^2$ and set
+\[
+ K_0=2\sqrt g\,C,\qquad
+ B_0=\sqrt{2d}\sqrt{D_v/D_u}\,B,\quad
+ c_u=D_u^{-1/2},\quad t_u=uD_u^{-1/2},\quad
+ \eta_v=\sqrt{D_v}/v.
+\]
+The complete selected parent is exactly
+\[
+\begin{split}
+4cD_vR^2+4D(R+C)^2+d\mathcal H
+={}&4(c+D)N^2+4cv^2R^2+2d(R+C)^2\\
+ &+2dD_u(vY-Z)^2+(K_0,B_0)Q(K_0,B_0)^T,
+\end{split}
+\]
+where
+\[
+ Q=\begin{pmatrix}
+ 1-\dfrac{d}{2g}c_u^2\eta_v^2&
+ \sqrt{\dfrac{d}{2g}}t_u\eta_v\\
+ \sqrt{\dfrac{d}{2g}}t_u\eta_v&1
+ \end{pmatrix}.
+\]
+To check the identity, use $Z=(uB-C/v)/D_u$ and complete the two current
+squares. Since $d/g=d/c+d/D$ is infinitesimal and $c_u,t_u,\eta_v$
+are bounded, $\bar Q=I_2$. Restore every unselected positive event.
+All roots separate between fields. Clearing the original pure-testing
+homogeneous angle factors gives the same identity at literal infinity:
+$\eta_v^2=1+(1/v)^2$, and $c_u,t_u$ are the normalized homogeneous
+Alice coordinates. Thus no infinite-angle endpoint is excluded.
+\end{proof}
+
+\begin{lemma}[Critical current mass outside the small Alice chart]
+Under the preceding strength assumptions, suppose
+\[
+ \gamma=\frac{A g}{d^2}\quad\hbox{is bounded},\qquad \bar\gamma\geq\tfrac14,
+\]
+where $A=e_4$ is the original event coefficient. Then every independent
+test with $v$ infinitesimal and $1/u$ bounded is tensor-SOS, for every
+state, including the homogeneous Alice-infinite endpoint.
+\end{lemma}
+\begin{proof}
+Keep $R,C,B,N,g,h,c_u,t_u$ from the preceding proof, and put
+$\epsilon=d/g$, $q=\sqrt\epsilon$ and
+\[
+ K_1=2\sqrt g\,C+\sqrt{d\epsilon}\,Y,\quad
+ B_1=\sqrt d(B-uvY),\quad V_0=\sqrt d\,vY,
+ \quad Y_0=\sqrt{d\epsilon}\sqrt{D_u}\,Y.
+\]
+Define
+\[
+ L_0=\frac{qc_u}{2}(K_1-c_uY_0)-t_uvB_1+c_uvV_0.
+\]
+Direct multiplication gives $L_0=\sqrt{dD_u}\,v(vY-Z)$ and the exact
+full selected-parent identity
+\[
+\begin{split}
+&4cD_vR^2+4D(R+C)^2+4AD_uD_vY^2+d\mathcal H\\
+&\qquad=4(c+D)N^2+4cv^2R^2+2d(R+C)^2+\mathcal G,\\
+\mathcal G={}&K_1^2+2D_v(B_1^2+V_0^2)
+ +(4\gamma D_v-c_u^2)Y_0^2\\
+&+2qv(K_1-c_uY_0)V_0-2L_0^2.
+\end{split}
+\]
+The four-root Gram of $\mathcal G$ has residue
+$\operatorname{diag}(1,2,2,4\bar\gamma-\bar c_u^2)$.
+Its last entry is at least $1-\bar c_u^2=\bar t_u^2>0$ because $1/u$
+is bounded. Every correction is polynomial in bounded
+$q,v,c_u,t_u,\gamma$ and has zero residue. The strict-residue lemma and
+restoration of the other events prove the claim. The displayed bounded
+homogeneous factors also cover literal Alice infinity.
+\end{proof}
+
+\begin{theorem}[Whole uniform infinitesimal C1 domain]
+\label{thm:c1-uniform-all-tests}
+Use the unchanged canonical uniform C1 source, including all exact
+coquotients and original coefficient zeros. Suppose
+\[
+ k,f,g,e>0\text{ are infinitesimal},\qquad e=kf/g,
+\]
+and the positive bounded shapes satisfy
+\[
+ R=1+k^2(1-af^2),\quad T=1+k^2-k^2g^2t,\qquad
+ M=R-t>0,\quad J=T-a>0.
+\]
+Assume every original event coefficient is nonnegative. Then the entire
+parent is tensor-SOS at every independent projective measurement pair
+and every real or complex testing state. There is no restriction on
+$b=g/k$ or on $A_c=g/f$.
+\end{theorem}
+
+\begin{proof}
+First derive the two outer-angle premises from the original coefficients.
+Write $B_c=2c_5-Jf^2c_d$. The exact source gives
+\[
+ D=\frac{aB_c}{Jc_3},\qquad
+ \frac dD=\frac{2Jf^2c_d}{B_c},\qquad
+ \frac dc=\frac{af^2c_d}{c_3}.
+\]
+Since $\bar B_c=4$, both ratios are infinitesimal, independently of
+any loss of residue of $a$ or $J$. Also, for the original harmonic
+mass $g_B=cD/(c+D)$,
+\[
+ \frac{A g_B}{d^2}
+ =\frac{c_4c_3B_c}{c_d^2(2Jc_3+aB_c)}.              \tag{UA1}
+\]
+The denominator is a unit: its residue is
+$16\cdot4(\bar J+\bar a)=64$, since $J+a=T$ has residue one.
+The numerator has residue $16$. Thus the original mass in (UA1) has
+residue exactly $1/4$. This argument uses neither a strong first pair
+nor beta positivity beyond the original source hypotheses.
+
+The two preceding lemmas handle every test except $u,v$ infinitesimal.
+Literal $u=0$ or $v=0$ also gives a nonnegative pure-testing core
+immediately. Normalize a nonzero state by a coordinate of largest
+absolute value; all coordinates are then bounded and at least one is
+a unit. If $X$ or $Y$ is a unit, the pure-testing core has positive
+residue $2(X^2+Y^2)$, so its product with the positive coefficient $d$
+is itself a square and all other events are positive squares.
+It remains that $X,Y$ are infinitesimal.
+
+The following coefficient-only split is exhaustive. If $b=g/k$ is
+bounded, then $f=eb$ and $g=kb$, so the bounded-$b$ Z theorem treats
+$Z$ a unit and arbitrary bounded $W$. If $Z$ is infinitesimal, $W$ is
+a unit, and the bounded-$b$ all-rho W endpoint applies after $W=1$
+normalization.
+
+If $b$ is unbounded, put $A=f$, $H=g$, $K=k/g=1/b$.
+All three are infinitesimal. Original beta nonnegativity gives exactly
+\[
+ \beta+\frac d2=\frac{2ae^2c_b}{tc_3},\qquad
+ \frac d2=\frac{af^2c_d}{c_3}
+ \quad\Longrightarrow\quad
+ E:=tb^2\leq\frac{2c_b}{c_d}.
+\]
+Hence $E>0$ is bounded with $\bar E\leq1$ and the exact source map is
+\[
+ (f,g,k,e,a,t)=(A,H,HK,AK,a,K^2E).
+\]
+Both original gaps, every coefficient and every literal coefficient
+zero are preserved. The new inverse-$b$ Z theorem handles $Z$ a unit;
+the finite ten-root W theorem handles the complementary $W$-unit,
+$Z$-infinitesimal chart. Thus all state cases are exhausted.
+
+The zero state is trivial. For a complex state the real parent matrix
+splits its evaluation into the sum of its real and imaginary quadratic
+evaluations. All state normalizations and homogeneous projective factors
+are pure testing elements. No comparison of an independent testing
+quantity with a coefficient scale was used.
+\end{proof}

@@ -1,0 +1,70 @@
+Independent review of the refined core (2026-10-22)
+Reviewer: proof_navigation
+
+Scope: full mathematical reading of deliverables/proof_source/chapters/
+01_theorem.tex, 02_model.tex, 03_tensor.tex, 04_geometry.tex,
+05_entry.tex, 06_mechanisms.tex, 07_cover.tex, and
+noncommuting_refined.tex. This review checks new compression, quantifiers,
+interfaces, and logical scope. It does not replace the separate detailed
+certificate audits. The pending C1-scoped, WC, and BA reference rewrites
+identified by the parent were not treated as final-document failures.
+
+Findings
+--------
+1. No substantive new mathematical defect found in these core files.
+
+2. One missing local definition in noncommuting_refined.tex: NC2 and NC4
+   use q_{11}, whereas the imported SG5--SG6 dictionary denotes the central
+   coefficient by h. Add the explicit identification q_{11}=h. The earlier
+   standalone version supplied this definition with its full dictionary.
+   This is a definition lost in compression, not a failed identity.
+
+3. The same introductory dictionary paragraph calls the t_i positive while
+   the NC theorem also permits d=0. State the immediate event-square d=0
+   case before this paragraph, then work with d>0. The final induction
+   already makes exactly that split, so no certificate case is missing.
+
+Specific scope checks passed
+----------------------------
+* Arbitrary separately labelled real closed extensions Kc,Kt are handled
+  without algebraic-disjointness or an order on their tensor product.
+  All normalizations, radicals, and exact centers are in a single factor;
+  only real residues are compared across factors. The final external
+  criterion correctly uses labelled copies of one arbitrary field, a
+  specialization of the stronger separated statement.
+
+* The physical Q222 definition uses arbitrary finite local dimensions,
+  mixed states, and binary POVMs. The common embedding for both setting
+  dilations, two-projection decomposition, real state splitting, direct
+  sum converse, nine-atom formula, and compactness argument justify the
+  fixed semialgebraic transferred set. No Hilbert-space definition over
+  non-Archimedean fields is substituted for that formula.
+
+* SG17--SG22 replaces the structural part of component 14 with the exact
+  strength needed by native entry. SG17 excludes all nonspanning active
+  supports, including both perfect matchings and empty support. SG18--19
+  proves a strictly positive source-field Hessian, with no claim of a
+  strict real residue. SG20--21 proves the positive contact orientation.
+  SG22 proves the forbidden-deletion implication. EN4, the connected
+  maximal-contact graph, its boundary opening, and the C1/C2 sign walls
+  use only these established facts. The polynomial selected-minor and
+  rational source identities remain explicit separate inputs.
+
+* Contact sufficiency and the source extreme reduction avoid circular
+  use of tensor certificates. Finite decomposition and native entry are
+  transferred as fixed first-order assertions; no non-Archimedean
+  topological compactness is presumed. The closed-face trace pairing uses
+  separately transferred attained finite-dimensional duality.
+
+* The common helper/circuit identities and the new proof-use extensions
+  retain the conditions that make their coefficients infinitesimal or
+  bounded. LC/CT keep the total-scale split after d=1, distinguish source
+  from test rates, include literal allowed zeros, and do not make the
+  scoped C1 bodies depend on the global C1/C2 conclusion.
+
+* The integrated noncommuting replacement retains the full hard-row
+  local lifting argument, one- and two-hard support tables, two complete
+  three-hard Laurent forms, arbitrary-ratio four-matching terminal,
+  singular eta_i=0 normal pivots, and finite increasing-matching
+  induction. No removed component 4--12 equation is needed after the
+  q_{11}=h identification is restored.

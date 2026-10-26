@@ -1,0 +1,300 @@
+\section{Small-$L$ C1: a weighted closure through both $r$ openings}
+\label{sec:r13-c1-r-openings}
+
+\begin{theorem}
+Use the original physical native C1 source, normalized by $d=1$, and
+retain all original intersections. Suppose that $x=k^2$ is positive
+infinitesimal and
+\[
+ \eta,\quad\zeta,\quad j_0=\eta+r-1
+       \quad\hbox{are positive bounded units}.                 \tag{RO1}
+\]
+Then the complete original parent is tensor SOS at every independent
+projective test and every state. The original $0<r<1$ may approach
+either endpoint at any positive rate, and the literal $\beta=0$ face
+is included. No lower positive real bound on $r$, $1-r$, or $\beta$
+is imposed. This extends the admitted IC1 domain; it does
+not cover an infinitesimal $j_0$, infinitesimal $\eta$, or unbounded
+$\zeta$.
+\end{theorem}
+
+All scalar and Gram identities in this section use the normalized
+parent $F/4$; multiplication of every square root by $2$ restores $F$.
+
+The proof reuses the unchanged exact scalar and full-normal identities
+(IC7)--(IC8), (IC16)--(IC19), and the three-circuit lemma. Its new
+content is a uniform weighting of the two divergent event openings,
+and a different $X$ normal that retains bounded and zero beta.
+
+\paragraph{Opening-cleared source arrays.}
+Put $\rho=\eta+r$, $y=x\eta\zeta$, $h=1-\theta$,
+$c=C(1-r)$ and $a=Ar$. The beta numerator (SB1) gives
+$\theta=x\pi$ with $\pi>0$ bounded. We do not require $\pi$
+infinitesimal. The original source formulas give, uniformly for
+all $0<r<1$,
+\[
+\begin{gathered}
+ c=\rho/2+O(x),\quad a=\eta/2+O(x),\quad
+ D=1/(2j_0)+O(x),\quad h=1+O(x),\\
+ m/x\sim\rho/(2\zeta),\qquad
+ \alpha/x^2\sim\rho\zeta(1+\zeta)/2,\qquad
+ B_x\theta/x={K\rho(h+\zeta)\over2P_d},\quad
+ B_x=\beta+\tfrac12\ge\tfrac12.                      
+\end{gathered} \tag{RO2}
+\]
+These are finite canceled numerator identities, followed by residue
+evaluation. Every canceled denominator at $x=0$ is a product of
+positive units from $\eta,\zeta,j_0,j_0+r$ and $\rho$, with no
+factor $r$, $1-r$, or $\pi$. In particular $D>0$ on this domain;
+the original $D=0$ face has empty intersection here, as already proved
+in (SB2). Both $\theta/\sqrt\alpha$ and
+$B_x\theta^2/\alpha$ are bounded, not necessarily infinitesimal.
+
+The exact source formulas for the two cleared strong weights are
+\[
+ c={K\rho E\over2P_d},\qquad a={\eta P_4\over2P_d}.
+\]
+Their order-$x$ differences in (RO2), and the following arrays, have
+opening-free finite canceled formulas:
+\[
+ {P_{Y,00}\over x},\quad {P_{E,00}\over x},\quad
+ {\theta(m+B_x)\over x},\quad
+ {\alpha+(m+B_x)\theta^2\over x^2},\quad {q_V\over x}.
+                                                               \tag{RO3}
+\]
+Here $P_Y,P_E,q_V$ are precisely (IC16) and (IC8). To check why no
+unbounded event remains in these arrays, replace every occurrence of
+$C(1-r)^2$ by $c(1-r)$, every $Ar^2$ by $ar$, every
+$C(1-r)$ by $c$, and every $Ar$ by $a$ before division. No other
+occurrence of $C$ or $A$ survives in the scalar or first-normal
+polynomials. The accompanying new checker prints the denominators of
+(RO2)--(RO3), retains arbitrary bounded $\pi$, and checks both
+$r=0$ and $r=1$ after cancellation. This is a finite symbolic
+criterion for boundedness on the stated field domain, not a numerical
+endpoint approximation.
+
+\paragraph{The normalized hard frame.}
+Define the pure-source coefficients
+\[
+ b={r(1-r)\over\eta(j_0+r)},\quad
+ H_0={\eta(j_0+r)\over2r(1-r)j_0},\quad
+ \gamma={\rho\over2\eta(j_0+r)}.
+\]
+Both $1/\sqrt{H_0}$ and $1/\sqrt{B_x}$ are bounded; $H_0$
+itself may be unbounded. Put
+\[
+ E_t=\eta uW-vZ,\quad
+ N_y=\sqrt{H_0}(Y-ruW-bE_t),\quad
+ N_x=\sqrt{B_x}(X+huZ).                              \tag{RO4}
+\]
+All three normals vanish at the actual source contact. For the
+comparison weights
+\[
+ C_0={\rho\over2(1-r)},\quad A_0={\eta\over2r},\quad
+ D_0={1\over2j_0},
+\]
+the exact quadratic base is
+\[
+ C_0(p-Y)^2+A_0Y^2+D_0(p-Y-q)^2+\tfrac12(p-Y)^2-pq
+       =H_0(Y-rp-b(\eta p-q))^2+\gamma(\eta p-q)^2.  \tag{RO5}
+\]
+Thus the divergent normal has already been normalized before taking
+residue. The cancellation factors needed for its entire hard block are
+\[
+ {C_0\over H_0}={r\rho j_0\over\eta(j_0+r)},\quad
+ {A_0\over H_0}={(1-r)j_0\over j_0+r},\quad
+ {D_0\over H_0}={r(1-r)\over\eta(j_0+r)}.             \tag{RO6}
+\]
+For example, after $p=(v+E_t)/\eta$ and $Z=1$, the $E_t$
+coefficients in $p-Y$ and $Y$ are respectively
+\[
+ {1-r\over\eta}-b={(1-r)j_0\over\eta(j_0+r)},\qquad
+ {r\over\eta}+b={r\rho\over\eta(j_0+r)}.            \tag{RO7}
+\]
+The strong $C,A$ factors therefore cancel even on those complete
+first-state directions. For instance an error
+$\delta_c(p-Y)^2/(1-r)$, with $\delta_c=O(x)$, has a
+$N_y^2$ coefficient $\delta_c/((1-r)H_0)=O(x)$,
+an $E_t^2$ coefficient $O(x)(1-r)$, and an $E_tN_y$
+coefficient $O(x)/\sqrt{H_0}$. The $A$ error has the same
+properties using $rH_0$ and the second formula in (RO7).
+The original higher-angle factors have the same cleared coefficients,
+multiplied by $U=u^2$ or $V=v^2$.
+
+Suppose first that $u,v>0$ are infinitesimal and the pure-testing
+ratio $t=v/u$ is bounded. After the state substitution (RO4), the
+complete hard quadratic on $(E_t,N_y,N_x)$ consequently has bounded
+entries and residue
+\[
+                         \operatorname{diag}(\gamma,1,1).       \tag{RO8}
+\]
+Here $\gamma$ is a positive bounded unit even when either $r$
+opening is infinitesimal. The additional $m t^2$ contribution is
+infinitesimal. The beta and half-core coefficients jointly give the
+third pivot because $m/B_x$ is infinitesimal. These estimates concern
+the full hard block, not only its restriction to the contact graph.
+
+\paragraph{The complete scalar and all first normals.}
+Normalize $Z=1$, homogenizing at the end as in IC1. Use the unchanged
+positive separated roots
+\[
+ A_t=uv,\quad B_t={kv^2\over s u},\quad C_t=xs,\quad
+ G=kv,\quad F_v=V-y,\qquad s=\sqrt{\eta\zeta}.
+\]
+The scalar at all three normals zero is exactly (IC7). Its coefficient
+residues are still
+\[
+ c_F\sim{\rho\over2\eta^2},\quad
+ f_A,f_B,f_C\sim\lambda={\rho\over2\eta},\quad
+ f_G\sim3\lambda.                                   \tag{RO9}
+\]
+They do not depend on the residue of $\pi$. Every coefficient of
+$U,V$ in (IC8) is bounded after the clearing described above;
+for the additional term in $f_C$ use
+$B_x\theta^2/x^2=(B_x\theta/x)\pi$. The exact contact
+value and the two first-jet identities (IC11)--(IC14) are unchanged.
+Their finite arrays therefore obey precisely the hypotheses of the
+three-circuit lemma, with $s$ a unit. It gives the same strict finite
+circuit Gram and the strict $F_v$ pivot. In particular the negative
+soft defect (SN10) has been allocated by the entire scalar (IC7), not
+dropped by comparing only its quadratic base.
+
+The complete first normals are (IC18), with the $N$ line divided
+by $\sqrt{H_0}$ and the $X$ line divided by $\sqrt{B_x}$
+instead of $\sqrt\beta$. Their exact root allocations are (IC19)
+with those same replacements. Every coefficient remains infinitesimal:
+the $N_y$ factors are bounded source factors times the old cleared
+polynomials; the $X$ coefficient on $C_t$ is
+\[
+ {2u\theta(m+B_x)\over\sqrt{B_x}\,xs},
+\]
+which is infinitesimal by (RO3), and its coefficients on $B_t,A_t$
+are respectively $O(k)$ and $O(v)$. In the latter coefficient
+$Z_X=B_x\theta-(D+\tfrac12)(1+hU)
+ +(D+\tfrac12)(1-r)/\eta$ is bounded. The $E_t$ line uses
+$m/x,P_{E,00}/x$ and bounded polynomial arrays, as in IC1.
+There is no negative power of $t$ in any coefficient.
+
+Each coefficient is polynomial in $u,t$ with bounded pure-source
+arrays; every term depending on $t$ carries $u,k$ or $m/k=O(k)$.
+The exact monic differences (IC21) hence have bounded $u$ quotient
+and infinitesimal $t$ quotient after evaluation at $u=k$. The
+unchanged exact source contact cancels the bare $G$ term in each
+complete normal. The conductors
+$G(u-k)=k(A_t-G)$ and $G(t-s)=s(B_t-G)$ therefore allocate
+all normals with infinitesimal coefficients on the strict circuit
+roots. Joining this allocation to (RO8) proves the entire parent
+on the bounded-ratio chart.
+
+\paragraph{The reciprocal ratio chart.}
+For $v/u$ unbounded use the homogeneous root list
+\[
+ E_t,\quad N_y,\quad N_x,\quad P_m=\sqrt m\,vW,
+ \quad Q_\alpha=\sqrt\alpha Z,\quad R_t=u^2W,
+ \quad S_t=uvW.                                      \tag{RO10}
+\]
+The error of the actual quadratic base relative to (RO5) is an
+$O(x)$ quadratic in $(p,E_t,N_y)$ after the opening cancellations
+(RO6)--(RO7). Every $\sqrt x\,p$ factor is allocated exactly by
+\[
+ \sqrt x\,p=\sqrt{x/m}\,(u/v)P_m,
+\]
+with a bounded source unit $x/m$ and an infinitesimal pure-testing
+ratio $u/v$. Thus the entire error has zero Gram residue on (RO10).
+All coefficients in the exact higher-angle identity (IC24) remain
+bounded after $Y=rp+bE_t+N_y/\sqrt{H_0}$. This follows term
+by term from (RO6), $b=O(r(1-r))$, $Ar=a$, and $C(1-r)=c$.
+Its only nonzero scalar residues are the two positive diagonal entries
+\[
+                 \kappa_R=\rho\eta/2,\qquad
+                 \kappa_S=\rho/2.                  \tag{RO11}
+\]
+No opening has been substituted before cancellation.
+
+It remains essential to combine beta with its half-core part. Set
+$B_t^{\rm state}=X+uZ$ and $J_0=p-Y-D_uvZ$. Relative to
+$B_t^{\rm state}=0$, the exact $D$, beta and half-core increment is
+\[
+ 2(D+\tfrac12)uvB_t^{\rm state}J_0
+ +(D+\tfrac12)UV(B_t^{\rm state})^2
+ +B_xD_v(B_t^{\rm state})^2.                          \tag{RO12}
+\]
+This whole-polynomial identity is checked in the new checker. Use
+\[
+ B_t^{\rm state}={N_x\over\sqrt{B_x}}
+               +{\theta u\over\sqrt\alpha}Q_\alpha.
+\]
+The first two terms of (RO12) have zero Gram residue on (RO10);
+$D$ is bounded, $1/\sqrt{B_x}$ and $\theta/\sqrt\alpha$
+are bounded, and every coefficient carries $u$ or $v$.
+The three remaining positive packets have their entire roots
+\[
+\begin{aligned}
+ \sqrt m\,R_m&=P_m+\sqrt m\,uvY-\sqrt m\,B_t^{\rm state},\\
+ \sqrt\alpha\sqrt{D_u}(vY-Z)
+   &=\sqrt{D_u}\{\sqrt\alpha[rS_t+v(bE_t+N_y/\sqrt{H_0})]
+                         -Q_\alpha\},\\
+ \sqrt{B_x}\sqrt{D_v}B_t^{\rm state}
+   &=\sqrt{D_v}\{N_x+\sqrt{B_x\theta^2/\alpha}\,uQ_\alpha\}.
+\end{aligned}                                                    \tag{RO13}
+\]
+Each is its leading root plus an infinitesimal-coefficient combination
+of (RO10). The square root in the last line is pure source and bounded;
+its factor $u$ supplies the needed infinitesimal even when beta is
+zero or bounded. The full parent therefore has a bounded Gram with
+strict diagonal residue
+\[
+                 (\gamma,1,1,1,1,\kappa_R,\kappa_S).
+                                                               \tag{RO14}
+\]
+This proves the remaining ratio chart.
+
+\paragraph{All-tests join and exact scope.}
+The earlier small-$L$, bounded-$\eta$ remote theorem includes (RO1)
+with every original opening, so it covers the complement of
+$u,v$ both infinitesimal. Literal axes have the elementary full-core
+identities recorded in IC1. Its exact sign gauges apply unchanged.
+Homogenizing the $Z=1$ identity gives polynomial state identities,
+including $Z=0$; applying them to real and imaginary parts covers
+complex states. All inverse and radical factors above are pure
+source or pure testing. This completes the claimed full-parent
+all-tests admission.
+
+The newly removed source region is the portion of (RO1) outside IC1,
+namely either $r$ or $1-r$ infinitesimal, with all total-scale and
+earlier-complement intersections retained. Remaining C14.3 source
+configurations still include infinitesimal $\eta$, unbounded
+$\zeta$, and nonunit or nonpositive $j_0$ while the actual
+$j=\eta(1+xh)-1+r$ remains positive. No conclusion on those
+regions or on C14.4 follows from this theorem.
+
+\paragraph{A local algebraic extension below beta zero.}
+The preceding two local ratio-chart arguments have a stronger precise
+scope that is useful when another event is restored later. Assume the
+exact native stationary coefficient formulas (NC1)--(NC4),
+$x>0$ infinitesimal, (RO1), $0<r,h<1$, and
+\[
+              B_x=\beta+\tfrac12\ge b_*>0
+              \quad\hbox{for some real }b_* .                 \tag{RO15}
+\]
+Original source physicality and $\beta\ge0$ are not required for
+this local assertion. Then the full C1-form parent is tensor SOS at
+all independent $u,v$ both infinitesimal, including their literal
+zero axes. In particular $-1/2<\beta<0$ is allowed whenever
+$\beta+1/2$ is a positive bounded unit.
+
+Indeed $P_d\sim1$ before any $h$ estimate, since all its source
+arguments are bounded. The exact formula
+$B_x\theta/x=K\rho(h+\zeta)/(2P_d)$ has bounded right side,
+and (RO15) therefore implies $\theta/x$ bounded. All of (RO2)--(RO14)
+follows, with $1/\sqrt{B_x}\le1/\sqrt{b_*}$. In particular
+$m,\alpha>0$, $C,A>0$, and $D\sim1/(2j_0)>0$ on this
+domain. No remaining use of $\beta\ge0$ occurs in the local
+scalar, first-normal or hard-block proof: its complete contribution
+is combined with the half-core as (RO12). At $u=0$ the signed
+core contributes $D_v(X^2+Y^2)/2$, so its $X^2$ part plus
+the beta packet is $B_xD_vX^2$. At $v=0$ the same combination
+is $B_x(X+uZ)^2$ and the remaining half-core is
+$(uW-Y)^2/2$. Thus both axes are also exact SOS under (RO15).
+Only this local assertion is extended. The earlier all-tests remote
+admission is not imported for negative beta.

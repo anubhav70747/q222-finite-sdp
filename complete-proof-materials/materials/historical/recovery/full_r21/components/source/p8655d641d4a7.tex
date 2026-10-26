@@ -1,0 +1,101 @@
+\section{C14.2: pure-testing state exits at the two small angles}
+
+Keep the unchanged C14.2 source and the exact quarter-parent BE10,
+with $d=1$, $L$ a positive bounded source unit, $x,\sigma>0$
+infinitesimal, and every original opening.  In particular $D,\beta\ge0$
+may vanish.  The R18 LA and LB admissions leave $u,w>0$
+infinitesimal.  Literal axes have the original direct core SOS.
+The original pure-testing core-sign exit leaves $WZ>0$; consequently
+$P=uW$ and $T=wZ$ are nonzero and have the same sign.
+
+\paragraph{The two extreme state ratios.}
+Choose positive real numbers $c_*,a_*,a'_* $ below the actual
+source weights $C,A,\alpha$, respectively; this is possible by LA1.
+Retain all positive original excesses and the entire $m,D,\beta$
+packets.  The selected polynomial is exactly
+\[
+ H_*=c_*D_w(P-Y)^2+a_*D_uD_wY^2
+       +a'_*D_u(Y-T)^2+K_w/2.                     \tag{CS1}
+\]
+Here LA2 gives the complete signed core, without approximation:
+\[
+ K_w=D_uX^2+D_uY^2+u^2T^2-2u^2TY-2PT
+       +w^2\{(P-Y)^2+X^2\}+2uwX(T+P-Y).          \tag{CS2}
+\]
+If $P/T$ is unbounded, write $T=\epsilon P$ with the
+\emph{pure-testing} infinitesimal $\epsilon=T/P$.  The bounded
+Gram of CS1 on $(X,Y,P)$ has residue
+\[
+ \tfrac12X^2+c_*(P-Y)^2+(a_*+a'_*+\tfrac12)Y^2,
+                                                               \tag{CS3}
+\]
+which is strictly positive.  If $P/T$ is infinitesimal, write
+$P=\epsilon T$.  On $(X,Y,T)$ the residue is
+\[
+ \tfrac12X^2+(c_*+a_*+\tfrac12)Y^2+a'_*(Y-T)^2,  \tag{CS4}
+\]
+also strictly positive.  All coefficients of CS1 are pure testing
+and real, so the usual finite positive-Gram lift is directly legal.
+Restoring the retained original squares proves the complete parent
+on both charts, for arbitrary remaining state coordinates.
+
+\paragraph{Every unmatched unit state ratio.}
+It remains to consider the positive bounded testing unit
+\[
+ \varrho=P/T=uW/(wZ).
+\]
+Put $L_0=\operatorname{res}(L)>0$ and
+$\varrho_0=\operatorname{res}(\varrho)>0$.  This paragraph admits
+every chart $\varrho_0\ne L_0$, using only real residues, rather
+than ordering $\varrho-L$ as a mixed element.
+
+Use the exact LA1 source weights $C_0,A_0,a_0$, with
+$e_r=1-r$, $b=Lr$, and $S_0=A_0+a_0+1/2$.  Choose the same
+pure-source common factor $f=1-\delta>0$ as LA4 and retain the
+original nonnegative event excesses $C-fC_0$, $A-fA_0$,
+$\alpha-fa_0$.  The entire remaining polynomial is the exact LA4
+form.  In its completed part LA3, retain the whole nonnegative
+$u^2$ packet, the full $w^2$ packet, and the coefficient excesses
+after clipping $fC_0,fS_0$ at positive real lower bounds $c,s$.
+The resulting bounded principal form on $(X,Y,T)$ is
+\[
+ \frac{fD_u}{2}X^2
+   +c\{(\varrho-Le_r)T-Y\}^2+s(Y-bT)^2.         \tag{CS5}
+\]
+Its $(Y,T)$ determinant is exactly
+\[
+ cs(\varrho-L)^2,                               \tag{CS6}
+\]
+as a polynomial identity, since $Le_r+b=L$.  At residues this is
+the positive real number $cs(\varrho_0-L_0)^2$.
+The full signed remainder
+$(1-f)K_0/2+(K_w-K_0)/2$ has infinitesimal bounded coefficients
+on $(X,Y,T)$ after $P=\varrho T$, by CS2.  Thus the full selected
+bounded Gram is strictly positive at residue.  The separated
+bounded-Gram lemma applies; all previously retained positive
+packets are restored.  No inverse of $\varrho-L$, or of any
+source/testing sum, has been used.
+
+\paragraph{Precise remaining state chart.}
+Together with LA, LB, the literal-axis exits and the core-sign exit,
+these two admissions reduce the whole C14.2 problem to
+\[
+ u,w>0\text{ infinitesimal},\quad WZ>0,\qquad
+ \varrho=\frac{uW}{wZ}>0\text{ a bounded testing unit},\qquad
+ \operatorname{res}\varrho=\operatorname{res}L.    \tag{CS7}
+\]
+In particular $uW/Z=w\varrho$ is infinitesimal.  The normalized
+radial root is exactly
+\[
+ R=\frac{wZ}{q}(1-z\varrho),\qquad q^2=z=L^{-1};  \tag{CS8}
+\]
+CS7 does not compare the source and testing infinitesimal parts of
+$L$ and $\varrho$.  It does not constrain the source sphere or
+remove $D=0$ or $\beta=0$.  This is a state-chart admission and
+reduction, not a complete C14.2 closure.  Applying the real statement
+to the two real state parts gives the complex-state statement,
+with the relevant chart chosen separately for each part.
+
+The focused checker verifies CS6 and the new three-term circuit
+identity in the accompanying note; it does not rerun the historical
+LA2--LA4 checks.

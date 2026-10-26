@@ -1,0 +1,238 @@
+\chapter{C14.2: the complete unbounded-$H$, unbounded-$W/Z$ chart}
+\label{component:p831dd6874dcf}
+\noindent\textbf{Component }\path{p831dd6874dcf}\par
+{\small\noindent Source: \path{BASE/inherited_r19/proofs/c142_contact/h_large_toric_completion.tex}\par}
+{\small\noindent SHA256: \path{831dd6874dcfbcf24dd8d32e3dcc2f44d928006b0dfc12ee90eb7fe6c22ab9a6}\par}
+{\small\noindent Inventory use: CT7-CT7a exact radial identities only; no unit-z conductor imported | CT1--CT13 and complete normal restoration | C14\_\allowbreak{}ENTIRE\_\allowbreak{}ORIGINAL\_\allowbreak{}PARENT\_\allowbreak{}GRAPH; precise subordinate uses retained below\par}
+\medskip
+\section{C14.2: the complete unbounded-$H$, unbounded-$W/Z$ chart}
+
+\begin{proposition}
+Keep the exact physical C14.2 source, $d=1$, all original strict
+gaps and residual intersections, and $D,\beta\ge0$, including their
+literal zero faces.  Suppose $H=h/\sigma$ is unbounded.  The entire
+parent is tensor SOS on the remaining double-small-angle chart with
+$W/Z$ unbounded.  This includes every state ratio on this chart:
+the extreme and unmatched ratios are admitted by CS1--CS7, and the
+matched positive-unit ratio is admitted below.  No mixed inverse or
+source/testing rate comparison occurs.
+\end{proposition}
+
+\paragraph{Exact source and state data.}
+Use BE2--BE9 and the entire SP6 identity, restoring the original
+centered $a,\ell$ excesses.  Thus $q^2=z=L^{-1}$ is a bounded
+positive source unit, $b=Lr$, $Q=1-b$, $p=ab$, $l=\ell Q$,
+$a=Az$, $\ell=\alpha z$.  All original hard and radial normals
+remain present.  Use the actual SP3 coefficient
+\[
+ \lambda=2H+\lambda_0,
+ \qquad K_A=4\kappa H-\lambda=\alpha_\kappa-\lambda_0.
+                                                               \tag{CT1}
+\]
+SP9--SP10 give $\lambda_0,\alpha_\kappa\in\mathcal O_c$.
+Consequently $\lambda>0$ is unbounded, $\lambda\sigma\sim2h$,
+$\lambda x\in\operatorname{Inf}_c$, and
+$\rho=\lambda x/\sigma$ is bounded: use BE7 and
+$x/\sigma\in\operatorname{Inf}_c$ on $H$ unbounded.
+There is no assumption that $\rho$ is a unit.
+
+After CS7 and the sign gauges, take $W,Z,u,w>0$ and define solely
+in the testing field
+\[
+ f=Z/W\in\operatorname{Inf}_{t,>0},\quad
+ c=\frac{u}{wf}=\frac{uW}{wZ}>0\text{ a bounded unit},\quad
+ F=fc^{1/3},\quad V=wc^{1/3}.
+\]
+Both $F,V$ are infinitesimal.  Set
+\[
+ k_c=(zc)^{1/3},\quad
+ F_0=\sqrt{x/\sigma}\,z^{1/6},\quad
+ V_0=\sqrt\sigma\,z^{1/6},\quad
+ g_0=\sqrt{\lambda x}\,z^{1/6}.
+                                                               \tag{CT2}
+\]
+Here $F_0,V_0$ are infinitesimal pure-source elements, and $k_c$ is
+a bounded separated unit.  Every fractional power of a displayed
+separated product means the product of the two pure-field powers.
+
+\paragraph{The scalar packet and its strict circuit rows.}
+The complete SP6 angular packet is exactly
+\[
+ K_A A_\theta^2+S+\chi uA_\theta R,
+ \qquad S=\lambda\sigma P_\beta^2+
+                    \rho(u^2-x)(w^2-\sigma z)W^2.              \tag{CT3}
+\]
+This follows from SP7 and does not discard a scalar or normal term.
+Put
+\[
+ A_1=\sqrt{\lambda\sigma}\,VF^2W,\quad
+ A_2=\sqrt\rho\,V^2FW,\quad
+ A_3=\sqrt\lambda\,xqW,\quad
+ G=g_0VFW,\quad d_i=A_i-G.
+\]
+All four quantities are nonnegative separated monomials and
+$A_1A_2A_3=G^3$.  Let $r_c=k_c^{-1}$.  The exact identity is
+\[
+\begin{split}
+ S+\lambda xR^2={}&\sum_{i=1}^3A_i^2-3G^2\\
+ &+\lambda xz\{uW(r_c-1)r_c(r_c+1)\}^2
+   +2\lambda xz\{uW(r_c-1)r_c\}^2.             \end{split} \tag{CT4}
+\]
+To see the finite SOS and its strict $d_i$ rows, let
+$p_i=A_i^{1/3}$, with separated cube roots.  Exactly
+\[
+ \sum_iA_i^2-3G^2
+ =\sum_i d_i^2+
+   \sum_{j=1}^3\sum_{1\le i<k\le3}
+       \{\sqrt{Gp_j}(p_i-p_k)\}^2.             \tag{CT5}
+\]
+The square roots also separate.  Thus CT4 supplies three diagonal
+pivots equal to one on $d_1,d_2,d_3$, and nine further squares.
+The two additional CT4 squares are retained whole.  Its sole cost
+$-\lambda xR^2$ has an infinitesimal pure-source coefficient.
+
+\paragraph{The radial row without a mixed inverse.}
+Define the legal root
+\[
+ J_c=(k_c-1)VFW.
+\]
+The exact radial relation is
+\[
+ R=-\frac{k_c^2+k_c+1}{q c^{2/3}}J_c.           \tag{CT6}
+\]
+Only the displayed bounded separated coefficient is used; the
+polynomial $k_c^2+k_c+1$ is never inverted.
+Restoring the full $a,\ell$ weights, their complete occurrence in
+the radial normal block is
+\[
+ 4D_u\{aD_w(N_y+bR)^2+\ell(N_y-QR)^2\}.
+\]
+The full constant radial base, including the other source terms, is
+\[
+ M=[4a+2z(2C+1)](N_y+bR)^2+4\ell(N_y-QR)^2.    \tag{CT7}
+\]
+Retain the positive $u^2,w^2$ excesses of the preceding $a,\ell$
+packet and the exact $4Cz w^2(N_y+bR)^2$ packet.  Clip the two
+pure-source coefficients in CT7 at positive real lower bounds,
+retaining their positive square excesses.  After CT6 the clipped
+Gram on $(N_y,J_c)$ is bounded and strictly positive at residue:
+the two rows differ by $R$, and the coefficient of $J_c$ in CT6
+has nonzero real residue.  This remains true at $b=0$ or $Q=0$
+in residue.  For an explicit audit, put $t=u^2$, $\xi=w^2$,
+$g=h-Q$, $a_\beta=\beta\theta^2$ and
+\[
+ k_1=2(1+2m)g^2+8Dhb+8pb\sigma+4a_\beta.
+\]
+After the displayed positive radial packets have been extracted,
+the exact three remaining coefficients of $N_y^2,R^2,N_yR$ are
+\[
+\begin{split}
+ E_{yy}={}&2z\{(1+2m)t+(1+2D)\xi\},\\
+ E_{RR}={}&z\{8bD+8bp\sigma
+       +4b\sigma(2C+2D+1)(r-1)+k_1t
+       +2b^2(2D+1)\xi\},\\
+ E_{yR}={}&4z\{t[2Dh+2p\sigma+(1+2m)g]
+       +b(2D+1)\xi+\sigma(2C+1)(r-1)\\
+       &\hspace{19mm}+2D[1+\sigma(r-1)]+2p\sigma\}.
+\end{split}                                                     \tag{CT7a}
+\]
+These are bounded infinitesimal coefficients.  The only apparent
+$C$ pole is its full LC2 correction,
+whose coefficient is $C(1-r)$ times $\sigma$ or $w$ and is bounded
+by BE9.  No entrywise cap of the original radial matrix is made.
+
+\paragraph{The two sphere-weighted Gamma conductors.}
+The monomial relations give exactly
+\[
+ (F-F_0)G=F_0d_1,\qquad (V-V_0)G=V_0d_2.
+                                                               \tag{CT8}
+\]
+Write $b_0,d_0$ for the BE6 sphere coordinates, not the source
+parameter $b$.  The pure-source quantity
+\[
+ B_\Gamma=b_0V_0/g_0=b_0\sqrt{\sigma/(\lambda x)}
+                                                               \tag{CT9}
+\]
+is bounded.  Indeed BE7 gives
+$xhB=\sigma xH_0+\sigma^2\mathcal H b_0^2$, and
+$\lambda\sigma\sim2h$; this proves the bound directly and never
+divides by $b_0$.  With $j=c^{1/3}$ the exact conductors are
+\[
+\begin{split}
+ w b_0\Gamma={}&-\frac{B_\Gamma(V_0+V)}{k_cj}d_2
+                       -\frac{b_0V^2}{k_cj}J_c,\\
+ u b_0\Gamma={}&-\frac{B_\Gamma jF(V_0+V)}{k_c}d_2
+                       -\frac{b_0jV^2F}{k_c}J_c.              \end{split} \tag{CT10}
+\]
+Every coefficient in these two arrays is infinitesimal and bounded.
+Let $\Gamma_d=d_0\Gamma$.  The original diagonal is exactly
+\[
+ \frac{4D}{\sigma^2}\Gamma^2
+       =\frac{2\mathcal H}{PJ}\Gamma_d^2,       \tag{CT11}
+\]
+with a positive-unit pure-source coefficient.  In CT11 the $J$ in
+the denominator is the original source $J$ of BE2.  Finally
+\[
+ u\Gamma=d_0u\Gamma_d+b_0(u b_0\Gamma),\quad
+ w\Gamma=d_0w\Gamma_d+b_0(w b_0\Gamma).         \tag{CT12}
+\]
+Thus every first normal carrying $u\Gamma$ or $w\Gamma$ has an
+infinitesimal bounded allocation on $(\Gamma_d,d_2,J_c)$.
+This includes $d_0=0$ and $b_0=0$ algebraically, with no false
+strict pivot on an unweighted $\Gamma$.
+
+\paragraph{The angular row at either $h$ type.}
+If $h$ is infinitesimal, SP10 gives
+$\alpha_\kappa\in\operatorname{Inf}_c$ and SP9 gives
+$\lambda_0\sim-2H_0$; hence $K_A\sim2H_0>0$.  Retain
+$K_AA_\theta^2$ as a strict additional row.
+If $h$ is a positive bounded unit, $\lambda\sigma$ is a unit and
+the following exact conductor replaces that row:
+\[
+ A_\theta=
+ \frac{qcw}{\sqrt{\lambda\sigma}}d_1
+ +\frac{k_c^2}{\sqrt\lambda}d_2
+ -\frac1{\sqrt\lambda}d_3
+ +(k_c+1)\sqrt x\,z^{1/6}J_c.                 \tag{CT13}
+\]
+All four coefficients are infinitesimal.  Since $K_A$ is bounded,
+its entire possibly signed square is then an infinitesimal bounded
+perturbation of the circuit/radial frame.  CT13 uses CT8 and
+$(k_c-1)G=g_0J_c$, not a division by a contact difference.
+
+\paragraph{Full-parent reassembly.}
+The strict bounded principal frame consists of $N_x$, the two raw
+radial roots $(N_y,J_c)$ with the clipped CT7 Gram, $\Gamma_d$,
+and the three circuit roots $d_i$.  Add $A_\theta$ when $h$ is
+infinitesimal.  The other nine CT5 squares and both final CT4
+squares are retained.  The following original positive packets
+are also retained whole: $4\beta D_wN_x^2$,
+$2(2D+1)(uX_e)^2$, the nonconstant positive $N_x^2$ excess,
+$4bpzu^2\Gamma^2$, and all radial source-weight excesses above.
+
+There are no unallocated SP6 terms.  Its remaining Gamma normals
+are exactly $-4u\nu N_x\Gamma$ and
+$qwR_\gamma(N_y+bR)\Gamma$; their coefficients $\nu,R_\gamma$
+are bounded, and CT10--CT12 allocate them infinitesimally.
+The $N_xN_y,N_xR,N_xA_\theta,N_yA_\theta$ entries have factors
+$uw,uw,wB_x,u$, respectively, with bounded remaining coefficients;
+$B_x=8\kappa e$ is bounded.  The last angular-radial term is the
+complete $\chi uA_\theta R$, with $\chi$ bounded.  CT6 and,
+when needed, CT13 give bounded allocations for all these roots.
+The remaining radial correction is bounded infinitesimal by CT7
+and LC2, and the circuit cost is $-\lambda xR^2$ with
+$\lambda x$ infinitesimal.  Consequently the complete remaining
+Gram is a bounded infinitesimal perturbation of the stated strictly
+positive residue Gram.  The separated bounded-Gram lemma proves
+finite tensor SOS.  Restore every retained square to obtain the
+entire original parent.
+
+All identities are exact at the sphere endpoints; no coefficient
+has been inferred positive by ordering a mixed element.  Source
+openings occur only in retained positive weights or the bounded
+opening-cleared combinations.  The proof is pointwise in the
+testing experiment, so separated cube roots and state ratios are
+legal.  Real/imaginary splitting supplies complex states, with the
+appropriate already-admitted or matched chart chosen for each part.
+The bounded-$W/Z$ part of the unbounded-$H$ source and the
+bounded-$H$ source are separate obligations and are not claimed here.

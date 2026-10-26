@@ -1,0 +1,180 @@
+\section{Positive-scale C2: a precise weak-alpha subbundle}
+
+
+\begin{theorem}
+Let the original bounded normalized C2 source be physical, with
+$\lambda=\beta=0$, all event coefficients nonnegative,
+$d,n,m,C,A,D$ positive bounded units, and $\alpha$ weak, meaning
+$\bar\alpha=0$. Then the complete original parent is tensor-SOS
+for every independent projective testing pair and every real or
+complex testing state.
+\end{theorem}
+
+This statement assumes all six printed unit hypotheses. It is not
+the whole weak-$\alpha$ branch and gives no assertion for weak $n$,
+$m$, $C$, $A$, or $D$. The proof uses A6, the separated strict-Gram
+lemma, and the recovered complete theorem
+\path{POSITIVE_D_FINITE_RATIO_CORNER_TERMINAL.md}, with its exact
+full-tail proof freshly read and replayed. The new issue is to show
+that its finite-ratio and state-complement hypotheses exhaust every
+possible zero left by this source, without constraining the independent
+tested ratio $u/v$.
+
+\section{Only the zero-zero corner needs a new argument}
+
+A6 covers noncommuting testing residues. On finite $u=0$, $v\ne0$,
+the unit $m$ removes the $W$ ray, and the $(X,Y,Z)$ complement is
+strict because $d,D,C,A$ are units and $v\ne0$. On finite $v=0$,
+$u\ne0$, the units $n,A$ force $X=Y=0$ at a zero; the $C$ packet
+forces $W=0$, and the signed core $(X+uZ)^2$ forces $Z=0$.
+
+The exact single-infinity core identities in
+\path{finite_pitchfork_fit.tex} require no unit $\alpha$: at
+$u=\infty$, $v\ne0$ use
+$2d[(W+vX)^2+(vY-Z)^2]$ and the $C,A$ packets; at $v=\infty$,
+$u\ne0$ use $2d(1+u^2)(X^2+Y^2)$ and the $C,D$ packets.
+Both state matrices are strictly positive.
+
+At $(\infty,0)$ the unit $n$ removes the only possible $X$ zero
+ray, and at $(0,\infty)$ the unit $m$ removes the $W$ ray.
+At $(\infty,\infty)$, put $p=1/u,q=1/v$, normalize the possible
+$Z$ zero ray to $Z=1$, and use $(p,q,W,X,Y)$ as roots. The exact
+full-parent square-ideal allocation already displayed and checked in
+the finite-pitchfork note has residue
+\[
+ 4CW^2+4AY^2+4D(X-p)^2+(2d+4n)X^2
+                         +[2d+4(m+\alpha)](Y-q)^2\succ0.
+\]
+This form remains strict for weak $\alpha$. Thus every projective
+test except $u,v$ infinitesimal is already covered, including literal
+zero/infinite endpoints and all signs.
+
+\section{The exact two state charts at zero-zero}
+
+Write $F$ for the original parent, with $\lambda=\beta=0$, and retain
+the whole nonnegative $\alpha$ packet
+$4\alpha(1+u^2)(vY-Z)^2$ whenever using an ordinary strict jet.
+At $u=v=0$ the residue is strictly positive on the $(X,Y)$ state
+subspace. Hence $X$- or $Y$-unit states have positive residue slack.
+For all other states, normalize a maximal coordinate. Then either
+$W=1$ with $Z$ infinitesimal, or $Z=1$ with $W$ bounded.
+
+In the first chart the entire remaining parent belongs to
+$(X,Y,u,v)^2$. Its quadratic residue is
+\begin{equation}
+ (4n+2d)X^2+4m(v-X)^2+[4(C+D)+2d](u-Y)^2+4AY^2\succ0. \tag{1}
+\end{equation}
+Consequently the finite normal allocation and restoration of the
+complete $\alpha$ packet give tensor-SOS. No testing ratio is used.
+
+In the second chart, set $w=\bar W\in\mathbb R$. The full residue
+quadratic jet on $(X,Y,u,v)$ is
+\begin{align}
+ Q_w={}&4nX^2+4m(vw-X-u)^2+4C(uw-Y)^2+4AY^2\notag\\
+      &+4D(uw-Y-v)^2
+        +2d[(uw-Y)^2+(X+u)^2-2uvw].                    \tag{2}
+\end{align}
+All coefficient letters in (1)--(2) now denote their real residues.
+Physicality implies $Q_w\succeq0$: evaluate the physical residue
+parent at $(X,Y,u,v)=s(x,y,a,b)$ and let the real $s$ tend to zero.
+The $(X,Y)$ principal block is strictly positive, already from the
+$nX^2$ and $AY^2$ terms. If $Q_w$ is strict, the same ordinary
+four-normal allocation applies, with $W-w$ infinitesimal in its
+coefficients, and the whole $\alpha$ packet restored.
+
+Suppose instead that $Q_w$ is singular. It has no nonzero kernel
+vector with $v=0$: the nonnegative sum at $v=0$ includes
+$4nX^2+(4m+2d)(X+u)^2+4AY^2$, so $X=u=Y=0$.
+It also has no nonzero kernel vector with $u=0$: the sum at $u=0$
+includes $4nX^2+4AY^2+4D(Y+v)^2$, so $X=Y=v=0$.
+Its real angular Schur complement therefore has positive diagonal
+entries. Being singular and positive semidefinite, it has rank one
+and a kernel with finite nonzero ratio $t_0=u/v$. Normalize a real
+kernel vector by $v=1$ and write it as $(x_0,y_0,t_0,1)$.
+This constructs a real coefficient-side jet center; it imposes no
+condition on the actual independent testing value of $u/v$.
+
+\section{Every singular jet fits the recovered ratio theorem}
+
+The homogeneous state jet at a real ratio $t$ is
+\begin{align*}
+ J_t(W,x,y,Z)={}&4nx^2+4m(W-x-tZ)^2+4C(tW-y)^2+4Ay^2\\
+ &+4D(tW-y-Z)^2
+   +2d[(tW-y)^2+(x+tZ)^2-2tWZ].
+\end{align*}
+Its $(W,x,y)$ complement at $Z=0$ is strict: it contains
+$4nx^2+4m(W-x)^2+4Ay^2$, with the remaining terms nonnegative.
+At $t=t_0$, its kernel is $(w,x_0,y_0,1)$ by (2).
+
+In the original determinant notation, at $\lambda=\beta=\alpha=0$,
+\[
+ q_{20}=4nAt_3t_4>0,\qquad q_{02}=4mDt_5t_6>0,
+ \qquad q_{21}=4CAt_1t_4>0,\qquad q_{12}=4CDt_5t_2>0.
+\]
+Here the $t_i$ are the original positive sums of bounded coefficients
+printed in the finite-pitchfork fit; all are units since $d$ is a
+unit. The full jet determinant is
+\[
+ \det J_t=16(q_{20}t^4+q_{11}t^2+q_{02}).
+\]
+Thus the singular jet gives precisely the finite nonzero root required
+by the recovered theorem, and its next coefficient satisfies
+$q_{21}t_0^4+q_{12}t_0^2>0$. The state complement, both endpoint
+coefficients, and the positive next coefficient are all verified.
+
+For clarity, the recovered proof normalizes the pure-testing event
+$vY-Z$ to $-1$, setting $Z=1+vY$. It keeps the complete opened
+$\alpha$ packet, including its $4\alpha u^2$ term, in the exact
+profile
+\[
+ F=4\alpha+v^2K(x,y,t,w,V),\qquad
+ (X,Y,u,W,V)=(vx,vy,vt,w,v^2)
+\]
+used only to construct coefficient-field critical centers. The positive
+state complement and the double finite root give a strict full Hessian
+in $(x,y,t,w)$, with positive next coefficient
+\[
+ \frac{16(q_{21}t_0^4+q_{12}t_0^2)}{\det M_J(t_0)}.
+\]
+The two signs of the optimized constant are handled by coefficient-only
+implicit centers exactly as in the finite-edge proof; physicality makes
+the remaining scalar nonnegative.
+
+Its actual tensor roots are the un-divided expressions
+\[
+ X-vx_c,\quad Y-vy_c,\quad u-vt_c,\quad v(W-w_c),
+ \quad v^2-V_c.
+\]
+All four full first-normal coefficients are $v\nabla K$ on this
+frame. Monic difference division makes their coupling to $v^2-V_c$
+infinitesimal. All 55 full-tail monomials have an exact allocation to
+the first four roots; factors of $W-w_c$ that remain in coefficients
+are infinitesimal. There is no substitution dividing $v(W-w_c)$ by
+$v$. The full residue Gram is the positive four-variable Hessian and
+the positive last scalar pivot. Hence the theorem applies to every
+testing point with the stated residue state, regardless of whether its
+actual tested $u/v$ is bounded or approaches $t_0$. This includes literal
+$v=0$ and arbitrary independent opening rates.
+
+The two zero-corner state charts and the strict/singular jet split
+are exhaustive. Together with the earlier projective dispatch, this
+proves the theorem. The zero state is direct, and complex states split
+into real and imaginary quadratic evaluations.
+
+\section*{Verification and retained complement}
+
+The recovered ratio checker freshly passes 9 exact identities and
+31 scalar entries, including the entire normal tail and its residue
+Hessian. The new \path{check_weak_alpha_unit_n_fit.py} checks the
+complete square-ideal memberships and exact quadratic forms in both
+zero-corner state charts (4 assertions). The other corner identities
+are the generic, already-replayed 11 assertions from the finite-pitchfork
+fit and remain valid for weak $\alpha$.
+
+Only the explicit subdomain with $d,n,m,C,A,D$ units has been admitted.
+The C2 reflection exchanges $(m,D)$ and $(C,\alpha)$; its exact image
+therefore supplies the corresponding weak-$C$ subdomain with the
+transported unit hypotheses. It does not remove weak-$n$ endpoints,
+other weak-$\alpha$ source shapes, C1 weak-$\alpha$, projective
+pitchforks, reciprocal terminals, or any local C14/weak-C2 frontier.
+All three remaining A5 groups remain open outside the stated repairs.

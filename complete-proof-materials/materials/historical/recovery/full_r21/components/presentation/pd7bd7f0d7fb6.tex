@@ -1,0 +1,218 @@
+\chapter{The remaining opening when the opposite event is bounded}
+\label{component:pd7bd7f0d7fb6}
+\noindent\textbf{Component }\path{pd7bd7f0d7fb6}\par
+{\small\noindent Source: \path{R13/baseline/baseline/baseline/baseline/baseline/advances/c2/c2_last_opening.tex}\par}
+{\small\noindent SHA256: \path{d7bd7f0d7fb66e4e45a7fceaac4ff793b5d046b7874bc3879cd8bd20219c3c81}\par}
+{\small\noindent Inventory use: CG1--CG10 complete gInf,runit opening, triangular m hard normal and literal n=0\par}
+\medskip
+\section{The remaining opening when the opposite event is bounded}
+\label{pd7bd7f0d7fb6:sec:c2-last-opening}
+
+\begin{theorem}[The unbounded-$m$ opening with bounded $n$]
+\label{pd7bd7f0d7fb6:thm:c2-no-opening-bounds}
+In Theorem~\ref{p81893ad08bed:thm:c2-three-openings}, replace the assumption that
+$g=b-1+r+xh$ is a positive bounded unit by $g>0$ and the assumption that at least one of $r,g$ is a bounded
+unit.  The all-tests tensor-SOS conclusion still holds.
+\end{theorem}
+
+The only new case is infinitesimal $g$; it is automatically bounded.
+Our hypothesis now makes $r$ a unit.  Since $b_0+r_0=1$ and $b$ is
+a positive unit, $r_0<1$.  Thus $n$ is bounded,
+$0<b_0<1$, and $1-r$ is a unit.  The source formulas imply
+\[
+               mg=\frac{(1+k^2)(1-r)A_cS_c}{2\Delta},   \tag{CG1}
+\]
+which is a positive bounded unit.  Thus $m$ is unbounded.  The
+two-opening bounds (CO1), positivity of $D/x,\alpha/x$, and the
+consequence that $b-k^2r$ is a unit remain valid.
+
+\paragraph{Use the original strong amplitude as the hard normal.}
+Put $\eta=h/b$ and use the exact contact graph
+\[
+ Y_g=\eta uW,\qquad
+ X_g=v(1+\eta u^2)W-(1+g)uZ.                            \tag{CG2}
+\]
+At contact this gives $X_g=\rho[b+xh-1-g]=-\rho r$.
+The original $m$ amplitude satisfies exactly $M|_g=guZ$.
+Normalize the full hard directions by
+\[
+ E_M=\sqrt m\{X-X_g-uv(Y-Y_g)\},\qquad
+ E_Y=\sqrt{C+A}(Y-Y_g).                                 \tag{CG3}
+\]
+In these variables
+\[
+ M=guZ-E_M/\sqrt m,
+ \quad
+ X=X_g+E_M/\sqrt m+uvE_Y/\sqrt{C+A}.
+\]
+Consequently the unbounded packet has no $E_Y$ contribution at all.
+This triangular change is essential: scaling $X$ alone would leave
+the uncontrolled coefficient $\sqrt{m/(C+A)}uv$.
+The entire scalar contribution of that packet is $4mg^2u^2Z^2$,
+which is bounded by (CG1).  Its full $X$ derivative contributes
+$-8mg\,uZ$, also bounded, before division by $\sqrt m$.
+
+All other source weights entering the $X$ row are $n,D$ and the
+unit signed weight, so the full $X$ derivative on (CG2) has bounded
+coefficients on $V=vW,B=uZ$.  Hence the $E_M$ first normal has
+zero-residue bounded coefficients on those roots.  The $E_Y$ first
+normal is
+\[
+       \frac{(F_Y+uvF_X)|_g}{\sqrt{C+A}}.               \tag{CG4}
+\]
+The $m$ packet cancels identically in $F_Y+uvF_X$, before any graph
+substitution.  The remaining large terms are exactly the $C,A$
+terms controlled by (CO1); all other coefficients are bounded.
+In particular the old (CO5) form on $P,B,E$ holds with bounded
+coquotients and identically zero leading corrections.
+The complete quadratic hard block is bounded and has residue
+\[
+                         \operatorname{diag}(4,4D_{v,0})  \tag{CG5}
+\]
+on the finite $u=0$ axis.  The $m$ packet gives precisely its first
+diagonal entry, the $C,A$ packets give the second, and all mixed
+entries from bounded packets contain $1/(\sqrt m\sqrt{C+A})$.
+
+\paragraph{The remaining five Laurent terms already force strictness.}
+The exact scalar divisions on $P,B,V,E$ are bounded for the same
+reason: $C,A$ enter through (CO1), and $m$ only through $mg^2$.
+Their leading weighted scalar is
+\[
+ q\,u^2W^2/x+b_su^2Z^2+c_sW^2-d_suWZ+exZ^2,
+\]
+where, for $z=v^2$ and $\nu=2n_0+1\geq1$,
+\[
+ \begin{gathered}
+ q=Q(1+z),\quad b_s=2\nu(1+z)-2,\quad
+ c_s=2z\nu(1+z),\quad d_s=4v\nu(1+z),\\
+ e=E_2z+E_0,\qquad Q=4T_0/b_0,
+ \quad E_2=4(D/x)_0>0,\quad E_0=4(\alpha/x)_0>0.
+ \end{gathered}                                         \tag{CG6}
+\]
+Set $\mathcal D(s,z)=(qs+c_s)(b_ss+e)-d_s^2s/4$.
+Its exact Laurent identity is
+\begin{align*}
+ \frac{\mathcal D(s,z)}{(1+z)sz}={}&
+ 2Q(\nu-1)s/z+2Q\nu s
+ +2\nu E_2z/s+2\nu E_0/s\\
+ &+QE_0/z+QE_2-4\nu.                                  \tag{CG7}
+\end{align*}
+Contact and stationarity give a zero at $(s,z)=(1,k_0^2)$.
+After $z=k_0^2t$, write the five coefficients in order as
+$a,b,c,d,e$.  Here $a\geq0$ and $b,c,d,e>0$.  Stationarity gives
+$c=a+e$ and $b=d+e$.  The zero value fixes the constant, so exactly
+\[
+ \mathcal L=
+ a(s/t+t/s-2)+d(s+1/s-2)+e(t/s+s+1/t-3).                 \tag{CG8}
+\]
+Every summand is nonnegative by AM--GM.  The last bracket alone
+forces $s=t=1$ at equality: its three positive terms have product
+one, and equality makes all three equal.  Its exponent vectors
+$(-1,1),(1,0),(0,-1)$ span two dimensions; equivalently its Hessian
+in $\log s,\log t$ at $(1,1)$ is
+$\left(\begin{smallmatrix}2&-1\\-1&2\end{smallmatrix}\right)$.
+Hence it already has a positive definite contact Hessian.
+This proves global uniqueness and local nondegeneracy even when
+$n_0=0$ and the first pair is absent.
+
+For remote finite nonzero $v$ the same scalar cross-term split as
+before gives a strict Gram.  The case $v_0=0,n_0>0$ is also strict
+on $P,B,V,E$.  The full normals are restored by (CG3)--(CG5).
+At matched finite-angle residues the whole scalar still has the
+form $p^2Q_b/x+B_b$ with bounded $Q_b,B_b$.  The four monic
+conductors $R,S,U,T$ of the prior theorem therefore give a bounded
+Gram, and (CG8) proves its strict Schur inequality.
+
+The full first normals have the required same conductor lifts.
+For $E_M$, their coefficient is $(uA_1+WB_1)/\sqrt m$ with bounded
+polynomial $A_1,B_1$.  Monic contact division retains the factor
+$1/\sqrt m$ in every coquotient.  Exact contact makes the residual
+coefficient $A_1+\kappa B_1$ vanish, giving the old four-root lift
+with zero residue.  For $E_Y$, the cancellation in (CG4) leaves
+precisely the old large-packet term $B_2$ plus bounded residual
+terms; its exact contact and identically zero leading part give
+the same $R B_2+\rho E_2'$ division, then the bounded factor
+$1/\sqrt H$.  These are full normal identities, not just Hessian
+checks.  Quadratic state degree and (CG5) finish the complete
+matched-contact certificate.
+
+\paragraph{The double-zero test when $n_0=0$.}
+The graph (CG2) is replaced in this remote corner.  Put
+\[
+ H_c=4m+4n+2,\quad \xi=4m/H_c,\quad
+ \zeta=(4m+2)/H_c,\quad \eta_c=C/(C+A).
+\]
+Use
+\[
+ Y_g=\eta_cuW,\quad
+ X_g=\xi v(1+\eta_cu^2)W-\zeta uZ,
+\]
+and the triangular normals
+\[
+ E_X=\sqrt{H_c}\{X-X_g-uv(Y-Y_g)\},\qquad
+ E_Y=\sqrt{C+A}(Y-Y_g).                                \tag{CG9}
+\]
+The entire graph amplitude is
+\[
+ M|_g=(1-\xi)v(1+\eta_cu^2)W+(\zeta-1)uZ.
+\]
+Both $m(1-\xi)$ and $m(\zeta-1)$ are bounded because $n$ is
+bounded.  Thus the scalar and full first normals have bounded
+coquotients after the same $x$ scaling as before.
+
+Set $\epsilon=4\alpha+4n\zeta>0$.  It is infinitesimal, with
+$n/\epsilon,x/\epsilon$ bounded.  The complete scalar $Z^2$
+coefficient is exactly
+\[
+ f_{zz}=4\alpha+\epsilon u^2+4n\zeta^2u^4+4Dv^2
+                            +u^2v^2 B_b,               \tag{CG10}
+\]
+where $B_b$ is bounded with residue $2$.  This identity follows
+directly from the packets and the exact relation
+$4n\zeta^2+(4m+2)(1-\zeta)^2=4n\zeta$.
+The $W^2$ coefficients on $P=uW/\rho,V=vW$ have positive residues
+$Q,2$.  The cross term is $uvWZ$ times a bounded function and
+can be written as a zero-residue multiple of $PE$ using
+$uvWZ=vPE$.  Thus the five scalar roots
+\[
+           P,\quad V,\quad E=\rho Z,\quad
+           B_\epsilon=\sqrt\epsilon\,uZ,\quad T=uvZ
+\]
+have strict diagonal residue $(Q,2,E_0,1,2)$.
+
+For the full $X$ derivative, at $v=0$ the $Z$ coefficient is exactly
+$-8n\zeta u^3$.  After division by $\sqrt{H_c}$ its coefficient
+on $B_\epsilon$ is infinitesimal because
+$n/\sqrt\epsilon=(n/\epsilon)\sqrt\epsilon$ is infinitesimal.
+The remaining $Z$ coefficient has the factor $uv^2$ and bounded
+coquotient; its coefficient on $T$ has zero residue.  The $W$
+coefficient has a factor $v$ and bounded coquotient, multiplied by
+$1/\sqrt{H_c}$.  For $E_Y$ the exact $m$ cancellation in
+$F_Y+uvF_X$ again applies; (CO6) gives
+$B_2=8D_v(xA)\eta_c u^2$, and the remaining lift is
+\[
+ P(B_2+xe_w)+T(\rho u e_z)+E\,8v(D-\alpha),
+\]
+divided by $\sqrt H$, with bounded $e_w,e_z$.
+Every coefficient has zero residue.  The hard residue of (CG9) is
+$\operatorname{diag}(1,4)$, and all mixed hard entries vanish in
+residue.  This proves the full-parent corner including literal $n=0$.
+
+\paragraph{All other tests.}
+For the remaining commuting axes use the earlier outer identities,
+cap $C,A$ at $\sigma/x$ as before, and also cap $m$ at
+$\min(m,1)$.  Retain the entire nonnegative excess $m$ packet.
+The selected $m$ weight is a unit and all previous displayed
+strict residues apply.  The noncommuting-residue theorem covers
+the other tests.  Restore all positive factors and split complex
+states as before.  This proves the theorem for arbitrary positive
+$g$, including the new unbounded-$m$ regime.
+
+The remaining assumptions in this source family are now only that
+$k,b$ are units, $x$ is positive infinitesimal, all original contact
+openings are positive, at least one of $r,g$ is a unit, $n\geq0$,
+and the source is physical.  The joint degeneration $r,g\to0$,
+where both $n,m$ can be unbounded, is not covered.  The
+result does not yet treat unbounded $b$ or a degenerate residue of
+the finite actual angle $k$.  Section~\ref{p7294aae40ee2:sec:c2-bounded-state-entry}
+excludes infinitesimal $b$ under these entry hypotheses.

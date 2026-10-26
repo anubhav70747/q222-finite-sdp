@@ -1,0 +1,131 @@
+C2 a -> 0 ENDPOINT: EXACT CONSTRAINTS AND SCOPE
+26 October 2026; private bounded audit; no public edits
+
+Read: independent-review/EXACT_LIFT_CANDIDATE.md, new a->0 section;
+checks/gram-lift/ends/check_a0_corners.py and its imported parent/basis;
+latex/certificates/c2_short.tex, native source/contact equations.
+
+Conclusion. The corner coefficient matrices, C2 relative determinants,
+leading-face identity and product-state identity are correct. On C2,
+the matrices really are principal submatrices of EVERY PSD Z_k Gram,
+not merely one choice of coefficient allocation. This needs the beta=0
+support-pruning argument below, which the corner script does not itself
+prove. The stronger claim about a uniform margin AFTER removing the
+moving contact kernel does not follow from these matrices alone.
+
+1. Why the entries are fixed, at every positive integer k.
+
+Write features u^(i/k)v^(j/k) psi_l, 0<=i,j<=k. For psi=(0,0,0,Z),
+the exact diagonal state polynomial is
+ F/Z^2=4alpha+(K+4beta)u^2+4Dv^2+4beta u^2v^2,
+ K=4m+4alpha+2d.
+On C2, beta=0. The Newton polygon is contained in
+conv{(0,0),(2,0),(0,2)}. Therefore every Z-feature with i+j>k has a
+zero row in ANY PSD Gram. Proof: factor G as a sum of squares and
+restrict the state to Z. A monomial outside half this polygon would
+give a noncancelling highest-weight square term in a separating
+direction. Its coefficient vector must vanish; PSD then kills its
+whole Gram row. This is a polynomial argument in u^(1/k),v^(1/k).
+It does not assume a parity-block-diagonal Gram.
+
+The diagonal corner monomials have unique pairs. For the YZ cross
+monomial u^2 v YZ, both features have i=k. Pruning leaves only j=0
+for the Z-feature, forcing j=k for Y. Likewise uv^2 XZ forces j=k
+in both features, then i=0 for Z and i=k for X. Hence the literal
+Gram blocks on (uZ,uvY) and (uvX,vZ), respectively, are
+ B1=[[K,-K],[-K,K+4A]],
+ B2=[[4D+2d+4n,-4D],[-4D,4D]].
+The printed generic coefficient-extraction formulas include beta and
+lambda, and are algebraically correct. However, beta>0 removes the
+triangular Z-pruning, allowing other feature pairs to contribute to
+these cross coefficients. Thus “fixed for every Gram” is proved here
+on beta=0, particularly C2, not on arbitrary nine-coordinate sources.
+
+For positive diagonal entries the relative determinants are exactly
+ rho1=det(B1)/(B1_11 B1_22)=4A/(K+4A),
+ rho2=det(B2)/(B2_11 B2_22)=(d+2n)/(2D+d+2n).
+They are invariant under diagonal congruences of the two coordinates.
+The diagonally normalized blocks have least eigenvalue
+1-sqrt(1-rho_i). The identities are necessary constraints on a Gram,
+not sufficient admission certificates.
+
+2. Native limiting scope and the margin qualification.
+
+Fix c,b,t,r with z=c^2, 0<r<1, b,t,c>0, and strict limiting gaps
+ g0=(1+z)b-1+r>0, j0=1+zr-t>0, 1-zb>0.
+Let Delta0 be the printed native Delta at a=0 and Ac=1+zr. Then
+ A/a^2 -> A1=Ac^2(b+r)/(2b Delta0)>0,
+ a^2D -> D0=(1+z)(b+r)b Ac/(2j0 Delta0)>0,
+ n -> n0=((b+r)Ac^2-r Delta0)/(2r Delta0),
+ m -> (1-r)Ac^2/(2g0 Delta0),
+ alpha -> z^2(1+z)b(b+r)^2/(2(1-zb)Delta0).
+Thus rho1,rho2 are positive constants times a^2 along actual native
+paths with n>=0; n0>0 ensures that condition for sufficiently small a.
+The three rational points P1--P3 have n0 and all limiting gaps strictly
+positive, checked exactly. Their reported asymptotic coefficients are
+consistent with these formulas. This is not a statement about every
+simultaneous approach to all source walls. In the d=1 normalization
+C,D diverge, so no finite full source exists at a=0. Projective
+normalization produces additional zero coefficients, not only A=0.
+
+CRITICAL QUALIFICATION: small rho bounds a principal block's
+correlation eigenvalue, but does NOT alone bound the smallest positive
+eigenvalue after deleting the full moving contact kernel. For example
+ G_epsilon=I-ww^T/(w^Tw), w=(1,1,epsilon),
+has nonzero eigenvalues exactly 1,1, while its first two-coordinate
+block has determinant epsilon^2/(2+epsilon^2). Kernel projection can
+account for the entire small direction. Consequently the wording
+“no diagonal rescaling can make the reduced margin uniform” needs
+an additional quantitative comparison to the contact kernel. It is
+not established by check_a0_corners.py. The exact shear identities are
+ K(uZ-uvY)^2+4A(uvY)^2,
+ 4D(uvX-vZ)^2+(2d+4n)(uvX)^2;
+they show no sign obstruction, but do not complete the remaining Gram.
+
+3. A stronger exact endpoint constraint to send to the native-C2 task.
+
+On the u-projective face the FULL polynomial is
+ [u^2]F=4C(1+v^2)W^2+4n(1+v^2)X^2
+       +K(vY-Z)^2+4A(1+v^2)Y^2+(4D+2d)(W+vX)^2.
+In particular, on W=X=0,Z=vY, its value is exactly
+ 4A(1+v^2)Y^2.
+After Z-pruning, the face moment vectors of this curve span a fixed
+(k+1)-dimensional subspace S_k: the k+1 Y-features and the Z-feature
+are related by Z=vY (the latter repeats the highest Y monomial).
+For EVERY certificate G, G restricted to S_k is O_k(A) in a fixed
+unscaled basis. To see uniformity over G, choose k+1 fixed distinct
+positive v-values. Their moment vectors form a basis of S_k. Their
+quadratic values are known multiples of A; PSD Cauchy--Schwarz bounds
+all cross terms, giving a constant depending only on that fixed basis.
+At A=0, S_k lies in ker G exactly. For k=6 this proves seven forced
+soft directions, without a numerical solver. It does not determine
+the quotient margin after contact removal and source-dependent
+normalization, nor all additional limit-kernel directions.
+
+The independent exact product-state identity is
+ F(W,vW,uW,uvW)=2W^2 Du Dv[2Au^2+2lambda Dv
+                         +v^2(d+2n+2beta Du)].
+It reduces on C2 to 2W^2 Du Dv[2Au^2+(d+2n)v^2].
+This confirms nearly tight classical directions for bounded u,W and
+v=O(a), but is not a uniform full-state or all-scale completion.
+
+Recommended message: any proposed native-C2 construction should
+respect the two forced corner matrices, the exact u-face curve and
+its seven-dimensional O(A) Gram restriction, and the product identity.
+It must handle the other state directions and contact-kernel projection
+before claiming a strict uniform reduced Gram. These necessary
+constraints neither refute nor prove finite-a Z6 admission or (ND).
+
+4. Evidence that remains evidence.
+
+The corner checker verifies algebraic identities and three exact
+one-parameter asymptotics. It does not supply the transformed limit
+form, a reproducible 57+4=61 kernel calculation, a rational feasible
+Gram after those 61 reductions, or a six-grade finite-a Schur bound.
+The reported margins 0.16,0.18,0.09 and graded feasibility are numerical
+evidence, not certified exact endpoint admission. The last assertion
+“every tested a>0 satisfies (ND)” also overstates what the document's
+earlier unresolved/noise-limited solver cases establish; at most it
+reports positive numerical margins in the cases actually resolved.
+Strict reduced-Gram persistence, uniform native admission and the
+candidate's global exactness remain unproved.

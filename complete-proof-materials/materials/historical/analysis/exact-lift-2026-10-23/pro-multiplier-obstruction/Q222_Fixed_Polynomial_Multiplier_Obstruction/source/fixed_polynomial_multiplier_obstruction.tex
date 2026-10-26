@@ -1,0 +1,353 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.82in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newcommand{\R}{\mathbb R}
+\newcommand{\sos}{\operatorname{SOS}}
+\hypersetup{hidelinks,pdftitle={Q222: no fixed polynomial multiplier and the remaining half-line completion}}
+\title{No source-independent polynomial Bob multiplier\\for the canonical two-LMI completion}
+\author{}\date{}
+\begin{document}\maketitle\vspace{-1.8em}
+\begin{abstract}
+An explicit rational one-parameter family of strictly valid canonical sources
+excludes every fixed nonzero nonnegative polynomial Bob multiplier in the
+accepted two-LMI completion. The proof uses a polynomial full-state test whose
+critical limit is the Motzkin polynomial plus a constant. The required
+half-line algebraic cover remains open: its square-root ramification removes
+this particular obstruction by an explicit three-square identity. The C1
+half-line quadratic form is derived, including its possibly discontinuous
+reflection at zero.
+\end{abstract}
+
+\section{Statement and the accepted completion identity}
+Write the canonical coefficients in the order
+$c=(d,\lambda,n,m,C,A,D,\alpha,\beta)$ and put $D_v=1+v^2$.
+The four $2\times2$ blocks are
+\begin{align*}
+P&=\begin{pmatrix}4mv^2&-4mv\\-4mv&4m+(4\beta+2d)D_v\end{pmatrix},&
+N&=\begin{pmatrix}4CD_v+4D+2d&(4D+2d)v\\(4D+2d)v&(4D+2d)v^2\end{pmatrix},\\
+E&=\begin{pmatrix}4AD_v+(4\alpha+2d)v^2&-(4\alpha+2d)v\\-(4\alpha+2d)v&4\alpha-2dv^2\end{pmatrix},&
+K&=4\lambda\begin{pmatrix}1&v\\v&v^2\end{pmatrix}
++4nD_v\begin{pmatrix}0&0\\0&1\end{pmatrix}.
+\end{align*}
+For a nonnegative polynomial $q\in\R[v]$ and a polynomial $2\times2$ matrix $Z$,
+the proposed completion consists of
+\begin{equation}\label{eq:blocks}
+G_{q,Z}=\begin{pmatrix}q(P+K)&Z\\Z^T&q(N+K)\end{pmatrix}\succeq0,
+\qquad
+H_{q,Z}=\begin{pmatrix}q(P+E)&q(K-E)-Z\\q(K-E)-Z^T&q(N+E)\end{pmatrix}\succeq0
+\end{equation}
+for every $v\in\R$.
+\begin{theorem}\label{thm:main}
+No nonzero $q\in\R[v]$, nonnegative on $\R$ and independent of the source,
+admits such a polynomial completion for every valid canonical source.
+More precisely, define, for $0<T\leq1/100$,
+\begin{equation}\label{eq:source}
+\boxed{\begin{aligned}
+d&=2T-4T^3,&\lambda=m=A&=T^3,\\
+n=D=\alpha&=1-T+T^3,&C=\beta&=(1-T)/2+T^3.
+\end{aligned}}
+\end{equation}
+All nine coefficients are positive, and every source in this family is valid
+for all states and all projective measurement angles.
+For every fixed $q$ as above there is $\delta_q>0$ such that no polynomial $Z$
+satisfies \eqref{eq:blocks} for any source \eqref{eq:source} with
+$0<T<\delta_q$.
+In particular, the rational sources $T=1/n^2$, $n\geq10$, eventually exclude
+any prescribed $q$.
+\end{theorem}
+
+We use the established canonical completion identity, without changing its
+quantifiers. Let $F_c(u,v;\psi)$ be the cleared canonical slack,
+$D_u=1+u^2$, $\psi=(W,X,Y,Z_0)^T$, and
+\[
+\Phi_c(U,v;a,b)=(1+U)a^TPa+U(1+U)b^TNb
++U(a-b)^TE(a-b)+(a+Ub)^TK(a+Ub).
+\]
+The two polynomial identities needed here are
+\begin{align}
+q\Phi_c&=\binom a{Ub}^{\!T}G_{q,Z}\binom a{Ub}
++U\binom ab^{\!T}H_{q,Z}\binom ab,\label{eq:split}\\
+u^2D_u F_c(u,v;\psi)&=(L(u)\psi)^T\mathcal P_c(u^2,v)(L(u)\psi),\label{eq:inverse}
+\end{align}
+where $\mathcal P_c$ is the state matrix of $\Phi_c$ and
+\[
+L(u)=\begin{pmatrix}u&0&u^2&0\\0&u&0&u^2\\u&0&-1&0\\0&u&0&-1\end{pmatrix}.
+\]
+These are the accepted source-independent identities. No inverse or cancellation
+of a mixed source/testing expression will be used.
+If $\deg q=2r$, principal minors of $G_{q,Z}$ imply $\deg Z\leq2r+2$.
+Univariate matrix factorization of the two matrices in \eqref{eq:blocks}
+then makes \eqref{eq:split}, at $U=u^2$, a polynomial sum of squares whose
+roots have degree at most $r+1$ in $v$ and at most two in $u$.
+Consequently
+\begin{equation}\label{eq:necessary}
+q(v)u^2(1+u^2)F_c(u,v;\psi)\quad\hbox{is a polynomial sum of squares.}
+\end{equation}
+The degree bound depends only on $q$, including when the source or either
+completion block loses rank. This consequence of the accepted completion is
+all that the obstruction requires.
+
+\section{A strictly valid rational source family}
+Let $\eta=1-T$, $w=4-2T+4T^3$ and
+\[
+f_T=w-\{S+\eta(A_1+B_0)\},\qquad
+S=A_0B_0-A_0B_1+A_1B_0+A_1B_1.
+\]
+In the canonical convention $f=d(1-S/2)+4\sum_i a_i p_i$, its coefficients are
+\[
+d=4-w,\quad \lambda=m=A=(w-2-2\eta)/4,\quad
+n=D=\alpha=(w-2+2\eta)/4,\quad C=\beta=(w-2)/4,
+\]
+which gives \eqref{eq:source}. This is an exact linear coefficient identity,
+verified directly in the accompanying script. Explicitly, in the canonical
+qubit basis $A_0=B_0=Z$,
+$A_1=((1-u^2)Z+2uX)/D_u$ and $B_1=((1-v^2)Z+2vX)/D_v$;
+here $Z=\operatorname{diag}(1,-1)$ and
+$X=\left(\begin{smallmatrix}0&1\\1&0\end{smallmatrix}\right)$.
+The parent is $D_uD_v$ times the unnormalised state expectation of $f_T$.
+Swapping Alice's inputs turns
+$f_T$ into the standard symmetric doubly tilted CHSH slack.
+
+Here is a full-state validity proof with explicit constants. Let
+$c^2+r^2=e^2+s^2=1$, put $\Omega=1+c+e-ce$, and form the standard Bell matrix
+\begin{equation}\label{eq:bell}
+H_T=\begin{pmatrix}
+\Omega+2(1-T)&(1-c)s&(1-e)r&-rs\\
+(1-c)s&-\Omega&-rs&(e-1)r\\
+(1-e)r&-rs&-\Omega&(c-1)s\\
+-rs&(e-1)r&(c-1)s&\Omega-2(1-T)
+\end{pmatrix}.
+\end{equation}
+Set $p=1-c$, $q_0=1-e$, so $p,q_0\in[0,2]$. Direct expansion, using the
+circle equations but neither sine sign, gives
+\begin{align}
+\det[(4-2T+\sigma)I-H_T]&=\sigma P_T(\sigma;p,q_0)+8pq_0R_T(p,q_0),\label{eq:det}\\
+P_T&=\sigma^3+(16-8T)\sigma^2+(84-88T+20T^2)\sigma\notag\\
+&\quad+144-240T+112T^2-16T^3+8pq_0(1-T)^2,\notag\\
+R_T&=(3+2T-T^2)(p+q_0)-2pq_0-18T+12T^2-2T^3.\notag
+\end{align}
+Take $\sigma=4T^3$ and $0<T\leq1/100$. Then $P_T\geq144-240T$.
+If $R_T\geq0$, the determinant is positive. Otherwise put $a=p+q_0$.
+The inequalities $pq_0\leq p+q_0$ and $3+2T-T^2\geq3$ give
+$R_T\geq a-18T$, so $a<18T<2$. Since
+$2pq_0\leq a^2/2\leq a$, we also have $R_T\geq2a-18T$.
+Because $R_T<0$,
+\[
+8pq_0R_T\geq2a^2R_T\geq4a^3-36Ta^2\geq-432T^3,
+\]
+where the last step is exactly
+\[
+4a^3-36Ta^2+432T^3=4(a-6T)^2(a+3T)\geq0.
+\]
+Thus in this case
+\begin{equation}\label{eq:positive-det}
+\det(wI-H_T)\geq(144-960T)T^3>0.
+\end{equation}
+
+A determinant alone would not prove positivity. At $c=e=1$, the four
+eigenvalues of $wI-H_T$ are
+\[
+4T^3,\quad6-2T+4T^3,\quad6-2T+4T^3,\quad4-4T+4T^3,
+\]
+all strictly positive. The angle torus is connected and \eqref{eq:det}
+never vanishes there. Continuous eigenvalues therefore cannot change sign.
+Hence $wI-H_T\succ0$ for every angle pair and both independent sine signs.
+This includes literal commuting tests and all projective endpoints.
+The accepted real-qubit representation now proves validity of $f_T$ on
+all of $Q_{222}$. At $T=0$ the coefficients remain nonnegative and $d=0$;
+this endpoint is the immediate positive-event source, also obtained by
+continuity. No boundary coefficient has been divided out.
+
+\section{The polynomial full-state test and the limiting contradiction}
+Put $T=t^2$, $u=-tx$, $v=ty$ and use the explicit unnormalised state
+\begin{equation}\label{eq:state}
+\psi_t(x,y)=\begin{pmatrix}
+1+\frac23t^4x^2y^2\\
+-\frac13t^3x^2y\\
+-tx+\frac23t^3xy^2\\
+-t^2xy-\frac23t^4x^3y
+\end{pmatrix}.
+\end{equation}
+It is the polynomial numerator of the Alice basis rotation, applied to
+$(1,\frac23t^3x^2y,\frac23t^3xy^2,-t^2xy)^T$. Thus no state component
+has been omitted, constrained to a limiting contact, or replaced by its
+leading value. The canonical source, tests and state satisfy the exact
+polynomial expansion
+\begin{equation}\label{eq:limit}
+F_{c(t^2)}(-tx,ty;\psi_t)
+=\frac43t^6\{M(x,y)+2\}+t^8 R(t,x,y),
+\qquad
+M=x^4y^2+x^2y^4-3x^2y^2+1,
+\end{equation}
+for a polynomial $R$. The source map, all four state coordinates, and every
+coefficient of \eqref{eq:limit} are checked over $\mathbb Q$ by
+the included verification script. The file \texttt{CRITICAL\_PULLBACK.txt}
+supplies the complete finite expansion.
+
+The leading coefficient also has a short hand calculation. In the standard
+frame, use half-angles $tx,ty$ and the state
+$\xi=(1,at^3,bt^3,ht^2)^T$. The coefficient of $t^4$ in
+$\xi^T(wI-H_{t^2})\xi$ is $4(h+xy)^2$. At $h=-xy$, its coefficient of
+$t^6$ is
+\[
+6\left(a-\frac23x^2y\right)^2+
+6\left(b-\frac23xy^2\right)^2+\frac43(M+2).
+\]
+This determines the displayed state choice while retaining both independent
+state-normal squares. The polynomial change to the canonical state and
+angle clearing multiply this expectation by $D_u^2D_v$, whose constant
+term is one, so they preserve the asserted leading coefficient.
+
+Let $q\ne0$ be nonnegative on $\R$. Its first nonzero Taylor term at the
+commuting Bob endpoint is
+\[
+q(v)=a v^{2k}+O(v^{2k+1}),\qquad a>0.
+\]
+Suppose completions exist along any sequence $t_j\downarrow0$ in the source
+family. Substitute \eqref{eq:state} into \eqref{eq:necessary} and divide by
+the positive scalar $t_j^{8+2k}$. Each resulting polynomial in the independent
+tests $(x,y)$ is SOS. If $\deg q=2r$, its total degree is at most
+$2r+16$, so every SOS root has degree at most $r+8$, independently of $j$.
+Its coefficient limit is
+\begin{equation}\label{eq:last}
+\frac{4a}{3}\,x^2y^{2k}\{M(x,y)+2\}.
+\end{equation}
+The extra $1+u^2$ factor tends to one. For each fixed real $t_j$, $x,y$
+remain arbitrary independent testing variables; the rescaling is used only
+to refute the assumed fixed certificate. There is no division by any
+expression mixing source and tests.
+
+For completeness, bounded-degree SOS cones are closed for the specific
+reason needed here. For a monomial vector $z$ containing all monomials through
+the root degree, let
+\[
+B=\int_{[-1,1]^2}zz^T\,dx\,dy\succ0.
+\]
+For any Gram matrix $Q_j\succeq0$ representing the $j$th polynomial,
+$\operatorname{Tr}(BQ_j)$ is its integral. Coefficient convergence bounds
+these integrals, and $B\succ0$ bounds $\operatorname{Tr}Q_j$ and every entry.
+A convergent subsequence therefore supplies a PSD Gram matrix for the limit.
+This proves that \eqref{eq:last} would be SOS, with no unproved compactness
+assumption about a source-dependent function family.
+
+A square monomial can be cancelled from a polynomial SOS. Indeed, if
+$x^2h=\sum_i h_i^2$, evaluating at $x=0$ forces each $h_i(0,y)=0$, so each
+$h_i$ is divisible by $x$. Repeat for the powers of $y$ and divide the
+positive scalar in \eqref{eq:last}. It follows that $M+2$ would be SOS.
+This is impossible by an elementary coefficient argument. Since $M+2$ has
+total degree six, each possible square root has degree at most three.
+On either coordinate axis $M+2=3$, so every root restricts to a constant
+there. Each root therefore has the form
+$a_0+a_1xy+a_2x^2y+a_3xy^2$. The coefficient of $x^2y^2$ in a sum of their
+squares is nonnegative, whereas it is $-3$ in $M+2$.
+This proves Theorem~\ref{thm:main}. If there were successful completions
+arbitrarily close to $T=0$, they would give the forbidden sequence; hence
+all sufficiently small members of the family exclude the chosen $q$.
+
+\paragraph{Stronger separable-multiplier statement.}
+The same proof excludes any fixed product $p(u)q(v)$ of two nonzero
+polynomials nonnegative on $\R$: for every such pair,
+$p(u)q(v)F_{c(T)}$ is not polynomial SOS for all sufficiently small $T>0$.
+Indeed, their first nonzero terms at zero are positive even monomials;
+under the displayed substitution the leading multiplier is a positive
+square monomial in $x,y$, which cancels by the same argument.
+The degree of the product is fixed, so any SOS has uniformly bounded root
+degree before and after the polynomial substitution. The completion theorem
+is the special case $p(u)=u^2(1+u^2)$.
+
+\section{The half-line form and the remaining implication}
+The proposed half-line form has an elementary exact justification.
+On C1, where $\lambda=n=0$, any polynomial selector satisfying both
+unscaled completion inequalities for every $v\geq0$ must have the form
+\begin{equation}\label{eq:halfline-selector}
+J_+(v)=\begin{pmatrix}
+p_1v+p_2v^2&q_2v^2\\
+r_0+r_1v+r_2v^2&s_1v+s_2v^2
+\end{pmatrix}.
+\end{equation}
+Indeed, the principal minors of $G_{1,J_+}$ give
+$|J_{ij}|^2\leq P_{ii}N_{jj}$, hence degree at most two, even when
+the right side vanishes identically. At $v=0$, the zero first diagonal of
+$P$ and zero second diagonal of $N$ kill the constant terms of
+$J_{11},J_{12},J_{22}$. Finally
+$|J_{12}(v)|^2\leq4m(4D+2d)v^4$ kills its linear term.
+No positive source weight was assumed or divided out.
+
+The endpoint does not in general force $r_0=0$:
+$G_{1,J_+}(0)\succeq0$ gives only
+\[
+r_0^2\leq(4m+4\beta+2d)(4C+4D+2d),
+\]
+and, after reversing the sign of $r_0$, $H_{1,J_+}(0)$ adds positive
+square blocks to this endpoint quadratic. With
+$T_0=\operatorname{diag}(1,-1)$, reflecting by
+$J_-(v)=T_0J_+(-v)T_0$ gives, away from zero,
+\[
+J(v)=\begin{pmatrix}
+p_1|v|+p_2v^2&q_2v|v|\\
+r_0\operatorname{sgn}(v)+r_1v+r_2v|v|&s_1|v|+s_2v^2
+\end{pmatrix}.
+\]
+Thus two closed half-line charts are legitimate; a global notation must
+also retain $\operatorname{sgn}(v)$ unless $r_0=0$ is separately proved.
+At zero, averaging the two feasible endpoint selectors supplies the value
+with $\operatorname{sgn}(0)=0$. Continuity of the selector is unnecessary.
+
+The obstruction is specific to a polynomial multiplier in the unramified
+Bob coordinate. It does not exclude a fixed half-line algebraic cover.
+Indeed, the critical polynomial becomes SOS after the single ramification
+$y=s^2$:
+\begin{equation}\label{eq:halfline}
+\boxed{M(x,s^2)=(x^2s^2-1)^2+\bigl(xs^2(s^2-1)\bigr)^2
++2\bigl(xs(s^2-1)\bigr)^2.}
+\end{equation}
+Adding the constant two preserves this certificate. Equivalently, $\sqrt y$
+is one sufficient additional testing function for this limiting obstruction
+on $y\geq0$. This supplies a local function, not a unique necessary choice
+or a global certificate.
+
+The precise unresolved implication, now for all nine coefficients, is
+\begin{equation}\label{eq:open}
+\boxed{c\text{ valid}\ \Longrightarrow\
+\exists J_+\in\bigl(\R[v]_{\leq2}\bigr)^{2\times2}\ 
+\forall v\geq0:\ G_{1,J_+}(v),H_{1,J_+}(v)\succeq0.}
+\end{equation}
+On C1 this is exactly the eight-parameter question \eqref{eq:halfline-selector}.
+If \eqref{eq:open} holds, each quadratic matrix on the half-line has the
+fixed-degree factorization
+\[
+M(v)=(B_0+vB_1)^T(B_0+vB_1)+vC_0^TC_0.
+\]
+It follows by applying the accepted univariate factorization to $M(s^2)$
+and separating even and odd powers. The resulting testing factors are
+$1,v,\sqrt v$; rank drops and zero blocks require no inverse.
+The missing step is the simultaneous existence of $J_+$ for every valid
+source. Its pointwise existence, the degree bound, and the Motzkin identity
+do not prove that implication. On the already solved face $d=0$, the
+accepted selector $J=K$ remains available, including zero event weights.
+
+No global testing family or affine $Q_{222}$ pencil is obtained here.
+The established companion and its pointwise results are not replaced by
+this obstruction theorem.
+\paragraph{Provenance and reproduction.}
+The critical doubly tilted CHSH--Motzkin mechanism is used in
+\cite{Chaturvedi}. The present argument proves its own rational upper bound,
+canonical source identity, exact polynomial state substitution and
+fixed-multiplier obstruction; it uses neither an exact quantum-value formula
+nor an identification of NPA certificates with angle-polynomial SOS.
+The accepted canonical identities and the unchanged companion are the
+project inputs at commit \texttt{918523fc} \cite{Project}.
+The accompanying script checks the new identities over $\mathbb Q$ and the
+machine-readable source/function data. No SDP computation enters the proof.
+
+\begin{thebibliography}{2}\small
+\bibitem{Chaturvedi} A. Chaturvedi, \emph{No Finite NPA Level Characterizes
+the Complete Quantum Set in the Simplest Bell Scenario},
+\href{https://arxiv.org/abs/2607.14569}{arXiv:2607.14569v1} (2026),
+especially Sections S3 and S6--S7.
+\bibitem{Project} A. Chaturvedi, \emph{q222-finite-sdp},
+\href{https://github.com/anubhav70747/q222-finite-sdp/tree/918523fc022bb7d1b0bf5304fcd485342528456f}{commit 918523fc022bb7d1b0bf5304fcd485342528456f}.
+\end{thebibliography}
+\end{document}

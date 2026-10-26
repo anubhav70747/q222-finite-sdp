@@ -1,0 +1,269 @@
+      R1 Full Infinitesimal Proof
+
+
+
+ 
+
+
+Native C2 R1: complete infinitesimal-test tensor certificate and outer join
+Source pinned: c2_short.tex, RSR1–RSR29, RFN4–RFN24, R1N1–R1N24. This note audits the actual R1 proof. Conclusion: the complete original C2 parent has a separated tensor-SOS certificate for all independently infinitesimal positive tests, with arbitrary positive state ratio, every original source opening and literal n=0. Joining the separately established outer certificates gives all independent projective tests for the R1 native sector, not for C2 or Q222 globally. The proof is pointwise in the pair of labelled real closed fields; no common bound on the outer real event caps is asserted or required.
+A. Fields, strict source and its exact coefficients
+Let K_s and K_t be independently labelled real closed extensions of R, T=K_s ⊗_R K_t, B=B_s ⊗_R B_t its bounded-factor tensor subring, and m=ker(res:B→R) its ideal of zero real residue. No order or inverses are imposed on a mixed tensor. The positive source coefficient is normalized to d=1, with lambda=beta=0. All divisions and radicals below are in one pure factor (or a displayed product of pure factors). Source quantities p,H,j,B,T satisfy
+
+
+
+
+0<p<min(1,j), 0<H<1, j,B,T>0;
+B,T,x=jB,y=TB infinitesimal in K_s;
+q_z=jT>0 arbitrary (small, unit or unbounded);
+original native source gaps strictly positive and n≥0.
+
+This is exactly the R1 domain from t_s,B_s,a_s B_s,t_s B_s infinitesimal via RSR2, with x=a_s B_s, y=t_s B_s. The inverse native map is
+$ r=\frac{j-p}{j+px},\quad h=\frac{1-HT}{1+HTx},\quad
+ a_s=\frac{j+px}{1+HTx},\quad
+ B_s=\frac{B(1+HTx)}{1+pB},\quad
+ t_s=\frac{T(1+pB)}{1+HTx}.
+\tag{A1}$In particular j-p, 1-p, H, 1-H are strictly positive; no lower bound on these four gaps is assumed. Set
+$K=j+1-p,\quad E=1+B(HT+p-1),\quad W_0=(1-H)j+1-p.$The exact source polynomials are
+$\begin{aligned}
+\mathcal P={}&j+1+B((j+1)^2-p)\\
+ &+TB\{Hj+j+1+B[Hj(2j+2-p)+p(2j+1-p)]\}\\
+ &+HjT^2B^2(1+Bp+BHj),\\
+\mathcal L={}&K+T(W_0-H)+BT[pK+Hj(1-p)]+BHT^2(W_0-1),\\
+\mathcal N={}&p+B(-j^2+3jp-j-p^2+p)\\
+ &+BT(Hj^2+Hj-j^2+jp-j+p)\\
+ &+B^2T(2Hj^2p-Hj^2-Hjp^2+2Hjp\\
+ &\qquad\qquad-2j^2p+3jp^2-jp-p^3+p^2)\\
+ &+B^2HT^2j(Hj-j+p)(1+Bp).
+\end{aligned}
+\tag{A2}$Write mu=m(1-p) and use the original source coefficients, not a substituted stationary source:
+$\begin{aligned}
+\mu&=\frac{jp(1+y)(1+x)(1+Hy)}{2\mathcal P},&
+ n&=\frac{\mathcal N}{2(j-p)\mathcal P},\\
+ C&=\frac{\mathcal L}{2HT\mathcal P},&
+ A&=\frac{T(1+x)(1+Hy)(K+Hjy)}{2(1-HT)\mathcal P},\\
+ D&=\frac{(1+Hy)(K+Hjy)[1-y((1-H)j-p)]}{2T(1-H)\mathcal P},&
+ \alpha&=\frac{B^2(K+Hjy)\mathcal L}{2E\mathcal P},\\
+ m&=\mu/(1-p).&&
+\end{aligned}
+\tag{A3}$The two formerly implicit denominators 1-HT and E are positive source units (T,B are infinitesimal), and 1-y((1-H)j-p) is a positive unit because yj=Tx is infinitesimal. All of m,C,A,D,alpha are positive, while n≥0 is allowed to vanish.
+A.1 Source estimates, derived without dividing by an opening
+Direct comparison of individual terms in (A2) with B(j+1)=B+x and T infinitesimal gives
+$ \mathcal P/(j+1)\sim1,\qquad \mathcal L/K\sim1,
+ \quad \tfrac12<k:=K/(j+1)<1. \tag{A4}$Regrouping the entire N polynomial gives
+$\mathcal N=p[1+B(3j+1-p)+BT(j+1)]
+ -Bj(j+1)[1+(1-H)T]+\mathcal R,
+\quad |\mathcal R|\le c_0BT\,Bj(j+1). \tag{A5}$The last estimate is termwise and uses only p<min(1,j), 0<H<1, B(j+1),T infinitesimal. In particular N≥0 proves
+$\eta_*:=\frac{Bj(j+1)}p=O(1),\quad
+ \eta_*\text{ infinitesimal}\Longrightarrow
+ n\sim\frac{p}{2(j-p)(j+1)}>0. \tag{A6}$Further direct substitutions into (A3) yield, with arbitrary openings H,1-H,j-p,1-p and arbitrary jT,
+$\begin{gathered}
+\mu=O(p),\quad h_0:=\mu+\tfrac12\text{ is a positive unit},
+\quad n(j-p)/j=O(1),\\
+ A/T\sim k/2,\quad TCH\sim k/2,\quad
+ T(D+\tfrac12)(1-H)\sim k/2,\\
+ \alpha=O(B(B+x))\text{ infinitesimal},\quad
+ \alpha/B=O(B+x)\text{ infinitesimal}.
+\end{gathered}\tag{A7}$All O assertions mean a bound by a positive real constant in the source field alone. No source/test comparison occurs.
+B. Complete four-state identity
+Let u,v be independent, positive infinitesimal testing elements, and let W,X,Y,Z be arbitrary real testing-state components. The canonical C2 quarter-parent is
+$\begin{split}
+\mathcal P_4={}&m(vW-X+uvY-uZ)^2+nD_uD_vX^2
+ +CD_v(uW-Y)^2+AD_uD_vY^2\\
+ &+(D+\tfrac12)(uW+uvX-Y-vZ)^2
+ +(\alpha+\tfrac12)D_u(vY-Z)^2\\
+ &+\tfrac12D_v(X+uZ)^2-\tfrac12D_uD_vZ^2,
+\end{split}\tag{B1}$where D_u=1+u², D_v=1+v². Its full Bell slack is 4 P_4. The exact testing-only change of state coordinates is
+$ w=\frac{W+uY}{D_u},\ z=\frac{Z-uX}{D_u},\quad
+ N=X+uZ-pD_uv,\quad M=uW-Y-HD_uvz. \tag{B2}$If the signed core is negative, the exact state Schur decomposition SJ3–SJ8 shows wz>0; after a testing sign gauge and division by the positive pure-testing w, set w=1,z>0. If the core is nonnegative, it and every event term are already pure separated squares. On the negative-core chart set N_0=N/D_u, M_0=M/D_u; the exact inverse on all four state components is
+$ X=N_0+pv-uz,\quad Z=z+uN_0+puv,
+ \quad W=1+u(M_0+Hvz),\quad Y=u-M_0-Hvz. \tag{B3}$The first indispensable retained square is mp D_u² N_0². Direct expansion, with no stationary approximation, gives
+$ \boxed{\mathcal P_4-mpD_u^2N_0^2=D_uG,}\tag{B4}$$\begin{split}
+G={}&\mu D_u[N_0^2-2vN_0+(1-p)v^2]+nD_v(N_0+pv-uz)^2\\
+&+CD_uD_v(M_0+Hvz)^2+AD_v(u-M_0-Hvz)^2\\
+&+(D+\tfrac12)D_u[M_0-(1-H)vz]^2\\
+&+(\alpha+\tfrac12)[u(1-p)v-(1+Hv^2)z-uN_0-vM_0]^2\\
+&+\tfrac12D_uD_v(N_0+pv)^2-\tfrac12D_v(z+uN_0+puv)^2.
+\end{split}\tag{B5}$Writing G=F+2L_N N_0+2L_M M_0+H_N N_0²+H_M M_0²+2(alpha+1/2)uvN_0M_0, the full normal coefficients are
+$H_N=h_0D_u+\tfrac12v^2+\alpha u^2+nD_v,
+\quad H_M=D_u(CD_v+D+\tfrac12)+AD_v+(\alpha+\tfrac12)v^2.\tag{B6}$No state normal has been suppressed. The exact source-only contact identities used later are
+$\begin{aligned}
+S_N={}&np-\mu+p/2+[-\mu-(\alpha+1/2)(1-p)]x
++j(\alpha-n)+yK_c=0,\\
+S_0={}&T(K_d+AH+1/2)-A=0,\\
+S_1={}&jK_d+\mu+xTCH=0,\\
+S_2={}&jK_d+xTCH+T[CH+AH+(\alpha+1/2)H]
+-A-(\alpha+1/2)(1-p)+\alpha/B=0,\\
+K_d={}&CH-(D+1/2)(1-H),\\
+K_c={}&p/2+j[H(\alpha+1/2)-1/2]+n(p-j).
+\end{aligned}\tag{B7}$All four numerators become zero polynomials after substituting (A3), not just small at the contact. These cancellations will eliminate every dangerous opening inverse from the full linear normal terms.
+C. The contact scalar identity and the complete n-current
+Introduce separated rows
+$ U=u/\sqrt x,\quad V=v/\sqrt y,\quad Z_*=z/\sqrt{jT},
+ \quad Q=U-VZ_*,\ B_*=V-UZ_*,\ R=Z_*-UV.\tag{C1}$They may be arbitrarily large in the tensor ring. Define
+$\Psi=U^2+V^2+Z_*^2+U^2V^2Z_*^2-4UVZ_*
+=(U-V)^2+Z_*^2(1-UV)^2+2UV(1-Z_*)^2. \tag{C2}$The last root uses sqrt(UV)=(xy)^(-1/4) ⊗ sqrt(uv), so its radical is legal. Put
+$\begin{gathered}
+K_0=CH^2+(D+1/2)(1-H)^2,
+\quad M_a=Ax,\quad M_b=[\mu(1-p)+(n+1/2)p^2]y,\\
+M_c=\alpha jT,\quad M_{ac}=nxjT=nj^2y,
+\quad M_{b^2}=(n+1/2)p^2y^2,\\
+M_{bc}=[K_0+AH^2+2H\alpha+H-1/2]yjT,\\
+M_{b^2c}=H^2(A+C+\alpha+1/2)y^2jT,\quad
+M_{ab^2c}=CH^2xy^2jT,\\
+k_c=(M_a-M_b+M_{ac}+M_{ab^2c}-M_{bc})/2,\\
+r_c=M_c-M_b+M_{ac}-k_c,\quad f_c=M_b-M_{ac},
+\quad q_c=M_a-f_c,\\
+d_c=M_{b^2c}-k_c,\quad g_c=M_{ab^2c},
+\quad e_0=\tfrac12p^2y^2-g_c.
+\end{gathered}\tag{C3}$An exact coefficient comparison using (A3) gives the whole scalar, F=G|_{N_0=M_0=0}:
+$\boxed{\begin{aligned}
+F={}&q_cQ^2+nj^2yB_*^2+r_cR^2+d_cV^2Q^2
+ +(np^2y^2+e_0)V^2B_*^2\\
+&+f_c\Psi+g_cV^2\Psi+k_cZ_*^2(V^2-1)^2.
+\end{aligned}}\tag{C4}$A short way to check this identity by hand is to expand in the twelve monomials u²v⁴z², u²v²z², u²v², u²z², u², uv³z, uvz, v⁴z², v⁴, v²z², v², z². The definitions (C3) match eight coefficients identically; the remaining four require the native stationary cancellations. The attached exact verifier finds precisely the four residual monomials u²v²z²,u²v²,uv³z,uvz before imposing (A3), and proves each residual numerator is identically zero.
+The scalar signs following by direct substitution into (A2)–(A3) are
+$\begin{gathered}
+f_c=\frac{Tx^2\mathcal F}{2\mathcal P}>0,\quad
+q_c\asymp Tx>0,\quad
+r_c>0,\quad g_c>0,\quad d_c>0,\quad k_c<0,\\
+f_c\asymp Tx^2,\quad r_c\asymp TjB^2(1-p),
+\quad g_c/f_c=O(Hy),\quad |k_c|/(q_cy)=O(p+B),\tag{C5}
+\end{gathered}$where asymp means a ratio which is a positive bounded source unit. For independent verification of the delicate negative term, let
+$\begin{split}
+\mathcal F={}&K+T\mathcal F_1+T^2\mathcal F_2,\\
+\mathcal F_1={}&-2BHjp+BHj+2Bjp-2Bp^2+2Bp-Hj-Hp-H+j+1-p^2/j+p/j,\\
+\mathcal F_2={}&-B^2H^2jp+B^2Hjp-B^2Hp^2+B^2Hp-BH^2j-BH^2p+BHj-BHp^2/j+BHp/j,\\
+\mathcal K={}&pW_0+B(1-p)[j(H(p+1)-p)-(1-p)(p-H)]\\
+&+TBH[(p+1)(1-H)j+(1-p)(BHj+p+1-H)]\\
+&+T^2B^2H^2j(1-H).
+\end{split}\tag{C6}$Termwise F/K→1 since Bj=x and T tend to zero, with p/j<1. The exact identity
+$\begin{split}
+\mathcal K-pW_0+Bp(1-p)(j+1)={}&B(1-p)[Hj(p+1)+H(1-p)+p^2]\\
+ &+TBH[(p+1)(1-H)j+(1-p)(BHj+p+1-H)]\\
+ &+T^2B^2H^2j(1-H)\ge0
+\end{split}\tag{C7}$proves Kcal>0: pW0≥p(1-p) while B(j+1) is infinitesimal. The source inequality (A6) also implies Kcal/K=O(p+B). Then
+$ k_c=-\frac{T^2B^2j(1+x)\mathcal K}{2E\mathcal P}<0,
+\tag{C8}$which proves (C5) with no assumption on jT.
+Do not discard the two correlated n terms. The scalar currents in (C4) are
+$ nj^2yB_*^2+np^2y^2V^2B_*^2=nj^2b^2+np^2v^2b^2,
+\quad b=v-uz/j=\sqrt y B_* .\tag{C9}$The first-normal linear coefficient contains exactly njb+npv²b together with its remainder. With c_b=nj/(n+h_0) and M_e=nh_0j²/(n+h_0), complete
+$ h_0N_0^2+n(N_0+jb)^2
+=(n+h_0)(N_0+c_bb)^2+M_e b^2,\tag{C10}$and retain the whole square nv²(N_0+pb)². If n=0, set c_b=M_e=0; no inverse of n or M_e is taken. If n>0,
+$\frac{c_b^2}{M_e}=\frac{n}{h_0(n+h_0)}=O(1).\tag{C11}$The other original positive squares to retain whole are
+$mpD_u^2N_0^2,\qquad nv^2(N_0+pb)^2,
+\qquad h_0u^2N_0^2,\quad\tfrac12v^2N_0^2,\quad\alpha u^2N_0^2,\tag{C12}$plus any positive scalar pieces d_c V²Q², g_cV²Psi, e_0^+V²B_*² after the signed allocations.
+D. Signed scalar terms are paid at infinitesimal Gram cost
+The following are universal polynomial identities, valid for arbitrary U,V,Z_* (no asymptotic approximation):
+$\begin{aligned}
+ (1+V^2)\Psi-V^2B_*^2
+ &=Q^2+R^2+V^2(1-UVZ_*)^2,\\
+ (1+U^2)\Psi-R^2
+ &=B_*^2+U^2Q^2+U^2(1-UVZ_*)^2.
+\end{aligned}\tag{D1}$Because e_0^-≤g_c, using the first identity to offset the negative e_0 costs at most
+$\frac{g_c}{f_c}\left(1+\frac{v^2}{y}\right)
+=O(Hy)+O(Hv^2)\in\mathfrak m.
+\tag{D2}$For k_c<0, use Z_*(V²-1)=-VQ-R and the inequality 2(V²Q²+R²)-(VQ+R)²=(VQ-R)², an exact square. To pay the R² component without suppressing the positive n current, split into the exhaustive source alternatives:
+If 1-p has positive real residue, direct r_cR² payment has |k_c|/r_c=O(T(p+B)/(1-p)) infinitesimal.
+If 1-p is infinitesimal and eta_* has positive real residue, j²B is a source unit; pay with (1+U²)Psi-R² in (D1). Its cost after source normalization is O(T(p+B)(1+u²/x)/j), infinitesimal by j²B being a unit and u infinitesimal.
+If 1-p and eta_* are infinitesimal, (A6) implies n>0 and M_e is a positive unit, with p²/M_e=O(1). Use the exact circuit budget
+$\begin{split}
+2(\Psi+V^2Q^2+U^2B_*^2)-R^2
+={}&(E_*+T_*)^2+2(U-V)^2+4UV(1-Z_*)^2\\
+&+2J_*^2+4UV(U-V)^2Z_*^2,
+\end{split}\tag{D3}$with E_*=Z_*(1-UV), T_*=UV(1-Z_*), J_*=T_*-(U-V)²Z_*. Its costs obey
+$|k_c|/f_c\in\mathfrak m_s,\qquad
+(|k_c|/(q_cy))v^2\in\mathfrak m,\qquad
+(|k_c|/(M_e yx))u^2\in\mathfrak m.\tag{D4}$The third bound follows fromp²/M_e=p²/(h_0j²)+p²/(nj²)=O(1) by (A6), and the exact k_c formula (C8). Identity (D3) has only legal separated radicals: for example sqrt(UV)=(xy)^(-1/4)⊗sqrt(uv).
+The three alternatives include all ties and the face n=0: if eta_* is infinitesimal, n>0, so n=0 belongs only to alternatives 1 or 2. After paying both signed terms, fixed positive real fractions of
+$\boxed{q_cQ^2,\quad r_cR^2,\quad f_c\Psi,\quad M_e b^2\ (n>0)}\tag{D5}$remain intact. Costs have zero residue in B, so, for example, one-half of each strictly positive row can be protected. This is a polynomial SOS domination statement, not a pointwise inequality on a mixed tensor.
+E. Whole-state normal conductors and finite root allocation
+Define q=vz-Tu, R_0=z-uv/B, and R_u=v(u²-x) (the scalar R_0=\sqrt{jT}R). Differentiate B5, retaining the entire quadratic. Algebra gives
+$\begin{split}
+L_N={}&[j(n-\alpha)+p(n+1/2)v^2]b
+ +K_R R_u+(K_c/j)uvq,\\
+K_R={}&-\mu-(\alpha+1/2)(1-p)+(T/j)K_c,\\
+L_M={}&C_q q+\mu uvb+v(\alpha-BTCHu^2)R_0,\\
+C_q={}&K_d+AH+1/2+v^2[CH(1+u^2)+AH+(\alpha+1/2)H].
+\end{split}\tag{E1}$These are exact on the source (A3). Without using stationary identities, the discrepancies are respectively v S_N and u S_0+(u²vz/j)S_1+uv²(S_2-S_1); all four vanish by (B7). In particular
+$\frac{K_c}{j}=O(1),\qquad K_R=O(1),\qquad
+K_d=-\mu/j-BTCH=O(1),\qquad TC_q\in\mathfrak m.
+\tag{E2}$The last two follow from S_1=0 before dividing by any weak C2 coefficient. The complete first normal after (C10) is
+$ L_N^{\mathrm{rem}}=-j\alpha b+\tfrac12pv^2b+K_RR_u+(K_c/j)uvq.
+\tag{E3}$The following named rows form a finite complete root list for the bounded-coefficient allocation. The first eight are protected rows; the last five are helpers purchased by the displayed exact circuits:
+$\begin{array}{ll}
+ h_N=\sqrt{n+h_0}\,(N_0+c_bb),&h_M=M_0/\sqrt{TH(1-H)},\\
+ h_Q=\sqrt{q_c}Q,&h_R=\sqrt{r_c}R,\\
+ h_{\Psi1}=\sqrt{f_c}(U-V),&
+ h_{\Psi2}=\sqrt{f_c}Z_*(1-UV),\\
+ h_{\Psi3}=\sqrt{2f_cUV}(1-Z_*),&
+ h_b=\sqrt{M_e}b\quad(n>0),\\[2pt]
+ h_{\mathrm{rad}}=R_u,&h_v=pv^2b,\\
+ h_{uv}=\sqrt T\,puvb,&h_{\alpha}=j\alpha b,\\
+ h_{\mathrm{opp}}=\sqrt{TH(1-H)}\,v(\alpha-BTCHu^2)R_0.
+\end{array}\tag{E4}$Omit the h_b row at literal n=0. The root h_M may be unbounded: the coefficient matrix, not the row evaluations, must be bounded. The scalar circuit remainder roots are given explicitly by (C2), (D1), (D3), the fixed matrices in (E6), and the full positive rows (C12). This is a finite recipe, and it retains all four original state degrees of freedom via (B3).
+Here are the exact purchase rules and their bounds:
+h_rad is free using RFN19–RFN20 below. In the source cases 1-p unit, 1-p infinitesimal/eta_* unit, and both infinitesimal, the costs of a fixed real multiple of R_u² against the protected scalar rows are respectivelyO(B+Bu²+u²/(1-p)),O(B+u²/j+u⁴/(j²B)), andO(u²/j+u⁴/j+[u⁴+(u²-x)²]/M_e). All have zero real residue; in the last case M_e is a source unit.
+h_v is free: if eta_* infinitesimal, its M_e b² price is O(v⁴); if eta_* a unit, multiply (D1) by p²y²v² and pay O(yv²+v⁴) of f_cPsi.
+h_uv is free: its corresponding costs are O(Tu²v²) or O(Tu²(y+v²)).
+h_alpha is free by the exact identity$j\alpha b=-(\alpha/B)R_u-\alpha uR_0.$Here alpha/B is infinitesimal. If 1-p is a unit, the second square costs O([B(j+1)]²u²/(1-p)) of r_cR²; if p~1, the (1+U²)Psi identity costs O(B³(j+1)²+B²(j+1)²u²/j) of f_cPsi. Both vanish in residue.
+For h_opp, put J=B(j+1)+u²∈m (a sum of separated infinitesimals) and use alpha-BTCHu²=O(BJ) by (A7). Its square is bounded by the source/test-separated quantity a_R= T(jT)v²(alpha-BTCHu²)²; the exact circuit budgets have costs$a_R/f_c=O((T/j)v^2J^2),\quad
+a_R/(q_cy)=O(v^2J^2),\quad
+a_R/(M_eyx)=O((T/j^2)(1+1/n)v^2J^2).\tag{E5}$Use direct r_cR² if 1-p is a unit, (1+U²)Psi if eta_* is a unit and p~1, and (D3) if eta_* is infinitesimal. All costs have zero residue. No comparison of the mixed products ju² or mu² is used.
+For completeness, the fixed rational polynomial certificate buying the radial row uses
+$ t_7=(Z_*-U^2V,\ V-U^2V,\ U-U^2V,\ UZ_*-U^2V,\ UV-U^2V,\ UVZ_*-U^2V,\ U^2-U^2V)^T,$$ t_3=(1-UV,V-UV,U-UV)^T,$$G_7=\begin{pmatrix}
+4&-2&-3/2&0&-1/2&0&1/2\\
+-2&3&0&-3/2&0&-1&2\\
+-3/2&0&4&3/2&-2&-3&0\\
+0&-3/2&3/2&4&-3/2&0&-3/2\\
+-1/2&0&-2&-3/2&3&2&-1\\
+0&-1&-3&0&2&8&-4\\
+1/2&2&0&-3/2&-1&-4&4
+\end{pmatrix},\quad
+G_3=\begin{pmatrix}3&-2&-2\\-2&2&2\\-2&2&3\end{pmatrix}.$The complete exact identity is
+$\boxed{4\Psi+4U^2Q^2+4U^2R^2-[V(U^2-1)]^2
+=t_7^TG_7t_7+4VZ_*(1-U)^2+UZ_*t_3^TG_3t_3.}
+\tag{E6}$The leading principal minors of G7 are 4,8,101/4,1049/16,907/16,3279/16,743/16; those of G3 are 3,2,2. Thus every term on the right is a legal separated square. When both 1-p and eta_* are infinitesimal, also use its exact permutation and
+$\begin{split}
+8U^2\Psi+8U^4Q^2+[8U^4+2(U^2-1)^2]B_*^2-[V(U^2-1)]^2
+={}&2U^2\mathcal W(U,Z_*,V)\\
+&+[UZ_*(U^2-1)-(U^2-1)B_*]^2,
+\end{split}\tag{E7}$where W(U,Z*,V)=4Psi+4U²Q²+4U²B*²-[Z*(U²-1)]² is the (E6) polynomial after exchanging V with Z_*. These are universal identities; no local contact-point approximation is used.
+E.1 Constructing the final bounded coefficient matrix
+Start with exact (B4)–(B7), (C4), (C10), and the full-square retention (C12). Apply (D1)–(D4) and (E6)–(E7) by adding/subtracting the explicitly displayed SOS remainders to purchase a fixed real diagonal on each free helper row. Every purchase changes coefficients of the protected roots by elements of m, by the cost bounds above. Next use h_N,h_M in (E4) and the exact conductors (E1)–(E3). This is an exact coefficient-extraction recipe: expand the resulting quadratic expression as h^TQh in the formal rows (E4); the coefficients define Q (nonunique if rows satisfy identities, but the stated procedure fixes one).
+The diagonal coefficients of the two complete normal rows have residues
+$ Q_{NN}\to1,\qquad Q_{MM}=TH(1-H)H_M\to k_0/2\ge1/4.
+\tag{E8}$For h_M, the C contribution is (1-H)k/2 and the D contribution is Hk/2, so no assumption that either gap is a unit was made. The original n v², h_0u², alpha u² packets were retained whole. The off-diagonal normal-normal coefficient is
+$ (2\alpha+1)uv\sqrt{TH(1-H)}/\sqrt{n+h_0}\in\mathfrak m.$The coefficients of both normals against the protected scalar rows either vanish in residue or are bounded coefficients multiplying the free helper rows. For the shift N_0=h_N/\sqrt{n+h_0}-c_bb, (C11) bounds the h_b coupling; the additional scalar -c_bb terms are infinitesimal relative to M_e b² (including c_bj alpha/M_e=alpha/h_0) or have the displayed small uv factors. At n=0, c_b=0 and all such terms vanish literally.
+Choose sufficiently large real pivots on the finitely many free helper rows, in order h_rad then h_v,h_uv,h_alpha,h_opp. A finite real Schur-complement argument absorbs the bounded cross coefficients with h_N,h_M,h_b. The protected h_Q,h_R,h_Psi1–3,h_b pivots lose only elements of m; for instance keep half of every source-scaled square in (D5). The resulting full coefficient matrix Q∈Sym_r(B) is bounded and its real residue is positive definite. Neither its rows nor their values need be bounded.
+The strict-residue tensor Gram lemma now gives h^TQh∈Σ(K_s⊗_R K_t)². Restore each exact SOS remainder, the mp event square, the entire nv²(N_0+pb)², and every positive row in (C12), then restore the pure-testing D_u and the pure-source d. This proves the complete original parent for every positive independent infinitesimal pair u,v and arbitrary z>0, without comparing any relative rates.
+F. Join with the established outer cases
+The testing-only sign/state congruences SJ3–SJ10 are used before any normalized state ratio. Their exact core decomposition shows that K≥0 if the rotated wz≤0, so no nonzero state is missed by w=1,z>0; when w=0 or z=0 the core itself is SOS. Literal u=0,v=0,u=∞,v=∞ projective axes have explicitly nonnegative core-square formulas SJ9–SJ10 and all event coefficients are nonnegative. Real/imaginary state components split.
+For positive tests, the following three possibilities exhaust the residue choices in the testing field; they involve no mixed source/testing comparison:
+Testing conditionComplete existing certificateRequired strictness
+v noninfinitesimal, including infinity by homogeneous clearingR1N13 two-current full-state identityg_*^{-1} infinitesimal, where g_*=CD/(C+D)
+v infinitesimal, u noninfinitesimal (positive real residue or unbounded)R1N14 four-root Gram, or R1N18–R1N24 six-root capped full-state GramFirst form has residue diag(1,2,2,k_0²-c_{u,0}²); when the last pivot is nonpositive, fix the real residue u_0>0 and choose real caps for that residue
+u,v both infinitesimalB–E above, retaining the original unbounded m eventNo source/test rate or state-ratio hypothesis
+
+
+
+
+The full R1N13 two-by-two Gram is
+$\begin{pmatrix}
+1-c_u^2\eta_v^2/(2g_*)&t_u\eta_v/\sqrt{2g_*}\\
+t_u\eta_v/\sqrt{2g_*}&1
+\end{pmatrix},\qquad
+c_u=(1+u^2)^{-1/2},\ t_u=u c_u,\ \eta_v=\sqrt{1+v^2}/v,$and has identity residue when 1/v is bounded. On the four-root R1N14 frame the last pivot is k_0²-c_{u,0}². If this is not positive, then u_0>0 is finite, k_0<1, and the source equations force p,j to be units, eta_* infinitesimal. R1N18–R1N24 fix that real u_0 and treat the four source openings (p_0<1,j_0>p_0), (p_0<1,j_0=p_0), (p_0=1,j_0>1), (p_0=j_0=1) with respectively both finite caps, an unbounded n cap, an unbounded m cap, and both unbounded caps. All four residue matrices have the explicit positive minors in R1N22–R1N24 and the positive-event kernel argument. These real caps are not required to work as u_0→0; that residue belongs to the local certificate already proved.
+Conclusion: the R1 native sector has all independent projective tests and all four state components covered by the qualitative tensor criterion. This does not provide one explicit global pencil, does not cover other C2 source sectors or C1, and cannot on its own conclude finite representability of the full Q222 set.
+G. Reproducibility / verification boundary
+verify_r1_exact.py independently performs rational polynomial coefficient matching of the complete four-state identity (B5), all four native stationary cancellations (B7), the linear normal conductors (E1), the scalar parent (C4) including its four nontrivial native remainders, the full normal Hessian (B6), and the universal circuits (D1), (D3), (E6), (E7). It checks the exact positive leading principal minors of G7 and G3. No SDP solver, numeric sweep or numerical coefficient fitting is used.
+The positive-residue and source-estimate arguments in Sections A, D, E are ordered-field deductions from these identities and from the displayed source inequalities. The pointwise outer-cap residue proofs R1N21–R1N24 are established inputs to this R1-focused join, not a newly claimed source-uniform cap theorem.
+
+
+
+
+
+
+
+
+

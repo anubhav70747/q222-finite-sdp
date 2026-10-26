@@ -1,0 +1,130 @@
+ChatGPT said:
+
+Q222 1/7: Exact unequal-angle convexification on fixed fibers
+A new exact spectrahedral subcone is available, but I cannot establish a finite SDP lift of the full three-parameter hull. The following reduction identifies exactly where the remaining convexification problem begins.
+1. An exact change of variables
+Set
+$x=\frac{a+r}{1-r},\qquad
+y=\frac{a+s}{1-s},\qquad k=xy.$
+The inverse is
+$r=\frac{x-a}{x+1},\qquad
+s=\frac{y-a}{y+1}.$
+The parameter conditions $a>0$, $0<r,s<1$, $g>0$, $B_0\le0$ become
+$\boxed{
+a>0,\quad k>\max\{1,a^2\},\quad
+x,y>a,\quad xy=k,\quad
+x+y\ge w_-(a,k)
+}$
+where
+$w_-=\frac{k(k+a^2-2a)}{a(k-a)}.$
+In particular, writing $w=x+y$,
+$\boxed{w_-\le w\le w_+:=a+\frac{k}{a}.}$
+To verify this, define
+$J=(k-a)w+2(1-a)k,\qquad
+\Phi=k(k-a^2)-aJ.$
+Direct substitution gives
+$g=\frac{(a+1)(k-1)}{(x+1)(y+1)},\qquad
+B_0=\frac{(a+1)^3\Phi}{(x+1)^2(y+1)^2}.$
+Thus $B_0\le0$ is precisely $w\ge w_-$. The upper bound $w\le w_+$ is equivalent to $x,y\ge a$ when $xy=k$.
+2. Exact affine PSD cone at every fixed $(a,k)$
+Fix any two real constants
+$a>0,\qquad k>\max\{1,a^2\}.$
+Use active coordinates $c=(d,n,m,C,A,D,\alpha)$. Define the following linear expressions in $c$:
+$\begin{aligned}
+B&=A+n,&M&=m+D,\\
+X&=\frac{k}{k-a}\big[(a-1)A+a(k-1)D\big],\\
+Y&=\frac{k}{k-a}\big[(a-1)A+a(k-1)m\big].
+\end{aligned}$
+Then the closed conic hull of all specified C2 sources having these fixed values of $a$ and $k=xy$ is exactly the following spectrahedral cone:
+$\boxed{
+\begin{gathered}
+a(d+2n)=2A,\\
+C+\frac d2=(k-1)D,\qquad
+\alpha+\frac d2=(k-1)m,\\
+(k-a^2)(A+n)=a^2(k-1)(m+D),\\[2mm]
+\begin{pmatrix}
+X&kA\\
+kA&kY
+\end{pmatrix}\succeq0,\\[2mm]
+n\ge0,\qquad aA-kn\ge0.
+\end{gathered}}\tag{F}$
+There are no auxiliary variables. The only nontrivial PSD block has order two; the other two inequalities are scalar blocks. The four displayed equalities are linear in source coordinates because $a,k$ are fixed constants.
+Proof of both inclusions. On an original generator,
+$X=Ax,\qquad Y=Ay,\qquad xy=k.$
+The matrix in (F) is therefore a positive rank-one matrix. The four linear identities follow from the angle law and rectangular minors; the scalar conditions follow from the parameter domain.
+Conversely, suppose (F) holds. For $A>0$, let
+$w=\frac{X+Y}{A}.$
+The scalar conditions are exactly $w_-\le w\le w_+$, while the PSD block implies
+$XY\ge kA^2,\qquad w\ge2\sqrt{k}.$
+Put
+$x_\pm=\frac{w\pm\sqrt{w^2-4k}}2.$
+Then $x_+x_-=k$, and $x_\pm\ge a$ because $w\le w_+$. The two endpoint pairs
+$(x_+,x_-),\qquad(x_-,x_+)$
+are admissible source contacts, including boundary limits. They have the same $w$, and their convex combinations fill precisely the segment allowed by $XY\ge kA^2$ at that $w$. Since the four linear identities uniquely recover the remaining coefficients from $A,X,Y$, these two contact rays reconstruct $c$.
+If $A=0$, the scalar inequalities force $n=0$, and the equalities and PSD block force every remaining coordinate to vanish. Thus zero and all finite singular endpoints are included. This proves (F) exactly.
+3. The quartic now has a proved converse on individual rays
+The rectangular minors imply, with $k=1+U/D$,
+$U=(k-1)D,\qquad V=(k-1)m,$
+and
+$(k-a^2)B=a^2(k-1)M.$
+Consequently $k>\max\{1,a^2\}$. Substituting these identities and the angle law into the quartic reduces it to
+$R:=(k-a^2)A^2+a(1-a)kAM-a^2k(k-1)mD=0.$
+More precisely, the original quartic residual equals
+$\frac{(a+1)^2(k-1)^2M^2}{a^2(k-a^2)}R.$
+The decisive relation is
+$\boxed{
+XY-kA^2=-\frac{k(k-1)}{(k-a)^2}R.
+}$
+Thus, on a fixed fiber, the quartic equality is precisely the rank-one boundary of the PSD block in (F).
+There is also a single-ray converse: for positive source coefficients satisfying the angle law and minors, the quartic together with
+$n\ge0,\qquad aA-kn>0$
+recovers one original admissible source ray, uniquely up to scaling. Indeed, the determinant vanishes, while the two scalar bounds make $X,Y$ positive and force $x=X/A,y=Y/A$ into the admissible parameter domain. Equality in the second bound gives a zero-opening endpoint.
+The additional bound is essential. For example,
+$c=\left(1,38,\frac{77}{4},\frac{33}{4},
+77,\frac78,192\right)$
+satisfies coefficient positivity, the angle identity, all three minors and the quartic, with $a=2,k=11$. But
+$aA-kn=-264<0.$
+It belongs to the wrong algebraic branch, corresponding to $x=3/2<a$. This disproves the bare algebraic conditions as a characterization of individual positive contacts, without asserting that this vector is outside their convex hull.
+4. A precise obstruction to imposing the quartic on mixtures
+Take the supplied rational valid source at $a=2,r=1/2,s=1/16$, and average it with the valid source obtained by exchanging $r,s$. Their midpoint is
+$\bar c=
+\left(
+1,\frac{43}{299},\frac{749}{5980},
+\frac{225}{299},\frac{385}{299},
+\frac{749}{5980},\frac{225}{299}
+\right).$
+It remains in the same $(a,k)=(2,11)$ fiber and satisfies all three rectangular minors. Nevertheless, its quartic residual is
+$\boxed{
+-\frac{1543042787517}{319701552040}<0.
+}$
+This follows directly because swapping $r,s$ exchanges $U,V$, and the midpoint changes the quartic by
+$-\frac{(a+1)^2}{4}M(B+S)(U-V)^2.$
+So even minors plus the quartic equality exclude legitimate convex mixtures. The PSD inequality in (F) is the exact repair on each fixed fiber.
+5. The first unproved implication for the full task
+Let $F_{a,k}$ denote the explicit spectrahedral cone (F). We now have the exact characterization
+$\boxed{
+K_{\mathrm{full}}
+=
+\overline{\operatorname{cone}
+\left(
+\bigcup_{\substack{a>0\\ k>\max\{1,a^2\}}}
+F_{a,k}
+\right)}.
+}$
+This equality includes all singular limits by closure and follows from the two-inclusion fiber theorem.
+What remains unproved is that this two-parameter continuum of spectrahedral cones has one fixed finite affine PSD representation. The coefficients $a,k$ in (F) are constants within each fiber, but become variable and multiply source coordinates across the full family. Treating them as ordinary SDP auxiliaries would destroy affineness. No fixed-degree moment truncation or alternative globally affine decomposition has been established.
+The strongest completed result for Task 1 is therefore the exact $2\times2$ spectrahedral convexification of every fixed $(a,k)$ fiber, together with the sharp converse for individual generators. It is not a full three-parameter lift, and no testing-region-only inequality has been promoted to a global certificate.
+Download the complete Task 1 mathematical note
+The note contains the explicit matrices, two-inclusion proof, generator reconstruction, exact rational counterexamples, and the remaining implication in a form suitable for comparison with the other six tasks.
+
+
+
+
+
+
+   Q222_Task1_UnequalAngle_Fiber_Theorem_2026-10-26.mdDocumentOpen file
+
+
+
+
+

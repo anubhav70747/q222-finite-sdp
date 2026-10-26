@@ -1,0 +1,222 @@
+\chapter{Outer tests and state entry when the native $r$ is infinitesimal}
+\label{component:p364e14238053}
+\noindent\textbf{Component }\path{p364e14238053}\par
+{\small\noindent Source: \path{R13/baseline/baseline/baseline/baseline/advances/c1/centered_a_outer.tex}\par}
+{\small\noindent SHA256: \path{364e1423805318f1c173683bd3eb63c27eba6442d586b66998103a7db65671ec}\par}
+{\small\noindent Inventory use: CAO1--CAO8 and all state-entry paragraphs | CAO1-CAO8 and full outer/state lemma | C1\_\allowbreak{}BARE\_\allowbreak{}OTHER\_\allowbreak{}TERMINALS; precise subordinate uses retained below\par}
+\medskip
+\section[Outer tests and state entry when the native r is infinitesimal]{Outer tests and state entry when the native $r$ is infinitesimal}
+\label{p364e14238053:sec:centered-a-outer}
+
+\begin{lemma}
+Use the unchanged physical native C1 source, normalized by $c=2$ and
+$\lambda=n=0$, with all original event signs and positive openings
+$a,t,M,J$. Suppose $k,\zeta,r=1-a\eta$ are positive infinitesimals and
+$\eta,e=k\sqrt{\eta/\zeta}$ are positive bounded units.
+Then the outer-test and state-entry arguments reduce the all-tests
+problem to precisely
+\[
+ u,v,w>0\text{ infinitesimal},\qquad Z=1,
+ \qquad w=(W+uY)/(1+u^2).
+ \tag{CAO1}
+\]
+All other independent projective tests and states admit a full-parent
+tensor SOS. No comparison of $k^2$ with $r$ is made, and arbitrarily
+small positive openings and literal $\beta=0$ are included.
+\end{lemma}
+
+\paragraph{Source ratios with the common factor cancelled.}
+Here $r$ always denotes the native source parameter, not the event root
+$uW-Y$. Put
+\[
+ K=1+k^2,\quad H_c=r+\eta,\quad V_c=k^2\eta\zeta,\quad
+ S_3=1-k^2\eta+tV_c,
+\]
+The two required short native polynomials are
+\begin{align*}
+P_4={}&1+k^2+\eta k^2(a-k^2-1)-\zeta k^2t\\
+ &+V_c[-\zeta k^2t^2+2k^2t+a(1-t)+t],\\
+P_d={}&(1+k^2)^2-a\eta k^4
+ +\zeta k^2[(k^2+1)-(k^2+2)t]\\
+ &+V_c[-\zeta k^2t^2+k^2a(t-1)+k^2t+k^2+1].
+\end{align*}
+They are positive bounded units with residue one. The exact source
+identities, after cancelling the common factor $r$ in the coquotients,
+are
+\begin{align*}
+ d&=\frac{4a\eta P_d}{KH_cS_3},&
+ Ar&=\frac{2a\eta^2P_4}{KH_cS_3},\\
+ \frac md&=\frac{e^2K(1-t\zeta)(1+V_c)H_c}{2M\eta P_d},&
+ \frac cd&=\frac{KH_cS_3}{2a\eta P_d},\\
+ \frac Ad&=\frac{\eta P_4}{2rP_d},&
+ \frac Dd&=\frac{KH_c(1+V_c)-J\eta P_d}{2J\eta P_d}.
+ \tag{CAO2}
+\end{align*}
+The positive openings obey
+$M+t=1+k^2r$ and $J+a=1+k^2-k^2\zeta t$; hence $a,t,M,J$ are
+bounded. Since $a\eta=1-r$, one has
+\[
+ \bar\eta\ge1,\qquad \bar d=4/\bar\eta,\qquad Ar\sim2,
+ \qquad A\text{ positive unbounded}.
+ \tag{CAO3}
+\]
+The numerator of $D/d$ in (CAO2) has residue
+$\bar H_c-\bar J\bar\eta=1$. Therefore $m/d,c/d,D/d,A/d$ all have
+positive real lower bounds. This conclusion uses no inverse bound on
+an opening. Moreover,
+\[
+ \begin{cases}
+ \displaystyle \bar D=\frac{2}{\bar\eta(\bar\eta-1)},
+       &\bar\eta>1,\\[4pt]
+ D\text{ positive unbounded},&\bar\eta=1.
+ \end{cases}
+ \tag{CAO4}
+\]
+
+\paragraph{The previously proved outer routing still applies.}
+Clip $m,c,A,D$ at positive real multiples of $d$, retaining all their
+nonnegative excess original event squares. The resulting coefficients
+divided by $d$ are bounded. The outer-test argument in
+\path{bounded_e_all_tests.tex}, through (BE2)--(BE4), uses only
+these lower bounds and the independent physical-source admission at
+noncommuting residue tests. Its exact homogeneous identities and
+four-root ideal memberships are unchanged. It therefore includes all
+projective infinity charts, the $(0,\infty)$, $(\infty,0)$ and
+$(\infty,\infty)$ corners, and the unit-$W$, infinitesimal-$Z$ state
+chart. The original-event SOS on literal zero axes is unchanged as
+well. This invokes none of the bounded-$r$ scalar or normal conclusions
+(BE5)--(BE6). Only bounded $u$ and infinitesimal $v$ remain.
+
+\paragraph{An exact centered root identity.}
+Write $D_u=1+u^2$, $D_v=1+v^2$ and introduce
+\[
+ h=A^{-1/2},\quad L=Ar,\qquad
+ H=\sqrt A(Y-ruW),\quad B=X+uZ,\quad U=uW,\quad V=vZ.
+ \tag{CAO5}
+\]
+Thus $Y=rU+hH$, while $h,r$ are infinitesimal and $L\sim2$.
+All coefficient radicals in (CAO5) lie in the coefficient field;
+$B,U,V$ lie in the testing field. The root $H$ is their finite tensor
+combination, with no mixed inverse or mixed radical.
+
+For clarity, the complete original finite parent used here is
+\begin{align*}
+F={}&4m(vW+uvY-X-uZ)^2+8D_v(uW-Y)^2
+       +4AD_uD_vY^2\\
+ &+(4D+2d)(uW+uvX-Y-vZ)^2
+   +(4\alpha+2d)D_u(vY-Z)^2\\
+ &+(4\beta+2d)D_v(X+uZ)^2-2dD_uD_vZ^2.
+\end{align*}
+
+Choose $0<D_*\le D$ bounded, and let $m_*=0$ or choose a positive
+real $m_*\le m$, as specified below. Retain the four nonnegative
+original event contributions with weights $m-m_*,D-D_*,\alpha,\beta$.
+For $C=4D_*+2d$, the exact remaining parent is
+\begin{align*}
+F_*={}&8D_v[(1-r)U-hH]^2
+ +4D_uD_vH^2+4LrD_uD_vU^2+8LhD_uD_vUH\\
+&+C[(1-r)U-hH+uvB-D_uV]^2+2dD_vB^2\\
+&+2dD_u\{v^2(rU+hH)^2-2(rU+hH)V-V^2\}
+ +4m_*R_m^2,                                      \tag{CAO6}\\
+R_m={}&vW+uv(rU+hH)-B.
+\end{align*}
+In particular, the centered $A$ contribution is the exact identity
+\[
+ 4AD_uD_vY^2
+ =4D_uD_vH^2+4LrD_uD_vU^2+8LhD_uD_vUH.
+\]
+This retains its complete hard root. The last two coefficients have
+zero residue. Formula (CAO6) follows directly from the original parent
+and includes the complete signed core; it is not an eliminated scalar
+or a restriction to state normals. Every displayed coefficient is
+bounded. The term involving $Z$ in that core has already cancelled
+to the displayed expression in $V=vZ$.
+
+\paragraph{Every state when $u$ is a bounded unit.}
+Set $m_*=0$, so the entire original $m$ event is retained. Formula
+(CAO6) is an exact Gram allocation on $(H,B,U,V)$. At infinitesimal
+$v$ its residue is
+\[
+ 4D_uH^2+2dB^2+8U^2+C(U-D_uV)^2-2dD_uV^2.
+ \tag{CAO7}
+\]
+Residues are understood in this and the following determinant
+calculations. The $U,V$ determinant is
+\[
+ D_u\{8CD_u-2d(8+C)\}.
+\]
+If $\bar\eta>1$, take $D_*=D$, which is bounded by (CAO4).
+Then $C=8/(\bar\eta-1)$ in residue and this determinant is
+\[
+ \frac{64u^2(1+u^2)}{\bar\eta-1}>0.
+\]
+If $\bar\eta=1$, choose a sufficiently large positive real $D_*$;
+this is permitted because $D$ is unbounded. The determinant is then
+\[
+ 32(1+u^2)(D_*u^2+2u^2-2)>0.
+\]
+The first diagonal is $8+C>0$, so the complete four-root residue
+Gram is positive definite in both cases. The cap is a real constant
+chosen from the nonzero testing residue of $u$; no division of tensor
+elements is introduced. The bounded full Gram is therefore tensor
+SOS, and restoring the retained events proves the claim for every
+state in this chart.
+
+\paragraph{The remaining unit-$w$ state chart.}
+Suppose $u,v$ are infinitesimal and $w$ is a unit. Then $W$ is a unit
+on the negative-core branch. When $Z$ is infinitesimal the inherited
+(BE4) argument already applies. Otherwise normalize the state so that
+$Z$ is a unit and put $q=W/Z$, a pure-testing unit. Choose a positive
+real lower bound $m_*\le m$. Now
+\[
+ R_m=qV+uv(rU+hH)-B,
+\]
+so (CAO6) is again an exact bounded Gram on $(H,B,U,V)$, with residue
+\[
+ 4H^2+2dB^2+4m_*(qV-B)^2
+       +8U^2+C(U-V)^2-2dV^2.                    \tag{CAO8}
+\]
+The $B$ pivot is positive. Its Schur complement adds
+\[
+ \mu V^2,\qquad \mu=\frac{4dm_*q^2}{d+2m_*}>0
+\]
+to the $U,V$ block. This is just a residue determinant computation;
+no mixed inverse is used to define a root or a full-parent coefficient.
+If $\bar\eta>1$, take $D_*=D$ as before. The determinant becomes
+\[
+ \frac{8\bar\eta\mu}{\bar\eta-1}>0.
+\]
+If $\bar\eta=1$, choose a sufficiently large positive real cap
+$D_*$ so that $\mu(C+8)-64>0$. The unboundedness of $D$ permits this
+choice. Thus the complete residue Gram in (CAO8) is strict, including
+all hard-soft terms, and restoring the retained events gives the
+full-parent tensor SOS.
+
+\paragraph{Completion of state entry.}
+Normalize the state by a maximal coordinate and first remove the
+nonnegative pure-testing-core branch, which has its direct original
+SOS. On the negative-core branch with $v$ infinitesimal, the residue
+core is
+\[
+ 2\{(X+uZ)^2+(uW-Y)^2\}.
+\]
+Consequently these two roots have zero residue. If $w$ and $Z$ were
+both infinitesimal, the exact inverse relations
+\[
+ W=w+\frac{u(uW-Y)}{D_u},\quad
+ Y=uw-\frac{uW-Y}{D_u},\quad X=(X+uZ)-uZ
+\]
+would make every normalized state coordinate infinitesimal. Hence
+small $w$ forces $Z$ to be a unit. The bounded-unit $u$ chart was
+settled by (CAO7), and all unit-$w$ states by (CAO8) and (BE4).
+Normalize the only remaining states by $Z=1$. The same exact
+pure-testing Schur identity (SD5) and testing sign gauges give
+$u,v,w>0$. This is exactly (CAO1). Literal axes and literal state
+zeros have already been included. Complex states split into their
+real and imaginary evaluations because the parent is real.
+
+The accompanying \path{check_centered_a_outer.py} independently
+checks the native source cancellations, the exact selected-parent
+identity, both complete root allocations, their residues and all
+displayed determinants. It does not import the contact scalar
+calculations used for the remaining chart.

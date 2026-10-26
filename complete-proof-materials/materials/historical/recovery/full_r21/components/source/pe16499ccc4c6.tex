@@ -1,0 +1,314 @@
+\section{A complete local strong-II Gram with independent testing rates}
+\label{sec:r7-local-strong-II}
+
+\begin{theorem}[Strong-II local allocation]
+Let the positive C2 source satisfy $z,y\in\Inf_{>0}$ and let
+$B=H+L$ be a positive unit.  Keep the exact source coefficients of
+(GE1), with $n\geq0$ and the remaining displayed weights positive.
+Then the original C2 parent belongs to $\sum(K_c\otimes_{\mathbb R}
+K_t)^2$ whenever both independent affine testing coordinates $u,v$
+are infinitesimal, including either literal testing axis.
+There is no comparison hypothesis between $u^2,z$, between $v^2,y$,
+or between the two source rates.  All openings of $r$, $L/y$,
+$1+zr-L/y$, and $1-H$ are retained, as is literal $n=0$.
+\end{theorem}
+
+This theorem is a full-parent local result.  The remote testing charts
+and the original projective endpoints are separate obligations; they
+must be joined before the strong II/HH checklist row is admitted.
+All identities below are polynomial in testing coordinates.  Inverses
+are taken only in the pure source field, and the final step uses the
+bounded Gram strict-real-residue lemma already used in the completed
+local UI certificate.  In particular no ordering or inverse of the
+mixed tensor is used.
+
+\paragraph{Source units and notation.}
+Write $U=u^2,V=v^2,k=\sqrt y$ and
+\[
+ a_c=1+zr,\quad t=L/y,\quad j=a_c-t,\quad s=a_c/B,
+ \quad c=CL,\quad d=Dyj.
+\]
+The source entry gives bounded $t,j,r$, positive units $B,c,d,m/z^2,A/y$,
+bounded $nr$ and $\alpha(1-H)$, and strong $\alpha$.
+These facts include the arbitrary openings $t\to0$, $j\to0$,
+$r\to0$, and $1-H\to0$.  They follow directly from the positive
+source formulas and were proved in (DI7).  Let $h=\operatorname{st}B$;
+then $0<h\leq1$ and, with $r_0=\operatorname{st}r$,
+\[
+\begin{gathered}
+ c_0=d_0^{\rm pair}=\frac{h}{2(1+h)},\quad
+ \operatorname{st}(m/z^2)=\frac{1-r_0}{2h^2(1+h)},\quad
+ \operatorname{st}(A/y)=\frac1{2h(1+h)},\\
+ \operatorname{st}(nr)=\frac1{2(1+h)}-\frac{r_0}{2},\qquad
+ \operatorname{st}\{\alpha(1-H)\}=\frac{h^2}{2(1+h)}.
+                                                        \tag{LII1}
+\end{gathered}
+\]
+These residues follow directly from (GE1): $L\to0$, $H\to h$,
+$a_c\to1$, $G\to h$, $\delta\to h(1+h)$, and the source
+numerator $M\to h^2$.  Substitution in the six rational coefficient
+formulas gives (LII1), including the identity
+$\operatorname{st}(nr)=1/[2(1+h)]-r_0/2$ without division by $n$.
+Define the source quantities (with $q,g$ bounded)
+\[
+ \ell=y(C+D)=c/t+d/j,\qquad
+ q=\frac{D}{C+D}=\frac{dt}{cj+dt},\qquad
+ g=\frac{yCD}{C+D}=\frac{cd}{cj+dt}.
+\]
+Here $0<q<1$, $g$ is a positive unit with residue $h/[2(1+h)]$,
+and $\ell$ has a positive real lower bound, although it may be
+unbounded.  Indeed $cj+dt$ is a unit because $t+j=a_c$ is a unit.
+Choose positive real $\ell_*\leq\ell$ and
+$\alpha_*\leq\alpha$.
+
+\paragraph{The state roots and the exact C,D completion.}
+Use the source-fixed parity graph
+\[
+ X=-\frac{zr v}{B}W+\xi,\qquad
+ Y=\frac{Hu}{B}W+\eta,\qquad
+ Z=\frac{uv}{B}W+\zeta.                         \tag{LII2}
+\]
+It agrees with the actual kernel at $U=z,V=y$ and is a change of all
+four homogeneous state coordinates with determinant one.  Set
+\[
+ Q_n=u\xi-\zeta,\quad K=ukW,\quad
+ R_h=\frac{vQ_n-su(V-y)W}{k},\qquad
+ N=\frac\eta k-qR_h.                              \tag{LII3}
+\]
+Thus $\eta=k(N+qR_h)$.  Every root in (LII3) vanishes at the actual
+contact.  If $Q=uW-Y$ and $J=Q+v(uX-Z)$, then
+\[
+ Q/k=(t/B)K-N-qR_h,\qquad
+ J/k=(1-q)R_h-N-(j/B)K.
+\]
+Consequently the exact weighted completion is
+\[
+\begin{split}
+ 4CQ^2+4DJ^2={}&4\ell N^2+4gR_h^2
+ +\frac{8(d-c)}BKN-8gsKR_h
+ +\frac{4(ct+dj)}{B^2}K^2,\\
+ 4CVQ^2={}&4CV\eta^2
+ +\frac{4ct}{B^2}VK^2-\frac{8c}BVK(N+qR_h).
+                                                        \end{split}\tag{LII4}
+\]
+There is no estimate in these identities.  Retain the following
+four nonnegative, contact-centered packets outside the remainder:
+\[
+ 4(\ell-\ell_*)N^2,\qquad 4CV\eta^2,\qquad
+ 4n(1+U)(1+V)\xi^2,\qquad
+ 4(\alpha-\alpha_*)(1+U)(v\eta-\zeta)^2.          \tag{LII5}
+\]
+Call the exact remainder $G$.  Its coefficients are bounded after
+writing $\eta=k(N+qR_h)$ and using (LII4).  For completeness, its
+entire formula is
+\[
+\begin{split}
+G={}&4\ell_*N^2+4gR_h^2+\frac{8(d-c)}BKN-8gsKR_h\\
+ &+\frac{4(ct+dj)}{B^2}K^2
+ +\frac{4ct}{B^2}VK^2-\frac{8c}BVK(N+qR_h)\\
+ &+4n(1+U)(1+V)
+   \left\{\frac{z^2r^2V}{B^2}W^2-\frac{2zr v}B W\xi\right\}\\
+ &+4\alpha_*(1+U)(v\eta-\zeta)^2
+  +4\alpha(1+U)
+   \left\{\frac{(1-H)^2UV}{B^2}W^2
+        -\frac{2(1-H)uv}B W(v\eta-\zeta)\right\}\\
+ &+4mM^2+4A(1+U)(1+V)Y^2\\
+ &+2\{J^2+(1+U)(vY-Z)^2+(1+V)(X+uZ)^2
+                      -(1+U)(1+V)Z^2\},        \end{split}\tag{LII6}
+\]
+where $M=vW-X+uvY-uZ$ and (LII2) is used in the last line.
+Every potentially unbounded original coefficient occurs here only
+through $nr$, $\alpha(1-H)$, or the bounded quantities in (LII1).
+No division by a testing coordinate has been introduced.
+
+\paragraph{One exact gauge removes the dependent-root first normal.}
+In the formal bounded polynomial (LII6), the coefficient of $R_hW$
+is $uk\rho(U,V)$ for a bounded source polynomial $\rho$.  Replace
+this entire term using the exact identity
+\[
+ KR_h=uvWQ_n-sU(V-y)W^2.                         \tag{LII7}
+\]
+Call the resulting polynomial $\widetilde G$.  It is equal to $G$
+on the roots (LII3), and has no $R_hW$ term.  This gauge is useful
+because $R_h$ is a dependent root: it permits the state and angular
+contact equations to be read as formal coefficient vanishings.
+
+More precisely, by parity write uniquely
+\[
+ \widetilde G=Q_0(N,\xi,\zeta,R_h)
+ +W\{vP_\xi(U,V)\xi+uvP_\zeta(U,V)\zeta
+                         +ukP_N(U,V)N\}
+ +\phi(U,V)W^2,                                  \tag{LII8}
+\]
+where all coefficients are bounded source polynomials and $Q_0$ is
+quadratic in the four displayed roots.  Formula (LII6), followed by
+the one replacement (LII7), is an exact coefficient-extraction
+specification for every entry in (LII8); the accompanying checker
+also prints them without suppression.
+
+The retained packets (LII5) vanish together with their first jets at
+the actual contact.  The exact original source state equations thus
+give
+\[
+ P_\xi(z,y)=P_\zeta(z,y)=P_N(z,y)=0.              \tag{LII9}
+\]
+Indeed the physical $\eta$ derivative first forces the $N$ coefficient
+to vanish; the physical $\xi,\zeta$ derivatives then force their
+formal coefficients to vanish because the $R_hW$ coefficient was
+removed.  The exact original contact and the two angular derivatives
+now give
+\[
+ \phi(z,y)=\phi_U(z,y)=\phi_V(z,y)=0.              \tag{LII10}
+\]
+This uses the six exact original source substitutions already checked
+in R6.  It imposes no new relation between source and testing fields.
+
+\paragraph{Bounded division and the complete angular allocation.}
+There are two additional elementary support facts in (LII8):
+\[
+ P_\xi\in(U,z),\qquad \deg_U\phi\leq2,\qquad
+ \phi(0,V)=V(d_s+e_sV),                           \tag{LII11}
+\]
+where
+\[
+ d_s=\frac4{B^2}\{m(B+zr)^2+(n+\tfrac12)z^2r^2\},\qquad
+ e_s=\frac4{B^2}(n+\tfrac12)z^2r^2.
+\]
+Both $d_s/z^2$ and $e_s/z^2$ are bounded.  The first support assertion
+is literal bounded-coefficient membership: setting $U=z=0$ in the
+extracted polynomial gives zero.  It is also clear before expansion:
+all $\xi W$ terms not supplied by the gauge contain $U$, $m$, $nzr$,
+or $zr$; those supplied by the gauge contain $U$.
+
+Monic division using (LII9) therefore gives bounded polynomials
+\[
+\begin{split}
+ P_\xi&=(U-z)A_\xi+z(V-y)B_\xi,\\
+ P_\zeta&=(U-z)A_\zeta+(V-y)B_\zeta,\\
+ P_N&=(U-z)A_N+(V-y)B_N.                         \end{split}\tag{LII12}
+\]
+For the first line, evaluate $P_\xi$ at $U=z$: the support assertion
+supplies the factor $z$ with bounded quotient, and its value at $V=y$
+is zero.  All other divisions are by the monic polynomials $U-z$
+or $V-y$.  In particular none creates an inverse of a small source
+or a testing difference.
+
+The scalar has the exact bounded decomposition
+\[
+ \phi=\frac{d_s+e_sV}{z^2}V(U-z)^2
+       +U(U-z)(V-y)A_s(V)+U(V-y)^2C_s(V).        \tag{LII13}
+\]
+Here is a constructive proof, including boundedness.  Write
+$\phi=a(V)U^2+b(V)U+V(d_s+e_sV)$ and subtract the first term of
+(LII13).  The remaining $U^2,U$ coefficients $a_1,b_1$ vanish at
+$V=y$ by the value and $U$ derivative in (LII10).  Divide them by
+$V-y$ to obtain $A_s,B_s$.  The $V$ derivative gives
+$zA_s(y)+B_s(y)=0$, so set $C_s=(B_s+zA_s)/(V-y)$.
+All three divisions are monic divisions of bounded polynomials.
+This proves (LII13) exactly, not asymptotically.
+
+Introduce the two legal angular roots
+\[
+ R=v(U-z)W,\qquad T=uk(U-z)W.                    \tag{LII14}
+\]
+The following identities allocate every term in (LII12)--(LII13):
+\[
+\begin{split}
+ zv(V-y)W&=\frac{uVQ_n-uvkR_h}{s}-(V-y)R,\\
+ uv(V-y)W&=\frac{VQ_n-vkR_h}{s},\\
+ uk(V-y)W&=\frac{vkQ_n-yR_h}{s},\\
+ U(U-z)(V-y)W^2&=-\frac{R_hT-uRQ_n}{s},\\
+ U(V-y)^2W^2&=\frac{VQ_n^2-2vkR_hQ_n+yR_h^2}{s^2}.
+                                                        \end{split}\tag{LII15}
+\]
+Together with $v(U-z)W=R$, $uv(U-z)W=uR$, and
+$uk(U-z)W=T$, these are an explicit complete allocation of the
+full remainder as a bounded symmetric Gram in
+\[
+                    (N,\xi,\zeta,R_h,R,T).       \tag{LII16}
+\]
+The original first state normals are all present.  The scalar
+restriction has not been used as a substitute for them.
+
+\paragraph{The finite block and the missing pivot.}
+The residue of $Q_0$ on the first four roots is
+\[
+             \operatorname{diag}(4\ell_*,2,4\alpha_*,4g_0).
+                                                        \tag{LII17}
+\]
+For example the signed core at $W=0$ is exactly
+$2(\xi+u\zeta-uv\eta)^2+2(1+U)V\xi^2+2(1+V)\eta^2$;
+all its other entries vanish in the present residue.  The extra
+terms in the first three lines of (LII15) have infinitesimal Gram
+coefficients except for $A_\xi\xi R$ and the allowed $A_NNT$.
+Likewise the last line has only infinitesimal coefficients, and
+the fourth line has one potentially finite $R_hT$ entry.  Thus,
+apart from entries in the last row and column $T$, the sole finite
+off-diagonal entry is between $\xi$ and $R$.
+
+The exact coefficient extraction yields
+\[
+ \operatorname{st}A_\xi=\frac4{h(1+h)},\qquad
+ \operatorname{st}(d_s/z^2)=\frac2{h^2(1+h)}.     \tag{LII18}
+\]
+For a short independent check of the first value, the unscaled
+original first-normal coefficient on the $V=y$ slice is
+\[
+ -4nzr(1+y)+4m(1-H)-(4D+2)yj+2(1+y)
+ \longrightarrow 2-4d_0^{\rm pair}=\frac2{1+h}.
+\]
+Its full multiplier is $2/B$.  Passing from the original normal
+to (LII8) changes this $U$-quotient only by a bounded multiple of
+$U$ or $z$, so its residue is unchanged.  The second value follows
+from (LII1):
+\[
+ \operatorname{st}\{m(B+zr)^2/z^2+(n+\tfrac12)r^2\}
+ =\frac{1-r_0}{2(1+h)}+\frac{r_0}{2(1+h)}
+ =\frac1{2(1+h)}.
+\]
+Hence the finite $(\xi,R)$ Gram block is exactly
+\[
+ \begin{pmatrix}
+  2&\dfrac2{h(1+h)}\\[2mm]
+  \dfrac2{h(1+h)}&\dfrac2{h^2(1+h)}
+ \end{pmatrix},\qquad
+ \text{Schur complement}=\frac2{h(1+h)^2}>0.      \tag{LII19}
+\]
+This calculation retains $r_0=0$, $n=0$, and $h=1$.
+
+Finally the exact toric conductor is the zero identity
+\[
+ \boxed{\quad
+ T^2-UR^2-\frac{U-z}{s}R_hT
+             +\frac{u(U-z)}s RQ_n=0.\quad}       \tag{LII20}
+\]
+Add any positive real multiple $\Lambda$ of this zero identity to
+the Gram.  Its only nonzero residue contribution is $\Lambda T^2$.
+The five-by-five block excluding $T$ is strictly positive by
+(LII17)--(LII19); all entries incident to $T$ are bounded.  Choose
+a sufficiently large real $\Lambda$ by the ordinary real Schur
+complement.  The entire six-by-six residue Gram is then strictly
+positive.  The bounded Gram lemma gives a tensor SOS for $G$, and
+adding the four packets (LII5) proves the theorem.
+
+\paragraph{Quantifiers and endpoint discipline.}
+No proof step divides by $u$, $v$, $U-z$, or $V-y$: parity quotients
+and monic polynomial divisions are coefficient extractions whose
+final identities are polynomial.  Thus the two literal affine axes
+are included.  The source inverses $1/B$, $1/k$, and the source
+packet square roots are legal even when their values are large;
+all coefficients of the final Gram are bounded.  The source ratios
+$t,j,r,1-H$ have not been bounded away from zero.  The new roots
+raise testing degree, so the local certificate is not homogenized
+to assert the original literal projective endpoints.  Those are
+joined by the separate direct-parent remote certificate.
+
+\paragraph{Checkable scope.}
+\texttt{check\_local\_strong\_ii.py} checks (LII4), (LII7),
+(LII15), (LII20), the complete bounded remainder's parity and support,
+its scalar $U=0$ value, its hard residue, and all three values in
+(LII18)--(LII19).  It prints the exact extracted polynomials in
+\texttt{extracted\_coefficients.txt}.  Source contact and stationarity
+are inherited from the six exact original source checks in
+\texttt{analysis\_atlas/oct19\_r6\_c2\_double/check\_common\_ii.py};
+no additional generic source substitution is claimed here.

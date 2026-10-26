@@ -1,0 +1,98 @@
+23 October 2026 — effect of the global weighted certificate on existence
+
+Conclusion: the verified weighted theorem consolidates angular positivity
+and the state-adjugate identity, but no stated lemma removes det(H) from
+det(H)F in the separated tensor ring. It therefore does not presently
+replace the singular-contact C1/C2 argument needed for qualitative finite
+lift existence. This is a missing implication for the proposed shorter
+route, not a defect in the existing unmultiplied proof.
+
+Exact dependencies inspected
+----------------------------
+Current github-q222-finite-sdp/latex/Proof.tex: universal tensor goal
+eq:insight-universal-goal; determinant vs full-state distinction at
+sec:insight-normal (~228); strict Gram lemma~242–275; whole-state
+identity~282–294; complementary-source lemma~302–319; conductor example
+~321–343; explicit C1/C2 applicability caveat~345–361.
+chapters/03_tensor.tex: TF1~44, TF2~78, TF3~115–127.
+chapters/06_mechanisms.tex: finite penalty~7, small-cost helper~28,
+restricted contact lift CC3~109–117 and proof~120–176.
+chapters/noncommuting_refined.tex: arbitrary-scale noncommuting theorem
+~40–48 and exact local lifting NC7–NC8~101–142.
+
+Why the available lemmas do not supply cancellation
+--------------------------------------------------
+TF3 cancels only a proven nonzero s tensor t with s,t positive in their
+own fields. det(H)=sum_{i<j<k} kappa_i kappa_j kappa_k det(r_i,r_j,r_k)^2
+is generally a SUM of such source/testing products, not one pure product.
+The weighted certificate places F in an SOS cone after adjoining the
+mixed inverse of det(H); that localized conclusion is not TF12.
+
+TF1 says that a bounded element with positive real residue is SOS.
+It neither makes it a unit nor supplies its inverse in T. TF2 requires
+an actual unmultiplied Gram with strict residue; it cannot be applied
+to a quadratic form divided by det(H). Positive residue of a normalized
+determinant consequently does not fill this step.
+
+The small-cost helper requires an exact identity A(z,H)-H²=SOS with
+infinitesimal quadratic costs on an already strict root frame. The
+weighted identity does not supply such an identity for unweighted state
+normals. The complementary-source lemma needs the explicit conductor
+sqrt(b) ell Gamma=sum c_i z_i with zero-residue coefficients and a+b a
+positive source unit. No such conductor follows from adjugate completion.
+
+CC3 is a restricted polynomial IDEAL MEMBERSHIP result, not SOS
+saturation by an arbitrary multiplier. To use it here one must first
+put the unmultiplied residual F-Pi in its specified chart, prove each
+first state-normal coefficient is in M intersection J, and prove the
+scalar coefficient is in (M²+(D0²)) intersection J². One must also retain
+the support/positive-weight bounds making its resulting cofactors
+bounded of zero residue, and a strict hard Gram. The multiplied identity
+does not establish those unweighted membership/boundedness hypotheses.
+These are precisely the current full-state case calculations.
+
+Smallest additional hypothesis for a shorter route
+--------------------------------------------------
+Direct multiplication would suffice if (detH)^-1 existed and were SOS
+in T, or if detH were a nonzero positive pure product. Neither hypothesis
+is proved or generally available for the independent-field determinant.
+The weaker property actually needed is Bell-specific SOS saturation:
+for each canonical physical F and independent testing point, the
+particular detH-weighted certificate descends to F in Sigma(T)^2,
+including its zero faces. No current lemma states that property.
+
+For a conductor-based proof the first concrete missing datum is a
+full-state positive-event subtraction Pi and the UNWEIGHTED contact
+module memberships/cofactor bounds just listed. It is not sufficient
+to establish those statements after multiplying them by detH.
+
+Concrete source/testing zero type
+---------------------------------
+Take any physical C1 source with d>0,lambda_ev=n=0 and alpha>0, and
+the literal original commuting test u=v=0. In the W,X,Y transverse block,
+ H=diag(0,4(m+beta)+2d,4(C+A+D)+2d),
+so detH=0. Yet on the state psi=(0,0,0,1), F=4alpha>0.
+The weighted identity is identically0 at this test and does not contain
+that unweighted state direction. Its root ideal alone therefore cannot
+contain F: every weighted root vanishes at this real point, while F
+does not. Positive-event restoration before a conductor argument is
+essential. A fully numerical trivial example is d=0,alpha=1,all other
+weights0: detH is identically0 and F=4Du(vY-Z)^2 is a nonzero event square.
+These examples do not challenge validity of F; they show why a
+weighted-root conductor cannot be invoked without its extra hypotheses.
+
+Near the C1 commuting corner, detH can instead be nonzero with zero
+residue and competing source/testing scales. Pure-factor cancellation
+cannot discard its zero opening, and positive-residue inversion cannot
+be inferred after normalization. These are the source/test types that
+the existing C1/C2 state-normal conductors distinguish.
+
+What can be shortened now
+-------------------------
+The angular section can cite one global21-monomial Laurent lemma instead
+of re-proving its stationary-contact specialization. The Cauchy–Binet
+completion is one uniform formula for all state directions and zero
+weights. Those are useful common foundations. The noncommuting theorem,
+closed/event faces and the singular full-state C1/C2 mechanisms remain
+required unless the specific saturation/conductor step is proved.
+No manuscript edits or new source searches were performed.

@@ -1,0 +1,95 @@
+\section{The shared C1--C2 boundary and a positive source partition}
+\label{sec:r13-source-overlap}
+
+This section records an exact source-only identity. It does not by itself
+admit any new independent testing domain. Its purpose is to identify the
+same physical boundary in the two remaining source charts and to retain
+the nonnegative slack when that boundary opens.
+
+Use the original weak-C2 variables $B=H+L$, $z,y>0$ and $0<r<1$,
+with the unchanged source gaps and nonnegative $n$. Write $e=1-r$,
+$K=1+z$, $T_c=B+zr$, and let $\delta$ be the original positive
+C2 denominator. Define the positive source polynomial
+\[
+ P_n=B+B^2+2Bzr+BHz+yB(1+z)+Hrz^2+yz^2re.
+ \tag{OP1}
+\]
+Then the following identity holds on the entire original source:
+\[
+ \boxed{\quad eP_n=(1+z)(H+y)(B+zr)+2r\delta n.\quad}
+ \tag{OP2}
+\]
+Every factor in the first summand is positive, and the second summand
+is nonnegative, including literal $n=0$. In particular the pure-source
+weights
+\[
+ q={ (1+z)(H+y)(B+zr)\over eP_n}>0,
+ \qquad s_n={2r\delta n\over eP_n}\ge0
+ \quad\hbox{satisfy}\quad q+s_n=1.                   \tag{OP3}
+\]
+Both square roots are legitimate source-field elements. Neither weight
+is assumed to have nonzero residue.
+
+\begin{proof}
+The unchanged formula for $n$ is
+\[
+ 2r\delta n=(B+zr)(1+zr)(1+zr+B-H)-r\delta.
+\]
+Substitution of the printed polynomial for $\delta$, followed by
+collecting terms, gives OP2. This is a polynomial identity, so no
+source boundary is obtained by continuity and no opening has been
+inverted except the displayed positive pure-source factors.
+\end{proof}
+
+\paragraph{Exact correspondence of the source contacts.}
+Use a subscript $1$ for native C1 notation in this paragraph. The map
+\[
+ x_1=z,\qquad \eta_1={y\over B},\qquad
+ \zeta_1={B\over z},\qquad r_1={H\over B},\qquad
+ \theta_1=e,
+ \tag{OP4}
+\]
+with $k_1=\sqrt z$ and the native parameter
+$\Delta_1=B/(z\sqrt y)$, gives
+\[
+ (u_c,v_c;W_c,X_c,Y_c,Z_c)
+ =\left(\sqrt z,\sqrt y;{B\over\sqrt{zy}},
+                       -r\sqrt z,{H\over\sqrt y},1\right)
+\]
+from the original native C1 contact formula. Thus it is the same
+contact, including all state coordinates. Direct substitution in the
+native positive polynomial $P_d$ gives $BP_d=P_n$.
+The native C1 beta coefficient at this formal contact therefore obeys
+\[
+ \beta_1=-{r\delta n\over eP_n}=-{s_n\over2},
+ \qquad \beta_1+\tfrac12={q\over2}>0.                 \tag{OP5}
+\]
+For $n=0$, the original C2 parent has
+$\lambda=n=\beta=0$. It is literally an original C1 parent,
+up to an optional positive normalization of $C$. The native source
+entry and uniqueness at stationary contact identify its coefficients
+with OP4. For $n>0$, OP5 makes the formal C1 beta negative. Hence
+OP4 does \emph{not} map that source to the nonnegative C1 event cone,
+and no physical C1 all-tests theorem may be imported there.
+
+\paragraph{The revision-12 small-gap chart.}
+Put $z=aB$, $y=tB$, $H=hB$, and $B=e\ell$, with the exact
+BS1/GR1 hypotheses. Here $a,t$ are positive bounded units,
+$h,e$ are infinitesimal, $t_0>1$, and $\ell$ is positive bounded.
+Canceling the pure-source factor $e$ before taking residues gives
+\[
+ q_0=\ell_0t_0(1+a_0),\qquad
+ (s_n)_0=1-\ell_0t_0(1+a_0).                          \tag{OP6}
+\]
+This is consistent with the original constraint $n\ge0$ and keeps
+its equality case. At $n=0$, OP4 has
+\[
+ L_1=x_1\zeta_1=B,\quad
+ \eta_1=t,\quad\zeta_1=1/a,\quad r_1=h,\quad
+ (j_{0,1})_0=t_0-1>0.
+\]
+It therefore enters the weighted small-$L$ C1 theorem in
+Section~\ref{sec:r13-c1-r-openings}. This overlap is an exact reuse
+of a proved physical boundary, not a claim that its positive-$n$
+neighborhood is covered. All total-scale and earlier-complement
+intersections remain in force.

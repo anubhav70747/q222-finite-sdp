@@ -1,0 +1,141 @@
+% Include-able definitions and exact fixed-family data for the all-z theorem.
+\paragraph{The complete native source and parent.}
+The source variables obey $x,\sigma,z>0$, $0<b,h<1$,
+$r=bz<1$. Set
+\begin{gather*}
+ Q=1-b,\quad \theta=1-h,\quad e=xh/\sigma,\quad E_s=1-e,
+ \quad K=1+x,\quad R_s=1+xr,\\
+ M=R_s-xz\theta,\quad J=1+xh-\sigma(1-r),\\
+ P_s=\sigma+K+\sigma z(1+bx+2xh)
+                   +\sigma bx^2hz^2+x^2h\theta z,\\
+ \pi=\frac{z(1+xh)E_s+(1-r)(1+xhz)}{2P_s},\qquad
+ \ell=\frac{(1+\sigma r)\{eR_s(1+\sigma z)+ME_s\}}{2P_s},\\
+ \kappa_s=\frac{K(1+\sigma r)(1+\sigma z)}{2MP_s}.
+\end{gather*}
+The strict gaps are $E_s,M,J>0$. The seven source coefficients,
+in the normalization $d=1$, are
+\begin{gather*}
+ m=\kappa_s x^2z\frac h\sigma,\qquad
+ C=\frac{Kz(1+\sigma r)E_s}{2(1-r)P_s},\qquad
+ A=\frac\pi{bz},\qquad \alpha=\frac\ell{Qz},\\
+ D=\frac{K(1+\sigma z)(1+\sigma r)-JP_s}{2JP_s},\qquad
+ \beta=\frac{K(1+\sigma r)(1+xhz)-\theta P_s}{2\theta P_s}.
+\end{gather*}
+In particular $m>0$; the hypotheses also require $D,\beta\ge0$.
+The symbol $\pi$ is a source numerator and is independent of the
+testing coordinate $p$.
+
+For $D_p=1+p^2$, $D_w=1+w^2$, the complete inverse-Alice parent is
+\begin{equation}\label{eq:allz-explicit-parent}
+\begin{split}
+ \widehat F={}&4m(pW-pwX+Y-wZ)^2+4CD_w(W-pY)^2
+                         +4AD_pD_wY^2\\
+ &+(4D+2)(wW+X-pwY-pZ)^2
+        +(4\alpha+2)D_p(Y-wZ)^2\\
+ &+(4\beta+2)D_w(pX+Z)^2-2D_pD_wZ^2.
+\end{split}
+\end{equation}
+It equals $p^2F_w(1/p,w)$ for $p\ne0$. For unit states the physical
+slack is $\widehat F/(D_pD_w)$. The pure testing factor
+$\kappa_t^2D_pD_w=1$ therefore restores the physical normalization
+and remains regular at $p=0$.
+
+\paragraph{An explicit list of 51 testing functions.}
+Fix $P_*\ge1$, put $t=p/P_*$, and write
+\[
+ \phi=(X,Y,W,wW,wZ,pX)^T,\qquad
+ y_1=t,\quad y_2=t(w/\delta)^2,\quad y_3=w/\delta.
+\]
+Take the $42$ labelled functions consisting of every entry of $\phi$
+multiplied by one of
+\[
+ 1,\quad\sqrt{1+y_1},\sqrt{1-y_1},\quad
+ \sqrt{1+y_2},\sqrt{1-y_2},\quad
+ \sqrt{1+y_3},\sqrt{1-y_3},
+\]
+and the nine further functions
+\[
+ pwZ,\ pY,\ pwY,\ wY,\ pwX,\ pW,\ pZ,\ Z,
+                         \quad wZ\sqrt{1-t^2}.
+\]
+All radicands are nonnegative on $0\le p\le P_*$,
+$0\le w\le\delta$. This list is independent of all source variables.
+For the physical slack multiply its entries by $\kappa_t$.
+For signed angles compose the list with the fixed angle-sign and
+state-sign gauges. No state-coordinate inverse or sign-dependent
+source factor occurs.
+
+\paragraph{Polynomial weighted blocks.}
+Here is the complete smaller weighted representation. A row
+$(v,g,H)$ means $g\,v^THv$. Write $[v]=vv^T$, and put
+\begin{gather*}
+ t_B=\sqrt B,\quad t_H=\sqrt{H_0},\quad
+ \ell_J=(t_B/q,-bt_B/q)^T,\quad \ell_G=(0,t_H/q)^T,\\
+ h_s=\frac1{P_*}(q,-sz/q,-s(1-r)/q)^T\quad(s=1,4/3),\\
+ \nu=1-a^2-c^2=\frac{Qz(1-r)}{H_0},\qquad \psi=(Y,wZ)^T.
+\end{gather*}
+Define source matrices
+\begin{align*}
+ G_{RS}&=(2-f/2)I_2,\\
+ G_{EL}&=\tfrac32f[h_{4/3}]
+               +2f\left(\frac{P_*^2}{1-r}-1\right)[h_1],\\
+ G_{JG}&=\tfrac32f[\ell_J]+\tfrac56f[\ell_G]
+                                      +2(1-f)[(1,-1)^T],\\
+ G_{pJG}&=f\left(2-\frac2{3P_*^2}\right)[\ell_J]
+       +\frac{2f}{3P_*^2}\{\nu([\ell_J]+[\ell_G])
+                                      +[c\ell_J-a\ell_G]\}
+       +2(1-f)[(1,0)^T].
+\end{align*}
+Their coefficients are nonnegative. In the order
+$(R,S,J_*,\bar E,G_*)=\mathsf L\phi$, the source matrix is
+\[
+ \mathsf L=\begin{pmatrix}
+ 1&0&0&1&0&0\\0&0&0&0&0&1\\
+ 0&t_B/q&0&0&-bt_B/q&0\\
+ 0&0&q/P_*&0&0&0\\0&0&0&0&t_H/q&0
+ \end{pmatrix}.
+\]
+Let $T_i$ be the three correction matrices in this order, including
+the factors $1,\delta^2,\delta$, respectively, and let $M_i$
+be their stated absolute-row-sum bounds. Thus the seven main rows are
+\[
+ \left(\phi,1,\mathsf L^T(f/2-\rho)I_5\mathsf L\right),\qquad
+ \left(\phi,1\pm y_i,
+              \mathsf L^T\frac{M_iI_5\pm T_i}{2}\mathsf L\right),
+ \quad i=1,2,3.
+\]
+The other twelve rows are
+\[
+\begin{array}{c|c|c}
+ v&g&H\\\hline
+ (X+wW,pX)^T&1&G_{RS}\\
+ (W,pY,pwZ)^T&1&G_{EL}\\
+ \psi&1&G_{JG}\\
+ wZ&1-t^2&2ft_H^2/(3q^2)\\
+ \psi&p^2&G_{pJG}\\
+ (pwX,pwY)^T&1&2I_2\\
+ (W-pY,w(W-pY))^T&1&4\operatorname{diag}(C-fC_0,C)\\
+ (Y,wY)^T&D_p&4\operatorname{diag}(A-fA_0,A)\\
+ pW-pwX+Y-wZ&1&4m\\
+ wW+X-pwY-pZ&1&4D\\
+ pX+Z&D_w&4\beta\\
+ Y-wZ&D_p&4(\alpha-f\alpha_0)
+\end{array}
+\]
+Their sum is exactly \eqref{eq:allz-explicit-parent}. There are
+$19$ blocks, of total order
+\[
+ 7\cdot6+(2+3+2+1+2)+2+2+2+4=62,
+\]
+with maximum order six. All matrix entries are source-only. They
+are explicit sums or congruences of nonnegative source rank-one
+matrices, diagonal matrices, or the proved row-sum matrices.
+The testing scalar multipliers are nonnegative polynomials.
+
+To recover the stated scalar list, factor each source Gram in the
+source field and split $D_p=1+p^2$, $D_w=1+w^2$, and $p^2$ into
+polynomial testing squares. Every resulting ungated root is a
+source-linear combination of the fourteen displayed monomials;
+the only remaining radicals are the six main gate roots and
+$\sqrt{1-t^2}$ multiplying $wZ$. Thus no additional testing function
+is introduced by any of the retained full events.

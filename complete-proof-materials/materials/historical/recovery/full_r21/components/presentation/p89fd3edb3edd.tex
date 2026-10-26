@@ -1,0 +1,297 @@
+\chapter{Shared event mechanisms for the remaining C1 sources}
+\label{component:p89fd3edb3edd}
+\noindent\textbf{Component }\path{p89fd3edb3edd}\par
+{\small\noindent Source: \path{R13/baseline/advances/c1_common/common_remote.tex}\par}
+{\small\noindent SHA256: \path{89fd3edb3edd2350eb561f1964d205c81ae33223d97b1f35ac7ab16e710855af}\par}
+{\small\noindent Inventory use: Original remote/projective testing exits | CE1--CE21 and exact relabelings | CE adjacent C,A noninfinitesimal Alice all-state exit\par}
+\medskip
+\section{Shared event mechanisms for the remaining C1 sources}
+\label{p89fd3edb3edd:sec:r6-c1-common-remote}
+Normalize the original parent by its positive pure-source coefficient $d$.
+Write $D_z=1+z^2$, and write the signed core as $2K$, where
+\[
+ K=(uW+uvX-Y-vZ)^2+D_u(vY-Z)^2+D_v(X+uZ)^2-D_uD_vZ^2.
+ \tag{CE1}
+\]
+The event packets used below are
+\[
+4m(vW-X+uvY-uZ)^2,\quad4CD_v(uW-Y)^2,
+\quad4AD_uD_vY^2,\quad4\alpha D_u(vY-Z)^2.
+\]
+Every omitted event and every nonnegative excess is retained as its exact
+original square. Source and testing fields remain independent. ``Strong''
+means bounded below by a positive real number; ``unbounded'' means larger
+than every real number. Neither assertion constrains upper scales.
+
+\begin{theorem}[Two adjacent unbounded events, with complete raw frames]
+If $C,A$ are unbounded, the full original parent is tensor SOS at every
+projective test for which $u$ is not infinitesimal, and every state.
+No physicality assumption beyond nonnegative event weights is needed for
+this particular assertion. By the exact cyclic relabeling below, if
+$A,\alpha$ are unbounded, the conclusion holds whenever $v$ is not
+projectively unbounded.
+\end{theorem}
+\begin{proof}
+Select $C=A=\mu$, with a positive real $\mu$ chosen after the real testing
+residues; unboundedness permits every such choice. The following are exact
+full quadratic forms, before any restriction to a state ray or contact.
+They therefore retain every first state normal and hard-normal coupling.
+
+For $u$ a bounded nonzero unit and $v$ bounded, use the four raw roots
+\[
+ (W,Y,B,V),\qquad B=X+uZ,\quad V=vZ.
+\]
+The entire core equals
+\[
+ K=(uW-Y+uvB)^2+D_vB^2+D_uv^2Y^2+D_uu^2V^2
+       -2D_uuV(W+vB).                         \tag{CE2}
+\]
+The two selected event forms remain $4\mu D_v(uW-Y)^2$ and
+$4\mu D_uD_vY^2$. In their common real kernel $W=Y=0$, the core has
+matrix on $(B,V)$
+\[
+ \begin{pmatrix}1+v^2D_u&-D_uuv\\-D_uuv&D_uu^2\end{pmatrix},
+ \qquad \det=D_uu^2>0.                       \tag{CE3}
+\]
+Here and in residue matrices, bounded testing letters mean their real
+residues. Thus a sufficiently large finite $\mu$ gives a strictly positive
+residue on the entire four-root space, even when $v=0$ literally.
+
+For $p=1/u$ infinitesimal and $v$ bounded, homogenize by $p^2$ and take
+\[
+ (W,Y,B,R),\qquad B=pX+Z,\quad R=vX.
+\]
+The exact full core is
+\[
+ K_p=B^2-2pvBW-2vBY+D_pR^2+2D_pRW
+                  +(W-pY)^2+D_pv^2Y^2.       \tag{CE4}
+\]
+The selected packets are $4\mu D_v(W-pY)^2$ and
+$4\mu D_pD_vY^2$. At $p=0$ their sum with $2K_p$ is
+\[
+ 4\mu D_v(W^2+Y^2)+2(W+R)^2+2(B-vY)^2,       \tag{CE5}
+\]
+strict for every $\mu>0$. The formula allows literal $p=0$ and $v=0$;
+the raw roots need not form independent state coordinates.
+
+For projectively unbounded $v$, put $w=1/v$, homogenize by $w^2$, and
+use $(W,X,Y,H)$ with $H=wZ$. The exact full core is
+\begin{align*}
+ K_w={}&u^2H^2-2u^2HY-2uHW+2uwHX+u^2w^2W^2\\
+ &+2u^2wWX-2uw^2WY+(D_u+w^2)(X^2+Y^2)-2uwXY.
+                                                        \tag{CE6}
+\end{align*}
+The selected packets are $4\mu D_w(uW-Y)^2$ and
+$4\mu D_uD_wY^2$. If $u$ is a bounded nonzero unit, at $w=0$ their
+common kernel has $W=Y=0$ and $K_w=D_uX^2+u^2H^2$ strictly positive.
+A sufficiently large real $\mu$ again works. If also $p=1/u$ is
+infinitesimal, homogenize (CE6) by $p^2$. The exact full core is
+\begin{align*}
+ K_{pw}={}&H^2-2pHW+2pwHX-2HY+w^2W^2+2wWX-2pw^2WY\\
+ &+(D_p+p^2w^2)(X^2+Y^2)-2pwXY.              \tag{CE7}
+\end{align*}
+At $p=w=0$ the full selected residue is
+\[
+ 4\mu(W^2+Y^2)+2X^2+2(H-Y)^2>0.             \tag{CE8}
+\]
+All these exact Gram coefficients are bounded. Strictness in (CE3) and
+its counterpart following (CE6) implies a finite cap by the elementary
+real Schur-complement argument: the event Gram is positive definite on
+the complement of its kernel, and the core is positive definite on the
+kernel. No source/testing rate comparison is involved. Apply the bounded
+positive-residue Gram lemma, and restore every retained original square.
+
+For the second assertion, compose the inherited Alice reflection with
+the swap/reflection. The resulting one-step inverse cycle rotation is
+\[
+ (u',v')=(1/v,u),\quad
+ (W',X',Y',Z')=(Y+vZ,-W-vX,Z-vY,vW-X),          \tag{CE9}
+\]
+and sends event index $i$ to $i-1$ in
+$(\lambda,D,C,A,\alpha,m,\beta,n)$. In particular original $A,\alpha$
+become new $C,A$. Its full-parent identity is
+\[
+ v^2F(\mathrm{rot}^{-1}c;1/v,u;\psi')=D_vF(c;u,v;\psi).
+                                                        \tag{CE10}
+\]
+The state map has determinant of absolute value $D_v^2$, and its
+homogeneous version at $v=\infty$ is invertible as well. Thus
+$u'=1/v$ not infinitesimal is exactly $v$ not projectively unbounded.
+Only pure testing factors are restored. Both signs, all literal endpoints,
+and complex states (by real/imaginary splitting) are included.
+\end{proof}
+
+\begin{theorem}[Four consecutive strong events]
+For an original physical parent with $C,A,\alpha,m$ strong, the full
+parent is tensor SOS at every test except possibly $u$ a bounded nonzero
+unit and $v$ projectively unbounded. All original upper coefficient
+scales and all nonnegative unselected coefficients are allowed.
+\end{theorem}
+\begin{proof}
+Cap these four events at any positive real $\mu$ smaller than all four
+weights, and retain every excess. Noncommuting-residue tests use the
+inherited physical-source theorem, applied to the original full parent.
+For commuting-residue tests use the capped parent.
+
+First suppose $v$ is bounded. On the three open commuting axes, the core
+and the four caps have zero common kernel: at $u=0$, the core forces
+$X=Y=0$, then $m$ and $\alpha$ force $W=Z=0$ when $v$ is a unit;
+at $u=\infty$, $C,A$ force $W=Y=0$, then the core forces $X=Z=0$;
+at $v=0$, $A,\alpha$ force $Y=Z=0$, then the core forces $W=X=0$
+when $u$ is a unit. These are strictly positive bounded state Grams.
+
+At $(u,v)=(0,0)$ the residue is
+\[
+ (2+4\mu)X^2+(2+8\mu)Y^2+4\mu Z^2.
+\]
+Only the $W$ ray remains. Normalize $W=1$ and take the five infinitesimal
+roots $(u,v,X,Y,Z)$. The full polynomial has no constant or linear term;
+its quadratic part is
+\[
+ 2(u-Y)^2+2X^2+
+ 4\mu\{(v-X)^2+(u-Y)^2+Y^2+Z^2\},            \tag{CE11}
+\]
+which is strictly positive. At $(u,v)=(\infty,0)$ only the $X$ ray
+remains. Normalize $X=1$ and use $(p,v,W,Y,Z)$. Its quadratic part is
+\[
+ 2(W+v)^2+2(p+Z)^2+
+ 4\mu\{(p+Z)^2+W^2+Y^2+Z^2\},              \tag{CE12}
+\]
+also strictly positive. All higher monomials in each chart allocate to
+products of two displayed roots with infinitesimal bounded coefficients.
+This is an exact finite Gram, not a truncation certificate.
+
+For $w=1/v$ infinitesimal use the full raw frame of (CE6). All four
+selected packets, with every normal present, are exactly
+\[
+ 4\mu\{(W-wX+uY-uH)^2+D_w(uW-Y)^2
+              +D_uD_wY^2+D_u(Y-H)^2\}.        \tag{CE13}
+\]
+At $u=w=0$ their sum with $2K_w$ has residue
+\[
+ 4\mu W^2+2X^2+(8\mu+2)Y^2+4\mu(Y-H)^2,    \tag{CE14}
+\]
+strict on all four roots. If $p=1/u$ is infinitesimal, homogenize again;
+the exact packets become
+\[
+ 4\mu\{(pW-pwX+Y-H)^2+D_w(W-pY)^2
+              +D_pD_wY^2+D_p(Y-H)^2\}.        \tag{CE15}
+\]
+Together with (CE7), at $p=w=0$ the residue is
+\[
+ 4\mu W^2+2X^2+4\mu Y^2+(8\mu+2)(Y-H)^2,    \tag{CE16}
+\]
+again strict. These frames require no state normalization, and no
+division by either small testing coordinate. Literal $w=0$ is included.
+The only chart not covered is ordinary $u$ and infinitesimal $w$.
+Restore the original packets and all pure factors as above.
+\end{proof}
+
+\begin{lemma}[Matched weak outer events at the large-Bob corner]
+Suppose $q>0$ is a pure-source infinitesimal and
+\[
+ C\ge c q^2,\quad m\ge m_*q^2,\quad
+ A\ge a_*/q^2,\quad\alpha\ge b_*/q^2
+                                                        \tag{CE17}
+\]
+for positive real $c,m_*,a_*,b_*$. At projectively unbounded $v$,
+the complete parent is tensor SOS whenever $u$ is infinitesimal or
+projectively unbounded. In the latter chart the lower bound on $m$
+is unnecessary.
+\end{lemma}
+\begin{proof}
+Keep $w=1/v$ and $H=wZ$ as in (CE6)--(CE7). If $u$ is infinitesimal,
+use the five raw roots
+\[
+ E=qW,\quad X,\quad F=Y/q,\quad G=H/q,\quad V=uwW.
+\]
+The exact whole core (CE6) becomes
+\begin{align*}
+ K_w={}&V^2+(D_u+w^2)X^2
+       +q^2\{u^2(G-F)^2+D_wF^2\}\\
+ &-2uGE+2quwX(G-F)+2uVX-2uw^2EF.             \tag{CE18}
+\end{align*}
+Cap only $m,A,\alpha$ at the indicated weights. Their complete packets
+are respectively
+\[
+ 4m_*(E-qwX+uq^2(F-G))^2,\quad
+ 4a_*D_uD_wF^2,\quad4b_*D_u(F-G)^2.
+\]
+The selected residue is
+\[
+ 2V^2+2X^2+4m_*E^2+4a_*F^2+4b_*(F-G)^2>0.   \tag{CE19}
+\]
+Every coefficient in (CE18) is bounded independently of all relative
+source/testing rates.
+
+If instead $p=1/u$ is infinitesimal, use
+\[
+ E=qW,\quad F=Y/q,\quad G=H/q,\quad
+ R=X+wW,\quad S=pX.
+\]
+The exact whole core (CE7) is
+\[
+ K_{pw}=R^2+D_wS^2+q^2(G-F)^2+p^2D_wq^2F^2
+       -2pE(G+w^2F)+2qwS(G-F).               \tag{CE20}
+\]
+Cap only $C,A,\alpha$. Their complete packets are
+\[
+ 4cD_w(E-pq^2F)^2,\quad4a_*D_pD_wF^2,
+ \quad4b_*D_p(F-G)^2.
+\]
+Together with $2K_{pw}$ their residue is
+\[
+ 2R^2+2S^2+4cE^2+4a_*F^2+4b_*(F-G)^2>0.     \tag{CE21}
+\]
+Only the pure-source inverse $1/q$ occurs in a root. These exact raw
+frames include every state normal and every literal endpoint. The
+strict-residue lemma and restoration of excess packets prove the claim.
+\end{proof}
+
+\paragraph{Exact application to the original C1 source rows.}
+The source premises here are precisely the already proved original
+formulas (NC1)--(NC7), (NI3)--(NI10); no independent source family is
+substituted. These common theorems give the following new quantified
+test reductions, always intersected with prior admissions:
+\begin{enumerate}
+\item C1.1, every $e$ type: (NI3) gives $C,A$ unbounded;
+only $u$ infinitesimal remains.
+\item C1.4, $L$ infinitesimal and $\eta$ unbounded: (NI6)
+again gives $C,A$ unbounded; only $u$ infinitesimal remains.
+\item C1.4, $L$ unbounded: (NI4) and (CE20) leave only
+$u$ bounded and $v$ unbounded.
+\item C1.5 actual UH, $\eta$ unbounded and $\zeta$ unit:
+(NI9) gives four strong events; only $u$ unit and $v$ unbounded remains.
+\item C1.5 actual UH, $\zeta$ unbounded: (NI10) and (CE17)
+leave the same sole strip, $u$ unit and $v$ unbounded.
+\end{enumerate}
+For the last line choose $q=\zeta^{-1/2}$. Formula (NI10) gives
+$C,m\asymp q^2$, $\alpha\asymp1/(q^2Q)$ and $A\asymp1/r$;
+the original $Q=1-x\zeta r>0$, with unit $x$, bounds $Aq^2$ below.
+Thus (CE17) holds with positive real constants. The adjacent-event
+theorem covers bounded $v$ and (CE18)--(CE21) remove both end types of
+$u$ at unbounded $v$. Both actual UH source patterns now have the same
+sole untreated testing strip, ordinary $u$ and unbounded $v$.
+
+In the $L$-unbounded C1.4 line take $q=L^{-1/2}$.
+Then (NI4) gives $C\asymp q^2$, $\alpha\asymp1/(q^2Q)$ and
+$Aq^2\asymp1/(Lr)>1$. The $p$-chart (CE20), which needs no lower
+bound on $m$, removes the projectively unbounded-$u$ tests there.
+
+All bounds are relative to original $d$. The four-source-event result
+does not require the additional NI9 total-scale condition that at least
+one opening be infinitesimal. Every literal permitted $D=0$ or
+$\beta=0$ is retained throughout, since neither coefficient was capped.
+No claim of nonemptiness or full-row completion is made. In particular,
+the $L$ unit and the $L$ infinitesimal/$\eta$ bounded parts of C1.4 are
+unchanged, and these remote results do not supply the missing critical
+contact conductors.
+
+\paragraph{Scoped corroboration.}
+The checker reconstructs the exact core, all six raw identities
+(CE2), (CE4), (CE6), (CE7), (CE18), (CE20), their selected packets and residues, the
+two corner quadratic forms, and the cyclic core and selected-event
+transport. It checks whole quadratic polynomials, hence all state normals
+at once. The source entry, ordered-field bounds, real Schur argument,
+strict-residue lemma, and the inherited noncommuting theorem remain the
+analytical proof. No whole-row count changes follow from these checks.

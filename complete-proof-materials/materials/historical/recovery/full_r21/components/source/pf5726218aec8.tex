@@ -1,0 +1,87 @@
+\section{Strong C2 source entry at an infinitesimal first angle}
+\label{sec:strong-angle-entry}
+Let $z=u_c^2$ be infinitesimal, $y=v_c^2>0$ arbitrary, and use the exact
+positive C2 source. Set
+\[
+ \begin{gathered}
+ H=zh\in(0,1),\quad L=yt>0,\quad B=zb=H+L,\\
+ A_c=1+zr,\quad S=A_c+L,\quad j=A_c-L/y>0.
+ \end{gathered}
+\]
+Here $0<r<1$. Define
+\begin{align*}
+ \delta={}&z+(1+z)B+(1+z)B^2+2z(1+z)Br+z^3r^2+2z^2r\\
+ &+y\{(1+z)B+z+z^2r(2-r)\},\\
+ G={}&B+z(H+r-1),\\
+ M={}&(1+z)(B+zr)(H+y)-z(1+y)(1-r)L\\
+ ={}&(1+z)(B+zr)H+yG+yzj+zrL(1+y)>0.
+\end{align*}
+The unchanged original coefficient formulas are
+\begin{align*}
+ n&=\frac{(B+zr)A_cS-r\delta}{2r\delta},&
+ m&=\frac{z^2(1+y)(1-r)A_cS}{2G\delta},\\
+ C&=\frac{A_cM}{2L\delta},&
+ A&=\frac{yA_c(B+zr)S}{2H\delta},\\
+ D&=\frac{(1+z)(B+zr)(B-zyr)S}{2yj\delta},&
+ \alpha&=\frac{(B+zr)M}{2(1-H)\delta}.
+\tag{GE1}
+\end{align*}
+Assume $C$ and $\alpha$ are strong, meaning each has a positive real
+lower bound in the coefficient field. Then $B$ is a bounded positive
+unit. Indeed
+\[
+ \delta\ge(1+y)(B+z),\qquad
+ M\le(1+z)(B+z)(1+y)
+\]
+give $CL\le A_c(1+z)/2$, so $L$ and $B$ are bounded.
+If $B$ were infinitesimal then so would $H$, while
+$\alpha(1-H)\le(B+zr)(1+z)/2$ would force $\alpha$ infinitesimal,
+a contradiction.
+
+Next, $n\ge0$ gives $r\delta\le(B+zr)A_cS$ and therefore
+$yr\le A_cS$, since $\delta\ge y(B+zr)$.
+Thus $G$, $B-zyr$ and $\delta/(1+y)$ are positive units.
+Since $L<yA_c$, the ratio $(H+y)/(1+y)$ is a positive unit: if $y$
+is infinitesimal then $H=B-L$ is a unit, and otherwise $y/(1+y)$
+is a unit. The positive second expression for $M$ now shows that
+$M/(1+y)$ is a positive unit.
+
+Finally $1-r$ is a unit. To see this, let
+$E(r)=(B+zr)A_cS-r\delta$, holding $B,H,y,z$ fixed.
+Its coefficients divided by $1+y$ are bounded, while direct expansion
+at $r=1$ gives
+\[
+ E(1)=-(H+y)(B+z)(1+z).
+\]
+The right side divided by $1+y$ is negative with nonzero residue.
+If $1-r$ were infinitesimal, $E(r)/(1+y)$ would have the same negative
+residue, contradicting $n\ge0$.
+
+Consequently the following exact scaled quantities are positive units:
+\[
+ \frac m{z^2},\quad CL,\quad\alpha(1-H),\quad
+ \frac{AH(1+y)}y,\quad Dyj(1+y).
+\tag{GE2}
+\]
+For the IH source subcase $y$ is unbounded, hence $r=O(1/y)$ is
+infinitesimal, $j$ is a unit, and $Dy^2$ is a positive unit.
+Put $\rho=B/y$, $s=r/\rho$, and $c_s=(1+L)/B$.
+Then $s$ is bounded and, with $N=4n+2$ and $\nu=Nr$,
+\[
+ \frac\nu\rho\longrightarrow2c_s,\quad
+ \frac{nr}\rho\longrightarrow\frac{c_s-s}{2},\quad
+ \frac D{\rho^2}\longrightarrow\frac{c_s}{2},\quad
+ CL\longrightarrow\frac12,\quad
+ \frac{Bm}{z^2}\longrightarrow\frac{c_s}{2},
+\]
+\[
+ AH\longrightarrow\frac{1+L}{2},\qquad
+ \alpha(1-H)\longrightarrow\frac B2.
+\tag{GE3}
+\]
+Here arrows mean equality of residues of bounded expressions, with
+$B,H,L,s$ replaced on the right by their residues. The expressions
+remain valid at $H_0=0$, $H_0=1$, or $L_0=0$ whenever allowed by $B_0>0$.
+The reason is that the scaled rational functions have denominators
+bounded away from zero after the displayed opening factors have
+been absorbed; no unscaled $1/H$, $1/(1-H)$ or $1/L$ is asserted bounded.

@@ -1,0 +1,89 @@
+Independent fixed-C2-gate extraction: final findings
+24 October 2026
+
+Result
+------
+The announced parent identities and affine pencil construction are correct,
+provided the retained positive core square d*J^2/2 is explicit. This term
+is present in the corrected integrated note. No other algebraic defect
+was found. The independent exact calculation produced the claimed 36
+Alice coefficient records and 15 Bob coefficient records.
+
+Frozen files
+------------
+check_and_extract.py       exact full-state polynomial check and extraction
+alice_order20.coo.json     12 rational coefficient matrices; 36 upper entries
+bob_order10.coo.json       9 rational coefficient matrices; 15 upper entries
+independent_checks.json    all exact identity results
+
+Indices in both JSON files are zero-based and upper-triangular: mirror
+an off-diagonal coefficient once. Alice parameter order is
+(d,lambda,n,m,C,A,D,alpha,beta,tau,p,q); Bob uses the first nine.
+The source-sign inequalities are external; appending them gives total
+orders 29 and 19. There are no coefficient equations or nonlinear
+constraints on tau,p,q.
+
+Full-parent restoration
+------------------------
+The check starts from the original fully homogeneous four-state parent,
+not a contact-state or state-normal restriction. On the two unit circles,
+its compact value P=F_h/4 equals the stated compact source expression.
+The displayed residual G is exact after retaining
+  lambda E_lambda^2 + beta L_A^2 + nX^2 + mM^2 + C(cE)^2
+       +(eE,J) S_tau (eE,J)^T + dJ^2/2.
+Omitting the last term leaves a discrepancy of exactly dJ^2/2.
+Every state coordinate W,X,Y,Z is independent throughout the check.
+
+Why unrestricted auxiliary coefficients are sound
+-------------------------------------------------
+Write V=cK, ell=cY, Y0=eY and g^2=b(B-b), zeta^2=1-b.
+The three auxiliary matrix coefficients evaluate to the following zero
+testing identities:
+  tau: 2(eE-J)bV/B + 2{(bV)^2+(gV)^2}/B^2 = 0,
+  p:   b{aR ell-U ell-b^2 ell^2-bVY0} = 0,
+  q:   b^2 ell^2{a^2+b^2-1}/2 = 0.
+They use only J-eE=V, allocation identity (2), and the circle/gate
+equations. Thus H_B^T Q20 H_B=P for arbitrary independent tau,p,q;
+q=p^2/d is not imposed or used for the identity. All twelve coefficient
+identities were checked separately. The source-only assignments
+p=d*h/(1+h), q=d*h^2/(1+h)^2 are sufficient PSD witnesses, not constraints
+on the affine pencil.
+
+Sufficient PSD conditions and zero cases
+----------------------------------------
+With nonnegative source coordinates, S_tau>=0, rho=tau-d/2>=0 and
+4A*rho>=d^2 P_B^2, the source witness decomposition makes Q20 PSD.
+The first two normal blocks are PSD by
+  d*q=p^2,
+  alpha*(d/2-p)-p^2/4
+     =d{2alpha(1-h^2)-d*h^2}/[4(1+h)^2]=0.
+The remaining diagonal terms are nonnegative. H_+,H_0,Q_* are PSD because
+P_B>=B/2, using 0<=h<=1. This includes d=0, alpha=0 and the branch
+d=alpha=0 with h=0; n,lambda,beta may vanish without any division.
+Other zero-source specializations require the displayed PSD conditions;
+they are not all admitted automatically.
+
+The Bob identity (5) and all nine Bob coefficient identities also hold
+for the full homogeneous parent. Its source witness condition is
+S_(d/(2delta^2))>=0. Its matrix is affine in the original nine sources;
+tau0=2^51*d introduces no auxiliary or nonlinear source constraint.
+
+Testing endpoints and limits of the result
+-------------------------------------------
+The exact identities hold on the closed algebraic covers, with arbitrary
+state signs and both signs of a,c,e. There is no inverse of a testing or
+state coordinate. Alice includes b=0 (u=infinity), b=B, and every Bob
+endpoint. Bob includes |c|=delta, c=+/-1,e=0 (v=infinity), and every
+Alice endpoint including u=0,infinity. Zero gate values are literal.
+
+The uncovered cap remains b>B and |c|<delta; in particular u=v=0 is
+not covered. The native contact has cE=L/sqrt((1+z)(1+y))>0 while P=0,
+so a globally positive decomposition retaining C(cE)^2 cannot certify
+that contact. Neither pencil nor their chart union is a full canonical
+certificate. Source-envelope estimates were assigned to the other
+reviewer and were not duplicated here. No global lift or contact-cap
+completion is inferred from these local identities.
+
+The exact SymPy checker passed in approximately 1.3 seconds. It used no
+solver, source sampling, numerical sign test, or downloaded matrix data.
+All work is private; no public files were edited.

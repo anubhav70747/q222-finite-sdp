@@ -1,0 +1,140 @@
+\chapter{Further actual-angle reductions from exact source entry}
+\label{component:pe56fb394b522}
+\noindent\textbf{Component }\path{pe56fb394b522}\par
+{\small\noindent Source: \path{R13/baseline/baseline/baseline/baseline/advances/source/angle_reductions.tex}\par}
+{\small\noindent SHA256: \path{e56fb394b52263918d985b9437e107edea077b0ea105beebe65fca8b1c306250}\par}
+{\small\noindent Inventory use: Actual directed weak II/IU/UI/UU exclusions and both-strong UU five-event entry\par}
+\medskip
+\section[Further actual-angle reductions from exact source entry]{Further actual-angle reductions from exact source entry}
+\label{pe56fb394b522:sec:c2-angle-reductions}
+
+All angles in this section are actual source contacts. They are strictly
+positive finite field elements; ``infinite'' below means unbounded in
+the coefficient field, not a literal projective endpoint. Write
+$z=c^2=u_c^2$, $y=a^2z=v_c^2$, and
+$A_c=1+zr$, $S=A_c+a^2zt$. The exact source identities used are
+\[
+ n\ge0\ \Longleftrightarrow\ (b+r)A_cS-r\Delta\ge0,
+ \qquad
+ N=(1+z)(b+r)h+a^2\{g+j+rt(1+y)\}>0.
+\]
+
+\begin{theorem}[The ordinary--ordinary source orbit is already closed]
+If both actual C2 half-angles are positive bounded units, then the
+source belongs either to the two-weak-complementary-event all-tests
+exit or to the five-consecutive-strong-event all-tests exit. No upper
+bound on an original event coefficient is required.
+\end{theorem}
+\begin{proof}
+Here $a,z$ are units. The positive gaps give $0<h<1/z$ and
+$0<t<1+zr$, so $h,t,b=h+a^2t$ are bounded. From
+$g=b-1+r+zh>0$ we obtain $1<b+r+zh\le(1+z)b+r$;
+thus $b+r$ is a positive unit. The positive expansion of $\Delta$
+makes it a bounded unit too. The original $A$ formula has unit
+numerator and bounded denominator $h$, so $A$ is strong.
+
+The exact numerator for $n$, after substituting $t=(b-h)/a^2$,
+satisfies the polynomial specialization
+\[
+ \left[(b+r)A_cS-r\Delta\right]_{r=1}
+     =-z(a^2+h)(b+1)(z+1).
+\]
+If $1-r$ were infinitesimal, taking residues would contradict
+$n\ge0$: the right side is strictly negative. Hence $1-r$ is a
+unit. The original $m$ numerator is now a unit and $g\Delta$ is
+bounded, so $m$ is strong. Apply the exact C2 reflection; it preserves
+ordinary actual angles and exchanges $m,D$. Thus $D$ is strong.
+
+If either $C$ or $\alpha$ is weak, its original rational formula
+implies $N$ infinitesimal: all the multiplying denominator factors
+are bounded and $z,a,b+r,\Delta$ have bounded inverses. The positive
+identity for $N$ then forces $h,j$ infinitesimal. Consequently
+$t=A_c-j$ and $1-zh$ are units. Both original complementary formulas
+therefore give $C,\alpha$ infinitesimal. The two-weak theorem applies.
+Otherwise $C,\alpha$ are both strong; with $m,A,D$ strong, the
+five-consecutive-event theorem applies. These cases exhaust the source.
+\end{proof}
+
+\paragraph{Some directed one-weak angle types are empty.}
+Orient an exactly-one-weak source so that $C$ is weak and $\alpha$
+strong. In addition to the ordinary--ordinary exclusion above, its
+actual angle types cannot be $(\mathrm{unit},\mathrm{Inf})$,
+$(\mathrm{Inf},\mathrm{unit})$ or $(\mathrm{Inf},\mathrm{Inf})$.
+Here $\mathrm{Inf}$ denotes positive infinitesimal.
+
+For $(\mathrm{unit},\mathrm{Inf})$, $z$ is a unit and $a^2$ is
+infinitesimal. Again $t,h,b,\Delta$ are bounded, $\Delta$ is a unit,
+and $b+r$ is a unit. Weak $C$ implies $N/a^2$ infinitesimal.
+The positive identity forces $j$ and $rt$ infinitesimal. Since
+$t=A_c-j$ is a unit, $r$ is infinitesimal. Then $g>0$ makes
+$b+zh$ a unit, and $b=h+a^2t$ makes $h$ a unit. The first positive
+summand of $N$ is consequently a unit, contradicting $N/a^2$
+infinitesimal.
+
+For $(\mathrm{Inf},\mathrm{unit})$, bounded $b$ is a unit by the
+inherited source-entry inequality. Explicitly,
+\[
+ xC(b-h)=\frac{A_c(xN)}{2\Delta},\qquad
+ xN=(1+x)(b+r)(xh+k^2)-x(1+k^2)(1-r)(b-h).
+\]
+The last numerator has residue $k_0^2(b_0+r_0)>0$, independently
+of any lower bound on $g$. Thus $xC(b-h)$ is a unit and $C$ is strong. For unbounded
+$b$, (SR1) gives $C\asymp1/L$ with bounded $L$, again strong.
+This exhausts $b$ and excludes weak $C$ in this angle orientation.
+
+For $(\mathrm{Inf},\mathrm{Inf})$, both $z,y$ are infinitesimal
+and $t<A_c$ is bounded. Put $H=zh$, $L=z(b-h)=yt$ and $B=zb=H+L$.
+Here $0<H<1$, $L$ is infinitesimal, and $B$ is bounded. If $H$ is
+a unit then $b$ is unbounded; direct division of the original
+$\Delta$ by $b$ gives a positive unit of residue $1+B_0$.
+The positive first summand of $N$ consequently gives
+$C\ge c_0H/L$ for some positive real $c_0$, contradicting weak $C$.
+Thus weak $C$ forces $H,B$ infinitesimal. The exact ratio is then
+\[
+ \frac\alpha C=
+ \frac{z^2(b+r)(b-h)}{A_c(1-H)}
+ =\frac{(B+zr)L}{A_c(1-H)},
+\]
+which is infinitesimal. Therefore $\alpha$ is weak as well, contrary
+to the selected one-weak orientation.
+
+After these exclusions, an exactly-one-weak source oriented with weak
+$C$ has only the following candidate actual types:
+\begin{gather*}
+ (\mathrm{Inf},\mathrm{unbounded}),\quad
+ (\mathrm{unit},\mathrm{unbounded}),\quad
+ (\mathrm{unbounded},\mathrm{Inf}),\\
+ (\mathrm{unbounded},\mathrm{unit}),\quad
+ (\mathrm{unbounded},\mathrm{unbounded}).
+\end{gather*}
+The second type is the reflection of the single-angle domain and
+is now fully covered by the homogeneous unbounded-$b$ theorem and the
+other single-angle admissions. The four other listed directed types
+remain conditional source leaves; no nonemptiness is inferred from
+their listing.
+
+\paragraph{Other strong-event angle types are not all empty.}
+For $x>0$ infinitesimal, the exact positive chart
+\[
+ c=\sqrt x,\quad a=1,\quad b=1/x,\quad r=1/4,\quad t=1/2
+\]
+has $h=1/x-1/2$, $g=1/x+1/4-x/2$, $j=1/2+x/4$ and all
+remaining chart gaps positive. Its original coefficients are
+\begin{align*}
+ n&=\frac{8-5x^2}{16(1+x)^2},&
+ m&=\frac{3x^2(3x+4)}{16(1+x)(4+x-2x^2)},\\
+ C=\alpha&=\frac{4-x}{8x},&
+ A&=\frac{x(x+4)(3x+4)}{32(2-x)(1+x)^2},\\
+ D&=\frac{(2-x)(3x+4)}{16x(1+x)}.
+\end{align*}
+Every coefficient is positive. The unchanged exact contact is
+\[
+ (u_c,v_c;W,X,Y,Z)
+ =(\sqrt x,\sqrt x;1/x,-\sqrt x/4,1/\sqrt x-\sqrt x/2,1).
+\]
+Original source stationarity, positive transverse state inertia and
+Laurent convexity prove physicality, including projective limits.
+Here $C,\alpha,D$ are unbounded, $m\sim3x^2/16$, $A\sim x/4$,
+and $n\to1/2$. Thus a genuine strong-complementary source can have
+two infinitesimal actual angles and weak $m,A$. This is an obstruction
+to deleting that angle orbit, not a counterexample to tensor SOS.

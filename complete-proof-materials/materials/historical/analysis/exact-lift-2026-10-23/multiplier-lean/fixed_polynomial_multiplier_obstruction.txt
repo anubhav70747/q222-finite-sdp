@@ -1,0 +1,170 @@
+                      No fixed separable polynomial multiplier
+                              for canonical Bell slacks
+
+    A singular limit of doubly tilted CHSH produces the Motzkin polynomial [1]. We use an explicit
+strictly valid source family and a polynomial four-component state to exclude every fixed separa-
+ble polynomial multiplier. The threshold obtained here is existential; the multiplier may be chosen
+arbitrarily before taking the limit.
+    Put Du = 1 + u2 , Dv = 1 + v 2 , and let σx = ( 01 10 ), σz = diag(1, −1). On two qubits choose
+
+                            (1 − u2 )σz + 2uσx                                       (1 − v 2 )σz + 2vσx
+    A0 = σz ⊗ I,     A1 =                      ⊗ I,       B0 = I ⊗ σz ,   B1 = I ⊗                       .
+                                    Du                                                        Dv
+
+For 0 < T ≤ 1/100, set η = 1 − T , w = 4 − 2T + 4T 3 , and define
+
+      S = A0 B0 − A0 B1 + A1 B0 + A1 B1 ,          FT (u, v; ψ) = Du Dv ψ T [wI − S − η(A1 + B0 )]ψ.         (1)
+
+Here ψ = (W, X, Y, Z)T is an arbitrary unnormalised real state. Thus FT ∈ R[u, v, W, X, Y, Z] is
+defined without denominators. In the canonical source convention of [2], its coefficients c(T ) =
+(d, λ, n, m, C, A, D, α, β) are exactly
+
+ d = 2T − 4T 3 ,     λ = m = A = T 3,          n = D = α = 1 − T + T 3,      C = β = (1 − T )/2 + T 3 . (2)
+
+This follows by expanding d = 4 − w, λ = m = A = (w − 2 − 2η)/4, n = D = α = (w − 2 + 2η)/4, and
+C = β = (w − 2)/4.
+
+Theorem 1. Every source (2) is strictly valid for all states and all projective measurement angles,
+and all nine source coefficients are positive. For every fixed pair of nonzero polynomials p ∈ R[u],
+q ∈ R[v] nonnegative on the whole real line, there is δp,q > 0 such that
+
+  p(u)q(v)FT (u, v; W, X, Y, Z)   is not a polynomial sum of squares   (0 < T < min{δp,q , 1/100}).
+                                                                                                  (3)
+                                           2
+In particular, the rational sources T = 1/n eventually exclude every prescribed pair p, q.
+
+Proof. Validity. Swap Alice’s inputs and rotate her first observable to σz . For real c, r, e, s with
+c2 + r2 = e2 + s2 = 1, the Bell operator becomes
+
+                   HT = (1 + c + e − ce) σz ⊗ σz + (1 − c)s σz ⊗ σx + (1 − e)r σx ⊗ σz
+                         − rs σx ⊗ σx + (1 − T )(σz ⊗ I + I ⊗ σz ).
+
+Write a = 1 − c, b = 1 − e, so a, b ∈ [0, 2]. Direct expansion gives
+
+             det[(4 − 2T + ρ)I − HT ] = ρPT (ρ; a, b) + 8abRT (a, b),                                        (4)
+                                           3                2                    2
+                                    PT = ρ + (16 − 8T )ρ + (84 − 88T + 20T )ρ
+                                          + 144 − 240T + 112T 2 − 16T 3 + 8ab(1 − T )2 ,
+                                    RT = (3 + 2T − T 2 )(a + b) − 2ab − 18T + 12T 2 − 2T 3 .
+
+
+                                                      1
+At ρ = 4T 3 , PT ≥ 144 − 240T . If RT ≥ 0, the determinant is positive. Otherwise let z = a + b. Since
+ab ≤ a + b, RT ≥ z − 18T and hence z < 18T < 2. Now 2ab ≤ z 2 /2 ≤ z gives RT ≥ 2z − 18T , so
+     8abRT ≥ 2z 2 RT ≥ 4z 3 − 36T z 2 ≥ −432T 3 ;          4z 3 − 36T z 2 + 432T 3 = 4(z − 6T )2 (z + 3T ).
+Consequently det(wI − HT ) ≥ (144 − 960T )T 3 > 0 in this case also. At c = e = 1, the four eigenvalues
+of wI − HT are
+                      4T 3 , 6 − 2T + 4T 3 , 6 − 2T + 4T 3 , 4 − 4T + 4T 3 .
+They are positive. The angle torus is connected and the determinant never vanishes there, so its
+inertia is constant. This proves strict positivity for both independent sine signs, including commuting
+angles and projective endpoints. Real and imaginary state parts, and the standard two-observable
+qubit reduction, give validity on Q222 . Positivity of every coefficient in (2) is literal.
+    A polynomial full-state test. Put T = t2 , u = −tx, v = ty and take
+                                                     1 + 32 t4 x2 y 2
+                                                 ⎛                      ⎞
+                                                 ⎜     − 31 t3 x2 y     ⎟
+                                     ψt (x, y) = ⎜
+                                                 ⎝ −tx + t xy ⎠ .
+                                                              2 3     2
+                                                                        ⎟                           (5)
+                                                              3
+                                                   −t2 xy − 32 t4 x3 y
+The choice cancels the lower-order state contributions as follows. In the standard frame use half-angles
+tx, ty and ξ = (1, αt3 , βt3 , ht2 )T . The coefficient of t4 in ξ T (wI − Ht2 )ξ is 4(h + xy)2 . At h = −xy, its
+coefficient of t6 is
+                2 2 2                  2 2 2 4
+         (︃          )︃        (︃          )︃
+        6 α − x y + 6 β − xy                   + {M (x, y) + 2},          M = x4 y 2 + x2 y 4 − 3x2 y 2 + 1.
+                3                      3          3
+Choose the two displayed state amplitudes to cancel the first two squares. Multiplication by u1 −u
+                                                                                                        (︁    )︁
+                                                                                                             1 ⊗I
+then gives exactly (5). This polynomial rotation numerator and angle clearing multiply the expectation
+by Du2 Dv , with constant term one. Direct polynomial expansion therefore gives
+                                      4
+                  Ft2 (−tx, ty; ψt ) = t6 {M (x, y) + 2} + t8 R(t, x, y),   R ∈ Q[t, x, y].          (6)
+                                      3
+This is a full four-state polynomial substitution; no state direction is discarded. Its total degree in
+(x, y) is at most twelve.
+    The fixed multiplier. Write the first nonzero Taylor terms as p(u) = a0 u2j + O(u2j+1 ) and q(v) =
+b0 v + O(v 2k+1 ). Global nonnegativity gives a0 , b0 > 0. If the conclusion failed, there would be a
+    2k
+
+sequence ti ↓ 0 for which pqFt2 is SOS. Substitute (5) and divide by t6+2j+2k
+                                                                          i      > 0. The resulting SOS
+                                 i
+polynomials in the independent variables x, y have total degree at most 12 + deg p + deg q and converge
+coefficientwise to
+                                        4a0 b0 2j 2k
+                                               x y {M (x, y) + 2}.                                   (7)
+                                           3
+The SOS cone of fixed degree is closed. ∫︁Indeed, let z(x, y) contain all monomials through the corre-
+sponding root degree. The matrix B = [−1,1]2 zz T dx dy is positive definite. If Qi ⪰ 0 represents the
+ith polynomial, coefficient convergence bounds its integral Tr(BQi ) and hence Tr Qi . A convergent
+subsequence of Gram matrices then represents the limit by a positive semidefinite matrix.
+    Thus (7) would be SOS. A square monomial can be cancelled from an SOS: evaluating a sum of
+squares at x = 0 forces each root to be divisible by x, and repeated division removes x2j ; the same
+argument removes y 2k . After removing the positive scalar, M + 2 would be SOS. Every root would
+have degree at most three. Since M + 2 = 3 on either coordinate axis, each root is constant on both
+axes, hence has the form a + bxy + cx2 y + dxy 2 . The coefficient of x2 y 2 in a sum of these squares
+is nonnegative, whereas it is −3 in M + 2. This contradiction rules out every sequence approaching
+T = 0 and proves the required sufficiently-small-T statement.
+
+                                                       2
+Corollary 2. No fixed nonzero polynomial q ∈ R[v] nonnegative on R permits the canonical two-LMI
+polynomial completion for every valid source. More precisely, for each such q, all sufficiently small
+sources (2) admit no polynomial completion matrix.
+
+Proof. Use the canonical completion matrices Gq,Z (v), Hq,Z (v) of [2, Sections 1 and 4]: the prescribed
+source blocks are multiplied by q, and the off-diagonal completion is the polynomial matrix Z. Their
+exact splitting identity is
+
+                                            a T
+                                           (︃ )︃         (︃ )︃    (︃ )︃T         (︃ )︃
+                                                           a        a              a
+                      qΦc (U, v; a, b) =         Gq,Z (v)      +U        Hq,Z (v)     .
+                                            Ub             Ub       b              b
+
+Here Φc is the canonical quadratic form in the transformed state coordinates (a, b), and Pc below is its
+state matrix. If both univariate matrix polynomials were positive semidefinite on all of R, polynomial
+matrix-SOS factorization [3, Theorem 1.2] would make qΦc (u2 , v; a, b) SOS. The exact polynomial
+inverse-numerator identity from [2, Section 1] is
+
+                                                                          u 0 u2 0
+                                                                        ⎛                 ⎞
+                                                                        ⎜ 0 u 0 u2 ⎟
+         (L(u)ψ)T Pc (u2 , v)(L(u)ψ) = u2 (1 + u2 )Fc (u, v; ψ), L(u) = ⎜
+                                                                        ⎝u 0 −1 0 ⎠ .
+                                                                                          ⎟
+
+                                                                          0 u 0 −1
+
+Substitution would therefore make q(v)u2 (1 + u2 )FT SOS, contrary to Theorem 1 with p(u) = u2 (1 +
+u2 ).
+
+    The obstruction concerns fixed separable polynomial multipliers; it does not address source-
+dependent or nonseparable multipliers. A square-root testing function already removes this particular
+limiting obstruction on a half-line: the exact identity
+                                                              )︁2             )︁2
+                      M (x, s2 ) = (x2 s2 − 1)2 + xs2 (s2 − 1) + 2 xs(s2 − 1)
+                                                 (︁               (︁
+
+
+makes M (x, s2 ) + 2 SOS. This identity supplies no universal half-line completion or finite global
+semidefinite lift.
+
+
+References
+[1] A. Chaturvedi, No Finite NPA Level Characterizes the Complete Quantum Set in the Simplest Bell Scenario,
+    arXiv:2607.14569v1 (2026), Sections S3 and S6–S7.
+
+[2] A. Chaturvedi, Canonical Bell validity through two matrix inequalities, q222-finite-sdp, canonical-completion
+    note.
+
+[3] A. Zalar, Matrix Fejér–Riesz theorem with gaps, arXiv:1503.06034, Theorem 1.2.
+
+
+
+
+                                                       3
+

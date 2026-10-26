@@ -1,0 +1,71 @@
+Bounded repair note: unrestricted tensor SOS while retaining transverse terms
+22 October 2026
+
+These are sufficient local lemmas, not a global Q222 closure claim. They do
+not require evaluated global features or order-two blocks.
+
+1. FULL NONDEGENERATE MINIMUM: AN EXACT ALL-RATES REPAIR
+
+Let Kc,Kt be separately labelled real closed extensions of R. Let
+F_c(Y) be a polynomial in finitely many testing variables, with coefficients
+in Kc. Suppose an exact source-side point a in Kc^m satisfies
+grad F_c(a)=0 and m_c=F_c(a)>=0. Let the source coefficients, a, and an
+independent testing tuple y be bounded and have common real center a0, and
+suppose the Hessian of F_c at a has strictly positive definite real residue.
+
+Polynomial Taylor division is exact:
+  F_c(Y)=m_c+(Y-a)^T H_c(Y)(Y-a),
+where H is a symmetric polynomial matrix over Kc and H_c(a) is half the
+Hessian. No inverse is required in this division (2 is a real unit).
+Evaluate Y in the testing factor. The resulting finite tensor matrix H has
+positive definite real residue. Choose a constant real invertible congruence
+making that residue the identity. Apply the fixed frame identity in
+source/diagonal/diagonal_proofs.tex:150--172. Its finitely many coefficients
+have positive residue, hence each is a finite sum of products of positive
+one-factor elements. Their one-factor square roots exist in Kc and Kt.
+Thus the exact loss is a finite tensor SOS, plus (sqrt(m_c) tensor 1)^2.
+Every coordinate difference is 1 tensor y_i - a_i tensor 1; all rates are
+independent. Positive infinitesimal values and shifts are retained exactly.
+
+This proves the regular all-rates case. To apply it one must establish the
+actual full critical center and the complete positive Hessian residue.
+A residue contact or a scalar Schur Hessian alone is insufficient. At a
+degenerate contact it gives no automatic replacement for the child argument.
+
+2. UNIVARIATE NONNEGATIVE RESIDUAL: NO NONDEGENERACY NEEDED
+
+Suppose an EXACT full-parent normal completion has reduced the remaining
+term to a univariate polynomial p(T) in Kc[T], nonnegative for every T in Kc.
+Then p=A(T)^2+B(T)^2 for A,B in Kc[T]. Proof: over a real closed field,
+every real root has even multiplicity; every irreducible quadratic is
+(T-b)^2+c^2 with c>0; the leading scalar is nonnegative. Multiply these
+two-square expressions using
+  (a^2+b^2)(c^2+d^2)=(ac-bd)^2+(ad+bc)^2.
+The zero polynomial is immediate. Evaluation at any independent t in Kt
+gives an exact tensor SOS. Each root is a finite sum
+sum_j (coefficient in Kc) tensor t^j. No rank-two estimate is needed.
+
+For nonnegativity only on T>=0, apply the preceding argument to p(S^2).
+Average the SOS under S -> -S, split each polynomial into even and odd
+parts, and obtain a finite representation
+  p(T)=sum_i A_i(T)^2 + T sum_i B_i(T)^2.
+At a nonnegative testing t, use sqrt(t) in Kt. Laurent denominators are
+handled on their open domains by pure-testing powers; literal zero must be
+proved separately. Again this keeps all infinitesimal source coefficients.
+
+This can repair an actual one-dimensional scalar child, even if its
+critical roots merge. Example with epsilon>0 infinitesimal:
+  F(T)=(T^2-epsilon)^2.
+Its residue is T^4; its exact minima are +/-sqrt(epsilon). Restricting to
+epsilon=0 loses the transverse term, but the displayed binomial already is
+a finite tensor root under independent evaluation. Nondegenerate centering
+at the real residue zero is unnecessary here.
+
+LIMIT OF THIS REPAIR
+
+The parent must first be reduced by an exact tensor identity. Completing
+normals using a mixed inverse is not licensed, and the nonnegative scalar
+restriction to an exact kernel is not the full parent. A general bivariate
+residual has no analogous elementary real-closed factorization. Consequently
+these lemmas do not establish the exceptional/global cover in the August
+proof or the absent LC1--LC10 body cited by the newer R21 opening.

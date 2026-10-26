@@ -1,0 +1,188 @@
+\section{Conditional effective algebraic extraction}
+\subsection{What this note establishes}
+There are three separate conclusions. First, the membership formula below describes $\Q$ exactly. Second, real algebraic coefficient descent and a terminating search follow \emph{if a finite lift of the searched type exists}. Third, the generated files contain one explicit candidate decision problem, not its solution. These distinctions are essential: a complete logical specification of an extraction problem does not supply the coefficient tuple requested by global extraction items E1--E3.
+
+The finite-lift existence criterion of Scheiderer, Corollary 3.19~\cite{Scheiderer}, requires a universal tensor sum-of-squares hypothesis. The criterion is not itself a proof that $\Q$ satisfies that hypothesis. The absent historical global proof is not reverified here. Likewise, existence of a semidefinite lift with arbitrary block order does not imply existence of a representation by blocks of order two. The second-order-cone search below is conditional on that stronger premise.
+
+\subsection{A rational atom map for the full quantum set}
+Use coordinates
+\[
+ q=(a_0,a_1,b_0,b_1,E_{00},E_{01},E_{10},E_{11}).
+\]
+One atom is parameterized by eight real numbers
+\[
+ z=(w,x,y,z_0,c_A,s_A,c_B,s_B)
+\]
+satisfying
+\begin{equation}\label{eq:atom-constraints}
+ w^2+x^2+y^2+z_0^2=1,\qquad
+ c_A^2+s_A^2=1,\qquad c_B^2+s_B^2=1.
+\end{equation}
+The state is the real vector $(w,x,y,z_0)$ in the computational basis. Its observables are
+\[
+ A_0=B_0=Z,\qquad A_1=c_AZ+s_AX,\qquad B_1=c_BZ+s_BX.
+\]
+Define the following quadratic polynomials:
+\begin{align*}
+ T_A&=w^2+x^2-y^2-z_0^2,&X_A&=2(wy+xz_0),\\
+ T_B&=w^2-x^2+y^2-z_0^2,&X_B&=2(wx+yz_0),\\
+ C_{ZZ}&=w^2-x^2-y^2+z_0^2,&C_{ZX}&=2(wx-yz_0),\\
+ C_{XZ}&=2(wy-xz_0),&C_{XX}&=2(wz_0+xy).
+\end{align*}
+The atom map $\Phi$ has coordinates
+\begin{align}\label{eq:atom-map}
+ \Phi_1&=T_A,&\Phi_2&=c_AT_A+s_AX_A,\notag\\
+ \Phi_3&=T_B,&\Phi_4&=c_BT_B+s_BX_B,\notag\\
+ \Phi_5&=C_{ZZ},&\Phi_6&=c_BC_{ZZ}+s_BC_{ZX},\notag\\
+ \Phi_7&=c_AC_{ZZ}+s_AC_{XZ},&&\notag\\
+ \Phi_8&=c_Ac_BC_{ZZ}+c_As_BC_{ZX}&&\notag\\
+       &\quad+s_Ac_BC_{XZ}+s_As_BC_{XX}.&&
+\end{align}
+Every coefficient is rational; the coordinate degrees are respectively
+\[
+ (2,3,2,3,2,3,3,4).
+\]
+The exact checker reconstructs all eight expressions independently from the corresponding $4\times4$ Pauli matrices and compares polynomial coefficients.
+
+\begin{theorem}[Nine-atom membership formula]\label{thm:physical}
+Let $Z$ denote the compact real algebraic set in~\eqref{eq:atom-constraints}. Then
+\[
+ \Q=\operatorname{conv}(\Phi(Z))
+ =\left\{\sum_{i=1}^{9}\lambda_i\Phi(z_i):
+       z_i\in Z,\ \lambda_i\ge0,\ \sum_{i=1}^{9}\lambda_i=1\right\}.
+\]
+This identity includes finite-dimensional complex and mixed states and arbitrary binary measurements. In particular, $\Q$ is compact, convex, and semialgebraic over $\mathbb Q$.
+\end{theorem}
+\begin{proof}
+First dilate each binary observable, a self-adjoint contraction, to a reflection on a doubled local space. For an observable $C$ the dilation
+\[
+ \widehat C=\begin{pmatrix}C&\sqrt{\Id-C^2}\\
+             \sqrt{\Id-C^2}&-C\end{pmatrix}
+\]
+uses the same upper-block embedding for every choice of observable. It preserves the local expectations and correlators, so the dimension remains finite and all measurements may be taken projective.
+
+Jordan's two-projector decomposition splits each local space into invariant subspaces of dimension at most two for its pair of reflections. Equivalently, one can diagonalize the unitary product of the reflections and pair conjugate eigenvalues; the resulting invariant blocks have dimension at most two. Applying the local decompositions to both parties makes every measured operator block diagonal. The trace against an arbitrary state is therefore a finite convex combination of expectations on pairs of local blocks. This is the standard qubit reduction underlying the extremal-correlation result of Masanes~\cite{Masanes}.
+
+On a nontrivial two-dimensional block, a local unitary sends the first reflection to $Z$; a phase rotation preserving $Z$ then makes the second reflection $cZ+sX$ with real $c,s$ and $c^2+s^2=1$. A one-dimensional block with reflection values $a_0,a_1\in\{-1,1\}$ embeds into a qubit by choosing the $Z$ eigenvector of eigenvalue $a_0$ and using the second observable $a_0a_1Z$. Thus blocks of dimension one are included in the same parameterization.
+
+All operators whose expectations enter the behavior are now real symmetric. If $\rho$ is a complex density matrix on such a block pair, its entrywise real part is a real symmetric positive semidefinite matrix with trace one. Positivity follows first on real vectors from positivity of $\rho$, and then on complex vectors by writing a complex vector as its real and imaginary parts. The imaginary antisymmetric part of $\rho$ has zero trace against every real symmetric measured operator, so replacing $\rho$ by its real part preserves every coordinate. A real spectral decomposition then writes that state as a convex combination of real pure states. Each resulting behavior is an atom of~\eqref{eq:atom-map}.
+
+Conversely, every atom is a physical two-qubit model, and every finite convex mixture is physical using a finite direct sum with a shared classical block label. Hence $\Q=\operatorname{conv}(\Phi(Z))$. Carath\'eodory's theorem in $\R^8$ reduces every finite mixture to at most nine atoms. Empty positions can be filled by arbitrary normalized atoms of zero weight. Since $Z$ and the nine-weight simplex are compact, their continuous polynomial image is compact. The displayed finite existential description and real quantifier elimination imply semialgebraicity over $\mathbb Q$. Convexity follows from the same direct-sum mixture construction.
+\end{proof}
+
+\subsubsection{Every quantified variable and constraint}
+The physical formula is
+\begin{equation}\label{eq:phys}
+ \begin{aligned}
+ \Phys(q):\quad&\exists\lambda_1,\ldots,\lambda_9\ 
+                  \exists z_1,\ldots,z_9:\\
+ &\lambda_i\ge0,\quad\sum_{i=1}^{9}\lambda_i=1,\quad
+                  z_i\text{ satisfies~\eqref{eq:atom-constraints}},\\
+ &q_\nu=\sum_{i=1}^{9}\lambda_i\Phi_\nu(z_i)
+       \quad(\nu=1,\ldots,8).
+ \end{aligned}
+\end{equation}
+The counts are exact:
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+Quantity&Count\\\midrule
+Weights&9\\
+Atom parameters&$9\cdot8=72$\\
+Total existential variables&81\\
+Weight-sum equation&1\\
+State and circle equations&$9\cdot3=27$\\
+Output coordinate equations&8\\
+Total polynomial equations&36\\
+Weight nonnegativity inequalities&9\\
+Maximum total polynomial degree&5\\\bottomrule
+\end{tabular}
+\end{center}
+The degree-five terms occur in $\lambda_i\Phi_8(z_i)$. No inequality selecting a measurement-angle chart is needed: the full circles are used. No square roots or trigonometric functions occur in~\eqref{eq:phys}. The formula is a membership description of the physical set, not a linear matrix inequality.
+
+\subsection{A fixed-pattern coefficient descent theorem}
+Fix positive block orders $r_1,\ldots,r_M$ and let
+\[
+ V=\bigoplus_{j=1}^{M}\mathsf S^{r_j},\qquad
+ D=\dim V=\sum_{j=1}^{M}\frac{r_j(r_j+1)}2.
+\]
+Here $\mathsf S^r$ is the real vector space of symmetric $r\times r$ matrices. A representation with this pattern has the form
+\begin{equation}\label{eq:generic-lift}
+ K=\left\{q\in\R^8:\exists y\in\R^m,
+ A_0+\sum_{\nu=1}^{8}q_\nu A_\nu
+       +\sum_{k=1}^{m}y_kB_k\in\prod_{j=1}^{M}\mathsf S^{r_j}_+\right\}.
+\end{equation}
+Every coefficient is an element of $V$. The auxiliary term ranges over the linear span of $B_1,\ldots,B_m$, whose dimension is at most $D$. Choosing a basis of that span and padding with zero directions if necessary yields the same represented set with exactly $D$ allowed auxiliary variables. This step is linear algebra and does not require a bound from the historical existence proof.
+
+\begin{theorem}[Real algebraic coefficient descent]\label{thm:descent}
+Let $K\subseteq\R^8$ be defined by a first-order formula in the ordered-ring language with rational coefficients. If $K$ has a representation~\eqref{eq:generic-lift} with the fixed block pattern, it has such a representation with coefficients in the real algebraic numbers $\RA$ and at most $D$ auxiliary variables. For this fixed pattern, existence and validity of a specified algebraic coefficient tuple are decidable by real quantifier elimination.
+\end{theorem}
+\begin{proof}
+Use the preceding compression to allow $D$ auxiliary variables. Let $c$ be the finite tuple containing all independent coefficient entries. For fixed block orders, positive semidefiniteness is equivalent to nonnegativity of all principal minors. Therefore
+\begin{equation}\label{eq:theta}
+ \Theta(c):\quad\forall q\in\R^8\,
+ \left[\Phys_K(q)\ \longleftrightarrow\
+       \exists y\in\R^D:\ L(c;q,y)\succeq0\right]
+\end{equation}
+is a first-order formula over $\mathbb Q$, where $\Phys_K$ is the given defining formula. Although an entry of $L$ is affine in $(q,y)$ when $c$ is fixed, it is a polynomial in the joint variables $(c,q,y)$, which is exactly what the ordered-ring language requires.
+
+By the existence hypothesis, the rational sentence $\exists c\,\Theta(c)$ is true over $\R$. The real algebraic numbers form a real closed field, and real closed fields admit quantifier elimination. Consequently the sentence is true over $\RA$ as well. Choose a witnessing tuple $c^*\in\RA^n$. The inclusion $\RA\subseteq\R$ is elementary; thus $\Theta(c^*)$ also holds over $\R$. This proves the claimed equality of represented sets with algebraic coefficients.
+
+Effective quantifier elimination decides the sentence at the fixed pattern and decides $\Theta(c^*)$ when the algebraic numbers are given by exact real-root encodings. A sample point of the resulting nonempty coefficient set can be computed by exact real algebraic algorithms. Alternatively, enumerate tuples of real algebraic numbers and decide $\Theta$ for each tuple. Once feasibility is known, coefficient descent guarantees that this enumeration eventually finds a witness. Both methods are effective in principle; neither is claimed to be practical for the input below. Background on the exact algorithms is given in~\cite{Basu}.
+\end{proof}
+
+The theorem does not assert the existence of rational coefficients. It also does not supply a bound on $D$, the block orders, the degrees of the algebraic coefficients, or the cost of the decision procedure.
+
+\subsection{Conditional search over all finite patterns}
+Suppose a full finite semidefinite lift of $\Q$ has been established independently. Enumerate a single positive semidefinite block of order $N=1,2,\ldots$. At each $N$, let $D=N(N+1)/2$, write the formula~\eqref{eq:theta}, and run an exact decision algorithm for $\exists c\,\Theta(c)$. Each fixed instance is decidable. Any finite product of positive semidefinite cones embeds into one block diagonal cone, so a positive decision is eventually reached under the finite-lift premise. One can then extract algebraic coefficients and verify both inclusions by deciding $\Theta$ with those coefficients substituted.
+
+If the stronger premise is a lift by finitely many blocks of order at most two, enumerate the number $M$ of $2\times2$ blocks instead. Scalar positive semidefinite blocks can be padded by a zero second row and column. The same conditional termination argument applies. Mere existence of an arbitrary finite semidefinite lift supplies no termination guarantee for the order-two-only enumeration.
+
+For the full-dimensional quantum set, an arbitrary affine projection representation can be put into the coordinate form~\eqref{eq:generic-lift}: the projection has rank eight, so complete its eight output coordinates to affine coordinates on its parameter space. Full affine dimension can already be seen in the 16 deterministic local behaviors
+\[
+ (a_0,a_1,b_0,b_1,a_0b_0,a_0b_1,a_1b_0,a_1b_1),
+ \qquad a_0,a_1,b_0,b_1\in\{-1,1\}.
+\]
+The regenerated rational row reduction gives affine rank eight. This is independent of any unverified global lift claim.
+
+\subsection{The three-block input: exact specification, unsolved status}
+For $M$ blocks of order two, the matrix-space dimension is $D=3M$. Use $D$ auxiliary variables, and give each of the three independent entries in each block an arbitrary affine coefficient for the constant, the eight quantum coordinates, and the $D$ auxiliary coordinates. The number of coefficient unknowns is
+\[
+ 3M(1+8+3M)=3M(9+3M).
+\]
+For $M=3$ this gives nine auxiliaries and 162 coefficient unknowns. For block $j$, write
+\[
+ L_j(c;q,y)=\begin{pmatrix}a_j(c;q,y)&b_j(c;q,y)\\
+                          b_j(c;q,y)&d_j(c;q,y)\end{pmatrix}.
+\]
+Its exact positivity formula is
+\[
+ a_j\ge0,\qquad d_j\ge0,\qquad a_jd_j-b_j^2\ge0.
+\]
+All diagonal conditions are retained, including singular and zero blocks. The candidate sentence is
+\begin{equation}\label{eq:candidate}
+ \begin{aligned}
+ \exists c\in\R^{162}\ \forall q\in\R^8:\qquad
+ \Phys(q)\quad\longleftrightarrow\quad
+ \exists y\in\R^9:\
+ L_1,L_2,L_3\succeq0.
+ \end{aligned}
+\end{equation}
+The symbol $\Phys(q)$ in~\eqref{eq:candidate} is the complete 81-variable existential formula~\eqref{eq:phys}, not an oracle or an approximate quantum membership test.
+
+The value $M=3$ is the first not excluded by a simple dimension obstruction in this direct-coordinate format. Indeed, if the linear map $q\mapsto\sum q_\nu A_\nu$ had a nonzero kernel direction $v$, every feasible $q$ would be accompanied by the whole line $q+\R v$, with the same auxiliary witness. Since $\Q$ is nonempty and bounded, that map must be injective. Hence $3M\ge8$, which excludes $M=1,2$. This necessary condition does not imply feasibility at $M=3$; no such inference is made.
+
+The Wolfram Language file constructs the fully expanded rational formulas and the sentence, with all symbols explicitly named. It does not invoke \texttt{Resolve}, \texttt{Reduce}, \texttt{FindInstance}, or any optimization routine. The companion JSON contains the exact sparse polynomial terms, variable order, coefficient mapping, counts and status. Both are labelled \texttt{UNSOLVED}. No global coefficient tuple is present.
+
+\subsection{Fresh encoding checks and the remaining extraction gates}
+Run \texttt{python3 generate\_q222\_qe\_problem.py}. It uses only the shared standard-library exact polynomial helper. Its receipt records 20 fresh encoding checks: all eight Pauli atom coordinates, the atom degree vector, the membership counts and degree bounds, rational affine rank of the deterministic behaviors, coefficient and auxiliary counts, disjoint symbol names, and the nine scalar positive-semidefinite conditions. These checks establish the advertised input encoding. They do not establish candidate feasibility, run quantifier elimination, or provide algebraic lift coefficients.
+
+The remaining global extraction gates are precise:
+\begin{enumerate}
+\item Establish and retain a complete verified full-set existence premise, or independently find a valid finite block pattern and its coefficients.
+\item Evaluate a global finite feature system or solve a candidate formula such as~\eqref{eq:candidate}; fix the actual matrix order and auxiliary dimension.
+\item Export every coefficient in the original eight coordinates using exact real algebraic encodings, including root-selection data.
+\item Prove both full-set inclusions with those fixed coefficients. A proposed lift can be checked by deciding~\eqref{eq:theta}, or by independent exact analytical certificates for each direction.
+\item Replay the coefficient verification, bind the evidence and data by hashes, and mark E1--E3 complete only after their actual deliverables exist.
+\end{enumerate}
+The present note completes the physical membership encoding and the conditional logical route. It leaves these full-set extraction gates open. The separately regenerated tilted--CHSH projection has evaluated coefficients and a proof of both inclusions for that projection, but its explicit nonquantum scope witness prevents using those coefficients as a full-set solution.

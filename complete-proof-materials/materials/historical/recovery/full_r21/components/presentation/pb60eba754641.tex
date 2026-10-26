@@ -1,0 +1,371 @@
+\chapter{R6 at a positive residual value of $a^2B$: an all-tests theorem}
+\label{component:pb60eba754641}
+\noindent\textbf{Component }\path{pb60eba754641}\par
+{\small\noindent Source: \path{BASE/proofs/weak_c2/r6_b_unit_all_tests.tex}\par}
+{\small\noindent SHA256: \path{b60eba7546416bee689116b4e001ce4ebed168b613628d3b1f57bec41f638aff}\par}
+{\small\noindent Inventory use: RB1-RB24\par}
+\medskip
+\section{R6 at a positive residual value of $a^2B$: an all-tests theorem}
+\label{pb60eba754641:sec:r6-b-unit}
+
+\paragraph{Scope.}
+All notation and all physical source constraints are the original weak-C2
+ones. In particular $d=1$, $\lambda=\beta=0$, $n\geq0$, and the actual
+finite stationary contact, every strict gap, the total-scale condition,
+and the complement of earlier admissions are retained. On R6,
+$t,h,l=1-h,j,r$ are positive bounded units, $B,x=aB,y=tB,g$ are
+positive infinitesimals, and here $a$ is unbounded. Define
+\[
+ s=a^{-1},\quad w_s=ae,\quad b=a^2B,\quad e=1-r,
+ \qquad B=s^2b,\quad x=sb,\quad y=ts^2b.
+ \tag{RB1}
+\]
+The existing exact source identity gives
+\[
+ 2r\Delta_*n/s^2=w_sQ_*-bK_*,\qquad
+ Q_*\sim\Delta_*\sim1,\quad K_*\sim h+t.
+ \tag{RB2}
+\]
+The gap $g=1-w_s+hsb$ gives $w_s\sim1$. Hence $b$ is bounded and
+\[
+ \rho=n/e^2\sim\frac{1-b_0(h_0+t_0)}2,\qquad
+ 0\leq b_0(h_0+t_0)\leq1.                         \tag{RB3}
+\]
+Here and below a subscript zero means the real residue; a displayed
+residue formula with bounded source letters has the same meaning.
+No testing variable occurs in these source estimates.
+
+\begin{theorem}
+On the entire original R6 source intersection, assume in addition that
+$b=a^2B$ is a positive bounded unit. Then the complete original parent
+is a finite sum of squares in the separated source--testing tensor ring
+at every independent projective testing pair and every real or complex
+state, with either angle sign and every literal projective endpoint.
+All positive $s,g$ opening rates are independent. Literal $n=0$ is
+included. The theorem makes no assertion about $b$ infinitesimal.
+\end{theorem}
+
+\paragraph{Source bounds needed by the proof.}
+Put $R=1+hx$, $K=1+x$ and $T=1+x(1-e)$. The original rational source
+formulas, after the pure-source substitutions (RB1), have only unit
+denominators after $mg$, $n/s^2$ and $\alpha/(s^3b^2)$ are formed.
+Their joint residues are
+\[
+ mg\sim\tfrac12,\quad
+ C\sim\frac{h+t}{2l},\quad A\sim\frac t{2h},\quad
+ D\sim\frac1{2(t-l)},\quad
+ \frac\alpha{s^3b^2}\sim\frac{h+t}2.               \tag{RB4}
+\]
+Thus $m$ is unbounded, $C,A,D$ are positive units, and all four have
+positive real lower bounds. There is no $s/g$ or $g/s$ assumption.
+The canceled formulas and their residues are checked in the accompanying
+script. They are rational identities of the actual physical source;
+no formal negative-beta source is imported.
+
+\paragraph{Two contact-zero packets remove the two troublesome terms.}
+Write the complete parent in the normalization $P=F/4$:
+\[
+\begin{split}
+ P={}&nD_uD_vX^2+mM^2+C D_v(uW-Y)^2+A D_uD_vY^2\\
+ &+(D+\tfrac12)J^2+(\alpha+\tfrac12)D_u(vY-Z)^2
+       +\tfrac12D_v(X+uZ)^2-\tfrac12D_uD_vZ^2,\\
+ M={}&vW-X+uvY-uZ,\qquad J=uW+uvX-Y-vZ,
+ \quad D_u=1+u^2,\quad D_v=1+v^2.
+\end{split}                                                     \tag{RB5}
+\]
+In the finite state chart $Z=1$, use the pure-testing coordinate
+$\omega=(W+uY)/D_u$ and the exact normals
+\[
+\begin{gathered}
+ p=\frac{w_s}{R}=1-\frac gR,\quad c=\frac{l}{tT},\quad
+ q_A=D_uv\omega,\quad q_B=v(1-uX),\\
+ \qquad N=X+u-pq_A,\quad M_B=uW-Y-cq_B.
+\end{gathered}                                    \tag{RB6}
+\]
+Their full inverse is
+\[
+\begin{gathered}
+ X=N+pD_uv\omega-u,\quad q_B=v(D_u-uN-puD_uv\omega),\\
+ \quad W=\omega+\frac{u(M_B+cq_B)}{D_u},\quad
+ Y=u\omega-\frac{M_B+cq_B}{D_u}.
+\end{gathered}                                    \tag{RB7}
+\]
+The only testing denominator is the positive pure-testing unit $D_u$.
+Set
+\[
+ \delta=\frac{R}{K\sqrt{bt}},\quad E=\frac{tK}{R},\quad
+ k=\sqrt x,\quad K_c=\delta^2Ek^2=\frac{sR}{K},\quad
+ \gamma=\frac r{K_c}=\frac{rK}{sR}.                \tag{RB8}
+\]
+All of $\delta,E,b$ are positive bounded units in this theorem.
+The actual contact in these coordinates is
+\[
+ (u,\omega,v;N,M_B)=(k,\delta k,\delta k^2E;0,0).
+ \tag{RB9}
+\]
+For direct verification, its original state coordinates with $Z=1$ are
+\[
+ u_c=\sqrt{sb},\quad v_c=s\sqrt{bt},\quad
+ W_c=\sqrt{s/t},\quad X_c=-r\sqrt{sb},\quad
+ Y_c=hs\sqrt{b/t},\quad
+ \omega_c=\sqrt{s/t}\,R/K.
+ \tag{RB9a}
+\]
+They give $u_cW_c-Y_c=ls\sqrt{b/t}=c\,v_c(1-u_cX_c)$
+and $X_c+u_c=e\sqrt{sb}=pD_{u_c}v_c\omega_c$.
+Also $\gamma v_c\omega_c=r\sqrt{sb}=-X_c$.
+Thus both normals and the retained $n$ row vanish exactly, before
+any residue calculation. These three cancellations and the identities
+$\omega_c=\delta k$, $v_c=\delta k^2E$, $K_c=sR/K$
+are separate symbolic assertions in the receipt.
+For any fixed positive real $K_m$, retain the two whole squares
+\[
+ (m-K_m)N^2,
+ \qquad nD_uD_v(X+\gamma v\omega)^2.                \tag{RB10}
+\]
+The first coefficient is positive because $m$ is unbounded. The second
+vanishes identically when $n=0$. Both rows vanish at (RB9), with every
+first jet of their squares. No inverse of $n$ is used.
+
+The complete remaining polynomial is exactly
+\[
+\begin{split}
+ G={}&K_mN^2-2\frac{mg}{R}q_AN+\frac{mg^2}{R^2}q_A^2\\
+ &-2n\gamma D_uD_vX(v\omega)-n\gamma^2D_uD_v(v\omega)^2\\
+ &+CD_v(uW-Y)^2+AD_uD_vY^2+(D+\tfrac12)J^2\\
+ &+(\alpha+\tfrac12)D_u(vY-1)^2
+       +\tfrac12D_v(X+u)^2-\tfrac12D_uD_v.
+\end{split}                                                     \tag{RB11}
+\]
+This is the entire parent minus precisely (RB10), including every
+first normal and every hard quadratic term. The exact cancellation
+$M=(g/R)q_A-N$ removes the whole $g^{-1}$ pole before an estimate.
+Moreover $n\gamma=O(s)$ and $n\gamma^2$ is bounded. All coefficients
+in (RB11), after (RB7), are therefore bounded. The only nonconstant
+state-normal degree is one or two.
+
+\paragraph{Raw support before the conductor.}
+Define
+\[
+ A_0=\omega v,\quad B_0=\delta v,\quad C_0=\delta E u\omega,
+ \quad D_0=\delta^2k^3E,\quad X_0=B_0-C_0.           \tag{RB12}
+\]
+At $N=M_B=0$ let $V_0=1-puv\omega$. Then
+\[
+ q_B=D_uvV_0,\quad uW=u\omega+u^2cvV_0,\quad
+ Y=u\omega-cvV_0,\quad J=-(1-c)D_uvV_0,
+ \quad X+u=pD_uA_0.                               \tag{RB13}
+\]
+Thus every term of the scalar of (RB11) lies, with bounded coefficients,
+in $(A_0,B_0,C_0)^2+(D_0^2)$. The only constant is from $\alpha$,
+and $\alpha/D_0^2$ is bounded with residue $b(h+t)/2$.
+For the new negative $n$ contribution use exactly
+\[
+\begin{split}
+ -2n\gamma D_uD_vX A_0-n\gamma^2D_uD_vA_0^2
+ ={}&2n\gamma D_uD_vuA_0\\
+ &-(2n\gamma pD_u+n\gamma^2)D_uD_vA_0^2
+ -2n\gamma D_uD_vA_0N,
+\end{split}                                                     \tag{RB14}
+\]
+where $uA_0=B_0C_0/(\delta^2E)$. Both complete first normals lie in
+$(A_0,B_0,C_0)$ with bounded coefficients. Every remaining hard entry
+is bounded. These are full rational support statements, not a scalar
+contact-value test. Clearing $D_u^2$ makes them polynomial; its inverse
+is a pure-testing square factor when restored.
+
+\paragraph{The contact Gram and its exact leading calculation.}
+Let
+\[
+ Y_0=A_0-kC_0,\quad Z_0=uB_0-kC_0,\quad H_0=kC_0-D_0.
+\]
+Use the separated nonnegative monomials $a_i^2=(A_0,uB_0,kC_0,D_0)$
+and the two pairings $Q_1=a_1a_2-a_3a_4$,
+$Q_2=a_1a_3-a_2a_4$. Their exact circuit is
+\[
+\begin{split}
+ T_4&=A_0^2+(uB_0)^2+(kC_0)^2+D_0^2-4k^2B_0C_0\\
+ &=\tfrac12\{(Y_0-Z_0)^2+H_0^2+Y_0^2+(Z_0+H_0)^2\}
+                   +Q_1^2+Q_2^2.
+\end{split}                                      \tag{RB15}
+\]
+Its matrix on $(Y_0,Z_0,H_0)$ is
+$\left(\begin{smallmatrix}1&-1/2&0\\-1/2&1&1/2\\0&1/2&1\end{smallmatrix}\right)$,
+which is positive definite with determinant $1/2$. All radicals
+separate: $a_1$ is pure testing, $a_2,a_3$ are products of pure-source
+and pure-testing radicals, and $a_4$ is pure source.
+
+Here is enough explicit algebra to reproduce the leading collection.
+At $g=0$, the canceled source expansions through the needed orders are
+\[
+\begin{aligned}
+ n/s^2&=\tfrac12\{1-b(h+t)\}+O(s),&
+ mg&=\tfrac12+\tfrac12(bh-1)s+O(s^2),\\
+ C&=\frac{h+t}{2l}-\frac{t+1}{2l}s+O(s^2),&
+ A&=\frac t{2h}-\frac t{2h}s+O(s^2),\\
+ D&=\frac1{2(t-l)}-
+       \frac{bt(h+t)+t-l}{2(t-l)^2}s+O(s^2),&
+ \alpha&=\tfrac12 b^2(h+t)s^3+O(s^4).
+\end{aligned}                                                     \tag{RB16}
+\]
+Here $O(s^j)$ means exact divisibility by $s^j$ in a rational ring with
+unit denominator, not an asymptotic substitution in the proof identity.
+Give $k,u,\omega$ weight one and $v$ weight two. Put $q=b(h+t)$.
+Using $s=k^2/b$ and
+$\delta=(1-lk^2+O(k^4))/\sqrt{bt}$, $\delta E=\sqrt{t/b}$,
+the scalar $G_0=G|_{N=M_B=0}$ satisfies
+\[
+ G_0=\frac b{2h}(1+u^2)X_0^2+\frac q2T_4
+       -\frac{k^2[1+bh(h+t)]}{2h}X_0^2+O_{\rm wt}(8)
+       \quad\pmod g.                               \tag{RB17}
+\]
+The complete first-normal coefficients obey
+\[
+ L_N=O_{\rm wt}(5),\qquad
+ L_{M_B}=\frac{X_0}{h\delta}+O_{\rm wt}(4)\quad\pmod g,
+ \tag{RB18}
+\]
+and the hard block has residue
+\[
+ \operatorname{diag}\left(K_m+\tfrac12,\,
+           A_*+C_*+D_*+\tfrac12\right),
+ \quad A_*={t\over2h},\ C_*={h+t\over2l},\ D_*={1\over2(t-l)}.
+ \tag{RB19}
+\]
+All equalities through the displayed weights are checked by rebuilding
+(RB11) from (RB5), not by fitting a numerical matrix.
+
+Apply the inherited monic contact--conductor identities CC1--CC6 to
+the exact difference in (RB17), and to the exact first-normal
+differences in (RB18). Their hypotheses are exactly the raw support in
+(RB13)--(RB14), together with zero contact value and full first jet.
+Both follow from the original stationary parent and (RB10); the model
+$X_0^2,T_4$ also has these zeros. No contact difference is inverted.
+The conductor maps preserve this grading: $X_0$ has weight two,
+the five circuit roots have weight three. The scalar difference of
+weight at least eight and normal differences of the displayed weights
+therefore have strictly positive-weight Gram coefficients. Every such
+coefficient is infinitesimal. Terms divisible by $g$ also lift with
+bounded coefficients and remain infinitesimal: the contact (RB9),
+$\delta$ and $E$ are independent of $g$, and the canceled coefficient
+ring has unit denominators at $g=0$. Clearing and restoring its finite
+unit denominators changes none of these conclusions.
+
+Consequently the residue on the eight roots
+$(X_0,Y_0,Z_0,H_0,Q_1,Q_2,N,\delta M_B)$ is the strict circuit with
+coefficient $q/2>0$, the $N$ pivot $K_m+1/2>0$, and the coupled block
+\[
+ \begin{pmatrix}
+ b/(2h)&bt/(2h)\\
+ bt/(2h)&bt(A_*+C_*+D_*+1/2)
+ \end{pmatrix}.                                    \tag{RB20}
+\]
+Its determinant is
+\[
+ \frac{b^2t}{2h}(C_*+D_*+1/2)>0.                    \tag{RB21}
+\]
+All pivots are positive bounded units. The separated strict-residue
+Gram lemma therefore gives finite tensor SOS for the exact remainder.
+Restore (RB10) and the pure-source/pure-testing clearing factors.
+This proves the whole local contact parent, for every independent rate
+and every normal direction.
+
+\paragraph{All remaining finite state and angle charts.}
+The following details make the join an all-tests result.
+For bounded $u$ with nonzero residue and infinitesimal $v$, retain
+$nD_uD_vX^2$ and $\alpha D_u(vY-Z)^2$, and the centered $m$ excess
+$(m-K_m)N^2$ from (RB6), now homogeneous in $Z$. Put
+$V_Z=vZ$ and $R_t=uW-Y$. After $X=N-uZ+pv(W+uY)$, the whole
+remainder is a bounded quadratic on $(N,R_t,Y,V_Z)$. Its residue
+splits off $K_m+1/2$ on $N$, with the other form
+\[
+ C_*R_t^2+A_*(1+u^2)Y^2
+ +(D_*+1/2)\{R_t-(1+u^2)V_Z\}^2
+ -(1+u^2)YV_Z-\tfrac12(1+u^2)V_Z^2.               \tag{RB22}
+\]
+Its first two leading principal minors are positive, and its determinant
+is exactly
+\[
+ (1+u^2)^2A_*C_*(D_*+1/2)u^2>0.                    \tag{RB23}
+\]
+This direct four-root proof covers every state, including $Z=0$, with
+no negative-beta or small-$\rho$ argument.
+
+It remains to consider both angles infinitesimal. The exact testing-core
+sign reduction from SD5 handles nonnegative core and literal axes by
+original-event squares. On its negative-core branch one may use the
+standard exact gauges $u,v>0$. Normalizing the original state by a
+maximal coordinate, the case $Z$ infinitesimal has $W$ a unit and is
+covered by BE4, with positive real caps of $m,A$ supplied by (RB4).
+Retain the actual nonnegative $n,\alpha$ packets. That exact selected
+full-parent frame is $(X,Y,uW,vW)$ and has strict residue; no coefficient
+bound involving $b$ enters its proof.
+
+If $Z$ is a unit normalize $Z=1$. The same core identity gives
+$\omega>0$, and $\omega$ is bounded. If $\omega$ is infinitesimal,
+use (RB17)--(RB21). If $\omega$ is a positive unit, use the exact
+relations $B_0=(\delta/\omega)A_0$ and $C_0=B_0-X_0$ in the raw
+support (RB13)--(RB14). The inverse is pure testing. Its complete
+residue on $(A_0,X_0,D_0,N,\delta M_B)$ consists of the positive
+$q/2$ pivots on $A_0,D_0$, the $K_m+1/2$ normal pivot, and precisely
+(RB20). Direct substitution in (RB11) gives these residues; all other
+coefficients contain $k,g,u,v$ after the cancellations already recorded.
+Thus this whole state chart is strict as well.
+
+\paragraph{Every other projective test.}
+Use the exact centered-event identity R5.5 for the finite remote pairs
+$v_0\ne0$. All source residues are (RB4) and $n_0=\alpha_0=0$.
+On the kernel of the limiting centered $m$ row, the determinant is
+\[
+ \frac{(1+U)^2(1+V)^2(h+t)}{8hl(t-l)}
+       \{V^2+t(h+t)U^2V+hUV^2\}>0.                 \tag{RB24}
+\]
+The restriction to $Z=0$ is positive by the original $A,C$ packets
+and the nonnegative signed-core restriction, exactly as in RT10.
+A sufficiently large positive real cap $K_m$ makes the full bounded
+residue strict. Its choice depends on the real testing residues only;
+unbounded $m$ permits every such real cap.
+
+For unbounded $u$ and bounded unit $v$, R6.5 at $n_0=0$ is strict
+because $C_*W^2$, $A_*Y^2$ and $(D_*+1/2)(W+vX)^2$ have common
+kernel zero. For unbounded $u$ and infinitesimal $v$, the exact
+BE $(\infty,0)$ frame $(pX+Z,W,Y,vX)$ retains every event except
+positive caps of $C,A$, and has strict residue. For unbounded $v$
+and bounded $u$, R6.6 at $n_0=0$ is strict; the centered correction
+vanishes on its $m$-row kernel. For both angles unbounded, R6.7 at
+$n_0=0$ has block determinants $D_*/2$ and
+$A_*(K_m+1/2)$, both positive. These are exact homogeneous full-parent
+identities. Their literal reciprocal zeros include the actual projective
+endpoints; undoing a nonzero homogeneous factor uses a pure-testing
+square only.
+
+This exhausts all independently chosen angle and state charts.
+Apply the real identities separately to the real and imaginary parts
+of a complex state. Every retained positive packet and original
+normalization is restored. The new admission is the entire stated
+$b$-unit source subdomain, rather than a scalar graph or a single
+local testing corner.
+
+\paragraph{Exact residual boundary.}
+Together with the inherited R18 thin-layer theorem, this leaves from
+unbounded-$a$ R6 only $b=a^2B$ positive infinitesimal. Then (RB3)
+forces $\rho_0=1/2$. The strict block (RB20) cannot be used without
+new weights, because $\delta$ becomes unbounded and $q=b(h+t)$
+loses residue. This is a failure of that bounded frame, not a
+counterexample to finite representability. The original physical
+constraints and all independent testing variables remain in force.
+
+\paragraph{Exact dependency index.}
+The accompanying \path{dependencies_r6_b_unit.json} names the
+exact inherited file, tagged equation or named paragraph, and the
+restricted use for every imported identity. In particular, BE4 is the
+complete selected four-root state identity; the BE $(\infty,0)$ identity
+is the unnumbered paragraph beginning ``At $(\infty,0)$ retain all
+events except $c,A$'' in the same file. RT10 supplies only the
+kernel determinant and its $Z=0$ restriction. R5.5 supplies only the
+centered-event identity. R6.5--R6.7 supply the displayed homogeneous
+kernel or root matrices, specialized to $n_0=0$ and (RB4), rather than
+the bounded-$a$ theorem surrounding them. SD5 supplies the pure-testing
+inverse and the immediately following exact sign Schur identity.
+This proof does not import any C1 physical-source theorem or use a
+negative-beta perturbation theorem.

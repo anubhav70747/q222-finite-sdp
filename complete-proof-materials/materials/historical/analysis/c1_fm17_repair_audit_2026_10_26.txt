@@ -1,0 +1,21 @@
+C1 FM17 and UKR10 — independent exact audit, 26 October 2026
+
+Verdict. The displayed plus-sign formula is correct, its complete FM parent identity holds, and its residue is strictly positive. Crucially, the recovered report misidentifies the checked source: both current HEAD f6eae28 and its cited commit 0565db3414e4fb2366fe4596fd2ff3c62867bbdf already print +(b1+theta/2)(1+v^2) in FM17. Thus no sign patch is warranted in either inspected repository revision. The report demonstrates the failure of a hypothetical minus-sign version, not an error present in those files.
+
+Exact differentiation. Set X=Nx-huZ, Y=ruW+q Ny, q^2=Sr(1-r), theta=1-h. Directly expanding the independent quarter-parent FM5 gives
+ Lx=-mv(1+ru^2)W+(D+1/2)u^2v(1-r)W
+    +uZ[m theta-(D+1/2)v^2(1+hu^2)+(beta+1/2)theta(1+v^2)].
+Since b1=beta theta, the positive last coefficient is inevitable. Substitution of N=kappa W-juZ and G=uW/sqrt(S)-j sqrt(S)Z yields FM18 exactly with
+ LU=m theta-(mj/kappa)v(1+ru^2)-(D+1/2)v^2(1+hu^2)
+    +(b1+theta/2)(1+v^2)+(D+1/2)(1-r)vjS.
+Changing only that plus to minus loses 2(beta+1/2)theta(1+v^2)uZ in Lx. At the physical contact it also destroys LU(x,b)=0, hence FM19's exact monic divisibility. This conclusion does not use a residue approximation.
+
+Complete identity, not only one coefficient. The private checker reconstructs FM5 independently and matches the graph scalar FM10, both unrestricted first normals FM18, and all three hard-normal coefficients FM16. It uses C=c0/[S(1-r)], A=a0/(Sr), with q^2=Sr(1-r); no contact equation or source/testing identification is imposed. It additionally matches both normals and all three quadratic coefficients of the exact capped UKR8/UKR9 parent against UKR10. The positive beta-theta cross coefficient survives capping; it must not be replaced by beta_c theta. Current UKR10 inherits precisely the correct plus sign.
+
+Strict FM residue. FM3/4 give LU at a=u^2=0 the residue (ell-nu v^2)/2, so the exact monic v-quotient has residue -nu b=-j at matched v=b. The residue on (Nx,Ny,N,G,B,Bu) is FM21 as displayed in the report. Its (G,B) determinant is nu ell>0. Eliminating Nx and N leaves the Bu pivot
+ 4-2nu j^2-theta^2 nu^2/(2h).
+Because j^2=nu ell<=1/4, h>=nu>0 and 0<=theta<=1, each subtraction is at most 1/2, so the pivot is at least 3. Ny is a separate positive pivot. FM8 with c=4 has only infinitesimal costs since kappa and v-b are infinitesimal. All coefficients are bounded separated sums; the strict-residue lemma applies after the exact scalar/normal monic lifts, with the beta Dv Nx^2 packet restored whole. D=0 is empty in FM1 because D/S has positive unit residue; beta=0 is included.
+
+UKR consequence and remaining scope. I also checked UKR14's uncapped Schur identity and UKR15's positive numerator decomposition exactly, using nu=A+kappa h and b^2=ell/nu. Their positive bracket remains strict under the stated native inequalities, including D=0/beta=0. The complete unit-kappa theorem still uses its printed bounded-capping/opening and monic-lift arguments UKR16–21; this audit does not replace those arguments. The recovered note explicitly leaves EL5–EL21, NU14–NU21, BN13–BN17/UN14–UN21 and unspecified k-unit/eta-unit leaves unreplayed, and does not prove its CA/SE bases. These are limits of that independent review, not demonstrated counterexamples or automatically missing manuscript proofs. No global C1 admission follows from its verified FM/UKR portion.
+
+Artifacts: c1_fm17_repair_audit_2026_10_26.py/.json. No repository TeX was edited.

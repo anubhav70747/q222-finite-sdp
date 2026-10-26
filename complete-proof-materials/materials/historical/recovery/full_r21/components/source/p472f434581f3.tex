@@ -1,0 +1,247 @@
+\section{The source, the original polynomial, and the proof language}
+
+Let $K_c,K_t$ be independent real closed extensions of $\mathbb R$.
+Source parameters lie in $K_c$, and angles and state coordinates in
+$K_t$. The assertion is a finite sum of squares in
+$K_c\otimes_{\mathbb R}K_t$, for each such pair of configurations.
+No order or general inverse is imposed on this tensor ring.
+A bounded quantity has a finite real residue; a positive unit is
+bounded above and below by positive reals. All asymptotic statements
+about a source or a test are made inside its own field.
+
+\paragraph{The original source.}
+Keep the physical stationary C1 source, its strict gaps,
+nonnegative event weights and all original residual intersections.
+Normalize its positive coefficient $d$ to $1$. On C14.2,
+$x=k^2>0$ is infinitesimal, $L=x\zeta$ is a positive bounded unit,
+and $\eta$ is unbounded. Set
+\[
+ \sigma=\eta^{-1},\ z=L^{-1},\ b=Lr,\ Q=1-b,
+ \theta=1-h,\ e=xh/\sigma,\ E=1-e,\ K=1+x.
+\]
+The source has $0<r,h,b<1$, $r=bz$, and its original strict gaps.
+The following exact formulas are NC1--NC4 in these coordinates:
+\[
+\begin{split}
+ J&=1+xh-\sigma(1-r),\qquad M=1+xr-xz\theta,\\
+ P&=\sigma+K+\sigma z(1+bx+2xh)
+                  +\sigma bx^2hz^2+x^2h\theta z,\\
+ p=Ar&=\frac{z(1+xh)E+(1-r)(1+xhz)}{2P},\\
+ l=\alpha zQ&=\frac{(1+\sigma r)
+     \{e(1+xr)(1+\sigma z)+ME\}}{2P},\\
+ C&=\frac{Kz(1+\sigma r)E}{2(1-r)P},\\
+ D&=\frac{K(1+\sigma z)(1+\sigma r)-JP}{2JP},\\
+ \beta\theta&=\frac{K(1+\sigma r)(1+xhz)-\theta P}{2P},\\
+ \kappa&=\frac{K(1+\sigma r)(1+\sigma z)}{2MP},
+ \qquad m=\kappa x^2z\frac h\sigma.
+\end{split}                                                     \tag{P1}
+\]
+Thus $a=Az=p/b$ and $\ell=\alpha z=l/Q$; the symbol $p$ here
+denotes a source product, not a testing angle. All original gaps
+are positive, while $D,\beta$ may be zero.
+
+\paragraph{The shared source sphere.}
+Put $H_0=1+z-r=1+zQ$,
+$B=P+xz(J-\sigma)$, $R_s=1+xr$, and
+\[
+ \mathcal H=R_sH_0+z\{(1-r)xh(2+xr)
+        -e[2+x(1+h+r\theta)]+Ke^2\}.
+\]
+The exact source identities BE3--BE8 are
+\[
+\begin{gathered}
+ 2\theta P\beta=hB-\sigma H_0,\qquad
+ 2P(JD+x\theta\beta)=\sigma^2\mathcal H,\\
+ d_0^2=\frac{2PJD}{\sigma^2\mathcal H},\qquad
+ b_0^2=\frac{2Px\theta\beta}{\sigma^2\mathcal H},\qquad
+ d_0,b_0\ge0,\quad d_0^2+b_0^2=1,\\
+ H=\frac h\sigma=\frac{H_0}{B}
+       +\frac\sigma x\frac{\mathcal H}{B}b_0^2.
+\end{gathered}                                                   \tag{P2}
+\]
+They follow by clearing the positive source denominators in P1.
+In this branch $e=O(x+\sigma)$ is infinitesimal, $M,P,J,B\sim1$,
+$\mathcal H\sim H_0$, and $\kappa\sim1/2$. To obtain the only
+non-immediate bound $e=O(x+\sigma)$, expand the original $D\ge0$
+numerator in native $\eta=1/\sigma$ coordinates as in BE1:
+\[
+ e\{K+x\theta(1+xh)/L\}
+       \le x(b_1/L)+\sigma(a_0/L),
+\]
+where
+\[
+\begin{split}
+ b_1={}&-Lhrx-Lh-Lr+L-h^2rx^2+h^2rx-3h^2x\\
+       &-2hrx+hx-3h+1,\\
+ a_0={}&Kr+(1-r)\{1+L+2xh+rxL+rx^2h\}.
+\end{split}
+\]
+Both right-hand source ratios are bounded and the left bracket is
+at least one. P1 then gives the opening-uniform comparisons
+\[
+ C(1-r)/z\sim\tfrac12,\quad p\sim H_0/2,\quad l\sim\tfrac12,
+ \qquad D=O(\sigma^2),\quad x\beta\theta=O(\sigma^2).
+                                                               \tag{P3}
+\]
+In particular $C,A,\alpha$ have positive real lower bounds,
+although their upper bounds may diverge. There is no inverse of a
+sphere coordinate and no lower bound on $D$ or $\beta$.
+
+\paragraph{The entire original polynomial.}
+On the reciprocal Bob chart $w=1/v$, put $D_u=1+u^2$ and
+$D_w=1+w^2$. For a real state $(W,X,Y,Z)$ define
+\[
+\begin{gathered}
+ M_w=W-wX+uY-uwZ,\quad R_w=uW-Y,\\
+ J_w=uwW+uX-wY-Z,\quad B_w=X+uZ,\\
+ K_w=J_w^2+D_u(Y-wZ)^2+D_wB_w^2-D_uD_wZ^2.
+\end{gathered}
+\]
+The target is exactly
+\[
+\begin{split}
+ F_w={}&4mM_w^2+4CD_wR_w^2+4AD_uD_wY^2+4DJ_w^2\\
+       &+4\alpha D_u(Y-wZ)^2+4\beta D_wB_w^2+2K_w.
+\end{split}                                                     \tag{P4}
+\]
+This expression, not a restriction to a contact line, is preserved
+throughout the proof. The source and testing angles are never identified.
+
+\paragraph{Why a strict bounded Gram suffices.}
+The only lifting lemma used below is the established separated
+bounded-Gram lemma: a finite symmetric matrix whose entries are
+finite sums of bounded separated factors, and whose real residue
+is strictly positive definite, defines a tensor SOS. Its elementary
+mechanism is worth recording. For a source infinitesimal $s$ and
+bounded testing $t$, choose positive real $a,\varepsilon$ with
+$|t|<a$ and $|s|<\varepsilon/a$. Then exactly
+\[
+ \varepsilon\pm st=\tfrac12
+ \{(\varepsilon/a+s)(a\pm t)
+            +(\varepsilon/a-s)(a\mp t)\}.
+\]
+Each summand is a product of nonnegative pure-field factors and
+has a separated square root. The same argument interchanges the
+fields. A finite real diagonal budget absorbs all infinitesimal
+matrix entries into a strictly positive real Gram. This constructs
+finite SOS without a mixed Cholesky factor or inverse. Every later
+use explicitly supplies the bounded coefficients and the positive
+residue; symbolic checks alone do not establish this hypothesis.
+
+\section{The exact complete normal identity used in the closure}
+
+Here is the complete SP6 identity, with the centered $A,\alpha$
+excesses restored, so that no cap term is implicit. Let
+\[
+\begin{gathered}
+ q=\sqrt z,\quad t=u^2,\ \xi=w^2,\quad g=h-Q,
+ \quad b_\theta=\beta\theta,\quad a_\beta=\beta\theta^2,\\
+ N_x=X+uhZ,\quad N_y=(Y-bwZ)/q,\\
+ \Gamma=\sigma Z-uwW,\quad R=wZ/q-uqW,
+ \quad A_\theta=q(t-x)W,\\
+ P_\beta=uZ-(x/\sigma)wW,\quad X_e=X+ewW,\quad
+ V=uw(t-x)W.
+\end{gathered}                                                   \tag{P5}
+\]
+The source coefficients are
+\[
+\begin{split}
+ \nu&=(2D-2b_\theta+h)/\sigma,\\
+ \lambda&=(8Dh+4a_\beta+2h^2)/\sigma-4bp\sigma z
+            =2H+\lambda_0,\\
+ \lambda_0&=4D(1+h)/\sigma-2\theta\nu-4bp\sigma z,\\
+ \chi&=8(pb+lQ)-4h+4eh(2D+1)-8Dh\\
+      &\quad+4z\{4Dbh+4pb\sigma+(1+2m)g^2+2a_\beta\},\\
+ B_x&=8\kappa e,\qquad
+ A_y=8(p-l)+4z\{(1+2m)g+2Dh+2p\sigma\},\\
+ R_x&=-4\{2Db+(1+2m)g-2b_\theta\},\\
+ R_\gamma&=-4\{2(C+D)(r-1)+2p+r-1+2pt\},\\
+ R_y&=4\{t[2Dh+2p\sigma+(1+2m)g]
+       +b(2C+2D+1)(\xi+\sigma z)\\
+      &\hspace{22mm}+(2C+1)(b-\sigma)+2D(1-\sigma)+2p\sigma\}.
+\end{split}                                                     \tag{P6}
+\]
+Finally put
+\[
+\begin{split}
+ k_0&=2b\{(2C+1)b+4D+4p\sigma
+                 +2(2C+2D+1)\sigma(r-1)\},\\
+ k_1&=2(1+2m)g^2+8Dhb+8pb\sigma+4a_\beta,\\
+ k_2&=2b^2(2C+2D+1),\qquad K_r=k_0+k_1t+k_2\xi,\\
+ H_y&=4D_u(aD_w+\ell)+4mtz+4CzD_w+(4D+2)\xi z+2D_uz,\\
+ c_G&=4D_u(pbD_w+lQ),\qquad c_N=8D_u(pD_w-l).
+\end{split}                                                     \tag{P7}
+\]
+Then $F_w=4\beta D_wN_x^2+G$, with the full parent core
+\[
+\begin{split}
+ G={}&2(2D+1)(uX_e)^2+[2(1+\xi)+4m\xi]N_x^2+H_yN_y^2\\
+ &+(4D/\sigma^2+4bpzt)\Gamma^2+(c_G+zK_r)R^2
+                -4u\nu N_x\Gamma\\
+ &-4uqw(2m+2D+1)N_xN_y
+      +qwR_\gamma(N_y+bR)\Gamma\\
+ &+uqwR_xN_xR+(c_N+zR_y)N_yR
+           +qwB_xN_xA_\theta+uA_yN_yA_\theta\\
+ &+4\kappa H A_\theta^2
+       +\lambda u(\Gamma P_\beta+A_\theta R)+\chi uA_\theta R.
+\end{split}                                                     \tag{SP6}
+\]
+This is an exact polynomial identity after clearing pure-source
+denominators in P1. It is the imported JR5/JB1 identity followed
+by the explicitly checked SP1--SP6 transformation. P4--P7 specify
+every entry for direct hand reproduction; the complete earlier
+derivations and their checkers are preserved in the archive.
+The two crucial conductors are
+\[
+\begin{split}
+ A_\theta^2+u\Gamma P_\beta+uA_\theta R
+  &=\sigma P_\beta^2+(x/\sigma)(t-x)(\xi-\sigma z)W^2,\\
+ V^2&=\sigma tA_\theta^2+u\sigma(t-x)A_\theta R-(t-x)V\Gamma.
+\end{split}                                                     \tag{P8}
+\]
+For the bounded-$M_\beta$ case, the generic pre-extraction JR
+coefficients of $\Gamma^2,A_\theta^2,\Gamma V$ are, respectively,
+\[
+\begin{split}
+ Z_0&=\{4D+2t(4Dh+2a_\beta+h^2)
+                       +2t^2h^2(2D+1)\}/\sigma^2,\\
+ A_0&=4\kappa H+2h^2(2D+1)t/\sigma,\\
+ S&=2\{h^2(2D+1)(t+x)+4Dh-2bp\sigma^2z
+                                  +2a_\beta+h^2\}/\sigma^2.
+\end{split}
+\]
+Its other changed terms are $H_xN_x^2+Z_xN_x\Gamma+uA_xN_xV
++u\sigma B_gA_\theta R$, where
+\[
+\begin{split}
+ H_x&=2(1+t+\xi)+4Dt+4m\xi,\quad A_x=-4h(2D+1)/\sigma,\\
+ Z_x&=-4u\{2D-2b_\theta+h+th(2D+1)\}/\sigma,\\
+ \sigma B_g&=2h^2(2D+1)(t-x)/\sigma+\lambda+\chi.
+\end{split}
+\]
+These replace the corresponding extracted terms in SP6; all other
+normal and radial terms are unchanged.
+
+\paragraph{The needed pole cancellations.}
+Directly from P1--P2,
+\[
+ \nu=2D/\sigma+\{H_0-ez(J-\sigma)\}/P.
+\]
+To bound $\alpha_\kappa=2H(2\kappa-1)$, set
+$N_\kappa=K(1+\sigma r)(1+\sigma z)-MP$ and
+\[
+ F_x=N_\kappa|_{\sigma=0}/x,\qquad
+ F_\sigma=(N_\kappa-N_\kappa|_{\sigma=0})/\sigma.
+\]
+These quotients are polynomials in bounded source letters, and
+$\alpha_\kappa=2(hF_\sigma+eF_x)/(MP)$. This establishes
+boundedness through every opening before taking residues.
+The divergent $C$ block is treated by CT7--CT7a. Equivalently,
+for $J_C=N_y+bR$ it is exactly
+\[
+ 4CzD_wJ_C^2+8C(r-1)J_C(z\sigma R-qw\Gamma).
+\]
+The optional cap $C_*=C/(1+C)$ therefore changes the entire core
+by precisely $4zD_w(C-C_*)J_C^2
+-8(C-C_*)(1-r)J_C(z\sigma R-qw\Gamma)$, as used in HG and HP.
+No omitted matrix entry is hidden by that cap.

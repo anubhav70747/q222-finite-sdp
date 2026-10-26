@@ -1,0 +1,266 @@
+{
+  "source_coordinates": [
+    "d",
+    "n",
+    "m",
+    "C",
+    "D",
+    "alpha"
+  ],
+  "identity_eliminated": "2*A=a*(d+2*n)",
+  "coefficient_matrix_shape": [
+    75,
+    21
+  ],
+  "generic_rank": 18,
+  "quadratic_identity_dimension": 3,
+  "primitive_identities": [
+    "4*C*a**2*m + 2*a**3*d*m + 4*a**3*m*n + 4*a**2*alpha*m + 4*a**2*d*m + 4*a**2*m*n - 2*a*alpha*d - 4*a*alpha*n - a*d**2 - 2*a*d*m - 2*a*d*n - 4*a*m*n - 4*alpha*n - 2*d*n - 4*m*n",
+    "4*C*D*a**2 + 4*C*a**2*m - 2*C*a*d - 4*C*a*n - 4*C*n + 2*D*a**3*d + 4*D*a**3*n + 2*D*a**2*d + 4*D*a**2*n - 2*D*a*d - 4*D*a*n - 4*D*n + 2*a**2*d*m - a*d**2 - 2*a*d*n - 2*d*n",
+    "-2*C*m + 2*D*alpha + D*d - d*m"
+  ],
+  "pairs": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      5
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      4,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      5
+    ]
+  ],
+  "identity_vectors": [
+    [
+      "-a",
+      "-2*a - 2",
+      "2*a**3 + 4*a**2 - 2*a",
+      "0",
+      "0",
+      "-2*a",
+      "0",
+      "4*a**3 + 4*a**2 - 4*a - 4",
+      "0",
+      "0",
+      "-4*a - 4",
+      "0",
+      "4*a**2",
+      "0",
+      "4*a**2",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "-a",
+      "-2*a - 2",
+      "2*a**2",
+      "-2*a",
+      "2*a**3 + 2*a**2 - 2*a",
+      "0",
+      "0",
+      "0",
+      "-4*a - 4",
+      "4*a**3 + 4*a**2 - 4*a - 4",
+      "0",
+      "0",
+      "4*a**2",
+      "0",
+      "0",
+      "0",
+      "4*a**2",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "-1",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "-2",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "2",
+      "0"
+    ]
+  ],
+  "maximal_minor_rows": [
+    0,
+    3,
+    4,
+    5,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    18,
+    19,
+    20,
+    21
+  ],
+  "maximal_minor_columns": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    15,
+    17,
+    18,
+    20
+  ],
+  "factored_maximal_minor": "256*a**47*(a - 1)**33*(a + 1)**28",
+  "generic_factored_basis": [
+    "m*P-D*Q",
+    "m*Gamma-b*Q",
+    "D*Gamma-b*P"
+  ],
+  "linear_forms": {
+    "A": "a*(d+2*n)/2",
+    "b": "A+n",
+    "P": "C+d/2",
+    "Q": "alpha+d/2",
+    "Gamma": "a^2*(b+P+Q)-b"
+  },
+  "exceptional_formal_ranks": {
+    "0": {
+      "rank": 3,
+      "quadratic_identity_dimension": 18
+    },
+    "1": {
+      "rank": 13,
+      "quadratic_identity_dimension": 8
+    },
+    "-1": {
+      "rank": 3,
+      "quadratic_identity_dimension": 18
+    }
+  },
+  "positive_a_exception": "a=1 only",
+  "a1_linear_identity": "D - d/2 + m - 2*n",
+  "a1_quadratic_basis": [
+    "d*(D - d/2 + m - 2*n)",
+    "n*(D - d/2 + m - 2*n)",
+    "m*(D - d/2 + m - 2*n)",
+    "C*(D - d/2 + m - 2*n)",
+    "D*(D - d/2 + m - 2*n)",
+    "alpha*(D - d/2 + m - 2*n)",
+    "C*m - (d/2 - m + n)**2",
+    "D*alpha - (-D + d/2 + n)**2"
+  ],
+  "quadratically_invisible_direction": [
+    "1",
+    "-a/(2*(a+1))",
+    "0",
+    "-1/2",
+    "0",
+    "-1/2"
+  ]
+}

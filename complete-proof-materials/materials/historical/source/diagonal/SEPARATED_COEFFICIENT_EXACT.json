@@ -1,0 +1,32 @@
+{
+  "decomposition": "gamma = p(x) + q(y) + sum_i (A_i(x)+delta)*(B_i(y)+delta)",
+  "generic_symbolic_summands_checked": 3,
+  "positivity_condition": "3*n*delta^2 + 2*delta*max(sum(abs(alpha_i)),sum(abs(beta_i))) < c",
+  "scope": "General theorem proved in diagonal_proofs.tex; symbolic corroboration and exact toy data only.",
+  "toy": {
+    "psd_block_orders": [
+      2,
+      2,
+      2
+    ],
+    "pure_factor_lower_bound": "13/32",
+    "source_factors": [
+      "x+1/4",
+      "15/32-x/4",
+      "1"
+    ],
+    "source_interval": [
+      "-1/4",
+      "1/4"
+    ],
+    "test_interval": [
+      "-1/4",
+      "1/4"
+    ],
+    "testing_factors": [
+      "y+1/4",
+      "1",
+      "15/32-y/4"
+    ]
+  }
+}

@@ -1,0 +1,116 @@
+ONE-POINT POSITIVITY IS NOT EXACT ON THE m=D, C=alpha SOURCE SECTION
+25 October 2026. Private bounded derivation; no solver or sampling.
+
+Work with lambda=beta=0, D=m, alpha=C, d,n,m,C,A>=0. Let P(u,v) be the
+matrix of the COMPLETE canonical parent F, including the negative core term.
+The source coefficients remain fixed independently of the testing u,v.
+
+1. Exact one-point reduction and its missing derivative
+-----------------------------------------------------
+Use the invertible congruence whose columns are
+(1,0,0,1), (0,1,0,0), (0,0,1,0), (1,0,0,-1). Then
+
+ T^T P(1,1) T /8 = diag(B,2C+d+4m),
+
+ B=[[2C,d/2,-2C-d/2],
+    [d/2,3d/4+m+2n,-d/4-m],
+    [-2C-d/2,-d/4-m,2A+2C+3d/4+m]].
+
+Thus the proposed one-point test really is a 3x3 PSD block (the remaining
+scalar is positive when d>0). This reduction does not prove adequacy.
+On the W=Z sector the two NORMALIZED angular differentials are E and -E:
+
+ E=[[C+d/2,d/4+m,-d/4-m],
+    [d/4+m,-d/4,0],[-d/4-m,0,-C-d/4]].
+
+Precisely, E is the top-left block of T^T(P_u(1,1)-P(1,1))T/8, and -E is
+the corresponding v block. Subtracting P accounts for derivative of D_uD_v.
+At a state kernel this subtraction is immaterial. Only the SUM of the
+angular derivatives vanishes automatically; the difference need not vanish.
+
+For the native-sign kernel psi=(1,-r,s,1), with s=1-t and 0<r,s<1, the
+state-kernel equations alone give
+
+ C=d(r+s)/(4(1-s)),
+ n=[d(2-3r-s)-4m(r+s)]/(8r),
+ A=[d(2+r-s)-4m(r+s)]/(8s).
+
+There remains one free weight m. Exactly,
+
+ F_u(1,1;psi)=2[d(1-r)(2+r-s)-8m(r+s)],
+ F_v(1,1;psi)=-F_u(1,1;psi).
+
+Hence the missing stationarity relation is
+
+       8m(r+s)=d(1-r)(2+r-s).                          (J)
+
+In unnormalized kernel coordinates W=Z=w, it is the homogeneous equation
+
+       d(w+X)(2w-X-Y)=8m*w*(Y-X).
+
+Substitution of (J) recovers the native fixed-angle formulas
+
+ m=D=d(1-r)(2+r-s)/(8(r+s)),
+ C=alpha=d(r+s)/(4(1-s)),
+ A=d(1+r)(2+r-s)/(16s),
+ n=d[(1+r)(2+r-s)-8r]/(16r).
+
+Writing s=1-t gives the formulas supplied by the separate source analysis.
+There is no further homogeneous LINEAR equation in (d,n,m,C,A) encoding
+(J): after clearing the displayed positive denominators, the five
+stationary coordinate polynomials have exact coefficient rank five.
+
+There is a source-only boundary formulation, but it is cubic, not an
+automatic PSD consequence. For d>0 and P(1,1)>=0 singular, its kernel is
+one-dimensional: the Z=0 principal block of the complete parent is strictly
+positive. Therefore B has rank two and adj(B) is a positive multiple of
+its kernel projector. The missing angular equation is exactly
+
+                 tr(adj(B) E)=0.                       (J')
+
+This is a degree-three polynomial equation in the weights. It is only a
+stationarity condition on the singular boundary, not a characterization
+of the full valid cone.
+
+2. Exact failure of the one-point PSD test
+-----------------------------------------
+Take the source, in standard nine-coordinate order,
+
+ (d,lambda,n,m,C,A,D,alpha,beta)
+   =(1,0,1/4,1/4,1/6,3/4,1/4,1/6,0).
+
+All nonzero event weights are strictly positive. At (u,v)=(1,1),
+
+ B=L diag(1/3,3/4,0) L^T,
+ L=[[1,0,0],[3/2,1,0],[-5/2,1,1]],
+
+and the fourth congruence scalar is 7/3. Hence P(1,1)>=0 exactly, with
+kernel psi=(1,-1/4,1/4,1). Nevertheless its complete angular derivatives
+are F_u=1 and F_v=-1 at that state. Keeping that same state and v=1,
+
+ F(u,1;psi)=(u-1)(67u-55)/12,
+ F(7/8,1;psi)=-29/768<0.
+
+Thus this source is physically invalid despite satisfying one-point PSD
+and all source signs. This is an exact full-parent counterexample, not a
+failure of a chosen Gram summand or a numerical lower bound.
+
+Adding stationarity only at kernels cannot characterize the whole cone
+either. A sufficiently small positive n-event perturbation makes P(1,1)
+strictly positive (its event root is nonzero on the displayed kernel), while
+the strict negative value at (7/8,1) persists. Then the kernel condition is
+vacuous. In particular, a block PSD completion enforcing only the missing
+kernel relation would still leave this interior problem unaddressed.
+
+3. Scope of the obstruction
+---------------------------
+The exact reduction is one 3x3 state block plus ONE missing angular
+stationarity equation. It rejects the proposed equivalence between global
+validity and one-point Bell-operator positivity on this source section.
+It does not exclude a different small finite pencil, an exact convex hull
+of the native two-parameter sources, or a completion retaining further
+angle information. No such universal completion has been derived here.
+
+Reproduction: c2_one_point_slice_checks_2026_10_25.py and matching JSON
+verify the full parent, congruence, both differential matrices, state and
+angular equations, stationary linear span and rational counterexample.

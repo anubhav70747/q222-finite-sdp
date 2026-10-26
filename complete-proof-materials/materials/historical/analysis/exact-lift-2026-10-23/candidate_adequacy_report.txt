@@ -1,0 +1,37 @@
+Exact adequacy result, 23 October 2026
+
+The current order-13744 canonical C1 source pencil represents the support
+c* that separates the order-8368 and order-10736 candidates. Its exact
+302-auxiliary certificate and four rational positive Gram factorizations
+are recovered and checked against the actual source-array bytes.
+
+New result: an explicit rational selector covers an open five-parameter
+stationary source family. The contact coefficient map has rank142 and
+exactly six full contact compatibility equations. Fixing250 free entries
+at c* and adjusting142 pivot entries yields four positive compressed
+Grams whenever max|b(theta)-b*|<1/3284140032. Reference Gram margin is
+at least2^-22; the largest selector row bound is783/2. No SDP solver.
+
+Six short rational formulas give a one-parameter subfamily; positivity of
+all native event coefficients is uniform for139<=A<=141, and the selector
+is certified for|A-140|<=2^-42. Its failure at A141 (negative Schur pivot)
+and A70 (negative diagonal) is recorded exactly. This is a counterexample
+to extending the fixed-free selector globally, not to candidate adequacy.
+
+All seven Bell-operator/source columns were independently restored with
+the original Pauli observables. Testing angles and states stay independent
+of source parameters. Thus every certified source gives a valid full-Q222
+Bell support. The script also prints exact eight-coordinate contact values.
+
+Files:
+  candidate_adequacy.tex/pdf: seven-page self-contained statement/proof.
+  check_c1_contact_selector.py: exact reproduction, about1.7seconds here.
+  c1_contact_selector_exact_results.json: exact checks and witnesses.
+  c1_contact_selector_data/: five original byte-preserved scientific input
+  JSON files and two newly evaluated selector/family files, plus README.
+
+Remaining: a PSD selector for all regular C1 contacts in at least one
+orientation, including limits; the independent full-C2 converse for13744;
+or a separate C160 adequacy argument. No full-Q222 exact pencil or C160
+reverse inclusion is established by this bounded result. No current public
+repository or manuscript was modified.

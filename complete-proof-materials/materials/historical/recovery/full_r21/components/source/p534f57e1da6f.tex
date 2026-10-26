@@ -1,0 +1,265 @@
+\section{Two weak complementary events force the C2 radial certificate}
+\label{sec:chart-free-c2}
+
+Here weak means infinitesimal after division by the original positive
+signed coefficient \(d\). All source calculations take place in one real
+closed coefficient field. Testing fields remain independent.
+
+\begin{theorem}[C2 entry without a contact-chart hypothesis]
+\label{thm:chart-free-c2}
+Let the physical canonical parent have \(\lambda=\beta=0\), \(d>0\),
+and nonnegative original event coefficients. Suppose it has an actual
+finite noncommuting stationary zero contact, and
+\[
+                    C/d,\ \alpha/d\quad\text{are infinitesimal}.
+\]
+Then its full parent is tensor SOS at every independent real or complex
+projective test. No hypothesis on the other four event weights, on the
+contact-angle ratio, or on the signs of the source gaps is imposed.
+
+More precisely, normalize \(d=1\). After local real sign gauges and at
+most the exact C2 reflection,
+the actual contact enters the positive rational C2 source with
+\[
+ c\text{ bounded},\qquad a,b,t\longrightarrow1,\qquad
+ r,h,g,j>0\text{ infinitesimal}.
+\]
+In particular all four matching weights are unbounded and both
+complementary weights are strictly positive on this finite-contact domain.
+\end{theorem}
+
+The proof has three ingredients: a finite physical witness makes the
+matching weights large; the quadratic CHSH excess controls the contact
+amplitudes at the scale of the actual angles; stationarity fixes their
+signs. This last step establishes the source chart rather than assuming it.
+
+\subsection{The physical bound at the correct angular scale}
+For \(u,v>0\), put \(D_u=1+u^2,D_v=1+v^2\), and let \(M(u,v)\) be the
+real symmetric matrix of the signed core
+\[
+H=2\{R_D^2+D_u(vY-Z)^2+D_v(X+uZ)^2-D_uD_vZ^2\},
+\]
+where
+\[
+R_m=vW-X+uvY-uZ,\qquad R_D=uW+uvX-Y-vZ.
+\]
+Write \(L=D_uD_v\). Direct matrix multiplication gives
+\begin{equation}
+(M-LI)^2=L^2I+4uvLJ,\qquad
+J=\begin{pmatrix}0&0&0&1\\0&0&-1&0\\0&-1&0&0\\1&0&0&0\end{pmatrix},
+\qquad J^2=I.                                      \label{eq:cf-core-square}
+\end{equation}
+For a unit real state \(\psi\), Cauchy--Schwarz therefore gives
+\[
+\psi^TM\psi\ge L-\sqrt{L^2+4uvL}\ge-2uv.
+\]
+The last inequality follows by squaring the positive quantities
+\(L+2uv\) and \(\sqrt{L^2+4uvL}\); their squared difference is
+\(4u^2v^2\). Homogeneity proves
+\begin{equation}
+                         H\ge-2uv\,\|\psi\|^2.        \label{eq:cf-core-bound}
+\end{equation}
+This is an exact ordered-field inequality, not a truncated expansion.
+It is the usual quadratic CHSH excess in the present normalization.
+
+At a normalized zero contact, every event term is nonnegative. Define
+the four matching amplitudes, in the fixed order \((n,A,m,D)\), by
+\[
+\mathcal L=(\sqrt{D_uD_v}X,\sqrt{D_uD_v}Y,R_m,R_D).
+\]
+Equation~\eqref{eq:cf-core-bound} gives, for each matching event,
+\begin{equation}
+                   e_i\mathcal L_i^2\le uv/2.         \label{eq:cf-amplitude-bound}
+\end{equation}
+All square roots and inequalities in this paragraph are coefficient-side.
+
+\subsection{Matching weights and the compact contact geometry}
+First every matching weight is unbounded. To see the mechanism for
+\(D\), use the coefficient-field experiment
+\[
+ u=1,\quad v=\sqrt{1+\delta},\quad
+ (W,X,Y,Z)=(1,0,0,\sqrt{1+\delta}),\qquad\delta>0.
+\]
+The \(n,A,m\) packets vanish, and the full eight-event parent is exactly
+\[
+4D\delta^2-2\delta+8\lambda+4(2+\delta)C
+ +8(1+\delta)\alpha+4(2+\delta)(1+\delta)\beta.
+\]
+If \(D\le B\) for a positive real \(B\), choose the positive real
+\(\delta=1/[4(B+1)]\). The first two terms have a strictly negative
+real upper bound, whereas the complementary terms are infinitesimal.
+This contradicts physicality. The exact even rotations of the event
+cycle give the same argument for \(n,A,m\), preserving the sum of the
+four complementary weights. The accompanying checker also supplies
+the four witnesses directly. Hence \(1/n,1/A,1/m,1/D\) are infinitesimal.
+
+Normalize the actual state to norm one and use positive actual
+half-angles, obtainable by local real basis gauges. The weaker
+bound \(H/(D_uD_v)\ge-2\) shows that all normalized matching
+probabilities vanish in residue. In particular \(X,Y\to0\).
+Put
+\[
+c_u=(1+u^2)^{-1/2},\ s_u=uc_u,\qquad
+c_v=(1+v^2)^{-1/2},\ s_v=vc_v.
+\]
+If \(\sigma=\operatorname{res}(c_us_v)\) and
+\(\tau=\operatorname{res}(s_uc_v)\), the two remaining matching
+equations read
+\[
+\sigma\overline W-\tau\overline Z=0,\qquad
+\tau\overline W-\sigma\overline Z=0.
+\]
+At least one of \(\overline W,\overline Z\) is nonzero. Thus
+\(\sigma=\tau\ge0\). If positive, the two actual half-angles are
+bounded units with the same residue. If zero, both are infinitesimal
+or both unbounded, by the two unit-circle identities. The exact C2
+reflection sends \((u,v)\) to \((1/v,1/u)\) and exchanges
+\((C,\alpha)\) and \((m,D)\), preserving the hypotheses. We may
+therefore assume either ordinary bounded-unit angles or two
+infinitesimal angles.
+
+\subsection{Relative coalescence when both angles vanish}
+Suppose \(u,v\) are infinitesimal. From
+\eqref{eq:cf-amplitude-bound}, all four
+\(\mathcal L_i/\sqrt{uv}\) are infinitesimal. In particular
+\(X/\sqrt{uv},Y/\sqrt{uv}\to0\). Set \(a=v/u>0\).
+Dividing the two other matching amplitudes by \(\sqrt{uv}\) gives
+\[
+\sqrt a\,W-\frac Z{\sqrt a}\longrightarrow0,\qquad
+\frac W{\sqrt a}-\sqrt a\,Z\longrightarrow0.
+\]
+The discarded terms are \(X/\sqrt{uv},Y/\sqrt{uv}\) and
+\(\sqrt{uv}X,\sqrt{uv}Y\), all infinitesimal.
+If \(a\) were unbounded, these equations would force both \(W,Z\)
+infinitesimal; the same follows if \(a\) is infinitesimal.
+Both contradict normalization. Thus \(a\) is a bounded unit.
+Taking residues now yields \(a\to1\) and \(W/Z\to1\), with
+both \(W,Z\) units. Consequently
+\[
+                  X/u,\ Y/u,\ R_m/u,\ R_D/u\longrightarrow0.
+\]
+This is relative coalescence, which the compact-angle argument alone
+does not establish.
+
+Normalize \(W=1\) by a pure coefficient factor. Write
+\[
+x=X/u,\quad y=Y/u,\quad q=v/u,\qquad
+(u,x,y,Z,q)\longrightarrow(0,0,0,1,1).
+\]
+The core divided by \(u^2\) is the polynomial
+\begin{align}
+\mathcal H:=H/u^2=2\{&
+(1-y-qZ+u^2qx)^2+(1+u^2q^2)(x+Z)^2 \notag\\
+&+(1+u^2)(u^2q^2y^2-2qyZ-q^2Z^2)\}. \label{eq:cf-scaled-core}
+\end{align}
+It has zero residue at this point. The nonnegative alpha packet and
+the zero-contact equation give
+\[
+0\le4\frac{\alpha}{u^2}(1+u^2)(u^2qy-Z)^2
+                   \le-\mathcal H.
+\]
+Its square factor is a positive unit. Hence
+\begin{equation}
+                         \alpha/u^2\longrightarrow0. \label{eq:cf-alpha-scale}
+\end{equation}
+This estimate is derived before the scaled stationary equations are used.
+
+\subsection{Stationarity fixes the source signs}
+In the small-angle case introduce the four exact local coordinates
+\[
+\ell=\left(\sqrt{D_uD_v}\,x,\sqrt{D_uD_v}\,y,
+ q-x+u^2qy-Z,\ 1+u^2qx-y-qZ\right).
+\]
+Their Jacobian with respect to \((x,y,Z,q)\) has residue
+\[
+J_0=\begin{pmatrix}
+1&0&0&0\\0&1&0&0\\-1&0&-1&1\\0&-1&-1&-1
+\end{pmatrix},\qquad \det J_0=2.
+\]
+Thus its inverse and the transformed derivatives are bounded at the
+actual contact. Only this pointwise coefficient-field inverse is used.
+Direct differentiation of \eqref{eq:cf-scaled-core} gives
+\[
+\operatorname{res}(\nabla_\ell\mathcal H)=2(1,-1,-1,1).
+\]
+The full parent divided by \(u^2\) is exactly
+\[
+4\sum_i e_i\ell_i^2
+ +4C(1+u^2q^2)(1-y)^2
+ +4(\alpha/u^2)(1+u^2)(u^2qy-Z)^2+\mathcal H.
+\]
+The two complementary-gradient terms have zero residue, by weak \(C\)
+and \eqref{eq:cf-alpha-scale}. The original stationary equations imply
+stationarity in \(\ell\), with \(u\) fixed. These equations first show
+that every \(e_i\ell_i\) is bounded, so its residue is defined. Consequently
+\begin{equation}
+\operatorname{res}(n\ell_n,A\ell_A,m\ell_m,D\ell_D)
+                         =\tfrac14(-1,1,1,-1).        \label{eq:cf-sign-residue}
+\end{equation}
+Every matching weight is positive, so \(X<0,Y>0,R_m>0,R_D<0\)
+as exact source inequalities.
+
+For ordinary angles the argument is shorter. Normalize \(W=1\);
+the actual contact has residue
+\((X,Y,Z,v)=(0,0,1,u)\), where \(u\) is a bounded unit.
+Use the unscaled \(\mathcal L\) coordinates. Their Jacobian determinant
+at that residue is \(2u(1+u^2)^2\), and
+\[
+\nabla_{\mathcal L}H=2u(1,-1,-1,1)
+\]
+there. All complementary gradients are bounded times \(C,\alpha\),
+hence infinitesimal. Stationarity gives
+\(\operatorname{res}(e_i\mathcal L_i)
+ =\overline u\,(-1,1,1,-1)/4\), with the same exact signs.
+
+\subsection{The original source and all independent tests}
+In either case \(W/Z\to1\), \(v/u\to1\), and \(X/u,Y/u\to0\).
+Set, using the original actual contact,
+\[
+c=u,\quad a=v/u,\quad b=aW/Z,\quad
+r=-X/(uZ),\quad t=(uW-Y)/(vZ).
+\]
+Then \(a,b,t\to1\) and
+\[
+h=b-a^2t=\frac{aY}{uZ}>0,\qquad
+g=\frac{R_m}{uZ}>0,\qquad j=-\frac{R_D}{vZ}>0.
+\]
+All four \(r,h,g,j\) are infinitesimal, so \(0<r<1\).
+The remaining chart boundaries are positive units:
+\[
+1-c^2h=\frac{Z-vY}{Z}>0,\qquad
+b-a^2c^2r=\frac{a(W+vX)}Z>0.
+\]
+These definitions give exactly
+\[
+h=b-a^2t,\qquad
+g=(1+c^2)b-(1-r+a^2c^2t),\qquad j=1+c^2r-t.
+\]
+There is no remaining sign-entry assumption.
+
+Finally the stationary coefficient matrix has the nonzero determinant
+\[
+4^6[-64ac^6rgt\,hj(1-c^2h)(1+c^2)^2(1+a^2c^2)^2\Delta].
+\]
+The inherited short three-by-three reduction proves this formula.
+For \(z=c^2\), its positive expansion is
+\[
+\Delta=1+(1+z)b+z(1+z)b^2+2z(1+z)br+z^2r^2+2zr
+       +a^2z\{(1+z)b+1+zr(2-r)\}\ge1.
+\]
+The original coefficients
+therefore equal the unique positive rational C2 source formulas.
+In particular their positive numerator identity forces \(C,\alpha>0\).
+If \(c\) is infinitesimal, the complete small-angle radial theorem,
+including its outer-test corollary, applies. If \(c\) is a unit,
+the inherited ordinary-angle radial corollary applies. The precise
+source files are identified in the reproduction paragraph below. These certificates concern
+the full parent and arbitrary independent testing fields. Reflect back
+when required and restore \(d\) by a pure coefficient square root.
+This proves Theorem~\ref{thm:chart-free-c2}.
+
+The conclusion closes the full two-weak-complementary-event
+\emph{finite-contact} C2 branch, not just a preselected rational chart.
+It does not assert that every weak-\(C\) source has weak \(\alpha\).
+The explicit one-weak escape family in the following supplement shows
+why that remaining implication fails.

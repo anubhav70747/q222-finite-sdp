@@ -1,0 +1,215 @@
+      Native C2 Two Channel Matrix Transport
+
+
+
+ 
+
+
+Native C2: a multiplier-free two-channel full-state identity
+Scope: Native C2, with source-side parameters separate from the independent testing angles. This proves a complete four-state SOS on the one-angle fiber v=v_c, and an exact 2-by-2 matrix-transport reduction for every independent u,v. It does not prove a global fixed-grid Gram or a finite lift.
+1. Native source and full parent
+Put d=1, lambda=beta=0, and define source parameters
+$ a,b,c,t>0,\quad 0<r<1,\quad z=c^2,\quad
+ h=b-a^2t>0,\quad
+ g=(1+z)b-(1-r+a^2zt)>0,\quad j=1+zr-t>0.$Also require 1-zh>0, b-a^2zr>0, n>=0 and the remaining native positivity gaps. The finite native contact is
+$ (u_c,v_c)=(c,ac),\qquad
+ \psi_c=(b/a,-cr,ch/a,1)^\top.$Let T_0=1+zr, and set
+$\begin{aligned}
+\Delta={}&(1+z)zb^2+2z(1+z)br+(1+z)(1+a^2z)b\\
+ &+z^2(1-a^2)r^2+2z(1+a^2z)r+1+a^2z,\\
+N={}&(1+z)(b+r)(b+a^2(1-t))-a^2(1+a^2z)(1-r)t.
+\end{aligned}$The native stationary coefficients are
+$\begin{aligned}
+n&=\frac{(b+r)T_0(T_0+a^2zt)-r\Delta}{2r\Delta},&
+ m&=\frac{(1+a^2z)(1-r)T_0(T_0+a^2zt)}{2g\Delta},\\
+C&=\frac{T_0N}{2a^2t\Delta},&
+ A&=\frac{a^2T_0(b+r)(T_0+a^2zt)}{2h\Delta},\\
+D&=\frac{(1+z)(b+r)(b-a^2zr)(T_0+a^2zt)}{2a^2j\Delta},&
+ \alpha&=\frac{z^2(b+r)N}{2(1-zh)\Delta}.
+\end{aligned}$These coefficients are source-only; in particular no independent testing coordinate occurs in them.
+Write D_u=1+u^2, D_v=1+v^2. The native SG2 parent for an arbitrary real state psi=(W,X,Y,Z) is
+$\begin{aligned}
+F={}&4nD_uD_vX^2+4m(vW-X+uvY-uZ)^2
+ +4CD_v(uW-Y)^2+4AD_uD_vY^2\\
+&+(4D+2)(uW+uvX-Y-vZ)^2
+ +(4\alpha+2)D_u(vY-Z)^2\\
+&+2D_v(X+uZ)^2-2D_uD_vZ^2.
+\end{aligned}\tag{1}$For arbitrary positive d, multiply all source coefficients and both sides by d after normalizing d=1.
+2. The exact two-channel identity
+For any independent testing u,v>0, let
+$ U=u^2,\quad V=v^2,\quad
+ \rho=\begin{pmatrix}W\\vX\end{pmatrix},\quad
+ \sigma=\begin{pmatrix}Y\\vZ\end{pmatrix}.$Define the following four symmetric 2-by-2 matrix functions (all source weights are from (1)):
+$\begin{aligned}
+\mathsf A(V)&=\begin{pmatrix}
+ 4C(1+V)+4D+2&4D+2\\
+ 4D+2&4D+2+4n(1+V^{-1})
+\end{pmatrix},\\
+\mathsf B(V)&=\begin{pmatrix}
+ 4D+4\alpha V+(4A+4C+2)(1+V)&4D-4\alpha\\
+ 4D-4\alpha&4D+4\alpha V^{-1}
+\end{pmatrix},\\
+\mathsf E(V)&=\begin{pmatrix}
+4mV&-4m\\
+-4m&4mV^{-1}+(2+4n)(1+V^{-1})
+\end{pmatrix},\\
+\mathsf T(V)&=\begin{pmatrix}
+4A(1+V)+(4\alpha+2+4m)V&-(4\alpha+2+4m)\\
+-(4\alpha+2+4m)&(4\alpha+2+4m)V^{-1}
+\end{pmatrix}.
+\end{aligned}\tag{2}$The sole coupling is the symmetric 2-by-2 matrix
+$\mathsf K(V)=\begin{pmatrix}
+4C+4D+2+4(C-m)V&4D+2+4m\\
+4D+2+4m&4D-(4m+2)V^{-1}
+\end{pmatrix}.\tag{3}$Theorem 1 (exact coefficient identity). As a polynomial in the two independent testing angles and four state components,
+$\boxed{
+F(u,v,\psi)=
+\rho^\top[\mathsf E(V)+u^2\mathsf A(V)]\rho
++\sigma^\top[\mathsf B(V)+u^2\mathsf T(V)]\sigma
+-2u\rho^\top\mathsf K(V)\sigma.
+}\tag{4}$No determinant multiplier, mixed inverse, testing-region restriction or scalar-state substitution occurs in (4).
+Each diagonal form has an explicit sum-of-square decomposition at every independent v>0:
+$\begin{aligned}
+\rho^\top\mathsf A\rho
+ & =4C(1+V)\rho_1^2+(4D+2)(\rho_1+\rho_2)^2
+ +4n(1+V^{-1})\rho_2^2,\\
+\sigma^\top\mathsf B\sigma
+ & =4D(\sigma_1+\sigma_2)^2
+ +4\alpha(v\sigma_1-v^{-1}\sigma_2)^2
+ +(4A+4C+2)(1+V)\sigma_1^2,\\
+\rho^\top\mathsf E\rho
+ & =4m(v\rho_1-v^{-1}\rho_2)^2
+ +(2+4n)(1+V^{-1})\rho_2^2,\\
+\sigma^\top\mathsf T\sigma
+ & =4A(1+V)\sigma_1^2
+ +(4\alpha+2+4m)(v\sigma_1-v^{-1}\sigma_2)^2.
+\end{aligned}\tag{5}$Strictly positive m,C,A,D,alpha,d imply A,B,E,T are positive definite for every finite V>0, even at n=0.
+Proof. Substitute X=rho_2/v, Y=sigma_1, Z=sigma_2/v into (1), expand each square, and group by powers u^0,u^1,u^2. This gives (2)--(4) exactly. Formula (5) is direct expansion and establishes the positivity assertion. The independent-state status is immediate because (rho,sigma) is invertible for every fixed v>0. ∎
+3. Two native vector identities (the key new stationary simplification)
+At the source contact define
+$U_0=z,\quad V_0=a^2z,\quad
+x=\begin{pmatrix}b/a\\-azr\end{pmatrix},\quad
+ y=\begin{pmatrix}zh/a\\az\end{pmatrix},\quad
+ H_b=b-a^2zr.$The determinant of the pair is
+$ \det[x,y]=z(b+zrh)>0.\tag{6}$Use subscripts 0 for evaluation of (2)--(3) at V_0.
+Lemma 2 (separate radial contact transports). The native stationary formulas give
+$\boxed{\mathsf B_0y=U_0\mathsf A_0x,
+\qquad\mathsf T_0y=-\mathsf E_0x.}\tag{7}$These are stronger than merely knowing that the complete Bell matrix annihilates its contact state.
+A short direct verification uses the following four scalar equalities (write Omega=4alpha+2+4m):
+\begin{aligned}
+&4Ah-a^2r(4n+2)=0,\tag{8a}\\
+&\Omega(1-zh)-4m(b+r)-(4n+2)r(1+V_0)=0,\tag{8b}\\
+&4Da^2j-2H_b-4\alpha a^2(1-zh)
+ +(4A+2)h(1+V_0)-4Ca^2t(1+V_0)=0,\tag{8c}\\
+&z[4Da^2j-2H_b+4nr(1+V_0)]+4\alpha(1-zh)=0.\tag{8d}
+\end{aligned}Equations (8a,b) are the two entries of T_0 y+E_0 x=0; (8c,d) are the two entries of B_0 y-U_0 A_0 x=0, up to nonzero positive source factors. Equation (8a) immediately follows from
+$2n+1=\frac{(b+r)T_0(T_0+a^2zt)}{r\Delta},
+\qquad 2A=\frac{a^2(b+r)T_0(T_0+a^2zt)}{h\Delta}.$For (8b--d), substitution of the six displayed source fractions, multiplication by the respective positive denominators, and collection using the definitions of h,g,j,Delta,N gives zero polynomial identities. No testing variable is specialized in these equations. The accompanying exact checker verifies all four identities over the rational function field. ∎
+4. Exact source-only rank-one splitting at the contact
+Define
+$ p=\mathsf A_0x,\quad q=\mathsf E_0x,\quad
+ a_*=x^\top\mathsf A_0x>0,\quad e_*=x^\top\mathsf E_0x>0.$The native full kernel relations are
+$(\mathsf E_0+U_0\mathsf A_0)x=\mathsf K_0y,
+\quad
+(\mathsf B_0+U_0\mathsf T_0)y=U_0\mathsf K_0x.\tag{9}$The u-stationary derivative, taken at fixed original state and then transported to (rho,sigma), gives
+$ U_0 x^\top\mathsf A_0x=y^\top\mathsf B_0y/U_0.$The derivative is unchanged at the kernel even though (rho,sigma) vary with u, because all chain-rule terms contain the vanishing state gradient. By (7)--(9),
+$y^\top p=U_0 a_*,\qquad y^\top q=-e_*.
+\tag{10}$In particular the pointwise kernel equations imply both contact energy equipartitions:
+$U_0a_*=U_0^{-1}y^\top\mathsf B_0y,
+\qquad e_*=y^\top\mathsf T_0y.
+\tag{11}$Theorem 3 (rank-one contact factorization).
+$\boxed{\mathsf K_0=\frac{pp^\top}{a_*}-\frac{qq^\top}{e_*}.}\tag{12}$Proof. Let the right side be K'. By definition, K'x=p-q; by (7) and (9), K_0x=p-q. By (10), K'y=U_0p+q; by (9), K_0y=U_0p+q. The two vectors x,y form a basis by (6), so K'=K_0. ∎
+Set the following source-only 4-by-4 PSD matrices:
+$\mathcal M_A=\begin{pmatrix}
+\mathsf A_0&-pp^\top/a_*\\-pp^\top/a_*&\mathsf B_0
+\end{pmatrix},\quad
+\mathcal M_E=\begin{pmatrix}
+\mathsf E_0&+qq^\top/e_*\\+qq^\top/e_*&\mathsf T_0
+\end{pmatrix}.\tag{13}$For arbitrary R,S in R^2,
+$|R^\top p|^2\le a_*R^\top\mathsf A_0R,
+\qquad |S^\top p|^2\le a_*S^\top\mathsf B_0S.$The second inequality uses B_0 y=U_0p and y^T B_0 y=U_0^2a_*. The analogous inequalities for q use T_0 y=-q and y^T T_0y=e_*. Thus Cauchy--Schwarz proves both matrices in (13) are PSD; there is no mixed multiplier or mixing of source and test denominators.
+Corollary 4 (complete four-state fixed-Bob-angle identity). For every independent u and arbitrary (W,X,Y,Z) with testing v=v_c, use rho=(W,v_c X), sigma=(Y,v_c Z). Then
+$\boxed{
+F(u,v_c,\psi)
+=\begin{pmatrix}u\rho\\\sigma\end{pmatrix}^{\!\top}
+\mathcal M_A\begin{pmatrix}u\rho\\\sigma\end{pmatrix}
++\begin{pmatrix}\rho\\u\sigma\end{pmatrix}^{\!\top}
+\mathcal M_E\begin{pmatrix}\rho\\u\sigma\end{pmatrix}.
+}\tag{14}$Both PSD matrices are independent of the variable u. Their Cholesky square roots are state-linear with angular functions 1,u, and (14) is globally valid on that entire one-angle fiber, not merely near the contact. The n=0 boundary is included because the four diagonal matrices remain positive definite there. The reflected one-angle fiber is obtained by the corresponding physical exchange, not by treating a testing angle as a source parameter.
+5. A pointwise universal two-channel reduction (not a finite lift)
+For any fixed v>0, whether or not v=v_c, define an as-yet-undetermined 2-by-2 L(v). The exact identity (4) becomes
+$\begin{aligned}
+F={}&\begin{pmatrix}u\rho\\\sigma\end{pmatrix}^{\!\top}
+\underbrace{\begin{pmatrix}
+\mathsf A(V)&-L(V)\\-L(V)^\top&\mathsf B(V)
+\end{pmatrix}}_{\mathcal M_A(V,L)}
+\begin{pmatrix}u\rho\\\sigma\end{pmatrix}\\
+&+\begin{pmatrix}\rho\\u\sigma\end{pmatrix}^{\!\top}
+\underbrace{\begin{pmatrix}
+\mathsf E(V)&-(\mathsf K(V)-L(V))\\
+-(\mathsf K(V)-L(V))^\top&\mathsf T(V)
+\end{pmatrix}}_{\mathcal M_E(V,L)}
+\begin{pmatrix}\rho\\u\sigma\end{pmatrix}.
+\end{aligned}\tag{15}$For each fixed v>0, existence of some L_v satisfying M_A(v,L_v),M_E(v,L_v) >= 0 is equivalent to F(u,v,psi)>=0 for all u in R and all states. Sufficiency is immediate. For necessity, apply the elementary univariate quadratic matrix SOS theorem to F as a degree-two matrix polynomial in u. Average its Gram under the exact symmetry (u,Y,Z)->(-u,-Y,-Z). The two parity blocks use exactly the monomial-state vectors (u rho,sigma) and (rho,u sigma); matching their diagonals with coefficients of u^0,u^2 forces A,B,E,T, and their two cross blocks sum to -K. This is (15).
+The native contact lemma guarantees pointwise feasibility for every v. But the resulting L_v is allowed to depend jointly on the source and that particular test. Existence of these fibers is not the existence of any fixed-feature global SOS. Formula (12) supplies an exact source-only value of the transporter at v=v_c only.
+6. Exact failure of the even-Laurent interpolation mechanism
+Consider the tempting stronger claim that a single transporter
+$L(V)=\sum_{j=-J}^J V^j L_j(c)$with source-only matrices L_j makes both M_A(V,L),M_E(V,L) PSD for all V>0. This is impossible for any native source with
+$\boxed{h\ne a^2r.}\tag{16}$Proof. Each cross entry of a PSD 4-by-4 matrix has squared modulus at most the product of its two diagonal entries. The four diagonal 2-by-2 matrices in (2) grow at most linearly in V as V->infty, and at most as 1/V as V->0. Hence any finite Laurent-polynomial L(V) satisfying the PSD constraints has no powers outside V^{-1},1,V. Each M_i(V) is therefore a PSD Hermitian Laurent matrix supported on V^{-1},1,V. Putting V=v^2, the matrix polynomial v^2M_i(v^2) is nonnegative on the whole real v-axis and has degree at most four. Elementary univariate matrix polynomial spectral factorization gives a sum of squares of matrix polynomials of degree at most two in v; division by v gives Laurent roots with exponents in {-1,0,1}.
+Insert those roots into (15). This is a sum of squares of state-linear Laurent polynomials in u,v equal to the ordinary polynomial (1). As v->0 the sum remains bounded for every state, forcing the negative-power coefficients of each root to vanish. As v->infty its bidegree-two growth forces every root to have v-degree at most one. The roots are already affine in u. Thus (15) would produce an ordinary polynomial state-linear SOS of the native C2 parent.
+But the four sign-related native contacts and the two missing events imply for every ordinary polynomial SOS
+$\frac{4A}{4n+2}=\left(\frac{a^2r}{h}\right)^2,$whereas the exact native stationary equation (8a) gives
+$\frac{4A}{4n+2}=\frac{a^2r}{h}.$All quantities are positive, hence h=a^2r, contrary to (16). ∎
+Therefore no even-Laurent source-only two-channel transporter exists generically. This is a no-go for one explicit construction strategy, not for sixth-root SOS: fractional powers in the transporter, additional radial layers, or both remain available. It also explains why selecting pointwise transporters cannot simply be upgraded to a global polynomial certificate.
+7. An explicit cubic building block without any multiplier
+Put p=u^(1/3), kappa=u_c^(1/3), with p,kappa>0, and define
+$\begin{aligned}
+f_0&=(p-\kappa)(p^2-p\kappa+\kappa^2),\\
+f_1&=2\sqrt\kappa\,p^{3/2}(p-\kappa),\\
+f_2&=2\kappa^{3/2}p^{1/2}(p-\kappa).
+\end{aligned}$The elementary identity
+$ (p^2+p\kappa+\kappa^2)^2
+ =(p^2-p\kappa+\kappa^2)^2+4p\kappa(p^2+\kappa^2)$gives
+$\boxed{(u-u_c)^2=f_0^2+f_1^2+f_2^2.}\tag{17}$All the angular powers of each root lie in u^{j/6} with 0<=j<=6 (specifically 0,1/6,1/3,1/2,2/3,5/6,1). For any source-only PSD 2-by-2 matrix R and any state-linear ell(psi,v) independent of u,
+$ (u-u_c)^2\,\ell^\top R\ell
+ =\sum_{i=0}^2 f_i^2\,\ell^\top R\ell.\tag{18}$Factoring R inside the source field makes (18) a matrix-valued sum of squares. When each coefficient of ell lies in the fixed v-span {v^{j/6}:0<=j<=6}, every resulting root lies in the full fixed two-angle sixth-root grid; without that degree hypothesis, (18) is still an identity but no fixed-grid claim follows. It is a nontrivial fractional refinement of an ordinary state-normal square, not a certificate for the cross term K(V) by itself. Multiplying the contact-fiber matrices (13) by arbitrary angle-dependent factors would not preserve (4); no such step is used.
+8. One precisely specified fixed-span completion target: 56 features
+The radial decomposition suggests a smaller-than-196 conditional ansatz, without claiming that it works. Let psi=(W,X,Y,Z) in that order. For sigma=A,E, define integer radial degrees
+$ e_A=(1,1,0,0),\qquad e_E=(0,0,1,1).$Take the fixed source-independent feature vectors, each of length 28,
+$ Z_\sigma=(u^{e_{\sigma,\ell}}v^{j/6}\psi_\ell)_{\ell=1,\ldots,4;\ j=0,\ldots,6}.$Every feature belongs to the full sixth-root grid Z6; here only the endpoint degrees 0,1 in u are used. A possible global certificate would be
+$ F=Z_A^\top Q_A Z_A+Z_E^\top Q_E Z_E,
+\qquad Q_A,Q_E\succeq0,
+\tag{19}$with 28-by-28 source-only symmetric matrices.
+For complete, explicit coefficient equations, write
+$F=\sum_{k=0}^{2}\sum_{t=0}^{12}u^kv^{t/6}
+  \psi^\top P_{k,t}\psi,$where the symmetric coefficient matrices P_{k,t} are read off from the known two-by-two matrices in (2)--(3) by setting
+$\begin{aligned}
+P_0(v)&=\operatorname{diag}(D_v^{(2)}\mathsf E D_v^{(2)},
+                                  D_v^{(2)}\mathsf B D_v^{(2)}),\\
+P_2(v)&=\operatorname{diag}(D_v^{(2)}\mathsf A D_v^{(2)},
+                                  D_v^{(2)}\mathsf T D_v^{(2)}),\\
+P_1(v)&=\begin{pmatrix}0&-D_v^{(2)}\mathsf K D_v^{(2)}\\
+                         -D_v^{(2)}\mathsf K D_v^{(2)}&0\end{pmatrix},
+\qquad D_v^{(2)}=\operatorname{diag}(1,v),
+\end{aligned}\tag{20}$and extracting their v^{t/6} coefficients (P_{k,t}=0 unless t=0,6,12).Then (19) is exactly equivalent to the finite linear equations
+$\boxed{
+(P_{k,t})_{\ell m}=
+\sum_{\sigma\in\{A,E\}:\,e_{\sigma,\ell}+e_{\sigma,m}=k}
+\ \sum_{\substack{0\le i,j\le6\\i+j=t}}
+(Q_\sigma)_{(\ell,i),(m,j)}
+}
+\quad\begin{matrix}
+0\le k\le2,\\0\le t\le12,\\1\le\ell,m\le4.
+\end{matrix}\tag{21}$Symmetric matrix coefficient convention handles off-diagonal state monomials automatically. Each Q_sigma is independent of testing angles and state, and its PSD factorization would give a fixed span. These equations involve two 28-by-28 PSD blocks, rather than a general 196-by-196 Gram. But the implication that every native C2 source satisfies (21) with Q_A,Q_E >=0 remains unproved. An unsuccessful attempt to find such a Gram would exclude this restricted cone, not the full sixth-root span, because intermediate u exponents are missing.
+9. Exact status
+Proved: (4) is the full global matrix identity with no multiplier; (5) supplies four globally PSD diagonal 2-by-2 blocks; (7) follows from the native source and yields the two rank-one contact transport matrices (13); (14) is a complete full-state SOS along v=v_c; (15) has a PSD split at each fixed v by one-variable matrix positivity; (16) rigorously forbids the even-Laurent two-channel construction on the generic native domain; (17)--(18) are exact sixth-root matrix refinements.
+First unproved implication: The family of independently feasible matrices L_v in (15), and the rank-one source-only value (12) at the contact, need not extend to one source-only pair of PSD coefficient Grams solving (21), or a larger fixed sixth-root module. Pointwise PSD and a contact fiber do not establish this. No cancellation of the mixed multiplier det H_3 has been asserted, and no global C2 or Q222 SDP lift follows from the present result.
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,182 @@
+\documentclass[11pt]{article}
+\usepackage[margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,hyperref}
+\newtheorem{theorem}{Theorem}
+\allowdisplaybreaks
+\title{A fixed testing family on the inverse-Alice chart}
+\author{}\date{23 October 2026}
+\begin{document}\maketitle
+
+\begin{theorem}
+Put $\delta=2^{-12}$. Suppose $0<b<1$, $Q=1-b$, $0<z\le1/64$,
+$q=\sqrt z$, and the source coefficients satisfy
+\[
+ m,D,\beta\ge0,\qquad
+ C\ge C_*={3z\over8},\quad
+ A\ge A_*={3\over8bz},\quad
+ \alpha\ge\alpha_*={3\over8Qz}.
+\]
+For $0\le p\le1$, $0\le w\le\delta$, and every real state,
+the complete inverse-Alice C1 parent below has an SOS in one fixed
+source-independent family of $51$ labelled testing functions.
+The construction also uses $27$ polynomial weighted
+positive semidefinite source blocks of total order $66$, maximum
+order six. There is no restriction on $H$ or the sign of $\lambda$.
+All source faces $D=0,\beta=0$ and all testing/state zeros are included.
+The same identities hold over independent real closed source and testing
+fields; all Gram factorizations below take place in the source field.
+\end{theorem}
+
+Write $D_p=1+p^2$, $D_w=1+w^2$. The full parent, with $d=1$, is
+\[
+\begin{split}
+ \widetilde F={}&4m(pW-pwX+Y-wZ)^2+4CD_w(W-pY)^2
+                  +4AD_pD_wY^2\\
+ &+(4D+2)(wW+X-pwY-pZ)^2
+ +(4\alpha+2)D_p(Y-wZ)^2\\
+ &+(4\beta+2)D_w(pX+Z)^2-2D_pD_wZ^2.
+\end{split}
+\]
+It equals $p^2F_w(1/p,w)$ when $p\ne0$ and defines the literal
+$p=0$ angle. Introduce five separated state roots and one source
+change of coordinates:
+\[
+ E=qW,\quad F=Y/q,\quad G=wZ/q,\quad
+ R=X+wW,\quad S=pX,\qquad J=F-bG.
+\]
+Their sizes need not be bounded. The complete signed core is $2K$,
+where direct expansion gives
+\[
+ K=R^2+D_wS^2+z(G-F)^2+p^2D_wzF^2
+                          -2pE(G+w^2F)+2qwS(G-F).
+\]
+Select just the three caps $C_*,A_*,\alpha_*$. Put
+$t_J=3/(2bQ)\ge6$. Expanding these caps and $2K$ gives
+\[
+ \widetilde F=B+\mathcal R+\mathcal P+\mathcal X,
+\]
+where $\mathcal X$ is the six original event terms with weights
+$4m,4D,4\beta,4(C-C_*),4(A-A_*),4(\alpha-\alpha_*)$, including
+their complete $D_p,D_w$ factors. Furthermore
+\[
+ B=2R^2+2S^2+J^2+\tfrac32E^2+\tfrac32(1+p^2)G^2-4pEG,
+\]
+\[
+ \mathcal R=-(3pz+4pw^2)E(J+bG)-4qwS(J-QG),
+\]
+\[
+\begin{split}
+ \mathcal P={}&(t_J-1)J^2+t_J(pJ)^2
+ +\tfrac32z^2(pF)^2+\tfrac32\{w(E-pzF)\}^2\\
+ &+{3\over2b}\{(wF)^2+(pwF)^2\}
+ +2(wS)^2+2z(G-F)^2+2zD_w(pF)^2.
+\end{split}
+\]
+Every coefficient in $\mathcal P$ is positive and source-only.
+Thus these are ten retained squares; expanding $\mathcal X$ gives
+twelve further squares.
+
+\paragraph{A fixed reserve and three error channels.}
+On the ordered roots $g=(R,S,J,E,G)$,
+\[
+\begin{split}
+ B-\tfrac19g^{\mathsf T}g={}&{17\over9}(R^2+S^2)+{8\over9}J^2
+ +{25\over18}(E-36pG/25)^2\\
+ &+{2\over225}G^2+{69\over50}(1-p^2)G^2.
+\end{split}
+\]
+This is six explicit squares with only the fixed testing radical
+$\sqrt{1-p^2}$. Set
+\[
+ y_1=p,\qquad y_2=p(w/\delta)^2,\qquad y_3=w/\delta.
+\]
+All lie in $[0,1]$. Write $\mathcal R=\sum_{j=1}^3y_jg^TA_jg$.
+The only upper-triangle entries of these symmetric source matrices are
+\[
+\begin{array}{c|cc|c}
+ &\text{entry}&\text{value}&r_j\\\hline
+ A_1&(E,J),(E,G)&-3z/2,-3bz/2&3z\\
+ A_2&(E,J),(E,G)&-2\delta^2,-2b\delta^2&4\delta^2\\
+ A_3&(S,J),(S,G)&-2q\delta,2qQ\delta&4q\delta.
+\end{array}
+\]
+Their absolute row sums are at most $r_j$, so $r_jI\pm A_j\succeq0$
+in the source field. Rational arithmetic gives
+\[
+ \sum_jr_j\le3/64+4\delta^2+\delta/2<1/18.
+\]
+Hence $H_0=(1/9-\sum r_j)I\succeq I/18$ and
+$H_j^\pm=(r_jI\pm A_j)/2\succeq0$. Exactly,
+\[
+ \tfrac19I+\sum_j y_jA_j
+   =H_0+\sum_j\{(1+y_j)H_j^++(1-y_j)H_j^-\}.
+\]
+Factor these seven matrices over the source real closed field.
+Only the six fixed testing radicals $\sqrt{1\pm y_j}$ are added;
+no mixed radical, adaptive constant, or source/testing comparison occurs.
+
+\paragraph{The fixed family.}
+Let $\phi_6=(X,Y,W,wW,wZ,pX)$. The roots $g$ are source-linear
+combinations of $\phi_6$. The $42$ functions $\phi_6$ times
+$1,\sqrt{1\pm y_1},\sqrt{1\pm y_2},\sqrt{1\pm y_3}$ span this
+seven-block contribution. Add
+\[
+ pwZ,\ pY,\ pwY,\ wY,\ pwX,\ pW,\ pZ,\ Z,
+                         \quad wZ\sqrt{1-p^2}.
+\]
+These nine functions contain all six baseline roots and all twenty-two
+retained roots. This proves the $51$-function count. The polynomial
+weighted form keeps the seven main vectors on $\phi_6$, six baseline
+vectors, eight grouped selected-positive vectors, and six whole event
+vectors. Their orders sum to $42+8+10+6=66$.
+
+\paragraph{Native source admission.}
+Here the opening numerator is denoted $\pi$ to distinguish it from
+the testing coordinate $p$. For the native C1 formulas put
+\[
+\begin{gathered}
+ r=bz,\quad\theta=1-h,\quad e=xh/\sigma,\quad E_s=1-e>0,
+ \quad K=1+x,\quad R_s=1+xr,\\
+ M=R_s-xz\theta>0,\quad J_s=1+xh-\sigma(1-r)>0,\\
+ P=\sigma+K+\sigma z(1+bx+2xh)+\sigma bx^2hz^2+x^2h\theta z,\\
+ \pi={z(1+xh)E_s+(1-r)(1+xhz)\over2P},\quad
+ l={(1+\sigma r)\{eR_s(1+\sigma z)+ME_s\}\over2P},\\
+ C={Kz(1+\sigma r)E_s\over2(1-r)P},\quad
+ A={\pi\over bz},\quad\alpha={l\over Qz},\\
+ D={K(1+\sigma z)(1+\sigma r)-J_sP\over2J_sP},\quad
+ \beta={K(1+\sigma r)(1+xhz)-\theta P\over2\theta P}.
+\end{gathered}
+\]
+Take $0<x,\sigma\le\epsilon=2^{-30}$, $0<h,b<1$, and the native
+nonnegative $D,\beta$. With $H_0=1+zQ$, $B_s=P+xz(J_s-\sigma)$,
+the source identities give
+\[
+ eB_s=xH_0+\sigma\mathcal H-2PJ_sD/\sigma,
+\]
+\[
+ \mathcal H=R_sH_0+z\{(1-r)xh(2+xr)
+                    -e[2+x(1+h+r\theta)]+Ke^2\}.
+\]
+Initially $0<e<1$, $1\le P\le1+5\epsilon$, $B_s\ge1$,
+$M\ge1-\epsilon$, and $\mathcal H\le4$. Thus $e\le6\epsilon$.
+Consequently
+\[
+ C/z,\ \pi\ \ge{1-6\epsilon\over2(1+5\epsilon)}>3/8,
+ \qquad l\ge{1-\epsilon\over2(1+5\epsilon)}>3/8.
+\]
+For $\pi$ use its numerator $\ge H_0-ze$; for $l$ use its
+numerator $\ge e+M(1-e)\ge1-\epsilon$. These prove the three caps
+without any bound on $H=h/\sigma$, $b^{-1}$, or $Q^{-1}$.
+
+\paragraph{Restoration and literal boundaries.}
+The two exact angle sign gauges give signed $p,w$ through their
+fixed absolute-angle/state-sign map. On $p\ne0$ the physical slack
+for unit states is $\widetilde F/(D_pD_w)$. Multiply every testing function by the
+pure-testing $\kappa_t$, where $\kappa_t^2D_pD_w=1$; this remains
+well-defined at $p=0$. All final vectors are polynomial in state and
+testing coordinates before whole-block gate radicals. Thus $p=0,w=0$
+and every state-coordinate zero are literal specializations. Gate signs
+multiply whole blocks and are harmless. Real and imaginary state parts
+give complex states. This proves a local fixed-family admission theorem
+on an additional testing chart, not a global quantum-set lift.
+\end{document}

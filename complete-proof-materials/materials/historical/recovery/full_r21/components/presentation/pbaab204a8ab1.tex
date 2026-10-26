@@ -1,0 +1,441 @@
+\chapter{A new complete R1 theorem with no source-ratio split}
+\label{component:pbaab204a8ab1}
+\noindent\textbf{Component }\path{pbaab204a8ab1}\par
+{\small\noindent Source: \path{NEW/weak_c2/r1_all_sources_all_tests.tex}\par}
+{\small\noindent SHA256: \path{baab204a8ab1db9336f65126c06bd3c57110f45d4ea11df2ab591f61d25a4ac1}\par}
+{\small\noindent Inventory use: R1N1-R1N24 and all-testing restoration | Only R1N12-24 universal full-current/finite-cap algebra is reused; no original R1 source membership or local theorem is imported\par}
+\medskip
+% New proof, 2026-10-22.  Frozen reconstruction files are not modified.
+\section{A new complete R1 theorem with no source-ratio split}
+\label{pbaab204a8ab1:sec:new-r1-all-tests}
+
+\paragraph{Statement and exact source.}
+Use the original common-II source, with $d=1$, $\lambda=\beta=0$,
+the six native coefficients of the recovered
+\path{weak_c2_source_formulas.tex}, every original strict gap,
+and $n\geq0$.  In the original R1 sector,
+\[
+ t_s,\quad B_s,\quad a_sB_s,\quad t_sB_s>0
+ \quad\hbox{are infinitesimal}.                         \tag{R1N1}
+\]
+There is no bound on $a_s$, on any original positive opening, or on
+the source ratio previously called $q_{\rm old}$.  The conclusion is:
+the entire original parent is a finite separated tensor sum of
+squares at every independent real projective measurement pair and
+every real or complex state.  This proof treats R1 only.
+
+Source and testing quantities belong to separate real closed fields
+$K_c,K_t\supset\mathbb R$.  All SOS assertions are in
+$K_c\otimes_{\mathbb R}K_t$.  We use the actual recovered strict
+bounded-Gram lemma: a bounded finite Gram with positive definite
+real residue gives tensor SOS, with no boundedness requirement on
+its row entries.  No order or mixed inverse is imposed on the
+tensor ring.
+
+Put $c_s=1+a_sB_sr$, $R_s=1+ha_sB_s$, and define
+\[
+\begin{aligned}
+ j&=\frac{a_sc_s}{R_s},\quad B=\frac{B_sR_s}{c_s},\quad
+ T=\frac{t_sc_s}{R_s},\quad p=\frac{a_s(1-r)}{R_s},\\
+ H&=\frac{1-h}{t_sc_s},\qquad x=jB,\quad y=TB,\quad q_z=jT.
+\end{aligned}                                          \tag{R1N2}
+\]
+The native strict gaps give $0<p<\min(1,j)$ and $0<H<1$.
+They also give $1-h<t_sc_s$, so $h\sim1$.
+Consequently $B,T,x,y$ are infinitesimal, while
+\emph{$q_z$ is an arbitrary positive source quantity}.
+In fact $x=a_sB_s$ and $y=t_sB_s$ exactly.
+The inverse source substitution is
+\[
+ r=\frac{j-p}{j+px},\quad h=\frac{1-HT}{1+HTx},\quad
+ a_s=\frac{j+px}{1+HTx},\quad
+ B_s=\frac{B(1+HTx)}{1+pB},\quad
+ t_s=\frac{T(1+pB)}{1+HTx}.                             \tag{R1N3}
+\]
+All arguments below therefore concern the actual original source.
+
+\subsection{Source bounds without a bound on \(jT\)}
+
+The exact dictionary RSR4--RSR6 in the freshly reconstructed
+actual-source and scalar proof remains valid under
+(R1N2)--(R1N3), because it is an exact rational substitution.
+For completeness the two polynomials controlling its denominators
+and current masses are
+\begin{align*}
+ \mathcal P={}&j+1+B\{(j+1)^2-p\}\\
+ &+TB\{Hj+j+1+B[Hj(2j+2-p)+p(2j+1-p)]\}\\
+ &+HjT^2B^2(1+Bp+BHj),\\
+ \mathcal L={}&K+T\{(1-H)j+1-p-H\}\\
+ &+BT[pK+Hj(1-p)]+BHT^2\{(1-H)j-p\},
+ \qquad K=j+1-p .
+\end{align*}
+The estimates
+\[
+ \mathcal P\sim j+1,\qquad \mathcal L\sim K,\qquad
+ \frac12<k:=\frac K{j+1}<1                               \tag{R1N4}
+\]
+use only $T,B,Bj=x$ infinitesimal and $p,H<1$.
+Indeed dividing each correction in $\mathcal P$ by $j+1$ bounds it
+by a finite sum of $B+x$, $TB(1+B+x)$ and
+$T^2B^2(1+B+x)$; dividing $\mathcal L-K$ by $K$ bounds it
+by a finite sum of $T$, $TB$ and $BT^2$.
+In particular no product $jT$ is bounded in this argument.
+
+The exact nonnegative numerator of $n$ has the regrouping
+\[
+ \mathcal N=p\{1+B(3j+1-p)+BT(j+1)\}
+       -Bj(j+1)\{1+(1-H)T\}+\mathcal R ,
+ \quad |\mathcal R|\le C_0BT\,Bj(j+1).                   \tag{R1N5}
+\]
+This is the finite polynomial regrouping RSR8; its coefficient bound
+uses $p<\min(1,j)$ only.  Since
+$n=\mathcal N/[2(j-p)\mathcal P]\ge0$, it follows that
+\[
+ \eta_*:=\frac{Bj(j+1)}p=O(1),\qquad
+ \eta_*\in\mathrm I
+ \Longrightarrow n\sim\frac{p}{2(j-p)(j+1)}>0.           \tag{R1N6}
+\]
+Thus literal $n=0$ is retained.  The same dictionary gives, with
+$\mu=m(1-p)$,
+\[
+\begin{aligned}
+ \mu&=O(p),\quad \mu+\tfrac12\asymp1,\quad
+ \alpha\asymp B^2(j+1),\quad \frac{n(j-p)}j=O(1),\\
+ \frac AT&\sim\frac k2,\quad
+ TCH\sim\frac k2,\quad TD(1-H)\sim\frac k2.
+\end{aligned}                                          \tag{R1N7}
+\]
+All statements are uniform at the independent openings $H$, $1-H$,
+$j-p$, and $1-p$.
+
+Put
+\[
+ g_*=\frac{CD}{C+D},\qquad h_*=\frac D{C+D}.
+\]
+Writing $U_c=TCH$ and $U_D=TD(1-H)$ gives the exact source identity
+\[
+ Tg_*=\frac{U_cU_D}{(1-H)U_c+HU_D}\sim\frac k2.          \tag{R1N8}
+\]
+The denominator is a bounded positive unit even when either opening
+is infinitesimal.  In particular
+$1/C,1/D,1/g_*$ are infinitesimal and
+$Ag_*\sim k^2/4$.  Also $(C+D)^{-1/2}=O(\sqrt T)$.
+
+\subsection{The complete small-angle theorem extends to all R1 sources}
+
+The reconstructed proof \path{fn_reconstructed.tex}, RFN4--RFN24,
+is a full-parent proof, not just a restriction to a scalar graph.
+We now justify its application under the larger source domain
+(R1N1), rather than importing its former domain label.
+
+First, all of its exact identities hold for the rational dictionary
+(R1N3), without any size assumption on $q_z$.  The parent, its two
+normals, their quadratic block, the scalar circuit, the radial Gram
+and the three source cancellation identities were all proved as
+identities of this dictionary.  Second, every uniform source bound
+used in that proof is exactly (R1N4)--(R1N7) or the following scalar
+bound:
+\[
+ f_c\asymp Tx^2,\quad q_c\asymp Tx,\quad
+ r_c\asymp TjB^2(1-p),\quad
+ g_c/f_c=O(Hy),\quad |k_c|/(q_cy)=O(p+B).                \tag{R1N9}
+\]
+To check the latter bounds without $jT\in\mathrm I$, use the explicit
+finite polynomials RSR15 and RSR18: each term of
+$\mathcal F_1/K,\mathcal F_2/K$ is bounded using $p/j<1$
+and $Bj=x$, and $\mathcal K/K=O(p+B)$ by the same inequalities.
+Thus $\mathcal F\sim K$ and all statements (R1N9) follow from
+RSR16--RSR20.  No $jT$ factor occurs in these estimates.
+
+The signed scalar allocation retains the effective mass
+$M_e=nh_0j^2/(n+h_0)$, $h_0=\mu+1/2$, after the complete
+correlated $n$-square completion.  Its three source cases use
+$1-p$ a unit, or $p\sim1$ with $\eta_*$ a unit, or
+$p\sim1$ with $\eta_*$ infinitesimal.  The proofs of these cases use
+only (R1N4)--(R1N9).  In the last case $M_e$ is a unit; in the second,
+$j^2B$ is a unit.  Literal $n=0$ occurs only in the first two cases.
+
+For clarity, the following are all potentially nonuniform costs in
+the complete normal lift, after cancellation of the source factors.
+The symbols $u,v$ denote independent infinitesimal tests.
+\[
+\begin{array}{c|c}
+ \text{purchased row or source case}&\text{bounded diagonal costs}\\ \hline
+ v(u^2-x),\ 1-p\text{ unit}
+       &O(B),\ O(Bu^2),\ O(u^2/(1-p))\\
+ v(u^2-x),\ p\sim1,\ \eta_*\text{ unit}
+       &O(B+u^2/j+u^4/(j^2B)),\ O(Bu^2)\\
+ v(u^2-x),\ p\sim1,\ \eta_*\in\mathrm I
+       &O(u^2/j),\ O(u^4/j),\
+            [8u^4+2(u^2-x)^2]/M_e\\
+ pv^2(v-uz/j),\ \eta_*\in\mathrm I
+       &(p^2/M_e)v^4\\
+ pv^2(v-uz/j),\ \eta_*\text{ unit}
+       &(p^2y/f_c)(yv^2+v^4)
+\end{array}                                                   \tag{R1N10}
+\]
+Every cost is infinitesimal for its stated case.  The source quotients
+$p^2/M_e$ or $p^2y/f_c$ used in the last two lines are bounded by
+(R1N6) and $p<\min(1,j)$.
+
+The full opposite normal row has squared multiplier
+\[
+ a_R=Tq_zv^2(\alpha-BTCHu^2)^2,\qquad
+ J=B(j+1)+u^2 .
+\]
+The occurrence of the possibly unbounded $q_z$ cancels exactly in
+its three cost ratios:
+\[
+ a_R/f_c=O((T/j)v^2J^2),\qquad
+ a_R/(q_cy)=O(v^2J^2),\qquad
+ a_R/(M_eyx)=O\!\left(T(1+1/n)v^2J^2/j^2\right).        \tag{R1N11}
+\]
+The last ratio is used only for $p\sim1,\eta_*\in\mathrm I$,
+where $(1+1/n)/j^2$ is bounded.  In the other two cases the
+direct opposite-current or the $(1+U^2)\Psi$ budget applies exactly
+as in RFN24.  The remaining normal coefficients are bounded
+multiples of $uv\sqrt T$, $T+v^2$ or the rows in (R1N10);
+their estimates require only $B,T,x,y$ infinitesimal.
+This checks all complete first-normal and hard-normal coefficients.
+The variable $z$ remains inside retained rows, with no bound on it.
+
+Consequently RFN4--RFN24 proves the following enlarged local statement:
+for every original R1 source (R1N1), the entire parent is tensor SOS
+when $u,v>0$ are infinitesimal, $w=(W+uY)/(1+u^2)=1$, and
+$z=(Z-uX)/(1+u^2)>0$ is arbitrary.  The complete source-only
+$n$-completion includes $n=0$.  The freshly proved SJ1--SJ10
+state/sign reduction therefore gives every state for these small
+angles, as well as every literal zero-angle and projective endpoint.
+
+\subsection{Outer testing angles: two exact current identities}
+
+We include the outer mechanism and its precise positivity condition.
+Let
+\[
+ R=uW-Y,\quad C_t=v(uX-Z),\quad B_t=X+uZ,\quad
+ N=R+h_*C_t,\quad D_u=1+u^2,\quad D_v=1+v^2,
+\]
+and let $K$ be the signed quarter-core
+\[
+ K=\tfrac12(R+C_t)^2+\tfrac12D_u(vY-Z)^2
+             +\tfrac12D_v B_t^2-\tfrac12D_uD_vZ^2.       \tag{R1N12}
+\]
+All unselected original nonnegative events are kept as whole squares.
+
+If $1/v$ is bounded, use
+\[
+ K_0=2\sqrt{g_*}C_t,\quad
+ B_0=\sqrt{2D_v/D_u}\,B_t,\quad
+ c_u=D_u^{-1/2},\quad t_u=uD_u^{-1/2},\quad
+ \eta_v=\sqrt{D_v}/v .
+\]
+The exact full selected-parent identity is
+\begin{align*}
+ 4CD_vR^2+4D(R+C_t)^2+4K
+ ={}&4(C+D)N^2+4Cv^2R^2+2(R+C_t)^2\\
+ &+2D_u(vY-Z)^2+(K_0,B_0)Q(K_0,B_0)^T,\\
+ Q={}&
+ \begin{pmatrix}
+ 1-c_u^2\eta_v^2/(2g_*)&t_u\eta_v/\sqrt{2g_*}\\
+ t_u\eta_v/\sqrt{2g_*}&1
+ \end{pmatrix}.
+\tag{R1N13}
+\end{align*}
+Since $1/g_*$ is infinitesimal and all the testing factors are bounded,
+$\overline Q=I$.  This treats every other angle and every state,
+including Bob infinity by homogeneous clearing.
+
+For $v$ infinitesimal put $\epsilon=1/g_*$, $q=\sqrt\epsilon$,
+$\gamma=Ag_*$, and
+\[
+ K_1=2\sqrt{g_*}C_t+\sqrt\epsilon Y,\quad
+ B_1=B_t-uvY,\quad V_0=vY,\quad Y_1=\sqrt{\epsilon D_u}\,Y,
+\]
+\[
+ L_0=\tfrac12qc_u(K_1-c_uY_1)-t_uvB_1+c_uvV_0.
+\]
+Then $L_0=\sqrt{D_u}\,v(vY-Z)$ exactly, and
+\begin{align*}
+ &4CD_vR^2+4D(R+C_t)^2+4AD_uD_vY^2+4K\\
+ &\quad=4(C+D)N^2+4Cv^2R^2+2(R+C_t)^2+\mathcal G,\\
+ \mathcal G={}&K_1^2+2D_v(B_1^2+V_0^2)
+ +(4\gamma D_v-c_u^2)Y_1^2\\
+ &+2qv(K_1-c_uY_1)V_0-2L_0^2 .
+\tag{R1N14}
+\end{align*}
+The complete four-root Gram has residue
+\[
+ \operatorname{diag}(1,2,2,\overline{k}^{\,2}
+                                      -\overline{c_u}^{\,2}).    \tag{R1N15}
+\]
+Thus it is strict whenever the last entry is positive.  In particular
+it covers every unbounded $u$, and covers every noninfinitesimal
+$u$ whenever $\overline k=1$.  All coefficients in the identity
+are bounded functions of the displayed normalized homogeneous Alice
+coordinates, so it includes the literal Alice-infinite endpoint.
+
+\subsection{The remaining bounded nonzero Alice chart}
+
+The only outer chart left by (R1N13)--(R1N15) has $v$ infinitesimal,
+$u$ a bounded positive unit, and $\overline k<1$.  Since
+$1-k=p/(j+1)$, this implies that $p,j$ are positive units and $j$
+is bounded.  Therefore $\eta_*\in\mathrm I$ and (R1N6) gives the
+exact relative critical limits
+\[
+ m\sim\frac{jp}{2(1-p)(j+1)},\qquad
+ n\sim\frac{p}{2(j-p)(j+1)}.                              \tag{R1N16}
+\]
+These statements allow either or both coefficients to be unbounded.
+
+Choose bounded positive real caps $m_c\le m$, $n_c\le n$ as specified
+below and keep their nonnegative excesses.  Retain all of $\alpha$
+as its original square.  Define six rows
+\[
+ \widehat N=\sqrt{C+D}(R+h_*C_t),\quad
+ P=C_t/\sqrt T,\quad Y_0=\sqrt T\,Y,\quad
+ X,\quad Z,\quad V=vY.                                  \tag{R1N17}
+\]
+They need not be independent or bounded.  Put
+$\delta=(C+D)^{-1/2}=O(\sqrt T)$, so
+$R=\delta\widehat N-h_*\sqrt T\,P$.
+The selected \emph{entire} parent is exactly
+\begin{align*}
+ \mathcal P_{\rm sel}={}&
+ \widehat N^2+Cv^2R^2+\tfrac12(R+C_t)^2
+       +(Tg_*)P^2+(A/T)D_uD_vY_0^2\\
+ &+m_c\{(v/u)R+(D_u/u)V-X-uZ\}^2+n_cD_uD_vX^2\\
+ &+\tfrac12D_u(V-Z)^2+\tfrac12D_v(X+uZ)^2
+                                      -\tfrac12D_uD_vZ^2 .
+\tag{R1N18}
+\end{align*}
+This is obtained by the exact completion
+$CD_vR^2+D(R+C_t)^2=(C+D)N^2+g_*C_t^2+Cv^2R^2$.
+It keeps every state-normal term.
+
+The row relation
+\[
+ PY_0=V(uX-Z)                                            \tag{R1N19}
+\]
+allows an arbitrary real zero shift
+$2b(PY_0-V(uX-Z))$.  Keep the two explicitly nonnegative squares
+$Cv^2R^2$ and $(R+C_t)^2/2$ whole.  The remaining complete Gram
+on (R1N17) is bounded: $u,1/u$ are bounded, $Tg_*,A/T$ are
+units, and the $R$ contribution in the $m_c$ square has coefficients
+$\delta v/u$ and $h_*\sqrt T v/u$, both infinitesimal.
+Its residue is the direct sum of a unit pivot and the two blocks
+\[
+ \begin{pmatrix}k_0/2&b\\b&k_0(1+u_0^2)/2\end{pmatrix},\qquad
+ Q_3(m_c,n_c;b),                                        \tag{R1N20}
+\]
+where subscripts denote real residues and $Q_3$ is the quadratic
+form in $(X,Z,V)$
+\begin{align*}
+ Q_3={}&m_c\{(D_u/u)V-X-uZ\}^2+n_cD_uX^2\\
+       &+\tfrac12D_uV^2-D_uVZ+\tfrac12(X+uZ)^2
+                                            -2bV(uX-Z).
+\tag{R1N21}
+\end{align*}
+In (R1N21), $u=u_0>0$ is real.  The choices of $b,m_c,n_c$
+that make both blocks strict are now explicit.
+
+\paragraph{Interior openings.}
+Suppose $p_0<1$ and $j_0>p_0$.  Use initially
+$m_0=j_0p_0/[2(1-p_0)(j_0+1)]$ and
+$n_0=p_0/[2(j_0-p_0)(j_0+1)]$, and take $b=k_0/2$.
+The first leading principal minor of $Q_3$ is
+$m_0+n_0D_u+1/2>0$; the other two are
+\[
+ \frac{p_0u_0^2D_uK_0}
+      {4(j_0-p_0)(j_0+1)^2(1-p_0)},\qquad
+ \frac{p_0u_0^2D_uK_0^2}{8(j_0-p_0)(j_0+1)^3},          \tag{R1N22}
+\]
+where $K_0=j_0+1-p_0$.  They are positive.
+The first block in (R1N20) has determinant
+$k_0^2u_0^2/4>0$.  Positive definiteness is open, so fixed
+real caps slightly below $m_0,n_0$ preserve strictness and are
+smaller than the actual source coefficients.
+
+\paragraph{Only the \(n\) opening is infinite.}
+If $j_0=p_0<1$, then $n$ is unbounded and
+$m_0=j_0^2/[2(1-j_0)(j_0+1)]$ is finite positive.
+At $b=k_0/2=1/[2(j_0+1)]$, restrict (R1N21) to the kernel
+$X=0$ of the $n$ packet.  Its first diagonal on $(Z,V)$ is
+$u_0^2(m_0+1/2)>0$, and its determinant is
+$u_0^2k_0^2/4>0$.  Choose $m_c<m_0$ sufficiently close and
+then a sufficiently large fixed real $n_c$.  The whole block is
+strict, with both caps below the original weights.
+
+\paragraph{Only the \(m\) opening is infinite.}
+If $p_0=1<j_0$, then $m$ is unbounded and
+$n_0=1/[2(j_0^2-1)]$ is finite positive.
+Take a real $b$ just above $k_0/2=j_0/[2(j_0+1)]$, with
+\[
+ b<\min\{k_0\sqrt{D_u}/2,\ j_0/[2(j_0-1)]\}.
+\]
+This interval is nonempty.  The first block in (R1N20) is strict.
+On the kernel $(D_u/u)V-X-uZ=0$ of the $m$ packet, use $(X,V)$
+coordinates.  The first diagonal of (R1N21) is
+$D_u/[2(j_0^2-1)]>0$, and its determinant is
+\[
+ -\frac{D_u^2[\,2b(j_0-1)-j_0\,][\,2b(j_0+1)-j_0\,]}
+        {4u_0^2(j_0^2-1)}>0.                            \tag{R1N23}
+\]
+Choose $n_c<n_0$ sufficiently close and then a sufficiently large
+real $m_c$.  This gives the required full strict block.
+
+\paragraph{Both openings are infinite.}
+If $p_0=j_0=1$, both $m,n$ are unbounded and $k_0=1/2$.
+Choose
+$1/4<b<\sqrt{D_u}/4$.
+The common kernel of the two event packets is
+$X=0$, $Z=D_uV/u_0^2$.  On it the rest of (R1N21) is exactly
+\[
+ \frac{D_u(4b-1)}{2u_0^2}V^2>0.                        \tag{R1N24}
+\]
+A sufficiently large real cap on both packets therefore gives
+a strict block.
+
+The elementary finite-cap fact used in these cases is as follows:
+if a real positive semidefinite event Gram is positive definite on
+the complement of its kernel, and the remaining real quadratic
+form is positive definite on that kernel, a sufficiently large
+real multiple of the event Gram makes their sum positive definite.
+It follows by a block Schur complement, and works for the sum of
+two event Grams as well.  Thus the choices above prove strictness
+of the \emph{complete} bounded Gram (R1N18), without restricting
+any normal or state coordinate.
+
+\subsection{Exhaustive testing and state join}
+
+The sign gauges SJ3 preserve every original source packet and the
+whole core, so affine $u,v$ may be taken nonnegative.
+If $v$ is not infinitesimal, (R1N13) applies.
+If $v$ is infinitesimal and $u$ is not infinitesimal, either
+(R1N15) applies or the complete six-root argument
+(R1N16)--(R1N24) applies.  These cases exhaust the outer angles.
+If $u,v>0$ are both infinitesimal, the enlarged local FN theorem
+proved above applies after SJ's full-state reduction to $w=1,z>0$;
+SJ gives the other state signs and the axes directly.
+Literal homogeneous measurement endpoints are given by SJ10 or
+the homogeneous current identities, without a limiting argument.
+The zero state is immediate.  For a complex state, the real
+parent matrix splits its value into its real and imaginary
+quadratic evaluations, to which the same proof applies.
+
+Restore every capped excess, the original $n,m,\alpha$ packets
+not used in a particular chart, and all cleared positive pure
+testing homogeneous factors.  All normalizations, radicals and
+inverses are pure source or pure testing.  This proves the
+complete original R1 source row at all independent tests and
+states, without a source-ratio split or a comparison of source
+and testing rates.
+
+\paragraph{Verification scope.}
+The companion checker verifies the exact source-coordinate map,
+the harmonic source identity, both full outer-current identities,
+the new full six-root parent representation, the zero relation,
+all positive-minor and kernel formulas, and their original
+source coefficients.  The source bounds and exhaustive chart
+argument above are analytical.  This theorem uses actual complete
+source and FN proof texts, not a historical status receipt.
+It makes no assertion about the still-separate R2--R4 rows.

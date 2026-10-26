@@ -1,0 +1,63 @@
+{
+  "named_exact_checks": {
+    "root_identity_audit": 31,
+    "root_boundary_identity_audit": 37,
+    "root_native_entry_audit": 3,
+    "positive_scale_independent": 34,
+    "strong_c2_independent": 53,
+    "unbounded_b_identity_audit": 34,
+    "local_identity_audit": 148
+  },
+  "total": 340,
+  "all_requested_checks_passed": true,
+  "bounded_a_count_rule": "Six BA checks are already included in the weak-C2 148, not added again.",
+  "supplemental_boolean_tables": {
+    "tables": 3,
+    "assignments_per_table": 128
+  },
+  "scope": "Targeted exact algebra; not a formal verification of the entire theorem.",
+  "portable_program_changes": [
+    {
+      "program": "root_identity_audit.py",
+      "original_sha256": "a7e6c17dcb6da7bc206a7f8d34555ce59c7a40fadedb3e37db9fd6977bd48132",
+      "portable_sha256": "8f7e2c8aa32542c7178cc8dd774dbf5cc795bafa482eae960c4b323745b815a0",
+      "change": "Removed the transient session-specific sys.path line, if present; mathematical code unchanged."
+    },
+    {
+      "program": "root_boundary_identity_audit.py",
+      "original_sha256": "9a8b1548f08354347997a85beacbe058858320e44543e43469877094617588aa",
+      "portable_sha256": "b617f5078c8539c293820e8d4dde99308e79683a1f07eb62fa168ef814c7661e",
+      "change": "Removed the transient session-specific sys.path line, if present; mathematical code unchanged."
+    },
+    {
+      "program": "root_native_entry_audit.py",
+      "original_sha256": "769a7bf5fa9c7773ca71b8d0559350a27384be075ba1fe3ab0bf969c9a72a255",
+      "portable_sha256": "546d77b8ff7cdbb0746b382828dfa395fbec4d5d4f8cdb20170d948baf73a873",
+      "change": "Removed the transient session-specific sys.path line, if present; mathematical code unchanged."
+    },
+    {
+      "program": "positive_scale_independent.py",
+      "original_sha256": "fabf027bd6055914937bdb41bbcfec4899c4b1a40f9ba2e3cd84bc3fc682edc7",
+      "portable_sha256": "4a4568c573f6cf39ed4c1ae8ba9ec5378e6c013c0a78b78e85f1722d25f5765b",
+      "change": "Removed the transient session-specific sys.path line, if present; mathematical code unchanged."
+    },
+    {
+      "program": "strong_c2_independent.py",
+      "original_sha256": "3f1dde62b1b867c26867acba299d5b8ab9a1f31d87c877b650d31ac4549190dd",
+      "portable_sha256": "eb95beb4253e2d2b825166616138d8e3ad6da9e463134edb7a219c638b0cf6b8",
+      "change": "Removed the transient session-specific sys.path line, if present; mathematical code unchanged."
+    },
+    {
+      "program": "unbounded_b_identity_audit.py",
+      "original_sha256": "320b73a73a3cc9e511ec9c8c458cd49ef50027714d3f3dbefe623d9029072a0a",
+      "portable_sha256": "320b73a73a3cc9e511ec9c8c458cd49ef50027714d3f3dbefe623d9029072a0a",
+      "change": "Removed the transient session-specific sys.path line, if present; mathematical code unchanged."
+    },
+    {
+      "program": "local_identity_audit.py",
+      "original_sha256": "ec6cb50a0f531bd974026feac985d2df628be0acd7ccba7280da3be5be2a3cda",
+      "portable_sha256": "abca2879860e8734962078a2a4e3e42fe291bdae1c946bc12730430f4d8e49b4",
+      "change": "Removed the transient session-specific sys.path line, if present; mathematical code unchanged."
+    }
+  ]
+}

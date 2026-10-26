@@ -1,0 +1,189 @@
+Q222 — current verified delivery, 23 October 2026, 01:26 UTC
+
+PUBLIC STATE
+Repository: https://github.com/anubhav70747/q222-finite-sdp
+HEAD: b4e2e904607c814cb8c732f4b2aac1666b45aba9
+Latest commit: Reduce ramified selectors to endpoint and contact constraints.
+Previous commit16b37f6 contains assembly and exact counterexample/enlargement.
+All 332 public files downloaded and byte-compared to committed Git blobs.
+82 canonical provenance files checked; all other provenance families checked.
+All 19 Overleaf TEX members match public sources. Git working tree clean.
+Complete ZIP: delivery-human/Q222_Complete_Scientific_Package.zip
+Bytes 14081246.
+SHA256 33341bfca43db8c429b89f294b240d8df2cbad54a5ebf34b8155c7ad8a0a7939.
+Full report: analysis/exact-lift-2026-10-23/public_upload_verification.json.
+
+The full eight-coordinate exact affine pencil is NOT extracted yet.
+Active goal: complete exact finite lift with minimum usage and update git.
+Do not mark complete or replace this target with an inner canonical cone.
+
+READING ORDER
+Article 7 pages, original complete companion 343 pages, Explicit_Lifts 10.
+Accepted main abstract untouched, hash:
+ac7edca81f30c5ee10ca91e378b2f34253cc7bc83dca3790ca3c42e6af80a5eb
+New full-polar assembly 3 pages, ramified counterexample/regularity 6 pages.
+Endpoint/contact lemma2pages, compiled clean and both rendered pages inspected.
+Canonical completion 5 pages; half-line 4 pages; multiplier obstruction 3.
+All new/changed rendered pages visually inspected; clean compilations.
+The three-page theorem is the canonical-to-full assembly, not a replacement
+for all 343 singular-case pages. Main/companion/Overleaf unchanged.
+
+DECISIVE NEW MATHEMATICS
+Let Ccan={c>=0: Mc is a valid full Bell slack}, c=(d,lambda,n,m,C,A,D,alpha,beta).
+Let E be the positive-event cone d=0.
+For every closed convex E subset K subset Ccan, PK=sum_g Mg K is closed,
+PK intersect M(R_+^9)=MK, and QK=Q222 iff K=Ccan.
+Thus other CHSH orientations CANNOT repair a missing canonical certificate.
+Proof uses the eight PR vertices, their pairwise local midpoints,
+nonnegative canonical event weights and theta=d/d0; sources bounded by
+the constant coefficient sum(c).
+Canonical map det=-32. Eight sign maps R=diag(1,r0,r1,s0,1,r0s0,r0,r1s0,r1).
+No input swaps needed. Exact maps/inverse and 28 midpoint decompositions
+are in canonical-completion/full-polar/full_polar_maps.json.
+A strictly feasible exact canonical L(c,y)=A c+B y gives K*={A*Y:Y>=0,B*Y=0}
+without closure; the trace bound proves closedness of the full adjoint image.
+Eight copies A*Yg=Mg^T(1,q), B*Yg=0 assemble the full lift iff K=Ccan.
+Rational map/adjoint elimination and literal Slater witness published.
+
+ORDER-33 CONE IS NOW PROVED INADEQUATE
+Quadratic J(v)=J0+vJ1+v²J2, v>=0, with
+SG=[[G0,BG],[BG^T,G2]], SH=[[H0,BH],[BH^T,H2]],
+TG=G1-BG-BG^T, TH=H1-BH-BH^T all PSD.
+Blocks8,8,4,4 +9scalar signs total33; 44aux.
+Original arrays full symmetric COO: do not mirror/double entries.
+Earlier source (359,0,0,75/16,60,416,41/2,831/2,151/2)
+has its exact half-line rescue, but a DIFFERENT valid source defeats the cone:
+cbar=(1,2^-34,2^-14,2^-24,1/576,161,1/2,76,1/250).
+All nine coefficients positive. Exact dual:
+ell=-23803618d+906393494300170lambda+2744379904n+
+1378590360912m+5935589516C+20425A+2600028D+91248alpha+278104928beta.
+ell(cbar)=-5417798011632274183/9663676416000 < -560635.
+2^-42 ell equals the sum of six PSD moment pairings; all44aux cancel.
+Fresh rational LDL and direct contraction against BOTH original COO arrays
+verified by independent agent. Growth |Jij|²=O(v4) implies every polynomial
+half-line selector has degree<=2: this excludes ALL polynomial degrees.
+Physical validity: cbar>=cstar with d unchanged, cstar's full4-state determinant
+has four positive AMGM circuits plus a strict transverse block.
+Full exact source and identities are in ramified-completion/reused/.
+Old full order264/384aux wrapper is therefore strictly larger than Q222.
+
+RAMIFIED ORDER49 CONE — ACTUAL PENCIL, UNIVERSAL COVERAGE STILL OPEN
+v=16s²,s>=0, J(s)degree<=4 adds sqrt(v),v^(3/2) selector terms.
+For Q=G,H:
+Q(s)=Z2(s)^T A_Q Z2(s)+s Z1(s)^T B_Q Z1(s),
+Z2=(I;sI;s²I), Z1=(I;sI).
+Blocks12,8,12,8+9signs total49; 148aux,411upper-triangular records;
+no residual coefficient equations. This is DISTINCT from angular order49.
+Array conventions: source signs FIRST, offsets9,21,29,41; mirror
+upper-triangular offdiagonals once (unlike older full COO).
+Exact certificates rescue BOTH cstar and cbar; positive core LDL pivots>2^-18.
+C33 strictly contained Cram contained Ccan. Equality Cram=Ccan unproved.
+C33 embeds by A0=[[Q0,0,16B],[0,16T,0],[16B^T,0,256Q2]], Bnew=0.
+The compact cover has40 source-independent scalar functions, v=16epsilon(rho/tau)^4,
+rho²+tau²=1,rho,tau>=0,kappa=sqrt(tau8+256rho8), kappa²>=1/8.
+The represented target is a1² Fh (NOT Fh); continuity recovers a1=0.
+Both angle signs and all projective endpoints included; functions bounded.
+Independent raw physical-state expansion checks 157basis identities x2 signs.
+
+NEW RAMIFIED REGULARITY
+W=diag(H3 tensor I4,H2prime tensor I4,repeat), H3_ij=1/(i+j+1),
+H2prime_ij=1/(i+j+2). W>=I40/381.
+<W,diag(AG,BG,AH,BH)>=integral0^1 tr(G(16s²)+H(16s²))ds
+=(2088/5)sum(c). All148aux cancel.
+Gramtrace bounded -> everyaux bounded by fixed coefficient recovery -> closed cone.
+Literal strict feasible point c0=(1/100,1,...,1), L49>=I49/100.
+Derivation: embed old strict point with A0>=8I12/25; Bnew=I8/100,
+A01=A12=-I4/200; Anew>=31I12/100.
+Auxrank148, fulladjoint157; core228coords ->80free/copy.
+Eight-copy outer order392,640aux. Exactness equivalent to Cram=Ccan.
+No huge392pencil export until coverage resolved; exact canonical arrays and
+general assembly suffice.
+
+ORIGINAL AND PUBLIC ARTIFACTS
+Original received ZIP:
+C:/Users/anubh/Downloads/Q222_Halfline_Order33_Counterexample_and_Order49_Enlargement.zip
+SHA256 2a02c671858f83e2c11f6a8d05ea6a3ddb70004f98658a6a297362d6b0596079.
+Original26files preserved unchanged:
+analysis/exact-lift-2026-10-23/pro-order33-obstruction/Q222_Halfline_Counterexample
+Completed response saved beside them as completed_pro_response.json.
+Public copy: extracted-lifts/canonical-completion/ramified-completion/
+Public prose shortened/streamlined, stale endpoint filename corrected,
+regularity appendix and independent checkers added; core data unchanged.
+Public SHA256SUMS and parent PROVENANCE updated.
+All reproduction scripts rerun from public paths without numerical solvers:
+reproduce.py, three independent checks, full-polar map --check and Slater checker.
+
+PRO STATUS — DO NOT DUPLICATE
+Existing authorized chat Recover manuscript:
+https://chatgpt.com/g/g-p-6a5a4eadb338819187059a43e8937c1f-sdp-representability/c/6ada2928-d9d8-83eb-a982-a73ce2b936b3
+Previous completed user21bdbfcb-5b3c-422d-9859-c77974e67420,
+assistant0351f526-2455-556c-bcdf-34bc02dca6ad fully downloaded and audited.
+ONE new task sent through UI at approximately01:15UTC23Oct.
+Prompt: analysis/exact-lift-2026-10-23/next_ramified_adequacy_task.txt
+Screenshot: ramified_adequacy_sent.png. UI shows Pro, Stop, Working for10s,
+and new acknowledgment: focus on whether fixed quartic selector covers
+every valid canonical source. Browser tab4, browser2, proofChat binding.
+Marked handoff. After compaction call cua.rewriteDocumentation().
+The read_thread tool at01:17 still returned OLD idle completed response;
+this is stale relative to the visibly running UI. New turn ID not yet known.
+DO NOT resend based on that stale idle result.
+New prompt shares public commit, exact no-rescue assembly, moment weight,
+Slater and ranks; asks use R21/library to prove universal ramified coverage
+or derive a genuinely justified uniform family. No speculative degree ladder,
+no expensive sweep, no repeating completed maps/regularity.
+Inspect eventual response, audit quantifiers and all singular dependencies
+before integrating any full-set claim.
+
+SUBAGENTS
+q222_existence_audit completed exact separator/validity.
+short_proof_critic completed compact functions, all affine identities and endpoints.
+q222_alternative_existence completed assembly/regularity, then received
+a NEW bounded task this turn: one purely analytical attempt on universal
+quartic selection, or a precise interior-contact obstruction.
+No numeric sweep; independent of Pro; completed at01:22 and audited by root.
+Public2page note Q222_Selector_Contacts.pdf, source proof/selector_contacts.tex.
+All agents now completed. New details below.
+Original review files are in analysis/exact-lift-2026-10-23/order33-independent/.
+
+CONTINUATION
+Do not rerun one-shot staging scripts: public sources include later manual edits.
+verify_public_update.py reusable only after clean commit/push; it downloads and
+byte-checks all committed files and rebuilds the complete scientific ZIP.
+Keep the goal active. User authorized public uploads and Pro/library delegation.
+Next mathematical step is uniform canonical adequacy or a rigorously necessary
+enlargement, not more identity counts or retesting completed data.
+No new universal existence/complete-pencilextraction claim was made this turn.
+Previous state preserved in analysis/exact-lift-2026-10-23/CURRENT_STATE_before_ramified_publication.txt.
+
+NEW ENDPOINT/CONTACT LEMMA
+Public ramified-completion/Q222_Selector_Contacts.pdf, two pages.
+Every diagonal has form4(a+256b s4), nonnegative a,b explicit in all9sources.
+PSD minors force entry exponents between half summed zero-orders at0
+and half summed degrees at infinity; zero diagonal kills its whole row.
+Apply simultaneously to J in G and R=K-E-J in H, retaining zero source faces.
+On C1 lambda=n=0,d,m,C>0:
+J11=p2s2+p3s3+p4s4, J12=q4s4,
+J21=r0+r1s+r2s2+r3s3+r4s4, J22=l2s2+l3s3+l4s4.
+Thus only four added coefficients over unramified8: p3,l3,r1,r3.
+D0 forces J12=0 and J22=l2s2+512d s4.
+beta0 forces degreeJ21<=2 and sameJ22; bothzero force J22=512d s4.
+At physical contact U0>0,s0>0, g=(a,U0b),h=(a,b), Gg=Hh=0.
+Jb=-(P+K)a/U0, J^T a=-U0(N+K)b; nonzero a,b leave
+one scalar freedom t a_perp b_perp^T. Zero-vector cases supplied.
+First derivative constrains g^T G' g=0 (not G'g=0).
+Full kernel second Schur jet is necessary, not sufficient:
+V^T M'' V/2 - (T^T M' V)^T (T^T M T)^-1 (T^T M' V) >=0.
+One-sided endpoint and reversed-polynomial infinity cases supplied.
+Root independently derived/checked all table entries, C1 zero faces,
+value-map rank and derivative caveat. No universal coverage claim.
+
+LATEST PRO OBSERVATION
+At01:25UTC UI still visibly Working for9m2s, Stop control present.
+Acknowledgment specifically targets fixed quartic universal coverage.
+Progress text mentions checking contacts, source faces, singular-case proofs,
+fixed families, determinant Laurent cone and cone invariance.
+No new prompt was sent after initial dispatch. New contact lemma has NOT
+been sent to the running task; share only after its response if useful.
+Initial dispatch referred to16b37f6; latestpublic b4e2e90 adds thecontactnote.
+Read_thread was stale last checked; prefer current UI until it catches up.
+Goal remains active; all public changes are pushed and byte-verified.

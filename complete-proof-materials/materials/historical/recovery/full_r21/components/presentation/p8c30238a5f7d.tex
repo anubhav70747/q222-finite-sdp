@@ -1,0 +1,181 @@
+\chapter{C14.4: extend the unmatched-Bob certificate to the entire small-$e$ source}
+\label{component:p8c30238a5f7d}
+\noindent\textbf{Component }\path{p8c30238a5f7d}\par
+{\small\noindent Source: \path{BASE/proofs/c144/small_e_unmatched_bob.tex}\par}
+{\small\noindent SHA256: \path{8c30238a5f7d19fdf1af94dbe933a8b34954519c3ca740740a4ad22844e6602f}\par}
+{\small\noindent Inventory use: SE1--SE12 | SE source bounds and complete unmatched Bob all-state exit | SE1-SE12: source scope and complete unmatched-residue/adjacent-C,A joins\par}
+\medskip
+\section{C14.4: extend the unmatched-Bob certificate to the entire small-$e$ source}
+\label{p8c30238a5f7d:sec:recovery-c144-small-e}
+
+This is a partial-domain theorem. It retains the original physical C14.4
+source, all strict gaps, nonnegative event weights, the original total-scale
+and prior-complement intersections, and independent source and testing fields.
+Its source has $x,L>0$ infinitesimal, $\zeta=L/x$ noninfinitesimal and
+$\eta$ unbounded. Write $\sigma=1/\eta$, $S=\sigma+L$ and
+\[
+ e=\frac{xh}{\sigma},\quad E=1-e,\quad
+ \kappa=\frac{x}{S},\quad \nu=\frac{\sigma}{S},\quad
+ \ell=\frac{L}{S},\quad \nu+\ell=1.
+ \tag{SE1}
+\]
+The letter $\kappa$ in this section denotes $x/S$, not the different
+coefficient denoted by $\kappa$ in the R19 reciprocal-$L$ chart.
+All source inequalities are taken in the coefficient field. Real residues
+are compared only after taking residues separately in the two fields.
+
+\paragraph{The exact source input.}
+Use ES1--ES10 from the retained R13 source proof. In particular
+$1/18\le E<1$, $0<h,r<1$, $\theta=1-h$, and
+\[
+\begin{gathered}
+ J=1+xh-\sigma(1-r),\qquad M=1+xr-\theta/\zeta>0,\\
+ Q=1-Lr,\quad H_0=1+L(1-r),\quad B=P+x(J-\sigma),\\
+ P=\sigma(1+L+2xh+rxL+rx^2h)+(1+x)L+x^2h\theta,\\
+ \mathcal H=(1+xr)H_0+(1-r)xh(2+xr)
+       -e\{2+x(1+h+r\theta)\}+(1+x)e^2.
+\end{gathered} \tag{SE2}
+\]
+The opening-safe sphere identities are
+\[
+\begin{gathered}
+ 2\theta P\beta=hB-\sigma H_0,\qquad
+ d_0^2+b_0^2=1,\quad d_0,b_0\ge0,\\
+ D=\frac{\sigma^2\mathcal H}{2PJ}d_0^2,\qquad
+ x\theta\beta=\frac{\sigma^2\mathcal H}{2P}b_0^2,\\
+ e\frac BS=\kappa H_0+\nu\mathcal H b_0^2,\qquad
+ e^2\frac BS=\kappa(eH_0+h\mathcal H b_0^2).
+\end{gathered}\tag{SE3}
+\]
+Here $P/S\sim1$, $J,Q,H_0\sim1$, $B/S-(1+\kappa)$ is
+infinitesimal, and $\mathcal H-E^2$ is infinitesimal. In particular
+$B/S$ and $\mathcal H$ are positive bounded units. These estimates
+are the already admitted ES bounds; they do not use bounded $\eta$.
+
+\paragraph{Source dichotomy.}
+On the entire C14.4 source,
+\[
+ e\text{ is infinitesimal}\quad\Longleftrightarrow\quad
+ \kappa=x/S\text{ is infinitesimal}.\tag{SE4}
+\]
+Indeed the first nonnegative sum in SE3 gives $\kappa=O(e)$,
+and the second gives $e^2=O(\kappa)$. Both implications are
+ordered-field statements entirely inside the source field.
+
+Suppose $e$ is infinitesimal. If $\zeta$ is unbounded, then
+$\theta/\zeta$ is infinitesimal and $M\sim1$ directly. If $\zeta$
+is a positive bounded unit, then the exact relation
+\[
+                  \ell=\zeta\kappa\tag{SE5}
+\]
+gives $\ell$ infinitesimal and $\nu\sim1$. Consequently
+$B/\sigma\sim1$. Since $\beta\ge0$, the first identity of SE3
+implies $hB\ge\sigma H_0$, whence $h\sim1$ and $\theta$ is
+infinitesimal. Thus $M\sim1$ in this case as well. We have proved,
+uniformly on the whole small-$e$ source,
+\[
+                    E\sim1,\quad M\sim1,\quad m\in\operatorname{Inf}_{>0}.
+                    \tag{SE6}
+\]
+For the last statement use the exact original coefficient
+\[
+ m=\frac{(1+x)(1+\sigma r)eS}{2M\zeta P};\tag{SE7}
+\]
+$1/\zeta$ is bounded and every other coefficient apart from $e$ is
+bounded, including the reciprocal of $M$ just proved to be a unit.
+No assumption on the ratio of a source infinitesimal to a testing
+infinitesimal occurs.
+
+The two nonnegative terms in the first sum in SE3 imply
+$\nu b_0^2$ infinitesimal. Hence the exact sphere formula and the
+exact formula for $\alpha$ yield
+\[
+ \frac DS-\frac{\nu^2}{2}\in\operatorname{Inf},\qquad
+ \frac\alpha S-\frac{\ell^2}{2}\in\operatorname{Inf},\qquad
+ SC(1-r)\sim\tfrac12,\qquad SAr\sim\tfrac12.\tag{SE8}
+\]
+For clarity the second formula is obtained without dividing by $\ell$:
+\[
+ \frac\alpha S=
+ \frac{(1+\sigma r)\{\ell(1+xr)e+\ell^2ME\}}
+      {2Q(P/S)}.\tag{SE9}
+\]
+These are additive bounded residue estimates, including $D=0$ whenever
+that boundary has points in the stated domain. They do not assert a
+relative estimate at a vanishing pivot.
+
+\paragraph{Theorem: every unmatched Bob residue on the small-$e$ source.}
+Let $e$ be infinitesimal. In the testing field choose normalized homogeneous
+Bob coordinates $(c,s)$ with $c^2+s^2=1$. For every independent projective
+test and every real or complex state satisfying
+\[
+                         \overline{s^2}\ne\overline\ell,\tag{SE10}
+\]
+the complete original C14.4 parent is a finite sum of squares in
+$K_c\otimes_{\mathbb R}K_t$.
+
+\paragraph{Proof with the complete parent retained.}
+Noninfinitesimal Alice tests use the unchanged adjacent-$C,A$ theorem:
+SE8 and $S$ infinitesimal imply that both $C$ and $A$ are unbounded.
+For infinitesimal or zero $u$, apply the exact EB3--EB7 homogeneous
+frame from the retained R18 proof. Those formulas are algebraic identities;
+their only source-limit inputs to the bounded-Gram proof are precisely
+$m$ infinitesimal and SE8, now established on the larger source domain.
+To make the imported implication explicit, put
+\[
+ H=S(C+A),\quad \rho=\frac C{C+A},\quad a_h=\frac{SCA}{C+A},
+ \qquad p=\frac{uW}{\sqrt S},\ q=\sqrt S Z,\ y=\frac Y{\sqrt S}.
+\]
+Then $1/\sqrt H$ is bounded, $0<\rho<1$, $a_h\sim1/2$, and
+the harmonic normal $N_y=\sqrt H(y-\rho p)$ can be substituted
+by $y=\rho p+N_y/\sqrt H$ with bounded source coefficients.
+The remaining normals are the EB4 $N_m,N_b,N_r$, with only pure-field
+radicals and the positive testing denominators $1+u^2$ and $1+u^2s^2$.
+The exact full quarter-parent is EB7,
+\[
+ N_y^2+a_hp^2+ASu^2y^2+M_B^2+D_B^2+A_B^2+\beta(X+uZ)^2
+                         +\tfrac12 K_B.\tag{SE11}
+\]
+All EB5 core terms and all EB6 event amplitudes are retained. In particular
+no state graph is imposed and neither first-normal coupling is removed.
+The two positive rows $ASu^2y^2$ and $\beta(X+uZ)^2$ are left whole.
+On the other six roots $(N_y,N_m,N_b,N_r,p,q)$ the bounded Gram has
+residue equal to $\operatorname{diag}(1,1,1/2,1/2)$ plus the scalar block
+\[
+ \frac12\begin{pmatrix}
+ 1&-\bar s\bar c\\
+ -\bar s\bar c&\bar\nu^{\,2}\bar s^{\,2}
+                            +\bar\ell^{\,2}\bar c^{\,2}
+ \end{pmatrix}.
+\tag{SE12}
+\]
+Its determinant is $(\overline{s^2}-\bar\ell)^2/4$, so SE10
+makes this finite coefficient Gram strictly positive definite. The
+separated bounded-Gram lemma supplies tensor SOS; restoring the two
+whole rows gives the complete parent. The exact homogeneous formulas
+allow $c=0$, $s=0$ and $u=0$. Signs and real/imaginary state parts are
+handled exactly as in EB, and the original positive source and testing
+normalizations are pure-field factors. This proves the stated domain.
+
+\paragraph{New part, and exact retained complement.}
+Unbounded $\zeta$ already forces $\kappa\le1/\zeta$ infinitesimal,
+so the new theorem contains the entire R18 unmatched-residue admission.
+Its additional domain is $\zeta$ a positive bounded unit, $e$
+infinitesimal, and Bob sine square with nonzero residue; this includes
+Bob infinity. In this added domain $\ell$ has zero residue, so the
+remaining Bob chart is exactly finite infinitesimal $v$ (including zero,
+which may be handled by independent literal-axis exits).
+
+After all these admissions, the C14.4 remainder is contained in the union
+of (i) $e$ infinitesimal and matched Bob residue, and (ii) $\zeta$ a
+positive bounded unit and $e$ a positive bounded unit. All original
+intersections remain in both. In case (ii), SE7 shows that $m$ has a
+positive real lower bound, while its upper bound may diverge through
+$M=0$. This is a source estimate, not a full-parent certificate. Neither
+remaining domain is declared empty or closed. C14.4 and U1 remain open.
+
+\paragraph{Verification scope.}
+The new checker verifies the source rescalings and exact identities used
+above. The seven EB identities are replayed separately from an unchanged
+temporary copy. Their algebra does not by itself prove the source bounds,
+strictness, or universal scope; those are the arguments just given.

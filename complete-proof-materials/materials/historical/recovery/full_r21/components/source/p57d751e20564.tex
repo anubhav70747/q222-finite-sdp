@@ -1,0 +1,101 @@
+\section[A sharper source bound on the L-unit, eta-large face]{A sharper source bound on the remaining $L$-unit, $\eta$-large face}
+\label{sec:r7-c1-L-unit-eta-large-frontier}
+
+This section proves a source restriction and a leading quadratic
+identity.  It does not claim the remaining full-parent admission.
+Use the unchanged native notation with $x\in\Inf_{>0}$,
+$L=x\zeta$ a positive unit, and $\eta$ unbounded.  Write
+$\theta=1-h$ and $K=1+x$.
+
+In the exact polynomial $B_5=a_2\eta^2+a_1\eta+a_0$, substitution
+$\zeta=L/x$ gives
+\[
+ a_2=-xh\{KL+x\theta(1+xh)\},\qquad a_1=xb_1,
+                                                               \tag{LH1}
+\]
+where
+\[
+\begin{split}
+ b_1={}&-Lhrx-Lh-Lr+L-h^2rx^2+h^2rx-3h^2x\\
+       &-2hrx+hx-3h+1,
+\end{split}
+\]
+and
+\[
+ a_0=Kr+(1-r)\{1+L+2xh+rxL+rx^2h\}.
+\]
+Both $b_1$ and $a_0$ are bounded uniformly in every source opening,
+while $KL+x\theta(1+xh)$ has a positive-unit lower bound.
+The original $B_5\ge0$ inequality therefore implies
+\[
+ x\eta h\le O(x)+O(\eta^{-1})\in\Inf,
+ \qquad\boxed{E=1-x\eta h\sim1.}                       \tag{LH2}
+\]
+This is stronger on this face than the global bound $E\ge1/18$.
+It does not require $x\eta$ bounded.  In particular it is not
+legitimate to infer $x\eta^2h=O(1)$ from (LH2); the exact available
+bound is $x\eta^2h=O(x\eta)+O(1)$.
+
+The corresponding opening-cleared leading source weights are
+\[
+ C_0=\frac1{2L(1-r)},\qquad
+ A_0=\frac{1+L(1-r)}{2Lr},\qquad
+ \alpha_0=\frac L{2(1-Lr)}.                              \tag{LH3}
+\]
+The ratios of the actual weights to these positive expressions
+tend to one.  In reciprocal Bob coordinates put $H_t=wZ$ and
+$P=uW$.  The leading three-state quadratic has the exact identity
+\[
+\begin{split}
+ &C_0(P-Y)^2+A_0Y^2+\alpha_0(Y-H_t)^2
+       +\tfrac12Y^2-PH_t\\
+ &\quad=C_0\{P-Y-L(1-r)H_t\}^2
+       +(A_0+\alpha_0+\tfrac12)\{Y-LrH_t\}^2.
+\end{split}                                             \tag{LH4}
+\]
+All radical or inverse coefficients in this identity are pure source.
+Its two roots vanish at the exact contact to leading order.
+The original $m,D,\beta$ packets, the small corrections to (LH3),
+and every normal coupling still require an exact simultaneous
+allocation.  Neither (LH2) nor (LH4) is a tensor-SOS certificate for
+that remaining source face.
+
+\paragraph{Why the completed C2 IH finite block cannot be copied unchanged.}
+The common contact geometry is still exact, but its source pivot
+hypotheses change. To make this failure concrete, take a positive
+pure-source infinitesimal $s$ and the native rational source
+\[
+ L=\tfrac12,\qquad x=s^2,\qquad\eta=s^{-1},\qquad
+ r_n=s,\qquad h_n=4s,\qquad\theta=1-4s.              \tag{LH5}
+\]
+All native strict gaps are positive for sufficiently small $s$.
+Opening-cleared substitution into the exact formulas gives
+\[
+ C\sim1,\quad sA\sim\tfrac32,\quad
+ D/s^2\sim\tfrac32,\quad m/x^2\sim4,\quad
+ \alpha\sim\tfrac14,\quad\beta/s\sim\tfrac12.       \tag{LH6}
+\]
+Thus this diagnostic also has an unbounded original coefficient;
+it is not removed merely by the all-coefficients-bounded argument.
+
+Write $B=L$, $H=Br_n$, $r_g=h_n$, $z=x$, $y=B\eta$.
+In the C1 version of the IC7 scalar bookkeeping, the beta event
+adds $4\beta(1-r_g)^2$ to its mixed coefficient $K$. Explicitly set
+\[
+\begin{split}
+ K_1={}&4AH^2+8DHr_g+4\alpha(1-H)^2
+       +4m(H+r_g-1)^2\\
+       &+2(H+r_g-1)^2+4\beta(1-r_g)^2,\\
+ k_1={}&K_1-4B^2m/z^2+8AH^2/y.
+\end{split}                                                   \tag{LH7}
+\]
+The same exact substitution yields $k_1\to-1$. Consequently
+$k_1/(Bs)$ is unbounded, whereas the completed strong-C2 IH
+finite block requires this coefficient to be bounded in its
+$sT$ normalization. The C2 premise $r_g/s\le c_s$ also fails:
+here $r_g/s=4$ and $c_s=(1+B-H)/B\to3$.
+This exhibits the precise failed transfer premise. It is not a
+counterexample to positivity or a proof that a generic remaining
+source is nonempty; this individual rational curve has its separate
+inherited admission. A new beta-aware soft normalization or circuit
+is required before that uniform C2 argument can be applied.

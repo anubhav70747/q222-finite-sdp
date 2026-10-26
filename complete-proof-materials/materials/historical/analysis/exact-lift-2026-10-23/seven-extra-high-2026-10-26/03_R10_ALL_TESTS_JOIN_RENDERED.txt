@@ -1,0 +1,300 @@
+      R10 Remote State and Source Join
+
+
+
+ 
+
+
+Native C2 R10: complete independent-test join, conditional on one thin contact gate
+Scope and verdict. This establishes the all-test, all-real-state tensor-SOS assertion for the original strict C2 R10 source, assuming only the supplied R10 Thin Native Gate Proof for the positive-infinitesimal rho=n/e^2 contact chart. The other two rho branches, every remote measurement chart, the unit-W state chart, literal axes and infinities are proved from explicit full-parent identities below. There is no common real-cap requirement and no source/test rate comparison. The result is a conditional sector theorem, not a finished global Q222 lift.
+Pinned algebra: latex/certificates/c2_short.tex at ada9c64, particularly the native source arrays, BA4--BA15, OP1--OP5, R10.2--R10.12, TL1--TL7 and UW1--UW4. Critical-wall identities SEO10--SEO20 are in latex/certificates/c1_short.tex.
+Theorem: exact R10 join
+Let K_c and K_t be independently labelled real closed extensions of R. Work in T=K_c tensor_R K_t. Normalize the positive canonical CHSH coefficient to d=1 in K_c. Assume an actual strict native C2 stationary source with lambda=beta=0, m,C,A,D,alpha>0, n>=0, the full native gaps and positive total-scale intersection of R10. Precisely, in the common-II source coordinates,
+
+
+
+
+t,g,j  positive bounded units;  a positive unbounded;
+B,h,e,x=aB positive infinitesimals; r=1-e;
+the full native physicality inequality n>=0.
+
+Define s=1/a, w=a e, b=a^2 B, so B=s^2 b, x=s b, e=s w, r=1-s w, and rho=n/e^2 (zero if n=0). Throughout, lambda_circ=(m-a^2q)/(ta^2B) denotes the positive BA angular-circuit mass, not the canonical event coefficient lambda_event=0. The BA formulas abbreviate this mass as lambda. Assume the following sole conditional input:
+When 0<rho is source-infinitesimal and a test satisfies u,v,omega=(W+uY)/(1+u^2)>0 all testing-infinitesimal with Z=1, the original quarter-parent has a separated tensor SOS. This is the attached TL4/TL6 complete thin-state gate, including both unrestricted state normals and the positive actual-C2 packets.
+Then the whole original parent is a finite sum of squares in T for every independent real projective measurement pair and every real homogeneous state. Complex states follow by real/imaginary splitting. The claim does not order rho against u,v or any testing state ratio.
+1. The actual native source bounds (no testing field)
+Put
+
+
+
+
+c_a=1+xr,  S_c=1+B(1-h+ar),
+g=1-w+hx,  j=c_a-(1-h)/t,
+Delta_*=s Delta,
+Q_*=1+B(1+t+ah+2ar+at)
+       +B^2{a(h+t)+a^2[h(r+1)+t(1+r-r^2)]},
+K_*=(1+s)(h+t)(1+x).
+
+The original n numerator, after multiplying by s, is exactly
+2 r Delta_* n/s^2 = w Q_* - b K_*  (R10.2).
+Here Q_* ~ 1, K_* ~ t, Delta_* ~ 1 in the source bounded ring: in the displayed polynomials, after B=s^2b, x=sb, e=sw, every nonconstant correction has a factor s,x or h, with b/w initially not needed for the estimates on Q_*,Delta_*. Because n>=0, w>0, K_*>0, we obtain
+0 < b/w <= Q_*/K_* = O(1), and 0<=n/s^2<=w Q_*/(2r Delta_*)=O(w).
+Thus b=O(w)=O(1), n=O(s^2w), a n=O(sw) infinitesimal, and a^2n=O(w) bounded. From j_0=1-1/t_0>0, g_0=1-w_0>0 we have t_0>1, 0<=w_0<1. Every such inequality concerns K_c only.
+The native fractions, with all originally printed denominators retained, give
+
+
+
+
+m/w = (1+tB)c_a S_c/(2g Delta_*) -> 1/[2(1-w_0)],
+C -> t_0/2;  A h -> t_0/2; D -> 1/[2(t_0-1)],
+alpha/(s^3 b^2) -> t_0/2.
+
+These are bounded relative formulas and remain valid if w,b themselves are infinitesimal. In particular m is bounded; C,D,Ah are positive units; A=(Ah)/h is unbounded; n,alpha are infinitesimal. Also a q is infinitesimal and a^2q is bounded for q=n r^2+(m+1/2)e^2+alpha.
+Cancellation of the apparent b denominator in the circuit mass lambda_circ. Write H=m+1/2 and
+lambda_circ = [m-r(wQ_*-bK_*)/(2Delta_*)-Hw^2-a^2alpha]/(t b).
+Clear only the positive-unit denominators. At b=0, the exact source fractions are Delta_*=1+s, m=w/[2(1-w)(1+s)], alpha=0, r=1-sw; hence
+m(1-w^2)-w^2/2 = r w/[2(1+s)].
+Therefore the numerator is identically zero at b=0 and its cleared numerator has the polynomial factor b. At s=h=0, keeping bounded w,b, the un-divided numerator reduces to tb/2. Polynomial division gives a bounded quotient with residue (lambda_circ)_0=1/2, even when b has zero residue. The same direct substitutions give chi-H infinitesimal for chi=m/w, because both have residue 1/[2(1-w_0)]. No inverse of w is used after writing the displayed exact m/w fraction.
+For the BA7 coefficients these substitutions give the source-only residues
+
+
+
+
+d_4 -> t_0/[2(t_0-1)], b_4 -> 0,
+a_E -> -1/(t_0-1), x_3 -> -1,
+c_F -> (t_0-w_0+t_0 b_0)/(2t_0^2) > 0,
+lambda -> 1/2.
+
+The positivity of c_F follows from t_0>1 and w_0<1, not from positive lower bounds on w,b.
+2. The remote-testing exhaustion: actual homogeneous parents
+The original quarter-parent (not a contact restriction) is
+
+
+
+
+P=n Du Dv X^2 + m(vW-X+uvY-uZ)^2 + C Dv(uW-Y)^2
+  +A Du Dv Y^2 +(D+1/2)(uW+uvX-Y-vZ)^2
+  +(alpha+1/2)Du(vY-Z)^2 +(1/2)Dv(X+uZ)^2
+  -(1/2)Du Dv Z^2,
+Du=1+u^2, Dv=1+v^2.
+
+Fix a testing residue class only in K_t. The entire positive m event is retained unless explicitly introduced as the row S=sqrt(m)W. The original n,alpha packets are also retained whole. All remaining coefficients are bounded in the corresponding displayed frames by Section 1; no 1/n, 1/m, or 1/alpha is used.
+(a) v infinitesimal, u a bounded unit or unbounded: BA11
+Put p=1/u, Dp=1+p^2, K=pX+Z, V_X=vX, N_inf=sqrt(n)X, R_inf=sqrt(alpha)pX, and J_inf=W+Dp V_X-pY-pvK. Direct homogeneous substitution, identically before taking residue, gives
+
+
+
+
+p^2 P(1/p,v)
+ =Dp Dv N_inf^2 +m(pvW+vY-K)^2 +C Dv(W-pY)^2
+ +Dp Dv A Y^2+D J_inf^2+Dp alpha(vY-Z)^2
+ +(1/2){J_inf^2+(1-p^2 v^2)K^2
+         +Dp[v^2Y^2-2vYK+2pYV_X+2pvKV_X-p^2V_X^2]}.
+
+Keep the m square whole. In roots (N_inf,R_inf,sqrt(A)Y,K,W,V_X) the bounded remainder residue has pivots Dp,Dp,Dp,1/2 and the two-variable form
+c_0 W^2+(d_0+1/2)(W+Dp V_X)^2 -(Dp p_0^2/2)V_X^2,
+with c_0=t_0/2, d_0=1/[2(t_0-1)]. Its determinant is
+Dp c_0(d_0+1/2)>0, using 2c_0(d_0+1/2)=c_0+d_0+1/2.
+All rows remain legal for p=0 (literal u=infinity). The dependence on infinitesimal v costs only zero-residue corrections.
+(b) u infinitesimal, v a bounded positive unit: BA12 plus R10.6
+Define roots S=sqrt(m)W, R_u=uW, X, Y_A=sqrt(A)Y, Z. The original m term is exactly (vS-sqrt(m)X+sqrt(m)uvY-sqrt(m)uZ)^2. Since m is bounded, the last two coefficients are testing-infinitesimal. The (S,X) residue is
+(v_0 S-sqrt(m_0)X)^2+(1+v_0^2)X^2/2, with determinant v_0^2(1+v_0^2)/2>0 for every m_0>=0.
+The (R_u,Z) residue is
+
+
+
+
+[ c_0(1+v_0^2)+d_0+1/2    -(d_0+1/2)v_0 ]
+[ -(d_0+1/2)v_0                 d_0 v_0^2 ]
+
+with determinant c_0 d_0 v_0^4>0; Y_A has positive pivot 1+v_0^2. This is a full-state strict Gram, and works even as m_0 vanishes.
+(c) u infinitesimal, v unbounded: BA13
+Use q_v=1/v and multiply the same homogeneous expression by q_v^2. At (u,q_v)=(0,0), the five-root remainder has diagonal residue
+(S,R_u,X,Y_A,Z) : (1,c_0,1/2,1,d_0)>0.
+The full m square was included as S^2, and literal v=infinity is covered with q_v=0.
+(d) both test angles have positive finite residue: BA14
+Retain m,n,alpha positive packets. The hard Y_A pivot is Du Dv; on (W,X,Z) the residue is
+
+
+
+
+c_0(1+v_0^2)u_0^2 W^2
+ +(d_0+1/2)(u_0W+u_0v_0X-v_0Z)^2
+ +(1+v_0^2)(X+u_0Z)^2/2 -(1+u_0^2)v_0^2Z^2/2.
+
+Its Z=0 principal block is strictly positive, and its exact determinant is
+(1+U)(1+V)UV {c_0(2d_0+1)U/4+c_0d_0 V/2}>0, U=u_0^2,V=v_0^2.
+Hence the complete state Gram is strict, including all source opening faces.
+(e) single infinity and double infinity: BA11/BA15
+For u=infinity and v a bounded unit, the residue is
+c_0(1+V)W^2+(d_0+1/2)(W+v_0X)^2+Z^2/2+(1+V)Y_A^2.
+For v=infinity and u a bounded unit it is
+c_0UW^2+(1+U)X^2/2+d_0(u_0X-Z)^2+(1+U)Y_A^2.
+Each is positive definite on all four state coordinates. For both infinite coordinates, set p=1/u, q_v=1/v, P_inf=pZ, Q_inf=q_vZ; the full homogeneous identity is
+
+
+
+
+p^2 q_v^2 P(1/p,1/q_v)
+=n(1+p^2)(1+q_v^2)X^2
+ +m(pW-pq_vX+Y-Q_inf)^2+C(1+q_v^2)(W-pY)^2
+ +A(1+p^2)(1+q_v^2)Y^2+D(q_vW+X-pq_vY-P_inf)^2
+ +alpha(1+p^2)(Y-Q_inf)^2
+ +(1/2){(q_vW+X-pq_vY-P_inf)^2+(1+p^2)(Y-Q_inf)^2
+         +(1+q_v^2)(p^2X^2+2XP_inf-P_inf^2)}.
+
+The selected residue on (W,X,Y_A,P_inf,Q_inf) is
+c_0W^2+(d_0+1/2)X^2-2d_0XP_inf+d_0P_inf^2+Y_A^2+Q_inf^2/2.
+Its (X,P_inf) determinant is d_0/2>0. At the literal endpoints, P_inf,Q_inf may vanish; their Gram does not require dividing either coordinate.
+These classes plus literal zero axes exhaust every test outside both u and v testing-infinitesimal, because every nonnegative projective angle is infinitesimal, finite positive-unit, or infinite (reciprocal-infinitesimal). This is an independently labelled testing-field division, not a source/test ratio partition.
+3. All-state local certificate for rho not infinitesimal
+Only u,v testing-infinitesimal remain. The generic BA4--BA7 identity for the entire original P is
+
+
+
+
+E=t uW-vZ, Ny=(Y-huW)/sqrt(h), xi=X+ruZ,
+Fv=(v^2-tB)Z, RD=v(u^2-x)Z, J=(uv-x/sqrt(a/t))Z,
+Q=sqrt(q)(avW-uZ-a xi),
+N=sqrt(n){r[(a/t)v^2-u^2]Z+u xi},
+R=sqrt(lambda)t sqrt(x)(sqrt(a/t)v-u)W,
+T=sqrt(2lambda/sqrt(a/t))sqrt(x)sqrt(uv)
+  (t sqrt(a/t)W-Z),
+mu=m-a^2q=t a lambda x.
+
+Here sqrt(uv) is pure testing, and all other radicals/inverses are source-only. The actual full identity R10.9 is
+
+
+
+
+P=Q^2+N^2+T^2+R^2+lambda J^2+d4 RD^2
+ +(cF+b4*x/t^2) Fv^2+(b4/t^2)v RD Fv
+ +H0-lambda*x*E^2-mu*xi^2-2(t*lambda*x/sqrt(q))*Q*xi
+ +E{(aE+cE*v^2)RD+(bE+cE*x)v Fv}
+ +sqrt(h)Ny{(aY+cY*v^2)RD+(bY+cY*x)v Fv}
+ +xi{x5*u*v*RD+u(x3+x5*x)Fv}.
+
+The entire hard quadratic is
+
+
+
+
+H0=C Dv(l E/t-sqrt(h)Ny)^2
+   +A Du Dv(hE/t+sqrt(h)Ny)^2
+   +(D+1/2)(lE/t-sqrt(h)Ny+uv xi)^2
+   +(alpha+1/2)Du v^2(hE/t+sqrt(h)Ny)^2
+   +[n(1+v^2+u^2v^2)+Dv/2]xi^2
+   +2m(v^2 E/t-uv xi)(hE/t+sqrt(h)Ny)
+   +m u^2v^2(hE/t+sqrt(h)Ny)^2,
+   l=1-h.
+
+This expression keeps all four original state degrees of freedom; no scalar graph is imposed. Use R10.2 and the exact source residues from §1. On (E,Ny,xi) its hard residue is diag(1/[2(t_0-1)],t_0/2,1/2).
+Let rho=n/e^2 be noninfinitesimal (a positive source-unit or unbounded). Define H=m+1/2, chi=m/w, qbar=a^2q. Source-only identities give
+qbar=w^2(rho r^2+H)+a^2alpha, chi-H infinitesimal, and
+S=1/2-mu-(t lambda x)^2/q=H-m^2/qbar.
+Since alpha>=0,
+S >= H rho r^2/(rho r^2+H)+(H^2-chi^2)/(rho r^2+H).
+The first term has strictly positive real residue even for unbounded rho, since H and r are units. The second has zero residue, since H-chi is infinitesimal and H+chi bounded. Moreover x/sqrt(q)=b/sqrt(qbar) is bounded: qbar>=Hw^2 and b/w=O(1). Hence the (Q,xi) block [[1,-sigma],[-sigma,1/2-mu]], sigma=t lambda x/sqrt(q), has bounded coefficients and a strictly positive Schur pivot S.
+The only surviving hard-to-angular cross residue is aE E RD; on (E,RD) the Gram is
+[1/(2(t_0-1))]*[[1,-1],[-1,t_0]], with determinant 1/[4(t_0-1)]>0.
+The remaining scalar pivots on (Ny,Fv,J,R) are t_0/2, (t_0-w_0+t_0 b_0)/(2t_0^2), 1/2, 1. Retain N^2,T^2 whole. All other terms have positive testing degree u or v, or a source-infinitesimal factor h,b4,x,alpha,an,aq; the printed BA5 full first-normal coefficients have no other surviving pole. Thus the matrix of the complete original P on these formal roots is bounded with positive-definite real residue. The positive-residue matrix lemma proves tensor SOS for every original homogeneous state, with no assumption on relative source/test infinitesimal rates.
+4. The entire unit-W local wall, for every rho branch
+Now u,v are infinitesimal in K_t, and the state has testing-unit W; normalize W=1, with X,Y,Z bounded. Define A_h=Ah, the positive source critical coefficient
+C_*=(h+2A_h)(1+2D)/[2(4A_hD-h)].
+The denominator is a positive unit because (A_h)_0=t_0/2, D_0=1/[2(t_0-1)] and h is infinitesimal. It obeys 2C_*(4AD-1)=(1+2A)(1+2D) exactly.
+Polynomial UW cancellation. Let z=b/w (bounded by the actual physical R10.2), x=sb, B=s^2b, r=1-sw and introduce the polynomial source numerators
+
+
+
+
+c_a=1+xr, Sc=1+B(1-h)+sbr, g=1-w+hx,
+J=t*c_a-(1-h), Delta_*=s*Delta,
+M_*=(1+x)(s+r)(h+t)-sw(1+tB)(1-h),
+NC=c_a M_*, DC=2(1-h)Delta_*,
+NA=t c_a(s+r)Sc, DA=2Delta_*,
+ND=(1+x)(s+r)(1-txr)Sc, DD=2J Delta_*,
+Nm=w(1+tB)c_a Sc, Dm=2g Delta_*.
+
+They give C=NC/DC, Ah=NA/DA, D=ND/DD, m=Nm/Dm. Clearing only their denominators yields exactly
+
+
+
+
+C_*-C = P/Q,
+P=(h DA+2NA)(DD+2ND)DC-2NC(4NA ND-h DA DD),
+Q=2(4NA ND-h DA DD)DC.
+
+At s=0, the three fractions are C=(t+h)/[2(1-h)], Ah=t/2, D=1/[2(t-1+h)], and these satisfy C_*=C identically in w,z,h,t. At w=0, then b=wz=0, all factors 1+s cancel and the same three fractions result for arbitrary s. Thus P lies in both polynomial ideals (s) and (w) in R[s,w,z,h,t], hence P=swP1 with a polynomial P1. Since Nm=w Nm1,
+(C_*-C)/m = s (P1 Dm)/(Q Nm1).
+At s=h=0, Q Nm1=16t; g=1-w is a source unit, as are Delta_*, J, and the other remaining denominators. Therefore the entire quotient R=(P1 Dm)/(Q Nm1) is bounded, uniformly at w,b,j opening rates; no 1/w or 1/j remains. This proves UW1--UW3, not just their value at contact.
+Let epsilon=max(C_*-C,0) be a source-only nonnegative number. Then epsilon/m=O(s) is infinitesimal, and epsilon itself is infinitesimal because m is bounded. The complete original full-parent decomposition is
+
+
+
+
+F_original = F_critical(C_*,A,D,d=1)
+  +4m Rm^2+4n Du Dv X^2+4alpha Du(vY-Z)^2
+  +4(C-C_*)_+ Dv(uW-Y)^2
+  -4epsilon Dv(uW-Y)^2,
+Rm=vW-X+uvY-uZ.
+
+The entire critical parent, not an evaluation on a state ray, is the polynomial SEO11
+
+
+
+
+F_critical =4C_*Dv(uW-Y)^2+4A Du Dv Y^2
+ +(4D+2)(uW+uvX-Y-vZ)^2+2Dv(X+uZ)^2
+ +2Du[v^2Y^2-2vY(vZ)-(vZ)^2].
+
+Put V=vZ, B_t=X+uZ, y=1/(2A), b_*=(4AD-1)/(A(4D+2)), and roots
+H_A=sqrt(A)(Y-yV),  H_D=sqrt(4D+2){uW-Y+uvB_t-(b_*+u^2)V}, B_t, uV, vV.
+The SEO11--SEO13 algebraic substitution gives a bounded five-root Gram with hard residue diag(2,4,1+4C_*/(4D+2)) and zero-section radial coefficients
+g=(2A+1)/A ->2, gamma=D(2A+1)^2/[A^2(2D+1)] ->2/t_0.
+The other terms carry an angular factor u or v; hence this is a strict real-residue Gram on the full critical parent. Its identity is valid even as A diverges, because all appearances of A have been absorbed in H_A, the bounded coefficients Ay^2, sqrt(A)y, etc.
+The original positive hard m event is now decisive. At W=1, exactly
+Rm=v(1+uY)-B_t,  V=[Z/(1+uY)](Rm+B_t);
+1+uY is a positive pure-testing unit, since u infinitesimal and Y bounded. Consequently
+
+
+
+
+uW-Y = H_D/sqrt(4D+2)-uvB_t
+        +(b_*+u^2)[Z/(1+uY)](Rm+B_t).
+
+Express sqrt(epsilon)(uW-Y) on the enlarged rows (B_t,H_A,H_D,uV,vV,sqrt(m)Rm). Its coefficient on the last row is a bounded testing factor times sqrt(epsilon/m), hence infinitesimal; every other coefficient carries sqrt(epsilon) and is infinitesimal. Multiplication by the bounded unit Dv makes the negative whole rank-one correction a bounded matrix with zero residue. The positive m square contributes a strict new pivot. Hence the full actual C2 parent has a strict bounded Gram, including all state directions. This is valid for either sign of Z, literal Z=0, and every relative source/test rate. It also shows why dropping the hard m square is invalid.
+5. The literal n=0 branch is exactly physical C1, not a limiting assertion
+The source-only OP2--OP5 identity reads
+e P_n = (1+z)(H+y)(B+zr)+2r delta n, with both displayed summands nonnegative,
+and maps the same actual contact by
+x1=z, eta1=y/B, zeta1=B/z, r1=H/B, theta1=e.
+On R10 this specializes to x1=x, eta1=t, zeta1=s, r1=h, theta1=e; hence k1^2=x=sb, k1,zeta1,r1 are infinitesimal, eta1=t a unit, and the C1 scale satisfies e1_scale^2 = k1^2 eta1/zeta1=tb bounded. Also M1=g and J1=j are positive units. The exact beta map is beta1=-r delta n/(e P_n); at literal n=0, beta1=0, and the original C2 and mapped C1 Bell parents are literally the same polynomial with lambda=n=beta=0 and the same five other source coefficients (native stationary uniqueness).
+For independent infinitesimal u,v, the state reduction in §6 leaves the contact chart Z=1, positive infinitesimal omega. The value of b is either a positive source-unit or infinitesimal, and the two explicit native C1 full-parent CA/SE polynomial identities apply at beta1=0:
+If tb is a positive unit, the CA frame includes (x0,y0,z0,h0,q1,q2,N,M_B), with scalar positive residue 4(E+4)x0^2/(E^2 delta^2)+8T4/(E delta^2), positive hard pivots 16/(E delta^2), 4(E^2+4)/E, and the coupled (M_B,x0) determinant 256/(E^3 delta^2)>0.
+If tb is infinitesimal, the SE frame uses the same eight contact roots after its source-only monomial scaling. The scalar residue is 8(E+2)x0^2/(H0 V_*)+8T4, the positive normal pivots are 4E/H0 and 8(E^2+2E ell+2ell^2+2)/V_*, and the coupled (M_B,x0) determinant is 64(E^2+2E ell+4E+4ell)/(H0^2 V_*)>0.
+Here T4=y0^2+z0^2+h0^2-y0 z0+z0 h0+q1^2+q2^2 has positive-definite contrast block on (y0,z0,h0). All the above quantities E,delta,H0,V_* occurring in denominators have positive source-unit residue in their respective chart, including the zero beta face. The exact CA/SE full-parent identities and their retained positive event packets therefore yield tensor SOS at n=0, without invoking a positive-n continuity argument or pretending the formal negative-beta parent is physical. These are the same residue matrices used in the supplied thin-gate calculation, now with the stress term literally zero.
+6. Exhaustive local-state/sign/endpoint join
+For the positive-infinitesimal rho leaf, dividing R10.2 by the positive pure-source w gives
+b/w = Q_*/K_* - 2r Delta_* rho w/K_*.
+Because rho is infinitesimal and w bounded, this is b/w ~ 1/t. Therefore b is a positive unit or infinitesimal, and the provided CA/SE thin gate has exactly its requisite opening-safe native source premises. This establishes its entry before invoking the assigned hypothesis.
+The source split is strictly trichotomic in K_c:
+rho positive with positive real residue or unbounded: use §3 on every u,v testing-infinitesimal state.
+0<rho source-infinitesimal: use §4 if W is a testing-unit, otherwise the supplied thin-contact gate after the reduction below.
+rho=0: use §4 if W is a testing-unit, otherwise §5 (physical C1 positive base).
+No comparisons of rho with testing infinitesimals occur. The sign-gauge identity, term by term in the original full parent, is
+(u,v,W,X,Y,Z) -> (eps u,eta v,W,eta X,eps Y,eps eta Z) for eps,eta in {+-1}.
+At u=0 or v=0, the pure testing signed CHSH core is a sum of squares, in literal projective homogeneous form (SJ9--SJ10), and every retained event packet is nonnegative. Its square roots belong to K_t. Thus literal axes need no contact gate.
+For u,v>0 testing-infinitesimal, normalize a nonzero testing state by its coordinate of maximum absolute value; now all state coordinates are bounded. The signed core has residue (X^2+Y^2)/2. If X or Y is a testing-unit, this pure-testing core is strictly positive and supplies an immediate separated square, so assume X,Y are infinitesimal. At least one of W,Z is a testing-unit:
+W a unit: normalize W=1 and use §4, with arbitrary bounded signed Z and unrestricted other normals.
+W infinitesimal, Z a unit: normalize Z=1; set omega=(W+uY)/(1+u^2) and z_rot=(Z-uX)/(1+u^2). Now omega is testing-infinitesimal and z_rot is a positive testing-unit. The exact SJ5 testing-only Schur identity decomposes the core into positive hard squares plus a scalar proportional to u^2v^2(omega^2+z_rot^2)-2uv H omega z_rot with a positive testing denominator H^2-u^2v^2, H=1+u^2+v^2. If omega z_rot<=0, the whole pure-testing core is nonnegative, so the parent is a sum of pure-testing and event squares. Otherwise omega>0, exactly the positive contact chart of the thin gate/physical n=0 CA--SE base.
+The zero state is trivial, and for complex states the real matrix parent satisfies F(psi_re+i psi_im)=F(psi_re)+F(psi_im).
+Literal projective infinities were treated by BA11--BA15 without dividing a vanishing homogeneous coordinate. The homogeneous original core at any measurement axis is the explicit sum of two pure-testing squares from SJ10, and all event terms are positive. For tests approaching infinities at an arbitrary independent infinitesimal rate, the BA residues were derived with the reciprocal testing coordinates themselves, so no limiting assumption or mixed denominator is hidden.
+Combining remote (§2) with local source/state (§§3--6) proves the theorem conditional on the single thin contact gate. The only unproved R10-specific premise of this proof is precisely that local gate; nothing in the join requires it to admit a common explicit affine feature pencil. Source-native identities, the explicit displayed CA/SE/BA/SEO polynomial equalities, and the separately proved positive-residue tensor lemma are the algebraic inputs, not additional unverified R10 coverage claims.
+
+
+
+
+
+
+
+
+

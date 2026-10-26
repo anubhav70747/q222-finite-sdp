@@ -1,0 +1,127 @@
+Independent bounded review: inverse-Alice C1 fixed family
+23 October 2026
+
+Scope: this inverse-Alice lemma only. Source rectangle x,sigma<=2^-30,
+0<z<=1/64 with native strict gaps and D,beta>=0; p=1/u in[0,1],
+w in[0,2^-12]. No public files edited and no global atlas reviewed.
+
+Analytical checks reconstructed independently from the public CE20 parent:
+
+1. Source caps. Write p_s for the native opening-cleared source product,
+to distinguish it from the testing p. The shared positive source formulas
+give e<=6epsilon, P<=1+5epsilon, p_s>=H0/2-16epsilon,
+l>=1/2-8epsilon. Therefore
+ C/z >= (1-6epsilon)/(2(1+5epsilon)) >3/8,
+ A=p_s/(bz)>=3/(8bz), alpha=l/(Qz)>=3/(8Qz).
+These bounds are sign-independent in lambda, require neither H bounded
+nor D,beta positive, and use no inverse D,beta or state coordinate.
+
+2. Raw full-parent identity. If p=1/u, define F_pw by homogeneous
+polynomial continuation of p^2 F_w(1/p,w). It equals2K_pw plus the six
+whole positive events (m,C,A,D,alpha,beta), where
+ K_pw=R^2+(1+w^2)S^2+z(G-F)^2+p^2(1+w^2)zF^2
+       -2pE(G+w^2F)+2qwS(G-F),
+ E=qW,F=Y/q,G=wZ/q,R=X+wW,S=pX,q^2=z.
+This identity can be expanded directly in all four state coordinates.
+The six event amplitudes are
+ pW-pwX+Y-wZ; W-pY; Y; wW+X-pwY-pZ; Y-wZ; pX+Z,
+with the original positive measurement factors. Thus no normal has been
+lost by passing to the raw frame.
+
+3. Cap reassembly. The selected C,A,alpha cap contributions are
+ (3/2)(1+w^2)(E-pzF)^2,
+ (3/(2b))(1+p^2)(1+w^2)F^2,
+ (3/(2Q))(1+p^2)(F-G)^2.
+Writing J=F-bG uses the exact variance identity
+ F^2/b+(F-G)^2/Q=G^2+J^2/(bQ).
+With the remaining positive squares retained, the base and entire error
+are exactly the expressions stated by the lemma. In particular one must
+retain(3/2)w^2(E-pzF)^2 before extracting the base, as well as
+(3/2)z^2(pF)^2. This avoids a spurious missing w^2 EF correction.
+
+4. Baseline. Its E,G block has determinant9/4-(7/4)p^2>=1/2 and
+trace3+(3/2)p^2<=9/2, hence minimum eigenvalue>=1/9. A direct stronger
+verification, avoiding any tensor matrix ordering, is
+ B_EG=(E^2+G^2)/9+(25/18)(E-(36/25)pG)^2
+      +(2/225)G^2+(69/50)(1-p^2)G^2.
+All other base pivots are>=1. sqrt(1-p^2) is a testing-only function.
+
+5. Entire error. On roots(E,J,G,R,S) it is
+ -(3zp+4delta^2*p*(w/delta)^2)E(J+bG)
+       -4qdelta*(w/delta)S(J-QG).
+The three coefficient-matrix absolute row bounds are respectively
+3z,4delta^2,4qdelta. At z<=1/64 and delta=2^-12 their sum is
+3/64+2^-22+2^-13<1/18. The base reserve therefore exceeds the full
+perturbation. This is a coefficient bound, not a discarded-normal estimate.
+
+6. Exact fixed-gate factorization is available, not merely pointwise PSD.
+For example the only nonzero off-diagonal errors lie on EJ,EG,SJ,SG.
+Take a fixed pair budget d=1/36. Every vertex has degree at most2,
+so the I/9 reserve retains diagonals at least1/18. The pair coefficients
+d+/-a(c,t) have exact nonnegative decompositions using the three gates
+1+/-p,1+/-p(w/delta)^2,1+/-w/delta: e.g.
+ d +/-[-(3z/2)p-2delta^2*p*(w/delta)^2]
+ =d-3z/2-2delta^2+(3z/2)(1-/+p)
+                     +2delta^2(1-/+p(w/delta)^2).
+The constant remainder is strictly positive. The EG edge includes b;
+the SJ/SG edges have coefficients2qdelta and2qdelta Q and use the
+third gate. This provides fixed directions and separated radicals.
+
+7. Endpoints and states. Every raw identity is polynomial in p,w, so
+p=0 and w=0 are literal specializations. Inverse-Alice p=0 is the
+projective endpoint, not evaluation of an undefined1/p. The state is
+unrestricted and homogeneous; root dependence at endpoints is harmless.
+Real and imaginary parts handle complex states. All radicals above are
+pure testing, and q is pure source. No testing/source mixed inverse occurs.
+
+8. Draft read in full: inverse_alice_fixed_family.tex. Its displayed
+parent, cap reassembly, ten selected-positive squares, and twelve
+original-event excess squares agree with the reconstruction above.
+The native lower bound for pi is valid because its numerator is
+H0-ze+xhz(2-e-r)>=H0-ze. The lower bound for l follows from
+e+M(1-e)>=1-epsilon. Neither needs lambda positive.
+
+9. Fixed51-function union independently checked. The seven main gate
+blocks use phi6=(X,Y,W,wW,wZ,pX) times1 and sqrt(1+/-y_j), giving42
+functions. The nine additions are
+ pwZ,pY,pwY,wY,pwX,pW,pZ,Z,wZ*sqrt(1-p^2).
+The baseline E-36pG/25 uses W,pwZ. The selected pJ uses pY,pwZ;
+w(E-pzF)=q*w(W-pY) uses wW,pwY; wS uses pwX. The m and D excess
+amplitudes require pW,pwX and pZ; beta requires Z. All other selected
+and original excess amplitudes are in these spans. The gate factors
+are fixed, source-independent, nonnegative on the entire testing box.
+There is no unlisted mixed radical, state-coordinate inverse or ratio.
+
+10. Two exposition repairs requested and accepted by the author:
+physical-slack restoration by DpDw alone must explicitly refer to unit
+states (otherwise the homogeneous state norm also divides); and
+"Equivalently" before the weighted-block description should be replaced
+so it does not assert equality of the unrestricted51-function Gram cone
+with the particular structured weighted cone. These do not alter the
+full homogeneous parent certificate. The source coordinate pi is already
+distinguished from the testing p in the actual draft.
+
+11. Weighted block dimensions. The original27-block/order67 claim is
+valid if the baseline R=X+wW is represented on the two-function vector
+(X,wW). The author is exporting a smaller scalar R block, reducing the
+baseline subtotal to8 and overall order to66. The selected subtotal10
+uses the fixed scalar polynomial W-pY with weight w^2 and source Gram
+3z/2, since E-pzF=q(W-pY). The51-function ordinary SOS union is unchanged.
+Literal matrix-data validation will be a separate check once serialized;
+this report verifies the printed algebraic certificate and its spans.
+
+SIGN CORRECTION, reported by the author after the initial review:
+CE20 has +4qwS(G-F), hence the rewritten error is -4qwS(J-QG).
+The first draft and my initial report transcribed that sign as plus;
+I did not catch this mismatch in the initial file read. The author found
+the exact residual8pwX(Y-wZ) and corrected the TeX and matrices. The
+correct A3 entries are SJ=-2qdelta and SG=+2qQdelta. All absolute-row
+bounds and the fixed-gate/sourcePSD argument are unchanged. The raw K
+identity written in item2 above already had the correct sign. This
+report's displayed rewritten error has now been corrected explicitly.
+
+VERDICT FOR THE SIGN-CORRECTED LEMMA: no mathematical blocker in the local inverse-Alice
+lemma. The source caps, complete state reconstruction, uniform reserve,
+entire error, fixed gate factorization,51-function union, both allowed
+source zero faces and all testing/state endpoints pass this independent
+bounded reasoning-based review. This is not a global coverage assertion.

@@ -1,0 +1,44 @@
+Abstract UI2 lifting and redistribution
+
+Scope. The algebra in c2_short.tex:6054-6118,6263-6269 is valid with the following precise coefficient-domain hypothesis. Work over the bounded source ring B_c and the bounded separated tensor ring; a,s,1/s are bounded, k>0 is source infinitesimal, v is testing infinitesimal, and w=u-a has zero residue. Every stated ideal membership and monic coquotient must have bounded coefficients. Let e=(E_r,E_X,E_Z), Q_N=uE_X-E_Z, and retain the positive term 4 gamma R_h² with gamma a positive unit. The hard quadratic remainder e^T H e has bounded entries. This is an allocation lemma; its native hypotheses and positivity still require separate proof.
+
+Monic division. Suppose phi belongs to (k²,xi) inside B_c[u,xi], and its value and both first derivatives vanish at (a,k²). Taylor division gives
+ phi=phi(a,xi)+w phi_u(a,xi)+w² D(u,xi).
+The first term is (xi-k²)² C0, and the second is w(xi-k²)B. Monic division and substitution at bounded a preserve coefficient bounds and preserve the coefficient ideal (k²,xi); hence D=k² A0+xi A1 with bounded A0,A1. This proves UI2 without dividing by k.
+
+Exact scalar allocation. For the roots S=vwW,T=kwW,R=(v²-k²)W/k, UI1 gives
+ phi W² = A1 S²+A0 T²+(B/s)(R_h T-S Q_N)
+                         +(C0/s²)(k R_h-v Q_N)².             (*)
+Thus the C0 term has only zero-residue coefficients: k²,kv,v² multiply bounded factors. The B term is retained completely; its R_h T and S Q_N residue cross terms need not vanish.
+
+First normals. With the convention that normal terms are twice E_i times their half derivative, restore the implicit homogeneous W in the displayed coefficient polynomials. For i=X,Z the exact allocation is
+ 2E_i[L_i0 S+(v L_i1/s)(kR_h-vQ_N)].
+The second bracket has coefficients vk and v², so vanishes in residue; the S E_i coefficient can be a unit. If the E_r half derivative is
+ W{w(k²L_r0+v²L_r1)+(v²-k²)L_r2},
+its allocation is
+ 2E_r[kL_r0 T+vL_r1 S+(L_r2/s)(kR_h-vQ_N)].
+Every E_r coupling has zero residue. Its monic representation follows by dividing first in u-a: the coquotient stays in (k²,xi), while the remaining constant term is divisible by xi-k². If the original text uses full coefficients rather than half derivatives, remove the displayed factors two; the bound and residue conclusions are identical.
+
+Residue and redistribution. Write b=bar(B/s), q=(0,bar u,-1), and ell=(0,bar L_X0,bar L_Z0)-b q/2. By (*) and the normal allocations, the residue Gram has hard block diag(bar H,4bar gamma), S-hard vector (ell,0), T-hard vector (0,b/2), diagonal S,T entries bar A1,bar A0, and zero S-T entry. Assuming bar H positive definite, its two angular Schur diagonals are
+ sigma=bar A1-ell^T(bar H)^(-1)ell,
+ tau=bar A0-b²/(16bar gamma).
+The inverse here is an ordinary real matrix inverse used only to assess the residue. Setting S=T tests exactly sigma+tau. If this sum is positive, choose a real eta with -sigma<eta<tau and add the identically zero expression
+ eta{S²-T²-(w/s)(R_h T-SQ_N)}.
+It changes the Schur diagonals to sigma+eta,tau-eta. Every accompanying cross-coefficient contains w and therefore has zero residue; all pre-existing residue cross terms remain unchanged. This proves the claimed strict-residue redistribution.
+
+Necessary qualification. Ideal membership over K_c[u,xi] is insufficient: k² is invertible there. The bounded polynomial phi=k(u-a)² satisfies all contact jets and angle parity but would force A0(a,0)=1/k, unbounded. Thus bounded ideal membership, or an explicit bounded representation, is the exact premise that the native-parent verification must establish. No native UI2 admission or global closure follows from this abstract lemma alone.
+
+Native graph-factor addendum (UR13-UR16 only).
+
+The bounded-ring premise can be verified here without expanding the parent. On the zero-normal graph, writing xi=v² and suppressing W, the exact amplitudes are
+ r_amp=rho k², Q=sv,
+ M=v{(1-x)(1+u²)+us-u rho k²},
+ p=v{u(1-x)+s-rho k²}, B=v{x+u(ux-s)},
+ J=rho k²+s xi, Y=u-rho k², Z=(ux-s)v.
+Their bracket polynomials have bounded coefficients. UR9-UR11 bound Ltau, Ltau², gamma=k²H, C rho k², nx, nx², m mu, m mu², alpha pi, alpha pi²; subtracting bounded caps preserves these bounds. UR3/UR5 also give A/k²=(A/epsilon)/a² bounded.
+
+Consequently every G_CD graph term in UR13 has a bounded k² or xi factor: in particular Hk²=gamma makes its second line a bounded multiple of xi and k². The G_n,G_m,G_alpha terms in UR15 have xi factors with precisely the bounded composite coefficients above. The A term has k², and every core term has xi except J², which lies in (k²,xi)². Thus phi belongs to (k²,xi) with bounded coquotients.
+
+For the E_r half derivative, UR13 contributes 4Ltau k²W+4(C rho k²)xi W. The M and p derivatives are respectively -uv and -v, giving xi times bounded coefficients in UR15. G_n contributes nothing; the A term has k². The core half derivative is 2J-2D_u v p, again in the same bounded ideal. The E_X,E_Z derivatives each have a v factor: this follows directly from the displayed graph amplitudes, while UR13 uses only bounded Ltau k² and Hk². Hence their remaining polynomial coefficients are bounded, as UI2 requires.
+
+At UR8 all retained square roots in UR12/UR14 vanish, so their full first jets vanish. Importing the exact native full-parent contact identity therefore gives all required G jets; since k>0, the v derivative gives phi_xi=0, and the v-normal factors give L_X=L_Z=0 at contact. No coefficient-bound argument divides by k. This closes the graph-support and source-jet prerequisites of the abstract allocation, not the matched Hessian, choice of caps, or outer measurement joins.

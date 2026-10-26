@@ -1,0 +1,195 @@
+\chapter{Beta-positive extension and the exact remaining local source branch}
+\label{component:p909aa5765721}
+\noindent\textbf{Component }\path{p909aa5765721}\par
+{\small\noindent Source: \path{R13/advances/revision13_c1_eta/beta_positive_extension.tex}\par}
+{\small\noindent SHA256: \path{909aa5765721968d80341f4fb77f53afd99b693ca6386f3c6f0b2ef839d2aa0a}\par}
+{\small\noindent Inventory use: Bounded-Mbeta and bounded-H unit-u admissions | JB1--JB8 and complete bounded-Mbeta theorem | bounded-Mbeta whole-source theorem\par}
+\medskip
+\section{Beta-positive extension and the exact remaining local source branch}
+\label{p909aa5765721:sec:r13-beta-positive-extension}
+
+Retain the same original C14.1 source as JR1--JR8, with $x,z,\sigma$
+positive infinitesimals, but allow $\beta\ge0$. Write
+\[
+ b_\theta=\beta\theta,\qquad H=h/\sigma,\qquad
+ M_\beta=b_\theta/\sigma^2.
+\]
+This section proves two precise extensions. First, if $M_\beta$ is
+bounded, the \emph{entire source domain is admitted for every test}.
+This includes the beta-zero theorem. Second, if $H$ is bounded but
+$M_\beta$ is unbounded, every bounded nonzero-unit $u$ is admitted
+at the residual infinitesimal-$w$ tests. On this second source domain
+only $u$ infinitesimal remains. Neither statement assumes $d_0$ a
+unit: the second includes $D=0$. The $H$-unbounded domain and C14.2
+are not admitted here.
+
+\paragraph{The generic joint radial identity.}
+The exact six-root identity JR5 continues to hold if its coefficients
+are given the following beta corrections:
+\begin{gather*}
+ k_1\ \mapsto\ k_1+4b_\theta\theta,\qquad
+ R_x\ \mapsto\ R_x+8b_\theta,\\
+ Z_0\ \mapsto\ Z_0+\frac{4b_\theta\theta t}{\sigma^2},\qquad
+ Z_x\ \mapsto\ Z_x+8ub_\theta/\sigma,\\
+ S\ \mapsto\ S+4b_\theta\theta/\sigma^2.
+\tag{JB1}
+\end{gather*}
+Here the uncorrected formulas on the right are the polynomials in
+JR2--JR3 evaluated at the actual $h,D,m,p,l$, not at a beta-zero
+source. The scalar $B$ remains its full monic quotient. The additional
+retained centered excess is $4\beta D_wN_x^2$. The complete generic
+coefficient is, explicitly,
+\[
+ S=\frac{2\{h^2(2D+1)(t+x)+4Dh-2bp\sigma^2z
+                       +2b_\theta\theta+h^2\}}{\sigma^2}.
+\tag{JB2}
+\]
+All four cancellations JR4 are exact with these changes. They were
+checked symbolically with $b_\theta$ free. Thus no radial pole remains
+unallocated in this extension.
+
+\paragraph{The source estimates needed by the extension.}
+The source equation BE3 gives exactly
+\[
+ H=H_0/B+\frac{2P}{B}\frac{b_\theta}{\sigma}.
+\tag{JB3}
+\]
+Consequently $M_\beta$ bounded implies $H\sim1$ and $\theta\sim1$.
+The sphere budget then implies $D/\sigma^2\sim1/2$, since
+$xb_\theta/\sigma^2=xM_\beta$ is infinitesimal. Also $\mu\sim1/2$.
+
+More generally, suppose only $H$ bounded. Then $\res H\ge1$;
+no exact inequality $H\ge1$ is imposed. One has $\theta\sim1$,
+and $b_\theta/\sigma$ is bounded. Write
+\[
+ d=\res(D/\sigma^2),\qquad
+ c=\res(xb_\theta\theta/\sigma^2).
+\]
+BE4--BE6 give $d,c\ge0$ and $d+c=1/2$. Formula JB3 gives
+$\res(b_\theta/\sigma)=(\res H-1)/2$. The bounded source formulas
+also give $\mu\sim H/2$, $p,l\sim1/2$, $C=O(z)$, and
+$p-l\in z\mathcal O_{\rm source}$. These statements retain both
+source-sphere endpoints and both $b,Q$ openings.
+
+\paragraph{An exact square joining the beta pole to its angular reserve.}
+Suppose first $u$ is a bounded nonzero unit, so that $1/u$ is an
+allowed bounded pure-testing inverse. Put
+\[
+ a_\beta=b_\theta\theta,\qquad
+ C_\beta=4a_\beta/\sigma^2,\qquad T_c=t\Gamma+V,
+ \qquad P_\beta=uZ-(x/\sigma)wW.
+\]
+The identity $T_c=\sigma uP_\beta$ has no $u$ denominator.
+Adding $(C_\beta/t)$ times JR6's zero, and completing the resulting
+$T_c$ square, gives the exact entire-parent identity
+\[
+ G=4a_\beta P_\beta^2+\widehat G,
+\tag{JB4}
+\]
+where $G$ is the complete generic JR5 and
+\begin{align*}
+ \widehat G=G
+ &-C_\beta t\Gamma^2
+ -(C_\beta+C_\beta x/t)\Gamma V
+ -C_\beta\sigma A_\theta^2\\
+ &-C_\beta\sigma(t-x)A_\theta R/u.
+\tag{JB5}
+\end{align*}
+Every coefficient of $\widehat G$ is bounded when $H$ is bounded
+and $u$ a unit. The only apparent angular reserve subtraction is
+$4a_\beta/\sigma$. Its exact source comparison is
+\[
+ \mu-a_\beta/\sigma
+ =\kappa H_0/B+
+    \frac{b_\theta}{\sigma}\left(\frac{2\kappa P}{B}-\theta\right),
+\tag{JB6}
+\]
+where $\kappa$ is the BE8 source factor. The bracket is infinitesimal,
+so this difference has residue $1/2$. Thus the beta pole is paid for
+by the actual shared $m$ packet. No leading coefficient is substituted
+in the exact identity JB4.
+
+\paragraph{Bounded $M_\beta$: all residual tests.}
+When $M_\beta$ is bounded and $u$ a unit, the residue of $\widehat G$
+is exactly the beta-zero residue in JR7 before the finite $V$ pivot:
+$H\sim1$, $d=1/2$, $c=0$. Add the same pure-testing pivot
+$\lambda(t)=2(t^2+t+1)/(1+t)^2$ and apply JR8. Restore the positive
+square in JB4 and every centered excess. This covers every unit $u$.
+
+When $u$ is infinitesimal, use the generic six-root form directly,
+without $1/u$. Its residue has five positive diagonal pivots equal to
+two, with the only cross term
+\[
+ (2+4M_0)\Gamma V,\qquad M_0=\res M_\beta\ge0.
+\]
+Add JR6's zero with the bounded pure-source coefficient
+$\lambda=(1+2M_\beta)^2$. All its non-$V^2$ corrections have zero
+residue. The $(\Gamma,V)$ Schur complement is
+$(1+2M_0)^2/2>0$. This includes literal $u=0$ and either sign.
+The exact remote join is the CE9--CE10 and CE20--CE21 join printed
+after JR8; it applies unchanged here because $D,\beta$ were unused.
+This proves the full all-tests admission under the sole extra
+pure-source condition $\beta\theta/\sigma^2$ bounded.
+
+\paragraph{Unbounded $M_\beta$, bounded $H$: all unit-Alice tests.}
+For any real nonzero residue $u_0$, set $t_0=u_0^2$. In the notation
+of JB3, and writing $H$ now for its finite real residue, the only
+nontrivial $\widehat G$ residue block is
+\begin{align*}
+ Q={}&2(1+t_0)N_x^2+[4d+2H^2t_0(1+t_0)]\Gamma^2\\
+ &-4u_0(1+Ht_0)N_x\Gamma-4Hu_0N_xV\\
+ &+[2H^2(1+t_0)-4c/t_0]\Gamma V.
+\tag{JB7}
+\end{align*}
+Its angular $(A_\theta,R)$ block is the strict matrix from JR7 and
+its $N_y$ pivot is $2(1+t_0)$. All other residue cross entries vanish.
+The beta square in JB4 equals $(C_\beta/t)T_c^2$, with
+$C_\beta$ unbounded. On its exact residue kernel $V=-t_0\Gamma$,
+JB7 reduces to
+\[
+ 2(1+t_0)N_x^2-4u_0N_x\Gamma+2\Gamma^2,
+ \qquad \det=4.
+\tag{JB8}
+\]
+Here the cancellation uses exactly $d+c=1/2$. It remains strict at
+$d=0$ and $c=0$. The row $T_c=V+t\Gamma$ has a bounded separated
+right inverse, obtained by changing $V$ alone. The elementary finite
+penalty lemma therefore chooses a positive real $K$ such that
+$\widehat G+(K/t)T_c^2$ has strictly positive residue. This is possible
+because $t_0>0$. The exact retained excess is
+$((C_\beta-K)/t)T_c^2$: $C_\beta-K$ is a positive pure-source
+coefficient, and its square root separates from the pure-testing
+$1/\sqrt t$. No ordering of $C_\beta/t$ minus a real number is used.
+This proves the entire
+parent for all bounded nonzero-unit $u$, with infinitesimal or zero
+$w$, all signs and complex states.
+
+The new exact remaining obstruction on the bounded-$H$ source branch
+is therefore $M_\beta$ unbounded and $u$ infinitesimal. JB5 has
+$x/u$ and $x/u^2$ terms there, so its bounded-Gram argument cannot be
+imported. The square $P_\beta$ itself is still legal and has no
+$u$ inverse; a joint allocation with the remaining angular terms is
+required to remove those coefficient denominators without comparing
+independent source and testing rates. No such allocation is claimed.
+
+\paragraph{Denominator and boundedness audit.}
+Every source inverse in the roots or exact coefficients is a pure-source
+inverse. On the large-$L$, bounded-$H$ domains, $P,J,B$ and the original
+geometry coefficient $M=1+xbz-xz\theta$ are units; $1-r$ and $\theta$
+are units as well. Possible $b,Q$ inverses occur only in the original
+source weights and the retained positive centered excesses, while their
+opening-cleared products $p,l$ are bounded. The normalized quantities
+$H$, $D/\sigma^2$, $b_\theta/\sigma$, and
+$xb_\theta\theta/\sigma^2$ are bounded by JB3 and the BE sphere.
+The corrections in JB5 therefore leave bounded coefficients: the
+remaining $\Gamma^2$ terms involve $D/\sigma^2$, $Dh/\sigma^2$ and
+$H^2$; the $\Gamma V$ coefficient involves those same bounded source
+products and $(xb_\theta\theta/\sigma^2)/t$; the angular-radial
+coefficient involves $b_\theta\theta/\sigma$ times $(t-x)/u$.
+The factors $1/u,1/t$ are used only when $u$ is a testing unit.
+All $u=0$ and infinitesimal-$u$ assertions for bounded $M_\beta$
+instead use the unaltered generic six-root identity and its bounded
+pure-source pivot $(1+2M_\beta)^2$. The everywhere bounded testing
+denominator $1+t=1+u^2$ in JR8 is also pure testing. No mixed inverse,
+mixed radical, or source/testing rate comparison occurs in either
+admitted domain or its remote join.

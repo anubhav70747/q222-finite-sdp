@@ -1,0 +1,78 @@
+THE MISSING QUARTIC CONTACT IDENTITY
+26 October 2026. One exact bounded check; no converse or full-hull claim.
+Matching .py/.json replay in about1.7s with SymPy, using the frozen full
+three-parameter clean_source and invisible-direction counterexample.
+
+Define B=A+n,U=C+d/2,V=alpha+d/2,S=U+V,M=m+D. Then the full native
+three-parameter maximally entangled C2 family satisfies exactly
+
+ S^2(B+d/2)(M+d/2)=(a+1)^2 U V M(B+S).              (Q4)
+
+The checker substitutes the entire independent source dictionary, clears
+its strictly positive common source denominator, and checks the resulting
+homogeneous polynomial identically in all three variables(a,r,z).
+It also rechecks a(d+2n)=2A and a^2 M(B+S)=B(M+S).
+No numerical fitting or restriction to fixed a or equal angles is used.
+
+NORMALIZED FACTORIZATION AND BRANCH
+
+On the native positive domain, S,B,M,U,V,d>0. Put
+ k=B/S,t=M/S,y=d/(2S),theta=UV/S^2,x=(k+y)(t+y),
+ D0=2kt+k+t.
+The unconditional polynomial identity is
+
+ (k+t+1)^2*x*theta-[x+(k-t)^2*theta]*(x+theta)
+       =-[(x-D0*theta)^2-4kt(k+1)(t+1)*theta^2].       (F)
+
+The summed-minor identity gives a^2*t*(k+1)=k*(t+1).
+Set p=t(k+1)>0,q=k(t+1)=a^2p. Since a>0,
+sqrt(pq)=ap and D0=p+q. Thus the two algebraic roots in(F) are
+ x_plus=(a+1)^2*t*(k+1)*theta,
+ x_minus=(a-1)^2*t*(k+1)*theta.
+Equation(Q4), after division by S^4, is EXACTLY x=x_plus.
+It selects the upper branch. The old quadratic identities together with
+(F)=0 do not by themselves select that branch; squaring cannot be used to
+discard the lower one. Positivity also does not authorize a converse or
+a convex-hull conclusion.
+
+A SHORT PHYSICAL DERIVATION OF THE FACTORIZATION
+
+At a maximally entangled state all local marginal expectations vanish.
+The full canonical slack then becomes
+ T-[P E00-V E01+U E10+Q E11],
+ T=B+M+S, P=B+d/2, Q=M+d/2.
+(The letters P,Q in this paragraph are weighted-correlation coefficients.)
+For fixed unit Bob vectors with inner product c, optimizing Alice yields
+ sqrt(P^2+V^2-2PVc)+sqrt(U^2+Q^2+2UQc).
+At an interior optimum, differentiation gives the ratio of the two square
+roots PV/(UQ). Eliminating c gives
+ beta^2=(PV+UQ)(PU+VQ)(PQ+UV)/(PQUV).
+The product in the first two factors equals
+ PQ(U+V)^2+(P-Q)^2 UV.
+Since P-Q=B-M, the equality T=beta becomes exactly(F)=0 after normalizing.
+Actual native validity and the maximally entangled interior contact justify
+this saturation statement; the direct polynomial substitution separately
+verifies that these sources choose x_plus, producing(Q4).
+
+FROZEN COUNTEREXAMPLE
+
+For the frozen a=2 source, B=428/299,U=595/299,V=154/299,
+S=749/299,M=749/2990,d=1. Its invisible source direction leaves
+B,U,V,S,M and a unchanged, while replacing d by d+epsilon. Consequently
+the left side minus the right side of(Q4) changes by exactly
+ S^2*[epsilon(B+M+d)/2+epsilon^2/4]
+ =561001*epsilon*(1495*epsilon+8019)/534617980.
+At epsilon=1/1000 the quartic residual is
+                  899901143099/106923596000000 >0.
+The normalized polynomial on the left of(F) is
+             -644974255506421607/14680915312000000000000 <0.
+Thus the new quartic detects the frozen positive-weight source which
+preserves the angle law and every fixed-a quadratic identity but is invalid.
+
+SCOPE
+
+(Q4) is established for individual native contact sources on the complete
+stated positive domain, including n=0; no division by n occurs. It controls
+a source direction invisible to all the quadrics. It is not asserted to
+hold as an equality on positive mixtures, nor to characterize valid
+sources, nor to give a PSD lift of the full native conic hull.

@@ -1,0 +1,30 @@
+{
+  "date": "2026-08-31",
+  "status": "LOCK_ZERO_COMPUTER_THEOREM_LEVEL_CORRECTED",
+  "claim": "sxdeg(Q_{2,2,2}) = 2",
+  "canonical_base": {
+    "filename": "Q222_SXDEG2_CONSOLIDATED_PARCHMENT_FINAL_2026-08-30.md",
+    "sha256": "e268a6ae1c11dd02b5819064fa7e8187173074050d92f3204e703dd46f574731",
+    "lines": 2415
+  },
+  "canonical_overlay": "Q222_SXDEG2_CORRECTION_PATCH_AND_FREEZE_2026-08-31.md",
+  "canonical_reader_route": "Q222_SXDEG2_READER_ROUTE_FROZEN_2026-08-31.md",
+  "repairs": [
+    "restore unique-visible-facet proof",
+    "restore real half-angle measurement chart before nine-channel slack",
+    "define p = B s^2 - u in the F1 Bell gauge",
+    "separate finite gauge-boundary routing from homogeneous projective routing",
+    "correct B0 four-square tensor-factor wording to factorwise separation",
+    "replace stale reader-route K3-dependent A17 pivots by centered K3-free pivots"
+  ],
+  "a17_centered_pivots": {
+    "q_beta": "4/(T^3*(1+V^2))",
+    "q_e1": "4/(T^3*V^2*(1+V^2))"
+  },
+  "a17_critical_value": "m = u^3 K3 >= 0 is retained and restored separately",
+  "logical_computer_dependencies": [],
+  "scope_not_claimed": [
+    "solver-ready explicit finite affine L3 lift",
+    "exact minimum M_SOC"
+  ]
+}

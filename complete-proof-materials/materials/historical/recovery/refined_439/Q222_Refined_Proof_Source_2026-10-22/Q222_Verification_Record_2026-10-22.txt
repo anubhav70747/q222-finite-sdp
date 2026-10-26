@@ -1,0 +1,240 @@
+Q222: VERIFICATION AND PROOF REFINEMENT
+22 October 2026
+
+RESULT
+
+I found no unresolved mathematical defect in the retained proof under its
+stated hypotheses. The refined document contains the complete qualitative
+argument for finite semidefinite representability of the full eight-coordinate
+Q222 set, together with the explicit local certificates that the argument
+requires. It is a mathematical audit and refinement, not a formal proof-assistant
+verification or a claim of external peer review.
+
+The main theorem is the existence of finite integers N,m and real symmetric
+matrices A0,A1,...,A8,B1,...,Bm of order N such that
+
+  Q222 = {q in R^8 : there exists y in R^m,
+          A0 + sum(q_i A_i) + sum(y_j B_j) is positive semidefinite}.
+
+The proof supplies no numerical bound on N and no verified assertion that all
+positive-semidefinite blocks can have order two. In particular, the conclusion
+must not be described as a proved second-order-cone representation.
+
+WHAT "COMPLETE" AND "MINIMAL" MEAN IN THIS EDITION
+
+The theorem and its short global argument appear first. The subsequent chapters
+prove the physical reduction, tensor-ring lemmas, source/contact reduction,
+native signs and parameter entry, common algebra, and exhaustive source cover.
+The certificate appendix gives the complete full-slack formulas for the cases
+in that cover. Those formulas are part of the proof, rather than optional
+computer evidence.
+
+The new PDF has 439 pages, compared with 798 pages in the recovered
+complete proof. Some reduction comes from a consolidated layout; the substantive
+reductions are identified below. This is a shorter complete version of this
+proof route, not a proof that no shorter argument exists. The short opening
+alone must not be presented as a self-contained proof of the canonical local
+certificate theorem.
+
+The source package compiles the full proof without the recovered archive. Its
+proof does not run a computer algebra system. Independent diagnostic programs
+and their receipts are supplied separately for reproducibility.
+
+PROOF STRUCTURE
+
+1. Finite quantum model.
+
+   Simultaneous dilation of each party's two binary measurements, the
+   two-projection block decomposition, and the real-state reduction give an
+   exact two-real-qubit model. Convexification in eight real coordinates needs
+   at most nine pure components. Therefore Q222 is compact, convex and
+   semialgebraic. Its fixed finite defining formula transfers to arbitrary
+   real closed fields. No infinite-dimensional Hilbert-space definition over
+   a non-Archimedean field is substituted for that formula.
+
+2. The stronger separated-slack assertion.
+
+   Let Kc and Kt be separately labelled real closed extensions of R. For every
+   affine Bell functional f nonnegative on the transferred quantum set over
+   Kc, and every transferred testing point q over Kt, the proof establishes
+
+       [f,q] = f0 tensor 1 + sum(f_i tensor q_i)
+               in Sigma(Kc tensor_R Kt)^2.
+
+   The tensor ring is not ordered. No embedding in a field and no algebraic
+   disjointness of Kc and Kt is assumed. Every inverse and radical used as a
+   normalization belongs to a single field factor unless a separate polynomial
+   identity explicitly supplies the relevant tensor expression.
+
+3. Strict bounded Gram matrices.
+
+   If Bc and Bt are the rings of bounded elements, their residue maps take
+   values in R. An element of Bc tensor_R Bt with strictly positive real
+   residue is an exact finite sum of elementary-tensor squares. The proof is
+   the finite reserve identity TF4, with positive pure-field factors.
+
+   Consequently, a symmetric matrix over Bc tensor_R Bt with positive-definite
+   real residue gives a sum of squares when evaluated on any tensor root
+   column. The roots need not be bounded. The finite rank-one decomposition
+   TF6 proves this without Cholesky inversion in the mixed tensor ring.
+
+4. Source geometry and entry.
+
+   The nonsignalling vertex argument, event cone, closed-face matrix lifts,
+   contact determinant support, strict source-field contact curvature and
+   extreme-source argument reduce the remaining proof to two contact families.
+   The exact native-entry argument supplies the signs and original stationary
+   coefficients used in the local certificates.
+
+   Determinant information is used for geometry and contact curvature. It is
+   not treated as an automatic certificate for the entire Bell slack.
+
+5. Complete local certificates and coverage.
+
+   The retained arguments cover positive total source scale; all C1 source
+   faces; both-weak and strong C2 cases; the directed weak-C2 R1--R10 cover;
+   noncommuting testing residues; projective testing endpoints; and every
+   state chart. The local expressions keep the scalar part, both first state
+   normals, and the remaining hard state quadratic form. Literal permitted
+   zero weights, including n=0 and beta=0 where applicable, are retained.
+
+   Source and testing infinitesimal rates remain independent. Boundedness is
+   proved by explicit finite separated coefficient formulas, not by comparing
+   an element of Kc with an element of Kt. Finite-cap arguments retain whole
+   original event excesses and justify the limiting kernel and remainder.
+
+6. Assembly and external criterion.
+
+   If f = sum_j a_j f_j, q = sum_i w_i q_i, and
+   [f_j,q_i] = sum_k h_ijk^2, then exactly
+
+       [f,q] = sum_ijk ((sqrt(a_j) tensor sqrt(w_i)) h_ijk)^2.
+
+   The testing weights sum to one, so the affine constant is preserved.
+   Positive pure-source and pure-testing factors can be canceled by their
+   separate inverse square roots. Zero weights are never inverted.
+
+   Scheiderer's Corollary 3.19 then gives finite semidefinite representability
+   from the tensor-SOS assertion for all real closed extensions. The stronger
+   two-field result in the manuscript includes the required case of two
+   labelled copies of one arbitrary extension.
+
+SUBSTANTIVE REFINEMENTS
+
+* One integrated noncommuting proof replaces the repeated noncommuting
+  constructions in original components 4--12. It retains unequal hard
+  weights, the one- and two-hard support calculations, both three-hard
+  Laurent restrictions, the arbitrary-ratio four-matching terminal, and the
+  finite increasing-matching induction. A compression pass restored the
+  explicit identification q11=h and stated d=0 before using strict t_i>0.
+
+* One source-geometry chapter replaces repeated source, closed-face and
+  structural-entry arguments. Its SG17--SG22 prove coercivity, the strict
+  five-variable source-field Hessian, contact orientation and forbidden
+  event deletion at exactly the strength needed by native entry. Strict
+  source-field positivity is not silently strengthened to strict residue.
+
+* A new bounded-a weak-C2 proof replaces the old WC and R9 branches. Its
+  standalone version is five pages. It prints the complete four-state
+  identity, the hard block and both normals, the physical source inequality
+  controlling the delicate Schur complement, and all projective endpoint
+  identities. It includes infinitesimal a and literal n=0. This is a proved
+  replacement, not a proposed shortcut awaiting a normal or remote-chart
+  calculation.
+
+* In C14.2, the CT proof requires only a positive bounded unit for its testing
+  ratio c; equality of its residue with the source parameter L is unnecessary.
+  The redundant intermediate ratio alternatives can therefore be removed.
+  The extreme-ratio CS identities, bounded-state CF, and bounded-H HG/HP
+  branches remain.
+
+* In C14.3, the exact DG/LD identities and source deficits, the completed-J
+  conductor, the DS3 unbounded-state exit, and the SB remote complement replace
+  narrower overlapping admissions. The short JF-to-DG derivation keeps both
+  normal terms and every scalar completion explicitly.
+
+* In C14.4, BN already covers every bounded tau, including the former bounded
+  n_s SN terminal. SN is retained only for the exact coefficient dictionary
+  used by BN and UN. The six source cells and their joins remain explicit.
+
+* Superseded status summaries, unfinished alternative routes, duplicate
+  dictionaries and checker-only provenance paragraphs were removed where
+  they have no mathematical role. Required definitions and formulas were
+  preserved or copied to their actual point of use. The source-to-refinement
+  manifest records the retained original component identities and hashes.
+
+EXACT ALGEBRA CHECKS
+
+Fresh, independently transcribed diagnostic programs passed the following
+340 named exact checks:
+
+  Shared circuits, conductor identities and critical wall       31
+  Boundary identities and constrained outer coefficients        37
+  Native-entry cofactor, selected minor and Cramer identity        3
+  Positive-total-scale identities                               34
+  Strong-C2 and single-angle identities                         53
+  Unbounded-b C2 and shared native identities                    34
+  Directed weak-C2, including the new bounded-a certificate     148
+                                                               ---
+                                                               340
+
+The six new bounded-a checks are included in 148; they are not counted again.
+Three additional Boolean support tables were checked over all 128 assignments
+of their seven event-presence variables. They are recorded separately from
+the 340 algebra checks.
+
+The diagnostics use SymPy 1.14.0 from an independently installed distribution.
+They do not import the archived manuscript's checker programs or bundled
+Python dependencies. The source package includes portable copies of the
+fresh scripts, original receipts, rerun instructions, and scoped analytical
+reports. Symbolic expansion confirms the displayed identities; it does not
+by itself establish inequalities, tensor-ring membership or atlas coverage.
+
+MATHEMATICAL REVIEW AND ITS LIMITS
+
+The analytic review followed the operative proof bodies, not only their
+theorem statements or old PASS receipts. It examined the source-entry
+hypotheses, exact state-normal formulas, coefficient divisibility, strict
+residue margins, finite-cap justifications, literal boundary weights,
+source/test separation, and the source/testing/state joins.
+
+The four review scopes cover the global physical/tensor/source framework;
+shared conductors and critical walls; C1 and the unbounded-b C2 chain;
+positive-scale and strong-C2 branches; directed weak-C2; and the newly
+compressed core. The separate reports identify their imports and limits.
+
+Not every coefficient in every displayed polynomial has been independently
+expanded. Some retained remote determinant formulas were checked structurally
+and in their proof context rather than through a separate symbolic expansion.
+There is no proof-assistant certificate of the entire theorem. A mathematical
+reader should treat this as a carefully audited, explicit written proof,
+with additional exact algebra evidence and a clear record of its scope.
+
+A tempting generic shortcut was rejected: a determinant SOS or a cleared
+matrix identity does not authorize cancellation of a mixed tensor factor.
+The supplementary tensor audit gives a counterexample to an automatic
+bounded-conductor inference. This is not a counterexample to Q222. The
+refined proof retains the full-slack local certificates that avoid the false
+inference.
+
+PROVENANCE AND REPRODUCIBILITY
+
+Recovered complete proof:
+  Q222_Analytical_Existence_Proof_RECOVERED_2026-10-22.pdf
+  798 pages; 4,720,858 bytes
+  SHA256 06e574ef781469443160497b7152650bc5a95bec9df2fd5ee733eeb787fcf1f1
+
+The refinement uses the indexed 215-component R21 fresh rederivation. The
+recovered inputs were preserved. The complete delivered LaTeX project is
+self-contained apart from ordinary TeX packages. The external theorem is
+identified explicitly and is not represented as a new result of this audit.
+
+Primary reference:
+  Claus Scheiderer, Second-order cone representation for convex sets in
+  the plane, arXiv:2004.04196v2 (28 January 2021), Corollary 3.19, printed
+  page 15. The tensor-rank criterion for a quantitative block-order bound is
+  Theorem 3.10; no such bound is established by this refinement.
+  https://arxiv.org/abs/2004.04196
+
+See audit/final_validation.json in the source package for the final page
+count, reference scan, build checks and deliverable hashes.

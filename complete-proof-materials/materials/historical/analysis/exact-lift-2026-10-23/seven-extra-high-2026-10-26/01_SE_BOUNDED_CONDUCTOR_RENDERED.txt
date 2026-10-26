@@ -1,0 +1,169 @@
+      Q222 Se Bounded Conductor Proof 2026 10 26
+
+
+
+ 
+
+
+Exact bounded SE conductor: scalar square, two first normals, and one eight-root matrix
+Scope. This proves the general algebraic part of the proposed thin-R10 step. It does not identify the TL6 raw coefficient arrays, verify their source-coquotient bounds, establish the formal negative-β base, or assert the global Q222 tensor-SOS theorem. The supplied excerpts are group_01.tex:1348–1478 (CC1–CC6) and group_03.tex:2497–2570 (SE5–SE11). The algebraic statements below are independently derived from those definitions. All ideals and divisibilities are formal before source specialization.
+1. Ring, support, and dictionary
+Let D be a characteristic-zero polynomial domain containing independent formal source letters ε,j,E and finitely many auxiliary source letters. For the direct version take D=Q[ε,j,E,ξ_1,...,ξ_m]. Let R=D[u,w,v]. Denominators depending only on source or testing factors with bounded, nonzero residue may first be cleared by multiplying by their pure-factor squares. After clearing, the stated coefficient and congruence tests must hold in R. The same argument works in a localization of D in which ε remains a nonunit and reduction modulo ε is defined. Source specialization must send all displayed coefficients and their formal coquotients to bounded elements. No inverse of ε, j, E, or a contact difference is admitted unless a separate source identity proves the resulting coquotient bounded.
+Define
+$ k=\varepsilon j,\quad v_0=\varepsilon j^2E,\quad
+ J=(u-k,w-j,v-v_0),\quad P_c=P(k,j,v_0),$$ A=\varepsilon wv,\quad B=v,\quad C=Euw,\quad
+ D_0=\varepsilon^2j^3E,$$ x=B-C,\quad y=A-kC,\quad z=uB-kC,\quad h=kC-D_0.$At the formal contact x_c=y_c=z_c=h_c=0, C_c=εj²E, and D_0=kC_c. The CC to SE dictionary is
+$ d_{CC}=\varepsilon,\ k_{CC}=j,\ b_{CC}^{2}=E,\quad
+ (u_{CC},w_{CC},v_{CC})=(w_{SE},u_{SE},v_{SE}),$$ (A,B,C,D_0)_{CC}=(uB,\varepsilon B,\varepsilon C,D_0)_{SE},
+\quad (x,y,z,h)_{CC}=(\varepsilon x,z,y,h)_{SE}.$Thus the CC first circuit radical equals the SE q_1, but the CC conductor would require division by ε to recover some SE coefficients. We do not import its coefficient estimates. We prove the SE conductor directly.
+At nonnegative testing angles introduce separated radicals
+$ a_1^2=A,\quad a_2^2=uB,\quad a_3^2=kC,\quad a_4^2=D_0,
+\quad q_1=a_1a_2-a_3a_4,\quad q_2=a_1a_3-a_2a_4.$The four positive squared monomials have product (k²BC)², and their roots can be selected as products of a pure-source square root and a pure-testing square root. Consequently
+$ \begin{aligned}
+ q_1^2&=A(uB)+(kC)D_0-2k^2BC,\\
+ q_2^2&=A(kC)+(uB)D_0-2k^2BC.
+ \end{aligned}
+\tag{1}$With r_*=y+z-h-2kx, polynomial expansion gives
+$ r_*=(v-v_0)\big[(u-k)+\varepsilon(w-j)\big]-Ek(u-k)(w-j)\in J^2,
+\tag{2}$$ \boxed{kCr_*=q_1^2-yz=q_2^2+zh.}
+\tag{3}$The state-normal roots N,M_B are the actual two hard roots of the native chart, treated as formal independent variables for coefficient extraction and substituted at the end. The full proposed eight-root column is
+$ \mathscr R=(N,M_B,x,y,z,h,q_1,q_2)^\top.
+\tag{4}$2. Exactly stated sufficient hypotheses
+Suppose the entire normalized stress, after subtracting only explicitly retained positive squares, has the exact polynomial expansion
+$ \mathscr F=F_0+2NG_N+2M_BG_M
+              +aN^2+2bNM_B+cM_B^2,
+\tag{5}$where all raw coefficients belong to R and become bounded after permitted specialization. The scalar has precisely the restricted support
+$ \boxed{F_0=f_AA^2+f_{BB}B^2+f_{BC}BC+f_{CC}C^2+\varpi D_0^2.}
+\tag{6}$No AB, AC, AD_0, BD_0, or CD_0 terms may be inserted without a new argument. In particular (6) belongs to (A,B,C)^2+(D_0^2), not the unrestricted (A,B,C,D_0)^2.
+Assume the following exact finite tests:
+S0, contact jets: F_0 ∈ J² (equivalently its contact value and all three first derivatives vanish). Each G_N,G_M∈J. These are polynomial equations before specialization.
+
+S1, scalar coefficient congruences: Put
+$S=k^2f_A+f_{BB}+f_{BC}+f_{CC}+k^2\varpi,
+\qquad H_x^{\rm raw}=2f_{BB}+f_{BC}.$Require S−S|_{w=j}∈ε²R, S|_{ε=0}=s(u²,v²) for a polynomial s, and H_x^{raw}|_{ε=0} to be independent of w. An easy stronger test, as stated in SE8–SE11, is that every w-dependent part of each f has an explicit ε² factor and every f|_{ε=0} is even in u,v and independent of w.
+
+N1, complete-normal support: For T∈{N,M_B}, require explicit bounded raw coefficients g_{TA},g_{TB},g_{TC}∈R with
+$G_T=g_{TA}A+g_{TB}B+g_{TC}C,
+\tag{7}$and k g_{TA}+g_{TB}+g_{TC} independent of w modulo ε. It is enough that the three g_{T•} are each w-independent modulo ε. No unreported linear D_0 term is allowed.
+
+B1, boundedness and units: a,b,c, all raw f,g, and the formal polynomial coquotients in the constructions below evaluate into B_c⊗_ℝ B_t. It suffices that all formal source generators and the tested angles are bounded and only positive-residue pure-field denominators have been inverted. If another native coquotient is present, its boundedness must be checked independently before this theorem applies.
+
+Conditions S0, S1, N1, B1 are finite coefficient tests, not vague contact positivity conditions. Native thin-R10 verification must supply them from its original TL6 arrays and source identities; the SE source excerpt alone does not determine all those arrays.
+Theorem. Under S0, S1, N1, B1, a symmetric 8×8 matrix H with coefficients bounded in B_c⊗_ℝ B_t can be constructed by the finite formulas below, such that
+$ \boxed{\mathscr F=\mathscr R^{\!\top}H\mathscr R}
+ \tag{8}$identically at all independent tests in the chart. Every coefficient is obtained by polynomial arithmetic and monic division. No mixed inverse, no inversion of ε, j, E, and no inverse of u−k,w−j,v−v_0 occurs. This theorem makes no claim that H is positive semidefinite; that is the separate native strict-base/infinitesimal-perturbation gate.
+3. A first-order SE conductor with an explicit quotient algorithm
+For any P∈R define the ordered monic differences
+$\begin{split}
+ T_u(P)&=\frac{P(u,w,v)-P(k,w,v)}{u-k},\\
+ T_w(P)&=\frac{P(k,w,v)-P(k,j,v)}{w-j},\\
+ T_v(P)&=\frac{P(k,j,v)-P(k,j,v_0)}{v-v_0}.
+\end{split}\tag{9}$The division symbols denote the unique polynomial quotients obtained from Z^m−a^m=(Z−a)Σ Z^{m−1-l}a^l. No division is performed at a numerical zero. Their telescoping identity is
+$ P=P_c+(u-k)T_u+(w-j)T_w+(v-v_0)T_v.\tag{10}$When P_c=0, suppose T_w(P)∈(ε,v)R. Construct V and U without Laurent powers by
+$ V=\frac{T_w(P)|_{\varepsilon=0}}{v},\qquad
+ U=\frac{T_w(P)-vV}{\varepsilon}.\tag{11}$Both expressions are polynomial quotients by the monic indeterminates v and ε after the respective divisibilities have been checked. Thus T_w=εU+vV. The exact SE5–SE7 identities yield
+$ \boxed{CP=x\mathcal L_x(P)+y\mathcal L_y(P)+z\mathcal L_z(P)}
+ \tag{12}$with
+$\begin{aligned}
+\mathcal L_x(P)&=-uT_u-\varepsilon wU-Ekw^2V-EkwT_v,\\
+\mathcal L_y(P)&=U+EjwV+EjT_v,\\
+\mathcal L_z(P)&=T_u+Ew(w-j)V+EwT_v.
+\end{aligned}\tag{13}$The identities are direct expansions of
+$ C(u-k)=z-ux,\quad \varepsilon C(w-j)=y-\varepsilon wx,\quad
+ C(v-v_0)=E(wz+jy-kwx),$and
+$ Cv(w-j)=Ew(w-j)z+Ejwy-Ekw^2x.$If T_w∈ε²R, the special choice V=0, U=T_w/ε is also polynomial, and U∈εR. This extra factor is decisive at the next stage.
+4. Scalar: exact two-stage algorithm
+Use the raw support (6) and the exact substitutions
+$ A=y+kC,\quad B=x+C,\quad D_0=kC-h.$The first expansion has no omitted mixed terms:
+$ F_0=f_Ay^2+f_{BB}x^2+\varpi h^2
+ +C\big[x(2f_{BB}+f_{BC})+y(2kf_A)-2k\varpi h\big]+C^2S.
+\tag{14}$Since F_0∈J², its contact value vanishes. At contact F_{0,c}=C_c² S_c, and C_c=εj²E is a nonzero polynomial in the domain. Hence S_c=0, with no division by C_c in the output. By S1, T_w(S)∈ε²R, so apply (12) with P=S, taking V=0, U=T_w/ε∈εR. Write the resulting vector as
+$ L=(\mathcal L_x(S),\mathcal L_y(S),\mathcal L_z(S)).$Then
+$ F_0=Q_2+C\sum_{i\in\{x,y,z,h\}}r_i H_i,
+\quad Q_2=f_Ay^2+f_{BB}x^2+\varpi h^2,
+\tag{15}$where r_x=x,r_y=y,r_z=z,r_h=h and
+$ (H_x,H_y,H_z,H_h)
+ =(2f_{BB}+f_{BC}+L_x,\ 2kf_A+L_y,\ L_z,\ -2k\varpi).\tag{16}$Put \varpi_c=\varpi(k,j,v_0), λ=2k\varpi_c, and
+$ (J_x,J_y,J_z,J_h)=(H_x,H_y,H_z,H_h)-\lambda(-2k,1,1,-1).
+\tag{17}$Exact contact value of all four remainders. Each root x,y,z,h vanishes at contact, as does every first derivative of Q_2. Differentiating (15), using F_0∈J², gives
+$ C_c\sum_iH_{i,c}\nabla r_{i,c}=0.$Cancel C_c only in the formal integral domain. The identity (2) implies
+$ -2k\nabla x_c+\nabla y_c+\nabla z_c-\nabla h_c=0.$Because H_{h,c}=-2k\varpi_c, the choice λ=2k\varpi_c makes J_{h,c}=0. The remaining three contact values have zero linear combination of the three gradients of x,y,z. Their determinant is
+$ \boxed{\det\frac{\partial(x,y,z)}{\partial(u,w,v)}\bigg|_c
+       =-E^2\varepsilon^3j^4\ne0}\tag{18}$as a formal polynomial. Therefore J_{x,c}=J_{y,c}=J_{z,c}=0 as polynomial identities; no inverse determinant appears in any certificate coefficient.
+The previously missing second-stage T_w divisibility, proved. Let
+$ s(u^2,v^2)=S|_{\varepsilon=0},\quad s(0,0)=0,$and define the polynomial quotients
+$ p(u^2,v^2)=\frac{s(u^2,v^2)-s(0,v^2)}{u^2},\qquad
+ q(v^2)=\frac{s(0,v^2)-s(0,0)}{v^2}.
+\tag{19}$S1 makes the first divisions obey
+$ T_u(S)\equiv up,\qquad T_w(S)\equiv0\pmod{\varepsilon^2},
+ \qquad T_v(S)\equiv vq\pmod\varepsilon.
+\tag{20}$With U=T_w(S)/ε∈εR, (13) implies
+$ L_x\equiv-u^2p,\quad
+ L_y\equiv Ejvq,\quad
+ L_z\equiv up+Ewvq\pmod\varepsilon.
+\tag{21}$Because k=εj and λ=2k\varpi_c, S1 further gives
+$ \begin{aligned}
+ J_x&\equiv H_x^{\rm raw}|_{\varepsilon=0}-u^2p,\\
+ J_y&\equiv Ejvq,\\
+ J_z&\equiv up+Ewvq,\\
+ J_h&\equiv0
+ \end{aligned}\pmod\varepsilon.
+\tag{22}$Now compute the second monic w quotient only after setting u=k as in (9). Modulo ε, k=0, hence
+$ \boxed{
+ (T_w(J_x),T_w(J_y),T_w(J_z),T_w(J_h))
+ \equiv (0,0,Evq(v^2),0)\pmod\varepsilon.
+ }
+\tag{23}$Therefore all four T_w(J_i)∈(ε,v)R, with an explicit polynomial V from (11). This is not assumed and requires the ε² first-stage w-dependence test, not merely w-independence modulo ε. As J_{i,c}=0, we can apply (12) to every J_i and write
+$ CJ_i=x\ell_{ix}+y\ell_{iy}+z\ell_{iz},\qquad
+ \ell_i=(\mathcal L_x(J_i),\mathcal L_y(J_i),\mathcal L_z(J_i)).
+\tag{24}$Combining (15)–(17), (3), and (24) yields the complete scalar identity
+$ \boxed{
+ F_0=f_{BB}x^2+f_Ay^2+\varpi h^2
+       +2\varpi_c(q_1^2-yz)
+       +\sum_{i=x,y,z,h}r_i(x\ell_{ix}+y\ell_{iy}+z\ell_{iz}).
+ }
+\tag{25}$Using the other circuit pairing, one may equally replace q_1²−yz by q_2²+zh. All coefficients in (25) arise by finitely many monic polynomial divisions and no forbidden inverse.
+5. Two complete first-normal rows
+For each T=N,M_B write the whole raw first normal as in (7). Put S_T=k g_{TA}+g_{TB}+g_{TC}. Then
+$ G_T=g_{TB}x+g_{TA}y+C S_T.$Its contact value is G_{T,c}=C_c(S_T)_c, so N1 and G_T∈J imply (S_T)_c=0. The w-independence of S_T modulo ε forces T_w(S_T)∈εR, using (9). Hence (12) applies with V=0 and U=T_w(S_T)/ε. Define
+$ \boxed{
+ G_T=\gamma_{Tx}x+\gamma_{Ty}y+\gamma_{Tz}z,
+ \quad (\gamma_{Tx},\gamma_{Ty},\gamma_{Tz})
+ =(g_{TB}+\mathcal L_x(S_T),\ g_{TA}+\mathcal L_y(S_T),\ \mathcal L_z(S_T)).
+ }
+\tag{26}$No higher-order assumption or lost first-normal term is hidden here. The two rows are independent and are lifted using the same ordered monic conductor.
+6. One explicit eight-root symmetric matrix
+Let e_x,e_y,e_z,e_h,e_{q1},e_{q2} be standard basis vectors in the six-dimensional soft-root space and let
+$ \widetilde\ell_i=(\ell_{ix},\ell_{iy},\ell_{iz},0,0,0)^\top.$Choose the fixed rational splitting 1/2 between the two circuit pairings in (3). Form the explicit symmetric coefficient matrix
+$ \begin{aligned}
+ H_{\rm soft}={}&
+  f_{BB}e_xe_x^\top+f_Ae_ye_y^\top+\varpi e_he_h^\top
+  +\varpi_c(e_{q1}e_{q1}^\top+e_{q2}e_{q2}^\top)\\
+ &-\frac{\varpi_c}{2}(e_ye_z^\top+e_ze_y^\top)
+  +\frac{\varpi_c}{2}(e_ze_h^\top+e_he_z^\top)\\
+ &+\frac12\sum_{i\in\{x,y,z,h\}}
+    (e_i\widetilde\ell_i^\top+\widetilde\ell_ie_i^\top).
+ \end{aligned}\tag{27}$For each hard normal T, put \gamma_T=(\gamma_{Tx},\gamma_{Ty},\gamma_{Tz},0,0,0)^\top. Define
+$ \boxed{
+ H=\begin{pmatrix}
+ a&b&\gamma_N^\top\\
+ b&c&\gamma_M^\top\\
+ \gamma_N&\gamma_M&H_{\rm soft}
+ \end{pmatrix}.}
+\tag{28}$Equations (25) and (26) immediately verify \mathscr F=\mathscr R^\top H\mathscr R. The hard 2×2 quadratic block (a,b;b,c) is unchanged. The chosen 1/2 splitting makes both q_1 and q_2 explicit, rather than silently discarding the second required radical root. Only field-specific positive pure factors are canceled after source/test specialization. The resulting bounded matrix is not asserted PSD by this lemma.
+7. Sharpness and logical boundaries
+Why first-stage w-dependence must have an ε² factor for this algorithm. Take
+$ F_0=\varepsilon C^2(w-j)^2$with only f_CC=ε(w-j)² nonzero. This lies in (A,B,C)^2∩J²; all raw coefficients reduce modulo ε to even, w-independent polynomials. Its first T_w(S)=ε(w-j) is divisible by ε but not ε². Applying the prescribed first conductor gives H_y=w-j, and consequently the second T_w(J_y)=1\notin(ε,v). The polynomial itself is an elementary square; this counterexample refutes only the automatic second-stage inference from the weaker hypotheses. It shows exactly why the stronger divisibility must be established on the actual source coefficients.
+Minimal second-stage test. For any contact-vanishing J_i in the algorithm, T_w(J_i)∈(ε,v) is equivalent to the formal polynomial J_i(0,w,0) being independent of w (with the other source letters retained). This is the minimal direct test when the convenient S1 parity/ε² conditions are unavailable. Either proof gives the bounded conductor.
+Why the raw support matters. In the CC system, Cr_*∈(A,B,C,D_0)^2∩J², but is not in the square of its five soft roots by the weight-42/x-divisibility test printed at group_01.tex:1470–1478. Hence the unrestricted replacement (A,B,C,D_0)^2 is false. The present theorem uses only (6), corresponding to (A,B,C)^2+(D_0^2), and never assumes the invalid larger ideal inclusion. Because the CC and SE normalizations scale x by ε, CC coefficient boundedness cannot simply be transferred to SE.
+Boundedness is an independent hypothesis. Polynomial division proves exact membership before specialization. To obtain a matrix over B_c⊗_ℝ B_t, the native application must verify that every raw coefficient and formal coquotient has bounded value after legal unit denominator clearing. In particular, an expression with a factor 1/ε is not accepted solely because its complete parent is bounded. The sufficient hypothesis here is explicitly polynomial, or a separately verified bounded coquotient. No order on the tensor product and no mixed Cholesky factor is used.
+What this gives the companion native task. Supply the five scalar coefficients f_A,f_BB,f_BC,f_CC,\varpi, six coefficients of the two complete raw normal rows, the three hard quadratic entries, and the original permitted source denominators. Check S0, S1, N1, B1 on the literal quarter-parent stress \mathscr E/\rho_{thin}. Formulas (9), (11), (13), (16)–(17), (24), (26)–(28) then produce its eight-root matrix exactly. Native positivity of the formal base and the strict residue of the final matrix remain separate proof obligations. The global tensor-SOS theorem does not follow from this local lemma alone.
+
+
+
+
+
+
+
+
+

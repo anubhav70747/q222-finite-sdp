@@ -1,0 +1,32 @@
+UI matched Hessian and finite caps — independent bounded audit
+26 October 2026
+
+Verdict. The actual RC3/RC4 leading model gives exactly UI4–UI6, and the finite-cap boundary argument is valid with the stated source hypotheses and the separately established UI2/full-normal allocation. No additional positive-residue assumption on r,g,1-zh,t,j or n is needed. This is the local ordinary–small UI chart only; outer/other-axis joins and any evaluated fixed testing dictionary remain outside the result.
+
+1. Independent Hessian calculation. I reconstructed RC4 with every testing occurrence of a replaced by u, leaving all RC3 source coefficients fixed. At (u,V,xi,zeta)=(a,1,-r/b,1/(ab)), the value and all four first derivatives vanish. Let H=(1/2)Hess(f), partitioned into state variables (xi,zeta) and angular variables (V,u). Exact elimination gives G=H_angle-K^T H_state^{-1}K with all three entries printed at UI4–UI5. In particular, writing z=a^2 and Ac=1+zr,
+ G_uu=8(1-r)Ac^2/(zb Delta),
+ det G=16(b+r)^2 Ac^3[3z+4-(z+2)^2r]/(b^2 Delta^2).
+The private checker verifies the three rational identities from the polynomial, rather than checking only the determinant of the proposed matrix.
+
+Strictness follows from the exact source numerator
+ 2r Delta n=b Qn,
+ Qn=(1-(z+1)r)Ac-zr g.
+Since n>=0 and g>=0 in the leading residue closure, r<=1/(z+1). Consequently
+ 3z+4-(z+2)^2r >= z(2z+3)/(z+1)>0.
+The denominators zb Delta and b^2 Delta^2 have positive unit residues: a is an ordinary positive unit, and UR4 plus strong alpha gives b a unit. Also 1-r>=z/(z+1). Thus G stays bounded and strictly positive near each allowed boundary residue. The lower bound is local to that real residue, not a single numerical constant for all positive a. Literal n=0 is included.
+
+2. Harmonic normalization. At epsilon=0 the two canceled numerators satisfy c1=c2=z(1+z)b(b+r)Ac/(2Delta). Therefore
+ overline(k^2 CD/(C+D))=c1/(t+j)=c1/Ac=H0,
+even when t or j vanishes in residue, since t+j=Ac is a unit. This justifies RC3's H0 throughout the cap-boundary argument; it does not set the independent testing angle v equal to k.
+
+3. Which weights can diverge. With the opening poles canceled, the only possible unbounded n,m,alpha correspond respectively to r=0, g=0, 1-zb=0. The last two cannot occur together: b=1/z gives g=1/z+r>0. Thus at most two weights diverge. The centered rows have hard parts E_X, E_X+a E_Z, E_Z, up to nonzero unit factors. Every possible pair is independent. Their full angular coefficients are bounded and continuous. The UR9 products nx,nx^2,m mu,m mu^2,alpha pi,alpha pi^2 and the canceled C/D products have no inverse of these vanishing openings; hence the finite matrix left after subtracting the centered penalties has a genuine continuous limit.
+
+4. Why the limiting kernel is strict. Approach a fixed boundary residue through positive leading-source points. The two-state block P is bounded below by cI, c>0, because m and alpha are strong. For a fixed angular vector q, solve the at most two penalty-row equations in the hard variables; unit determinants give a bounded competitor h0. The centered divergent squares vanish on it, so the continuous finite part makes F(h0,q) bounded. With hmin the exact state minimizer,
+ (h0-hmin)^T P(h0-hmin)=F(h0,q)-q^T Gq.
+This bounds hmin uniformly. The state Schur identity, P>=cI and the strict bounded G then give a uniform positive lower bound for the full matched Hessian near that residue. For a vector in the limiting common penalty kernel, adjust only its hard coordinates into each nearby exact kernel. The adjustment tends to zero. The divergent squares vanish exactly, so taking the limit proves the finite part strictly positive on the limiting kernel. The elementary finite-penalty lemma therefore supplies sufficiently large finite real caps, below the actual unbounded weights. Bounded weights are kept whole.
+
+The required approach domain is not empty: its real inequalities are r>0, (1-r)/(1+z)<b<1/z and Qn>=0. For r>0 the last condition is b<=1/[z(z+1)r]+(z-1)/[z(z+1)]-(z+2)r/(z+1). These intervals approximate all the admitted closed boundary points, including their intersections and n=0. No absent native gap is silently assumed positive in residue.
+
+5. Return to the independent fields. In the lifted six-row Gram, setting S=T is only an auxiliary real residue calculation. The change from its four nontrivial rows to two hard deviations and (V,u) has determinant containing 2s, a unit. Hence the strict matched Hessian makes the two angular Schur diagonals have positive sum. The last exact UI1 identity redistributes their mass; its extra cross coefficients contain u-a and have zero residue. This produces a strict six-row residue without imposing S=T on independent tests. Together with the previously checked exact UI2 allocation, it certifies the full local parent, with centered positive excesses restored. It does not supply a global angular join.
+
+Exact replay: ui_hessian_caps_audit_2026_10_26.py/.json; no sampling or public edits.

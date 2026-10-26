@@ -1,0 +1,128 @@
+Q222 — current verified public delivery, 23 October 2026
+
+LATEST PUBLIC COMMIT
+6fb64b50e1746e9fd8a2afeb7cc5bf14f595a9c8
+Repository: https://github.com/anubhav70747/q222-finite-sdp
+All 288 public files downloaded and byte-compared to committed blobs.
+Provenance: original50, contact7, local66963, inverse18, weighted45,
+canonical-completion38. All19 Overleaf TEX files match public source blobs.
+Repository clean after publication. No full-set exact affine pencil yet.
+Complete scientific ZIP: delivery-human/Q222_Complete_Scientific_Package.zip
+Bytes: 13366643
+SHA256: 90b55e5fdc60d0d0170575739202293da2b70d81e094567a4171f068c758a7c9
+Verification: analysis/exact-lift-2026-10-23/public_upload_verification.json
+
+CURRENT READING ORDER
+Article7pages; complete companion343pages; Explicit_Lifts10pages.
+Canonical-completion5pages; new half-line4pages; multiplier-obstruction3pages.
+Root README shortened to the mathematical progression, with historical/local
+construction details retained in extracted-lifts/README.md and all files intact.
+No claim that the new7pages replace the full343-page singular-case companion.
+Accepted article abstract untouched:
+ac7edca81f30c5ee10ca91e378b2f34253cc7bc83dca3790ca3c42e6af80a5eb
+Main article/companion/Overleaf not rebuilt or changed this turn.
+Three completion notes compiled twice cleanly. Every new page and changed
+canonical page5 visually inspected. Exact checks replayed from public paths.
+
+NEW EXACT HALF-LINE CONE
+extracted-lifts/canonical-completion/halfline/
+Q222_Halfline_Completion.pdf, halfline_combined.tex, two COO arrays,
+literal rational witness, compiler and independent standard-library checkers.
+For J(v)=J0+vJ1+v²J2 and G,H the established canonical4x4 matrices,
+write G=G0+vG1+v²G2 and H similarly. Exact finite cone:
+ SG=[[G0,BG],[BG^T,G2]]>=0, SH=[[H0,BH],[BH^T,H2]]>=0,
+ TG=G1-BG-BG^T>=0, TH=H1-BH-BH^T>=0.
+Blocks8,8,4,4 total24; twelve J entries plus32 B entries =44aux.
+Nine scalar source signs give order33. All coefficients integers, no equations.
+Fejer-Riesz of M(t²), parity averaging, proves equivalence to quadratic
+matrix positivity on v>=0 including singular matrices and all zero faces.
+Reflection Jminus(v)=diag(1,-1) Jplus(-v) diag(1,-1) covers v<0.
+At zero use Jplus(0); selector continuity is unnecessary.
+This is an INNER canonical-validity cone. Universal adequacy remains open.
+
+Explicit strict dual certificate:
+ WS=[[I4,I4/2],[I4/2,I4]], WT=I4/2,
+ <WS,SG+SH>+<WT,TG+TH>=16 sum(c), all44aux coefficients cancel.
+Minimum eigenvalue1/2, total weight trace20. Hence totalGramtrace<=32sum(c)
+and every aux |y_i|<=16sum(c). Auxiliary kernel is zero by coefficient recovery.
+Projection closed; no fixed-source weak infeasibility. Phase I min t with
+L(c,y)+tI24>=0 has strictly feasible primal and dual(W/20), finite attained
+optima, positive optimum iff fixed-source infeasible. No arbitrarySDP claim.
+Strict trace checker validates all53coefficient matrices exactly.
+
+Exact rescue of the published polynomial obstruction source:
+c=(359,0,0,75/16,60,416,41/2,831/2,151/2).
+Jplus(v)=1/64*[[3043v-2109v²,3875v²],
+              [1403+23874v+2306v²,815v+43455v²]].
+BGdenominator256; BHdenominator18496; literal data and rational LDL exported.
+Ranks SG,SH,TG,TH=(5,7,1,3). WitnessSHA256
+130f73dd78d3fe3aa0a2e7be6f3868559712057b051022a9025298b0baaeda14.
+The full-line polynomial selector is forced to(p,r,s)=(-100,2000,1200)
+and G(1) has value-2645/4 on(a2,b1)=(1,-1), so full-linepolynomialsfail.
+Halfline reflection has sign(v),|v|,v|v|; do not omit constant r0sign(v).
+318compilerchecks +96witnesscoefficient equalities +exactLDL+kernelchecks.
+One tiny Clarabel diagnostic was used, then exact rational recovery; no
+additional solver or source sweep. Public witness replay does not need solver.
+
+NEW FIXED POLYNOMIAL-MULTIPLIER OBSTRUCTION
+extracted-lifts/canonical-completion/polynomial-obstruction/
+For0<T<=1/100, c(T)=(2T-4T³,T³,1-T+T³,T³,(1-T)/2+T³,T³,
+                    1-T+T³,1-T+T³,(1-T)/2+T³) is strictlyvalid.
+This is slack w-[S+(1-T)(A1+B0)], w=4-2T+4T³.
+Exactdet bound >=(144-960T)T³>0 plus connectedtorusinertia provesvalidity.
+UnderT=t²,u=-tx,v=ty and full polynomialstate, leadingterm is
+(4/3)t6*(Motzkin+2). For everyfixed nonzero globallynonnegative separable
+p(u)q(v), boundeddegreeSOSclosedness and squaremonomialcancellation show
+p q F_c(T) is notpolynomialSOS for allsufficientlysmallT.
+Threshold existential, source-dependent/nonseparable/algebraicmultipliers
+outside theorem. FixedpolynomialBobcompletion is ruledout, all degrees.
+M(x,s²)=(x²s²-1)²+[xs²(s²-1)]²+2[xs(s²-1)]² showswhyhalflinecanescape.
+OriginalProarchiveSHA256:
+5f77931c5a41e9c48108a6cb39d3ddbc92de937a51c410f559dbcf8c890e8bb4.
+Independent analytic review: multiplier_obstruction_review.txt inanalysis.
+IndependentcheckderivesphysicalBellmatrix, genericcompletionidentities,
+criticaldegree12 (or16 afteru²Du), andfull-state leadingcoefficient.
+Public proof shortened from5to3pages without shrinking11pttype.
+CanonicalnoteSection4 updated: fixedpolynomialroute is no longer calledopen.
+
+OTHER RESULTS PRESERVED
+Canonicalpointwisevalidity is forallv exists2x2J with G,HPSD.
+Angularorder49 exact in nineLaurentcoefficients,48aux24order2+1scalar;
+source mapquartic, notaffineBelllift. Weightedfullstateorder133,
+104functions27blocks. LocalinverseAlice62/allAlice731 andorder669 retained.
+PSDtotalorder>=9 via nine exposedprobabilityfaces; auxiliariescompress to
+N(N+1)/2-9; N9,p36,2025matrixcoeff template unsolved.
+Full343companion and all source cases unchanged.
+
+ACTIVE GOAL AND LIVE PRO TASK
+Goal remains active: complete exact finite lift with minimum usage and update git.
+No complete eight-coordinate affine pencil has been extracted; do not mark
+complete or replace this target by the order33 innercone.
+PreviousPro task completed and fully recovered:
+user36fb521f-d0bc-4bed-8ecf-2e9cd3312ba2,
+answer3f4fad43-134c-50ed-a4a8-0677fa7b12ff.
+One new authorized task is RUNNING in Recover manuscript:
+thread6ada2928-d9d8-83eb-a982-a73ce2b936b3
+userturn21bdbfcb-5b3c-422d-9859-c77974e67420, sent1792715145.806.
+Lastread showedthreadACTIVE at00:35UTC. The usermessage-only turn field
+sayscompleted; that does not mean assistant taskfinished. Browser showed
+responding and the exact order33 adequacy/dual-atomic-decomposition task.
+Prompt: next_halfline_adequacy_task.txt; dispatch: halfline_adequacy_dispatch.json.
+Screenshot: halfline_adequacy_sent.png. Task received the oldboundedauxproof
+and exactJ witness, and was toldhalflinefiles wouldbeuploaded. Latestpublic
+main nowhas them; no duplicateprompt sent. The newliteralstrictdualW was
+found afterdispatch and ispublic; share onlyaftercompletion ifneeded.
+DO NOT interrupt or duplicate. Recovercompletedresponse, inspectquantifiers,
+auditanyuniversalcoverage or exactseparation beforeintegrating.
+Noexpensive sweeps; all localagenttasks arecompleted and no repoedits pending.
+CUA existing proofChat(tab4,browser2) markedhandoff thisturn. Aftercompaction,
+rewriteDocumentation beforeuse. Preferread_thread for cheapstatus; UIforfiles.
+
+PROGRESS THIS TURN
+Verified scientific progress and verified live wait, not goalcompletion:
+closed order33halflinecone, exactrationalrescue, strictdualtraceidentity,
+fixedpolynomialmultiplier impossibility, shorterproofnotes, publicbyteverifiedupload.
+Nextwork: resolveuniversalorder33adequacy viaProresult or exactdualstructure;
+ifcounterexample, retainits preciseimplication andderiveonejustifiedextension.
+Do not rerun the one-shot staging script blindly: it would overwrite later
+README edits. verify_public_update.py is reusable aftercleancommit/push.

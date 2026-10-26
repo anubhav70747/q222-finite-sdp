@@ -1,0 +1,61 @@
+\chapter{One hard event and a positive next-scale signed coefficient}
+\label{component:pb16e5066334b}
+\noindent\textbf{Component }\path{pb16e5066334b}\par
+{\small\noindent Source: \path{CORE/prior/inherited/zero_d_one_hard.tex}\par}
+{\small\noindent SHA256: \path{b16e5066334b6b1b83097bee079bc2d1fbfc34752531e0d3bafce52043b9d4b5}\par}
+{\small\noindent Inventory use: prop:one-hard-event | one-hard-event constrained curvature; prop:one-hard-event | C14\_\allowbreak{}ENTIRE\_\allowbreak{}ORIGINAL\_\allowbreak{}PARENT\_\allowbreak{}GRAPH; precise subordinate uses retained below\par}
+\medskip
+\subsection{One hard event and a positive next-scale signed coefficient}
+\begin{proposition}[The one-hard-event terminal]\label{pb16e5066334b:prop:one-hard-event}
+Let the source be physical. Suppose one event weight $a$ satisfies $\sigma/a\in\mathfrak m_c$, where $\sigma$ is the largest remaining source coefficient, and $d/\sigma$ has positive residue. Then the entire parent is tensor SOS at every noncommuting residue test.
+\end{proposition}
+\begin{proof}
+CHSH symmetries are transitive on the eight events, so take $\lambda/\sigma$ unbounded and all other coefficients divided by $\sigma$ bounded, with $\overline{d/\sigma}>0$. A test with nonzero residue of the $\lambda$ amplitude has positive slack after normalization by $\lambda$. Otherwise use that amplitude as the hard state coordinate and restrict to its exact kernel
+\[
+W=-vX.
+\]
+The constrained normalized residue is a nonnegative quadratic form in $(X,Y,Z)$, depending on $u,v$. On $Z=0$ it is positive definite by the signed-core calculation in Section~\ref{p0c8f420148b7:sec:physical}. Thus at any zero its state matrix has exactly two positive eigenvalues and one simple zero eigenvalue; in particular $Z\ne0$, and the chart $Z=1$ is available.
+
+Here is a small determinant calculation proving strictness in its two angle directions. All source coefficients in the rest of this proof are the normalized residues, with $d>0$. Differentiate the determinant polynomial of Section~\ref{p0c8f420148b7:sec:physical} with respect to $\lambda$. The resulting eight outer coefficients are
+\begin{align*}
+a_{00}&=4\alpha t_7t_8,&
+a_{01}&=4(Dt_7t_6+2\alpha m t_8),\\
+a_{02}&=8mDt_6,&
+a_{10}&=4(2\alpha A t_7+nt_8t_4),\\
+a_{12}&=8(\beta m t_6+cDt_2),&
+a_{20}&=8nAt_4,\\
+a_{21}&=8(\beta n t_2+cAt_4),&
+a_{22}&=8\beta ct_2.
+\end{align*}
+Every $t_i$ appearing here is strictly positive because $d>0$. A basis change with first column $(1,0,0,0)$ and remaining columns $(-v,1,0,0),(0,0,1,0),(0,0,0,1)$ has determinant one. Its leading $\lambda$ entry is $4\lambda D_u$, so the determinant of the constrained three-by-three state matrix is
+\[
+4D_uD_v^2UV\,L_\lambda(U,V),\qquad
+L_\lambda=h_\lambda+\sum_{(i,j)\ne(1,1)}a_{ij}U^{i-1}V^{j-1},
+\quad U=u^2,\ V=v^2.
+\]
+Thus $L_\lambda$ is nonnegative on the positive quadrant. At a zero it is stationary in logarithmic angles. Its logarithmic Hessian is a positive sum of the outer products of the active exponent vectors.
+
+We show that those vectors span the plane at every zero. If a nonempty collection spans only a line and has zero weighted gradient, that line must contain an opposite pair among the eight boundary vectors of the Newton square. There are only four possible lines.
+\begin{itemize}
+\item On the horizontal line, the off-line coefficients force $\alpha=n=0$. A negative horizontal exponent requires $D>0$, hence $m=c=0$ from $a_{02}=a_{12}=0$. But then $a_{21}=0$, so the positive horizontal exponent is absent.
+\item On the vertical line, $a_{00}=a_{01}=0$ force $\alpha=D=0$. A negative vertical exponent requires $n>0$; then $a_{21}=0$ forces $\beta=0$, giving $a_{12}=0$ and no positive vertical exponent.
+\item On the line of slope $-1$, the two opposite coefficients $a_{02},a_{20}>0$ require $m,D,n,A>0$, contradicting the required off-line equality $a_{01}=0$.
+\item On the line of slope $+1$, the opposite coefficients require $\alpha,\beta,c>0$. The off-line equations then force $m=D=n=A=0$. Together with the hard $\lambda$ event the support is the perfect matching $\{\lambda,c,\alpha,\beta\}$.
+\end{itemize}
+The last case is also impossible for a nonnegative constrained source. On its perfect-matching curve all event squares and the signed core vanish. The signed-core differential is nonzero on the tangent space to the sole hard constraint. To check this invariantly, on the symmetry-equivalent matching $\{n,m,A,D\}$ use its four independent event-normal differentials $(dX,dY,dR_m,dR_D)$; the core differential is
+\[
+2t\{(1+t^2)dX-(1+t^2)dY-dR_m+dR_D\}.
+\]
+All four coefficients are nonzero. Removing only one hard direction leaves a nonzero derivative, while every event square has zero derivative. The constrained slack therefore takes a negative value on one side of that curve, a contradiction.
+
+Finally suppose no outer exponent is active. Then $\alpha=D=n=0$ and
+$\beta m=cA=\beta c=0$. If $\beta>0$, all complementary active events are contained in $\{A,\beta\}$; if $\beta=0$ and $c>0$, they are contained in $\{m,c\}$; otherwise they are contained in $\{m,A\}$. Including the hard event, these are the three nonextendable triples
+\[
+\{\lambda,A,\beta\},\quad \{\lambda,m,c\},\quad \{\lambda,m,A\}.
+\]
+Their exact kernel states in Section~\ref{p76173e99815f:sec:zero-d-cycle} have strictly negative signed core. Substitution annihilates every event and contradicts $d>0$.
+
+Thus the logarithmic determinant Hessian is positive definite at every constrained zero. The two positive state eigenvalues give a positive state block; its ordinary real Schur complement identifies the two-angle Hessian with a positive multiple of the determinant Hessian. Hence the constrained slack has a positive definite full Hessian in its two state and two angle variables. This Schur complement is used only over the real residue field, not as a tensor inverse.
+
+The diagonal weighted-contact argument, with hard ratio $\sigma/\lambda$, now applies. Its soft residue is either positive or has this strict four-variable minimum. It gives an exact full-parent Gram and restores the pure source scale, proving the assertion.
+\end{proof}

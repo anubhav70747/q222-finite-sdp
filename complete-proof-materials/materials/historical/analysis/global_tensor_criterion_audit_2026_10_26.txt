@@ -1,0 +1,72 @@
+GLOBAL TENSOR CRITERION: CONDITIONAL IMPLICATION AUDIT
+26 October 2026. Local native certificates are hypotheses throughout.
+
+Verdict. The implication from the FULL universal tensor-SOS assertion to
+some finite affine SDP lift is correct. It supplies neither local coverage
+nor evaluated matrices nor a finite NPA level.
+
+Primary source checked directly: Claus Scheiderer, arXiv:2004.04196v2,
+https://arxiv.org/html/2004.04196v2, Corollary3.19 (HTML lines518--523),
+Theorem3.10 (416--445), definition3.7 (392--405), Theorem2.10 (299--306).
+For a closed convex semialgebraic Q, Corollary3.19 uses exactly
+ forall real-closed K containing R, forall f in(P_Q)_K, forall q in Q_K:
+ f0 tensor1+sum f_i tensor q_i belongs to Sigma(K tensor_R K)^2.
+The paper writes point first; the factor flip is an algebra isomorphism
+preserving squares. No uniform square count, testing library, matrix
+order, or tensor-rank bound is required here. Theorem3.10 separately
+characterizes a SPECIFIED extension-degree bound d through bounded
+rank of each square tensor. The corollary's proof obtains a finite
+variety/function space from universal SOS, using the preceding
+algebraic/real-spectrum argument and Theorem2.10.
+
+Quantifiers and field labels. Two separately labelled copies of the SAME
+arbitrary K suffice. Proving the claim for arbitrary different source and
+testing fields is stronger. Keep the tensor product over the actual real
+base field. Do not multiply its two factors into K: ordinary f(q)>=0,
+including all real evaluations, is not the required SOS assertion.
+The finite nine-atom polynomial model for Q makes Q compact, convex and
+semialgebraic over R. Its fixed first-order formula transfers to Q_K;
+transferring the polar formula forall q in Q, f(q)>=0 identifies(P_Q)_K
+with all affine K-functionals nonnegative on Q_K. Real compactness is
+not being asserted in a non-Archimedean field.
+
+Conditional atom assembly. Assume exhaustive finite source decomposition
+and a tensor identity for EVERY required independent atom pair, including
+literal boundaries and nonstandard relative rates. A homogeneous parent
+identity F=(1 tensor h_t)[f,Phi] with h_t>0 permits division by its PURE
+testing square root. Source normalization d=1 is restored by sqrt(d)
+in the source factor. No mixed tensor denominator may be canceled.
+For f=sum_j a_j f_j and q=sum_i w_i Phi_i, with coefficients in their
+own factors, a_j,w_i>=0 and sum_i w_i=1, atom SOS h_ijk gives exactly
+ [f,q]=sum_i,j,k[(sqrt(a_j) tensor sqrt(w_i))h_ijk]^2.
+The testing weight sum is essential for the affine constant. Zero
+weights are never inverted. The finite extreme-source decomposition
+can transfer through its first-order midpoint/extremality formula;
+that observation does not verify any local native lemma.
+
+Both lift inclusions. The corollary supplies X,phi and finite-dimensional
+U with Q contained in phi(X(R)) and phi*(P_Q) contained in Sigma U^2.
+Enlarge U by1 and let V span1,phi*x_i and all u_i u_j for a fixed basis
+of U. Impose on a linear functional L on V
+ L(1)=1, L(phi*x_i)=q_i, [L(u_i u_j)]>=0.
+All coordinate-ring relations inside V are fixed finite linear
+relations, so this is one finite affine pencil, with equality constraints
+eliminated or represented by scalar PSD blocks. If q belongs to Q,
+evaluation at a preimage in X(R) is feasible. Conversely, any feasible L
+is nonnegative on every phi*f=sum squares from U, hence f(q)>=0 for
+every supporting affine f. Separation for closed convex Q gives q in Q.
+No representing measure, moment completeness, or Slater assumption is
+needed for this direct argument.
+
+The X,U and pencil dimensions/entries remain existential. Rational
+semialgebraic defining data for Q permit algebraic entries in principle
+by first-order transfer after finite sizes are fixed; this evaluates
+nothing and implies no finite NPA characterization.
+
+Actionable scope. The recovered texts' global criterion and both
+inclusions are sound conditional mathematics. Their claims that exactly
+two named gates remain, or that routing is exhaustive, are not established
+by this audit and must not become unconditional premises. The required
+hypothesis is complete separated atom SOS over every real-closed K,
+not an inventory, real sampling, determinant positivity, or a bounded
+compact-native certificate alone. No public file was changed.

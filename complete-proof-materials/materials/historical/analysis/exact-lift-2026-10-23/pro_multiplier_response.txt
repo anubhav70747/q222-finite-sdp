@@ -1,0 +1,301 @@
+**No fixed polynomial \(q(v)\ge 0\) can give polynomial completions of the two-LMI system for every valid canonical source, regardless of its degree.** This is the decisive new result.
+
+The half-line quadratic completion remains unresolved. The obstruction below survives every fixed separable polynomial multiplier \(p(u)q(v)\), but a square-root function on the half-line removes its limiting Motzkin obstruction. Thus it does not rule out your proposed algebraic cover.
+
+## Deliverables
+
+:chatgpt-content-reference{index="2"}[Q222_Fixed_Polynomial_Multiplier_Obstruction.pdf](sandbox:/workspace/scratch/3bd2dd833c30/halfline_2026-10-23/deliverables/Q222_Fixed_Polynomial_Multiplier_Obstruction.pdf)
+
+The five-page proof includes the exact source-validity argument, both independent state-normal terms, the multiplier obstruction, and the precise remaining half-line implication.
+
+:chatgpt-content-reference{index="3"}[Q222_Fixed_Polynomial_Multiplier_Obstruction_Source_and_Data.zip](sandbox:/workspace/scratch/3bd2dd833c30/halfline_2026-10-23/deliverables/Q222_Fixed_Polynomial_Multiplier_Obstruction_Source_and_Data.zip)
+
+The ZIP contains editable LaTeX, the nine source functions, the exact \(4\times4\) Bell matrix, the complete polynomial state substitution, every coefficient of the resulting pullback, a small rational Gram for the critical half-line polynomial, and an exact verification script. The existing matrices and companion are unchanged.
+
+## 1. The new obstruction theorem
+
+Write the source coefficients in the established order
+\[
+c=(d,\lambda,n,m,C,A,D,\alpha,\beta).
+\]
+
+For
+\[
+0<T\le \frac1{100},
+\]
+define
+\[
+\boxed{
+\begin{aligned}
+d&=2T-4T^3,
+&\lambda=m=A&=T^3,\\
+n=D=\alpha&=1-T+T^3,
+&C=\beta&=\frac{1-T}{2}+T^3.
+\end{aligned}}
+\]
+
+Every coefficient is strictly positive, and every source in this family is valid for all states and all projective measurement angles.
+
+**Theorem.** For every pair of fixed nonzero polynomials
+\[
+p(u)\ge0,\qquad q(v)\ge0
+\]
+on the real line, there is \(\delta_{p,q}>0\) such that
+\[
+p(u)q(v)F_{c(T)}(u,v;\psi)
+\]
+is **not** a polynomial sum of squares whenever
+\[
+0<T<\min\{\delta_{p,q},1/100\}.
+\]
+
+Taking
+\[
+p(u)=u^2(1+u^2)
+\]
+settles your polynomial-multiplier alternative. The accepted completion identities and univariate matrix factorization imply
+\[
+G_{q,Z_c}(v),H_{q,Z_c}(v)\succeq0
+\quad\text{for every }v\in\mathbb R
+\quad\Longrightarrow\quad
+q(v)u^2(1+u^2)F_c\in\Sigma.
+\]
+The theorem contradicts this implication for sufficiently small members of the displayed valid-source family.
+
+This covers polynomial selectors \(Z_c\) of arbitrary degree. Indeed, if \(\deg q=2r\), the principal-minor bounds already force
+\[
+\deg Z_c\le 2r+2.
+\]
+
+The rational sequence
+\[
+T=\frac1{n^2},\qquad n\ge10,
+\]
+eventually excludes every prescribed \(q\). The proof establishes the threshold’s existence; it does not evaluate a threshold for an arbitrary input polynomial.
+
+## 2. Why these are exact valid sources
+
+Set
+\[
+\eta=1-T,\qquad w=4-2T+4T^3.
+\]
+The displayed source is exactly the canonical coefficient representation of
+\[
+f_T=w-\bigl\{S+\eta(A_1+B_0)\bigr\},
+\]
+where
+\[
+S=A_0B_0-A_0B_1+A_1B_0+A_1B_1.
+\]
+
+Swapping Alice’s inputs gives the symmetric doubly tilted CHSH matrix. The proof supplies an elementary bound for this matrix rather than requiring its exact quantum maximum.
+
+For every angle pair, the exact determinant calculation gives
+\[
+\boxed{\det(wI-H_T)\ge (144-960T)T^3>0.}
+\]
+The estimate rests on the explicit identity
+\[
+4a^3-36Ta^2+432T^3
+=4(a-6T)^2(a+3T)\ge0.
+\]
+
+The determinant is supplemented by an inertia argument. At coincident measurements, the four slack eigenvalues are
+\[
+4T^3,\qquad
+6-2T+4T^3,\qquad
+6-2T+4T^3,\qquad
+4-4T+4T^3,
+\]
+all positive. The angle torus is connected, and the determinant never vanishes there. Consequently no eigenvalue can cross zero:
+\[
+wI-H_T\succ0
+\]
+for every angle pair.
+
+This proves full-state validity, retaining both sine signs, commuting tests and projective endpoints. At \(T=0\), the source reaches an admissible \(d=0\) positive-event face. No source coefficient is divided out.
+
+The critical Motzkin mechanism follows the one in your doubly tilted CHSH paper. The new argument here applies it to fixed polynomial multipliers in the canonical coordinates, using a rational upper bound and an exact polynomial state substitution. :chatgpt-content-reference{index="0"}
+
+## 3. The complete state substitution exposes the obstruction
+
+Put
+\[
+T=t^2,\qquad u=-tx,\qquad v=ty,
+\]
+and use the full polynomial state
+\[
+\boxed{
+\psi_t(x,y)=
+\begin{pmatrix}
+1+\frac23t^4x^2y^2\\[2pt]
+-\frac13t^3x^2y\\[2pt]
+-tx+\frac23t^3xy^2\\[2pt]
+-t^2xy-\frac23t^4x^3y
+\end{pmatrix}.}
+\]
+
+Exact expansion gives
+\[
+F_{c(t^2)}(-tx,ty;\psi_t)
+=
+\frac43t^6\bigl(M(x,y)+2\bigr)+t^8R(t,x,y),
+\]
+where \(R\) is a polynomial and
+\[
+M(x,y)=x^4y^2+x^2y^4-3x^2y^2+1.
+\]
+
+Both independent state-normal directions can be seen before making this state choice. In the standard frame, take
+\[
+\xi=(1,at^3,bt^3,ht^2)^T.
+\]
+The order-\(t^4\) coefficient is
+\[
+4(h+xy)^2.
+\]
+After setting \(h=-xy\), the order-\(t^6\) coefficient is
+\[
+6\left(a-\frac23x^2y\right)^2
++
+6\left(b-\frac23xy^2\right)^2
++
+\frac43(M+2).
+\]
+The displayed \(\psi_t\) retains the complete polynomial change back to the canonical state.
+
+Now let the first nonzero term of a fixed nonnegative \(q\) be
+\[
+q(v)=a v^{2k}+O(v^{2k+1}),\qquad a>0.
+\]
+Thus zeros of \(q\) at the commuting endpoint are allowed.
+
+If polynomial completions existed along a sequence \(t_j\downarrow0\), their necessary SOS certificates, after substitution and division by the positive scalar \(t_j^{8+2k}\), would converge coefficientwise to
+\[
+\boxed{\frac{4a}{3}x^2y^{2k}(M+2).}
+\]
+
+The degrees are uniformly bounded: when \(\deg q=2r\), the substituted polynomials have total degree at most \(2r+16\), so every SOS root has degree at most \(r+8\).
+
+Here closedness has a concrete justification. For the fixed monomial vector \(z\), the matrix
+\[
+B=\int_{[-1,1]^2}zz^T\,dx\,dy
+\]
+is positive definite. If \(Q_j\succeq0\) represents a convergent sequence of polynomials, their integrals bound
+\[
+\operatorname{Tr}(BQ_j),
+\]
+which bounds \(Q_j\). A convergent subsequence therefore supplies a PSD Gram matrix for the limit.
+
+Square monomials can be cancelled from a polynomial SOS: evaluating at \(x=0\) forces every root of an SOS divisible by \(x^2\) to be divisible by \(x\), and the same argument applies repeatedly to \(y\). Hence the limit would force \(M+2\) to be SOS.
+
+That is impossible by a short coefficient argument. Every possible root has degree at most three. Since \(M+2=3\) on either coordinate axis, each root must have the form
+\[
+a_0+a_1xy+a_2x^2y+a_3xy^2.
+\]
+The coefficient of \(x^2y^2\) in a sum of such squares is nonnegative, whereas its coefficient in \(M+2\) is \(-3\).
+
+For every fixed \(t\), \(x,y\) remain arbitrary independent testing variables. The varying substitution is used to refute a universal certificate; it supplies no source-dependent testing dictionary.
+
+## 4. The half-line form is justified, but its adequacy remains open
+
+Your proposed C1 form is indeed necessary:
+\[
+\boxed{
+J_+(v)=
+\begin{pmatrix}
+p_1v+p_2v^2&q_2v^2\\
+r_0+r_1v+r_2v^2&s_1v+s_2v^2
+\end{pmatrix}.}
+\]
+
+The derivation uses only principal minors:
+
+- Growth at \(+\infty\) bounds every entry’s degree by two.
+- The zero endpoint rows remove the constant terms of \(J_{11},J_{12},J_{22}\).
+- The inequality
+  \[
+  |J_{12}(v)|^2\le4m(4D+2d)v^4
+  \]
+  removes its linear term.
+
+These arguments remain valid when source weights vanish.
+
+There is one correction to the suggested global function list. The endpoint conditions do not generally force \(r_0=0\); they allow
+\[
+r_0^2\le
+(4m+4\beta+2d)(4C+4D+2d).
+\]
+Consequently reflection gives
+\[
+J(v)=
+\begin{pmatrix}
+p_1|v|+p_2v^2&q_2v|v|\\
+r_0\operatorname{sgn}(v)+r_1v+r_2v|v|
+&s_1|v|+s_2v^2
+\end{pmatrix}
+\]
+away from zero. Two separate closed half-line charts handle this directly. In global notation, the sign function must be retained unless an additional argument removes \(r_0\). At zero, convex averaging supplies the value corresponding to \(\operatorname{sgn}(0)=0\).
+
+### A fixed square root removes this particular obstruction
+
+The exact identity
+\[
+\boxed{
+M(x,s^2)
+=(x^2s^2-1)^2
++\bigl(xs^2(s^2-1)\bigr)^2
++2\bigl(xs(s^2-1)\bigr)^2
+}
+\]
+shows why the polynomial impossibility theorem does not settle the half-line proposal.
+
+Equivalently, on \(y\ge0\), define
+\[
+f(x,y)=
+\begin{pmatrix}
+x^2y-1\\
+xy(y-1)\\
+x\sqrt y\,(y-1)\\
+1
+\end{pmatrix}.
+\]
+Then
+\[
+\boxed{
+M(x,y)+2
+=f(x,y)^T\operatorname{diag}(1,1,2,2)f(x,y).
+}
+\]
+
+These four functions and this rational Gram matrix are included in the data. They certify the critical polynomial only. They do not certify the full canonical slack.
+
+## 5. The precise remaining implication
+
+The unresolved statement is
+\[
+\boxed{
+c\text{ valid}
+\ \Longrightarrow\
+\exists J_+\in
+\bigl(\mathbb R[v]_{\le2}\bigr)^{2\times2}
+\quad
+\forall v\ge0:
+\quad
+G_{1,J_+}(v),H_{1,J_+}(v)\succeq0.
+}
+\]
+
+On C1 this is exactly the eight-parameter question above. For all nine coefficients it remains a simultaneous completion problem.
+
+An affirmative proof would give the fixed half-line factors
+\[
+1,\quad v,\quad\sqrt v,
+\]
+because every positive semidefinite quadratic matrix polynomial on the half-line has a representation
+\[
+M(v)=(B_0+vB_1)^T(B_0+vB_1)+vC_0^TC_0.
+\]
+This factorization accommodates zero blocks and rank drops without inversion. The missing step is the existence of the same polynomial \(J_+\) for every \(v\ge0\), for every valid source. The accepted pointwise theorem does not supply it.
+
+The \(d=0\) selector \(J=K\) remains available. **No globally adequate algebraic family or affine full-\(Q_{222}\) pencil has been established in this investigation.** The new theorem rules out the fixed polynomial-completion alternative for the full canonical cone while leaving the half-line algebraic completion as a precise, still-open possibility.

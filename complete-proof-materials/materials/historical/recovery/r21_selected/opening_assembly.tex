@@ -1,0 +1,372 @@
+\section*{Reader's guide and the completed existence proof}
+\addcontentsline{toc}{section}{Reader's guide and the completed existence proof}
+
+This volume is a fresh rederivation of the finite semidefinite-lift
+existence argument for the two-party, two-setting, two-outcome quantum
+set.  It uses the surviving mathematical sources and supplies new proofs
+for the missing local arguments and final source assembly.  It is not a restoration of the
+missing original 549-page PDF or of the original R21 archive bytes.
+The source archive preserves the retained originals and records the
+relationship between each original mathematical component and its
+presentation here.
+
+\paragraph{Completed mathematical assembly.}
+The complete canonical local-certificate theorem is proved in
+LC1--LC10, in the component beginning on
+page~\pageref{component:pe1088004af65}.  It connects the actual physical
+source reduction to the positive-scale theorem, every C1 source branch,
+and every C2 source branch, then restores the original homogeneous
+slack and finite source/testing combinations.  The opening argument
+below states that conclusion with its full quantifiers and applies the
+finite-lift criterion.  The later components contain the complete local
+constructions and source implications on which that assembly depends.
+
+\subsection*{What the statement means}
+
+Let $\mathcal Q_{222}\subset\mathbb R^8$ be the set of correlations
+of finite-dimensional bipartite complex tensor-product experiments,
+with two binary measurements on each side.  We use the coordinates
+\[
+ q=(a_0,a_1,b_0,b_1,E_{00},E_{01},E_{10},E_{11}),
+\]
+where $a_x$ and $b_y$ are the single-party expectations and $E_{xy}$
+is the joint expectation of the $\{+1,-1\}$-valued observables.
+Write $P$ for the cone of real affine functions nonnegative on this set.
+
+The physical reduction proves the exact formula
+\[
+ \mathcal Q_{222}
+ =\left\{\sum_{i=1}^{9}w_i\Phi(z_i):
+     z_i\in S^1\times S^1\times S^3,
+     \quad w_i\ge0,\quad\sum_iw_i=1\right\}.        \tag{FA1}
+\]
+Here $\Phi$ is the polynomial expectation map for
+$A_0=B_0=Z$, $A_1=c_AZ+s_AX$, $B_1=c_BZ+s_BX$, and a real unit
+two-qubit vector.  The proof includes a simultaneous dilation of both
+binary effects of each party, the two-involution block decomposition,
+the real/imaginary splitting of a complex state, finite direct-sum
+realization, and the nine-point convexification argument.  Consequently
+$\mathcal Q_{222}$ is compact, convex, and semialgebraic over $\mathbb R$.
+
+For a real closed extension $K\supset\mathbb R$, the symbol
+$(\mathcal Q_{222})_K$ means the set defined by the same fixed finite
+formula (FA1), with its variables in $K$.  Likewise
+\[
+ P_K=\{f\in K[q]_{\le1}:f(q)\ge0\text{ for all }
+                              q\in(\mathcal Q_{222})_K\}.       \tag{FA2}
+\]
+The identification with the transferred real cone is proved by the
+first-order description of validity.  No compactness assertion about
+the order topology of a non-Archimedean field is used.
+
+\subsection*{Separately labelled fields}
+
+Choose arbitrarily two real closed extensions $K_c,K_t\supset\mathbb R$,
+and put $T=K_c\otimes_{\mathbb R}K_t$.  The subscripts distinguish
+coefficient variables from testing variables.  The two fields may be
+two labelled copies of the same extension.  No algebraic-disjointness
+assumption, embedding of $T$ in an ordered field, or ordering of $T$
+is made.  For $f=f_0+\sum_{\nu=1}^8 f_\nu q_\nu$, define
+\[
+ [f,q]=f_0\otimes1+\sum_{\nu=1}^8 f_\nu\otimes q_\nu.           \tag{FA3}
+\]
+The target is membership in $\Sigma T^2$, the set of finite sums of
+squares of elements of this tensor ring.  The finite list of roots may
+depend on the chosen fields, functional and testing point.
+
+The local proofs use the convex subring $\mathcal O(K)$ of elements
+bounded in absolute value by a real constant, and its ideal
+$\mathfrak m(K)$ of infinitesimals.  A positive element is of exactly
+one of three types: positive infinitesimal, positive bounded unit
+(both it and its inverse are bounded), or positive unbounded.
+Literal zero is kept separate.  The residue of a bounded element is
+its unique real standard part.  These types organize the proof;
+they do not identify an independent source infinitesimal with a
+testing infinitesimal.
+
+The common algebraic tool states that a bounded symmetric tensor
+matrix with positive definite real residue gives a finite tensor SOS
+when evaluated on any finite list of tensor roots.  Its proof uses
+finite positive pure-factor decompositions and a fixed real
+diagonal-dominance reserve.  It never takes the inverse or square
+root of a mixed tensor.  The roots themselves need not be bounded.
+The complete strict-Gram proof is included among the foundations.
+
+\subsection*{The full polynomial that every local proof certifies}
+
+In the fixed CHSH orientation put
+\[
+ H=1-\tfrac12(E_{00}-E_{01}+E_{10}+E_{11}),\qquad
+ f=dH+4\sum_{\xi}\xi p_\xi,
+ \quad\xi\in\{\lambda,n,m,C,A,D,\alpha,\beta\}.                \tag{FA4}
+\]
+The coefficients are nonnegative, and $d>0$ on the nontrivial
+canonical source.  With $D_u=1+u^2$, $D_v=1+v^2$, and
+$\psi=(W,X,Y,Z)$, the complete affine-chart parent is
+\begin{align*}
+ F={}&4\lambda D_u(W+vX)^2+4nD_uD_vX^2
+       +4m(vW-X+uvY-uZ)^2\\
+   &+4CD_v(uW-Y)^2+4AD_uD_vY^2
+       +(4D+2d)(uW+uvX-Y-vZ)^2\\
+   &+(4\alpha+2d)D_u(vY-Z)^2
+       +(4\beta+2d)D_v(X+uZ)^2-2dD_uD_vZ^2.          \tag{FA5}
+\end{align*}
+Products of a coefficient-field number and a testing-field expression
+in (FA5) always denote their separated tensor product.  A scalar
+restriction to a contact graph does not by itself prove the required
+statement: the original state-normal terms and all higher terms must
+also be included.  Each local proof gives an exact identity or a
+complete root allocation for this parent, and restores every retained
+positive packet after proving the bounded remainder.
+
+For homogeneous angle pairs $(a_0,a_1)$ and $(b_0,b_1)$, put
+$\Delta_A=a_0^2+a_1^2>0$, $\Delta_B=b_0^2+b_1^2>0$.
+The homogeneous parent $\mathcal F$ satisfies
+\[
+ \mathcal F=(1\otimes\Delta_A\Delta_B\|\psi\|^2)
+                  [f,\Phi(z)]                              \tag{FA6}
+\]
+for every nonzero state, with $z$ its normalized physical atom.
+The homogeneous identity is proved directly from all eight event
+amplitudes.  It includes the zero and infinite angle coordinates;
+those points are not obtained by cancelling a vanished affine
+coordinate.  The zero state is immediate.
+
+\subsection*{Source reduction and the precise local proposition}
+
+Every valid functional is either a nonnegative event sum or has a
+negative value at a PR vertex.  In the latter case the eight neighboring
+deterministic vertices and that PR vertex form the affine evaluation
+basis giving (FA4).  Normalize the positive coefficient sum in the
+source field.  The real compact convex source base and its fixed
+nine-term extreme-point representation transfer as finite first-order
+formulas.  The determinant has a convex logarithmic Laurent profile.
+Its coercive extreme sources have an actual finite noncommuting
+stationary contact and five or six positive events.  The incompatible
+omission cases have two explicit closed-face matrix lifts.
+
+The remaining compatible omission patterns reduce, by actual Bell
+symmetries, to
+\[
+\begin{array}{ll}
+\mathrm{C1}:&d,m,C,A,\alpha>0,\quad\lambda=n=0,\quad
+             D,\beta\ge0,\quad D+\beta>0,\\
+\mathrm{C2}:&d,m,C,A,D,\alpha>0,\quad\lambda=\beta=0,\quad n\ge0.
+\end{array}                                                     \tag{FA7}
+\]
+The physicality condition and the actual source contact are retained.
+The native-entry proof derives all strict signs and gaps from these
+conditions, including the literal third-omission faces.  Source
+contacts are never substituted for independent testing points.
+
+\paragraph{Complete local-certificate proposition (LC).}
+For every source in (FA7), over every $K_c$, and every independent
+projective angle pair and state over every $K_t$, the homogeneous
+parent $\mathcal F$ is a finite sum of squares in $T$, possibly after
+multiplication by a proved positive pure-source factor.  The statement
+includes every allowed zero coefficient, arbitrary positive openings,
+all relative source and testing rates, all state ratios, exact sign
+gauges, and literal projective endpoints.
+
+The total-scale split uses
+\[
+ \delta_{\rm tot}=
+ \frac{d}{d+\lambda+n+m+C+A+D+\alpha+\beta}.                    \tag{FA8}
+\]
+It is taken before a later $d=1$ or $C=2$ gauge.  For $d>0$ the
+quotient is positive bounded, so its positive-unit and
+positive-infinitesimal alternatives are exhaustive.  Setting $d=1$
+does not select the first alternative.  Literal $d=0$ is a separate
+sum of event squares.  At a literally commuting testing pair the
+signed core is nonnegative in the testing field, so it too has a
+direct separated certificate.
+
+\begin{proof}[Proof of LC]
+The native-entry theorem EN1--EN16 derives the exact source signs,
+strict gaps and stationary formulas directly from physicality and the
+actual finite contact.  It uses single-field source geometry and does
+not assume a tensor certificate.  On the positive-unit alternative of
+(FA8), AU1--AU19 proves the entire parent at every independent test.
+All coefficients are then bounded after the positive source normalization
+$d=1$; the weak/unit coefficient partitions in AU exhaust their
+possibilities, including the allowed literal zeros.
+
+Retain the positive-infinitesimal alternative of (FA8) for the remaining
+sources.  In C1 orient the native Alice parameter to $0<k\leq1$.
+For unit $k$, the actual source equations give the complete AS,
+ordinary unit/unit, unit/small and unit/unbounded contact alternatives.
+The ordinary unit/unit source has five consecutive strong events by
+the exact NC7 elimination; the other alternatives use their complete
+CU/CR and UH full-parent constructions.  For infinitesimal $k$,
+noninfinitesimal $\zeta$ is the full C1.4 domain.  LC4a--LC4c gives its
+bare-source partition, including all seven earlier exits and the five
+normalized C14.4 cells.  The actual JC constructions prove every cell
+without obtaining a bound from an unspecified earlier exclusion.
+
+If both $k$ and $\zeta$ are infinitesimal, the three types of $\eta$
+complete the C1 cover.  Infinitesimal $\eta$ uses the proved uniform
+all-$e$ join; unbounded $\eta$ uses the full C1.1 unit-$q$ and small-$q$
+theorems.  Unit $\eta$ is divided by the three types of
+$e=k\sqrt{\eta/\zeta}$ and, where necessary, by unit or infinitesimal
+$r\in(0,1)$.  The complete small-$e$, bounded-$e$, centered-A and
+unbounded-$e$ theorems cover those alternatives.  These are exactly the
+ten disjoint rows of LC5, with the original total scale, source gaps,
+allowed zero coefficients and independent testing/state variables retained.
+
+For C2, CT1--CT16 first treats the two weak complementary events by its
+actual matching-source entry and full radial and outer constructions.
+Otherwise its exact full-parent reflection orients the asymmetric weak
+case, and its nine ordered actual-angle types are exhaustive.  Every
+occupied cell has a complete local and remote proof; each empty cell
+has an explicit necessary-source contradiction.  The directed weak
+unbounded/unbounded cell is the exact reflection of HJ's ten-row source
+join.  Its $n=0$ C1 calls use only two independently proved bare C1
+terminals, so neither CT nor HJ assumes the present global conclusion.
+
+Every testing exit uses the whole physical parent and all state-normal
+terms.  Noncommuting testing residues use the separately proved A6
+construction on the original physical source.  The homogeneous identities
+and explicit endpoint charts supply literal zero/infinite angles; all
+allowed state ratios and both signs are included.  Complex states split
+into their real and imaginary parts.  Restoring the proved nonzero
+pure-source and pure-testing factors gives the unmultiplied homogeneous
+parent.  This proves LC.  LC1--LC10 and LCH1--LCH3 give the detailed
+source predicates, complete dependency direction and exact reconciliation
+with every historical row; the actual component proofs supply each
+conductor, full-normal allocation and strict Gram used in this join.
+\end{proof}
+
+\subsection*{Finite closure and the existence implication}
+
+\begin{theorem}[Universal tensor statement and finite semidefinite lift]
+For every pair of separately labelled
+real closed extensions $K_c,K_t\supset\mathbb R$,
+\[
+       [f,q]\in\Sigma(K_c\otimes_{\mathbb R}K_t)^2
+       \quad\text{for every }f\in P_{K_c},\quad
+                    q\in(\mathcal Q_{222})_{K_t}.               \tag{FA9}
+\]
+Consequently $\mathcal Q_{222}$ has a finite semidefinite lift.
+\end{theorem}
+
+\begin{proof}
+An event evaluation has a testing-field sum-of-squares factorization
+from its projector, and a nonnegative coefficient contributes its
+source-field square root.  The zero source and nonnegative constants
+are included by event normalization.
+
+For a closed-face source use its explicit homogeneous matrix lift.
+The displayed strict feasible point, with all free coefficient sign
+blocks included, makes the adjoint image of the positive semidefinite
+cone closed.  To see the attainment step, a strict feasible matrix
+$M(z_*)\succeq\epsilon I$ bounds the trace of any positive
+semidefinite dual witness whose adjoint image stays bounded.
+Separation then gives an attained matrix witness for every nonnegative
+evaluation.  This fixed finite existential statement transfers to the
+testing field, independently of source feasibility in the coefficient
+field.  Factoring the two positive semidefinite matrices there gives
+\[
+ \sum_{i,j}X_{ij}\otimes Y_{ij}
+   =\sum_{a,b}\left(\sum_i B_{ia}\otimes C_{ib}\right)^2,
+       \qquad X=BB^T,\quad Y=CC^T.                           \tag{FA10}
+\]
+The dual equations cancel all auxiliaries and identify this expression
+with the original face slack.  Singular matrices are allowed in these
+finite field factorizations.
+
+For a canonical contact source apply LC to each real pure testing atom.
+If $(s\otimes1)\mathcal F=\sum_k h_k^2$ with $s>0$ in $K_c$,
+then (FA6) gives the exact unmultiplied certificate
+\[
+ [f,\Phi(z)]=\sum_k\left[
+   \bigl(s^{-1/2}\otimes
+        (\Delta_A\Delta_B\|\psi\|^2)^{-1/2}\bigr)h_k\right]^2.
+                                                               \tag{FA11}
+\]
+All inverses and radicals in this formula are taken inside one field.
+Every additional source or testing gauge is restored in the same
+way, after its own nonvanishing has been proved.  Finite real Bell
+relabelings only change coordinates and preserve the assertion.
+
+Use the finite source decomposition and the nine-atom testing
+decomposition to write
+\[
+ f=\sum_j a_j f_j,\qquad q=\sum_i w_i\Phi(z_i),\qquad
+ a_j,w_i\ge0,\quad\sum_iw_i=1.
+\]
+If $[f_j,\Phi(z_i)]=\sum_k h_{ijk}^2$, then
+\[
+ [f,q]=\sum_{i,j,k}
+       \left[(\sqrt{a_j}\otimes\sqrt{w_i})h_{ijk}\right]^2.
+                                                               \tag{FA12}
+\]
+Linearity in $f$ and affineness in $q$ prove this identity.  The equation
+$\sum_iw_i=1$ preserves the affine constant.  Zero weights produce
+zero roots and are never inverted.  The real/imaginary state split and
+finite convexification already include complex and mixed states.
+This proves (FA9).
+
+Now choose two labelled copies of one arbitrary real closed extension
+$K$ of $\mathbb R$.  Formula (FA9) gives the hypothesis of
+Corollary~3.19 in Claus Scheiderer's
+\emph{Second-order cone representation for convex sets in the plane},
+arXiv:2004.04196v2.  That corollary applies to a closed convex
+semialgebraic subset of arbitrary finite-dimensional $\mathbb R^n$.
+Its point-first tensor convention is equivalent to (FA3) by the factor
+flip, which preserves squares.  The physical reduction proves all of
+its set hypotheses, and (FA2) identifies its transferred valid-affine
+cone.  It therefore gives finite semidefinite-lift existence.
+\end{proof}
+
+Explicitly, the existence conclusion has the form
+\[
+ \mathcal Q_{222}=
+ \left\{q\in\mathbb R^8:\ \exists y\in\mathbb R^m,\quad
+ A_0+\sum_{\nu=1}^8q_\nu A_\nu+\sum_{j=1}^m y_jB_j\succeq0\right\}
+                                                               \tag{FA13}
+\]
+for finite integers $N,m$ and real symmetric $N\times N$ matrices.
+Several semidefinite blocks can be combined diagonally.  Linear
+equalities in a lift can be eliminated by parametrization or represented
+by opposite scalar blocks.  These operations give (FA13) in the
+original eight coordinates.
+
+\subsection*{Scope, reading order, and verification}
+
+The existence criterion does not evaluate the dimension, a global
+feature list, or the matrices in (FA13).  The three constructive
+checklist items E1--E3 remain additional outputs: an evaluated feature
+and auxiliary-variable list, an evaluated pencil and projection, and
+both-inclusion validation of that actual coefficient data.  No numerical
+lift-size bound or second-order-cone representation is asserted here.
+
+The reader can follow the mathematical argument in this order:
+the physical model and separated algebra; source coercivity, closed
+faces and native entry; the positive-scale and noncommuting-testing
+exits; the complete C1 and C2 branches and their full source/test
+joins; finally the finite closure (FA10)--(FA12) and the external
+criterion.  The component index identifies every actual body and
+its source path.  Displayed formula tags retained from a component
+are local to that component.  The global exposition and dependency
+records specify the component when using such a tag elsewhere.
+
+Retained source files may contain a statement that their own local
+result does not prove an entire global theorem, or may describe the
+remaining scope at the time they were written.  Those qualifications
+are preserved; a later proved union is required to discharge them.
+Historical status prose, review records and symbolic assertion counts
+are never mathematical premises.  The archive binds each body and
+each presentation by its own hash and preserves the originals.
+
+Verification consists of analytical review, independent review by
+other agents within the same model system, targeted exact symbolic
+corroboration, dependency and file-integrity checks, and PDF layout
+review.  It is not external peer review or proof-assistant formal
+verification.  The runnable verification program distinguishes file
+integrity from optional isolated algebra replays; neither substitutes
+for the printed analytical arguments.
+
+\paragraph{Primary external source.}
+Claus Scheiderer, \emph{Second-order cone representation for convex sets
+in the plane}, arXiv:2004.04196v2, Corollary~3.19,
+\url{https://arxiv.org/pdf/2004.04196}.

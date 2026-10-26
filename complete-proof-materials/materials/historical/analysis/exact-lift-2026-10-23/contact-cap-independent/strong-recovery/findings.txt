@@ -1,0 +1,105 @@
+Strong contact admission: independent algebra and fixed-span audit
+24 October 2026
+
+Verdict
+-------
+No algebraic discrepancy found. The six-row Gram reconstructs the complete
+original parent after the six exact native source remainders vanish and
+all four retained LII5 square terms are restored. The zero conductor,
+normalization/shear and the fixed11/20 root spans are exact.
+Quantitative SC10/SC11 and coefficient/gate bounds are separately reviewed
+by alternative_existence; no positivity claim is inferred here from an identity.
+
+Preserved source and generated data
+-----------------------------------
+Input: ../../pro_contact_strong_recovery_reply.txt.
+All five displayed scripts were read and copied unchanged to scripts/strong/.
+extract_lII.py ran once, producing fresh local data/lII_generic.pkl and.json.
+Only this newly generated local pickle was read. The received native checker
+also completed, with all six cleared contact-remainder numerators zero;
+see data/NATIVE_CONTACT_VERIFICATION.json.
+check_strong_algebra.py and algebra_checks.json give the independent results.
+
+Why the divisions lose no source terms
+-------------------------------------
+Let Q be the recovered generic six-row matrix on f=(N,xi,zeta,Rh,R,T).
+Write (rx,rz,rn,ra,rb,rc) for its six monic-division remainders.
+After the exact testing substitutions
+ R=v(u^2-z)W, T=uk(u^2-z)W,
+ Rh={v(u*xi-zeta)+s*u(k^2-v^2)W}/k,
+the following GENERIC identity holds, before native source substitution:
+ G-f^TQf =
+  v*z*rx*xi*W+u*v*rz*zeta*W+u*k*rn*N*W
+  +{u^4*ra+u^2*rb+u^2(v^2-k^2)*rc}W^2.
+Every coefficient was checked exactly. Consequently dp,ts,js disappear
+from Q only through these explicitly retained source-remainder terms;
+there is no tacit division by an opening or missing stationarity relation.
+The actual GE1 formulas make all six remainder numerators zero identically.
+
+Original parent and retained terms
+----------------------------------
+Starting independently from the complete full numerator F=4P, substitute
+ xi=X+z*r*vW/B,
+ eta=Y-HuW/B=k(N+qRh),
+ zeta=Z-uvW/B,
+and use cp=Cyt, dp=Dyj, q=D/(C+D), g=yCD/(C+D),
+B=H+yt, j=1+zr-t, s=(1+zr)/B,
+nu=nr, mu=m/z^2, al=alpha(1-H), aa=A/y.
+Then exactly
+ F=G+4(ell-ls)N^2+4C*v^2*eta^2
+       +4nDuDv*xi^2+4(alpha-als)Du(v*eta-zeta)^2,
+where ell=y(C+D). Seven remaining source coefficients were cleared
+separately, all zero. Both state normals remain independent; all original
+state variables are restored. No contact-state restriction is used.
+
+Conductor, shear and factor four
+--------------------------------
+The recovered conductor
+ T^2-u^2R^2-(u^2-z)Rh*T/s+u(u^2-z)R(u*xi-zeta)/s
+vanishes identically under the same testing definitions.
+Adding4/H times it changes no parent value.
+
+With h=sqrt(H), the exact matrix mapping the new roots back to f is
+ diag(1/h,1,1/H,1/h,h,h),
+with extra entries T[2,3]=-u/H and T[2,5]=-1/[h(1+H)]
+(one-based indices). It maps
+ (hN,xi+u*zeta+R/[H(1+H)],H*zeta,hRh,R/h,T/h)
+back to f, and the conductor matrix equals half its state Hessian.
+The entry containing u is absorbed into the explicitly expanded testing
+span; after that expansion the map from fixed functions to roots has
+pure-source coefficients.
+
+These scripts construct F, not F/4. After restoring the four retained
+terms, dividing functions by sqrt(DuDv) and Gram coefficients by4 gives
+the contact affine target F_h/4. This normalization is essential.
+
+Fixed spans
+------------
+The six normalized roots use the following one-based indices of H11:
+ {2,6,7,8}, {1,4,9,11}, {3,5}, {6,7,8}, {4,9}, {6,10}.
+The retained component roots use indices of the full20:
+ N:{2,6,7,8}; v*eta:{5,16};
+ xi:{1,4}; u*xi:{5,12}; v*xi:{13,14}; uv*xi:{7,15};
+ v*eta-zeta:{3,5,16}; u(v*eta-zeta):{9,11,17}.
+Every membership was checked by polynomial coefficient extraction.
+No extra testing functions are introduced by source caps or the conductor.
+The literal n=0 specialization has no inverse n anywhere.
+
+The free-symbol set of generic Q is exactly
+ {B,H,aa,al,als,cp,g,k,ls,mu,nu,q,r,s,u,v,z}.
+Thus its normalized coefficients can be bounded by the source variables
+in the received bound_lII.py; dp,ts,js need no additional interval substitution.
+
+Scope
+-----
+This is the actual strong native branch2^-12<=H<1, positive z,y,r,t,j
+and n>=0, with independent testing angles/states. Testing literal axes
+are polynomial values. The contact rectangle is finite; projective
+endpoints belong to the separately preserved remote charts.
+Caps ls=H/4 and als=H^2/8 are algebraically consistent; their positivity
+reserve and all uniform interval estimates belong to the other review.
+Nonnegative lambda,beta and other event additions use the already
+verified strong20 event-ray witnesses.
+Native envelope admission plus remote charts does not establish universal
+canonical source coverage or an exact full-Q222 lift.
+

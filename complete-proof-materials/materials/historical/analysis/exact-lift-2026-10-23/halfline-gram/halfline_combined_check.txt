@@ -1,0 +1,26 @@
+Private staging: halfline_combined.tex / halfline_combined.pdf
+
+Four pages, 11-point text, with the exact singular-Gram verification in an
+appendix. Leads with the half-line algebraic gain, then gives the four-block
+affine pencil, closedness, and the rational source rescued by reflection.
+
+The literal J+, BG and BH in the TeX match the frozen witness exactly.
+Frozen witness SHA256 remains
+130f73dd78d3fe3aa0a2e7be6f3868559712057b051022a9025298b0baaeda14.
+The independent standard-library witness replay passed all coefficient and
+LDL identities, with Gram ranks (5,7,1,3), including every zero pivot row.
+The existing compiler verifies the affine equations and trace premises.
+The independent strict-trace checker verifies source coefficients all 16,
+auxiliary coefficients all zero, and the literal dual weight lower bound
+I/2. The combined proof uses this short identity for compactness and keeps
+the sharp auxiliary bound 16*sum(c). Positive LDL pivots are correctly
+reported in [floor,floor+1), including the exact pivot 1664.
+
+Two-pass compilation is clean: references resolved, no overfull boxes.
+All four final pages were rendered and visually inspected. Section and
+appendix boundaries fall on pages 3 and 4; no clipped or overlapping math.
+
+Scope: exact closed quadratic half-line selector cone, order 24 (or 33
+with nine source-sign blocks), 44 auxiliaries, and this one exact source.
+Universal adequacy and a full quantum-set lift remain unresolved.
+No public-repository or frozen witness/source files were edited.

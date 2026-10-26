@@ -1,0 +1,43 @@
+\chapter{Physical entry excludes a small state parameter}
+\label{component:p7294aae40ee2}
+\noindent\textbf{Component }\path{p7294aae40ee2}\par
+{\small\noindent Source: \path{R13/baseline/baseline/baseline/baseline/baseline/advances/c2/c2_bounded_state_entry.tex}\par}
+{\small\noindent SHA256: \path{7294aae40ee2774cc19176ebd1d92b4079f29a9b74246870d3d965b62bc97f1a}\par}
+{\small\noindent Inventory use: Exact lower bound for bounded b, before any single-opening theorem\par}
+\medskip
+\section{Physical entry excludes a small state parameter}
+\label{p7294aae40ee2:sec:c2-bounded-state-entry}
+
+This short reduction concerns the same exact rational source, before
+assuming that $b$ is a unit.  Suppose $x>0$ is infinitesimal, $k$ is
+a positive bounded unit, $b>0$ is bounded, $0<r<1$, $0<h<b$,
+$g=b-1+r+xh>0$, and $n\geq0$.  No further source physicality is
+needed for the following necessary bound.
+
+All quantities in
+\[
+             (b+r)A_cS_c\geq r\Delta
+\]
+are bounded, so taking residues gives
+\[
+ r_0\{b_0+k_0^2(b_0+1)\}\leq b_0.
+\]
+The brace is strictly positive even if $b_0=0$.  On the other hand
+$g>0$ gives $r_0\geq1-b_0$.  If $b_0\leq1$, combining the two
+inequalities yields
+\[
+ (1-b_0)\{b_0+k_0^2(b_0+1)\}\leq b_0,
+ \quad\text{or equivalently}\quad
+              b_0^2\geq\frac{k_0^2}{1+k_0^2}.
+\]
+For $b_0\geq1$ this lower bound is automatic.  Hence in every case
+\[
+                b_0\geq\frac{k_0}{\sqrt{1+k_0^2}}>0.
+\]
+Thus bounded $b$ is necessarily a unit.  In particular there is no
+additional $b$-infinitesimal source domain in this actual-contact
+scaling.  Combining the two new single-angle certificates, the
+uncaptured part of this bounded-$b$ entry domain has exactly the
+joint necessary degeneration $r_0=g_0=0$, hence $b_0=1$; the other
+remaining scale is unbounded $b$.  This is a necessary source
+reduction, not a certificate for the joint degeneration.

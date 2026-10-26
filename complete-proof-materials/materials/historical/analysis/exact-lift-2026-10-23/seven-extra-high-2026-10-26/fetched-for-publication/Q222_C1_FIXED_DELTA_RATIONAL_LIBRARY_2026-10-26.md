@@ -1,0 +1,185 @@
+# Native C1 and the fixed compatible-corner multiplier Delta
+
+26 October 2026. **Proof status: exact coefficient-space theorem, not SDP admission.**
+
+The problem is whether every strict six-event native C1 source possesses a PSD Gram with the **fixed** testing functions
+\(u^{i/2}v^{j/2}\psi_l/\sqrt{\Delta(u,v)}\), \(0\le i,j\le6\), \(l=W,X,Y,Z\), where
+\(\Delta=(u^2+v^2)(1+u^2v^2)\). We prove the exact polynomial degree, soundness, closedness, a contact-and-corner-reduced 130-feature support, and **surjectivity of the complete affine coefficient equations** onto the 332-dimensional contact-jet kernel. The required PSD implication remains open. No C1 source is excluded, and no complete lift is claimed.
+
+Sources: [SG2–SG7](https://github.com/anubhav70747/q222-finite-sdp/blob/92c1f0941bf7565f5fe3f45168959fc9cab12998/latex/chapters/04_geometry.tex), [C1 native dictionary](https://github.com/anubhav70747/q222-finite-sdp/blob/92c1f0941bf7565f5fe3f45168959fc9cab12998/latex/certificates/c1_short.tex), [contact scalar](https://github.com/anubhav70747/q222-finite-sdp/blob/92c1f0941bf7565f5fe3f45168959fc9cab12998/independent-review/CONTACT_SCALAR_GRAM.md). For the preceding sixth-root route see `Q222_C1_ALL_ZERO_SIXTH_ROOT_REDUCTION_2026-10-26.md`. This note is an independent fixed-multiplier analysis, not a modification of the old sixth-root cone.
+
+## 1. Fixed cone and projective corners
+
+Let \(F_c=\psi^TP_c(u,v)\psi\) be the **complete** SG2 parent with \(\lambda=n=0\) and
+\(d,m,C,A,D,\alpha,\beta>0\). In the original fixed variables set
+
+\[
+ Z_{\mathrm{pol}}=(u^{i/2}v^{j/2}\psi_l)_{0\le i,j\le6,\ l=W,X,Y,Z}.
+\]
+
+Define \(K_\Delta=\{c:\exists Q\succeq0,\ Z_{\mathrm{pol}}^TQZ_{\mathrm{pol}}=\Delta F_c\}\), with all coefficient identities imposed in \(r=\sqrt u,s=\sqrt v\). The source coefficients occur **affinely**. Since
+
+\[
+\Delta=u^2+v^2+u^4v^2+u^2v^4,
+\]
+
+its separate degree is \((4,4)\); \(F_c\) has bidegree \((2,2)\), so \(\Delta F_c\) has bidegree at most \((6,6)\). Sign averaging in \((r,s)\) yields unconstrained PSD block orders \((64,48,48,36)\), as proposed.
+
+The homogeneous multiplier is
+
+\[
+\widehat\Delta=(a_1^2b_0^2+a_0^2b_1^2)(a_0^2b_0^2+a_1^2b_1^2),
+\]
+
+of projective bidegree \((4,4)\). It is positive at every finite positive-angle pair and has zeros exactly at the four compatible projective corners \((u,v)=(0,0),(0,\infty),(\infty,0),(\infty,\infty)\). The numerator has full projective bidegree \((6,6)\).
+
+**Soundness:** A Gram proves \(F_c\ge0\) for \(u,v>0\) by division by positive \(\Delta\). The SG2 sign congruences \(P_c(-u,v)=S_uP_c(u,v)S_u\), \(P_c(u,-v)=S_vP_c(u,v)S_v\) extend positivity to all finite real angles, and continuous polynomial projective normalization of \(F_c/(D_uD_v)\) gives the axes and infinities, including the four zeros of \(\widehat\Delta\). At none of the four zeros is division attempted. Hence \(K_\Delta\) is globally quantum sound.
+
+**Closedness:** Integrate \(Z_{\mathrm{pol}}Z_{\mathrm{pol}}^T\) over a fixed positive rectangle in \((u,v)\) and over the real state sphere. Its moment matrix is positive definite by linear independence. For a convergent sequence of coefficient vectors, integrating \(\Delta F_c\) bounds the trace of every PSD Gram, so a subsequence converges. Its limit remains a PSD Gram. Thus \(K_\Delta\) is a closed convex spectrahedral shadow cone in the original source coordinates.
+
+## 2. Exact Newton pruning for strict native C1
+
+Put \(r=\sqrt{u/u_c}\), \(s=\sqrt{v/v_c}\), and \(\psi_l=\psi_{c,l}\phi_l\), **for proof coordinates only**. Native C1 has \(u_c,v_c>0\) and every \(\psi_{c,l}\ne0\). The source-only diagonal monomial rescaling carries the resulting feature list back into the original fixed \(Z_{\mathrm{pol}}\) space.
+
+The four diagonal entries \(P_{ll}\) of SG2 have nonnegative monomial coefficients; all vertices below occur with strictly positive coefficients when \(d,m,C,A,D,\alpha,\beta>0\). For a PSD Gram representing \(\Delta F\), every scalar root coefficient of each state component must lie in the half-Newton polygon of the corresponding diagonal polynomial. The proof uses an exposed monomial: the highest term of a sum of real squares cannot cancel. The exact support conditions on monomials \(r^is^j\phi_l\), \(0\le i,j\le6\), are
+
+\[
+\begin{array}{c|l|r}
+ l&\text{allowable }(i,j)&\text{count}\\\hline
+ W&4\le i+j\le10,\quad |i-j|\le4&30\\
+ X&2\le i+j\le10,\quad -4\le i-j\le2&30\\
+ Y,Z&2\le i+j\le10,\quad |i-j|\le4&37\text{ each}.
+\end{array}
+\tag{N}
+\]
+
+The four parity sizes are exactly \((44,28,28,34)\). For a strict contact, \(P_c(u_c,v_c)\psi_c=0\), and positivity of the Gram forces every square to vanish at \((r,s,\phi)=(1,1,\mathbf1)\). In each parity the evaluation vector is nonzero, so its orthogonal complement has codimension one. Taking a common monomial pivot \(z_\pi\) for the parity, an explicit basis consists of all differences \(z_i-z_\pi\). Therefore every PSD certificate can be expressed in the four contact-reduced blocks
+
+\[
+\boxed{43,\quad27,\quad27,\quad33}\qquad\text{(total 130).}\tag{K}
+\]
+
+These are necessary support and kernel eliminations, not a reduced ansatz; conversely any PSD Gram on them is a certificate in the proposed original 196-function cone.
+
+## 3. An exact universal coefficient-map theorem
+
+Form the four columns \(q_\pi\) of contact differences in (K), with state coordinates \(\phi\). For arbitrary real symmetric blocks \(Q_\pi\) define
+
+\[
+\mathcal A_\Delta(Q)=\sum_{\pi\in\{0,1\}^2}q_\pi^TQ_\pi q_\pi.
+\]
+
+Collect coefficients of the ten unordered state monomials \(\phi_l\phi_m\) and of \(r^{2a}s^{2b}\), \(0\le a,b\le6\). The actual product support of (N) has exactly 338 independent monomial coordinates. Its per-state-pair counts, in order \(WW,WX,WY,WZ,XX,XY,XZ,YY,YZ,ZZ\), are
+
+\[
+\boxed{30,31,34,34,30,34,34,37,37,37}.\tag{T}
+\]
+
+**Theorem (no affine matching obstruction).** The exact rational coefficient map, whose four-block domain has \(946+378+378+561=2263\) symmetric entries, has rank **332**, and its image is precisely the 338-dimensional support space subject to the six linear contact-jet equations
+
+\[
+ \partial_{\phi_l}f(1,1,\mathbf1)=0\ (l=1,2,3,4),\qquad
+ \partial_r f(1,1,\mathbf1)=\partial_s f(1,1,\mathbf1)=0.
+\tag{J}
+\]
+
+The value equation is redundant by state homogeneity. These six jets are independent: the coefficients \(\phi_Y^2u^2,\phi_Y^2v^2,\phi_Y^2u^2v^2\) control the Y-state and both angular jets; one diagonal monomial each in W, X, and Z controls the remaining state jets. Thus \(\operatorname{rank}\mathcal A_\Delta\le338-6=332\).
+
+**Short analytic proof of equality, using only the even-even block.** Replace the even exponents \((i,j)\) by \((p,q)=(i/2,j/2)\). Its 44 root monomials are \(z_{l,pq}=u^pv^q\phi_l\) on the following four small integer grids:
+
+```
+ W  : (0,2) (1,1) (1,2) (1,3) (2,0) (2,1) (2,2) (2,3) (3,1) (3,2)
+ X  : (0,1) (0,2) (1,0) (1,1) (1,2) (1,3) (2,1) (2,2) (2,3) (3,2)
+ Y,Z: (0,1) (0,2) (1,0) (1,1) (1,2) (1,3) (2,0) (2,1)
+      (2,2) (2,3) (3,1) (3,2).
+```
+
+Their pairwise products reach **every** one of the 338 coefficient positions (T). Let \(\Lambda\) be a linear coefficient functional annihilating every product of contact differences \((z_i-z_0)(z_j-z_0)\). With \(M_{ij}=\Lambda(z_iz_j)\), this gives
+
+\[
+M_{ij}-M_{i0}-M_{0j}+M_{00}=0
+\quad\Longrightarrow\quad
+M_{ij}=a_i+a_j,
+\quad a_i=M_{i0}-M_{00}/2.
+\tag{H}
+\]
+
+For each fixed state coordinate \(l\), \(M_{(l,x),(l,y)}\) depends only on the exponent sum \(x+y\). Thus whenever \(x+a=b+c\) among that state's grid points, one has
+
+\[
+ a_l(x)=a_l(b)+a_l(c)-a_l(a).
+\tag{P}
+\]
+
+The three shared points \((1,1),(2,1),(1,2)\) determine one unique affine function \(a_l(p,q)=\alpha_l+\beta_lp+\gamma_lq\). The following two-round applications of (P) force that affine formula at every grid point (the table lists the new points in each round):
+
+| State grid | Round 1 | Round 2 |
+|---|---|---|
+| W | (0,2), (1,3), (2,0), (2,2), (3,1) | (2,3), (3,2) |
+| X | (0,1), (0,2), (1,0), (1,3), (2,2) | (2,3), (3,2) |
+| Y,Z | (0,1), (0,2), (1,0), (1,3), (2,0), (2,2), (3,1) | (2,3), (3,2) |
+
+For any two distinct state coordinates \(l,m\), the two equal-total-exponent factorizations of \(u^3v^2\phi_l\phi_m\), using \((2,1)+(1,1)=(1,1)+(2,1)\), imply \(\beta_l=\beta_m\). Similarly the swap of \((1,2)\) and \((1,1)\) implies \(\gamma_l=\gamma_m\). Hence \(\beta_l=\beta\), \(\gamma_l=\gamma\) for all four states and
+
+\[
+\Lambda(u^pv^q\phi_l\phi_m)
+=\alpha_l+\alpha_m+\beta p+\gamma q.
+\tag{L}
+\]
+
+These are **exactly the six first-contact derivative functionals** in (J). Conversely all six derivatives annihilate every contact-difference product. Since the even-even products reach the entire support (T), their annihilator has dimension six, so their coefficient map has rank \(338-6=332\). Adding the other parities cannot increase the rank. This is a complete pen-and-paper argument: no numerical or modular-rank premise is needed.
+
+The independent standalone checker `verify_c1_delta_rational_contact_rank.py` reproduces all 338 support positions, the coefficient map, and the same exact rank 332 by modular elimination; it serves only as a redundant arithmetic audit.
+
+The complete SG2 matrix-entry monomial supports are, before multiplying by \(\Delta\),
+
+```
+WW: (0,2),(2,0),(2,2)       WX: (0,1),(2,1)
+WY: (1,0),(1,2)             WZ: (1,1)
+XX: (0,0),(0,2),(2,2)       XY: (1,1)
+XZ: (1,0),(1,2)             YY: (0,0),(2,0),(0,2),(2,2)
+YZ: (0,1),(2,1)             ZZ: (0,0),(2,0),(0,2),(2,2).
+```
+
+Every support position after multiplication by \(\Delta\) belongs to (T); the checker confirms every position, for all coefficients, not a particular native example. Moreover multiplying the actual SG2 stationary contact polynomial by \(\Delta>0\) preserves all six equations (J). Therefore for **every** strict native C1 source there exist four source-field **symmetric, not necessarily PSD** matrices of the reduced sizes whose Gram identity equals the complete \(\Delta F_c\) coefficientwise. No source/test identification or mixed inverse is used.
+
+This is an exact algebraic admission to the *linear span* of the proposed cone, not an SOS theorem. Positivity of some Gram is not guaranteed by surjectivity of its coefficient map.
+
+## 4. Why the determinant denominator does not cancel
+
+Let \(P=\begin{pmatrix}H&h\\h^T&p\end{pmatrix}\) in the original \((W,X,Y;Z)\) state splitting. The exact polynomial adjugate identity reads
+
+\[
+\det(H)\,\psi^TP\psi
+=(H\xi+hZ)^T\operatorname{adj}(H)(H\xi+hZ)+\det(P)Z^2.
+\tag{A}
+\]
+
+At \(d,m,C,A,D,\alpha,\beta=(7301/540,40/9,2,2891/135,4699/1080,81/40,49/1080)\), the native strict C1 source with contact \((u_c,v_c;\psi_c)=(1,1;1,-2/5,1/8,1)\), exact expansion gives, with \(U=u^2,V=v^2\),
+
+\[
+\det H=\frac{32(1+U)(1+V)}{2187}\,R(U,V),
+\]
+\[
+\begin{aligned}
+R={}&3367440U^2V^2+2081520U^2V+9017757UV^2\\
+&+27119114UV+13816089U+4260060V^2+4567780V.
+\end{aligned}
+\]
+
+At \((U,V)=(2,-2)\), \(\Delta=(U+V)(1+UV)=0\) while \(R(2,-2)=36,429,338\ne0\) and \((1+U)(1+V)=-3\ne0\). Hence **\(\Delta\nmid\det H\)** even for this strict native C1 source. Thus (A) cannot be divided by \(\det H\) and reinterpreted as a \(\Delta\)-certificate through a polynomial cancellation. This is a precise obstruction to that *particular proof step*, not to the proposed rational Gram cone.
+
+## 5. The first still missing universal implication
+
+Let \(b_\Delta(c)\) be the full coefficient vector of the contact-normalized polynomial \(\Delta F_c\) in (T). The result of §3 proves \(b_\Delta(c)\in\operatorname{im}\mathcal A_\Delta\) for every finite strict native source. What has **not** been proved is
+
+\[
+\boxed{\forall c\in\mathsf C_1^{\mathrm{strict}},\quad
+\exists Q_{00}\succeq0,\ Q_{01}\succeq0,\ Q_{10}\succeq0,\ Q_{11}\succeq0:\quad
+\mathcal A_\Delta(Q)=b_\Delta(c).}
+\tag{PSD-Delta-C1}
+\]
+
+The four Gram blocks are freely varying, including all cross-component entries. Equivalently the first unresolved implication is that every dual coefficient functional whose four compressed moment matrices are PSD must pair nonnegatively with the complete native C1 target. Neither global positivity of \(F_c\), nor determinant SOS, nor contact Hessian positivity, nor the rank 332 theorem proves this dual inequality. No exact negative functional for the full proposed cone was obtained, so the cone is **not** excluded either.
+
+A universal proof of (PSD-Delta-C1), together with corresponding C2 coverage and the established closed-face and event cones, would permit a fixed exact hybrid SDP lift. The present result supplies no reverse inclusion and no complete lift. Increasing the power of \(\Delta\) has not been justified by a failure of (PSD-Delta-C1) and is not claimed.

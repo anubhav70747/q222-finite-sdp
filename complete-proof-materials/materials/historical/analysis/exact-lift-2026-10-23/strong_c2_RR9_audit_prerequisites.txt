@@ -1,0 +1,109 @@
+Strong-C2 RR9: prerequisites for auditing a proposed finite completion
+====================================================================
+Public input: github-q222-finite-sdp/latex/certificates/c2_short.tex.
+Only the indicated source and testing formulas were read; no new
+construction or announced Pro result is assumed. No numerical work.
+
+1. Parent and coefficient conventions
+------------------------------------
+Lines 3-20: independent real closed source/testing fields Kc,Kt; d=1,
+F=4P, with full state (W,X,Y,Z). The native C2 source has lambda=beta=0,
+n>=0 and m,C,A,D,alpha>0 (lines 46-55).
+Use eq:c2-master-parent (15-20), or the exact normalized form RR3
+(1543-1555): F/(4DuDv) is
+  nX^2+m(bcW-bdX+acY-adZ)^2+CE^2+AY^2
+  +(D+1/2)J^2+(alpha+1/2)Q^2+(L^2-Z^2)/2,
+where E=aW-bY, K=aX-bZ, L=bX+aZ, J=dE+cK, Q=cY-dZ.
+Here a=u/sqrt(Du), b=1/sqrt(Du), c=v/sqrt(Dv), d=1/sqrt(Dv).
+The letter d in these homogeneous testing coordinates is NOT the source
+coefficient d=1. Likewise RR2's beta_0 is a real cap below alpha, not the
+original beta event coefficient.
+
+2. Exact source domain behind RR9
+---------------------------------
+GE1 and definitions: lines 4506-4530; II specialization DI7: 4596-4625.
+Source contact coordinates are z=u_c^2>0,y=v_c^2>0 infinitesimal,
+H=z*h_src in (0,1), L=y*t_src>0, B=z*b_src=H+L a positive bounded unit,
+A_c=1+zr, t=L/y, j=A_c-t>0, 0<r<1,
+G=B+z(H+r-1)>0, B-zyr>0, and n>=0. The six original rational weights are exactly GE1,
+not independently variable approximations. Contact and stationarity
+are native-entry inputs (1494-1495).
+RR1-RR2 (1507-1531): with h=res H=res B in (0,1],
+  Cyt ~ Dyj ~ h/[2(1+h)], A/y ~ 1/[2h(1+h)],
+  gamma=yCD/(C+D) ~ h/[2(1+h)].
+C,D are unbounded. If h<1, alpha ~ h^2/[2(1-h^2)]; if h=1, alpha
+is unbounded. For any real 0<h0<h, beta_0=h0^2/[2(1-h0^2)]<alpha.
+No lower bound is imposed on r,t,j,1-H; their arbitrarily small positive
+openings and literal n=0 are included. This does NOT assert literal
+r=0,t=0,j=0,H=1, or C=D=alpha=0 in the rational GE1 formulas.
+
+3. What RR9 actually decomposes
+--------------------------------
+Remote strip: v infinitesimal (possibly zero), u noninfinitesimal
+(possibly infinity), so a is a testing unit (1581-1589).
+Put s=C+D, theta=D/s, N=sqrt(s)(E+theta vK),
+V=vK/sqrt(y), q=sqrt(y)Y, x=bX, z0=Z, ell=vY.
+RR5 is the exact harmonic completion; RR6 is
+  a*x*ell-b^2*z0*ell=b*V*q.
+RR7 (1601-1607) retains ALL of
+  nDvX^2, m{b(vW-X)+a(vY-Z)}^2, N^2, Cv^2E^2,
+  (E+vK)^2/2, (alpha-beta_0)(ell-z0)^2.
+The remainder G is RR8, and RR9 (1623-1635) is the exact identity
+  G=Dv*M_k + gamma V^2+(A/y)Dv q^2-kDv*b*V*q
+                       -v^2(beta_0+1/2)(ell-z0)^2.
+The M_k Gram on (x,z0,ell), writing t0=beta_0+1/2, is
+  [[1/2,a/2,ka/2],
+   [a/2,t0-b^2/2,-t0-kb^2/2],
+   [ka/2,-t0-kb^2/2,t0]].
+The other block on (V,q) is
+  [[gamma,-kDv*b/2],[-kDv*b/2,(A/y)Dv]].
+The final negative rank-one term belongs to the first block and cannot
+be omitted. The identity must hold with all four independent state
+coordinates, not just on a contact graph or at a state minimizer.
+
+4. Testing cover and literal boundaries
+---------------------------------------
+RR3-RR4 (1533-1579): if v is noninfinitesimal, c is a unit and the
+three-root strict Gram covers EVERY u, including u=0,infinity, and
+v=infinity. RR9 covers v infinitesimal, u noninfinitesimal, including
+v=0 and u=infinity (1615-1678). The double-infinitesimal chart, including
+u=v=0, is the separate local LII theorem (1195-1204,1482-1495).
+Homogeneous endpoints mean (a,b)=(1,0) or (c,d)=(1,0), modulo simultaneous
+sign. Use the original parent, not a raised-degree graph limit. Both
+finite testing signs are included. The strong-II/HH reflection and its
+full homogeneous identity are at 63-77 and 1681-1688; the B-infinitesimal
+weak-source face is explicitly excluded from RR's scope.
+
+5. Current pointwise choices versus a fixed source-affine completion
+-------------------------------------------------------------------
+For res b=b0 in (0,1), RR10-RR12 (1637-1663) choose a real h0<h
+depending on b0, then k=-kappa in the displayed strict interval.
+For b infinitesimal or zero, RR13 (1665-1676) uses k=-1 and the three
+exact squares. These are pointwise strict-residue arguments; they do
+not already supply one source-only auxiliary tuple valid for all tests.
+A proposed fixed completion must prove its own quantifier order:
+  for each source, choose auxiliary coefficients, then cover ALL tests.
+Its matrices must be affine in the source and auxiliary variables.
+Harmonic gamma, sqrt(C+D), source y, and the cap/k choices are not
+themselves affine source expressions. They may serve as source-only
+witness assignments, but their embedding and every product relation
+must be explicit. Testing functions must be a fixed source-independent
+family. Pure-source inverses are legal; inverses of mixed expressions
+and identifying testing u^2,v^2 with contact z,y are not.
+
+6. Restoring the two omitted event weights
+------------------------------------------
+For nonnegative openings lambda_event,beta_event, keep the same base
+source and add exactly
+  4 lambda_event Du(W+vX)^2 + 4 beta_event Dv(X+uZ)^2
+to F. In RR3 this adds lambda_event(dW+cX)^2+beta_event L^2.
+In RR7's F/(4Du) normalization it adds
+  lambda_event(W+vX)^2+beta_event Dv L^2.
+Both are retained source-positive squares, including literal zero and
+unbounded event weights; no division by either opening is needed.
+This proves monotone extension from an admissible GE1 base. Removing
+lambda,beta from an arbitrary physical tuple need not leave such a base.
+For d>0 arbitrary, first divide every source coefficient by d and restore
+the pure-source positive factor d. A claim at d=0 needs its own event-face
+certificate. Any exported full-state/pencil claim must state these
+source-domain and event-restoration conditions explicitly.

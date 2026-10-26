@@ -1,0 +1,204 @@
+\section{R1 unbounded-$q$: exact contact circuits and their square budgets}
+\label{sec:r1-qo-contact-circuit-budgets}
+
+\paragraph{Status and exact scope.}
+This is a collection of proved algebraic lemmas for the remaining
+original R1 source sector. It is not a local or all-testing admission.
+The complete original parent and the two complete state normals are
+RQ6--RQ11 of \texttt{r1\_unbounded\_q\_structural\_checkpoint.tex}.
+The new lemmas below avoid substituting $u=vz/T$ and therefore introduce
+no inverse powers of a mixed graph coordinate. The final full-normal
+allocation is still a separate obligation.
+
+\subsection{The full $n$ scalar has just two negative monomials}
+
+Use RQ1--RQ11. Restore the original $n$ packet in the scalar graph
+$N=M=0$ and write this full scalar as $F_{\rm full}$. Equivalently
+\[
+ F_{\rm full}=F+n(1+v^2)\xi_g^2,\qquad
+ \xi_g=p(1+ru^2)v-(1-r)uz.
+ \tag{RB1}
+\]
+Here the factor $1+v^2$ is essential. Its omission would change the
+whole scalar and every subsequent allocation.
+Put $K_0=CH^2+(D+\tfrac12)(1-H)^2$. Direct expansion gives
+\begin{align*}
+F_{\rm full}={}&
+ Au^2+\{\mu(1-p)+(n+\tfrac12)p^2\}v^2+\alpha z^2\\
+&+\{A+\alpha(1-p)^2+\mu(1-p)+\tfrac12(1-p)^2\}u^2v^2
+ +nu^2z^2\\
+&+\{K_0+AH^2+2H\alpha+H-\tfrac12\}v^2z^2
+ +(n+\tfrac12)p^2v^4\\
+&+(K_0+n)u^2v^2z^2
+ +H^2(A+C+\alpha+\tfrac12)v^4z^2
+ +CH^2u^2v^4z^2\\
+&-2\{AH+\alpha(1-p)+np+\tfrac12\}uvz\\
+&-2\{AH+H\alpha(1-p)+np+
+                  \tfrac12[H(1-p)+p]\}uv^3z .
+\end{align*}
+\tag{RB2}
+Every displayed even coefficient is nonnegative on the original
+source. The only coefficient requiring an estimate is that of
+$v^2z^2$: $K_0$ has a positive lower bound of order $1/t$, whereas
+the possible negative part is at most $1/2$. In particular this
+observation allows arbitrary $n\ge0$, including $n=0$ and unbounded
+$n$. It is not a claim that a polynomial with two negative monomials
+automatically has a circuit certificate.
+
+\subsection{An exact finite contact expansion}
+
+Let $x=u_c^2$, $y=v_c^2$, and $q_z=z_c^2$ be the actual three
+positive contact coordinates of RQ5. Define the separated rows
+\[
+ U=u/\sqrt{x},\qquad V=v/\sqrt{y},\qquad Z_*=z/\sqrt{q_z}.
+ \tag{RB3}
+\]
+These are rows, not bounded Gram coefficients. Define
+\[
+ Q_*=U-VZ_*,\qquad B_*=V-UZ_*,\qquad R_*=Z_*-UV,
+\]
+\[
+ \Psi=U^2+V^2+Z_*^2+U^2V^2Z_*^2-4UVZ_* .
+ \tag{RB4}
+\]
+On the positive testing core $\Psi$ is a separated SOS:
+\[
+ \Psi=(U-V)^2+Z_*^2(1-UV)^2
+                     +2UV(1-Z_*)^2.
+ \tag{RB5}
+\]
+The last square has root $\sqrt{2UV}(1-Z_*)$; this is a product
+of pure-source and pure-testing roots. Signs and literal testing
+axes must be supplied by the inherited core exits in any admission;
+the following identities themselves are polynomial identities.
+
+Let $M_a,M_b,M_c,M_{ab},M_{ac},M_{bc},M_{b^2},
+M_{abc},M_{b^2c},M_{ab^2c}$ denote the ten positive monomial
+coefficients after RB2 is expressed in $(U,V,Z_*)$. Thus, for example,
+\[
+ M_a=Ax,\quad M_b=\{\mu(1-p)+(n+\tfrac12)p^2\}y,\quad
+ M_c=\alpha q_z,\quad M_{ac}=nxq_z,
+\]
+\[
+ M_{b^2c}=H^2(A+C+\alpha+\tfrac12)y^2q_z,\qquad
+ M_{ab^2c}=CH^2xy^2q_z.
+\tag{RB6}
+\]
+All coefficients are actual source quantities.
+The actual scalar contact value and its first jets imply
+\[
+ M_b+M_{b^2}=M_{ac}+M_{abc}+M_{ab^2c},\qquad
+ M_a+M_{ab}=M_c+M_{bc}+M_{b^2c}.
+\tag{RB7}
+\]
+Set
+\[
+ k_c=\tfrac12(M_a-M_b+M_{ac}+M_{ab^2c}-M_{bc}),\qquad
+ r_c=M_c-M_b+M_{ac}-k_c,
+\]
+\[
+ f_c=M_b-M_{ac},\quad q_c=M_a-f_c,\quad
+ e_c=M_{b^2}-M_{ab^2c},\quad d_c=M_{b^2c}-k_c,\quad
+ g_c=M_{ab^2c}.
+\tag{RB8}
+\]
+Then the exact full scalar is
+\begin{align*}
+F_{\rm full}={}&q_cQ_*^2+M_{ac}B_*^2+r_cR_*^2
+ +d_cV^2Q_*^2+e_cV^2B_*^2\\
+&+f_c\Psi+g_cV^2\Psi
+ +k_cZ_*^2(V^2-1)^2 .
+\end{align*}
+\tag{RB9}
+The two odd coefficients in RB9 are fixed by the contact value and
+the $V$ derivative; RB7 fixes the remaining even coefficients.
+No positivity of $e_c,k_c,f_c$ is inferred merely from this identity.
+There is also a one-parameter variant, obtained by adding zero:
+for any pure-source $\tau$, replace
+\[
+ (q_c,M_{ac},d_c,e_c,f_c,g_c,k_c)
+ \longmapsto
+ (q_c-\tau,M_{ac}-\tau,d_c+\tau,e_c+\tau,
+  f_c+\tau,g_c-\tau,k_c-\tau)
+\]
+and add $\tau U^2Z_*^2(V^2-1)^2$.
+\tag{RB10}
+
+\subsection{Two exact circuit budgets}
+
+The first budget is the polynomial identity
+\[
+ (1+U^2)\Psi
+ =R_*^2+B_*^2+U^2Q_*^2+U^2(1-UVZ_*)^2.
+\tag{RB11}
+\]
+All permutations of $(U,V,Z_*)$ are allowed. In particular
+\[
+ (1+V^2)\Psi-V^2B_*^2
+       =Q_*^2+R_*^2+V^2(1-UVZ_*)^2
+\tag{RB12}
+\]
+is literally a sum of three squares. Consequently a signed
+$e_cV^2B_*^2$ term is paid at infinitesimal Gram cost whenever
+$e_c^-/f_c$ is source infinitesimal and
+$e_c^-/(f_cy)$ is bounded: the cost is
+$(e_c^-/f_c)+(e_c^-/(f_cy))v^2$. This criterion never treats
+$V$ as a bounded coefficient.
+
+For the second budget put $t_*=UV$, $\delta_*=U-V$, and
+\[
+ E=Z_*(1-t_*),\qquad T_*=t_*(1-Z_*),\qquad
+ J=T_*-\delta_*^2Z_*.
+\]
+There are exact identities
+\[
+ R_*=E-T_*,\qquad
+ V^2Q_*^2+U^2B_*^2-T_*^2
+                =J^2+2t_*\delta_*^2Z_*^2.
+\tag{RB13}
+\]
+Together with RB5 they give the explicit separated SOS remainder
+\begin{align*}
+&2\{\Psi+V^2Q_*^2+U^2B_*^2\}-R_*^2\\
+&\hspace{5mm}=(E+T_*)^2+2\delta_*^2+
+ 4t_*(1-Z_*)^2+2J^2+4t_*\delta_*^2Z_*^2 .
+\end{align*}
+\tag{RB14}
+Thus $R_*^2$ can be bought from the circuit and the two current rows,
+without any inverse or root of a mixed sum.
+For positive source masses $q_c,v_c,f_c$, a multiplier $a_c\ge0$
+has infinitesimal cost if
+\[
+ a_c/f_c\in\mathrm I,\qquad
+ a_c/(q_cy)\text{ is bounded},\qquad
+ a_c/(v_cx)\text{ is bounded}.
+\tag{RB15}
+\]
+The last two costs carry the actual testing factors $v^2,u^2$.
+The identities continue to hold on literal axes. No division by
+$U,V,Z_*$ occurs anywhere in RB11--RB15.
+
+\subsection{The exact remaining $n$ cancellation}
+
+Write $j=\sqrt{xq_z/y}$, so the original actual contact gives
+\[
+ \frac pj=\frac{1-r}{1+rx},\qquad
+ \xi_g=p\sqrt y\,\{B_*-r\sqrt x\,uR_*\}.
+\tag{RB16}
+\]
+Restoring or removing the full $n$ packet must retain the factor
+$1+v^2$ from RB1. For its unweighted part alone,
+\[
+ nxq_z-np^2y=nxq_z\{1-(p/j)^2\},
+\]
+\[
+ n\{1-(p/j)^2\}
+ =nr\,\frac{(2-r)+2x+rx^2}{(1+rx)^2}.
+\tag{RB17}
+\]
+This is bounded through the opening $r=0$ in residue and includes
+literal $n=0$. The remaining cross and $v^2$ terms are exact
+polynomials obtained from RB1 and RB16. They have not been silently
+discarded. A proof of their allocation, together with the complete
+state normals RQ10--RQ11 and the outer-testing joins, is necessary
+before an unbounded-$q$ R1 admission can be recorded.

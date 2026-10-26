@@ -1,0 +1,100 @@
+GENERAL NATIVE C2: INDEPENDENT RATIONAL NPA OBSTRUCTION AUDIT
+26 October 2026. Owned scope only: Section4 of recovered task3, generic
+extension and extremality. Matching standalone .py/.json; replay about1.2s.
+No public edits, source archive, numerical solver, or parameter search.
+
+1. The actual rational witness passes
+
+For a=c=1,b=5/4,t=3/4,r=1/4, the native formulas give, in active order
+(d,n,m,C,A,D,alpha),
+ (1,7/66,5/33,5/22,10/33,16/33,9/22).
+The five strict gaps(h,g,j,1-zh,b-a^2zr) are(1/2,1,1/2,1/2,1).
+The contact state is(5/4,-1/4,1/2,1), at u=v=1. Direct construction
+of the uncleared Pauli Bell operator verifies its four kernel entries
+and both scalar angular derivatives. Its concurrence is22/23.
+The equal-angle cone's required expression4A-2m-2D is-2/33, not d=1.
+
+For the C2 root order
+ (A1-I,B1-I,A0B0-I,A1B1-I,B0-A0,A0B1-A0,A1B0-A0),
+the matrix T of root actions on the unnormalised contact has first-four-
+column determinant-1/2. The displayed seven-by-three kernel N is exact:
+TN=0 and its final three rows are I3. Thus N spans ker(T).
+
+The checker reconstructs all products in the universal algebra using
+separate reduced Alice and Bob words. It cancels only adjacent identical
+same-party reflections and commutes only opposite parties. It imposes
+no same-party commutativity and does not replace word identities by
+evaluation at the qubit contact.
+
+For Q=N S N^T, coefficient extraction from all49 root products gives
+EXACTLY the displayed six-by-six matrix M, in the stated six forbidden
+word and six symmetric-entry orders. Its determinant is-405. Hence all
+six entries of S vanish. Positivity is used to infer Q T^T=0 at the zero;
+after that, the contradiction follows from linear coefficient matching
+alone. This proves exclusion from the full nine-word1+AB certificate
+cone. A complex Hermitian Gram does not evade the argument: its real
+part supplies a real PSD certificate for the real universal coefficients.
+
+2. Precise open-set/generic extension
+
+Use native coordinates(a,b,c,t,r), not z with a moving square root.
+The observables at u=c,v=ac and the state(b/a,-cr,ch/a,1) depend
+rationally on these coordinates. Wherever its first four columns T0
+are invertible, the SAME kernel prescription is rational:
+              N(p)=stack[-T0(p)^(-1)*Tlast(p),I3].
+The SAME six forbidden-word coefficients give a rational M(p).
+At the witness detT0=-1/2 and detM=-405. Their rational numerators
+are therefore nonzero polynomials, not identities.
+
+Consequently the obstruction holds on a nonempty Euclidean-open native
+neighbourhood and on a relative Zariski-open dense subset of the full-
+dimensional strict native parameter interior(n>0). In particular that
+neighbourhood contains a!=1,b!=a sources, which remain nonmaximally
+entangled by continuity. The equal-angle hyperplane residual is also
+nonzero at the witness, so a common open neighbourhood misses that cone.
+
+This proves a GENERIC obstruction. It does not prove exclusion at every
+native parameter or throughout a lower-dimensional face such as n=0.
+No orbit-by-orbit membership claim for all finite physical relabellings
+of the equal-angle cone was checked here. Any universal reading of
+'Schmidt-imbalanced C2 extreme rays cannot be supplied' needs these
+qualifications; the preceding explicit generic statement is justified.
+
+3. Stationary determinant convention and full-polar extremality
+
+The web general determinant is exactly the retained EN16 formula in
+latex/chapters/05_entry.tex. Its six columns are UNWEIGHTED event packets
+ DuDv X^2, Rm^2, Dv(uW-Y)^2, DuDv Y^2, RD^2, Du(vY-Z)^2;
+its rows are derivatives(W,X,Y,Z,u,v). This is NOT the uncleared
+state-kernel convention used for earlier small-curve minors. At the
+rational witness this six-by-six matrix is reconstructed independently:
+det=-297, agreeing with EN16. No general five-variable determinant was
+expanded in this audit. The witness extremality follows independently
+from this nonzero minor; the all-native extension uses retained EN16.
+
+At the witness, normalized p_A=2/23 and H=-17/46<0. Canonical extremality
+therefore extends to the FULL cone P of quantum-valid affine slacks.
+Indeed any valid summand has nonnegative eight canonical event weights,
+because they are one quarter of its values at the deterministic CHSH
+neighbours. A summand tight at this quantum point cannot have d_i<0:
+d_i H would be strictly positive and every event term nonnegative.
+Thus all summands lie in the nonnegative canonical cone, where extremality
+forces proportionality. This rules out supplying this ray by the sum of
+the full1+AB cone and the specified equal-angle cone, not only by canonical
+pieces of the NPA cone.
+
+The same upgrade holds for EVERY strict native C2 contact wherever the
+retained EN16 establishes canonical extremality, including n=0:
+ Y=ch/a>0, A>0, hence p_A=Y^2/||psi||^2>0 and, at the zero,
+              H=-4 sum_i a_i p_i <=-4A p_A<0.
+Limits with vanishing strict gaps need separate reasoning; no uniform
+statement about those limits follows from this strict inequality.
+
+4. Verdict and limits
+
+No error found in the owned rational source, kernel, forbidden matrix,
+determinant-405, or correctly qualified generic exclusion. The full-polar
+extremality conclusion can be strengthened as above. The Bell-sector
+Schur formulas and the full sixth-root admission problem were outside
+this exclusive audit. No fixed full-family Gram admission or full Q222
+lift follows from the rational obstruction.

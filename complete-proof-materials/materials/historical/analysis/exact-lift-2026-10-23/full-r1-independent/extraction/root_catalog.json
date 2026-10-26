@@ -1,0 +1,7253 @@
+{
+  "source_definitions": {
+    "SX": "1/sqrt(x)",
+    "SY": "1/sqrt(y)",
+    "SZ": "1/sqrt(j*T)",
+    "c": "B*T*C*H",
+    "sN": "sqrt(n+mu+1/2)",
+    "cb": "n*j/(n+mu+1/2)",
+    "sE": "sqrt(n*(mu+1/2)*j^2/(n+mu+1/2))",
+    "tau": "sqrt(T*H*(1-H))",
+    "rhoQ": "T*sqrt(x/qc)",
+    "sR": "sqrt(rc/(j*T))",
+    "phi": "p^2/(1-p+p^2)",
+    "theta": "Me/Sigma",
+    "Sigma": "Me+fc/y",
+    "gamma": "p^2/Sigma",
+    "radical_symbols": {
+      "suv": "sqrt(u*v)",
+      "suz": "sqrt(u*w*zeta)",
+      "svz": "sqrt(v*w*zeta)",
+      "sm": "sqrt(-u*v*w*zeta)"
+    },
+    "normalization": "Every fixed feature sqrt(q_b)*monomial is divided by sqrt(1+v^2)."
+  },
+  "roots": [
+    {
+      "chart": 1,
+      "family": "core_1",
+      "root": "cb*sN*v*w - cb*sN*u*zeta/j - p*sN*v*w + sN*t",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "core_2",
+      "root": "sE*v*w - sE*u*zeta/j",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "core_3",
+      "root": "u**2*v*w - v*w*x",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "core_4",
+      "root": "alpha*j*v*w - alpha*u*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "core_5",
+      "root": "p*v**3*w - p*u*v**2*zeta/j",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          3,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "core_6",
+      "root": "-H*v*zeta/tau - r/tau",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "core_7",
+      "root": "sqrt(T)*alpha*v*zeta - sqrt(T)*c*u**2*v*zeta - sqrt(T)*alpha*u*v**2*w/B + sqrt(T)*c*u**3*v**2*w/B",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          2,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          3,
+          2,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "core_8",
+      "root": "sqrt(T)*p*u*v**2*w - sqrt(T)*p*u**2*v*zeta/j",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          2,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "core_9",
+      "root": "-T*u*w/rhoQ + v*zeta/rhoQ",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "core_10",
+      "root": "sR*zeta - sR*u*v*w/B",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "core_11",
+      "root": "SX*u*w - SY*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "core_12",
+      "root": "-SX*SY*SZ*u*v*zeta + SZ*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "core_13",
+      "root": "-sqrt(2)*sqrt(SX)*sqrt(SY)*SZ*suv*zeta + sqrt(2)*sqrt(SX)*sqrt(SY)*suv*w",
+      "radical_class": "uv",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "retained_1",
+      "root": "-p*v*w + t",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "retained_2",
+      "root": "-p*u*v*w + t*u",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "retained_3",
+      "root": "-p*v**2*w + t*v",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "retained_4",
+      "root": "t*v - p*u*v*zeta/j",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "retained_5",
+      "root": "-H*u*v*zeta - r*u",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "retained_6",
+      "root": "-H*v**2*zeta - r*v",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "retained_7",
+      "root": "-H*u*v**2*zeta - r*u*v",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          2,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "retained_8",
+      "root": "SX*SY*u*v*w - SY**2*SZ*v**2*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "retained_9",
+      "root": "-SX*SY*SZ*u*v*zeta + SY**2*v**2*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          2,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "retained_10",
+      "root": "-SX*SY**2*SZ*u*v**2*zeta + SY*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "retained_11",
+      "root": "2*SX*SY*u*v*w - SY**2*SZ*v**2*zeta - SZ*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "retained_12",
+      "root": "SX*u*w - SY*SZ*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "retained_13",
+      "root": "-SX*SY*u*v*w + SZ*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "event_1",
+      "root": "-r*u + t*v - u*v*zeta + w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "event_2",
+      "root": "t - u*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "event_3",
+      "root": "t*v - u*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "event_4",
+      "root": "-t + v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "event_5",
+      "root": "-t*u + u*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "event_6",
+      "root": "r",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "event_7",
+      "root": "r*u",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "event_8",
+      "root": "r*v",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "event_9",
+      "root": "r*u*v",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          1,
+          0,
+          1,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "event_10",
+      "root": "r + u*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "event_11",
+      "root": "r*v + u*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "event_12",
+      "root": "r + v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "event_13",
+      "root": "r*u + u*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "event_14",
+      "root": "r*v - t*u + u*v*w - zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "event_15",
+      "root": "t",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "event_16",
+      "root": "t*u",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "event_17",
+      "root": "t*v",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "event_18",
+      "root": "t*u*v",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "radial_W_1",
+      "root": "-SX**2*SY*u**2*v*w + SZ*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "radial_W_2",
+      "root": "-SX**2*SY*u**2*v*w + SY*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "radial_W_3",
+      "root": "-SX**2*SY*u**2*v*w + SX*u*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "radial_W_4",
+      "root": "-SX**2*SY*u**2*v*w + SX*SZ*u*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "radial_W_5",
+      "root": "-SX**2*SY*u**2*v*w + SX*SY*u*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "radial_W_6",
+      "root": "-SX**2*SY*u**2*v*w + SX*SY*SZ*u*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "radial_W_7",
+      "root": "-SX**2*SY*u**2*v*w + SX**2*u**2*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "radial_W_8",
+      "root": "-2*SX*sqrt(SY)*sqrt(SZ)*svz*u + 2*sqrt(SY)*sqrt(SZ)*svz",
+      "radical_class": "vwz",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "radial_W_9",
+      "root": "-SX**(3/2)*SY*sqrt(SZ)*suz*u*v + sqrt(SX)*sqrt(SZ)*suz",
+      "radical_class": "uwz",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "radial_W_10",
+      "root": "-SX**(3/2)*SY*sqrt(SZ)*suz*u*v + sqrt(SX)*SY*sqrt(SZ)*suz*v",
+      "radical_class": "uwz",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "radial_W_11",
+      "root": "-SX**(3/2)*SY*sqrt(SZ)*suz*u*v + SX**(3/2)*sqrt(SZ)*suz*u",
+      "radical_class": "uwz",
+      "monomials": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "radial_U_A27_1",
+      "root": "-SX**2*SZ*u**2*zeta + SX*SY*u*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "radial_U_A27_2",
+      "root": "SX**3*u**3*w - SX**2*SY*SZ*u**2*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "radial_U_A27_3",
+      "root": "-SX**3*SY*SZ*u**3*v*zeta + SX**2*u**2*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          3,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "radial_U_Wpi_1",
+      "root": "-SX**3*SZ*u**3*zeta + SX*SY*u*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          3,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "radial_U_Wpi_2",
+      "root": "-SX**3*SZ*u**3*zeta + SX*SZ*u*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "radial_U_Wpi_3",
+      "root": "-SX**3*SZ*u**3*zeta + SX**2*u**2*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          3,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "radial_U_Wpi_4",
+      "root": "-SX**3*SZ*u**3*zeta + SX**2*SY*u**2*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          3,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "radial_U_Wpi_5",
+      "root": "-SX**3*SZ*u**3*zeta + SX**2*SZ*u**2*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "radial_U_Wpi_6",
+      "root": "-SX**3*SZ*u**3*zeta + SX**2*SY*SZ*u**2*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "radial_U_Wpi_7",
+      "root": "-SX**3*SZ*u**3*zeta + SX**3*u**3*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          3,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "radial_U_Wpi_8",
+      "root": "-2*SX**2*sqrt(SY)*sqrt(SZ)*svz*u**2 + 2*SX*sqrt(SY)*sqrt(SZ)*svz*u",
+      "radical_class": "vwz",
+      "monomials": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "radial_U_Wpi_9",
+      "root": "-SX**(5/2)*sqrt(SY)*SZ*suv*u**2*zeta + SX**(3/2)*sqrt(SY)*suv*u*w",
+      "radical_class": "uv",
+      "monomials": [
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "radial_U_Wpi_10",
+      "root": "-SX**(5/2)*sqrt(SY)*SZ*suv*u**2*zeta + SX**(3/2)*sqrt(SY)*SZ*suv*u*zeta",
+      "radical_class": "uv",
+      "monomials": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "radial_U_Wpi_11",
+      "root": "-SX**(5/2)*sqrt(SY)*SZ*suv*u**2*zeta + SX**(5/2)*sqrt(SY)*suv*u**2*w",
+      "radical_class": "uv",
+      "monomials": [
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "radial_RB_square_1",
+      "root": "2*SX**3*SZ*u**3*zeta - SX**2*SY*u**2*v*w - 2*SX*SZ*u*zeta + SY*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          3,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "Jalpha_difference_1",
+      "root": "-alpha*u*zeta + 2*alpha*u**2*v*w/B - alpha*v*w*x/B",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "Jalpha_Bswap_1",
+      "root": "-SX*SY*u*v*w + SZ*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "Jalpha_Bswap_2",
+      "root": "SX**2*u**2*w - SX*SY*SZ*u*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "Jalpha_Bswap_3",
+      "root": "-SX**2*SY*SZ*u**2*v*zeta + SX*u*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "O_v_A27_1",
+      "root": "-SX*SZ*u*v*zeta + SY*v**2*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          2,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "O_v_A27_2",
+      "root": "SX**2*u**2*v*w - SX*SY*SZ*u*v**2*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "O_v_A27_3",
+      "root": "-SX**2*SY*SZ*u**2*v**2*zeta + SX*u*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          2,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "O_u2v_A27_1",
+      "root": "-SX*SZ*u**3*v*zeta + SY*u**2*v**2*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          2,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          3,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "O_u2v_A27_2",
+      "root": "SX**2*u**4*v*w - SX*SY*SZ*u**3*v**2*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          3,
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          4,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "O_u2v_A27_3",
+      "root": "-SX**2*SY*SZ*u**4*v**2*zeta + SX*u**3*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          3,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          4,
+          2,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "O_v_B29_1",
+      "root": "-2*SX*SY*SZ*u*v**2*zeta + SX*SY*u*v**2*w + SZ*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          2,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "O_v_B29_2",
+      "root": "sqrt(2)*SX*u*v*w - sqrt(2)*SY*v**2*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          2,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "O_v_B29_3",
+      "root": "-2*sqrt(SX)*sqrt(SY)*SZ*suv*v*zeta + 2*sqrt(SX)*sqrt(SY)*suv*v*w",
+      "radical_class": "uv",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "O_v_B29_4",
+      "root": "-sqrt(2)*SX**2*SZ*u**2*v*zeta + sqrt(2)*SX*SY*SZ*u*v**2*zeta + sqrt(2)*SX*SY*u*v**2*w - sqrt(2)*SY**2*SZ*v**3*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          3,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          2,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "O_v_B29_5",
+      "root": "2*SX**(3/2)*sqrt(SY)*SZ*suv*u*v*zeta - 2*sqrt(SX)*SY**(3/2)*SZ*suv*v**2*zeta",
+      "radical_class": "uv",
+      "monomials": [
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "O_u2v_B29_1",
+      "root": "-2*SX*SY*SZ*u**3*v**2*zeta + SX*SY*u**3*v**2*w + SZ*u**2*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          3,
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          3,
+          2,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "O_u2v_B29_2",
+      "root": "sqrt(2)*SX*u**3*v*w - sqrt(2)*SY*u**2*v**2*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          2,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          3,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "O_u2v_B29_3",
+      "root": "-2*sqrt(SX)*sqrt(SY)*SZ*suv*u**2*v*zeta + 2*sqrt(SX)*sqrt(SY)*suv*u**2*v*w",
+      "radical_class": "uv",
+      "monomials": [
+        [
+          2,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "O_u2v_B29_4",
+      "root": "-sqrt(2)*SX**2*SZ*u**4*v*zeta + sqrt(2)*SX*SY*SZ*u**3*v**2*zeta + sqrt(2)*SX*SY*u**3*v**2*w - sqrt(2)*SY**2*SZ*u**2*v**3*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          3,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          3,
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          3,
+          2,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          4,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "O_u2v_B29_5",
+      "root": "2*SX**(3/2)*sqrt(SY)*SZ*suv*u**3*v*zeta - 2*sqrt(SX)*SY**(3/2)*SZ*suv*u**2*v**2*zeta",
+      "radical_class": "uv",
+      "monomials": [
+        [
+          2,
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          3,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "O_majorization_1",
+      "root": "sqrt(T)*alpha*v*zeta + sqrt(T)*c*u**2*v*zeta - sqrt(T)*alpha*u*v**2*w/B - sqrt(T)*c*u**3*v**2*w/B",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          2,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          3,
+          2,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "signed_A27_1",
+      "root": "-SX*SZ*u*zeta + SY*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "signed_A27_2",
+      "root": "SX**2*u**2*w - SX*SY*SZ*u*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "signed_A27_3",
+      "root": "-SX**2*SY*SZ*u**2*v*zeta + SX*u*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "signed_B29_1",
+      "root": "-2*SX*SY*SZ*u*v*zeta + SX*SY*u*v*w + SZ*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "signed_B29_2",
+      "root": "sqrt(2)*SX*u*w - sqrt(2)*SY*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "signed_B29_3",
+      "root": "-2*sqrt(SX)*sqrt(SY)*SZ*suv*zeta + 2*sqrt(SX)*sqrt(SY)*suv*w",
+      "radical_class": "uv",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "signed_B29_4",
+      "root": "-sqrt(2)*SX**2*SZ*u**2*zeta + sqrt(2)*SX*SY*SZ*u*v*zeta + sqrt(2)*SX*SY*u*v*w - sqrt(2)*SY**2*SZ*v**2*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "signed_B29_5",
+      "root": "2*SX**(3/2)*sqrt(SY)*SZ*suv*u*zeta - 2*sqrt(SX)*SY**(3/2)*SZ*suv*v*zeta",
+      "radical_class": "uv",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "helper_v_E18_1",
+      "root": "SX*u*v*w - SY*SZ*v**2*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "helper_v_E18_2",
+      "root": "-SX*SY*u*v**2*w + SZ*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          2,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "helper_v_E18_3",
+      "root": "-SX*SY**2*SZ*u*v**3*zeta + SY*v**2*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          2,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          3,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "helper_u_E18_1",
+      "root": "SX*u**2*w - SY*SZ*u*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "helper_u_E18_2",
+      "root": "-SX*SY*u**2*v*w + SZ*u*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "helper_u_E18_3",
+      "root": "-SX*SY**2*SZ*u**2*v**2*zeta + SY*u*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          2,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_Psi_1",
+      "root": "SX*u*w - SY*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_shift_Psi_(0, 2, 0)",
+      "root": "SX*u*v*w - SY*v**2*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          2,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_shift_Psi_(0, 4, 0)",
+      "root": "SX*u*v**2*w - SY*v**3*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          3,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_shift_Psi_(2, 0, 0)",
+      "root": "SX*u**2*w - SY*u*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_shift_Psi_(2, 2, 0)",
+      "root": "SX*u**2*v*w - SY*u*v**2*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          2,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_shift_Psi_(4, 0, 0)",
+      "root": "SX*u**3*w - SY*u**2*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          3,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_shift_Psi_(4, 2, 0)",
+      "root": "SX*u**3*v*w - SY*u**2*v**2*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          2,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          3,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_shift_Psi_(6, 2, 0)",
+      "root": "SX*u**4*v*w - SY*u**3*v**2*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          3,
+          2,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          4,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_Psi_2",
+      "root": "-SX*SY*SZ*u*v*zeta + SZ*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_shift_Psi_(0, 2, 1)",
+      "root": "-SX*SY*SZ*u*v**2*zeta + SZ*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          2,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_shift_Psi_(0, 4, 1)",
+      "root": "-SX*SY*SZ*u*v**3*zeta + SZ*v**2*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          3,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_shift_Psi_(2, 0, 1)",
+      "root": "-SX*SY*SZ*u**2*v*zeta + SZ*u*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_shift_Psi_(2, 2, 1)",
+      "root": "-SX*SY*SZ*u**2*v**2*zeta + SZ*u*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          2,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_shift_Psi_(4, 0, 1)",
+      "root": "-SX*SY*SZ*u**3*v*zeta + SZ*u**2*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          3,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_shift_Psi_(4, 2, 1)",
+      "root": "-SX*SY*SZ*u**3*v**2*zeta + SZ*u**2*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          3,
+          2,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_shift_Psi_(6, 2, 1)",
+      "root": "-SX*SY*SZ*u**4*v**2*zeta + SZ*u**3*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          3,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          4,
+          2,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_Psi_3",
+      "root": "-sqrt(2)*sqrt(SX)*sqrt(SY)*SZ*suv*zeta + sqrt(2)*sqrt(SX)*sqrt(SY)*suv*w",
+      "radical_class": "uv",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_shift_Psi_(0, 2, 2)",
+      "root": "-sqrt(2)*sqrt(SX)*sqrt(SY)*SZ*suv*v*zeta + sqrt(2)*sqrt(SX)*sqrt(SY)*suv*v*w",
+      "radical_class": "uv",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_shift_Psi_(0, 4, 2)",
+      "root": "-sqrt(2)*sqrt(SX)*sqrt(SY)*SZ*suv*v**2*zeta + sqrt(2)*sqrt(SX)*sqrt(SY)*suv*v**2*w",
+      "radical_class": "uv",
+      "monomials": [
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_shift_Psi_(2, 0, 2)",
+      "root": "-sqrt(2)*sqrt(SX)*sqrt(SY)*SZ*suv*u*zeta + sqrt(2)*sqrt(SX)*sqrt(SY)*suv*u*w",
+      "radical_class": "uv",
+      "monomials": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_shift_Psi_(2, 2, 2)",
+      "root": "-sqrt(2)*sqrt(SX)*sqrt(SY)*SZ*suv*u*v*zeta + sqrt(2)*sqrt(SX)*sqrt(SY)*suv*u*v*w",
+      "radical_class": "uv",
+      "monomials": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_shift_Psi_(4, 0, 2)",
+      "root": "-sqrt(2)*sqrt(SX)*sqrt(SY)*SZ*suv*u**2*zeta + sqrt(2)*sqrt(SX)*sqrt(SY)*suv*u**2*w",
+      "radical_class": "uv",
+      "monomials": [
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_shift_Psi_(4, 2, 2)",
+      "root": "-sqrt(2)*sqrt(SX)*sqrt(SY)*SZ*suv*u**2*v*zeta + sqrt(2)*sqrt(SX)*sqrt(SY)*suv*u**2*v*w",
+      "radical_class": "uv",
+      "monomials": [
+        [
+          2,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_shift_Psi_(6, 2, 2)",
+      "root": "-sqrt(2)*sqrt(SX)*sqrt(SY)*SZ*suv*u**3*v*zeta + sqrt(2)*sqrt(SX)*sqrt(SY)*suv*u**3*v*w",
+      "radical_class": "uv",
+      "monomials": [
+        [
+          3,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          3,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_Q_1",
+      "root": "SX*u*w - SY*SZ*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_shift_Q_(0, 2, 0)",
+      "root": "SX*u*v*w - SY*SZ*v**2*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_shift_Q_(0, 4, 0)",
+      "root": "SX*u*v**2*w - SY*SZ*v**3*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          3,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          2,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_shift_Q_(2, 0, 0)",
+      "root": "SX*u**2*w - SY*SZ*u*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_shift_Q_(4, 0, 0)",
+      "root": "SX*u**3*w - SY*SZ*u**2*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_shift_Q_(4, 4, 0)",
+      "root": "SX*u**3*v**2*w - SY*SZ*u**2*v**3*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          3,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          3,
+          2,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_E_1",
+      "root": "v*w - u*zeta/j",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_shift_E_(0, 4, 0)",
+      "root": "v**3*w - u*v**2*zeta/j",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          3,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_shift_E_(2, 0, 0)",
+      "root": "u*v*w - u**2*zeta/j",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_shift_E_(2, 2, 0)",
+      "root": "u*v**2*w - u**2*v*zeta/j",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          2,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_shift_E_(4, 0, 0)",
+      "root": "u**2*v*w - u**3*zeta/j",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          3,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_shift_E_(6, 2, 0)",
+      "root": "u**3*v**2*w - u**4*v*zeta/j",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          3,
+          2,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          4,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_R_1",
+      "root": "-SX*SY*u*v*w + SZ*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_shift_R_(0, 2, 0)",
+      "root": "-SX*SY*u*v**2*w + SZ*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          2,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_shift_R_(2, 0, 0)",
+      "root": "-SX*SY*u**2*v*w + SZ*u*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": 1,
+      "family": "residual_shift_R_(4, 2, 0)",
+      "root": "-SX*SY*u**3*v**2*w + SZ*u**2*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          3,
+          2,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "core_1",
+      "root": "cb*sN*v*w - cb*sN*u*zeta/j - p*sN*v*w + sN*t",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "core_2",
+      "root": "sE*v*w - sE*u*zeta/j",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "core_3",
+      "root": "u**2*v*w - v*w*x",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "core_4",
+      "root": "alpha*j*v*w - alpha*u*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "core_5",
+      "root": "p*v**3*w - p*u*v**2*zeta/j",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          3,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "core_6",
+      "root": "-H*v*zeta/tau - r/tau",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "core_7",
+      "root": "sqrt(T)*alpha*v*zeta - sqrt(T)*c*u**2*v*zeta - sqrt(T)*alpha*u*v**2*w/B + sqrt(T)*c*u**3*v**2*w/B",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          2,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          3,
+          2,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "core_8",
+      "root": "sqrt(T)*p*u*v**2*w - sqrt(T)*p*u**2*v*zeta/j",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          2,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "core_9",
+      "root": "-T*u*w/rhoQ + v*zeta/rhoQ",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "core_10",
+      "root": "sR*zeta - sR*u*v*w/B",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "core_11",
+      "root": "SX*u*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "core_12",
+      "root": "SY*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "core_13",
+      "root": "SZ*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "core_14",
+      "root": "SX*SY*SZ*u*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "core_15",
+      "root": "2*sqrt(SX)*sqrt(SY)*sqrt(SZ)*sm",
+      "radical_class": "negative_uv_wz",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "retained_1",
+      "root": "-p*v*w + t",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "retained_2",
+      "root": "-p*u*v*w + t*u",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "retained_3",
+      "root": "-p*v**2*w + t*v",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "retained_4",
+      "root": "t*v - p*u*v*zeta/j",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "retained_5",
+      "root": "-H*u*v*zeta - r*u",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "retained_6",
+      "root": "-H*v**2*zeta - r*v",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "retained_7",
+      "root": "-H*u*v**2*zeta - r*u*v",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          2,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "retained_8",
+      "root": "SX*SY*u*v*w - SY**2*SZ*v**2*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "retained_9",
+      "root": "-SX*SY*SZ*u*v*zeta + SY**2*v**2*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          2,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "retained_10",
+      "root": "-SX*SY**2*SZ*u*v**2*zeta + SY*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "retained_11",
+      "root": "2*SX*SY*u*v*w - SY**2*SZ*v**2*zeta - SZ*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "retained_12",
+      "root": "SX*u*w - SY*SZ*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "retained_13",
+      "root": "-SX*SY*u*v*w + SZ*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "event_1",
+      "root": "-r*u + t*v - u*v*zeta + w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "event_2",
+      "root": "t - u*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "event_3",
+      "root": "t*v - u*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "event_4",
+      "root": "-t + v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "event_5",
+      "root": "-t*u + u*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "event_6",
+      "root": "r",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "event_7",
+      "root": "r*u",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "event_8",
+      "root": "r*v",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "event_9",
+      "root": "r*u*v",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          1,
+          0,
+          1,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "event_10",
+      "root": "r + u*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "event_11",
+      "root": "r*v + u*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "event_12",
+      "root": "r + v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "event_13",
+      "root": "r*u + u*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "event_14",
+      "root": "r*v - t*u + u*v*w - zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "event_15",
+      "root": "t",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "event_16",
+      "root": "t*u",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "event_17",
+      "root": "t*v",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "event_18",
+      "root": "t*u*v",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "radial_W_1",
+      "root": "2*SX*u*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "radial_W_2",
+      "root": "sqrt(3)*SY*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "radial_W_3",
+      "root": "2*SX**2*u**2*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "radial_W_4",
+      "root": "sqrt(3)*SX**2*SY*u**2*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "radial_W_5",
+      "root": "sqrt(2)*SX*SY*u*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "radial_W_6",
+      "root": "2*SZ*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "radial_W_7",
+      "root": "2*SX*SZ*u*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "radial_W_8",
+      "root": "2*sqrt(2)*SX*SY*SZ*u*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "radial_W_9",
+      "root": "4*sqrt(SX)*sqrt(SY)*sqrt(SZ)*sm",
+      "radical_class": "negative_uv_wz",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "radial_W_10",
+      "root": "4*SX**(3/2)*sqrt(SY)*sqrt(SZ)*sm*u",
+      "radical_class": "negative_uv_wz",
+      "monomials": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "radial_U_A27_1",
+      "root": "-SX**2*SZ*u**2*zeta + SX*SY*u*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "radial_U_A27_2",
+      "root": "SX**3*u**3*w - SX**2*SY*SZ*u**2*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "radial_U_A27_3",
+      "root": "-SX**3*SY*SZ*u**3*v*zeta + SX**2*u**2*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          3,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "radial_U_Wpi_1",
+      "root": "2*SX**2*u**2*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "radial_U_Wpi_2",
+      "root": "2*SX**3*u**3*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          3,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "radial_U_Wpi_3",
+      "root": "2*SX*SY*u*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "radial_U_Wpi_4",
+      "root": "2*SX**2*SY*u**2*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "radial_U_Wpi_5",
+      "root": "sqrt(3)*SX*SZ*u*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "radial_U_Wpi_6",
+      "root": "sqrt(3)*SX**3*SZ*u**3*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          3,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "radial_U_Wpi_7",
+      "root": "sqrt(2)*SX**2*SZ*u**2*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "radial_U_Wpi_8",
+      "root": "2*sqrt(2)*SX**2*SY*SZ*u**2*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "radial_U_Wpi_9",
+      "root": "4*SX**(3/2)*sqrt(SY)*sqrt(SZ)*sm*u",
+      "radical_class": "negative_uv_wz",
+      "monomials": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "radial_U_Wpi_10",
+      "root": "4*SX**(5/2)*sqrt(SY)*sqrt(SZ)*sm*u**2",
+      "radical_class": "negative_uv_wz",
+      "monomials": [
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "radial_RB_square_1",
+      "root": "2*SX**3*SZ*u**3*zeta - SX**2*SY*u**2*v*w - 2*SX*SZ*u*zeta + SY*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          3,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "Jalpha_difference_1",
+      "root": "-alpha*u*zeta + 2*alpha*u**2*v*w/B - alpha*v*w*x/B",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "Jalpha_Bswap_1",
+      "root": "-SX*SY*u*v*w + SZ*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "Jalpha_Bswap_2",
+      "root": "SX**2*u**2*w - SX*SY*SZ*u*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "Jalpha_Bswap_3",
+      "root": "-SX**2*SY*SZ*u**2*v*zeta + SX*u*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "O_v_A27_1",
+      "root": "-SX*SZ*u*v*zeta + SY*v**2*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          2,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "O_v_A27_2",
+      "root": "SX**2*u**2*v*w - SX*SY*SZ*u*v**2*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "O_v_A27_3",
+      "root": "-SX**2*SY*SZ*u**2*v**2*zeta + SX*u*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          2,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "O_u2v_A27_1",
+      "root": "-SX*SZ*u**3*v*zeta + SY*u**2*v**2*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          2,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          3,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "O_u2v_A27_2",
+      "root": "SX**2*u**4*v*w - SX*SY*SZ*u**3*v**2*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          3,
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          4,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "O_u2v_A27_3",
+      "root": "-SX**2*SY*SZ*u**4*v**2*zeta + SX*u**3*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          3,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          4,
+          2,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "O_v_B29_1",
+      "root": "-2*SX*SY*SZ*u*v**2*zeta + SX*SY*u*v**2*w + SZ*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          2,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "O_v_B29_2",
+      "root": "sqrt(2)*SX*u*v*w - sqrt(2)*SY*v**2*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          2,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "O_v_B29_3",
+      "root": "-2*sqrt(SX)*sqrt(SY)*SZ*suv*v*zeta + 2*sqrt(SX)*sqrt(SY)*suv*v*w",
+      "radical_class": "uv",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "O_v_B29_4",
+      "root": "-sqrt(2)*SX**2*SZ*u**2*v*zeta + sqrt(2)*SX*SY*SZ*u*v**2*zeta + sqrt(2)*SX*SY*u*v**2*w - sqrt(2)*SY**2*SZ*v**3*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          3,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          2,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "O_v_B29_5",
+      "root": "2*SX**(3/2)*sqrt(SY)*SZ*suv*u*v*zeta - 2*sqrt(SX)*SY**(3/2)*SZ*suv*v**2*zeta",
+      "radical_class": "uv",
+      "monomials": [
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "O_u2v_B29_1",
+      "root": "-2*SX*SY*SZ*u**3*v**2*zeta + SX*SY*u**3*v**2*w + SZ*u**2*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          3,
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          3,
+          2,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "O_u2v_B29_2",
+      "root": "sqrt(2)*SX*u**3*v*w - sqrt(2)*SY*u**2*v**2*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          2,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          3,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "O_u2v_B29_3",
+      "root": "-2*sqrt(SX)*sqrt(SY)*SZ*suv*u**2*v*zeta + 2*sqrt(SX)*sqrt(SY)*suv*u**2*v*w",
+      "radical_class": "uv",
+      "monomials": [
+        [
+          2,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "O_u2v_B29_4",
+      "root": "-sqrt(2)*SX**2*SZ*u**4*v*zeta + sqrt(2)*SX*SY*SZ*u**3*v**2*zeta + sqrt(2)*SX*SY*u**3*v**2*w - sqrt(2)*SY**2*SZ*u**2*v**3*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          3,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          3,
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          3,
+          2,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          4,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "O_u2v_B29_5",
+      "root": "2*SX**(3/2)*sqrt(SY)*SZ*suv*u**3*v*zeta - 2*sqrt(SX)*SY**(3/2)*SZ*suv*u**2*v**2*zeta",
+      "radical_class": "uv",
+      "monomials": [
+        [
+          2,
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          3,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "O_majorization_1",
+      "root": "sqrt(T)*alpha*v*zeta + sqrt(T)*c*u**2*v*zeta - sqrt(T)*alpha*u*v**2*w/B - sqrt(T)*c*u**3*v**2*w/B",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          2,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          3,
+          2,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "signed_A27_1",
+      "root": "-SX*SZ*u*zeta + SY*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "signed_A27_2",
+      "root": "SX**2*u**2*w - SX*SY*SZ*u*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "signed_A27_3",
+      "root": "-SX**2*SY*SZ*u**2*v*zeta + SX*u*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "signed_B29_1",
+      "root": "-2*SX*SY*SZ*u*v*zeta + SX*SY*u*v*w + SZ*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "signed_B29_2",
+      "root": "sqrt(2)*SX*u*w - sqrt(2)*SY*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "signed_B29_3",
+      "root": "-2*sqrt(SX)*sqrt(SY)*SZ*suv*zeta + 2*sqrt(SX)*sqrt(SY)*suv*w",
+      "radical_class": "uv",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "signed_B29_4",
+      "root": "-sqrt(2)*SX**2*SZ*u**2*zeta + sqrt(2)*SX*SY*SZ*u*v*zeta + sqrt(2)*SX*SY*u*v*w - sqrt(2)*SY**2*SZ*v**2*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "signed_B29_5",
+      "root": "2*SX**(3/2)*sqrt(SY)*SZ*suv*u*zeta - 2*sqrt(SX)*SY**(3/2)*SZ*suv*v*zeta",
+      "radical_class": "uv",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "helper_v_E18_1",
+      "root": "SX*u*v*w - SY*SZ*v**2*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "helper_v_E18_2",
+      "root": "-SX*SY*u*v**2*w + SZ*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          2,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "helper_v_E18_3",
+      "root": "-SX*SY**2*SZ*u*v**3*zeta + SY*v**2*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          2,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          3,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "helper_u_E18_1",
+      "root": "SX*u**2*w - SY*SZ*u*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "helper_u_E18_2",
+      "root": "-SX*SY*u**2*v*w + SZ*u*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "helper_u_E18_3",
+      "root": "-SX*SY**2*SZ*u**2*v**2*zeta + SY*u*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          2,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_Psi_1",
+      "root": "SX*u*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Psi_(0, 2, 0)",
+      "root": "SX*u*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Psi_(0, 4, 0)",
+      "root": "SX*u*v**2*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          2,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Psi_(2, 0, 0)",
+      "root": "SX*u**2*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Psi_(2, 2, 0)",
+      "root": "SX*u**2*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Psi_(4, 0, 0)",
+      "root": "SX*u**3*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          3,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Psi_(4, 2, 0)",
+      "root": "SX*u**3*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          3,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Psi_(6, 2, 0)",
+      "root": "SX*u**4*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          4,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_Psi_2",
+      "root": "SY*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Psi_(0, 2, 1)",
+      "root": "SY*v**2*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          2,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Psi_(0, 4, 1)",
+      "root": "SY*v**3*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          3,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Psi_(2, 0, 1)",
+      "root": "SY*u*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Psi_(2, 2, 1)",
+      "root": "SY*u*v**2*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          2,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Psi_(4, 0, 1)",
+      "root": "SY*u**2*v*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Psi_(4, 2, 1)",
+      "root": "SY*u**2*v**2*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          2,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Psi_(6, 2, 1)",
+      "root": "SY*u**3*v**2*w",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          3,
+          2,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_Psi_3",
+      "root": "SZ*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Psi_(0, 2, 2)",
+      "root": "SZ*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Psi_(0, 4, 2)",
+      "root": "SZ*v**2*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Psi_(2, 0, 2)",
+      "root": "SZ*u*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Psi_(2, 2, 2)",
+      "root": "SZ*u*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Psi_(4, 0, 2)",
+      "root": "SZ*u**2*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Psi_(4, 2, 2)",
+      "root": "SZ*u**2*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Psi_(6, 2, 2)",
+      "root": "SZ*u**3*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          3,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_Psi_4",
+      "root": "SX*SY*SZ*u*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Psi_(0, 2, 3)",
+      "root": "SX*SY*SZ*u*v**2*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          2,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Psi_(0, 4, 3)",
+      "root": "SX*SY*SZ*u*v**3*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          3,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Psi_(2, 0, 3)",
+      "root": "SX*SY*SZ*u**2*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Psi_(2, 2, 3)",
+      "root": "SX*SY*SZ*u**2*v**2*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          2,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Psi_(4, 0, 3)",
+      "root": "SX*SY*SZ*u**3*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          3,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Psi_(4, 2, 3)",
+      "root": "SX*SY*SZ*u**3*v**2*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          3,
+          2,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Psi_(6, 2, 3)",
+      "root": "SX*SY*SZ*u**4*v**2*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          4,
+          2,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_Psi_5",
+      "root": "2*sqrt(SX)*sqrt(SY)*sqrt(SZ)*sm",
+      "radical_class": "negative_uv_wz",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Psi_(0, 2, 4)",
+      "root": "2*sqrt(SX)*sqrt(SY)*sqrt(SZ)*sm*v",
+      "radical_class": "negative_uv_wz",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Psi_(0, 4, 4)",
+      "root": "2*sqrt(SX)*sqrt(SY)*sqrt(SZ)*sm*v**2",
+      "radical_class": "negative_uv_wz",
+      "monomials": [
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Psi_(2, 0, 4)",
+      "root": "2*sqrt(SX)*sqrt(SY)*sqrt(SZ)*sm*u",
+      "radical_class": "negative_uv_wz",
+      "monomials": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Psi_(2, 2, 4)",
+      "root": "2*sqrt(SX)*sqrt(SY)*sqrt(SZ)*sm*u*v",
+      "radical_class": "negative_uv_wz",
+      "monomials": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Psi_(4, 0, 4)",
+      "root": "2*sqrt(SX)*sqrt(SY)*sqrt(SZ)*sm*u**2",
+      "radical_class": "negative_uv_wz",
+      "monomials": [
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Psi_(4, 2, 4)",
+      "root": "2*sqrt(SX)*sqrt(SY)*sqrt(SZ)*sm*u**2*v",
+      "radical_class": "negative_uv_wz",
+      "monomials": [
+        [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Psi_(6, 2, 4)",
+      "root": "2*sqrt(SX)*sqrt(SY)*sqrt(SZ)*sm*u**3*v",
+      "radical_class": "negative_uv_wz",
+      "monomials": [
+        [
+          3,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_Q_1",
+      "root": "SX*u*w - SY*SZ*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Q_(0, 2, 0)",
+      "root": "SX*u*v*w - SY*SZ*v**2*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Q_(0, 4, 0)",
+      "root": "SX*u*v**2*w - SY*SZ*v**3*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          3,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          2,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Q_(2, 0, 0)",
+      "root": "SX*u**2*w - SY*SZ*u*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Q_(4, 0, 0)",
+      "root": "SX*u**3*w - SY*SZ*u**2*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          3,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_Q_(4, 4, 0)",
+      "root": "SX*u**3*v**2*w - SY*SZ*u**2*v**3*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          3,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          3,
+          2,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_E_1",
+      "root": "v*w - u*zeta/j",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_E_(0, 4, 0)",
+      "root": "v**3*w - u*v**2*zeta/j",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          3,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_E_(2, 0, 0)",
+      "root": "u*v*w - u**2*zeta/j",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_E_(2, 2, 0)",
+      "root": "u*v**2*w - u**2*v*zeta/j",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          2,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_E_(4, 0, 0)",
+      "root": "u**2*v*w - u**3*zeta/j",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          3,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_E_(6, 2, 0)",
+      "root": "u**3*v**2*w - u**4*v*zeta/j",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          3,
+          2,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          4,
+          1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_R_1",
+      "root": "-SX*SY*u*v*w + SZ*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_R_(0, 2, 0)",
+      "root": "-SX*SY*u*v**2*w + SZ*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          2,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_R_(2, 0, 0)",
+      "root": "-SX*SY*u**2*v*w + SZ*u*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "chart": -1,
+      "family": "residual_shift_R_(4, 2, 0)",
+      "root": "-SX*SY*u**3*v**2*w + SZ*u**2*v*zeta",
+      "radical_class": "plain",
+      "monomials": [
+        [
+          2,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          3,
+          2,
+          0,
+          0,
+          1,
+          0
+        ]
+      ]
+    }
+  ],
+  "G7": [
+    [
+      "4",
+      "-2",
+      "-3/2",
+      "0",
+      "-1/2",
+      "0",
+      "1/2"
+    ],
+    [
+      "-2",
+      "3",
+      "0",
+      "-3/2",
+      "0",
+      "-1",
+      "2"
+    ],
+    [
+      "-3/2",
+      "0",
+      "4",
+      "3/2",
+      "-2",
+      "-3",
+      "0"
+    ],
+    [
+      "0",
+      "-3/2",
+      "3/2",
+      "4",
+      "-3/2",
+      "0",
+      "-3/2"
+    ],
+    [
+      "-1/2",
+      "0",
+      "-2",
+      "-3/2",
+      "3",
+      "2",
+      "-1"
+    ],
+    [
+      "0",
+      "-1",
+      "-3",
+      "0",
+      "2",
+      "8",
+      "-4"
+    ],
+    [
+      "1/2",
+      "2",
+      "0",
+      "-3/2",
+      "-1",
+      "-4",
+      "4"
+    ]
+  ],
+  "G3": [
+    [
+      "3",
+      "-2",
+      "-2"
+    ],
+    [
+      "-2",
+      "2",
+      "2"
+    ],
+    [
+      "-2",
+      "2",
+      "3"
+    ]
+  ],
+  "loss_polynomials": {
+    "Psi": "32*T**2*alpha**2*j*phi*theta*v**2/fc + 32*T**2*alpha**2*j*phi*v**2/fc + 32*T**2*c**2*j*phi*theta*u**4*v**2/fc + 32*T**2*c**2*j*phi*u**4*v**2/fc + 8*T*gamma*u**2*v**2 + 8*T*gamma*u**2*y + 16*alpha**2*j**2*phi*u**2*y/(fc*x) + 16*alpha**2*j**2*phi*y/fc + 8*gamma*v**4 + 8*gamma*v**2*y + gc/fc + 2*kappa*phi*theta/fc + 2*kappa*phi/fc + 128*phi*theta*u**2*x*y/fc - 64*phi*x**2*y/fc + 64*x**2*y/fc + 32*T**2*alpha**2*j*phi*u**2*v**2/(Sigma*x*y) + 32*T**2*c**2*j*phi*u**6*v**2/(Sigma*x*y) + 2*kappa*phi*u**2/(Sigma*x*y) + 64*phi*u**4/Sigma + 64*phi*u**2*x/Sigma + 64*phi*x**2/Sigma - 256*alpha**2*phi**2*theta*u**2*x*y/(B**2*fc) + 128*alpha**2*phi**2*x**2*y/(B**2*fc) + 256*alpha**2*phi*theta*u**2*x*y/(B**2*fc) - 256*alpha**2*phi*x**2*y/(B**2*fc) + 128*alpha**2*x**2*y/(B**2*fc) - 128*alpha**2*phi**2*u**4/(B**2*Sigma) - 128*alpha**2*phi**2*u**2*x/(B**2*Sigma) - 128*alpha**2*phi**2*x**2/(B**2*Sigma) + 128*alpha**2*phi*u**4/(B**2*Sigma) + 128*alpha**2*phi*u**2*x/(B**2*Sigma) + 128*alpha**2*phi*x**2/(B**2*Sigma)",
+    "Q": "64*T**2*alpha**2*j*phi*theta*v**4/(qc*y) + 64*T**2*c**2*j*phi*theta*u**4*v**4/(qc*y) + 4*kappa*phi*theta*v**2/(qc*y) + 2*kappa*v**2/(qc*y) + 128*phi*theta*u**4*y/qc - 64*phi*theta*u**2*x*y/qc + 64*u**2*x*y/qc - 256*alpha**2*phi**2*theta*u**4*y/(B**2*qc) + 128*alpha**2*phi**2*theta*u**2*x*y/(B**2*qc) + 256*alpha**2*phi*theta*u**4*y/(B**2*qc) - 128*alpha**2*phi*theta*u**2*x*y/(B**2*qc) - 128*alpha**2*phi*u**2*x*y/(B**2*qc) + 128*alpha**2*u**2*x*y/(B**2*qc)",
+    "E": "8*T*gamma*u**2*v**2 + 8*gamma*v**4 + 64*T**2*alpha**2*j*phi*u**2*v**2/(Sigma*x*y) + 64*T**2*c**2*j*phi*u**6*v**2/(Sigma*x*y) + 4*kappa*phi*u**2/(Sigma*x*y) + 160*phi*u**4/Sigma - 64*phi*u**2*x/Sigma + 32*phi*x**2/Sigma - 320*alpha**2*phi**2*u**4/(B**2*Sigma) + 128*alpha**2*phi**2*u**2*x/(B**2*Sigma) - 64*alpha**2*phi**2*x**2/(B**2*Sigma) + 320*alpha**2*phi*u**4/(B**2*Sigma) - 128*alpha**2*phi*u**2*x/(B**2*Sigma) + 64*alpha**2*phi*x**2/(B**2*Sigma)",
+    "R": "-32*T**2*alpha**2*j*phi*v**2/rc + 32*T**2*alpha**2*j*v**2/rc - 32*T**2*c**2*j*phi*u**4*v**2/rc + 32*T**2*c**2*j*u**4*v**2/rc - 32*T*alpha**2*j*phi*u**2/rc + 32*T*alpha**2*j*u**2/rc - 2*kappa*phi/rc + 2*kappa/rc - 64*phi*u**2*x*y/rc + 64*u**2*x*y/rc + 128*alpha**2*phi**2*u**2*x*y/(B**2*rc) - 256*alpha**2*phi*u**2*x*y/(B**2*rc) + 128*alpha**2*u**2*x*y/(B**2*rc)"
+  },
+  "loss_support": {
+    "Psi": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        6,
+        2
+      ]
+    ],
+    "Q": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        4,
+        4
+      ]
+    ],
+    "E": [
+      [
+        0,
+        4
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        4,
+        0
+      ],
+      [
+        6,
+        2
+      ]
+    ],
+    "R": [
+      [
+        0,
+        2
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        4,
+        2
+      ]
+    ]
+  }
+}

@@ -1,0 +1,173 @@
+23 October 2026 — bounded effectiveness / extraction derivation
+Repository checked at HEAD d767a78. No repository edits or solver runs.
+
+VERDICT
+The accepted qualitative proof makes exact algebraic synthesis a
+terminating algorithm. It does NOT presently give an evaluated degree,
+global feature count, maximum total PSD order, or one certified finite
+candidate size by a standard quantitative theorem. The existing search
+paragraph is logically correct; its precise description is a terminating
+UNBOUNDED search, not a search with an already evaluated finite upper bound.
+This is an extraction limitation, not a challenge to qualitative existence.
+
+One useful new deduction is available without revisiting local proofs:
+for the compact full-dimensional8-coordinate set, fixed-order synthesis
+needs at most D-9 auxiliaries, D=N(N+1)/2. Thus N>=4 and the first
+single-block template is order4 with one auxiliary and100 unknown matrix
+entries. This is a smaller concrete TEMPLATE, not a proved adequate lift.
+
+1. Exactly what the present proof establishes
+---------------------------------------------
+Read latex/Proof.tex (entire7-page main), especially its tensor goal,
+strict-Gram proof and final assembly/extraction paragraphs; read
+latex/chapters/03_tensor.tex TF11–TF12; read
+latex/Explicit_Lifts.tex:564–600.
+
+The pointwise quantifier order is
+ forall real-closed labelled fields Kc,Kt, source f, test q,
+ exists finitely many h_j in Kc tensor_R Kt:
+                 [f,q]=sum_j h_j^2.
+Each h_j has some finite expression sum_l a_jl tensor b_jl.
+Neither this statement nor the main text supplies uniform bounds on
+the number of terms, tensor ranks, algebraic degrees, or a common
+testing-function space. Moreover b_jl can be chosen anew after f and q
+are fixed. Merely being an element of Kt does not make it a member of
+one globally chosen source-independent testing library.
+
+Scheiderer, arXiv:2004.04196v2, Theorem3.10 and Corollary3.19 (printed
+pages12–15), together with Lemmas3.16–3.17, are the relevant precise
+statements. Corollary3.19 obtains some finite-dimensional U on a fixed
+algebraic cover. The proof makes two finite-cover selections by
+constructible compactness, without a numerical dimension/degree bound.
+Theorem3.10 says a uniform bound d on tensor-root rank bounds the
+largest LMI block size sxdeg. It does not bound the number of blocks
+or their total single-block order. Source:
+https://arxiv.org/pdf/2004.04196
+
+Even if one mechanically counted a uniform tensor-rank bound from all
+existing local formulas, that would at most supply this block-size
+information until the finite-cover/feature selection were made effective.
+No new verification of the local identities is needed for that count,
+but the count itself and a total-order bound are not in the current text.
+
+2. Why local degree counts do not supply the missing library
+------------------------------------------------------------
+The finite-lift route needs the stronger uniform order
+ exists one fixed cover X and finite testing spaces V_i,
+ forall valid sources f, exists source-only PSD Grams G_i(f),
+ forall testing x in X:
+         f(Phi(x))=sum_i v_i(x)^T G_i(f) v_i(x).
+The V_i must be selected before f and x. In particular their functions
+cannot depend on a source contact, source residue or a real center
+chosen after both source and test have been seen.
+
+The main strict-Gram proof chooses real bounds M_j and a real congruence
+from the current residues. This is legal for its pointwise tensor-SOS
+claim. It does not by itself select finitely many universal functions
+sqrt(M_j +/- y_j). Finite symbolic templates with freely moving centers
+are not a finite-dimensional function space. For example the rational
+functions1/(t+a), a ranging through distinct real constants, have degree1
+numerators/denominators yet are linearly independent, by their distinct
+simple poles. Thus a bound on algebraic/rational expression degree alone
+does not justify collecting a finite global feature span.
+
+Nor can a source-dependent center simply be added as a free testing
+coordinate and then specialized to that source: on a fixed cover the
+identity must hold on the whole testing fiber, independently of f.
+Standard effective positivity bounds on joint source/testing polynomials
+do not enforce this tensor separation and may introduce mixed multipliers
+or mixed radicals. They do not directly provide the missing hypothesis.
+
+3. Exact constructive lemma once a fixed library is available
+---------------------------------------------------------------
+Suppose fixed, explicitly given semialgebraic testing functions v_i of
+length d_i satisfy the uniform identity in section2, on a fixed cover X
+whose expectation map Phi has closed convex hull Q222. Assume their
+product relations are exactly computable (e.g. a fixed algebraic cover
+with a verified normal-form basis, or rational semialgebraic graphs and
+real quantifier elimination).
+
+Set W=span_R{1,Phi_1,...,Phi_8, all v_ia*v_ib}. Choose a basis containing
+the nine independent affine coordinates. Introduce a linear functional
+ell on W with ell(1)=1 and ell(Phi_j)=q_j; its other coordinates are the
+auxiliaries. Impose the finite moment LMIs
+                    (ell(v_ia*v_ib))_{a,b} >=0
+for each i. This is an explicit original-coordinate pencil of total
+order N0=sum_i d_i, with at most sum_i d_i(d_i+1)/2 auxiliaries.
+
+Both inclusions are immediate and exact. Dirac evaluations on X and
+their convex mixtures supply feasible ell for Q222. Conversely, for
+any valid affine f, its fixed Gram identity implies
+ f(q)=sum_i trace(G_i(f) M_i(ell))>=0.
+Separation of a point from the closed convex set Q222 gives the reverse
+inclusion. Thus a verified fixed global library would finish extraction
+without re-proving local mathematics. The qualitative proof guarantees
+that such a library/cover exists, but does not identify its size or data.
+
+4. The unconditional exact synthesis algorithm, assuming existence
+------------------------------------------------------------------
+At fixed N let D=N(N+1)/2. The matrix entries are finitely many unknown
+real constants. The rational first-order sentence
+ exists c forall q [Phys(q) iff exists y L_c(q,y)>=0]
+is decidable, using the existing81-atom-variable membership formula and
+principal minors for PSD. If true, exact real-algebraic witnesses can
+be returned with isolating data. Because all data are rational, transfer
+from the real algebraic field back to R makes those coefficients satisfy
+the SAME global equality, not merely an equality on algebraic points.
+
+Hence enumeration over N terminates once the qualitative theorem is
+accepted. It bypasses a testing-library derivation and need not repeat
+the local proofs. The algorithm still has to be EXECUTED to return a
+pencil. Effective QE bounds for fixed N bound only that fixed sentence's
+complexity/witness degrees, not the first successful N. This result is
+not a claim that no computable size bound could ever be extracted: for
+this proven positive instance, the first successful N is itself computable
+by the search. No numerical upper bound is presently supplied.
+
+5. A sharper finite template: p<=D-9 and N>=4
+--------------------------------------------
+Here is a direct bound omitted from the current paragraph. Let
+ L(q,y)=A0+sum_{i=1}^8 q_i Ai+sum_{j=1}^p y_j Bj
+represent a nonempty compact full-dimensional S in R8. Replace the Bj
+by a basis of V=span{Bj}, of dimension r. If sum_i a_i Ai lies in V
+for nonzero a, any feasible point extends along a full line in q while
+its matrix remains unchanged. Compactness therefore makes A1,...,A8
+linearly independent modulo V.
+
+Also A0 cannot belong to span(A1,...,A8,V). Such a dependence would give
+an affine parameter point (q*,y*) with L(q*,y*)=0. From any other feasible
+point, scaling its positive matrix by every t>=0 would give an unbounded
+ray q*+t(q-q*) in S. A full-dimensional S has a point q different fromq*.
+Thus A0 is one further independent direction. Consequently
+                     r+9<=D.
+
+Q222 is compact by the verified finite atom model and full-dimensional:
+it contains the local points0 and every e_i (indeed +/-e_i). One explicit
+realization samples four deterministic output bits uniformly with density
+(1+a_x)/16 for a marginal coordinate or(1+a_x b_y)/16 for a correlator.
+This leaves precisely the indicated expectation equal to1 and the other
+seven zero. Hence the dimension argument applies to Q222.
+
+Therefore fixed-N synthesis may take p_N=D-9 for N>=4, padding zero
+auxiliary matrices when necessary. There are then
+                 (9+p_N)D=D²
+unknown matrix coefficients. In particular the first template is
+ exists c in R100 forall q in R8
+ [Phys(q) iff exists y in R:
+             A0+sum_{i=1}^8 q_i Ai+y B1 >=0], Ai,B1 in Sym4.
+Nothing in the current existence proof says that this first template
+is feasible. If false, the next is N5,D15,p6,225 unknown coefficients.
+This is a useful exact reduction of the synthesis input, not an order4
+upper bound or a replacement for a returned, verified matrix tuple.
+
+Recommended precise status
+----------------------------
+'A terminating exact synthesis algorithm follows from qualitative
+existence. For orderN>=4 it suffices to search p<=N(N+1)/2-9 auxiliary
+directions. No successful order or algebraic coefficient witness has
+yet been evaluated.'
+
+That is the strongest upgrade established by this bounded derivation.
+An evaluated upper-order bound requires an actual global feature/cover
+selection, a new quantitative extraction theorem applicable to these
+separated witnesses, or a successful fixed-order first-order synthesis.

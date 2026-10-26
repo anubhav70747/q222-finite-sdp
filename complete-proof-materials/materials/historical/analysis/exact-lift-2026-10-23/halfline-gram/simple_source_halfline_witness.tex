@@ -1,0 +1,162 @@
+% Include-able body; requires amsmath and amssymb.
+\section*{An exact half-line completion for the polynomial counterexample}
+Consider the single C1 source
+\[
+ (d,\lambda,n,m,C,A,D,\alpha,\beta)
+ =\left(359,0,0,\frac{75}{16},60,416,
+          \frac{41}{2},\frac{831}{2},\frac{151}{2}\right).
+\]
+The scaling by $359$ is only to simplify the rational coefficients.
+Every matrix and selector below divided by $359$ gives a certificate
+for the same source normalized to $d=1$.
+Define
+\begin{align*}
+ P(v)&=\begin{pmatrix}
+ 75v^2/4&-75v/4\\-75v/4&4155/4+1020v^2
+ \end{pmatrix},\\
+ N(v)&=\begin{pmatrix}1040+240v^2&800v\\800v&800v^2\end{pmatrix},\\
+ E(v)&=\begin{pmatrix}1664+4044v^2&-2380v\\-2380v&1662-718v^2\end{pmatrix}.
+\end{align*}
+For $v\ge0$, an exact quadratic completion is
+\begin{equation}
+ \boxed{J_+(v)=\frac1{64}
+ \begin{pmatrix}
+ 3043v-2109v^2&3875v^2\\
+ 1403+23874v+2306v^2&815v+43455v^2
+ \end{pmatrix}.}                                      \label{halfline:witness-J}
+\end{equation}
+Put
+\[
+ G(v)=\begin{pmatrix}P(v)&J_+(v)\\J_+(v)^T&N(v)\end{pmatrix},\qquad
+ H(v)=\begin{pmatrix}P(v)+E(v)&-E(v)-J_+(v)\\
+                    -E(v)-J_+(v)^T&N(v)+E(v)\end{pmatrix},
+\]
+and let $G_j,H_j$ denote their coefficients of $v^j$.
+Here are rational Gram matrices proving $G(v),H(v)\succeq0$ on the
+whole half-line. Set
+\begin{align}
+ B_G&=\frac1{256}\begin{pmatrix}
+ 0&0&0&0\\
+ -4800&-48015&-27346&3260\\
+ 12172&186862&-21340&204800\\
+ 0&0&0&0
+ \end{pmatrix},                                      \label{halfline:witness-BG}\\
+ B_H&=\frac1{18496}\begin{pmatrix}
+ -6910952&240550&5277344&1292578\\
+ -41117866&-4908665&35528504&2316913\\
+ 3043153&1489795&-7316324&276862\\
+ 36194938&-415582&-30578223&-3325523
+ \end{pmatrix}.                                      \label{halfline:witness-BH}
+\end{align}
+Then define the four constant matrices
+\begin{align}
+ S_G&=\begin{pmatrix}G_0&B_G\\B_G^T&G_2\end{pmatrix},&
+ T_G&=G_1-B_G-B_G^T,\notag\\
+ S_H&=\begin{pmatrix}H_0&B_H\\B_H^T&H_2\end{pmatrix},&
+ T_H&=H_1-B_H-B_H^T.                                  \label{halfline:witness-Grams}
+\end{align}
+All four are positive semidefinite. An exact rational $LDL^T$ certificate
+is specified as follows, including the singular directions.
+Use unpivoted symmetric elimination in the displayed coordinate order,
+with unit diagonal in $L$. At a positive pivot $d_i$, set
+$L_{ji}=R_{ji}/d_i$ and update
+$R_{jk}\leftarrow R_{jk}-R_{ji}R_{ik}/d_i$ for $j,k>i$.
+At a zero pivot the remaining row is identically zero and is left
+unchanged. Starting from each matrix in
+\eqref{halfline:witness-Grams}, the following table gives all zero
+pivot positions and exact integer lower bounds on the other pivots,
+in order; each positive pivot is strictly less than its bound plus one.
+Positions are numbered starting at one.
+\[
+\begin{array}{c|c|l}
+ \text{matrix}&\text{zero pivot positions}&
+        \text{integer lower bounds on positive pivots}\\\hline
+ S_G&1,4,8&1038,\ 1039,\ 16,\ 382,\ 162\\
+ S_H&8&1664,\ 2700,\ 1039,\ 639,\ 1562,\ 214,\ 67\\
+ T_G&1,3,4&375\\
+ T_H&4&747,\ 483,\ 430
+\end{array}
+\]
+These are rational inequalities, not floating point bounds.
+For example, the rank-one matrix is explicitly
+\[
+ T_G=\frac{5335}{128}
+ \begin{pmatrix}0\\3\\-2\\0\end{pmatrix}
+ \begin{pmatrix}0&3&-2&0\end{pmatrix}.
+\]
+The full rational entries of $L$ and $D$ are also supplied in
+\texttt{SIMPLE\_SOURCE\_HALFLINE\_EXACT\_WITNESS.json}.
+The zero-pivot rows and the equality $M=LDL^T$ hold exactly for each
+of the four matrices. Their ranks are respectively $5,7,1,3$.
+
+For $R_v=[I_4\ \ vI_4]$, direct coefficient comparison now gives
+\begin{equation}
+ G(v)=R_vS_GR_v^T+vT_G,\qquad
+ H(v)=R_vS_HR_v^T+vT_H.                               \label{halfline:witness-identity}
+\end{equation}
+Every coefficient and every PSD assertion in this certificate can be
+checked with rational arithmetic alone. The accompanying standard-library
+script \texttt{check\_simple\_source\_exact\_witness.py} independently
+reconstructs $P,N,E$, compares all quadratic coefficients in
+\eqref{halfline:witness-identity}, recomputes the four $LDL^T$
+factorizations, and checks the exact contact kernels. It does not read
+the numerical diagnostic used to find the witness.
+
+\paragraph{Restoration of the complete parent.}
+Let $U=u^2$ and $a,b\in\mathbb R^2$. Define
+\[
+ \Phi(U,v;a,b)=(1+U)a^TP(v)a+U(1+U)b^TN(v)b
+                  +U(a-b)^TE(v)(a-b).
+\]
+The exact identity
+\[
+ \Phi=
+ \binom a{Ub}^{\!T}G(v)\binom a{Ub}
+       +U\binom ab^{\!T}H(v)\binom ab
+\]
+proves positivity for every $U\ge0$, every $a,b$, and $v\ge0$.
+The canonical state substitution
+\[
+ W=a_1+Ub_1,\quad X=a_2+Ub_2,\qquad
+ Y=u(a_1-b_1),\quad Z=u(a_2-b_2)
+\]
+restores the full physical parent as $F=(1+u^2)\Phi$.
+For $u\ne0$ this substitution is invertible. Polynomial continuity
+gives $u=0$, and homogenization in both angle pairs gives the
+projective endpoints.
+
+For negative $v$, set $T=\operatorname{diag}(1,-1)$ and define
+\begin{equation}
+ J_-(v)=T J_+(-v)T\qquad(v<0).                         \label{halfline:witness-negative}
+\end{equation}
+The exact parity identities $M(-v)=TM(v)T$ for $M=P,N,E$ show that
+both completion matrices for $J_-$ are congruent to those at $-v>0$.
+At $v=0$ use $J_+(0)$, whose certificate is literal in
+\eqref{halfline:witness-identity}. Thus all testing angles and all
+state directions are covered for this fixed source.
+
+\paragraph{Why the polynomial obstruction is avoided.}
+The selector in \eqref{halfline:witness-negative} together with
+\eqref{halfline:witness-J} is piecewise quadratic. For instance,
+its upper-left entry is $(3043|v|-2109v^2)/64$ and its upper-right
+entry is $3875v|v|/64$. It is not a polynomial on the real line.
+A global polynomial selector, if one existed, could be averaged under
+$v\mapsto-v$ and reduced by the endpoint zero rows to
+\[
+ J(v)=\begin{pmatrix}pv^2&0\\rv&sv^2\end{pmatrix}.
+\]
+At the exact contact $U=1/4,v=2,a=(17,2)^T,b=(12,-18)^T$, the zero
+quadratic form forces
+\[
+ J(2)b=-4P(2)a,\qquad J(2)^Ta=-N(2)b/4,
+\]
+which uniquely give $(p,r,s)=(-100,2000,1200)$.
+Their $G(1)$ principal submatrix on $(a_2,b_1,b_2)$ is
+\[
+ \begin{pmatrix}8235/4&2000&1200\\2000&1280&800\\1200&800&800\end{pmatrix},
+ \qquad \det=-412640000<0.
+\]
+Thus the exhibited half-line certificate succeeds for a source excluded
+by every global polynomial selector. This proves feasibility for this
+one source in the quadratic half-line cone. It makes no assertion that
+every valid source belongs to that cone.

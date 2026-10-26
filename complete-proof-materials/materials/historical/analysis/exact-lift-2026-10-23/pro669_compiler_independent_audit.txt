@@ -1,0 +1,149 @@
+Independent bounded audit of the Pro669 compiler and local cone
+23 October 2026
+
+Package: pro669/Q222_Fixed_Family_Source_and_Matrices_2026-10-23
+Scope: proof/fixed_compiler.tex, proof/matrix_scope.tex, actual fixed-feature
+maps, retained-root compilation, final rational pencil and both local cone
+inclusions. The larger numerical source-bound theorem is being reviewed
+separately. No full-Q222 adequacy or global cover is inferred.
+
+VERDICT
+
+No mathematical blocker found in this compiler or its stated local cone
+equivalence. The evaluated order669 pencil represents the DEFINED fixed
+certificate cone, not the entire cone of polynomials nonnegative on the
+testing rectangle, and not the eight-coordinate quantum set.
+
+1. EXACT RATIONAL REPLAY
+
+Read root/verify_final_pencils.py before execution. It imports only Python
+standard-library modules, executes no generator or external command, and
+writes only root/FINAL_EXACT_REPLAY.json. Running it returned:
+
+ POS: 52 blocks, order268, rank281, 1368 raw Gram entries,1087 auxiliaries.
+ NEG: 49 blocks, order240, rank221, 1155 raw Gram entries,934 auxiliaries.
+ SIX: 19 blocks, order161, rank180, 846 raw Gram entries,666 auxiliaries.
+ Final:120 blocks, order669, maximum block12,2694 auxiliaries,7716 records.
+
+All682 final parent coefficient equations and all2687 component free
+directions are checked exactly. This is more than a saved PASS: the code
+rebuilds P4 directly from its seven canonical coefficients, independently
+rebuilds the products of every actual fixed feature, applies the two gate
+relations, compares the exported coefficient maps, and checks each affine
+pencil entry against every equation. The source-sum split and both-state
+intersection are replayed by explicit coordinate substitutions.
+
+Source locators: root/verify_final_pencils.py:95 (coefficient equations),
+:114 (rank and complete free parametrization),:134 (POS/NEG products and
+full P4 targets),:168 (weighted SIX products and target),:211 (intersection
+and sum assembly). The complete map-rank argument is sound: the checked
+auxiliary columns lie in the kernel, their selected unit coordinates make
+them independent, and their count equals nullity. Thus they span the
+entire kernel; no Gram solution is discarded by the elimination.
+
+2. ALGEBRAIC COVER AND PARITY
+
+The positive testing substitution is u=delta^2*A^8,w=delta*B^4,
+W=omega^4,Z=zeta^4 with delta=2^-12 and xi^2=1-A^4,
+eta^2=1-B^4. It covers exactly 0<=sqrt(u),w<=delta and the normalized
+W,Z>=0 real-state chart. All parameter signs are permitted. The negative
+chart uses Z=-zeta^4; an overall state sign and the two printed angle
+gauges cover every real state sign and the signed angle rectangle T.
+The testing normalizer is never zero and is a common pure-testing factor.
+
+The principal square-root coordinate is delta^(3/2)*A^4*B^2*omega^2*zeta^2,
+which is nonnegative at EVERY real cover point, so no principal branch
+selection is hidden. The only odd quarter-state/quarter-w powers occur in
+the retained circuit roots. In every individual retained root all terms
+have the same parity in A,B,omega,zeta,xi,eta. Replacing positive roots by
+the signed algebraic parameters therefore changes at most that root's
+overall sign and preserves its square. I checked this property in every
+actual retained block, not only in the three printed circuit prototypes.
+
+All feature monomials have state weight one: weight(omega)=weight(zeta)=1/4,
+weight(X)=weight(Y)=1. Thus every feature product and every parent term has
+state weight two. A relation on the normalized sphere extends by weighted
+radial rescaling to all state variables. On |A|,|B|<1 the four independent
+choices of signs of xi,eta isolate the four coefficients of the gate
+normal form f00+xi*f10+eta*f01+xi*eta*f11. Each coefficient then vanishes on
+an open set, hence is the zero polynomial. Consequently the gate reduction
+does not omit additional functional relations from the normalized sphere.
+This establishes the necessity of the coefficient equations as well as
+their sufficiency for identities on this cover.
+
+Source locators: proof/fixed_compiler.tex:116--166 (cover/parity and exact
+negative congruence),:193 (homogeneity argument); compile_principal.py
+CHI, channel_map and gate reduction. The SIX cone has scalar radicals
+attached to whole blocks, so their signs are independently harmless. Its
+unreduced state coordinates are homogeneous of ordinary degree one; the
+same radial/open-set reasoning proves matching necessity there.
+
+3. COMPLETE RETAINED FIXED FAMILY
+
+Compared c1_fixed_family/build_retained.py and C1_RETAINED_ROOTS.json with
+the actual POS/NEG fixed-feature files and compile_full_charts.py. The
+19 elementary roots include Eplus, both radial excesses, Nx excess, the
+four positive Eyy/ERR testing terms, FA, and the angular difference.
+The remaining roots are8/11 angular roots and3/1 circuit roots on the
+positive/negative state charts. The negative angular correction agrees
+with the cleared angular identity; no state normal or W=0 case is dropped.
+
+Independently rebuilt EVERY retained block's exponents and source vector
+under quarter_u=2^-6*A^2,quarter_w=2^-3*B. All30 positive retained roots
+give36 compiled blocks after the three circuit multipliers; all31 negative
+roots give33 blocks. Together with16 principal blocks these are exactly
+the52/49 blocks compiled. Every retained source-vector coefficient agrees,
+including its exact rational rescaling.
+
+For the circuit scalar, qC=qC0-rC*u with u=delta^2*A^8. Its identity
+qC=(qC0-rC*delta^2)+rC*delta^2*[xi^2+(xi*A^2)^2] is exact. Thus the
+three multipliers1,xi,xi*A^2 are complete, with nonnegative source weights
+once the stated source reserve holds. There is no adaptive M or mixed
+source/testing radical. The roots and their cleared identities remain
+literal at u=0,w=0,W=0,Z=0,c_A=0,dG=0.
+
+The negative-state source congruence needs minus signs on the Z,uZ,wZ
+columns. I separately multiplied the printed A_minus and signed/scaled
+11-column testing vector and compared all12 rows with the actual signed
+state-root formulas. All rows agree exactly.
+
+Independent additional checks are in pro669_compiler_audit.py/.json.
+
+4. TWO LOCAL CONE INCLUSIONS AND EXACT SCOPE
+
+For each fixed chart, an LMI witness gives Gram blocks satisfying every
+full-parent coefficient equation, so it gives the asserted certificate.
+Conversely, any certificate in that fixed family provides a Gram solution;
+its free entries determine auxiliaries, and the complete kernel
+parametrization reconstructs those same PSD blocks. Therefore the displayed
+pencil is exactly the specified fixed Gram cone. This does not replace
+the family by all nonnegative polynomials on the chart.
+
+POS and NEG certify two required state charts and are intersected by a
+block diagonal pencil sharing the same seven visible coordinates. SIX is
+an alternative sufficient construction on a larger angle rectangle. A
+free split z_c with first source z_c and second source c-z_c implements
+the cone sum exactly; no sign condition on the split is needed. A sum of
+the two full-parent identities is nonnegative on their common rectangle.
+
+For a native source, the separate numerical admission theorem supplies
+the PSD assignment for either lambda branch. Conditional only on those
+source inequalities (outside this audit's ownership), the compiler
+transports that witness correctly. No step of the compiler extends it
+to z>1, the other canonical source regimes, source openings, or independent
+testing angles outside T. The manuscript's explicit exclusions agree.
+
+5. PRESERVATION AND COMMANDS
+
+Commands run:
+ py -3.14 root/verify_final_pencils.py  [from package directory]
+ py -3.14 pro669_compiler_audit.py     [from analysis/exact-lift-2026-10-23]
+
+The root verifier rewrites its receipt with Windows backslashes in its
+input paths. Saved that fresh result separately as
+pro669_final_exact_replay_windows.json, normalized only its path separators
+to POSIX, and confirmed the result matches the ORIGINAL receipt SHA256
+7066a6556c285a98d5dc293504d540f930bcae6a1690c54dc16d1d0334ed3e94.
+Restored those hash-identical bytes in the frozen package. All63 manifest
+entries now remain hash-identical; no pencil, feature, source or proof
+file was modified.

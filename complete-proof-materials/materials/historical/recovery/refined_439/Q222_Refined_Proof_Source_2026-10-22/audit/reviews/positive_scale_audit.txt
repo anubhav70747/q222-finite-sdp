@@ -1,0 +1,9 @@
+POSITIVE-SCALE INDEPENDENT AUDIT
+Scope: components 173–176, 193, 196, 198, 200–202, 205.
+Result: no mathematical failure found at the stated physical native finite-contact interface, with all coefficients bounded after d=1. Canonical entry and weak-total-scale cases remain separate.
+
+The actual source proofs were read in full. The analytical audit covers the arbitrary-RCF IFT, augmented 2-gamma pivot, all-state weighted tail and ratio independence; source-rate estimates; the unit-beta and unbounded-source-state cases; the full WN33 completion including scalar shift and retained WN37 mass; monic division with bounded coefficients; strict full Hessians; and the finite source/test chart partitions.
+
+34 targeted exact identities were rebuilt independently from the full parent in positive_scale_independent.py, with results in the adjacent JSON. These include RC4 soft pivots and normalized full state equations derived directly from source contact derivatives. No archive engine or historical PASS was used. Computation corroborates algebra only; proofs of order, boundedness, transfer and coverage are in positive_scale_audit.tex.
+
+Refinement: use one semialgebraic source-center lemma, one monic-division lemma and one full-normal allocation rule to remove repeated wrappers. Preserve the nontrivial source-specific circuit conductors. No generic determinant cancellation may replace them.

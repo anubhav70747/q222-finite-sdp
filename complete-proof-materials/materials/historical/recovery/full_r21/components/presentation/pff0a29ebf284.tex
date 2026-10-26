@@ -1,0 +1,221 @@
+\chapter{C14.1b: the entire parent on bounded testing state quotients}
+\label{component:pff0a29ebf284}
+\noindent\textbf{Component }\path{pff0a29ebf284}\par
+{\small\noindent Source: \path{R17/proofs/c1_sphere/bounded_state_full_parent.tex}\par}
+{\small\noindent SHA256: \path{ff0a29ebf284bdc413f495bd78ddcfaf19366a21b4e0130de5f183ca91bb4364}\par}
+{\small\noindent Inventory use: Inherited C14.1b bounded-state and sign exits | BS complete bounded-state proof | C14\_\allowbreak{}ENTIRE\_\allowbreak{}ORIGINAL\_\allowbreak{}PARENT\_\allowbreak{}GRAPH; precise subordinate uses retained below\par}
+\medskip
+\section{C14.1b: the entire parent on bounded testing state quotients}
+\label{pff0a29ebf284:sec:r17-c1-bounded-state}
+
+\begin{theorem}
+Retain every original C14.1b source hypothesis and intersection:
+$x,z,\sigma>0$ are infinitesimal, $H=h/\sigma$ is unbounded,
+$0<h<1$, and all original stationary-contact, strict-gap,
+coefficient-sign and residual-complement conditions remain in force.
+Normalize $d=1$ by its positive pure-source value, and retain the
+original positive-infinitesimal total-scale intersection.
+For every independently chosen bounded $u$, infinitesimal or zero $w$,
+and real testing state with $Z\ne0$ and $f=W/Z$ bounded, the complete
+original reciprocal parent is a finite tensor SOS. Both testing signs
+and zero angles are included. The literal $Z=0$ chart is covered by
+the original-core sign exit.
+\end{theorem}
+
+This is a full-parent state-subchart admission, not a complete C14.1b
+source admission. After the sign exit, the remaining real states have
+$WZ>0$ and unbounded $W/Z$. A complex state is covered here when
+each of its real and imaginary parts satisfies this state chart or
+the sign exit. No assertion for other complex states is implicit.
+
+\paragraph{Exact parent entry.}
+Use SP1--SP6 of the companion sphere-pole reduction, including all its
+generic JR/JB coefficients and retained centered excesses. In particular
+$a_*=\ell_*=1/4$ are the fixed JR1 caps; their exact nonnegative
+centered excesses remain in the parent. Also
+$P_\beta=uZ-(x/\sigma)wW$, $X_e=X+(xh/\sigma)wW$,
+$A_\theta=q(u^2-x)W$, $q^2=z$, and $R=wZ/q-uqW$.
+Set
+\[
+ s=x/\sigma,\quad L_h=\lambda/H,\quad
+ K_A=4\kappa H-\lambda,\quad \rho_\lambda=\lambda x/\sigma.
+\]
+The SP3 identity $\lambda=2H+\lambda_0$, with $\lambda_0$ bounded,
+implies $\lambda>0$ unbounded and $L_h\sim2$.
+Also $s$ is infinitesimal by SP11, and
+$\rho_\lambda=2xh/\sigma^2+\lambda_0s$ is bounded and positive.
+The exact source cancellation SP10 makes $K_A$ bounded. More precisely,
+\[
+ \operatorname{res}K_A=2-4\operatorname{res}h,\qquad
+ \operatorname{res}\chi=4(1-\operatorname{res}h).
+ \tag{BS1}
+\]
+These follow from $\alpha_\kappa=2H(2\kappa-1)$,
+$K_A=\alpha_\kappa-\lambda_0$:
+$\operatorname{res}\alpha_\kappa=-2\operatorname{res}h$ and
+$\operatorname{res}\lambda_0=-2(1-\operatorname{res}h)$.
+The polynomial source divisibility in SP10 proves these assertions
+uniformly in $h$, rather than multiplying an unspecified infinitesimal
+error by $H$.
+
+Use SP7 with the \emph{whole} coefficient $\lambda$. The last line of
+SP6 becomes exactly
+\[
+ K_A A_\theta^2+\chi uA_\theta R+
+ \underbrace{\lambda\sigma P_\beta^2+
+       \rho_\lambda(u^2-x)(w^2-\sigma z)W^2}_{\mathscr P}.
+ \tag{BS2}
+\]
+This step retains the signed contact product; it has not discarded
+one of its negative terms.
+
+\paragraph{An exact bounded conductor for the contact product.}
+All following state quotients belong solely to the testing field.
+Put
+\[
+ U_h=\sqrt h\,uZ,\qquad
+ Q_\lambda=\sqrt{\rho_\lambda}\,uwW,\qquad
+ M_\lambda=\sqrt\lambda\,xqW.
+\]
+The roots are homogeneous in the testing state and explicitly separated.
+At $Z\ne0$, the identity $W=fZ$ gives
+\[
+ \sqrt h\,P_\beta=(1-szf^2)U_h-\sqrt h\,sqfR.
+ \tag{BS3}
+\]
+Expanding all four terms of the contact product gives the exact identity
+\[
+\begin{split}
+ \mathscr P={}&L_h\{(1-szf^2)U_h-\sqrt h\,sqfR\}^2
+                  +Q_\lambda^2+M_\lambda^2\\
+ &-L_hszf^2U_h^2
+       -L_hs^2\{\sqrt h\,qfR+zf^2U_h\}^2 .
+\end{split}                                                   \tag{BS4}
+\]
+Both negative lines are retained exactly. Their coefficients, expanded
+as a Gram on $(U_h,R)$, are infinitesimal sums of separated tensors:
+$s,z,q$ are source infinitesimals, $\sqrt h$ is bounded, and $f$
+is bounded pure testing. The first square has residue $2U_h^2$.
+No inverse of $1-szf^2$, or of any other mixed quantity, is used.
+The two remaining displayed squares are retained with their exact
+positive source weights, through either sphere endpoint.
+
+\paragraph{Every coupling to the collapsing Gamma direction.}
+The only $\Gamma$ cross terms in SP6 are
+$-4\nu N_x(u\Gamma)$ and
+$R_\gamma(N_y+bR)(qw\Gamma)$. They both have exact conductors.
+Define the bounded infinitesimal separated expression
+\[
+ B_f=(\sigma-xzf^2)/\sqrt h.
+\]
+Indeed $\sigma/\sqrt h=\sqrt{\sigma}\sqrt{\sigma/h}$ is infinitesimal
+because $H$ is unbounded, and
+$x/\sqrt h=(x/\sigma)(\sigma/\sqrt h)$ is infinitesimal.
+Direct substitution of the original roots gives
+\[
+ u\Gamma=B_fU_h-uqfA_\theta-u^2qfR,                 \tag{BS5}
+\]
+\[
+ qw\Gamma=qzfB_fU_h-uz^2f^2A_\theta
+                  +z(\sigma-ufw-u^2zf^2)R.         \tag{BS6}
+\]
+Every coefficient on the right is infinitesimal and separated for
+bounded $u$ and $f$, including arbitrary relative source and testing
+rates. Thus both full first-normal couplings, and the $R\Gamma$
+coupling, become infinitesimal bounded Gram entries on
+$(N_x,N_y,U_h,A_\theta,R)$. No free positive pivot on $\Gamma$
+has been imposed.
+
+The entire remaining diagonal in $\Gamma$ is
+\[
+ \left(\frac{4D}{\sigma^2}+4bpzu^2\right)\Gamma^2,
+ \tag{BS7}
+\]
+a sum of two exact squares with nonnegative pure-source weights.
+It is retained separately. The other already-positive extracted square
+$2(2D+1)(uX_e)^2$, both centered cap excesses, and
+$4\beta D_wN_x^2$ are also retained exactly.
+
+\paragraph{All remaining full-parent entries.}
+After BS2--BS7, the only other cross terms are exactly SP5 without
+its two $\Gamma$ terms:
+\[
+\begin{split}
+ &-4uqw(2m+2D+1)N_xN_y
+ +uqwR_xN_xR+(c_N+zR_y)N_yR\\
+ &\hspace{12mm}+qwB_xN_xA_\theta+uA_yN_yA_\theta .
+\end{split}                                                   \tag{BS8}
+\]
+Their coefficients are infinitesimal. The opening-uniform source
+bounds are $p,l\sim1/2$, $p-l\in z\mathcal O_c$,
+$m,D,b_\theta,C$ bounded, $B_x=8\kappa e$ infinitesimal, and
+$A_y=O(z)$; $u$ and $f$ are bounded and $w$ infinitesimal.
+The three corresponding hard/radial diagonals have residues
+\[
+ [2(1+w^2)+4mw^2]_0=2,\quad
+ (H_y)_0=2(1+u_0^2),\quad
+ (c_G+zK_r)_0=2(1+u_0^2).                          \tag{BS9}
+\]
+Thus no unallocated full-parent entry is hidden in the scalar argument.
+
+\paragraph{Two exhaustive pure-source cases.}
+If $h$ is infinitesimal, BS1 gives $(K_A)_0=2$ and $\chi_0=4$.
+Retain $Q_\lambda^2+M_\lambda^2$ outside the remaining Gram.
+In the root order $(N_x,N_y,U_h,A_\theta,R)$ its exact bounded
+Gram has residue
+\[
+ \operatorname{diag}(2,2(1+u_0^2),2)\ \oplus\
+ \begin{pmatrix}2&2u_0\\2u_0&2(1+u_0^2)\end{pmatrix}.
+ \tag{BS10}
+\]
+The last determinant is exactly $4$, so this residue is strictly
+positive for every bounded testing residue $u_0$, including zero.
+
+If $h$ is a positive unit, the potentially signed $A_\theta$ diagonal
+is instead removed using the exact root identity
+\[
+ A_\theta=\frac{qfu}{\sqrt h}\,U_h
+                       -\frac1{\sqrt\lambda}M_\lambda.        \tag{BS11}
+\]
+Both coefficients are infinitesimal. Keep $M_\lambda^2$ in the Gram
+and retain $Q_\lambda^2$ separately. Since $K_A,\chi,u$ are bounded,
+all the $A_\theta$ terms now contribute only infinitesimal entries.
+In the root order $(N_x,N_y,U_h,R,M_\lambda)$ the complete residue is
+\[
+ \operatorname{diag}(2,2(1+u_0^2),2,2(1+u_0^2),1)\succ0.
+ \tag{BS12}
+\]
+This includes the $\theta=1-h$ opening. The two cases require no
+comparison of a testing parameter with $h$.
+
+The finite bounded positive-Gram criterion supplies legal tensor SOS
+in either case. Its strict real residue can depend on the real number
+$u_0$. Every error is a finite sum of separated bounded factors with
+an infinitesimal source or testing factor; the usual finite two-factor
+coefficient splitting applies. There is no mixed Cholesky operation.
+
+\paragraph{Endpoints, signs, and scope.}
+Every identity used above is exact at $u=0$ or $w=0$. The sources
+$D=0$ and either sphere endpoint were never inverted. At the additional
+$D=0$ null point $u=w=W=X=Y=0$, all roots in the strict Gram vanish
+and the retained BS7 contribution is exactly $4DZ^2$.
+Thus the certificate respects that null point and does not restore
+the invalid old soft-coordinate cap.
+
+The argument itself allows signed bounded $f$. For $Z=0$ the
+original-core sign lemma applies since $uwWZ=0$; all original event
+weights remain nonnegative pure source. That exit also covers
+$uwWZ\le0$ regardless of the size of $W/Z$. After the exact testing
+sign gauges, the only real-state complement on the remaining tests
+is therefore $WZ>0$ and unbounded $W/Z$.
+For completeness the reciprocal core at $Z=0$ is the manifest sum
+$(uwW+uX-wY)^2+D_uY^2+D_wX^2$.
+At the literal reciprocal endpoint $w=0$ it is exactly
+$K_w=D_u(X^2+Y^2)$. Thus this endpoint needs no finite-$v$
+Schur formula or continuity argument.
+
+The focused checker verifies BS2--BS8 as an identity of the entire
+SP6 parent, both Gamma conductors, the contact-product expansion,
+BS11, both strict residue calculations, and the exact extra zero.
+It does not assert that the remaining unbounded-state quotient is
+covered, or count this result as a whole-source admission.

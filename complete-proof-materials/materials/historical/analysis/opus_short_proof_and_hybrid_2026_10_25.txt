@@ -1,0 +1,160 @@
+OPUS SHORT PROOF AND AN EXACT NPA/HARD-SOURCE HYBRID CRITERION
+Snapshot: github-q222-finite-sdp c435bd1. Bounded reading only; no new
+audit of all companion cases, solver work, or public-source modification.
+
+1. What PEN_AND_PAPER.md does and does not prove.
+
+Part A is a clear modular implication [I1]--[I5] => finite lift. The
+source/test mixture identity preserves the constant coefficient because
+sum_i w_i=1, and the pure-testing factor DuDv||psi||^2 can legally be
+cancelled. The final Tarski statement concerns existence of algebraic
+entries at some fixed finite size; it does not evaluate that size or entries.
+
+The indispensable import is [I5], exactly Proof.tex proposition
+prop:insight-canonical (lines364ff). It quantifies over EVERY separately
+labelled real closed source/test pair, every C1/C2 contact source and
+EVERY independent projective test/state, including singular faces. Its
+proof explicitly imports bounded-coefficient Chapter A, C1 Chapter B,
+C2 Chapter C, Theorem6.2, and the complementary charts. Chapter07 then
+assembles those same inputs. PEN_AND_PAPER.md itself acknowledges that
+this is the approximately31,000-line companion theorem.
+
+Thus this is not a new short, self-contained proof of the hard result.
+It is a readable proof conditional on the imported theorem, with an
+independent-review claim that the import has been audited. That claim
+and the scripts are evidence, not a replacement proof inside the note.
+The reconstructed R6 remote matrices/HI Gram mentioned in the review
+README should be explicit, citable proof material when reproducibility
+of [I5] is claimed. I have not re-certified those cases here.
+
+The useful concise identity in Part B is
+ det(Mplus)F=(P psi)^T adj(Mplus)(P psi)+det(P)s^2.
+Its separated SOS right side certifies the MULTIPLIED parent. Cancelling
+the mixed det(Mplus) is precisely the hard content still imported; it
+does not follow from its pointwise positivity. This is the correct
+place to state the remaining mathematical obligation in the narrative.
+
+Important distinction: TF12/Corollary3.19 needs no separately supplied
+uniform root-count or fixed dictionary IF [I5]'s universal real-closed-
+field assertion is proved. Compactness supplies a finite representation
+nonconstructively. However TF1 (03_tensor.tex TF3--TF4) chooses real
+M_j>|y_j| inside sqrt(M_j +/- y_j); TF2 repeats that operation. Those
+instructions do not evaluate one fixed global testing library. Calling
+the short note nonconstructive is accurate; calling this an evaluated
+lift, or a new proof removing the long cases, would not be accurate.
+
+2. A precise constructive hybrid criterion.
+
+Let V=R^9 be affine Bell coefficients, z(q)=(1,q), and
+ P={f: f.z(q)>=0 for every q in Q222}.
+Fix ONE finite NPA level k, with compact projected outer set Q_k
+containing Q222, and define N_k={f:f>=0 on Q_k}. Let H_1,...,H_s be
+finitely many explicitly represented conic SDP certificate cones of
+Bell coefficients. REQUIRE GLOBAL SOUNDNESS H_i subset P.
+
+The exact coverage condition is
+
+           P=closure(N_k+H_1+...+H_s).                (H)
+
+Then the finite hybrid primal is
+ Q_hyb=Q_k intersect {q:z(q) in H_i^* for all i},
+and Q_hyb=Q222 by polarity. The closure is allowed in(H): taking a
+dual already takes it. A stronger sufficient coverage proof is to put
+every extreme source ray from the canonical classification in that sum,
+including all finite relabelling orbits, permitted zero faces and limit
+rays. Covering each ray by one component is sufficient but not necessary;
+a decomposition into several components also suffices.
+
+Uniformity requirements are finite k, finitely many H_i of fixed matrix
+size, and exact admission over their entire claimed source domains.
+Their free Gram entries may depend on the source. A fixed family can
+include algebraic testing roots and fixed chart gates; an adaptive gate
+threshold inside a testing root has not been counted as one fixed function.
+If finitely many NPA levels are used, replace them by their maximum.
+Neither hierarchy convergence nor a collection of individual sources
+with finite certificates proves(H) at one level. A useful sufficient
+easy-region condition would be a compact normalized source set with
+uniform positivity margin gamma>0, together with a justified uniform
+NPA approximation bound smaller than gamma divided by its coefficient
+norm bound. No such evaluated k/coverage split is supplied here.
+
+DUALITY REQUIREMENT FOR THE LITERAL PRIMAL PENCIL. If
+ H_i={f:exists y, L_i(f,y)=sum f_a A_ia+sum y_b B_ib>=0},
+then, with attained conic duality, its dual condition is
+ exists Y_i>=0: <B_ib,Y_i>=0, <A_ia,Y_i>=z_a.
+Full strict feasibility in the appropriate reduced coordinate/face
+space is a sufficient regularity condition. A strict matrix>=epsilon I
+bounds trace(Y_i) by f_*.z/epsilon and makes the adjoint image closed;
+separation then gives the exact dual representation. A numerical dual
+solve or unproved no-gap assertion is insufficient. Embedded closed
+faces use their seven free source coordinates, not impossible strict
+positivity of their two fixed-zero coordinates. For canonical-to-full
+transport M_g, impose M_g^T z in the corresponding source-cone dual;
+the existing eight-copy assembly supplies these exact maps.
+
+TEST-CHART WARNING. A cone sound only on a cap is not an H_i subset P.
+For fixed test charts covering ALL physical atoms, first intersect their
+source-certificate cones using the same source and separate Gram variables.
+Only that global source cone may be added in(H). The order293 R1 cone
+currently certifies |u|<=9/256 OR |v|>=1/16; the remaining strip is open.
+Adding its dual as an unrestricted inequality family could exclude real
+quantum points. Intersecting that partial cone with N_k makes it sound
+but adds nothing beyond N_k, since N_k+(partial intersect N_k)=N_k.
+
+3. Closed faces can be added directly; L6 membership is unnecessary.
+
+SG11--SG14, latex/chapters/04_geometry.tex (lines439--541), give
+EXACT full-validity source cones for two representatives:
+ F_a:lambda=m=0, one6x6 Gram with three skew auxiliaries(SG12);
+ F_o:lambda=alpha=0, two3x3 blocks with one auxiliary xi(SG13).
+Each has seven remaining nonnegative source coordinates. The printed
+strict points make the whole reduced lift strictly feasible; SG14 proves
+attained dual representation and separated trace certificates, including
+singular coefficients. They may simply be added as known sound H_i.
+The finite CHSH symmetry orbits give the twelve exclusive-pair faces:
+eight distance-three pairs and four opposite pairs in the SG8 cycle.
+
+Do SG12/SG13 already prove F_a,F_o subset L1 subset L6? NOT directly
+from the displayed Gram identities. SG12 is a Gram for the limiting
+univariate K(v); SG13 is a Gram for the rescaled limiting form G_s.
+Their equivalence with full-parent validity is then proved by determinant
+remainders and SG4, not by printing a full F SOS in Z1. SG14 duality
+gives a finite testing certificate, but not necessarily that specified
+polynomial feature space. No L1 inclusion was established in this pass.
+It is unnecessary for the hybrid.
+
+In particular let H=L6, or another globally sound closed candidate, and
+add the finite source orbits of H and F_a,F_o. Events are already in L1.
+If every C1/C2 contact representative is admitted to H, the classified
+extreme rays are all covered by this sum, whether or not the closed
+faces lie in H. No invariance of H's testing basis should be assumed:
+finite source-permuted cones can instead be included explicitly. In
+canonical nonnegative coordinates such a finite sum of closed cones is
+closed: each summand is coordinatewise bounded by the total along any
+convergent sequence. Hence here the classification proves exact equality,
+not just dense coverage. This removes the closed-face-in-L6 obligation.
+
+4. What this snapshot actually establishes.
+
+Known exact inputs: events; the two closed-face SDP cones and their finite
+symmetries; canonical/full coefficient maps; and fixed regional R1 matrices.
+L6 has soundness, closedness, finite affine equations, events and four
+exact contact certificates. Its nondegeneracy continuation hypothesis(ND)
+is still a conjecture, not supplied by seeds, numerical sweeps or ordinary
+closedness of L6. At c435bd1 the candidate note also leaves full strict
+feasibility to be checked; a later exact witness can resolve regularity,
+but cannot establish source coverage by itself.
+
+The repo supplies no chosen finite NPA level and no proof of(H), either
+as a complete easy/hard source partition or as conic generation. The
+long theorem[I5], if valid, already gives qualitative existence through
+Corollary3.19, but cannot be substituted for fixed hard cones when the
+output requested is actual matrix entries.
+
+Recommendation. Keep PEN_AND_PAPER as the modular qualitative proof,
+explicitly dependent on the companion. For constructive work, remove
+the separate closed-face L6 goal, retain those existing exact cones,
+and target only the still-unproved contact-ray coverage in(H). State
+the finite NPA level, hard source domains, global testing coverage and
+exact dual regularity as separate mathematical claims. This makes a
+successful hybrid sufficient without claiming L6 alone is canonical-exact.

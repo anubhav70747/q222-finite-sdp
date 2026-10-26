@@ -1,0 +1,120 @@
+\section{C14.2: bounded $h/\sigma$ and the unbounded $W/Z$ state chart}
+\label{sec:r19-c142-bounded-H}
+
+Retain the full original C14.2 source, with $z=L^{-1}$ a positive
+bounded unit, $x,\sigma$ infinitesimal and every original opening,
+coefficient boundary and residual intersection unchanged.  Suppose
+$H=h/\sigma$ is bounded.  Then $H$ is a positive unit by BE7 and
+$h$ is infinitesimal.  The following full-parent certificate applies
+to $u,w$ infinitesimal and to every real state with $W\ne0$ and
+$t=Z/W$ infinitesimal, including $t=0$ and both signs.  It makes
+no claim for the complementary state chart or unbounded $H$.
+
+Use the exact generic SP6 parent, with $A=A_\theta$ and
+\[
+ d=4D/\sigma^2,\qquad \rho=\lambda x/\sigma.
+\]
+All source coefficients in the following calculations are actual
+coefficients; formal caps are only exact square extractions.
+
+\paragraph{The sphere restores a strict Gamma direction.}
+The identity $uP_\beta=(u^2-x)Z+(x/\sigma)\Gamma$ gives exactly
+\[
+ \lambda u\Gamma P_\beta
+       =\rho\Gamma^2+\frac{\lambda t}{q}A\Gamma.
+ \tag{HG1}
+\]
+There is no state inverse beyond the pure-testing coordinate $W^{-1}$.
+The complete angular/Gamma packet of SP6 is consequently
+\[
+ (d+\rho)\Gamma^2+4\kappa H A^2
+       +\frac{\lambda t}{q}A\Gamma
+       +(\lambda+\chi)uAR.
+ \tag{HG2}
+\]
+No signed scalar product was discarded in this transformation.
+
+To control the formerly missing Gamma pivot uniformly, BE4 implies
+the exact source identity
+\[
+ \rho=\frac D{\sigma^2}(8hx-4\theta J)
+       +\frac{2xh^2}{\sigma^2}
+       +\frac{2\theta\mathcal H}{P}-4bp xz.
+ \tag{HG3}
+\]
+Also, directly from BE7,
+\[
+ \frac{xh^2}{\sigma^2}
+    =\frac{eH_0}{B}+\frac{h\mathcal H}{B}b_0^2,
+ \qquad e=xh/\sigma\in\mathrm{Inf}.
+ \tag{HG4}
+\]
+Since $\operatorname{res}(D/\sigma^2)=
+\tfrac12\operatorname{res}(H_0d_0^2)$,
+$\mathcal H/P\sim H_0$, $J\sim1$ and
+$d_0^2+b_0^2=1$, these identities give, even without bounded $H$,
+\[
+ \operatorname{res}\rho=2\operatorname{res}(H_0b_0^2),\qquad
+ \operatorname{res}(d+\rho)=2\operatorname{res}H_0>0.
+ \tag{HG5}
+\]
+In particular no ratio to the possibly vanishing $b_0$ is asserted,
+and neither $D$ nor $b_0$ is inverted.  In the bounded-$H$ chart,
+$\lambda,\chi$ are bounded,
+$4\kappa H$ is a positive unit, and $q$ is a unit.  Both cross
+coefficients in HG2 are therefore infinitesimal.
+
+\paragraph{The full radial and hard block through the C opening.}
+Restore the centered $A,\alpha$ cap excesses into the $N_y$ diagonal.
+Put $a=Az$, $\ell=\alpha z$, $Q=1-b$,
+$J_C=N_y+bR$ and $J_\ell=N_y-QR$.
+Use the exact LC3 cap $C_*=C/(1+C)$, retaining
+$4zD_w(C-C_*)J_C^2$ and its complete correction
+\[
+ -8(C-C_*)(1-r)J_C(z\sigma R-qw\Gamma).
+ \tag{HG6}
+\]
+The correction has infinitesimal coefficients on
+$(N_y,R,\Gamma)$, because $(C-C_*)(1-r)$ is bounded.
+The exact leading pure-source radial form is
+\[
+ M=\{4a+2z(2C_*+1)\}J_C^2+4\ell J_\ell^2.
+ \tag{HG7}
+\]
+Both coefficients have positive real lower bounds; their potentially
+unbounded excesses are retained as squares.  The inverse allocations
+$R=J_C-J_\ell$ and $N_y=QJ_C+bJ_\ell$ are bounded.  Therefore
+$M$ supplies a strict bounded Gram on $(N_y,R)$ through every
+$r$, $1-r$, and $Q$ opening.
+
+For clarity, HG7 is obtained from the entire formal radial/hard
+coefficient collection by putting $u=w=\sigma=D=m=\beta\theta=h=0$
+while retaining the actual pure-source $a,\ell,p=ab,l=\ell Q,z,b,C_*$.
+The omitted $u^2$ and $w^2$ multiples of $a,\ell$ are retained
+exactly as the nonnegative packets from
+\[
+ 4(1+u^2)\{a(1+w^2)J_C^2+\ell J_\ell^2\}.
+\]
+All remaining coefficient differences are bounded infinitesimals:
+$p,l,z,b,C_*$ are bounded, $m,D,\beta\theta,h,\sigma$ are
+infinitesimal, and $u,w$ are testing infinitesimals.  This assertion
+is made only after the divergent $C$ correction HG6 has been
+accounted for, and after retaining the displayed $a,\ell$ packets.
+
+The $N_x$ diagonal has residue $2$.  Its Gamma normal is
+$-4u\nu N_x\Gamma$ with bounded $\nu$; both other Gamma normals
+carry $qw$.  All remaining SP5 hard and first-normal coefficients
+are infinitesimal after the radial source form HG7 is restored.
+The separated Gram on $(N_x,J_C,J_\ell,\Gamma,A)$ consequently has
+strict positive residue.  HG2 supplies the last two positive pivots.
+The original beta packet, the $2(2D+1)(uX_e)^2$ square, the
+$4bpzu^2\Gamma^2$ square, and every source cap excess remain once.
+Thus the entire original SP6 parent is included, not only its scalar
+restriction.  The bounded separated-Gram lemma proves tensor SOS.
+
+All formulas are literal at zero testing angles and $Z=0$; the
+case $W=0$ has the inherited original-core sign exit.  Application
+to real and imaginary state parts gives the corresponding complex
+state admission when each part lies in this chart or an existing
+admission.  This is a source/state subchart result, not a complete
+C14.2 closure.

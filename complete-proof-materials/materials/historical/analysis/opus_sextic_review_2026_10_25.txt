@@ -1,0 +1,200 @@
+BOUNDED REVIEW OF THE SEXTIC PUISEUX-GRAM CANDIDATE
+Snapshot: github-q222-finite-sdp HEAD c435bd14a30bbe69aba4c4831aea1d212e8855ad.
+Public files were read only. The untracked whole-parent-completion folder
+was not used. No solver, numerical sweep or large exact LDL replay.
+
+Verdict. The proposed fixed family is a sound, closed finite SDP cone.
+Its global adequacy remains unproved. There is also a precise mismatch
+between the full-basis nondegeneracy definition and the pruned seed data,
+so the continuation theorem needs repair before even its nonemptiness
+step is justified. After that repair, ND is still a substantive missing
+positivity/constant-rank theorem, not a consequence of closedness.
+
+1. FIRST EXACT PROOF DEFECT: CONTACT-ONLY REDUCTION IS INSUFFICIENT.
+
+EXACT_LIFT_CANDIDATE.md16-20 defines the full196-function Z6. Lines103-109
+say only the contact vector is removed in each parity block, and119-122
+use this for nondegeneracy. But on both contact supports lambda=0.
+The parent coefficient of u^0 v^0 W^2 is exactly4lambda=0
+(gram_lift.py26-30; verify_boundary.py51-55).
+
+In a Gram on Z6 that coefficient is exactly G[W,W]: all angular
+exponents are nonnegative, so no other product contributes. A PSD
+matrix with this zero diagonal has its entire W row/column zero.
+Thus the basis vector e_W is a forced kernel vector. It is independent
+of the nonzero contact evaluation vector z_c, which has other nonzero
+entries. Removing only z_c cannot leave a positive definite matrix.
+This holds for every C1/C2 source in the stated open support faces.
+
+The actual checker correctly uses a different reduction:
+verify_boundary.py149-176 reads pruned basis_blocks, and175-180 explicitly
+sets all omitted monomials to zero. Each of the four JSONs retains
+blocks(52,36,36,30), total154, with42 of196 functions pruned. If its
+reduced blocks are PD, the full196 Gram has rank150 and kernel46:
+42 forced directions plus4 contact directions, not kernel4.
+
+Repair: fix the Newton-pruned, support-dependent testing basis on each
+open support face, remove its forced null directions first, and only
+then remove its four contact vectors. This basis remains source
+independent within each fixed support pattern. The seeds can then
+establish reduced strict positivity, subject to the separate rank check.
+As presently written, the assertion that seeds make S_sigma nonempty
+(lines143-145) does not follow from the stated ND definition.
+
+The claimed412-row/rank406 assertion(lines110-112) is not checked by
+the supplied verifier: there is no reduced coefficient rank computation
+in verify_boundary.py149-180 or the other gram-lift check code. Exact
+Gram identity and reduced PD do not themselves prove that rank. A
+separate exact rank witness or a structural surjectivity proof is needed.
+
+2. WHAT IS UNCONDITIONALLY VALID.
+
+Fixed features/source independence: Z6 contains only testing monomials
+and state coordinates. Its coefficients are rational after u=s^6,v=t^6,
+and equality is a finite rational coefficient system. Source/contact
+normalizations in the seed checker151-166 alter Gram coefficients only;
+they do not identify source angles with independent testing angles.
+
+Soundness(lines25-28,42-43) is valid. The two parent sign symmetries are
+the actual ones in symcheck.py4-11. They extend positivity from positive
+angles to every quadrant. Compact bihomogeneous normalization then
+extends it to axes and projective endpoints by continuity. This uses
+the assumed nine source nonnegativity constraints explicitly.
+
+Closedness(lines45-54) is valid. On [1/2,2]^2 times the state sphere,
+linear independence of angular monomials and of the four state-linear
+coordinates makes M=integral ZZ^t strictly positive definite. For a
+convergent source sequence, the evaluated target integral is bounded,
+and positivity bounds every Gram trace by lambda_min(M)^-1 times that
+integral. A bounded subsequence preserves all coefficient equations.
+No mixed source/testing inverse or implicit primal-closure theorem is used.
+
+The compact-base/extreme-source reduction(lines56-74) follows once
+the referenced classification is taken as input. The event inclusion
+is valid for the actual eight event terms: each factor Du or Dv only
+multiplies a root with degree zero in that same angle, so its expanded
+roots all lie in the corner basis Z1.
+
+The seed verifier's exact identity construction and rational LDL logic
+are appropriate for membership of the four individual sources after
+pruning. I inspected that logic and the four basis metadata, rather
+than independently replaying the large rational LDL calculations.
+No universal source admission follows from these four data records.
+
+3. THE REPAIRED CONTINUATION STILL REQUIRES ND.
+
+After fixing the reduced spaces, the openness argument127-134 is
+essentially correct provided the six independent contact conditions
+and coefficient-map rank N-6 are actually proved. One small repair:
+the unanchored minimal-norm solution need not equal the known positive
+seed certificate. Use instead
+
+ Q'(w)=Q'_0+B_w^+[F(w)-B_w Q'_0]
+
+in a continuous local trivialization of the reduced spaces. This equals
+Q'_0 at the seed and stays PD nearby when the rank is constant.
+
+Closedness of L6 gives only a PSD limiting Gram, not strict positivity
+on the contact complement or persistence of maximal coefficient rank.
+For a generic exact countermodel to that inference, keep a fixed
+contact kernel e0 and take the unique full Gram diag(0,1,t^2), with
+t in(-1,1). The reduced coefficient map is the identity and has constant
+maximal rank. For t!=0 the reduced Gram is PD; at t=0 it gains another
+null direction. The target and contact vary analytically and all
+certificates remain feasible in a closed cone. Nevertheless ND fails.
+This is not a counterexample for the Q222 candidate; it isolates the
+extra assertion that the proposed ND must prove.
+
+The existing qualitative tensor-SOS theorem does not supply ND or Z6
+membership: it permits different fixed testing functions, radicals,
+charts and degrees (PEN_AND_PAPER.md88-104). A global multiplied
+certificate also does not remove its mixed multiplier. Scale covariance
+of the monomial space(lines194-199) supplies source-only congruences
+for a rescaled polynomial, not certificates for all independent shape
+parameters of the native families.
+
+After pruning and proving seed rank, ND plus the closed-face admission
+would give the stated open/closed connectedness proof. Neither ND nor
+closed-face Z6 admission is proved in the inspected material. Numerical
+near-one ratios are not exact membership: lines232-234 cannot turn a
+k2 ratio >=.99999999 into containment by nestedness alone.
+
+4. SIZE AND ASSEMBLY CORRECTIONS.
+
+The full196 basis has parity blocks64,48,48,36 and5098 symmetric Gram
+variables. Their entries map individually to490 distinct angular/state
+monomials, giving coefficient-map rank490 and4608 free Gram directions.
+The2763 count at line36 instead equals3175-412 for the pruned154 basis;
+it cannot be combined with the full196 block sizes without explaining
+an additional global reduction. Consequently the approximately22000
+auxiliary count(lines162-163) does not describe the full unpruned system.
+
+A strict full-basis Slater point can plausibly be supplied independently
+of adequacy: all eight events at weight1,d=0 have18 corner roots spanning
+all16 corner functions. A small rational positive d preserves a strict
+corner Gram. The parent's H7 construction then spreads a positive
+corner-I reserve over the full sixth-root grid, because
+(1,r,...,r^6)H7(1,r,...,r^6)^t=1+r^12 and H7 is PD by its two irreducibly
+diagonally dominant parity blocks. This logic is valid; the parent is
+deriving the explicit rational constants. It would close the separate
+assembly Slater obligation, not ND or canonical adequacy.
+
+5. RELEVANCE OF THE USER'S NPA/EASY-REGION PROPOSAL.
+
+The hybrid is mathematically viable in principle, but needs a fixed
+finite exact statement on each easy region. If these are source regions,
+one must prove that a single finite NPA level gives exact support
+certificates throughout those regions and then show that those cones
+together with the hard-region cones generate the whole polar. If these
+are testing-angle regions, ordinary NPA constraints do not by themselves
+encode the angle restriction; an exact restricted model/localizing
+certificate and its projection must be supplied. Per-source convergence,
+sampled tightness, or a level that varies without a uniform bound does
+not give one finite lift. Simply intersecting two outer approximations
+does not prove exactness without a reverse-inclusion argument.
+
+Thus NPA can take over a genuinely uniform exact easy-region theorem,
+and could reduce the amount of hard explicit construction. It does not
+currently prove the corrected ND statement or remove the two closed
+faces from the remaining source coverage obligation.
+
+Strongest validated improvement: a concrete fixed196-function global
+candidate with a soundness and closedness proof, plus supplied exact
+individual boundary witnesses in fixed support-face reductions. The
+unproved step is universal adequate admission in that particular fixed
+family, with the continuation reduction needing the repairs above.
+
+ADDENDUM: A BOUNDED STRUCTURAL REPAIR OF THE RANK OBLIGATION.
+
+The parent proposed reducing the rank calculation to one normalized
+contact. This is valid whenever all contact state coordinates are
+nonzero. Put s=u^(1/6),t=v^(1/6). Positive contact-angle scaling and
+nonzero diagonal state scaling send every basis monomial to itself
+times its contact value. Thus Z(contact-scaled variables)=D_zc Z.
+The invertible Gram congruence G'=D_zc G D_zc sends G zc=0 to G'1=0;
+the target coefficient-space scaling is also invertible. Consequently
+the reduced coefficient-map rank is constant along these scalings.
+Negative nonzero state coordinates cause no difficulty: diagonal signs
+are invertible real congruences.
+
+At the normalized contact all reduced roots are z_i-z_ref within their
+parity block. Products of two such roots are annihilated by the six
+functionals ds,dt,dW,dX,dY,dZ at(1,1,1,1,1,1). Value is redundant by
+state homogeneity. All four supplied pruned bases have412 coefficient
+monomials and contain the six columns
+
+       Y^2, s^2Y^2, t^2Y^2, t^12W^2, X^2, Z^2.
+
+The six-gradient evaluation matrix on these columns has determinant
+plus or minus64, so these annihilators are independent. Therefore the
+reduced rank is at most406. An exact406 rank lower bound at the all-ones
+contact, for example a nonzero406 minor modulo a prime, would prove
+rank406 at every nonzero contact in that fixed support-face basis.
+No heavy rank calculation was performed in this review.
+
+The native formulas inspected have no state-scaling zero: C2
+verify_boundary.py68 has W>0,X<0,Y=c*h/a>0,Z=1. For C1 line83,
+W,Y,Z are nonzero and m>0 forces1-t*zeta>0, so X<0. Applying the
+normalized calculation to every contact still uses the manuscript's
+coverage of these native charts. This rank repair does NOT establish
+positive-definite Gram feasibility at arbitrary contacts or ND.

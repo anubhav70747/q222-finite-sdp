@@ -1,0 +1,64 @@
+Joined contact/remote cone: closure audit
+24 October 2026
+
+Verdict: the repaired argument proves K635 is closed. The original assertion
+S_tau>=0, and hence tau<=min(C,D), does not follow from the merged public
+Alice pencil. The replacement bounds below are sufficient and follow
+directly from its actual COO entries. No additional source admission follows.
+
+Actual remote bounds
+---------------------
+Read: public fixed-c2-gates/alice_order20.coo.json. With zero-based indices,
+B=67108863/67108864 and rho=tau-d/2, the actual entries are
+ Q55=C-d/2, Q66=D, Q5,16=rho/B, Q6,16=-rho/B,
+ Q16,16=2rho/B^2, Q88=q/2, Q12,12=p-q, Q10,10=d/2-p.
+Thus PSD implies rho>=0 and 0<=q<=p<=d/2. The principal minor on{6,16}
+gives rho(2D-rho)>=0, hence
+ d/2<=tau<=d/2+2D.
+The minor on{5,16} also gives rho<=2C-d when rho>0; its zero case follows
+from Q55>=0. Thus tau<=2C-d/2 as well. These conclusions use free auxiliaries,
+not the nonlinear native witness. For example d=p=q=0,C=1,D=3,tau=4/3
+and all other source coordinates zero give a PSD public Alice matrix
+while tau>C, disproving the original upper bound.
+
+Contact coefficient equations and compression
+----------------------------------------------
+The public parity-reduced system uses ordinary monomials in the six
+variables(u,v,t,r,w,zeta); no nontrivial radical parity remains in its rows.
+On the common real open set
+ 0<u<2^-12, 0<v<2^-25, w>0, zeta>0, t,r arbitrary,
+all gates and denominator factors are positive. Within each reduced block
+all feature products, multiplied by Du*Dv, are ordinary polynomials:
+the common radical character squares to a fixed monomial in u,v,w*zeta,
+and the common gate squares to its defining polynomial. Consequently a
+coefficient identity is equivalent to the pointwise identity on this open
+set: a real polynomial vanishing there is zero. This is the required
+reason that compression preserves EVERY encoded equation.
+
+For block b, put V_b=span{Phi_b(x):x in this open set}, and compress G_b
+orthogonally to V_b. Its quadratic evaluations are unchanged, and it remains
+PSD. Choose finitely many fixed points whose feature vectors span each V_b,
+taking the union over the finitely many blocks. The evaluation matrix
+M_b=sum_l Phi_b(x_l)Phi_b(x_l)^T is positive definite on V_b.
+For compressed PSD matrices, tr(M_b G_b)>=mu_b tr(G_b), with mu_b>0.
+Zero-dimensional blocks can simply be deleted.
+
+If c_n converges, summing the pointwise identities at those points gives
+ sum_b tr(M_b G_b,n)=sum_l S_c_n(x_l).
+The right side is bounded because the target is linear in c. Every term
+on the left is nonnegative, so all compressed Gram traces are uniformly
+bounded. Cross-block dependencies cannot defeat this estimate. A subsequence
+therefore converges to PSD blocks satisfying all coefficient equations.
+
+Joined limit and scope
+------------------------
+The explicit remote auxiliary bounds give a bounded sequence(tau_n,p_n,q_n)
+for convergent c_n. Extract jointly with the contact blocks. Alice PSD,
+the contact equations, Bob PSD and c>=0 all survive the limit. Hence K635
+is closed, without any strict-feasibility or projection-closedness assumption.
+
+Given the already established inclusions E+cone(native) subset K635 subset
+C_can, this proves closure(E+cone(native)) subset K635 subset C_can.
+Only finite convergent source limits are included. This says nothing about
+whether every canonical source is such a limit, or belongs to K635.
+

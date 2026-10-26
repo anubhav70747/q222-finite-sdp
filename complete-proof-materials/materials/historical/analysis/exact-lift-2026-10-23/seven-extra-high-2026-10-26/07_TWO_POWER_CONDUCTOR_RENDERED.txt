@@ -1,0 +1,201 @@
+      R10 Two Power Conductor Unified Proof
+
+
+
+ 
+
+
+Q222 thin-R10: a two-power, parity-free conductor and a unified correction frame
+26 October 2026. This is a theorem about the local TL6 difference only. The exact native source comparisons TL3, same-contact OP4/OP5, and strict formal-C1 base are imported as explicitly named inputs, not newly proved here. All parents are in the F/4 normalization. No global finite-lift assertion is made.
+Theorem A: filtered two-stage conductor
+Let $K_c,K_t$ be separately labelled real-closed extensions of $\mathbb R$. Let $\mathcal A\subset B_c$ be a domain of bounded source elements containing $\varepsilon,j,E,k=\varepsilon j$ and closed under the unit-denominator operations below, with $\varepsilon,j,E>0$. Work in $R=\mathcal A[u,\omega,v]$ (or clear finitely many positive, bounded testing-only denominators beforehand). Set
+$ v_0=\varepsilon j^2E,\quad J=(u-k,\omega-j,v-v_0),\quad
+ A=\varepsilon\omega v,\ B=v,\ C=Eu\omega,\ D_0=\varepsilon^2j^3E,$$ x=B-C,\quad y=A-kC,\quad z=uB-kC,\quad h_0=kC-D_0.$Let $q_1,q_2$ be the separated circuit roots with squared monomials $A,uB,kC,D_0$; equivalently
+$ q_1=\sqrt\varepsilon\sqrt{u\omega}\,(v-v_0),\qquad
+ q_2=\varepsilon\sqrt{jE}\sqrt{uv}\,(\omega-j).$The prefactors in these formulas are products of pure-source and pure-testing radicals. In particular the square roots are elements of the separated tensor ring.
+Consider the complete normal-quadratic expression
+$ \mathscr F=F_0+2NG_N+2M G_M+aN^2+2bNM+cM^2,$$ F_0=f_AA^2+f_{BB}B^2+f_{BC}BC+f_{CC}C^2+\varpi D_0^2,
+ \quad G_T=g_{TA}A+g_{TB}B+g_{TC}C\quad(T=N,M).$Suppose exactly that (i) $f_A,f_{BB},f_{BC},f_{CC},\varpi\in\varepsilon^2 R$; (ii) $g_{T\bullet}\in\varepsilon R$; (iii) $F_0\in J^2$, $G_N,G_M\in J$; and (iv) $a,b,c\in R$ have bounded evaluations. These are hypotheses about formal bounded coquotients, not just small values after evaluating at one testing point.
+Conclusion. There is a finite explicit $H\in\mathrm{Sym}_8(B_c\otimes_{\mathbb R}B_t)$ with
+$ \mathscr F=\mathscr R^TH\mathscr R,
+ \qquad \mathscr R=(N,M,x,y,z,h_0,q_1,q_2)^T.$Both monic conductor stages may set $V=0$; no angular parity condition is necessary. The statement holds whether $\varepsilon$ is a positive unit or an infinitesimal, provided the stated bounded coquotients exist. No inverse of $\varepsilon,j,E$, a contact difference, or a mixed source/testing element appears in $H$.
+Proof and hand-reproducible algorithm
+For a polynomial $P$, perform ordered monic subtraction:
+$ \begin{aligned}
+ T_u(P)&=\frac{P(u,\omega,v)-P(k,\omega,v)}{u-k},\\
+ T_\omega(P)&=\frac{P(k,\omega,v)-P(k,j,v)}{\omega-j},\\
+ T_v(P)&=\frac{P(k,j,v)-P(k,j,v_0)}{v-v_0}.
+ \end{aligned}$The displayed quotients are polynomial divided differences, computable by $(X^n-Y^n)/(X-Y)=\sum_{a=0}^{n-1}X^{n-1-a}Y^a$, without inversion. If $P_c=0$ and $T_\omega(P)=\varepsilon U$, put
+$ \boxed{\begin{aligned}
+ \mathcal L_x(P)&=-uT_u(P)-\varepsilon\omega U-Ek\omega T_v(P),\\
+ \mathcal L_y(P)&=U+Ej T_v(P),\\
+ \mathcal L_z(P)&=T_u(P)+E\omega T_v(P).
+ \end{aligned}}\tag{A1}$Then the exact conductor identities give
+$ CP=x\mathcal L_x(P)+y\mathcal L_y(P)+z\mathcal L_z(P).\tag{A2}$Indeed $C(u-k)=z-ux$, $\varepsilon C(\omega-j)=y-\varepsilon\omega x$, and $C(v-v_0)=E(\omega z+jy-k\omega x)$.
+First scalar division. Define
+$ S=k^2f_A+f_{BB}+f_{BC}+f_{CC}+k^2\varpi,
+ \quad Q_2=f_Ay^2+f_{BB}x^2+\varpi h_0^2.$Direct substitution $A=y+kC,\ B=x+C,\ D_0=kC-h_0$ gives
+$ F_0=Q_2+C\{x(2f_{BB}+f_{BC})+2kf_Ay-2k\varpi h_0\}+C^2S.\tag{A3}$At contact $C_c=\varepsilon j^2E\ne0$; $F_{0,c}=0$ forces $S_c=0$ by cancellation in the source domain. Since $S=\varepsilon^2S_2$, all its monic quotients have $\varepsilon^2$ as a formal factor. Hence $U_S=T_\omega(S)/\varepsilon\in\varepsilon R$, so (A1) applies with $V=0$. It yields
+$ \mathcal L_x(S)\in\varepsilon^2R,\qquad
+ \mathcal L_y(S)\in\varepsilon R,\qquad
+ \mathcal L_z(S)\in\varepsilon^2R.\tag{A4}$Put
+$ \begin{aligned}
+ H_x&=2f_{BB}+f_{BC}+\mathcal L_x(S),\\
+ H_y&=2kf_A+\mathcal L_y(S),\\
+ H_z&=\mathcal L_z(S),\\
+ H_h&=-2k\varpi,
+ \end{aligned}
+ \quad \lambda=2k\varpi_c,
+ \quad J_i=H_i-\lambda(-2k,1,1,-1)_i.$Thus, before using contact derivatives,
+$ H_x\in\varepsilon^2R,\quad H_y\in\varepsilon R,
+ \quad H_z\in\varepsilon^2R,\quad H_h\in\varepsilon^3R,
+ \quad\lambda\in\varepsilon^3R,$and consequently
+$ \boxed{(J_x,J_y,J_z,J_h)\in
+ \varepsilon^2R\times\varepsilon R\times\varepsilon^2R\times\varepsilon^3R.}\tag{A5}$The exact circuit relation is
+$ r_*=y+z-h_0-2kx\in J^2,\qquad
+ kCr_*=q_1^2-yz=q_2^2+zh_0.\tag{A6}$Because $F_0\in J^2$ and $Q_2\in J^2$, the first derivative of (A3) after the first division gives $\sum H_{i,c}\nabla r_{i,c}=0$. Since $r_*\in J^2$, the coefficient vector $(-2k,1,1,-1)$ is an exact kernel vector of those gradients. Its $h_0$ entry is $-1$, while $H_{h,c}=-2k\varpi_c=-\lambda$. Therefore $\sum J_{i,c}\nabla r_{i,c}=0$ and $J_{h,c}=0$. Finally,
+$ \det \frac{\partial(x,y,z)}{\partial(u,\omega,v)}\bigg|_c
+ =-E^2\varepsilon^3j^4\ne0.$Invertibility over the source field proves $J_{x,c}=J_{y,c}=J_{z,c}=0$. This uses no inverse of the infinitesimal determinant in any Gram coefficient.
+Second scalar division, with no parity. Every $J_i\in\varepsilon R$, so each monic quotient $T_\omega(J_i)\in\varepsilon R$. Choose simply
+$ \boxed{U_i=T_\omega(J_i)/\varepsilon\in R,\qquad V_i=0.}\tag{A7}$The quotient is extracted from its known formal $\varepsilon$ factor; it is bounded. Apply (A1) to each $J_i$, writing $\ell_{ix}=\mathcal L_x(J_i)$, $\ell_{iy}=\mathcal L_y(J_i)$, $\ell_{iz}=\mathcal L_z(J_i)$. Equations (A3),(A6) yield the complete scalar identity
+$ \boxed{F_0=Q_2+2\varpi_c(q_1^2-yz)
+ +\sum_{i=x,y,z,h_0}r_i(x\ell_{ix}+y\ell_{iy}+z\ell_{iz}).}\tag{A8}$Both normals. For each $T=N,M$ set $S_T=kg_{TA}+g_{TB}+g_{TC}\in\varepsilon R$. From $G_T=g_{TB}x+g_{TA}y+CS_T$ and $G_T\in J$ it follows that $(S_T)_c=0$. Thus $T_\omega(S_T)\in\varepsilon R$. With $U_T=T_\omega(S_T)/\varepsilon$ and $V_T=0$, (A1) gives
+$ \boxed{G_T=\gamma_{Tx}x+\gamma_{Ty}y+\gamma_{Tz}z,\quad
+ \gamma_T=(g_{TB}+\mathcal L_x(S_T),\ g_{TA}+\mathcal L_y(S_T),\ \mathcal L_z(S_T),0,0,0)^T.}\tag{A9}$These are the full first-normal rows, not contact restrictions.
+The full matrix. In the soft basis $(x,y,z,h_0,q_1,q_2)$, let $e_i$ be coordinate vectors and $\widetilde\ell_i=(\ell_{ix},\ell_{iy},\ell_{iz},0,0,0)^T$. Define
+$ \begin{aligned}
+ H_s={}&f_{BB}e_xe_x^T+f_Ae_ye_y^T+\varpi e_he_h^T
+ +\varpi_c(e_{q_1}e_{q_1}^T+e_{q_2}e_{q_2}^T)\\
+ &-\frac{\varpi_c}{2}(e_ye_z^T+e_ze_y^T)
+ +\frac{\varpi_c}{2}(e_ze_h^T+e_he_z^T)\\
+ &+\frac12\sum_{i=x,y,z,h_0}(e_i\widetilde\ell_i^T+\widetilde\ell_ie_i^T),\\
+ H={}&\begin{pmatrix}
+ a&b&\gamma_N^T\\ b&c&\gamma_M^T\\
+ \gamma_N&\gamma_M&H_s
+ \end{pmatrix}.\tag{A10}
+ \end{aligned}$The equal circuit split follows from $q_1^2-q_2^2=z(y+h_0)$. Substitution of (A8),(A9) proves $\mathscr F=\mathscr R^TH\mathscr R$. Every operation uses sums/products, formal factor extraction, or positive unit inverses, so every entry is bounded. QED.
+Theorem B: application to the entire native TL6 correction
+Retain the exact original R10.2 conditions and the exact TL3 coefficient identities. Distinguish source $w_s=ae$ and $j_R$ from test $\omega$ and SE contact $j$. Source $s=1/a$, $b_s=a^2B$, $x_s=sb_s=k^2$, $w_s=ae$, $e=sw_s$; $t,g,j_R$ are positive units and $s,B,h,e,x_s$ infinitesimal, while $\rho=n/e^2>0$ is source-infinitesimal.
+Use the single source chart, valid for both $b_s$-scale alternatives:
+$ K=1+k^2,\quad R_1=1+hk^2,\quad Q=K^2/R_1,\quad E=tK/R_1,$$ \varepsilon^2=\frac{tK^2b_s}{R_1^2},\qquad
+ j^2=\frac{sR_1^2}{tK^2},\qquad
+ \tau=\frac{w_s}{\varepsilon^2}=\frac{w_sR_1^2}{tK^2b_s}.
+ \tag{B1}$R10.2/TL1 gives $b_s/w_s\sim1/t$, hence $\tau\sim1$ is a positive source unit. Also $E\sim t$ and $Q,K,R_1$ are units; $j$ is infinitesimal; $\varepsilon$ is bounded, either a unit or infinitesimal. The exact contacts are
+$ k=\varepsilon j,\quad \zeta_1=s=j^2QE/K,\quad K_c=j^2E,
+ \quad w_s=\varepsilon^2\tau,\quad \gamma=r/(j^2E),\quad p=w_s/R_1=\varepsilon^2\tau/R_1.$There is no source/test comparison in these statements. The original source gap $j_R$ is not the variable $j$.
+Here is the complete coquotient table, obtained by exact native cancellation:
+$ \begin{array}{rlrl}
+ \Lambda=\Theta/\rho&=\varepsilon^2\tau^2QE/K,&
+ \nu=n/\rho=e^2&=\varepsilon^4j^4\tau^2Q^2E^2/K^2,\\
+ \nu\gamma^2/\varepsilon^2&=\varepsilon^2\tau^2r^2Q^2/K^2,&
+ \nu\gamma/\varepsilon&=\varepsilon^3j^2E\tau^2rQ^2/K^2,\\
+ \Xi/D_0^2=\nu x_s/D_0^2&=\varepsilon^2\tau^2Q^2/K^2,&
+ D_0&=\varepsilon^2j^3E.
+ \end{array}\tag{B2}$In particular, with $c_*,d_*,z_*,d_0,a_*$ defined exactly by TL3 and by the previous TL6 array convention,
+$ c_*,d_*,z_*,d_0,a_*\in\varepsilon^2\mathcal A,
+ \qquad
+ \frac{z_*-d_0}{D_0^2}
+ =-\varepsilon^2\frac{\tau^2Q^2P_\alpha}{K^3Q_c}.
+ \tag{B3}$All displayed denominators $E,K,Q,R_1,g,j_R,1-h,h+t,Q_c$ are positive source units. The formal C1 normal coefficient $h_1=a_1/T_1$ is also bounded: $a_1=(K-\ell)/E$ and $T_1=K-k^2w_s\zeta_1$ are units on this actual native domain. No inverse of $h,j,k,\varepsilon$ remains.
+Full TL6 stress, including both normals and the hard block. Put $D_u=1+u^2$, $D_v=1+v^2$, $A_t=v\omega$, $X=N+pD_uA_t-u$,
+$ q_B=v(D_u-uN-puD_uv\omega),\quad T=M+h_1q_B,\quad
+ R=M+(h_1-1)q_B,$$ W=\omega+uT/D_u,\quad Y=u\omega-T/D_u,\quad U=uW.$With the original quarter-parent TL3 quotients, the entire TL6 correction divided by $\rho$ is
+$ \boxed{\begin{aligned}
+ \mathscr F:=\mathscr E/\rho={}&
+ \nu D_uD_v\bigl[2\gamma uA_t-(2\gamma pD_u+\gamma^2)A_t^2-2\gamma A_tN\bigr]\\
+ &-\nu D_v(N+pD_uA_t)^2+c_*D_vT^2+d_*R^2\\
+ &+z_*D_u(vY-1)^2-d_0D_uD_v
+ +a_*D_uD_v(2UY-hU^2).
+ \end{aligned}}\tag{B4}$This is an exact identity of the full four-state parent, not its contact value. The first line is TL5 after retaining the positive contact-zero TL4 packet. The second line contains the negative $-nD_v(X+u)^2$, both source squares and the centered-$A$ correction. The final terms include the entire $\delta d$ normal and hard contribution; none are discarded. The full coefficient arrays generated from (B4) are reproduced in the appendix below.
+Use uniformly the SE-normalized soft frame
+$ (A,B,C,D_0)=(\varepsilon\omega v,\ v,\ Eu\omega,\ \varepsilon^2j^3E)
+ \tag{B5}$with the original, unscaled hard normals $N,M$. In (B4) express $A_t=A/\varepsilon$, but do not leave $1/\varepsilon$ as a Gram coefficient: extract the cancelled source combinations in (B2) first. By those exact relations, and the boundedness of $h_1$, all five scalar coefficient arrays, all five displayed first-normal coefficient arrays, and all three hard coefficients satisfy
+$ \boxed{
+ f_A,f_{BB},f_{BC},f_{CC},f_0\in\varepsilon^2 R_{\rm bd},\quad
+ \ell_{N\bullet},\ell_{M\bullet}\in\varepsilon^2 R_{\rm bd},\quad
+ H^{\rm hard}_{\bullet\bullet}\in\varepsilon^2 R_{\rm bd}.
+ }\tag{B6}$Here $R_{\rm bd}$ permits only the bounded unit inverses above and a finite power of the positive testing unit $D_u$. For example,
+$ f_A=-\frac{\nu D_uD_v}{\varepsilon^2}(2\gamma pD_u+\gamma^2)
+ -\frac{\nu p^2D_u^2D_v}{\varepsilon^2},\quad
+ \ell_{NA}=-\frac{2\nu D_uD_v(\gamma+p)}{\varepsilon},$$ f_0=\frac{(z_*-d_0)D_u}{D_0^2}
+ =-\varepsilon^2\frac{\tau^2Q^2P_\alpha D_u}{K^3Q_c},
+ \quad H^{\rm hard}_{NN}=-\nu D_v+\text{terms carrying }c_*,d_*,z_*,a_*.$(B2) gives each of these a literal $\varepsilon^2$ factor. The other arrays are sums of products of bounded test multipliers and those same starred source coefficients, except for $2\nu\gamma D_uD_v/E$ in $f_{BC}$, which is even of order $\varepsilon^4$. There is no exceptional coefficient. The accompanying exact checker verifies all thirteen arrays have no inverse $\varepsilon$ or $j$ after $\varepsilon^2$ is extracted.
+The inherited same-contact OP4/OP5 identities and the retained contact-zero packets imply $F_0\in J^2$ and both complete first normals lie in $J$; clearing the common positive testing unit $D_u$ preserves these jets. When using the conductor's $2NG_N+2MG_M$ convention, take $g_{T\bullet}=\ell_{T\bullet}/2$, not $\ell_{T\bullet}$. Thus all hypotheses of Theorem A hold and (A10), with $\varpi=f_0$, yields
+$ \boxed{\mathscr E/\rho=\mathscr R^TH\mathscr R,\qquad H\in\operatorname{Sym}_8(B_c\otimes_{\mathbb R}B_t).}\tag{B7}$No parity or $(\varepsilon,v)$ second-stage test is needed, and the normal/hard blocks are retained exactly.
+One frame for CA and SE, with an essential base distinction
+The unit-scale CA monomials are $(\omega v,\delta v,\delta Eu\omega,\delta^2k^3E)$, with $\delta=1/\varepsilon$. Equation (B5) says exactly
+$ (A,B,C,D_0)_{\rm CA}=\delta(A,B,C,D_0)_{\rm SE}.$Every CA soft root $x,y,z,h_0,q_1,q_2$ is therefore $\delta$ times the corresponding SE root. The original normals $N,M_B$ are unchanged, not $(N,\delta M_B)$. When $\varepsilon$ is a positive unit, $\delta$ and $\delta^{-1}$ are bounded source units, so the two full eight-root frames are related by the invertible bounded congruence
+$ D=\operatorname{diag}(1,1,\delta,\delta,\delta,\delta,\delta,\delta),
+ \quad \mathscr R_{\rm CA}=D\mathscr R_{\rm SE},
+ \quad G_{\rm SE}=D^TG_{\rm CA}D.$This unifies the entire correction matrix algorithm for positive-unit and infinitesimal $\varepsilon$. When $\varepsilon$ is infinitesimal, $\delta$ is unbounded and this CA-to-SE congruence is not an allowed bounded-residue transfer; one must use the independently established SE formal-base residue. When $\varepsilon$ is a unit, the already established CA base-residue positivity transfers through the bounded congruence. Thus base positivity still has two checks; the correction conductor does not.
+Finally $\rho>0$ is source-infinitesimal, so conditional on the separately checked formal base $\overline{G_0}\succ0$, the local actual Gram has $\overline{G_0+\rho H}=\overline{G_0}\succ0$. Restore the positive TL4 row, retained centered-$A$ packet and original positive event packets. This proves only the prescribed local thin-R10 tensor-SOS chart, conditional on the imported TL3 and base identities, with source/testing variables independent throughout.
+Exact outstanding dependencies (not claimed here)
+TL3 native algebra: the complete source coefficient-difference formulas and OP4/OP5 same-contact identity, including the contact jets of (B4). These are assigned to a different proof and are treated here as exact symbolic inputs.
+Formal negative-$\beta_1$ base: the full CA5/CA8 and SE4/SE9–SE11 Gram residue identities for $\beta_1=-s_n/2$, not a mere invocation of the physical C1 theorem. Independently assigned.
+Beyond the local thin chart: remote, reciprocal/projective and all-source joins, and universal tensor-SOS admission. None is inferred from (B7).
+Appendix: exact TL6 arrays used for the native filter check
+The following is included verbatim from the previously audited native-array note, with $\alpha_A=\varepsilon,\alpha_B=1,\alpha_C=E$ in the present single frame. The definitions and the 13 arrays are sufficient to reconstruct all entries of (A10).
+Set
+$ V_0=1-puv\omega,\quad b_q=\frac{D_uV_0}{\alpha_B},
+\quad t_B=h_1b_q,\quad r_B=(h_1-1)b_q,$$ U_B=\frac{u^2t_B}{D_u},\quad U_C=\alpha_C^{-1},
+\qquad Y_B=-\frac{t_B}{D_u},\quad Y_C=\alpha_C^{-1},$$ t_N=-h_1uv,\quad r_N=-(h_1-1)uv,\quad
+ U_N=\frac{u^2t_N}{D_u},\quad Y_N=-\frac{t_N}{D_u},
+\quad U_M=\frac{u^2}{D_u},\quad Y_M=-\frac1{D_u}.
+\tag{11}$These are bounded tensor coefficients; $\alpha_A^{-1}$ is used only in combinations in (6), never by itself when $\alpha_A=\varepsilon$.
+The following five scalar arrays are exact:
+$\boxed{\begin{aligned}
+ f_A={}&-\frac{\nu D_uD_v}{\alpha_A^2}
+       (2\gamma pD_u+\gamma^2)
+       -\frac{\nu p^2D_u^2D_v}{\alpha_A^2},\\
+ f_{BB}={}&c_*D_v t_B^2+d_*r_B^2
+    +z_*D_u\left(-\frac{2Y_B}{\alpha_B}+v^2Y_B^2\right)
+    -\frac{d_0D_u}{\alpha_B^2}
+    +a_*D_uD_v(2U_BY_B-hU_B^2),\\
+ f_{BC}={}&\frac{2\nu\gamma D_uD_v}{\alpha_B\alpha_C}
+     +z_*D_u\left(-\frac{2Y_C}{\alpha_B}+2v^2Y_BY_C\right)
+     +2a_*D_uD_v(U_BY_C+U_CY_B-hU_BU_C),\\
+ f_{CC}={}&z_*D_uv^2Y_C^2
+     +a_*D_uD_v(2U_CY_C-hU_C^2),\\
+ f_0={}&\frac{(z_*-d_0)D_u}{D_0^2}
+       =-\frac{\Xi}{D_0^2}\frac{P_\alpha D_u}{KQ_c}.
+\end{aligned}}\tag{12}$In particular the scalar at zero normals is literally
+$ \left.\mathscr E/\rho\right|_{N=M_B=0}
+ =f_AA^2+f_{BB}B_0^2+f_{BC}B_0C+f_{CC}C^2+f_0D_0^2.
+\tag{13}$There is no $AB_0$ or $AC$ term; $uA_t=(B_0C)/(\alpha_B\alpha_C)$ supplies the one new $B_0C$ cross term from TL5. Keeping $-nD_v(X+u)^2$ is essential for the $p^2$ part of $f_A$.
+The two complete first-normal rows, writing $L_N=\ell_{NA}A+\ell_{NB}B_0+\ell_{NC}C$ and $L_M=\ell_{MB}B_0+\ell_{MC}C$, are
+$\boxed{\begin{aligned}
+ \ell_{NA}&=-\frac{2\nu D_uD_v(\gamma+p)}{\alpha_A},\\
+ \ell_{NB}&=2c_*D_vt_Bt_N+2d_*r_Br_N
+  +2z_*D_u\left(-\frac{Y_N}{\alpha_B}+v^2Y_BY_N\right)
+  +2a_*D_uD_v(U_NY_B+U_BY_N-hU_BU_N),\\
+ \ell_{NC}&=2z_*D_uv^2Y_CY_N
+  +2a_*D_uD_v(U_NY_C+U_CY_N-hU_CU_N),\\
+ \ell_{MB}&=2c_*D_vt_B+2d_*r_B
+  +2z_*D_u\left(-\frac{Y_M}{\alpha_B}+v^2Y_BY_M\right)
+  +2a_*D_uD_v(U_MY_B+U_BY_M-hU_BU_M),\\
+ \ell_{MC}&=2z_*D_uv^2Y_CY_M
+  +2a_*D_uD_v(U_MY_C+U_CY_M-hU_CU_M).
+\end{aligned}}\tag{14}$The missing $\ell_{MA}$ is exactly zero. Both first-normal rows, not merely their contact restrictions, are retained.
+Finally the complete hard block $H^{\rm hard}$, with the off-diagonal written in matrix convention so that the polynomial contains $2H^{\rm hard}_{NM}NM_B$, is
+$\boxed{\begin{aligned}
+ H_{NN}^{\rm hard}={}&-\nu D_v+c_*D_vt_N^2+d_*r_N^2
+  +z_*D_uv^2Y_N^2
+  +a_*D_uD_v(2U_NY_N-hU_N^2),\\
+ H_{NM}^{\rm hard}={}&c_*D_vt_N+d_*r_N+z_*D_uv^2Y_NY_M
+  +a_*D_uD_v(U_NY_M+U_MY_N-hU_NU_M),\\
+ H_{MM}^{\rm hard}={}&c_*D_v+d_*+z_*D_uv^2Y_M^2
+  +a_*D_uD_v(2U_MY_M-hU_M^2).
+\end{aligned}}\tag{15}$Equations (12)–(15) are the full identity
+$ \frac{\mathscr E}{\rho}
+ =f_AA^2+f_{BB}B_0^2+f_{BC}B_0C+f_{CC}C^2+f_0D_0^2
+ +NL_N+M_BL_M+(N,M_B)H^{\rm hard}(N,M_B)^T.
+\tag{16}$All normal terms are homogeneous in the two hard normals; no state ratio has been frozen. Equation (16) was also reconstructed and checked by exact polynomial subtraction in the accompanying script verify_R10_TL6_arrays.py.
+
+
+
+
+
+
+
+
+

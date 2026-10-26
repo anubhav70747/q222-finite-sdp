@@ -1,0 +1,136 @@
+\section{The complementary Bob region}\label{sec:R1-Bob-complement}
+The same native source box admits a second fixed Gram matrix on
+$|v|\geq1/16$, with no restriction on the Alice angle. This certificate
+uses the entire state quadratic form.
+
+Use the compact testing coordinates
+\[
+ (a,b)=\frac{(u,1)}{\sqrt{1+u^2}},\qquad
+ (c,e)=\frac{(v,1)}{\sqrt{1+v^2}},\qquad
+ a^2+b^2=c^2+e^2=1,\quad b\geq0.
+\]
+The circle coordinates include the projective endpoints. For independent
+real state coordinates $W,X,Y,Z$, define
+\begin{gather*}
+ E=aW-bY,\quad K=aX-bZ,\quad J=eE+cK,\quad U=eZ-cY,\\
+ E_\lambda=eW+cX,\qquad L_A=bX+aZ,\qquad
+ M=b(cW-eX)+a(cY-eZ).
+\end{gather*}
+For source order $(d,\lambda,n,m,C,A,D,\alpha,\beta)$, the compact
+quarter-parent is
+\begin{align}
+ P={}&\lambda E_\lambda^2+\beta L_A^2+nX^2+mM^2+CE^2+AY^2
+ +(D+d/2)J^2+(\alpha+d/2)U^2
+       +\tfrac d2(L_A^2-Z^2).
+ \label{eq:R1-Bob-parent}
+\end{align}
+For finite angles this is the canonical quarter-parent divided by its
+positive angular denominators.
+
+Put $q_B=1/257$, $\tau_B=257d/2$, and
+\[
+ S_B=\begin{pmatrix}C-\tau_B&\tau_B\\
+                     \tau_B&D-\tau_B\end{pmatrix}.
+\]
+Since $J-eE=cK$ and $L_A^2-Z^2=X^2-K^2$, one has the exact identity
+\begin{align}
+ CE^2+DJ^2-\tfrac d2K^2
+ =C(cE)^2+(eE,J)S_B(eE,J)^T
+           +\tau_B(c^2-q_B)K^2.\label{eq:R1-Bob-allocation}
+\end{align}
+Consequently $P$ is represented on the ten fixed functions
+\begin{equation}
+ \Phi_B=(E_\lambda,L_A,X,M,Y,U,J,cE,eE,
+                          \sqrt{c^2-1/257}\,K)^T.
+ \label{eq:R1-Bob-functions}
+\end{equation}
+Explicitly, let $e_i$, $0\leq i\leq9$, denote the standard basis of
+$\mathbb R^{10}$. Its source-affine Gram matrix is
+\begin{align}
+ Q_B={}&\operatorname{diag}(\lambda,\beta,n+d/2,m,A,\alpha+d/2,
+                   D-128d,C,C-257d/2,257d/2)\notag\\
+       &+\tfrac{257d}{2}(e_6e_8^T+e_8e_6^T),\qquad
+                 P=\Phi_B^TQ_B\Phi_B .
+ \label{eq:R1-Bob-matrix}
+\end{align}
+This is an identity for every source, rather than an identity after a
+special choice of auxiliary variables. There are no auxiliaries.
+For nonnegative source coordinates, $S_B\succeq0$ is sufficient for
+$Q_B\succeq0$: its $(8,6)$ block is $S_B$ plus the positive diagonal
+contribution $d/2$ on row~6, and all other terms are positive diagonal.
+
+\subsection*{Uniform source admission}
+Take the native R1 source box
+\[
+ \delta=2^{-10},\quad 0<B,T,x=jB\leq\delta,\quad
+ 0<p<\min(j,1),\quad0<H<1,\quad n\geq0,
+ \qquad(d,\lambda,\beta)=(1,0,0).
+\]
+Let $J_s=j+1$, $K_s=j+1-p$ and retain the source constants
+\[
+ f_0=1-\delta-\delta^3,\qquad
+ R_0=1+2\delta+2\delta^2+4\delta^3+\delta^4(1+2\delta).
+\]
+The native dictionary gives
+\[
+ C=\frac{L}{2HTP},\qquad
+ D=\frac{(1+Hy)(K_s+Hjy)[1-y((1-H)j-p)]}{2T(1-H)P},
+ \qquad y=TB,
+\]
+where $P\leq R_0J_s$, $L\geq f_0K_s$ and $K_s/J_s\geq1/2$.
+Since $yj=Tx\leq\delta^2$,
+\begin{equation}
+ C\geq\frac{f_0}{4R_0HT},\qquad
+ D\geq\frac{1-\delta^2}{4R_0T(1-H)}.
+ \label{eq:R1-Bob-source-bounds}
+\end{equation}
+Here $f_0<1-\delta^2$. Setting $k=f_0/(4R_0T)$ therefore gives
+$C\geq k/H$ and $D\geq k/(1-H)$. Their reciprocal sum satisfies
+\[
+ \frac1\eta:=\frac1C+\frac1D\leq\frac Hk+\frac{1-H}k=\frac1k,
+ \qquad
+ \eta=\frac{CD}{C+D}\geq\frac{f_0}{4R_0T}
+                   >\frac1{5T}\geq\frac{1024}{5}>\frac{257}{2}.
+\]
+The numerical source comparison is the exact rational inequality
+\[
+ \frac{f_0}{4R_0}=\frac{140600049270784}{564050540888577}>\frac15.
+\]
+For positive $C,D$, the matrix
+$\left(\begin{smallmatrix}C-\tau&\tau\\\tau&D-\tau\end{smallmatrix}\right)$
+is positive definite whenever $0\leq\tau<\eta$, because
+$\eta<\min(C,D)$ and its determinant is $CD-\tau(C+D)$.
+Thus $S_B\succ0$ for every displayed native source.
+
+This argument retains literal $n=0$ and the zero coordinates
+$\lambda=\beta=0$. Arbitrary nonnegative event additions also remain
+admitted: at $d=0$, the matrix in \eqref{eq:R1-Bob-matrix} is positive
+semidefinite for each of the eight event rays. No event weight or
+state coordinate is inverted.
+
+\subsection*{The joined testing domain}
+For finite Bob angles,
+$c^2\geq1/257$ is exactly $v^2\geq1/256$. The functions and identity
+include both boundary signs, $c=\pm1/\sqrt{257}$, and the Bob
+projective endpoints $c=\pm1,e=0$. Alice is unrestricted on its
+compact circle, including $a=\pm1,b=0$. All state signs are retained.
+
+Intersecting this matrix constraint with the enlarged cap system
+$|u|\leq9/256$, $|v|\leq1/16$ gives total positive-semidefinite order
+\[
+       274\ \text{(cap)}+10\ \text{(Bob)}
+                 +9\ \text{(shared source signs)}=293.
+\]
+It admits the same native sources and event additions. Its testing
+validity covers the union of those two regions. The remaining strip is
+\[
+                  |u|>9/256,\qquad |v|<1/16,
+\]
+including the Alice projective endpoints within that strip. Admission
+on this strip and global canonical adequacy are separate questions.
+
+The rational sparse matrix has fifteen upper-triangular records in
+\texttt{bob\_complement\_order10.coo.json}; indices start at zero and
+each off-diagonal record is mirrored once. Its exact reconstruction
+and all nine parent coefficient identities are verified by
+\texttt{check\_bob\_complement.py}.

@@ -1,0 +1,124 @@
+\section{R10: a direct critical-wall certificate for every unit-$W$ state}
+\paragraph{Statement.}
+On the entire original R10 source, every independent test with $u,v$
+infinitesimal and normalized $W$ a testing unit is tensor SOS. This
+includes bounded $Z$ of every sign, infinitesimal $Z$, and $Z=0$.
+The theorem uses the actual physical C2 coefficients. No continuation
+of a negative-beta C1 source is involved.
+
+Use the R10 source scale $s=1/a$, $w=ae$, $b=a^2B$, and put
+$z=b/w$. The source constraint proves $z$ bounded. Write $A_h=Ah$.
+The source estimates give $A_h,C,D$ positive units, $h$ infinitesimal,
+$m/w$ a positive unit, and $t_0>1$, $w_0<1$.
+Define the positive pure-source critical coefficient
+\[
+ C_*={ (h+2A_h)(1+2D)\over 2(4A_hD-h)}
+     ={(1+2A)(1+2D)\over2(4AD-1)}.
+ \tag{UW1}
+\]
+Its denominator after the first normalization is a positive unit.
+We prove the opening-uniform estimate
+\[
+                 {C_*-C\over m}=s\,R,
+                 \qquad R\text{ bounded}.             \tag{UW2}
+\]
+
+\paragraph{A short polynomial proof of the source estimate.}
+All the following letters are polynomials in bounded source variables
+$(s,w,z,h,t)$ after $b=wz$, with $x=sb$, $B=s^2b$, $r=1-sw$:
+\[
+ c_a=1+xr,\quad S_c=1+B(1-h)+sbr,\quad
+ g=1-w+hx,\quad J=t c_a-(1-h),\quad \Delta_*=s\Delta,
+\]
+\[
+ M_*=(1+x)(s+r)(h+t)-sw(1+tB)(1-h).
+\]
+Use the exact source numerators and denominators
+\[
+ \begin{array}{ll}
+ N_C=c_aM_*,&D_C=2(1-h)\Delta_*,\\
+ N_A=t c_a(s+r)S_c,&D_A=2\Delta_*,\\
+ N_D=(1+x)(s+r)(1-txr)S_c,&D_D=2J\Delta_*,\\
+ N_m=w(1+tB)c_aS_c,&D_m=2g\Delta_*.
+ \end{array}
+\]
+Thus $C=N_C/D_C$, $A_h=N_A/D_A$, $D=N_D/D_D$,
+and $m=N_m/D_m$. Clear the denominator in UW1:
+\[
+ \begin{split}
+ P={}&(hD_A+2N_A)(D_D+2N_D)D_C\\
+     &-2N_C(4N_AN_D-hD_AD_D),\\
+ Q={}&2(4N_AN_D-hD_AD_D)D_C.
+ \end{split}                                                  \tag{UW3}
+\]
+Then $C_*-C=P/Q$. At $s=0$ one has
+\[
+ C={t+h\over2(1-h)},\quad A_h=t/2,\quad
+ D={1\over2(t-1+h)},
+\]
+and substitution gives $C_*=C$ identically. At $w=0$ (hence
+$b=0$), the same three formulas hold for every $s$, because all
+factors $1+s$ cancel. Therefore the polynomial $P$ is divisible by
+both $s$ and $w$, hence $P=swP_1$. Since $N_m=wN_{m,1}$,
+\[
+ {C_*-C\over m}=s\,{P_1D_m\over QN_{m,1}}.
+\]
+The denominator $QN_{m,1}$ at $s=h=0$ is $16t>0$.
+This proves UW2 by finite polynomial cancellation, without comparing
+$w$ to $s$ or $h$. The new checker verifies exactly this divisibility
+and denominator. Its displayed residue also gives
+$R\sim t(1-w)(tz+2)$, though the proof only needs boundedness.
+
+\paragraph{Complete parent and state allocation.}
+Set $\epsilon=(C_*-C)_+$. By UW2, $\epsilon/m$ is
+infinitesimal. If $C>C_*$, retain the nonnegative excess $C-C_*$.
+Retain the entire original $n$ and $\alpha$ packets; beta is zero.
+The remaining signed core and $C_*,A,D$ packets are exactly the
+critical parent SEO11, with $c=C_*$ and $d=1$, because
+\[
+                  2C_*(4AD-1)=(1+2A)(1+2D).
+\]
+The exact critical-wall identities SEO12--SEO15 give a bounded strict
+Gram on
+\[
+ B_t=X+uZ,\quad H_A=\sqrt A(Y-yV),\quad
+ H_D=\sqrt{4D+2}\{uW-Y+uvB_t-(b_*+u^2)V\},
+ \quad uV,\ vV,
+\]
+where $V=vZ$, $y=1/(2A)$ and
+$b_*=(4AD-1)/(A(4D+2))$. Here $y,b_*$ are bounded;
+$C_*,D$ are units and $A$ may be unbounded. The hard residue is
+strict and the two radial masses have positive residues $2$ and
+$2/t_0$. This is an application of those full polynomial identities,
+not of their original C1 source theorem.
+
+Normalize $W=1$ by a pure-testing factor. The entire $m$ event obeys
+\[
+ R_m=v(1+uY)-B_t,\qquad
+ V={Z\over1+uY}(R_m+B_t).                         \tag{UW4}
+\]
+The denominator is a positive testing unit. From the displayed
+$H_D$ root,
+\[
+ uW-Y=(b_*+u^2)V-uvB_t+H_D/\sqrt{4D+2}.
+\]
+Thus $\sqrt\epsilon(uW-Y)$ is a linear combination of the strict
+critical roots and $\sqrt mR_m$ with infinitesimal coefficients.
+The only potentially small denominator is accounted for by
+$\sqrt{\epsilon/m}$, infinitesimal by UW2. Consequently the complete
+negative correction $-4\epsilon(1+v^2)(uW-Y)^2$ has an
+infinitesimal bounded Gram. The $m$ packet supplies a strict additional
+pivot. Restore all retained original packets to obtain the entire
+C2 parent, including every hard state direction.
+
+\paragraph{State entry for the remaining local work.}
+Normalize a real testing state by a maximal coordinate. On the
+negative pure-testing-core branch at $u,v$ infinitesimal, $X,Y$
+are infinitesimal. If $W$ is a unit the theorem applies. Otherwise
+$Z$ is a unit; set $Z=1$, and then
+$w_{\rm test}=(W+uY)/(1+u^2)$ is infinitesimal. The inherited exact
+Schur sign identity gives the positive contact chart. Literal axes
+have the original event-square exits; complex states split into real
+and imaginary parts. Together with the R10 remote theorem, the only
+remaining task is the contact chart $u,v,w_{\rm test}>0$
+infinitesimal, $Z=1$, on any source not already admitted locally.

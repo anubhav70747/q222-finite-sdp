@@ -1,0 +1,120 @@
+\section{Weak IH: all remote testing charts}
+\label{sec:weak-ih-remote}
+Assume the weak-$C$ IH source entry, with no restriction on
+$\rho_0\in[0,1]$, on positive $r,H,1-H$, or on $n\ge0$.
+The uniform source inputs are $B$ unbounded, $C,m$ infinitesimal,
+$BC,AH/B,\alpha(1-H)/B$ positive units with common residue
+$c=1/[2(1+\rho_0)]$, and $A,\alpha$ unbounded.
+Every square retained below has nonnegative pure-source coefficient;
+products $1+u^2$ and $1+v^2$ are themselves testing sums of squares.
+
+\paragraph{Finite $v$, infinitesimal $u$.}
+Write $Y_A=\sqrt A Y$ and $Z_\alpha=\sqrt\alpha(vY-Z)$, so
+$Y=Y_A/\sqrt A$ and $Z=vY_A/\sqrt A-Z_\alpha/\sqrt\alpha$.
+Retain the complete $n,C,D$ packets. Use the five roots
+\[
+ U=uW,\quad X,\quad V=\sqrt m\,vW,\quad Y_A,\quad Z_\alpha.
+\]
+The $m$ packet is exactly
+$4(V-\sqrt m X+u\sqrt{m/\alpha}Z_\alpha)^2$.
+All coefficients in the remaining core are bounded after substituting
+$Y,Z$, and all coefficients involving $Y$ or $Z$ are infinitesimal.
+The full residue Gram is diagonal:
+\[
+ 2U^2+2(1+v_0^2)X^2+4V^2
+       +4(1+v_0^2)Y_A^2+4Z_\alpha^2.
+\tag{IR1}
+\]
+This includes literal $u=0$ or $v=0$; redundant zero roots cause no
+problem for a positive Gram representation.
+
+\paragraph{Finite $v$, unit $u$.}
+Retain $n,m,C,D$. Use $(W,X,Y_A,Z_\alpha)$.
+The residue of the core and selected $A,\alpha$ packets is
+\[
+ 2\{u_0^2(W+v_0X)^2+(1+v_0^2)X^2\}
+       +4(1+u_0^2)(1+v_0^2)Y_A^2
+       +4(1+u_0^2)Z_\alpha^2,
+\tag{IR2}
+\]
+which is strictly positive because $u_0\ne0$.
+
+\paragraph{Finite $v$, unbounded $u$.}
+Use the homogeneous coordinate $p=1/u$, infinitesimal or zero.
+Retain $n,m,D$ and use
+\[
+ P=pX,\quad Q=W+vX,\quad S=\sqrt C W,\quad Y_A,\quad Z_\alpha.
+\]
+The $C$ packet becomes
+$4(1+v^2)(S-p\sqrt{C/A}Y_A)^2$.
+The entire selected expression has bounded coefficients, and residue
+\[
+ 2Q^2+2(1+v_0^2)P^2+4(1+v_0^2)S^2
+       +4(1+v_0^2)Y_A^2+4Z_\alpha^2.
+\tag{IR3}
+\]
+Thus every finite-$v$ chart is complete, independently of $n$.
+
+\paragraph{Both testing angles unbounded.}
+Let $p=1/u$, $w=1/v$ be infinitesimal or zero and put
+$D_p=1+p^2$, $D_w=1+w^2$.
+Retain the entire $n,m$ packets. Set $d=\min(1,D)>0$ in the source
+field and retain $4(D-d)J^2$. The remainder is exactly
+\begin{align*}
+ F_*={}&4CD_w(W-pY)^2+4AD_pD_wY^2+4dJ^2
+       +4\alpha D_p(Y-wZ)^2\\
+ &+2\{J^2+D_p(Y-wZ)^2+D_w(pX+Z)^2-D_pD_wZ^2\},\\
+ J={}&wW+X-pwY-pZ.
+\end{align*}
+Use the graph $X=-wW$, $Y=HwZ$, the normals
+$E_X=X+wW$, $E_Y=\sqrt L(Y-HwZ)$ with
+$L=B/[H(1-H)]$, and scalar roots
+\[
+ S=\sqrt C W,\quad E=\sqrt B\,wZ,\quad
+ U=pwW,\quad P=\sqrt d\,pZ.
+\tag{IR4}
+\]
+On the graph the exact expression is
+\begin{align*}
+ F_*|_{\rm graph}={}&4D_w(S-pH\sqrt{C/B}E)^2
+ +\frac{4D_p}{B}\{AH^2D_w+\alpha(1-H)^2\}E^2\\
+ &+4(1+Hw^2)^2P^2+2D_wU^2
+ -\frac{4pD_w}{\sqrt{BC}}SE
+ +\frac2B\{(1-H)^2+H^2p^2D_w\}E^2.
+\tag{IR5}
+\end{align*}
+All coefficients are bounded and its residue is
+$4S^2+4cE^2+2U^2+4P^2$.
+
+The first $X$ normal, divided by four, is exactly
+\[
+ L_X=-pD_wU+\frac{p(1-H)w}{\sqrt B}E
+               -2\sqrt d(1+Hw^2)P.
+\tag{IR6}
+\]
+The first $Y$ normal is
+\begin{align*}
+ L_Y={}&-2p\sqrt C D_w S+\frac{E}{\sqrt B}
+ \{2Cp^2HD_w+2D_p(AHD_w-\alpha(1-H))\\
+ &\hspace{38mm}+(2d+1)p^2(1+Hw^2)-D_p(1-H)\}.
+\tag{IR7}
+\end{align*}
+After dividing by $\sqrt L$, all its coefficients are infinitesimal;
+the only possible nonzero term is proportional to
+$(AH-\alpha(1-H))/B$, whose residue is zero.
+The quadratic normal coefficients have residues
+$2+4d_0$ and $4c$, and their mixed coefficient has zero residue.
+The only nonzero scalar-normal coupling is the $(P,E_X)$ block
+\[
+ \begin{pmatrix}4&-4\sqrt{d_0}\\-4\sqrt{d_0}&2+4d_0\end{pmatrix},
+\tag{IR8}
+\]
+whose determinant is exactly $8$. Thus the full Gram is strict even
+when $D$ is infinitesimal and even when $n=0$. The normalization uses
+$\sqrt d$ but never $1/\sqrt d$ in a Gram coefficient.
+
+Each displayed Gram is a representation of the complete selected
+state quadratic form, not just its graph restriction. The bounded
+positive-residue lemma and the retained squares prove tensor SOS.
+These charts, the open-axis theorem, and the three local source-shape
+proofs cover every independent testing pair.

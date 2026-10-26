@@ -1,0 +1,501 @@
+{
+  "scope": "C1.4 after x=k^2 infinitesimal,zeta noninfinitesimal; upstream predicates retained",
+  "definitions": "L=x*zeta;sigma=1/eta;S=sigma+L;kappa=x/S;nu=sigma/S;ell=L/S;j=eta*(1+x*h)-1+r",
+  "claim": "Coverage ledger, not an assertion all coefficient algebra independently verified",
+  "rows": [
+    {
+      "name": "large_L_unit_eta",
+      "predicate": "L unbounded; eta positive bounded unit",
+      "components": [
+        {
+          "number": 27,
+          "id": "pd4b92bf7de71",
+          "title": "C1.4: unbounded $L=x\\zeta$, bounded-unit $\\sigma=1/\\eta$",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/inherited_r19/inherited_r18/inherited_r17/inherited_r16/Q222_Revision13/advances/c1_large_l_eta_unit/large_l_unit.tex"
+        }
+      ],
+      "status": "deep_read_complete_selected_exact_expansions",
+      "note": "Full source, local and remote arguments deeply read; keep named shared LII/RR/CE prerequisites."
+    },
+    {
+      "name": "large_L_bounded_H",
+      "predicate": "L,eta unbounded; H=h*eta bounded",
+      "components": [
+        {
+          "number": 26,
+          "id": "p10ee3d96a3f1",
+          "title": "An exact beta-shared normalization for the two eta-large C1.4 charts",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/inherited_r19/inherited_r18/inherited_r17/inherited_r16/Q222_Revision13/advances/c1_eta_large_source/beta_shared_source_normalization.tex"
+        },
+        {
+          "number": 62,
+          "id": "p89fd3edb3edd",
+          "title": "Shared event mechanisms for the remaining C1 sources",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/inherited_r19/inherited_r18/inherited_r17/inherited_r16/Q222_Revision13/baseline/advances/c1_common/common_remote.tex"
+        },
+        {
+          "number": 169,
+          "id": "p3be5a8005801",
+          "title": "State-free normal conductors at the large-$L$ corner",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/proofs/c1_unbounded/c141a_closure_and_c141b_partial.tex"
+        }
+      ],
+      "status": "root_deep_read_reported",
+      "note": "Root covered BE/CE/JR/JB/SF full proof, including bounded M_beta; exact source/test closure retained."
+    },
+    {
+      "name": "large_L_unbounded_H",
+      "predicate": "L,eta,H unbounded",
+      "components": [
+        {
+          "number": 26,
+          "id": "p10ee3d96a3f1",
+          "title": "An exact beta-shared normalization for the two eta-large C1.4 charts",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/inherited_r19/inherited_r18/inherited_r17/inherited_r16/Q222_Revision13/advances/c1_eta_large_source/beta_shared_source_normalization.tex"
+        },
+        {
+          "number": 62,
+          "id": "p89fd3edb3edd",
+          "title": "Shared event mechanisms for the remaining C1 sources",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/inherited_r19/inherited_r18/inherited_r17/inherited_r16/Q222_Revision13/baseline/advances/c1_common/common_remote.tex"
+        },
+        {
+          "number": 141,
+          "id": "pff0a29ebf284",
+          "title": "C14.1b: the entire parent on bounded testing state quotients",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/inherited_r19/inherited_r18/inherited_r17/proofs/c1_sphere/bounded_state_full_parent.tex"
+        },
+        {
+          "number": 142,
+          "id": "pfeca652aef94",
+          "title": "A full-parent pole extraction and a larger comparison-model state chart",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/inherited_r19/inherited_r18/inherited_r17/proofs/c1_sphere/sphere_pole_reduction.tex"
+        },
+        {
+          "number": 157,
+          "id": "pcc84202479d2",
+          "title": "C14.1b: every state when the first testing angle is a unit",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/inherited_r19/inherited_r18/proofs/c1_sphere/unit_u_all_states.tex"
+        },
+        {
+          "number": 169,
+          "id": "p3be5a8005801",
+          "title": "State-free normal conductors at the large-$L$ corner",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/proofs/c1_unbounded/c141a_closure_and_c141b_partial.tex"
+        },
+        {
+          "number": 170,
+          "id": "p5cd5fa89abcc",
+          "title": "C14.1b: the bounded testing-ratio complement at every unit $h$",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/proofs/c1_unbounded/c141b_bounded_testing_ratio.tex"
+        },
+        {
+          "number": 171,
+          "id": "p50b4df0bb619",
+          "title": "C14.1b: the remaining source at bounded Alice-to-reciprocal-Bob ratio",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/proofs/c1_unbounded/c141b_gamma_angular_domination.tex"
+        },
+        {
+          "number": 172,
+          "id": "p0931b3af19ec",
+          "title": "C14.1b: the entire unit beta-sphere source, including the contact ratio",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/proofs/c1_unbounded/c141b_unit_beta_sphere_all_tests.tex"
+        },
+        {
+          "number": 182,
+          "id": "p4e5ba027f187",
+          "title": "A fresh angular budget and completion of the retained C14.1b residual",
+          "source": "rederivation_2026-10-22/c1/c141b_residual_rederived.tex"
+        }
+      ],
+      "status": "split_deep_read_complete",
+      "note": "Root audited retained exits 141/142/157/169--172; AR182 fully read here. No unresolved inference found in this branch."
+    },
+    {
+      "name": "unit_L_small_eta",
+      "predicate": "L unit; eta infinitesimal",
+      "components": [
+        {
+          "number": 29,
+          "id": "p080aa62de16d",
+          "title": "A C1 extension: $L$ a unit and $\\eta$ infinitesimal",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/inherited_r19/inherited_r18/inherited_r17/inherited_r16/Q222_Revision13/advances/c1_lunit/lunit_eta_small.tex"
+        }
+      ],
+      "status": "deep_read_complete_selected_exact_expansions",
+      "note": "Full source, local and remote arguments deeply read; keep named shared LII/RR/CE prerequisites."
+    },
+    {
+      "name": "unit_L_unit_eta",
+      "predicate": "L,eta units",
+      "components": [
+        {
+          "number": 31,
+          "id": "p686209b87229",
+          "title": "C1 with both $L$ and $\\eta$ units",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/inherited_r19/inherited_r18/inherited_r17/inherited_r16/Q222_Revision13/advances/c1_lunit_eta_unit/eta_unit.tex"
+        }
+      ],
+      "status": "deep_read_complete_selected_exact_expansions",
+      "note": "Full source, local and remote arguments deeply read; keep named shared LII/RR/CE prerequisites."
+    },
+    {
+      "name": "unit_L_large_eta",
+      "predicate": "L unit; eta unbounded",
+      "components": [
+        {
+          "number": 30,
+          "id": "p57d751e20564",
+          "title": "A sharper source bound on the remaining $L$-unit, $\\eta$-large face",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/inherited_r19/inherited_r18/inherited_r17/inherited_r16/Q222_Revision13/advances/c1_lunit_eta_large/source_frontier.tex"
+        },
+        {
+          "number": 154,
+          "id": "pda4a21937f64",
+          "title": "C14.2: bounded Bob tests at every local Alice angle",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/inherited_r19/inherited_r18/proofs/c1_lunit/bounded_bob.tex"
+        },
+        {
+          "number": 155,
+          "id": "p156da4167158",
+          "title": "The exact C14.2 remainder and its centered C extraction",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/inherited_r19/inherited_r18/proofs/c1_lunit/centered_c_reduction.tex"
+        },
+        {
+          "number": 156,
+          "id": "pb0d9d28d0849",
+          "title": "C14.2: the complete noninfinitesimal-Alice complement",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/inherited_r19/inherited_r18/proofs/c1_lunit/noninfinitesimal_alice.tex"
+        },
+        {
+          "number": 161,
+          "id": "p831dd6874dcf",
+          "title": "C14.2: the complete unbounded-$H$, unbounded-$W/Z$ chart",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/inherited_r19/proofs/c142_contact/h_large_toric_completion.tex"
+        },
+        {
+          "number": 162,
+          "id": "p8655d641d4a7",
+          "title": "C14.2: pure-testing state exits at the two small angles",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/inherited_r19/proofs/c142_contact/state_ratio_exits.tex"
+        },
+        {
+          "number": 163,
+          "id": "p98e371f5b846",
+          "title": "Two complementary C14.2 certificates",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/inherited_r19/proofs/c142_root/complementary_charts.tex"
+        },
+        {
+          "number": 164,
+          "id": "pcb3428d66a71",
+          "title": "C14.2: bounded $h/\\sigma$ and the unbounded $W/Z$ state chart",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/inherited_r19/proofs/c142_sphere/bounded_H_large_state.tex"
+        },
+        {
+          "number": 165,
+          "id": "p021ed4a9e0db",
+          "title": "C14.2: bounded $h/\\sigma$ with positive $\\lambda$, all states",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/inherited_r19/proofs/c142_sphere/bounded_H_positive_lambda_all_states.tex"
+        },
+        {
+          "number": 166,
+          "id": "p896e19be06f0",
+          "title": "C14.2 is closed: the exact all-tests and all-states join",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/inherited_r19/proofs/c142_sphere/c142_all_tests_join.tex"
+        }
+      ],
+      "status": "deep_read_complete_selected_exact_expansions",
+      "note": "All source/test/state partitions read. CT enlarged to every positive unit c; CS5--CS6 redundant; keep CS1--CS4."
+    },
+    {
+      "name": "small_L_large_zeta",
+      "predicate": "L infinitesimal; eta bounded; zeta unbounded",
+      "components": [
+        {
+          "number": 28,
+          "id": "p6d2f659c0fde",
+          "title": "Small $L$, bounded $\\eta$: exact source openings and the remote complement",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/inherited_r19/inherited_r18/inherited_r17/inherited_r16/Q222_Revision13/advances/c1_lsmall_eta_bounded/remote_reduction.tex"
+        },
+        {
+          "number": 139,
+          "id": "p60eca5442075",
+          "title": "The entire unit-$\\eta$ large-$\\zeta$ source, through the actual-$j$ opening",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/inherited_r19/inherited_r18/inherited_r17/proofs/c1_source_ends/large_zeta_unit_eta_all_tests.tex"
+        },
+        {
+          "number": 143,
+          "id": "pc720c1e06aca",
+          "title": "The damped completion at large zeta with bounded L over eta",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/inherited_r19/inherited_r18/inherited_r17/proofs/matrix_mechanism/large_zeta_damped_extension.tex"
+        },
+        {
+          "number": 144,
+          "id": "p8635816e42a0",
+          "title": "Large zeta: the enlarged state chart and the exact remaining corner",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/inherited_r19/inherited_r18/inherited_r17/proofs/matrix_mechanism/large_zeta_damped_state_extension.tex"
+        },
+        {
+          "number": 151,
+          "id": "pfaf149c34810",
+          "title": "The end-to-end C14.3a/b join",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/inherited_r19/inherited_r18/proofs/c1_joint/c143ab_all_tests_join.tex"
+        },
+        {
+          "number": 152,
+          "id": "pe3bbfd3a8151",
+          "title": "The completed $J$ row conducts the shared remaining normal",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/inherited_r19/inherited_r18/proofs/c1_joint/completed_j_conductor.tex"
+        }
+      ],
+      "status": "deep_read_complete_selected_exact_expansions",
+      "note": "EU handles unit eta; LD plus CJ handles eta infinitesimal at every L/eta; DS3 handles X/Z unbounded. Component144 redundant."
+    },
+    {
+      "name": "small_L_small_eta_unit_zeta",
+      "predicate": "L,eta infinitesimal; zeta unit",
+      "components": [
+        {
+          "number": 28,
+          "id": "p6d2f659c0fde",
+          "title": "Small $L$, bounded $\\eta$: exact source openings and the remote complement",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/inherited_r19/inherited_r18/inherited_r17/inherited_r16/Q222_Revision13/advances/c1_lsmall_eta_bounded/remote_reduction.tex"
+        },
+        {
+          "number": 136,
+          "id": "pd6aedcfef8b0",
+          "title": "C14.3b: the complete gamma--circuit join and its negative soft source pivot",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/inherited_r19/inherited_r18/inherited_r17/proofs/c1_small_eta/coupled_gamma_soft_obstruction.tex"
+        },
+        {
+          "number": 137,
+          "id": "p024c821bfb59",
+          "title": "C14.3b: a complete source subchart from a damped two-circuit completion",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/inherited_r19/inherited_r18/inherited_r17/proofs/c1_small_eta/damped_gamma_source_subchart.tex"
+        },
+        {
+          "number": 138,
+          "id": "p8cfada778490",
+          "title": "The damped frame also enlarges the pure-testing state chart",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/inherited_r19/inherited_r18/inherited_r17/proofs/c1_small_eta/damped_state_extension.tex"
+        },
+        {
+          "number": 151,
+          "id": "pfaf149c34810",
+          "title": "The end-to-end C14.3a/b join",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/inherited_r19/inherited_r18/proofs/c1_joint/c143ab_all_tests_join.tex"
+        },
+        {
+          "number": 152,
+          "id": "pe3bbfd3a8151",
+          "title": "The completed $J$ row conducts the shared remaining normal",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/inherited_r19/inherited_r18/proofs/c1_joint/completed_j_conductor.tex"
+        }
+      ],
+      "status": "deep_read_complete_selected_exact_expansions",
+      "note": "JF + DG source identities + CJ handles all x/eta with X/Z bounded; DS3 handles X/Z unbounded. GS136 diagnostic not needed."
+    },
+    {
+      "name": "small_L_unit_eta_zeta_regular_j",
+      "predicate": "L infinitesimal; eta,zeta units; j=eta*(1+x*h)-1+r unit",
+      "components": [
+        {
+          "number": 48,
+          "id": "p3df6e6bdd8f4",
+          "title": "Small-$L$ C1: a weighted closure through both $r$ openings",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/inherited_r19/inherited_r18/inherited_r17/inherited_r16/Q222_Revision13/advances/revision13_c1_small_l/r_opening_closure.tex"
+        }
+      ],
+      "status": "deep_read_complete_selected_exact_expansions",
+      "note": "RO"
+    },
+    {
+      "name": "small_L_unit_eta_zeta_small_j_unit_r",
+      "predicate": "L infinitesimal; eta,zeta units; j infinitesimal; r unit",
+      "components": [
+        {
+          "number": 47,
+          "id": "p48da253a150f",
+          "title": "The actual-$j$ C1 opening: centering the whole divergent event",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/inherited_r19/inherited_r18/inherited_r17/inherited_r16/Q222_Revision13/advances/revision13_c1_small_l/j_opening_closure.tex"
+        }
+      ],
+      "status": "deep_read_complete_selected_exact_expansions",
+      "note": "JO"
+    },
+    {
+      "name": "small_L_unit_eta_zeta_small_j_small_r",
+      "predicate": "L infinitesimal; eta,zeta units; j,r infinitesimal",
+      "components": [
+        {
+          "number": 49,
+          "id": "pbf6de1d7328a",
+          "title": "The simultaneous $r,j$ opening: a harmonic full-event frame",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/inherited_r19/inherited_r18/inherited_r17/inherited_r16/Q222_Revision13/advances/revision13_c1_small_l/simultaneous_r_j_closure.tex"
+        }
+      ],
+      "status": "deep_read_complete_selected_exact_expansions",
+      "note": "HO"
+    },
+    {
+      "name": "c144_unit_all",
+      "predicate": "L,sigma infinitesimal; kappa,nu,ell units",
+      "components": [
+        {
+          "number": 191,
+          "id": "p3f02c51074be",
+          "title": "All testing charts for the unit-$\\kappa,\\nu,\\ell$ source",
+          "source": "rederivation_2026-10-22/c1/c144_unit_kappa_all_tests_rederived.tex"
+        },
+        {
+          "number": 192,
+          "id": "pd26b89cdb3f0",
+          "title": "A fresh matched-Bob completion for unit $\\kappa,\\nu,\\ell$",
+          "source": "rederivation_2026-10-22/c1/c144_unit_kappa_matched_rederived.tex"
+        }
+      ],
+      "status": "deep_read_complete_selected_exact_expansions",
+      "note": "FU + UKR; UKR14\u201317 independently simplify to zero"
+    },
+    {
+      "name": "c144_unit_kappa_small_nu",
+      "predicate": "L,sigma infinitesimal; kappa,ell units; nu infinitesimal",
+      "components": [
+        {
+          "number": 188,
+          "id": "p578719565e9d",
+          "title": "The full unit-$\\kappa$, infinitesimal-$\\nu$ source endpoint",
+          "source": "rederivation_2026-10-22/c1/c144_nu_endpoint_rederived.tex"
+        },
+        {
+          "number": 191,
+          "id": "p3f02c51074be",
+          "title": "All testing charts for the unit-$\\kappa,\\nu,\\ell$ source",
+          "source": "rederivation_2026-10-22/c1/c144_unit_kappa_all_tests_rederived.tex"
+        }
+      ],
+      "status": "deep_read_complete_selected_exact_expansions",
+      "note": "NU; uses FU remote frames without importing FU source scope"
+    },
+    {
+      "name": "c144_small_kappa_unit_fractions",
+      "predicate": "L,sigma,kappa infinitesimal; nu,ell units",
+      "components": [
+        {
+          "number": 186,
+          "id": "p2edb55cd1f69",
+          "title": "Fresh C14.4 completion when $\\kappa$ is small and both Bob source fractions are units",
+          "source": "rederivation_2026-10-22/c1/c144_finite_matched_rederived.tex"
+        },
+        {
+          "number": 187,
+          "id": "pe55ec4890781",
+          "title": "A source-free angular budget for the finite matched-Bob corner",
+          "source": "rederivation_2026-10-22/c1/c144_matched_bob_budget.tex"
+        },
+        {
+          "number": 168,
+          "id": "p8c30238a5f7d",
+          "title": "C14.4: extend the unmatched-Bob certificate to the entire small-$e$ source",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/proofs/c144/small_e_unmatched_bob.tex"
+        }
+      ],
+      "status": "deep_read_complete_selected_exact_expansions",
+      "note": "FM + source-free MB; SE source and EB complete remote frames deeply read; no missing state normal"
+    },
+    {
+      "name": "c144_small_ell",
+      "predicate": "L,sigma,kappa,ell infinitesimal; nu unit",
+      "components": [
+        {
+          "number": 185,
+          "id": "pb96c9bfcc12d",
+          "title": "C14.4 at the entire $\\ell$-infinitesimal source endpoint",
+          "source": "rederivation_2026-10-22/c1/c144_ell_endpoint_rederived.tex"
+        },
+        {
+          "number": 168,
+          "id": "p8c30238a5f7d",
+          "title": "C14.4: extend the unmatched-Bob certificate to the entire small-$e$ source",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/proofs/c144/small_e_unmatched_bob.tex"
+        }
+      ],
+      "status": "deep_read_complete_selected_exact_expansions",
+      "note": "EL; must retain circuits, both state normals, and three helper budgets"
+    },
+    {
+      "name": "c144_small_kappa_nu_bounded_tau",
+      "predicate": "L,sigma,kappa,nu infinitesimal; ell unit; tau=h/(nu/ell) bounded",
+      "components": [
+        {
+          "number": 184,
+          "id": "p80b0c5b9879f",
+          "title": "The entire bounded-$h/q$ part of the doubly small endpoint",
+          "source": "rederivation_2026-10-22/c1/c144_bounded_h_ratio_rederived.tex"
+        },
+        {
+          "number": 189,
+          "id": "p1de5b12d1927",
+          "title": "The doubly infinitesimal endpoint with bounded $\\beta/q^2$",
+          "source": "rederivation_2026-10-22/c1/c144_small_nu_bounded_beta_rederived.tex"
+        },
+        {
+          "number": 168,
+          "id": "p8c30238a5f7d",
+          "title": "C14.4: extend the unmatched-Bob certificate to the entire small-$e$ source",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/proofs/c144/small_e_unmatched_bob.tex"
+        }
+      ],
+      "status": "deep_read_complete_selected_exact_expansions",
+      "note": "BN includes SN;189 remains dictionary input, not separate terminal"
+    },
+    {
+      "name": "c144_small_kappa_nu_unbounded_tau",
+      "predicate": "L,sigma,kappa,nu infinitesimal; ell unit; tau unbounded",
+      "components": [
+        {
+          "number": 190,
+          "id": "peaa56c1a3c7a",
+          "title": "The unbounded-$h/q$ part of the doubly small endpoint",
+          "source": "rederivation_2026-10-22/c1/c144_unbounded_h_ratio_rederived.tex"
+        },
+        {
+          "number": 189,
+          "id": "p1de5b12d1927",
+          "title": "The doubly infinitesimal endpoint with bounded $\\beta/q^2$",
+          "source": "rederivation_2026-10-22/c1/c144_small_nu_bounded_beta_rederived.tex"
+        },
+        {
+          "number": 168,
+          "id": "p8c30238a5f7d",
+          "title": "C14.4: extend the unmatched-Bob certificate to the entire small-$e$ source",
+          "source": "reconstruction/salvaged_checkpoint/Q222_Recovery_Continuation_R21_2026-10-21/checkpoint_R21/proofs/c144/small_e_unmatched_bob.tex"
+        }
+      ],
+      "status": "deep_read_complete_selected_exact_expansions",
+      "note": "UN;189 dictionary reused; theta may be infinitesimal"
+    }
+  ],
+  "verification_limit": "Deep mathematical read of actual proof bodies, plus selected independent exact expansions. This does not assert every printed coefficient was independently expanded or that every other global branch is covered.",
+  "packet_manifest": "C1_REQUIRED_CERTIFICATE_PACKETS.json",
+  "shared_definitions": [
+    22,
+    23,
+    26,
+    37,
+    38,
+    40,
+    41,
+    44,
+    45,
+    46,
+    53,
+    62,
+    64,
+    88,
+    107,
+    130,
+    142,
+    160
+  ]
+}

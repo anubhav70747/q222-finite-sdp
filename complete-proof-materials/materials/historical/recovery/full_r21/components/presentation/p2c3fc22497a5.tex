@@ -1,0 +1,383 @@
+\chapter{A short proof for every noncommuting residue}
+\label{component:p2c3fc22497a5}
+\noindent\textbf{Component }\path{p2c3fc22497a5}\par
+{\small\noindent Source: \path{CORE/prior/inherited/penpaper_noncommuting.tex}\par}
+{\small\noindent SHA256: \path{2c3fc22497a59086acf6bc93ff5f5408d84300149843aa9d4f6239fb6847d29a}\par}
+{\small\noindent Inventory use: full exposition | entire noncommuting-residue proof; full exposition | C14\_\allowbreak{}ENTIRE\_\allowbreak{}ORIGINAL\_\allowbreak{}PARENT\_\allowbreak{}GRAPH; precise subordinate uses retained below\par}
+\medskip
+\section{A short proof for every noncommuting residue}
+\label{p2c3fc22497a5:sec:penpaper-noncommuting}
+
+The noncommuting part of the argument has a simple organizing principle:
+\emph{a vanishing event constrains an entangled state, and there are only four
+compatible such constraints}.  Coefficients can occur at arbitrarily many
+relative scales, but the proof only changes when a new independent constraint
+appears.  The number of relevant changes is therefore bounded by geometry.
+
+This section gives a short reading route through
+Theorem~\ref{p94dfbc8a5970:thm:all-noncommuting}.  Its conclusion concerns independent tests
+whose two measurement pairs are noncommuting \emph{in residue}.  It does not
+include infinitesimal approaches to commuting measurements, and it is not by
+itself the global finite SDP theorem.
+
+\subsection{What must be certified}
+Keep the coefficient field $K_c$ and the testing field $K_t$ separate, and put
+$T=K_c\otimes_{\mathbb R}K_t$.  A source is physical when its Bell slack is
+nonnegative at every experiment over $K_c$.  The assertion to prove is stronger
+than that ordinary positivity: its evaluation at an independent experiment
+over $K_t$ must lie in $\Sigma T^2$.
+
+Write the entire parent in the form
+\begin{equation}\label{p2c3fc22497a5:eq:pp-packets}
+ F=\sum_{e}c_e\,b_e(u,v)R_e(W,X,Y,Z;u,v)^2+d\,C,
+ \qquad c_e\geq0,\quad d\geq0.
+\end{equation}
+Here $C=D_uD_v\langle H\rangle$, with the state norm left homogeneous;
+the factors $b_e$ are the positive testing factors in
+\eqref{p0c8f420148b7:eq:parent}, including its factor four.  The $R_e$ are the eight
+measurement amplitudes.  For example,
+\[
+ R_n=X,\quad R_A=Y,\quad
+ R_m=vW-X+uvY-uZ,\quad
+ R_D=uW+uvX-Y-vZ.
+\]
+Normalize $d+\sum_e c_e=1$, unless the source is zero.  Choose a bounded
+projective state chart and finite half angles whose residues satisfy
+$u_0v_0\ne0$.  These choices use only pure testing factors.
+
+Only one algebraic certificate is needed throughout.  If a finite identity
+has the form
+\begin{equation}\label{p2c3fc22497a5:eq:pp-strict}
+ F/\sigma=a+h^TQh,\qquad a\in K_c,\quad a\geq0,
+ \quad Q\in\operatorname{Sym}(B_c\otimes B_t),\quad\bar Q\succ0,
+\end{equation}
+where $\sigma>0$ is pure coefficient, then the strict Gram lemma gives
+$F\in\Sigma T^2$.  The entries of $h$ need not be bounded.  In particular,
+rescaling a normal coordinate by a large \emph{pure coefficient} is allowed.
+The argument never takes an inverse or a square root of a mixed tensor.
+
+There are two immediate cases.  Positive slack residue is covered by
+Lemma~\ref{p25af2c58da7e:lem:residue}.  Literal $d=0$ makes
+\eqref{p2c3fc22497a5:eq:pp-packets} an event-square sum.  All subsequent steps keep every
+packet of the complete parent, including its infinitesimal terms.
+
+\subsection{Entanglement turns the events into a matching}
+For a product state, the CHSH expectation obeys
+\[
+ S=a_0(b_0-b_1)+a_1(b_0+b_1)
+ \leq |b_0-b_1|+|b_0+b_1|=2\max(|b_0|,|b_1|).
+\]
+At noncommuting residue angles equality $S=2$ is impossible.  If both Bob
+moduli are below one it is already strict.  If one equals one, the other is
+strictly smaller, and equality would require a common eigenstate of Alice's
+two noncommuting reflections.  Thus the signed core has positive testing
+residue at every product residue state.  Its actual testing value is positive,
+so $dC$ is a square after separate field square roots.  Such tests are settled.
+
+Now suppose $\bar d=0$, the slack residue vanishes, and the residue state is
+entangled.  Write that real state as an invertible $2\times2$ matrix $\Psi$.
+For any fixed Alice ray $a$, the equation
+\[
+                         a^T\Psi b=0
+\]
+selects exactly one Bob projective ray, and conversely.  Two vanishing events
+cannot therefore share a local outcome ray.  The losing events occur in a single bipartite cycle of local outcome rays,
+with cyclic edge order
+\[
+                    (\lambda,D,c,A,\alpha,m,\beta,n).
+\]
+Consequently every set of vanishing events is a matching, of size at most
+four.  This is the finiteness mechanism.
+
+Any three matching event vectors are state-linearly independent.  Indeed,
+the span of two rank-one matrices with independent left and right factors
+contains no third rank-one projective point.  A dependence among three
+rank-one matrices must therefore have a common left or right factor;
+matching edges cannot do so.  For at most three vanishing events, their
+amplitudes may hence be used as exact local state coordinates.  A nonzero
+minor at the chosen residue supplies the inverse change of coordinates;
+its denominator is a pure testing unit.  This is an exact coordinate change,
+not a linearization.
+
+Four matching edges give one of two perfect matchings.  In the representative
+$\{n,m,A,D\}$, the equations are
+\[
+ X=Y=0,\qquad vW=uZ,\qquad uW=vZ.
+\]
+Thus $u^2=v^2$.  Choosing its sign and putting $W=1$ gives the smooth curve
+$v=u$, $Z=1$.  It has four independent normal directions: three state
+directions and the angle difference.  The other perfect matching is its
+CHSH-symmetric counterpart.  Section~\ref{p76173e99815f:sec:zero-d-cycle} establishes these
+statements directly from the event amplitudes.
+
+\subsection{Unequal scales are handled one normal coordinate at a time}
+Suppose $k\leq3$ event weights $a_1,\ldots,a_k$ have already been identified,
+and every remaining coefficient is infinitesimal relative to each $a_i$.
+Let $\sigma$ be the largest remaining coefficient, including $d$, and put
+\[
+ \varepsilon_i=\sigma/a_i\in\mathfrak m_c.
+\]
+In exact event coordinates the parent has the form
+\begin{equation}\label{p2c3fc22497a5:eq:pp-diagonal}
+ F(x,y)=\sum_{i=1}^k a_i b_i(y)x_i^2+\sigma G(x,y),
+ \qquad \bar b_i(y_0)>0,
+\end{equation}
+with bounded coefficients after clearing pure testing unit denominators.
+The variables $y$ comprise the remaining projective state and angle
+coordinates.  On the exact hard kernel $x=0$, physicality implies
+\[
+                         g(y):=\overline G(0,y)\geq0.
+\]
+
+If $g(y_0)>0$, the roots $(x_i/\sqrt{\varepsilon_i},1)$ immediately give a
+strict residue Gram.  If $g(y_0)=0$ and $\nabla^2g(y_0)\succ0$, solve for an
+exact coefficient-field stationary center.  The correct scaling is
+$x_i=\varepsilon_i s_i$, separately for every normal.  Dividing the stationary
+equations gives
+\begin{align*}
+ 2b_i(y)s_i+G_{x_i}(\varepsilon s,y)&=0,\\
+ \sum_i\varepsilon_i s_i^2\nabla b_i(y)
+                 +\nabla_yG(\varepsilon s,y)&=0.
+\end{align*}
+Their residue Jacobian is block upper triangular, with diagonal blocks
+\[
+ 2\operatorname{diag}(\bar b_i(y_0)),\qquad \nabla^2g(y_0).
+\]
+Both are positive definite.  The semialgebraic implicit-function theorem,
+transferred to $K_c$, gives $(x_c,y_c)$ with
+$x_{ci}=\varepsilon_i s_{ci}$ and bounded $s_c$.
+
+Finite Taylor expansion at this exact center, on the roots
+\[
+ h=\big((x_i-x_{ci})/\sqrt{\varepsilon_i}\big)_{i=1}^k
+                  \mathbin{\oplus}(y-y_c),
+\]
+has residue Gram
+\[
+ \bar Q=\operatorname{diag}
+       \big(\bar b_1,\ldots,\bar b_k,\tfrac12\nabla^2g(y_0)\big)\succ0.
+\]
+Hard normal--tangent terms acquire a factor $\sqrt{\varepsilon_i}$;
+hard pure tangent terms acquire $\varepsilon_i$.  Higher Taylor terms leave
+an actual infinitesimal deviation in their coefficient.  The constant
+$F(x_c,y_c)/\sigma$ is nonnegative by physicality, giving
+\eqref{p2c3fc22497a5:eq:pp-strict}.  This proves Lemma~\ref{p94dfbc8a5970:lem:diagonal-hard-scales} and
+explains why no comparability of the $a_i$ is needed.
+
+The implicit-function step is local in a fixed finite-dimensional real
+parameter space.  Its existence and uniqueness statements transfer to the
+coefficient field.  It is not an infinite asymptotic expansion or an
+assumption of compactness over a non-Archimedean field.
+
+\subsection{When the signed term appears, physicality forces curvature}
+Suppose $\overline{d/\sigma}>0$ at the next scale.  With no hard constraint,
+or with one or two hard event constraints, the constrained state form is
+strictly positive on its subspace $Z=0$.  At a zero it therefore has a simple
+kernel and positive complementary state pivots.
+
+The remaining angular curvature is encoded by one small determinant.
+The parent determinant is a positive angular factor times $UVL(U,V)$,
+where $U=u^2$, $V=v^2$, and
+\begin{equation}\label{p2c3fc22497a5:eq:pp-laurent}
+ L(U,V)=h+\sum_{e\in E}q_eU^{e_1}V^{e_2},
+ \qquad q_e>0,\qquad
+ E\subset\{-1,0,1\}^2\setminus\{(0,0)\}.
+\end{equation}
+All outer coefficients are nonnegative, as follows from the factored
+determinant formulas in Section~\ref{p0c8f420148b7:sec:physical}.  Constraining one or two
+event amplitudes amounts to taking the coefficient of their weights in
+this determinant: in an adapted state basis it is the determinant of the
+remaining state form, times a positive factor.  Hence it retains the same
+Laurent structure.
+
+At a physical zero, logarithmic stationarity and curvature are exactly
+\begin{equation}\label{p2c3fc22497a5:eq:pp-newton-hessian}
+ \sum_{e\in E}w_e e=0,\qquad
+ \nabla^2_{\log U,\log V}L=\sum_{e\in E}w_e ee^T,
+ \qquad w_e=q_eU^{e_1}V^{e_2}>0.
+\end{equation}
+Thus strict angular curvature is equivalent to the active exponent vectors
+spanning the plane.  There is no eigenvalue estimate to compute.
+
+For clarity, the finite support argument establishing that span has only
+two possible obstructions.  A stationary support of rank one must lie on
+one of the four opposite-pair lines of the Newton square.  Substituting the
+factored coefficients shows that it either activates an exponent off that
+line, or leaves a perfect matching of events.  Rank zero leaves a support
+contained in a nonextendable matching triple.  For the unconstrained rank-zero case, the forbidden pairs form this
+event cycle together with its four opposite chords.  An independent triple
+must have cyclic gaps $(2,3,3)$: the only other possible gap pattern
+$(2,2,4)$ contains an opposite pair.  Rotation of the cycle carries all such
+triples to $\{\lambda,m,c\}$.  Indeed the CHSH maps $g_T$ and $g_B$ act on
+edge indices as $i\mapsto2-i$ and $i\mapsto3-i$ modulo eight, so
+$g_Bg_T$ is a one-edge rotation.  The representative has the exact kernel state
+\[
+ \psi_H=(uv,-u,u^2v,1+v^2+u^2v^2),\qquad
+ C(\psi_H)=-2D_uD_vu^2v^2<0.
+\]
+The rank-one perfect-matching case has a
+matching curve on which the core is zero but its differential is nonzero
+in every event-normal direction.  In the representative matching, with
+$B=1+t^2$, that differential is
+\[
+              2t\big(B\,dX-B\,dY-dR_m+dR_D\big).
+\]
+Imposing at most two event constraints leaves a direction with nonzero
+core derivative.  All event squares have zero derivative there, so the
+constrained parent would change sign.  Either obstruction contradicts
+physicality.  The short exact support arguments are proved in
+Theorem~\ref{pe25c50379365:thm:curvature} and
+Propositions~\ref{pb16e5066334b:prop:one-hard-event}--\ref{pf47f6a4e3a60:prop:two-hard-event}; they require
+only the displayed determinant factors and these kernel witnesses.
+
+For three hard events there is no state variable left, and there are only
+two matching orbits.  Their exact kernel states can be chosen as
+\[
+ \psi_N=(uv,-u,0,1+v^2),\qquad \psi_E=(u,0,0,v).
+\]
+After division by positive testing factors, their restrictions are
+\begin{align*}
+ L_N={}&\frac{2n(1+U)}V+2cU+\frac{2D(1+V)}U
+       +\frac{2\alpha(1+U)(1+V)}{UV}+2\beta V-d,\\
+ L_E={}&d(U/V-1)+\frac{2\lambda(1+U)}V
+       +\frac{2cU(1+V)}V+\frac{2D(U-V)^2}{UV}
+       +\frac{2\alpha(1+U)}U+2\beta(1+V).
+\end{align*}
+For $L_N$, a positive $n,D$ or $\alpha$ already supplies two independent
+exponents; if they all vanish, the remaining positive exponentials cannot
+have a stationary zero.  For $L_E$, $d>0$ supplies $(1,-1)$.  Failure of
+two-dimensional span forces $\lambda=c=\alpha=\beta=0$; the remaining
+one-variable expression has minimum
+\[
+ 2\sqrt{2D(d+2D)}-d-4D<0,
+ \qquad (d+4D)^2-8D(d+2D)=d^2>0.
+\]
+Again physicality excludes the obstruction.  Multiplication by a positive
+factor preserves the Hessian sign at a stationary zero.  The positive
+state pivots, when present, then promote angular curvature to the full
+constrained Hessian by an ordinary real Schur complement.  This Schur
+complement is used only in the residue field.  The weighted argument above
+now supplies the exact tensor certificate.
+
+\subsection{Four constraints leave one Laurent variable}
+It remains to understand what happens if all four matching events appear
+before the signed term does.  Take the matching $\{n,m,A,D\}$ and, by
+symmetry, choose its smallest weight to be $D=\mu$.  The hypotheses are
+\[
+ d/\mu\in\mathfrak m_c,\qquad
+ \lambda/\mu,c/\mu,\alpha/\mu,\beta/\mu\in\mathfrak m_c.
+\]
+Set $\eta_1=\mu/n$, $\eta_2=\mu/A$, $\eta_3=\mu/m$, so
+$0<\eta_i\leq1$; their residues may be zero.  Near the matching curve use
+$W=1$ and exact coordinates
+\[
+ R=v-X+uvY-uZ,\qquad
+ Z=(v-X+uvY-R)/u,\qquad \delta=v-u.
+\]
+The fourth amplitude equals $f+L$, where
+\[
+ f=(u^2-v^2)/u,\qquad
+ L=v(u+u^{-1})X-(1+v^2)Y+(v/u)R.
+\]
+On $X=Y=R=0$ the signed-plus-fourth packets are exactly
+\begin{equation}\label{p2c3fc22497a5:eq:pp-four-completion}
+ 4\mu f^2+2duf
+ =4\mu\left(f+\frac{du}{4\mu}\right)^2
+                  -\frac{d^2u^2}{4\mu}.
+\end{equation}
+Let $\tau=\max(\lambda,c,\alpha,\beta)$.  Testing the negative minimum in
+\eqref{p2c3fc22497a5:eq:pp-four-completion} at $u=1$ proves
+\[
+                  \tau>0,\qquad \rho=\frac{d^2}{\mu\tau}
+                  \text{ is bounded}.
+\]
+Thus physicality itself bounds the first adverse normal correction by the
+complementary event scale.
+
+Put $\varepsilon=d/\mu$ and scale the four stationary normal coordinates by
+\[
+ X=\varepsilon\eta_1s_1,\quad
+ Y=\varepsilon\eta_2s_2,\quad
+ R=\varepsilon\eta_3s_3,\quad \delta=\varepsilon r,
+ \qquad u=t.
+\]
+For $\bar\rho>0$, divide their stationary equations by $d$.  Writing
+$B=1+t^2$, $\ell=(B,-B,1)$, $b=(B^2,B^2,1)$ and
+$k=-2r+\sum_i\bar\eta_i\ell_i s_i$, their residues are
+\[
+ 8b_i s_i+8k\ell_i+(4tB,-4tB,0)_i=0,
+ \qquad -16k-4t=0.
+\]
+Subtracting suitable multiples of the last row leaves positive diagonal
+normal pivots $8b_i$ and $32$.  In particular the system remains nonsingular
+when any $\bar\eta_i$ vanishes.  Its solution is
+\[
+ s_1=-\frac{t}{4B},\quad s_2=\frac{t}{4B},\quad s_3=\frac t4,
+ \quad r=\frac t8(1-\bar\eta_1-\bar\eta_2+\bar\eta_3).
+\]
+After this normal completion, the residue potential along the matching
+curve is exactly
+\[
+ g(t)=4(1+t^2)(P+Qt^2)
+       -\frac{\bar\rho t^2}{4}(1+\bar\eta_1+\bar\eta_2+\bar\eta_3),
+\]
+where $P=\overline{(\lambda+\alpha)/\tau}$,
+$Q=\overline{(c+\beta)/\tau}$ and $P+Q>0$.  Its quotient by $4t^2$ is
+\begin{equation}\label{p2c3fc22497a5:eq:pp-final-circuit}
+ P(1+t^{-2})+Q(1+t^2)
+       -\frac{\bar\rho}{16}(1+\bar\eta_1+\bar\eta_2+\bar\eta_3).
+\end{equation}
+Physicality makes this nonnegative.  At a zero, stationarity forces
+$P/t^2=Qt^2$, so $P,Q>0$ and the logarithmic second derivative is positive.
+There is therefore a strict tangent pivot as well as the four strict normal
+pivots.  If $\bar\rho=0$, the complementary event value is already strictly
+positive and the direct normal Gram suffices.
+
+For the exact restoration, the roots at a coefficient-field stationary
+center are
+\[
+ \left(\sqrt{n/\tau}(X-X_c),\sqrt{A/\tau}(Y-Y_c),
+ \sqrt{m/\tau}(R-R_c),\sqrt{\mu/\tau}(\delta-\delta_c),t-t_c\right).
+\]
+The key bounds are transparent: for a normal weight $a_i=\mu/\eta_i$,
+\[
+ \frac{a_ix_{ci}^2}{\tau}=\rho\eta_i s_{ci}^2,
+ \qquad
+ \frac{a_ix_{ci}}{\sqrt{a_i\tau}}=\sqrt{\rho\eta_i}\,s_{ci}.
+\]
+Every quantity on the right is bounded.  Exact packetwise Taylor allocation
+therefore gives a strict Gram, whose tangent Schur complement is $g''/2$.
+Theorem~\ref{pa2cbe6ecbeb4:thm:matching-flag-terminal} supplies the full details.  No inverse
+of $\eta_i$ is needed in a bounded Gram coefficient.
+
+\subsection{The finite induction}
+Start with all event coefficients having positive residue.  If the residue
+slack is zero and $\bar d=0$, they form a nonempty matching $S$ at the
+entangled residue state.  For $|S|\leq3$, take the next scale
+\[
+             \sigma=\max\bigl(\{d\}\cup\{c_e:e\notin S\}\bigr).
+\]
+Every weight already in $S$ dominates $\sigma$.  Restricting to their exact
+event kernel gives the next-scale nonnegative residue $g$.
+
+If $g$ is positive, the weighted certificate finishes.  If $g=0$ and
+$d/\sigma$ has positive residue, the Laurent curvature argument finishes.
+Otherwise $g$ is an event-square sum.  At least one remaining coefficient
+has positive residue after division by $\sigma$, and every such event must
+vanish at the same entangled residue state.  Add all of them to $S$.
+The enlarged set is still a matching, and every coefficient outside it is
+infinitesimal relative to each of its weights.
+
+Each repetition adds an edge.  A matching has at most four edges, so there
+are at most three enlargements.  On reaching four edges the preceding
+one-variable terminal applies, independently of their relative weights.
+If $\bar d>0$ at the outset, the unconstrained Laurent curvature theorem
+and the regular-contact certificate already apply.  These cases exhaust
+all noncommuting residue tests and prove Theorem~\ref{p94dfbc8a5970:thm:all-noncommuting}.
+
+The insight is that the proof counts constraints, not coefficient regimes.
+The event cycle supplies a finite depth; physicality supplies curvature at
+the first visible signed scale; exact Taylor expansion converts that
+curvature into a separated-field sum of squares.  The commuting boundary
+requires additional arguments because the outcome rays then coalesce and
+the matching argument no longer controls the normal directions.

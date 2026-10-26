@@ -1,0 +1,172 @@
+Independent quantitative C1 review, 23 October 2026
+
+VERDICT: the positive-lambda MAIN GRAM certificate on the stated source
+and testing rectangle is supported by the displayed inequalities. I found
+no remaining parameter-denominator, coefficient-majorant, state-ratio or
+zero-weight gap in that result. The original unsigned geometric-mean
+testing feature needed a state-sign correction; the author has applied it.
+The fixed signed-angle gauge is now explicit as well. This verdict does
+not cover the retained-square feature union being developed separately,
+the lambda<=0 compilation, a local whole-parent pencil, or a global lift.
+
+Only two source files were read:
+  paper-human/Uniform_C1_Certificate.tex;
+  analysis/exact-lift-2026-10-23/fixed_box_c1.tex,
+    final SHA256 38B3E605A17579A446551291D9E31CBEACE29AD800A342ED57F7285FBDDBF48B.
+The final version also prints the raw reciprocal parent; its seven
+terms agree with the full-state polynomial reviewed here.
+I did not read or rely on the author's checker or status/count output.
+
+The following bounds were reconstructed independently from its displayed
+source identities and polynomial definitions. They do not use positivity
+labels, verification counts, or a numerical optimizer.
+
+Assume 0<x,sigma<=epsilon<=1/2000, 0<z<=1, 0<b<1, r=bz<1,
+0<h<1, E=1-xh/sigma>0, native J,M>0, and D,beta>=0.
+
+1. Source bounds. P is between1 and1+4epsilon; J,M>=1-epsilon;
+   1<=B_s<=1+6epsilon. Initially 0<e<1 gives calH<=4. BE3/BE4
+   (Uniform lines214-223) imply e<=2x+4sigma<=6epsilon. Therefore
+   |calH-H0|<=31epsilon, D<=3sigma², beta*theta<=h,
+   p<=2, ell-opening l<=1, kappa<=1, and |lambda0|<=5.
+   H0 lies in[1,2]. All these estimates use nonnegativity, not strict
+   positivity, of D,beta.
+
+2. Two exact coefficient computations (Uniform lines262-290).
+   If N_kappa=x F_x+sigma F_sigma, then ||F_x||_1=37 and
+       F_sigma=sigma*b*z²+b*z-1.
+   For the displayed polynomial N=J P R0, consecutive differences give
+       N=x N_x+sigma N_sigma,
+       ||N_x||_1=128, ||N_sigma||_1=24.
+   The remaining e-only quotient is exactly zero. The coefficient norm
+   is the sum of absolute coefficients in bounded variables x,sigma,z,b,h,e.
+   Hence |R0|<=256(x+sigma). For lambda>0, lambda<=2H+5 and
+       (x+sigma)² H=x e+2sigma e+sigma h
+   imply |R0 sqrt(lambda)|<=512 sqrt(epsilon).
+
+3. Positive-lambda complementary budget. The exact S identity (Uniform
+   lines430-443) and the preceding bounds give
+       |S-2H0|<=150epsilon; in particular1<=S<=5.
+   Thus 0<=d_G<=S, 0<rho<=S; L0<=3 and q0²=L0 rho give q0<=4.
+   No inverse of d_G, D or beta is used. d_G=0 therefore causes no
+   singular denominator in either complete Gamma conductor.
+
+4. Angular repair at c=max(0,1-K_A)>0 (Uniform lines508-561).
+   The exact N_kappa identity gives
+       |K_A-[2(1-h)H0-2h(1-r)]|<=1000epsilon.
+   Since its bracket is >=2-4h, K_A<1 implies h>=1/8. The stronger
+   residue statement h>=1/4 is not itself a valid finite-box bound.
+   From a0²(h B_s-sigma H0)<=calH, obtain a0<=8; then L0>=1/8.
+   The angular correction coefficients satisfy
+       epsilon_C<=16sigma+u+k,
+       epsilon_G<=24u+8k.
+   Also c<=4. This supplies explicit source bounds needed to make the
+   angular subtraction a small perturbation in any sufficiently small
+   independent testing box. It does not yet bound every final Gram entry.
+
+5. Uniform baseline margin. The radial matrix of J_C²+J_l² is
+       [[2,b-(1-b)],[b-(1-b),b²+(1-b)²]].
+   Its determinant is1 and trace at most3, so its smallest eigenvalue
+   is at least1/3, including limiting b=0 or1. In the lambda>0 frame,
+   the other original pivots are at least1/2 after the angular split.
+
+6. Nonpositive lambda (Uniform lines623 onward). Its defining inequality
+   implies H<=2, h<=2sigma, beta*theta²/sigma²<=2 and -8<=L<=0,
+   where L=lambda/sigma. BE3 gives |H-H0|<=18epsilon; BE4 gives
+   |d_G-2H0|<=200epsilon. Also |kappa-1/2|<=39epsilon and
+   |4kappa H-2H0|<=400epsilon. The baseline Gamma,V block has
+       determinant >=2+(7/4)L², trace<=5+L²,
+   so smallest eigenvalue >=2/5. Together with the radial form, the
+   full unperturbed matrix has a reserve of at least1/3.
+
+7. Literal faces. BE4 and calH>=1-31epsilon>0 show D and beta cannot
+   both vanish in this source domain. Either individual face is allowed.
+   D=0 is handled by S=rho>0; Gamma_star may then be identically zero,
+   which is harmless for evaluating a strict coefficient Gram. beta=0
+   is never inverted. The testing axes are literal specializations of
+   the polynomial identities; all newly introduced testing radicals
+   have nonnegative arguments after the exact sign gauges.
+
+8. Main normal reconstruction and majorant: fixed_box lines294-336.
+   I checked F1=u Gamma and F2=q w(R0-8p u²)Gamma. Differences d_i-d_j
+   equal B_i-B_j, so the common geometric mean cancels exactly. The
+   first conductor yields source factors sqrt(d_G)/S, sqrt(rho)/S,
+   rho/S all at most1. The second uses |R0|<=512epsilon,
+   |R0 q0|<=2048epsilon and |R0 sqrt(lambda)|<=1024sqrt(epsilon).
+   These prove the note's f1/f2 coefficient majorants, including both
+   complete normals. The angular subtraction uses c<=6, a0<=8,
+   L0>=1/8; its displayed U,K cross bound96sqrt(u) is deliberately
+   coarse but valid because sqrt(k)<=1.
+
+   For the remaining coefficients I reconstructed:
+     |Rx|,|Ay|<=32; |chi|<=64; |Bx|<=48epsilon; |k1|<=16.
+   For example |p-l|<=max(p,l)<=2, since both are positive. This
+   avoids the unnecessarily loose p+l estimate in Ay. All C poles
+   occur as C(1-r)<=1. The coefficient bounds of Eyy, ERR, EyR
+   stated at fixed_box lines350-362 follow term by term from these
+   estimates and D<=4sigma², beta*theta<=1; none divides by a
+   small radial opening.
+
+9. I independently rebuilt the displayed positive-coefficient polynomial
+   Q, rather than accepting its norms. Its total coefficient sum is8590;
+   its constant-testing coefficient sum is5030, and that entire part
+   has a factor s=sqrt(epsilon). After u=v² the exact testing exponent
+   support is
+      (0,0),(0,1),(0,2),(1,0),(2,0),(2,1),(4,0),(4,1).
+   The individual positive contributions to the total norm are
+      32,336,208,72,6752,32,64,48,64,128,10,4,432,24,192,48,96,48.
+   Thus every main-Gram coefficient bound follows from an explicit
+   termwise majorant, not from pointwise matrix positivity or a fit.
+
+10. Fixed directions and tensor SOS: fixed_box lines396-438.
+   With epsilon=2^-160 the constant-testing matrix differs from the
+   fixed diagonal by at most2^-60 entrywise. The 12 diagonal channels
+   Gi_i-11/48 have constant coefficient at least13/48-2^-60;
+   the132 off-diagonal channels have constant coefficient at least
+   1/96-2^-61. Both bounds exceed c0=1/256. The nonconstant source
+   coefficients are bounded by2^20< A*=2^30. Every nonconstant
+   testing monomial is between0 and2^-50<gamma=1/(14*2^38).
+   Expansion of the printed identity gives14 A* gamma=c0 and
+   exactly q0+sum a_j b_j. All factors A* +/-a_j and gamma +/-b_j
+   are positive in their own labelled fields. It therefore proves a
+   separated tensor SOS directly, without using infinitesimal TF2 on
+   a finite box. There is ample strict reserve in all144 channels.
+   The analogous single-variable circuit coefficient identity at
+   lines464-478 is exact, including its13 A* gamma constant.
+
+11. State signs, testing axes, and fixed feature span.
+   The corrected feature at lines243-250 and445 is
+      sgn(W) sqrt(u w max(WZ,0)), zero at W=0.
+   Its source coefficient in the common signed geometric mean is
+   sqrt(lambda x). Hence every one of the12 roots is source-linearly
+   spanned by the displayed12 testing functions, including W,Z<0.
+   Using the unsigned feature would not justify that span after the
+   common state flip; the correction is essential. The fixed testing
+   gauge at lines72-83 replaces signed angles by their absolute
+   values and flips X,Y,Z appropriately. It preserves the parent and
+   keeps all radicals real, with no new source dependence or extra
+   feature. No inverse state coordinate or state-ratio condition
+   occurs. Testing u=0 or w=0 is literal specialization; the common
+   geometric mean then vanishes, as needed.
+
+12. Nonempty zero faces and the unbounded-H path: lines492-526.
+   I independently expanded BE3 and BE4 and all four displayed face/
+   path numerator polynomials; their exact residuals are zero.
+   For x=sigma=t, h=Ht, the coefficientwise remainder bounds are
+   (687/4)t³ for DN and156t² for betaN when1<=H<=4. The signs at
+   H=1,2 and H=2,4 therefore bracket the respective beta=0 and D=0
+   roots, keeping the other coefficient strictly positive. The
+   displayed lambda bounds (t/4 and1/8-4t) follow with theta>=1/2.
+   On x=t²/16,sigma=t,h=3/4 the DN bracket is negative for0<t<=1
+   by domination of its negative constant; betaN is a product of
+   positive factors. The native gaps remain strict. K_A differs from
+   zero by at most4096epsilon, so this path also has c>0. Thus the
+   dangerous angular case and both individual zero faces occur inside
+   the certified domain; they were not excluded by the parameter box.
+
+The348/180 count is correct for the displayed MAIN-GRAM feature
+dictionary (12 roots times29 or15 fixed scalar multipliers). It is not
+a count for the complete parent. The note states that limitation
+explicitly; the circuit remainder and retained positive squares still
+need their own fixed testing features. No conclusion about their union
+or a global exact lift is part of this report.

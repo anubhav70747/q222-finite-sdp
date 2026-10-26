@@ -1,0 +1,236 @@
+ChatGPT said:
+
+Theorem: No fixed $C^3$ angular Gram library can certify all native Bell contacts
+Result: The proposed extension is true, with a slightly weaker regularity hypothesis than $C^3$. Every finite, source-independent angular feature library possessing a polynomial third-order Peano expansion at the commuting origin fails to certify the complete canonical source cone. It also fails to certify all strict native C1/C2 contacts and their physical relabelings in one common testing frame.
+The obstruction is quantitative: such a library cannot even certify a doubly tilted Bell bound whose excess over the local bound is $O(T^3)$.
+This generalizes the fixed-rational-multiplier obstruction without excluding arbitrary finite SDP lifts.
+1. Exact theorem
+Let $\Omega=(0,\infty)^2$, and fix finitely many real functions $f_1,\ldots,f_N$ on $\Omega$, independent of the Bell source coefficients.
+Assume each admits a polynomial cubic Peano jet at the origin:
+$\boxed{
+f_i(u,v)=p_i(u,v)+o\!\left((u^2+v^2)^{3/2}\right),
+\qquad \deg p_i\le3,
+}
+\tag{H}$
+as $(u,v)\to(0,0)$ within $\Omega$.
+Every $C^3$ extension to a neighborhood of the origin satisfies (H).
+Write
+$Z_f(u,v,\psi)=
+\bigl(f_i(u,v)\psi_\ell\bigr)_{i,\ell},
+\qquad \ell=W,X,Y,Z,$
+and define the exact Gram cone
+$\mathcal L_f=
+\left\{
+c:\exists G_c\succeq0,\quad
+F_c(u,v,\psi)=Z_f^TG_cZ_f
+\ \forall(u,v)\in\Omega,\ \forall\psi\in\mathbb R^4
+\right\}.$
+Here $F_c$ is the complete SG2 parent, not its determinant or a scalar Schur complement.
+Theorem 1 (cubic-jet obstruction).
+Let
+$B_T=A_0B_0-A_0B_1+A_1B_0+A_1B_1
+ +(1-T)(A_1+B_0),$
+and let $\ell_T=4-2T$ be its local bound. Put
+$F_{T,w}=D_uD_v\,\psi^T(wI-B_T)\psi.$
+For every finite $K>0$, there exists $T_0(K,f)>0$ such that
+$\boxed{
+F_{T,\ell_T+\kappa T^3}\notin\mathcal L_f
+\quad
+(0<T<T_0,\quad 0\le\kappa\le K).
+}
+\tag{1}$
+In particular, if $b_T=\omega_Q(T)$ is the quantum maximum and
+$w_f(T)=\inf\{w\ge b_T:F_{T,w}\in\mathcal L_f\},$
+with $w_f=+\infty$ for an empty set, then
+$\boxed{
+\lim_{T\downarrow0}
+\frac{w_f(T)-b_T}{T^3}=+\infty.
+}
+\tag{2}$
+Thus the same cubic-scale divergence proved for every fixed NPA level holds for every fixed angular-state Gram library satisfying (H).
+Proof
+Step 1. Source-dependent Gram matrices cannot escape to infinity
+First remove any linear dependencies among the fixed $f_i$ on $\Omega$. This preserves their span, regularity, and PSD Gram representability.
+Choose finitely many angular points $(u_j,v_j)\in\Omega$ such that
+$M=\sum_j f(u_j,v_j)f(u_j,v_j)^T\succ0,
+\qquad f=(f_1,\ldots,f_N)^T.$
+Such a finite evaluation design exists by linear independence.
+Evaluate a Gram identity at each state basis vector $e_\ell$. Summation gives
+$\sum_{j,\ell}F_c(u_j,v_j,e_\ell)
+=\operatorname{tr}\!\left[G_c(M\otimes I_4)\right].$
+Consequently,
+$\boxed{
+\operatorname{tr}G_c\le
+\frac{\sum_{j,\ell}F_c(u_j,v_j,e_\ell)}
+{\lambda_{\min}(M)}.
+}
+\tag{3}$
+The right side is a fixed linear functional of $c$. Hence bounded source coefficients force bounded PSD Gram matrices.
+This remains true even if a particular source-dependent Gram construction appears to have divergent entries. Once redundant fixed features are removed, a bounded Gram representation exists and every feasible PSD Gram obeys (3).
+It follows immediately that $\mathcal L_f$ is closed: for $c_n\to c$, choose bounded PSD Grams, pass to a subsequence, and preserve the identity.
+Step 2. Pull back the exact cubic degeneration
+From the proved polynomial obstruction, put $T=t^2$ and
+$\psi_t=
+\begin{pmatrix}
+1+\frac23t^4x^2y^2\\
+-\frac13t^3x^2y\\
+-tx+\frac23t^3xy^2\\
+-t^2xy-\frac23t^4x^3y
+\end{pmatrix}.$
+Its exact expansion gives
+$t^{-6}F_{t^2,\ell_{t^2}+4t^6}
+(-tx,ty,\psi_t)
+=\frac43(M(x,y)+2)+O(t^2),$
+where
+$M=1+x^4y^2+x^2y^4-3x^2y^2.$
+For $w=\ell_T+\kappa T^3$, the additional contribution is
+$(\kappa-4)t^6D_uD_v\|\psi_t\|^2.$
+Therefore, along any sequence $\kappa_t\to\kappa_0$,
+$\boxed{
+t^{-6}F_{t^2,\ell_{t^2}+\kappa_t t^6}
+(-tx,ty,\psi_t)
+\longrightarrow
+\frac43\left(M(x,y)+\frac{3\kappa_0}{4}-1\right).
+}
+\tag{4}$
+All source coefficients remain bounded as $t\to0$.
+Step 3. Every normalized smooth root has a cubic polynomial limit
+Suppose, contrary to (1), that Gram certificates exist along $t_n\downarrow0$, with bounded $\kappa_n$. Extract a subsequence with $\kappa_n\to\kappa_0$.
+By (3), the corresponding Grams $G_n$ are bounded. Their positive square roots
+$B_n=G_n^{1/2}$
+are therefore uniformly bounded.
+Choose an open rectangle $R$ with $x<0<y$. Then
+$(-t_nx,t_ny)\in\Omega$
+for all sufficiently small $t_n$. We never have to evaluate a feature outside its positive-quadrant domain.
+By (H) and the explicit polynomial form of $\psi_t$,
+$Z_f(-tx,ty,\psi_t)
+=\sum_{j=0}^{3}t^j Z_j(x,y)+o(t^3),
+\tag{5}$
+uniformly on compact subsets of $R$, where every component of $Z_j$ is a polynomial of total degree at most $j$.
+Define
+$H_n(x,y)=t_n^{-3}B_nZ_f(-t_nx,t_ny,\psi_{t_n}).$
+The Gram identity and (4) imply that $\|H_n(x,y)\|$ remains bounded on each compact rectangle.
+Equation (5) gives
+$H_n(x,y)=P_n(x,y)+o(1),$
+where
+$P_n(x,y)=
+\sum_{j=0}^3t_n^{j-3}B_nZ_j(x,y)$
+is a vector polynomial of total degree at most three.
+Its coefficients are not assumed bounded. Instead, evaluate $P_n$ at ten unisolvent points of $R$, enough to determine any bivariate polynomial of degree at most three.
+Since $H_n$ is bounded there and the remainder vanishes, all coefficients of $P_n$ are bounded by a fixed inverse interpolation matrix.
+After a subsequence,
+$P_n\longrightarrow P$
+coefficientwise, with $\deg P_j\le3$.
+Equation (4) now forces
+$\boxed{
+\frac43\left(M(x,y)+\frac{3\kappa_0}{4}-1\right)
+=\sum_jP_j(x,y)^2.
+}
+\tag{6}$
+This holds on $R$, hence everywhere as a polynomial identity.
+Step 4. Contradiction with Motzkin
+For any $a\ge0$, $M+a$ is not polynomial SOS.
+Indeed, each root in a putative SOS has degree at most three. Along either coordinate axis, the sum of squares is the constant $1+a$, so every root must be constant on both axes. Its form is necessarily
+$p_j=r_j+s_jxy+h_jx^2y+k_jxy^2.$
+The coefficient of $x^2y^2$ in $\sum_jp_j^2$ is
+$\sum_j s_j^2\ge0,$
+whereas its coefficient in $M+a$ is $-3$.
+For the physically relevant near-optimal bounds, $\kappa_0\ge4/3$, so $a=3\kappa_0/4-1\ge0$. If a smaller $\kappa_0$ were allowed, the same contradiction holds whenever $1+a\ge0$, and a negative constant term is itself impossible for an SOS.
+Thus (6) is impossible. This proves (1).
+Finally the proved bounds
+$\ell_T+\frac43T^3+O(T^4)\le b_T
+<\ell_T+4T^3$
+show $b_T-\ell_T=\Theta(T^3)$. Since every bounded cubic excess is excluded by (1), the ratio in (2) diverges. $\square$
+2. Transfer to strict native C1/C2 contacts
+Corollary 2 (native-orbit obstruction).
+There is no finite family satisfying (H) that gives exact PSD Gram identities for every strict native C1 and C2 source and every required physical relabeling, with all certificates expressed in the same original angular frame.
+The family may be augmented by the event features
+$1,\ u,\ v,\ uv$
+without changing the conclusion.
+Proof. Let $b_T$ be the attained quantum optimum. For sufficiently small $T$, the tight source $c(T,b_T)$ has all nine canonical coefficients positive and has a finite noncommuting contact.
+Fix that contact. The four state kernel equations and two angular stationarity equations define a linear subspace of canonical source coefficients. Intersect it with the nonnegative orthant and a normalization hyperplane.
+Every vertex with $d>0$ is globally valid by SG7. The contact equations bound its support by seven positive source coordinates, and SG9–SG10 classify it into the native C1/C2 physical orbits. A vertex with $d=0$ is an event combination.
+Therefore the tight source decomposes exactly into finitely many native-orbit sources and event sources. This is the contact-preserving decomposition proved in NATIVE_MULTIPLIER_OBSTRUCTION.md.
+Literal third-omission sources are limits of strict native contacts by the nondegenerate contact implicit-function argument. Closedness of $\mathcal L_f$, proved in Step 1, passes their certificates to the limit.
+Every event parent is SOS using the four polynomial angular features displayed above.
+If every strict native orbit were admitted, their finite sum would therefore give a Gram for $F_{T,b_T}$ in the fixed enlarged $C^3$ library. But
+$\frac{b_T-\ell_T}{T^3}$
+is bounded, contradicting Theorem 1. $\square$
+This proves a failure of uniform native-orbit admission, not merely failure for the non-native doubly tilted source.
+There is an important qualification: a library that is $C^3$ only in each native chart need not remain $C^3$ after physical relabeling. Reciprocal transformations such as $u\mapsto1/u$ can send the commuting origin to a different projective boundary. The corollary requires cubic Peano jets for the pulled-back features in the original frame. Smoothness in unrelated charts cannot silently replace that hypothesis.
+A finite collection of orbit-specific libraries is also excluded if every pulled-back library satisfies (H) at that same origin: simply concatenate their feature lists.
+3. What regularity has actually been ruled out?
+The decisive hypothesis is not differentiability terminology but the existence of a polynomial cubic Peano jet.
+Angular feature regularity
+Consequence
+
+Polynomial or rational, regular at the origin
+Excluded as a uniform fixed Gram library
+
+$C^\infty$, analytic, or $C^3$ near the origin
+Excluded
+
+Only a third-order polynomial Peano jet, without full $C^3$ regularity
+Still excluded
+
+$C^{2,1}$ or merely $C^2$
+Not settled by this theorem
+
+Fractional-power or ramified features without a cubic polynomial jet
+Not excluded
+
+Arbitrary finite SDP factors unrelated to fixed angular-state features
+Not excluded
+
+
+
+
+The $C^3$ assumption is sufficient, not proved sharp.
+For example,
+$h(u,v)=(u^2+v^2)^{3/2}$
+is $C^{2,1}$ at the origin but fails to have a polynomial cubic Peano jet:
+$t^{-3}h(-tx,ty)=(x^2+y^2)^{3/2}.$
+Thus the polynomial-limit step above cannot simply be extended to all $C^{2,1}$ features. This is a limitation of the method, not a counterexample to the possible impossibility of such libraries.
+The argument extends beyond $Z_f=(f_i\psi_\ell)$ to any finite library of fixed state-linear functions whose angular coefficient functions satisfy (H). In particular, evaluated finite NPA words have analytic angular coefficients near this commuting origin.
+4. Half-powers remove the scalar obstruction, but not the full parent obstruction
+The supplied identity is correct:
+$\boxed{
+\begin{aligned}
+M(u,v)={}&(u^2v-uv^2)^2\\
+&+2\bigl((uv)^{3/2}-(uv)^{1/2}\bigr)^2\\
+&+(uv-1)^2,\qquad u,v\ge0.
+\end{aligned}
+}$
+Indeed the three squares expand respectively to
+$u^4v^2+u^2v^4-2u^3v^3,$
+$2u^3v^3-4u^2v^2+2uv,$
+and
+$u^2v^2-2uv+1.$
+Their sum is exactly $M$.
+This resolves the apparent paradox: the Motzkin polynomial is not SOS in ordinary polynomial roots, but it is SOS when suitable half-power roots are permitted on the positive quadrant. Those roots do not possess the required cubic polynomial jets across the commuting boundary.
+However, the identity involves monomials such as $u^2v$, $uv^2$, and $(uv)^{3/2}$. They do not fit automatically into the degree-capped angular grid of $L_2$, whose features are only
+$u^{i/2}v^{j/2}\psi_\ell,\qquad 0\le i,j\le2.$
+Moreover, the Motzkin limit is a single scalar pullback, whereas $L_2$ demands a Gram identity for the complete four-state parent at every independent test.
+The exact strict-C2 half-power separator proves this difference is real: $L_2$ excludes an open subset of strict native C2 despite the scalar half-power identity.
+Thus the Motzkin degeneration explains why fractional regularity is relevant. It does not select denominator three or six, prove sixth-root admission, or determine the necessary degree cap.
+5. Consequence for a genuinely non-NPA finite lift
+There is no contradiction between the following statements:
+$\text{Every fixed finite NPA level is inexact}$
+and
+$\text{A different finite semidefinite lift might be exact}.$
+A fixed NPA word list produces a finite family of operator-SOS roots. After evaluating the operators on qubits, their angular coefficients are rational and regular near the commuting origin. Theorem 1 places these fixed smooth factor libraries on the impossible side of the cubic obstruction.
+A general finite SDP lift is different. Its auxiliary variables need not be truncated word moments, and its dual factorization need not use state-linear angular functions possessing $C^3$ extensions. Hidden variables and test-side factors may depend on algebraic branches, singular projective charts, or other nonsmooth structures near the critical boundary.
+The necessary structural conclusion is:
+Any exact finite SDP construction that admits all native contact sources must either escape the class of fixed finite angular-state Gram libraries with cubic polynomial Peano jets at the commuting origin, or use a genuinely different factorization architecture.
+For work on Q222, this is a substantial pruning theorem. It excludes every attempt to obtain uniform coverage merely by adding finitely many smooth angular basis functions to a polynomial or finite-word SOS representation, regardless of how complicated their source-dependent PSD Gram matrices become.
+It leaves fractional-power libraries and non-NPA semidefinite factorizations mathematically eligible, while assigning no unsupported sufficiency claim to either.
+Final theorem status: Proved under the explicit common-frame cubic-jet hypothesis, including the quantitative $T^{-3}$ divergence and native-orbit consequence. Sharpness below third-order Peano regularity remains open.
+
+
+
+
+
+
+
+
+

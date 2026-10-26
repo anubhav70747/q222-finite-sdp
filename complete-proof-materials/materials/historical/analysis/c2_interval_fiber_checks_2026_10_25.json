@@ -1,0 +1,44 @@
+{
+  "source_order": [
+    "d",
+    "lambda",
+    "n",
+    "m",
+    "C",
+    "A",
+    "D",
+    "alpha",
+    "beta"
+  ],
+  "n_numerator_identity": true,
+  "Delta_positive_coefficient_identity": true,
+  "N_positive_identity": true,
+  "all_scaled_source_identities": true,
+  "source_degrees_in_z": [
+    5,
+    -1,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    -1
+  ],
+  "max_degree": 5,
+  "source_multiplier": "2*Delta*g*j*(1-z*h)",
+  "fixed_shape_moment_PSD_orders": [
+    3,
+    3
+  ],
+  "common_factor_example": {
+    "k": "1/4",
+    "b": "19/32",
+    "r": "1/4",
+    "t": "9/8"
+  },
+  "example_common_monic_factor": "z - 1/2",
+  "example_n_numerator_at_lower_endpoint": "243/512",
+  "scope": "Exact identities for fixed-shape interval reduction; no full-C2 finite lift asserted.",
+  "no_solver_or_numerical_sweep": true
+}

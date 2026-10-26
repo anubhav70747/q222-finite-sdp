@@ -1,0 +1,76 @@
+      C2 Sector Independent Audit 0565
+
+
+
+ 
+
+
+C2 infinitesimal-total-scale: independent audit at commit 0565db3
+Scope: physical native C2, d=1, lambda=beta=0, n>=0, delta_tot infinitesimal. Source/test fields independently labelled. R1, R10, literal n=0 physical-C1 theorem, original SG/EN classification, and thin-R10 formal-C1 positivity are external, not counted as proved here. No global finite-SDP assertion.
+Pinned input: latex/certificates/c2_short.tex, commit 0565db3414e4fb2366fe4596fd2ff3c62867bbdf. Supporting latex/certificates/c1_short.tex QI3-QI10 and latex/chapters/noncommuting_refined.tex NC theorem have been examined. Independent SymPy reproducibility: C2_0565_TARGETED_EXACT_CHECKS.py (17 exact, nonsampled checks).
+A proved all-tests subcone
+If the five consecutive events m,C,A,D,alpha have positive real lower bounds relative to d, set d=1 and mu=min(1,m,C,A,D,alpha). The selected F_mu has five events all mu. Retain excess event squares from original physical parent. At noncommuting residues apply the physical-source NC theorem to the original parent, not to F_mu. At open commuting axes the selected event forms and the nonnegative CHSH core have zero common kernel, giving PD residue. At the only three nonstrict double corners the exact complete quadratic Taylor forms are NW3-NW5; at (0,0), W=1, it is (2+8mu)(u-Y)^2+2X^2+4mu*((v-X)^2+Y^2+Z^2). Their Gram is PD for mu>0; higher monomials are bounded infinitesimal entries on five deviation roots. Homogeneous reciprocals and sign congruences complete all tests. This proves the five-event theorem of c2_short.tex:7332-7465 directly from the full parent and positive-residue lemma, with no uniform margin in mu across different source fields.
+Directed R2 current: an exact algebraic source-normal lemma
+The normalized letters are S,z,q,w,h and e=zw, with source units P,J,Q,R, and K. Source differences divided by lambda*q in TU9 are denoted t_c,t_a,t_d,t_alpha,t_m,t_b. At q=0:
+
+
+
+
+J0=1-S(1-h), R0=K0=P0=1,
+rho0=h, a_t0=1-h,
+t_c0=-(1-e)(1+S)/(1-h),
+t_a0=-(1-e)/h,
+t_d0=-(1-e)/J0,
+t_m0=1-e,
+t_b0=(1-e)(1+z),
+t_alpha0=0.
+
+Write D=1-h. The UL6 scalar coefficients mathsf a,b,c,l have exact specializations
+
+
+
+
+mathsf a0/4=-(1-e)*[(1+S)*D+h+S^2*D^2/J0],
+mathsf b0=-8*t_d0*S*D,
+mathsf c0=4*t_d0,
+mathsf l0=4*(1-e)*(1+zw).
+
+The identity (1-SD)(1+SD)+S^2 D^2=1 gives
+
+
+
+
+mathsf a0=mathsf c0,
+mathsf b0+2*mathsf c0+8*(1-e)=0,
+mathsf l0=4*(1-e^2).
+
+These are UL7, proved for all source openings, without assuming h or 1-h have real-unit residue. Indeed the opening poles cancel algebraically in UL6: 1-rho0=(1-h)/R, so factors (1-rho0)^2 pay for t_c~1/(1-h), and rho0^2 pay for t_a~1/h. Hence the q,U,V monic coefficient quotients of these already bounded composites stay bounded (P,J,Q,R are source units).
+For the complete harmonic-normal correction UL12, the two UL13 arrays at q=U=V=0 are
+
+
+
+
+F_H0=h*t_a0-(1-h)*t_c0-S^2*(1-h)*t_d0=(1-e)*S/J0,
+F_v0=S*t_d0=-(1-e)*S/J0.
+
+Thus R*F_H+F_v has zero constant at q=U=V=0, and finite monic division by (q,U,V) is legitimate with bounded coefficients. Independently verify UL10's first normal q division at q=0 using P_b0=(1+z), P_m0=1, P0=1: it equals V-z*U*(1+V) exactly. No mixed inverse is introduced. TU17 whole-current square difference is exact by U_* B_*=Gamma^2; UL15 difference-of-square identities are exact from the factorization of sqrt(U_*)-sqrt(B_*). They preserve both state normals.
+Limits of this verification: the full post-UL15 scalar/normal coefficient readback into QI's toric root list (UL18, c2_short.tex:11209-11233) was not independently reproduced coefficient by coefficient. Its source-scale cancellations (UL7, UL13) and root identities check, but these do not by themselves prove that the remaining Gram perturbation has all bounded infinitesimal entries. This is the earliest residual exact verification gate in the directed weak-II chain; it is not a counterexample or proof of failure.
+Other exact checks and applicable structural lemmas
+Weak-IH IC8, IC8a (lines 4813-4838): both toric zero identities verified as literal polynomials with rho=B/y; no division by the mixed differences u^2-z or w^2-1/y.
+Strong-II LII20 (lines 1467-1479): with R=v(U-z)W, T=u sqrt(y)(U-z)W, Rh=[v Qn - s u (V-y)W]/sqrt(y), direct substitution reduces the purported zero to 0. The remaining (xi,R) Schur pivot is 2/[B0(1+B0)^2]>0. This checks the critical contact conductor and residue mechanism, not every raw LII6 coefficient.
+One-small-angle UI1 (lines 6074-6084): k Rh=v Qn+s(v^2-k^2)W gives all three relations by multiplying or squaring, with pure-source unit s^-1. The first-normal lifting depends on the complete UI2 source jets, which have not been independently expanded here.
+R3/R4 remote EN22 (lines 11956-11992): all three ordered principal minors of both stated full three-state quadratic forms match the printed rational expressions identically. Their positivity is literal for permitted T and nonzero Bob residue.
+R6/R7 source equalities RI5-RI6, RU11 (lines 13056-13074): substitute a=1/s, B=s^2 b, x=s b, e=s(1+hx-g), r=1-e, and all original stationary weights. Then F0(b=0)=A_N(b=0)=0 identically. After setting g=0 and taking the source corner, F0/b ->(h+t)/2 and A_N/(bs)->h+t. This verifies the two scale-critical native cancellations without assumptions on independent tests. It does not verify every remaining RI/RU normal-array coquotient.
+Exact R2O6 reflection, R2O10 four-state completion, and R7 RU25/26 remote two-state determinant also agree with direct symbolic expansion, so no false physical-source transfer was found there.
+The generic bounded-cap principle is valid only for a chosen bounded full quadratic form strictly positive on the real common kernel of the retained positive square rows, not for a clipped source assumed physical. The printed outer computations use precisely this form. The real cap may depend on the given testing residue; that is legitimate at the qualitative tensor-SOS level.
+Dependency verdict
+The source-angle inventory and literal source n=0 branch, taken as dependencies, partition the candidate source sector as stated. The proved five-event subcone and the exact checkable identities above are durable. The full assigned C2 sector is not independently certified here. First outstanding exact verification is the complete UL18 post-correction Gram matching for the R2 unbounded-current branch, which must control all scalar/root terms and both first state normals. A proof that UL7 and UL13 vanish, or that the scalar determinant is nonnegative, does not alone establish it. Other local leaves likewise retain their own coefficient-level verification obligations; this note does not promote printed section conclusions or unit-residue samples to a universal proof.
+
+
+
+
+
+
+
+
+

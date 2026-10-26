@@ -1,0 +1,164 @@
+Recovered R21: bounded independent C1 proof audit
+22 October 2026
+
+Result and scope
+
+No defect was found in the substantive hard step independently rederived:
+the full UH parent coefficient collection and the matched, unit-sigma angular
+Schur mechanism. Twenty exact polynomial/rational identities were checked
+symbolically, without sampling or optimization. The actual UI full-parent
+remainder and real rank-one allocation lemma also survive direct mathematical
+inspection. This is positive evidence for these operative C1 mechanisms, not
+certification of the entire C1 source/test atlas or the global finite lift.
+
+The recovered material materially differs from the earlier conditional notes:
+it supplies entire quadratic parent and first-normal formulas. The conclusion
+above is based on these actual component bodies, not their completion labels.
+
+Material read
+
+Root: recovery/full_r21/components/source/
+  pe1088004af65.tex: LC1--LC10 dispatch, ordinary UI/UH invocation.
+  pa0b854a04f49.tex: CU1--CU13, entire UI ordinary/small strip.
+  p013c226a79b3.tex: CR1--CR13 including CR5a, UI remote complement.
+  pf7ffa921793c.tex: UH1--UH20, homogeneous UH conductor.
+  p6b22e944bd7c.tex: UA1--UA3 real rank-one allocation lemma.
+
+The source identities were recovered through COMPONENT_INDEX.json, so the
+operative bodies rather than similarly named historical summaries were used.
+
+1. Full-parent UH identities independently checked
+
+The accompanying check_r21_c1_independent.py begins with UH2 itself, using
+independent generic event weights m,c,a,ell,D,beta. It substitutes
+
+ X=N_x-k h Z,   Y=q N_y+k b q^2 W,
+
+and compares the COMPLETE coefficients against UH7 and UH12. The following
+identities vanish exactly, before using any stationary-source conditions:
+
+ - entire scalar coefficient;
+ - entire coefficients of N_x and N_y;
+ - coefficients of N_x^2, N_y^2 and N_x N_y;
+ - the angular root zero UH11.
+
+Thus these are not selected normal terms or a scalar-ray calculation. In
+particular the signed core in UH2 has been retained in every comparison.
+
+At the finite-interior unit-sigma residue, z=q^2=0, substitute the actual
+source coefficients printed after UH18. The checker then rederives all six
+UH9 conditions at u=k: L=J_0=K_0=0, K_0'=-sigma J_0', and the two complete
+first-normal contact equalities. It does not replace the unknown full parent
+by an independently chosen residue matrix.
+
+2. Matched unit-sigma UH Schur mechanism: rederived, not assumed
+
+For finite interior source residues, reconstruct the six-root quadratic Gram
+from the entire scalar and first-normal coefficients. At u=k its two hard
+blocks, on (N_y,N) and (N_x,U), respectively, are exactly
+
+ 4 K a N_y^2 + 4 K ell (N_y-N)^2,
+
+ (4 beta+2)N_x^2 + (4D+2)x(N_x+U)^2.
+
+Here x=k^2, K=1+x. They are strictly positive, uniformly in the permitted
+source openings: x is a unit; a and ell have positive unit lower bounds;
+D,beta are nonnegative. The off-block coefficients vanish in residue.
+
+Let gamma_S and gamma_T denote the angular Schur complements after these
+two hard blocks. Direct symbolic elimination of these ACTUAL blocks, using
+all first normals, confirms exactly
+
+ gamma_S+sigma gamma_T = -2 p(H)/(sigma(K+sigma)),
+
+ p(H)=Kx(K+4sigma)H^2-2K(x+2sigma)H+x.                     [UH19]
+
+The closed interval in UH18 follows from D,beta>=0 and makes p strictly
+negative: it is convex and both displayed endpoint values are negative
+units when sigma is a unit. Hence the total angular Schur coefficient is
+a positive unit. At the double opening J=theta=0, sigma=K,H=1/K gives
+p=-4 and the total equals 4/K^2>0.
+
+The zero identity UH11 changes the two angular diagonals by opposite
+sigma-weighted amounts, without changing their sum above. Once the capped
+remainder is bounded, a finite REAL multiple distributes the positive sum
+into two positive diagonals. No inverse of a mixed tensor element is used.
+
+All four printed hard minimizers on page/body lines 392--400 were also
+independently recovered from these same blocks. All six associated exact
+checks passed, including the D- and beta-row defects:
+
+ D row /T = k(HK-1)J/(sigma K),
+ beta row /T = -x theta(HK-1)/(sigma K).
+
+The denominators here are units in this branch. Thus the alleged bounded
+minimizers and their vanishing defects are supported by actual algebra.
+For the b,Q opening row, N_y/S-xb(N/S)=0 identically. These formulas support
+the constrained-kernel finite-penalty argument; they are not numerical
+evidence for it. I did not regenerate the whole capped six-root matrix at
+every simultaneous opening, so that finite-cap conclusion remains dependent
+on the bounded-remainder argument printed in UH3--UH4 and the stated
+finite-dimensional penalty lemma.
+
+3. UI checks by direct algebra and mathematical inspection
+
+The CU5 entire parent remainder is consistent with the original full parent,
+not only its restriction. In particular with B=gN+p vQ, p=t/R, M=R-t,
+the combined m,beta packets, after subtracting CU2, give exactly
+
+ (4/R){(h_2+h_b D_v)N^2+2(h_b D_v-h_2)LN
+                     +[h_2(1-p)+h_b p D_v]L^2}.
+
+Subtracting the three centered excesses CU3 then gives the remaining CU5
+cross and scalar terms, using c_a=a(c-c_*), A_r=r(A_0-A_*),
+D_J=J_s(D_0-D_*). The signed d_0 terms and alpha packet have the displayed
+CU5 form after cancellation; no first state normal has been dropped.
+
+CU6 and all three CU9 identities follow literally from their root definitions.
+The monic division mechanism in CU8 is valid given its printed ideal and
+stationary-jet hypotheses: membership phi in (g^2,xi) is preserved by division
+in u-k, while evaluation at xi=epsilon^2, with epsilon^2 a unit multiple of
+g^2, supplies the displayed weighted second-order form. No small source
+number is inverted in those monic divisions. I did not separately regenerate
+the full native source identities needed for all CU8 contact hypotheses.
+
+UA1--UA3 is a valid real lemma. For d>0 and |e|<ds, the vertex lambda=e/d
+works because dh+e^2>0. If |e|>=ds and the endpoint value were nonpositive,
+put y=|e|-ds. Then h+ds^2<=-2sy and dh+e^2<=y^2. For y>0, evaluation of
+the UA1 quadratic at T=c_0/(sy) contradicts strict positivity; y=0 already
+contradicts dh+e^2>0. The d=0 limiting scalar case follows from
+h+2s|e|>0. Thus a real interior allocation exists. P^-1 and the square root
+are used only for REAL residue analysis, not as mixed-ring operations.
+
+The exact relation CU11 is the appropriate root-product zero for applying
+this allocation. This avoids the invalid alternative of inverting the full
+mixed coefficient matrix. CU13 uses only real limiting scalar inversions
+when interpreting boundary hard blocks.
+
+4. Tensor typing and limits of this review
+
+In the checked conductors, 1/q, 1/sigma, 1/k and 1/g are pure-source
+divisions; 1/u in the away-angle UI chart is a pure-testing division.
+All are legitimate in their stated fields. The roots are finite separated
+tensors. The subsequent monic identities use no mixed inverse or mixed
+square root. The final strict-residue argument is therefore correctly typed
+provided the advertised capped Gram is bounded with strictly positive real
+residue. The exact hard-Schur checks above verify a substantial instance of
+that residue claim.
+
+This review did NOT independently verify the native EN/NI source entry,
+all UI Hessian formula CU10 and all its boundary limits, the infinitesimal-
+sigma UH13--UH17 Schur computation, the complete unit-sigma away-angle
+Laurent allocation, every CR remote coefficient matrix, or every other C1
+row. Those remain separate proof dependencies. No failure of any of them
+was established here. No global theorem should be inferred solely from
+the twenty identities or from this bounded positive review.
+
+Replay evidence
+
+  check_r21_c1_independent.py
+  check_r21_c1_independent.json
+
+SymPy 1.14.0; exact expansion/factorization only; twenty named identities
+equal zero. No solver, optimization routine, sampled positivity test or
+manuscript source edit was used.

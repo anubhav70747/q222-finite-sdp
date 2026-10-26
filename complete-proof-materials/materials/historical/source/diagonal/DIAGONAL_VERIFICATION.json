@@ -1,0 +1,37 @@
+{
+  "counts_are_overlapping_algebraic_corroboration_not_a_proof_count": true,
+  "data_sha256": {
+    "B0_EXACT.json": "a60474e1076c0647ae8491c97358a036274d6b4cbdb320d2b61c4203fc1d6b22",
+    "DIAGONAL_FRAME_EXACT.json": "051aff6d15055ebeb95c1de218e0131e581e5af4af22b330614bf96f62aa5cbe",
+    "EVENT_CONTACT_EXACT.json": "79a1851167ce05354c46de6e4d6ff85bb3e51135875bb21992ae17350d7f0b6f",
+    "SEPARATED_COEFFICIENT_EXACT.json": "315a94d53c8bc424c38fbaf8252b2e04b244c016154c0cc87f4b5beb6fe74fc6"
+  },
+  "full_B0_restoration_complete": false,
+  "global_finite_lift_extraction_complete": false,
+  "groups": [
+    {
+      "checks": 4,
+      "name": "separated positive coefficient identities",
+      "status": "PASS"
+    },
+    {
+      "checks": 4,
+      "name": "denominator-free frame corroboration",
+      "status": "PASS"
+    },
+    {
+      "check_count_convention": "1 square identity + 4 tests + 1 chamber + 9 state/envelope groups",
+      "checks": 15,
+      "name": "B0 displayed coefficient module",
+      "status": "PASS"
+    },
+    {
+      "check_count_convention": "6 physical restrictions + 5 homogenizations + 1 chart + 1 nonzero vector + 6 divisions + 5 kernel identities + 1 degree tuple + 1 primitive gcd",
+      "checks": 26,
+      "name": "event stationary-contact cofactors",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS",
+  "sympy_version": "1.14.0"
+}

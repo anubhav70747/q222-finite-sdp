@@ -1,0 +1,622 @@
+**The missing native C2 contact cap is now covered by one fixed finite testing family.** The construction represents the complete unmultiplied slack, retains both independent state normals, and includes literal \(n=0\). Its evaluated rational affine system has **PSD order \(605\), \(4697\) auxiliary Gram entries, and \(948\) linear coefficient equations**.
+
+Appending the preserved Alice and Bob matrices gives an **order-\(635\)** certificate admitting this native GE1 source envelope on the **entire testing set**, including projective endpoints. **Universal canonical coverage remains unproved**, so this is not yet an exact lift of the full eight-coordinate \(Q_{222}\).
+
+### Deliverables
+
+- :chatgpt-content-reference{index="0"}[Q222_Fixed_C2_Contact_Cap.pdf](sandbox:/workspace/scratch/3bd2dd833c30/contact_cap_2026-10-23/deliverables/Q222_Fixed_C2_Contact_Cap/Q222_Fixed_C2_Contact_Cap.pdf) — proof, exact source formulas, complete witness reconstruction, and the further R1 uniformization lemma.
+- :chatgpt-content-reference{index="1"}[Q222_Fixed_C2_Contact_Cap_Source_and_Matrices.zip](sandbox:/workspace/scratch/3bd2dd833c30/contact_cap_2026-10-23/deliverables/Q222_Fixed_C2_Contact_Cap_Source_and_Matrices.zip) — LaTeX, evaluated data, preserved remote matrices, and exact reproduction scripts.
+- :chatgpt-content-reference{index="2"}[AFFINE_SYSTEM.txt](sandbox:/workspace/scratch/3bd2dd833c30/contact_cap_2026-10-23/deliverables/Q222_Fixed_C2_Contact_Cap/AFFINE_SYSTEM.txt) — complete finite function list and affine specification in plain text.
+
+The evaluated records are also available directly:
+
+- :chatgpt-content-reference{index="3"}[C2_CONTACT_AFFINE_COO.json](sandbox:/workspace/scratch/3bd2dd833c30/contact_cap_2026-10-23/deliverables/Q222_Fixed_C2_Contact_Cap/data/C2_CONTACT_AFFINE_COO.json)
+- :chatgpt-content-reference{index="4"}[GRAM_AFFINE_COO.tsv](sandbox:/workspace/scratch/3bd2dd833c30/contact_cap_2026-10-23/deliverables/Q222_Fixed_C2_Contact_Cap/data/GRAM_AFFINE_COO.tsv)
+- :chatgpt-content-reference{index="5"}[SOURCE_AFFINE_COO.tsv](sandbox:/workspace/scratch/3bd2dd833c30/contact_cap_2026-10-23/deliverables/Q222_Fixed_C2_Contact_Cap/data/SOURCE_AFFINE_COO.tsv)
+- :chatgpt-content-reference{index="6"}[COEFFICIENT_MONOMIALS.tsv](sandbox:/workspace/scratch/3bd2dd833c30/contact_cap_2026-10-23/deliverables/Q222_Fixed_C2_Contact_Cap/data/COEFFICIENT_MONOMIALS.tsv)
+
+## 1. Exact scope of the contact theorem
+
+Write the independent affine source coordinates as
+\[
+\mathbf c=(d,\lambda,n,m,C,A,D,\alpha,\beta).
+\]
+For native admission normalize \(d=1\), take the exact GE1 coefficients, and assume
+\[
+0<H_o<1,\qquad
+0<z_o,y_o\le 2^{-64}H_o,\qquad
+0<r_o<1,
+\]
+\[
+L_o=y_ot_o>0,\qquad
+j_o=1+z_or_o-t_o>0,\qquad n\ge0.
+\]
+Native \(\lambda=\beta=0\). Nonnegative event additions are admitted by the same affine system.
+
+There is **no positive lower bound** on \(H_o,r_o,t_o,j_o,1-H_o\), and no comparison between a source opening and an independent testing opening.
+
+Fix
+\[
+B_0=1-2^{-26}.
+\]
+The requested cap
+\[
+b>B_0,\qquad |c_{\rm test}|<2^{-26}
+\]
+lies in
+\[
+|u|\le2^{-12},\qquad |v|\le2^{-25},
+\]
+where
+\[
+(a,b)=\frac{(u,1)}{\sqrt{1+u^2}},\qquad
+(c_{\rm test},e)=\frac{(v,1)}{\sqrt{1+v^2}}.
+\]
+
+The two source ranges \(H_o\le2^{-12}\) and \(H_o\ge2^{-12}\) have separately proved witnesses in a **single fixed direct-sum family**. This split is used only to choose a witness; it is not an SDP constraint.
+
+| System | PSD block order, including nine source signs | Auxiliaries | Linear equations |
+|---|---:|---:|---:|
+| Contact cap | \(605\) | \(4697\) | \(948\) |
+| Contact cap plus preserved Alice/Bob blocks | \(635\) | \(4700\) | \(948\) |
+
+If \(\mathcal S\) denotes this native GE1 envelope and \(K_{635}\) the joined certificate cone, the established inclusions are
+\[
+E+\operatorname{cone}(\mathcal S)
+\ \subseteq\ K_{635}\ \subseteq\ C_{\rm can}.
+\]
+The second inclusion follows from the three fixed testing charts. Equality with \(C_{\rm can}\) is not established.
+
+## 2. The decisive repair at the native contact
+
+The troublesome contact is retained exactly. Put \(B_s=H_o+L_o\). At
+\[
+u=\sqrt{z_o},\qquad v=\sqrt{y_o},
+\]
+\[
+(W,X,Y,Z)=
+\left(
+\frac{B_s}{\sqrt{z_oy_o}},
+-r_o\sqrt{z_o},
+\frac{H_o}{\sqrt{y_o}},
+1
+\right),
+\]
+the complete slack satisfies \(F_h/4=0\), while, for \(E=aW-bY\),
+\[
+c_{\rm test}E
+=\frac{L_o}{\sqrt{(1+z_o)(1+y_o)}}>0.
+\]
+
+The new proof therefore returns to the original full-parent contact identities. It does **not** retain \(C(c_{\rm test}E)^2\) as an independently positive remainder.
+
+### A single current budget, including \(n=0\)
+
+On the weak-opening branch, use the exact R1 source change
+\[
+\begin{gathered}
+B_s=H_o+y_ot_o,\quad h_s=H_o/B_s,\quad
+c_s=1+z_or_o,\quad R_s=1+h_sz_o,\\
+B=B_sR_s/c_s,\qquad
+j=z_oc_s/(B_sR_s),\qquad
+T=y_oc_s/(B_sR_s),\\
+p=z_o(1-r_o)/(B_sR_s),\qquad H=t_o/c_s,
+\qquad x=jB=z_o,\quad y=TB=y_o.
+\end{gathered}
+\]
+These source quantities obey
+\[
+0<B<2^{-11},\qquad 0<j,T<2^{-63},\qquad 0<p<j,\qquad 0<H<1.
+\]
+
+Make the pure-testing state change
+\[
+t=\frac{X+uZ}{1+u^2},\quad
+r=\frac{Y-uW}{1+u^2},\quad
+w=\frac{W+uY}{1+u^2},\quad
+\zeta=\frac{Z-uX}{1+u^2}.
+\]
+The two independent state normals are
+\[
+N_0=t-pvw,\qquad M_0=-r-Hv\zeta.
+\]
+Also put
+\[
+b_{\rm cur}=vw-\frac{u\zeta}{j},\qquad
+\mu=m(1-p),\qquad h_0=\mu+\frac12.
+\]
+
+The exact current completion is
+\[
+h_0N_0^2+n(N_0+jb_{\rm cur})^2
+=\widehat N^2+M_e b_{\rm cur}^2,
+\]
+where
+\[
+\widehat N=\sqrt{n+h_0}
+\left(N_0+\frac{nj}{n+h_0}b_{\rm cur}\right),
+\qquad
+M_e=\frac{nh_0j^2}{n+h_0}.
+\]
+
+The new uniform estimate is
+\[
+\boxed{\quad
+p^2\le8\Sigma,\qquad
+\Sigma=M_e+\frac{f_c}{y}>0.
+\quad}
+\]
+Here \(f_c\) is the original positive circuit mass, given explicitly by the source dictionary in the proof.
+
+The estimate has a short proof. Set \(\rho=p/j\). The exact physical numerator gives
+\[
+\rho\le\frac52(n+B),\qquad
+\frac{f_c}{y}\ge\frac{j^2B}{3}.
+\]
+If \(n\le h_0\), then \(M_e\ge nj^2/2\), and \(\rho^2\le\rho\) gives
+\[
+p^2\le5M_e+\frac{15}{2}\frac{f_c}{y}.
+\]
+If \(n\ge h_0\), then \(M_e\ge j^2/4\), giving \(p^2\le4M_e\).
+
+At \(n=0\),
+\[
+M_e=0,\qquad
+\widehat N=\sqrt{h_0}N_0,\qquad
+\Sigma=f_c/y>0.
+\]
+Thus the completion never divides by a disappearing current mass.
+
+### Exact purchases from the combined mass
+
+Use homogeneous contact coordinates
+\[
+U=\frac{u}{\sqrt x},\qquad V=\frac{v}{\sqrt y},\qquad
+\mathcal Z=\frac{\zeta}{\sqrt{jT}},
+\]
+\[
+Q_*=Uw-V\mathcal Z,\quad
+B_*=Vw-U\mathcal Z,\quad
+R_*=\mathcal Z-UVw,
+\]
+and
+\[
+\Psi_h=(U-V)^2w^2+\mathcal Z^2(1-UV)^2
+       +2UV(w-\mathcal Z)^2.
+\]
+These expressions divide only by source quantities.
+
+The exact circuit identity is
+\[
+\mathcal E_h=(1+V^2)\Psi_h-V^2B_*^2
+=Q_*^2+R_*^2+V^2(w-UV\mathcal Z)^2.
+\]
+With
+\[
+\gamma=\frac{p^2}{\Sigma}\le8,
+\]
+it yields
+\[
+\begin{aligned}
+&\gamma M_ev^4b_{\rm cur}^2
++\gamma f_c(yv^2+v^4)\Psi_h
+-(pv^2b_{\rm cur})^2\\
+&\hspace{35mm}=\gamma f_cyv^2\mathcal E_h,
+\end{aligned}
+\]
+and
+\[
+\begin{aligned}
+&\gamma TM_eu^2v^2b_{\rm cur}^2
++\gamma Tf_cu^2(y+v^2)\Psi_h
+-(\sqrt T\,puvb_{\rm cur})^2\\
+&\hspace{35mm}=\gamma Tf_cyu^2\mathcal E_h.
+\end{aligned}
+\]
+
+Every coefficient here is source-only. Every testing root belongs to the finite span listed below.
+
+The signed scalar terms are recombined before any positivity assertion:
+\[
+g_cV^2\Psi_h-g_cV^2B_*^2
+=g_c(\mathcal E_h-\Psi_h),
+\]
+and, with \(\kappa=-k_c>0\),
+\[
+-\kappa(VQ_*+R_*)^2
+=-2\kappa V^2Q_*^2-2\kappa R_*^2
++\kappa(VQ_*-R_*)^2.
+\]
+This is the contact-compatible replacement for the previous retained positive square.
+
+Both full normal couplings remain in the reconstruction. In the original notation they include
+\[
+L_N^{\rm rem}
+=\left(K_R+\frac{\alpha}{B}\right)R_u
++\alpha uR+\frac12pv^2b_{\rm cur}
++\frac{K_c}{j}uvq,
+\]
+\[
+L_M=C_q q+\mu uvb_{\rm cur}
++v(\alpha-BTCHu^2)R,
+\]
+where
+\[
+q=v\zeta-Tuw,\qquad R=\zeta-\frac{uv}{B}w,\qquad
+R_u=v(u^2-x)w.
+\]
+The full formulas and all \(44\) weak witness records are printed in the package. Two independent symbolic contractions reconstructed the parent with \(N_0\) and \(M_0\) algebraically independent.
+
+## 3. Uniform bounds that actually fix the gates
+
+### Weak openings
+
+After the exact allocations above and the original radial identity, the eleven-row Gram has the form
+\[
+Q(u,v)=Q_{00}+\sum Q_{ij}u^iv^j,
+\qquad Q_{00}\succeq I/4.
+\]
+Its complete nonconstant support and uniform operator bounds are
+\[
+\begin{array}{c|rrrrrrrr}
+u^iv^j&u&v&u^2&v^2&uv&u^2v&u^2v^2&v^4\\ \hline
+\|Q_{ij}\|_2\text{ bound}&1&1&512&8&16&4&16&128.
+\end{array}
+\]
+
+The constant reserve follows from an explicit Schur estimate. The substantial constant block has diagonals \((1,1,16,8)\); after subtracting \(I/2\), its correction has norm at most
+\[
+2\left(\frac2{31}+\frac1{30}\right)
+=\frac{91}{465}<\frac12.
+\]
+The remaining diagonals and couplings leave \(Q_{00}\succeq I/4\).
+
+Fix, once and for all,
+\[
+p_{ij}(u,v)=(4096u)^i(33554432v)^j.
+\]
+If \(r_{ij}\) is the bound in the table, set
+\[
+\alpha_{ij}=r_{ij}2^{-12i-25j},
+\qquad A_{ij}=2^{-12i-25j}Q_{ij}.
+\]
+The exact budget sum is
+\[
+\sum\alpha_{ij}
+=\frac{2720379395100337099505665}
+       {9903520314283042199192993792}
+<\frac1{1024}.
+\]
+Consequently
+\[
+\begin{aligned}
+Q={}&Q_{00}-\sum\alpha_{ij}I\\
+&+\sum\left[
+\frac{\alpha_{ij}I+A_{ij}}2(1+p_{ij})
++\frac{\alpha_{ij}I-A_{ij}}2(1-p_{ij})
+\right],
+\end{aligned}
+\]
+with source-only PSD coefficients and reserve at least \(255I/1024\).
+
+Thus the testing thresholds are exactly \(1\). No TF1 or TF2 threshold remains.
+
+### Strong openings
+
+For \(H_o\ge2^{-12}\), the original LII contact identity admits the source caps
+\[
+\ell_*=\frac{H_o}{4},\qquad \alpha_*=\frac{H_o^2}{8}.
+\]
+Adding \(4/H_o\) times the original zero conductor and making the exact shear
+\[
+\left(
+\sqrt{H_o}N,\;
+\xi+u\zeta_s+\frac{R}{H_o(1+H_o)},\;
+H_o\zeta_s,\;
+\sqrt{H_o}R_h,\;
+R/\sqrt{H_o},\;
+T_s/\sqrt{H_o}
+\right)
+\]
+places all six roots in the source span of
+\[
+\mathcal H=
+(X,Y,Z,vW,uvW,uW,uvX,vZ,u^2vW,u^3W,uZ).
+\]
+
+The normalized six-row Gram has the fixed monomial support
+\[
+\begin{gathered}
+00,01,02,10,11,12,20,21,22,30,32,40,42,50.
+\end{gathered}
+\]
+Its source-only baseline is
+\[
+\operatorname{diag}
+\left(1,2,\frac12,\frac2{1+H_o},
+\frac2{(1+H_o)^2},4\right)
++\frac{e_4e_6^T+e_6e_4^T}{1+H_o}
+\succeq I/2.
+\]
+The exact coefficient estimates give constant error at most \(2^{-40}\), and total constant-error-plus-gate budget below \(1/8\). Hence the fixed-gate decomposition retains at least \(3I/8\) in this unscaled remainder.
+
+The proof supplies the actual six-row polynomial matrix, its monic divisions, all \(51\) coefficient records, and the rational coefficient estimates. The six contact remainders vanish identically after literal GE1 substitution. No limiting source values are used.
+
+## 4. The complete fixed function list
+
+The following is sufficient to reconstruct the whole contact system.
+
+### Strong blocks
+
+Divide these functions by \(\sqrt{D_uD_v}\), where \(D_u=1+u^2\), \(D_v=1+v^2\).
+
+The order-\(20\) base is \(\mathcal H\) followed by
+\[
+(uX,vX,v^2W,uv^2W,vY,uvY,W,uvZ,uY).
+\]
+The last function \(uY\) is necessary for the literal \(A\)-event face.
+
+For each of
+\[
+(0,1),(0,2),(1,0),(1,1),(1,2),(2,0),(2,1),
+(2,2),(3,0),(3,2),(4,0),(4,2),(5,0),
+\]
+include both
+\[
+\sqrt{1+p_{ij}}\,\mathcal H,\qquad
+\sqrt{1-p_{ij}}\,\mathcal H.
+\]
+These are twenty-six order-\(11\) blocks. The strong total is \(306\).
+
+### Weak blocks
+
+Divide every function below by \(\sqrt{D_v}\). In the displayed order, the base has \(34\) functions.
+
+| Factor | Monomial multipliers |
+|---|---|
+| \(t\) | \(1,v,u,uv\) |
+| \(r\) | \(1,v,u,uv\) |
+| \(w\) | \(1,v,u,v^2,uv,u^2,v^3,uv^2,u^2v\) |
+| \(\zeta\) | \(1,v,u,v^2,uv,uv^2,u^2v,uv^3,u^2v^2\) |
+| \(\sqrt{uv}\,w,\ \sqrt{uv}\,\zeta\) | \(1\) for each |
+| \(\sqrt{uw\zeta}\) | \(1,v,u,uv\) |
+| \(\sqrt{vw\zeta}\) | \(1,u\) |
+
+The principal sublist has one-based indices
+\[
+1,5,10,11,13,15,16,17,18,19,20,22,23,24,27,28.
+\]
+For each of the eight weak gate monomials, include both gate signs times this sublist. The weak total is
+\[
+34+16\cdot16=290.
+\]
+
+The full Gram block list is therefore
+\[
+20,\quad 26\times11,\quad34,\quad16\times16.
+\]
+
+### Signs and literal boundaries
+
+The physical sign gauge
+\[
+(u,v,W,X,Y,Z)\longmapsto
+(\epsilon u,\eta v,W,\eta X,\epsilon Y,\epsilon\eta Z)
+\]
+preserves all nine source summands individually.
+
+The exact original sign-joining identity gives
+\[
+K_{\rm core}<0\ \Longrightarrow\ uvw\zeta>0.
+\]
+The four gauges therefore reduce this region to \(u,v>0,\ w\zeta>0\), where the displayed radicals are defined. On \(K_{\rm core}\ge0\), the fixed core root and the eight event roots give the direct diagonal certificate.
+
+All eight positive-event rays have explicit integer-root witnesses in the strong base. Thus \(d=0\) is included literally. The weak completion also treats \(n=0\) literally. Finite coefficient limits of the admitted cap cone follow from a finite-evaluation Gram bound after the functions have been fixed; compactness is not used to choose them.
+
+## 5. The rational affine matrices and text records
+
+There are no nonlinear source constraints in the extracted SDP.
+
+Use
+\[
+X=t-u\zeta,\quad Y=r+uw,\quad
+Z=\zeta+ut,\quad W=w-ur.
+\]
+The nine target columns are
+\[
+\begin{aligned}
+T_\lambda&=D_u(W+vX)^2,&
+T_n&=D_uD_vX^2,\\
+T_m&=(vW-X+uvY-uZ)^2,&
+T_C&=D_v(uW-Y)^2,\\
+T_A&=D_uD_vY^2,&
+T_D&=(uW+uvX-Y-vZ)^2,\\
+T_\alpha&=D_u(vY-Z)^2,&
+T_\beta&=D_v(X+uZ)^2,
+\end{aligned}
+\]
+\[
+T_d=\frac12\left(T_D+T_\alpha+T_\beta-D_uD_vZ^2\right).
+\]
+Their source-weighted sum is exactly \(D_uD_vF_h/4\).
+
+Products reduce in
+\[
+\mathbb Q[u,v,t,r,w,\zeta,s_u,s_v,s_z]/
+(s_u^2-u,\ s_v^2-v,\ s_z^2-w\zeta).
+\]
+The square classes are independent, so the eight parity monomials give an exact coefficient basis. Source and testing fields remain separate.
+
+For a strong block, its product weight is \(1\) or \(1\pm p_{ij}\). For a weak block it is \(D_u\) or \(D_u(1\pm p_{ij})\). For every reduced monomial \(m_\nu\), impose
+\[
+\boxed{
+\sum_b\sum_{i\le j}
+(2-\delta_{ij})[m_\nu](\omega_bh_ih_j)\,G_b[i,j]
+-\sum_{k=1}^{9}[m_\nu]T_k\,c_k=0.
+}
+\]
+The PSD pencil is
+\[
+\boxed{\operatorname{diag}(\mathbf c,G_1,\ldots,G_{44})\succeq0.}
+\]
+
+This finite prescription has been **evaluated** into \(22802\) nonzero Gram records and \(120\) source records in \(948\) equations. Gram variables are actual symmetric entries; the product columns include the off-diagonal factor \(2\).
+
+For example, these are four literal sparse rows, with all omitted coefficients zero:
+
+```text
+Equation 25, t^2:
+  sum(b=1..44) G_b[1,1] = n + m + beta + d/2
+
+Equation 17, r^2:
+  sum(b=1..27) G_b[2,2] + G_28[5,5]
+    + sum(b=29..44) G_b[2,2] = C + A + D + d/2
+
+Equation 9, w^2:
+  G_1[18,18] + G_28[9,9] = lambda
+
+Equation 3, zeta^2:
+  sum(b=1..27) G_b[3,3] + G_28[18,18]
+    + sum(b=29..44) G_b[9,9] = alpha
+```
+
+The nonlinear source formulas in the proof only select feasible values of these free Gram entries.
+
+The joined all-test native certificate is
+\[
+\operatorname{diag}
+\bigl(
+\mathbf c,G_1,\ldots,G_{44},
+Q_{20}(\mathbf c;\tau_R,p_R,q_R),Q_{10}(\mathbf c)
+\bigr)\succeq0,
+\]
+with the same \(948\) equations. The old arrays were copied unchanged. Their three auxiliary variables remain free, giving total order \(635\) and \(4700\) auxiliaries.
+
+## 6. A further uniformization beyond this envelope
+
+The same harmonic mechanism extends to the full R1 corner
+\[
+0<B,jB,T\le2^{-10},\qquad
+0<p<\min\{j,1\},\qquad
+0<H<1,\qquad n\ge0,
+\]
+without bounding \(j\) or \(jT\):
+\[
+\boxed{p^2\le32(M_e+f_c/y).}
+\]
+
+On its \(p\ge\tfrac12\) part, put
+\[
+\theta=\frac{M_e}{M_e+f_c/y},\qquad
+\Sigma=M_e+f_c/y\ge\frac1{128}.
+\]
+The original two radial identities can be averaged with the **source-only** weights \(\theta,1-\theta\). This gives one exact identity
+\[
+f_ca_\Psi\Psi_h+q_ca_QQ_*^2+M_ea_Eb_{\rm cur}^2-R_u^2
+=x^2y\bigl((1-\theta)\mathcal R_A+\theta\mathcal R_B\bigr),
+\]
+where both remainders are explicit SOS and
+\[
+\begin{aligned}
+a_\Psi&=\frac{8\theta xyu^2}{f_c}
+       +\frac{4(x^2+xu^2+u^4)}{\Sigma},\\
+a_Q&=\frac{8\theta yu^4+4(1-\theta)xyu^2}{q_c},\\
+a_E&=\frac{8u^4+2(u^2-x)^2}{\Sigma}.
+\end{aligned}
+\]
+
+The opposite-normal term is treated while retaining its whole moving-zero polynomial:
+\[
+L=\alpha-BTCHu^2,\qquad
+a_R=jT^2v^2L^2.
+\]
+Its root is the polynomial
+\[
+\sqrt j\,Tv(\alpha-BTCHu^2),
+\]
+so its moving zero introduces no moving testing radical. An analogous source-weighted average purchases \(a_RR_*^2\).
+
+All roots of these two identities lie in a displayed **50-function testing span**. Moreover, the coefficient estimates—not merely pointwise estimates—give a fixed-gate representation of each residual coefficient
+\[
+r_i=1-16a_i-o_i,\qquad i\in\{\Psi,Q,E\}.
+\]
+Only these nine gate exponents occur:
+\[
+\mathcal J=
+\{(2,0),(4,0),(0,2),(2,2),(4,2),(6,2),(0,4),(2,4),(4,4)\}.
+\]
+Writing
+\[
+16a_i+o_i=c_{i0}+\sum_{\nu\in\mathcal J}c_{i\nu}P_\nu,
+\qquad P_\nu=(4096u)^{\nu_1}(33554432v)^{\nu_2},
+\]
+the exact identity is
+\[
+r_i=\rho_i+\sum_\nu c_{i\nu}^{+}(1-P_\nu)
+                  +\sum_\nu c_{i\nu}^{-}P_\nu,
+\]
+with source-only nonnegative coefficients and reserves
+\[
+\rho_\Psi\ge\frac{15}{16},\qquad
+\rho_Q\ge1-2^{-23},\qquad
+\rho_E\ge\frac{29}{32}.
+\]
+Every exponent is even. Thus the only additional radicals are the **nine fixed functions** \(\sqrt{1-P_\nu}\), all with threshold \(1\).
+
+This removes the old source-dependent split for these radial and opposite-normal allocations, including \(n=0\). **It does not yet complete the full-parent Gram on that larger R1 corner.**
+
+## 7. The remaining implication
+
+The contact-cap quantifier has been closed:
+\[
+\forall\,\mathbf c\in\mathcal S\quad
+\exists\,G_{\mathbf c}\succeq0\quad
+\forall\,t\in\mathcal T_{\rm cap}:
+\quad
+P_{\mathbf c}(t)=\Phi(t)^TG_{\mathbf c}\Phi(t),
+\]
+for the actual fixed family above.
+
+The remaining global requirement is still
+\[
+\forall\,\mathbf c\in C_{\rm can}\quad
+\exists\,G_{\mathbf c}\succeq0:
+\qquad
+\mathcal A_{\Phi_{\rm global}}G_{\mathbf c}
+=\mathcal B\mathbf c
+\]
+for **one specified, evaluated finite family** covering all canonical source regions.
+
+The broader R1 budget lemma supplies part of that construction. A uniform completion of the remaining full-parent normal couplings, followed by admission of the other canonical source regions, is still missing. I have not proved \(C_{\rm can}\subseteq K_{635}\), or a reduction that would imply it. The accepted full-polar assembly therefore remains available but cannot yet turn these matrices into an exact full-\(Q_{222}\) lift.
+
+### Reproduction and preservation
+
+From the unpacked directory:
+```sh
+python3 scripts/reproduce.py
+python3 scripts/check_full_r1_harmonic.py
+```
+These use the Python standard library. The first rebuilds the nine matrix/function files byte-for-byte, checks all eight positive-event certificates, and verifies the unchanged remote hashes and chart assembly.
+
+The symbolic proof checks use SymPy 1.14.0:
+```sh
+python3 scripts/check_restricted_r1_source_bounds.py
+python3 scripts/check_rfn11_witness.py
+python3 scripts/check_sign_join.py
+python3 scripts/check_averaged_r1_budgets.py
+python3 scripts/strong/run.py
+```
+All completed successfully. No SDP search or tolerance-based feasibility was used.
+
+```text
+New source-and-matrices ZIP:
+c22fae5078293f1f60d8a38b55ab845740d90cad3461637663d0519fae99d522
+
+Evaluated contact affine COO:
+4210370d1fe6247137d28133ca7ab44ba898256e9aada56741ff7be26cf9657b
+
+Preserved previous fixed-C2-gates ZIP:
+6ff5792f53c65afb7802c8b193c3c478b74bddb59cd4d2dcc81617774cd65eab
+```
+
+The previous six-page artifact and its matrices are preserved. The original complete companion has not been replaced or modified.

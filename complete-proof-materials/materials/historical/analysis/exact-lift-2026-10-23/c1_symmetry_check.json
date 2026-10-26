@@ -1,0 +1,816 @@
+{
+  "physical_relabellings_total": 128,
+  "CHSH_preservers": 16,
+  "event_action": "i -> eps*i+j mod8 in cycle lambda,D,C,A,alpha,m,beta,n",
+  "raw_zero_edge_stabilizers_without_fixing_CHSH": [
+    {
+      "party_swap": false,
+      "A_input_permutation": [
+        0,
+        1
+      ],
+      "B_input_permutation": [
+        0,
+        1
+      ],
+      "A_signs": [
+        1,
+        -1
+      ],
+      "B_signs": [
+        1,
+        1
+      ]
+    },
+    {
+      "party_swap": false,
+      "A_input_permutation": [
+        0,
+        1
+      ],
+      "B_input_permutation": [
+        0,
+        1
+      ],
+      "A_signs": [
+        1,
+        1
+      ],
+      "B_signs": [
+        1,
+        1
+      ]
+    },
+    {
+      "party_swap": false,
+      "A_input_permutation": [
+        0,
+        1
+      ],
+      "B_input_permutation": [
+        1,
+        0
+      ],
+      "A_signs": [
+        1,
+        -1
+      ],
+      "B_signs": [
+        -1,
+        -1
+      ]
+    },
+    {
+      "party_swap": false,
+      "A_input_permutation": [
+        0,
+        1
+      ],
+      "B_input_permutation": [
+        1,
+        0
+      ],
+      "A_signs": [
+        1,
+        1
+      ],
+      "B_signs": [
+        -1,
+        -1
+      ]
+    }
+  ],
+  "preserving_relabellings": [
+    {
+      "party_swap": false,
+      "A_input_permutation": [
+        0,
+        1
+      ],
+      "B_input_permutation": [
+        0,
+        1
+      ],
+      "A_signs": [
+        -1,
+        -1
+      ],
+      "B_signs": [
+        -1,
+        -1
+      ],
+      "new_event_to_old": {
+        "lambda": "alpha",
+        "D": "m",
+        "C": "beta",
+        "A": "n",
+        "alpha": "lambda",
+        "m": "D",
+        "beta": "C",
+        "n": "A"
+      },
+      "event_index_permutation": [
+        4,
+        5,
+        6,
+        7,
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "party_swap": false,
+      "A_input_permutation": [
+        0,
+        1
+      ],
+      "B_input_permutation": [
+        0,
+        1
+      ],
+      "A_signs": [
+        1,
+        1
+      ],
+      "B_signs": [
+        1,
+        1
+      ],
+      "new_event_to_old": {
+        "lambda": "lambda",
+        "D": "D",
+        "C": "C",
+        "A": "A",
+        "alpha": "alpha",
+        "m": "m",
+        "beta": "beta",
+        "n": "n"
+      },
+      "event_index_permutation": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "party_swap": false,
+      "A_input_permutation": [
+        0,
+        1
+      ],
+      "B_input_permutation": [
+        1,
+        0
+      ],
+      "A_signs": [
+        -1,
+        1
+      ],
+      "B_signs": [
+        1,
+        1
+      ],
+      "new_event_to_old": {
+        "lambda": "A",
+        "D": "C",
+        "C": "D",
+        "A": "lambda",
+        "alpha": "n",
+        "m": "beta",
+        "beta": "m",
+        "n": "alpha"
+      },
+      "event_index_permutation": [
+        3,
+        2,
+        1,
+        0,
+        7,
+        6,
+        5,
+        4
+      ]
+    },
+    {
+      "party_swap": false,
+      "A_input_permutation": [
+        0,
+        1
+      ],
+      "B_input_permutation": [
+        1,
+        0
+      ],
+      "A_signs": [
+        1,
+        -1
+      ],
+      "B_signs": [
+        -1,
+        -1
+      ],
+      "new_event_to_old": {
+        "lambda": "n",
+        "D": "beta",
+        "C": "m",
+        "A": "alpha",
+        "alpha": "A",
+        "m": "C",
+        "beta": "D",
+        "n": "lambda"
+      },
+      "event_index_permutation": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "party_swap": false,
+      "A_input_permutation": [
+        1,
+        0
+      ],
+      "B_input_permutation": [
+        0,
+        1
+      ],
+      "A_signs": [
+        -1,
+        -1
+      ],
+      "B_signs": [
+        -1,
+        1
+      ],
+      "new_event_to_old": {
+        "lambda": "D",
+        "D": "lambda",
+        "C": "n",
+        "A": "beta",
+        "alpha": "m",
+        "m": "alpha",
+        "beta": "A",
+        "n": "C"
+      },
+      "event_index_permutation": [
+        1,
+        0,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2
+      ]
+    },
+    {
+      "party_swap": false,
+      "A_input_permutation": [
+        1,
+        0
+      ],
+      "B_input_permutation": [
+        0,
+        1
+      ],
+      "A_signs": [
+        1,
+        1
+      ],
+      "B_signs": [
+        1,
+        -1
+      ],
+      "new_event_to_old": {
+        "lambda": "m",
+        "D": "alpha",
+        "C": "A",
+        "A": "C",
+        "alpha": "D",
+        "m": "lambda",
+        "beta": "n",
+        "n": "beta"
+      },
+      "event_index_permutation": [
+        5,
+        4,
+        3,
+        2,
+        1,
+        0,
+        7,
+        6
+      ]
+    },
+    {
+      "party_swap": false,
+      "A_input_permutation": [
+        1,
+        0
+      ],
+      "B_input_permutation": [
+        1,
+        0
+      ],
+      "A_signs": [
+        -1,
+        1
+      ],
+      "B_signs": [
+        -1,
+        1
+      ],
+      "new_event_to_old": {
+        "lambda": "C",
+        "D": "A",
+        "C": "alpha",
+        "A": "m",
+        "alpha": "beta",
+        "m": "n",
+        "beta": "lambda",
+        "n": "D"
+      },
+      "event_index_permutation": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        0,
+        1
+      ]
+    },
+    {
+      "party_swap": false,
+      "A_input_permutation": [
+        1,
+        0
+      ],
+      "B_input_permutation": [
+        1,
+        0
+      ],
+      "A_signs": [
+        1,
+        -1
+      ],
+      "B_signs": [
+        1,
+        -1
+      ],
+      "new_event_to_old": {
+        "lambda": "beta",
+        "D": "n",
+        "C": "lambda",
+        "A": "D",
+        "alpha": "C",
+        "m": "A",
+        "beta": "alpha",
+        "n": "m"
+      },
+      "event_index_permutation": [
+        6,
+        7,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "party_swap": true,
+      "A_input_permutation": [
+        0,
+        1
+      ],
+      "B_input_permutation": [
+        0,
+        1
+      ],
+      "A_signs": [
+        -1,
+        1
+      ],
+      "B_signs": [
+        -1,
+        1
+      ],
+      "new_event_to_old": {
+        "lambda": "beta",
+        "D": "m",
+        "C": "alpha",
+        "A": "A",
+        "alpha": "C",
+        "m": "D",
+        "beta": "lambda",
+        "n": "n"
+      },
+      "event_index_permutation": [
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0,
+        7
+      ]
+    },
+    {
+      "party_swap": true,
+      "A_input_permutation": [
+        0,
+        1
+      ],
+      "B_input_permutation": [
+        0,
+        1
+      ],
+      "A_signs": [
+        1,
+        -1
+      ],
+      "B_signs": [
+        1,
+        -1
+      ],
+      "new_event_to_old": {
+        "lambda": "C",
+        "D": "D",
+        "C": "lambda",
+        "A": "n",
+        "alpha": "beta",
+        "m": "m",
+        "beta": "alpha",
+        "n": "A"
+      },
+      "event_index_permutation": [
+        2,
+        1,
+        0,
+        7,
+        6,
+        5,
+        4,
+        3
+      ]
+    },
+    {
+      "party_swap": true,
+      "A_input_permutation": [
+        0,
+        1
+      ],
+      "B_input_permutation": [
+        1,
+        0
+      ],
+      "A_signs": [
+        -1,
+        -1
+      ],
+      "B_signs": [
+        -1,
+        1
+      ],
+      "new_event_to_old": {
+        "lambda": "n",
+        "D": "lambda",
+        "C": "D",
+        "A": "C",
+        "alpha": "A",
+        "m": "alpha",
+        "beta": "m",
+        "n": "beta"
+      },
+      "event_index_permutation": [
+        7,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "party_swap": true,
+      "A_input_permutation": [
+        0,
+        1
+      ],
+      "B_input_permutation": [
+        1,
+        0
+      ],
+      "A_signs": [
+        1,
+        1
+      ],
+      "B_signs": [
+        1,
+        -1
+      ],
+      "new_event_to_old": {
+        "lambda": "A",
+        "D": "alpha",
+        "C": "m",
+        "A": "beta",
+        "alpha": "n",
+        "m": "lambda",
+        "beta": "D",
+        "n": "C"
+      },
+      "event_index_permutation": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "party_swap": true,
+      "A_input_permutation": [
+        1,
+        0
+      ],
+      "B_input_permutation": [
+        0,
+        1
+      ],
+      "A_signs": [
+        -1,
+        1
+      ],
+      "B_signs": [
+        1,
+        1
+      ],
+      "new_event_to_old": {
+        "lambda": "m",
+        "D": "beta",
+        "C": "n",
+        "A": "lambda",
+        "alpha": "D",
+        "m": "C",
+        "beta": "A",
+        "n": "alpha"
+      },
+      "event_index_permutation": [
+        5,
+        6,
+        7,
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "party_swap": true,
+      "A_input_permutation": [
+        1,
+        0
+      ],
+      "B_input_permutation": [
+        0,
+        1
+      ],
+      "A_signs": [
+        1,
+        -1
+      ],
+      "B_signs": [
+        -1,
+        -1
+      ],
+      "new_event_to_old": {
+        "lambda": "D",
+        "D": "C",
+        "C": "A",
+        "A": "alpha",
+        "alpha": "m",
+        "m": "beta",
+        "beta": "n",
+        "n": "lambda"
+      },
+      "event_index_permutation": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        0
+      ]
+    },
+    {
+      "party_swap": true,
+      "A_input_permutation": [
+        1,
+        0
+      ],
+      "B_input_permutation": [
+        1,
+        0
+      ],
+      "A_signs": [
+        -1,
+        -1
+      ],
+      "B_signs": [
+        -1,
+        -1
+      ],
+      "new_event_to_old": {
+        "lambda": "alpha",
+        "D": "A",
+        "C": "C",
+        "A": "D",
+        "alpha": "lambda",
+        "m": "n",
+        "beta": "beta",
+        "n": "m"
+      },
+      "event_index_permutation": [
+        4,
+        3,
+        2,
+        1,
+        0,
+        7,
+        6,
+        5
+      ]
+    },
+    {
+      "party_swap": true,
+      "A_input_permutation": [
+        1,
+        0
+      ],
+      "B_input_permutation": [
+        1,
+        0
+      ],
+      "A_signs": [
+        1,
+        1
+      ],
+      "B_signs": [
+        1,
+        1
+      ],
+      "new_event_to_old": {
+        "lambda": "lambda",
+        "D": "n",
+        "C": "beta",
+        "A": "m",
+        "alpha": "alpha",
+        "m": "A",
+        "beta": "C",
+        "n": "D"
+      },
+      "event_index_permutation": [
+        0,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1
+      ]
+    }
+  ],
+  "C1_zero_edge_stabilizers": [
+    {
+      "party_swap": false,
+      "A_input_permutation": [
+        0,
+        1
+      ],
+      "B_input_permutation": [
+        0,
+        1
+      ],
+      "A_signs": [
+        1,
+        1
+      ],
+      "B_signs": [
+        1,
+        1
+      ],
+      "new_event_to_old": {
+        "lambda": "lambda",
+        "D": "D",
+        "C": "C",
+        "A": "A",
+        "alpha": "alpha",
+        "m": "m",
+        "beta": "beta",
+        "n": "n"
+      },
+      "event_index_permutation": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "party_swap": false,
+      "A_input_permutation": [
+        0,
+        1
+      ],
+      "B_input_permutation": [
+        1,
+        0
+      ],
+      "A_signs": [
+        1,
+        -1
+      ],
+      "B_signs": [
+        -1,
+        -1
+      ],
+      "new_event_to_old": {
+        "lambda": "n",
+        "D": "beta",
+        "C": "m",
+        "A": "alpha",
+        "alpha": "A",
+        "m": "C",
+        "beta": "D",
+        "n": "lambda"
+      },
+      "event_index_permutation": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ]
+    }
+  ],
+  "exact_checks": 23,
+  "checks": {
+    "AS4 full nine-coefficient parent": true,
+    "state congruence norm": true,
+    "state determinant": true,
+    "native a transport": true,
+    "native t transport": true,
+    "native M transport": true,
+    "native J transport": true,
+    "native E transport": true,
+    "native Q transport": true,
+    "native rho transport": true,
+    "native G transport": true,
+    "actual Bob squared angle invariant": true,
+    "native involution x": true,
+    "native involution eta": true,
+    "native involution zeta": true,
+    "native involution r": true,
+    "native involution h": true,
+    "native coefficient C to m": true,
+    "native coefficient m to C": true,
+    "native coefficient A to alpha": true,
+    "native coefficient alpha to A": true,
+    "native coefficient D to beta": true,
+    "native coefficient beta to D": true
+  },
+  "scope": "Physical signed-CHSH relabellings, fixed zero edge {lambda,n}; no claim for recanonicalizing a different zero edge on extra-zero boundary faces."
+}

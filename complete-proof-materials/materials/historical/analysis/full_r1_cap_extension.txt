@@ -1,0 +1,167 @@
+FULL R1 CAP EXTENSION WITH THE EXISTING ENTIRE-PARENT COMPLETION
+
+Result. The published uniform-contact proof extends, without changing
+its native source box or any diagonal allocation, to
+
+        |u| <= 9/256,             |v| <= 1/16.
+
+All actual source contacts u=sqrt(x),v=sqrt(y) are strictly interior:
+sqrt(x)<=1/32<9/256 and sqrt(y)<=1/1024<1/16. This establishes a
+larger fixed testing-cap certificate, not complementary-test admission.
+The old rational gate arrays require the constant substitutions below;
+their literal old weights cannot be used on a larger cap.
+
+Inputs inspected. Published extracted-lifts/canonical-completion/
+uniform-contact/Uniform_Contact_Certificate.tex, R1_Source.tex,
+source_dictionary_exact.tex and R1_Purchases.tex; plus
+analysis/full_r1_annulus_independent.txt. The latter's moving-zero
+obstruction to the old separated Alice-arc Gram is unchanged. No state
+normal, retained event, source gap or contact relation is discarded.
+
+1. Two joint source estimates replace only coarse separate maxima.
+
+Keep delta=1/1024, J=j+1,K=j+1-p,Dp=1-p+p^2,phi=p^2/Dp,
+theta=Me/Sigma. The native assumptions are exactly those of the
+published theorem, including n>=0, with no bounds on j or jT. Write
+
+ f0=1-delta-delta^3,
+ R0=1+2delta+2delta^2+4delta^3+delta^4(1+2delta).
+
+The published coefficient inequalities give
+ P<=R0 J, F>=f0 K, L>=f0 K, E<=1+delta^2,
+ phi/Sigma<=128/3, 0<=theta<=1, B,x<=delta.
+
+For 0<p<min(j,1), the exact joint inequality is
+
+           (J/K)[1-phi+2phi/j] <= 4.                 (A)
+
+Indeed put q=j-p>0 and multiply by j K Dp. The nonnegative difference
+between right and left numerators is precisely
+
+ (4p^2-3p+3)q^2+(p+1)(4p^2-4p+3)q+3p(1-p)^2.
+
+The quadratic coefficient is positive; the middle factor equals
+(p+1)[4(p-1/2)^2+2]. This proves (A) without a source limit or a
+source/testing identification.
+
+Let S>=delta denote the squared Alice cap. The exact published radial
+Psi fraction, whose coefficients in s=u^2 are nonnegative, can be
+regrouped as
+
+ rPsi(s)=8(P/F)[B(1-phi)+2phi*theta*s/j]
+             +4(phi/Sigma)(x^2+xs+s^2).
+
+Thus its weighted coefficient norm at s<=S satisfies
+
+ ||rPsi|| <= 32(R0/f0)S
+                   +(512/3)(delta^2+delta*S+S^2).    (B)
+
+Here B<=S permits the single use of (A). Independent maxima of
+P/F,1-phi and phi/j lose this useful compatibility.
+
+Similarly the exact radial R fraction is
+
+ rR(s)=8 P E s/[Dp(1+x)(1+Hy)L].
+
+Using J/K<=2 and Dp>=3/4 gives the coefficient-norm estimate
+
+ ||rR|| <= (64/3)[R0(1+delta^2)/f0]S.               (C)
+
+This is approximately half the old128S/3 bound. Equations(B),(C)
+are joint source estimates, not evaluations restricted to the contact.
+
+2. Simultaneous four-pivot losses on the enlarged cap.
+
+Set S=(9/256)^2=81/65536, V=(1/16)^2=1/256,
+e=2delta,D=e^2+S^2. Keep the effective radial multiplier below17,
+including its interaction with the whole Jalpha row. Replace only
+the radial-Psi and radial-R entries in the published exact purchase
+table by17 times(B) and17 times(C). All other entries are unchanged.
+The exact rational sums are bounded as follows:
+
+ Psi: 17[32(R0/f0)S+(512/3)(delta^2+delta*S+S^2)]
+       +16[8delta*e^2+(32/3)e^2*S]
+       +(2048/3)delta*V(1+2S)D
+       +12delta+48delta*S
+       +256(delta^2*V+V^2+delta^3*S+delta*S*V)
+       +2(delta^2+V)
+     = 13691734369401991808945157/19323923629888189704962048
+     < 3/4.                                          (D1)
+
+ Q: 17[64delta*S+(256/3)S^2]+512V^2D+18V
+     =40594954657/549755813888 <1/8.                 (D2)
+
+ E: (21760/3)(e+S)^2+(8192/3)delta*S*V*D
+       +96delta*S+256(V^2+delta*S*V)
+     =2102056720292849/27021597764222976 <1/8.        (D3)
+
+ R: 17(64/3)[R0(1+delta^2)/f0]S+(1024/3)e^2*S
+       +(1024/3)delta*V*D+6delta
+     =825045110233813523858785/1811617840302017784840192
+     <1/2.                                          (D4)
+
+Decimal values, only for orientation, are
+ (.708538008722,.073841792359,.077791725665,.455418958613).
+The last Psi term is the same conservative bound used in the published
+proof; actual gc/fc<=2y<=2delta^2 is even smaller. Hence(D1) does not
+benefit from any unproved cancellation or changed retained coefficient.
+
+Available scalar fractions after the unchanged13-row core are
+(3/4,1/2,1/2,1/2). All four comparisons are strict. They therefore
+give positive source-only reserves in the SAME coefficient-sign
+decomposition by fixed scalar gates. They are coefficient-norm bounds,
+not just pointwise positivity. The exact standard-library check is
+analysis/full_r1_cap_extension_checks.py/.json.
+
+3. Matrix gates and state/source faces.
+
+The published coefficient matrices still have norms at most1 and
+support only uv,v^2,u^2v^2. On the new cap their matrix-gate budgets
+are respectively9/4096,1/256,81/16777216. The constant reserve is
+
+ 1/16-delta-9/4096-1/256-81/16777216
+       =929711/16777216 >1/32.                      (E)
+
+No matrix allocation changes. Both explicit state-sign expansions,
+the entire parent identity, all retained squares, the gauge action,
+and n=0 stay literal. Sigma=Me+fc/y>0 at n=0; no inverse of Me is
+introduced. All source denominators are exactly those of the existing
+native theorem. Testing axes require no division.
+
+In the fixed-family recipe replace every normalized monomial by
+
+        P_ab=((256/9)u)^a(16v)^b.
+
+The source-independent monomial/radical supports and gate grouping
+are unchanged: total PSD order283,49 Gram blocks,2269 upper Gram
+variables and554 coefficient equations. Their rational Gram records
+must be regenerated with these new constants before claiming the
+new evaluated arrays. Polynomial target/source records are unchanged.
+The same Cartesian positive-grid proof of closedness works with the
+new cap endpoints. This report makes no complementary-test claim.
+
+4. Why merely using u0=1/16 with these allocations fails.
+
+This is a failure of the current payment, not an obstruction to any
+other full-parent Gram. Take the actual sources j=1,H=1/2, first let
+B=T tend to0 with p fixed in(0,1), then let p tend to1. The physical
+numerator tends to p>0, so n>=0 holds for sufficiently small positive
+B,T. The other coefficients remain positive by the native theorem.
+In this sequential limit Me tends to3/4, theta tends to1, phi tends
+to1, P/F tends to2, and the effective radial multiplier tends to16.
+At v=0, the exact Psi loss consequently tends to
+
+                 512s+(256/3)s^2.
+
+At s=1/256 this exceeds2, whereas only3/4 of the Psi mass is
+available. Therefore the same fixed16Ru purchase cannot certify
+that larger cap by a nonnegative residual coefficient; sufficiently
+nearby actual sources already violate this necessary residual sign.
+This neither disproves Bell validity nor excludes reducing/rebalancing
+the Ru allocation, combining residuals, or another fixed Gram.
+
+Conclusion. The requested strict-contact-overlap cap is proved by
+two sharp joint coefficient bounds and the existing exact full-parent
+identities. No solver, source sweep, smaller source box, new source
+admission theorem or old separated-arc argument was used. Public files
+were not changed.

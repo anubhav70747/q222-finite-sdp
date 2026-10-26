@@ -1,0 +1,92 @@
+SOURCE GEOMETRY AUDIT AND MINIMAL REDUCTION -- 22 OCTOBER 2026
+
+ACTUAL INPUTS READ
+Components 3 (physical_core.tex), 13 (closed_faces_short.tex),
+14 (finite_contact_source_reduction_REDERIVED.tex),
+15 (global_native_entry_REDERIVED.tex),
+194 (c2_complete_source_routing_REDERIVED.tex),
+195 (complete_source_routing_REDERIVED.tex),
+196 (positive_scale_union_REDERIVED.tex).
+Prior status/review records were not used as mathematical premises.
+
+PROVED REDUCTION
+See source_geometry_audit.tex, SG1--SG16 for the exact argument.
+
+1. Any valid affine source is either a nonnegative sum of nonsignalling
+   event inequalities or has, at a PR point, the canonical form
+   f=dH+4 sum a_i p_i, with d>0 and a_i>=0.
+2. The complete 4x4 state parent has a positive 3x3 principal block
+   for noncommuting angles. Its determinant is a positive testing
+   factor times a Laurent polynomial with eight nonnegative outer
+   coefficients on the 3x3 square.
+3. A finite nonzero kernel plus the two angle stationarity equations
+   imply ordinary physicality by convexity in logarithmic angles.
+   This removes a redundant universal physicality premise from the
+   final core target. The fixed algebraic implication transfers.
+4. Coercivity is exactly compatibility of the omitted losing events.
+   Coercive extreme sources have a finite contact and exactly five
+   or six active events: more than six leaves a nonradial solution
+   of the six linear contact equations, contradicting extremality.
+5. The two possible contact source patterns are
+   C1: lambda=n=0; d,m,C,A,alpha>0; D,beta>=0; D+beta>0.
+   C2: lambda=beta=0; d,m,C,A,D,alpha>0; n>=0.
+6. All noncoercive sources lie in relabelings of lambda=m=0 or
+   lambda=alpha=0. Their exact lifts have one 6x6 PSD block or two
+   3x3 blocks. The proof and strict feasible points are included.
+7. Strict feasibility gives attained dual PSD factorisations. A
+   source lift over K_c and an evaluation dual lift over K_t give
+   exact tensor trace-pairing squares; no mixed inverse is used.
+8. At most nine source atoms and at most nine real-qubit testing
+   atoms suffice; this fixed statement transfers to real closed
+   fields. All literal zero coefficients/weights are retained.
+
+SMALLEST CORE STATEMENT STILL TO PROVE
+Set d=1, choose either C1 or C2, and assume the six exact polynomial
+contact equations at a source point u_c,v_c,W_c>0, Z_c=1.
+For independent testing u,v,W>0, X,Y arbitrary, Z=1, prove that the
+ENTIRE parent F is a sum of squares in K_c tensor_R K_t.
+The two fields are independently labelled and can be copies of one
+field. No native coordinate chart or source scale partition need be
+part of this statement. Ordinary physicality is already implied by
+the contact equations.
+
+All other tests are elementary: sign gauges, commuting/projective
+angles, WZ<=0 (explicit pure-testing signed-core Schur form), Z=0,
+state normalisation, complex-state split, and finite mixtures.
+
+FINDINGS / CLAIM BOUNDARY
+- No concrete defect found in the finite source geometry, contact
+  perturbation argument, two closed-face matrix lifts, or their
+  separated trace-pairing consequence.
+- The native-entry proof has a coherent acyclic structure: first
+  contact sufficiency/coercivity, then the connected real maximal
+  contact graph and no-wall arguments, then explicit cofactor and
+  stationary-minor identities, and finally first-order transfer.
+  Its displayed finite determinant/cofactor identities remain exact
+  algebraic inputs for a complete line-by-line reproduction.
+- Chapter 195 is an assembly over many local proof bodies. Its
+  top-level scale partitions are structurally exhaustive; that fact
+  does not prove the imported full-state conductor assertions.
+- This reduction is not a completed proof of the core statement.
+  A final paper must either prove that statement or carry the needed
+  complete local arguments; it cannot replace them by the word
+  'complete', a status receipt, or determinant positivity.
+
+WHY THE SCALAR NINE-SQUARE RESULT DOES NOT AUTOMATICALLY END THE PROOF
+For P=[[H,b],[b^T,c]], D=det H, one has the exact identity
+ D F = (Hx+bz)^T adj(H)(Hx+bz) + det(P) z^2.
+This only certifies D*F. D is mixed in source and testing variables.
+Strict positivity does not make such a tensor element a unit:
+1+t^2 tensor s^2 maps to zero under embeddings sending s to i/t
+in an algebraic closure of a source real-closed function field.
+Consequently cancellation requires a new explicit lemma; it is not
+ordinary division inside either field. This obstruction is not a
+counterexample to Q222 representability.
+
+The TeX fragment records a complete elementary reduction, exact
+closed-face pencils, the minimal core quantifiers, and the precise
+matrix-multiplier barrier. Further local atlas auditing is separate.
+
+
+INTEGRATION UPDATE, 22 OCTOBER 2026
+The TeX now includes SG17--SG22: every finite physical contact has coercive support and strict full source-field Hessian; its normalized state has Wc>0; deleting a zero-amplitude positive event cannot make support noncoercive. Exact physical cycle maps are included. Together with the previous SG geometry this replaces components 3/13/14, provided the physical model and finite-lift bridge2 plus native entry15 and its source dictionaries are retained. The local assertion is proved separately by the explicit scoped certificate bodies; see C1_AUDIT_REPORT.txt, C1_REQUIRED_CERTIFICATE_PACKETS.json, c1_local_refinement.tex and c1_scoped/MANIFEST.json. No all-215 coefficient-expansion claim is made.

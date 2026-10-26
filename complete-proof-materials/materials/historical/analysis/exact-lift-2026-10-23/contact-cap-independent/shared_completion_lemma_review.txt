@@ -1,0 +1,71 @@
+SHARED EXTRACTION LEMMA FOR THE TWO CONTACT COMPLETIONS
+Private bounded review, 24 October 2026
+
+There is one useful common lemma. It combines the fixed-gate identity with
+the passage from source-dependent rows to fixed testing spans. It removes
+duplicated extraction reasoning, but not the two different completion proofs.
+
+Lemma (fixed testing functions from a uniform matrix reserve).
+Let X be a fixed testing/state domain; let D(x)>0 and fixed real function
+columns Psi(x),Theta(x) satisfy Theta=E Psi for a fixed matrix E.
+Let g_1,...,g_m be fixed functions with |g_k|<=1 on X. Suppose, for each
+admitted source s,
+  D S_s=f_s^T Q_s f_s+Psi^T R_s Psi,
+  f_s=A_s Theta, R_s>=0,
+  Q_s=Q_s,0+sum_k B_s,k g_k,
+where every matrix subscripted s depends only on the source, Q_s is symmetric,
+Q_s,0>=mu I, ||B_s,k||op<=rho_k, and sum rho_k<mu.
+Then S_s has a positive Gram representation in the fixed blocks
+  Psi/sqrt(D),
+  sqrt(1+g_k) Theta/sqrt(D), sqrt(1-g_k) Theta/sqrt(D).
+No boundedness of A_s or R_s is required.
+
+Proof. Put V_s=Q_s,0-sum rho_k I and
+W_s,k^±=(rho_k I±B_s,k)/2. All these matrices are PSD, and
+Q_s=V_s+sum[W_s,k^+(1+g_k)+W_s,k^−(1-g_k)].
+The base Gram is E^T A_s^T V_s A_s E+R_s; the signed gate Grams are
+A_s^T W_s,k^± A_s. Substitution proves the identity. The argument uses no
+inverse of A_s or positive lower bound on its singular values. Therefore
+zero rows, zero source weights and vanishing gates cause no exception.
+
+Weak substitution.
+Use Contact_Completion.tex equations eq:complete,eq:f,eq:retained,eq:RFN19,
+Table tab:features and Lemma lem:bounds:
+  D=Dv; Psi=psi34; Theta=psi[I_*] (the displayed16-element sublist);
+  f_s=the eleven rows in eq:f;
+  g_ab=(2^12 u)^a(2^25 v)^b;
+  B_s,ab=2^(-12a-25b)Q_ab; rho_ab=2^(-12a-25b)r_ab.
+The eight pairs and r_ab are precisely eq:bounds. Their sum is <1/1024,
+and mu=1/4, giving reserve >=255/1024.
+The eleven displayed supports supply A_s. R_s is the positive base Gram
+of the retained term,16x²y W and the two E remainders in eq:complete;
+eq:RFN19 and the fixed-span paragraph explicitly supply its roots/matrices.
+Thus the lemma produces base34 plus sixteen order16 gate blocks.
+The domain is the fixed positive cap with w*zeta>=0. Literal n=0 causes a
+zero fourth row; the lemma makes no division by that row or its coefficient.
+
+Strong substitution.
+Use Strong_Contact_Completion.tex equations eq:normalized,eq:newroots,
+eq:retained,eq:baseline and Table tab:budgets:
+  D=Du Dv; Psi=H20; Theta=H11 (the first11 entries);
+  f_s=widehat f/2; Q_s=widehat Q;
+  g_ij=(4096u)^i(33554432v)^j;
+  B_s,ij=2^(-12i-25j)C_ij; rho_ij=alpha_ij (nonconstant).
+Here Q_s,0=C00>= (1/2−2^-40)I. The fourteen-entry budget table, including
+the constant deviation, has total <1/8, giving reserve >=3/8.
+R_s is the Gram of R_+/4 in H20; its source coefficients are nonnegative.
+The final section supplies both A_s and the retained root spans.
+The factor1/2 in f_s accounts exactly for S_c=F/(4DuDv).
+This gives base20 plus26 order11 gate blocks on the whole signed cap.
+
+Editorial use and limit.
+State this lemma once, then replace weak Lemma lem:gates and its concluding
+span-to-Gram paragraph, and the strong final section's repeated gate proof
+and pushforward explanation, by the two substitutions above. Keep all source
+bounds, harmonic purchases, monic divisions, conductor and six-row shear:
+they establish the lemma's hypotheses and do not follow from it.
+The weak sign/core argument and remote gluing also remain separate.
+This is an actual shared extraction argument, not a shared source-admission
+theorem; it yields no admission outside the proved native domains and no
+full canonical coverage.
+

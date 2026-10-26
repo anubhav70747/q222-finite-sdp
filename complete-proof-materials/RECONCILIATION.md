@@ -1,0 +1,23 @@
+# What the recovered work already establishes
+
+The earlier list of unfinished work overstated what remained to be derived. The complete 22 October audits were available locally but had not been reconciled with the later, narrower assignments.
+
+The complete C1 report discusses all ten LC5 rows, ordinary and complementary UI charts, UH opening faces, all six refined C14 predicates and seven restored exits. It examines full state forms, normal rows, constrained Schur completions and real coefficient bounds. The complete C2 report includes R8 joint-D cancellation and the thin-R10 stress, both normal supports, the negative formal beta interface and the literal n=0 overlap. These are substantive proof reviews, not just completion labels.
+
+The lead review covers the physical reduction, source geometry, noncommuting residue theorem and global assembly. Its final reconciliation supports the qualitative existence theorem, explicitly without claiming an evaluated global pencil or proof-assistant certification.
+
+Later reports often describe what was not independently checked within that assignment. Such a scope limit does not invalidate the earlier completed review. A later actual correction must instead be identified by equation, source version and affected implication. The final integrated verification will make those comparisons.
+
+| Previously described as remaining | Material already available | Correct next action |
+|---|---|---|
+| CU/CR and UI | Complete C1 determinant, contact-jet, opening-boundary and real-cap review | Compare any changed formulation; do not rederive unchanged cells |
+| UH | Complete unit/small-sigma and single/double-opening review | Verify changes only |
+| SC/QI | Entire scalar, contact, normal and hard-block source proofs with component reviews | Preserve the original dependency chain |
+| R8 joint-D | Complete JD14–JD17 cancellation and all-test review | Reconcile the later R2 report's separate-branch warning with this existing proof |
+| Thin R10 | Complete earlier stress/normal/formal-base review; new explicit CA/SE rechecks | Finish the precise version/interface reconciliation |
+| Global tensor criterion | Prior adversarial review and later targeted quantifier check | Preserve the criterion's assumptions and distinguish existence from extraction |
+| Full-set eight-copy assembly | Both inclusions already proved for an exact canonical input | Supply the remaining exact canonical input |
+
+The explicit-lift problem remains open at uniform admission into one finite global library and evaluation of the resulting affine matrices. Neither all recorded identity checks nor a finite family of examples closes that universal implication.
+
+See [the material checklist](CHECKLIST.md), [C1 cases](C1_CASES.md), [C2 cases](C2_CASES.md) and [original component sources](COMPONENTS.md) for direct evidence.

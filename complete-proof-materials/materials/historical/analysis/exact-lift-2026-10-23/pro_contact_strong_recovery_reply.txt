@@ -1,0 +1,438 @@
+## Part 2 — strong admission source
+
+This is a read-only transcription of the saved files and their accompanying formulas. **No mathematical checker was rerun and no construction was changed.** The ZIP remains SHA-256 `c22fae5078293f1f60d8a38b55ab845740d90cad3461637663d0519fae99d522`.
+
+Save the five code blocks under the displayed paths in a fresh directory containing `data/`. They import only SymPy and the standard library; there are no omitted local helpers. The saved reproduction environment specifies SymPy 1.14.0. Run in this order:
+
+```sh
+python scripts/strong/extract_lII.py
+python scripts/strong/verify_native_contact.py
+python scripts/strong/bound_lII.py
+python scripts/strong/monomial_budgets.py
+python scripts/strong/export_source_witness.py
+```
+
+### Definitions, shear and normalization
+
+Here \(H,z,y,r,t\) are the **native** \(H_o,z_o,y_o,r_o,t_o\), not Part 1’s compact variables. The saved domain is
+\[
+\epsilon=2^{-64},\quad2^{-12}\le H<1,\quad0<z,y\le\epsilon H,
+\quad0<r<1,\quad t>0,\quad j=1+zr-t>0,\quad n\ge0.
+\]
+Normalize \((d,\lambda,\beta)=(1,0,0)\). Set
+\[
+a_c=1+zr,\quad L=yt,\quad B_s=H+yt,\quad s=a_c/B_s,\quad k=\sqrt y,
+\]
+\[
+c_*=CL,\quad d_*=Dyj,\quad\ell=y(C+D),\quad
+q=D/(C+D),\quad g=yCD/(C+D).
+\]
+The script dictionary is
+\[
+B=B_s,\ ss=s,\ cp=c_*,\ dp=d_*,\ ts=t,\ js=j,
+\quad ls=\ell_*=H/4,\quad als=\alpha_*=H^2/8,
+\]
+\[
+\boxed{\mu=m/z^2,\quad\nu=nr,\quad al=\alpha(1-H),\quad aa=A/y.}
+\]
+Testing variables are independent, with \(|u|\le2^{-12},|v|\le2^{-25}\); \(U=u^2,V=v^2,D_u=1+U,D_v=1+V\). All state coordinates \(X,Y,Z,W\) are real. Original **LII2–LII3** give
+\[
+\xi=X+zrvW/B_s,\quad\eta=Y-HuW/B_s,\quad\zeta=Z-uvW/B_s,
+\]
+\[
+R_h=(uvX-vZ+syuW)/k,
+\quad N=[Y-quvX+qvZ-(H/B_s+qsy)uW]/k,
+\]
+\[
+R=v(U-z)W,\qquad T=uk(U-z)W.
+\]
+The four retained **LII5** terms, outside the six-row remainder, are
+\[
+\mathcal R_+=4(\ell-\ell_*)N^2+4CV\eta^2+
+4nD_uD_v\xi^2+4(\alpha-\alpha_*)D_u(v\eta-\zeta)^2.
+\]
+The first script is the complete **LII6–LII15** monic-division reconstruction. The second adds \(4/H\) times the **LII20** zero conductor
+\[
+T^2-UR^2-(U-z)R_hT/s+u(U-z)R(u\xi-\zeta)/s=0
+\]
+and makes the exact change
+\[
+\widehat f=(\sqrt H N,\ \xi+u\zeta+R/[H(1+H)],\ H\zeta,
+\sqrt H R_h,\ R/\sqrt H,\ T/\sqrt H).
+\]
+Its matrix `T` maps these new roots to the old roots; the congruence is `T.T*Q*T`.
+
+**Exact baseline subtraction.** Put all SC10 errors and \(z/H,k/\sqrt H\) equal to zero, keeping \(H,r,t\) formal, then set \(u=v=0\):
+\[
+Q_*=
+\begin{pmatrix}
+1&0&0&0&0&0\\0&2&0&0&0&0\\0&0&1/2&0&0&0\\
+0&0&0&2/(1+H)&0&1/(1+H)\\
+0&0&0&0&2/(1+H)^2&0\\
+0&0&0&1/(1+H)&0&4
+\end{pmatrix}\succeq I_6/2.
+\]
+In the code, `source=entry-lead` and `testing=lead-base[i,j]`; together they bound \(\widehat Q-Q_*\). The baseline remains in the exported Gram. Off-diagonal records are actual symmetric entries, contributing twice their value to the quadratic form; indices are **zero-based**.
+
+**Factor of four.** These scripts construct the full-parent numerator. Restore \(\mathcal R_+\), divide every testing function by \(\sqrt{D_uD_v}\), and divide its full-parent Gram by four to represent the compact \(F_h/4\). The six-row remainder alone omits the displayed LII5 terms.
+
+### 1. `scripts/strong/extract_lII.py`
+
+```python
+import sympy as S
+import pickle,json
+from pathlib import Path
+
+OUT=Path(__file__).resolve().parents[2]/'data'
+u,v,W,N,xi,ze,Rh,R,T=S.symbols('u v W N xi ze Rh R T')
+z,k,H,B,r,cp,dp,g,q,ss,ts,js,ls,als,al,nu,mu,aa=S.symbols('z k H B r cp dp g q ss ts js ls als al nu mu aa')
+U,V=S.symbols('U V')
+y=k*k
+eta=k*(N+q*Rh)
+X=xi-z*r*v/B*W
+Y=eta+H*u/B*W
+Z=ze+u*v/B*W
+K=u*k*W
+Qn=u*xi-ze
+J=(u*W-Y)+v*(u*X-Z)
+M=v*W-X+u*v*Y-u*Z
+du=1+u*u; dv=1+v*v
+G=4*ls*N*N+4*g*Rh*Rh+8*(dp-cp)/B*K*N-8*g*ss*K*Rh
+G+=4*(cp*ts+dp*js)/B**2*K*K+4*cp*ts/B**2*v*v*K*K-8*cp/B*v*v*K*(N+q*Rh)
+G+=4*nu*du*dv*(z*z*r*v*v/B**2*W*W-2*z*v/B*W*xi)
+G+=4*als*du*(v*eta-ze)**2+4*al*du*((1-H)*u*u*v*v/B**2*W*W-2*u*v/B*W*(v*eta-ze))
+G+=4*z*z*mu*M*M+4*y*aa*du*dv*Y*Y
+G+=2*(J*J+du*(v*Y-Z)**2+dv*(X+u*Z)**2-du*dv*Z*Z)
+G=S.Poly(S.expand(G),N,xi,ze,Rh,W)
+states=[N,xi,ze,Rh]
+def cf(x,y):
+    return G.coeff_monomial(x*y)
+Q0=S.zeros(4)
+for i,x in enumerate(states):
+    for j in range(i,4):
+        yy=states[j]
+        Q0[i,j]=Q0[j,i]=cf(x,yy)/(1 if i==j else 2)
+rho=S.cancel(cf(Rh,W)/(u*k))
+pxi=S.cancel(cf(xi,W)/v+u*u*rho)
+pze=S.cancel(cf(ze,W)/(u*v)-rho)
+pn=S.cancel(cf(N,W)/(u*k))
+phi=S.cancel(G.coeff_monomial(W*W)-ss*u*u*(v*v-y)*rho)
+def uv(p):
+    p=S.Poly(S.expand(p),u,v)
+    assert all(i%2==j%2==0 for i,j in p.monoms())
+    return S.Add(*(a*U**(i//2)*V**(j//2) for (i,j),a in p.terms()))
+pxi,pze,pn,phi=map(uv,[pxi,pze,pn,phi])
+def divvar(p,x,a):
+    quot,rem=S.div(p,x-a,x)
+    return S.factor(quot),S.factor(rem)
+Axi,pxiz=divvar(pxi,U,z)
+Bxi,rx=divvar(pxiz/z,V,y)
+Aze,pzez=divvar(pze,U,z)
+Bze,rz=divvar(pzez,V,y)
+An,pnz=divvar(pn,U,z)
+Bn,rn=divvar(pnz,V,y)
+ds=4/B**2*(z*z*mu*(B+z*r)**2+(nu*r+S.Rational(1,2)*r*r)*z*z)
+es=4/B**2*(nu*r+S.Rational(1,2)*r*r)*z*z
+phis=S.Poly(S.expand(phi-(ds+es*V)/z**2*V*(U-z)**2),U)
+assert S.factor(phis.coeff_monomial(1))==0
+As,ra=divvar(phis.coeff_monomial(U*U),V,y)
+Bs,rb=divvar(phis.coeff_monomial(U),V,y)
+Cs,rc=divvar(Bs+z*As,V,y)
+def tv(p):return p.subs({U:u*u,V:v*v})
+Qn=u*xi-ze
+f=S.Matrix([N,xi,ze,Rh,R,T])
+out=(S.Matrix(states).T*Q0*S.Matrix(states))[0]
+out+=(tv(Axi)-(v*v-y)*tv(Bxi))*R*xi+tv(Bxi)/ss*(u*v*v*Qn-u*v*k*Rh)*xi
+out+=u*tv(Aze)*R*ze+tv(Bze)/ss*(v*v*Qn-v*k*Rh)*ze
+out+=tv(An)*T*N+tv(Bn)/ss*(v*k*Qn-y*Rh)*N
+out+=(ds+es*v*v)/z**2*R*R+tv(As)/ss*(-Rh*T+u*R*Qn)+tv(Cs)/ss**2*(v*v*Qn**2-2*v*k*Rh*Qn+y*Rh*Rh)
+out=S.Poly(S.expand(out),*list(f))
+Q=S.zeros(6)
+for i,x in enumerate(f):
+    for j in range(i,6):
+        yy=f[j]
+        Q[i,j]=Q[j,i]=S.factor(out.coeff_monomial(x*yy)/(1 if i==j else 2))
+dat={'Q':Q,'Q0':Q0,'rho':rho,'Axi':Axi,'Bxi':Bxi,'Aze':Aze,'Bze':Bze,'An':An,'Bn':Bn,'As':As,'Bs':Bs,'Cs':Cs,'contact_residuals':[rx,rz,rn,ra,rb,rc],'phi':phi,'normal_polynomials':[pxi,pze,pn], 'symbols':list(locals().get('states',[]))}
+with (OUT/'lII_generic.pkl').open('wb') as fp:pickle.dump(dat,fp)
+summary={name:str(S.factor(dat[name])) for name in ['rho','Axi','Bxi','Aze','Bze','An','Bn','As','Bs','Cs']}
+summary['Gram']=[[str(x) for x in Q.row(i)] for i in range(6)]
+(OUT/'lII_generic.json').write_text(json.dumps(summary,indent=2))
+print('Saved generic exact Gram and quotients.')
+```
+
+### 2. `scripts/strong/bound_lII.py`
+
+```python
+import sympy as S,pickle,json
+from pathlib import Path
+from fractions import Fraction as F
+O=Path(__file__).resolve().parents[2]/'data'
+Q=pickle.load((O/'lII_generic.pkl').open('rb'))['Q']
+u,v,z,k,H,B,r,cp,g,q,ss,ls,als,al,nu,mu,aa=S.symbols('u v z k H B r cp g q ss ls als al nu mu aa')
+hh=S.symbols('hh',positive=True)
+tt,zz,kk,db,ds,dc,dg,dal,dA,dm,dn,dq=S.symbols('tt zz kk db ds dc dg dal dA dm dn dq')
+ff=S.Matrix(S.symbols('Nn Xx Zz Hh Rr Tr'));Nn,Xx,Zz,Hh,Rr,Tr=ff
+con=Tr**2-u*u*Rr**2-(u*u-z)/ss*Hh*Tr+u*(u*u-z)/ss*Rr*(u*Xx-Zz)
+Qc=S.hessian(con,list(ff))/2
+c0=1/(2*(1+hh*hh))
+sub={H:hh*hh,B:hh*hh*(1+db),ss:(1+ds)/(hh*hh),cp:hh*hh*(c0+dc),g:hh*hh*(c0+dg),q:tt+dq,ls:hh*hh/4,als:hh**4/8,al:hh**4*(c0+dal),nu:c0-r/2+dn,mu:((1-r)*c0+dm)/hh**4,aa:(c0+dA)/(hh*hh),z:hh*hh*zz,k:hh*kk}
+Q=Q+4/H*Qc
+T=S.diag(1/hh,1,1/(hh*hh),1/hh,hh,hh)
+T[1,2]=-u/(hh*hh);T[1,4]=-1/(hh*(1+hh*hh))
+Q=T.T*Q.subs(sub,simultaneous=True)*T
+zero={x:0 for x in [zz,kk,db,ds,dc,dg,dal,dA,dm,dn,dq]}
+base=Q.subs(zero).subs({u:0,v:0})
+variables=[u,v,hh,r,tt,zz,kk,db,ds,dc,dg,dal,dA,dm,dn,dq]
+eps=F(1,2**64)
+bounds={u:F(1,2**12),v:F(1,2**25),r:F(1),tt:F(2),zz:eps,kk:F(1,2**32),db:2*eps,ds:4*eps,dc:16*eps,dg:64*eps,dal:16*eps,dA:16*eps,dm:16*eps,dn:16*eps,dq:64*eps}
+hmin=F(1,64)
+def rational_bound(expr):
+    num,den=S.fraction(S.cancel(expr))
+    den=S.factor(den)
+    terms=S.factor_list(den)[1]
+    const=F(S.factor_list(den)[0]);hp=0;denlower=const
+    for p,e in terms:
+        if p==hh:hp+=e
+        elif p==hh**2+1:pass
+        elif p in [db+1,ds+1]:denlower*=F(1,2)**e
+        else:raise ValueError(('unexpected denom',den,p,e))
+    P=S.Poly(num,*variables)
+    total=F(0)
+    for mon,co in P.terms():
+        term=abs(F(co))
+        for var,power in zip(variables,mon):
+            if var==hh:
+                power-=hp
+                term*=hmin**power if power<0 else F(1)
+            else:term*=bounds[var]**power
+        total+=term
+    return total/denlower,len(P.terms())
+records=[];source_sum=F(0);testing_sum=F(0)
+for i in range(6):
+ for j in range(i,6):
+    print('entry',i,j,flush=True)
+    entry=S.cancel(Q[i,j])
+    lead=S.cancel(entry.subs(zero))
+    source=S.cancel(entry-lead)
+    testing=S.cancel(lead-base[i,j])
+    sb,ns=rational_bound(source);tb,nt=rational_bound(testing)
+    mult=1 if i==j else 2
+    source_sum+=mult*sb;testing_sum+=mult*tb
+    records.append({'i':i,'j':j,'source_bound':str(sb),'testing_bound':str(tb),'source_terms':ns,'testing_terms':nt})
+    Q[i,j]=Q[j,i]=entry
+print('source sum',float(source_sum),'testing sum',float(testing_sum))
+receipt={'source_sum':str(source_sum),'testing_sum':str(testing_sum),'sum_lt_one_quarter':source_sum+testing_sum<F(1,4),'records':records}
+(O/'lII_uniform_bound.json').write_text(json.dumps(receipt,indent=2))
+with (O/'lII_normalized_full.pkl').open('wb') as fp:pickle.dump({'Q':Q,'base':base,'variables':variables,'bounds':bounds,'source_substitution':sub},fp)
+```
+
+### 3. `scripts/strong/monomial_budgets.py`
+
+```python
+import sympy as S,pickle,json
+from fractions import Fraction as F
+from pathlib import Path
+O=Path(__file__).resolve().parents[2]/'data'
+d=pickle.load((O/'lII_normalized_full.pkl').open('rb'))
+Q=d['Q'];variables=d['variables'];bounds=d['bounds'];base=d['base']
+u,v,hh,r,tt,zz,kk,db,ds,dc,dg,dal,dA,dm,dn,dq=variables
+zero={x:0 for x in [zz,kk,db,ds,dc,dg,dal,dA,dm,dn,dq]}
+hmin=F(1,64)
+def groups(expr):
+ num,den=S.fraction(S.cancel(expr));fac=S.factor_list(den)
+ hp=0;lower=F(fac[0]);out={}
+ for p,e in fac[1]:
+  if p==hh:hp+=e
+  elif p==hh**2+1:pass
+  elif p in [db+1,ds+1]:lower*=F(1,2)**e
+  else:raise ValueError((p,e))
+ for mon,c in S.Poly(num,*variables).terms():
+  term=abs(F(c))/lower
+  for var,pow in zip(variables,mon):
+   if var==hh:
+    pow-=hp
+    term*=hmin**pow if pow<0 else F(1)
+   else:term*=bounds[var]**pow
+  key=mon[:2];out[key]=out.get(key,F(0))+term
+ return out
+tot={}
+for i in range(6):
+ for j in range(i,6):
+  lead=Q[i,j].subs(zero)
+  for ex in [Q[i,j]-lead,lead-base[i,j]]:
+   for key,b in groups(ex).items():tot[key]=tot.get(key,F(0))+(1 if i==j else 2)*b
+def dyad(q):
+ if q==0:return F(0)
+ x=F(1)
+ while x<q:x*=2
+ while x/2>=q:x/=2
+ return x
+rows=[]
+for key,b in sorted(tot.items()):
+ alpha=dyad(b)
+ rows.append({'exponents':list(key),'budget':str(alpha),'raw_bound':str(b)})
+ print(key,'budget=',alpha,'raw=',float(b))
+assert sum(dyad(b) for b in tot.values())<F(1,8)
+receipt={'domain':{'H_min':'1/4096','u_max':'1/4096','v_max':'1/33554432','epsilon':'1/18446744073709551616'},'budgets':rows,'total_budget':str(sum(dyad(b) for b in tot.values())),'total_lt_one_eighth':True,'p_monomial':'(4096*u)^i*(33554432*v)^j','exclude_constant_from_gate_list':True}
+(O/'LII_FIXED_GATE_BUDGETS.json').write_text(json.dumps(receipt,indent=2))
+```
+
+### 4. `scripts/strong/export_source_witness.py`
+
+```python
+"""Export the evaluated six-Gram source-only entries as plain text JSON."""
+import json,pickle,sympy as S
+from pathlib import Path
+O=Path(__file__).resolve().parents[2]/'data'
+D=pickle.load((O/'lII_normalized_full.pkl').open('rb'))
+Q=D['Q'];u,v=D['variables'][:2]
+records=[];support=set()
+for i in range(6):
+    for j in range(i,6):
+        P=S.Poly(Q[i,j],u,v)
+        for exponents,coefficient in P.terms():
+            if coefficient==0:continue
+            support.add(exponents)
+            records.append([i,j,list(exponents),str(S.factor(coefficient))])
+assert len(records)==51
+assert len(support)==14
+data={'test_variables':['u','v'],'matrix_order':6,
+      'source_parameterization':'see source-box proof and extract_lII.py',
+      'upper_entries_by_test_monomial':records,
+      'testing_support':[list(x) for x in sorted(support)]}
+(O/'LII_NORMALIZED_SOURCE_WITNESS.json').write_text(json.dumps(data,indent=2)+'\n')
+print('Exported',len(records),'upper-triangular coefficient records.')
+```
+
+### 5. `scripts/strong/verify_native_contact.py`
+
+```python
+"""Exact native GE1 checks of all six monic-division contact remainders."""
+import json,pickle,sympy as S
+from pathlib import Path
+O=Path(__file__).resolve().parents[2]/'data'
+D=pickle.load((O/'lII_generic.pkl').open('rb'))
+z,k,H,B,r,cp,dp,g,q,ss,ts,js,al,nu,mu,aa=S.symbols('z k H B r cp dp g q ss ts js al nu mu aa')
+y,t=S.symbols('y t')
+Ac=1+z*r; Bb=H+y*t; jj=Ac-t; Sc=Ac+y*t
+delta=z+(1+z)*Bb+(1+z)*Bb**2+2*z*(1+z)*Bb*r+z**3*r**2+2*z**2*r+y*((1+z)*Bb+z+z**2*r*(2-r))
+Gc=Bb+z*(H+r-1)
+Mc=(1+z)*(Bb+z*r)*(H+y)-z*(1+y)*(1-r)*y*t
+cc=Ac*Mc/(2*delta)
+dd=(1+z)*(Bb+z*r)*(Bb-z*y*r)*Sc/(2*delta)
+pair=S.factor(cc*jj+dd*t)
+source={B:Bb,cp:cc,dp:dd,g:cc*dd/pair,q:dd*t/pair,ss:Ac/Bb,ts:t,js:jj,
+al:(Bb+z*r)*Mc/(2*delta),nu:((Bb+z*r)*Ac*Sc-r*delta)/(2*delta),
+mu:(1+y)*(1-r)*Ac*Sc/(2*Gc*delta),aa:Ac*(Bb+z*r)*Sc/(2*H*delta)}
+receipt=[]
+for i,expr in enumerate(D['contact_residuals']):
+    print('native residual',i,flush=True)
+    E=expr.subs(k**2,y).subs(source,simultaneous=True)
+    num,den=S.fraction(S.together(E))
+    zero=S.Poly(num,H,z,y,r,t).is_zero
+    assert zero,(i,S.factor(num))
+    receipt.append({'residual':i,'cleared_numerator_zero':zero})
+(O/'NATIVE_CONTACT_VERIFICATION.json').write_text(json.dumps(receipt,indent=2))
+print('All six native contact residuals vanish identically.',flush=True)
+```
+
+### SC10–SC11: source inequalities and their saved justification
+
+Put \(a_0=1/[2(1+H)]\). The exact error coordinates are
+\[
+\begin{array}{lll}
+B_s/H=1+e_B,&sH=1+e_s,&c_*/H=a_0+e_C,\\
+g/H=a_0+e_g,&\alpha(1-H)/H^2=a_0+e_\alpha,&AH/y=a_0+e_A,\\
+mH^2/z^2=(1-r)a_0+e_m,&nr=a_0-r/2+e_n,&q=t+e_q.
+\end{array}\tag{SC10}
+\]
+The script names `db,ds,dc,dg,dal,dA,dm,dn,dq` denote these nine errors in the same order; `hh=sqrt(H)`, `zz=z/H`, `kk=sqrt(y/H)`, `tt=t`.
+\[
+|e_B|\le2\epsilon,\quad |e_s|\le4\epsilon,\quad
+|e_C|,|e_\alpha|,|e_A|,|e_m|,|e_n|\le16\epsilon,
+\quad |e_g|,|e_q|\le64\epsilon.\tag{SC11}
+\]
+Also \(z/H\le\epsilon\), \(k/\sqrt H\le\sqrt\epsilon\), \(t\le2\).
+
+Here is the saved quantitative argument, with its intermediate inequalities printed. In `verify_native_contact.py`, `Mc`, `Gc`, `Sc` mean \(M_s,G_s,S_c\), and `delta` is the native denominator \(\Delta\). The source bounds used are
+\[
+1\le M_s/H^2\le(1+\epsilon)^4,\qquad
+1\le\Delta/[H(1+H)]\le1+10\epsilon,
+\]
+\[
+1\le(B_s+zr)/H\le(1+\epsilon)^2,\quad
+1\le S_c\le(1+\epsilon)^2,\quad
+1-\epsilon\le G_s/H\le1+3\epsilon,
+\]
+\[
+1-\epsilon^2\le(B_s-zyr)/H\le(1+\epsilon)^2.
+\]
+Substitution in GE1 bounds the relative errors of \(c_*/H,d_*/H,\alpha(1-H)/H^2,AH/y\) by \(12\epsilon\). The relative multiplier of \((1-r)a_0\) in \(mH^2/z^2\) lies between
+\[
+\frac1{(1+3\epsilon)(1+10\epsilon)}
+\quad\text{and}\quad\frac{(1+\epsilon)^4}{1-\epsilon}.
+\]
+The expression \(nr+r/2\) has the same five-factor upper bound as \(AH/y\). Write
+\[
+c_*/H=a_0(1+e_c'),\quad d_*/H=a_0(1+e_d'),
+\quad |e_c'|,|e_d'|\le12\epsilon.
+\]
+Using \(t+j=a_c\),
+\[
+q=\frac{t}{a_c}\frac{1+e_d'}{1+e_w'},\qquad
+\frac gH=\frac{a_0}{a_c}\frac{(1+e_c')(1+e_d')}{1+e_w'},
+\quad |e_w'|\le12\epsilon.
+\]
+These give the stated \(64\epsilon\) bounds. The denominators used in these scaled estimates stay bounded away from zero independently of \(r,t,j,1-H\).
+
+The literal caps used in the first two scripts obey
+\[
+\ell\ge4g\ge4H(a_0-64\epsilon)
+\ge H(1-256\epsilon)>H/4,
+\]
+\[
+\alpha\ge H^2(a_0-16\epsilon)/(1-H)
+\ge H^2(1/4-16\epsilon)>H^2/8.
+\]
+These are the source-envelope estimates as saved, not a fresh audit in this recovery reply.
+
+### Every fixed coefficient budget
+
+Write \(\widehat Q=\sum C_{ij}u^iv^j\),
+\(A_{ij}=2^{-12i-25j}C_{ij}\), and \(p_{ij}=(2^{12}u)^i(2^{25}v)^j\). In the order
+```
+(0,0),(0,1),(0,2),(1,0),(1,1),(1,2),(2,0),
+(2,1),(2,2),(3,0),(3,2),(4,0),(4,2),(5,0)
+```
+the saved SC7 bounds \(\alpha_{ij}\) are
+```
+2^-40,2^-50,2^-33,2^-4,2^-55,2^-41,2^-18,
+2^-62,2^-48,2^-28,2^-65,2^-42,2^-72,2^-51.
+```
+The first bounds \(\|A_{00}-Q_*\|_2\); the others bound \(\|A_{ij}\|_2\). Their saved exact sum is
+\[
+295165937727343559809/4722366482869645213696<1/8.
+\]
+The scripts print/export **every exact rational coefficient estimate** before upward dyadic rounding. They use only denominators
+\[
+hh^a(1+hh^2)^b(1+db)^c(1+ds)^d,
+\]
+with \(hh\in[1/64,1]\), \(1+hh^2\ge1\), \(1+db,1+ds\ge1/2\). Numerator terms are bounded individually at the listed rational endpoints, with negative net powers of `hh` evaluated at \(1/64\); symmetric off-diagonal entries are counted twice. Thus the printed `rational_bound` and `groups` functions specify every estimate, including its denominator treatment.
+
+The source-only reserve is
+\(A_{00}-\sum_{(i,j)\ne(0,0)}\alpha_{ij}I_6\succeq3I_6/8\), and each gate pair is exactly
+\[
+\frac{\alpha_{ij}I_6+A_{ij}}2,\qquad
+\frac{\alpha_{ij}I_6-A_{ij}}2,
+\]
+attached to \(1+p_{ij}\) and \(1-p_{ij}\). There is no constant gate.
+
+The six normalized roots belong to the source span of
+\[
+(X,Y,Z,vW,uvW,uW,uvX,vZ,u^2vW,u^3W,uZ).
+\]
+The retained/event union additionally uses
+\[
+(uX,vX,v^2W,uv^2W,vY,uvY,W,uvZ,uY).
+\]
+The last \(uY\) retains the literal \(A\)-event at \(d=0\). Literal \(n=0\) introduces no division by \(n\); none of the displayed bounds imposes a relative-rate condition on the positive openings \(r,t,j,1-H\). This is the saved strong interval \(2^{-12}\le H<1\); the \(H\to0\) portion is Part 1.

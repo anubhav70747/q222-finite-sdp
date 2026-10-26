@@ -1,0 +1,79 @@
+Q222 paper: private content and dependency map, 22 October 2026
+
+Status: completed proof review and manuscript; the complete abstract was accepted.
+The original author's earlier instruction was to close the global proof first.
+
+Principal claim
+The full eight-coordinate finite-dimensional tensor-product quantum set for
+two parties, two binary measurements each is a spectrahedral shadow. There
+exist finite N,m and real symmetric matrices A0,A1,...,A8,B1,...,Bm such that
+Q222={q: exists y, A0+sum q_i A_i+sum y_j B_j >=0}. The proof supplies
+qualitative existence. It does not evaluate these matrices or N,m.
+
+Consequences
+One fixed finite lifted feasible set represents all marginals and correlators,
+so every affine Bell objective has the same exact lifted optimization domain.
+The matrices can be chosen with real algebraic entries: Q222 has a fixed
+polynomial definition over Q; for the finite N,m supplied by existence, equality
+with a projected pencil is a first-order statement over Q about finitely many
+matrix coefficients. Transfer from R to the real algebraic numbers supplies
+coefficients there. Transfer back to R proves equality for all real q.
+This consequence does not evaluate a pencil or assert efficient extraction.
+
+Reader progression
+1. Introduce the actual Bell experiment and its eight expectations. Explain
+   that a finite SDP representation means linear constraints and positivity
+   of a fixed finite matrix after auxiliary variables have been introduced.
+   State the full theorem with the original eight coordinates retained.
+2. Reduce the physical set to a fixed polynomial two-qubit image and nine
+   convex weights. This proves compactness/semialgebraicity and makes later
+   field extensions precise. Define Bell slack f=bound-Bell functional.
+3. Explain why ordinary pointwise nonnegativity is insufficient for the
+   finite-representation question. State the tensor criterion, define its
+   two copies of a real closed field and exact tensor evaluation. Give its
+   quantifiers before using independent infinitesimal coefficients/tests.
+4. Derive the common event-square parent and source reduction. Show the
+   determinant's nonnegative outer coefficients and how logarithmic convexity
+   supplies actual regular contacts. Reduce extreme sources to the two
+   explicit omission families plus the two closed source faces.
+5. Explain the local SOS mechanism by proving the positive-residue/strict-
+   Gram lemma and the restricted monomial contact lift. At noncommuting
+   residues, entanglement makes the vanishing events a matching; adding a
+   normal constraint can happen at most four times. At commuting residues,
+   retain full normal coefficients and resolve exact source-scale branches.
+   Present the source partition and name the operative lemmas without replacing
+   them by historical certificate labels. Full derivations must accompany it.
+6. Restore pure-source and pure-testing factors, then finite source/testing
+   convex combinations. This yields the universal tensor criterion and hence
+   the global finite lift. Prove the algebraic-coefficient corollary.
+7. Conclude with the precise structural consequence and the remaining concrete
+   task of evaluating a useful pencil. Do not claim fixed-level NPA exactness,
+   second-order-cone representability, an explicit size, or computational speed.
+
+Supporting proof material
+The independently reviewed R21 bodies contain the full local calculations.
+Preserve their original bytes and component map. In a submission manuscript,
+rewrite their exposition in dependency order and remove source-history prose;
+never omit a source boundary, first normal, complementary state chart or
+independent testing-rate condition to shorten the proof. The retained 798-page
+volume is supporting source evidence, not already a polished supplement.
+The exact replay scripts corroborate the displayed identities and should be
+optional ancillary checks, not a required step in the printed proof.
+
+Notation
+Q222: full quantum set; q: its eight-coordinate point.
+f: valid affine Bell slack; F: its homogeneous evaluated polynomial.
+Kc,Kt: separately labelled real closed fields over R; T=Kc tensor_R Kt.
+u,v: testing half-angles; actual contact parameters carry c subscript.
+W,X,Y,Z: homogeneous real state coordinates.
+d: nonnegative signed-core coefficient, distinct from matrix/block dimension.
+lambda,n,m,C,A,D,alpha,beta: nonnegative losing-event weights.
+delta_tot: signed-core coefficient divided by total coefficient sum, kept
+invariant under every normalization. Matrix dimension should be N, not d.
+Literal zero, positive infinitesimal and positive bounded unit are distinct.
+
+Preservation outside the active main theorem
+The supplied extraction package's evaluated tilted-CHSH projection and general
+conditional assembly are preserved in source/ and its source inventory.
+They are not silently promoted to an evaluated lift of the full quantum set.
+An explicit feature basis/pencil is a separate constructive output.

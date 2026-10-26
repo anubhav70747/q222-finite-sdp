@@ -1,0 +1,240 @@
+WEAK CONTACT-CAP GRAM: INDEPENDENT AUDIT OF ALL 44 RECORD BOUNDS
+24 October 2026
+
+Result. The recovered 44-record matrix has Q00>=I/4 and satisfies
+all eight claimed operator bounds on the actual restricted source box.
+The derivation below supplies the intermediate bounds explicitly.
+The current normalization is literal at n=0 and uniformly controls
+unbounded n. This result concerns PSD admission of the reconstructed
+matrix; full-parent reconstruction, sign joining, and fixed-root span
+are a separate review.
+
+Inputs: pro_contact_recovery_reply.txt (Part 1), the 44 actual symmetric
+records in its first program, and the original RSR/RFN dictionary in
+latex/certificates/c2_short.tex. No source sampling or numerical search.
+Exact check: check_weak_recovery_source_envelopes.py and
+weak_recovery_source_envelopes_check.json. The code inspected the
+recovered mathematical prefix before executing it; its checks are
+coefficient envelopes and zero polynomial numerators, not feasibility
+tolerances. Originals/public files were unchanged.
+
+1. Actual domain and auxiliary enlarged box
+
+The previously checked native change gives
+ 0<B<2^-11, 0<j,T<2^-63, 0<p<j, 0<H<1, n>=0,
+ x=jB, y=TB, u<=2^-12, v<=2^-25.
+Call this domain D. In particular n can be zero or unbounded; no lower
+bound on j-p,H,1-H,B,T or p is imposed. All native parameters with
+undefined denominators remain strictly positive.
+
+For source-polynomial estimates ONLY, enlarge to
+ B,j,T<=delta=1/1024, p=j*s, 0<=H,s<=1.
+The special numerical bounds B<2^-11 and j,T<2^-63 are retained when
+estimating the final pivot losses. The enlarged box alone would not
+give the same 7/8 circuit reserve using 192B.
+
+The coefficient-weight envelope of a polynomial is its absolute
+coefficient sum weighted by delta^(degree_B+degree_T+degree_j).
+The exact recovered polynomials give
+ P-1: 1155174955302256641/590295810358705651712 <1/128,
+ L-1: 2149057539/549755813888 <1/128,
+ FF-1:5633901886178307/1152921504606846976 <1/128,
+ F1:1612711427/536870912 <4,
+ F2/B:1077937155/1073741824 <2.
+Thus, writing ell=127/128 and h=129/128,
+ 1<=P<=h, ell<=L,FF<=h, 1-delta<=E<=1.
+P>=1 uses its positive expression and p<j; E<=1 uses HT+p<1.
+
+2. Every scaled source bound used in the matrix estimates
+
+Let a_min=1/(2h) and
+ a_max=(1+delta^2)^2(1+2delta)/[2(1-delta)].
+The explicit RSR6/RSR16 formulas give the following intervals:
+
+ratio                         lower                        upper
+A/T                           a_min                        a_max
+THC                           ell/(2h)                     h/2
+T(D+1/2)(1-H)                  (1-delta^3)/(2h)             d_max
+alpha/B^2                     ell/(2h)                     (1+2delta)h/[2(1-delta)]
+mu/(jp)                       a_min                        (1+delta^2)^3/2
+fc/(Tx^2)                     ell/(2h)                     h/2
+qc/(Tx)                       a_min-(2/3)delta^2           a_max
+rc/[TjB^2(1-p)]                ell/(2h)                     (1+delta^2)^2 h/[2(1-delta)]
+
+Here
+ d_max=(1+delta^2)(1+2delta)(1+delta^3)/2+delta/2.
+Every displayed lower bound exceeds1/3 and every upper bound is below2/3
+by exact rational arithmetic at delta=1/1024.
+
+These intervals follow termwise, without opening-dependent constants:
+x,y<=delta^2, 1<=K+Hjy<=1+2delta, 1<=P<=h, E>=1-delta,
+and 1-delta^3<=1-y[(1-H)j-p]<=1+delta^3.
+For T(D+1/2)(1-H), first cancel 1-H in D's formula, then add
+T(1-H)/2. For qc use qc/(Tx)=A/T-x*fc/(Tx^2).
+For all other entries insert these elementary bounds directly in RSR6/16.
+This explicitly accounts for all eight members of S1, including H->0,
+H->1, and vanishing j,p,T,B. No lower opening was introduced.
+
+The positive numerator condition supplies the sole n-dependent estimate.
+The printed remainder formula gives
+ NN/j<=1+B(3j+1)+BT(j+1)+6B^2T(j+1)<2.
+As P>=1,
+ 0<=n(j-p)/j=NN/(2jP)<=1.                              (2)
+
+3. Signed masses and normal coefficients
+
+The positive RSR19 identity implies KK>0 because
+ KK>=p(1-p)[1-B(j+1)]>0.
+A direct upper bound in the printed KK polynomial is
+ KK<=(1+delta)p+
+       [1+3delta+3delta^2+delta^3+delta^4]B
+    <=2(p+B).
+Indeed bound pW0 by p(1+j), the B line by B(1+2delta),
+the BT line by BT(1+3delta+delta^2), and the final line by B*delta^4.
+Consequently kappa=-kc>0. Exact source ratios and S1 imply
+ kappa/rc = T KK/[(1-p)(1+Hy)L] <=3T(p+B),
+ kappa/(qc*y) <=4(p+B),
+ gc/fc=Hy L/FF<=2y.                                    (3)
+For the second inequality use qc>=Tx/3 and
+kappa=T^2B^2j(1+x)KK/(2EP); its remaining rational constant is
+3(1+delta^2)/(1-delta)<4. These bounds hold at n=0 too.
+
+The four recovered source cancellations were independently reduced
+to zero rational numerators after termwise cancellation. In particular
+ j Kd+mu+xTCH=0,
+ Kd=CH-(D+1/2)(1-H),
+so |Kd|<=mu/j+B TCH<=(2/3)(p+B).
+The matrix estimates also admit direct bounds avoiding that cancellation:
+ Kc/j=p/(2j)+H(alpha+1/2)-1/2-n(j-p)/j.
+By (2), S1 and p/j<1, |Kc/j|<=2.
+Moreover, directly from kR=-mu-(alpha+1/2)(1-p)+(T/j)Kc+alpha/B,
+ |kR|<=1/2+(4/3)delta^2+(8/3)delta<1.                 (4)
+Here mu<=(2/3)jp, alpha<=(2/3)B^2 and alpha/B<=(2/3)B.
+
+For completeness the remaining source claims used in the recovered
+normal argument follow from S1:
+ TCq=A+v^2 TH[C(1+u^2)+A+alpha+1/2] <=T+v^2
+when u^2<=1/16; the bracket is at most
+ (2/3)(17/16)+(2/3)delta^2+(2/3)delta^3+delta/2<1.
+Also
+ |alpha-BTCH u^2|<=(2/3)B(B+u^2),
+ TH(1-H)HM>=TH(1-H)(C+D+1/2)
+              >=(1-H)/3+H/3=1/3.                    (5)
+Both large C and large D are retained jointly in the last estimate.
+
+4. Uniform source normalizations, including literal n=0
+
+Use names a_N,b_N to distinguish source normalization from B:
+ h0=mu+1/2,
+ a_N=1/sqrt(n+h0),
+ b_N=sqrt[n/(h0(n+h0))],
+ tau=sqrt[TH(1-H)],
+ rhoQ=T sqrt(x/qc), rhoR=sqrt(jT/rc).
+S1 immediately gives
+ a_N^2+b_N^2=1/h0<=2, a_N+b_N<=2,
+ tau*rhoQ<=T, B*rhoR<=sqrt[3/(1-p)]<2,
+ alpha*rhoR<=2B,
+ |(Kc/j)rhoQ|<=4sqrt(T),
+ (alpha+1/2)tau<=sqrt(T)/3,
+ TH(C+A+alpha+1/2)<1.                                 (6)
+For example rhoQ<=sqrt(3T), tau<=sqrt(T)/2, and
+alpha+1/2<=1/2+(2/3)delta^2<2/3.
+The last inequality uses THC<=2/3 and the remaining O(T) terms
+bounded exactly as in (5).
+
+The fourth row is sqrt(Me)*bcur, Me=n h0 j^2/(n+h0).
+The apparent shift division has already canceled in the records:
+ b_N*sqrt(Me)=nj/(n+h0)=cb
+holds literally for every n>=0, including zero.
+At n=0, b_N=Me=cb=0, a_N=1/sqrt(h0), and the fourth row is zero.
+No record contains 1/n or 1/sqrt(Me).
+The other potentially vanishing denominator is
+Sigma=Me+fc/y, which stays strictly positive at n=0. The previously
+checked budget gives gamma=p^2/Sigma<=8. Thus the n=0 specialization
+does not rely on a limit or a changed matrix formula.
+
+If n is unbounded, a_N,b_N remain bounded by (6); every other n
+dependence is through n(p-j)/j, bounded by (2). Source inverses of
+H,1-H,T,j,B in the ROWS need not be bounded; all matrix coefficients
+are controlled by (2)--(6).
+
+5. Q00>=I/4 from the actual constant records
+
+The constant graph splits into:
+ (i) rows(1,4,9,10);
+ (ii) rows(2,3,11);
+ (iii) diagonal rows5,6,7,8.
+There are no other constant cross entries among the 44 records.
+
+For (i), diagonals are(1,1,16,8) and the two cross columns are
+(a_N,-b_N)^T*kR and (a_N,-b_N)^T/2. After subtracting I/2, the lower
+diagonal block is diag(31/2,15/2); its Schur correction has norm
+ <=(a_N^2+b_N^2)[2kR^2/31+1/30]
+ <=2(2/31+1/30)=91/465<1/2.
+Hence block(i)>=I/2.
+
+In (ii), the row2 diagonal is tau^2(C+D+1/2+A)>=1/3 by (5).
+Rows3 and11 have diagonals>=1. Their only cross entries are
+ q23=tau*rhoQ*A/T, |q23|<=T,
+ q2,11=(mu/p)sqrt[H(1-H)], |q2,11|<=j/3.
+Since T+j/3<1/12 on D, diagonal dominance after subtracting I/4
+proves block(ii)>=I/4. This uses no lower bound on H or1-H.
+
+Row5 has diagonal
+ 1+(gc-2kappa)/rc>=1-6T(p+B)>7/8.
+Rows6--8 have identical constant diagonal
+ 1-gc/fc-64x^2 y/fc>=1-2y-192B>7/8.
+For this last strict bound use B<2^-11 and y=TB<2^-74.
+Combining these independent blocks proves Q00>=I/4.
+
+6. Each nonconstant coefficient: literal row sums
+
+For a symmetric matrix, operator norm is bounded by the maximum
+absolute row sum. Reading exactly the 44 symmetric-entry records gives:
+
+monomial  derived maximum row sum                    fixed bound
+u         <=(a_N+b_N)alpha*rhoR<=4B<6B               1
+v         <=tau*alpha*rhoR<=B                       1
+u^2       <=max(192B,192/(1-p),8Ty)                 512
+v^2       <=max(1+8(p+B),64y)                       8
+uv        <=8sqrt(T)<12                            16
+u^2 v     <=(tau)(THC)(B*rhoR)<=2sqrt(T)/3          4
+u^2 v^2   <=max(2/3,8T)                            16
+v^4       <=8gamma<=64                             128
+
+Details requiring particular care:
+* u^2 diagonal3 is64xy/qc<=192B; diagonal5 is
+  64xy/rc<=192/(1-p); diagonals6--8 are gamma*T*y.
+* v^2 consists only of diagonal3, cross(2,3), and diagonals6--8.
+  Their bounds are8(p+B),1,64y, respectively.
+* uv has only edges(1,3),(3,4),(1,2),(2,4). Its row3 sum is
+  (a_N+b_N)|(Kc/j)rhoQ|<=8sqrt(T), and each other sum is smaller.
+* u^2v has one cross edge(2,5); u^2v^2 has cross(2,3) plus four
+  gamma*T diagonals. The cross bound is tau*rhoQ*HC<=THC<=2/3.
+* v^4 has only four diagonals -8gamma.
+
+All derived bounds are strictly below their fixed gate bounds on D.
+The asserted looser row sums in the recovered reply therefore hold.
+In particular every listed operator bound remains valid when n=0,
+n is unbounded, or any positive source opening becomes arbitrarily small.
+
+7. Fixed gates and exact remaining scope
+
+With p_ab=(2^12 u)^a(2^25 v)^b and the eight fixed bounds r_ab,
+the coefficient matrices alpha_ab I +/- A_ab are PSD, where
+ alpha_ab=r_ab 2^(-12a-25b), A_ab=2^(-12a-25b)Qab.
+Their budget is exactly
+ 2^-12+2^-25+2^-15+2^-47+2^-33+2^-47+2^-70+2^-93
+ =2720379395100337099505665/9903520314283042199192993792
+ <1/1024.
+Consequently reserve>=255I/1024 and the source-only matrix fixed-gate
+decomposition printed in the recovery is positive. This part needs
+no adaptive TF1/TF2 threshold.
+
+The recovered text now supplies enough inequalities to prove weak
+Gram positivity on its ACTUAL restricted domain; no missing weak
+coefficient estimate was found in this pass. This does not certify
+its full-parent identity or final testing-function span, which are
+being checked independently, nor the strong Part2 or a larger source
+domain. No additional construction or source sweep was undertaken.
+

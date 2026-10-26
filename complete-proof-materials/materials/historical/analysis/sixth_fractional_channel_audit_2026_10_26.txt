@@ -1,0 +1,35 @@
+Sixth-root fractional-channel necessity: exact independent verification
+2026-10-26. No optimization or numerical feasibility computation.
+
+Verdict: the new conditional necessity theorem is correct in the displayed contact-normalized monomial frame. It does not prove sixth-root admission, and its extended functional is not a sixth-root dual separator.
+
+Input checked: analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/06_sixth_root_uniform_return_COMPLETE.txt. The only imported numerical data are the 90 literal integers in the public independent-review/checks/c2_half_power_obstruction.py; the audit does not execute that file. The native source and full SG2 parent are independently rebuilt with Fractions.
+
+Support and coefficient algebra:
+* Sixth-root polynomial parity gives unpruned orders64,48,48,36. The WW Newton triangle forces i+j>=6; the ZZ triangle forces i+j<=6. Retained orders are52,36,36,30, total154. Their contact reductions are51,35,35,29. Thus the response's combined Newton/contact count is consistent.
+* The old subset i,j in{0,3,6} has orders14,6,6,4, total30. The remaining orders38,30,30,26 total124.
+* Defining Lambda at summed exponents divisible by6 as Y+T, T=24000000000000, and zero otherwise, every old-new adjoint entry is exactly zero. All new diagonal entries are exactly zero. Any nonzero new entry uses a complementary pair1+5 or2+4 in at least one angle. The largest absolute entry is exactly B=24002021367851.
+* The native source is strict and its normalized complete-parent value at(1,1,ones) is exactly zero. Consequently the added T does not change the full-parent pairing. It remains exactly minus the delta printed in the response.
+
+Old-sector positivity:
+For the first retained feature in each block, form the pivot/difference congruence. The lower-right matrices are exactly the old13,5,5,3 compressed moment matrices. Independent rational LDL reconstruction verifies each is positive definite. Solving each compressed Schur problem with rational arithmetic gives gaps strictly greater than, respectively,
+ 400000000000,
+ 15000000000000,
+ 19000000000000,
+ 23000000000000.
+Thus all four UNCOMPRESSED old-sector matrices are strictly positive definite after adding T. Exact gap fractions and feature orders are in the JSON.
+
+Quantitative conclusion:
+For any PSD sixth-root Gram G representing the normalized parent, Newton-forced rows vanish. Contracting the identity yields
+ -delta=tr(M_O G_OO)+tr(M_N G_NN).
+The first term is nonnegative. Entrywise boundedness gives ||M_N||<=124B (indeed each absolute row sum<=123B), hence
+ tr(G_NN)>=delta/(124B)>9.49*10^-9.
+Since the new diagonal is zero,
+ sum_{e<f, Lambda(e f)!=0}|G_ef|>=delta/(2B)>5.88*10^-7.
+The trace pairing includes both off-diagonal orders, which is why the second denominator is2B. Neither inequality assumes a particular construction of G. Parity averaging is optional: omitted cross-parity terms already contract to zero.
+
+Scope:
+The explicit constants depend on the stated raw retained-monomial/contact-normalized frame, not on arbitrary congruent Gram coordinates. The negative pairing varies continuously with strict native parameters under the moving invertible contact normalization, while the moment matrices are fixed. Therefore a neighborhood inside the strict native parameter family has a positive lower bound of the same type, with possibly decreased constants. No uniform size for that neighborhood is supplied or required.
+The conclusion excludes completions with all complementary fractional correlations zero; it does not say which complementary channels suffice. It neither excludes L6 nor cancels any source/testing multiplier. The quadratic-module restatement follows directly from splitting exponents i,j by parity, with U=u^(1/3), V=v^(1/3), and root degrees<=3-epsilon and<=3-eta.
+
+Reproduce: run analysis/sixth_fractional_channel_audit_2026_10_26.py from any working directory. It reads the public90-moment literal and writes its adjacent JSON, with all proof checks using exact rational arithmetic. No public files are changed.

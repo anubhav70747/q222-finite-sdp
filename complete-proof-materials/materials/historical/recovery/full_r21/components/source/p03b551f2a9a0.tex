@@ -1,0 +1,271 @@
+# A positive-d terminal at a finite-ratio distance-four corner
+
+25 September 2026. This is new round6 work. It uses the same coefficient-only
+critical-center argument as `POSITIVE_D_FINITE_EDGE_TERMINAL.md`, with a
+separate exact full-tail calculation. It does not cover ratio endpoints or
+flat jet boundaries.
+
+## 1. Hypotheses and conclusion
+
+The physical nonnegative coefficient vector belongs to (B_c^9), where
+\(B_c\) is the bounded valuation ring of a real closed extension of the
+reals. The independent test belongs to the corresponding ring (B_s) of
+another real closed extension. Suppose
+
+\[
+\lambda=0\quad\hbox{exactly},\qquad d_0>0,\quad\alpha_0=0.
+\tag{1}
+\]
+
+All other coordinates may have arbitrary nonnegative residues or opening
+rates. At this distance-four residue face write
+
+\[
+Q_{c_0}(U,V)=q_{20}U^2+q_{11}UV+q_{02}V^2
++q_{21}U^2V+q_{12}UV^2+q_{22}U^2V^2.
+\]
+
+For a real (t_0\ne0), assume
+
+\[
+q_{20},q_{02}>0,\quad
+q_{20}t_0^4+q_{11}t_0^2+q_{02}=0,
+\quad q_{21}t_0^4+q_{12}t_0^2>0.
+\tag{2}
+\]
+
+Let the exact quadratic jet (J_4(t_0)) have kernel
+
+\[
+(w_0,x_0,y_0,1),
+\]
+
+and suppose its principal block in the variables ((W,X,Y)) is positive
+definite. Equivalently the normalized kernel is simple and this specified
+complement is positive. This real rank/complement condition is stated
+explicitly; no unverified support census is used to remove it.
+
+Then the original full slack is SOS in (B_c\otimes B_s) for every
+independent test with
+
+\[
+\bar u=\bar v=0,\qquad
+[\bar W:\bar X:\bar Y:\bar Z]=[w_0:0:0:1],
+\tag{3}
+\]
+
+with the following un-divided normal quantities:
+
+\[
+X-vx_0,\quad Y-vy_0,\quad u-vt_0
+\]
+
+are the normal quantities handled below. **No asymptotic comparison or
+extra smallness assumption on these three differences is needed.** They
+automatically have zero residue in (3), and the positive Gram is proved
+uniformly on all their independent rates. In particular this statement
+does not assume that \(u/v\) is bounded or that its residue is \(t_0\): the
+construction is an identity in the un-divided variables. The selected
+
+\(t_0\) specifies a coefficient-side jet center, not a condition on an
+independent mixed or pure-tested ratio.
+
+## 2. Full polynomial and residue Hessian
+
+The pure-tested amplitude (vY-Z) is a unit in (3). Normalize it to (-1),
+so
+
+\[
+Z=1+vY.
+\]
+
+The whole opened alpha packet becomes (4\alpha(1+u^2)). Substituting
+
+\[
+X=vx,\quad Y=vy,\quad u=vt,\quad W=w,\quad V=v^2
+\]
+
+formally, on the coefficient side only, gives the exact full identity
+
+\[
+F=4\alpha+v^2K(x,y,t,w,V).
+\tag{4}
+\]
+
+The complete (K) is polynomial. Its constant \(V\) coefficient is
+
+\[
+\begin{aligned}
+K_0={}&4e_1x^2+4e_2(w-x-t)^2+4e_3(tw-y)^2+4e_4y^2\\
+&+4e_5(tw-y-1)^2+4\beta(x+t)^2\\
+&+2d\{(tw-y)^2+(x+t)^2-2tw\}+4\alpha t^2.
+\end{aligned}
+\tag{5}
+\]
+
+At the real residue the last term vanishes, and this is precisely
+\(J_4(t)[w,x,y,1]\). The stipulated positive three-state complement makes
+the \((w,x,y)\) Hessian positive. Its minimized scalar is
+
+\[
+\frac{16(q_{20}t^4+q_{11}t^2+q_{02})}{\det M_J(t)},
+\tag{6}
+\]
+
+where \(M_J\) is that positive principal jet block. Physicality and (2)
+make the numerator a positive multiple of \((t^2-t_0^2)^2\). Therefore
+the full four-variable Hessian of \(K_0\) at
+
+\[
+q_0=(x_0,y_0,t_0,w_0)
+\]
+
+is positive definite. Its optimized next coefficient is
+
+\[
+\gamma=\partial_V K(q_0,0)
+=\frac{16(q_{21}t_0^4+q_{12}t_0^2)}{\det M_J(t_0)}>0.
+\tag{7}
+\]
+
+The determinant calculation is the full state Schur-complement calculation,
+after scaling \(X,Y\) by \(v\). At the zero of (6), derivatives of the
+positive state determinant do not affect the next coefficient. This
+calculation proves the real sign in (7); no state-block inverse is inserted
+into a tensor certificate.
+
+## 3. Exact centers, including both signs
+
+Solve \(
+\nabla_qK(q_*(c,V),V)=0
+\) by the Nash implicit function theorem, justified by the positive
+four-Hessian. Let \(k(c,V)=K(q_*(c,V),V)\), and put
+
+\[
+\kappa=k(c,0).
+\]
+
+If \(\kappa\ge0\), take \(q_c=q_*(c,0),V_c=0\). If \(\kappa<0\), solve
+
+\[
+\nabla_qK(q_c,V_c)=0,\qquad
+K(q_c,V_c)+V_c K_V(q_c,V_c)=0.
+\tag{8}
+\]
+
+Its residue Jacobian has the positive four-Hessian and final pivot
+\(2\gamma>0\), with zero lower-left block. Hence the nearby solution
+exists in the coefficient field and satisfies \(V_c>0\), by the local
+monotonicity of \(k(V)+Vk'(V)\) from its negative value at zero.
+
+In the latter branch the pure coefficient scalar
+
+\[
+\mu=4\alpha+V_cK(q_c,V_c)
+\tag{9}
+\]
+
+is nonnegative. It is the original physical slack at the actual
+coefficient-side realization \(v=\sqrt{V_c}\),
+
+\[
+(u,X,Y,W)=(v t_c,v x_c,v y_c,w_c),\qquad Z=1+vY.
+\]
+
+Thus the sign argument is valid for arbitrary physical coefficients, not
+only coefficient vectors already at contact.
+
+## 4. Verified full-tail grouping without division by v
+
+Define the un-divided normals
+
+\[
+N_1=X-vx_c,\quad N_2=Y-vy_c,\quad N_3=u-vt_c,
+\quad N_4=v(W-w_c).
+\tag{10}
+\]
+
+Write \(z=W-w_c\) while expanding the full polynomial. Its four exact
+linear coefficients in \(N_1,N_2,N_3,z\) are
+
+\[
+vK_x,\quad vK_y,\quad vK_t,\quad v^2K_w.
+\]
+
+Accordingly the whole linear part is \(v\nabla_qK(q_c,V)\cdot N\).
+Every monomial of the full remainder belongs to
+
+\[
+(N_1,N_2,N_3,vz)^2.
+\tag{11}
+\]
+
+The direct checker allocates all 55 monomials of that complete remainder
+into (11). Terms such as \(N_3^2z^2\) retain \(z^2\) as a bounded
+infinitesimal coefficient. Terms with one \(z\) and one other normal have
+the required factor \(v\), unless they already have two of the first
+three normals. Terms with \(z^2\) and no other normals have \(v^2\).
+Consequently no step substitutes \(z=N_4/v\).
+
+The exact resulting normal Gram has residue
+
+\[
+\tfrac12\operatorname{Hess}_{(x,y,t,w)}K_0(q_0)\succ0.
+\tag{12}
+\]
+
+Since \(\nabla K(q_c,V_c)=0\), the linear coefficient polynomial is
+divisible by \(V-V_c\). Its contribution couples \(N\) to the scalar
+generator \(V-V_c\) with an extra \(v\), hence a zero-residue cross
+coefficient. The fixed-center univariate profile gives, by exact monic
+division, the two identities
+
+\[
+\begin{array}{ll}
+\kappa\ge0:&F=4\alpha+\kappa v^2+G^THG,
+\quad G=(N_1,N_2,N_3,N_4,V),\\[2mm]
+\kappa<0:&F=\mu+G^THG,
+\quad G=(N_1,N_2,N_3,N_4,V-V_c).
+\end{array}
+\tag{13}
+\]
+
+The final Gram residue is the positive block (12) together with the
+positive last entry \(\gamma\). The bounded positive-residue Gram lemma
+proves it SOS, and the remaining pure nonnegative point scalars are
+squares. Restoring the event normalization multiplies the roots by a
+pure tested unit. This proves the claimed original-ring certificate for
+every rate in (3).
+
+## 5. Nonvacuity and audit status
+
+At the physical residue
+
+\[
+c_0=(2,0,1,1,1,1,1,0,1)
+\]
+
+one has
+
+\[
+Q=144\{(U-V)^2+2UV(U+V)+U^2V^2\}.
+\]
+
+The corner center is \((x_0,y_0,t_0,w_0)=(-1/2,1/2,1,1)\), and
+\(\gamma=6\). The full four-Hessian is
+
+\[
+\begin{pmatrix}
+32&0&24&-8\\0&32&-24&-24\\24&-24&48&12\\-8&-24&12&32
+\end{pmatrix}\succ0.
+\]
+
+`verify_positive_d_ratio_corner.py` reconstructs the full polynomial and
+verifies **9 identities / 31 scalar entries**, the 61-term original
+normalized parent, the 60-term profile, all 55 remainder monomials, and
+the full residue Hessian. Its report is
+`POSITIVE_D_RATIO_CORNER_CHECKS.json`.
+
+The theorem is local in the residue state \(w_0\). Other real kernel
+directions, a vanishing complement, ratio endpoints, and a vanishing
+off-edge coefficient have not been included by approximation.

@@ -1,0 +1,155 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=23mm,headheight=14pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array,calc,graphicx,xcolor}
+\usepackage{xurl}
+\usepackage[colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Q222: analytical extraction refinement}
+\fancyhead[R]{\small Regenerated 22 October 2026}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\newcommand{\Q}{{\mathcal Q_{222}}}
+\newcommand{\R}{\mathbb R}
+\newcommand{\RA}{\mathbb R_{\mathrm{alg}}}
+\newcommand{\Splus}{\mathbb S_+}
+\newcommand{\T}{\mathcal T}
+\newcommand{\Id}{\mathbb I}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Phys}{\operatorname{Phys}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\norm}[1]{\lVert #1\rVert}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\setcounter{tocdepth}{2}
+\setlength{\emergencystretch}{2em}
+\hypersetup{pdftitle={Q222 Analytical Extraction Refinement - Regenerated},pdfauthor={Regenerated proof and exact coefficient record},pdfsubject={Local extraction, exact tilted projection, and open global extraction gates}}
+\title{\textbf{Q222 Analytical Extraction Refinement}\\[4pt]
+\large Regenerated proofs, exact coefficient data, and the remaining global gates}
+\author{Mathematical reconstruction and verification record}
+\date{22 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+This release reconstructs the analytical extraction refinement from retained
+sources and newly generated exact data. It delivers an evaluated local
+complete-parent regular-C2 certificate, an exact affine pencil for the
+tilted--CHSH two-coordinate projection, the displayed $B_0$ coefficient
+module, restricted contact data, and the general local constructions used
+to form fixed features. It also proves a precise limitation of literal
+Schur-remainder extraction and specifies a conditional exact algebraic
+search for a full lift. The global feature list, full eight-coordinate
+affine pencil, and both global inclusions remain open. The accompanying
+archive contains the complete sources and replayable coefficient checks,
+as well as the earlier continuation archive unchanged.
+\end{abstract}
+
+\section{Outcome, scope, and source custody}
+\label{sec:release-scope}
+
+Write the original quantum coordinates as
+\[
+ q=(a_0,a_1,b_0,b_1,E_{00},E_{01},E_{10},E_{11})\in\R^8.
+\]
+The purpose of exact finite-lift extraction is to evaluate finite integers
+$N,m$ and all real symmetric matrices in
+\begin{equation}
+ \Q=\left\{q\in\R^8:\exists y\in\R^m,
+ A_0+\sum_{\nu=1}^{8}q_\nu A_\nu+\sum_{j=1}^{m}y_jB_j\succeq0\right\},
+ \label{eq:global-target}
+\end{equation}
+and to prove both inclusions for those same coefficients. Equation
+\eqref{eq:global-target} is the target of the open global extraction items,
+not a newly evaluated representation delivered by this report.
+
+The regenerated results have the following precise domains.
+\begin{center}
+\small
+\begin{tabular}{@{}p{0.23\linewidth}p{0.29\linewidth}p{0.41\linewidth}@{}}
+\toprule
+Construction & Delivered data & Exact scope\\
+\midrule
+Regular C2 & 785 blocks of order two; 237 ambient product monomials
+ & One normalized contact graph and an independent testing box.\\[5pt]
+Tilted--CHSH & Order five, one auxiliary; or order four, no auxiliary
+ & The projection $(a_0,E_{00}+E_{01}+E_{10}-E_{11})$.\\[5pt]
+Displayed $B_0$ & Nine square features; order-four diagonal coefficient pencil
+ & The four-coefficient module, with original factor typing preserved.\\[5pt]
+Smooth diagonal & Explicit finite local separation and frame construction
+ & Exact $J^2$ data and a positive tangential residue are hypotheses.\\[5pt]
+Global search & Rational physical formula and exact unsolved QE input
+ & A conditional decision procedure; no global coefficient tuple.\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The regular-C2 certificate keeps the complete polynomial parent and
+separates source and testing variables. Its local feature list and product
+map are fully evaluated. The tilted construction additionally supplies an
+explicit matrix pencil and a proof of both inclusions for its projection.
+A rational nonquantum behavior shows why this family, even after
+relabelings and probability constraints, does not describe the full set.
+The global finite-cover theorem states exactly what further data would
+turn sufficiently many restored local certificates into
+\eqref{eq:global-target}.
+
+\paragraph{What was recovered.}
+The canonical August 30 source has 76,839 bytes and SHA-256
+\begin{center}\small
+\nolinkurl{e268a6ae1c11dd02b5819064fa7e8187173074050d92f3204e703dd46f574731}.
+\end{center}
+It was recovered from the retained continuation archive through its
+nested preceding releases. The attached August 31 frozen source archive
+has 17,609 bytes and SHA-256
+\begin{center}\small
+\nolinkurl{1a6208d7d1f51e5e166d46e80be3167ffc43aff97027f5d0c39705ab5d4f2bb3}.
+\end{center}
+The earlier continuation archive is preserved unchanged at 8,884,930
+bytes, with SHA-256
+\begin{center}\small
+\nolinkurl{9dcf9554b1a2578bb6b9fd909e7d194d82636fe61a0035da0694eb2e44f441a3}.
+\end{center}
+The file \nolinkurl{inputs/SOURCE_CUSTODY.json} records the recovery chain.
+Matching hashes establish that these inputs have been preserved. They do
+not revalidate every inherited mathematical claim.
+
+\paragraph{What this regeneration does not restore.}
+The historical 549-page R21 proof and its original completeness assertion
+are not recreated or independently recertified here. This is a newly
+regenerated refinement with its own checked data, not a byte-for-byte copy
+of a lost report. The unchanged prior archive retains the preceding
+derivations and candidate matrices for continued work. No earlier release
+has been overwritten.
+
+\paragraph{How to read and reproduce the release.}
+The next section gives the complete local C2 argument and evaluated
+compiler conventions. The local separation, $B_0$, contact, and assembly
+sections explain how those methods extend and what is still missing.
+The tilted section gives the fully evaluated projected example. The
+Schur-remainder and effective-search sections delimit two other extraction
+routes. The final checklist records all twenty supplementary acceptance
+items and ten concrete global data obligations. Run
+\texttt{python3 verify.py} for integrity, or
+\texttt{python3 verify.py --replay quick} for the fresh exact suites in an
+isolated temporary copy. The root verification report states the scope
+and outcome of the actual release checks.
+
+\tableofcontents
+\clearpage
+\input{regular_c2.tex}
+\input{../diagonal/diagonal_proofs.tex}
+\input{tilted.tex}
+\input{../c2/schur_remainder_proof.tex}
+\input{effective.tex}
+\input{checklist.tex}
+\input{references.tex}
+\end{document}

@@ -1,0 +1,158 @@
+\section[A homogeneous scalar lift at the unbounded-state contact]{A homogeneous scalar lift at the unbounded-state contact}
+\label{sec:unbounded-b-homogeneous-scalar}
+
+This lemma is a scalar lifting statement.  It neither supplies the full
+state normals nor proves positivity of its coefficient Gram by itself.
+Its purpose is to avoid any bound on the contact state ratio.
+
+Let $B,\sigma>0$ be pure coefficient infinitesimals, let $k>0$ be a
+pure coefficient bounded unit, and put $x=\sigma B$, $\xi=u^2$.
+Suppose
+\[
+ f=a(\xi,v)W^2+2u d(\xi,v)WZ+c(\xi,v)Z^2,
+ \quad
+ a=\frac\xi B Q+\sigma^2 a_0,\qquad
+ c=B e+\xi b,                                      \tag{HL1}
+\]
+where $Q,a_0,d,e,b$ have bounded polynomial coefficients.  Bounded
+pure testing unit denominators may be cleared beforehand.
+Assume the value and all first derivatives of $f$ vanish at
+\[
+ u=\sqrt{x},\quad v=k,\quad
+ W=\frac1k\sqrt{B/\sigma},\quad Z=1.                \tag{HL2}
+\]
+No bound on $B/\sigma$ is assumed.
+
+Define the homogeneous roots
+\[
+ R=\frac{uW-(B/k)Z}{\sqrt B},\qquad
+ S=uZ-\sigma kW,\qquad
+ U=\sqrt B(v-k)Z,\qquad T=u(v-k)Z.                 \tag{HL3}
+\]
+They satisfy the exact conductors
+\[
+ (\xi-x)W=u\sqrt B R+(B/k)S,
+ \qquad
+ (\xi-x)Z=uS+\sigma k\sqrt B R.                    \tag{HL4}
+\]
+Then $f$ has an exact symmetric Gram on $(R,S,U,T)$ whose entries
+are bounded polynomials.  In particular no inverse of $\sigma$,
+$B$, a testing infinitesimal, or a mixed expression is required in
+these Gram entries.  The roots themselves need not be bounded.
+
+\paragraph{First set $v=k$.}
+In this paragraph every scalar coefficient is evaluated at $v=k$.
+State stationarity and $u$ stationarity give
+\begin{gather*}
+ a_c=-\sigma k d_c,\qquad c_c=-B d_c/k,\\
+ B(a_\xi)_c+kd_c+2kx(d_\xi)_c
+                      +\sigma k^2(c_\xi)_c=0,     \tag{HL5}
+\end{gather*}
+where $c$ on a subscript means evaluation at $\xi=x$.
+These are identities in the pure coefficient field; deriving them
+does not insert an inverse into a tensor Gram.
+
+Set, by monic polynomial division in $\xi$,
+\[
+ s=\frac{c+Bd/k}{\xi-x},\qquad
+ q=-kd-\sigma k^2s,\qquad
+ h_2=\frac{Ba+k\xi d+\sigma k^2c+\sigma Bkd}
+                    {(\xi-x)^2}.                 \tag{HL6}
+\]
+All three quotients have bounded polynomial coefficients.  The first
+numerator vanishes at $x$ by (HL5), and the last numerator and its
+$\xi$ derivative vanish there by the same three identities.
+Moreover $Ba=\xi Q+B\sigma^2a_0$ is bounded.  Division by a monic
+polynomial preserves bounded coefficients and is not evaluation of
+an inverse of $\xi-x$.
+
+Direct multiplication gives the exact identity
+\[
+ f(\xi,k)=qR^2+sS^2
+                  +h_2\left(uR+\frac{\sqrt B}{k}S\right)^2.
+                                                               \tag{HL7}
+\]
+For later residue computations, if $E_0=e+d/k$, then
+\[
+ s=b+B\frac{E_0(\xi)-E_0(x)}{\xi-x}
+       +x\frac{b(\xi)-b(x)}{\xi-x}.                \tag{HL8}
+\]
+Thus $s_0=b_0$, $q_0=-k_0d_0$, and the $h_2$ correction has zero
+residue in every Gram entry.  Here subscripts $0$ denote residues,
+not evaluation at the contact polynomial variable.
+
+\paragraph{The complete angular coquotient.}
+Write $\tau=v-k$ and, for each of $Q,a_0,d,e,b$, form its bounded
+monic difference in $v$, denoted respectively by
+$Q_1,a_{01},d_1,e_1,b_1$:
+\[
+ Q(\xi,v)-Q(\xi,k)=\tau Q_1(\xi,v),
+\]
+and similarly for the other four functions.  Put
+\[
+ H_1=Q_1/k^2+2d_1/k+e_1,\qquad
+ L_1=a_{01}/k^2+b_1,\qquad J_1=H_1+\sigma L_1.
+\]
+Angular stationarity at (HL2) gives exactly $J_1(x,k)=0$.
+Consequently the successive monic differences
+\[
+ J_1=(\xi-x)J_\xi+\tau J_v,
+ \quad
+ J_\xi=\frac{J_1(\xi,v)-J_1(x,v)}{\xi-x},\qquad
+ J_v=\frac{J_1(x,v)}{v-k}                            \tag{HL9}
+\]
+are bounded polynomials.  Let $D_1=L_1+BJ_\xi$.  The full exact
+angular correction is
+\begin{align*}
+ f(\xi,v)-f(\xi,k)={}&
+ \tau Q_1R^2+\frac{\tau a_{01}}{k^2}S^2\\
+ &+\left\{2(Q_1/k+d_1)+\sigma kD_1\right\}RU\\
+ &+\left\{D_1-2a_{01}/k^2\right\}ST+J_vU^2.       \tag{HL10}
+\end{align*}
+To check this without any division, use
+$uW/\sqrt B=R+\sqrt B Z/k$ and
+$\sigma W=(uZ-S)/k$.  The only term not already among the displayed
+root products becomes
+\[
+ \tau Z^2\{BH_1+\xi L_1\}
+ =D_1\tau(\xi-x)Z^2+BJ_v\tau^2Z^2
+ =D_1(ST+\sigma kRU)+J_vU^2,
+\]
+by (HL4).  Equations (HL7) and (HL10) prove the asserted homogeneous
+Gram lift for every state $W,Z$ simultaneously.  There is no state
+normalization and no discarded endpoint $Z=0$.
+
+The usual exact zero, now with the new source scale, is
+\[
+ T^2-\sigma U^2-ST(v-k)-\sigma kRU(v-k)=0.          \tag{HL11}
+\]
+This is the appropriate identity for redistributing the angular
+diagonal.  Its $U^2$ coefficient is $\sigma$, which is infinitesimal;
+replacing it by $1$ would erase the smaller radial scale.  Any
+positivity argument must use the actual residue coefficients of
+(HL7)--(HL10), rather than importing the bounded-state Schur test
+without this scale correction.
+
+\paragraph{Strict scalar corollary for the small-$B$ source.}
+Suppose additionally that the coefficientwise leading functions on
+the finite $u=0$ axis are
+\[
+ Q_0(v)=\frac{2K^2(1+v^2)}{1+K^2},\qquad
+ d_0(v)=-2v,\qquad
+ e_0(v)=\frac{2(v^2/K^2+K^2)}{1+K^2},
+ \qquad b_0(K)>0,
+\]
+where $K=k_0$.  Then the $(R,U)$ residue block produced above is
+\[
+ 2K^2R^2+\frac{4(K^2-1)}{1+K^2}RU+\frac2{K^2}U^2,
+\]
+with Schur margin $8/(1+K^2)^2>0$.  The $S^2$ coefficient has
+residue $b_0(K)>0$, the $RS$ residue is zero, and the only other
+possible residue entry is a bounded $ST$ coefficient, say $\ell$.
+Add a positive real multiple $\delta$ of (HL11), with
+$\delta>\ell^2/(4b_0(K))$.  Its correction to the $U^2$ entry has
+zero residue because $\sigma$ is infinitesimal, whereas it supplies
+the positive $T^2$ diagonal $\delta$.  Both residue blocks are then
+strictly positive.  This proves the scalar strict bounded Gram for
+all homogeneous states in the matched-angle chart.  Full normals
+and the other testing charts remain separate requirements.

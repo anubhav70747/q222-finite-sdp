@@ -1,0 +1,59 @@
+\subsection{A short determinant check for exact source entry}
+\label{sec:c2-contact-determinant}
+
+Here is a reproducible uniqueness check for the six source coefficients.
+Let $M$ have rows indexed by $(W,X,Y,Z,u,v)$ and columns equal to the
+derivatives of
+\[
+D_uD_vX^2,\quad R_2^2,\quad D_vR_3^2,\quad
+D_uD_vY^2,\quad R_5^2,\quad D_uR_\alpha^2,
+\]
+evaluated at $(u,v;W,X,Y,Z)=(c,ac;b/a,-cr,c(b/a-at),1)$.
+Write $z=c^2$, $D=1+z$, $E=1+a^2z$, $h=b-a^2t$,
+$g=Db-(1-r+a^2zt)$, and $j=1+zr-t$.
+Factoring the six columns by
+\[
+2cr,\quad2cg,\quad2act,\quad-2ch/a,\quad2acj,
+\quad2(1-zh)
+\]
+and the first row by $c$ leaves the matrix
+\[
+B=\begin{pmatrix}
+0&a&E&0&-1&0\\
+-DE&-1&0&0&-az&0\\
+0&az&-E&-DE&1&-acD\\
+0&-c&0&0&ac&D\\
+zrE&zh-1&(b/a)E&-zhE/a&azr-b/a&c(1-zh)\\
+azrD&b/a+zh/a&a^2zt&-zDh&1+zr&-cDh/a
+\end{pmatrix}.
+\]
+Use the pivots in row $2$, column $1$; row $1$, column $3$; and
+row $4$, column $6$.  Eliminate those three columns, multiply the
+remaining second and third rows by $D$ and $E$, and factor $-DE$
+from their middle column.  The determinant reduces to
+$\det B=D^2E^2\det T$, where
+\[
+T=\begin{pmatrix}
+a&1&a^2z\\
+-1-b-z(r+a^2t)&zh/a&az(r-1+zh)\\
+b/a+az(h-r)&zh&E(1+zh)+z(r+a^2t)
+\end{pmatrix}.
+\]
+Subtract $(zh/a)$ times the first row from the second and $zh$ times
+the first row from the third.  Expanding along the middle column gives
+\[
+\det T=[1+b+z(b+r)][1+z(a^2+b+r)]
+-z(1-r)(b-a^2zr)=\Delta.
+\]
+The last equality follows by expanding the two products and is exactly
+the source definition of $\Delta$.  Restoring the factors proves
+\begin{equation}
+\det M=-64a c^6rgt h j(1-zh)D^2E^2\Delta.
+\label{eq:c2-entry-determinant}
+\end{equation}
+Each source coefficient occurs with a factor $4$ in the parent, so the
+stationary linear system in $(e_1,e_2,e_3,e_4,e_5,\alpha)$ has determinant
+$4^6\det M$.  On the positive source domain this is nonzero.  Since the
+six source formulas above satisfy all six stationary equations,
+they are their unique solution.  This checks exact coefficient entry,
+independently of the subsequent asymptotic Gram argument.

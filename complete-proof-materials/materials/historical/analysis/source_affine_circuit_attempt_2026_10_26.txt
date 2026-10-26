@@ -1,0 +1,123 @@
+SOURCE-AFFINE CIRCUITS AND THE CANONICAL CURRENT: ONE BOUNDED ATTEMPT
+26 October 2026. No global-lift conclusion; no public changes.
+
+Result. The fixed scalar Laurent cone does not directly furnish an affine
+source lift. Two exact barriers can be isolated: its actual coefficient
+graph is nonconvex, and the canonical optimal-current reconstruction has
+infinite testing-function rank even on an elementary valid affine source
+family. The latter rules out a finite fixed dictionary for that PARTICULAR
+reconstruction, not another Gram or a nonoptimal-current construction.
+
+1. Where affineness is lost.
+
+Grant the fixed circuit/geometric-mean SDP representation of
+ S_L={(h,q): h+sum_e q_e U^e1 V^e2>=0 for U,V>0, q_e>=0}.
+For the canonical parent P_c, SG5--SG6 give
+ det P_c=16 Du^2 Dv^2 u^2v^2 L_c(u^2,v^2),
+with q_e(c),h(c) homogeneous quartics in the nine source coefficients.
+For example q_(1,1)=4 beta C[d+2(lambda+n+D)][d+2(alpha+m+A)].
+For d>0 and uv!=0 the fixed positive three-state block makes scalar
+determinant nonnegativity equivalent to full-state positivity. Hence
+this is an exact POLYNOMIAL pullback of the scalar circuit cone, not
+an affine semidefinite lift.
+
+One cannot implement q=q(c) as the projection of affine PSD constraints:
+the graph is nonconvex even on valid sources. For c0=(1,1,1,1,1,1,1,1,1),
+q_(1,1)(c0)=196 and q(tc0)=196t^4. The midpoint of the graph points at
+c0,2c0 has q=1666, whereas the actual midpoint source has q=3969/4.
+The entire source ray is quantum valid (see below). Every affine SDP
+projection is convex. This excludes the literal exact-coefficient-graph
+shortcut, not every conceivable elimination of these quartics. Introducing
+fourth-root geometric means does not solve the matching step: their
+hypographs are convex, but equality to the actual quartic coefficients
+and the central coefficient remains nonlinear. An exact monotone slack
+replacement would need its own proved two-inclusion argument.
+
+2. A source-affine pointwise formulation exists, but does not exchange
+   the quantifiers.
+
+Use the positive rank-one decomposition from PEN_AND_PAPER, Insights 1,4,6:
+ M_+=sum_i kappa_i g_i g_i^T,
+ P=M_+-2d Du Dv ee^T, e=(0,0,0,1)^T.
+Here kappa_i are nonnegative affine source conductances; all g_i are
+fixed pure-testing functions (including their pure-testing square roots).
+For strictly positive conductances and M_+>0, the following is exact
+at ONE fixed testing pair:
+ P>=0 iff there exists j such that
+ sum_i j_i g_i=d e,
+ [[diag(kappa),j],[j^T,d/(2 Du Dv)]]>=0.                (*)
+Indeed the minimum of sum_i j_i^2/kappa_i under the linear constraint
+is d^2 R, R=e^T M_+^{-1}e. Thus (*) is 2d Du Dv R<=1, precisely the
+rank-one Schur condition. Its constraints are affine in c,j at fixed
+tests; no determinant products are needed. The unresolved implication
+is replacing “for every test there exists j” by a certificate using
+one fixed finite testing-function space, with source-only coefficients.
+
+3. The optimal-current shortcut cannot supply that fixed space.
+
+Take d=1, all event weights one except C=1+t, t>=0. Its normalized
+operator is
+ f_t=9I-(5/2)S_CHSH+4t Pi_C.
+It is globally strictly positive because ||S_CHSH||<=2sqrt(2) and
+9-5sqrt(2)>0. It even has a common elementary 1+AB SOS certificate:
+ 2sqrt(2)I-S_CHSH = (K0^2+K1^2)/sqrt(2),
+ K0=A0-(B0-B1)/sqrt(2), K1=A1-(B0+B1)/sqrt(2).
+Thus the family itself is not a hard or excluded family.
+
+Fix v=1, retain arbitrary u>0, and put z=u^2. Its positive matrix is
+ M_t=
+ [[8+18z,10z,-10u,-10u],
+  [10z,28+18z,-10u,10u],
+  [-10u,-10u,28+18z,-10z],
+  [-10u,10u,-10z,12+22z]] +8t (u,0,-1,0)(u,0,-1,0)^T.
+This follows directly from the Pauli parent plus 4(1+u^2)ee^T.
+Exact determinant/cofactor calculation gives
+ R_t(u)=N_t(z)/[8(1+z)P_t(z)],
+ P_t(z)=(518+333t)z^2+(856+401t)z+588+168t,
+ N_t(z)=(252+162t)z^2+(769+324t)z+392+112t.
+In particular det M_t=128(1+z)^2 P_t(z).
+
+These functions are linearly independent for distinct t>=0. Write
+P_t=P0+tP1. The exact identities
+ Res_z(P0,P1)=4720275000,
+ Res_z(P_t,N_t)=7087500(2t+5)(2t+7)^2(9t+14),
+ P_t(-1)=50(2t+5)
+show that different P_t have disjoint roots and none is cancelled by
+N_t or shared with 1+z. Each R_t therefore has a pole absent from
+every other member of any finite subfamily. A linear combination
+vanishing on z>0 is a zero rational function; the unique poles force
+all its coefficients to vanish. No numerical sampling is involved.
+The same proof works after restriction to any fixed real interval with
+nonempty interior, for example 1/2<=u<=1.
+
+Consequently {R_t} cannot lie in ANY fixed finite-dimensional real
+testing-function span, even one allowing arbitrary fixed functions.
+Nor can all canonical minimum-dissipation currents lie in one such
+space V: their minimum energy R_t=sum_i (j_i^*)^2/kappa_i would then
+belong to the finite span of pairwise products of elements of V, since
+each kappa_i depends only on the source. The contradiction also survives
+multiplying each R_t by a nonzero source-only normalization.
+
+This identifies a concrete source-dependent denominator, not a real
+testing singularity: all P_t(z)>0 on z>=0, but their complex poles move
+with t. Compact physical testing does not make their exact rational
+linear span finite.
+
+4. Exact residual obligation.
+
+Circuit SOS and the Cauchy--Binet adjugate identity do give
+ det(M_+) F=(P psi)^T adj(M_+)(P psi)+det(P) s^2,
+ s^2=2d Du Dv Z^2.
+The obstruction above explains why dividing this identity through by
+det(M_+) using the unique optimal currents does not give one fixed
+testing dictionary. To obtain an affine finite lift by this route one
+still needs either (a) a fixed finite nonoptimal-current/Gram construction
+with the exact budget (*) for every source and test, or (b) a different
+affine representation proving both inclusions without matching the
+quartic coefficient graph. Neither is supplied by the fixed eight
+Laurent exponents or scalar circuit decomposition alone.
+
+No impossibility of a finite lift, of source-dependent Grams in a fixed
+library, or of a different circuit-based elimination is claimed. The
+easy common SOS of this same family explicitly prevents such an
+overinterpretation of the optimal-current obstruction.

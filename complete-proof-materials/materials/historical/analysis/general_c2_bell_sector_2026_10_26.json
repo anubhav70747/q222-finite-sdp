@@ -1,0 +1,125 @@
+{
+  "full_canonical_parent_Bell_block_identity_exact": true,
+  "core_cross_block_zero": true,
+  "core_plus": [
+    [
+      "u*(u - v)",
+      "u*(u*v + 1)"
+    ],
+    [
+      "u*(u*v + 1)",
+      "u**2*v**2 + u*v + v**2 + 1"
+    ]
+  ],
+  "core_minus": [
+    [
+      "u*(u + v)",
+      "u*(u*v - 1)"
+    ],
+    [
+      "u*(u*v - 1)",
+      "u**2*v**2 - u*v + v**2 + 1"
+    ]
+  ],
+  "event_order": [
+    "lambda",
+    "n",
+    "m",
+    "C",
+    "A",
+    "D",
+    "alpha",
+    "beta"
+  ],
+  "event_factors": [
+    "u**2 + 1",
+    "(u**2 + 1)*(v**2 + 1)",
+    "1",
+    "v**2 + 1",
+    "(u**2 + 1)*(v**2 + 1)",
+    "1",
+    "u**2 + 1",
+    "v**2 + 1"
+  ],
+  "event_plus_vectors": [
+    [
+      "1",
+      "v"
+    ],
+    [
+      "0",
+      "1"
+    ],
+    [
+      "-u + v",
+      "-u*v - 1"
+    ],
+    [
+      "u",
+      "1"
+    ],
+    [
+      "0",
+      "-1"
+    ],
+    [
+      "u - v",
+      "u*v + 1"
+    ],
+    [
+      "-1",
+      "-v"
+    ],
+    [
+      "u",
+      "1"
+    ]
+  ],
+  "event_minus_vectors": [
+    [
+      "1",
+      "v"
+    ],
+    [
+      "0",
+      "1"
+    ],
+    [
+      "u + v",
+      "u*v - 1"
+    ],
+    [
+      "u",
+      "-1"
+    ],
+    [
+      "0",
+      "1"
+    ],
+    [
+      "u + v",
+      "u*v - 1"
+    ],
+    [
+      "1",
+      "v"
+    ],
+    [
+      "-u",
+      "1"
+    ]
+  ],
+  "minus_core_determinant": "u*v*(1+u^2)*(1+v^2)",
+  "minus_core_first_pivot": "u*(u+v)",
+  "positive_block_domain": "d>0,u>0,v>0, all event weights nonnegative",
+  "generic_fraction_free_Schur_identity_exact": true,
+  "all_four_native_contact_kernel_entries_exact": true,
+  "native_event_roots_cancelled_before_common_denominator_expansion": true,
+  "contact_Bell_coordinate_formula_exact": true,
+  "Schmidt_discriminant_identity_exact": true,
+  "Schmidt_discriminant_scale": "formula belongs to a*Psi; divide by a^4 for the unscaled contact matrix",
+  "maximal_entanglement_condition": "b=a and a*t=1-r; equivalent to qc=0 in this native sign chart",
+  "native_N_positive_identity_exact": true,
+  "scope": "Existing pointwise Bell-sector/Schur reduction; no mixed inverse or nonlinear numerator is asserted to define a finite affine SDP.",
+  "no_numerical_optimization_or_parameter_sweep": true
+}

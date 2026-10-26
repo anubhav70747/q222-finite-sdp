@@ -1,0 +1,32 @@
+C1 THREE-CHANNEL REMAINDER: ONE EXACT CORNER OBSTRUCTION
+26 October 2026
+
+Source from public independent-review/C1_POLYNOMIAL_OBSTRUCTION.md:
+ (d,m,C,A,D,alpha,beta)
+ =(7301/540,40/9,2,2891/135,4699/1080,81/40,49/1080),
+ lambda=n=0.
+All seven displayed weights are positive. Native SD1 parameters are
+k=f=g=1,a=7/8,t=3/5, with gaps M=J=21/40,E=3/5,Q=7/8.
+Contact:
+ (u_c,v_c;W_c,X_c,Y_c,Z_c)=(1,1;1,-2/5,1/8,1).
+The checker verifies the full SG2 parent, all six first derivatives,
+and the strict state/amplitude signs.
+
+Apply exactly the B1,B2,w construction in
+04_c1_uniform_fractional_RECOVERED.txt. At u=v=0:
+ B^T e_W=(287420389553/8616808197,-413/9),
+ w^T e_W=3246283025161627764/916659055603535689,
+ H_WW=F(0,0;e_W)=0,
+ R_WW=-136060499747820067655375429183840/
+        4375356724835654725138132413567 <0.
+
+Already B2_W=-413/9 forces negativity, since K>0 and sigma>0.
+Continuity makes this remainder negative also at nearby positive angles.
+It is therefore impossible to prove global PSD for this particular
+three-channel allocation. This does not exclude other allocations or Z6.
+
+Replay:
+ python c1_three_channel_corner_counterexample_2026_10_26.py
+Requires SymPy; prints exact rational results and writes no files.
+No solver, source sweep or approximation is used.
+

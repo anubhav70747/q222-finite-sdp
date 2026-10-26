@@ -1,0 +1,174 @@
+\chapter{Strong IH: remote charts and the all-tests join}
+\label{component:p7405dbf89341}
+\noindent\textbf{Component }\path{p7405dbf89341}\par
+{\small\noindent Source: \path{R13/baseline/baseline/advances/ih/strong/ih_remote_charts.tex}\par}
+{\small\noindent SHA256: \path{7405dbf893412ea0c95351f3486db35723984e7e5d65073868a21718b179af48}\par}
+{\small\noindent Inventory use: SR1--SR8 all remaining testing/state charts, with detailed A6 final noncommuting join\par}
+\medskip
+\section{Strong IH: remote charts and the all-tests join}
+\label{p7405dbf89341:sec:strong-ih-remote}
+Use the source entry of \S\ref{pf5726218aec8:sec:strong-angle-entry}. In particular
+$B=H+L$ is a bounded positive unit, $m,D$ are infinitesimal,
+$C,A,\alpha$ are strong, and the bounded products satisfy
+\[
+ CL\to\tfrac12,\qquad AH\to(1+L)/2,
+ \qquad\alpha(1-H)\to B/2.
+\tag{SR1}
+\]
+Whenever an event coefficient is unbounded, a positive finite real cap
+may be used and its excess retained in its original positive square.
+When a coefficient is bounded it may be used unchanged.
+
+\paragraph{Finite-penalty principle.}
+Suppose a real symmetric quadratic form is strictly positive on the
+common kernel of finitely many real linear forms. Adding sufficiently
+large positive multiples of their squares makes the complete form
+strictly positive. To verify this without a limiting assertion, choose
+an orthogonal splitting into their common kernel and its complement.
+The upper block has a positive lower eigenvalue $c$, and the penalty
+matrix on the complementary block has a positive lower eigenvalue
+$e$. If the remaining lower block has norm at most $b$ and the cross
+block norm is at most $a$, any penalty $M$ with $Me>b+a^2/c$ makes the
+Schur complement strictly positive. All choices are real scalars.
+This principle makes the opening cases below uniform; no unbounded
+coefficient is inserted into a bounded Gram.
+
+\paragraph{Testing $u$ infinitesimal, $v$ finite.}
+Retain the $n,D$ packets and excess caps of $C,A,\alpha$.
+Write their finite selected coefficients as $c,a,b>0$. Use roots
+$U=uW,Y,Z,X,V=\sqrt m\,vW$. The $m$ packet is exactly
+\[
+ 4(V-\sqrt m X+\sqrt m\,uvY-\sqrt m\,uZ)^2.
+\]
+Together with the selected packets and the original core this is an
+exact bounded Gram expression. Its residue has isolated $X,V$ pivots
+$2(1+v^2),4$ and the following $(U,Y,Z)$ block (residue notation suppressed):
+\[
+ \begin{pmatrix}
+ 2+4cD_v&-2-4cD_v&-2v\\
+ -2-4cD_v&2D_v+4cD_v+4aD_v+4bv^2&-4bv\\
+ -2v&-4bv&4b
+ \end{pmatrix}.
+\tag{SR2}
+\]
+In the interior, use $c=1/(2L)$, $a=(1+L)/(2H)$ and
+$b=B/[2(1-H)]$. Its leading principal minors are
+\[
+ \frac{2(L+D_v)}L,\quad
+ \frac{4(L+1)(D_v-H)(L+D_v)}{HL(1-H)},\quad
+ \frac{8B(L+1)^2D_v}{HL(1-H)},
+\tag{SR3}
+\]
+all positive. At an opening, apply the finite-penalty principle:
+\begin{itemize}
+\item $H_0=0$: the large $A$ packet forces $Y=0$; the restricted
+      two-dimensional determinant is $4(L+1)>0$.
+\item $H_0=1$: the large $\alpha$ packet forces $Z=vY$; the restricted
+      determinant is $4(L+1)^2D_v/L>0$.
+\item $L_0=0$: the large $C$ packet forces $U=Y$; the restricted
+      determinant is $4/(1-H)>0$.
+\item $L_0=0$, $H_0=1$: both constraints leave the strictly positive
+      form $2Y^2$.
+\end{itemize}
+The case $L_0=H_0=0$ is excluded by $B_0>0$. Thus (SR2) can always be
+made strictly positive with bounded selected coefficients.
+
+\paragraph{Testing $u$ a unit, $w=1/v$ infinitesimal.}
+Retain $n,m$ and the excess caps of $C,A,\alpha$; retain the full
+$D$ packet using its natural root. Put
+$U=uW$, $E=wZ$, $P_Z=\sqrt D Z$. In roots $(U,Y,E,X,P_Z)$ the exact
+selected expression is
+\begin{align*}
+ &4cD_w(U-Y)^2+4aD_uD_wY^2+4bD_u(Y-E)^2\\
+ &\quad+4\{\sqrt D(wU+uX-wY)-P_Z\}^2\\
+ &\quad+2\{(wU+uX-wY)^2+D_u(Y-E)^2+D_wX^2-E^2
+                   -2UE+2YE+2uwXE\}.
+\tag{SR4}
+\end{align*}
+Its isolated $X,P_Z$ residue pivots are $2D_u,4$. The $(U,Y,E)$ block is
+\[
+ \begin{pmatrix}
+ 4c&-4c&-2\\
+ -4c&4c+(4a+4b+2)D_u&-4bD_u-2u^2\\
+ -2&-4bD_u-2u^2&4bD_u+2u^2
+ \end{pmatrix}.
+\tag{SR5}
+\]
+For interior openings the leading minors are
+\[
+ 2/L,\qquad4(1+L)D_u/[HL(1-H)],\qquad
+ 8u^2(1+L)^2D_u/[HL(1-H)],
+\tag{SR6}
+\]
+strict because $u_0\ne0$. The opening constraints and restricted
+positive determinants are respectively
+\[
+ \begin{array}{c|c|c}
+ H_0=0&Y=0&4u^2(1+1/L)\\
+ H_0=1&Y=E&4u^2(1+L)/L\\
+ L_0=0&U=Y&4u^2D_u/[H(1-H)]
+ \end{array}
+\]
+and at $L_0=0,H_0=1$ the remaining form is $2u^2Y^2$.
+Finite penalties therefore give a strict full Gram at every opening.
+
+\paragraph{Both testing angles unbounded.}
+Use (IR4)--(IR7), replacing $C$ by a finite positive cap $c_*$ and
+setting $d=D$ (which is infinitesimal in the strong IH source).
+Retain the excess $C$ packet and the entire $n,m$ packets.
+The roots are
+\[
+ \begin{gathered}
+ S=\sqrt{c_*}W,\quad E=\sqrt B\,wZ,\quad U=pwW,\quad P=\sqrt D\,pZ,\\
+ E_X=X+wW,\qquad E_Y=\sqrt{B/[H(1-H)]}(Y-HwZ).
+ \end{gathered}
+\]
+The exact graph identity (IR5) remains valid. The $E^2$ coefficient
+has residue $2c_s$, $c_s=(1+L)/B$, because its core contribution
+$2(1-H)^2/B$ must be retained when $B$ is a unit.
+In (IR7), the potentially nonzero first-normal coefficient is now
+\[
+ 2\{AH-\alpha(1-H)\}-(1-H),
+\]
+whose residue is zero by (SR1). The normal $E_Y$ pivot is also $2c_s$.
+All scalar-normal cross coefficients are infinitesimal, since
+$\sqrt D$ is infinitesimal. Thus the full diagonal residue is
+\[
+ \operatorname{diag}(4,2c_s,2,4,2,2c_s)>0.
+\tag{SR7}
+\]
+
+\paragraph{The remaining remote charts.}
+When $u$ is unbounded and $v$ is a unit, the homogeneous core has
+residue $2\{(W+vX)^2+(vY-Z)^2\}$. Positive finite caps on the $C$
+and $A$ packets supply $W^2$ and $Y^2$, respectively, so the residue
+is strict on $(W,X,Y,Z)$. When $u$ is unbounded and $v$ infinitesimal,
+put $p=1/u$ and use the five roots
+$(P,Q,W,Y,Z)=(pX,W+vX,W,Y,Z)$. Positive caps $c,a,b$ give the residue
+\[
+ 2Q^2+2(P+Z)^2+4cW^2+4aY^2+4bZ^2>0.
+\tag{SR8}
+\]
+When $u$ is a unit and $v$ infinitesimal, the core has residue
+$2\{(uW-Y)^2+(X+uZ)^2\}$; the positive $A$ and $\alpha$ caps give
+$Y^2$ and $Z^2$, making the residue strict. In these expressions all
+excess event coefficients are retained in their positive squares.
+When both testing angles are units, the inherited noncommuting-test
+theorem applies independently of source scales.
+
+\paragraph{Exhaustive join.}
+Classify each testing angle in the projective line as infinitesimal,
+a bounded unit, or unbounded, with literal zero and infinity included
+in the corresponding homogeneous chart. The infinitesimal/unbounded
+cell is the local theorem of \S\ref{pf3e0ca8bf054:sec:strong-ih-local}.
+The infinitesimal/finite cells follow from (SR2); the unit/unbounded
+cell from (SR4); the unbounded/unbounded cell from (SR7); the
+unbounded/finite and unit/infinitesimal cells from (SR8) and its
+preceding argument; and the unit/unit cell from the inherited theorem.
+These nine cells are exhaustive. Both exact sign gauges
+$(u,W,X)\mapsto(-u,-W,-X)$ and
+$(v,W,Y)\mapsto(-v,-W,-Y)$ preserve the full parent, so every
+signed testing chart is included. Every certificate retains the full
+state normals and the omitted original $\lambda,\beta$ remain zero.
+Therefore the entire strong IH source leaf has all-tests tensor-SOS
+admission, including $n=0$ and every projective endpoint.

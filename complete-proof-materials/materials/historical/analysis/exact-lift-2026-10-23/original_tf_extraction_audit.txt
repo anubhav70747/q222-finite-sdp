@@ -1,0 +1,89 @@
+Original existence route: bounded extraction audit, 23 October 2026
+
+Conclusion. The constructive identities give finite local root templates,
+but their present TF1/TF2 lifting does not specify one finite global testing
+basis. Chapter 03 explicitly allows root number/tensor ranks to depend on
+K,f,q (lines 194--197); the final appeal to Corollary 3.19 is the step that
+asserts a finite representation. This is an existence-to-extraction gap,
+not an objection to the stated pointwise tensor-SOS argument.
+
+The exact bottleneck is 03_tensor.tex, TF3--TF4 (lines 49--74). For a
+particular bounded tensor it selects a pure-factor decomposition, real
+reserve allocations epsilon_j and real M_j>|y_j|. Its testing factors are
+sqrt(M_j+y_j), sqrt(M_j-y_j), or, when roles are interchanged,
+sqrt(epsilon_j/M_j+y_j), sqrt(epsilon_j/M_j-y_j). Neither the y_j library
+nor these gate parameters are fixed across the source/testing types. TF2
+then invokes this operation for every scalar coefficient of TF6. Finitely
+many displayed local matrices therefore do not themselves supply finitely
+many testing functions after this last step. Allowing M to move inside
+sqrt(M+t) generally gives an infinite-dimensional function family; this
+observation is only about literal extraction from this recipe, not a
+no-go theorem for a different fixed-family certificate.
+
+Several apparent parameters are NOT intrinsic span obstructions. The real
+whitening C and TF6 delta only mix/weight an existing frame and may be
+absorbed into source Gram coefficients. Source radicals, real event caps
+and finite penalty constants likewise remain source coefficients when
+whole event squares are retained. For example, c2_short.tex OA7--OA9
+(lines 5215--5278) chooses a real allocation using u_0 and rho_0, but its
+varying real matrix entries do not require new testing functions. Pure
+testing normalization in TF8 is also harmless once its factors belong to
+a fixed finite chart library: add their inverse square roots to that
+library and retain separate literal-zero charts. An arbitrary TF8 unit
+has not, however, been assigned such a common library merely by naming it.
+
+The conductor calculation in 06_mechanisms.tex CC1--CC6 is favorable:
+monic polynomial division and separated monomial radicals preserve a finite
+testing support. It introduces no moving testing branch point. The loss
+of literal extraction is visible when the C1 bounded-z proof finishes its
+displayed twelve-root frame by the unspecialized bounded-Gram fact
+(c1_short.tex lines 7672--7687), rather than fixed numerical gates.
+
+One concrete sufficient uniformization lemma would close this gap. On each
+of finitely many source-independent algebraic testing covers, put every
+local frame in K_c-span(H), for one finite testing list H, and prove an
+identity valid throughout the chart
+ Q=Q0(c) tensor 1 + sum_nu A_nu(c) tensor p_nu(t),
+where the p_nu form one fixed finite library with |p_nu|<=1. Find source-only
+alpha_nu with alpha_nu I +/- A_nu PSD and Q0-sum alpha_nu I PSD. Then exactly
+ Q=(Q0-sum alpha_nu I) tensor 1
+   +sum_nu [(alpha_nu I+A_nu)/2 tensor (1+p_nu)
+            +(alpha_nu I-A_nu)/2 tensor (1-p_nu)].
+TF9 now gives the fixed testing span
+ H + sum_nu sqrt(1+p_nu)H + sum_nu sqrt(1-p_nu)H,
+plus finitely listed retained squares and fixed normalization factors.
+No mixed inverse or point-dependent gate remains. The missing requirement
+is uniform chart identities/admission for these fixed lists, rather than
+strict residue at each individual pair of types. TF1/TF2 alone does not
+prove this requirement.
+
+Chapter 07 (lines 78--96) supplies all-state local assembly and nine-atom
+bounds, not that uniformization. Once an atomic fixed family is obtained,
+TF10 is finite bookkeeping: the fixed nine-atom testing cover introduces
+only sqrt(w_i)*h(atom_i); source conic coefficients remain pure source.
+Finite angle/state sign charts and the field flip likewise cause no new
+infinite family. The full source/testing symmetries must transport the
+testing functions and normalizations as well as the source coefficients:
+a Bob-only fractional family need not remain the same span after reciprocal
+Alice--Bob exchange. Once a fixed family exists, a finite symmetry orbit can
+be accommodated by a finite union of transported families. If their targets
+use different fixed nonnegative pure-testing multipliers, a common product
+multiplier gives a common target by multiplying each root by the square
+roots of the other factors, provided that product is positive on a dense
+testing set. This does not prove closure of the particular 40-function span
+and does not remove the unfixed TF4 gates.
+Thus the actionable extraction task is to replace the
+generic strict-residue gates by one finite fixed-chart gate library and
+source-only Gram allocation, then propagate it through the existing
+nine-atom assembly. This audit does not address case coverage or any
+ramified completion cone. Originals were preserved; no numeric work.
+
+Independent exact check of the moving-threshold issue. For any distinct
+positive constants M_1,...,M_n, the functions sqrt(M_i+t) are linearly
+independent on every interval about zero on which they are defined.
+If sum a_i sqrt(M_i+t)=0, take derivatives k=0,...,n-1 at zero and
+divide by the nonzero falling-factorial coefficient (1/2)_k.
+The resulting equations are sum (a_i sqrt(M_i))(1/M_i)^k=0.
+Their coefficient matrix is Vandermonde with distinct nodes 1/M_i,
+so every a_i vanishes. A symbolic gate with a freely varying threshold
+therefore cannot be counted as one fixed testing function.

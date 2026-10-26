@@ -1,0 +1,169 @@
+Independent contact-cap coefficient reconstruction
+24 October 2026
+
+Input and scope
+---------------
+Input: ../pro_contact_completed_reply.txt, complete 19620-character reply.
+No received archive, downloaded matrices, admission-witness records, or numerical
+SDP was used. Files were reconstructed solely from the complete function lists,
+source-column formulas and product-coefficient rule in sections 4 and 5.
+The local parent/sign identities were compared with the current public
+latex/certificates/c2_short.tex, eq:c2-master-parent and SJ1--SJ7
+(component:pf77de02d80c4).
+
+Result
+------
+No discrepancy in the evaluated affine-system specification was found.
+All announced counts and all four complete sample equations agree exactly:
+  44 Gram blocks: 20, 26*11, 34, 16*16;
+  Gram order 596, plus 9 source signs = total PSD order 605;
+  4697 upper-triangular Gram variables;
+  948 reduced monomial coefficient equations;
+  22802 nonzero Gram records; 120 nonzero source records.
+"948" counts coefficient equations; row independence was not asserted or tested.
+
+Files
+-----
+reconstruct.py                 independent standard-library exact checker/exporter
+contact_affine_independent.json all evaluated monomials, Gram/source records,
+                               block names/orders and integer event witnesses
+checks.json                    exact counts, four sample rows and identity results
+findings.txt                   this report
+
+Indices in the JSON are one-based; source records are the right-hand side.
+The source order is (d,lambda,n,m,C,A,D,alpha,beta). Gram entries are actual
+symmetric entries and every off-diagonal product column includes its factor2.
+Polynomial variable order is (u,v,t,r,w,zeta,su,sv,sz). Monomials use ordinary
+ascending lexicographic exponent order, which reproduces sample row numbers
+25,17,9,3 exactly. The independent file is an alternative exact encoding;
+it is not claimed byte-identical to the unavailable received JSON.
+
+Full-parent and coefficient-ring soundness
+-----------------------------------------
+Set W=w-u*r, X=t-u*zeta, Y=r+u*w, Z=zeta+u*t.
+This is an invertible pure-testing change: its determinant is (1+u^2)^2.
+All four state coordinates remain independent; no contact-state restriction,
+normal restriction, state division or source/testing identification is used.
+The target columns are exactly the original complete parent, including the
+lambda and beta events, the independent n event, and the complete d core.
+
+A strong feature is h/sqrt(Du*Dv), hence its cleared product weight is1 or
+1 +/- (4096u)^i(33554432v)^j. A weak feature is h/sqrt(Dv), so its cleared
+weight is Du or Du times that same gate. The factor Du is essential and is
+included in the reconstruction. Du*Dv is strictly positive for finite angles.
+
+The ring reduction is exact. Successive monic division in su,sv,sz leaves
+the eight parity monomials over Q[u,v,t,r,w,zeta]; reductions commute.
+In the rational-function field the square classes u,v,w*zeta are independent
+(valuations at u,v,w establish this), so the eight parity functions are also
+linearly independent on the positive open chart. Thus no unintended radical
+coefficient cancellation is admitted, and enforcing every monomial row is
+equivalent to the stated full polynomial identity.
+
+All three radical relations are checked/used literally:
+  su^2=u, sv^2=v, sz^2=w*zeta.
+The weak bases sqrt(uv)*w, sqrt(uv)*zeta, sqrt(uw*zeta), sqrt(vw*zeta)
+are represented as su*sv*w, su*sv*zeta, su*sz, sv*sz, respectively.
+
+Exact event witnesses
+---------------------
+All eight d=0 positive-event rays are admitted in strong block1 alone;
+all other blocks can be zero. Here indices refer to its20 functions.
+Each listed row is an integer-root coefficient vector, and the source Gram
+is the sum of its row outer products:
+ lambda: (e18+e13), (e6+e7);
+ n:      e1, e12, e13, e7;
+ m:      e4-e1+e17-e11;
+ C:      e6-e2, e5-e16;
+ A:      e2, e20, e16, e17;
+ D:      e6+e7-e2-e8;
+ alpha:  e16-e3, e17-e11;
+ beta:   e1+e11, e13+e19.
+All eight polynomial coefficient contractions were checked exactly.
+This proves event-ray admission, including arbitrary nonnegative event
+additions to any separately proved feasible native source.
+
+Sign-chart soundness and endpoints
+---------------------------------
+Every target summand is invariant under every choice eps,eta in{+1,-1}:
+ (u,v,W,X,Y,Z) -> (eps*u,eta*v,W,eta*X,eps*Y,eps*eta*Z).
+All9 target-column invariances were checked polynomially.
+In the rotated state coordinates, t->eta*t, r->eps*r, w->w,
+zeta->eps*eta*zeta.
+
+The full-state SJ5 core identity was independently checked after clearing its
+strictly positive pure-testing denominator. Put H=1+u^2+v^2,
+Delta=H^2-u^2v^2>0, and
+ A=[[H,-uv],[-uv,H]]/2,
+ B=[[-u^2v,-uv^2],[uv^2,u^2v]]/2.
+Then
+ K/Du = ([t,r]+A^{-1}B[w,zeta])^T A
+         ([t,r]+A^{-1}B[w,zeta])
+       + Du*Dv/(2Delta)
+         [u^2v^2(w^2+zeta^2)-2uvH*w*zeta].
+Consequently K<0 implies uv*w*zeta>0. Gauging u,v positive therefore
+also makes w*zeta positive, exactly the domain of the weak radicals.
+When K>=0 the d core and all8 event terms are nonnegative directly;
+one does not evaluate imaginary radicals on that complementary state set.
+At u=0, v=0, w=0 or zeta=0 the core is nonnegative, so literal axes need
+no weak-radical division or limiting admission argument.
+
+On 0<=u<=2^-12,0<=v<=2^-25, all strong/weak signed gates are nonnegative.
+Both state signs, all state ratios, and both original angle signs are covered
+using the displayed gauges. All gates may vanish at their boundaries.
+
+The old remote complement is indeed contained in this rectangle:
+ b>1-2^-26 gives u^2 < (1-2^-26)^-2-1 <2^-24;
+ |c_test|<2^-26 gives v^2<2^-52/(1-2^-52)<2^-50.
+Both inequalities were checked as exact rationals. The contact family
+contains no projective infinity; u=infinity or v=infinity belongs to the
+separately preserved remote charts, whose identities were audited earlier.
+Thus the advertised order635 chart coverage is algebraically sound conditional
+on admission in all three component cones. This is not universal source
+coverage.
+
+Bounds/admission: what is and is not established here
+---------------------------------------------------
+The weak gate budget displayed in section3 is correct exactly:
+ sum r_ij*2^(-12i-25j)
+ =2720379395100337099505665/9903520314283042199192993792 <1/1024.
+Given the asserted Q00>=I/4 and coefficient operator bounds, the displayed
+PSD gate decomposition and its255/1024 reserve follow immediately.
+
+The displayed strong baseline is also at least I/2 for every0<=Ho<=1,
+independently of any unavailable perturbation bounds. After subtracting I/2,
+the first three diagonal entries are1/2,3/2,0. The fifth entry is
+ (1-Ho)(3+Ho)/(2(1+Ho)^2)>=0.
+The fourth/sixth block is
+ [[(3-Ho)/(2(1+Ho)),1/(1+Ho)],
+  [1/(1+Ho),7/2]].
+Its first pivot is positive, and its determinant is
+ [17+7Ho(2-Ho)]/[4(1+Ho)^2]>0.
+Both numerator identities are included in the exact checker. This verifies
+the baseline assertion, not the claimed strong constant-error/gate bounds.
+
+However, the completed reply DOES NOT contain the actual eleven-row Q,
+all44 weak witness records, the strong six-row polynomial matrix, its51
+coefficient records, or the exact GE1 source dictionary defining fc, etc.
+These are described as present in the unavailable archive. Counts, event
+witnesses and coefficient-ring soundness do not verify the quantitative
+admission theorem for the GE1 envelope, its n=0 specialization, or the
+larger R1 budget theorem. No counterexample to those claims was established.
+Their actual-body verification remains outstanding when the archive arrives.
+
+Finite source limits
+--------------------
+The closure claim is valid for this fixed family without trusting an
+unprovided bound. Each block's own feature list is linearly independent on
+the strict real chart u,v>0,w*zeta>0 with all gates positive. For strong
+blocks this follows from distinct state monomials before the invertible
+state change; for weak blocks it follows from distinct monomials and the
+independent radical parities. A common finite set of chart evaluations
+therefore gives a positive-definite evaluation Gram in every block. Summing
+the coefficient identity at those points uniformly bounds all PSD block
+traces whenever source coefficients converge. Subsequence limits yield
+a feasible limiting tuple. This is closedness after fixing the functions;
+it neither selects functions nor proves any missing source admission.
+
+No public files were edited; no admission sweep, optimization or solver ran.
+

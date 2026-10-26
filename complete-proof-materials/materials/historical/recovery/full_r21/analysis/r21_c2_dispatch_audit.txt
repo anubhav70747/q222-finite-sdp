@@ -1,0 +1,380 @@
+Q222 ANALYTICAL EXISTENCE-PROOF RECOVERY
+Independent scope audit: directed weak-C2 and complete C2 dispatch
+22 October 2026
+
+RESULT
+
+The inspected source partitions are exhaustive at their stated hypotheses.
+No concrete uncovered source cell, false reflection, deletion of the literal
+n=0 boundary, or circular call to the whole C1/C2 theorem was found in the
+dispatch arguments reviewed here.
+
+This is a scope-and-dependency audit. It checks how actual source equations
+partition the domain, how imported theorem hypotheses match those pieces,
+and where global foundations remain separate premises. It does not freshly
+verify every polynomial/conductor/Gram in every imported local theorem.
+
+In particular, the complete C2 join is a theorem for an original PHYSICAL
+canonical source with a finite noncommuting stationary contact and the
+native-entry inequalities. It does not, by itself, prove that every global
+valid affine functional has entered that native chart. EN, AU and A6 remain
+separate substantive inputs at the places identified below.
+
+SOURCE ROOT
+
+Paths are relative to:
+q222_existence_recovery_2026-10-22/sources/
+Q222_R21_Rederived_Proof_Package_2026-10-22/
+Q222_R21_Rederived_Release_2026-10-22/
+
+Principal files read:
+
+  [HJ] rederivation_2026-10-22/weak_c2/
+       weak_c2_complete_source_and_testing_join_rederived.tex
+  [BSR] rederivation_2026-10-22/weak_c2/
+        weak_c2_bare_source_scope_audit.tex
+  [CT] rederivation_2026-10-22/global/
+       c2_complete_source_routing_REDERIVED.tex
+  [R2A] rederivation_2026-10-22/weak_c2/
+        r2_all_original_sources_all_tests.tex
+  [RL] rederivation_2026-10-22/weak_c2/
+       r2_bounded_a_or_small_p_local.tex
+  [TU] rederivation_2026-10-22/root/
+       r2_thin_unbounded_source_rederived.tex
+  [UL] rederivation_2026-10-22/root/
+       r2_unbounded_current_rederived.tex
+  [R2O] rederivation_2026-10-22/global/
+        r2_outer_testing_join_REDERIVED.tex
+
+For selected inherited paths, the exact files are the entries OP, CS, SE_ALL
+in WEAK_C2_USED_INPUTS.json and the SINGLE_ANGLE_ALL_OPENINGS entries in
+C2_ROUTING_ACTUAL_BODY_INPUTS.json. Those manifests were used to locate
+the bodies, not as proof premises.
+
+1. THE DIRECTED WEAK-C2 INPUT IS PRECISE
+
+HJ lines 5-32 require:
+
+  * the original physical stationary C2 source;
+  * d=1, lambda_event=beta=0, every original strict gap, n>=0;
+  * two positive infinitesimal actual contact half-angles;
+  * C noninfinitesimal, alpha infinitesimal;
+  * delta_tot=1/(1+n+m+C+A+D+alpha) infinitesimal.
+
+The all-tests conclusion concerns the full parent HJ2. The state/sign and
+projective restoration is a substantive part of the imported bodies. The
+source entry into this positive stationary chart is explicitly external
+to HJ; it is not inferred from the ten-row table.
+
+The source and testing fields are separately labelled real closed extensions
+of R, with no disjointness assumption. They may be labelled copies of the
+same extension. The word 'independent' in earlier local texts is used in
+the universal-choice sense made explicit by HJ/BSR, not as an extra field
+disjointness assumption.
+
+2. THE TWO SOURCE EXCLUSIONS HAVE ACTUAL ALGEBRAIC REASONS
+
+HJ4-HJ6 introduce the original contact variables and exact stationary weights.
+With z=u_c^2, y=v_c^2, H=v_cY_c, L=v_c(u_cW_c-Y_c), B=H+L,
+the original gap j=1+zr-L/y>0 gives L<y(1+zr). Thus L is infinitesimal
+and B is bounded. The positive numerator decomposition in HJ5 proves
+
+    alpha weak  <=>  B infinitesimal.
+
+On the stated directed input, therefore, B,z,y are positive infinitesimals.
+Set a=z/B, t=y/B, h=H/B, l=L/B=1-h, e=1-r, g=G/B.
+Only a,t may be unbounded; h,l,r,e,g,j are positive bounded quantities.
+
+The first important exclusion is HJ13-HJ14:
+
+    n unbounded <=> r infinitesimal;
+    m unbounded <=> g infinitesimal;
+    A unbounded <=> H/y infinitesimal;
+    C unbounded <=> L/(H+y) infinitesimal;
+    D unbounded <=> y/B infinitesimal or j infinitesimal.
+
+Consequently all six weights are bounded exactly when
+t,h,l,j,r,g are units. This is incompatible with delta_tot infinitesimal.
+
+The equivalence can be checked without a hidden a-scale assumption. HJ11
+gives r(2n+1) and AH/y positive units. HJ12 gives m~1/g when g is
+infinitesimal and m bounded when g is a unit. For t a unit the remaining
+unboundedness tests are exactly h,l,j infinitesimal. If t is infinitesimal,
+the j gap forces l infinitesimal and C,D unbounded; if t is unbounded,
+C,A are unbounded. This covers the apparently missing a=z/B scale.
+
+The second exclusion is HJ15:
+
+    C weak <=> r,g,H/y,j all infinitesimal.
+
+For the forward implication, the positive terms of M_s/(L delta) force
+H/L infinitesimal. Bounded C forces L comparable to H+y, while the j gap
+gives L<=y(1+zr), hence L~y and B~y. The other positive terms force
+G/delta, zr/delta, zj/delta infinitesimal. If z/delta were infinitesimal,
+B/delta and G/delta would instead have residue one. Thus z/delta is a
+unit, r,j are infinitesimal, and G>0 forces B/z a unit; g is then
+infinitesimal. Conversely the four stated small quantities imply
+B/z~1 and B/y~1, making each positive summand small.
+
+This excludes exactly the simultaneous r,j-infinitesimal part of R7 on the
+directed strong-C input. It is not legitimate to delete that condition
+from R7's positive-pivot argument, and BSR explicitly does not do so.
+
+3. THE HJ TEN ROWS AND FOUR EXITS EXHAUST THE SOURCE
+
+Here I denotes positive infinitesimal, U positive bounded unit, O positive
+unbounded. A condition absent from a row is unrestricted except for the
+common physical-source hypotheses.
+
+  Row    Conditions
+  R1     t:I
+  R2     t:O
+  R3     t,h:U; l:I
+  R4     t,h,l:U; j:I
+  R5     t,h,l,j:U; r:I
+  R6     t,h,l,j,r:U; g:I
+  R7     t:U; h,g:I; r,j not both I
+  R8     t,g:U; h,j:I
+  R9     t,g,j:U; h,e,a:I
+  R10    t,g,j:U; h,e:I; a:O
+
+Proof of exhaustion, following HJ lines 285-311:
+
+Split t into I,U,O. The outside types are R1,R2. At t:U, split h.
+For h:U take the first infinitesimal among l,j,r,g, giving R3-R6. If
+none is infinitesimal all weights are bounded, contradicting the input.
+For h:I, l~1. If g:I the only missing r,j-both-I tuple is excluded by
+HJ15; the remainder is R7. If g:U and j:I, obtain R8.
+
+It remains to take t,g,j:U and h:I. If e:U, positivity g=1-ae+hz
+makes a bounded. When r:U, the alternatives a:U and a:I are WA and WE.
+When r:I, any bounded a is SL. If e:I, then r~1: a:I gives R9,
+a:U gives WC, and a:O gives R10. These four regular exits have actual
+bodies with the precise hypotheses in BSR2.
+
+Thus the ten labels are not claimed to exhaust the domain by themselves;
+the four printed exits and two proven empty intersections are essential.
+
+4. LITERAL n=0 IS NOT LOST IN THIS PARTITION
+
+The partition never divides by n. The following scope checks matter:
+
+  R1: The later source-wide full-parent proof includes n=0 literally;
+      see the separate R1 audit.
+  R2: Bounded native a is RL. For unbounded a, Lambda=n/(tB) is either
+      bounded (TU, includes zero) or unbounded (UL). tB is positive.
+  R3/R4: Split e=1-r into U or I. In the e:U bodies the original
+      source estimate nr~e/[2(1+a)]>0 proves n=0 impossible. The new
+      e:I theorem EN1-EN25 explicitly retains n=0 and arbitrary a.
+  R5: The printed positive residue (nr)_0=1/[2(1+rho)] makes n=0
+      impossible on this row, without imposing a new source condition.
+  R6: The unbounded-a branch first bounds b=a^2B from the original
+      physicality numerator, then splits b:U or b:I. The unit-b theorem
+      includes n=0. In sectors where a residue excludes zero, it is
+      excluded by the original coefficient formula.
+  R7: The genuine source exclusion is the r,j condition, not n>0.
+      The unbounded-a proof retains the actual n packet.
+  R8: The unbounded-a part splits n/e^2 into noninfinitesimal, positive
+      infinitesimal, and exactly zero. The zero branch has a physical
+      C1 boundary map, described below.
+  R9: The printed source and remote estimates explicitly allow n=0.
+  R10: The local split is n/e^2 noninfinitesimal, positive infinitesimal,
+      or n=0. The last uses the same exact boundary map.
+
+The nonnegative quantities whose ratio types are split always have their
+literal zero case named. In contrast, the original strict openings are
+positive by the native chart and are partitioned only into I,U,O.
+
+5. THE C1 BOUNDARY IMPORT IS RESTRICTED CORRECTLY
+
+The inherited source_overlap.tex, OP1-OP5, supplies
+
+    e P_n = (1+z)(H+y)(B+zr)+2r delta n,
+    beta_1 = -r delta n/(e P_n).
+
+The map x1=z, eta1=y/B=t, zeta1=B/z=1/a, r1=H/B=h,
+theta1=e gives the same four contact coordinates. Therefore beta_1=0
+exactly at n=0; for n>0 the formal beta is negative. OP5 explicitly
+forbids applying a physical C1 theorem to that positive-n comparison.
+
+In the unbounded-a R8/R10 boundary cases, the map has
+
+    k1=sqrt(z), zeta1, r1 infinitesimal;
+    eta1=t a unit;
+    e1_scale^2=t a^2B positive bounded.
+
+If e1_scale is infinitesimal, the actual small_e_all_tests.tex theorem
+applies, including every positive native r1 and beta1=0. If it is
+noninfinitesimal, centered_a_bounded_delta.tex applies; its theorem allows
+e bounded below and r1 infinitesimal. Their printed hypotheses match.
+
+These are local C1 all-tests bodies, not the whole C1 routing theorem.
+Their proofs use centered-parent/conductor and outer/state lemmas. The
+centered-A outer lemma has an explicit shared noncommuting-residue input
+and selected BE outer identities; it does not invoke the C2 union.
+The small-e outer proof has explicit commuting-corner/state arguments.
+The global A6/noncommuting foundation remains a separate substantive
+dependency to verify; a circular C2 -> whole C1 -> whole C2 call is not
+introduced by this boundary reuse.
+
+6. REPRESENTATIVE R2 SCOPE TRACE
+
+R2A lines 44-90 give a genuine exhaustive split of the original R2 source:
+
+    native a bounded -> RL/SH;
+    native a unbounded, n/(tB) bounded -> TU;
+    native a unbounded, n/(tB) unbounded -> UL.
+
+The source-entry inequality (1-r)Q>=BK includes equality at n=0 and
+establishes a(tB) infinitesimal. Thus TU/UL's S=1/t, z=1/a,
+q=a(tB) are all legitimate positive infinitesimals. The bounded-current
+branch derives tau=q/(zw) a positive unit without division by n.
+The unbounded-current branch instead derives lambda tau~1/2 and
+n/(z^2w)~1/2. It does not retain a bound that belonged only to TU.
+
+The use of formal C1 coefficients is explicitly algebraic. TU lines
+246-356 checks the coefficient arrays and replaces the old physical-beta
+bound by w/(c/g)=sqrt(w/tau)=O(1). UL lines 56-62 identifies that this
+bound is no longer available and UL8-UL18 replaces the dangerous term
+using the full extra n current, its new pivot, and first-jet checks.
+Neither proof invokes physical C1 positivity for beta^0<0.
+
+All-small testing angles are handled by these full-parent local bodies.
+R2A lines 92-122 use R2O for the complementary testing angles and SJ for
+literal endpoints and state/sign restoration. R2O is a newly supplied
+universal-identity proof; its opening explicitly says that the reflected
+source is not being assumed to satisfy an R1 source theorem. Its actual
+reflection may create a lambda'=alpha event, which is kept as a positive
+whole packet. This avoids the tempting but invalid shortcut of treating
+the transformed original R2 source as an R1 source.
+
+This trace checks scope compatibility and the structure of the replacement
+bounds. It is not a fresh coefficient-level verification of every QI/SC
+conductor invoked by TU and UL.
+
+7. CT REFLECTION AND NATIVE-GAP PRESERVATION
+
+The complete C2 source has actual angles u_c=c, v_c=ac and CT2 gaps.
+CT4 sends
+
+    (u,v;W,X,Y,Z;n,m,C,A,D,alpha)
+    ->(1/v,1/u;Z,X,Y,W;n,D,alpha,A,m,C).
+
+It preserves the parent after multiplying by the positive pure-testing
+factor u^2v^2, with literal endpoints treated homogeneously. Packetwise,
+for example, uv J'=-M and uv M'=-J, explaining m <-> D.
+
+Let z=c^2. The source map is
+
+    c'=1/(ac), a'=a, b'=a^2/b,
+    r'=a^2zr/b, t'=(1-zh)/b.
+
+Direct substitution gives
+
+    h'=a^2zh/b,  g'=a^2j/b,  j'=g/b,
+    1-r'=(b-a^2zr)/b,
+    1-z'h'=(b-h)/b=a^2t/b,
+    b'-a^2z'r'=a^2(1-r)/b.
+
+Every displayed quantity has the required strict positive sign by CT2.
+The six coefficients are permuted, so delta_tot is unchanged and n=0 is
+preserved. These calculations verify the reflection at the level relevant
+to routing. No false rule t -> 1/t is used.
+
+8. THE COMPLETE C2 SOURCE TABLE
+
+CT first splits delta_tot into unit or infinitesimal. In the unit case,
+all coefficients are bounded and the separate positive-scale theorem AU
+is invoked at the EN native-entry interface. In the infinitesimal case,
+split C,alpha into both weak, both strong, or exactly one weak. Use the
+reflection to orient the asymmetric case as C weak, alpha strong.
+
+The nine positive actual-angle types in CT6 are exhaustive:
+
+  Angles  Both C,alpha strong                 C weak, alpha strong
+  II      strong-II local + remote           impossible
+  IU      single-angle join                  impossible
+  IO      strong-IH local + remote           weak-IH full join
+  UI      strong-UI full join                impossible
+  UU      five-retained-events terminal      impossible
+  UO      single-angle after reflection      single-angle after reflection
+  OI      strong-HI full join                impossible
+  OU      strong-UI after reflection         impossible
+  OO      strong-II after reflection         HJ after reflection
+
+The O letter means an unbounded finite source half-angle, not a literal
+projective source endpoint. All independent testing endpoints belong to
+the full-parent leaf conclusions.
+
+The empty cells are not based on a historical admission complement:
+CT lines 182-198 points to original source numerator/gap contradictions for
+II,IU,UI,UU. CT lines 200-214 uses n>=0 to show r/u_c^(-2) bounded on
+OI/OU; the cancelled C formula then has positive-unit numerator and bounded
+positive denominator, so C cannot be weak. Equality n=0 is retained in
+that argument.
+
+The both-weak case is outside this table. CT lines 113-180 first derives
+n,m,A,D unbounded by physical coefficient-field tests, then obtains the
+matched-contact source regime CT8 by the actual matching equations and
+stationarity. It calls the complete radial local/outer bodies and A6;
+those are real substantive leaf proofs, not consequences of the table.
+
+9. SINGLE-ANGLE COVERAGE AND A USEFUL ORIENTATION DETAIL
+
+In the IU chart, n>=0 makes bounded b a positive unit (CT10). For bounded
+b there are exactly three cases: g unit, g infinitesimal/r unit, and
+g,r both infinitesimal. The actual theorem headers of
+c2_openings_and_unbounded_n.tex, c2_last_opening.tex and
+joint_centered_packets.tex match those alternatives and allow arbitrary
+h and b-h openings. The first derives the formerly assumed lower bounds
+on 1-r and b-k^2r from n>=0. Thus importing only the earlier
+general_single_angle.tex theorem would be insufficient, but CT imports
+the extensions explicitly.
+
+For unbounded b, the positive gaps give B=xb bounded. B unit gives the
+strong pitchfork; B infinitesimal gives unbounded_b_small_B.tex. Its
+theorem expressly allows arbitrary B/sigma, every n scale, and n=0.
+The strong-pitchfork extension explicitly handles unbounded C or alpha,
+in addition to the prior bounded-complementary-coefficient theorem.
+
+When the oriented weak UO cell is reflected, it becomes IU with C strong
+and alpha weak. This is not a hole: the single-angle bodies do not require
+both events strong. In their bounded-b regime C is strong and alpha weak;
+the unbounded-b split handles the additional strong-complement regime.
+The two column labels in CT6 should therefore not be misread as additional
+hypotheses of every leaf named in that row.
+
+10. WHAT WAS CHECKED AND WHAT REMAINS INHERITED
+
+Checked analytically in this audit:
+
+  * HJ's source-coordinate logic, weak-face equivalence, unbounded-weight
+    tests, all-bounded exclusion, and the R7 simultaneous-small exclusion.
+  * Exhaustion and disjointness of the HJ rows plus four explicit exits.
+  * Placement of n=0 and the exact algebra of the OP C1 boundary map.
+  * The native-scale match to the two actual C1 boundary leaf statements.
+  * R2's bounded/unbounded source/current partition and the scope of its
+    formal comparison versus physical-source imports.
+  * CT4/CT5 reflection, native gap preservation, and preservation of n=0
+    and delta_tot.
+  * Exhaustion of CT's total-scale, weak/strong, and actual-angle cases.
+  * The actual theorem-header coverage of all single-angle b/opening cases.
+  * Separation of the source-entry, positive-scale, and noncommuting-test
+    foundations from the local dispatch being assembled.
+
+Inherited mathematical leaves, NOT freshly rederived by this scope audit:
+
+  * EN native physical source entry; AU complete positive-scale theorem;
+    A6 arbitrary-scale noncommuting testing theorem.
+  * Full radial and matching-current conductors in the both-weak case.
+  * Every detailed C2 strong-II, UI, HI, IH and weak-IH Gram/conductor.
+  * Complete coefficient expansions in the R2 QI/SC argument and all
+    R3-R10 local/remote bodies beyond the scope matches described here.
+  * The restriction arguments used by the empty-cell bodies, beyond the
+    source implications spelled out and examined in CT/HJ.
+
+No checker was run. Neither a status receipt nor an old open frontier was
+treated as a mathematical premise. The dispatch is coherent and closes its
+own logical case partition, conditional on these separately stated exact
+leaf theorems. A full end-to-end certification must additionally establish
+those leaf bodies and the global valid-source reduction.

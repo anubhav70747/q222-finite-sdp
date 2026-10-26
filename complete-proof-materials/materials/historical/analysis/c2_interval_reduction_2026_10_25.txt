@@ -1,0 +1,164 @@
+NATIVE C2: EXACT INTERVAL FIBERS, AND THE REMAINING FOUR-PARAMETER OBSTRUCTION
+25 October 2026. Bounded structural derivation; no numerical optimization.
+
+Conclusion
+----------
+Each fixed native shape (a,b,r,t) has an exact finite SDP description of its
+closed source cone using two 3x3 moment matrices. This follows from an exact
+one-interval reduction and a degree-five polynomial source curve. It does
+not yet produce a single affine pencil for the full C2 cone: the four shape
+parameters remain in its coefficient map nonlinearly. Treating them as free
+matrix coefficients is exactly the unproved step, not an affine lifting rule.
+
+Source: public latex/certificates/c2_short.tex:263-300, equations
+eq:c2-native-source and eq:c2-native-contact. Write k=a^2 and h=b-kt.
+Fix k,b,t>0, 0<r<1 and h>0. The variable in this derivation is the SOURCE
+contact parameter z=c^2; it is never an independent testing angle.
+
+1. The native source domain is one interval
+------------------------------------------
+The chart gaps are
+
+ g=b+r-1+hz,   j=1-t+rz,   1-hz,   b-krz.
+
+The denominator has a positive-coefficient form:
+
+ Delta=(b+1)+(b+1)(b+k+2r)z
+       +[(b+r)^2+k(b+r(2-r))]z^2 >0,   z>=0.
+
+The only potentially negative source coefficient is n. Its numerator is
+
+ q(z)=(b+r)(1+rz)(1+rz+kzt)-r Delta
+     =q0+q1*z-K*z^2,
+ q0=b(1-r)>0,
+ q1=b(b+2r)(1-r)-(b+r)h-kr(b+1),
+ K=r[(b+r)h+kb+kr(2-r)]>0.
+
+Consequently q has exactly one positive root
+
+ z_n=(q1+sqrt(q1^2+4Kq0))/(2K),
+
+and n>=0 iff 0<=z<=z_n. All other source numerators are positive in the
+chart, including
+
+ N=(1+z)(b+r)h+k[g+j+rt(1+kz)]>0.
+
+Thus, if nonempty, the entire native domain for this fixed shape is
+
+ L<z<U,   L=max(0,(1-b-r)/h,(t-1)/r),
+           U=min(1/h,b/(kr),z_n).
+
+The endpoint z=U is included in the actual chart only when its active upper
+restriction is n=0 and the other strict gaps remain positive. Closed source
+cones include all finite source-ray limits at either endpoint. No disconnected
+contact intervals or extra stationary-source inequalities are hidden here.
+
+2. A uniform degree-five polynomial curve for each fixed shape
+------------------------------------------------------------
+Use Ac=1+rz, E=1-hz and S(z)=2 Delta*g*j*E>0 on (L,U).
+Multiplying the complete source vector c(z), in order
+(d,lambda,n,m,C,A,D,alpha,beta), gives the following polynomial vector P(z):
+
+ P_d=2 Delta*g*j*E,
+ P_lambda=P_beta=0,
+ P_n=q*g*j*E/r,
+ P_m=(1+kz)(1-r)Ac(Ac+kzt)*j*E,
+ P_C=Ac*N*g*j*E/(kt),
+ P_A=k*Ac(b+r)(Ac+kzt)*g*j*E/h,
+ P_D=(1+z)(b+r)(b-krz)(Ac+kzt)*g*E/k,
+ P_alpha=z^2(b+r)N*g*j.
+
+Each coordinate has degree at most five in z. All divisors in this display
+are positive fixed-shape scalars. This is a polynomial identity, not an
+approximation or a matrix positivity inference. It retains n=0 and all
+state/testing dependence because it only rescales the source coefficients
+of the unchanged full parent.
+
+There is one important endpoint cancellation. Divide all nonzero coordinates
+of P by their monic common univariate polynomial factor G, and choose its
+overall sign so Q=P/G is nonnegative on (L,U). Such a sign exists because
+P_d>0 there, so G has no zero and constant sign on the interval. The resulting
+polynomial vector Q has degree <=5 and no simultaneous zero on [L,U].
+Its endpoint values are nonnegative and are limits of source rays.
+
+This division cannot simply be omitted. For example,
+k=1/4,b=19/32,r=1/4,t=9/8 gives h=5/16 and g=j=0 at L=1/2, while
+q(1/2)=243/512>0. Every coordinate of P has the common factor z-1/2.
+Without its removal, the endpoint vector would be zero and would miss the
+limiting combination of the m and D event rays.
+
+3. Exact fixed-shape SDP
+-----------------------
+Write Q(z)=sum_{i=0}^5 Q_i z^i, padding zero coefficients when necessary.
+The closed conic hull of the original native source rays for this fixed
+shape is exactly
+
+ c=sum_{i=0}^5 Q_i h_i,
+ [h_{i+j+1}-L h_{i+j}]_{i,j=0}^2 >=0,
+ [U h_{i+j}-h_{i+j+1}]_{i,j=0}^2 >=0.                    (M)
+
+These are the degree-five Hausdorff moment conditions on [L,U]. For
+completeness, their sufficiency is a one-variable fact, not a multivariate
+SOS assumption. Every polynomial p of degree <=5 nonnegative on [L,U]
+has the form
+
+ p(z)=(z-L) sum f_i(z)^2+(U-z) sum g_i(z)^2,
+ degree f_i,degree g_i <=2.
+
+To prove this, substitute z=(L+U s^2)/(1+s^2) and multiply by (1+s^2)^5.
+The result is an even nonnegative univariate polynomial of degree <=10.
+Real factorization expresses it as a sum of two polynomial squares of
+degree <=5. Averaging under s -> -s separates each square into its even
+part (degree <=4) and odd part s times a polynomial in s^2 (degree <=4).
+Substituting back gives the displayed interval identity. Hence the two
+PSD inequalities in (M) make the moment functional nonnegative on every
+nonnegative polynomial of degree <=5. Finite-dimensional separation from
+the closed conic hull of (1,z,...,z^5), z in [L,U], then gives an actual
+nonnegative measure on that interval. Conversely any such measure gives
+(M). Applying Q gives precisely the source cone, with no relaxation.
+
+The source image is closed here: Q has nonnegative coordinates and no
+simultaneous zero on a compact interval, so sum_i Q_i(z) has a strictly
+positive minimum. The sum of source coordinates therefore bounds total
+representing mass. Limits of source vectors have subsequential moment
+limits and remain in (M). This fixes the possible endpoint-zero issue.
+
+The total PSD order is six, and this is a fixed testing-independent SOURCE
+cone for each frozen shape. Matrix coefficients are real algebraic for
+algebraic shape parameters, because U may contain the quadratic root z_n.
+No rationality of those endpoint coefficients is being asserted.
+
+4. The precise uncompleted step for full C2
+-----------------------------------------
+The four shape parameters k,b,r,t are independent in the native chart.
+Both Q_i and the interval endpoints in (M) vary with them. A proposed full
+system c=sum_i Q_i(k,b,r,t)h_i is not affine in its unknowns: it contains
+products of shape variables and moment variables, as well as h=b-kt and
+the parameter-dependent interval endpoint. Replacing the polynomial
+coefficients by independent PSD matrices drops exactly these consistency
+relations. It is not justified by the univariate moment theorem.
+
+Equivalently, conic sums over varying shapes require moments of a measure
+on the full five-parameter native domain, not just moments of z. Showing
+that finitely many matrix coefficients encode those joint moments would
+require a further exact finite-order moment theorem or an explicit finite
+PSD generating cone for their shape dependence. Neither the stationary
+identities nor the degree-five bound supply that theorem. Quantifying over
+one shape after another gives a family of pencils, not one finite pencil.
+
+Existing canonical completion also cautions against replacing this missing
+step by an arbitrary polynomial matrix selector: the published half-line
+and ramified cones have exact all-positive valid-source exclusions. Those
+examples are not native C2 lambda=beta=0 counterexamples, so they do NOT
+refute (M), nor prove that a new matrix-valued interval method cannot work.
+They only rule out inferring global adequacy from a univariate selector
+ansatz without proving its source admission.
+
+This is the end of the bounded derivation. The useful new reduction is the
+explicit single interval and universal degree-five bound for every fixed
+C2 shape. It removes all internal z case splitting in such a fiber. It
+does not yet remove the four-parameter shape dependence or yield full C2.
+
+Exact helper: c2_interval_fiber_checks_2026_10_25.py/.json checks q, Delta,
+the positive N identity, every source rescaling, all nine degree bounds,
+and the simultaneous-endpoint cancellation example. No solver or sweep.

@@ -1,0 +1,154 @@
+      Q222 Se Full Two Stage Filtered Proof 2026 10 26
+
+
+
+ 
+
+
+Thin-R10 formal C1 / physical C1: complete SE4 two-stage filtered conductor
+Scope. This is only the SE branch of the local C1 base. The original-parent-to-SE4 subtraction is a separate assignment; here the exact input is the printed complete SE4 expression, and every coefficient of that expression (scalar, both first normals, hard 2-by-2 block) is independently reconstructed below. Source and testing elements belong to independently labelled real closed fields. No rate comparison between the fields occurs. For physical C1, E is a positive bounded unit, 0<ell<K is arbitrary (possibly with nonzero residue), and eps,j are positive infinitesimals with bounded tau; a=(K-ell)/E need not be a unit. For formal thin R10, additionally ell is infinitesimal and E>1 is a bounded unit, with the separately established pi=1-s_n>1/2. This proof requires no nonnegative formal beta.
+1. Exact factored source coefficients and bounded ring
+Put
+$ k=\varepsilon j,\quad K=1+k^2,\quad Q=K^2-\ell k^2,\quad
+ a=(K-\ell)/E,\quad \eta=KE/Q,\quad r=\ell/Q,\quad
+ \zeta=j^2QE/K,\quad t=\varepsilon^2\tau,$$ R=K^2/Q,\quad T=K-k^2t\zeta,\quad
+ V_c=k^2\eta\zeta=\varepsilon^2j^4E^2,\quad
+ Q_c=1-k^2\zeta+aV_c=1-\ell\varepsilon^2j^4E/K,
+ \quad S_c=1-k^2\eta+tV_c,$$ H_c=r+\eta,\quad D=1+u^2,\quad D_v=1+v^2,\quad
+ p=t/R=\varepsilon^2\tau/R,\quad h_s=a/T.$Use the original short source polynomials $P_4,P_\alpha,P_d$ from SD1, evaluated at these substitutions. The cancelled coquotients imply the exact SE3 coefficient formulas
+$\begin{aligned}
+ b_2&=\varepsilon^2\frac{8(1-t\zeta)(1+V_c)}{Q S_c},&
+ b_b&=\varepsilon^2\frac{8[1+(1-t)\zeta]}{Q S_c},\\
+ b_3&=\frac8T,&b_5&=\frac{8(1+V_c)}{TS_c},\\
+ L&=\frac{2\eta^2P_4}{K H_cS_c},&
+ d_0&=\frac{4\eta P_d}{K H_cS_c},\\
+ A_0&=\frac{LH_c}{1+rH_c},&
+ \alpha_0&=\varepsilon^4j^6E^2\frac{2P_\alpha}{KQ_cS_c},
+ \qquad \nu=d_0(1-p).
+\end{aligned} \tag{A}$No inverse of $a$ or $\ell$ occurs. The only inverted source factors are E,K,Q,R,T,H_c,S_c,Q_c,1+rH_c, all positive bounded units: E,E^{-1} are units by hypothesis, H_c has residue E+ell, the other factors have positive unit residues, and 1+rH_c>=1. The formulas stay bounded even if a or ell is infinitesimal. Dividing the entire parent by positive pure-source a before producing (A) is harmless; treating 1/a as a bounded Gram entry would not be.
+For formal thin R10, retain SD3's four original positive packets and the centered-A packet; the Pi2 reserve leaves (2 pi-1) nu D_v N^2>0 since pi>1/2. For physical C1, beta>=0 gives the same positivity. All retained packets vanish, with their full first derivatives, at the native contact. Positive source factors (including a and, in the R10 join, kappa) and the common F/4 factor are restored only after this local Gram has been constructed.
+2. Entire exact raw SE4 coefficient identity
+Define $V_0=1-puvw$, $\Phi=b_3D_vh_s+b_5(1-h_s)$, and $\sigma=4\alpha_0+2d_0$. The independent testing variables are $u,w,v$, and N,M are the two full state normals. With $q_A=Dvw$, $q_B=v(D-uN-puDvw)$, $U_T=M+h_sq_B$, use
+$ W=w+uU_T/D,\quad Y=uw-U_T/D.$This is the complete SE4 parent, not its scalar restriction. Let
+$ A_r=\varepsilon wv,\ B_r=v,\ C_r=Euw,\ D_r=\varepsilon^2j^3E.$Write
+$ \mathscr G=f_AA_r^2+f_{BB}B_r^2+f_{BC}B_rC_r+f_{CC}C_r^2+\varpi D_r^2
+ +2N G_N+2M G_M+H_{NN}N^2+2H_{NM}NM+H_{MM}M^2.\tag{B}$Exact scalar arrays (all dependence on w is through V_0):
+$\begin{aligned}
+ f_A&=D^2\left[\frac{b_2}{\varepsilon^2}(1-p)+\frac{b_b}{\varepsilon^2}D_vp\right],\\
+ f_{BB}&=\Phi D^2V_0^2+4A_0DD_vh_s^2(1+ru^2)^2V_0^2
+ -4LDD_vh_s^2u^2(2+ru^2)V_0^2
+ +\sigma D(2h_sV_0+h_s^2v^2V_0^2)-2d_0D,\\
+ f_{BC}&=-\frac{8A_0DD_v(1-r)h_s(1+ru^2)V_0}{E}
+ +\frac{8LDD_vh_s[(1-r)u^2-1]V_0}{E}
+ -\frac{\sigma D}{E}(2+2h_sv^2V_0),\\
+ f_{CC}&=\frac{4A_0DD_v(1-r)^2}{E^2}
+ +\frac{4LDD_v(2-r)}{E^2}+\frac{\sigma Dv^2}{E^2},\\
+ \varpi&=\frac{8P_\alpha}{KQ_cS_c}D.
+\end{aligned}\tag{C}$For the complete first normals define
+$\begin{aligned}
+ P_B&=8A_0D_vh_s(1+ru^2)^2V_0-8LD_vh_su^2(2+ru^2)V_0
+           +2\sigma(1+h_sv^2V_0),\\
+ P_C&=-\frac{8A_0D_v(1+ru^2)(1-r)}E
+      +\frac{8LD_v[(1-r)u^2-1]}E-\frac{2\sigma v^2}E.
+\end{aligned}$Then $G_T=g_{TA}A_r+g_{TB}B_r+g_{TC}C_r$, where
+$\begin{array}{lll}
+ g_{NA}=D(b_bD_v-b_2)/\varepsilon,&
+ g_{NB}=-\Phi DuvV_0-\frac12h_suP_Bv,&
+ g_{NC}=-\frac12h_suP_Cv,\\
+ g_{MA}=0,&g_{MB}=(b_3D_v-b_5)DV_0+P_B/2,&g_{MC}=P_C/2.
+\end{array}\tag{D}$The displayed 1/eps is the explicit bounded coquotient eps D[(b_b/eps²)Dv-b_2/eps²] from (A).
+Finally let
+$ \Xi=\frac{4D_v[A_0(1+ru^2)^2-Lu^2(2+ru^2)]+\sigma v^2}{D}.$The entire hard block, including the reserved normal, is
+$\begin{aligned}
+ H_{NN}&=b_2+b_bD_v+\nu D_v+\Phi u^2v^2+\Xi h_s^2u^2v^2,\\
+ H_{NM}&=-(b_3D_v-b_5)uv-\Xi h_suv,\\
+ H_{MM}&=b_3D_v+b_5+\Xi.
+\end{aligned}\tag{E}$Derivation: set $q_B=DB_rV_0-uvN$, $U_T=M+h_sq_B$, $uW=C_r/E+u^2U_T/D$, $Y=C_r/E-U_T/D$, and expand the four SE4 packets into powers of N,M. The two latter forms are quadratic in U_T; their first derivative is P_B B_r+P_C C_r at N=M=0, and their half-second derivative is Xi. This proves (B)--(E) coefficient by coefficient. The standalone checker tests the six resulting identities independently with symbolic coefficients, not just the Gram minors.
+3. First conductor, four exact scalar residuals
+Work in the bounded source/test coefficient ring $\mathcal R$, containing the polynomials in $\varepsilon,j,E,\ell,\tau,u,w,v$ and only the unit inverses displayed after (A), together with $D^{-1}$ for the hard block. For conductor calculations (C),(D) are already polynomial in u,w,v, with source unit denominators. Let $\mathfrak J=(u-k,w-j,v-\varepsilon j^2E)$.
+The native SD9--SD11 identities are genuine polynomial identities, unchanged when formal $\beta_1=-s_n/2<0$; they give the full contact jets for (B). The retained positive packets vanish to first order, so $F_0\in\mathfrak J^2$, $G_N,G_M\in\mathfrak J$, where $F_0$ is the scalar in (B).
+Put $x=B_r-C_r, y=A_r-kC_r,z=uB_r-kC_r,h_0=kC_r-D_r$. Set
+$ S=k^2f_A+f_{BB}+f_{BC}+f_{CC}+k^2\varpi,
+ \quad Q_0=f_Ay^2+f_{BB}x^2+\varpi h_0^2.$First exact coefficient identity:
+$ F_0=Q_0+C_r\{x(2f_{BB}+f_{BC})+2kf_Ay-2k\varpi h_0\}+C_r^2S.\tag{F}$Since $C_{r,c}=\varepsilon j^2E\ne0$, $F_{0,c}=0$ implies $S_c=0$. Every w dependence of (C) is through V_0=1-(eps² tau/R)uvw; hence
+$ T_w(S)\in\varepsilon^2\mathcal R,\qquad
+ \bar S=s(u^2,v^2),\quad s(0,0)=0,\quad
+ \overline{2f_{BB}+f_{BC}}\in\mathcal A[u^2,v^2].\tag{G}$The bar here reduces only eps; j is not set to zero. Parity follows from the full arrays (C) with V_0=1, and s(0,0)=0 follows by reducing the exact contact equation S_c=0 (where u=k=eps j, v=eps j²E).
+For any polynomial P with P_c=0, let T_u,T_w,T_v be ordered monic differences in u,w,v at the contact. If $T_w=\varepsilon U_P+vV_P$, define
+$\begin{array}{l}
+ L_x(P)=-uT_u-\varepsilon wU_P-Ekw^2V_P-EkwT_v,\\
+ L_y(P)=U_P+EjwV_P+EjT_v,\\
+ L_z(P)=T_u+Ew(w-j)V_P+EwT_v.
+\end{array}\tag{H}$The exact SE5--SE7 conductor identity is $C_rP=xL_x(P)+yL_y(P)+zL_z(P)$. Apply it first to S with V_S=0, U_S=T_w(S)/eps in eps R. Define
+$ (H_x,H_y,H_z,H_h)=(2f_{BB}+f_{BC}+L_x(S),\,2kf_A+L_y(S),\,L_z(S),\,-2k\varpi).$The native first jets imply $J_{i,c}=0$ for
+$ J_i=H_i-\lambda(-2k,1,1,-1)_i,\qquad \lambda=2k\varpi_c.\tag{I}$For h, this is immediate. For the other three, differentiate (F) and use the independent contact gradients of (x,y,z); their determinant is -E² eps³ j⁴ != 0. This determinant is used only for cancellation in an integral domain, not inverted as a coefficient.
+4. Second conductor: the formerly missing condition
+Define the genuinely polynomial quotients
+$ p_s(U,V)=\frac{s(U,V)-s(0,V)}U,\qquad
+ q_s(V)=\frac{s(0,V)}V.$Both are polynomials since s(0,0)=0. Reducing the entire first-stage residual arrays (I) modulo eps gives
+$\boxed{\begin{array}{ll}
+ \bar J_x=\overline{2f_{BB}+f_{BC}}-u^2p_s(u^2,v^2),&
+ \bar J_y=Ejv\,q_s(v^2),\\
+ \bar J_z=u\,p_s(u^2,v^2)+Ewv\,q_s(v^2),&
+ \bar J_h=0.
+\end{array}}\tag{J}$This follows from T_u(S) bar =u p_s, T_v(S) bar =v q_s, T_w(S) in eps² R, with the exact SE7 formula. No source/test rates have been compared. In the ordered second w quotient one first sets u=k; modulo eps this means u=0. Therefore
+$ \boxed{(\overline{T_w(J_x)},\overline{T_w(J_y)},
+ \overline{T_w(J_z)},\overline{T_w(J_h)})
+ =(0,0,Ev\,q_s(v^2),0).}\tag{K}$Thus every T_w(J_i) belongs to (eps,v) in the bounded ring; choose V_{J_z}=E q_s(v²) (and zero for the other three), and divide the remaining multiple of eps formally, with a bounded polynomial coquotient. No inverse of eps, j, k, ell, or a survives. Apply (H) a second time to write
+$ C_rJ_i=x\ell_{ix}+y\ell_{iy}+z\ell_{iz}.\tag{L}$The special contact-jet relation
+$ r_*=y+z-h_0-2kx\in\mathfrak J^2,\qquad
+ kC_rr_*=q_1^2-yz=q_2^2+zh_0
+\tag{M}$provides the exact native compensating factor k in (I), so no forbidden 1/k occurs. The checker verifies (M) and SE7 as polynomial identities.
+For both complete normals, put $S_T=kg_{TA}+g_{TB}+g_{TC}$. Their exact contact vanishing gives $(S_T)_c=0$; (D) shows $\bar S_T$ is w independent, because all w dependence goes through V_0. Hence T_w(S_T) in (eps), and one application of (H) gives
+$ G_T=\gamma_T\cdot(x,y,z,h_0,q_1,q_2),\quad
+ \gamma_T=(g_{TB}+L_x(S_T),\ g_{TA}+L_y(S_T),\ L_z(S_T),0,0,0).\tag{N}$This includes both normals; neither is evaluated on a state graph.
+5. Full finite eight-root matrix and positive residue
+Equations (F), (I), (L), (M) give the scalar identity
+$ F_0=Q_0+\varpi_c(q_1^2+q_2^2-yz+zh_0)
+ +\sum_{i=x,y,z,h_0}r_i(x\ell_{ix}+y\ell_{iy}+z\ell_{iz}).\tag{O}$For the ordered frame$\mathscr R=(N,M,x,y,z,h_0,q_1,q_2)$, let e_i denote its soft coordinate vectors, $\widetilde\ell_i=(\ell_{ix},\ell_{iy},\ell_{iz},0,0,0)$. Define explicitly
+$\begin{aligned}
+ H_s={}&f_{BB}e_xe_x^T+f_Ae_ye_y^T+\varpi e_he_h^T
+ +\varpi_c(e_{q_1}e_{q_1}^T+e_{q_2}e_{q_2}^T)\\
+ &-\frac{\varpi_c}{2}(e_ye_z^T+e_ze_y^T)
+  +\frac{\varpi_c}{2}(e_ze_h^T+e_he_z^T)
+ +\frac12\sum_i(e_i\widetilde\ell_i^T+\widetilde\ell_i e_i^T),\\
+ H&=\begin{pmatrix}H_{NN}&H_{NM}&\gamma_N^T\\H_{NM}&H_{MM}&\gamma_M^T\\\gamma_N&\gamma_M&H_s\end{pmatrix}.
+\end{aligned}\tag{P}$This is a complete finite coefficient identity: (A),(C)--(E),(H),(I),(L),(N),(P) specify every entry by bounded algebra and ordered monic differences. No unresolved symbolic allocation remains in this definition. Equations (B),(N),(O) give exactly $\mathscr G=\mathscr R^TH\mathscr R$.
+Now take the joint source/testing residue of the coefficients, without identifying their infinitesimal rates. Let $H_0=\bar E+\bar\ell>0$, $V_*=1+\bar\ell H_0>0$, and
+$ g=\frac{8\bar E(H_0+1)}{H_0V_*},\qquad
+ f=\frac{8(\bar E+2)}{H_0V_*}.$Direct reduction of the explicit source arrays and (J) gives
+$ \bar f_A=\bar\varpi=8,\quad
+ (\bar f_{BB},\bar f_{BC},\bar f_{CC})=(f,-2f,f),\quad
+ \bar\gamma_N=0,\quad\bar\gamma_M=(g,0,0,0,0,0),$$ p_s(0,0)=8,\quad q_s(0)=8/\bar E,\qquad
+ \bar\ell_{zz}=8,
+ \quad \bar\ell_{ij}=0\text{ for every other second-stage entry}.$The exact residual matrix is
+$ \boxed{\bar H=\left[\frac{4\bar E}{H_0}\right]\oplus
+ \begin{pmatrix}
+ \frac{8(\bar E^2+2\bar E\bar\ell+2\bar\ell^2+2)}{V_*}&g\\
+ g&f
+ \end{pmatrix}\oplus 8(C_T\oplus I_2),}\tag{Q}$$ C_T=\begin{pmatrix}1&-1/2&0\\-1/2&1&1/2\\0&1/2&1\end{pmatrix},
+\qquad \det C_T=1/2.$The coupled determinant equals
+$ \frac{64(\bar E^2+2\bar E\bar\ell+4\bar E+4\bar\ell)}{H_0^2V_*}>0.$This holds also at bar ell=0 and at bar ell=1 (the latter permits a infinitesimal). No inverse of a or ell occurs anywhere in (Q). Both formal thin R10 (bar ell=0, bar E>1) and physical C1 (bar ell any in [0,1], bar E>0 unit) have the same strict conclusion.
+6. Rate-independent filtration, not a diagonal q-limit
+Assign the exact polynomial weights
+$ \operatorname{wt}(\varepsilon,j,u,w,v)=(1,1,2,1,3),\quad
+ \operatorname{wt}(N,M,x,y,z,h_0,q_1,q_2)=(5,3,3,5,5,5,5,5).$All source units E,ell,tau have weight zero; ell is not presumed infinitesimal. The contact substitutions respect these weights: k=eps*j weighs 2 and v_c=eps*j² E weighs 3. The three SE5 and additional SE6 identities are weighted homogeneous:
+$ \begin{array}{c|c}
+ C_r(u-k)=z-ux&5\\
+ \varepsilon C_r(w-j)=y-\varepsilon wx&5\\
+ C_r(v-v_c)=E(wz+jy-kwx)&6\\
+ C_rv(w-j)=Ew(w-j)z+Ejwy-Ekw^2x&7\\
+ kC_rr_*=q_1^2-yz=q_2^2+zh_0&10.
+ \end{array}$Because every division in (H) is an ordered monic polynomial divided difference and (G),(K) supply exact bounded coquotients, (P) has entries in the bounded ring with no negative weight. The reduction (Q) evaluates each coefficient at the ideal (eps,j,u,w,v)=0. Therefore
+$ H-H_{\mathrm{lead}}(E,\ell)\in
+ (\varepsilon,j,u,w,v)\,\mathcal R^{8\times8},\tag{R}$where $H_{\mathrm{lead}}(E,\ell)$ is the right side of (Q) before taking real residues. Each entry of (R) has strictly positive weight, so has zero real residue for every independent source/test rate. This proves the required tail filtration after both divisions, not merely from a high-weight undivided scalar. The strict bounded-Gram lemma then admits the SE4 remainder locally. Restore the positive packets and pure-source prefactors; no physical-C1 theorem is invoked for the formal negative-beta base.
+Scope boundary: This proves the SE local formal-base lemma assuming the established exact original-parent-to-SE4 subtraction and native contact identities SD9--SD11, which are separately checked polynomial identities. It does not verify TL6 stress or any global independent-test join outside the local SE chart. The companion checker reconstructs SE4 (all six coefficient groups), checks SD9--SD10, the exact conductor identities and all residue formulas; it does not independently replay the separately assigned original-parent-minus-packets identity.
+
+
+
+
+
+
+
+
+

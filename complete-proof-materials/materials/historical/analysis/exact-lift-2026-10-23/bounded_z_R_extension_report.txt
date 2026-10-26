@@ -1,0 +1,86 @@
+23 October 2026 — bounded-z extension and stronger inverse-Alice result
+
+Primary new result
+------------------
+inverse_alice_all_z_completion.tex proves an actual common testing family
+for every z>0 on the native source wedge
+  0<x,sigma <= 2^-30 / (P_*^2(1+z)), P_*>=1 fixed,
+with no bound on H=h/sigma. Testing is 0<=p=1/u<=P_* and
+0<=w<=2^-12/P_*. D=0 and beta=0 are admitted wherever native formulas
+and nonnegative weights permit them. No mixed radical or inverse occurs.
+
+The useful exact leading completion, with Q=1-b, r=bz, H0=1+zQ,
+B=H0/(bQ), J*=sqrt(B)(F-bG), G*=sqrt(H0)G, is
+  Q0=2R^2+2S^2+2/(1-r)(E-p[z(F-bG)+G])^2
+     +2(1+p^2)J*^2+2G*^2.
+After Ebar=E/P_* and t=p/P_*, its clipped Gram is >=I5/2.
+The source coefficient vector (z/sqrt(B),1/sqrt(H0)) has norm<=1
+because H0-1-bQz^2=zQ(1-r)>=0. This eliminates any cutoff on z.
+
+Three correction matrices have respective row bounds
+  50 eta P_*^2, 4P_*^2, 4
+at t, t w^2, w, with eta=2^-30/P_*^2. Their fixed testing reserve
+is at most 524441/536870912 < 1/512; final Gram margin is >I5/4.
+The whole retained parent, not just its determinant or principal part,
+is displayed in the TeX. The integrated proof now includes the complete
+native source/raw parent and the author's explicit51-function,19-block
+family (total weighted order62,max6). I analytically matched each grouped
+block to the retained identity, including the p² radial block and merged
+C/A excess. The permutation between the theorem's five-root ordering and
+the block dictionary's ordering is explicit. This report does not audit
+the byte serialization of the author's JSON.
+
+P_*=2^24 gives all Alice angles, with |w|<=2^-36 and z<=1, by overlap
+with the corrected local669 inner construction. Source box is
+x,sigma<=2^-78/(1+z). For any bounded-z infinitesimal source germ,
+the new inverse-Alice family applies without first choosing a real R.
+It also applies to unbounded z satisfying the weighted source condition.
+It does not supply the missing R-independent inner frame for z>1,
+all native sources with larger weighted openings, or |w|>2^-36.
+
+Ancillary finite-R inner bound
+------------------------------
+bounded_z_R_extension.tex supplies the more conservative unchanged
+twelve-/six-root admission bounds
+  epsilon_R=2^-96(1+R)^-16,
+  delta_R=2^-28(1+R)^-4,
+  M_R=2^16(1+R)^4,
+for 0<z<=R. The testing degree/list size is unchanged, but the testing
+interval depends on R. The proof gives termwise coefficient-norm bounds;
+it is not a numerical sampling or solver assertion.
+
+Retained-root caveat resolved
+-----------------------------
+For z=R,b=1/(2R),h=1/2,sigma=t,x=t^2, the unchanged extracted
+twelve-root free principal minor on Nx,Gamma* tends to 2(1-Ru^2).
+This obstructs merely enlarging that principal Gram's testing box.
+It does NOT obstruct the whole certificate: at w=0 the full X,Z sector
+is exactly 2(1+u^2)X^2+4D(uX-Z)^2+4beta(X+uZ)^2, with the remaining
+W,Y terms also positive squares. The full w-linear cross form, and
+the relation uXe=uNx-Hu^2Gamma-(Huw/q)A_theta, are recorded explicitly.
+No assertion of impossibility for alternative fixed testing frames follows.
+
+Exact ancillary checks
+----------------------
+check_bounded_z_R_extension.py (about2s) checks both full-parent w
+identities, seven source-path limits, the limiting minor, and Fx's
+coefficient sum37/z-degree3. Its output is bounded_z_R_extension_checks.json.
+check_inverse_alice_all_z_completion.py (about1s) independently expands
+the CE20 core, leading completion, normalized baseline SOS, full retained
+parent, three coefficient matrices, and exact rational reserve/margin.
+Its output is inverse_alice_all_z_completion_checks.json. Both passed.
+Source inequalities are the analytic inequalities in the TeX, not claims
+inferred from these exact identity checks.
+
+Exact inherited source locators read
+------------------------------------
+Recovered order669 proof/source_setup.tex and proof/uniform_bounds.tex;
+github-q222-finite-sdp/latex/certificates/c1_short.tex:7241 onward,
+sec:c1-unification-bounded-z-all-H / thm:c1-unification-bounded-z-all-H;
+same file around CE20 (~1258) and component:p909aa5765721 (~8022).
+The new result complements the bounded-z theorem's infinitesimal-Alice
+scope. Only the w-small/unit-Alice subclaim of p909aa5765721 is directly
+superseded; its complete Bob-angle scope requires its other remote join.
+
+No public source or frozen recovery file was edited. These are local
+certificate-cone results, not reverse inclusion for a global Q222 lift.

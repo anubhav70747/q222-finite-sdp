@@ -1,0 +1,41 @@
+===verify_r2.py===
+TU6 Pd equals P True
+TU9 C True
+TU9 A True
+TU9 D True
+TU9 m True
+TU9 hb True
+TU9 alpha True
+TU10 poly True
+TU7 contact normal dictionary independent above; all TU source polynomial rows PASS
+===verify_rl_fast.py===
+S0 True terms 1
+S1 True terms 1
+S2 True terms 1
+SN True terms 1
+RL5 p-zero True terms 1
+RFN21/22 source cancellations and RL5 exact polynomial PASS
+===verify_full_state.py===
+RFN7 generic full-state equality PASS
+RFN9 2x2 hard matrix PASS
+RL23 second-normal shift cancellation independent of stationary source PASS
+LN expression: -(-2*H*alpha*u*v**2*z - H*u*v**2*z - 2*alpha*p*u**2*v + 2*alpha*u**2*v - 2*alpha*u*z + 2*mu*u**2*v + 2*mu*v - 2*n*p*v**3 - 2*n*p*v + 2*n*u*v**2*z + 2*n*u*z - p*u**2*v - p*v**3 - p*v + u**2*v + u*v**2*z)/2
+LM expression: (2*A*H*v**3*z + 2*A*H*v*z - 2*A*u*v**2 - 2*A*u + 2*C*H*u**2*v**3*z + 2*C*H*u**2*v*z + 2*C*H*v**3*z + 2*C*H*v*z + 2*D*H*u**2*v*z + 2*D*H*v*z - 2*D*u**2*v*z - 2*D*v*z + 2*H*alpha*v**3*z + H*u**2*v*z + H*v**3*z + H*v*z + 2*alpha*p*u*v**2 - 2*alpha*u*v**2 + 2*alpha*v*z + p*u*v**2 - u**2*v*z - u*v**2)/2
+===verify_circuit.py===
+SH1 parameter 3/2 exact PASS
+SH2 two currents exact PASS
+RL17 complete signed Motzkin/opposite square cost exact PASS
+TU17 full current completion in unrestricted N exact PASS
+SH4 opposite normal source factorization exact PASS
+===verify_outer_caps.py===
+R2O21 minor 1 True
+R2O21 minor 2 True
+R2O21 minor 3 True
+R2O22 diagonal -u**2/(2*(j - 1)*(j + 1))
+R2O22 determinant u**2/(4*(j + 1)**2)
+R2O23 diagonal (u**2 + 1)/(2*(j - 1)*(j + 1))
+R2O23 determinant -(u**2 + 1)**2*(2*b*j - 2*b - j)*(2*b*j + 2*b - j)/(4*u**2*(j - 1)*(j + 1))
+R2O24 V**2*(4*b - 1)*(u**2 + 1)/(2*u**2)
+all R2O finite cap identities PASS
+===verify_r8_scope.py===
+Formal R8 exact opening j=h; g->1/2, t->1, (eQ-BK)/h->1/4; n>0 for small h.

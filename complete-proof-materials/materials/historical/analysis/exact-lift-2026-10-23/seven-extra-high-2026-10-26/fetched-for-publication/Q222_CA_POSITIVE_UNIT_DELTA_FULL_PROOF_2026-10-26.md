@@ -1,0 +1,239 @@
+# The complete CA base on the positive-unit-δ chart
+
+**Scope.** Let `K_c,K_t` be independently labelled real closed extensions of `R`; tensor products below are over `R`. Assume the original C1 stationary coquotient identities, with source-only parameters `k,ℓ>0` infinitesimal, `E,δ>0` bounded units, `t>0` bounded and the strict native positive shape/opening conditions `a,M=R-t,J=T-a>0`. Both the physical C1 domain (arbitrary positive-unit `E`) and the thin-R10 formal domain (`E>1`, possibly `β<0` but `β+d/2>0`) are covered. In the formal case we only assume the positive **paired** event coefficient, not `β≥0`. The testing variables `u,v,w>0` are independently infinitesimal, and the testing state chart is `Z=1`; `N,M_B` are unconstrained state-normal roots. The result is a tensor-SOS certificate for the entire **local** original parent, not a claim that the formal negative-β source is globally quantum-valid or that the separate SE chart is proved.
+
+## 1. Complete source chart and polynomial coquotients
+
+Use notation that distinguishes the testing normal `M_B` from the source opening `M`:
+
+```
+K=1+k², Q=K²−ℓk², a=(K−ℓ)/E, η=KE/Q, r=ℓ/Q,
+Δ=δQ/K, ζ=δ²k²QE/K, R=K²/Q, T=K−k²tζ,
+M=R−t, J=T−a, V=k²ηζ, H=r+η,
+Q_c=1−k²ζr, Ω=1−k²η+tV, g=1−tζ, G=g+ζ,
+P4=T(1−k²ηg)+k²(1−r)G,
+Pα=Rg(1+V)+ζM(1−k²ηg),
+Pd=1+2k²g+rk⁴G+k²ζ+ηk²(Kζ+k²g tζ).
+```
+
+These are *polynomially equal* to the native original coquotient polynomials in SD1: in the checker the differences of the three original polynomials and the three compact forms above reduce to zero; the six SD9–SD10 contact balances also reduce to zero **before** any chart specialization. After cancellation of the common factor `r=ℓ/Q` in `c2,cb,c3,c5,cα,cd` (none is divided by a small opening), the complete CA coefficients are
+
+```
+B2=8a g(1+V)/(R Δ² Ω),
+Bb=8a[1+(1−t)ζ]/(R Δ² Ω),
+B3=8a/T, B5=8a(1+V)/(T Ω),
+L=Ar=2aη²P4/(K H Ω),
+d=4aηPd/(K H Ω),
+α=2aΔ²k⁶η²Pα/(K Q_c Ω), A*=1/a.
+```
+
+**Important cancellation:** since `c3/ℓ=2KH Q_c Ω/Q`, the factor `1/Q` in the printed `L=2aη² c4/(Q (c3/ℓ))` cancels. Keeping it would produce a spurious weight-six error. `K,Q,K−ℓ,R,T,H,Q_c,Ω,E,δ` and their reciprocals are bounded units. No `1/k,1/ℓ,1/M,1/J,1/t` enters any remainder coefficient. At `k=ℓ=0`:
+`(B2,Bb,B3,B5,L,d)=(8/(Eδ²),8/(Eδ²),8/E,8/E,2,4/E)`; `α=2Eδ²k⁶ +` higher-weight terms. All are bounded uniformly in independent rates. In particular `A=L/r` is unbounded positive while `A−1/a>0`. Retain its centered square exactly; no division by `A` is performed.
+
+## 2. SD2 minus all SD3 packets, independently of β's sign
+
+Write `D_u=1+u²,D_v=1+v²`, and in the *original* state coordinates set
+`q_A=v(W+uY)`, `q_B=v(1−uX)`, `B=X+u`, `r_t=uW−Y`,
+`N=B−p q_A`, `M_B=r_t−h q_B`, `p=t/R`, `h=a/T`.
+Then the unchanged original amplitudes are
+`r_2=−N+(1−p)q_A`, `B=N+pq_A`, `r_t=M_B+h q_B`, and
+`r_5=M_B−(1−h)q_B`.
+
+The four **literal** coefficient identities, using `R−t=M`, `T−a=J`, are
+
+```
+R/M [N−(1−p)q_A]² −t/M N²
+  =N²−2q_A N+(1−p)q_A²,
+R/t [N+p q_A]²−M/t N²
+  =N²+2q_A N+p q_A²,
+T/a [M_B+h q_B]²−J/a M_B²
+  =M_B²+2q_B M_B+h q_B²,
+T/J [M_B−(1−h)q_B]²−a/J M_B²
+  =M_B²−2q_B M_B+(1−h)q_B².
+```
+
+The coefficient map from `Φ=Δ²Λ F` (SD2), divided by `Δ²Λ`, to these four packets is precisely `(B2,Bb,B3,B5)` above. The remaining three original terms are `4A D_uD_vY²`, `4αD_u(vY−1)²`, and `2dD_u[(vY−1)²−D_v]`. Since `L=Ar`, the exact centered subtraction is
+
+```
+4A D_uD_vY² −4(A−1/a)D_uD_v(Y−ruW)²
+ =4/a D_uD_v(Y−ruW)²+4L D_uD_v(2uWY−ru²W²).
+```
+
+Adding these identities yields **exactly** CA5, including its entire scalar, both first normals and all three normal quadratic coefficients. This is derived from the original packets, not asserted by redefining the parent. All retained coefficients are nonnegative, including the formal source with `β<0`: SD2 uses `cb>0`, representing the positive paired coefficient `β+d/2`, and never requires the sign of β separately. The centered A square is positive as noted in §1.
+
+## 3. Complete raw scalar and BOTH first normals, without expansion omissions
+
+Set `D=D_u`, `V0=1−puvw`, and introduce the four *separated monomials*
+
+```
+A0=wv, B0=δv, C0=δEuw, D0=δ²k³E.
+```
+
+At `N=M_B=0` the full inverse state substitution SD5 gives exactly
+
+```
+q_A=D A0, q_B0=D v V0,
+Y0=C0/(δE)−h B0 V0/δ, U0=uW0=C0/(δE)+u²hB0V0/δ,
+L0=Y0−rU0.
+```
+
+Here `U0` is the product `uW0`, not the source opening. The complete scalar `S=CA5|_{N=M_B=0}`, with no suppressed α term, is
+
+```
+S= D²[B2(1−p)+Bb D_v p] A0²
+  +D²V0²[B3D_v h+B5(1−h)] B0²/δ²
+  +4/a D D_v L0² +4L D D_v(2U0Y0−rU0²)
+  +(4α+2d)D[(B0Y0/δ)²−2B0Y0/δ]
+  −2dD B0²/δ² + 4αD.
+```
+
+All terms except the last are explicitly in `(A0,B0,C0)²`. Since
+
+`4αD = [8aD Pα/(δ²K Q_c Ω)] D0²`,
+
+the last is a bounded-unit multiple of `D0²`. This establishes the **complete raw scalar membership**
+
+`S ∈ (A0,B0,C0)² + (D0²)`.
+
+The normal perturbations are exactly
+
+```
+q_B=q_B0−uvN,
+Y=Y0−M_B/D+h uvN/D,
+W=W0+uM_B/D−h u²vN/D.
+```
+
+Let `L_N=[N]CA5` and `L_M=[M_B]CA5` be the full linear coefficients. Literal differentiation of every CA5 term gives
+
+```
+L_N=2q_A(Bb D_v−B2)
+ −2uv q_B0(B3D_vh+B5(1−h))
+ +(8h uv/a)(1+ru²)D_vL0
+ +8Lh uvD_v(U0−u²L0)
+ +2(4α+2d)h uv²(vY0−1),
+
+L_M=2q_B0(B3D_v−B5)
+ −(8/a)D_v(1+ru²)L0
+ +8L D_v(u²L0−U0)
+ −2(4α+2d)v(vY0−1).
+```
+
+These identities were checked exactly against the first derivatives of the **full** CA5 expression. Every summand has a factor `v`, `uw`, `A0`, `B0`, or `C0`, with bounded coefficients. In particular
+
+`L_N,L_M ∈ (A0,B0,C0)`.
+
+No claimed membership follows merely from a leading residue: these formulas account for both full normals at every order.
+
+## 4. Exact CA6 identities, including the α contribution
+
+In the ring of rational coefficient functions with unit denominators, give the weights
+
+`wt(k)=wt(ℓ)=wt(u)=wt(w)=1`, `wt(v)=2`, `wt(E)=wt(δ)=wt(t)=0`.
+
+Then `wt(A0)=3`, `wt(B0)=wt(C0)=2`, `wt(D0)=3`. Define
+
+```
+x=B0−C0, y=A0−kC0, z=uB0−kC0, h0=kC0−D0,
+a1²=A0, a2²=uB0, a3²=kC0, a4²=D0,
+q1=a1a2−a3a4, q2=a1a3−a2a4,
+T4=y²+z²+h0²−2yz+2q1².
+```
+
+In the *polynomial coefficient ring* (without radicals),
+
+`q1²=A0(uB0)+(kC0)D0−2k²B0C0`,
+`T4=A0²+u²B0²+k²C0²+D0²−4k²B0C0`.
+
+Thus `x` has weight two and each of `y,z,h0,q1,q2` weight three. Substitute §1 into §3, expand in a **formal grading variable** `zeta_w` by `(k,ℓ,u,w,v)↦(zk,zℓ,zu,zw,z²v)`, and extract exact coefficients through weight six in `S` and weight three in both `L_N,L_M`. The checker reconstructs α from the *original coquotient*, not by supplying its leading term. Its exact vanishing tests yield
+
+```
+S_≤6=4P/(E⁴δ²) x² −16(k+u)/(E²δ²) xz +8/(Eδ²)T4,
+(L_N)_≤3=0,
+(L_M)_≤3=8[E²+2E−2ℓ(E+1)]/(E²δ) x,
+P=E²(E+4)−E(E²+6E+4)ℓ+2(E+1)(E+2)ℓ²
+  +E²(8−3E)k²+4E²ku+E²(E+4)u².
+```
+
+Every grade `0,...,6` of the scalar discrepancy and `0,...,3` of *both* normal discrepancies is identically zero as a rational polynomial in the independent `E,δ,t,k,ℓ,u,w,v`. Therefore, without any source/testing rate comparison,
+
+`S−S_≤6 ∈ F_≥7`, `L_N∈F_≥4`, `L_M−(L_M)_≤3∈F_≥4`.
+
+The full hard matrix entries are extracted from the same CA5 polynomial, with residue `diag(16/(Eδ²),4(E²+4)/E)` and zero off-diagonal. Again the checker takes the complete coefficient of `N²`, `M_B²`, and `NM_B` from CA5, rather than supplying the residue.
+
+## 5. A finite, weight-preserving, denominator-free conductor
+
+Let `J=(u−k,w−δk,v−δk²E)` and `I=(A0,B0,C0)`. The original contact (SD11) is exactly `(u,w,v,N,M_B)=(k,δk,δk²E,0,0)`. The six native coquotient balances SD9–SD10, checked by exact polynomial reduction, give value and all first derivatives of the *original* parent equal to zero; every retained packet and the centered A square also vanishes to first order. Therefore
+
+`S∈J²`, `L_N,L_M∈J`.
+
+`S_≤6∈J²∩[I²+(D0²)]` because `x,y,z,h0,q1` vanish to first order at contact, and the explicit polynomial identity for `T4` above gives raw membership. The normal leading term is a multiple of `x∈I∩J`. Therefore the **complete tails**
+
+`S_tail=S−S_≤6 ∈ (I²+(D0²))∩J²∩F_≥7`,
+
+`L_N∈I∩J∩F_≥4`, `L_M,tail∈I∩J∩F_≥4`.
+
+Clear all denominators with a finite product of the positive source-unit denominator factors in §1 and a power of the positive *pure-testing* unit `D_u`. Their residues are positive, so multiplication and later separate square-root cancellation preserve all filtrations and positivity. Work over the resulting polynomial ring. All ideals above are homogeneous in the weighted grading (degree zero coefficients may be arbitrary bounded functions of E,δ,t). Consequently take their homogeneous degree components **before** choosing a raw representation: no hidden cancellation of lower-weight coefficients is being used.
+
+Here is the complete finite algorithm, applicable to each monomial and hence to the whole tail. For any polynomial `R` let `R_c=R(k,δk,δk²E)`. Divide monically in the order `u−k`, then `w−δk`, then `v−δk²E`:
+
+`R=R_c+(u−k)T_u+(w−δk)T_w+(v−δk²E)T_v`.
+
+Every quotient is the finite difference `((X^m−X_c^m)/(X−X_c))=Σ_{i=0}^{m−1}X^{m−1−i}X_c^i`; no contact difference is inverted. The complete conductor is
+
+```
+C0(u−k)=z−ux,
+C0(w−δk)=δy−wx,
+C0(v−δk²E)=E(wz+δky−kwx),
+C0 R= x(−uT_u−wT_w−EkwT_v)
+      +y(δT_w+δkET_v)+z(T_u+EwT_v),    if R_c=0.
+```
+
+To lift `I∩J`, write `F=f_A A0+f_B B0+f_C C0=f_Ay+f_Bx+C0(kf_A+f_B+f_C)`, use the contact value to prove the last bracket has zero contact evaluation, and apply the displayed conductor. It produces a linear combination of `x,y,z` with no inverse.
+
+To lift `(I²+(D0²))∩J²`, substitute `A0=y+kC0`, `B0=x+C0`, `D0=kC0−h0` into an exact raw representation. Write it as
+
+`F=Q_2+C0(xH_x+yH_y+zH_z+h0H_h)+C0²R`,
+
+where `Q_2∈(x,y,h0)²`, `H_z=0` initially, and `H_h=−2kρ` if `ρ` is the original `D0²` coefficient. Contact gives `R_c=0`, so apply the conductor to `C0 R` and absorb `C0²R` in the four coefficients. Put
+
+`r_*=y+z−h0−2kx`,
+
+which satisfies the **exact** identities
+
+```
+r_*=(v−δk²E)[(w−δk)+δ(u−k)]−δkE(u−k)(w−δk)∈J²,
+kC0 r_*=q1²−yz.
+```
+
+The gradient relation of `r_*` is `(-2k,1,1,-1)` in `(x,y,z,h0)`; the contact Jacobian of `(x,y,z)` has determinant `−δ⁴k⁴E²`, nonzero as a source-field element but **never inverted as a lift coefficient**. Subtract the multiple `2kρ_c r_*` from the four contact coefficient values. The h0 value becomes zero and the other three are zero by the gradient equations and cancellation in the polynomial domain. Thus the remaining four coefficient polynomials lie in `J`. Conductor-division on them yields the exact final expansion
+
+`F=Q_2+2ρ_c(q1²−yz)+Σ_{j∈{x,y,z,h0}}j(C0 R_j)`,
+
+with every `C0 R_j` a polynomial linear combination of `x,y,z`. This is an explicit **finite quadratic-root lift**. No inverse of the Jacobian determinant, of k or ℓ, or of a contact difference occurs.
+
+**Weight certification.** `wt(C0)=wt(x)=2` and `wt(y)=wt(z)=wt(h0)=wt(q1)=wt(q2)=3`; also `wt(u−k)=wt(w−δk)=1`, `wt(v−δk²E)=2`. Each conductor formula above is weighted homogeneous. The monic quotients lower weight by 1,1,2 respectively, then multiplying by `C0` restores exactly the specified weights. The raw and contact ideals are graded, so applying the algorithm separately to each homogeneous input of degree `m` produces root products of that same degree. Thus a scalar term of weight at least seven yields Gram coefficients of weight **at least one** on the five soft roots, and a normal term of weight at least four yields coefficients of weight **at least one** on `x,y,z`. The weights are positive regardless of how k,ℓ and u,w,v compare, and hence these coefficients are bounded with zero real residue in the independently labelled tensor ring. Rational unit denominators are restored only after the finite lift and cannot alter this conclusion.
+
+## 6. Positive residue and restoration
+
+The two-pairing identity gives the fixed strictly positive Gram for
+
+`T4=y²+z²+h0²−yz+zh0+q1²+q2²`,
+
+whose `(y,z,h0)` block has successive leading minors `1,3/4,1/2`; `q1,q2` each have unit pivot. All terms of §4 involving ℓ,k,u and every conductor tail have zero residue. The leading scalar is
+
+`[4(E+4)/(E²δ²)]x²+[8/(Eδ²)]T4`.
+
+The hard normal residue is `diag(16/(Eδ²),4(E²+4)/E)`, with only the complete `M_B` normal coupling `8(E+2)x/(Eδ)`. The coupled `(M_B,x)` Gram is
+
+```
+[[4(E²+4)/E, 4(E+2)/(Eδ)],
+ [4(E+2)/(Eδ), 4(E+4)/(E²δ²)]],
+```
+
+of determinant `256/(E³δ²)>0` for **every E>0 bounded unit**. The N pivot is `16/(Eδ²)>0`. The resulting eight-root Gram on `(N,M_B,x,y,z,h0,q1,q2)` has bounded entries and strictly positive real residue. The separated-tensor strict-Gram lemma (TF1–TF2) converts it to a finite tensor SOS, without mixed inverses or radicals.
+
+Restore the four nonnegative original SD3 packets, the positive centered A square, and the exact pure-source/pure-testing normalization factors. This proves the stated *local CA branch* for arbitrary independent source/testing infinitesimal rates and every permitted positive opening. The formal case uses `cb>0`, equivalently the already checked `β+d/2>0`, not the false condition `β≥0`. In the thin-R10 notation, if the formal source is positively normalized by `σ=2/C_1` and the requested quarter parent is `κ F_1/4`, then `F_B=σ F_1` and `κF_1/4=[κ/(4σ)]F_B`; this is restored by the positive pure-source square root `sqrt(κ)/(2sqrt(σ))`. It does not establish the separately assigned SE branch or any global formal-source statement.
+
+## Exact checker
+
+`verify_Q222_CA_full_base.py` reconstructs the three original native polynomials and all six contact balances; the four packet identities; the full raw scalar and both exact normal expressions from CA5; every weighted coefficient identity in CA6 (without manually inserted alpha); all three hard-normal residue entries; and CC conductor/repair identities. The finite monic division and weighted filtration proof above is symbolic and applies to *every* coefficient of the complete cleared tail, not a finite truncation assertion.

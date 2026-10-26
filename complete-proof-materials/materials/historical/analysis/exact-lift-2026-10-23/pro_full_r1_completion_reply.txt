@@ -1,0 +1,516 @@
+I obtained a **uniform completion of both state normals on the full quantitative R1 source corner, for one fixed contact cap**. The new ingredient is a single source weight that joins the direct and harmonic purchases before their singular denominators are estimated.
+
+**Global canonical coverage remains unresolved.** The result below closes the R1 infinitesimal-testing normal completion with an actual fixed family and evaluated affine records. It does not supply admission on the complementary testing regions or the other canonical source regions.
+
+## 1. The new theorem
+
+Let \(\mathcal S_{R1}\) denote the original R21 stationary source vectors from **RSR2–RSR6 and RSR15–RSR18**, with
+\[
+(d,\lambda,n,m,C,A,D,\alpha,\beta)
+=(1,0,n,m,C,A,D,\alpha,0),
+\]
+subject to
+\[
+0<B,\ x=jB,\ T\le 2^{-10},\qquad
+B,x\le2^{-10},\qquad
+0<p<\min(j,1),\qquad 0<H<1,\qquad n\ge0.
+\]
+There is **no upper or lower bound on \(j\) or \(jT\)**.
+
+The fixed testing cap is
+\[
+|u|\le u_0=2^{-12},\qquad |v|\le v_0=2^{-25},
+\]
+with all four real state coordinates unrestricted. Source parameters and testing parameters remain independent.
+
+Write \(E=\{c\ge0:d=0\}\) for the positive-event cone. The constructed, closed affine Gram cone \(K_{\mathrm{cap}}\) satisfies
+\[
+\boxed{
+\overline{\operatorname{cone}(\mathcal S_{R1})+E}
+\ \subseteq\ K_{\mathrm{cap}}
+\ \subseteq\
+\{c\ge0:F_h(c;u,v,\psi)\ge0
+\text{ throughout this cap, for every }\psi\}.
+}
+\]
+
+The first inclusion is proved by the simultaneous completion below and an explicit rational closedness certificate. The second follows by evaluating the fixed Gram identities on the eight closed sign charts.
+
+This includes literal \(n=0\), all state signs, testing axes, and every finite homogeneous limit of the displayed source vectors. It does not assert that this source closure exhausts all canonical zero-weight faces.
+
+## 2. The cancellation that removes the R1 source split
+
+Retain the established quantities
+\[
+y=TB,\qquad q_z=jT,\qquad
+\mu=m(1-p),\qquad h_0=\mu+\tfrac12,
+\]
+\[
+M_e=\frac{nh_0j^2}{n+h_0},\qquad
+\Sigma=M_e+\frac{f_c}{y},\qquad
+\theta=\frac{M_e}{\Sigma}.
+\]
+The accepted full-R1 harmonic bound is
+\[
+p^2\le32\Sigma,\qquad f_c>0.
+\]
+
+The new choice is
+\[
+\boxed{
+D_p=1-p+p^2=(p-\tfrac12)^2+\tfrac34,
+\qquad
+\phi=\frac{p^2}{D_p}.
+}
+\]
+It gives all three bounds needed by the completion:
+\[
+\frac{1-\phi}{1-p}=\frac1{D_p}\le\frac43,\qquad
+\frac{\phi}{\Sigma}\le\frac{128}{3},\qquad
+\frac{\phi}{j}\le\frac{4p}{3}\le\frac43.
+\]
+
+Thus \(1-\phi\) cancels the opening \(1-p\) in the direct opposite pivot, while \(\phi\) controls the potentially vanishing harmonic denominator. The same weight works for every \(p\), including \(p\to0\) and \(p\to1\). It is entirely a **source coefficient**.
+
+Use the homogeneous rows
+\[
+U=\frac{u}{\sqrt x},\quad
+V=\frac{v}{\sqrt y},\quad
+Z_*=\frac{\zeta}{\sqrt{q_z}},
+\]
+\[
+Q=Uw-VZ_*,\quad B_*=Vw-UZ_*,\quad R_*=Z_*-UVw,
+\]
+\[
+b=\sqrt y\,B_*=vw-\frac{u\zeta}{j},\qquad
+R=\sqrt{q_z}\,R_*,
+\]
+and
+\[
+\Psi=(U-V)^2w^2+Z_*^2(1-UV)^2+2UV(w-Z_*)^2.
+\]
+
+The opening-sensitive first-normal helper must be kept whole:
+\[
+\boxed{
+J_\alpha=j\alpha b
+=-\frac{\alpha}{B}R_u-\alpha uR,
+\qquad
+R_u=v(u^2-x)w.
+}
+\]
+
+Set \(A_1=(\alpha/B)R_u\), \(B_1=\alpha uR\). Combining
+\[
+2A_1^2+2B_1^2-(A_1+B_1)^2=(A_1-B_1)^2
+\]
+with the exact RFN18 identity
+\[
+(1+U^2)\Psi-B_*^2
+=R_*^2+U^2Q^2+U^2(w-UVZ_*)^2
+\]
+gives
+\[
+\begin{aligned}
+&2(1-\phi)(\alpha/B)^2R_u^2
++2(1-\phi)\alpha^2q_z u^2R_*^2\\
+&\quad+\phi j^2\alpha^2y(1+u^2/x)\Psi-J_\alpha^2\\
+&=(1-\phi)(A_1-B_1)^2\\
+&\quad+\phi j^2\alpha^2y
+ \bigl[R_*^2+U^2Q^2+U^2(w-UVZ_*)^2\bigr].
+\end{aligned}
+\tag{1}
+\]
+
+This is the useful cancellation: the small \(1-p\) factor is canceled **before** a bound is taken, and the whole \(J_\alpha\) row remains available for the normal Gram.
+
+Writing \(\eta=B+x\), the exact source bounds give
+\[
+\alpha\le B\eta,\qquad
+r_c\ge \frac{TjB^2(1-p)}8,\qquad
+f_c\ge\frac{Tx^2}{8}.
+\]
+Consequently the three costs in (1) are bounded by
+\[
+2\eta^2,\qquad
+\frac{64}{3}\eta^2u^2,\qquad
+8B\eta^2+\frac{32}{3}\eta^2u^2,
+\]
+respectively. None requires a lower bound on \(1-p,j,n,H\), or \(1-H\).
+
+### The same weight purchases the radial row
+
+Let \(\mathcal W,\mathcal W^\pi\) be the retained RFN19 radial SOS polynomials, and put
+\[
+\mathcal A=(1+U^2)\Psi-R_*^2,
+\]
+\[
+\mathcal R_A=\mathcal W+4U^2\mathcal A,\qquad
+\mathcal R_B=2U^2\mathcal W^\pi+
+ \bigl[UZ_*(U^2-1)-(U^2-1)B_*\bigr]^2.
+\]
+
+For \(s=u^2\), define
+\[
+\begin{aligned}
+r_\Psi={}&(1-\phi)\frac{4x^2y}{f_c}
++\phi\left(\frac{8\theta xys}{f_c}
++\frac{4(x^2+xs+s^2)}{\Sigma}\right),\\
+r_Q={}&(1-\phi)\frac{4xys}{q_c}
++\phi\frac{8\theta ys^2+4(1-\theta)xys}{q_c},\\
+r_E={}&\phi\frac{8s^2+2(s-x)^2}{\Sigma},\\
+r_R={}&(1-\phi)\frac{4xys}{r_c}.
+\end{aligned}
+\]
+Then, exactly,
+\[
+\begin{aligned}
+&f_cr_\Psi\Psi+q_cr_QQ^2+M_er_Eb^2+r_cr_RR_*^2-R_u^2\\
+&=x^2y\bigl[(1-\phi)\mathcal W
++\phi(1-\theta)\mathcal R_A+\phi\theta\mathcal R_B\bigr].
+\end{aligned}
+\tag{2}
+\]
+
+The coefficientwise absolute-value bounds are
+\[
+\begin{aligned}
+|r_\Psi|_*&\le32B+\frac{256}{3}s+\frac{512}{3}(\eta+s)^2,\\
+|r_Q|_*&\le64Bs+\frac{256}{3}s^2,\\
+|r_E|_*&\le\frac{1280}{3}(\eta+s)^2,\\
+|r_R|_*&\le\frac{128}{3}s.
+\end{aligned}
+\tag{3}
+\]
+Here \(|\cdot|_*\) means absolute values of polynomial coefficients, not merely a pointwise bound. In particular, it treats \((s-x)^2\) through \((s+x)^2\).
+
+The entire opposite-normal helper is likewise retained:
+\[
+O=\sqrt T\,v(\alpha-BTCHu^2)R.
+\]
+Its multiplier is the polynomial \(v(\alpha-BTCHu^2)\). Its testing span therefore uses \(v,u^2v\); there is no source-dependent radical or branch point.
+
+## 3. Both normals fit one uniformly positive core
+
+In the source-free rotated state coordinates, retain
+\[
+N_0=t-pvw,\qquad M_0=-r-Hv\zeta.
+\]
+Set
+\[
+c_b=\frac{nj}{n+h_0},\qquad
+\widehat N=\sqrt{n+h_0}(N_0+c_bb),\qquad
+E_*=\sqrt{M_e}\,b,
+\]
+\[
+a=(n+h_0)^{-1/2},\qquad
+b_0=\sqrt{\frac{n}{h_0(n+h_0)}}.
+\]
+Then
+\[
+N_0=a\widehat N-b_0E_*,
+\qquad a^2+b_0^2=\frac1{h_0}\le2.
+\]
+At \(n=0\), \(b_0,c_b,M_e,E_*\) vanish literally.
+
+For the second normal and conductor row, use
+\[
+\tau=\sqrt{TH(1-H)},\qquad
+\rho_Q=T\sqrt{x/q_c},
+\]
+\[
+\widehat M=M_0/\tau,\qquad
+\widehat Q=\frac{v\zeta-Tuw}{\rho_Q}
+=-\sqrt{q_c}\,Q,\qquad
+\widehat R=\sqrt{r_c}\,R_*.
+\]
+The minus sign in \(\widehat Q\) is retained in every normal coupling.
+
+Define
+\[
+H_1=pv^2b,\qquad H_2=\sqrt T\,puvb.
+\]
+On the thirteen rows
+\[
+f=(\widehat N,E_*,R_u,J_\alpha,H_1,
+   \widehat M,O,H_2,\widehat Q,\widehat R,
+   \psi_1,\psi_2,\psi_3),
+\]
+where \(\sum\psi_i^2=f_c\Psi\), the constant core has diagonal
+\[
+(1,\tfrac12,16,16,8,a_M,16,8,
+ \tfrac12,\tfrac12,\tfrac14,\tfrac14,\tfrac14),
+\]
+with
+\[
+a_M=\tau^2(C+D+\tfrac12+A),
+\]
+and cross terms
+\[
+2(a\widehat N-b_0E_*)
+   (K_RR_u-J_\alpha+H_1/2)
++
+2\sqrt{H(1-H)}\,\widehat M
+   \bigl(O+(\mu/p)H_2\bigr).
+\tag{4}
+\]
+
+The exact R21 coefficients are
+\[
+K_c=\frac p2+j\{H(\alpha+\tfrac12)-\tfrac12\}+n(p-j),
+\]
+\[
+K_R=-\mu-(\alpha+\tfrac12)(1-p)+(T/j)K_c.
+\]
+The quantitative source estimates give
+\[
+|K_R|<1,\qquad \mu/p\le2/3,\qquad 1/8\le a_M<3/4.
+\]
+
+After subtracting \(I/16\), the two Schur corrections are bounded by
+\[
+\frac{10168}{32385}<\frac7{16},
+\qquad
+\frac4{255}+\frac{16}{1143}<\frac1{16}.
+\]
+Thus the constant core dominates \(I_{13}/16\).
+
+The **exact remaining terms**, with both normals still independent, are
+\[
+\begin{aligned}
+&2uv(a\widehat N-b_0E_*)
+ \left((K_c/j)\rho_Q\widehat Q
+       +(\alpha+\tfrac12)\tau\widehat M\right)\\
+&\qquad+2\tau\rho_Q C_q\,\widehat M\widehat Q,
+\end{aligned}
+\]
+where the original source cancellation gives
+\[
+C_q=A/T+Hv^2\{C(1+u^2)+A+\alpha+\tfrac12\}.
+\]
+
+Consequently the core matrix is exactly
+\[
+K(u,v)=K_{00}+uvK_{11}+v^2K_{02}+u^2v^2K_{22}.
+\]
+Its constant perturbation has norm at most \(T\), and
+\[
+\|K_{11}\|,\ \|K_{02}\|,\ \|K_{22}\|\le1.
+\]
+
+Normalize the three monomials by the fixed cap:
+\[
+P_{ab}=(u/u_0)^a(v/v_0)^b,\qquad
+(a,b)\in\{(1,1),(0,2),(2,2)\}.
+\]
+Their budgets are the fixed rational numbers
+\[
+2^{-37},\quad2^{-50},\quad2^{-74}.
+\]
+The elementary matrix-gate identity therefore uses only
+\[
+\sqrt{1\pm P_{11}},\qquad
+\sqrt{1\pm P_{02}},\qquad
+\sqrt{1\pm P_{22}},
+\]
+and leaves a constant reserve larger than \(I_{13}/32\).
+
+### The purchases are simultaneous
+
+The completed calculation purchases
+\[
+16R_u^2+16J_\alpha^2+16O^2+8H_1^2+8H_2^2.
+\]
+After including the signed scalar mass, the total coefficient losses satisfy
+\[
+\boxed{
+\|b_\Psi\|<9/16,\quad
+\|b_Q\|<2^{-22},\quad
+\|b_E\|<1/16,\quad
+\|b_R\|<1/64.
+}
+\tag{5}
+\]
+The norm here weights monomials by \(u_0^av_0^b\) before summing absolute source coefficients. The proof prints every loss polynomial and its rational majorant.
+
+The core retains fractions
+\[
+(d_\Psi,d_Q,d_E,d_R)=(1/4,1/2,1/2,1/2).
+\]
+The residual coefficients \(1-d_i-b_i\) have precisely the nonconstant support
+\[
+\mathcal J=
+\{(2,0),(4,0),(0,2),(2,2),(4,2),(6,2),
+  (0,4),(2,4),(4,4)\}.
+\]
+Writing \(b_i=c_{i0}+\sum_\nu c_{i\nu}P_\nu\), one has the exact decomposition
+\[
+1-d_i-b_i
+=\rho_i+\sum_\nu c_{i\nu}^{+}(1-P_\nu)
+       +\sum_\nu c_{i\nu}^{-}P_\nu,
+\]
+\[
+\rho_i=1-d_i-c_{i0}-\sum_\nu c_{i\nu}^{+}>0.
+\]
+All exponents are even, so each \(P_\nu\) is already a polynomial square. This completes the scalar gates with fixed thresholds.
+
+Restoring every positive normal term and every purchased-square remainder gives the **complete quarter-parent**, including
+\[
+\frac{\mu p}{1-p}(1+u^2)N_0^2
++(h_0+\alpha)u^2N_0^2+\tfrac12v^2N_0^2
++nv^2(N_0+pb)^2
+\]
+and all three nonconstant positive \(M_0^2\) terms. The exact contraction was checked with \(N_0,M_0\) free.
+
+## 4. Fixed functions, affine records, and singular limits
+
+The testing roots are monomials multiplied by fixed factors from
+\[
+1,\quad \sqrt{uv},\quad
+\sqrt{uw\zeta},\quad \sqrt{vw\zeta}
+\]
+on \(u,v\ge0,\ w\zeta\ge0\), and
+\[
+1,\quad \sqrt{uv},\quad \sqrt{-uv\,w\zeta}
+\]
+on \(u,v\ge0,\ w\zeta\le0\), together with the scalar and matrix gates above.
+
+Every function is divided by \(\sqrt{1+v^2}\). Their contraction is \(F_h/4\); **there is no additional division of the Gram by four**.
+
+The exact support lists—not degree-complete polynomial frames—give:
+
+| Component | \(w\zeta\ge0\) | \(w\zeta\le0\) |
+|---|---:|---:|
+| Base functions | 63 | 59 |
+| Scalar-gate functions | 60 | 60 |
+| Matrix-gate functions | 24 | 24 |
+| Total | **147** | **143** |
+
+The source-fixed covariance
+\[
+(u,v,t,r,w,\zeta)\longmapsto
+(au,bv,t,ab\,r,bw,a\zeta),\qquad a,b=\pm1,
+\]
+preserves every one of the nine source columns. Pulling back the functions uses the same Gram witnesses on the four angle-sign charts. Together with the two state signs, this covers the closed cap.
+
+### Exact sparse coefficient prescription
+
+For a block with polynomial weight \(q_b(z)\), monomial exponents \(A_b\), and
+\[
+z=(u,v,t,r,w,\zeta),
+\]
+the functions and product equations are
+\[
+h_{b,e}(z)=
+\frac{\sqrt{q_b(z)}\,z^e}{\sqrt{1+v^2}},
+\qquad
+h_{b,e}h_{b,f}
+=\frac{q_b(z)z^{e+f}}{1+v^2}.
+\]
+
+If \(q_b=\sum_\alpha q_{b\alpha}z^\alpha\), the coefficient record for the free upper Gram entry \((Q_b)_{ef}\) is
+\[
+\boxed{
+(\text{chart},\,e+f+\alpha,\,b,e,f,\,
+ (2-\delta_{ef})q_{b\alpha}).
+}
+\]
+The source record is
+\[
+(\text{chart},\,\alpha,\,i,\,-[z^\alpha]T_i),
+\]
+where \(T_i\) is the original affine quarter-parent column.
+
+The evaluated system is
+\[
+\operatorname{diag}(c_0,\ldots,c_8,Q_0,\ldots,Q_{50})\succeq0
+\]
+with linear coefficient identities. It has:
+
+- total order **299**;
+- **2,370** free Gram entries;
+- **554** coefficient equations;
+- **2,852** Gram records and **132** source records.
+
+These numbers describe the evaluated cap certificate. The admission proof is the simultaneous construction above. The nonlinear expressions \(\phi,\theta,\tau\), and the other source radicals supply witnesses for free Gram entries; they are not nonlinear SDP constraints.
+
+### A concrete closedness proof
+
+For each state sign \(\varepsilon\), use the fixed 320-point rational grid
+\[
+u=u_0 i/6,\quad i=1,\ldots,5;\qquad
+v=v_0 k/5,\quad k=1,\ldots,4,
+\]
+\[
+t,r,w\in\{1/3,2/3\},\qquad
+\zeta\in\varepsilon\{1/3,2/3\}.
+\]
+
+Every block weight is strictly positive there. Each block’s distinct monomials have individual degrees at most
+\[
+(4,3,1,1,1,1).
+\]
+Repeated polynomial interpolation therefore proves
+\[
+W_b=\sum_{\text{grid}}h_bh_b^T\succ0.
+\]
+Every \(W_b\) is rational, and its evaluated entries are included.
+
+Separately for each chart,
+\[
+\sum_b\operatorname{tr}(W_bQ_b)
+=\sum_{\text{grid}}F_h(c)/4.
+\]
+Bounded source vectors consequently have bounded PSD Gram witnesses. Taking subsequences proves closedness and admission of all finite homogeneous coefficient limits.
+
+This handles diverging explicit witness formulas without assigning values to undefined native expressions. Literal \(n=0\) remains a direct specialization; the positive-event cone is included by its original event squares.
+
+## 5. The first remaining quantified implication
+
+A concrete next missing statement is already present for the **same** source family. For example, on
+\[
+\mathcal A=
+\{2^{-24}\le u^2\le2^{24},\ |v|\le2^{-25}\},
+\]
+with arbitrary states, one needs a finite algebraic testing cover \(\{\Omega_k\}\) and fixed testing vectors \(H_k\) such that
+\[
+\boxed{
+\forall c\in\mathcal S_{R1}\ \exists\,Q_k(c)\succeq0\
+\forall t\in\Omega_k:
+\quad F_h(c;t)/4=H_k(t)^TQ_k(c)H_k(t).
+}
+\]
+The cover and functions must be chosen before \(c\), including at \(n=0\).
+
+The critical outer completion does not establish this. Its current coefficient is
+\[
+n_0=\frac{p}{2(j-p)(j+1)},
+\qquad
+\frac n{n_0}
+=\frac{\mathcal N(j+1)}{p\mathcal P},
+\]
+and that ratio can vanish on the physical \(n=0\) face. A positive critical current cannot therefore be retained as an actual-source pivot by comparison. This identifies the failed inference; it is not a counterexample to existence of another fixed family.
+
+The complementary R1 tests, the other C1/C2 source regions, and projective endpoints outside the cap still require admission proofs. I have not applied the established full-polar assembly to claim a full Q222 lift.
+
+## Files and recovery
+
+The complete proof is ten pages, with the main argument followed by the exact budget, source, and function appendices.
+
+:chatgpt-content-reference{index="0"}[Q222_All_R1_Contact_Completion.pdf](sandbox:/workspace/scratch/3bd2dd833c30/global_normal_2026-10-24/deliverables/Q222_All_R1_Contact_Completion.pdf)
+
+The package contains the LaTeX, actual rational COO arrays, rational closure matrices, generators, and independent exact full-parent and support checks.
+
+:chatgpt-content-reference{index="1"}[Q222_All_R1_Contact_Completion_Source_and_Matrices.zip](sandbox:/workspace/scratch/3bd2dd833c30/global_normal_2026-10-24/deliverables/Q222_All_R1_Contact_Completion_Source_and_Matrices.zip)
+
+**New ZIP SHA-256**
+```text
+105e9931c855210c8723770896f2615ba9ebdc7f5b05e2c796e4f589eda391ef
+```
+
+All new proof and generator sources are also preserved in **seven verbatim recovery parts**, each below 17,500 characters; the longest is 15,595. Part 2 contains the main proof, Part 3 the exact purchases and complete fixed-function list, Part 4 the source dictionary and family generator, and Parts 5–7 the bounds, affine compiler, root specification, and independent contraction checks. Those sources regenerate the complete data with `python reproduce.py`.
+
+The previous contact-cap ZIP remains unchanged and still has SHA-256
+```text
+c22fae5078293f1f60d8a38b55ab845740d90cad3461637663d0519fae99d522
+```

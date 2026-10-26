@@ -1,0 +1,41 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype}
+\usepackage[margin=24mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,tabularx,array,enumitem}
+\usepackage{xcolor,hyperref,xurl,fancyhdr}
+\definecolor{ink}{HTML}{17334B}
+\definecolor{teal}{HTML}{087D85}
+\hypersetup{colorlinks=true,linkcolor=teal,urlcolor=teal,
+pdftitle={Q222 analytical existence proof: recovery and analysis}}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small\textcolor{ink}{Q222: analytical existence proof}}
+\fancyhead[R]{\small 22 October 2026}
+\fancyfoot[C]{\thepage}
+\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}
+\setlist{nosep,leftmargin=1.5em}
+\allowdisplaybreaks[2]
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcommand{\R}{\mathbb R}\newcommand{\Q}{\mathcal Q_{222}}
+\newcommand{\T}{\mathcal T}\newcommand{\res}{\operatorname{res}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\sos}{\Sigma\T^2}
+\newcommand{\sxdeg}{\operatorname{sxdeg}}
+\newcommand{\src}[1]{\textcolor{teal}{[#1]}}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}[proposition]{Lemma}
+\begin{document}
+{\large\color{teal} RECOVERED MANUSCRIPT AND ANALYTICAL REVIEW\par}
+{\LARGE\bfseries\color{ink} The finite-lift existence argument\\for the complete Q222 quantum set\par}
+{\large Recovery, mathematical structure, and review scope\par}
+\medskip
+\textbf{22 October 2026}
+
+\input{recovery}
+\input{proof_spine}
+\input{local_analysis}
+\input{audit_and_sources}
+\end{document}
+

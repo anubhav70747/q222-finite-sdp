@@ -1,0 +1,266 @@
+ChatGPT said:
+
+I recovered the original proof and exact symbolic checker from the previous run. Both files are intact. I reran the checker successfully, independently verified the contact-action matrix against the four-dimensional Pauli representation, and verified an expanded kernel basis and the six forbidden-word equations.
+Recovered artifacts:
+Complete proof, 8 KB Markdown
+
+
+
+Exact symbolic checker, Python/SymPy
+
+
+
+Expanded kernel entries and coefficient matrix
+
+
+
+The proof below gives the formulas needed to audit the result without trusting the checker.
+1. Theorem and precise domain
+Let $f_c=dH+4\sum_i c_i p_i$, with $d>0$, be a native C2 source satisfying $\lambda=\beta=0$. Suppose it has a finite, noncommuting, maximally entangled quantum contact.
+Theorem. No such nonzero source has a sum-of-squares certificate in the fixed nine-word NPA space
+$\mathcal W=(I,A_0,A_1,B_0,B_1,A_0B_0,A_0B_1,A_1B_0,A_1B_1).$
+This covers unequal measurement angles and the literal $n=0$ boundary.
+Write
+$M(s)=\frac{(1-s^2)\sigma_z+2s\sigma_x}{1+s^2}.$
+In the native real gauge, every maximally entangled C2 contact takes the form
+$\begin{aligned}
+A_0=B_0&=\sigma_z,\\
+A_1&=M(\sqrt z),\\
+B_1&=M(a\sqrt z),\\
+\psi_c&=(1,-r\sqrt z,r\sqrt z,1)^T.
+\end{aligned}$
+The source-contact parameters satisfy
+$\boxed{
+a,z>0,\quad 0<r<1,\quad
+ar z<1,\quad K:=a+r-1+ar z>0.
+}
+\tag{1}$
+These are necessary native-domain inequalities from EN14–EN15. Specifically, maximal entanglement gives $b=a$, $t=(1-r)/a$, $h=ar$, $g=K$, and $j=K/a$. The inequalities $g,j>0$ and $1-zh>0$ give $K>0$ and $arz<1$.
+The argument actually applies to every triple satisfying (1), whether or not that triple produces a positive native source.
+All $a,r,z$ are source-contact parameters. No testing angle or testing state is identified with them in the universal algebra identity.
+2. Deterministic compression to seven roots
+The two deterministic zeros are
+$(A_0,A_1,B_0,B_1)=(1,1,1,1),
+\qquad (-1,1,-1,1).$
+Consequently, every nine-word SOS root must lie in the span of
+$h=
+\begin{pmatrix}
+A_1-I\\
+B_1-I\\
+A_0B_0-I\\
+A_1B_1-I\\
+B_0-A_0\\
+A_0B_1-A_0\\
+A_1B_0-A_0
+\end{pmatrix}.
+\tag{2}$
+Indeed, if $f=w^T G w$, $G\succeq0$, vanishes at a deterministic assignment, the corresponding evaluation vector belongs to $\ker G$. The common annihilator of the two evaluation vectors has dimension seven, and (2) is a basis.
+Thus NPA membership would imply
+$\boxed{f=h^TQh,\qquad Q\succeq0,}
+\tag{3}$
+as an identity in the universal reflection algebra, not merely at the contact.
+3. Quantum-contact action and nonzero pivot
+Let $T\in\mathbb R^{4\times7}$ have columns $h_i\psi_c$. Put
+$U=1+z,\qquad V=1+a^2z.$
+After dividing rows 1, 2, 3, 4 of $T$ by $2z,2\sqrt z,2\sqrt z,2$, respectively, we obtain the following matrix $T_0$:
+$\boxed{
+T_0=
+\begin{pmatrix}
+\frac{r-1}{U}&-\frac{a(a+r)}V&0&
+-\frac{(a-1)K}{UV}&0&
+-\frac{a(a+r)}V&\frac{r-1}{U}\\[2pt]
+\frac{1+rz}{U}&\frac{a+r}V&r&
+\frac{(1+az)K}{UV}&r&
+\frac{a+r}V&\frac{r-1}{U}\\[2pt]
+\frac{1-r}{U}&-\frac{a(arz-1)}V&-r&
+-\frac{(1+az)K}{UV}&r&
+\frac{a(arz-1)}V&\frac{1+rz}{U}\\[2pt]
+-\frac{1+rz}{U}&\frac{arz-1}V&0&
+-\frac{z(a-1)K}{UV}&0&
+-\frac{arz-1}V&\frac{1+rz}{U}
+\end{pmatrix}.
+}
+\tag{4}$
+The original matrix is recovered exactly by
+$T=\operatorname{diag}(2z,2\sqrt z,2\sqrt z,2)\,T_0.$
+Use columns $(1,2,3,5)$ as a pivot. Direct expansion gives
+$\boxed{
+\det T_{0[:,(1,2,3,5)]}
+=-\frac{2r^2(a+1)K}{UV}\ne0.
+}
+\tag{5}$
+Equivalently, the unscaled pivot determinant is
+$-\frac{32r^2z^2(a+1)K}{UV}.$
+Every factor needed for nonvanishing is strictly nonzero by (1). Therefore $\operatorname{rank}T=4$, and $\dim\ker T=3$.
+Since $Q\succeq0$ and the SOS expectation vanishes at $\psi_c$,
+$\operatorname{tr}(TQT^T)=0
+\quad\Longrightarrow\quad
+TQ^{1/2}=0.$
+Hence every possible Gram has its range inside $\ker T$.
+4. Explicit kernel basis
+For compactness define
+$\begin{aligned}
+R&=1-arz,\\
+E&=1+z(a+r-ar),\\
+L&=a^2(1+rz)+ar\bigl[1+(2r-1)z\bigr]+1-r,\\
+J&=(a-1)r^2z-2arz-a-2r+1.
+\end{aligned}$
+An exact $7\times3$ basis of $\ker T$ is
+$\boxed{
+N=
+\begin{pmatrix}
+-\frac{(a-1)(a^2z+2arz-1)}{(a+1)V}
+&
+\frac{2a(a+r)UR}{(a+1)VK}
+&
+\frac{L}{(a+1)K}\\[5pt]
+-\frac{(a-1)(1+(2r-1)z)}{(a+1)U}
+&
+-\frac{L}{(a+1)K}
+&
+-\frac{2(1-r)V(1+rz)}{(a+1)UK}\\[5pt]
+-\frac{KE}{rUV}
+&
+-\frac{(a+r)R}{rV}
+&
+\frac{(1-r)(1+rz)}{rU}\\[5pt]
+1&0&0\\[5pt]
+\frac{(a-1)KE}{r(a+1)UV}
+&
+\frac{(a-1)(a+r)R}{r(a+1)V}
+&
+\frac{J}{r(a+1)U}\\[5pt]
+0&1&0\\
+0&0&1
+\end{pmatrix}.
+}
+\tag{6}$
+I checked all twelve entries of $T_0N=0$ symbolically. The identity rows $4,6,7$ make the three columns manifestly independent.
+Equivalently, using $P=(1,2,3,5)$, $J_0=(4,6,7)$, this basis is defined without expansion by
+$N_P=-T_{0[:,P]}^{-1}T_{0[:,J_0]},
+\qquad N_{J_0}=I_3.$
+Every contact-compatible positive Gram consequently has the form
+$\boxed{Q=NSN^T,\qquad S\in\mathbb S_+^3.}
+\tag{7}$
+5. Six forbidden-word equations
+All indices of $Q$ below run from 1 to 7 in the order (2).
+Reduction uses $A_x^2=B_y^2=I$ and cross-party commutation. It does not impose $A_0A_1=A_1A_0$ or $B_0B_1=B_1B_0$.
+The following six words cannot occur in the target Bell functional, so their coefficients in $h^TQh$ must vanish:
+Universal word
+Required equation
+$B_0B_1$
+$Q_{25}+Q_{36}+Q_{47}=0$
+$A_0A_1$
+$-Q_{15}-Q_{16}-Q_{17}+Q_{37}+Q_{46}=0$
+$A_0A_1B_0$
+$Q_{13}-Q_{57}-Q_{67}-Q_{77}=0$
+$A_0A_1B_0B_1$
+$Q_{34}=0$
+$A_0A_1B_1$
+$Q_{16}-Q_{45}-Q_{46}-Q_{47}=0$
+$A_0A_1B_1B_0$
+$Q_{67}=0$
+
+
+
+These equations were independently checked by expanding the universal products of all seven roots.
+Here are the exact row and column conventions that define the six-by-six matrix, without requiring its lengthy expanded rational entries.
+Order the coordinates of $S$ as
+$q=(S_{11},S_{22},S_{33},S_{12},S_{13},S_{23})^T.$
+For each forbidden word $w$, form the symmetric coefficient matrix
+$(C_w)_{ij}
+=\frac{[w](h_ih_j)+[w](h_jh_i)}2,$
+where $[w]$ denotes the coefficient of $w$ after universal word reduction.
+Set $B_w=N^TC_wN$. The row of the coefficient matrix $M$ corresponding to $w$ is
+$\boxed{
+M_{w,:}=
+\bigl(
+(B_w)_{11},(B_w)_{22},(B_w)_{33},
+2(B_w)_{12},2(B_w)_{13},2(B_w)_{23}
+\bigr).
+}
+\tag{8}$
+Rows follow the six-word table above. Thus all six equations are exactly $Mq=0$. Equations (2), (6) and (8) specify every matrix entry as a rational function of $a,r,z$.
+6. Exact determinant and contradiction
+The recovered symbolic computation gives
+$\boxed{
+\det M=
+\frac{
+32a^2(a+r)^2(1-r)(1+rz)
+(1-arz)^2\,[1+z(a+r-ar)]
+}{
+r^3(a+1)^3(1+z)(1+a^2z)^3
+}.
+}
+\tag{9}$
+Every factor in (9) is strictly positive under (1). In particular,
+$1+z(a+r-ar)=1+z\bigl[a(1-r)+r\bigr]>0.$
+Hence
+$\det M>0,\qquad
+Mq=0\Longrightarrow q=0
+\Longrightarrow S=0\Longrightarrow Q=0.$
+But $Q=0$ would make $f_c=0$ as a universal identity, contradicting $d>0$.
+This proves the theorem. Notice that the final contradiction rules out even indefinite symmetric matrices $S$ within the contact-compressed kernel; PSD was required only to justify the compression $Q=NSN^T$.
+Equal angles
+Setting $a=1$, with $x=rz$, recovers the full two-parameter equal-angle surface
+$r,x>0,\qquad r+x+3rx\le1.$
+The determinant remains strictly positive, including equality in the last inequality, where $n=0$. Thus the obstruction holds on the entire finite positive-parameter surface, not merely the previously proved curve $r=\tfrac12$.
+7. Exceptional loci and what is not proved
+The determinant calculation has no exceptional interior locus under (1). Specifically:
+$a=1$ is not exceptional; equal angles are included.
+
+
+
+$n=0$ is not exceptional; finite noncommuting C2 contacts on that face are included.
+
+
+
+$K=0$ makes the chosen contact pivot singular, but native strict C2 contacts require $K>0$.
+
+
+
+$r=0$, $r=1$, $arz=1$, $z=0$, and $a=0$ are excluded contact degenerations or parameter boundaries.
+
+
+
+The proof does not automatically extend nonmembership to these singular limits. The fixed NPA certificate cone is closed, but its complement is not closed. A sequence of excluded contact rays may converge to an admitted event ray.
+For partially entangled C2 contacts, the rank-four contact compression and universal coefficient test remain available. However, determinant nonvanishing throughout their full parameter domain has not been proved. A vanishing selected minor also does not establish membership; the remaining coefficient equations and $S\succeq0$ must still be checked.
+The recovered C1 result
+The previous calculation also established an exact C1 seed obstruction. At
+$(d,\lambda,n,m,C,A,D,\alpha,\beta)
+=\left(\frac{27}{2},0,0,4,2,9,\frac54,\frac{13}{4},\frac94\right)$
+with $u=v=1$ and $\psi=(1,-\tfrac12,\tfrac14,1)^T$, the C1 seven-root contact action has rank four. Its kernel basis is
+$N_{\mathrm{C1}}=
+\begin{pmatrix}
+1&5/3&2\\
+-7/4&-4/3&-17/4\\
+-5/3&-16/9&-5\\
+-3/4&-7/3&-13/4\\
+1&0&0\\
+0&1&0\\
+0&0&1
+\end{pmatrix}.$
+For the ordered forbidden words
+$(B_0B_1,\ A_0B_0B_1,\ A_0A_1,\
+A_0A_1B_0,\ A_0A_1B_0B_1,\ A_0A_1B_1),$
+the corresponding six-by-six coefficient determinant is
+$\boxed{\det M_{\mathrm{C1}}=\frac{7360}{243}\ne0.}$
+Thus this C1 seed lies outside $1+AB$. By the connected real-analytic strict-native contact parametrization, the same nonmembership holds on an open dense subset of the strict C1 chart. The exceptional zero set of this selected minor has not been classified.
+Conclusion for the hybrid lift
+The exact division of responsibility is now:
+Fixed $1+AB$: event rays, CHSH, and the established one-sided tilted-CHSH certificate families.
+Exact additional blocks: SG12/SG13 closed faces and the entire equal-angle C2 source cone already represented by the order-seven pencil.
+Proved to require something beyond $1+AB$: every finite noncommuting maximally entangled C2 native contact, including unequal angles and $n=0$, together with a generic open dense subset of strict C1 contacts.
+Still unresolved: the remaining partially entangled native contacts, their exceptional rank loci, and globally sound finite blocks covering all those rays.
+The determinant (9), the contact pivot (5), the explicit kernel (6), and the six equations above are the recovered, auditable obstruction. The linked checker verifies these algebraic identities exactly without numerical sampling or SDP optimization.
+
+
+
+
+
+   Q222_Task5_NPA_Classification_Proof.mdDocumentOpen fileQ222_Task5_NPA_exact_checker.pyCodeOpen file   Q222_Task5_N_M_exact_expanded.txtDocumentOpen file
+
+
+
+
+

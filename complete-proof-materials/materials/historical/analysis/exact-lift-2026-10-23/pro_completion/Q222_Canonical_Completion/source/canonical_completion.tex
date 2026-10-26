@@ -1,0 +1,351 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,hyperref}
+\hypersetup{hidelinks,pdftitle={Q222: exact canonical completion and polynomial-selector obstruction}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\PSD}{\succeq0}
+\newcommand{\R}{\mathbb R}
+\title{An exact two-LMI reduction of the canonical $Q_{222}$ slack\\
+and an obstruction to every polynomial Bob selector}
+\author{}
+\date{}
+\begin{document}
+\maketitle
+\vspace{-2em}
+\begin{abstract}
+A source-independent polynomial state change reduces the complete canonical
+slack, with all nine source coefficients and four independent state coordinates,
+to a matrix quadratic in the squared Alice opening.  Positivity in Alice is
+equivalent to two $4\times4$ matrix inequalities with one $2\times2$ Bob-dependent
+selector.  This reduction includes all zero source weights and all projective
+testing endpoints.  On C1, every polynomial selector reduces to three scalar
+parameters.  An already certified rational valid source admits none: its exact
+contact fixes those parameters, and a $3\times3$ principal minor is negative at
+$v=1$.  Thus polynomial completion of this normal form fails; a fixed algebraic
+selector or an additional fixed testing multiplier remains unresolved.
+\end{abstract}
+
+\section{The full state reduction}
+Let $c=(d,\lambda,n,m,C,A,D,\alpha,\beta)\geq0$ and put
+$D_u=1+u^2$, $D_v=1+v^2$.  The established complete canonical parent is
+\begin{align}
+F_c={}&4\lambda D_u(W+vX)^2+4nD_uD_vX^2
+ +4m(vW-X+uvY-uZ)^2\notag\\
+&+4CD_v(uW-Y)^2+4AD_uD_vY^2
+ +(4D+2d)(uW+uvX-Y-vZ)^2\notag\\
+&+(4\alpha+2d)D_u(vY-Z)^2
+ +(4\beta+2d)D_v(X+uZ)^2-2dD_uD_vZ^2.\label{parent}
+\end{align}
+Define the symmetric
+$2\times2$ matrices
+\begin{align}
+P(v)&=\begin{pmatrix}
+4mv^2&-4mv\\-4mv&4m+(4\beta+2d)D_v
+\end{pmatrix},\notag\\
+N(v)&=\begin{pmatrix}
+4CD_v+4D+2d&(4D+2d)v\\(4D+2d)v&(4D+2d)v^2
+\end{pmatrix},\label{blocks}\\
+E(v)&=\begin{pmatrix}
+4AD_v+(4\alpha+2d)v^2&-(4\alpha+2d)v\\
+-(4\alpha+2d)v&4\alpha-2dv^2
+\end{pmatrix},\notag\\
+K(v)&=4\lambda\begin{pmatrix}1&v\\v&v^2\end{pmatrix}
+       +4nD_v\begin{pmatrix}0&0\\0&1\end{pmatrix}.\notag
+\end{align}
+All entries are affine in $c$ and quadratic in the testing variable $v$.
+For $a=(S,T)^T$, $b=(P_0,Q_0)^T$, and $U=u^2$, make the polynomial change
+\begin{equation}
+W=S+UP_0,\quad X=T+UQ_0,\quad
+Y=u(S-P_0),\quad Z=u(T-Q_0).\label{change}
+\end{equation}
+The state coordinates $P_0,Q_0$ are unrelated to the matrix $P(v)$.
+Direct substitution gives the exact identity
+\begin{equation}
+F_c=D_u\Phi_c(U,v;a,b),\qquad
+\boxed{\begin{aligned}
+\Phi_c={}&(1+U)a^TPa+U(1+U)b^TNb\\
+ &+U(a-b)^TE(a-b)+(a+Ub)^TK(a+Ub).
+\end{aligned}}\label{normal}
+\end{equation}
+For example, the $m,C,D,\alpha,\beta$ event roots in \eqref{parent}
+become respectively
+$D_u(vS-T)$, $uD_uP_0$, $uD_u(P_0+vQ_0)$,
+$u\{v(S-P_0)-(T-Q_0)\}$, and $D_uT$.
+These substitutions prove \eqref{normal} without a source-dependent inverse.
+
+For completeness, write $\psi=(W,X,Y,Z)^T$ and let $\mathcal P_c(U,v)$
+be the symmetric matrix of $\Phi_c$ in $(a,b)$. Its three coefficients are
+\begin{equation}
+\mathcal P_c=
+\begin{pmatrix}P+K&0\\0&0\end{pmatrix}
++U\begin{pmatrix}P+E&K-E\\K-E&N+E\end{pmatrix}
++U^2\begin{pmatrix}0&0\\0&N+K\end{pmatrix}.\label{quadratic}
+\end{equation}
+The change matrix has determinant $u^2D_u^2$.  Its polynomial inverse
+numerator is
+\begin{equation}
+L(u)=\begin{pmatrix}
+u&0&u^2&0\\0&u&0&u^2\\u&0&-1&0\\0&u&0&-1
+\end{pmatrix},\qquad
+\boxed{u^2D_uF_c(\psi)=(L(u)\psi)^T
+\mathcal P_c(u^2,v)(L(u)\psi).}\label{multiplier}
+\end{equation}
+Equation \eqref{multiplier} is a polynomial normal-form identity. It is not a
+sum-of-squares certificate.
+
+\section{Two matrix inequalities, with the quantifiers retained}
+\begin{theorem}\label{thm:selector}
+For any fixed real source $c$ and fixed real Bob test $v$, the following are
+equivalent:
+\begin{enumerate}
+\item $\mathcal P_c(U,v)\PSD$ for every $U\geq0$.
+\item There exists a real $2\times2$ matrix $J$ such that
+\begin{equation}
+\boxed{\mathcal G_J=
+\begin{pmatrix}P+K&J\\J^T&N+K\end{pmatrix}\PSD,
+\qquad
+\mathcal H_J=
+\begin{pmatrix}P+E&K-E-J\\K-E-J^T&N+E\end{pmatrix}\PSD.}\label{lmis}
+\end{equation}
+\end{enumerate}
+The equivalence also holds over every real closed field.  In particular,
+complete canonical validity is exactly
+\begin{equation}
+\boxed{\forall v\in\R\ \exists J\in\R^{2\times2}:
+\mathcal G_J(v)\PSD,\quad\mathcal H_J(v)\PSD.}\label{quantifiers}
+\end{equation}
+All source faces, including $d=0$ and arbitrary zero event weights, are retained.
+\end{theorem}
+\begin{proof}
+The reverse implication is the explicit identity
+\begin{equation}
+\Phi_c=
+\binom a{Ub}^{\!T}\mathcal G_J\binom a{Ub}
++U\binom ab^{\!T}\mathcal H_J\binom ab.\label{split}
+\end{equation}
+For the forward implication, $\mathcal P_c(t^2,v)$ is a positive semidefinite
+univariate matrix polynomial of degree at most four.  The real-line matrix
+Fej\'er--Riesz theorem gives a polynomial matrix factor of degree at most two;
+real and imaginary parts give a real sum of matrix squares
+\cite[Theorem 1.2]{Zalar}. Averaging its values at $t$ and $-t$ separates even
+and odd powers. Consequently
+\[
+\mathcal P_c(U,v)=(B_0+UB_2)^T(B_0+UB_2)+UB_1^TB_1
+\]
+for rectangular real matrices $B_0,B_1,B_2$.
+The constant coefficient in \eqref{quadratic} has its last two rows and columns
+zero, so $B_0=[R\ \ 0]$.  The coefficient of $U^2$ has its first two rows and
+columns zero, so $B_2=[0\ \ T]$.  This uses only the elementary fact that a
+zero diagonal entry of a positive semidefinite Gram matrix forces its entire
+row and column to vanish.  Setting $J=R^TT$ gives
+$\mathcal G_J=[R\ T]^T[R\ T]$ and
+$\mathcal H_J=B_1^TB_1$, proving \eqref{lmis}.
+
+This is a fixed finite-dimensional first-order assertion in the real closed
+field language: positivity is expressed by principal minors, and the
+half-line condition by quantification over $U$ and a four-vector.  Transfer
+therefore proves precisely the same assertion over every real closed field.
+
+For $u\ne0$, \eqref{change} is invertible and so positivity of $F_c$ is equivalent
+to positivity of $\mathcal P_c(u^2,v)$.  The excluded value $u=0$ is recovered
+by polynomial continuity; all $U>0$ are attained.  More explicitly,
+\eqref{parent} has bidegree at most $(2,2)$ in $(u,v)$, so
+\[
+F_c^{\mathrm h}(r,s;\psi)
+=r_0^2s_0^2F_c(r_1/r_0,s_1/s_0;\psi)
+\]
+is polynomial in the homogeneous angle pairs $r=(r_0,r_1)$ and
+$s=(s_0,s_1)$.  On their unit circles it equals the normalization
+$F_c/(D_uD_v)$.  Continuity recovers the Alice and Bob projective endpoints.
+Over a real closed field the same endpoint statement follows by the sign of
+the first nonzero coefficient in the corresponding local polynomial chart.
+No source coefficient was divided out.
+\end{proof}
+
+There is also an elementary check on the face $d=0$: then $E\PSD$, and
+$J=K$ makes both matrices in \eqref{lmis} sums of the positive diagonal blocks
+$P,N$ and a square block built from $K$ or $E$. More generally adding a
+nonnegative event source with $d=0$ preserves any certificate by adding its
+$K$ to $J$.  The unresolved completion is therefore associated with the signed
+core, not with adding positive events.
+
+Theorem~\ref{thm:selector} does not choose $J$ in a fixed space of functions
+of $v$. Its real-closed-field proof permits coefficients algebraic in both
+source and testing data. The tensor product of the independent source and
+testing fields is not a real closed field, and this proof supplies no
+sum-of-squares factorization in that tensor product.
+
+\section{The complete polynomial-selector obstruction}
+\begin{proposition}\label{prop:degree}
+If polynomial entries $J(v)$ satisfy \eqref{lmis} for every real $v$, they have
+degree at most two.  A selector can then be chosen of the form
+\[
+J(v)=\begin{pmatrix}p_0+p_2v^2&q_1v\\r_1v&s_0+s_2v^2\end{pmatrix}.
+\]
+On the entire C1 face $\lambda=n=0$, existence of any polynomial selector is
+equivalent to existence of one with just three scalar parameters:
+\begin{equation}
+\boxed{J(v)=\begin{pmatrix}pv^2&0\\rv&sv^2\end{pmatrix}.}\label{three}
+\end{equation}
+\end{proposition}
+\begin{proof}
+Every $2\times2$ principal minor of $\mathcal G_J$ gives
+$|J_{ij}(v)|^2\leq(P+K)_{ii}(N+K)_{jj}$.  The right side has degree at most
+four, proving the degree bound, including cases where it is identically zero.
+With $T=\operatorname{diag}(1,-1)$, each matrix in \eqref{blocks} obeys
+$M(-v)=TM(v)T$.  Replace $J(v)$ by
+$\tfrac12\{J(v)+TJ(-v)T\}$; convexity of the positive semidefinite cone retains
+both inequalities and gives the displayed parity.
+
+On C1, $P(0)=\operatorname{diag}(0,4m+4\beta+2d)$ and
+$N(0)=\operatorname{diag}(4C+4D+2d,0)$.  Zero diagonal entries in
+$\mathcal G_J(0)$ force $p_0=s_0=0$. Finally
+\[
+q_1^2v^2=|J_{12}(v)|^2\leq4m(4D+2d)v^4
+\]
+for every $v$, so $q_1=0$. This proof does not assume any of the source weights
+is positive.
+\end{proof}
+
+Use now the already established valid C1 source from
+\texttt{strict\_outer\_physical\_source.json} in the public repository,
+with $d=1$, $\lambda=n=0$, and
+\begin{align*}
+m&=\frac{1166523000}{31661820415017653},&
+C&=\frac{322803000}{186199784281},&
+A&=\frac{218288946200}{1359122513},\\
+D&=\frac{90943434293}{222507771414},&
+\alpha&=\frac{248802430236}{3300726103},&
+\beta&=\frac{205476973}{51646655494}.
+\end{align*}
+Its validity is an established input from \cite{Project}, certified by the independently checked
+order-13744 rational certificate; that certificate is not rebuilt here.
+Its exact contact is
+\[
+u_*=\frac1{13},\qquad v_*=16,\qquad
+(W_*,X_*,Y_*,Z_*)=(140,-1/32,1/50,1).
+\]
+In \eqref{change} the contact becomes
+\begin{equation}
+U_*=\frac1{169},\quad
+a_* =\binom{69589/500}{247/5440},\qquad
+b_* =\binom{69459/500}{-70473/5440}.\label{contact}
+\end{equation}
+The full four-dimensional equation
+$\mathcal P_c(U_*,v_*)(a_*,b_*)^T=0$ is exact.
+
+\begin{theorem}\label{thm:obstruction}
+This valid source has no polynomial selector satisfying \eqref{lmis} for all
+$v$. Equivalently, its polynomial $\Phi_c(u^2,v;a,b)$ is not a sum of polynomial
+squares in $(u,v,a,b)$.
+\end{theorem}
+\begin{proof}
+By Proposition~\ref{prop:degree}, a polynomial selector would have the form
+\eqref{three}. At the contact, both nonnegative terms in \eqref{split} vanish.
+Therefore
+\begin{equation}
+J(v_*)b_*=-P(v_*)a_*/U_*,\qquad
+J(v_*)^Ta_*=-U_*N(v_*)b_*.\label{kernel}
+\end{equation}
+The first coordinate of the first equation determines $p$, and the second
+coordinate of the second equation determines $s$; the remaining coordinates
+then determine $r$ consistently. Substituting the displayed rational input gives
+\begin{equation}
+p=-\frac{37168625}{1489598274248},\qquad
+r=\frac{622145600000}{505399414477},\qquad
+s=\frac{7465747200}{3689046821}.\label{forced}
+\end{equation}
+This is a rank-three linear system, not a numerical fit.
+
+Put $a_0=4m$, $b_0=4\beta+2d$, $c_0=4C$, $e_0=4D+2d$.  At $v=1$, the principal
+submatrix of $\mathcal G_J$ on coordinates $(a_2,b_1,b_2)$ is
+\[
+\begin{pmatrix}
+a_0+2b_0&r&s\\r&2c_0+e_0&e_0\\s&e_0&e_0
+\end{pmatrix}.
+\]
+Its determinant equals
+\begin{equation}
+2e_0c_0(a_0+2b_0)-e_0(r-s)^2-2c_0s^2.\label{minor}
+\end{equation}
+The input fractions imply directly
+\[
+3<e_0<4,\quad 0<c_0<1/100,\quad 0<a_0+2b_0<5,\quad
+r<5/4,\quad s>2.
+\]
+Consequently \eqref{minor} is less than
+$2/5-27/16=-103/80<0$, contradicting $\mathcal G_J(1)\PSD$.
+
+Finally, a polynomial sum of squares for $\Phi_c(u^2,v;a,b)$ can use roots
+of degree at most two in $u$, at most one in $v$, and homogeneous linear
+degree in the four state coordinates: higher terms cannot cancel in a sum
+of real squares. Averaging in $u\mapsto-u$ and using the constant and leading
+state supports exactly as in Theorem~\ref{thm:selector} would produce a
+polynomial selector. Conversely a polynomial selector gives polynomial
+matrix factorizations of its two positive univariate matrices by
+Fej\'er--Riesz and then a polynomial sum of squares through \eqref{split}.
+This proves the equivalence.
+\end{proof}
+
+\section{What remains, and the evaluated files}
+The reduction is exact for the whole canonical slack cone, with both state
+normals and every zero opening retained.  Its evaluated block diagonal
+order-eight pencil $\mathcal G_J\oplus\mathcal H_J$ has 108 integer COO entries,
+nine source parameters, four selector parameters, and Bob degree at most two.
+The derived C1 three-parameter version has 80 integer COO entries.  They are
+\emph{pointwise pencils}: the quantifier $\forall v\,\exists J$ remains.
+
+The obstruction is to every polynomial Bob selector on the entire real Bob
+chart in this normal form,
+not to every source-independent algebraic family or multiplier.  It also
+does not show that $u^2D_uF_c$ in the original state coordinates has no
+polynomial sum-of-squares representation: cancelling the extra factors after
+pullback through \eqref{change} would require another theorem.  A viable
+completion must supply one fixed testing algebra (for example one fixed
+Bob denominator or a genuinely algebraic family) in which the selectors and
+their positive matrix factors exist uniformly over the full source cone.
+The pointwise real-closed-field theorem and source-dependent matrix
+factorization do not supply that assertion.  In particular, an odd algebraic
+function such as $v|v|$ can vanish quadratically at $v=0$ without vanishing
+identically, so the rank argument forcing the polynomial entry $J_{12}=0$
+does not extend to a two-half-line algebraic cover.  No adequacy statement
+for that cover has been proved here.
+
+A concrete sufficient remaining implication is the existence of one fixed
+nonnegative polynomial $q(v)$, positive on a dense set, for which every valid
+source admits a polynomial $Z_c(v)$ satisfying
+\[
+\begin{pmatrix}q(P+K)&Z_c\\Z_c^T&q(N+K)\end{pmatrix}\PSD,\qquad
+\begin{pmatrix}q(P+E)&q(K-E)-Z_c\\q(K-E)-Z_c^T&q(N+E)\end{pmatrix}\PSD
+\quad(v\in\R).
+\]
+The first inequality would force $\deg Z_c\leq\deg q+2$; univariate
+matrix factorization would then give one fixed testing family for
+$q(v)u^2D_uF_c$, with source-linear coefficient input and an exact
+validity converse by density. Theorem~\ref{thm:obstruction} rules out $q=1$
+for this route. It neither proves nor disproves the displayed implication
+for another $q$, or the broader possibility of a fixed algebraic family.
+No full-set affine $Q_{222}$ lift is claimed here.
+
+The two integer COO files accompanying this note contain respectively the
+pointwise order-eight pencil and its derived C1 polynomial-selector version.
+The counterexample JSON file contains the exact contact linear system, its
+forced solution, and the negative minor.  An independent verifier checks every
+exported matrix coefficient and the counterexample using only Python's
+standard-library rational arithmetic.  A separate symbolic checker verifies
+the full nine-source polynomial identities. The supplied builder recreates
+only this new data; the README gives the exact commands.
+
+\begin{thebibliography}{2}
+\bibitem{Zalar} A. Zalar, \emph{Matrix Fej\'er--Riesz theorem with gaps},
+Theorem 1.2, \href{https://arxiv.org/abs/1503.06034}{arXiv:1503.06034};
+\href{https://zalara.github.io/Papers/MatrixFejerRieszArxivOriginal.pdf}{author's full text}.
+\bibitem{Project} \raggedright A. Chaturvedi, \emph{q222-finite-sdp},
+\href{https://github.com/anubhav70747/q222-finite-sdp/tree/5fc0a0487bb94d7bdfa9929edb5f4f6f3ff50240}{commit 5fc0a0487bb9}.
+Established input: \texttt{extracted-lifts/outer-candidates/}
+\texttt{strict\_outer\_physical\_source.json}; the exact file is bundled
+with the new certificate data.
+\end{thebibliography}
+\end{document}

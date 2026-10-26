@@ -1,0 +1,147 @@
+23 October 2026 — independent bounded C1 interval / unit-L review
+
+Files reviewed:
+ bounded_unit_L_all_tests.tex, including the updated ell<=L<=U constants;
+ unit_L_qualitative_replacement.tex.
+No author/public proof file was edited.
+
+VERDICT
+The quantitative interval proof is supported on its exact native domain,
+including the general0<ell<=L<=U delta, conditional only on the separately
+verified bounded-R inner admission theorem stated as its input. I did not
+re-audit that inner theorem's new2^-40/2^-20 constants in this delta review.
+The qualitative unit-L replacement is supported with the explicit
+source-field / live-tensor order stated below. No mathematical gap found.
+
+Fresh algebra, independent of the author's computed records
+-----------------------------------------------------------
+check_independent_annulus.py derives the raw4x4 selected Gram directly
+from S0 and KB, expands its determinant and all principal cofactors,
+and independently verifies the displayed trace inverse formula. It also
+derives all seven event-coordinate coefficient matrices. All identities
+passed in~1s; output independent_annulus_checks.json.
+The exact determinant is
+ (1+t)^2 [1+L(1-r)]^2 [Lq+t(1-q)]
+ / [16L²r(1-r)(1-Lr)],  t=u²,q=c².
+All denominator factors are positive on the native source domain;
+the only angular zero is u=c=0. At T=0 the selected form is positive
+because it contains positive multiples of (P-Y)²,Y²,X². This establishes
+the full raw Gram's positive definiteness away from that corner.
+
+Native ratios and all-H admission
+---------------------------------
+The proof uses the actual P1 numerators, not freely chosen leading data.
+With (1+z)x,(1+z)sigma<=epsilon, the two BE identities give e<=5epsilon
+without bounding h/sigma. P_s<=1+4epsilon and |M_s-1|<=epsilon follow
+by r=bz<1. The C/A ratios are within9epsilon below and3epsilon above1;
+alpha's ratio is within5epsilon. Thus d_s<=25epsilon. The condition
+epsilon<=k/[50(k+K)] gives d_s<=k/[2(k+K)] exactly. No inverse of D or
+beta is used. C0>=1/(2U), and A0=H0/(2r)>=1/(2U) since H0>=z=1/L.
+Hence C,A>=1/[4max(U,1)] under the prescribed small error.
+
+Endpoint and annulus inequalities
+---------------------------------
+Both endpoint matrices match their whole signed cores and selected
+C/A events. At p=0, each raw norm is <=3 times the norm in the four
+displayed squared forms. This proves the lower boundmu/3. For the
+finite-v chart the correction row bound is3p; for the reciprocal-w
+chart it is4p. Thus p<=mu/24 leaves at leastmu/6. Their Cholesky roots
+are fixed TESTING functions because mu is a fixed real constant.
+Both Bob charts and the literal p=w=0 endpoints are covered.
+
+For the annulus, the N_i upper bounds follow termwise from0<r<1,
+0<=q<=1,|u|<=M. For gamma=min(ell,1),
+ (1+t)[Lq+t(1-q)]>=gamma(q+t).
+Thus trace(G0^-1)<=2B/[gamma(q+t)], giving the stated positive
+reserve and the smaller conservative k on q+t>=tau²/2.
+
+I also bounded both complete core matrices directly. In raw coordinates
+row sums are at most3+M,1+M²+3M,2+2M²+M,1+2M²+M. In event coordinates
+they are at most2+M,3+M,M²+M+2,1+M²+3M. All are <=K=3M² because M>=96.
+The actual raw selected Gram is bounded below by
+ (1-d_s)k-d_sK >=k/2.
+The event map and its inverse have squared Frobenius norms5+s²<=6,
+so its actual event-coordinate Gram is at leastk/12.
+
+Clipping, finite grid, and field separation
+------------------------------------------
+The only large source coefficients occur diagonally in the three event
+coordinates. After clipping each at N, the unchanged small principal
+block keeps reservek/12, the large block has reserveN-K, and cross
+norm is <=K. The displayed2Kab inequality leaves positive remainders
+1 andk/24. This proves the clipped h_* reserve without estimating any
+source-dependent testing inverse.
+
+Every coefficient matrix in the seven-monomial expansion has row norm
+<=B_*=N+1. The chosen n gives7delta_g B_*<=h_*/2. Nearest rational
+parameter-grid points have coordinate errors<=1/n. The squared-radius
+error is <=2(M+1)/n<tau²/2, so each point of the target annulus has a
+retained center in the larger annulus. The seven monomial errors are
+<=4M²/n: for u²s² use2M|du|+2M²|ds|, and the other six are smaller.
+The displayed paired-matrix identity is exact and all its Gram matrices
+are source-only positive matrices. Its radicals are testing-only.
+
+The C-C' excess uses e1=P-Y, already among the four main roots; therefore
+the65-function count is consistent even though only the two additional
+A/alpha roots are named in the restoration sentence. The three m/D/beta
+roots may be written without compact-coordinate divisions as
+ sW-cX+usY-ucZ, cuW+usX-cY-sZ, X+uZ.
+They are regular at c=0. All retained source coefficients are nonnegative
+and D/beta may be literallyzero.
+
+General ell<=L<=U delta / full cover
+-----------------------------------
+z<=1/ell<=R=max(1,1/ell), and x,sigma<=epsilon/(1+z)<=epsilon_R.
+Thus the stated new bounded-R input's SOURCE box applies. Outside the
+annulus, |u|<tau=delta_R²/2 gives sqrt|u|<delta_R, while
+ |w|=c/sqrt(1-c²)<2tau=delta_R²<=delta_R.
+Thus its TESTING box applies. This imports the new R-dependent family,
+not the old669 admission with a silently enlarged z range.
+The endpoint constantM=ceil96max(U,1) still gives1/M<=mu/24.
+All remaining tests lie in the annulus. The fixed real constants may
+be extremely large/small; all chart counts are nevertheless finite.
+The indicator selection of the first covering chart is source-free and
+semialgebraic. Radicals are defined on their chart and extended byzero,
+so no undefined negative-radicand product is required outside the chart.
+The compact normalizerDu^-1/2, endpoint normalizers(DpDv)^-1/2 and
+(DpDw)^-1/2, and the inner full/quarter factor1/2 match the same physical
+quarter-parent. This includes literal projective endpoints and all states.
+
+Qualitative replacement: exact order required
+---------------------------------------------
+Its unit-L source has x,sigma infinitesimal and bounded unitz=1/L, so
+BE9 gives the three relative ratios~1 uniformly through source openings.
+Choose real ell,U,M,tau after the real residues, as the proof does.
+All determinant/inverse estimates must then be evaluated at the fixed
+REAL testing center(u0,c0,s0). They are ordinary ordered-field matrix
+calculations inK_c. The positive lower reserve first passes to the
+original selected pure-source Gram; clip the original C,A,alpha atN.
+
+Keep the LIVE root column e(u,c,s) unchanged. The clipped live matrix is
+its pure-source center matrix plus an element of
+ Sym4(B_c tensor m_t).
+The center matrix is bounded after clipping and has a positive real
+lower reserve. TF2 therefore applies directly to the live matrix,
+including possibly unbounded state roots. There is no mixed inverse.
+The current initial sentence says the reserve calculation is at the
+real center; the following explicit addition would remove ambiguity:
+
+ 'In the determinant, inverse and clipping estimates below set
+ (u,c,s)=(u0,c0,s0); all these matrices and inequalities lie inK_c.
+ No inverse of the live tensor matrix is taken. After clipping keep
+ the live root column unchanged: its coefficient matrix is the
+ bounded pure-source center matrix plus zero-residue coefficients.'
+
+Also state explicitly that c=0,s=+/-1 denotes v=infinity,w=0. For the
+initial f-decomposition say it is used only to lower-bound the original
+selected Gram; clipping subsequently uses the original C,A,alpha.
+These are precision/ordering clarifications, not additional hypotheses.
+
+With this order, B23 covers the u,c both infinitesimal corner; the
+bounded-u complement has the proved strict center reserve; unbounded-u
+has the two pure-testing endpoint Grams. No relative source/testing rate,
+positive lower bound onD/beta, or state ratio is introduced. Signs and
+complex states are handled by the exact gauges and real/imaginary split.
+The replacement is therefore suitable for the stated unit-L / large-eta
+C1 source domain, retaining B23 and the tensor foundations as dependencies.
+No claim about a global evaluated affine Q222 lift is implied.

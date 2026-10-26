@@ -1,0 +1,285 @@
+\chapter{C1.1 with $k^2\eta$ a unit: a complete contact certificate}
+\label{component:p95350f69a353}
+\noindent\textbf{Component }\path{p95350f69a353}\par
+{\small\noindent Source: \path{R13/advances/c1_small/q_unit_completion.tex}\par}
+{\small\noindent SHA256: \path{95350f69a35347503869de108b3124c5ad72b0daadde632ce44dcbb244e890df}\par}
+{\small\noindent Inventory use: SC10--SC20 and complete full-normal/contact proof | C1\_\allowbreak{}BARE\_\allowbreak{}OTHER\_\allowbreak{}TERMINALS; precise subordinate uses retained below\par}
+\medskip
+\section{C1.1 with $k^2\eta$ a unit: a complete contact certificate}
+\label{p95350f69a353:sec:r7-c1-q-unit}
+\begin{theorem}
+On the original C1.1 source, suppose $q=k^2\eta$ is a positive bounded
+unit. The entire original parent is tensor SOS at every independent
+projective test and every real or complex state. All positive opening
+rates and the permitted literal boundary $D=0$ are included.
+\end{theorem}
+The proof uses the exact full quadratic (SC3), not its leading scalar.
+The $q$-infinitesimal part of C1.1 is not included in this theorem.
+
+\paragraph{One more centered packet.}
+Use the variables of (SC1)--(SC5), and put $s_D=J/R$. Retain the
+additional nonnegative square
+\[
+                  4D_b(J_b+s_DH)^2.                 \tag{SC10}
+\]
+It vanishes at actual contact, where $H=RvZ$ and $J_b=-JvZ$.
+Its removal replaces $4D_bJ_b^2$ in (SC3) exactly by
+\[
+                  -8D_bs_DHJ_b-4D_bs_D^2H^2.
+\]
+In particular it removes the entire standalone $(vZ)^2$ term.
+This step allows $D_b=0$ literally and does not divide by $D_b$.
+
+Set $Z=1$ on the remaining state chart. Put $c=\sqrt q$ and
+$w=(W+uY)/R$, and use the four separated positive monomials
+\[
+ A=\frac{cuw}{b^2},\quad B=\frac{cvw}{bg},\quad
+ C=\frac{uv}{b},\quad D=c^2g,\quad
+ \Gamma=(ABCD)^{1/4}.
+ \tag{SC11}
+\]
+Their exact contact is $(u,v,w)=(k,cg,bg)$, with $k=bc$, and
+$A=B=C=D$ there. Notice that $H=RA/c$, $L=RB/c$, $V=C$,
+$g=D/q$, and $Hv=R\Gamma^2/q$.
+
+Here are explicit formulas for the entire scalar at $N=N_y=0$,
+after (SC10). Write $a_t=1-\rho_0+pv^2$. Define
+\begin{align*}
+ P_H={}&4D_v\{c_b(1-\rho_0)^2+a_b\rho_0^2/D_u\}
+       +2b^2\{a_t^2+v^2\rho_0^2/D_u\}\\
+ &+4\alpha_bg^2b^4v^2\rho_0^2/D_u
+       -8D_bs_Db^2a_t-4D_bs_D^2,\\
+ P_L={}&4[h_2(1-p)+h_bpD_v]/R,\\
+ P_{Hv}={}&-4[D_u(1+pv^2)-u^2\rho_0]
+             -8\alpha_bg^2b^2\rho_0+8D_bs_DD_u.
+\end{align*}
+The exact scalar is
+\[
+ f=f_AA^2+f_BB^2+f_CC^2+f_DD^2-f_\Gamma\Gamma^2,
+ \tag{SC12}
+\]
+where
+\[
+ f_A=R^2P_H/q,\quad f_B=R^2P_L/q,\quad
+ f_C=2D_u,\quad f_D=4\alpha_bD_u/q^2,
+ \quad f_\Gamma=-RP_{Hv}/q.
+\]
+These are rational functions of $u,v$ over bounded source coefficients,
+with only positive-unit denominators. For example,
+\[
+ c_b(1-\rho_0)^2=
+   \frac{K(1+b^2r)E(1-r)}{2P_dR^2},\qquad
+ a_b\rho_0^2=\frac{P_4K^2r}{2P_dR^2}.
+\]
+Thus neither $r$ opening survives in their denominators.
+For $u,v,b,g$ infinitesimal their residues are
+\[
+               \overline f_A=\overline f_B=
+ \overline f_C=\overline f_D=2,\qquad
+               \overline f_\Gamma=8.               \tag{SC13}
+\]
+This uses the exact source residues in (SC2), including
+$\overline D_b=(1-2\overline q)/2$. It does not assume a positive
+lower bound on $D_b$.
+
+Here is an explicit finite denominator certificate used below.
+Every function just displayed is $P(u,v)/(1+u^2)$ for a polynomial
+$P$ with bounded pure-source coefficient array. For a monomial use
+\[
+ x^m-x_0^m=(x-x_0)\sum_{j=0}^{m-1}x^{m-1-j}x_0^j.
+\]
+Applying this identity to each monomial supplies finite first and
+second difference arrays with bounded source coefficients. For the
+denominator use only the exact identity
+\[
+ \frac1{1+u^2}-\frac1{1+k^2}
+ =-\frac{(u-k)(u+k)}{(1+u^2)(1+k^2)}.
+\]
+Thus the first and second finite Taylor arrays about $(k,cg)$
+are bounded and use only pure-testing $1+u^2$ and pure-source
+$1+k^2$ denominators, both units. The same construction after
+$u=U^2,v=V^2$ gives the half-variable arrays below. This is a
+finite polynomial identity construction, not an analytic series.
+
+\paragraph{Every first normal and the complete hard block.}
+Let $\delta_\rho=\rho_0-\rho$. The full first-normal coefficients
+of the remaining quadratic, with no normal suppressed, are
+\begin{align*}
+ \mathcal L_N={}&\frac8R(h_bD_v-h_2)L
+       +4buvg(a_t-2D_bs_D)H-4D_uvgV,\\
+ \mathcal L_y={}&8D_v\sqrt{s}\,\delta_\rho H\\
+ &+\frac H{\sqrt s}\left[
+ -\frac{8D_va_bu^2\rho_0}{D_u}+8D_bs_Db^2
+ +\frac{8\alpha_bg^2b^4v^2\rho_0}{D_u}
+ -4b^2a_t+\frac{4b^2v^2\rho_0}{D_u}\right]\\
+ &+\frac{4bu}{\sqrt{s}}V
+       -\frac{8\alpha_bgb^2v}{\sqrt{s}}(gZ).
+                                                        \tag{SC14}
+\end{align*}
+Each is a bounded infinitesimal-coefficient linear combination of
+$A,B,C,D$. At actual contact it is zero exactly, since the source
+is a stationary zero and every removed packet vanishes there.
+The coefficients of $N^2,N_y^2,NN_y$ are respectively
+\[
+\begin{aligned}
+ H_{NN}&=4(h_2+h_bD_v)/R+2g^2u^2v^2,\\
+ H_{yy}&=4D_v\left(1-\frac{a_bu^2}{D_us}\right)
+       +\frac{4\alpha_bg^2b^4v^2}{D_us}
+       +\frac{2b^2}{s}\left(1+\frac{v^2}{D_u}\right),\\
+ H_{Ny}&=-4buvg/\sqrt{s}.
+\end{aligned}                                                     \tag{SC15}
+\]
+Thus the hard Gram has residue $\operatorname{diag}(4q,4)$.
+In (SC15), $H_{Ny}$ denotes the polynomial coefficient of $NN_y$,
+not the off-diagonal matrix entry.
+
+\paragraph{A finite geometric-mean square lift.}
+Here is a detailed lift for the particular raw module (SC12).
+It is not a claim about arbitrary contact-vanishing polynomials.
+Define $\alpha_i=A_i-\Gamma$, with
+$(A_1,A_2,A_3,A_4)=(A,B,C,D)$, and put
+\[
+ T_4=\sum_iA_i^2-4\Gamma^2.
+\]
+A fixed positive Gram on the following finite roots represents $T_4$:
+\[
+ \alpha_i,\qquad
+ Q_{ij|kl}=\sqrt{A_iA_j}-\sqrt{A_kA_l},\qquad
+ \sqrt\Gamma(\sqrt{A_i}-\sqrt{A_j}),\qquad
+ \sqrt\Gamma((A_iA_j)^{1/4}-(A_kA_l)^{1/4}).          \tag{SC16}
+\]
+Use all four $\alpha_i$, all three pair partitions, and all six
+unordered differences in the third group. To verify strictness, average
+positive multiples of the symmetric circuit decomposition in (SC9) and
+\[
+ T_4=\sum_i\alpha_i^2+2\Gamma\left(\sum_iA_i-4\Gamma\right).
+\]
+
+over the three decompositions
+\[
+ \sum_iA_i-4\Gamma=(\sqrt{A_i}-\sqrt{A_j})^2
+ +(\sqrt{A_k}-\sqrt{A_l})^2
+ +2((A_iA_j)^{1/4}-(A_kA_l)^{1/4})^2.
+\]
+The additional differences $A_i-A_j$ in the first decomposition are
+$\alpha_i-\alpha_j$ and give nonnegative corrections to the already
+strict $\alpha$ block.
+
+Write $\epsilon_i=f_i-2$, $\epsilon_\Gamma=f_\Gamma-8$, and
+$\sigma=\sum_i\epsilon_i-\epsilon_\Gamma$. Then
+\[
+ f-2T_4=\sum_i\epsilon_i\alpha_i^2
+       +2\Gamma\sum_i\epsilon_i\alpha_i+\Gamma^2\sigma.
+ \tag{SC17}
+\]
+All $\epsilon$ have zero residue. The exact contact value implies
+$\sigma(k,cg)=0$. Clear the pure-testing denominator $D_u$ if needed;
+monic division gives
+$\sigma=(u-k)\sigma_u+(v-cg)\sigma_v$ with bounded coefficients.
+For the monomials (SC11), the exact conductors are
+\[
+\begin{aligned}
+ \Gamma(u-k)&=\sqrt{uk}\,Q_{13|24},\\
+ \Gamma(v-cg)&=\sqrt{vcg}\,Q_{23|14},\\
+ \Gamma(w-bg)&=\sqrt{wbg}\,Q_{12|34}.
+\end{aligned}                                                     \tag{SC18}
+\]
+Thus the last term in (SC17) becomes $\Gamma$ times a linear
+combination of the $Q$ roots with infinitesimal bounded coefficients.
+The exact identity
+\[
+ Q_{ij|kl}-\tfrac12(A_i+A_j-A_k-A_l)
+ =-\tfrac12(\sqrt{A_i}-\sqrt{A_j})^2
+  +\tfrac12(\sqrt{A_k}-\sqrt{A_l})^2               \tag{SC19}
+\]
+changes these terms into infinitesimal quadratic corrections on (SC16)
+and $\Gamma\sum_i\mu_i\alpha_i$, where each $\mu_i$ is infinitesimal
+and is rational in $\sqrt u,\sqrt v$ with bounded coefficient arrays
+and positive-unit denominators.
+
+The exact three contact jets imply that the four source values
+$\mu_i(k,cg)$ coincide. Indeed the differential vectors of
+$\alpha_i/\Gamma$ at contact are the four rows
+\[
+ (1/2,-1/2,1/2),\quad(-1/2,1/2,1/2),\quad
+ (1/2,1/2,-1/2),\quad(-1/2,-1/2,-1/2)
+\]
+in logarithmic coordinates $(u/k,v/(cg),w/(bg))$. Their sole linear
+relation is the sum of all four rows. Cancelling the nonzero source
+factors in this equality establishes coincidence; no inverse of a
+small number enters a Gram coefficient.
+Call the common infinitesimal value $\mu_*$. The common term is
+\[
+ \mu_*\Gamma\sum_i\alpha_i
+   =\mu_*\Gamma\left(\sum_iA_i-4\Gamma\right),
+\]
+an infinitesimal correction on the explicitly displayed variance roots.
+For each remaining $\mu_i-\mu_*$, monic division in $\sqrt u,\sqrt v$
+has bounded coquotients. Apply the half-variable conductors
+\[
+\begin{aligned}
+ \Gamma(\sqrt u-\sqrt k)
+   &=(uk)^{1/4}\sqrt\Gamma
+          ((AC)^{1/4}-(BD)^{1/4}),\\
+ \Gamma(\sqrt v-\sqrt{cg})
+   &=(vcg)^{1/4}\sqrt\Gamma
+          ((BC)^{1/4}-(AD)^{1/4}).
+\end{aligned}                                                     \tag{SC20}
+\]
+Their coefficient factors are infinitesimal. Multiplying by the
+remaining $\alpha_i$ proves that the entire scalar correction in
+(SC17), not merely its low-order jet, is a bounded zero-residue
+quadratic form on (SC16). This uses only two finite monic divisions.
+The boundedness of their coefficient arrays follows from the explicit
+rational functions (SC12), whose test denominators are powers of
+$D_u$, and from the displayed square-root substitutions; bounded
+function values alone are not being used as a substitute for this fact.
+
+The same argument for a first normal is shorter. If
+$\mathcal L=\sum_i a_iA_i$, write
+$\mathcal L=\sum_i a_i\alpha_i+\Gamma\sum_i a_i$.
+Its exact contact zero gives $\sum_i a_i(k,cg)=0$; one monic division
+and (SC18) allocate it on (SC16), with infinitesimal coefficients.
+Apply this to both complete expressions (SC14).
+Together with (SC15), this yields a bounded strictly positive-residue
+Gram for the entire original remainder. Restore (SC10), the paired
+packets, and all positive pure-source and pure-testing normalizations.
+
+\paragraph{Exhaustion and legal radicals.}
+For $q$ a unit, $e^2=q/g^2$ is unbounded. The exact adjacent-event
+rotations and the $W$-unit state argument (SC8) therefore reduce every
+unadmitted negative-core test to $u,v,W$ infinitesimal and $Z$ a unit.
+Literal axes are direct original-core exits. Use exact sign gauges and
+normalize $Z=1$. The inherited pure-testing Schur identity forces
+$W+uY>0$ on the remaining negative-core chart: with
+$w_t=(W+uY)/D_u$, the eliminated scalar is
+\[
+ \frac{uvD_uD_v}{\mathcal D}
+       (D_uuv w_t^2-2D_uD_vw_t+uv),\qquad
+ \mathcal D=u^2v^4+u^2v^2+u^2+v^4+2v^2+1>0,
+\]
+which is nonnegative when $w_t\le0$; its eliminated two-square
+matrix is strictly positive. Hence $w=(W+uY)/R>0$.
+Every monomial in (SC11), and every product under a radical in
+(SC16)--(SC20), factors into a positive pure-source quantity and a
+positive pure-testing quantity. The occurrence of $R$ in $w$ is a
+positive pure-source unit, not a mixed denominator. All test
+coefficients remain bounded because $u,v,w$ are infinitesimal.
+If the general toric contact lemma is used, its third coordinate
+is literally the pure-testing $W+uY$, with pure-source contact
+$Rbg$; this direction is inactive in every coefficient function.
+Complex state evaluations split into real and imaginary parts.
+This supplies every independent test and proves the theorem.
+
+\paragraph{Audit scope.}
+The parent and the scoped toric-lift reviewer independently reviewed
+the finite lift, bounded rational arrays, full normal block, legal
+radicals, and joins within the same agent system. The thirty-nine
+exact checks verify the displayed whole-polynomial and source
+identities. A further six exact polynomial checks verify the actual
+source contact value, all three scalar first jets, and both full
+normal contact zeros directly from (NC1)--(NC4). Their explicit
+denominator-cleared numerators are printed in
+\path{check_q_unit_contact.py}; they confirm the original
+stationary-zero premise without sampling. No numerical table is a
+premise of this argument.

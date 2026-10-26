@@ -1,0 +1,125 @@
+POSITIVE ME C2 GENERATOR CONVERSE: BOUNDED INDEPENDENT AUDIT
+26 October 2026. No public changes or numerical optimization.
+
+Inputs: seven-extra-high-2026-10-26/02_generator_characterization_COMPLETE.txt
+and current independent-review/C2_CONTACT_GEOMETRY.md, equations (1)-(6).
+
+Verdict and two required corrections
+-----------------------------------
+The semialgebraic converse, rational inverse, branch selection and a=1
+reduction are correct under their stated strict source assumptions. The
+reconstructed ORIGINAL native parameter in response Section 1 is wrong:
+
+             t_source=(1-r)/a, NOT 1-r.
+
+The response could instead define a new rescaled parameter a*t_source=1-r,
+but it does not do so. With the correction, b_source=a and z=s/(ar) give
+the claimed contact (1,-ru,ru,1). They also give the original native gaps
+
+ h_source=ar,  g_source=a+r+s-1,  j_source=(a+r+s-1)/a,
+ 1-z*h_source=1-s,  b_source-a^2*z*r=a(1-s).
+
+Thus the reconstructed r,s domain is exactly consistent with the current
+dictionary and original positive chart. The erroneous unscaled t value
+would generally change the state and can leave that chart.
+
+In Section 3's angular stationarity and cosine formula, T is undefined.
+It must be declared T=M+d/2, denoted R in C2_CONTACT_GEOMETRY.md. With that
+definition those formulas are consistent. No other algebraic error was
+found in the main converse or a=1 branch.
+
+1. Necessity and the rational elimination
+----------------------------------------
+Use the response's B,U,V,S,M,N,P,tau,chi. Positivity and all rank-one minors
+give m=tau*V, D=tau*U and, with k=B/S,
+
+ a^2*tau*(k+1)=k*(1+tau),
+ k=a^2*tau/chi,   chi=(1+tau)/(1+k)>0.
+
+The angle law gives P=(a+1)N. After these substitutions the original
+quartic residual is exactly
+
+       (a+1)S^2 E/(chi*tau),
+
+where E is response equation (4). Every cancelled factor is strictly
+positive. For the rational inverse
+
+ r=(chi*N-am)/(N+m), s=(chi*N-aD)/(N+D),
+
+direct symbolic algebra verifies response identity (5) without any
+assumption E=0. It also verifies the two identities used for equation (8)
+modulo exactly the same multiple of E. There is no hidden extra equation.
+
+The four branch inequalities are precisely 0<r,s<1. For example,
+
+ 1-r=(a+1)[m-(1-a)tau*N]/(N+m),
+
+and r>0 is chi*N>am; the s identities are identical with m replaced by D.
+Thus strict branch selection is necessary, including when a<1.
+
+2. Sufficiency and uniqueness
+----------------------------
+With E=0 and the strict branches, response (5) gives
+(1-r)(1-s)=(a+1)tau*g. Since the left side and tau are positive, g>0.
+The identity L=g+(1-a)(1-r)(1-s) then gives L=g*chi.
+
+Independently substituting the current dictionary verifies its four ratios
+in the response table, both rational inverse compositions, the angle law
+and all three minors exactly. The reconstructed source and dictionary
+source therefore have identical U:V:P, B/S and M/S. The identity
+d=2(P-B)>0 fixes their common scaling factor to the input d. The angle law
+recovers A, and N=P/(a+1) recovers n. This reproduces every coefficient;
+it is not just a solution of the necessary polynomial identities.
+
+The dictionary denominator Delta is positive for 0<r,s<1,a>0. Its formula
+n=-d*a*B0/[2(a+1)Delta] and input n>=0 give B0<=0. Nothing divides by n,
+so the genuine n=0 boundary remains included. The rational inverse proves
+uniqueness. The corrected original native t above is essential here.
+
+3. The a=1 branch and the unphysical algebraic branch
+---------------------------------------------------
+At a=1, chi=1 and k=tau imply B=M. With the angle law this gives
+n=m+D-A and d=4A-2m-2D. Write M=m+D. The minors give
+U=D*S/M,V=m*S/M; the quartic becomes A^2=mD(M+S)/M. Consequently
+
+ C=U-d/2=(A-m)^2/m,
+ alpha=V-d/2=(A-D)^2/D.
+
+Thus the two Schur equalities follow exactly. Conversely they recover the
+same minors and quartic under the linear relations. The inverse reduces
+to (A-m)/(A+m),(A-D)/(A+D), and the strict branches are A>m,A>D.
+There is no singular inversion at a=1.
+
+The response's rational source at a=3/2 satisfies every claimed angle,
+minor and quartic identity. Both quartic sides are 75625/3. Its inverse
+is exactly (-1/14,1/6), and its support stationary cosine is -9/5. It
+therefore correctly disproves the converse WITHOUT the branch conditions.
+This witness shows nonmembership in the stated native family; no separate
+global-validity conclusion about that witness is needed for the converse.
+
+4. Angular interpretation and endpoints
+---------------------------------------
+Set u=sqrt(s/(ar)),v=au and phi=2 arctan(ru). Positivity gives phi>0.
+The inequality r<1 gives phi<theta_A. Since ruv=s<1,
+theta_B+phi<pi. Comparing tangent half-angles shows
+theta_A<theta_B+phi exactly when a+r+s-1>0. Thus the angle ordering in
+Section 3 is correct. The displayed Bob cosine is (r-as)/(r+as).
+
+The explicit regular r->0 endpoint formulas in Section 6 were checked
+against the dictionary by direct substitution; swapping r,s gives the
+second endpoint. Their contacts do degenerate as stated. The broad
+divergence claims are consistent with the positive factors: r->1 forces
+s->0 and C diverges; s->1 is symmetric; g->0 has nonvanishing m,D
+numerators unless simultaneously r,s->0. In that last case, when allowed,
+Delta=Theta((r+s)^2) and B0=-a^2(r+s)+O((r+s)^2), so n diverges. No
+classification of the separately rescaled d=0 cone follows from this.
+
+Exact checker
+-------------
+c2_generator_converse_audit_2026_10_26.py/.json verifies the generic E and
+quartic reduction, native four ratios/minors/inverses, branch identities,
+corrected original chart gaps, a=1 equations, rational branch witness and
+the regular finite endpoint. It does not repeat the five-variable native
+parent expansion or attempt convex-hull admission. The result concerns
+individual positive maximally entangled C2 generators only; polynomial
+generator equations are not asserted to be mixing-stable or an SDP lift.

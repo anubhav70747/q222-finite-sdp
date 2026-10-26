@@ -1,0 +1,133 @@
+Independent nonpositive-angular C1 review, 23 October 2026
+
+VERDICT: the complete157-function local real-state dictionary in
+fixed_box_c1_nonpositive.tex is supported by its exact identities and
+finite bounds. I found no omitted retained term, mixed-radical inverse,
+state-ratio restriction, coefficient-majorant gap, or excluded nonempty
+D=0 case. The original private-review premise for N1 was replaced by
+the actual short source derivation, which I also checked. This verdict
+is local to the stated box and lambda<=0; it is not global adequacy.
+
+Read actual bodies: fixed_box_c1_nonpositive.tex, Uniform_C1_Certificate.tex,
+and the shared fixed_box_c1.tex source formulas. No author checker or
+reported check count was used as a mathematical premise.
+Final nonpositive-note SHA256:
+FB14DB89EB764AB7080AC09E8880FA1AAF75706D7D2BB8D63A815A0608BD0B2F.
+
+1. N1 source bounds.
+   From lambda<=0:
+      8Dh+4beta theta²+2h²<=4bp sigma² z.
+   This gives H<=2,h<=2sigma,beta theta²/sigma²<=2 and -8<=L<=0.
+   BE3 is H Bs-H0=2P beta theta/sigma. With theta>=1-2epsilon,
+   P<=1+4epsilon and Bs<=1+6epsilon, it yields |H-H0|<18epsilon.
+   BE4 is dG=2calH/(PJ)-4x beta theta/(J sigma²). The two errors
+   from2H0 are bounded by88epsilon/(1-epsilon) and
+   12epsilon/(1-epsilon), giving the stated200epsilon bound.
+   The displayed kappa formula gives |kappa-1/2|<39epsilon and
+   hence |4kappaH-2H0|<348epsilon<400epsilon. No positivity
+   assumption on lambda has been imported for these common bounds.
+
+2. Shear and complete assembly N4-N7.
+   T=Gamma+(L/2)V gives
+      T²+V²+(2H0-1)Gamma²+(3L²/4)V²
+       =2H0 Gamma²+L Gamma V+(1+L²)V².
+   The shear/inverse are source-only, with |L/2|<=4. Adding Kc times
+   the printed zero identity produces precisely N5, including its
+   signs on all three correction terms. I independently expanded:
+      u²Gamma+V=sigma u Pbeta;
+      A²+u Gamma Pbeta+u A R
+        =sigma Pbeta²+(x/sigma)(u²-x)(w²-sigma z)W²;
+      V²-sigma u² A²-u sigma(u²-x)A R+(u²-x)V Gamma=0.
+   All three have exact zero polynomial residuals. They prove the
+   angular replacement with no division by lambda, including lambda=0.
+   Splitting Nx/radial excesses and using N4 then gives N7 literally.
+
+3. Every N9 coefficient majorant.
+   |Gamma| in formal coefficient norm is at most T+4V. The two
+   complete normals contribute12u Nx(T+4V) and
+   (512epsilon w+16u²w)JC(T+4V), so no normal was omitted.
+   |lambda|<=8epsilon implies |chi+lambda|<=65; Kc<=65.
+   Thus the last three majorant terms bound the exact added zero:
+      65epsilon u²A²,
+      65epsilon(u³+u)A(JC+JL),
+      65(u²+epsilon)V(T+4V).
+   All other coefficient bounds are the sign-independent source
+   estimates previously checked from the rational formulas; C occurs
+   only through C(1-r), so no radial-opening denominator is estimated.
+
+4. The majorant was independently rebuilt, not accepted by its label.
+   Its sixteen positive contributions to total coefficient norm are
+      32,336,208,5000,60,2640,32,64,48,64,130,400,200,65,260,650,
+   summing to10189. Constant-testing norm is
+      (256+128+5000+400+325)epsilon=6109epsilon.
+   Exact testing support is
+      1,w,w²,u,uw,u²,u²w,u³.
+   Therefore the deliberately larger bounds2^20 epsilon at the constant
+   matrix and2^20 on every other source coefficient are valid.
+
+5. Fixed-direction tensor SOS N11-N12.
+   Six diagonal directions and two directions per unordered pair give
+   36 scalar channels. Their diagonal constant coefficient is at least
+   11/16-2^20epsilon; off-diagonal constant coefficient at least
+   1/32-2^19epsilon. These exceed c0=1/256 by a large margin.
+   Every testing monomial is between0 anddelta<gamma; its source
+   coefficient is bounded by2^20< A*=2^30. Since7 A* gamma=c0,
+   expansion of N12 exactly recovers the scalar channel with positive
+   factors in their own labelled fields. No mixed radical or assumed
+   order on the tensor product is used.
+
+6. Complete157 testing functions, N13-N15.
+   All six principal roots use the ten listed pre-Gram functions;
+   notably V=u³wW-xuwW, T=Gamma+(L/2)V require only the displayed
+   u³wW addition. The seven extra ordinary functions span every
+   retained root in N6. Its final retained roots Gamma,V,A need no
+   further functions, since all are already in the principal list.
+   The total is10*15+7=157 labelled functions; repeated functions
+   can only reduce its span dimension. All fixed radicals involve
+   testing monomials alone; their coefficients are source-only.
+
+7. Boundaries and state coverage.
+   No D or beta inverse appears. N1 gives dG>=2-200epsilon>0 on
+   this branch, proving that D=0 has empty intersection here; the
+   positive-lambda construction covers actual D=0 sources. beta=0
+   is not excluded or inverted. lambda=0 is included since the proof
+   never divides by lambda. State coordinates are arbitrary and every
+   root is source-linear in the fixed testing functions, without any
+   state ratio. The angle sign gauge is fixed/testing-only; literal
+   testing axes and zero state coordinates specialize the identities.
+   Complex states use the separate real/imaginary copies, as stated.
+
+The result supplies a complete local certificate for the remaining
+angular sign on this source/testing rectangle. It gives no certificate
+for complementary testing charts or other source regions and no exact
+global affine pencil.
+
+ADDENDUM: new nonempty-path subsection, independently checked only.
+
+For x=sigma=t,z=b=1-t²,h=t-4t²+B t³,16<=B<=18, I rebuilt
+DN=2JPD, betaN=2thetaP beta and
+NL=4DN h+2betaN theta J+2h²JP-2b pN sigma²zJ from the literal
+source formulas, without reading the author's checker. Their t-degrees
+are17,15,21. Subtracting the proposed leading terms leaves exactly
+the following weighted absolute coefficient norms (B^j bounded by18^j):
+  DN-t²:27640, minimum remaining t-degree3;
+  betaN-(B-17)t³:24459, minimum remaining t-degree4;
+  NL-(2B-38)t³:248856, minimum remaining t-degree4.
+Thus all three displayed remainder inequalities are verified directly.
+
+For0<t<=2^-160, DN>=t²(1-27640t)>0 and
+NL<=t³(-2+248856t)<0 uniformly in B. betaN is strictly negative
+at B16 and strictly positive at B18; the exact bounds are
+-t³+24459t4 and t³-24459t4. The polynomial intermediate-value
+argument therefore produces a beta=0 point B in(16,18), retaining
+D>0 and L<0. The point B18 is rational for rational t and has
+D,beta>0,L<0. Intermediate bracket points with beta<0 are used
+only for the root argument, not asserted to belong to the theorem's
+nonnegative-coefficient domain.
+
+Finally h/t=1-4t+B t² is positive and below2, E=1-h>0,
+0<b,z<1,r=bz<1,theta>0, and J,M>=1-t>0. All source
+denominators are positive and the other event coefficients remain
+strictly positive by their defining positive formulas. No native gap
+or coefficient sign is missing at the two selected source points.
+The new nonemptiness assertion is supported; no repair is needed.

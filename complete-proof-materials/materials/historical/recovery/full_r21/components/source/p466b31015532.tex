@@ -1,0 +1,96 @@
+\section{A three-monomial contact lift with one unit coordinate}
+\label{sec:three-circuit}
+
+Work in the same tensor ring $T=K_c\otimes_{\mathbb R}K_t$ and bounded
+subring $B$ as throughout this package. Every inverse and radical below
+is of a pure-field or positive separated element. Let $k>0$ be a
+pure-source infinitesimal and $s>0$ a positive pure-source bounded unit.
+Let $u>0$ be a pure-testing infinitesimal and $t>0$ a positive
+pure-testing bounded element (possibly infinitesimal). Define
+\[
+ A_1=u^2t,\qquad A_2=\frac{ku t^2}{s},\qquad A_3=k^2s,
+ \qquad G=kut,\qquad d_i=A_i-G.
+\]
+Then $A_1A_2A_3=G^3$. Two exact conductor identities are
+\begin{equation}\label{T3:conductors}
+ G(u-k)=k d_1,\qquad G(t-s)=s d_2.
+\end{equation}
+They permit a unit testing ratio $t$ without comparing a mixed tensor.
+
+Put $Q=G\sum_i d_i$ and $L=\sum_i A_i^2-3G^2$.
+For $a_i=A_i^{1/3}$, the elementary cubic identity gives
+\begin{align}\label{T3:sos}
+ Q&=\frac12\sum_{1\le i<j\le3}\sum_{\ell=1}^3
+       \{\sqrt{G a_\ell}(a_i-a_j)\}^2,\\
+ L&=\sum_i d_i^2+2Q.\nonumber
+\end{align}
+Thus $L$ has a positive constant diagonal Gram on a finite list of
+three difference roots and nine cubic-identity roots. No assertion
+that every nonnegative tensor is SOS is used.
+
+\paragraph{Exact finite lift.}
+Let $\lambda\in B_c$ have positive real residue, and consider
+\[
+ F=\sum_{i=1}^3(\lambda+\epsilon_i)A_i^2
+       -(3\lambda+\epsilon_g)G^2,
+ \qquad h=\sum_i\epsilon_i-\epsilon_g.
+\]
+Write $\Delta_u=u-k$, $\Delta_t=t-s$. Assume explicit finite identities
+\begin{align}
+ \epsilon_i-\epsilon_{i0}&=K_{iu}\Delta_u+K_{it}\Delta_t,
+       &\epsilon_i,\epsilon_{i0}&\in B_{\rm Inf},\label{T3:coeff}\\
+ h&=b_u\Delta_u+b_t\Delta_t+
+          \sum_{j,\ell\in\{u,t\}}H_{j\ell}\Delta_j\Delta_\ell,
+       &b_u,b_t&\in K_c,\label{T3:taylor}\\
+ 2(\epsilon_{10}-\epsilon_{30})+k b_u&=0,
+ &2(\epsilon_{20}-\epsilon_{30})+s b_t&=0.\label{T3:jets}
+\end{align}
+Require $K_{iu},H_{uu},H_{ut},H_{tu}\in B$ and
+$K_{it},H_{tt}\in B_{\rm Inf}$. The distinction is essential:
+the second conductor has a unit coefficient, so boundedness alone of
+the second-coordinate arrays does not suffice.
+
+Then $F$ is tensor SOS. Indeed, expanding $A_i=G+d_i$ and applying
+\eqref{T3:conductors} and \eqref{T3:jets} yields the exact identity
+\begin{align}\label{T3:error}
+ F-\lambda L={}&\sum_i\epsilon_i d_i^2+2\epsilon_{30}Q
+ +2\sum_i(kK_{iu}d_1d_i+sK_{it}d_2d_i)\\
+ &+k^2H_{uu}d_1^2+ks(H_{ut}+H_{tu})d_1d_2
+          +s^2H_{tt}d_2^2.\nonumber
+\end{align}
+In detail, the two bare-$G$ first-order terms are cancelled by
+$G^2b_u\Delta_u=kb_uGd_1$ and
+$G^2b_t\Delta_t=sb_tGd_2$. All remaining coefficients in
+\eqref{T3:error} are bounded infinitesimals. The strict diagonal
+Gram for $\lambda L$ in \eqref{T3:sos} therefore remains strictly
+positive in real residue. The bounded-Gram lemma supplies a finite
+tensor SOS. This argument uses no power series or mixed inverse.
+
+\paragraph{Normal extension.}
+Suppose a coupling to a normalized hard state normal has the exact form
+$\ell=\sum_i c_iA_i$ with $c_i\in B_{\rm Inf}$,
+$\sum_i c_{i0}=0$, and
+\[
+ \sum_i(c_i-c_{i0})=J_u\Delta_u+J_t\Delta_t,
+ \qquad J_u\in B,\quad J_t\in B_{\rm Inf}.
+\]
+Then
+\[
+ \ell=\sum_i c_i d_i+kJ_u d_1+sJ_t d_2
+\]
+has infinitesimal coefficients on the same root list. It can be joined
+to a hard normal block with strictly positive real residue. Extra
+already-controlled scalar roots may be appended, provided their
+coupling coefficients are likewise infinitesimal. The source-specific
+arrays and hard-block bounds remain separate proof obligations.
+
+\paragraph{Small-$L$ coordinates.}
+For $x=k^2$, $s=\sqrt{\eta\zeta}$ and $t=v/u$, this gives
+\[
+ (A_1,A_2,A_3,G)=
+ \left(uv,\sqrt{\frac{x}{\eta\zeta}}\frac{v^2}{u},
+       \sqrt{\eta\zeta}\,x,\sqrt{x}\,v\right).
+\]
+The lemma applies only when the stated pure-field size assumptions and
+all finite scalar and normal identities have been proved. A leading
+three-term AM--GM form alone does not close a source domain.

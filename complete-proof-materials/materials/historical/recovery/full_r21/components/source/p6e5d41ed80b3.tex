@@ -1,0 +1,45 @@
+\section{Exact C2 source and its uniqueness}\label{app:c2-source}
+In this appendix, $c$ denotes the actual half-angle and
+$C$ the event weight previously denoted $c$. Set
+\[
+ z=c^2,\quad A_c=1+zr,\quad
+ h=b-a^2t,\quad g=(1+z)b-(1-r+a^2zt),\quad j=1+zr-t,
+\]
+\begin{align*}
+\Delta={}&(1+z)zb^2+2z(1+z)br+(1+z)(1+a^2z)b\\
+ &+z^2(1-a^2)r^2+2z(1+a^2z)r+1+a^2z,\\
+N={}&(1+z)(b+r)(b+a^2(1-t))-a^2(1+a^2z)(1-r)t.
+\end{align*}
+The unchanged $d=1$, $\lambda=\beta=0$ source is
+\begin{align*}
+n&=\frac{(b+r)A_c(A_c+a^2zt)-r\Delta}{2r\Delta},&
+m&=\frac{(1+a^2z)(1-r)A_c(A_c+a^2zt)}{2g\Delta},\\
+C&=\frac{A_cN}{2a^2t\Delta},&
+A&=\frac{a^2A_c(b+r)(A_c+a^2zt)}{2h\Delta},\\
+D&=\frac{(1+z)(b+r)(b-a^2zr)(A_c+a^2zt)}{2a^2j\Delta},&
+\alpha&=\frac{z^2(b+r)N}{2(1-zh)\Delta}.
+\end{align*}
+Its exact contact is
+\[
+ (u_c,v_c;W_c,X_c,Y_c,Z_c)
+   =\left(c,ac;\frac ba,-cr,c\left(\frac ba-at\right),1\right).
+\]
+The positive chart requires $a,c,b,t>0$, $0<r<1$, $h,g,j>0$,
+$1-zh>0$, $b-a^2zr>0$, and nonnegative original event weights.
+The source identities and the full independent-test radial certificates
+are included in the accompanying inherited modules; the source-entry
+proof above imposes no hidden shape-unit hypothesis.
+
+
+The numerator has the useful positive identity
+\[
+N=(1+c^2)(b+r)h+a^2\{g+j+rt(1+a^2c^2)\}>0.
+\]
+It follows by substituting the three source-gap definitions; every term
+is positive in the domain used by the contact-entry theorem.
+For the determinant calculation use the aliases
+\[
+ R_2=R_m,\quad R_3=uW-Y,\quad R_5=R_D,\quad R_\alpha=vY-Z,
+ \qquad(e_1,e_2,e_3,e_4,e_5)=(n,m,C,A,D).
+\]
+\input{contact/source_determinant.tex}

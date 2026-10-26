@@ -1,0 +1,139 @@
+23 October 2026 — bounded independent analytical audit
+
+Reviewed: pro133/Q222_Global_Weighted_Certificate/proof/
+global_weighted_certificate.tex (equations1–16 and both validity
+implications, with a bounded check of the whitening example).
+
+VERDICT
+No decisive mathematical gap found in the global WEIGHTED certificate
+or in the quantum-validity equivalence on the stated nonnegative
+canonical orthant. The conclusion is an exact quartic pullback of a
+fixed Gram cone, not an affine semidefinite lift of the Bell-slack cone
+or Q222. The singular multiplier faces are handled correctly. The
+specific rank/record counts and serialized order133 pencil were not
+independently certified in this bounded proof audit.
+
+1. Full-state completion — lines120–142, equations8–9
+----------------------------------------------------
+With x=(W,X,Y), P=[[H,b],[b^T,c]], q=Hx+bZ, the polynomial identity is
+ det(H)F=q^T adj(H)q+[c det(H)-b^T adj(H)b]Z².
+It follows directly from H adj(H)=det(H)I, with no inverse. The bracket
+is det(P) even for singular H. Cauchy–Binet gives
+ adj(H)=sum_{i<j} kappa_i kappa_j (r_i cross r_j)(...)^T.
+Substituting q=sum_k kappa_k r_k(R_k psi) gives exactly the displayed
+f_ijk and block9. Each block is a nonnegative scalar times an outer
+product. All four state coordinates, including the Z contribution in
+every R_k psi, remain. No state-ray or Schur-denominator restriction
+has been used. The adjacent independent script verifies the general
+symbolic adjugate identity.
+
+2. Determinant coefficients — lines149–184, equation10
+------------------------------------------------------
+I independently recovered the eight outer coefficients from four
+2x2 boundary factorizations, rather than trusting the quoted SG data.
+Put B(U,V)=det(P_aff)/(16 Du² Dv²). Then
+ B(0,V)=4(lambda*t7+m*t5*V)(alpha*t8+D*t6*V),
+ [U²]B=4(n*t3+C*t1*V)(A*t4+beta*t2*V),
+ B(U,0)=4(lambda*t8+A*t3*U)(alpha*t7+n*t4*U),
+ [V²]B=4(m*t6+C*t2*U)(D*t5+beta*t1*U).
+Their expansions give all eight q_ij in the note, including both
+summands of each edge coefficient. Each q_ij is nonnegative in the
+specified orthant.
+
+The divisor/degree assertion also has a short independent argument:
+at u=i the entire affine quadratic is in just W+iY and X+iZ; at v=i
+it is in just W+iX and Y+iZ. Conjugation gives the same rank<=2 at
+u,v=-i. A4x4 determinant therefore vanishes to order>=2 at each such
+root, proving divisibility by Du² Dv². Entries have bidegree<=2, so the
+quotient has degree<=4 in each angle. Exact sign gauges make it even,
+hence biquadratic in U,V. The eight boundary coefficients leave only
+the UV coefficient; its value at U=V=1 is precisely the printed h.
+Validity makes P positive semidefinite at each real angle, so equation10
+indeed gives L>=0 throughout the positive quadrant.
+
+3. Laurent cone and finite source prescription — lines187–294
+-------------------------------------------------------------
+If h<0, separating0 from conv(support) would send all monomials to0
+along a logarithmic ray, a contradiction. Exposing the minimal face
+through0 leaves equation12. The relative-interior condition makes the
+face exponential sum coercive and strictly convex in its span. Its
+positive minimizer is a source-algebraic solution of equation13.
+The rank-one rule is correct also for e=(1,-1). A proper face through0
+can only be one of the four opposite pairs, so the printed finite
+support/sign procedure is exhaustive, including line-supported cases
+and minima only at infinity in the original2D problem.
+
+The positive balanced cone has exactly12 primitive circuits: four
+opposite pairs, four111 triangles, four112 triangles. I independently
+enumerated all minimal positive2D dependencies; these are all of them.
+Greedy subtraction preserves nonnegativity/balance and eliminates a
+positive coordinate, so at most8 steps suffice. Equation14 equals the
+identity (a+b+c)(a²+b²+c²-ab-ac-bc)=a³+b³+c³-3abc with abc=1.
+The112 identity follows from p_e p_f=p_g^-2. Thus equations15–16 are
+positive source-only Gram assignments for every valid Laurent datum,
+not only for stationary contacts. h>=0, absent coefficients, and the
+constant remainder r are included correctly.
+
+4. Root signs, endpoints and field separation — lines296–337
+-------------------------------------------------------------
+The21 exponents include every numerator used by the circuits. Each
+dyad joins coordinatewise equal parities; hence every g_nu*g_mu term
+is even in all four root variables. Sign flips of sixth roots do not
+alter the quadratic form. Clearing denominators leaves nonnegative
+integer exponents since each index lies in[-3,3]^2, yielding a genuine
+polynomial identity at every zero opening. This is a valid endpoint
+argument; it does not divide by a vanished angle coordinate.
+
+Minimizers, support cases and Gram dyads depend only on source data.
+The fixed f/g functions depend only on the testing cover. The real
+proof transfers to a real closed source field through the finite
+first-order algebraic prescriptions and unique positive solution13.
+The polynomial identities then hold in the tensor product with an
+independent real closed testing field. No mixed radical/inverse or
+source-dependent testing feature is introduced.
+
+5. Both validity implications — lines339–374
+--------------------------------------------
+Forward: valid source =>P>=0 =>L>=0 =>angular Gram plus state Gram.
+Reverse: any fixed positive Gram makes det(H)F>=0 pointwise. For d>0,
+the6/7/8 core rows have squared3x3 minor
+ a0² a1² b0² b1².
+Thus Cauchy–Binet gives
+ det(H)>=(2d)^3 a0² a1² b0² b1²>0
+on the dense interior angular set, regardless of other zero weights.
+There F>=0; ordinary continuity extends it to all projective endpoints,
+even where det(H)=0. If d=0, F is already a nonnegative event-square
+sum, so the potentially vacuous weighted test admits no invalid tuple
+within this orthant. Real-state positivity implies complex-state
+positivity by real/imaginary splitting. The cited Jordan reduction is
+the established companion input; this audit did not re-prove it.
+
+The orthant restriction is essential. For example outside it, take
+d=0,lambda=-1 and all other event weights0. Then H has rank<=1,
+det(H)F=0 belongs to every Gram cone, but
+F=-4(b0W+b1X)² is not a valid slack. The note explicitly excludes such
+tuples; its converse must not be presented for arbitrary Bell sources
+without an additional canonical-reduction theorem.
+
+6. Pencil and whitening scope
+------------------------------
+The generic coefficient-elimination logic20–22 is sound if the supplied
+basis/pivot/product identities are exact: target coefficients lie in
+the product-column span even for invalid sources, through the initial
+indefinite diagonal(h,q) representation. So pivot-row equations recover
+all coefficient equations. Source degree is genuinely four, and allowing
+those monomials to become free variables would not preserve the source
+relations. I did not recheck104/rank189/7472/6079 serialized records.
+
+I additionally checked equation25 and its two evaluations exactly. The
+partial-fraction independence proof is correct and rules out the stated
+finite exact-inverse/whitening family, not arbitrary finite Gram cones.
+The final paragraph expressly makes the correct limitation: no multiplier
+cancellation and no obstruction to finite-Q222-lift existence is proved.
+
+EXACT CHECKS
+check_pro133_weighted_audit.py passed in~1s. It independently checks the
+general adjugate identity, core minor, all12 minimal positive circuits,
+their21-monomial support/parity, equation14, and the inverseYY example.
+Output: pro133_weighted_independent_checks.json.
+No public file or frozen Pro source was edited; no SDP solve was used.

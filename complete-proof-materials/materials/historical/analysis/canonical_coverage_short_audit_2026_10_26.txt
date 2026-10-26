@@ -1,0 +1,85 @@
+Canonical extreme sources and nonescaping contacts
+Independent bounded proof check, 2026-10-26
+
+Sources: analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/07_limits_global_COMPLETE.txt, especially lines 28-75 and 90-122; github-q222-finite-sdp/latex/chapters/04_geometry.tex, SG2-SG7 (lines 54-218), SG17-SG22 (228-345), and SG8-SG10 (348-435).
+
+VERDICT
+The extreme-source reduction and no-escaping-coercive-contact lemma are valid. The following gives a complete short proof from the displayed parent/determinant datum, rather than treating the omission inventory as a proof. No additional admission of an unproved finite certificate cone follows. The outstanding global implication remains coverage of every required contact extreme ray by the proposed certificate cones.
+
+1. Determinant and stationary physicality
+For d>0 and nonnegative event weights, write the full state quadratic as SG2. At noncommuting finite angles its Z=0 block H3 is positive definite by SG3. Thus P>=0 iff det P>=0, and every zero has one-dimensional state kernel with Z nonzero. SG5 gives
+  det P=16 Du^2 Dv^2 u^2 v^2 L(u^2,v^2),
+  L(U,V)=h+sum_e q_e U^(e1) V^(e2),
+where e runs over the eight nonzero points of {-1,0,1}^2, q_e>=0, and h and all q_e are polynomial functions of the source. In SG6 every auxiliary t_i is positive when d>0. Consequently the active exponent set is determined solely by which of the event products in SG6 are positive; no cancellation is possible.
+
+At a source with fixed positive contact angles and fixed nonzero state, the four state-kernel equations and two angular expectation equations are six homogeneous linear equations in the nine source coordinates. The state block above gives L=L_U=L_V=0 at that contact. Setting w_e=q_e Uc^(e1) Vc^(e2), this is h=-sum w_e and sum w_e e=0. The elementary balanced Laurent identity (or weighted AM-GM over the real field) then gives L>=0 at every independent positive angle. SG4 gives the entire state quadratic's positivity. The determinant depends only on u^2,v^2 apart from its positive prefactor, so signs of finite nonzero angles cause no further case. At 0 or projective infinity one local pair commutes; simultaneous diagonalization gives H>=0, and all event terms are positive. This proves precisely the global physicality implication needed for the source perturbations below. It uses no mixed tensor inverse or unsupported multiplier cancellation.
+
+2. Coercivity and the twelve omitted pairs
+For positive coefficients, S(t)=sum_e q_e exp(e dot t) is coercive on R^2 exactly when 0 is interior to the active exponent polygon. If 0 is interior, max_e e dot t>=a||t|| for some a>0, hence S(t)>=min_active(q_e) exp(a||t||). Otherwise a separating direction makes all exponents nonincreasing along a ray. For this eight-point grid, a separating direction can be chosen from the eight axis/diagonal normals: a nonzero extreme ray of the separating cone is perpendicular to a grid vector. This also handles the empty active set.
+
+There is a short explicit product check. For a normal nu, require q_e=0 whenever e dot nu>0. By SG6 this requires omitting at least one endpoint of each corresponding positive-event product. The inclusion-minimal omitted sets for each normal are:
+  nu=( 1, 0): {C,n}, {A,beta}
+  nu=(-1, 0): {lambda,m}, {D,alpha}
+  nu=( 0, 1): {D,beta}, {C,m}
+  nu=( 0,-1): {lambda,A}, {alpha,n}
+  nu=( 1, 1): {C,beta}, {D,A,beta}, {C,m,n}
+  nu=( 1,-1): {A,n}, {lambda,A,beta}, {C,alpha,n}
+  nu=(-1, 1): {D,m}, {lambda,C,m}, {D,alpha,beta}
+  nu=(-1,-1): {lambda,alpha}, {lambda,A,m}, {D,alpha,n}.
+Each triple already contains one of the axis pairs. Thus the only inclusion-minimal noncoercive omitted sets are the twelve displayed pairs. In the cycle
+  (lambda,D,C,A,alpha,m,beta,n)
+they are exactly pairs of cyclic distance three or four. These are also exactly the mutually exclusive losing-event pairs, by agreement or disagreement on a shared local measurement. Therefore coercivity is equivalent to pairwise compatibility of the omitted events.
+
+Pairwise compatible events give consistent assignments to each of A0,A1,B0,B1 and so extend to a deterministic assignment. A deterministic assignment loses one or three CHSH inputs. Hence there are at most three omissions. In the cycle, compatible pairs have distance one or two, and the eight compatible triples are exactly three consecutive vertices. This proves all lower event-count and triple-omission statements without an unlisted case.
+
+The physical relabelings displayed in chapter 04 lines 270-282 are exact: they act as i->5-i, i->3-i and i->2-i modulo eight, preserve the CHSH sign s_xy a b, and are local input/output relabelings or party exchange. Their compositions generate a one-step cycle rotation and a reflection. Thus they generate the required dihedral action, with two pair orbits represented by {lambda,m} and {lambda,alpha} for noncoercive sources, and by {lambda,n} and {lambda,beta} for compatible omissions. This is a physical symmetry, not just a formal permutation of coordinates.
+
+3. Every physical finite contact is coercive
+Although the extreme-source argument below only starts with coercive support, this useful stronger claim in lines 228-268 is also justified. Balance sum w_e e=0 implies that a noncoercive active set is empty or a balanced opposite pair on one of the four lines through the grid origin. For a horizontal opposite pair, each of the four product choices in SG6 forces an off-line coefficient; the same holds vertically. The diagonal opposite pairs can have no off-line coefficient only on one of the alternating event sets {lambda,C,alpha,beta} and {D,A,m,n}. They are related by a physical one-step rotation. For the latter, at u=v=1 and psi=(1,-epsilon,epsilon,1),
+  F=16epsilon[(d+n+m+A+D)epsilon-d]<0
+when epsilon=d/[2(d+n+m+A+D)]. Thus neither is physical.
+
+If every q_e is zero, maximal allowed positive-event sets are the eight rotations of {lambda,m,A}. For that set, u=v=1 and psi=(1,-1,0,2) annihilate the event rows and give the core value -4d. Smaller sets use the same witness after a physical rotation. Empty exponent support is therefore not physical. These arguments rule out every noncoercive finite stationary contact with d>0.
+
+4. Strictly positive determinant minimum is not extreme
+Normalize d+sum a_i=1. The physical nonnegative source body is a compact convex subset of the simplex. For a source with d>0 and coercive support, L attains a finite minimum mu>=0. Suppose mu>0. Inside its exact active coefficient face, choose a small nonzero perturbation eta with coefficient sum zero, and use both signs. There are at least six active source coordinates (d plus five events), so such a nonradial direction exists. It keeps d and active events positive and every omitted event zero.
+
+Continuity and the positive-product description give, for any sufficiently small epsilon>0, |h'-h|<=epsilon and q'_e>=(1-epsilon)q_e for every active e, while zero coefficients remain zero. Uniformly at all positive angles,
+  L'>=(1-epsilon)L+epsilon h-epsilon
+     >=(1-epsilon)mu+epsilon h-epsilon>0.
+The last strict inequality is obtained by choosing epsilon small; h is fixed and finite. SG4 and the direct commuting-endpoint argument prove global physicality of both perturbations. Thus the original normalized source is not extreme. An extreme coercive source must instead have mu=0 at finite positive angles, giving an actual state-kernel contact and both angular derivatives. No assumption of a uniform state spectral gap at commuting endpoints is used.
+
+5. An extreme contact has five or six positive events
+At its fixed contact, the six linear stationary equations have a solution space in the active source coordinates of dimension at least k-6, where k includes d. If seven or more event weights were positive, k>=8 and this dimension is at least two. Intersecting its direction space with coefficient sum zero leaves a nonzero direction. Small opposite perturbations preserve all signs, all omitted coordinates, and all six equations; stationary physicality from item 1 makes them globally valid. This contradicts extremality. Hence at most six events are positive. Item 2 gives at least five.
+
+Exactly two or three events are therefore omitted. The compatible two-omission orbits and their permitted third omissions give exactly
+  C1: lambda=n=0; d,m,C,A,alpha>0; D,beta>=0; D+beta>0,
+      with possible third omission D=0 or beta=0;
+  C2: lambda=beta=0; d,m,C,A,D,alpha>0; n>=0,
+      with possible third omission n=0.
+The latter triple is already a C1 orbit. Each source in this classification must still possess the actual contact proved in item 4; sign patterns alone are not claimed sufficient for extremality or contact existence. If d=0, the cone is the event orthant, whose extreme rays are individual events. Noncoercive sources omit an exclusive pair and are transported to one of the two exact closed-face cones.
+
+6. No escaping contact with coercive limiting support
+Let normalized physical sources c_j converge to c_inf, with d_inf>0, and choose actual positive finite contacts (u_j,v_j,psi_j). Assume the limiting active exponent set E_inf is coercive. Since 0 is interior to its polygon, choose a>0 with max_{e in E_inf} e dot t>=a||t||. Polynomial continuity of q_e and positivity at the limit give a common delta>0 such that q_e(c_j)>=delta for every e in E_inf and all sufficiently large j. All other coefficients are nonnegative. Therefore
+  sum_e q_e(c_j)exp(e dot t)>=delta exp(a||t||).
+The polynomial h(c_j) is bounded. At the contact, with t_j=(log u_j^2,log v_j^2), L_j=0, so the right side is bounded by -h(c_j). This bounds ||t_j||. Both u_j and v_j are consequently bounded above and away from zero.
+
+SG3 now gives H3(c_j,u_j,v_j) uniformly positive definite: the angles lie in a fixed positive compact interval and d_j is bounded below. Its cross column b is bounded. Every contact has Z_j nonzero, and after Z_j=1 its other state coordinates satisfy (W_j,X_j,Y_j)^T=-H3^-1 b. They are bounded and admit a convergent subsequence. In particular the normalized state cannot escape by approaching the forbidden Z=0 subspace while the angles stay compact.
+
+Thus an escaping angle sequence forces either d_inf=0 or noncoercive limiting exponent support. This is a statement about convergent real source sequences in a fixed positive chart. It does not replace a nonzero infinitesimal by zero, nor assert source admission merely from boundedness. The two limiting source types are event combinations or sources on the exact closed faces, respectively. Literal projective testing endpoints are covered by the direct homogeneous endpoint argument, not by taking an unjustified mixed inverse limit.
+
+7. Actual strict-contact approximation on third-omission faces
+This is a separate statement from classification and no escape. Its derivative-rank justification is EN4 in chapter 05, lines 69-84; the C1 use is printed at lines 176-186. Start at an actual finite physical contact on C1 D=0 or beta=0, or on C2 n=0. Fix Z=1, let z=(W,X,Y,u,v), hold every other event weight fixed, and open just the missing coefficient to epsilon. Solve the six equations
+  (gradient_z F,F)=0
+for (z,d), near the original values. At epsilon=0 their Jacobian is
+  [ Hess_z F    partial_d gradient_z F ]
+  [     0                  F_H        ].
+The five-by-five Hessian is positive definite by the already proved coercive-contact state/angle Schur Hessian (SG18-SG19). The core expectation F_H is strictly negative by SG20-SG21. Its determinant is therefore det(Hess_z F)*F_H, nonzero. The ordinary real analytic implicit-function theorem gives an analytic contact branch for small epsilon>0. It keeps d>0, u,v>0, the five originally positive event weights fixed, and the two prescribed omissions zero. Hence it is a genuine strict six-event C1 or C2 contact branch converging to the given boundary source. SG7 proves global physicality at every independent test. Because F_H remains negative, increasing d with those event weights immediately violates the inequality at the same contact; its d is maximal. No extremality assumption or convex mixing is used to obtain this branch.
+
+Consequently admission in a closed fixed source cone passes to the boundary IF that cone already admits these actual strict contact sources (or a fixed finite union of closed cones covers them, after passing to a subsequence). Closedness alone is not an admission theorem. If the available admission hypothesis covers only extreme strict rays rather than all strict contact sources, one must additionally use stationary uniqueness: EN8 for C1 or EN16 for C2 makes the six-column stationary system nonsingular, so its seven-coordinate kernel is one-dimensional and a decomposition into physical sources sharing the contact is proportional. Those displayed stationary determinants were not reexpanded in this bounded check. They are a distinct, identifiable dependency in that extremality-only version; EN4 by itself proves actual contact density, not extremality of the approximants.
+
+SCOPE / UNRESOLVED IMPLICATION
+No defect was found in the requested proof dependencies. All ordinary-real arguments above depend on the exact SG2/SG5/SG6 identities; their determinant expansion was not repeated in this bounded check. The EN4 derivative rank and actual boundary-contact approximation are justified in item 7. The full native-coordinate sign formulas and EN8/EN16 determinant expansions were not independently repeated here. Classification, no escape, and actual contact approximation each have the precise scope stated above; none proves finite fixed-feature admission or tensor-SOS multiplier removal. Ext_contact(K_can) being contained in the finite union of retained globally sound certificate cones remains a separate unproved admission implication where not already supplied by a particular certificate.
+
+SMALL EXACT CHECK
+A standard-library Boolean check of all 256 omission sets confirms exactly twelve minimal noncoercive pairs, sixteen compatible pairs, eight compatible triples, and the eight-normal table above. Independent insertion of the eight event definitions confirms all three physical event permutations and CHSH-sign preservation. This is a verification of the short product/symmetry proof, not its substitute; no numerical optimization or sweep over continuous parameters was used.

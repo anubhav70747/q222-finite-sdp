@@ -1,0 +1,110 @@
+Independent bounded review: Q222_Canonical_Completion
+23 October 2026
+
+VERDICT. No mathematical blocker found in the displayed two-LMI equivalence
+or the all-degree polynomial-selector obstruction. The note correctly leaves
+the universal Bob quantifier and the proposed fixed-multiplier implication
+unresolved. It supplies no new global affine Q222 lift.
+
+1. Full parent and exact completion
+
+The nine-source parent matches public latex/chapters/04_geometry.tex (SG2),
+including the negative signed term and all four independent state entries.
+I checked its event-root substitutions directly. They give F=Du*Phi with the
+displayed P,N,E,K; in particular E22=4alpha-2d*v^2 is correct. The change has
+determinant u^2*Du^2, L*N=u*Du*I, and hence
+ u^2*Du*F(psi)=(L psi)^T Pcal(u^2,v)(L psi).
+This is an identity, not an SOS conclusion. No source weight is inverted.
+
+The split with G_J and H_J is exact also for nonsymmetric J. Necessity is
+valid: Pcal(t^2,v) has degree <=4, so the real-line matrix Fejer--Riesz
+theorem supplies degree <=2 factors, including the singular case. Taking
+real/imaginary parts and averaging t with -t gives
+ Pcal(U)=(B0+U B2)^T(B0+U B2)+U B1^T B1.
+The constant zero state block forces B0=[R,0], and the leading zero state
+block forces B2=[0,T]. Thus J=R^T T gives exactly the two displayed LMIs.
+The required degree and semidefinite versions are explicitly stated in
+Zalar Theorem 1.2, checked in the author's primary text:
+ https://zalara.github.io/Papers/MatrixFejerRieszArxivOriginal.pdf
+
+The theorem is finite-dimensional first order and transfers to real closed
+fields. This does not identify the independent source/testing tensor product
+with a real closed field. Finite nonzero u suffices by invertibility; the
+homogeneous physical parent and continuity/local polynomial signs recover
+both testing axes and projective endpoints. Zero source weights, including
+d=0, introduce no division. Complex states follow by real/imaginary parts.
+
+2. Polynomial-selector obstruction
+
+The degree bound is valid: G_J's 2x2 principal minors bound each polynomial
+Jij squared by a polynomial of degree <=4, so deg Jij<=2. Parity averaging
+preserves both LMIs. On C1, the zero diagonals at v=0 eliminate the two
+diagonal constants; the bound |J12|^2<=4m(4D+2d)v^4 eliminates its remaining
+odd-linear coefficient. Therefore every polynomial selector would yield
+the three-parameter form printed in the note; no positivity hypothesis on
+individual event weights is needed for this reduction.
+
+At the given contact, U>0 and both PSD terms in the split must vanish.
+The resulting kernel equations have rank three and force the stated p,r,s.
+The v=1 minor on (a2,b1,b2) has the stated form and exact value
+ -69352124781612280381599769461934673920000000 /
+  32438294482980702952775476165756828843959807,
+which is less than -103/80. The elementary hand bounds are sufficient.
+
+The equivalence with non-SOS of Phi(u^2,v;a,b) is also justified. A real
+polynomial SOS for this polynomial has roots linear homogeneous in the
+states, degree <=2 in u and <=1 in v: higher leading squares cannot cancel.
+The same u-parity averaging and zero-block forcing would then produce a
+polynomial J. Conversely the two univariate PSD matrices of a polynomial
+selector have polynomial factors and give an SOS by the exact split.
+This excludes every polynomial degree, not just a truncated search.
+
+The obstruction does NOT extend automatically to algebraic or piecewise
+selectors: the entry v*abs(v), for example, evades the odd-polynomial
+vanishing-order argument. Nor does it establish non-SOS of u^2*Du*F in the
+original state variables; pulling back a hypothetical SOS introduces extra
+factors, whose cancellation requires a separate theorem.
+
+3. Source identity and established validity input
+
+The bundled ESTABLISHED_VALID_SOURCE.json is byte-identical to the current
+public extracted-lifts/outer-candidates/strict_outer_physical_source.json,
+SHA256 0479aeabc84cb1e3a71073d5162df83af8603c5f94609742498b0659ad793b75.
+Its seven coefficients and contact also match the existing public
+contact-selector/c1_contact_selector_data/C1_REPAIRED_TWO_FRAME_COUNTEREXAMPLE.json
+and candidate_adequacy.tex, equation (seed). That proof gives the relevant
+all-state/all-angle certificate, rather than claiming universal adequacy
+of the order-13744 candidate. I accepted this established validity input;
+I did not rebuild its old rational PSD certificate or global proof.
+Independently assembling the original SG2 state matrix from its event
+outer products verifies the complete four-dimensional contact kernel.
+
+4. Multiplier conclusion and data execution
+
+The final fixed-q implication is a correct sufficient remaining route, not
+a proved existence statement. For fixed nonnegative nonzero q, the first
+LMI bounds deg Z by deg q+2. Univariate matrix factorization and the fixed
+state change would then give a bounded fixed testing family for
+q(v)*u^2*Du*F, with affine source/Gram coefficient equations. Dense-set
+positivity recovers validity. The counterexample rules out q=1 for this
+specific route only. No assertion about another q or a fixed algebraic
+family follows. The order-eight data remain pointwise pencils with
+quantifiers forall v exists J, not a quantifier-free lift.
+
+I read all three scripts completely before execution. They import only
+standard-library modules and SymPy; the builder writes only its local
+new JSON data (with a local fallback source read). No network, solver,
+shell execution, deletion, or old matrix regeneration occurs.
+Executed in the private copy
+ analysis/exact-lift-2026-10-23/pro_completion/pro_completion_review_run/:
+ check_selector_certificate.py;
+ check_alice_quadratic_reduction.py;
+ build_selector_data.py;
+ check_selector_certificate.py again.
+All exited zero. The 108-entry and 80-entry COO exports, exact contact,
+unique selector, minor, and full nine-source identities pass. All three
+rebuilt JSON objects equal the delivered objects structurally. My separate
+event-outer-product and public-source checks are recorded in
+independent_spot_results.json; execution is recorded in review_execution.log
+and review_execution_results.json. All 12 original package files retain
+their pre-execution SHA256 hashes. No public repository file was changed.

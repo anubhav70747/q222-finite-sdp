@@ -1,0 +1,329 @@
+% Input-ready section: shares fixed_box_c1 source definitions; requires mathrsfs.
+\section{The complete nonpositive-angular branch}\label{sec:fixed-c1-nonpositive}
+
+This note treats only the $\lambda\le0$ branch of
+\texttt{Uniform\_C1\_Certificate.tex}, on the source and independent
+testing rectangle of \texttt{fixed\_box\_c1.tex}. It supplies a complete
+parent certificate, including the retained positive squares. It is not a
+global lift or a certificate for other testing charts.
+
+\subsection{Domain and source bounds}
+
+Use exactly the rational source formulas and strict gaps of
+\texttt{fixed\_box\_c1.tex}, except that $\lambda\le0$. Thus
+\[
+ \begin{gathered}
+ 0<x,\sigma\le\eps=2^{-160},\quad 0<z\le1,\quad
+ 0<b<1,\quad r=bz<1,\quad 0<h<1,\quad D,\beta\ge0,
+ \\ 0\le u,w\le\delta=2^{-100}.
+ \end{gathered}
+\]
+State coordinates $W,X,Y,Z$ are unrestricted. Set $k=\sqrt x$,
+$q=\sqrt z$, $Q=1-b$, $H=h/\sigma$, $H_0=1+zQ$,
+$d_G=4D/\sigma^2$, $L=\lambda/\sigma$, and $K_c=1+L^2$.
+The source identities BE3--BE4 give the following finite bounds:
+\[
+ H\le2,\quad h\le2\sigma,\quad -8\le L\le0,\quad
+ |d_G-2H_0|\le200\eps,\quad
+ |4\kappa H-2H_0|\le400\eps.                 \tag{N1}
+\]
+The already established common bounds used below are
+\[
+ 1\le H_0\le2,\quad |\nu|\le3,\quad p\le2,\quad
+ m\le6\eps^2,\quad D\le4\sigma^2,\quad
+ |R_0|\le512\eps,\quad |B_x|\le48\eps,
+\]
+\[
+ |R_x|,|A_y|\le32,\quad |\chi|\le64,\quad
+ |k_1|\le16,\qquad 4a,4\ell\ge1.           \tag{N2}
+\]
+Here all coefficient symbols have their displayed definitions in the
+``finite formula for the main Gram'' section of
+\texttt{fixed\_box\_c1.tex}, and $R_\gamma=R_0-8pu^2$.
+The coefficient bounds for $E_{yy},E_{RR},E_{yR}$ on their respective
+testing supports $(u^2,w^2)$ and $(1,u^2,w^2)$ are
+\[
+ (4,4),\qquad (64\sigma,16,4),\qquad
+ (32\sigma,12,8).                         \tag{N3}
+\]
+These bounds retain $C(1-r)$ rather than estimating the possibly
+unbounded positive coefficient $C$. Their source-formula proofs in the
+shared calculation do not use $\lambda>0$; only the subsequent
+positive-angular construction there uses that sign.
+
+Here is a short derivation of (N1), using only the shared source
+formulas and common bounds. Multiplying $\lambda\le0$ by $\sigma$
+gives
+\[
+ 8Dh+4\beta\theta^2+2h^2\le4bp\sigma^2z.
+\]
+Thus $H^2\le2bpz\le4$, $h\le2\sigma$, and
+$\beta\theta^2/\sigma^2\le bpz\le2$. In particular
+$\theta\ge1-2\eps$ and $\beta\theta/\sigma^2\le3$.
+Also every positive term in $L$ can be discarded to give
+$L\ge-4bpz\ge-8$.
+For the remaining estimates it is enough to use $\eps\le1/2000$.
+The positive formula for $P$, with $h\le2\sigma$, yields
+$1\le P\le1+4\eps$, and $1\le B_s\le1+6\eps$.
+BE3 is exactly
+\[
+ HB_s-H_0=2P\beta\theta/\sigma.
+\]
+Consequently
+\[
+ |H-H_0|\le
+ \left\{\frac{4(1+4\eps)}{1-2\eps}+12\right\}\eps
+ <18\eps.
+\]
+Use the common bound $|\mathcal H-H_0|\le32\eps$ and
+$|PJ-1|\le6\eps$, $PJ\ge1-\eps$. BE4 gives
+\[
+ d_G=\frac{2\mathcal H}{PJ}
+             -\frac{4x\beta\theta}{J\sigma^2}.
+\]
+The first term differs from $2H_0$ by at most
+$88\eps/(1-\eps)$ and the second has absolute value at most
+$12\eps/(1-\eps)$, so their sum is less than $200\eps$.
+Finally $|M-1|\le\eps$ implies $|MP-1|\le6\eps$, while
+$1\le K(1+\sigma r)(1+\sigma z)\le1+4\eps$.
+The formula for $\kappa$ therefore gives
+$|\kappa-1/2|\le5\eps/(1-\eps)<39\eps$.
+Together with $H\le2$, this proves
+\[
+ |4\kappa H-2H_0|
+ \le8(39\eps)+2(18\eps)<400\eps.
+\]
+
+\subsection{Exact complete quadratic correction}
+
+Retain the uniform proof's roots
+\[
+\begin{gathered}
+ N_x=X+uhZ,\quad N_y=(Y-bwZ)/q,\quad
+ R=wZ/q-uqW,\quad \Gamma=\sigma Z-uwW,\\
+ A_\theta=q(u^2-x)W,\quad V=uw(u^2-x)W,\quad
+ J_C=N_y+bR,\quad J_\ell=N_y-QR,\quad X_e=X+ewW.
+\end{gathered}
+\]
+In particular $R=J_C-J_\ell$ and $N_y=QJ_C+bJ_\ell$.
+Introduce the source-only shear
+\[
+ T=\Gamma+(L/2)V,\qquad
+ g=(N_x,J_C,J_\ell,T,V,A_\theta)^{\mathsf T},\qquad
+ D_* =\operatorname{diag}(2,1,1,1,1,2).
+\]
+This shear is invertible with inverse $\Gamma=T-(L/2)V$;
+both directions have coefficients bounded by four.
+The source baseline has the exact decomposition
+\[
+\begin{split}
+ 2H_0\Gamma^2+L\Gamma V+(1+L^2)V^2
+ &=T^2+V^2+(2H_0-1)\Gamma^2+\tfrac34L^2V^2,\\
+ 2H_0A_\theta^2&=2A_\theta^2+2(H_0-1)A_\theta^2.
+\end{split}                                                   \tag{N4}
+\]
+Thus the principal baseline is the fixed diagonal $D_*$, with the
+last terms in (N4) retained as nonnegative source squares. This is
+a source-only change of roots, not a congruence depending on testing
+parameters. Below all final directions are fixed in these six coordinates.
+
+Define $\mathcal E$ by the following quadratic polynomial, substituting
+$\Gamma=T-(L/2)V$, $R=J_C-J_\ell$, and $N_y=QJ_C+bJ_\ell$:
+\[
+\begin{split}
+ \mathcal E={}&E_{yy}N_y^2+E_{RR}R^2+E_{yR}N_yR
+ +(d_G-2H_0)\Gamma^2-4\nu uN_x\Gamma
+ +qw(R_0-8pu^2)J_C\Gamma\\
+ &-4uqw(2m+2D+1)N_xN_y+uqwR_xN_xR
+ +qwB_xN_xA_\theta+uA_yN_yA_\theta\\
+ &+(\chi+\lambda)uA_\theta R
+ +(4\kappa H-2H_0)A_\theta^2+Lu^2\Gamma^2\\
+ &-K_c\sigma u^2 A_\theta^2
+ -K_c\sigma u(u^2-x)A_\theta R
+ +K_c(u^2-x)V\Gamma .
+\end{split}                                                    \tag{N5}
+\]
+This specifies every entry of $G$ by
+$g^{\mathsf T}Gg=g^{\mathsf T}D_*g+\mathcal E$; cross coefficients
+are divided by two between symmetric entries.
+
+For completeness the entire retained part is
+\[
+\begin{split}
+ \Pi={}&4\beta N_x^2+(4\beta+2+4m)(wN_x)^2
+ +2(2D+1)(uX_e)^2+4bpz(u\Gamma)^2\\
+ &+4a\{(uJ_C)^2+(wJ_C)^2+(uwJ_C)^2\}
+ +4\ell(uJ_\ell)^2+4Cz(wJ_C)^2\\
+ &+[4a+2z(2C+1)-1]J_C^2+(4\ell-1)J_\ell^2\\
+ &+(2H_0-1)\Gamma^2+\tfrac34L^2V^2
+ +2(H_0-1)A_\theta^2.
+\end{split}                                                    \tag{N6}
+\]
+Every coefficient in (N6) is nonnegative in the source field.
+No mixed radical occurs.
+
+The exact parent identity is
+\[
+                     F_w=\Pi+g^{\mathsf T}Gg.             \tag{N7}
+\]
+Indeed the uniform proof gives
+\[
+ K_AA_\theta^2+\mathscr S
+ =4\kappa H A_\theta^2+Lu^2\Gamma^2+L\Gamma V
+                                      +\lambda uA_\theta R.
+\]
+Add $K_c$ times its exact zero identity
+\[
+ V^2-\sigma u^2A_\theta^2
+ -u\sigma(u^2-x)A_\theta R+(u^2-x)V\Gamma=0.
+\]
+Splitting the radial and $N_x$ pivots and then using (N4) gives
+precisely (N5)--(N7), including both complete Gamma normal terms.
+
+\subsection{Evaluated coefficient bound and fixed directions}
+
+All entries of $G-D_*$ are polynomials on the fixed testing support
+\[
+ \{1,w,w^2,u,uw,u^2,u^2w,u^3\}.                 \tag{N8}
+\]
+Here is a positive-coefficient majorant for the absolute coefficient
+polynomial of (N5). Treat its root letters as formal nonnegative
+variables, put $n=J_C+J_\ell$, and $C_*=T+4V$. Then
+\[
+\begin{split}
+ \mathcal Q={}&(4u^2+4w^2)n^2
+ +(64\eps+16u^2+4w^2)n^2
+ +(32\eps+12u^2+8w^2)n^2\\
+ &+200\eps C_*^2+12uN_xC_*
+ +(512\eps w+16u^2w)J_CC_*\\
+ &+16uwN_xn+32uwN_xn+48\eps wN_xA_\theta
+ +32unA_\theta+65uA_\theta n\\
+ &+400\eps A_\theta^2+8u^2C_*^2
+ +65\eps u^2A_\theta^2
+ +65\eps(u^3+u)A_\theta n
+ +65(u^2+\eps)VC_* .
+\end{split}                                                   \tag{N9}
+\]
+For the two replacement terms use $|\lambda|\le8\eps$,
+$|\chi+\lambda|\le65$, $K_c\le65$, and $x,\sigma\le\eps$.
+All other terms use (N1)--(N3). In particular
+$|2m+2D+1|\le4$, a deliberately loose bound.
+
+Evaluating this positive polynomial at one gives total coefficient
+norm $10189<2^{14}$. Its constant-testing part has norm
+$6109\eps$. The successive summands contribute
+\[
+32,336,208,5000,60,2640,32,64,48,64,130,400,200,65,260,650
+\]
+to the first total. The constant part consists of
+$(256+128+5000+400+325)\eps$.
+Consequently the deliberately larger rational bounds
+\[
+ |G_{ij}(0,0)-(D_*)_{ij}|\le2^{20}\eps,
+ \quad\text{every nonconstant coefficient has magnitude }\le2^{20}
+                                                               \tag{N10}
+\]
+hold in the source field.
+
+For six coordinates use the exact fixed-direction decomposition
+\[
+\begin{split}
+ G={}&\sum_i(G_{ii}-5/16)e_ie_i^{\mathsf T}\\
+ &+\sum_{i<j}\frac{1/16+G_{ij}}2(e_i+e_j)(e_i+e_j)^{\mathsf T}
+ +\sum_{i<j}\frac{1/16-G_{ij}}2(e_i-e_j)(e_i-e_j)^{\mathsf T}.
+\end{split}                                                    \tag{N11}
+\]
+There are $36$ scalar channels. Let $b_1,\ldots,b_7$ be the
+nonconstant monomials of (N8), fix
+\[
+ c_0=2^{-8},\qquad A_*=2^{30},\qquad
+ \gamma=\frac1{7\,2^{38}},
+\]
+and write a channel as $q_0(c)+\sum_j a_j(c)b_j(t)$.
+The diagonal constant channels are at least $11/16-2^{20}\eps$;
+the off-diagonal ones are at least $1/32-2^{19}\eps$.
+Thus $q_0\ge c_0$ and $|a_j|\le A_*$. Also
+$0\le b_j\le\delta<\gamma$ throughout the independent testing box.
+The exact separated identity
+\[
+ q_0+\sum_ja_jb_j=(q_0-c_0)
+ +\frac12\sum_{j=1}^7
+ \{(A_*+a_j)(\gamma+b_j)+(A_*-a_j)(\gamma-b_j)\}       \tag{N12}
+\]
+uses $7A_*\gamma=c_0$. Every factor on its right is nonnegative
+in its own labelled field. Multiplying these squares by the fixed
+linear directions in (N11) proves (N7) by an evaluated finite
+tensor sum of squares, without an infinitesimal-residue argument
+on a finite rectangle.
+
+\subsection{A fixed complete testing dictionary}
+
+Every coordinate of $g$ is source-linearly spanned by
+\[
+ \mathcal V_0=\{X,Y,Z,W,uZ,wZ,uW,uwW,u^2W,u^3wW\}.       \tag{N13}
+\]
+For example $J_C=Y/q-buqW$, $J_\ell=Y/q-wZ/q+QuqW$,
+and $T=\sigma Z-uwW+(L/2)(u^3wW-xuwW)$.
+Thus the main Gram uses the $150$ displayed functions
+\[
+ \mathcal V_0\ \cup\
+ \{f\sqrt{\gamma+b_j},\ f\sqrt{\gamma-b_j}:
+                         f\in\mathcal V_0,\ 1\le j\le7\}.      \tag{N14}
+\]
+All retained roots in (N6) lie in the source-linear span of
+$\mathcal V_0$ together with the seven additional functions
+\[
+       \{wX,uwZ,uX,u^2wW,uY,wY,uwY\}.                     \tag{N15}
+\]
+For instance $uX_e=uX+euwW$ and
+$u\Gamma=\sigma uZ-u^2wW$. This proves a complete-parent
+dictionary of $157$ displayed testing functions. Each source-only
+linear combination obtained from (N11)--(N12) and (N6) has a
+nonnegative source coefficient, absorbed by its own source square
+root. The formulas give the finite coefficient prescription; no
+successful global pencil or global feature bound follows.
+
+For signed testing angles compose the entire dictionary with the
+source-independent gauge of \texttt{fixed\_box\_c1.tex}; this does
+not change the count. The polynomial identities specialize literally
+at $u=0$, $w=0$, and arbitrary zero state coordinates. Applying
+the same real certificate to the real and imaginary parts treats
+complex states (with the corresponding doubled real dictionary).
+
+No inverse of $D$ or $\beta$ appears. The $\beta=0$ face is allowed
+literally. In this branch (N1) actually implies
+$d_G\ge2-200\eps>0$, so the $D=0$ face has empty intersection
+with the stated box and $\lambda\le0$. Actual $D=0$ sources are
+therefore supplied by the positive-$\lambda$ branch, not by this note.
+This distinction is a consequence of the explicit bounds, not an
+additional exclusion.
+
+\subsubsection*{Nonempty sources, including the zero-beta face}
+For a completely explicit source path set
+\[
+ x=\sigma=t,\qquad z=b=1-t^2,\qquad
+ h=t-4t^2+Bt^3,\qquad 16\le B\le18,\quad0<t\le\eps.
+\]
+All strict native gaps hold, since $0<h\le2t$, $E=1-h>0$,
+and $J,M\ge1-t>0$. Let $p_N=2Pp$, $D_N=2JPD$,
+$\beta_N=2\theta P\beta$, and
+\[
+ N_L=4D_Nh+2\beta_N\theta J+2h^2JP
+                              -2bp_N\sigma^2zJ=\sigma^2JP L.
+\]
+Direct polynomial multiplication, grouping by powers of $t$, gives
+\[
+\begin{split}
+ |D_N-t^2|&\le27640t^3,\\
+ |\beta_N-(B-17)t^3|&\le24459t^4,\\
+ |N_L-(2B-38)t^3|&\le248856t^4.
+\end{split}
+\]
+For these bounds take absolute coefficient sums in $(t,B)$ and
+replace every $B^j$ by $18^j$ in the remainders. Thus $D>0$ and
+$L<0$ throughout this path. At $B=18$, also $\beta>0$, giving
+an entirely rational strict source for each rational $t$.
+The signs of $\beta_N$ at $B=16,18$ are opposite. Polynomial
+continuity therefore gives $B\in(16,18)$ with $\beta=0$, while
+$D>0$ and $L<0$ remain strict. This verifies actual zero-beta
+sources in the branch; it is not only a formal boundary allowance.

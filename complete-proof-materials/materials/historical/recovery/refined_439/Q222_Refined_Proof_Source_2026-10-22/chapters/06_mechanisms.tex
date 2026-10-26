@@ -1,0 +1,197 @@
+\chapter{Common algebra and local completion mechanisms}
+\label{ch:mechanisms}
+The bounded strict-Gram lemma is proved in Chapter~\ref{ch:tensor}. The following finite algebraic constructions are reused by the certificate chapters.
+\section{Finite algebra and contact completion}
+\paragraph{Finite penalty lemma.}
+Let $R$ be a real symmetric quadratic form and $L$ a real linear
+map.  If $R$ is positive definite on $\ker L$, then
+$R+M\|Lz\|^2$ is positive definite for some real $M>0$.
+
+\emph{Proof.}
+Choose a linear complement of $\ker L$.  The restriction of $L$
+to that complement has a positive least singular value.  In these
+coordinates the kernel block of $R$ is positive definite, and
+adding $M L^TL$ makes the other Schur complement positive for
+sufficiently large $M$. \hfill$\square$
+
+For an opening argument one must additionally exhibit a bounded
+remainder after subtracting the divergent squares, and a bounded
+right inverse for their independent hard rows.  If a family has a
+uniform positive lower bound before subtraction, its limit on the
+limiting kernel is positive: lift a kernel vector to exact kernels
+with that right inverse and take the real limit.  The finite penalty
+lemma then supplies finite caps.  Pointwise positivity of a
+determinant alone would not establish this assertion.  The printed
+UI, UH, large-$L$ and UKR bounded minimizers and hard-row minors
+supply these extra hypotheses.
+
+\paragraph{Small-cost helper lemma.}
+Suppose the main roots have a strict real residue Gram and an exact
+identity has the form $A(z,H)-H^2=\sum R_i^2$, where every
+coefficient of the quadratic form $A$ on the main roots $z$ and
+$H$ is infinitesimal.  Then any prescribed finite positive diagonal
+budget $cH^2$ can be introduced by the exact replacement
+\[
+          F=(F-cA+cH^2)+c\sum R_i^2.
+\]
+It changes the main residue Gram by zero and retains the displayed
+positive squares.  Finitely
+many helper roots can be treated in a stated order, after which a
+real Schur complement handles their bounded cross coefficients.
+This is the mechanism in CU9, UH11, MB3, NU10, SN8 and their
+BN/UN variants.  The order matters in UN: first obtain the radial
+pivot when $\theta$ is infinitesimal, then buy the angular helpers.
+
+\subsection{The three-monomial circuit}
+
+Let $k>0$ be source infinitesimal, $s>0$ a source unit,
+$u>0$ testing infinitesimal and $t>0$ bounded testing.  Put
+\[
+ A_1=u^2t,\quad A_2=ku t^2/s,\quad A_3=k^2s,
+ \quad G=kut,\quad d_i=A_i-G.
+\]
+Then $A_1A_2A_3=G^3$, and
+$G(u-k)=kd_1$, $G(t-s)=sd_2$.
+For $a_i=A_i^{1/3}$, all roots separate into pure-field factors,
+and
+\[
+ Q=G\sum_i d_i
+   =\tfrac12\sum_{i<j}\sum_l
+       \{\sqrt{Ga_l}(a_i-a_j)\}^2,
+ \qquad \sum_iA_i^2-3G^2=\sum_i d_i^2+2Q.
+\]
+If the coefficients of a perturbed circuit have the finite Taylor
+arrays in Section~\ref{component:p466b31015532}, its two first contact jets cancel every
+bare $Gd_i$ term.  The error becomes precisely
+\[
+ \sum_i\epsilon_i d_i^2+2\epsilon_{30}Q
+ +2\sum_i(kK_{iu}d_1d_i+sK_{it}d_2d_i)
+ +k^2H_{uu}d_1^2+ks(H_{ut}+H_{tu})d_1d_2+s^2H_{tt}d_2^2.
+\]
+The essential hypotheses are that the $u$ arrays are bounded and
+the $t$ arrays are infinitesimal.  The latter is needed because
+$s$ is a unit.  RO, JO and HO establish it explicitly: every
+$t$-dependent monomial after $u=k$ carries $k$ or $k^2$.
+The same two conductors allocate the complete first state normals.
+Consequently the circuit is not being inferred from its leading
+AM--GM expression alone.
+
+\subsection{A short derivation of the C14.3 complete identity}
+
+The full JF1 identity can be certified without importing a historical
+symbolic receipt.  Substitute
+\[
+ W=(v+E)/(\eta u),\qquad Y=Q+rv/\eta,
+ \qquad X=\xi-hu,\qquad Z=1.
+\]
+Using the printed JF definitions, collect original $F/4$ minus its
+JF1 right side.  Its exact support is
+\[
+                    \{vE,\ vQ,\ u\xi,\ UV,\ V,\ 1\}.
+\]
+This collection has been independently expanded.  The JF1 right
+side has zero value and all first derivatives at
+$U=x,V=\eta x/a,E=Q=\xi=0$.  The six original contact equations
+therefore kill all six coefficients: the three state derivatives
+kill the first three; the $U$ derivative, $V$ derivative and value
+then kill the last three.  Homogenisation gives the full identity.
+
+Here is the short pen-and-paper derivation of DG3 from JF1.
+Write $H=avW-uZ$, $c^2=a/\eta$, $x=k^2$,
+$J=(uv-x/c)Z$, $\tau=\eta cW-Z$, $D_0=u-cv$,
+$E=\eta(P+Q)$ and $R_c=kv\tau$.  The exact identities are
+\[
+ uv\xi=h\{uJ+kR_c-(x/c)H-T\},\qquad
+ EH=uv\tau^2-\eta D_0^2WZ,
+ \qquad \sqrt\lambda R_c=R+\sqrt\lambda kE.
+\]
+Choose $G_0=2\eta\lambda-2\eta$ and
+$\epsilon=\gamma-G_0/h$.  Conduct only
+$(G_0/h)uvQ\xi$, leaving $\epsilon uvQ\xi$ intact.  Completing
+$R^2+(G_0k/\sqrt\lambda)QR$ and
+$\lambda J^2+G_0uQJ+AUQ^2$ yields
+\[
+ \widehat R^2-\lambda x(\eta P+\eta Q/\lambda)^2,
+ \qquad \widehat J^2+
+          \left(A-G_0^2/(4\lambda)\right)UQ^2.
+\]
+The remaining $EH$ term combines with the original third circuit
+square into
+\[
+        (2x/c)uv\tau^2+(G_0x/c)D_0^2WZ+(G_0x/c)PH.
+\]
+The source cross term changes from $2b'QT$ to
+$2(b'-G_0/2)QT$.  All other JF1 terms remain untouched.
+This is the complete DG3/LD9 identity and accounts for both state
+normals, both circuit completions and every scalar term exactly.
+
+The three regular source functions
+$\Delta_0$, $c_U/\eta$, and $G_f-G_0$ vanish at $L=\eta=0$
+for arbitrary $a$.  Their independently rederived first derivatives
+there are
+\[
+\begin{array}{c|cc}
+ &\partial_L&\partial_\eta\\\hline
+ \Delta_0&(a+2\pi+1)/4&(2\sigma+3)/4\\
+ c_U/\eta&(2a+2\pi+1)/2&(2\sigma+3)/2\\
+ G_f-G_0&(2a+2\pi+1)/2&\sigma+2.
+\end{array}
+\]
+The unit-denominator formulas LD3--LD5 turn this into exact finite
+divisions, so there is no pure-$a$ remainder.  At $a$ infinitesimal
+these are LD7.  For unit $a$, put $L=x/a$ and
+$\pi_{L}=a\pi_x$ to obtain DG6.  The first two rows have strictly
+positive residue; they provide the missing source scale and the
+positive $c_U$ square at arbitrary relative rates.
+
+The unit-$a$ angular margin also has a direct short proof.  If
+$B=\beta+1/2$ is unbounded its normalized angular off-diagonal
+tends to zero.  Otherwise write $a_0,B_0,\pi_0$ for real residues.
+The source identities give
+\[
+ B_0\pi_0=(a_0+1)/(2a_0),\quad
+ \operatorname{res}(q/x^2)=(a_0+1)/(2a_0^2)+B_0\pi_0^2,
+ \quad \operatorname{res}(\mu/(a x))=1/2.
+\]
+Because $B_0\ge1/2$, the squared normalized off-diagonal is at
+most $a_0^2/[(a_0+1)(a_0+2)]<1$, while $\mu/B$ is infinitesimal.
+Thus DG2 has a strict real residue without an omitted beta-zero
+case.  For infinitesimal $a$, LD11 already gives identity residue.
+
+Finally CJ4--CJ8 allocate the entire remaining normal by the
+already retained $\widehat J$ row.  Their coefficients are finite
+sums in $B_c\otimes B_t$: expand
+$\phi=X/Z+hu$, use $\epsilon=O(s)$ and $\eta/s\le1$, and
+cancel $x/\sqrt a=\sqrt a L$ before estimating the large-$\zeta$
+case.  The only missing state chart, $X/Z$ unbounded, has the
+direct positive pure-testing packet DS3.  Thus the old bounded
+source-ratio and bounded-state theorems are unnecessary as separate
+terminals once the actual DG/LD identities and CJ are retained.
+
+\subsection{Two further reductions of redundant local alternatives}
+
+\paragraph{C14.2.}
+On its unchanged unbounded-$H$ source, CT requires only
+$f=Z/W$ infinitesimal and
+$c=uW/(wZ)$ a positive bounded unit.  Its proof does not use
+$\operatorname{res}c=\operatorname{res}L$.  In CT6 the coefficient
+\[
+              (k_c^2+k_c+1)/(q c^{2/3}),\qquad k_c=(zc)^{1/3},
+\]
+is a bounded separated unit for every such $c$.  The CT10
+coefficients remain infinitesimal and the CT13 coefficients remain
+infinitesimal in its unit-$h$ case.  All other strictness estimates
+are unchanged.  Hence CT covers all positive-unit ratios on this
+state chart. CS1--CS4 cover the extreme ratios, CF covers bounded
+$W/Z$ on the unbounded-$H$ source, and HG/HP together with the
+$\lambda\le0$ CF case cover bounded $H$.
+
+\paragraph{C14.4.}
+On the double-infinitesimal $(\kappa,\nu)$ endpoint, BN proves
+the entire bounded $\tau=h/(\nu/\ell)$ source, including bounded
+$n_s=\beta/(\nu/\ell)^2$.  The exact SN polynomial dictionary in Section~\ref{component:p1de5b12d1927} supplies the formulas used by BN and UN.  The
+six source cells are FU+UKR, NU, FM, EL, BN and UN.
+
+
+\section{Every noncommuting testing residue}
+\input{chapters/noncommuting_refined.tex}

@@ -1,0 +1,251 @@
+\chapter{A common exact II reduction for the two C2 double corners}
+\label{component:pfb3a83f3849a}
+\noindent\textbf{Component }\path{pfb3a83f3849a}\par
+{\small\noindent Source: \path{R13/baseline/advances/c2_double/common_ii_reduction.tex}\par}
+{\small\noindent SHA256: \path{fb3a83f3849aa5acd6ee74e9116123f4973ae9acfc67b2979d39199f16fcc15e}\par}
+{\small\noindent Inventory use: source entry and exact C2 reflection; DI1-DI6 as full-parent identities\par}
+\medskip
+\section{A common exact II reduction for the two C2 double corners}
+\label{pfb3a83f3849a:sec:r6-c2-double}
+
+This section proves source reduction and an exact full-parent identity.
+It does not claim a new all-tests admission.  In particular, the scalar
+identity below is not substituted for the missing allocation of its
+three state normals.  Source and testing fields remain independent.
+
+\paragraph{One source chart, with the orientation recorded.}
+Use the positive C2 chart and put
+\[
+ z=u_c^2,\quad y=v_c^2,\quad H=v_cY_c,\quad
+ L=v_c(u_cW_c-Y_c),\quad B=H+L,\quad r=-X_c/u_c.
+\]
+Here the contact is normalized by $Z_c=1$, $0<H<1$, $0<r<1$,
+$L>0$, and
+\[
+ A_c=1+zr,\quad j=A_c-L/y>0,\quad
+ G=B+z(H+r-1)>0,\quad B-zyr>0.
+\]
+Suppose both actual angles are infinitesimal.  Then $L<yA_c$ is
+infinitesimal, and $B$ is bounded.  The exact reflection
+\[
+ (u_c,v_c;W_c,X_c,Y_c,Z_c;n,m,C,A,D,\alpha)
+ \mapsto(1/v_c,1/u_c;Z_c,X_c,Y_c,W_c;n,D,\alpha,A,m,C)
+\]
+takes directed weak-$C$ HH to II with $C$ strong and $\alpha$ weak.
+It takes the strong II/HH orbit to II with both $C,\alpha$ strong.
+The weak orientation has therefore changed under reflection and must
+not be relabelled as weak-$C$ II.
+
+\begin{proposition}[The exact common source face]
+For every positive II source, $\alpha$ is weak if and only if $B$ is
+infinitesimal; $\alpha$ is strong if and only if $B$ is a positive
+unit.  In the latter case $C$ is automatically unbounded.
+\end{proposition}
+\begin{proof}
+Use the exact $\delta,M$ of (GE1), equivalently
+\[
+\begin{split}
+ \delta={}&z+(1+z)B+(1+z)B^2+2z(1+z)Br+z^3r^2+2z^2r\\
+ &+y\{(1+z)B+z+z^2r(2-r)\},\\
+ M={}&(1+z)(B+zr)(H+y)-z(1+y)(1-r)L.
+\end{split}
+\]
+All terms in $\delta$ are nonnegative and $\delta\ge B+z$.
+The lower bound used below follows from the exact positive identity
+\[
+ M=(1+z)(B+zr)H+yG+yzj+zrL(1+y).
+\]
+If $B$ is infinitesimal, then $H$ is infinitesimal, $1-H$ is a unit,
+and
+\[
+ 0<\alpha=\frac{(B+zr)M}{2(1-H)\delta}
+ \le\frac{(B+zr)(1+z)(H+y)}{2(1-H)}
+\]
+is infinitesimal.  If $B$ is a unit, then $H=B-L$ is a unit,
+$\delta$ is a unit, and the positive decomposition of $M$ gives
+$M\ge(1+z)(B+zr)H$.  Thus $M$ is a unit and $\alpha$ is strong.
+Moreover $CL=A_cM/(2\delta)$ is a unit and $L$ is infinitesimal,
+so $C$ is unbounded.  These cases exhaust bounded positive $B$.
+No lower bound on $r$, $j$, $H$, or $1-H$ was imposed in the weak
+case, and $n=0$ was not removed.
+\end{proof}
+
+Thus the two residual leaves are, respectively, the $B\to0$ face and
+the $B$-unit face of one actual II source chart.  This is a reduction,
+not an assertion that the weak face has the same bounded roots as the
+unit face.
+
+\paragraph{A parity-preserving graph with every state normal.}
+For independent testing angles $u,v$ set $U=u^2$, $V=v^2$ and write
+\[
+ X=-\frac{rU v}{B}W+\xi,\qquad
+ Y=\frac{Hu}{B}W+\eta,\qquad
+ Z=\frac{uv}{B}W+\zeta.                         \tag{DI1}
+\]
+This is an exact polynomial change of all four homogeneous state
+coordinates, with determinant one.  Its only inverse is the positive
+pure-source inverse $1/B$.  It is legal for arbitrary testing signs,
+at $u=0$ or $v=0$, and for $W=0$.  At $(U,V)=(z,y)$ its graph is the
+exact actual kernel normalized by $W=1$.
+
+Put $q=H+r-1$.  The graph amplitudes, with $W$ suppressed, are
+\[
+\begin{array}{lll}
+ x_0=-rUv/B,&y_0=Hu/B,&z_0=uv/B,\\
+ M_0=v(B+Uq)/B,&c_0=Lu/B,&J_0=u\{L-V(1+rU)\}/B,\\
+ p_0=-(1-H)uv/B,&b_0=(1-r)Uv/B.&
+\end{array}                                                   \tag{DI2}
+\]
+The complete state-normal quadratic of the original parent is
+\[
+\begin{split}
+ Q={}&(4m+2)(\xi+u\zeta-uv\eta)^2
+ +(4nD_uD_v+2D_uv^2)\xi^2\\
+ &+(4CD_v+4AD_uD_v+2D_v)\eta^2
+ +4D(uv\xi-\eta-v\zeta)^2\\
+ &+4\alpha D_u(v\eta-\zeta)^2.
+\end{split}                                  \tag{DI3}
+\]
+In particular the signed core restricted to $W=0$ is exactly
+\[
+ 2(\xi+u\zeta-uv\eta)^2+2D_uv^2\xi^2+2D_v\eta^2.
+\]
+This SOS identity uses neither a matrix inverse nor a mixed order.
+
+Here are every first-normal polynomial, without suppressed terms.
+Define
+\[
+\begin{split}
+ A_x(U)={}&-4nr(1+y)(1+U+z)-4mq\\
+ &+(4D+2)\{L-y[1+r(U+z)]\}+2(1+y)(1-r),\\
+ B_x(U)={}&-4nrU(1+U)-(4D+2)U(1+rU)+2(1-r)U,\\
+ A_\eta={}&4myq+4AH(1+y)+(4D+2)ry-(4\alpha+2)y(1-H),\\
+ B_\eta(U)={}&4m(B+Uq)-4CL+4AH(1+U)\\
+ &+(4D+2)(1+rU)-(4\alpha+2)(1+U)(1-H),\\
+ A_\zeta={}&-4mq+(4D+2)ry+(4\alpha+2)(1-H)-2r(1+y),\\
+ B_\zeta(U)={}&4D(1+rU).
+\end{split}                                                    \tag{DI4}
+\]
+Then the exact full parent is
+\[
+\begin{split}
+ F={}&Q+F_{\rm graph}\\
+ &+\frac{2W}{B}\bigl[
+ v\xi\{(U-z)A_x+(V-y)B_x\}
+ +u\eta\{(U-z)A_\eta+(V-y)B_\eta\}\\
+ &\hspace{37mm}+uv\zeta\{(U-z)A_\zeta+(V-y)B_\zeta\}\bigr].
+                                                               \end{split} \tag{DI5}
+\]
+To see the ideal membership without an approximation, the respective
+linear coefficients divided by $v/B,u/B,uv/B$ are polynomials affine
+in $V$ and at most quadratic in $U$.  Their values at $(z,y)$ vanish
+by the exact original state-kernel equations.  Subtract their value
+first at $V=y$ and then at $U=z$; this gives exactly (DI4).  The
+divisions by $u$ and $v$ in this explanatory derivation are polynomial
+factorizations; (DI4)--(DI5) themselves have no such divisions.
+
+\paragraph{The angular scalar is an exact contact-ideal polynomial.}
+Define positive source coefficients
+\[
+\begin{gathered}
+ p_2=r^2(D+n+\tfrac12),\quad
+ p_1=2Dr+nr^2+\tfrac12r^2,\quad
+ P(U)=p_2U^2+p_1U+D,\\
+ q_1=AH^2,\quad q_0=AH^2+(C+D+\tfrac12)L^2,\quad
+ d_0=mB^2,\quad a_y=nr^2+yp_2,\\
+ K(U)=yp_2(U+z)+yp_1-q_1/y.
+\end{gathered}
+\]
+The following identity is exact for the entire source chart, including
+the weak-$\alpha$ face and literal $n=0$:
+\[
+\boxed{\begin{aligned}
+ F_{\rm graph}=\frac{4W^2}{B^2}\biggl[&
+ V(U-z)^2\Bigl(a_yU+\frac{d_0}{z^2}\Bigr)
+ \\
+ &+U(V-y)^2P(U)+U(U-z)(V-y)K(U)\biggr].
+ \end{aligned}}                                      \tag{DI6}
+\]
+For a short derivation, put $f=B^2F_{\rm graph}/(4UV W^2)$ formally.
+Its nine Laurent supports are
+\[
+ (2,1),(2,0),(1,1),(1,0),(1,-1),(0,1),(0,0),(0,-1),(-1,0).
+\]
+All coefficients other than $(1,0)$ and the constant coefficient are
+nonnegative; their positive values are respectively
+$p_2,nr^2,p_1,q_1,D,q_0,d_0$.
+Thus
+\[
+ f=P(U)V+(q_1U+q_0)/V+nr^2U^2+b_0'U+c_0'+d_0/U.
+\]
+Exact contact and its two angular derivatives give
+$q_1z+q_0=y^2P(z)$ and
+\[
+ f(U,y)=(U-z)^2\{a_y+d_0/(z^2U)\}.
+\]
+Subtracting $f(U,y)$ proves (DI6).  Multiplication by $UV$ removes
+all testing inverses, so the boxed polynomial identity includes the
+literal testing axes.  In particular its formal $V=y$ slice is SOS,
+but the mixed term in (DI6) and all three lines of (DI4) remain part
+of the independent-testing problem.
+
+\paragraph{A full-parent bounded remainder on the strong face.}
+On $B$-unit II, the source entry gives positive units
+\[
+ m/z^2,\quad A/y,\quad CL,\quad Dyj,\quad
+ \alpha(1-H),\qquad nr\ \hbox{bounded}.              \tag{DI7}
+\]
+Here $H=B-L$ and $1-r$ are units.  The latter assertion follows from
+the exact numerator identity
+$E(1)=-(H+y)(B+z)(1+z)$ for
+$E(r)=(B+zr)(1+zr)(1+zr+L)-r\delta$ and $E(r)\ge0$.
+All claims in (DI7) retain arbitrary openings $j,1-H,r$.
+
+Choose any bounded cap $0\le n_*\le n$ and any positive real cap
+$0<\alpha_*\le\alpha$.  Set
+\[
+\begin{split}
+ P_C&=4CD_v\eta^2,\\
+ P_D&=4D\{J+(yj/B)uW\}^2,\\
+ P_n&=4(n-n_*)D_uD_v\xi^2,\\
+ P_\alpha&=4(\alpha-\alpha_*)D_u(v\eta-\zeta)^2.
+\end{split}                                                    \tag{DI8}
+\]
+Each displayed root vanishes at the actual contact.  The exact identity
+$F=P_C+P_D+P_n+P_\alpha+G$ has a polynomial remainder $G$ with
+bounded source coefficients; for bounded affine tests this is a bounded
+tensor polynomial.  Indeed its four changed packets are
+exactly
+\[
+\begin{split}
+ G_C={}&4CD_v\{c_0^2W^2-2c_0W\eta\},\\
+ G_D={}&-8D(yj/B)uWJ-4D(yj/B)^2u^2W^2,\\
+ G_n={}&4n_*D_uD_vX^2
+ +4(n-n_*)D_uD_v\{x_0^2W^2+2x_0W\xi\},\\
+ G_\alpha={}&4\alpha_*D_u(vY-Z)^2
+ +4(\alpha-\alpha_*)D_u\{p_0^2W^2+2p_0W(v\eta-\zeta)\}.
+\end{split}                                                    \tag{DI9}
+\]
+Add the unchanged $4mM^2+4AD_uD_vY^2$ and the entire signed core.
+Boundedness follows from (DI7), since the only potentially large
+products are $CL$, $Dyj$, $nr$, $nr^2$, $\alpha(1-H)$ and
+$\alpha(1-H)^2$.  No coefficient inverse involving a test is
+taken.  The graph raises the testing degree, so one must not identify
+its common higher-degree homogenization at a literal projective endpoint
+with the original parent's endpoint form.  Endpoint joins remain part
+of any future all-tests admission.  All removed packets have zero first
+jet, so $G$ retains the
+exact contact and every first derivative.  This proposition asserts
+boundedness, not positivity, of $G$.
+
+\paragraph{The precise remaining obligation.}
+Equations (DI3)--(DI6) expose the same contact ideal on both source
+faces and print every state normal.  Equation (DI8) additionally
+removes all unbounded source coefficients on the strong face.
+A completion must allocate the mixed angular term in (DI6) together
+with all of (DI4), using retained packet roots or further admissible
+roots, and prove a strict bounded Gram or exact SOS for every
+independent testing rate.  The factors $1/B$ and $d_0/z^2$ cannot be
+declared uniformly bounded on the weak face; its source normalization
+remains a separate task.  Neither remaining checklist row is closed
+by the present reduction.

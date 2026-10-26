@@ -1,0 +1,201 @@
+\chapter{Every noncommuting positive-$d$ contact is regular}
+\label{component:pe25c50379365}
+\noindent\textbf{Component }\path{pe25c50379365}\par
+{\small\noindent Source: \path{CORE/prior/inherited/structural_terminals.tex}\par}
+{\small\noindent SHA256: \path{e25c503793657fdc2ca93ef5832ce6b4eec9c9b8a8ad280698b03bcc396519d4}\par}
+{\small\noindent Inventory use: lem:regular; thm:curvature | unconstrained/support curvature and constrained terminals; lem:regular; thm:curvature | C14\_\allowbreak{}ENTIRE\_\allowbreak{}ORIGINAL\_\allowbreak{}PARENT\_\allowbreak{}GRAPH; precise subordinate uses retained below\par}
+\medskip
+\section{Every noncommuting positive-$d$ contact is regular}\label{pe25c50379365:sec:regular}
+The first simplification removes an entire kind of apparent degeneracy. It requires no chart census: at positive signed CHSH weight, physicality itself forces angular curvature.
+
+\begin{lemma}[Exact regular-contact certificate]\label{pe25c50379365:lem:regular}
+Let $F(c,z)\in\R[c,z]$, with bounded $c\in B_c^m,z_t\in B_t^n$ and residues $c_0,z_0$. Suppose
+\[
+F(c_0,z_0)=0,\quad \nabla_zF(c_0,z_0)=0,\quad
+\nabla_z^2F(c_0,z_0)\succ0,
+\]
+and $F(c,z)\ge0$ for all $z\in K_c^n$. Then $F^\otimes(c,z_t)\in\Sigma T^2$.
+\end{lemma}
+\begin{proof}
+The real implicit-function theorem gives a unique critical branch $z=\sigma(c)$ in fixed real neighborhoods. Its graph is semialgebraic: it is defined by the polynomial gradient equations with the neighborhood restrictions ensuring uniqueness. After shrinking, it satisfies a real Lipschitz bound $\norm{\sigma(c')-z_0}\le M\norm{c'-c_0}$. This fixed first-order existence, uniqueness and bound statement transfers to $K_c$. Thus there is $z_c$ of residue $z_0$ with $\nabla_zF(c,z_c)=0$.
+
+Put $a=F(c,z_c)\ge0$ and $h_i=1\otimes z_{t,i}-z_{c,i}\otimes1$. Finite polynomial Taylor expansion is exact:
+\[
+F^\otimes(c,z_t)=a\otimes1+h^TQh,\qquad
+Q\in\Sym_n(B),\quad\bar Q=\tfrac12\nabla_z^2F(c_0,z_0)\succ0.
+\]
+For an explicit allocation, give each monomial of degree at least two two of its $h$ factors as roots, and leave its remaining factors in the Gram coefficient. Degree-one terms vanish. Every coefficient of degree at least three then has an infinitesimal factor. Symmetrize cross terms with a factor one half. The constant is $(\sqrt a\otimes1)^2$; Lemma~\ref{p25af2c58da7e:lem:gram} handles the quadratic form. There is no infinite series or mixed inverse.
+\end{proof}
+
+\begin{theorem}[Automatic angular curvature]\label{pe25c50379365:thm:curvature}
+Fix real source coefficients with $d>0$ and all eight event coefficients nonnegative, and suppose the canonical parent is PSD at every pair of real angles. At every finite zero contact $(u_0,v_0,\psi_0)$ with $u_0v_0\ne0$ and $\psi_0\ne0$, the active outer Laurent exponents span $\R^2$. The Hessian in two angle coordinates and three projective state coordinates is positive definite.
+\end{theorem}
+\begin{proof}
+The transverse state block is positive definite by the signed-core formula in Section~\ref{p0c8f420148b7:sec:physical}. At a zero contact, $\det P$ and its first angle derivatives vanish. The Laurent determinant therefore satisfies
+\[
+\sum_{e\in E}w_e e=0,\qquad w_e=q_eU^{e_1}V^{e_2}>0.
+\]
+If $E$ has rank one, it is an opposite pair in the eight-point Newton square. Since all $t_i>0$, an outer exponent is active precisely when one of the coefficient products in its displayed determinant formula is positive. No further activation table is needed.
+A horizontal opposite pair also activates an off-line product: combining $\lambda D$ or $\alpha m$ with $\beta n$ or $cA$ forces, respectively, $\lambda n,cD,\beta m,\alpha A$. The vertical case is identical with the roles exchanged. The two diagonal pairs force exactly the supports $\{n,m,A,D\}$ and $\{\lambda,c,\alpha,\beta\}$; any extra positive event activates an off-line exponent.
+
+Both diagonal supports are impossible. At $u=v=1$, the signed core matrix is
+\[
+C=\begin{pmatrix}2&2&-2&-2\\2&6&-2&2\\-2&-2&6&-2\\-2&2&-2&2\end{pmatrix}.
+\]
+For the first support take $z=(1,0,0,1)$, and for the second take $z=(1,-1,1,1)$. The respective positive event packets annihilate $z$, while $z^TCz=0$ and $Cz\ne0$. Thus $z^TPz=0$ but $Pz=dCz\ne0$, contradicting $P\succeq0$.
+
+If $E$ has rank zero, the support contains none of the twelve activating pairs. Arrange the event labels cyclically as
+\[
+(\lambda,D,c,A,\alpha,m,\beta,n).
+\]
+Those pairs are exactly the eight neighboring pairs and the four opposite pairs. An independent set has at most three vertices: a four-element independent set in the cycle would be an alternating set and would contain an opposite pair. A maximal independent triple has cyclic gaps $(2,3,3)$; any smaller independent set extends to one. These triples form one symmetry orbit. Indeed the CHSH maps $g_A,g_B,g_T$ from Section~\ref{p0c8f420148b7:sec:physical} act on the cyclic index $i$ as $5-i,3-i,2-i$ modulo eight, so $g_Bg_T$ is a one-step rotation.
+
+It therefore suffices to consider $\{\lambda,m,c\}$. The single polynomial state
+\[
+\psi_H=(uv,-u,u^2v,1+v^2+u^2v^2)
+\]
+annihilates all three event amplitudes. Substitution in the signed parent gives exactly
+\[
+F_H(\psi_H)=-2u^2v^2(1+u^2)(1+v^2)<0\qquad(uv\ne0),
+\]
+where $F_H$ denotes the parent with $d=1$ and every event weight zero. Thus a source supported in the triple has $F(\psi_H)=dF_H(\psi_H)<0$. Symmetry gives the contradiction for every rank-zero support. This replaces the entire witness table by one Hardy-state identity.
+
+Hence $E$ spans $\R^2$. In a fixed real kernel basis write
+\[
+P(\theta)=\begin{pmatrix}a&b^T\\b&C_0\end{pmatrix},\qquad
+F=a+2b^Ty+y^TC_0y,\quad C_0(\theta_0)\succ0.
+\]
+The angle Schur complement of the state Hessian is the Hessian of $a-b^TC_0^{-1}b$. Since $\det P=(\det C_0)(a-b^TC_0^{-1}b)$ and the Laurent value and gradient vanish, its sign equals that of
+\[
+\nabla^2L=\sum_{e\in E}w_e ee^T\succ0.
+\]
+The change from $(u,v)$ to $(\log u^2,\log v^2)$ is locally invertible. The full Hessian is therefore positive definite. All inverses in this paragraph are ordinary real residue calculations.
+\end{proof}
+
+Normalize the source by a positive pure coefficient factor and choose a bounded projective testing-state chart. Physicality gives the polynomial positivity premise of Lemma~\ref{pe25c50379365:lem:regular} over the coefficient field by transfer. Applying that lemma proves tensor SOS at every noncommuting zero residue with $\bar d>0$; restore the projective state scale by its pure testing square. A positive residue slack is already covered by Lemma~\ref{p25af2c58da7e:lem:residue}. Thus the unresolved residue geometry is confined to commuting tests and $\bar d=0$.
+
+\section{The commuting corner: a sharp leading inequality and a full certificate}\label{pe25c50379365:sec:corner}
+Put $\lambda=\alpha=0$ temporarily. At $u=v=0$ the parent is $2t_7X^2+2t_8Y^2$, where
+\[
+t_7=d+2(\beta+n+m),\qquad t_8=d+2(c+A+D).
+\]
+Give $u,v,X,Y$ weight one and $W,Z$ weight zero. The exact degree-two part is
+\[
+F_2=2t_7\left(X+\frac{L_x}{2t_7}\right)^2
++2t_8\left(Y+\frac{L_y}{2t_8}\right)^2+4\mathcal B,
+\]
+where
+\begin{align*}
+L_x&=-4mvW+2(t_7-2n)uZ,&
+L_y&=-2(t_8-2A)uW+4DvZ,\\
+\mathcal B&=a(uW)^2+b(vW)^2+\gamma(uZ)^2+e(vZ)^2-\kappa uvWZ,\\
+a&=\frac{A(t_8-2A)}{t_8},&b&=\frac{m(t_7-2m)}{t_7},\\
+\gamma&=\frac{n(t_7-2n)}{t_7},&e&=\frac{D(t_8-2D)}{t_8},\\
+\kappa&=d+\frac{4mn}{t_7}+\frac{4AD}{t_8}.&&
+\end{align*}
+Physicality implies $F_2\ge0$: substitute $\varepsilon(u,v,X,Y)$, divide by $\varepsilon^2$, and take the real limit. The resulting fixed algebraic condition transfers to real closed fields.
+
+\begin{proposition}[Exact leading condition]
+For $a,b,\gamma,e\ge0$ and $\kappa>0$,
+\[
+\mathcal B\ge0\text{ for all }u,v,W,Z
+\quad\Longleftrightarrow\quad
+\kappa\le2(\sqrt{ae}+\sqrt{b\gamma}).
+\]
+\end{proposition}
+\begin{proof}
+Let $R_0=\sqrt{ae}+\sqrt{b\gamma}$. For positive coefficients choose the ratios $u/v$ and $W/Z$ to attain simultaneously the two arithmetic--geometric mean equalities. This proves necessity; zero coefficients follow by adding an arbitrarily small positive real number and passing to the limit. For sufficiency put $\vartheta=\kappa/(2R_0)\le1$. Exactly,
+\begin{align*}
+\mathcal B={}&\vartheta\big[(\sqrt a\,uW-\sqrt e\,vZ)^2
+ +(\sqrt b\,vW-\sqrt\gamma\,uZ)^2\big]\\
+&+(1-\vartheta)\big[a(uW)^2+b(vW)^2+\gamma(uZ)^2+e(vZ)^2\big].
+\end{align*}
+All roots and weights split into the correct fields.
+\end{proof}
+
+\begin{theorem}[Strict commuting certificate]
+Assume all source entries are bounded and nonnegative, $\bar d>0$, and $u,v$ are infinitesimal or zero. If $\bar a,\bar b,\bar\gamma,\bar e>0$ and
+\[
+\bar\kappa<2(\sqrt{\bar a\bar e}+\sqrt{\bar b\bar\gamma}),
+\]
+the entire parent is tensor SOS for arbitrary state coordinates. The actual source may have any nonnegative $\lambda,\alpha$.
+\end{theorem}
+\begin{proof}
+Retain the $\lambda,\alpha$ packets as positive squares. On
+$g=(X,Y,uW,vW,uZ,vZ)$, the displayed completion makes the Gram of $F_2$ strictly positive in residue. The entire remaining difference is exactly $g^TEg$ with $\bar E=0$.
+
+Here is a finite allocation proving the last assertion. Every omitted monomial has weighted degree at least four. With two state factors from $X,Y$, leave its at least two angle factors in the coefficient. With one state factor from $W,Z$, allocate one angle to that factor and leave at least two angles. With two factors from $W,Z$, allocate one angle to each and leave at least two. Every allocation exists because all four angular roots are present. The coefficients are bounded and have zero residue; no state coordinate occurs in them. Apply Lemma~\ref{p25af2c58da7e:lem:gram} and restore the retained squares.
+\end{proof}
+
+\section{A critical wall resolved by five roots}\label{pe25c50379365:sec:wall}
+The following full-parent result includes an exact critical equality. Write
+\[
+t=d+2(c+A+D),\qquad
+\Delta=8ADc-4ADd-d^2t.
+\]
+\begin{theorem}[Critical-wall certificate]\label{pe25c50379365:thm:wall}
+Let the source entries be bounded and nonnegative with $\bar d,\bar A,\bar D>0$. If the actual coefficient-field number $\Delta\ge0$, then at every independent infinitesimal or zero $u,v$ the complete parent is tensor SOS, for arbitrary state coordinates.
+\end{theorem}
+\begin{proof}
+Retain all event packets except $c,A,D$. The remaining signed core plus those three events is exactly quadratic in
+\[
+R=X+uZ,\quad U=uW,\quad V=vZ,\qquad g=(R,Y,U,V).
+\]
+For a direct verification, set $C=U+uvR-Y$, $Q=R-D_uuvV/D_v$. The signed core equals
+\[
+K=2\left[C^2+D_vQ^2+D_uv^2Y^2+
+\frac{D_uu^2(1-u^2v^2)}{D_v}V^2\right]-4D_uUV.
+\]
+The three event terms are $4cD_v(U-Y)^2$, $4AD_uD_vY^2$ and $4D(C-D_uV)^2$. This defines the entire four-root Gram $G(u,v)$, with only a pure testing denominator $D_v>0$.
+
+The identity
+\[
+\Delta=2c(4AD-d^2)-d(d+2A)(d+2D)
+\]
+shows that $\Delta\ge0$ implies
+\[
+c\ge c_*:=\frac{d(d+2A)(d+2D)}{2(4AD-d^2)},\qquad 4AD-d^2>0.
+\]
+Since $c_*$ is bounded above by bounded $c$, while its numerator has positive residue, $4AD-d^2$ has positive residue. Thus all the following coefficient quotients are bounded. Retain the excess $c-c_*$ as an additional positive packet and set $c=c_*$. For the remainder of this proof redefine $t:=d+2(c_*+A+D)$.
+
+At $u=v=0$, $G$ has rank three and null vector
+\[
+z=(0,y,q,1),\qquad
+y=\frac d{2A},\quad q=\frac{D(2A+d)}{A(2D+d)}.
+\]
+Use the bounded pure coefficient change
+\[
+h_1=R,\quad h_2=Y-yV,\quad h_3=U-qV,\quad N=V.
+\]
+The hard block at zero is
+\[
+H_0=\operatorname{diag}\!\left(2d,
+\begin{pmatrix}2t&-2(t-2A)\\-2(t-2A)&2(t-2A)\end{pmatrix}\right)\succ0.
+\]
+The $2\times2$ determinant is $8A(t-2A)>0$. The exact null evaluation is
+\[
+z^TG(u,v)z=a_{20}u^2+a_{02}v^2+a_{40}u^4+a_{22}u^2v^2,
+\]
+with
+\[
+a_{20}=\frac{d(2A+d)}A,\quad
+a_{02}=\frac{Dd(2A+d)^2}{A^2(2D+d)},\quad
+a_{40}=2(2D+d),\quad
+a_{22}=\frac{d^2(2A+d)}{2A^2}.
+\]
+All are positive, and $a_{20},a_{02}$ have positive residues. For complete control of the cross terms, the three hard-null entries are
+\begin{align*}
+(Gz)_1&=-\frac{uv}{A}\big[(4AD+2Ad)u^2+2Ad+d^2\big],\\
+(Gz)_2&=\frac{u^2}{A}\big[4AD+2Ad+(2Ad+d^2)v^2\big],\\
+(Gz)_3&=\frac{-(4AD+2Ad)u^2+(2Ad+d^2)v^2}{A}.
+\end{align*}
+These formulas follow by substituting $z$ into the four displayed packet expressions; they are identities of the entire parent.
+
+Use the five roots $(h_1,h_2,h_3,uN,vN)$. Allocate a factor $uN$ in the first two cross terms, leaving a coefficient divisible by $v$ or $u$; split the third between $uN$ and $vN$. The hard-hard corrections vanish at zero. Give $uN$ the diagonal $a_{20}+a_{40}u^2+a_{22}v^2$, and $vN$ the diagonal $a_{02}$. The exact Gram therefore has residue
+\[
+\operatorname{diag}(\bar H_0,\bar a_{20},\bar a_{02})\succ0.
+\]
+Apply Lemma~\ref{p25af2c58da7e:lem:gram} and restore all retained squares. No $u$, $v$, state coordinate or mixed tensor has been inverted.
+\end{proof}
+
+Theorem~\ref{pe25c50379365:thm:wall} covers the wall itself and arbitrary nonnegative infinitesimal $\Delta$. It does not cover $\Delta<0$ infinitesimal when other event packets compensate the deficit. The equality theorem alone does not justify an open neighborhood on that side.

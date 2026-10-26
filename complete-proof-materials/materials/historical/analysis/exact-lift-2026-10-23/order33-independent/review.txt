@@ -1,0 +1,138 @@
+Independent review of the exact order-33 counterexample
+23 October 2026
+
+DECISIVE RESULT
+The printed all-positive rational source
+  cbar=(1,2^-34,2^-14,2^-24,1/576,161,1/2,76,1/250)
+is valid for every full state and every real/projective angle pair, but
+admits no native-v polynomial half-line selector of ANY degree in the
+printed two-LMI completion. In particular, the evaluated order-33 cone is
+a proper subcone of the full nonnegative canonical validity cone. No
+decisive defect was found in this result.
+
+Inputs actually checked
+-----------------------
+Pro package: pro-order33-obstruction/Q222_Halfline_Counterexample/
+  proof/halfline_counterexample.tex (counterexample, separator, validity),
+  proof/dual_six_matrices.tex,
+  data/dyadic_order33_separator.json,
+  data/verify_exact_separator.py (read, not used as the independent map),
+  reused/check_source_validity.py (read, then run with private output).
+
+Our published, full-symmetric COO files:
+  github-q222-finite-sdp/extracted-lifts/canonical-completion/halfline/
+  HALFLINE_QUADRATIC_SELECTOR_ORDER24.coo.json
+    SHA256 992102bb950ba0d94fcd87fe92c11d8b1521a94635c0d262a04ae9d049e117bb
+  HALFLINE_QUADRATIC_SELECTOR_ORDER33.coo.json
+    SHA256 f1a66f929de9f64b06951804ef4c87e06e0e05858f99d0b3daeb23587b472f2b
+
+1. Direct contraction with the published compiler
+------------------------------------------------
+The independent checker reads the six original rational moment matrices,
+checks their stated congruence from all six hatted matrices, and parses the
+six printed TeX matrices to confirm exact agreement with the data. It
+forms the four dual blocks M_G,M_H,R_G,R_H and computes fresh exact LDL
+pivots. Every pivot is positive. Supplied LDL factors are not relied on.
+The full order-33 dual is their direct sum with nine scalar zero blocks.
+
+The checker contracts that dual with EVERY printed COO coefficient,
+using the actual full-symmetric storage convention once per entry. For
+each order, all 44 auxiliary contractions are exactly zero, and the nine
+source contractions equal 2^-42 times
+  ell=(-23803618,906393494300170,2744379904,1378590360912,
+       5935589516,20425,2600028,91248,278104928).
+The twelve selector overlap equations are also individually verified.
+Thus the conclusion does not depend on Pro's derived dual-map formula
+matching our compiler: it is checked against the published arrays.
+
+At the all-positive source, exact arithmetic gives
+  ell(cbar)=-5417798011632274183/9663676416000 < -560635.
+The actual PSD trace is 2^-42 times that value, also strictly negative.
+For any purported feasible primal all four Gram pairings would be
+nonnegative. This direct contradiction proves infeasibility without a
+duality theorem, a closure argument, or an assumption of numerical solver
+accuracy. The source-sign dual entries are zero and cannot change the
+contraction. The original unrounded cstar is also separated, with
+  ell(cstar)=-303722700569565123211387668040/267603838100324717114473.
+
+2. Full-state validity, not merely a determinant test
+----------------------------------------------------
+The old source cstar exactly matches the published rational physical
+source, SHA256
+  0479aeabc84cb1e3a71073d5162df83af8603c5f94609742498b0659ad793b75.
+The inspected standard-library source verifier directly expands its raw
+four-by-four parent determinant by all 24 permutations and checks the
+printed Laurent identity coefficientwise. Its output was written only
+to this private directory. The determinant has 23 nonzero polynomial
+terms and bidegree (8,8).
+
+I also checked the analytical validity implication. Set x=169u^2 and
+y=v^2/256. All four printed rho coefficients are positive; the four
+brackets x+1/x-2, y+1/y-2, y/x+x+1/y-3, and xy+1/x+1/y-3 are
+nonnegative by AM-GM. The independent checker confirms their combined
+six Laurent weights exactly match the direct determinant expansion.
+Their two exponent balances are exactly zero.
+
+For u!=0, the Z=0 principal state block is bounded below by
+  T^T diag(4m,4C Dv,4A Du Dv)T,
+  T=[[v,-1,uv],[u,0,-1],[0,0,1]], det T=u.
+All three coefficients are positive, and all other Z=0 terms are
+nonnegative. This makes that principal block positive definite. The
+nonnegative full determinant then makes its scalar Schur complement
+nonnegative. Therefore the entire four-state matrix is PSD for uv!=0.
+Polynomial continuity includes the axes; its continuous bihomogeneous
+extension includes the projective endpoints. The argument retains all
+state coordinates and all signs of both angles. Real symmetric positivity
+also covers complex state vectors by splitting real and imaginary parts.
+
+The checker confirms cbar-cstar>=0 coordinatewise, with delta d=0 and
+strictly positive cbar. Each changed coordinate multiplies a nonnegative
+event form. Hence F_cbar=F_cstar+F_delta>=0 for all the same states and
+tests. This establishes validity without relying on the new ramified
+certificate, which is being checked separately.
+
+3. Why every polynomial selector is excluded
+-------------------------------------------
+The conclusion is stronger than failure of one chosen degree. If any
+polynomial J(v) made G_J(v) PSD for all v>=0, its two-by-two principal
+minors would imply
+  |J_ij(v)|^2 <= (P+K)_ii(v)(N+K)_jj(v)=O(v^4).
+For a fixed source the right side is a fixed polynomial of degree at
+most four. A nonzero polynomial J_ij of degree greater than two cannot
+satisfy that bound as v tends to positive infinity. Thus J has degree
+at most two.
+
+For a quadratic real symmetric matrix polynomial nonnegative on the
+half-line, the univariate matrix-SOS theorem gives exactly
+  Q(v)=[I;vI]^T S[I;vI]+vT, S>=0,T>=0.
+One can see the degree and form by factoring Q(s^2), which is an even
+globally PSD quartic matrix polynomial, then averaging its polynomial
+SOS at s and -s and separating even and odd roots. No nonsingularity
+assumption is required. Therefore any polynomial selector would produce
+the four Gram blocks of the evaluated order-33 compiler, contradicted by
+the exact separating trace. The result excludes polynomial dependence
+on the native v coordinate of every degree; it does not exclude rational,
+piecewise, or ramified algebraic selectors.
+
+4. Scope and assembly dependency
+--------------------------------
+Directly certified here: C33 is strictly smaller than the nonnegative
+nine-source canonical validity cone, and cbar is an explicit witness.
+No ramified-order49 adequacy or repaired certificate was audited here.
+No inference from one chart alone to the full relabelled construction is
+silently made. Combining this result with the parent's separately proved
+no-rescue assembly theorem (Theorem 2 of full_polar_assembly.tex) does give
+strictness of the full order-264 outer construction, under that theorem's
+closed-cone and event-face hypotheses. That geometric theorem is outside
+this bounded review, as requested.
+
+Reproduction/evidence
+---------------------
+Own checker: check_order33_counterexample.py
+Own exact receipt: order33_counterexample_checks.json
+Source-validity receipts: pro_completion_selfcontained_data.json and
+                         pro_completion_selfcontained_checks.json
+The own checker uses only fractions, standard-library parsing, direct
+COO contraction and fresh LDL elimination; runtime below 0.2 s. The
+inspected source-validity checker ran in about 0.2 s. No solver or sweep
+was used, and supplied/public files were not modified.

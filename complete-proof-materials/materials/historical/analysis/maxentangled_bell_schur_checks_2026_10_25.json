@@ -1,0 +1,18 @@
+{
+  "full_real_planar_Bell_basis_identity_exact": true,
+  "normal_basis": [
+    "-Phi_minus",
+    "Psi_plus",
+    "Psi_minus"
+  ],
+  "normal_block": "2*[[-Jxx,-Jxz,ux],[-Jxz,-Jzz,uz],[ux,uz,-Jxx-Jzz]]",
+  "derivative_action_normal_components": [
+    "-qz",
+    "qx",
+    "Mzx-Mxz"
+  ],
+  "ordinary_coefficient_quadric_factor_exact": true,
+  "quadric_factor": "ordinary_quadric = -2*(D*(alpha+d/2)-m*(C+d/2))",
+  "Hessian_scope": "Necessary 5x5 joint state/angle matrix at one fixed real planar zero; no global sufficiency.",
+  "no_solver_or_numerical_sweep": true
+}

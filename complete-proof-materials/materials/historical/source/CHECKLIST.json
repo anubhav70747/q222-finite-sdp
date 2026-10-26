@@ -1,0 +1,231 @@
+{
+  "counts": {
+    "open": 7,
+    "scoped_completed": 13,
+    "total": 20
+  },
+  "global_exact_lift_extraction_complete": false,
+  "historical_549_page_proof_recreated": false,
+  "items": [
+    {
+      "acceptance_and_result": "The canonical August 30 source and the August 31 frozen ZIP match their recorded SHA-256 digests. The earlier continuation archive is preserved unchanged. This verifies custody, not all inherited mathematics.",
+      "evidence": [
+        "inputs/SOURCE_CUSTODY.json",
+        "recovered/Q222_Extraction_Continuation_Package_2026-10-22.zip"
+      ],
+      "id": "S01",
+      "status": "COMPLETE",
+      "title": "Recover and bind the retained source inputs"
+    },
+    {
+      "acceptance_and_result": "The finite identity gamma=p(x)+q(y)+sum(A_i(x)+delta)(B_i(y)+delta) has explicit strict sign bounds and a fixed order-two block conversion. The toy 1+xy example is fully evaluated.",
+      "evidence": [
+        "diagonal/diagonal_proofs.tex",
+        "diagonal/SEPARATED_COEFFICIENT_EXACT.json"
+      ],
+      "id": "L01",
+      "status": "COMPLETE",
+      "title": "Explicitly separate every positive local coefficient"
+    },
+    {
+      "acceptance_and_result": "Given exact J^2 data and positive tangential residue, add a normal Gram term, use a constant matrix change, and apply the fixed m^2-frame identity. The theorem leaves its global hypotheses to be instantiated.",
+      "evidence": [
+        "diagonal/diagonal_proofs.tex",
+        "diagonal/DIAGONAL_FRAME_EXACT.json"
+      ],
+      "id": "L02",
+      "status": "COMPLETE",
+      "title": "Prove the denominator-free smooth-diagonal construction"
+    },
+    {
+      "acceptance_and_result": "The complete parent, six contact equations, regular contact graph, exact Taylor matrix, 25 frames and rational radius are evaluated. The source/contact box and testing box vary independently. This is one normalized local domain.",
+      "evidence": [
+        "c2/regular_c2_local_proof.tex",
+        "c2/regular_c2_frames.json",
+        "c2/regular_c2_independent_verification.json"
+      ],
+      "id": "L03",
+      "status": "COMPLETE_LOCAL",
+      "title": "Evaluate a full regular-C2 contact box"
+    },
+    {
+      "acceptance_and_result": "Delivered: 785 order-two blocks, 1570 listed feature entries with repetitions, 237 ambient monomials, 27747 product coefficients, and 295 target coefficients in seven source columns. These do not specify a global eight-coordinate quantum lift.",
+      "evidence": [
+        "c2/regular_c2_feature_list.json",
+        "c2/regular_c2_product_map.json",
+        "c2/regular_c2_build.py",
+        "c2/regular_c2_check.py"
+      ],
+      "id": "L04",
+      "status": "COMPLETE_LOCAL",
+      "title": "Evaluate the regular-C2 feature list and product map"
+    },
+    {
+      "acceptance_and_result": "The four displayed coefficient scalars form exactly the nonnegative orthant, with four rational necessity tests, nine polynomial square features, and an order-four diagonal pencil. August repair R5 factor typing is retained.",
+      "evidence": [
+        "diagonal/B0_EXACT.json",
+        "diagonal/diagonal_proofs.tex"
+      ],
+      "id": "B01",
+      "status": "COMPLETE_MODULE",
+      "title": "Extract the displayed B0 coefficient module"
+    },
+    {
+      "acceptance_and_result": "Twenty monomials suffice when the 4-by-4 state congruence is independent of polynomial-testing variables U,V. This is a conditional envelope; it does not assert that order-two blocks survive or that the physical restoration map is known.",
+      "evidence": [
+        "diagonal/B0_EXACT.json",
+        "diagonal/diagonal_proofs.tex"
+      ],
+      "id": "B02",
+      "status": "COMPLETE_CONDITIONAL",
+      "title": "Bound the feature envelope under a fixed-testing-variable congruence"
+    },
+    {
+      "acceptance_and_result": "Required: the complete state congruence, every pure-factor scaling/clearing function and its domain, the original slack identity, original-coordinate map, and every singular or zero-factor branch. The retained base asserts a congruence but does not print these data.",
+      "evidence": [
+        "inputs/canonical_august30/Q222_SXDEG2_CONSOLIDATED_PARCHMENT_FINAL_2026-08-30.md",
+        "inputs/frozen_august31/Q222_SXDEG2_CORRECTION_PATCH_AND_FREEZE_2026-08-31.md",
+        "diagonal/diagonal_proofs.tex"
+      ],
+      "id": "B03",
+      "status": "OPEN",
+      "title": "Supply the actual B0 radial restoration and clearing maps"
+    },
+    {
+      "acceptance_and_result": "All six reduced forms, thirty Jacobian entries and six primitive cofactors are evaluated; all five JX=0 identities hold. This is a restricted stationary-contact parametrization, not a proof of global physical validity or boundary completeness.",
+      "evidence": [
+        "diagonal/EVENT_CONTACT_EXACT.json",
+        "diagonal/DIAGONAL_VERIFICATION.json",
+        "diagonal/diagonal_proofs.tex"
+      ],
+      "id": "C01",
+      "status": "COMPLETE_RESTRICTED",
+      "title": "Reconstruct the restricted event-contact cofactor vector"
+    },
+    {
+      "acceptance_and_result": "The reflection SOS, attainment, all real tilt parameters, both signs, endpoint completion, and separately labelled real-closed-field factors are covered for the stated two-coordinate projection.",
+      "evidence": [
+        "compiler/tilted_family_exact_extraction.tex",
+        "compiler/TILTED_SOURCE_CERTIFICATES.json"
+      ],
+      "id": "T01",
+      "status": "COMPLETE",
+      "title": "Certify the complete tilted-CHSH support family"
+    },
+    {
+      "acceptance_and_result": "The order-five lift has one auxiliary and 14 nonzero upper coefficient records over Q(sqrt(2)); elimination gives order four, zero auxiliaries and 12 records. Original-coordinate substitution gives a projection cylinder.",
+      "evidence": [
+        "compiler/TILTED_FIXED_FEATURES.json",
+        "compiler/TILTED_ORIGINAL_COORDINATE_LIFT.coo.json",
+        "compiler/TILTED_DIRECT_ELIMINATED.coo.json"
+      ],
+      "id": "T02",
+      "status": "COMPLETE",
+      "title": "Evaluate the tilted fixed features and affine pencils"
+    },
+    {
+      "acceptance_and_result": "Both inclusions are proved for |t|<=1 and t^2+s^2/4<=2. The rational point (0,0,0,0,1,1,1/4,-1/4) passes all probability and relabelled tilted-family inequalities but is nonquantum.",
+      "evidence": [
+        "compiler/tilted_family_exact_extraction.tex",
+        "compiler/TILTED_SCOPE_COUNTEREXAMPLE.json",
+        "compiler/CHECK_TILTED_EXTRACTION.json"
+      ],
+      "id": "T03",
+      "status": "COMPLETE",
+      "title": "Prove both projected inclusions and exhibit the full-set limitation"
+    },
+    {
+      "acceptance_and_result": "A physical one-parameter complete-parent family has pairwise coprime literal remainder denominators and infinitely many linearly independent scalar remainders. This rules out that literal fixed-feature route, while the complete family itself has five fixed testing features.",
+      "evidence": [
+        "c2/schur_remainder_proof.tex",
+        "c2/schur_remainder_data.json",
+        "c2/schur_remainder_verification.json"
+      ],
+      "id": "D01",
+      "status": "COMPLETE",
+      "title": "Audit the literal Schur-remainder extraction route"
+    },
+    {
+      "acceptance_and_result": "Required: a finite cover of the whole product domain, including exceptional, zero, boundary, projective, away-from-contact and normalization branches, with every restored slack identity. One regular rectangle and general local theorems do not establish the cover.",
+      "evidence": [
+        "diagonal/diagonal_proofs.tex",
+        "GLOBAL_EXTRACTION_OBLIGATIONS.json"
+      ],
+      "id": "A01",
+      "status": "OPEN",
+      "title": "Evaluate a finite global all-source/all-test atlas"
+    },
+    {
+      "acceptance_and_result": "For the retained order-13744 candidate route, the stated C1 canonical admission/converse gate remains open. An alternative exact full-set construction could bypass this sufficient route. It is not made true by the local C2 extraction.",
+      "evidence": [
+        "recovered/Q222_Extraction_Continuation_Package_2026-10-22.zip",
+        "inputs/prior_summary/GLOBAL_COMPILATION_RECEIPT.json"
+      ],
+      "id": "G1",
+      "status": "OPEN",
+      "title": "Settle the retained enlarged-candidate C1 admission gate"
+    },
+    {
+      "acceptance_and_result": "For the same retained enlarged candidate, the universal C2 admission/converse gate remains open. Exactness on the reciprocity-fixed sector or near one contact does not prove this universal gate.",
+      "evidence": [
+        "recovered/Q222_Extraction_Continuation_Package_2026-10-22.zip",
+        "inputs/prior_summary/GLOBAL_COMPILATION_RECEIPT.json"
+      ],
+      "id": "G2",
+      "status": "OPEN",
+      "title": "Settle the retained enlarged-candidate C2 admission gate"
+    },
+    {
+      "acceptance_and_result": "Required: one fixed finite global list with all radicands, domains, auxiliary variables and a proved completeness statement for every valid full-set affine slack. The present local counts are not global bounds.",
+      "evidence": [
+        "GLOBAL_EXTRACTION_OBLIGATIONS.json",
+        "CHECKLIST.json"
+      ],
+      "id": "E1",
+      "status": "OPEN",
+      "title": "Deliver the evaluated global feature list and actual dimensions"
+    },
+    {
+      "acceptance_and_result": "Required: actual finite N,m and every coefficient of A0 + sum(q_nu A_nu) + sum(y_j B_j), exact algebraic encodings where necessary, and the projection to the original eight coordinates. No such exact full-set pencil is delivered.",
+      "evidence": [
+        "GLOBAL_EXTRACTION_OBLIGATIONS.json",
+        "CHECKLIST.json"
+      ],
+      "id": "E2",
+      "status": "OPEN",
+      "title": "Deliver the evaluated full eight-coordinate affine pencil"
+    },
+    {
+      "acceptance_and_result": "Required: physical-point lifting and exclusion of every nonquantum point using the delivered fixed coefficients, with exact replayable coefficient evidence. A projection-only proof, an outer approximation or unsolved QE formula does not satisfy this gate.",
+      "evidence": [
+        "GLOBAL_EXTRACTION_OBLIGATIONS.json",
+        "CHECKLIST.json"
+      ],
+      "id": "E3",
+      "status": "OPEN",
+      "title": "Prove both full-set inclusions for that fixed pencil"
+    },
+    {
+      "acceptance_and_result": "The full rational nine-atom physical formula, real-algebraic coefficient descent theorem and fixed-pattern decision input are explicit. The M=3 order-two input is UNSOLVED: feasibility is not established and no quantifier elimination was run. Termination of the pattern search requires the corresponding existence premise.",
+      "evidence": [
+        "compiler/effective_algebraic_extraction.tex",
+        "compiler/Q222_SOC_M3_UNSOLVED_INPUT.json",
+        "compiler/Q222_SOC_M3_UNSOLVED_INPUT.wl",
+        "compiler/CHECK_Q222_QE_ENCODING.json"
+      ],
+      "id": "Q01",
+      "status": "COMPLETE_CONDITIONAL",
+      "title": "Specify a conditional exact algebraic extraction procedure"
+    }
+  ],
+  "release": "Q222 Analytical Extraction Refinement - regenerated 2026-10-22",
+  "scope": "Supplementary extraction checklist, not a replacement certification of the historical 46-item R21 existence checklist.",
+  "status_convention": {
+    "COMPLETE": "Complete only for the precisely stated item.",
+    "COMPLETE_CONDITIONAL": "A theorem or construction with its stated hypotheses; missing global hypotheses are not certified.",
+    "COMPLETE_LOCAL": "Complete on the displayed normalized local domain.",
+    "COMPLETE_MODULE": "Complete for the displayed abstract coefficient module.",
+    "COMPLETE_RESTRICTED": "Complete for the stated restricted contact equations.",
+    "OPEN": "The required full deliverable or proof is absent."
+  }
+}

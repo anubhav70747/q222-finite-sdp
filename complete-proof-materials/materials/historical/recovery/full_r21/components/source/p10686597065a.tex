@@ -1,0 +1,348 @@
+\section{A direct certificate for the positive-$d$ C2 reciprocal corner}
+\label{sec:new-rc-direct}
+
+\paragraph{Precise scope.}
+Normalize the original C2 source by $d=1$ and $\lambda=\beta=0$.
+Assume that all source coefficients are bounded, that $C,A,\alpha$
+are positive bounded units, that $m,D$ are positive infinitesimals,
+and that $n\geq0$ is bounded. Retain the original physicality,
+finite noncommuting stationary zero contact, positive native gaps,
+and any original prior-complement predicates. This section proves
+the complete parent is tensor SOS at every independent projective
+test and every state. The contact is used only inside the source
+field. No mixed determinant is cancelled.
+
+The source balance portion of the retained positive-$d$ partition
+gives, with reciprocal Bob contact coordinate $w_c=1/v_c$,
+\[
+ U=u_c^2\in\operatorname{Inf}_{>0},\qquad
+ V=w_c^2\in\operatorname{Inf}_{>0},\qquad
+ m\asymp U^2,\qquad D\asymp V^2.
+ \tag{RC1}
+\]
+Only the displayed balance proof, not its references to missing
+terminal certificates, is used here. Its two angular stationarity
+equations have positive-unit factors and prove RC1 directly.
+
+\subsection{The actual source has a bounded shape chart}
+
+Choose the native positive contact chart with $Z_c=1$, and set
+\[
+ S=(u_c/w_c)W_c,\qquad y=Y_c/w_c,\qquad
+ R=-X_c/(u_cV).
+ \tag{RC2}
+\]
+Then $S,y,S-y,1-y,R$ are positive bounded units. Here is an entry
+proof that does not assume those facts as extra source hypotheses.
+In the reciprocal parent RC6 below, take the ordinary source-field
+Schur complement of the $X,Y$ block. That block has residue
+$\operatorname{diag}(n+1/2,H)$, where $H=C+A+\alpha+1/2$.
+Its $W,W$ Schur entry divided by $U$ has residue
+$a=C-C^2/H>0$, while its $W,Z$ entry divided by $u_cw_c$
+has residue $-b=-(1/2+C\alpha/H)<0$. The balance
+$m/U\in\operatorname{Inf}$ and $D/V\in\operatorname{Inf}$
+justifies these divisions in the source field. The zero-state
+equation therefore gives $S\sim b/a$, a positive bounded unit.
+
+The two hard state equations, scaled in the source field by
+$u_cV$ and $w_c$, are a bounded linear system in $R,y$. Its
+residue is triangular with positive diagonal $n+1/2,H$.
+Consequently both quantities are bounded. The second equation gives
+$Hy=CS+\alpha$ in residue, so $y$ is a positive unit. The
+$W$ equation divided by $u_cw_c$ gives
+$C(S-y)=1/2$ in residue. The $Z$ equation divided by $V$
+gives $\alpha(1-y)=S/2$ in residue: its apparently constant
+$U$ terms cancel exactly before the division. Finally the first
+hard equation gives $(n+1/2)R=(1+S-y)/2$ in residue. These
+relations prove all five claimed positive-unit bounds. The exact
+native gaps already give $0<y<1$ and $S-y>0$ before taking
+residues.
+
+The unchanged native source formulas are converted by the following
+dictionary. Their letters are used only in this display:
+\[
+\begin{aligned}
+ z=U,\quad a^2=1/(UV),\quad b=S/U,\quad t=(S-y)V,
+ &\quad r=VR,\quad h=y/U,\\
+ g=S/U+y-1+VR,&\qquad j=1+UVR-V(S-y).
+\end{aligned}
+ \tag{RC3}
+\]
+Substitution into the six exact native coefficients has denominators
+with positive-unit leading parts after the displayed powers of
+$U,V$ are removed. Thus $\mu=m/U^2$ and $\delta=D/V^2$
+are bounded units, and the source residues are
+\[
+\begin{aligned}
+ C_0&=\frac1{2(S-y)},& A_0&=\frac{1+S-y}{2y},&
+ \alpha_0&=\frac{S}{2(1-y)},\\
+ n_0&=\frac{1+S-y-R}{2R},&
+ \mu_0&=\frac{1+S-y}{2S^2},&
+ \delta_0&=\frac{S(1+S-y)}2.
+\end{aligned}\tag{RC4}
+\]
+In residue formulas such as RC4 the shape letters mean their real
+residues. In particular
+\[
+ C_0\{\alpha_0(A_0-1/2)-1/4\}
+       =(A_0+\alpha_0+1/2)/4.
+ \tag{RC5}
+\]
+These are source statements only. They do not identify any source
+infinitesimal with an independent testing infinitesimal.
+
+\subsection{The complete local parent and both unrestricted normals}
+
+For $u,w$ infinitesimal or zero in the independent testing field,
+put $D_u=1+u^2$, $D_w=1+w^2$. The full quarter-parent after
+the pure testing reciprocal Bob normalization is
+\[
+\begin{split}
+ F={}&m(W-wX+uY-uwZ)^2+nD_uD_wX^2
+       +CD_w(uW-Y)^2+AD_uD_wY^2\\
+ &+(D+1/2)(uwW+uX-wY-Z)^2
+       +(\alpha+1/2)D_u(Y-wZ)^2\\
+ &+\tfrac12D_w(X+uZ)^2-\tfrac12D_uD_wZ^2.
+\end{split}\tag{RC6}
+\]
+All four state coordinates are arbitrary. Introduce tensor rows
+\[
+ \begin{gathered}
+ N_x=X+uRw^2Z,\qquad N_y=Y-ywZ,\\
+ \rho=uW-SwZ,\qquad k=UW-SuwZ,\qquad \ell=(w^2-V)Z.
+ \end{gathered}
+ \tag{RC7}
+\]
+The testing-dependent $w^2$ in $N_x$ is essential; it agrees with
+the source contact and removes the unbounded coefficient produced
+by a contact-fixed center. The exact conductor identities are
+\[
+ U\rho-uk=Sw(u^2-U)Z,\qquad
+ u\rho-k=(u^2-U)W.
+ \tag{RC8}
+\]
+
+Expanding the entire RC6 gives
+\[
+ F=F_0+H_xN_x^2+H_yN_y^2+2H_{xy}N_xN_y
+                         +2N_xL_x+2N_yL_y,
+ \tag{RC9}
+\]
+where $F_0$ is only the constant coefficient of this unrestricted
+normal expansion. The hard coefficients are exactly
+\[
+\begin{split}
+ H_x&=mw^2+nD_uD_w+(D+1/2)u^2+D_w/2,\\
+ H_y&=mu^2+CD_w+AD_uD_w+(D+1/2)w^2+(\alpha+1/2)D_u,\\
+ H_{xy}&=-(m+D+1/2)uw.
+\end{split}\tag{RC10}
+\]
+Set $J_x=n(1+w^2)+D+1/2$ and $K_x=n(1+U)+1/2+m$.
+The complete first normal is
+\[
+ L_x=(D+1/2)uw\rho-(m/U)wk
+ +u\{D/V-Rw^2K_x\}\ell
+ -(R/S)uwJ_x(U\rho-uk).
+ \tag{RC11}
+\]
+Every coefficient on $\rho,k,\ell$ is bounded infinitesimal.
+For the other normal define
+\[
+ \begin{aligned}
+ a_{10}&=Ay+(m+\alpha+1/2)(y-1),\\
+ a_{01}&=-(C+D+1/2)S+(C+A+D+1/2)y,\\
+ a_{11}&=R(m+D+1/2)+Ay.
+ \end{aligned}
+\]
+Then the exact expression is
+\[
+\begin{split}
+ L_y={}&\{m-C-(C+D+1/2)w^2+(U/S)(a_{10}+a_{11}w^2)\}\rho\\
+ &-(u/S)(a_{10}+a_{11}w^2)k+w(a_{01}+a_{11}U)\ell.
+\end{split}\tag{RC12}
+\]
+Its only nonzero residue coupling is $-C_0\rho$. RC11--RC12
+follow by full expansion and the two actual source state equations;
+they retain every state-normal term of RC6. Their algebra is
+checked against the complete state Hessian, not a graph restriction.
+
+\subsection{A scalar certificate by finite monic divisions}
+
+Put
+\[
+ c=C+(C+D+1/2)w^2,\quad b_2=(D+1/2)R,
+ \quad b_1=(C+D+1/2)(y-S)-mR,\quad \gamma=b_1+b_2U.
+\]
+Define
+\[
+ F_{\rm base}=(c-2Ub_2w^2/S)\rho^2+\mu k^2
+       +(2ub_2w^2/S)\rho k-2w\gamma\rho\ell.
+ \tag{RC13}
+\]
+The source $W$ state equation removes the remaining $WZ$
+coefficient. Direct expansion then gives
+$F_0-F_{\rm base}=E(u^2,w^2)Z^2$, with $E(a,b)$ a
+bounded-coefficient polynomial of degree at most two in $a$.
+Its exact properties are
+\[
+\begin{gathered}
+ E(a,0)=D,\qquad E(U,V)=E_a(U,V)=E_b(U,V)=0,\\
+ E(a,b)=E_0(b)+(a-U)E_1(b)+(a-U)^2E_2(b),\\
+ E_2(b)=R^2b^2\{n(1+b)+D+1/2\}.
+\end{gathered}\tag{RC14}
+\]
+The three vanishing jets follow from the actual full contact:
+every row in RC7 vanishes there, the complete scalar and both
+angle derivatives vanish, and RC13 has zero first derivatives
+there. They are also checked directly from the native source
+coefficients. Since $E_1(0)=E_1(V)=0$ and $E_0$ has a double
+zero at $V$, finite monic polynomial division gives bounded
+polynomials $J_0,J_1$ such that
+\[
+ E_0(b)=(b-V)^2J_0(b),\qquad
+ E_1(b)=b(b-V)J_1(b).
+ \tag{RC15}
+\]
+These divisions take place in the source polynomial algebra before
+tensor evaluation. They introduce no inverse of $V$ or of a mixed
+quantity. In particular $V^2J_0(0)=D$, and the other coefficients
+of $J_0$ remain bounded; hence $J_0(w^2)$ has residue $\delta_0$.
+
+RC8 now gives the exact scalar identity
+\[
+\begin{split}
+ F_0={}&F_{\rm base}
+ +\frac{R^2w^2\{n(1+w^2)+D+1/2\}}{S^2}(U\rho-uk)^2\\
+ &+\frac wS J_1(w^2)(U\rho-uk)\ell+J_0(w^2)\ell^2.
+\end{split}\tag{RC16}
+\]
+This polynomial formula also holds at $u=0$ or $w=0$; neither
+is inverted. Combining RC9--RC16 represents the entire parent
+by a bounded Gram on $(N_x,N_y,\rho,k,\ell)$ with real residue
+\[
+ (n_0+1/2)N_x^2+H_0N_y^2-2C_0N_y\rho+C_0\rho^2
+                              +\mu_0k^2+\delta_0\ell^2,
+ \qquad H_0=C_0+A_0+\alpha_0+1/2.
+ \tag{RC17}
+\]
+This is positive definite: the $N_y,\rho$ determinant is
+$C_0(A_0+\alpha_0+1/2)>0$, and the other three pivots are
+strictly positive. The separated strict bounded-Gram lemma
+therefore gives a finite tensor SOS of the complete RC6. It
+requires bounded matrix entries, not bounded rows or states.
+
+\subsection{All other testing charts}
+
+We give complete parent identities for the outer charts so the
+local certificate is not mistaken for an all-tests conclusion.
+Every nonnegative event packet described as retained below is
+kept whole, as a separated source square times testing squares.
+
+\paragraph{Both original testing coordinates bounded.}
+Put $p=uW$. Retain the whole $m,n,D$ packets and use the
+remaining Gram on $(p,Y,X,Z)$:
+\[
+\begin{split}
+ C D_v(p-Y)^2+A D_uD_vY^2
+ &+\tfrac12(p+uvX-Y-vZ)^2+(\alpha+1/2)D_u(vY-Z)^2\\
+ &+\tfrac12D_v(X+uZ)^2-\tfrac12D_uD_vZ^2.
+\end{split}\tag{RC18}
+\]
+The $Z=0$ hard block is positive definite by its displayed
+$C,A,X$ squares. After RC4 the determinant of the real residue is
+\[
+ \frac{(S+u^2v^2)(1+u^2)^2(1+v^2)^2(1+S-y)^2}
+      {16y(S-y)(1-y)}>0.
+ \tag{RC19}
+\]
+Here also $u,v$ mean real testing residues. Thus RC18 is a strict
+bounded Gram, even when $u$ or $v$ has zero residue.
+
+\paragraph{Alice reciprocal, Bob bounded.}
+Let $s=1/u$ be infinitesimal or zero, set $D_s=1+s^2$, and use
+rows $(W,Y,V_x,R_x)=(W,Y,vX,sX+Z)$. Retain the entire
+$m,n,D,\alpha$ packets. The remaining expression is
+$CD_v(W-sY)^2+AD_sD_vY^2+K/2$, where exactly
+\[
+\begin{split}
+ K={}&\{W-sY+D_sV_x-svR_x\}^2+D_vR_x^2\\
+ &+D_s\{v^2Y^2-2Y(vR_x-sV_x)-(vR_x-sV_x)^2\}.
+\end{split}\tag{RC20}
+\]
+Its residue is
+\[
+ C_0D_vW^2+A_0D_vY^2
+          +\tfrac12(W+V_x)^2+\tfrac12(vY-R_x)^2\succ0.
+ \tag{RC21}
+\]
+This single formula includes all bounded $v$, including literal
+zero and arbitrary competing small $s,v$. There is no $s/v$
+coefficient.
+
+\paragraph{Bob reciprocal, Alice a bounded unit.}
+Let $w$ be infinitesimal or zero, and $u$ a bounded unit. Use
+$\rho_*=uW-Y$, $T=wZ$, $S_D=\sqrt D\,Z$, and the five rows
+$(\rho_*,Y,X,T,S_D)$. Retain $m,n$ whole. The $D$ packet is
+exactly $\{\sqrt D(uX+w\rho_*)-S_D\}^2$. The other terms are
+\[
+ CD_w\rho_*^2+AD_uD_wY^2+\alpha D_u(Y-T)^2+K/2,
+\]
+where the complete core is
+\[
+ K=(D_u+w^2)X^2+2uwX T+w^2\rho_*^2+2uw\rho_*X
+                           -2\rho_*T-T^2+D_u(Y-T)^2.
+ \tag{RC22}
+\]
+The $X,S_D$ residue pivots are $D_u/2,1$. On
+$(\rho_*,Y,T)$ the residue matrix is
+\[
+ \begin{pmatrix}
+ C_0&0&-1/2\\
+ 0&G D_u&-(\alpha_0+1/2)D_u\\
+ -1/2&-(\alpha_0+1/2)D_u&\alpha_0D_u+u^2/2
+ \end{pmatrix},\qquad G=A_0+\alpha_0+1/2.
+ \tag{RC23}
+\]
+Its first two leading minors are $C_0,C_0GD_u$. By RC5 its
+determinant is $GD_uu^2(1+2C_0)/4>0$. This proves strictness.
+The alternative $u$ infinitesimal or zero is precisely RC7--RC17.
+
+\paragraph{Both testing coordinates reciprocal.}
+Let $s,w$ be infinitesimal or zero. Set $T=wZ$ and
+$S_D=\sqrt D\,sZ$. Use the five rows $W,X,Y,T,S_D$, and retain the
+entire $m,n,\alpha$ packets. The $D$ packet is
+$\{\sqrt D(wW+X-swY)-S_D\}^2$. The other terms are
+$CD_w(W-sY)^2+AD_sD_wY^2+K/2$, where exactly
+\[
+\begin{split}
+ K={}&(wW+X-swY)^2+D_s(Y-T)^2+s^2D_wX^2\\
+ &-2sWT+2s^2YT+2swXT-s^2T^2.
+\end{split}\tag{RC24}
+\]
+The full five-row residue is
+\[
+ C_0W^2+A_0Y^2+X^2/2+(Y-T)^2/2+S_D^2\succ0.
+ \tag{RC25}
+\]
+This gives the final strict bounded Gram.
+
+Every ordered-field testing coordinate is bounded or has
+infinitesimal reciprocal. RC18--RC25 and the local proof therefore
+cover both projective lines. The identities are polynomial in the
+chosen homogeneous coordinates, so literal infinity is included by
+$s=0$ or $w=0$. Both signs are allowed throughout; no state ratio
+or state normalization is used. Positive pure testing square
+normalizations restore the original homogeneous parent, and the
+original source scale is restored by a pure source square root.
+Real and imaginary parts of a complex state are handled separately.
+
+\paragraph{Verification and limits.}
+The local checker verifies the six native source limits, both full
+normal identities, every scalar monic-division identity, all contact
+jets and the critical residue relation. A separate outer checker
+verifies RC18--RC25 as complete parent/core identities. These exact
+checks corroborate the algebra; the source entry, boundedness,
+strictness and quantified joins are the analytical proof above.
+This result has exactly the positive-$d$ C2 reciprocal scope stated
+at the start. It does not assert the remaining positive-$d$ cases,
+the weak C1/C2 terminals or the final universal theorem.

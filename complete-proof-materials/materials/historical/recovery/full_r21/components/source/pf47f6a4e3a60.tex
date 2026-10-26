@@ -1,0 +1,56 @@
+\subsection{Two hard events and a positive next-scale signed coefficient}
+\begin{proposition}[The two-hard-event terminal]\label{prop:two-hard-event}
+Let the source be physical. Suppose two independent matching event weights $a_1,a_2$ satisfy $\sigma/a_i\in\mathfrak m_c$, where $\sigma$ is the largest remaining source coefficient, and $d/\sigma$ has positive residue. Then the complete parent is tensor SOS at every noncommuting residue test annihilating those two events.
+\end{proposition}
+\begin{proof}
+The two hard weights need not be comparable. Restrict the normalized residue source to their exact state-linear kernels. This is a nonnegative quadratic form on a two-dimensional state space. Its intersection with $Z=0$ has dimension at least one, and the signed core is positive definite there. At a zero the constrained state matrix therefore has one positive eigenvalue and one simple zero eigenvalue; its kernel has $Z\ne0$.
+
+There are three symmetry classes of hard pairs. In the eight-cycle of losing events, two matching edges have distances two, three, or four. Representatives are respectively
+\[
+ \{\lambda,c\},\qquad\{\lambda,m\},\qquad
+ \{\lambda,\alpha\}.
+\]
+Extract the coefficient of the product of the two hard weights from each outer coefficient $q_{ij}$ of the determinant dictionary. Each resulting coefficient is nonnegative. Since $d>0$, its exact positivity conditions are the following; a juxtaposition means that both factors are positive, and a disjunction means at least one listed condition holds.
+\[
+\begin{array}{c|c|c|c}
+(i-1,j-1)&\{\lambda,m\}&\{\lambda,c\}&\{\lambda,\alpha\}\\\hline
+(-1,-1)&\alpha&\alpha&\text{always}\\
+(-1,0)&D\text{ or }\alpha&D\text{ or }\alpha m&D\text{ or }m\\
+(-1,1)&D&Dm&Dm\\
+(0,-1)&n\text{ or }A\alpha&n&A\text{ or }n\\
+(0,1)&\beta\text{ or }Dc&D\text{ or }\beta m&Dc\text{ or }\beta m\\
+(1,-1)&An&0&An\\
+(1,0)&Ac\text{ or }\beta n&A&Ac\text{ or }\beta n\\
+(1,1)&\beta c&\beta&\beta c
+\end{array}
+\]
+For example, apart from the common positive factor $4$, the first two coefficients in the $\{\lambda,m\}$ column are
+\[
+ 2\alpha(2A+2D+2c+d),\qquad
+ 2(2AD+2A\alpha+4D\alpha+2Dc+Dd+2\alpha c+\alpha d).
+\]
+The table follows by differentiating the eight displayed quadratic-factor formulas, with no determinant recomputation.
+
+A state basis adapted to the two independent hard amplitudes shows that this leading determinant coefficient is a positive angle-dependent factor times the determinant of the constrained two-by-two state form. Thus, after its positive monomial factor is removed, the constrained determinant is a Laurent polynomial with a constant central coefficient and precisely these eight nonnegative outer coefficients. At any zero its logarithmic gradient vanishes. If its active exponent vectors do not span the plane, either none is active or they lie on one of the four opposite-pair lines.
+
+Here the table gives a short exhaustive classification.
+\begin{itemize}
+\item For $\{\lambda,m\}$, neither diagonal line is possible: its negative diagonal coefficient activates respectively the off-line exponent $(-1,0)$. On the horizontal line, $D$ or $\alpha$ together with $Ac$ or $\beta n$ activates an off-line exponent in all four cases. On the vertical line, $n$ or $A\alpha$ together with $\beta$ or $Dc$ does the same. With no active exponent, $\alpha=D=n=\beta=0$ and $Ac=0$, so the remaining support is contained in $\{A\}$ or $\{c\}$.
+\item For $\{\lambda,c\}$, the slope-minus-one line is impossible since its positive opposite coefficient is identically zero. A horizontal pair activates $D$ or $\alpha m$, hence an off-line exponent; a vertical pair activates $n$ and either $D$ or $\beta m$, with the same consequence. The slope-plus-one pair forces $\alpha,\beta>0$ and $D=n=A=m=0$. With no active exponent, all remaining weights except possibly $m$ vanish.
+\item For $\{\lambda,\alpha\}$, the exponent $(-1,-1)$ is always active. A one-dimensional stationary support must therefore be the slope-plus-one pair. Its other end forces $c,\beta>0$, while the off-line coefficients force $D=m=A=n=0$. Rank zero is impossible.
+\end{itemize}
+
+The rank-zero possibilities are contained in the triples
+$\{\lambda,m,A\}$ and $\{\lambda,m,c\}$. At $u=v=1$ the states
+\[
+ (W,X,Y,Z)=(1,-1,0,2),\qquad(1,-1,1,3)
+\]
+respectively annihilate all their event amplitudes, including both hard events. Their signed-core values are $-4$ and $-8$. Thus neither can be a nonnegative constrained source.
+
+The only rank-one possibilities complete the perfect matching
+$\{\lambda,c,\alpha,\beta\}$. On its exact matching curve, all event squares and the signed core vanish. The four event-normal differentials are independent. As shown in Proposition~\ref{prop:one-hard-event}, the signed-core differential has a nonzero coefficient in every one of those four directions. Imposing only two hard constraints leaves at least one nonzero such derivative, whereas every remaining event square has zero differential. The constrained slack changes sign, contradicting physicality.
+
+Consequently the active exponent vectors span the plane at every constrained zero. The logarithmic determinant Hessian is positive definite. The single positive soft-state pivot identifies its angle Hessian, up to positive factors and an invertible coordinate change, with the Schur complement of the full constrained Hessian. Thus that Hessian is positive definite in one projective state variable and two angle variables. All Schur operations in this argument take place only over the real residue field.
+
+Finally use the two exact hard event amplitudes as coordinates. If their weights are $a_1,a_2$, put $x_i=(\sigma/a_i)s_i$ in the coefficient-field stationary equations. The ratios $\sigma/a_i$ are infinitesimal, and the divided hard equations have positive diagonal residue. The diagonal weighted-contact lemma therefore applies with roots $\sqrt{a_i/\sigma}(x_i-x_{ci})$, together with the three soft deviations. Its exact Taylor Gram has strict residue, and its stationary value is nonnegative by physicality. Restoring the pure coefficient scale proves the full-parent assertion.
+\end{proof}

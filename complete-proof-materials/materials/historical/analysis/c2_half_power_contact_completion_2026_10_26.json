@@ -1,0 +1,196 @@
+{
+  "scalar_Mu_identity": true,
+  "scalar_Mv_identity": true,
+  "cross_coefficient_unknowns_per_row": 16,
+  "cross_map_rank": 8,
+  "free_cross_parameters_per_row": 8,
+  "total_free_cross_parameters": 24,
+  "new_weighted_channel_cancellations": true,
+  "fixed_unshifted_parity_orders": [
+    16,
+    8,
+    8,
+    4
+  ],
+  "fixed_total": 36,
+  "contact_before_support_orders": [
+    15,
+    7,
+    7,
+    3
+  ],
+  "C2_support_pruned_orders": [
+    14,
+    6,
+    6,
+    4
+  ],
+  "C2_support_and_contact_orders": [
+    13,
+    5,
+    5,
+    3
+  ],
+  "C2_support_and_contact_total": 26,
+  "literal_kept_root_monomials": {
+    "(0, 0)": [
+      [
+        "W",
+        0,
+        2
+      ],
+      [
+        "W",
+        2,
+        0
+      ],
+      [
+        "W",
+        2,
+        2
+      ],
+      [
+        "X",
+        0,
+        0
+      ],
+      [
+        "X",
+        0,
+        2
+      ],
+      [
+        "X",
+        2,
+        0
+      ],
+      [
+        "X",
+        2,
+        2
+      ],
+      [
+        "Y",
+        0,
+        0
+      ],
+      [
+        "Y",
+        0,
+        2
+      ],
+      [
+        "Y",
+        2,
+        0
+      ],
+      [
+        "Y",
+        2,
+        2
+      ],
+      [
+        "Z",
+        0,
+        0
+      ],
+      [
+        "Z",
+        0,
+        2
+      ],
+      [
+        "Z",
+        2,
+        0
+      ]
+    ],
+    "(1, 0)": [
+      [
+        "W",
+        1,
+        2
+      ],
+      [
+        "X",
+        1,
+        0
+      ],
+      [
+        "X",
+        1,
+        2
+      ],
+      [
+        "Y",
+        1,
+        0
+      ],
+      [
+        "Y",
+        1,
+        2
+      ],
+      [
+        "Z",
+        1,
+        0
+      ]
+    ],
+    "(0, 1)": [
+      [
+        "W",
+        2,
+        1
+      ],
+      [
+        "X",
+        0,
+        1
+      ],
+      [
+        "X",
+        2,
+        1
+      ],
+      [
+        "Y",
+        0,
+        1
+      ],
+      [
+        "Y",
+        2,
+        1
+      ],
+      [
+        "Z",
+        0,
+        1
+      ]
+    ],
+    "(1, 1)": [
+      [
+        "W",
+        1,
+        1
+      ],
+      [
+        "X",
+        1,
+        1
+      ],
+      [
+        "Y",
+        1,
+        1
+      ],
+      [
+        "Z",
+        1,
+        1
+      ]
+    ]
+  },
+  "scope": "Exact normal-form identities/counts only. Universal PSD Gram feasibility is not tested or asserted."
+}

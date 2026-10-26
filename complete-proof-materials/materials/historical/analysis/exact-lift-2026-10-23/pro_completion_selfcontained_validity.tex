@@ -1,0 +1,49 @@
+% Input-ready replacement for the established-validity dependency.
+% P_*(u,v) is the state matrix of the already displayed full parent at c_*.
+\paragraph{Validity of the rational source.}
+Let $P_*(u,v)$ be the symmetric state matrix of \eqref{parent} at
+the displayed rational source. It has a direct determinant certificate. Put
+$X=169u^2$, $Y=v^2/256$, and
+\[
+ k=\frac{365997345792000000}
+ {806534883104527170621493981142180739537045858457}>0.
+\]
+In the following order of exponents, let $n_e$ be the positive integers
+\[
+\begin{array}{c|r}
+ e&n_e\\\hline
+ (-1,0)&1347083645295592961374032847731\\
+ (-1,1)&2737791187307806620394799996019\\
+ (0,-1)&765091750295568657441489249147602\\
+ (0,1)&762274793296209851400745596627083\\
+ (1,0)&4005709020552400161419980319250\\
+ (1,1)&79165812050999420348852524500
+\end{array}
+\]
+Direct expansion of the full four-dimensional state determinant gives,
+for $uv\ne0$,
+\[
+ \det P_*(u,v)=16D_u^2D_v^2u^2v^2\,k
+       \sum_e n_e\bigl(X^{e_1}Y^{e_2}-1\bigr).
+\]
+The exact integer identities
+$n_{-1,0}+n_{-1,1}=n_{1,0}+n_{1,1}$ and
+$n_{0,-1}=n_{-1,1}+n_{0,1}+n_{1,1}$ say that
+$\sum_e n_e e=0$. Weighted AM--GM therefore makes the displayed
+sum nonnegative for every $X,Y>0$. The $Z=0$ principal block $B_*$
+is strictly positive for $u\ne0$: its three positive $m,C,A$ packets give
+\[
+ B_*\succeq T^T\operatorname{diag}(4m,4CD_v,4AD_uD_v)T,
+ \qquad
+ T=\begin{pmatrix}v&-1&uv\\u&0&-1\\0&0&1\end{pmatrix},
+ \qquad \det T=u.
+\]
+All remaining packets on $Z=0$ are nonnegative. Thus $B_*\succ0$,
+and the scalar Schur complement, whose sign is the sign of
+$\det P_*$, proves $P_*\succeq0$ whenever $uv\ne0$.
+Both signs of each angle are already included. Polynomial continuity
+gives the finite axes; homogenizing the parent to bidegree $(2,2)$
+in the two projective angle pairs gives their infinite endpoints.
+This proves positivity for every real state; separating real and
+imaginary parts proves the same for complex states.
+No previously extracted Gram certificate is needed.

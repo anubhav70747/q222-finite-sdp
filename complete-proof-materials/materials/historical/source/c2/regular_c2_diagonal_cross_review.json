@@ -1,0 +1,77 @@
+{
+  "algebraic_corroboration": {
+    "B0_checks": 50,
+    "B0_result": "All nine feature functions reproduce all four complete coefficient columns; four rational necessity tests and the strict-chamber sample agree.",
+    "event_checks": 9,
+    "event_limit": "This cross-review does not independently recompute the six determinants or certify source physicality.",
+    "event_result": "All six displayed restricted forms, all thirty derivative entries, the degree/support tuples, and all five primitive-vector kernel identities agree.",
+    "method": "Exact Fraction polynomial dictionaries; no diagonal-generator import."
+  },
+  "analytic_review": [
+    {
+      "finding": "Expansion and the stated strict p/q lower bounds are correct on the required product neighborhood.",
+      "topic": "Positive separated coefficient identity"
+    },
+    {
+      "finding": "A*Delta z=0 makes the normal correction exact; positive tangential H and positive normal A^T A give a positive full matrix for sufficiently large integer t by a Schur complement.",
+      "topic": "Smooth-diagonal normal correction"
+    },
+    {
+      "finding": "For H*=C^T C and f=Cz, C^-T(H+tA^T A)C^-1 has identity residue. The coefficients K_ii-2(m-1)eps and eps+/-K_ij/2 reproduce every entry.",
+      "topic": "Constant frame change and finite frame"
+    },
+    {
+      "finding": "The independent-poles argument proves infinite separation rank of1/(1-xy) on product intervals; the construction correctly excludes unsupported mixed inversions.",
+      "topic": "Mixed denominator warning"
+    },
+    {
+      "finding": "August30 equation12.1 and August31 Repair5 put A,T,p,w,h,eps0 in the point/coefficient factor and U,V in the support factor. The new proof retains this and labels its testing notation as a coefficient-module abstraction.",
+      "topic": "Frozen Repair5 factor typing"
+    },
+    {
+      "finding": "The order4 diagonal orthant pencil concerns only(c1,c2,c3,c4). The20-function congruence envelope assumes a pure coefficient-factor state change. No physical eight-coordinate pencil or surviving order2 bound is inferred. The missing congruence and clearing maps are explicit.",
+      "topic": "B0 restoration scope"
+    },
+    {
+      "finding": "Membership-pattern cells are finite and choose a covering rectangle for every nonempty source/test cell pair. Zero extension preserves fixed feature size and yields the asserted global slack identity under the supplied finite-cover hypothesis.",
+      "topic": "Finite-cover indicator assembly"
+    },
+    {
+      "finding": "W explicitly contains1, all Phi_i, and every feature product. Full dimensionality justifies extending1,Phi_i to a basis. No unsupported product-span assumption remains.",
+      "topic": "Moment product space and coordinates"
+    },
+    {
+      "finding": "Forward inclusion uses an actual finite convex combination of evaluations. Reverse inclusion uses separation of the assumed closed C=convPhi(T) and the exact global slack identities. No closure of a projected spectrahedron is asserted or required.",
+      "topic": "Both inclusions and closure"
+    }
+  ],
+  "files_reviewed": [
+    {
+      "file": "diagonal/B0_EXACT.json",
+      "sha256": "a60474e1076c0647ae8491c97358a036274d6b4cbdb320d2b61c4203fc1d6b22"
+    },
+    {
+      "file": "diagonal/EVENT_CONTACT_EXACT.json",
+      "sha256": "79a1851167ce05354c46de6e4d6ff85bb3e51135875bb21992ae17350d7f0b6f"
+    },
+    {
+      "file": "diagonal/diagonal_proofs.tex",
+      "sha256": "0dcfc809429062d92c1f73efced0279f8d801350d548debf0ebe04f5822d582a"
+    },
+    {
+      "file": "inputs/frozen_august31/Q222_SXDEG2_CORRECTION_PATCH_AND_FREEZE_2026-08-31.md",
+      "sha256": "c72fe7bf596c63e4a08b4f186d452af813a5010b832ea7717c5d550d00faf7ac"
+    },
+    {
+      "file": "inputs/canonical_august30/Q222_SXDEG2_CONSOLIDATED_PARCHMENT_FINAL_2026-08-30.md",
+      "sha256": "e268a6ae1c11dd02b5819064fa7e8187173074050d92f3204e703dd46f574731"
+    }
+  ],
+  "remaining_global_inputs": [
+    "An evaluated finite all-source/all-test cover with restored local slack identities.",
+    "All exceptional, rank-drop, and projective boundary coverage and restoration maps.",
+    "An evaluated global feature basis, coefficient tables, and affine projection in the original eight quantum coordinates."
+  ],
+  "reviewer": "Separate C2 reconstruction agent; same model-assisted system, not external review.",
+  "status": "PASS_WITH_STATED_LOCAL_AND_CONDITIONAL_SCOPE"
+}

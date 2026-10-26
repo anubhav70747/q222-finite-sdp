@@ -1,0 +1,430 @@
+% Fresh complete directed weak-C2 assembly, 2026-10-22.
+\section{The complete directed weak-C2 source and testing join}
+\label{sec:weak-c2-complete-join-rederived}
+
+\paragraph{Theorem.}
+Let \(K_c,K_t\) be arbitrarily chosen, separately labelled
+real closed extensions of \(\mathbb R\); no
+algebraic-disjointness assumption is made.  In particular
+they may be two labelled copies of the same extension.
+Use an original physical stationary C2 source
+with \(d>0\), \(\lambda_{\rm event}=\beta=0\), all event
+coefficients nonnegative, and every original strict source gap.
+Normalize \(d=1\).  Suppose the positive actual source chart
+has two infinitesimal contact half-angles and
+\[
+ C\notin\mathrm{Inf}_c,\qquad
+ \alpha\in\mathrm{Inf}_c,\qquad
+ \delta_{\rm tot}
+   =\frac1{1+n+m+C+A+D+\alpha}\in\mathrm{Inf}_{c,>0}.
+ \tag{HJ1}
+\]
+Then the entire original parent is a finite sum of squares in
+\(K_c\otimes_{\mathbb R}K_t\) at every independent projective
+testing pair and every real or complex state.
+There is no earlier-admission-complement hypothesis.
+The theorem retains literal \(n=0\) and every allowed
+independent source opening.
+By the exact reflection HJ3 it also proves the original
+directed weak-\(C\), strong-\(\alpha\) HH source.
+The entry into the physical positive source chart is a
+separate global source-entry theorem, not a conclusion
+inferred from this join.
+
+\paragraph{The full parent and the reflection.}
+For finite testing half-angles write
+\[
+ D_u=1+u^2,\quad D_v=1+v^2,\quad
+ M=vW-X+uvY-uZ,\quad J=uW+uvX-Y-vZ .
+\]
+The quarter-parent is exactly
+\[
+\begin{split}
+ \mathcal P={}&nD_uD_vX^2+mM^2+CD_v(uW-Y)^2
+       +AD_uD_vY^2+DJ^2+\alpha D_u(vY-Z)^2\\
+ &+\tfrac12\{J^2+D_u(vY-Z)^2+D_v(X+uZ)^2-D_uD_vZ^2\}.
+\end{split}
+\tag{HJ2}
+\]
+Every proof imported below certifies this entire polynomial.
+The omission-preserving reflection is
+\[
+\begin{split}
+ &(u,v;W,X,Y,Z;n,m,C,A,D,\alpha)\\
+ &\hspace{4mm}\longmapsto
+ (1/v,1/u;Z,X,Y,W;n,D,\alpha,A,m,C).
+\end{split}
+\tag{HJ3}
+\]
+Under HJ3, \(\mathcal P=u^2v^2\mathcal P'\) exactly.
+This is verified packet by packet and for the full signed
+core.  Its degree-\((2,2)\) homogeneous form exchanges
+the corresponding angle coordinates, so it includes
+the literal projective endpoints.
+It preserves \(n,A\), and interchanges \(m,D\) and
+\(C,\alpha\).  A weak-\(C\) HH input therefore becomes
+strong-\(C\), weak-\(\alpha\) II.
+No transformation \(t\mapsto1/t\) of the subsequent
+source shape is asserted.
+
+\subsection{Actual source equations and the weak face}
+
+Normalize the positive actual contact by \(Z_c=1\), and put
+\[
+\begin{gathered}
+ z=u_c^2,\quad y=v_c^2,\quad H=v_cY_c,\quad
+ L=v_c(u_cW_c-Y_c),\quad B=H+L,\quad r=-X_c/u_c,\\
+ c_a=1+zr,\quad S_c=c_a+L,\quad T_c=B+zr,\quad
+ j=c_a-L/y,\quad G=B+z(H+r-1).
+\end{gathered}
+\tag{HJ4}
+\]
+The unchanged source conditions are
+\[
+ z,y>0,\quad 0<H,r<1,\quad L>0,\quad
+ j,G,B-zyr>0,\quad n\geq0 .
+\]
+In particular
+\[
+ (u_c,v_c;W_c,X_c,Y_c,Z_c)
+ =\left(\sqrt z,\sqrt y;\frac{B}{\sqrt{zy}},
+                  -r\sqrt z,\frac H{\sqrt y},1\right).
+\]
+The exact source denominator and positive numerator are
+\[
+\begin{split}
+ \delta={}&z+(1+z)B+(1+z)B^2+2z(1+z)Br
+                       +z^3r^2+2z^2r\\
+ &+y\{(1+z)B+z+z^2r(2-r)\},\\
+ M_s={}&(1+z)T_c(H+y)-z(1+y)(1-r)L\\
+     ={}&(1+z)T_cH+yG+yzj+zrL(1+y).
+\end{split}
+\tag{HJ5}
+\]
+The six original coefficients, before any size specialization, are
+\[
+\begin{aligned}
+ n&=\frac{T_cc_aS_c-r\delta}{2r\delta},&
+ m&=\frac{z^2(1+y)(1-r)c_aS_c}{2G\delta},\\
+ C&=\frac{c_aM_s}{2L\delta},&
+ A&=\frac{yc_aT_cS_c}{2H\delta},\\
+ D&=\frac{(1+z)T_c(B-zyr)S_c}{2yj\delta},&
+ \alpha&=\frac{T_cM_s}{2(1-H)\delta}.
+\end{aligned}
+\tag{HJ6}
+\]
+All inequalities and all contact identities below refer
+to these actual coefficients.  In particular the
+numerator of \(n\) is never replaced by a limiting
+source whose sign has not been proved.
+
+Since \(z,y\) are infinitesimal, the exact \(j\) gap gives
+\(L<y(1+zr)\), hence \(L\) infinitesimal and \(B\)
+bounded.  If \(B\) is infinitesimal, then \(H\) is
+infinitesimal and \(\delta\geq B+z\geq T_c\).
+The first expression for \(M_s\) gives
+\[
+ 0<\alpha
+ \leq\frac{T_c(1+z)(H+y)}{2(1-H)}
+ \in\mathrm{Inf}_c.
+ \tag{HJ7}
+\]
+If \(B\) is a unit, \(H=B-L\), \(\delta\), and \(M_s\)
+are units by the positive expression in HJ5.
+Then \(\alpha\) is noninfinitesimal and
+\(CL=c_aM_s/(2\delta)\) is a unit.
+Thus \(\alpha\) is weak exactly when \(B\) is
+infinitesimal.  The input HJ1 therefore has
+\[
+ B,z,y\in\mathrm{Inf}_{c,>0}.
+ \tag{HJ8}
+\]
+This conclusion is an actual source estimate.
+It imposes no power-law relation or unprinted rate
+comparison between \(B,z,y\).
+
+\subsection{Uniform source alternatives}
+
+Put
+\[
+ a=z/B,\quad t=y/B,\quad h=H/B,\quad l=L/B=1-h,\quad
+ e=1-r,\quad g=G/B.
+ \tag{HJ9}
+\]
+The quantities \(h,l,r,e,g,j\) are positive and bounded;
+\(a,t\) may be infinitesimal, units, or unbounded.
+Their exact relations give
+\[
+\begin{gathered}
+ g=1-ae+hz>0,\qquad j=1+zr-l/t>0,\\
+ ae<1+hz,\qquad
+ e\text{ unit}\Longrightarrow a\text{ bounded},\\
+ a\text{ unbounded}\Longrightarrow e\text{ infinitesimal},
+ \qquad a\text{ infinitesimal}\Longrightarrow g\sim1,\\
+ g\text{ infinitesimal}\Longrightarrow ae\sim1.
+\end{gathered}
+\tag{HJ10}
+\]
+
+Here is the source estimate behind the finite partition.
+From HJ5,
+\(\delta/(B+z)\sim1\).
+Moreover \(T_c\geq B\), \(T_c>z(1-H)\), and
+\(T_c\leq B+z\), so \(T_c/\delta\) is a positive unit.
+Consequently
+\[
+ r(2n+1)=\frac{T_cc_aS_c}{\delta}\asymp1,\qquad
+ \frac{AH}{y}=\frac{c_aT_cS_c}{2\delta}\asymp1.
+ \tag{HJ11}
+\]
+The \(m\) formula can be rewritten exactly as
+\[
+ m=\frac{(1+y)c_aS_c}{2}\frac z\delta
+               \frac{1+zH/B-g}{g}.
+ \tag{HJ12}
+\]
+For unit \(g\) this is bounded.  For infinitesimal \(g\),
+\(ae\sim1\), \(z/\delta\) is a unit, and \(m\asymp1/g\).
+Thus no independent \(a=z/B\) rate creates an omitted
+intermediate \(m\) case.
+
+The positive decomposition of \(M_s\), and its first
+expression in HJ5, similarly show
+\[
+\begin{array}{c|c}
+ \text{original coefficient is unbounded}
+       &\text{equivalent source condition}\\ \hline
+ n&r\text{ infinitesimal}\\
+ m&g\text{ infinitesimal}\\
+ A&H/y\text{ infinitesimal}\\
+ C&L/(H+y)\text{ infinitesimal}\\
+ D&y/B\text{ infinitesimal or }j\text{ infinitesimal}.
+\end{array}
+\tag{HJ13}
+\]
+For completeness, the \(C\) upper bound is a bounded
+multiple of \((H+y)/L\).
+If \(L/(H+y)\) is infinitesimal, the subtracted
+term in the first formula for \(M_s\) is
+infinitesimal relative to \(T_c(H+y)\);
+this gives the reverse estimate.
+For \(D\), if \(B/y\) is infinitesimal, then
+\(j\sim1\) and the exact formula gives \(D=O(B/y)\).
+Otherwise \(zyr/B\) is infinitesimal, and
+\(D\asymp B/(yj)\).
+The original gap \(B-zyr>0\) is thereby retained in
+the region where it cannot be replaced by \(B\).
+
+It follows that all six original coefficients are bounded
+if and only if
+\[
+             t,h,l,j,r,g\text{ are units}.
+ \tag{HJ14}
+\]
+Indeed \(t\) infinitesimal makes \(C,D\) unbounded;
+\(t\) unbounded makes \(C,A\) unbounded.
+For unit \(t\), HJ13 gives exactly the other five
+unit conditions.  HJ1 rules out HJ14, since the
+sum in the denominator of \(\delta_{\rm tot}\)
+would then be bounded.  No positive-\(d\) source
+theorem is needed to remove this empty intersection.
+
+There is also the exact source equivalence
+\[
+ C\text{ infinitesimal}
+ \quad\Longleftrightarrow\quad
+ r,g,H/y,j\text{ infinitesimal}.
+ \tag{HJ15}
+\]
+To verify the forward direction, the four positive
+terms of \(M_s/(L\delta)\) first force \(H/L\)
+infinitesimal.  Bounded \(C\) and HJ13 give
+\(L\asymp y\), hence \(H/y\) infinitesimal and
+\(B\asymp y\).  The same four summands give
+\(G/\delta,zr/\delta,zj/\delta\) infinitesimal.
+The factor \(z/\delta\) cannot be infinitesimal:
+that would imply \(B/\delta\sim1\) and
+\(G/\delta\sim1\).  Hence \(r,j\) are infinitesimal,
+and \(G>0\) together with \(z/\delta\) unit gives
+\(B/z\) unit.  It follows that \(g\) is infinitesimal.
+Conversely \(r,g\) infinitesimal imply \(B/z\sim1\).
+With \(H/y,j\) infinitesimal the gap gives
+\(L/y\sim1\), hence \(B/y\sim1\).
+Every positive summand of \(M_s/(L\delta)\) is then
+infinitesimal, proving the converse.
+On the directed input HJ1 this entire intersection
+is empty.  In particular it is not an allowed
+unproved continuation of the R7 residue pivots.
+
+\subsection{The ten rows and every remaining exit}
+
+The symbol \({\rm I}\) denotes positive infinitesimal,
+\({\rm U}\) a positive unit, and \({\rm O}\) positive
+unbounded.  Every row below includes HJ4--HJ10 and
+the actual coefficient formulas HJ6.
+\[
+\begin{array}{c|l}
+ {\rm R1}&t:{\rm I}\\
+ {\rm R2}&t:{\rm O}\\
+ {\rm R3}&t,h:{\rm U},\ l:{\rm I}\\
+ {\rm R4}&t,h,l:{\rm U},\ j:{\rm I}\\
+ {\rm R5}&t,h,l,j:{\rm U},\ r:{\rm I}\\
+ {\rm R6}&t,h,l,j,r:{\rm U},\ g:{\rm I}\\
+ {\rm R7}&t:{\rm U},\ h,g:{\rm I},
+                  \quad r,j\text{ not both }{\rm I}\\
+ {\rm R8}&t,g:{\rm U},\ h,j:{\rm I}\\
+ {\rm R9}&t,g,j:{\rm U},\ h,e,a:{\rm I}\\
+ {\rm R10}&t,g,j:{\rm U},\ h,e:{\rm I},\ a:{\rm O}.
+\end{array}
+\tag{HJ16}
+\]
+The rows are disjoint.  Their complements have the
+following explicit destinations, not a blanket
+earlier-admission clause.
+
+Split \(t\) first.  Its infinitesimal and unbounded
+cases are R1 and R2.
+For \(t\) unit split \(h\).
+If \(h\) is a unit, test in order whether \(l,j,r,g\)
+is infinitesimal.  These are exactly R3--R6.
+If none is, HJ14 contradicts the total-scale
+condition.
+If \(h\) is infinitesimal, \(l\sim1\).
+For infinitesimal \(g\), simultaneous infinitesimal
+\(r,j\) contradicts HJ15 and HJ1; otherwise this
+is R7.
+For unit \(g\), infinitesimal \(j\) gives R8.
+
+Only \(t,g,j\) units and \(h\) infinitesimal remain.
+If \(e\) is a unit, HJ10 makes \(a\) bounded.
+For unit \(r\), unit \(a\) gives WA and infinitesimal
+\(a\) gives WE.  For infinitesimal \(r\), either
+bounded type of \(a\) gives SL.
+If \(e\) is infinitesimal, \(r\sim1\).
+Then unit \(a\) gives WC, infinitesimal \(a\) gives
+R9, and unbounded \(a\) gives R10.
+The complete physical source conditions of
+WA/WE/SL/WC are exactly BSR2--BSR3.
+No \(h/a\), \(e/B\), or source/testing comparison
+has been inserted.  This proves exhaustion of
+the actual source, without asserting that every
+formal type tuple is physically realized.
+
+\subsection{Actual complete proof for each row}
+
+The mathematical imports in this paragraph are the
+specified proof bodies, not admission receipts.
+The bare-scope argument BSR1--BSR15 proves precisely
+why their earlier residual-complement wording is
+not a needed hypothesis.
+
+\paragraph{R1 and R2.}
+R1N1--R1N24 in
+\texttt{r1\_all\_sources\_all\_tests.tex}
+prove all original R1 sources.
+The exact compact-source and full-normal derivation
+permits arbitrary positive normalized state ratio;
+its full six-root cap identities and projective
+entry supply all outer tests.
+R2A1--R2A4 in
+\texttt{r2\_all\_original\_sources\_all\_tests.tex}
+prove all original R2 sources.
+That theorem explicitly splits bounded \(a\),
+unbounded \(a\) with bounded \(n/(tB)\), and
+unbounded \(a,n/(tB)\), using respectively
+RL/SH, TU, and UL.
+Its R2O/SJ join supplies every test and state.
+The formal C1 comparison in TU/UL is implemented
+by exact coefficients and the complete actual
+\(n\) packet; it never assumes a negative-beta
+source is physical.
+
+\paragraph{R3 and R4.}
+Every positive \(e<1\) is either a unit or
+infinitesimal.  The unit cases are the actual
+R3E and R4E all-tests bodies, with BSR4's
+bare-scope verification.  Every infinitesimal
+\(e\) case is EN1--EN25 in
+\texttt{r34\_e\_inf\_all\_sources\_all\_tests.tex}.
+The latter keeps both complete state normals,
+the endpoint \(H\) or \(1-H\) opening, and the
+entire source partition before its remote join.
+These alternatives exhaust each original row.
+
+\paragraph{R5--R7.}
+Bare R5 is BSR5--BSR6.
+R6 splits into bounded \(a\) and unbounded \(a\);
+in the latter case physicality bounds \(b=a^2B\),
+whose unit and infinitesimal cases are RB and RI.
+Thus BSR7 supplies every source of R6.
+R7 splits into bounded and unbounded \(a\);
+BSR8--BSR10 and RU supply both.
+Its sole genuine simultaneous-\(r,j\) exclusion
+has already been dispatched by HJ15.
+These statements preserve the actual \(n=0\)
+boundary wherever it is possible.
+
+\paragraph{R8--R10.}
+R8 is the union of the unit-\(r\) local JD proof,
+the infinitesimal-\(r\) local RD proof, and JD's
+remote join valid for both cases.
+R9 is the complete reciprocal-contact RC1--RC13
+body with its actual source appendix and the
+explicit R9 extension of GR's full remote proof.
+R10 is the actual three-component all-tests join:
+its weighted full-parent proof, its positive-thin
+contact proof, and its unit-\(W\) complement.
+The source subcases in BSR11--BSR15 are exhaustive.
+The literal \(n=0\) import is exactly OP4 followed
+by the native C1 small-\(e\) or centered-\(A\)
+body.  It contains no whole-C1 or whole-weak-C2
+routing premise.
+
+\subsection{State, sign, and projective restoration}
+
+Each row proof certifies the full HJ2, either directly
+on four states or after an exact inverse with both
+state normals present.
+All normalizations use pure-source, pure-testing,
+or positive separated factors.
+At a nonzero finite chart they are reversed on
+the SOS roots.  Literal zero and infinite testing
+angles use the actual homogeneous parent, not a
+limiting division by a zero coordinate.
+The exact state sign gauges preserve every event
+packet and the core; the negative-core state
+normalizations and their complementary
+nonnegative-core branches are part of the named
+all-tests bodies.
+No arbitrary state ratio is bounded by a source
+scale in this assembly.
+
+Every bounded complete Gram used in those bodies
+has strict positive real residue on its retained
+root list.  The strict bounded-Gram lemma, including
+its WA10 polynomial version, therefore
+gives a finite tensor SOS; it does not take a
+square root or inverse of a mixed tensor.
+Restoring all original positive excess packets
+preserves that conclusion.
+The original measurement matrices are real, so a
+complex-state value is the sum of its real and
+imaginary state values.
+The source partition HJ16 and its four explicit
+regular exits now prove the theorem.
+
+\paragraph{Dependency boundary.}
+This is a proof of the complete directed weak-C2
+leaf and its exact reflected HH orientation.
+The positive-total-scale interior is excluded
+algebraically by HJ1 and HJ14, and the two-weak
+intersection is excluded algebraically by HJ1
+and HJ15.  Hence neither global A5 nor a global
+C2 union is a dependency.
+Global source entry, other omission patterns,
+and other source-scale regimes remain the
+responsibility of their own stated theorems.
+The accompanying manifest lists actual proof
+bodies and prerequisite parent/conductor
+identities with their precise uses; status
+documents are not mathematical inputs.

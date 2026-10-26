@@ -1,0 +1,162 @@
+EXACT TWO-NORMAL SCHUR ELIMINATION ON THE REMAINING R1 STRIP
+
+Outcome. The exact elimination is valid, and its normal determinant has
+a positive polynomial decomposition on the whole native source box.
+However, separating its positive Schur-square component is incompatible
+with any one finite source-independent testing family. This obstruction
+already occurs on v=0 at actual positive native sources and on the
+outer Alice interval. It rules out literal Schur-square separation as
+the finite-certificate construction; it does not rule out a different
+full-parent Gram. The remaining R1 strip is NOT certified here.
+
+Inputs read: published uniform-contact parent, native dictionary and
+source bounds; analysis/full_r1_annulus_independent.txt. No old party
+swap, numerical source sweep, SDP or public edit is used.
+
+1. Exact entire-parent elimination.
+
+Keep the native source box B,T,x=jB<=delta=2^-10,
+0<p<min(j,1),0<H<1,n>=0, d=1,lambda=beta=0. All source
+coefficients below are the actual dictionary values. Put Du=1+u^2,
+Dv=1+v^2 and use the existing rotated coordinates. Change only the
+state coordinates by
+
+ t=N+p v w,               r=-M-Hv zeta,
+ W=w-u r, X=t-u zeta, Y=r+u w, Z=zeta+u t.
+
+The exact quarter-parent numerator T=Dv*S_c is
+
+ n Dv X^2+m Du(vw-t)^2+C Du Dv r^2+A Dv Y^2
+ +D Du(r+v zeta)^2+alpha(vY-Z)^2
+ +[Du(r+v zeta)^2+(vY-Z)^2+Du Dv t^2-Dv Z^2]/2.
+
+Let q=alpha+1/2. Direct coefficient extraction gives
+
+ T = (N,M)H(N,M)^t+2 LN*N+2 LM*M+F,
+ F = T evaluated at N=M=0,
+
+ H=[[q u^2+RN, q u v],[q u v,q v^2+RM]],
+ RN=m Du+(n+1/2)Dv,
+ RM=Du(C Dv+D+1/2)+A Dv.
+
+The complete linear coefficients are
+
+ LN=vw[n p Dv-m(1-p)Du-q u^2(1-p)+(p/2)Dv]
+       +u zeta[alpha(1+Hv^2)-n Dv+(H-1)v^2/2],
+
+ LM=v zeta{Du[H C Dv-(1-H)(D+1/2)]
+                    +H A Dv+q(1+Hv^2)}
+       -u w[A Dv+q(1-p)v^2].
+
+No scalar restriction or event square is removed in this formula.
+In particular
+
+ Delta=det H=RN*RM+q u^2 RM+q v^2 RN>0.             (1)
+
+This is a strict positive polynomial decomposition even at n=0;
+RN>=Dv/2 and RM>=Du/2. For ell=(LN,LM)^t and z=(N,M)^t,
+
+ T=(z+H^-1 ell)^t H(z+H^-1 ell)+F-ell^t H^-1 ell, (2)
+
+or, with no inverse,
+
+ Delta*T=(Hz+ell)^t adj(H)(Hz+ell)
+                  +Delta*F-ell^t adj(H)ell.        (3)
+
+The final state form in(2) remains to be certified. Positivity of H
+alone does not prove positivity of T on the strip.
+
+For Alice infinity set a=u/sqrt(Du),b=1/sqrt(Du). Rescale N=b*Nbar,
+M=b*Mbar before taking b=0. The continuous normal block is b^2 H:
+
+ [[q a^2+m+(n+1/2)Dv b^2, q a b v],
+  [q a b v, C Dv+D+1/2+(A Dv+q v^2)b^2]].
+
+At b=0 it is diag(q+m,C Dv+D+1/2), strictly positive. Thus normal
+elimination has no singularity at the projective Alice endpoint.
+This does not by itself settle the complementary state form there.
+
+2. A precise obstruction to using the separated Schur square.
+
+At v=0 the exact parent is the direct sum
+
+ (AN+BN u^2)N^2+2(alpha-n)u*N*zeta+(n u^2+alpha)zeta^2
+ +(AM+BM u^2)M^2-2A u*M*w+A u^2 w^2,
+
+ AN=n+m+1/2, BN=m+alpha+1/2,
+ AM=C+D+A+1/2, BM=C+D+1/2.
+
+The N-completed-square component of(2) therefore contains, on the
+source-independent test-state substitution W=Y=0,X=-u,Z=1,
+
+             g_c(s)=(n-alpha)^2*s/(AN+BN*s),
+             s=u^2>=(9/256)^2.                   (4)
+
+The M square vanishes at this substitution. The state substitution is
+independent of all native parameters: at v=0 it is exactly N=M=w=0,
+zeta=1, despite the source-dependent normal coordinates used off v=0.
+
+Use actual native sources j=1,H=1/2,B=T=2^-20, with
+p in[1/4,1/2]. Their physicality numerator is uniformly positive:
+expanding NN-p and taking its absolute coefficient majorant on this
+interval gives a number less than8*2^-20, so NN>p-8*2^-20>0.
+All other native signs and denominators follow from the published
+source box. The ratio r_c=AN/BN is a nonconstant rational function
+of p. Two exact values are
+
+ p=1/4:
+ r=6447599759597134890401793/5641653824874866551728812,
+
+ p=1/2:
+ r=4835700972619905530593281/3626777458848285570629633.
+
+They are unequal. The factor n-alpha is nonzero at both points and
+hence is not the zero rational function. Discarding its finitely many
+possible zeros leaves infinitely many distinct positive ratios r.
+
+Consequently the family(4) has infinite-dimensional real linear span,
+even when restricted to any open real interval s>(9/256)^2. Indeed
+choose any number of distinct ratios r_i. After nonzero source-only
+scaling, the functions are s/(s+r_i). A linear relation on that real
+interval is a rational identity; multiplying by product_i(s+r_i)
+and setting s=-r_i forces each coefficient to vanish.
+
+If the separated positive component in(2) had one finite fixed testing
+family f_1,...,f_k with source-only Gram coefficients, its restriction
+to the above source-independent states would lie in the finite span
+of the k(k+1)/2 products f_i f_j. This contradicts the infinite-span
+result. The obstruction allows arbitrary source-only Gram dependence,
+not merely affine dependence, and arbitrary fixed testing functions.
+It is therefore not cured by a different basis for the same separated
+Schur component, by changing a pointwise Cholesky factor, or by adding
+finitely many fixed functions to that component.
+
+3. Scope and the needed next step.
+
+There is no obstruction to the full parent at v=0. It has the explicit
+polynomial SOS
+
+ (C+D+1/2)Du*M^2+A(-M+uw)^2
+ +(m+1/2)Du*N^2+n(N-u*zeta)^2+alpha(zeta+uN)^2.
+
+Thus the rational terms introduced in the Schur split cancel between
+its two positive pieces, while their sum already has a finite fixed
+SOS. One cannot demand a finite fixed certificate for each separated
+piece and infer that this certifies the full family.
+
+On the outer strip, x/u^2<=64/81 and
+u^2-x>=(17/81)u^2. This genuine contact separation does not remove
+the moving poles in(4); they lie at negative s and persist on every
+positive real test interval. A successful proof must retain the
+cancellation before selecting fixed positive pieces, for example via
+a source-only block completion or a polynomial Gram that reallocates
+the retained squares. Equation(3) is only a multiplied identity;
+Delta>0 is not a tensor-ring inverse or multiplier-removal theorem.
+
+The exact helper analysis/full_r1_alice_schur_2026_10_24.py/.json
+checks the entire-parent coefficients, positive determinant formula,
+generic fraction-free identity, v=0 decomposition, physicality bound
+and both rational ratio values. It does not claim strip admission.
+The bounded attempt ends at this precise obstruction to literal Schur
+separation; it is not a counterexample to another fixed full-parent
+certificate, qualitative Q222 existence, or a global lift.

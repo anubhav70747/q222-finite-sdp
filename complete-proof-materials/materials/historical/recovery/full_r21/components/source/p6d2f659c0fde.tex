@@ -1,0 +1,199 @@
+\section[Small L, bounded eta: source openings and the remote complement]{Small $L$, bounded $\eta$: exact source openings and the remote complement}
+\label{sec:r8-c1-small-L-bounded-eta}
+
+Work in the original C1 source, with $d=1$, $x\in\Inf_{>0}$,
+$\zeta$ noninfinitesimal, $L=x\zeta\in\Inf_{>0}$, and $\eta$
+bounded. Native $r=1-a\eta$, $h=1-\theta$ remain strictly positive.
+This section admits every original projective test except possibly
+$u,v$ both infinitesimal. It does not admit the remaining two-soft
+local chart.
+
+\paragraph{Exact source restrictions, including the total-scale intersection.}
+Put $\rho=r+\eta$ and $j=\eta J=\eta(1+xh)-1+r>0$.
+Since $a<1+xh$, $\rho$ is a positive bounded unit. The exact beta
+numerator is
+\[
+ 2\beta\theta P_d=K\rho(xh+L)-\theta P_d.       \tag{SB1}
+\]
+It implies $\theta=O(x+L)=O(L)$, since $x/L=1/\zeta$ is bounded.
+Consequently
+\[
+ h,M,E,Q,P_d,P_4\sim1,\qquad B_5\sim1.           \tag{SB2}
+\]
+For the last assertion, use the exact expression
+$B_5=K(1+L\eta)\rho-jP_d$: its residue is
+$r+\eta-(\eta-1+r)=1$. Thus original $D=0$ cannot occur on
+this source face; literal $\beta=0$ remains included.
+The original formulas, with openings canceled before taking residues,
+give uniformly
+\[
+\begin{gathered}
+ C(1-r)\sim\rho/2,\quad Ar/\eta\sim1/2,
+ \quad Dj\sim1/2,\\
+ mL/x^2\sim\rho/2,\quad
+ \alpha/[L(L+x)]\sim\rho/2,\quad
+ (2\beta+1)\theta/(x+L)\sim\rho.
+\end{gathered}                                         \tag{SB3}
+\]
+In particular $C,D$ are strong, $m,\alpha$ weak, and $A$ is strong
+precisely when $\eta$ is a unit. The four exact large-weight
+alternatives are
+\[
+\begin{array}{c|c}
+\text{weight unbounded}&\text{equivalent opening}\\\hline
+C&1-r\in\Inf\\
+D&j\in\Inf\\
+A&r\in\Inf\\
+\beta&\theta/(x+L)\in\Inf.
+\end{array}                                                   \tag{SB4}
+\]
+For the $A$ equivalence, $r\in\Inf$ forces $\eta$ to be a unit
+because $j>0$; if $r$ is a unit, $\eta/r$ is bounded.
+All coefficients are bounded exactly when the four quantities in
+the right column of (SB4) are positive bounded units. That entire
+interior is already admitted by the positive-total-scale theorem.
+After intersection with $\delta_{\rm tot}\in\Inf_{>0}$, at least
+one of (SB4) therefore occurs. These are exhaustive necessary source
+alternatives, not assertions of their independent realizability.
+
+\paragraph{The unit-$\eta$ remote tests: two complete three-state blocks.}
+Suppose first $\eta$ is a unit, with real residue $e>0$, and write
+$r_0=\operatorname{res}r\in[0,1]$. For an interior opening,
+the source residues are
+\[
+ C_0=\frac{r_0+e}{2(1-r_0)},\quad
+ A_0=\frac e{2r_0},\quad D_0=\frac1{2(e+r_0-1)}.       \tag{SB5}
+\]
+Retain the original $m,\alpha,\beta$ packets throughout. Bounded
+selected weights retain their actual coefficients; unbounded ones
+are capped at sufficiently large finite real numbers and their
+excesses retained as exact squares.
+
+For $u$ a bounded nonzero unit and $v$ infinitesimal, use the full
+raw frame
+\[
+ p=uW,\quad Y,\quad R=vZ,\quad B_t=X+uZ.
+\]
+The exact core is (CE2), and the $D$ event is
+$J=p-Y+uvB_t-D_uR$. Every Gram coefficient is bounded after
+capping, and no state normal is omitted. Set $U=\operatorname{res}u^2>0$.
+The residue, divided by four, is $B_t^2/2$ plus
+\[
+\begin{split}
+ f_U={}&C_0(p-Y)^2+A_0(1+U)Y^2
+       +D_0\{p-Y-(1+U)R\}^2\\
+ &+\tfrac12\{(p-Y)^2+(1+U)UR^2-2(1+U)pR\}.
+\end{split}                                            \tag{SB6}
+\]
+Its first two principal minors and determinant are, respectively,
+\[
+\begin{gathered}
+\Delta_1=\frac{e(e+r_0)}{2(1-r_0)j_0},\qquad
+\Delta_2=\frac{e^2(1+U)(e+r_0)}{4r_0(1-r_0)j_0},\\
+\Delta_3=\frac{Ue(1+U)^2(e+r_0)^2}{8r_0(1-r_0)j_0}>0,
+\qquad j_0=e+r_0-1.
+\end{gathered}                                      \tag{SB7}
+\]
+
+For $u$ infinitesimal and $v$ a bounded nonzero unit, use the full
+frame $(p=uW,X,Y,R=vZ)$. The same exact parent has residue,
+divided by four, $(1+V)X^2/2$ plus
+\[
+\begin{split}
+ f_V={}&C_0(1+V)(p-Y)^2+A_0(1+V)Y^2
+       +D_0(p-Y-R)^2\\
+       &+\tfrac12\{(p-Y)^2+VY^2-2pR\},
+ \qquad V=\operatorname{res}v^2>0.
+\end{split}                                            \tag{SB8}
+\]
+The leading two minors are positive, and
+\[
+ \det f_V=\frac{V(1+V)(e+r_0)^2}{8r_0(1-r_0)j_0}>0. \tag{SB9}
+\]
+
+These arguments include every opening in (SB4). To see explicitly
+why the finite cap remains valid, impose the kernels of the divergent
+events and inspect the remaining two-state Gram. The determinants
+are
+\[
+\renewcommand{\arraystretch}{1.7}
+\begin{array}{c|c|c}
+\text{opening}&\det(f_U|_{\ker})&\det(f_V|_{\ker})\\\hline
+r_0=0,\ e>1&\dfrac{Ue^2(1+U)}{4(e-1)}&\dfrac{Ve}{4(e-1)}\\
+r_0=1&\dfrac{U(1+U)^2(e+1)}4&\dfrac{V(e+1)}{4e}\\
+j_0=0,\ 0<r_0<1&
+ \dfrac{U(1+U)^2}{4r_0}&\dfrac{V(1+V)}{4r_0(1-r_0)}.
+\end{array}                                                   \tag{SB10}
+\]
+The respective kernels are $Y=0$, $p=Y$, and
+$p-Y=(1+U)R$ for $f_U$ or $p-Y=R$ for $f_V$.
+All first pivots are positive. At the only double opening,
+$r_0=j_0=0,e=1$, the two kernels leave the positive scalar
+$U(1+U)R^2/2$, respectively $VR^2/2$. There are no other
+multiple openings since $e>0$. The elementary finite-penalty
+Schur lemma therefore supplies finite real caps simultaneously
+for every divergent selected event.
+
+For completeness the remaining projective ends also use original
+homogeneous degree. If $u$ is unbounded, (CE4)--(CE5) for bounded
+$v$, and (CE7)--(CE8) for unbounded $v$, are strict with any positive
+finite $C,A$ caps. If $v$ is unbounded and $u$ bounded, put
+$w=1/v$ and use $(p=uW,X,Y,Z)$. The exact $D$ event is
+$w(p-Y)+uX-Z$. At $w=0$ the core is
+$(1+u^2)(X^2+Y^2)$, while the three caps give
+$C(p-Y)^2+A(1+u^2)Y^2+D(uX-Z)^2$; these are strict on
+all four roots, including $u=0$. Each term suppressed in this
+residue has a bounded infinitesimal coefficient in this same
+full frame. Literal $w=0$ is therefore included. The both-unit
+tests are covered by the inherited noncommuting-residue theorem.
+Together these statements exhaust the complement of $u,v\in\Inf$.
+
+\paragraph{The infinitesimal-$\eta$ remote tests.}
+Here $r\sim1$, $C,D$ are unbounded, and $y=L\eta$ is infinitesimal.
+Define the pure-source harmonic coefficient
+$\gamma=yCD/(C+D)$. Uniformly through the $a,J$ openings,
+\[
+ \gamma\sim L/2,\qquad A/y\sim1/(2L),\qquad
+ \gamma A/y\sim1/4,\qquad y/\gamma\sim2\eta\in\Inf. \tag{SB11}
+\]
+The strong-II remote proof (RR3)--(RR6), which uses only $C,D$
+unbounded, covers every noninfinitesimal $v$ and every $u$.
+For $u$ noninfinitesimal and $v$ infinitesimal, use (RR7)--(RR9)
+with zero alpha cap and $k=-1$. In its notation let
+$a=u/\sqrt{1+u^2}$, $b=1/\sqrt{1+u^2}$,
+$\ell=vY$, $x_t=bX$, $R_0=x_t+a(Z-\ell)$, and $q=\sqrt yY$.
+Then
+\[
+ M_{-1}=\tfrac12R_0^2+\tfrac12(b\ell)^2,\qquad
+ v(Z-\ell)=avR_0-bv(b\ell)-b\sqrt y\,V_h,       \tag{SB12}
+\]
+where $V_h=v(aX-bZ)/\sqrt y$. Normalize the harmonic pair as
+$P_h=\sqrt\gamma V_h$, $Q_h=\sqrt{A/y}\,q$. Its residue
+determinant is $1-b_0^2>0$ by (SB11), where $b_0=\operatorname{res}b<1$;
+the off-diagonal entry is $b_0$. The sole negative term in (RR9),
+$-v^2(Z-\ell)^2/2$, is an infinitesimal Gram perturbation of
+$(R_0,b\ell,P_h)$ by (SB12), since $\sqrt{y/\gamma}$ is
+infinitesimal. Thus the full four-root Gram is strict. Retain the
+original positive $\alpha(Z-\ell)^2$, the C1 beta event, and every
+other unused packet. The homogeneous endpoint $u=\infty$ has
+$a=\pm1,b=0$ and is included; literal $v=0$ also causes no change.
+
+\paragraph{The actual remaining obstruction.}
+Only the simultaneous infinitesimal-test chart remains, intersected
+with (SB4) and all previous admissions. It has two soft state
+directions, not the single soft ray of the admitted $L$-unit proof.
+Indeed the original parent at $u=v=0$ is exactly
+\[
+ F= (4m+4\beta+2)X^2+(4C+4A+4D+2)Y^2+4\alpha Z^2. \tag{SB13}
+\]
+Since $m,\alpha$ are weak, the two $W,Z$ directions remain soft
+after the hard $X,Y$ normals are normalized. On the contact graph
+$X=-huZ$, $Y=ruW$, the exact two-soft scalar is (WS2)--(WS3)
+with $n=0$, the WS letters $h,r$ replaced by native $r,h$, and
+the additional positive term
+$\beta\theta^2U(1+V)Z^2$ in $F_g/4$. Its two negative
+monomials are still $-2uv(b_0+b_1U)WZ$. No strict finite Gram
+on the existing hard roots supplies the missing $W,Z$ pivots.
+A weighted contact circuit and its complete first-normal allocation
+are still needed. Neither the exact source alternatives nor the
+remote theorem is presented as that local completion.

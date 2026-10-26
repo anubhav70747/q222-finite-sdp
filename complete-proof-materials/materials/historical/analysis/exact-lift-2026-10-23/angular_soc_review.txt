@@ -1,0 +1,86 @@
+Independent algebra review: the eight-exponent Laurent coefficient cone
+23 October 2026
+
+VERDICT. The proposed order-49 affine lift is exact for
+ K={ (h,q): q_e>=0, h+sum_{e in E}q_e U^{e_1}V^{e_2}>=0 for all U,V>0 },
+ E={-1,0,1}^2\{0}. The earlier order-57 construction is also exact.
+I first derived the three block projections and the reduced assembly from
+the proposed formulas, then compared the minimal-face argument with the
+existing global_weighted_certificate.tex. No new draft or checker was used.
+
+1. EXACT CIRCUIT PROJECTIONS
+
+For an opposite pair, the infimum of r1 U^e+r2 U^{-e} is
+ k=2 sqrt(r1*r2). The proposed matrix [[2r1,s],[s,2r2]] is PSD precisely
+when r1,r2>=0 and |s|<=k. Hence its circuit polynomial minus s is
+nonnegative. Positive s=k is feasible, including zero coefficients.
+
+For e+f+g=0, the infimum is k=3(r1*r2*r3)^(1/3). Put t=s/3.
+The three PSD blocks imply x,y,t>=0, x^2<=r1*r2, y^2<=r3*t,
+and t^2<=x*y. If t>0, these give t^3<=r1*r2*r3. Conversely,
+if 0<t^3<=r1*r2*r3, choose x=sqrt(r1*r2) and y=t^2/x.
+For t=0 choose x=y=0. Thus this lift projects exactly to
+ r_i>=0, 0<=s<=k. No negative threshold is needed for necessity.
+
+For e+f+2g=0, the infimum is
+ k=4(r1*r2*(r3/2)^2)^(1/4).
+With t=s/4, the two PSD blocks imply 0<=x<=sqrt(r1*r2) and
+ t^2<=x*r3/2. These are equivalent to r_i>=0 and |s|<=k:
+for sufficiency choose x=sqrt(r1*r2). Thus the r3/2 convention,
+s/4 convention, and factors of two are all correct.
+
+All three caps follow from weighted AM-GM. For a triangle the two
+independent exponents allow equality at a positive point when all
+coefficients are positive. A zero coefficient gives cap zero and
+infimum zero; the block proofs above cover this case directly.
+
+2. REDUCED ASSEMBLY AND NECESSITY
+
+Keep only the 24 triangle incidences as allocation variables. Define
+ R_e=q_e-sum_{triangles C containing e}r_Ce.
+Use the unique opposite-pair block for e and -e with diagonal entries
+2R_e,2R_{-e}; keep all triangle blocks and the scalar h+sum_C s_C.
+Triangle allocations are nonnegative from their own block diagonals;
+R_e>=0 follows from the pair block. Thus q_e>=0 is itself implied.
+Every coefficient is allocated exactly, and
+ L=(h+sum_C s_C)+sum_C(sum_{e in C}r_Ce U^e-s_C).
+The preceding circuit bounds prove sufficiency.
+
+For necessity, h>=0 has the immediate witness: zero triangle
+allocations and thresholds, pair diagonals 2q_e. For h<0, use the
+minimal face J of the active exponent hull containing the origin.
+An exposing ray discards off-face terms without changing the face
+terms. On span(J), the face exponential sum has an attained minimum.
+At its minimizer a=(U_c,V_c), w_e=q_e a^e is balanced. Decompose w
+into positive circuits and allocate r_Ce=lambda_C b_Ce/a^e, with
+threshold s_C=lambda_C sum_e b_Ce. Each circuit is exactly at its
+AM-GM cap, and h+sum_C s_C is the nonnegative face minimum.
+Off-face coefficients and any remaining capacity may be placed in
+their opposite-pair diagonals; adding nonnegative diagonal entries
+preserves PSD. This proves necessity even for minima approached only
+at infinity. If zero is outside the active hull, h<0 is impossible.
+
+The primitive circuits are exactly four opposite pairs, four triangles
+{(a,b),(-a,0),(0,-b)} with weights (1,1,1), and four triangles of two
+adjacent corners and their opposite axial point with weights (1,1,2).
+No extra circuit or threshold-sign constraint is missing.
+
+3. COUNTS, CONVENTIONS, AND SCOPE
+
+There are 4+4*3+4*2=24 order-two blocks and one scalar block:
+total PSD order 49. Auxiliaries are 24 triangle allocations,
+12 thresholds, 8 ordinary-triangle x/y variables, and 4 weighted
+triangle x variables: 48. There are no coefficient equations left.
+All block entries are affine over the rationals in the nine inputs
+(h,q) and these auxiliaries. The earlier version has 32 allocations,
+56 auxiliaries, and eight additional scalar residual blocks, hence
+order 57, as claimed.
+
+The result is an exact affine semidefinite lift of this Laurent
+coefficient cone (indeed using only order-two PSD cones and one ray).
+Substituting the existing quartic coefficient map gives an exact
+quartic pullback test on the canonical source domain where the
+determinant/validity equivalence was already proved. It does not make
+that substitution affine, and does not establish an affine lift of
+the full Bell-source cone or Q222. No solver or script was run, and
+no broader proof or source-map audit is claimed here.

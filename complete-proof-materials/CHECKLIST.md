@@ -1,0 +1,135 @@
+# Complete material checklist — 26 October 2026
+
+This checklist links to the proofs, coefficients, matrix data, exact checkers and recorded results themselves. A checked box below means that the identified material and its stated result are on file; it is not a fresh certification of the entire theorem.
+
+The 22 October full analytical review supports qualitative finite-SDP existence. It covers 215 indexed components, 45 C1 cells and 49 C2 leaves. Later bounded reviews leave specific version/interface checks to reconcile. Constructing one evaluated global pencil is a separate unfinished task.
+
+- [All 215 components](COMPONENTS.md)
+- [Every C1 cell](C1_CASES.md) and [every C2 leaf](C2_CASES.md)
+- [All published material](INVENTORY.md), [machine-readable checklist](CHECKLIST.json), and [file hashes](MANIFEST.json)
+- [What the earlier work already completed](RECONCILIATION.md)
+- [Recovery limits](RECOVERY_LIMITS.md) and [the next verification pass](VERIFICATION_PLAN.md)
+
+## Foundations, full local proof and delivery
+
+- [x] **P01 — Real two-qubit reduction and compact nine-atom physical model.** prior complete analytical review.
+  Evidence: [02_model.tex](../latex/chapters/02_model.tex); [lead_completion_review.txt](../complete-proof-materials/materials/historical/analysis/lead_completion_review.txt).
+  Completion condition/scope: Preserve the real-state reduction, compactness and convex mixture argument.
+
+- [x] **P02 — Universal tensor-SOS criterion and algebraic coefficients.** prior review; targeted criterion recheck available.
+  Evidence: [03_tensor.tex](../latex/chapters/03_tensor.tex); [global_tensor_criterion_audit_2026_10_26.txt](../complete-proof-materials/materials/historical/analysis/global_tensor_criterion_audit_2026_10_26.txt); [global_criterion_adversarial_check.txt](../complete-proof-materials/materials/historical/analysis/c2_completion/global_criterion_adversarial_check.txt).
+  Completion condition/scope: Retain the field quantifiers and both inclusions; no fixed square count is required for qualitative existence.
+
+- [x] **P03 — Canonical source reduction, all omission supports, stationary contact validity.** prior review; targeted geometric recheck available.
+  Evidence: [04_geometry.tex](../latex/chapters/04_geometry.tex); [canonical_coverage_short_audit_2026_10_26.txt](../complete-proof-materials/materials/historical/analysis/canonical_coverage_short_audit_2026_10_26.txt); [CANONICAL_SOURCE_REDUCTION.md](../independent-review/CANONICAL_SOURCE_REDUCTION.md).
+  Completion condition/scope: Include both closed-face orbits, event rays, finite contacts and permitted third omissions.
+
+- [x] **P04 — Native source/contact entrance.** prior complete analytical review.
+  Evidence: [05_entry.tex](../latex/chapters/05_entry.tex); [en_native_entry_audit_2026_10_26.txt](../complete-proof-materials/materials/historical/analysis/en_native_entry_audit_2026_10_26.txt).
+  Completion condition/scope: Match actual source parameters to all contact equations, independently of testing variables.
+
+- [x] **P05 — Noncommuting residue theorem A6 and strict-Gram mechanism.** prior complete analytical review.
+  Evidence: [noncommuting_refined.tex](../latex/chapters/noncommuting_refined.tex); [lead_completion_review.txt](../complete-proof-materials/materials/historical/analysis/lead_completion_review.txt).
+  Completion condition/scope: Use the full event matching/induction and state/projective joins, not only positive residues.
+
+- [x] **P06 — All 45 C1 source/test/state cells.** prior complete analytical review.
+  Evidence: [All C1 cases](C1_CASES.md); [audit_report.txt](../complete-proof-materials/materials/historical/analysis/c1_completion/audit_report.txt); [refined_delta_audit.txt](../complete-proof-materials/materials/historical/analysis/c1_completion/refined_delta_audit.txt).
+  Completion condition/scope: Preserve every listed hypothesis, complete state form, opening and complementary test.
+
+- [x] **P07 — All 49 C2 source/test leaves.** prior complete analytical review.
+  Evidence: [All C2 cases](C2_CASES.md); [final_audit.txt](../complete-proof-materials/materials/historical/analysis/c2_completion/final_audit.txt); [refined_delta_audit.txt](../complete-proof-materials/materials/historical/analysis/c2_completion/refined_delta_audit.txt).
+  Completion condition/scope: Preserve strong-angle branches, weak-source R1–R10, both normals, literal n=0 and projective joins.
+
+- [x] **P08 — Global source cover and finite assembly.** prior complete analytical review.
+  Evidence: [07_cover.tex](../latex/chapters/07_cover.tex); [final_audit.txt](../complete-proof-materials/materials/historical/analysis/final_audit.txt); [coverage_union.json](../complete-proof-materials/materials/historical/analysis/coverage_union.json).
+  Completion condition/scope: Keep local implications under their native hypotheses and the universal criterion. Coverage counts do not prove those implications.
+
+- [x] **P09 — Refined BA, CT, DS/CJ and BN/UN changes.** prior delta reviews complete.
+  Evidence: [refined_delta_audit.txt](../complete-proof-materials/materials/historical/analysis/c1_completion/refined_delta_audit.txt); [refined_delta_audit.txt](../complete-proof-materials/materials/historical/analysis/c2_completion/refined_delta_audit.txt).
+  Completion condition/scope: Use generic BA identities for R8/R10 with their own source bounds; preserve all unit testing ratios in CT.
+
+- [x] **P10 — Original 215 source bodies and 215 presentation copies.** materially delivered; source identity checked.
+  Evidence: [Component-by-component proof index](COMPONENTS.md); [COMPONENT_INDEX.json](../complete-proof-materials/materials/historical/recovery/full_r21/records/COMPONENT_INDEX.json); [PROOF_DEPENDENCIES.json](../complete-proof-materials/materials/historical/recovery/full_r21/records/PROOF_DEPENDENCIES.json).
+  Completion condition/scope: Check original source and transformed presentation hashes separately; preserve all original path bindings in the archive.
+
+- [x] **P11 — Original full archive and 798-page recovered volume.** materially delivered.
+  Evidence: [Q222_R21_Rederived_Proof_Package_2026-10-22.zip](../complete-proof-materials/materials/historical/recovery/full_r21/archives/Q222_R21_Rederived_Proof_Package_2026-10-22.zip); [Q222_Analytical_Existence_Proof_RECOVERED_2026-10-22.pdf](../complete-proof-materials/materials/historical/recovery/full_r21/Q222_Analytical_Existence_Proof_RECOVERED_2026-10-22.pdf); [Q222_Complete_Package.zip](../complete-proof-materials/materials/historical/delivery/Q222_Complete_Package.zip).
+  Completion condition/scope: Preserve byte identity and distinguish these historical versions from current manuscript sources.
+
+- [x] **P12 — Current paper, companion, sources and matrix data.** already published; indexed here.
+  Evidence: [Q222_Paper.pdf](../pdf/Q222_Paper.pdf); [Q222_Complete_Proofs.pdf](../pdf/Q222_Complete_Proofs.pdf); [Q222_Overleaf.zip](../Q222_Overleaf.zip); [All evaluated representations](../extracted-lifts).
+  Completion condition/scope: Keep sources, matrices, exact coefficient systems, code and results together.
+
+
+## Explicit lift construction
+
+- [x] **L01 — Exact closed-face pencils SG12/SG13 and symmetry copies.** proved in supplied source; prior review.
+  Evidence: [04_geometry.tex](../latex/chapters/04_geometry.tex); [ASSEMBLY_REFINEMENT.md](../independent-review/ASSEMBLY_REFINEMENT.md).
+  Completion condition/scope: Use the exact globally sound face cones directly; no sixth-root inclusion for them is needed.
+
+- [x] **L02 — Canonical-to-full eight-copy polar assembly.** proved conditional construction.
+  Evidence: [full_polar_assembly.tex](../extracted-lifts/canonical-completion/full-polar/full_polar_assembly.tex).
+  Completion condition/scope: Insert a single exact canonical pencil; both inclusions are already established for that input.
+
+- [x] **L03 — Compact strict native source families.** scoped complete construction.
+  Evidence: [COMPACT_NATIVE_CONTACT_COVER.md](../independent-review/COMPACT_NATIVE_CONTACT_COVER.md).
+  Completion condition/scope: The finite size depends on the compact subfamily; this does not supply uniform singular-limit admission.
+
+- [x] **L04 — Explicit regional R1 and C2 certificates.** scoped constructions and matrices delivered.
+  Evidence: [R1 data and source](../extracted-lifts/canonical-completion/uniform-contact); [C2 regional completions](../extracted-lifts/canonical-completion/fixed-c2-gates); [r1_full_proof_audit_2026_10_26.txt](../complete-proof-materials/materials/historical/analysis/r1_full_proof_audit_2026_10_26.txt).
+  Completion condition/scope: Retain the stated source and testing domains when joining regional cones.
+
+- [x] **L05 — Equal-angle and unequal-angle C2 exact subfamilies.** scoped complete representations.
+  Evidence: [c2-equal-angle-cone](../extracted-lifts/c2-equal-angle-cone); [c2-unequal-angle-curve](../extracted-lifts/c2-unequal-angle-curve).
+  Completion condition/scope: Retain their exact parameter domains and source/behavior inclusions.
+
+- [x] **L06 — Sixth-root library specification, soundness and closedness.** candidate properties established in supplied analysis.
+  Evidence: [EXACT_LIFT_CANDIDATE.md](../independent-review/EXACT_LIFT_CANDIDATE.md); [ASSEMBLY_REFINEMENT.md](../independent-review/ASSEMBLY_REFINEMENT.md).
+  Completion condition/scope: These properties make it a valid candidate cone; they do not prove every native source belongs to it.
+
+- [x] **L07 — Closed-form C2 c=0 and c=infinity limit Grams.** exact endpoint result; local symbolic replay completed.
+  Evidence: [C2_END_GRAM_LEMMA.md](../independent-review/C2_END_GRAM_LEMMA.md).
+  Completion condition/scope: Keep the distinct state rescaling at the two ends. Endpoint positivity alone does not give finite-c positivity.
+
+- [ ] **L08 — Finite-c complete-state certificate in one fixed library.** OPEN construction.
+  Evidence: [EXACT_LIFT_CANDIDATE.md](../independent-review/EXACT_LIFT_CANDIDATE.md).
+  Completion condition/scope: Give a Gram or equivalent exact certificate for the complete parent at all finite native c, with actual coefficient matching and positivity.
+
+- [ ] **L09 — Uniform admission through every singular source limit.** OPEN construction.
+  Evidence: [ASSEMBLY_REFINEMENT.md](../independent-review/ASSEMBLY_REFINEMENT.md); [COMPACT_NATIVE_CONTACT_COVER.md](../independent-review/COMPACT_NATIVE_CONTACT_COVER.md).
+  Completion condition/scope: Prove every remaining C1/C2 source lies in one fixed finite sum of globally sound cones; include zero weights, independent rates and testing endpoints.
+
+- [ ] **L10 — Final evaluated global affine pencil and both inclusions.** OPEN construction.
+  Evidence: [full_polar_assembly.tex](../extracted-lifts/canonical-completion/full-polar/full_polar_assembly.tex).
+  Completion condition/scope: After L08/L09 or a proved alternative, publish every matrix, auxiliary variable, coefficient equation and an independently replayable two-inclusion proof.
+
+- [x] **L11 — NPA and simpler feature-library limitations.** proved/scoped obstruction evidence delivered.
+  Evidence: [SMOOTH_FEATURE_OBSTRUCTION.md](../independent-review/SMOOTH_FEATURE_OBSTRUCTION.md); [NATIVE_MULTIPLIER_OBSTRUCTION.md](../independent-review/NATIVE_MULTIPLIER_OBSTRUCTION.md); [C2_HALF_POWER_OBSTRUCTION.md](../independent-review/C2_HALF_POWER_OBSTRUCTION.md).
+  Completion condition/scope: Distinguish failure of one fixed NPA/feature cone from impossibility of an arbitrary finite SDP lift.
+
+
+## Reconciliation and verification
+
+- [ ] **V01 — Reconcile the older complete review with later narrow C1/C2 reviews.** OPEN targeted verification.
+  Evidence: [Status reconciliation](RECONCILIATION.md); [final_audit.txt](../complete-proof-materials/materials/historical/analysis/final_audit.txt).
+  Completion condition/scope: Compare actual changed equations and hypotheses. A later assignment that did not check a branch does not reopen its prior proof by itself.
+
+- [ ] **V02 — Thin-R10 formal-base and conductor interfaces in the latest source.** OPEN final reconciliation; prior proof and later partial rechecks delivered.
+  Evidence: [r10_source_and_formal_base_audit_2026_10_26.txt](../complete-proof-materials/materials/historical/analysis/r10_source_and_formal_base_audit_2026_10_26.txt); [ca_se_conductor_structural_review_2026_10_26.txt](../complete-proof-materials/materials/historical/analysis/ca_se_conductor_structural_review_2026_10_26.txt); [r10_all_tests_join_audit_2026_10_26.txt](../complete-proof-materials/materials/historical/analysis/r10_all_tests_join_audit_2026_10_26.txt); [final_audit.txt](../complete-proof-materials/materials/historical/analysis/c2_completion/final_audit.txt).
+  Completion condition/scope: Compare TL stress, CA/SE full scalar and normal coefficient collections, negative-beta paired reserve and all testing joins against the already reviewed chain.
+
+- [ ] **V03 — IC/LII independent follow-up and any claimed coefficient correction.** OPEN recovery/reconciliation; original proof and checker package delivered.
+  Evidence: [Recovery limits](RECOVERY_LIMITS.md).
+  Completion condition/scope: Recover the independent follow-up from the inaccessible chat and identify the exact equation/version it changes before treating the proposed correction as operative.
+
+- [ ] **V04 — Latest BN/UN, R2, R3/R4, R6/R7 and UL readbacks.** OPEN consolidated version check; full proofs and available original checkers delivered.
+  Evidence: [Material inventory](INVENTORY.md).
+  Completion condition/scope: Check each new normalisation and imported lemma against the native source. Retain N0=N/ell in the corrected BN/UN proof.
+
+- [x] **V05 — Identity, link, archive and delivery coverage checks.** performed for this publication.
+  Evidence: [Integrity verifier](verify_materials.py); [Verification receipt](VERIFICATION.json).
+  Completion condition/scope: Verify bytes, all component hashes, source/dependency availability and all generated checklist links; do not call this a new mathematical proof.
+
+- [ ] **V06 — Final independent mathematical verification of the integrated package.** OPEN later pass.
+  Evidence: [Verification plan](VERIFICATION_PLAN.md).
+  Completion condition/scope: Resolve V01–V04, inspect every changed implication, and state exactly whether the current source retains the prior complete proof. No blanket rederivation or numerical sweeps.

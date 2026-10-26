@@ -1,0 +1,435 @@
+\section{R8: a joint divergent-$D$ certificate, a paired-$D$ thin lift, and the remote join}
+\label{sec:r17-R8-joint-D}
+
+\paragraph{Scope and conventions.}
+All identities use $F/4$ and the unchanged physical C2 parent, with
+$\lambda_{\rm event}=\beta=0$, $d=1$, and $n\ge0$.  Every original
+stationary-contact, nonnegative-coefficient, strict-gap, total-scale,
+and prior-admission-complement intersection is retained.  The two real
+closed source/testing fields are independent.  The symbol $\lambda$
+below is the positive circuit coefficient, not an event coefficient.
+
+R8 means $B,z,y,h,j>0$ infinitesimal, $t=y/B$ and $g=G/B$ positive
+bounded units, $h=H/B$, $a=z/B$, $r\in(0,1)$, and $e=1-r$.  Put
+$x=z=aB$, $l=1-h$.  The exact gap is
+\[
+                 j=1+xr-l/t.                         \tag{JD1}
+\]
+In particular $t_0=1$.  This section proves:
+\begin{enumerate}
+\item every independent test and state on the whole R8 subdomain
+      where $r$ is a positive bounded unit;
+\item the entire remote testing complement of both angles
+      infinitesimal on all of R8, including $r$ infinitesimal.
+\end{enumerate}
+The simultaneous $r,h,j$-infinitesimal local domain is proved by the
+separate joint-$n,A,D$ lemma in
+\texttt{weak\_r8\_small\_r/r8\_small\_r\_local.tex}; it is not
+inferred from the present $r$-unit proof.  Its union with the two
+assertions above closes the whole ordered R8 shape.  No R1 or R2
+admission is asserted here.
+
+The inherited exact inputs are R15 RC1--RC13 and its source appendix,
+R16 R10.9--R10.12, TL1--TL10 and the two complete-support checks, the
+CA/CS/SE bounded contact conductors, and the critical-wall polynomial
+identities SEO10--SEO20.  They are used as explicit identities with
+the bounds verified below.  In particular no physical C1 theorem is
+invoked at a negative formal beta.
+
+\paragraph{A single contact-zero row removes every naked $D$ pole.}
+Use the homogeneous R15/R16 roots
+\[
+ E=tuW-vZ,\quad N_y=(Y-huW)/\sqrt h,\quad \xi=X+ruZ,
+ \quad R_D=v(u^2-x)Z,\quad F_v=(v^2-y)Z.
+\]
+The other roots $Q,N,T,R,J$ and source coefficients are exactly those
+of R10.9.  Define
+\[
+ L_D={l\over t}E-rR_D-\sqrt hN_y+uv\xi,
+ \qquad M_D=\sqrt D\,L_D.                            \tag{JD2}
+\]
+The original event row satisfies the exact homogeneous identity
+\[
+ uW+uvX-Y-vZ=L_D-jvZ.                               \tag{JD3}
+\]
+Thus $L_D$ vanishes at the actual source contact, including its full
+state normal.  This is a legal separated root at every testing axis.
+
+Let $\mathscr P$ be the right side of R10.9 with the two exact
+positive squares $N^2,T^2$ omitted, and let $\mathscr P_0$ denote
+its formal coefficient specialization $D=0$.  The other source
+letters are held fixed in this notation; it does not change the
+physical source.  Direct collection of the complete $D$ channel gives
+\[
+ \boxed{\quad \mathscr P=D L_D^2+\mathscr P_0
+                        -2Dj\,uF_v\xi.\quad}        \tag{JD4}
+\]
+Here is the full coefficient calculation.  The hard contribution is
+$D(lE/t-\sqrt hN_y+uv\xi)^2$; the remaining $D$ contributions are
+$Dr^2R_D^2-2Dr(lE/t-\sqrt hN_y+uv\xi)R_D$ and
+$2D\{l/t-1-rx\}uF_v\xi$.  Their sum is exactly JD4 by JD1.
+This accounts for every hard and first-normal term, rather than just
+the angular graph or its Hessian.
+
+Use the polynomial inverse
+\[
+ E={t\over l}\{D^{-1/2}M_D+rR_D+\sqrt hN_y-uv\xi\}. \tag{JD5}
+\]
+On R8, $t/l$ is a unit, $D^{-1/2}$ is infinitesimal, and $Dj$ is
+bounded.  Every coefficient of the new remainder is bounded whenever
+the remaining source arrays of R10.9 are bounded.  In particular no
+ratio $h/j$, $x/j$, or testing angle divided by a source opening occurs.
+The full divergent rank-one block has been normalized jointly.
+
+\paragraph{The exact residue after the joint normalization.}
+Put $\sigma=t\lambda x/\sqrt q$ and $\mu=m-a^2q$ as in R10.9.
+At the R8 source/testing corner, JD4--JD5 have the complete residue
+\[
+ \begin{split}
+ M_D^2+r_0^2(C_0+n_0)R_D^2+(Ah)_0N_y^2
+  +(n_0+\tfrac12-\mu_0)\xi^2
+  +(c_F)_0F_v^2+\lambda_0J^2+R^2+Q^2-2\sigma_0Q\xi.
+ \end{split}                                                   \tag{JD6}
+\]
+This formula applies when $r,n$ are bounded and $r$ a unit.  Its
+derivation can retain $n,C,Ah,\mu,c_F,\lambda,\sigma$ as free source
+letters: specialize $u=v=\sqrt h=D^{-1/2}=x=\alpha=0$ and $t=1$
+in JD4--JD5.  In particular the $E,R_D,N_y$ terms become
+$r^2(C+n)R_D^2+AhN_y^2$, with no missing $D$ contribution.
+The separate $N^2,T^2$ remain intact.  The focused checker reconstructs
+the original hard polynomial and verifies both JD4 and this full
+residue.
+
+\paragraph{Bounded $a$, unit $r$, and unit $e$.}
+Positivity of $g=1-ae+hx$ makes $a$ bounded whenever $e$ is a unit.
+The unchanged source formulas, with $B=h=0$ and $t=1$ only after
+clearing unit denominators, give
+\[
+ \begin{gathered}
+ n_0={e_0\over2r_0(1+a_0)},\quad
+ (m/a^2)_0={e_0\over2g_0(1+a_0)},\\
+ C_0={1+a_0(2r_0-1)\over2(1+a_0)},\quad
+ (Ah)_0=(Dj)_0={1+a_0r_0\over2(1+a_0)},\\
+ \lambda_0={r_0(1+a_0r_0)\over2(1+a_0)},\quad
+ (c_F)_0={(1+a_0r_0)g_0\over2(1+a_0)}.                \tag{JD7}
+ \end{gathered}
+\]
+All displayed pivots are positive units.  Indeed
+$1+a_0(2r_0-1)=g_0+a_0r_0>0$.  The source cancellation defining
+$\lambda=(m-a^2q)/(ta^2B)$ is regular also at $a=0$; no division
+by an infinitesimal $a$ survives its canceled formula.
+Here $q$ is a unit, $\mu=ta^2B\lambda$ is infinitesimal and
+$\sigma$ is infinitesimal.  Therefore JD6 is strictly positive.
+All omitted entries have zero residue by the finite polynomial
+JD4--JD5 and bounded source arrays.  The bounded separated-Gram
+lemma gives the complete local parent for every independent ratio
+$u/v$, every state, and both literal axes.
+
+\paragraph{Bounded $a$, infinitesimal $e$, including $n=0$.}
+Now $r_0=1$, $C_0=(Ah)_0=1/2$, $n,m,\mu$ are infinitesimal,
+$\lambda_0=(c_F)_0=1/2$, and
+\[
+                    (\alpha/B^2)_0=(1+a_0)/2.         \tag{JD8}
+\]
+The physical inequality OP2 supplies the crucial source lower bound,
+without dividing by $n$:
+\[
+ {e\over B}\ge
+ {(1+x)(h+t)(1+ar)\over P_n/B},\qquad P_n/B\sim1.
+                                                               \tag{JD9}
+\]
+It remains valid when $e/B$ is unbounded and at literal $n=0$.
+Since $q\ge\alpha+e^2/2$, the $Q,\xi$ Schur pivot satisfies
+\[
+ \begin{split}
+ \operatorname{st}\left(\tfrac12-\mu
+                 -{t^2\lambda^2a^2B^2\over q}\right)
+ &\ge {1\over2}-{a_0^2\over2(1+a_0)(2+a_0)}\\
+ &= {2+3a_0\over2(1+a_0)(2+a_0)}>0.                  
+ \end{split}\tag{JD10}
+\]
+This is a bound entirely in the source field.  The entry $\sigma$
+is bounded by JD8, so the whole block is bounded and strict.
+The remaining entries of JD6 are positive units.  This proves all
+local tests and all states on this source domain, including $n=0$.
+
+\paragraph{Unbounded $a$: the thick layer.}
+Put $s=1/a$, $w=ae$, $b=a^2B$.  The exact R10 source identity
+still reads
+\[
+ n=s^2{wQ_*-bK_*\over2r\Delta_*},\qquad
+ Q_*\sim1,\ K_*\sim t,\ \Delta_*\sim1.             \tag{JD11}
+\]
+Thus $b/w$ is bounded, $b$ is bounded, $g_0=1-w_0>0$, and
+\[
+\begin{gathered}
+ (m/w)_0={1\over2(1-w_0)},\quad C_0=(Ah)_0=1/2,
+ \quad (Dj)_0=1/2,\\ \lambda_0=1/2,
+ \quad(c_F)_0=(1-w_0+b_0)/2>0.
+\end{gathered}                       \tag{JD12}
+\]
+The source formulas for these quantities have no $j$ denominator;
+only $D$ itself is unbounded, and JD4 has removed that pole.
+For $\rho=n/e^2$ positive noninfinitesimal, retain the exact R10.10
+identities and R10.11 Schur pivot:
+\[
+ \bar q=a^2q=w^2\{\rho r^2+H\}+a^2\alpha,
+ \quad H=m+\tfrac12,\quad \chi=m/w,
+ \quad \chi-H\in\operatorname{Inf},
+\]
+\[
+ S=\tfrac12-\mu-{(t\lambda x)^2\over q}
+ =H-{m^2\over\bar q}
+ \ge {H\rho r^2\over\rho r^2+H}
+       +{H^2-\chi^2\over\rho r^2+H}.                 \tag{JD13}
+\]
+The first term has positive residue and the second is infinitesimal,
+also for unbounded $\rho$.  Moreover $x/\sqrt q=b/\sqrt{\bar q}$
+is bounded by JD11 and $\bar q\ge Hw^2$.  JD6 consequently has
+strict residue on $(M_D,R_D,N_y,\xi,F_v,J,R,Q)$, with the only
+possible nonzero cross residue in its strictly positive $Q,\xi$
+block.  Restore $N^2,T^2$.  This proves the full local parent, not
+just its contact-state restriction.
+
+\paragraph{Unbounded $a$: the thin layer and the exact paired-$D$ repair.}
+Assume $0<\rho=n/e^2$ infinitesimal.  JD11 gives
+$b/w\sim1/t$, so $\psi=w/b$ is a unit.  The formal C1 contact is
+exactly OP4, with native parameters
+\[
+ x_1=x,\quad\eta_1=t,\quad\zeta_1=s,\quad r_1=h,
+ \quad\theta_1=e,\quad t_1=w.
+\]
+TL2 still gives $\beta_1=-s_n/2$ infinitesimal and
+$\kappa=(1+2n)/(1-s_n)\sim1$.  The native gaps satisfy
+$M_1=g$ a unit and $J_1=j>0$.  The canceled CA/CS/SE remainders
+have no inverse $J_1$; their divergent paired-$D$ mass is retained
+in SD3.  The formal source has $C_1,A_1h$ positive units,
+$D_1j$ a positive unit, positive $m_1,\alpha_1$, and positive
+$\beta_1+1/2$.  These facts follow directly from TL3 and JD12.
+Its bounded opening ratio $t_1/e_{1,\mathrm{scale}}^2=w/(tb)$
+is a unit.  Thus the explicit CA/CS/SE strict base and their finite
+conductors apply exactly as in the R16 thin proof; the reservation
+$(2+4\beta_1)\nu-\nu$ is positive because $\beta_1$ is
+infinitesimal.  This is an algebraic use of those formulas, not an
+application of a physical C1 theorem with negative beta.
+
+Here is the one change needed to the R16 perturbation.  In native
+notation put
+\[
+ T_1=c_a=1+xr,\quad a_1=l/t,\quad
+ b_D={J_1\over T_1}={j\over c_a},\quad
+ h_1={a_1\over T_1}=1-b_D,
+\]
+\[
+ q_B=v(Z-uX),\quad M_B=(uW-Y)-h_1q_B,
+ \quad R_{D,\mathrm{event}}=M_B-b_Dq_B.               \tag{JD14}
+\]
+The old retained paired-$D$ packet in $\kappa F_1/4$ is
+$\kappa(D_1+1/2)h_1M_B^2$.  In the actual parent retain instead
+the positive contact-zero packet $(D_2+1/2)h_1M_B^2$.
+For $\delta_D=(D_2+1/2)-\kappa(D_1+1/2)$ the entire resulting
+difference is
+\[
+ \boxed{\quad
+ \delta_D\{R_{D,\mathrm{event}}^2-h_1M_B^2\}
+ =\eta_D\{M_B^2-2M_Bq_B+b_Dq_B^2\},\quad
+ \eta_D=\delta_D b_D.\quad}                          \tag{JD15}
+\]
+By the exact TL3 coefficients, with $\Theta=n/B$,
+\[
+ \eta_D={\Theta\{S_cP_D/t-jP_\kappa\}
+                    \over K(h+t)c_a},\qquad
+       \eta_D/\rho=O(w).                            \tag{JD16}
+\]
+Every denominator is a unit.  In particular the previously unbounded
+$\rho w/j$ correction is absent; no relative $w/j$ bound is needed.
+
+Keep the R16 positive contact-zero $n$ row TL4, the actual centered
+$A$ packet, and every other unchanged retained packet.  The exact
+full stress is TL6 with its $\delta_D R_{D,\mathrm{event}}^2$
+line replaced by the right side of JD15.  Both parents and all
+retained packets have zero contact value and full first jet, so this
+new entire stress has the same exact vanishing.
+
+For completeness its new term satisfies every finite-support premise
+of the inherited conductor.  The exact inverse state formulas give
+\[
+ q_B=v\{D_u-uN-puD_uv\mathfrak w\},\qquad p=t_1/R_1.
+                                                               \tag{JD17}
+\]
+At zero normals $q_B=vD_uV_0$.  Hence the new scalar term is in
+$(v)^2$, both complete first normals are in $(v)$, and the remaining
+hard entries are bounded.  There are no terms above normal degree
+two.  Every dependence on $\mathfrak w$ has a factor $p$.
+In the CA chart JD16 divided by $\rho$ has bounded coefficients
+on the same raw roots as TL8.  In the SE chart
+\[
+ \Theta/\rho=\varepsilon^2\tau^2QE/K
+\]
+gives the same extra $\varepsilon^2$ factor to every new coefficient.
+Modulo $\varepsilon$, scalar coefficients are even in $u,v$ and
+the normal coefficients are independent of $\mathfrak w$.
+Thus the exact support, full-jet, and finite divisibility hypotheses
+of CC3--CC6 and SE5--SE8 are unchanged.  The complete stress divided
+by $\rho$ has a bounded Gram on the same eight roots.  Multiplication
+by $\rho$ makes it an infinitesimal perturbation of the strict formal
+C1 base.  Restoring the positive packets proves the actual C2 parent
+on the entire thin contact chart, including both full state normals.
+
+At literal $n=0$, OP4 is a physical C1 identification with
+$k_1,\zeta_1,r_1$ infinitesimal, $\eta_1=t$ a unit and
+$e_{1,\mathrm{scale}}^2=tb$ bounded.  The physical C1.2/C1.3
+all-tests theorems allow arbitrary positive $J_1$ and literal beta
+zero, so they cover this boundary exactly.
+
+\paragraph{The unit-$W$ entry on the unbounded-$a$ thin layer.}
+The actual physical C2 critical coefficient is
+\[
+ C_*={(h+2Ah)(1+2D)\over2(4AhD-h)}.
+\]
+Use the polynomial UW3 numerator/denominator with $b=wz_*$,
+$z_*=b/w$ bounded.  Its numerator is divisible by $sw$ because it
+vanishes identically at $s=0$ and $w=0$.  The denominator after
+canceling the $m$ numerator has residue $16t_0=16$, also when
+$j_0=0$.  Consequently
+\[
+                   (C_*-C)/m=s\times O(1).            \tag{JD18}
+\]
+There is no $j$ inverse in this estimate.  SEO12 permits both $A,D$
+unbounded: its entire hard block remains strict and its two radial
+masses tend to $2,2$.  With $W=1$, the exact testing identity
+$vZ=Z(R_m+X+uZ)/(1+uY)$ absorbs the full negative critical correction
+by JD18 and the retained original $m$ square.  All denominators are
+pure testing units.  This proves every local normalized unit-$W$
+state, including $Z=0$; negative-core state normalization leaves
+exactly the $Z=1$, $u,v,\mathfrak w>0$ infinitesimal chart proved
+above.  This is the same actual-C2 state entry as UW, with its
+source bound checked at the new $t_0=1$ boundary.
+
+\paragraph{Finite remote tests when $e$ is infinitesimal.}
+For bounded $a$, $C_*-C$ is infinitesimal because $C_*,C\sim1/2$.
+For unbounded $a$ this follows also from JD18 and bounded $m$.
+The full critical-wall identities SEO17, SEO18, SEO20, in the
+normalized SEO12 frame, are strict whenever at least one finite
+angle has nonzero residue.  They explicitly allow $A,D$ unbounded.
+The entire correction $-4(C_*-C)_+D_v(uW-Y)^2$ has infinitesimal
+bounded entries in that frame.  Retain original $n,m,\alpha$ and
+any positive excess.  This proves every finite remote test, with
+all states, for the entire $e$-infinitesimal R8 domain.
+
+\paragraph{Finite remote tests when $e$ is a unit, including small $r$.}
+Here $a$ is bounded, $m,C$ bounded, $C$ a positive unit, $A,D$
+unbounded, and $N_*=n+1/2$ is either a unit or unbounded.  All
+normalizations below are pure source.  Let
+$\widehat X=\sqrt{N_*}X$, $\widehat Y=\sqrt A Y$, and
+$\widehat D=\sqrt D\,R_{D,\mathrm{event}}$.
+
+If $u$ is a bounded unit and $v$ bounded, use the exact inverse
+\[
+ W={D^{-1/2}\widehat D+A^{-1/2}\widehat Y+vZ
+                         -uvN_*^{-1/2}\widehat X\over u}.
+                                                               \tag{JD19}
+\]
+All full coefficients are bounded.  The $\widehat Y,\widehat D$
+residue pivots are $(1+U)(1+V),1$, with zero cross residue, where
+$U=u_0^2>0,V=v_0^2\ge0$.  For unit $r$, the remaining two-state
+matrix before $X$ normalization is the complete original parent at
+$Y=R_{D,\mathrm{event}}=0$, namely
+\[
+ \begin{split}
+ &(nD_uD_v+mD_v^2+CD_vUV+D_v/2)X^2\\
+ &+2\{-mD_v(V-U)/u-CD_vuV+uD_v/2\}XZ\\
+ &+\{m(V-U)^2/U+CD_vV+(U-V)/2\}Z^2.
+ \end{split}                                                   \tag{JD20}
+\]
+Insert the residue source values JD7, with $e=1-r$, $g=1-ae$.
+Its determinant has the exact positive expression
+\[
+ \begin{split}
+ U\det={D_uD_v(1+ar)\over4r(1+a)^2g}
+ \{e(U-aV)^2+r(g+ar)U^2V+g(g+ar)UV^2\}.             
+ \end{split}\tag{JD21}
+\]
+It is positive for every $U>0,V\ge0$.  The $X$ diagonal is
+positive.  Division by the positive unit $N_*$ proves strictness
+after normalization.  When $r$ is infinitesimal, divide JD21 by
+$N_*\sim n$ before taking residue.  The result is
+\[
+ U\det_{\rm normalized}
+ ={D_uD_v\over2(1+a_0)(1-a_0)}
+       \{(U-a_0V)^2+(1-a_0)^2UV^2\}>0,             \tag{JD22}
+\]
+with $0\le a_0<1$.  The normalized $X$ diagonal tends to $D_uD_v$.
+Thus JD19 proves this remote chart for arbitrary relative $n,A,D$
+rates, without a comparison between any of them.
+
+It remains to take $u$ infinitesimal and $v$ a bounded unit.  If
+$a$ is a unit, $m$ is a unit.  Solve instead for $Z$ by the pure
+testing unit $v$.  The full residue is
+\[
+ m_0(v_0W-N_{*,0}^{-1/2}\widehat X)^2
+       +D_v\widehat X^2+D_v\widehat Y^2+\widehat D^2,
+                                                               \tag{JD23}
+\]
+where $N_*^{-1/2}$ has residue zero if $n$ is unbounded.  This is
+strict, with the two-state determinant $m_0V D_v>0$.
+If $a$ is infinitesimal, use the extra legal root $S=aW$ and put
+$R=uW$.  The exact D event gives
+$R=vZ-uvX+Y+D^{-1/2}\widehat D$.  Substitute this expression
+in every occurrence except the $m$ event, where use
+$mR_m^2=(m/a^2)(vS-aX+auvY-auZ)^2$.
+All coefficients are bounded, also when $n$ is unbounded after
+the displayed $X$ normalization.  Its entire residue is diagonal
+on $(S,\widehat X,\widehat Y,\widehat D,Z)$ with pivots
+\[
+                    ((m/a^2)_0V,D_v,D_v,1,V^2/2)>0.   \tag{JD24}
+\]
+These identities retain every original event and the complete signed
+core; introducing a dependent extra root is harmless.  The finite
+separated lift around the real angle residues proves each chart.
+
+\paragraph{Projective endpoints, signs, and the complete join.}
+On all of R8, $C$ is a positive unit and $A,D$ are unbounded.
+For infinity charts retain the whole original $m,n,\alpha$ packets,
+clip $C,A,D$ at suitable positive real lower bounds, and retain their
+positive excesses.  The exact homogeneous infinity identities used
+in SEO19 and its accompanying BE2 routing require only these lower
+bounds and $d=1$; they do not require $D$ bounded or $m$ bounded
+below.  In particular the delicate $(u,1/v)=(0,0)$ corner has the
+strict selected residue
+\[
+ 2X^2+4c(uW-Y)^2+(4A_*+2)Y^2+4D_*Z^2
+\]
+on $(X,Y,uW,Z)$ after retaining $m$.  All leftover $W$ occurrences
+carry $u$.  The remaining single and double infinities are exactly
+the same homogeneous event identities.  Literal endpoint values are
+taken in those original homogeneous formulas; no higher-degree
+contact graph is substituted at infinity.
+
+For unit $r$, source $a$ is bounded or unbounded.  The bounded case
+has $e$ unit or infinitesimal and is covered locally by JD7 or
+JD8--JD10.  The unbounded case forces $e$ infinitesimal and is
+covered by the thick/positive-thin/literal-zero split above.  These
+are exhaustive pure-source alternatives.  All finite remote tests
+use JD18--JD24 or the critical wall, and every infinity uses the
+homogeneous join.  Original testing sign gauges, literal-axis event
+identities, state homogenization, and the real/imaginary split give
+all signs and complex states.  All inverses and radicals are pure
+source or pure testing.  No independent source/testing rate is ever
+compared.
+
+This proves the entire R8 $r$-unit source subdomain all tests and
+the remote complement for every R8 source.  If $r$ is infinitesimal,
+$e$ is a unit and $g>0$ forces bounded $a$ with $a_0<1$; precisely
+these hypotheses, with every other original intersection unchanged,
+are those of the joint-$n,A,D$ local lemma.  That lemma supplies a
+strict full-parent Gram with residue $(1,1,1,(m/a^2)_0,C_0)$ on
+all remaining local tests, including the axes.  Therefore the two
+source alternatives $r$ unit or infinitesimal now exhaust R8 with
+an all-tests certificate.  Literal $n=0$ was retained in the unit-$r$
+proof; it is impossible in the small-$r$ part because $nr$ is a unit.
+The whole ordered R8 shape is closed, with no extra source or testing
+rate restriction.  The 20 new focused checks in \texttt{check\_joint\_D.json}
+corroborate the new exact identities; the ordered-field bounds and
+finite-conductor arguments are the proof, not an inference from a
+numerical sample or a checker count.

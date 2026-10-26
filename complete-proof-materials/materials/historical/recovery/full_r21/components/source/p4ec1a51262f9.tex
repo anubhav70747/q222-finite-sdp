@@ -1,0 +1,398 @@
+# A full-parent terminal for a finite positive-d commuting edge
+
+25 September 2026. New work; the round5 package is unchanged.
+
+This theorem closes the nondegenerate finite-angle part of a distance-three
+jet face when one of its two omitted events is allowed to open. It applies
+to the C1 and C2 routing wherever the hypotheses below hold. It does not
+assert completion of their projective endpoints or flat core boundaries.
+
+## 1. Precise separate-field statement
+
+Let the coefficients belong to the bounded valuation ring of a real closed
+extension (K_c\supset\mathbb R), and let an independent measurement/state
+test belong to the bounded valuation ring of (K_s\supset\mathbb R), with
+projective charts used as necessary. Assume the coefficient vector is
+physical over (K_c), is nonnegative, and satisfies **exactly**
+
+\[
+\lambda=0.
+\]
+
+Its real residue (c_0) is assumed to satisfy
+
+\[
+d_0>0,\qquad (e_2)_0=0.
+\tag{1}
+\]
+
+There are no exact support requirements on (e_1,e_3,e_4,e_5,\alpha,\beta).
+In particular any of them may open infinitesimally from zero. On the exact
+residue face (\lambda=e_2=0), write the known determinant decomposition as
+
+\[
+Q_{c_0}(U,V)=U E(V)+U^2 B(V),
+\quad E(V)=q_{10}+q_{11}V+q_{12}V^2,
+\quad B(V)=q_{20}+q_{21}V+q_{22}V^2.
+\tag{2}
+\]
+
+Fix a real (v_0\ne0), and suppose
+
+\[
+q_{10}>0,\quad q_{12}>0,\quad E(v_0^2)=0,\quad B(v_0^2)>0.
+\tag{3}
+\]
+
+Also assume the three-state complement (M_0(v_0)) in (5) below is positive
+definite. These are entirely real residue conditions. The latter condition
+is automatic if (\alpha_0+(e_5)_0>0), and is displayed explicitly to avoid
+an unproved support-exhaustion claim.
+
+For every independent test with
+
+\[
+\bar u=0,\qquad \bar v=v_0,
+\qquad [\bar W:\bar X:\bar Y:\bar Z]=[1:0:0:0],
+\tag{4}
+\]
+
+the original full slack is a finite sum of squares in the original bounded
+tensor ring (B_c\otimes_{\mathbb R}B_s). All coefficient-opening rates and
+all test rates in this chart are allowed. No quotient by an infinitesimal
+test quantity or mixed tensor element is used.
+
+The same statement with (E(v_0^2)>0) is the immediate positive-definite
+four-normal exit described in section 7.
+
+## 2. Event normalization and the complete polynomial
+
+Use the full parent in coefficient order
+
+\[
+(d,\lambda,e_1,e_2,e_3,e_4,e_5,\alpha,\beta).
+\]
+
+The event amplitude (R_2=vW-X+uvY-uZ) is a pure tested unit in (4).
+Divide the state by (R_2). This is a legal pure-support unit operation and
+sets
+
+\[
+R_2=1,\qquad W=(1+X-uvY+uZ)/v.
+\]
+
+The entire opened-event contribution is now the **constant** (4e_2).
+Call the resulting full raw slack (F(X,Y,Z,u,v)). Its coefficients are
+polynomials in the point coefficients and Laurent polynomials in (v).
+The only denominators are powers of the pure tested unit (v).
+
+At (u=0), its state Hessian divided by two is
+
+\[
+M_0(v)=
+\begin{pmatrix}
+2(d+2e_1+2\beta)(1+v^2)&0&0\\
+0&2d(1+v^2)+4(e_3+e_4)(1+v^2)+4e_5+4\alpha v^2
+ &4v(e_5-\alpha)\\
+0&4v(e_5-\alpha)&4\alpha+4e_5v^2
+\end{pmatrix}.
+\tag{5}
+\]
+
+Its lower block is positive definite if (d>0) and
+
+\[
+\alpha d+2\alpha e_3+2\alpha e_4+2\alpha e_5(1+v^2)
++e_5v^2(d+2e_3+2e_4)>0.
+\]
+
+Introduce **coefficient-side center variables** (x,a,b,U) by the formal
+substitution
+
+\[
+X=u^2x,\quad Y=ua,\quad Z=ub,\quad U=u^2.
+\]
+
+The exact full identity is
+
+\[
+F(u^2x,ua,ub,u,v)=4e_2+u^2K(x,a,b,v,U),
+\quad U=u^2.
+\tag{6}
+\]
+
+Here (K) is polynomial in (x,a,b,U), with Laurent-polynomial (v)
+coefficients. More strongly,
+
+\[
+K_x=U E_x,\qquad
+\partial_x E_x\big|_{U=0}=4(d+2e_1+2\beta)(1+v^2)>0,
+\tag{7}
+\]
+
+and (K(x,a,b,v,0)) is independent of (x). These statements have been
+verified directly on all 105 terms of (K), starting from all 106 terms of
+the normalized full parent. The formal substitution defines the center;
+it is never used to form (X/u^2,Y/u,Z/u) in the independent tensor.
+
+## 3. The residue center and positive quartic coefficient
+
+At the real residue, minimizing the positive state block in (a,b) gives
+a scalar jet profile
+
+\[
+r(v)=\frac{16(1+v^2)^2}{v^2\det M_0(v)}E(v^2).
+\tag{8}
+\]
+
+Physicality and (3) imply
+
+\[
+E(V)=q_{12}(V-v_0^2)^2.
+\]
+
+Consequently (r(v_0)=r'(v_0)=0), (r''(v_0)>0). The Hessian of
+
+\[
+K_0(a,b,v)=K(x,a,b,v,0)
+\]
+
+in ((a,b,v)) is positive definite at its unique local zero
+
+\[
+(a_0,b_0,v_0).
+\]
+
+This follows by completing the strictly positive ((a,b)) quadratic and
+using (r''(v_0)>0), so it controls the full Hessian, not just its
+determinant. Equation (E_x=0) then determines a unique (x_0) by (7).
+
+Set (q=(x,a,b,v)). The Jacobian of
+
+\[
+\mathcal E(q,U)=(E_x,K_a,K_b,K_v)
+\tag{9}
+\]
+
+in (q) at ((c_0,q_0,0)) is block upper triangular. Its top-left entry is
+the positive number in (7), and its lower (3\times3) block is the positive
+Hessian just proved. Thus it is invertible. The Nash implicit function
+theorem gives a coefficient-only local branch (q_*(c,U)).
+
+The optimized function
+
+\[
+k(c,U)=K(q_*(c,U),U)
+\]
+
+satisfies
+
+\[
+k(c_0,0)=0,\qquad
+\gamma:=k_U(c_0,0)
+=\frac{16(1+v_0^2)^2}{v_0^2\det M_0(v_0)}B(v_0^2)>0.
+\tag{10}
+\]
+
+For clarity, (10) uses the whole parent determinant and the positive state
+block. The event-normalized four-by-four matrix has determinant
+
+\[
+\det P/v^2.
+\]
+
+Its state Schur complement is its determinant divided by the positive
+three-state determinant. At (e_2=0), (2) therefore gives (8), and at the
+zero in (3) its next (U^2) coefficient is exactly (10). The equations
+for (a,b) optimize the order-(U) state terms; the divided equation for
+
+\(x\) optimizes the order-(U^2) state term. No inverse of this state block
+is used in the final tensor identity; this real calculation only proves
+strict positivity of the residue coefficient.
+
+## 4. Two coefficient-only centers
+
+Put (\kappa=k(c,0)). It is a pure coefficient infinitesimal, with either
+sign allowed.
+
+If (\kappa\ge0), take (q_c=q_*(c,0)) and (U_c=0). The ordinary
+derivatives (K_a,K_b,K_v) vanish there, and (E_x=0).
+
+If (\kappa<0), solve
+
+\[
+\mathcal E(q_c,U_c)=0,\qquad
+K(q_c,U_c)+U_cK_U(q_c,U_c)=0.
+\tag{11}
+\]
+
+The full Jacobian at the real base point is block upper triangular with
+the invertible block (9) and final diagonal entry (2\gamma>0). The
+derivatives of the final equation in (q) vanish at the base point.
+Hence there is a unique nearby coefficient-only solution.
+
+It satisfies (U_c>0). Indeed along the normal branch the last equation
+is (g(U)=k(U)+Uk'(U)=0), with (g(0)=\kappa<0) and derivative having
+positive residue (2\gamma). This argument is local and transfers to
+the real closed coefficient field. It uses no comparison with the
+independent tested (u).
+
+Define
+
+\[
+\mu=4e_2+U_cK(q_c,U_c).
+\tag{12}
+\]
+
+This is nonnegative: realize \(u_c=\sqrt{U_c}\), (v=v_c),
+
+\[
+(X,Y,Z)=(U_cx_c,u_ca_c,u_cb_c),
+\]
+
+and restore (W) by the event normalization. This is an actual
+coefficient-side state and measurement pair, so full physicality applies.
+
+## 5. Exact full-tail identity in the original independent tensor
+
+Keep (q_c) fixed and put
+
+\[
+N_x=X-u^2x_c,\quad N_y=Y-ua_c,\quad N_z=Z-ub_c,
+\quad T=v-v_c,\quad N_v=uT.
+\tag{13}
+\]
+
+All these belong to the original bounded tensor ring. No small quantity
+has been divided out.
+
+The state dependence of the normalized full parent is exactly quadratic.
+Consequently its entire expansion is
+
+\[
+F=4e_2+U K(q_c\text{ with }v\text{ variable},U)
++U E_xN_x+uK_aN_y+uK_bN_z+N_s^TMN_s,
+\quad N_s=(N_x,N_y,N_z),
+\tag{14}
+\]
+
+where the derivative functions on the right are evaluated at
+
+\((x_c,a_c,b_c,v,U)\). The independent checker verifies this identity,
+all three linear coefficients, and the complete quadratic remainder.
+
+At (v=v_c,U=U_c) all four center equations vanish. Exact difference
+division therefore writes the linear terms as combinations of
+
+\[
+N_x U(U-U_c),\quad N_yu(U-U_c),\quad N_zu(U-U_c),
+\quad N_xuN_v,\quad N_yN_v,\quad N_zN_v.
+\tag{15}
+\]
+
+The coefficient functions are bounded. Laurent denominators involve only
+the pure units (v,v_c); differences of their powers are divided using
+finite algebraic identities. Taylor division of the profile in (v)
+gives an additional term (N_v^2h) and a cross term
+
+\[
+N_vu(U-U_c)h_1.
+\tag{16}
+\]
+
+Thus all cross terms with the last scalar generator have an extra (u)
+or (U), and have zero residue at every independent test rate.
+
+For (\kappa\ge0), univariate division at (U=0) gives the exact form
+
+\[
+F=4e_2+\kappa u^2+G^T H G,
+\quad G=(N_x,N_y,N_z,N_v,U).
+\tag{17}
+\]
+
+For (\kappa<0), stationarity in (11) and (12) gives a double zero of
+the fixed-center univariate profile at (U_c). Monic polynomial division
+(its coefficients may contain only the pure coefficient unit (v_c))
+therefore gives
+
+\[
+F=\mu+G^THG,
+\quad G=(N_x,N_y,N_z,N_v,U-U_c).
+\tag{18}
+\]
+
+In both cases the residue Gram is positive definite. Its first block is
+the positive state-(X) entry together with one half of the positive
+Hessian of (K_0(a,b,v)); its last entry is (\gamma>0). The cross entries
+to the last generator vanish by (15)–(16). This statement also accounts
+for the possibly nonzero residue cross terms (N_yN_v,N_zN_v), which are
+part of the positive full jet Hessian.
+
+The bounded positive-residue Gram lemma from round5 now makes
+
+\(G^THG\) an SOS in (B_c\otimes B_s). The remaining coefficients
+\(e_2,\kappa,\mu\) are nonnegative pure coefficient quantities in their
+respective branches and hence squares. Finally multiply the roots by the
+original pure tested event amplitude to undo normalization. If normalized
+physical slack rather than raw slack is desired, the norm and measurement
+denominators are positive pure tested units on this chart and can likewise
+be restored. This proves section 1.
+
+## 6. Nonvacuity and exact checks
+
+The real residue
+
+\[
+(d,\lambda,e_1,e_2,e_3,e_4,e_5,\alpha,\beta)
+=(2,0,0,0,1,1,1,1,0)
+\]
+
+is physical, lies in both the C1 and C2 omission masters, and has
+
+\[
+Q=16U\{4UV+3(V-1)^2\}.
+\]
+
+At (v_0=1), the center is
+
+\[
+(x_0,a_0,b_0)=(-1/2,1/2,1),\qquad \gamma=2.
+\]
+
+The divided (x) pivot is 16, and the full lower Hessian is
+
+\[
+\begin{pmatrix}64&0&48\\0&16&16\\48&16&64\end{pmatrix}\succ0.
+\]
+
+`verify_positive_d_finite_edge.py` rederives the full parent, event
+normalization, divided center equations, exact linear jets, and every
+state-quadratic tail term. Its report is
+`POSITIVE_D_FINITE_EDGE_CHECKS.json`: **15 identities, 30 scalar entries,
+all passed**. It includes the displayed example and both independent
+calculations of its positive quartic coefficient.
+
+## 7. Exact scope of the remaining cases
+
+If (E(v_0^2)>0), the original four-normal expansion in
+
+\((X,Y,Z,u)\) after event normalization has a positive residue Gram.
+The term (4e_2) remains separate, so this strict finite-angle exit needs
+no critical center. If the tested state has positive residue loss, the
+scalar bounded-positive-residue lemma applies immediately.
+
+The theorem above treats a finite nonzero zero of a nonzero quadratic
+edge polynomial with both endpoint coefficients positive. It leaves:
+
+- \(v_0=0\) or (v_0=\infty), where the normalization or the jet Hessian
+  changes;
+- flat outside/core cases (E\equiv0), where the (v) Hessian vanishes;
+- distance-four corner jets that are not relabelings of this finite-edge
+  configuration;
+- coefficient charts in which both events of the chosen distance-three
+  omission pair are nonzero. For applications to C1/C2 extreme routing,
+  a permanently omitted event must first be included in the chosen pair.
+
+No density, continuity of certificates, or unproved global gluing is used
+to include those cases.

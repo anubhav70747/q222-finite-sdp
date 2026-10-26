@@ -1,0 +1,30 @@
+{
+  "full_three_parameter_quartic_verified_as_polynomial": true,
+  "positive_source_clearing_factor": "2*r*(1 - r)*(a + 1)*(-a*r*z + 1)*(z**2*(a**2 + a*r*(2 - r) + r**2) + z*(a**2 + a + 2*r) + 1)*(a*r*z + a + r - 1)",
+  "angle_and_summed_minor_identity_verified": true,
+  "weighted_CHSH_factorization_verified": true,
+  "normalized_definitions": {
+    "k": "B/S",
+    "t": "M/S",
+    "y": "d/(2*S)",
+    "theta": "U*V/S^2",
+    "x": "(k+y)*(t+y)"
+  },
+  "upper_root": "(a+1)^2*t*(k+1)*theta",
+  "lower_root": "(a-1)^2*t*(k+1)*theta",
+  "root_factorization_modulo_angle_relation_verified": true,
+  "branch_reason": "p=t(k+1)>0, q=k(t+1)=a^2*p, sqrt(p*q)=a*p since a>0",
+  "counterexample_a": "2",
+  "counterexample_epsilon": "1/1000",
+  "counterexample_invariants": {
+    "B": "428/299",
+    "U": "595/299",
+    "V": "154/299",
+    "S": "749/299",
+    "M": "749/2990"
+  },
+  "quartic_residual_along_invisible_direction": "561001*epsilon*(1495*epsilon + 8019)/534617980",
+  "counterexample_quartic_residual": "899901143099/106923596000000",
+  "counterexample_normalized_weighted_CHSH_polynomial": "-644974255506421607/14680915312000000000000",
+  "scope": "Necessary identity for individual native contacts; no converse or full-hull condition proved."
+}

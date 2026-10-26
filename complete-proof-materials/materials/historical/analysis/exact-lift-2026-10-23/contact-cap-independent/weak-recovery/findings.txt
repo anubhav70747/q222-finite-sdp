@@ -1,0 +1,134 @@
+Weak contact admission: independent algebra and fixed-span audit
+24 October 2026
+
+Verdict
+-------
+No algebraic discrepancy found. All44 actual recovered Gram records,
+the eleven roots, retained whole squares, both new purchase identities
+and the complete original-state parent agree exactly. Every required
+testing root belongs to the supplied fixed34-function list; the eleven
+main roots use only its principal16. This report does not certify the
+source bounds or positivity of the eleven-row Gram; those are separately
+reviewed. Strong admission Part2 is outside this report.
+
+Input and preserved transcription
+----------------------------------
+Input: ../../pro_contact_recovery_reply.txt, Part1.
+received_generator.py is the first complete Python block copied unchanged.
+SHA256: abf58695c241acb44c3f4291c739d6c8374c9dce5b0f2aee65ae08890a473dff.
+It was read before execution. It performs symbolic construction/assertions
+and prints44 records; no filesystem/network/shell/optimizer calls occur.
+received_records.txt and records.json retain its actual44 entries.
+Locations in that file:
+  src dictionary26--40; record list57--78; eleven roots96--101;
+  E18/W19 definitions104--107; retained squares111--117;
+  final numerator118--121; entire RFN parent123--135.
+
+Checks and method
+------------------
+check_weak.py uses SymPy1.14.0. It contracts every actual record, with the
+off-diagonal factor2. Rows6--8 are grouped only because their five sets
+of diagonal coefficients coincide identically, and their squared-root
+sum is exactly fc*Psi. Pure-source nonnegative square-root arguments
+(n>=0,mu>0 and the positive scalar pivots) license the root simplifications.
+
+The44-record contraction plus ALL recovered retained terms and the
+three purchase remainders equals the RFN parent identically before any
+native source substitution. Both helper purchases are separate exact
+identities using gamma=p^2/(Me+fc/y). Their denominator is pure source.
+
+For the original-state comparison, the testing variables
+(u,v,t,r,w,zeta) remain algebraically independent. We substitute
+W=w-u*r, X=t-u*zeta, Y=r+u*w, Z=zeta+u*t in the complete original quarter-
+parent, then compare it with Du times the recovered numerator.
+There are28 nonzero testing coefficients before native substitution.
+Each was cleared separately; every numerator is zero.
+
+To avoid enormous artificial denominators, the common stationary
+denominator P was canceled BEFORE source substitution. The comparison
+is affine in the source coefficients, so one substitutes P*src[k]
+term by term. No global expanded native parent, testing quotient,
+state denominator, contact-state restriction or numerical sample is used.
+identity_checks.json records every result.
+
+Source dictionary and native GE1 identity
+-----------------------------------------
+The recovered RSR dictionary agrees with the actual public RSR2--RSR19
+and RFN source/scalar formulas in latex/certificates/c2_short.tex.
+All six scalar mass definitions(kc,rc,fc,qc,dc,gc) were independently
+checked against their coefficient definitions from RFN12.
+
+The original GE1 source was also checked directly. With e=1+Bp,
+ x=jB, y=TB, K=j+1-p,
+the inverse native source change is
+ z_o=x, y_o=y, r_o=(j-p)/(j*e),
+ H_o=B(1-HT)/e, B_o=B(1+HTx)/e, t_o=H(1+x)/e.
+The exact cleared identities include
+ delta_GE1*e^2=B(1+x)P,
+ M_GE1*e^2=B^2(1+x)L,
+ G_GE1*e=B(1-p)(1+x),
+ NN=j(1+x)(K+Hjy)(1+Hy)-(j-p)P.
+The remaining numerator/denominator factors were checked explicitly,
+and all six literal GE1 weights(n,m,C,A,D,alpha) equal the recovered
+rational dictionary. Thus the parent comparison uses the actual native
+source, rather than a newly selected stationary coefficient family.
+
+Fixed functions
+---------------
+check_spans.py verifies39 root memberships exactly. Main row1--11
+use the following one-based indices in the fixed34 list:
+ 1:{1,10,20}; 2:{5,19}; 3:{11,19}; 4:{10,20};
+ 5:{13,18}; 6:{10,11}; 7:{18,22}; 8:{27,28};
+ 9:{10,17}; 10:{15,23}; 11:{16,24}.
+All are in the announced principal16. Multiplication by either gate
+therefore uses the prescribed16-function gate blocks.
+
+Every retained RP root belongs to fixed34, including the full
+n*v^2*(N0+p*bcur)^2 square and the original mp*Du*N0^2 terms.
+The two E18 remainders require respectively v times its three roots
+and u times its three roots. These use the listed higher terms,
+including uv^3*zeta(index25) and u^2v^2*zeta(index26), so neither
+helper creates an unlisted testing function.
+
+RFN19 is not merely assumed positive. Its actual current public G7/G3
+matrices were copied from the scientific identity and checked exactly
+after homogeneous state restoration:
+ W19=t7^T G7 t7+4V*w*Zbar*(1-U)^2
+                  +U*w*Zbar*t3^T G3 t3.
+The seven t7 roots belong to the polynomial part of fixed34.
+The middle root uses sqrt(v*w*zeta)*(1-U), indices33,34.
+The three final roots use sqrt(u*w*zeta)*t3, indices29--32.
+All omitted normalization factors are pure source. The exact leading
+principal minors match
+ G7:4,8,101/4,1049/16,907/16,3279/16,743/16;
+ G3:3,2,2.
+Hence this particular retained rational-matrix remainder is positive
+definite/SOS independently of any bounds on the main Gram.
+span_checks.json contains all39 explicit supports and both minor lists.
+
+Literal n=0 and boundaries
+--------------------------
+At n=0, cb=Me=b=0 and Sigma=fc/y>0. The fourth root vanishes; every
+record and square remains defined, and the44-record identity is already
+formal in n. There is no division by n or sqrt(Me). Source dictionary
+n=0 means NN=0; it is not imposed on unrelated free source parameters.
+Other source inverses/radicals are pure source and use positive native
+parameters. No lower opening bound is used in the algebraic checks.
+
+Testing u=0,v=0,w*zeta=0 needs no state denominator: all fixed radical
+functions have their literal zero values. General negative state/angle
+signs use the separately checked sign-joining/gauge argument from the
+coefficient reconstruction. Source positivity and main-Gram estimates
+are separate hypotheses; an identity alone does not prove admission.
+
+Files and rerun
+---------------
+received_generator.py / received_records.txt / records.json
+check_weak.py / identity_checks.json
+check_spans.py / span_checks.json / findings.txt
+Rerun with Python plus SymPy1.14.0:
+ python check_weak.py
+ python check_spans.py
+The private _deps directory is a local runtime fallback, not scientific data.
+No public files were edited.
+

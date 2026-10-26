@@ -1,0 +1,337 @@
+\chapter{R2 with bounded \(a\), or an infinitesimal paired-event parameter}
+\label{component:p393d3faa269a}
+\noindent\textbf{Component }\path{p393d3faa269a}\par
+{\small\noindent Source: \path{NEW/weak_c2/r2_bounded_a_or_small_p_local.tex}\par}
+{\small\noindent SHA256: \path{393d3faa269a80f3be895a951ff29f03eb13c1ceb1e122cc5123d1978eb0a2ee}\par}
+{\small\noindent Inventory use: RL1-RL24\par}
+\medskip
+% Fresh proof, 2026-10-22. Frozen reconstructed inputs are unchanged.
+\section{R2 with bounded \(a\), or an infinitesimal paired-event parameter}
+\label{p393d3faa269a:sec:r2-shifted-local}
+
+\paragraph{Exact statement.}
+Use the actual original weak-C2 source and all its original strict
+gaps, with \(d=1\), \(\lambda=\beta=0\), and \(n\geq0\).
+Suppose \(t_s\) is positive unbounded and
+\(B_s,a_sB_s,t_sB_s\) are positive infinitesimals.
+Put \(e=1-r\), \(R_s=1+ha_sB_s\).  On the source subset
+\[
+       a_s=O(1)\quad\hbox{or}\quad
+       p=a_s e/R_s\in\mathrm I_c,                     \tag{RL1}
+\]
+the entire parent is separated tensor SOS for every independent
+projective testing pair and every real or complex state.
+Literal \(n=0\) and every opening of \(r,h,1-h,g\) are retained.
+For the all-testing conclusion, the local proof below is joined
+explicitly to R2O1--R2O24.
+
+The two fields and the bounded-Gram convention are those of EN1--EN4.
+In particular no mixed inverse is used.  Every coefficient bound
+below refers to a finite array in \(B_c\otimes B_t\); the rows need
+not be bounded.
+
+\subsection{Actual source entry and bounds}
+
+Use the exact compact source dictionary RSR2--RSR8, with
+\[
+ j=a_sc_s/R_s,\quad B=B_sR_s/c_s,\quad T=t_sc_s/R_s,\quad
+ p=a_se/R_s,\quad H=(1-h)/(t_sc_s),\quad c_s=1+a_sB_sr.
+\]
+Set
+\[
+ S=1/T,\quad \ell=HT,\quad \bar h=1-\ell,\quad
+ x=jB,\quad y=TB,\quad B=Sy,\quad q_z=j/S .
+                                                               \tag{RL2}
+\]
+Thus \(S,x,y\) are positive infinitesimals,
+\(0<p<\min(1,j)\), \(0<\ell<1\), and \(j\asymp a_s\).
+Both \(\ell\) and \(\bar h\) may be arbitrarily small.
+The original physicality inequality RER2--RER7 gives \(jy\in\mathrm I_c\).
+In terms of the actual finite polynomials \(\mathcal P,\mathcal L,
+\mathcal N,\mathcal F,\mathcal K\) of RSR, put
+\[
+ K=j+1-p,\quad k=K/(j+1),\quad
+ F_b=j+1+p(1-p)/j,\quad E=1+B(\ell+p-1).
+                                                               \tag{RL3}
+\]
+Here \(1/2<k<1\) and \(1\le F_b/(j+1)<2\).  Direct substitution
+\(B=Sy,T=1/S,H=S\ell\) in those finite polynomials gives
+\[
+ \mathcal P/(j+1)\sim1,\qquad
+ S\mathcal L/K\sim1,\qquad S\mathcal F/F_b\sim1.         \tag{RL4}
+\]
+For clarity, the terms after division contain only bounded
+\(p/j,j/(j+1),K/(j+1)\), multiplied by \(S,y\), or \(jy\).
+No inverse of \(\ell\), \(\bar h\), or \(j-p\) is involved.
+
+The same substitution in the exact numerator of \(n\) yields
+\[
+ \mathcal N=p(1+\epsilon_p)
+                -yj(j+1)(1+\epsilon_y),\qquad
+ \epsilon_p,\epsilon_y\in\mathrm I_c.                  \tag{RL5}
+\]
+For an explicit finite division certificate, the zero-\(p\) term is
+\[
+ \mathcal N|_{p=0}
+ =-yj(j+1)\{1+S(1-\ell)\}
+             \{1+S\ell yj/(j+1)\}.
+\]
+The quotient \((\mathcal N-\mathcal N|_{p=0})/p\) is a
+finite polynomial.  This grouping can be read termwise from RSR5:
+the first
+coefficient is \(1+y(j+1)+O(Sy(j+1)+Sy^2(j+1))\);
+the second coefficient is \(1+O(S+y+Syj)\).
+Using \(\mathcal N\geq0\), therefore,
+\[
+ \eta_2=\frac{yj(j+1)}p=O(1),\qquad
+ \eta_2\in\mathrm I_c\ \Longrightarrow\
+ n\sim\frac{p}{2(j-p)(j+1)}>0 .                        \tag{RL6}
+\]
+The estimate includes the face \(\mathcal N=0\), which can occur
+only in the positive-unit \(\eta_2\) case.
+
+Let \(\mu=m(1-p)\) and \(h_0=\mu+1/2\).
+The complete source formulas now imply
+\[
+\begin{gathered}
+ \mu\sim\frac{jp}{2(j+1)},\quad h_0\asymp1,\quad
+ CH\sim k/2,\quad SA\bar h\sim k/2,\quad D/S\sim k/2,\\
+ \alpha\sim\frac{Sy^2K^2}{2(j+1)},\quad
+ f_c\sim\frac{j^2y^2F_b}{2(j+1)},\quad
+ r_c\sim\frac{jy^2(1-p)K}{2(j+1)} .
+\end{gathered}                                                   \tag{RL7}
+\]
+These use the exact masses in RFN12 and the closed RSR formulas.
+All displayed positive masses are strictly positive.
+Write \(\kappa=-k_c>0\).  The exact positive-surplus formula
+RSR19 proves this sign.  Its substituted finite polynomial gives
+\[
+ \frac{\kappa}{r_c}=O(p+Sy)\quad(p\in\mathrm I_c),\qquad
+ \frac{\kappa}{jy^2}=O(1).                              \tag{RL8}
+\]
+For the remaining case in (RL1), \(p\) and \(j\) are positive
+bounded units, and
+\[
+ \frac{\kappa}{f_c}\sim\frac{pK}{jF_b}\leq\frac12,
+ \qquad jF_b-2pK=(j-p)K\geq0.                          \tag{RL9}
+\]
+The inequality is a bound on real residues when combined with
+the preceding asymptotic equality.  On this case \(\eta_2\) is
+infinitesimal, and the effective current defined below is a
+positive bounded unit.
+
+\subsection{The entire parent and its harmonic shift}
+
+Retain the complete original quarter-parent RFN4.  Its exact inverse
+state change at \(w=(W+uY)/(1+u^2)=1\) is
+\[
+ X=N_0+pv-uz,\quad Z=z+uN_0+puv,\quad
+ W=1+u(M_0+Hvz),\quad Y=u-M_0-Hvz.                    \tag{RL10}
+\]
+Here \(z>0\) is arbitrary.  Retain \(mpD_u^2N_0^2\) and divide
+the remaining whole parent by \(D_u=1+u^2\).
+The exact expression is RFN7, with both complete state normals,
+hard entries RFN9, and scalar RFN12.
+
+Use the additional exact change
+\[
+ q=vz-Tu,\qquad L=M_0+Hq,\qquad
+ M_0=L-Hq,\qquad L=\sqrt{S\ell\bar h}\,\widehat L .
+                                                               \tag{RL11}
+\]
+All divisions are pure source or pure testing.  In particular
+this change does not invert the harmonic mixed unit
+\(1+\rho u^2\).
+The complete diagonal of \(\widehat L\) is
+\[
+ S\ell\bar h\{D_u(CD_v+D+\tfrac12)+AD_v+
+                   (\alpha+\tfrac12)v^2\},
+                                                               \tag{RL12}
+\]
+with positive real residue \(\overline k/2\) and bounded
+coefficient array through both openings.
+
+Use the circuit coordinates \(U,V,Z_*,Q_*,B_*,R_*,\Psi\)
+of SH1--SH2, and \(b=v-uz/j=\sqrt y B_*\).
+Before spending any scalar \(n\)-mass, complete the exact correlated
+block, as in RFN13--RFN16:
+\[
+ h_0N_0^2+n(N_0+jb)^2
+ =(n+h_0)(N_0+c_bb)^2+M_e b^2,\quad
+ c_b=\frac{nj}{n+h_0},\quad M_e=\frac{nh_0j^2}{n+h_0}.  \tag{RL13}
+\]
+Keep \(nv^2(N_0+pb)^2\) and all three additional positive hard
+squares RFN15 whole, including after the change
+\(\widehat N=\sqrt{n+h_0}(N_0+c_bb)\).
+At \(n=0\), put \(c_b=M_e=0\) and omit the current row.
+For \(n>0\), \(c_b^2/M_e=n/[h_0(n+h_0)]\) is bounded.
+
+\paragraph{The exact shifted scalar.}
+Let \(F\) be RFN12.  The shifted scalar is
+\(F-2HqL_M+H^2q^2H_M\).
+Use the whole \(d_cV^2Q_*^2\) term in its \(q^2\) diagonal.
+Using the exact actual-source identity \(S_0=0\) in RFN22,
+the resulting coefficient on \((\sqrt S q)^2\) is exactly
+\[
+ D_q=S\{A\bar h^2+\ell^2(C+D+\tfrac12)D_u\}
+       -\frac{f_c}{Tx}-TH^2C\,u^2v^2
+       -\frac{k_cv^2}{yTx}.                            \tag{RL14}
+\]
+It has bounded array and positive real residue \(\overline k/2\).
+Indeed \(f_c/(Tx)=O(jy)\) is infinitesimal, \(TH^2C=\ell CH\)
+is bounded, and \(\kappa/(yTx)=\kappa/(jy^2)\) is bounded.
+Its equivalent \(Q_*^2\) mass has order \(jy\).
+The only extra scalar cross terms are
+\[
+ -2Hq\{\mu uvb+v(\alpha-yCHu^2)R\},\qquad
+ R=z-uv/(Sy).                                        \tag{RL15}
+\]
+The budgets below allocate their entire expressions.
+
+The remaining signed scalar terms are exactly
+\(e_0V^2B_*^2+k_cZ_*^2(V^2-1)^2\), where
+\(e_0=p^2y^2/2-g_c\).
+The negative part of \(e_0\) is at most \(g_c\).
+SH2 purchases it at relative circuit cost
+\[
+ \frac{g_c}{f_c}(1+V^2)
+   =O\bigl(S(y+v^2)\bigr)\in\mathrm I.                \tag{RL16}
+\]
+Use \(Z_*(V^2-1)=-VQ_*-R_*\) for the other signed term.
+If \(p\) is infinitesimal, (RL8) pays its opposite part
+directly from \(r_cR_*^2\), and its \(VQ_*\) cost is
+\(O(v^2)\).
+Otherwise \(p,j,M_e\) are positive units.  Young's exact
+square identity with parameter \(1/6\), followed by SH1 at
+\(a=3/2\), gives the legal SOS domination
+\[
+ \kappa Z_*^2(V^2-1)^2
+ \preceq_{\rm sos}
+ \frac74\kappa\Psi+
+ \frac{21}{2}\kappa V^2Q_*^2+
+ \frac72\kappa V^2B_*^2 .                             \tag{RL17}
+\]
+The circuit cost is at most \(7/8+o(1)\), by (RL9).
+The two other relative costs are \(O(v^2)\).
+Thus fixed positive real fractions of \(D_q(\sqrt S q)^2\),
+\(r_cR_*^2\), \(f_c\Psi\), and \(M_eb^2\) remain;
+the last is absent only at \(n=0\).
+The opposite mass \(r_c\) was not spent in the second case.
+
+\subsection{All helper rows and both complete normals}
+
+As usual, a free row permits any fixed real square pivot at
+infinitesimal cost from the preceding retained scalar forms.
+SH2 proves that both \(E_u=u(uvz-jy)\) and \(E_v=v(uvz-jy)\)
+are free.  The row \(R_u=v(u^2-x)\) is free as well.
+For \(p\) infinitesimal, use the actual RFN19 rational Gram:
+its three costs are \(O(S^2y)\), \(O(Syu^2)\),
+and \(O(Su^2/(1-p))\).
+When \(p,j,M_e\) are units, apply SH1 to the \(R_*^2\)
+term in RFN19.  The resulting costs are
+\[
+ O(S^2y+Su^2/j),\quad O(Syu^2+Su^2v^2),\quad
+ O(jSu^2v^2/M_e),                                    \tag{RL18}
+\]
+all infinitesimal.
+
+The rows \(pv^2b\) and \(\sqrt S\,\mu uvb\) are free.
+If \(\eta_2\) is infinitesimal, (RL6) and (RL13) imply
+\[
+ \frac{p^2}{M_e}
+  =\frac{p^2}{h_0j^2}+\frac{p^2}{nj^2}=O(1).
+                                                               \tag{RL19}
+\]
+They then cost \(O(v^4)\) and \(O(Su^2v^2)\).
+If \(\eta_2\) is a positive unit, the actual source gives
+\(p^2y/f_c=O(1)\) and \(\mu=O(p)\).
+The second identity in SH2 buys the same rows with costs
+\[
+ O\bigl(v^2(y+v^2)\bigr),\qquad
+ O\bigl(Su^2(y+v^2)\bigr),                             \tag{RL20}
+\]
+including \(n=0\).
+
+The full opposite term \(\sqrt S\,v(\alpha-yCHu^2)R\)
+is free by SH4--SH8.  Also \(j\alpha b\) is free:
+\[
+ j\alpha b=-(\alpha/B)R_u-\alpha uR,\qquad
+ \alpha/B=O(y(j+1))\in\mathrm I_c.
+                                                               \tag{RL21}
+\]
+For \(p\) infinitesimal, the direct \(r_c\) cost for
+\(\alpha uR\) is \(O(Sy^2(j+1)^2u^2)\).
+In the unit \(p,j,M_e\) case use SH1; the three costs
+are \(O(Sy^2u^2)\), \(O(Sy^2u^2v^2)\), and
+\(O(Sjy^2u^2v^2/M_e)\).  All are infinitesimal.
+These statements account for the whole source \(\alpha\), not
+only its leading coefficient.
+
+\paragraph{The first normal.}
+The exact RFN21 source cancellations give, after (RL11),
+\[
+ L_N'=[j(n-\alpha)+p(n+\tfrac12)v^2]b
+             +K_sR_u+\kappa_NE_v,                     \tag{RL22}
+\]
+\[
+ K_s=-\mu+(\alpha+\tfrac12)(\ell+p-1),\qquad
+ \kappa_N=-(n+\tfrac12)(1-p/j).
+\]
+Both coefficients are bounded.  For \(\kappa_N\), use the
+exact numerator of \(n\) and
+\(n(j-p)/j=O(p/[j(j+1)])\); this cancels the \(r\) opening.
+After the entire correlated completion (RL13), the remaining
+normal is
+\(-j\alpha b+\tfrac12pv^2b+K_sR_u+\kappa_NE_v\).
+Every row is free by (RL18)--(RL21).
+Division by \(\sqrt{n+h_0}\) is bounded.
+The shift generates couplings to \(\sqrt{M_e}b\) with bounded
+coefficients \(c_b/\sqrt{M_e}\); they are absent at \(n=0\).
+Large fixed real helper pivots absorb these couplings by exact
+Young identities.
+
+\paragraph{The second normal and the entire hard block.}
+The complete RFN22 normal after (RL11) is
+\[
+ L_L=(C_q-HH_M)q+\mu uvb+v(\alpha-yCHu^2)R,\qquad
+ C_q-HH_M=-D-H(C+D+\tfrac12)u^2 .                      \tag{RL23}
+\]
+The coefficient of \(\sqrt S q\) after the normalization
+of \(L\) is infinitesimal; \(D\) is infinitesimal and
+\(H(C+D+1/2)\) is bounded.
+The other two terms are free by (RL20) and SH6--SH8.
+Exactly the same rows pay (RL15), whose first factor is
+\(\sqrt S q\) with a bounded source multiplier.
+
+The remaining hard off-diagonal is
+\((\alpha+1/2)uv\sqrt{S\ell\bar h}/\sqrt{n+h_0}\),
+which is infinitesimal.  Its \(c_b b\) correction has the
+same bound after division by \(\sqrt{M_e}\).
+The complete finite Gram therefore has a positive definite
+real residue, with principal normal pivots
+\[
+                   1,\quad\overline k/2,\quad\overline k/2
+                                                               \tag{RL24}
+\]
+on \(\widehat N,\widehat L,\sqrt S q\), together with the
+retained strict scalar and purchased helper pivots.
+All extra positive hard squares and both original retained
+current packets are restored whole.  The strict bounded-Gram
+lemma proves tensor SOS for the entire parent.
+
+\subsection{State and outer-chart exhaustion}
+
+The fresh full-state sign lemma SJ1--SJ10 permits positive
+\(u,v\), and on the remaining negative-core chart gives
+\(wz>0\).  Divide by the nonzero pure-testing \(w\) to obtain
+the normalization used above with arbitrary \(z>0\).
+No estimate in this proof uses its size.  Literal axes and
+homogeneous endpoints have the direct original-core SOS exit.
+Real and imaginary state parts separate.
+The exact outer theorem R2O1--R2O24 covers every other testing
+pair on all original R2 sources.  This proves the stated
+all-tests conclusion on (RL1).
+
+The complementary source \(a_s\) unbounded and \(p\) a positive
+unit is not inferred from this proof.  It requires the separate
+TU source comparison and additional-current conductor.

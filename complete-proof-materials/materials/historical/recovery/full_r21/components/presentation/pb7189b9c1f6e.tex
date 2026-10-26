@@ -1,0 +1,124 @@
+\chapter{An unbounded first actual angle forces a strong $C$ packet}
+\label{component:pb7189b9c1f6e}
+\noindent\textbf{Component }\path{pb7189b9c1f6e}\par
+{\small\noindent Source: \path{R13/baseline/baseline/baseline/advances/source/bounded_second_angle_exclusion.tex}\par}
+{\small\noindent SHA256: \path{b7189b9c1f6e2bcb933cf7d128ea76d1ba7f7adeb5857773f5054f2a726e0bc3}\par}
+{\small\noindent Inventory use: WE1--WE6 exact n numerator contradiction for weak-C actual HI/HU\par}
+\medskip
+\section[An unbounded first actual angle forces a strong C packet]{An unbounded first actual angle forces a strong $C$ packet}
+\label{pb7189b9c1f6e:sec:c2-weak-hi-hu-empty}
+
+\begin{theorem}[The directed weak-$C$ types HI and HU are empty]
+Use the exact positive rational C2 source, with $d=1$ and $n\geq0$.
+If the first actual half-angle $u_c$ is unbounded and the second
+actual half-angle $v_c$ is bounded, then $1/C$ is bounded.
+Consequently no exactly-one-weak source oriented with $C$ weak can
+have directed actual type HI or HU.  Literal $n=0$ is included.
+\end{theorem}
+
+This is an original-source impossibility theorem.  It makes no
+claim that a scalar contact identity by itself is a tensor-SOS
+certificate.  All independent testing variables and state coordinates
+remain unrestricted; the two source leaves are empty before any
+testing restriction is imposed.
+
+\begin{proof}
+Write
+\[
+ q=u_c^{-2}>0,\qquad y=v_c^2>0,
+ \qquad H=u_c^2h=v_cY_c\in(0,1),
+\]
+and retain the original $r\in(0,1)$.  Here $q$ is infinitesimal
+and $y$ is bounded; $y$ may itself be infinitesimal.  Put
+\[
+ R=r/q=-u_cX_c,\quad B=u_cv_cW_c,\quad
+ L=v_c(u_cW_c-Y_c),\quad T=B-yR.
+\]
+The exact positive gaps give
+\[
+ B=H+L=yR+T,\qquad 0<T<H+y,\qquad L>0.
+\]
+In particular $H,T,y,r$ are bounded.  The original source coordinates
+become exactly
+\[
+ z=1/q,\quad a^2=yq,\quad b=yr+qT,\quad h=qH,
+ \quad t=r/q+(T-H)/y,
+\]
+and the two gaps satisfy
+\[
+             g=H+(1+y)r-1+qT>0,
+ \qquad j=(H+y-T)/y>0.                             \tag{WE1}
+\]
+The displayed expressions are pure coefficient identities; no
+inverse of a mixed source/testing element is used.
+
+We first show that $R$ is bounded.  Set $Q=q^2\Delta>0$.
+Direct expansion of the unchanged original formula for $n$ gives
+\[
+                         n=-\frac{qP}{2rQ},        \tag{WE2}
+\]
+where the following exact decomposition of $P$ is sufficient:
+\begin{align*}
+P={}&r^2(1+y)(H+yr)-Tqr(y+2)-q^2(T^2+T)+P_+,\\
+P_+={}&HTq^2+HTqr+Hqr(y+1)+T^2q^2r\\
+     &+Tq^2r(y+1)+2Tqr^2(y+1)+qr^2y(y+1)>0.        \tag{WE3}
+\end{align*}
+Suppose for contradiction that $R$ is unbounded, and put
+$\kappa=q/r=1/R$, which is infinitesimal.  Let $S=H+yr>0$.
+The ratio $T/S$ is bounded.  Indeed, if $r$ is a unit, then
+\[
+                T<H+y\leq S/r.
+\]
+If $r$ is infinitesimal, (WE1) and boundedness of $y,T$ imply
+$H_0=1$, so $S$ is a unit and $T/S$ is again bounded.
+Since $T$ is bounded, $(T^2+T)/S$ is bounded as well.  Dividing
+the lower bound in (WE3) by the positive $r^2S$ gives
+\[
+ \frac{P}{r^2S}\geq (1+y)
+       -\kappa\frac{T(y+2)}S
+       -\kappa^2\frac{T^2+T}S.
+\]
+The last two terms are infinitesimal, while $1+y\geq1$.
+Thus $P>0$.  Equation (WE2) contradicts $n\geq0$, including
+the equality case $n=0$.  Therefore $R$ is bounded.
+
+Now $r=qR$ is infinitesimal.  Equation (WE1) becomes
+\[
+             g=H-1+q\{(1+y)R+T\}>0,
+\]
+so $H_0=1$.  Both $B=yR+T$ and $L=B-H$ are bounded.
+The original denominator has the exact form
+\begin{align*}
+ \Delta={}&(1+q)\{B^2+2BR+(1+y)B\}
+           +(1-yq)R^2+2(1+y)R+1+y.                \tag{WE4}
+\end{align*}
+It is a positive bounded unit: all quantities are bounded, and
+$1-yq$ is a positive unit, with constant contribution $1+y\geq1$.
+The unchanged numerator $N_{\rm src}$ satisfies
+\[
+ \frac{N_{\rm src}}q
+  =(1+q)(B+R)(H+y)-(1+y)(1-qR)L.                  \tag{WE5}
+\]
+Since $H_0=1$ and $L=B-H$, its residue is
+\[
+       (N_{\rm src}/q)_0=(1+y_0)(1+R_0)>0.
+\]
+Thus $N_{\rm src}/q$ is a positive bounded unit.  Finally,
+$A_c=1+R$ and $a^2t=qL$, so the original coefficient is exactly
+\[
+          C=\frac{(1+R)(N_{\rm src}/q)}{2L\Delta}.
+                                                               \tag{WE6}
+\]
+The numerator has bounded positive inverse, and $L\Delta$ is
+bounded.  Therefore $1/C$ is bounded, as asserted.  No lower bound
+on $L$ was required; if $L$ is infinitesimal the conclusion is
+stronger.
+\end{proof}
+
+The exact C2 reflection preserves directed type HI and exchanges
+$C,\alpha$.  Applying the theorem in both orientations shows that
+every physical HI source has both complementary packets strong.
+For type HU the reflected type is UI; the reflected consequence is
+that $\alpha$ is automatically strong at every UI actual contact.
+These observations respect the directed weak-$C$ orientation; they
+do not identify IH with HI.

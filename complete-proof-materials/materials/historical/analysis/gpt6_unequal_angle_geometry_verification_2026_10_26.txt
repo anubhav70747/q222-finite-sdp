@@ -1,0 +1,73 @@
+BOUNDED VERIFICATION OF RECOVERED UNEQUAL-ANGLE GEOMETRY
+26 October 2026. Input is gpt6_unequal_angle_response_2026_10_26.txt
+under analysis/exact-lift-2026-10-23. NO SOURCE ZIP WAS RECOVERED OR USED.
+Scope: symmetric source/domain, recovery identities, canonical extremality
+minor, and two signed-mixture witnesses. No moment-pencil or full-hull audit.
+
+Result: all requested identities and stated domains pass exact comparison.
+Matching .py/.json provide the replay and the complete rational witnesses.
+The script runs in about1.5s with SymPy; no parameter or numerical sweep.
+
+1. Exact comparison and native domain
+
+Set s=ar z in the independent general-angle dictionary. With the recovered
+symbols e=r+s,p=rs,g=a+r+s-1,L=a(e-p)+p,Q=ag+L, its six helper functions
+become
+ old Q=L/(ar), old L=g, old J=1-s, old R=Q/a,
+ old W=Delta0/(a^2r^2), old N=-B0/(a^2r).
+Every one of the seven symmetric source formulas agrees identically.
+
+The independent exact native domain a>0,0<r<1,z>0,old L>0,old N>=0
+therefore becomes precisely
+ a>0, 0<r,s<1, g>0, B0<=0.
+In the forward direction old N>=0 already implies old J>0, hence s<1;
+the reverse implication follows directly from z=s/(ar). B0=0 is exactly
+n=0, with no division by n or B0, so that face is included literally.
+
+The claimed e<1 is strict, including B0=0: if e>=1 then p in(0,1),
+ e^2+p-e>0 and3e-2-p>0. All four terms of B0 are then positive, contradicting
+B0<=0. The denominator claims also hold directly: e-p=r(1-s)+s>0 gives
+L>0; Q=ag+L>0; Delta0>0 termwise since e^2-p=r^2+rs+s^2>0 and2e-p>0.
+
+2. Exact recovery, reciprocity, and extremality
+
+The checker verifies a(d+2n)=2A, both kappa identities, and both displayed
+difference identities. Because d=1,n>=0, the angle recovery divides only
+by the strictly positive d+2n. All factors multiplying r-s in the two
+difference identities are strictly positive. Thus
+ m=D iff C=alpha iff r=s iff u_c*v_c=1,
+where u_c*v_c=a c^2=s/r. This is an equivalence on individual native
+contact rays, not on their mixtures and not an all-testing reduction.
+
+The displayed rank-six minor matches the independently reconstructed
+minor exactly, using Delta_nat=(a+1)*old W=(a+1)Delta0/(a^2r^2).
+Convention: uncleared Bell operator B; unnormalised fixed
+psi=(1,-cr,cr,1); rows(B psi)_1,...,(B psi)_4,psi^T B_u psi,psi^T B_v psi;
+columns(d,n,m,C,A,D,alpha); delete d. No doubled state gradient is used.
+Its factors are nonzero on the complete stated domain, including n=0.
+The canonical-extremality argument is therefore valid: nonnegative
+canonical summands preserve lambda=beta=0 and the contact; validity forces
+their kernel/derivative equations, whose common solution is one-dimensional.
+This does not assert extremality in the unrestricted Bell polar.
+
+Global physicality has the required inputs: all event weights nonnegative,
+the independently verified six contact equations, the positive3-state block,
+and nonnegative Laurent outer coefficients. The stated stationary convex
+Laurent argument then applies to the full parent, with signs and projective
+endpoints included by continuity of the restored bounded operator.
+
+3. Both signed-mixture witnesses are genuine and exact
+
+For a1=1,a2=2, assign(r,s)=(1/8,1/16) to the first ray and(1/16,1/8)
+to the second. All seven active weights are strictly positive. In particular
+ n1=101/104, n2=2939/2911,
+ kappa1=16/35, kappa2=152/35.
+For R=[[m,D],[alpha+d/2,C+d/2]],
+ det(R1+R2)=(kappa2-kappa1)(m1D2-D1m2)
+          =-16557677/50331190.
+Reversing the ordered(r,s) pairs between a1 and a2 gives the same positive
+n values and kappas, and determinant+16557677/50331190. The JSON contains
+the complete exact sources, not only determinant values.
+
+Hence neither sign of this determinant is necessary for their conic hull.
+This confirms the claimed obstruction; it supplies no full-hull lift.

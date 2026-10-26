@@ -1,0 +1,235 @@
+\section{The weak-C2 R9 contact corner: a full-parent coupled-circuit certificate}
+
+\paragraph{Scope.}
+Retain the original R9 physical stationary source and all inherited
+intersections. Thus $B,a,h,e$ are positive infinitesimals,
+$r=1-e$, $t$ and $j$ are units with $t_0>1$, and $n\ge0$.
+Consider arbitrary independent $u,v>0$ infinitesimal, with
+$\omega=u/v>0$ unrestricted. The following is a certificate for the
+entire original parent, not only its contact graph. Its bounded Gram
+coefficients contain no $\omega$ or $1/\omega$, so it covers every
+positive testing ratio at once. The original axes/sign identities and
+R13 remote theorem then close all tests on R9.
+
+All formulas below refer to $F/4$. Use the unchanged WC3, WC6,
+WC13--WC17a coefficients, and put
+\[
+ x=aB=k^2,\quad y=tB=l^2,\quad c=\sqrt{a/t}=k/l,
+ \quad U=u^2,\ V=v^2,\quad q=q_s+\alpha,
+\]
+\[
+ \mu=m-a^2q,\quad \lambda=\frac{\mu}{ta^2B},\quad
+ K_X'=K_X-a\alpha,\quad K_E'=K_E+a\alpha/t.
+\]
+Indeed $\lambda=f_B-\alpha/y$, where the R14 exact joint-source
+divisions give $f_B\sim1/2$ and $\alpha/B^2\sim t_0/2$. Since
+$\alpha/y=(B/t)(\alpha/B^2)$ is infinitesimal, $\lambda\sim1/2>0$.
+The same exact reductions give
+$c_F\sim1/(2t_0)$, $d_4\sim t_0/[2(t_0-1)]$ and $b_4$ bounded.
+These reductions hold on the literal $n=0$ face, and no division by
+$n$ is used. In particular all source denominators used below are positive; no
+comparison of source and testing rates occurs.
+
+\paragraph{An exact scalar completion.}
+At $Z=1$ use
+\[
+ A=uv,\quad B_c=ck\,v^2/u,\quad C_c=k^2/c,
+ \quad G=kv,\quad d=B_c-G,\quad J=A-C_c,
+\]
+\[
+ F_v=V-y,\qquad R_D=v(U-x),\qquad H_u=(a/t)V/u-u.
+\]
+Thus $AB_cC_c=G^3$. Completing the entire $\alpha U$ term into
+$qH_u^2$ changes $f_B$ to $\lambda=f_B-\alpha/y$ and $f_G$
+to $f_G'=f_G-2\alpha/y$. The exact source contact balances imply
+\[
+ f_{A0}=\lambda-2d_4x-b_4y/t^2,\qquad
+ f_{C0}=\lambda+b_4y/t^2,\qquad
+ f_G'=3\lambda-d_4x+b_4y/t^2.
+ \tag{RC1}
+\]
+These identities follow from the value and both first derivatives
+of the original scalar at $(u,v)=(k,l)$, since the extracted
+$H_u,F_v$ squares vanish there; they can also be checked by the
+finite source formulas. Using $A^2=UV$, $G^2=xV$ and $C_c^2=xy$
+now gives the exact scalar identity
+\[
+ \mathcal S=qH_u^2+nr^2u^2H_u^2+
+ \left(c_F+\frac{b_4x}{t^2}\right)F_v^2
+ +\lambda L_3+d_4R_D^2+\frac{b_4}{t^2}vR_DF_v,
+ \tag{RC2}
+\]
+where $L_3=A^2+B_c^2+C_c^2-3G^2$.
+For example the two nontrivial remainders are precisely
+\[
+ (U-2x)A^2+xG^2=V(U-x)^2,
+\]
+\[
+ (V-y)A^2+y(C_c^2-G^2)
+       =V(U-x)(V-y)+x(V-y)^2.
+\]
+This uses no limiting expansion or approximate scalar positivity.
+
+\paragraph{The complete original hard block.}
+Keep the full WC4 state frame
+\[
+ E=tuW-vZ,\qquad N_y=(Y-huW)/\sqrt h,\qquad
+ \xi=X+ruZ.
+\]
+Work initially at $Z=1$. Complete the two angular squares as
+\[
+ Q=\sqrt q\left(H_u+\frac{a}{t\omega}E-a\xi\right)
+   =\sqrt q\,(avW-uZ-a\xi),
+\]
+\[
+ N=\sqrt n\{r uH_u+u\xi\}.
+ \tag{RC3}
+\]
+The second formula is homogenized by replacing $uH_u$ by
+$[(a/t)V-U]Z$. It includes $n=0$ without division.
+Subtracting $Q^2+N^2$ from the entire parent leaves the singular
+hard quadratic exactly as the single positive rank-one packet
+\[
+ \mu\left(\frac{E}{t\omega}-\xi\right)^2.
+ \tag{RC4}
+\]
+All other hard coefficients form a bounded quadratic
+$\mathcal H_0(E,N_y,\xi)$ with residue
+\[
+ \operatorname{diag}\left(\frac1{2(t_0-1)},\frac{t_0}2,
+                                     \frac12\right).
+ \tag{RC5}
+\]
+This assertion concerns the full parent. To check that no hidden
+$1/\omega$ remains, its only such term before subtraction is the
+$m$-event coefficient $(1+hU)/(t\omega)$.
+After removing its leading $m/(t\omega)$ part, the $E^2$ error is
+$m(2hV+h^2UV)/t^2$, the $E\xi$ error is $-2mh uv/t$,
+and the $EN_y$ coefficient is bounded by a bounded source factor
+times $m\sqrt hV$. All remaining event coefficients have no
+negative power of $\omega$: $uW=(v+E)/t$ and
+$Y=h(v+E)/t+\sqrt hN_y$ make this explicit. The $A$ event uses
+$Ah$, so no inverse power of $h$ survives. Subtracting $Q^2,N^2$
+changes its bounded entries only by infinitesimals after RC4 is
+removed. This proves RC5 directly from WC3, without a mixed inverse.
+
+\paragraph{Exact centering of every first normal.}
+Set
+\[
+ a_E=2Ah\,h/t^2-2e_1/t,\quad b_E=2b_2/t^2,
+ \quad c_E=2b_4/t^2.
+\]
+Let $a_Y,b_Y,c_Y$ be the three coefficients of
+$u^3w,u^3w^3,u^5w^3$ in $\mathcal R_Y$ in WC17a.
+All are bounded. Original contact of the complete normals gives
+\[
+ 2K_E'+a_Ex+b_Ey+c_Exy+2\lambda x=0,
+\]
+\[
+ 2K_X'+x_3y+x_5xy-2t\lambda x=0,
+ \qquad 2K_Y+a_Yx+b_Yy+c_Yxy=0.
+ \tag{RC6}
+\]
+These are source identities. With $p=ck/\omega$ (possibly
+unbounded), one has $pG=kB_c$ and hence
+\[
+ pB_c-kG=(p+k)d.
+\]
+The entire residual normal coefficients after RC3 are exactly
+\[
+ \mathcal R_E'=2\lambda(p+k)d
+ +(a_E+c_EV)R_D+(b_E+c_Ex)vF_v,
+ \tag{RC7}
+\]
+\[
+ \mathcal R_X'=-2t\lambda ck\,d
+ +(2t\lambda c+x_5uv)R_D-2t\lambda cuJ
+                    +u(x_3+x_5x)F_v,
+ \tag{RC8}
+\]
+\[
+ \mathcal R_Y=(a_Y+c_YV)R_D+(b_Y+c_Yx)vF_v.
+ \tag{RC9}
+\]
+The actual $N_y$ coefficient is $\sqrt h\mathcal R_Y$.
+The identity underlying RC8 is particularly useful:
+\[
+                  xu-ckG=cR_D-cuJ.
+\]
+The identities $UV-xy=V(U-x)+x(V-y)$ and RC6 prove all three
+formulas. Thus no normal is inferred merely from its vanishing.
+
+\paragraph{Absorb the unbounded ratio without comparing it.}
+The elementary circuit identity and its exact coupled completion are
+\[
+ L_3=J^2+(1+2k/p)d^2,
+\]
+\[
+ \begin{split}
+ \lambda L_3+\lambda p^2E^2+2\lambda(p+k)Ed
+ ={}&\lambda J^2+\frac{2\lambda k}{p}(pE+d)^2\\
+ &+\lambda\{(p-k)E+d\}^2-\lambda k^2E^2.
+ \end{split}                                                    \tag{RC10}
+\]
+All radicals in its positive squares are separated: $k/p=\omega/c$.
+No boundedness assumption on $p$ has been used. Put
+$R=\sqrt\lambda\{(p-k)E+d\}$.
+The singular cross term in RC4 must be kept with RC8. Together they
+are
+\[
+ -2t\lambda ck\,\xi(pE+d)
+ =-2t\sqrt\lambda ck\,\xi R-2t\lambda ck^2E\xi.
+ \tag{RC11}
+\]
+Both displayed coefficients are infinitesimal. The remaining
+$\mu\xi^2$ term is bounded and infinitesimal. This exact cancellation
+is the step that permits arbitrary independent rates of $c$ and
+$\omega$.
+
+The two coupled roots simplify after homogenization to
+\[
+ pE+dZ=kv(tcW-Z),\qquad
+ R=\sqrt\lambda\,tk(cv-u)W,
+\]
+\[
+ \sqrt{2\lambda k/p}\,(pE+dZ)
+       =\sqrt{2\lambda/c}\,k\sqrt{uv}\,(tcW-Z).
+ \tag{RC13}
+\]
+In particular their final forms contain no testing-ratio inverse.
+Retain $Q^2,N^2,(2\lambda k/p)(pE+d)^2$ as exact positive squares.
+Every remaining term is a bounded Gram on
+\[
+              (E,R_D,N_y,\xi,F_v,J,R).
+\]
+Its only nonzero off-diagonal residue is between $E$ and $R_D$:
+$a_E\to-1/(t_0-1)$. Their full residue block is
+\[
+ \frac1{2(t_0-1)}
+ \begin{pmatrix}1&-1\\-1&t_0\end{pmatrix}\succ0,
+ \qquad \det=\frac1{4(t_0-1)}.
+ \tag{RC12}
+\]
+The other diagonal residues are $t_0/2,1/2,1/(2t_0),1/2,1$.
+All other entries are infinitesimal: this is explicit in RC7--RC11,
+using $\sqrt h,c,u,v,k$ infinitesimal and all printed source arrays
+bounded. The subtraction $-\lambda k^2E^2$ in RC10 does not change
+the positive residue. The bounded-Gram lemma therefore supplies
+finite tensor SOS for the entire parent.
+
+\paragraph{Restoration and all-tests join.}
+Homogenize all scalar roots by $Z$. The expressions RC3 are already
+state-linear, and every other root becomes a state-linear expression;
+no $Z$ inverse remains. Hence $Z=0$ is included. All divisions are
+pure source or pure testing. Although $p$ and $k/p$ may be unbounded,
+they occur only inside the printed exact positive square or the root
+$R$, never as an entry of the bounded Gram. No ratio hypothesis on
+$u/v$ has been used. The exact original gauges restore both
+angle signs; real and imaginary parts give complex states. The final roots in RC3 and RC13 and all other Gram roots have no
+testing inverse, so substitution extends the identity to either literal
+axis directly. The inherited R13 R9 remote theorem covers the complement
+of both angles infinitesimal.
+These are exhaustive pure-testing cases; no testing-ratio split remains.
+Thus this coupled certificate closes the whole R9 source shape,
+with every original source gap and literal $n=0$ retained. No other
+weak-C2 source shape is claimed here.

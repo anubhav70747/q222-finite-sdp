@@ -1,0 +1,65 @@
+{
+  "all_pass": true,
+  "checks": {
+    "isotropic_Motzkin_three_squares": true,
+    "anisotropy_principal_minor": true,
+    "Delta_four_monomial_squares": true,
+    "Delta_reciprocity_u": true,
+    "Delta_reciprocity_v": true,
+    "Delta_exchange": true,
+    "strict_native_source": true,
+    "parent_bidegree_2_2": true,
+    "contact_parent_zero": true,
+    "contact_two_angular_gradients_zero": true,
+    "contact_four_state_gradients_zero": true,
+    "multiplied_parent_bidegree_6_6": true,
+    "Newton_feature_counts": true,
+    "Newton_parity_orders": true,
+    "Newton_total": true,
+    "native_diagonal_support_inside_hulls": true,
+    "diagonal_Newton_vertices_present": true,
+    "regression_contact_all_components_nonzero": true,
+    "source_contact_positive_angles": true
+  },
+  "parity_orders": [
+    44,
+    28,
+    28,
+    34
+  ],
+  "compressed_orders": [
+    43,
+    27,
+    27,
+    33
+  ],
+  "regression": {
+    "native_parameters": [
+      "13/600",
+      "101/1000",
+      "47/15",
+      "27/35",
+      "13/154"
+    ],
+    "contact_angles": [
+      "47/15",
+      "611/9000"
+    ],
+    "contact_state": [
+      "303/65",
+      "-611/2310",
+      "6621971/455000",
+      "1"
+    ],
+    "source_weights_quarter_parent": {
+      "d": "1",
+      "n": "27494966179205281/34408402385212080160",
+      "m": "192335621735585909792987125/159079045200219399712064624",
+      "C": "9335521210411397914625/134192769302327112624",
+      "A": "323572961203856274001/1640828720303278206455744",
+      "D": "415342519215971275761110397/8194034148215597375342480",
+      "alpha": "82109574497048117018235087/3988582831851068859932864"
+    }
+  },
+  "scope": "Exact source and scalar/corner identities; no numerical or exact SDP feasibility claim."
+}

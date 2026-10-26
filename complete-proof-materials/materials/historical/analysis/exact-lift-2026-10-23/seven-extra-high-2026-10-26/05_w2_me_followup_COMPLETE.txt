@@ -1,0 +1,138 @@
+ChatGPT said:
+
+Result: the 13-word $W_2$ cone does not cover the entire maximally entangled C2 family
+I found an exact rational obstruction, not a numerical SDP failure. It already occurs at the simple Pauli contact
+$a=1,\qquad r=\frac14,\qquad z=1,$
+so that
+$A_0=B_0=\sigma_z,\qquad A_1=B_1=\sigma_x,\qquad
+\psi=(1,-\tfrac14,\tfrac14,1)^T.$
+The corresponding native C2 source, in order $(d,n,m,C,A,D,\alpha)$, is
+$\boxed{c_*=(1,\tfrac18,\tfrac38,\tfrac16,\tfrac58,\tfrac38,\tfrac16).}$
+It has $n>0$, satisfies the strict native inequalities, and is globally quantum-valid by the native contact theorem. Its two classical zeros and quantum contact compress every possible real $W_2$ Gram to a $7\times7$ PSD matrix $S$.
+Exact universal word matching then implies
+$\begin{gathered}
+S_{15}+S_{17}=0,\\
+S_{11}+S_{55}+S_{77}+2S_{57}=0,\\
+S_{41}+S_{45}+S_{47}=-S_{77},\\
+S_{61}+S_{65}+S_{67}=-S_{55},\\
+\boxed{S_{35}=\frac1{48}}.
+\end{gathered}
+\tag{1}$
+All indices here refer to the contact-kernel basis constructed below.
+Take $v=e_1+e_5+e_7$. The first two identities give $v^TSv=0$. Positivity forces $Sv=0$. Its fourth and sixth components then give $S_{77}=S_{55}=0$. A PSD matrix with $S_{55}=0$ must have $S_{35}=0$, contradicting (1).
+Thus
+$\boxed{f_{c_*}\notin\Sigma^2(W_2).}$
+Importantly, the contradiction uses a universal reflection-algebra identity. Matching only the four-dimensional qubit operator would not establish this result.
+Stronger theorem: the full equal-angle C2 surface is excluded
+The calculation extends symbolically to every
+$r,x>0,\qquad r+x+3rx\leq1,\qquad z=x/r.$
+These are precisely the positive-parameter equal-angle maximally entangled C2 contacts in the pinned order-seven source cone.
+Use the eleven roots
+$\begin{aligned}
+h=(\;&A_1-I,\ B_1-I,\ A_0B_0-I,\ A_1B_1-I,\\
+&B_0-A_0,\ A_0B_1-A_0,\ A_1B_0-A_0,\\
+&A_0A_1-A_0,\ A_1A_0-A_0,\\
+&B_0B_1-B_0,\ B_1B_0-B_0\;)^T.
+\end{aligned}$
+The last four roots are the additional directions supplied by $W_2$. Every root vanishes at both deterministic C2 zeros.
+At the quantum contact, $T=(h_1\psi,\ldots,h_{11}\psi)$ has a nonzero four-column pivot:
+$\boxed{\det T_{[:,(1,2,3,5)]}
+=-\frac{64r^3z^2}{1+z}\ne0.}$
+Define
+$R=r(1+z),\quad p=(1+r)(1-rz),\quad
+q=1+r^2z,\quad s=(r-1)(1+rz).$
+An explicit kernel basis is
+$N=\frac1R
+\begin{pmatrix}
+0&p&q&q&p&p&q\\
+0&-q&s&s&-q&-q&s\\
+-R&-p&-s&-q&q&q&-q\\
+R&0&0&0&0&0&0\\
+0&0&-R&-R&0&R&0\\
+0&R&0&0&0&0&0\\
+0&0&R&0&0&0&0\\
+0&0&0&R&0&0&0\\
+0&0&0&0&R&0&0\\
+0&0&0&0&0&R&0\\
+0&0&0&0&0&0&R
+\end{pmatrix}.$
+It satisfies $TN=0$, and its seven free rows form $I_7$. Any PSD certificate must therefore take the form
+$f_c=(N^Th)^\dagger S(N^Th),\qquad S\succeq0.$
+Matching all 41 universal reduced-word coefficients gives a coefficient system of rank 23, with five free Gram entries $S_{44},S_{56},S_{57},S_{66},S_{77}$.
+The essential elimination identities are
+$\begin{gathered}
+S_{11}=S_{56}-2S_{57}-S_{77},\qquad S_{55}=-S_{56},\\
+S_{15}+S_{17}=0,\qquad
+S_{14}=S_{45}=S_{16}=S_{67}=0,\\
+S_{47}=-S_{77},\\
+\boxed{
+S_{35}=
+\frac{r(1+r)(1+z)^2}
+{32(1-r)(1+z+2rz)}>0.
+}
+\end{gathered}
+\tag{2}$
+These are rational identities in independent source parameters $r,z$. Their derivation does not substitute any test-dependent word relation.
+As at the rational seed, $v=e_1+e_5+e_7$ has $v^TSv=0$. Positivity implies $Sv=0$, forcing $S_{77}=S_{55}=0$, whereas (2) requires $S_{35}>0$. Contradiction.
+Thus
+$\boxed{
+\forall\,r,x>0,\ r+x+3rx\leq1:
+\quad f_{c(r,x)}\notin\Sigma^2(W_2).
+}$
+There is no exceptional interior locus. In particular, at $r=1/3,z=1$,
+$(d,n,m,C,A,D,\alpha)
+=(1,0,\tfrac14,\tfrac14,\tfrac12,\tfrac14,\tfrac14),$
+and the contradiction is $S_{35}=1/32>0$. The boundary $n=0$ is genuinely included.
+A genuinely unequal-angle C2 ray is admitted
+The picture is not simply that every maximally entangled C2 contact defeats $W_2$.
+At
+$(a,r,z)=\left(2,\frac12,\frac1{16}\right),$
+the native source is
+$c=\left(
+1,\frac{43}{299},\frac{77}{1495},
+\frac{891}{598},\frac{385}{299},
+\frac{119}{598},\frac9{598}
+\right).$
+I obtained exact rational matrices $N_*\in\mathbb Q^{11\times7}$ and $S_*\in\mathbb Q^{7\times7}$ such that
+$\boxed{
+f_c=(N_*^Th)^\dagger S_*(N_*^Th),
+\qquad S_*\succ0.
+}$
+All 41 universal word coefficients agree, including the forbidden words. The seven exact $LDL^T$ pivots exceed, respectively,
+$\left(
+\frac1{25},\frac1{50},\frac1{10},
+\frac1{20},\frac1{20},\frac1{250},\frac1{1000}
+\right).$
+Both matrices are printed in full in the proof file. This establishes genuine $W_2$ coverage beyond $1+AB$, but does not establish a uniform neighbourhood of admitted native contacts.
+Consequence for unequal angles and the next word list
+The $W_2$ SOS cone is closed: in the universal algebra, the identity coefficient of $W_2^\dagger G W_2$ equals $\operatorname{tr}G$, bounding any convergent sequence of PSD Grams. Hence exclusion at a strict equal-angle source persists in a neighbourhood containing unequal-angle contacts.
+The same reasoning applies relative to $n=0$. At $a=z=1,r=1/3$, $\partial_r n=-9/8\ne0$, so the implicit-function theorem gives nearby unequal-angle contacts with $n=0$, some of which are also excluded from $W_2$.
+The natural next single enlargement is the 21-word list
+$\mathcal W_{2+\mathrm{mix}}=
+W_2\cup
+\{A_0A_1B_j,A_1A_0B_j,
+A_iB_0B_1,A_iB_1B_0:
+i,j\in\{0,1\}\}.$
+It introduces mixed cubic contact-annihilating directions unavailable to $W_2$. Whether its universal PSD coefficient identities admit every finite maximally entangled C2 contact remains unproved. No coverage claim is made for this enlargement.
+Exact deliverables
+The complete matrices, elimination conventions, exact source formulas, and singular-boundary argument are available here:
+Full theorem and proof
+
+Standalone exact SymPy checker
+
+Unequal-angle rational Gram matrices
+
+The checker runs successfully using rational algebra, verifies the two-parameter exclusion and the unequal-angle universal SOS, and uses no SDP solver or parameter sweep.
+Project implication: $W_2$ cannot replace the existing equal-angle order-seven block. It nevertheless certifies at least one genuinely unequal-angle C2 extreme ray. The next useful question is whether a fixed mixed-cubic enlargement can cover the remaining unequal-angle family without sacrificing the global, source-independent word list.
+
+
+
+
+
+
+   Q222_W2_C2_THEOREM_2026-10-26.mdDocumentOpen fileQ222_W2_C2_exact_checker.pyCodeOpen file   Q222_W2_UNEQUAL_S_GRAM.txtDocumentOpen file
+
+
+
+
+

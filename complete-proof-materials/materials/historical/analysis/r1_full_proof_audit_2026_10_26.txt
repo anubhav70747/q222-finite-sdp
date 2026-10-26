@@ -1,0 +1,61 @@
+R1 full-proof bounded audit, 26 October 2026
+
+Read 03_R1_FULL_PROOF_RENDERED.txt and its recovered summary against public
+latex/certificates/c2_short.tex:9260–9754 (RFN), 9841–10062 (R1N outer
+join), the source bounds at 8944–8966 and 9044–9135, and SJ's state join.
+Verdict: no genuine gap found in this bounded review. The displayed
+argument supports qualitative tensor-SOS closure of the stated native
+R1 source sector, conditional only on its explicitly inherited physical
+source domain, not closure of all C2 or Q222. This is not an extraction
+of one fixed testing-function family.
+
+Complete parent. B4–B6 agree with RFN4–RFN9, including the original
+unbounded m packet. Directly under B3 its event row becomes
+D_u*((1-p)*v-N_0), so subtracting mp*D_u^2*N_0^2 leaves precisely the
+mu term in B5. The C and D rows become D_u*(M_0+H*v*z) and
+D_u*(M_0-(1-H)*v*z); the other rows give the remaining displayed terms.
+Thus this is a four-state identity, not a contact-state restriction.
+The Hessian and both complete normal rows match RFN21–RFN23; B7 records
+the exact source cancellations, including the negative mu in K_R.
+
+Source bounds. A5's remainder bound follows termwise from p<min(1,j),
+B(j+1)=B+x infinitesimal and T infinitesimal. N>=0 therefore gives the
+bounded eta_* and its stated critical asymptotic without dividing by n.
+P/(j+1)~1, L/K~1 and 1/2<k<1 control the source coefficients even for
+unbounded j. The explicit RSR16 formulas justify the delicate r_c
+opening factor (1-p), f_c~T*x^2 and g_c/f_c=O(H*y); RSR18–RSR20 justify
+the signed k_c bound. No lower bound on j-p, 1-p, H or 1-H is inserted.
+
+The correlated n terms are correctly completed before spending scalar
+mass. This leaves M_e rather than the larger raw n*j^2. At n=0 the
+shift and effective row vanish literally. If eta_* is infinitesimal,
+the exact source asymptotic forces n>0; thus n=0 is never routed into
+the alternative using its reciprocal. When p~1 and eta_* is a positive
+unit, j^2*B is a positive unit. When both are infinitesimal, M_e is a
+positive unit and (1+1/n)/j^2 is bounded. These are precisely the facts
+needed by the radial and opposite-row budgets, and cover tied rates.
+
+The signed-term and helper bounds agree with RFN18–RFN24. Their
+remaining coefficients are source-bounded constants times polynomials
+in the independent infinitesimal tests u,v; no state ratio enters a
+Gram coefficient. The apparent opening singularity in the second hard
+normal cancels before taking residue: its C and D contributions add
+to k/2, including H near0 or1. Large real helper pivots absorb bounded
+couplings while their scalar costs remain zero-residue. Restoring the
+retained whole squares and pure-testing D_u therefore preserves the
+complete parent. Arbitrarily large normalized rows are legal in TF2.
+
+Outer join. R1N13 has identity residue for bounded 1/v. R1N14 handles
+unbounded u and all remaining strict last pivots. Otherwise u has a
+fixed positive real residue and p,j are positive bounded units; the
+four capped-event cases R1N22–R1N24 are exhaustive. Their caps may
+depend on that real residue; no cap uniform as u_0 tends to0 is needed.
+SJ's exact sign, zero-state and homogeneous-axis identities close the
+endpoints, and real/imaginary splitting covers complex states.
+
+Minor wording correction only: B2's normals involve source p,H and
+are mixed tensor rows, not “testing-only” coordinates. The w,z rotation
+and division by nonzero w are pure testing; the normal reconstruction
+uses only the pure-testing inverse D_u. The actual proof never needs
+a mixed inverse or an order on the tensor ring, so this terminology
+does not create a mathematical gap.

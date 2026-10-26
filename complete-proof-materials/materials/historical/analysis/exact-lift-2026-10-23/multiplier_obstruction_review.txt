@@ -1,0 +1,114 @@
+Independent bounded review: fixed separable polynomial multipliers
+23 October 2026
+
+VERDICT
+The stated theorem is supported. For every fixed pair of nonzero real
+polynomials p(u),q(v), each nonnegative on the entire real line, the full
+canonical parent p(u)q(v)F_c(T) is not polynomial SOS for every sufficiently
+small positive T in the printed, strictly physically valid family. The
+two-LMI polynomial-completion impossibility follows as stated. No decisive
+defect was found. The threshold is existential, depends on p,q, and is not
+evaluated by this proof.
+
+Source reviewed:
+pro-multiplier-obstruction/Q222_Fixed_Polynomial_Multiplier_Obstruction/
+  source/fixed_polynomial_multiplier_obstruction.tex
+  check_fixed_q_obstruction.py
+The checker was read before running. No public repository file was edited.
+
+1. Full-state validity, source lines 93-159
+The canonical coefficient map is exact, including all nine coefficients.
+For 0<T<=1/100, d=2T-4T^3>0 and all eight event coefficients are positive.
+Swapping Alice's settings gives the symmetric doubly tilted CHSH expression.
+I independently reconstructed the printed H_T from
+  ZZ+Z B1+A1 Z-A1 B1+(1-T)(Z I+I Z),
+with A1=cZ+rX and B1=eZ+sX. Thus its determinant is the relevant full-state
+determinant, not a determinant of a restricted state ansatz.
+
+The determinant lower bound has the correct inequality directions. Put
+a=p+q0. If R_T<0, pq0<=p+q0 gives a<18T<2; then
+2pq0<=a^2/2<=a and R_T>=2a-18T. Since R_T is negative,
+  8pq0 R_T >= 2a^2 R_T >= 4a^3-36Ta^2 >= -432T^3.
+Together with sigma=4T^3 and P_T>=144-240T this yields
+  det(wI-H_T)>=(144-960T)T^3>0.
+If R_T>=0 the positive sigma P_T term already suffices. Every sine sign
+is retained in the circle reduction. The initial matrix at c=e=1 has the
+four printed strictly positive eigenvalues. The angle torus is connected,
+and a continuous symmetric matrix with nowhere-zero determinant cannot
+change inertia. Hence wI-H_T is positive definite on the whole torus.
+The usual two-qubit/reflection reduction, explicitly a project input,
+extends this to all quantum models. Real symmetric positivity also holds
+on complex state vectors. Literal commuting angles and all zero-sine
+endpoints are included, without division by a coefficient.
+
+2. Completion-to-polynomial-SOS interface, lines 61-89
+I independently expanded both generic identities, with nine independent
+source coefficients and four independent selector entries:
+  q Phi = [a;Ub]^T G [a;Ub] + U[a;b]^T H[a;b],
+  Phi(u^2,v;L(u)psi) = u^2(1+u^2)F_c(u,v;psi).
+Both are exact. Global positivity of the univariate real symmetric
+polynomial matrices G,H permits the standard univariate matrix-SOS
+factorization, including singular matrices. Substitution U=u^2 and then
+L(u)psi is polynomial, so it gives the claimed necessary polynomial SOS.
+The principal-minor estimate |Z_ij|^2<=q^2(P+K)_ii(N+K)_jj bounds
+deg Z_ij<=deg q+2; vanishing diagonal factors force Z_ij=0 and cause no
+exception. No tensor inverse or mixed source/testing cancellation is used.
+The univariate matrix factorization is the standard external algebraic
+input for this completion consequence; the stronger non-SOS statement
+for p(u)q(v)F itself does not need it.
+
+3. Critical full-state pullback and uniform degree, lines 162-220
+All four polynomial state entries are present and agree with the printed
+Alice rotation numerator. The exact leading term is
+  F_c(t^2)(-tx,ty;psi_t) = (4/3)t^6(M+2)+O(t^8).
+The O(t^8) is an actual finite polynomial remainder. The independent
+normal-square calculation in the supplied checker keeps both state
+normal directions. My separate calculation verified the leading term
+and the total (x,y) degree: it is 12 for the pulled-back F and 16 after
+the factor u^2(1+u^2). Thus q of degree 2r gives target degree <=2r+16
+and SOS root degree <=r+8. The latter also follows directly because the
+highest homogeneous parts of real squares cannot cancel. Coefficients
+of any hypothetical selectors may diverge with t; this does not defeat
+the fixed target-degree argument.
+
+4. Closedness, cancellation and the contradiction, lines 222-259
+For a full monomial vector z through a fixed root degree, the cube moment
+matrix B=integral zz^T is strictly positive definite: a nonzero polynomial
+has positive squared integral. Coefficient convergence bounds the
+integrals of the SOS polynomials, hence Tr(BQ_j), hence Tr Q_j and every
+entry of any PSD Gram Q_j. A convergent subsequence supplies a Gram for
+the coefficient limit. This is the correct bounded-degree SOS closedness
+argument; it does not assume bounded selector coefficients.
+
+The lowest nonzero Taylor terms of p and q are positive even monomials.
+After u=-tx,v=ty, the normalized limit is a positive constant times
+  x^(2h)y^(2k)(M(x,y)+2).
+Square monomial cancellation is valid by evaluating on a coordinate
+hyperplane and then dividing every SOS root by that coordinate, repeated
+as necessary. Finally M+2 cannot be SOS: all roots would have degree<=3;
+its constant restrictions to both axes force every root to have the form
+a0+a1 xy+a2 x^2y+a3 xy^2. The x^2y^2 coefficient of their squared sum is
+sum a1^2>=0, contradicting the actual coefficient -3.
+If successful certificates existed arbitrarily close to T=0, their square
+roots t=sqrt(T) would give the prohibited sequence. Thus the conclusion is
+failure for all sufficiently small T, not merely along one subsequence.
+
+5. Scope
+This excludes fixed globally nonnegative SEPARABLE polynomial multipliers
+and, in particular, fixed polynomial Bob multipliers in the printed
+two-LMI ansatz. It does not exclude source-dependent multipliers, general
+nonseparable multipliers, or fixed algebraic testing functions. The exact
+ramification identity M(x,s^2)=three polynomial squares is correct; it
+explains why no half-line/algebraic-cover obstruction follows. The final
+simultaneous half-line selector implication remains a separate open claim.
+No contradiction to qualitative finite SDP-lift existence or to a finite
+algebraic testing family follows, and no global affine pencil is obtained.
+
+Evidence
+The inspected supplied checker passed in about 1.3 s. A separate private
+checker, check_multiplier_obstruction_independent.py, passed in about 1 s;
+it checks the generic completion identities, derives H_T from Pauli
+operators, and checks the full pullback degree and leading coefficient.
+Its exact result is multiplier_obstruction_independent_checks.json.
+The analytic inequalities, inertia, closedness, cancellation, and scope
+arguments above were checked as mathematics, not inferred from PASS labels.

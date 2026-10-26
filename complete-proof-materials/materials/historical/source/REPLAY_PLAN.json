@@ -1,0 +1,43 @@
+{
+  "global_E1_E2_E3": "OPEN",
+  "requirements": "Python3.10+; SymPy1.14.0 for the SymPy suites; all execution offline.",
+  "scope": "Six reconstruction/verification suites and three separate review suites. Their assertion counts overlap and are not a mathematical proof count.",
+  "suites": [
+    {
+      "name": "regular C2 construction",
+      "script": "c2/regular_c2_build.py"
+    },
+    {
+      "name": "regular C2 independent Fraction verification",
+      "script": "c2/regular_c2_check.py"
+    },
+    {
+      "name": "diagonal B0 event reconstruction",
+      "script": "diagonal/regenerate_diagonal.py"
+    },
+    {
+      "name": "tilted projection extraction",
+      "script": "compiler/build_and_check_tilted_extraction.py"
+    },
+    {
+      "name": "rational full-set QE encoding",
+      "script": "compiler/generate_q222_qe_problem.py"
+    },
+    {
+      "name": "literal Schur remainder identities",
+      "script": "c2/schur_remainder_check.py"
+    },
+    {
+      "name": "separate C2 SymPy review",
+      "script": "diagonal/review_regular_c2.py"
+    },
+    {
+      "name": "separate B0 and event review",
+      "script": "c2/regular_c2_cross_review.py"
+    },
+    {
+      "name": "separate Schur packet-matrix review",
+      "script": "compiler/review_schur_remainder.py"
+    }
+  ]
+}

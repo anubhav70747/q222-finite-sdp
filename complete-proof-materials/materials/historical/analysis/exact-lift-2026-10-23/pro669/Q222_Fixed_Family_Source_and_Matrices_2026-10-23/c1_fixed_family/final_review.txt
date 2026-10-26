@@ -1,0 +1,112 @@
+FINAL INDEPENDENT HOSTILE REVIEW — COMBINED LOCAL C1 CLAIM
+23 October 2026
+
+Conclusion: no unresolved mathematical gap found in the stated LOCAL claim.
+This conclusion does not assert full-Q222 adequacy or global Bell validity.
+
+Object reviewed
+---------------
+root/compile_combined.py and root/C1_UNIFORM_LOCAL_ORDER669.coo.json,
+the exact cone K=(K_POS intersect K_NEG)+K_SIX. The actual file has seven
+canonical source coordinates (d,m,C,A,D,alpha,beta), 2694 auxiliaries,
+120 PSD blocks, total order 669, maximum block order 12, and 7716 nonzero
+upper-triangle coefficient records.
+
+1. Source-cone combination and coefficient conventions
+------------------------------------------------------
+The combined pencil is exactly
+
+  blockdiag(L_both(z,y_plus), L_six(c-z,y_six)).
+
+Its seven free split coordinates are necessary and present. The source
+intersection shares the same seven source coordinates between POS and NEG;
+the two sets of Gram auxiliaries remain independent. The sum then replaces
+the SIX visible source by c-z. The compiler correctly converts the SIX
+one-based coefficient indices (0 constant, 1..7 visible) to the combined
+zero-based visible indices. Its global matrix coordinates are converted to
+the correct individual block coordinates. There is no off-by-one error in
+the 7+2021+666 auxiliary allocation. Every stored off-diagonal coefficient
+is an actual symmetric matrix entry; it is mirrored once, while coefficient
+matching includes the appropriate factor two in quadratic products.
+
+The two directions of the cone equivalence are immediate from this block
+form: a completion gives the required source decomposition, and any such
+decomposition together with its two completions gives a combined completion.
+No closure of a projected cone or limiting representation is assumed.
+
+2. Native source admission, including lambda=0 and weak event faces
+------------------------------------------------------------------
+The lambda>0 uniform bounds were independently checked against the exact
+12-root coefficient matrices. In particular the potentially dangerous
+s^2 Gamma row is below 96+8*sqrt(10)<128; both full Gamma normal terms are
+retained. At epsilon=2^-30, the constant correction is at most 1/16 and the
+sum of the seven testing corrections is below 1/12. This leaves a strictly
+positive numerical source reserve. The source estimates remove all H poles
+before taking bounds; H is not silently assumed bounded.
+
+The separate six-root proof is sufficient for the complementary branch.
+From lambda<=0 it obtains H<=2, h<=2*sigma, e<=2*x, beta*(1-h)^2<=2*sigma^2,
+and -8<=L=lambda/sigma<=0. Its BE4 estimate gives dG>=1 on the larger
+x,sigma<=2^-10 source box. The radial source block is at least I/3; the
+(Gamma,Vhat) block has diagonal entries at least one and off-diagonal
+absolute value at most 1/2, hence is at least I/2. The printed E00 bound
+and all seven nonconstant coefficient bounds imply its fixed source guards.
+The combined epsilon=2^-30 domain is a subset of this larger domain.
+
+Thus lambda>0 sources enter the first summand and lambda<=0 sources enter
+the second, by setting the other summand equal to zero. The zero source
+belongs to each homogeneous Gram cone. No lambda=0 face is missing. D=0
+is legal in the positive branch; the nonpositive branch's dG>=1 proves
+that D=0 cannot occur there. beta=0 is legal in either applicable branch.
+No D, beta, or state coordinate is inverted. Positive scaling of the
+normalized d=1 native source is permitted by homogeneity.
+
+3. Testing signs and all state normals
+-------------------------------------
+The POS/NEG intersection covers W>=0 with both signs of Z. An overall
+state sign covers W<0. W=0 is covered without choosing a nonzero coordinate.
+The exact transformations (u,Y,Z)->(-u,-Y,-Z) and
+(w,X,Z)->(-w,-X,-Z) preserve every term of the canonical parent for
+arbitrary canonical source coefficients. Thus source-pencil feasibility
+implies nonnegativity on |u|<=2^-24, |w|<=2^-12 and every real state.
+The SIX testing square |u|,|w|<=2^-12 contains this common rectangle.
+The real quadratic identity applies separately to real and imaginary
+state parts, so complex states add no missing normal direction.
+
+One explicit source-assignment clarification was sent to the parent:
+on NEG, the principal congruence must use the first eleven columns of
+A_minus followed by diag(1,1,-1,1,-delta^2,-delta,delta^2,delta^3,
+delta^4,delta^3,delta), because the polynomial testing functions use |Z|
+whereas the physical coordinate is Z=-|Z|. The compiler's target(-1) and
+the retained NEG source matrices already implement the correct sign.
+The evaluated pencil needs no change; print the congruence rule to make
+the source assignment unambiguous.
+
+4. Normalization and boundary restoration
+-----------------------------------------
+The affine source pencils match the complete unnormalized reciprocal
+parent P4, not a state restriction or a determinant. Multiplying every
+feature by the fixed testing normalizer kappa_t, with
+kappa_t^2*(1+u^2)*(1+w^2)=1, restores the stated normalized Bell-slack
+convention on the state sphere. Its denominator is everywhere positive.
+This is a pure testing factor; no mixed tensor cancellation is used.
+All remaining state/testing axes are literal polynomial specializations
+of the exported formulas. The independently checked P4=SP6 identity,
+both complete normal conductors, and both retained sign-chart identities
+support this assertion.
+
+5. Limits of the verified conclusion
+------------------------------------
+K is exactly the specified evaluated local certificate cone. Every admitted
+native source in the printed source box belongs to K. Every feasible source
+of K is nonnegative on the common local testing rectangle. These statements
+do not identify K with all locally nonnegative canonical sources, much less
+with the full quantum polar. Literal x=0, sigma=0, z=0, z>1, complementary
+testing regions, other C1 charts, and C2 require their own fixed-family
+coverage. No argument by continuity or qualitative existence fills them.
+
+Review method: targeted mathematical inspection of the exact source bounds,
+the six-root identity and fixed-family proof, the two sign-chart compilers,
+the sum/intersection compiler, coefficient conventions, and normalization.
+This was a final hostile review, not another broad numerical test campaign
+and not a proof-assistant verification.

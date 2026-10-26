@@ -1,0 +1,221 @@
+      R10 Thin Native Gate Proof
+
+
+
+ 
+
+
+Q222: the native thin-R10 bounded-matrix gate
+Scope. This note proves the local statement asserted in TL6–TL10 of the recovered October R21 source. It is not a global source-cover or a finite-SDP-lift theorem. The matrix factors below are indefinite bounded corrections; positivity is recovered by adding them, with the infinitesimal source factor $\rho$, to a strictly positive-residue formal-C1 base. All formulas use the quarter parent $F/4$. We distinguish the R10 source variables $w_s=ae$, $j_R$ from the independent testing variable $\omega=\mathfrak w$ and the SE source coordinate $j_s$.
+Statement
+Let $K_c,K_t\supset\mathbb R$ be independently labelled real-closed fields. Take an actual native weak-C2 R10 source with the complete conditions of R10.2, including positive-unit $t,g,j_R$, positive infinitesimal $s=1/a,B,h,e,x=aB$, and $0<\rho=n/e^2\in\operatorname{Inf}(K_c)$. Retain the original gaps. On the double-infinitesimal testing chart $Z=1$, $u,v,\omega>0$ infinitesimal, use the actual CA/SE hard normals $N,M_B$. Let $\mathscr E$ be exactly TL6 after retaining the entire positive contact-zero TL4 square and the positive centered-$A$ excess packet.
+Then for each of the two source-scale alternatives $tb$ a positive unit or infinitesimal, with the corresponding actual eight-root frame $\mathcal R=(x_0,y_0,z_0,h_0,q_1,q_2,N,M_B)^T$, there exists a symmetric matrix $H\in\operatorname{Sym}_8(B_c\otimes_{\mathbb R}B_t)$ such that
+$\boxed{\mathscr E/\rho=\mathcal R^T H\mathcal R.}\tag{G}$The matrix is constructed by the finite algorithm in §4 below; it uses no division by a source infinitesimal, by a contact difference, or by a mixed source/testing expression. Independently, the exact CA or SE formal-C1 remainder has a positive-definite real-residue Gram even though its native $\beta_1=-s_n/2<0$. Therefore the thin local actual-C2 quarter-parent has a separated tensor SOS for all independent source/test relative rates in this chart.
+Exact inputs. Native coefficient differences TL3, original R10.2, formal-contact OP4/OP5, the polynomial-state inverse TL7, and the elementary contact identities CC1–CC6 / SE5–SE7. The proof below verifies their native application; it never substitutes contact evaluation for a full-state identity. The algebraic source packets and CA/SE residues used are printed in the recovered group_01.tex, group_03.tex, and group_07.tex.
+1. Two charts and exact source cancellations
+Set $s=1/a$, $w_s=ae$, $b=a^2B$, so that
+$ B=s^2b,\quad x=sb,\quad e=sw_s,\quad r=1-sw_s,
+\quad 2r\Delta_*n/s^2=w_sQ_*-bK_* .\tag{1}$TL1 gives $b/w_s\sim1/t$, with $t$ and $w_s/b$ positive units. The formal C1 contact parameters are
+$ k^2=x=sb,\quad \eta_1=t,\quad\zeta_1=s,\quad r_1=h,\quad t_1=w_s.$Introduce the C1 chart coefficients (do not confuse the following $E,Q$ with the TL stress)
+$ K=1+k^2,\qquad R_1=1+hk^2,\qquad Q=K^2/R_1,
+\qquad E=tK/R_1,\tag{2}$$ \delta^2=\frac{R_1^2}{tK^2b},\qquad \varepsilon=\delta^{-1},
+\qquad j_s=\delta k.\tag{3}$These follow from the exact CA3 equations $r_1=\ell/Q$, $\eta_1=KE/Q$, $\zeta_1=\delta^2k^2 QE/K$; indeed $\ell=hQ$. In particular $E\sim t$ is a positive unit and $\ell$ is infinitesimal. From (3),
+$ \varepsilon^2=\frac{tK^2b}{R_1^2},\quad
+ j_s^2=\frac{sR_1^2}{tK^2},\quad
+ s=j_s^2QE/K,\quad k=\varepsilon j_s,\tag{4}$$ K_c=\frac{sK}{Q}=j_s^2E,
+\quad\gamma=\frac{r}{K_c},\quad p=\frac{w_s}{R_1}.$These identities are exact. The source $j_R$ is a different positive unit appearing in TL3; it is never replaced by $j_s$.
+If $b$ is a positive unit, $\delta, E$ are positive units and the CA frame uses the original, unscaled normals:
+$ (A,B_0,C,D_0)=(\omega v,\delta v,\delta E u\omega,\delta^2 k^3E).
+\tag{CA}$If $b$ is infinitesimal, set $w_s=\varepsilon^2\tau$. Equation (1), (4) makes $\tau=w_s/\varepsilon^2\sim1$ a positive unit. Then $\varepsilon,j_s$ are infinitesimal and SE uses
+$ (A,B_0,C,D_0)=(\varepsilon\omega v,v,E u\omega,
+ \varepsilon^2j_s^3E).\tag{SE}$The SE circuit monomials are exactly the CA monomials divided by $\delta$. In particular SE retains $N,M_B$ unscaled. The optional CS1 frame $(N,\delta M_B)$ is a separate scaled-CA construction, not a silent replacement of SE's hard normal.
+Let $\Lambda=\Theta/\rho$, $\nu=n/\rho=e^2$, and $\Xi=nx/\rho=\nu x$. In CA, the following coquotients are bounded with no small inverse:
+$ \Lambda=\frac{\delta^2QEw_s^2}{K},\quad
+ \nu\gamma^2=\frac{w_s^2r^2Q^2}{K^2},\quad
+ \frac\Xi{D_0^2}=\frac{w_s^2Q^2}{K^2},\tag{5}$$ \nu\gamma=\frac{\delta^2Ek^2w_s^2rQ^2}{K^2}.$Here $\delta,E$ are units, so these expressions are bounded. In SE they become the exact cancellation table
+$ \begin{aligned}
+ \Lambda&=\frac{\varepsilon^2\tau^2QE}{K},&
+ \nu&=\frac{\varepsilon^4j_s^4\tau^2 Q^2E^2}{K^2},\\
+ \frac{\nu\gamma^2}{\varepsilon^2}
+ &=\frac{\varepsilon^2\tau^2r^2Q^2}{K^2},&
+ \frac{\nu\gamma}{\varepsilon}
+ &=\frac{\varepsilon^3j_s^2E\tau^2rQ^2}{K^2},\\
+ \frac{\Xi}{D_0^2}
+ &=\frac{\varepsilon^2\tau^2Q^2}{K^2},&
+ p&=\varepsilon^2\tau/R_1.
+ \end{aligned}\tag{6}$Every displayed denominator is a pure-source positive unit. The native $t,g,j_R,1-h,K,h+t,Q_c$ denominators in TL3 are also units, including tied rates of $\varepsilon,j_s,\rho$.
+2. Recover all TL6 coefficients before applying a conductor
+Abbreviate $D_u=1+u^2$, $D_v=1+v^2$. Use $\omega=(W+uY)/D_u$, $A_t=v\omega$, and the original TL7 normal coordinates:
+$ X=N+pD_uA_t-u,\quad
+ q_B=v(D_u-uN-puD_uv\omega),\quad
+ W=\omega+\frac{u(M_B+h_1q_B)}{D_u},\quad
+ Y=u\omega-\frac{M_B+h_1q_B}{D_u}.
+\tag{7}$Here $h_1=a_1/T_1$ is a bounded C1 source coefficient, while $h$ without a subscript denotes the original R10 infinitesimal gap. In particular
+$ uW-Y=M_B+h_1q_B,
+\quad R_{D,\mathrm{event}}=M_B+(h_1-1)q_B,
+\quad X+u=N+pD_uA_t.$Write the three monomials in either frame uniformly as
+$ A=\alpha_A\omega v,\qquad B_0=\alpha_Bv,
+ \qquad C=\alpha_Cu\omega,
+\tag{8}$where $(\alpha_A,\alpha_B,\alpha_C)=(1,\delta,\delta E)$ in CA and $(\varepsilon,1,E)$ in SE. In formulas below, $B_0$ denotes the monomial $\alpha_Bv$, not the original R10 source $B$.
+Define five source-only coefficient quotients
+$ c_*=\frac{\delta C}{\rho},\quad
+ d_*=\frac{\delta D+\delta d/2}{\rho},\quad
+ z_*=\frac{\delta\alpha+\delta d/2}{\rho},\quad
+ d_0=\frac{\delta d}{2\rho},\quad
+ a_*=\frac{\delta(Ah)}{\rho},\tag{9}$so that $z_*-d_0=\delta\alpha/\rho$. They are explicitly obtained from TL3 by
+$ \begin{aligned}
+ c_*&=-\Lambda\frac{c_a}{1-h},&
+ a_*&=-\Lambda\frac{t c_aS_c}{K(h+t)},\\
+ d_0&=-\Lambda\frac{P_\kappa}{K(h+t)},&
+ d_*&=\Lambda\left[\frac{S_cP_D}{K(h+t)t j_R}
+ -\frac{P_\kappa}{K(h+t)}\right],\\
+ z_*&=d_0-\Xi\frac{P_\alpha}{KQ_c}.
+ \end{aligned}\tag{10}$All coefficients are bounded in CA and divisible by $\varepsilon^2$ in SE. No $1/h$, $1/j_s$, $1/\varepsilon$, or $1/\rho$ survives in these quotients. The unsubscripted $\delta C,\delta d,\ldots$ in (9) are coefficient differences, not the CA source scaling $\delta$.
+Set
+$ V_0=1-puv\omega,\quad b_q=\frac{D_uV_0}{\alpha_B},
+\quad t_B=h_1b_q,\quad r_B=(h_1-1)b_q,$$ U_B=\frac{u^2t_B}{D_u},\quad U_C=\alpha_C^{-1},
+\qquad Y_B=-\frac{t_B}{D_u},\quad Y_C=\alpha_C^{-1},$$ t_N=-h_1uv,\quad r_N=-(h_1-1)uv,\quad
+ U_N=\frac{u^2t_N}{D_u},\quad Y_N=-\frac{t_N}{D_u},
+\quad U_M=\frac{u^2}{D_u},\quad Y_M=-\frac1{D_u}.
+\tag{11}$These are bounded tensor coefficients; $\alpha_A^{-1}$ is used only in combinations in (6), never by itself when $\alpha_A=\varepsilon$.
+The following five scalar arrays are exact:
+$\boxed{\begin{aligned}
+ f_A={}&-\frac{\nu D_uD_v}{\alpha_A^2}
+       (2\gamma pD_u+\gamma^2)
+       -\frac{\nu p^2D_u^2D_v}{\alpha_A^2},\\
+ f_{BB}={}&c_*D_v t_B^2+d_*r_B^2
+    +z_*D_u\left(-\frac{2Y_B}{\alpha_B}+v^2Y_B^2\right)
+    -\frac{d_0D_u}{\alpha_B^2}
+    +a_*D_uD_v(2U_BY_B-hU_B^2),\\
+ f_{BC}={}&\frac{2\nu\gamma D_uD_v}{\alpha_B\alpha_C}
+     +z_*D_u\left(-\frac{2Y_C}{\alpha_B}+2v^2Y_BY_C\right)
+     +2a_*D_uD_v(U_BY_C+U_CY_B-hU_BU_C),\\
+ f_{CC}={}&z_*D_uv^2Y_C^2
+     +a_*D_uD_v(2U_CY_C-hU_C^2),\\
+ f_0={}&\frac{(z_*-d_0)D_u}{D_0^2}
+       =-\frac{\Xi}{D_0^2}\frac{P_\alpha D_u}{KQ_c}.
+\end{aligned}}\tag{12}$In particular the scalar at zero normals is literally
+$ \left.\mathscr E/\rho\right|_{N=M_B=0}
+ =f_AA^2+f_{BB}B_0^2+f_{BC}B_0C+f_{CC}C^2+f_0D_0^2.
+\tag{13}$There is no $AB_0$ or $AC$ term; $uA_t=(B_0C)/(\alpha_B\alpha_C)$ supplies the one new $B_0C$ cross term from TL5. Keeping $-nD_v(X+u)^2$ is essential for the $p^2$ part of $f_A$.
+The two complete first-normal rows, writing $L_N=\ell_{NA}A+\ell_{NB}B_0+\ell_{NC}C$ and $L_M=\ell_{MB}B_0+\ell_{MC}C$, are
+$\boxed{\begin{aligned}
+ \ell_{NA}&=-\frac{2\nu D_uD_v(\gamma+p)}{\alpha_A},\\
+ \ell_{NB}&=2c_*D_vt_Bt_N+2d_*r_Br_N
+  +2z_*D_u\left(-\frac{Y_N}{\alpha_B}+v^2Y_BY_N\right)
+  +2a_*D_uD_v(U_NY_B+U_BY_N-hU_BU_N),\\
+ \ell_{NC}&=2z_*D_uv^2Y_CY_N
+  +2a_*D_uD_v(U_NY_C+U_CY_N-hU_CU_N),\\
+ \ell_{MB}&=2c_*D_vt_B+2d_*r_B
+  +2z_*D_u\left(-\frac{Y_M}{\alpha_B}+v^2Y_BY_M\right)
+  +2a_*D_uD_v(U_MY_B+U_BY_M-hU_BU_M),\\
+ \ell_{MC}&=2z_*D_uv^2Y_CY_M
+  +2a_*D_uD_v(U_MY_C+U_CY_M-hU_CU_M).
+\end{aligned}}\tag{14}$The missing $\ell_{MA}$ is exactly zero. Both first-normal rows, not merely their contact restrictions, are retained.
+Finally the complete hard block $H^{\rm hard}$, with the off-diagonal written in matrix convention so that the polynomial contains $2H^{\rm hard}_{NM}NM_B$, is
+$\boxed{\begin{aligned}
+ H_{NN}^{\rm hard}={}&-\nu D_v+c_*D_vt_N^2+d_*r_N^2
+  +z_*D_uv^2Y_N^2
+  +a_*D_uD_v(2U_NY_N-hU_N^2),\\
+ H_{NM}^{\rm hard}={}&c_*D_vt_N+d_*r_N+z_*D_uv^2Y_NY_M
+  +a_*D_uD_v(U_NY_M+U_MY_N-hU_NU_M),\\
+ H_{MM}^{\rm hard}={}&c_*D_v+d_*+z_*D_uv^2Y_M^2
+  +a_*D_uD_v(2U_MY_M-hU_M^2).
+\end{aligned}}\tag{15}$Equations (12)–(15) are the full identity
+$ \frac{\mathscr E}{\rho}
+ =f_AA^2+f_{BB}B_0^2+f_{BC}B_0C+f_{CC}C^2+f_0D_0^2
+ +NL_N+M_BL_M+(N,M_B)H^{\rm hard}(N,M_B)^T.
+\tag{16}$All normal terms are homogeneous in the two hard normals; no state ratio has been frozen. Equation (16) was also reconstructed and checked by exact polynomial subtraction in the accompanying script verify_R10_TL6_arrays.py.
+3. Actual native valuation and divisibility checks
+CA. In the unit-$tb$ branch, $\alpha_A=1$, $\alpha_B=\delta$, $\alpha_C=\delta E$ are units. The source brackets (10), the coquotients (5), and $p,h_1,h$ are bounded. Hence all five coefficients (12), five normal coefficients (14), and three hard coefficients (15) lie in $B_c\otimes B_t$. All angular denominators are powers of $D_u$, which is a positive testing unit; after clearing them the arrays are polynomials in $u,\omega,v$ with bounded source coefficients. The original CC1–CC6 monic conductor applies without an inverse of $k$ or a contact variable.
+SE. In the infinitesimal-$tb$ branch, substitute $(\alpha_A,\alpha_B,\alpha_C)=(\varepsilon,1,E)$. By (6),
+$ \frac{\nu\gamma^2}{\alpha_A^2}\in\varepsilon^2B_c,
+\quad \frac{\nu\gamma}{\alpha_A}\in\varepsilon^3j_s^2B_c,
+\quad \frac{\Xi}{D_0^2}\in\varepsilon^2B_c,
+\quad c_*,d_*,z_*,d_0,a_*\in\varepsilon^2B_c.
+\tag{17}$Furthermore $\nu/\alpha_A^2,\nu p/\alpha_A^2,\nu p^2/\alpha_A^2$ are bounded with at least an $\varepsilon^2$ factor after cancellation; $p=\varepsilon^2\tau/R_1$ and all other test multipliers in (11) are bounded. Thus every coefficient in (12)–(15) lies in $\varepsilon^2(B_c\otimes B_t)$. In particular all normalized raw scalar and first-normal arrays belong to the bounded ring; the source-dependent $\gamma=r/K_c$ never appears without a cancelling $\nu$, and the apparent $D_0^{-2}$ in $f_0$ is cancelled exactly by (6). This argument compares no source infinitesimal to a testing infinitesimal.
+For the finite conductor premises, factor the common $\varepsilon^2$ out of each raw array, clear only the finitely many positive source-unit and $D_u$ denominators, and denote the resulting polynomial coefficients by $\widehat f_i,\widehat\ell_{Nj},\widehat\ell_{Mj}$. The testing $\omega$-dependence occurs solely through
+$ V_0=1-puv\omega,\qquad p=\varepsilon^2\tau/R_1.
+\tag{18}$Modulo $\varepsilon$, every $\widehat f_i$ is therefore independent of $\omega$ and even in both $u$ and $v$. Every $\widehat\ell$ is independent of $\omega$ modulo $\varepsilon$. This is a check of the actual complete arrays (12)–(15): $D_u,D_v,u^2,v^2$ are even, and (18) is their only other testing dependence. It includes the TL5 term, the $-nD_v(X+u)^2$ term, and the centered-$A$ cross term. There are no omitted $\omega$-dependent linear normals.
+For any polynomial $S$ in the first scalar conductor, perform the explicit monic substitutions in the order $u\mapsto k$, $\omega\mapsto j_s$, $v\mapsto\varepsilon j_s^2E$:
+$ S=S_c+(u-k)T_u+(\omega-j_s)T_\omega
+ +(v-\varepsilon j_s^2E)T_v.
+\tag{19}$The particular first scalar remainder $S$ in §4 has $S_c=0$. At $\varepsilon=0$, (18) makes it $\omega$-independent and even in $u,v$, while the contact values of $u,v$ both become zero. Consequently its first-stage quotients satisfy
+$ T_u\in(u,\varepsilon),\quad
+ T_\omega\in(\varepsilon),\quad
+ T_v\in(v,\varepsilon).
+\tag{20}$In fact the $\omega$-dependent part of $S$ begins at $p=O(\varepsilon^2)$, so $T_\omega\in(\varepsilon^2)$ after factoring the raw common $\varepsilon^2$. In SE7 one can choose $V=0$, $U=T_\omega/\varepsilon$, an exact polynomial quotient with no coefficient containing $\varepsilon^{-1}$.
+The first application of SE7 introduces into the new $z_0$ coefficient only the possible $\omega$-dependence $E\omega T_v$ modulo $\varepsilon$, and (20) makes it a multiple of $v$. The $x_0,y_0,h_0$ coefficients are $\omega$-independent modulo $\varepsilon$: in particular $U\in(\varepsilon)$, and every term involving $k=\varepsilon j_s$ disappears there. Subtracting the contact gradient relation from §4 changes this only by $\omega$-independent source coefficients. Therefore each second-stage scalar remainder has
+$ \boxed{T_\omega\in(\varepsilon,v).}\tag{21}$For each first-normal row the first-order remainder is also $\omega$-independent modulo $\varepsilon$ by (18), and its single conductor satisfies $T_\omega\in(\varepsilon)$. Equations (20)–(21) prove the precise first- and second-stage SE7 tests, not just a generic contact-vanishing assertion. The raw $D_0$ restriction in (13) is exactly $(A,B_0,C)^2+(D_0^2)$; no $CD_0$ or other mixed $D_0$ product is inserted.
+4. Explicit finite algorithm for the whole 8-by-8 matrix
+This constructs every entry of $H$ in (G); it also specifies the only general conductor facts used. Write $\mathfrak R_0=(x_0,y_0,z_0,h_0,q_1,q_2)$, using in both charts
+$ x_0=B_0-C,\quad y_0=A-kC,\quad z_0=uB_0-kC,
+ \quad h_0=kC-D_0,
+\tag{22}$where $k=\varepsilon j_s$ in SE. The circuit pairing squares are
+$ a_1^2=A,\ a_2^2=uB_0,\ a_3^2=kC,\ a_4^2=D_0,
+\qquad q_1=a_1a_2-a_3a_4,\quad q_2=a_1a_3-a_2a_4.$All radicals are products of positive source-only and testing-only roots. The following are exact polynomial relations:
+$ q_1^2-q_2^2=z_0(y_0+h_0),\quad
+ r_*=y_0+z_0-h_0-2kx_0,
+\quad kCr_*=q_1^2-y_0z_0.
+\tag{23}$The Jacobian $\partial(x_0,y_0,z_0)/\partial(u,\omega,v)$ at the contact is $-\varepsilon^3j_s^4E^2\ne0$ in SE (and $-\delta^4k^4E^2\ne0$ in CA). Its inverse is never used in a coefficient.
+Scalar step. Start from (12)–(13), substitute$A=y_0+kC$, $B_0=x_0+C$, $D_0=kC-h_0$, and set
+$ Q_2=f_Ay_0^2+f_{BB}x_0^2+f_0h_0^2,
+\quad S=k^2f_A+f_{BB}+f_{BC}+f_{CC}+k^2f_0.$Then, exactly,
+$ F_{\rm scalar}=Q_2
+ +C[x_0(2f_{BB}+f_{BC})+y_0(2kf_A)-2kf_0h_0]
+ +C^2S.
+\tag{24}$At contact $C_c\ne0$, and scalar contact vanishing yields $S_c=0$. Divide $S$ monically as (19). In CA use CC2; in SE use the precise SE7 coefficients:
+$ \begin{aligned}
+ CS={}&x_0[-uT_u-\varepsilon\omega U-Ek\omega^2V-Ek\omega T_v]\\
+ &+y_0[U+Ej_s\omega V+Ej_sT_v]\\
+ &+z_0[T_u+E\omega(\omega-j_s)V+E\omega T_v],
+ \quad T_\omega=\varepsilon U+vV.
+ \end{aligned}\tag{25}$No source parameter is inverted in (25). For the first stage use the exact quotient $U=T_\omega/\varepsilon,V=0$, whose existence follows from (20). For a second-stage $T_\omega\in(\varepsilon,v)$, choose explicitly
+$ V=\frac{T_\omega-T_\omega|_{v=0}}{v},\qquad
+ U=\frac{T_\omega|_{v=0}}{\varepsilon}.$Both divisions are polynomial factor extraction certified by (21); they introduce no localized inverse and preserve boundedness. Multiplying (25) by $C$, combine with (24), obtaining
+$ F_{\rm scalar}=Q_2+C(x_0H_x+y_0H_y+z_0H_z+h_0H_h),
+\qquad H_h=-2kf_0.$The scalar's full first contact jet is zero. Thus the contact values satisfy
+$ (H_x,H_y,H_z,H_h)_c
+   =2k(f_0)_c(-2k,1,1,-1).
+\tag{26}$This follows because the remaining three root gradients have the nonzero determinant above. Subtract $2k(f_0)_c\,r_*$. Use (23) to replace its exact contribution by $2(f_0)_c(q_1^2-y_0z_0)$. Now each corrected coefficient $H'_x,H'_y,H'_z,H'_h$ vanishes at contact. Perform their monic divisions (19) and apply CC2/SE7 again, using the just-proved second-stage divisibility (21). Consequently each $CH'_i$ is a bounded linear combination of $x_0,y_0,z_0$. Multiply by the corresponding $x_0,y_0,z_0,h_0$. The result is a quadratic form on $(x_0,y_0,z_0,h_0,q_1)$, without ever dividing by $k$, $\varepsilon$, $j_s$, or a contact difference.
+First normal rows. For $\sigma=N,M_B$, write the corresponding row (14) as $L_\sigma=l_{\sigma A}A+l_{\sigma B}B_0+l_{\sigma C}C$ (with $l_{MA}=0$). Then
+$ L_\sigma=l_{\sigma A}y_0+l_{\sigma B}x_0
+  +C S_\sigma,\qquad
+ S_\sigma=k l_{\sigma A}+l_{\sigma B}+l_{\sigma C}.
+\tag{27}$The actual full-parent first-jet equations imply $(S_\sigma)_c=0$. Apply one monic CC2/SE7 division to each $S_\sigma$, with the native normal divisibility established in §3. This produces $L_\sigma$ as a bounded combination of $x_0,y_0,z_0$, for both normals. No normal is discarded or scaled incorrectly.
+Hard block and matrix assembly. Take the three coefficients in (15) unchanged as the $(N,M_B)$-principal block of $H$. Expand the scalar and two resulting linear normal forms on the ordered eight roots
+$ \mathcal R=(x_0,y_0,z_0,h_0,q_1,q_2,N,M_B)^T.$For any coefficient $c\,r_ir_j$ with $i\ne j$, insert $c/2$ in $H_{ij}=H_{ji}$; for a square $c\,r_i^2$, insert $c$ on the diagonal. All unmentioned entries are zero. This is an explicit terminating algorithm yielding every entry of $H$ from the finite arrays (12)–(15). It constructs an indefinite matrix, which is exactly what (G) requires.
+Every operation is a polynomial substitution, an exact divisibility quotient (never a localization), addition/multiplication, or inversion of an explicitly positive source or testing unit. §3 proves every coquotient stays bounded even for tied valuations. Hence $H\in\operatorname{Sym}_8(B_c\otimes B_t)$ and (G) holds identically.
+5. Strict real residue of the formal negative-beta C1 base
+OP4–OP5 give the same complete contact state and $\beta_1=-s_n/2$. TL2 and R10.2 imply
+$ 0<s_n=O(\rho w_s),\quad
+ \beta_1\in\operatorname{Inf}(K_c)^-,\quad
+ \pi=1-s_n>0,\quad \kappa=(1+2n)/\pi\sim1.$The C1 coefficient identities SD1–SD4 do not require $\beta_1\ge0$ to be algebraically valid. Their retained packets contain $\beta_1+1/2=\pi/2>0$ and the other positive event/paired coefficients, never $\beta_1$ by itself. In SE4 the normal packet originally supplies $(2+4\beta_1)\nu_0$; after retaining $\nu_0$, the excess is $(1+4\beta_1)\nu_0>0$. The positive centered-$A$ excess $A_1-A_{*,1}$ is also unchanged. Thus the formal base's selected packets are actually nonnegative despite its negative raw beta. The C1 source normalization to $C_1=2$, whenever used, is a positive unit, and $\kappa$ and the quarter-parent factor $1/4$ likewise preserve positive residue.
+CA, $tb$ a unit. The exact centered remainder CA5 has the scalar residue
+$ \frac{4(E+4)}{E^2\delta^2}x_0^2+
+ \frac8{E\delta^2}T_4,
+\quad T_4=y_0^2+z_0^2+h_0^2-y_0z_0+z_0h_0+q_1^2+q_2^2.$The original unscaled normals have hard pivots $16/(E\delta^2)$ and $4(E^2+4)/E$, and the only first-normal coupling is $8(E+2)/(E\delta)\,M_Bx_0$. Accordingly
+$ \det G_{(M_B,x_0)}=\frac{256}{E^3\delta^2}>0.
+\tag{28}$The $(y_0,z_0,h_0)$ contrast matrix of $T_4$ is$\left(\begin{smallmatrix}1&-1/2&0\\-1/2&1&1/2\\0&1/2&1\end{smallmatrix}\right)\succ0$, and both $q_1,q_2$ have positive diagonal coefficients. The full eight-root residue is therefore positive definite. It is independent of the sign of the infinitesimal raw $\beta_1$.
+SE, $tb$ infinitesimal. Use SE4 in the unscaled $(N,M_B)$ normals, after its original positive-unit normalization by native $a_1=(K-\ell)/E$. Put $H_0=E+\ell>0$, $V_*=1+\ell H_0>0$. The exact coefficient collection SE9–SE10 gives scalar residue
+$ \frac{8(E+2)}{H_0V_*}x_0^2+8T_4,
+\quad L_N=0,
+\quad L_M=\frac{16E(H_0+1)}{H_0V_*}x_0,$with hard pivots
+$ G_{NN}=\frac{4E}{H_0}>0,
+\quad G_{MM}=\frac{8(E^2+2E\ell+2\ell^2+2)}{V_*}>0,$and
+$ \boxed{\det G_{(M_B,x_0)}
+ =\frac{64(E^2+2E\ell+4E+4\ell)}{H_0^2V_*}>0.}\tag{29}$Here $E\sim t$ is a positive unit; $\ell=Qh$ may vanish in residue, without harming any displayed strict pivot. The finite contact algebra and the nonnegative packets have exactly the hypotheses just verified, including $\beta_1<0$, so the SE full Gram has positive-definite real residue. One must not infer this from the physical C1 theorem; it follows from the displayed full SE4 coefficient identity, the positive paired packet, and (29).
+The circuit identity $q_1^2-q_2^2=z_0(y_0+h_0)$ proves the strict positive representation of $T_4$. It is not just the semidefinite form $(y_0-z_0)^2+h_0^2+2q_1^2$.
+6. Closing the local tensor SOS
+In either chart let $G_0$ be the bounded Gram of the formal $\kappa F_1/4$ remainder after the common normalization and retained packets, with $\overline{G_0}\succ0$ proved in §5. By §4 the full actual-minus-formal stress is $\mathscr E=\rho\mathcal R^TH\mathcal R$ with bounded $H$. Since $\rho$ is a positive source-only infinitesimal,
+$ \overline{G_0+\rho H}=\overline{G_0}\succ0.$The strict bounded-Gram tensor lemma applies to $\mathcal R^T(G_0+\rho H)\mathcal R$, irrespective of the magnitude of the actual roots or their relative testing rates. Restore the positive SD3 packets, the positive centered-$A$ packet $(A_2-\kappa A_{*,1})D_uD_v(Y-huW)^2$, and TL4 $nD_uD_v(X+\gamma A_t)^2$. Every square uses only pure source and testing radical factors. This proves the local thin-R10 entire-state tensor-SOS claim.
+Not proved here: the other R10 testing charts, the remote joins, universal C1/C2 source admission, Scheiderer's global hypothesis, or any explicit full-Q222 SDP. This note closes precisely the local gate (G) and the formal-base strictness, using the contact conductor identities as elementary algebra rather than as a coverage verdict.
+
+
+
+
+
+
+
+
+

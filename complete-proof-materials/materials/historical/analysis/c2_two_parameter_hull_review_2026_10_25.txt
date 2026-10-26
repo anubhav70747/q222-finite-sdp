@@ -1,0 +1,130 @@
+EXACT HULL OF THE a=b_source=1, t_source=1-r C2 SURFACE
+25 October 2026. Independent derivation and exact symbolic receipt.
+
+The proposed total-order-seven cone is correct, including all zero faces
+and all finite source limits. Its dual is an explicit order-seven behavior
+constraint with four scalar auxiliaries. It covers this two-parameter
+surface and its entire closed conic hull, not all C2 or Q222.
+
+1. Direct native specialization
+-------------------------------
+Use source order (d,lambda,n,m,C,A,D,alpha,beta), put x=zr and
+S=r+x+2rx. For a=b_source=1 and t_source=1-r, the actual native formulas give
+
+ d=1, lambda=beta=0,
+ n=(1-r-x-3rx)/(4S),
+ m=(1-r)(1+x)/(4S),    A=(1+r)(1+x)/(4S),
+ D=(1+r)(1-x)/(4S),
+ C=r^2(1+x)/[(1-r)S],
+ alpha=x^2(1+r)/[(1-x)S].
+
+The positive native domain is exactly
+
+ r>0, x>0, r+x+3rx<=1.
+
+It implies r,x<1; all source gaps are positive. In particular h=r,
+g=j=r(1+z), 1-zh=b_source-a^2zr=1-x. The source parameters are independent
+of testing parameters. Physical global validity of this native surface is
+the input handled by the separate source-validity proof; stationarity and
+the cone algebra alone would not prove it.
+
+Direct substitution gives the identities
+
+ d=4A-2m-2D,   n=m+D-A,
+ mC=(A-m)^2,  D alpha=(A-D)^2,
+ r=(A-m)/(A+m),   x=(A-D)/(A+D).
+
+2. Exact closed hull
+--------------------
+Let K be defined by lambda=beta=0, the two linear d,n identities above,
+
+ M=[[m,A-m],[A-m,C]]>=0,
+ N=[[D,A-D],[A-D,alpha]]>=0,
+ A-m>=0, A-D>=0, m+D-A>=0.                         (K)
+
+This is a closed spectrahedral cone of total PSD order seven. All ordinary
+source coefficients are nonnegative: m,D,C,alpha>=0 follow from the PSD
+diagonals; A>=m,D and n>=0 follow from the scalar inequalities; and
+d=2[(A-m)+(A-D)]>=0. Every positive surface source belongs to K.
+
+For the reverse inclusion first suppose m,D>0. Subtract the nonnegative
+excesses
+
+ (C-(A-m)^2/m)*e_C,
+ (alpha-(A-D)^2/D)*e_alpha.
+
+The remaining source has both 2x2 matrices of rank one. Set
+r=(A-m)/(A+m), x=(A-D)/(A+D), which lie in [0,1). Exactly,
+
+ 1-r-x-3rx = 4A(m+D-A)/[(A+m)(A+D)] >=0.
+
+For r,x>0 this is the unique positive multiple of the displayed native
+surface source having this A. Indeed its scale is
+4A(r+x+2rx)/[(1+r)(1+x)], equal to d. If r=0 or x=0, approximate from
+inside the domain r,x>0, r+x+3rx<=1 while keeping A fixed. This continuously
+recovers the same rank-one source. The case r=x=0 is also recovered this
+way: m=D=A, C=alpha=0, n=A,d=0.
+
+If m=0, the first PSD block forces A=0; A-D>=0 and D>=0 then force D=0.
+The same conclusion follows from D=0. Only the nonnegative C and alpha
+axes remain. No division by a zero diagonal is used.
+
+Both axes belong to the closed hull of the surface itself, not merely to a
+larger added event cone. For 0<e<1 take r=1-e,x=e^2/4. The domain gap is
+e-e^2+3e^3/4>0. Dividing its source by C and taking e down to zero gives
+exactly e_C. Swapping r and x and dividing by alpha gives e_alpha.
+Thus the excesses and all zero-diagonal cases above are in the closed
+surface hull. This proves both inclusions of (K).
+
+3. Explicit behavior constraint, with no implicit dual closure
+------------------------------------------------------------
+For any behavior let H be the canonical affine CHSH functional, and use
+the existing event probabilities p_n,p_m,p_C,p_A,p_D,p_alpha. Define
+
+ lA=4(H-p_n+p_A),
+ lm=-2H+4(p_n+p_m),
+ lD=-2H+4(p_n+p_D),
+ lC=4p_C,     lalpha=4p_alpha.
+
+After the linear source substitutions the Bell slack is exactly
+lA*A+lm*m+lD*D+lC*C+lalpha*alpha. The behavior obeys every source in K iff
+there exist four real auxiliary variables xi,eta,s,t such that
+
+ U=[[lA+lm-2eta-t,xi],[xi,lC]]>=0,
+ V=[[lA+lD-2xi-s,eta],[eta,lalpha]]>=0,
+ s>=0, t>=0, 2xi+2eta+s+t-lA>=0.                       (D)
+
+Equivalently the first diagonals are
+2H+4(p_A+p_m)-2eta-t and 2H+4(p_A+p_D)-2xi-s.
+All matrix entries are affine in the behavior and the four auxiliaries.
+No source contact parameter occurs in these feature functions or entries.
+
+To verify soundness put q3=2xi+2eta+s+t-lA. The exact coefficient identity is
+
+ lA*A+lm*m+lD*D+lC*C+lalpha*alpha
+ =tr(U M)+tr(V N)+s(A-m)+t(A-D)+q3(m+D-A).
+
+All terms are nonnegative under (K),(D). For completeness, the converse is
+an attained conic duality statement. In the five source coordinates
+(A,m,D,C,alpha), the point (1,3/4,3/4,1,1) has both PSD blocks strictly
+positive (each determinant 11/16) and scalar entries 1/4,1/4,1/2.
+Its full source has d=1,n=1/2,lambda=beta=0. Thus the block map is strictly
+feasible. Evaluating a convergent adjoint-image sequence at this point
+bounds the traces of its PSD matrices and the nonnegative scalar multipliers.
+Their image is therefore closed. Separation/bipolarity gives every element
+of K* as exactly this PSD adjoint image. Eliminating its coefficient equations
+gives precisely (D), so there is no missing closure or attainment assumption.
+
+4. Exact checks and scope
+-------------------------
+c2_two_parameter_hull_checks_2026_10_25.py independently substitutes the
+native formulas, verifies every displayed surface identity, both exact axis
+limits, the inverse physicality-domain identity, the full dual polynomial
+identity, the behavior pairing and the strict point. Its matching JSON is
+the reproducible exact receipt. No numerical SDP or parameter sweep is used.
+
+The earlier one-parameter hard curve is the section r=1/2 of this surface,
+so the new order-seven block includes all its inequalities. Any strict NPA
+improvement established from that curve is therefore retained. Physical
+validity and source extremality are separate source theorems; no full-C2,
+full-Q222, or universal sixth-root admission conclusion follows here.

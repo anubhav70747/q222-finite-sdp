@@ -1,0 +1,124 @@
+Independent exact review: ramified order-49 obstruction
+23 October 2026
+
+VERDICT
+The finite separating certificate is correct against OUR published
+order-49 pencil. No decisive defect was found. The all-positive valid
+source cdagger and the transported contact source pi(cstar) both lie
+outside the evaluated ramified completion cone.
+
+Checked input
+-------------
+Pro package: pro-ramified-obstruction/Q222_Ramified_Quartic_Obstruction/
+  verify.py (read before evaluation; not imported by the own checker),
+  data/certificate.json,
+  proof/ramified_obstruction.tex, proof/moments_g.tex, proof/moments_h.tex.
+
+The actual PUBLIC pencil, not merely Pro's reused copy:
+  github-q222-finite-sdp/extracted-lifts/canonical-completion/
+    ramified-completion/data/ramified_order49_pencil.json
+SHA256:
+  5428ca18e35f2d2468c2560eba3109cf26b6c98edc1dcca9c7a108aef80d7421
+The reused copy has exactly the same bytes.
+Certificate SHA256:
+  109a3fc85661ea18fe4750617b2cdddd2b7d90b1a731b822eb1f4e931aef8135
+
+1. Positive definiteness and storage
+------------------------------------
+The ten four-by-four integer moments are symmetric and agree entrywise
+with all ten printed TeX matrices. Their twenty selector-overlap equations
+are exact. The own checker forms the four integer Hankel blocks of orders
+12,8,12,8 and performs fresh rational Schur elimination. All pivots are
+strictly positive; it does not use the supplied Bareiss routine or supplied
+pivot factors. The floors of the smallest pivots are exactly
+  794, 12397, 67408, 1527738.
+The full dual has these four blocks at offsets 9,21,29,41 and zeros in
+the first nine scalar source-sign positions.
+
+The public file uses UPPER-TRIANGULAR COO, so each off-diagonal entry
+contributes twice to the trace pairing. The own checker uses that actual
+convention, verifies all block offsets, and checks the source-sign rows
+explicitly. The first nine source matrices have their own scalar diagonal
+one; no auxiliary has any coefficient in those scalar positions. The
+certificate's nine zero dual sign weights are PSD and legitimate. No
+nonnegativity assumption or sign block is omitted.
+
+2. Full adjoint contraction
+---------------------------
+All 148 auxiliary contractions vanish exactly. The nine source
+contractions equal 12 times the integer functional
+  ell=(-97633735551856,24154193783510329,85793705264,
+       1787034292680750290,3303160925893294,16956553777510394,
+       13682527570574,670221724556174,366431361010),
+in order (d,lambda,n,m,C,A,D,alpha,beta).
+
+At the strictly positive source
+  cdagger=(1,1/576,161,2^-24,2^-34,2^-14,1/2,1/250,76),
+the exact value is
+  ell(cdagger)=-32607070960447356138172589/9663676416000 < 0.
+The normalized trace certificate, dividing the integer Hankel matrices
+by den=15*2^60, has value
+  -32607070960447356138172589/13926825441960528092615147520000.
+The scale is 12/den, exactly as reported in the package.
+
+At the boundary source pi(cstar), read from the unchanged published
+rational physical source and permuted in the stated order, one obtains
+  ell(pi(cstar))=
+   -4844338143654932884745484309348314410/802811514300974151343419 < 0.
+Its C and A coordinates are zero and all coordinates are nonnegative.
+Thus both sources satisfy the scalar source-sign constraints, while the
+four nonnegative PSD pairings would have a strictly negative sum. This
+proves exact infeasibility directly; no dual attainment or closure theorem
+is required.
+
+3. Validity transport and its retained assumptions
+-------------------------------------------------
+As requested, the already checked old cbar/cstar validity proof was not
+repeated. The new transport is consistent with the full parent, rather
+than an arbitrary permutation of source coordinates. Under
+  (u,v;W,X,Y,Z) -> (-1/v,-1/u;W,Y,X,Z)
+and clearing u^2 v^2, the event packets permute as
+  lambda <-> C, n <-> A, alpha <-> beta,
+with m,D fixed (their individual roots change sign). The negative core
+term is invariant, and the three positive d terms permute or stay fixed.
+Hence d is unchanged and the full polynomial source identity holds.
+Homogenizing the angles gives the global substitutions
+  a -> (b1,-b0), b -> (a1,-a0), psi -> (W,Y,X,Z),
+without division. Axes, projective endpoints and all state signs are
+therefore included. Thus canonical validity is invariant under
+  pi=(0,4,5,3,1,2,6,8,7).
+The own checker verifies cdagger=pi(cbar), the exact transported boundary
+source, and cdagger>=pi(cstar) coordinatewise with d unchanged. Positivity
+of cdagger follows from its displayed rational coordinates. On the
+established validity inputs, both excluded sources are physically valid.
+
+4. Slightly stronger scope: all polynomial degrees in the same s
+----------------------------------------------------------------
+There is an immediate extension beyond failure of a degree-four search.
+If a polynomial selector J(s) of ANY degree made G_J(s),H_J(s) PSD for
+all s>=0, every entry would obey the principal-minor bound
+  |J_ij(s)|^2 <= (P+K)_ii(16s^2)(N+K)_jj(16s^2)=O(s^8).
+The diagonal source blocks have degree at most four in s, so each
+polynomial J_ij must have degree at most four. Half-line matrix-SOS
+factorization of that quartic gives precisely the order-49 Gram form
+with features (I,sI,s^2I) and sqrt(s)(I,sI), including singular cases.
+Therefore this exact counterexample excludes EVERY polynomial selector
+in the same coordinate s=sqrt(v)/4. Increasing its polynomial degree
+cannot repair it. This argument is an analytical consequence of the
+verified certificate, not a separate numerical test.
+
+The result does not exclude rational selectors, finer algebraic
+ramifications, Alice-dependent feature enlargements, or the qualitative
+existence theorem. It does not prove that any particular new feature is
+the unique necessary repair. Global order-392 strictness follows only
+when combined with the separately established polar assembly theorem;
+that geometric theorem was not re-audited in this task.
+
+Files and reproduction
+----------------------
+  check_ramified_obstruction.py
+  ramified_obstruction_checks.json
+Run `python check_ramified_obstruction.py`. The checker uses only the
+standard library and exact fractions. Runtime was below 0.2 s. No solver,
+floating-point calculation, source sweep, old validity re-audit, or
+modification of supplied/public files was performed.

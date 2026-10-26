@@ -1,0 +1,416 @@
+\section{The exact existence statement}
+
+The set is the full finite-dimensional bipartite tensor-product quantum
+set in the coordinates
+\[
+ q=(a_0,a_1,b_0,b_1,E_{00},E_{01},E_{10},E_{11})\in\R^8.
+\]
+Writing outcomes as \(a,b\in\{-1,1\}\), its probabilities are
+\[
+ p(a,b\mid x,y)=\frac{1+a\,a_x+b\,b_y+ab\,E_{xy}}4.
+\]
+Let \(P\) be the cone of affine functions nonnegative on \(\Q\).
+For a real closed extension \(K\supseteq\R\), a subscript \(K\) means
+base extension of the fixed semialgebraic description.
+
+For arbitrary separately labelled real closed extensions \(K_c,K_t\),
+put
+\[
+ \T=K_c\otimes_{\R}K_t,\qquad
+ [f,q]=f_0\otimes1+\sum_{\nu=1}^{8}f_\nu\otimes q_\nu.
+\]
+The source coefficients belong to \(K_c\); the independent testing point
+belongs to \(K_t\). These are not Alice/Bob labels. The factors may be
+two labelled copies of the same field. No ordering, field property, or
+algebraic-disjointness property is assumed for \(\T\).
+
+The October manuscript's universal claim is
+\begin{equation}
+ \boxed{\ 
+ [f,q]\in\Sigma(K_c\otimes_{\R}K_t)^2
+ \quad\text{for every }K_c,K_t,\ f\in P_{K_c},\ q\in(\Q)_{K_t}.
+ \ }
+ \label{eq:universal}
+\end{equation}
+Every certificate is finite. A common number of roots and a rank-two
+bound are not part of this qualitative statement.
+
+Scheiderer's Corollary 3.19 characterizes closed convex semialgebraic
+spectrahedral shadows by this tensor-SOS condition for two copies of
+every real closed extension. Its ambient dimension is arbitrary; the
+planar main theorem in the paper's title has a different scope.
+Thus \eqref{eq:universal}, with the finite physical model below, gives
+finite \(N,m\) and real symmetric matrices satisfying
+\begin{equation}
+ \boxed{\ 
+ \Q=\left\{q:\exists y\in\R^m,\quad
+ A_0+\sum_{\nu=1}^{8}q_\nu A_\nu+
+       \sum_{j=1}^{m}y_jB_j\succeq0\right\}.
+ \ }
+ \label{eq:lift}
+\end{equation}
+The same paper's Theorem 3.10 adds a uniform bound on tensor-root rank
+and controls semidefinite block size. That is the stronger criterion
+used by the August route. \src{S1}
+
+The external implication is correct. The Q222-specific burden is the
+universal hypothesis, not evaluating the eventual matrices.
+Conversely, ordinary scalar nonnegativity alone does not supply that
+hypothesis.
+
+\section{The finite physical model}
+
+Put \(\mathcal Z=S^1\times S^1\times S^3\).
+For \(z=((c_A,s_A),(c_B,s_B),\psi)\), let \(\Phi(z)\) be the eight
+expectations in a real unit state \(\psi\in\R^4\), using
+\[
+ A_0=B_0=Z,\quad A_1=c_AZ+s_AX,\quad B_1=c_BZ+s_BX,
+\]
+\[
+ Z=\begin{pmatrix}1&0\\0&-1\end{pmatrix},\qquad
+ X=\begin{pmatrix}0&1\\1&0\end{pmatrix}.
+\]
+
+\begin{proposition}[Exact real-qubit reduction]
+\[
+ \Q=\operatorname{conv}\Phi(\mathcal Z)
+ =\left\{\sum_{i=1}^{9}w_i\Phi(z_i):
+ z_i\in\mathcal Z,\ w_i\ge0,\ \sum_iw_i=1\right\}.
+\]
+Consequently \(\Q\) is compact, convex and semialgebraic.
+\end{proposition}
+
+\begin{proof}
+A binary observable is a Hermitian contraction \(A\), with involutive
+dilation
+\[
+ \widehat A=
+ \begin{pmatrix}A&\sqrt{I-A^2}\\
+ \sqrt{I-A^2}&-A\end{pmatrix}.
+\]
+The same embedding \(h\mapsto(h,0)\) works for both local settings.
+Applying both local embeddings preserves joint expectations.
+
+For two involutions \(U,V\), \(C=UV\) is unitary and \(UCU=C^*\).
+Pairing conjugate eigenspaces gives invariant blocks of dimension two;
+real eigenvalues give one-dimensional blocks. Local basis changes put
+each nontrivial pair into the real form above. One-dimensional
+strategies are represented on common eigenvectors with commuting
+measurement choices.
+
+Block-diagonal measurements retain only the diagonal state blocks,
+whose traces are convex weights. A complex pure vector \(x+iy\)
+against a real symmetric observable \(M\) satisfies
+\[
+ (x+iy)^*M(x+iy)=x^TMx+y^TMy.
+\]
+Separate normalization gives real pure-state atoms. Mixed states are
+included by pure-state decomposition. Conversely, finite mixtures are
+realized by local direct sums and a state on matching block pairs.
+
+Carath\'eodory elimination in \(\R^8\) leaves at most nine atoms.
+The displayed parameter space with simplex weights is compact and
+semialgebraic, and the expectation map is polynomial. Its image is
+compact and semialgebraic; direct sums establish convexity.
+\end{proof}
+
+This covers complex and mixed states and arbitrary finite original
+dimensions. The qubit reduction agrees with Masanes's extremal
+realization theorem. \src{RFA; S3}
+The fixed nine-atom formula defines \((\Q)_K\), and
+\[
+ f\in P_K\quad\Longleftrightarrow\quad
+ \forall q\in(\Q)_K,\ f(q)\ge0
+\]
+is a first-order ordered-field formula. Transfer does not assert
+order-topological compactness of a non-Archimedean field.
+
+\section{The algebra that makes the proof computer-free}
+
+\subsection{Why the two tensor factors must remain separate}
+
+In a real closure \(K\) of \(\R(t)\), ordered with \(t>0\)
+infinitesimal, the tensor
+\(\Delta=t\otimes1-1\otimes t\) is nonzero, although multiplication
+sends it to zero. Extend \(d/dt\) to the algebraic extension and apply
+\(a\otimes b\mapsto a\,db/dt\); the image is \(-1\).
+
+A mixed tensor with positive residue need not be a unit.
+For example \(1+\Delta^2\) is not invertible in \(K\otimes_\R K\).
+Embed the second copy of \(\R(t)\) into \(K(i)\) by \(t\mapsto t+i\),
+and extend to an embedding of its algebraic real closure. The induced
+homomorphism sends \(\Delta\) to \(-i\), so it sends \(1+\Delta^2\)
+to zero. A unit cannot have zero image in a field.
+
+Thus a source-field Schur complement can prove source geometry without
+automatically authorizing the same inverse in the tensor ring.
+The proof needs pure-factor operations or exact finite tensor identities.
+\src{TF}
+
+\subsection{Legal restoration, matrix pairing and mixture identities}
+
+For \(s>0\) in \(K_c\) and \(t>0\) in \(K_t\),
+\[
+ (s\otimes t)F\in\sos\quad\Longleftrightarrow\quad F\in\sos,
+\]
+because the multiplier is the invertible square
+\((\sqrt s\otimes\sqrt t)^2\).
+
+If \(X=BB^T\) over \(K_c\), \(Y=CC^T\) over \(K_t\), then
+\begin{equation}
+ \sum_{i,j}X_{ij}\otimes Y_{ij}
+ =\sum_{a,b}\left(\sum_iB_{ia}\otimes C_{ib}\right)^2.
+ \label{eq:pair}
+\end{equation}
+Singular PSD matrices are allowed.
+
+For nonnegative source weights \(a_j\) and testing weights \(w_i\)
+with \(\sum_iw_i=1\), write \(f=\sum_ja_jf_j\), \(q=\sum_iw_iq_i\).
+If \([f_j,q_i]=\sum_k h_{ijk}^2\), then
+\begin{equation}
+ [f,q]=\sum_{i,j,k}
+ \left((\sqrt{a_j}\otimes\sqrt{w_i})h_{ijk}\right)^2.
+ \label{eq:mixture}
+\end{equation}
+This is finite linearity in \(f\) and affineness in \(q\).
+The testing-weight sum preserves the affine constant. Zero weights
+are never inverted. \src{O, FA10--FA12}
+
+\subsection{Positive residue gives an exact tensor SOS}
+
+Let \(\mathcal O_c,\mathcal O_t\) be the rings of elements bounded by
+real constants and set \(\mathcal B=\mathcal O_c\otimes_\R\mathcal O_t\).
+Their standard-part maps induce a real residue map on \(\mathcal B\).
+
+\begin{lemma}[Positive residue]
+Every \(a\in\mathcal B\) with \(\res(a)>0\) is a finite sum of
+positive pure tensors, hence an SOS with rank-one roots.
+\end{lemma}
+
+\begin{proof}
+Expand bounded factors around their real residues:
+\[
+ a=\epsilon+\sum_{j=1}^{N}x_j\otimes y_j,\qquad\epsilon>0,
+\]
+where each term has an infinitesimal factor. Split
+\(\epsilon=\sum_j\epsilon_j\) into positive real reserves.
+If \(x_j\) is infinitesimal, choose real \(M_j>|y_j|\). Exactly,
+\[
+ \epsilon_j+x_j\otimes y_j
+ =\frac12\left[
+ (\epsilon_j/M_j+x_j)\otimes(M_j+y_j)
+ +(\epsilon_j/M_j-x_j)\otimes(M_j-y_j)\right].
+\]
+All four factors are positive in their own fields, so take their
+separate square roots. Exchange factors when the infinitesimal is
+\(y_j\). The case \(N=0\) is immediate.
+\end{proof}
+
+\begin{lemma}[Strict bounded Gram]
+If \(H\in\operatorname{Sym}_r(\mathcal B)\) has positive-definite real
+residue, then \(v^THv\in\sos\) for every \(v\in\T^r\).
+The rows \(v_i\) need not be bounded.
+\end{lemma}
+
+\begin{proof}
+A real congruence makes the residue \(I\). Choose real \(\delta>0\)
+with \((r-1)\delta<1\). The exact identity is
+\[
+\begin{aligned}
+ H={}&\sum_i[H_{ii}-(r-1)\delta]e_ie_i^T\\
+ &+\sum_{i<j}\frac{\delta+H_{ij}}2(e_i+e_j)(e_i+e_j)^T\\
+ &+\sum_{i<j}\frac{\delta-H_{ij}}2(e_i-e_j)(e_i-e_j)^T.
+\end{aligned}
+\]
+Every scalar coefficient has positive real residue. Apply the preceding
+lemma and evaluate on \(v\).
+\end{proof}
+
+There is no infinite expansion or mixed square root. The hard application
+step is producing an exact full-parent Gram with bounded coefficients
+and \emph{strict} real residue. Positive infinitesimal eigenvalues do
+not meet the latter condition. \src{G}
+
+\subsection{Regular contact and the additional rank-two condition}
+
+If a real polynomial \(F(s,t)\) satisfies
+\(F(s,s)=0\) and \(\partial_tF(s,s)=0\), then polynomial expansion in
+\(h=t-s\) gives exactly
+\[
+ F(s,t)=(t-s)^TH(s,t)(t-s),\qquad
+ H(p,p)=\tfrac12\partial_t^2F(p,p).
+\]
+No higher term is discarded. When independent source and test points
+specialize to \(p\) and \(H(p,p)\succ0\), strict Gram applies.
+
+For a smooth affine variety, the analogous statement uses an exact
+tensor in the square of the diagonal ideal and a positive intrinsic
+quadratic class. Actual separate lifts to a common valid chart are
+needed. Scheiderer's diagonal lemma supplies this mechanism under its
+precise hypotheses. \src{TF; S2}
+
+Every real linear combination of genuine divided differences
+\(f_i(s)\otimes1-1\otimes f_i(t)\) is again one divided difference,
+so has rank at most two. Multiplication by rank-one coefficient roots
+preserves this bound. Arbitrary rows that individually have rank two
+need not have a real span consisting of rank-two tensors.
+The October qualitative route requires finite root rank, not the
+additional uniform bound two.
+
+\section{The exact source funnel}
+
+For a fixed CHSH orientation,
+\[
+ H=1-\tfrac12(E_{00}-E_{01}+E_{10}+E_{11}),\qquad
+ f=dH+4\sum_\xi \xi p_\xi,
+\]
+with eight nonnegative event coefficients
+\(\xi=\lambda,n,m,C,A,D,\alpha,\beta\).
+For \(D_u=1+u^2\), \(D_v=1+v^2\), and state \((W,X,Y,Z)\), the
+complete parent is
+\begin{align}
+F={}&4\lambda D_u(W+vX)^2+4nD_uD_vX^2
+ +4m(vW-X+uvY-uZ)^2 \notag\\
+ &+4CD_v(uW-Y)^2+4AD_uD_vY^2 \notag\\
+ &+(4D+2d)(uW+uvX-Y-vZ)^2 \notag\\
+ &+(4\alpha+2d)D_u(vY-Z)^2
+ +(4\beta+2d)D_v(X+uZ)^2-2dD_uD_vZ^2.
+ \label{eq:parent}
+\end{align}
+Coefficient and testing expressions occupy separate factors.
+A scalar restriction of \eqref{eq:parent} cannot replace a certificate
+for the entire state form.
+
+For homogeneous measurement pairs, with
+\(\Delta_A=a_0^2+a_1^2>0\), \(\Delta_B=b_0^2+b_1^2>0\),
+\[
+ \mathcal F=(1\otimes\Delta_A\Delta_B\|\psi\|^2)[f,\Phi(z)].
+\]
+The factor is pure testing and positive for a nonzero state.
+The homogeneous identity includes literal endpoints without dividing
+by a vanished affine coordinate. \src{O, FA4--FA6; RFA}
+
+\subsection{Reduction to events, closed faces and two contact families}
+
+A valid affine functional either is nonnegative on the nonsignaling
+polytope and is a nonnegative event sum, or is negative at a PR vertex.
+That PR vertex and its eight neighboring deterministic vertices form
+an affine evaluation basis, giving the canonical coefficient
+representation above.
+
+For \(d>0\), the signed \(Z=0\) restriction is
+\[
+ 2d\{(uW+uvX-Y)^2+D_uv^2Y^2+D_vX^2\}\succ0
+ \quad(uv\ne0).
+\]
+Thus the three-state principal block is positive definite.
+The full state determinant is
+\[
+ \det P=16D_u^2D_v^2u^2v^2L(U,V),\qquad U=u^2,\ V=v^2,
+\]
+\[
+ L(U,V)=h+\sum_{e\in\{-1,0,1\}^2\setminus\{0\}}
+ q_eU^{e_1}V^{e_2},\qquad q_e\ge0.
+\]
+The source body prints all eight nonnegative factorizations.
+At a positive stationary contact,
+\(a_e=q_eU_c^{e_1}V_c^{e_2}\) obey
+\[
+ h=-\sum_ea_e,\qquad \sum_ea_ee=0,\qquad
+ \mathcal H_L=\sum_ea_eee^T.
+\]
+Rank-zero and rank-one support possibilities are excluded by explicit
+event-incidence arguments and negative physical tests. This gives
+coercivity and strict \emph{single-field} curvature at every actual
+finite zero.
+
+Conversely, nonnegative coefficients, a finite kernel state and both
+angle jets zero imply physicality: the convex logarithmic Laurent
+profile has a global minimum there. Logarithms are used over \(\R\);
+the resulting finite ordered-field implication transfers. None of this
+inverts a tensor or promotes a source-field Hessian to strict residue.
+\src{SE1--SE10}
+
+Normalize the coefficient sum to one over \(\R\).
+A coercive extreme source cannot have a strictly positive Laurent
+minimum, since small opposite coefficient perturbations preserve
+positivity. Thus it has a finite contact.
+There are four kernel equations and two angle equations, linear in
+the nine coefficients. Seven or eight positive events would permit a
+nonradial sign-preserving perturbation retaining all six equations,
+contradicting extremality. Hence five or six events are positive.
+
+The compatible omission patterns reduce by actual Bell symmetries to
+\[
+\begin{array}{ll}
+\mathrm{C1}:&
+ d,m,C,A,\alpha>0,\quad\lambda=n=0,\quad
+ D,\beta\ge0,\quad D+\beta>0,\\
+\mathrm{C2}:&
+ d,m,C,A,D,\alpha>0,\quad\lambda=\beta=0,\quad n\ge0.
+\end{array}
+\]
+Incompatible omissions enter two closed-face types.
+The compact normalized real source base has affine dimension at most
+eight, so nine extreme sources suffice. This fixed finite assertion
+then transfers to every source field. \src{SE11--SE15}
+
+\subsection{The closed faces have explicit lifts}
+
+For a symmetric quadratic matrix polynomial \(K(t)=K_0+tK_1+t^2K_2\),
+the retained argument proves
+\[
+ K(t)\succeq0\ \forall t
+ \ \Longleftrightarrow\
+ \exists S=-S^T:\quad
+ \begin{pmatrix}K_0&K_1/2+S\\K_1/2-S&K_2\end{pmatrix}\succeq0.
+\]
+The proof uses a closed Gram cone, a finite matrix-moment decomposition
+and separation, including singular cases.
+It yields one \(6\times6\) block for \(\lambda=m=0\), and two
+\(3\times3\) blocks for \(\lambda=\alpha=0\).
+
+Both have displayed strictly feasible points. Strict feasibility bounds
+the trace of PSD witnesses when their adjoint images stay bounded, so
+the adjoint image is closed and the evaluation witness is attained.
+The finite witness statement transfers to the testing field, and
+\eqref{eq:pair} gives tensor squares. This is an actual analytical
+closed-face input. \src{CF1--CF11; RFA}
+
+\section{Finite closure and existence}
+
+The remaining local proposition must certify the complete parent for
+every actual physical C1/C2 source, every independent projective test,
+every state, all allowed literal zero coefficients and all positive
+openings. The initial scale
+\[
+ \delta_{\rm tot}=
+ \frac{d}{d+\lambda+n+m+C+A+D+\alpha+\beta}
+\]
+is split before a \(d=1\) gauge. Positive-unit and positive-infinitesimal
+total scale are distinct cases; \(d=1\) does not itself imply bounded
+event coefficients.
+
+Assuming this full local proposition, each event source has a direct
+projector certificate, each closed-face source uses matrix pairing,
+and each C1/C2 source uses its local parent identity.
+If \((s\otimes1)\mathcal F=\sum_kh_k^2\), \(s>0\), restoration gives
+\[
+ [f,\Phi(z)]=
+ \sum_k\left[
+ \left(s^{-1/2}\otimes
+       (\Delta_A\Delta_B\|\psi\|^2)^{-1/2}\right)h_k
+ \right]^2.
+\]
+All inverses are pure field operations.
+The finite source decomposition and nine-atom testing decomposition,
+combined with \eqref{eq:mixture}, give \eqref{eq:universal}.
+Taking two copies of one arbitrary real closed field then yields
+\eqref{eq:lift}. \src{O; LC9--LC10}
+
+This final implication is sound with those hypotheses.
+E1--E3 ask for an evaluated common feature list, a concrete affine
+pencil and projection, and both-inclusion validation of its data.
+They are downstream constructive outputs, not extra hypotheses of
+the qualitative criterion.
+

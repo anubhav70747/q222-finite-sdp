@@ -1,0 +1,66 @@
+>>> Q222_R6_R7_source_exact_audit.py
+PASS Delta polynomial
+Delta degree 11
+PASS F0 numerator
+PASS AN numerator
+UF terms 27 deg 19 b0 Poly(0, s, domain='ZZ') s0 Poly((h + t)*b, b, domain='ZZ[t,h]')
+UN terms 14 deg 13 b0 Poly(0, s, domain='ZZ') s0 Poly(0, b, domain='ZZ')
+res mg 1/2
+res C -(h + t)/(2*(h - 1))
+res Ah t/2
+res beD 1/(2*t)
+res alsc (h + t)/2
+TAYLOR C [-(h + t)/(2*(h - 1)), s*(t + 1)/(2*(h - 1)), -s**2*(t + 1)/(2*(h - 1))]
+TAYLOR Ah [t/2, -s*t/2, s**2*t/2]
+TAYLOR beD [1/(2*t), -s/(2*t), s*(-b*t - b + s)/(2*t)]
+TAYLOR n1 [0, s/2, -s*(b*h + b*t + s)/2]
+PASS true native n
+PASS true native mg
+PASS true native C
+PASS true native Ah
+PASS true native DjR/T
+PASS true native alpha
+UNIT-b jet mg constant 1/2 s-derivative (b*h - 1)/2
+UNIT-b jet C constant -(h + t)/(2*(h - 1)) s-derivative (t + 1)/(2*(h - 1))
+UNIT-b jet A constant t/(2*h) s-derivative -t/(2*h)
+UNIT-b jet D constant 1/(2*(h + t - 1)) s-derivative -(b*h*t + b*t**2 + h + t - 1)/(2*(h + t - 1)**2)
+>>> Q222_R6R7_full_parent_readback_audit.py
+PASS R6 scalar five packet identity
+PASS R6 first N normal
+PASS R6 first MB normal
+PASS R6 hard NN
+PASS R6 hard NM
+PASS R6 hard MM
+PASS R7 scalar five packet identity
+PASS R7 first N normal
+PASS R7 first MB normal
+PASS R7 hard NN
+PASS R7 hard NM
+PASS R7 hard MM
+>>> Q222_R6R7_R34_identity_audit.py
+PASS 3.1.a
+PASS 3.1.b
+PASS 3.1.c
+PASS 3.1.d
+PASS 3.3
+PASS 3.4 circuit with two product squares
+PASS RFN12 circuit
+PASS RFN19 7+3 matrix identity
+G7 principal minors: [4, 8, 101/4, 1049/16, 907/16, 3279/16, 743/16]
+G3 principal minors: [3, 2, 2]
+PASS RFN20
+>>> Q222_R34_short_balance_audit.py
+S0 reduced polynomial coefficients 1
+PASS R34 S0 by short polynomial identity
+S2 reduced polynomial coefficients 1
+PASS R34 S2 by pure source polynomial identity
+SN reduced polynomial coefficients 1
+PASS R34 SN by pure source polynomial identity
+>>> Q222_R34_full_parent_readback_audit.py
+PASS full R3/R4 original parent identity (9)
+PASS HN
+PASS HM
+PASS HNM
+Dln with factor 1 zero True
+Dlm with factor 1 zero True
+ALL FIVE EXACT AUDITS PASSED

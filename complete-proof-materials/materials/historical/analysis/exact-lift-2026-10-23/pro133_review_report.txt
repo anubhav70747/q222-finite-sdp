@@ -1,0 +1,89 @@
+Pro order-133 package: bounded code, reproduction and scope review
+23 October 2026
+
+Package reviewed:
+pro133/Q222_Global_Weighted_Certificate
+No public files or supplied-package files were edited. Execution used
+the separate private copy pro133_review_run. Archive integrity is the
+parent's separate check.
+
+CODE AUDIT BEFORE EXECUTION
+Read reproduce.py and all seven scripts it can invoke, including both
+optional compilers and both bridge checkers. Imports are standard Python
+libraries and SymPy; no archive Python module is imported indirectly.
+The only subprocess calls are fixed script paths launched with the same
+Python executable, with no shell. No network, solver, deletion, registry,
+credential or external-service operation was found. Writes are local JSON
+outputs. The one use of __import__ names the fixed standard itertools
+module. JSON strings sent to sympify are the inspected eight mathematical
+row vectors; numeric array data contain no executable expressions.
+Installed runtime: Python3.14.3,SymPy1.14.0, matching the stated dependency.
+
+REPRODUCTION
+Executed py -3.14 reproduce.py --rebuild in pro133_review_run; exit0.
+The transcript is pro133_review_run/review_reproduction.log.
+All new stages completed: circuit/root-sign/adjugate checks, full exact
+determinant, rebuilt fixed family, rebuilt pencil and quartic map, all535
+product identities, full symbolic source identity for all10 state-matrix
+coefficients, and the two bridge checkers. The old669 matrix was only
+hash-checked; no old compilation was run. No floating-point solver used.
+
+REPRODUCED COUNTS
+189 indexed functions,48 zero polynomial indices;141 nonzero indexed
+functions and128 distinct nonzero normal forms;104 independent functions
+(83 polynomial,21 angular).
+27 PSD blocks:22 of order4,four of order6,one of order21; total order133.
+535 upper-triangular Gram coordinates;261 coefficient rows;rank189;
+72 redundant coefficient equations;346 free Gram directions.
+Product matrix261x535 with5653 nonzero integer entries.
+Pencil6079 upper-triangle rational coefficient records.
+Quartic source map189 outputs from9 canonical source coefficients,
+7472 nonzero homogeneous-degree4 monomial records.
+
+INDEPENDENT HIGH-RISK CONVENTION CHECKS
+Used a separate script importing no archive code:
+pro133_independent_spots.py, result pro133_review_run/independent_spot_results.json.
+Reconstructed an off-diagonal product column from each of all27 blocks
+using the six original cover equations. All27 agree, including factor2.
+Decoded COO entries as(variable,row,column,numerator,denominator) and
+independently checked pencil reconstruction columns0,94,188 and kernel
+columns189,362,534. Thus the upper-triangle and free-variable conventions
+agree with the product equations.
+Evaluated the quartic map at a new source tuple(3,2,4,1,5,0,6,7,8) and
+two new exact angle fixtures, including a projective endpoint and signs.
+Both complete4x4 matrices equal(det H)P exactly. All7472 source terms
+were independently checked to have degree4.
+
+All four rebuilt scientific JSON files are identical to the supplied
+files after CRLF-to-LF normalization, and parse to identical JSON.
+They are not byte-identical on Windows: Path.write_text translated the
+originalLF line endings toCRLF. This is a serialization portability detail,
+not a mathematical-data discrepancy. Original archive files remain intact.
+
+MATHEMATICAL SCOPE
+Read the seven-page global_weighted_certificate.tex and checked its main
+mechanisms. The inverse-free completion is the polynomial identity
+ det(H)F=sum_{i<j}kappa_i kappa_j(sum_k kappa_k f_ijk)^2+det(P)Z^2.
+The angular proof includes noncoercive faces by taking the minimal active
+face containing0, then balancing its12 primitive circuits. Source-only
+Gram coefficients and the sixth-root testing cover are kept separate.
+Root-sign parity and polynomial homogenization include zero openings.
+No state-sphere reduction is needed because every product is homogeneous
+quadratic in the state. The converse uses det(H)>0 on the dense
+noncommuting set when d>0; d=0 is already an event SOS.
+
+The pencil is exact for its structured weighted polynomial-coefficient
+cone. Canonical validity is its QUARTIC pullback. Its189 visible variables
+are polynomial coefficients, not the8 quantum expectations or the9 Bell
+source coefficients. Hence neither this matrix nor free quartic monomials
+constitute an affine full-Q222 lift. The exact-whitening obstruction only
+rules out a fixed finite family of exact inverse factors, not other
+unmultiplied certificates. The note states these limitations correctly.
+
+VERDICT
+No blocker found in this bounded code/reproduction/convention review.
+Scientific data reproduce exactly modulo Windows line endings, and the
+claimed counts and quartic scope agree with the evaluated data. The bridge
+scripts also ran successfully; their complete analytical source-domain
+proofs were not independently reaudited here. This is not blanket
+certification of the inherited348-page proof or an affine global lift.

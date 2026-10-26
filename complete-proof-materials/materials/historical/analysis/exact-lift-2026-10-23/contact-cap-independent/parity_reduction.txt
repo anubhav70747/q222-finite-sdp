@@ -1,0 +1,40 @@
+Equivalent elimination of mixed radical terms
+24 October 2026
+
+The coefficient algebra has the independent square classes u, v and
+w*zeta. Let the eight sign automorphisms change the signs of their three
+formal square roots independently. Every prescribed feature has one
+character under this finite group. The target polynomial and every signed
+gate are fixed by the group.
+
+If G is a feasible positive semidefinite Gram matrix, conjugate G by the
+diagonal feature-character matrix for each automorphism and average the
+eight matrices. Positivity is preserved. Applying the same automorphism
+to the polynomial identity shows that every conjugate is feasible.
+Orthogonality of the characters removes precisely those entries joining
+different characters. Conversely, a matrix with these entries zero is
+already an allowed original Gram matrix. Thus the projected source cones
+are exactly equal. This argument is algebraic: it does not require giving
+a negative value to a principal physical square root.
+
+All strong features have trivial character. The weak base partitions into
+index groups 1--26, 27--28, 29--32, 33--34. Each gated weak principal list
+partitions into its first14 and last2 entries. Hence the new block orders
+are20, 26 copies of11, then26,2,4,2, then16 pairs14,2. There are63 blocks,
+of total order596, or605 including the9 source signs.
+
+Exact filtering of the independently reconstructed coefficient arrays
+gives4021 symmetric Gram variables,619 polynomial coefficient equations,
+20610 Gram records and120 source records. All nontrivial-character source
+rows are absent. Every dropped Gram record belongs to a cross-character
+column, and every retained one belongs to a same-character column; the
+script checks both implications for every record.
+
+This reduces4697 variables and948 equations without changing the cone.
+Adding the preserved remote matrices still gives total order635 and4024
+auxiliaries. It does not establish source admission beyond the original
+construction. In particular, no universal canonical coverage follows.
+
+Reproduction: run reduce_parity.py after reconstruct.py.
+The public/source witness need not be modified: averaging its matrices
+constructs the reduced witness directly.

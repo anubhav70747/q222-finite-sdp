@@ -1,0 +1,125 @@
+\subsection{Unit \texorpdfstring{$L$}{L} and unbounded \texorpdfstring{$\eta$}{eta}: all testing angles}
+\label{component:pb0d9d28d0849}
+\label{component:pda4a21937f64}
+
+\begin{theorem}\label{thm:c1-unit-L-all-tests}
+Keep the native C1 source with $d=1$, $x,\sigma=1/\eta$ positive
+infinitesimal, $L=x\zeta$ a positive bounded unit, and all original
+strict gaps and nonnegative event coefficients. The complete parent
+is a tensor sum of squares at every independent projective angle pair
+and every real or complex state, including either permitted face
+$D=0$ or $\beta=0$.
+\end{theorem}
+\begin{proof}
+The source formulas (P1) and opening-safe estimates (BE3)--(BE9) give
+\[
+ C/C_0,A/A_0,\alpha/a_0\sim1,\qquad
+ C_0=\frac1{2L(1-r)},\quad
+ A_0=\frac{1+L(1-r)}{2Lr},\quad
+ a_0=\frac L{2(1-Lr)}.
+\]
+Choose real $0<\ell\le L\le U$ and a real
+$0<\mu\le\min(1/4,C,A)$. Such a $\mu$ exists uniformly through
+the source openings because $C_0,A_0\ge1/(2U)$.
+
+First let $u$ be bounded. Put
+$c=(1+v^2)^{-1/2}$, $s=vc$, $P=uW$, $T=cZ$.
+When $u,c$ are both infinitesimal, $w=1/v$ is infinitesimal and
+Theorem~\ref{thm:c1-unification-bounded-z-all-H} applies, since
+$z=1/L$ is bounded. This includes the literal corner.
+Otherwise put $(u_0,c_0,s_0)=\operatorname{res}(u,c,s)$ and choose
+real $M\ge1$, $\tau>0$ with $|u_0|\le M$ and
+$u_0^2+c_0^2\ge\tau^2$. The next reserve calculation is evaluated
+at this real testing center, so its matrices are pure source.
+
+The leading selected quarter-parent in the four raw roots $(P,X,Y,T)$ is
+\[
+ S_0=C_0(P-Y)^2+A_0(1+u^2)Y^2
+                   +a_0(1+u^2)(sY-T)^2+K_B/2,
+\]
+\[
+ K_B=X^2+c^2(P-Y)^2+s^2Y^2-2sPT
+ +2ucX(sP-sY+T)+u^2s^2X^2+u^2(sY-T)^2.
+\]
+Its $T=0$ block is strictly positive. Its determinant is
+\[
+ \det G_0=\frac{(1+u^2)^2(Lc^2+u^2s^2)
+                 \{1+L(1-r)\}^2}{16L^2r(1-r)(1-Lr)}>0.
+\]
+All source-opening denominators cancel from the cofactor ratio:
+\[
+ \operatorname{tr}G_0^{-1}
+ =\frac{2(L^2N_2+LN_1+N_0)}
+ {(1+t)\{Lq+t(1-q)\}\{1+L(1-r)\}},\quad t=u^2,\ q=c^2,
+\]
+where, writing $e_r=1-r$,
+\begin{align*}
+ N_2&=1+r^2+e_rq\{1+r(1-q)\}+e_r(2-qr)t+e_r^2(1-q)t^2,\\
+ N_1&=2e_rq+\{2-rq(3-q)\}t+e_r(1-q)t^2,\qquad
+ N_0=1+(2-q)t.
+\end{align*}
+The numerator is bounded by a real constant depending only on $U,M$.
+Moreover $(1+t)\{Lq+t(1-q)\}\ge\min(\ell,1)(q+t)$.
+Thus $G_0\succeq\kappa I$ for some real $\kappa>0$, uniformly
+through every source opening.
+
+Set $d_s=|C/C_0-1|+|A/A_0-1|+|\alpha/a_0-1|$ and $f=1-d_s$.
+Retain the exact original event excesses $C-fC_0,A-fA_0,\alpha-fa_0$.
+The remaining actual form is exactly $fS_0+(1-f)K_B/2$.
+The core at the real center has bounded coefficients, whereas $d_s$
+is source infinitesimal. Its actual source Gram therefore has a
+positive real lower bound.
+
+Use the moving event coordinates $e=(P-Y,Y,sY-T,X)$.
+Both coordinate maps have squared Frobenius norm at most six.
+Clip $C,A,\alpha$ at a sufficiently large real $N$, retaining each
+excess as its whole original event. In these coordinates the core
+has norm at most a real $K$, independently of source openings.
+If the unmodified Gram has reserve $k>0$, its complementary block
+remains at least $k$, its clipped large block is at least $N-K$,
+and the off-diagonal norm is at most $K$. Taking
+$N>K+2K^2/k+1$ preserves a positive real reserve, by
+$2Kab\le(2K^2/k)a^2+(k/2)b^2$.
+
+The clipped coefficients are bounded source elements. Its entire
+live Gram, including both state normals, is a polynomial in bounded
+testing $u,c,s$ in the moving coordinates $e$. Replacing its testing
+coefficients by $u_0,c_0,s_0$ changes the Gram by bounded zero-residue
+coefficients. The source matrix at that center has positive-definite
+real residue by the preceding reserve.
+The separated bounded-Gram lemma applies. Restore all clipped
+excesses and the complete original $m,D,\beta$ terms.
+
+It remains to treat unbounded $u$. Put $p=1/u$ and use two Bob charts.
+For $|v|\le1$ take $(W,Y,B,R)$ with $B=pX+Z$, $R=vX$; the exact core is
+\[
+ K_p=B^2-2pvBW-2vBY+(1+p^2)R^2+2(1+p^2)RW
+                         +(W-pY)^2+(1+p^2)v^2Y^2.
+\]
+Select only $C=A=\mu$. At $p=0$ the selected quarter-parent is
+\[
+ \mu(1+v^2)(W^2+Y^2)+\tfrac12(W+R)^2
+                             +\tfrac12(B-vY)^2\succeq(\mu/3)I.
+\]
+For $|w|=|1/v|\le1$ use $(W,Y,X,H)$, $H=wZ$, and the exact core
+\begin{align*}
+ K_{pw}={}&H^2-2pHW+2pwHX-2HY+w^2W^2+2wWX-2pw^2WY\\
+ &+(1+p^2+p^2w^2)(X^2+Y^2)-2pwXY.
+\end{align*}
+The corresponding selected value at $p=0$ is
+\[
+ \mu(1+w^2)(W^2+Y^2)+\tfrac12(X+wW)^2
+                               +\tfrac12(H-Y)^2\succeq(\mu/3)I.
+\]
+In each chart every remaining coefficient is bounded infinitesimal.
+The complete selected testing Gram is therefore positive definite
+and can be factored entirely in the testing field. Restore $C-\mu$,
+$A-\mu$ and all other original nonnegative event terms. The two
+charts cover every Bob angle, including their literal endpoints.
+
+All normalizations are positive pure testing factors. The exact
+sign gauges are $u\mapsto-u$, $(Y,Z)\mapsto(-Y,-Z)$, and
+$v\mapsto-v$, $(X,Z)\mapsto(-X,-Z)$; they preserve the full parent.
+Real and imaginary splitting treats complex states. No source
+coefficient $D$ or $\beta$ was divided by or capped.
+\end{proof}

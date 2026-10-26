@@ -1,0 +1,174 @@
+\chapter{C1 UI: a full-parent remote complement}
+\label{component:p013c226a79b3}
+\noindent\textbf{Component }\path{p013c226a79b3}\par
+{\small\noindent Source: \path{R13/baseline/baseline/advances/c1_ui/remote_complement.tex}\par}
+{\small\noindent SHA256: \path{013c226a79b3a1076d4bf4810beef1da98031c61b23c61804687ce57d17a3d8c}\par}
+{\small\noindent Inventory use: CR1--CR13, including CR5a | C1\_\allowbreak{}BARE\_\allowbreak{}OTHER\_\allowbreak{}TERMINALS; precise subordinate uses retained below\par}
+\medskip
+\section{C1 UI: a full-parent remote complement}
+\label{p013c226a79b3:sec:c1-ui-remote}
+The source has actual ordinary Alice angle and infinitesimal Bob
+angle. Apply the exact native stabilizer (AS5) as in (NI7) and take
+$\eta$ a positive bounded unit, $\zeta=g^2$ infinitesimal and $k$ a
+bounded unit. The reflected orientation need not satisfy $k\le1$.
+Its $E$ remains a positive unit by the exact source entry in (NI7).
+Normalize by the positive pure-source $d$.
+Equations (NC2)--(NC4) give
+\[
+ C/d,\ A/d,\quad g^2m/d,\quad g^2\beta/d,\quad
+ \alpha/(dg^2)\quad\hbox{strong},\qquad D/d\ge0.       \tag{CR1}
+\]
+For example $P_d,P_\alpha,Q,r+\eta$ are units, whereas the
+positive openings $M,t,r,1-r$ are bounded and may be infinitesimal.
+The $-1/2$ in $\beta/d$ disappears after multiplication by $g^2$.
+In this particular source subdomain $\beta=0$ is impossible; $D=0$
+is allowed throughout. Choose positive real constants
+$\mu,\nu,c,a,b$ below the five quantities in (CR1), respectively
+in the order $g^2m/d,g^2\beta/d,C/d,A/d,\alpha/(dg^2)$.
+Whenever needed we cap these coefficients at
+\[
+ m=\mu/g^2,\quad\beta=\nu/g^2,\quad C=c,\quad A=a,
+ \quad\alpha=bg^2.                                  \tag{CR2}
+\]
+Every unused packet, every positive excess, and the complete $D$
+packet is retained as a square. The signed core, divided by two, is
+\[
+ K=J^2+D_u(vY-Z)^2+D_v(X+uZ)^2-D_uD_vZ^2,
+ \quad J=uW+uvX-Y-vZ.                              \tag{CR3}
+\]
+Only the core and the explicitly selected caps need a bounded Gram.
+This observation keeps all upper coefficient scales out of the proof.
+
+\begin{theorem}[C1 UI remote tests]
+For every source satisfying (CR1), the complete original C1 parent
+is tensor SOS at every independent testing pair except possibly
+$u$ a bounded nonzero unit and $v$ infinitesimal. The conclusion
+includes literal projective endpoints, both signs, all states,
+and $D=0$.
+\end{theorem}
+\begin{proof}
+All constants in residue forms below are real residues. Roots may be
+unbounded, but all coefficients in their exact Gram are bounded.
+First put $Q=W+uY$, $B=X+uZ$; then
+\[
+ M=vQ-B,\quad uW-Y=uQ-D_uY,\quad
+ J=uQ-D_uY+uvB-vD_uZ.                               \tag{CR4}
+\]
+These identities account for every state normal.
+
+If $u$ is a bounded unit and $v$ projectively infinite, put $w=1/v$
+and homogenize by $w^2$. Use roots
+$(E_Q,E_B,Y,Z)=(Q/g,B/g,Y,Z)$ and cap only $m,\beta$.
+The exact homogenized core is
+\[
+ [w(ugE_Q-D_uY)+ugE_B-D_uZ]^2
+ +D_u(Y-wZ)^2+D_wg^2E_B^2-D_uD_wZ^2.
+\]
+Its residue is $D_u(Y^2+u^2Z^2)$. Including the two caps gives
+\[
+ 4\mu E_Q^2+4\nu E_B^2+2D_u(Y^2+u^2Z^2)>0.         \tag{CR5}
+\]
+
+If $u$ is infinitesimal and $v$ projectively infinite, the preceding
+four-root frame loses the $Z$ pivot. Keep $w=1/v$ and instead use
+$(E_Q,E_B,Y,U,T)$, where $U=uZ$ and $T=gwZ$. Put
+$A_0=w(ugE_Q-D_uY)+ugE_B$. The exact homogenized core is
+\[
+ K_w=A_0^2+D_uY^2+D_wg^2E_B^2+D_uU^2
+       -2D_ug(wE_Q+E_B)U+2wD_uuYU.
+\]
+All its coefficients are bounded, with residue $Y^2+U^2$.
+Cap $m,\beta,\alpha$; their amplitudes after normalization are
+$E_Q-wE_B$, $E_B$, and $gY-T$, with the positive factors
+$D_w,D_u$ in the last two packets. The full selected residue is
+\[
+ 4\mu E_Q^2+4\nu E_B^2+2Y^2+2U^2+4bT^2>0.       \tag{CR5a}
+\]
+This includes literal $u=0$ or $w=0$; no division by either was used.
+
+If $u$ is infinitesimal and $v$ a bounded unit, use
+$E_Q=Q/g,E_B=B/g,Y,U=uZ,Z_g=gZ$, and cap $m,\beta,\alpha$.
+Substitute $W=gE_Q-uY$, $X=gE_B-uZ$ in (CR3).
+All terms involving $Z$ collect into $uZ$; the resulting exact
+core is a polynomial in $(u,v,g;E_Q,E_B,Y,U)$.
+Its residue is $D_vY^2+v^2U^2$. The full selected residue is
+\[
+ 4\mu(vE_Q-E_B)^2+4\nu D_vE_B^2
+       +2D_vY^2+2v^2U^2+4bZ_g^2>0.                 \tag{CR6}
+\]
+The $\alpha$ amplitude is $gvY-Z_g$, so no inverse of $u$ was used
+in constructing this Gram.
+
+If both $u,v$ are infinitesimal, set
+\[
+ U=uQ,\quad V=vQ/g,\quad E_B=B/g,\quad Z_g=gZ,
+ \quad S=uvZ,
+\]
+and include $Y$ as the sixth root. The exact core is
+\begin{align*}
+K={}&(U-D_uY+uvgE_B)^2+D_uv^2Y^2+D_vg^2E_B^2+D_uS^2\\
+ &+2D_uuYS-2D_uuVZ_g-2D_uvgE_BS.                 \tag{CR7}
+\end{align*}
+In particular the apparently problematic term $UvZ$ is exactly
+$uVZ_g$, with no mixed inverse. Cap all five weights in (CR2).
+The entire selected residue is
+\[
+ 4\mu(V-E_B)^2+4\nu E_B^2+(4c+2)(U-Y)^2
+          +4aY^2+4bZ_g^2+2S^2>0.                  \tag{CR8}
+\]
+
+It remains to cover $u$ projectively infinite. Put $p=1/u$,
+homogenize by $p^2$, and use $D_p=1+p^2$,
+$Q=pW+Y$, $B=pX+Z$. Then
+\[
+ M=vQ-B,\quad r=W-pY,\quad
+ J=D_p(W+vX)-p(Q+vB).                              \tag{CR9}
+\]
+For $v$ a bounded unit, use $(Q/g,B/g,W,X)$ and cap $m,\beta,C$.
+The core after $Y=gE_Q-pW$, $Z=gE_B-pX$ is a bounded polynomial
+with residue $(W+vX)^2$. The selected residue is
+\[
+ 4\mu(vE_Q-E_B)^2+4\nu D_vE_B^2
+           +4cD_vW^2+2(W+vX)^2>0.                 \tag{CR10}
+\]
+
+For infinitesimal $v$, use $(W,R,Y,V,E_B)$ with
+$R=vX$, $V=vQ/g$, $E_B=B/g$. Cap $m,\beta,C,A$, retaining
+$\alpha$ entirely. The exact core is
+\begin{align*}
+K_p={}&(W+D_pR-pY-pvgE_B)^2+D_vg^2E_B^2\\
+ &+D_p\{v^2Y^2-2vgYE_B+2pYR-(vgE_B-pR)^2\}.
+                                                               \tag{CR11}
+\end{align*}
+Every coefficient is bounded. The selected residue is
+\[
+ 4\mu(V-E_B)^2+4\nu E_B^2+4cW^2+4aY^2
+                    +2(W+R)^2>0.                 \tag{CR12}
+\]
+
+Finally, when both testing angles are infinite, also put $w=1/v$
+and homogenize by $p^2w^2$. Use $(Q/g,B/g,W,X)$ and cap
+$m,\beta,C$. Substitution $Y=gE_Q-pW$, $Z=gE_B-pX$ in the
+homogenized core is polynomial and has residue $X^2$.
+The selected residue is
+\[
+ 4\mu E_Q^2+4\nu E_B^2+4cW^2+2X^2>0.               \tag{CR13}
+\]
+Each displayed positive form is strict on the complete root space.
+The bounded positive-residue Gram lemma therefore supplies tensor
+SOS. Restoring the retained packets proves the original parent.
+The bounded unit/unit testing chart is already covered by the
+inherited noncommuting-residue theorem. This leaves exactly the
+ordinary/small testing strip stated in the theorem. The exact gauges
+$(u,W,X)\mapsto(-u,-W,-X)$ and
+$(v,W,Y)\mapsto(-v,-W,-Y)$ preserve every event square and the core.
+All homogeneous formulas allow $p=0$ or $w=0$ literally.
+Real and imaginary state components are treated separately.
+\end{proof}
+
+The checker verifies the exact core reductions and their residues;
+it does not infer positivity from samples. This theorem narrows the
+actual UI subcase of C1.5. It does not close C1.5, whose actual UH
+source subcase remains, and it does not yet close UI's ordinary/small
+strip. The leading-contact calculations stored alongside this proof
+remain candidate material until their complete normal lift is printed.

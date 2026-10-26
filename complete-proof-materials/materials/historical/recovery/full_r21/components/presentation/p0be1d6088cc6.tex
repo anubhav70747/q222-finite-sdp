@@ -1,0 +1,786 @@
+\chapter{Scope and actual checklist delta}
+\label{component:p0be1d6088cc6}
+\noindent\textbf{Component }\path{p0be1d6088cc6}\par
+{\small\noindent Source: \path{BASE/proofs/routing/routing_audit.tex}\par}
+{\small\noindent SHA256: \path{0be1d6088cc6370c7cb2ec4b2b0ed2a294c691a0cf96af071b5f14d9a8e9250e}\par}
+{\small\noindent Inventory use: C1 input and finite dispatch; C1.4 subdivision | C14\_\allowbreak{}ENTIRE\_\allowbreak{}ORIGINAL\_\allowbreak{}PARENT\_\allowbreak{}GRAPH; precise subordinate uses retained below\par}
+\medskip
+\section*{Scope and actual checklist delta}
+
+This note closes the two technical audit imports left in U1.A6 by the
+R18 routing review: constrained curvature with one or two hard events,
+and the four-matching terminal with arbitrary internal coefficient
+scales. It also writes an explicit common input, the source-entry maps,
+and an exhaustive decision tree into the historical thirteen rows and
+their C14/R1--R10 subdivisions. All original physicality, contact,
+coefficient signs, strict gaps, literal zeros, and total-scale conditions
+are carried along as conjuncts.
+
+The distinction between a proved dispatch implication and an accepted
+terminal certificate is essential. The complete positive-total-scale
+terminal bundle in A5 is only partially repaired: the recovered finite-edge
+proof and the new \path{a5_recovery/finite_pitchfork_fit.tex} cover the
+ordinary/finite-pitchfork subbundle with $d,C,A,D,\alpha$ units and its
+exact symmetry images. The companion
+\path{a5_recovery/weak_alpha_unit_n_fit.tex} supplies a second precise
+C2 subdomain: $d,n,m,C,A,D$ all units, $\alpha$ weak, and
+$\lambda=\beta=0$. The rest of weak-$\alpha$, projective-pitchfork,
+and reciprocal terminals remain imported. This audit also
+found a specific mismatch in the preserved uniform C1 theorem statements:
+the printed infinitesimal-$e$ and unbounded-$e$ theorems do not by
+themselves cover unit $e$. The companion proof
+\path{us_unit/bounded_delta_all_tests.tex} repairs that subentry directly.
+It extends the exact full-parent contact--conductor proof to bounded
+$\Delta=1/e$ and bounded testing $w$, proves positive coefficient weights
+without comparing independent rates, and supplies the complete testing
+join. Thus an old all-$e$ assertion is no longer needed for that subentry.
+
+The exact parent and Laurent determinant identities and the separated
+bounded strict-Gram lemma remain the already-admitted inputs. The
+focused routing checker has 225 passing exact assertions, covering both full-parent
+reflections, support
+classification, the two-hard activation table, finite source-type
+routing, and four-matching normal completion. The separate bounded-$\Delta$
+checker has 33 passing exact conductor and full-source lift assertions.
+The scoped positive-scale repair has a recovered 15-identity, 30-entry
+full-parent replay and 11 new exact projective-boundary checks.
+Its C2 weak-$\alpha$ subdomain has a separate recovered 9-identity,
+31-entry full-tail replay and 4 exact state-jet assertions.
+These assertions do not
+prove an unresolved commuting-boundary terminal. No global tensor-SOS
+or spectrahedral-shadow conclusion follows from this note.
+
+All cited paths are given in the accompanying \path{ROUTING_LEDGER.json},
+relative to the recovered \path{checkpoint_R19} directory, with
+SHA-256 hashes; new continuation files have their own explicit path root.
+The symbols \texttt{R13}, \texttt{OLD}, and \texttt{INH}
+in the ledger have one explicit expansion each; no absent external
+manuscript is substituted for a preserved file.
+
+\section{One exact input, before optional exclusions}
+
+Let $K_c,K_t\supset\R$ be independent real closed fields. The bounded
+subring of either field consists of elements whose absolute value is
+at most some real number; its maximal ideal consists of infinitesimals.
+For $q>0$ write $q:\I$ when $q$ is infinitesimal, $q:\U$ when $q$
+and $q^{-1}$ are bounded, and $q:\Otype$ when $q^{-1}$ is infinitesimal.
+These are exhaustive, disjoint types. Bounded means $\I$ or $\U$;
+noninfinitesimal means $\U$ or $\Otype$. Zero is always a separate
+literal case. Type notation is external shorthand for ordered-field
+inequalities relative to real bounds, not a new algebraic equation.
+
+In the coefficient order $(d,\lambda,n,m,C,A,D,\alpha,\beta)$ and
+with $D_u=1+u^2$, $D_v=1+v^2$, retain the complete original parent
+\begin{align}
+F_c={}&4\lambda D_u(W+vX)^2+4nD_uD_vX^2
+ +4m(vW-X+uvY-uZ)^2\notag\\
+&+4CD_v(uW-Y)^2+4AD_uD_vY^2
+ +(4D+2d)(uW+uvX-Y-vZ)^2\notag\\
+&+(4\alpha+2d)D_u(vY-Z)^2
+ +(4\beta+2d)D_v(X+uZ)^2-2dD_uD_vZ^2. \tag{P}
+\end{align}
+Its symmetric state matrix is $P_c(u,v)$, so $F_c=\psi^TP_c\psi$.
+Physicality is the exact quantified polynomial condition
+$P_c(u,v)\succeq0$ for every source-field projective pair, interpreted
+in the four homogeneous angle charts. It is never replaced by
+positivity of a truncated scalar or a modified parent.
+
+The canonical remaining source input $Q(c)$ is the following conjunction:
+\begin{enumerate}
+\item $c\in K_c^9$, $d>0$, all eight event coefficients nonnegative,
+and physicality of (P).
+\item $\delta_{\rm tot}=d/(d+\lambda+n+m+C+A+D+\alpha+\beta):\I$.
+This quotient is computed before any later $d=1$ or $C=2$ normalization.
+\item The source is coercive and has five or six positive events.
+There is a finite positive contact $u_c,v_c>0$ and nonzero $\psi_c$
+such that $P_c\psi_c=0$ and
+$\partial_u F_c=\partial_v F_c=0$ at this contact.
+\item A deterministic omission convention has chosen C1 or C2 as
+described below. Its literal coefficient equalities and positivity
+conditions are part of $Q$, not conditions to be inferred later from
+a limiting approximation.
+\end{enumerate}
+The testing input is an arbitrary independent $K_t$ projective angle
+pair and an arbitrary real or complex state. A complex state is split
+into real and imaginary parts because the parent is real symmetric.
+No source contact is identified with a testing point.
+
+If one wants precisely the input after A6, append that at least one
+testing measurement pair commutes in real residue. We prove the source
+dispatch with all tests allowed, so that additional restriction cannot
+create a missing source case. Optional historical exits may likewise be
+intersected afterwards: if $Q\Rightarrow E\lor\bigvee R_i$, then
+$Q\land\neg E\land B\Rightarrow\bigvee(R_i\land B)$ for every
+common additional predicate $B$. This elementary implication avoids
+using an unspecified phrase such as ``the complement of all prior
+admissions'' as the premise of the coverage proof itself.
+
+\paragraph{Canonical omission and symmetry convention.}
+Use the fixed cycle
+$(\lambda,D,C,A,\alpha,m,\beta,n)$.
+The A3 reduction gives compatible omissions: pairs have cycle distance
+one or two, and triples consist of three consecutive vertices.
+For a triple, choose a distance-one pair first, with the lexicographically
+least pair in this fixed cycle breaking ties. Choose the first word in
+a fixed enumeration of the finite Bell relabeling group that sends it
+to $\{\lambda,n\}$. The extra zero is then $D=0$ or $\beta=0$.
+For two omissions, distance one enters C1 and distance two enters C2.
+Thus the two canonical domains are
+\begin{align*}
+\mathrm{C1}:&\quad \lambda=n=0,\quad m,C,A,\alpha>0,\quad
+ D,\beta\ge0,\quad D+\beta>0;\\
+\mathrm{C2}:&\quad \lambda=\beta=0,\quad m,C,A,D,\alpha>0,
+ \quad n\ge0.
+\end{align*}
+The five-active C2 boundary $n=0$ is already assigned C1 by the
+precedence convention, but it is deliberately allowed in C2 theorem
+statements and all later implications. No proof is lost by this overlap.
+The partition is disjoint for chosen canonical records, not for their
+unoriented physical-source images.
+
+\section{A6: the formerly imported technical audit}
+
+\subsection{Weighted centers do not require comparable hard weights}
+
+At a noncommuting testing residue, use an entangled residue state as an
+invertible two-by-two matrix. A fixed local ray has a unique orthogonal
+partner on the other side. Consequently its vanishing losing events
+form a matching of the eight-cycle, of size at most four. At most three
+such product-event rows are independent state coordinates. Product
+residue states instead have strictly positive signed-core value at a
+noncommuting pair; their contribution is a pure-source positive factor
+times a pure-testing square, plus event squares.
+
+Suppose independent hard event amplitudes are exact coordinates $x_i$,
+their positive weights are $a_i$, and the next coefficient scale is
+$\sigma$, with $\varepsilon_i=\sigma/a_i:\I$. The local polynomial is
+\[
+F=\sum_i a_i b_i(y)x_i^2+\sigma G(x,y),\qquad b_i(y_0)>0.
+\]
+Set $x_i=\varepsilon_i s_i$ in the coefficient-field stationary
+equations. After division by $\sigma$ their normal equations have
+residue $2b_i(y)s_i+G_{x_i}(0,y)=0$, and their tangent equations have
+residue $\nabla_yG(0,y)=0$. If the constrained soft Hessian is positive
+definite, the residue Jacobian is invertible: its hard diagonal entries
+are $2b_i>0$ and its soft Schur block is precisely that Hessian.
+The semialgebraic implicit-function statement over $\R$, followed by
+transfer, supplies an exact source-field stationary center. Physicality
+makes its value nonnegative.
+
+The exact finite Taylor roots are
+$(x_i-x_{ic})/\sqrt{\varepsilon_i}$ and $y-y_c$.
+For each hard packet, $x_{ic}=\varepsilon_i s_{ic}$ makes its
+center-square and center-linear contributions bounded after this
+scaling. All remaining higher-degree factors are actual deviations,
+not quotients by a source opening. The residue Gram is strict, so the
+admitted separated strict-Gram lemma applies. None of these operations
+uses a mixed inverse or orders a source infinitesimal against a testing
+infinitesimal.
+
+\subsection{Exact deficient-support classification}
+
+For $d>0$ write the eight outer Laurent coefficients of the determinant
+as $q_e\ge0$, $e\in\{-1,0,1\}^2\setminus\{0\}$. At a stationary
+zero its logarithmic Hessian is $\sum_e w_e ee^T$ with $w_e>0$ for
+active exponents. It fails to be positive definite only if the support
+has rank zero or rank one. A stationary nonempty rank-one support must
+contain opposite exponents; one-sided support cannot have zero gradient.
+
+For one hard event, take $\lambda$ by symmetry and extract
+$\partial q_e/\partial\lambda$. For two hard matching events the three
+orbits have representatives $\{\lambda,m\}$, $\{\lambda,C\}$,
+and $\{\lambda,\alpha\}$. Extract the coefficient of their product.
+A state basis adapted to the independent hard amplitudes shows that this
+leading coefficient is a positive angular factor times the constrained
+state determinant. The positivity table below is therefore exact.
+Juxtaposition means both coefficients are positive.
+\[
+\begin{array}{c|ccc}
+e&\{\lambda,m\}&\{\lambda,C\}&\{\lambda,\alpha\}\\\hline
+(-1,-1)&\alpha&\alpha&\text{always}\\
+(-1,0)&D\text{ or }\alpha&D\text{ or }\alpha m&D\text{ or }m\\
+(-1,1)&D&Dm&Dm\\
+(0,-1)&n\text{ or }A\alpha&n&A\text{ or }n\\
+(0,1)&\beta\text{ or }DC&D\text{ or }\beta m&DC\text{ or }\beta m\\
+(1,-1)&An&0&An\\
+(1,0)&AC\text{ or }\beta n&A&AC\text{ or }\beta n\\
+(1,1)&\beta C&\beta&\beta C
+\end{array}
+\]
+Inspection of the four opposite-pair lines gives no rank-one stationary
+support for $\{\lambda,m\}$. For the other two pairs the only
+possibility is the perfect matching
+$\{\lambda,C,\alpha,\beta\}$. The one-hard calculation has exactly
+that same possibility. With no hard event there are precisely the two
+perfect matchings. These are positivity-support implications and allow
+every omitted weight to be literally zero.
+
+All rank-zero supports are contained in a nonextendable matching triple,
+whose cyclic gaps are $(2,3,3)$. For one hard $\lambda$, representatives
+are $\{\lambda,A,\beta\}$, $\{\lambda,m,C\}$, and
+$\{\lambda,m,A\}$. For the pair $\{\lambda,m\}$ only the latter
+two occur; for $\{\lambda,C\}$ only $\{\lambda,m,C\}$ occurs;
+for $\{\lambda,\alpha\}$ rank zero is impossible. At $u=v=1$, the
+states $(1,-1,0,2)$ and $(1,-1,1,3)$ annihilate respectively the
+$\{\lambda,m,A\}$ and $\{\lambda,m,C\}$ events and give signed-core
+values $-4$ and $-8$. Cycle symmetry supplies the remaining triples.
+Hence a physical constrained source with $d>0$ cannot have rank zero.
+
+On a perfect-matching curve all matching event squares and the signed
+core vanish. For the representative $\{n,m,A,D\}$ the four independent
+event-normal differentials satisfy
+\[
+dH=2t\{(1+t^2)dX-(1+t^2)dY-dR_m+dR_D\},\qquad t>0.
+\]
+Every coefficient is nonzero. Imposing at most two hard constraints
+leaves a direction on which this derivative is nonzero; all event-square
+derivatives vanish there. The constrained parent changes sign, contrary
+to physicality. This removes the rank-one cases.
+
+Thus every zero of the one/two-hard constrained determinant has positive
+angular Hessian. The signed core is strictly positive on the $Z=0$
+state subspace, so the constrained state matrix has respectively two
+or one positive transverse state eigenvalues and a simple kernel with
+$Z\ne0$. A Schur-complement calculation over the real residue field
+identifies the angular Hessian with a positive multiple of the determinant
+Hessian. The full soft Hessian is therefore strict. This is a real
+residue calculation, not a Schur inverse in the tensor product.
+
+For reproducibility the checker enumerates respectively 256, 128, and
+64 supports for no hard event, one fixed hard event, and each two-hard
+orbit. It checks every positivity-table entry on every support. The
+enumeration corroborates the finite proof; it makes no numerical
+positivity inference and does not test only generic positive coefficients.
+
+\subsection{Four matching weights, all internal scales retained}
+
+Suppose $\mu=\min(n,m,A,D)>0$, and $d/\mu$ and each of
+$\lambda/\mu,C/\mu,\alpha/\mu,\beta/\mu$ are infinitesimal.
+Rotate the cycle so $D=\mu$, and set
+\[
+\eta_1=\mu/n,\quad\eta_2=\mu/A,\quad\eta_3=\mu/m,
+\qquad 0<\eta_i\le1.
+\]
+No positive lower bound is imposed on any $\eta_i$.
+In the $W=1$ chart take $R=v-X+uvY-uZ$ as a state coordinate, so
+$Z=(v-X+uvY-R)/u$. The fourth amplitude is $f+L$, where
+\[
+f=(u^2-v^2)/u,\quad
+L=v(u+u^{-1})X-(1+v^2)Y+(v/u)R.
+\]
+At $X=Y=R=0$ the signed and fourth packets equal
+\[
+4\mu f^2+2duf
+=4\mu\left(f+\frac{du}{4\mu}\right)^2-\frac{d^2u^2}{4\mu}.
+\]
+Testing $u=1$, $v=\sqrt{1+d/(4\mu)}$ proves, by physicality, that
+$\tau=\max(\lambda,C,\alpha,\beta)>0$ and
+$\rho=d^2/(\mu\tau)$ is bounded. Put $\varepsilon=d/\mu:\I$.
+
+If $\rho:\I$, use the four normal roots
+$\sqrt{n/\tau}X$, $\sqrt{A/\tau}Y$, $\sqrt{m/\tau}R$,
+$\sqrt{\mu/\tau}(v-u)$, and the constant root. Their normal residue is
+\[
+4B^2z_1^2+4B^2z_2^2+4z_3^2+
+4(-2z_4+B\sqrt{\bar\eta_1}z_1-B\sqrt{\bar\eta_2}z_2
+             +\sqrt{\bar\eta_3}z_3)^2\succ0,
+\quad B=1+u_0^2.
+\]
+The complementary packets give a strictly positive constant residue;
+the signed linear corrections have coefficients $\sqrt\rho$ or
+$\sqrt{\rho\eta_i}$ and vanish in residue.
+
+If $\rho:\U$, substitute in source-field stationarity
+\[
+X=\varepsilon\eta_1s_1,\quad Y=\varepsilon\eta_2s_2,
+\quad R=\varepsilon\eta_3s_3,\quad v-u=\varepsilon r,\quad u=t.
+\]
+With $B=1+t^2$, $\ell=(B,-B,1)$, $b=(B^2,B^2,1)$, and
+$k=-2r+\sum\bar\eta_i\ell_i s_i$, the four divided normal equations
+are
+\[
+8b_i s_i+8k\ell_i+(4tB,-4tB,0)_i=0,\qquad -16k-4t=0.
+\]
+Their Jacobian determinant is $32\cdot8^3B^4>0$, even if some
+$\bar\eta_i=0$. Their unique solution is
+\[
+s_1=-\frac{t}{4B},\quad s_2=\frac{t}{4B},\quad s_3=\frac t4,
+\quad r=\frac t8(1-\bar\eta_1-\bar\eta_2+\bar\eta_3).
+\]
+Let $P=\operatorname{res}((\lambda+\alpha)/\tau)$ and
+$Q=\operatorname{res}((C+\beta)/\tau)$; $P+Q>0$. Exact normal
+completion of the normalized residue objective leaves
+\[
+g(t)=4(1+t^2)(P+Qt^2)
+ -\frac{\bar\rho t^2}{4}(1+\bar\eta_1+\bar\eta_2+\bar\eta_3).
+\]
+Physicality gives $g\ge0$. At a zero, stationarity of $g/(4t^2)$
+gives $P/t^2=Qt^2$, forcing $P,Q>0$ and positive logarithmic curvature.
+If $g(t_0)>0$, normal completion gives a strict constant-plus-normal
+Gram. Otherwise adjoining the tangent equation gives an invertible
+Jacobian and an exact stationary center with nonnegative value.
+
+Put $\delta=v-u$. The full-parent Taylor roots are
+\[
+\sqrt{n/\tau}(X-X_c),\quad\sqrt{A/\tau}(Y-Y_c),\quad
+\sqrt{m/\tau}(R-R_c),\quad\sqrt{\mu/\tau}(\delta-\delta_c),
+\quad t-t_c.
+\]
+The packetwise bounds that justify the entire Taylor polynomial are
+\[
+\frac{a_i x_{ci}^2}{\tau}=\rho\eta_i s_{ci}^2,\qquad
+\frac{a_i x_{ci}}{\sqrt{a_i\tau}}=\sqrt{\rho\eta_i}s_{ci}.
+\]
+The fourth normal has the same estimates with $\eta_i=1$. Complementary
+and signed packets have no larger factors. Every packet is at most
+quadratic in the state coordinates, so after two normal factors are
+assigned the remaining higher factors are bounded deviations. The only
+denominators are pure testing units $t$, together with admitted pure
+coefficient units. The residue normal block is the strict form above;
+its tangent Schur complement is $g''(t_0)/2>0$. This proves the full
+packet restoration for arbitrary unequal matching weights.
+
+At each earlier scale either a positive soft value or a strict constrained
+Hessian finishes the argument, or another matching edge is added.
+Three-edge kernels have the two inherited explicit Laurent forms; their
+rank failures give respectively no stationary zero or a negative minimum
+$2\sqrt{2D(d+2D)}-d-4D<0$ (squaring has difference $d^2>0$).
+There can be at most four matching edges. The terminal above therefore
+completes the finite matching-scale induction without a rate comparison.
+This closes the specific A6 technical imports. It says nothing about a
+commuting testing residue by continuity.
+
+\section{Global sign entry and exact coordinate maps}
+
+\subsection{C1}
+
+Normalize $C=2$ by a positive pure-source factor. The finite contact has
+the unique gauge
+\[
+(u_c,v_c;\psi_c)=(k,\ell;S,k(\theta-1),kSr,1),
+\qquad S>0,\quad0<r,\theta<1.
+\]
+The inherited global sign proof has now had its curvature input audited
+above. Over $\R$ it uses the unique maximal-$d$ contact graph over the
+connected positive event orthant, a positive cofactor proving
+$\theta>0$, and no-wall removal arguments for $Y=0$, $S-Y=0$, and
+$\theta=1$. Its exact positive seed is
+\[
+(u,v;S,Y,\theta)=(1,1;1,1/4,1/2),\qquad
+c=(27/2,0,0,4,2,9,5/4,13/4,9/4).
+\]
+The cross-multiplied amplitude identity extends from the nonzero Cramer
+minor locus by analyticity on this specified graph. A boundary implicit
+function argument opens $D=0$ or $\beta=0$, proves the strict signs
+there, and only then transfers the finite first-order implication.
+This use of real continuity proves source sign entry; it is not an
+argument that tensor SOS is closed under non-Archimedean limits.
+
+The full-parent Alice reflection is
+\[
+u'=1/u,\quad v'=v,\quad
+G\psi=(vW-X,-W-vX,Z-vY,Y+vZ),
+\]
+with $(\lambda\ n)(m\ C)(A\ \alpha)(D\ \beta)$ on coefficients.
+It obeys $G^TG=(1+v^2)I$ and
+\[
+u^2F_{c'}(1/u,v;G\psi)=(1+v^2)F_c(u,v;\psi).
+\]
+Its factors are pure testing squares after homogeneous normalization.
+Apply it on the source side if needed to fix $0<k\le1$; equality is
+kept in the unit case. Literal $D=0$ and $\beta=0$ exchange.
+
+Define, exactly,
+\[
+\eta=\ell/(kS),\quad\zeta=S\ell/k,\quad e=k/S,
+\quad x=k^2,\quad a=(1-r)/\eta,\quad t=\theta/\zeta,
+\quad h=1-\theta.
+\]
+In particular $e=k\sqrt{\eta/\zeta}$, with the positive square root.
+The original gaps are
+\begin{gather*}
+R=1+xr,\quad T=1+xh,\quad M=R-t>0,\quad J=T-a>0,\\
+E=1-x\eta h>0,\quad Q=1-x\zeta r>0,\quad0<a,t<2.
+\end{gather*}
+Every branch below retains these exact relations. The same selected
+minor remains nonzero when $D=0$ or $\beta=0$, so a boundary coefficient
+column must not simply be deleted from the rational-source derivation.
+The nonnegative source numerators $B_5,B_\beta$ in the ledger are
+equivalent to the literal original inequalities $D,\beta\ge0$.
+
+\subsection{C2}
+
+Normalize $d=1$. At the source contact $Z=1$ the exact signs are
+\[
+W>0,\ X<0,\ Y>0,\ uW-Y>0,\ 1-vY>0,
+\quad R_m>0,\ R_D<0,\ X+u>0,\ W+vX>0.
+\]
+The proof uses the analogous unique real maximal-contact graph, the
+exact seed
+\[
+(n,m,C,A,D,\alpha)=(1/8,3/8,1/6,5/8,3/8,1/6),
+\quad(u,v;\psi)=(1,1;1,-1/4,1/4,1),
+\]
+and event-amplitude removal. The wall $X=0$ would delete $n$ and enter
+the C1 triple face, where the already-proved strict sign gives a
+contradiction. The omitted-event signs follow from the original $X$
+kernel equation and the exact C2 reflection. Literal $n=0$ is the C1
+triple face directly. First-order transfer is performed after this real
+argument.
+
+The source variables and all strict gaps are
+\begin{gather*}
+c=u_c,\quad a=v_c/u_c,\quad b=aW_c,\quad r=-X_c/u_c,
+\quad t=(u_cW_c-Y_c)/v_c,\\
+h=aY_c/u_c=b-a^2t>0,\quad
+g=R_m/u_c=(1+c^2)b-(1-r+a^2c^2t)>0,\\
+j=-R_D/v_c=1+c^2r-t>0,\quad0<r<1,\quad
+1-c^2h>0,\quad b-a^2c^2r>0.
+\end{gather*}
+The positive stationary determinant is a nonzero factor times
+$ac^6rgt\,hj(1-c^2h)(1+c^2)^2(1+a^2c^2)^2\Delta$,
+where
+\[
+\Delta=1+(1+z)b+z(1+z)b^2+2z(1+z)br+z^2r^2+2zr
+ +a^2z\{(1+z)b+1+zr(2-r)\}\ge1,\quad z=c^2.
+\]
+Thus the six rational coefficients are the original coefficients by
+uniqueness of the six stationary equations, including $n=0$.
+
+The exact reflection is
+\[
+(u,v;W,X,Y,Z)\mapsto(1/v,1/u;Z,X,Y,W),\qquad
+(m\ D)(C\ \alpha),
+\]
+and obeys, on the C2 omission face, the exact identity
+\[
+u^2v^2F_{c'}(1/v,1/u;Z,X,Y,W)=F_c(u,v;W,X,Y,Z).
+\]
+Both $n$ and $A$ are unchanged. The positive
+source normalization by $W_c$ is legal. The factorization and endpoint
+interpretation are homogeneous, so literal testing infinity is included.
+
+\section{Exhaustive dispatch into the historical thirteen rows}
+
+\subsection{C1: five retained rows and explicit other exits}
+
+All entries in the following table include the exact C1 input above.
+The notation $\neg\I$ means a positive unit or an unbounded element.
+The row order is deterministic.
+\begin{longtable}{p{.57\linewidth}p{.35\linewidth}}
+\toprule Source condition & Destination \\\midrule
+$k:\I$, $\zeta:\neg\I$ & C1.4, arbitrary positive $\eta$ \\
+$k:\U$, $\eta,\zeta:\I$ & AS: arbitrary-state-ratio theorem \\
+$k:\U$, at least one of $\eta,\zeta:\neg\I$ & C1.5 \\
+$k,\zeta,\eta:\I$ & US: whole uniform-source exit; exact join below \\
+$k,\zeta:\I$, $\eta:\Otype$ & C1.1 \\
+$k,\zeta:\I$, $\eta:\U$, $e:\I$ & C1.3, every $0<r<1$ \\
+$k,\zeta:\I$, $\eta,e,r:\U$ & BE: bounded-$e$ all-tests theorem \\
+$k,\zeta,r:\I$, $\eta,e:\U$ & CA: centered-$A$, unit-$e$ theorem \\
+$k,\zeta:\I$, $\eta,r:\U$, $e:\Otype$ & UE: unit-$\eta$, unbounded-$e$ theorem \\
+$k,\zeta,r:\I$, $\eta:\U$, $e:\Otype$ & C1.2 \\
+\bottomrule
+\end{longtable}
+To prove exhaustion, first split bounded $k$ into $\I/\U$. On the
+$k:\I$ side split $\zeta$ into infinitesimal or not. On the remaining
+$k,\zeta:\I$ side split $\eta$ into its three types. Only
+$\eta:\U$ requires the $e$ trichotomy, and only $e:\U$ or
+$\Otype$ requires the two possibilities for $r$. There is no
+unbounded-$r$ case because $0<r<1$. The inequalities $a,t<2$ imply
+$r\sim1$ when $\eta:\I$, but no extra rate condition is needed.
+
+For AS, the original source formulas make $D$ and $\beta$ strictly
+positive; a literal zero cannot be smuggled into its theorem. BE and CA
+explicitly retain $\beta=0$; on their source shapes the formula for
+$D$ has positive-unit numerator and prevents $D=0$. UE makes
+$m/d$ and $\beta/d$ unbounded, so its stated assumptions also decide
+that boundary. These are source consequences, not informal continuity
+extensions.
+
+The historical US entry has three exhaustive subentries. For $e:\I$
+its exact theorem is \path{c1_uniform_all_tests.tex}. For $e:\Otype$
+the original unbounded-$e$ $W$-unit/outer-test theorem and the restricted
+contact--conductor completion provide the full normal restoration.
+The new \path{us_unit/bounded_delta_all_tests.tex} proves the complete
+source for bounded $\Delta=1/e$, hence covers both $e:\U$ and
+$e:\Otype$. Its new grading assigns weight zero to both $\delta$
+and testing $w$, while preserving strictly positive weights on every
+scalar and first-normal correction coefficient. The $Z$-unit chart now
+allows bounded $W$; the complementary $W$-unit, $Z$-infinitesimal chart
+uses the retained-current identity with $\Delta Z$ infinitesimal.
+The original outer-angle identities then give all projective tests.
+This is the exact matching proof for US-$\U$ that the old summary
+did not supply. The positive strict gaps and all original source signs
+remain premises, and every subtracted packet is restored.
+
+\subsection{C2: directed weak rows and strong orbits}
+
+Weak means infinitesimal after division by $d$, while strong means
+bounded positive reciprocal; strong coefficients may be unbounded.
+Since $C,\alpha>0$, first split into both weak, exactly one weak, and
+both strong. Both weak goes to the chart-free C2 radial theorem. Its
+physical matching witnesses force all four matching weights large,
+then the exact contact estimates give the radial-source entry. The
+source argument and the final radial all-tests certificate are distinct
+steps and are separately named in the ledger.
+
+For exactly one weak coefficient reflect once, if necessary, so $C$
+is weak and $\alpha$ strong. Do not quotient this directed list by
+another reflection. Source identities exclude actual types II, IU, UI,
+UU in that orientation. The all-tests single-angle corollary removes
+UH. The remaining four historical directed rows are
+\[
+\mathrm{C2.W.IH},\quad\mathrm{C2.W.HI},\quad
+\mathrm{C2.W.HU},\quad\mathrm{C2.W.HH}.
+\]
+Here H is an unbounded positive actual half-angle, not literal infinity;
+the actual contact is always finite over $K_c$.
+
+For both $C,\alpha$ strong, if $m,A,D$ are all strong then the five
+consecutive events $(D,C,A,\alpha,m)$ give the five-event exit.
+Otherwise retain $m$ weak, else $A$ weak, else $D$ weak, in that order
+if a disjoint event subpartition is desired. The all-tests IU/UH and
+UU corollary removes three ordered angle types. Reflection acts on
+the other six by reversal and reciprocal type, giving precisely
+\[
+\mathrm{C2.S.II/HH},\quad\mathrm{C2.S.IH},\quad
+\mathrm{C2.S.UI/HU},\quad\mathrm{C2.S.HI}.
+\]
+These are four orbits; IH and HI are each fixed and must not be
+identified. Together with the five C1 rows this gives thirteen labels.
+The finite angle calculation is included in the exact checker.
+
+The directed HI and HU rows were subsequently proved empty, without
+testing restrictions. The proof is substantive: with $q=u_c^{-2}:\I$
+and bounded $y=v_c^2$, original $n\ge0$ forces $R=r/q$ bounded.
+Otherwise the positive leading term in its exact numerator dominates
+the negative terms, contradicting $n\ge0$. Then $H=v_cY_c\sim1$,
+$\Delta$ is a positive bounded unit, and
+$C=(1+R)(N_{\rm src}/q)/(2L\Delta)$ has bounded positive reciprocal.
+This contradicts the chosen weak-$C$ orientation. Literal $n=0$ is
+included in the contradiction. The ledger records the exact file.
+
+The optional reciprocal-product exit requires all four products
+$Cn,Cm,CA,CD$ to have bounded positive reciprocals in the weak-$C$
+orientation. Merely two large adjacent weights do not suffice, and
+$n=0$ never passes this exit. This exit is unnecessary for the finite
+thirteen-row coverage implication; intersecting its complement later
+preserves coverage.
+
+\section{C1.4: exhaustive C14 subdivision, with missing exits restored}
+
+The input is $k:\I$, $\zeta:\neg\I$, with all exact C1 constraints.
+Put $L=x\zeta$ and, when $\eta:\Otype$, $\sigma=1/\eta$.
+The following tree covers this whole source shape, before any extra
+testing screens are applied.
+
+\paragraph{$L:\Otype$.}
+The strict original gap $Q=1-Lr>0$ forces $r:\I$.
+Since $1-r=a\eta$ and $a<2$, $\eta$ cannot be infinitesimal.
+For $\eta:\U$ the large-$L$, unit-$\eta$ all-tests theorem applies.
+For $\eta:\Otype$, put $H=h/\sigma$. If $H:\Otype$, enter C14.1b.
+If $H$ is bounded, split
+$M_\beta=\beta\theta/\sigma^2$ into bounded or unbounded, after
+$d=1$. Bounded $M_\beta$, including $\beta=0$, is the JR/JB all-tests
+exit; unbounded $M_\beta$ is C14.1a. No $H=0$ case is introduced,
+since $h>0$; $M_\beta=0$ is literal and allowed.
+
+\paragraph{$L:\U$.}
+The three types of $\eta$ give, respectively, the small-$\eta$
+$L$-unit all-tests exit, the unit-$\eta$ $L$-unit all-tests exit, and
+C14.2. The source formulas in the first two cited theorems, rather than
+their titles, retain the original gap and zero-boundary hypotheses.
+
+\paragraph{$L:\I$.}
+Unbounded $\eta$ gives C14.4. For bounded $\eta$, unbounded $\zeta$
+gives C14.3a. The only remaining case is $\zeta:\U$: infinitesimal
+$\eta$ gives C14.3b. If both $\eta,\zeta:\U$, define the exact
+positive bounded source gap
+\[
+j=\eta(1+xh)-1+r=\eta J.
+\]
+If $j:\U$, then $j_0=\eta+r-1$ is a positive unit and the RO theorem
+applies. If $j:\I$, then $\eta+r\sim1$, hence $1-r:\U$.
+For $r:\U$ use JO; for $r:\I$ use HO. There is no need to compare
+$j$ with $x$, and no equality $j=0$ is permitted.
+
+This proves that the six historical refined shapes
+C14.1a, C14.1b, C14.2, C14.3a, C14.3b, C14.4, together with the exact
+listed exits, cover C1.4. R19 admits all of C14.2 and C14.3a/b.
+Their files are recorded as existing closures; this note does not claim
+to have proved C14.1a/b or C14.4. A later continuation may replace
+those open labels only with its actual proof bytes and scope.
+
+\section{Weak HH: exact reflected entry and the ten disjoint rows}
+
+Reflect the directed weak-$C$ HH source once to actual II. Now $C$
+is strong and $\alpha$ weak. Put
+\[
+z=u_c^2,\quad y=v_c^2,\quad H=v_cY_c,\quad
+L=v_c(u_cW_c-Y_c),\quad B=H+L,\quad r=-X_c/u_c.
+\]
+The exact original constraints include
+\begin{gather*}
+z,y:\I,\quad 0<H,r<1,\quad L>0,\quad j=1+zr-L/y>0,\\
+G=B+z(H+r-1)>0,\quad B-zyr>0,\quad n\ge0.
+\end{gather*}
+Since $L<y(1+zr)$, $L$ is infinitesimal and $B$ is bounded.
+The unchanged alpha formula is
+\[
+\alpha=\frac{(B+zr)M}{2(1-H)\delta},\qquad
+M=(1+z)(B+zr)H+yG+yzj+zrL(1+y)>0,
+\]
+with the positive original denominator $\delta$ printed in the ledger.
+If $B$ is infinitesimal, the exact estimates give $\alpha$ infinitesimal.
+If $B$ is a unit, then $H$, $\delta$, and $M$ are units, so $\alpha$
+is strong; also $CL=(1+zr)M/(2\delta)$ is a unit and $C$ is
+unbounded. Thus the actual directed weak HH input has exactly
+$B,z,y:\I$, not an assumed power-law scaling.
+
+Define the weak-II variables
+\[
+a=z/B,\quad t=y/B,\quad h=H/B,\quad l=L/B=1-h,
+\quad e=1-r,\quad g=G/B.
+\]
+All $h,l,r,e,g,j$ are strictly positive bounded elements; $a,t>0$ can
+have all three types. Retain exactly
+\[
+g=1-ae+hz>0,\qquad j=1+zr-l/t>0,\qquad B-zyr>0,
+\qquad n\ge0,
+\]
+as well as all original source formulas and $\delta_{\rm tot}:\I$.
+The first identity gives
+\[
+ae<1+hz;\quad e:\U\Rightarrow a\text{ bounded};\quad
+a:\Otype\Rightarrow e:\I;\quad a:\I\Rightarrow g\sim1;
+\quad g:\I\Rightarrow ae\sim1. \tag{WF}
+\]
+The exact coefficient estimates WII1--WII4 prove that all six retained
+event coefficients are bounded if and only if
+$t,h,l,j,r,g$ are units. With $d=1$, that would make
+$\delta_{\rm tot}$ a unit. Therefore the all-six-unit branch is
+excluded on the present input. Also the two-weak source exit is exactly
+$r,g,H/y,j:\I$; when $t:\U$ this is $r,g,h,j:\I$.
+
+After those exits and the regular A-opening admissions, the ten ordered
+rows are as follows. Every row includes all preceding weak-II equations
+and original coefficients; a type table does not assert its realizability.
+\begin{longtable}{c p{.78\linewidth}}
+\toprule Row & Exact additional type condition \\\midrule
+R1 & $t:\I$.\\
+R2 & $t:\Otype$.\\
+R3 & $t,h:\U$, $l:\I$.\\
+R4 & $t,h,l:\U$, $j:\I$.\\
+R5 & $t,h,l,j:\U$, $r:\I$.\\
+R6 & $t,h,l,j,r:\U$, $g:\I$.\\
+R7 & $t:\U$, $h,g:\I$, excluding $r,j$ both infinitesimal.\\
+R8 & $t,g:\U$, $h,j:\I$.\\
+R9 & $t,g,j:\U$, $h,e,a:\I$.\\
+R10 & $t,g,j:\U$, $h,e:\I$, $a:\Otype$.\\
+\bottomrule
+\end{longtable}
+
+Here is the proof of exhaustion, including every discarded type.
+Split $t$ first. For $t:\U$, split $h$. If $h:\U$, first test
+$l:\I$, then $j:\I$, then $r:\I$, then $g:\I$. These are R3--R6.
+If none applies, all six variables $t,h,l,j,r,g$ are units, contradicting
+the total-scale input by WII4. If $h:\I$, $l\sim1$. First test
+$g:\I$: either $r,j:\I$ and the two-weak theorem applies, or this is
+R7. For $g:\U$, test $j:\I$, giving R8. Only
+$t,g,j:\U$, $h:\I$ remains.
+
+On that final regular opening, if $e:\U$ then $a$ is bounded by
+(WF). For $r:\U$, $a:\U$ gives WA and $a:\I$ gives WE; for
+$r:\I$ the SL theorem applies for either bounded type of $a$.
+If $e:\I$ then $r\sim1$; $a:\U$ gives WC, $a:\I$ gives R9,
+and $a:\Otype$ gives R10. WA is joined to its printed remote theorem;
+WE, SL with its projective join, and WC each have exactly the source
+conditions just stated. No $h/a$ or $e/B$ comparison is inserted.
+
+The table is disjoint by this order. The focused checker enumerates
+all type assignments obeying the necessary consequences of (WF) and
+$h+l=r+e=1$, and confirms that every surviving tuple has precisely
+the displayed destination or one named exit. It does not assume that
+every such combinatorial tuple is realized by a physical source.
+
+R19 already admits R5, R8, R9, R10, and portions of R3, R4, R6, R7.
+The supplied R19 frontier records the remaining exact intersections:
+R3 and R4 have $e:\I$; R6 has $a:\Otype$, $e:\I$,
+$\rho=n/e^2:\U$; R7 has $a:\Otype$, $e:\I$.
+R1 and R2 retain their full original residual source conditions.
+These are substitutions of existing theorem scopes after the coverage
+argument, not evidence that a remaining domain is nonempty.
+
+\section{Boundary, normalization, and testing rules}
+
+\begin{enumerate}
+\item C1 $D=0$ or $\beta=0$ is carried through the rational source
+minor. If a later branch makes one impossible, its original coefficient
+formula must prove that fact. The other zero is still kept. Both zero
+simultaneously is outside the five/six-active coercive entry.
+\item C2 $n=0$ is retained in global sign entry, the weak-II formula,
+and every subsequent source inequality. It is never replaced by
+$n>0$, nor used as a residue approximation to $n>0$.
+\item A source shape parameter or gap is strictly positive unless its
+definition is an original nonnegative coefficient. An infinitesimal
+opening is not a literal zero. In particular $M,J,E,Q,r,1-r,h,l,g,j$
+are not set to zero in an exact source formula.
+\item $d=1$ and $C=2$ are legal positive pure-source normalizations;
+they do not turn the earlier condition $\delta_{\rm tot}:\I$ into
+a positive-total-scale source. Source-only coefficient weights and
+testing-only normalization factors have square roots in their respective
+fields and restore every certificate.
+\item The source angles classify actual contacts. Independent testing
+angles remain arbitrary, with signs, zeros, and infinity treated in their
+homogeneous charts. A finite-chart proof alone is not an all-tests
+statement. The ledger distinguishes local theorems from their exact joins.
+\item The optional rational-curve theorem requires coefficients in a
+single $\R(T)$, a specified physical real interval, and nonvanishing
+denominators there. It is not an arbitrary multiparameter exit.
+The C2-to-C1 overlap is physical only for $n=0$: the overlap identity
+gives a negative C1 beta coefficient for $n>0$.
+\end{enumerate}
+
+\section{Conclusion of this audit, with the remaining entries explicit}
+
+The omission routing, positive-chart maps, C1/C2 source-type disjunction,
+C14 refinement, and weak R1--R10 refinement are now explicit. Their
+exhaustion is proved on the algebraic source input with the stated type
+conditions, independently of nonemptiness and independently of optional
+historical exclusions. The exact one/two-hard and four-matching work
+completes the requested U1.A6 technical audit on its stated domain.
+The separate bounded-$\Delta$ proof repairs the US-$\U$ terminal
+statement mismatch without relying on a historical global assertion.
+
+The precise remaining audit entries are:
+\begin{enumerate}
+\item U1.A5: the scale split and source partition were already audited
+in R18. The ordinary and finite-pitchfork subbundle with
+$d,C,A,D,\alpha$ units is now repaired using the recovered full-parent
+finite-edge theorem, verified exact source entry, and a complete
+projective join. The separate note displays all four corner quadratic
+forms and restores every retained packet. Its exact symmetry images
+are included only under their stated unit hypotheses. The separate C2
+weak-$\alpha$ note proves the subdomain with all six of
+$d,n,m,C,A,D$ units and its exact reflection, by showing every
+remaining singular zero-corner jet fits the recovered finite-ratio
+theorem. No bound on the actual tested ratio is assumed. Remaining
+weak-alpha shapes and their stabilizer images, the C1 projective
+pitchfork, and reciprocal all-tests terminals remain to be accepted.
+\item U1.A7: the ledger now names essential and optional exits, but
+their complete all-tests proofs are not all freshly reaudited here.
+The former US-$\U$ provenance issue is repaired by the new full-parent
+theorem for $k,\eta,\zeta:\I$, bounded $1/e$, all original gaps and
+signs, and all independent tests. Its review is recorded separately
+from the imported terminal bundle.
+\item U1.A9: parts (i)--(iv) have the explicit coverage construction
+above. Its terminal-substitution step remains conditional on the exact
+registry inputs and on the open local rows in the
+current frontier. Do not change a historical import to ``newly proved''
+because its filename appears in the registry.
+\end{enumerate}
+U1 remains open; the global representability bridge remains blocked by
+U1. No separate uniform bound on the number of local squares has been
+introduced. This note is a same-system mathematical audit with narrow
+exact symbolic corroboration, not external review or proof-assistant
+verification.

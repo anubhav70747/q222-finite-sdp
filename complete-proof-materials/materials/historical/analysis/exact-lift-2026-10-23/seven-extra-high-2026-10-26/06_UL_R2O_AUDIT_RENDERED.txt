@@ -1,0 +1,213 @@
+      Q222 Ul R2o Analytical Audit 2026 10 26
+
+
+
+ 
+
+
+Q222 UL/R2O: audited bounded toric allocation and simplified all-testing join
+Source and scope. Pinned TeX 171a7e94b8f52f2bb601562eda362badfb687a9a, latex/certificates/c2_short.tex, TU2–TU17 and UL1–UL18, and latex/certificates/c1_short.tex, SC3–SC5, SC16–SC20, QI2–QI10. These are used as specific polynomial identities, not as conclusions of their physical-source theorems. The RER source-entry identities and SG signed-core/state-entry lemma are separate hypotheses with their printed physical C2 conditions. The coefficient comparison TU9 (six exact rational rows) is algebraic and uses the original sources, not a formal C1 physicality assumption.
+Claim, with exact dependency boundary. For the positive-unbounded-current original C2 R2 subdomain (UL1), the finite coefficient operations below turn the complete local parent into 24-root separated tensor SOS, provided the exact QI2–QI10 scalar and complete two-normal identities have the polynomial interpretations stated in the pinned TeX. These identities are not the QI physical C1 theorem. The R2O all-testing interface in the UL1 subdomain is proved directly from the reflected parent, RER source estimates and the two universal current identities; it needs none of the finite-cap R2O13–24 cases. The attached checker verifies the full SC3 parent readback, the reflection, both R2O current identities, all exceptional UL monomial identities, the source specializations UL7/UL10/UL13, the full UL6 scalar and UL10/UL12 normal readbacks, the exact four-root hard block, and the toric identities; it does not generate the final 24-by-24 Gram by expanding all QI arrays. The bounded-module proof below supplies that missing mathematical argument. No statement about all R2, other C2 leaves, or global spectrahedral shadows follows.
+1. Entire source, entire four-state parent, and exact positive squares
+Let the source-field parameters be
+$ S=t_s^{-1},\ z=a^{-1},\ q=a(t_sB),\ w=ae,\quad
+ b=\sqrt S,\ g=\sqrt z,\ c=\sqrt q,\ e=zw,\quad
+ R=1+Sqh,\ M=R-w>0.$Here $S,z,q$ are positive infinitesimals, $0<w<R\sim1$, and $0<h<1$, with no lower bound on $w,h,1-h,M$. The current $\lambda=n/(qz)>0$ is unbounded. The exact physical source equation
+$ Q_{\rm RER}=\tau\big[(1+z)(1+Sh)(1+Sq)+2r(z\Delta)\lambda\big],\qquad \tau=\frac q{zw},$with its positive unit factors gives
+$ \tau\in\mathrm I_c,\quad \lambda\tau\sim\frac12,\quad
+ L:=\lambda q\sim zw/2,\quad n=\lambda qz\sim z^2w/2,\quad
+ M_1=nS/z^2\sim Sw/2.
+\tag{1}$Therefore $L,M_1,n,e$ are infinitesimal, $H_0=4h_2/R+2z\asymp z$, and
+$ \frac{g}{\sqrt{H_0}}=O(1),\quad
+ \frac{c}{\sqrt{H_0}}=O(\sqrt{w\tau})\in\mathrm I_c,\quad
+ \frac{L}{H_0}=O(w),\quad
+ \frac{wz}{\sqrt n}=O(\sqrt w).
+\tag{2}$All divisions in (1)–(2) are purely source-field operations.
+Set $D_u=1+u^2,D_v=1+v^2$, and work first with independent positive infinitesimal $u,v$, $Z=1$, positive $Q_b=(W+uY)/b$. Define
+$ Y_b=Y/S,\ p=w/R,\quad
+ N=\frac{(X+u)/b-pvQ_b}{g},\ H=\frac{uQ_b}{b},\quad L_t=\frac{vQ_b}{g},\quad
+ B_b=gN+pvQ_b,\quad V_t=uv/b,$$ c_b=SC,\ a_b=SA,\ D_b=D/S,\ \alpha_b=\alpha/(Sz),\quad
+ h_2=mzM,\quad h_b=zw/2.$Here $L_t$ is a testing root, distinguished from $L=\lambda q$. Direct expansion of the complete SG2 C2 parent in all four state amplitudes gives the exact identity
+$ \frac FS=G_{\rm SC3}+\frac{4h_2w}{MR}N^2+\frac{4h_bM}{wR}D_vN^2+\frac{4n}{S}D_uD_vX^2,
+\tag{3}$where
+$\begin{aligned}
+G_{\rm SC3}={}&\frac4R\left[(h_2+h_bD_v)N^2+2(h_bD_v-h_2)L_tN+(h_2(1-p)+h_bpD_v)L_t^2\right]\\
+&+4D_v[c_b(H-D_uY_b)^2+a_bD_uY_b^2]+4D_bJ_b^2+4\alpha_bzD_u(vSY_b-1)^2+2K_b,\\
+J_b={}&S(H-D_uY_b)+ubvB_b-D_uv,\\
+K_b={}&S(H-D_uY_b)^2+2buv(H-D_uY_b)B_b+u^2v^2B_b^2+D_uv^2SY_b^2+D_uV_t^2\\
+&-2D_uV_t(Q_b+vB_b)+2D_uu^2vY_b .
+\end{aligned}
+\tag{4}$Equation (3) is not restricted to either state normal. It holds before native stationarity: the exact checker reduces every coefficient of the ten state monomials to zero. The two original current packets combine with the SC3 $N^2$ diagonal into
+$ \Pi_m=\frac{4h_2w}{MR}N^2,\qquad \Pi_v=\frac{4h_b}{w}(vN)^2,\qquad
+ \widehat N=\sqrt{H_0}N,\quad H_0=\frac{4h_2}{R}+\frac{4h_b}{w}.
+\tag{5}$The harmonic normal is $N_y=\sqrt\sigma(D_uY_b-\rho_0H)$, where $\sigma=c_b+a_b$, $\rho_0=(1+Sq)h/R$. The exact harmonic identity SC4 and the exact native cancellation SC5 make $\sqrt\sigma(\rho_0-c_b/\sigma)$ infinitesimal even if either $h$ or $1-h$ is infinitesimal. Indeed its numerator has the source factor $S h(1-h)$, while $\sqrt\sigma\asymp[h(1-h)]^{-1/2}$. Thus the other harmonic coefficients, $a_b/\sigma$, $a_b\rho_0/\sqrt\sigma$, $a_b\rho_0^2$, and $1/\sqrt\sigma$ are bounded. There is no inversion of an opening.
+Let $h_t=H/R$, and define the four positive separated monomials
+$ A_*=ch_t,\quad B_*=cL_t/R,\quad C_*=uv/b,\quad D_*=qg,\quad
+ \Gamma=(A_*B_*C_*D_*)^{1/4},\quad U_*=cgu/b.$The actual native contact satisfies $Q_b|_c=gR$, hence $A_*|_c=B_*|_c=C_*|_c=D_*|_c=U_*|_c=\Gamma_c=qg$. In particular all toric differences and the two additional angle roots vanish at that same full-state contact. Then $\Gamma^2=qh_tv=U_*B_*$. Put
+$ E_*=h_t-v,\quad F_*=vh_t-gD_*,\quad J_3=\sqrt\lambda(U_*-B_*),\quad
+ d_N=\sqrt{nz/H_0},\quad V_3=\sqrt{\lambda\Gamma}(\sqrt{U_*}-\sqrt{B_*}).$The whole additional $n$-current, including its $N$ normal, is TU17. Its first square is $4D_uD_v(J_3-d_N\widehat N)^2$. Exact UL15 gives
+$ J_3^2=4V_3^2+\lambda(\sqrt{U_*}-\sqrt{B_*})^4,\qquad
+ \Gamma J_3=V_3^2/\sqrt\lambda-2\sqrt\lambda\Gamma(B_*-\Gamma).$Thus retain these nonnegative contact-zero squares:
+$\begin{aligned}
+\Pi_{n,1}&=2D_uD_v(J_3-d_N\widehat N)^2,\\
+\Pi_{n,2}&=\lambda D_uD_v(\sqrt{U_*}-\sqrt{B_*})^4,\\
+\Pi_E&=(\sqrt{A_*}-\sqrt{cv})^4.
+\end{aligned}\tag{6}$The last follows from the exact QI8 identity $qE_*^2=4R_E^2+\Pi_E$, where $R_E=\sqrt\Gamma(\sqrt{A_*}-\sqrt{cv})$. The current remainder is exactly
+$ D_uD_v\big[J_3^2+4V_3^2-4d_NJ_3\widehat N+2d_N^2\widehat N^2\big],
+\tag{7}$plus the two TU17 signed scalar terms and its $-8\lambda D_uD_v(1-e)czB_*N$ first normal. In (7), $d_N\in\mathrm I_c$; $D_uD_v-1\in\mathrm I_t$.
+2. Exact source-coefficient and normal arrays
+The exact six differences TU9 between the actual coefficients and the formal C1 coefficients are divided by $L=\lambda q$. This is algebraic subtraction only: the formal source need not be physical. Write the six resulting arrays $(\widetilde c,\widetilde a,\widetilde d,\widetilde\alpha,\widetilde m,\widetilde b)$. They are the explicit rational expressions in TU9 with denominator units $P,J,Q,R$, apart from the displayed $1/h,1/(1-h)$ in $\widetilde a,\widetilde c$. Set $U=u^2,V=v^2$, $\rho_0=(1+Sq)h/R$, $a_t=1-\rho_0+(w/R)V$. Define
+$\begin{aligned}
+\mathsf a={}&4D_vR^2[\widetilde c(1-\rho_0)^2+\widetilde a\rho_0^2/D_u]
++4\widetilde\alpha zS^2VR^2\rho_0^2/D_u+4\widetilde dS^2R^2a_t^2,\\
+\mathsf b={}&-8\widetilde\alpha zSR\rho_0-8\widetilde dSRa_tD_u,\\
+\mathsf c={}&4\widetilde dD_u^2,\qquad
+\mathsf l=4R[\widetilde m(1-w/R)+\widetilde b(w/R)D_v].
+\end{aligned}\tag{8}$All source opening inverses cancel before division: $1-\rho_0=(1-h)/R$,
+$ \rho_0\widetilde a=-\frac{(1-e)(1+Sq)P_A}{RP},\qquad
+ (1-\rho_0)\widetilde c=-\frac{(1-e)P_C}{RP}.
+\tag{9}$Writing $\Phi,\Phi^0$ for the complete actual/formal SC3 scalar (both state normals zero), TU17 and the six source differences give the exact full scalar difference
+$\begin{aligned}
+\Phi-\Phi^0={}&\lambda[X A_*^2+Y\Gamma^2+ZB_*^2]
++L\mathsf c E_*^2+(4D_u\,\delta\alpha_b/q^2)D_*^2,\\
+X={}&\mathsf a-\mathsf c,\quad
+Y=\mathsf b+2\mathsf c+8D_uD_v(1-e),\quad
+Z=\mathsf l-4D_uD_v(1-e^2).
+\end{aligned}\tag{10}$In these formulas $\delta\alpha_b$ is actual-minus-formal. The entire first normal difference is
+$\begin{aligned}
+\delta\mathcal L_N={}&8\lambda c(1-e)\mathsf F_N B_*+
+8L\widetilde d\,ubvg(Sa_tH-D_uv),\\
+\mathsf F_N={}&\frac{P_bD_v-(1+qz)P_m}{P}-zD_uD_v
+=V-zUD_v+qF_{Nq},
+\end{aligned}\tag{11}$and the entire harmonic-normal difference is
+$\begin{aligned}
+\sqrt\sigma\,\delta\mathcal L_y&=8L(\mathsf F_HH+\mathsf F_vv),\\
+\mathsf F_H&=D_v[\rho_0\widetilde a-(1-\rho_0)\widetilde c]
+-D_v\widetilde a U\rho_0/D_u+\widetilde\alpha zS^2V\rho_0/D_u-\widetilde dS^2a_t,\\
+\mathsf F_v&=\widetilde dSD_u-\widetilde\alpha zS.
+\end{aligned}\tag{12}$The exact checker verifies that $X=Y=Z=0$ at $q=U=V=0$, $\mathsf F_N|_{q=0}=V-zUD_v$, and
+$ \mathsf F_H|_{q=U=V=0}=-\mathsf F_v|_{q=U=V=0}
+ =\frac{(1-e)S}{1-S(1-h)}.
+\tag{13}$All these are polynomial identities after clearing positive unit denominators, not merely residue limits. Monic division in the fixed order $q,U,V$ therefore gives bounded coquotients
+$ X=qX_q+UX_U+VX_V,\quad Y=qY_q+UY_U+VY_V,\quad Z=qZ_q+UZ_U+VZ_V.
+\tag{14}$No inverse of $q,U,V$ is introduced: for a rational $N/D$, subtract at zero and divide the polynomial numerator difference; each remaining denominator is a unit specialization of $D$. The same applies to $R\mathsf F_H+\mathsf F_v$ in (13).
+The complete hard quadratic is uniquely and reproducibly specified by taking $\tfrac12\partial_{N}^2$, $\tfrac12\partial_N\partial_{N_y}$, $\tfrac12\partial_{N_y}^2$ of the entire SC3 formula (4), converting to $\widehat N,N_y$, and adding (7). This is a finite coefficient-extraction identity, with no state variable set to zero. The harmonic normalization cancellations (9) make its $C,A$ coefficients bounded; the $D,\alpha$ differences are $O(L)$, and the first-normal current coupling has coefficient $d_N\in\mathrm I_c$. Its hard residue on $(\widehat N,N_y,J_3,V_3)$ is $\operatorname{diag}(1,4,1,4)$, with all off-diagonal residues zero.
+Complete hard block after the retained packets
+For additional reproducibility, here is the entire quadratic block after subtracting the five positive packets, in the ordered variables$(\widehat N,N_y,J_3,V_3)$. It follows by literal second derivatives of (4) and (7), with $S=b^2,z=g^2$:
+$\boxed{
+\mathcal H_{\rm hard}=\begin{pmatrix}
+1+\dfrac{z u^2v^2(4D_bS+2)}{H_0}+2D_uD_vd_N^2
+&-\dfrac{2bguv(1+2D_bS)}{\sqrt{H_0\sigma}}
+&-2D_uD_vd_N&0\\[5pt]
+*&\dfrac{4D_v(c_b+a_b/D_u)}{\sigma}
+ +\dfrac{4D_bS^2+2S+2Sv^2/D_u+4\alpha_bzS^2v^2/D_u}{\sigma}
+&0&0\\[5pt]
+*&*&D_uD_v&0\\
+*&*&*&4D_uD_v
+\end{pmatrix}.
+}\tag{13a}$In particular the off-diagonal hard coefficient $-2bguv(1+2D_bS)/\sqrt{H_0\sigma}$ includes both the $D_bJ_b^2$ packet and the signed $2K_b$ contribution. The $N_y^2$ diagonal includes $C,A,D,\alpha$ and the two relevant $K_b$ terms, with no state normal omitted. Our standalone checker differentiates the full symbolic quadratic in the four variables and verifies all sixteen matrix entries exactly, before any source/test limit.
+As $u,v,b,g,S,z,d_N$ are infinitesimal, $H_0\asymp z$, $D_b$ is a unit, and $c_b/\sigma+a_b/\sigma=1$ with both fractions in $[0,1]$, we obtain
+$\overline{\mathcal H_{\rm hard}}=\operatorname{diag}(1,4,1,4),$for arbitrary independent source and testing infinitesimal rates. Neither $H_0$ nor $\sigma$ is inverted alone: the only normalized factors are the bounded ratios shown in (13a).
+Why the generic QI6 scalar readback uses no physical C1 theorem
+Let $a=a_0+qa_1,b_*=b_0+qb_1,c_*=c_0+qc_1$ be the printed scalar coefficients in $a h_t^2+b_*h_tv+c_*v^2$, and set
+$\widetilde b_0=b_0+4wD_uV,\quad
+X=a_0+\widetilde b_0+c_0=UX_U+VX_V,\quad
+Y=-\widetilde b_0-2c_0=UY_U+VY_V.$Then $a_0=X+Y+c_0$, $b_0=-Y-2c_0-4wD_uV$, so direct expansion with $E_*=h_t-v$ gives
+$\begin{split}
+(a_0+qa_1)h_t^2+(b_0+qb_1)h_tv+(c_0+qc_1)v^2
+={}&(c_0+qc_1)E_*^2+Xh_t^2+YE_*h_t-4wD_uv^3h_t\\
+&+(a_1-c_1)A_*^2+(b_1+2c_1)\Gamma^2.
+\end{split}$Now $u h_t=uE_*+bC_*$, $B_*C_*=(c/g)v^2h_t$, $R^2P_LB_*^2/q=P_LL_t^2$, and $4\alpha_bD_uD_*^2/q^2=4\alpha_bzD_u$. These give the entire QI6 scalar identity term by term. It is independent of the sign of the formal $\beta^0$. The checker independently verifies this coefficient identity as well as the whole source-difference scalar (10), the signed-current $N$-row (11), and the entire harmonic row (12).
+3. Exhaustive exceptional coefficient ledger
+Use the algebraic QI2–QI10 scalar decomposition for the formal C1 comparison. It is an identity derived from the complete SC3 quadratic; no positive-$\beta^0$ theorem is invoked. Its finite q-coquotients have bounded arrays through both openings by SC5 and the unit denominators. The original QI6 coefficients have residues $(2,-8,2,2)$ on $(A_*^2,\Gamma^2,B_*^2,D_*^2)$; its $X_V$ has residue 2, $Y_V$ has residue 0, and the hard/scalar extraction has no unlisted state direction. The original QI dangerous coefficient is $-4(wg/c)vB_*C_*$; it is not bounded in that form when $\tau$ is infinitesimal.
+Every new term from (10)–(14), the current and the QI6 scalar has one of the following exact bounded allocations:
+Raw occurrenceExact change of rootsCoefficient controlling its residue
+$\lambda U A_*^2,\lambda V A_*^2$$L(uE_*+bC_*)^2,\ L(F_*+gD_*)^2$$L\in\mathrm I_c$
+$\lambda U\Gamma^2,\lambda V\Gamma^2$$LbC_*(uE_*+bC_*),\ L(F_*+gD_*)(F_*+gD_*-vE_*)$$L\in\mathrm I_c$
+$\lambda UB_*^2$$M_1(F_*+gD_*)^2$$M_1\in\mathrm I_c$
+$\lambda VB_*^2$$nC_*^2-2\sqrt n\,vC_*J_3+v^2J_3^2$$n,\sqrt n,v$ infinitesimal
+$(wg/c)vB_*C_*$$wzC_*^2-(wz/\sqrt n)vC_*J_3$$wz\in\mathrm I_c$; $(wz/\sqrt n)v\in\mathrm I_t\mathcal B$
+$q, U,V$ scalar coefficients in (14)The five formulas above$L,M_1,n$ or a testing $u,v$ factor
+$J_3$ current square(6)–(7) and UL15$d_N, D_uD_v-1$ infinitesimal
+Extra $\Gamma E_*,\Gamma F_*,\Gamma J_3$Contact divisions belowExact source ratios in (15)
+
+
+
+
+The sixth and seventh entries include all $L\mathsf c E_*^2$ and $4D_u\delta\alpha_bD_*^2/q^2$ contributions: their factors are $L$, respectively $\delta\alpha_b/q^2=L\,O(S+e)$. The generic QI6 terms multiplying $u,b,g,z,S,q,v$ are also residue-small after the strict pivots are removed. The table is exhaustive because QI6 contains only its listed four toric monomials, $E_*^2$, $(vh_t)^2$, the two $uE_*+bC_*$ terms, the $Y_V$ term, and the sole dangerous $BC$ cross term.
+The coefficient families remaining linear in the non-root $\Gamma$ have bounded testing divided differences and precisely these contact ratios:
+\begin{array}{c|c|c}
+\text{family}&\text{new coefficients}&\text{contact ratio}\hline
+\Gamma E_*&Lbu,\ Lgv&(Lbu_c)/c=LS,\ (Lgv_c)/c=Lz\\
+\Gamma F_*&Lg,\ M_1g&(Lg)/g=L,\ (M_1g)/g=M_1\\
+\Gamma J_3&\epsilon_B=-2\sqrt n\,v,\ \epsilon_T=(wz/\sqrt n)v&
+\sqrt\lambda\,\epsilon_B|_c=-2n,\ \sqrt\lambda\,\epsilon_T|_c=e.
+\end{array}\tag{15}The old QI $\Gamma E_*,\Gamma F_*$ ratios are $b^2(2X_U+Y_U)+Y_Vg^2\in\mathrm I$ and $2(X_V-2)\in\mathrm I$, respectively. For each bounded rational coefficient $t(u,v)$, use ordered monic testing differences
+$ t-t_c=(u-u_c)t_u+(v-v_c)t_v,
+\tag{16}$whose coefficient arrays are bounded because the denominators are products of $D_u$ and source units. Then
+$ \Gamma(u-u_c)=\sqrt{uu_c}\,Q_{13|24},\quad
+ \Gamma(v-v_c)=\sqrt{vv_c}\,Q_{23|14}
+\tag{17}$convert all nonconstant terms into root products with vanishing factors $\sqrt{uu_c},\sqrt{vv_c}$. Constant $\Gamma E_*,\Gamma F_*$ terms use the exact identities
+$ c\Gamma E_*=2\Gamma(A_*-\Gamma)-R_E^2,\quad
+ \Gamma F_*=-2g\Gamma(D_*-\Gamma)+R_F^2/g,$with the small ratios in (15). Constant $\Gamma J_3$ uses UL15: its $V_3^2$ coefficient is $\epsilon_c/\sqrt\lambda\in\mathrm I$ and its $\Gamma(B_*-\Gamma)$ coefficient is $2\sqrt\lambda\epsilon_c\in\mathrm I$. Its nonconstant coefficient again uses (16)–(17). Thus every bare-$\Gamma$ exceptional term is allocated with bounded zero-residue coefficients, without a source/testing rate comparison or $1/c,1/g,1/\sqrt n$ left unpaired.
+For the first hard-normal row, use (11) and (13). The $qF_{Nq}$ term becomes a bounded infinitesimal multiple of $B_*$ after division by $\sqrt{H_0}$; the $V$ and $zU D_v$ terms use
+$ \lambda cVB_*=Lg\,vC_*-\sqrt L\,v^2J_3,\quad
+ \lambda czUB_*=Lbg\,v(uE_*+bC_*).$The coefficients after normalizing by $\sqrt{H_0}$ are bounded combinations of
+$ (Lg/\sqrt{H_0})v,\quad \sqrt{L/H_0}\,v^2,\quad
+ (Lbg/\sqrt{H_0})v,\quad (Lc/\sqrt{H_0}),\quad (Lbg/\sqrt{H_0})uv,$all zero residue by (1)–(2). The unchanged formal-QI row, normalized by the actual $H_0$, has factors $q/(c\sqrt{H_0})=c/\sqrt{H_0}\in\mathrm I_c$; it is not normalized by a hypothetical comparable formal $H_0^0$.
+For the second hard-normal row, (12) and (13) give $R\mathsf F_H+\mathsf F_v=qT_q+UT_U+VT_V$ with bounded arrays. Since $H=R(E_*+v)$, apply
+$ qv=cA_*-qE_*,\quad Uv=buC_*,\quad
+ Vv=v(F_*+gD_*-vE_*).$Every coefficient carries $L/\sqrt\sigma$ and/or a positive source/testing infinitesimal. The unchanged formal-QI normal uses the exact QI9 D-root and QI10 monic identity with the actual/formal $\sqrt\sigma$ ratio, a pure-source unit of residue one. Thus both complete normal rows have bounded zero-residue root coefficients before the final contact division.
+4. Finite toric and normal contact conductor; the resulting matrix
+Take the sixteen SC16 roots, specifically four $\alpha_i=A_i-\Gamma$, three $Q_{ij|kl}=\sqrt{A_iA_j}-\sqrt{A_kA_l}$, six $D_{ij}=\sqrt\Gamma(\sqrt{A_i}-\sqrt{A_j})$, three $P_{ij|kl}=\sqrt\Gamma((A_iA_j)^{1/4}-(A_kA_l)^{1/4})$. Append the QI roots $E_*,F_*,R_E,R_F$ and the four hard/current roots $\widehat N,N_y,J_3,V_3$. This fixes an ordered 24-column $\mathscr R_{24}$; all of its roots vanish at the actual contact.
+For each of the three perfect pairings $\pi=(ij|kl)$, let
+$ T_{\rm diff,\pi}=(\alpha_i-\alpha_j)^2+(\alpha_k-\alpha_l)^2+2Q_\pi^2,\quad
+ T_{\rm var,\pi}=\sum_i\alpha_i^2+2D_{ij}^2+2D_{kl}^2+4P_\pi^2.$Both are identically $T_4=\sum_iA_i^2-4\Gamma^2$. Hence
+$ 2T_4=\frac13\sum_\pi(T_{\rm diff,\pi}+T_{\rm var,\pi}).
+\tag{18}$This is a strict constant coefficient Gram on all 16 roots: the $\alpha$ diagonal is at least 1, and the $Q,D,P$ diagonal pivots are respectively $2/3,2/3,4/3$. Set the positive reference matrix $G_0$ by
+$ \mathscr R_{24}^TG_0\mathscr R_{24}=2T_4+(2-q)E_*^2+2F_*^2+4R_E^2+4R_F^2+\widehat N^2+4N_y^2+J_3^2+4V_3^2.
+\tag{19}$Since $q$ is infinitesimal, its real residue is strictly positive definite. The algebraic QI5 coefficients and (6)–(7) identify exactly this strict leading form.
+Here is the entire tail algorithm, which constructs every matrix entry without an SDP solver or infinite series:
+Start with the complete parent (3)–(4), take the two complete normal derivatives, and subtract (5)–(7) and (19). Use the algebraic QI6 source decomposition and the actual differences (10)–(12).
+Apply the ordered numerator differences $q,U,V$ of (14), followed by the seven exact radical and toric rewrites in the table and (15). Expand only into products of the listed contact roots and bare-$\Gamma$ terms.
+Apply the ordered differences $u-u_c$, then $v-v_c$, to the three bare-$\Gamma$ families, and use (17), QI7 and UL15. Their contact ratios are (15), so every resulting Gram coefficient is bounded with zero residue.
+After those operations, the only non-root scalar part is $\sum_i(2+\epsilon_i)A_i^2-(8+\epsilon_\Gamma)\Gamma^2$, with $\epsilon_i,\epsilon_\Gamma$ bounded and zero residue. Put $\sigma_{\rm tor}=\sum_i\epsilon_i-\epsilon_\Gamma$. Subtract (18) to obtain$ \sum_i\epsilon_i\alpha_i^2+2\Gamma\sum_i\epsilon_i\alpha_i+\Gamma^2\sigma_{\rm tor}.$The original complete parent and every retained contact-zero square have zero value and first jets at the actual contact, so $\sigma_{\rm tor}(u_c,v_c)=0$. Divide it monically in $u,v$, use (17), then the polynomial identity$ Q_{ij|kl}-\tfrac12(A_i+A_j-A_k-A_l)
+ =-\tfrac12(\sqrt{A_i}-\sqrt{A_j})^2+\tfrac12(\sqrt{A_k}-\sqrt{A_l})^2.$This leaves $\Gamma\sum_i\mu_i\alpha_i$. The exact three scalar first jets force the four values $\mu_i(u_c,v_c)$ to coincide: the four contact derivative rows of $\alpha_i/\Gamma$ have rank three and sole relation $(1,1,1,1)$. The common coefficient multiplies $\Gamma\sum_i\alpha_i=\Gamma(\sum_iA_i-4\Gamma)$, a sum of variance roots from (18). Each remaining $\mu_i-\mu_*$ is divided monically in $\sqrt u$, then $\sqrt v$, using the exact SC20 identities$ \Gamma(\sqrt u-\sqrt{u_c})=(uu_c)^{1/4}P_{13|24},\quad
+ \Gamma(\sqrt v-\sqrt{v_c})=(vv_c)^{1/4}P_{23|14}.$The added coefficient factors $(uu_c)^{1/4},(vv_c)^{1/4}$ have zero residue. The divided differences remain bounded (testing denominators are powers of $1+u^2$; source denominators are positive units).
+For each complete normal, the remaining terms after the table have form $N_T\sum_i a_{Ti}(u,v)A_i$ plus already root-products, with all $a_{Ti}$ bounded and zero residue. Contact first-normal stationarity makes $\sum_i a_{Ti}(u_c,v_c)=0$. Rewrite $A_i=\alpha_i+\Gamma$, then divide the sum monically in $u,v$ and apply (17). This gives zero-residue products of that normal with SC16 roots. The hard quadratic is already fully extracted in step 1.
+Each generated term $t r_ir_j$ contributes $t/2$ to the two symmetric off-diagonals if $i\ne j$, or $t$ to a diagonal; a retained square $t(\sum a_ir_i)^2$ contributes $t aa^T$. The resulting symmetric 24-by-24 matrix is uniquely prescribed by this ordered rewrite algorithm (not by a claimed uniqueness of Gram representatives).
+All operations consist of finite polynomial arithmetic, coefficient extraction, and monic division. We clear only source and testing unit denominators first and restore them afterward. No division by a contact difference, $q,z,n,h,1-h,M,u_c,v_c$, or a mixed source/testing expression is performed in a bounded coefficient. The exceptional inverse radicals in (15) were combined into bounded coquotients before the matrix is constructed. Every difference coefficient is either source-small $L,M_1,n,z,q,S,e$, testing-small $u,v$, or multiplied by a conductor $\sqrt{uu_c},\sqrt{vv_c},(uu_c)^{1/4},(vv_c)^{1/4}$, so all coefficients in the tail matrix $\Delta$ have zero residue. We have the exact identity
+$ \boxed{F/S=\Pi_m+\Pi_v+\Pi_{n,1}+\Pi_{n,2}+\Pi_E
+       +\mathscr R_{24}^T(G_0+\Delta)\mathscr R_{24},\quad
+       \Delta\in\operatorname{Sym}_{24}(B_c\otimes B_t),\quad\bar\Delta=0.}
+\tag{20}$The strict bounded-Gram lemma applies pointwise in the independently labelled source/test fields: the positive-definite real residue of $G_0$ absorbs the bounded zero-residue perturbation. No uniform source margin is required. Multiplying by the positive pure-source $S$ restores the entire original parent on the indicated chart. This is a qualitative separated tensor SOS, not a fixed affine Gram or SDP lift.
+5. R2O interface: UL needs no difficult finite caps
+For arbitrary finite testing angles define the exact reflected state
+$\begin{split}
+ G\psi=(&uvW-uX-vY+Z,\ -vW+X-uvY+uZ,\\
+       &-uW-uvX+Y+vZ,\ W+vX+uY+uvZ).
+\end{split}$The exact polynomial checks give $G^TG=D_uD_vI$ and, for the reflected coefficient permutation $(\lambda',n',m',C',A',D',\alpha',\beta')=(\alpha,m,n,C,D,A,\lambda,\beta)$,
+$ F_{c'}(v,u;G\psi)=D_uD_vF_c(u,v;\psi).
+\tag{21}$Retain the positive reflected $\lambda'=\alpha$ event unchanged. From the full native RER source identities, $g_*=\mathsf C\mathsf D/(\mathsf C+\mathsf D)$ is unbounded, while $\gamma=\mathsf A g_*\sim k^2/4$ is a positive unit. Here
+$ k=\frac{1+ar}{1+a}=1-\frac{zw}{1+z},
+\tag{22}$so $\bar k=1$ throughout UL1 (even if $w,h,1-h$ are infinitesimal). This reduces the entire R2O join:
+Reflected Bob $v$ noninfinitesimal (including infinity): the exact whole-parent R2O10 current identity has $2\times2$ Gram$ \begin{pmatrix}1-c_u^2\eta_v^2/(2g_*)&t_u\eta_v/\sqrt{2g_*}\\
+ t_u\eta_v/\sqrt{2g_*}&1\end{pmatrix}$with residue $I_2$, since $1/g_*$ is infinitesimal and $c_u,t_u,\eta_v$ bounded. It retains the other original event packets and every state coordinate.
+Reflected Bob $v$ infinitesimal, reflected Alice $u$ noninfinitesimal: the exact R2O11 selected-parent Gram on $(K_1,B_1,V_0,Y_1)$ has residue $\operatorname{diag}(1,2,2,1-\bar c_u^2)$. Since $u$ has positive unit or infinite residue, $\bar c_u^2=(1+\bar u^2)^{-1}<1$; this is strictly positive. No finite cap and no R2O13–24 case is needed.
+If reflected $u,v$ are both infinitesimal, this is precisely the original UL local leaf handled by (20).
+The exact R2O10/11 identities have been checked after eliminating their pure source/testing radicals, as has the full reflection (21). Original literal axes and projective infinities follow from the CHSH core's direct commuting-measurement squares plus the original event squares (the SJ10 endpoint statement, not an assumed full C2 theorem). The original sign gauge, projective state charts and real/imaginary split restore every state and angle; the testing normalization $D_uD_v$ is positive and purely testing. Thus (20) and this interface prove precisely the UL1 all-testing branch, relative only to the named algebraic inputs and the elementary projective state-entry lemma.
+6. Dependencies and scope of verification
+Independently verified in the attached checker: full SC3 identity from SG2 including all ten state monomials and original $n$ packet; the exact full Bell reflection (21); R2O10 and R2O11 selected-parent identities; the UL8/UL9 exceptional substitutions, UL15 radial-square identities, SC16 toric decompositions, and the necessary source specializations (UL7, UL10, UL13).
+Algebraic imported identities with explicit content and no circular physicality: TU9 six source differences, SC4–SC5 opening cancellation, QI2–QI10 full generic scalar and normal source-coefficient formulas, SC17–SC20 contact/toric conductors. The proof above uses only those polynomial equalities and the bounded coquotient consequences established from them, not the physical C1 theorem at a negative formal $\beta$.
+Independent physical input: actual C2 RER source stationarity and its positive unit source bounds; the signed-core/projective state-entry and endpoint identities SJ. These do not assert the whole UL tensor-SOS theorem.
+Not covered: the TU bounded-$\lambda$ R2 source branch, bounded-native-$a$ R2 branches, literal $n=0$ in UL1 (impossible under its positive-unbounded $\lambda$ premise), other C2 source sectors, C1 sectors, or either full global qualitative/extracted SDP theorem.
+The checker is intentionally an algebraic replay of the load-bearing identities, not an output of the final 24-by-24 matrix; the latter is specified by the deterministic finite mathematical algorithm in §4. If the QI2–QI10 algebraic equalities are withdrawn rather than established from their printed definitions, (20) must be read as conditional on them. No boundedness or positivity follows merely from the checker reporting zero polynomial differences.
+
+
+
+
+
+
+
+
+

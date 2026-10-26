@@ -1,0 +1,414 @@
+\section{A bounded-shape one-weak C2 family, at all tests}
+\label{sec:c2-general-single-angle}
+
+This module gives a source-domain extension of the fixed rational
+family.  Its scalar uniqueness proof is an exact six-term Laurent
+identity and a three-cycle arithmetic--geometric mean inequality.
+The full-normal and outer-chart arguments include literal $n=0$.
+
+Put $x>0$ infinitesimal in the coefficient field and $\rho=\sqrt{x}$.
+Choose positive bounded coefficient units $k,b,r,h$ such that
+\[
+ 1-r,\quad b-h,\quad g=b-1+r+xh,\quad b-k^2r
+\]
+are positive bounded units.  Set
+\[
+ c=\rho,\quad a=k/\rho,\quad t=x(b-h)/k^2,
+ \quad j=1+xr-t,\quad a_2=k^2/x,
+ \quad A_c=1+xr,\quad S_c=A_c+a_2xt.
+\]
+Thus $h=b-a_2t$, $g=(1+x)b-(1-r+a_2xt)$, and $j=1+xr-t$.
+Use the exact original rational source
+\begin{align*}
+ \Delta={}&(1+x)xb^2+2x(1+x)br+(1+x)(1+a_2x)b
+       +x^2(1-a_2)r^2+2x(1+a_2x)r+1+a_2x,\\
+ N={}&(1+x)(b+r)(b+a_2(1-t))-a_2(1+a_2x)(1-r)t,\\
+ n={}&\frac{(b+r)A_cS_c-r\Delta}{2r\Delta},\\
+ m={}&\frac{(1+a_2x)(1-r)A_cS_c}{2g\Delta},\\
+ C={}&\frac{A_cN}{2a_2t\Delta},\\
+ A={}&\frac{a_2A_c(b+r)S_c}{2h\Delta},\\
+ D={}&\frac{(1+x)(b+r)(b-a_2xr)S_c}{2a_2j\Delta},\\
+ \alpha={}&\frac{x^2(b+r)N}{2(1-xh)\Delta}.
+\end{align*}
+Assume $n\geq0$ and physicality of this canonical source.  The latter
+is the same inherited source-physicality hypothesis used for the
+general noncommuting-residue exit; no conclusion below is predicated
+on a new source enumeration.  Literal $n=0$ is allowed.
+
+The parent, with $d=1$ and $\lambda=\beta=0$, is
+\begin{align*}
+ F={}&4nD_uD_vX^2+4mM^2+4CD_v(uW-Y)^2+4AD_uD_vY^2
+                +4DJ^2+4\alpha D_u(vY-Z)^2+H,\\
+ M={}&vW-X+uvY-uZ,\qquad J=uW+uvX-Y-vZ,\\
+ H/2={}&J^2+D_u(vY-Z)^2+D_v(X+uZ)^2-D_uD_vZ^2,
+ \qquad D_u=1+u^2,\quad D_v=1+v^2.
+\end{align*}
+Its exact stationary contact is
+\[
+ (u,v;W,X,Y,Z)=(\rho,k;\rho b/k,-\rho r,xh/k,1).
+\]
+Writing $\kappa=b/k$ and using a subscript zero for residues gives
+\begin{align*}
+ \Delta_0&=(1+k_0^2)(b_0+1),\qquad
+ n_0=\frac{b_0+r_0-r_0\Delta_0}{2r_0\Delta_0}\geq0,\\
+ m_0&=\frac{1-r_0}{2(b_0-1+r_0)(b_0+1)}>0,\\
+ C_*:=(xC)_0&=\frac{k_0^2(b_0+r_0)}{2(b_0-h_0)\Delta_0},\qquad
+ A_*:=(xA)_0=\frac{k_0^2(b_0+r_0)}{2h_0\Delta_0},\\
+ D_*:=(D/x)_0&=\frac{(b_0+r_0)(b_0-k_0^2r_0)}{2k_0^2\Delta_0},\qquad
+ E_*:=(\alpha/x)_0=\frac{k_0^2(b_0+r_0)^2}{2\Delta_0}.
+\end{align*}
+All starred quantities are positive.  Thus $n$ is bounded, $m$ is a
+positive unit, $C,A$ have scale $x^{-1}$, and $D,\alpha$ have scale $x$.
+
+\begin{theorem}[General bounded-shape single-angle source]
+\label{thm:c2-general-single-angle}
+Every source in the displayed domain has tensor SOS for the full
+original parent at all independent real or complex projective testing
+states and all projective testing angles.  No comparison between a
+coefficient infinitesimal and a testing infinitesimal is needed.
+The conclusion includes $n=0$.  Applying the exact C2 reflection gives
+the corresponding original orientation with weak $C$ and strong
+$\alpha$; this is a sufficient source domain, not a global one-weak
+C2 classification.
+\end{theorem}
+
+\paragraph{The finite $u=0$ axis and its full normals.}
+Set $a_0=4m_0$, $b_0'=a_0+2$, and
+\[
+ H_0(v)=(4n_0+2)(1+v^2)+a_0,\quad \eta=h/b,
+ \quad \gamma=-r-\frac{a_0b-b_0'}{H_0(k)}.
+\]
+Here $\gamma$ is infinitesimal and $\eta_0=C_* /(C_*+A_*)$.
+Use the exact contact graph
+\[
+ X_g=\frac{a_0vW-b_0'uZ}{H_0(v)}+\gamma uZ,
+ \qquad Y_g=\eta uW.
+\]
+The denominator $H_0(v)$ is a pure testing unit and $H_0(k)$ is a
+pure coefficient unit.  Let $N_X=X-X_g$, $N_Y=(Y-Y_g)/\rho$.
+Writing $f=F|_g=f_{ww}W^2+f_{wz}WZ+f_{zz}Z^2$, exact monic divisions give
+\[
+ f=aP^2+b_s B^2+c_s V^2+eE^2+g_sBV,
+ \qquad(P,B,V,E)=(uW/\rho,uZ,vW,\rho Z),
+\]
+where
+\[
+ \begin{gathered}
+ a=x(f_{ww}-f_{ww}|_{u=0})/u^2,\qquad
+ b_s=(f_{zz}-f_{zz}|_{u=0})/u^2,\\
+ c_s=f_{ww}|_{u=0}/v^2,\qquad e=f_{zz}|_{u=0}/x,\qquad
+ g_s=f_{wz}/(uv).
+ \end{gathered}
+\]
+These displayed quotients are polynomial divisions, not inverses of
+testing infinitesimals.  Parity gives the divisions by $u^2,v^2,uv$;
+$f_{zz}|_{u=0}=4Dv^2+4\alpha$ gives the $x$ factor.  Only $C,A$ can
+produce coefficient poles, and they occur in $f_{ww}$ with a factor
+$u^2$; its prefactor $x$ removes them.
+
+Put $Q=4C_*A_* /(C_*+A_*)>0$.  The bounded coefficient residues are
+\begin{align*}
+ q(v)=a_0^{\rm sc}&=Q D_v,&
+ b(v)&=b_0'\frac{H_0-a_0-2}{H_0},\\
+ \bar c(v)&=a_0\frac{H_0-a_0}{H_0},&
+ g(v)&=-2b_0'\frac{H_0-a_0}{H_0},&
+ e(v)&=4D_*v^2+4E_*.
+\end{align*}
+Thus $c(v):=v^2\bar c(v)$ and $d(v):=-vg(v)$ give the weighted
+leading scalar
+\[
+ q(v)u^2W^2/x+b(v)u^2Z^2+c(v)W^2-d(v)uWZ+e(v)xZ^2.
+\]
+The full expansion is
+\[
+ F=f+N_XL_X+N_YL_Y+H_{XX}N_X^2+2H_{XY}N_XN_Y+H_{YY}N_Y^2.
+\]
+Its hard residue is $\operatorname{diag}(H_0(v),4D_v(C_*+A_*))$.
+Direct differentiation gives
+\[
+ L_X=V\ell_w+B\ell_z,\qquad
+ L_Y=P(B_2+xe_w)+B(\rho u e_z)+E e_*,
+\]
+where
+\[
+ B_2=8D_v\{(xA)\eta D_u-(xC)(1-\eta)\},\qquad
+ e_*=8v(D-\alpha).
+\]
+All $\ell_w,\ell_z,e_w,e_z$ are bounded; the residues of
+$\ell_w,\ell_z,B_2,e_*$ vanish identically in finite $v$.
+For the second identity, after subtracting $uWB_2/x$ from $F_Y|_g$,
+the remaining $W$ coefficient is $ue_w$ and the remaining $Z$
+coefficient is $u^2e_z+e_*$.  The constant signed-core derivatives
+cancel.  This proves full normal restoration wherever the scalar
+Gram on these four roots is strict.
+
+\paragraph{Global scalar strictness by an exact cycle identity.}
+Let $\nu=2n_0+1\geq1$, $\mu=2m_0+1>1$, $z=v^2$,
+$\mathcal H=\nu(1+z)+\mu-1$, $e_2=4D_*$ and $e_0=4E_*$.  Then
+\[
+ b=\frac{2\mu(\nu(1+z)-1)}{\mathcal H},\quad
+ c=\frac{2(\mu-1)z\nu(1+z)}{\mathcal H},\quad
+ d=\frac{4\mu v\nu(1+z)}{\mathcal H},\quad
+ e=e_2z+e_0.
+\]
+For $s,z>0$ define
+$\mathcal D(s,z)=(q s+c)(b s+e)-d^2s/4$.
+The following exact identity is the key:
+\begin{align*}
+ \frac{\mathcal H\mathcal D(s,z)}{(1+z)sz}
+ ={}&2Q\mu(\nu-1)s/z+2Q\mu\nu s
+ +2(\mu-1)\nu e_2z/s+2(\mu-1)\nu e_0/s\\
+ &+Qe_0(\nu+\mu-1)/z+Qe_2\nu z\\
+ &+Q\{e_2(\nu+\mu-1)+e_0\nu\}-4\mu\nu.
+\end{align*}
+Every nonconstant coefficient is positive, except the first may be
+zero when $n_0=0$.  Exact contact and stationarity, followed by taking
+residues, give a stationary zero at $(s,z)=(1,k_0^2)$.  Here is an
+algebraic proof that it is the unique zero on the whole positive
+quadrant.  Rescale $z=k_0^2t$ and write the Laurent expression as
+\[
+ \mathcal L=a_\ell s/t+b_\ell s+c_\ell t/s+d_\ell/s
+                      +e_\ell/t+f_\ell t-\Sigma,
+ \qquad \Sigma=a_\ell+b_\ell+c_\ell+d_\ell+e_\ell+f_\ell.
+\]
+The constant term has this form by its zero value at $(1,1)$.
+Stationarity gives
+$a_\ell-c_\ell=d_\ell-b_\ell=f_\ell-e_\ell=:\tau$.
+Put $p_\ell=\min(a_\ell,c_\ell)\geq0$,
+$q_\ell=\min(b_\ell,d_\ell)>0$,
+$r_\ell=\min(e_\ell,f_\ell)>0$.  Exactly,
+\begin{align*}
+ \mathcal L={}&p_\ell(s/t+t/s-2)+q_\ell(s+1/s-2)
+                              +r_\ell(t+1/t-2)\\
+ &+\begin{cases}
+ \tau(s/t+1/s+t-3),&\tau\geq0,\\
+ (-\tau)(t/s+s+1/t-3),&\tau\leq0.
+ \end{cases}
+\end{align*}
+Each bracket is nonnegative by the two- or three-term
+arithmetic--geometric mean inequality.  The two strictly positive
+pair terms force $s=t=1$ at equality.  They also give a positive
+definite Hessian there: the other brackets are nonnegative and
+vanish at that point.  Thus both remote uniqueness and local
+nondegeneracy are proved by the same finite algebraic identity, over
+any real closed residue field.  No inference from a merely local
+Hessian is being used.
+
+Consequently, for finite nonzero $v$ with $v^2\ne k_0^2$,
+\[
+ |d(v)|<2\sqrt{b(v)c(v)}+2\sqrt{q(v)e(v)}.
+\]
+Indeed the minimum of $\mathcal D(s,z)/s$ over $s>0$ is
+$(\sqrt{bc}+\sqrt{qe})^2-d^2/4$ and is attained, so positivity is
+strict.  Split the exact cross term using $BV=vPE$ and the pure
+testing function
+\[
+ \theta=\frac{|v|\sqrt{b(v)\bar c(v)}}
+ {|v|\sqrt{b(v)\bar c(v)}+\sqrt{q(v)e(v)}}.
+\]
+The resulting residue blocks on $(B,V)$ and $(P,E)$ are strictly
+positive.  The denominator is a pure testing unit.  At $v_0=0$ the
+same conclusion holds when $n_0>0$, with zero cross residues.
+The case $n_0=0,v_0=0$ is treated separately below.
+
+\paragraph{The matched finite-angle residue.}
+For $v_0=k_0$, normalize $Z=1$ when $Z\ne0$.  If $W$ is
+infinitesimal, put
+\[
+ R=(uW-\kappa x)/\rho,\quad S=u-\kappa^{-1}W,
+ \quad U=\rho(v-k),\quad T=u(v-k).
+\]
+The exact conductors are
+\[
+ u^2-x=uS+\kappa^{-1}\rho R,\qquad
+ W^2-\kappa^2x=-\kappa WS+\kappa\rho R,
+ \qquad uW-\kappa x=\rho R.
+\]
+Write $\xi=u^2,\omega=W^2,p=uW$ and
+\[
+ f=p^2Q_b/x+B_b,\qquad
+ Q_b=4D_v\{(xC)(1-\eta)^2+(xA)\eta^2D_u\}.
+\]
+Here $B_b$ is bounded and polynomial in these three invariants with
+only the separate unit denominators already specified.  Put
+$G=\kappa^2xQ_b+B_b$ and take successive monic differences
+\[
+ G=G_0(v)+(\xi-x)G_\xi+(\omega-\kappa^2x)G_\omega
+                    +(p-\kappa x)G_p.
+\]
+Exactly,
+\[
+ f=R^2Q_b+\kappa^2S^2G_\omega+\rho R\mathcal A+uS\mathcal B+G_0,
+\]
+where $\mathcal A=2\kappa Q_b+\kappa^{-1}G_\xi+
+\kappa G_\omega+G_p$ and $\mathcal B=G_\xi-\kappa^2G_\omega$.
+The contact Jacobian of $(R,S)$ with respect to $(u,W)$ has
+determinant $-2$.  Exact stationarity therefore gives
+$\mathcal A_c=\mathcal B_c=0$.  Cancelling $\rho$ here proves
+vanishing and does not introduce a Gram coefficient inverse.
+Monic contact division of these two functions and the conductors
+above give a bounded Gram on $(R,S,U,T)$.
+Also $G_0=xg_0(v)$ with bounded $g_0$, and exact contact gives a
+double factor $(v-k)^2$, producing its bounded $U^2$ coefficient.
+
+The full normals have zero-residue lifts on these roots.  For $L_X$,
+write $L_X=uA_1+WB_1=-\kappa B_1S+u(A_1+\kappa B_1)$.
+Both coefficient functions have identically zero leading part for
+every $v$; exact normal contact makes $A_1+\kappa B_1$ vanish at
+contact.  Monic division gives coefficients with factors $u\rho$,
+$u^2$, or $uW$, and a $(v-k)$ quotient of an identically zero
+leading function.  All have zero residue.  For $L_Y$, write
+$L_Y=RB_2+\rho E_2$.  Its bounded even $E_2$ vanishes exactly at
+contact, and both $B_2,E_2$ have identically zero leading part.
+Monic division gives factors $x,\rho u,\rho W$, or the same
+zero-leading-function quotient.  Thus the entire normal restoration
+is bounded and has zero residue.
+
+The soft residue has the form
+\[
+ q(k_0)R^2+\kappa_0^2c(k_0)S^2+A_1'RU+B_1'ST+E_1'U^2.
+\]
+It satisfies
+\[
+ E_1'>\frac{(A_1')^2}{4q(k_0)}+
+          \frac{(B_1')^2}{4\kappa_0^2c(k_0)}.
+\]
+To prove this strict inequality, the leading scalar at
+$u=\rho s,W=\rho w$ is
+$\Phi=q s^2w^2+b s^2+c w^2-dsw+e$.
+Complete its $w$ square:
+\[
+ \Phi=(qs^2+c)\left(w-\frac{ds}{2(qs^2+c)}\right)^2
+           +\frac{\mathcal D(s^2,v^2)}{qs^2+c}.
+\]
+The global Laurent calculation gives a positive definite Hessian of
+the second term in $(s,v)$ at $(1,k_0)$; both coordinate derivatives
+are nonzero there.  The first square supplies the missing $w$
+direction.  Hence the full three-variable Hessian is positive
+definite.  On first variations $T=U$; the displayed inequality is
+exactly its Schur complement after the invertible $(R,S)$ change.
+Choose a real $\delta$ strictly between the second summand and
+$E_1'-(A_1')^2/(4q(k_0))$.  Add $\delta$ times the exact zero
+\[
+ T^2-U^2-ST(v-k)-\kappa^{-1}RU(v-k)=0.
+\]
+The two blocks $(R,U)$ and $(S,T)$ are now strictly positive, and so
+is the full six-root residue Gram.
+
+If the ratio $W/Z$ is not infinitesimal, instead normalize $W=1$;
+then $Z$ is bounded.  The earlier scalar is $aP^2$ plus a term of
+positive residue $c(k_0)$; its normal lifts have zero residue on
+$(P,1)$.  This is strict.  The case $Z=0$ is a literal sum of the
+event squares and the three positive core squares.  The simultaneous
+sign change $(u,v,X,Y)\mapsto(-u,-v,-X,-Y)$ covers $v_0=-k_0$.
+
+\paragraph{The double-zero corner when $n_0=0$.}
+Use instead the pure coefficient quantities
+\[
+ H_c=4n+4m+2,\quad \xi_c=4m/H_c,\quad
+ \zeta=(4m+2)/H_c,\quad \eta_c=C/(C+A),
+\]
+and graph $X_g=\xi_cvW-\zeta uZ$, $Y_g=\eta_cuW$.
+Put $\epsilon=4\alpha+4n(4m+2)/H_c>0$.
+Then $\epsilon$ is infinitesimal, while $n/\epsilon$ and
+$x/\epsilon$ are bounded.  Use the hard roots as before and scalar
+roots
+\[
+ P=uW/\rho,\quad V=vW,\quad E=\rho Z,\quad
+ B_\epsilon=\sqrt\epsilon\,uZ,\quad T=uvZ.
+\]
+Direct packet expansion gives exactly
+\[
+ f_{zz}=4\alpha+\epsilon u^2+4n\zeta^2u^4+4Dv^2
+                         +u^2v^2 B_b,
+\]
+where $B_b$ is bounded with residue $2$.  Its first four terms
+give coefficients $4\alpha/x$, $1+(4n\zeta^2/\epsilon)u^2$,
+and $(4D/x)v^2$ on $E^2,B_\epsilon^2,E^2$ respectively.  The
+$W^2$ contribution has bounded coefficients on $P^2,V^2$ with
+positive residues $Q$ and $4m_0/(2m_0+1)$.  The $WZ$ contribution
+is $uvWZ$ times a bounded function; use $uvWZ=vPE$ to give it zero
+cross residue.  Thus the five scalar roots have strict diagonal
+residue $(Q,4m_0/(2m_0+1),4E_*,1,2)$.
+
+For completeness, $L_X$ has a zero-residue bounded coefficient on
+$V$.  At $v=0$ its $Z$ coefficient is exactly $-8n\zeta u^3$;
+on $B_\epsilon$ this is $-8n\zeta u^2/\sqrt\epsilon$, which is
+infinitesimal because $n/\epsilon$ is bounded.  The remaining
+$Z$ coefficient has a factor $uv^2$, giving a zero-residue multiple
+of $T$.  For $L_Y$, the large-packet coefficient is now exactly
+$B_2=8D_v(xA)\eta_cu^2$; the remaining terms lift as
+\[
+ L_Y=P(B_2+xe_w)+T(\rho u e_z)+E\,8v(D-\alpha),
+\]
+with bounded $e_w,e_z$.  All coefficients have zero residue.  The
+hard residue is $\operatorname{diag}(4m_0+2,4(C_*+A_*))$.
+This includes literal $n=0$ without deleting a coordinate.
+
+\paragraph{The remaining commuting charts.}
+The following exact core identities retain all unused event packets.
+Every retained coefficient is nonnegative; in particular the $n$
+packet can be retained even when $n=0$.  They prove strict bounded
+Grams without dividing by a testing infinitesimal.
+
+If $u$ is a finite unit and $v\to0$, take
+\[
+ R=(uW-Y)/\rho,\quad L=Y/\rho,\quad B=X+uZ,\quad V=vZ.
+\]
+Then $M=-B+(\rho v/u)(R+D_uL)$, and exactly
+\begin{align*}
+ H/2={}&(1+D_uv^2)B^2+u^2D_uV^2-2uvD_uBV\\
+ &+2\rho R(uvB-D_uV)+xR^2-2D_u\rho LV+D_uxv^2L^2.
+\end{align*}
+Retain $n,D,\alpha$.  The residue on $(B,V,R,L)$ is diagonal
+with entries $(4m_0+2,2u_0^2D_{u,0},4C_*,4A_*D_{u,0})$.
+
+If $u\to\infty$ and $v$ is finite, put $p=1/u$ and use $p^2F$.
+Take $R=(W-pY)/\rho$, $L=Y/\rho$, $B=Z+pX$, $V=vX$.
+The homogenized $m$ amplitude is
+$-B+\rho pvR+\rho vD_pL$, and the exact core is
+\begin{align*}
+ \widehat H/2={}&B^2+D_pV^2+2\rho D_pRV-2\rho pvRB+xR^2\\
+ &+2D_p\rho pLV-2D_p\rho vLB+D_pxv^2L^2.
+\end{align*}
+Retain $n,D,\alpha$.  The residue on $(B,V,R,L)$ is diagonal
+with entries $(4m_0+2,2,4C_*D_{v,0},4A_*D_{v,0})$.
+
+If $v\to\infty$ and $u$ is bounded, put $q=1/v$ and use $q^2F$.
+Take $R=(uW-Y)/\rho$, $L=Y/\rho$, $T=uqZ$, $N_1=\rho Z$.
+Exactly,
+\begin{align*}
+ \widehat H/2={}&(D_u+q^2)X^2+D_uxL^2+T^2+2qXT
+       +q^2xR^2+2uq\rho XR-2qRN_1-2D_uqLN_1,\\
+ 4D\widehat J^2={}&4(D/x)(-N_1+\rho uX+xqR)^2.
+\end{align*}
+Retain $n,m,\alpha$.  The residue on $(X,R,L,T,N_1)$ is diagonal
+with entries
+\[ (2D_{u,0},4C_*,4A_*D_{u,0},2,4D_*). \]
+
+Finally if both angles are infinite, use $p=1/u,q=1/v$ and
+$p^2q^2F$.  Set $R=(W-pY)/\rho$, $L=Y/\rho$, $T=qZ$.  Then
+\[
+ \widehat H/2=(1+p^2D_q)X^2+xq^2R^2+xD_pL^2+T^2
+       +2\rho qXR+2pqXT-2\rho pRT-2\rho D_pLT.
+\]
+Retain $n,m,D,\alpha$.  The residue on $(X,R,L,T)$ is
+diagonal with entries $(2,4C_*,4A_*,2)$.
+
+\paragraph{Exhaustion and independence.}
+These charts cover every commuting angle residue: the whole finite
+$u=0$ axis, the finite-unit $v=0$ axis, either infinite axis, and
+their intersections.  When both angle residues are noncommuting,
+apply the inherited physical noncommuting-residue theorem at arbitrary
+coefficient scales.  Complex states require no additional chart:
+if $Z\ne0$, multiply by a phase and normalize $Z=1$; the real parent
+is the sum of its real-state value and its imaginary-state value,
+the latter having $Z=0$ and hence being a literal square sum.
+If $Z=0$ this is already true of both parts.  Homogeneity covers all
+projective state charts.  Roots may be unbounded throughout.
+All inverses or radicals used in coefficients are pure coefficient
+or pure testing operations on units, except $\sqrt\epsilon$ in
+roots and its controlled coefficient ratio $n/\sqrt\epsilon$.
+No mixed inverse and no comparison of independent infinitesimals
+occurs.  Applying the strict bounded-tensor Gram lemma completes
+the proof.

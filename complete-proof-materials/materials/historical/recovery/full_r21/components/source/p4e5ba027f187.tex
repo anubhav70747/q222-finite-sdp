@@ -1,0 +1,337 @@
+\section{A fresh angular budget and completion of the retained C14.1b residual}
+\label{sec:c141b-residual-rederived}
+
+\paragraph{Scope and provenance.}
+This is a new proof, not a restoration of the missing late-R21 source.
+Keep the original physical stationary C1 source, its strict gaps,
+nonnegative event coefficients, original infinitesimal total scale and
+every earlier-admission complement in the surviving C14.1b statement.
+Normalize the original positive coefficient to $d=1$ as in P1--P4.
+Source parameters lie in a real closed extension $K_c$ and testing
+angles and states in an independent extension $K_t$ of $\mathbb R$.
+All conclusions are finite sums of squares in
+$\mathcal T=K_c\otimes_{\mathbb R}K_t$. No order or general inverse
+of a mixed tensor is used.
+
+The exact target is the complete reciprocal-Bob polynomial P4/SP6
+in the surviving \texttt{inherited\_r19/parent\_reference.tex}.
+Use its notation, and set $k=\sqrt x$, $q=\sqrt z$, $z=1/L$,
+$\sigma=1/\eta$, $b=Lr$, $Q=1-b$, $\theta=1-h$.
+The source part of the retained residual GA9 is
+\[
+ x,z,\sigma>0\text{ infinitesimal},\quad
+ \operatorname{res}h\ge\tfrac12,\quad k/\sigma\text{ infinitesimal},
+ \quad b_0\text{ infinitesimal},\quad d_0\sim1.
+ \tag{AR1}
+\]
+Its real testing part has $u,w>0$ infinitesimal, $WZ>0$,
+$W/Z$ and $u/w$ unbounded, and $uW/(wZ)$ unbounded. These
+intersections are retained. The proof below in fact needs only
+$u,w,W,Z>0$ with $u,w$ infinitesimal after the inherited sign
+gauges; it assumes no upper or lower bound on any state ratio.
+
+\begin{theorem}[Fresh completion of the retained residual]
+On AR1 and the exact retained testing/source intersections just
+stated, the complete original parent is a finite tensor sum of
+squares. Together with the surviving SF, BC, US and GA admissions
+and their recorded literal, sign and projective exits, this closes
+the entire original scoped C14.1b domain. It does not by itself
+close C14.4 or the global C1 entry and union.
+\end{theorem}
+
+\subsection{Source coefficients and the original scalar packet}
+
+The source estimates SF1--SF5 and US2--US3 were proved for
+$z$ infinitesimal. On AR1 they imply
+\[
+ \begin{gathered}
+ L_0:=\lambda\sigma\sim2h\text{ is a positive bounded unit},
+ \qquad \lambda^{-1}\in\operatorname{Inf}_c,\\
+ \rho=\lambda x/\sigma=L_0(k/\sigma)^2\in\operatorname{Inf}_c,
+ \qquad \lambda x\in\operatorname{Inf}_c,
+ \qquad d_G:=4D/\sigma^2\sim2. 
+ \end{gathered} \tag{AR2}
+\]
+Here $h$ is a positive unit even when $\theta=1-h$ is
+infinitesimal. In particular $\lambda>0$ and $d_G$ is a strict
+original Gamma pivot. The exact sphere identity P2 proves these
+bounds without an inverse of $b_0$ or $d_0$.
+
+For clarity, the other source bounds used below are
+\[
+ \begin{gathered}
+ P,J,M,B,\mathcal H\sim1,\quad p,l,\kappa\sim\tfrac12,
+ \quad C=O(z),\quad D=O(\sigma^2),\\
+ e=xh/\sigma\in\operatorname{Inf}_c,\quad
+ m=\kappa xze\in\operatorname{Inf}_c,\quad
+ \beta\theta\in\mathcal O_c,\quad
+ \nu,K_A,\chi,R_x,A_y\in\mathcal O_c,
+ \quad B_x=8\kappa e\in\operatorname{Inf}_c.
+ \end{gathered} \tag{AR3}
+\]
+These are SF1--SF5, the P1 formulas and the SP9--SP10 polynomial
+cancellations. In particular $K_A=4\kappa h/\sigma-\lambda$
+is bounded although its residue $2-4\operatorname{res}h$ may be
+zero or negative. Also
+\[
+ R_\gamma=-4\{2(C+D)(r-1)+2p+r-1+2pu^2\}
+ \tag{AR4}
+\]
+is a bounded separated coefficient. None of AR2--AR4 contains
+$u/w$, a state ratio, or a comparison of a source and a testing
+rate. The only possible source poles in $a=Az=p/b$ and
+$\ell=\alpha z=l/Q$ remain in positive packets below. The
+possibly unbounded $\beta$ itself also remains in its original
+nonnegative packet; no upper bound on $\beta$ is asserted.
+
+Keep the exact roots
+\[
+ N_x=X+uhZ,\quad N_y=(Y-bwZ)/q,\quad
+ \Gamma=\sigma Z-uwW,\quad R=wZ/q-uqW,
+ \quad A_\theta=q(u^2-x)W.
+ \tag{AR5}
+\]
+The whole angular packet of SP6 is
+\[
+ K_AA_\theta^2+\chi uA_\theta R+\mathscr S,
+ \qquad
+ \mathscr S=\lambda\sigma\{uZ-(x/\sigma)wW\}^2
+       +\rho(u^2-x)(w^2-\sigma z)W^2.
+ \tag{AR6}
+\]
+This is the exact P8 transformation, not a restriction of the state.
+Define the four positive separated monomials
+\[
+ B_1=\sqrt{\lambda\sigma}\,uZ,\quad
+ B_2=\sqrt\rho\,uwW,\quad
+ B_3=\sqrt\lambda\,xqW,\quad
+ B_4=\sqrt{\lambda x}\,wZ/q,
+ \qquad G_4=(B_1B_2B_3B_4)^{1/4}.
+ \tag{AR7}
+\]
+Every fractional power means the product of the two pure-field
+powers. With $d_i=B_i-G_4$, the complete circuit is
+\[
+ \mathscr C:=\mathscr S+\lambda xR^2
+       =\sum_{i=1}^4B_i^2-4G_4^2
+       =\sum_{i=1}^4d_i^2+\mathcal E_4,
+ \tag{AR8}
+\]
+where the explicit surviving US10 remainder is
+\[
+ \mathcal E_4=2G_4\left\{
+ (\sqrt{B_1}-\sqrt{B_2})^2+
+ (\sqrt{B_3}-\sqrt{B_4})^2+
+ 2\big((B_1B_2)^{1/4}-(B_3B_4)^{1/4}\big)^2\right\}.
+ \tag{AR9}
+\]
+Its nonnegative monomial prefactors have separated square roots.
+
+\subsection{An eight-square budget for the angular row}
+
+The following elementary identity is the new step. Let $U,V,Z_*$
+be positive separated monomials, let $a_*>0$ be pure source, and set
+\[
+ \begin{gathered}
+ \Psi=1+U^2V^2+U^2Z_*^2+V^2Z_*^2-4UVZ_*,\\
+ T=U^2-1,\qquad Q_*=VZ_*-U,\qquad
+ R_*=Z_*-UV,\qquad G_*=U(V-Z_*).
+ \end{gathered} \tag{AR10}
+\]
+There are two exact polynomial identities
+\[
+ \Psi=G_*^2+(1-VZ_*)^2+2VZ_*(U-1)^2,
+ \qquad
+ \Psi=T^2+Q_*^2+UTQ_*-UR_*^2-(U+1)G_*R_*.
+ \tag{AR11}
+\]
+Consequently
+\[
+\boxed{\begin{aligned}
+ &[2+a_*(U+1)]\Psi+U^2Q_*^2
+       +\left[2U+\frac{U+1}{a_*}\right]R_*^2-T^2\\
+ &\quad=(T+UQ_*)^2+2Q_*^2
+       +(U+1)\left(\sqrt{a_*}G_*
+                          -R_*/\sqrt{a_*}\right)^2\\
+ &\qquad\quad+a_*(U+1)(1-VZ_*)^2
+                     +2a_*(U+1)VZ_*(U-1)^2.
+\end{aligned}} \tag{AR12}
+\]
+The right side consists of eight legal squares: expand each
+factor $U+1$ into its two summands before taking roots. Only
+radicals of positive separated monomials occur. In particular
+neither a square root nor an inverse of $1+U$ is used. The
+identity imposes no bound on $U,V,Z_*$ or on $a_*^{-1}$.
+
+Apply this with
+\[
+ U=\frac uk,\qquad V=\frac w{\sqrt\sigma q},\qquad
+ Z_* =\frac{\sqrt\sigma}{kq}\frac ZW,
+ \qquad a_*=\lambda k,\qquad M_*=k^2qW.
+ \tag{AR13}
+\]
+Each quotient is taken within a pure field before tensoring.
+The only state inverse is the nonzero pure-testing $W^{-1}$.
+The other inverses are positive pure-source factors. These
+expressions are allowed to be unbounded inside a square root row.
+Directly,
+\[
+ \mathscr C=\lambda M_*^2\Psi,\qquad
+ A_\theta=M_*T,\qquad R=kqWQ_*,\qquad
+ \Gamma=k\sqrt\sigma qWR_*.
+ \tag{AR14}
+\]
+Multiplying AR12 by the square $M_*^2$ therefore proves
+\[
+\boxed{\quad
+ \Delta_A:=\varepsilon_C\mathscr C+u^2R^2
+                 +\varepsilon_G\Gamma^2-A_\theta^2
+                         \ \in\ \Sigma\mathcal T^2,
+ \quad} \tag{AR15}
+\]
+with the exact coefficients
+\[
+ \varepsilon_C=\frac2\lambda+u+k,\qquad
+ \varepsilon_G=2\frac k\sigma u+
+                         \frac{u+k}{\lambda\sigma}.
+ \tag{AR16}
+\]
+Both are finite sums of positive bounded separated factors with
+zero real residue. This follows from AR2, bounded $k/\sigma$,
+and the independent facts $u\in\operatorname{Inf}_t$ and
+$k,\lambda^{-1}\in\operatorname{Inf}_c$. It uses no bound on
+$q u/w$, $uW/(wZ)$, or any normalized variable in AR13.
+The identity also gives a direct expression for each of its eight
+roots: multiply the eight expanded roots on the right of AR12
+by $M_*$. Thus AR15 is a finite certificate, not a pointwise
+inequality imported from an ordered compositum.
+
+\subsection{Paying the signed angular term exactly once}
+
+Choose a fixed positive real $c_*$ such that
+$\operatorname{res}(K_A+c_*)>0$, possible because $K_A$ is
+bounded. The exact allocation is
+\[
+\begin{split}
+ K_AA_\theta^2+\mathscr S
+  ={}&(K_A+c_*)A_\theta^2
+       +(1-c_*\varepsilon_C)\mathscr C
+       -c_*\varepsilon_G\Gamma^2\\
+    &-(\lambda x+c_*u^2)R^2+c_*\Delta_A.
+\end{split} \tag{AR17}
+\]
+AR17 uses AR8 and AR15 once each. The coefficient of the whole
+circuit has residue one; its four $d_i$ rows remain strict.
+The three AR9 rows with this same coefficient are retained
+separately. The elementary positive-residue lemma makes each
+of these bounded coefficients a tensor SOS; multiplying its
+finite square decomposition by the corresponding row preserves
+the finite SOS property. There is no mixed square root of
+$1-c_*\varepsilon_C$.
+
+\subsection{The two complete state normals and all original hard terms}
+
+Use the exact CT7--CT7a radial extraction. Its constant base is
+\[
+ [4a+2z(2C+1)](N_y+bR)^2+4\ell(N_y-QR)^2.
+ \tag{AR18}
+\]
+Since $p,l\sim1/2$ and $0<b,Q<1$, both coefficients exceed
+one. Keep their positive pure-source excesses and retain
+$(N_y+bR)^2+(N_y-QR)^2$ in the principal frame. Its bounded
+two-by-two Gram has determinant $(b+Q)^2=1$ and positive
+definite residue, including $b=0$ or $Q=0$ in residue. This is
+a cap of whole positive squares, not a cap of unrelated matrix
+entries. Retain exactly the nonconstant positive $a,\ell,C$
+packets specified in CT7, before using its remaining coefficients.
+
+The three exact remainders $E_{yy},E_{RR},E_{yR}$ in CT7a are
+bounded infinitesimal: every source factor in their braces is
+bounded by AR3, $C=O(z)$, $D=O(\sigma^2)$, and they have the
+printed factor $z$ together with $u^2,w^2,\sigma$ or $D$.
+No estimate involving a state coordinate or $u/w$ is present.
+
+The two entire Gamma normal terms of SP6 are
+\[
+ -4\nu uN_x\Gamma
+          +qwR_\gamma(N_y+bR)\Gamma.
+ \tag{AR19}
+\]
+They are bounded infinitesimal entries on the original
+$(N_x,N_y,R,\Gamma)$ frame, directly by AR3--AR4 and
+$u,q,w$ infinitesimal. In this source sector the Gamma diagonal
+is $d_G\Gamma^2$ with $d_G\sim2$, so no sphere-coordinate
+inverse, Gamma conductor or weak Gamma pivot is required.
+The five other complete cross terms are exactly
+\[
+ \begin{split}
+ &-4uqw(2m+2D+1)N_xN_y+uqwR_xN_xR\\
+ &\qquad+qwB_xN_xA_\theta+uA_yN_yA_\theta
+                                      +\chi uA_\theta R.
+ \end{split} \tag{AR20}
+\]
+Every displayed coefficient is infinitesimal and bounded by
+AR3. The entire $N_yR$ term has already been included in
+AR18 and CT7a. Thus both unrestricted state normals and every
+remaining mixed term of SP6 have been allocated.
+
+Use exactly $2N_x^2$ in the principal frame and retain exactly
+$[2w^2+4mw^2]N_x^2$ as its positive excess. After AR17 the
+principal frame is
+\[
+          (N_x,N_y,R,\Gamma,A_\theta,d_1,d_2,d_3,d_4).
+ \tag{AR21}
+\]
+Its real residue is strictly positive definite: the $N_x$ pivot
+is two, the radial block is AR18's clipped block, the Gamma
+pivot is two, the angular pivot is $\operatorname{res}(K_A+c_*)>0$,
+and the four circuit pivots are one. All other entries are
+bounded infinitesimals, including the AR17 Gamma/radial costs.
+The separated bounded-Gram lemma therefore proves finite SOS.
+
+Finally restore, each exactly once, $4\beta(1+w^2)N_x^2$,
+$2(2D+1)(uX_e)^2$, $[2w^2+4mw^2]N_x^2$,
+$4bpzu^2\Gamma^2$, all CT7 positive source and testing
+excesses, the AR9 remainder with its positive-residue coefficient,
+and $c_*\Delta_A$. This restores precisely P4/SP6. The roots
+need not be bounded; only the Gram entries have been bounded.
+
+\subsection{Exact join and literal boundaries}
+
+The surviving SF theorem covers $\operatorname{res}h<1/2$ in
+C14.1b. US covers its unit-$h$, unit-$k/\sigma$ source for
+all states and tests; US2 bounds $k/\sigma$ throughout the
+unit-$h$ source. BC and GA cover their stated bounded-ratio
+testing domains. Their residual is exactly contained in AR1
+with the testing predicates printed above, now covered by
+AR17--AR21. The inherited bounded-state, nonzero-unit-Alice,
+remote, literal-axis and sign exits remain unchanged. Their
+precise dependency index is the surviving
+\texttt{proofs/c1\_unbounded/DEPENDENCIES.txt}, together with
+the introductions and concluding joins of SF, US and GA.
+This is a finite union on the original scoped C14.1b source;
+it does not erase any earlier-admission complement.
+
+The residual itself has $D>0$ by AR2. Literal $D=0$ remains
+covered by the US sphere endpoint, which divides by neither
+$D$ nor a sphere coordinate. Literal $\beta=0$ is incompatible
+with $H=h/\sigma$ unbounded here: P2 gives $H=H_0/B$ on
+that face, a bounded quantity. Hence no nonempty C14.1b face
+has been dropped. Arbitrarily small positive $b,Q,\theta,D$
+or other original openings are kept wherever compatible with
+the printed source sector. For complex states apply the real
+routing independently to their real and imaginary parts;
+each part satisfies an earlier exit or the new residual proof.
+Restore only the original positive pure-source and pure-testing
+normalizations.
+
+\paragraph{Verification boundary.}
+The companion exact checker verifies the elementary identities
+AR11--AR12, all four scaling identities AR14, the restored
+budget AR15--AR16, its eight separated squares, and the
+once-paid AR17 allocation. The complete P4/SP6 and CT7a
+identities are surviving algebraic inputs. Their source bounds,
+the full-normal allocation and the quantified join are the
+analytical argument above; an assertion count does not replace
+these arguments. Independent review is requested before this
+new theorem is recorded as an admitted replacement.

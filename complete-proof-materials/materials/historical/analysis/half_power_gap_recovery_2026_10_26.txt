@@ -1,0 +1,22 @@
+Pre-existing half-power gap diagnostics: bounded read-only recovery
+2026-10-26; repository independent-review b6ddb4f. No solver was run.
+
+Only ONE of the nine records has native C2 support: (fam,idx)=("C2",2), called C2_2. The others are three C1-face records, three all-positive random records, and the all-positive cbar/cdagger pair. They are not native C2 sources, even after physical relabeling.
+
+Best C2 diagnostic:
+  independent-review/checks/gram-lift/gaps_k2.json
+  independent-review/checks/gram-lift/cases.json ["C2_2"]
+  independent-review/checks/gram-lift/cases_302.json, fam=C2,idx=2.
+Its event order is (lambda,n,m,C,A,D,alpha,beta):
+  (0,.00046030838130763714,.794655535342095,
+   46.03279056073332,.00013008784424856985,
+   33.54407554939257,14.629328379781981,0).
+The saved numerical d*=.6608503406207688; angle proxy (3.133919293864171,.06786453763930111); high-precision reported d2/d*=.6524004822584958. All six retained events are positive. For these exact event weights, the TRUE maximal-d source necessarily has a finite positive native C2 contact by the positive-six-event graph EN3-EN4/coercive determinant argument. However the stored d*, contact angles and gap are numerical; no exact contact/state, native parameter tuple or half-power dual certificate is stored.
+
+Convention: gram_lift.py:26-35 is exactly SG2, without a multiplier. Its k=2 family is {u^(i/2)v^(j/2)psi_l:0<=i,j<=2}, i.e.36 functions before exact support pruning. C2_2 uses block sizes(14,6,6,4), total30: the W roots satisfy i+j>=2 and Z roots i+j<=2; X,Y retain all9. These are legitimate half-Newton-support restrictions, not a different source polynomial. Event weights are divided by max(e) internally and the reported d* is rescaled back. The JSON key "lam" is an angle scaling/proxy, NOT the event coefficient lambda. No contact state is saved.
+
+Numerical caveats: the unpruned C2_2 max-d run reports1.2167 with InsufficientProgress; other gap records have ratios>1 or AlmostSolved. These are not mathematical gap/admission proofs. The final lower ratios are labeled hp, but the high-precision half-power checker/dual matrices are absent from this folder. oracle() mixes exact rational coefficient extraction with floating Newton minimization, and dstar() is numerical bisection. The parsed JSON floats become their exact BINARY rationals (parse_e:143), so replacing them by short decimal strings changes the exact problem. I found no immediate parent/coefficient or parity-block encoding mismatch: even-k blocks use the formal signs of sqrt(u),sqrt(v), independently of state.
+
+Existing EXACT artifacts: cbar's intended event tuple is (2^-34,2^-14,2^-24,1/576,161,1/2,76,1/250), with d=1; cdagger is (1/576,161,2^-24,2^-34,2^-14,1/2,1/250,76), d=1. Their validity and order33/order49 dual obstructions are under extracted-lifts/canonical-completion/ramified-completion/ and ramified-obstruction/. Those duals concern DIFFERENT completion cones and do not certify a k=2 gap. The saved four exact boundary Grams in gram-lift/boundary/data/ are k=6 certificates at C1A/B,C2A/B, not certificates at the nine gaps.
+
+Recommended exact check: use C2_2 as the only directly relevant large-gap native-C2 diagnostic. Freeze its literal binary-rational e, then obtain an exact algebraic boundary contact/d or a nearby rational native parameter tuple with an exact stationary source. Contract/rationally certify a dual against the FULL36-feature coefficient map (or its proved30-feature support face), not against an order33/49 selector pencil. Until that is done, label it a strong numerical native-C2 diagnostic, not an exact counterexample. For a simpler already rational valid source use cbar, but its half-power exclusion would not by itself refute admission of all native C2.

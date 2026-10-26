@@ -1,0 +1,91 @@
+\subsection{A fourth edge at a smaller coefficient scale}
+\begin{proposition}[The fourth-edge promotion]\label{prop:fourth-edge-promotion}
+The exceptional promotion case in Theorem~\ref{thm:three-event-weighted} is also tensor SOS. Consequently every noncommuting zero-$d$ residue with at least three dominant event coefficients is settled.
+\end{proposition}
+\begin{proof}
+By symmetry the three dominant coefficients are $n,m,A$ and the smaller fourth coefficient is $D=\mu>0$. The promotion hypotheses say
+\[
+\mu\in\mathfrak m_c,\qquad d/\mu\in\mathfrak m_c,
+\qquad \lambda/\mu,c/\mu,\alpha/\mu,\beta/\mu\in\mathfrak m_c.
+\]
+As before $d=0$ is immediate. Set $\tau=\max(\lambda,c,\alpha,\beta)$. Choose the sign of the matching curve so that $\bar v=\bar u\ne0$, and put $W=1$. Use the exact strong-event state coordinates
+\[
+x=(X,Y,R),\qquad R=v-X+uvY-uZ,
+\qquad Z=\frac{v-X+uvY-R}{u}.
+\]
+Only the pure testing unit $u$ is inverted. Define
+\[
+f=\frac{u^2-v^2}{u},\qquad
+L=v(u+u^{-1})X-(1+v^2)Y+(v/u)R.
+\]
+Then the fourth event amplitude is exactly $f+L$. On $x=0$, the signed core is $2uf$, and hence the entire signed-plus-fourth part is
+\[
+4\mu f^2+2duf=4\mu\left(f+\frac{du}{4\mu}\right)^2
+ -\frac{d^2u^2}{4\mu}.
+\]
+Testing $u=1$, $v=\sqrt{1+d/(4\mu)}$ and $x=0$ proves $\tau>0$ and
+\[
+\rho=\frac{d^2}{\mu\tau}\quad\hbox{is bounded}.
+\]
+Indeed all complementary amplitudes are bounded at that test, and otherwise their total would be infinitesimal relative to the displayed negative term.
+
+Put $\delta=v-u$. If $\bar\rho=0$, an exact Gram on the roots
+\[
+\left(x/\sqrt\tau,\ \delta\sqrt{\mu/\tau},\ 1\right)
+\]
+has strictly positive residue. To see the bounds directly, the strong packets supply a positive three-by-three block, and $4\mu(f+L)^2$ supplies the positive fourth diagonal entry $16$ because $f=-2\delta-\delta^2/u$. The strong--fourth cross block has size $\sqrt\mu$; signed-core linear terms have sizes $d/\sqrt\tau=\sqrt{\mu\rho}$ and $d/\sqrt{\mu\tau}=\sqrt\rho$, respectively. Every other contribution has bounded coefficients. The constant residue comes from the complementary packets on the matching curve and is
+$4(1+u_0^2)(P+Qu_0^2)>0$, where
+\[
+P=\overline{(\lambda+\alpha)/\tau},\qquad
+Q=\overline{(c+\beta)/\tau},\qquad P+Q>0.
+\]
+
+It remains to treat $\rho$ with positive residue. Write $\varepsilon=d/\mu$, so that $d=\mu\varepsilon$ and $\tau=\mu\varepsilon^2/\rho$. In the coefficient-field stationary equations make the substitutions
+\[
+x=d s,\qquad \delta=\varepsilon r,\qquad u=t.
+\]
+Divide the three $x$ equations by $d$, the $\delta$ equation by $d$, and the $t$ equation by $\tau$. After the pure unit clearing by $t$, all coefficients are bounded functions of $\mu,\varepsilon,\rho$ and the four normalized complementary coefficients. This can also be read directly from the strong packets, the exact formulas for $f,L$, and the fact that the signed core is quadratic in $x$.
+
+At residue let $B=1+t^2$ and
+\[
+Q_s=4\operatorname{diag}(\bar n B^2,\bar A B^2,\bar m),\qquad
+\ell=(B,-B,1)^T,\qquad b=(4tB,-4tB,0)^T.
+\]
+The first four stationary equations reduce to
+\[
+2Q_s s-16r\ell+b=0,\qquad 32r-4t=0.
+\]
+The limiting objective for the last two variables is
+\[
+\Psi(r,t)=\bar\rho(16r^2-4tr)+4(1+t^2)(P+Qt^2).
+\]
+Eliminating $r=t/8$ leaves
+\[
+g(t)=4(1+t^2)(P+Qt^2)-\bar\rho t^2/4.
+\]
+Physicality makes $g(t)\ge0$ for every nonzero real $t$: substitute $x=0$, $\delta=\varepsilon t/8$ into the original parent and take its normalized residue. Dividing $g$ by $4t^2$ gives
+\[
+P(1+t^{-2})+Q(1+t^2)-\bar\rho/16.
+\]
+If this is positive at the testing residue, the same strict Gram argument applies after the explicit shift $\delta\mapsto\delta-\varepsilon t/8$; its mixed strong-normal terms remain zero in residue. Otherwise its zero is stationary, $P,Q>0$, and $g''(t_0)>0$.
+
+At such a zero, the scaled stationary system has an invertible Jacobian. The strong block is $2Q_s\succ0$. The remaining two-by-two block has first row $(32,-4)$ and Schur complement $g''(t_0)>0$. The coefficient-field implicit-function theorem therefore produces an exact stationary center
+\[
+x_c=d s_c,\qquad\delta_c=\varepsilon r_c,\qquad t_c,
+\quad \bar r_c=t_0/8,\quad\bar t_c=t_0.
+\]
+Physicality gives $a=F(x_c,\delta_c,t_c)/\tau\ge0$.
+
+Expand exactly at that center and use the roots
+\[
+\left(\frac{x-x_c}{\sqrt\tau},\
+\sqrt{\frac\mu\tau}(\delta-\delta_c),\ t-t_c\right).
+\]
+The Gram coefficients are bounded. For transparency, strong--fourth entries are $O(\sqrt\mu)+O(d/\sqrt\mu)$; strong--tangent entries are $O(d/\sqrt\tau)=O(\sqrt\mu)$; fourth--tangent entries are $O(d/\sqrt{\mu\tau})=O(1)$. Pure tangent contributions from strong packets are $O(d^2/\tau)=O(\mu)$, while those from the fourth packet and signed core are $O(d^2/(\mu\tau))=O(1)$. Higher Taylor factors have zero residue. These estimates follow term by term from the quadratic strong packets, $f=-2\delta-\delta^2/t$, and the displayed exact $L$.
+
+The residue Gram is the direct sum of $Q_s$ and the positive definite Hessian form of $\Psi/2$, with its $r$ coordinate rescaled by $1/\sqrt{\bar\rho}$. Positivity of that Hessian follows from its positive normal entry $32\bar\rho$ and the positive Schur complement $g''(t_0)$. The exact linear terms vanish at the stationary center, so
+$F/\tau=a+h^TQh$ with $\bar Q\succ0$. Pure testing powers of $t$ clear the finite rational expressions; the corresponding constant term is a positive pure coefficient times a pure testing square. Lemma~\ref{lem:gram} and pure-factor restoration finish the proof.
+\end{proof}
+
+\paragraph{From this promotion to all coefficient scales.}
+The next theorem lets all four matching weights have independent scales. One- and two-hard-event kernels are then handled by their constrained determinants, completing the finite matching induction in Theorem~\ref{thm:all-noncommuting}.

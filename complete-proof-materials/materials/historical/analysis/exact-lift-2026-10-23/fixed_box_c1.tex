@@ -1,0 +1,555 @@
+\documentclass[11pt]{article}
+\usepackage[margin=24mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\R}{\mathbb R}
+\newcommand{\eps}{\varepsilon}
+\allowdisplaybreaks
+\title{An evaluated testing dictionary for the positive-angular C1 main Gram}
+\author{}\date{23 October 2026}
+\begin{document}\maketitle
+
+This calculation concerns the main Gram of the all-$H$, bounded-$z$
+C1 certificate at public commit
+\texttt{0c1ce2e15ed067a6845464e2468559cea5274f2c}.
+It gives fixed rational bounds on a genuine source/testing rectangle,
+including source points approaching $D=0$, $\beta=0$, and $H=+\infty$.
+The condition $\lambda>0$ is retained. The separate $\lambda\le0$
+construction and the retained squares outside this Gram are not
+compiled here. Thus this is not yet a local whole-parent pencil or a
+full-set pencil.
+
+\section{The rectangle and source formulas}
+
+Fix the rational constants
+\[
+ \eps=2^{-160},\qquad \delta=2^{-100},\qquad
+ c_0=2^{-8},\qquad A_*=2^{30},\qquad
+ \gamma={c_0\over14A_*}={1\over14\,2^{38}}.
+\]
+The source domain consists of
+\[
+ 0<x,\sigma\le\eps,\quad 0<z\le1,\quad 0<b<1,
+ \quad r=bz<1,\quad 0<h<1,
+\]
+with the original strict gaps and the two nonnegative event
+coefficients specified below. Set
+\[
+ Q=1-b,\quad \theta=1-h,\quad H=h/\sigma,\quad e=xh/\sigma,
+ \quad E=1-e>0,\quad k=\sqrt x,\quad q=\sqrt z,
+\]
+\[
+ K=1+x,\quad R_s=1+xr,\quad M=R_s-xz\theta>0,
+ \quad J=1+xh-\sigma(1-r)>0,
+\]
+\[
+ P=\sigma+K+\sigma z(1+bx+2xh)
+                  +\sigma bx^2hz^2+x^2h\theta z,
+\]
+\[
+\begin{gathered}
+ p={z(1+xh)E+(1-r)(1+xhz)\over2P},\qquad
+ l={(1+\sigma r)\{eR_s(1+\sigma z)+ME\}\over2P},\\
+ \kappa={K(1+\sigma r)(1+\sigma z)\over2MP}.
+\end{gathered}
+\]
+The original coefficients are
+\[
+\begin{gathered}
+ m=\kappa x^2zH=\kappa xze,\qquad
+ C={Kz(1+\sigma r)E\over2(1-r)P},\\
+ A=p/r,\quad \alpha=l/(zQ),\quad a=p/b,\quad \ell=l/Q,\\
+ D={K(1+\sigma z)(1+\sigma r)-JP\over2JP}\ge0,\qquad
+ \beta={K(1+\sigma r)(1+xhz)-\theta P\over2\theta P}\ge0.
+\end{gathered}
+\]
+Here $H$ has no upper bound. Neither $b$, $Q$, $\theta$, $1-r$,
+nor $z$ is bounded below. The testing rectangle is independently
+\[
+                  0\le u,w\le\delta.
+\]
+For signed angles $u_s,w_s$, set
+$\alpha_s=\operatorname{sgn}(u_s)$ and
+$\beta_s=\operatorname{sgn}(w_s)$, choosing the value $1$ at zero.
+The exact testing gauge is
+\[
+ (u,w,X,Y,Z,W)=(|u_s|,|w_s|,\beta_sX_s,\alpha_sY_s,
+                                \alpha_s\beta_sZ_s,W_s).
+\]
+It preserves the parent polynomial. Composing every testing function
+below with this one fixed piecewise semialgebraic map extends the
+same feature count to $|u_s|,|w_s|\le\delta$; no square root of a
+negative angle is taken. State coordinates $X,Y,Z,W$ are unrestricted
+real numbers; no state ratio is bounded.
+
+Define
+\[
+ H_0=1+zQ,\quad B_s=P+xz(J-\sigma),
+\]
+\[
+ \mathcal H=R_sH_0+z\{(1-r)xh(2+xr)
+ -e[2+x(1+h+r\theta)]+Ke^2\}.
+\]
+Two exact source identities, obtained by multiplication, are
+\begin{align}
+ 2\theta P\beta&=hB_s-\sigma H_0,\label{eq:BE3}\\
+ 2P(JD+x\theta\beta)&=\sigma^2\mathcal H.\label{eq:BE4}
+\end{align}
+The angular quantities used below are
+\[
+\begin{gathered}
+ \nu=(2D-2\beta\theta+h)/\sigma,\quad
+ \lambda=(8Dh+4\beta\theta^2+2h^2)/\sigma-4bp\sigma z>0,\\
+ K_A=4\kappa H-\lambda,\quad d_G=4D/\sigma^2,
+ \quad \rho=\lambda x/\sigma,\quad S=d_G+\rho,\\
+ L_0=\lambda\sigma,\quad q_0=\lambda k,\quad
+ c=\max(0,1-K_A),\quad a_0=k/\sigma.
+\end{gathered}
+\]
+The letter $q_0$ here is a source quantity, not the constant
+coefficient of a later scalar channel.
+
+The complete reciprocal parent being certified is
+\[
+\begin{split}
+ F_w={}&4m(W-wX+uY-uwZ)^2+4C(1+w^2)(uW-Y)^2\\
+ &+4A(1+u^2)(1+w^2)Y^2
+ +(4D+2)(uwW+uX-wY-Z)^2\\
+ &+(4\alpha+2)(1+u^2)(Y-wZ)^2
+ +(4\beta+2)(1+w^2)(X+uZ)^2\\
+ &-2(1+u^2)(1+w^2)Z^2.
+\end{split}
+\]
+All four state coordinates occur; they need not be normalized.
+
+\section{Uniform source bounds, without an upper bound on $H$}
+
+All inequalities in this section follow under the larger condition
+$\eps\le2^{-22}$, so in particular on the chosen rectangle.
+Directly from the positive formula for $P$ and the definitions,
+\[
+ 1\le P\le1+5\eps,\quad |J-1|,|M-1|\le\eps,
+ \quad 1\le B_s\le1+7\eps,\quad 1\le H_0\le2.
+\]
+Initially $0<e<1$ gives $0\le\mathcal H\le4$: nonnegativity
+uses \eqref{eq:BE4}. Eliminate $\beta$ to obtain
+\[
+ eB_s=xH_0+\sigma\mathcal H-2PJD/\sigma.
+\]
+Consequently
+\begin{equation}\label{eq:basic-bounds}
+ e\le2x+4\sigma\le6\eps,\qquad
+ |\mathcal H-H_0|\le32\eps,\qquad
+ 0\le D\le4\sigma^2,\quad 0\le\beta\theta\le1.
+\end{equation}
+For example, in $\mathcal H-H_0$ the terms are bounded by
+$2\eps+3\eps+3e+2e^2$, which is at most $32\eps$ here.
+The same positive formulas give
+\begin{equation}\label{eq:p-bounds}
+ |p-H_0/2|\le16\eps,\quad |l-1/2|\le8\eps,
+ \quad 1/4\le p,l,\kappa\le2,
+ \quad \kappa\le1,\quad m\le6\eps^2,
+ \quad C(1-r)\le1.
+\end{equation}
+In particular $4a,4\ell\ge1$. The unbounded positive coefficients
+$a,\ell,C$ will be retained in whole squares and will not be
+estimated separately.
+
+Exact rearrangement gives
+\[
+ \nu=2D/\sigma+[H_0-ez(J-\sigma)]/P,
+\]
+\[
+ \lambda=2H+2e\theta z(J-\sigma)/P
+                  -2\theta H_0/P+8Dh/\sigma-4bp\sigma z.
+\]
+Thus
+\begin{equation}\label{eq:lambda-bounds}
+ |\nu|\le3,\qquad |\lambda-2H|\le5,
+ \qquad |L_0-2h|\le8\sigma.
+\end{equation}
+
+For completeness, the cancellation needed when $H$ is large is
+polynomial. Write
+\[
+ N_\kappa=K(1+\sigma r)(1+\sigma z)-MP=xF_x+\sigma F_\sigma.
+\]
+Here $F_\sigma=r-1+\sigma rz$, and $F_x$ is the polynomial
+$(N_\kappa-N_\kappa|_{x=0})/x$. Its coefficient $\ell^1$ norm
+in $(x,\sigma,z,b,h,r)$ is $37$, as can also be checked by
+expanding the displayed product. Since all six arguments lie in
+$[0,1]$,
+\[
+ H(2\kappa-1)={eF_x+hF_\sigma\over MP},\qquad
+ |H(2\kappa-1)-h(r-1)|\le462\eps.
+\]
+The estimate $|MP-1|\le8\eps$ suffices for the second inequality.
+Combining this with \eqref{eq:lambda-bounds} more precisely yields
+\begin{equation}\label{eq:KA-bounds}
+ |K_A-\{2\theta H_0-2h(1-r)\}|\le2^{12}\eps,
+ \qquad |K_A|\le5,\quad 0\le c\le6.
+\end{equation}
+If $c>0$, then $h\ge1/8$: for $h<1/8$ the expression in braces
+is at least $3/2$, whereas the error is less than $1/4$.
+The earlier elimination identity also gives
+\[
+ a_0^2(hB_s-\sigma H_0)\le\mathcal H.
+\]
+Therefore, whenever $c>0$,
+\begin{equation}\label{eq:c-positive}
+ a_0\le8,\qquad L_0\ge1/8,\qquad
+ 1/\lambda\le8\sigma.
+\end{equation}
+Every term below containing $a_0$ or $1/\lambda$ from the angular
+subtraction is multiplied by $c$. On $c=0$ that subtraction is
+identically zero; no uniform estimate on those unused factors is
+required.
+
+Put
+\[
+ R_0=-4\{2(C+D)(r-1)+2p+r-1\}.
+\]
+The positive expression for $C(1-r)$ and the formula for $p$ give
+$|R_0|\le256(x+\sigma)\le512\eps$. Since
+\[
+ (x+\sigma)^2H=xe+2\sigma e+\sigma h\le2\eps,
+\]
+\eqref{eq:lambda-bounds} further gives
+\begin{equation}\label{eq:R0-bounds}
+ |R_0|\sqrt\lambda\le1024\sqrt\eps.
+\end{equation}
+Finally the exact identity
+\[
+ S={2\mathcal H\over P}+d_G(1-J+2hx)
+       +{2eH_0\over P}-{2e^2z(J-\sigma)\over P}-4bpxz
+\]
+shows
+\begin{equation}\label{eq:S-bounds}
+ |S-2H_0|\le256\eps,\qquad
+ 1\le S\le5,\quad 0\le d_G,\rho\le5,
+ \quad 0<L_0\le3,\quad 0<q_0\le4.
+\end{equation}
+Here $q_0^2=L_0\rho$; all bounds use $\lambda>0$ but no lower
+bound on $\lambda$ or upper bound on $H$.
+
+\section{A finite formula for the main Gram}
+
+The state roots are
+\[
+\begin{gathered}
+ N_x=X+uhZ,\quad N_y=(Y-bwZ)/q,\quad
+ R=wZ/q-uqW,\quad \Gamma=\sigma Z-uwW,\\
+ A_\theta=q(u^2-x)W,\quad T_\theta=kq(u-k)W,
+ \quad J_C=N_y+bR,\quad J_\ell=N_y-QR,\quad
+ \Gamma_*=\sqrt{d_G}\Gamma.
+\end{gathered}
+\]
+Let
+\[
+ B_1=\sqrt{\lambda\sigma}\,uZ,\quad
+ B_2=\sqrt\rho\,uwW,\quad
+ B_3=\sqrt\lambda\,xqW,\quad
+ B_4=\sqrt{\lambda x}\,wZ/q.
+\]
+When $WZ>0$, put
+$G_*=\operatorname{sgn}(W)(B_1B_2B_3B_4)^{1/4}$ and
+$d_i=B_i-G_*$. This is the positive-state convention followed,
+when necessary, by changing the signs of all roots together.
+When $WZ\le0$
+put $d_i=B_i$. Equivalently, for every state,
+\[
+ G_*=\sqrt{\lambda x}\,\operatorname{sgn}(W)
+                \sqrt{uw\max(WZ,0)},\qquad d_i=B_i-G_*.
+\]
+Define
+\[
+ U_*=\sqrt{q_0}\sqrt u\,q(u-k)W,
+ \qquad K_*=\sqrt{q_0}\sqrt k\,q(u-k)W.
+\]
+Use the twelve-root column
+\[
+ g=(N_x,J_C,J_\ell,\Gamma_*,A_\theta,T_\theta,
+                         d_1,d_2,d_3,d_4,U_*,K_*)^{\mathsf T}.
+\]
+The two radial changes are source-only and uniformly bounded:
+\[
+ R=J_C-J_\ell,\qquad N_y=QJ_C+bJ_\ell.
+\]
+Set
+\[
+ D_*={\rm diag}(2,1,1,1,1/2,1/2,1/2,1/2,1/2,1/2,1,1/2).
+\]
+We now define a polynomial quadratic form $\mathcal E(g)$, which
+fully specifies the correction matrix; a cross term is divided by
+two when placed in its two symmetric entries.
+
+For its coefficients put $t=u^2$, $\xi=w^2$, $g_s=h-Q$ and
+\[
+\begin{gathered}
+ R_x=-4\{2Db+(1+2m)g_s-2\beta\theta\},\quad B_x=8\kappa e,\\
+ A_y=8(p-l)+4z\{(1+2m)g_s+2Dh+2p\sigma\},\\
+ \chi=8(pb+lQ)-4h+4eh(2D+1)-8Dh\\
+ \hspace{12mm}+4z\{4Dbh+4pb\sigma+(1+2m)g_s^2+2\beta\theta^2\},\\
+ k_1=2(1+2m)g_s^2+8Dhb+8pb\sigma+4\beta\theta^2.
+\end{gathered}
+\]
+Then
+\[
+\begin{split}
+ E_{yy}&=2z\{(1+2m)u^2+(1+2D)w^2\},\\
+ E_{RR}&=z\{8bD+8bp\sigma+4b\sigma(2C+2D+1)(r-1)
+                                  +k_1u^2+2b^2(2D+1)w^2\},\\
+ E_{yR}&=4z\{u^2[2Dh+2p\sigma+(1+2m)g_s]+b(2D+1)w^2\\
+ &\hspace{25mm}+\sigma(2C+1)(r-1)+2D[1+\sigma(r-1)]+2p\sigma\}.
+\end{split}
+\]
+The entire first normal is represented by the linear form
+\[
+ F_1={\sqrt{d_G}\over S}u\Gamma_*
+ +{\sqrt\rho\over S}\{kd_1-ud_2+(u-k)d_3\}
+                         -{\rho\over S}\sqrt\sigma T_\theta.
+\]
+The entire second normal is represented by
+\[
+\begin{split}
+ F_2={}&{R_0\sqrt{d_G}\over S}qw\Gamma_*
+ +{R_0\rho\sigma z\over S}R
+ -{R_0\sqrt\rho\over S}(qw+z\sqrt\sigma)(d_2-d_3)\\
+ &+\left\{{R_0q_0z\over S}
+       +{R_0\sqrt\lambda\sqrt\rho\over S}qw\right\}T_\theta
+                                          -8pquwF_1.
+\end{split}
+\]
+These are exact identities $F_1=u\Gamma$ and
+$F_2=qw(R_0-8pu^2)\Gamma$. In particular they keep both complete
+state-normal couplings, not only their contact restrictions.
+
+Write
+\[
+ \eps_C=2/\lambda+u+k,\qquad
+ \eps_G=2a_0u+(u+k)/L_0.
+\]
+The correction is exactly
+\begin{align*}
+ \mathcal E={}&E_{yy}N_y^2+E_{RR}R^2+E_{yR}N_yR
+                  -4\nu N_xF_1+J_CF_2\\
+ &-4uqw(2m+2D+1)N_xN_y+uqwR_xN_xR
+                 +qwB_xN_xA_\theta+uA_yN_yA_\theta+\chi uA_\theta R\\
+ &-\tfrac12\rho\sigma R^2+\sqrt{q_0}\sqrt u\,U_*R
+       -{cd_G\over S}\eps_C\sum_{i=1}^4d_i^2
+       -{cd_G\over S}u^2R^2-{c\over S}\eps_G\Gamma_*^2\\
+ &-{c\over S}\{\sqrt{a_0u}\,U_*+\sqrt{a_0k}\,K_*\}^2.
+\end{align*}
+Define $G$ by
+$g^{\mathsf T}Gg=g^{\mathsf T}D_*g+\mathcal E$.
+This is the actual main Gram after retaining the positive excess
+of the $N_x,J_C,J_\ell$ squares, splitting $K_A+c\ge1$ equally
+between $A_\theta,T_\theta$, and retaining their nonnegative
+difference. The averaged circuit identity and angular identity
+used in this step are precisely those of the printed all-$H$
+proof at
+\href{https://github.com/anubhav70747/q222-finite-sdp/blob/0c1ce2e15ed067a6845464e2468559cea5274f2c/latex/certificates/c1_short.tex#L7550-L7740}
+{lines 7550--7740}. This definition therefore prints every main-Gram
+entry through one quadratic polynomial instead of twelve rows of
+expanded rational functions.
+
+\section{Rational coefficient bounds and fixed radicals}
+
+Put $v=\sqrt u$. Every entry of $G-D_*$ is a polynomial in
+$(v,w)$, with source coefficients, supported on
+\[
+ \{1,w,w^2,v,v^2,v^2w,v^4,v^4w\}
+ \subset\{v^\alpha w^\beta:0\le\alpha\le4,0\le\beta\le2\}.
+\]
+The following elementary bounds provide a reproducible coefficient
+estimate:
+\[
+ |R_x|,|A_y|\le32,\quad |\chi|\le64,\quad
+ |B_x|\le48\eps,\quad |k_1|\le16.
+\]
+The coefficients of $E_{yy}$ on $(u^2,w^2)$ are bounded by $(4,4)$;
+those of $E_{RR}$ on $(1,u^2,w^2)$ by $(64\sigma,16,4)$;
+those of $E_{yR}$ by $(32\sigma,12,8)$.
+These follow term by term from \eqref{eq:basic-bounds}--\eqref{eq:p-bounds};
+in the constant terms use $C(r-1)$, never $C$ separately.
+
+Here is a single positive-coefficient majorant which verifies
+all remaining estimates. In it $s=\sqrt\eps$, all twelve root
+letters are formal nonnegative indeterminates, and
+$n=r'=J_C+J_\ell$. Define
+\[
+ f_1=u\Gamma_*+sd_1+ud_2+(u+s)d_3+sT_\theta,
+\]
+\[
+\begin{split}
+ f_2={}&512s^2w\Gamma_*+512s^4r'
+  +512s^2(w+s)(d_2+d_3)\\
+ &+(2048s^2+1024sw)T_\theta+16uwf_1.
+\end{split}
+\]
+The absolute coefficient polynomial of $\mathcal E$ is bounded by
+\begin{align*}
+ \mathcal Q={}&(4u^2+4w^2)n^2
+ +(64s^2+16u^2+4w^2)r'^2
+ +(32s^2+12u^2+8w^2)nr'\\
+ &+12N_xf_1+J_Cf_2+16uwN_xn+32uwN_xr'
+      +48s^2wN_xA_\theta+32unA_\theta+64uA_\theta r'\\
+ &+\tfrac52s^2r'^2+2vU_*r'
+      +6(16s^2+u+s)\sum_i d_i^2+6u^2r'^2
+      +(144u+48s)\Gamma_*^2\\
+ &+48uU_*^2+96vU_*K_*+48sK_*^2.
+\end{align*}
+Indeed \eqref{eq:S-bounds} bounds $\sqrt{d_G}/S$, $\sqrt\rho/S$,
+$d_G/S$, $\rho/S$ by one, while \eqref{eq:c-positive} gives
+$\eps_C\le16\sigma+u+k$ and $\eps_G\le24u+8k$ when needed.
+The two small coefficients in $F_2$ use
+$|R_0q_0|\le2048\eps$ and \eqref{eq:R0-bounds}.
+
+Expansion, or simply evaluation at one of this positive-coefficient
+polynomial, gives coefficient $\ell^1$ norm $8590$. Its constant
+testing part has norm $5030$ and every term of that part is
+divisible by $s$. Consequently every source coefficient of every
+nonconstant testing monomial in $G$ has absolute value below
+$2^{20}$, and the source matrix $G(0,0)$ satisfies
+\begin{equation}\label{eq:matrixbounds}
+ |G_{ij}(0,0)-(D_*)_{ij}|\le2^{20}\sqrt\eps=2^{-60}.
+\end{equation}
+These estimates hold before any ordering of the tensor product is
+assumed. They bound pure-source coefficients in their own field.
+
+For $r=12$ the following exact quadratic-form decomposition uses
+only fixed directions:
+\[
+\begin{split}
+ G={}&\sum_i\left(G_{ii}-{11\over48}\right)e_ie_i^{\mathsf T}\\
+ &+\sum_{i<j}{1/48+G_{ij}\over2}(e_i+e_j)(e_i+e_j)^{\mathsf T}\\
+ &+\sum_{i<j}{1/48-G_{ij}\over2}(e_i-e_j)(e_i-e_j)^{\mathsf T}.
+\end{split}
+\]
+Write each of its $144$ scalar channels as
+\[
+ q(c,t)=q^{(0)}(c)+\sum_{j=1}^{14}a_j(c)b_j(t),
+\]
+where $b_j$ run through the nonconstant monomials in the
+$5\times3$ rectangle above. By \eqref{eq:matrixbounds}, for every
+channel
+\[
+ q^{(0)}\ge c_0=1/256,\qquad |a_j|\le A_*=2^{30}.
+\]
+In fact the off-diagonal channels have constant term at least
+$1/96-2^{-61}$ and the diagonal ones at least $13/48-2^{-60}$.
+On the independent testing rectangle,
+$0\le b_j\le\sqrt\delta=2^{-50}<\gamma$.
+Hence the exact separated identity
+\[
+ q=(q^{(0)}-c_0)+\frac12\sum_{j=1}^{14}
+ \bigl[(A_*+a_j)(\gamma+b_j)+(A_*-a_j)(\gamma-b_j)\bigr]
+\]
+has nonnegative factors in their own labelled fields. It proves
+the required tensor SOS without an appeal to entrywise positivity
+in a tensor ring or to a point-dependent real congruence.
+
+All twelve roots are source-linear combinations of the fixed
+testing functions
+\[
+ \mathcal V=\{X,Y,Z,W,uZ,wZ,uW,uwW,u^2W,
+                u^{3/2}W,u^{1/2}W,
+                  \operatorname{sgn}(W)\sqrt{uw\max(WZ,0)}\}.
+\]
+The last function includes both state-sign cases and is zero
+when $WZ\le0$. Changing all state signs changes all twelve roots'
+signs and preserves the quadratic form.
+Therefore a fixed main-Gram dictionary is
+\[
+ \mathcal V\ \cup\ \{f\sqrt{\gamma+b_j},f\sqrt{\gamma-b_j}:
+                         f\in\mathcal V,\ 1\le j\le14\}.
+\]
+It has $348$ displayed functions. All radicals are testing-only;
+all remaining coefficients are source-only square roots.
+
+Only seven nonconstant monomials actually occur. Dropping the zero
+channels and replacing $\gamma$ by $1/(7\,2^{38})$ gives the
+smaller displayed list of $12(1+14)=180$ functions. This optional
+reduction changes no source estimate. The accompanying exact
+polynomial check records the support as well as both norms.
+
+The separate multiplier of the retained circuit remainder is
+$\tfrac12-cd_G\eps_C/S$. Its constant term is at least
+$1/2-6(16\eps+\sqrt\eps)>c_0$ and its only testing coefficient
+is bounded by six. More explicitly, put
+\[
+ a_C=-cd_G/S,\qquad
+ q_C^{(0)}=\tfrac12-(cd_G/S)(2/\lambda+k).
+\]
+Then its fixed-radical factorization is
+\[
+ q_C^{(0)}+a_Cu=(q_C^{(0)}-c_0)+13A_*\gamma
+ +\tfrac12\{(A_*+a_C)(\gamma+u)
+                          +(A_*-a_C)(\gamma-u)\}.
+\]
+Every displayed pure factor is nonnegative on the rectangle.
+Its circuit remainder roots, and the other retained squares,
+still require their own testing features; they are not counted
+in $348$ or $180$.
+
+\section{The two zero faces are present, and $H$ is unrestricted}
+
+No inverse of $D$, $\beta$, $b$, $Q$ or a state coordinate was used
+in the coefficient estimates or Gram decomposition. At $D=0$
+the root $\Gamma_*$ is zero and all formulas remain literal.
+At $\beta=0$ the same formulas apply. Testing axes are included.
+The denominators $S,M,P,J,\sigma,k$ used above are nonzero on
+the stated source domain; their potentially dangerous combinations
+were bounded explicitly rather than omitted on a boundary.
+
+For explicit nonemptiness set $x=\sigma=t$, $z=1$, $b=1/2$,
+$h=Ht$, with $0<t\le\eps$. The numerators $D_N=2JPD$ and
+$\beta_N=2\theta P\beta$ are exactly
+\[
+\begin{split}
+ D_N={}&(3-H)t^2+(3/4-6H)t^3+(H^2+H/2)t^4\\
+       &+(-7H^2/2+H/4)t^5+(H^3-H^2/2)t^6,\\
+ \beta_N={}&(H-3/2)t+4Ht^2-Ht^3+4H^2t^4
+                                      +(-H^3+H^2/2)t^5.
+\end{split}
+\]
+Uniformly for $1\le H\le4$, the remainders beyond the first
+terms have absolute values at most $(687/4)t^3$ and $156t^2$.
+Thus continuity gives a $\beta=0$ source with $H\in[1,2]$ and
+$D>0$, and a $D=0$ source with $H\in[2,4]$ and $\beta>0$.
+On the first face $p\le7/8$ and
+$\lambda=8DH+2(H^2-p)t\ge t/4$.
+On the second, $\beta\theta\ge t/16$, so
+$\lambda\ge1/8-4t>0$. All strict native gaps hold.
+
+Finally take $\sigma=t$, $x=t^2/16$, $z=1$, $b=1/2$, $h=3/4$.
+Then $H=3/(4t)$ is unbounded along $t\downarrow0$ and
+\[
+ D_N={-3t^2\over262144}
+ (6t^5-61t^4+608t^3-7872t^2+8192t-126976)>0,
+\]
+\[
+ \beta_N={3(3t^2+64)(2t^3+5t^2+64)\over16384}>0.
+\]
+Also $K_A=O(\eps)$ on this path by \eqref{eq:KA-bounds}, so
+$c>0$ is represented. These are singular limits inside the
+evaluated rectangle, not merely a nonsingular compact slice.
+
+\section{Exact checks and scope}
+
+The adjacent script \texttt{fixed\_box\_c1\_checks.py} verifies with
+rational polynomial arithmetic the $F_x$ norm $37$, $F_\sigma$,
+the majorant norms $8590$ and $5030$, its testing support, all
+displayed rational margin comparisons, and the numerator formulas
+and sign brackets for the two faces. Its JSON output records each
+check. The inequalities above also supply the analytical proof;
+the script is not a numerical fit or a replacement for it.
+
+This supplies the previously missing fixed constants and fixed
+testing radicals for the positive-angular main Gram. It does not
+compile the other retained square families, the $\lambda\le0$
+branch, complementary testing charts, other C1 source charts or
+the global common-cover selection. None of those cases is silently
+included in the stated feature count.
+\end{document}

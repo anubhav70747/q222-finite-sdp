@@ -1,0 +1,246 @@
+NO FIXED SEPARABLE POLYNOMIAL MULTIPLIER FOR ALL NATIVE C1+C2 CONTACTS
+26 October 2026. Private transfer argument; no numerical work.
+
+Conclusion. The theorem in multiplier-lean/fixed_polynomial_multiplier_
+obstruction.tex DOES exclude a single pair of fixed nonzero polynomials
+p(u),q(v), nonnegative on all of R, for which p(u)q(v)F_c is an ordinary
+real polynomial SOS for EVERY strict native C1 and C2 contact source.
+The same assertion includes, a fortiori, all their permitted finite
+zero-event faces. Roots and their coefficients may depend on the source;
+no a priori degree bound or fixed feature library is assumed.
+
+The transfer does not require a polynomial certificate for the two
+noncoercive closed faces. A tight-face decomposition removes them.
+
+A. Tighten the explicit obstruction family to a nonlocal contact.
+
+Retain eta=1-T and Bell operator B_T=S+eta(A1+B0). Its local maximum is
+ell_T=2+2eta=4-2T: this is its maximum on the sixteen deterministic
+assignments, attained by the all-positive assignment. Put
+ w_T=4-2T+4T^3,
+ b_T=max quantum expectation of B_T.
+The existing strict-validity proof gives b_T<w_T<4, for 0<T<=1/100.
+The maximum is attained on the compact real two-qubit parameter/state
+space by the two-observable reduction.
+
+The same exact polynomial state test in the multiplier theorem, with
+x=y=1 and T=t^2, has
+ F_T(-t,t;psi_t)=(8/3)t^6+O(t^8),
+ (1+t^2)^2 ||psi_t||^2=1+O(t^2).
+Consequently its Bell expectation is
+ ell_T+(4/3)T^3+O(T^4)>ell_T
+for all sufficiently small T. Thus ell_T<b_T<w_T. A maximizing test
+cannot have either measurement pair commuting: a commuting pair gives
+a local behavior and cannot exceed ell_T. A maximizing real test can
+therefore be expressed with finite nonzero half-angles; the exact state
+sign congruences make both angles positive.
+
+The tight slack f_T^*=b_T I-B_T has canonical coefficients
+ d*=4-b_T>0,
+ lambda*=m*=A*=(b_T-ell_T)/4>0,
+ n*=D*=alpha*=(b_T-2T)/4>0,
+ C*=beta*=(b_T-2)/4>0.
+It is quantum-valid and zero at that finite noncommuting contact.
+No explicit formula or rationality for b_T is needed.
+
+B. Decompose INSIDE this contact, so no closed-face atom occurs.
+
+Fix its angles and normalized real contact state. The equations
+ P(c)psi=0, psi^T P_u(c)psi=0, psi^T P_v(c)psi=0
+are six homogeneous linear equations in the nine canonical source
+coefficients. Intersect their kernel with c>=0 and sum c_i=1. This is
+a compact polytope. Its vertices have at most seven positive source
+coordinates, since the augmented linear system has rank at most seven.
+The normalized source c_T^* is a finite convex combination of these
+vertices.
+
+Each vertex with d>0 is globally valid by the stationary-zero criterion
+SG7 in latex/chapters/04_geometry.tex. Every physical d>0 source with
+this finite noncommuting contact has coercive exponent support, by
+SG17 and its preceding explicit support argument. Hence it has at
+least five positive event weights (SG9), and its at-most-seven active
+source coordinates give at most six. The finite CHSH-preserving event
+symmetries put it in C1 or C2, including a permitted third omission
+(SG10 and the exact native entry parametrizations). A d=0 vertex is
+an event atom: its nonnegative event sum vanishes on the contact only
+if every retained event amplitude does, so the contact slice of d=0
+is the simplex on those event atoms.
+
+Equivalently the existing global extreme-source decomposition suffices:
+every summand must be tight at this contact, and SG17 excludes every
+positive-d noncoercive closed-face summand. The direct contact-polytope
+argument avoids importing that global decomposition.
+
+C. One multiplier for the native charts gives one for all finite orbits.
+
+Physical relabelings of two binary observables, recanonicalized with
+A0=B0=Z, act on each real half-angle by u -> +/-u or +/-1/u (likewise v),
+possibly exchanging the parties. Their state congruences have polynomial
+numerators divided only by sqrt(1+u^2) and/or sqrt(1+v^2). This follows
+by choosing the new first observable as the Z axis: if inputs are
+swapped the rotation numerator is [[1,u],[-u,1]]; outcome reversals
+use fixed Pauli matrices and/or reciprocal half-angles. Thus this
+finite physical group preserves the following multiplier property.
+For an explicit verification use the three involutions printed after
+SG17, whose event-cycle permutations are i->5-i,3-i,2-i modulo eight.
+Let N(w)=[[1,w],[-w,1]], X=[[0,1],[1,0]], and let Pi interchange the
+two physical state factors. Their exact RAW-parent identities are
+ D_u F_(gA c)(u,v;psi)=v^2 F_c(-u,-1/v;(N(u) tensor I)psi),
+ D_v F_(gB c)(u,v;psi)=u^2 F_c(1/u,-v;(X tensor N(v))psi),
+ F_(gT c)(u,v;psi)=u^2v^2 F_c(-1/v,-1/u;Pi psi).
+To check: gA sends observables to (A1,A0,B0,-B1), then conjugating by
+N(u)/sqrt(D_u) sends the first Alice observable to Z and the second
+to A1(-u). gB sends them to (-A0,A1,B1,B0), followed by X on Alice
+and N(v)/sqrt(D_v) on Bob. gT sends them to (B0,-B1,A0,-A1).
+These maps preserve CHSH and permute the eight event definitions
+exactly as above. Identities initially written for uv!=0 are rational
+identities; after clearing they hold polynomially, including axes.
+Their cycle permutations generate all i->+/-i+j, j=0,...,7, giving an
+explicit finite list of sixteen source relabelings. Composing the
+identities proves the required rational/SOS transport for each orbit.
+
+Precisely let M=pq, and B=(deg M+6)/2. Every polynomial SOS root of
+MF has total degree at most B, because F has total degree at most six;
+higher leading squares cannot cancel. For a relabeling g, let U,V be
+its transformed half-angles, i,j indicate reciprocal substitutions,
+and e,f indicate the sqrt(D_u),sqrt(D_v) state denominators. With an
+appropriate polynomial state numerator N, the raw forms satisfy
+ D_u^e D_v^f F_(g c)(u,v;psi)
+ =u^(2i) v^(2j) F_c(U,V;N psi).
+After substituting the hypothesized SOS and multiplying by
+u^(2B)v^(2B), every square becomes polynomial. In particular
+ M_g=u^(2B)v^(2B) D_u^e D_v^f p(U)q(V)
+is a fixed nonzero separable polynomial, nonnegative on the entire
+real testing plane, and M_g F_(g c) is SOS. Party interchange merely
+exchanges the two univariate factors. Extra harmless even powers may
+be used if a particular convention uses a larger clearing exponent.
+
+Take the product M_* of the finitely many M_g, including the identity
+chart. Every M_g and every quotient M_*/M_g is a product of globally
+nonnegative univariate polynomials, hence is polynomial SOS. Therefore
+M_* certifies every native orbit with ONE fixed separable multiplier.
+It also certifies every event atom: the exact SG2 event forms are
+squares times D_u and/or D_v, and D_u,D_v are SOS.
+
+If the assumption covers only strict six-event sources, the native
+third-omission opening argument in EXACT_LIFT_ROUTE.md, section
+'Only the strict contact families need new admission proofs', gives
+sequences of strict contacts approaching every permitted finite face.
+The degree of M_*F is fixed. Its polynomial SOS cone is closed: the
+integral of the monomial Gram on a compact box bounds the trace of PSD
+Grams for any coefficient-convergent sequence. Hence the same M_*
+certifies those limits. No uniform positive Gram margin is required.
+
+D. Contradiction with the original fixed-multiplier theorem.
+
+By B--C, M_*F_T^* is SOS. The actual strictly valid obstruction parent is
+ F_T=F_T^*+(w_T-b_T) D_uD_v (W^2+X^2+Y^2+Z^2).
+The second summand times M_* is polynomial SOS, since w_T-b_T>0 and
+all its testing factors are products of nonnegative univariate
+polynomials. Therefore M_*F_T would be SOS for every sufficiently
+small T, contradicting the original theorem for this FIXED M_*.
+This proves the claimed native-union obstruction. It does not identify
+which of C1 or C2, or which individual native source, fails a given
+multiplier; it does not exclude source-dependent multipliers,
+nonseparable multipliers vanishing at the origin, or fractional
+pure-testing features.
+
+E. A separate strengthening on the FULL canonical family.
+
+For ANY fixed polynomial T0(u,v) with T0(0,0)>0, the original scaled
+state substitution gives
+ t^(-6) T0(-tx,ty) F_(t^2)(-tx,ty;psi_t)
+ ->(4/3)T0(0,0)(Motzkin(x,y)+2)
+coefficientwise in a fixed finite degree. Thus the same closedness
+argument excludes T0 F_T for all sufficiently small T, without any
+separability assumption. If T0 vanishes at the origin, its leading
+homogeneous form remains in the limiting product, and this particular
+argument does NOT settle that product (for example T0=u^2+v^2).
+The orbit-saturation argument C alone does not transfer a nonseparable
+representative-chart multiplier: arbitrary nonnegative bivariate
+quotients need not be SOS, and reciprocal clearing can destroy a
+positive constant term. The following distinct tight-limit argument
+does handle a common multiplier for ALL original-frame native orbits.
+
+Closed-face caution. SG12/SG13 themselves describe limiting univariate
+or rescaled state forms, and SG14 gives testing-field PSD factors; this
+is not already an ordinary polynomial-SOS identity for their complete
+parents. Nothing above assumes that missing compatibility or proves a
+low-word closed-face certificate. It is unnecessary for this tight-face
+transfer, not silently supplied by the finite SDP representations.
+
+F. Nonseparable positive-at-origin obstruction for ALL native orbits.
+
+Stronger precise statement: no fixed real polynomial T0(u,v) with
+T0(0,0)>0 can make T0 F_c SOS for every strict native C1/C2 source AND
+all their finite physical relabeling orbits in the original testing
+frame. No separability or SOS assumption on T0 is needed here. This
+is not asserted for a multiplier known only on the two representative
+charts, because C's orbit saturation may give zeros at the origin.
+
+Set kappa(T)=(b_T-ell_T)/T^3. Part A gives
+ liminf kappa(T)>=4/3, and kappa(T)<4.
+Along a sequence T=t^2 ->0 choose kappa(T)->kappa0 in [4/3,4]. The tight
+parent has the exact coefficient limit under the same state pullback:
+ t^(-6) F_T^*(-tx,ty;psi_t)
+ ->(4/3)[M(x,y)+(3kappa0/4-1)].
+Indeed subtracting the gap (4-kappa(T))t^6 D_uD_v||psi_t||^2
+from the original limit (4/3)(M+2) gives this formula. The new constant
+c0=3kappa0/4-1 belongs to [0,2]. For EVERY c0>=0, M+c0 is not polynomial
+SOS: each degree-three root is constant on both axes, so the x^2y^2
+coefficient of its square sum would be nonnegative, whereas it is -3.
+
+Use the contact decomposition B to write F_T^*=N_T+E_T, where N_T is a
+nonnegative source sum of native-orbit parents and E_T is an event SOS.
+If only strict contacts are covered, first use the fixed-degree opening
+and closure argument in C for their finite omission faces. Pull back
+and divide by t^6; write f_t=n_t+e_t. The degrees of these polynomials
+in x,y are uniformly at most twelve. Both n_t,e_t are nonnegative for
+all real x,y, because all the source summands are physically valid.
+Furthermore e_t is ordinary polynomial SOS. On a fixed box,
+ 0 <= integral e_t <= integral f_t,
+and the right side stays bounded by the explicit coefficient limit.
+The positive-definite integral monomial Gram therefore bounds the
+trace of a PSD Gram representing e_t. Pass to a subsequence with
+ e_t -> e, where e is SOS, coefficientwise.
+Then n_t=f_t-e_t also converges, to n. The common-multiplier hypothesis
+makes T0(-tx,ty)n_t SOS of degree at most 12+deg(T0), independently
+of the number of contact-polytope vertices used. Since
+T0(-tx,ty)->T0(0,0)>0 coefficientwise, fixed-degree SOS closedness gives
+T0(0,0)n SOS, hence n SOS. Thus the displayed limit f=n+e would be SOS,
+contradicting M+c0. This argument never asserts that T0 E_T is SOS:
+event terms are controlled before multiplication by the bounded
+nonnegative decomposition. It therefore closes the event-compatibility
+issue for the ORIGINAL-FRAME ORBIT statement without an extra premise.
+
+Summary of distinct scopes:
+(i) all strict representative C1+C2 charts: no fixed nonzero separable
+    globally nonnegative p(u)q(v), using orbit saturation;
+(ii) all their physical orbits in one original testing frame: no fixed
+    polynomial T0 with positive constant term, using the tight limit;
+(iii) a general nonseparable multiplier vanishing at the origin, or a
+    nonseparable multiplier supplied only in representative charts:
+    not settled by these arguments.
+
+G. Fixed rational testing spans regular at the angular origin.
+
+A direct corollary of F excludes a fixed finite source-independent
+rational testing span phi_i(u,v;psi), linear in the four independent
+state amplitudes, if every feature admits a polynomial numerator over
+one scalar denominator Q(u,v) with Q(0,0)!=0. Indeed a source-only PSD
+Gram for F_c on this span gives, after factoring in the source field,
+ Q(u,v)^2 F_c = sum_j R_j(u,v;psi)^2
+with ordinary polynomial roots. Thus the SAME fixed multiplier Q^2,
+positive at the origin, would certify all native orbits, contradicting
+F. A finite collection of such spans is equally excluded: take the
+product of their finitely many denominators, still nonzero at zero.
+Polynomial identity after clearing holds everywhere, even if the
+original rational features have poles away from the origin.
+
+This is a scalar ANGULAR denominator hypothesis; it does not address
+source-dependent denominators, rational state-dependent denominators,
+fractional/algebraic testing functions, or rational angular features
+whose unavoidable denominators vanish at the origin. For only the two
+representative native charts, the separable theorem also excludes
+fixed rational spans with a common nonzero SEPARABLE denominator,
+without requiring its value at the origin to be nonzero.

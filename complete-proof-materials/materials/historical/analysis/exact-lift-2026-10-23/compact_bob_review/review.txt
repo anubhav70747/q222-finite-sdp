@@ -1,0 +1,106 @@
+Compact-Bob audit and bounded-unit-L all-tests theorem
+23 October 2026. Private analysis; no public files changed.
+
+Original inputs inspected: pro133 bridges/compact_Bob/compact_bob_completion.tex
+and its entire exact checker; public c1_short.tex components
+pb0d9d28d0849 (LA1--LA7), pda4a21937f64 (LB1--LB5), and p89fd3edb3edd
+(CE1--CE8); inverse62 full-parent identities. CAP component p23a094ff816d
+was read to identify the scope of the selected-parent obstruction. The
+bounded-R statement/source estimates were read; root reports its full
+independent analytical review passed. This review does not duplicate that
+review. The weighted-cancellation obstruction was not needed.
+
+ORIGINAL COMPLETION: NO SUBSTANTIVE ISSUE FOUND
+The checker was copied outside the frozen archive and safely replayed:
+all20 exact checks pass. I also checked the mathematical mechanism: strict
+T=0 raw-state block plus positive full determinant; opening-cleared inverse
+trace bound; common-factor actual-source accounting; fixed source clipping;
+event-coordinate norm conversion; and fixed chart polarization. The source
+clipping proof is sound: both coordinate map and inverse have squared
+Frobenius norm<=6, so its stated reserve is conservative. Both complete
+state normals and all original m,D,beta terms are retained. Literal D=0,
+beta=0 and Bob endpoints are allowed. A single family requires fixed chart
+selectors; chart radicals alone are only locally defined. The new theorem
+below supplies the selectors explicitly.
+
+INTERFACE AND INITIAL COVERAGE HOLE
+The leading coefficients match inverse62 exactly under L=1/z and b=L*r,
+where compact-Bob r is the native r. They are not merely asymptotic.
+The original compact annulus has |u|<=1 and u^2+c^2>=tau^2. Inverse62
+has |u|>=2^-24 but only |w|<=2^-36. These two domains alone leave
+|u|>1 outside that Bob strip. The finite ratio-admission bound for the
+annulus must also be imposed; it need not follow from inverse62's original
+box if tau is chosen small. The selected-parent below-wall witness is
+valid but is not a negative witness for the full parent. It explains why
+the other original events cannot be dropped at the double contact corner.
+
+NEW EXACT RESULT
+bounded_unit_L_all_tests.tex (6 pages) proves one fixed testing-family
+theorem for each specified rational interval 0<ell<=L<=U<infinity.
+All formulas, source conditions, matrices and physical normalizers are
+printed. The source box is explicit and permits arbitrary H=h/sigma,
+all relative opening rates and either permitted event-zero face.
+
+Let R=max(1,1/ell), eps_R=2^-40(1+R)^-8, delta_R=2^-20(1+R)^-2,
+mu=1/[4max(U,1)], M=ceil96max(U,1), tau=delta_R^2/2,
+B=U^2(4+2M^2+M^4)+U(2+2M^2+M^4)+1+2M^2,
+k=min(ell,1)tau^2/(8B), K=3M^2,
+epsilon=min(2^-78,eps_R,k/[50(k+K)]).
+The native admission is 0<x,sigma<=epsilon/(1+z), z=1/L, with the
+original strict gaps and nonnegative native D,beta. Source identities
+give d_src<=25epsilon and C,A>=mu, without dividing by D or beta.
+
+Endpoint mechanism: selecting only C=A=mu, CE4 and CE7 yield the printed
+two test-only4x4 matrices. At p=0 their reserves are mu/3; finite-p
+corrections have row norms<=3p and<=4p. Hence p<=mu/24 gives reserve
+mu/6 for every Bob angle using its two fixed charts. Their four testing
+Cholesky roots are fixed functions because mu is frozen, not source-
+dependent. Six whole event/excess roots per chart restore the full parent.
+
+Generalized annulus: the exact cofactor denominator satisfies
+(1+t)[Lq+t(1-q)]>=min(ell,1)(q+t). The displayed B controls its numerator
+on |u|<=M. Actual ratio admission and core norm K give a reserve k/2 on
+the larger annulus. Fixed clipping N=K+1+24K^2/k yields h=min(1,k/24).
+The fixed rational grid uses n=ceil max(8M^2/tau^2,56M^2(N+1)/h), with
+c_j=(n^2-j^2)/(n^2+j^2),s_j=2jn/(n^2+j^2). Every center is rational.
+The exact fixed-polarization identity supplies at most65 functions per
+chart; no mixed source/testing matrix is factored.
+
+The endpoint covers |u|>=M. The annulus covers the rest except
+|u|,c<tau, where sqrt(|u|),|w|<=delta_R. The independently reviewed
+bounded-R inner theorem covers that last corner. The common box lies
+inside its exact source admission. Thus ALL projective testing pairs
+are covered. This is not the previously evaluated731 cone: the inner
+supports now depend on the fixed R. If ell>=1, public669 alone suffices,
+with the stronger choice tau=2^-25 and epsilon_R omitted from the minimum.
+
+CHECKS AND PRECISE LIMIT
+check_bounded_unit_L.py verifies15 exact endpoint, restoration, reserve,
+denominator and rational-grid identities; bounded_unit_L_checks.json
+includes a fully evaluated ell=U=1 optimized669 instance. The finite grid
+bound is enormous and has not been enumerated into matrix arrays. This
+is a complete fixed-family theorem on the stated source interval, not an
+evaluated global affine pencil. No source outside its admission is claimed.
+In particular it is not uniform as ell tends to0 or U to infinity; it
+does not cover literal z=0, larger weighted openings, other native source
+charts or C2. It closes those testing obligations only after fixing the
+source interval. Its qualitative germ consequence covers unitL with
+x,sigma infinitesimal by choosing rational ell,U around its real residue.
+
+EXACT PRUNING MAP
+See unit_L_replacement_map.json for source locators and retained inputs.
+unit_L_qualitative_replacement.tex is a two-page include-able replacement
+when built at10pt. It uses no finite grid and imports no bounded-R bridge:
+the existing B23 theorem handles the double-infinitesimal corner. All
+reserve/clipping inequalities are explicitly evaluated at the real
+testing residue in the source field, then the complete live event-frame
+Gram differs by bounded zero-residue coefficients. Endpoint core forms
+and exact gauges are printed. Its sole external formal reference is the
+existing thm:c1-unification-bounded-z-all-H label.
+Entire LA and LB subsections can be replaced for their unitL/unbounded-eta
+source; their old asymptotic split by testing type and chosen Bob residue
+is unnecessary. Their two source-partition references can target the new
+theorem. The local all-H proof is not wholly obsolete: the inner retained-
+root formulas/source identities are still used, and L-unbounded consumers
+remain outside this source interval. UnitL with infinitesimal or unit eta
+also remains separate. No deletion of all C1 technical material is justified.

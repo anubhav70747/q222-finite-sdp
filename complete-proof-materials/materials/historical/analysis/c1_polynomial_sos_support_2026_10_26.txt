@@ -1,0 +1,80 @@
+The C1 four-signed-contact polynomial-SOS obstruction
+Private bounded derivation, 2026-10-26
+
+Result. C1 has a concrete analogue of the C2 support obstruction, but it is a triangle inequality rather than the same rigid coefficient-ratio equality. A strict native C1 source violating this inequality is given below. Hence a nonempty open subset of the strict native C1 family is not an ordinary polynomial SOS, at any degree. This argument does not prove exclusion on a dense generic subset or on all C1 sources.
+
+Inputs read: current independent-review/C2_POLYNOMIAL_OBSTRUCTION.md; complete SG2; c1_short.tex CE1-CE2 and SD1. No earlier local SOS proof was used. Companion c1_polynomial_sos_support_2026_10_26.py/.json reconstructs the exact prescribed example from SD1 and checks the full parent.
+
+1. Degree and support.
+Fix an original finite native C1 contact, normalized Z_c=1:
+  u_c=k>0, v_c=ell>0,
+  psi_c=(S,k(theta-1),k S r,1),
+  S>0, 0<r,theta<1.
+Its coefficients satisfy lambda=n=0; d,m,C,A,alpha>0; D,beta>=0 and D+beta>0.
+
+If F=sum_j R_j^2 in ordinary real polynomials, the exact degree argument from C2 still applies: every root is homogeneous linear in state and multiaffine in u,v,
+  R_j=sum_l (A_jl+B_jl u+C_jl v+D_jl uv) psi_l.
+Higher leading degrees cannot cancel in a sum of real squares, and F(u,v,0)=0 kills state-independent parts.
+
+In the actual SG2 parent, [W^2]F=4lambda=0 and [u^2 X^2]F=4n=0. Therefore A_jW=B_jX=0 for every root. This is the essential distinction from C2: the two deleted coefficients belong to DIFFERENT sign characters. In C2, both deletions lie in the invariant character and leave only two coefficients; here each affected character retains three.
+
+2. A necessary triangle inequality.
+Average each root over the four exact contact sign actions
+  (u,Y,Z)->(-u,-Y,-Z), (v,X,Z)->(-v,-X,-Z).
+The invariant character retains W,vX,uY,uvZ. Since A_jW=0, contact vanishing gives
+  v_c X_c C_jX+u_c Y_c B_jY+u_c v_c D_jZ=0.
+Use coefficient vectors across all roots:
+  c=(C_jX)_j, b=(B_jY)_j, e=(D_jZ)_j.
+Put p=-X_c/u_c=1-theta>0 and q=Y_c/v_c=k S r/ell>0. Dividing by u_c v_c gives
+  -p c+q b+e=0.
+The full parent's exact coefficients give
+  ||c||^2=4beta+2d, ||b||^2=4A, ||e||^2=4beta.
+Thus the three positive-or-zero lengths
+  p sqrt(4beta+2d), q sqrt(4A), sqrt(4beta)
+must form a triangle.
+
+Equivalently, with a0=p^2(4beta+2d), b0=4q^2 A, c0=4beta, every polynomial SOS satisfies
+  H0=2(a0 b0+a0 c0+b0 c0)-a0^2-b0^2-c0^2>=0,
+or (a0+b0-c0)^2<=4a0 b0.
+This follows directly from the triangle inequality or Cauchy-Schwarz applied to e=p c-q b. It does not require assuming that individual roots have pure sign character.
+
+At beta=0, e=0 and this collapses to a0=b0. It is then precisely the two-root ratio rigidity on the C1/C2 triple-omission face. For beta>0 there is generally no such equality.
+
+For completeness the other affected character retains uvW,uX,vY,Z. Deleting B_jX gives
+  u_c v_c W_c D_jW+v_c Y_c C_jY+A_jZ=0.
+Its squared lengths are
+  4C(u_c v_c W_c)^2,
+  [4(C+A+alpha)+2d](v_c Y_c)^2,
+  4alpha.
+They must satisfy the same Heron inequality. These are additional necessary conditions, not a full Gram criterion.
+
+3. One strict native C1 violation.
+Use current SD1 at
+  k=f=g=1, a=7/8, t=3/5.
+Then S=1, u_c=v_c=1, r=1/8, theta=3/5 and
+  psi_c=(1,-2/5,1/8,1).
+The original source in order (d,lambda,n,m,C,A,D,alpha,beta) is
+  (7301/540,0,0,40/9,2,2891/135,4699/1080,81/40,49/1080).
+Every nonomitted event is STRICTLY positive. Its strict gaps are
+  M=J=21/40, E=3/5, Q=7/8.
+The exact checker reconstructs all coefficients from SD1 and verifies the four state-kernel and two angular equations against the complete SG2. The stationary-contact theorem therefore proves global validity. It also directly verifies all four signed zeros.
+
+Here p=2/5, q=1/8, and the squared lengths are
+  (a0,b0,c0)=(196/45,2891/2160,49/270).
+They cannot form a triangle: sqrt(a0)>2, sqrt(b0)<6/5, sqrt(c0)<1/2, so sqrt(a0)>sqrt(b0)+sqrt(c0). Equivalently,
+  H0=-10994179/1555200<0.
+This proves that the complete full-state F of this strict native C1 source is NOT an ordinary polynomial SOS at any degree.
+
+If d=1 normalization is preferred, the same source is
+  (1,0,0,2400/7301,1080/7301,236/149,
+   4699/14602,2187/14602,1/298).
+Positive common scaling does not affect the obstruction.
+
+All inequalities at the example are strict and the native rational formulas are continuous with nonzero denominators. Thus the violation persists on a nonempty open set of the five-parameter strict native C1 chart. This is a genuine interior event-positive failure, not only a beta=0 example or an inference from an optimizer.
+
+4. Exact scope and why C1 differs.
+The original C1 seed (d,m,C,A,D,alpha,beta)=(27/2,4,2,9,5/4,13/4,9/4) at (u_c,v_c;psi_c)=(1,1;1,-1/2,1/4,1) satisfies both triangle inequalities strictly: their Heron values are 1215/16 and2687/16. Thus this degree/support argument does not yield an equality that generically contradicts all native C1 sources. Further full-parent matching may impose additional constraints, but it was not attempted here.
+
+The obstruction concerns ordinary real polynomial squares of F itself. It does not exclude fractional-power testing functions, rational certificates after a fixed positive denominator, or SOS for a multiplied parent. A polynomial matrix-SOS coupling completion of this source would contradict the obstruction, but a merely pointwise PSD remainder is not ruled out.
+
+Execution: the standalone private exact checker completed in about one second. It uses one deliberately selected rational source, no solver and no continuous-parameter sweep. It verifies source positivity, all native gaps, all six stationary equations, four signed contacts, the relevant SG2 coefficient identities and the strict triangle violation.

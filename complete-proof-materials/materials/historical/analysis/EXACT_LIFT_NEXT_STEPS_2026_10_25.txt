@@ -1,0 +1,52 @@
+EXACT LIFT: CONSTRUCTION AND REMAINING STEPS
+25 October 2026
+
+1. Retain the established blocks.
+The nine-word NPA matrix, finite closed-face pencils and the new order-seven
+equal-angle C2 cone give globally sound constraints on the same eight behavior
+coordinates. The order-seven cone contains the previous order-three curve;
+do not append the latter separately. Published source and behavior matrices:
+github-q222-finite-sdp/extracted-lifts/c2-equal-angle-cone/.
+Remote commit e0fedcd5c5bb41cc3b3234044b146ff38df386e4, independent-review.
+
+2. Extend the exact cone to unequal measurement angles.
+Set native b=a>0, t=(1-r)/a, u=c, v=ac and
+psi=(1,-cr,cr,1). This preserves maximal entanglement and adds one independent
+angle parameter. The exact source formulas and native domain are frozen in
+c2_maxentangled_general_angles_2026_10_25.txt. Six contact equations, the
+nonzero contact minor and the unique quadratic relation have exact checks.
+The relation is D(alpha+d/2)=m(C+d/2). Its rank-four quadratic form prevents
+a direct source-linear 2x2 rank-one construction of the previous kind;
+auxiliary variables or a larger coupled PSD block remain possible.
+Required output: one finite source-affine representation of the closed hull,
+with both inclusions and every endpoint proved. Fiberwise representations
+or contact-by-contact Grams do not establish this statement.
+
+3. Retain independent state parameters in the remaining C1/C2 families.
+Maximally entangled contacts cover only part of these families. After step 2,
+identify precisely which extreme rays still need certificates. Either give
+additional explicit fixed cones or prove universal sixth-root admission for
+the remaining sources. The fixed dual reformulation alone does not prove it.
+
+4. Assemble only after coverage.
+Verify every required extreme ray, zero-weight limit and physical relabeling.
+The established assembly lemma then intersects the attained dual constraints
+to give the full lift. No full global Q222 lift has yet been established by
+this constructive route.
+
+DIVISION OF WORK
+GPT-6 Extra High: step 2, focused request sent once after the previous run
+ended with Task failed / Message delivery timed out. New run visibly showed
+Analyzing Unequal-Angle Entangled Contact Cones. No final result recovered yet.
+Coordinator: compare its complete answer with the frozen exact formulas,
+prove both cone inclusions and check the resulting matrices before publishing.
+Two bounded local agents: finished source/domain elimination and the
+one-point-PSD counterexample; no further parallel search currently needed.
+
+FAILED SHORTCUT TO AVOID
+On m=D,C=alpha, P(1,1)>=0 does not imply global validity. The exact source
+(d,n,m,C,A,D,alpha)=(1,1/4,1/4,1/6,3/4,1/4,1/6) has a PSD matrix there but
+parent value -29/768 at u=7/8,v=1,psi=(1,-1/4,1/4,1). The missing angular
+equation is independent of state-kernel equations. A small positive event
+perturbation also defeats tests that impose stationarity only at kernels.
+See c2_one_point_slice_obstruction_2026_10_25.txt for the exact derivation.

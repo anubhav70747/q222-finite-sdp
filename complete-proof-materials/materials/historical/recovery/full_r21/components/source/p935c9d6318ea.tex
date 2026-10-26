@@ -1,0 +1,74 @@
+\paragraph{Deriving the scalar and first-normal inputs by monic division.}
+Here is a finite construction of every coefficient in the preceding table. It uses the seven factored packets, differentiation, and division by monic polynomials. Thus neither a stored expansion nor a rational-function ideal calculation is an input.
+
+Let $\mathcal R=\Q[a,t,b,e,k]$ and use an indeterminate $U$ for $u^2$ in this paragraph only. Put $K=k^2$. Substitute $(X,Y,v)=(X_g,Y_g,v_g)$ in the peeled polynomial $E$. Directly from the seven packets, the resulting expression has the form
+\[
+\frac{E_g}{e^2b^4}=e^2\mathcal A(U)+ekZ\mathcal B(U)+k^2Z^2\mathcal C(U),
+\qquad \mathcal A,\mathcal B,\mathcal C\in\mathcal R[U].
+\]
+The displayed division means coefficientwise polynomial extraction: the constant, linear and quadratic coefficients in $Z$ have the factors $e^2$, $ek$ and $k^2$, respectively. No evaluated tensor is divided. Substituting the graph into the factored packets gives the five short contact and axis identities
+\begin{gather*}
+(\mathcal A+\mathcal B+\mathcal C)(K)=0,\qquad
+(\mathcal B+2\mathcal C)(K)=0,\qquad
+(\mathcal A+\mathcal B+\mathcal C)'(K)=0,\\
+\mathcal A(0)=\mathcal B(0)=0.
+\end{gather*}
+Consequently the following monic divisions have zero remainder:
+\begin{align*}
+\mathcal N&=\frac{\mathcal A+\mathcal B+\mathcal C}{(U-K)^2},&
+\mathcal D&=\frac{\mathcal B+2\mathcal C}{U-K},\\
+\mathcal R_0&=\frac{\mathcal C+K\mathcal D+K^2\mathcal N}{U},&
+\mathcal J&=\frac{-\mathcal D-2K\mathcal N}{U}.
+\end{align*}
+For the last two divisions, evaluate the numerators at $U=0$ and use the first two division identities together with $\mathcal A(0)=\mathcal B(0)=0$. This is a polynomial-ring argument; the symbols $K$ and $U$ are not inverted after evaluation. Set
+\[
+A_{00}=\mathcal R_0(u^2),\qquad A_{01}=u\mathcal J(u^2),
+\qquad A_{11}=\mathcal N(u^2).
+\]
+Comparing the three coefficients of $1,Z,Z^2$ proves exactly
+\[
+\frac{E_g}{e^2b^4}
+=A_{00}\,[u(e-kZ)]^2+A_{01}\,u(e-kZ)(eu^2-k^3Z)
+ +A_{11}(eu^2-k^3Z)^2.
+\]
+Multiplying by $e^2b^4$ gives the scalar identity used above.
+
+For each $\xi\in\{X,Y,v\}$, let $R_\xi$ be the graph restriction of $\partial_\xi E$, divided coefficientwise by $e^2b^2,eb^2,e^2b^2$, respectively. The first two are linear in $Z$. The third has one quadratic coefficient, supplied solely by the signed packet:
+\[
+[Z^2]R_v=-4R_cT_0c_d\,e k b^2u(1+u^2).
+\]
+Define
+\[
+C_X=C_Y=0,\qquad C_v=4R_cT_0c_d\,eb^2(1+u^2).
+\]
+Then $\widetilde R_\xi=R_\xi-C_\xi Z\,u(e-kZ)$ is linear in $Z$ and has the polynomial parity form
+\[
+\widetilde R_\xi=eu\,L_{\xi,0}(U)+kuZ\,L_{\xi,1}(U),
+\qquad L_{\xi,i}\in\mathcal R[U].
+\]
+In particular, subtracting the quadratic term also leaves its corrected linear coefficient divisible by $ku$; this follows upon collecting the signed packet with the two current packets. The contact identity is
+$\big(L_{\xi,0}+L_{\xi,1}\big)(K)=0$. Form the monic quotient
+\[
+J_\xi=\frac{L_{\xi,0}+L_{\xi,1}}{U-K}.
+\]
+The promised full first-normal coefficients are now defined by the short formulas
+\[
+P_\xi=(L_{\xi,0}-UJ_\xi)(u^2)+C_\xi Z,
+\qquad Q_\xi=uJ_\xi(u^2).
+\]
+Indeed direct multiplication gives
+$R_\xi=P_\xi u(e-kZ)+Q_\xi(eu^2-k^3Z)$.
+This proves the full first-normal identities, including the quadratic-in-$Z$ term; no first-normal term has been omitted.
+
+For completeness, the weighted splits have an equally explicit finite rule. In a polynomial expanded in $(e,k,b,u)$, place a monomial with $k$-exponent at least $r$ in the first bucket and divide it by $k^r$; place every remaining monomial in the second bucket and divide it by $e^s b^s$. Use $(r,s)=(4,2)$ for $A_{00}$ and $(r,s)=(2,1)$ for
+\[
+A_{01},\quad P_X,\quad P_Y,\quad P_v-16kP_0.
+\]
+Substitution of the seven short packets into the monic formulas shows that every monomial left for the second bucket has the required $e^s b^s$ factor. Equivalently, the only polynomial remainders to check are
+\[
+A_{00}\equiv0\pmod{(k^4,e^2b^2)},\qquad
+A_{01},P_X,P_Y,P_v-16kP_0\equiv0\pmod{(k^2,eb)}.
+\]
+These are ordinary finite polynomial truncations: discard the monomials divisible by the displayed generators. The two bucket quotients have respectively residues $(-8,-8)$ for $A_{00}$ and $(0,0)$ for each of the other four entries; $A_{11}$ has residue $8$, and all $Q_\xi$ have residue zero. To obtain these numbers, after the divisions set $e=k=u=Z=0$, keeping $a,t,b$ free. In particular the new term $C_vZ$ belongs to $eb\,\mathcal R[u,Z]$ and its second-bucket quotient contains the infinitesimal testing factor $Z$. No assumption $\bar b=0$ is used.
+
+This is a reproducible coefficient construction: the source consists of seven short packets, the scalar construction of four monic quotients, and each first-normal construction of one monic quotient. The finite checks accompany these formulas as a convenience; the definitions and the multiplication identities, rather than expanded coefficient arrays, are the proof objects.

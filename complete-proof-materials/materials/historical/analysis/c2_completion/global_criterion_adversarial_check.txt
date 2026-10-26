@@ -1,0 +1,72 @@
+SHORT ADVERSARIAL CHECK OF THE FINAL EXISTENCE INTERFACE
+
+Sources actually checked:
+- recovery/r21_selected/opening_assembly.tex, lines 26-58 and 239-332,
+  FA1/FA2 and FA9-FA13.
+- recovery/full_r21/components/source/p9b00698ff36a.tex, RFA physical
+  model and transfer lines 14-141, normalization lines 154-232, and
+  universal finite assembly lines 369-426.
+- C. Scheiderer, arXiv:2004.04196v2, Corollary 3.19 and proof, printed
+  page 15 (PDF page index14), freshly opened from
+  https://arxiv.org/pdf/2004.04196 . The corresponding extracted text
+  lines are 1355-1371. The corollary is not restricted to planar sets.
+
+Finding: no invalid final implication found, conditional on the actual
+universal LC/source decomposition inputs established elsewhere.
+
+1. The set in the corollary must be closed, convex and semialgebraic over
+R. FA1's finite polynomial expectation model on nine copies of the compact
+real S1 x S1 x S3, with simplex weights, has these properties and equals
+the full finite-dimensional complex quantum set by simultaneous effect
+dilation, Jordan block decomposition, real/imaginary splitting and direct
+sum realization. Its real compactness gives closedness. One does not need
+topological compactness over a non-Archimedean extension.
+
+2. The corollary quantifies over EVERY real closed extension K of R,
+EVERY affine f in the transferred valid-affine cone, and EVERY point of
+the transferred set. FA2 identifies the cone by the same quantified
+nonnegativity condition and elementary transfer. FA9 has the stronger
+two-labelled-field assertion. Choosing two labelled copies of the same
+arbitrary K gives precisely K tensor_R K. The factor flip is a ring
+isomorphism preserving squares, so point-first/coefficient-first order
+is harmless. An assertion only over R or one chosen extension would be
+insufficient; that is not the assertion used here.
+
+3. FA12 is exact for AFFINE evaluations. For f=sum a_j f_j, nonnegative
+source weights need not sum to one. For q=sum w_i Phi(z_i), testing
+weights DO sum to one, preserving f's constant term. Expanding bilinearly
+then gives sum a_j tensor w_i times each elementary slack. Their square
+roots are pure source/testing. Zero weights give zero roots and are never
+inverted. Field-dependent finite choices are allowed by the universal
+pointwise SOS criterion; no pre-evaluated common atlas or square count is
+an additional hypothesis of Corollary 3.19.
+
+4. FA11 divides only by positive s in Kc and positive Delta_A Delta_B
+norm(psi)^2 in Kt. Projective angle pairs are nonzero, and a nonzero state
+has positive squared norm. Their inverses and square roots therefore
+exist in their separate real closed fields. Literal affine infinity is
+handled by nonzero homogeneous pairs; zero state is evaluated separately.
+There is no cancellation or square root of a mixed tensor element.
+
+5. FA10 factors two PSD matrices inside their respective real closed
+fields, allowing singular factors. The entrywise pairing expands to the
+displayed squares; dual linear equations cancel auxiliary terms. This
+step requires the explicit attained closed-face dual witnesses and the
+strict-point/closed-image argument, checked by the lead; the final
+assembly does not replace attainment by a formal nonnegative pairing.
+
+6. Corollary 3.19 asks for finite SOS with no COMMON tensor-rank bound.
+Its proof supplies a finite-dimensional algebraic space U from these
+universal hypotheses and concludes finite semidefinite extension degree.
+Consequently FA13's finite real affine pencil exists. Multiple PSD blocks
+can be combined diagonally, and affine projection equations can be
+retained as equalities or represented by opposite scalar blocks. This
+does not compute N,m or any matrix entry and does not establish an SOC
+lift or extension degree two. E1-E3 are later constructive tasks rather
+than missing hypotheses for the qualitative implication.
+
+Adversarial conclusion: the remaining possible failure point would have
+to be an unproved local/source-generation/closed-face premise, not a
+quantifier, convex-weight, pure-factor, ambient-dimension or extraction
+mismatch at the Corollary 3.19 interface. No such interface mismatch was
+found in this short check.

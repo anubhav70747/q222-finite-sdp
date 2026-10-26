@@ -1,0 +1,146 @@
+\chapter{The two missing weak-IH source endpoints}
+\label{component:p18dbedfff317}
+\noindent\textbf{Component }\path{p18dbedfff317}\par
+{\small\noindent Source: \path{R13/baseline/baseline/advances/ih/weak/ih_source_endpoints.tex}\par}
+{\small\noindent SHA256: \path{18dbedfff317c23862d5254744a5e0dc33f7149ead8f6cb87f55d9a7f28d610d}\par}
+{\small\noindent Inventory use: WIE1--WIE6 both rho=0,1 source endpoints with full D packet and complete normals\par}
+\medskip
+\section{The two missing weak-IH source endpoints}
+\label{p18dbedfff317:sec:weak-ih-endpoints}
+We use the exact parent, graph, roots, coefficients $K,k$, and both
+normal factorizations (IC3)--(IC12) in the preserved interior-corner
+proof.  Those identities are exact for every positive canonical C2
+source; their validity does not require the interior-shape assumption.
+Here $z$ and testing $u,w$ are infinitesimal (zero testing coordinates
+are allowed), $B$ is unbounded, $H\in(0,1)$, $\rho=B/y$, and
+$N=4n+2$, $\nu=Nr$. All source and testing rates are independent.
+
+\paragraph{The endpoint $\rho_0=0$.}
+Put $s=r/\rho$ and $\tau=1/B$. Nonnegativity of $n$ and the exact
+source formulas imply that $s$ is bounded. The following normalized
+source quantities have the indicated residues:
+\[
+ \nu/\rho\to2,\quad nr/\rho\to(1-s)/2,\quad
+ D/\rho^2\to1/2,\quad BC,Bm/z^2,AH/B,\alpha(1-H)/B\to1/2,
+\]
+\[
+ k/(B\rho)\to2s,\qquad 0\le s_0\le1.
+\tag{WIE1}
+\]
+These are uniform opening identities: after substituting
+$B=1/\tau$, $y=1/(\tau\rho)$, $r=s\rho$, their normalized rational
+functions have a nonzero denominator at $z=\tau=\rho=0$, including
+$H=0,1$. The fresh checker records these denominator residues.
+Thus they concern simultaneous, not iterated, infinitesimal limits.
+
+Replace $T$ by $T_\rho=\rho T$ in (IC7). Its coefficients are bounded;
+for example $r^2n/\rho^2=s(nr/\rho)$ is bounded. Add the exact zero
+\[
+ T_\rho^2+(u^2-z)T_\rho R_2
+ -\rho u(zR_0-uR_1)(uR_0-R_1)=0.
+\tag{WIE2}
+\]
+This is (IC8a) multiplied by $\rho$, and uses no mixed inverse.
+The residue Gram has $R_0,R_1,E$ diagonal entries $2,2,2$, and
+\[
+ (R_2,T_\rho):\quad
+ \begin{pmatrix}2&-s_0\\-s_0&1+2s_0\end{pmatrix}.
+\]
+Its determinant $2+4s_0-s_0^2\ge2$ is strictly positive on $[0,1]$.
+
+The entire normal restoration survives this rescaling. In (IC11),
+replace $f_XT$ by $(f_X/\rho)T_\rho$, where
+\[
+ f_X/\rho=-2(nr/\rho)(1+w^2)-s(2D+1)
+\]
+is bounded. Every multiplier still contains testing $u$ or $w$, and
+$1/\sqrt N$ is bounded. The remaining coefficients in (IC11) are
+unchanged and infinitesimal. Formula (IC12) uses the root $R_1$ rather
+than $T$ and remains bounded and infinitesimal unchanged. The normal
+quadratic residue is $\operatorname{diag}(1,2)$. Hence the full
+seven-root Gram is strict. This includes arbitrary positive $r,H,1-H$
+and literal $n=0$.
+
+\paragraph{The endpoint $\rho_0=1$.}
+Set $e=1+zr-\rho+H/y=j>0$, an infinitesimal, and write
+\[
+ \rho=\frac{1+zr-e}{1-H\tau},\qquad \tau=1/B.
+\]
+The exact source formulas give the simultaneous normalized residues
+\[
+ De\to1/4,\quad\nu\to1,\quad nr\to(1-2r)/4,\quad
+ BC\to1/4,\quad Bm/z^2\to(1-r)/4,
+\]
+\[
+ AH/B,\alpha(1-H)/B\to1/4,\quad
+ 0\le r_0\le1/2.
+\tag{WIE3}
+\]
+Put $\kappa=k-8DHr$; then $\kappa/B\to r$.
+The scaled rational functions have regular nonzero denominators at
+$z=\tau=e=0$ after the displayed powers of $e$ are absorbed.
+
+The large coefficient $D$ must be retained in a square, not treated
+as a bounded Gram coefficient. Introduce the full-state root
+\[
+ F_D=\sqrt D\,(J+eZ),\qquad a=\sqrt{H/B},\qquad
+ Q=R_2-rT-aE.
+\]
+On the graph, $Q=J+eZ$. Subtracting its square from (IC7) gives the
+exact identity
+\begin{align*}
+ G-4DQ^2={}&(4BC-\kappa z/B)R_0^2+4BmR_1^2/z^2
+       +2(2C+1)R_2^2\\
+ &+r^2(4nw^2+4n+2)T^2
+ +\frac HB\{4A(1+u^2)+4C+2\}E^2\\
+ &+\kappa uR_0R_1/B+(-4r+\kappa/B)R_2T
+       -4a(2C+1)R_2E.
+\tag{WIE4}
+\end{align*}
+Add the exact zero (IC8a). Restore the full normals
+\[
+ E_X=\sqrt N(X+ruZ),\qquad
+ E_Y=\sqrt{B/[H(1-H)]}(Y-HwZ).
+\]
+Use the exact relation
+\[
+ R_2=F_D/\sqrt D+rT+aE-uE_X/\sqrt N
+                         +wE_Y/\sqrt{B/[H(1-H)]}.
+\tag{WIE5}
+\]
+The inverse $1/\sqrt D$ is purely in the source field and infinitesimal.
+All coefficients after this substitution are bounded.
+
+For completeness, the first-normal quotients of
+$\widehat F-4F_D^2$ are precisely the D-removed versions of
+(IC11)--(IC12). Explicitly,
+\begin{align*}
+ \bar f_X&=-2nr(1+V)-r,\\
+ \bar g_X&=-2mB/z-2nr(1+z)+1-H-r-2m(H+r-1),\\
+ \bar f&=2m-2C(1+V)-V,\\
+ \bar f_Y&=2AH(1+V)-2\alpha(1-H)+(2m+1)(H+r-1),\\
+ \bar g_Y&=-B(2C+1)+2AH(1+z)+2CH+H.
+\end{align*}
+The constant term in the $Y$ monic polynomial acquires $2De$, but
+its monic quotient coefficients are unchanged; the $X$ polynomial
+has the constant correction $-2De$. Exact source stationarity
+still sets the constant remainders to zero because $J+eZ$ vanishes
+at the contact. Thus the displayed quotient formulas reconstruct
+both linear normals. Their normalized coefficients are infinitesimal
+by (WIE3); in particular $De$ is bounded and no bare $D$ survives.
+The normal quadratic block of the D-removed expression has residue
+$\operatorname{diag}(1,1)$.
+
+In the order $(R_0,R_1,T,E,F_D,E_X,E_Y)$, the complete residue Gram
+is diagonal:
+\[
+ \operatorname{diag}\{1,1-r_0,1+r_0-r_0^2,1,4,1,1\}.
+\tag{WIE6}
+\]
+For instance the $T^2$ entry comes from substituting $R_2=r_0T$
+in (WIE4): it is $r_0\nu_0-r_0^2$, plus the unit contribution from
+(IC8a). Every entry is positive for $0\le r_0\le1/2$.
+This proves full-parent tensor SOS at the corner also when
+$1-\rho$ is infinitesimal. Along with the preserved interior proof
+and the $\rho_0=0$ argument, every allowed source shape is covered
+at the independent testing corner $u,w$ infinitesimal.

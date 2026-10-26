@@ -1,0 +1,80 @@
+Strict native C2: exact obstruction to unramified coupling completion
+Scope. Full five-parameter native C2 family with d=1, lambda=beta=0, independent real tests u,v, all four state coordinates. No numerical sweep, no regional certificate. Reference: repository commit 6b0f1f7b2c518be4ab315c802a073f5c96205217, latex/certificates/c2_short.tex and independent-review/EXACT_LIFT_ROUTE.md.
+Conclusion. A complete strict native C2 polynomial SOS in R[u,v,W,X,Y,Z] is possible only if h=a^2 r, where h=b-a^2 t>0. The proof uses the exact native C2 stationary coefficients, the absent lambda/beta events, and the four physically related contacts. This is a necessary condition, not a characterization. It rules out every unramified polynomial SOS and every polynomial Schur completion with an SOS remainder at generic strict sources. It does not rule out pointwise PSD polynomial remainders, fractional powers, or fixed positive pure-testing multipliers. Universal sixth-root admission remains open.
+1. Native domain and parent
+Set z=c^2, A_c=1+zr,
+$h=b-a^2t,\quad g=(1+z)b-(1-r+a^2zt),\quad j=1+zr-t.$The strict native hypotheses are a,b,c,t>0, 0<r<1, h,g,j>0, 1-zh>0, b-a^2zr>0, n>0, with the exact native stationary weights m,C,A,D,alpha>0. The formulas also make sense at n=0. Let
+$\begin{split}
+\Delta={}&1+(1+z)b+z(1+z)b^2+2z(1+z)br+z^2r^2+2zr\\
+&+a^2z\{(1+z)b+1+zr(2-r)\}>0,
+\end{split}$and Xi=(b+r) A_c(A_c+a^2zt). The only two native stationary coefficients required for the obstruction are
+$ n=\frac{\Xi-r\Delta}{2r\Delta},\qquad A=\frac{a^2\Xi}{2h\Delta}.$The physical contact is
+$ (u_c,v_c;W_c,X_c,Y_c,Z_c)
+ =\left(c,ac;\frac ba,-cr,\frac{ch}{a},1\right),$with delta=W_c Z_c-X_c Y_c=(b+c^2r h)/a>0.
+The full physical parent is
+$\begin{split}
+F={}&4nD_uD_v X^2+4m(vW-X+uvY-uZ)^2
++4CD_v(uW-Y)^2+4AD_uD_vY^2\\
+&+(4D+2d)(uW+uvX-Y-vZ)^2
++(4\alpha+2d)D_u(vY-Z)^2\\
+&+2dD_v(X+uZ)^2-2dD_uD_vZ^2,
+\end{split}$where D_u=1+u^2, D_v=1+v^2 and d=1.
+2. Generic unramified SOS obstruction
+Theorem. If this complete native parent is SOS of ordinary polynomials in u,v,W,X,Y,Z, then
+$\boxed{h=a^2r.}$Proof. Because the parent is quadratic in psi=(W,X,Y,Z) and bidegree at most (2,2) in (u,v), every root in a real polynomial SOS is linear in psi and bidegree at most (1,1) in (u,v): a higher leading degree cannot cancel among sums of real squares. Write a generic root as
+$q=\sum_{\ell=W,X,Y,Z}(a_\ell+b_\ell u+c_\ell v+d_\ell uv)\ell.$The coefficients [W^2]F=0 and [u^2v^2Z^2]F=0 imply a_W=d_Z=0 in every root.
+The exact sign symmetries (u,Y,Z)->(-u,-Y,-Z) and (v,X,Z)->(-v,-X,-Z) take the physical contact to four zeros, one for each pair of signs. Every root vanishes at each zero. Average these four equalities over signs. The only invariant testing-state monomials among the 16 are W, vX, uY, uvZ. Since the first and last have already vanished, we get for every root
+$v_cX_c\,c_X+u_cY_c\,b_Y=0,
+\qquad b_Y=\frac{a^2r}{h}c_X.$The coefficient of u^2Y^2 in F is 4A and that of v^2X^2 is 4n+2d; in the SOS these are respectively the sums of b_Y^2 and c_X^2. Therefore
+$\frac{4A}{4n+2d}=\left(\frac{a^2r}{h}\right)^2.$On the other hand the native coefficient formulas give, with d=1,
+$4n+2=\frac{2\Xi}{r\Delta},\qquad 4A=\frac{2a^2\Xi}{h\Delta},
+\qquad\frac{4A}{4n+2}=\frac{a^2r}{h}.$Both ratios are positive. Equating them gives a^2r/h=1. QED.
+The obstruction covers a relative Zariski-open dense subset of the five-parameter strict native family, namely the complement of the proper hypersurface b=a^2(t+r). It does not assert SOS admission on that hypersurface.
+One exact strict source
+Choose (a,b,c,t,r)=(1,5/4,1,3/4,1/4), so (d,n,m,C,A,D,alpha)=(1,7/66,5/33,5/22,10/33,16/33,9/22). Then h=1/2, a^2r=1/4, and the two required ratios are 1/2 and 1/4, respectively. Hence its four-state parent is nonnegative at all independent tests but is not an ordinary polynomial SOS.
+3. Consequence for the source-only scalar Gram completion
+Take the given source-only congruence T_c=I tensor L^{-1}, L=epsilon Psi_c^T, and B_c=(e00,e01+e10,e11,h_0) with h_0=(0,-1,1,0). The contact-normalized matrix P'=T_c P T_c^T=B_c [[H,zeta],[zeta^T,gamma]] B_c^T has the provided exact identity H13=H22-gamma; gamma=y^T G y with y=(s,t_0,s t_0), s=u-u_c, t_0=v-v_c and unique source-only G>=0.
+Assume a polynomial coupling zeta=V(u,v)y obeys the range conditions range V^T subset range G and has a polynomial matrix SOS remainder
+$R(u,v)=H(u,v)-V(u,v)G^\dagger V(u,v)^T.$Then
+$F=\|G^{1/2}y\,q+G^{\dagger/2}V^Tp\|^2+p^TRp$is a polynomial SOS because the change from (p,q) to the original four state coordinates is source-only. Therefore the theorem rules out every such polynomial-SOS remainder, regardless of the syzygies in V, on every strict native C2 source with h != a^2r.
+This is not an obstruction to the more general pointwise inequality H-VG^dagger V^T>=0: a pointwise nonnegative matrix polynomial need not be a matrix SOS. Nor does it obstruct an SOS with fractional monomials or a fixed pure-testing multiplier.
+4. A uniform native leading-coefficient identity forces mixed coupling
+Let P22 denote the coefficient of u^2v^2 in P and write
+$\mathfrak p=4C,\quad \mathfrak q=4n+4D+2d,
+\quad\mathfrak r=4(m+A+\alpha)+2d.$Direct expansion of the complete C2 parent gives
+$P_{22}=\operatorname{diag}(\mathfrak p,\mathfrak q,\mathfrak r,0).$Using L^{-1}=delta^{-1} [[Y_c,Z_c],[-W_c,-X_c]] and the dual matrix of the basis B_c, one obtains exactly the coefficient vector of u^2v^2 in the three couplings:
+$\boxed{
+\zeta_{22}=\frac1{4\delta^2}
+\begin{pmatrix}
+2(W_cY_c\mathfrak p+X_cZ_c\mathfrak q)\\
+-W_c^2\mathfrak p-X_c^2\mathfrak q+Y_c^2\mathfrak r\\
+-2W_cY_c\mathfrak r
+\end{pmatrix}.}$In particular, for every native strict C2 source (including n=0 while its other native chart conditions remain valid),
+$\boxed{\zeta_{22,3}=-\frac{cbh}{a^2\delta^2}\bigl(2(m+A+\alpha)+d\bigr)<0.}$Thus V cannot be testing-independent or affine in s,t_0; a genuine s t_0 coefficient is necessary.
+The exact generic polynomial coupling reduction
+Whenever G>0, if [[H,V],[V^T,G]]>=0 at all positive independent tests, then VG^{-1}V^T<=H. Since H has degree at most two in each testing variable, taking the other test fixed and sending the first to positive infinity forces deg_u V<=1 and similarly deg_v V<=1. Hence any polynomial V satisfying this stronger globally PSD block condition is bilinear:
+$V=V_{00}+sV_{10}+t_0V_{01}+s t_0V_{11}.$Writing each component of the known coupling polynomial as zeta_i=Σ_{0<=m,n<=2}c^i_{mn}s^m t_0^n with c^i_{00}=0, one explicit particular solution V^(0)y=zeta is, row by row,
+$\begin{aligned}
+V^{(0)}_{i1}&=c_{10}+c_{20}s+\tfrac13c_{11}t_0+\tfrac12c_{21}s t_0,\\
+V^{(0)}_{i2}&=c_{01}+c_{02}t_0+\tfrac13c_{11}s+\tfrac12c_{12}s t_0,\\
+V^{(0)}_{i3}&=\tfrac13c_{11}+\tfrac12c_{21}s+\tfrac12c_{12}t_0+c_{22}s t_0.
+\end{aligned}$(All c_{mn} in this display carry row index i.) The most general bilinear coupling is this particular solution plus four free source-only multiples in each row of the syzygies
+$(-t_0,s,0),\qquad(-t_0,0,1),\qquad(-s t_0,0,s),\qquad(0,-s t_0,t_0).$These are all the syzygies: the coefficient map from 12 row entries to zeta_i has rank eight (matching all bidegrees other than the constant), leaving dimension four. Thus the strong block-PSD completion reduces to just 12 source-only coupling parameters and a 6x6 polynomial matrix inequality, although its global positivity is not established.
+The polynomial G is positive definite generically in the strict native C2 chart. At the rational strict source above,
+$G=\begin{pmatrix}
+136/121&-900/1331&-52/1331\\
+-900/1331&130/121&590/1331\\
+-52/1331&590/1331&538/1331
+\end{pmatrix},$with principal determinants 136/121, 1329280/1771561 and 22341120/214358881, all strictly positive. The entries of G are rational functions of the native chart with positive denominator delta; hence det G is not the zero rational function, and G>0 on a nonempty relative Zariski-open dense subset of the native strict chart. The remaining special algebraic locus may require a singular G^dagger analysis.
+Failure of canonical symmetric coefficient polarization, even at a nonnegative test
+For the same rational strict source, consider the specific row-wise coefficient division V^(0) just displayed, with all 12 syzygy coefficients set to zero. At independent testing (u,v)=(0,1), s=-1,t_0=0, its first row is
+$ e_1^T V^{(0)}=(160/363,-18136/11979,-7268/11979).$The normalized positive-state block satisfies H11(0,1)=320/121, but direct rational inversion of the displayed G yields
+$\boxed{
+H_{11}(0,1)-e_1^T V^{(0)}G^{-1}V^{(0)T}e_1
+=-\frac{6975688592}{51747662835}<0.
+}$By continuity, this candidate also fails at sufficiently small strictly positive testing u>0, v=1. This is a bona fide native obstruction to the canonical, syzygy-free coupling; it is not a proof that all 12-parameter couplings fail.
+5. Precisely what remains
+The strongest proved statements are: (i) h=a^2r is necessary for any ordinary polynomial SOS of the full native parent, (ii) mixed bilinear test couplings are forced for a polynomial block completion with G>0, (iii) the canonical coefficient polarization fails on a strict native source, and (iv) arbitrary polynomial syzygies leave 12 source-side coefficients under the global block-PSD ansatz.
+The first unproved implication is existence, for every strict native source, of either a source-only choice of those syzygies and a globally sound fractional SOS remainder with a fixed feature basis, or one fixed positive pure-testing multiplier T(u,v) for which TF admits a fixed uniform finite SOS feature list. The ordinary polynomial SOS obstruction proves that the fractional/denominator freedom is genuine, not decorative. The existing sixth-root grid is a candidate; half powers such as sqrt(u v)W, sqrt(u v)Z, and independent fractional powers may evade the sign-character constraint, but no uniform admission claim is made.
+If a single fixed closed cone covers all strict native contacts, its n=0 finite contact limits follow by the published opening/closedness argument. No uniform positive margin at n=0 is required.
+

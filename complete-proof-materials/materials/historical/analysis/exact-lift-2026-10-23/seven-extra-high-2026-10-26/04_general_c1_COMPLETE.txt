@@ -1,0 +1,129 @@
+ChatGPT said:
+
+Q222 4/7: Native C1, an exact low-order obstruction
+Exact analytical result
+The full native C1 family is not uniformly certified by the seven-root $1+AB$ NPA cone. I obtained an exact positive-definite dual separator and two globally quantum-valid C1 extreme rays violating its necessary inequality.
+Crucially, one source is strictly interior to the native C1 event pattern. The other has the literal singular coefficient $\beta=0$. Both have exact rational contacts, and their global quantum validity is proved for arbitrary independent testing angles and states.
+This does not disprove the existence of a larger fixed finite SDP lift. It identifies exactly why an additional C1 certificate cone is necessary.
+Download the complete pen-and-paper proof, source dictionary and explicit Gram equations
+1. Two exact native C1 sources
+Using the rational dictionary NC1–NC4 in c1_short.tex, set the independent source parameters
+$x=1,\qquad \eta=\zeta=\theta=\frac12.$
+The two choices $r=1/2$ and $r=3/8$ give, in canonical order $(d,m,C,A,D,\alpha,\beta)$,
+$\boxed{
+c_{\rm int}=
+\left(1,\frac{20}{29},\frac{12}{29},
+\frac{13}{58},\frac{51}{58},
+\frac3{29},\frac3{58}\right)
+}$
+and
+$\boxed{
+c_{\rm bdy}=
+\left(1,\frac56,\frac3{10},
+\frac13,2,\frac1{13},0\right).
+}$
+Both have $\lambda=n=0$, satisfy all native gap inequalities, and possess genuine finite noncommuting contacts
+$(u_c,v_c)=\left(1,\frac12\right),
+\qquad
+\psi_c=\left(1,-\frac12,r,1\right).$
+These are the sources' own contacts. The subsequent validity proof keeps arbitrary testing coordinates $u,v,\psi$ independent of them.
+2. A direct global-validity proof
+Let $P_c(u,v)$ be the full $4\times4$ state quadratic pencil from the repository's homogeneous C1 parent. Its explicit rank-one construction, including the negative CHSH contribution, is printed in the proof file.
+For $u^2+v^2>0$, its upper-left $3\times3$ principal block is positive definite using only the positive event coefficients. Therefore
+$P_c(u,v)\succeq0
+\quad\Longleftrightarrow\quad
+\det P_c(u,v)\ge0.$
+Put $U=u^2,\ V=v^2,\ T=4V$. The only nontrivial determinant factors reduce to two elementary nonnegative polynomials:
+$\begin{aligned}
+M_1&=(UT)^2+U+T-3UT,\\
+M_2&=U^2T+T^2+U-3UT.
+\end{aligned}$
+Both are nonnegative by AM–GM: in each case the product of the three positive terms is $(UT)^3$.
+For the interior source, after removing a strictly positive prefactor, the determinant is
+$\boxed{
+G_{\rm int}
+=670V(U-1)^2
++\frac{449}{2}U(T-1)^2
++\frac{55}{2}M_1+255M_2.
+}$
+For the singular boundary source,
+$\boxed{
+G_{\rm bdy}
+=235V(U-1)^2
++\frac{153}{2}U(T-1)^2
++\frac{295}{2}M_2.
+}$
+These identities prove positivity at every real test. At $u=v=0$, the state matrix is directly PSD; its homogeneous limits establish the projective endpoints.
+Consequently both inequalities are genuinely quantum valid. No sampled positivity, local testing rectangle, or assumed global C1 theorem is used.
+3. The decisive seven-root dual inequality
+Use exactly the requested C1 basis
+$R=\begin{pmatrix}
+A_0-I\\ A_1B_0-I\\ A_1B_1-I\\
+B_0-A_1\\ B_1-A_1\\
+A_0B_0-A_1\\ A_0B_1-A_1
+\end{pmatrix}.$
+A $1+AB$ certificate requires
+$f_c=R^\dagger QR,\qquad Q\succeq0,$
+as an identity of universal observable words, not merely on the physical contact.
+Expanding all 25 reduced words, including unwanted alternating Alice and Bob products, leaves exactly 13 free real Gram parameters. The complete affine $7\times7$ matrix is in the proof file.
+The key is this single integer positive-definite separator:
+$K=
+\begin{pmatrix}
+389&135&2&203&-21&-98&126\\
+135&158&-12&42&0&-161&-84\\
+2&-12&11&0&7&14&28\\
+203&42&0&158&-12&23&142\\
+-21&0&7&-12&11&9&9\\
+-98&-161&14&23&9&277&240\\
+126&-84&28&142&9&240&396
+\end{pmatrix}.$
+Its seven leading principal minors are all strictly positive, so $K\succ0$.
+Substitution into the complete affine Gram equations gives, with every free parameter cancelling,
+$\boxed{
+\operatorname{tr}(KQ)
+=
+9m+58C+44A+2D+121\alpha+100\beta-61d.
+}$
+Since $K,Q\succeq0$ implies $\operatorname{tr}(KQ)\ge0$, every C1 inequality admitted by this $1+AB$ cone must satisfy
+$\boxed{
+61d\le
+9m+58C+44A+2D+121\alpha+100\beta.
+}$
+But the two valid sources give
+$\begin{aligned}
+\operatorname{tr}(KQ_{\rm int})&=-\frac{43}{29}<0,\\
+\operatorname{tr}(KQ_{\rm bdy})&=-\frac{3169}{390}<0.
+\end{aligned}$
+Thus neither can possess a seven-root PSD Gram, regardless of how its 13 auxiliary parameters are chosen.
+4. They are extreme rays, not decomposable test cases
+There is a further exact check. Every positive decomposition of either slack must preserve its two deterministic zeros and its quantum contact.
+For a general nine-coefficient Bell functional, impose the four operator-kernel equations at the contact, the two angular-stationarity equations, and the two deterministic-zero equations. The resulting $8\times9$ linear system has rank eight.
+The minors obtained from its first eight columns are
+$-\frac{576}{125}
+\quad\text{and}\quad
+-\frac{273}{100}$
+for the interior and boundary sources respectively.
+Hence every quantum-valid summand vanishing at those contacts is proportional to the source itself. Both sources generate extreme quantum-supporting rays.
+This matters for cone assembly: a sound decomposition cannot manufacture either extreme ray by combining unrelated valid inequalities. At least one retained sound cone must admit that ray directly.
+5. What remains unresolved
+The pinned repository also proves the uniform native source gap $E\ge 1/18$, including literal $D=0$ and $\beta=0$ cases. That is useful control of singular denominators, but does not establish uniform finite-Gram admission.
+The first exact missing implication is:
+$\boxed{
+\text{Every native C1 contact and singular limit}
+\ \Longrightarrow\
+\text{admission to a fixed finite globally sound certificate cone.}
+}$
+The result above excludes the simplest proposed candidate, $1+AB$, even on a strictly interior C1 extreme ray. It does not exclude larger fixed pencils or a finite decomposition using additional globally sound C1 blocks.
+Coordinator verdict: exact obstruction proved; genuine interior and singular C1 sources verified globally; full uniform C1 lift remains open. The deliverable contains the rational dictionary, complete affine Gram parametrization, dual matrix, determinant identities, and extremality verification.
+
+
+
+
+
+
+   Q222_C1_exact_seven_root_obstruction_2026-10-26.mdDocumentOpen file
+
+
+
+
+

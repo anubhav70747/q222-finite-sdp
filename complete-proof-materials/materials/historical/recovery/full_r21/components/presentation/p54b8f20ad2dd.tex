@@ -1,0 +1,88 @@
+\chapter{Exact source entry for the strong HI corner}
+\label{component:p54b8f20ad2dd}
+\noindent\textbf{Component }\path{p54b8f20ad2dd}\par
+{\small\noindent Source: \path{R13/baseline/baseline/advances/hi/exact_source_entry.tex}\par}
+{\small\noindent SHA256: \path{54b8f20ad2dd194d0e2ed7f5124fa1cc688d91a27ff328d503dc53b0eb45bd9b}\par}
+{\small\noindent Inventory use: Exact HI entry from n>=0, q,yInf and actual gaps; all four event weights unbounded\par}
+\medskip
+\section{Exact source entry for the strong HI corner}
+Use the original positive rational C2 source with $d=1$, actual
+$u_c$ unbounded and $v_c$ infinitesimal. Put
+\[
+ q=u_c^{-2},\quad y=v_c^2,\quad H=u_c^2h\in(0,1),
+ \quad R=r/q,\quad B=b/q,\quad L=yt=B-H,\quad T=B-yR.
+\]
+The already proved source identities (WE1)--(WE3) show that $R$ is
+bounded using only $n\geq0$, $q$ infinitesimal and $y$ bounded.
+Here is their short contradiction argument, to make this use
+explicit. The positive source gaps imply
+\[
+ 0<T<H+y,\quad g=H+(1+y)r-1+qT>0,
+\]
+and $n=-qP/(2rQ)$ with $Q>0$ and
+\[
+ P\ge r^2(1+y)(H+yr)-Tqr(y+2)-q^2(T^2+T).
+\]
+If $q/r$ were infinitesimal, then $T/(H+yr)$ and
+$(T^2+T)/(H+yr)$ would be bounded. For unit $r$ this follows
+from $T<H+y\le(H+yr)/r$; for infinitesimal $r$, the inequality
+$g>0$ forces $H$ to have residue one. Division by $r^2(H+yr)$
+would give $P>0$, contrary to $n\geq0$. Thus $R$ is bounded.
+(The exact positive remainder in this lower bound is printed in
+(WE3), so this argument uses no asymptotic sign substitution.)
+
+Now $r=qR$ is infinitesimal and $g>0$ gives $H_0=1$.
+Define the positive opening
+\[
+ E=(1-H)/q.
+\]
+The same gap implies
+$E<(1+y)R+T$, so $E$ is bounded. Since $j=1+R-t>0$,
+$t$ is bounded; consequently
+\[
+ H=1-qE,\quad B=H+yt\sim1,\quad
+ j=1+R-t,\quad K=B+R-E=g/q>0.
+\]
+All of $E,t,j,K$ are positive bounded, while
+$t+j=1+R$ and $E+K=B+R$ are positive units.
+
+Let $\Delta$ and $N$ denote the unchanged original source
+polynomials, and set $\mathcal N=N/q$. Their exact expressions are
+\begin{align*}
+\Delta={}&(1+q)\{B^2+2BR+(1+y)B\}
+ +(1-yq)R^2+2(1+y)R+1+y,\\
+\mathcal N={}&(1+q)(B+R)(H+y)-(1+y)(1-qR)yt.
+\end{align*}
+Thus $\Delta$ is a positive bounded unit and
+\[
+ \bar\Delta=(1+\bar R)(3+\bar R),\qquad
+ \overline{\mathcal N}=1+\bar R>0.
+\]
+Set $S=1+R+yt$, also a positive unit. Direct substitution into
+the original coefficients gives the following exact equalities:
+\[
+\begin{aligned}
+ mqK&=\frac{(1+y)(1-qR)(1+R)S}{2\Delta},&
+ Cyt&=\frac{(1+R)\mathcal N}{2\Delta},\\
+ \frac{A}{qy}&=\frac{(1+R)(B+R)S}{2H\Delta},&
+ Dyj&=\frac{(1+q)(B+R)(B-yR)S}{2\Delta},\\
+ \alpha qE&=\frac{(B+R)\mathcal N}{2\Delta},&
+ n&=\frac{(B+R)(1+R)S-R\Delta}{2R\Delta}.
+\end{aligned}                                                   \tag{HI-entry}
+\]
+Every one of the first five right-hand sides is a positive bounded
+unit; in particular $B-yR$ has residue one. The last numerator has
+residue $(1+\bar R)(1-\bar R)$, so $n\geq0$ implies
+$0\le\bar R\le1$. This does not imply $R\le1$ as a source
+inequality, and no such stronger claim is used.
+
+Since $q,y$ are infinitesimal and $E,t,j,K$ bounded, the positive
+numbers $qK,yt,yj,qE$ are infinitesimal. Dividing their unit
+products in (HI-entry) proves
+\[
+ m,C,D,\alpha\quad\hbox{are all unbounded},\qquad
+ A\asymp qy.
+\]
+This conclusion follows from the original source formulas and
+$n\geq0$; no additional strong-weight assumption is needed for
+an actual HI source.

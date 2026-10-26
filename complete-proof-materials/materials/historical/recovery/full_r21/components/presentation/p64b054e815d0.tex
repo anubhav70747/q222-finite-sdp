@@ -1,0 +1,255 @@
+\chapter{Ordinary-angle C1 with arbitrary positive shape openings}
+\label{component:p64b054e815d0}
+\noindent\textbf{Component }\path{p64b054e815d0}\par
+{\small\noindent Source: \path{R13/baseline/baseline/baseline/baseline/baseline/baseline/baseline/advances/c1/arbitrary_shape_openings.tex}\par}
+{\small\noindent SHA256: \path{64b054e815d0c2e05a4f9af55664795c46fdfd4b528544b74a0add8fb3953946}\par}
+{\small\noindent Inventory use: AO1–AO12 | C1\_\allowbreak{}BARE\_\allowbreak{}OTHER\_\allowbreak{}TERMINALS; precise subordinate uses retained below\par}
+\medskip
+\section{Ordinary-angle C1 with arbitrary positive shape openings}
+\label{p64b054e815d0:sec:c1-arbitrary-openings}
+
+The unit assumptions on $a,t,M,J$ in
+Theorem~\ref{p18a57c9c271d:thm:c1-ordinary-angle} can all be removed. The large
+positive packets must be retained before taking a bounded Gram residue.
+
+\begin{theorem}[Ordinary angles and arbitrary positive openings]
+Use the unchanged native C1 source (OA2), with $c=2$ and
+$\lambda=n=0$. Assume only that $k,s=g/f$ are positive bounded units,
+$\eta=f^2>0$ is infinitesimal, and
+\[
+\begin{gathered}
+ \zeta=g^2=s^2\eta,\quad K=1+k^2,\quad
+ R=K-ak^2\eta,\quad T=K-k^2s^2\eta t,\\
+ a,t>0,\quad M=R-t>0,\quad J=T-a>0.
+\end{gathered}\tag{AO1}
+\]
+Then the full original parent is tensor SOS at every independent
+projective test and every real or complex state. No lower bound on
+$a,t,M,J$, and no boundedness assumption on the original event
+coefficients, is required.
+\end{theorem}
+
+Since $a<T<K$ and $t<R<K$, both shapes are bounded, and $R,T$ have
+residue $K$. In particular
+\[
+       p=t/R\in(0,1),\qquad h=a/T\in(0,1)              \tag{AO2}
+\]
+are bounded at every opening rate. The seven native coquotients have
+the same residues as in (OA3). All original events are positive:
+$A/a$ and $\alpha/a$ are $\eta^2$ times positive units, while
+$d/a$ is $\eta$ times a positive unit; positivity of the remaining
+events also follows from the explicit bounds below.
+
+\paragraph{Retain the four large packets exactly.}
+Put $\Delta=s/k$, $\Lambda=RTc_3/(2a)$, and
+\[
+ H_2=4Tc_2,\quad H_b=4Tc_b,\quad H_3=4Rc_3,\quad H_5=4Rc_5.
+\]
+All four have residue $8K^2$. For a bounded finite testing angle define
+\[
+ D_u=1+u^2,\quad D_v=1+v^2,\quad
+ x=X+uZ,\quad y=uW-Y,\quad
+ q_A=v(W+uY),\quad q_B=v(Z-uX),
+\]
+\[
+                    N=x-pq_A,\qquad L=y-hq_B.
+\]
+The four nonnegative packets are
+\[
+ \Pi_1=H_2\frac tM N^2,\quad
+ \Pi_2=H_b\frac MtD_vN^2,\quad
+ \Pi_3=\Delta^2H_3\frac JaD_vL^2,\quad
+ \Pi_4=\Delta^2H_5\frac aJL^2.                         \tag{AO3}
+\]
+Their possibly unbounded pure source coefficients stay in their
+separate square roots. They never enter the bounded remainder Gram.
+The exact whole-parent identity is
+\begin{align*}
+ G:=\Delta^2\Lambda F-\sum_{i=1}^4\Pi_i
+ ={}&H_2\{N^2-2q_AN+(1-p)q_A^2\}
+     +H_bD_v\{N^2+2q_AN+pq_A^2\}\\
+ &+\Delta^2H_3D_v\{L^2+2q_BL+hq_B^2\}
+     +\Delta^2H_5\{L^2-2q_BL+(1-h)q_B^2\}
+     +\mathcal W,                                      \tag{AO4}\\
+ \mathcal W={}&4RT\Delta^2\eta^2c_4D_uD_vY^2
+   +4RT\Delta^4k^6\eta^2c_\alpha D_u(vY-Z)^2\\
+ &+2RT\Delta^2\eta c_dD_u\{(vY-Z)^2-D_vZ^2\}.
+\end{align*}
+This is the original four-packet identity (SD3)--(SD4), valid without
+unit shapes. For example, the first subtraction uses only
+$R=M+t$ and $x=N+(t/R)q_A$; its result is
+$H_2\{N^2-2q_AN+(M/R)q_A^2\}$. The other three follow in the
+same way from $R=M+t$ and $T=J+a$.
+
+\paragraph{A bounded coordinate change with no mixed inverse.}
+Let $w=(W+uY)/D_u$, which lies entirely in the testing field. Then
+\[
+\begin{gathered}
+ q_A=D_uv w,\quad
+ X=N+pD_uv w-uZ,\quad
+ q_B=v(D_uZ-uN-puD_uv w),\\
+ W=w+\frac{u(L+hq_B)}{D_u},\qquad
+ Y=uw-\frac{L+hq_B}{D_u}.                             
+\end{gathered}
+\tag{AO5}
+\]
+These are exact inverse formulas. Their only testing denominator is
+the positive pure testing unit $D_u$; their source coefficients use
+only $R^{-1},T^{-1}$. In particular no determinant involving $p,h,u,v$
+is inverted. Set $\widehat G=D_uG$. It is a polynomial in
+$N,L,u,w,v,Z$ with bounded coefficients, since this multiplication
+clears the denominators in (AO5).
+
+Suppose $v$ is infinitesimal and $u$ is a finite positive unit.
+The exact polynomial $\widehat G$ has a bounded Gram on
+\[
+                    N,\ L,\ vw,\ vZ,\ \eta w,\ \eta Z.
+                                                               \tag{AO6}
+\]
+After expanding only the squares in (AO4), every term contains a
+product of two listed roots. The coefficient errors carry $v$, $\eta$,
+or a native coquotient difference of zero residue. To display the
+Gram residue, use the purely formal substitutions
+$N=\eta\xi$, $L=\eta\chi$, $v=\eta\nu$ and read the coefficient of
+$\eta^2$. It is
+\[
+ \mathcal G=16K^2D_u\xi^2+16\Delta^2K^2D_u\chi^2
+                         +8\Delta^2K^3D_u^2S,        \tag{AO7}
+\]
+where
+\[
+ S=u^2w^2+s^2k^4Z^2+
+   \frac{D_u}{K}\nu^2\left(\frac{k^2}{s^2}w^2+Z^2\right)
+   -2Ku\nu wZ.                                       \tag{AO8}
+\]
+There is no shape parameter in this residue other than the fixed
+units $k,s$. In particular no assertion that $v/\eta$ is bounded
+has been made. Formula (AO7) follows directly from
+$H_2,H_b,H_3,H_5\sim8K^2$, $c_4,c_\alpha\sim2K$, $c_d\sim4K^2$:
+the $p$ and $h$ terms in the two scalar pairs sum to one, while the
+two linear normal coefficients have zero residue.
+
+\paragraph{Finite unit Alice angles: the same scalar, fewer hard roots.}
+The capacity identity (OA10), with $W$ replaced by $w$, proves a
+strict six-root Gram unless $\bar u=\bar k$. At the matched angle,
+\[
+ S=(\nu Z-kw)^2+
+       \left(\frac{k}{s}\nu w-sk^2Z\right)^2.
+\]
+Define
+\[
+ r_1=vZ-\eta kw,\qquad r_2=(k/s)vw-\eta sk^2Z.
+\]
+The exact relation
+\[
+ wr_1-(s/k)Zr_2=\eta k(s^2Z^2-w^2)                    \tag{AO9}
+\]
+closes every state with $\overline{s^2Z^2-w^2}\ne0$ by adding its
+identically zero squared relation to the Gram on $(N,L,r_1,r_2,\eta)$.
+The multiplier in this relation is never inverted.
+
+Normalize the testing state. If $N$ or $L$ has nonzero residue,
+$\widehat G$ has positive residue and is already certified. Otherwise
+the inverse formulas force $w$ or $Z$ to be a unit. When (AO9) has
+zero multiplier residue, $Z$ is a unit; normalize $Z=1$.
+The negative-core branch has $w>0$ by the pure testing core Schur
+calculation printed in the ordinary-angle proof. Thus only
+$\bar w=\bar s$ remains. The nonnegative-core branch and literal
+axes are direct original-event SOS exits.
+
+\paragraph{The exact contact with arbitrary shape rates.}
+The native contact (OA4), under (AO5), is
+\[
+ (u_c,w_c,v_c,N_c,L_c)
+       =\left(k,\frac{sR}{K},ks\eta,0,0\right).        \tag{AO10}
+\]
+All four packets (AO3) and all their first derivatives vanish there.
+The original native contact identities consequently give exact value
+and first-derivative zero for $\widehat G$ as well. This remains true
+when a packet coefficient is unbounded: each coefficient is an element
+of the source field multiplying a square that vanishes exactly.
+
+Use the five roots
+\[
+       N,\ L,\ v-v_c,\ \eta(w-w_c),\ \eta(u-k).       \tag{AO11}
+\]
+The complete polynomial $\widehat G$ belongs to
+$(N,L,v)^2+\eta(N,L,v)+(\eta^2)$, by (AO4)--(AO5).
+Translation by $v_c=\eta ks$ preserves this inclusion. Its constant
+normal coefficient is $\eta^2$ times a bounded polynomial in the
+two soft deviations; its linear normal coefficients are $\eta$ times
+such polynomials. Exact contact and stationarity make their constant
+and the required first coefficients vanish. Finite monic Taylor
+division therefore gives an exact bounded Gram on (AO11), just as in
+(OA14), with no division by any testing/source comparison.
+Higher Taylor terms have zero residue after this allocation.
+
+The residue Gram is now particularly simple. Its first two blocks are
+$16K^3$ and $16\Delta^2K^3$. Its remaining block is
+$8\Delta^2K^5$ times the half-Hessian of $S$ at
+$(\nu,w,u)=(ks,s,k)$ and $Z=1$. The latter is exactly (OA15), with
+positive leading principal minors
+\[
+                         K,\qquad4k^4,\qquad12s^2k^6/K.
+\]
+Thus the entire five-root Gram is strict independently of all four
+shape-opening rates.
+
+\paragraph{The outer charts without bounded event weights.}
+These charts admit a simpler uniform retained-packet comparison.
+The exact source formulas give
+\begin{align*}
+ m/a&\ge\frac{2k^2c_2}{s^2Rc_3},&
+ c/a&\ge\frac2T,\\
+ D/a&\ge\frac{2c_5}{Tc_3}-\frac{\eta c_d}{c_3},&
+ \beta/a&\ge\frac{2k^2c_b}{s^2Rc_3}-\frac{\eta c_d}{c_3}.
+                                                               \tag{AO12}
+\end{align*}
+All four right sides are positive bounded units. Choose a positive
+real $\mu$ smaller than their residues. In $F/a$, retain the four
+nonnegative event packets with weights
+$m/a-\mu,c/a-\mu,D/a-\mu,\beta/a-\mu$. The remaining complete
+parent has the four corresponding weights all equal to $\mu$,
+and the unchanged weights
+\[
+ d/a=\eta\,d_1,\quad A/a=\eta^2A_2,\quad
+ \alpha/a=\eta^2\alpha_2,
+\]
+where $d_1,A_2,\alpha_2$ are positive units. This is an exact
+decomposition at the present test, not a claim that the capped source
+is globally physical.
+
+If the homogeneous Bob sine has nonzero residue, the four event
+amplitudes have trivial common state kernel, as proved in the
+ordinary-angle theorem. Their bounded positive Gram absorbs the
+infinitesimal signed core. If Bob is small and $u$ is infinitesimal,
+use the six roots
+$(x,y,vW,vZ,\eta uW,\eta Z)$ of the same theorem. The four hard
+weights $\mu$ give a strict four-root block and the two weak diagonal
+coefficients are positive units. The signed soft cross term has an
+additional factor $u$, so its Gram coefficient has zero residue.
+At the reciprocal Alice endpoint put $q=1/u$ and use
+\[
+                x'=qX+Z,\ y'=W-qY,\ vY,\ vX,
+                       \eta Y,\ \eta qX.
+\]
+The hard residue is
+$4\mu\{(vY-x')^2+x'^2+y'^2+(y'+vX)^2\}$;
+the weak diagonals have positive unit coefficients. Assign the signed
+soft cross term as a multiple of $q(vX)(\eta Y)$, which has zero
+residue. These are the exact finite and reciprocal monomial
+allocations already proved in the ordinary-angle theorem; they use
+no shape inverse. Literal infinity follows in the homogeneous chart.
+
+These outer charts and the finite-unit Alice analysis exhaust all
+independent tests. Restore the retained packets, then the positive
+pure factors $D_u$, $\Delta^2\Lambda$, or $a$ used in the respective
+charts. Every radical and inverse is confined to one field. Complex
+states split into their real and imaginary parts.
+
+\paragraph{Remaining scope.}
+This closes every positive opening $a,t,M,J$ on the ordinary-unit-$k$,
+ordinary-unit-$s=g/f$, infinitesimal-$\eta$ row. It does not address
+nonunit $k$ or $s$, non-small $\eta$, or literal zero openings that
+are not defined by the native formulas. Actual-source entry retains
+exactly the inherited contact-sign and nonzero-minor domain of (CE1).

@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-22",
+  "scope": "Source recovery, file integrity, presentation quality, and scoped analytical review; not independent certification of all 215 mathematical components.",
+  "recovered_manuscript": {
+    "pages": 798,
+    "components": 215,
+    "sha256": "ccd4aa915b7c5c2aa8bc04a4eba8b0eedb39e90a4c8629e0368e07ed78d9b6a8",
+    "original_549_page_release_recovered": false,
+    "all_798_pages_freshly_visually_reviewed": false
+  },
+  "r21_archive_integrity": {
+    "checked_manifest_files": 4689,
+    "manifest_errors": [],
+    "checked_dependency_bindings": 445,
+    "dependency_errors": [],
+    "declared_distinct_components": 215,
+    "scope": "Byte identity only; not mathematical correctness."
+  },
+  "new_report": {
+    "pages": 16,
+    "sha256": "9bda7576faca0baae3f90dd8e65777db2ff15efe39afe00b3f6d01cb3fb290de",
+    "latex_exit_code": 0,
+    "latex_warnings": [],
+    "rendered_pages": 16,
+    "all_pages_visually_inspected": true,
+    "render_resolution_dpi": 100
+  },
+  "focused_audit_files": [
+    "august_audit.txt",
+    "r21_a6_audit.txt",
+    "r21_assembly_audit.txt",
+    "r21_c2_dispatch_audit.txt",
+    "r21_r1_audit.txt"
+  ],
+  "mathematical_method": "Direct reading, analytical derivations and selected hand expansions. No numerical solver or symbolic checker was executed as a proof premise in this recovery.",
+  "reviewers": "Lead review and scoped additional-agent reviews within the same model system; not external peer review or proof-assistant verification.",
+  "preservation": "Recovered inputs copied unchanged; new analysis separately named.",
+  "integrity_program": "verify_recovery.py checks manifest-bound file bytes and nested ZIP CRC integrity only."
+}

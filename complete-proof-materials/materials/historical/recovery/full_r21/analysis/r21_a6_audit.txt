@@ -1,0 +1,320 @@
+NARROW ANALYTICAL REVIEW OF THE OCTOBER A6 NONCOMMUTING EXIT
+2026-10-22
+
+Result and scope
+================
+
+No mathematical defect was found in this pass in the recovered eight-cycle
+geometry, the one-hard-event constrained-curvature argument, the two-hard-event
+constrained-curvature argument, or their stated interface with the finite
+induction. In particular, the source-physicality-to-constrained-residue step is
+valid here and is materially more precise than a substitution of residue
+boundary equations into the full tensor parent.
+
+This is a scoped analytical finding. It is not a certification of all 215
+retained proof bodies, all commuting/projective endpoints, the full R1 argument,
+or the universal finite-lift theorem. The one-/two-hard arguments use the printed
+finite determinant dictionary in physical_core.tex and the weighted-contact
+lemma. I checked their differentiations and their geometric exclusions directly;
+I did not re-expand the entire original four-by-four determinant from scratch.
+No numerical solver, CAS replay or PASS label was used in the mathematical
+reasoning of this audit.
+
+Source resolution
+=================
+
+The exact source paths are the entries in
+
+q222_existence_recovery_2026-10-22/sources/
+Q222_R21_Rederived_Proof_Package_2026-10-22/
+Q222_R21_Rederived_Release_2026-10-22/
+rederivation_2026-10-22/weak_c2/A6_ACTUAL_BODY_INPUTS.json.
+
+Within its CORE/prior/inherited alias, I read:
+  zero_d_geometry.tex       (A6_GEOMETRY; 86 lines)
+  zero_d_one_hard.tex       (A6_ONE; 54 lines)
+  zero_d_two_hard.tex       (A6_TWO; 56 lines)
+  zero_d_induction.tex      (A6_INDUCTION; 51 lines)
+  physical_core.tex        (A6_PARENT; 126 lines)
+  zero_d_weighted.tex      (A6_WEIGHTED; 141 lines)
+  structural_terminals.tex (A6_CONTACT; 194 lines).
+
+The last three were read for the physical parent, determinant dictionary,
+weighted-contact interface, and the regular-contact construction. The review
+below concerns A6_GEOMETRY/A6_ONE/A6_TWO and their use by A6_INDUCTION. The
+arbitrary-scale four-matching terminal is a separate input reviewed by the
+lead reviewer and is not independently re-certified in this report.
+
+1. Why constrained residue nonnegativity follows from physicality
+================================================================
+
+The crucial step is A6_INDUCTION lines 38--44. Let S be the current hard matching
+and let x_i be its exact event amplitudes. Their state-linear independence gives
+a real rational coordinate chart (x,y) with denominators nonzero at the chosen
+noncommuting residue. The full parent has the exact form
+
+    F(x,y) = sum_i a_i b_i(y) x_i^2 + sigma G(x,y),
+
+where a_i and sigma are source-field numbers, epsilon_i=sigma/a_i are positive
+infinitesimals, the b_i are positive units locally, and G has bounded source
+coefficients. Here sigma is the maximum of the signed coefficient and the
+remaining event coefficients, so every coefficient of G is bounded after the
+declared pure testing coordinate denominators are cleared.
+
+Fix a real y in the coordinate domain. In the coefficient field impose x=0
+EXACTLY. The hard packets then vanish identically, regardless of how large
+a_i/sigma are. Physicality of the original source gives
+
+    G(0,y) = F(0,y)/sigma >= 0.
+
+The left side is bounded, so taking its real residue gives
+
+    g(y)=residue(G)(0,y) >= 0.
+
+For the homogeneous constrained state form this applies to every real state
+in the hard kernel and every noncommuting real angle pair. Consequently its
+state matrix is PSD, its determinant is nonnegative, and any interior zero of
+the associated Laurent polynomial has zero logarithmic gradient.
+
+This argument uses exact hard-kernel restriction solely to derive information
+about the real residue function g. It does not assert that the actual independent
+test lies exactly on that kernel. The weighted lemma subsequently certifies
+the complete parent at the actual test, retaining all hard normal deviations
+and every remaining signed/event term. There is no discarded infinitesimal
+term in this passage.
+
+2. The eight-cycle geometry
+===========================
+
+2.1 Product residue exit (A6_GEOMETRY lines 4--14)
+
+For a product state the CHSH expression obeys
+
+    S <= |b0-b1|+|b0+b1| = 2 max(|b0|,|b1|) <= 2.
+
+If both Bob moduli are less than one, this is strict. If one has modulus one,
+noncommuting Bob reflections prevent the other from also having modulus one.
+Both coefficients b0-b1 and b0+b1 are then nonzero. Equality would require both
+Alice moduli to be one, impossible for her noncommuting reflections. Therefore
+H=1-S/2 has strictly positive real residue. Its actual value in the testing
+field is positive; d tensor H has separate field square roots. All event
+packets are already tensor squares. This settles the full parent at a product
+residue, even if d is a positive infinitesimal.
+
+2.2 Entangled matching (lines 39--61)
+
+Write a real entangled two-qubit state as an invertible two-by-two matrix Psi.
+For fixed nonzero local ray a, the vanishing equation a^T Psi b=0 determines
+one Bob projective ray, and conversely. Hence vanishing losing events share
+no local ray: they form a matching in the eight-cycle.
+
+For at most three events, the product vectors are independent. If three
+rank-one matrices in a two-dimensional span were dependent, either the first
+two have independent left and right factors, in which case their span contains
+only their two rank-one projective points, or they share a left/right factor,
+in which case the whole span shares it. Three cycle edges cannot share a
+vertex, whose degree is two. At a common nonzero projective kernel state,
+these independent linear forms give independent state derivatives. Thus
+the local event normal rank really is k for k<=3.
+
+The cycle has exactly two perfect matchings. For {n,m,A,D}, X=Y=0 and the other
+two equations give vW=uZ and uW=vZ, whence u^2=v^2. In W=1 coordinates the
+two remaining derivatives listed in the text are independent for u!=0. For
+{lambda,c,alpha,beta}, W=1 gives X=-1/v, Y=u, Z=uv, followed by u^2v^2=1
+with nonzero angular derivative. Each perfect matching has three state
+normals and one angular normal. This is a direct geometric classification,
+not an appeal to an enumerated machine atlas.
+
+3. The one-hard-event constrained minimum
+=========================================
+
+3.1 Exact restriction and state rank (A6_ONE lines 6--10)
+
+The CHSH symmetry group is transitive on the eight events, so the hard event
+can be lambda. Its exact kernel is W=-vX. The signed core on Z=0 is positive
+definite when d>0 and uv!=0, as displayed in A6_PARENT lines 54--56. On the
+three-dimensional constrained state space, the Z=0 intersection has dimension
+two. Therefore a PSD constrained matrix at a zero has two positive eigenvalues
+and one simple kernel eigenvalue. The kernel has Z!=0, permitting the Z=1
+projective chart. This argument is over the real constrained residue field.
+
+3.2 Determinant differentiation (A6_ONE lines 12--29)
+
+The hard lambda packet is a rank-one update. In the determinant dictionary,
+differentiate each q_ij with respect to lambda. I checked all eight resulting
+outer coefficients against A6_PARENT lines 61--75; they are exactly those
+printed in A6_ONE. Each has nonnegative coefficients, and all t_i occurring
+in it are strictly positive because the normalized residue d is positive.
+
+The basis with columns e_W, (-v,1,0,0), e_Y, e_Z has determinant one. The
+lambda entry is 4 lambda D_u. Thus the coefficient of lambda in det(P) is
+4D_u times the determinant of the restricted three-by-three matrix. From
+the printed full determinant it follows exactly that
+
+    det(P_constrained) = 4D_u D_v^2 U V L_lambda(U,V).
+
+This is a positive smooth factor times a Laurent polynomial with nonnegative
+outer coefficients. Its logarithmic Hessian is the sum of weighted exponent
+outer products. The only possible rank-one stationary supports are opposite
+pairs on the four lines through the Newton square.
+
+3.3 Exhaustive exclusions (lines 31--49)
+
+The horizontal and vertical cases contradict their off-line zero coefficients;
+the slope-minus-one pair also activates an off-line coefficient. The only
+remaining rank-one pattern is contained in the perfect matching
+{lambda,c,alpha,beta}. On the matching curve all event squares and the signed
+core vanish, but the signed core has a nonzero derivative in each of the four
+independent event-normal directions. One hard constraint removes only one
+of those directions, leaving a nonzero constrained derivative. A globally
+nonnegative real function cannot have such a derivative at a zero.
+
+For clarity, on the equivalent matching {n,m,A,D}, set u=t, v=t+delta, W=1,
+Z=1+zeta. The four linear event normals are X,Y,R_m,R_D, where
+
+    R_m=delta-X+t^2Y-t zeta,
+    R_D=t^2X-Y-delta-t zeta.
+
+The signed-core first differential is
+
+    2t[(1+t^2)dX-(1+t^2)dY-dR_m+dR_D].
+
+All four coefficients are nonzero for t!=0. This can also be checked directly
+by differentiating the displayed physical parent at (W,X,Y,Z)=(1,0,0,1).
+
+If no outer exponent is active, the remaining event support is contained in
+one of the three nonextendable triples listed in the proof. Their exact kernel
+states annihilate all events while the signed core is negative. Thus rank
+zero is impossible as well.
+
+The exponent span is therefore two-dimensional at every constrained zero.
+Combining its strictly positive angular Hessian with the two positive state
+directions gives a strictly positive four-variable constrained Hessian. The
+Schur complement used to identify that Hessian is an ordinary real-residue
+calculation. No mixed tensor matrix is inverted.
+
+4. The two-hard-event constrained minimum
+=========================================
+
+4.1 State rank and pair types (A6_TWO lines 6--12)
+
+The two exact hard event equations leave a two-dimensional state space. Its
+intersection with Z=0 has dimension at least one, where the signed core is
+positive. Hence at a constrained zero the PSD state matrix has one positive
+eigenvalue and one simple kernel with Z!=0. Matching pairs have cycle distances
+two, three or four; the three listed representative pairs exhaust them by
+dihedral CHSH symmetries. No comparison of the two hard weights is used.
+
+4.2 All 24 activation conditions checked (lines 13--34)
+
+Starting from the eight one-lambda derivative coefficients, differentiate with
+respect to m, c or alpha. I checked all 24 positivity conditions in the printed
+table by this direct elementary differentiation.
+
+For example, for the {lambda,m} pair the (-1,-1) coefficient is a positive
+constant times alpha t8, so it is active exactly when alpha>0. The (-1,0)
+coefficient is a positive constant times D t6+alpha t8, so it is active exactly
+when D>0 or alpha>0. For the {lambda,alpha} pair the (-1,-1) coefficient is a
+positive constant times t7 t8 and is always active since d>0. The other entries
+follow in the same way; no sign cancellation is hidden in the table.
+
+An adapted state basis makes the coefficient of the product of the two hard
+weights a strictly positive angle factor times the constrained determinant.
+This is an exact rank-one-update/cofactor identity, not a limit assuming equal
+hard-weight scales. Thus the extracted Laurent polynomial has the same zero
+and Hessian sign as the constrained determinant.
+
+4.3 Curvature exclusions (lines 36--53)
+
+For {lambda,m}, each possible opposite-pair line activates an off-line exponent.
+With no active exponent, the remaining support is contained in {A} or {c}.
+For {lambda,c}, only the slope-plus-one line remains, and its off-line equations
+force precisely the perfect-matching support; rank zero leaves only m. For
+{lambda,alpha}, the always-active (-1,-1) exponent rules out rank zero and
+restricts rank one to the same perfect matching.
+
+The two rank-zero witnesses at u=v=1 are literal:
+
+    (W,X,Y,Z)=(1,-1,0,2) for {lambda,m,A},
+    (W,X,Y,Z)=(1,-1,1,3) for {lambda,m,c}.
+
+Their event amplitudes vanish and direct substitution in the signed parent
+gives respectively -4 and -8. The rank-one matching pattern is impossible
+because two hard equations still leave a tangent direction with nonzero
+signed-core derivative while every remaining event square has zero derivative.
+
+Thus the exponent vectors span the plane at every physical constrained zero.
+The one positive state pivot and the two positive angular directions give a
+strict three-variable constrained Hessian. Again all Schur operations occur
+only over the ordinary real residue field.
+
+5. Returning from constrained curvature to the complete tensor parent
+====================================================================
+
+A6_TWO line 55 and A6_ONE line 53 use the unequal diagonal hard-scale lemma,
+not an assertion that the constrained residue is already the full slack.
+For epsilon_i=sigma/a_i, put x_i=epsilon_i s_i in the SOURCE-FIELD stationary
+equations. Their residue Jacobian has positive diagonal hard block and the
+strict constrained Hessian as tangent block. The semialgebraic implicit-
+function argument therefore supplies an exact source-field critical center
+with bounded s_ci and x_ci=epsilon_i s_ci.
+
+The Gram roots are
+
+    (x_i(test)-x_ci(source))/sqrt(epsilon_i(source)),
+    y_j(test)-y_cj(source).
+
+They are finite sums of elementary tensors. They need not be bounded: the
+strict-Gram theorem concerns the bounded coefficient matrix. Exact finite
+Taylor allocation leaves a Gram with positive-definite real residue. Hard
+normal-tangent entries acquire factors sqrt(epsilon_i), hard tangent entries
+acquire epsilon_i, and all soft terms are bounded at the declared scale.
+The center value is nonnegative by source physicality and is a pure source
+square. All original terms remain in this identity.
+
+The state coordinate changes for one, two or three hard events use only
+real testing denominators nonzero at the residue. Clearing their squares
+preserves local positivity and the strict constrained Hessian at a zero.
+No expression like the mixed denominator in August equation (9.11) appears
+in this full-parent construction.
+
+6. Interface with the finite induction
+======================================
+
+The finite induction in A6_INDUCTION lines 34--48 uses these propositions in
+exactly their proved scope. Starting with sum c_i+d=1 and residue(d)=0, at
+least one event coefficient has positive residue. The unresolved entangled
+state makes these events a nonempty matching S.
+
+At the next pure source scale sigma, if g(y0)>0 the weighted lemma settles the
+test. If g(y0)=0 and residue(d/sigma)>0, the cases |S|=1 and |S|=2 use the
+propositions reviewed here; |S|=3 uses the separate Laurent restriction theorem.
+If residue(d/sigma)=0, then g is a nonnegative event-square sum. At least one
+remaining normalized event weight is positive; zero g forces its residue
+amplitude to vanish. Adding all such edges preserves the matching property.
+Every still-remaining coefficient is infinitesimal relative to every newly
+hard weight, as well as relative to the earlier hard weights.
+
+This addition is a refinement of the normal-scale analysis of the SAME full
+parent. It does not set those actual normal deviations to zero in the final
+tensor. Each repetition adds at least one edge, and a matching has at most
+four. The termination bound of at most three enlargements is therefore valid.
+At four edges, the induction explicitly invokes the arbitrary-scale matching
+terminal, whose detailed proof lies outside this narrow pass.
+
+7. Final scoped assessment
+==========================
+
+The geometry and one-/two-hard constrained-curvature modules give a coherent
+analytical route from source physicality to strict real constrained minima.
+The exact weighted-parent interface preserves the actual infinitesimal terms
+and independent coefficient/testing factors. Within the stated dependency
+boundary, this pass found no additional gap or correction to make.
+
+The result relies on the complete physical parent and its displayed determinant
+dictionary, the strict-Gram/implicit-function machinery, and for the full A6
+induction the separately reviewed three-/four-matching modules. It covers only
+tests where BOTH measurement pairs are noncommuting in residue. It supplies
+one legitimate input to the later universal assembly; it does not itself settle
+commuting degenerations, projective endpoints, source entry, or global finite-
+lift existence.

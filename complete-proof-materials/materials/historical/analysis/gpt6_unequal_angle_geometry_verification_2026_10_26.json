@@ -1,0 +1,98 @@
+{
+  "input": "explicit recovered text only; no ZIP recovered",
+  "source_order": [
+    "d",
+    "n",
+    "m",
+    "C",
+    "A",
+    "D",
+    "alpha"
+  ],
+  "all_seven_symmetric_source_formulas_match": true,
+  "six_helper_changes_verified": true,
+  "source_domain_equivalence": "z=s/(a*r), old L=g, old N=-B0/(a^2*r), old J=1-s",
+  "domain_includes_n_zero": "B0=0; no division by n or B0",
+  "e_less_than_one_proof": "If e>=1 and 0<r,s<1 then all four terms in B0 are strictly positive: e^2+p-e>0 and (3e-2)-p>0. Contradiction.",
+  "positive_denominators": "L>0 from e-p=r(1-s)+s>0; Q=ag+L>0; Delta0>0 termwise.",
+  "angle_kappa_difference_identities_verified": {
+    "angle_ratio": true,
+    "kappa_C": true,
+    "kappa_alpha": true,
+    "quadratic_relation": true,
+    "m_minus_D": true,
+    "C_minus_alpha": true
+  },
+  "reciprocal_equivalence": "r=s iff m=D iff C=alpha; u*v=s/r, hence iff u*v=1",
+  "extremality_minor_matches_independent_uncleared_operator_convention": true,
+  "minor_nonzero_including_n_zero": "r,s<1,g>0,Delta_nat>0,c>0",
+  "signed_witnesses": [
+    {
+      "a1": 1,
+      "a2": 2,
+      "rs1": [
+        "1/8",
+        "1/16"
+      ],
+      "rs2": [
+        "1/16",
+        "1/8"
+      ],
+      "source1": [
+        "1",
+        "101/104",
+        "119/104",
+        "17/182",
+        "153/104",
+        "135/104",
+        "3/130"
+      ],
+      "source2": [
+        "1",
+        "2939/2911",
+        "19975/110618",
+        "1989/29110",
+        "8789/2911",
+        "7238/55309",
+        "11583/40754"
+      ],
+      "kappa1": "16/35",
+      "kappa2": "152/35",
+      "mixture_determinant": "-16557677/50331190"
+    },
+    {
+      "a1": 1,
+      "a2": 2,
+      "rs1": [
+        "1/16",
+        "1/8"
+      ],
+      "rs2": [
+        "1/8",
+        "1/16"
+      ],
+      "source1": [
+        "1",
+        "101/104",
+        "135/104",
+        "3/130",
+        "153/104",
+        "119/104",
+        "17/182"
+      ],
+      "source2": [
+        "1",
+        "2939/2911",
+        "7238/55309",
+        "11583/40754",
+        "8789/2911",
+        "19975/110618",
+        "1989/29110"
+      ],
+      "kappa1": "16/35",
+      "kappa2": "152/35",
+      "mixture_determinant": "16557677/50331190"
+    }
+  ],
+  "not_audited": "order-six moment pencil, degree-five matrix T, source ZIP, full conic hull"
+}

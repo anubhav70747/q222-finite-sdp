@@ -1,0 +1,65 @@
+EN native-entry analytical dependency audit, 26 October 2026
+
+Inputs: 05_SG_EN_CLASSIFICATION_RENDERED.txt, Lemma6 and native appendix;
+public latex/chapters/05_entry.tex, especially lines43–84,108–186,
+189–241,243–307. SG classification/identities were treated as separately
+audited inputs, not re-proved here.
+
+Verdict: no EN-specific analytical gap found. The generic Cramer-to-all-
+contacts extension is justified by an actually constructed connected
+analytic graph, rather than assumed connectedness or prior native entry.
+The conclusion is the native-coordinate/sign interface, not tensor-SOS
+or finite-lift existence.
+
+Graph construction. For each positive six-event support, normalize C=2
+and vary the other five retained weights over the connected positive
+orthant. Physicality in d is a closed convex interval containing0.
+The positive central determinant term at d=0 gives a positive interval;
+a fixed negative-CHSH-core test bounds its length above. The fixed active
+Laurent support is coercive, so the maximal positive d has a finite
+contact. Its strictly convex logarithmic Laurent sum has a unique
+minimizer. SG3 then gives a unique kernel state with Z=1. SG18 gives
+the strict five-variable Hessian and SG20 gives the negative d derivative.
+Thus the six-equation analytic IFT applies at every maximal contact.
+Each nearby branch is physical by SG7, and its negative core makes its
+d maximal at its own weights. Uniqueness patches the branches globally.
+This does not assume continuity of an optimizer at infinity.
+
+Cramer extension. The determinant is an analytic function on that graph.
+The exact seed proves it is not identically zero; connected real
+analyticity makes its nonzero set dense. The explicitly stated polynomial
+Cramer identity gives EN7 there, without any native gap assumptions.
+Continuity extends the cross-multiplied equation to the exceptional minor
+locus. This order is essential: invoking only the equivalent native m
+formula before entry/uniqueness would be circular. The recovered text
+provides the independent determinant identity, so does not do that.
+
+Strict signs. EN6 proves theta>0 directly. The Y0=0 and S-Y0=0 walls
+annihilate a retained positive event; deleting that event preserves the
+whole kernel and both angle jets. SG7 would make the deleted source
+physical, contradicting SG17/SG22 for its exclusive omission pair.
+After EN7 has been extended, theta=1 similarly forces Rm=0 and is
+excluded. Connectedness and the seed fix the signs. Full-parent reflection
+then supplies the remaining signs; its last coordinate uY0+v is already
+positive, so normalization is legal.
+
+Literal boundaries. At D=0 or beta=0, D+beta>0 remains required. Open
+the missing coefficient at that fixed finite real contact and solve for
+the five contact variables and d using the same invertible Hessian/core
+Jacobian. Positivity survives locally and SG7 makes the branch physical.
+The strict interior inequalities initially give weak limiting signs;
+EN6, the nonvanishing event walls, EN7 and reflection upgrade them to
+strict signs at the boundary. This is not an unsupported “strictness
+passes to limits” argument. C2 at n=0 is already the physical C1 beta=0
+triple face. For n>0, the X=0 wall deletes n and contradicts that already
+proved C1 sign, so the C2 argument has no mutual-entry cycle.
+
+Transport/converse. Only after these signs are established are EN13–EN16
+used to prove every native denominator nonzero and apply stationary
+uniqueness. No column is dropped at a zero event weight. The converse
+retains all original coefficient signs, not merely positive coordinate
+gaps; native stationarity plus SG7 then gives validity. The one-dimensional
+homogeneous stationary kernel proves the stated extremality. Analytic
+connectedness is used only over the reals; it is the resulting finite
+ordered-field implication that transfers. Testing angles independent of
+the source contact are never identified in this entry argument.

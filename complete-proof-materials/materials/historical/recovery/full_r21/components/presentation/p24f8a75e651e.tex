@@ -1,0 +1,148 @@
+\chapter{Weighted normal completion at matching residues}
+\label{component:p24f8a75e651e}
+\noindent\textbf{Component }\path{p24f8a75e651e}\par
+{\small\noindent Source: \path{CORE/prior/inherited/zero_d_weighted.tex}\par}
+{\small\noindent SHA256: \path{24f8a75e651e715d8ae6a9ed52b453e9e947cd9615dd9d726124b15b3b5d6345}\par}
+{\small\noindent Inventory use: lem:weighted-contact; eq:three-N; eq:three-E; thm:three-event-weighted; thm:four-event-weighted | C14\_\allowbreak{}ENTIRE\_\allowbreak{}ORIGINAL\_\allowbreak{}PARENT\_\allowbreak{}GRAPH; precise subordinate uses retained below | C1\_\allowbreak{}BARE\_\allowbreak{}OTHER\_\allowbreak{}TERMINALS; precise subordinate uses retained below\par}
+\medskip
+\section{Weighted normal completion at matching residues}\label{p24f8a75e651e:sec:zero-d-weighted}
+The cycle classification can be strengthened without any division by a mixed tensor. The elementary device below keeps the large normal form intact while solving only a small, nonsingular critical-point system.
+
+\begin{lemma}[A weighted regular-contact lemma]\label{p24f8a75e651e:lem:weighted-contact}
+Let $\sigma>0$ be an infinitesimal in the coefficient field. In local real coordinates $(x,y)\in\mathbb R^r\times\mathbb R^s$, suppose a physically nonnegative polynomial has the exact form
+\[
+F(x,y)=x^TA(x,y)x+\sigma G(x,y),
+\]
+with bounded coefficient-field coefficients and symmetric $A$. At the independent test assume $\bar x=0$, $\bar y=y_0$, and $\bar A(0,y_0)\succ0$. Put $g(y)=\overline{G}(0,y)$. If either $g(y_0)>0$, or
+\[
+g(y_0)=0,\qquad \nabla g(y_0)=0,\qquad \nabla^2g(y_0)\succ0,
+\]
+then the entire tensor evaluation of $F$ is a sum of squares. The same assertion holds for rational coordinate expressions whose denominators are products of coefficient units and real testing polynomials nonzero at $y_0$.
+\end{lemma}
+\begin{proof}
+In the first case divide by $\sigma$ and use the roots $(x/\sqrt\sigma,1)$. Allocate every term of $G-G(0,y)$ containing $x$ to these roots. The exact Gram has residue $\operatorname{diag}(\bar A(0,y_0),g(y_0))\succ0$.
+
+In the second case put $x=\sigma s$ in the stationary equations for $F/\sigma$. They become
+\begin{align*}
+2A(\sigma s,y)s+\sigma\big(s^TA_{x_i}(\sigma s,y)s\big)_{i=1}^r
+  +G_x(\sigma s,y)&=0,\\
+\sigma\big(s^TA_{y_j}(\sigma s,y)s\big)_{j=1}^s
+  +G_y(\sigma s,y)&=0.
+\end{align*}
+At residue, the second equation is $\nabla g(y)=0$ and the first uniquely determines
+\[
+s_0=-\bar A(0,y_0)^{-1}\overline{G_x}(0,y_0)/2.
+\]
+The Jacobian in $(s,y)$ is block upper triangular, with diagonal blocks
+$2\bar A(0,y_0)$ and $\nabla^2g(y_0)$. The real semialgebraic implicit-function theorem, transferred to the coefficient field, supplies an exact stationary point $(x_c,y_c)=(\sigma s_c,y_c)$ with $(\bar s_c,\bar y_c)=(s_0,y_0)$. Physicality gives $a=F(x_c,y_c)/\sigma\ge0$.
+
+Set $h=x-x_c$ and $t=y-y_c$. The linear terms vanish exactly. Allocate terms with at least two $h$ factors to $h_ih_j/\sigma$; terms with exactly one $h$ factor have bounded coefficients after division by $\sigma$, because $x_c/\sigma=s_c$ is bounded. Terms with no $h$ factor contributed by the hard form have a factor $x_c^2/\sigma=\sigma s_c^2$. Consequently the exact finite Taylor allocation is
+\[
+F/\sigma=a+
+\begin{pmatrix}h/\sqrt\sigma\\t\end{pmatrix}^{\!T}
+Q
+\begin{pmatrix}h/\sqrt\sigma\\t\end{pmatrix},
+\qquad
+\bar Q=\operatorname{diag}\!\left(\bar A(0,y_0),\tfrac12\nabla^2g(y_0)\right)\succ0.
+\]
+Every unallocated higher factor has zero residue. Lemma~\ref{p25af2c58da7e:lem:gram} applies, $a$ is a pure coefficient square, and the positive pure factor $\sigma$ is restored. For rational expressions, clear the finitely many indicated denominators by separately positive squares before applying the polynomial argument. The proof never inverts $A$ in the tensor ring: its real inverse is used only to identify the initial point for the coefficient-field implicit-function theorem.
+\end{proof}
+
+\subsection{Three dominant events: two Laurent problems}
+Normalize the source and suppose exactly three event coefficients have positive residues, forming a matching $M$. If all complementary coefficients and $d$ vanish literally, the parent is already an event-square sum. Otherwise write
+\[
+\sigma=\max\bigl(\{d\}\cup\{c_i:i\notin M\}\bigr)>0.
+\]
+The three event amplitudes are independent state coordinates near their common noncommuting kernel. A real, angle-dependent affine change of projective state coordinates makes them the normal coordinates $x$. Its denominators are pure testing units. The parent is therefore in the form of Lemma~\ref{p24f8a75e651e:lem:weighted-contact}: the three dominant packets supply $A$, and all complementary packets and the signed core supply $\sigma G$.
+
+There are two matching orbits under the CHSH symmetries. Representatives, polynomial kernel states and exact constrained Laurent polynomials are
+\begin{align*}
+M_N&=\{\lambda,m,A\}, &\psi_N&=(uv,-u,0,1+v^2),\\
+M_E&=\{n,m,A\}, &\psi_E&=(u,0,0,v).
+\end{align*}
+With $U=u^2,V=v^2$, substitution into the complete parent gives
+\begin{align}
+\frac{F(\psi_N)}{2UV(1+V)}
+&=\frac{2n(1+U)}V+2cU+\frac{2D(1+V)}U\nonumber\\
+&\quad +\frac{2\alpha(1+U)(1+V)}{UV}+2\beta V-d,
+\label{p24f8a75e651e:eq:three-N}\\
+\frac{F(\psi_E)}{2UV}
+&=d(U/V-1)+\frac{2\lambda(1+U)}V+\frac{2cU(1+V)}V\nonumber\\
+&\quad +\frac{2D(U-V)^2}{UV}+\frac{2\alpha(1+U)}U+2\beta(1+V).
+\label{p24f8a75e651e:eq:three-E}
+\end{align}
+All nonconstant Laurent coefficients are nonnegative. At a stationary zero, the logarithmic Hessian is
+$\sum_e a_e U^{e_1}V^{e_2}ee^T$ and is positive definite exactly when the active exponent vectors span $\mathbb R^2$.
+
+For \eqref{p24f8a75e651e:eq:three-N}, any positive $n,D$ or $\alpha$ already supplies two independent exponent vectors. If all three vanish, the only remaining nonconstant terms are $2cU+2\beta V$, which cannot have a stationary zero unless both coefficients vanish. Thus when $\overline{d/\sigma}>0$, every physical zero of the normalized restriction has positive definite logarithmic Hessian. If $\overline{d/\sigma}=0$, the restriction is strictly positive: some complementary coefficient has positive normalized residue, and its event amplitude is nonzero on $\psi_N$ at every noncommuting angle.
+
+For \eqref{p24f8a75e651e:eq:three-E}, a positive residue of $d/\sigma$ supplies exponent $(1,-1)$. Failure to span two dimensions forces $\lambda=c=\alpha=\beta=0$ in normalized residue. Stationarity then requires $D>0$, but the minimum of the remaining diagonal expression is
+\[
+2\sqrt{2D(d+2D)}-d-4D<0,
+\]
+since $(d+4D)^2-8D(d+2D)=d^2>0$. Physicality excludes this case. Hence every physical zero again has strictly positive logarithmic Hessian. Multiplying by a positive smooth testing factor or passing from logarithmic angles to $u,v\ne0$ preserves positive definiteness at a zero.
+
+\begin{theorem}[Three-event weighted completion]\label{p24f8a75e651e:thm:three-event-weighted}
+For a physical source, at a noncommuting zero residue with exactly three dominant matching events, the entire parent is tensor SOS if the matching is nonextendable, or if $d/\sigma$ has positive residue. For an extendable matching with $\overline{d/\sigma}=0$, it is also tensor SOS unless the only complementary event with positive normalized residue is the fourth edge completing the perfect matching, and the testing residue lies on that matching's curve.
+\end{theorem}
+\begin{proof}
+Physicality makes the constrained normalized residue nonnegative. The preceding calculation gives either a positive value or a strict two-angle minimum, so Lemma~\ref{p24f8a75e651e:lem:weighted-contact} applies. In the remaining extendable case, every complementary event except the fourth matching edge is nonzero on the kernel. Thus a zero requires those other normalized coefficients to vanish; the fourth event must vanish, giving precisely the perfect-matching curve. The cycle rotations and reflections induced by the three CHSH maps carry each of the eight extendable triples to $M_E$ and each of the eight nonextendable triples to $M_N$.
+\end{proof}
+
+\subsection{Four dominant events: the first normal correction is a Laurent circuit}
+\begin{theorem}[Four-event weighted completion]\label{p24f8a75e651e:thm:four-event-weighted}
+For a physical source, if $\bar d=0$ and four event coefficients have positive residues, the entire parent is tensor SOS at every noncommuting residue test.
+\end{theorem}
+\begin{proof}
+The case $d=0$ is already an event-square sum, so assume $d>0$. The cycle classification reduces a zero to a perfect matching. By symmetry take $M=\{n,m,A,D\}$, with these four coefficients positive units. The sign choice of the matching curve is removed by a real testing reflection. Near the curve write
+\[
+u=t,\quad v=t+\delta,\quad W=1,\quad Z=1+\zeta,
+\qquad z=(X,Y,\delta,\zeta),\quad \bar t\ne0.
+\]
+Put $B=1+t^2$ and use the four linear normal forms
+\[
+X,\qquad Y,\qquad r_m=\delta-X+t^2Y-t\zeta,
+\qquad r_D=t^2X-Y-\delta-t\zeta.
+\]
+Their matrix $J(t)$ is invertible for $t\ne0$. The dominant quadratic form and the linear part of the signed core are exactly
+\begin{align*}
+Q_t(z)&=4\{nB^2X^2+AB^2Y^2+m r_m^2+D r_D^2\},\\
+\ell_t(z)&=2t\{B(X-Y)-r_m+r_D\}.
+\end{align*}
+Complete $Q_t+d\ell_t$ by the shift $z=h+d\eta(t)$, where in the four displayed normal forms
+\[
+J(t)\eta(t)=\left(-\frac{t}{4nB},\frac{t}{4AB},\frac{t}{4m},-\frac{t}{4D}\right)^T.
+\]
+This is a finite separated rational expression: $J(t)^{-1}$ is pure testing, and the only coefficient inverses are the four positive units. The minimum correction is
+\[
+-\frac{d^2t^2}{4}\left(\frac1n+\frac1A+\frac1m+\frac1D\right).
+\]
+On the curve, the complementary packets are exactly
+\[
+4(1+t^2)\{(\lambda+\alpha)+t^2(c+\beta)\}.
+\]
+
+Let $\sigma=\max(\lambda,\alpha,c,\beta)$. Physicality forces $\sigma>0$ and $d^2/\sigma$ bounded. Indeed, otherwise substitute $t=1$ and the displayed shift with $h=0$. The complementary packets are $o(d^2)$, while the hard packets and signed core, divided by $d^2$, have strictly negative residue. All omitted terms have an additional factor $d$, giving a contradiction.
+
+After the shift, collect terms of degree at least two in $h$ in a symmetric matrix $A(h,t)$. The constant term is $O(d^2+\sigma)$ and the coefficient of each linear $h$ term is $O(d^2+\sigma)$: the terms of first order in $d$ cancel by the displayed completion. These statements are finite polynomial divisibilities after clearing $t$ and $B$ by pure testing squares. Thus the entire shifted parent has the exact form
+\[
+F=h^TA(h,t)h+\sigma G(h,t),\qquad
+\bar A(0,t)\succ0,
+\]
+with bounded coefficients, and
+\[
+\bar G(0,t)=4(1+t^2)(p+qt^2)
+ -\frac{\rho t^2}{4}\left(\frac1{\bar n}+\frac1{\bar A}+\frac1{\bar m}+\frac1{\bar D}\right),
+\]
+where $p=\overline{(\lambda+\alpha)/\sigma}$,
+$q=\overline{(c+\beta)/\sigma}$ and $\rho=\overline{d^2/\sigma}$.
+Here $p,q\ge0$ and $p+q>0$. Divide by the positive testing factor $4t^2$ and put $U=t^2$; the residue is the one-variable Laurent polynomial
+\[
+p(1+U^{-1})+q(1+U)
+ -\frac\rho{16}\left(\frac1{\bar n}+\frac1{\bar A}+\frac1{\bar m}+\frac1{\bar D}\right).
+\]
+Physicality makes it nonnegative for every $U>0$. At a zero, stationarity gives $p/U=qU$; hence both $p$ and $q$ are positive and its logarithmic second derivative $p/U+qU$ is strictly positive. Lemma~\ref{p24f8a75e651e:lem:weighted-contact} therefore settles every test near the curve. Tests away from it have positive residue, completing the proof.
+\end{proof}
+
+\paragraph{The next scale.}
+The next result handles the lower-scale fourth-edge promotion. The subsequent matching terminal removes the assumption of comparable hard weights, and the constrained determinant arguments handle one or two hard events. Together they yield the finite induction of Theorem~\ref{p94dfbc8a5970:thm:all-noncommuting}.

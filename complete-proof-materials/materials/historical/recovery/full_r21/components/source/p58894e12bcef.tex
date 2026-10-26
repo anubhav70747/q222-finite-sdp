@@ -1,0 +1,66 @@
+\section{The C1 circuit needs six soft directions}
+Let
+\[
+a_1=\sqrt{wv},\quad a_2=\sqrt{\delta uv},\quad
+a_3=b\sqrt{\delta kuw},\quad a_4=\delta k^{3/2}b.
+\]
+The radicals are separated coefficient/testing radicals. Put
+\[
+h_{13}=a_1^2-a_3^2,\quad h_{23}=a_2^2-a_3^2,\quad
+h_{34}=a_3^2-a_4^2,
+\qquad q_1=a_1a_2-a_3a_4,\quad q_2=a_1a_3-a_2a_4.
+\]
+Averaging the three-square arithmetic--geometric-mean identities for
+pairings $12|34$ and $13|24$ gives exactly
+\begin{equation}
+\sum_{i=1}^4a_i^4-4a_1a_2a_3a_4
+=h_{13}^2+h_{23}^2+h_{34}^2-h_{13}h_{23}+h_{23}h_{34}
+ +q_1^2+q_2^2.\label{eq:compact-circuit}
+\end{equation}
+The contrast block is
+\[
+G=\begin{pmatrix}1&-1/2&0\\-1/2&1&1/2\\0&1/2&1\end{pmatrix}\succ0;
+\qquad \det G_{[1]}=1,\quad\det G_{[2]}=3/4,\quad\det G=1/2.
+\]
+Unlike a single pairing, the two pairings control all three independent
+contrasts of the four squared monomials.
+
+Write $K=1+k^2$, $D=1+u^2$ and
+\[
+g_0=\delta(v-b^2uw),\qquad g_4=uwv-\delta^2k^4b^2.
+\]
+The leading scalar used in the complete source is
+\[
+P=D(w^2+\delta^2)v^2+\delta^2Kb^4u^2w^2+
+\delta^4Kk^6b^4-2\delta^2K^2b^2uwv
+=g_0^2+g_4^2+\sum_i a_i^4-4\prod_i a_i.
+\]
+There is a second exact simplification:
+\begin{equation}
+g_4=u h_{13}+k h_{23}-ku g_0+k h_{34}.\label{eq:g4-conductor}
+\end{equation}
+All four displayed coefficients are infinitesimal in the allowed chart.
+Thus $g_4^2$ can be retained as a positive square or absorbed as a
+zero-residue Gram correction. Equations \eqref{eq:compact-circuit} and
+\eqref{eq:g4-conductor} give a strict residue Gram on just
+\[
+\boxed{(g_0,h_{13},h_{23},h_{34},q_1,q_2).}
+\]
+The first-order and restricted second-order conductor theorem places
+every source correction in the first five of these roots. The two hard
+state normals therefore give an \emph{eight-root} bounded strict-residue
+Gram for the normalized remainder after retaining the four positive
+packets, replacing its previous thirteen-root frame. Restoring those
+packets gives the entire parent. Their possibly unbounded gap ratios
+are kept outside this bounded Gram. This is a local Gram-frame
+dimension, not a global SDP block-size bound or a claimed optimal number
+of tensor squares.
+
+One pairing alone does not suffice. At the formal complex point
+$(a_1,a_2,a_3,a_4)=(1,1,i,-i)$, its roots
+$a_1^2-a_2^2$, $a_3^2-a_4^2$, $a_1a_2-a_3a_4$ all vanish, whereas
+$h_{13}=2$. Hence their ideal does not contain $h_{13}$, and their squared
+ideal cannot absorb every infinitesimal multiple of $h_{13}^2$.
+This is an algebraic obstruction to that proposed reduction, not a physical
+complex-state counterexample. The second pairing supplies exactly the
+missing strict contrast direction.

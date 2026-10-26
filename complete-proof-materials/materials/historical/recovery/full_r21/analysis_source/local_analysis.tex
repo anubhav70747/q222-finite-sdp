@@ -1,0 +1,242 @@
+\section{Targeted analysis of the recovered local proofs}
+
+The current review includes four complementary October audits:
+global/source assembly and a delicate C1 endpoint; the later full R1
+proof; noncommuting-residue constrained geometry; and C2 source
+dispatch. The separate audit notes give exact paths, equation tags,
+hypotheses and limits. Their findings are summarized here without
+converting scoped checks into certification of all 215 components.
+
+\subsection{R1: the effective reserve and the whole parent}
+
+The later R1 theorem expressly removes the earlier restriction that
+\(jT\) be infinitesimal. Its compact source variables satisfy
+\[
+ 0<p<\min(1,j),\quad 0<H<1,\qquad
+ B,T,jB,TB\text{ positive infinitesimals},
+\]
+while \(j\) and \(jT\) need not be bounded. A literal inverse map to
+the original stationary source is printed.
+
+For \(h_0>0\), \(n\ge0\), the central exact completion is
+\begin{equation}
+ h_0N_0^2+n(N_0+jb)^2
+ =(n+h_0)\left(N_0+\frac{nj}{n+h_0}b\right)^2
+ +\frac{nh_0j^2}{n+h_0}b^2.
+ \label{eq:effective}
+\end{equation}
+The denominator is strictly positive and pure source.
+Writing
+\[
+ c_b=\frac{nj}{n+h_0},\qquad M_e=\frac{nh_0j^2}{n+h_0},
+\]
+the usable reserve is \(M_e\), not the uncompleted mass \(nj^2\).
+At \(n=0\), both quantities vanish literally. For \(n>0\),
+\[
+ \frac{c_b^2}{M_e}=\frac{n}{h_0(n+h_0)}\le\frac1{h_0},
+\]
+which controls the shift against the retained current.
+
+The full-normal proof retains both unrestricted state normals, both
+first-normal arrays, and their quadratic cross term. Scalar, radial
+and circuit identities buy helper pivots; strict Gram then applies
+to the remaining complete expression. The scalar restriction alone
+would not suffice. \src{R1N; FN}
+
+The contact rows use
+\[
+ U=\frac{u}{\sqrt{jB}},\quad V=\frac{v}{\sqrt{TB}},
+ \quad Z_*=\frac{z}{\sqrt{jT}},
+\]
+and the exact circuit
+\[
+\begin{aligned}
+ \Psi&=U^2+V^2+Z_*^2+U^2V^2Z_*^2-4UVZ_*\\
+ &=(U-V)^2+Z_*^2(1-UV)^2+2UV(1-Z_*)^2.
+\end{aligned}
+\]
+The rows can be unbounded. The positive state ratio \(z\) remains
+arbitrary inside them. The square root of \(UV\) factors into
+pure-source and pure-testing quantities.
+
+The opposite second-normal contribution is treated through the whole
+squared multiplier
+\[
+ T(jT)v^2\bigl(\alpha-BTCHu^2\bigr)^2.
+\]
+The newer cost estimates cancel \(jT\) exactly and retain all higher
+terms and the cross term. They do not compare source and testing
+infinitesimals. \src{FN24; R1N11}
+
+For outer tests put
+\[
+ C_t=v(uX-Z),\qquad B_t=X+uZ,\qquad g_*=\frac{CD}{C+D}.
+\]
+A pure-source harmonic completion gives \(g_*C_t^2\).
+The exact relation
+\[
+ uB_t-C_t/v=(1+u^2)Z
+\]
+produces the two-row outer Gram when \(v\) is noninfinitesimal.
+The small-\(v\) four-row identity and the remaining six-row identity
+retain every state coordinate. Real cap choices use positivity on
+event kernels; excess coefficients stay in whole event squares.
+
+The audit directly checked these outer identities, including the
+zero row relation used in the six-row adjustment. The state/sign
+join covers \(wz\le0\) with a pure-testing nonnegative core, and
+normalizes \(w=1\) when \(wz>0\) while keeping \(z>0\) arbitrary.
+Homogeneous formulas include literal endpoints, and complex states
+split into real and imaginary parts. \src{R1N12--R1N24; SJ}
+
+\textbf{Finding.}
+The later R1 argument is present and substantive. No concrete gap
+was found in the examined allocation and joins. Older records marking
+R1 open should not be substituted for this later body.
+The large source-polynomial, scalar-circuit and radial coefficient
+expansions were not all independently recomputed in this review.
+
+\subsection{A shorter R1 reserve formulation}
+
+The later proof map combines several source cases using
+\[
+ \rho=Bj^2,\quad\delta=1-p,\quad S=\delta+\rho+M_e,
+ \qquad p^2\le10M_e+4\rho,\quad \frac1{10}\le S<9.
+\]
+Weighting the exact budgets by \(\delta/S,\rho/S,M_e/S\)
+avoids isolated inverse openings. \(S\) is a positive pure-source
+unit, and \(M_e=0\) is retained without division by \(M_e\).
+This is a useful shorter exposition, retaining the full parent,
+circuit, radial and normal identities as inputs. \src{RM}
+
+\subsection{The C1 JC4/SN endpoint}
+
+The reviewed endpoint has \(S,\kappa,\nu\) infinitesimal,
+\(\ell=1-\nu\), \(q=\nu/\ell\), and \(n_s=\beta/q^2\) bounded.
+The exact source identities give
+\[
+ b_0^2=O(\kappa\theta n_s),\qquad
+ \frac{D}{Sq^2}\longrightarrow\frac12,\qquad
+ \frac e\kappa\longrightarrow1,\qquad
+ \frac h\nu\longrightarrow1.
+\]
+This retains literal \(\beta=0\) and excludes \(D=0\).
+No ordering among the independent infinitesimal scales is assumed.
+The local \(e=xh/\sigma=\kappa h/\nu\) is explicitly defined and is
+not the earlier native parameter bearing the same letter.
+
+The complete local parent keeps unrestricted state normals
+\(X_e,N_y\). Its exact relation
+\[
+ R=\frac{\kappa\sqrt S\,G-uN}{\ell}
+\]
+puts every \(R\)-term into an infinitesimal Gram perturbation.
+The helper identity has the usable form
+\[
+ \mathrm{Cost}=\ell^2(wB_u)^2+(\kappa\delta W)^2,
+\]
+where the cost's coefficients on strict base rows have zero residue.
+It buys any fixed positive helper pivot on \(wB_u\), together with
+a genuine square, at infinitesimal cost. The analogous \(wB\) pivot
+handles the remaining bounded cross terms.
+When \(n_s=0\), its zero row is omitted.
+
+The remote coverage has three genuine cases.
+Noninfinitesimal Alice tests use complete four-state Grams since
+\(C,A\) are unbounded. Infinitesimal Alice with unmatched Bob uses
+a homogeneous six-root Gram with scalar-block determinant
+\[
+ \frac14(\bar s^2-\bar\ell)^2.
+\]
+On the SN source \(\bar\ell=1\); the remaining matched Bob tests have
+\(c\) infinitesimal and \(s\) a unit, so \(w=c/s\) is infinitesimal,
+exactly the local SN domain. State ratios remain in roots throughout.
+
+\textbf{Finding.}
+The source transition, full-state allocation and local/remote union
+are coherent on the examined formulas. Some coefficient expansions
+and the other C1 endpoint cells were not independently rederived.
+\src{Current assembly audit}
+
+\subsection{Noncommuting residue tests}
+
+The A6 route uses the geometry of zero events at an entangled residue:
+the supported zero events form a matching in the event eight-cycle.
+At most three are independent state-normal coordinates. A fourth
+matching event enters a separate terminal.
+
+At each source scale, impose the current hard event amplitudes
+\emph{exactly} zero in the coefficient field, divide by the positive
+pure-source next scale \(\sigma\), and then take residue.
+Physicality makes the resulting constrained residue nonnegative.
+This does not delete actual terms from the final tensor expression.
+The weighted-contact lemma returns to the full parent with all normal
+deviations retained.
+
+If the signed coefficient becomes visible, the one-, two- or
+three-hard-event constrained curvature argument applies. Otherwise
+another matching edge is added. The process terminates because
+there are at most four matching edges, not because an arbitrary
+infinitesimal series is assumed to stabilize.
+
+The focused audit checked all eight one-hard derivative coefficients
+and all 24 two-hard activation conditions from the printed determinant
+dictionary, the explicit negative witness states and the nonzero
+signed-core differential on the residual matching.
+The weighted and unequal-scale lemmas use only real residue Jacobian
+inversion and source-field implicit-function transfer; they do not
+invert a mixed tensor.
+
+\textbf{Finding.}
+No defect was found in the reviewed geometry, constrained curvature
+and induction interface. The original full determinant identity and
+the complete arbitrary-scale four-matching terminal remain named
+mathematical inputs. A6 does not cover commuting-angle residues.
+\src{Current A6 audit}
+
+\subsection{C2 source dispatch and boundary logic}
+
+The HJ source partition reaches ten rows R1--R10 or four regular exits.
+The two excluded intersections have source-equation justifications:
+\[
+ \text{all six weights bounded}
+ \ \Longleftrightarrow\
+ t,h,\ell,j,r,g\text{ are units},
+\]
+contradicting the weak total scale, and the weak-\(C\) criterion
+excludes exactly the simultaneous-small \(r,j\) intersection.
+
+The formal C1 comparison has
+\[
+ \beta_1=-\frac{r\delta n}{eP_n}.
+\]
+At \(n=0\) it is an actual C1 boundary source and the precise local
+C1 theorem is used. At \(n>0\), the comparison has negative
+\(\beta_1\); the proof instead checks finite coefficient identities.
+It does not invoke physical C1 positivity for this formal source.
+
+The complete CT reflection preserves the strict native gaps. For example,
+\[
+ g'=\frac{a^2j}{b},\qquad j'=\frac gb,
+\]
+\[
+ 1-r'=\frac{b-a^2zr}{b},\qquad
+ 1-z'h'=\frac{a^2t}{b},\qquad
+ b'-a^2z'r'=\frac{a^2(1-r)}b.
+\]
+All are positive by the original source domain. Both \(n=0\) and the
+total-scale predicate are preserved.
+
+The nine ordered angle types and complementary-event cases are
+exhaustive. The single-angle argument explicitly includes additional
+opening extensions beyond its earliest theorem header.
+The inspected dispatch does not call the entire C1 theorem in a circle;
+its C1 imports are named local bodies.
+
+\textbf{Finding.}
+No uncovered source cell, false reflection, lost \(n=0\) boundary or
+whole-theorem routing cycle was found. Native entry, positive-scale
+coverage, A6 and the detailed local conductors remain substantive
+inputs; dispatch verification is not independent rederivation of
+every leaf. \src{Current C2 dispatch audit}
+

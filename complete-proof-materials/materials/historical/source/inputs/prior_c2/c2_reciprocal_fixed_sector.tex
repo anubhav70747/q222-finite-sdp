@@ -1,0 +1,232 @@
+\section{An exact finite lift for the reciprocity-fixed C2 sector}
+\label{sec:c2-reciprocal-fixed-sector}
+
+This section gives an evaluated affine semidefinite representation with
+both inclusions proved.  Its scope is the full linear sector
+$D=m$, $\alpha=C$ of the canonical C2 cone, including every zero
+coefficient face.  It is not a converse for either of the previously
+proposed two-variable Gram dictionaries outside this sector.
+
+\paragraph{Complete parent and statement.}
+For $c=(d,n,m,C,A,D,\alpha)\geq0$, put $D_u=1+u^2$, $D_v=1+v^2$ and
+define $P_c=\psi^TM_c(u,v)\psi$, $\psi=(W,X,Y,Z)^T$, by
+\begin{align*}
+P_c={}&nD_uD_vX^2+m(vW-X+uvY-uZ)^2
+ +CD_v(uW-Y)^2+AD_uD_vY^2\\
+&+(D+d/2)(uW+uvX-Y-vZ)^2
+ +(\alpha+d/2)D_u(vY-Z)^2\\
+&+(d/2)D_v(X+uZ)^2-(d/2)D_uD_vZ^2.
+\end{align*}
+The canonical slack is $F_c=4P_c$.  Let $\mathcal C_2$ consist of these
+nonnegative coefficient vectors for which $P_c\geq0$ for every real
+angle and state, including homogeneous projective endpoints, and set
+\[
+\mathcal C_2^{\mathrm{fix}}
+ =\mathcal C_2\cap\{D=m,\ \alpha=C\}.
+\tag{SF1}
+\]
+The matrices $Q_+\in\mathbb S^4$, $Q_-\in\mathbb S^5$ in SF9--SF10
+give the following exact representation:
+\[
+\boxed{\quad
+c\in\mathcal C_2^{\mathrm{fix}}
+\ \Longleftrightarrow\ 
+\exists x\in\mathbb R^9:\
+\operatorname{diag}\bigl(Q_+,Q_-,d,n,m,C,A,
+ D-m,m-D,\alpha-C,C-\alpha\bigr)\succeq0.
+\quad}
+\tag{SF2}
+\]
+Thus the lift in the original seven coordinates has total matrix order
+$18$ and nine auxiliary variables; the largest block has order $5$.
+Using the five independent coordinates $(d,n,m,C,A)$ instead gives
+total order $14$.  These are explicit sufficient sizes, with no claim
+of minimality.
+
+\paragraph{Why one angular curve is sufficient on this entire sector.}
+For $U=u^2,V=v^2$, direct expansion gives
+\[
+\det M_c=D_u^2D_v^2UV L_c(U,V),\qquad
+L_c=c_{11}+c_{21}U+c_{12}V+c_{20}U/V+c_{02}V/U+c_{10}/V+c_{01}/U.
+\tag{SF3}
+\]
+On the sector $D=m,\alpha=C$, the coefficients satisfy
+\[
+\begin{aligned}
+c_{21}=c_{10}=a_0
+ &=\frac{AC(2m+d+2n)(2C+d+2m)}4,\\
+c_{12}=c_{01}=b_0
+ &=\frac{Cm(d+2n)(2A+2C+d+2m)}4.
+\end{aligned}
+\tag{SF4}
+\]
+In particular $a_0,b_0\geq0$, including on their zero faces.  Write
+$U=rt$, $V=r/t$ with $r,t>0$.  All central and ratio terms in SF3
+are independent of $r$, so the exact difference is
+\[
+L_c(rt,r/t)-L_c(t,1/t)
+ =(r+r^{-1}-2)(a_0t+b_0/t)\geq0.
+\tag{SF5}
+\]
+For $d>0$ and $uv\ne0$, the upper $WXY$ block of $M_c$ is positive
+definite: the restriction of its signed core at $Z=0$ is
+$\tfrac d2[(uW+uvX-Y)^2+D_uv^2Y^2+D_vX^2]$, whose three rows
+are independent.  Its Schur complement therefore makes
+$M_c(u,v)\succeq0$ equivalent to $L_c(U,V)\geq0$.
+It follows from SF5 that testing $v=1/u$, $u>0$, for every state is
+necessary and sufficient.  No state is restricted in taking this curve.
+The exact sign gauges
+\[
+(u,v;W,X,Y,Z)\longmapsto
+(\epsilon u,\eta v;W,\eta X,\epsilon Y,\epsilon\eta Z),
+\qquad \epsilon,\eta\in\{-1,1\},
+\]
+preserve the complete parent.  They give both signs of the angles;
+homogenization by the positive squares of the angle denominators and
+continuity give all axes and projective endpoints.  If $d=0$, all six
+remaining event packets are squares, so the same equivalence holds
+directly.  Real symmetric positivity also gives complex-state
+positivity by separating the real and imaginary parts of the state.
+
+\paragraph{The exact univariate state polynomial.}
+The matrix $H(u)=u^2M_c(u,1/u)$ is polynomial of degree four.
+Set $W=S+T$ and $Z=S-T$, an invertible constant state transformation.
+On SF1, the whole parent becomes
+\[
+u^2P_c(u,1/u;S+T,X,Y,S-T)
+ =(S,X,Y)R(u)(S,X,Y)^T+q_T(u)T^2,
+\tag{SF6}
+\]
+where
+\[
+q_T(u)=(1+u^2)\bigl[(2C+d+2m)u^2+2m\bigr]\geq0
+\]
+and the six independent entries of the symmetric matrix $R$ are
+\begin{align*}
+R_{SS}&=(2C+d+2m)u^4+(2C-d-4m)u^2+2m,\\
+R_{SX}&=(d+2m)u^3-2mu,\\
+R_{SY}&=-(2C+d+2m)u^3+(2m-2C)u,\\
+R_{XX}&=nu^4+(2n+2m+d)u^2+n+d/2,\\
+R_{XY}&=-(d/2+2m)u^2,\\
+R_{YY}&=Au^4+(2A+2C+2m+d)u^2+A+2C+d/2.
+\end{align*}
+All state cross terms involving $T$ cancel identically, not only at a
+stationary contact.  With $J_3=\operatorname{diag}(1,-1,-1)$,
+\[
+R(-u)=J_3R(u)J_3.
+\tag{SF7}
+\]
+Consequently SF5--SF7 prove that membership in SF1 is equivalent to
+$R(u)\succeq0$ for every real $u$.  At $u=0$ this follows by
+continuity; no positive-definiteness assumption is imposed.
+
+\paragraph{Finite degree and parity.}
+The matrix Fej\'er--Riesz theorem on the real line states that a
+Hermitian polynomial matrix of degree at most $2N$ which is positive
+semidefinite on the real line is $G(u)^*G(u)$ with $\deg G\leq N$.
+We use the degree-bounded version stated as Theorem 1.2 in
+A. Zalar, \emph{Matrix Fej\'er--Riesz theorem with gaps},
+arXiv:1503.06034v1, p.~1,
+\url{https://arxiv.org/abs/1503.06034}.
+Applied to the real symmetric $R$, splitting the real and imaginary
+parts of $G$ gives real state-linear SOS rows of degree at most two
+in $u$.  This also covers singular matrices.  A real-factor formulation
+is given by C. Hanselka and R. Sinn, \emph{Positive Semidefinite
+Univariate Matrix Polynomials}, arXiv:1707.08261,
+\url{https://arxiv.org/abs/1707.08261}.
+
+Average the resulting Gram identity under
+$(u,S,X,Y)\mapsto(-u,S,-X,-Y)$, which preserves the target by SF7.
+The nine degree-at-most-two state-linear monomials split into
+\[
+f_+=(S,uX,uY,u^2S)^T,\qquad
+f_-=(X,Y,uS,u^2X,u^2Y)^T.
+\tag{SF8}
+\]
+The average removes the off-diagonal block between the two parity
+classes and preserves positive semidefiniteness.  Thus
+$R(u)\succeq0$ for all real $u$ is equivalent to a Gram identity
+\[
+(S,X,Y)R(u)(S,X,Y)^T=f_+^TQ_+f_++f_-^TQ_-f_-,
+\qquad Q_+\succeq0,\ Q_-\succeq0.
+\]
+Conversely such an identity is
+plainly nonnegative for every state and real $u$.
+
+\paragraph{Evaluated affine arrays.}
+For arbitrary real $x_1,\ldots,x_9$, put
+\[
+Q_+=\begin{pmatrix}
+2m&x_1&x_2&x_3\\
+x_1&x_4&x_5&x_6\\
+x_2&x_5&x_7&x_8\\
+x_3&x_6&x_8&2C+d+2m
+\end{pmatrix}.
+\tag{SF9}
+\]
+Define the following eight explicitly affine entries:
+\begin{align*}
+\ell_1&=-2m-x_1,&\ell_2&=2m-2C-x_2,\\
+\ell_3&=n+m+d/2-x_4/2,&\ell_4&=-d/2-2m-x_5-x_9,\\
+\ell_5&=A+C+m+d/2-x_7/2,&\ell_6&=2C-d-4m-2x_3,\\
+\ell_7&=d+2m-x_6,&\ell_8&=-2C-d-2m-x_8.
+\end{align*}
+Then
+\[
+Q_-=\begin{pmatrix}
+n+d/2&0&\ell_1&\ell_3&x_9\\
+0&A+2C+d/2&\ell_2&\ell_4&\ell_5\\
+\ell_1&\ell_2&\ell_6&\ell_7&\ell_8\\
+\ell_3&\ell_4&\ell_7&n&0\\
+x_9&\ell_5&\ell_8&0&A
+\end{pmatrix}.
+\tag{SF10}
+\]
+For every choice of all five source variables and all nine auxiliaries,
+these arrays satisfy the complete coefficient identity
+\[
+f_+^TQ_+f_++f_-^TQ_-f_-=(S,X,Y)R(u)(S,X,Y)^T.
+\tag{SF11}
+\]
+They parametrize \emph{every} Gram identity in SF8.  Indeed the
+$10+15=25$ symmetric Gram coordinates map onto sixteen independent
+coefficients.  The coefficient map has rank sixteen; equivalently,
+matching the powers $1,u,u^2,u^3,u^4$ in the six state pairs solves
+every remaining entry in terms of precisely the nine entries chosen in
+SF9--SF10.  The homogeneous auxiliary directions are independent,
+so none of the allowed identities has been discarded.
+
+\paragraph{Both inclusions and all boundary cases (SF12).}
+If the pencil in SF2 is positive semidefinite, its scalar blocks force
+the five independent coefficients to be nonnegative and force
+$D=m$, $\alpha=C$.  SF11 gives $R(u)\succeq0$ for all real $u$;
+SF6 gives positivity on $v=1/u$.  For $d>0$, SF3--SF5 and the
+positive upper state block give positivity for all positive angle pairs,
+and the gauges and homogeneous limits give every remaining test.
+For $d=0$ the six event squares give the conclusion directly.
+This proves the projected pencil is contained in $\mathcal C_2^{\rm fix}$.
+
+Conversely a physical point in SF1 is positive on $v=1/u$ and every
+state.  SF6 gives $R(u)\succeq0$ for $u>0$, and SF7 and continuity
+extend this to all real $u$.  The degree-two matrix factorization and
+parity average give positive semidefinite Gram blocks in SF8.
+Coefficient-map completeness supplies nine real auxiliaries in exactly
+SF9--SF10.  The orthant and equality scalar blocks also hold, proving
+the other inclusion.  This argument includes zero matrices, vanishing
+outer determinant masses, multiple zero event coefficients, and
+singular Grams without taking inverses or strict limits.
+
+\paragraph{Scope of the advance.}
+The representation removes both angular quantifiers on the entire
+reciprocity-fixed sector and evaluates all affine matrix coefficients.
+It does not assert that SF8 is a two-angle SOS, nor that its Grams lie
+in either the old or enlarged two-angle candidate.  For a general
+source the equalities in SF4 fail, and the nonnegative projection
+identity SF5 is unavailable.  The universal five-parameter regular
+contact PSD-selection problem in GR17 remains to be proved.
+
+The companion solver-free checker verifies the complete parent,
+determinant identities, state congruence, parity, coefficient-map rank,
+and every entry of the exported original-coordinate order-$18$ pencil.
+The degree-bounded matrix factorization is the standard theorem quoted
+above; it is not inferred from a solver result or from these finite checks.

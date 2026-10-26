@@ -1,0 +1,47 @@
+Full-state contact congruence (root, 24 October 2026)
+==================================================
+Native C2, d=1, lambda=beta=0. B_s=H+L and the native source formulas
+are exactly those in the published Fixed_C2_Completions.tex.
+
+Let x=u²,w=v² and introduce independent coordinates (N1,N2,N3,T0) by
+ W=N1+N2+B_s*T0,
+ X=u²*v*(N3-r*T0),
+ Y=u*(N2+H*T0),
+ Z=u*v*T0.
+This is a polynomial state map with determinant +/-u^4*v².
+It is invertible for u*v!=0, with no source denominators. Its exact
+state-normal amplitudes are
+ v(uW-Y)-LZ = u*v*N1,
+ vY-HZ = u*v*N2,
+ X+r*u*Z = u²*v*N3.
+
+The full unnormalized F/4 after this substitution is
+ n(1+x)(1+w)x²w(N3-rT0)²
+ +m w[N1+(1+x)N2-xN3+(B_s+x(H+r-1))T0]²
+ +C(1+w)x(N1+L T0)²
+ +A(1+x)(1+w)x(N2+H T0)²
+ +(D+1/2)x[N1+xwN3+(L-w(1+rx))T0]²
+ +(alpha+1/2)(1+x)xw[N2+(H-1)T0]²
+ +(1/2)(1+w)x²w[N3+(1-r)T0]²
+ -(1/2)(1+x)(1+w)xw T0².
+
+This is an explicit symmetric4 matrix polynomial in x,w, source parameters,
+and their source-only contact parameters. At N1=N2=N3=0,T0=1 it is exactly
+the scalar kernel polynomial already derived. All three normal directions
+are retained, in contrast with checking the scalar kernel alone.
+No PSD or fixed-function source-affine extraction is asserted here.
+
+Potential use: exact contact equations require the three normal/T0 cross
+entries to vanish at x=z,w=y. Thus they belong to (x-z,w-y), with explicitly
+divided differences. A contact-adapted completion must control their whole
+coupling, not only the scalar kernel. The hard normal matrix has different
+x,w orders, so an ordinary unscaled lower bound does not suffice.
+
+If a future certificate is obtained after multiplication by a fixed
+nonnegative testing monomial, prove the corresponding weighted identity
+explicitly. Original validity then follows first on the dense u*v!=0
+region by invertibility and only afterwards at axes by continuity.
+The state change alone is not a source-affine lift: H,L,r must be used as
+source-only Gram witnesses, and coefficient matching must remain linear
+in the original source coordinates.
+

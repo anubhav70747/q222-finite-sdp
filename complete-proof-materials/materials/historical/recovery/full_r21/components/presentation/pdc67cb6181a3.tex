@@ -1,0 +1,112 @@
+\chapter{C14.4: a contact-centered full-parent identity through the $M$ opening}
+\label{component:pdc67cb6181a3}
+\noindent\textbf{Component }\path{pdc67cb6181a3}\par
+{\small\noindent Source: \path{BASE/proofs/c144/centered_m_parent.tex}\par}
+{\small\noindent SHA256: \path{dc67cb6181a37c47e9bf53b46d5c1ee432bc732f5b1906c69b7ba5b2e6ce322f}\par}
+{\small\noindent Inventory use: CM1--CM7 | CM1-CM7 actual contact-zero m normal and exact opening-safe coefficient | C14\_\allowbreak{}ENTIRE\_\allowbreak{}ORIGINAL\_\allowbreak{}PARENT\_\allowbreak{}GRAPH; precise subordinate uses retained below\par}
+\medskip
+\section{C14.4: a contact-centered full-parent identity through the $M$ opening}
+\label{pdc67cb6181a3:sec:recovery-c144-centered-m}
+
+This section is an exact reduction, not an all-tests admission. It supplies
+an opening-safe state normal for the remaining C14.4 source. Keep all
+original source conditions and write $R_s=1+xr$, $M_s=R_s-\theta/\zeta>0$.
+Define only in the coefficient field
+\[
+ p=\frac{\theta}{\zeta R_s}=1-\frac{M_s}{R_s}\in(0,1),\qquad
+ \mu=m(1-p)=\frac{(1+x)(1+\sigma r)eS}{2\zeta P R_s},\qquad
+ m_c=\frac m{1+m}.
+ \tag{CM1}
+\]
+Here $0<m_c<1$, $m-m_c\ge0$, and $\mu$ is bounded uniformly through
+$M_s\to0$. In particular the potentially unbounded $m$ occurs below
+only in an unchanged positive excess square.
+
+On the finite Bob chart let $D_u=1+u^2$, $D_v=1+v^2$ and set
+\[
+ V=v(W+uY),\quad N=X+uZ-pV,\quad
+ J_0=uW-Y+puvV-(1+u^2)vZ.\tag{CM2}
+\]
+The original event amplitudes are exactly
+\[
+ vW-X+uvY-uZ=(1-p)V-N,\qquad
+ X+uZ=N+pV,\qquad
+ uW-Y+uvX-vZ=J_0+uvN.\tag{CM3}
+\]
+Consequently the entire original quarter-parent is
+\[
+\begin{split}
+ F/4={}&(m-m_c)N^2+C D_v(uW-Y)^2+A D_uD_vY^2\\
+ &+m_cN^2-2\mu NV+\mu(1-p)V^2
+ +(D+\tfrac12)(J_0+uvN)^2\\
+ &+(\alpha+\tfrac12)D_u(vY-Z)^2
+ +(\beta+\tfrac12)D_v(N+pV)^2-\tfrac12D_uD_vZ^2.
+\end{split}\tag{CM4}
+\]
+This is a polynomial identity after clearing pure-source denominators.
+It follows by substituting CM3 into all six original event packets and
+the complete signed core. No state variable has been set to a contact
+value in CM4.
+
+\paragraph{Why this particular normal preserves the actual contact.}
+For the actual source contact, $u_c=k=\sqrt x$,
+$v_c=\sqrt{L/\sigma}$, $W_c/Z_c=\sqrt{\zeta\sigma}$,
+$X_c=-hkZ_c$ and $Y_c=rkW_c$. Thus
+$v_cW_c=\zeta kZ_c$ and
+\[
+ N_c=\theta kZ_c-pR_s\zeta kZ_c=0.\tag{CM5}
+\]
+Retaining $(m-m_c)N^2$ therefore respects the original kernel. Capping
+the uncentered $m$ event itself would not have this property when $M_s>0$.
+The contact calculation is a source-field check of the choice of normal;
+it is not an identification of independent testing variables with source
+parameters in the tensor claim.
+
+\paragraph{The complete first-normal coefficient is bounded.}
+For bounded $v$ and the residual infinitesimal $u$, put
+$\widehat N=\sqrt{1+\beta}\,N$. Expanding the last three squares
+in CM4 shows that its residual $\widehat N^2$ coefficient is
+\[
+ H_N=\frac{m_c}{1+\beta}
+  +\frac{(D+1/2)u^2v^2}{1+\beta}
+  +\frac{\beta+1/2}{1+\beta}D_v.
+ \tag{CM6}
+\]
+More precisely,
+\[
+ H_N-\tfrac12D_v
+ =\frac{m_c}{1+\beta}
+  +\frac{(D+1/2)u^2v^2}{1+\beta}
+  +\frac{\beta D_v}{2(1+\beta)}
+\]
+is a sum of separated nonnegative products, hence tensor SOS. This
+identity states the diagonal reserve without assigning an order to
+the mixed tensor ring.
+The full first-normal cross term is
+\[
+ 2\widehat N\left[
+ \frac{-\mu+(\beta+1/2)D_vp}{\sqrt{1+\beta}}V
+ +\frac{(D+1/2)uv}{\sqrt{1+\beta}}J_0\right].\tag{CM7}
+\]
+All these coefficients are bounded separated expressions on the stated
+chart. Indeed ES gives $D,\alpha$ infinitesimal, while
+$2\theta P\beta=hB-\sigma H_0$ gives $\beta\theta=O(1)$.
+Hence $\beta p=(\beta\theta)/(\zeta R_s)$ and $\beta p^2$
+are bounded through $\theta\to0$; $1/\zeta$ and $1/R_s$ are
+bounded. CM1 bounds $\mu$ through the independent $M_s$ opening.
+The real residue of $H_N$ is at least the residue of $D_v/2$, even
+when one of the opening parameters is infinitesimal.
+
+The remaining scalar and $Y$ form is printed explicitly by CM4 with
+$N=0$; the original positive $C,A$ rows are retained. A strict normal
+pivot does not prove that this remaining form is tensor SOS, and
+completing it using a mixed inverse of $H_N$ is not allowed. In particular
+CM4 alone does not resolve the matched Bob source/test contact or the
+unit-$e$ sector. A valid completion must allocate the full signed soft
+form together with CM7, or produce an exact impossible-source proof.
+The reciprocal Bob chart is not supplied by a finite-$v$ limit.
+
+The accompanying checker verifies CM3--CM7 against the entire original
+four-state polynomial and verifies the contact relation. This reduction
+retains every coefficient opening and exposes the remaining soft problem
+without a divergent $m$ first-normal coefficient.

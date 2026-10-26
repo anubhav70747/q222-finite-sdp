@@ -1,0 +1,46 @@
+WHY THE RECOVERED ANGLE AND ALL QUADRICS DO NOT DETERMINE THE HULL
+26 October 2026
+
+The exact native formulas give a(d+2n)=2A. After eliminating A and fixing
+a>0, a!=1, all homogeneous quadratic identities are the three minors of
+[[m,D,b],[Q,P,Gamma]], where b=A+n, P=C+d/2, Q=alpha+d/2 and
+Gamma=a^2(b+P+Q)-b. The fixed-a coefficient calculation proves completeness
+of this list; see c2_fixed_a_quadrics_2026_10_26.txt.
+
+These equations lose a source direction. In active order
+(d,n,m,C,A,D,alpha), put
+
+  w=(1,-a/[2(a+1)],0,-1/2,a/[2(a+1)],0,-1/2).
+
+The quantities b,P,Q,m,D and the angle-recovery equation are unchanged by
+c -> c+epsilon*w. Every one of the three quadrics is therefore unchanged.
+This is not an innocuous freedom: the complete Bell slack changes by
+
+ epsilon/2 * [(1-a)/(1+a)*(A0-B0)+A1+B1-A0B0-A1B1].
+
+At a maximally entangled state the marginal expectations vanish. Thus the
+change is -epsilon*(<A0B0>+<A1B1>)/2. A positive perturbation makes the slack
+negative whenever that sum is positive at the old zero.
+
+An exact example uses a=2, r=1/2, z=1/16 in the native source formulas:
+
+ c=(1,43/299,77/1495,891/598,385/299,119/598,9/598).
+
+The contact is u=1/4,v=1/2, psi=(1,-1/8,1/8,1). Its complete Bell operator
+annihilates psi and both scalar angle derivatives vanish. All active
+weights are positive. For epsilon=1/1000, the perturbed source still has
+positive weights, satisfies a(d+2n)=2A, and satisfies all three quadrics.
+Yet its normalized Bell slack at the same contact is exactly
+
+                     -963/1105000 < 0.
+
+Consequently it is outside the closed convex cone of valid native sources.
+The recovered angle and all quadratic identities cannot characterize that
+cone. A further relation or inequality must control the displayed source
+direction. This does not exclude auxiliary PSD variables or any finite
+lift; it identifies a constraint that a proposed lift must preserve.
+
+The matching exact checker verifies the invariant direction, all source
+signs, the original kernel and angle equations, and the negative Bell value.
+This is a private test for the full-hull construction, not a replacement
+for that construction or a claim that the global theorem is impossible.

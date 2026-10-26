@@ -1,0 +1,357 @@
+Q222 ANALYTICAL EXISTENCE-PROOF RECOVERY
+Scoped independent analytical audit: R1 and the directed weak-C2 join
+22 October 2026
+
+VERDICT AND SCOPE
+
+The recovered 798-page fresh rederivation contains a substantive, later,
+source-wide R1 argument. It is not accurate to call that argument missing
+merely because older recovery checkpoints left R1 open. The new file
+r1_all_sources_all_tests.tex explicitly removes the old restriction that
+jT be infinitesimal and supplies the outer-angle argument that the recovered
+FN small-angle proof does not itself claim.
+
+No concrete contradiction or unsupported implication was found in the R1
+allocation, all-state reduction, or outer-angle join inspected here. The
+logical mechanism produces ordinary finite tensor sums of squares; it does
+not require or establish separation rank two. It therefore remains relevant
+to qualitative finite SDP-lift existence even if an older SOC claim fails.
+
+This is a scoped analytical review, not certification of every branch of the
+798-page global manuscript. The explicit source-weight polynomial identities,
+scalar circuit identity, and seven-by-seven radial identity remain individually
+checkable finite algebraic lemmas. Their complete large rational coefficient
+expansions were not independently recomputed in this audit. No checker was
+executed and no PASS status was used as a mathematical premise.
+
+SOURCE ROOT AND EXACT BODY REFERENCES
+
+All paths below are relative to:
+q222_existence_recovery_2026-10-22/sources/
+Q222_R21_Rederived_Proof_Package_2026-10-22/
+Q222_R21_Rederived_Release_2026-10-22/
+
+[R1N] rederivation_2026-10-22/weak_c2/r1_all_sources_all_tests.tex
+  Lines 5-48: actual source scope and coordinate inversion.
+  Lines 50-115: uniform source bounds and harmonic coefficient.
+  Lines 117-201: enlargement of the FN domain to arbitrary jT.
+  Lines 203-268: full two-row and four-row outer current identities.
+  Lines 270-399: complete six-row representation and real cap choices.
+  Lines 401-424: exhaustive testing/state/projective restoration.
+
+[FN] reconstruction/restored_context/weak_c2/fn_reconstructed.tex
+  Lines 24-81: field typing, old source domain, and local conclusion.
+  Lines 83-228: complete parent, both normal variables, and correct reserve.
+  Lines 230-369: explicit scalar/current/radial budgets.
+  Lines 371-537: both complete normal arrays, hard cross term, restoration.
+
+[RSR] reconstruction/restored_context/c144/rederived/
+      r1_qo_actual_source_and_scalar.tex
+  RSR2-RSR6: compact source inversion and six exact native weights.
+  RSR7-RSR9: relative source bounds and n>=0 physicality estimate.
+  RSR10-RSR20: full scalar graph, circuit, and source-only masses.
+  RSR21-RSR29: scalar allocation using the effective correlated reserve.
+
+[SJ] reconstruction/restored_context/root_rederived/
+     full_state_sign_join_REDERIVED.tex
+  SJ1-SJ10: full-state sign reduction, homogeneity, literal endpoints.
+
+[BG] reconstruction/pdf_supplement/components/strict_bounded_gram.tex
+  Lines 9-35: positive-residue and strict bounded-Gram lemmas.
+
+[HJ] rederivation_2026-10-22/weak_c2/
+     weak_c2_complete_source_and_testing_join_rederived.tex
+  Lines 5-32: precise directed weak-C2 hypothesis and conclusion.
+  HJ2-HJ15: whole parent, reflection, actual source formulas, exclusions.
+  HJ16 and lines 281-311: finite source partition and four regular exits.
+  Lines 313-430: specified local imports and remaining global boundary.
+
+The later computer-free map also contains a useful simplification:
+Q222_Computer_Free_Proof_Map_2026-10-22/
+Q222_Computer_Free_Proof_Map_2026-10-22/latex/r1_simplification.tex,
+with analysis/r1_core_notes.txt. That simplification explicitly retains the
+same finite identities and does not purport to re-audit the global theorem.
+
+1. THE ACTUAL R1 STATEMENT
+
+The source is the original stationary common-II source with d=1,
+lambda=beta=0, all original strict gaps, n>=0, and
+
+    t_s, B_s, a_s B_s, t_s B_s > 0 infinitesimal.
+
+Source coefficients are in K_c; all testing angles and states are in K_t.
+The tensor factors are separately labelled, with no disjointness assumption.
+Using c_s=1+a_s B_s r and R_s=1+h a_s B_s, the compact variables are
+
+    j=a_s c_s/R_s, B=B_s R_s/c_s, T=t_s c_s/R_s,
+    p=a_s(1-r)/R_s, H=(1-h)/(t_s c_s),
+    x=jB, y=TB, q_z=jT.
+
+The strict gaps give 0<p<min(1,j), 0<H<1. The four quantities B,T,x,y
+are infinitesimal. The newer theorem allows q_z to be arbitrary positive.
+It supplies a literal inverse source map; it does not replace the source
+by a limiting stationary model.
+
+The conclusion is the whole original quarter-parent at all independent
+projective testing angles and all states. The older FN file has a smaller
+header domain, but R1N specifically checks the extension of every bound it
+uses. Treating that older header as an unresolved contradiction would miss
+the purpose and content of the later theorem.
+
+2. WHY THE SOURCE-DOMAIN ENLARGEMENT IS SUBSTANTIVE
+
+R1N4-R1N9 use the exact RSR polynomial dictionary. After division by j+1
+or K=j+1-p, all source corrections are controlled by B, T, Bj, p/j and
+bounded p,H. A positive lower bound on j-p, 1-p, H, or 1-H is not used.
+In particular no term requires jT to be bounded.
+
+The n numerator has the exact form
+
+    N = p(1+epsilon_1)-Bj(j+1)(1+epsilon_2),
+
+with infinitesimal source errors. Thus n>=0 bounds
+eta=Bj(j+1)/p. If eta is infinitesimal then
+
+    n ~ p/[2(j-p)(j+1)] > 0.
+
+This is the reason that the most delicate source case has a nonzero usable
+current. Literal n=0 remains in the other cases; it is never divided out.
+
+Other crucial uniform quantities are
+
+    h0=mu+1/2 ~ a positive bounded unit, mu=m(1-p)=O(p),
+    A/T ~ TCH ~ TD(1-H) ~ k/2,  1/2<k<1,
+    f_c ~ Tx^2, q_c ~ Tx, r_c ~ TjB^2(1-p).
+
+All comparisons in this paragraph occur within the ordered source field.
+They are not comparisons of a source infinitesimal with a testing one.
+
+3. THE FULL PARENT IS RETAINED
+
+FN4 is the actual polynomial
+
+ P = m(vW-X+uvY-uZ)^2+n DuDv X^2+C Dv(uW-Y)^2+A DuDv Y^2
+     +(D+1/2)(uW+uvX-Y-vZ)^2+(alpha+1/2)Du(vY-Z)^2
+     +(1/2)Dv(X+uZ)^2-(1/2)DuDv Z^2,
+
+where Du=1+u^2 and Dv=1+v^2.
+
+FN5-FN9 introduce two unrestricted state-normal rows and expand the entire
+parent, not merely its restriction to their common zero set. In particular
+the complete normal block includes the cross term
+
+    2(alpha+1/2) u v N0 M0.
+
+The scalar graph alone would not prove the claim. The later parts of FN
+explicitly allocate both linear normal arrays and this cross term.
+
+The correct completion is
+
+ h0 N0^2+n(N0+j b)^2
+ = (n+h0)(N0+c_b b)^2+M_e b^2,
+
+ c_b=nj/(n+h0), M_e=n h0 j^2/(n+h0), b=v-uz/j.
+
+This identity is elementary expansion in the tensor ring with a pure-source
+positive denominator. Its reserve is M_e, not the unreduced mass nj^2.
+The additional correlated packet n v^2(N0+p b)^2 stays whole. At n=0,
+c_b=M_e=0 and the effective current row is omitted. For n>0,
+
+    c_b^2/M_e=n/[h0(n+h0)] <= 1/h0 <= 2.
+
+Consequently the normal shift cannot introduce an uncontrolled coefficient
+on the retained current row. This is the mathematically relevant repair
+to any earlier scalar-only or double-spending argument.
+
+4. THE ARBITRARY STATE RATIO REALLY REMAINS A ROW
+
+The normalized quantities U=u/sqrt(x), V=v/sqrt(y), Z*=z/sqrt(jT)
+need not be bounded. The contact circuit is
+
+ Psi=(U-V)^2+Z*^2(1-UV)^2+2UV(1-Z*)^2.
+
+This identity is valid by direct expansion. The square root of UV factors
+as the testing sqrt(uv) times the source (xy)^(-1/4). Every root is an
+element of K_c tensor K_t. The proof does not take a mixed inverse.
+
+The budget coefficients depend on source variables and infinitesimal u,v.
+The arbitrary positive z is kept inside the rows Q*,B*,R*,Psi and the full
+normal rows. The source cases handle potentially large 1/(1-p), 1/M_e and
+1/(j^2B) only where those inverses are actually bounded or are cancelled by
+the chosen exact circuit identity. In the j-infinitesimal case, 1-p is a
+unit, so the direct r_c budget is used; the potentially large T/j in an
+alternative estimate is not needed there.
+
+The full opposite second-normal row has squared multiplier
+
+    a_R=T(jT)v^2(alpha-BTCH u^2)^2.
+
+The FN24 and R1N11 costs cancel q_z exactly. They keep the whole square,
+including the higher testing terms and their cross term. The case where
+an effective-current denominator is used has p~1 and eta infinitesimal,
+so n>0 and (1+1/n)/j^2 is bounded. The other source cases use different
+explicit budgets. This is a legitimate case distinction within K_c.
+
+The remaining hard mixed term after normalization has infinitesimal bounded
+coefficients, because the shift is controlled by c_b^2/M_e. A finite number
+of purchased helper rows consumes only infinitesimal coefficients of the
+strict scalar reserves. A fixed sufficiently large real radial pivot absorbs
+the finitely many bounded non-infinitesimal radial couplings.
+
+5. THE OUTER IDENTITIES CAN BE CHECKED WITHOUT A SOLVER
+
+Set R=uW-Y, Ct=v(uX-Z), Bt=X+uZ, g=CD/(C+D), h=D/(C+D).
+Harmonic completion gives exactly
+
+    C Dv R^2+D(R+Ct)^2
+    =(C+D)(R+h Ct)^2+g Ct^2+C v^2 R^2.
+
+For v noninfinitesimal, the useful identity is
+
+    u Bt-Ct/v=Du Z.
+
+It implies
+
+ 2Dv Bt^2-2DuDv Z^2
+ = (2Dv/Du)Bt^2+(4uDv/(Du v))Ct Bt
+   -(2Dv/(Du v^2))Ct^2.
+
+After setting K0=2sqrt(g)Ct and B0=sqrt(2Dv/Du)Bt, this is exactly the
+two-row Q in R1N13. All normalized testing factors are bounded; 1/g is
+infinitesimal by the source harmonic estimate Tg~k/2. Thus its residue is I.
+No condition on the other angle or state is required.
+
+For v infinitesimal, expand the four-row expression R1N14. Using
+K1=2sqrt(g)Ct+Y/sqrt(g), B1=Bt-uvY, V0=vY, and
+Y1=sqrt(Du/g)Y, its remaining quadratic expression simplifies exactly to
+
+ 4g Ct^2+4A DuDv Y^2+2Dv Bt^2
+ +2Du v^2Y^2-4Du vYZ-2Du v^2Z^2.
+
+Expanding the original signed core after harmonic completion gives the same
+expression. Its residue is diag(1,2,2,k0^2-c_u0^2). This is positive for
+unbounded u, and for every noninfinitesimal u when k0=1.
+
+The remaining outer case has bounded positive-unit u and k0<1. Then p and
+j are positive bounded units. The exact six-row identity R1N18 preserves
+every state coordinate. The zero shift used to adjust its residue Gram is
+
+    2b(PY0-V(uX-Z))=0,
+
+because P=Ct/sqrt(T), Y0=sqrt(T)Y, V=vY. It is a polynomial row relation,
+not a mixed change of field variables.
+
+Its Q3 block in (X,Z,V) is
+
+ m_c[(Du/u)V-X-uZ]^2+n_c Du X^2
+ +(Du/2)V^2-Du VZ+(1/2)(X+uZ)^2-2bV(uX-Z).
+
+For interior openings, m0=jp/[2(1-p)(j+1)],
+n0=p/[2(j-p)(j+1)], b=k/2. For example the first two principal minors
+follow directly from the coefficient matrix:
+
+   a11=m0+n0 Du+1/2,
+   det(Q3[1:2,1:2])=n0 Du u^2(m0+1/2)
+     =p Du u^2(j+1-p)/[4(j-p)(1-p)(j+1)^2]>0.
+
+The printed third minor is positive. The two-by-two (P,Y0) block has
+determinant k^2u^2/4>0. Slightly smaller fixed real caps preserve positivity.
+
+At infinite openings, the proof checks positivity on the kernel of the
+large event packet(s), then chooses sufficiently large real caps. This uses
+the elementary fact: if E>=0 and F is positive definite on ker(E), then
+F+cE is positive definite for sufficiently large real c. A block Schur
+complement proves that fact. The cap excesses remain whole nonnegative
+source-event squares. No unbounded source coefficient is treated as a
+small perturbation.
+
+6. SIGNS, AXES, PROJECTIVE ENDPOINTS, AND COMPLEX STATES
+
+SJ3 preserves each original event packet and the complete signed core,
+so u,v may be made nonnegative. The pure-testing state rotation is invertible
+with denominator Du>0. SJ5 is a square completion of a positive real-field
+two-by-two hard block. Its scalar remainder is a positive testing multiple of
+
+    u^2v^2(w^2+z^2)-2uv(1+u^2+v^2)wz.
+
+For wz<=0 this is nonnegative in K_t. Otherwise homogeneity normalizes
+w=1 and leaves z>0 arbitrary; no boundedness conclusion is made.
+Thus the small-angle theorem and the outer identities cover all states.
+
+SJ10 gives exact homogeneous square formulas on all four zero/infinite
+measurement axes, including their intersections. No limiting division is
+used. For complex states the parent matrix is real, so its Hermitian
+quadratic evaluation splits into the two real quadratic evaluations.
+
+7. WHY STRICT RESIDUE IMPLIES AN EXACT TENSOR SOS
+
+Let B_c,B_t be the bounded rings and B=B_c tensor_R B_t. Every a in B with
+positive real residue is a finite tensor SOS. Write a=epsilon+sum x_i tensor
+y_i, where each summand has an infinitesimal factor. For an infinitesimal x
+and bounded y, choose real M>|y| and a positive real reserve epsilon_i. Then
+
+ epsilon_i+x tensor y
+ =1/2[(epsilon_i/M+x) tensor (M+y)
+      +(epsilon_i/M-x) tensor (M-y)].
+
+The four factors are positive in their own fields, so separate field square
+roots give tensor squares. This proves the scalar lemma directly.
+
+A real congruence normalizes a strict residue Gram to I. The decomposition
+in BG lines 29-35 expresses it as a sum of fixed real rank-one matrices with
+scalar coefficients having positive residue. Applying the scalar lemma to
+those coefficients gives an exact SOS on arbitrary tensor rows, including
+unbounded rows. This is why the argument is not merely valued-field
+positivity, not a formal power-series square root, and not an inverse of a
+mixed tensor.
+
+The resulting square roots can have finite separation rank larger than two.
+That is harmless for ordinary finite-SDP existence and gives no SOC claim.
+
+8. WHAT THE DIRECTED WEAK-C2 JOIN DOES AND DOES NOT ADD
+
+HJ specifies an original physical C2 stationary source with two infinitesimal
+contact angles, strong C, weak alpha, and infinitesimal inverse total source
+scale. Its reflection is packetwise exact. The actual source estimates give
+B,z,y infinitesimal and the finite alternatives in HJ16.
+
+The ten rows are exhausted by splitting t first, then h, l, j, r, g and the
+remaining bounded/unbounded a alternatives. Two apparent missing cases are
+excluded by actual source equations: all six weights bounded contradict the
+total-scale hypothesis; simultaneous weak C contradicts the directed strong-C
+hypothesis. Those exclusions are genuine source restrictions, not admissions
+based on a status label.
+
+The join invokes specified full-parent bodies for R2-R10 and WA/WE/SL/WC.
+Their scopes are described explicitly, but this audit has not independently
+rederived every one of those bodies. HJ is not by itself a proof of entry of
+all valid global affine sources into this chart. Its last paragraph correctly
+leaves source entry, other omission patterns, and other scale regimes to
+separate theorems. Those are the places where a global audit must continue.
+
+9. USEFUL ANALYTICAL SIMPLIFICATION
+
+The later computer-free proof-map file packages the three R1 reserve cases
+into one pure-source denominator:
+
+    rho=Bj^2, delta=1-p, S=delta+rho+M_e,
+    p^2 <= 10M_e+4rho, 1/10 <= S < 9.
+
+The proof uses the exact n numerator and the same physicality estimates.
+Weighting the three explicit opposite-current and radial budgets by
+delta/S, rho/S, M_e/S removes the dangerous individual inverse openings.
+S is a pure-source positive unit, so inversion is legal. n=0 is included
+literally. This is a useful shorter exposition of the full-parent budget
+mechanism, while the finite parent/circuit/radial/normal identities remain
+explicit lemmas to check.
+
+RECOMMENDED CONCLUSION FOR THE RECOVERY REPORT
+
+The late R1 proof has been recovered as an actual argument and should be
+distinguished from older open recovery records. Its small-angle mechanism,
+source-domain extension, full-state reduction and outer-angle coverage are
+mathematically coherent at ordinary tensor-SOS scope. Exact extraction is
+not a premise of this result. The global finite-lift conclusion must still
+be assessed against the full source-entry and other-leaf dependency chain;
+neither this scoped positive finding nor a historical lock label settles
+that larger review.

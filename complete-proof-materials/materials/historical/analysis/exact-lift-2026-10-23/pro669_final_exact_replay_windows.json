@@ -1,0 +1,96 @@
+{
+  "status": "passed",
+  "verifier": "Python standard-library Fraction arithmetic; no generator imports",
+  "scope": "Exact equations and parametrizations for the evaluated local source cones. Not a proof of full-Q222 reverse inclusion.",
+  "components": {
+    "POS": {
+      "status": "passed",
+      "blocks": 52,
+      "matrix_order": 268,
+      "rebuilt_product_columns": 1368,
+      "exact_coefficient_equations": 281,
+      "full_parent_target_rebuilt": true,
+      "rank": 281,
+      "free_coordinates_verified": 1087
+    },
+    "NEG": {
+      "status": "passed",
+      "blocks": 49,
+      "matrix_order": 240,
+      "rebuilt_product_columns": 1155,
+      "exact_coefficient_equations": 221,
+      "full_parent_target_rebuilt": true,
+      "rank": 221,
+      "free_coordinates_verified": 934
+    },
+    "SIX_STRUCTURED": {
+      "status": "passed",
+      "blocks": 19,
+      "matrix_order": 161,
+      "rebuilt_product_columns": 846,
+      "exact_coefficient_equations": 180,
+      "full_parent_target_rebuilt": true,
+      "rank": 180,
+      "free_coordinates_verified": 666
+    }
+  },
+  "combined": {
+    "source_coordinates": 7,
+    "auxiliaries": 2694,
+    "blocks": 120,
+    "matrix_order": 669,
+    "largest_block": 12,
+    "two_sign_intersection_exact": true,
+    "source_sum_split_exact": true,
+    "direct_final_parent_equations_verified": 682,
+    "all_component_free_directions_verified": 2687,
+    "nonzero_upper_affine_records": 7716
+  },
+  "inputs": [
+    {
+      "path": "uniform_tf1\\C1_POS_FULL_FIXED_FEATURES.json",
+      "sha256": "52541397f314ed851c651872bdabe1bfc4ea37e925c0f77c149d5cd3d827eb31"
+    },
+    {
+      "path": "uniform_tf1\\C1_POS_FULL_COEFFICIENT_MAP.coo.json",
+      "sha256": "a919620bcd61ca1ca25d63c45dbb5be134bc202194bac8d2890bac4479815f6e"
+    },
+    {
+      "path": "uniform_tf1\\C1_POS_FULL_SOURCE_PENCIL.coo.json",
+      "sha256": "9a13bde515aa730676bbb37982ca55b79208403b1c0d3354cc9142de3002e565"
+    },
+    {
+      "path": "uniform_tf1\\C1_NEG_FULL_FIXED_FEATURES.json",
+      "sha256": "ef5c456bb4baf68dc7f9ccd39eb4504b024856482f7b41019e94c68af3e7aabf"
+    },
+    {
+      "path": "uniform_tf1\\C1_NEG_FULL_COEFFICIENT_MAP.coo.json",
+      "sha256": "e2dba6b7ebb3343b63b72af54a181291333fa6074f58cec3f3d4bfc33c744934"
+    },
+    {
+      "path": "uniform_tf1\\C1_NEG_FULL_SOURCE_PENCIL.coo.json",
+      "sha256": "c2c02853239562523f159d1b42bb37037acb93a47335edaef4af2c797f00cb60"
+    },
+    {
+      "path": "candidate_boundary\\six_root_structured_source_pencil.coo.json",
+      "sha256": "a3d456e747aa75d44620b99291ed0f7a9c1b3b359086cfd4a425dcdd5caffab4"
+    },
+    {
+      "path": "candidate_boundary\\six_root_structured_product_map.json",
+      "sha256": "89b477733c5e25a67e4ffb1659e73e276000d3fabf9b3399ee296da1ad95c8e6"
+    },
+    {
+      "path": "candidate_boundary\\six_root_general_formulas.json",
+      "sha256": "a203a1d27566d69e5a6957579072c87786d20d913cc344abc68d85d6eea3d947"
+    },
+    {
+      "path": "uniform_tf1\\C1_BOTH_SIGNS_LOCAL_SOURCE_PENCIL.coo.json",
+      "sha256": "030ccb131bc5b3b1676de8935c4879170fe940b0e014d311e5d6de49954a0e67"
+    },
+    {
+      "path": "root\\C1_UNIFORM_LOCAL_ORDER669.coo.json",
+      "sha256": "5524cb2ef981615d07d6e063e769c7c939a345830f18b8be731bbe28bc10fdcc"
+    }
+  ],
+  "mutation_policy": "Pencil, feature and map files were read only; this verifier writes only FINAL_EXACT_REPLAY.json."
+}

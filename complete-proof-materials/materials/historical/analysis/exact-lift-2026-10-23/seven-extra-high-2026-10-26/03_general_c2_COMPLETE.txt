@@ -1,0 +1,263 @@
+ChatGPT said:
+
+Q222 3/7: General native C2 contacts
+Status: The general C2 family has a useful exact Bell-basis reduction that retains independent Schmidt data. It does not yet yield a fixed, globally sound SDP cone covering every C2 generator. The missing step is uniform affine-Gram admission, not quantum validity.
+1. Recovered native parametrization
+The requested source is at latex/certificates/c2_short.tex, under Stationary coefficients and contact. The corresponding sign and uniqueness theorem is in latex/chapters/05_entry.tex, equations EN14–EN16.
+Normalize $d=1$, with $\lambda=\beta=0$, and take independent source parameters
+$a,b,c,t>0,\qquad 0<r<1,\qquad z=c^2.$
+Define
+$\begin{gathered}
+q=1+zr,\quad h=b-a^2t,\\
+g=(1+z)b-(1-r+a^2zt),\\
+j=1+zr-t,\\
+\Delta=(1+z)zb^2+2z(1+z)br\\
+\quad +(1+z)(1+a^2z)b+z^2(1-a^2)r^2\\
+\quad+2z(1+a^2z)r+1+a^2z,\\
+N=(1+z)(b+r)(b+a^2(1-t))
+-a^2(1+a^2z)(1-r)t.
+\end{gathered}$
+The six source coefficients are exactly
+$\begin{aligned}
+n&=\frac{(b+r)q(q+a^2zt)-r\Delta}{2r\Delta},\\
+m&=\frac{(1+a^2z)(1-r)q(q+a^2zt)}{2g\Delta},\\
+C&=\frac{qN}{2a^2t\Delta},\\
+A&=\frac{a^2q(b+r)(q+a^2zt)}{2h\Delta},\\
+D&=\frac{(1+z)(b+r)(b-a^2zr)(q+a^2zt)}
+{2a^2j\Delta},\\
+\alpha&=\frac{z^2(b+r)N}{2(1-zh)\Delta}.
+\end{aligned}$
+The domain is
+$h,g,j,1-zh,b-a^2zr>0,\qquad n\ge0,$
+in addition to the stated parameter signs. In particular,
+$N=(1+z)(b+r)h+a^2\{g+j+rt(1+a^2z)\}>0.$
+The exact contact is
+$\boxed{
+u_c=c,\qquad v_c=ac,\qquad
+\psi_c=\left(\frac ba,-cr,\frac{ch}{a},1\right)^T.
+}$
+All five source parameters are independent of the testing variables $u,v$ and of the arbitrary state $(W,X,Y,Z)$.
+2. Exact Schmidt-data lemma
+Write the contact state as the real $2\times2$ coefficient matrix
+$a\Psi_c=
+\begin{pmatrix}
+b&-acr\\
+ch&a
+\end{pmatrix}.$
+Its two squared column norms are $b^2+zh^2$ and $a^2(1+zr^2)$, while their inner product is $ac(h-br)$. Consequently, its squared Schmidt-eigenvalue difference, before normalization, is
+$\boxed{
+\mathfrak D=
+\bigl[b^2+zh^2-a^2(1+zr^2)\bigr]^2
++4a^2z(h-br)^2.
+}$
+Both terms are nonnegative. Because all parameters are positive,
+$\boxed{
+\psi_c\text{ maximally entangled}
+\iff b=a,\quad at=1-r.
+}$
+Thus $b=a$ alone does not imply maximal entanglement. The previously extracted contact $(1,-cr,cr,1)$ imposes both equations. The equal-angle order-seven source cone covers the further specialization $a=1$; it cannot be silently extended to arbitrary Schmidt data.
+3. Bell-basis/Schur lemma for arbitrary Schmidt data
+This is the structural reduction I would retain.
+Introduce the fixed Bell coordinates
+$p=\binom{W+Z}{X-Y},\qquad
+q=\binom{W-Z}{X+Y}.$
+For arbitrary independent testing angles $u,v>0$, the complete C2 state polynomial has the exact block form
+$F_c=p^TK_+p+2p^TEq+q^TK_-q,$
+where $K_+,K_-,E$ are $2\times2$ matrices affine in the original source coefficients.
+Put $D_u=1+u^2,D_v=1+v^2$. The signed CHSH core contributes
+$K_+^{(0)}=
+\begin{pmatrix}
+u(u-v)&u(1+uv)\\
+u(1+uv)&1+v^2+u^2v^2+uv
+\end{pmatrix},$
+$K_-^{(0)}=
+\begin{pmatrix}
+u(u+v)&u(uv-1)\\
+u(uv-1)&1+v^2+u^2v^2-uv
+\end{pmatrix}.$
+The complete affine matrices are specified without expansion by
+$\begin{aligned}
+K_\pm&=dK_\pm^{(0)}
++\sum_i e_i k_i\,\ell_i^\pm(\ell_i^\pm)^T,\\
+E&=\sum_i e_i k_i\,\ell_i^+(\ell_i^-)^T,
+\end{aligned}$
+with $i\in\{n,m,C,A,D,\alpha\}$ and
+$i$
+$k_i$
+$\ell_i^+$
+$\ell_i^-$
+$n$
+$D_uD_v$
+$(0,1)$
+$(0,1)$
+$m$
+$1$
+$(v-u,-1-uv)$
+$(u+v,uv-1)$
+$C$
+$D_v$
+$(u,1)$
+$(u,-1)$
+$A$
+$D_uD_v$
+$(0,-1)$
+$(0,1)$
+$D$
+$1$
+$(u-v,1+uv)$
+$(u+v,uv-1)$
+$\alpha$
+$D_u$
+$(-1,-v)$
+$(1,v)$
+
+
+
+These identities follow by substituting the inverse Bell-coordinate transformation into the exact parent polynomial. No contact substitution is used.
+Decisive positivity observation
+Direct expansion gives
+$\det K_-^{(0)}=uvD_uD_v>0,
+\qquad
+(K_-^{(0)})_{11}=u(u+v)>0.$
+Therefore
+$\boxed{K_-(u,v)\succ0\qquad(u,v>0)}$
+for every nonnegative C2 source with $d>0$, independently of its Schmidt coefficients.
+Indeed, the core already has a positive-definite minus-sector block, and every event contribution is positive semidefinite on that block.
+The exact Schur identity is consequently
+$\boxed{
+F_c=
+(q+K_-^{-1}E^Tp)^TK_-(q+K_-^{-1}E^Tp)
++p^TSp,
+}$
+where
+$S=K_+-EK_-^{-1}E^T.$
+Thus the entire nontrivial positivity problem is confined to one two-dimensional Bell sector. The negative direction of the CHSH core never resides in the minus sector for $u,v>0$.
+Equivalently, with polynomial rather than rational entries, define
+$\boxed{
+T=(\det K_-)K_+-E\operatorname{adj}(K_-)E^T.
+}$
+Then
+$F_c\ge0\text{ for all real states}
+\iff T(u,v)\succeq0
+\quad(u,v>0).$
+This is an exact pointwise equivalence, not a finite SDP representation.
+What happens at the actual C2 contact?
+At $(u_c,v_c)=(c,ac)$, the Bell coordinates of the stationary state are
+$p_c=\binom{(b+a)/a}{-c(ar+h)/a},
+\qquad
+q_c=\binom{(b-a)/a}{c(h-ar)/a}.$
+The kernel equation gives
+$\boxed{
+K_-(u_c,v_c)q_c=-E(u_c,v_c)^Tp_c,
+\qquad S(u_c,v_c)p_c=0.
+}$
+Hence the two independent Schmidt defects are exactly the two components of $q_c$.
+For the previously extracted maximally entangled slice, $q_c=0$. For general C2, $q_c\ne0$, and the coupling $E^Tp_c$ cannot simply be discarded.
+This pinpoints what the equal-angle proof omits: a genuinely coupled $2\times2$ Schur completion, not an additional arbitrary four-state case analysis.
+The inverse $K_-^{-1}$ depends jointly on the source and testing variables. It cannot be inserted into a separated, fixed affine Gram pencil without further work.
+4. An exact obstruction beyond the equal-angle cone and NPA
+Consider the admissible rational native source
+$a=c=1,\quad b=\frac54,\quad
+t=\frac34,\quad r=\frac14.$
+Its coefficients are
+$\boxed{
+(d,\lambda,n,m,C,A,D,\alpha,\beta)
+=
+\left(1,0,\frac7{66},\frac5{33},\frac5{22},
+\frac{10}{33},\frac{16}{33},\frac9{22},0\right).
+}$
+The contact state is
+$\psi_c=(5/4,-1/4,1/2,1)^T.$
+Its concurrence is $22/23$, so it is not maximally entangled.
+It is outside the known equal-angle source cone because that cone requires
+$d=4A-2m-2D$, whereas here
+$4A-2m-2D=-\frac2{33}\ne1.$
+There is also an exact NPA obstruction.
+Let $R$ be the seven-root column specified in the question. At the contact, $A_1=B_1=\sigma_x$, $A_0=B_0=\sigma_z$. The matrix whose columns are $R_i\psi_c$ has rank four; its first four columns have determinant $-1/2$. Its kernel has basis
+$N=
+\begin{pmatrix}
+-1&3/4&9/8\\
+1&-5/4&-7/8\\
+3&0&3\\
+-3&-3/4&-9/8\\
+1&0&0\\
+0&1&0\\
+0&0&1
+\end{pmatrix}.$
+If a PSD seven-root Gram $Q$ represented this source, zero expectation at the contact would force
+$Q=NSN^T,\qquad S\succeq0,\quad S\in\mathbb S^3.$
+Now impose the universal word identities. In the order
+$(S_{11},S_{12},S_{13},S_{22},S_{23},S_{33}),$
+the coefficients of the six forbidden words
+$\begin{gathered}
+B_0B_1,\ A_0A_1,\ A_0A_1B_0B_1,\\
+A_0A_1B_0,\ A_0A_1B_1B_0,\ A_0A_1B_1
+\end{gathered}$
+form the matrix
+$\mathcal M=
+\begin{pmatrix}
+1&7/4&-31/8&0&9/4&-9/8\\
+1&-11/4&23/8&-3/2&-3&15/8\\
+-9&-9/4&-99/8&0&-9/4&-27/8\\
+-3&9/4&-5/8&0&5/4&19/8\\
+0&0&0&0&1&0\\
+3&11/4&33/8&3/2&3&9/8
+\end{pmatrix}.$
+Direct rational elimination gives
+$\boxed{\det\mathcal M=-405\ne0.}$
+Every displayed word has zero coefficient in a Bell functional. Thus $\mathcal M S=0$ forces $S=0$, contradicting $d=1$.
+This uses universal word matching, not merely evaluation at the testing contact.
+Moreover, the contact-kernel basis and this minor depend rationally on the five native parameters wherever the rank-four pivot remains nonzero. Their determinants are nonzero at the displayed source. Therefore their nonvanishing holds on a nonempty open subset, and generically on the interior of the native parameter domain.
+In particular, sufficiently small perturbations with $a\ne1$ and $b\ne a$ produce genuinely unequal-angle, nonmaximally entangled C2 sources outside $1+AB$.
+There is no reduction of the general family to the known NPA block plus the equal-angle order-seven block.
+Extremality and global validity
+These sources are genuine globally quantum-valid extreme rays, rather than regional candidates.
+The exact stationary $6\times6$ determinant from the native derivation is
+$-64ac^6rgt\,hj(1-zh)(1+z)^2
+(1+a^2z)^2\Delta\ne0.$
+It fixes all six event coefficients uniquely once $d$ and the contact are fixed. In any decomposition into nonnegative valid sources, both classical zeros and the quantum contact persist term by term. Every summand solves those same six equations and is proportional to the original ray. This proves extremality, including the literal $n=0$ face when the strict gap hypotheses hold.
+For validity at independent tests, the stationary contact makes the eight nonnegative outer Laurent coefficients balance:
+$\sum_e w_e e=0,\qquad w_e\ge0.$
+Hence, with $U=u^2,V=v^2$,
+$L(U,V)=
+\sum_e w_e
+\left[
+\left(\frac U{U_c}\right)^{e_1}
+\left(\frac V{V_c}\right)^{e_2}-1
+\right]\ge0$
+by weighted AM–GM, or by $e^x\ge1+x$ and the balance identity. The positive three-dimensional state minor then gives the full state-matrix positivity. Polynomial continuity and the exact sign gauges include zero and infinite testing angles; splitting complex states into real and imaginary parts completes global validity.
+The Schur reduction therefore addresses certificates for already-valid inequalities, not a missing proof of their physicality.
+5. The first unproved implication
+The Bell-sector lemma isolates the problem, but it does not turn $T\succeq0$ into an affine SDP cone: $T$ contains nonlinear products of source coefficients, and the Schur square contains a mixed source-testing inverse.
+For the fixed sixth-root construction, the precise remaining assertion is
+$\boxed{
+\forall(a,b,c,t,r)\in\mathcal D_{\mathrm{C2}},
+\quad
+b_{\mathrm{C2}}(a,b,c,t,r)
+\in
+\mathcal A_{\mathrm{C2}}
+\left(
+\mathbb S_+^{51}\oplus
+\mathbb S_+^{35}\oplus
+\mathbb S_+^{35}\oplus
+\mathbb S_+^{29}
+\right).
+}$
+Here $\mathcal D_{\mathrm{C2}}$ is the full native domain of Section 1, and $b_{\mathrm{C2}}$ is the complete normalized coefficient vector, including every universal word coefficient. Equivalently, using the compact dual section in EXACT_LIFT_ROUTE.md, the obligation is
+$\boxed{\mu_{\mathrm{C2}}(a,b,c,t,r)\ge0
+\quad\text{throughout }\mathcal D_{\mathrm{C2}}.}$
+Nothing established here proves that sign. In particular, a Schur-complement positivity proof at every real testing pair does not establish it.
+Singular source limits remain quantum-valid by continuity of the original source functionals. However, $K_-^{-1}$ may become singular in limiting testing charts, and closedness of the sixth-root cone only includes these limits after admission of the approaching sources has been proved. No boundary admission is inferred here.
+Conclusion for the coordinator
+The strongest compact result is the exact Bell-sector Schur reduction, together with a rigorous generic obstruction showing that Schmidt-imbalanced C2 extreme rays cannot be supplied by $1+AB$ or the known equal-angle cone.
+All remaining state coupling is concentrated in the explicitly affine $2\times2$ blocks $K_+,E,K_-$. The next proof must turn that coupling into a fixed, source-test-separated positive Gram, or prove the exact sixth-root dual margin is nonnegative over the complete five-parameter native domain.
+General C2 coverage remains unresolved.
+
+
+
+
+
+
+
+
+

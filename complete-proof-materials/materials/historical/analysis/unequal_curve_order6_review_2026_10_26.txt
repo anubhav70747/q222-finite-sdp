@@ -1,0 +1,138 @@
+UNEQUAL-ANGLE CURVE: INDEPENDENT EXACT CHECK OF THE ORDER-SIX LIFT
+26 October 2026. Bounded audit of the explicit recovered response only.
+
+Input: analysis/exact-lift-2026-10-23/
+gpt6_unequal_angle_response_2026_10_26.txt. No ZIP or omitted source data
+were assumed. The fixed parameters are r=1/4,s=1/8 and 3/4<=a<=2.
+
+Verdict
+-------
+The displayed 7x6 matrix T, denominator 262144, two 3x3 interval moment
+blocks, and claimed closed source-cone interpretation are correct. No
+closure or dual-attainment defect remains when the mass bound below is
+stated explicitly. There is an elementary stronger moment reconstruction:
+every feasible moment vector is represented by at most THREE atoms, even
+when its Hankel matrix is singular. The recovered six-atom bound was true
+but weaker. This is one evaluated curve cone, not the full unequal-angle
+three-parameter hull and not a full-Q222 lift.
+
+1. Source polynomial and interval signs
+--------------------------------------
+Independently substitute r=1/4,s=1/8 in the six recovered rational source
+formulas and d=1. In active order (d,n,m,C,A,D,alpha), direct cancellation
+gives EXACTLY
+
+       k(a)c(a) = T(1,a,a^2,a^3,a^4,a^5)^T / 262144,
+
+with every integer entry of T equal to the recovered matrix. The small
+independent checker contains the complete literal matrix and reconstructs
+all seven products; it does not import an advertised data file.
+
+The positive clearing factor and auxiliary polynomials simplify to
+
+ k=21(a+1)(8a-5)(32a^3+112a^2+23a+1)/131072,
+ Delta0=(32a^3+112a^2+23a+1)/1024,
+ L=(11a+1)/32, Q=(32a^2-9a+1)/32,
+ g=a-5/8.
+
+On [3/4,2], all denominator factors are strictly positive. The factors
+a+1,8a-5 and the positive-coefficient cubic in k are positive increasing,
+so
+
+               k(a)>=k(3/4)=55713/2097152>0.
+
+The fixed cubic is B0=(32a^3-208a^2-29a+1)/1024. After mapping the interval
+to [0,1], its degree-three Bernstein coefficients are exactly
+
+ -497/4096, -1463/6144, -1737/4096, -633/1024.
+
+All Bernstein basis functions are nonnegative and sum to one. Therefore
+B0<=-497/4096<0 throughout the closed interval. Thus the curve lies in the
+strict recovered native domain (n>0 included); no parameter endpoint or
+denominator degeneration is concealed. This audit verifies this admission
+to the explicit native dictionary. Global physical validity still uses
+the complete-parent native physicality theorem, not the signs or moment
+representation alone. It does not re-audit extremality or the full
+three-parameter parameterization.
+
+2. Both inclusions by a three-dimensional spectral construction
+--------------------------------------------------------------
+Write l=3/4,b=2. For y0,...,y5 define
+
+ H0=[y_{i+j}]_{i,j=0}^2, H1=[y_{i+j+1}]_{i,j=0}^2.
+
+The recovered PSD blocks are exactly M_l=H1-l H0 and M_b=b H0-H1. A
+nonnegative measure on [l,b] immediately satisfies these constraints.
+For the converse, M_l,M_b>=0 imply
+
+ H0=(M_l+M_b)/(b-l)>=0,       l H0<=H1<=b H0.
+
+Take V=R^3/ker(H0), with inner product <e_i,e_j>=(H0)_{ij}.
+If v is in ker(H0), both PSD bounds force (H1-lH0)v=(bH0-H1)v=0;
+thus H1v=0. Hence H1 defines a well-defined symmetric bilinear form on
+V. Let T be its self-adjoint representing operator:
+
+                  <T e_i,e_j>=(H1)_{ij}.
+
+The bounds give l I<=T<=b I on V. The Hankel identities show
+
+                  T e0=e1,       T e1=e2.
+
+Consequently <e0,T^j e0>=y_j for j=0,...,5. Explicitly the last two
+moments are <e2,e2>=y4 and <e2,T e2>=y5; earlier ones follow from the
+two shift identities and self-adjointness. The spectral measure of e0
+under T therefore represents every prescribed moment. Its support lies
+in [l,b] and contains at most dim(V)<=3 atoms. This proof includes every
+singular H0 case; if V is zero then the bounds also give H1=0 and all
+moments vanish.
+
+Applying T_source/262144 (the displayed coefficient matrix, distinct from
+the self-adjoint operator just constructed) maps those atoms to positive
+mixtures of the exact cleared sources. Conversely every positive mixture
+of cleared source rays supplies feasible moments. Since k>0, the original
+and cleared source curves generate the same cone. Thus both inclusions
+hold without a multivariate moment assumption or a degree hierarchy.
+
+3. Source-image closedness and exact dual representation
+-------------------------------------------------------
+The moment cone is closed directly from its two PSD constraints. A linear
+image of it need not be closed in general; here its d coordinate repairs
+that issue. For any representing measure mu,
+
+       d=integral k(a) dmu >= (55713/2097152)*mu([l,b]).
+
+For a convergent sequence of source vectors, d is bounded. Thus the masses
+are bounded, and every moment y_j is bounded because the interval is
+compact. A subsequence of moment vectors converges; its two PSD blocks
+remain PSD and its image is the desired limit. The source cone is closed.
+All endpoints and singular moment limits are therefore already represented.
+
+There is also no hidden dual-attainment step. Lebesgue moments
+y_j=(b^{j+1}-l^{j+1})/(j+1) give a strict point of both PSD blocks.
+Their exact leading principal minors, for each block, are
+
+             25/32, 15625/294912, 9765625/28991029248.
+
+Equivalently, for arbitrary nonzero degree-two q, the integrals of
+(a-l)q(a)^2 and (b-a)q(a)^2 are strictly positive. Evaluating an adjoint
+PSD-image sequence at this fixed moment point bounds the traces of its
+two PSD Gram matrices. The adjoint image is closed; finite-dimensional
+separation yields the exact attained dual. In polynomial language, a
+degree-at-most-five p nonnegative on [l,b] has
+
+ p(a)=(a-l)(1,a,a^2)G(1,a,a^2)^T
+                 +(b-a)(1,a,a^2)H(1,a,a^2)^T, G,H>=0.
+
+The coefficient/trace pairing against the two recovered moment blocks is
+also checked exactly. Thus a behavior-side dual block can be constructed
+without an unproved dual-closure assertion. This note audits the source
+cone lift; it does not claim a new globally exact behavior representation.
+
+Files and exact execution
+-------------------------
+analysis/unequal_curve_order6_independent_2026_10_26.py reconstructs the
+curve, literal T, factorization, all four Bernstein coefficients, localizer
+coefficient pairing, H0/H1 shift identities and strict-point minors.
+The matching JSON records the literal matrix and exact rational results.
+No numerical optimization, parameter sweep, archive assumption or public
+file edit was used.

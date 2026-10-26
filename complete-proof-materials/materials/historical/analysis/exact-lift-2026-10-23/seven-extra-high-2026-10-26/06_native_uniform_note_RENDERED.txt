@@ -1,0 +1,134 @@
+Q222 / native C2: uniform localized SOS and the remaining fixed-multiplier gap
+Reference: anubhav70747/q222-finite-sdp, commit 443f8781f752714309f83c118af3b6f4900c1821, particularly latex/certificates/c2_short.tex and latex/chapters/04_geometry.tex (SG2, SG5–SG7).
+Status. This is a complete, test-uniform source/test-separated SOS for delta_H F on the full five-parameter native C2 locus, including n=0. The multiplier delta_H=det H is mixed source/testing, so the construction is not a fixed affine SDP lift for F. A distinct exact calculation below obstructs the natural four-normal global subtraction.
+1. Native source and hypotheses
+Use source order (d,n,m,C,A,D,alpha) with lambda=beta=0, and normalize d=1.Let a,b,c,t>0, 0<r<1, z=c^2, and define
+$A_c=1+zr,\quad h=b-a^2t,\quad
+g=(1+z)b-(1-r+a^2zt),\quad j=1+zr-t.$$\begin{split}
+\Delta={}&1+(1+z)b+z(1+z)b^2+2z(1+z)br+z^2r^2+2zr\\
+&+a^2z[(1+z)b+1+zr(2-r)],\\
+N={}&(1+z)(b+r)(b+a^2(1-t))-a^2(1+a^2z)(1-r)t.
+\end{split}$The native conditions are
+$h,g,j,1-zh,b-a^2zr>0,\quad n\ge0.$The source entries are
+$\begin{aligned}
+n&=\frac{(b+r)A_c(A_c+a^2zt)-r\Delta}{2r\Delta},&
+m&=\frac{(1+a^2z)(1-r)A_c(A_c+a^2zt)}{2g\Delta},\\
+C&=\frac{A_cN}{2a^2t\Delta},&
+A&=\frac{a^2A_c(b+r)(A_c+a^2zt)}{2h\Delta},\\
+D&=\frac{(1+z)(b+r)(b-a^2zr)(A_c+a^2zt)}{2a^2j\Delta},&
+\alpha&=\frac{z^2(b+r)N}{2(1-zh)\Delta}.
+\end{aligned}$Delta>0 and N=(1+z)(b+r)h+a^2[g+j+rt(1+a^2z)]>0; hence all remaining coefficients are positive. The exact contact is
+$(u_c,v_c;\psi_c)=(c,ac;b/a,-cr,c(b/a-at),1).$Its full first-order stationarity is an exact native identity (not a testing-region assumption).
+2. A 12-square scalar determinant certificate
+Set $D_u=1+u^2,D_v=1+v^2$, and let $P(u,v)$ be the $4\times4$ symmetric state matrix of the complete C2 parent $F=\psi^TP\psi$:
+$\begin{split}
+F={}&4nD_uD_v X^2+4m(vW-X+uvY-uZ)^2\\
+&+4CD_v(uW-Y)^2+4AD_uD_vY^2\\
+&+(4D+2d)(uW+uvX-Y-vZ)^2\\
+&+(4\alpha+2d)D_u(vY-Z)^2
++2dD_v(X+uZ)^2-2dD_uD_vZ^2.
+\end{split}$The exact determinant identity (SG5–SG6) is
+$\det P=16D_u^2D_v^2u^2v^2L(U,V),\quad U=u^2,\ V=v^2,$with $L=h_{\rm det}+\sum_{e\in E}q_eU^{e_1}V^{e_2}$ and six exponents
+$\begin{array}{c|c}
+e & q_e\\\hline
+e_1=(-1,0)&4\alpha m\,t_5t_8\\
+e_2=(-1,1)&4mD\,t_5t_6\\
+e_3=(0,-1)&4\alpha A\,t_7t_3\\
+e_4=(0,1)&4CD\,t_5t_2\\
+e_5=(1,-1)&4nA\,t_3t_4\\
+e_6=(1,0)&4CA\,t_1t_4
+\end{array}$where
+$\begin{array}{ll}
+t_1=d+2(n+D),&t_2=d+2(\alpha+m+A),\\
+t_3=d+2(C+D),&t_4=d+2(\alpha+m),\\
+t_5=d+2n,&t_6=d+2(\alpha+C+A),\\
+t_7=d+2(n+m),&t_8=d+2(C+A+D).
+\end{array}$Set $U_c=c^2,V_c=a^2c^2$, $s_e=q_eU_c^{e_1}V_c^{e_2}$. Native stationarity gives exactly
+$h_{\rm det}=-\sum_e s_e,\qquad
+s_{e_1}-s_{e_6}=s_{e_5}-s_{e_2}=s_{e_4}-s_{e_3}=: \varepsilon.$Define $\tau_+=\max(\varepsilon,0)$, $\tau_-=\max(-\varepsilon,0)$ and
+$\rho_1=s_{e_1}-\tau_+=s_{e_6}-\tau_-,
+\quad \rho_2=s_{e_5}-\tau_+=s_{e_2}-\tau_-,
+\quad \rho_3=s_{e_4}-\tau_+=s_{e_3}-\tau_-.$All $\rho_i,\tau_\pm\ge0$. Write $x=(U/U_c,V/V_c)$, $x^e=x_1^{e_1}x_2^{e_2}$, and $T_+=(e_1,e_4,e_5)$, $T_-=(e_2,e_3,e_6)$. Then
+$\boxed{
+L=\sum_{i=1}^3\rho_i(x^{e_i}+x^{-e_i}-2)
++\tau_+\left(\sum_{e\in T_+}x^e-3\right)
++\tau_-\left(\sum_{e\in T_-}x^e-3\right).
+}$Only one triangular term can be active. Each pair contributes the square
+$u^2v^2(x^e+x^{-e}-2)
+=\left[uv(x^{e/2}-x^{-e/2})\right]^2.$For a triangle $T=(f_1,f_2,f_3)$ with $\sum f_i=0$, the cubic Hurwitz identity gives
+$\boxed{
+u^2v^2\left(\sum_{i=1}^3x^{f_i}-3\right)
+=\frac12\sum_{h=1}^3\sum_{1\le i<j\le3}
+\left[uv\,x^{f_h/6}(x^{f_i/3}-x^{f_j/3})\right]^2 .
+}$The three pair squares plus nine triangle squares prove
+$u^2v^2L(u^2,v^2)=\sum_{\ell=1}^{12}\ell_\ell(u,v)^2,$with vanishing square terms omitted, and each $\ell_\ell$ supported on$\{u^{i/3}v^{j/3}:0\le i,j\le6\}$.All circuit weights and contact-angle constants are source-side only. Independent testing $u,v>0$ is unrestricted.
+3. Full four-state uniform polynomial identity
+Let $\xi=(W,X,Y)^T$, $H=P_{\xi\xi}$, $b=P_{\xi Z}$, and $\delta_H=\det H$. The explicit column is
+$\boxed{
+b=
+\begin{pmatrix}
+-uv(4m+4D+2d)\\
+u(4m+2d-4Dv^2)\\
+v\,[4(D-\alpha)-(4m+4\alpha+2d)u^2]
+\end{pmatrix}.
+}$Here $D$ in the second entry denotes the source event weight, not $D_v$.
+Define the following 19 row vectors $\varrho_i\in\mathbb R[u,v]^3$:
+$\begin{array}{l}
+\sqrt{2d}(u,uv,-1),\
+\sqrt{2d}(0,0,v),\
+\sqrt{2d}(0,0,uv),\
+\sqrt{2d}(0,1,0),\
+\sqrt{2d}(0,v,0),\\
+2\sqrt n(0,1,0),\
+2\sqrt n(0,u,0),\
+2\sqrt n(0,v,0),\
+2\sqrt n(0,uv,0),\\
+2\sqrt m(v,-1,uv),\\
+2\sqrt C(u,0,-1),\
+2\sqrt C(uv,0,-v),\\
+2\sqrt A(0,0,1),\
+2\sqrt A(0,0,u),\
+2\sqrt A(0,0,v),\
+2\sqrt A(0,0,uv),\\
+2\sqrt D(u,uv,-1),\\
+2\sqrt\alpha(0,0,v),\
+2\sqrt\alpha(0,0,uv).
+\end{array}$Direct expansion of SG2 at $Z=0$ gives $H=\sum_i\varrho_i\varrho_i^T$. Consequently the 3-dimensional Cauchy–Binet / cross-product identity gives
+$\operatorname{adj}H=
+\sum_{1\le i<j\le19}
+(\varrho_i\times\varrho_j)(\varrho_i\times\varrho_j)^T.$The $d$-core is strictly positive on $\xi\neq0$ for all $u,v>0$, so
+$\delta_H\ \ge\ (2d)^3u^2v^2D_uD_v\ >0.$With $\eta=H\xi+bZ$, the fraction-free Schur identity and the scalar squares yield
+$\boxed{
+\begin{split}
+\delta_H F={}&
+\sum_{i<j}\big[(\varrho_i\times\varrho_j)\cdot\eta\big]^2\\
+&+\sum_{\ell=1}^{12}
+\big[4D_uD_v\,\ell_\ell(u,v) Z\big]^2.
+\end{split}}$This is a uniform finite exact SOS for $\delta_HF$, with all four state variables and unrestricted independent testing $u,v>0$. Each square has bidegree at most $(4,4)$ in $u,v$, with exponents in thirds; a fixed basis of $13^2\times4=676$ monomials
+$\{u^{i/3}v^{j/3}\psi_l:0\le i,j\le12,\ l=1,\dots,4\}$suffices. There are at most $\binom{19}{2}+12=183$ squares. Coefficients use only native source parameters and source-side real roots. The proof remains literal at $n=0$ because the four $n$-rows simply vanish; no limiting assumption is needed for this multiplied certificate. A general $d>0$ follows by common scaling.
+Limitation: $\delta_H$ depends jointly on source and testing variables. Hence equality for $\delta_H F$ is nonlinear in the source coefficients and does not define a sound fixed affine SDP source cone for $F$. It cannot be divided away as an SOS algebraic step.
+4. Two exact native checks on failed shortcuts
+(a) Mixed determinant does not separate. For the strict partially entangled native source
+$(d,n,m,C,A,D,\alpha)=
+(1,7/66,5/33,5/22,10/33,16/33,9/22),$the ratio $\delta_H(2,1)/\delta_H(1,1)=22125/1408$.For the exact strict native seed C2A
+$(1,59/320,73/230,23/100,73/200,73/230,23/100),$the same ratio is $460405/31648$. They differ. Thus$\delta_H(c;u,v)\neq\gamma(c)T(u,v)$ for any fixed test polynomial $T$ across the native family. A scalar normalization cannot turn this certificate into a fixed-multiplier lift.
+(b) Four contact-normal packet subtraction fails globally. In the first native source use
+$(a,b,c,t,r)=(1,5/4,1,3/4,1/4),\quad
+(h,g,j)=(1/2,1,1/2).$Let $R_m=vW-X+uvY-uZ,\ R_D=uW+uvX-Y-vZ$ and define four exact contact normals
+$H_n=X+ruZ,\quad H_m=R_m-guZ,\quad
+H_A=Y-(h/a)uZ,\quad H_D=R_D+jvZ.$Every $H_i$ vanishes at the native contact. Nevertheless
+$\left.
+\left(F-4nD_uD_vH_n^2-4mH_m^2
+-4AD_uD_vH_A^2-4DH_D^2\right)
+\right|_{u=2,v=1,\ (W,X,Y,Z)=(0,0,0,1)}
+=-\frac{31}{11}.$The whole-four-normal subtraction, useful in restricted radial arguments, is not a globally sound nonnegative remainder on native C2. Any universal Gram using these normals must include further coupled corrections.
+5. First surviving implication
+The exact native result is
+$\boxed{\forall\,c\in\mathcal C_2^{\rm native},\
+       \delta_H(c;u,v)F_c \in\Sigma_{\le(4,4),\,1/3},\
+       \delta_H(c;u,v)>0\ (u,v>0).}$What is not proved is uniform denominator removal, e.g.
+$\delta_H(c;u,v)F_c\in\Sigma
+\quad\Longrightarrow\quad
+F_c\in L_6
+\qquad(c\in\mathcal C_2^{\rm native}),$or the weaker existence of one fixed positive pure-testing multiplier$T(u,v)$ and one fixed finite Gram feature set with$T(u,v)F_c\in\Sigma$ for every native source. Either such fixed-multiplierconstruction, if proved, would produce a globally sound affine SDP conewith linear coefficient identity $\operatorname{coeff}(TF_c)=A(G)$.The ratio computation proves the present multiplier is not of that form.Uniform admission, and hence full finite-lift extraction by this route,remains open.
+

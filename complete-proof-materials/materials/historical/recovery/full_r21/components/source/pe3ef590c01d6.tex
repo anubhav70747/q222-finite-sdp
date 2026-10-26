@@ -1,0 +1,340 @@
+\section[An interior small-L C1 source: a full three-circuit closure]{An interior small-$L$ C1 source: a full three-circuit closure}
+\label{sec:r9-c1-small-interior}
+
+\begin{theorem}
+Use the original physical native C1 source and all earlier intersections.
+Suppose $x=k^2$ is infinitesimal, and
+\[
+ \eta,\ \zeta,\ r,\ 1-r,\ j_0=\eta+r-1
+       \quad\hbox{are positive bounded units}.                 \tag{IC1}
+\]
+Then the full original parent is tensor SOS for every independent
+projective test and every state. No source/testing rate comparison is
+used. This is a subdomain of C14.3; it does not assert the remaining
+small-$L$ source boundaries or C14.4.
+\end{theorem}
+
+Normalize $d=1$, set $\rho=\eta+r$, $y=x\eta\zeta$, and retain
+all original packets. Here $L=x\zeta$ is infinitesimal. The source
+formulas (NC1)--(NC4) and (SB1)--(SB4) give
+\[
+ \begin{gathered}
+ m/x\sim\rho/(2\zeta),\qquad
+ \alpha/x^2\sim\rho\zeta(1+\zeta)/2,\\
+ C=C_0+O(x),\quad A=A_0+O(x),\quad D=D_0+O(x),\\
+ C_0={\rho\over2(1-r)},\quad A_0={\eta\over2r},
+ \quad D_0={1\over2j_0}.                                \end{gathered} \tag{IC2}
+\]
+If the total scale is a unit, the earlier positive-total-scale theorem
+already applies. On the residual total-scale-infinitesimal intersection,
+all original coefficients except $\beta$ are bounded, so $\beta$ is
+unbounded. Its exact numerator implies
+\[
+ \theta=x\pi,\quad\pi\in\operatorname{Inf}_{>0},\qquad
+ \beta\theta/x=O(1),\quad
+ \beta\theta^2/x^2=O(\pi).                               \tag{IC3}
+\]
+Thus $\beta=0$ and $D=0$ are absent on this particular residual source
+subdomain, by source implication. No permitted boundary is removed
+from a larger claimed theorem. All source denominators used below are
+products of positive bounded units from (IC1), $M,J,Q,P_d$, and their
+source specializations. The apparent $x$ and $x^2$ denominators cancel
+by finite polynomial numerator division, as specified below.
+
+The existing theorem in Section~\ref{sec:r8-c1-small-L-bounded-eta},
+equations (SB6)--(SB12), covers the original source $x,L$ infinitesimal,
+$\zeta$ noninfinitesimal, and $\eta$ bounded on the complement of
+$u,v$ both infinitesimal, with every homogeneous endpoint. Its source
+domain contains (IC1). Literal testing axes are direct: the half core
+is $D_v(X^2+Y^2)/2$ at $u=0$ and
+$\{(uW-Y)^2+(X+uZ)^2\}/2$ at $v=0$, and every other packet is
+nonnegative. The exact transformations
+$(u,Y,Z)\mapsto(-u,-Y,-Z)$ and
+$(v,X,Z)\mapsto(-v,-X,-Z)$ preserve the original parent, so work on
+the positive testing sign chart and restore all signs afterwards.
+For complex states apply the real identity to the real and imaginary
+parts. First work at $Z\ne0$, divide the state by $Z$, and set $Z=1$;
+no bound on $W$ is imposed. Afterward multiply the exact identity by
+the original $Z^2$. Its state-normal roots become the homogeneous
+linear forms displayed below and its scalar circuit roots become
+$Z$ times the roots at $Z=1$. No $Z$ inverse remains. The resulting
+identity is polynomial in the original state coordinates and hence
+also holds at $Z=0$.
+
+\paragraph{A bounded-ratio frame retaining all three state normals.}
+First suppose the pure-testing ratio $t=v/u$ is bounded, possibly
+infinitesimal. Define
+\[
+ \begin{gathered}
+ E=\eta uW-v,\quad
+ b={r(1-r)\over\eta(\eta+2r-1)},\quad
+ N=Y-ruW-bE,\\
+ \xi=X+hu,\qquad N_x=\sqrt\beta\,\xi,\quad h=1-\theta.
+                                                               \end{gathered} \tag{IC4}
+\]
+The state change is exact and uses only the pure-testing inverse $u$:
+$W=(v+E)/(\eta u)$, $Y=r(v+E)/\eta+bE+N$, $X=-hu+\xi$.
+Every normal vanishes at the actual source contact. Its full hard
+quadratic has the strictly positive diagonal residue
+\[
+ (E,N,N_x):\qquad
+ \operatorname{diag}\left(
+ {\rho\over2\eta(\eta+2r-1)},
+ {\eta(\eta+2r-1)\over2r(1-r)j_0},1\right).             \tag{IC5}
+\]
+This is a statement about the complete original hard block. At bounded
+$t$, its remaining terms are bounded with zero residue: the potentially
+new $m t^2$ coefficient is infinitesimal, and normalizing $\xi$ makes
+all its other hard entries infinitesimal. No state normal has been
+restricted or dropped.
+
+\paragraph{The exact scalar, with the negative defect absorbed.}
+Set $U=u^2,V=v^2$, $s=\sqrt{\eta\zeta}$, $k=\sqrt x$, and introduce
+the positive separated roots
+\[
+ A_t=uv,\quad B_t={k v^2\over s u},\quad
+ C_t=xs,\quad G=kv,\qquad F_v=V-y.
+                                                               \tag{IC6}
+\]
+They satisfy $A_tB_tC_t=G^3$ and coincide at actual contact
+$(u,t)=(k,s)$. The pure-testing pole in $B_t$ is inside the root;
+none of the coefficient arrays below has a negative power of $t$.
+
+Use $A_w,A_z,b_0,b_1$ from (SN1)--(SN2), including the beta term.
+The scalar at $E=N=\xi=0$ is exactly
+\[
+ \mathcal S={VA_w\over\eta^2U}+A_z
+                  -{2V\over\eta}(b_0+b_1U)
+       =c_FF_v^2+f_AA_t^2+f_BB_t^2+f_CC_t^2-f_GG^2.    \tag{IC7}
+\]
+Here the complete coefficients are
+\[
+\begin{aligned}
+ c_F={}&{C(1-r)^2+Ar^2+(\alpha+\tfrac12)r^2+2mr\over\eta^2},\\
+ a_{UV}={}&{Ar^2\over\eta^2}+{h^2\over2}+2Dh+\beta\theta^2
+                                     -{2b_1\over\eta},\\
+ a_{UUV}={}&h^2(D+\tfrac12),\qquad
+ a_{UVV}={r^2(m+A+\alpha+\tfrac12)\over\eta^2},\\
+ q_V={}&{C(1-r)^2+Ar^2+(D+\tfrac12)(1-r)^2\over\eta^2}
+                                     +D-{2b_0\over\eta},\\
+ q_U={}&\alpha+(m+\beta+\tfrac12)\theta^2,\\
+ f_A={}&a_{UV}+a_{UUV}U+a_{UVV}V,\qquad
+ f_B={m\zeta\over\eta x},\\
+ f_C={}&{\alpha-c_Fy^2+q_UU\over\eta\zeta x^2},\qquad
+ f_G=-{q_V+2c_Fy\over x}.                              \end{aligned} \tag{IC8}
+\]
+Thus the source-negative quadratic base has already been combined
+with the original $m$, $\alpha$, and higher-angle terms. The residues
+are
+\[
+ c_F\sim{\rho\over2\eta^2},\qquad
+ f_A,f_B,f_C\sim\lambda={\rho\over2\eta},\qquad
+ f_G\sim3\lambda.                                    \tag{IC9}
+\]
+For example the leading scalar is exactly
+\[
+ {\rho\over2\eta^2}(V-y)^2+
+ {\rho\over2\eta}\left\{UV+{xV^2\over\eta\zeta U}
+                            +\eta\zeta x^2-3xV\right\}.
+                                                               \tag{IC10}
+\]
+The braces are the three-term AM--GM circuit
+$A_t^2+B_t^2+C_t^2-3G^2$, not a standalone quadratic PSD assertion.
+
+\paragraph{Finite scalar Taylor arrays.}
+Let $\epsilon_i=f_i-\lambda$ and $\epsilon_G=f_G-3\lambda$,
+$h_c=\epsilon_A+\epsilon_B+\epsilon_C-\epsilon_G$.
+Equations (IC8) show that $h_c=h_{00}+aU+cV$ with bounded
+pure-source $a,c$. Exact contact value gives
+\[
+ h_c=a(u^2-k^2)+c(u^2t^2-k^2s^2).                     \tag{IC11}
+\]
+For $d_u=u-k,d_t=t-s$, its finite second Taylor identity is
+\[
+\begin{split}
+ h_c={}&2k(a+cs^2)d_u+2k^2sc\,d_t
+ +(a+ct^2)d_u^2+2kc(t+s)d_ud_t+k^2c\,d_t^2.            \end{split} \tag{IC12}
+\]
+The coefficient of $d_t^2$ is infinitesimal. For any affine function
+$f=f_{00}+a_fU+c_fV$ among (IC8), the exact first difference is
+\[
+ f-f(k,s)=(u-k)(u+k)(a_f+c_ft^2)
+                    +(t-s)k^2(t+s)c_f.                \tag{IC13}
+\]
+These are the required bounded $u$ arrays and infinitesimal $t$ arrays;
+no appeal to unspecified Taylor membership is needed.
+The two exact first-jet balances are
+\[
+ 2(\epsilon_{A0}-\epsilon_{C0})+k h_{c,u0}=0,
+ \quad 2(\epsilon_{B0}-\epsilon_{C0})+s h_{c,t0}=0.      \tag{IC14}
+\]
+They follow from the original stationary contact, and are also checked
+directly using (NC4). The extra square $c_FF_v^2$ has zero value and
+first jets there. Apply the accompanying three-circuit contact-lift
+lemma with the exact conductors
+\[
+ G(u-k)=k(A_t-G),\qquad G(t-s)=s(B_t-G).                \tag{IC15}
+\]
+This gives a strictly positive residue Gram on the finite circuit
+root list, together with the strict $F_v$ pivot.
+
+\paragraph{Explicit finite allocations of every first normal.}
+Use $f_w,f_z,k_w,k_z$ in (SN2), and define the polynomials
+\[
+\begin{aligned}
+ P_Y(U,V)&=2(k_w/\eta+k_z),\\
+ P_E(U,V)&={2\over\eta^2}(A_w/U-mV/U)
+              -{2\over\eta}(b_0+b_1U)+bP_Y(U,V).
+\end{aligned}                                                   \tag{IC16}
+\]
+The quotient $A_w/U-mV/U$ is polynomial, as its displayed numerator
+shows. For either polynomial $P$ use the exact divisions
+\[
+ P=P_{00}+UP_U+VP_V,\quad
+ P_U={P-P(0,V)\over U},\quad
+ P_V={P(0,V)-P(0,0)\over V}.                           \tag{IC17}
+\]
+All arrays are bounded. The source formulas give, by finite numerator
+division, $P_{Y,00}/x,P_{E,00}/x$ bounded. The complete first normals
+of the original $F/4$ in the frame (IC4) are exactly
+\[
+\begin{aligned}
+ \mathcal L_N&=vP_Y,\\
+ \mathcal L_E&=2mv t^2/\eta^2+vP_E,\\
+ \mathcal L_x&={1\over\sqrt\beta}\left[
+ 2u\theta(m+\beta+\tfrac12)
+ -{2m\over\eta}ut^2(1+rU)+2uVZ_X\right],\\
+ Z_X&=(\beta+\tfrac12)\theta-(D+\tfrac12)(1+hU)
+                         +(D+\tfrac12)(1-r)/\eta .     \end{aligned} \tag{IC18}
+\]
+These identities are independently checked by differentiating the
+entire original parent after the full state substitution (IC4).
+
+Their actual root allocations are
+\[
+\begin{aligned}
+ vP&={P_{00}\over k}G+u(P_U+t^2P_V)A_t,\\
+ {2m\over\eta^2}vt^2&={2ms t\over\eta^2k}B_t,\\
+ \mathcal L_x&={2u\theta(m+\beta+\tfrac12)
+                    \over\sqrt\beta\,xs}C_t
+ -{2ms(1+rU)\over\eta k\sqrt\beta}B_t
+ +{2vZ_X\over\sqrt\beta}A_t.                          \end{aligned} \tag{IC19}
+\]
+Every coefficient in (IC19) is infinitesimal. Its $u$ first-difference
+array is bounded and its $t$ array is infinitesimal: the coefficient
+arrays are polynomials in $u,t$ with bounded source arrays, and each
+term depending on $t$ contains $u$, $k$, or $1/\sqrt\beta$; evaluation
+at $u=k$ retains such an infinitesimal factor. There are no negative
+$t$ powers. The source ratios needed here are precisely
+\[
+ m/x,\quad P_{Y,00}/x,\quad P_{E,00}/x,\quad
+ \theta(m+\beta+\tfrac12)/x,\quad \beta\theta/x,
+                                                               \tag{IC20}
+\]
+all bounded by canceled finite numerator formulas.
+The exact original contact makes each complete normal zero at
+$(u,t)=(k,s)$. For a normal $\ell=\sum b_iA_i+b_GG$, put
+$B=\sum b_i+b_G$, and use the explicit monic divisions
+\[
+ B=(u-k){B(u,t)-B(k,t)\over u-k}
+       +(t-s){B(k,t)-B(k,s)\over t-s}.                 \tag{IC21}
+\]
+The first quotient is bounded and the second infinitesimal by the
+polynomial arrays just given. Replacing $A_i$ by $A_i-G$ and applying
+(IC15) allocates each complete normal with infinitesimal coefficients
+on the same strict circuit roots. Joining (IC5), (IC7), and (IC19)
+therefore gives a bounded positive-residue Gram for the entire original
+parent in every bounded-$v/u$ testing chart, including infinitesimal
+$v/u$ and arbitrary state size.
+
+\paragraph{The reciprocal testing-ratio chart.}
+It remains to consider $v/u$ unbounded, so $u/v$ is infinitesimal.
+Return to homogeneous state coordinates and set
+\[
+ p=uW,\ q=vZ,\ E=\eta p-q,\quad
+ Y=rp+bE+N,\quad B=X+uZ=\xi+\theta uZ.
+\]
+Use the complete raw root list
+\[
+ E,\ N,\ N_x=\sqrt\beta\xi,\quad
+ P=\sqrt m\,vW,\quad Q=\sqrt\alpha Z,\quad
+ R_t=u^2W,\quad S_t=uvW.                              \tag{IC22}
+\]
+No independence of these roots is required.
+The exact source comparison error in the quadratic base is a
+quadratic with $O(x)$ source coefficients in $(p,Y,q)$. It has zero
+residue on (IC22), since
+\[
+ \sqrt x\,p=\sqrt{x/m}\,(u/v)P,\quad
+ Y=rp+bE+N,\quad q=\eta p-E,                          \tag{IC23}
+\]
+and $x/m$ is a positive bounded unit. The coefficient $u/v$ is
+pure testing, not a mixed source/testing comparison. The comparison
+base itself is exactly $H_0N^2+\gamma E^2$, with the positive values
+in (IC5).
+
+For completeness, with $B=0$ the exact higher-angle part of the
+$C,A,D$ packets and half core, after the quadratic base is removed, is
+\[
+\begin{split}
+ &U\{AY^2-2Dq(p-Y-q)+q^2/2-pq\}\\
+ &\quad+V\{C(p-Y)^2+(A+\tfrac12)Y^2\}
+ +(A+\tfrac12)UVY^2+(D+\tfrac12)U^2q^2.               \end{split} \tag{IC24}
+\]
+Upon inserting $Y=rp+bE+N$, $q=\eta p-E$, its residue on
+$(R_t,S_t)$ is strictly diagonal:
+\[
+ \kappa_R={\rho\eta\over2},\qquad
+ \kappa_S={\rho\over2}.                              \tag{IC25}
+\]
+All other entries carry $u$, $v$, $U$, or $V$. For example
+$UpE=uR_tE$, $VpE=vS_tE$, $U^2p^2=UR_t^2$, and
+$UVp^2=US_t^2$. These identities allocate every term of (IC24)
+without an inverse or a rate comparison.
+
+The terms involving $B$ are equally explicit. Relative to $B=0$, the
+$D$ packet adds $2DuvB(p-Y-D_uq)+DUVB^2$, and the half core adds
+$uvB(p-Y-D_uq)+(D_v+UV)B^2/2$.
+Here
+\[
+ B={N_x\over\sqrt\beta}+{\theta u\over\sqrt\alpha}Q,
+ \quad uvp=uS_t,
+\]
+so their Gram coefficients are infinitesimal. The three remaining
+original packets keep their entire roots:
+\[
+\begin{aligned}
+ \sqrt m\,M&=P+\sqrt m\,uvY-\sqrt m\,B,\\
+ \sqrt\alpha\sqrt{D_u}(vY-Z)
+  &=\sqrt{D_u}\{\sqrt\alpha(rS_t+v(bE+N))-Q\},\\
+ \sqrt\beta\sqrt{D_v}B
+  &=\sqrt{D_v}\{N_x+\sqrt{\beta\theta^2/\alpha}\,uQ\}.
+\end{aligned}                                                   \tag{IC26}
+\]
+Each is its leading root $P,-Q,N_x$ plus an infinitesimal-coefficient
+combination of (IC22). Indeed $\theta/\sqrt\alpha=O(\pi)$,
+$\beta\theta^2/\alpha=O(\pi)$, and $m,\alpha$ are infinitesimal.
+Thus the complete original parent has a bounded Gram on (IC22) with
+strictly positive diagonal residue
+\[
+             (\gamma,H_0,1,1,1,\kappa_R,\kappa_S).
+                                                               \tag{IC27}
+\]
+This proves the reciprocal-ratio chart. Together with the bounded-ratio
+chart and the inherited remote theorem it proves the stated all-tests
+interior source theorem.
+
+\paragraph{Verification and exact scope.}
+The accompanying checker verifies (IC7)--(IC8), every full first
+normal by original-parent differentiation, the complete hard residues,
+all canceled source coquotients and contact jets, the finite Taylor
+identity, and the exact remote-ratio higher-angle identity and both
+strict pivots. Its denominator report specializes each canceled
+source denominator at $x=0$ and records nonzero signed products of
+positive-unit factors
+from (IC1); no inverse opening or negative testing-ratio power is
+hidden in the proof. The ordered-field bounds and the full original
+remote join are the proof above. This theorem removes exactly the
+source subdomain (IC1), after the original total-scale intersection;
+it does not remove infinitesimal $\eta$, unbounded $\zeta$, or an
+infinitesimal $r$, $1-r$, or $j_0$ opening.

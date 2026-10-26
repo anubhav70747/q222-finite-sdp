@@ -1,0 +1,96 @@
+SECTIONS 2--3: EXACT CONTACT-COUPLING AUDIT
+26 October 2026. Private result; no source admission theorem is asserted.
+
+Input: analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/
+06_contact_completion_followup_COMPLETE.txt, sections 2 and 3 only.
+Replay: contact_completion_sections23_audit_2026_10_26.py and .json.
+The script reconstructs the raw parent from canonical event projectors,
+uses rational symbolic algebra, and performs no parameter search/solver.
+
+1. Leading coupling coefficient: VERIFIED GENERICALLY.
+
+Let h_s=b-a^2 t_source, psi_c=vec(Psi_c),
+ Psi_c=[[b/a,-cr],[c h_s/a,1]], delta=(b+c^2 r h_s)/a>0.
+Use epsilon=[[0,-1],[1,0]], L=epsilon Psi_c^T, J=I tensor L^{-1},
+and C0=(e00,e01+e10,e11,(0,-1,1,0)^T). Thus
+ K=C0^{-1} J P J^T C0^{-T}=[[H,zeta],[zeta^T,gamma]].
+Here P=(1+u^2)(1+v^2) times the canonical normalized Bell matrix.
+
+Its u^2v^2 coefficient is the physical matrix evaluated at A1=B1=-Z:
+ P22=diag(4C,4n+4D+2d,4(m+A+alpha)+2d,0).
+The script derives this from the six retained event projectors, with all
+seven source coefficients symbolic. Applying the congruence gives
+ [zeta_3]_(u^2v^2)
+ =-b c h_s [2(m+A+alpha)+d]/(b+c^2 r h_s)^2
+ =-c b h_s [2(m+A+alpha)+d]/(a^2 delta^2)<0.
+This is independent of n and remains strict on n=0. Shifting to
+s=u-u_c,t0=v-v_c preserves this highest mixed coefficient. Therefore
+zeta cannot equal V(s,t0)(s,t0,s t0)^T with constant or total-degree-one
+V: such a product has total degree at most three. Mixed bilinear terms
+in V are necessary.
+
+2. Conditional degree reduction: VERIFIED, with the stated quantifier.
+
+Fix a source with constant G>0 and suppose polynomial V satisfies
+ [[H(u,v),V(u,v)],[V(u,v)^T,G]]>=0 for EVERY real independent u,v.
+The Schur complement implies V_i G^{-1} V_i^T<=H_ii for each row i.
+If V_i has u-degree d>=2, its leading row coefficient is a nonzero
+polynomial in v. Choose a real v where it is nonzero. The left side has
+positive leading coefficient and degree 2d>2 in u, while H_ii has
+u-degree at most two: contradiction at infinity. Repeat with u,v
+interchanged. Thus every entry of V is in span{1,s,t0,s t0}.
+This is a necessary reduction of the STRONGER block-PSD ansatz, not a
+proof that such V exists. No mixed testing inverse is used in the proof.
+
+For one row V there are 12 scalar coefficients. Multiplication by
+(s,t0,s t0)^T maps them onto the eight nonconstant monomials of separate
+degree <=2. The exact coefficient matrix has rank eight. Its kernel is
+the four-dimensional space spanned by
+ (-t0,s,0), (-t0,0,1), (-s t0,0,s), (0,-s t0,t0).
+The script verifies their independence and full kernel dimension.
+Consequently all bilinear solutions of zeta=Vq differ by exactly four
+source-only scalar coefficients per row, hence twelve in total.
+This parametrizes the solutions of the coupling EQUATIONS; the
+semialgebraic condition that the block be PSD for every test is unsolved.
+
+The section's statement that G>0 holds only generically is superseded:
+analysis/c2_contact_scalar_gram_rank_2026_10_26.txt proves G>0 throughout
+the finite native C1/C2 domain, including permitted event-zero faces.
+No singular-G subcase remains inside this precise finite native domain.
+There is still no source-uniform lower eigenvalue bound from that theorem.
+
+3. Negative polarization witness: REPRODUCED EXACTLY.
+
+The short reply does not define 'symmetric coefficient division'. The
+following explicit equal-monomial division recovers its fraction exactly.
+Write each zeta_i=sum a_jk s^j t0^k, with a_00=0, and set
+ V_i1=a10+a20 s+(a11/3)t0+(a21/2)s t0,
+ V_i2=a01+a02 t0+(a11/3)s+(a12/2)s t0,
+ V_i3=a11/3+(a21/2)s+(a12/2)t0+a22 s t0.
+Each mixed monomial is divided equally among all columns that can
+produce it. Its product with q=(s,t0,s t0)^T is identically zeta_i.
+A final mathematical note should print this definition rather than
+leave 'canonical polarization' ambiguous.
+
+For native (a,b,c,t_source,r)=(1,5/4,1,3/4,1/4), the exact raw source is
+(d,n,m,C,A,D,alpha)=(1,7/66,5/33,5/22,10/33,16/33,9/22).
+The source contact is (u_c,v_c)=(1,1), and the scalar Gram is
+ G=[[136/121,-900/1331,-52/1331],
+    [-900/1331,130/121,590/1331],
+    [-52/1331,590/1331,538/1331]].
+Its leading principal minors are 136/121,1329280/1771561,
+22341120/214358881, all positive. At u=0,v=1 (s=-1,t0=0), the above
+polarization gives exactly
+ [H-VG^{-1}V^T]_11=-6975688592/51747662835<0.
+The checker obtains this from the complete event-defined P, not from
+the claimed fraction. Continuity gives failure also for small positive
+u with v=1. This disproves ONLY this explicit allocation. It does not
+exclude a different choice of the twelve syzygy coefficients, nor
+fractional testing functions, a pure-testing multiplier, or merely
+pointwise positivity of the original four-state parent.
+
+Conclusion: all four requested local claims are supported after the
+explicit polarization definition and removal of the obsolete generic-G
+caveat. The remaining quantified obligation is still to find an
+admissible allocation/certificate for the independent testing plane;
+the twelve-parameter reduction alone does not supply it.

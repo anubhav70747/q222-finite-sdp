@@ -1,0 +1,62 @@
+EXACT UNIFORM TWO-PARAMETER C2 SOURCE CONE
+25 October 2026. Private analytical result; no SDP, sampling, or sweeps.
+
+Full proof: c2_maxentangled_surface_2026_10_25.tex.
+Reproducer/data: matching .py and .json; Python+SymPy, about2.4s locally.
+
+The six contact equations with u=v=c, psi=(1,-cr,cr,1), d=1,
+lambda=beta=0 give, with z=c^2 and T=1+(1+2r)z:
+ n=[1-r-r(1+3r)z]/(4rT), m=(1-r)(1+rz)/(4rT),
+ C=r(1+rz)/[(1-r)T], A=(1+r)(1+rz)/(4rT),
+ D=(1+r)(1-rz)/(4rT), alpha=r(1+r)z^2/[(1-rz)T].
+Exact native domain: 0<r<1 and 0<z<=(1-r)/[r(1+3r)].
+The n>=0 inequality implies rz<1; all other required weights are positive.
+
+Set x=rz. The domain is r,x>0, r+x+3rx<=1. Multiplication by
+4(r+x+2rx)(1-r)(1-x)>0 gives, in order(d,n,m,C,A,D,alpha),
+ [4(r+x+2rx)(1-r)(1-x),
+  (1-r-x-3rx)(1-r)(1-x),
+  (1-r)^2(1-x^2),4r^2(1-x^2),(1-r^2)(1-x^2),
+  (1-r^2)(1-x)^2,4x^2(1-r^2)].
+All coordinates have bidegree(2,2), but a bivariate moment relaxation
+is unnecessary. Their CLOSED conic hull is exactly the spectrahedral cone
+
+ lambda=beta=0; d=4A-2m-2D; n=m+D-A;
+ [[m,A-m],[A-m,C]]>=0; [[D,A-D],[A-D,alpha]]>=0;
+ A-m>=0; A-D>=0; m+D-A>=0.
+
+Total PSD order7: two2x2 matrices and three nonnegative scalar blocks.
+The two parameter ratios are h=m/A and k=D/A, with h,k<=1,h+k>=1.
+The minimal values C0=(A-m)^2/m and alpha0=(A-D)^2/D define one
+surface ray, recovered by r=(A-m)/(A+m),x=(A-D)/(A+D).
+Any additional C,alpha are independent nonnegative event-ray additions.
+Those rays themselves lie in the surface closure: r=1-e,x=e/8 gives
+4e_C in the limit, and the reflected path gives4e_alpha.
+If m=0 or D=0, PSD and the scalar inequalities force A=m=D=0,
+leaving precisely the two axes. If h=k=1, then d=0,n=m=A=D,
+C0=alpha0=0; this boundary is the r=x=0 limit. All cases are included.
+
+Validity is standalone, not an import of SG7. With the scaled source,
+the Z=0 state block is positive definite at uv!=0 from the signed CHSH
+part alone. Write z=x/r, X=u^2/z,Y=v^2/z and
+G=16(1-r^2)^3(1-x^2)^3. The exact raw4x4 determinant is
+ 16G Du^2 Dv^2 u^2 v^2 R(X,Y),
+where
+ R=a(X+1/X-2)+b(Y+1/Y-2)+c0(X/Y+Y/X-2)
+                        +Delta(Y/X+X+1/Y-3),
+ a=8rx(1-r), b=8rx(1-x),
+ c0=(1+r)(1+x)(1-r-x-3rx), Delta=8rx(r+x).
+All four coefficients are nonnegative, and AM-GM handles each bracket.
+Continuity, two-reflection blocks, and real/imaginary state decomposition
+give global quantum validity. The script verifies the full polynomial
+identity in all four independent variables(r,x,u,v), not just contact jets.
+
+All interior parameter rays are canonical extreme rays, including n=0:
+the six contact equations on seven active coefficients have rank6, with
+minor deleting d equal to
+ -32768*c^6*r^4*(r-1)*(c^2*r-1)*(2c^2*r+c^2+1)/(1+c^2)^5,
+nonzero throughout this domain. Exact row/operator convention is in TeX.
+
+No claim of all-C2 or full-Q222 coverage is made. This is one genuinely
+uniform evaluated cone for all independent parameters of the specified
+maximally entangled surface and all independent physical testing choices.

@@ -1,0 +1,215 @@
+\section{The remaining small-$r$ local chart of weak-C2 R8}
+\label{sec:r17-r8-small-r}
+
+\begin{theorem}
+Retain the original physical stationary weak-C2 source, all strict gaps,
+nonnegative event coefficients, the original positive-infinitesimal
+total-scale intersection, and every inherited residual exclusion.
+Suppose the source is in R8 and $r$ is infinitesimal. Thus $t=y/B$
+and $g=G/B$ are positive bounded units, while $B,h=H/B,j,r$ are
+positive infinitesimals. Then the entire original four-state parent is
+a finite tensor SOS for every independent pair of infinitesimal or zero
+testing half-angles $u,v$, with either sign and all real or complex states.
+No source opening is compared with another opening or with a testing rate.
+\end{theorem}
+
+This is the missing local component of the R8 join. Its remote tests
+and its $r$-unit local chart are supplied separately by the R17
+joint-$D$ argument. The proof below does not rely on an unproved
+extension of the RC normalization across $r=0$.
+
+\paragraph{Source entry and the three independent hard scales.}
+Write $a=z/B$, $l=1-h$, $x=aB$, and
+\[
+ j=1+xr-l/t,\qquad g=1+a(hB+r-1).
+\]
+The R8 and small-$r$ hypotheses imply that $a$ is bounded with residue
+$\rho\in[0,1)$: $g_0=1-\rho>0$. Also $t_0=1$.
+The unchanged exact source formulas WE1, jointly at $B=h=r=0,t=1$,
+give
+\[
+ (nr)_0=(Ah)_0=(Dj)_0=\frac1{2(1+\rho)},\qquad
+ \left(\frac{m}{a^2}\right)_0=\frac1{2(1-\rho^2)},
+ \quad C_0=\left(\frac\alpha{B^2}\right)_0
+       =\frac{1-\rho}{2(1+\rho)}>0.                 \tag{RD1}
+\]
+These are joint regular reductions. After replacing $n,A,D$ by
+$nr,Ah,Dj$, all source denominators are products of units
+$t,g,1-h,1-hB,\Delta$ with $\Delta_0=1+\rho$.
+Thus $n,A,D$ are all positive unbounded, with completely unrestricted
+relative rates, while $nr,Ah,Dj,\mu=m/a^2,C,\alpha_*=\alpha/B^2$
+are positive bounded units. In particular $n=0$ is impossible on
+this chart; no inverse of a vanishing event coefficient is being used.
+
+\paragraph{A general exact centered-$D$ gauge of the complete WA matrix.}
+Use the unnormalized complete WA3--WA8 identity, with the WE4 source
+rescaling of the second scalar root:
+\[
+ \mathcal R=(\xi,\eta,R_1,R_2',T)^T,
+ \quad \xi=X+ruZ,\quad\eta=Y-huW,
+\]
+\[
+ R_1=uW-t^{-1}vZ,\quad R_2'=avW-uZ,\quad T=uvW-BZ,
+ \qquad F/4=\mathcal R^TG\mathcal R.                \tag{RD2}
+\]
+Here $G$ contains the complete hard block, both complete first-normal
+rows, and the complete scalar block. No packet or normal is omitted.
+All its entries are affine in the formal event coefficient $D$.
+
+For $U=u^2$, $V=v^2$, define three five-component columns
+\begin{align*}
+ d&=(uv,-1,l,ruv,-arv)^T,\\
+ s&=(0,0,(x-U)v,-(B-V/t)u,U-aV/t)^T,\\
+ k&=(-2rtu,0,0,-r^2tu,ar^2t)^T.
+\end{align*}
+The physical root relation and the centered $D$ event are exactly
+\[
+ s^T\mathcal R=0,\qquad
+ L_D:=d^T\mathcal R
+   =uW+uvX-Y-vZ+jvZ.                               \tag{RD3}
+\]
+The following is a matrix identity, valid before any residue operation:
+\[
+ \partial_DG-dd^T-\frac{sk^T+ks^T}{2}=jH_D,        \tag{RD4}
+\]
+where $H_D$ is symmetric and its only nonzero entries are
+\[
+ (H_D)_{13}=tuv,\quad (H_D)_{15}=-tu,\quad
+ (H_D)_{34}=rtuv,\quad (H_D)_{35}=-artv.           \tag{RD5}
+\]
+Indices in RD5 refer to the displayed order in RD2 and start at one.
+This explicitly resolves the failure of the ungauged matrix
+$\partial_DG-dd^T$ to be divisible by $j$.
+
+Let $G^{(0)}=G|_{D=0}$ denote a formal matrix substitution, with every
+other source coefficient kept at its actual value. This is not a
+physical modified source and no physicality theorem is applied to it.
+Because the term involving $s$ vanishes exactly on the physical roots,
+RD4 gives the entire-parent identity
+\[
+ F/4=D L_D^2+\mathcal R^T\{G^{(0)}+DjH_D\}\mathcal R.
+                                                               \tag{RD6}
+\]
+The first-normal and hard-block entries in RD4 are part of this identity,
+not merely its scalar restriction. No inverse of $u$, $v$, $j$, or a
+state coordinate was used in deriving RD3--RD6.
+
+\paragraph{The bounded $D$-free matrix through the $a$ opening.}
+Normalize only the first two roots in $G^{(0)}$ initially, by
+$\widehat\xi=\sqrt n\,\xi$ and $\widehat\eta=\sqrt A\,\eta$.
+The resulting matrix, in
+$(\widehat\xi,\widehat\eta,R_1,R_2',T)$, is a finite polynomial in
+$u,v$ with bounded pure-source coefficients. Here is the complete
+coefficient check needed for this assertion.
+
+The hard entries after $D=0$ are
+\begin{align*}
+ h_{xx}/n&=(1+U)(1+V)+[m+UV/2+(1+V)/2]/n,\\
+ h_{xy}/\sqrt{nA}&=-uv(m+1/2)/\sqrt{nA},\\
+ h_{yy}/A&=(1+U)(1+V)
+       +[C(1+V)+1/2+mUV+(\alpha+1/2)(1+U)V]/A.
+\end{align*}
+Every added coefficient is bounded and has zero residue.
+In the first normal, the complete WA6 parameters now have the forms
+\[
+ p_0=t(nr+r/2),\quad p_1=t(nr+r/2),\quad
+ q_1/a=nr+Bp_1,
+\]
+\[
+ f_x=-mh+l/2-p_0-q_1,
+ \quad (-m+q_1U)/a=-a\mu+(nr+Bp_1)U.
+\]
+They are bounded before multiplication by $1/\sqrt n$.
+In the complete second normal, all WA7 coefficients involve only
+the bounded products $Ah,m,C,\alpha,r,h$, and
+\[
+ q_y/a=-k_z-(Ah)/t-Bk_{uv}
+\]
+is bounded. Multiplication by $1/\sqrt A$ therefore bounds that
+entire normal row as well. No ratio $n/A$, $A/n$, $h/r$, or $r/h$
+appears.
+
+For the scalar block use the exact WE5 expressions with $D=0$.
+All occurrences of $n$ are through $nr^2=(nr)r$, and all occurrences
+of $A$ are through $Ah^2=(Ah)h$. The only possible new $a$ denominator
+is
+\[
+ Q_*=(b_2-\alpha_*)/a,\quad
+ b_2=2a^2\mu h+C(1-h)^2+(Ah)h+(B^2\alpha_*+1/2)h^2. \tag{RD7}
+\]
+The exact WE1 expressions for $b_2$ and $\alpha_*$ involve no $D$
+and no $j$ denominator. At $a=0$ their difference vanishes identically
+for arbitrary $B,h,r,t$. Its cleared numerator is consequently
+divisible by $a$; the canceled denominator at $B=h=r=0,t=1$ is
+$2(a-1)(a+1)$, a unit for $0\le\rho<1$. The divided numerator
+vanishes at that joint corner for every $a$. Hence $Q_*$ is bounded
+(in fact infinitesimal), independently of $a,h,r,j$ rates.
+This proves the bound on
+\[
+ f_s/a=\tfrac12[Q_*-a\,nr^2-aBt(n+1/2)r^2]
+\]
+and on the whole remaining scalar block. In particular the old
+assumption that $j$ was a unit is unnecessary after the exact $D$
+channel has been removed by RD6.
+
+\paragraph{Simultaneous normalization of all three hard scales.}
+Use the final five roots
+\[
+ \mathcal N=(\widehat\xi,\widehat\eta,\widehat D,R_2',T)^T,
+ \qquad\widehat D=\sqrt D\,L_D.                    \tag{RD8}
+\]
+Solving only the source-unit coefficient $l=1-h$ in RD3 gives
+\[
+ R_1=\frac1l\left\{
+ \frac{\widehat D}{\sqrt D}
+ +\frac{\widehat\eta}{\sqrt A}
+ -\frac{uv\widehat\xi}{\sqrt n}
+ -ruvR_2'+arvT\right\}.                            \tag{RD9}
+\]
+Every coefficient in RD9 is bounded and separated. In particular,
+independent small $r,h,j$ cause no ratio of their square roots.
+Let $P(u,v)$ be the explicit matrix mapping $\mathcal N$ to
+$\mathcal R$ according to RD9 and
+$\xi=\widehat\xi/\sqrt n$, $\eta=\widehat\eta/\sqrt A$.
+Then exactly
+\[
+ F/4=\mathcal N^T\widehat G\mathcal N,
+ \qquad
+ \widehat G=E_{33}+P^T\{G^{(0)}+DjH_D\}P.          \tag{RD10}
+\]
+The preceding bounds and RD9 prove that every coefficient of this
+finite testing-polynomial matrix is bounded pure source. The factor
+$Dj$ is a unit, while every entry of $H_D$ has positive testing degree.
+Thus its contribution to the residue at $u=v=0$ is zero.
+
+The normalized $n$ and $A$ hard diagonals have residue one. Since
+$1/\sqrt n$, $1/\sqrt A$, $1/\sqrt D$, $r,h$ are infinitesimal,
+the entire $R_1$ row of $P(0,0)$ has zero residue. The remaining
+source scalar diagonals have residues $\mu_0$ and $\alpha_{*,0}=C_0$.
+All cross entries have zero residue. Consequently
+\[
+ \overline{\widehat G}
+   =\operatorname{diag}\left(1,1,1,
+              \frac1{2(1-\rho^2)},
+              \frac{1-\rho}{2(1+\rho)}\right)\succ0. \tag{RD11}
+\]
+This is the full five-root Gram residue, not a Hessian or state slice.
+
+The positive pure-source matrix $\widehat G(0,0)$ has bounded inverse.
+Whiten it purely in the source field and apply the finite separated
+coefficient construction WA10 to the finitely many nonconstant
+testing monomials. Their values are infinitesimal for arbitrary
+independent infinitesimal $u,v$. This produces a finite SOS in
+$K_c\otimes_{\mathbb R}K_t$ without any mixed inverse or mixed radical.
+The argument includes either zero test and both signs because all
+identities are polynomial in $u,v$. Applying it to real and imaginary
+state parts proves the complex-state statement.
+
+\paragraph{Verification boundary.}
+The focused checker imports only the established complete six-contact
+WA identity and WA10. It verifies the new entire $D$-matrix gauge,
+the physical syzygy, the exact original-event centering, the entire
+parent equality RD6, all fifteen normalized coefficient denominators
+at the joint opening, the full residue RD11, and the exact source
+quotient through $a=0$. Eighteen new exact checks pass. No numerical
+positivity test or unproved scalar-to-parent lift is used.

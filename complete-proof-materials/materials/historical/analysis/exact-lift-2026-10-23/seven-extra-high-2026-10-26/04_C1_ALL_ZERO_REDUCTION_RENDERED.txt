@@ -1,0 +1,151 @@
+      Q222 C1 All Zero Sixth Root Reduction 2026 10 26
+
+
+
+ 
+
+
+Native C1: all-zero-compatible sixth-root scalar reservoir and exact state-coupling matching
+Scope (26 October 2026). Exact, analytic statements applying to every finite strict native C1 contact, with the full four-state parent and independent source and testing coordinates. This document proves an explicit strict Gram for the entire scalar contact ideal, an exact root basis satisfying the two deterministic corner zeros and the moving contact, and constructive surjectivity for all three state couplings. It reduces a sufficient sixth-root admission claim to one explicit 36-by-36 Schur domination problem. That domination is not proved, and the full uniform C1 admission theorem remains open. The 36-by-36 condition is sufficient, not necessary. It must not be cited as a completed lift.
+Pinned source evidence: latex/chapters/04_geometry.tex, SG2/SG3/SG7, latex/certificates/c1_short.tex, NC1--NC4, CONTACT_SCALAR_GRAM.md, C1_POLYNOMIAL_OBSTRUCTION.md, EXACT_LIFT_ROUTE.md.
+1. Exact regression against the failed three-channel allocation
+The given rational native C1 source has (lambda,n)=(0,0) and
+$(d,m,C,A,D,\alpha,\beta)=(7301/540,40/9,2,2891/135,4699/1080,81/40,49/1080),
+\qquad (u_c,v_c;\psi_c)=(1,1;1,-2/5,1/8,1).$In the complete SG2 parent F=psi^T P psi, exact expansion gives P_WW(0,0)=0, the full first W row at (0,0) equals zero, and P(1,1) psi_c=0. Reconstruct the earlier allocation with s=u-1,t=v-1, contact scalar gamma=q^T G q, G=[[K,g],[g^T,f]], rho=K^{-1}g, sigma=f-g^T K^{-1}g, B_2=j_01+j_02 t, B_1=j_10+j_20 s+(j_11-rho_1 j_10-rho_2 j_01)t, and w as in the old three-channel reduction. The exact results are
+$B_{2,W}(0,0)=-413/9,\qquad
+(H-BK^{-1}B^T-\sigma^{-1}ww^T)_{WW}(0,0)
+=-\frac{136060499747820067655375429183840}{4375356724835654725138132413567}<0.$A positive square cannot have that nonzero W coefficient at a zero of the full parent. This excludes the specified allocation, not a source-uniform syzygy repair or the fixed sixth-root cone. No use of the old remainder is made below.
+2. What all compulsory zeros demand
+For lambda=n=0, the full parent is
+$\begin{aligned}
+F_c={}&4m(vW-X+uvY-uZ)^2+4C(1+v^2)(uW-Y)^2
++4A(1+u^2)(1+v^2)Y^2\\
+&+(4D+2d)(uW+uvX-Y-vZ)^2+(4\alpha+2d)(1+u^2)(vY-Z)^2\\
+&+(4\beta+2d)(1+v^2)(X+uZ)^2-2d(1+u^2)(1+v^2)Z^2.
+\end{aligned}$Besides the noncommuting contact, every source has the two deterministic corner zeros:
+(u,v)=(0,0), state e_W=(1,0,0,0);
+(u,v)=(infinity,0), state e_X=(0,1,0,0), with the degree-2 projective normalization in u.
+The diagonal entries of the WXY principal block are
+$\begin{aligned}
+H_{WW}&=4mv^2+(4C+4D+2d)u^2+4Cu^2v^2,\\
+H_{XX}&=4(m+\beta)+2d+(4\beta+2d)v^2+(4D+2d)u^2v^2,\\
+H_{YY}&=4(A+C+D)+2d+4Au^2+[4(A+C+\alpha)+2d]v^2\\
+&\hspace{12mm}+[4(A+\alpha+m)+2d]u^2v^2.
+\end{aligned}$Set r=(u/u_c)^(1/6), s=(v/v_c)^(1/6), with pure-source rescalings, and use the source-only state shear psi=(xi+xi_c Z,Z), xi=(xi_W,xi_X,xi_Y). Thus
+$F_c=\xi^T H\xi+2Z\zeta^T\xi+\gamma Z^2,
+\quad \zeta=H\xi_c+P_{WXY,Z},\quad \gamma=\psi_c^TP\psi_c.$At source contact (r,s)=(1,1), xi=0,Z=1, so only a Z-feature needs to vanish at contact. The W, X, Y polynomial coefficients in individual square roots are unconstrained there except by the root space. Each root must belong to
+$\begin{aligned}
+\mathcal U_W&=\operatorname{span}\{r^is^j:0\le i,j\le6,\ i+j\ge6\}\quad(28),\\
+\mathcal U_X&=\operatorname{span}\{r^is^j:0\le i,j\le6,\ i\le j\}\quad(28),\\
+\mathcal U_Y&=\operatorname{span}\{r^is^j:0\le i,j\le6\}\quad(49),\\
+\mathcal E&=\{p\in\mathbb R[r,s]_{\le(6,6)}:p(\pm1,\pm1)=0\}\quad(45).
+\end{aligned}$The first two spaces follow from the exact half-Newton polygons of the strict positive diagonal coefficients. The W support ensures zero at (0,0,e_W); the X support forbids r^6s^0, ensuring zero at the second projective corner. Averaging squares under r->-r,s->-s permits one parity per root, and every parity root vanishing at (1,1) must vanish at all four lifted signed contact points. Hence the last space is precisely the Z-root space, and there is no other compulsory linear vanishing condition within the full positive-grid fixed span. This is an exact SOS-root description, not a positivity claim.
+Explicit monic contact basis
+Let E be the 45-element column of polynomials
+$\boxed{
+\mathcal E_1=\{(r^2-1)r^is^j:0\le i\le4,\ 0\le j\le6\},\quad
+\mathcal E_2=\{(s^2-1)r^is^j:i=0,1,\ 0\le j\le4\}.}$For any polynomial p of bidegree at most (6,6), Euclidean division by r^2-1 gives a unique p=(r^2-1)Q+R_0(s)+rR_1(s) with deg_r Q <=4. Requiring vanishing at (±1,±1) makes R_0,R_1 divisible by s^2-1, with quotient degree at most four. This proves unique coordinates in the basis above, without a mixed inverse.
+After parity splitting, the complete four-state basis sizes are
+(i mod 2,j mod 2)WXYZ contact idealtotal
+(0,0)1010161551
+(0,1)66121135
+(1,0)66121135
+(1,1)669829
+
+
+
+
+This supplies a contact-and-two-corner-compatible explicit basis behind the inspected 51/35/35/29 rank theorem. The homogeneous corner at infinity is handled at the polynomial leading-face level, not by testing a divergent numerical coordinate.
+3. New theorem: strict scalar Gram in every contact parity
+The established native contact scalar theorem says gamma=q^T G q, G \succ0, with q=(u-u_c,v-v_c,(u-u_c)(v-v_c)). Put a=r^6-1,b=s^6-1, Q=(a,b,ab)^T. Then
+$\gamma=Q^T\widehat GQ,\qquad
+\widehat G=\operatorname{diag}(u_c,v_c,u_cv_c)\,G\,\operatorname{diag}(u_c,v_c,u_cv_c)\succ0.$Take the pure-source number
+$\lambda=\bigl(2\operatorname{tr}(\widehat G^{-1})\bigr)^{-1}>0,
+\qquad\widehat G-\lambda I\succ0.$Then gamma=lambda gamma_0+Q^T(\hat G-lambda I)Q with gamma_0=a^2+b^2+a^2b^2. The last term is a sum of three squares in the even-even parity and its roots belong to E.
+Put S(r)=1+r^2+r^4 and T(r)=1+(r^6-1)^2/2. The exact scalar identity is
+$\boxed{\gamma_0=(r^2-1)^2S(r)^2T(s)+(s^2-1)^2S(s)^2T(r).}
+\tag{A}$Two explicit univariate positive-definite matrices represent its factors:
+$S(r)^2=(1,r,\ldots,r^4)D_5(1,r,\ldots,r^4)^T,
+\quad D_5=\operatorname{diag}(1,2,3,2,1)\succ0,$$T(r)=(1,r,\ldots,r^6)Q_7(1,r,\ldots,r^6)^T,$$Q_7=\begin{pmatrix}
+\frac32&0&-\frac1{32}&0&-\frac1{32}&0&-\frac{17}{32}\\
+0&\frac1{16}&0&0&0&0&0\\
+-\frac1{32}&0&\frac1{16}&0&0&0&-\frac1{32}\\
+0&0&0&\frac1{16}&0&0&0\\
+-\frac1{32}&0&0&0&\frac1{16}&0&-\frac1{32}\\
+0&0&0&0&0&\frac1{16}&0\\
+-\frac{17}{32}&0&-\frac1{32}&0&-\frac1{32}&0&\frac12
+\end{pmatrix}\succ0.$Its successive leading minors are 3/2, 3/32, 95/16384, 95/262144, 47/2097152, 47/33554432, 381/1073741824, all positive; multiplication gives exactly 3/2-r^6+r^12/2.
+The two tensor-product Grams in (A) are positive definite on the 35 roots (r^2-1)r^is^j with (i,j) in [0,4]x[0,6] and the other 35 roots (s^2-1)r^is^j with (i,j) in [0,6]x[0,4], respectively. Write their 70-vector as T70=A E45, where A is the fixed 70x45 integer coefficient matrix obtained by the displayed monic divisions. Since the first 35 roots and ten of the latter 35 are precisely the independent E45, rank(A)=45. Therefore
+$\boxed{K_{45}=A^T\operatorname{diag}(D_5\otimes Q_7,Q_7\otimes D_5)A\succ0,\qquad
+\gamma_0=E_{45}^TK_{45}E_{45}.}
+\tag{B}$Thus gamma has an explicit source-only Gram strictly positive on all 45 dimensions of the scalar contact ideal. Each of its parity restrictions of orders 15,11,11,8 is positive definite. No uniform lower eigenvalue bound is asserted when a source degenerates.
+This is stronger than the old three-square scalar identity: that rank-three identity did not certify interiority relative to the full contact-zero sixth-root space.
+4. Every full-state coupling has an exact fixed-space allocation
+The three components of zeta are biquadratic in u,v. Let
+$\zeta_l(r,s)=\sum_{p,q=0}^2 c_{l,pq}\,r^{6p}s^{6q},\qquad \sum_{p,q}c_{l,pq}=0
+\quad(l=W,X,Y).$The sum vanishes by the actual contact kernel P(u_c,v_c) psi_c=0. Two extra identities hold directly from SG2, before using the source dictionary:
+$\boxed{c_{W,00}=0,\qquad c_{X,20}=0.}
+\tag{C}$The first follows from the zero first W row of P(0,0); the second from the absence of u^2 v^0 in the complete X row, including all couplings. These are the two deterministic-corner constraints.
+Let z_pq=r^(6p)s^(6q), and use z_11=r^6s^6 as anchor contact monomial. Then
+$\zeta_l=\sum_{(p,q)\ne(1,1)} c_{l,pq}(z_{pq}-z_{11}).
+\tag{D}$For each (p,q) in this sum choose an anchor (a,b) in {0,1}^2 such that both (p,q) and (1,1) lie inside the unit square (a,b)+{0,1}^2. The following fixed choices work (within each entry, all vertex pairs use the displayed anchor):
+StateMissing target vertexVertex pairs (p,q)Anchor (a,b)
+W(0,0)(1,0),(2,0),(2,1)(1,0)
+W(0,1),(0,2),(1,2)(0,1)
+W(2,2)(1,1)
+X(2,0)(0,0),(1,0),(0,1)(0,0)
+X(0,2),(1,2)(0,1)
+X(2,1),(2,2)(1,1)
+Ynone(0,0),(1,0),(0,1)(0,0)
+Y(2,0),(2,1)(1,0)
+Y(0,2),(1,2)(0,1)
+Y(2,2)(1,1)
+
+
+
+
+Every difference has the exact product decomposition
+$\boxed{
+z_{pq}-z_{11}=
+\underbrace{r^{6a}s^{6b}}_{\in\mathcal U_l}
+\underbrace{\bigl(r^{6(p-a)}s^{6(q-b)}-r^{6(1-a)}s^{6(1-b)}\bigr)}_{\in\mathcal E,\ \deg\le(6,6)}.}
+\tag{E}$In particular, the allowed W anchors all satisfy a+b>=1 and the allowed X anchors satisfy a<=b. Equation (E) provides, for each component of zeta, a source-only, coefficient-linear formula for a cross Gram block B_* between the 36 even-even WXY roots and the 15 even-even scalar contact roots. The scalar differences are expressed in the 15-dimensional parity-even subbasis of E by monic division. The other three parity cross blocks can be zero.
+This establishes the linear coupling identities for the entire full parent, without relying on 406-rank numerics. It works for arbitrary independent tests and every state. It also proves that the two deterministic corner constraints are exactly the right graph deletion conditions for this allocation.
+5. The globally positive H block is already a Gram
+The full WXY block, after the source-only state shear, is exactly the Z=0 specialization of SG2:
+$\begin{aligned}
+\xi^TH\xi={}&4m(v\xi_W-\xi_X+uv\xi_Y)^2
++4C(1+v^2)(u\xi_W-\xi_Y)^2
++4A(1+u^2)(1+v^2)\xi_Y^2\\
+&+(4D+2d)(u\xi_W+uv\xi_X-\xi_Y)^2
++(4\alpha+2d)(1+u^2)v^2\xi_Y^2
++(4\beta+2d)(1+v^2)\xi_X^2.
+\end{aligned}
+\tag{F}$Expanding positive products 1+u^2, 1+v^2 yields an explicit PSD Gram X_H in the 36 even-even WXY features only. All W and X monomials used satisfy their Newton support restrictions; every root vanishes at the compulsory zeros after translating back to the original state.
+Combining the exact H Gram (F), the exact coupling allocation (D)--(E), and the strict scalar Gram (A)--(B) gives an exact full-state Gram identity in the 51/35/35/29 all-zero basis, with no multiplier and with every polynomial coefficient matched. Its Gram is symmetric but not known to be PSD because of the cross blocks. There is no claim that the off-diagonal allocation produces positive squares by itself.
+6. The precise one-block Schur repair that would finish C1
+Let U denote the column of 36 even-even WXY features, E0 the 15 even-even scalar ideal features, and let S0(c) \succ0 be the explicit 15x15 scalar Gram from Section 3. Let B_*(c) be the constructive 36x15 cross block from Section 4, and X_H(c)\succeq0 the explicit 36x36 H Gram from Section 5. All depend only on the source, not on independent testing variables. Their coefficient identities are
+$U^TX_HU=\xi^TH\xi,
+\qquad U^TB_*E_0=\zeta^T\xi,
+\qquad\sum_{\pi} E_\pi^TS_\pi E_\pi=\gamma Z^2.$Consider the single source-dependent but finite, exact algebraic implication
+$\boxed{\forall c\in\mathsf C_1^{\rm strict}\ \exists N\in\mathbb S^{36}:\quad
+U^TNU\equiv0,
+\qquad X_H+N-B_*S_0^{-1}B_*^T\succeq0.}
+\tag{C1-36}$U^TNU=0 means every coefficient of every state monomial vanishes, including all unwanted fractional words. It is a fixed finite system of linear equations in the entries of N, not a pointwise test. A source-only inverse of the positive definite S0 is permitted. If (C1-36) holds, form
+$\boxed{G_{00}=\begin{pmatrix}X_H+N&B_*\\ B_*^T&S_0\end{pmatrix}\succeq0,\qquad
+G_{01}=S_{01}\succ0,\quad G_{10}=S_{10}\succ0,\quad G_{11}=S_{11}\succ0.}$These four exact matrices give the complete sixth-root certificate for that source, including the contact and both deterministic zeros. They have orders 51,11,11,8 after retaining only the scalar components of the other parity blocks; padding them by zero WXY components returns the fixed orders 51/35/35/29. The block algebra is ordinary Schur complement and contains no testing-dependent cancellation. The new condition is far stronger than pointwise PSD and is not proved; it is sufficient but not necessary for sixth-root admission. It may fail for this fixed choice of scalar Gram and star couplings even if the full cone admits the source.
+One can weaken it, while still retaining a single 51-order PSD block, by permitting B to range over the fixed affine coefficient solutions U^T B E0=zeta^T xi; the matrix-selection problem is then \exists B,N: U^T(B-B_*)E0=0, U^TNU=0, X_H+N-B S0^{-1}B^T\succeq0. Equivalently, impose directly the affine LMI [[X_H+N,B],[B^T,S0]]\succeq0 plus those coefficient equations, avoiding the inverse. This is the most natural next sufficient uniform lemma.
+7. Relation to an actual source-affine lift
+The normalized variables and state shear are proof devices. Every function used is an exact linear combination of the original fixed testing functions
+$Z_6=\{u^{i/6}v^{j/6}\psi_l:0\le i,j\le6,\ l=W,X,Y,Z\},$with coefficients drawn entirely from the source field. The eventual source-affine candidate remains
+$K_6=\{c\in\mathbb R^9:\exists G\succeq0,\ \mathcal L(G)=\operatorname{coeff}(F_c)\},$where mathcal L is the fixed coefficient map of Z_6^T G Z_6 in the original source-independent monomial testing basis, and F_c is the SG2 parent, linear in the original nine weights. The moving-contact basis does not appear in this final pencil. Both inclusions follow if source admission is proved: every Gram gives global validity on positive angles; conversely admitting each required extreme contact and closed-face/event cone, then taking the established fixed-cone closure and source assembly, gives exactness. Neither the all-C1 admission nor the separate C2 admission is established here.
+Final status: The previous false completion is abandoned. The scalar contact part has a strict, explicit 45-dimensional sixth-root Gram; all three WXY-to-Z couplings match exactly with the correct corner and contact kernels; H is globally SOS with a 36-dimensional even-even Gram. What remains is the one-block Gram Schur domination (C1-36), or a less restricted full four-block PSD completion. There is no proof of either, and no sixth-root separator. No finite exact global Q222 lift is claimed.
+
+
+
+
+
+
+
+
+

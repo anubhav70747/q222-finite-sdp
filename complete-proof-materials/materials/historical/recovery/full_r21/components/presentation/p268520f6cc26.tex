@@ -1,0 +1,166 @@
+\chapter{Weak ii source alternatives}
+\label{component:p268520f6cc26}
+\noindent\textbf{Component }\path{p268520f6cc26}\par
+{\small\noindent Source: \path{R13/advances/weak_source/weak_ii_source_alternatives.tex}\par}
+{\small\noindent SHA256: \path{268520f6cc26c85a8b1785a7b36b1cac0c0cff2ce59142ad1e76834eecf22e4b}\par}
+{\small\noindent Inventory use: WII1-WII6\par}
+\medskip
+\section{Exact source alternatives on the weak-\texorpdfstring{$B$}{B} II face}
+\label{p268520f6cc26:sec:r8-weak-ii-source}
+This is an exhaustive source reduction, not a new generic all-tests
+admission. Use the original positive source (GE1), with
+$z,y,B\in\Inf_{>0}$, $B=H+L$, $0<H,r<1$, $L>0$,
+\[
+ a_c=1+zr,\quad S=a_c+L,\quad j=a_c-L/y>0,
+ \quad G=B+z(H+r-1)>0,
+\]
+and $B-zyr>0$, $n\geq0$. Write $T=B+zr$ and $g=G/B$.
+The already proved common-II source entry gives $\alpha$ weak on
+this entire face. All comparisons below are in the pure source field.
+The notation $f\asymp h$ means that both $f/h$ and $h/f$ are bounded.
+
+\paragraph{Uniform estimates before any shape specialization.}
+The exact positive formula for $\delta$ gives
+\[
+ \frac\delta{B+z}\sim1.
+\]
+Moreover $T\geq B$ and $T>z(1-H)$, by $G>0$, while $T\leq B+z$.
+Consequently $T/\delta$ is a positive bounded unit, uniformly without
+a bound on $z/B$. Since $a_c,S\sim1$, the original formulas imply
+\[
+ r(2n+1)=\frac{Ta_cS}{\delta}\asymp1,
+ \qquad \frac{AH}{y}=\frac{a_cTS}{2\delta}\asymp1.
+                                                               \tag{WII1}
+\]
+Also $0<g\leq1+z$, because $G\leq B+zH$ and $H\leq B$.
+The exact identity $z(1-r)=B+zH-G$ rewrites the original $m$ as
+\[
+ m=\frac{(1+y)a_cS}{2}\frac z\delta
+       \frac{1+zH/B-g}{g}.                       \tag{WII2}
+\]
+If $g$ is a unit, this is bounded. If $g$ is infinitesimal, then
+$z(1-r)/B\sim1$, so $z/(B+z)$ is a positive unit and
+$m\asymp1/g$. In particular there is no omitted intermediate
+large-$m$ case caused by an independent $z/B$ rate.
+
+\paragraph{Exactly which original coefficients are unbounded.}
+The following five equivalences hold on the complete weak-$B$ face:
+\[
+\begin{array}{c|l}
+\text{coefficient is unbounded}&\text{necessary and sufficient source condition}\\ \hline
+n&r\in\Inf\\
+m&G/B\in\Inf\\
+A&H/y\in\Inf\\
+C&L/(H+y)\in\Inf\\
+D&y/B\in\Inf\ \text{or}\ j\in\Inf.
+\end{array}                                                     \tag{WII3}
+\]
+The first three were proved in (WII1)--(WII2). For $C$, use
+\[
+ M=(1+z)T(H+y)-z(1+y)(1-r)L.
+\]
+It bounds $C$ above by a bounded multiple of $(H+y)/L$. If
+$L/(H+y)$ is infinitesimal, then $z/T$ is bounded and the subtracted
+term is infinitesimal relative to $T(H+y)$. Thus in that case
+$C\asymp(H+y)/L$ is unbounded. This proves both directions.
+
+For $D$, if $B/y$ is infinitesimal then $L/y$ is infinitesimal and
+$j\sim1$. The original formula directly gives $D=O(B/y)$, hence
+$D$ weak. If $B/y$ is noninfinitesimal, then $zyr/B$ is infinitesimal,
+and the exact positive numerator gives
+\[
+ D\asymp B/(yj).
+\]
+Here $j$ is bounded; $j$ infinitesimal forces $L/y\sim1$ and hence
+$B/y$ noninfinitesimal. These alternatives give precisely the last
+line of (WII3). This proof never replaces $B-zyr$ by $B$ in the
+region where that replacement need not be valid.
+
+\paragraph{The positive-total-scale intersection is explicit.}
+Put $a=H/B\in(0,1)$ and $\tau=y/B>0$. Every original coefficient is
+bounded if and only if all six quantities
+\[
+ \tau,\quad a,\quad1-a,\quad j,\quad r,\quad g
+ \quad\text{are positive bounded units}.          \tag{WII4}
+\]
+Indeed if $\tau$ is infinitesimal, then $C,D$ are unbounded; if
+$\tau$ is unbounded, then $C,A$ are unbounded. With $\tau$ a unit,
+(WII3) says respectively that boundedness of $A,C,D,n,m$ is
+equivalent to $a,1-a,j,r,g$ being units. Thus (WII4) is exact and
+includes arbitrary $z/B$. The original positive-total-scale theorem
+already admits this full six-unit interior. After intersecting with
+$\delta_{\rm tot}\in\Inf_{>0}$, at least one condition in (WII4)
+must fail, equivalently at least one line of (WII3) must occur.
+
+The shape alternatives can also be read as follows:
+\[
+\begin{array}{c|c|c|c}
+ y/B&C&A&D\\ \hline
+ \Inf&\text{unbounded}&\text{weak}&\text{unbounded}\\
+ \text{unit}&\text{unbounded iff }1-a\in\Inf&
+ \text{unbounded iff }a\in\Inf&
+ \text{unbounded iff }j\in\Inf\\
+ \text{unbounded}&\text{unbounded}&\text{unbounded}&\text{weak}.
+\end{array}                                                     \tag{WII5}
+\]
+In every row $n,m$ are governed independently by $r,g$ as in (WII3).
+The exact source inequalities and $n\geq0$ are still imposed; the
+table does not assert independent realizability of arbitrary shapes.
+
+\paragraph{The two-weak intersection and the four-product exit.}
+There is a stronger exact equivalence:
+\[
+ \boxed{\ C\in\Inf\quad\Longleftrightarrow\quad
+ r,g,H/y,j\in\Inf
+ \quad\Longleftrightarrow\quad n,m,A,D\text{ all unbounded}.\ }
+                                                               \tag{WII6}
+\]
+To prove the forward direction, the positive identity
+\[
+ M=(1+z)TH+yG+yzj+zrL(1+y)
+\]
+shows $H/L$ infinitesimal. Since $C$ is bounded, (WII3) makes
+$L/(H+y)$ a unit. Hence $L\asymp y$, $H/y$ infinitesimal, and
+$B\asymp y$. The same four positive summands now imply
+$G/\delta,zr/\delta,zj/\delta$ infinitesimal. The quantity
+$z/\delta$ cannot be infinitesimal: otherwise $B/\delta\sim1$
+and $G/\delta\sim1$, a contradiction. Thus $r,j$ are infinitesimal.
+The inequality $G>0$ then gives $B/z$ a positive-unit lower bound;
+$z/\delta$ a unit supplies its upper bound. Therefore $g=G/B$ is
+infinitesimal too.
+
+Conversely $r,g\in\Inf$ imply, by $G=B+z(H+r-1)$,
+\[
+ (1-g)B/z=1-H-r,\qquad B/z\sim1.
+\]
+If also $H/y,j\in\Inf$, then $L/y=a_c-j\sim1$ and
+$B/y\sim1$. All four positive summands in $M/(L\delta)$ are now
+infinitesimal, so $C$ is weak. Finally (WII3) gives one implication
+of the last equivalence. For its converse, $A$ unbounded makes
+$H/y$ infinitesimal and $B/y$ bounded, so $D$ unbounded must mean
+$j$ infinitesimal. The $n,m$ statements give $r,g\in\Inf$.
+
+The already admitted both-complementary-events-weak theorem removes
+the first intersection in (WII6). On the remaining directed face
+$C$ strong and $\alpha$ weak, at least one of $n,m,A,D$ is therefore
+bounded. Its product with $\alpha$ is infinitesimal. Consequently
+the four reciprocal-product exit
+\[
+ \alpha n,\quad\alpha m,\quad\alpha A,\quad\alpha D
+ \quad\text{all strong}
+\]
+is impossible throughout this directed weak-$\alpha$/strong-$C$
+II face. This is a uniform statement, not a failed-product example.
+
+\paragraph{What this does and does not remove.}
+The exact all-unit region (WII4) is already admitted by the
+positive-total-scale theorem, and the exact four-large intersection
+(WII6) is already admitted by the two-weak theorem. Individual real
+rational source curves remain covered by the separate curve theorem.
+The latter does not automatically admit these generic multiparameter
+opening faces. Adjacent dominant-event results require their actual
+normalized coefficient support and the stated testing-angle hypotheses;
+two unbounded adjacent coefficients alone do not supply those premises.
+Thus this reduction identifies the genuine source alternatives still
+requiring a full-parent argument. It does not establish that their
+intersection with the entire global complement is nonempty or empty.

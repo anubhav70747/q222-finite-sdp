@@ -1,0 +1,101 @@
+Q222: what the fixed 13-word NPA W2 certifies on maximally entangled C2 contacts
+Reference: anubhav70747/q222-finite-sdp, commit 1a9ef48715afa36289a73b1cc5d12d0b0df742b2. This note does not redo the published nine-word obstruction, C1 obstruction, or fixed-fiber lift.
+Theorem
+Let
+$W_2=(I,A_0,A_1,B_0,B_1,A_0A_1,A_1A_0,B_0B_1,B_1B_0,A_0B_0,A_0B_1,A_1B_0,A_1B_1).$Entire equal-angle ME C2 surface excluded. Let r,x>0, r+x+3rx<=1, and z=x/r. Every corresponding native C2 source f_c with d=1, including the n=0 boundary, is not a universal sum of Hermitian squares in span(W2).
+Unequal-angle admission is possible. At (a,r,z)=(2,1/2,1/16), the native source$(d,n,m,C,A,D,\alpha)=(1,43/299,77/1495,891/598,385/299,119/598,9/598)$does admit an exact universal W2 certificate with a strictly positive 7x7 contact-compressed Gram given below.
+Genuinely unequal failures also occur. The W2 certificate cone is closed, and native source parameters vary continuously. Nonmembership at any strict equal-angle source therefore persists in a parameter neighborhood, which contains a != 1. At the n=0 equal-angle seed, the implicit-function theorem additionally gives nearby unequal-angle n=0 failures.
+These results rule out W2 as a uniform solution for the entire ME C2 family. The previous exact order-seven source/behavior pencil remains necessary at least for its equal-angle rays if no stronger NPA word list is retained.
+1. Universal reduction and the short eleven-root basis
+The two deterministic zeros are (A0,A1,B0,B1)=(1,1,1,1) and (-1,1,-1,1). Their common annihilator inside span W2 has basis
+$\begin{aligned}
+h=(\;&A_1-I,\ B_1-I,\ A_0B_0-I,\ A_1B_1-I,\ B_0-A_0,\ A_0B_1-A_0,\ A_1B_0-A_0,\\
+& A_0A_1-A_0,\ A_1A_0-A_0,\ B_0B_1-B_0,\ B_1B_0-B_0\;)^T.
+\end{aligned}$If f_c = W2^dag G W2, G >= 0, vanishes at both deterministic assignments, then G annihilates those evaluation vectors. Therefore there is a real 11x11 PSD Gram Q with f_c=h^dag Q h. A complex Gram may be averaged with its conjugate.
+At a quantum contact, put T=(h_1 psi,...,h_11 psi). The expectation is zero, hence positivity forces TQ=0. If rank T=4, choose a 11x7 basis N of its kernel. Then Q=N S N^T with S >=0, and the candidate identity becomes
+$ f_c=(N^T h)^\dagger S(N^T h)$in the universal group algebra, where the only reductions are A_i^2=B_j^2=I and [A_i,B_j]=0.
+2. A kernel basis for the whole equal-angle surface
+Set a=1, x=rz,
+$M(t)=\frac{(1-t^2)\sigma_z+2t\sigma_x}{1+t^2},\quad
+ A_0=B_0=\sigma_z,\quad A_1=B_1=M(\sqrt z),\quad
+\psi=(1,-r\sqrt z,r\sqrt z,1)^T.$The native sources have
+$\begin{gathered}
+d=1,\quad n=\frac{1-r-x-3rx}{4(r+x+2rx)},\quad
+m=\frac{(1-r)(1+x)}{4(r+x+2rx)},\\
+A=\frac{(1+r)(1+x)}{4(r+x+2rx)},\quad
+D=\frac{(1+r)(1-x)}{4(r+x+2rx)},\\
+C=\frac{r^2(1+x)}{(1-r)(r+x+2rx)},\quad
+\alpha=\frac{x^2(1+r)}{(1-x)(r+x+2rx)},\quad \lambda=\beta=0.
+\end{gathered}$The 4x4 contact-action pivot on root columns P=(1,2,3,5) is
+$\det T_{[:,P]}=-\frac{64r^3z^2}{1+z}\ne0.$Put R=r(1+z), p=(1+r)(1-rz), q=1+r^2z, s=(r-1)(1+rz). The exact kernel basis is
+$N=\frac1R
+\begin{pmatrix}
+0&p&q&q&p&p&q\\
+0&-q&s&s&-q&-q&s\\
+-R&-p&-s&-q&q&q&-q\\
+R&0&0&0&0&0&0\\
+0&0&-R&-R&0&R&0\\
+0&R&0&0&0&0&0\\
+0&0&R&0&0&0&0\\
+0&0&0&R&0&0&0\\
+0&0&0&0&R&0&0\\
+0&0&0&0&0&R&0\\
+0&0&0&0&0&0&R
+\end{pmatrix}.$The bottom seven free rows (4,6,7,8,9,10,11) form I_7. Direct Pauli multiplication gives TN=0. All denominators in the displayed basis are nonzero on the claimed domain.
+3. Five universal coefficient identities contradict positive semidefiniteness
+Fix the row/column order of S to be k=N^T h. For each reduced universal group word w, compare coefficients in
+$\sum_{i,j=1}^7 S_{ij}k_i^\dagger k_j=f_c.$An exact calculation over Q(r,z) has 41 distinct word rows and a coefficient rank of 23. Using upper-triangle coordinate order (S11,S12,...,S17,S22,...,S77), the five free coordinates may be chosen as (S44,S56,S57,S66,S77). Direct elimination yields the following necessary identities (all other entries are irrelevant to the contradiction):
+$\begin{aligned}
+S_{11}&=S_{56}-2S_{57}-S_{77},& S_{55}&=-S_{56},\\
+S_{15}+S_{17}&=0,& S_{14}=S_{45}=S_{16}=S_{67}&=0,\\
+S_{47}&=-S_{77},\\
+S_{35}&=\frac{r(1+r)(1+z)^2}{32(1-r)(1+z+2rz)}>0.&
+\end{aligned}
+\tag{*}$The complete coefficient construction and exact row reduction are in Q222_W2_C2_exact_checker.py.
+Let v=e1+e5+e7. From (*)
+$v^T S v=S_{11}+S_{55}+S_{77}+2(S_{15}+S_{17}+S_{57})=0.$If S>=0, then Sv=0. However (*) gives
+$(Sv)_4=S_{14}+S_{45}+S_{47}=-S_{77},\qquad
+(Sv)_6=S_{16}+S_{56}+S_{67}=S_{56}=-S_{55}.$Therefore S77=S55=0. Every positive semidefinite matrix with zero fifth diagonal entry has zero fifth row/column, implying S35=0, contradicting (*). No PSD Gram exists.
+The only denominators introduced in the exact row reduction are products of r,1-r,1-rz,1+r,1+rz,1+z,1+z+2rz, which are nonzero under r,x>0 and r+x+3rx<=1. In particular nothing divides by n. The n=0 curve is fully included.
+A particularly simple n=0 source is obtained at r=1/3,z=1:
+$ (d,n,m,C,A,D,\alpha)=(1,0,1/4,1/4,1/2,1/4,1/4).$Here S35=1/32>0 provides the same contradiction. At r=1/4,z=1, the strict source is (1,1/8,3/8,1/6,5/8,3/8,1/6) and S35=1/48.
+4. Exact non-equal-angle W2 membership, with a printed PSD block
+Set a=2,r=1/2,z=1/16. The contact is u=1/4, v=1/2, psi=(1,-1/8,1/8,1). In the same eleven-root basis, the following 11x7 matrix spans the contact annihilator:
+$N_* = \begin{pmatrix}
+1/6&17/10&6/5&6/5&4/3&17/10&221/150\\
+-16/51&-6/5&-22/85&-22/85&-26/51&-6/5&-58/75\\
+-175/68&-15/4&33/34&-65/34&65/34&13/4&-13/4\\
+1&0&0&0&0&0&0\\
+175/204&5/4&-45/34&-45/34&-65/102&9/4&13/12\\
+0&1&0&0&0&0&0\\
+0&0&1&0&0&0&0\\
+0&0&0&1&0&0&0\\
+0&0&0&0&1&0&0\\
+0&0&0&0&0&1&0\\
+0&0&0&0&0&0&1
+\end{pmatrix}.$The 7x7 symmetric rational matrix below is an exact Gram certificate. Each row is printed explicitly, with symmetry making the normalization unambiguous:
+Plain text
+
+
+
+S* = [
+[ 49146259/1004640000, -1935923/80371200,    288229/4018560,             0,       -136427/10046400,             0,       -552231/26790400 ],
+[ -1935923/80371200, 12689303/345644000,   -11939/229632,     -422431/975936000,           0,          0,       -98483/11481600 ],
+[ 288229/4018560,     -11939/229632,       3015449/12629760,              0,        6503/114816,    -614509/12629760,                0 ],
+[ 0,                      -422431/975936000, 0,                         1/16,         0,           -1309/229632,         -561/12800 ],
+[ -136427/10046400,       0,                 6503/114816,                0,           5/48,          -1/32,                  3/52 ],
+[ 0,                        0,              -614509/12629760,     -1309/229632,     -1/32,           1/40,                  0 ],
+[ -552231/26790400, -98483/11481600,       0,                  -561/12800,       3/52,           0,                     11/128 ]
+]
+
+The exact identities are
+$ f_{c_*}=(N_*^T h)^\dagger S_*(N_*^T h),\qquad S_*\succ0.$Verification is universal: all 41 reduced-word coefficients match, including the 32 forbidden coefficients. It is not merely equality of Pauli matrices at contact. Sylvester's criterion can be checked without printing large numerators: the seven successive rational LDL^T pivots are respectively strictly greater than
+$\left(\frac1{25},\frac1{50},\frac1{10},\frac1{20},\frac1{20},\frac1{250},\frac1{1000}\right).$The accompanying exact checker asserts each inequality over rationals; no numerical PSD solver or sample-based inference enters the proof. Therefore W2 really does admit some unequal-angle maximally entangled C2 extreme inequalities. This is a certificate for one contact ray, not a uniform representation of an open parameter region or the full three-parameter family.
+5. Limits, persistence, and one modest next word list
+For the universal algebra generated by W2, all 13 listed words are distinct unitary group words. Thus in any representation f=W2^dag G W2, the identity coefficient equals tr(G) (off-diagonal word products cannot reduce to identity). Bounded coefficient sequences with PSD Grams consequently have bounded Grams. The W2 SOS coefficient cone is closed. Since the native coefficient maps are continuous, all strict equal-angle nonmember rays have neighborhoods of nonmembers that include unequal-angle parameters.
+At a=1,z=1,r=1/3, n=0. Differentiating the equal-angle source gives partial_r n=-1/(8r^2)=-9/8 at that point. The full native rational source map is analytic, so the implicit-function theorem produces a nearby two-dimensional n=0 contact surface. The nonmembership neighborhood intersects it at points with a != 1. Hence unequal-angle n=0 contacts also fall outside W2.
+One natural single modest enlargement is W_{2+mix}, adjoining the eight mixed-party words of total length three:
+$ A_0A_1B_j,\ A_1A_0B_j\quad(j=0,1),\qquad
+ A_iB_0B_1,\ A_iB_1B_0\quad(i=0,1).$This yields 21 fixed words. These mixed cubic words introduce independent contact-annihilating directions that are absent in W2; they need not preserve the five identities (*). This is an algebraic opportunity, not a proof that 21 words suffice. The first unproved implication is a universal coefficient identity with a PSD Gram for every a,r,z in the strict native domain, including n=0. No increase of NPA word lists beyond this one candidate was attempted here.
+Project implication: retain the already-proved order-seven equal-angle source/behavior cone regardless of what the larger word list may eventually prove. Do not infer a full Q222 lift from the present subfamily classification.
+

@@ -1,0 +1,43 @@
+\chapter{A pure-testing sign exit for the complete original parent}
+\label{component:p894ae380fb8a}
+\noindent\textbf{Component }\path{p894ae380fb8a}\par
+{\small\noindent Source: \path{R17/proofs/root/core_sign_lemma.tex}\par}
+{\small\noindent SHA256: \path{894ae380fb8a6a6568e79fb489902d4eea8708cfcf39cc7256062b274d6c91db}\par}
+{\small\noindent Inventory use: entire source-free sign lemma | C14\_\allowbreak{}ENTIRE\_\allowbreak{}ORIGINAL\_\allowbreak{}PARENT\_\allowbreak{}GRAPH; precise subordinate uses retained below\par}
+\medskip
+\section{A pure-testing sign exit for the complete original parent}
+The source event coefficients are nonnegative and $d>0$ is pure source.
+It suffices to treat the quarter-core at $d=1$,
+\[
+ Q_0=\tfrac12\{(uW+uvX-Y-vZ)^2+D_u(vY-Z)^2
+                   +D_v(X+uZ)^2-D_uD_vZ^2\}.
+\]
+All variables in $Q_0$ belong to the testing field. Put
+$b=1+v^2+u^2v^2$ and $\Delta=b^2-u^2v^2$.
+The hard matrix on $(X,Y)$ is
+\[
+ H=\tfrac12\begin{pmatrix}b&-uv\\-uv&b\end{pmatrix}\succ0.
+\]
+Indeed $b-|uv|=(|uv|-1/2)^2+3/4+v^2>0$.
+The exact Schur complement on $(W,Z)$ is
+\[
+ S=\frac{D_uD_v}{2\Delta}
+ \begin{pmatrix}u^2v^2&-uvb\\-uvb&u^2v^2\end{pmatrix}.
+\]
+The inverse in this calculation is pure testing and is legitimate.
+Thus $uvWZ\le0$ implies $Q_0\ge0$: the diagonal terms of $S$
+are nonnegative and its cross contribution is also nonnegative.
+At each such testing point, $Q_0$ is a nonnegative element of a real
+closed field and has a pure-testing square root. Restoring $d$ and
+all nonnegative source-weighted original events gives finite tensor
+SOS directly. Literal $u=0$ or $v=0$ is included.
+
+The exact sign gauges can always arrange $u,v\ge0$. Reversing the
+sign of $u$ together with $Y,Z$ preserves every original squared
+packet, as does reversing the sign of $v$ together with $X,Z$.
+Consequently any remaining real state in the nontrivial local
+argument satisfies $WZ>0$. A certificate valid for every such state,
+combined with this exit, covers all real states. Applying the real
+assertion to real and imaginary parts covers complex states.
+This is a pure-testing routing lemma, not a comparison with a source
+scale and not a new source-shape admission by itself.

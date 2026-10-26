@@ -1,0 +1,395 @@
+% New proof, 2026-10-22. No historical-byte identity is claimed.
+\section{R2 with an unbounded source ratio and a bounded relative current}
+\label{sec:r2-thin-new}
+
+\paragraph{Statement and domain.}
+Use the actual original weak-C2 source RER1--RER8, normalized by
+$d=1$, with $\lambda=\beta=0$ and every original strict gap.
+Suppose $t,a$ are positive unbounded, while $B,aB,tB$ are
+positive infinitesimals, and put $e=1-r$.  Assume
+\[
+             \lambda_n=n/(tB)=O(1),\qquad n\geq0.       \tag{TU1}
+\]
+The entire original parent is tensor SOS for every independent
+projective test and every state.  Literal $n=0$ is included.
+No comparison of a testing quantity with a source quantity is made.
+This theorem treats precisely this source sector; it is not a
+completion of the other R2 sectors or the global finite-lift proof.
+
+The bounded-Gram and finite toric allocation lemmas used below are
+the actual retained SC16--SC20 and QI1--QI10 proofs.  We use their
+printed finite algebra and prove its source bounds on the present
+domain.  We do not apply the physical C1 theorem to a formal source
+whose event coefficient could be negative.
+
+\subsection{An exact common contact and bounded source comparison}
+
+Set
+\[
+ S=1/t,\quad z=1/a,\quad q=a(tB),\quad w=ae,\qquad
+ b=\sqrt S,\quad g=\sqrt z,\quad c=\sqrt q.
+                                                               \tag{TU2}
+\]
+Thus $B=Szq$, $e=zw$, the actual squared angles are
+$u_c^2=Sq$ and $v_c^2=zq$, and $S,z,q$ are positive
+infinitesimals.  Keep $h$ as the original C2 source parameter.
+The strict $m$ gap gives
+\[
+ R=1+Sqh,\quad M=R-w>0,
+ \qquad 0<w<R\sim1.                                      \tag{TU3}
+\]
+Both original openings $h,1-h$ remain arbitrary positive quantities.
+
+The exact RER2 identity, divided by $e>0$, gives
+\[
+ Q_{\rm RER}
+ =\tau\{(1+z)(1+Sh)(1+Sq)+2r(z\Delta)\lambda_n\},
+ \qquad \tau=q/(zw),\quad \lambda_n=n/(qz).
+\]
+Here $Q_{\rm RER}\sim1$, $z\Delta\sim1$ and $r\sim1$.
+The bracket is a positive bounded unit, since $\lambda_n\geq0$
+is bounded and its first term is a positive unit.  Consequently
+\[
+ \tau\text{ is a positive bounded unit},\qquad
+ \overline\tau=\frac1{1+2\overline\lambda_n},\qquad
+ q=zw\tau.
+                                                               \tag{TU4}
+\]
+No division by $n$ has occurred.  This sector includes the earlier
+thin condition $\rho_n=n/e^2\in\mathrm I$: in that case the same
+RER identity gives $\tau\sim1$ and
+$\lambda_n=\rho_nw/\tau\in\mathrm I$ directly, without first
+assuming (TU1).
+
+For the comparison only, substitute into the native C1 rational
+formulas NC1--NC4
+\[
+ k^2=Sq,\quad \eta=1/S,\quad \zeta=z,\quad
+ r_{\rm C1}=h,\quad t_{\rm C1}=w,\quad
+ a_{\rm C1}=S(1-h).                                     \tag{TU5}
+\]
+Their $\theta$ is $e=zw$ and their $R,M$ are exactly (TU3).
+Write a superscript $0$ for these formal C1 coefficients.
+All their source denominators have the requisite positive signs:
+\[
+\begin{gathered}
+ K=1+Sq,\quad J=1+Sq(1-e)-S(1-h),\quad
+ E=1-q(1-e),\quad Q=1-Sqzh,
+\end{gathered}
+\]
+and $J,E,Q$ are positive bounded units.  Their common polynomial is
+\[
+ P=1+qz+Sq(2+z-2e)+Sq^2(z+e-e^2)+S^2hq^2(1+z-e).
+                                                               \tag{TU6}
+\]
+In particular $P\sim1$.  We make no sign claim for $\beta^0$.
+
+The two sources have exactly the same state contact.  With $Z_c=1$,
+\[
+ u_c=bc,\quad v_c=cg,\quad W_c=bg,\quad
+ Y_c=hu_cW_c,\quad X_c=-(1-e)u_c.                       \tag{TU7}
+\]
+This follows either by substitution in the two native dictionaries,
+or from $Y_c=hu_cW_c$, $X_c=-ru_cZ_c$ and
+$Z_c/W_c=\sqrt{at}$ in the actual C2 source.  In particular
+the comparison does not move the contact.
+
+Use the actual, not formal, normalized coefficients
+\[
+ c_b=SC,\ a_b=SA,\ D_b=D/S,\ \alpha_b=\alpha/(Sz),\quad
+ h_2=mzM,\quad h_b=zw/2.
+                                                               \tag{TU8}
+\]
+They satisfy $m=h_2/(zM)$ and $\beta+1/2=h_b/(zw)$.
+Use the same normalizations with superscript $0$, and let $\delta$
+mean actual minus formal.  The following explicit polynomials make
+all needed cancellations finite and opening-safe.  Put $G=1+z-e$,
+and define
+\begin{align*}
+ P_C={}&1+qz+S\{1+q(2+2z-e)+q^2z\}\\
+ &+S^2\{q[h(1+z)+1-e]
+          +q^2[hez-e(1+z)+2z+1]\}+S^3hq^2G,\\
+ P_A={}&1+qz+S\{q(2+z-2e)+q^2z(1-e)\}
+                 +S^2q^2G(G-hz),\\
+ P_D={}&1+q(z+e)+S\{q[h(1+z)+1-e]+q^2(z+e-e^2)\}
+                 +S^2hq^2G,\\
+ P_m={}&1+qz+S\{q(2+z-2e)+q^2z\}
+                 +S^2q^2\{(1-e)^2+z(1-e)+hez\},\\
+ P_b={}&(1+z)(1+qz)+Sq(1+z)(2+z-2e)\\
+       &+Sq^2z(1+z-e^2)+S^2q^2G^2.
+\end{align*}
+Then the exact rational identities are
+\[
+\begin{aligned}
+ (1-h)\delta c_b&=-\frac{n(1-e)P_C}{zP},&
+ h\delta a_b&=-\frac{n(1-e)P_A}{zP},\\
+ \delta D_b&=-\frac{n(1-e)(1+qz)P_D}{zJP},&
+ \delta h_2&=\frac{n(1-e)(1+qz)P_m}{zP},\\
+ \delta h_b&=\frac{n(1-e)P_b}{zP},&
+ \delta\alpha_b&=
+ \frac{n(1-e)q^2(1+qz)[(1+S)e-S(1-h)(1+z)]}{zQP}.
+\end{aligned}                                                   \tag{TU9}
+\]
+These identities are proved simply by substituting the six printed
+RER1 weights and the six NC4 weights, clearing the indicated pure
+source denominators, and multiplying.  They include $n=0$; the
+right sides define no quotient by $n$.
+
+After substituting $e=zw$, the polynomial
+\[
+       P_\Delta=\frac{P_b-(1+qz)P_m}{z}                 \tag{TU10}
+\]
+is a genuine finite polynomial in $S,z,q,w,h$.  Indeed the numerator
+specialized at $z=0$ is zero identically, so ordinary monic division
+by $z$ has zero remainder.  Consequently
+\[
+ \delta(h_b-h_2)=n(1-e)P_\Delta/P.
+                                                               \tag{TU11}
+\]
+Every polynomial in (TU6), (TU9), (TU10) has bounded coefficients
+and bounded arguments.  From (TU4) and (TU9)--(TU11) we obtain
+\[
+\begin{gathered}
+ (1-h)\delta c_b,\ h\delta a_b,\ \delta D_b
+                     =q\lambda_n\,O(1),\qquad
+ \delta h_2,\delta h_b=q\lambda_n\,O(1),\\
+ \delta\alpha_b/q^2=\lambda_n q\,O(S+e),\qquad
+ \delta(h_b-h_2)/(qz)=\lambda_n O(1).
+\end{gathered}                                                   \tag{TU12}
+\]
+Here $O(1)$ denotes an explicit bounded rational source array with
+denominators among the units $P,J,Q,R$; it does not hide a state
+or testing factor.  These conclusions require no lower bound on
+$h$, $1-h$, or $M$.
+
+In particular $c_b\asymp1/(1-h)$, $a_b\asymp1/h$,
+$D_b\sim1/2$, $\alpha_b/q^2\sim1/2$, and
+$h_2/q,h_b/q$ positive bounded units with common residue
+$1/2+\overline\lambda_n$.  We also have
+\[
+ h_b/w=z/2,\qquad h_b-h_2=O(qz),\qquad
+ H_0:=4h_2/R+4h_b/w\geq2z,
+ \quad H_0\asymp q+z.                                  \tag{TU13}
+\]
+The last statements use the formal exact SC2 difference together
+with (TU11), and hold also when $M$ is arbitrarily small.
+
+\subsection{The complete additional current, including its normal}
+
+Let the testing $u,v$ be positive infinitesimals and first take
+$Z=1$ on its pure-testing state chart.  Use the exact SC coordinates
+\[
+ Q_b=(W+uY)/b,\quad Y_b=Y/S,\quad p=w/R,\quad
+ N=((X+u)/b-pvQ_b)/g,
+\]
+\[
+ H=uQ_b/b,\quad L=vQ_b/g,\quad
+ \sigma=c_b+a_b,\quad \rho_0=Kh/R,\quad
+ N_y=\sqrt\sigma\{D_uY_b-\rho_0H\}.
+                                                               \tag{TU14}
+\]
+Both $N,N_y$ vanish at (TU7).  The exact SC3 full-parent identity
+is an algebraic identity for arbitrary $c_b,a_b,D_b,\alpha_b,h_2,h_b$;
+no C1 coefficient relation is used in deriving it.  With (TU8),
+it represents all the actual C2 parent except its additional term
+$4nD_uD_vX^2/S$.  Retain its original nonnegative $m$ packet
+$4h_2wN^2/(MR)$, incorporate the second paired packet into
+$H_0N^2$, and retain $4h_b(vN)^2/w$ exactly as in the uniform
+QI normal lemma.  Define $\widehat N=\sqrt{H_0}N$.
+
+Put $h_t=H/R$, and introduce the same four positive separated
+monomials and their geometric mean as in QI:
+\[
+ A_*=ch_t,\quad B_*=cL/R,\quad C_*=uv/b,\quad
+ D_*=qg,\qquad \Gamma=(A_*B_*C_*D_*)^{1/4}.
+                                                               \tag{TU15}
+\]
+Their exact relations include
+$\Gamma^2=qh_tv$ and $B_*C_*=(c/g)v^2h_t$.
+The extra monomial
+\[
+                   U_*=cgu/b
+\]
+has the two exact identities
+\[
+       U_*B_*=\Gamma^2,\qquad
+       cgX/b=czN+eB_*-U_*.
+                                                               \tag{TU16}
+\]
+The entire additional current therefore has the following square
+completion, with no state normal set to zero:
+\begin{align*}
+ \frac{4n}{S}D_uD_vX^2
+ ={}&4\lambda_nD_uD_v(U_*-B_*-czN)^2\\
+ &+4\lambda_nD_uD_v
+   \{2(1-e)\Gamma^2-(1-e^2)B_*^2
+                         -2(1-e)czB_*N\}.
+                                                               \tag{TU17}
+\end{align*}
+The first line is a nonnegative separated SOS and vanishes at the
+actual contact, including its unrestricted state-normal coordinate.
+Its coefficient is literally zero if $n=0$.  The remaining scalar
+changes have bounded coefficients on $B_*^2$ and $\Gamma^2$.
+Their possibly nonzero real residues will cancel exactly with
+the source comparison below.  The full additional first-normal coefficient, on
+$B_*\widehat N$, is infinitesimal because
+\[
+       \lambda_n cz/\sqrt{H_0}=O(\lambda_n c\sqrt z)
+                                            \in\mathrm I.
+                                                               \tag{TU18}
+\]
+In particular (TU17) does not estimate or discard $u/b$, which can
+be arbitrarily large.  The new positive square contains that entire
+row, while the exact product relation in (TU16) places its cross
+term on the old angular circuit.
+
+\subsection{Why the full QI allocation is stable here}
+
+We verify the actual finite hypotheses of QI1--QI10 rather than
+an abstract continuity assertion.  Its coefficient arrays have
+only the pure-testing denominators $D_u$ and positive pure-source
+units after cancellation of the two $h$ openings.  The latter
+cancellation is preserved exactly because
+\[
+ 1-\rho_0=(1-h)/R,\qquad \rho_0=Kh/R.
+                                                               \tag{TU19}
+\]
+For example all perturbations of
+$c_b(1-\rho_0)^2$, $a_b\rho_0^2$,
+$c_b(1-\rho_0)$ and $a_b\rho_0$ are $q\lambda_n$
+times bounded rational arrays, by (TU9).  Moreover
+\[
+ \delta(\sigma\rho_0-c_b)
+       =\rho_0\delta a_b-(1-\rho_0)\delta c_b
+                             =q\lambda_n O(1).
+                                                               \tag{TU20}
+\]
+This is the complete potentially singular harmonic first-normal
+coefficient after multiplication by $\sqrt\sigma$.
+Both $\sigma$ and its formal comparison are comparable to
+$[h(1-h)]^{-1}$, and their ratio has residue one.
+Their square-root ratios and inverses are consequently bounded
+pure-source units.  Thus this change of hard normal loses no
+opening bound.
+
+In the exact generic scalar QI2, the changes of $a,b_*,c_*$ are
+$q\lambda_n$ times bounded arrays in $u,v$.  This follows term by
+term from (TU12), (TU19): its only $C,A$ occurrences are the first
+two expressions in (TU19); its $D_b$ occurrences have bounded
+factors; its $\alpha_b$ occurrences have bounded factors and the
+additional small factors printed in QI2.  Consequently the
+formal specialization $a_0,b_0,c_0$ and its exact $U,V$ divisions
+in QI3--QI4 can be used unchanged, while the remaining $q$
+coquotients change by bounded arrays.  Write
+$\lambda_0=\overline\lambda_n$.  Their complete leading changes
+are respectively $0,-8\lambda_0,4\lambda_0,0$: substituting
+$S=z=q=u=v=0$ in the bounded coquotients (TU9) gives
+$\delta a/q=-4\lambda_0$, $\delta b_*/q=0$,
+$\delta c_*/q=-4\lambda_0$, and
+$\delta(R^2P_L)/q=4\lambda_0$.  Thus before the extra current
+the four residues are
+\[
+ \overline{a_1-c_1}=2,\qquad
+ \overline{b_1+2c_1}=-8-8\lambda_0,\qquad
+ \overline{R^2P_L/q}=2+4\lambda_0,\qquad
+ \overline{4\alpha_bD_u/q^2}=2.
+                                                               \tag{TU21}
+\]
+Equation (TU17) adds $-4\lambda_0$ to the $B_*^2$ residue
+and $+8\lambda_0$ to the $\Gamma^2$ residue.  Consequently
+the \emph{combined} full scalar has exactly the original four
+residues $(2,-8,2,2)$ on $(A_*^2,\Gamma^2,B_*^2,D_*^2)$.
+All differences from those residues are infinitesimal bounded
+arrays, because $\lambda_n$ itself is bounded.  This cancellation
+is why a thinness assumption is unnecessary on (TU1).
+The one additional bound QI uses from physical $\beta\geq0$ is
+also available directly, without any sign for $\beta^0$:
+\[
+  w/(c/g)=\sqrt{w/\tau}=O(1),\qquad w=O(1).
+                                                               \tag{TU22}
+\]
+Thus the exact dangerous cross term $-4(wv/(c/g))D_uB_*C_*$
+still has infinitesimal coefficient.
+
+For the complete first $N$ normal, (TU13) gives exactly the two
+bounds used in the uniform QI normal lemma:
+$g/\sqrt{H_0}$ and $c/\sqrt{H_0}$ are bounded, and
+\[
+ \frac{h_bD_v-h_2}{\sqrt{qH_0}}=O(z+v^2).
+                                                               \tag{TU23}
+\]
+The $H$ term and all other terms in SC14 therefore have the same
+infinitesimal coefficients on the QI rows; (TU18) handles the whole
+extra term.  For the harmonic normal, (TU20) adds a
+$q\lambda_n$ bounded array to the left side of QI10.  It can be
+absorbed into its existing $qK_q$ coquotient.  All other terms are
+the same bounded rational arrays multiplied by the opening-safe
+quantities in (TU12), (TU19).  The exact $D_b$ root and its two
+normal terms in QI9 remain unchanged as algebraic identities.
+The complete hard block therefore retains the real residue
+$\operatorname{diag}(1,4)$ in $(\widehat N,N_y)$.
+
+For clarity, here is the finite allocation being invoked.  Use
+the QI roots
+\[
+ E_*=h_t-v,\quad F_*=vh_t-gD_*,\quad
+ R_F=\frac{\sqrt{g\Gamma}}c(\Gamma-D_*),\quad
+ R_E=\sqrt\Gamma(\sqrt{A_*}-\sqrt{cv}),
+\]
+together with the complete finite toric root list SC16.
+The exact identities QI7--QI8 give strict real square pivots on
+$F_*,R_F,R_E$; QI6 gives the strict $E_*$ pivot and twice the
+four-monomial circuit.  Every remaining coefficient is an
+infinitesimal bounded rational array in the testing $u,v$, with
+the same finite denominators and divisions just verified.
+All removed packets, including (TU17), vanish at (TU7).
+The actual source contact value, its three scalar first jets,
+and both full first-normal contact values consequently vanish
+exactly for this remaining expression.  Applying the two finite
+monic divisions SC17--SC20 and the displayed QI7 first-jet
+identities therefore puts the entire scalar correction and
+both complete first normals on this strict root list with
+infinitesimal coefficients.  The coefficient functions are
+independent of the state ratio $Q_b/Z$; no boundedness of that
+ratio is assumed.  This is precisely the constructive QI
+allocation, with its source inequalities checked in
+(TU12)--(TU23), not a conclusion from a scalar restriction alone.
+
+The resulting finite Gram is bounded and has positive definite
+real residue.  The strict bounded-Gram lemma supplies tensor SOS.
+Restore the original positive paired packets and the new full
+square in (TU17).  This proves the local assertion for the entire
+parent on the positive small-angle, negative-core chart.
+
+\subsection{States, signs, and all remaining tests}
+
+Every inverse and radical used above is pure source, pure testing,
+or the explicitly separated positive monomial radical in (TU15).
+For $Z\ne0$ the normalization $Z=1$ is pure testing; multiplying
+back by $Z^2$ restores homogeneity.  At $Z=0$ the original
+pure-testing core restriction is nonnegative.  The exact core
+Schur identity and sign gauges used in the retained QI proof
+force $W+uY>0$ on the remaining negative-core chart, and hence
+all four monomials are positive.  Otherwise the core and all
+original event packets already give the direct exit.  Literal
+zero-angle charts have that same original exit.  Complex states
+split into their real and imaginary parts, since the real
+measurement matrices and full quadratic parent are unchanged.
+
+The new R2 outer theorem R2O1--R2O24 treats every projective
+testing pair outside the double-infinitesimal original chart,
+with no condition on $a$ or $n/e^2$.  Its hypotheses are exactly
+the original RER source conditions already retained here.
+Combining that result with this local proof gives the claimed
+all-tests, all-states theorem on (TU1).  No other source branch
+is admitted by this conclusion.
+
+\paragraph{Verification scope.}
+The associated checker verifies the exact native contact map,
+all six comparison formulas (TU9), the finite division (TU10),
+the four complete residue cancellations in (TU21),
+the whole generic SC reduction, the entire additional-current
+completion (TU17), and its actual contact zero.  Ordered-field
+bounds, the complete finite QI allocation and the outer-chart
+join are analytical parts of this proof, not consequences of
+the number of checker assertions.

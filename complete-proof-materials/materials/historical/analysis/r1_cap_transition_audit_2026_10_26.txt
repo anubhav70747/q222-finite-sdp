@@ -1,0 +1,27 @@
+R1 bounded-cap transition: exact formulas and quantifier audit
+2026-10-26
+
+Verdict: equations(4),(7),(8),(9) are correct. The proved obstruction concerns one fixed bounded-real-cap residue allocation. It is not a missing hypothesis of R21's qualitative independently labelled source/testing criterion, nor an obstruction to the full parent or another Gram allocation.
+
+Exact symbolic replay. Write D=1+u^2 and
+ f(b,n)=4b^2-8bn-4b+2n+1.
+Direct Hessian extraction from the displayed full Q3 gives the compact identity
+ det Q3= -D/8[(2m_*+1)D f(b,n_*)+8n_* b^2].
+Substituting the hard-event kernel gives exactly
+ det Qker= -D^2 f(b,n_*)/(4u^2),
+confirming(4). These identities use the full quadratic in X,Z,V, without a scalar state substitution.
+
+For n0=1/[2(j^2-1)] and k=j/(j+1), the smaller root b_-(n0)=k/2. For fixed0<=n_*<n0, Qker>0 requires a fixed positive gap b-k/2, incompatible with Q2>0 as u->0. At n_*=n0, the two conditions imply0<b-k/2=O(u^2). The compact determinant then tends, for every finite m_*, to
+ -j^2/[8(j-1)(j+1)^3],
+independently of the bounded coefficient(b-k/2)/u^2. Thus(7) also holds without assuming that coefficient has a limit.
+
+For b=k/2+c u^2+o(u^2), m_*(u)u^2->M<infinity, exact substitution gives(8):
+ j[8c(j+1)^2M-j]/[8(j-1)(j+1)^3].
+The2x2 constraints alone give0<=c<=k/4; they do NOT force c>0, since b-k/2 could be o(u^2). Nonnegative full determinant with finite M subsequently forces c>0 and M>=1/[2(j+1)], establishing(9). This is a minor correction to the stated intermediate inference, not to its conclusion.
+
+Original-source interface checked. Public c2_short.tex:8855-8965 contains the exact compact source/inverse RSR2-RSR9;9910-10024 contains R1N16-R1N24. For example, fixed j>1,H=1/2,p=1-epsilon,B=T=epsilon gives an actual strict source path for small positive epsilon: all compact/inverse gaps stay positive, m~j/[2(j+1)epsilon], and n->n0>0. The source sector is therefore genuine.
+R1N18 is the exact selected quarter-parent identity; alpha and the nonnegative m,n excesses are retained. Its six-root Gram is bounded only after fixing a nonzero real Alice residue. R1N19 is exactly the zero-gauge relation used. Consequently the displayed Q2/Q3 are genuine complete residue blocks for that chosen construction. Their failure excludes that block-PSD allocation, not positivity or SOS of the full parent; the six-root frame is overcomplete and other allocations remain possible.
+
+Quantifier conclusion. R1N21 explicitly fixes u=u0>0 REAL before selecting real b,m_c,n_c. R1N23 proves precisely the required pointwise choice in the m-infinite opening. Nothing there asserts one finite cap works for every u0 approaching zero. Independent source/test extensions legitimately allow separate certificates for positive real testing residue and infinitesimal testing u; the latter is the separate RFN4-RFN24 case. No ordering of the mixed product m*u^2 is required to make this exhaustive split.
+
+Thus chat3's proposed common-identity repair is a requirement for its attempted explicit uniform atlas, not an identified gap in the existing universal tensor-SOS route. Retaining an unbounded source event or changing the normalized roots also lies outside its no-cap theorem. The constructive follow-up should inspect or extract the existing complete RFN local parent and join legitimate cases, rather than demand an unnecessary common bounded cap.

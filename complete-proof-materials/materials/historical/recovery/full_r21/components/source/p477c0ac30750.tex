@@ -1,0 +1,375 @@
+\section{Fresh finite-contact entry and the exact two-family source target}
+\label{sec:rederived-contact-entry}
+
+The input here is the actual recovered parent and its factored determinant,
+not an asserted completion of an atlas.  We rederive the finite-contact
+nondegeneracy needed by the source-entry argument and state exactly which
+C1/C2 certificates would finish the global source reduction.  A strict
+Hessian in a single source field is not identified with a strict real
+residue Gram in a tensor product.
+
+\subsection{Exact input and support incidence}
+
+Use the full parent (CAP1), with $d>0$ and all eight event coefficients
+nonnegative.  Its state matrix is $P(u,v)$.  The physical dictionary is
+$F=D_uD_v\|\psi\|^2 f(q)$ at a nonzero state and its homogeneous
+extension at projective angles.  This dictionary and the determinant
+identity below occur as actual proof bodies in the recovered
+\emph{physical\_core.tex}; the physical normalization was also freshly
+rederived in (RFA10)--(RFA12).
+
+Write
+\begin{align*}
+t_1&=d+2(\lambda+n+D),&t_2&=d+2(\alpha+m+A),\\
+t_3&=d+2(\lambda+C+D),&t_4&=d+2(\alpha+\beta+m),\\
+t_5&=d+2(\lambda+\beta+n),&t_6&=d+2(\alpha+C+A),\\
+t_7&=d+2(\beta+n+m),&t_8&=d+2(C+A+D).
+\end{align*}
+All $t_j$ are strictly positive.  The exact whole-parent determinant is
+\[
+\det P=16D_u^2D_v^2u^2v^2L(u^2,v^2),\qquad
+L(U,V)=h+\sum_{e\in E}q_eU^{e_1}V^{e_2},
+\quad E=\{-1,0,1\}^2\setminus\{0\},
+\tag{SE1}
+\]
+where $h=q_{11}$ and the eight nonnegative coefficients are
+\begin{align*}
+q_{00}&=4\lambda\alpha t_7t_8,&
+q_{01}&=4(\lambda Dt_7t_6+\alpha mt_5t_8),\\
+q_{02}&=4mDt_5t_6,&
+q_{10}&=4(\alpha At_7t_3+\lambda nt_8t_4),\\
+q_{12}&=4(\beta mt_1t_6+CDt_5t_2),&
+q_{20}&=4nAt_3t_4,\\
+q_{21}&=4(\beta nt_3t_2+CAt_1t_4),&
+q_{22}&=4\beta Ct_1t_2.
+\end{align*}
+Here $q_{ij}$ has exponent $e=(i-1,j-1)$.  In particular an exponent
+is active exactly when at least one of its displayed event products is
+positive.  The checker for this section uses these exact incidence
+conditions; it does not replace physicality by a support enumeration.
+
+Call the support \emph{coercive} when $0$ is in the interior of the
+convex hull of the active exponents.  Over the real field this is
+equivalent to coercivity of $L(e^x,e^y)$: a positive exponential
+sum tends to infinity in every direction exactly under that condition.
+The condition on the finite support itself makes sense unchanged over
+any real closed coefficient field.
+
+At $Z=0$ the signed part of the full parent is
+\[
+2d\{(uW+uvX-Y)^2+D_uv^2Y^2+D_vX^2\}.
+\tag{SE2}
+\]
+It is positive definite for $uv\ne0$, so the corresponding
+$3\times3$ block $H$ is positive definite, and
+$P\succeq0\Longleftrightarrow\det P\geq0$.  If a nonzero state is
+in its kernel, that state has $Z\ne0$ and the kernel has dimension one.
+
+\subsection{No physical finite zero has degenerate Newton support}
+
+\begin{theorem}[Coercivity and strict curvature at every actual finite zero]
+Let a nonnegative canonical source with $d>0$ be physical and have a
+zero on a nonzero state at finite $u_c,v_c\ne0$.  Then its Newton
+support is coercive.  After the harmless real local basis gauges making
+$u_c,v_c>0$ and the normalization $Z_c=1$, the full Hessian of $F$ in
+the five variables $(W,X,Y,u,v)$ is positive definite at this contact.
+The assertion holds over every real closed extension of $\mathbb R$.
+\end{theorem}
+
+\begin{proof}
+Physicality makes the contact a zero minimum, so its first derivatives
+in the five variables vanish.  By (SE1)--(SE2), $L=0$ and its two
+logarithmic derivatives vanish.  Put
+$a_e=q_eU_c^{e_1}V_c^{e_2}>0$ for active exponents.  Then
+\[
+\sum_ea_e e=0.
+\tag{SE3}
+\]
+If the support were not coercive, a nonzero real linear functional
+would be nonnegative on it.  Applying that functional to (SE3) shows
+that it vanishes on every active exponent.  Thus all active exponents
+would lie on one line through the origin, or the support would be empty.
+There are only four possible such lines in $E$.
+
+An active horizontal opposite pair would require both
+$q_{01},q_{21}>0$.  Their four possible product pairings force,
+respectively, $\lambda n$, $CD$, $\beta m$, or $\alpha A$ to be
+positive, activating $q_{10}$ or $q_{12}$ off that line.  A vertical
+opposite pair $q_{10},q_{12}>0$ is ruled out in exactly the same
+explicit way: its pairings force $\alpha m$, $CA$, $\beta n$, or
+$\lambda D$ positive, activating $q_{01}$ or $q_{21}$.  A
+one-sided line cannot satisfy (SE3).
+
+For the diagonal pair $q_{00},q_{22}>0$, positivity forces
+$\lambda,\alpha,\beta,C>0$, and all off-line coefficients vanish
+only if $n=m=A=D=0$.  For the other diagonal pair
+$q_{02},q_{20}>0$, the sole possibility is
+$n,m,A,D>0$, $\lambda=C=\alpha=\beta=0$.
+These are the two alternating four-event matchings of the cycle.
+Neither supports a physical source with $d>0$.  For the latter, set
+$u=v=1$ and take the entire, untruncated state
+$\psi=(1,-\varepsilon,\varepsilon,1)$.  Direct substitution gives
+\[
+F(1,1;1,-\varepsilon,\varepsilon,1)
+ =16\varepsilon\{(d+n+m+A+D)\varepsilon-d\}.
+\tag{SE4}
+\]
+Choosing $\varepsilon=d/[2(d+n+m+A+D)]>0$ is a strict negative
+witness.  The other matching is its image under the physical one-step
+event-cycle rotation (CAP13).  The formula also allows literal zeros
+among the matching weights.
+
+Finally suppose every outer coefficient vanishes.  In the event cycle
+$(\lambda,D,C,A,\alpha,m,\beta,n)$, the forbidden simultaneously
+positive pairs are precisely the adjacent pairs and opposite pairs:
+these are the twelve products occurring in (SE1).  Four pairwise
+nonadjacent vertices of an eight-cycle would have to alternate and
+would contain an opposite pair.  Hence at most three events are active.
+Every maximal allowed set is a triple with cyclic gaps $(2,3,3)$;
+smaller allowed sets extend to one.  These eight triples are all rotations
+of $\{\lambda,m,A\}$.  At $u=v=1$, the state $(1,-1,0,2)$
+annihilates those three event rows, while the signed core equals $-4$.
+Thus the full parent is $-4d<0$.  Rotation rules out every such support.
+This excludes the empty and rank-one possibilities, proving coercivity.
+
+The angular log-Hessian at the contact is now
+\[
+\mathcal H_L=\sum_ea_e ee^T\succ0,
+\tag{SE5}
+\]
+because the active exponent vectors span $\mathbb R^2$ and each
+$a_e$ is positive.  Write
+$P=\left(\begin{smallmatrix}H&b\\b^T&c\end{smallmatrix}\right)$.
+Completing the three state coordinates within the single source field
+gives
+\[
+F=(x+H^{-1}b)^TH(x+H^{-1}b)+s(u,v),\qquad
+s=c-b^TH^{-1}b=\det P/\det H.
+\tag{SE6}
+\]
+At the contact $s=0$ and $\nabla s=0$.  Equations (SE1), (SE5)
+show that its angle Hessian is the positive scalar
+$16D_u^2D_v^2u^2v^2/\det H$ times the congruence of
+$\mathcal H_L$ by $\operatorname{diag}(2/u,2/v)$.
+It is positive definite.  The full five-variable Hessian has positive
+state block $2H$ and this positive angular Schur complement, so is
+positive definite too.  This is an exact single-field Schur argument.
+Logarithms are merely notation for the operators
+$U\partial_U,V\partial_V$; (SE3), (SE5), and their Hessian
+congruence are algebraic ordered-field formulas.  Alternatively the
+entire fixed finite assertion transfers from the real field.
+\end{proof}
+
+There is a useful converse contact implication, independent of
+coercivity.  If nonnegative coefficients with $d>0$ have a nonzero
+kernel state at $uv\ne0$ and both angle derivatives of its parent
+vanish, (SE2) gives $L=0$, $U\partial_UL=V\partial_VL=0$.
+Over $\mathbb R$, convexity of $L(e^x,e^y)$ makes this zero its
+global minimum.  The determinant criterion and the direct commuting
+endpoint argument prove physicality.  This is a finite first-order
+implication, so it transfers to every real closed field.  Thus
+\[
+\text{nonnegative coefficients + finite kernel + both angle jets}
+ \quad\Longrightarrow\quad\text{physicality}.
+\tag{SE7}
+\]
+No coercivity premise is needed for this implication.  Combining it
+with the theorem then excludes every proposed degenerate-support
+contact automatically.
+
+\subsection{The negative-core state orientation and deletion test}
+
+For reference, the raw signed-core matrix $P_H$ has
+\[
+\det P_H=-16D_u^2D_v^2u^2v^2\ne0.
+\tag{SE8}
+\]
+At any physical finite zero, at least one retained event has positive
+value.  Otherwise all event matrices annihilate the state and the
+kernel equation would give $P_H\psi=0$, contradicting (SE8).
+Consequently the core expectation there is strictly negative.
+
+This fixes an exact state sign without native contact coordinates.
+For $u,v>0$ put $h_0=1+v^2+u^2v^2$.  The $X,Y$ core block is
+$2\left(\begin{smallmatrix}h_0&-uv\\-uv&h_0\end{smallmatrix}\right)
+\succ0$.  Its Schur complement on $(W,Z)$ is
+\[
+\frac{2D_uD_v}{h_0^2-u^2v^2}
+\begin{pmatrix}u^2v^2&-uvh_0\\-uvh_0&u^2v^2\end{pmatrix}.
+\tag{SE9}
+\]
+If $WZ\leq0$, this quadratic form and the completed $X,Y$ square
+are nonnegative.  Hence a negative core expectation forces $WZ>0$.
+At a physical contact the gauge $Z=1$ therefore has $W>0$.
+For an independent testing state with $WZ\leq0$, the core value is
+instead a nonnegative pure-testing scalar; its separated product with
+$d$ is a square, and every event is a square.  This gives an exact
+easy-state tensor-SOS exit, with no claim about merely small positive
+$WZ$.
+
+Suppose a positive retained event has zero row at a finite contact.
+Deleting its coefficient preserves the kernel and both angle jets:
+the square and all its first derivatives vanish there.  The remaining
+coefficients are nonnegative, so (SE7) makes the deleted source physical.
+The theorem therefore forbids a deletion that makes the Newton support
+noncoercive.  This supplies the exact no-wall implication used in the
+recovered global C1 sign-entry proof.  It does not authorize deleting
+an event whose row is nonzero: (CAP15) then gives a negative value.
+\tag{SE10}
+
+\subsection{The canonical event basis and two sufficient contact families}
+
+Here we specify the global source target, including its quantifiers.
+Let $Q\subset\mathbb R^8$ be the compact finite-dimensional
+tensor-product quantum set from (RFA1)--(RFA6), and let $f$ be an affine
+functional nonnegative on it.  If $f$ is nonnegative on the whole
+nonsignaling polytope, linear separation of its finite probability
+inequality description writes it as a nonnegative sum of probability
+events (a nonnegative constant can be absorbed using normalization).
+These events have immediate separated certificates.  Otherwise $f$ is
+negative at a PR vertex: the nonsignaling vertices are the sixteen
+deterministic assignments and eight PR vertices, and $f$ is nonnegative
+at every deterministic assignment.
+
+Choose that PR orientation.  In the convention
+$H=1-(E_{00}-E_{01}+E_{10}+E_{11})/2$, the eight losing events
+vanish at that PR point.  Each has a unique deterministic $S=2$
+neighbor where its probability is one and the seven other losing
+probabilities vanish.  The nine evaluations are therefore an affine
+basis and give the exact coefficient representation
+\[
+f=dH+4\sum_i a_i p_i,\qquad
+d=-f(\mathrm{PR})>0,\qquad a_i=f(v_i)/4\geq0.
+\tag{SE11}
+\]
+The checker verifies these eight neighbor evaluations and nonsingularity
+of their augmented nine-point evaluation matrix from the actual event
+definitions.  The finite nonsignaling vertex argument and the full
+physical normalization are retained inputs, with exact source hashes
+in the accompanying dependency receipt.
+
+Two omissions are compatible precisely when the events never specify
+opposite outcomes at a shared local setting.  The factored coefficients
+in (SE1) give
+\[
+0\in\operatorname{int}\operatorname{conv}(\operatorname{supp}L)
+\quad\Longleftrightarrow\quad
+\text{all omitted losing events are pairwise compatible}.
+\tag{SE12}
+\]
+For clarity, a separating direction for a subset of the eight square
+boundary points can be chosen from
+$(\pm1,0),(0,\pm1),(\pm1,\pm1)$.  For an axis representative,
+vanishing on the forbidden half-plane requires
+$\lambda\alpha=\lambda D=\alpha m=mD=0$, whose minimal
+omission sets are $\{\lambda,m\}$ and $\{\alpha,D\}$.
+For a diagonal representative the minimal sets are
+$\{\lambda,\alpha\}$, $\{\lambda,m,A\}$,
+$\{n,D,\alpha\}$; the latter two already contain an axis
+exclusive pair.  The physical cycle rotation gives the other directions.
+These are exactly the twelve exclusive pairs: cycle distance three or
+four.  This proves (SE12), and the checker independently verifies it on
+all finite support choices.  Compatible pairs have cycle distance one
+or two; a compatible triple is three consecutive vertices.  A larger
+compatible omission set is impossible.
+
+Normalize the nonnegative canonical source tuple by
+$d+\sum a_i=1$.  Its physical subset is compact and convex over
+$\mathbb R$.  Consider an extreme point with $d>0$ and coercive
+support.  Its Laurent polynomial attains a minimum $\mu$ at finite
+positive $U,V$.  If $\mu>0$, perturb the active coefficients by
+small opposite nonradial amounts, preserving their sum and exact zero
+coordinates.  Every positive $q_e$ changes by relative error at most
+$\epsilon$ and $h$ by absolute error at most $\epsilon$.  Uniformly,
+\[
+L'\geq(1-\epsilon)L+\epsilon h-\epsilon
+ \geq(1-\epsilon)\mu+\epsilon h-\epsilon>0
+\tag{SE13}
+\]
+for sufficiently small real $\epsilon$.  The perturbed sources remain
+physical, contradicting extremality.  There are at least six active
+coordinates because (SE12) permits at most three event omissions, so
+a nonradial perturbation exists.  Hence $\mu=0$, giving an actual
+finite noncommuting contact.
+
+At that contact the four kernel equations and two angle equations
+\[
+P\psi=0,\qquad \psi^TP_u\psi=0,\qquad\psi^TP_v\psi=0
+\tag{SE14}
+\]
+are six homogeneous linear equations in the nine source coefficients.
+If seven or eight events were positive, there would be at least eight
+active source coordinates including $d$.  Their nullspace has dimension
+at least two and contains the source itself.  It therefore has a
+nonzero direction of coefficient sum zero.  Small opposite changes in
+that direction preserve all active signs and the same equations
+(SE14).  By (SE7) they remain physical, again contradicting extremality.
+No generic-rank assumption is involved.  Thus a coercive extreme source
+has exactly five or six positive events.
+
+Choose an adjacent compatible omitted pair first when three events are
+omitted.  By the physical cycle symmetries, every such source enters
+one of the following exact domains, including the stated zero faces:
+\[
+\begin{array}{ll}
+\mathrm{C1}:&d,m,C,A,\alpha>0,\quad
+ \lambda=n=0,\quad D,\beta\geq0,\quad D+\beta>0,\\
+\mathrm{C2}:&d,m,C,A,D,\alpha>0,\quad
+ \lambda=\beta=0,\quad n\geq0.
+\end{array}
+\tag{SE15}
+\]
+Both domains retain physicality and the existence of an actual finite
+positive source contact.  In C1 a third omitted event can only be
+$D$ or $\beta$.  In C2 it can only be $n$; this boundary is already
+in a C1 orbit, but allowing it in both is harmless.  Noncoercive source
+faces contain an exclusive omitted pair and are relabelings of
+$\lambda=m=0$ or $\lambda=\alpha=0$; their recovered exact matrix
+lifts remain separate, available proof inputs.
+
+The normalized source base has affine dimension at most eight, so the
+finite-dimensional extreme-point theorem and Caratheodory's elimination
+argument express each point as a convex combination of at most nine
+extreme points.  The midpoint definition of extremality, physicality,
+this fixed nine-point combination, and finite-contact attainment all
+have first-order polynomial formulas.  Their truth over $\mathbb R$
+therefore transfers to every real closed coefficient field.  Compactness,
+logarithms, and real perturbation sizes were used only to prove the real
+assertion before transfer.  Nonnegative summands automatically preserve
+literal zeros of the original source.
+
+\begin{corollary}[Precise sufficient tensor hypotheses]
+Suppose that, for each of C1 and C2 in (SE15), every actual source
+tuple over every real closed $K_c\supset\mathbb R$ has an
+unmultiplied full-parent SOS at every independent projective test and
+state over every real closed $K_t\supset\mathbb R$.  There is no
+algebraic-disjointness assumption: the fields are labelled factors and
+may be copies of the same field.  Together with the two recovered
+closed-face matrix lifts, these two hypotheses imply the universal
+separated slack-SOS statement for the entire physical set $Q$.
+\end{corollary}
+
+\begin{proof}
+Apply (SE11)--(SE15) in the source field, restore the finite real Bell
+relabelings, and multiply roots by the separate square roots of the
+nonnegative source combination weights.  The event atoms and the
+closed-face atoms have separated certificates, the latter by attained
+finite-dimensional matrix duality as in (RFA).  Every quantum testing
+point is a convex combination of at most nine real-qubit atoms in its
+own field; multiply roots by the separate testing-weight square roots
+and sum.  The pure homogeneous angle, state and source normalization
+factors are restored within their respective fields.  These operations
+are exactly finite conic and convex closure of sums of squares.
+\end{proof}
+
+\paragraph{What is and is not discharged.}
+This section proves source-contact coercivity, the strict single-field
+contact Hessian, contact sufficiency, the no-wall deletion implication,
+and the exact canonical source partition.  It isolates sufficient C1/C2
+tensor hypotheses with every coefficient sign, literal boundary and
+source contact retained.  Their positive-total and weak-total subdomains
+are the exhaustive scale split (CAP17).  It does not discharge those
+two all-tests hypotheses.  In particular, (SE6) is not a mixed tensor
+inverse, and its positive Hessian need not have a positive definite
+real residue after arbitrary independent source/testing degenerations.
+No generic matrix descent or historical all-tests assertion is used.

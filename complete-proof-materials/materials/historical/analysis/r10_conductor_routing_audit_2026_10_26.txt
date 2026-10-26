@@ -1,0 +1,65 @@
+R10 bounded-conductor routing audit (2026-10-26)
+
+Scope: targeted source reading, not verification of gate G or the global theorem.
+Base P = recovery/refined_439/Q222_Refined_Proof_Source_2026-10-22/.
+The recovered reply's source locations are accurate:
+ P/certificates/group_07.tex:7758–8023 contains TL1–TL10;
+ P/certificates/group_03.tex:2497–2609 contains SE5–SE11.
+
+Verdict on G. The proposed equation E/rho = R^T H R with H symmetric over
+B_c tensor B_t is faithful to TL:8003–8014, provided R is the actual chart's
+eight-root frame and the common F/4 normalization is retained. It is a
+noncircular, independently testable sufficient target. It becomes circular
+if “the inherited conductor applies” or TL:8010 is assumed in proving it.
+SE7 itself is an elementary identity, not the entire scalar-square lift.
+Contact value/first-jet zero and bounded raw coefficients alone do not imply G.
+The restriction M^2+(D0^2), not (M,D0)^2, is substantive: the latter is
+explicitly disproved in group_01.tex:1470–1478.
+
+Chat A: prove the general conductor, without native-source positivity.
+Supply group_01.tex:1348–1478 (CC1–CC6 and counterexample) and
+group_03.tex:2497–2570. Work with source parameters epsilon,j,E and test
+variables u,w,v; contact (epsilon*j,j,epsilon*j^2*E). Set
+ A=epsilon*w*v, B=v, C=E*u*w, D0=epsilon^2*j^3*E, k=epsilon*j;
+ x=B-C, y=A-k*C, z=u*B-k*C, h=k*C-D0.
+The radical roots are q1=a1*a2-a3*a4, q2=a1*a3-a2*a4, where
+ (a1^2,a2^2,a3^2,a4^2)=(A,u*B,k*C,D0), with separated positive roots.
+Their product is k^2*B*C. The soft list is (x,y,z,h,q1,q2).
+The eight-root list adds the two actual hard normals N,M_B.
+
+SE7 lifts C*S whenever a stated monic division gives
+S=(u-k)Tu+(w-j)Tw+(v-epsilon*j^2*E)Tv and Tw=epsilon*U+v*V.
+Ask for an explicit finite linear scalar/normal lifting algorithm, specifying
+the monic order and every first- and second-stage divisibility premise. Its
+output must represent scalar terms quadratically on the soft roots, both
+linear normal rows on those roots, and the hard quadratic unchanged.
+Require bounded coefficients after evaluation and unit-denominator clearing,
+with no inverse of epsilon,j,k,E or contact differences. In particular,
+prove rather than assume the second-stage divisibilities asserted at
+SE:2553–2570. A theorem conditional on those explicit finite tests is useful;
+an unrestricted contact-vanishing theorem is not justified.
+
+Chat B: apply that algorithm to the complete TL6 stress.
+Supply group_07.tex:7758–8023 in full, not only TL6. Include exact physical
+source polynomials/weights and quarter-parent BA1–BA2 at 9377–9409;
+R10 source assumptions/scale identity at 7525–7586; and formal-contact map
+OP1–OP5 at 659–721. Distinguish source w=ae from testing mathfrak w,
+and R10 source gap j from the SE chart parameter j.
+The source conditions include all native gaps/exclusions, t,g,j positive
+bounded units, a unbounded, B,h,e,x=aB infinitesimal, and
+0<rho=n/e^2 infinitesimal. Do not replace the exact R10.2 relation by
+independently chosen bounded source letters.
+
+Provide both chart dictionaries: TL7–TL10; SE source chart at
+group_03.tex:2414–2467; unit-scale chart CA3 at 3126–3139 and roots at
+3195–3213. CA uses its original normals; the optional CS1 variant uses
+the scaled normal delta*M_B (group_03.tex:1964–2024). In SE use the
+normalization actually printed in SE4/SE10.
+Demand explicit raw scalar coefficients f_A,f_BB,f_BC,f_CC,f_0,
+both full first-normal arrays, and the hard block for E/rho; then run the
+proved conductor symbolically on these arrays. TL8–TL10 are coquotient
+inputs, not substitutes for those arrays. Preserve the retained TL4 square
+and centered-A packet. Finally verify the formal negative-beta base directly
+under TL:7823–7847, using SE9–SE11 or CA5–CA8, rather than invoking a
+physical C1 theorem. Success settles this local thin branch only, not its
+remote/all-source joins or universal tensor-SOS.

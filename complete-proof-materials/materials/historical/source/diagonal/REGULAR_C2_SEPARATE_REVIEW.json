@@ -1,0 +1,38 @@
+{
+  "analytical_findings": [
+    "The six contact equations include the state value and all three normalized state derivatives; Euler homogeneity restores the fourth derivative.",
+    "The contact source Jacobian is invertible throughout the stated box. The source coordinate bounds are retained, so no claim is made that every contact-box point lies in the bounded source graph.",
+    "The exact polynomial Taylor identity and correct L inverse orientation retain all parent terms.",
+    "All source/test coefficient separation is explicit; positivity holds on independent boxes and over independently labelled real closed fields.",
+    "The matrix identity gives the stated local Gram representation. Ambient monomial count is not mislabelled as the rank of the product space.",
+    "The seven source columns are full parent columns, but the normalized local contact proof does not prove a global projection onto the original eight quantum coordinates."
+  ],
+  "data_sha256": {
+    "regular_c2_feature_list.json": "8a67754cb93a916da818afd7eb752ecc392ff3562d109d4bc5116b4c1e01e51c",
+    "regular_c2_frames.json": "9543cbe723c11fd777d5c67521d5bc13f3e5aefd46ae19e290f8192be52eaa8c",
+    "regular_c2_product_map.json": "cf653ac20a6692bcb5169f5ece53f39316c7035194220761141f4eed9576ae2a"
+  },
+  "editorial_issue_reported": "Missing backslash before quad in matching equation; author reported it corrected.",
+  "global_E1_E2_E3_complete": false,
+  "jacobian_infinity_norm_bound": "11650604933999/11225797109143808",
+  "limitations": [
+    "Does not independently regenerate the full multivariate Taylor allocation, which the separate C2 checker tests.",
+    "No global source validity or finite all-source/all-test cover is supplied.",
+    "Not external peer review or proof-assistant formal verification."
+  ],
+  "method": "Direct SymPy derivatives and linear algebra; separate Fraction polynomial data cross-check; no C2 module imports; analytical proof reading.",
+  "minimum_fresh_pure_coefficient_bound": "42814735026878674197946501682910336350483418950559226246401994080470441881944701/7901987227018431428675420786629943965340900816233478156511987618268693850338099200",
+  "reviewer": "separate diagonal/extraction agent within the same model system",
+  "scope": "One normalized regular-C2 source/contact graph and independent testing box only.",
+  "status": "PASS",
+  "verified_counts": {
+    "PSD2_blocks": 785,
+    "ambient_monomials": 237,
+    "frames": 25,
+    "listed_features": 1570,
+    "mixed_products": 735,
+    "product_records": 27747,
+    "pure_positive_remainders": 50,
+    "target_records": 295
+  }
+}

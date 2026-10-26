@@ -1,0 +1,249 @@
+\section{An exhaustive positive-$d$ source partition}
+\label{sec:positive-d-source-partition}
+
+Throughout this section the coercive canonical source is bounded and physical,
+$d$ is a positive unit, and an actual finite noncommuting stationary
+zero contact exists. Write $U=u_c^2,V=v_c^2$. For nonnegative pure
+source quantities, $a\asymp b$ means that $a/b$ and $b/a$ are bounded
+positive units. This notation is used only inside $K_c$.
+
+\begin{lemma}[Two forbidden weak faces]
+\label{lem:positive-d-forbidden-faces}
+Every positive-$d$ C2 source has $A$ a positive unit. In C1, at least
+one of $m,c$ is a positive unit.
+\end{lemma}
+\begin{proof}
+The following identities for the central determinant coefficient
+follow by substituting into the displayed four-by-four parent:
+\begin{align*}
+ h\big|_{\lambda=\beta=A=0}
+ &=-d(d+2n)(2D+2c+d)(2\alpha+d+2m),\\
+ h\big|_{\lambda=n=m=c=0}
+ &=-d(2D+d)(2\beta+d)(2A+2\alpha+d).
+\end{align*}
+Both are strictly negative when $d>0$. If $\bar A=0$ in C2,
+the residue Laurent polynomial has only the terms
+$h+q_{01}/U+q_{02}V/U+q_{12}V$. Substituting $U=t^2,V=1/t$
+and sending the real number $t$ to infinity gives the negative limit
+$h$, contradicting physicality. If $\bar m=\bar c=0$ in C1,
+its residue Laurent polynomial is $h+q_{10}/V$; letting $V$ tend to
+infinity gives the same contradiction. These are arguments over the
+real residue source and involve no tensor division.
+\end{proof}
+
+\begin{proposition}[The positive-$d$ C2 source partition]
+\label{prop:c2-positive-d-partition}
+The C2 source is covered by the existing small-$\alpha$ all-tests
+theorem or its exact stabilizer image unless $\alpha,c,A$ are units.
+In the latter case the actual contact satisfies
+\[
+ U\text{ bounded},\qquad V^{-1}\text{ bounded},\qquad
+ U^2\asymp m,\qquad DV^2\asymp1.                 \tag{SP1}
+\]
+Consequently its four exhaustive source types are:
+\begin{enumerate}
+\item $m,D$ units: $u_c,v_c$ bounded nonzero in residue;
+\item $m$ weak, $D$ a unit: $u_c$ infinitesimal and $v_c$ a bounded unit;
+\item $m$ a unit, $D$ weak: $u_c$ a bounded unit and $v_c$ unbounded;
+\item $m,D$ weak: $u_c$ infinitesimal and $v_c$ unbounded.
+\end{enumerate}
+The first three types have all-tests certificates from the preceding
+modules. The fourth, with $n$ arbitrary, is the common reciprocal
+type completed below in Theorem~\ref{thm:c2-positive-d-all-tests}.
+\end{proposition}
+\begin{proof}
+The stabilizer $(\lambda\ \beta)(m\ D)(c\ \alpha)$ exchanges
+$c,\alpha$ and acts on the absolute half-angles by
+$(|u|,|v|)\mapsto(1/|v|,1/|u|)$. At measurement level it exchanges
+the parties and sends $(A_0,A_1;B_0,B_1)$ to
+$(-B_0,B_1;-A_0,A_1)$, followed by local basis changes.
+Thus either weak residue enters
+Corollary~\ref{cor:c2-alpha-zero-all-tests}. Lemma~\ref{lem:positive-d-forbidden-faces}
+gives the unit $A$. In the remaining branch write
+\[
+ q_{01}=ma_1,\quad q_{02}=mDa_2,\quad q_{10}=a_3,
+ \quad q_{12}=Da_4,\quad q_{20}=na_5,\quad q_{21}=a_6,
+\]
+where all $a_i$ are bounded positive units. At the actual contact,
+$L(U,V)=0$ and every noncentral term is nonnegative. Since $h$ is
+bounded, $U,V^{-1},m/U,DV$ are bounded. Angular stationarity is
+\[
+ (q_{02}/U+q_{12})V^2=q_{10}+q_{20}U,
+ \qquad U^2(q_{20}+q_{21}V)=mV(a_1+a_2DV).
+\]
+In the first equation the right side is a positive bounded unit,
+and the left side is $DV^2(a_4+a_2m/U)$ with a positive-unit
+parenthesis. Thus $DV^2\asymp1$. Dividing the second equation by
+$V$ gives $U^2(a_6+na_5/V)=m(a_1+a_2DV)$; both parentheses
+are positive bounded units, so $U^2\asymp m$. This proves (SP1)
+and the exhaustive partition. Coercivity ensures $m,D>0$ as actual
+source quantities; the same fact also follows from the two equations.
+
+For the first type, the direct all-tests argument in
+Lemma~\ref{lem:positive-d-strong-dispatch} below applies. The second
+has the natural pitchfork entry of Theorem~\ref{thm:c2-pitchfork};
+Lemma~\ref{lem:positive-d-strong-dispatch} promotes that terminal
+to all tests. The stabilizer exchanges $m,D$, so the third type is
+the exact image of the second. No restriction on $n$ has been used.
+\end{proof}
+
+\begin{proposition}[The positive-$d$ C1 source partition]
+\label{prop:c1-positive-d-partition}
+For C1, weak $\alpha$ or weak $A$ is already covered by an all-tests
+theorem and its stabilizer image. Otherwise $\alpha,A$ are units.
+After the C1 stabilizer, $c$ may be taken to be a unit. The remaining
+exhaustive source alternatives are:
+\begin{enumerate}
+\item $m$ is a unit and $D$ or $\beta$ is a unit: the source has
+an all-tests certificate;
+\item $m$ is weak and $D$ is a unit: the source has an all-tests
+pitchfork certificate;
+\item $m$ is a unit and both $D,\beta$ are weak: the actual contact
+has $u_c$ a bounded unit and $v_c$ unbounded;
+\item $m,D$ are weak: the actual contact has $u_c$ infinitesimal
+and $v_c$ unbounded, with $\beta$ arbitrary.
+\end{enumerate}
+The third type is now covered at every test by
+Theorem~\ref{thm:c1-projective-pitchfork}. The fourth is covered at
+every test when $\beta$ is a unit by
+Corollary~\ref{cor:c1-reciprocal-beta-all-tests} below. Thus only its
+weak-$\beta$ subcase remains after these reductions; it is completed
+in Theorem~\ref{thm:c1-positive-d-all-tests} below.
+\end{proposition}
+\begin{proof}
+The C1 stabilizer
+$(\lambda\ n)(m\ c)(A\ \alpha)(D\ \beta)$ exchanges $A,\alpha$.
+Hence Corollary~\ref{cor:c1-all-m-all-tests} covers either weak
+case. The forbidden-face lemma permits an orientation with $c$ a
+unit in the remaining branch. Now
+\[
+ q_{01}=ma_1,\quad q_{02}=mDa_2,\quad q_{10}=a_3,
+ \quad q_{12}=\beta m a_4+Da_5,\quad q_{21}=a_6,
+ \quad q_{22}=\beta a_7,
+\]
+where all $a_i$ are positive bounded units. The contact equality
+bounds each positive Laurent term, so $U,V^{-1},m/U,DV$ are bounded.
+The $U$ stationarity equation reads
+\[
+ U^2(a_6+\beta a_7V)=m(a_1+a_2DV).               \tag{SP2}
+\]
+Its right parenthesis is a positive bounded unit, and its left
+parenthesis is bounded below by a positive unit. Therefore weak
+$m$ forces $U$ infinitesimal. If $m$ is a unit, boundedness of
+$m/U$ forces $U$ to be a unit. The other stationarity equation is
+\[
+ a_3=V^2\{mDa_2/U+\beta ma_4+Da_5+\beta a_7U\}. \tag{SP3}
+\]
+If $m$ is a unit, so is $U$, and the braces are comparable with
+$D+\beta$. Thus $V$ is a unit exactly when $D$ or $\beta$ is a
+unit, and is unbounded exactly when both are weak. If $m$ is weak,
+$U$ is infinitesimal. If $V$ is bounded, (SP2) gives $m/U$ weak,
+and (SP3) forces $D$ to be a unit. Conversely a unit $D$ makes
+$V$ bounded in (SP3), so the remaining branch has $V$ unbounded.
+These alternatives exhaust all cases.
+
+In the first type apply the stabilizer if necessary to arrange
+$D$ a unit; then $d,c,A,D,\alpha,m$ are units and
+Lemma~\ref{lem:positive-d-strong-dispatch} applies. In the second,
+Proposition~\ref{prop:c1-pitchfork-entry} supplies the exact finite
+pitchfork entry, and the same dispatch lemma completes all tests.
+\end{proof}
+
+\begin{lemma}[All-tests promotion for strong and pitchfork sources]
+\label{lem:positive-d-strong-dispatch}
+Let C1 or C2 have $d,c,A,D,\alpha$ units. If $m$ is a unit, it has
+a tensor certificate at every independent projective test. If $m$
+is weak and its actual contact has $u_c$ infinitesimal and $v_c$
+a bounded unit, the same conclusion follows from its finite-angle
+pitchfork theorem.
+\end{lemma}
+\begin{proof}
+All noncommuting residue tests are covered by
+Theorem~\ref{thm:all-noncommuting}. At the zero-zero angle corner,
+a zero state is the $W$ ray because $\alpha$ is a unit. Normalize
+$W=1$ and retain the entire nonnegative $m$ packet. Every remaining
+monomial is in $(u,X,Y,Z)^2$. Its quadratic residue is
+\[
+ 2(d+2\beta+2n)X^2+(4c+4D+2d)(u-Y)^2+4AY^2+4\alpha Z^2,
+\]
+which is positive definite in $(u,X,Y,Z)$. Finite polynomial
+allocation therefore gives an exact strict-residue Gram; the
+retained packet is restored. This works whether $m$ is weak or a
+unit and includes every bounded projective state chart near the
+unique zero ray.
+
+At $v=0,u\ne0$, the zero-state classification excludes zeros because
+$A,\alpha$ are units. At $u=0,v\ne0$, it excludes zeros if $m$ is
+a unit. If $m$ is weak, the sole zero state is the $W$ ray. The
+appropriate pitchfork theorem covers the matched remote residues
+$v=\pm\bar v_c$; its printed positive quartic boundary factor
+covers every unmatched finite remote residue by the strict
+four-root Gram. Its projective remote endpoint is also strict.
+
+All other projective angles use the exact homogeneous chart
+identities already printed in Section~\ref{sec:positive-d-geometry}.
+Their hypotheses here are precisely the units $d,c,A,D$: at
+$(\infty,0)$ use $(pX+Z,Y,W,vX)$, at $(0,\infty)$ use
+$(X,Y,uW,Z)$, and at $(\infty,\infty)$ use the five-root
+quadratic form on $(W,X,Y,p,q)$ after retaining the $\beta,\alpha,n$
+packets.
+Those displayed residue forms are positive definite independently
+of the residues of $m,n,\alpha,\beta$. One infinite angle with the
+other finite nonzero has no kernel by the same $c,A,D$ square
+identities. This exhausts both projective angle lines and all state
+charts; positive pure testing factors restore the original slack.
+\end{proof}
+
+\begin{corollary}[All tests for the strong-$\beta$ reciprocal source]
+\label{cor:c1-reciprocal-beta-all-tests}
+Under the hypotheses of Proposition~\ref{prop:c1-reciprocal-beta-entry},
+the C1 source has a tensor certificate at every independent projective
+test, not only at its reciprocal testing corner.
+\end{corollary}
+\begin{proof}
+That proposition gives $d,c,A,\alpha,\beta$ units, $m,D$ weak,
+$\bar h=0$, and every state at the corner $(u,v)=(0,\infty)$.
+Theorem~\ref{thm:all-noncommuting} handles every noncommuting
+residue test. At $(0,0)$ use the strict four-root Gram in
+Lemma~\ref{lem:positive-d-strong-dispatch}; its displayed residue
+remains positive when $D$ is weak, since $c,A,\alpha,d$ are units.
+At $v=0,u\ne0$ the units $A,\alpha$ exclude a zero state.
+
+At $u=0$ and finite nonzero $v$, the only zero state is the $W$ ray.
+Retain the whole $m$ packet and use $(u,X,Y,Z)$ as roots. The real
+hard block is the positive $X$ mass together with
+\[
+ \{4(c+A)+2d\}(1+v^2)Y^2+4\alpha(vY-Z)^2,
+\]
+which is positive definite. The scalar angular Schur coefficient
+is the pitchfork boundary expression
+\[
+ f(v)=\frac{8(1+v^2)}{t_7\det B(v)}
+      (q_{10}+\bar h v^2+\bar q_{12}v^4)
+      =\frac{8(1+v^2)q_{10}}{t_7\det B(v)}>0.
+\]
+Thus the exact four-root Gram has positive definite residue.
+All divisions here describe a real residue calculation, not an
+operation in the tensor ring.
+
+At $(\infty,0)$ the existing four-root identity has residue
+\[
+ 2dR^2+2d(W+V)^2+4cW^2+4AY^2\succ0,
+\]
+so it does not need a unit $D$. At $(\infty,\infty)$ the residue
+state matrix is positive definite since $c,\beta,d$ are units.
+For $u=\infty$ and finite nonzero $v$, the signed core together
+with the $c,A,\beta$ packets contains
+\[
+ 2d\{(W+vX)^2+(vY-Z)^2\}
+ +4c(1+v^2)W^2+4A(1+v^2)Y^2
+ +4\beta(1+v^2)Z^2\succ0.
+\]
+For $v=\infty$ and finite nonzero $u$, use instead
+\[
+ 2d(1+u^2)(X^2+Y^2)+4c(uW-Y)^2
+                              +4\beta(X+uZ)^2\succ0.
+\]
+These checks exhaust the projective angle charts. The stated
+reciprocal theorem supplies the sole remaining double corner.
+\end{proof}

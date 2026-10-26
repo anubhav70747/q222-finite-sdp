@@ -1,0 +1,145 @@
+SINGLE-PSD-CONE ORDER LOWER BOUND FOR Q222
+23 October 2026
+
+Conclusion
+==========
+Every representation of the full eight-coordinate Q222 as an affine
+projection of an affine section of Sym_N^+ has N >= 9.  Thus the fixed-order
+synthesis search can discard N=4,...,8 as well as N<4.  With the previously
+proved auxiliary bound p <= D-9, D=N(N+1)/2, the first unexcluded template
+is N=9, D=45, p<=36, with at most D^2=2025 matrix coefficients.
+This is a necessary lower bound, not an order-nine construction.
+
+The proof is elementary: eight strict event-positivity face inclusions,
+followed by a minimal-PSD-face argument.  No strict feasibility assumption
+on the original lift is needed.  This does not lower-bound the largest
+block of a product lift: it bounds the order of a single PSD cone, or the
+sum of block orders after a block-diagonal embedding.
+
+1. An exact nine-face flag
+=========================
+Write a deterministic vertex as four bits v=(a0,a1,b0,b1), with observable
+values (-1)^a_x and (-1)^b_y.  For an event e=(x,y,a,b), its probability
+at v is 1 exactly when a_x=a and b_y=b, and otherwise is 0.  For a general
+behaviour q it is the affine functional
+
+ p_e(q) = [1+(-1)^a A_x+(-1)^b B_y+(-1)^(a+b) E_xy]/4.
+
+All sixteen p_e are nonnegative on Q222.  Put F0=Q222 and successively
+impose the eight zero-event conditions in the following table:
+
+ k   added zero probability     witness in F_(k-1)\F_k   surviving vertices
+ 1   P(1,0|0,0)=0               1000                    12
+ 2   P(0,1|0,0)=0               0010                     8
+ 3   P(1,1|0,1)=0               1011                     6
+ 4   P(1,1|1,0)=0               1110                     5
+ 5   P(1,1|0,0)=0               1010                     4
+ 6   P(1,1|1,1)=0               0101                     3
+ 7   P(0,1|0,1)=0               0001                     2
+ 8   P(1,0|1,0)=0               0100                     1
+
+Here F_k is Q222 intersected with the first k zero conditions.  It is
+an exposed face: it is the zero set of the sum of the first k nonnegative
+probabilities.  Each displayed witness has every preceding event zero
+and the newly added event equal to one.  Every F_k contains the vertex
+0000.  Therefore
+
+          F0 strictly contains F1 strictly contains ... strictly contains F8
+
+is a chain of nine nonempty exposed faces.  No assertion about unlisted
+quantum points on those faces is required for strictness or nonemptiness.
+
+The checker enumerates all 65536 subsets of the sixteen zero conditions.
+They give 1722 distinct survivor sets on deterministic vertices, including
+the empty set.  A recursion deleting one event's four vertices at a time
+finds a maximum of eight strict nonempty transitions.  Its 1721 states are
+exactly all nonempty survivor sets.  Allowing several conditions at one
+step cannot give a longer chain: insert them one at a time and discard
+steps that leave the survivor set unchanged.  The table attains the
+maximum.  Independently, every survivor set is the vertex set of an
+exposed face of the eight-dimensional local polytope; a strict nonempty
+face chain in an eight-dimensional convex set has at most nine terms.
+Exact rational elimination also confirms dimensions 8,7,...,0 for the
+classical faces along this flag.
+
+2. Minimal PSD supports strictly decrease
+=========================================
+Let K be a convex set represented as pi(T), where
+
+                T = A intersect Sym_N^+
+
+for an affine subspace A of Sym_N and an affine map pi.  For any nonempty
+convex subset C of T define its support space
+
+                U(C) = sum_{X in C} range(X).
+
+The smallest face of Sym_N^+ containing C is the set of PSD matrices with
+range contained in U(C).  There is an X_C in C positive definite on U(C):
+choose finitely many points whose ranges span U(C), and average them.
+The kernel of a sum of PSD matrices is the intersection of their kernels.
+
+Claim. If C is a face of T, D is a subset of T, C is a proper subset of
+D, and both are nonempty, then U(C) is a proper subspace of U(D).
+(We only apply this with both C and D faces of T.)
+
+Proof. Inclusion is automatic.  If the support spaces were equal, choose
+X_C as above.  For any Y in D, a sufficiently small theta in (0,1) makes
+X_C-theta Y PSD: both matrices are supported on U(C), where X_C is
+positive definite.  The matrix
+
+                   Z = (X_C-theta Y)/(1-theta)
+
+belongs to A, because its affine coefficients sum to one, and is PSD.
+Thus Z belongs to T and X_C=theta Y+(1-theta)Z.  Since X_C belongs to the
+face C of T, Y belongs to C.  This for all Y in D contradicts properness.
+The claim follows.  In particular it is valid when T has no point positive
+definite in the full ambient Sym_N: the proof works in its actual support.
+
+For a nonempty face F of K, the inverse image
+
+                  T_F = {X in T : pi(X) in F}
+
+is a nonempty face of T.  A strict inclusion F strictly contains G gives
+a strict inclusion T_F strictly contains T_G, because pi is onto K.
+Consequently every strict nonempty face inclusion in K lowers the PSD
+support dimension by at least one.
+
+3. Compactness supplies the last positive rank
+==============================================
+Suppose K is compact and has more than one point.  Then 0 is not in T.
+Indeed, if 0 were in A, the affine subspace A would be linear and T would
+be a cone.  Writing pi(X)=q0+L(X), every X in T would give the ray
+q0+t L(X), t>=0, in K.  Compactness would force L(X)=0 for every X in T,
+so K would be the singleton {q0}, a contradiction.
+
+Thus every nonempty T_F has support dimension at least one.  For the
+nine-face flag constructed above, writing r_k=dim U(T_(F_k)) gives
+
+             N >= r_0 > r_1 > ... > r_8 >= 1.
+
+Therefore N>=9.  This proves the conclusion for every affine-section
+PSD lift and handles projections and missing strict feasibility directly.
+
+The same conclusion applies to a pencil presentation
+K={q : exists y, A0+sum_i q_i A_i+sum_j y_j B_j >=0}.
+For compact K, q is determined by the resulting matrix: if a kernel
+direction changed q while leaving the matrix fixed, any feasible parameter
+point would extend to a full feasible q-line.  Hence projection from the
+affine space of pencil matrices is well-defined and the preceding argument
+applies.  Extra affine equations can first be eliminated by parametrizing
+their nonempty affine solution space.
+
+4. Exact checker and limits
+===========================
+Files in this directory:
+  positivity_face_chain_lower_bound.py
+  positivity_face_chain_lower_bound_checks.json
+
+Run: py -3 positivity_face_chain_lower_bound.py
+It uses only the Python standard library, integer bit masks, and exact
+rational Gaussian elimination.  Runtime in this session: below one second.
+It establishes the Boolean flag and its maximality; the PSD-lift lower
+bound is the separate mathematical proof in Sections 2-3 above.
+
+No source files or public repository files were changed.  No SDP solver,
+quantifier elimination, or assumed certificate-status label was used.

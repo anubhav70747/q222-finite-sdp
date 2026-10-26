@@ -1,0 +1,86 @@
+UNIFORM PAYMENT OF THE R1 SIGNED RADIAL MASS
+
+Domain and notation. Use the actual RSR4--6/15--21 dictionary in
+latex/certificates/c2_short.tex, with delta=2^-10, 0<B,jB,T<=delta,
+0<p<min(j,1), 0<H<1, n>=0. Put x=jB,y=TB, J=j+1,K=J-p,
+kap=-kc>0, h0=mu+1/2, Me=n h0 j^2/(n+h0), Sigma=Me+fc/y.
+All denominators below are pure source. This concerns only radial
+terms, not the completion of either state normal.
+
+1. Exact averaged identity.
+
+Set theta=Me/Sigma. Write A27=(1+U^2)Psi-R_*^2 and
+B29=2(Psi+V^2 Q_*^2+U^2 B_*^2)-R_*^2, the separated SOS in
+RSR27/29, with U=u/sqrt(x),V=v/sqrt(y). Then
+
+ fc aPsi Psi+qc aQ Q_*^2+Me*y aE B_*^2-kap R_*^2
+     =kap[(1-theta)A27+theta B29],                       (1)
+ aPsi=kap(1+theta)/fc+kap*u^2/(Sigma*y*x),
+ aQ=2kap*theta*v^2/(qc*y),
+ aE=2kap*u^2/(Sigma*y*x).
+
+Indeed (1-theta)/fc=1/(Sigma*y), while theta=Me/Sigma;
+these identities match all four coefficients, without cancelling Me.
+At n=0, theta=Me=0, Sigma=fc/y>0: (1) is literally kap A27.
+The SOS identities are used in the nonnegative angle chart; their
+coefficient bounds below involve only u^2,v^2 and apply after the fixed
+angle/state sign gauges as well. No independent state bound is used.
+
+2. Uniform source bounds, including arbitrary j and jT.
+
+Let f0=1-delta-delta^3. The previous exact derivation in
+full_r1_budget_independent.txt gives
+ P>=J, E>=1-delta, L>=f0 K, f0 K<=F<=2K,
+ p^2<=(45/2)Sigma.
+For completeness, L>=K-T-BT^2 follows directly from RSR5.
+The regrouped F1,F2 there give F1<=4K,F2<=3delta K, proving
+F<=K(1+4delta+3delta^3)<2K. From RSR18, dropping only negative
+terms gives
+ Kcal/J<=p+2B+TB(2+delta)+T^2B^2<=p+3B.                 (2)
+RSR19 also gives Kcal>=p(1-p)(1-BJ)>0, so kap>0.
+
+Define Gq=(1+x)(1+Hy)(K+Hjy)/(1-HT)-xF. Exactly
+ qc=Tx Gq/(2P), Gq>=(1-2delta)K>0.
+Consequently, throughout the full source domain,
+ kap/(qc*y)=(1+x)Kcal/(E Gq)
+ <=(1+delta)(2+6delta)/[(1-delta)(1-2delta)]<3.           (3)
+
+If p>=1/2, then j>=1/2 and Sigma>=1/90. Equations (2) and
+F>=f0K give the explicit bounds
+ kap/fc=T(1+x)Kcal/(E*j*F)
+ <=T(1+delta)(2+12delta)/[(1-delta)f0]<3T,
+ kap/(Sigma*y*x)=T(1+x)Kcal/(2EP Sigma)
+ <=45T(1+delta)(1+3delta)/(1-delta)<48T.                 (4)
+Thus aPsi<=6T+48T*u^2, aQ<=6v^2, aE<=96T*u^2.
+Every bound is uniform as n->0, j-p->0, H->0 or1, or j,jT grow.
+
+If p<1/2, no averaging is needed:
+ kap/rc=T Kcal/[(1-p)(1+Hy)L]
+ <=T(2p+6delta)/[(1-p)f0]<3T.                           (5)
+
+3. Whole signed square and fixed gates.
+
+RSR24 gives Z_*(V^2-1)=-VQ_*-R_*, and exactly
+ 2kap V^2 Q_*^2+2kap R_*^2-kap Z_*^2(V^2-1)^2
+     =kap(VQ_*-R_*)^2.
+For p>=1/2 combine this with twice (1). The whole negative kc term
+therefore costs fractions at most
+ 12T+96T*u^2 on fc Psi,
+ 18v^2 on qc Q_*^2,
+ 192T*u^2 on Me*y B_*^2.
+On |u|<=2^-12, |v|<=2^-25 these are, respectively,
+ <1/64, <2^-45, <2^-26.
+For p<1/2, (3),(5) instead cost <1/128 of rc R_*^2 and <2^-47
+of qc Q_*^2. Thus the three old RSR25--29 source cases are replaced
+for this signed mass by two numerical p intervals.
+
+These are coefficient bounds, not pointwise positivity in a tensor.
+For example, write 2aPsi=c0+c2*u^2 with source-only c0,c2>=0,
+bPsi=c0+c2*2^-24<1/64. Then exactly
+ 1-2aPsi=(1-bPsi)+c2*2^-24(1-2^24 u^2).
+The Q and current fractions have the same identity with the fixed
+gates 1-2^50 v^2 and 1-2^24 u^2. Constants in the p<1/2 case
+are source-only positive residues. Thus all residual scalar factors
+have explicit fixed-gate decompositions; no adaptive real threshold
+is needed for this allocation. Other radial purchases and all normal
+couplings still require their own simultaneous budget.

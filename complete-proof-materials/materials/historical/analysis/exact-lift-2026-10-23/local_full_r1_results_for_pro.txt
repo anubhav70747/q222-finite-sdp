@@ -1,0 +1,50 @@
+LOCAL RESULTS TO COMPARE WITH THE ACTIVE GLOBAL PRO RESPONSE — UNSENT
+Do not send while userturn efab172a-9ef0-4ed3-8a94-62d9e5b46f9a is active.
+
+1. Both strong and weak native contact proofs are fully checked and published.
+All actual strong generators,51coefficient records,14budgets,source errors,
+full-parent/contact remainders,conductor/shear and spans pass. No discrepancy.
+
+2. Joined K635 is closed, now published. Fixed cap evaluations bound all Gram
+traces; actual Alice COO gives rho=tau-d/2>=0,rho<=2D,0<=q<=p<=d/2.
+Thus closure(E+cone(Snative)) subset K635 subset Ccan. Not global admission.
+
+3. FullR1 domain delta2^-10,0<B,jB,T<=delta,0<p<min(j,1),0<H<1,n>=0:
+we independently proved p²<=(45/2)Sigma, Sigma=Me+fc/y, no bound onj,jT.
+Key estimates P/(j+1)<=Rdelta<5/4; F>=K(1-delta-delta³);
+fc/y>j²B/5; rho²<=5n+(9/2)B withrho=p/j; splitn<=h0,n>=h0.
+Detailed proof full_r1_budget_independent.txt and exact checks JSON saved.
+
+4. The old weak Q cannot extend unchanged. On actualR1 path
+B=T=s,j=2,H=1/2,p=1-s²,positiveweights,n->1/6,
+rc/s5,gc/s5->2/3,kappa/s4->1/3; sQ00[5,5]->-1.
+All limits checked symbolically against the published source formulas.
+This identifies a missing signed allocation, not a counterexample to another lift.
+
+5. That signed mass has a uniform source-weighted payment.
+Forp>=1/2,theta=Me/Sigma,1-theta=fc/(ySigma),Sigma>=1/90.
+A27=(1+U²)Psi-R² and B29=2(Psi+V²Q²+U²Bstar²)-R² are exact SOS;
+root checked their FULL homogenizations in independentw,Z.
+Multiply(1-theta)A27+theta B29 bykappa. Costs onfcPsi,qcQ²,Me*yBstar²:
+ aPsi=kappa(1+theta)/fc+kappa*u²/(Sigma*y*x),
+ aQ=2kappa*theta*v²/(qc*y),
+ aE=2kappa*u²/(Sigma*y*x).
+Actualsource bounds give aPsi<=6T+48T*u²,aQ<=6v²,aE<=96T*u².
+Whole negativekc square (RSR24 plus twice averagedidentity) costs
+12T+96T*u²,18v²,192T*u² respectively: <1/64,<2^-45,<2^-26
+on |u|<=2^-12,|v|<=2^-25. Forp<1/2,kappa/rc<3T directly.
+Residual factors use only fixedgates1-2^24u² and1-2^50v².
+Exactfullproof signed_radial_uniform_payment.txt; no divisionbyMe,n.
+
+6. Further root construction under bounded independent check:
+remove original weak offdiagonals u(1,5),u(4,5) by adjoining
+ gA=alpha*u*Rphysical=alpha*sqrt(jT)*u*Rstar.
+RSR27 alone pays gA² fromfcPsi with coefficients
+ alpha²*jT/fc on u² and alpha²*jT/(fc*x) on u4.
+Expected explicit bounds30delta² and45delta onp>=1/2 usingalpha<=B²(j+1),
+fc>Tj²B²/5 and j>=1/2. This avoids the degenerate rc normalization.
+aN f1-bN f4=N exactly, so new offdiagonals aN,-bN coupleN togA.
+The M coupling uses gB=sqrt(j)T*v*(alpha-BTCH*u²)Rstar,
+with bounded sqrt(H(1-H)) coefficient, matching your saved opposite-normal
+purchase. New full positive Gram still requires simultaneousbudget verification.
+Do not claim it finished from these individual allocations.

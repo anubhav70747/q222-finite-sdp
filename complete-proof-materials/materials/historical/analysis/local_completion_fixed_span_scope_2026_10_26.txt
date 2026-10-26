@@ -1,0 +1,86 @@
+LOCAL CONTACT COMPLETION AND FIXED SIXTH-ROOT FUNCTIONS
+Bounded analytical finding, 26 October 2026. Read-only source review.
+
+Inputs: analysis/c2_half_power_contact_completion_2026_10_26.txt,
+and the relevant polynomial-contact and strict-Gram mechanisms.
+No solver, browser, sweep or repository edit.
+
+1. A constructive local statement, with an explicit limitation.
+
+In the contact coordinates of the input, write
+ F=eta^T H eta+2z eta^T Vq+z^2 q^T Gq,
+ q=(s,t,st), s=u-u_c,t=v-v_c, G>0.
+The source-only choice of V at contact supplied there gives
+ R=H-VG^{-1}V^T, R(0,0)>0.
+H and V are respectively biquadratic and bilinear, so
+ R(s,t)=sum_{0<=i,j<=2} R_ij s^i t^j.
+These statements concern the full polynomial matrix, not its determinant.
+
+There is a fixed-degree LOCALIZING matrix-SOS identity, explicitly:
+ lambda=1/Tr(R_00^{-1})>0,
+ M=sum_{i+j>0} ||R_ij||_F,
+ r=min(u_c/2,v_c/2,1,lambda/[2(M+lambda)])>0.
+Set a=(s+r)/(2r), b=(t+r)/(2r). Expand R in tensor Bernstein degree(2,2):
+ R=sum_{k,l=0}^2 B_{k,2}(a) B_{l,2}(b) C_kl,
+ B_{k,2}(a)=binom(2,k)a^k(1-a)^(2-k).
+
+All nine C_kl are source-only matrices >=lambda I/2.
+Proof: the degree-two Bernstein coefficient vectors of 1,s/r,s²/r²
+are respectively(1,1,1),(-1,0,1),(1,-1,1). Consequently
+ ||C_kl-R_00||<=sum_{i+j>0} r^(i+j)||R_ij||_F<=rM<lambda/2.
+Since R_00>=lambda I, the assertion follows.
+
+Each Bernstein weight is a polynomial square times one of
+ 1, ell_u, ell_v, ell_u ell_v,
+ ell_u=r²-(u-u_c)², ell_v=r²-(v-v_c)².
+Thus R has an exact matrix preordering representation of bidegree<=2
+using source-only PSD coefficient matrices. Together with the polynomial
+square block
+ (V^T eta+Gqz)^T G^{-1}(V^T eta+Gqz),
+this certifies F on the explicit contact-centered rectangle |s|,|t|<=r,
+for every state. It remains valid at literal n=0 whenever the stated
+finite-contact G and Hessian hypotheses hold.
+
+This is NOT a Z6 SOS: taking the roots of ell_u and ell_v introduces
+source-dependent interior branch points. Source-only shifts of polynomial
+factors expand harmlessly; those two square roots do not.
+
+2. Why restricting an ordinary Z6 identity to a local region does not help.
+
+Let Z6 mean a finite polynomial span in u^(1/6),v^(1/6), linear in state,
+with source-only coefficients. If an exact identity
+ F=sum_j h_j^2, h_j in that span,
+holds on ANY nonempty open contact-centered angular rectangle for all
+states, substitute u=X^6,v=Y^6. Both sides become polynomials in
+X,Y and the state. Equality on an open set forces a global polynomial
+identity. It therefore proves precisely the corresponding global Z6
+SOS membership, not a weaker local membership.
+
+The same observation applies to an ordinary matrix-SOS identity for R.
+Local positive definiteness cannot justify it. For example R=1-s² is
+positive near s=0 but cannot equal a sum of squared polynomials in
+(u^(1/6),v^(1/6)) even locally when s=u-u_c: polynomial continuation
+would make it nonnegative for every positive u. This directly blocks
+the proposed shortcut from a strict contact reserve to a polynomial
+Z6 Gram identity. It does not refute Z6 admission of native Bell sources.
+
+3. The exact missing patching step.
+
+One needs testing charts/localizers FIXED BEFORE the source, plus explicit
+finite-degree identities and coefficient bounds proving admission on those
+charts, with complementary tests also covered. The source-dependent r
+above supplies neither a finite fixed cover nor a common fixed-root family.
+Writing its moving localizers as additional constraints introduces source-
+dependent testing functions; treating their coefficients as free Gram
+entries does not establish their positivity on a fixed testing chart.
+
+For a compact source subfamily with a common contact neighborhood and
+uniform reserve/coefficient bounds, the Bernstein argument CAN use fixed
+boxes and fixed gate roots. The full native family has no such uniformity
+from the Hessian theorem alone: openings degenerate and contacts approach
+axes or projective infinity. Handling those limits with one fixed family
+is the remaining constructive problem. Pointwise local completions,
+or a finite-subcover assertion without that quantified uniformity, do not
+supply globally sound fixed affine cones. No universal sixth-root or
+canonical admission follows from this local lemma.
+

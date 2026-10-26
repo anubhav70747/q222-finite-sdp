@@ -1,0 +1,434 @@
+## Part 1 — complete weak admission source
+
+This is a consolidated transcription of the saved weak source dictionary, 44-record generator, full-parent restoration, and bound appendix. **I have not rerun the mathematical checks or altered the construction.** The preserved ZIP still has SHA-256
+`c22fae5078293f1f60d8a38b55ab845740d90cad3461637663d0519fae99d522`.
+
+Both constructions with their estimates do not fit in this reply. This part is complete for **\(0<H_o\le2^{-12}\)**. The exact strong material remaining for Part 2 is identified at the end; in particular, **\(H_o\to1\)** belongs to that part.
+
+### 1. Domain and exact source change
+
+Use the original native **GE1** source, normalized by \((d,\lambda,\beta)=(1,0,0)\), with
+\[
+0<H_o\le2^{-12},\quad0<z_o,y_o\le2^{-64}H_o,\quad
+0<r_o<1,\quad0<t_o<1+z_or_o,\quad n\ge0.
+\]
+Set
+\[
+B_s=H_o+y_ot_o,\quad h_s=H_o/B_s,\quad c_s=1+z_or_o,\quad R_s=1+h_sz_o,
+\]
+\[
+B=B_sR_s/c_s,\quad j=z_oc_s/(B_sR_s),\quad
+T=y_oc_s/(B_sR_s),\quad p=z_o(1-r_o)/(B_sR_s),\quad H=t_o/c_s.
+\]
+Then, exactly,
+\[
+x=jB=z_o,\quad y=TB=y_o,\quad p/j=(1-r_o)/c_s,
+\]
+and uniformly
+\[
+0<B<2H_o\le2^{-11},\quad0<j,T<2^{-63},\quad0<p<j,\quad0<H<1.\tag{D}
+\]
+The source variables \(B,T,j,p,H\) and testing variables below are independent. The test chart is
+\(0\le u\le2^{-12},\ 0\le v\le2^{-25},\ w\zeta\ge0\), with
+\[
+t=(X+uZ)/(1+u^2),\quad r=(Y-uW)/(1+u^2),
+\]
+\[
+w=(W+uY)/(1+u^2),\quad \zeta=(Z-uX)/(1+u^2).
+\]
+The repository labels used are **RSR2–RSR19** for the compact source/scalar dictionary, **RFN8/RFN12** for the full parent, **RFN18b/RFN19** for the two circuit identities, and **RFN21–RFN22** for the retained normal terms.
+
+### 2. Standalone SymPy transcription
+
+The program constructs the actual eleven-row polynomial Gram and all 44 records. `src` defines every event/scalar source symbol as a rational function of the five compact source parameters. It is a witness substitution, not an SDP constraint. Records are **one-based actual symmetric entries**, without an off-diagonal factor two.
+
+```python
+import sympy as s
+from fractions import Fraction as F
+h=s.Rational(1,2)
+B,T,j,p,H=s.symbols('B T j p H', positive=True)
+n,mu,m,C,A,D,alpha,fc,qc,rc,gc,kc,dc=s.symbols(
+    'n mu m C A D alpha fc qc rc gc kc dc', real=True)
+x=j*B; y=T*B; qz=j*T
+K=j+1-p; E=1+B*(H*T+p-1); W0=(1-H)*j+1-p
+P=(j+1+B*((j+1)**2-p)
+   +T*B*(H*j+j+1+B*(H*j*(2*j+2-p)+p*(2*j+1-p)))
+   +H*j*T*T*B*B*(1+B*p+B*H*j))
+L=K+T*(W0-H)+B*T*(p*K+H*j*(1-p))+B*H*T*T*(W0-1)
+NN=(p+B*(-j*j+3*j*p-j-p*p+p)
+    +B*T*(H*j*j+H*j-j*j+j*p-j+p)
+    +B*B*T*(2*H*j*j*p-H*j*j-H*j*p*p+2*H*j*p
+             -2*j*j*p+3*j*p*p-j*p-p**3+p*p)
+    +B*B*H*T*T*j*(H*j-j+p)*(1+B*p))
+F1=(-2*B*H*j*p+B*H*j+2*B*j*p-2*B*p*p+2*B*p
+    -H*j-H*p-H+j+1-p*p/j+p/j)
+F2=(-B*B*H*H*j*p+B*B*H*j*p-B*B*H*p*p+B*B*H*p
+    -B*H*H*j-B*H*H*p+B*H*j-B*H*p*p/j+B*H*p/j)
+FF=K+T*F1+T*T*F2
+KK=(p*W0+B*(1-p)*(j*(H*(p+1)-p)-(1-p)*(p-H))
+    +T*B*H*((p+1)*(1-H)*j+(1-p)*(B*H*j+p+1-H))
+    +T*T*B*B*H*H*j*(1-H))
+src={
+ mu:j*p*(1+y)*(1+x)*(1+H*y)/(2*P),
+ n:NN/(2*(j-p)*P),
+ C:L/(2*H*T*P),
+ A:T*(1+x)*(1+H*y)*(K+H*j*y)/(2*(1-H*T)*P),
+ D:(1+H*y)*(K+H*j*y)*(1-y*((1-H)*j-p))/(2*T*(1-H)*P),
+ alpha:B**2*(K+H*j*y)*L/(2*E*P),
+ fc:T*x*x*FF/(2*P),
+ rc:B*B*j*T*(1-p)*(1+x)*(1+H*y)*L/(2*E*P),
+ gc:H*T*T*j*j*B**3*L/(2*P),
+ kc:-T*T*B*B*j*(1+x)*KK/(2*E*P)}
+src[m]=src[mu]/(1-p)
+src[qc]=src[A]*x-src[fc]
+src[dc]=H**2*(src[A]+src[C]+src[alpha]+h)*y*y*qz-src[kc]
+# Native admissibility includes src[n]>=0, equivalently NN>=0.
+
+h0=mu+h
+cb=n*j/(n+h0); Me=n*h0*j*j/(n+h0)
+a=1/s.sqrt(n+h0); b=s.sqrt(n/(h0*(n+h0)))
+tau=s.sqrt(T*H*(1-H))
+rhoQ=T*s.sqrt(x/qc); rhoR=s.sqrt(qz/rc)
+Sigma=Me+fc/y; gamma=p*p/Sigma; kap=-kc
+Kc=p/2+j*(H*(alpha+h)-h)+n*(p-j)
+KR=-mu-(alpha+h)*(1-p)+(T/j)*Kc
+kR=KR+alpha/B
+
+# Exactly the saved 44 actual upper-triangular coefficient records.
+# Each tuple is (row,column,u_exponent,v_exponent,coefficient).
+rec=[]
+def add(ii,jj,eu,ev,c):
+    rec.append((min(ii,jj),max(ii,jj),eu,ev,s.sympify(c)))
+diag=[1,tau**2*(C+D+h+A),1+gc/qc,1,1+(gc-2*kap)/rc,
+      1-gc/fc-64*x*x*y/fc,1-gc/fc-64*x*x*y/fc,
+      1-gc/fc-64*x*x*y/fc,16,8,1]
+for ii,c in enumerate(diag,1): add(ii,ii,0,0,c)
+for ii,jj,c in [(1,9,a*kR),(4,9,-b*kR),(1,10,a/2),(4,10,-b/2),
+               (2,3,tau*rhoQ*A/T),(2,11,(mu/p)*s.sqrt(H*(1-H)))]:
+    add(ii,jj,0,0,c)
+add(1,5,1,0,a*alpha*rhoR); add(4,5,1,0,-b*alpha*rhoR)
+add(2,5,0,1,tau*alpha*rhoR)
+add(3,3,2,0,-64*x*y/qc); add(5,5,2,0,-64*x*y/rc)
+for ii in [6,7,8]: add(ii,ii,2,0,-gamma*T*y)
+add(3,3,0,2,-2*kap/(y*qc))
+add(2,3,0,2,tau*rhoQ*H*(C+A+alpha+h))
+for ii in [6,7,8]: add(ii,ii,0,2,-8*gamma*y)
+for ii,jj,c in [(1,3,a*(Kc/j)*rhoQ),(3,4,-b*(Kc/j)*rhoQ),
+               (1,2,(alpha+h)*tau*a),(2,4,-(alpha+h)*tau*b)]:
+    add(ii,jj,1,1,c)
+add(2,5,2,1,-tau*B*T*C*H*rhoR)
+add(2,3,2,2,tau*rhoQ*H*C)
+for ii in [4,6,7,8]: add(ii,ii,2,2,-gamma*T)
+for ii in [4,6,7,8]: add(ii,ii,0,4,-8*gamma)
+assert len(rec)==44
+
+u,v=s.symbols('u v', nonnegative=True)
+t,r,w,zeta=s.symbols('t r w zeta', real=True)
+Qab={e:s.zeros(11) for e in {(eu,ev) for _,_,eu,ev,_ in rec}}
+for ii,jj,eu,ev,c in rec:
+    Qab[eu,ev][ii-1,jj-1]+=c
+    if ii!=jj: Qab[eu,ev][jj-1,ii-1]+=c
+Q=s.zeros(11)
+for (eu,ev),mat in Qab.items(): Q+=u**eu*v**ev*mat
+
+# The eleven rows, before their common division by sqrt(1+v^2).
+N0=t-p*v*w; M0=-r-H*v*zeta
+bcur=v*w-u*zeta/j; q=v*zeta-T*u*w
+R=zeta-u*v*w/B; Ru=v*(u*u-x)*w
+U=u/s.sqrt(x); V=v/s.sqrt(y); Zs=zeta/s.sqrt(qz)
+Qh=U*w-V*Zs; Bh=V*w-U*Zs; Rh=Zs-U*V*w
+Psi=(U-V)**2*w*w+Zs**2*(1-U*V)**2+2*U*V*(w-Zs)**2
+f=s.Matrix([
+ s.sqrt(n+h0)*(N0+cb*bcur), M0/tau, q/rhoQ, s.sqrt(Me)*bcur,
+ R/rhoR, s.sqrt(fc)*(U-V)*w,
+ s.sqrt(fc/qz)*(1-U*V)*zeta,
+ s.sqrt(2*fc)/(x*y)**s.Rational(1,4)*s.sqrt(u*v)*(w-Zs),
+ Ru, p*v*v*bcur, s.sqrt(T)*p*u*v*bcur])
+
+# Original RFN18b and RFN19, homogenized without a state denominator.
+E18=Qh**2+Rh**2+V**2*(w-U*V*Zs)**2
+W19=4*Psi+4*U**2*Qh**2+4*U**2*Rh**2-V**2*(U**2-1)**2*w*w
+# RFN18b: E18=(1+V^2)*Psi-V^2*Bh^2.
+# RFN19 supplies the unchanged positive rational 7-row/3-row SOS for W19.
+
+# ALL retained whole squares, including the original mp*(1+u^2)*N0^2.
+mp=mu*p/(1-p)
+RP=(mp*N0**2+(mp+h0+alpha)*(u*N0)**2+h*(v*N0)**2
+    +n*(v*(N0+p*bcur))**2
+    +tau**2*(C+D+h)*(u*f[1])**2
+    +tau**2*(C+A+alpha+h)*(v*f[1])**2
+    +tau**2*C*(u*v*f[1])**2
+    +dc*(V*Qh)**2+h*p*p*y*y*(V*Bh)**2
+    +gc*(V*(w-U*V*Zs))**2+kap*(V*Qh-Rh)**2)
+certificate_numerator=((f.T*Q*f)[0]+RP+16*x*x*y*W19
+                       +8*gamma*fc*y*v*v*E18
+                       +gamma*T*fc*y*u*u*E18)
+# F_h/4 = certificate_numerator/(1+v^2).
+
+# Complete saved RFN8/RFN12 parent for independent comparison.
+Fs=(qc*Qh**2+n*j*j*y*Bh**2+rc*Rh**2+dc*V**2*Qh**2
+    +(n*p*p*y*y+h*p*p*y*y-gc)*V**2*Bh**2
+    +fc*Psi+gc*V**2*Psi+kc*Zs**2*(V**2-1)**2)
+LN=(n*j*bcur+n*p*v*v*bcur-j*alpha*bcur+h*p*v*v*bcur
+    +KR*Ru+(Kc/j)*u*v*q)
+Cq=A/T+v*v*(C*H*(1+u*u)+A*H+(alpha+h)*H)
+LM=Cq*q+mu*u*v*bcur+v*(alpha-B*T*C*H*u*u)*R
+HN=h0*(1+u*u)+h*v*v+alpha*u*u+n*(1+v*v)
+HM=(1+u*u)*(C*(1+v*v)+D+h)+A*(1+v*v)+(alpha+h)*v*v
+parent_numerator=(Fs+2*LN*N0+2*LM*M0+HN*N0**2+HM*M0**2
+                  +2*(alpha+h)*u*v*N0*M0+mp*(1+u*u)*N0**2)
+
+# Literal fixed gate prescription: no free thresholds.
+rb={(1,0):1,(0,1):1,(2,0):512,(0,2):8,
+    (1,1):16,(2,1):4,(2,2):16,(0,4):128}
+I=s.eye(11); reserve=Qab[0,0].copy(); gates={}
+for (eu,ev),bound in rb.items():
+    scale=s.Rational(1,2**(12*eu+25*ev))
+    budget=bound*scale; Ac=scale*Qab[eu,ev]
+    reserve-=budget*I
+    gates[eu,ev]=((budget*I+Ac)/2,(budget*I-Ac)/2)
+# Q=reserve + sum Gplus*(1+p_ab)+Gminus*(1-p_ab),
+# p_ab=(4096*u)^a*(33554432*v)^b.
+# Use expr.subs(src,simultaneous=True) for the native source witness.
+for row in rec: print(row)
+```
+
+The program retains `n` formally until `src` is applied, so the specialization `n=0` is literal: \(b=c_b=M_e=0\), the fourth row is zero, and \(\Sigma=f_c/y>0\). No formula divides by \(n\) or \(\sqrt{M_e}\). The source formulas themselves are exactly those used by the saved checker; they are printed here so no source symbol has to be inferred.
+
+### 3. Source inequalities needed by the admission proof
+
+Here \(P,L,NN,FF,KK\) mean exactly the polynomials in the program; put \(\delta=2^{-10}\), \(\ell=127/128\), \(h_*=129/128\). The saved **SB1–SB11** proof uses the following explicit estimates.
+
+**Polynomial envelopes.** Substitute \(p=js\), \(0<s<1\). For a polynomial in \((B,T,j,H,s)\), its absolute coefficient sum with each monomial weighted by \(\delta^{\deg_B+\deg_T+\deg_j}\) bounds it on the larger box \(B,T,j\le\delta\), \(H,s\le1\). Applied to the printed polynomials, the saved bounds are
+\[
+\|P-1\|_\delta,\ \|L-1\|_\delta,\ \|FF-1\|_\delta<1/128,
+\quad \|F1\|_\delta<4,\quad\|F2/B\|_\delta<2.
+\]
+Together with the positive expression for \(P\), these give
+\[
+1\le P\le h_*,\quad \ell\le L,FF\le h_*,\quad1-\delta\le E\le1.
+\]
+For clarity, the exact saved envelope operation is:
+```python
+ss=s.symbols('ss')
+delta=F(1,1024)
+def abs_envelope(expr):
+    poly=s.Poly(s.cancel(expr.subs(p,j*ss)),B,T,j,H,ss)
+    return sum(abs(F(int(s.numer(c)),int(s.denom(c))))
+               *delta**(eb+et+ej)
+               for (eb,et,ej,eh,es),c in poly.terms())
+```
+
+**Scaled positive coefficients.** Every member of this list lies in \([1/3,2/3]\):
+\[
+\frac AT,\ THC,\ T(D+\tfrac12)(1-H),\ \frac\alpha{B^2},\
+\frac\mu{jp},\ \frac{f_c}{Tx^2},\ \frac{q_c}{Tx},\
+\frac{r_c}{TjB^2(1-p)}.\tag{S1}
+\]
+The saved rational endpoint bounds establishing these claims are the following, all evaluated at \(\delta=1/1024\):
+\[
+a_{\min}=1/(2h_*),\qquad
+a_{\max}=\frac{(1+\delta^2)^2(1+2\delta)}{2(1-\delta)},
+\]
+\[
+\begin{gathered}
+a_{\min}>1/3,\quad a_{\max}<2/3,\quad
+\ell/(2h_*)>1/3,\quad h_*/2<2/3,\\
+a_{\min}-2\delta^2/3>1/3,\\
+\frac{(1+\delta^2)^2h_*}{2(1-\delta)}<2/3,\quad
+\frac{(1+2\delta)h_*}{2(1-\delta)}<2/3,\\
+\frac{1-\delta^3}{2h_*}>1/3,\quad
+\frac{(1+\delta^2)(1+2\delta)(1+\delta^3)}2+\delta/2<2/3,\quad
+\frac{(1+\delta^2)^3}{2}<2/3.
+\end{gathered}
+\]
+
+**Physical numerator and the new harmonic budget.** Exactly,
+\[
+NN=p\{1+B(3j+1-p)+BT(j+1)\}
+-Bj(j+1)\{1+(1-H)T\}+\mathcal R.
+\]
+After \(p=js\),
+\[
+\frac{\mathcal R}{B^2Tj^2}
+=H(2s-1)-s+s^2+j(2Hs-Hs^2-2s+3s^2-s^3)
++HT(H-1+s)(1+Bjs).
+\]
+Its absolute value is at most \(5+9\delta+\delta(1+\delta^2)<6\). Hence
+\[
+NN\ge p-2Bj(j+1),\quad n(j-p)/j\le1,\quad p/j\le\tfrac52(n+B).
+\]
+The upper bound uses
+\[
+NN/j\le1+B(3j+1)+BT(j+1)+6B^2T(j+1)<2.
+\]
+Using (S1), if \(n\le h_0\), then
+\[
+M_e\ge nj^2/2,\quad f_c/y\ge j^2B/3,\quad
+p^2\le5M_e+\tfrac{15}{2}f_c/y\le8\Sigma.
+\]
+If \(n\ge h_0\), then \(M_e\ge j^2/4\) and \(p^2\le4M_e\). Thus \(0<\gamma\le8\), including literal \(n=0\).
+
+**Signed masses.** The exact identity
+\[
+\begin{aligned}
+KK-pW_0+Bp(1-p)(j+1)
+={}&B(1-p)\{Hj(p+1)+H(1-p)+p^2\}\\
+&+TBH\{(p+1)(1-H)j+(1-p)(BHj+p+1-H)\}\\
+&+T^2B^2H^2j(1-H)
+\end{aligned}
+\]
+has nonnegative right side. Since \(W_0\ge1-p\), \(B(j+1)<1\), and the printed polynomial gives \(KK\le2(p+B)\),
+\[
+\kappa:=-k_c>0,\quad
+\kappa/r_c\le3T(p+B),\quad
+\kappa/(q_cy)\le4(p+B),\quad g_c/f_c\le2y.\tag{S2}
+\]
+For example, \(\kappa/r_c=T\,KK/[(1-p)(1+Hy)L]\).
+
+**Both normal coefficients.** Set \(K_d=CH-(D+1/2)(1-H)\). The exact source cancellations used are
+\[
+\begin{aligned}
+0&=T(K_d+AH+1/2)-A,\\
+0&=jK_d+\mu+xTCH,\\
+0&=jK_d+xTCH+T\{CH+AH+(\alpha+1/2)H\}
+-A-(\alpha+1/2)(1-p)+\alpha/B,\\
+0&=np-\mu+p/2+\{-\mu-(\alpha+1/2)(1-p)\}x
++j(\alpha-n)+yK_c.
+\end{aligned}
+\]
+They give
+\[
+|K_c/j|\le2,\quad |k_R|\le1,\quad|K_d|\le\tfrac23(p+B).
+\tag{S3}
+\]
+In particular,
+\[
+|k_R|\le\mu+(\alpha+1/2)(1-p)+2T+\alpha/B
+\le\tfrac12+\tfrac43\delta^2+\tfrac83\delta<1.
+\]
+For \(u^2\le1/16\), the remaining saved estimates are
+\[
+\begin{gathered}
+0\le TC_q\le T+v^2,\qquad
+|\alpha-BTCHu^2|\le\tfrac23B(B+u^2),\\
+TH(1-H)H_M\ge1/3.
+\end{gathered}\tag{S4}
+\]
+The last inequality retains the entire \(C,D\) part:
+\[
+TH(1-H)(C+D+1/2)\ge(1-H)/3+H/3.
+\]
+
+### 4. Exact purchases, reserves, and all eight coefficient bounds
+
+The two **new helper identities**, using the homogeneous `Psi`, `E18` and `bcur` in the program, are
+\[
+\gamma M_ev^4b_{\rm cur}^2+
+\gamma f_c(yv^2+v^4)\Psi-(pv^2b_{\rm cur})^2
+=\gamma f_cyv^2\mathcal E_{18},
+\]
+\[
+\gamma TM_eu^2v^2b_{\rm cur}^2+
+\gamma Tf_cu^2(y+v^2)\Psi-(\sqrt T\,puvb_{\rm cur})^2
+=\gamma Tf_cyu^2\mathcal E_{18}.
+\]
+They follow literally from \(p^2=\gamma(M_e+f_c/y)\) and RFN18b. The scalar recombination uses
+\[
+g_cV^2\Psi-g_cV^2B_h^2=g_c(\mathcal E_{18}-\Psi),
+\]
+\[
+-\kappa(VQ_h+R_h)^2=-2\kappa V^2Q_h^2-2\kappa R_h^2
++\kappa(VQ_h-R_h)^2.
+\]
+Thus no independently positive \(C(cE)^2\) is retained at the native zero.
+
+Purchasing \(16R_u^2\) via RFN19 costs at most
+\[
+192B,\qquad192Bu^2,\qquad192u^2/(1-p)
+\]
+of the \(f_c,q_c,r_c\) pivots. The helper purchases, with multipliers \(8,1\), cost at most
+\[
+64(yv^2+v^4)+8Tu^2(y+v^2)
+\]
+of the circuit pivot and \(64v^4+8Tu^2v^2\) of the current pivot. On (D) and the fixed test cap, each helper loss is below \(2^{-90}\), and
+\[
+\begin{aligned}
+2y+192B+\text{circuit helper loss}&<1/8,\\
+8(p+B)v^2+192Bu^2&<1/8,\\
+6T(p+B)+192u^2/(1-p)&<1/8.
+\end{aligned}
+\]
+All four scalar pivots retain more than \(7/8\); the absent current row at \(n=0\) requires no division.
+
+For the matrix bounds, the saved source estimates give
+\[
+a^2+b^2=1/h_0\le2,\quad a+b\le2,\quad
+\alpha\rho_R\le2B,\quad B\rho_R\le2,
+\]
+\[
+\tau\rho_Q\le T,\qquad \alpha+1/2\le2/3.
+\]
+Also,
+\[
+|(K_c/j)\rho_Q|\le4\sqrt T,\quad
+(\alpha+1/2)\tau\le\sqrt T/3,\quad
+TH(C+A+\alpha+1/2)<1.
+\]
+Reading the actual records, their maximum absolute row sums have the following saved conservative bounds:
+
+| Monomial | Row-sum bound | Fixed gate bound |
+|---|---:|---:|
+| \(u\) | \(6B\) | \(1\) |
+| \(v\) | \(B\) | \(1\) |
+| \(u^2\) | \(\max\{192/(1-p),192B,8Ty\}\) | \(512\) |
+| \(v^2\) | \(\max\{1+8(p+B),64y\}\) | \(8\) |
+| \(uv\) | \(12\) | \(16\) |
+| \(u^2v\) | \(2/3\) | \(4\) |
+| \(u^2v^2\) | \(\max\{2/3,8T\}\) | \(16\) |
+| \(v^4\) | \(64\) | \(128\) |
+
+Each first bound is strictly below its gate bound on (D). These are the conservative constants in the saved checker; the bound appendix also records sharper row sums.
+
+**Constant Gram.** On rows \((1,4,9,10)\), the diagonals are \((1,1,16,8)\), with off-diagonal columns \((a,-b)^Tk_R\) and \((a,-b)^T/2\). Subtracting \(I/2\), the Schur correction is bounded by
+\[
+2\left(\frac2{31}+\frac1{30}\right)=\frac{91}{465}<\frac12.
+\]
+The second row has diagonal at least \(1/3\); rows 3 and 11 have diagonals at least 1; the remaining diagonal rows have at least \(7/8\). The only remaining constant cross entries are \((2,3)\), \((2,11)\), bounded by \(T,j/3\). Since \(T+j/3<1/12\),
+\[
+Q_{00}\succeq I/4.
+\]
+For \(r_{ab}\) in the last table, fix
+\[
+p_{ab}=(2^{12}u)^a(2^{25}v)^b,\quad
+\alpha_{ab}=r_{ab}2^{-12a-25b},\quad
+A_{ab}=2^{-12a-25b}Q_{ab}.
+\]
+The exact total is
+\[
+\sum\alpha_{ab}=
+\frac{2720379395100337099505665}{9903520314283042199192993792}
+<1/1024.
+\]
+Consequently the program’s `reserve` is at least \(255I/1024\), both matrices in each `gates` pair are PSD, and
+\[
+Q=\mathrm{reserve}+\sum_{a,b}
+\left[
+\frac{\alpha_{ab}I+A_{ab}}2(1+p_{ab})+
+\frac{\alpha_{ab}I-A_{ab}}2(1-p_{ab})
+\right].
+\]
+This is the complete new uniform-threshold step for the weak admission theorem.
+
+**Opening limits.** No bound above depends on a lower bound for \(H_o,r_o,t_o,j_o\), where \(j_o=1+z_or_o-t_o\). Here \(t_o\to0\) means \(H\to0\), \(j_o\to0\) means \(H\to1\), and \(r_o\to0\) permits \(j-p\to0\) and unbounded \(n\); the scaled estimates and \(a^2+b^2\le2\) retain them. \(H_o\to0\) is covered by (D). Literal \(n=0\) is covered as specified. Undefined native GE1 values at a zero denominator have not been substituted for positive-parameter formulas. The original \(H_o\to1\) regime is the strong part, not claimed here.
+
+### 5. Exact strong part still to retrieve
+
+The remaining saved chain, without any redesign, is:
+
+1. `scripts/strong/extract_lII.py` — 3,089 characters: full LII6 remainder, all monic divisions, raw six-row Gram.
+2. `scripts/strong/bound_lII.py` — 2,920: conductor, exact shear, scaled source substitution, baseline subtraction and rational coefficient envelope.
+3. `scripts/strong/monomial_budgets.py` — 1,759: every monomial budget.
+4. `scripts/strong/export_source_witness.py` — 998: all 51 normalized records.
+
+These intact generators total **8,766 characters**. Their expanded 51-record JSON is **84,365 characters**. Part 2 must also recover the native scaled-error inequalities **SC10–SC11** from `proof/strong_contact_uniformization.tex` and the GE1 substitution in `verify_native_contact.py`. The strong program’s `mu=m/z^2`, `nu=nr`, and `al=alpha*(1-H)` differ from the weak symbols above. Its exact baseline subtraction, shear, and factor-of-four normalization remain to be printed with that second part.

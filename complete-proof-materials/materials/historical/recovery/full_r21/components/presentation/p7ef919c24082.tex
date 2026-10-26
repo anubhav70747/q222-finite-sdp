@@ -1,0 +1,115 @@
+\chapter{The unbounded-$e$ C1 source away from the zero-$W$ state}
+\label{component:p7ef919c24082}
+\noindent\textbf{Component }\path{p7ef919c24082}\par
+{\small\noindent Source: \path{CORE/prior/inherited/c1_unbounded_e_w_unit.tex}\par}
+{\small\noindent SHA256: \path{7ef919c2408221436586e92643ba0659249ec05a53524eabfb2eb4f6c0ab39d1}\par}
+{\small\noindent Inventory use: UW1–UW3 only; old source and state restrictions are not silently imported | C1\_\allowbreak{}BARE\_\allowbreak{}OTHER\_\allowbreak{}TERMINALS; precise subordinate uses retained below\par}
+\medskip
+\section{The unbounded-$e$ C1 source away from the zero-$W$ state}
+\label{p7ef919c24082:sec:c1-unbounded-e-w-unit}
+
+The complementary state chart has a short retained-current proof.  It
+does not require a contact division or a comparison of coefficient and
+testing rates.
+
+\begin{theorem}[Unbounded-$e$, $W$ a unit]
+Use the unchanged canonical uniform C1 source of
+Section~\ref{p05180564ed05:sec:productrepair}, with $k,f,g>0$ infinitesimal,
+$e=kf/g$ unbounded, and the original positive bounded shapes and gaps
+$a,t,M=R-t,J=T-a$.  Retain all original nonnegative event coefficients.
+Then the entire parent is tensor-SOS for every independent test with
+$u,v,X,Y$ infinitesimal, $Z$ bounded, and $W$ a unit.
+\end{theorem}
+\begin{proof}
+Normalize $W=1$ using the testing field and put $\Delta=1/e$.
+Evaluate the seven short source polynomials with their native
+$K=k^2$, $\eta=f^2$, $\zeta=g^2$ and write $c_b=c_\beta$.
+Thus
+\[
+ R=1+k^2(1-af^2),\qquad T=1+k^2-k^2g^2t,
+\]
+and their residues are $2,2,2,2,2,2,4$ in the original order,
+irrespective of the size of $e$.  These are the same polynomial source
+identities as before, now used on the unbounded-$e$ domain.
+Write $D_u=1+u^2$, $D_v=1+v^2$ and
+\[
+ Q=W+uY,\quad B=X+uZ,\quad r=uW-Y,\quad
+ r_2=vQ-B,\quad r_5=r-v(Z-uX).
+\]
+Thus $Q$ is a pure-testing unit.  All appearances of $Q^{-1}$ below
+are inverses in the testing field, with bounded residue one.
+Let $H_2=4Tc_2$, $H_b=4Tc_b$, $H_3=4Rc_3$, $H_5=4Rc_5$.
+The exact original source, with $g=\Delta kf$, is
+\[
+\begin{gathered}
+c=2,\quad d=\frac{2af^2c_d}{c_3},\quad
+m=\frac{2ae^2c_2}{Mc_3},\quad
+A=\frac{2af^4c_4}{c_3},\quad
+\alpha=\frac{2a\Delta^2k^6f^4c_\alpha}{c_3},\\
+D+\frac d2=\frac{2ac_5}{Jc_3},\qquad
+\beta+\frac d2=\frac{2ae^2c_b}{tc_3},\qquad
+\Lambda=\frac{RTc_3}{2a}.
+\end{gathered}                                                    \tag{UW1}
+\]
+The letter $D$ in (UW1) is the original coefficient $e_5$; it is
+distinct from the displayed testing factors $D_u,D_v$.
+Directly combining the three positive signed-core squares with their
+matching events gives the full-parent identity
+\[
+\begin{split}
+\Delta^2\Lambda F={}&
+ H_2\frac RM r_2^2+H_b\frac RtD_vB^2
+ +\Delta^2H_3\frac TaD_vr^2
+ +\Delta^2H_5\frac TJr_5^2\\
+&+4RT\Delta^2f^4c_4D_uD_vY^2
+ +4RT\Delta^4k^6f^4c_\alpha D_u(vY-Z)^2\\
+&+2RT\Delta^2f^2c_dD_u
+       (v^2Y^2-2vYZ-v^2Z^2).
+\end{split}                                                       \tag{UW2}
+\]
+Use $R/M=1+t/M$, $R/t=1+M/t$, $T/a=1+J/a$ and
+$T/J=1+a/J$.  Retain the four positive excess packets, the complete
+alpha packet, and the positive $v^2Y^2$ part of the last line.
+The remaining expression has the five-root frame
+\[
+ z=(r_2,B,\Delta r,\Delta r_5,\Delta f^2Y).
+\]
+Its diagonal part is
+\[
+ H_2z_1^2+H_bD_vz_2^2+H_3D_vz_3^2+H_5z_4^2
+       +4RTc_4D_uD_vz_5^2.
+\]
+The two complete negative terms are, exactly,
+\[
+ -4RTc_dD_u\frac{\Delta Z}{Q}\,z_5(z_1+z_2)
+ -2RTc_dD_u\frac{\Delta^2f^2Z^2}{Q^2}(z_1+z_2)^2,       \tag{UW3}
+\]
+because $vQ=z_1+z_2$.  Every displayed Gram coefficient is bounded.
+The correction coefficients in (UW3) have zero residue, while the
+diagonal residue is $8I_5$.  The bounded strict-residue Gram lemma
+therefore applies.  Restoring the six retained nonnegative packets and
+undoing the positive pure-coefficient factor $\Delta^2\Lambda$ proves
+the assertion.  No shape or gap is inverted in the bounded Gram;
+the possibly unbounded gap ratios occur only in retained squares.
+\end{proof}
+
+\begin{corollary}[Precise remaining unbounded-$e$ test domain]
+For this source, the only independent testing domain not covered by
+the preceding theorem and the existing uniform outer-angle identities
+is
+\[
+ Z=1,\qquad u,v,W,X,Y\text{ infinitesimal}.
+\]
+\end{corollary}
+\begin{proof}
+The two strength ratios $d/c,d/D$ and the original harmonic mass
+formula (UA1) depend only on $k,f,g$ being infinitesimal.  In particular
+the mass has residue $1/4$ for unbounded $e$ as well.  Hence the two
+outer-angle lemmas apply without change, including homogeneous
+infinite-angle endpoints.  The literal axes give a nonnegative
+pure-testing core.  Normalize a nonzero state by a coordinate of
+maximal absolute value.  If $X$ or $Y$ is a unit, that core has positive
+residue $2(X^2+Y^2)$.  Otherwise $X,Y$ are infinitesimal; the theorem
+covers $W$ a unit, and its complement has $Z$ a unit and $W$
+infinitesimal.  Pure-testing $Z$ normalization gives the stated domain.
+\end{proof}

@@ -1,0 +1,421 @@
+\section{C1 UH: a homogeneous biquadratic conductor}
+\label{sec:r7-c1-uh}
+All coefficients below are divided by the original positive pure-source
+$d$. We treat precisely (NI9) and (NI10), with no alteration of the native
+source (NC1)--(NC7). The revision-6 common-event theorem already covers
+all tests except positive unit $u$ and $w=1/v$ infinitesimal.
+Put $x=k^2$, $K=1+x$, $\sigma=1/\eta$, $z=1/\zeta=q^2$,
+$b=r/z$, $H=h/\sigma$, and retain $\sigma>0$ (it need not be a unit).
+On (NI9), $\sigma$ is infinitesimal and $z$ is a unit; on (NI10),
+$z$ is infinitesimal and $\sigma$ is bounded. Throughout, $k,H$ are
+positive units, $b,z,\sigma$ are bounded, $Q=1-xb>0$, and
+\[
+ r=zb,\quad R=1+xzb,\quad M=R-z+\sigma zH,
+ \quad J=1+\sigma(xH-1+zb),\quad\theta=1-\sigma H,
+ \quad E_s=1-xH.
+\]
+The exact source polynomials, all with bounded arguments, are
+\begin{align*}
+ P={}&xK+\sigma x+\sigma z+\sigma zb x^2
+ +x^2\sigma zH(1-\sigma H)+2x\sigma^2zH
+ +\sigma^2z^2bx^2H,\\
+ V={}&z(1+x\sigma H)E_s+x(1-zb)(1+\sigma zH),\\
+ B_\alpha={}&R\sigma zH+RxH+ME_s.
+\end{align*}
+Writing $m=m_{\rm old}/z$, $c=C/z$, $a=Az$, $\ell=\alpha z$,
+\[
+ c={K(1+\sigma zb)E_s\over2(1-zb)P},\quad
+ m={Kx(1+\sigma zb)H(\sigma z+x)\over2MP},\quad
+ a={V\over2bP},\quad
+ \ell={x^2(1+\sigma zb)B_\alpha\over2QP}.                 \tag{UH1}
+\]
+Define the polynomial quotients
+\[
+ N_D={K(\sigma z+x)(1+\sigma zb)-JP\over\sigma},\qquad
+ N_\beta={Kx(1+\sigma zb)(1+\sigma zH)-\theta P\over\sigma}.
+\]
+Then $D=\sigma N_D/(2JP)$ and
+$\beta=\sigma N_\beta/(2\theta P)$, exactly.
+
+\paragraph{The bounded full parent.}
+Let $D_u=1+u^2$, $D_w=1+w^2$. Its six event amplitudes are
+\[
+ M_w=W-wX+uY-uwZ,\ R_w=uW-Y,\ Y,\
+ J_w=uwW+uX-wY-Z,\ Y-wZ,\ B_w=X+uZ.
+\]
+Thus the exact parent is
+\[
+ F=4mzM_w^2+4czD_wR_w^2+4(a/z)D_uD_wY^2
+ +4DJ_w^2+4(\ell/z)D_u(Y-wZ)^2+4\beta D_wB_w^2+2K_w, \tag{UH2}
+\]
+where, without any restriction to a state ray,
+\begin{align*}
+ K_w={}&u^2w^2Z^2-2u^2wYZ-2uwWZ+2uw^2XZ
+       +u^2w^2W^2+2u^2wWX-2uw^2WY\\
+      &+(D_u+w^2)(X^2+Y^2)-2uwXY.
+\end{align*}
+For a potentially unbounded weight choose a finite cap, keeping bounded
+weights unchanged. Subtract and retain the following nonnegative
+centered excesses:
+\begin{align*}
+ &4(m-m_*)[qM_w-kM(wZ/q)]^2,\\
+ &4(c-c_*)D_w[qR_w-x(1-r)(wZ/q)]^2,\\
+ &4(a-a_*)D_uD_w[(Y-xbwZ)/q]^2,
+ \quad4(\ell-\ell_*)D_u[(Y-xbwZ)/q]^2.          \tag{UH3}
+\end{align*}
+The first line uses $qM_w$ and the second $qR_w$; thus these are
+exactly excesses of the scaled weights in (UH1). Their remainders
+are bounded because $mM,c(1-r),ab,\ell Q$ are bounded.
+When $\sigma$ is a unit, additionally retain
+\[
+ 4(D-D_*)(J_w+JZ)^2,
+ \qquad4(\beta-\beta_*)D_w(X+uhZ)^2.               \tag{UH4}
+\]
+Here $DJ$ and $\beta\theta$ are bounded. When $\sigma$ is
+infinitesimal, no (UH4) cap is needed: $D,\beta=O(\sigma^2)$,
+as proved below. Denote the complete remainder by $G$.
+Every retained row vanishes at the actual contact
+\[
+ u=k,\quad w={q\sqrt\sigma\over k},\qquad
+ (W,X,Y,Z)=({\sqrt\sigma\over q},-kh,kbq\sqrt\sigma,1).
+                                                               \tag{UH5}
+\]
+No comparison between independent source and test rates occurs.
+
+\paragraph{Exact homogeneous conductor, including every first normal.}
+Put $h=\sigma H$, $\delta=u-k$, and use the six roots
+\[
+\begin{gathered}
+ N_x=X+khZ,\quad N_y=(Y-kbq^2W)/q,\\
+ U=wW-\sigma Z/k,\quad N=(wZ-q^2W/k)/q,\\
+ S=q\delta W,\quad T=\sigma\delta Z.
+\end{gathered}                                     \tag{UH6}
+\]
+Substitute $X=N_x-khZ$, $Y=qN_y+kbq^2W$ in the entire
+bounded remainder $G$. Its complete quadratic normal block is the
+coefficient collection in $(N_x,N_y)$. Its scalar and first-normal
+coefficients have exactly the following supports:
+\begin{align*}
+ G_{00}&={A\over q^2}w^2Z^2+B w^2W^2+C\sigma^2 Z^2
+                  +D_1 wWZ+E q^2W^2,\\
+ G_{10}&=A_xwW+B_xZ+C_xw^2Z,\\
+ G_{01}&=q(A_y+B_yw^2)W+C_ywZ/q.                    \tag{UH7}
+\end{align*}
+All eleven displayed coefficient families and the quadratic normal
+coefficients are bounded polynomials in $u$, with bounded source
+coefficients; $B_x$ is divisible by $\sigma$. In the unit-$\sigma$
+case divisibility means a bounded quotient, not a new polynomial
+identity. Formulas below specify every coefficient before caps, and
+(UH3)--(UH4) specify their exact changes. No state normal is omitted.
+
+Set $s=\sigma/k$, $a_0=q^2/k$ and
+\[
+ L=2A/k+2B\sigma/k+D_1,\quad
+ J_0=C-B/k^2,\quad K_0=A/k^2+2B\sigma/k^2+D_1/k+E.
+\]
+The scalar is identically
+\[
+ A N^2+B U^2+qLWN+\sigma^2J_0Z^2+q^2K_0W^2.       \tag{UH8}
+\]
+Exact source contact and all stationary jets give
+\[
+ L(k)=J_0(k)=K_0(k)=0,\qquad K_0'(k)=-\sigma J_0'(k),
+\]
+\[
+ B_x(k)+s[A_x(k)+a_0C_x(k)]=0,\qquad
+ A_y(k)+C_y(k)/k+s a_0B_y(k)=0.                    \tag{UH9}
+\]
+These hold separately for every centered excess, hence for every cap.
+Write the monic divisions
+\[
+ L=\delta L_1,\quad J_0=\delta j+\delta^2J_2,\quad
+ K_0=-\sigma\delta j+\delta^2K_2,
+\]
+\[
+ B_x+s(A_x+a_0C_x)=\sigma\delta H_x,\qquad
+ A_y+C_y/k+s a_0B_y=\delta H_y.
+\]
+All quotients are bounded. The scalar and full first normals become
+\begin{align*}
+ G_{00}={}&A N^2+B U^2+(L_1+k\sigma j)SN-kjTU
+                          +J_2T^2+K_2S^2,\\
+ G_{10}={}&(A_x+a_0C_x)U+C_xqwN+H_xT,\\
+ G_{01}={}&(C_y+s q^2B_y)N+qB_ywU+H_yS.            \tag{UH10}
+\end{align*}
+Together with the unchanged full quadratic normal block, this is an
+exact bounded six-root Gram for $G$, not a scalar restriction.
+The only root relation needed for strict completion is
+\[
+ T^2=\sigma S^2+k\sigma\delta SN-k\delta TU.        \tag{UH11}
+\]
+Its verification is one multiplication using (UH6). Adding any bounded
+multiple of its zero changes no parent. No mixed inverse, root, order,
+or source/test identification occurs in (UH6)--(UH11).
+
+For the cap argument it is useful to print every centered row directly
+in this same frame. In the order $m,c,(a,\ell),D,\beta$, they are
+\begin{align*}
+ &uzN_y-(kR+z\delta)N-qwN_x-(zQ/k)S,\\
+ &S-zN_y-x(1-r)N,\qquad N_y-xbN,\\
+ &(u-kbz)U+uN_x-qwN_y+(E_s/k)T,\qquad N_x+HT.
+                                                               \tag{UH20}
+\end{align*}
+These are exact identities before taking any residue.
+
+\paragraph{Explicit coefficient input.}
+For (UH2) before caps put $j_u=u-kbz$, $p_u=1+ukbz$,
+$t_u=kh-u$. The full scalar coefficients in (UH7) are
+\begin{align*}
+ A={}&4mz^2t_u^2+4\ell D_u+(4\beta+2)zt_u^2,\\
+ B={}&(4cz+4D+2)j_u^2+4aD_uxb^2z,\\
+ C={}&[4D(1+ukh)^2+4\beta(u-kh)^2+2D_uxh^2]/\sigma^2,\\
+ D_1={}&8mzp_ut_u-8Dj_u(1+ukh)-8\ell D_ukb
+          -4u^2k(h+bz)-4u+4uxhbz,\\
+ E={}&4mp_u^2+4cj_u^2+4(a+\ell)D_uxb^2+2D_uxb^2z.
+\end{align*}
+The first normals are
+\begin{align*}
+ A_x={}&-8mzp_u+(8D+4)uj_u,\\
+ B_x={}&-8Du(1+ukh)+8\beta(u-kh)-4D_ukh,\\
+ C_x={}&-8mzt_u+(8\beta+4)(u-kh),\\
+ A_y={}&8mzup_u-8czj_u+8(a+\ell)D_ukb+4D_ukbz,\\
+ B_y={}&-8czj_u+8aD_ukb-(8D+4)j_u,\\
+ C_y={}&8mz^2ut_u-8\ell D_u+8Dz(1+ukh)+4uzt_u.
+\end{align*}
+The coefficients of $N_x^2,N_y^2,N_xN_y$ are respectively
+\[
+ 4mzw^2+4Du^2+4\beta D_w+2(D_u+w^2),
+\]
+\[
+ 4mz^2u^2+4cz^2D_w+4aD_uD_w+4\ell D_u+4Dzw^2
+                            +2z(D_u+w^2),
+ \qquad-8mzuqw-8Duqw-4uqw.                         \tag{UH12}
+\]
+Here products such as $Du$ mean $D\,u$, whereas $D_u=1+u^2$.
+
+\paragraph{Infinitesimal $\sigma$: source collapse and strict residue.}
+The exact polynomial $P_m=(N_D+xN_\beta)/\sigma$ is bounded.
+At $\sigma=0$, $N_D=-xN_\beta$ and
+\[
+ N_\beta=x(K+z)H+bxz-x-z.
+\]
+Nonnegativity of $D,\beta$ forces
+\[
+ H=H_0+O(\sigma),\quad
+ H_0={x+zQ\over x(K+z)},\qquad E_0=1-xH_0={R\over K+z}.
+                                                               \tag{UH13}
+\]
+Indeed $JD+x\theta\beta=\sigma^2P_m/(2P)$ and $J,\theta$
+are units. Thus $D,\beta=O(\sigma^2)$, including either literal zero.
+Moreover
+\[
+ (D+x\beta)/\sigma^2\longrightarrow KH_0E_0/2>0.
+\]
+The other limiting coefficients are
+\[
+ c_0={R\over2x(1-zb)(K+z)},\quad m_0={xH_0\over2(1-zQ)},
+ \quad a_0^{\rm wt}={H_0\over2b},\quad
+ \ell_0={xR\over2Q(K+z)}.                           \tag{UH14}
+\]
+At a matched angle $u=k$, the residue Gram (UH10) splits into
+$(N_y,N,S)$ and $(N_x,U,T)$, because their only off-block coefficients
+contain $w$. Before caps, the $(N_y,N)$ block is positive definite;
+its angular Schur complement is
+\[
+ \Gamma=8RH_0/K>0.                                \tag{UH15}
+\]
+The $(N_x,U)$ block is precisely
+\[
+ 2K(N_x+xH_0U)^2+2KxH_0E_0U^2.                   \tag{UH16}
+\]
+The remaining $T$ couplings are bounded. As $\sigma,\delta$ have
+zero residue, (UH11) permits an arbitrarily large positive $T^2$
+pivot without changing any other residue coefficient. This proves a
+strict full six-root residue Gram. For $u^2\ne x$, use the full raw
+frame $(E_t,F_t,G_t,R_t,X,T_0)=(qW,Y/q,wZ/q,wW,X,\sigma Z)$.
+Its leading first block is
+\begin{align*}
+ &4m_0[E_t+uz(F_t-G_t)]^2+4c_0(uE_t-zF_t)^2
+       +4a_0^{\rm wt}D_uF_t^2+4\ell_0D_u(F_t-G_t)^2\\
+ &\qquad+2z\{u^2(G_t-F_t)^2+F_t^2\}-4uE_tG_t.
+\end{align*}
+Put $v_0=u^2$ and $M_0=1-zQ$. In $(F_t,F_t-G_t)$ the hard block
+is diagonal, with weights
+\[
+ B_h={2(x+zQ)[v_0(1-r)+R]\over bx(1-r)(K+z)},\qquad
+ L_h={2R[v_0(x+zQ)+xM_0]\over Q(K+z)M_0}.
+\]
+The exact $E_t$ Schur complement is
+\[
+ {2(v_0-x)^2(1+v_0)RH_0\over
+ [v_0(1-r)+R][v_0(x+zQ)+xM_0]}.                  \tag{UH17}
+\]
+It has a positive-unit limit through every opening when $v_0\ne x$.
+The hard minimizers are
+\[
+ {F_t\over E_t}={ubK\over v_0(1-r)+R},\qquad
+ {F_t-G_t\over E_t}={-uKQ\over v_0(x+zQ)+xM_0},
+\]
+also bounded through every opening. The other raw blocks are
+$2\{u^2R_t^2+2u^2R_tX+D_uX^2\}$ and
+$4(D+u^2\beta)T_0^2/\sigma^2$, both strictly positive.
+This gives the full bounded away-angle lift, without a determinant-only
+claim or any omitted first state normal.
+
+\paragraph{Unit $\sigma$: angular Schur sign.}
+Here (NI10) gives $z=0$ at residue. Put $h=\sigma H$,
+$J=1+\sigma(xH-1)$, $\theta=1-\sigma H$. The source signs imply
+\[
+ 0<\sigma<K,\qquad {1\over K+\sigma}\le H
+       \le{x+\sigma\over x(K+\sigma)}.             \tag{UH18}
+\]
+These inequalities are stated on the interior; its closure includes
+$\sigma=K$ when $J=\theta=0$.
+The limits are
+\[
+ m={KxH\over2(K+\sigma)},\quad c={K(1-xH)\over2x(K+\sigma)},
+ \quad a={1\over2b(K+\sigma)},\quad
+ \ell={x\over2Q(K+\sigma)},
+\]
+\[
+ D={K\over2J(K+\sigma)}-\tfrac12,
+ \quad\beta={K\over2\theta(K+\sigma)}-\tfrac12.
+\]
+The two hard blocks in (UH10) are positive definite. Their angular
+Schur coefficients $\gamma_S,\gamma_T$ have no $ST$ term and satisfy
+\[
+ \gamma_S+\sigma\gamma_T
+ ={ -2p(H)\over\sigma(K+\sigma)}>0,\qquad
+ p(H)=Kx(K+4\sigma)H^2-2K(x+2\sigma)H+x.           \tag{UH19}
+\]
+Convexity of $p$ and (UH18) prove strict negativity: its endpoint
+values are respectively
+\[
+ {-\sigma(3\sigma x+4\sigma+4x+4)\over(K+\sigma)^2},\quad
+ {-\sigma(4\sigma x+3\sigma+4x^2+4x)\over x(K+\sigma)^2}.
+\]
+Use (UH11) to distribute this positive total between $S^2,T^2$;
+for example choose its multiple so both resulting Schur coefficients
+are positive. This yields the required strict six-root Gram.
+
+For completeness, angles $u^2\ne x$ are strictly positive as well.
+Eliminating the two hard state variables from the leading form,
+multiplying by the positive source factor $(K+\sigma)/2$, and
+writing $U_0=u^2$, $P_0=(w/q)(Z/q)$, $T_0=(Z/q)^2$ gives a positive
+Laurent function
+\[
+ A+B P_0^2+C P_0^2/T_0+D_0T_0-2E P_0,
+\]
+where
+\[
+ A=KxH+K(1-xH)U_0/x,\ B=x(1+U_0),\
+ C={KU_0\over J+\theta U_0},
+\]
+\[
+ D_0=(1+U_0)\left[{K(1+U_0)\over J+\theta U_0}-(K+\sigma)\right],
+ \quad E={K\sqrt{U_0}(1+U_0)\over J+\theta U_0}.
+\]
+The strict criterion is $E<\sqrt{AB}+\sqrt{CD_0}$.
+Squaring only to analyze these positive real residue quantities gives
+\[
+ (E^2-AB-CD_0)^2-4ABCD_0
+ ={K^2(1+U_0)^2\over(J+\theta U_0)^2}(U_0-x)^2Q_2(U_0).
+\]
+The quadratic $Q_2$ has positive constant $H^2x^2J^2$, positive
+leading coefficient $\theta^2(1-xH)^2$, and $Q_2(x)=xp(H)<0$.
+Explicitly, with $E_s=1-xH$,
+\[
+ Q_2(U_0)=E_s^2\theta^2U_0^2
+ +2E_s\{x\theta^2+E_s\theta J+(K+\sigma)\theta-2K\}U_0
+ +x^2H^2J^2.
+\]
+The concave quadratic
+$U_0(K+\sigma)-[x^2H+(1-xH)U_0](J+\theta U_0)$
+is negative at zero and infinity and positive at $x$; at each of its
+two zeros the preceding discriminant is negative. Consequently its
+positive interval lies inside $Q_2<0$. This proves the criterion for
+all $U_0\ne x$. Sign charts with $P_0\le0$ are immediate. These
+square roots are an analysis of real residues only and are not tensor
+roots or mixed localizations.
+
+This inequality is directly a bounded Gram allocation, not a
+comparison of mixed ratios. Before choosing projective coordinates,
+put $E_t=qW$, $G_t=wZ/q$, $R_t=wW$. The exact relation
+$E_tG_t=R_tZ$ permits distributing the cross term between the two
+quadratic blocks $(E_t,G_t)$ and $(R_t,Z)$. The strict inequality
+above is exactly the condition that both $2\times2$ blocks can be
+made positive definite by a finite real allocation. It therefore
+handles every independent rate of $q,w$.
+At $J=0$ or $\theta=0$, the root-interval argument permits one endpoint
+at zero or infinity. At the double face $J=\theta=0$, necessarily
+$\sigma=K$, $H=1/K$. As $J+\theta U_0\to0$,
+\[
+ E-\sqrt{CD_0}\longrightarrow K\sqrt{U_0},\qquad
+ AB-K^2U_0=(U_0-x)^2.
+\]
+Thus the constrained allocation remains strictly positive away from
+$U_0=x$, including this double face without dividing by a vanishing
+residue denominator.
+
+\paragraph{Opening faces, tensor conclusion, and exact scope.}
+The finite-cap argument is applied to the full Gram above. For
+$\sigma$ infinitesimal the possible diverging rows have openings
+$1-zb$, $1-zQ$, $b$, $Q$; at most two can diverge together. The pairs
+$(c,m)$, $(m,a)$, $(c,\ell)$ have independent hard rows; other pairs
+are excluded by $0<zb,xb<1$ and $1-zQ>0$. In the $(N_y,N)$ columns
+of (UH20), their determinants have absolute values $kzK,k,x$,
+respectively; each is a unit on its compatible face. The hard block
+is uniformly coercive, since it contains positive-unit multiples
+of $N_y^2$ and $(N_y-N)^2$. Its minimizing hard coordinates for
+fixed angular $S$ are explicitly
+\[
+ {N_y\over S}={b(2bxz-x+1)\over K},\qquad
+ {N\over S}={4bxz-x-2z+1\over xK}.
+\]
+They are bounded through every opening. Thus the limit of the
+uncapped Schur complement is the Schur complement restricted to the
+diverging centered rows' kernel. The quotients (UH15)--(UH16) stay
+positive units there. The elementary finite-dimensional penalty
+lemma now applies: a bounded symmetric form strictly positive on
+the common kernel becomes strictly positive after sufficiently large
+finite positive multiples of these rows' squares are added. This
+proves the finite-cap claim, with the entire angular right-hand sides
+in (UH20) retained. Away from $u^2=x$, (UH17) and its printed bounded
+hard minimizers give the same constrained strictness directly.
+
+For unit $\sigma$, only $b,Q,J,\theta$ can be openings.
+The $b,Q$ rows coincide in the hard direction $N_y-xbN$ and cannot
+both diverge. The $J,\theta$ rows on $(N_x,U)$ are independent even
+if both vanish; their determinant is the unit $u$. Formula (UH19)
+remains a positive unit through these faces. More explicitly, the
+two hard blocks dominate positive-unit multiples of
+$N_y^2+(N_y-N)^2$ and $N_x^2+(N_x+U)^2$. Their angular minimizers are
+\[
+ {N_y\over S}={b(1-HxK)\over K},\quad
+ {N\over S}={1-HxK\over xK},
+\]
+\[
+ {N_x\over T}={\sigma H^2xK-HxK-\sigma H(2x+1)+x\over\sigma K},
+ \quad {U\over T}={HxK(K+\sigma)-xK-\sigma\over x\sigma K}.
+\]
+Their $D$ and $\beta$ row defects divided by $T$ are respectively
+$k(HK-1)J/(\sigma K)$ and $-x\theta(HK-1)/(\sigma K)$.
+Hence every relevant constrained limit exists with bounded
+minimizers; the same penalty argument applies. On the angular
+relation $T^2=\sigma S^2$, its strictly positive Schur value is
+(UH19), and after taking finite caps the bounded zero (UH11)
+distributes that value into two strict angular pivots. The away-angle
+allocation and its single/double-face limits above give the same
+conclusion there. All removed excesses remain exact positive
+source/test squares. No positive lower bound on an original opening
+has been imposed.
+
+A strict bounded residue Gram lifts by the inherited tensor Gram
+lemma. Every root in (UH6) is a finite sum of separated source and
+testing factors. After restoring the retained squares this certifies
+the complete original parent, including $D=0$ or $\beta=0$.
+Together with revision-6 remote tests, this closes both (NI9) and
+(NI10). Those are the entire actual UH portion of C1.5. The already
+proved UU and UI portions and exact source stabilizers therefore close
+the entire C1.5 row, subject to the exact checks and mathematical review
+recorded alongside this section.

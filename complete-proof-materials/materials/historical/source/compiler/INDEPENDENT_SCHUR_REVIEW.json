@@ -1,0 +1,114 @@
+{
+  "analytical_observations": [
+    {
+      "finding": "The signed core restricted to Z=0 is strictly positive when uv!=0 because its three packet rows have determinant -uv. Positive event packets preserve this. The nonnegative full determinant from balanced weighted AM-GM then gives a nonnegative scalar Schur complement.",
+      "topic": "positivity of complete seed"
+    },
+    {
+      "finding": "The matrix is polynomial and separately of degree at most two in each angle. Continuity after bihomogenization includes axes and projective endpoints. This reasoning concerns the complete parent, with source t>=0.",
+      "topic": "axes and projective endpoints"
+    },
+    {
+      "finding": "D_t has degree two for every t>=0. The displayed nonzero resultants imply coprimality of its numerator and each other denominator. Clearing a finite relation and reducing modulo each D_t forces its scalar coefficient to vanish.",
+      "topic": "literal remainder linear independence"
+    },
+    {
+      "finding": "An arbitrary fixed finite function space has a finite-dimensional product span. Thus it cannot contain SOS certificates for every literal S_t. The conclusion is about these literal scalar remainders, not about all possible certificates of the parent.",
+      "topic": "fixed-feature obstruction scope"
+    },
+    {
+      "finding": "M_t=M_0+t*Du*Dv*e_X e_X^T, and M_0 is PSD. Four components of its unique PSD square root applied to the state, plus sqrt(Du*Dv)*X, give five source-independent testing functions. The square root is semialgebraic through its defining polynomial and PSD conditions.",
+      "topic": "complete-family five features"
+    },
+    {
+      "finding": "Neither the scalar obstruction nor the five-feature one-parameter family proves or disproves full-Q222 finite-lift existence or supplies a global feature atlas. The proof explicitly states this limitation.",
+      "topic": "global scope"
+    }
+  ],
+  "fresh_check_count": 17,
+  "fresh_checks": [
+    {
+      "name": "strict_upper_core_row_determinant",
+      "status": "PASS"
+    },
+    {
+      "name": "amgm_total_mass",
+      "status": "PASS"
+    },
+    {
+      "name": "amgm_exponent_balance",
+      "status": "PASS"
+    },
+    {
+      "name": "amgm_masses_strictly_positive",
+      "status": "PASS"
+    },
+    {
+      "name": "independent_full_determinant",
+      "status": "PASS"
+    },
+    {
+      "name": "independent_restricted_upper_determinant",
+      "status": "PASS"
+    },
+    {
+      "name": "independent_restricted_full_determinant",
+      "status": "PASS"
+    },
+    {
+      "name": "independent_literal_remainder",
+      "status": "PASS"
+    },
+    {
+      "name": "independent_resultant_A_B",
+      "status": "PASS"
+    },
+    {
+      "name": "independent_resultant_D_N",
+      "status": "PASS"
+    },
+    {
+      "name": "independent_D_minus_one",
+      "status": "PASS"
+    },
+    {
+      "name": "independent_D_discriminant",
+      "status": "PASS"
+    },
+    {
+      "name": "positive_denominator_coefficients",
+      "status": "PASS"
+    },
+    {
+      "name": "seed_contact_kernel",
+      "status": "PASS"
+    },
+    {
+      "name": "matrix_is_biquadratic_in_angles",
+      "status": "PASS"
+    },
+    {
+      "name": "independent_sign_gauge_u",
+      "status": "PASS"
+    },
+    {
+      "name": "independent_sign_gauge_v",
+      "status": "PASS"
+    }
+  ],
+  "not_claimed": [
+    "external peer review",
+    "proof-assistant verification",
+    "global Q222 extraction",
+    "fresh audit of historical R21"
+  ],
+  "requested_changes": [],
+  "review_kind": "independent same-model analytical review and separately constructed exact packet-matrix check",
+  "reviewed_files": {
+    "schur_remainder_check.py": "e239d38bda9ab231ab1ef8c484150bf367a5dc68e32ae8aaf6e85448d421b697",
+    "schur_remainder_data.json": "357fd1740230020c48208e0bbe2a724d86c91ec792b5a54cde8a2a69e2da568d",
+    "schur_remainder_proof.tex": "519bc12ad1402e34fc88d68a84c0e555fb9b7e9c102730f0e7783b7a2b7f3b0e"
+  },
+  "runtime": "SymPy 1.14.0",
+  "status": "PASS_WITH_STATED_SCOPE"
+}

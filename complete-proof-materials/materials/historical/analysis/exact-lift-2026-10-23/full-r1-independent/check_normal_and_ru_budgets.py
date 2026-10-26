@@ -1,0 +1,47 @@
+"""Exact rational receipt for the independently derived R1 loss bounds."""
+from fractions import Fraction as F
+from pathlib import Path
+import json
+
+d=F(1,2**10); S=F(1,2**24); V=F(1,2**50); e=2*d; D=e*e+S*S
+f0=1-d-d**3; l0=1+d+d*d+d**3
+R0=1+2*d+2*d*d+4*d**3+d**4*(1+2*d)
+basic={
+    'alpha_factor_lt_1':(1+d*d)*l0/(2*(1-d))<1,
+    'c_factor_lt_1':l0/2<1,
+    'fc_lower_1_8':f0/(4*R0)>F(1,8),
+    'qc_lower_1_5':(1-2*d)/(4*R0)>F(1,5),
+    'rc_lower_1_8':f0/(4*(1+d*d)*R0)>F(1,8),
+    'phi_kap_fc_3T':F(8,3)*(1+d)*(1+3*d)/((1-d)*f0)<3,
+    'phi_kap_sigma_24T':F(64,3)*(1+d)*(1+3*d)/(1-d)<24,
+    'kap_qcy_3':(1+d)*(2+6*d)/((1-d)*(1-2*d))<3,
+    'direct_phi_kap_rc_3T':F(4,3)*(2+6*d)/f0<3,
+    'effective_Ru_lt_17':16+32*e*e<17,
+}
+rows={
+    'Ru':[17*(32*d+F(256,3)*S+F(512,3)*(e+S)**2),
+          17*(64*d*S+F(256,3)*S*S),17*F(1280,3)*(e+S)**2,
+          17*F(128,3)*S],
+    'Jalpha':[16*(8*d*e*e+F(32,3)*e*e*S),F(0),F(0),16*F(64,3)*e*e*S],
+    'O':[16*F(128,3)*d*V*(1+2*S)*D,16*32*V*V*D,
+         16*F(512,3)*d*S*V*D,16*F(64,3)*d*V*D],
+    'kc':[12*d+48*d*S,18*V,96*d*S,6*d],
+    'H1_H2':[256*(d*d*V+V*V+d**3*S+d*S*V),F(0),256*(V*V+d*S*V),F(0)],
+    'e0':[2*(d*d+V),F(0),F(0),F(0)],
+}
+totals=[sum(row[i] for row in rows.values()) for i in range(4)]
+limits=[F(9,16),F(1,2**22),F(1,16),F(1,64)]
+comparisons=[a<b for a,b in zip(totals,limits)]
+old64=[64*(360*d*d+81*S+360*S*S)<F(1,32),
+       64*(40*d*S+80*S*S)<F(1,2**22),
+       64*(180*d*d+900*S*S)<F(1,64)]
+assert all(basic.values()) and all(comparisons) and all(old64)
+result={'scope':'R1 source/purchase estimates only; no core, parent, support or coverage assertion',
+        'basic_rational_checks':basic,'old_p_ge_half_64Ru_checks':old64,
+        'rows':{k:list(map(str,v)) for k,v in rows.items()},
+        'totals':list(map(str,totals)),'limits':list(map(str,limits)),
+        'strict_comparisons':comparisons}
+out=Path(__file__).with_suffix('.json')
+out.write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
+print(json.dumps({'basic_checks':basic,'strict_comparisons':comparisons,
+                  'totals':list(map(str,totals)),'output':str(out)},indent=2))

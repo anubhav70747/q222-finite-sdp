@@ -1,0 +1,136 @@
+RADIAL AND NORMAL PURCHASE BUDGETS ON THE FULL QUANTITATIVE R1 BOX
+
+Scope. This independently verifies the source estimates and purchase
+bounds in equations1--3/5 of pro_full_r1_completion_reply.txt. It does
+not verify the core matrix, full-parent contraction, support export,
+closedness or complementary testing coverage. All source coefficients
+are the actual RSR4--6/15--21 rational dictionary, not independent values.
+Let d=2^-10, x=jB,y=TB, 0<B,x,T<=d, 0<p<min(j,1), 0<H<1,n>=0.
+Write J=j+1,K=J-p, eta=B+x, h0=mu+1/2, Me=n h0j^2/(n+h0),
+Sigma=Me+fc/y, theta=Me/Sigma. No bound on j or jT is imposed.
+
+1. Source estimates and the phi cancellation.
+
+Put f0=1-d-d^3, l0=1+d+d^2+d^3 and
+ R0=1+2d+2d^2+4d^3+d^4(1+2d).
+The exact termwise estimates previously proved give
+ J<=P<=R0 J, 1-d<=E<=1+d^2,
+ f0 K<=L<=l0 K, f0 K<=F<=2K,
+ Gq>=(1-2d)K, qc=Tx Gq/(2P),
+ fc>=Tx^2/8, qc>=Tx/8, rc>=TjB^2(1-p)/8.
+Also c:=BTCH=B L/(2P)<B, and
+ alpha<=B^2 J*(1+d^2)l0/[2(1-d)]<=B(B+x)=B eta.
+These estimates hold down to H->0,1 and n=0.
+
+Let Dp=1-p+p^2>=3/4 and phi=p^2/Dp. Exactly
+ (1-phi)/(1-p)=1/Dp<=4/3,
+ phi/Sigma<=128/3, phi/j<=4p/3<=4/3.
+The second bound uses p^2<=32Sigma (independently strengthened to
+(45/2)Sigma in full_r1_budget_independent.txt). Thus all cancellations
+are source-only and retain literal n=0; no inverse of Me is used.
+
+2. Jalpha and Ru, including their interaction.
+
+The exact identity Jalpha=j alpha b=-(alpha/B)Ru-alpha uR gives
+equation1 by 2a^2+2b^2-(a+b)^2=(a-b)^2. There is no sign defect:
+ (1+U^2)Psi=Bstar^2+Rstar^2+U^2Q^2+U^2(w-UVZstar)^2,
+so either Bstar^2 or Rstar^2 may be subtracted in the RFN identity.
+Its costs per Jalpha^2 are bounded respectively by
+ 2eta^2 on Ru^2,
+ (64/3)eta^2 u^2 on rc Rstar^2,
+ 8B eta^2+(32/3)eta^2 u^2 on fc Psi.
+These follow directly from alpha<=B eta and the three phi inequalities.
+
+For the Ru purchase, the printed coefficients rPsi,rQ,rE,rR have
+coefficientwise absolute majorants (s=u^2)
+ rPsi*:32B+(256/3)s+(512/3)(eta+s)^2,
+ rQ*:64Bs+(256/3)s^2,
+ rE*:(1280/3)(eta+s)^2,
+ rR*:(128/3)s.                                          (A)
+For example, xy/fc<=8/j, y/qc<=8/j and x^2y/fc<=8B.
+Apply phi/j<=4/3 to the s and s^2 terms, phi/Sigma<=128/3
+to all harmonic terms, and (1-phi)/(1-p)<=4/3 to rR.
+For rE, replace (s-x)^2 by its coefficient majorant (s+x)^2;
+the latter minus the former is 4xs, a positive polynomial square.
+This proves exactly equation3, rather than merely pointwise bounds.
+
+Funding 16Jalpha^2 adds 32(1-phi)(alpha/B)^2 Ru^2. Consequently
+the effective Ru multiplier is 16+32(1-phi)(alpha/B)^2
+<=16+32eta^2<17. This interaction is included in every total below.
+
+3. Opposite-normal helper O and the signed mass.
+
+O=sqrt(j)T v(alpha-cu^2)Rstar. Replace its multiplier by
+ Cbar=2jT^2v^2(alpha^2+c^2u^4).
+This replacement is exact up to the separated square
+ Cbar Rstar^2-O^2=jT^2v^2(alpha+cu^2)^2 Rstar^2.
+Average the direct Rstar^2 purchase with weight1-phi and the
+theta-harmonic purchase with weight phi. Their scalar fractions are
+ bPsi=Cbar*phi[(1+theta)/fc+s/(Sigma*y*x)],
+ bQ=2Cbar*phi*theta*v^2/(qc*y),
+ bE=2Cbar*phi*s/(Sigma*y*x), bR=Cbar*(1-phi)/rc.
+Using alpha<=B eta,c<=B gives the coefficient majorants
+ bPsi<=(128/3)T v^2(1+2s)(eta^2+s^2),
+ bQ<=32v^4(eta^2+s^2),
+ bE<=(512/3)T s v^2(eta^2+s^2),
+ bR<=(64/3)T v^2(eta^2+s^2).                            (B)
+They involve no moving testing root; O uses only v and u^2v.
+
+The same phi-direct/harmonic average pays the entire negative kc
+square. From Kcal/J<=p+3B, the exact ratios give
+ phi*kap/fc<=3T, phi*kap/(Sigma*y*x)<=24T,
+ kap/(qc*y)<=3, (1-phi)*kap/rc<=3T.
+Use Zstar(V^2-1)=-VQ-Rstar and
+ 2kap V^2Q^2+2kap Rstar^2-kap Zstar^2(V^2-1)^2
+   =kap(VQ-Rstar)^2.
+The resulting four losses are bounded by
+ 12T+48Ts, 18v^2, 96Ts, 6T, respectively.                 (C)
+These uniform bounds remove the previous p split for this purchase.
+
+4. Simultaneous exact rational receipt for equation5.
+
+Set S=2^-24,V=2^-50,e=2d,D=e^2+S^2. Each row below gives the
+upper bound for the four weighted absolute coefficient norms
+(Psi,Q,E,R). All entries are nonnegative rational expressions.
+
+Ru (effective multiplier<17):
+ 17*(32d+256S/3+512(e+S)^2/3),
+ 17*(64dS+256S^2/3),17*1280(e+S)^2/3,17*128S/3.
+Jalpha (multiplier16, excluding its already-counted Ru cost):
+ 16*(8d e^2+32e^2S/3),0,0,16*64e^2S/3.
+O (multiplier16):
+ 16*128dV(1+2S)D/3,16*32V^2D,
+ 16*512dSVD/3,16*64dVD/3.
+Signed kc square:12d+48dS,18V,96dS,6d.
+H1,H2 (multipliers8 each):
+ 256*(d^2V+V^2+d^3S+dSV),0,256*(V^2+dSV),0.
+Conservative payment of e0^-<=gc:2*(d^2+V),0,0,0.
+
+For H1,H2 use gamma=p^2/Sigma<=32 and RFN18:
+Psi losses gamma[yv^2+v^4+Ty s+Tsv^2],
+E losses gamma[v^4+Tsv^2]. The displayed factor8 gives256.
+For e0 use gc/fc=Hy L/F<=2y and L/F<2; the unused positive
+gc V^2Psi may simply be retained. These bounds are conservative.
+
+The exact sums are strictly less than (9/16,2^-22,1/16,1/64).
+Decimal diagnostics only: (0.554125987353,6.333510487e-8,
+0.027670965246,0.005902608314). Rational comparisons were made
+directly; check_normal_and_ru_budgets.py/json preserves the receipt.
+Thus equation5's purchase estimates pass independently of the core.
+
+All residual polynomials use only the stated even testing monomials.
+If b=c0+sum cnu Pnu with 0<=Pnu<=1, then exactly
+ 1-dfixed-b=(1-dfixed-c0-sum cnu^+)
+             +sum cnu^+(1-Pnu)+sum cnu^- Pnu.
+Every reserve is strictly positive by the rational norm bounds.
+These are fixed-gate coefficient payments, not a tensor-order argument.
+
+Original p>=1/2 request. Without phi one can still fund 64Ru^2:
+its three fractions are bounded by
+ 64*(360d^2+81S+360S^2)<1/32,
+ 64*(40dS+80S^2)<2^-22,
+ 64*(180d^2+900S^2)<1/64.
+Here Sigma>=1/90, fc/y>=j^2B/5 and qc>=Tx/5 were used.
+The proposed16gA costs <2^-38 by normal_r_payment.txt. The new
+whole-Jalpha phi construction above supersedes the need for a separate
+gA row in the received full-R1 theorem; these alternatives are not mixed.

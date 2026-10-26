@@ -1,0 +1,146 @@
+\section{C14.1b: every state when the first testing angle is a unit}
+\label{sec:r18-sphere-unit-u}
+
+Retain the entire original C14.1b source intersection and the exact
+SP6 parent from revision 17.  Assume $u$ is a bounded nonzero unit
+and $w$ is infinitesimal.  The argument below proves the whole parent
+for every testing state, including the previously unadmitted
+$W/Z$-unbounded states.  It does not cover infinitesimal $u$.
+All source gaps, $D=0$, both source sphere endpoints and the literal
+coefficient boundaries remain unchanged.
+
+\paragraph{No state chart is needed.}
+All roots below are homogeneous polynomials in the original testing
+state, with pure-source coefficients.  In particular the proof
+uses no state-coordinate inverse, no bound on $W/Z$, and no sign
+restriction.  The only testing inverse is that of the unit $u$.
+Write $U=u^2$, $s=x/\sigma$, and preserve the exact SP/BS coefficients
+\[
+ L_h=\lambda\sigma/h,\quad \rho=\lambda x/\sigma,
+ \quad d=4D/\sigma^2,\quad K_A=4\kappa h/\sigma-\lambda.
+\]
+The source identities give $s\in\mathrm{Inf}$,
+$\sigma/\sqrt h\in\mathrm{Inf}$, $L_h\sim2$, $\nu\sim1$, and
+\[
+ d+\rho\sim2,\quad K_A-(2-4h)\in\mathrm{Inf},\quad
+ \chi-(4-4h)\in\mathrm{Inf},\quad
+ (c_G+zK_r)-2(1+U)\in\mathrm{Inf}.
+ \tag{SU2}
+\]
+The last infinitesimal is a finite separated expression for bounded
+$u$ and infinitesimal $w$.  For the only new source assertion in
+SU2, the sphere identities give exactly
+\[
+ d=\frac{2\mathcal H}{PJ}d_0^2,\qquad
+ \rho=\frac{2xH_0}{\sigma B}
+       +\frac{2\mathcal H}{B}b_0^2+\lambda_0s.
+ \tag{SU3}
+\]
+Thus $d+\rho\sim2$ follows from $d_0^2+b_0^2=1$, with no inverse
+of either sphere coordinate.  All other bounds are the reviewed
+SP9--SP11 and BS1 source identities.
+
+\paragraph{Shift the troublesome angular product into the normal block.}
+Set $A_0=qW$, $A=A_\theta=(U-x)A_0$, and retain $R$.
+There is an exact conductor:
+\[
+ A(A+uR)=u(U-x)wWZ-x(U-x)A_0^2.
+ \tag{SU4}
+\]
+Consequently the angular/radial part of BS2 is
+\[
+\begin{split}
+ K_AA^2+\chi uAR+(c_G+zK_r)R^2
+ ={}&2(A+uR)^2+2R^2-4hu(U-x)wWZ\\
+ &+4hx(U-x)A_0^2+\delta_A A^2+
+   \delta_\chi uAR+\delta_RR^2,
+\end{split} \tag{SU5}
+\]
+where the three $\delta$ coefficients are the infinitesimals in
+SU2.  This step keeps the signed product exactly; it is not an
+inequality based on the sign of $U-x$.
+
+\paragraph{A complete strict normal block.}
+Introduce the legal separated roots
+\[
+ H=\sqrt h\,uZ,\qquad S=uwW-hu^2Z,\qquad N=N_x,
+ \qquad Z_g=uwW=S+u\sqrt h\,H.
+\]
+Their exact allocations are
+\[
+\begin{split}
+ \Gamma&=-S+\left(\frac{\sigma}{u\sqrt h}-u\sqrt h\right)H,\\
+ P_h:=\sqrt h P_\beta&=(1-sh)H-\frac{s\sqrt h}{u}S,\\
+ X_e&=N-\sqrt h P_h.
+\end{split} \tag{SU6}
+\]
+Every coefficient is bounded; the factors $u^{-1}$ are pure testing
+units.  The full signed packet in BS2 also satisfies exactly
+\[
+ \mathscr P=L_hP_h^2+
+      \rho(1-x/U)Z_g^2-\rho\sigma(U-x)A_0^2.
+ \tag{SU7}
+\]
+The apparently signed factor $1-x/U$ is simply a bounded Gram
+coefficient of residue one.  No mixed inverse is used.
+
+Combine the $wWZ$ term in SU5 with every $N,\Gamma,P_h,Z_g$ term:
+\[
+\begin{split}
+ \mathscr N={}&[2(1+w^2)+4mw^2]N^2
+     +2(2D+1)U X_e^2+d\Gamma^2-4u\nu N\Gamma\\
+ &+L_hP_h^2+\rho(1-x/U)Z_g^2
+       -4\sqrt h\,\frac{U-x}{u}\,Z_gH .
+\end{split} \tag{SU8}
+\]
+This is an exact equality for the entire indicated normal block.
+Its coefficients in $(N,S,H)$ are bounded separated expressions.
+Using SU2 and SU6, its residue is exactly
+\[
+ 2(1+u_0^2)N^2+4u_0NS+2S^2+2H^2.
+ \tag{SU9}
+\]
+The $N,S$ determinant is $4$, so this residue is strictly positive.
+The $H$ cross terms cancel: the $X_e$ square cancels the leading
+$N\Gamma$ coupling to $H$, and the angular shift in SU5 cancels
+the remaining $S H$ and $hH^2$ terms.  This is where the sphere
+sum $d_0^2+b_0^2=1$ is essential.
+
+The remaining angular/radial block is
+\[
+\begin{split}
+ \mathscr A={}&2\{(U-x)A_0+uR\}^2+2R^2\\
+ &+(4hx-\rho\sigma)(U-x)A_0^2
+   +\delta_A(U-x)^2A_0^2
+   +\delta_\chi u(U-x)A_0R+\delta_RR^2.
+\end{split} \tag{SU10}
+\]
+Its residue on $(A_0,R)$ has determinant $4u_0^4>0$.
+
+\paragraph{Every other original-parent term.}
+The unchanged hard $N_y$ diagonal has residue $2(1+u_0^2)$.
+All SP5 terms other than its two $\Gamma$ terms already have
+infinitesimal coefficients on $(N,N_y,A_0,R)$, by SP's complete
+opening-uniform coefficient bounds and $A=(U-x)A_0$.
+The two $\Gamma$ terms have a factor $qw$ and become infinitesimal
+crosses after the bounded allocation SU6.  Thus the complete Gram
+on $(N,N_y,S,H,A_0,R)$ has strictly positive residue, the direct
+sum of SU9, the $N_y$ entry and SU10.
+
+The remaining exact nonnegative rows are retained once: both
+centered cap excesses, $4\beta D_wN^2$, and
+$4bpzU\Gamma^2$.  The $d\Gamma^2$ part and
+$2(2D+1)(uX_e)^2$ have already been used in SU8 and are not
+retained a second time.  All scalar, hard and first-normal terms
+of the original SP6 parent are therefore included.
+
+The bounded separated-Gram criterion proves tensor SOS for all real
+states and both testing signs, including literal $Z=0$ and $w=0$.
+Applying the real identity separately to real and imaginary parts
+gives all complex states.  Neither source sphere endpoint is inverted.
+The precise remaining C14.1b testing domain has $u$ infinitesimal
+(with the earlier state and sign admissions still retained).
+
+The focused checker verifies SU4, SU6--SU8 and the whole reassembled
+SP6 parent, then the two strict residue determinants.  It does not
+replay the unchanged source formulas or claim a whole-source closure.

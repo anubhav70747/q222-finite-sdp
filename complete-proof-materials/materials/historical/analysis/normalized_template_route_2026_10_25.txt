@@ -1,0 +1,140 @@
+NORMALIZED TARGETS CANNOT HAVE A FINITE POSITIVE-TEMPLATE COVER
+
+Result. The proposed literal polyhedral route is impossible for ALL
+contact-normalized native C1/C2 targets. Already a positive C2 subfamily
+has conical limits whose state matrices, at the one normalized testing
+pair s=t=1, run through infinitely many distinct rank-one PSD rays.
+A finite conic hull of fixed PSD Gram templates can have only finitely
+many such rays. This is NOT an obstruction to L6 or to a finite fixed
+testing basis with variable PSD coefficient matrices.
+
+Sources inspected: complete canonical parent in gram_lift.py26-30;
+uniform-contact/source_dictionary_exact.tex (actual stationary R1
+dictionary); the verified native contact/state formulas. Public source
+snapshot at read31789f0d95de4ff1ab42c3d824150e45fd6e92dc.
+No numerical SDP, sweep, large appendix replay or public edit.
+
+1. An actual native C2 family.
+
+Fix B=T=epsilon=2^-12,H=1/2, let j range over[2,3] and
+let3/4<=p<1. Then B,T,x=jB<=delta=2^-10 and p<min(j,1).
+The actual native physicality numerator NN is positive uniformly.
+From the displayed polynomial dictionary, on this parameter box,
+
+ |NN-p| <=23epsilon+22epsilon^2+50epsilon^3
+                           +9epsilon^4(1+epsilon)<24epsilon<3/4.
+
+Thus n=NN/[2(j-p)P]>0. All remaining native weights and denominators
+are positive by the existing source bounds. In particular this is
+not an independently selected positive event vector.
+
+Set x=jB,y=TB,qz=jT. The contact is
+
+ uc=sqrt(x),vc=sqrt(y),
+ psic=(1+Hjy, -(j-p)sqrt(y),
+                  (1-HT)sqrt(x),(1+pB)sqrt(qz)).
+
+All four state coordinates are nonzero, including as p approaches1,
+because j>=2. The complete stationary parent vanishes at this contact.
+Normalize exactly as proposed:
+
+ Fhat_jp(s,t,eta)=F_c(uc*s,vc*t,diag(psic)*eta).
+
+The new contact is s=t=1,eta=(1,1,1,1). No testing/source variables
+are identified in this definition; the contact quantities are coefficients.
+
+2. The complete-parent conical limit.
+
+The native weight m=mu/(1-p) diverges to positive infinity as p->1.
+Its numerator mu=jp(1+y)(1+x)(1+Hy)/(2P) has a finite positive limit.
+All other source weights remain finite: j-p>=1, P>=j+1, E>=1-B,
+1-HT>0,H=1/2 and T=B=epsilon are fixed away from zero. The
+contact-normalizing factors also have finite nonzero limits.
+
+The m-event term of the FULL parent is
+4m(vW-X+uvY-uZ)^2. Its normalized root divided by sqrt(y) is exactly
+
+ L_jp=(1+Hjy)t*etaW+(j-p)etaX
+          +jB(1-HT)st*etaY-j(1+pB)s*etaZ.
+
+Every other complete-parent term has bounded coefficients. Therefore
+coefficientwise in the fixed finite polynomial space,
+
+           Fhat_jp/(4my) --> g_j=L_j^2,
+
+ L_j=(1+Hjy)t*etaW+(j-1)etaX
+          +jB(1-HT)st*etaY-j(1+B)s*etaZ.             (1)
+
+This is a full-parent limit, not a scalar restriction or a discarded
+normal calculation. The limiting root still vanishes at the normalized
+contact: its four coefficients sum to zero since y=BT.
+
+3. Why finitely many fixed positive templates cannot contain the family.
+
+Suppose fixed PSD Gram polynomials P1,...,Pr generate a cone containing
+every Fhat_jp. Their conic hull is closed. A direct proof uses a fixed
+positive testing-box/state-sphere integral I: for every nonzero positive
+template I(Pi)>0, so convergent coefficient vectors bound every positive
+template coefficient. Subsequence limits retain a conic representation.
+Thus this finite cone also contains every g_j in(1).
+
+Evaluate all forms at the fixed normalized test s=t=1. Each template
+becomes a fixed PSD4x4 state matrix Mi. The limit g_j becomes
+
+                         ell_j*ell_j^t,
+
+ ell_j=(1+Hjy, j-1, jB(1-HT), -j(1+B)).
+
+These are infinitely many distinct rank-one rays. For j!=k the
+minor formed by the W and Z coordinates is exactly
+
+ ell_j,W*ell_k,Z-ell_k,W*ell_j,Z=(j-k)(1+B)!=0.       (2)
+
+A sum of PSD matrices has rank one only when every positively used
+nonzero summand has its range in that same one-dimensional space:
+test every vector orthogonal to ell_j and use nonnegativity. Hence
+each represented rank-one ray requires a nonzero fixed Mi of that
+same ray. A finite list cannot cover all the distinct directions(2).
+Templates whose evaluation is zero cannot supply the nonzero target.
+This contradiction proves the obstruction.
+
+Consequently there is no polyhedral cone of normalized coefficients
+containing all these actual native targets whose finitely many extreme
+generators each have a fixed PSD sixth-root Gram. Adding finitely many
+polyhedral cases does not help: the union of their generator lists is
+still finite. Stationarity plus coefficient-sign or circuit inequalities
+cannot produce the proposed finite positive-generator cover of the
+entire family without relaxing at least one of these requirements.
+
+4. The precise limitation, and a useful surviving block.
+
+The obstruction is to a POLYHEDRAL positive-template reduction, not to
+the finite sixth-root certificate cone. In fact the limiting family
+already has an extremely small fixed-function representation. Define
+the two fixed corner-basis roots
+
+ L0=t*etaW-etaX,
+ L1=Hy*t*etaW+etaX+B(1-HT)st*etaY-(1+B)s*etaZ.
+
+Both vanish at the normalized contact, and
+
+       g_j=(L0+jL1)^2
+          =(L0,L1)[[1,j],[j,j^2]](L0,L1)^t.
+
+The coefficient matrix is PSD rank one for every j, but these matrices
+cannot themselves be generated by finitely many fixed PSD matrices.
+One variable2x2 PSD coefficient block handles them perfectly. All
+functions here lie already in Z1, hence in Z6.
+
+Thus a viable structural reduction must retain genuinely semidefinite
+coefficient blocks (or permit additional source-dependent congruences
+whose expansion returns such blocks), rather than only nonnegative
+scalar combinations of finitely many fixed positive polynomials. This
+does not provide the complete native Gram, and does not exclude a
+polyhedral cover after restricting away from degenerating openings.
+
+The small exact helper normalized_template_route_checks.py/.json checks
+the native sign majorant, m-divergence identity, complete-parent m
+coefficient, normalized limiting root, direction minor and fixed2x2
+representation. It uses no optimization. The bounded route stops at
+this concrete obstruction; no universal admission or global lift is claimed.

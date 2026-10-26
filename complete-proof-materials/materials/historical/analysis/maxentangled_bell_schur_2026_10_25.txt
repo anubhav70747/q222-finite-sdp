@@ -1,0 +1,130 @@
+MAXIMALLY ENTANGLED ZERO: BELL-BASIS BLOCK AND JOINT ANGULAR SCHUR CONDITION
+25 October 2026. Precise local identities; no global admission conclusion.
+
+1. Full Bell operator at a real planar maximally entangled zero
+-------------------------------------------------------------
+Choose fixed local real bases taking the zero state to
+Phi+=(|00>+|11>)/sqrt(2). All C2 contacts under discussion are real planar;
+write Alice and Bob Bloch directions a_x,b_y in the X,Z plane in this fixed
+gauge. The complete Bell slack is
+
+ B=kappa I+u.(sigma tensor I)+v.(I tensor sigma)
+                +sum_{i,j in {X,Z}} J_ij sigma_i tensor sigma_j,
+
+where u=sum_x h_x a_x, v=sum_y j_y b_y, J=sum_xy T_xy a_x b_y^T.
+The ordinary source coefficients h_x,j_y,T_xy remain the fixed Bell
+coefficients; u,v,J depend on the testing directions. Direct action on Phi+
+gives
+
+ B Phi+=(kappa+tr J)Phi+ +(u_X+v_X)Psi+
+                       +(u_Z+v_Z)Phi- +(J_ZX-J_XZ)Psi-.
+
+Consequently B Phi+=0 is exactly
+
+ kappa=-tr J,   v=-u,   J=J^T.                         (1)
+
+In the orthonormal Bell basis (Phi+,-Phi-,Psi+,Psi-), the FULL operator is
+zero on the first row/column, and its remaining block is
+
+ K=2*[[-J_XX,-J_XZ,u_X],
+      [-J_XZ,-J_ZZ,u_Z],
+      [u_X,u_Z,-tr J]].                                (2)
+
+This proves the proposed 3x3 identity, including its signs. At this fixed
+measurement pair positivity for every state is exactly K>=0. Equivalently
+-J>=0, u lies in range(-J), and u^T(-J)^+u<=-tr J. Equation (2) retains
+the marginal/state coupling; keeping only the correlator block -J loses it.
+
+2. One explicit necessary 5x5 matrix for state and angle perturbations
+--------------------------------------------------------------------
+Hold this local gauge fixed. Vary only the two independent measurement
+angles theta=(alpha_1,beta_1), holding a_0,b_0 fixed. Other smooth local
+angle coordinates give congruent conditions. For every globally valid
+slack tight at this strategy, scalar angle stationarity is
+
+ tr(M_1)=tr(M_2)=0,
+ M_1=sum_y T_1y a'_1 b_y^T,
+ M_2=sum_x T_x1 a_x (b'_1)^T,
+
+where a'_1,b'_1 are the actual unit-circle tangents. Define q_1=h_1 a'_1,
+q_2=j_1 b'_1 and the three-component real columns
+
+ w_j=(-(q_j)_Z,(q_j)_X,(M_j)_ZX-(M_j)_XZ),  j=1,2.
+
+These are exactly the components of Pi_perp (partial_j B)Phi+ in the basis
+(-Phi-,Psi+,Psi-). Put W=[w_1,w_2] and
+
+ C_11=-(1/2)sum_y T_1y a_1.b_y,
+ C_22=-(1/2)sum_x T_x1 a_x.b_1,
+ C_12=C_21=(1/2)T_11 a'_1.b'_1.
+
+Then the precise joint second-order condition is
+
+                    [[K,W],[W^T,C]]>=0.                (3)
+
+Proof: use the normalized state path Phi+ +epsilon*z+O(epsilon^2), with
+z orthogonal to Phi+, and theta=epsilon*t. Because B Phi+=0 and the scalar
+first-angle derivatives vanish, the expectation through order epsilon^2 is
+
+       z^T K z +2 z^T W t+t^T C t.
+
+Nonnegativity for both signs of epsilon and all z,t gives (3). Imaginary
+state tangents add their independent K quadratic form, since the planar
+operator and the angle-action columns are real. They do not change (3).
+This uses the complete state form, not a selected positive summand.
+
+Equivalently (3) says K>=0, range(W) subset range(K), and
+C-W^T K^+ W>=0. The range condition is essential on degenerate state faces.
+All entries of (3) are SOURCE AFFINE when the contact directions and the
+Bell basis are fixed. The inverse expression is only an equivalent ordinary
+finite-dimensional Schur condition; it is not division by a mixed tensor
+element or a source-independent SOS construction.
+
+The angle parametrization by the circle also covers a half-angle chart's
+projective endpoint locally. It gives local necessity only: no assertion
+that the 5x5 condition proves positivity at distant measurement angles.
+
+3. Native quadratic identity in ordinary Bell coefficients
+---------------------------------------------------------
+For lambda=beta=0 the canonical coefficient map is
+
+ kappa=d+n+m+C+A+D+alpha,
+ h_0=n-A-alpha, h_1=m-C-D,
+ j_0=-n+C+A, j_1=-m+D-alpha,
+ T_00=-d/2-n-A, T_01=d/2+alpha,
+ T_10=-d/2-C,   T_11=-d/2-m-D.
+
+Therefore the native maximally entangled identity
+
+                  D(alpha+d/2)=m(C+d/2)                (4)
+
+is precisely
+
+       T_11(T_01+T_10)+T_01 h_1+T_10 j_1=0.           (5)
+
+Indeed D*T_01+m*T_10 equals minus one half of the left-hand side of (5).
+This is an exact algebraic translation, not an additional theorem that
+(1), (3) or (5) alone suffices for global validity. It shows explicitly
+that the source quadric balances correlator and marginal coefficients.
+
+4. Exact scope and the remaining inference
+-----------------------------------------
+The current canonical positive native chart already has a separate generic
+physicality proof: positive three-state block, nonnegative Laurent outer
+determinant coefficients, and stationarity followed by balance/AM-GM. Thus
+(2)-(3) provide a concise structural state/angle condition; they are not a
+new independent universal admission proof for those native sources.
+
+A fixed-contact affine matrix can constrain sources tight at THAT contact.
+As the contact moves, its Bloch directions, Bell basis, and the coefficients
+in W,C move. Treating that family as one fixed finite source cone would
+still require elimination or a proved finite convex-hull representation.
+The local Schur inverse does not provide that elimination. No such global
+inference is made here, and the ordinary coefficient identity does not
+remove the already established rank-four quadric obstruction to a single
+source-linear rank-one 2x2 determinant representation.
+
+The matching maxentangled_bell_schur_checks_2026_10_25.py/.json checks the
+full Bell-basis identity and the exact factor in (4)-(5). The Hessian proof
+above is an analytic expansion with all entries explicitly defined, not a
+claim inferred from a numerical Hessian or a PASS label.

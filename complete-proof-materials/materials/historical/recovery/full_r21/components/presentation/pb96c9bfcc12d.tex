@@ -1,0 +1,453 @@
+\chapter{C14.4 at the entire $\ell$-infinitesimal source endpoint}
+\label{component:pb96c9bfcc12d}
+\noindent\textbf{Component }\path{pb96c9bfcc12d}\par
+{\small\noindent Source: \path{NEW/c1/c144_ell_endpoint_rederived.tex}\par}
+{\small\noindent SHA256: \path{b96c9bfcc12d51c385d0aa7c4f9b46d3fc9322544414720685bccda5a3053e25}\par}
+{\small\noindent Inventory use: EL0a--EL21 | Fresh complete EL0a–EL21 proof; entire ell-infinitesimal source endpoint | C14\_\allowbreak{}ENTIRE\_\allowbreak{}ORIGINAL\_\allowbreak{}PARENT\_\allowbreak{}GRAPH; precise subordinate uses retained below\par}
+\medskip
+% Fresh rederivation. Independent analytical review is recorded separately.
+\section{C14.4 at the entire $\ell$-infinitesimal source endpoint}
+\label{pb96c9bfcc12d:sec:c144-ell-endpoint-rederived}
+
+\paragraph{Theorem and exact scope.}
+Retain the original native C14.4 physical source, all strict gaps,
+nonnegative event weights, total-scale conditions and prior-complement
+intersections.  Let
+\[
+ S=\sigma+L,\quad x=\kappa S,\quad
+ \nu=\sigma/S,\quad\ell=L/S,\quad\nu+\ell=1,
+ \quad\zeta=L/x=\ell/\kappa.
+\]
+Suppose $S,\ell>0$ are infinitesimal and $\zeta$ is
+noninfinitesimal.  Then the complete original parent is a finite
+sum of squares in the separated ring
+$K_c\otimes_{\mathbb R}K_t$ for every independently chosen
+projective test and every real or complex state.  The proof includes
+$\beta=0$ and unrestricted openings of $r,1-r,\theta$.
+The intersection with $D=0$ is empty by the source estimate below.
+No earlier missing R21 endpoint proof is used.
+
+\paragraph{Source estimates at this endpoint.}
+Use the exact actual-source formulas FM2--FM3 and SE1--SE3, with
+$0<r,h<1$, $\theta=1-h$, $e=\kappa h/\nu$, $E=1-e\ge1/18$,
+$U_s=(1+x)(1+\nu Sr)$, and
+\[
+\begin{gathered}
+ J=1+xh-\nu S(1-r),\quad
+ M=1+xr-\kappa\theta/\ell>0,\quad Q_s=1-\ell Sr,\\
+ a_0=SAr,\qquad c_0=SC(1-r),\qquad P=SP_0.
+\end{gathered}
+\]
+Put $g=\kappa/\ell=1/\zeta$, which is bounded.
+Then $\nu\sim1$ and $\kappa\in\operatorname{Inf}$.
+Since
+\[
+ 0\le\beta\theta
+  =\frac{U_s(\ell+\kappa h)-\theta P_0}{2P_0},
+\]
+we have $\theta=O(\ell+\kappa)=O(\ell)$ and
+$\beta\theta=O(\ell)$, hence $h\sim1$,
+$\beta\theta^2=O(\ell^2)$ and $M\sim1$.
+The exact source formulas give
+\[
+\begin{gathered}
+ J,Q_s,P_0,E\sim1,\quad c_0,a_0\sim\tfrac12,
+ \quad D/S\sim\tfrac12,\quad m\in\operatorname{Inf}_{>0},\\
+ \frac{qm}{\kappa^2}
+   =\frac{U_s h}{2M\nu^2P_0}\sim\tfrac12,
+ \qquad q=\ell/\nu,\\
+ \frac{\alpha}{S\ell^2}
+   =\frac{(1+\nu Sr)\{(1+xr)e/\ell+ME\}}{2Q_sP_0},
+ \qquad
+ \frac{\alpha}{S\ell^2}-\frac{1+g}{2}\in\operatorname{Inf}.
+\end{gathered}                                                   \tag{EL0a}
+\]
+The last difference is uniform for bounded $g$, because
+$e/\ell=gh/\nu$.  All statements are inside the source field;
+none compares a testing rate to a source rate.  In particular
+$D/S$ is a positive unit, while $\beta$ may be zero, bounded,
+or unbounded.
+
+\paragraph{The full parent and local testing chart.}
+Noninfinitesimal Alice tests and unmatched Bob residues will be joined
+at the end.  The remaining chart has $u,v\ge0$ infinitesimal,
+including literal zero axes.  Write $a=u^2$, $c=v^2$,
+$b=\sqrt q$, $j=\nu b$, and $d=D+1/2$.
+The complete original quarter-parent is
+\[
+\begin{aligned}
+ F/4={}&m(vW-X+uvY-uZ)^2+C(1+c)(uW-Y)^2\\
+ &+A(1+a)(1+c)Y^2+d(uW-Y+uvX-vZ)^2\\
+ &+(\alpha+\tfrac12)(1+a)(vY-Z)^2
+ +(\beta+\tfrac12)(1+c)(X+uZ)^2\\
+ &-\tfrac12(1+a)(1+c)Z^2.
+\end{aligned}                                                     \tag{EL0b}
+\]
+All state coordinates are arbitrary elements of the testing field.
+No state coordinate is divided by or bounded below.
+Put $R_s=1+xr$, $p=\kappa\theta/(\ell R_s)$, $\mu=m(1-p)$, and
+\[
+ V=v(W+uY),\qquad N=X+uZ-pV,\qquad
+ Y=ruW+\sqrt{Sr(1-r)}N_y.                         \tag{EL1}
+\]
+These are pure-source rescalings of polynomial state normals.
+The original $m$ event is $(1-p)V-N$, the beta event is $N+pV$,
+and the core event is
+$uW-Y+puvV-(1+a)vZ+uvN$; thus no term has been dropped.
+On $N=N_y=0$ define
+\[
+\begin{aligned}
+ L_0&=\mu(1-p)+(\beta+\tfrac12)p^2,
+ \qquad L_1=(\beta+\tfrac12)p^2,\\
+ B_c&=1-r+pc(1+ra),\\
+ \lambda(a,c)&=\frac q{\kappa^2}(1+ra)^2(L_0+L_1c),\\
+ A_P&=(1+c)[c_0(1-r)+a_0r(1+a)]
+       +S[dB_c^2+(\alpha+\tfrac12)(1+a)r^2c],\\
+ K&=(1+a)[dB_c+(\alpha+\tfrac12)r],\\
+ F_Z&=(1+a)[\alpha+Dc+dac].
+\end{aligned}                                                    \tag{EL2}
+\]
+Here $c_0=SC(1-r)$ and $a_0=SAr$.  The complete graph scalar is
+\[
+ F_0=c(1+ra)^2(L_0+L_1c)W^2+A_PP^2-2vKPQ+F_ZZ^2,
+ \quad P=uW/\sqrt S,\quad Q=\sqrt S Z.             \tag{EL3}
+\]
+Let $T=\kappa W,U=uZ$ and use the exact four-term circuit
+\[
+ \Psi=(\nu/\ell)cT^2+\nu^2cU^2+\kappa\nu\ell Q^2
+       +\kappa P^2-4\kappa\nu vPQ.                \tag{EL4}
+\]
+Its four positive monomial square roots are
+$A_1=(\kappa/b)vW$, $A_2=\nu vuZ$,
+$A_3=\nu b\sqrt xZ$, and $A_4=\sqrt\kappa P$.
+Their product is a square.  The usual two paired AM--GM identities
+make $\Psi$ a separated SOS, including $WZ<0$ by sign excess.
+The multiplier $\lambda$ itself is a sum of separated monomial
+squares with positive pure-source coefficients; no mixed radical
+of $\lambda$ is taken.
+
+Set $\Gamma=P-\nu vQ$, $\Lambda=vP-\ell Q$, and
+\[
+ \widehat A=A_P-\kappa\lambda,\quad
+ \widehat K=K-2\kappa\nu\lambda,\quad
+ \widehat F=F_Z-\lambda(\nu^2ac+\kappa\nu\ell S).
+\]
+Then the following equality is purely polynomial and exact:
+\[
+ F_0-\lambda\Psi
+   =\widehat A\Gamma^2-2vJ\Gamma Q+HZ^2,
+ \quad J=\widehat K-\nu\widehat A,
+ \quad H=\widehat F+\nu^2Sc\widehat A-2\nu Sc\widehat K.
+                                                               \tag{EL5}
+\]
+The exact coefficient bounds are
+$\lambda_0=qL_0/\kappa^2\sim1/2$ and
+$\lambda_1=qL_1/\kappa^2=O(\ell)$.
+Indeed the exact opening-safe formulas are
+\[
+ \lambda_1=\frac{\theta(2\beta\theta+\theta)}
+                    {2\ell\nu R_s^2},\qquad
+ \lambda_0=\frac{U_shM}{2\nu^2P_0R_s^2}+\lambda_1.
+\]
+Here $\theta/\ell$ and $(\beta\theta)/\ell$ are bounded, so
+the formula for $\lambda_1/\ell$ has only bounded source factors.
+No comparison between $S$ and $\ell$ is made.  The mixed term
+arising from $-\nu^2\lambda_1c^2a$ is allocated in EL18 below
+using an actual row of the same circuit.
+
+\subsection{Exact helper rows and the complete two-normal conductor}
+The following exact budgets and complete normal conductors use a
+positive real fraction of $\Psi$ and strict pivots on
+$(\Gamma,\Lambda)$.  The scalar calculation below supplies precisely
+these pivots; it does not use the state normals to obtain them.
+Put $\delta=v-b$, $G_0=P-jQ$, $B_o=\delta Q$, and
+\[
+\begin{gathered}
+ E_{12}=A_1-A_2=(v/b)(T-jU),\quad V_h=v\delta U,\\
+ R_v=v(a-x)Z,\quad B=\sqrt S(c-q)Z,\quad
+ R_0=\ell\sqrt S(a-x)Z.
+\end{gathered}
+                                                               \tag{EL6}
+\]
+The exact angular relations are
+\[
+ (v+b)G_0=\Lambda+b\Gamma,\qquad
+ \nu(v+b)B_o=\Lambda-v\Gamma=\nu B.             \tag{EL7}
+\]
+In particular $B$ has a bounded linear expression in the two strict
+angular rows.  Multiply MB3 by $v^2/j^2$ and use
+$\eta=\kappa(v+b)/j\in\mathrm{Inf}$.  The exact SOS inequality is
+\[
+ V_h^2\preceq_{\rm SOS}
+  \frac{\delta^2}{\nu^2}E_{12}^2
+   +\eta(\Lambda+b\Gamma)^2
+   +\frac{\eta+2\kappa}{\nu^2}(\Lambda-v\Gamma)^2.
+                                                               \tag{EL8}
+\]
+For a direct verification, set $R_1=vG_0,R_2=vB_o$.
+The mixed-term replacement uses the legal SOS
+\[
+ \eta(R_1^2+R_2^2)-2\kappa\delta R_1R_2/j
+ =\frac{\kappa v}{j}(R_1-R_2)^2
+  +\frac{\kappa b}{j}(R_1+R_2)^2.
+\]
+Replacing $v^2$ by $(v+b)^2$ leaves
+$(2vb+b^2)G_0^2$ and $(2vb+b^2)B_o^2$, with positive
+separated multipliers.  The remaining MB3 square is
+$(v\delta T/j)^2$.  Every cost in EL8 is infinitesimal, since
+$\kappa/j=(\kappa/\ell)b$ is infinitesimal.
+
+Two further exact relations are
+\[
+ R_v=\frac{\kappa v\sqrt S}{\nu b}\Gamma
+       -\frac u\nu E_{12}+\frac{xv(v-b)}bZ,          \tag{EL9}
+\]
+\[
+ \frac{x^2}{qS}B^2-
+       \left(\frac{xv(v-b)}bZ\right)^2
+   =\frac{x^2}{q}(2vb+b^2)(v-b)^2Z^2.              \tag{EL10}
+\]
+Thus $R_v$ is free at infinitesimal Gram cost because
+$x^2/(qS)=\kappa S(\kappa/q)$ is infinitesimal.  Finally
+\[
+ 2\nu^2ScR_v^2+2\nu^2(a-x)^2B^2-R_0^2
+       =[\nu\sqrt S(2c-q)(a-x)Z]^2               \tag{EL11}
+\]
+buys $R_0$ with infinitesimal costs.  None of EL6--11 bounds or
+divides a state coordinate or a mixed source/testing sum.
+
+For the exact complete $N$ half derivative set
+\[
+\begin{aligned}
+ B_0(c)&=[-\mu+(\beta+\tfrac12)p(1+c)]/\kappa,\\
+ F_a(a,c)&=r\kappa B_0(c)+d(1-r)+dpc(1+ra),\\
+ D_t(a,c)&=d(1+a)-\nu S F_a(a,c).
+\end{aligned}                                                     \tag{EL12}
+\]
+All their coefficients are bounded, including at $\beta=0$ or
+unbounded $\beta$: $\mu/\kappa$ and
+$(\beta+1/2)p/\kappa=(\beta\theta+\theta/2)/(\ell R_s)$
+are bounded.  Write the monic polynomial differences
+$D_t-D_t(x,q)=(a-x)D_a+(c-q)D_c$ and
+$B_0(c)-B_0(q)=(c-q)B_{01}$.  Source contact gives
+$D_t(x,q)=\nu B_0(q)$.  The entire half derivative is
+\[
+\begin{aligned}
+ L_N={}&bB_0(c)E_{12}+uv\sqrt S F_a\Gamma-uvD_aR_v\\
+ &+[-D_t(x,q)+\nu bB_{01}(v+b)-v(v+b)D_c]V_h.
+\end{aligned}                                                     \tag{EL13}
+\]
+Hence EL8--10 allocate every $N$ cross term without a state bound.
+The normal $\widehat N=\sqrt{1+\beta}N$ has diagonal at least
+$(\beta+1/2)/(1+\beta)\ge1/2$; dividing the cross coefficients
+by $\sqrt{1+\beta}$ only improves the displayed bounds.
+
+The complete other half derivative is
+\[
+ L_y=\sqrt{r(1-r)}[Y_P\Gamma+vY_KQ],             \tag{EL14}
+\]
+where
+\[
+\begin{aligned}
+ Y_P={}&(1+c)[-c_0+a_0(1+a)]\\
+ &+S\{c(1+ra)(L_0+L_1c)+d(-1+pac)B_c
+                   +(\alpha+\tfrac12)(1+a)rc\},\\
+ Y_K={}&\nu Y_P+(1+a)(D-\alpha-dpac).
+\end{aligned}
+\]
+The polynomial coefficients are bounded, $Y_P$ is infinitesimal,
+and actual source contact gives $Y_K(x,q)=0$.  Monic division gives
+$Y_K=(a-x)Y_a+(c-q)Y_c$ with bounded coefficients, so
+\[
+ L_y=\sqrt{r(1-r)}[Y_P\Gamma+\sqrt S Y_aR_v+vY_cB].
+                                                               \tag{EL15}
+\]
+The exact quadratic normal coefficients are
+\[
+\begin{aligned}
+ H_N={}&m+dac+(\beta+\tfrac12)(1+c),\\
+ H_y={}&rc_0(1+c)+(1-r)a_0(1+a)(1+c)\\
+ &+Sr(1-r)[d(-1+pac)^2+(\alpha+\tfrac12)(1+a)c
+                         +ac(L_0+L_1c)],\\
+ H_{Ny}={}&\sqrt{Sr(1-r)}uv[\kappa B_0(c)-d+dpac].
+\end{aligned}                                                     \tag{EL16}
+\]
+After the source-only normalization of $N$, the first two diagonal
+residues are respectively in $[1/2,1]$ and $1/2$, and the cross
+coefficient is infinitesimal.  Equations EL13--16 include all terms
+of the full original parent; they require no $W/Z$ or testing/source
+rate restriction.  The scalar allocation and exact strict-Gram assembly are given next.
+
+
+\subsection{Complete scalar allocation, including the mixed radial term}
+Both $\widehat A$ and the coefficients of $J,H$ in EL5 are
+bounded polynomials in $a,c$: their source coefficients are built
+from bounded $p,d,\alpha,c_0,a_0,\lambda_0,\lambda_1,\kappa,S,\nu$.
+In fact $p=O(\kappa)$,
+$\mu/\kappa=O(\kappa/\ell)$, and
+$(\beta+1/2)p^2=O(\kappa^2)$.
+Consequently $\widehat A\sim1/2$ on the local chart.
+Actual source contact, checked in the original parent, gives
+\[
+ J(x,q)=0,\qquad H(x,q)=H_a(x,q)=H_c(x,q)=0.        \tag{EL17}
+\]
+These are exact identities, not residue equalities.  They also follow
+by evaluating the actual contact state in EL1: all four circuit
+monomials agree, $\Gamma=0$, and both graph normals vanish.
+The vanishing first derivatives of the original contact parent
+then give the three scalar jets.  The focused checker verifies all
+of them directly from FM2--FM3.
+
+The additional actual circuit row
+\[
+ E_{23}=A_2-A_3=\nu(uv-\sqrt{xq})Z
+\]
+resolves the otherwise unbounded mixed coefficient.  Direct expansion
+using $x=\kappa S$ gives the exact identity
+\[
+ c(a-x)(c-q)Z^2
+ =\frac{c-q}{\nu^2}E_{23}^2
+  +\frac{2\sqrt{\kappa q}}{\nu}E_{23}B-\kappa B^2.
+                                                               \tag{EL18}
+\]
+Every coefficient on the right is infinitesimal.  To see the equality
+without division by a testing coordinate, use
+\[
+ (ac-xq)Z^2=E_{23}^2/\nu^2+2\sqrt{xq}\,ZE_{23}/\nu,
+ \qquad c(a-x)=ac-xq-x(c-q).
+\]
+All square roots in this calculation are pure-source roots.
+
+For completeness, the single circuit supplies positive fixed pivots
+on both $E_{12}$ and $E_{23}$.  If $WZ\ge0$, use the two AM--GM
+pairings having respectively these differences and average them;
+then $\Psi-\tfrac14(E_{12}^2+E_{23}^2)$ is separated SOS.
+If $W,Z$ are both negative, first change the common state sign;
+the parent and all squared differences are unchanged.
+If $WZ<0$, the negative product term of $\Psi$ is nonnegative,
+and
+\[
+ \sum_{i=1}^4 A_i^2-\tfrac14[(A_1-A_2)^2+(A_2-A_3)^2]
+\]
+is a real positive-definite quadratic form in the $A_i$.
+For example its leading $3\times3$ block has diagonal
+$(3/4,1/2,3/4)$ and successive leading minors
+$3/4,5/16,3/16$; the fourth diagonal is $1$.
+This supplies a finite real Gram factorization.  The remaining
+$-4\kappa\nu uvWZ$ is a separated square on this pure-testing sign
+chart.  The zero-state boundaries use the same identities.
+Since $\lambda_0\sim1/2$ and $\lambda_1\ge0$,
+$\lambda-1/4$ is a separated SOS multiplier:
+\[
+ \lambda-\tfrac14=(\lambda_0-\tfrac14)
+       +\lambda_0(2ra+r^2a^2)+\lambda_1c(1+ra)^2.
+\]
+Thus $\lambda\Psi$ leaves strict real diagonal $1/16$ on each of
+$E_{12},E_{23}$ and an explicitly retained separated SOS remainder.
+No mixed square root of $\lambda$ has been used.
+
+Perform monic polynomial division in $a$ and then in $c$.
+By EL17 there are bounded coefficient polynomials such that
+\[
+\begin{aligned}
+ J&=(a-x)J_a+(c-q)J_c,\\
+ H&=(a-x)^2H_{20}(a,c)
+       +(a-x)(c-q)H_{11}(c)+(c-q)^2H_{02}(c).
+\end{aligned}                                                     \tag{EL19}
+\]
+The division is by monic polynomials; it introduces no inverse of
+$a-x$, $c-q$, or any mixed expression.  The following four particular
+coefficient identities are exact:
+\[
+\begin{aligned}
+ H_{20}(a,0)&=-\kappa\nu\ell S\lambda_0r^2,\\
+ H_{11}(0)&=-\alpha/q+2\kappa\nu^2S\lambda_0r(1+rx),\\
+ H_{02}(0)/S
+   &=\nu^2\left[(1+x)\frac\alpha{S\ell^2}
+                 -g\nu\lambda_0(1+rx)^2\right]\sim\tfrac12,\\
+ H_{02}(c)&=H_{02}(0)+\nu^2S^2dp^2(1+rx)^2c.
+\end{aligned}                                                     \tag{EL20}
+\]
+The first three also follow immediately by evaluating
+$H(a,0)=\alpha(1+a)-\kappa\nu\ell S\lambda_0(1+ra)^2$
+and using EL17; the last follows from the $c^3$ coefficient.
+In particular $H_{11}(0)/(S\ell)$ is bounded and
+$H_{02}(c)/S\sim1/2$.  The $g$ terms cancel in the real residue
+of the third line by EL0a.  This cancellation is why the independent
+ratio $S/\ell$ never enters the estimate.
+
+Write $H_{20}=H_{20}(a,0)+c\widetilde H_{20}$ and
+$H_{11}=H_{11}(0)+c\widetilde H_{11}$, with bounded coefficients.
+Substitution into EL5 gives the exact scalar assembly
+\[
+\begin{aligned}
+ F_0={}&\lambda\Psi+\widehat A\Gamma^2
+                 +\frac{H_{02}(c)}S B^2\\
+ &-2\sqrt S J_a\Gamma R_v-2vJ_c\Gamma B
+       -g\nu\lambda_0r^2R_0^2+\widetilde H_{20}R_v^2\\
+ &+\frac{H_{11}(0)}{S\ell}R_0B\\
+ &+\widetilde H_{11}
+       \left[\frac{c-q}{\nu^2}E_{23}^2
+             +\frac{2\sqrt{\kappa q}}\nu E_{23}B-\kappa B^2\right].
+\end{aligned}                                                     \tag{EL21}
+\]
+This includes every scalar term, including the one involving
+$\lambda_1c^2a$.  It supplies strict real pivots on
+$(E_{12},E_{23},\Gamma,B)$; the two radial rows have arbitrary
+fixed positive pivots available at infinitesimal cost by EL9--11.
+There is no discarded source-dependent signed term.
+
+\subsection{Strict bounded Gram and all-test completion}
+Use the main rows
+\[
+ E_{12},\ E_{23},\ \Gamma,\ B,\ \widehat N=\sqrt{1+\beta}N,
+ \ N_y
+\]
+and the three auxiliary rows $V_h,R_v,R_0$.
+EL21 and EL13--16 express the entire EL0b as a bounded quadratic
+form in these nine rows, together with the retained circuit SOS
+remainder.  The real diagonal of the main block is bounded below
+by $(1/16,1/16,1/2,1/2,1/2,1/2)$.
+Its off-diagonal entries are infinitesimal except for couplings to
+the auxiliary rows.  These are bounded, as are the possibly signed
+auxiliary diagonal entries.
+
+Choose a sufficiently large fixed real positive diagonal on each
+auxiliary row, and purchase it using EL8--11.  This is an exact
+SOS operation: if $Q-R^2$ is a displayed SOS budget, replace the
+quadratic form by its difference with a real multiple of $Q-R^2$
+and retain that multiple as a separate SOS.  EL8 and EL9--10 cost
+only infinitesimal entries on the main rows; EL11 is purchased
+last and costs an infinitesimal entry on $R_v$ as well as on $B$.
+The real auxiliary diagonals can be chosen large enough that the
+real Schur complement is positive definite.  This argument uses
+only a finite real matrix, never a mixed-field matrix inverse.
+The resulting bounded coefficient Gram has strictly positive real
+residue.  The inherited strict separated bounded-Gram lemma in
+\path{parent_reference.tex} makes the complete form a finite
+SOS in $K_c\otimes_{\mathbb R}K_t$.  Restoring the budget and circuit
+remainders proves the original full parent.
+
+There is no restriction on $W,Z$, their ratio, or either normal;
+$\beta$ was never discarded or divided by.  The actual retained
+normal diagonal handles an arbitrarily large $\beta$ before any
+cross-term estimate.  The only inverse involving an arbitrarily
+small opening is the pure-source scaling used to define $N_y$;
+its inverse never appears in a Gram coefficient.  All helper roots
+are products of source and testing factors or finite sums thereof.
+
+The local proof includes $u=0$ and $v=0$, since it never divides
+by either.  Negative $u$ is reduced by
+$(u,Y,Z)\mapsto(-u,-Y,-Z)$ and negative $v$ by
+$(v,X,Z)\mapsto(-v,-X,-Z)$; EL0b is invariant under each map.
+Real and imaginary state parts are handled separately.
+By EL0a both $C,A$ are unbounded, so the surviving adjacent-$C,A$
+proof covers noninfinitesimal Alice tests.  Since $\kappa$ and $e$
+are infinitesimal, the surviving SE10--SE12 theorem covers every
+homogeneous Bob sine-square residue different from $\bar\ell=0$,
+including Bob infinity.  The only remaining Bob chart is exactly
+finite infinitesimal $v$, proved above.  Therefore all projective
+tests and all states on the original $\ell$-infinitesimal source
+intersection are covered.  All original source predicates are
+retained; no numerical sampling or historical completion marker
+is an input to this conclusion.

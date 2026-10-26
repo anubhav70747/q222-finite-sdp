@@ -1,0 +1,262 @@
+ChatGPT said:
+
+Part 1 of 2. I recovered the saved proof from /mnt/data/el_nu_audit/EL_NU_Endpoint_Proof.md. Its mathematical text is reproduced below, through the complete EL/NU local certificates and independent testing joins. No derivation was restarted.
+The original file contains 377 lines and approximately 27,400 characters, so it exceeds your requested single-response limit.
+
+Native C1: the two singular sphere endpoints EL and NU
+Scope and conclusion. Let $K_c,K_t$ be independently labelled real closed extensions of $\mathbb R$, $T=K_c\otimes_{\mathbb R}K_t$, and $\mathcal B=B_c\otimes_{\mathbb R}B_t$ the bounded subring with real residue map. The source is an actual physical native C1 contact with $d=1,\lambda_{\rm event}=n=0$, $m,C,A,\alpha>0$, $D,\beta\ge0$, $D+\beta>0$, every original strict native gap, and infinitesimal $\delta_{\rm tot}$. We prove the complete EL and NU subfamilies, including all independent projective testing pairs and unrestricted real/complex state vectors, using no mixed inverse. We use the native contact/kernel/first-jet equations derived from SD9–SD11, rather than assuming same-field positivity is a tensor certificate. The adjoining sectors, CA/SE, BN/UN and R1/R10 are not part of this statement.
+The complete original finite-chart quarter-parent is
+$\begin{split}
+\mathcal P={F\over4}={}&m(vW-X+uvY-uZ)^2+C D_v(uW-Y)^2+A D_uD_vY^2\\
+&+(D+\tfrac12)(uW+uvX-Y-vZ)^2 +(\alpha+\tfrac12)D_u(vY-Z)^2\\
+&+(\beta+\tfrac12)D_v(X+uZ)^2-\tfrac12D_uD_vZ^2,
+\end{split}\tag{P}$
+$D_u=1+u^2,D_v=1+v^2$. In the Bob-reciprocal coordinate $w=1/v$, the exact homogeneous parent $\mathcal P_w=w^2\mathcal P(u,1/w)$ is
+$\begin{split}
+\mathcal P_w={}&m(W-wX+uY-uwZ)^2+C(1+w^2)(uW-Y)^2+A(1+u^2)(1+w^2)Y^2\\
+&+(D+\tfrac12)(uwW+uX-wY-Z)^2+(\alpha+\tfrac12)(1+u^2)(Y-wZ)^2\\
+&+(\beta+\tfrac12)(1+w^2)(X+uZ)^2-\tfrac12(1+u^2)(1+w^2)Z^2.
+\end{split}\tag{P'}$
+It defines literal $w=0$, rather than requiring a limit. The native source chart has
+$S=\sigma+L\in\operatorname{Inf}_{c,>0},\quad x=\kappa S,\quad
+ \nu=\sigma/S,\quad\ell=L/S,\quad \nu+\ell=1,\quad
+ \theta=1-h,\ e=\kappa h/\nu,\ E=1-e\ge1/18,$
+$0<r,h<1$, $J=1+xh-\nu S(1-r)>0$, $M=1+xr-\kappa\theta/\ell>0$, $Q_s=1-\ell Sr>0$. Set $P_0$ and $U_s$ by
+$P_0=1+S(\nu\ell+2\nu\kappa h+\kappa\ell+\kappa^2h\theta)
+ +S^2(\nu r\kappa\ell+\nu r\kappa^2h),\quad U_s=(1+x)(1+\nu Sr).$
+The following exact original-source identities are used without replacing the event coefficients:
+$\begin{gathered}
+ c_0=SC(1-r)={U_sE\over2P_0},\qquad
+ a_0=SAr={(1+xh)E+(1-r)(\ell S+xh)\over2P_0},\\
+ {D\over S}={U_s-JP_0\over2JSP_0},\quad
+ a_1={\alpha\over S}={(1+\nu Sr)[\ell(1+xr)e+\ell^2ME]\over2Q_sP_0},\\
+ \beta\theta={U_s(\ell+\kappa h)-\theta P_0\over2P_0},\qquad
+ {m\over\kappa^2}={U_sh\over2M\ell\nu P_0}.
+\end{gathered}\tag{S}$
+The apparent $1/S$ pole in $D/S$ cancels polynomially: $U_s-JP_0$ has zero constant term as a polynomial in $S$. The native source's contact has $u_c^2=x,v_c^2=\ell/\nu$, and all four state coordinates and all six state/angle first jets are fixed by SD9–SD11. Only source-field substitutions into these contact equations are made below.
+Structural lemma: finite graded helper allocation
+Let $z$ be a finite column of separated roots, with $z^TQz$ and $Q\in\operatorname{Sym}(\mathcal B)$, $\bar Q\succ0$. Suppose a finite set of auxiliary roots $H_i$ has explicit separated SOS budget identities that provide $H_i^2$ at bounded costs on already purchased helpers and zero-residue bounded costs on the main roots. If the helpers can be ordered so that each budget's noninfinitesimal costs fall only on earlier helpers (or on a main unit pivot multiplied by an infinitesimal factor), then arbitrary finite real positive pivots on all $H_i$ can be acquired without changing $\bar Q$. Consequently any bounded symmetric quadratic error on $(z,H)$ is absorbed: choose helper pivots sufficiently large in reverse Schur-complement order. The remaining real main Schur complement is strictly positive, since the main losses incurred by the budget identities have zero residue. For the explicit finite matrix construction, write each budget as $C_i-H_i^2=\sum_j t_{ij}^2$ and set $Q_{\rm final}=Q_{\rm raw}+\sum_i M_i(E_{H_iH_i}-Q(C_i))$, where $Q(C_i)$ is the symmetric coefficient matrix of the displayed cost on the combined root list. Then $F=z^TQ_{\rm final}z+\sum_{i,j}M_it_{ij}^2$ is an exact polynomial identity. All $M_i$ are chosen as positive finite real numbers from the real residue Schur inequalities. Each budget is an identity of separated squares, not an inequality inferred from an ordering on $T$; no mixed inverse is used. A bounded Gram with $\bar Q\succ0$ is tensor-SOS by the strict-residue lemma, and all reserved budget remainders are restored. This remains valid when a declared root vanishes identically.
+NU: $\nu$ infinitesimal, $\kappa,\ell$ units
+Assume $\nu\in\operatorname{Inf}_{c,>0}$, $\kappa,\ell$ positive bounded units, $\ell=1-\nu$. Set $q=\nu/\ell$, $\zeta=\ell/\kappa$. The exact source sphere
+$D={\sigma^2\mathcal H\over2PJ}\,d_{\rm sph}^2,\qquad
+ \beta={\sigma^2\mathcal H\over2Px\theta}\,b_{\rm sph}^2,
+ \qquad d_{\rm sph}^2+b_{\rm sph}^2=1$
+with $\sigma=\nu S,P=SP_0,x=\kappa S$ yields
+$d_s={D\over Sq^2}={\ell^2\mathcal H\over2P_0J}d_{\rm sph}^2,\quad
+ n_s={\beta\over q^2}={\ell^2\mathcal H\over2\kappa P_0\theta}b_{\rm sph}^2,
+ \quad Jd_s+\kappa\theta n_s={\ell^2\mathcal H\over2P_0}.
+\tag{N1}$
+The denominators are source units, $\mathcal H\sim E^2$, and the right side is a positive unit. Thus $d_s,n_s$ are bounded, nonnegative, and at least one is a positive unit (including either exact zero face). From $e(B/S)=\kappa H_0+\nu\mathcal H b_{\rm sph}^2$, with $B/S\sim1+\kappa$ and $H_0\sim1$, obtain
+$\bar e={\bar\kappa\over1+\bar\kappa},\quad
+ \bar E={1\over1+\bar\kappa},\quad h\in\operatorname{Inf}_c,\quad
+ \bar c_0=\bar a_0=\bar a_1=\bar E/2,
+ \quad 0<\bar\kappa\le1.
+\tag{N2}$
+(The displayed bar equalities are residue statements.) Define $R_s=1+xr$, $p=\kappa\theta/(\ell R_s)\in(0,1)$ and $\mu_c=m(1-p)$. Cancelling $M=R_s(1-p)$ in (S) gives the exact bounded fraction
+$\mu_c={\kappa eU_s\over2\ell P_0R_s},\qquad
+ \bar\mu_c={\bar\kappa^2\over2(1+\bar\kappa)}>0.
+\tag{N3}$
+Choose a real $0<\epsilon<\mu_c$. Put $V=W+uY$, $B_c=w(X+uZ)$. Subtract the actual nonnegative contact-zero packet $(m-\epsilon)(B_c-pV)^2$ from (P'). The exact replacement is
+$m(V-B_c)^2-(m-\epsilon)(B_c-pV)^2
+ =m_0B_c^2-2m_1B_cV+m_2V^2,$
+$m_0=\epsilon,\qquad m_1=\mu_c+\epsilon p,\qquad
+ m_2=\mu_c(1+p)+\epsilon p^2,
+\qquad \bar m_2=\bar\kappa^2(\epsilon+1/2).
+\tag{N4}$
+All are bounded even for unbounded $m$, and the removed square and all its first derivatives vanish at the source contact.
+For arbitrary original state coordinates, put $a=u^2,c=w^2,\delta=c-q$, and define
+$\begin{gathered}
+ X_e=X+ewW,\quad N_y={Y-ruW\over\sqrt{Sr(1-r)}},\quad
+ N=W-\zeta uwZ,\quad G={uW\over\sqrt S}-\ell\sqrt S\,wZ,\\
+ B=\sqrt S\delta Z,\quad B_u=u\delta Z,\quad
+ R=w(a-x)Z={\sqrt S\over\zeta}G-{u\over\zeta}N.
+\end{gathered}\tag{N5}$
+The transformed capped parent is exactly, not only on its graph,
+$\mathcal P_{\rm cap}=F_0+H_xX_e^2+H_yN_y^2+2H_{xy}X_eN_y
+ +2X_eL_x+2N_yL_y.
+\tag{N6}$
+The graph has $F_0=A_NN^2+A_PG^2-2uwZL_1N+HZ^2$, with $A_N,A_P,K,F_Z,J_1,L_1,H$ exactly:
+$\begin{aligned}
+ A_N={}&m_2(1+ra)^2+2m_1ec(1+ra)+m_0e^2c^2
+ +(\beta+\tfrac12)e^2c(1+c)-de[2(1-r)-e]ac,\\
+ A_P={}&(1+c)[c_0(1-r)+a_0r(1+a)]
+ +S[d(1-r)^2c+(\alpha+\tfrac12)(1+a)r^2],\\
+ K={}&m_1(1+ra)+m_0ec+d(1-r-e)+(\alpha+\tfrac12)(1+a)r+(\beta+\tfrac12)e(1+c),\\
+ F_Z={}&D+\alpha c+\beta a+(m_0+\alpha+\beta+\tfrac12)ac,\\
+ J_1={}&K-\ell A_P,\quad L_1=J_1-\zeta A_N,\quad
+ H=F_Z-\ell^2ScA_P+ac(\zeta^2A_N-2\zeta J_1),\quad d=D+\tfrac12.
+\end{aligned}\tag{N7}$
+All polynomial coefficients in (N7) are bounded: $c_0,a_0,m_i,e,\zeta$ are bounded, while $D=S q^2d_s,\beta=q^2n_s,\alpha=Sa_1$. Direct expansion of (P') after (N4),(N5) gives (N6) and (N7), with both unrestricted first normals
+$\begin{aligned}
+ A_x={}&-m_0ec-m_1(1+ra)+da(1-r-e)-e(\beta+\tfrac12)(1+c),\\
+ T_x={}&\zeta cA_x+\beta-D+c(m_0+\beta+\tfrac12),\\
+ Y_P={}&(1+c)[-c_0+a_0(1+a)]
+ +S[m_2(1+ra)+m_1ec-dc(1-r-e)+(\alpha+\tfrac12)(1+a)r],\\
+ Y_Q={}&-m_1a+d-(\alpha+\tfrac12)(1+a),\quad Y_C=\ell Y_P+Y_Q,\\
+ L_x={}&wA_xN+uZT_x,\quad L_y=\sqrt{r(1-r)}(Y_PG+Y_C\sqrt S\,wZ),\\
+ H_x={}&m_0c+da+(\beta+\tfrac12)(1+c),\\
+ H_y={}&rc_0(1+c)+(1-r)a_0(1+a)(1+c)\\
+ &+Sr(1-r)[m_2a+dc+(\alpha+\tfrac12)(1+a)],\\
+ H_{xy}={}&-uw\sqrt{Sr(1-r)}(m_1+d).
+\end{aligned}\tag{N8}$
+Each line is checked directly by differentiating (P') in $(X_e,N_y)$, with no use of state contact to suppress a coefficient.
+Exact contact divisions and the only potentially dangerous quotients. At $(a,c)=(x,q)$ the original contact has $N=G=X_e=N_y=0$. Source-field stationarity of the complete capped parent gives $L_1=H=H_a=H_c=T_x=Y_C=0$ there; the source contact values of $w,W,Z$ are nonzero, so these are genuine vanishing coefficient equations. Since $H(a,0)=D+\beta a$, polynomial division, in $a$ then $c$, yields bounded coefficient arrays
+$\begin{aligned}
+ L_1&=(a-x)L_a+(c-q)L_c,\\
+ H&=H(x,c)+(a-x)H_a(x,c)+c(a-x)^2H_{20},\\
+ H_a(x,c)&=(c-q)[-\beta/q+cH_{11}],\\
+ H(x,c)&=S(c-q)^2[d_s+\kappa n_s+cH_{02}].
+\end{aligned}\tag{N9}$
+The quotient $\beta/q=q n_s$ is bounded. All coefficients of $H(x,c)/S$ are bounded before division: at $a=x=\kappa S$ every monomial in (N7) has an explicit $S$ factor, after using $D=S q^2d_s,\alpha=Sa_1,\beta=q^2n_s$. Thus monic division by $(c-q)^2$ gives bounded $H_{02}$, without dividing a merely bounded error by $S$. The factor $c$ in the last $a$-remainder follows from $H(a,0)$ being affine in $a$. Also
+$T_x=c(a-x)X_a+(c-q)[(D-\beta)/q+cX_c],\quad
+ Y_C=(a-x)Y_a+(c-q)Y_c,$
+where $(D-\beta)/q=Sqd_s-qn_s$ is bounded, and all quotient coefficients are bounded. Direct use of $R$ and the identity
+$c(a-x)(c-q)Z^2=\zeta^{-1}[G(wB)-N(wB_u)]\tag{N10}$
+then produces the entire scalar and both normal conductors:
+$\begin{aligned}
+ F_0={}&A_NN^2+A_PG^2+d_sB^2+n_sB_u^2+H_{02}(wB)^2+H_{20}R^2\\
+ &+(H_{11}-n_s)\zeta^{-1}[G(wB)-N(wB_u)]-2uL_aNR-2L_cN(wB_u),\\
+ L_x={}&wA_xN+uwX_aR+d_s\sqrt S\,q uB-n_sqB_u+wX_c(wB_u),\\
+ L_y={}&\sqrt{r(1-r)}[Y_PG+\sqrt S\,Y_aR+Y_c(wB)].
+\end{aligned}\tag{N11}$
+These are polynomial identities in all original state variables, and do not require independent source and testing angles to be comparable.
+The main six roots $(N,G,X_e,N_y,\sqrt{d_s}B,\sqrt{n_s}B_u)$ have residue diagonal
+$(\bar\kappa^2(\epsilon+1/2),\bar E/2,1/2,\bar E/2,1,1)\succ0.
+\tag{N12}$
+Every main cross coefficient has zero residue: $R=(\sqrt S/\zeta)G-(u/\zeta)N$, $Y_P$ has zero residue by $\bar c_0=\bar a_0$, the $d_s,n_s$ normal terms contain $q$ or $\sqrt S$, and $H_{xy}$ contains $uw\sqrt S$. The only bounded, potentially noninfinitesimal off-diagonals belong to the two helpers $wB,wB_u$.
+The two exact NU budgets are
+$\begin{aligned}
+ \delta^2N^2+2\zeta\delta wGB+2\zeta\ell w^2B^2-\zeta^2(wB_u)^2&=(\delta W)^2,\\
+ \delta^2G^2+2\ell\delta wNB_u+2\ell\zeta w^2B_u^2-\ell^2(wB)^2&=(\delta P)^2,\quad P=uW/\sqrt S.
+\end{aligned}\tag{N13}$
+If $d_s$ is a unit, first purchase a sufficiently large $wB_u$ pivot from the first identity, charging $w^2B^2$ to the unit $d_sB^2$; then purchase $wB$ from the second identity, charging its $w^2B_u^2$ to the already purchased $wB_u$ pivot. Choose the first pivot large enough for this finite cost. The first budget's charge on $B^2$ has an explicit $w^2$ factor and zero residue. If $n_s$ is a unit, reverse the order: obtain $wB$ from the second at infinitesimal cost on $n_sB_u^2$, and $wB_u$ from the first using the acquired $wB$ pivot. Cross costs contain $\delta w$ or $\delta$ and have zero residue. This proves the budget even when the other sphere mass is literally zero; taking both budgets simultaneously without such an order would not justify their cost. Take the helper diagonals large enough to absorb (N11)'s bounded couplings by an ordinary real Schur complement. The resulting eight-root coefficient matrix is bounded with strictly positive real residue. Restore the N13 SOS right sides and $(m-\epsilon)(B_c-pV)^2$. This certifies the original complete NU parent.
+EL: $\ell,\kappa$ infinitesimal, $\nu$ unit
+Assume $S,\ell,\kappa\in\operatorname{Inf}_{c,>0}$, $\nu$ a positive unit and $\zeta=\ell/\kappa$ noninfinitesimal, so $g=\kappa/\ell$ is bounded. The original $\beta\theta\ge0$ relation in (S) gives
+$\theta=O(\ell),\qquad \beta\theta=O(\ell),\qquad
+ e=O(\kappa),\quad h\sim M\sim J\sim E\sim1,\\
+ c_0,a_0\sim1/2,\quad D/S\sim1/2,\quad m=O(\kappa^2/\ell)=O(\kappa),\quad
+ \frac\alpha{S\ell^2}-\frac{1+g}{2}\in\operatorname{Inf}_c.
+\tag{E1}$
+The $D=0$ face is empty here; $\beta=0$ is allowed. Set $q=\ell/\nu$, $b=\sqrt q$, $j=\nu b$, $p=\kappa\theta/(\ell R_s)$, $R_s=1+xr$, $\mu=m(1-p)$. On the double-infinitesimal independent testing chart $u,v\ge0$ put $a=u^2,c=v^2$ and retain both unrestricted normals
+$V=v(W+uY),\quad N=X+uZ-pV,\quad
+ N_y={Y-ruW\over\sqrt{Sr(1-r)}}.
+\tag{E2}$
+Then the original quarter-parent (P) has the exact complete expansion
+$\mathcal P=F_0+H_NN^2+H_yN_y^2+2H_{Ny}NN_y+2NL_N+2N_yL_y,
+\tag{E3}$
+with $P=uW/\sqrt S,Q=\sqrt SZ$ and
+$\begin{gathered}
+ L_0=\mu(1-p)+(\beta+\tfrac12)p^2,\quad L_1=(\beta+\tfrac12)p^2,\quad
+ B_c=1-r+pc(1+ra),\\
+ A_P=(1+c)[c_0(1-r)+a_0r(1+a)]+S[dB_c^2+(\alpha+\tfrac12)(1+a)r^2c],\\
+ K=(1+a)[dB_c+(\alpha+\tfrac12)r],\quad F_Z=(1+a)[\alpha+Dc+dac],\\
+ F_0=c(1+ra)^2(L_0+L_1c)W^2+A_PP^2-2vKPQ+F_ZZ^2.
+\end{gathered}\tag{E4}$
+Set $\lambda_0=qL_0/\kappa^2,\lambda_1=qL_1/\kappa^2$, and $\lambda(a,c)=(\lambda_0+\lambda_1c)(1+ra)^2$. Exact source cancellation of the apparent $1/\ell$ poles gives
+$\lambda_0={U_shM\over2\nu^2P_0R_s^2}+\lambda_1\sim\tfrac12,
+ \qquad
+ \lambda_1={\theta(2\beta\theta+\theta)\over2\ell\nu R_s^2}=O(\ell).
+\tag{E5}$
+In particular $\lambda$ is a sum of separated nonnegative monomial-square multiples, and no square root of a general source/testing sum is needed. The four separated monomial roots
+$A_1=(\kappa/b)vW,\quad A_2=\nu uvZ,\quad
+ A_3=\nu b\sqrt xZ,\quad A_4=\sqrt\kappa P$
+form the exact circuit
+$\Psi=\sum_i A_i^2-4\kappa\nu uvWZ
+ ={\nu\over\ell}c(\kappa W)^2+\nu^2c(uZ)^2+\kappa\nu\ell Q^2+\kappa P^2-4\kappa\nu vPQ.
+\tag{E6}$
+The two paired AM–GM identities show $\Psi-\tfrac14[(A_1-A_2)^2+(A_2-A_3)^2]\in\Sigma T^2$, including $WZ<0$ by its positive signed-product excess. Since $\lambda_0\sim1/2$, $\lambda-1/4$ is separated SOS and the circuit reserves positive real $1/16$ pivots on $E_{12}=A_1-A_2$, $E_{23}=A_2-A_3$.
+With $\Gamma=P-\nu vQ$, $\Lambda=vP-\ell Q$, $\widehat A=A_P-\kappa\lambda$, $\widehat K=K-2\kappa\nu\lambda$, $\widehat F=F_Z-\lambda(\nu^2ac+\kappa\nu\ell S)$, define $J=\widehat K-\nu\widehat A$ and $H=\widehat F+\nu^2Sc\widehat A-2\nu Sc\widehat K$. Direct expansion gives
+$F_0=\lambda\Psi+\widehat A\Gamma^2-2vJ\Gamma Q+HZ^2,\qquad \bar{\widehat A}=1/2.
+\tag{E7}$
+At the native contact $a=x,c=q$ the graph normals, circuit differences and $\Gamma$ vanish. Its zero and first source-field contact jets therefore give $J(x,q)=H(x,q)=H_a(x,q)=H_c(x,q)=0$. These identities yield exact bounded monic divisions
+$J=(a-x)J_a+(c-q)J_c,\qquad
+ H=(a-x)^2H_{20}+(a-x)(c-q)H_{11}+(c-q)^2H_{02}.
+\tag{E8}$
+The potentially delicate quotients can be checked before taking any residue, using $H(a,0)=\alpha(1+a)-\kappa\nu\ell S\lambda_0(1+ra)^2$:
+$\begin{aligned}
+ H_{20}(a,0)&=-\kappa\nu\ell S\lambda_0r^2,\\
+ H_{11}(0)&=-\alpha/q+2\kappa\nu^2S\lambda_0r(1+rx),\\
+ \frac{H_{02}(0)}S&=\nu^2\left[(1+x)\frac\alpha{S\ell^2}
+ -(\kappa/\ell)\nu\lambda_0(1+rx)^2\right]\sim\tfrac12,\\
+ H_{02}(c)&=H_{02}(0)+\nu^2S^2dp^2(1+rx)^2c.
+\end{aligned}\tag{E9}$
+Therefore $H_{11}(0)/(S\ell)$ is bounded (both $\alpha/(S\ell^2)$ and $\kappa/\ell$ are bounded), $H_{02}(c)/S\sim1/2$, and the $c$-remainders $\widetilde H_{20},\widetilde H_{11}$ have bounded source coefficients by ordinary polynomial extraction. No negative power of $S$, $\ell$ or $\beta$ survives in a Gram coefficient.
+To retain every first normal, put $d=D+1/2$,
+$B_0(c)={-\mu+(\beta+1/2)p(1+c)\over\kappa},\quad
+ F_a=r\kappa B_0(c)+d(1-r)+dpc(1+ra),\quad
+ D_t=d(1+a)-\nu S F_a.$
+These have bounded polynomial coefficients: $\mu/\kappa=O(\kappa/\ell)$, $(\beta+1/2)p/\kappa=(\beta\theta+\theta/2)/(\ell R_s)=O(1)$, and all other factors are bounded. Direct derivative of (P), followed by the source-field contact equality $D_t(x,q)=\nu B_0(q)$, gives the entire N row
+$\begin{split}
+ L_N={}&bB_0(c)E_{12}+uv\sqrt S F_a\Gamma-uvD_aR_v\\
+ &+[-D_t(x,q)+\nu bB_{01}(v+b)-v(v+b)D_c]V_h,
+\end{split}\tag{E10}$
+where $D_t-D_t(x,q)=(a-x)D_a+(c-q)D_c$, $B_0(c)-B_0(q)=(c-q)B_{01}$, $V_h=v(v-b)uZ$, $R_v=v(a-x)Z$. The complete second row is
+$L_y=\sqrt{r(1-r)}[Y_P\Gamma+\sqrt S Y_aR_v+vY_cB],\tag{E11}$
+where $Y_P=(1+c)[-c_0+a_0(1+a)]+S\{c(1+ra)(L_0+L_1c)+d(-1+pac)B_c+(\alpha+1/2)(1+a)rc\}$ has zero residue, and $Y_K=\nu Y_P+(1+a)(D-\alpha-dpac)=(a-x)Y_a+(c-q)Y_c$ by the actual contact. Both rows, and no others, are verified by differentiating the full (P) in $(N,N_y)$. Their divided coefficients are bounded by (E1),(E5) and monic division. All coefficients on the main roots are infinitesimal: $b\in\operatorname{Inf}_c$, $u,v,\sqrt S$ are infinitesimal, and $Y_P$ has zero residue; the only possibly bounded couplings are to $V_h,R_v$ and the scalar auxiliary roots.
+The complete hard coefficients are
+$\begin{aligned}
+ H_N&=m+dac+(\beta+\tfrac12)(1+c),\\
+ H_y&=rc_0(1+c)+(1-r)a_0(1+a)(1+c)\\
+ &+Sr(1-r)[d(-1+pac)^2+(\alpha+\tfrac12)(1+a)c+ac(L_0+L_1c)],\\
+ H_{Ny}&=\sqrt{Sr(1-r)}uv[\kappa B_0(c)-d+dpac].
+\end{aligned}\tag{E12}$
+After $\widehat N=\sqrt{1+\beta}\,N$, the first hard diagonal has residue $(\bar\beta+1/2)/(1+\bar\beta)\in[1/2,1]$ when $\beta$ bounded and residue $1$ when $\beta$ unbounded. The $N_y$ diagonal tends to $1/2$, and the cross has zero residue. This is the whole two-normal block, not a scalar restriction.
+Exact radial allocation and final matrix. Set $B=\sqrt S(c-q)Z$, $R_0=\ell\sqrt S(a-x)Z$. Polynomial expansion gives
+$c(a-x)(c-q)Z^2
+ ={c-q\over\nu^2}E_{23}^2+{2\sqrt{\kappa q}\over\nu}E_{23}B-\kappa B^2.
+\tag{E13}$
+All three coefficients on the right have zero residue ($\kappa,q,c$ infinitesimal); this includes the $-\nu^2\lambda_1 ac^2$ term that would be missed by dropping mixed radial degree. From (E7)–(E9) obtain the exact scalar identity
+$\begin{split}
+ F_0={}&\lambda\Psi+\widehat A\Gamma^2+{H_{02}(c)\over S}B^2
+ -2\sqrt S J_a\Gamma R_v-2vJ_c\Gamma B\\
+ &-g\nu\lambda_0r^2R_0^2+\widetilde H_{20}R_v^2
+ +{H_{11}(0)\over S\ell}R_0B\\
+ &+\widetilde H_{11}\left[{c-q\over\nu^2}E_{23}^2
+ +{2\sqrt{\kappa q}\over\nu}E_{23}B-\kappa B^2\right],
+ \quad g=\kappa/\ell.
+\end{split}\tag{E14}$
+The remaining helpers are made freely available, with no mixed inversion, by the following exact SOS budgets. Define $\delta=v-b$, $G_0=P-jQ$, $B_o=\delta Q$, $\eta_*=\kappa(v+b)/j$, and $E_{12}=(v/b)(\kappa W-j uZ)$. Then
+$V_h^2\preceq_{\rm sos}{\delta^2\over\nu^2}E_{12}^2
+ +\eta_*(\Lambda+b\Gamma)^2
+ +{\eta_*+2\kappa\over\nu^2}(\Lambda-v\Gamma)^2.
+\tag{E15}$
+Its remainder is an explicit separated SOS:
+$\begin{split}
+ &(v\delta\kappa W/j)^2+\eta_*[(v+b)^2-v^2](G_0^2+B_o^2)\\
+ &+{\kappa v\over j}[vG_0-vB_o]^2+{\kappa b\over j}[vG_0+vB_o]^2
+ +2\kappa[(v+b)^2-v^2]B_o^2.
+\end{split}$
+All costs on the strict main roots have zero residue, since $\kappa/j=(\kappa/\ell)b$ and $u,v,b$ are infinitesimal; the coefficient $\eta_*$ is a positive sum of separated terms. The further exact identities
+$\begin{gathered}
+ R_v={\kappa v\sqrt S\over\nu b}\Gamma-{u\over\nu}E_{12}+{xv(v-b)\over b}Z,\\
+ {x^2\over qS}B^2-({xv(v-b)\over b}Z)^2={x^2\over q}(2vb+b^2)(v-b)^2Z^2,\\
+ 2\nu^2ScR_v^2+2\nu^2(a-x)^2B^2-R_0^2
+ =[\nu\sqrt S(2c-q)(a-x)Z]^2
+\end{gathered}\tag{E16}$
+provide arbitrary real pivots first on $R_v$ and then $R_0$, at infinitesimal cost on the main rows and already acquired helpers. Indeed $x^2/(qS)=\kappa S(\kappa/q)$ is infinitesimal because $\kappa/q=\nu\kappa/\ell$ is bounded. This is a finite graded allocation, not a claim that pointwise positive polynomials are automatically tensor SOS.
+On the main rows $(E_{12},E_{23},\Gamma,B,\widehat N,N_y)$, (E10)–(E14) and the circuit give a bounded Gram with real diagonal at least
+$(1/16,1/16,1/2,1/2,1/2,1/2),$
+with every off-diagonal residue zero except those involving the auxiliaries $(V_h,R_v,R_0)$. Their couplings and signed diagonals are bounded by (E9)–(E16). Buy sufficiently large finite real auxiliary pivots using (E15)–(E16); the graded lemma gives a strictly positive real nine-row Gram. All subtracted budgets leave exact separated SOS remainders; restore them. This proves the complete EL parent, including arbitrarily large $\beta$, literal $\beta=0$, both original state normals, arbitrary testing/state rates and literal zero axes.
+Independent testing joins and exact remaining dependencies
+For both endpoints, $C,A$ are unbounded because $SC(1-r)$, $SAr$ have unit residues and $S$ is infinitesimal. The exact CE2–CE10 four-state core identity and finite-penalty argument therefore cover every Alice test with noninfinitesimal projective coordinate, including Alice infinity; no bound on a testing state ratio is introduced. Sign gauges $(u,Y,Z)\mapsto(-u,-Y,-Z)$, $(v,X,Z)\mapsto(-v,-X,-Z)$ preserve (P), and imaginary states split from real states because (P) is a real quadratic form.
+For EL, $e\in\operatorname{Inf}_c$, $m\in\operatorname{Inf}_c$, and the original source sphere gives $SC(1-r),SAr\sim1/2$, $D/S\sim1/2$, $\alpha/S-\ell^2/2\in\operatorname{Inf}$. The homogeneous Bob all-state frame EB4–EB7 has exact six-root residue $\operatorname{diag}(1,1,1/2,1/2)$ plus the $2\times2$ block
+$\frac12\begin{pmatrix}1&-\bar s\bar c\\-\bar s\bar c&\bar\nu^2\bar s^2+\bar\ell^2\bar c^2\end{pmatrix},\qquad \det=\frac14(\bar s^2-\bar\ell)^2.$
+Here $(c,s)$ are normalized pure-testing Bob homogeneous coordinates. Since $\bar\ell=0$, every Bob test with $\bar s^2\ne0$ is strictly certified, including infinity. The only remaining Bob residue has $v$ infinitesimal or zero and is exactly the EL local proof. This uses the exact EB4–EB7 full-parent identity, not merely its determinant.
+For NU, $v$ infinitesimal has the exact FU22–FU23 full-state residue
+$m_c(T_v/\kappa-B_0)^2+\tfrac12B_0^2+\tfrac12U_v^2
+ +\tfrac E2(P^2+N_y^2)+a_1Q^2\succ0$
+for any small positive real $m_c\le m$. For a finite nonzero Bob residue, the full FU8–FU9 six-row capped parent has $N_y$ pivot $ED_v/2$ and the other real Schur determinant polynomial $\mathcal P(y,c)$ in FU14–FU15. Since $\nu=0$ in residue, $d_0=\beta=0,a_1=E/2$, and, for $0<\bar\kappa<1$, $\bar m=\kappa^2/[2(1-\kappa^2)]$, its exact factorization is
+$\mathcal P(y,c)=E(m+1/2)c(y-\kappa)^2+(m+1/2)E^2y>0
+ \quad(y,c>0).$
+This supplies the strictly positive two-block Gram via the real zero gauge $TU-\kappa PQ=0$. If $\bar\kappa=1$, $m$ is unbounded and $\mathcal P/m\to\tfrac12c(y-1)^2+\tfrac14y>0$: choose a finite cap after fixing the real testing residue, retain the full positive excess, and apply the same strictness calculation. Finally Bob infinity is precisely the NU local reciprocal chart $w=0$. All joining identities are homogeneous, so no infinity endpoint requires cancellation of a zero coordinate.
+
+Precisely what remains in Part 2: the final 21 lines of the saved proof, comprising the paragraph specifying all external dependencies (SD9–SD11, SE2–SE3, CE2–CE10, EB4–EB7, FU8–FU9 and FU14–FU15), the reproducibility record for the symbolic checkers, and the independent complete-parent checks of the complementary CE, EB and FU identities.
+This first part reproduces the saved claims without a fresh mathematical audit. The saved proof reports no unfinished EL/NU-local identity; the listed external dependencies remain explicit proof inputs. The authoritative FM17/UKR10 already contains the correct plus sign, and no source edit is indicated.
+
+
+
+
+
+
+
+

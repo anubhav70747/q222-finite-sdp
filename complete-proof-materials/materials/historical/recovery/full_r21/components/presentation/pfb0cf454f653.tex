@@ -1,0 +1,252 @@
+\chapter{Positive total scale: the recovered finite-pitchfork fit}
+\label{component:pfb0cf454f653}
+\noindent\textbf{Component }\path{pfb0cf454f653}\par
+{\small\noindent Source: \path{BASE/proofs/routing/a5_recovery/finite_pitchfork_body.tex}\par}
+{\small\noindent SHA256: \path{fb0cf454f653dfc2e569f0e07e24f832993b1ba3ca28dac452f7dedb31eb19e7}\par}
+{\small\noindent Inventory use: S complete strong/finite-edge fit and every projective corner; its A6 call is replaced by AU2-AU5\par}
+\medskip
+\section{Positive total scale: the recovered finite-pitchfork fit}
+
+The September archive contains an explicit full-parent theorem for a
+finite nonzero commuting edge, even though it does not contain the later
+A5 terminal files under their recorded names. Its source hypotheses are
+automatic on the ordinary and finite-pitchfork branch with
+$d,C,A,D,\alpha$ units. This note proves that exact implication and
+supplies explicit full-parent projective boundary forms. Thus that
+subbundle of A5 is now mathematically audited. Weak-$\alpha$,
+projective-pitchfork, and reciprocal terminal branches remain separate
+obligations; there is no whole-A5 admission.
+
+\begin{theorem}
+Let the original normalized C1 or C2 source be bounded, nonnegative and
+physical over a real closed coefficient extension of $\mathbb R$.
+Assume $d,C,A,D,\alpha$ are positive bounded units. Retain its exact
+canonical zero coefficients, in particular $\lambda=0$, and every
+other nonnegative original coefficient $n,m,\beta$. Then its entire
+parent is tensor-SOS at every independent projective testing pair and
+every real or complex testing state.
+\end{theorem}
+
+The proof uses the admitted separated strict-Gram lemma, the freshly
+audited noncommuting-residue theorem A6, and the preserved finite-edge
+critical-center theorem whose proof is reviewed below. All source and
+testing rates remain independent.
+
+\section{Exact source fit of the recovered finite-edge theorem}
+
+The archived notation is
+$(d,\lambda,e_1,e_2,e_3,e_4,e_5,\alpha,\beta)
+=(d,\lambda,n,m,C,A,D,\alpha,\beta)$.
+The theorem requires $\lambda=0$ exactly, $\bar d>0$, $\bar m=0$,
+a finite real $v_0\ne0$, and positivity conditions on the residue
+determinant at $u=0$. Bars denote real residues in this section.
+Its test state is the $W$ ray. It permits arbitrary independent
+nonnegative opening rates of all the original coefficients.
+
+At $\lambda=m=0$, the exact determinant polynomial is
+\[
+ Q(U,V)=U E(V)+U^2 B(V),\quad
+ E(V)=q_{10}+q_{11}V+q_{12}V^2,\quad
+ B(V)=q_{20}+q_{21}V+q_{22}V^2.
+\]
+Use the inherited positive quantities
+\begin{align*}
+ t_1&=d+2(n+D),&t_2&=d+2(\alpha+m+A),\\
+ t_3&=d+2(C+D),&t_4&=d+2(\alpha+\beta+m),\\
+ t_5&=d+2(\beta+n),&t_6&=d+2(\alpha+C+A),\\
+ t_7&=d+2(\beta+n+m),&t_8&=d+2(C+A+D).
+\end{align*}
+All eight have positive bounded-unit residues. At the residue $m=0$,
+the required coefficients are
+\[
+ q_{10}=4\alpha A t_7t_3>0,\quad
+ q_{12}=4CDt_5t_2>0,\quad
+ q_{21}=4(\beta n t_3t_2+CA t_1t_4)>0,
+\]
+and $q_{20},q_{22}\geq0$. Therefore $B(v_0^2)>0$ for every
+$v_0\ne0$. Physicality implies $E(V)\geq0$ for all real $V>0$:
+divide $Q(U,V)\geq0$ by $U>0$ and let the real variable $U$ tend to
+zero. Consequently a zero $E(v_0^2)=0$ is a double zero,
+$E(V)=q_{12}(V-v_0^2)^2$, and otherwise $E(v_0^2)>0$.
+
+After normalizing the tested event
+$r_2=vW-X+uvY-uZ$ to one, the residue state complement on
+$(X,Y,Z)$ is
+\[
+ M_0(v)=\begin{pmatrix}
+ 2(d+2n+2\beta)(1+v^2)&0&0\\
+ 0&2d(1+v^2)+4(C+A)(1+v^2)+4D+4\alpha v^2
+                                      &4v(D-\alpha)\\
+ 0&4v(D-\alpha)&4\alpha+4Dv^2
+ \end{pmatrix}.
+\]
+Its lower-block determinant is positive because, after a positive factor
+is removed, it is
+\[
+ \alpha d+2\alpha C+2\alpha A+2\alpha D(1+v^2)
+                      +Dv^2(d+2C+2A)>0.
+\]
+Thus the specified state complement is positive definite. Every
+hypothesis of the recovered finite-edge theorem is now verified
+directly from the original A5 source, including arbitrary $n,\beta\geq0$.
+
+\paragraph{What the recovered proof actually establishes.}
+Its exact pure-testing normalization is
+$W=(1+X-uvY+uZ)/v$, leaving the entire opened $m$ packet as $4m$.
+The formal coefficient-side substitution
+$X=u^2x,Y=ua,Z=ub,U=u^2$ gives the full identity
+\[
+ F=4m+u^2K(x,a,b,v,U),\qquad K_x=U E_x,
+\]
+with $\partial_xE_x|_{U=0}=4(d+2n+2\beta)(1+v^2)>0$.
+The actual independent testing coordinates are never divided by $u$.
+The minimized residue profile is a positive multiple of $E(v^2)$;
+the full $(a,b,v)$ Hessian is strict at a double zero. Its next
+coefficient is
+\[
+ \gamma=\frac{16(1+v_0^2)^2 B(v_0^2)}{v_0^2\det M_0(v_0)}>0.
+\]
+This is a real residue determinant/Schur calculation, not a mixed
+inverse in the tensor ring.
+
+The coefficient-field implicit-function equations are
+$(E_x,K_a,K_b,K_v)=0$. With $\kappa$ the optimized value at $U=0$,
+use $U_c=0$ if $\kappa\geq0$; if $\kappa<0$, also impose
+$K+UK_U=0$. The added pivot is $2\gamma>0$ and produces $U_c>0$.
+The remaining scalar $\mu=4m+U_cK_c$ is nonnegative by original
+physicality at an actual coefficient-field realization.
+
+The full normal expansion uses
+\[
+ N_x=X-u^2x_c,\quad N_y=Y-ua_c,\quad N_z=Z-ub_c,
+ \quad N_v=u(v-v_c),\quad R=u^2-U_c.
+\]
+Every first state-normal coefficient is printed in the recovered proof:
+$u^2E_x,uK_a,uK_b$. Monic division at the coefficient center expresses
+them in the five roots above, with an extra $u$ or $u^2$ on every
+coupling to $R$. The complete state remainder is exactly quadratic.
+The residue Gram consists of the positive state-$X$ mass, the positive
+$(a,b,v)$ Hessian, and the pivot $\gamma$; all couplings to $R$ vanish
+in residue. If $\kappa\geq0$, replace $R$ by $u^2$ and retain
+$4m+\kappa u^2$. Otherwise retain $\mu$. Both branches restore the
+original event normalization. This is a full-parent certificate.
+When $E(v_0^2)>0$ the four ordinary normals $(X,Y,Z,u)$ already
+have strict residue, and the same whole $4m$ packet is retained.
+
+The complete proof is the recovered
+\path{POSITIVE_D_FINITE_EDGE_TERMINAL.md}; its exact full-parent
+checker was freshly replayed: 15 identities, 30 scalar entries pass.
+Its local conclusion is used only on the finite nonzero edge stated
+above. The next section supplies the previously excluded endpoints.
+
+\section{Explicit all-projective dispatch}
+
+Noncommuting residue tests use A6. It remains that at least one angle
+has residue zero or infinity. For finite $u_0\ne0$ and $v_0=0$,
+the real residue parent is a sum of nonnegative event terms and the
+core $2d[(uW-Y)^2+(X+uZ)^2]$. The unit $A,\alpha,C$ terms
+force $Y=Z=W=0$, and the core then forces $X=0$.
+Hence the residue state matrix is positive definite.
+
+For $u_0=0$ and finite $v_0\ne0$, the unit $C,A,D,\alpha$ terms
+and $d>0$ leave only the $W$ ray if $m$ is weak, while unit $m$
+removes that ray too. In the weak case, positive residue slack is
+immediate; at the $W$ ray, the previous section applies for either
+$E(v_0^2)>0$ or $E(v_0^2)=0$.
+
+For $u=\infty$ and finite nonzero $v$, set $p=1/u$ and homogenize
+as $F_p=p^2F(1/p,v)$. Its real residue has core
+\[
+ 2d[(W+vX)^2+(vY-Z)^2]
+\]
+and positive $4C(1+v^2)W^2+4A(1+v^2)Y^2$ packets. These
+force every state coordinate to vanish at a zero, so the matrix is
+positive definite. For $v=\infty$ and finite nonzero $u$, the
+homogenized residue has core $2d(1+u^2)(X^2+Y^2)$ together with
+$4C(uW-Y)^2+4D(uX-Z)^2$. Again it is positive definite.
+These are exact residue identities and use no density argument.
+
+It remains to cover the four double corners. The following displayed
+quadratic forms are complete, with coefficient letters interpreted in
+real residue. All coefficients that are merely nonnegative remain so.
+At a unit state coordinate, normalize it in the testing field.
+
+At $(u,v)=(0,0)$ the only possible zero state is the $W$ ray.
+Put $W=1$ and retain the entire $m$ packet. The remainder lies
+exactly in $(u,X,Y,Z)^2$, and its residue quadratic is
+\[
+ 2(d+2n+2\beta)X^2+(4C+4D+2d)(u-Y)^2+4AY^2+4\alpha Z^2.
+\]
+It is strict. The testing $v$ is bounded infinitesimal in its
+coefficients and is never divided out.
+
+At $(u,v)=(\infty,0)$ the only possible zero state is the $X$ ray
+when $n$ is weak; if $n$ is a unit there is no zero. Put $X=1$,
+retain the entire $n$ packet in $F_p$, and use roots $(p,v,W,Y,Z)$.
+The whole remainder belongs to their square ideal and its residue is
+\[
+ 4CW^2+4AY^2+(4D+2d)(W+v)^2
+                 +4\alpha Z^2+[4(m+\beta)+2d](p+Z)^2\succ0.
+\]
+
+At $(u,v)=(0,\infty)$ the only possible zero state is the $W$ ray
+when $m$ is weak. Put $q=1/v$, $W=1$, and retain the entire $m$
+packet in $F_q=q^2F(u,1/q)$. The whole remainder is in
+$(u,X,Y,Z)^2$ and its residue quadratic is
+\[
+ (4n+4\beta+2d)X^2+4C(u-Y)^2+[4(A+\alpha)+2d]Y^2+4DZ^2\succ0.
+\]
+The testing $q$ remains a bounded infinitesimal coefficient.
+
+At $(u,v)=(\infty,\infty)$ the only possible zero state is the $Z$
+ray when $\beta$ is weak. Put $Z=1$ and retain the entire $\beta$
+packet in $F_{pq}=p^2q^2F(1/p,1/q)$. The complete remainder lies
+in $(p,q,W,X,Y)^2$ and its residue quadratic is
+\[
+ 4CW^2+4AY^2+4D(X-p)^2+(2d+4n)X^2
+                            +[2d+4(m+\alpha)](Y-q)^2\succ0.
+\]
+
+For each corner, allocate two normal factors from every monomial to
+the Gram roots; every remaining factor is bounded. Terms above
+quadratic order have infinitesimal coefficients. The displayed full
+quadratic residues are strict, so the separated strict-Gram lemma
+applies. Restore each retained packet. Homogeneous angle factors and
+state normalizations are pure testing squares. The identities include
+literal zero and infinity and every original nonnegative opening rate.
+For nonzero state residues away from the listed rays, positivity gives
+the scalar strict-residue exit. The zero state is immediate and complex
+states split into real and imaginary evaluations. This proves the theorem.
+
+\section*{Scope, checks, and the remaining A5 imports}
+
+The new checker \path{check_finite_pitchfork_fit.py} verifies 11 exact
+identities: four full-remainder square-ideal memberships, their four
+complete quadratic forms, and the three finite/infinite edge identities.
+The recovered finite-edge checker separately verifies the exact
+normalized full parent, all first state normals, and complete hard tail.
+The general signs are proved above and in the recovered critical-center
+argument; the checker is corroboration rather than a positivity premise.
+
+This proves the ordinary and finite-pitchfork subbundle with
+$d,C,A,D,\alpha$ units. In the C2 partition its source-reflection
+image covers the single weak-$D$ branch. In the C1 ordinary branch a
+unit $\beta$ may be exchanged with $D$ by the exact stabilizer when
+$m,C,A,\alpha$ are units. These are the previously audited exact
+full-parent symmetry transports, with their literal zeros retained.
+
+The remaining A5 imports include the weak-$\alpha$ all-tests terminals and
+their stabilizer images, the C1 projective pitchfork with $D,\beta$
+weak, and the reciprocal source branches with $m,D$ weak. None satisfies
+the required unit-$D$ premise by mere approximation. A separate note
+\path{weak_alpha_unit_n_fit.tex} verifies the finite-ratio corner's
+positive-endpoint and simple-complement hypotheses only on the C2
+subdomain where $d,n,m,C,A,D$ are all units and $\alpha$ is weak.
+It does not supply the rest of weak-$\alpha$.
+The strict-$\alpha$-mass theorem requires $C,A\gg d$, which is
+incompatible with bounded normalized coefficients and unit $d$.
+
+Exact archive identity, selected member hashes, fresh replay receipts,
+and the scoped G1--G9 review are recorded in the adjacent recovery
+manifest and \path{RECOVERY_AND_FIT.txt}. The newer R19 frontier
+continues to override old global-status assertions.

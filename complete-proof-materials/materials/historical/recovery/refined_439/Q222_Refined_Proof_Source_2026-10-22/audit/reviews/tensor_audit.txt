@@ -1,0 +1,74 @@
+FOUNDATIONAL TENSOR AUDIT -- 22 October 2026
+
+Verdict: the assigned foundational lemmas and the final external-criterion
+implication are valid under their explicit hypotheses. No foundational
+counterexample to the October qualitative route was found. This is not
+a certification of the C1/C2 local identities or exhaustive routing.
+
+Files inspected:
+- component p25af2c58da7e, source strict_gram.tex, SHA256
+  25af2c58da7e1b0dc18b12c88178f434de24a96664d2dc036f312e919628bd1e.
+- reconstruction/restored_context/routing/
+  fresh_physical_normalization_conditional_assembly.tex.
+- rederivation_2026-10-22/publication/opening_assembly.tex.
+- primary external paper https://arxiv.org/pdf/2004.04196v2,
+  Sections 3.2/3.3, Proposition 3.5, Theorem 3.10, Corollary 3.19.
+
+Verified by direct derivation, with no PASS receipt used as a premise:
+1. Standard-part maps exist for bounded elements of any ordered real
+   closed extension of the full real field. Dedekind completeness of R
+   is used. This must not be silently generalized to an arbitrary base
+   real closed subfield.
+2. Bc tensor_R Bt embeds into Kc tensor_R Kt by exactness of tensoring
+   vector spaces. The residue kernel is mc tensor Bt + Bc tensor mt.
+   Algebraic disjointness of the two fields is unnecessary.
+3. A strictly positive real residue has an exact finite positive-pure-
+   tensor decomposition. Each summand has an elementary tensor square
+   root, so the scalar positive-residue lemma is stronger than ordinary
+   finite SOS and does not involve a mixed radical.
+4. Real congruence plus the printed diagonal-dominance decomposition
+   proves strict bounded Gram. Its roots may be unbounded and dependent.
+   The Gram coefficients themselves must belong to Bc tensor Bt and
+   its real residue must be positive definite, not merely semidefinite.
+5. Strictly positive pure-source/pure-testing factors cancel legally by
+   their pure-field inverse square roots. Literal zeros and general
+   mixed factors are not covered by this statement.
+6. PSD matrix trace pairing and finite conic/convex closure are exact
+   tensor identities. Zero convex/conic weights need no inversions.
+7. The definition of the valid-affine cone transfers exactly by its
+   first-order formula. No non-Archimedean topological compactness is
+   invoked by this step.
+8. Cor3.19 is correctly applied in arbitrary dimension. The coefficient-
+   first convention is carried to the paper's point-first convention by
+   the factor flip. The opening explicitly allows two labelled copies
+   of one K, which is the case required by the criterion.
+9. Unrestricted finite tensor SOS for all K/f/q suffices for qualitative
+   existence; no pre-existing common rank or square-count bound is
+   required. A bound d via Theorem3.10 would require a common tensor-
+   rank bound on each root. Numerical local square counts alone do not
+   supply it.
+
+Decisive boundary example (not a Bell-slack counterexample):
+K=real closure of R(tau), tau positive infinitesimal.
+Delta=tau tensor 1 - 1 tensor tau has residue0 and diagonal value0.
+The automorphism tau -> 2tau extends to K, and the tensor homomorphism
+x tensor y -> x sigma(y) maps Delta to -tau. Hence Delta is not SOS.
+Therefore positive semidefinite residue or nonnegative diagonal testing
+cannot replace strict residue or a genuine separated tensor identity.
+
+Minimal-exposition recommendation:
+Fix one arbitrary real closed extension K/R and use two labelled copies
+in K tensor_R K from the beginning. This removes an unnecessary stronger
+quantifier without identifying any source/testing rates. State TF1--TF5
+as the entire algebraic foundation, then isolate all substantive local
+work in one exact full-parent certificate theorem and one exhaustion
+theorem. Neither should be declared proved solely from these lemmas.
+
+Deliverable tensor_audit.tex contains complete pen-and-paper proofs of
+the foundation, an exact statement of the external implication, and
+the strictness counterexample. It is a LaTeX fragment for incorporation.
+
+Public-source web references obtained during this audit:
+turn1view0 (opened complete v2 paper), turn2view0 (Cor3.19),
+turn2view1 (Thm3.10), turn3view0/turn3view1 (Section3.2/Prop3.5),
+turn3view2 (Cor3.19). Root should reopen primary ref before citing.

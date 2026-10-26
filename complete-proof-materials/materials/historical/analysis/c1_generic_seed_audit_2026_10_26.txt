@@ -1,0 +1,106 @@
+C1 GENERIC SEVEN-ROOT OBSTRUCTION: SEED AUDIT
+26 October 2026; private exact check, no public modifications
+
+Verdict. The recovered seed, kernel and determinant 7360/243 are correct.
+They prove an open dense strict-C1 parameter-set exclusion, with the
+specific denominator/rank-chart qualifications below. They do not classify
+the exceptional parameter set or prove exclusion at every C1 source.
+
+1. Exact native source and validity.
+
+In full canonical order (d,lambda,n,m,C,A,D,alpha,beta), the source is
+ (27/2,0,0,4,2,9,5/4,13/4,9/4).
+Its own contact is (u,v)=(1,1), psi=(1,-1/2,1/4,1).
+This is the existing EN9 seed in latex/chapters/05_entry.tex.
+Independent NC1--NC4 substitution gives
+ k=S=v_c=1, r=1/4, theta=1/2, eta=zeta=1,
+ a=3/4,t=1/2, E=1/2,Q=M=J=3/4,
+ B5=25/32, Bbeta=15/16.
+All strict native gaps and all six retained event weights are positive.
+The four physical state-kernel equations and both scalar angular jets
+vanish exactly, reconstructed from Pauli operators/event projectors.
+
+There is also a short direct global certificate, independent of an
+unproved C1 uniform-Gram assertion. Set U=u^2,V=v^2. The full raw
+four-state parent satisfies
+ det P=16(1+u^2)^2(1+v^2)^2 u^2v^2 L(U,V),
+ L/72=494/U+210 V/U+845/V+451 V+520 U+184 UV-2704.
+The six integer coefficients sum to 2704; their U- and V-exponent
+weighted sums are both zero. AM--GM on 2704 repeated positive terms
+therefore gives L>=0 for all U,V>0. The checker verifies this entire
+determinant identity directly, not just the coefficient balance.
+The positive three-state core in SG3 makes det P>=0 imply P>=0 for
+uv!=0. Continuity covers axes and separate projective endpoints
+(at the origin P=diag(0,52,76,13)). This proves full quantum validity
+by the usual two-observable reduction, for arbitrary independent tests.
+
+2. Kernel and six universal coefficient equations.
+
+Use the public C1 roots, in order,
+ (A0-I,A1B0-I,A1B1-I,B0-A1,B1-A1,A0B0-A1,A0B1-A1).
+The two deterministic zeros (1,1,1,1) and (1,-1,-1,-1) force any
+1+AB SOS root into their seven-dimensional span. The contact action
+T has rank four; the first-four-column determinant is 27/32. The supplied
+ N=[[1,5/3,2],[-7/4,-4/3,-17/4],[-5/3,-16/9,-5],
+    [-3/4,-7/3,-13/4],[1,0,0],[0,1,0],[0,0,1]]
+satisfies TN=0 and has independent columns. A PSD seven-root Gram
+must consequently be Q=N S N^T with S symmetric PSD. Complex Grams
+do not evade this argument: taking real parts preserves real word
+coefficients and PSD, so a real symmetric Gram suffices if any exists.
+
+The checker uses the public c1_npa_separator.py reduction helpers,
+loading only their definitions and fixed root list, without executing
+the public script's writer. It reduces words using only within-party
+reflection cancellation and cross-party commutation. For forbidden
+words (B0B1,A0B0B1,A0A1,A0A1B0,A0A1B0B1,A0A1B1), and S-coordinate
+order (S11,S22,S33,S12,S13,S23), the literal coefficient matrix is
+ [[13/6,64/27,85/4,3,151/12,137/9],
+  [0,0,-13/4,1,-3/4,-7/3],
+  [-1/4,8/9,-1/2,-5/6,1/12,7/18],
+  [-7/4,-8/9,-17/2,-9/2,-31/4,-15/2],
+  [0,-16/9,0,-5/3,0,-5],
+  [-5/3,-80/27,-31/4,-41/9,-103/12,-95/9]].
+Its determinant is exactly 7360/243. Thus all six forbidden coefficients
+vanish only if S=0, making Q=0 and contradicting this nonzero slack.
+No qubit-specific word relation is used to match universal coefficients.
+
+3. Precisely justified generic extension.
+
+Choose five independent strict native contact coordinates
+ p=(k,ell,S,r,theta),
+ psi_c=(S,k(theta-1),kSr,1), (u_c,v_c)=(k,ell).
+Here eta=ell/(kS), zeta=S ell/k, and NC1--NC4 give rational source
+coefficients. The strict parameter domain imposes positivity of these
+coordinates, 0<r,theta<1, all native gaps, and D,beta>0. It is an open
+five-dimensional semialgebraic domain before the optional k<=1 orientation.
+
+Let T(p) be the seven-root contact action and multiply it by
+(1+k^2)(1+ell^2) to obtain a polynomial matrix T_hat(p). Set
+ Delta(p)=det(T_hat[:,1:4]) and, on Delta!=0,
+ N(p)=[-T_hat[:,1:4]^{-1} T_hat[:,5:7]; I3].
+The same universal six-word prescription gives a rational matrix M(p),
+whose entries have denominators dividing Delta^2. Hence
+ H(p)=Delta(p)^12 det M(p)
+is a polynomial. At the seed, Delta=216 and det M=7360/243, so neither
+Delta nor H is the zero polynomial. Their common nonvanishing set is
+open and dense in EVERY nonempty open component of the strict parameter
+domain. At every such point the rank-four compression and invertible
+six-word system prove nonmembership in 1+AB.
+
+This rational-polynomial argument does not require an uncomputed
+generic five-parameter determinant or an appeal to connectedness of an
+analytic graph. If k<=1 is enforced, k<1 is the open interior; the seed
+at k=1 has strictly positive other gaps and can be approached from
+k<1. The same conclusion is relatively dense in the oriented chart.
+
+Scope of “generic”: open dense in the strict five-dimensional native
+CONTACT PARAMETER domain (and consequently dense in its continuous
+source image), not an open subset of the ambient nine source coordinates.
+No statement is established on the selected exceptional algebraic sets
+Delta=0 or H=0, on literal D=0/beta=0 parameter faces, or on degenerating
+contacts. Other pivots/equations might exclude such points, but were not
+examined. A vanishing selected determinant is not an admission certificate.
+
+Frozen artifacts: c1_generic_seed_audit_2026_10_26.py and matching JSON.
+Replay uses SymPy plus the existing public reduction helpers; about
+1.3 seconds, no solver, parameter sweep, or public write.

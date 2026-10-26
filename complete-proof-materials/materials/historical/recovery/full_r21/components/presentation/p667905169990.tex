@@ -1,0 +1,166 @@
+\chapter{Reconstructed R2 source entry and full two-packet extraction}
+\label{component:p667905169990}
+\noindent\textbf{Component }\path{p667905169990}\par
+{\small\noindent Source: \path{REC/weak_c2/r2_source_entry_reconstructed.tex}\par}
+{\small\noindent SHA256: \path{6679051699909c37d8a3ec490c67de5b13db3076535d9ea4e35f4ad9c917db8f}\par}
+{\small\noindent Inventory use: RER1-RER8 | Actual original R2 source, all openings, unchanged coefficient formulas and RER1-7 bounds\par}
+\medskip
+% Fresh transcription and proof from retained RE1--RE8 mathematics.
+% No original-byte identity is claimed.
+\section{Reconstructed R2 source entry and full two-packet extraction}
+\label{p667905169990:sec:r2-reconstructed-source-entry}
+
+\paragraph{Provenance and scope.}
+This is a fresh mathematical reconstruction of the retained RE1--RE8
+source-entry formulas.  The original late-R21 file is absent.  The
+identities are checked again against the unchanged native source
+formulas, and the boundedness proof is given in full.  This lemma is
+structural: it supplies neither a scalar contact conductor nor an
+all-testing R2 certificate.  In particular, restoring this lemma does
+not restore the missing thin-source, normal, or outer-chart proofs.
+
+Use the original weak-C2 native source $(a,B,t,r,h)$, with
+$0<r,h<1$, $a,B,t>0$, the original strict source gaps, and $n\geq0$.
+In R2, $t$ is positive unbounded while
+\[
+ B,\qquad z=aB,\qquad y=tB
+\]
+are positive infinitesimals.  There is no bound on $a$ and no lower
+bound on $r$, $h$, $1-h$, or $e=1-r$.  Put $l=1-h$ and $S=1/t$.
+Define the actual native arrays
+\[
+ c=1+zr,\quad s_c=1+B(l+ar),\quad
+ R=1+hz,\quad g=R-ae>0,\quad j_D=c-l/t>0,
+\]
+\begin{align*}
+ \Delta={}&a+(1+z)+(1+z)B+2z(1+z)r
+          +a^3B^2r^2+2a^2Br\\
+          &+tB\{1+a+z+a^2Br(2-r)\},\\
+ M={}&(1+z)(1+ar)(h+t)-a(1+y)e\,l.
+\end{align*}
+The six weights used throughout this section are exactly
+\[
+\begin{aligned}
+ n&=\frac{(1+ar)c s_c-r\Delta}{2r\Delta},&
+ m&=\frac{a^2(1+y)e c s_c}{2g\Delta},\\
+ C&=\frac{cM}{2l\Delta},&
+ A&=\frac{tc(1+ar)s_c}{2h\Delta},\\
+ D&=\frac{(1+z)(1+ar)(1-atBr)s_c}{2t j_D\Delta},&
+ \alpha&=\frac{B^2(1+ar)M}{2(1-hB)\Delta}.
+\end{aligned}                                                     \tag{RER1}
+\]
+All denominators are pure source.  The original positivity assumptions
+are retained without adding a rate comparison.
+
+\paragraph{Physicality controls the apparently unbounded source scale.}
+The exact numerator identity is
+\[
+ (1+ar)(1+zr)\{1+B(l+ar)\}-r\Delta=eQ-BK,                \tag{RER2}
+\]
+where
+\[
+ K=(a+1)(h+t)(1+z),
+\]
+\[
+ Q=1+B+y+z(h+t+2r)
+       +z^2\{t(1+er)+h(1+r)\}+Bz(h+t).                 \tag{RER3}
+\]
+Every term of $Q$ is nonnegative.  Since $r\Delta>0$, original
+physicality is exactly $eQ\geq BK$, including equality when $n=0$.
+Put $\kappa=ay=tz$.  Before assuming that $\kappa$ is bounded, direct
+termwise inspection of (RER3), using $B,y,z$ infinitesimal, gives
+$Q\leq C_0(1+\kappa)$ for a fixed positive real $C_0$.
+The strict gap $g>0$ gives $ae<R\sim1$, so multiplication of the
+physicality inequality by $a$ yields
+\[
+ \kappa(a+1)(1+hS)(1+z)\leq aeQ<RQ
+                                      \leq C_1(1+\kappa)           \tag{RER4}
+\]
+for a fixed positive real $C_1$.
+
+If $a$ is bounded, $\kappa=ay$ is infinitesimal.  If $a$ is unbounded,
+move $C_1\kappa$ to the left in (RER4).  Since
+$a+1-C_1\geq(a+1)/2$, one obtains
+$\kappa\leq2C_1/(a+1)$, again infinitesimal.  In either case,
+(RER4) also bounds $(a+1)\kappa$.  Returning to (RER3) and then to
+$eQ\geq BK$ proves
+\[
+ ay\in\mathrm I,\qquad a(a+1)y=O(1),\qquad Q\sim1,
+ \qquad \frac{(a+1)y}{e}=O(1).                         \tag{RER5}
+\]
+No division by $n$ occurred; the argument includes the face $n=0$.
+
+\paragraph{Uniform source normalizations.}
+Put
+\[
+ k=\frac{1+ar}{1+a},\qquad p=\frac{ae}{R}\in(0,1),
+ \qquad \mu=m(1-p)=\frac{mg}{R},\qquad\delta_n=nr.
+\]
+The quantity $k$ is a positive bounded unit.  Indeed $k\leq1$; if
+$a\leq1$, then $k\geq1/(1+a)\geq1/2$.  If $a>1$, use
+$ae<R=1+hz$ to get $k>(a-hz)/(1+a)$, which has a positive real lower
+bound.  Direct termwise division of the displayed polynomial
+$\Delta$ by $1+a$ gives $\Delta/(1+a)\sim1$.  Also
+\[
+ \frac{M}{t(1+ar)}\sim1:
+\]
+the first term has ratio $(1+z)(1+hS)\sim1$, while the absolute
+ratio of the second is at most $R(1+y)S/(1+ar)$ and hence is
+infinitesimal.  Since $c,s_c,j_D,1-hB\sim1$, (RER1) now gives
+\[
+ \frac{SC\,l}{k}\sim\frac12,\quad
+ \frac{SA\,h}{k}\sim\frac12,\quad
+ \frac{D}{Sk}\sim\frac12,\quad
+ \frac{\alpha}{Sy^2(1+a)k^2}\sim\frac12.               \tag{RER6}
+\]
+For the $D$ relation use $atB=ay=\kappa\in\mathrm I$ from
+(RER5).  Thus all original $h$ and $l$ openings are present.
+
+Two exact bounded products remove the remaining nonuniform source
+poles:
+\[
+ mg=\frac{a^2e(1+y)c s_c}{2\Delta},\qquad
+ \delta_n=\frac{eQ-BK}{2\Delta}.                       \tag{RER7}
+\]
+The quantities $mg$, $mg/a$, $mg/a^2$, $\mu$, $\delta_n$, and
+$nr^2$ are bounded.  For example
+$a^2e/(1+a)\leq R a/(1+a)=O(1)$, while
+$0\leq\delta_n\leq eQ/(2\Delta)=O(1)$.
+These estimates do not imply that $m$ or $n$ themselves are bounded.
+
+\paragraph{Exact extraction from the entire parent.}
+Let testing $u,v,W,X,Y,Z$ be arbitrary, independently of the source;
+put $D_u=1+u^2$, $D_v=1+v^2$.  The complete original quarter-parent is
+\begin{align*}
+ \mathcal P={}&m(vW-X+uvY-uZ)^2+nD_uD_vX^2
+     +CD_v(uW-Y)^2+AD_uD_vY^2\\
+ &+(D+\tfrac12)(uW+uvX-Y-vZ)^2
+     +(\alpha+\tfrac12)D_u(vY-Z)^2\\
+ &+\tfrac12D_v(X+uZ)^2-\tfrac12D_uD_vZ^2.
+\end{align*}
+Define the mixed rows
+\[
+ q_a=v(W+uY),\qquad N=X+uZ-pq_a,\qquad \xi=X+ruZ.
+\]
+Then the following identity retains both actual positive packets,
+without setting either normal to zero:
+\[
+ \mathcal P=mpN^2+nD_uD_v\xi^2+G,                       \tag{RER8}
+\]
+where
+\begin{align*}
+ G={}&\mu\{N^2-2q_aN+(1-p)q_a^2\}
+        +\delta_nD_uD_v(-2uZX-ru^2Z^2)\\
+ &+CD_v(uW-Y)^2+AD_uD_vY^2\\
+ &+(D+\tfrac12)(uW+uvX-Y-vZ)^2
+        +(\alpha+\tfrac12)D_u(vY-Z)^2\\
+ &+\tfrac12D_v(X+uZ)^2-\tfrac12D_uD_vZ^2.
+\end{align*}
+It follows simply by expanding
+$m\{(1-p)q_a-N\}^2-mpN^2$ and
+$n(X^2-\xi^2)=nr(-2uZX-ru^2Z^2)$.
+Both retained packets are finite separated SOS: their source weights
+are nonnegative, $D_uD_v$ is pure testing, and $N,\xi$ are allowed
+mixed rows.  When $n=0$ the second packet vanishes literally.
+The exact identity and all estimates above are the reconstructed
+structural conclusion; no positivity conclusion about $G$ is asserted.

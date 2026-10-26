@@ -1,0 +1,118 @@
+ChatGPT said:
+
+The remaining obstruction is a zero-cost pseudo-contact, not a loss of coefficient rank
+The new review notes identify a useful distinction. On either open C1 or C2 contact family, the 154 retained features have a coefficient map of constant rank 406 after removing the four contact vectors. Consequently, local continuation cannot fail because the linear equations lose rank. It can fail only because the required Gram matrix reaches the boundary of its positive-semidefinite cone.
+I checked the two documents at commit 6a6d736. They establish the four exact seeds and the constant-rank structure, but they do not establish the persistence of positive-definite reduced Grams.
+There is a precise way to turn that missing persistence into one fixed dual problem, with no moving contact vectors and no new Gram basis.
+1. Normalize every nonzero contact to one fixed coefficient map
+Fix $\sigma\in\{C1,C2\}$. Let
+$\mathcal A_\sigma:
+\bigoplus_{g=1}^{4}\mathbb S^{r_g}
+\longrightarrow\mathbb R^{412},
+\qquad
+(r_1,r_2,r_3,r_4)=(52,36,36,30)$
+be the reduced polynomial coefficient map before removing the contact vectors.
+For an open native contact $x$, let $z_g(x)$ be its nonzero feature vector in each parity sector. Choose diagonal scalings $D_g(x)$ sending these vectors to $\mathbf1$.
+The corresponding invertible scaling of coefficient monomials gives a transformed target $b_\sigma(c,x)$.
+Because every feature is a monomial, this conjugation sends the coefficient equations at $x$ to those at the normalized contact. After quotienting the line $\mathbb R\mathbf1$ in each parity sector, all contacts use one fixed linear map
+$\boxed{
+A_\sigma:
+\mathcal G_\sigma\longrightarrow V_\sigma,
+\qquad
+\dim V_\sigma=406,
+}$
+where
+$\mathcal G_\sigma
+=
+\mathbb S^{51}\oplus
+\mathbb S^{35}\oplus
+\mathbb S^{35}\oplus
+\mathbb S^{29}.$
+The domain has 2,742 symmetric coordinates. The normalization depends on the source contact, but it is used only in this proof comparison. It introduces no source-dependent testing functions into the proposed SDP.
+The full reduced coefficient cone is
+$K_\sigma=A_\sigma(\mathcal G_{\sigma,+}),$
+with $\mathcal G_{\sigma,+}$ the product of four PSD cones.
+The crucial gain is that $K_\sigma$ itself no longer depends on the location of the contact.
+Correction to the dimension above: $\mathcal G_\sigma$ has 3,021 symmetric coordinates, not 2,742. The four block orders and the rank 406 are unchanged.
+2. An exact dual criterion for persistence
+Let $A_\sigma^*$ denote the adjoint of the normalized coefficient map, and define
+$\mathcal D_\sigma=
+\left\{
+y\in V_\sigma^*:
+A_\sigma^*y\succeq0,\quad
+\operatorname{tr}(A_\sigma^*y)=1
+\right\}.$
+Define the contact margin
+$\boxed{
+\mu_\sigma(c,x)
+=
+\min_{y\in\mathcal D_\sigma}
+\langle y,b_\sigma(c,x)\rangle.
+}
+\tag{1}$
+Theorem (fixed dual contact criterion). On either open native contact family,
+$\begin{aligned}
+\mu_\sigma(c,x)>0
+&\iff
+\text{a positive-definite reduced Gram exists},\\
+\mu_\sigma(c,x)\ge0
+&\iff
+\text{a positive-semidefinite reduced Gram exists},\\
+\mu_\sigma(c,x)<0
+&\iff
+\text{the source is excluded by the fixed }L_6\text{ cone}.
+\end{aligned}
+\tag{2}$
+The minimum is attained. This includes singular feasible Grams; it does not assume primal or dual Slater at the source.
+Proof. The normalized reduced features are linearly independent. Integrating their outer products over a positive testing rectangle and the state sphere gives a positive-definite moment matrix $M_\sigma$. Thus, for any PSD Gram tuple $G$ representing a coefficient vector $b$,
+$\lambda_{\min}(M_\sigma)\operatorname{tr}G
+\le
+\langle M_\sigma,G\rangle
+=
+I(b),$
+where $I$ is a fixed linear functional of the polynomial coefficients.
+Consequently, bounded coefficient vectors have bounded representing PSD Grams, so $K_\sigma$ is closed.
+The map $A_\sigma$ is surjective onto $V_\sigma$, by the established rank-406 calculation. Hence $A_\sigma^*$ is injective. The conditions
+$A_\sigma^*y\succeq0,\qquad
+\operatorname{tr}(A_\sigma^*y)=1$
+bound $A_\sigma^*y$, and therefore bound $y$. Thus $\mathcal D_\sigma$ is compact.
+By conic duality,
+$K_\sigma^*=\{y:A_\sigma^*y\succeq0\}.$
+A vector belongs to the closed cone $K_\sigma$ exactly when it pairs nonnegatively with every member of its dual. Normalizing the trace gives the middle equivalence.
+Furthermore, a linear map takes the relative interior of a convex cone onto the relative interior of its image. Since $A_\sigma$ is onto $V_\sigma$, the image cone has nonempty interior, and a vector lies in that interior precisely when it has a positive-definite Gram preimage. This is equivalent to strict positivity against every nonzero dual vector, giving the first equivalence. The third is the separating alternative. $\square$
+3. The exact missing inequality
+The nondegeneracy condition (ND) in EXACT_LIFT_CANDIDATE.md is therefore equivalent to
+$\boxed{
+\mu_\sigma(c(w),x(w))>0
+\quad
+\text{for every }w\in\Theta_\sigma,\quad
+\sigma=C1,C2.
+}
+\tag{3}$
+There is no moving optimization cone in (3). Only its target vector changes.
+Because $\mathcal D_\sigma$ is fixed and compact, the function
+$b\longmapsto\min_{y\in\mathcal D_\sigma}\langle y,b\rangle$
+is concave, continuous and Lipschitz on $V_\sigma$.
+This is a stronger formulation than merely saying positive-definite Grams continue locally: every possible failure is witnessed by a nonzero PSD dual moment functional satisfying
+$\boxed{
+A_\sigma^*y\succeq0,\qquad
+\operatorname{tr}(A_\sigma^*y)=1,\qquad
+\langle y,b_\sigma(c,x)\rangle=0.
+}
+\tag{4}$
+Such a witness is a zero-cost pseudo-contact. It is not automatically an actual additional quantum contact.
+For example, a genuine testing evaluation away from the contact gives a positive functional, and its pairing with the source slack is strictly positive whenever that source has a unique quantum zero. A general truncated PSD moment functional need not be a positive combination of such evaluations. Excluding those nonrepresentable functionals is the mathematical content missing from a contact-only positivity argument.
+4. What would finish the hybrid lift
+The most useful next lemma is now an exact dual rigidity statement:
+Dual contact rigidity. For every open C1 or C2 native source, every nonzero PSD functional on the normalized reduced sixth-root Gram space has strictly positive pairing with that source’s complete full-state slack.
+Proving this would establish (3), hence every open contact source would lie in $L_6$ with a positive-definite reduced certificate. The existing closedness theorem would then admit their zero-weight limits. Adding SG12/SG13, the event cone and the fixed NPA cone, wherever needed, would complete the already established hybrid assembly.
+But I have not proved dual contact rigidity. In particular, the established coefficient rank and four exact seeds do not imply it, and strict positivity of the physical slack away from its contact does not automatically exclude pseudo-moment functionals. The currently justified statement is the exact alternative (2), not $L_6=C_{\rm can}$.
+This analysis does not produce new evaluated matrices or justify a new global lift, so I have not created a replacement pencil. It does isolate the remaining question as an explicit fixed, 406-dimensional dual positivity problem on each contact orbit, with no moving feature basis, inverse of a mixed source/testing expression, or unverified compactness shortcut.
+
+
+
+
+
+
+
+

@@ -1,0 +1,246 @@
+\section[A local strong-C2 certificate at the ordinary--small contact]{A local strong-C2 certificate at the ordinary--small contact}
+\label{sec:local-ui-certificate}
+
+This section uses the exact full-parent reduction and source notation
+in Section~\ref{sec:ui-full-parent-reduction}. It proves a local independent-test
+statement. The other commuting axis and the outer projective join
+are not included.
+
+\begin{theorem}[Local ordinary--small C2 certificate]
+Use the unchanged physical C2 source with $d=1$, actual contact
+$u_c=a$ a positive bounded unit and $v_c=k$ a positive infinitesimal,
+and $C,\alpha$ bounded below by positive real numbers. Then the full
+parent is tensor SOS for every independent test with $v$ infinitesimal
+and $u-a$ infinitesimal, and every projective state. The original
+$n=0$ boundary and all positive source opening rates are included.
+No upper bound on $n,m,C,D,\alpha$ is imposed.
+\end{theorem}
+
+Here $u-a$ is the difference of the corresponding tensor factors.
+The residue condition means that their real residues agree; it does
+not identify the source and testing fields or compare their rates.
+The exact sign gauges give the corresponding negative-angle charts.
+
+\paragraph{Bounded full remainder and its exact graph.}
+The packet reduction leaves a bounded polynomial remainder $G$ and
+the positive relative square
+\[
+ 4\gamma R_h^2,\qquad
+ \gamma=k^2CD/(C+D)\asymp1,\qquad
+ R_h=\frac{v(uX-Z)-s k^2W}{k}.
+\]
+Every other retained packet is an exact positive square vanishing
+at the full actual contact. For positive bounded caps $m_*,\alpha_*$
+and $0\le n_*\le n$, set
+\[
+ E_X=X-xvW,\quad E_Z=Z-(ux-s)vW,\quad
+ E_r=uW-Y-\rho k^2W,
+ \qquad Q_N=uE_X-E_Z.
+\]
+The full inverse is polynomial. All terms of $G$, including its
+complete first-normal rows and quadratic normal block, are retained.
+There are no higher state-normal terms.
+
+Put $w=u-a$, $\xi=v^2$, and use the additional separated roots
+\[
+ S=vwW,\qquad T=kwW,\qquad R=(v^2-k^2)W/k.
+\]
+The exact identities
+\[
+ kR=\frac{kR_h-vQ_N}{s},\qquad
+ RT=\frac{R_hT-SQ_N}{s},\qquad
+ S^2-T^2=\frac w s(R_hT-SQ_N)                      \tag{UI1}
+\]
+use only the bounded pure-source inverse $1/s$.
+
+\paragraph{Complete scalar and normal lifting.}
+On the graph $E_X=E_Z=E_r=0$, write $G=\phi(u,\xi)W^2$.
+Its bounded polynomial coefficients and the original parity imply
+$\phi\in(k^2,\xi)$. The exact contact identities give
+$\phi=\phi_u=\phi_\xi=0$ at $(u,\xi)=(a,k^2)$.
+Successive monic Taylor division gives
+\[
+ \phi=w^2(k^2A_0+\xi A_1)
+             +w(\xi-k^2)B+(\xi-k^2)^2C_0,          \tag{UI2}
+\]
+with bounded coefficients. To see the asserted first factor directly,
+divide first in $u-a$; the second $u$ coquotient stays in
+$(k^2,\xi)$. The constant and first $u$ terms are then divided in
+$\xi-k^2$. No source infinitesimal is inverted by these operations.
+Equations (UI1) allocate the three terms of (UI2) on
+$(S,T,R_h,E_X,E_Z)$.
+
+The full first $E_X,E_Z$ coefficients are $vL_X(u,\xi)$ and
+$vL_Z(u,\xi)$. Exact contact gives $L_i(a,k^2)=0$, so they are
+\[
+ v\{wL_{i0}+(\xi-k^2)L_{i1}\}.
+\]
+The first summand is allocated on $S$, and the second uses
+$vkR=v(kR_h-vQ_N)/s$. The entire $E_r$ coefficient belongs to
+$(k^2,\xi)$ and vanishes at contact. The same division writes it as
+\[
+ w(k^2L_{r0}+\xi L_{r1})+(\xi-k^2)L_{r2}.
+\]
+It consequently uses $kT,vS,kR$. All these $E_r$ couplings have
+zero residue. Thus (UI1)--(UI2) produce an exact bounded Gram on
+\[
+             (E_r,E_X,E_Z,R_h,S,T).                 \tag{UI3}
+\]
+This is a full-parent lift, not a restriction to a state kernel.
+
+\paragraph{The strict matched Hessian.}
+First take finite positive residue source weights. The leading model
+before setting the ordinary test angle equal to $a$ is (RC4), with
+every testing occurrence of $a$ replaced by $u$; its source
+coefficients remain those of (RC3). Let $\mathsf G$ denote one half
+of its angular Hessian after eliminating its two state directions,
+in variables $(V,u)$ at the exact contact. Direct differentiation and
+two-by-two Schur elimination give
+\[
+ \mathsf G_{uu}=
+ \frac{8(1-r)(1+zr)^2}{zb\Delta}>0,                 \tag{UI4}
+\]
+\[
+ \det\mathsf G=
+ \frac{16(b+r)^2(1+zr)^3
+                \{3z+4-(z+2)^2r\}}{b^2\Delta^2}.  \tag{UI5}
+\]
+The other two entries, making boundedness explicit, are
+\begin{align*}
+ \mathsf G_{Vu}&=
+ \frac{4(1+zr)^2\{zb+zr+2r-2\}}{ab\Delta},\\
+ \mathsf G_{VV}&=
+ \frac{8(1+zr)\{z^2b^2+z^2br+zb^2+2zbr-zb-r+1\}}
+      {b\Delta}.
+\end{align*}
+For a short check of strictness, the exact leading $n$ numerator is
+$bQ_n$, where
+\[
+ Q_n=1+r(z-1)-z(z+2)r^2-z(z+1)br
+     =(1-(z+1)r)(1+zr)-zr g.
+\]
+Since $Q_n\ge0$ and $g\ge0$, one has $r\le1/(z+1)$.
+Consequently
+\[
+ 3z+4-(z+2)^2r\ \ge\ \frac{z(2z+3)}{z+1}>0.       \tag{UI6}
+\]
+All denominators in (UI4)--(UI6) are positive bounded units.
+These formulas therefore give a strict, uniformly bounded-away-from-zero
+angular Schur form on the source residue domain, including $n=0$.
+They contain no inverse of $r$, $g$, or $1-zb$.
+
+\paragraph{Large weights and finite real caps.}
+We use the elementary finite-dimensional penalty lemma: if a real
+symmetric form $B$ is strictly positive on the common kernel of the
+rows of a matrix $V$, then $B+M V^TV$ is positive definite for some
+finite real $M>0$. A proof is to split into $\ker V$ and its
+orthogonal complement. The first diagonal block is strict; taking
+$M$ sufficiently large makes its Schur complement strict too.
+
+The bounded finite part obtained by the centered packets is
+continuous at all source boundary residues. This assertion is
+algebraic: its only large-weight products are
+\[
+ nx,\ nx^2,\ m\mu,\ m\mu^2,\ \alpha\pi,\ \alpha\pi^2,
+ \quad C\rho k^2,\ D\sigma k^2,\ k^2H,
+\]
+and their bounded cap analogues. Substitution of the original source
+formulas cancels the possible $r,g,1-zh,t,j$ poles in those products;
+their denominators are the displayed positive units. For example,
+\[
+ m\mu=\frac{(1+k^2)(1-r)A_cS}{2b\Delta},\qquad
+ \alpha\pi=-\frac{z^2(b+r)N}{2ab\Delta}.
+\]
+The other cancellations are
+\[
+ nx=-\frac{(b+r)A_cS-r\Delta}{2b\Delta},\quad
+ nx^2=x(nx),\quad m\mu^2=\mu(m\mu),\quad
+ \alpha\pi^2=\pi(\alpha\pi),
+\]
+\[
+ C\rho k^2=\frac{c_1}{ab},\qquad
+ D\sigma k^2=-\frac{c_2}{ab},\qquad
+ c_1=\frac{zA_cN}{2\Delta},\quad
+ c_2=\frac{z(1+z)(b+r)(b-k^2r)S}{2\Delta}.
+\]
+Finally $C\rho+D\sigma=(Ct-Dj)/(ab)$, using the exact canceled
+formula in the full-parent reduction. Thus even this difference has
+no hidden small-opening denominator.
+For $k^2H$, write $k^2C=c_1/t$, $k^2D=c_2/j$, with
+$c_1,c_2$ positive bounded units. Then
+$k^2H=c_1c_2/(c_1j+c_2t)$, whose denominator is a unit because
+$t+j=A_c$ is a unit. Its residue is exactly $H_0$ in (RC3).
+
+At most two of $n,m,\alpha$ can diverge. Indeed $m$ can diverge
+only at $g=0$, while $\alpha$ can diverge only at $1-zb=0$;
+these two equalities would give $g=1/z+r>0$. The hard-state parts
+of the three possible diverging centered rows are, up to nonzero
+unit factors,
+\[
+                   E_X,\qquad E_X+aE_Z,\qquad E_Z.
+\]
+Every possible pair is independent with a unit determinant.
+
+Here is why their constrained limiting finite form is strict.
+Approach the boundary by the positive leading-source domain. The
+state block is bounded below by a positive real form because $m$ and
+$\alpha$ are strong. Its minimizing hard vector for a fixed angular
+vector is bounded: solve the at most two diverging packet equations
+in the hard variables, using the unit determinants just displayed;
+this supplies a bounded competitor, and all remaining coefficients
+stay bounded. If $h_0$ is that competitor and $h_{\min}$ the state
+minimizer for angular vector $q$, the exact identity
+\[
+ (h_0-h_{\min})^TP(h_0-h_{\min})
+       =F(h_0,q)-q^T\mathsf Gq
+\]
+and $P\succeq cI$ make boundedness of $h_{\min}$ explicit.
+Together with (UI4)--(UI6), the state Schur factorization
+then bounds the full matched Hessian below by a positive real multiple
+of the Euclidean norm. For a vector in the common limiting packet
+kernel, adjust only its hard coordinates to lie in the exact nearby
+packet kernels. The adjustment tends to zero and annihilates the
+large weights exactly. Taking the limit proves strict positivity of
+the bounded finite part on that common kernel. The penalty lemma now
+chooses finite real caps for every diverging weight. Bounded source
+weights can be retained in full. All caps are below their original
+weights, so the remaining centered excesses are positive squares.
+
+This limiting argument uses only real finite-dimensional forms to
+choose caps. No inverse of a tensor matrix and no mixed root are
+used in the full-parent identity. The boundary residues are limits
+of the positive leading-source domain: $g$ and $1-zb$ specify the
+interval for $b$, and decreasing a positive $r$ if necessary makes
+$Q_n\ge0$ strict. Thus the argument also covers a literal original
+$n=0$ and all combinations of the allowed boundary residues.
+
+\paragraph{Separate angular roots and full strictness.}
+The residue of the hard block in (UI3) is
+\[
+ 2E_r^2+4n_*(1+a^2)E_X^2
+ +(4m_*+2)(E_X+aE_Z)^2+4\alpha_*(1+a^2)E_Z^2
+ +4\gamma R_h^2,
+\]
+which is strict. In the residue Gram, $S$ couples only to the two
+ordinary hard normals, and $T$ only to $R_h$; the $E_r$ couplings
+vanish. Setting $S=T$ gives the matched leading Hessian under an
+invertible bounded change of coordinates. Indeed at $V=1$ the
+ordinary normals are its two state deviations, $R_h$ supplies the
+relative-angle deviation with nonzero coefficient $2s$, and
+$S=T$ supplies the ordinary-angle deviation. The chosen caps therefore
+make the sum of the two angular Schur diagonals strictly positive.
+
+Add an appropriate real multiple of the last zero identity in (UI1).
+It redistributes mass between $S^2$ and $T^2$; all accompanying
+coefficients contain $w$ and have zero residue. Since their Schur
+diagonal sum is positive, choose this multiple so that both Schur
+diagonals are positive. The entire six-root residue Gram is now
+positive definite. The strict-residue Gram lemma proves the exact
+bounded remainder plus relative packet is tensor SOS.
+
+Finally restore every centered excess and both other C/D packets.
+The construction was homogeneous in $W$ and its state inverse was
+polynomial, so it includes $W=0$ and every projective state. Real and
+imaginary parts give complex states. This completes only the stated
+local independent-test domain; the outer-angle and other commuting-axis
+certificates are still required before admitting the full UI source leaf.

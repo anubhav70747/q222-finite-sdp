@@ -1,0 +1,212 @@
+\chapter{Exact sums of squares in the separated tensor ring}
+\label{ch:tensor}
+\section{Two labelled fields and their residues}
+Let $K_c,K_t$ be real closed extensions of $\mathbb R$ and put
+\[
+ T=K_c\otimes_{\mathbb R}K_t,\qquad
+ B_i=\{x\in K_i: |x|<M\text{ for some }M\in\mathbb R_{>0}\},
+ \quad i\in\{c,t\}.
+\]
+Write $\mathfrak m_i$ for the elements whose absolute value is smaller
+than every positive real number. The order on $K_i$ is its unique field
+order. No order, embedding into a field, or algebraic-disjointness
+assumption is imposed on $T$.
+
+Every $x\in B_i$ has a unique real standard part $\bar x$ with
+$x-\bar x\in\mathfrak m_i$. Indeed, the real cut
+$\{r\in\mathbb R:r\le x\}$ is nonempty and bounded; its supremum
+has the claimed property. Two such real numbers differ by a real
+infinitesimal and hence agree. Infinitesimals form an ideal of $B_i$,
+so $x\mapsto\bar x$ is an $\mathbb R$-algebra homomorphism with
+kernel $\mathfrak m_i$. In particular
+$B_i=\mathbb R\oplus\mathfrak m_i$ as real vector spaces.
+
+Since tensoring real vector spaces preserves injections,
+$B:=B_c\otimes_{\mathbb R}B_t$ embeds into $T$. Its residue map is
+\[
+ \rho:B\longrightarrow\mathbb R,\qquad
+ \rho\Bigl(\sum_i a_i\otimes b_i\Bigr)=\sum_i\bar a_i\bar b_i.
+ \tag{TF1}
+\]
+The direct-sum decompositions above show that
+\[
+ \ker\rho=\mathfrak m_c\otimes B_t+B_c\otimes\mathfrak m_t.
+ \tag{TF2}
+\]
+Thus every tensor of zero residue has a finite expression in which
+each elementary term has at least one infinitesimal factor. None of
+these observations requires the two field extensions to be disjoint.
+
+\section{A strict real reserve gives an exact tensor sum of squares}
+\label{component:p25af2c58da7e}
+\label{p25af2c58da7e:sec:mechanism}
+\label{p25af2c58da7e:lem:residue}
+\paragraph{Lemma TF1 (positive residue).}
+If $a\in B$ and $\rho(a)>0$, then $a$ is a finite sum of squares in
+$T$. In fact its square roots may all be chosen to be elementary
+tensors.
+
+\begin{proof}
+By (TF2), write
+\[
+ a=\varepsilon+\sum_{j=1}^N x_j\otimes y_j,\qquad
+ \varepsilon=\rho(a)>0,
+ \tag{TF3}
+\]
+with bounded pure factors and an infinitesimal in at least one factor
+of each term. If $N=0$, the assertion is immediate. Otherwise choose
+positive real numbers $\varepsilon_j$ summing to $\varepsilon$.
+For a term with $x_j$ infinitesimal, choose a positive real
+$M_j>|y_j|$. Direct multiplication gives
+\[
+ \varepsilon_j+x_j\otimes y_j
+ =\frac12\left[
+  (\varepsilon_j/M_j+x_j)\otimes(M_j+y_j)
+ +(\varepsilon_j/M_j-x_j)\otimes(M_j-y_j)\right].
+ \tag{TF4}
+\]
+All four pure factors are strictly positive in their respective
+fields. Each elementary summand therefore is a square: for example
+$\tfrac12u\otimes v=(\sqrt{u/2}\otimes\sqrt v)^2$.
+If instead $y_j$ is infinitesimal, interchange the roles of the
+two factors in this calculation. Sum (TF4) over $j$. Every operation
+is a field operation in one labelled factor; no mixed radical or
+mixed inverse occurs.
+\end{proof}
+
+\label{p25af2c58da7e:lem:gram}
+\paragraph{Lemma TF2 (strict bounded Gram).}
+Let $Q\in\operatorname{Sym}_r(B)$ and suppose its entrywise real
+residue $\rho(Q)$ is positive definite. Then
+\[
+                 g^{\mathsf T}Qg\in\Sigma T^2
+                 \qquad\text{for every }g\in T^r.
+ \tag{TF5}
+\]
+The entries of $g$ need not be bounded, independent, or polynomial.
+
+\begin{proof}
+Choose a real invertible matrix $C$ with
+$C^{\mathsf T}\rho(Q)C=I$. Replacing $Q$ by
+$C^{\mathsf T}QC$ and $g$ by $C^{-1}g$ preserves the quadratic
+expression, so assume $\rho(Q)=I$. Choose a real $\delta>0$ such
+that $(r-1)\delta<1$. With $e_i$ the real coordinate vectors,
+\[
+\begin{split}
+ Q={}&\sum_i\bigl(Q_{ii}-(r-1)\delta\bigr)e_ie_i^{\mathsf T}\\
+ &+\sum_{i<j}\frac{\delta+Q_{ij}}2
+                (e_i+e_j)(e_i+e_j)^{\mathsf T}\\
+ &+\sum_{i<j}\frac{\delta-Q_{ij}}2
+                (e_i-e_j)(e_i-e_j)^{\mathsf T}.
+\end{split}
+ \tag{TF6}
+\]
+The off-diagonal entries agree because the last two contributions
+have difference $Q_{ij}$; their diagonal contributions sum to
+$\delta$ for every incident pair. The residues of all scalar
+coefficients in (TF6) are positive. Lemma TF1 expresses each
+coefficient as a finite sum of squares in $T$. Evaluation on $g$
+then expresses (TF5) as a finite sum of squares of those scalar roots
+times $g_i$ or $g_i\pm g_j$. This is a polynomial identity in the
+commutative ring $T$, so no size condition on $g$ is involved.
+\end{proof}
+
+\section{Legal normalization and finite assembly}
+\paragraph{Lemma TF3 (pure-factor cancellation).}
+For $s\in K_c^{>0}$, $t\in K_t^{>0}$, and $F\in T$,
+\[
+ F\in\Sigma T^2\quad\Longleftrightarrow\quad
+                  (s\otimes t)F\in\Sigma T^2.
+ \tag{TF8}
+\]
+Indeed multiply each root by $\sqrt s\otimes\sqrt t$ in one
+direction and by $s^{-1/2}\otimes t^{-1/2}$ in the other.
+These are inverse units of $T$. Nonvanishing must be proved before
+this lemma is used. A homogeneous coordinate that is literally zero
+cannot be cancelled, and the lemma does not authorize cancellation
+of a general mixed tensor.
+
+\paragraph{Lemma TF4 (positive matrix pairing).}
+If $X\in\operatorname{Sym}_r(K_c)$ and
+$Y\in\operatorname{Sym}_r(K_t)$ are positive semidefinite in their
+own fields, then
+\[
+ \sum_{i,j}X_{ij}\otimes Y_{ij}
+ =\sum_{a,b}\left(\sum_i U_{ia}\otimes V_{ib}\right)^2,
+ \qquad X=UU^{\mathsf T},\quad Y=VV^{\mathsf T}.
+ \tag{TF9}
+\]
+To obtain the factorizations over a real closed field, pivot on a
+positive diagonal entry and complete its square. The remaining
+Schur complement is positive semidefinite. If every diagonal entry
+is zero, every off-diagonal entry is zero by its two-dimensional
+quadratic restriction. Induction, and positive square roots of the
+pivots, finish the factorization even for singular matrices.
+Expansion of the right side proves (TF9).
+
+\paragraph{Lemma TF5 (conic and convex closure).}
+For $f=f_0+\sum_{\nu=1}^n f_\nu q_\nu$ set
+$[f,q]=f_0\otimes1+\sum_\nu f_\nu\otimes q_\nu$.
+Suppose in the source field
+$f=\sum_j a_j f_j$ with $a_j\ge0$, and in the testing field
+$q=\sum_i w_i q_i$ with $w_i\ge0$ and $\sum_iw_i=1$.
+If $[f_j,q_i]=\sum_k h_{ijk}^2$ in $T$, then
+\[
+             [f,q]=\sum_{i,j,k}
+                \left[(\sqrt{a_j}\otimes\sqrt{w_i})h_{ijk}\right]^2.
+ \tag{TF10}
+\]
+This follows from linearity in $f$ and affineness in $q$; the equation
+$\sum_iw_i=1$ preserves the constant coefficient. All sums are finite.
+Zero weights give zero roots and are never inverted.
+
+\section{Exactly the external criterion that is needed}
+Let $S\subset\mathbb R^n$ be closed, convex, and semialgebraic, and
+let $P_S$ be its cone of nonnegative affine functions. Fix a finite
+real formula defining $S$. Over any real closed extension $K$, its
+transfer $S_K$ is the set defined by that same formula. The formula
+\[
+          \forall q\ (q\in S\ \Longrightarrow\ f(q)\ge0)
+ \tag{TF11}
+\]
+shows, by quantifier elimination and elementary transfer, that
+$(P_S)_K$ consists exactly of the $K$-affine functions nonnegative
+on $S_K$. This is a statement about formulas; it makes no claim
+that $S_K$ is compact in the order topology of $K$.
+
+Scheiderer's Corollary 3.19~\cite{scheiderer} says that $S$ has a finite semidefinite
+lift if and only if, for every real closed extension $K/\mathbb R$,
+every $f\in(P_S)_K$, and every $q\in S_K$, the point-first tensor
+evaluation is a finite sum of squares in $K\otimes_{\mathbb R}K$.
+The coefficient-first convention used here is equivalent by the
+factor-flip automorphism, which preserves squares.
+Therefore a proof of
+\[
+       [f,q]\in\Sigma(K\otimes_{\mathbb R}K)^2
+       \quad\text{for every }K,\ f\in(P_S)_K,\ q\in S_K
+ \tag{TF12}
+\]
+is sufficient. Two labelled copies of each one arbitrary $K$ suffice;
+a theorem for all unequal pairs $K_c,K_t$ is stronger than necessary.
+The labels must still remain separate in every identity. In particular,
+algebraic disjointness of the copies must not be imposed.
+
+The quantifiers in (TF12) permit the number and tensor ranks of roots
+to depend on $K,f,q$. Corollary 3.19 supplies finiteness of a common
+lift through its finite-dimensional algebraic construction and
+compactness argument. No uniform root-count or rank bound has to be
+supplied beforehand. Theorem 3.10 is the stronger quantitative version:
+an asserted block-order bound $d$ needs a uniform bound $d$ on the
+tensor ranks of the square roots. The lemmas above do not by themselves
+provide such a bound for all local certificates. Both results concern
+arbitrary finite ambient dimension, despite the paper's planar title.
+
+\paragraph{Primary source and exact locations.}
+C.~Scheiderer, \emph{Second-order cone representation for convex sets
+in the plane}, arXiv:2004.04196v2 (28 January 2021): the bounded-ring
+setup is Section 3.2, printed p.~10; Proposition 3.5 is on printed
+p.~11; Theorem 3.10 is on printed p.~12; Corollary 3.19 and its proof
+are on printed p.~15. The elementary reserve identity (TF4) above
+independently proves the positive-residue step for the two-labelled-field
+setting. The external implication used is Corollary 3.19 itself.
+

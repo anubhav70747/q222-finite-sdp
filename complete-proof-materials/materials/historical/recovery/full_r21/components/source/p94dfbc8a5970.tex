@@ -1,0 +1,51 @@
+\subsection{A finite induction on event constraints}
+\begin{lemma}[Unequal diagonal hard scales]\label{lem:diagonal-hard-scales}
+Suppose a physically nonnegative local polynomial has the form
+\[
+F(x,y)=\sum_{i=1}^k a_i b_i(y)x_i^2+\sigma G(x,y),
+\]
+where $a_i,\sigma>0$ are pure coefficient numbers,
+$\varepsilon_i=\sigma/a_i$ are infinitesimal, and $b_i,G$ have bounded coefficients. At the test let $\bar x=0$, $\bar y=y_0$ and $\bar b_i(y_0)>0$. If $g(y)=\overline G(0,y)$ is positive at $y_0$, or has a zero there with positive definite Hessian, then $F$ is tensor SOS.
+\end{lemma}
+\begin{proof}
+For a positive value use the roots $(x_i/\sqrt{\varepsilon_i},1)$, exactly as in Lemma~\ref{lem:weighted-contact}. At a zero, physicality gives $\nabla g(y_0)=0$. Put $x_i=\varepsilon_i s_i$ in the stationary equations. They are
+\[
+2b_i(y)s_i+G_{x_i}(\varepsilon s,y)=0,
+\qquad
+\sum_i\varepsilon_i s_i^2\nabla b_i(y)+\nabla_yG(\varepsilon s,y)=0.
+\]
+The residue Jacobian is block upper triangular with positive diagonal normal block $2\operatorname{diag}(\bar b_i(y_0))$ and tangent block $\nabla^2g(y_0)\succ0$. The coefficient-field implicit-function theorem gives an exact stationary center with $x_{ci}=\varepsilon_i s_{ci}$ and bounded $s_c$.
+
+Exact Taylor allocation on the roots
+\[
+\left((x_i-x_{ci})/\sqrt{\varepsilon_i}\right)_{i=1}^k,
+\quad y-y_c
+\]
+has residue Gram
+$\operatorname{diag}(\bar b_1,\ldots,\bar b_k,\nabla^2g/2)\succ0$.
+Indeed a hard mixed normal--tangent coefficient has an extra factor $\sqrt{\varepsilon_i}$, and a hard pure tangent coefficient has an extra factor $\varepsilon_i$, since $x_{ci}/\varepsilon_i=s_{ci}$ is bounded. The bounded $G$ terms have the same or smaller factors. The center value $F(x_c,y_c)/\sigma$ is a nonnegative pure coefficient. Apply the strict Gram lemma and restore $\sigma$. Pure testing unit denominators are cleared as in Lemma~\ref{lem:weighted-contact}.
+\end{proof}
+
+\begin{theorem}[Every noncommuting residue test is atlas-free]
+\label{thm:all-noncommuting}
+For every physical canonical source, the entire parent is tensor SOS at every independent test for which both measurement pairs are noncommuting in residue. No restriction on the relative source coefficient scales is required.
+\end{theorem}
+\begin{proof}
+Normalize $d+\sum c_i=1$. Literal $d=0$ is an event-square sum. Positive slack residue is covered by Lemma~\ref{lem:residue}; positive $\bar d$ is covered by Theorem~\ref{thm:curvature} and Lemma~\ref{lem:regular}. We may therefore assume $d>0$, $\bar d=0$, and zero slack residue.
+
+A product residue state is already settled by Section~\ref{sec:zero-d-cycle}. At an entangled residue, all positive-residue event coefficients belong to a matching in the eight-cycle. Call this first collection of hard events $S$. If $|S|=4$, all complementary coefficients and $d$ are infinitesimal relative to its four positive-unit weights, so Theorem~\ref{thm:matching-flag-terminal} applies directly. Suppose $|S|\le3$.
+
+The amplitudes of $S$ are independent state-linear coordinates on a projective state chart. Choose them as $x_i$, and call the remaining state and angle coordinates $y$. The change of coordinates has only real testing denominators that are units at the chosen residue. For the next scale put
+\[
+\sigma=\max\bigl(\{d\}\cup\{c_j:j\notin S\}\bigr).
+\]
+Every hard coefficient $a_i$ is larger than $\sigma$: the quotient $\sigma/a_i$ is infinitesimal. The parent has the exact diagonal form of Lemma~\ref{lem:diagonal-hard-scales}. On its hard kernel the normalized residue $g=\overline G(0,y)$ is nonnegative by physicality.
+
+If $g(y_0)>0$, the lemma finishes. If $g(y_0)=0$ and $\overline{d/\sigma}>0$, there are only three possibilities. With one or two hard events, Propositions~\ref{prop:one-hard-event} and~\ref{prop:two-hard-event} give a strict constrained minimum. With three hard events, the two Laurent restrictions of Theorem~\ref{thm:three-event-weighted} give the same conclusion. Their calculations concern only $g$ and hence do not depend on whether the hard coefficients are comparable. Lemma~\ref{lem:diagonal-hard-scales} finishes in each case.
+
+The only alternative is $g(y_0)=0$ and $\overline{d/\sigma}=0$. Then $g$ is a nonnegative event-square sum, and at least one remaining event coefficient has positive residue after division by $\sigma$. Its amplitude must vanish at the same entangled residue state. Add every such event to $S$. The enlarged set is still a matching, and every coefficient left outside it is infinitesimal relative to all its weights.
+
+If the enlarged set has at most three edges, repeat the preceding step. If it has four, it is a perfect matching. All complementary coefficients and $d$ are then infinitesimal relative to its smallest weight, exactly the hypotheses of Theorem~\ref{thm:matching-flag-terminal}. Each repetition adds an edge, and a matching has at most four edges. The induction therefore terminates after at most three enlargements. Every step retains the complete parent; none discards an infinitesimal signed or event term. Pure-field restoration returns the original normalized slack.
+\end{proof}
+
+The role of the eight-cycle is now structural: it bounds the number of independent event constraints. Laurent curvature handles the first scale where the signed term becomes visible, and the four-event terminal handles the case where all four constraints become visible first. This replaces the noncommuting part of the source atlas by a finite rank argument.

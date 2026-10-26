@@ -1,0 +1,288 @@
+\section{Correction: both previously surviving global pencils are strictly outer}
+\label{sec:current-global-candidate-correction}
+
+This section supersedes the unresolved reverse-inclusion status attached to
+the order-$8368$ and order-$10736$ candidates in the earlier extraction
+release.  It changes no earlier file.  Both matrices remain valid,
+explicit outer approximations, but neither is an exact lift of
+$\mathcal Q_{222}$.  The proof uses recovered rational certificate data
+and checks their agreement with the current matrices; it does not import
+a conclusion from an archive title or a historical status field.
+
+\subsection{The precise current objects}
+
+Use the original coordinates
+\[
+ q=(a_0,a_1,b_0,b_1,E_{00},E_{01},E_{10},E_{11}),\qquad
+ \widehat q=(1,q).                                                   \tag{RG1}
+\]
+Let $P_Q$ denote the cone of affine functions nonnegative on the full
+finite-dimensional tensor-product quantum body.  Let $C_1,C_2$ be the
+physical canonical nonnegative coefficient cones.  In this section
+$R_1,R_2$ denote exactly the previously recovered certificate cones with
+four Gram blocks of orders $14,6,6,4$, weights $1,v,u,uv$, a scalar
+$d\geq0$ block, and all six remaining source sign inequalities.
+The entire parent identity proves $R_i\subseteq C_i$.
+
+The order-$8368$ source sum $K_{8368}$ contains the 128 transported
+$R_1$ cones, 64 transported $R_2$ cones, 64 exact adjacent closed faces,
+32 exact opposite closed faces, and all 16 event rays.  The order-$10736$
+sum $K_{10736}$ contains 128 copies of each $R_i$, the same 96 exact
+closed faces, and the same events.  Their evaluated primal pencils
+describe precisely
+\[
+ \mathcal O_N=\{q:(1,q)\in K_N^*\},\qquad N\in\{8368,10736\}.       \tag{RG2}
+\]
+This identity follows from the already checked literal trace-adjoint
+elimination and strict source points of the four canonical pencils.
+No canonical reverse inclusion is a premise of (RG2).
+
+The source-sum matrices used below are copied unchanged into
+\nolinkurl{inputs/GLOBAL_SOURCE_MAPS_N8368.json} and
+\nolinkurl{inputs/GLOBAL_SOURCE_MAPS_N10736.json}.  Their arrays include
+all 288 and 352 non-event components, respectively.  Thus the added
+closed faces are checked explicitly; identity of the historical
+192-frame list alone would not suffice for this correction.
+
+\subsection{An exact physical extreme support}
+
+In the $C_1$ order $(d,m,C,A,D,\alpha,\beta)$, put
+\[
+\begin{aligned}
+ d&=1,&m&=\frac{1166523000}{31661820415017653},&
+ C&=\frac{322803000}{186199784281},\\
+ A&=\frac{218288946200}{1359122513},&
+ D&=\frac{90943434293}{222507771414},&
+ \alpha&=\frac{248802430236}{3300726103},\\
+ \beta&=\frac{205476973}{51646655494}.&&
+\end{aligned}                                                       \tag{RG3}
+\]
+Call this vector $c_*$.  All seven entries are strictly positive.
+Its actual contact is
+\[
+ u_*=1/13,\qquad v_*=16,\qquad
+ \psi_*=(140,-1/32,1/50,1)^T.                                       \tag{RG4}
+\]
+The state is unnormalized, which is harmless because the parent is
+quadratic in it.  Let $f_*=J_1c_*$, where the exact original-coordinate
+map is
+\[
+ J_1c=
+ \begin{pmatrix}
+ d+m+C+A+D+\alpha+\beta\\
+ -A-\alpha\\m-C-D+\beta\\C+A-\beta\\-m+D-\alpha\\
+ -d/2-A\\d/2+\alpha\\-d/2-C-\beta\\-d/2-m-D
+ \end{pmatrix}.                                                     \tag{RG5}
+\]
+For the full homogeneous parent $F_c=\psi^TP_c(u,v)\psi$, the checker
+reconstructs the original Pauli observables and proves the exact matrix
+identity
+\[
+ P_c(u,v)=(1+u^2)(1+v^2)\operatorname{Bell}(J_1c;u,v).              \tag{RG6}
+\]
+It also checks all four kernel equations and both angular equations at
+(RG4), with no normal or higher-order terms discarded.
+
+Here is a complete global physicality argument for this particular
+source.  Its determinant divided by $(1+u^2)^2(1+v^2)^2u^2v^2$ is
+a Laurent polynomial in $U=u^2,V=v^2$, with six strictly positive
+outer coefficients and one central constant.  If the outer exponent
+is $(i,j)$, absorb $U_*^iV_*^j$ into its positive coefficient $b_{ij}$.
+The exact recorded identities are
+\[
+ h+\sum b_{ij}=0,\qquad
+ \sum i b_{ij}=\sum j b_{ij}=0.                                   \tag{RG7}
+\]
+Weighted arithmetic--geometric mean, applied to
+$(U/U_*)^i(V/V_*)^j$, makes the Laurent polynomial nonnegative for
+all $U,V>0$.  The positive $m,C,A$ event rows on $(W,X,Y)$ are,
+up to positive scalar factors,
+\[
+ (v,-1,uv),\qquad(u,0,-1),\qquad(0,0,1).
+\]
+Their determinant is $u$, so that principal block is positive definite.
+The nonnegative determinant therefore gives a nonnegative scalar Schur
+complement and hence $P_{c_*}\succeq0$.  The full sign congruences use
+$\operatorname{diag}(1,1,-1,-1)$ for $u\mapsto-u$ and
+$\operatorname{diag}(1,-1,1,-1)$ for $v\mapsto-v$.  Homogeneous
+continuity supplies zero and infinite angles.  Real and imaginary
+parts of a complex state add, and finite-dimensional binary strategies
+reduce to convex mixtures of these qubit tests.  Thus $f_*\in P_Q$.
+
+Exactly two deterministic behaviors have zero value:
+\[
+\begin{aligned}
+ z_1&=(1,1,-1,-1,-1,-1,-1,1,1),\\
+ z_2&=(1,1,1,1,1,1,1,1,1).
+\end{aligned}                                                       \tag{RG8}
+\]
+The other fourteen deterministic values are strictly positive.  The
+canonical PR value is $-1$, and the other seven PR values are positive.
+On the entire nine-dimensional affine coefficient space, form the
+linear equations
+\[
+ P_f(u_*,v_*)\psi_*=0,\quad
+ \psi_*^T(\partial_uP_f)\psi_*=0,\quad
+ \psi_*^T(\partial_vP_f)\psi_*=0,\quad
+ f(z_1)=f(z_2)=0.                                                   \tag{RG9}
+\]
+In the printed order, the determinant of columns $0,\ldots,7$ of
+this $8\times9$ matrix is exactly
+\[
+ \frac{409072768794400177096031164572864}{10770194675703125}\ne0.     \tag{RG10}
+\]
+The full rational matrix is retained in the replay receipt.
+
+Consequently $f_*$ is an extreme ray of $P_Q$.  Indeed, in a physical
+conic decomposition of $f_*$, every summand must vanish at both
+deterministic zeros and at (RG4).  Positive semidefiniteness forces
+its full state-kernel equation.  Its nonnegative fixed-state testing
+function has an interior minimum there, so both angular derivatives
+vanish.  Equation (RG10) puts every summand on the same one-dimensional
+ray; its scalar is nonnegative because $f_*$ is positive at another
+deterministic behavior.  This argument imposes no canonical sign
+assumption on the summands.
+
+\subsection{The same separator excludes both actual current orientations}
+
+Let $h(c)=\psi_*^TP_c(u_*,v_*)\psi_*$ and define
+\[
+                  \ell(c)=93424h(c)-d.                            \tag{RG11}
+\]
+Here $P_c$ is the full parent of (RG6), not a quarter-parent.
+The checker verifies this normalization against the current original
+Bell operator.  Since $h(c_*)=0$, one has $\ell(c_*)=-1$.
+
+The recovered file
+\nolinkurl{inputs/historical_C1_SATURATED_CONE_SEPARATOR.json}
+contains two tuples of four complete rational symmetric matrices of
+orders $14,6,6,4$.  Direct rational Schur elimination gives strictly
+positive LDL pivots in all eight matrices.  In orientation zero their
+trace coefficients in the current affine Gram pencil satisfy
+\[
+ \sum_b\operatorname{tr}(Y_b^{(0)}L_b(c,y))=\ell(c)-d,
+ \qquad Y_b^{(0)}\succ0.                                          \tag{RG12}
+\]
+All 79 auxiliary coefficients vanish exactly.  In orientation one they
+satisfy
+\[
+ \sum_b\operatorname{tr}(Y_b^{(1)}L_b(c,y))=\ell(\sigma_1c)-d,
+ \qquad Y_b^{(1)}\succ0,                                          \tag{RG13}
+\]
+where
+\[
+ \sigma_1(d,m,C,A,D,\alpha,\beta)
+       =(d,C,m,\alpha,\beta,A,D).                                 \tag{RG14}
+\]
+The scalar $d$ multiplier is one, and the appended six source-sign
+block multipliers are zero.  Every visible coefficient and every
+auxiliary coefficient in (RG12)--(RG13) is checked against the actual
+current COO array, with the off-diagonal trace factor two.
+Therefore
+\[
+ \ell\geq0\text{ on }R_1+\sigma_1R_1,\qquad
+ c_*\notin R_1+\sigma_1R_1.                                      \tag{RG15}
+\]
+The historical and current C1 array hashes differ, but all mathematical
+keys---features, weights, dimensions, variables, blocks and entries---
+are identical.  Only the two status-prose fields differ.  This
+comparison is performed by the new checker; it is not inferred from
+matching filenames.
+
+\subsection{Transfer to all current source components}
+
+For each actual current component map $J_g$, solve
+$J_gc=f_*$ over the rationals and retain a solution only if all its
+canonical source coefficients are nonnegative.  The complete result
+for both global constructions is
+\[
+\begin{array}{c|c|c|c}
+ \text{component}&\text{family}&\text{source preimage}&
+ \text{augmented point action}\\ \hline
+ 64&C_1&\sigma_1c_*&(1,2,-3,-5,-4,-7,-6,9,8)\\
+ 77&C_1&c_*&(1,2,3,4,5,6,7,8,9).
+\end{array}                                                       \tag{RG16}
+\]
+The action notation is a signed one-based coordinate permutation.
+There are no other eligible maps, including among the 96 exact
+closed-face components or among either list of C2 components.  No
+event ray is proportional to $f_*$; its negative PR value already
+excludes that possibility.
+
+For historical correspondence, all 128 old C1 maps agree literally
+with the current 128 maps.  Forty of the 64 old C2 maps agree
+literally, and the remaining 24 agree after the exact source
+involution $\sigma_2$.  This historical comparison is additional
+custody evidence; (RG16) independently screens the entire current
+construction.
+
+If $f_*$ lay in $K_N$, extremality would force every nonzero summand
+to be a positive multiple of $f_*$.  The complete screen (RG16)
+allows only the two C1 preimages, and (RG15) excludes both.
+Thus
+\[
+                         f_*\notin K_N.                          \tag{RG17}
+\]
+
+\subsection{Closedness and the original eight-coordinate conclusion}
+
+Each $R_i$ is closed.  To see this without assuming closedness of a
+general spectrahedral projection, evaluate its features at
+$u,v\in\{1,2\}$ and at the four coordinate state vectors.  For
+each block the weighted finite evaluation moment is positive definite;
+the checker supplies exact positive LDL pivots for all eight moments.
+If the source coefficients converge, the sum of those sixteen parent
+evaluations stays bounded and equals
+\[
+                    \sum_b\operatorname{tr}(Q_bM_b).              \tag{RG18}
+\]
+Since $M_b\succ0$ and $Q_b\succeq0$, all Gram matrices are bounded.
+Their limits retain every affine coefficient identity.  The actual
+affine Gram range is a closed finite-dimensional linear subspace,
+so those limiting matrices still have auxiliary preimages.  Source
+nonnegativity is closed as well.
+
+In the two exact closed-face lifts, the Gram diagonals are fixed
+linear functions of the source; bounded source coefficients bound
+every PSD entry and hence all auxiliary variables.  These coefficient
+cones are closed too.  Every transported source has affine constant
+$d+\sum c_e$, and Bell relabelings fix that constant.  A convergent
+sequence in either finite source sum therefore bounds the nonnegative
+mass of each summand.  Passing to a subsequence in each of finitely
+many closed source cones proves that $K_N$ is closed.
+
+Separate the point $f_*$ from this closed cone.  There is a nonzero
+$x\in K_N^*$ with $f_*\cdot x<0$.  The 16 event inequalities belong
+to $K_N$.  Their sum at each input is $4x_0$, so $x_0\geq0$.
+If $x_0=0$, all event evaluations vanish; their linear span is the
+full affine coefficient space, forcing $x=0$.  Hence $x_0>0$, and
+$x/x_0=(1,q)$ for an original eight-coordinate behavior.  By (RG2),
+$q\in\mathcal O_N$, while $f_*(q)<0$ implies $q\notin\mathcal Q_{222}$.
+Together with the soundness inclusion, this proves
+\[
+ \boxed{\mathcal Q_{222}\subsetneq\mathcal O_{8368},\qquad
+        \mathcal Q_{222}\subsetneq\mathcal O_{10736}.}             \tag{RG19}
+\]
+This is a strictness theorem, not an evaluated nonquantum point with
+all thousands of auxiliary coordinates printed.
+
+\subsection{Scope and execution record}
+
+The independent replay
+\nolinkurl{check_remembered_ray_global_transfer.py} passes 448 exact
+assertions and emits
+\nolinkurl{REMEMBERED_RAY_GLOBAL_TRANSFER.json}.  The separate C1
+replay passes 583 assertions.  These counts overlap and are not added.
+They corroborate the displayed algebra, rational positivity, literal
+current-map correspondence, and finite evaluation moments; the
+extremality, compactness and separation arguments above are analytical.
+
+The earlier status that the two global reverse inclusions were open is
+replaced by (RG19).  The original coefficient matrices, their exact
+outer-inclusion proofs, the exact symmetric C1 sector lift, C2
+reciprocity, and their previous provenance remain intact.  This
+correction does not refute any enlarged testing-feature cone, the
+separate C160 construction, or the existence of some finite SDP lift.
+An adequate replacement must enlarge the actual certificate space or
+use a different fixed feature construction.  Additional copies of
+already included Bell frames cannot remove this obstruction.

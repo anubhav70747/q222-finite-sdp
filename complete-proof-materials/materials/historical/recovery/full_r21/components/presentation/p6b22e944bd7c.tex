@@ -1,0 +1,374 @@
+\chapter{Completion of the strong C2 ordinary--small source chart}
+\label{component:p6b22e944bd7c}
+\noindent\textbf{Component }\path{p6b22e944bd7c}\par
+{\small\noindent Source: \path{R13/baseline/baseline/advances/ui/ui_all_tests_recovered.tex}\par}
+{\small\noindent SHA256: \path{6b22e944bd7c51d3c7e80d46a5a2db0b3ae5a6f6171dfe98a55787befe99a6e4}\par}
+{\small\noindent Inventory use: UA1--UA3 only: elementary real rank-one allocation lemma and proof | UA1--UA16 complete source openings, finite-cap approximation, remote/testing/projective endpoints and all state ratios | C1\_\allowbreak{}BARE\_\allowbreak{}OTHER\_\allowbreak{}TERMINALS; precise subordinate uses retained below\par}
+\medskip
+\section{Completion of the strong C2 ordinary--small source chart}
+\label{p6b22e944bd7c:sec:ui-all-tests-recovered}
+
+\begin{theorem}[Strong C2 UI, all independent tests]
+Use the original C2 source (UR1)--(UR3), with $d=1$, actual source
+angles $u_c=a>0$ a bounded unit and $v_c=k>0$ infinitesimal, and
+$C,\alpha$ strong. Then the entire parent (UR6) is a sum of squares
+in the tensor product of the independent source and testing fields,
+for every testing angle, including projective endpoints, and every
+homogeneous state. The statement retains the literal boundary $n=0$
+and arbitrary positive rates of every source opening.
+\end{theorem}
+
+The local contact certificate in Section~\ref{p76545700d90b:sec:local-ui-certificate}
+already covers $v$ infinitesimal and $u$ with the same residue as $a$.
+We supply its complete complement. No comparison between $v$ and $k$
+is made. The argument uses one elementary rank-one allocation, followed
+by short positive frames at the testing endpoints.
+
+\paragraph{A rank-one allocation lemma.}
+Let $P$ be a positive definite real symmetric matrix, let $\ell,b$ be
+real columns, and let $H,c_0>0$. Set
+\[
+ d=\ell^TP^{-1}\ell,\qquad e=\ell^TP^{-1}b,\qquad
+ h=c_2-b^TP^{-1}b.
+\]
+Suppose
+\[
+ p(T)=c_0+(h+4Hdc_0)T+4H(dh+e^2)T^2>0\quad(T\ge0),
+ \qquad dh+e^2>0.                                      \tag{UA1}
+\]
+There exists a real $\lambda$ such that
+\[
+ |\lambda|<\sqrt{4Hc_0},\qquad
+ h+2e\lambda-d\lambda^2>0.                             \tag{UA2}
+\]
+Indeed put $s=\sqrt{4Hc_0}$. If $d>0$ and $|e|<ds$, take
+$\lambda=e/d$. If $|e|\ge ds$, the value at the appropriate endpoint
+is $h+2|e|s-ds^2$. Were this nonpositive, writing
+$x=|e|-ds\ge0$ would give
+$h+ds^2\le-2sx$ and $dh+e^2\le x^2$; the quadratic in (UA1)
+would then have a nonpositive value at a positive argument. Thus a
+nearby interior $\lambda$ works. This includes equality $|e|=ds$.
+The scalar interval argument also holds in a limiting case $d=0$;
+then $e\ne0$ follows from $dh+e^2>0$. (For a finite positive $P$
+itself, $d=0$ would force $\ell=e=0$, so this case occurs only
+when using the continuous scalar extension at a boundary.)
+
+Consequently the two real matrices
+\[
+ \begin{pmatrix}P&b-\lambda\ell\\(b-\lambda\ell)^T&c_2\end{pmatrix},
+ \qquad
+ \begin{pmatrix}4H&\lambda\\\lambda&c_0\end{pmatrix}       \tag{UA3}
+\]
+are positive definite. This is an elementary real lemma. Its inverse
+and square root are never taken in the tensor ring.
+
+\paragraph{The finite ordinary angle away from contact.}
+Assume $v$ infinitesimal and $u$ a bounded unit whose real residue has
+square different from $a_0^2$. Keep the centered packets
+$P_L,P_C,P_n,P_m,P_\alpha$ of (UR12), (UR14) outside the Gram, and
+combine $P_H$ with the exact remainder. Use the six separated roots
+\[
+ r_0=uW-Y,\quad X,\quad Z,\quad V_0=vW,\quad K_0=kW,
+ \quad R_0=\frac{v(uX-Z)}{k}.                           \tag{UA4}
+\]
+They satisfy the exact zero relation
+\[
+ R_0K_0-(uX-Z)V_0=0.                                  \tag{UA5}
+\]
+All divisions in (UA4) are pure source divisions.
+
+For completeness the boundedness of the $C,D$ remainder in this frame
+is explicit. Write $\ell_0=L\tau$, $c_R=C\rho k^2$, and
+$Q=uX-Z$. Then (UR13) gives exactly
+\begin{align*}
+ G_{CD}+P_H={}&4\gamma R_0^2
+ +8\ell_0kK_0r_0+8\ell_0qk^2V_0Q-4\ell_0\tau k^2K_0^2\\
+ &+8c_RvV_0r_0-4c_R\rho k^2V_0^2.                  \tag{UA6}
+\end{align*}
+All displayed coefficients are bounded by (UR9)--(UR11); all terms
+except the first have zero residue. The $A$ packet is exactly
+$4(A/k^2)D_uD_v(uK_0-kr_0)^2$. Substituting
+$Y=uW-r_0$ in (UR15) and the signed core gives a bounded Gram on
+(UA4), with no discarded normal term. Its residue has an isolated
+$2r_0^2$ term. First suppose the leading source weights are finite.
+The remaining residue is
+\[
+ q_s^TPq_s+2V_0b_*^Tq_s+c_2V_0^2+4H R_0^2+c_0K_0^2,
+ \quad q_s=(X,Z)^T,                                  \tag{UA7}
+\]
+where $D_u=1+u^2$, $H=H_0$, $A_w=A_0^{\rm weak}$ are (RC3), and
+\[
+\begin{gathered}
+ P=\begin{pmatrix}
+ 4nD_u+4m+2&(4m+2)u\\
+ (4m+2)u&(4m+2)u^2+4\alpha D_u
+ \end{pmatrix},\quad \ell=(u,-1)^T,\\
+ b_*=\binom{-4mD_u}{-D_uu(4m+4\alpha+2)},\quad
+ c_0=4A_wD_uu^2,\quad
+ c_2=4mD_u^2+(4\alpha+2)D_uu^2.                      
+\end{gathered}
+\tag{UA8}
+\]
+The matrix $P$ is strictly positive because $m,\alpha$ are strong.
+The last sign-changing part of (UA7) is handled by adding
+$2\lambda$ times (UA5). This gives precisely the two blocks (UA3).
+
+Here is a direct proof of (UA1) for every ordinary angle away from
+contact. Put $N_*=2n+1$, $T_*=2m+2\alpha+1$, $U=u^2$, and
+$T=V^2$. The leading state polynomial (RC4), with its testing $a$
+replaced by $u$ but its source unchanged, has determinant
+\[
+ \det f=8D_u^2u^2V^2\,\mathcal L(U,T),                \tag{UA9}
+\]
+where
+\begin{align*}
+\mathcal L={}&\frac{4\alpha mN_*}{U}
+ +4A_wHT_*U+\frac{4A_w\alpha(2m+N_*)}{T}
+ +\frac{4A_wnT_*U}{T}\\
+ &+2HN_*T_*T+\frac{4HmN_*T}{U}
+ +4A_wH(2m+N_*)-N_*T_*.
+\end{align*}
+After division by $N_*T_*$ all possible opening poles cancel. Define
+\[
+ i_N=N_*^{-1},\quad t_m=m/T_*,\quad t_{am}=\alpha m/T_*,
+ \quad q_\alpha=\frac{\alpha(2m+N_*)}{N_*T_*},\quad i_\alpha=1/\alpha.
+\]
+Writing $z=a^2$, $A_c=1+zr$, and using the leading $\Delta$ of (RC3),
+these quantities are exactly
+\[
+\begin{aligned}
+ i_N&=\frac{r\Delta}{(b+r)A_c^2},&
+ t_m&=\frac{(1-r)(1-zb)}{2b(b+r)(z+1)},\\
+ t_{am}&=\frac{z^2(b+r)(1-r)}{4\Delta},&
+ q_\alpha&=\frac{bz^2\{(z+1)b+(z+2)r-1\}}{2A_c^2},\\
+ i_\alpha&=\frac{2(1-zb)\Delta}{z^2(z+1)b(b+r)^2}.
+\end{aligned}\tag{UA10}
+\]
+All denominators here are units. The normalized Laurent polynomial is
+\[
+ \frac{\mathcal L}{N_*T_*}
+ =\frac{4t_{am}}U+4A_wHi_NU+\frac{4A_wq_\alpha}T
+  +2A_w(1-i_N)\frac UT+2HT+4Ht_m\frac TU
+  +4A_wHq_\alpha i_\alpha-1.                         \tag{UA11}
+\]
+Its value and its two first derivatives vanish at $(U,T)=(z,1)$,
+as direct substitution verifies. In logarithmic coordinates the
+nonconstant terms have nonnegative coefficients. The coefficients of
+$U^{-1}$ and $T$ are positive units. If $i_N>0$, the coefficients of
+$U$ and $T^{-1}$ are positive; if $i_N=0$, that of $U/T$ is positive.
+The function is therefore strictly convex in logarithmic coordinates
+and has its unique minimum at $(z,1)$. This proves strict positivity
+at fixed $U\ne z$ for every $T>0$. The constant and leading
+coefficients of the equivalent quadratic (UA1) are strictly positive:
+$c_0>0$, and the positive $T$ coefficient in (UA11) gives the second
+assertion. Thus (UA2)--(UA3) prove the required strict residue Gram.
+
+\paragraph{Opening boundaries and divergent source weights.}
+The preceding proof extends to all allowed opening residues, rather
+than assuming $n,m,\alpha$ bounded. The following formulas make the
+needed uniformity checkable. Put
+\[
+ J_0=q_\alpha+\frac{u^2(1-i_N)}2.
+\]
+Then $J_0$ is a positive unit, and direct two-by-two inversion gives
+\[
+\begin{aligned}
+ \frac{\det P}{N_*T_*}&=8D_uJ_0,\\
+ d&=\frac{u^2i_N+q_\alpha i_\alpha}{4J_0},&
+ e&=\frac{uD_u}{2J_0},&
+ h&=\frac{D_u(4t_{am}-u^2)}{J_0},\\
+ (P^{-1}b_*)_1&=\frac{i_N(u^2-4t_{am})}{2J_0},&
+ (P^{-1}b_*)_2&=-\frac{u\{4t_{am}i_N+(1-i_N)u^2+1\}}{2J_0}.
+\end{aligned}\tag{UA12}
+\]
+To check the unit assertion, if $i_N=0$ then $J_0=u^2/2>0$.
+If $i_N>0$, the weight $N_*$ is finite and the strong lower bounds
+on $m,\alpha$ give $q_\alpha>0$: this follows directly from
+$\alpha(2m+N_*)/[N_*(2m+2\alpha+1)]$, whether both weights are
+finite or one diverges. Thus (UA12) has only unit denominators on
+the entire source residue domain.
+
+The strictly positive leading coefficient is also explicit:
+\[
+ dh+e^2=\frac{D_u(u^2+2t_m)}{2J_0}>0.
+\]
+Equations (UA10)--(UA12) prove continuity of $d,e,h$ and of the
+minimizing hard vector. The convexity proof for (UA11) remains strict
+at every allowed boundary. Choose $\lambda$ from the strict interval
+(UA2) at that boundary; the same strict inequalities hold nearby.
+Moreover $P$ is bounded below by a positive real matrix, while
+$P^{-1}b_*$ and $P^{-1}\ell$ are bounded. Its Schur factorization
+therefore bounds the first block in (UA3) below by a positive real
+multiple of the identity, uniformly in the nearby source. The second
+block is a strictly positive real matrix as well.
+
+The finite leading sources used in this limiting argument are valid
+real interior sources. This point must be established separately:
+the actual source has $b=h+(k^2/z)t$, and it is not legitimate to
+substitute that actual $b$ into a leading formula with denominator
+$1-zb$ when this denominator has an infinitesimal sign change.
+For the limiting real parameters, put
+\[
+ f(b,r)=1+r(z-1)-brz(z+1)-r^2z(z+2).
+\]
+Their domain is $b>0$, $0\le r<1$, $g=(1+z)b-1+r\ge0$,
+$1-zb\ge0$, and $f(b,r)\ge0$. For $0<s<1$, let
+\[
+ b_s=sb+(1-s)/(1+z),\qquad r_s=sr.
+\]
+Direct expansion gives
+\[
+ g_s=sg,\qquad 1-zb_s>0,\qquad
+ f(b_s,r_s)=(1-s)(1+s-sr)+s^2f(b,r)>0.
+\]
+Increase $b_s$ by a sufficiently small $\epsilon>0$. This makes
+$g_s$ strict, decreases the last two strict margins by respectively
+$z\epsilon$ and $r_sz(z+1)\epsilon$, and therefore preserves them.
+If $r=0$, then increase $r_s$ by a sufficiently small positive
+amount; $g$ increases and $f$ remains positive by continuity.
+Letting these perturbations tend to zero as $s\to1$ supplies valid
+finite real leading sources approaching every allowed residue.
+Their $t$ may be chosen as $(1+zr)/2$, since the leading harmonic
+weight is independent of $t$. The normalized leading identity
+$2rn\Delta=bf(b,r)$ verifies the nonnegative-$n$ requirement.
+The same construction supplies the real-interior approximation
+used in the finite-cap step of the local UI certificate.
+
+At most two of $n,m,\alpha$ diverge: $m$ can diverge only at $g=0$,
+and $\alpha$ only at $1-zb=0$, which cannot occur together. Their
+centered excess rows have hard-state parts proportional to
+\[
+ X,\qquad X+uZ,\qquad Z.
+\]
+Any possible pair is independent because $u$ is a unit. For a vector
+in their common limiting kernel, change only $(X,Z)$ by a vanishing
+amount to annihilate the corresponding nearby exact rows. Their
+large penalties then vanish exactly. Taking the limit in the uniform
+strict lower bound proves that the bounded finite part is strictly
+positive on that limiting kernel. The elementary finite-dimensional
+penalty lemma used in the local theorem now supplies finite real caps
+$n_*,m_*,\alpha_*$. Their centered excesses are precisely the retained
+packets (UR14). The exact bounded remainder with those caps, after
+adding (UA5), has a strictly positive residue Gram on (UA4).
+This proves the finite ordinary-angle complement for all source
+openings and literal $n=0$.
+
+\paragraph{Endpoint frames.}
+Choose positive real $\mu,m_*,\alpha_*$ below, respectively,
+$k^2C,k^2D$, $m$, and $\alpha$. The products $k^2C,k^2D$ are strong
+by (UR5), and $A_w=A/k^2$ is a positive unit. Retain $n$ and all
+positive excesses in full. The following formulas concern the parent
+with $C=D=\mu/k^2$, $m=m_*$, $\alpha=\alpha_*$ and $A=A_wk^2$.
+They therefore suffice. The root coordinates need not themselves be
+bounded; only their displayed Gram coefficients must be bounded.
+
+At $u,v$ infinitesimal use
+\[
+ E=(uW-Y)/k,\quad R=v(uX-Z)/k,\quad V=vW,\quad K=kuW,
+ \quad X,Z.
+\]
+The exact amplitudes are
+\[
+ J=k(E+R),\quad M=D_uV-X-uZ-uvkE,\quad
+ vY-Z=uV-Z-vkE,\quad kY=K-k^2E.
+\]
+Their full residue form is
+\[
+ 4\mu\{E^2+(E+R)^2\}+4m_*(V-X)^2+4\alpha_*Z^2
+       +4\overline{A_w}K^2+2X^2,                    \tag{UA13}
+\]
+which is strict. Literal zero testing angles are included without
+any division by a testing angle.
+
+For bounded $u$ and finite unit $v$, put
+$E=(uW-Y)/k$, $F=J/k$. Then
+\[
+ Y=uW-kE,\quad Z=uX+k(E-F)/v.
+\]
+The roots $(E,F,W,X)$ have strict residue
+\[
+ 4\mu D_vE^2+4\mu F^2+
+ \{4m_*D_u^2+(4\alpha_*+2)D_uu^2\}(vW-X)^2
+ +2D_vD_uX^2.                                      \tag{UA14}
+\]
+For bounded $u$ and $v=\infty$ write $q=1/v$ and homogenize by $q^2$.
+The same roots are defined using the homogeneous $J$, and
+\[
+ Y=uW-kE,\qquad Z=uX+kqE-kF.
+\]
+The strict residue is (UA14) with $D_v=1$ and $(vW-X)^2$ replaced
+by $W^2$. This includes the literal endpoint $q=0$.
+
+For $u=\infty$, put $p=1/u$, $D_p=1+p^2$, and homogenize by $p^2$.
+Write $r_p=W-pY$, $Q_p=X-pZ$, and $P=vY-Z$. Then
+\[
+ J=r_p+vQ_p,\qquad M=D_pP-pQ_p+pv r_p.
+\]
+For $v$ infinitesimal use the six roots
+\[
+ E=r_p/k,\quad F=vQ_p/k,\quad P,\quad R=pQ_p,
+ \quad K=kY,\quad S=pZ.
+\]
+The signed core is exactly
+\[
+ 2k^2(E+F)^2+2D_pP^2+2D_vR^2-4D_pD_vRP
+    +4D_pD_vpFK+2D_pD_vS^2.
+\]
+Its cross-term reduction uses $RvY=pFK$, an exact identity.
+Adding every capped packet gives the strict residue
+\[
+ 4\mu\{E^2+(E+F)^2\}+(4m_*+2)(P-R)^2
+ +4\alpha_*P^2+4\overline{A_w}K^2+2S^2.             \tag{UA15}
+\]
+For finite unit $v$, instead use $E=r_p/k$, $F=J/k$, $P,K,S$.
+Since $Q_p=k(F-E)/v$, the strict residue is
+\[
+ 4\mu D_vE^2+4\mu F^2+(4m_*+4\alpha_*+2)P^2
+ +4\overline{A_w}D_vK^2+2D_vS^2.                   \tag{UA16}
+\]
+Finally, at both infinite endpoints put $q=1/v$ and homogenize by
+$p^2q^2$. Use
+\[
+ E=(W-pY)/k,\quad F=(qW+X-pqY-pZ)/k,\quad
+ P=Y-qZ,\quad K=kY,\quad S=pZ.
+\]
+Here $M=D_pP+pkD_qE-pqkF$ and the entire signed core is
+\[
+ 2k^2F^2+2D_pP^2+2D_qp^2k^2(F-qE)^2
+ +4D_qD_pk(F-qE)S+2D_qD_pS^2.
+\]
+The strict residue is (UA16) with $D_v=1$.
+
+\paragraph{Exhaustion and restoration.}
+A testing angle is infinitesimal, a bounded unit, or projectively
+infinite. Equations (UA13)--(UA16) cover every pair except ordinary
+$u$ with infinitesimal $v$. The local theorem covers the equal-residue
+contact, and (UA4)--(UA12) cover its complement. Exact sign gauges are
+\[
+ (u,W,X)\mapsto(-u,-W,-X),\qquad
+ (v,W,Y)\mapsto(-v,-W,-Y);
+\]
+all unspecified variables are fixed. Both preserve the full parent,
+so negative ordinary contact residues are included. All endpoint
+frames have been written after homogenization, including literal
+projective endpoints. Each proof has an exact bounded Gram with
+strict real residue; the strict-residue Gram lemma gives tensor SOS.
+Restoring all retained packets completes the original parent.
+Real and imaginary parts treat complex states. This closes the
+entire strong C2 UI admission and its exact symmetry image HU.
+
+\paragraph{Reproducibility.}
+The recovered endpoint and allocation identities are replayed by
+two scripts:
+\begin{itemize}
+\item \path{check_ui_projective_recovery.py}: seven exact checks.
+\item \path{check_ui_all_tests_recovery.py}: thirty-one exact checks.
+\end{itemize}
+Those scripts verify symbolic equalities, sign gauges, all five
+pole-free formulas, determinant factorization, contact derivatives,
+and displayed endpoint residue forms. The explicit real interior
+approximation also incorporates the same-system mathematical audit
+in \path{ui_boundary_audit.tex}; it is not an independent
+external verification. Positivity, boundedness and
+exhaustion are supplied by the preceding analytical arguments;
+passing algebraic checks alone is not used as their substitute.

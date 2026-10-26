@@ -1,0 +1,213 @@
+\section[An infinitesimal native r with unit eta and unit e]{An infinitesimal native $r$ with unit $\eta$ and unit $e$}
+
+\begin{theorem}[The centered-$A$ unit-$e$ slice]
+Use the physical native C1 source with its unchanged original events,
+$c=2$, $\lambda=n=0$, all positive openings $a,t,M,J$, and all original
+nonnegative signs, including literal $\beta=0$.
+Suppose $k,\zeta,r=1-a\eta$ are positive infinitesimals, while
+$\eta$ and $e=k\sqrt{\eta/\zeta}$ are positive bounded units.
+Then the full parent is tensor SOS at every independent projective test
+and every real or complex state. No bound on $k^2/r$ is imposed.
+\end{theorem}
+
+The theorem is restricted to unit $e$. Its proof uses $\delta^{-1}$
+as a bounded pure coefficient number; it does not assert the cases of
+infinitesimal or unbounded $e$.
+
+\paragraph{Centering the sole large event.}
+The exact native contact has $Y_c=r u_cW_c$. Consequently
+\[
+ L_A=Y-r uW
+\]
+vanishes at contact with no asymptotic replacement. The native formulas
+give $a$ a positive unit, $A$ unbounded and $Ar$ a positive unit of
+residue $2$. Put $A_*=1/a$, a positive bounded pure coefficient unit.
+The complete packet
+\[
+             4(A-A_*)D_uD_v L_A^2                         \tag{CA1}
+\]
+is positive and has zero value and full first derivative at the exact
+native contact. Retain it as a square.
+
+It is essential to center this packet before taking residues.
+The remaining $A$ channel is exactly
+\[
+ 4A_*D_uD_vL_A^2+
+ 4(Ar)D_uD_v\{2uWY-r u^2W^2\}.                         \tag{CA2}
+\]
+Only $Ar$ and $r$ occur in its coefficients. In particular this is a
+bounded expression for every positive rate of $r$ relative to $k$.
+
+\paragraph{A source chart with no hidden $k^2/r$ quotient.}
+Keep the exact contact variables $\delta,k,E=b^2$ from (SD6), and put
+\[
+ K=1+k^2,\quad \ell=K-aE=Qr>0,\quad
+ Q=K^2-\ell k^2,\quad a=(K-\ell)/E.
+\]
+Here $\delta,E,a$ are positive bounded units and $k,\ell$ are positive
+infinitesimals. The exact source substitution is
+\[
+ \eta=KE/Q,\quad r=\ell/Q,\quad
+ \Delta=\delta Q/K,\quad \zeta=\delta^2k^2QE/K,
+ \quad R=K^2/Q,\quad T=K-k^2t\zeta.                    \tag{CA3}
+\]
+All denominators in (CA3) are positive pure coefficient units.
+For $i=2,b,3,5,\alpha,d$ let $\widetilde c_i=c_i/\ell$,
+defined by cancelling the explicit $L_c=\ell/Q$ factor in the short
+native formulas. This cancellation gives rational expressions with
+unit denominators; it does not leave an inverse of $\ell$.
+For example, writing $H_c=r+\eta$ and $V_c=k^2\eta\zeta$,
+\[
+ \widetilde c_3=\frac{2KH_cQ_c(1-k^2\eta+tV_c)}Q,
+ \qquad \widetilde c_d=\frac{4Q_cP_d}Q.
+\]
+Their residues are $2E$ for $i=2,b,3,5,\alpha$, and $4$ for $i=d$;
+$c_4$ has residue $2$.
+
+Define the following bounded pure coefficient quantities:
+\[
+ \begin{array}{ll}
+ B_2=\dfrac{8a\widetilde c_2}{R\widetilde c_3\Delta^2},&
+ B_b=\dfrac{8a\widetilde c_b}{R\widetilde c_3\Delta^2},\\[4pt]
+ B_3=8a/T,&B_5=\dfrac{8a\widetilde c_5}{T\widetilde c_3},\\[4pt]
+ L=Ar=\dfrac{2a\eta^2c_4}{Q\widetilde c_3},&
+ d=\dfrac{2a\eta\widetilde c_d}{\widetilde c_3},\\[4pt]
+ \alpha=\dfrac{2a\Delta^2k^6\eta^2\widetilde c_\alpha}
+                    {\widetilde c_3}.&
+ \end{array}                                                     \tag{CA4}
+\]
+These formulas explicitly account for the cancellation needed below.
+
+\paragraph{The exact full remainder, before any collection.}
+Retain the four original (SD3) packets, divided by the positive source
+factor $\Delta^2\Lambda$, and retain (CA1). Use the unchanged pure
+testing coordinate $w=(W+uY)/D_u$ and the hard normals $N,M_B$.
+For $Z=1$ put $p=t/R$, $h=a/T$ and
+\[
+ q_A=vD_uw,\quad q_B=v(D_u-uN-puD_uv w),
+\]
+\[
+ W=w+u(M_B+hq_B)/D_u,\qquad
+ Y=uw-(M_B+hq_B)/D_u.
+\]
+The complete remainder is exactly
+\begin{align*}
+\mathscr G={}&B_2\{N^2-2q_AN+(1-p)q_A^2\}
+ +B_bD_v\{N^2+2q_AN+pq_A^2\}\\
+&+B_3D_v\{M_B^2+2q_BM_B+hq_B^2\}
+ +B_5\{M_B^2-2q_BM_B+(1-h)q_B^2\}\\
+&+4A_*D_uD_v(Y-r uW)^2
+ +4LD_uD_v(2uWY-r u^2W^2)\\
+&+4\alpha D_u(vY-1)^2
+ +2dD_u\{(vY-1)^2-D_v\}.                         \tag{CA5}
+\end{align*}
+There are no normal terms above degree two. Every coefficient of
+(CA5) is bounded. The only testing denominator is a power of the
+positive unit $D_u$; every source denominator in (CA3)--(CA5) is a
+positive unit. The possibly unbounded opening ratios remain exclusively
+in the four retained positive packets.
+
+\paragraph{The exact low-weight collection.}
+The outer/state lemma in \texttt{centered\_a\_outer.tex} reduces the
+independent tests to $Z=1$ and $u,w,v$ infinitesimal, with $w>0$ on
+the negative pure-core branch. Use the unchanged circuit monomials
+\[
+ A_0=wv,\quad B_0=\delta v,\quad C_0=\delta Euw,
+ \quad D_0=\delta^2k^3E,
+\]
+\[
+ x=B_0-C_0,\quad y=A_0-kC_0,\quad
+ z=uB_0-kC_0,\quad h_0=kC_0-D_0.
+\]
+Let $q_1,q_2$ be the same two separated radical pairings as in the
+contact--conductor proof, and let
+\[
+ T_4=y^2+z^2+h_0^2-2yz+2q_1^2.
+\]
+Give $(\delta,k,E,\ell,t,u,w,v)$ weights $(0,1,0,1,0,1,1,2)$.
+Then $x$ has weight two and $y,z,h_0,q_1,q_2$ have weight three.
+Denote the scalar of (CA5) by $S$, and its two complete first normals
+by $L_N,L_M$. Direct multiplication of (CA3)--(CA5) through the
+indicated weights gives
+\[
+ \begin{aligned}
+ S_{\le6}&=\frac{4P}{E^4\delta^2}x^2
+ -\frac{16(k+u)}{E^2\delta^2}xz
+ +\frac8{E\delta^2}T_4,\\
+ (L_N)_{\le3}&=0,\\
+ (L_M)_{\le3}&=
+ \frac{8\{E^2+2E-2\ell(E+1)\}}{E^2\delta}\,x,
+ \end{aligned}                                                   \tag{CA6}
+\]
+where the short coefficient polynomial is
+\[
+ \begin{split}
+ P={}&E^2(E+4)-E(E^2+6E+4)\ell+2(E+1)(E+2)\ell^2\\
+ &+E^2(8-3E)k^2+4E^2ku+E^2(E+4)u^2.
+ \end{split}
+\]
+The full hard-normal block, from the quadratic part of (CA5), has
+residue
+\[
+       \operatorname{diag}\left(\frac{16}{E\delta^2},
+                                \frac{4(E^2+4)}E\right).          \tag{CA7}
+\]
+Here and in the residue Grams, $E,\delta$ denote their positive
+residues. Formula (CA6), rather than a large expansion, is the finite
+coefficient identity used by the proof. Its 37 raw scalar monomials
+collect to the displayed three terms. The exact checker reconstructs
+the six cancelled native coquotients, the entire expression (CA5),
+and both complete normals before making this collection.
+
+\paragraph{Why all higher terms have harmless coefficients.}
+The scalar of (CA5), after clearing the stated units, belongs to
+$(A_0,B_0,C_0)^2+(D_0^2)$. This follows directly from $q_A=wvD_u$,
+$q_B|_{N=M_B=0}\in(v)$, and $Y,W$ in (CA5): the centered scalar
+$Y-r uW$ lies in $(v,uw)$; its square is in the same raw monomial
+square ideal since $\delta,E$ are units. The sole constant state term
+comes from $\alpha$, which has the factor $k^6$, and is a bounded
+unit multiple of $D_0^2$. Both full first normals belong to
+$(A_0,B_0,C_0)$ by the same displayed expression.
+
+All retained packets vanish to first order at the exact contact
+\[ (u,w,v,N,M_B)=(k,\delta k,\delta k^2E,0,0). \]
+Thus the scalar belongs to the square of its contact ideal and the
+first normals belong to that ideal. The unchanged monic
+contact--conductor identities therefore apply, over the coefficient
+ring in which only the displayed positive units have been inverted.
+They never divide by $k$, $\ell$, $M$, $J$, $t$, or a contact difference;
+the displayed $1/a$ is the inverse of a known positive unit.
+The contact substitutions preserve the new weights. After (CA6) is
+subtracted, scalar weights are at least seven and normal weights at
+least four. Their lifted coefficients consequently have positive
+weights, hence zero residues. Clearing the finitely many unit
+denominators before this polynomial lift and restoring them afterward
+changes no residue sign and introduces no mixed inverse.
+
+\paragraph{Strictness, full normals, and restoration.}
+The leading scalar is
+\[
+ \frac{4(E+4)}{E^2\delta^2}x^2+\frac8{E\delta^2}T_4.
+\]
+The standard two-pairing circuit supplies a strict Gram on
+$(y,z,h_0,q_1,q_2)$. The only nonzero first-normal residue is
+$8(E+2)x/(E\delta)$, the coefficient of the full normal $M_B$.
+Accordingly the coupled $(M_B,x)$ Gram is
+\[
+ \begin{pmatrix}
+ 4(E^2+4)/E&4(E+2)/(E\delta)\\
+ 4(E+2)/(E\delta)&4(E+4)/(E^2\delta^2)
+ \end{pmatrix},\qquad
+ \det=\frac{256}{E^3\delta^2}>0.                      \tag{CA8}
+\]
+Together with the independent $N$ pivot in (CA7), this gives a
+bounded strict eight-root Gram for the entire remainder (CA5).
+Restore (CA1), all four original positive packets, and all separated
+normalization factors. The outer/state lemma exhausts the remaining
+tests; real and imaginary state evaluations give the complex case.
+
+This proves precisely the stated unit-$e$, unit-$\eta$,
+infinitesimal-$r$ slice. Combined with the bounded-unit-$r$ theorem,
+it covers every positive $r$ when $\eta,e$ are bounded units and
+$k,\zeta$ infinitesimal. It makes no assertion about unbounded
+$\eta$ or either nonunit alternative for $e$.

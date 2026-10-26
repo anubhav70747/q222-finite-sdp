@@ -1,0 +1,122 @@
+TWO RATIONAL C1 SOURCES: PHYSICAL VALIDITY AND FULL-POLAR EXTREMALITY
+Independent bounded audit, 26 October 2026
+
+Verdict. All physicality and extremality claims assigned from web task 4
+are correct. The verification is independent of the seven-root separator
+and of a universal native-C1 certificate theorem. The companion script
+reconstructs the physical Pauli parent, checks the two determinant
+identities, and reproduces the two quoted full-Bell minors exactly.
+There are 23 exact checks; the matching JSON records their results.
+
+1. Source and parent conventions.
+
+Active order is (d,m,C,A,D,alpha,beta), with lambda=n=0. The two sources are
+ c_int=(1,20/29,12/29,13/58,51/58,3/29,3/58),
+ c_bdy=(1,5/6,3/10,1/3,2,1/13,0).
+NC1--NC4, latex/certificates/c1_short.tex, give these exactly at
+ x=1, eta=zeta=theta=1/2,
+ r=1/2 or 3/8 respectively. In both cases h=1/2, y=1/4, t=1;
+the native a values are 1 and 5/4. All strict gaps hold. In order
+(E,Q,M,J,B5,Bbeta), their values are
+ (3/4,3/4,1/2,1/2,51/32,3/16),
+ (3/4,13/16,3/8,1/4,7/4,0).
+Thus the second source has a literal allowed beta=0, not a limiting
+division by beta. Both have D>0 and all other required positive weights.
+
+For an independent physical reconstruction use A0=B0=Z and
+ A1=((1-u^2)Z+2uX)/(1+u^2),
+ B1=((1-v^2)Z+2vX)/(1+v^2).
+Set H=I-(A0B0-A0B1+A1B0+A1B1)/2. For each losing event
+(epsilon,delta|i,j), its four-times-probability operator is
+(I+epsilon Ai) tensor (I+delta Bj). The event order is
+ (++|01),(+-|00),(+-|11),(-+|10),(-+|00),(-+|11),(--|01),(+-|10).
+The script verifies separately that all nine cleared operator columns
+coincide with the rank-one packets of SG2. Let P be the resulting raw
+matrix, so P=(1+u^2)(1+v^2) times the normalized Bell operator.
+
+The own contacts are (u,v)=(1,1/2) and psi=(1,-1/2,r,1).
+Both P psi=0 and the two scalar angular jets vanish exactly. These are
+four kernel equations and two scalar first derivatives, with no
+identification of independent testing angles with the source contact.
+
+2. Determinant certificates and global physicality.
+
+Put U=u^2,V=v^2,T=4V and define
+ M1=(UT)^2+U+T-3UT,
+ M2=U^2T+T^2+U-3UT.
+Their three positive summands have product (UT)^3, so both expressions
+are nonnegative for all U,T>=0 by elementary AM--GM (including axes by
+continuity). The exact FULL determinants are
+ det P_int=(18432/707281)(1+u^2)^2(1+v^2)^2 G_int,
+ det P_bdy=(64/585)(1+u^2)^2(1+v^2)^2 G_bdy,
+where
+ G_int=670 V(U-1)^2+(449/2)U(T-1)^2+(55/2)M1+255M2,
+ G_bdy=235 V(U-1)^2+(153/2)U(T-1)^2+(295/2)M2.
+These identities were recomputed as exact four-by-four determinants of
+the independently reconstructed state matrices, not inferred from SG5.
+
+For (u,v)!=(0,0), the upper-left three-state block is positive definite.
+Indeed its nonnegative terms include
+ 2d[(uW+uvX-Y)^2+(1+u^2)v^2Y^2+(1+v^2)X^2]
+ +4A(1+u^2)(1+v^2)Y^2
+ +4m(vW-X+uvY)^2.
+Vanishing forces X=Y=0 and then uW=vW=0, hence W=0.
+Here d,A,m>0 for BOTH sources. Consequently Schur complementation
+turns the nonnegative determinant into full P>=0 at every nonzero
+finite pair. This also proves the stronger block claim on either axis,
+not only when uv!=0.
+
+At u=v=0 the matrices are respectively
+ diag(0,144/29,234/29,12/29),
+ diag(0,16/3,188/15,4/13),
+so the origin is included directly. Homogenizing with separate
+half-angle pairs yields continuous PSD matrices at all projective
+endpoints. Negative angle signs are already covered by U=u^2,V=v^2
+and the block argument. Real symmetric PSD gives positivity on complex
+states as well. The usual two-observable Jordan reduction then extends
+this two-qubit calculation to the full bipartite (2,2,2) quantum set.
+No stationary-contact sufficiency theorem is imported here.
+
+3. Extremality in the FULL Bell polar, not just a canonical orthant.
+
+Take arbitrary nine Bell coefficients in order
+ (1,A0,A1,B0,B1,E00,E01,E10,E11).
+At the stated quantum contact impose four NORMALIZED operator-kernel
+equations and the two scalar u,v expectation derivatives with the
+unnormalized fixed psi above. Add evaluations at the deterministic
+points, in order (A0,A1,B0,B1),
+ v_lambda=(1,1,1,1), v_n=(1,-1,-1,-1).
+These are the two actual deterministic zeros of either source.
+The resulting eight-by-nine matrix has first-eight-column minor
+ -576/125 for c_int,
+ -273/100 for c_bdy.
+The quoted values are thus correct with this precise normalized-
+operator/scalar-jet convention. Raw cleared operators or state-gradient
+rows would change these numbers. The script also reconstructs each
+full Bell coefficient vector and checks that it lies in this kernel.
+
+For completeness, let f=f1+f2 with each summand quantum valid in the
+full Bell coefficient space. Nonnegativity makes both summands vanish
+at the two deterministic zeros and at the quantum contact. At fixed
+angles their state operators are PSD; zero expectation therefore gives
+the four kernel equations. At an interior finite angular contact,
+their smooth nonnegative expectation functions have zero first
+derivatives. Thus each summand satisfies the SAME eight linear rows.
+Rank eight forces it to be proportional to f. Its proportionality
+constant is nonnegative, since f is strictly positive at the uniform
+quantum behavior and its negative multiple would fail there. Hence
+each displayed source spans an extreme ray of the full quantum polar.
+This reasoning does not assume summand event coefficients nonnegative
+and does not require summands to lie in the canonical orthant.
+
+As an additional exact consistency check, H at the normalized contacts
+is -8/25 and -218/765 respectively. Neither contact is local.
+
+Scope. These two explicit sources are globally quantum valid and
+full-polar extreme, including the literal beta=0 source. This audit
+does not check the seven-root Gram separator, generalize to every C1
+source, establish a larger finite certificate cone, or solve the full
+eight-coordinate finite-lift problem.
+
+Replay: py -3.14 analysis/c1_rational_validity_audit_2026_10_26.py
+Last replay: all 23 exact checks passed, about 1.5 seconds, no solver.

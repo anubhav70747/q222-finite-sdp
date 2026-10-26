@@ -1,0 +1,291 @@
+# Global sign entry for the adjacent contact family
+
+## Statement and exact scope
+
+Use the canonical full parent in coefficient order
+\(c=(d,\lambda,e_1,e_2,e_3,e_4,e_5,\alpha,\beta)\).
+On the adjacent face \(\lambda=e_1=0\), assume d>0 and initially that the other six event
+coefficients are strictly positive. Normalize \(e_3=2\). At a physical
+noncommuting zero take the angle gauges \(u,v>0\) and normalize the last
+kernel coordinate to one:
+\[
+\psi=(A,u(\eta-1),uY,1)^T.
+\]
+Then
+\[
+\boxed{A>0,\qquad 0<Y<A,\qquad 0<\eta<1.}
+\tag{1}
+\]
+These are actual ordered-field inequalities, with no residue or rate
+assumptions. The assertion holds over every real closed extension of the
+reals. It applies to every such boundary contact, without an extremality
+assumption. Section 6 extends the result to the exact three-consecutive-omission
+boundary. This is a sign theorem, not an SOS certificate for the full family.
+
+The proof uses the established full-parent determinant, strict curvature,
+and contact sufficiency theorems. Its only new continuity argument is
+spelled out below; connectedness is used on a specified positive parameter
+orthant, not assumed for an unspecified contact locus.
+
+## 1. Every positive event tuple has one analytic maximal-signed contact
+
+Put \(w=(e_2,e_4,e_5,\alpha,\beta)\in\mathbb R_{>0}^5\), retaining
+\(e_3=2\), and define
+\[
+d_*(w)=\max\{d\ge0:(d,0,0,e_2,2,e_4,e_5,\alpha,\beta)\in C\}.
+\tag{2}
+\]
+This maximum exists, is strictly positive, and is finite. Closedness and
+convexity give a closed interval of admissible nonnegative d. At d=0 all
+outer determinant coefficients are nonnegative, and the central coefficient
+is strictly positive: its nonnegative expansion contains
+\(16e_2e_3e_4e_5\). For sufficiently small d>0 the central coefficient
+remains positive and all outer coefficients remain nonnegative, proving
+physicality by full-parent inertia. Testing a fixed strictly CHSH-violating
+realization bounds d above.
+
+For these six positive events the determinant support is a fixed
+two-dimensional support with zero in its interior. The logarithmic Laurent
+determinant therefore is strictly convex and coercive. At d=d_* its minimum
+must be zero: a strictly positive minimum is stable under small increases
+of d, by the uniform supported-perturbation estimate in the routing proof.
+Thus the minimum supplies unique squared contact angles \(U=u^2,V=v^2>0\).
+The parent has three positive eigenvalues, so its kernel is simple. The
+established packet argument shows that its last coordinate is nonzero.
+Consequently the chosen positive angles and normalized kernel are unique.
+
+At this contact the core expectation is strictly negative. Indeed,
+\[
+0=d_*\,\psi^TH\psi+\sum_i w_i\,\psi^TE_i\psi.
+\]
+If all retained expectations vanished, all retained event matrices would
+annihilate the state and the kernel equation would give H psi=0. The core
+is invertible at a finite noncommuting pair, a contradiction. At least one
+expectation is positive, and d_*>0, giving \(\psi^TH\psi<0\).
+
+Let z consist of the three affine state coordinates and two positive
+angles, and let f(d,w,z) be the full polynomial parent slack. Its complete
+five-variable contact Hessian is positive definite. The equations
+\[
+\nabla_z f=0,\qquad f=0
+\]
+have Jacobian with respect to (z,d)
+\[
+\begin{pmatrix} \nabla_z^2 f&\partial_d\nabla_z f\\
+0&\partial_d f\end{pmatrix},
+\]
+which is invertible because the upper block is positive definite and
+\(\partial_d f=\psi^TH\psi<0\). The Nash implicit function theorem gives
+a local analytic branch of d and z. Stationary-contact sufficiency makes
+that branch physical; its negative core expectation prevents increasing d
+at the fixed test. Thus it equals d_*(w), with the unique chosen contact.
+These branches agree on overlaps, giving analytic functions on the entire
+connected orthant \(\mathbb R_{>0}^5\).
+
+## 2. A>0 from the negative CHSH cone
+
+Write an arbitrary real state as (A,X,Y_s,Z). Set
+\(h=1+v^2+u^2v^2\). The X,Y_s block of the raw core H is
+\[
+2\begin{pmatrix}h&-uv\\-uv&h\end{pmatrix}\succ0.
+\]
+Its Schur complement on A,Z is
+\[
+\frac{2(1+u^2)(1+v^2)}{h^2-u^2v^2}
+\begin{pmatrix}u^2v^2&-uvh\\-uvh&u^2v^2\end{pmatrix}.
+\tag{3}
+\]
+For AZ<=0 its quadratic form is nonnegative. Completing the X,Y_s square
+then gives psi^T H psi>=0. Every contact above has negative core
+expectation, so AZ>0. With Z=1, this proves A>0.
+
+Every physical noncommuting contact with this fixed event tuple is on the
+maximal graph (2): its negative core expectation means that increasing d
+at the fixed test immediately produces a negative slack.
+
+## 3. eta>0 from a positive cofactor identity
+
+Let B=adj(P). At contact B=gamma psi psi^T for gamma>0, and hence
+\[
+u B_{44}+B_{24}=\gamma u\eta.
+\]
+Here indices are one-based. Direct full-parent expansion gives
+\[
+u B_{44}+B_{24}=16uv^2(1+u^2)^2(1+v^2)\,F_\eta,
+\tag{4}
+\]
+where, writing Dv=1+v^2,
+\[
+\begin{aligned}
+F_\eta={}&(d+2e_5)\big[(d+2\alpha)(e_2Dv+e_3u^2v^2)
+                 +2e_4Dv(e_2+e_3u^2)\big]\\
+&+2e_2e_3\big[d(u^2v^2+Dv)+2\alpha+2e_5v^2(1+u^2)\big].
+\end{aligned}
+\tag{5}
+\]
+Every term is nonnegative, and d,e2,u,v>0 give strict positivity.
+Thus eta>0 throughout the contact graph.
+
+## 4. The three remaining sign walls cannot be crossed
+
+At any physical zero, a retained event with zero amplitude can be removed
+while preserving the kernel and angular stationarity equations: the event
+value and every first derivative of its squared amplitude vanish there.
+The stationary-contact theorem makes the resulting nonnegative coefficient
+vector physical. A physical d>0 vector with noninterior Newton support,
+however, cannot have a noncommuting zero, by the routing theorem.
+
+If Y=0, the retained e4 event vanishes. Removing it gives omissions
+lambda,e1,e4, including the distant pair lambda,e4. If A-Y=0, the retained
+e3 event vanishes, and its removal gives the distant omitted pair e1,e3.
+Both contradict the preceding paragraph. Therefore Y and A-Y never vanish.
+
+For eta=1, use the exact cross-multiplied contact identity
+\[
+e_2\,[A+uv(\eta-1)]\,[v(A+u^2Y)-u\eta]
+=2u^3(A-Y)(1-\eta)(1+v^2).
+\tag{6}
+\]
+To justify (6) even when a selected Cramer minor vanishes, first derive it
+on the nonzero-minor locus from the verified rational contact solution.
+The selected minor is an analytic function on the connected positive event
+orthant. It is not identically zero, as the exact seed in Section 5 shows.
+A nonzero analytic function on a connected open set cannot vanish on an
+open subset; hence the nonzero-minor locus is dense. Both sides of (6) are
+continuous on the entire analytic contact graph, so (6) extends everywhere.
+This explicitly handles exceptional Cramer points.
+
+At eta=1, A>0 and e2>0 make (6) force
+\(v(A+u^2Y)-u=0\), which is precisely the retained e2 amplitude. Removing
+e2 gives the distant omitted pair lambda,e2, again impossible. Hence eta-1
+never vanishes.
+
+The continuous nonzero functions Y, A-Y, and eta-1 have fixed signs on the
+connected positive event orthant. The exact seed gives their signs.
+
+## 5. Exact positive seed and transfer
+
+Take
+\[
+u=v=A=1,\quad Y=\tfrac14,\quad\eta=\tfrac12,
+\]
+\[
+c=\left(\tfrac{27}{2},0,0,4,2,9,\tfrac54,
+                 \tfrac{13}{4},\tfrac94\right).
+\tag{7}
+\]
+The complete parent kernel and both angle stationarity equations hold
+exactly; the selected Cramer minor is nonzero. All six event weights are
+positive. Contact sufficiency therefore places it on the graph (2). It
+has Y>0, A-Y>0, and eta-1<0. The previous section proves (1) over the reals.
+
+The final implication is a finite first-order assertion in the coefficient,
+state and angle variables: physicality is expressed by quantified
+polynomial PSD inequalities; the kernel and stationarity equations are
+polynomial; positivity of u,v,d and the six retained events and the desired
+signs are ordered-field formulas. Transfer proves (1) over every real
+closed extension. No logarithm or analytic continuation is used within a
+non-Archimedean field.
+
+## 6. Exact three-consecutive omissions
+
+After choosing the adjacent omitted pair lambda=e1=0, a three-consecutive
+omission has either beta=0 or e5=0. The other five events are positive.
+At any real finite noncommuting contact with d>0, the full Hessian remains
+positive definite and the core expectation remains strictly negative by
+the same established theorems. Apply the implicit function argument of
+Section 1 at this boundary tuple and open its third omitted coefficient
+to epsilon>0, keeping the other event weights fixed. For sufficiently
+small epsilon the signed coefficient stays positive and the branch has
+nonnegative coefficients. Stationary-contact sufficiency makes it physical.
+Thus it belongs to the six-positive-event graph already treated.
+
+Taking the analytic limit gives Y>=0, A-Y>=0, and eta<=1. Strict A>0 and
+eta>0 follow directly from Sections 2 and 3; the cofactor formula stays
+strict when beta=0 or e5=0. The still-positive e4 and e3 coefficients make
+the same distant-omission removal arguments exclude Y=0 and A-Y=0.
+Equation (6) passes to the limit along the analytic branch; e2 remains
+positive, so eta=1 again forces the forbidden e2 removal. This proves
+strict inequalities (1) at the three-omission boundary as well.
+
+This limit is taken at a fixed finite real noncommuting contact, where the
+implicit-function hypotheses are verified. It does not assume convergence
+of an optimizer escaping to infinity. The resulting first-order implication
+then transfers to every real closed extension.
+
+## 7. All amplitude signs and a single rational chart
+
+There is a physical Bell reflection preserving the adjacent omitted pair.
+It exchanges e2 with e3, e4 with alpha, and e5 with beta (and lambda with
+e1). After real local basis gauges its angle action is u'=1/u, v'=v and
+its state action, up to a positive normalization, is
+\[
+\psi'=(vA-u(\eta-1),\ -A-uv(\eta-1),\ 1-uvY,\ uY+v)^T.
+\tag{8}
+\]
+The matrix implementing this state action is
+\[
+G=\begin{pmatrix}v&-1&0&0\\-1&-v&0&0\\0&0&-v&1\\0&0&1&v\end{pmatrix},
+\qquad G^TG=(1+v^2)I.
+\]
+If c' denotes the displayed coefficient permutation, direct full-parent
+congruence gives \(u^2(1+v^2)P_{c'}(1/u,v)=GP_c(u,v)G^T\).
+The transformed event weights satisfy the same positivity or single-zero
+conditions. Apply (1) to the transformed contact and divide its state by
+its positive last coordinate uY+v. The inequalities Y'>0, eta'<1,
+eta'>0, and Y'<A' give, respectively,
+\[
+1-uvY>0,\qquad h_0:=A+uv(\eta-1)>0,
+\]
+\[
+R_5:=u(A-Y)+u^2v(\eta-1)-v<0,
+\qquad R_2:=v(A+u^2Y)-u\eta>0.
+\tag{9}
+\]
+Thus every one of the eight event amplitudes has a fixed, strictly nonzero
+sign in this canonical state gauge. In particular, the denominator product
+in the established selected-minor identity is strictly positive:
+\[
+\mathcal D=Y(1+u^2)(uY+v)(1-uvY)h_0R_2(-R_5)>0,
+\]
+\[
+\det J_{(d,e_2,e_4,e_5,\alpha,\beta)}
+=-8192\eta u^2v(1+u^2)^2(1+v^2)^2\mathcal D<0.
+\tag{10}
+\]
+Consequently the same e3=2 rational Cramer formula is valid on both the
+exact two-omission family and its routed three-consecutive-omission
+boundaries. It is legitimate here to include a zero coefficient's column
+in the selected square matrix: (10), rather than an active-column deletion
+argument, proves its invertibility. This replaces the earlier need for six
+separate five-row templates on the adjacent three-omission boundary.
+
+For six positive events, (10) also proves that every maximal-signed
+boundary point above is an extreme ray of the full canonical cone. The
+seven active columns have rank six and their kernel is one-dimensional.
+For a single additional event omission, the six active columns have rank
+five: the unique kernel of all seven columns has zero in that omitted
+coordinate and is strictly positive on the remaining active coordinates.
+The exact contact-face description then proves extremality as well.
+
+## 8. What this closes
+
+The adjacent exact-two-omission contact formula now enters its positive
+shape domain globally: A>0, t=u/A>0, 0<r=Y/A<1, and 0<eta<1.
+The same conclusion holds for the routed three-consecutive-omission contact
+families, with the same rational formula and a strictly signed denominator.
+Those quantities need not have positive real residues or be bounded.
+Consequently this theorem closes sign entry, but not the remaining joint
+rate and optimizing-angle boundary certificates. The separated omission
+face remains outside this theorem.
+
+## Verification and review
+
+The checker verify_sign_entry.py reconstructs the full parent and verifies
+the negative-core Schur complement, the positive cofactor identity, the
+cross-multiplied contact identity on the Cramer locus, the exact seed kernel,
+both angular derivatives, its selected minor -8640, and the positive d=0
+central coefficient. The analytic graph, dense extension, no-wall arguments,
+and real-closed-field transfer are proved in the text. Two same-system
+agents reviewed the argument and its three-omission extension; this is not
+external or proof-assistant verification.

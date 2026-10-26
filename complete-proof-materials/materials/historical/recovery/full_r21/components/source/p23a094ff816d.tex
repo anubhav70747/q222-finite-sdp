@@ -1,0 +1,325 @@
+\section{A rederived three-event wall and its exact contact exclusion}
+\label{sec:rederived-three-event-contact}
+
+This section is a fresh proof from the recovered full parent.  It does
+not use a historical admission or any missing local certificate.  The
+selected three-event cone is given an explicit matrix description, its
+separated tensor-SOS assertion is proved by finite-dimensional duality,
+and its intersection with the actual finite-contact source domain is
+shown to be empty.  The last conclusion concerns the source contact,
+not a comparison between a source contact and an independent test.
+
+\subsection{The selected full parent}
+
+Write $D_u=1+u^2$, $D_v=1+v^2$, and retain the coefficient order
+$(d,\lambda,n,m,C,A,D,\alpha,\beta)$.  The original complete parent is
+\begin{align}
+F={}&4\lambda D_u(W+vX)^2+4nD_uD_vX^2
+ +4m(vW-X+uvY-uZ)^2\notag\\
+&+4CD_v(uW-Y)^2+4AD_uD_vY^2
+ +(4D+2d)(uW+uvX-Y-vZ)^2\notag\\
+&+(4\alpha+2d)D_u(vY-Z)^2
+ +(4\beta+2d)D_v(X+uZ)^2-2dD_uD_vZ^2.
+\tag{CAP1}
+\end{align}
+All nine coefficients are nonnegative.  Let $F_*$ be the selected parent
+with $\lambda=n=m=\alpha=\beta=0$, so that only the consecutive event
+triple $(D,C,A)$ remains.  For $d,C,A,D\geq0$ define
+\[
+\Delta=8ADC-4ADd-d^2\{d+2(C+A+D)\}.
+\tag{CAP2}
+\]
+
+\begin{proposition}[Exact physical wall and strict interior-angle positivity]
+If $d>0$, the selected parent $F_*$ is positive semidefinite at every
+projective measurement pair if and only if $\Delta\geq0$.  Whenever
+this holds, its state matrix is positive definite at every finite pair
+$u,v\ne0$.  In particular, the equality wall $\Delta=0$ has no finite
+noncommuting contact.
+\end{proposition}
+
+\begin{proof}
+Let $P_*(u,v)$ be the symmetric state matrix.  Direct expansion of the
+full polynomial (CAP1), without a state or angle truncation, gives
+\[
+\det P_*=16D_u^2D_v^2u^2v^2
+ \{d\Delta+4CDd(d+2A)v^2+4CAd(d+2D)u^2\}.
+\tag{CAP3}
+\]
+The focused checker rebuilds $P_*$ from its state Hessian and verifies
+this entire identity.  Its restriction to $Z=0$ is the sum of the
+nonnegative event packets and
+\[
+2d\{(uW+uvX-Y)^2+D_uv^2Y^2+D_vX^2\}.
+\tag{CAP4}
+\]
+For $uv\ne0$ these three squared linear forms are independent.  Hence
+the upper $3\times3$ state block is positive definite.  A Schur
+complement taken in this one ordered field proves that $P_*\succeq0$
+if and only if its determinant is nonnegative, and that a positive
+determinant gives positive definiteness.  This is a statement about
+ordinary field-valued source or testing matrices; it takes no inverse
+in a tensor product.
+
+Suppose $\Delta<0$.  Put $r=4CDd(d+2A)$ and
+$s=4CAd(d+2D)$, both nonnegative.  Taking
+\[
+u^2=v^2=\frac{-d\Delta}{2(r+s+1)}>0
+\]
+makes the expression in braces in (CAP3) negative.  This is an explicit
+ordered-field witness to nonphysicality, so no limiting argument is
+needed.  Conversely, $\Delta\geq0$ makes all three terms in braces
+nonnegative.  It also forces $C,A,D>0$: if one vanished, (CAP2) would
+be strictly negative because $d>0$.  Thus $r,s>0$ and the determinant
+is strictly positive whenever $uv\ne0$.
+
+At an actual commuting angle, including a projective infinity, one
+party's two reflections commute.  Simultaneous diagonalization makes
+the CHSH operator on each local eigenspace either $\pm2$ times one
+remote reflection.  The signed core $I-S/2$ is then positive
+semidefinite.  Every event packet is positive semidefinite too.  This
+covers all literal endpoints directly.  The argument holds over every
+real closed field, because it uses real diagonalization of symmetric
+matrices and explicit ordered-field identities.  If $d=0$, every
+parent in (CAP1) is its event-square sum separately.
+\end{proof}
+
+\subsection{A small exact lift of the selected source cone}
+
+Set
+\[
+p=4C+4D+2d,\qquad r=4D+2d,\qquad
+B(d,C,A,D)=
+\begin{pmatrix}
+p+4A&4D&-p\\
+4D&4D&-r\\
+-p&-r&p
+\end{pmatrix}.
+\tag{CAP5}
+\]
+For nonnegative coefficients the selected source is physical exactly
+when $B\succeq0$.  Here is a direct verification of this matrix
+description.  When $d>0$, use the positive last diagonal entry $p$.
+The Schur complement of that entry is
+\[
+\begin{pmatrix}4A&-2d\\-2d&4b/p\end{pmatrix},
+\qquad b=4CD-2Dd-d^2,
+\qquad \det B=8\Delta.
+\tag{CAP6}
+\]
+Moreover
+\[
+\Delta=2Ab-d^2(d+2C+2D).
+\tag{CAP7}
+\]
+If $\Delta\geq0$, then $A,b>0$, and (CAP6) is positive semidefinite.
+If $B\succeq0$, its determinant is nonnegative, hence $\Delta\geq0$.
+For $d=0$ one has the exact quadratic identity
+\[
+(y,z,x)B(0,C,A,D)(y,z,x)^T
+ =4C(y-x)^2+4Ay^2+4D(y+z-x)^2.
+\tag{CAP8}
+\]
+Thus the entire selected physical cone, including all zero faces, is
+\[
+\mathcal C=\{(d,C,A,D)\in\mathbb R_{\geq0}^4:B(d,C,A,D)\succeq0\}.
+\tag{CAP9}
+\]
+It has a strict feasible point $(1,2,2,2)$: the leading principal
+minors of $B$ there are $26,144,280$.
+
+\begin{lemma}[Separated certificate for the selected wall]
+For arbitrary labelled real closed fields $K_c,K_t\supset\mathbb R$,
+every source $c\in\mathcal C_{K_c}$, and every projective angle pair
+and real state in $K_t$, the complete selected parent is a finite sum
+of squares in $K_c\otimes_{\mathbb R}K_t$.  The full parent (CAP1)
+has the same property if its selected coefficients satisfy (CAP9).
+\end{lemma}
+
+\begin{proof}
+We first establish the exact dual representation used in this lemma.
+For a real linear functional $\ell$ nonnegative on $\mathcal C$,
+there are $\mu\in\mathbb R_{\geq0}^4$ and a real symmetric
+$Q\succeq0$ such that, for all $c=(d,C,A,D)$,
+\[
+\ell(c)=\mu\cdot c+\operatorname{tr}(B(c)Q).
+\tag{CAP10}
+\]
+Indeed let $\mathcal D$ be the cone of functionals on the right.  It
+is closed: if a sequence of these functionals converges, evaluation
+at $c_0=(1,2,2,2)$ bounds both $\sum\mu_i$ and
+$\operatorname{tr}Q$, because all coordinates of $c_0$ and the
+smallest eigenvalue of $B(c_0)$ are strictly positive.  Positive
+semidefinite matrices with bounded trace are bounded, so there is a
+convergent subsequence of the representing pairs.  The dual cone
+$\mathcal D^*$ is exactly (CAP9).  Finite-dimensional separation of
+closed convex cones gives $\mathcal D=\mathcal C^*$ and proves
+(CAP10).  This statement has a fixed finite first-order formulation
+using the principal-minor inequalities for a $3\times3$ matrix.
+Consequently it holds over every real closed field by transfer.
+
+Fix an arbitrary testing tuple in $K_t$.  Its homogeneous selected
+parent is a linear functional $\ell_t$ on the four source
+coefficients.  The physical equivalence just proved says that
+$\ell_t\geq0$ on $\mathcal C_{K_t}$.  Apply (CAP10) in $K_t$ to
+obtain $\mu_t\geq0$, $Q_t\succeq0$.  Evaluating the resulting
+linear coefficient identity in separated fields gives
+\[
+F_*(c,t)=\sum_{i=1}^4c_i\otimes\mu_{t,i}
+ +\sum_{j,k=1}^3 B(c)_{jk}\otimes(Q_t)_{jk}.
+\tag{CAP11}
+\]
+The first terms are squares by separate square roots.  Factor
+$B(c)=UU^T$ within $K_c$ and $Q_t=VV^T$ within $K_t$.  The last
+term in (CAP11) is exactly
+\[
+\sum_{a,b}\left(\sum_jU_{ja}\otimes V_{jb}\right)^2.
+\]
+This proves the tensor certificate with no mixed denominator.  The
+five omitted event packets in (CAP1) are separate positive-source
+factors times testing squares and can be restored exactly.  Every
+literal projective endpoint is already included in the homogeneous
+testing tuple.  Splitting a complex state into its real and imaginary
+parts gives the same assertion for complex states.
+\end{proof}
+
+\subsection{Every actual finite contact lies strictly below all eight walls}
+
+The fixed event cycle is
+\[
+(a_0,\ldots,a_7)=(\lambda,D,C,A,\alpha,m,\beta,n).
+\]
+For indices modulo eight put
+\[
+\Delta_i=8a_i a_{i+1}a_{i+2}-4d a_i a_{i+2}
+ -d^2\{d+2(a_i+a_{i+1}+a_{i+2})\}.
+\tag{CAP12}
+\]
+The cyclic equivalence can be verified without an unspecified symmetry
+import.  In the CHSH convention
+$S=A_0B_0-A_0B_1+A_1B_0+A_1B_1$, the Bell relabeling
+\[
+(A'_0,A'_1,B'_0,B'_1)=(B_1,-B_0,-A_0,-A_1)
+\tag{CAP13}
+\]
+preserves $S$ and maps each event in the displayed cycle to the next.
+For example the transformed $\lambda=(+,+\mid0,1)$ is the original
+$D=(-,+\mid1,1)$.  The complete eight-event permutation and the CHSH
+identity are checked exactly.  Relabeling preserves whether each local
+pair is noncommuting, so the strict assertion of the first proposition
+applies to every cyclic triple.
+
+\begin{theorem}[Automatic contact exclusion]
+Let $d>0$, let every event coefficient be nonnegative, and suppose
+the original parent (CAP1) has a zero on a nonzero source-field state
+at an actual finite noncommuting source pair.  Then
+\[
+\Delta_i<0\qquad (i=0,\ldots,7).
+\tag{CAP14}
+\]
+The conclusion needs only the actual zero and coefficient signs;
+no extra assumption about contact stationarity or historical prior
+exclusions is required.
+\end{theorem}
+
+\begin{proof}
+If some $\Delta_i\geq0$, the selected parent for that triple is
+positive definite at the specified pair.  The full parent is this
+selected parent plus five nonnegative event packets.  It is therefore
+positive on every nonzero state at that pair, contradicting the
+assumed zero.  This uses only ordinary ordered-field positivity at
+the source contact.  It does not evaluate a source contact in an
+independent testing field.
+\end{proof}
+
+More generally, suppose a proposed cap keeps the same signed coefficient
+$d$ and removes nonnegative amounts $e_j$ from event coefficients.
+At an actual zero $t_c$ one has the exact identity
+\[
+F_{\mathrm{cap}}(t_c)
+ =-4\sum_j e_j\,\omega_j(t_c)R_j(t_c)^2,
+\tag{CAP15}
+\]
+where $\omega_j$ is the positive angle factor multiplying the event
+row in (CAP1).  Thus a globally physical cap can remove a strictly
+positive amount only from an event whose row vanishes at that contact.
+If one removed positive packet has nonzero row, (CAP15) is already a
+strictly negative physicality witness.  In the special three-event cap,
+(CAP14) rules out even the case in which all removed rows vanish.
+The same argument permits smaller retained event coefficients: add
+their nonnegative excesses back as well.  It does not apply to a
+modification of $d$, whose difference is a signed CHSH term rather
+than a nonnegative event packet.
+
+\subsection{Exact consequences for source normalization and routing}
+
+For $d>0$ put
+\[
+\delta_{\rm tot}=\frac{d}{d+\sum_{i=0}^7a_i},
+\qquad b_i=a_i/d.
+\tag{CAP16}
+\]
+In a real closed extension, ``bounded'' means bounded in absolute
+value by a real number, and ``infinitesimal'' means smaller in
+absolute value than every positive real number.  Since all $b_i$
+are nonnegative and the sum is finite,
+\[
+\begin{array}{ll}
+\delta_{\rm tot}\text{ has positive real residue}
+ &\Longleftrightarrow\text{every }b_i\text{ is bounded},\\
+\delta_{\rm tot}\text{ is infinitesimal}
+ &\Longleftrightarrow\text{at least one }b_i\text{ is unbounded}.
+\end{array}
+\tag{CAP17}
+\]
+These alternatives are disjoint and exhaustive because
+$0<\delta_{\rm tot}\leq1$.  They are invariant under a positive
+source rescaling and under Bell relabeling.  Normalizing $d=1$ is
+legal in the coefficient field, and multiplying each tensor root by
+the pure-source factor $\sqrt d$ restores the original scale.
+
+There cannot be three consecutive unbounded $b_i$ at an actual finite
+contact.  Indeed division of (CAP12) by its positive triple product
+gives
+\[
+\frac{\Delta_i}{a_i a_{i+1}a_{i+2}}
+ =8-\frac{4d}{a_{i+1}}
+ -\frac{d^3}{a_i a_{i+1}a_{i+2}}
+ -2d^2\left\{
+ \frac1{a_i a_{i+1}}+\frac1{a_i a_{i+2}}
+ +\frac1{a_{i+1}a_{i+2}}\right\}.
+\tag{CAP18}
+\]
+If the three ratios $a_j/d$ were unbounded, its residue would be
+$8$, contradicting (CAP14).  Equivalently, every consecutive triple
+contains an event bounded relative to $d$.
+
+If a later chart uses $C=2$, the rescaling factor is $2/C$, and its
+new signed weight is $2d/C$; (CAP16) remains unchanged.  The implication
+$d/C$ infinitesimal $\Rightarrow\delta_{\rm tot}$ infinitesimal is
+valid, but the reverse implication does not follow from normalization
+alone.  A different event may be the unbounded one.  An entry map that
+claims more must prove its extra source inequalities explicitly.
+
+For a more precise cap screen with $d>0$, (CAP7) yields
+\[
+b>0\quad\Longrightarrow\quad
+\Delta<0\ \Longleftrightarrow\
+A<\frac{d^2(d+2C+2D)}{2b}.
+\tag{CAP19}
+\]
+If $b\leq0$, the strict inequality $\Delta<0$ is automatic.  Every
+inverse in (CAP19) is within the source field, and the polynomial
+condition (CAP14) remains the primary contact condition.
+
+\paragraph{Scope of the new routing result.}
+The three-event all-tests certificate and the finite-contact exclusion
+are proved here.  In particular no finite-contact C1 or C2 elementary
+source can be silently discarded because it is said to pass a
+three-event wall: that intersection is empty.  The bare finite-contact
+source domain already implies all eight strict wall inequalities, so
+adding these particular prior-complement predicates does not shrink
+that domain.  Equations (CAP16)--(CAP19) justify only the stated scale
+partition and coefficient screens.  They do not prove the missing
+positive-scale terminals, the uniform C1 all-tests join, the remaining
+weak C1/C2 local certificates, or the universal tensor-SOS criterion.

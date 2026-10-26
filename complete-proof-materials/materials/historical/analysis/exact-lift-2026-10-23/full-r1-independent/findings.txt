@@ -1,0 +1,90 @@
+Full R1 normal core: independent exact reconstruction
+24 October 2026
+
+Result. The completed Pro reply's13-row core, covariance and two displayed
+purchase identities are correct. No RFN18 typo exists: both subtractions
+are equivalent to
+ (1+U^2)Psi=Rstar^2+Bstar^2+U^2Qstar^2+U^2(w-UVZstar)^2.
+The whole Jalpha row improves the provisional gA construction; the latter
+need not be exported separately.
+
+Files: full_r1_enlarged_gram.py, normal_core_records.json(28 actual symmetric
+upper-entry coefficient records), normal_core_checks.json.
+The source dictionary is the actual recovered RSR/RFN dictionary, with
+independent source/testing variables. No SDP or numerical sampling ran.
+
+Exact parent/core comparison
+-----------------------------
+Rows: (Nhat,Ecurrent,Ru,Jalpha,H1,Mhat,O,H2,Qhat,Rhat,psi1,psi2,psi3).
+Their diagonal and cross entries are exactly those in the Pro reply.
+The polynomial support is00,11,02,22; source-only coefficients are printed
+in normal_core_records.json. Scalar fractions are(1/4,1/2,1/2,1/2).
+
+Using Jalpha=j*alpha*b=-alpha*Ru/B-alpha*u*Rphys, the complete normal term
+is exactly
+ 2N0(KR*Ru-Jalpha+H1/2)
+ +2uv*N0((Kc/j)*rhoQ*Qhat+(alpha+1/2)*tau*Mhat)
+ +2sqrt(H(1-H))*Mhat*(O+(mu/p)*H2)
+ +2tau*rhoQ*Cq*Mhat*Qhat.
+Thus both original independent normals and all Rphys couplings remain.
+
+The script checks the ENTIRE recovered RFN parent equals this core plus
+all original retained positive squares(including gc*Qstar^2,gc*Rstar^2,
+dc and n squares) and the explicit scalar residual
+ (1/2)Me*b^2+(1/2)qc*Qstar^2+(1/2)rc*Rstar^2+(3/4)fc*Psi
+ -gc*Psi-2kappa*V^2*Qstar^2-2kappa*Rstar^2
+ -16Ru^2-16Jalpha^2-16O^2-8H1^2-8H2^2.
+All testing-polynomial coefficients cancel before native substitution.
+The two Pro purchases(1),(2) are checked separately, exactly.
+
+Covariance
+-----------
+For all four signs a,b, the actual nine affine source columns satisfy
+ T_i(au,bv,t,ab*r,b*w,a*zeta)=T_i(u,v,t,r,w,zeta).
+This was checked on every monomial, using exact rational coefficients.
+It is the ordinary physical angle gauge composed with overall state sign b.
+State and angle chart coverage still needs the advertised fixed function
+lists; this covariance check does not certify their unavailable encoding.
+
+Schur and source bounds
+-----------------------
+After subtracting I/16, the first block correction is exactly bounded by
+ 2(32/255+4/127)=10168/32385<7/16,
+and the second by4/255+16/1143<1/16.
+These use a^2+b0^2<=2, |KR|<1, mu/p<=2/3, H(1-H)<=1/4 and aM>=1/8.
+
+Here are explicit uniform dictionary bounds sufficient for the source
+hypotheses and testing perturbations. Let delta=2^-10,J=j+1,K=J-p,
+l=1+delta+delta^2+delta^3,f0=1-delta-delta^3, and use the already proved
+J<=P<=Rdelta*J, L<=l*K, F>=f0*K,
+Gq>=(1-2delta)K. Then
+ alpha<=B(B+x)<=2delta^2, mu/p<=2/3, A/T<=2/3, qc>=Tx/8.
+Dropping only negative terms of NN gives
+ NN/j<=1+4delta+2delta^2+6delta^3+delta^4(1+delta)<2.
+Hence0<=n(1-p/j)=NN/(2jP)<1, so |Kc/j|<=2.
+Consequently |KR|<=2/3+2delta^2+2delta<1.
+
+The exact aM source formula gives
+ f0/(4Rdelta)<=aM<=max(l,(1+delta^2)^3)/2+delta/8+delta^2/6,
+which lies strictly within(1/8,3/4). The lower bound keeps both C,D
+terms with their complementary H and1-H weights.
+
+For the remaining matrix terms,
+ ||K11||^2<=578T/9<1,
+ ||K02||<=sqrt(2)[l/2+delta(2delta/3+2delta^2+1/2)]<1,
+ ||K22||<=sqrt(2)*l/2<1.
+The constant M-Q entry has modulus at most2sqrt(2)T/3<T.
+The exact gate reserve is therefore
+ 1/16-delta-2^-37-2^-50-2^-74>1/32.
+Every endpoint comparison is checked with rational arithmetic in the script.
+
+Scope
+------
+This settles the core/parent interface and constant/testing Gram margins.
+The simultaneous scalar loss polynomials are independently handled in
+normal_and_ru_budgets.txt by the other reviewer, including the extra Ru
+payment from16Jalpha^2; those computations are not duplicated here.
+The299-order feature lists/COO, closure grid and complementary testing
+regions are not checked by this script. No universal canonical coverage
+or exact full-Q222 lift is inferred.
+

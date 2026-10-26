@@ -1,0 +1,253 @@
+\chapter{The exact strong-C2 ordinary--small source reduction}
+\label{component:pc3daa35e9a9b}
+\noindent\textbf{Component }\path{pc3daa35e9a9b}\par
+{\small\noindent Source: \path{R13/baseline/baseline/baseline/advances/c2_ui/full_parent_reduction.tex}\par}
+{\small\noindent SHA256: \path{c3daa35e9a9bf4f24e2dd222610b0b42d4288eef948dd408990bf1f03a444b47}\par}
+{\small\noindent Inventory use: UR1--UR17 entire original parent, exact centered packet retention and all normalized source differences including Ct-Dj\par}
+\medskip
+\section[The exact strong-C2 ordinary--small source reduction]{The exact strong-C2 ordinary--small source reduction}
+\label{pc3daa35e9a9b:sec:ui-full-parent-reduction}
+
+This section records the original source, every parent packet, and the
+bounded products used in the following reciprocal and local certificates.
+It is an exact algebraic reduction, not an all-tests admission. The
+coefficient and testing fields remain independent real closed extensions
+of $\mathbb R$.
+
+\paragraph{Source definitions and physical domain.}
+Take the actual source angles $u_c=a$ and $v_c=k$, where $a>0$ is a
+bounded unit and $k>0$ is infinitesimal. Set $z=a^2$ and
+$\varepsilon=k^2/z$. In the original canonical C2 chart put
+\[
+ h=b-\varepsilon t,\quad A_c=1+zr,\quad j=A_c-t,\quad
+ g=(1+z)b-1+r-\varepsilon zt,\quad S=A_c+\varepsilon zt.
+ \tag{UR1}\label{pc3daa35e9a9b:eq:ui-source-gaps}
+\]
+The native positive gaps are $r,1-r,t,h,g,j,1-zh$; assume all original
+event signs, including $n\ge0$, and assume $C,\alpha$ are bounded below
+by positive real numbers. No positive lower bound on a native opening
+is imposed. Define the two complete source polynomials
+\begin{align*}
+ \Delta={}&1+(1+z)b+z(1+z)b^2+2z(1+z)br+z^2r^2+2zr\\
+ &+\varepsilon z\{(1+z)b+1+zr(2-r)\},\\
+ N={}&(1+z)(b+r)\{b+\varepsilon(1-t)\}
+          -\varepsilon(1+\varepsilon z)(1-r)t.
+ \tag{UR2}\label{pc3daa35e9a9b:eq:ui-source-polynomials}
+\end{align*}
+With $d=1$ and $\lambda=\beta=0$, the unchanged original coefficients
+are
+\[
+ \begin{aligned}
+ n&=\frac{(b+r)A_cS-r\Delta}{2r\Delta},&
+ m&=\frac{(1+k^2)(1-r)A_cS}{2g\Delta},\\
+ C&=\frac{A_cN}{2\varepsilon t\Delta},&
+ A&=\frac{\varepsilon A_c(b+r)S}{2h\Delta},\\
+ D&=\frac{(1+z)(b+r)(b-k^2r)S}{2\varepsilon j\Delta},&
+ \alpha&=\frac{z^2(b+r)N}{2(1-zh)\Delta}.
+ \end{aligned}                                                   \tag{UR3}
+ \label{pc3daa35e9a9b:eq:ui-original-source}
+\]
+These are the original rational C2 source formulas, with its angle-square
+parameter replaced by $z$ and its squared angle-ratio parameter by
+$\varepsilon$; all quantities formerly supplied by a source-file
+reference are displayed in (UR1)--(UR3).
+
+The source bounds used below follow directly from these definitions.
+First $t<A_c$, $h<1/z$, and $b=h+\varepsilon t$ give bounded $t,h,b$.
+The inequality $(1+z)b+r>1$ gives a positive lower bound on $b+r$;
+(UR2) makes $\Delta$ a positive bounded unit. The exact positive identity
+\[
+ N=(1+z)(b+r)h+
+       \varepsilon\{g+j+rt(1+\varepsilon z)\}                 \tag{UR4}
+\]
+shows that infinitesimal $h$ would make $b,N$ infinitesimal and
+$1-zh$ a unit, contradicting strong $\alpha$. Thus $h,b,N$ are units.
+The numerator of $2rn\Delta$ evaluated at $r=1$ is exactly
+\[
+ -z(\varepsilon+h)(b+1)(z+1).
+\]
+It has negative unit residue, so $n\ge0$ forces $1-r$ to be a unit.
+Consequently
+\[
+ mg,\quad A/\varepsilon,\quad \varepsilon Ct,\quad
+ \varepsilon Dj,\quad \alpha(1-zh)
+ \quad\hbox{are positive bounded units},\qquad nr\text{ is bounded}.
+ \tag{UR5}\label{pc3daa35e9a9b:eq:ui-source-bounds}
+\]
+In particular $m$ is strong, $A$ is infinitesimal, and $C,D$ may have
+arbitrarily large positive sizes. Literal $n=0$ is retained.
+
+\paragraph{The entire parent and exact contact.}
+For independent testing angles and a homogeneous state define
+\[
+ \begin{gathered}
+ D_u=1+u^2,\quad D_v=1+v^2,\quad
+ r_{\rm amp}=uW-Y,\quad Q=uX-Z,\\
+ J=r_{\rm amp}+vQ=uW+uvX-Y-vZ,\\
+ M=vW-X+uvY-uZ,\quad p=vY-Z,\quad B=X+uZ.
+ \end{gathered}
+\]
+The signed core and the full original parent are
+\[
+ \mathcal K=2\{J^2+D_up^2+D_vB^2-D_uD_vZ^2\},
+\]
+\[
+ F=4nD_uD_vX^2+4mM^2+4CD_vr_{\rm amp}^2
+       +4AD_uD_vY^2+4DJ^2+4\alpha D_up^2+\mathcal K.
+ \tag{UR6}\label{pc3daa35e9a9b:eq:ui-full-parent}
+\]
+Normalize the actual contact by $W_c=1$. Introduce the bounded pure-source
+quantities
+\[
+ x=-r/b,\quad \rho=t/(ab),\quad \sigma=-j/(ab),\quad
+ s=\sigma-\rho=-A_c/(ab),\quad
+ \mu=g/b,\quad \pi=(zh-1)/(ab).                       \tag{UR7}
+ \label{pc3daa35e9a9b:eq:ui-contact-amplitudes}
+\]
+Here $s$ is a nonzero bounded unit. The exact stationary contact is
+\[
+ (u_c,v_c;W_c,X_c,Y_c,Z_c)
+ =\left(a,k;1,kx,a-\rho k^2,\frac{k}{ab}\right),       \tag{UR8}
+\]
+and its amplitudes are
+\[
+ r_{{\rm amp},c}=\rho k^2,\quad J_c=\sigma k^2,\quad
+ M_c=\mu k,\quad p_c=\pi k,\quad Q_c=sk.
+\]
+Substitution of (UR3) gives $F=0$ and all four state and both angle
+first derivatives zero at (UR8). These are the unchanged native
+contact identities; no equality of independent testing rates is used.
+
+\paragraph{Products with all possible opening poles cancelled.}
+Define two positive bounded units
+\[
+ c_1=\frac{zA_cN}{2\Delta},\qquad
+ c_2=\frac{z(1+z)(b+r)(b-k^2r)S}{2\Delta}.
+\]
+The exact products required by the local cap argument are
+\[
+ \begin{aligned}
+ nx&=-\frac{(b+r)A_cS-r\Delta}{2b\Delta},&
+ m\mu&=\frac{(1+k^2)(1-r)A_cS}{2b\Delta},\\
+ \alpha\pi&=-\frac{z^2(b+r)N}{2ab\Delta},&
+ C\rho k^2&=\frac{c_1}{ab},\qquad
+ D\sigma k^2=-\frac{c_2}{ab}.
+ \end{aligned}                                                   \tag{UR9}
+ \label{pc3daa35e9a9b:eq:ui-cancelled-products}
+\]
+Their products with the bounded factors $x,\mu,\pi$ also show
+$nx^2,m\mu^2,\alpha\pi^2$ bounded. Crucially, cancellation before
+estimating gives the further exact identity
+\[
+ Ct-Dj=
+ \frac{(1+z)(b+r)\{A_cj-zt(b-\varepsilon zr)\}
+       -A_c(1+\varepsilon z)(1-r)t}{2\Delta}.          \tag{UR10}
+ \label{pc3daa35e9a9b:eq:ui-cancelled-CD-difference}
+\]
+Thus $C\rho+D\sigma=(Ct-Dj)/(ab)$ is bounded for every positive rate
+of $t,j$, including infinitesimal openings.
+
+Set
+\[
+ L=C+D,\qquad q=D/L,\qquad H=CD/L,\qquad
+ \tau=(C\rho+D\sigma)/L,\qquad \gamma=k^2H.
+\]
+Here $q,1/L,\tau,L\tau$ are bounded, and
+\[
+ \gamma=\frac{c_1c_2}{c_1j+c_2t}\asymp1,
+ \qquad t+j=A_c\asymp1.                              \tag{UR11}
+ \label{pc3daa35e9a9b:eq:ui-harmonic-unit}
+\]
+The denominator in (UR11) is a positive unit even if either opening
+is infinitesimal. At finite source residues it gives precisely $H_0$
+in (RC3). Equations (UR9)--(UR11) also show that the bounded finite
+part extends continuously to the allowed boundary residues: no
+inverse of $r,g,1-zh,t,j$ remains in these products.
+
+\begin{proposition}[Exact bounded UI remainder]
+\label{pc3daa35e9a9b:prop:ui-bounded-remainder}
+For bounded source caps $0\le n_*\le n$ and positive bounded-unit
+caps $m_*\le m$, $\alpha_*\le\alpha$, the parent (UR6) is the sum
+of explicit positive centered packets and a bounded polynomial
+remainder $G$. Every centered packet vanishes with its full first jet
+at (UR8), so $G$ has exact zero value and all first derivatives there.
+\end{proposition}
+\begin{proof}
+The exact original $C,D$ combination is
+\[
+ CD_vr_{\rm amp}^2+DJ^2
+   =L(r_{\rm amp}+qvQ)^2+Hv^2Q^2+Cv^2r_{\rm amp}^2.
+\]
+Retain the three nonnegative packets
+\[
+ \begin{aligned}
+ P_L&=4L(r_{\rm amp}+qvQ-\tau k^2W)^2,\\
+ P_H&=4H(vQ-sk^2W)^2,\\
+ P_C&=4Cv^2(r_{\rm amp}-\rho k^2W)^2.
+ \end{aligned}                                                   \tag{UR12}
+\]
+Their subtraction leaves exactly
+\begin{align*}
+ G_{CD}={}&8L\tau k^2W(r_{\rm amp}+qvQ)-4L\tau^2k^4W^2\\
+ &+8Hs k^2vWQ-4Hs^2k^4W^2\\
+ &+8C\rho k^2v^2Wr_{\rm amp}-4C\rho^2k^4v^2W^2.
+ \tag{UR13}
+\end{align*}
+All its coefficients are bounded by (UR9)--(UR11), including
+$L\tau^2=(L\tau)^2/L$. Centering at $k^2W$ is essential to this
+boundedness assertion.
+
+Also retain
+\[
+ \begin{aligned}
+ P_n&=4(n-n_*)D_uD_v(X-xvW)^2,\\
+ P_m&=4(m-m_*)(M-\mu vW)^2,\\
+ P_\alpha&=4(\alpha-\alpha_*)D_u(p-\pi vW)^2.
+ \end{aligned}                                                   \tag{UR14}
+\]
+The exact corresponding remainders are
+\[
+ \begin{aligned}
+ G_n={}&4n_*D_uD_vX^2+8(n-n_*)xvWD_uD_vX
+                    -4(n-n_*)x^2v^2W^2D_uD_v,\\
+ G_m={}&4m_*M^2+8(m-m_*)\mu vWM
+                    -4(m-m_*)\mu^2v^2W^2,\\
+ G_\alpha={}&4\alpha_*D_up^2+8(\alpha-\alpha_*)\pi vWD_up
+                    -4(\alpha-\alpha_*)\pi^2v^2W^2D_u.
+ \end{aligned}                                                   \tag{UR15}
+\]
+These coefficients are bounded by (UR9) and the bounded caps. With
+\[
+ G=G_{CD}+G_n+G_m+G_\alpha+4AD_uD_vY^2+\mathcal K,
+\]
+the entire exact identity is
+\[
+ F=P_L+P_H+P_C+P_n+P_m+P_\alpha+G.                 \tag{UR16}
+ \label{pc3daa35e9a9b:eq:ui-entire-reduction}
+\]
+It includes the signed core and every original state-normal term.
+All six retained roots vanish at (UR8), proving the contact-jet
+assertion. This proposition does not claim positivity of $G$.
+\end{proof}
+
+For the local theorem retain $P_L,P_C,P_n,P_m,P_\alpha$ outside the
+bounded Gram and combine $G$ with
+\[
+ P_H=4\gamma R_h^2,\qquad R_h=(vQ-sk^2W)/k.
+ \tag{UR17}
+\]
+The factor $1/k$ is pure coefficient. The exact graph normals are
+\[
+ E_X=X-xvW,\quad E_Z=Z-(ux-s)vW,\quad
+ E_r=r_{\rm amp}-\rho k^2W.
+\]
+Their inverse is polynomial:
+\[
+ X=E_X+xvW,\quad Z=E_Z+(ux-s)vW,\quad
+ Y=uW-\rho k^2W-E_r,\quad Q=svW+uE_X-E_Z.
+\]
+Thus no state is discarded, including $W=0$. The following reciprocal
+lemma identifies the leading relative-angle completion; the local
+certificate supplies the complete normal lift, cap choice, and strict
+Gram. The outer-angle and other commuting-axis join remains a separate
+obligation, so this reduction adds no all-tests source admission.

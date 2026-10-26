@@ -1,0 +1,107 @@
+C1 SEVEN-ROOT UNIVERSAL-WORD SEPARATOR: INDEPENDENT EXACT AUDIT
+26 October 2026. No public edits, solver, sampling or contact-only matching.
+
+Input: seven-extra-high-2026-10-26/04_general_c1_COMPLETE.txt.
+Scope: universal word equations, the integer K, both negative values, and
+reduction of the full nine-word 1+AB SOS problem. Physical validity and
+extremality are separate tasks and are not certified by this report.
+
+Verdict
+-------
+The separator is correct. K is strictly positive definite; its trace
+identity holds for EVERY real symmetric exact universal Gram, including
+all unwanted word equations. Both quoted rational violations are exact.
+The two deterministic zeros make the seven-root reduction complete for
+the full nine-word cone, not just a restricted ansatz. Complex Grams do
+not evade the exclusion.
+
+1. Independently reconstructed coefficient system
+-------------------------------------------------
+Use the universal group (Z2*Z2) x (Z2*Z2). Represent each word by its
+Alice alternating sequence and Bob alternating sequence. Multiplication
+concatenates and cancels adjacent identical letters within each party;
+adjoint reverses both sequences. Measurements on the SAME party are
+never commuted. This gives unique reduced group words.
+
+Expand the seven displayed roots from scratch. For each upper Gram entry,
+the coefficient column is Ri*Ri for a diagonal, and Ri*Rj+Rj*Ri for an
+off-diagonal. The resulting matrix M has 25 rows and 28 columns, rank 15.
+Thus the exact affine real Gram equations have 13 free variables. The
+checker confirms every C1 target belongs to the formal coefficient image,
+so this is not a trace identity vacuous on an inconsistent affine system.
+
+For source order (d,m,C,A,D,alpha,beta), the target Bell coefficients are
+
+ I: d+m+C+A+D+alpha+beta,
+ A0: -A-alpha,        A1: m-C-D+beta,
+ B0: C+A-beta,        B1: -m+D-alpha,
+ A0B0: -d/2-A,        A0B1: d/2+alpha,
+ A1B0: -d/2-C-beta,   A1B1: -d/2-m-D.
+
+Every other reduced-word coefficient is zero. This includes alternating
+Alice/Bob products; no physical-contact evaluation replaces these equations.
+
+2. K positivity and the exact adjoint identity
+---------------------------------------------
+Independent Fraction arithmetic gives the leading principal minors of K:
+
+ 389, 43237, 412479, 17674904, 41152768, 1682481152, 73148743680.
+
+All are positive. A rational LDL factorization is reconstructed and checked
+entrywise, so K>0 exactly.
+
+Without using the response's omitted affine Gram matrix, solve M^T l=k,
+where k has entries Kii on Gram diagonals and 2Kij off diagonal. Symmetrize
+l under word adjoint. The matching JSON supplies the resulting exact
+universal word functional, the full M and source coefficient matrix T.
+Direct contraction gives
+
+ l^T T=(-61,9,58,44,2,121,100).
+
+Hence for EVERY exact universal Gram Mq=T c,
+
+ tr(KQ)=9m+58C+44A+2D+121alpha+100beta-61d.
+
+All 13 free Gram directions cancel because M^T l=k. For Q>=0 this is
+nonnegative. On the two stated sources its values are exactly
+
+ interior: -43/29,       beta=0 source: -3169/390.
+
+These are values a putative Gram WOULD have to attain; no such PSD Gram
+exists. The notation tr(K Q_source) must not be read as constructing one.
+
+3. Why this excludes the full nine-word certificate
+--------------------------------------------------
+Both C1 targets vanish at the deterministic assignments
+(A0,A1,B0,B1)=(1,1,1,1) and (1,-1,-1,-1). For the nine-word list
+(I,A0,A1,B0,B1,A0B0,A0B1,A1B0,A1B1), these are two independent evaluation
+vectors. An exact PSD nine-word Gram must annihilate each: its quadratic
+form is zero there. Its range therefore lies in their common orthogonal
+complement.
+
+The coefficient columns of the seven displayed roots have rank seven,
+lie in that complement, and hence span it. Compressing any nine-word PSD
+Gram to this basis yields a PSD seven-root Gram with the SAME universal
+polynomial. This proves necessity and sufficiency of the reduction, not
+just sufficiency of an ansatz. The integer K need only act on this reduced
+space; no positive-definite nine-word moment matrix is asserted.
+
+For a complex Hermitian Gram, entrywise conjugation preserves PSD and
+conjugates the polynomial coefficients. The target and group structure
+constants are real, so averaging gives a real symmetric PSD Gram with
+the same target. Therefore the reconstructed real universal equations
+exclude complex certificates too.
+
+The conclusion is nonmembership of both stated C1 sources in full 1+AB.
+It does not exclude larger word lists, different fixed testing functions,
+or any general finite lift. Combining this with the other reviewer's
+physical-validity theorem gives the claimed strict obstruction for valid
+C1 inequalities; physicality is not inferred from the separator itself.
+
+Reproduction
+------------
+c1_npa_separator_audit_2026_10_26.py uses ONLY Python's standard library
+and exact rational arithmetic. The matching JSON contains all 25 words,
+the independently rebuilt coefficient map, source map, literal K, positive
+LDL pivots/minors, dual word functional and both violations. Execution
+completed without any optimizer or parameter sweep.

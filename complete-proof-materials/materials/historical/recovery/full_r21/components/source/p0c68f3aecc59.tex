@@ -1,0 +1,97 @@
+\section{The physical small-$1-r$ source has a forced scale bound}
+\label{sec:r12-small-gap-scale}
+
+Retain the original physical C2 source, its exact contact and strict
+gaps, with $n\ge0$, $d=1$, $B=H+L$, and $B,z,y>0$
+infinitesimal. Put
+\[
+ a=z/B,\quad t=y/B,\quad h=H/B,\quad e=1-r>0.
+\]
+Assume $e,h$ infinitesimal and $a,t,G/B,j,L/B$ positive bounded
+units. Thus $\rho=\operatorname{st}(a)>0$,
+$\tau=\operatorname{st}(t)>1$, and $r$ is a unit.
+
+\begin{lemma}
+The exact original source identity is
+\[
+ 2r\Delta n=eQ-BK,\qquad \Delta=\delta/B,             \tag{BS1}
+\]
+where
+\[
+\begin{split}
+ K&=(1+a)(h+t)(1+aB),\\
+ Q&=1+B[1+t+ah+2ar+at]\\
+  &\quad+B^2\{a(h+t)+a^2[h(r+1)+t(1+r-r^2)]\}.
+\end{split}                                            \tag{BS2}
+\]
+Both $Q,K$ are positive bounded units, with residues
+$Q_0=1$, $K_0=(1+\rho)\tau$, and $\Delta_0=1+\rho$.
+Consequently source nonnegativity is exactly equivalent to
+\[
+ 0<B/e\le Q/K,\qquad
+ 0\le n/e\le Q/(2r\Delta).                            \tag{BS3}
+\]
+In particular $B/e$ and $n/e$ are bounded, regardless of the
+relative rate of $h$.
+\end{lemma}
+\begin{proof}
+The original normalized source formula is
+\[
+ 2r\Delta n=(1+ar)(1+aBr)[1+B(1-h+ar)]-r\Delta,
+\]
+with
+\[
+\begin{split}
+ \Delta={}&a+(1+aB)+(1+aB)B+2aB(1+aB)r+a^3B^2r^2
+       +2a^2Br\\
+       &+tB[1+a+aB+a^2Br(2-r)].
+\end{split}
+\]
+Subtracting its value at $r=1$ and dividing by $1-r$ gives
+the polynomial $Q$ in (BS2); the value at $r=1$ is $-BK$.
+Every term in $Q$ is positive, since $0<r<1$ implies
+$1+r-r^2>0$. The stated residues and inequalities follow.
+\end{proof}
+
+\paragraph{The literal $r=1$ face is not an admissible anchor.}
+At $r=1$ and still $B>0$, the exact identity becomes
+\[
+ n\big|_{r=1}
+ =-\frac{B(h+t)(1+aB)}
+ {2[1+B(1+2a+t)+aB^2(1+a+t)]}<0.                      \tag{BS4}
+\]
+Thus simply setting $r=1$ exits the original nonnegative-source
+domain. An event-face theorem requiring $n\ge0$ cannot be applied
+to that unmodified endpoint. This is a limitation of that endpoint
+reduction, not a refutation of any alternative full-parent proof.
+
+\paragraph{What this repairs, and what remains unresolved.}
+Let $\lambda_*=B/e$, which is bounded by (BS3). Its residue may
+be zero. Joint substitution $B=e\lambda_*$, $r=1-e$ gives
+\[
+ (n/e)_0=\frac{1-\lambda_{*,0}(1+\rho)\tau}{2(1+\rho)},
+ \qquad (m/e)_0=\frac{\rho^2}{2(1+\rho)}>0.           \tag{BS5}
+\]
+For the scalar coefficient $\beta_s$ in (WA4),
+\[
+ (\beta_s/e)_0
+ =\rho^2\left[\frac1{2(1+\rho)}
+                   +\frac{\lambda_{*,0}\tau}{2(\tau-1)}\right]>0.
+                                                               \tag{BS6}
+\]
+So source physicality removes the apparent diagonal-coefficient
+pole after scaling $R_2$ by $\sqrt e$.
+It does not remove the previously established cross-coefficient
+poles: the same exact source still forces
+\[
+ (j_0)_0=\frac{\rho\tau(\tau+1)}{4(\tau-1)},\quad
+ (j_1)_0=\frac{\rho\tau^2}{4(\tau-1)},\quad
+ (f_s)_0=-\frac{\rho\tau}{4}.
+\]
+Thus that fixed Gram still has unbounded $J_s/\sqrt e$ and
+$f_s/\sqrt e$. No new local full-parent certificate or all-tests
+admission is claimed here. The decisive result is the exact
+physical scale bound and the exclusion of the literal $r=1$
+nonnegative-source anchor. Source physicality and contact are
+retained as hypotheses throughout; no coefficient-sign argument
+is used to infer global physicality.

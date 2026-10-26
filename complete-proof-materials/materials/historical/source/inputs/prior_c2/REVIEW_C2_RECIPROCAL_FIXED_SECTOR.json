@@ -1,0 +1,54 @@
+{
+  "reviewer": "C1 analytical workstream",
+  "verdict": "ACCEPTED_EXACT_SECTOR_LIFT",
+  "scope": "SF1-SF12: complete canonical C2 sector D=m, alpha=C, all nonnegative coefficients, arbitrary physical angles and states including all zero coefficient faces. Order18 in original7 coordinates or14 in5 independent coordinates;9 auxiliaries;largest block5.",
+  "method": "Independent analytical proof review, direct primary-source verification of the bounded-degree matrix factor theorem, and a separately written full-parent/actual-COO consumer (17 exact assertions).",
+  "findings": [
+    "The determinant projection L(rt,r/t)-L(t,1/t)=(r+1/r-2)(a0*t+b0/t) is exact for the full sector. Both coefficients are nonnegative on every face; no source-dependent angular minimizer or scalar Schur denominator was discarded.",
+    "For d>0 and positive finite angles the complete core has a strict WXY state block. The determinant comparison is therefore sufficient for full matrix positivity. The d=0 branch is handled directly by positive event packets; signs and projective limits are preserved.",
+    "The constant W=S+T,Z=S-T substitution splits the entire reciprocal-curve parent into an explicitly nonnegative T square and the stated3x3 degree4 matrix, with every cross term retained.",
+    "The primary theorem permits singular PSD matrix polynomials and bounds the factor degree by2. Splitting complex factors into real and imaginary parts and averaging the exact parity gives the4+5 features without extra degree or positivity assumptions.",
+    "The literal affine arrays reconstruct the complete reduced parent for all visible and auxiliary variables. The25 Gram entries have coefficient rank16 and the9 actual auxiliary directions exhaust the kernel, so no PSD Gram identities are excluded.",
+    "The original-coordinate pencil imposes all five independent nonnegative signs and both equality pairs exactly. Both lift inclusions and every simultaneous zero-coefficient case follow."
+  ],
+  "blockers": [],
+  "limits": "No claim outside D=m,alpha=C; no claim of containment in old/enlarged two-angle Gram candidates; no universal C2 converse or whole-Q222 lift follows.",
+  "primary_sources": [
+    {
+      "url": "https://zalara.github.io/Papers/MatrixFejerRieszArxivOriginal.pdf",
+      "location": "arXiv1503.06034v1,Theorem1.2,page1",
+      "verified_statement": "A Hermitian polynomial matrix nonnegative on the real line and of degree at most2N has a polynomial G*G factor with factor degree at mostN."
+    },
+    {
+      "url": "https://arxiv.org/pdf/1503.06034",
+      "location": "v2,Theorem1.1,page1",
+      "verified_statement": "The same real-line degree-bounded factorization is stated in the revised version."
+    }
+  ],
+  "inputs": [
+    {
+      "path": "c2/c2_reciprocal_fixed_sector.tex",
+      "sha256": "96ea46b64e967d9eeb07985b6bda693f44dfd25e6d7cc727d7ae60d9f70e55fa"
+    },
+    {
+      "path": "c2/C2_RECIPROCAL_FIXED_SECTOR.coo.json",
+      "sha256": "bcb29bb380808569d51263dfc9475e1783c6a6bfef5838528e03327e16e0d42c"
+    },
+    {
+      "path": "c2/check_c2_reciprocal_fixed_sector.py",
+      "sha256": "e68aba5f11745f68abf51ae29f28275600f2e6482270209e8e095d4f79ade168"
+    },
+    {
+      "path": "c2/check_c2_reciprocal_fixed_sector.json",
+      "sha256": "d4283c5143cde6c8dea4da17891ecf98e1e1732d363e10828fd2a122ddbb480c"
+    },
+    {
+      "path": "c1/review_check_c2_fixed_sector.py",
+      "sha256": "7021f63a31474fd463b7fae6bbfb49aafe61206b0ae3dc7544530fb65598bda8"
+    },
+    {
+      "path": "c1/INDEPENDENT_C2_FIXED_SECTOR_CHECK.json",
+      "sha256": "dfc35db67d7031e6835f4a1442ecd8e87fe2112a41bc3db84c3f051910e3fcc0"
+    }
+  ]
+}

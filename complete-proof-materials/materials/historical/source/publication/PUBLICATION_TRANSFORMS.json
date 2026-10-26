@@ -1,0 +1,38 @@
+{
+  "purpose": "Faithful combination of independently readable source components",
+  "transforms": [
+    {
+      "operations": [
+        "Remove standalone preamble, title, abstract and document wrappers; full source retained unchanged.",
+        "Demote section headings by one level and prepend the combined component heading.",
+        "Move bibliography entries to the combined bibliography."
+      ],
+      "publication_copy": "publication/regular_c2.tex",
+      "publication_sha256": "c9028dd01c1a216eeb1a4faa7647f28e1f43d9481b6391c4e8c535f060129b2a",
+      "source": "c2/regular_c2_local_proof.tex",
+      "source_sha256": "f9c2f8721043cfedb0f64dfa6e9de3ce725b8f242c34e32c1b672bb0b274f21d"
+    },
+    {
+      "operations": [
+        "Remove standalone preamble, title, abstract and document wrappers; full source retained unchanged.",
+        "Demote section headings by one level and prepend the combined component heading.",
+        "Move bibliography entries to the combined bibliography."
+      ],
+      "publication_copy": "publication/tilted.tex",
+      "publication_sha256": "9346b053f5dd5a5c1d8a53f8f34a9725d9c08013805e6d38b0798b553ba4bb65",
+      "source": "compiler/tilted_family_exact_extraction.tex",
+      "source_sha256": "3aa414f1660f61e8918b3edc7bcee0c62aa97ae13c1ab1864e2c48caed052432"
+    },
+    {
+      "operations": [
+        "Remove standalone preamble, title, abstract and document wrappers; full source retained unchanged.",
+        "Demote section headings by one level and prepend the combined component heading.",
+        "Move bibliography entries to the combined bibliography."
+      ],
+      "publication_copy": "publication/effective.tex",
+      "publication_sha256": "49b9f3601405326e4168f3eea5a22062a4cac4242491be25500a9863944a0593",
+      "source": "compiler/effective_algebraic_extraction.tex",
+      "source_sha256": "4b272c2064bf1387c4735cf6e76f603cd15c1191702c3428ab360ef2eff6ff86"
+    }
+  ]
+}

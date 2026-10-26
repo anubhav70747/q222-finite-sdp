@@ -1,0 +1,151 @@
+\chapter{The joint small-$a$, small-$e$ corner: a bounded-ratio closure}
+\label{component:p26da50239f47}
+\noindent\textbf{Component }\path{p26da50239f47}\par
+{\small\noindent Source: \path{R16/inherited_r14/proofs/weak_local/bounded_ratio_closure.tex}\par}
+{\small\noindent SHA256: \path{26da50239f4701b3f3d5afaaa21060d5a09e8919997fdbcd541f2d4bb20b0f79}\par}
+{\small\noindent Inventory use: R9B2 and its joint monic source-regularity proof\par}
+\medskip
+\section{The joint small-$a$, small-$e$ corner: a bounded-ratio closure}
+\label{p26da50239f47:sec:r14-r9-bounded-ratio}
+
+\begin{theorem}
+Retain the full physical and stationary source domain R9 of (WF3),
+including all inherited exclusions, $n\ge0$, and independent source
+and testing fields. For every local testing pair $u,v\ne0$ for which
+$w=v/u$ is bounded in the testing field, the entire original C2 parent
+is finite tensor SOS, with every state component retained. Literal
+axes are also covered. The theorem does not cover the remaining
+local chart $v/u$ unbounded, and therefore is not an all-tests
+admission of R9.
+\end{theorem}
+
+The proof uses the exact identities (WC3)--(WC17a), not the unit-$a$
+contact-lifting argument. Take $u,v>0$ using the inherited exact sign
+gauges. The source quantities $B,a,h,e$ are positive infinitesimals,
+$t$ is a unit with $t_0>1$, and $r=1-e$. Put
+\[
+ c=\sqrt{a/t},\quad k=\sqrt{aB},\quad
+ A_1=uv,
+ \quad A_2=ck\frac{v^2}{u},\quad A_3=\frac{k^2}{c},
+ \quad G=kv,\quad F_v=v^2-tB.
+\]
+All divisions and radicals are pure-field operations. In particular
+$w=v/u$ is bounded and $c$ is infinitesimal. The crucial identity is
+\[
+ \boxed{G^2=(cw)A_1A_3.}                              \tag{R9B1}
+\]
+Thus the negative circuit term is an infinitesimal off-diagonal
+coefficient in the $(A_1,A_3)$ frame. No circuit conductor and no
+comparison of source and testing rates is needed.
+
+\paragraph{Joint source regularity at $a=0$.}
+Use the unchanged definitions $q_s,\widetilde m,c_F,f_A,f_B,f_C,f_G$
+from (WC1), (WC6), and (WC8), and put $f_{C0}=f_C|_{U=0}$.
+Unlike $\partial_Uf_C$, all coefficients needed below are jointly
+regular at $B=a=h=0,r=1$. More explicitly,
+\[
+\begin{array}{c|c}
+\text{expression}&\text{joint residue}\\\hline
+c_F&1/(2t_0)\\
+f_A|_{U=V=0},\ f_B,\ f_{C0}&1/2\\
+f_G&3/2\\
+\widetilde m/B&0\\
+K_X/B,\ K_E/B,\ K_Y/B&t_0/2,\ -1/2,\ 0\\
+d_4,\ b_4&t_0/[2(t_0-1)],\ 0\\
+\alpha/B^2&t_0/2
+\end{array}                                                   \tag{R9B2}
+\]
+These are finite rational identities. To verify them, use the
+unit common denominator
+\[
+ \mathcal D=2rg(1-h)(1-hB)(t-1+h+aBtr)\Delta
+\]
+from (WC3), insert the exact source numerators, and divide numerator
+and denominator by each explicit monic factor $B$ and $a$.
+The required numerator remainders vanish identically, not just at
+the corner. Each remaining denominator has a nonzero corner value.
+The accompanying focused checker performs precisely these divisions
+and prints the denominator and residue for every row. There is no
+$e/B$, $h/a$, or mixed-rate regularity assumption. All remaining
+source coefficients of (WC17a) are rational with the same unit
+denominators and are therefore bounded on this chart.
+
+\paragraph{A strict scalar Gram without a contact lift.}
+Define the legal separated roots
+\[
+ T_q=\sqrt{q_s}\,u,\qquad T_n=\sqrt n\,r u^2,
+ \qquad T_\alpha=\sqrt\alpha\,u,\qquad
+ d=1-\frac a t w^2.
+\]
+Here $q_s>0$ and $n\ge0$; literal $n=0$ gives the zero root
+$T_n$ and requires no division. Also $d$ has residue one.
+The exact scalar identity (WC9) becomes
+\[
+ \mathcal S=d^2(T_q^2+T_n^2)+c_FF_v^2
+       +f_AA_1^2+f_BA_2^2+f_{C0}A_3^2
+       -f_G(cw)A_1A_3+T_\alpha^2.                 \tag{R9B3}
+\]
+Indeed $H_u=-du$ and the formerly problematic term is exactly
+\[
+  (f_C-f_{C0})A_3^2=\alpha u^2.
+\]
+It is retained as a square, not treated as a bounded perturbation.
+Since $f_A=f_A|_{U=V=0}+d_4U+b_4V/t^2$, (R9B2) proves that
+(R9B3) has a bounded Gram with strictly positive diagonal real
+residue on
+\[
+ T_q,T_n,F_v,A_1,A_2,A_3,T_\alpha.
+\]
+Its only displayed off-diagonal entry is infinitesimal by (R9B1).
+
+\paragraph{Every original state normal.}
+Use exactly the full-state frame (WC4),
+\[
+ E=tuW-v,\qquad N_y=(Y-huW)/\sqrt h,
+ \qquad \xi=X+ru,
+\]
+initially at $Z=1$. The original hard block has the unchanged
+strict residue (WC5), because its rational coefficients have no
+negative power of $a$ and (WF6)--(WF7) supply its source limits.
+The extracted angular contributions in (WC15) are infinitesimal
+linear combinations of $T_q,T_n$: simply replace
+$R_q=-dT_q$ and $R_n=-dT_n$. Their coefficients remain bounded
+infinitesimals even when $n=0$.
+
+For the complete residual normals, use their exact polynomial
+arrays (WC17a). Every term is either $Buw^j$ with $0\le j\le3$
+or $u^iw^j$ with $i\ge3,j\ge1$, with bounded pure-source
+coefficients by (R9B2). The following exact allocations have only
+infinitesimal coefficients:
+\[
+ \boxed{
+ Buw^j=\frac{u w^{j+1}}t A_1-\frac{u w^j}t F_v,
+ \qquad
+ u^iw^j=u^{i-2}w^{j-1}A_1.}                         \tag{R9B4}
+\]
+The first identity follows from $tB=v^2-F_v$ and $A_1=uv$;
+the second is immediate. These identities include the formerly
+problematic $Bu$ term, and never divide by $a$, $k$, or a mixed
+element. Hence all three full first normals are infinitesimal
+linear combinations of roots already carrying strict scalar
+pivots. The $\sqrt h$ multiplying the $N_y$ normal is bounded
+and causes no difficulty. Joining them with the hard block gives
+an exact finite bounded Gram with strictly positive real residue.
+The inherited bounded-Gram lemma now proves tensor SOS for the
+complete parent.
+
+Homogenize by $Z^2$ exactly as after (WC28), so all roots become
+homogeneous state-linear expressions and no $Z$ inverse remains.
+The resulting identity includes $Z=0$. The original sign gauges
+handle all signs, the two exact positive-axis identities (WC28)
+handle literal axes, and real/imaginary splitting handles complex
+states. No norm, original packet, or hard normal was discarded.
+
+\paragraph{Exact remaining scope.}
+Together with the R13 remote reduction, this leaves on R9 only
+$u,v\ne0$ both infinitesimal with $\omega=u/v$ infinitesimal.
+The new identity (R9B1) does not claim $cw$ bounded when $w$ is
+unbounded. That reciprocal local chart remains an explicit proof
+obligation. The accompanying 23 exact checks (including twelve
+joint source regularity checks) verify the new finite identities;
+they are not a replay of an older suite.

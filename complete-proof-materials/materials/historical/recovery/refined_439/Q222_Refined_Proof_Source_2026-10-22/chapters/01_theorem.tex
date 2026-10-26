@@ -1,0 +1,169 @@
+\chapter{The theorem and its proof}
+\label{ch:theorem}
+
+Let $\mathcal Q_{222}\subset\mathbb R^8$ be the set of behaviours of
+two separated quantum systems, with two binary measurements on each
+system.  We use outcomes $\pm1$ and coordinates
+\[
+ q=(a_0,a_1,b_0,b_1,E_{00},E_{01},E_{10},E_{11}).
+\]
+The corresponding probabilities are
+$p(\alpha,\beta\mid x,y)=
+(1+\alpha a_x+\beta b_y+\alpha\beta E_{xy})/4$.
+The quantum definition permits arbitrary finite local Hilbert-space
+dimensions, mixed states, and binary positive-operator-valued measurements.
+
+\begin{theorem}[Finite semidefinite representability]
+\label{thm:main}
+There are finite integers $N,m$ and real symmetric matrices
+$A_0,A_1,\ldots,A_8,B_1,\ldots,B_m$ of order $N$ such that
+\[
+ \mathcal Q_{222}
+ =\left\{q\in\mathbb R^8:
+     \exists y\in\mathbb R^m,\quad
+     A_0+\sum_{\nu=1}^{8}q_\nu A_\nu+
+                 \sum_{j=1}^{m}y_jB_j\succeq0\right\}.
+\]
+\end{theorem}
+
+The theorem is qualitative.  The argument below gives neither a value of
+$N$ nor a bound of two on the orders of the positive-semidefinite blocks.
+Its algebraic conclusion, which is the actual object proved, is stronger
+than ordinary nonnegativity of every Bell slack.
+
+\begin{theorem}[Separated slack certificate]
+\label{thm:slack}
+Let $K_c,K_t$ be separately labelled real closed extensions of
+$\mathbb R$.  Let $f=f_0+\sum_{\nu=1}^{8} f_\nu q_\nu$ be an
+affine function in $K_c[q]$ nonnegative on the transferred quantum set,
+and let $q\in(\mathcal Q_{222})_{K_t}$.  Then
+\[
+ [f,q]:=f_0\otimes1+\sum_{\nu=1}^{8}f_\nu\otimes q_\nu
+       \ \in\ \Sigma(K_c\otimes_{\mathbb R}K_t)^2.
+\]
+Each sum of squares is finite.  The fields may be labelled copies of
+the same extension; no algebraic-disjointness hypothesis is imposed.
+\end{theorem}
+
+\section{A short proof, with every local input supplied below}
+
+Write $P_{\mathcal Q}$ for the cone of valid affine functions.
+The proof has four reductions.
+
+\paragraph{1. A finite physical model.}
+Chapter~\ref{ch:model} proves
+\[
+ \mathcal Q_{222}
+   =\operatorname{conv}\Phi(S^1\times S^1\times S^3),
+ \qquad
+ q=\sum_{i=1}^{9}w_i\Phi(z_i),\quad
+ w_i\geq0,\quad\sum_iw_i=1.
+\]
+Here $\Phi$ is the polynomial expectation map for two real qubits.
+The common dilation, two-dimensional block decomposition, removal of
+complex phases, and nine-term convexification are proved there.
+Thus $\mathcal Q_{222}$ is compact, convex, and semialgebraic.
+The fixed finite formula transfers to any real closed testing field.
+
+\paragraph{2. A finite source reduction.}
+Chapter~\ref{ch:geometry} proves that a valid source is an event sum
+or a nonnegative combination of at most nine canonical sources.
+Noncoercive sources have one of two explicit closed-face matrix lifts.
+Every remaining extreme source has an actual finite stationary contact
+and one of the following event supports, after a finite Bell relabelling:
+\[
+\begin{array}{ll}
+\mathsf C_1:&\lambda=n=0,\quad d,m,C,A,\alpha>0,
+                         \quad D,\beta\geq0,\quad D+\beta>0,\\
+\mathsf C_2:&\lambda=\beta=0,\quad d,m,C,A,D,\alpha>0,
+                         \quad n\geq0.
+\end{array}
+\]
+The geometry uses the nonnegative outer coefficients of the contact
+determinant, an eight-event compatibility calculation, and the six
+linear contact equations.  It does not infer a tensor certificate from
+a determinant certificate.  Chapter~\ref{ch:entry} proves the strict
+native signs and identifies the original stationary coefficients.
+
+\paragraph{3. The complete canonical polynomial.}
+For $D_u=1+u^2$, $D_v=1+v^2$ and $\psi=(W,X,Y,Z)$, let
+\[
+\begin{split}
+F={}&4\lambda D_u(W+vX)^2+4nD_uD_vX^2
+       +4m(vW-X+uvY-uZ)^2\\
+ &+4CD_v(uW-Y)^2+4AD_uD_vY^2
+       +(4D+2d)(uW+uvX-Y-vZ)^2\\
+ &+(4\alpha+2d)D_u(vY-Z)^2
+       +(4\beta+2d)D_v(X+uZ)^2-2dD_uD_vZ^2.
+\end{split}                                                     \tag{M1}
+\]
+The canonical certificate theorem in Chapter~\ref{ch:cover} proves
+$F\in\Sigma(K_c\otimes K_t)^2$ for both supports, every independent
+testing pair, and every state.  Its proof is the finite source cover
+in that chapter together with the full identities in the certificate
+chapters.  Those identities include the scalar terms, both independent
+state normals, and the remaining state quadratic form.  They retain
+literal zero event weights, arbitrary relative infinitesimal rates,
+all state ratios, and the homogeneous angle endpoints.
+
+There is one algebraic mechanism behind these certificates.  If
+$G$ has coefficients in the tensor product of the two bounded rings
+and has a positive-definite real residue, then $z^TGz$ is tensor SOS.
+Chapter~\ref{ch:tensor} proves this by a finite elementary-square
+identity.  The roots $z$ may be unbounded.  The common contact
+division and circuit lemmas in Chapter~\ref{ch:mechanisms} produce
+the exact bounded coefficients; the certificate chapters prove the
+strict residue and cover the testing complements.  No mixed inverse
+is introduced in this step.
+
+\paragraph{4. Restore the slack and assemble.}
+The homogeneous version of (M1) equals
+\[
+ (1\otimes\Delta_A\Delta_B\|\psi\|^2)\,[f,\Phi(z)],
+ \qquad \Delta_A,\Delta_B>0.
+\]
+Every cancelled factor is a nonzero pure-source or pure-testing
+factor.  The closed-face lifts give separated trace-pairing squares;
+events give immediate elementary squares.  For a source decomposition
+$f=\sum_j a_j f_j$ and a testing mixture $q=\sum_iw_iq_i$, write
+$[f_j,q_i]=\sum_k h_{ijk}^2$.  Then, exactly,
+\[
+ [f,q]=\sum_{i,j,k}
+       \bigl[(\sqrt{a_j}\otimes\sqrt{w_i})h_{ijk}\bigr]^2.
+                                                               \tag{M2}
+\]
+The constant coefficient is preserved by $\sum_iw_i=1$; zero
+weights cause no division.  This proves Theorem~\ref{thm:slack}.
+
+Finally apply Scheiderer's tensor-evaluation criterion
+\cite[Corollary 3.19]{scheiderer} to two labelled copies of each
+arbitrary real closed field $K$.  Its hypotheses are exactly
+closedness, convexity, semialgebraicity, and the separated SOS
+assertion just established.  It yields a finite semidefinite lift,
+which is Theorem~\ref{thm:main}.\hfill$\square$
+
+\section{Reading the certificate chapters}
+
+The short argument above is the proof's logical spine.  The complete
+proof consists of that argument and the explicit certificates that
+follow.  The latter are essential: replacing them by a list of names
+would leave the canonical certificate theorem unproved.
+
+Three conventions keep the detailed calculations unambiguous.
+First, coefficients and actual contact parameters always belong to
+$K_c$; independent testing angles and state amplitudes belong to
+$K_t$.  Second, $\mathrm I$, $\mathrm U$, and $\mathrm O$ mean,
+respectively, positive infinitesimal, positive bounded with positive
+real residue, and positive unbounded.  These letters refer to the
+field specified in each statement.  A letter H in an inherited chart
+name means type $\mathrm O$, not a literal infinite coordinate.
+Third, a displayed equation tag such as RC or SC is local to its
+certificate section.  Section and page references identify the
+intended formula when several families use the same short tag.
+
+The refinement removes superseded proof routes and consolidates
+shared algebra while preserving the formulas on which the remaining
+routes depend.  It is a reduction of the recovered argument, not a
+claim that no shorter proof can exist.  A separate verification record
+in the source package identifies the new exact algebra checks and
+the substantive proof replacements.

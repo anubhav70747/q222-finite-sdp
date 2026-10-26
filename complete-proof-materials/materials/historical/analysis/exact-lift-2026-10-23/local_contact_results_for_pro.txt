@@ -1,0 +1,123 @@
+LOCAL RESULTS FOR THE NEXT PRO COMPARISON — DO NOT SEND DURING ACTIVE RUN
+
+General native GE1 source formulas now satisfy all six contact identities
+exactly: the three state-normal/kernel entries, the value, and both angular
+first derivatives vanish. The full polynomial state congruence was verified
+independently. With nonnegative weights, SG7 therefore proves physicality of
+this whole native family, not just selected curves.
+Public checker:
+https://github.com/anubhav70747/q222-finite-sdp/blob/main/extracted-lifts/canonical-completion/fixed-c2-gates/check_native_contact.py
+
+Useful source-normal coordinates and the full transformed parent follow.
+Full-state contact congruence (root, 24 October 2026)
+==================================================
+Native C2, d=1, lambda=beta=0. B_s=H+L and the native source formulas
+are exactly those in the published Fixed_C2_Completions.tex.
+
+Let x=u²,w=v² and introduce independent coordinates (N1,N2,N3,T0) by
+ W=N1+N2+B_s*T0,
+ X=u²*v*(N3-r*T0),
+ Y=u*(N2+H*T0),
+ Z=u*v*T0.
+This is a polynomial state map with determinant +/-u^4*v².
+It is invertible for u*v!=0, with no source denominators. Its exact
+state-normal amplitudes are
+ v(uW-Y)-LZ = u*v*N1,
+ vY-HZ = u*v*N2,
+ X+r*u*Z = u²*v*N3.
+
+The full unnormalized F/4 after this substitution is
+ n(1+x)(1+w)x²w(N3-rT0)²
+ +m w[N1+(1+x)N2-xN3+(B_s+x(H+r-1))T0]²
+ +C(1+w)x(N1+L T0)²
+ +A(1+x)(1+w)x(N2+H T0)²
+ +(D+1/2)x[N1+xwN3+(L-w(1+rx))T0]²
+ +(alpha+1/2)(1+x)xw[N2+(H-1)T0]²
+ +(1/2)(1+w)x²w[N3+(1-r)T0]²
+ -(1/2)(1+x)(1+w)xw T0².
+
+This is an explicit symmetric4 matrix polynomial in x,w, source parameters,
+and their source-only contact parameters. At N1=N2=N3=0,T0=1 it is exactly
+the scalar kernel polynomial already derived. All three normal directions
+are retained, in contrast with checking the scalar kernel alone.
+No PSD or fixed-function source-affine extraction is asserted here.
+
+Potential use: exact contact equations require the three normal/T0 cross
+entries to vanish at x=z,w=y. Thus they belong to (x-z,w-y), with explicitly
+divided differences. A contact-adapted completion must control their whole
+coupling, not only the scalar kernel. The hard normal matrix has different
+x,w orders, so an ordinary unscaled lower bound does not suffice.
+
+If a future certificate is obtained after multiplication by a fixed
+nonnegative testing monomial, prove the corresponding weighted identity
+explicitly. Original validity then follows first on the dense u*v!=0
+region by invertibility and only afterwards at axes by continuity.
+The state change alone is not a source-affine lift: H,L,r must be used as
+source-only Gram witnesses, and coefficient matching must remain linear
+in the original source coordinates.
+
+
+
+Two simple scalar allocations fail even on globally valid sources:
+1. Subtract k0*w*(x-z)^2 from the kernel polynomial, k0=m*(H+L)^2/z^2,
+   and put the residual divided by x in a 2x2 Gram on (1,w).
+   H=t=1/2, z=y=r=s gives a negative determinant arbitrarily near x=z.
+2. Subtract w*(x-z)^2*(k0-sigma*x), with
+   sigma=(b/y+y*Gprime)^2/(y*G)+c+y*f,
+   b=A*H^2, c=n*r^2, f=(D+n+1/2)*r^2,
+   G=g2(z), Gprime=g2prime(z).
+   H=h, z=y=h^2, r=t=1/2 gives determinant -> -x^4/64 at every fixed x>0,
+   while the removed coefficient ->1/4-x/8>0 for x<2.
+These failures are specific to the unrestricted two-by-two Gram allocation;
+they exclude neither half-line positivity nor full-normal completions.
+Exact rational identities and limits have been checked, without sweeps.
+
+Use these only if relevant to your completed derivation. Please prioritize
+one fixed finite testing span and affine pencil; a source-dependent inverse
+of the positive normal block does not by itself provide a finite span.
+
+BOUNDED DETERMINANT ROUTE CHECK (COMPLETED)
+For P=[[A,b],[b^T,e]] and D_A=det A>0,
+ D_A F=(A*xi+bZ)^T adj(A)(A*xi+bZ)+det(P)*Z^2.
+The positive normal block and balanced Laurent circuits yield fixed testing
+features for this weighted parent. They do not remove D_A: it is cubic in
+source coordinates and jointly source/testing dependent. The full contact
+normal transformation changes it only by the pure testing factor x^3*w/64.
+A nonnegative increase C->C+tau preserves validity (but not necessarily the
+native boundary parametrization). At v=1, the denominator D_tau=D_0+tau D_1
+has nonconstant D_1/D_0. Its endpoint values are
+ 1/[C+A+(D+alpha+1)/2] and 1/[C+n(D+1/2)/(2n+D+1/2)],
+which differ strictly. Consequently the literal D_tau^(-1/2) functions span
+an infinite-dimensional family, by a Vandermonde derivative argument.
+This only limits direct division; retaining excess event squares or finding
+a different core/cancellation remains possible. Do not treat it as a no-go
+result for an exact finite lift.
+
+ORIGINAL C2 CAP PROOF LOCATORS — 24 October 2026
+
+No single R21 formula is indexed by the literal numerical source/test
+bounds of the new fixed-gates construction. Positive numerical thresholds
+must not be mistaken for infinitesimal partitions over arbitrary real
+closed fields.
+
+For z,y infinitesimal in the source field, c2_short.tex:
+1. H unit: lines1190-1688, components pe16499ccc4c6 and p590112f102bd.
+   LII2-LII7 center normals and complete C,D squares; LII15-LII20 give
+   monic allocations and six-root strict-residue Gram. RR3-RR9 cover
+   complementary tests with compact circles and harmonic completion.
+2. H infinitesimal and y/(H+L) unit: lines7931-8462,
+   sec:c2-bounded-a-new, prop:c2-bounded-a.
+   B=H+L, a=z/B, t=y/B; a bounded on the proposed envelope.
+   BA4-BA7, source-only caps, strict-residue completion, literal axes.
+3. H infinitesimal and y/(H+L) infinitesimal: lines9236-10062,
+   components p261f71af685d and pbaab204a8ab1.
+   RFN4-RFN24 restore normals with circuits/conductors;
+   R1N1-R1N7 supply source rescaling/bounds.
+
+Each ultimately uses TF1/TF2, p25af2c58da7e:lem:gram in03_tensor.tex.
+These are local separated identities, not evaluated fixed gates.
+The numerical cap b>1-2^-26, |c|<2^-26 permits unit testing angles;
+complementary/noncommuting arguments and literal-axis identities are needed.
+Numerical source bounds permit unit z or y too; strong IU/UI/UU routes
+are in pe351eb06b28b:sec:c2-complete-source-routing, lines42-181.
+Read only the actually applicable branch when checking the Pro construction.

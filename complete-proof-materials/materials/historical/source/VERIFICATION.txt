@@ -1,0 +1,56 @@
+Q222 ANALYTICAL EXTRACTION REFINEMENT - REGENERATED 2026-10-22
+VERIFICATION REPORT
+
+RESULT: PASS within the precise local, projected, module and conditional scopes.
+GLOBAL E1-E3: OPEN. Historical 549-page proof: not recreated or re-audited.
+
+FRESH ISOLATED REPLAY
+Nine suites passed in an isolated temporary copy: six construction/verification suites and three separately implemented review suites.
+The replay checked 87 then-existing manifest-bound files. Every regenerated manifest-bound output remained byte-identical; mismatches: 0.
+The final manifest also binds these aggregate reports and final document-QA records. No delivered proof file was rewritten by the isolated replay.
+
+PASS  c2/regular_c2_build.py
+PASS  c2/regular_c2_check.py
+PASS  diagonal/regenerate_diagonal.py
+PASS  compiler/build_and_check_tilted_extraction.py
+PASS  compiler/generate_q222_qe_problem.py
+PASS  c2/schur_remainder_check.py
+PASS  diagonal/review_regular_c2.py
+PASS  c2/regular_c2_cross_review.py
+PASS  compiler/review_schur_remainder.py
+
+EXACT LOCAL RESULTS
+Regular C2: 25 fixed frames; 735 mixed positive products; 50 positive pure remainders; 785 PSD blocks of order two; 1570 listed features retaining repetitions; 237 ambient monomials; 27747 product records; 295 seven-source target records; maximum product degree 6.
+The rational local radius is 510101005/350806159660744. The complete parent, contact equations, uniform Jacobian regularity, exact Taylor matrix, sign bounds, tensor factor typing and coefficient conventions are retained.
+The C2 independent checker records 111823 comparisons, of which 99116 are encoding checks. These are not independent theorem counts and are not added to other overlapping check totals.
+Tilted projection: 38 checks; N=5, m=1 with 14 upper coefficient records, or N=4, m=0 with 12 records, over Q(sqrt(2)). Both inclusions hold for the stated projection only. The rational nonquantum scope witness is retained.
+Diagonal/B0/event: four corroboration groups with 4, 4, 15, 26 checks. The displayed B0 coefficient cone is exact; its physical restoration remains open. Restricted event cofactors satisfy all five polynomial kernel identities.
+Literal Schur remainder: 28 root identity groups plus the separate 17-check packet-matrix review. The infinite-span conclusion concerns literal scalar remainders and does not obstruct fixed features for the complete parent.
+QE encoding: 20 checks of the rational physical formula and decision input. Physical formula: 81 existential variables, 36 equations, 9 inequalities, maximum degree 5. Candidate M=3: 162 coefficients, 9 auxiliaries. Status UNSOLVED; no quantifier elimination was run.
+
+DOCUMENT QA
+The final manuscript has 31 pages. Every page was rendered and visually reviewed. All 31 final page images decode completely. Three truncated initial PNG render files were replaced; no PDF content change was needed.
+Final compile diagnostics: 0 overflowing boxes; 0 underfull boxes; 0 unresolved references; 0 missing glyphs; 0 duplicate destinations.
+PDF SHA256: db07ab77c834778cc9cc3d29eaecac036f0c0cb510c0669abbd72582688ae4df
+
+SOURCE CUSTODY
+Canonical August 30 base: 76839 bytes; SHA256 e268a6ae1c11dd02b5819064fa7e8187173074050d92f3204e703dd46f574731.
+Attached August 31 frozen source ZIP: 17609 bytes; SHA256 1a6208d7d1f51e5e166d46e80be3167ffc43aff97027f5d0c39705ab5d4f2bb3.
+Unchanged earlier continuation ZIP: 8884930 bytes; SHA256 9dcf9554b1a2578bb6b9fd909e7d194d82636fe61a0035da0694eb2e44f441a3. Its ZIP CRC check passed.
+
+CHECKLIST
+20 supplementary items: 13 complete within stated scopes; 7 open.
+Open items: B03, A01, G1, G2, E1, E2, E3. All 34 unique evidence paths exist.
+Ten further concrete global data obligations G01-G10 are listed separately from the retained candidate gates G1 and G2.
+
+LIMITS
+The review comprises analytical review, separate-agent review within the same model system, and targeted exact algebra. It is not external peer review or proof-assistant formal verification.
+No evaluated full eight-coordinate quantum pencil, numerical global lift-size bound, or full-set second-order-cone representation is claimed.
+The preserved older order-13744 outer candidate and its prior records were not newly replayed in this regeneration; its reverse inclusion remains unproved.
+
+REPRODUCE
+python3 verify.py
+python3 -m pip install -r requirements.txt
+python3 verify.py --replay quick
+
+Final archive integrity is checked after packaging. The archive digest belongs outside the ZIP and is appended to the downloadable verification report.

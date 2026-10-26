@@ -1,0 +1,196 @@
+\chapter{A simultaneous full-$D$/full-$Y$ identity and an extra-row conductor}
+\label{component:pa73a17051258}
+\noindent\textbf{Component }\path{pa73a17051258}\par
+{\small\noindent Source: \path{R17/definitions/c1_complete_joint_frame.tex}\par}
+{\small\noindent SHA256: \path{a73a170512582634bf9285c08110515d2f736dda21eada108e1caa3db50c0032}\par}
+{\small\noindent Inventory use: JF1--JF5, definitions, full-parent derivation | C14\_\allowbreak{}ENTIRE\_\allowbreak{}ORIGINAL\_\allowbreak{}PARENT\_\allowbreak{}GRAPH; precise subordinate uses retained below\par}
+\medskip
+\section{A simultaneous full-$D$/full-$Y$ identity and an extra-row conductor}
+\paragraph{Scope and status.}
+This is an independently reconstructed exact identity for the complete
+original C1 parent, not a certificate admitting C14.3b. It retains the
+same stationary source, $\Lambda=n=0$, $\beta\ge0$, all $j$ and $1-r$
+openings, independent source/testing fields, and the remaining local
+$v/u$-infinitesimal testing chart. No mixed inverse or comparison of
+source and testing rates is used below.
+
+Write $\mathcal P=F/4$, initially at $Z=1$. Set
+\[
+ a=1/\zeta,\quad t=\eta,\quad y=tx/a,\quad U=u^2,\quad V=v^2,
+ \quad B=\beta+\tfrac12,\quad D_p=D+\tfrac12,
+\]
+\[
+ \begin{gathered}
+ E=tuW-v,\quad Q_t=Y-rv/t,\quad P=E/t-Q_t,\\
+ \xi=X+hu,\quad R_D=v(U-x),\quad T_D=R_D-uv\xi/h.
+ \end{gathered}
+\]
+Thus $Q_t=rE/t+\nu$ in the R15 notation. Put
+\[
+ q=\alpha+(m+B)(1-h)^2,\quad\mu=m-a^2q,
+ \quad\lambda=\mu/(tax),\quad H=avW-u-a\xi,
+\]
+\[
+ F_0=V-y,\quad F_b=F_0+vE,\quad F_t=F_0+(t/r)vQ_t,
+ \quad T_0=A+\alpha+\tfrac12,\quad T_m=T_0+m,
+ \quad e_4=r^2T_m/t^2.
+\]
+Here $F_t=\widetilde F$ and $F_b=\overline F$. Define pure-source
+coefficients
+\[
+ b=Ar/t-m(1-h)-\alpha-\tfrac12,\qquad
+ b'=b+e_4yt/(2r),
+\]
+\[
+ \kappa=2[B(1-h)-D_pj/t-mr/t],\qquad
+ \gamma=2b'/h+2D_pj/r-2tB(1-h)/r.
+\]
+They satisfy $b'=O(x)$, $t\kappa\sim-1$ and $\gamma\sim1$.
+
+\paragraph{Complete parent, with no omitted hard row.}
+Let
+\[
+ L=UV+(ax/t)V^2/U+tx^2/a-3xV,
+\]
+\[
+ \mathscr C=\lambda L+\frac{\mu V}{t^2U}E^2
+                +2\left(\frac{\mu v^3}{t^2U}-\lambda xv\right)E.
+\]
+The exact full-parent identity is
+\begin{align*}
+ \mathcal P={}&qH^2+\mathscr C
+ +CP^2+AQ_t^2+D_p(P-hT_D)^2+2b'Q_tT_D\\
+ &+\mathscr R+e_4UF_t^2-e_4yu(H+a\xi)F_t\\
+ &+AUQ_t^2+B(1+V)\xi^2
+                 -2(\mu/a)H\xi-\mu\xi^2\\
+ &+\kappa uF_t\xi+\gamma uvQ_t\xi,                 \tag{JF1}
+\end{align*}
+where the entire joint radial row is
+\[
+ \mathscr R=\frac C{t^2}(F_b-rF_t)^2
+       +\frac{r^2T_0}{t^2}F_t^2
+       +\left(\frac{2mr}{t^2}+e_4x\right)F_bF_t.    \tag{JF2}
+\]
+In particular all $mVEQ_t/t$ terms are included in JF2; they are not
+separate errors. The $mUVQ_t^2$ contribution is included in the complete
+$e_4UF_t^2$ row, so it cannot also be retained independently.
+
+A short independent way of certifying JF1 is useful. Without imposing
+any source formulas, the difference between the original parent and
+its displayed right side is exactly a linear combination of only
+\[
+                       vE,\ vQ_t,\ u\xi,\ UV,\ V,\ 1.
+\]
+The displayed expression has zero value and all five first derivatives
+at the original contact $U=x,V=y,E=Q_t=\xi=0$.
+Its six coefficients therefore vanish by the six original stationary
+contact balances. The checker establishes this polynomial identity,
+including the value and every normal, before applying contact. This
+uses the complete original parent rather than a truncated model.
+
+\paragraph{One strict radial pivot, with its exact companion.}
+Set $\rho=m+rT_mx/2$. Then JF2 has the pure-source completion
+\[
+ \mathscr R=\frac C{t^2}
+       [F_b-r(1-\rho/C)F_t]^2
+       +\frac{r^2}{t^2}[T_0+2\rho-\rho^2/C]F_t^2.  \tag{JF3}
+\]
+Here $\rho=O(x)$ and $T_0+2\rho-\rho^2/C\sim1/2$;
+all denominators are pure source and this remains uniform at both
+source openings. Both $F_t/t$ and $F_b/t$ have bounded allocations
+on JF3. This does not provide an independent strict $F_0/t$ pivot.
+The non-small remaining coefficient is precisely $\gamma uvQ_t\xi$.
+In particular a source split making $x/\sqrt t$ bounded does not
+remove it, because $\gamma\sim1$.
+
+\paragraph{The extra circuit row participates in the leading cancellation.}
+Use $c^2=a/t$, $k^2=x$, $p=ckv/u$, and homogenize now in $Z$:
+\[
+ J_0=uv-x/c,\quad R_c=kv(tcW-Z),\quad
+ R=\sqrt\lambda\,tk(cv-u)W,
+ \quad \tau=tcW-Z.
+\]
+The generic exact circuit completion is
+\[
+ \mathscr C=\lambda J_0^2Z^2+R^2+
+      \underbrace{\frac{2\lambda k}{p}R_c^2}_{\mathcal T^2}
+      -\lambda xE^2.
+\]
+The full-$D$ conductor is
+\[
+ R_D=uJ_0Z+kR_c-(x/c)(H+a\xi),\qquad
+ H+a\xi=avW-uZ.                                  \tag{JF4}
+\]
+The additional exact polarization is
+\[
+ E(H+a\xi)=uv\tau^2-t(u-cv)^2WZ.                  \tag{JF5}
+\]
+Consequently the extra circuit row and the principal cross left after
+using JF4 satisfy
+\[
+ \mathcal T^2+\kappa h(x/c)E(H+a\xi)
+ =\frac{x}{c}(2\lambda+\kappa h)uv\tau^2
+      -\kappa ht\frac{x}{c}(u-cv)^2WZ.             \tag{JF6}
+\]
+This cancels the previously non-small $E$--angular Gram coupling.
+It is not itself an SOS decomposition: the independent native-source
+calculation in \path{../small_eta/check_circuit_remainder_source.py}
+gives $2\lambda+\kappa h<0$ of order $x/t$ in this chart.
+Also, the sign of $WZ$ must be retained. The second summand is a
+literal SOS on the pure-testing sign chart $WZ\ge0$ because
+$-\kappa>0$, but not on the opposite sign chart.
+
+\paragraph{An exact allocation of the negative small extra-row fraction.}
+There is nevertheless a useful conductor:
+\[
+ x\frac{k}{p}R_c^2
+          =U R_c^2-kuJ_0R_c\tau.                   \tag{JF7}
+\]
+If the testing state is normalized with $Z$ a unit and $W$ bounded,
+then $\tau/Z=tc(W/Z)-1$ is bounded. Thus the right side is an
+infinitesimal Gram on $\sqrt\lambda R_c$ and
+$\sqrt\lambda J_0Z$, with coefficients $U$ and
+$ku(\tau/Z)$. Since
+$\sqrt\lambda R_c=R+\sqrt\lambda kE$, its additional coefficient
+on $E/\sqrt t$ is $\sqrt{\lambda t}\,k=O(k)$.
+Therefore a negative $O(x)$ fraction of $\mathcal T^2$ has a bounded
+infinitesimal allocation on this state chart. No bound on $p$ is used.
+The companion identity
+\[
+ F_b/t=(W/Z)J_0Z+(x/a)\tau                          \tag{JF8}
+\]
+may supply a strict $xZ$ radial pivot in a simultaneous state-chart
+reassembly, since $\tau/Z\sim-1$ there. All divisions in JF7--JF8
+are pure testing. Neither identity is an authorization to assume a
+strict $E/\sqrt t$ pivot after the leading source block has become
+semidefinite. That final simultaneous allocation is still required.
+
+\paragraph{A direct conductor on the normalized $Z$-unit state chart.}
+There is a simpler route on this state chart that does not perform JF4--JF6.
+Put $e_E=E/\sqrt t$ and retain the original strict source completion
+of the first line of JF1. Since $Q_t=E/t-P$ and $vZ=tuW-E$,
+\[
+ uvQ_t\xi=\sqrt t\,U(W/Z)e_E\xi
+             -u(\xi/Z)e_E^2-uvP\xi.                \tag{JF9}
+\]
+When the testing state is normalized with $Z$ a unit, $W/Z$ and
+$X/Z$ are bounded and $\xi/Z=X/Z+hu$ is bounded. Thus all three
+coefficients in JF9 are infinitesimal in the bounded tensor ring.
+The last uses the bounded pure-source allocation of $P$ on the
+completed source roots. The first line of JF1 has source Schur pivot
+$tS\sim1/2$, and $E/\sqrt t$ has a bounded allocation there,
+including after the full $D_p$ shift. Consequently JF9 removes the
+remaining $\gamma$ coupling on this state chart without producing
+a semidefinite source frame. The checker verifies JF9 exactly.
+The accompanying complete state-chart admission, if used, must still
+list the retained positive rows and the strict angular block; JF9
+alone does not cover states with normalized $Z$ infinitesimal.
+
+\paragraph{Receipts and audit conclusion.}
+\path{check_joint_frame.py} has sixteen exact checks. They establish
+JF1 against the complete original parent through precisely its six
+stationary contact balances, JF3--JF8, and the exact surviving
+$\gamma$ coupling. This resolves the double counting of the low and
+high full-$Y$ radial rows and gives a new extra-row conductor.
+It does not establish the remaining strict frame, does not admit a
+new all-tests source subdomain, and does not close C14.3b.

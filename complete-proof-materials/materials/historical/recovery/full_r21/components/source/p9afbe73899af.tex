@@ -1,0 +1,254 @@
+\section{C1.1: an opening-uniform full normal and a new angular circuit}
+\label{sec:r7-c1-small}
+This section concerns the original C1.1 source, not an enlarged family.
+All coefficients are divided by $d>0$. Put
+\[
+ b=\eta^{-1/2},\quad g=\sqrt\zeta,\quad q=k^2\eta,
+ \qquad x=b^2q,\quad a=b^2(1-r).
+ \tag{SC1}
+\]
+Here $b,g$ are positive infinitesimals, $q>0$ is bounded, and
+$\overline q\le1/2$. The new bounded two-normal reduction below is
+asserted for $q$ a positive unit. The exact polynomial identities
+remain valid more generally, but their indicated boundedness argument
+would not control $g/\sqrt q$ when $q$ is infinitesimal.
+No all-tests closure is inferred from the reduction.
+
+Keep $K,R,T,M,J,E,Q,P_4,P_d,P_\alpha$ from (NC1)--(NC2), and set
+\[
+\begin{aligned}
+ c_b&=b^2C/d=\frac{K(1+b^2r)E}{2(1-r)P_d},&
+ a_b&=b^2A/d=\frac{P_4}{2rP_d},\\
+ D_b&=D/(db^2),&\alpha_b&=\alpha/(db^2g^2),\\
+ h_2&=\frac{Kq(1+b^2r)(1-tg^2)(1+qg^2)}{2P_d},&
+ h_b&=\frac{Kq(1+b^2r)[1+(1-t)g^2]}{2P_d}.
+\end{aligned}
+\]
+Thus $m/d=h_2/(g^2M)$ and $\beta/d+1/2=h_b/(g^2t)$.
+The exact relation
+\[
+ h_b-h_2=\frac{Kq(1+b^2r)E g^2}{2P_d}
+ \tag{SC2}
+\]
+removes the apparent opening dependence from the first normal of the
+paired $m,\beta$ currents. The quantities $D_b,\alpha_b,h_2,h_b$ are
+bounded; $\alpha_b,h_2,h_b$ are units in the stated $q$-unit domain.
+Their residues are respectively $(1-2q)/2,q^2/2,q/2,q/2$, with
+bounded source letters on the right understood at residue.
+
+\paragraph{Exact full-parent reduction.}
+For bounded affine tests define
+\[
+ Q_b=(W+uY)/b,\quad Y_b=Y/b^2,\quad p=t/R,\quad
+ N=\frac{(X+uZ)/b-pvQ_b}{g},
+\]
+\[
+ H=uQ_b/b,\quad L=vQ_b/g,\quad V=uvZ/b,\quad
+ B_b=gN+pvQ_b,\quad D_u=1+u^2,\quad D_v=1+v^2.
+\]
+All roots use only pure-source inverses. Retain the two nonnegative
+original packets
+\[
+ \frac{4h_2t}{MR}N^2,
+ \qquad \frac{4h_bM}{tR}D_vN^2.
+\]
+The complete original parent divided by $db^2$, minus these packets,
+is exactly
+\begin{align*}
+ G={}&\frac4R\{(h_2+h_bD_v)N^2+2(h_bD_v-h_2)LN
+              +[h_2(1-p)+h_bpD_v]L^2\}\\
+ &+4D_v\{c_b(H-D_uY_b)^2+a_bD_uY_b^2\}
+   +4D_bJ_b^2+4\alpha_b g^2D_u(vb^2Y_b-Z)^2+2K_b,
+                                                        \tag{SC3}\\
+ J_b={}&b^2(H-D_uY_b)+ubvB_b-D_uvZ,\\
+ K_b={}&b^2(H-D_uY_b)^2+2buv(H-D_uY_b)B_b+u^2v^2B_b^2\\
+ &+D_uv^2b^2Y_b^2+D_uV^2
+       -2D_uV(Q_b+vB_b)+2D_uu^2vZY_b.
+\end{align*}
+These are entire quadratic polynomials in the state; no restriction
+of a state normal has been made. In particular, (SC3) is a direct
+input for collecting both complete first normals and their full hard
+quadratic, rather than an identity solely on a contact graph.
+
+\paragraph{A harmonic normal removes both $r$ openings.}
+Put
+\[
+ s=c_b+a_b,\quad \rho=c_b/s,\quad h=c_ba_b/s,
+ \quad \rho_0=Kr/R,\qquad
+ N_y=\sqrt{s}\,(D_uY_b-\rho_0H).
+\]
+Then the complete $C,A$ line in (SC3), divided by $4D_v$, equals
+\[
+ \left[N_y+\sqrt{s}(\rho_0-\rho)H\right]^2+hH^2
+ -\frac{a_bu^2}{D_u}
+           \left(\frac{N_y}{\sqrt{s}}+\rho_0H\right)^2.
+ \tag{SC4}
+\]
+The inverse $1/D_u$ is pure testing, and every coefficient in (SC4)
+is bounded uniformly through either $r\to0$ or $r\to1$.
+Indeed $s$ is bounded below, $h$ is a positive unit, and
+$a_b/s$, $a_b\rho_0/\sqrt{s}$ and $a_b\rho_0^2$ are bounded.
+There is no mixed harmonic denominator.
+
+Here is the exact source cancellation that also centers the normal
+without an opening loss. Define
+\[
+ S_0=Kr(1+b^2r)E+(1-r)P_4,
+\]
+\[
+ T_0=q^2(1-tg^2)^2+qrg^2+2qtg^2-qg^2-2q+r.
+\]
+Then
+\[
+ \rho=\frac{Kr(1+b^2r)E}{S_0},\qquad
+ Kr-\rho R=-\frac{b^2r(1-r)K T_0}{S_0},\qquad
+ h=\frac{K(1+b^2r)E P_4}{2P_dS_0}.             \tag{SC5}
+\]
+Both $S_0$ and the other denominators are positive units. Also
+$s\asymp[r(1-r)]^{-1}$, so $\sqrt{s}(\rho_0-\rho)$ is
+infinitesimal without a lower bound on either opening.
+At the actual contact,
+\[
+ (u,v)=(b\sqrt q,\sqrt q g),\quad
+ Q_b=RgZ,\quad Y_b=r\sqrt q gZ,
+\]
+and both $N,N_y$ vanish exactly. Thus (SC3)--(SC5) remove every
+unbounded source weight while retaining the actual contact and every
+state normal.
+
+\paragraph{The leading angular circuit.}
+For $u,v$ infinitesimal, the leading scalar after the harmonic state
+normal has been removed is twice
+\[
+ (1-q)H^2+qL^2+V^2+(1-2q)(vZ)^2+q^2(gZ)^2-2VQ_b.
+\]
+Here the leading relation $H(vZ)=VQ_b$ is exact for the displayed
+roots. It splits as
+\[
+ (1-2q)(H-vZ)^2+
+ qH^2+qL^2+V^2+q^2(gZ)^2-4qVQ_b.              \tag{SC6}
+\]
+The final four positive terms form one AM--GM circuit, since
+\[
+ (\sqrt qH)(\sqrt qL)V(qgZ)=(qVQ_b)^2.
+\]
+On the positive negative-core chart its radical factors separate
+between the source and testing fields. This proves positivity of the
+leading scalar, including $q=1/2$, where its separate binomial drops
+out. The leading hard normal coefficients are $4q$ on $N$ and $4$
+on $N_y$. This organizing form alone is not yet a certificate for
+all the higher terms in (SC3).
+
+A useful exact conductor can be stated without comparing any source
+and testing rate. Normalize $Z=1$ on its pure-testing state chart,
+put $c=\sqrt q$, $w=(W+uY)/R$, and now use the contact-exact roots
+\[
+ H_0=uw/b^2,\ L_0=vw/(bg),\ V_0=uv/b,\ D_0=c^2g,
+ \quad A_0=cH_0,\ B_0=cL_0,\ C_0=V_0.
+\]
+Their contact is $(u,v,w)=(bc,cg,bg)$. Set
+\[
+ E_0=H_0-v,\quad
+ S_v=A_0-D_0-cE_0,\quad
+ S_u=C_0-D_0-S_v,\quad S_w=B_0-D_0-S_v.
+\]
+Direct multiplication gives
+\[
+\begin{aligned}
+ H_0(u-bc)&=(u-bc)E_0+bS_u,\\
+ H_0(v-cg)&=(v-cg)E_0+(v/c)S_v,\\
+ H_0(w-bg)&=(w-bg)E_0+(bg/c)S_w.
+\end{aligned}                                                     \tag{SC7}
+\]
+Only the positive-unit inverse $1/c$ occurs. These identities lift
+contact-vanishing coefficients times $H_0$ to the displayed root
+module with bounded coefficients on the small pure-testing chart.
+They do not alone prove a full scalar square lift: a first-jet
+syzygy among the redundant angular roots still has to be allocated,
+particularly when the coefficient of $E_0^2$ vanishes at $q=1/2$.
+
+\paragraph{Exact small-cost angular pivots.}
+The four-term circuit has the exact symmetric decomposition
+\[
+ \sum_{i=1}^4A_i^2-4\sqrt{A_1A_2A_3A_4}
+ =\frac13\sum_{i<j}(A_i-A_j)^2
+  +\frac23\sum_{\{ij\}\mid\{kl\}}
+       (\sqrt{A_iA_j}-\sqrt{A_kA_l})^2,
+\]
+where the second sum is over the three pair partitions. Use
+$(A_1,A_2,A_3,A_4)=(A_0,B_0,C_0,D_0)$ above and assume the positive
+chart $u,v,w>0$. Then the following identities are exact:
+\[
+\begin{aligned}
+ c\sqrt{uw}\,E_0
+ &=\sqrt{uw}(A_0-D_0)
+      +b\sqrt{cg}(\sqrt{A_0D_0}-\sqrt{B_0C_0}),\\
+ \sqrt{vw}(u-bc)
+ &=\frac{b^{3/2}}{\sqrt c}
+             (\sqrt{A_0C_0}-\sqrt{B_0D_0}),\\
+ \sqrt{uw}(v-cg)
+ &=b\sqrt{g/c}
+             (\sqrt{B_0C_0}-\sqrt{A_0D_0}),\\
+ \sqrt{uv}(w-bg)
+ &=\frac{b^{3/2}\sqrt g}{c}
+             (\sqrt{A_0B_0}-\sqrt{C_0D_0}).
+\end{aligned}                                                     \tag{SC9}
+\]
+The coefficient factors on the right are infinitesimal; all radicals
+separate between the source and testing fields. Consequently any fixed
+positive real multiples of the squares of the four left-hand roots can
+be inserted as additional positive Gram pivots at an infinitesimal cost
+in the displayed strict circuit Gram. To see this without a limiting
+assertion, write the four identities as $P=TZ$, with $Z$ the displayed
+circuit roots and every entry of $T$ in the bounded maximal ideal. Then
+$Z^TGZ=\tau P^TP+Z^T(G-\tau T^TT)Z$, and the second matrix retains
+the strictly positive real residue of $G$ for every fixed real $\tau>0$.
+This is a genuine full-rates Gram mechanism. It still requires showing
+that the entire first-normal and scalar remainders of (SC3) allocate on
+these weighted roots; the identities do not make that last membership
+automatic.
+
+\paragraph{A quantified remote improvement when $e$ is unbounded.}
+The source identity $e^2=q/g^2$ and (NI3) imply that $m,\beta$ are
+both unbounded when $e$ is unbounded. Three inverse-cycle rotations
+send this adjacent pair to $C,A$ and transform tests as
+$(u,v)\mapsto(v,1/u)$. Therefore the adjacent-event theorem covers
+all tests with $v$ not infinitesimal. Combined with the previous
+$C,A$ admission, only $u,v$ infinitesimal remain in this $e$ type.
+This includes every $q$-unit source considered above.
+
+There is also a complete state-chart admission there. Normalize the
+pure-testing state by a coordinate of maximal absolute value. If
+$W$ is a unit, cap $C,A,m,\beta$ at a sufficiently large positive
+real $\mu$, retain all excesses, and leave every other event as its
+original nonnegative square. At $u=v=X=Y=0$, the quadratic part in
+$(u,v,X,Y)$ is
+\[
+ 2(uW-Y)^2+2(X+uZ)^2-4uvWZ+
+ 4\mu\{(uW-Y)^2+Y^2+(vW-X-uZ)^2+(X+uZ)^2\}.
+ \tag{SC8}
+\]
+The event part is strictly positive for every real $W\ne0$ and bounded
+real $Z$: its zero equations give successively $Y=u=X=v=0$. A sufficiently
+large finite $\mu$ therefore absorbs the entire signed quadratic core.
+The exact remainder has degree at least three in these four small
+roots, with bounded coefficients in $W,Z$, so it allocates with zero
+residue. This proves the entire original parent on this chart.
+If the core has negative sign and $W$ is infinitesimal, then $Z$ is
+a unit, since otherwise the core residue forces $X=Y=0$, contrary
+to maximal-coordinate normalization. Thus the remaining state chart
+has $Z=1$, $W$ infinitesimal, and both testing half-angles infinitesimal.
+This is a full quantified narrowing, not closure of C1.1.
+
+\paragraph{Completion and exact outstanding obligation.}
+The following section supplies a finite scalar square lift and both
+complete first normals for the $q$-unit C1.1 subdomain, including
+$D=0$. It uses a contact-centered $D$ packet followed by the geometric
+mean conductor; an unweighted $E_0^2$ perturbation by itself is not
+controlled by the circuit uniformly at arbitrary relative rates.
+For $q$ infinitesimal, the uniform normal and protected contact lift
+in Sections~\ref{sec:r7-c1-q-inf-local}--\ref{sec:r7-c1-q-inf-remote}
+resolve the additional $g/\sqrt q$ issue and all remote tests.
+No assumption of bounded $e$ or $1/e$ is imposed. The original
+checker verifies thirty-nine whole-polynomial and source identities;
+the later modules include their own exact checks and scoped review.

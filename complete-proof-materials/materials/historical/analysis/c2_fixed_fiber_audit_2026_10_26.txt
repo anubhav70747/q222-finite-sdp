@@ -1,0 +1,129 @@
+EXACT FIXED-(a,k) C2 FIBER: INDEPENDENT AUDIT, 26 OCTOBER 2026
+
+Result. The fixed-fiber theorem in seven-extra-high-2026-10-26/
+01_full_me_hull_COMPLETE.txt is correct, with the endpoint precision below.
+This is an exact spectrahedral cone for each pair of FIXED real constants
+a>0, k>max(1,a^2). It does not convexify the continuum of such pairs.
+The checker is self-contained, imports only SymPy/standard-library modules,
+and verifies 30 exact identities; its matching JSON records the results.
+
+Conventions. Use active canonical order (d,n,m,C,A,D,alpha), lambda=beta=0,
+and the symmetric native dictionary (1) in independent-review/
+C2_CONTACT_GEOMETRY.md. Here k=xy=1+(C+d/2)/D on a generator; it is NOT
+the normalized k=B/S used later in that document's equation (7).
+
+1. Exact parameter domain and explicit source formulas.
+
+For native a>0, 0<r,s<1, g=a+r+s-1>0, B0<=0, put
+ x=(a+r)/(1-r), y=(a+s)/(1-s), k=xy, w=x+y,
+ w_-=k(k+a^2-2a)/(a(k-a)), w_+=a+k/a.
+Then the exact open-coordinate domain is
+ k>max(1,a^2), x,y>a, xy=k, w>=w_-.
+In particular w<w_+, not merely w<=w_+. The closed domain replaces
+x,y>a by x,y>=a, or equivalently allows w=w_+. Indeed
+ g=(a+1)(k-1)/((x+1)(y+1)),
+ B0=(a+1)^3 [k(k-a^2)-a((k-a)w+2(1-a)k)]/
+                    ((x+1)^2(y+1)^2).
+Thus g>0 is k>1 and B0<=0 is w>=w_-. Also
+ w_+-w_-=(k-a^2)/(k-a)>0,  w_+>2sqrt(k),
+so EVERY stipulated (a,k) has a nonempty original fiber.
+
+The complete A-normalized source is particularly simple:
+ N:=n/A = a(k-a)(w-w_-)/(k(k-a^2)),
+ d/A=2/a-2N,
+ D/A=[(k-a)x/k-(a-1)]/[a(k-1)],
+ m/A=[(k-a)y/k-(a-1)]/[a(k-1)],
+ C/A=(k-a)(x-a)^2/[a x(k-a^2)],
+ alpha/A=(k-a)(y-a)^2/[a y(k-a^2)].
+Substitution in all seven entries of dictionary (1) proves these formulas.
+They retain n=0 literally. Such a zero face exists in a fixed fiber iff
+w_->=2sqrt(k), and is then w=w_-. At w=w_+ one of x,y equals a,
+hence r=0 or s=0 and C=0 or alpha=0. These are limits, not original
+strict-positive-opening parameters. Both openings cannot vanish since
+k>a^2. All other native denominators remain nonzero at these endpoints.
+
+2. Exact cone and both inclusions.
+
+Define X=k[(a-1)A+a(k-1)D]/(k-a),
+       Y=k[(a-1)A+a(k-1)m]/(k-a).
+The closed conic hull of the original native sources at fixed a,k is
+EXACTLY the following no-auxiliary-variable cone:
+ a(d+2n)=2A,
+ C+d/2=(k-1)D,  alpha+d/2=(k-1)m,
+ (k-a^2)(A+n)=a^2(k-1)(m+D),
+ [[X,kA],[kA,kY]] >= 0,
+ n>=0, aA-kn>=0.                                      (F)
+
+Forward inclusion: every original generator has X=Ax, Y=Ay. Its PSD
+block is rank one, and the source formulas give all four equalities and
+both scalar inequalities. Continuity supplies the zero-opening limits.
+
+Reverse inclusion, including signs: n>=0 and aA-kn>=0 imply A>=0.
+If A=0, then n=d=0; the fourth equality gives m+D=0. The two PSD
+diagonals force m,D>=0, hence m=D=C=alpha=0. There is no nonzero
+exception at A=0.
+
+If A>0, the four equalities recover every source coefficient uniquely
+from A,X,Y. In particular, with c_w=a(k-a)/(k(k-a^2))>0,
+ n=c_w(X+Y-Aw_-),
+ aA-kn=k c_w(Aw_+-X-Y),
+ d=2(k-a^2)A/(ak)+2(aA-kn)/k>0.
+Thus w=(X+Y)/A lies in [w_-,w_+]. The PSD block gives X,Y>0,
+XY>=kA^2, and w>=2sqrt(k). Let
+ x_+=(w+sqrt(w^2-4k))/2, x_-=(w-sqrt(w^2-4k))/2.
+They satisfy x_+x_-=k. Since
+ (a-x_-)(a-x_+)=a(w_+-w)>=0
+and x_+>a (or, at a double root, sqrt(k)>a), one has x_->=a.
+The normalized PSD condition is exactly
+ (X/A-x_-)(x_+-X/A)=XY/A^2-k>=0.
+When x_+>x_-, set lambda=(X/A-x_-)/(x_+-x_-), so 0<=lambda<=1.
+Then (X/A,Y/A) is the lambda-weighted mean of
+ (x_+,x_-) and (x_-,x_+). When they coincide, one generator suffices.
+The A-normalized source formulas are affine in x,y at fixed k after
+using xy=k, as is also immediate from the four linear equalities.
+Consequently this SAME combination reconstructs every source entry.
+Each endpoint is an admissible native source or a zero-opening limit.
+This proves the reverse inclusion, canonical coefficient nonnegativity,
+and an explicit at-most-two-generator decomposition. No extra positivity
+constraints were silently assumed in (F).
+
+The closed-endpoint justification is within the SAME fixed fiber:
+if w=w_+, take w_j<w_+ tending to it, with
+w_j>max(w_-,2sqrt(k)); the two root pairs give strict x,y>a native
+sources tending to the desired endpoint pair. At w=w_- and at the
+double root, the original domain already permits the relevant n=0 or
+equal-opening contact. These arguments never take a,k to a boundary.
+
+3. Rank-one converse and quartic check.
+
+Within (F), rank-one PSD block and aA-kn>0 describe exactly one original
+native ray (including n=0); equality in that scalar bound describes a
+zero-opening limit. The native parameter pair is x=X/A,y=Y/A, followed
+by r=(x-a)/(x+1),s=(y-a)/(y+1). The normalization d=1 is permitted
+because every nonzero point of (F) has d>0.
+
+Writing M=m+D and
+ R=(k-a^2)A^2+a(1-a)kAM-a^2k(k-1)mD,
+the four linear relations give
+ XY-kA^2=-k(k-1)R/(k-a)^2.
+The original contact-quartic residual equals
+ [(a+1)^2(k-1)^2 M^2/(a^2(k-a^2))] R.
+Both factorizations were checked identically, not just on examples.
+Hence quartic equality is the rank-one boundary, not a convex-cone
+constraint. The supplied midpoint at a=2,k=11 is strictly inside the
+PSD determinant inequality and has the stated quartic residual
+ -1543042787517/319701552040.
+The supplied wrong-branch point also checks exactly: aA-kn=-264.
+
+Scope. This establishes a genuine fixed order-two PSD block and two
+scalar blocks (four linear equalities), with no auxiliaries, for EACH
+fixed pair. It gives no finite affine representation of their continuum
+of conic hulls. The proposed compact reparametrization p=a/sqrt(k),
+q=1/sqrt(k) does map the open pair domain bijectively to 0<p,q<1;
+it does not make the products of p,q with source coordinates affine.
+No full-hull, global-lift, arbitrary-a,k-boundary, or independent
+finite-family conclusion follows from this calculation.
+
+Replay:
+ py -3.14 analysis/c2_fixed_fiber_audit_2026_10_26.py
+Result: 30 exact checks passed; no numerical solver or parameter sweep.

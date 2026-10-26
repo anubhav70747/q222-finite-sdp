@@ -1,0 +1,321 @@
+\chapter{The joint rational C2 opening: a full-parent certificate}
+\label{component:p8f912583feaa}
+\noindent\textbf{Component }\path{p8f912583feaa}\par
+{\small\noindent Source: \path{R13/baseline/baseline/baseline/baseline/advances/c2_joint/joint_centered_packets.tex}\par}
+{\small\noindent SHA256: \path{8f912583feaa7f930694a5996b34ad984e1af7b157dbfae029f41c58a4a2ef70}\par}
+{\small\noindent Inventory use: JC1--JC13 complete simultaneous r,gInf source with both centered excess packets\par}
+\medskip
+\section[The joint rational C2 opening: a full-parent certificate]{The joint rational C2 opening: a full-parent certificate}
+\label{p8f912583feaa:sec:c2-joint-centered}
+
+\begin{theorem}[Both event openings may close]
+Use the exact rational C2 source and original parent of
+\path{general_single_angle.tex}.  Suppose $x>0$ is infinitesimal,
+$k,b$ are positive bounded units, $0<r<1$, $0<h<b$, and
+$g=b-1+r+xh>0$.  Suppose $r,g$ are infinitesimal, $n\geq0$, and
+the source is physical.  Then the entire original parent is tensor
+SOS at every independent real or complex projective testing state
+and every independent projective pair of testing angles.  No lower
+bound on either $h$ or $b-h$ is required.
+\end{theorem}
+
+Together with the three-opening and last-opening theorems this
+removes the condition that at least one of $r,g$ be a unit in the
+bounded-$k,b$ rational C2 source family.  It does not classify all
+physical one-weak C2 sources, nor admit a nonunit $k$ or unbounded $b$.
+All tensor-ring conventions and the strict bounded tensor Gram lemma
+are those of the authoritative package.  In particular, a root vector
+need not be linearly independent, and its entries may be unbounded.
+
+\paragraph{Source bounds, including both complementary openings.}
+Write $\rho=\sqrt{x}$, $\eta=h/b$, $\kappa=b/k$, $K=k_0>0$,
+and $D_K=1+K^2$.  Since $r,g$ are infinitesimal, $b_0=1$.
+The source formulas give
+\[
+ (nr)_0=\frac1{4D_K},\qquad (mg)_0=\frac14,
+ \qquad \Delta_0=2D_K.
+\]
+Thus $n,m$ are positive unbounded pure coefficient quantities,
+$nr,mg$ are bounded units, and $nr^2,mg^2$ are infinitesimal.
+In particular $m-1>0$.  The existing opening cancellation identities,
+with $T_C=xC(b-h)$ and $T_A=xAh$, give bounded positive units
+\[
+ (T_C)_0=(T_A)_0=\frac{K^2}{4D_K},\qquad
+ (D/x)_0=\frac1{4K^2D_K},\quad
+ (\alpha/x)_0=\frac{K^2}{4D_K}.
+\]
+They hold even if $h$ or $b-h$ is infinitesimal.  Specifically,
+\[
+ xC(1-\eta)=T_C/b,\quad xA\eta=T_A/b,\quad
+ xC(1-\eta)^2=T_C(b-h)/b^2,\quad
+ xA\eta^2=T_Ah/b^2.                                  \tag{JC1}
+\]
+Put $H_c=x(C+A)$.  This quantity is bounded below by a positive
+real, although it can be unbounded.  Its reciprocal and reciprocal
+square root are bounded pure coefficient elements.
+
+\paragraph{Center the excess positive packets before taking normals.}
+Retain exactly the original amplitudes
+\[
+ M=vW-X+uvY-uZ,\qquad J=uW+uvX-Y-vZ,
+ \qquad D_u=1+u^2,\quad D_v=1+v^2.
+\]
+Let $F$ denote the full original parent, including its signed core
+$H$.  Define $G$ by the following exact polynomial identity:
+\[
+ F=G+4nD_uD_v(X+ruZ)^2
+             +4(m-1)(M-guZ)^2.                       \tag{JC2}
+\]
+An explicit expression, requiring no elimination or mixed inverse, is
+\begin{align*}
+G={}&4M^2+4CD_v(uW-Y)^2+4AD_uD_vY^2
+       +4DJ^2+4\alpha D_u(vY-Z)^2+H\\
+ &-8nrD_uD_vuZX-4nr^2D_uD_vu^2Z^2\\
+ &+8(m-1)g\,uZM-4(m-1)g^2u^2Z^2.                  \tag{JC3}
+\end{align*}
+Every coefficient in (JC3) except $C,A$ is bounded.  At the exact
+original contact
+\[
+ (u,v;W,X,Y,Z)=(\rho,k;\kappa\rho,-r\rho,xh/k,1)
+\]
+both subtracted squares and all of their first derivatives vanish.
+Consequently $G$ has exactly the same zero and full stationary
+contact as $F$.  This statement is essential: merely capping the
+uncentered original packets would not preserve the contact.
+
+On the finite $u=0$ residue axis use
+\begin{gather*}
+ X_g=-ruZ,\qquad Y_g=\eta uW,\qquad E_X=\sqrt n(X+ruZ),\\
+ E_Y=\sqrt{C+A}(Y-\eta uW),\qquad
+ E_M=\sqrt{m-1}(M-guZ).                              \tag{JC4}
+\end{gather*}
+Expand only $G$ in $E_X,E_Y$ and retain $4E_M^2$ as written.
+The root $E_M$ is allowed to be redundant.  No substitution for
+$W$ is made.  In particular, the positive $C$ packet introduces
+no coefficient of the form $Cu^2/n$ or $Cu^2/m$.
+
+\paragraph{The complete graph scalar and its global leading inequality.}
+Write $f=G|_g=f_{ww}W^2+f_{wz}WZ+f_{zz}Z^2$.  The same exact monic
+divisions as in the prior single-angle proof give
+\[
+ f=aP^2+b_sB^2+c_sV^2+eE^2+g_sBV,
+ \qquad (P,B,V,E)=(uW/\rho,uZ,vW,\rho Z),              \tag{JC5}
+\]
+where
+\[
+ a=x\frac{f_{ww}-f_{ww}|_{u=0}}{u^2},\quad
+ b_s=\frac{f_{zz}-f_{zz}|_{u=0}}{u^2},\quad
+ c_s=\frac{f_{ww}|_{u=0}}{v^2},\quad
+ e=\frac{f_{zz}|_{u=0}}x,\quad g_s=\frac{f_{wz}}{uv}.
+\]
+These are polynomial coquotients, not inverses of testing
+infinitesimals.  Their coefficients are bounded by (JC1)--(JC3).
+The exact constant $f_{zz}|_{u=0}=4Dv^2+4\alpha$ supplies the $x$
+factor.  For finite $v$ their residues are
+\[
+ q(v)=\frac{K^2(1+v^2)}{D_K},\qquad
+ b_s=4,\quad c_s=4,\quad g_s=-10,\qquad
+ e(v)=\frac{v^2/K^2+K^2}{D_K}.                        \tag{JC6}
+\]
+Thus the leading scalar, using the exact identity $BV=vPE$, is
+\[
+                  qP^2-2vPE+eE^2+4(V-B)^2.           \tag{JC7}
+\]
+The key identity is now an identity for the graph of a full
+bounded remainder, rather than for the overconstrained graph from
+the earlier frontier note:
+\[
+                   q(v)e(v)-v^2
+                    =\frac{(v^2-K^2)^2}{D_K^2}.      \tag{JC8}
+\]
+If $v$ is a finite nonzero residue with $v^2\ne K^2$, then
+$10|v|<8|v|+2\sqrt{qe}$.  Splitting the exact $BV=vPE$ cross
+term with the pure testing function
+\[
+             \theta=\frac{4|v|}{4|v|+\sqrt{q(v)e(v)}}
+\]
+gives strictly positive residue blocks on $(B,V)$ and $(P,E)$.
+At $v_0=0$, allocate the entire cross term using $BV=vPE$;
+(JC5) then has strictly positive diagonal residue
+$(q(0),4,4,e(0))$ and zero cross residues.  There is no exceptional
+$n_0=0$ corner in the joint regime.
+
+Here is also a global equality and Hessian check needed at the
+matched angles.  For $z=v^2>0$ and $s>0$, set
+\[
+ \mathcal D(s,z)=(q s+4z)(4s+e)-25zs.
+\]
+Exactly,
+\begin{align*}
+ \frac{\mathcal D(s,z)}s
+ &=4qs+4ez/s+qe-9z\\
+ &=4\bigl(\sqrt{qs}-\sqrt{ez/s}\bigr)^2
+       +(\sqrt{qe}-\sqrt z)(\sqrt{qe}+9\sqrt z).    \tag{JC9}
+\end{align*}
+The second term is nonnegative by (JC8); its equality forces
+$z=K^2$.  The first then forces $s=1$.  Moreover the second term is
+\[
+ \frac{(z-K^2)^2}{D_K^2}
+       \frac{\sqrt{qe}+9\sqrt z}{\sqrt{qe}+\sqrt z},
+\]
+whose quadratic coefficient at contact is strictly positive.
+The first square supplies a nonzero $s$ derivative there.
+Hence $\mathcal D$ has a positive definite Hessian at $(1,K^2)$.
+These radicals are used only in the residue-field inequality; no
+radical of an element mixing coefficient and testing fields is used.
+
+\paragraph{Restore every normal, with bounded coefficients.}
+From (JC2)--(JC4) the entire parent is exactly
+\[
+ F=f+E_XL_X+E_YL_Y+
+ H_{XX}E_X^2+2H_{XY}E_XE_Y+H_{YY}E_Y^2+4E_M^2.        \tag{JC10}
+\]
+The first normals are $L_X=G_X|_g/\sqrt n$ and
+$L_Y=G_Y|_g/\sqrt{C+A}$.  The only unbounded weights $C,A$ do not
+enter the $X$ row.  Thus
+\[
+ L_X=V\ell_w+B\ell_z
+\]
+with bounded coefficient functions carrying the infinitesimal
+pure coefficient factor $1/\sqrt n$.  Both have identically zero
+residue on the entire finite $u=0$ axis, including $v=0$.
+
+For the second normal the exact form is
+\[
+ L_Y=\frac1{\sqrt{H_c}}\left\{
+ P(B_2+xe_w)+B(\rho u e_z)+E e_*\right\},            \tag{JC11}
+\]
+where
+\[
+ B_2=8D_v\{(xA)\eta D_u-(xC)(1-\eta)\},\qquad
+ e_*=8v(D-\alpha).
+\]
+All $e_w,e_z$ are bounded: all new terms in (JC3) have bounded
+coefficients, and their $Y$ derivative has an additional $u^2Z$
+factor.  Equation (JC1) makes $B_2$ bounded with identically zero
+residue, even at either closing complementary opening.  Thus every
+coefficient in (JC11) has zero residue.
+
+The entire hard block is bounded and has residue
+\[
+             \operatorname{diag}(4D_{v,0},4D_{v,0},4)
+                   \quad\hbox{on }(E_X,E_Y,E_M).      \tag{JC12}
+\]
+The first entry comes from the retained centered $n$ packet;
+the bounded $G$ contribution is divided by $n$.  The second is
+\[
+ 4D_v\frac{C+AD_u}{C+A}
+   =4D_v\left(1+\frac A{C+A}u^2\right)
+\]
+plus bounded terms divided by $C+A$.  The mixed entry contains
+$1/(\sqrt n\sqrt{C+A})$ times a bounded function.  The third
+entry is the unexpanded centered $m$ packet.  This proves the
+full-parent assertion at all remote finite-axis tests, by the
+strict Gram in (JC5) and the zero-residue first normals.
+
+\paragraph{The matched finite-angle residues.}
+At $v_0=K$, normalize $Z=1$ and suppose $W$ is infinitesimal.
+Use exactly the prior contact conductors
+\[
+ R=(uW-\kappa x)/\rho,\quad S=u-\kappa^{-1}W,
+ \quad U=\rho(v-k),\quad T=u(v-k),
+\]
+with exact identities
+\[
+ u^2-x=uS+\kappa^{-1}\rho R,\quad
+ W^2-\kappa^2x=-\kappa WS+\kappa\rho R,
+ \quad uW-\kappa x=\rho R.                           \tag{JC13}
+\]
+Here $f=p^2Q_b/x+B_b$, with bounded $B_b$ and
+\[
+ Q_b=4D_v\{(xC)(1-\eta)^2+(xA)\eta^2D_u\}.
+\]
+Boundedness follows from (JC1); the remaining terms use only
+the bounded coefficients of (JC3).  The full exact stationary
+contact of $G$ proved after (JC3) supplies every vanishing required
+by the prior monic-contact-division argument.  Successive monic
+differences in $u^2-x,W^2-\kappa^2x,uW-\kappa x,v-k$ therefore
+give a bounded Gram on $R,S,U,T$.
+
+For precision, its strict residue follows from the same explicit
+Schur-complement step in that argument, now with
+\[
+ \Phi=q(v)s^2w^2+4s^2+4v^2w^2-10vsw+e(v).
+\]
+Completing the $w$ square gives
+\[
+ \Phi=(qs^2+4v^2)
+       \left(w-\frac{5vs}{qs^2+4v^2}\right)^2
+       +\frac{\mathcal D(s^2,v^2)}{qs^2+4v^2}.
+\]
+Equation (JC9) proves a positive definite three-variable Hessian
+at $(s,w,v)=(1,1/K,K)$.  Consequently the residue before the
+conductor-zero correction has form
+\[
+ q(K)R^2+4S^2+A_1RU+B_1ST+E_1U^2,
+ \qquad E_1>A_1^2/(4q(K))+B_1^2/16.
+\]
+Choose a real $\delta$ strictly between $B_1^2/16$ and
+$E_1-A_1^2/(4q(K))$, and add $\delta$ times the exact zero
+\[
+ T^2-U^2-ST(v-k)-\kappa^{-1}RU(v-k)=0.
+\]
+The two residue blocks $(R,U)$ and $(S,T)$ are strictly positive.
+
+An explicit equivalent residue check can be used in place of this
+Schur choice.  The capped current has the exact conductor lift
+\[
+ (M-gu)|_g=-v\kappa S+\kappa T
+                  +\eta uv\rho R+\eta u\kappa\rho U.
+\]
+Retaining its $T^2$ term, rather than first moving that term to $U^2$,
+gives the scalar residue
+\[
+ K^2R^2+\frac{2(K^2-1)}{D_K}RU+\frac{U^2}{K^2}
+                  +4(S-T/K)^2.
+\]
+Adding $2/D_K^2$ times the same conductor zero leaves the $(R,U)$
+Schur margin $2/D_K^2>0$, and leaves
+$4(S-T/K)^2+(2/D_K^2)T^2$ on $(S,T)$, also strictly positive.
+
+The full-normal lifts are also the ones actually required for
+(JC10), rather than scalar-only lifts.  Write
+$L_X=uA_1'+WB_1'=-\kappa B_1'S+u(A_1'+\kappa B_1')$.
+Both functions and all their bounded monic coquotients retain
+$1/\sqrt n$.  Exact $G_X=0$ at contact supplies vanishing of
+$A_1'+\kappa B_1'$.  Using (JC13) gives zero-residue coefficients
+on $R,S,U,T$.  For (JC11), write its numerator as $RB_2+\rho E_2$.
+Both $B_2,E_2$ have identically zero leading functions and $E_2$
+vanishes at contact.  The same monic divisions give factors
+$x,\rho u,\rho W$, or a zero-leading-function $(v-k)$ coquotient;
+division by $\sqrt{H_c}$ preserves boundedness and zero residue.
+Thus the complete seven-root Gram on
+$(R,S,U,T,E_X,E_Y,E_M)$ is strict in residue.
+
+If $W/Z$ is not infinitesimal, normalize $W=1$ and keep $Z$
+bounded.  Then the scalar has a strict residue on $(P,1)$:
+its positive constant contribution is $4K^2$.  All normalized
+first normals have zero residue as above.  For $Z=0$, the original
+parent is already the literal sum of its event packets and three
+positive core squares.  The simultaneous sign copy gives $v_0=-K$.
+
+\paragraph{Every other independent test.}
+The outer-chart proof need not use the centered decomposition.
+Use the original parent, cap $C,A$ at $\sigma/x$, where
+$\sigma=\min(1,xC,xA)$ is a positive bounded unit, and cap $m$ at
+$1$.  Retain the original nonnegative excess packets and the
+entire original $n$ packet.  The four exact outer-core identities
+in the prior single-angle theorem apply without change: their
+strict residues require only $\sigma_0>0$, the selected $m=1$,
+and $(D/x)_0>0$.  They never bound $n$.  This covers the finite
+unit $u$ axis, both reciprocal axes, all their intersections, and
+literal projective ends.  The inherited physical
+noncommuting-residue theorem covers the remaining tests.
+
+These charts and the entire finite $u=0$ axis exhaust all independent
+projective measurement pairs.  All state charts were restored above;
+complex states split into their real and imaginary parts as in the
+prior proof.  Every inverse or radical used in a tensor coefficient
+is pure coefficient or pure testing.  No comparison of a source
+infinitesimal with a testing infinitesimal, and no mixed inverse
+or radical, occurs.  Restoring the retained packets proves the theorem.

@@ -1,0 +1,194 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\newcommand{\Id}{\mathbb I}
+\begin{document}
+\begin{center}\large An exact order-seven cone for a two-parameter C2 surface\end{center}
+
+Use the canonical slack
+\[
+ f_c=d\bigl[1-(E_{00}-E_{01}+E_{10}+E_{11})/2\bigr]
+           +4\sum_i a_i p_i,
+\]
+where $c=(d,\lambda,n,m,C,A,D,\alpha,\beta)$ and the eight events are
+\[
+ (++|01),(+-|00),(+-|11),(-+|10),(-+|00),(-+|11),(--|01),(+-|10).
+\]
+The nonnegative source coordinates and the requirement $f_c\geq0$ on all
+quantum behaviours define the canonical valid cone.
+
+\paragraph{The stationary sources and their exact domain.}
+Set $d=1$, $\lambda=\beta=0$, and let
+\[
+ 0<r<1,\qquad 0<z\leq\frac{1-r}{r(1+3r)},\qquad
+ T=1+(1+2r)z.
+\]
+The six contact equations at
+\[
+ u=v=\sqrt z,\qquad
+ \psi=(1,-r\sqrt z,r\sqrt z,1)^T
+\]
+give
+\begin{align*}
+ n&=\frac{1-r-r(1+3r)z}{4rT},&
+ m&=\frac{(1-r)(1+rz)}{4rT},&
+ C&=\frac{r(1+rz)}{(1-r)T},\\
+ A&=\frac{(1+r)(1+rz)}{4rT},&
+ D&=\frac{(1+r)(1-rz)}{4rT},&
+ \alpha&=\frac{r(1+r)z^2}{(1-rz)T}.
+                                                               \tag{1}
+\end{align*}
+Here $n\geq0$ is equivalent to the stated upper bound; that bound implies
+$rz\leq(1-r)/(1+3r)<1$, so all other required event weights are positive.
+The six equations have a nonzero minor, deleting the $d$ column,
+\[
+ -\frac{32768c^6r^4(r-1)(c^2r-1)(2c^2r+c^2+1)}{(1+c^2)^5},
+ \qquad c=\sqrt z.
+\]
+The matrix here has columns $(d,n,m,C,A,D,\alpha)$ and rows
+$(\mathcal B\psi)_1,\ldots,(\mathcal B\psi)_4,
+\psi^T\mathcal B_u\psi,\psi^T\mathcal B_v\psi$, evaluated at $u=v=c$,
+where $\mathcal B$ is the uncleared Bell operator and the unnormalised
+state $\psi$ is held fixed. The first four rows are not doubled gradients.
+Thus (1) is the unique source with $d=1$ for this contact.
+Once validity is established below, it also proves canonical extremality:
+in any sum of valid nonnegative canonical sources, $\lambda=\beta=0$
+and the contact value persist in every summand. Positivity then forces
+the four kernel equations, while the interior angular minimum forces
+the two derivative equations. The one-dimensional solution space makes
+every summand a nonnegative multiple of (1), including at $n=0$.
+
+Put $x=rz$, $\kappa=r+x+2rx$. The entire domain becomes
+\[
+ r,x>0,\qquad r+x+3rx\leq1,                              \tag{2}
+\]
+which implies $r,x<1$. Multiplication by $4\kappa(1-r)(1-x)>0$
+gives the polynomial source, written only in its seven active coordinates,
+\[
+ s(r,x)=\begin{pmatrix}
+ 4\kappa(1-r)(1-x)\\
+ (1-r-x-3rx)(1-r)(1-x)\\
+ (1-r)^2(1-x^2)\\
+ 4r^2(1-x^2)\\
+ (1-r^2)(1-x^2)\\
+ (1-r^2)(1-x)^2\\
+ 4x^2(1-r^2)
+ \end{pmatrix}_{(d,n,m,C,A,D,\alpha)}.                   \tag{3}
+\]
+Every coordinate has degree at most two in each parameter.
+
+\begin{theorem}
+Let $K$ be the closed conic hull of (3) over (2). It is exactly the cone
+specified by $\lambda=\beta=0$, the linear identities
+\[
+ d=4A-2m-2D,\qquad n=m+D-A,                              \tag{4}
+\]
+and the fixed linear matrix inequalities
+\[
+ \begin{pmatrix}m&A-m\\A-m&C\end{pmatrix}\succeq0,
+ \qquad
+ \begin{pmatrix}D&A-D\\A-D&\alpha\end{pmatrix}\succeq0,
+                                                               \tag{5}
+\]
+\[
+ A-m\geq0,\qquad A-D\geq0,\qquad m+D-A\geq0.            \tag{6}
+\]
+This has total PSD order seven. Every source in $K$ is quantum-valid.
+\end{theorem}
+
+\begin{proof}[Proof of the exact source cone]
+On the surface, (4) holds and both matrices in (5) have rank one:
+\[
+ (A-m)^2=mC,\qquad (A-D)^2=D\alpha.
+\]
+The inequalities (6) follow immediately from (3) and (2). The cone
+defined by (4)--(6) is closed, so it contains $K$.
+
+Conversely, suppose (4)--(6) hold. If either $m=0$ or $D=0$, its
+positive semidefinite block forces $A=0$, and (6) forces $m=D=0$.
+Only $C,\alpha\geq0$ remain. Both corresponding event rays lie in $K$:
+\[
+ \lim_{\varepsilon\downarrow0}s(1-\varepsilon,\varepsilon/8)
+       =4e_C,\qquad
+ \lim_{\varepsilon\downarrow0}s(\varepsilon/8,1-\varepsilon)
+       =4e_\alpha.
+                                                               \tag{7}
+\]
+These paths satisfy (2).
+
+Otherwise $A,m,D>0$. The two Schur complements give
+\[
+ C\geq C_0=\frac{(A-m)^2}{m},\qquad
+ \alpha\geq\alpha_0=\frac{(A-D)^2}{D}.
+\]
+Set
+\[
+ r=\frac{A-m}{A+m},\qquad x=\frac{A-D}{A+D}.
+\]
+Then $0\leq r,x<1$, and
+\[
+ r+x+3rx-1=\frac{4A(A-m-D)}{(A+m)(A+D)}\leq0.
+\]
+The source with $C=C_0$, $\alpha=\alpha_0$ and all other coordinates
+unchanged is precisely
+\[
+ \frac{A}{(1-r^2)(1-x^2)}s(r,x).
+\]
+Boundary points $r=0$ or $x=0$, including $r=x=0$, are limits of (2).
+In particular, the latter gives $d=0$, $n=m=A=D$, $C_0=\alpha_0=0$.
+Adding $(C-C_0)e_C+(\alpha-\alpha_0)e_\alpha$ and using (7) puts the
+original source in $K$. This proves both inclusions with all boundary
+cases explicit. It also shows that (4)--(6) imply all canonical source
+signs: the two PSD blocks give $m,C,D,\alpha\geq0$, (6) gives $A,n\geq0$,
+and $m,D\leq A$ gives $d\geq0$.
+\end{proof}
+
+\paragraph{A standalone physical-validity proof.}
+For the scaled source (3), choose
+\[
+ A_0=B_0=\sigma_z,\qquad
+ A_1=\frac{(1-u^2)\sigma_z+2u\sigma_x}{1+u^2},\qquad
+ B_1=\frac{(1-v^2)\sigma_z+2v\sigma_x}{1+v^2}.
+\]
+Let $P(u,v)$ be its Bell-operator state matrix multiplied by
+$D_uD_v=(1+u^2)(1+v^2)$. For $uv\ne0$ its $Z_s=0$ state block is
+positive definite: its terms proportional to $d$ alone equal
+\[
+ 2d\bigl[(uW+uvX_s-Y)^2+D_uv^2Y^2+D_vX_s^2\bigr].       \tag{8}
+\]
+All event contributions are positive semidefinite. Thus $P$ has at least
+three positive eigenvalues, and determinant nonnegativity suffices for
+positivity of the whole matrix.
+
+Write $z=x/r$, $\mathsf X=u^2/z$, $\mathsf Y=v^2/z$ and
+$G=16(1-r^2)^3(1-x^2)^3$. Direct expansion of this four-by-four state
+matrix gives
+\[
+ \det P=16G D_u^2D_v^2u^2v^2\mathcal R(\mathsf X,\mathsf Y),
+                                                               \tag{9}
+\]
+where the entire Laurent factor is
+\begin{align*}
+\mathcal R={}&a(\mathsf X+\mathsf X^{-1}-2)
+ +b(\mathsf Y+\mathsf Y^{-1}-2)\\
+ &+c_0(\mathsf X/\mathsf Y+\mathsf Y/\mathsf X-2)
+ +\Delta(\mathsf Y/\mathsf X+\mathsf X+\mathsf Y^{-1}-3),\\
+a={}&8rx(1-r),\qquad b=8rx(1-x),\\
+c_0={}&(1+r)(1+x)(1-r-x-3rx),\qquad \Delta=8rx(r+x).
+                                                               \tag{10}
+\end{align*}
+All four coefficients are nonnegative on (2). The first three brackets
+are reciprocal-pair AM--GM inequalities. The final bracket is three-term
+AM--GM, since the product of its three terms is one. Thus (8)--(10) prove
+positivity for $uv\ne0$. Continuity of the uncleared Bell matrix includes
+zero and infinite half-angle coordinates. Two-reflection block
+decomposition then proves validity in arbitrary dimension; the real state
+matrix being positive also covers complex states. Closure and conic
+combination preserve validity, so the whole cone in (4)--(6) is sound.
+
+The accompanying exact script reconstructs all six contact equations,
+the source scaling, both rank-one identities, the inverse decomposition,
+the two event-ray limits, and the full four-variable polynomial identity
+(9). No varying testing-function family or parameter grid enters the cone.
+\end{document}

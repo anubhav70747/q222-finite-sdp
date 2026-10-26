@@ -1,0 +1,238 @@
+C2 FIXED-GATE SOURCE ENVELOPE: INDEPENDENT ANALYTICAL AUDIT
+23 October 2026
+
+Result. The four stated GE1 bounds hold on the claimed native envelope.
+In fact, for every 0<epsilon<=1/100 the proof below gives
+ A<=epsilon, eta>=1/(5epsilon),
+ 4 A eta >= (1+H)^(-2)-14epsilon, |h_*-H|<=4epsilon.
+No lower bound on H,r,t,j,1-H is used. The exact contact residual is
+positive, so the separately retained C(cE)^2 cannot cover that contact.
+This is a restriction on this completion, not on all fixed families.
+
+Sources inspected: first assistant turn 5d686150-f1bc-506c-a488-38dc8d769411
+in pro_original_extraction_completed_response.json; native GE1 at
+github-q222-finite-sdp/latex/certificates/c2_short.tex:4501--4530;
+native contact eq:c2-native-contact near line289. Testing identities and
+the exported affine matrices are under a separate independent audit.
+
+1. Exact native formulas and hypotheses
+
+Use d=1 and the native event lambda=beta=0, with n>=0 and other original
+positivity constraints. Let
+ 0<H<1, 0<z,y<=epsilon H, 0<r<1, L=yt>0,
+ a_s=1+zr, 0<t<a_s, j=a_s-t>0, B_s=H+L.
+To avoid collisions, B_s is the SOURCE quantity; B below is a fixed
+TESTING cutoff. Define T=B_s+zr, U=B_s-zyr, S=a_s+L. GE1 is
+ Delta=z+(1+z)B_s+(1+z)B_s^2+2z(1+z)B_s r
+        +z^3 r^2+2z^2r
+        +y[(1+z)B_s+z+z^2 r(2-r)],
+ G=B_s+z(H+r-1),
+ M=(1+z)T H+yG+yzj+zrL(1+y).
+In particular the positive GE1 expression for M is retained exactly.
+
+The four coefficients relevant here are
+ C=a_s M/(2 L Delta),
+ A=y a_s T S/(2H Delta),
+ D=(1+z)T U S/(2 yj Delta),
+ alpha=T M/[2(1-H)Delta].
+Set eta=CD/(C+D) and h_*=sqrt[2alpha/(2alpha+1)].
+All these definitions are on positive native openings; no zero denominator
+is replaced by a limiting value. Native n>=0 is preserved but is not needed
+for the estimates below. Also G>=H-z>=H(1-epsilon)>0 and
+U>=H(1-epsilon^2)>0 already follow on this smaller envelope.
+
+2. Four uniform majorants, with their complete elementary derivation
+
+Put q=1+epsilon+epsilon^2. Since L=yt<y a_s,
+ L<=epsilon H(1+epsilon),
+ H<=B_s<=qH,
+ 1<=a_s<=1+epsilon,
+ H<=T<=H(1+epsilon)^2,
+ 1<=S<=1+2epsilon+epsilon^2=(1+epsilon)^2,
+ U>=H-zy>=H(1-epsilon^2).
+The last inequality uses zy<=epsilon^2 H^2 and H<1.
+
+The first Delta bound is immediate:
+ Delta >= B_s+B_s^2 >= H(1+H).
+For its upper bound insert z,y<=epsilon H, B_s<=qH, r<=1,
+r(2-r)<=1 into the displayed positive polynomial for Delta:
+ Delta <= H[epsilon+q(1+epsilon H)]
+       + H^2[q^2(1+epsilon H)+3epsilon q(1+epsilon H)
+              +3epsilon^2]+2epsilon^3 H^3.
+Subtract H+H^2. The result is
+ Delta-H-H^2 <= H[A_delta+B_delta H+C_delta H^2],
+ where
+ A_delta=2epsilon+epsilon^2 <=3epsilon,
+ B_delta=q^2-1+4epsilon q+3epsilon^2
+         =6epsilon+10epsilon^2+6epsilon^3+epsilon^4 <=7epsilon,
+ C_delta=epsilon q^2+3epsilon^2 q+2epsilon^3
+         =epsilon+5epsilon^2+8epsilon^3+5epsilon^4+epsilon^5
+         <=2epsilon.
+All three last inequalities hold for epsilon<=1/100.
+Finally
+ 3+7H+2H^2 <=6(1+H)
+because their difference is (1-H)(2H+3)>=0. Hence
+ H(1+H) <= Delta <= (1+6epsilon)H(1+H).                 (A)
+
+For M, its first positive term gives M>=H^2. Also
+ G<=B_s+zH<=H(1+epsilon)^2, j<=1+epsilon,
+so its four positive terms give
+ M/H^2 <= (1+epsilon)^3
+          +epsilon(1+epsilon)^2
+          +epsilon^2(1+epsilon)
+          +epsilon^2(1+epsilon)^2
+        =1+4epsilon+7epsilon^2+5epsilon^3+epsilon^4
+        <=1+5epsilon.                                (B)
+Together the other two majorants are
+ H<=T<=H(1+epsilon)^2, U>=H(1-epsilon^2).              (C)
+Equations (A)--(C) have no small native opening in their error constants.
+
+3. Consequences for A, eta, and 4A eta
+
+The exact formula and the preceding bounds yield
+ A <= [y/(2H)](1+epsilon)^5/(1+H)
+   <= epsilon (1+epsilon)^5/2 <=epsilon,
+since (101/100)^5<2.
+
+Use reciprocals to avoid separately bounding the openings t and j:
+ 1/eta = 2y Delta[
+              t/(a_s M)+j/((1+z)T U S)].
+By (A)--(C), t+j=a_s<=1+epsilon, and 1+H<=2,
+ 1/eta <= 4epsilon (1+6epsilon)(1+epsilon)/(1-epsilon^2)
+        = 4epsilon (1+6epsilon)/(1-epsilon)
+        <=5epsilon.
+The final inequality is exactly 29epsilon<=1. Thus eta>=1/(5epsilon).
+
+A second exact cancellation is
+ 1/(4A eta)
+ =H Delta^2[
+   t/(a_s^2 T S M)
+   +j/((1+z)a_s T^2 U S^2)].
+Applying only the lower bounds on these denominator factors gives
+ 1/(4A eta)
+ <= (Delta^2/H^2)[t+j/(1-epsilon^2)]
+ <= (1+H)^2 (1+6epsilon)^2/(1-epsilon)
+ <= (1+H)^2(1+14epsilon).
+The last inequality is equivalent to epsilon(1-50epsilon)>=0.
+Taking reciprocals and using (1+s)^(-1)>=1-s proves
+ 4A eta >= (1+H)^(-2)/(1+14epsilon)
+          >=(1+H)^(-2)-14epsilon.                    (D)
+This proves the response's looser -22epsilon estimate.
+
+4. The source square root h_*, including H tending to either endpoint
+
+Let N=T M. From (B)--(C),
+ 1<=v=N/H^3<=(1+epsilon)^2(1+5epsilon)<=1+8epsilon.
+Put w=Delta/[H(1+H)], so 1<=w<=1+6epsilon.
+Eliminating alpha from its exact formula, without dividing by 1-H,
+ h_*^2/H^2
+ = v/[H^2 v+(1-H^2)w].
+It follows that
+ 1/(1+6epsilon) <= h_*^2/H^2 <=1+8epsilon.
+Therefore
+ H(1-3epsilon)<=h_*<=H(1+4epsilon).
+For the lower bound one can square the positive quantities:
+ (1-3epsilon)^2(1+6epsilon)
+ =1-27epsilon^2+54epsilon^3<=1.
+The upper bound follows from (1+4epsilon)^2>=1+8epsilon.
+Consequently |h_*-H|<=4epsilon H<=4epsilon.
+There is no hidden inverse of H or 1-H in this estimate.
+It proves the claimed looser 5epsilon bound on the entire positive envelope.
+
+5. Implication for the fixed gates and exact testing coverage
+
+Set delta_0=2^(-26), B=1-delta_0, epsilon=delta_0^2/4096=2^(-64),
+vartheta=h_* /(1+h_*), P_B=B-vartheta B^2,
+tau=eta-1/4 and rho=tau-1/2=eta-3/4.
+
+For positive C,D, S_tau=[[C-tau,tau],[tau,D-tau]] is PSD whenever
+0<=tau<=eta, since det(S_tau)=CD-tau(C+D).
+The eta bound is more than sufficient for this, rho>=0, and also
+S_tau0>=0 with tau0=1/(2delta_0^2).
+
+For completeness, the response's numerical margin follows directly
+using its weaker 22epsilon and 5epsilon bounds. The function
+h/(1+h) is 1-Lipschitz on [0,1]. Thus replacing h_* by H changes
+P_B^2 by at most 10epsilon. A<=epsilon gives
+ 4A rho-P_B^2
+ >=(1+H)^(-2)-[B-H B^2/(1+H)]^2-35epsilon.
+Since B(1+H delta_0)<=B(1+delta_0)=1-delta_0^2,
+the displayed difference of squares is at least delta_0^2/4.
+Hence
+ 4A rho-P_B^2 >=(989/4096)delta_0^2>delta_0^2/8.
+There is consequently no source-bound obstruction to the two certificates
+on b<=B or |c|>=delta_0, conditional here only on their separately
+audited full-parent identities. Literal n=0 is included: n was never
+inverted or bounded away from zero. Positive native openings may tend
+to zero independently; the displayed rational source formulas are not
+asserted at their undefined zero denominators. The d=0/alpha=0
+specializations of the general coefficient identities are separate
+from this d=1 native-envelope assertion.
+
+6. Exact contact residual and why the retained square stops
+
+At the native contact
+ u_c=sqrt z, v_c=sqrt y,
+ (W_c,X_c,Y_c,Z_c)=((H+L)/sqrt(zy),-sqrt z r,H/sqrt y,1),
+the original source gives the full homogeneous parent F_h/4=0.
+The compact coordinates are
+ (a,b)=(sqrt z,1)/sqrt(1+z),
+ (c,e)=(sqrt y,1)/sqrt(1+y).
+With E=aW-bY one obtains exactly
+ E_c=L/[sqrt y sqrt(1+z)],
+ (cE)_c=L/sqrt[(1+z)(1+y)]>0.                         (E)
+Since C=a_s M/(2L Delta)>0, retaining C(cE)^2 as a separate
+positive summand is impossible in any SOS identity at this contact.
+This concerns the positive decomposition, not just a failure of one
+determinant estimate.
+
+The contact really lies in the omitted cap:
+ b_c=(1+z)^(-1/2)>=1-z/2>B,
+ |c_c|=sqrt[y/(1+y)]<sqrt epsilon=delta_0/64.
+Thus this failure does not contradict coverage of the two stated charts.
+This audit proves no coverage of b>B and |c|<delta_0, and no assertion
+for native C2 sources outside the stated source envelope.
+
+7. A concrete contact-preserving repair, and its precise missing implication
+
+Do not retain C(cE)^2 separately near this contact. Instead combine its
+cross terms with the other source squares before imposing positivity.
+The following three polynomial testing amplitudes vanish at the
+exact contact:
+ N1=cE-L b e Z,
+ N2=cY-H eZ,
+ N3=bX+r aZ.                                        (F)
+Their span is fixed: every Ni is a source-linear combination of
+ Phi_contact=(cE,beZ,cY,eZ,bX,aZ).
+There is no source-dependent testing radical or branch point.
+Relative to the response's twenty functions, only the two polynomial
+functions beZ and aZ need be added for this statement, because
+ cY=ell, eZ=U+ell, bX=L_A-aZ. Thus
+ N2=(1-H)ell-HU, N3=L_A-(1-r)aZ.
+
+At positive actual source angles the coefficient matrix on (W,X,Y,Z)
+is
+ [ac  0  -bc  -Lbe]
+ [ 0  0    c   -He]
+ [ 0  b    0    ra].
+Its (W,Y,X) minor is a b c^2 up to sign, which is nonzero.
+Its common kernel is exactly
+ span(((H+L)/(u_c v_c),-r u_c,H/v_c,1)).
+Thus (F) gives the full physical state kernel, not only a selected
+state ray inequality.
+
+This rank assertion is at positive actual source angles. There is
+no uniform lower bound on a b c^2, and at the literal Bob axis c=0
+the rank falls to at most two. No live testing inverse is proposed;
+projective endpoints and joint small-angle limits still require a
+homogeneous contact/angle argument. Nor does the kernel calculation
+prove a PSD Gram: the missing implication is one uniform,
+source-only positive allocation of the whole parent in a fixed
+extension of Phi_contact on the entire cap, including both independent
+angle deviations and simultaneous normal-scale degenerations.
+This is the most direct specific repair suggested by (E); it is not
+a claimed completion.
+
+No numerical or candidate sweep was used. Originals and the public
+repository were unchanged.
+

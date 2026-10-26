@@ -1,0 +1,218 @@
+% Private replacement body for the current B.24--B.26; no public source edit.
+\subsection{A full-state completion for every Alice angle}
+\label{sec:c1-c141-all-alice}
+
+\begin{theorem}\label{thm:c1-c141-all-tests}
+Retain the original stationary C14.1 source and all its intersections:
+$d=1$, $\lambda_{\rm ev}=n=0$, the native strict gaps,
+$m,C,A,\alpha>0$, $D,\beta\ge0$, and
+\[
+ x=k^2,\qquad z=(x\zeta)^{-1},\qquad\sigma=\eta^{-1}
+          \quad\hbox{positive source infinitesimals}.
+\]
+There is no restriction on $H=h/\sigma$. The complete homogeneous
+parent is a finite tensor sum of squares at every independent
+projective testing pair and every real or complex state. The literal
+faces $D=0$, $\beta=0$ and all testing and state-coordinate zeros
+are included.
+\end{theorem}
+
+\begin{proof}
+We first treat the corner in which the Bob half-angle is projectively
+unbounded. Put $w=1/v$, including $w=0$ at $v=\infty$.
+Thus $w$ is infinitesimal or zero. If $u$ is infinitesimal or zero,
+Theorem~\ref{thm:c1-unification-bounded-z-all-H} applies directly.
+For every other Alice test, $p=1/u$ is bounded; $p=0$ includes
+$u=\infty$. The exact angle gauges allow $p,w\ge0$: changing the
+sign of $p$ together with $Y,Z$, or changing the sign of $w$ together
+with $X,Z$, preserves the homogeneous polynomial below.
+
+\paragraph{The whole polynomial in the inverse-Alice chart.}
+Write $D_p=1+p^2$ and $D_w=1+w^2$. The homogeneous parent is
+\[
+\begin{split}
+ \widetilde F={}&4m(pW-pwX+Y-wZ)^2+4CD_w(W-pY)^2
+                         +4AD_pD_wY^2\\
+ &+(4D+2)(wW+X-pwY-pZ)^2
+ +(4\alpha+2)D_p(Y-wZ)^2\\
+ &+(4\beta+2)D_w(pX+Z)^2-2D_pD_wZ^2.
+\end{split}                                                    \tag{IA1}
+\]
+For $p\ne0$ this is $p^2$ times the reciprocal parent
+\eqref{eq:c1-reciprocal-parent}; the displayed polynomial defines its
+literal projective endpoint at $p=0$. Set
+\[
+ q=\sqrt z,\quad Q=1-b,\quad r=bz,\quad H_0=1+zQ,
+\]
+\[
+ E=qW,\quad F=Y/q,\quad G=wZ/q,\quad
+ R=X+wW,\quad S=pX,\quad J=F-bG.
+\]
+Only pure-source inverses occur in these roots. Direct expansion of
+the complete signed part of \eqref{eq:c1-reciprocal-parent} gives
+\[
+ K=R^2+D_wS^2+z(G-F)^2+p^2D_wzF^2
+                    -2pE(G+w^2F)+2qwS(G-F).             \tag{IA2}
+\]
+Thus \eqref{eq:c1-reciprocal-parent}, in this chart, is $2K$ plus
+the six original positive event terms. This identity keeps all four
+state coordinates.
+
+\paragraph{Three leading event weights complete the signed core.}
+Define the positive source coefficients
+\[
+ C_0=\frac{z}{2(1-r)},\qquad
+ A_0=\frac{H_0}{2bz},\qquad
+ \alpha_0=\frac1{2Qz},\qquad B=\frac{H_0}{bQ}.
+\]
+The opening-cleared estimates (BE9) imply
+\[
+ C/C_0\sim1,\qquad A/A_0\sim1,\qquad\alpha/\alpha_0\sim1.
+\]
+In particular the pure-source number
+\[
+ f=\min\{1,C/C_0,A/A_0,\alpha/\alpha_0\}
+\]
+is positive, $f\sim1$, and each original event weight is at least
+$f$ times its corresponding leading weight. This uses neither a
+bound on $H$ nor positivity of $D$ or $\beta$.
+
+The decisive cancellation is the following exact identity:
+\[
+\begin{split}
+ &2z(G-F)^2+2p^2zF^2-4pEG
+ +\frac2{1-r}(E-pzF)^2\\
+ &\hspace{8mm}+\frac{2H_0}{b}(1+p^2)F^2
+                    +\frac2Q(1+p^2)(F-G)^2\\
+ &=\frac2{1-r}(E-pzJ-pG)^2
+                  +2B(1+p^2)J^2+2H_0G^2.
+\end{split}                                                    \tag{IA3}
+\]
+It follows by substituting $F=J+bG$ and $r=bz$; no contact or state
+equation is used. In particular it joins the negative product to
+three whole event squares before any coefficient is estimated.
+
+Put
+\[
+ J_* =\sqrt B J,\quad G_* =\sqrt{H_0}G,\quad
+ a=\frac z{\sqrt B},\quad c=\frac1{\sqrt{H_0}},\quad
+ L=aJ_*+cG_*=zJ+G.
+\]
+The native inequality $r<1$ gives the exact contraction
+\[
+ 1-a^2-c^2=\frac{zQ(1-r)}{H_0}\ge0.                  \tag{IA4}
+\]
+Consequently the source coefficients $a,c$ are bounded, including
+arbitrarily small $b$ or $Q$.
+
+\paragraph{An exact positive remainder and the entire error.}
+For clarity define
+\[
+\begin{split}
+ \mathcal X={}&4m(pW-pwX+Y-wZ)^2
+       +4D(wW+X-pwY-pZ)^2+4\beta D_w(pX+Z)^2\\
+ &+4(C-fC_0)D_w(W-pY)^2
+       +4(A-fA_0)D_pD_wY^2\\
+ &+4(\alpha-f\alpha_0)D_p(Y-wZ)^2,
+\end{split}
+\]
+and retain the nonnegative expression
+\[
+\begin{split}
+ \Pi={}&\mathcal X
+ +2(1-f)\{R^2+S^2+z(G-F)^2+p^2zF^2\}\\
+ &+2w^2S^2+2p^2w^2zF^2
+ +4fC_0w^2(W-pY)^2+4fA_0D_pw^2Y^2.
+\end{split}                                                    \tag{IA5}
+\]
+All its source coefficients are nonnegative; $D_p,D_w$ and the
+remaining factors separate in the testing field. Each term is
+therefore a tensor sum of squares. Equations (IA1)--(IA3) give
+the full equality
+\[
+\begin{split}
+ \widetilde F={}&f\mathcal Q+\Pi+\mathcal E,\\
+ \mathcal Q={}&2R^2+2S^2+\frac2{1-r}(E-pL)^2
+                         +2(1+p^2)J_*^2+2G_*^2,\\
+ \mathcal E={}&-4(1-f)pEG-4pw^2EF+4qwS(G-F).
+\end{split}                                                    \tag{IA6}
+\]
+In particular the last state coupling has the original sign from
+(IA2). Nothing has been restricted to a state subspace.
+
+\paragraph{A uniform reserve for every bounded inverse angle.}
+Choose a real constant $P\ge1$ with $p\le P$ and put
+\[
+ t=p/P,\qquad E_*=E/P,\qquad
+ g=(R,S,E_*,J_*,G_*)^{\mathsf T}.
+\]
+Then $0\le t\le1$. Define
+\[
+ \mathcal B=2R^2+2S^2+2(E_*-tL)^2
+                         +2(1+t^2)J_*^2+2G_*^2.
+\]
+The difference $\mathcal Q-\mathcal B$ is exactly
+\[
+ 2\left(\frac{P^2}{1-r}-1\right)(E_*-tL)^2
+                    +2(P^2-1)t^2J_*^2\in\Sigma T^2.
+                                                               \tag{IA7}
+\]
+Moreover, the contraction (IA4) gives the explicit reserve
+\[
+\begin{split}
+ \mathcal B-\tfrac12g^{\mathsf T}g
+ ={}&\tfrac32(R^2+S^2)
+       +\tfrac32(E_*-4tL/3)^2+\tfrac32J_*^2+\tfrac56G_*^2\\
+ &+\tfrac23(1-t^2)G_*^2+\tfrac43t^2J_*^2\\
+ &+\tfrac23t^2\{(1-a^2-c^2)(J_*^2+G_*^2)
+                                   +(cJ_*-aG_*)^2\}.
+\end{split}                                                    \tag{IA8}
+\]
+Every radical needed on the right is in one labelled field.
+In particular no square root of a mixed coefficient is taken.
+
+It remains to put the complete error in the same five roots.
+Its only nonzero upper-triangle matrix entries are
+\[
+\begin{array}{c|c}
+ (E_*,G_*)&-2(1-f)P^2t/\sqrt{H_0}
+                         -2P^2btw^2/\sqrt{H_0}\\
+ (E_*,J_*)&-2P^2tw^2/\sqrt B\\
+ (S,J_*)&-2qw/\sqrt B\\
+ (S,G_*)& 2qQw/\sqrt{H_0}.
+\end{array}                                                    \tag{IA9}
+\]
+The pure-source coefficient matrices at $t,tw^2,w$ have absolute
+row bounds $2(1-f)P^2$, $4P^2$, and $4$, respectively. Here use
+$1/\sqrt B\le1/2$, $b/\sqrt{H_0}\le1$, and
+\[
+ q^2/B=rQ/H_0\le1,\qquad q^2Q^2/H_0\le1.
+\]
+The first bound is a source infinitesimal. In the other two terms,
+$tw^2$ and $w$ are testing infinitesimals. Thus (IA9) defines a
+bounded tensor matrix with zero real residue, without imposing an
+order on the tensor product or comparing source and testing rates.
+The remaining Gram matrix is $fI/2$ plus this error; its residue is
+$I/2$. The strict bounded-Gram lemma proves its tensor sum of
+squares. Restoring (IA5), (IA7) and (IA8) proves the whole corner
+for every homogeneous real state. The roots themselves need not
+be bounded or independent.
+
+\paragraph{The remaining Bob angles and the endpoints.}
+On C14.1, (BE9) and $z$ infinitesimal imply that $A$ and $\alpha$
+are unbounded. The adjacent-event theorem transported by
+(CE9)--(CE10) in Section~\ref{component:p89fd3edb3edd} therefore
+covers every Bob test that is not projectively unbounded, with all
+Alice tests. This and the corner just proved exhaust the projective
+testing pairs.
+
+No inverse of $D$, $\beta$ or a state coordinate occurs. The
+identities specialize literally at $p=0$, $w=0$ and zero state
+coordinates; $u=0$ was covered separately at the start. Real and
+imaginary state parts give complex states. Finally restore the
+positive pure-field homogenization factors as in the original
+parent normalization. For unit states the inverse-Alice angular
+factor is $1/(D_pD_w)$, which remains positive at $p=0$; arbitrary
+nonzero homogeneous states have the additional pure-testing state
+norm factor. This proves the stated full C14.1 domain.
+\end{proof}
