@@ -2108,3 +2108,19 @@ Twenty-eight original or independently generated scientific payloads are added b
 | analysis/upstream-3b1450d-exact-verification-2026-10-26/check_c2_r0_face_k2.log | [file](../complete-proof-materials/materials/historical/analysis/upstream-3b1450d-exact-verification-2026-10-26/check_c2_r0_face_k2.log) | 3848 |
 | analysis/upstream-3b1450d-exact-verification-2026-10-26/results.json | [file](../complete-proof-materials/materials/historical/analysis/upstream-3b1450d-exact-verification-2026-10-26/results.json) | 4312 |
 | analysis/upstream-3b1450d-exact-verification-2026-10-26/run_targeted_replay.py | [file](../complete-proof-materials/materials/historical/analysis/upstream-3b1450d-exact-verification-2026-10-26/run_targeted_replay.py) | 3122 |
+
+## C2 fractional moving-contact carrier
+
+Nine original or independently verified scientific payloads are preserved below; the [construction scope](STRICT_SOURCE_REDUCTIONS_UPDATE.md) records the unresolved coupled PSD completion.
+
+| Project-relative source | Public material | Bytes |
+|---|---|---:|
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-2039/task3/original-package.zip | [file](../complete-proof-materials/materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-2039/task3/original-package.zip) | 7268 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-2039/task3/package/EXACT_CHECK_OUTPUT.txt | [file](../complete-proof-materials/materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-2039/task3/package/EXACT_CHECK_OUTPUT.txt) | 605 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-2039/task3/package/EXACT_DATA.json | [file](../complete-proof-materials/materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-2039/task3/package/EXACT_DATA.json) | 785 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-2039/task3/package/MANIFEST.json | [file](../complete-proof-materials/materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-2039/task3/package/MANIFEST.json) | 469 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-2039/task3/package/PROOF_AND_OPEN_GATE.md | [file](../complete-proof-materials/materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-2039/task3/package/PROOF_AND_OPEN_GATE.md) | 5872 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-2039/task3/package/verify_fractional_opening.py | [file](../complete-proof-materials/materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-2039/task3/package/verify_fractional_opening.py) | 5586 |
+| analysis/c2_fractional_opening_verification_2026_10_26.txt | [file](../complete-proof-materials/materials/historical/analysis/c2_fractional_opening_verification_2026_10_26.txt) | 4862 |
+| analysis/c2_fractional_opening_replay_2026_10_26.log | [file](../complete-proof-materials/materials/historical/analysis/c2_fractional_opening_replay_2026_10_26.log) | 724 |
+| analysis/c2_fractional_opening_integrity_2026_10_26.json | [file](../complete-proof-materials/materials/historical/analysis/c2_fractional_opening_integrity_2026_10_26.json) | 1160 |

@@ -1,0 +1,33 @@
+{
+  "scope": "ALL genuine strict native C2 sources Omega; positive carrier only, H2 UNPROVED",
+  "source_order": [
+    "d",
+    "lambda",
+    "n",
+    "m",
+    "C",
+    "A",
+    "D",
+    "alpha",
+    "beta"
+  ],
+  "contact": [
+    "c",
+    "a*c",
+    "b/a",
+    "-c*r",
+    "c*(b/a-a*t)",
+    "1"
+  ],
+  "carrier_squared_roots": [
+    "(u-q*v/a)*X+(1-q)*(c*r/b)*v*W",
+    "sqrt(2*q/a)*sqrt(u*v)*(X+(a*c*r/b)*W)"
+  ],
+  "chosen_source_gauge": "q=a/(1+a)",
+  "required_unclosed_gram": "For every theta in Omega, find P>=0 satisfying exact coefficients of Dv*F in Z_(6,12). The carrier is merely a sufficient partial allocation; no Gram need dominate it.",
+  "remaining_cross_residual": [
+    "[u*v*W*X]=-8*n*c*r*(1+q)/b",
+    "[u*v^3*W*X]=-8*n*c*r*(1+q)/b"
+  ],
+  "all_checks": "PASS"
+}

@@ -1,0 +1,94 @@
+Combined analytical and exact-replay review: fractional C2 opening
+Reviewed 27 October 2026; requested record dated 26 October 2026
+
+Original package: analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/
+fetched-2039/task3/package (5 files)
+
+VERDICT
+
+The complete four-state u-quadratic identity, positive extreme-u packets,
+moving-contact fractional carrier, fixed-grid support, mandatory uX
+diagonal and displayed raw budget/cross coefficients are supported.
+The safe standalone exact replay passed. The construction is a positive
+partial allocation valid for every strict native source, not universal
+H2 admission or a residual PSD completion.
+
+Terminology must distinguish its ambient polynomial SOS from K364 source
+membership. The carrier is NOT itself an element of the nine-dimensional
+SG2 source image: its nonzero uvWX coefficient is absent from that entire
+source image. A positive ambient Gram is useful for assembling the target,
+but is not by itself a Bell-valid source cone element. 'Globally sound'
+should refer here only to its SOS on the canonical positive testing chart;
+the carrier need not share SG2's signed-angle congruences independently.
+
+1. Analytical checks and exact scope
+
+The parent matches original SG2 for d=1, lambda=beta=0, with all four
+state amplitudes unrestricted and source/test coordinates independent.
+F=F0+uF1+u^2F2 holds coefficientwise. Every displayed square multiplier
+in F0 and F2 is positive on the actual strict native domain; F1 requires
+joint completion and is not made positive by the endpoint identities.
+
+For a,b,c,r,n>0 and pure-source0<=q<=1, write k0=cr/b. Then
+  L=(u-qv/a)X+(1-q)k0 vW,
+  H=sqrt(2q/a)sqrt(uv)(X+a k0 W).
+Their contact zeros follow from u_c=v_c/a and X_c+a k0 W_c=0.
+The expansion in Eq. (8), including its v^2 WX cross term, is correct.
+The -2q uvX^2/a term from L^2 cancels the corresponding H^2 term.
+All inverses and the radical coefficient are pure source; a,b>0 suffice
+for their domain. Applying the construction on Omega therefore introduces
+no new source gap assumption or comparison of testing and source rates.
+
+The four roots 2sqrt(n)L,2sqrt(n)H and their v multiples use precisely
+the displayed uX,vX,vW,sqrt(uv)X,sqrt(uv)W features and their shifted rows.
+Their u exponents are at most1, v exponents at most2, all multiples of1/6.
+They give a fixed364-row PSD Gram for the carrier. This is positivity
+for u,v>0 and arbitrary real W,X,Y,Z; a separate Bell-source interpretation
+does not follow from that ambient feature fact.
+
+The unique uX diagonal in the fixed grid has target value4n: to produce
+u^2X^2, both rows must have maximal u exponent1, v exponent0, and stateX.
+The carrier matches this value and the zero uvX^2 coefficient exactly.
+The choice q=a/(1+a) lies strictly between0 and1 and gives the positive
+RAW unmultipled-parent coefficient budget
+  [v^2X^2](F-4n(L^2+H^2))=2+4n a(a+2)/(1+a)^2.
+This is one coefficient budget, not a PSD test for the full residual.
+
+The carrier creates uvWX and uv^3WX coefficients
+  8n(cr/b)(1+q)>0,
+while DvF has zero at both keys. Hence the residual must contain their
+negatives. These are genuine coupled coefficient requirements, not
+terms that may be discarded. Proving the chosen residual PSD is only
+a sufficient ansatz; H2 does not require a Gram dominating this carrier.
+Indeed, carrier saturation of the uX diagonal means a PSD residual
+would have a zero uX row, so that route fixes additional couplings rather
+than merely reserving an innocuous positive diagonal.
+
+No universal residual positivity, no whole-wall-to-strict implication,
+and no strict C2 admission theorem are established. The exact K364 H2
+remains an all-Omega PSD coefficient-matching problem. Existing density,
+open-end, qualitative-existence and global conditional assembly results
+retain their previous scopes. No additional obstruction was sought.
+
+2. Integrity and safe replay
+
+Original ZIP SHA256:
+faf4ec7f6f809f586ff1176ff3817a348c7cf628c4289dd1de4976a6dd71abdd
+
+ZIP integrity test passed. Its5 entries are exactly the5 package files;
+each extracted package file is byte-identical to its archived version.
+All4 file hashes listed by MANIFEST.json match. The manifest appropriately
+omits its own self-hash.
+
+The inspected checker uses SymPy and local JSON output only, with no
+optimizer, network, external data, sweep or repository action. I copied
+the original package to analysis/c2-fractional-opening-replay-2026-10-26
+before executing it, so its EXACT_DATA.json write did not modify originals.
+The run exited0 after1.286 seconds; every exact assertion passed.
+Its regenerated EXACT_DATA is semantically identical to the supplied file.
+
+Evidence files:
+  analysis/c2_fractional_opening_replay_2026_10_26.log
+  analysis/c2_fractional_opening_integrity_2026_10_26.json
+
+No repository, original package, prior review or browser was edited.

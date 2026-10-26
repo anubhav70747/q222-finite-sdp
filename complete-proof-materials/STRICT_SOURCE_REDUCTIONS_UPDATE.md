@@ -62,6 +62,18 @@ Keeping the old complete v^2 and uv^2 allocations fixed, the full system leaves 
 - [Independent first-u-jet and frozen-top analytical review](materials/historical/analysis/c2_complete_jet_analytic_verification_2026_10_26.txt)
 - [Independent exact replay and direct-parent capacities](materials/historical/analysis/c2_complete_jet_exact_verification_2026_10_26.txt)
 
+## C2 fractional opening: a positive partial allocation
+
+For every strict native C2 source, two source-only contact-zero roots and their v multiples give an exact four-square polynomial in the fixed 364-feature span. They match the forced coefficient [u^2 X^2]=4n and cancel [uv X^2]. The gauge q=a/(1+a) retains the positive raw diagonal budget 2+4n*a(a+2)/(1+a)^2.
+
+This is an ambient PSD Gram on the canonical positive testing chart, not a member of the source-affine K364 cone: its nonzero uvWX coefficient is absent from every full source polynomial (1+v^2)F_c. The residual must restore that coefficient and uv^3WX by negative couplings, together with all other coefficients and the moving contact kernel. No simultaneous PSD completion is proved. A feasible full Gram need not dominate this chosen carrier, so the residual problem is a sufficient construction route rather than an equivalent characterization of H2. Both H1/H2 remain open.
+
+- [Original fractional C2 moving-contact carrier](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-2039/task3/package/PROOF_AND_OPEN_GATE.md)
+- [Original complete carrier package](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-2039/task3/original-package.zip)
+- [Independent carrier verification](materials/historical/analysis/c2_fractional_opening_verification_2026_10_26.txt)
+- [Exact replay](materials/historical/analysis/c2_fractional_opening_replay_2026_10_26.log)
+- [Original-file integrity](materials/historical/analysis/c2_fractional_opening_integrity_2026_10_26.json)
+
 ## Next implication
 
 The next C1 task is a simultaneous native-domain PSD gauge construction; the next C2 task is full Gram admission or its equivalent dual positivity statement. Another coefficient-rank calculation or isolated carrier is insufficient. A different fixed globally sound library remains an admissible route if it gives a complete proof. A separating witness against Z6 is not a prerequisite for choosing one.
