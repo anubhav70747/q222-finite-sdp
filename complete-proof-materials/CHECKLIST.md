@@ -2,7 +2,7 @@
 
 This checklist links to the proofs, coefficients, matrix data, exact checkers and recorded results themselves. A checked box below means that the identified material and its stated result are on file; it is not a fresh certification of the entire theorem.
 
-The 22 October full analytical review supports qualitative finite-SDP existence. It covers 215 indexed components, 45 C1 cells and 49 C2 leaves. Later bounded reviews leave specific version/interface checks to reconcile. Constructing one evaluated global pencil is a separate unfinished task.
+The 22 October full analytical review supports qualitative finite-SDP existence. It covers 215 indexed components, 45 C1 cells and 49 C2 leaves. The current-version interface checks and final source/global conjunction are now reconciled in V01-V06 using those complete body reviews. Constructing one evaluated global pencil remains a separate unfinished task.
 
 - [All 215 components](COMPONENTS.md)
 - [Every C1 cell](C1_CASES.md) and [every C2 leaf](C2_CASES.md)
@@ -110,9 +110,9 @@ The 22 October full analytical review supports qualitative finite-SDP existence.
 
 ## Reconciliation and verification
 
-- [ ] **V01 — Reconcile the older complete review with later narrow C1/C2 reviews.** OPEN targeted verification.
-  Evidence: [Status reconciliation](RECONCILIATION.md); [final_audit.txt](../complete-proof-materials/materials/historical/analysis/final_audit.txt).
-  Completion condition/scope: Compare actual changed equations and hypotheses. A later assignment that did not check a branch does not reopen its prior proof by itself.
+- [x] **V01 — Reconcile the older complete review with later narrow C1/C2 reviews.** RESOLVED current-version native source-coverage and acyclic dependency conjunction.
+  Evidence: [Source-coverage conjunction](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1328/V01_THEOREM_AND_PROOF.md); [Exact dependency crosswalk](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1328/FINITE_DEPENDENCY_CROSSWALK.csv); [Independent source and hypothesis verification](materials/historical/analysis/v01_conjunction_verification_2026_10_26.txt).
+  Completion condition/scope: The current source partitions, whole-parent testing joins and V02-V04 interfaces supply exactly V06 NATIVE for arbitrary independently labelled real closed fields, actual physical C1/C2 sources, all independent projective tests and states, and permitted zero faces. This retains the earlier complete body reviews; it is not a new derivation of unchanged leaves.
 
 - [x] **V02 — Thin-R10 formal-base and conductor interfaces in the latest source.** RESOLVED for the frozen thin-R10 version/interface task.
   Evidence: [Five-interface analytical reconciliation](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1207/thin_R10_reconciliation/THIN_R10_INTERFACE_RECONCILIATION.md); [Independent native-source verification](materials/historical/analysis/thin_r10_interface_verification_2026_10_26.txt); [r10_source_and_formal_base_audit_2026_10_26.txt](../complete-proof-materials/materials/historical/analysis/r10_source_and_formal_base_audit_2026_10_26.txt); [ca_se_conductor_structural_review_2026_10_26.txt](../complete-proof-materials/materials/historical/analysis/ca_se_conductor_structural_review_2026_10_26.txt); [r10_all_tests_join_audit_2026_10_26.txt](../complete-proof-materials/materials/historical/analysis/r10_all_tests_join_audit_2026_10_26.txt); [final_audit.txt](../complete-proof-materials/materials/historical/analysis/c2_completion/final_audit.txt).
@@ -124,12 +124,12 @@ The 22 October full analytical review supports qualitative finite-SDP existence.
 
 - [x] **V04 — Latest BN/UN, R2, R3/R4, R6/R7 and UL readbacks.** RESOLVED for the specified current-version normalization, domain and import interfaces.
   Evidence: [Full frozen-version crosswalk](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1248/Q222_V04_FROZEN_INTERFACE_CROSSWALK_2026-10-26.md); [Independent native-source verification](materials/historical/analysis/v04_interface_verification_2026_10_26.txt); [Original evidence and checker package](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1248/V04_crosswalk_original_evidence.zip).
-  Completion condition/scope: Corrected BN/UN factors, restricted reflected k=1 subdomains, R3/R4/R6/R7 replacement routing and UL whole-parent restoration agree with current native sources. Existing source bounds and previously reviewed imports remain explicit. Final V01/V06 conjunction and L08-L10 construction remain separate.
+  Completion condition/scope: Corrected BN/UN factors, restricted reflected k=1 subdomains, R3/R4/R6/R7 replacement routing and UL whole-parent restoration agree with current native sources. Existing source bounds and previously reviewed imports remain explicit. Final V01/V06 conjunction is recorded below; L08-L10 construction remains separate.
 
 - [x] **V05 — Identity, link, archive and delivery coverage checks.** performed for this publication.
   Evidence: [Integrity verifier](verify_materials.py); [Verification receipt](VERIFICATION.json).
   Completion condition/scope: Verify bytes, all component hashes, source/dependency availability and all generated checklist links; do not call this a new mathematical proof.
 
-- [ ] **V06 — Final independent mathematical verification of the integrated package.** OPEN later pass.
-  Evidence: [Verification plan](VERIFICATION_PLAN.md).
-  Completion condition/scope: Resolve V01–V04, inspect every changed implication, and state exactly whether the current source retains the prior complete proof. No blanket rederivation or numerical sweeps.
+- [x] **V06 — Final independent mathematical verification of the integrated package.** RESOLVED integrated qualitative-existence implication on the reviewed source.
+  Evidence: [Eight-lemma global proof](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1328/V06_global_implication_original/Q222_V06_GLOBAL_IMPLICATION_CONCISE_PROOF_2026-10-26.md); [Independent global verification and notation clarification](materials/historical/analysis/v06_global_conjunction_verification_2026_10_26.txt); [Original V06 proof package](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1328/V06_global_implication_original.zip).
+  Completion condition/scope: V01 supplies the exact NATIVE input. Independent verification checks the transferred physical model and valid source body, separated tensor Gram, affine constant and zero weights, primary Corollary 3.19, and both existential lift inclusions. The review shorthand for the normalized source body must retain physical validity as the current manuscript does. L08-L10 remain open; no evaluated pencil or size bound follows.

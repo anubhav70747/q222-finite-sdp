@@ -1,14 +1,11 @@
-# Next mathematical verification pass
+# Verification status and remaining construction
 
-The publication pass checks recovery, identity, links and coverage of delivered artifacts. The next pass checks the mathematics of the latest integrated version.
+The current qualitative-existence verification is complete in V01-V06 relative to the recovered substantive body reviews. The source conjunction supplies the precise native-atom statement required by the independently checked global implication. The checklist links the original proofs, source comparisons and separate verification notes. No unchanged leaf was rederived in this pass.
 
-1. Freeze the published commit and compare the original 215-component proof, the refined source and current companion. Use the existing crosswalks; review changed implications rather than restarting every local derivation.
-2. IC/LII current-version reconciliation is complete in V03. Preserve its native-domain hypotheses and exact imports when doing the final conjunction; no coefficient correction was found.
-3. Thin-R10 interface reconciliation is complete in V02. Preserve its common frame, normalized SE divisibility, formal beta reserve and actual-C2 testing joins in the final conjunction.
-4. V04 normalization/domain/import reconciliation is complete. Retain its exact native-source premises and previously reviewed dependencies in the final V01/V06 conjunction.
-5. Check dependency closure against all 45 C1 and 49 C2 rows, including literal zero events and projective endpoints. Distinguish source/state/test variables and prevent a full-C1/C2 theorem from being used to prove itself.
-6. Replay only the exact checkers relevant to a changed or disputed identity, after inspecting their code and dependencies. Record algebraic equality separately from the positivity or boundedness argument it supports. Do not launch numerical sweeps.
-7. State the resulting qualitative-existence verdict with its actual scope. Keep this verdict separate from the still-open explicit-lift items L08–L10.
-8. For the explicit construction, verify any new finite-c Gram against the full state polynomial, then prove uniform admission through all singular source limits in one fixed library (or give a complete alternative). Evaluate the final matrices and check both inclusions using the established assembly theorem.
+1. Preserve the current mathematical sources and the original 215-component proof with the 45 C1 and 49 C2 case records. A subsequent revision requires checking its changed equations and imports.
+2. Retain the V02 thin-R10, V03 IC/LII and V04 normalization/domain conditions when using V01. The global implication uses physical validity in the normalized source body, arbitrary independently labelled fields, the full parent, and pure-field normalization only.
+3. Recover and verify the newest finite-c calculation. Check the complete coefficient identity and finite-positive-epsilon PSD, including the last Schur block. Distinguish a neighborhood of each strict face point from all finite native c.
+4. Prove admission through every remaining singular source limit into one fixed finite globally sound library, or supply a complete alternative. Include literal zero weights, independent rates and all testing endpoints.
+5. Evaluate every matrix and auxiliary equation of the final global pencil, then verify both inclusions using the established assembly theorem.
 
-Every checklist change must cite the exact proof/source and the check that resolves it. Neither a file count nor a successful build can close a mathematical item.
+L08-L10 remain open. No file count, successful symbolic identity, positive endpoint block or generic first-order construction closes these PSD and universal-admission obligations. Run only targeted checkers for new or disputed identities; no numerical sweeps are needed for the qualitative conjunction.

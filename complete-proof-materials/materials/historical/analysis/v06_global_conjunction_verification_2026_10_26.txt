@@ -1,0 +1,120 @@
+V06 GLOBAL IMPLICATION AND V01 INTERFACE — 26 October 2026
+
+VERDICT
+The V06 implication is valid conditional on its exact NATIVE statement.
+That statement matches V01_THEOREM_AND_PROOF.md, section 1: independently
+labelled arbitrary real-closed source/testing fields over R, actual
+physical SG10 C1/C2 sources with finite noncommuting stationary zero,
+every permitted coefficient-zero face and source opening, every
+independent projective testing pair, and the full four-state parent.
+Both allow finite SOS roots to depend on the instance and require no
+common tensor rank, degree, feature list, or explicit affine pencil.
+No stronger native theorem is needed by V06. Whether every local proof
+establishes this universal premise is the separate V01 coverage review.
+
+No genuine unresolved implication was found between that premise and
+qualitative finite real affine SDP representability. One set-builder
+clarification is needed when reusing V06's source-body shorthand below.
+Original downloaded files were not altered.
+
+EVIDENCE AND VERSION
+Read all three V06 original documents and their manifest; all three
+SHA256 hashes and byte sizes match the original manifest. Also read
+V01's precise theorem/interface, current 02_model,03_tensor,04_geometry,
+07_cover and the relevant entry statements, together with the existing
+global_tensor_criterion_audit_2026_10_26.txt and the earlier C2 global
+criterion adversarial check. The eight foundational chapter Git blobs
+are identical at current HEAD 94b5555d10f80ae68f56b3580e64be96e8c8d2de,
+V06 pin 8108102c092894c62768b7c8b0008889737bf1e7 and frozen comparison
+332483309586e0fec6e16fc1dd855915b648dca1. Working text matches as well;
+raw checkout bytes may differ from Git blobs by Windows line endings.
+
+PRIMARY CRITERION FRESHLY CHECKED
+Opened the primary paper itself at
+https://arxiv.org/html/2004.04196v2, not just the supplied review.
+Corollary 3.19 and its proof (HTML lines 518–523) give precisely the
+closed-convex-semialgebraic criterion, universal over every real-closed
+extension and every transferred affine polar element and point. The
+SOS is unrestricted finite SOS. Definition 3.7 (392–405) confirms the
+point-first convention; swapping the two factors gives the convention
+here. Theorem 3.10 (416–429) has the additional rank restriction only
+when a specified extension-degree bound is sought. The corollary's
+proof supplies an affine X, morphism phi and finite-dimensional U with
+Q contained in phi(X(R)) and phi*(P_Q) contained in Sigma U^2.
+Theorem 2.10 (299–306) confirms the resulting finite representation.
+The corollary is dimension independent despite the paper's planar title.
+
+DECISIVE ALGEBRAIC IMPLICATIONS
+1. TF1–TF6 are exact ring arguments. Standard parts exist because the
+   common base is the actual complete real field. Tensoring the bounded
+   rings is injective as an operation on real vector spaces. The kernel
+   decomposition gives finitely many elementary terms with one small
+   factor. In TF4, each positive real reserve dominates that factor
+   within its own field. TF6 exactly reconstructs every diagonal and
+   off-diagonal entry after a real congruence, and all scalar residues
+   are positive. Multiplying these scalar squares by arbitrary root
+   combinations is valid even for unbounded or dependent roots. No
+   order, inverse, or square root on a general mixed tensor is used.
+
+2. RFA1–RFA6 provide the needed real compact convex semialgebraic Q and
+   its fixed nine-atom first-order extension. The common-isometry binary
+   dilations, Jordan blocks, real/imaginary splitting and direct-sum
+   converse establish the model. The transferred polar formula contains
+   all affine valid functionals, not a selected Bell family. The proof
+   transfers fixed formulas, not non-Archimedean topological compactness.
+
+3. SG1 separates the nonsignalling-positive event branch. SG10 and the
+   extreme-source lemma reduce the other branch to events, the two
+   closed faces and native C1/C2, including third omissions. SG11's
+   matrix Gram argument includes singular blocks. SG12/13 exhibit
+   strict feasible points of the full homogeneous pencils with sign
+   blocks; these control PSD preimage traces and give attained duals,
+   not merely a possibly nonclosed dual image. SG14/TF9 then factor
+   source and testing witnesses separately and cancel auxiliaries.
+   These are non-native foundations already present in the source;
+   NATIVE is the sole separately pending native input, not literally
+   the only premise of the entire theorem.
+
+4. RFA10–RFA13 identify the full homogeneous parent with the atom slack
+   times Delta_A Delta_B norm(psi)^2 in the testing factor. Each angle
+   pair is nonzero; nonzero states have positive norm. Pure-field
+   cancellation is legal; zero state and projective endpoints are
+   treated before division. TF10 preserves the affine constant exactly
+   because testing weights sum to one. Source conic weights need not.
+   Zero weights are multiplied as zero roots and are never inverted.
+   Hence the two decompositions establish the universal tensor slack.
+   Taking two labelled copies of the same arbitrary field gives exactly
+   the criterion's quantified input; no field factors are collapsed.
+
+5. The finite-pencil argument has both inclusions. For the finite real
+   space V spanned by 1, phi coordinates and U-products, choose L in V*
+   with L(1)=1, L(phi_i)=q_i and the U-moment matrix PSD. Evaluation at
+   any preimage of q in X supplies feasibility for every q in Q.
+   Conversely the pullback SOS makes every affine f in P_Q nonnegative
+   at a feasible q; affine separation gives q in Q. Coordinate-ring
+   linear dependencies are imposed inside V. No representing measure,
+   moment completeness, closed projection, or extra Slater premise is
+   needed in this last construction. Its finite size remains unknown.
+
+SET-BUILDER CLARIFICATION
+V06 Lemma 3 calls its body physically valid but displays only
+{(d,a)>=0 : d+sum a=1}. Those braces alone describe the entire simplex
+and would NOT support the claimed physical extreme-source reduction.
+The operative body must be written
+
+ B_src = {(d,a)>=0 : d+sum_e a_e=1,
+          dH(q)+4 sum_e a_e p_e(q)>=0 for every q in Q}.
+
+This is explicit in current 04_geometry.tex:381–382 and is also the
+membership predicate used in V06's subsequent transfer sentence and
+V01 section 3. Thus the omission is shorthand in the recovered note,
+not a hidden assumption or a defect in the operative source proof.
+Any new exposition should include the physicality clause expressly.
+
+BOUNDARY OF THIS CHECK
+No local source cells were re-derived, no numerical sweeps or recovered
+checkers were run, and no repository files were edited. The all-native
+coverage verdict remains separate. Conditional on that exact verdict,
+there is no additional global implication gap here. The result gives
+an existential finite real affine lift, not evaluated matrices, a size
+bound, a common local feature library, or a finite NPA level.

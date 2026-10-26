@@ -1,6 +1,6 @@
 # Published material inventory
 
-1332 original files copied; 75 members unpacked from newly fetched packages; 265 exact-byte matches linked to existing repository files. Original archives preserve further inherited dependencies and data.
+1342 original files copied; 75 members unpacked from newly fetched packages; 265 exact-byte matches linked to existing repository files. Original archives preserve further inherited dependencies and data.
 
 The [source map](SOURCE_MAP.json) contains every file hash, original path, publication path, duplicate mapping and exclusion reason. The [checklist](CHECKLIST.md) distinguishes proofs, historical reviews and unfinished construction.
 
@@ -1707,3 +1707,19 @@ The [source map](SOURCE_MAP.json) contains every file hash, original path, publi
 | analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1248/V04_crosswalk_original_evidence/unchanged_original_checkers/Q222_C2_R34_R67_Independent_Audit_2026-10-26.zip | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1248/V04_crosswalk_original_evidence/unchanged_original_checkers/Q222_C2_R34_R67_Independent_Audit_2026-10-26.zip) | 17944 |
 | analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1248/V04_crosswalk_original_evidence.zip | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1248/V04_crosswalk_original_evidence.zip) | 170206 |
 | analysis/v04_interface_verification_2026_10_26.txt | [file](materials/historical/analysis/v04_interface_verification_2026_10_26.txt) | 9713 |
+
+
+## Final qualitative conjunction recovery and verification, 13 UTC
+
+| Source | Public material | Bytes |
+|---|---|---:|
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1328/FINITE_DEPENDENCY_CROSSWALK.csv | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1328/FINITE_DEPENDENCY_CROSSWALK.csv) | 4880 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1328/RECOVERY_RECEIPT.json | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1328/RECOVERY_RECEIPT.json) | 1089 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1328/V01_THEOREM_AND_PROOF.md | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1328/V01_THEOREM_AND_PROOF.md) | 21664 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1328/V06_global_implication_original/Q222_V06_GLOBAL_IMPLICATION_CONCISE_PROOF_2026-10-26.md | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1328/V06_global_implication_original/Q222_V06_GLOBAL_IMPLICATION_CONCISE_PROOF_2026-10-26.md) | 17076 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1328/V06_global_implication_original/Q222_V06_GLOBAL_IMPLICATION_DEPENDENCY_CROSSWALK_2026-10-26.md | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1328/V06_global_implication_original/Q222_V06_GLOBAL_IMPLICATION_DEPENDENCY_CROSSWALK_2026-10-26.md) | 8473 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1328/V06_global_implication_original/Q222_V06_PACKAGE_MANIFEST_2026-10-26.txt | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1328/V06_global_implication_original/Q222_V06_PACKAGE_MANIFEST_2026-10-26.txt) | 659 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1328/V06_global_implication_original/Q222_V06_SCHEIDERER_PRIMARY_CRITERION_AND_PENCIL_2026-10-26.txt | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1328/V06_global_implication_original/Q222_V06_SCHEIDERER_PRIMARY_CRITERION_AND_PENCIL_2026-10-26.txt) | 2976 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1328/V06_global_implication_original.zip | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1328/V06_global_implication_original.zip) | 14182 |
+| analysis/v01_conjunction_verification_2026_10_26.txt | [file](materials/historical/analysis/v01_conjunction_verification_2026_10_26.txt) | 7368 |
+| analysis/v06_global_conjunction_verification_2026_10_26.txt | [file](materials/historical/analysis/v06_global_conjunction_verification_2026_10_26.txt) | 7016 |

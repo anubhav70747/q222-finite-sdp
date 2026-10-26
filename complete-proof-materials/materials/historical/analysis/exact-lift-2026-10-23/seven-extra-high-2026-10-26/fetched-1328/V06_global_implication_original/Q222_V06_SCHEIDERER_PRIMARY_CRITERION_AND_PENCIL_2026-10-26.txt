@@ -1,0 +1,56 @@
+Q222 V06: PRIMARY REAL-ALGEBRAIC CRITERION AND BOTH INCLUSIONS
+26 October 2026
+
+Primary: Claus Scheiderer, Second-order cone representation for convex sets
+in the plane, SIAM J. Appl. Algebra Geom. 5 (2021) 114-139,
+arXiv:2004.04196v2, https://arxiv.org/pdf/2004.04196
+
+Corollary 3.19 (PDF page index 14 / printed p. 15) is NOT restricted to
+plane sets: if K subset R^n is closed, convex and semialgebraic, it is a
+spectrahedral shadow iff, for every real closed extension R' of R, every
+a in K_{R'}, and every f in (P_K)_{R'}, the point-first tensor evaluation
+f^tensor(a) belongs to Sigma(R' tensor_R R')^2.
+
+Theorem 3.10 (PDF page index 11 / printed p. 12) is different: to establish
+a specified extension-degree bound d, it requires the sum of squares to
+have each square of tensor rank at most d. Corollary 3.19 does not ask for
+one d, one number of squares, one polynomial degree, one NPA level, or one
+source-independent finite testing library across all field/test/source
+instances.
+
+In the paper's Definition 3.7, f^tensor(a) is point first; the Q222
+proof writes coefficients first. Flip the two factors in R' tensor_R R'.
+The flip is an algebra automorphism preserving sums of squares.
+
+The proof of Corollary 3.19 explicitly yields a real affine variety X,
+a map phi:X -> A^n, and a finite-dimensional real linear space
+U subset R[X] with K subset phi(X(R)) and phi*(P_K) subset Sigma U^2.
+It does not assert an evaluated X or U. Theorem 2.10 connects the
+finite SOS space to finite semidefinite extension degree.
+
+Set u_1,...,u_r a basis of U and take the finite real vector space
+V=span(1,phi_1,...,phi_n,u_i u_j). A feasible point above x in R^n
+is a linear functional L:V->R with L(1)=1, L(phi_i)=x_i, and
+[L(u_i u_j)] PSD. Linear dependencies among the displayed generators
+are finitely many affine equalities; represent with scalar PSD +/-
+constraints or eliminate them. Hence there is one finite real affine
+pencil.
+
+(+) For x in K, choose z in X(R) with phi(z)=x and L=ev_z|V.
+The moment matrix is the PSD rank-one matrix u(z)u(z)^T.
+(-) For any feasible (x,L), and any f in P_K, phi*(f)=sum_j g_j^2,
+g_j in U. Thus f(x)=L(phi*f)=sum_j L(g_j^2)>=0.
+Closed convex separation implies x in K. This proof does not require
+L to be evaluation, a representing measure, or a closed projected PSD
+cone. It uses both inclusions, not just a dual-cone description.
+
+Applying this to Q222 requires: Q222 closed convex semialgebraic;
+its fixed nine-atom first-order extension Q_K; transferred polar P_Q,K;
+and a tensor SOS for every real closed K, every transferred f,q.
+These are supplied by the V06 chain under the labelled native atom
+hypothesis. Thus a finite real pencil EXISTS, but its entries and size
+are not extracted from the source-specific certificates.
+
+Other caution: a polynomially defined Q over rational coefficients
+allows an existential algebraic-real pencil after fixing some finite
+sizes by first-order transfer. That does not evaluate those sizes.

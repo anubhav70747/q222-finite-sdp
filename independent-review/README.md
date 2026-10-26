@@ -12,18 +12,20 @@ fixed finite pencil. For the original argument it isolates the thin-R10
 bounded-matrix implication as the key verification step. The
 [explicit bounded conductor](SE_BOUNDED_CONDUCTOR.md) and the
 [two-power conductor](TWO_POWER_CONDUCTOR.md) now supply that eight-root
-matrix under their stated hypotheses. The implication itself is under
-independent verification: the ordinary–small C2 branch and the CA/SE base
-have been checked. The [EL/NU endpoint proof](C1_EL_NU_ENDPOINTS.md) now
+matrix under their stated hypotheses. Its thin-R10 interface reconciliation
+is complete in [V02](../complete-proof-materials/CHECKLIST.md), including the
+ordinary–small C2 branch and the CA/SE base. The [EL/NU endpoint proof](C1_EL_NU_ENDPOINTS.md) now
 supplies the complete scalar, both state normals, bounded coefficient
 construction, and complementary testing charts for those two physical C1
 source domains. Its eight symbolic modules have been replayed locally.
 The completed 22 October C1/C2 reviews and original proof bodies have now been
 [recovered and published](../complete-proof-materials/). They already cover the
 remaining source domains and global assembly. The later reports below are
-scoped rechecks, not evidence that those earlier proofs were absent. Specific
-version and interface questions remain for the
-[consolidated verification pass](../complete-proof-materials/VERIFICATION_PLAN.md).
+scoped rechecks, not evidence that those earlier proofs were absent. The
+[final conjunction](../complete-proof-materials/RECONCILIATION.md#final-qualitative-conjunction-26-october-13-utc)
+reconciles the current source coverage with the independently checked global
+implication. The [remaining construction](../complete-proof-materials/VERIFICATION_PLAN.md)
+concerns finite-c PSD, uniform admission and evaluation of the global pencil.
 
 For the current construction route, read
 [`EXACT_LIFT_ROUTE.md`](EXACT_LIFT_ROUTE.md): a fixed NPA baseline, the
