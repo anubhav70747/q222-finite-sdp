@@ -6,6 +6,12 @@ on the review branch. The paper remains unchanged. The review breaks the argumen
 lists what was checked and what was found, and follows the explicit lift as far
 as it currently goes.
 
+The current [existence-proof check](EXACT_LIFT_ROUTE.md#the-original-existence-argument-has-a-different-requirement)
+distinguishes the original universal tensor-SOS argument from extraction of
+one fixed finite pencil. Its thin-R10 bounded-matrix implication is still
+under independent verification; the earlier review findings below do not
+certify that complete implication.
+
 For the current construction route, read
 [`EXACT_LIFT_ROUTE.md`](EXACT_LIFT_ROUTE.md): a fixed NPA baseline, the
 seven-root reduction forced by two classical zeros, the existing closed-face

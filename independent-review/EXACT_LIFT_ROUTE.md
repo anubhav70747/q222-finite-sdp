@@ -415,3 +415,43 @@ reduce to the two contact families, prove their admission, include their
 limits and the closed faces, and join the finite PSD blocks. Universal
 contact admission is still the unresolved step; the dual reformulation
 does not establish its sign.
+
+## The original existence argument has a different requirement
+
+The construction above seeks one specified finite family of certificate
+blocks. The original proof instead invokes a real-algebraic criterion after
+proving tensor sums of squares for every independently labelled source and
+test. That route may use a different certificate for each pair. It does not
+first require an explicit common testing space or one real bound valid in
+every limiting regime.
+
+This distinction matters in the R1 case. Equation R1N21 in
+[`c2_short.tex`](../latex/certificates/c2_short.tex#L9958) fixes a positive
+real testing residue before choosing its real caps. The separate RFN4--RFN24
+argument treats infinitesimal testing angles. A fixed-cap allocation can
+fail as the real residue tends to zero without invalidating this case split.
+The required check is that the complete parent is certified in each case
+and that the cases exhaust the independent tests.
+
+A concrete outstanding verification in the thin R10 case is the passage
+from the full stress in TL6 to the bounded eight-root matrix asserted in
+[`c2_short.tex`](../latex/certificates/c2_short.tex#L14132). With
+`rho = n/e^2`, the claim is
+
+`E/rho = R^T H R`, with every entry of `H` in `B_c tensor_R B_t`.
+
+Here `R` is the actual chart's eight-root list and `B_c,B_t` are the bounded
+source and testing rings. The scalar terms, both first-normal rows and the
+hard-normal block must all be represented by this same matrix. The CC/SE
+conductor requires its stated support and successive divisibility
+hypotheses; contact vanishing alone does not supply them. The formal C1
+base also needs a complete Gram with strictly positive real residue under
+the thin-layer assumptions, including its formal negative coefficient.
+If both statements hold, adding `rho H` preserves that residue. This
+settles the local perturbation, after which the other branches and their
+dependencies still need verification.
+
+The bounded matrix implication remains under independent review. No
+counterexample to it has been established. Neither the unextracted pencil
+nor failure of a stronger uniform-cap construction disproves the original
+existence claim; neither establishes its missing verification.
