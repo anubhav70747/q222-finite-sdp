@@ -1951,3 +1951,8 @@ The [source map](SOURCE_MAP.json) contains every file hash, original path, publi
 | analysis/latest-transfer-exact-verification-2026-10-26/integrity.json | [file](materials/historical/analysis/latest-transfer-exact-verification-2026-10-26/integrity.json) | 7900 |
 | analysis/latest-transfer-exact-verification-2026-10-26/results.json | [file](materials/historical/analysis/latest-transfer-exact-verification-2026-10-26/results.json) | 9520 |
 | analysis/latest-transfer-exact-verification-2026-10-26/run_targeted_replay.py | [file](materials/historical/analysis/latest-transfer-exact-verification-2026-10-26/run_targeted_replay.py) | 3624 |
+
+
+## Direct common-cone admission reduction
+
+[Direct common-cone reduction](materials/historical/analysis/direct_common_cone_admission_reduction_2026_10_26.txt) preserves the independently verified weaker sufficient H1/H2 implication; 2896 bytes, SHA-256 b5c97cf5299f59c76ad69b48b0b0b94eb468c7814a48a8be1ac426bd0b7af846.

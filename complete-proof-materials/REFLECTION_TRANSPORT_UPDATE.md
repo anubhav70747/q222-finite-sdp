@@ -24,7 +24,19 @@ Define K_ext by c>=0 and coefficientwise equality (1+v^2)F_c=zext^T P zext with 
 
 ## Conditional global consequence and required symmetry
 
-If every strict oriented C1 source and every strict C2 source admits a Z6 Gram, all strict sources enter K_ext. L15 then gives the required source limits by coefficient-space closure, with event rays and SG12/SG13 face cones retained separately. The finite sound sum is closed.
+The weaker sufficient hypotheses are direct admission to K_ext=K364:
+
+- H1: every physical strict C1 source in the actual oriented domain 0<k<=1 belongs to K364.
+- H2: every physical strict C2 source in its complete native domain belongs to K364.
+
+Neither requires an unweighted Z6 representation of F. Set Kbar=K364+sigma(K364). Both summands are fixed, closed and globally sound; the deterministic-coefficient bound closes their finite sum. The native reflection sends every opposite-orientation strict C1 ray to H1, while H2 supplies C2. Thus all strict sources enter Kbar, and L15 gives the required boundary sources there. This does not assert sigma(K364)=K364 or individual membership of every unoriented C1 source in K364.
+
+For the full physical group Gamma, Gamma*sigma=Gamma, so
+
+    sum_g g Kbar = sum_g g K364 + sum_g g sigma(K364)
+                = sum_g g K364.
+
+The last equality uses conicity and addition closure of the orbit sum. Hence the same 128-orbit global candidate needs no extra blocks. Retain its event and SG12/SG13 face-orbit blocks. [Direct common-cone reduction](materials/historical/analysis/direct_common_cone_admission_reduction_2026_10_26.txt) proves this implication. Both H1 and H2 remain unproved. The Z6 transport above remains one sufficient route to direct K364 admission; it is not a necessary requirement.
 
 Equation (16) of the original report refers to a group Gamma "of SG8". The stabilizer of a single CHSH orientation is insufficient for the complete Bell cone. Use the full 128-element physical relabeling group, including party exchange, or eight PR-sector representatives together with the canonical stabilizer. Apply those fixed linear maps to every required cone before taking the global sum. This correction is part of the conditional global statement.
 
@@ -43,3 +55,6 @@ The two strict-family admission theorems remain open. So do evaluation of every 
 - [Independent analytical verification](materials/historical/analysis/c1_reflection_transport_analytic_verification_2026_10_26.txt)
 - [Independent exact replay and full-Z6 extension](materials/historical/analysis/c1_reflection_transport_exact_verification_2026_10_26.txt)
 - [Full-Z6 sparse reflection matrix](materials/historical/analysis/c1_reflection_transport_exact_verification_2026_10_26_artifacts/full_Z6_reflection_sparse_map.json)
+
+
+The original strict Z6 witness still proves the unconditional K364 Slater point and attained duality. Its use requires no universal Z6 admission theorem.

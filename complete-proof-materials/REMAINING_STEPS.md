@@ -30,11 +30,11 @@ The original recovery conversation's unequal-angle result agrees with the recove
 
 These are completion conditions, not a requirement to execute every possible proof route. R01–R05 can be discharged by one sufficiently strong admission theorem. They refine L08–L10 in the [material checklist](CHECKLIST.md).
 
-- [ ] **R01 — Specify the explicit finite construction.** Fix the testing functions, source-to-coefficient maps and allowed additional globally sound cones. Their finite dimensions must be independent of the source. L17 specifies a common 364-feature weighted cone and exact reflection embeddings, conditional on two strict Z6 admission inputs. Its complete coefficient maps and final symmetry-assembled matrices remain to be evaluated; an adequate proved alternative is also sufficient. **Maps to L08/L09.**
+- [ ] **R01 — Specify the explicit finite construction.** Fix the testing functions, source-to-coefficient maps and allowed additional globally sound cones. Their finite dimensions must be independent of the source. L17 specifies a common 364-feature weighted cone and exact reflection embeddings, conditional on direct oriented C1 and strict C2 admission inputs in K364. Its complete coefficient maps and final symmetry-assembled matrices remain to be evaluated; an adequate proved alternative is also sufficient. **Maps to L08/L09.**
 
-- [ ] **R02 — Prove complete strict C1 admission.** L17 reduces this target to physically valid strict C1 sources with 0<k<=1 in Z6 (or a fixed embedded subspace). Reflection then covers the opposite orientation in the stated common cone. Supply the missing exact PSD certificate throughout that oriented domain. Preserve the complete four-state parent, independent testing angles and all coefficient equations. A rational affine preimage or positive diagonal masses alone do not close this item. **Maps to L09, with the strict-family part made explicit.**
+- [ ] **R02 — Prove complete strict C1 admission.** The weaker sufficient H1 is direct K364 admission for every physically valid strict C1 source with 0<k<=1. Reflection covers the opposite orientation in sigma(K364), and the closed sum Kbar supplies L15. A Z18/Z6 certificate is sufficient, not necessary. Supply the missing PSD proof throughout the oriented domain. Preserve the complete four-state parent, independent testing angles and all coefficient equations. A rational affine preimage or positive diagonal masses alone do not close this item. **Maps to L09, with the strict-family part made explicit.**
 
-- [ ] **R03 — Prove complete strict C2 admission.** Cover arbitrary finite native c and the source parameters outside the verified open-end neighborhoods. Retain the known obstruction to universal use of the smaller half-power library. **Maps to L08.**
+- [ ] **R03 — Prove complete strict C2 admission.** Prove the direct K364 admission hypothesis H2 for arbitrary finite native c and the full physical strict domain outside the verified open-end neighborhoods. An unweighted Z6 representation is sufficient but is not required. Retain the known obstruction to universal use of the smaller half-power library. **Maps to L08.**
 
 - [x] **R04 — Prove singular-source closure conditional on complete strict-source admission.** L15 verifies the coefficient-space density and finite closed-sum implication for the hybrid construction. Actual singular admission follows when R02 and R03 hold in the same fixed closed globally sound cone; no uniform Gram margin or separate limiting-chart proof is needed. Event and SG12/SG13 cones remain separate. **Conditional implication resolved; strict hypotheses remain open.**
 
@@ -58,8 +58,8 @@ These are completion conditions, not a requirement to execute every possible pro
 
 | Work | Present assignment or next dependency |
 |---|---|
-| R02 strict C1 | Task5: prove oriented k<=1 C1 admission in Z6 or an adequate embedded subspace. L17 supplies its exact reflection and common-cone transport; the full-A1 Z16 target is refuted. |
-| R03 strict C2 | The full dual inequality remains open; the new signed-edge allocation does not prove it. |
+| R02 strict C1 | Task5: prove direct oriented k<=1 C1 admission in K364; an actual Z18 gauge construction is sufficient. Kbar and the full orbit supply the verified reflection/density implication. |
+| R03 strict C2 | Task3: prove direct strict C2 K364 admission. The stronger Z6 dual inequality remains open; neither the carrier nor the mixed-multiplier identity proves admission. |
 | R01/R04/R05 | L15 verifies conditional density; L17 specifies and verifies a common fixed weighted cone and reflection transport. Strict-family admission and complete evaluated maps remain open. |
 | R06–R08 | L17 supplies the common-cone duality implication. The complete physical orbit and final matrices still require the strict-family conjunction and explicit evaluation. |
 | R09 | Can develop alongside the new mechanism, but closure requires a complete replacement for the imported long argument. |
@@ -89,3 +89,6 @@ The reflection package resolves the transport/duality implication L17. It does n
 
 
 The latest strict-source packages refine the algebra without closing R02 or R03: C1 now has an exact nine-gauge/two-Schur interface, while the C2 selected carrier has an unproved residual and its separate full-state SOS represents a mixed-multiplier polynomial. [Current construction scope](STRICT_SOURCE_REDUCTIONS_UPDATE.md) specifies the exact scope and next positivity statements. R07 and the global evaluated lift remain open.
+
+
+[Direct common-cone reduction](materials/historical/analysis/direct_common_cone_admission_reduction_2026_10_26.txt) removes universal original-Z6 admission as a requirement. Under H1/H2, density uses Kbar=K364+sigma(K364), and the full128 orbit sum absorbs sigma without additional blocks. Task7 can materialize this conditional pencil while the two admission proofs remain open.
