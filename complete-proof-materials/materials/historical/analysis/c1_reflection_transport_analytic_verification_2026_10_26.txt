@@ -1,0 +1,189 @@
+Bounded analytical verification: C1 reflection, fixed364 cone, and attained dual
+26 October 2026
+
+VERDICT
+
+The orientation/native transport, fixed-feature transport, all-projective-test
+soundness, fixed364 closedness, strict Slater inheritance and attained source
+dual are analytically supported. They do not establish either pending strict
+admission assertion. There is one necessary definition repair in the global
+assembly: Eq. (16) must use all PR sectors, not only the SG8 stabilizer.
+
+With Gamma explicitly the full 128-element physical relabeling group (local
+setting permutations, independent outcome flips, and party exchange), or eight
+PR-sector representatives composed with the actual SG8 stabilizer, the stated
+conditional global lift follows from the two admission inputs and the retained
+source classification/density results. Under a literal SG8-only definition of
+Gamma, the full-Bell equality in Eq. (16) is false. The original theorem file
+has not been edited.
+
+Scope: I inspected the recovered theorem and actual SG1/SG2, SG8--SG13,
+EN1--EN16, NC1--NC4/SD1, the homogeneous parent, and the original196 strict
+feasibility construction. This is independent analytical checking of the new
+implications, not an inference from the exact-code PASS, a numerical sweep, or
+a new audit of the inherited long qualitative proof/density theorem.
+
+1. Reflection and complete native-domain entry
+
+The source permutation is exactly
+  (d,lambda,n,m,C,A,D,alpha,beta)
+    -> (d,n,lambda,C,m,alpha,beta,A,D).
+The associated conventional Bell map is physical: keep A0, flip A1, interchange
+B0 and B1 and flip both. It is involutive and preserves the chosen CHSH core.
+Termwise SG2 transport gives u^2 F_sigma(c)(1/u,v;G(v)psi)=Dv F_c(u,v;psi),
+where G^2=Dv I and Dv=1+v^2. Thus physicality, contact and strict retained
+weights are preserved, before any source normalization.
+
+For a physical strict C1 contact, EN2 gives all the original positive gaps.
+H=r+eta>0 and G0=h+zeta>0. The reflected last state coordinate is
+kgH/f>0, so normalization at that contact is legitimate and pure source.
+The native formulas (9)--(10) are correct. In particular
+  G0-Q=zeta M>0, H-E=eta J>0,
+give 0<r',h'<1; eta',zeta',a',t',E',Q',M',J' are positive. When k>1,
+k'=1/k<1 and J',M'>0 imply a'<1+k'^2 h'<2 and t'<1+k'^2 r'<2.
+Hence the reflected point lies in the complete oriented domain, including
+the usual upper bounds, not just in a chart with the desired value of k.
+
+The coquotient signs are also justified. NC2 gives directly
+  P4'=T'E'+k'^2(1-r')G0'>0,
+  Palpha'=R'h'(1+V0')+zeta'M'E'>0,
+  Pd'=p0'+eta'p1'>0,
+with every displayed summand nonnegative and a strictly positive constant.
+The c3 gap is E'>0; the other coquotient factors are positive. EN8 is
+nonzero throughout this contact domain. SD1/EN13 stationary uniqueness
+therefore identifies the native source with the reflected physical source;
+NC3--NC4 then identify the two event-weight numerator signs with D',beta'>0.
+No limit argument is needed for any strict sign.
+
+SD1 fixes C=2. Reflection changes this C to m_old, so the representative to
+which oriented admission applies is exactly (2/m_old) sigma(c), not sigma(c)
+without rescaling. Removing this scale multiplies its Gram by m_old/2>0.
+The linear source cone map remains sigma throughout dual assembly. The identity
+orientation for k<=1 and this reflection for k>1 cover every strict C1 ray.
+
+2. Feature transport, including the fullZ6 extension
+
+The sixteen rows in Eq. (13) follow exactly from u z16(1/u,v;G psi).
+They have u exponents in [0,1], v exponents in [0,2], all multiples of 1/6.
+Thus h16=L16^T Z_ext and Q -> L16 Q L16^T is a fixed PSD congruence.
+Both directions of Eq. (14) hold using G^2=Dv I; retaining Dv is essential.
+This does not imply membership of reflected sources in unchanged Z6.
+
+The same argument holds for EVERY original196 row, not only Z16. For
+z_(i,j,l)=u^(i/6)v^(j/6)psi_l, 0<=i,j<=6, its reflected row is
+  u^(1-i/6) v^(j/6) (G(v)psi)_l.
+Each G row has two terms, with v exponents j/6 or 1+j/6. Consequently a fixed
+integer matrix L6 of size 364 by 196 has two signed entries per column,
+at indices (6-i,j,l0) and (6-i,j+6,l1), and
+  u z6(1/u,v;G psi)=L6^T Z_ext.
+There are 392 signed entries. A reflected fullZ6 Gram gives
+  Dv F_c=Z_ext^T(L6 Q L6^T)Z_ext.
+An unreflected fullZ6 Gram gives the sum of its two embeddings, for z6 and
+v z6. Therefore oriented C1 admission into any fixed subspace of Z6,
+including Z18 or all196 rows, suffices for the SAME fixed364 cone and SAME
+multiplier. This extension does not prove such admission.
+
+3. All tests and closedness
+
+Coefficient equality is a polynomial identity in R=u^(1/6), S=v^(1/6) and
+all four independent real state amplitudes, not a contact restriction.
+PSD gives Dv F_c>=0 on u,v>0; division by positive Dv gives physicality.
+The two exact SG2 sign congruences in 04_geometry.tex:577--582 cover every
+finite real quadrant. Continuity covers literal axes. The homogeneous parent
+RFA10--RFA12 shows that the limits F/u^2, F/v^2, F/(u^2v^2) are precisely
+the missing projective tests. The feature bounds allow leading-square
+limits u^(-1)Z_ext and v^(-2)Z_ext. At Bob infinity, in particular,
+F/v^2 tends to (v^(-2)Z_ext)^T P(v^(-2)Z_ext). At commuting endpoints one
+can alternatively use directly the positive CHSH core plus event packets,
+as all source coordinates are nonnegative. Complex states split into their
+real/imaginary parts because the Bell matrices are real symmetric.
+
+The feature-moment argument proves actual coefficient-space closedness:
+the 364 functions R^i S^j psi_l are linearly independent on a positive
+rectangle times S^3. Their moment matrix is PD, so bounded coefficient
+images of PSD Grams bound their traces. A convergent subsequence retains
+the coefficient equality and orthant. The same argument closes A(S_+^364).
+There is no assumption that an arbitrary PSD projection is closed.
+
+The fixed coefficient map is rational, with at most 13*25*10=3250 equations.
+First-order transfer of the fixed finite Gram assertions is legitimate.
+Factoring a source-only PSD Gram and dividing roots by sqrt(Dv) in the
+testing field yields the stated separated SOS without a mixed-field inverse.
+
+4. Strict original196 point and fixed364 dual attainment
+
+The actual strict_feasibility.py constructs c*=(1/21,1,...,1)>0. Its PSD
+claim has a direct hand proof, stronger than relying on its exact checks.
+Number its eighteen displayed event roots l1,...,l18 in their file order.
+The X and Y corner coordinates occur individually. The remaining eight are
+  W=l1-l5,         uW=l8+l10,
+  vW=l7+l3-l16,    uvW=l9+l12,
+  Z=l12-l15,       uZ=l13-l16,
+  vZ=l2-l10-l14,   uvZ=l18-l5.
+Applying Cauchy--Schwarz to each recovery expression gives
+||z_corner||^2<=6 sum l_i^2: the largest total multiplicity is six, for l10.
+Thus Q0=4 sum l_i l_i^T >= (2/3) I16. Since Qd_plus>=0 and Qd_minus<=2 I,
+epsilon=1/21 gives
+  Qc=Q0+epsilon Qd-epsilon I >= (11/21) I16>0.
+
+The seven-by-seven H has positive diagonal, nonpositive distance-two
+off-diagonals, and two irreducible diagonally dominant parity blocks with
+strict rows; hence H>0. Its polynomial is exactly 1+r^12. Therefore
+  P6*=J Qc J^T+(H tensor H tensor I4)/21>0.
+The latter tensor polynomial cancels the subtracted corner identity, so
+it represents the complete SG2 source c*, not an altered target.
+
+The fixed364 embeddings J0 (Bob indices 0..6) and J1 (indices 6..12)
+represent z6 and v z6. Their ranges cover every coordinate. For any nonzero x,
+at least one J_a^T x is nonzero; therefore
+  P*=J0 P6* J0^T+J1 P6* J1^T>0,
+and A P*=T c*. This is a strict point of the actual joint lift, including
+every source orthant constraint.
+
+Consequently Eq. (18) is the exact attained dual. The trace pairing with
+P*>0 bounds A*y_j for a convergent dual-image sequence, c*>0 bounds r_j,
+and subtracting the joint kernel of y -> (A*y,T^T y) gives bounded y
+representatives. Hence the proposed image is closed. Its dual is exactly
+K by the closed Gram image and separation, proving equality by bipolarity.
+The indispensable conditions are b=T^T y+r, A*y>=0, r>=0.
+
+5. Global assembly: required symmetry correction and correct target
+
+04_geometry.tex:413--414 explicitly calls the group of SG8 CHSH-preserving.
+It stabilizes the chosen PR sector. For any canonical nonnegative source,
+its functional is nonnegative at each other PR vertex: its selected H is
+nonnegative there and every event probability is nonnegative. The same
+holds after SG8-stabilizer maps and for event rays. Their sum therefore
+cannot contain a quantum-valid CHSH functional negative at another PR.
+This proves the defect in a literal SG8-only reading of Eq. (16).
+
+Use instead the full128 group, or eight PR-sector representatives times
+the SG8 stabilizer. Under that definition, strict-source coverage and
+the retained five-event density/classification admit each required
+extreme contact ray individually. Event and SG12/SG13 face cones handle
+the remaining types. All summands are sound and closed. Deterministic
+averaging gives t>=0 and |b_i|<=t for a sound affine functional, so a
+bounded sum bounds every summand; termwise subsequences close the finite
+sum. This supports the corrected global equality.
+
+The target is exactly b(q)=E_SG1^T(1,q)=(H(q),4p_lambda,...,4p_beta),
+in the stated source order. For a linear source action S_g, impose
+S_g^T b(q) in K*. For a closed face with source injection I_face,
+the target is I_face^T S_g^T b(q); omitted coordinates are free dual
+directions, not additional positivity constraints. Retain the face
+orthants and their attained source-dual pencils, plus all event
+inequalities. Never substitute the nonlinear C=2 normalization here.
+The finite intersection is one block-diagonal rational SDP system with
+shared physical q and independent auxiliary variables. By compact convex
+Q222 and the full Bell-validity cone equality, it is an exact lift,
+CONDITIONAL on the two pending admission assertions.
+
+Main source locators (relative to github-q222-finite-sdp unless stated):
+  latex/chapters/02_model.tex:141--260 (homogeneous tests and normalization)
+  latex/chapters/04_geometry.tex:16--66,350--431,463--528,577--582
+  latex/chapters/05_entry.tex:19--38,116--174,242--269
+  latex/certificates/c1_short.tex:195--239,697--747
+  independent-review/checks/gram-lift/strict_feasibility.py:12--60
+Recovered theorem: analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/
+  fetched-1719/package/C1_REFLECTION_TRANSPORT_AND_FIXED_CONE_THEOREM.md
+  especially lines 123--131,167--176,194--200,208--216,230--264.

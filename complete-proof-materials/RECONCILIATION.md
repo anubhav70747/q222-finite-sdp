@@ -51,3 +51,8 @@ Both complete normal answers and their original archives are recovered. [Origina
 ## Singular-density implication and changed C1 construction, 16:30 UTC
 
 [Verified scope and corrections](DENSITY_AND_CONSTRUCTION_UPDATE.md) records the verified conditional density theorem L15: strict admission into one fixed closed cone suffices for singular boundaries and the finite hybrid assembly. This removes a separate singular proof obligation once its strict hypotheses hold; L08-L10 remain unconditionally open. The exact C1 counterexample L16 shows that universal eight-gauge feasibility on the full A1 domain is false. L13 remains an exact affine/PSD-equivalence reduction. The small oriented subfamily and larger/reflected cones remain possible constructive routes. The C2 bridge calculation remains a scoped failed allocation, with the full dual inequality open. P01-P12, V01-V06 and L12 are preserved.
+
+
+## Reflection and common-cone implication
+
+[Verified reflection transport and extension](REFLECTION_TRANSPORT_UPDATE.md) records L17: strict C1 reflection reduces coverage to k<=1, and the full-Z6 transport embeds both orientations into one fixed 364-feature cone. Soundness, closedness and attained source-dual representation are verified. Use the full physical relabeling orbit, not only the SG8 stabilizer. The two strict-family PSD assumptions and the evaluated global pencil remain open; no qualitative-existence result is reopened.

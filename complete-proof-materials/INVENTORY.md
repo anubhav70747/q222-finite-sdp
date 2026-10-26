@@ -1869,3 +1869,28 @@ The [source map](SOURCE_MAP.json) contains every file hash, original path, publi
 ## Bounded review of merged upstream package
 
 [Bounded review of the merged upstream package](materials/historical/analysis/upstream_85e915c_bounded_review_2026_10_26.txt) preserves the independent scientific delta review of upstream commit 85e915c. Original note: 8569 bytes; SHA-256 f9e1d8fb97f188a75fa2cb453c9dd02c6dcdffbcaca00e422f61898e6fa412fb.
+
+
+## Reflection transport and common-cone evidence
+
+| Source | Public material | Bytes |
+|---|---|---:|
+| analysis/c1_reflection_transport_analytic_verification_2026_10_26.txt | [file](materials/historical/analysis/c1_reflection_transport_analytic_verification_2026_10_26.txt) | 10574 |
+| analysis/c1_reflection_transport_exact_verification_2026_10_26.txt | [file](materials/historical/analysis/c1_reflection_transport_exact_verification_2026_10_26.txt) | 7139 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1719/original-reflection-package.zip | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1719/original-reflection-package.zip) | 52841 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1719/package/C1_REFLECTION_SOURCE_PACKET.txt | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1719/package/C1_REFLECTION_SOURCE_PACKET.txt) | 86722 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1719/package/C1_REFLECTION_TRANSPORT_AND_FIXED_CONE_THEOREM.md | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1719/package/C1_REFLECTION_TRANSPORT_AND_FIXED_CONE_THEOREM.md) | 18804 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1719/package/COORDINATOR_THEOREM.md | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1719/package/COORDINATOR_THEOREM.md) | 2577 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1719/package/EXACT_CHECKS.log | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1719/package/EXACT_CHECKS.log) | 1163 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1719/package/README.md | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1719/package/README.md) | 1133 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1719/package/SHA256SUMS.txt | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1719/package/SHA256SUMS.txt) | 652 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1719/package/transport_sparse_maps.json | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1719/package/transport_sparse_maps.json) | 23601 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1719/package/verify_reflection_transport.py | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1719/package/verify_reflection_transport.py) | 10750 |
+| analysis/c1_reflection_transport_exact_verification_2026_10_26_artifacts/full_Z6_reflection_extension.log | [file](materials/historical/analysis/c1_reflection_transport_exact_verification_2026_10_26_artifacts/full_Z6_reflection_extension.log) | 659 |
+| analysis/c1_reflection_transport_exact_verification_2026_10_26_artifacts/full_Z6_reflection_sparse_map.json | [file](materials/historical/analysis/c1_reflection_transport_exact_verification_2026_10_26_artifacts/full_Z6_reflection_sparse_map.json) | 45433 |
+| analysis/c1_reflection_transport_exact_verification_2026_10_26_artifacts/integrity_and_replay_results.json | [file](materials/historical/analysis/c1_reflection_transport_exact_verification_2026_10_26_artifacts/integrity_and_replay_results.json) | 8503 |
+| analysis/c1_reflection_transport_exact_verification_2026_10_26_artifacts/integrity_driver.py | [file](materials/historical/analysis/c1_reflection_transport_exact_verification_2026_10_26_artifacts/integrity_driver.py) | 6706 |
+| analysis/c1_reflection_transport_exact_verification_2026_10_26_artifacts/replay.stderr.log | [file](materials/historical/analysis/c1_reflection_transport_exact_verification_2026_10_26_artifacts/replay.stderr.log) | 0 |
+| analysis/c1_reflection_transport_exact_verification_2026_10_26_artifacts/replay.stdout.log | [file](materials/historical/analysis/c1_reflection_transport_exact_verification_2026_10_26_artifacts/replay.stdout.log) | 1191 |
+| analysis/c1_reflection_transport_exact_verification_2026_10_26_artifacts/replayed_transport_sparse_maps.json | [file](materials/historical/analysis/c1_reflection_transport_exact_verification_2026_10_26_artifacts/replayed_transport_sparse_maps.json) | 26360 |
+| analysis/c1_reflection_transport_exact_verification_2026_10_26_artifacts/verify_full_Z6_reflection_extension.py | [file](materials/historical/analysis/c1_reflection_transport_exact_verification_2026_10_26_artifacts/verify_full_Z6_reflection_extension.py) | 3183 |

@@ -1,0 +1,1710 @@
+Q222 constructive completion: current reviewed baseline a9124b959daa2628f870be60f1eab5ea376c8bea. User requests exact global lift and short full proof. The 215-component qualitative existence proof remains separately reviewed. Do not confuse it with the explicit construction.
+
+
+===== complete-proof-materials/DENSITY_AND_CONSTRUCTION_UPDATE.md =====
+# Verified scope and corrections for the 16:30 batch
+
+The original reports and ZIP files are preserved unchanged. The following qualifications govern their use.
+
+## Singular-source density
+
+The independently reviewed theorem is conditional: if all strict real C1 and C2 sources belong to one fixed closed globally sound cone K, the permitted five-event contacts belong to K by coefficient-space density. The complete source cone is the closed finite sum of event rays and the required relabelings of K and the SG12/SG13 face cones. The argument does not put the closed-face cones inside K, and it does not prove either strict-family admission hypothesis.
+
+At a five-event contact the full contact Hessian is positive definite. Opening the missing event and adjusting the signed-core coefficient d gives an invertible six-equation implicit-function problem. The original stationary-source theorem establishes physical validity of the perturbed source; the native inverses place it in the actual strict domain. Closedness is applied to the original Bell coefficients, so no uniform control of contact coordinates or Gram matrices near the boundary is needed. The existing extreme-source classification handles all other limiting coefficients. A finite sum of these sound closed cones is closed because deterministic-assignment averaging bounds every nonconstant Bell coefficient by the constant coefficient.
+
+Two conventions in the recovered proof require precision. First, use J_i = partial F / partial a_i for the event derivative in the perturbation formula d'(0) = -J_i(s0)/F_H(s0). In the displayed full parent J_i is four times the corresponding raw event packet. This factor does not change the sign argument. Second, A*y >= 0 alone describes a dual cone in polynomial coefficient space. For K = {c in C : T c = A(G), G >= 0}, source-dual certificates involve z = T*y + r, with r in C*, and the existing Slater or facial-reduction conditions needed for exact dual representation. The Bell target adjoint/projection must be included when evaluating the final lift. The density and closed-sum proof does not need that shorthand.
+
+## C1 construction
+
+The supplied strict native k=4, f=1/1000 example disproves universal admission to the particular 16-feature cone on A1. The Fourier and Schur inequalities, and their exact rational contradiction, were independently reviewed and replayed. Thus the eight-gauge universal feasibility statement from the previous batch is false on A1, rather than merely open.
+
+The rational separator is nonnegative on the relevant canonical Bell coefficient slice, which has the required sign congruences and four sign-related contacts. The stronger statement for every arbitrary polynomial with a single contact zero is unsupported and must not be used. The orientation-restricted k<=1 domain, the proposed 18-feature extension and the full sixth-root library are not excluded by this result. Reflection transport must retain the positive denominator/multiplier and the testing-dependent state congruence. A reflected cone can be retained as a separate finite globally sound cone without asserting that it is a monomial subcone of the original Z6.
+
+## C2 construction
+
+The new signed bridge and 17-edge formula is a verified affine identity. Its particular Gram allocation is indefinite when h-a^2*r is nonzero. This is not a counterexample to the complete 14-corner Gram with zero-target cancellations or to the 154-feature cone. The nonnegative 24-term dual inequality remains unproved. The archive contains 10 files, matching its 9-file manifest entries plus the manifest, despite the chat summary's count of 11.
+
+The qualitative existence proof and the strict C2 open-end theorem retain their earlier verified scope. These new results alter the constructive route; they do not reopen those proofs.
+
+
+Original proofs, exact data and independent reviews are linked under L15/L16 in the [material checklist](CHECKLIST.md). The C2 scoped reduction is linked under L14.
+
+
+===== independent-review/CONTACT_RAY_EXPOSURE.md =====
+# A contact experiment exposes its Bell source ray
+
+This is a deduction from the source classification SG1–SG10 and the nonvanishing contact minors EN1–EN16. It does not use the long tensor-SOS atlas.
+
+Let \(C\subset\mathbb R_+^9\) be the canonical quantum-valid source cone in the order
+\((d,\lambda,n,m,C,A,D,\alpha,\beta)\).
+Let \(c\in C\) be a physical C1 or C2 source with a finite noncommuting contact
+\(\tau=(u_c,v_c,\psi_c)\), gauged by \(u_c,v_c>0\), \(Z_c=1\).
+The two mandatory omitted coordinates are \(I=\{\lambda,n\}\) in C1 and \(I=\{\lambda,\beta\}\) in C2. Literal third omissions are allowed.
+
+The six equations consisting of the four components of \(P_{c'}(\tau)\psi_c=0\) and the two angular stationary equations are linear in \(c'\). On the seven-dimensional subspace \(c'_i=0\) for \(i\in I\), they have rank six. For C1 use the selected columns \((d,m,A,D,\alpha,\beta)\) and EN8; for C2 use \((n,m,C,A,D,\alpha)\) and EN16. Their factors are nonzero throughout the stated contact domains, including the permitted third omissions. Hence their kernel is precisely \(\mathbb Rc\).
+
+For \(c'\in C\), define
+\[
+\ell_c(c')=F_{c'}(\tau)+\sum_{i\in I}c'_i\ge0.
+\]
+If it vanishes, each summand vanishes. Positivity of the full state matrix gives \(P_{c'}(\tau)\psi_c=0\); a zero at an interior angular test gives both angular derivatives. The selected minor therefore forces \(c'\in\mathbb R_+c\). Thus every such contact ray is exposed in the canonical cone.
+
+## A physical exposing correlation for the full Bell-validity cone
+
+Let \(q_\tau\) be the normalized contact behaviour, let \(v_i,v_j\) be the deterministic CHSH-facet neighbours corresponding to the omitted events, and put
+\[
+w=(1+u_c^2)(1+v_c^2)\|\psi_c\|^2,\qquad
+q_{\mathrm{exp}}=\frac{wq_\tau+\frac14v_i+\frac14v_j}{w+\frac12}.
+\]
+The identities \(F_{c'}(\tau)=wf_{c'}(q_\tau)\) and \(f_{c'}(v_k)=4c'_k\) give
+\[
+f_{c'}(q_{\mathrm{exp}})=\frac{\ell_c(c')}{w+\frac12}.
+\]
+
+All eight canonical losing probabilities of \(q_\tau\) are strictly positive by EN2. Its CHSH value \(S>2\): the positive retained event contribution at contact must balance \(d(1-S/2)\), with \(d>0\).
+
+Every winning probability is also positive. In a nonsignalling extremal decomposition, the canonical PR weight is at least \((S-2)/2\), because every other vertex has this CHSH value at most two. Its winning probabilities are \(1/2\); hence \(p_{\mathrm{win}}\ge(S-2)/4>0\). Thus \(q_\tau\) has full event support.
+
+For every other CHSH orientation \(g\), either \(S_g=-S\), or \(S+S_g\le4\); therefore \(S_g<2\). A nonzero quantum-valid affine functional vanishing at \(q_{\mathrm{exp}}\) vanishes at each of its three positively weighted constituent behaviours. It cannot be a nonnegative event combination, because \(q_\tau\) has full support, or belong to another PR sector, whose CHSH slack is strictly positive at \(q_\tau\). It belongs to the canonical cone. The two deterministic equalities impose its omitted coordinates, and the contact-minor argument makes it a positive multiple of \(f_c\). Consequently
+\[
+\{f\in Q_{222}^{\vee}:f(q_{\mathrm{exp}})=0\}=\mathbb R_+f_c.
+\]
+This proves exposure in the full cone of Bell-valid affine functionals.
+
+The primal exposed face contains \(q_\tau,v_i,v_j\), which are affinely independent: the deterministic points have CHSH value two and the contact has a larger value. Its dimension is at least two. A third omitted event gives a third distinct deterministic vertex, hence dimension at least three. These are lower bounds. The mixture has a unique supporting Bell ray; this is not a self-testing assertion.
+
+## Reconstruction and exact examples
+
+With jet rows \(F,F_W,F_X,F_Y,F_u,F_v\), the fourth state-kernel equation follows by Euler homogeneity at \(Z=1\). Fixing \(C=2\) in C1 or \(d=1\) in C2, the invertible selected minor recovers the six remaining source coefficients rationally from the five contact parameters.
+
+The two repository seeds give:
+\[
+\begin{array}{c|c|c|c}
+&\det J_{\mathrm{selected}}&S(q_\tau)&S(q_{\mathrm{exp}})\\\hline
+\mathrm{C1}&69120&103/37&107/39\\
+\mathrm{C2}&184320&46/17&8/3
+\end{array}
+\]
+The selected-minor numbers use this jet convention, rather than the raw-kernel convention in EN8/EN16.
+The C1 exposing mixture has weights \(37/39,1/39,1/39\); the C2 weights are \(17/18,1/36,1/36\).
+Run `node checks/contact-ray-exposure/verify_contact_seeds.js`. The executed exact rational checks test both six-jet systems, both selected minors, all eight losing probabilities, all three deterministic neighbours, and both CHSH values. They corroborate the examples; the universal exposure proof uses EN1–EN16.
+
+## Consequence for finite source atlases
+
+For finitely many sound source cones \(K_j\subseteq C\), an extreme ray can lie in \(\sum_jK_j\) only if one summand contains it. Each nonzero summand in a decomposition of an extreme ray is on that ray, and cones contain all its positive multiples. Conversely, covering every extreme ray covers the compact normalized base and hence \(C\).
+
+The exposed-ray result makes the C1/C2 contact graphs the exact test objects for a proposed finite atlas, after the closed faces and symmetry images have been included. It does not prove that the order-940 source atlas, its order-7520 outer behaviour pencil, or the sixth-root candidate has this coverage.
+
+References: [source geometry](../latex/chapters/04_geometry.tex), [contact signs and minors](../latex/chapters/05_entry.tex), [current construction route](EXACT_LIFT_ROUTE.md).
+
+
+===== independent-review/L12_HALF_POWER_COROLLARY.md =====
+# L12 already admits the strict open C2 ends in the half-power library
+
+This is a corollary of the newly published L12 theorem, not a new proof of its coefficient or PSD assertions.
+
+Let
+\[
+Z_k=\{u^{i/k}v^{j/k}\psi_\ell:0\le i,j\le k,\ \ell=W,X,Y,Z\},\qquad
+L_k=\{c:F_c=Z_k^TGZ_k,\ G\succeq0\}.
+\]
+The L12 proof uses fourteen even rows
+\[
+UW,\ UVX,\ VZ,\ VW,\ UZ,\ UVY,\ UVW,\ Z,\ UX,\ VX,\ UY,\ VY,\ X,\ Y
+\]
+and two odd rows \(\sqrt{UV}W,\sqrt{UV}Z\).
+Every row has angular exponents in
+\(\{0,\tfrac12,1\}^2\). Thus these sixteen functions are already a sublist of \(Z_2\), which itself embeds into \(Z_6\).
+
+The L12 substitutions multiply each angular variable and each state coordinate by a nonzero source-only factor. A monomial row therefore becomes a nonzero source-only multiple of the same original angular/state monomial. Diagonal congruence transports its PSD Gram back into the original \(Z_2\). Its positive source-only scalar multiplier is absorbed into that Gram. No new angular denominator or fractional exponent is introduced.
+
+Consequently L12 proves:
+for fixed positive real \(a,t,\eta,\rho\) with
+\[
+0<\rho<t,\quad 0<t-\rho<1,\quad 0<\eta<1,\quad a^2t+\eta>1,
+\]
+and native parameters
+\(\varepsilon=c^{-2}\), \(b=a^2t+\eta\varepsilon\), \(r=\rho\varepsilon\),
+the exact full native C2 source belongs to \(L_2\) for every sufficiently small positive \(\varepsilon\). The statement is uniform on compact subsets of this strict face domain.
+
+The other end also lies in \(L_2\). Under the exact parent inversion, multiplication of a reciprocal row by \(uv\) maps
+\[
+u^{i/2}v^{j/2}\ \longmapsto\
+u^{(2-j)/2}v^{(2-i)/2},
+\]
+with the stated state permutation. This preserves the entire \(Z_2\) grid.
+
+The accompanying checker verifies all sixteen exponent pairs and their inverted-grid membership exactly. It does not re-run L12's source matching, all-orders right inverse or graded Schur proof. Those remain the explicit input theorem and its published verification notes.
+
+This does not contradict the known strict-native C2 source outside \(L_2\): it admits only the sufficiently near strict open-end neighborhoods. It gives no parameter-independent numerical cutoff, no uniform passage to source walls or coupled noncompact degenerations, and no arbitrary-finite-\(c\) or global-Q222 admission. Its useful refinement is that L12's local progress requires half-powers only; genuine sixth-root features are not used in these displayed certificates.
+
+Sources: [current L12 checklist](../complete-proof-materials/CHECKLIST.md), [the original full theorem and proof](../complete-proof-materials/materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1407/FINITE_C_THEOREM_AND_PROOF.md), and [the global half-power exclusion](C2_HALF_POWER_OBSTRUCTION.md).
+
+
+===== extracted-lifts/global-weighted/angular-order13/README.md =====
+# Exact angular cone of total PSD order 13
+
+This represents the nine Laurent coefficients. It does not give an affine pencil in the original Bell-source coefficients. The latter enter through quartic polynomials (SG5–SG6).
+
+Let
+\[
+L(U,V)=h+\sum_{(i,j)\in\{-1,0,1\}^2\setminus\{0\}}q_{ij}U^iV^j,\qquad q_{ij}\ge0,\quad U,V>0.
+\]
+Write \(UVL=\sum_{a,b=0}^2g_{ab}U^aV^b\), with \(g_{11}=h\).
+Set \(R=\operatorname{diag}(g_{00},g_{01},g_{02})\) and
+\(S=\operatorname{diag}(g_{20},g_{21},g_{22})\).
+There are thirteen auxiliary variables: \(J\in\mathbb R^{3\times3}\),
+\(C\in\operatorname{Sym}_2\), and \(\rho\in\mathbb R\). Define
+\[
+B=\begin{pmatrix}
+g_{10}-2J_{00}&-J_{01}-J_{10}-C_{00}/2&\rho\\
+*&h-2(J_{02}+J_{11}+J_{20})-2\rho-2C_{01}&-J_{12}-J_{21}-C_{11}/2\\
+*&*&g_{12}-2J_{22}
+\end{pmatrix}.
+\]
+Then \(L\ge0\) on the positive quadrant, with the stated eight coefficient signs, if and only if
+\[
+\operatorname{diag}\left(
+\begin{pmatrix}R&J\\J^T&S\end{pmatrix},B,C,[g_{10}],[g_{12}]
+\right)\succeq0. \tag{A13}
+\]
+The orders are \((6,3,2,1,1)\), total 13. This reduces total PSD order relative to the existing order-49 angular SOCP, while using larger PSD blocks; no SOCP-size optimality is claimed.
+
+## Coefficient identity and sufficiency
+
+Put \(t=\sqrt V\), \(z=(1,t,t^2)^T\), \(w=(1,t)^T\), and \(M=\begin{psmallmatrix}R&J\\J^T&S\end{psmallmatrix}\). The five entries displayed for \(B\) are exactly the five coefficient equations in
+\[
+UVL=(z,Uz)^TM(z,Uz)+Uz^TBz+Ut\,w^TCw. \tag{1}
+\]
+Each right-hand term is nonnegative for \(U,t>0\). The first PSD block forces six outer signs, and the two scalar blocks force the other two.
+
+## Necessity, including both weighted-triangle orientations
+
+For strictly positive outer coefficients the Laurent sum is coercive in logarithmic coordinates. It has a minimizer \((U_*,V_*)>0\). With \(w_e=q_eU_*^{e_1}V_*^{e_2}\),
+\(\sum_e w_e e=0\), and the minimum of \(L\) is nonnegative.
+The cone of balanced nonnegative weights is generated by its rays with minimal support. A ray has at most three support points: otherwise the two balance equations have a support-preserving perturbation independent of the ray. Its minimal positive dependencies are four opposite pairs, four triangles with weights \((1,1,1)\), and four with weights \((1,1,2)\). The checker enumerates these twelve supports directly.
+
+After normalization by \((U_*,V_*)\), it therefore suffices to certify positive monomials, a nonnegative constant, and those twelve circuits in (1), with the two diagonal subblocks of \(M\) fixed diagonal.
+
+The opposite pairs use:
+\[
+\begin{array}{ll}
+UV(U+U^{-1}-2)=t^2(U-1)^2,&
+UV(V+V^{-1}-2)=U(t^2-1)^2,\\
+UV(UV+U^{-1}V^{-1}-2)=(Ut^2-1)^2,&
+UV(UV^{-1}+U^{-1}V-2)=(U-t^2)^2.
+\end{array}
+\]
+For the unweighted triangle:
+\[
+U^2V^2+U+V-3UV=(Ut^2-t)^2+U(t-1)^2+2Ut(t-1)^2. \tag{2}
+\]
+For the two inequivalent orientations of the weighted triangle:
+\[
+\begin{aligned}
+U^2V^2+V^2+2U-4UV&=t^4(U-1)^2+2U(t^2-1)^2,\\
+U^2V^2+U^2+2V-4UV&=(U-t)^2+(Ut^2-t)^2+2Ut(t-1)^2.
+\end{aligned}\tag{3}
+\]
+The second line is essential. Directly exchanging \(U,V\) in the first line gives a square with two \(U\)-degree-one monomials, which need not respect diagonal \(S\). The alternative identity in the second line repairs that restriction.
+
+Reflections \(U\mapsto U^{-1}\), \(V\mapsto V^{-1}\), followed by the positive monomial clearing factor, generate the four orientations of (2) and the two orientations of each line of (3). Even powers in each prefactor are absorbed into its root. The resulting roots lie in exactly:
+\[
+(1,t,t^2,U,Ut,Ut^2),\quad \sqrt U(1,t,t^2),\quad \sqrt{Ut}(1,t).
+\]
+Every root in the first block connects one \(U\)-degree-zero and one \(U\)-degree-one monomial, so its diagonal subblocks remain diagonal. Positive monomials are diagonal squares in these same blocks. Rescaling at the positive minimizer preserves all three spans. This proves necessity for positive support.
+
+For zero outer coefficients, add \(\epsilon>0\) to all eight coefficients. Integrate (1) over \(1\le U,t\le2\). Each of the three weighted feature moment matrices is positive definite, since its feature functions are linearly independent on the rectangle. All Gram blocks are PSD, so their traces are bounded by the bounded integral of the polynomial divided by a fixed positive eigenvalue. A convergent subsequence preserves the coefficient equations and PSD. The limiting Grams prove (A13), including infima at infinity and missing support.
+
+## Bell-source specializations
+
+When the Bell-source orthant already enforces the eight outer signs, omit the two scalar blocks: total order 11. SG6 gives \(g_{00}=g_{20}=0\) in C1 and \(g_{00}=g_{22}=0\) in C2. PSD annihilates those rows and columns of \(M\), leaving block orders \((4,3,2)\), total nine. At a finite contact all three weighted Gram forms vanish. Each annihilates its nonzero evaluation vector, so the ranks are at most \((3,2,1)\). Thus at most six squares suffice. A third omitted event removes another diagonal row, giving total order at most eight and at most five squares.
+
+These are determinant certificates. Substituting the quartic source map into (A13) is a polynomial matrix inequality, not an affine source lift. No state-normal completion or full-Q222 reverse inclusion follows from this reduction.
+
+## Reproduction and data
+
+Run `node verify_angular13.js`. It uses exact integer polynomial coefficients, enumerates all twelve circuits, checks their block spans and fixed diagonal restrictions, and checks all 22 visible/auxiliary affine basis identities. `angular_pencil.json` contains twice (A13), with integer coefficient arrays and a stated upper-triangular convention. `exact_checks.json` records the executed result. The checker is the same pure JavaScript function evaluated during preparation; no numerical SDP solver is used.
+
+Source determinant and support formulas: [SG5–SG6](../../../latex/chapters/04_geometry.tex).
+
+
+===== latex/chapters/05_entry.tex =====
+\chapter{Coordinates of the contact families}
+\label{ch:entry}
+\label{component:p477c0ac30750}
+\label{p477c0ac30750:sec:rederived-contact-entry}
+The source support, physicality, curvature and deletion facts used below were proved in Chapter~\ref{ch:geometry}, including (SG17)--(SG22).
+\section{Signs and stationary coordinates}
+\label{component:paf13bbf8fd32}
+
+\label{paf13bbf8fd32:sec:global-native-entry-rederived}
+
+The stationary equations give rational formulas for the event weights.
+To use those formulas at a singular limit, we first determine the signs
+of every denominator. The contact geometry of Chapter~\ref{ch:geometry}
+provides the required strict inequalities.
+
+\subsubsection*{Statement and the real maximal-contact graph}
+
+Use the raw full parent \(F\), with \(d>0\).
+Every source below is physical and has an actual finite noncommuting
+zero.  The two allowed coefficient domains are
+\[
+\begin{array}{ll}
+ {\rm C1}:&\lambda=n=0,\quad m,C,A,\alpha>0,\quad
+ D,\beta\ge0,\quad D+\beta>0,\\
+ {\rm C2}:&\lambda=\beta=0,\quad m,C,A,D,\alpha>0,\quad n\ge0.
+\end{array}\tag{EN1}
+\]
+Make the actual angle gauges positive and put \(Z_c=1\), as permitted
+by SG3--SG4.  Then \(W_c>0\) by SG15 and SG21.  We prove the strict signs
+\[
+\begin{gathered}
+ X_c<0,\quad Y_c>0,\quad u_cW_c-Y_c>0,\quad
+ 1-v_cY_c>0,\\
+ R_{m,c}:=v_cW_c-X_c+u_cv_cY_c-u_c>0,\\
+ R_{D,c}:=u_cW_c+u_cv_cX_c-Y_c-v_c<0,\\
+ X_c+u_c>0,\qquad W_c+v_cX_c>0.
+\end{gathered}\tag{EN2}
+\]
+These inequalities hold over every real closed coefficient field.
+In particular they are strict ordered-field statements, with no
+assertion that a gap has positive real residue.
+
+Here is the common connected-graph argument, proved over \(\mathbb R\)
+before first-order transfer.  In either exact two-omission family,
+initially require all six retained events positive, normalize \(C=2\),
+and let their other five weights vary over the positive orthant.  Put
+\[
+ d_*(w)=\max\{d\ge0:(d,w)\text{ is physical}\}.
+ \tag{EN3}
+\]
+The admissible set is a closed interval by convexity.  It has positive
+length: at \(d=0\) the central Laurent coefficient is positive, its
+nonnegative Cauchy--Binet expansion containing \(16mCAD\); the outer
+coefficients remain nonnegative for \(d\ge0\).  Thus sufficiently small
+positive \(d\) is physical by SG3--SG6 and the homogeneous endpoint
+limits.  A fixed strictly CHSH-violating real test bounds \(d\) above.
+
+For these positive six-event supports the active outer exponents are
+constant and have zero in the interior of their convex hull.  The
+logarithmic Laurent sum is strictly convex and coercive.  At \(d_*\)
+its unique minimum is zero.  Indeed if its minimum were \(\mu>0\),
+a small increase of \(d\) preserves every active outer coefficient
+within a relative error \(\varepsilon\) and the central coefficient
+within absolute error \(\varepsilon\).  As in the extreme-source argument, this preserves a
+positive uniform lower bound, contradicting maximality.
+There is therefore one positive squared-angle contact, and SG3--SG4 gives
+one state with \(Z=1\).
+
+At that contact the core value is strictly negative (SG20--SG21).
+The Jacobian of the six equations
+\(\nabla_zF=0,F=0\), in \(z=(W,X,Y,u,v)\) and \(d\), is
+\[
+ \begin{pmatrix}\nabla_z^2F&\partial_d\nabla_zF\\
+ 0&\partial_dF\end{pmatrix},
+ \qquad \nabla_z^2F\succ0,\quad\partial_dF<0 .
+ \tag{EN4}
+\]
+The real analytic implicit-function theorem gives a local analytic
+contact branch.  SG7 makes it physical and the negative core value
+makes its \(d\) maximal.  Uniqueness makes these branches agree.
+Thus the normalized contact is analytic on the entire connected
+positive orthant.  Every physical finite zero with those event weights
+lies on this graph, because its negative core value prevents increasing
+\(d\) at that same test.
+
+\subsubsection*{C1: strict signs including the two literal boundary faces}
+
+Write
+\[
+ (W,X,Y,Z)=(S,u(\theta-1),uY_0,1).
+ \tag{EN5}
+\]
+We first determine the sign of $\theta$ from an adjugate entry. With \(B=\operatorname{adj}P\),
+\[
+\begin{gathered}
+ uB_{44}+B_{24}
+ =16uv^2D_u^2D_v\,\mathcal F,\\
+\begin{aligned}
+ \mathcal F={}&(d+2D)\{(d+2\alpha)(mD_v+Cu^2v^2)
+                       +2AD_v(m+Cu^2)\}\\
+ &+2mC\{d(u^2v^2+D_v)+2\alpha+2Dv^2D_u\}>0 .
+\end{aligned}
+\end{gathered}\tag{EN6}
+\]
+Since \(P\) has one-dimensional kernel and three positive eigenvalues,
+\(B=\gamma\psi\psi^T\) with \(\gamma>0\).  Equation EN6 gives
+\(\theta>0\).
+
+Neither \(Y_0=0\) nor \(S-Y_0=0\) is possible.  These walls would delete
+the positive \(A\)-event or \(C\)-event, respectively, while preserving
+the kernel and both angle jets.  The resulting omission set contains
+an exclusive pair, so has noncoercive support.  SG7 and SG22 rule this out.
+The remaining cross-multiplied contact identity is
+\[
+ m\,[S+uv(\theta-1)]\,
+       [v(S+u^2Y_0)-u\theta]
+   =2u^3(S-Y_0)(1-\theta)D_v .
+ \tag{EN7}
+\]
+For precision about exceptional source minors, use the four raw kernel
+equations and the two full angular derivatives.  Their selected six-column
+system, for \((d,m,A,D,\alpha,\beta)\) with \(C=2\), has
+determinant
+\[
+ -8192\theta u^2vD_u^2D_v^2\,\mathcal D,\qquad
+ \mathcal D=Y_0D_u(uY_0+v)(1-uvY_0)
+ [S+uv(\theta-1)]R_m(-R_D).
+ \tag{EN8}
+\]
+EN7 follows first from its rational solution wherever this selected
+minor is nonzero: the Cramer determinant for the \(m\)-column,
+multiplied by \([S+uv(\theta-1)]R_m\), equals this determinant
+times \(2u^3(S-Y_0)(1-\theta)D_v\).  This is an exact
+polynomial determinant identity.  The equivalent native formula is
+\(m=2ae^2c_2/(Mc_3)\), with the definitions in EN13 below:
+\(c_2/c_3=(1-\theta)D_v/E\),
+\(M=R_m/(Sv)\), \(E=[S+uv(\theta-1)]/S\),
+\(a=u(S-Y_0)/v\), \(e=u/S\).  These substitutions give EN7
+exactly.  The native contact equations are polynomial identities, so
+this argument does not assume the signs being proved.
+
+At the exact positive seed
+\[
+ (u,v;S,Y_0,\theta)=(1,1;1,\tfrac14,\tfrac12),\qquad
+ (d,m,C,A,D,\alpha,\beta)
+ =(\tfrac{27}2,4,2,9,\tfrac54,\tfrac{13}4,\tfrac94),
+ \tag{EN9}
+\]
+all six stationary equations hold and the selected minor is nonzero.
+Consequently that analytic minor is not identically zero on the
+connected contact graph.  Its nonzero set is dense.  Continuity extends
+EN7 to every contact on the graph.  At \(\theta=1\), EN7 and \(S,m>0\)
+would imply \(R_m=0\), permitting deletion of \(m\) and creating an
+exclusive omitted pair, again impossible.  The three continuous
+nonzero functions \(Y_0,S-Y_0,\theta-1\) therefore have constant signs,
+fixed by EN9:
+\[
+ S>0,\qquad 0<Y_0<S,\qquad 0<\theta<1.
+ \tag{EN10}
+\]
+
+The full-parent C1 reflection swaps
+\((\lambda,n),(m,C),(A,\alpha),(D,\beta)\), sends \(u\) to \(1/u\),
+and sends the state to
+\[
+ (vS-u(\theta-1),\,-S-uv(\theta-1),\,
+                   1-uvY_0,\,uY_0+v).
+\]
+Its state matrix \(G\) has \(G^TG=D_vI\); the full core and every event
+obey \(u^2F_{\sigma_1c}(1/u,v;G\psi)=D_vF_c(u,v;\psi)\).
+Its last coordinate is positive.
+Applying EN10 to the transformed normalized state proves successively
+\(1-uvY_0>0,\ S+uv(\theta-1)>0,\ R_D<0,\ R_m>0\).
+Together with EN10 this is precisely EN2.
+
+For a literal third omission \(D=0\) or \(\beta=0\), start at the
+given real contact and open that coefficient to \(\varepsilon>0\).
+EN4 is still invertible by the strict contact Hessian (SG18--SG19).  The local analytic branch stays at
+positive \(d\), has nonnegative event weights, and is physical by SG7.
+The already proved inequalities hold on it.  At the limit, EN6 and
+SG15 and SG21 stay strict; the still positive \(A,C,m\) and the same deletion
+arguments make the other weak inequalities strict.  EN7 passes to
+the limit, and so does the reflection.  Thus EN2 holds on both
+boundary faces.  This is an implicit-function limit at a fixed
+finite real contact, not an assertion that an optimizer cannot escape
+to infinity.  First-order transfer now gives the entire implication
+over every real closed field.
+
+\subsubsection*{C2: all signs and a positive omitted-row cofactor}
+
+Use the same positive six-event graph.  Five retained-amplitude walls
+are excluded directly by SG22:
+\[
+ Y=0,\quad uW-Y=0,\quad R_m=0,\quad R_D=0,\quad vY-1=0.
+ \tag{EN11}
+\]
+Deleting \(A,C,m,D,\alpha\), respectively, introduces an exclusive
+omitted pair in addition to \(\lambda=\beta=0\).
+The wall \(X=0\) deletes \(n\); the resulting source is on the C1
+three-consecutive-omission face \(\lambda=n=\beta=0\).
+It is physical by SG7, so EN10 gives \(X<0\), a contradiction.
+Thus all six retained event rows have fixed signs on the connected
+C2 graph.  The exact seed
+\[
+ (n,m,C,A,D,\alpha)=(\tfrac18,\tfrac38,\tfrac16,
+                              \tfrac58,\tfrac38,\tfrac16),\quad d=1,
+ \qquad (u,v;W,X,Y,Z)=(1,1;1,-\tfrac14,\tfrac14,1)
+\]
+has every required positive weight and every stationary equation.
+It fixes their signs to the first six signs in EN2.
+
+Here is a direct proof of the omitted-row sign, including \(n=0\).
+Let \(P_0\) be this raw C2 matrix with \(n\) set to zero.
+Changing \(n\) adds only \(4nD_uD_v\) to its \(XX\) entry.
+The cofactor \(B_{24}\) does not contain that column, whereas
+\(B_{44}\) changes by \(4nD_uD_v\det(P_0|_{W,Y})\).
+Consequently
+\[
+\begin{split}
+ uB_{44}+B_{24}
+  ={}&16uv^2D_u^2D_v\,\mathcal F\\
+    &+4unD_uD_v\det(P_0|_{W,Y})>0 .
+\end{split}\tag{EN12}
+\]
+Here \(\mathcal F\) is EN6 with \(\beta=0\).  The determinant in
+the second line is positive: the \(Z=0\) state block already has
+the strictly positive signed-core form SG3--SG4.  Thus \(X+u>0\).
+The C2 full-parent reflection
+\[
+ (u,v;W,X,Y,Z)\mapsto(1/v,1/u;Z,X,Y,W),
+ \quad (m,D),(C,\alpha),(\lambda,\beta)
+\]
+has the exact homogeneous identity
+\(u^2v^2F_{\sigma_2c}(1/v,1/u;Z,X,Y,W)=F_c(u,v;W,X,Y,Z)\).
+The transformed contact
+has positive last coordinate \(W\).  Applying the just-proved
+\(X'+u'Z'>0\) gives \(W+vX>0\).
+This proves EN2 for positive \(n\).  For literal \(n=0\), EN1 is
+already a C1 triple face and its signs apply directly; EN12 remains
+strict as well.
+
+\subsubsection*{Exact native-coordinate transport and uniqueness}
+
+For C1, reflect if needed so \(0<k=u_c\le1\), and define
+\[
+\begin{gathered}
+ S=W_c,\quad r=Y_c/(kS),\quad
+ \theta=1+X_c/k,\quad h=1-\theta,\\
+ \eta=v_c/(kS),\quad \zeta=Sv_c/k,\quad
+ f=\sqrt\eta,\quad g=\sqrt\zeta,\quad e=k/S=kf/g,\\
+ a=(1-r)/\eta,\quad t=\theta/\zeta,\quad x=k^2,\\
+ R=1+xr,\quad T=1+xh,\quad M=R-t,\quad J=T-a,\\
+ E=1-x\eta h,\qquad Q=1-x\zeta r .
+\end{gathered}\tag{EN13}
+\]
+By EN2, \(0<r,\theta<1\), all \(\eta,\zeta,a,t\) are positive,
+and
+\[
+ R_m=k\zeta M>0,\quad R_D=-v_cJ<0,\quad
+ W_c+v_cX_c=SE>0,\quad 1-v_cY_c=Q>0.
+\]
+Thus \(M,J,E,Q>0\), and \(0<a,t<2\).
+The selected determinant EN8 is now strictly nonzero.  The native
+seven coquotients and source coefficients SD1 in Section~\ref{component:p0acdb66bba2f}, with their exact stationarity identities SD9--SD11,
+satisfy exactly the six stationary equations at this same contact.
+Uniqueness therefore identifies them with the original normalized
+source, including \(D=0\) or \(\beta=0\).  No asymptotic hypothesis
+is used for these polynomial identities.
+
+For C2, normalize \(d=1\), and set
+\[
+\begin{gathered}
+ c=u_c,\quad a=v_c/u_c,\quad b=aW_c,\quad r=-X_c/u_c,\quad
+ t=(u_cW_c-Y_c)/v_c,\quad z=c^2,\\
+ h=b-a^2t=aY_c/u_c,\quad
+ g=(1+z)b-(1-r+a^2zt)=R_m/u_c,\quad
+ j=1+zr-t=-R_D/v_c .
+\end{gathered}\tag{EN14}
+\]
+The complete strict native domain follows:
+\[
+ a,b,c,t>0,\quad 0<r<1,\quad h,g,j>0,\quad
+ 1-zh=1-v_cY_c>0,\quad b-a^2zr=a(W_c+v_cX_c)>0.
+ \tag{EN15}
+\]
+The actual six-column stationary determinant is, in the unweighted
+event convention of the retained determinant proof,
+\[
+ -64ac^6rgt\,hj(1-zh)(1+z)^2(1+a^2z)^2\Delta,
+\]
+\[
+ \Delta=1+(1+z)b+z(1+z)b^2+2z(1+z)br+z^2r^2+2zr
+        +a^2z\{(1+z)b+1+zr(2-r)\}\ge1 .
+ \tag{EN16}
+\]
+That body provides its explicit reduction to a three-by-three
+determinant.  The six rational coefficients in
+Section~\ref{component:p6e5d41ed80b3} solve these six equations at the
+contact EN14.  EN16 makes the solution unique, so they are exactly
+the original source coefficients.  This remains valid at \(n=0\);
+one does not delete its column from the square system.
+
+All gauge actions, positivity statements and source equations used
+above are finite polynomial or rational ordered-field statements
+with denominators explicitly nonzero.  The real connected-graph
+proof therefore transfers as one fixed first-order implication.
+Together, EN1--EN16 discharge the native sign and positive-gap
+interface for both families in SG10.  They do not prove an
+all-tests tensor assertion; that assertion is supplied by the
+source partitions and their proofs in Appendices B and C.
+
+
+
+===== latex/chapters/04_geometry.tex =====
+\chapter{The source cone: two closed faces and two contact families}
+\label{ch:geometry}
+\label{component:p0c8f420148b7}
+\label{p0c8f420148b7:sec:physical}
+\label{p0c8f420148b7:eq:parent}
+\label{p0c8f420148b7:prop:compat}
+\label{component:pd9a6195f0af3}
+\label{pd9a6195f0af3:sec:closed-faces-short}
+\label{pd9a6195f0af3:lem:closed-face-orbits}
+\label{pd9a6195f0af3:lem:quadratic-matrix-lift}
+\label{pd9a6195f0af3:thm:closed-face-adjacent}
+\label{pd9a6195f0af3:thm:closed-face-opposite}
+\label{pd9a6195f0af3:cor:all-closed-faces}
+\section{The exact physical polynomial}
+
+Use the affine functional $H=1-(E_{00}-E_{01}+E_{10}+E_{11})/2$.
+Order the eight losing events as
+\[
+ (\lambda,n,m,C,A,D,\alpha,\beta)
+ =\bigl((++|01),(+-|00),(+-|11),(-+|10),
+             (-+|00),(-+|11),(--|01),(+-|10)\bigr).
+\]
+Every event vanishes at the chosen PR point.  Each is one at its own
+deterministic CHSH-facet neighbour and zero at the other seven.
+Consequently every affine functional has the unique expansion
+\[
+ f=dH+4\sum_i a_i p_i,\qquad
+ d=-f(\mathrm{PR}),\qquad a_i=f(v_i)/4.                 \tag{SG1}
+\]
+For a quantum-valid functional negative at that PR point, $d>0$ and
+$a_i\geq0$.  If a quantum-valid functional is nonnegative at every PR
+point, it is nonnegative on the entire nonsignalling polytope and is a
+nonnegative combination of its probability inequalities.  The latter
+sources have immediate separated square certificates.  Here is a complete short vertex argument. The nonsignalling affine
+space has dimension eight. If no local marginal is deterministic, each
+two-by-two outcome table has positive row and column sums, hence at
+most two zero entries. A vertex requires at least eight active
+probability inequalities. Thus every table has exactly two zeros,
+necessarily in opposite corners. Write its perfect correlation or
+anticorrelation as $a_x=s_{xy}b_y$, with $s_{xy}=\pm1$.
+If $\prod_{x,y}s_{xy}=-1$, these equations force all four marginals
+to vanish and give a PR vertex. If the product is $+1$, one marginal
+remains free and the table is a mixture of two deterministic points,
+so an interior marginal value is not a vertex. If instead one
+marginal is deterministic, say $A_0$, a local model is obtained by
+sampling $A_1$ and then sampling $B_0,B_1$ independently conditional
+on $A_1$, using the two given joint tables. Nonsignalling makes their
+$A_1$ marginals agree; the tables involving fixed $A_0$ are reproduced
+automatically. Such a vertex is therefore deterministic. This proves
+that the only vertices are the sixteen deterministic points and the
+eight PR points. Linear separation (equivalently finite-dimensional
+Farkas duality) now gives the asserted event representation.
+
+Put $D_u=1+u^2$, $D_v=1+v^2$, and write the real state as
+$\psi=(W,X,Y,Z)$.  The entire cleared parent is
+\[
+\begin{split}
+ F={}&4\lambda D_u(W+vX)^2+4nD_uD_vX^2
+       +4m(vW-X+uvY-uZ)^2\\
+ &+4CD_v(uW-Y)^2+4AD_uD_vY^2
+ +(4D+2d)(uW+uvX-Y-vZ)^2\\
+ &+(4\alpha+2d)D_u(vY-Z)^2
+ +(4\beta+2d)D_v(X+uZ)^2-2dD_uD_vZ^2.
+\end{split}                                                   \tag{SG2}
+\]
+It is $D_uD_v\|\psi\|^2f(q)$ for a nonzero unnormalised state.
+All these factors are pure testing factors.  Write $P(u,v)$ for its
+symmetric state matrix.  If $d>0$ and $uv\ne0$, its $Z=0$ principal
+block is positive definite, since the signed part alone is
+\[
+ 2d\{(uW+uvX-Y)^2+D_uv^2Y^2+D_vX^2\}.                 \tag{SG3}
+\]
+Thus $P$ has at least three positive eigenvalues, its kernel at a
+zero is one-dimensional with $Z\ne0$, and
+\[
+                 P\succeq0\quad\Longleftrightarrow\quad\det P\geq0.
+                                                               \tag{SG4}
+\]
+
+Here is the entire determinant datum needed for the geometric
+reduction.  Set
+\[
+\begin{array}{ll}
+t_1=d+2(\lambda+n+D),&t_2=d+2(\alpha+m+A),\\
+t_3=d+2(\lambda+C+D),&t_4=d+2(\alpha+\beta+m),\\
+t_5=d+2(\lambda+\beta+n),&t_6=d+2(\alpha+C+A),\\
+t_7=d+2(\beta+n+m),&t_8=d+2(C+A+D).
+\end{array}
+\]
+All $t_i>0$.  Directly expanding the four-dimensional determinant of
+SG2, or applying Cauchy--Binet to its eight positive and one negative
+rank-one packets, gives
+\[
+ \det P=16D_u^2D_v^2u^2v^2L(u^2,v^2),\qquad
+ L(U,V)=h+\sum_{(i,j)\ne(1,1)}q_{ij}U^{i-1}V^{j-1},       \tag{SG5}
+\]
+where
+\[
+\begin{array}{ll}
+q_{00}=4\lambda\alpha t_7t_8,&
+q_{01}=4(\lambda Dt_7t_6+\alpha mt_5t_8),\\
+q_{02}=4mDt_5t_6,&
+q_{10}=4(\alpha At_7t_3+\lambda nt_8t_4),\\
+q_{12}=4(\beta mt_1t_6+CDt_5t_2),&
+q_{20}=4nAt_3t_4,\\
+q_{21}=4(\beta nt_3t_2+CAt_1t_4),&
+q_{22}=4\beta Ct_1t_2.
+\end{array}                                                   \tag{SG6}
+\]
+The central coefficient is fixed without a long expansion by
+$h=\det P(1,1)/256-\sum_{(i,j)\ne(1,1)}q_{ij}$.
+The eight nonnegative outer coefficients determine the possible
+contact geometries.
+
+\section{The twelve elementary angular identities}
+\label{sec:angular-circuits}
+
+The determinant of the state matrix has eight nonconstant Laurent
+monomials. Their coefficients are nonnegative. A stationary zero
+therefore has a particularly simple algebraic decomposition, which
+also explains the cubic and quartic identities used below.
+
+Let $E=\{-1,0,1\}^2\setminus\{(0,0)\}$ and write
+\[
+ L(U,V)=h+\sum_{e\in E}q_eU^{e_1}V^{e_2},\qquad q_e\ge0.
+\]
+Suppose $U_c,V_c>0$ satisfy $L=L_U=L_V=0$. Put
+$w_e=q_eU_c^{e_1}V_c^{e_2}$. The value and derivative equations are
+exactly
+\[
+ h=-\sum_e w_e,\qquad \sum_e w_e e=0.
+ \label{eq:angular-balance}
+\]
+Thus the positive coefficients balance around the origin in the
+exponent plane.
+
+\begin{lemma}[Balanced Laurent polynomial]
+Let $K_c,K_t$ be labelled real closed extensions of $\mathbb R$.
+If the coefficients and contact above belong to $K_c$, then for every
+$U,V>0$ in $K_t$ the separated evaluation of $L$ is a finite sum of
+squares in $K_c\otimes_{\mathbb R}K_t$.
+\end{lemma}
+\begin{proof}
+First decompose the coefficient vector $w$ using its balance equation.
+If $w\ne0$, the origin lies in the convex hull of its active exponents.
+A minimal subset containing the origin has two or three elements.
+For the eight exponents in $E$, the possibilities, up to rotation
+and reflection of the square, are
+\[
+\begin{array}{c|c|c}
+\text{exponents}&\text{positive integer weights}&\text{number}\\ \hline
+\{e,-e\}&(1,1)&4\\
+\{(1,1),(-1,0),(0,-1)\}&(1,1,1)&4\\
+\{(1,1),(-1,1),(0,-1)\}&(1,1,2)&4.
+\end{array}
+\]
+Indeed a two-element set must be opposite. A triangle containing the
+origin contains either one corner and its two opposite axial points,
+or two adjacent corners and their opposite axial point. These are
+the last two rows. For its integer weight vector $b$, subtract
+$\lambda b$, where $\lambda=\min_{b_e>0}w_e/b_e$.
+The remainder is nonnegative and balanced, and has fewer active
+entries. Repeating at most eight times gives
+$w=\sum_j\lambda_jb^{(j)}$ with $\lambda_j>0$ in $K_c$.
+
+Set $X=U_c^{-1}\otimes U$ and $Y=V_c^{-1}\otimes V$.
+Their rational powers mean separate positive roots in the two fields.
+For each row of the table the monomials $p_i=X^{e_{i1}}Y^{e_{i2}}$
+satisfy $\prod_i p_i^{b_i}=1$. The required elementary identities are
+\begin{align*}
+ p+p^{-1}-2&=(\sqrt p-p^{-1/2})^2,\\
+ a^3+b^3+c^3-3abc
+   &=\tfrac12(a+b+c)\bigl[(a-b)^2+(b-c)^2+(c-a)^2\bigr],\\
+ a^4+b^4+c^4+d^4-4abcd
+   &=(a^2-b^2)^2+(c^2-d^2)^2+2(ab-cd)^2.
+\end{align*}
+For weights $(1,1,1)$ take $a=p_1^{1/3}$, $b=p_2^{1/3}$,
+$c=p_3^{1/3}$; then $abc=1$. Each of $a,b,c$ is an elementary
+tensor square, so the middle line is a sum of tensor squares.
+For weights $(1,1,2)$ take $a=p_1^{1/4}$, $b=p_2^{1/4}$ and
+$c=d=p_3^{1/4}$; then $abcd=1$.
+Finally multiply the squares by $\sqrt{\lambda_j}\otimes1$ and sum.
+Equation~\eqref{eq:angular-balance} makes the result exactly $L$.
+\end{proof}
+
+In a single real closed field this proves that a stationary zero of
+$L$ is a global minimum, using only the three displayed identities.
+For the Bell state matrix, its positive three-dimensional principal
+block then turns determinant nonnegativity into matrix positivity.
+The same calculation proves a separated sum-of-squares identity for
+the determinant at independent tests. To obtain a certificate for the
+whole state polynomial we must also control the state-normal terms;
+the following matrix lemmas perform that step.
+
+
+\section{Stationary zeros and physicality}
+
+\paragraph{Contact lemma.}
+Suppose $d>0$, all event weights are nonnegative, and there exist
+positive $u_c,v_c$ and a nonzero real state $\psi_c$ such that
+\[
+ P(u_c,v_c)\psi_c=0,
+ \qquad\psi_c^TP_u(u_c,v_c)\psi_c=0,
+ \qquad\psi_c^TP_v(u_c,v_c)\psi_c=0.                    \tag{SG7}
+\]
+Then the source is physical at every angle and every state.  This
+statement holds over every real closed field.
+
+\emph{Proof.}
+SG3 gives three positive complementary state eigenvalues. The adjugate
+at contact is a positive multiple of $\psi_c\psi_c^T$, so SG7 and SG5
+give $L=L_U=L_V=0$ there. The balanced Laurent identity just proved
+makes $L$ nonnegative at every positive pair in the same field.
+Equation SG4 therefore gives physicality for $uv\ne0$.
+At a commuting or projective endpoint, simultaneous diagonalization
+of the commuting local pair reduces the CHSH operator to $\pm2$
+times a remote reflection, so $H\succeq0$. The event terms are
+nonnegative there as well. Homogenizing SG2 includes all endpoints.
+This proves the claim over every real closed field.\hfill$\square$
+
+This lemma is also the justification for deleting a positive event
+whose amplitude vanishes at a contact.  Its square and all first
+derivatives vanish; deleting it preserves SG7.  It is not legitimate
+to delete an event whose amplitude is nonzero.
+
+\section{The geometry of a stationary zero}
+
+\paragraph{Coercivity at every physical finite contact.}
+Every physical source with $d>0$ and a finite noncommuting zero has
+coercive Newton support.  Indeed, put
+$a_e=q_eU_c^{e_1}V_c^{e_2}>0$ for the active exponent vectors.
+The two contact derivatives give
+\[
+                         \sum_e a_e e=0.                \tag{SG17}
+\]
+If zero is not in the interior of their convex hull, a separating
+linear functional nonnegative on every active vector must vanish
+on all of them, by SG17.  Thus the active support is empty or lies
+on one of the four lines through the origin in the square grid.
+A nonempty one-sided subset cannot satisfy SG17.  The horizontal
+opposite pair $q_{01},q_{21}>0$ has four possible product pairings
+in SG6.  These respectively force $\lambda n$, $CD$, $\beta m$
+or $\alpha A$ positive, activating an off-line coefficient
+$q_{10}$ or $q_{12}$.  The vertical pair similarly forces
+$\alpha m$, $CA$, $\beta n$ or $\lambda D$ and activates
+$q_{01}$ or $q_{21}$.
+
+For the diagonal pair $q_{00},q_{22}>0$, all off-line coefficients
+can vanish only on the alternating matching
+$\lambda,\alpha,\beta,C>0$, $n=m=A=D=0$.
+For the other diagonal they can vanish only on the opposite matching
+$n,m,A,D>0$, $\lambda=C=\alpha=\beta=0$.
+The latter is not physical: SG2 at $u=v=1$ and
+$\psi=(1,-\varepsilon,\varepsilon,1)$ gives
+\[
+ F=16\varepsilon\{(d+n+m+A+D)\varepsilon-d\}<0
+ \quad\text{for }\quad
+ \varepsilon=\frac{d}{2(d+n+m+A+D)}.
+\]
+The first matching is its physical one-step cycle rotation.
+If every outer coefficient is zero, SG6 forbids every adjacent or
+opposite positive pair in the cycle
+$(\lambda,D,C,A,\alpha,m,\beta,n)$.
+Any maximal remaining set is a triple with cyclic gaps $(2,3,3)$;
+smaller sets extend to such a triple.  The eight triples are rotations
+of $\{\lambda,m,A\}$.  At $u=v=1$, $\psi=(1,-1,0,2)$
+annihilates precisely the needed three event rows and has signed-core
+value $-4$, giving $F=-4d<0$.  This excludes empty support too.
+
+For completeness, the physical cycle symmetries used here are the
+CHSH-preserving maps on event coordinates $(x,y,a,b)$
+\[
+\begin{split}
+g_A:(x,y,a,b)&\mapsto(1-x,y,a,(-1)^yb),\\
+g_B:(x,y,a,b)&\mapsto(x,1-y,(-1)^{1-x}a,b),\\
+g_T:(x,y,a,b)&\mapsto(y,x,(-1)^yb,(-1)^xa).
+\end{split}
+\]
+In the displayed cycle, indexed from zero, they act as
+$i\mapsto5-i,3-i,2-i$ modulo eight.  Their compositions give
+a one-step rotation and a reflection.  The assertions follow
+by inserting the eight event definitions in SG1.
+
+\paragraph{Strict single-field contact Hessian.}
+The logarithmic angular Hessian is now
+\[
+                 \mathcal H_L=\sum_e a_e ee^T\succ0,       \tag{SG18}
+\]
+since the active vectors span the plane.  Write the state matrix
+as $P=\left(\begin{smallmatrix}H_3&b\\b^T&c\end{smallmatrix}\right)$
+in the coordinates $(W,X,Y;Z)$ and set $Z=1$.
+The positive definite state block SG3 gives, within the single
+source field,
+\[
+ F=(z+H_3^{-1}b)^TH_3(z+H_3^{-1}b)+s(u,v),
+ \qquad s=\det P/\det H_3,\quad z=(W,X,Y)^T.             \tag{SG19}
+\]
+At contact $s=0$ and its gradient vanishes.  Its angular Hessian
+is the positive scalar $16D_u^2D_v^2u^2v^2/\det H_3$ times
+the congruence of SG18 by $\operatorname{diag}(2/u,2/v)$.
+Consequently the full Hessian of $F$ in $(W,X,Y,u,v)$ has
+positive state block $2H_3$ and a positive angular Schur complement;
+it is positive definite.  All formulas for derivatives and
+positive definiteness are algebraic.  The finite real assertion
+therefore transfers to every real closed field; logarithms are
+only notation for $U\partial_U,V\partial_V$.
+The inverse in SG19 belongs to the source field.
+
+\paragraph{Positive contact state orientation.}
+Let $F_H$ denote SG2 with $d=1$ and all eight event weights zero.
+Its state matrix satisfies
+\[
+              \det P_H=-16D_u^2D_v^2u^2v^2\ne0.          \tag{SG20}
+\]
+This follows by a four-dimensional determinant expansion of the
+three signed-core squares and the negative $Z^2$ term in SG2.
+If all positive-weight event rows vanished at a physical contact,
+their state matrices would annihilate the contact state.  The
+kernel equation would then give $P_H\psi_c=0$, contradicting
+SG20.  Hence at least one event contributes positively.  Since
+$F(\psi_c)=0$ and $d>0$, the core value $F_H(\psi_c)$ is strictly
+negative.
+
+For positive $u,v$, the $X,Y$ block of $F_H$ is
+$2\left(\begin{smallmatrix}h_0&-uv\\-uv&h_0\end{smallmatrix}\right)$,
+where $h_0=1+v^2+u^2v^2$.  Its Schur form is exactly SG15.
+It is nonnegative when $WZ\le0$.  Thus the negative core value
+forces
+\[
+                  W_cZ_c>0,\qquad Z_c=1\Longrightarrow W_c>0.
+                                                               \tag{SG21}
+\]
+
+\paragraph{The forbidden-deletion implication.}
+If a positive event row vanished at a contact, deleting that
+coefficient would preserve the four kernel equations and both
+angular derivatives.  SG7 would make the resulting nonnegative
+source physical, with the same finite contact.  SG17--SG18
+therefore make its support coercive.  We obtain the exact rule
+\[
+ \text{a positive contact event cannot vanish if deleting it
+ makes the Newton support noncoercive}.                       \tag{SG22}
+\]
+In particular every deletion introducing an exclusive omitted pair
+is forbidden by SG9.  This rule will fix the signs of the contact coordinates in
+Chapter~\ref{ch:entry}.
+
+\section{Reduction to two contact families}
+
+The active exponent vectors in SG5 lie on the boundary of
+$\{-1,0,1\}^2$.  The exponential sum is coercive exactly when zero
+is in the interior of their convex hull.  One direction follows from
+uniform positive support in every unit direction; the other follows
+from a separating direction along which every active exponential is
+nonincreasing.
+
+For this eight-point configuration a separating direction can be
+chosen from $(\pm1,0),(0,\pm1),(\pm1,\pm1)$.  For example the axis
+condition in SG6 gives
+$\lambda\alpha=\lambda D=\alpha m=mD=0$, whose minimal omitted
+event pairs are $\{\lambda,m\}$ and $\{\alpha,D\}$.
+For a diagonal the additional minimal pair is
+$\{\lambda,\alpha\}$; the remaining minimal triples already
+contain an axis pair.  Rotating the event cycle
+\[
+                 (\lambda,D,C,A,\alpha,m,\beta,n)          \tag{SG8}
+\]
+gives exactly the twelve pairs of exclusive events.  Therefore
+\[
+ \text{coercive exponent support}\quad\Longleftrightarrow\quad
+ \text{every two omitted losing events are compatible}.       \tag{SG9}
+\]
+Compatibility means agreement on each shared local measurement.
+Pairwise compatible events extend to a single deterministic
+assignment.  Such an assignment loses one or three CHSH inputs;
+there are consequently at most three compatible omissions.
+In SG8 compatible pairs have cyclic distance one or two, and a
+compatible triple is three consecutive vertices.
+
+\paragraph{Extreme-source lemma.}
+Normalise the canonical source by $d+\sum a_i=1$ and impose
+physicality and nonnegativity.  This is a compact convex subset of
+an eight-dimensional simplex.  Every extreme point with $d>0$ and
+coercive support has a finite stationary zero and exactly five or
+six positive event weights.
+
+\emph{Proof.}
+Coercivity gives a finite minimum $\mu\geq0$ of $L$.  If $\mu>0$,
+take sufficiently small opposite nonradial perturbations inside the
+exact active coefficient face, preserving the normalisation.  Every
+positive $q_e$ changes by relative error at most $\varepsilon$,
+every zero $q_e$ remains zero, and $h$ changes by absolute error at
+most $\varepsilon$.  Thus, uniformly at all positive angles,
+\[
+ L'\geq(1-\varepsilon)L+\varepsilon h-\varepsilon
+       \geq(1-\varepsilon)\mu+\varepsilon h-\varepsilon>0.
+\]
+The perturbations remain physical by SG4 and the direct endpoint
+argument, contradicting extremality.  The perturbation exists:
+SG9 permits at most three omissions, hence at least six active
+coordinates including $d$.  Thus $\mu=0$ and there is a contact.
+
+Fix its angles and state.  SG7 consists of six homogeneous linear
+equations in the source coefficients.  If at least seven events
+were positive, there would be at least eight active coordinates;
+their solution space has dimension at least two and contains the
+source.  Intersecting its directions with coefficient sum zero
+leaves a nonzero direction.  Small opposite perturbations preserve
+all signs and SG7, and are physical by the contact lemma.  This again
+contradicts extremality.  Hence at most six events are positive.
+The lower bound five follows from SG9. \hfill$\square$
+
+The CHSH-preserving event relabellings generate the dihedral group
+of SG8.  Thus the coercive extreme sources, including every allowed
+third omission, reduce to the two patterns
+\[
+\begin{array}{ll}
+\mathsf C_1:&\lambda=n=0,\quad d,m,C,A,\alpha>0,
+                  \quad D,\beta\geq0,\quad D+\beta>0,\\
+\mathsf C_2:&\lambda=\beta=0,\quad d,m,C,A,D,\alpha>0,
+                  \quad n\geq0.
+\end{array}                                                     \tag{SG10}
+\]
+The C1 third omission is $D=0$ or $\beta=0$; the C2 third omission
+is $n=0$, already a C1 orbit.  This overlap is harmless.  It is not
+legitimate to replace positive infinitesimal coefficients by zeros.
+
+Every point of the normalised source body is a convex combination
+of at most nine extreme points.  The fixed nine-term assertion,
+the midpoint definition of extremality, SG7, and physicality all
+have first-order polynomial formulations.  Their real proof
+therefore transfers to a real closed coefficient field, without
+using topological compactness or arbitrary infinite decompositions
+in that field.  A nonnegative decomposition preserves each literal
+zero coefficient term by term.
+
+\section{Noncoercive sources have explicit lifts}
+
+Every noncoercive source omits an exclusive pair.  Up to the same
+finite symmetries there are only two possibilities:
+$\lambda=m=0$ and $\lambda=\alpha=0$.
+
+We first record the elementary quadratic matrix lemma.  A real
+symmetric matrix polynomial $K(t)=K_0+tK_1+t^2K_2$ is PSD for every
+real $t$ exactly when there is a skew-symmetric $S$ such that
+\[
+ \begin{pmatrix}K_0&K_1/2+S\\K_1/2-S&K_2\end{pmatrix}\succeq0.
+                                                               \tag{SG11}
+\]
+For completeness, the cone of Gram-representable coefficient
+triples is closed because the trace of a representing PSD Gram is
+$\operatorname{tr}(K_0+K_2)$.  A nonnegative dual functional has
+block Hankel matrix $\left(\begin{smallmatrix}U&V\\V&W\end{smallmatrix}\right)
+\succeq0$, with $U,V,W$ symmetric.  Diagonalising
+$U^{+/2}VU^{+/2}$ on $\operatorname{ran}U$ writes its moment part as
+$\sum_j(z_j,t_jz_j)(z_j,t_jz_j)^T$; the remainder is
+$\operatorname{diag}(0,W-VU^+V)\succeq0$.
+Its value on $K$ is consequently
+$\sum_jz_j^TK(t_j)z_j+\sum_iw_i^TK_2w_i\geq0$.
+Separation proves SG11, including singular $U$.  The fixed-size
+statement transfers to real closed fields.
+
+For $\lambda=m=0$, use SG11 with
+\[
+\begin{split}
+ K_0&=\operatorname{diag}(4C+4D+2d,4A,4\alpha),\\
+ K_2&=\operatorname{diag}(4C,4A+4\alpha+2d,4D),\\
+ K_1&=\begin{pmatrix}0&0&-(4D+2d)\\
+                    0&0&-(4\alpha+2d)\\
+                    -(4D+2d)&-(4\alpha+2d)&0\end{pmatrix}.
+\end{split}                                                     \tag{SG12}
+\]
+Necessity follows by setting $W=a/u$ and letting $u\to0$ in the
+homogeneous state form.  The surviving form, after $R=a-Y$, is
+$2t_5D_vX^2+(R,Y,Z)^TK(v)(R,Y,Z)$.
+For sufficiency the determinant identity gives
+\[
+ \det K(v)=\frac{8D_v}{t_5}(q_{10}+hv^2+q_{12}v^4),
+\]
+whereas
+$L=h+q_{10}/V+q_{12}V+U(q_{20}/V+q_{21}+q_{22}V)$.
+PSD of $K$ makes the first three terms nonnegative; all remaining
+terms are nonnegative.  SG4 and the endpoint argument finish the
+equivalence.  When $d=0$ all forms are event-square sums.
+The Gram is strictly feasible at
+$C=A=2$, $D=\alpha=d=n=\beta=1$, $S=0$:
+after permutation its two Schur margins are $125/56>0$.
+
+For $\lambda=\alpha=0$, put $p=4C+4D+2d$,
+$q=4m+4\beta+2d$, $r=4D+2d$.  The exact lift is
+\[
+ B_1=\begin{pmatrix}4m&-4m&\xi\\-4m&q+4n&q\\\xi&q&q\end{pmatrix}
+ \succeq0,\quad
+ B_2=\begin{pmatrix}p+4A&4D&-p\\
+                 4D&4D&-(4m+r)-\xi\\
+                 -p&-(4m+r)-\xi&p\end{pmatrix}\succeq0.          \tag{SG13}
+\]
+Indeed set $u=\varepsilon s$, $v=\varepsilon$,
+$(W,Z)=(w,z)/\varepsilon$, $X=x$, $Y=y$.
+The surviving form is
+\[
+\begin{split}
+ G_s={}&4nx^2+4m(w-x-sz)^2+4C(sw-y)^2+4Ay^2\\
+       &+r(sw-y-z)^2+(4\beta+2d)(x+sz)^2-4dyz-2dz^2.
+\end{split}
+\]
+Its determinant is $16(q_{02}+hs^2+q_{20}s^4)$.  The same
+nonnegative-remainder argument proves equivalence with physicality.
+Applying SG11 to its state matrix, the zero diagonal entries on
+$sx,sy$ force their Gram rows to vanish.  Coefficient matching leaves
+only $\xi$, and the remaining Gram splits into the two blocks SG13.
+Equivalently
+$G_s=(w,x,sz)B_1(w,x,sz)^T+(y,z,sw)B_2(y,z,sw)^T$;
+the $\xi$ terms cancel because $w(sz)=z(sw)$.
+At $C=A=n=\beta=2$, $m=D=d=1$, $\xi=-5$, the successive
+principal minors are $(4,72,234)$ and $(22,72,234)$.
+Both lifts retain all nonnegative coefficient constraints.
+
+\paragraph{Why these source lifts give separated certificates.}
+Represent either source cone as $a\geq0$ and
+$\exists z\,M(a,z)\succeq0$, absorbing the signs into diagonal
+blocks.  The displayed points make this entire homogeneous lift
+strictly feasible.  The image of its dual PSD cone is closed:
+pairing with a fixed strict feasible matrix bounds the trace of
+every PSD preimage of a convergent dual sequence.  Separation
+therefore proves attained dual representation for every functional
+nonnegative on the source cone.  This is a finite-dimensional
+argument, and its fixed matrix-size quantified conclusion transfers.
+
+Given a source in $K_c$, choose its lift $A_c\succeq0$ there.
+Given a physical test in $K_t$, its evaluation functional belongs
+to the dual source cone in $K_t$; choose its attained dual matrix
+$B_t\succeq0$ there.  Their separated trace pairing equals the
+slack because all auxiliary-coordinate coefficients cancel.
+Factoring $A_c=RR^T$ and $B_t=SS^T$ in their respective fields gives
+\[
+ \langle A_c,B_t\rangle_{\otimes}
+       =\sum_{i,j}\left(\sum_k R_{ki}\otimes S_{kj}\right)^2.
+                                                               \tag{SG14}
+\]
+No mixed inverse or limiting certificate is involved.  Literal
+zero coefficients and singular matrices are included.
+
+\section{The remaining quadratic form}
+
+Let $K_c,K_t$ be separately labelled real closed extensions of
+$\mathbb R$ and $T=K_c\otimes_{\mathbb R}K_t$.
+The source partition in Chapter~\ref{ch:cover} reduces the following
+assertion to explicit local calculations.
+
+\paragraph{Canonical assertion $\mathcal C$.}
+Take $d=1$ and source coefficients in either pattern SG10.
+Assume only that there exist $u_c,v_c>0$, $W_c>0$, and
+$X_c,Y_c\in K_c$ for which SG7 holds with
+$\psi_c=(W_c,X_c,Y_c,1)$.  For every independent
+$u,v,W>0$ and $X,Y\in K_t$, the full expression SG2 with
+$Z=1$ belongs to $\Sigma T^2$.
+
+Physicality follows from SG7. Every source produced by the extreme
+reduction has this form after the angle signs and state normalization
+are fixed in its own field. The independent testing state remains
+arbitrary in $\mathcal C$.
+
+\paragraph{Assembly lemma.}
+Once $\mathcal C$ is proved, every transferred quantum-valid affine
+functional and every independent transferred quantum behaviour
+have separated slack in $\Sigma T^2$.  Therefore the universal
+tensor-SOS finite-lift criterion applies to the full eight-coordinate
+quantum set.
+
+\emph{Proof.}
+The source reduction gives at most nine canonical source atoms,
+each of which is an event atom, a closed-face atom, or SG10 with
+an actual contact.  Event atoms and closed faces were handled above.
+Restore $d$ by multiplying each root by $\sqrt d\otimes1$.
+
+For a canonical contact source, finite angle signs are harmless.
+The polynomial is unchanged by
+\[
+ (u;W,X,Y,Z)\mapsto(-u;W,X,-Y,-Z),\qquad
+ (v;W,X,Y,Z)\mapsto(-v;W,-X,Y,-Z).
+\]
+Literal zero/infinite angles have nonnegative pure-testing $H$ and
+nonnegative event squares, as already proved.  For $u,v>0$, the
+signed core is nonnegative whenever $WZ\leq0$.  To check this,
+put $h_0=1+v^2+u^2v^2$; its $X,Y$ block is
+$2\left(\begin{smallmatrix}h_0&-uv\\-uv&h_0\end{smallmatrix}\right)
+\succ0$, and the remaining Schur form on $W,Z$ is
+\[
+ \frac{2D_uD_v}{h_0^2-u^2v^2}
+ \{u^2v^2(W^2+Z^2)-2uvh_0WZ\}\geq0.                 \tag{SG15}
+\]
+This is a pure testing calculation.  Its square root in $K_t$,
+together with $\sqrt d$ in $K_c$, certifies the signed core;
+every event remains a square.  It includes $Z=0$.
+Otherwise $Z\ne0$ and $W/Z>0$; divide the state by $Z$ inside
+$K_t$ and apply $\mathcal C$.  Restore $Z^2$ afterwards.
+Real and imaginary state parts add because the measurements are
+real.  All homogeneous angle normalisations are pure testing
+squares and have nonzero denominators on their stated charts.
+
+Finally every testing behaviour is a mixture of at most nine real
+two-qubit behaviours.  If source and testing weights are $a_j,w_i$
+and atom certificates are $\sum_kh_{ijk}^2$, the entire slack is
+\[
+       \sum_{i,j,k}
+           [ (\sqrt{a_j}\otimes\sqrt{w_i})h_{ijk}]^2.
+\]
+The affine constant is preserved because $\sum_iw_i=1$.
+Zero weights are never inverted.  This proves the universal tensor
+assertion; applying the criterion in Chapter~\ref{ch:tensor} is the final
+qualitative existence step. \hfill$\square$
+
+
+
+===== analysis/c1_16_obstruction_analytic_verification_2026_10_26.txt =====
+BOUNDED ANALYTICAL VERIFICATION: STRICT C1 Z16 OBSTRUCTION
+26 October 2026
+
+Scope: mathematical reading of the recovered original package, its exact
+checker expressions, the previous Z16 reduction, and the specific native
+source/physicality/reflection identities. No new numerical samples, SDP,
+parameter sweep, whole-proof re-audit, browser action, or repository edit.
+The supplied logs were read as receipts; no checker was rerun in this audit.
+
+PACKAGE
+analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1628/
+task5/package/Q222_C1_16_obstruction_2026_10_26/
+All PROOF.md line references below refer to this package.
+
+VERDICT
+The negative resolution of OPEN-C1-16 on the previously printed unoriented
+strict A1 domain is supported. The exhibited source has k=4. No obstruction
+to the separately oriented k<=1 claim, positive Z18/full-Z6 admission,
+evaluated global pencil, or qualitative finite-SDP existence follows.
+There is one material scope correction to the claimed separating-functional
+extension at PROOF.md:277: restrict its positivity assertion to the canonical
+Bell coefficient slice with the sign congruences and coefficient constraints
+used in the proof. An arbitrary represented polynomial with only one contact
+zero has not been shown to satisfy that assertion. This correction does not
+affect the explicit native-source impossibility certificate.
+
+1. GENUINE STRICT SOURCE AND GLOBAL VALIDITY
+PROOF.md:25-81 gives k=4,f=1/1000,g=1/8,a=t=1, all strict native signs,
+the original seven positive nonomitted weights, and contact
+(u,v;W,X,Y,Z)=(4,1/2000;125,-63/16,999999/2000,1).
+original_baseline/c1_native.py:6-24 agrees termwise with current repository
+latex/certificates/c1_short.tex:696-747 (coquotients and SD1). In particular
+lambda=n=0, C=2 and D,beta are the actual positive physical event weights,
+not formal negative coefficients or omitted boundary values.
+verify_exact_no16.py:17-29 evaluates the complete list of source signs;
+:40-45 substitutes all four state derivatives and both angular derivatives
+of the full parent, rather than a scalar contact restriction.
+Its sym_parent at original_baseline/c1_small_map.py:39-41 retains the signed
+core, all four state coordinates and all seven physical coefficients.
+Current latex/chapters/04_geometry.tex:198-218 explicitly states and proves
+the SG7 contact-to-physicality implication under d>0 and nonnegative event
+weights, at all angles/states including homogeneous endpoints. Therefore
+invoking it here is legitimate, relative to that retained proved module.
+
+2. FOUR-SIGN/Fourier LOWER BOUND
+PROOF.md:85-134 uses an invertible source-only rescaling and separates the
+ordinary integer-polynomial square sum from gamma*UV*(W-Z)^2. The contact
+kernel of the fractional 2x2 PSD block forces precisely this one root.
+After removing integer/fractional cross blocks, the identity is polynomial,
+so its evaluation at negative U or V is legitimate; no real square root of
+a negative testing coordinate is being evaluated. At the two sign-related
+zeros with UV=-1 the fractional polynomial equals -4 gamma. The integer
+root norms are consequently 2 sqrt(gamma), while they vanish at the other
+two zeros. The only trivial sign characters among the fourteen integer
+features are V X, U Y and UV Z, as read directly from the feature list and
+verify_exact_no16.py:112-128. Averaging and the triangle inequality give
+gamma >= max(0,sqrt(S_b)-sqrt(S_c)-sqrt(S_e))^2.
+The three norms in (11) have unique feature-square coefficients. Cross
+terms cannot alter them. The rational comparisons in (18)-(20) have the
+correct direction and yield gamma>81/4000000.
+
+3. FORCED SCHUR UPPER BOUND AND CONTRADICTION
+PROOF.md:138-180 and verify_forced_schur.py:14-48 tie the required entries
+and zeros to the retained 42-row map and all eight gauge directions.
+The block on indices 1,2 is strictly positive, with determinant
+8m(2 beta+d)v_c^2 W_c^2 X_c^2. Eliminating it in indices 0,1,2,4 leaves
+H00-gamma^2 H22/(4 delta), H04, H44. Since H44>0, its determinant gives
+exactly (17), including u_c^2 v_c^2 W_c^4; there is no missing contact
+normalization factor. At the witness, U_theta<1/100000^2. With gamma>=0
+this gives gamma<1/100000, contradicting the Fourier lower bound.
+The complete Schur rules in PROOF.md:319-380 correctly retain zero-pivot
+range conditions b=0, not division by a zero pivot. These are reductions,
+not a positive-admission construction for other sources.
+
+4. RATIONAL SEPARATOR: VALID WITNESS; NARROW ITS STATED AMBIENT SCOPE
+PROOF.md:229-274 gives the valid linear Cauchy consequence
+gamma >= S_b/3-S_c-S_e. The fixed rational q0 is the minimizing vector
+for the two forced strictly positive subblocks at gamma0=1/100000.
+Its quadratic value is affine with slope -a0 in gamma. Adding
+a0*(gamma-L_lin) cancels the sole gauge exactly and leaves the displayed
+strictly negative rational value. This is an exact algebraic separation
+of the native coefficient-matching PSD feasibility problem.
+However, PROOF.md:277 says positivity holds for every Z16-represented
+parent on the single exposed contact-zero face. The preceding proof uses
+the original Bell sign congruences at :99-107, hence four sign-related
+zeros, not merely the zero at (1,1;1,1,1,1). The forced-entry formulas also
+come from the canonical coefficient subspace. Arbitrary polynomial squares
+vanishing at this one contact need not possess the other three zeros.
+Use: 'a rational separator on the canonical Bell coefficient slice of the
+contact-zero face, with the displayed sign congruences.' Do not assert the
+larger ambient-face positivity without an additional proof.
+
+5. FAMILY, ORIENTATION AND ENLARGEMENT
+The leading orders at PROOF.md:281-315 have the correct scaling:
+S_b~(536/17)f^2, S_c,S_e=O(f^4), U_theta~(270144/18479)f^4.
+Consequently the squared lower bound and squared upper bound disagree
+strictly for all sufficiently small positive f; continuity with strict
+source signs supplies open native neighborhoods. The limiting f=0 source
+is not asserted to be a strict native source.
+Current c1_short.tex:104 and :580 use oriented k<=1, whereas :696-698
+expressly preserves the coquotient/contact identities for arbitrary
+positive parameters before the bounded-Gram application. Thus the k=4
+witness is admissible for the recovered A1 but does not settle the
+oriented representative-only version. PROOF.md:7-21 and :407 correctly
+retain that qualification.
+PROOF.md:386-398 correctly distinguishes necessary new noninteger rows,
+strict ambient-cone enlargement by sqrt(uv)X,Y, and unproved physical-source
+admission. Integer root degrees above one cannot occur in a degree-(2,2)
+sum of ordinary polynomial squares; the absent W^2 and u^2 X^2 target
+coefficients eliminate W and uX. The other fourteen integer features are
+already present. The example uv(X-Y)^2 proves strict ambient enlargement,
+not membership of the actual counterexample or universal Z18 sufficiency.
+
+6. MOST USEFUL CONSTRUCTIVE CONTINUATION
+Do not continue catalogue-building on Z16. Ask for a positive admission
+construction on an explicitly fixed reflection-compatible feature space,
+with the oriented source domain and exact transport settled first.
+The shortest targeted question is whether the oriented Z16 construction
+can be completed and transported into one fixed finite cone, using the
+new Z18 fractional state directions where necessary. Keep full Z6 as the
+declared target if that smaller cone does not close under transport.
+
+Critical transport constraint: current latex/chapters/05_entry.tex:162-170
+gives the actual reflection, whose state matrix satisfies G^T G=D_v I,
+and u^2 F_ref(1/u,v;G psi)=D_v F_original(u,v;psi). Its matrix depends on
+the testing coordinate v. A 'reflection-orbit cone' is therefore not
+automatically the monomial union Z16 plus reflected names, or a subcone of
+the original 196-feature frame. Specify homogeneous clearing and retained
+D_v multiplier, or the corresponding normalized rational features, before
+claiming equality to the original candidate admission problem. A proof of
+D_v F as polynomial SOS must not silently be reported as F in unchanged Z6.
+After that frame is fixed, seek source-dependent PSD Gram/Schur allocations
+on the oriented strict source domain and exact coefficient restoration.
+Neither local witness feasibility alone nor more obstructions constitute
+the required universal constructive continuation.
+
+The earlier qualitative C1/C2 existence chain is outside this bounded audit
+and is unaffected by failure of this particular sixteen-feature cone.
+
+
+===== analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1628/task5/package/Q222_C1_16_obstruction_2026_10_26/PROOF.md =====
+# Strict C1: exact negative resolution of OPEN-C1-16 and the fixed-library boundary
+
+**26 October 2026.** This proof is about the **entire unrestricted four-state parent and independently variable positive measurement half-angle coordinates**. It works with the genuine native C1 dictionary SD1, not a formal source or a scalar contact restriction. There is no SDP solve, search over witness points, numerical sweep, or publication operation. It retains the already-proved 42-row, rank-36 exact contact coefficient map as an input and does not reprove that map.
+
+## Theorem (OPEN-C1-16 is false on A1)
+
+Let A1 be the **exact strict domain printed in the recovered C1 16-feature proof**: the native positive parameters `k,f,g,a,t` and the coquotient/denominator and strict source-sign inequalities, with **no additional inequality `k<=1` appended**. Let `Z16` contain the fourteen integer rows
+
+\[
+(uW,vW,X,uvX,Y,uvY,uZ,vZ,uvW,vX,uY,vY,Z,uvZ)
+\]
+
+and the two rows \(\sqrt{uv}W,\sqrt{uv}Z\). On this domain, the assertion that every genuine strict native C1 source has a PSD Gram in `Z16` is **false**. Specifically
+
+\[
+\boxed{(k,f,g,a,t)=(4,1/1000,1/8,1,1)}\tag{1}
+\]
+
+satisfies all strict native source inequalities, has a genuine globally quantum-valid stationary contact, but **has no PSD Gram in these sixteen features, regardless of the eight gauges**. In fact an open subset of strict A1 sources, including a sufficiently small positive-`f` part of the family `(k,g,a,t)=(4,1/8,1,1)`, is excluded.
+
+This theorem neither excludes a PSD Gram using additional sixth-root features nor refutes the complete qualitative finite-SDP existence theorem. The physical Alice reflection may orient to `0<k<=1`, but that reflection is **not proved to preserve this exact 16-feature subspace**. Thus the stated obstruction is for A1 as recovered, which permits `k>1`; it does not purport to refute an extra, separately imposed `k<=1` representative-only claim.
+
+## 1. Exact strict native source and full-state validity
+
+Retain the native SD1 notation
+
+\[
+\kappa=k^2,\ \eta=f^2,\ \zeta=g^2,\quad
+L_c=1-a\eta,\ H_c=1+(1-a)\eta,\ Q_c=1-\kappa\zeta+a\kappa\eta\zeta,
+\]
+\[
+R=1+\kappa L_c,\quad T=1+\kappa-\kappa\zeta t,\quad M=R-t,\quad J=T-a.
+\]
+
+The seven source coquotients `c2, cb, c3, c5, c4, calpha, cd` and `P4, Palpha, Pd` are those printed in `c1_native.py` and the recovered original C1 TeX; this is an exact, fully algebraic source dictionary. The complete physical strict domain A1 requires
+
+\[
+\begin{gathered}
+ k,f,g,a,t,L_c,H_c,Q_c,M,J>0,\quad 1-t\zeta>0,\quad
+ 1-\kappa\eta+t\kappa\eta\zeta>0,\\
+ P_4,P_\alpha,P_d,c_2,c_b,c_3,c_5,c_4,c_\alpha,c_d>0,\\
+ D_{\rm e}=2ac_5/(Jc_3)-d_{\rm B}/2>0,\qquad
+ \beta=2ae^2c_b/(tc_3)-d_{\rm B}/2>0,
+\end{gathered}\tag{2}
+\]
+
+with `e=kf/g`, `d_B=2a eta cd/c3`; the other three physical weights `m,A,alpha` are strictly positive by these formulas. These signs make every native denominator legal and give the actual stationary contact
+
+\[
+(u_c,v_c;W_c,X_c,Y_c,Z_c)=
+(k,kfg;g/f,-k(1-tg^2),kgL_c/f,1).\tag{3}
+\]
+
+At (1), the contact is
+
+\[
+\boxed{(u_c,v_c;\psi_c)=(4,1/2000;125,-63/16,999999/2000,1).}\tag{4}
+\]
+
+For exact reproducibility, the entire original source is
+
+\[
+\begin{split}
+(d,\lambda,n,m,C,A,D,\alpha,\beta)=(&923999207/13599785800000,0,0,\\
+&8000002/63491000001,2,\\
+&53599207/27199544400428400000,\\
+&11449570655261/90188053200000,\\
+&228841893/21473353157782,\\
+&2883242147/1431556400000).
+\end{split}\tag{5}
+\]
+
+All nonomitted weights are **strictly positive**. The exact positive gaps are, among others,
+
+\[
+ L_c=999999/1000000,\quad Q_c=3000001/4000000,\quad
+ M=999999/62500,\quad J=63/4,\quad 1-tg^2=63/64.
+\tag{6}
+\]
+
+The exact checker evaluates the whole SG2 parent with the seven weights (5), verifies `F=0` at (4), and verifies **all four unrestricted state gradients and both angular gradients vanish identically**. The previously proved SG7 stationary-to-validity theorem therefore yields genuine global quantum validity. In particular, the signed-core and all independent test/state directions, not just the contact graph, are covered.
+
+## 2. Source-wide necessary **lower** bound on the sole fractional Gram gauge
+
+Make the invertible source-only normalization
+
+\[
+ u=u_cU,\quad v=v_cV,\quad
+ (W,X,Y,Z)=\operatorname{diag}(W_c,X_c,Y_c,Z_c)(\phi_W,\phi_X,\phi_Y,\phi_Z).
+\]
+
+At the positive contact `U=V=1`, `phi=(1,1,1,1)`. The established contact-kernel coefficient map shows that every PSD `Z16` Gram would have the form
+
+\[
+\widehat F=\sum_j p_j(U,V,\phi)^2+\gamma UV(\phi_W-\phi_Z)^2,
+\qquad\gamma\ge0,\tag{7}
+\]
+
+where the `p_j` are **ordinary real polynomials** in the fourteen integer features. We do not assume that the integer polynomial alone inherits the Bell sign invariance. Instead use the four exact sign-related contact zeros of the **original** parent:
+
+\[
+ (U,V;\phi_W,\phi_X,\phi_Y,\phi_Z)
+ =(\sigma,\tau;1,\tau,\sigma,\sigma\tau),
+ \qquad\sigma,\tau\in\{\pm1\}.\tag{8}
+\]
+
+These zeros are exact by the physical sign congruences of SG2. At `sigma*tau=1`, the fractional term in (7) is zero, so the entire integer-root vector `p=(p_j)` is zero. At `sigma*tau=-1`, the fractional term is `-4 gamma` and `F=0`, whence
+
+\[
+\|p_{+-}\|^2=\|p_{-+}\|^2=4\gamma.\tag{9}
+\]
+
+The average of every integer feature over (8) is zero **except** `V phi_X`, `U phi_Y`, and `UV phi_Z`. Let `a,b,e` denote their coefficient vectors in the polynomial-square representation. Averaging the four root vectors gives
+
+\[
+ a+b+e=\tfrac14(p_{+-}+p_{-+}),\qquad
+ \|a+b+e\|\le\sqrt\gamma.\tag{10}
+\]
+
+Because the monomials `V^2 phi_X^2`, `U^2 phi_Y^2`, and `U^2V^2 phi_Z^2` each have a **unique integer feature square** and are absent from the fractional square (7), their squared coefficient norms are exactly
+
+\[
+\boxed{S_c=(4\beta+2d)v_c^2X_c^2,\quad
+S_b=4A u_c^2Y_c^2,\quad
+S_e=4\beta u_c^2v_c^2Z_c^2.}\tag{11}
+\]
+
+Thus, with `L=max(0,sqrt(S_b)-sqrt(S_c)-sqrt(S_e))`, the reverse triangle inequality proves the **source-wide necessary bound**
+
+\[
+\boxed{\gamma\ge L^2.}\tag{12}
+\]
+
+There is no square root of a mixed tensor element in this argument: (12) is a real inequality for the **source-only** Gram coefficient, derived from four ordinary real polynomial evaluations and Euclidean norms.
+
+## 3. Source-wide forced **upper** bound from the strict Schur pivot
+
+The previously verified 42-row, rank-36 coefficient map, with eight source-only gauge directions, is retained. It fixes the following reduced entries for **every** exact contact-matching Gram in the integer odd-parity `7x7` block (zero-based indices):
+
+\[
+\begin{aligned}
+H_{00}&=2Bu_c^2W_c^2,&H_{01}&=-\gamma/2,&H_{02}&=0,\\
+H_{04}&=-2Bu_cW_cY_c,&H_{14}&=H_{24}&=0,\\
+H_{11}&=4mv_c^2W_c^2,&H_{12}&=-4mv_cW_cX_c,\\
+H_{22}&=2(2\beta+d+2m)X_c^2,&H_{44}&=2(2A+B)Y_c^2,
+\end{aligned}\tag{13}
+\]
+
+where `B=2C+2D+d`. The identity `H01=-gamma/2` is the exact cancellation of the `UV phi_W^2` coefficient between the two integer features and the fractional square. These entries and the displayed zeros are unaffected by the other seven gauges. The separate `H5[11,11]=4 alpha Z_c^2>0` is also fixed.
+
+The forced block `P=H7[{1,2}]` satisfies
+
+\[
+\delta=\det P=8m(2\beta+d)v_c^2W_c^2X_c^2>0,\tag{14}
+\]
+
+while the forced `H7[{0,4}]` has determinant
+
+\[
+8ABu_c^2W_c^2Y_c^2>0.\tag{15}
+\]
+
+Schur-complement `P` in the *four-by-four* principal matrix on `{0,1,2,4}`. Since `H02=H14=H24=0`, its remaining `(0,4)` matrix is
+
+\[
+\begin{pmatrix}
+H_{00}-\gamma^2H_{22}/(4\delta)&H_{04}\\
+H_{04}&H_{44}
+\end{pmatrix}\succeq0.\tag{16}
+\]
+
+Its determinant, including all source/contact factors, yields the necessary **source-wide upper bound**
+
+\[
+\boxed{\gamma^2\le U_\theta:=
+\frac{64mA(2\beta+d)(2C+2D+d)u_c^2v_c^2W_c^4}
+{(2\beta+d+2m)(2A+2C+2D+d)}.}\tag{17}
+\]
+
+This is forced even if the *full* Gram is singular. No positive-definiteness of the Gram, gauge continuity, or source-uniform cap is used.
+
+## 4. Exact rational infeasibility certificate
+
+At (1), all three squared lengths (11) are **rational**:
+
+\[
+\begin{aligned}
+S_c&=\frac{3969}{124998031250},\\
+S_b&=\frac{53599153400793}{1699973225000000000},\\
+S_e&=\frac{2883242147}{89472275000000000}.
+\end{aligned}\tag{18}
+\]
+
+Direct cross-multiplication in the integers proves
+
+\[
+S_b>\frac1{200^2},\qquad
+S_c<\frac1{4000^2},\qquad
+S_e<\frac1{4000^2}.\tag{19}
+\]
+
+The Fourier inequality (12) therefore forces
+
+\[
+\boxed{\gamma>\left(\tfrac1{200}-\tfrac2{4000}\right)^2
+ =\frac{81}{4\,000\,000}.}\tag{20}
+\]
+
+On the other hand the exact rational value of (17) is
+
+\[
+U_\theta=
+\frac{1097712033787939840000000}
+ {75086759814055431645960567199993023}
+ <\frac1{100000^2}.\tag{21}
+\]
+
+Consequently any PSD Gram would require
+
+\[
+\boxed{0\le\gamma<\frac1{100000}<\frac{81}{4\,000\,000}<\gamma,}\tag{22}
+\]
+
+an explicit **algebraic impossibility certificate**. Equations (19) and (21) are checked by exact rational ordering, not floating-point approximations. Moreover, the two PSD consequences can be combined into **one exact linear separator on the exposed contact-zero face**, as follows.
+
+
+### A single rational separating functional on the exposed contact face
+
+The Fourier argument admits a **linear** Cauchy variant. Write `S=a+b+e` in the notation of (10). Then `b=S-a-e` and the Euclidean inequality `||r+s+t||^2 <= 3(||r||^2+||s||^2+||t||^2)` imply, using `||S||^2<=gamma`,
+
+\[
+\boxed{\gamma\ge L_{\rm lin}:=\frac{S_b}{3}-S_c-S_e.}\tag{22a}
+\]
+
+At the exact source (1),
+
+\[
+\boxed{L_{\rm lin}=\frac{8878812233069}{849986612500000000}>\gamma_0:=\frac1{100000}.}\tag{22b}
+\]
+
+Choose the following **fixed rational Gram test vector**, supported entirely on the forced coordinates `(0,1,2,4)` of `H7`:
+
+\[
+\begin{split}
+q_0&=e_0+a_0e_1+b_0e_2+c_0e_4,\\
+a_0&=\frac{\gamma_0H_{22}}{2\delta}
+=\frac{276058888004033}{102400025600000}>0,\\
+b_0&=-\frac{H_{12}}{H_{22}}a_0
+=-\frac{3999937}{1612800000},\\
+c_0&=-\frac{H_{04}}{H_{44}}
+=\frac{68000000000000}{67999932000063}.
+\end{split}\tag{22c}
+\]
+
+For **any** contact-reduced exact `Z16` Gram, all entries touched by this vector are forced and
+
+\[
+q_0^TH_7(\gamma)q_0
+=Q_0+a_0(\gamma_0-\gamma),\qquad
+Q_0=q_0^TH_7(\gamma_0)q_0
+=-\frac{64109639476176033245960567199993023}
+{5570468085829570501939179678720000000000}<0.
+\tag{22d}
+\]
+
+Thus **both** `q_0^TH7q_0>=0` and `gamma-L_lin>=0` are mandatory PSD consequences. Multiply the second by the positive rational `a0` and add to the first. The `gamma` coefficient cancels **exactly**, leaving the source-only coefficient functional
+
+\[
+\boxed{\begin{aligned}
+\mathcal L(\widehat F)&:=q_0^TH_7(\gamma)q_0+a_0(\gamma-L_{\rm lin})\\
+&=Q_0+a_0(\gamma_0-L_{\rm lin})\\
+&=-\frac{75230062831940553240656946536904079000951}
+ {5918622341193918658310378408640000000000000000}<0.
+\end{aligned}}\tag{22e}
+\]
+
+Every term defining `\mathcal L` is **linear in the normalized parent coefficients**; the joint-half gauge disappears. For every `Z16`-represented parent **on the exposed contact-zero face** `F(1,1;1,1,1,1)=0`, its PSD Gram yields `\mathcal L>=0`. The displayed strict negative rational therefore constitutes a reproducible **linear separating certificate for that face**. This stronger certificate is not claimed to be positive on the entire unexposed ambient polynomial cone or on the full `Z6` cone. No numerical eigensolver or gauge selection is involved.
+
+## 5. An entire analytic strict C1 branch, not an isolated witness
+
+Keep `(k,g,a,t)=(4,1/8,1,1)` and let `f>0` tend to zero. The native rational coquotients give the following **exact leading coefficients**:
+
+\[
+\frac d{f^2}\longrightarrow\frac{1155}{17},\quad
+\frac m{f^2}\longrightarrow126,\quad
+\frac A{f^4}\longrightarrow\frac{67}{34},\quad
+\frac\beta{f^2}\longrightarrow\frac{68477}{34},\quad
+D\longrightarrow\frac8{63}.\tag{23}
+\]
+
+All other native gaps and denominator limits remain strictly positive; `m,A,alpha,beta,d>0` for sufficiently small positive `f`. In this family
+
+\[
+(u_c,v_c,W_c,X_c,Y_c,Z_c)=
+\left(4,\frac f2,\frac1{8f},-\frac{63}{16},\frac{1-f^2}{2f},1\right).
+\]
+
+Substitution into the source-wide necessary estimates gives
+
+\[
+\boxed{
+\lim_{f\downarrow0}\frac{(\sqrt{S_b}-\sqrt{S_c}-\sqrt{S_e})^2}{f^2}
+ =\frac{536}{17},\qquad
+\lim_{f\downarrow0}\frac{U_\theta}{f^4}=
+ \frac{270144}{18479}.}\tag{24}
+\]
+
+The exact comparison
+
+\[
+\left(\frac{536}{17}\right)^2-\frac{270144}{18479}
+ =\frac{307698304}{314143}>0\tag{25}
+\]
+
+shows `gamma_min>sqrt(U_theta)` for **every sufficiently small** positive `f`. By continuity and strict native signs, every such source has an open five-parameter neighborhood of strict sources also outside the 16-feature cone. This proof is analytical and makes no grid, sweep, or connectedness-to-PSD argument.
+
+## 6. Complete forced Schur reduction, including **singular** certificates
+
+For completeness, the promised actual elimination of the two universally strict inputs works at **every** strict A1 source, not just at (1). Keep the fully reconstructed affine blocks `H7(theta;s),H5(theta;s)` of the original eight-gauge constructor. Put
+
+\[
+P=H_7[\{1,2\},\{1,2\}]\succ0,
+\quad a_4=H_{44}>0,
+\quad a_{11}=H_{11,11}^{(5)}=4\alpha Z_c^2>0.
+\]
+
+For `I=(0,3,4,5,6)` define the **exact** five-by-five Schur matrix
+
+\[
+J_{ij}=H_{ij}-
+ \frac{H_{22}H_{i1}H_{j1}-H_{12}(H_{i1}H_{j2}+H_{i2}H_{j1})+H_{11}H_{i2}H_{j2}}
+ {\delta},\quad i,j\in I.\tag{26}
+\]
+
+Since `H14=H24=0`, eliminating the strictly positive node `4` commutes with (26). For `I'=(0,3,5,6)` put
+
+\[
+T_{ij}=J_{ij}-\frac{J_{i4}J_{4j}}{H_{44}},\qquad i,j\in I'.\tag{27}
+\]
+
+Then **exactly**
+
+\[
+H_7\succeq0\ \Longleftrightarrow\ T\succeq0.
+\]
+
+The first scalar pivot of `T` simplifies to
+
+\[
+\boxed{d_0=T_{00}=
+\frac{4A(2C+2D+d)u_c^2W_c^2}{2A+2C+2D+d}
+-\frac{(2\beta+d+2m)\gamma^2}
+{16m(2\beta+d)v_c^2W_c^2}.}\tag{28}
+\]
+
+Thus `d0>=0` is precisely (17). For `R=(3,5,6)`, let `b=(T03,T05,T06)^T` and `B3=T[R,R]`. If `d0>0`, the **complete** condition is the one three-by-three inequality
+
+\[
+\boxed{B_3-bb^T/d_0\succeq0.}\tag{29}
+\]
+
+If `d0=0`, there is no division by a vanishing Schur pivot: the **necessary and sufficient** condition is
+
+\[
+\boxed{b=0,\quad B_3\succeq0.}\tag{30}
+\]
+
+For the other block, with `J5=(7,8,9,10)`, define
+
+\[
+S^{(5)}_{ij}=H_{ij}-\frac{H_{i,11}H_{11,j}}{4\alpha Z_c^2},\qquad i,j\in J5.\tag{31}
+\]
+
+Then `H5>=0` if and only if `S^(5)>=0`. If desired one can further eliminate `i=10` with scalar pivot
+
+\[
+ e_{10}=2v_c^2Y_c^2(2A+2C+2\alpha+d)-\frac{s_6^2}{4\alpha Z_c^2}.\tag{32}
+\]
+
+For `e10>0`, a final three-by-three Schur inequality on indices `(7,8,9)` is exact; for `e10=0`, its complete off-diagonal vector must vanish and the remaining three-by-three principal matrix must be PSD. Therefore no unnecessary strict-Gram feasibility assumption is present anywhere in the reduction.
+
+The **only remaining admission test after the forced eliminations**, for sources not already excluded by (12)–(17), is the simultaneous PSD feasibility of (27), (31) and `gamma>=0` in the seven other real gauges. It is not supplied by the merely positive forced masses. Crucially the source (1) fails **before** this unresolved residual test, so OPEN-C1-16 itself is decisively settled negatively.
+
+## 7. Necessary finite-library enlargement and the unproved sufficiency
+
+All ordinary integer-angle polynomial squares representing a bidegree-`(2,2)` parent have testing degree at most `(1,1)` in each root: an uncancelled highest-degree coefficient of a sum of real squares cannot disappear. The C1 Newton support forces the constant `W` and `uX` rows to vanish. Thus the fourteen integer rows of `Z16` exhaust **all permitted integer-angle features** of this degree. The theorem therefore proves:
+
+> **Necessity.** Any single fixed monomial sublibrary of the full sixth-root grid that admits **all** strict A1 C1 sources must activate at least one genuinely new **noninteger-exponent** row outside the existing shared half-power `sqrt(uv)W,Z` pair. Adding more integer-degree roots or changing only source-dependent Gram gauges cannot fix the exhibited failure.
+
+A natural explicit finite enlargement inside the full original `Z6` grid is
+
+\[
+\boxed{Z_{18}=Z_{16}\cup\{\sqrt{uv}X,\sqrt{uv}Y\}\subset Z_6.}\tag{33}
+\]
+
+Its certificate cone is finite affine-SDP and globally sound for the **canonical Bell source polynomials**, because a positive Gram proves the original parent nonnegative for all positive test angles and all unrestricted states, and the original Bell sign congruences restore the other quadrants and homogeneous endpoints. Its ambient angular polynomial SOS cone is **strictly** larger: `uv(X-Y)^2` is the single added square `sqrt(uv)(X-Y)` and is not representable in `Z16`, since setting `W=Z=0` kills all old fractional features, while any SOS of the remaining integer polynomials is nonnegative also at `u=-1,v=1,X=1,Y=0`, where `uv(X-Y)^2=-1`.
+
+This strictly larger **ambient** cone does **not** constitute a proof that the native witness (1), let alone the entire strict C1 family, belongs to the enlarged **physical-source** cone. The eight-gauge contradiction does not transfer unchanged to (33), because the fractional block now has additional contact-root directions. Neither sufficiency of `Z18` nor sufficiency of the full 196-feature `Z6` has been proved by this task. That is the next actual admission implication, not another audit of the qualitative theorem.
+
+## 8. Exact reproducibility and provenance
+
+- `verify_exact_no16.py` checks every A1 sign and original weight, all six physical stationarity equations, the exact four-sign character support, the rational Fourier lower bound, the factorized Schur upper bound, and their strict contradiction.
+- `verify_forced_schur.py` independently reconstructs the needed forced universal coefficient entries from the already retained integer map and verifies the complete strict-block Schur expression in symbolic source/angle letters, without a solver.
+- `verify_analytic_family.py` verifies all five native rational leading coefficients, the two asymptotic gamma limits, and their rational strict comparison.
+- `original_baseline/` retains unchanged original SD1/SD2 source, contact rank, gauge-constructor and verification files. The source map and prior 42/36 result are inputs, not rediscovered verdicts.
+
+The evaluated global Q222 fixed lift, the positive C1 `Z18` or `Z6` admission and any claim of an orientation-restricted `k<=1` counterexample are **not** established here. The independently proved qualitative existence and C2 strict open-end results are unaffected.

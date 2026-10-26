@@ -1,0 +1,8 @@
+PASS all 196 formal full-Z6 reflection identities in R,S,W,X,Y,Z
+PASS independent exact polynomial monomial-coefficient checks for all 196 rows
+PASS fixed L6 matrix: 364 x 196 with exactly 392 signed integer entries
+PASS sparse columns map (i,j,l) to (6-i,j+shift,ell), shift in {0,6}
+CONDITIONAL CONSEQUENCE: any oriented source Gram in any fixed library inside span(Z6), including Z18 when so embedded, transports into K6,12 via this same fixed reflection construction.
+No universal C1/C2 PSD assertion checked; no solver or sweep run.
+JSON SHA256 fe47966db4d35b2c79f01f87013011320b4149139c5f3dafe2746e7fd5b83295
+Runtime Python 3.14.3; SymPy 1.14.0

@@ -30,17 +30,17 @@ The original recovery conversation's unequal-angle result agrees with the recove
 
 These are completion conditions, not a requirement to execute every possible proof route. R01–R05 can be discharged by one sufficiently strong admission theorem. They refine L08–L10 in the [material checklist](CHECKLIST.md).
 
-- [ ] **R01 — Specify the explicit finite construction.** Fix the testing functions, source-to-coefficient maps and allowed additional globally sound cones. Their finite dimensions must be independent of the source. The sixth-root library is a candidate; a proved finite hybrid alternative is sufficient. **Maps to L08/L09.**
+- [ ] **R01 — Specify the explicit finite construction.** Fix the testing functions, source-to-coefficient maps and allowed additional globally sound cones. Their finite dimensions must be independent of the source. L17 specifies a common 364-feature weighted cone and exact reflection embeddings, conditional on two strict Z6 admission inputs. Its complete coefficient maps and final symmetry-assembled matrices remain to be evaluated; an adequate proved alternative is also sufficient. **Maps to L08/L09.**
 
-- [ ] **R02 — Prove complete strict C1 admission.** For every physically valid strict C1 source, supply an exact PSD Gram or equivalent certificate in the chosen construction. Preserve the complete four-state parent, independent testing angles and all coefficient equations. A rational affine preimage or positive diagonal masses alone do not close this item. **Maps to L09, with the strict-family part made explicit.**
+- [ ] **R02 — Prove complete strict C1 admission.** L17 reduces this target to physically valid strict C1 sources with 0<k<=1 in Z6 (or a fixed embedded subspace). Reflection then covers the opposite orientation in the stated common cone. Supply the missing exact PSD certificate throughout that oriented domain. Preserve the complete four-state parent, independent testing angles and all coefficient equations. A rational affine preimage or positive diagonal masses alone do not close this item. **Maps to L09, with the strict-family part made explicit.**
 
 - [ ] **R03 — Prove complete strict C2 admission.** Cover arbitrary finite native c and the source parameters outside the verified open-end neighborhoods. Retain the known obstruction to universal use of the smaller half-power library. **Maps to L08.**
 
 - [x] **R04 — Prove singular-source closure conditional on complete strict-source admission.** L15 verifies the coefficient-space density and finite closed-sum implication for the hybrid construction. Actual singular admission follows when R02 and R03 hold in the same fixed closed globally sound cone; no uniform Gram margin or separate limiting-chart proof is needed. Event and SG12/SG13 cones remain separate. **Conditional implication resolved; strict hypotheses remain open.**
 
-- [ ] **R05 — Establish complete testing and canonical-source coverage.** Every cone used globally must certify all independent measurements and states, including projective endpoints. Join regional testing certificates for the same source before global use. Then apply the existing canonical classification and include event and closed-face orbits. **Maps to L09.**
+- [ ] **R05 — Establish complete testing and canonical-source coverage.** L17 verifies all-testing soundness of its common cone, including projective endpoints. Complete canonical-source admission still requires R02 and R03 and the full physical symmetry orbit. Join regional testing certificates for the same source before global use. Then apply the existing canonical classification and include event and closed-face orbits. **Maps to L09.**
 
-- [ ] **R06 — Instantiate the proved duality and assembly.** Establish the required closedness, strict feasibility or explicit facial reduction for the actual completed blocks. Insert the exact canonical cone into the existing eight-orientation or hybrid assembly. **Maps to L10.**
+- [ ] **R06 — Instantiate the proved duality and assembly.** L17 verifies closedness, a strict point and attained duality for its common cone. Complete the source admission hypotheses and instantiate every required event, closed-face and physical-symmetry block. Insert the exact canonical cone into the existing eight-orientation or hybrid assembly. **Maps to L10.**
 
 - [ ] **R07 — Evaluate the affine pencil.** Deliver every matrix in A0 + sum(q_i A_i) + sum(y_j B_j), each exact coefficient, all auxiliary equations, block orders and variable counts. Supply deterministic generation instructions. If algebraic constants occur, identify them exactly. **Maps to L10.**
 
@@ -58,10 +58,10 @@ These are completion conditions, not a requirement to execute every possible pro
 
 | Work | Present assignment or next dependency |
 |---|---|
-| R02 strict C1 | Universal Z16 admission on A1 is refuted (L16); seek a proved oriented, enlarged or reflected finite construction. |
+| R02 strict C1 | Task5: prove oriented k<=1 C1 admission in Z6 or an adequate embedded subspace. L17 supplies its exact reflection and common-cone transport; the full-A1 Z16 target is refuted. |
 | R03 strict C2 | The full dual inequality remains open; the new signed-edge allocation does not prove it. |
-| R01/R04/R05 | The conditional singular-density/closed-sum implication R04 is verified. Fix a common closed sound construction and prove its strict-family admission. |
-| R06–R08 | Require an exact canonical construction from R01–R05. |
+| R01/R04/R05 | L15 verifies conditional density; L17 specifies and verifies a common fixed weighted cone and reflection transport. Strict-family admission and complete evaluated maps remain open. |
+| R06–R08 | L17 supplies the common-cone duality implication. The complete physical orbit and final matrices still require the strict-family conjunction and explicit evaluation. |
 | R09 | Can develop alongside the new mechanism, but closure requires a complete replacement for the imported long argument. |
 | R10–R12 | Integrate and release only the proved final construction; keep existing original evidence available. |
 
@@ -83,3 +83,6 @@ At **22:00 IST** the three complete responses and original packages were recover
 ## Audit finding
 
 No substantive contradiction was found between the completed body reviews, the V01–V06 conjunction and the scoped construction results. No overlooked explicit universal fixed-library theorem was found in the inspected library material. The remaining scientific work is explicit universal admission and extraction (L08–L10), followed by a shorter complete proof and integrated delivery. Earlier narrow “not checked in this task” statements do not erase the complete reviews. Current status must follow the actual theorem domains, not package names, file counts or interim chat claims.
+
+
+The reflection package resolves the transport/duality implication L17. It does not close R02, R03 or R07. [Verified reflection transport and extension](REFLECTION_TRANSPORT_UPDATE.md) gives the full-Z6 extension, the required global-symmetry correction and the precise remaining data requirements.

@@ -1,0 +1,118 @@
+C1 REFLECTION TRANSPORT: ORIGINAL PAYLOAD AND EXACT REPLAY
+Date: 26 October 2026
+Scope: archive integrity; unchanged-original exact replay; checker/JSON scope.
+
+RESULT
+The original ZIP passes CRC checking. All eight extracted package files match
+the corresponding original ZIP-member bytes. Every one of the seven rows in
+SHA256SUMS.txt matches both ZIP data and extracted original files. SHA256SUMS.txt
+itself is not self-listed, but its bytes also match the ZIP member.
+Archive SHA256:
+377e95e1ef460770d6371d21db881a84df8509974f824d548f669c74ddb8c278
+Checker SHA256:
+c880941df79ced0ffd11d6c26cb4565a9b2f3d135a611e0b6eb92e0d13993616
+
+I read the complete 10,750-byte verify_reflection_transport.py before running it.
+Its imports are SymPy, json and pathlib. It writes transport_sparse_maps.json
+beside __file__. Therefore I replayed an exact original checker copy in:
+C:/Users/anubh/AppData/Local/Temp/q222-reflection-replay-fde6e48a3d2346438f94c34a4bc52e40
+Python 3.14.3; SymPy 1.14.0. One process, thread environment limits all set to 1;
+no solver calls, numerical sweeps, or optimization. Exit code 0; empty stderr;
+11 PASS output lines; approximately 1.22 seconds. All original package file
+hashes are unchanged after replay. No Git or browser action was performed.
+
+REPRODUCTION IDENTITY
+Replay stdout matches EXACT_CHECKS.log after CRLF/LF normalization. Replayed
+JSON matches original parsed native JSON data exactly. Both replay files differ
+from originals only in newline convention (the Windows runtime writes CRLF).
+Original JSON SHA256:
+f2ed779cdbd6addd9699824751e76493eae285ed6f87c3d8cb62896a59b7d3a0
+Replay JSON SHA256:
+c32cf235221e16929de8bec620aa4557bbbd9df2835bc4940cf5da0422f9de5b
+This is a platform newline difference, not a changed sparse map.
+
+WHAT THE CHECKER ACTUALLY CHECKS
+- Exact symbolic full nine-coefficient, four-state SG2 reflection identity and
+  G(v)^T G(v)=(1+v^2)I. Its parent matches SG2 in the frozen source packet.
+- Exact symbolic native contact parameter formulas, eight transformed gap
+  identities, and source-contact state divisor k*g*H/f. The native inverse
+  definitions match the packet EN13. Positivity follows only when the physical
+  domain hypotheses are supplied; symbols here are nonzero, not domain-tested.
+- Exact reflected 16-feature expressions and support in the fixed 7x13x4 grid;
+  source permutation involution; source-to-affine 9x9 map and involution.
+- Exact reconstruction of all 16 reflected features from 32 signed sparse
+  entries; two 196-row embeddings whose union covers all 364 coordinates.
+- Equality of all nine native Bell weights under reflection and C=2 restoration
+  at ONE exact rational source: (k,f,g,a,t)=(4,1/1000,1/8,1,1).
+- Deterministic JSON regeneration.
+
+ADDITIONAL NATIVE-JSON CHECKS
+All 364 index triples are unique and in exact lexicographic (i,j,l) order;
+16 reflected sparse columns contain exactly 32 entries with signs +/-1;
+all entry indices are valid integers. J0 and J1 each have 196 entries and
+have the claimed unshifted / +6 Bob exponent coordinates. Their union has
+364 entries and their intersection has 28. Coefficient-key shape is [13,25,10].
+The metadata checked_assertion_count_groups=8 is stale or undefined as a count:
+the script contains 16 assert statements, loops repeat several assertions,
+and stdout has 11 PASS groups. It is not a scientific proof count.
+
+CHECKER LIMITATIONS AND POTENTIALLY OVERREAD CLAIMS
+The printed 'all nine exact native Bell weights under reflection' is only the
+single-source check above, not a generic symbolic native_c1 covariance test.
+The full theorem explicitly discloses this witness-only scope in section 2.
+The printed embedding check '...and strict Slater' verifies index coverage;
+it does NOT build/check the imported strict rational 196-row Gram or certify
+the universal C1/C2 PSD hypotheses. Strict extension follows mathematically
+from coverage only after a genuinely positive definite original Gram is given.
+
+The JSON contains explicit source/Bell maps, feature indices, reflected signed
+transport and J0/J1 embeddings. It does NOT contain numeric sparse entries of
+the complete coefficient maps T, A, or their dual adjoints: coefficient_linear_map
+is a descriptive string and coefficient_key_shape is a shape declaration.
+Consequently 'exact dual-adjoint assembly' in README describes the theorem's
+symbolic prescription, not an executable assembled full SDP in this payload.
+
+The checker does not verify physical-domain completeness, native stationary
+uniqueness, universal oriented C1 Z16 PSD, universal C2 Z6 PSD, source-density,
+face classification, closedness, endpoint soundness, attained duality, or the
+final physical-symmetry SDP assembly. Those are mathematical arguments/imports
+in the theorem, rather than tested checker assertions. The two universal PSD
+inputs remain explicitly conditional. A successful replay does not make the
+conditional cone theorem or Q222 SDP construction unconditional.
+
+EVIDENCE FILES (beside this report in the *_artifacts directory)
+- integrity_and_replay_results.json: all ZIP-member CRCs/hashes, every SUMS row,
+  before/after original-file equality, runtime result and native JSON checks.
+- replay.stdout.log and replay.stderr.log: exact new process output.
+- replayed_transport_sparse_maps.json: separately regenerated native map data.
+- integrity_driver.py: independent integrity/replay procedure used here.
+
+SEPARATE EXACT CORROBORATION: FULL-Z6 REFLECTION EXTENSION
+A new independent checkscript was run once in the same private temporary folder;
+the original payload and checker were not edited. Put R=u^(1/6), S=v^(1/6).
+For EACH of the 196 rows z6_(i,j,l)=R^i S^j psi_l, with 0<=i,j<=6,
+the script verifies the exact formal polynomial identity
+  u*z6_(i,j,l)(1/u,v;G(v)psi)
+  = sum_(index,sign in column_(i,j,l)) sign*zext_index.
+Each column has exactly two +/-1 terms. Its destination indices are
+  (6-i,j+shift,ell), shift=0 or 6,
+using the state/sign entries of G. Hence all terms lie in 0<=i'<=6,
+0<=j'<=12. The fixed L6 matrix has shape 364x196 and exactly 392 nonzeros.
+Both direct symbolic expansion and independently extracted formal polynomial
+coefficient dictionaries agree for every row. Four PASS lines; exit code 0;
+Python 3.14.3, SymPy 1.14.0; no solver/sweep. Native sparse map JSON SHA256:
+fe47966db4d35b2c79f01f87013011320b4149139c5f3dafe2746e7fd5b83295
+
+Consequently h6=L6^T*zext. If F_(sigma c)=z6^T Q z6 with Q>=0, then
+(1+v^2)F_c=zext^T(L6 Q L6^T)zext, with L6 Q L6^T>=0.
+The same implication holds for any fixed feature library contained in span(Z6),
+including Z18 once its embedding in Z6 is supplied. Thus the reflection step
+need not restrict its admission hypothesis to the smaller Z16 library. This
+checks the fixed transport implication only; it provides no universal oriented
+C1 PSD theorem and does not check a particular Z18 embedding or PSD solution.
+
+Separate supplementary evidence files in the *_artifacts directory:
+- verify_full_Z6_reflection_extension.py
+- full_Z6_reflection_sparse_map.json
+- full_Z6_reflection_extension.log
+All three also remain in the private temporary replay folder above.
