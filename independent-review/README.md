@@ -2,7 +2,7 @@
 
 This folder records an outside review of the existence proof in `latex/` and of
 the explicit-lift material in `extracted-lifts/`, followed by new constructions
-on the review branch. The review breaks the argument into stages, states the idea that organizes it,
+on `main`. The review breaks the argument into stages, states the idea that organizes it,
 lists what was checked and what was found, and follows the explicit lift as far
 as it currently goes.
 
@@ -13,8 +13,12 @@ bounded-matrix implication as the key verification step. The
 [explicit bounded conductor](SE_BOUNDED_CONDUCTOR.md) and the
 [two-power conductor](TWO_POWER_CONDUCTOR.md) now supply that eight-root
 matrix under their stated hypotheses. The implication itself is under
-independent verification: the ordinary–small C2 branch has been checked
-completely, and the other branches and the CA/SE base are the next to check.
+independent verification: the ordinary–small C2 branch and the CA/SE base
+have been checked. The [EL/NU endpoint proof](C1_EL_NU_ENDPOINTS.md) now
+supplies the complete scalar, both state normals, bounded coefficient
+construction, and complementary testing charts for those two physical C1
+source domains. Its eight symbolic modules have been replayed locally.
+The remaining C1/C2 source domains and their assembly still require verification.
 
 For the current construction route, read
 [`EXACT_LIFT_ROUTE.md`](EXACT_LIFT_ROUTE.md): a fixed NPA baseline, the
