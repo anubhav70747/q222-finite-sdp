@@ -44,9 +44,9 @@ For coefficient maps T c=A P, the attained source-dual representation is
 
     K_ext* = { T^T y+r : A* y>=0, r>=0 }.
 
-The strict source and Gram point bounds convergent dual representatives after quotienting the joint kernel. The Bell target vector and source orthant must be retained. The theorem specifies this map and its coefficient indexing, but the original JSON does not materialize the complete sparse T, A or final symmetry-assembled pencil. The 364-feature count and at most 3250 coefficient keys therefore describe a conditional construction, not a delivered exact global SDP.
+The strict source and Gram point bounds convergent dual representatives after quotienting the joint kernel. The Bell target vector and source orthant must be retained. The original reflection package specified these maps symbolically. L18 now materializes T, A and the complete symmetry-assembled outer pencil, with all auxiliary equalities and offsets. Its global exactness remains conditional on H1/H2.
 
-The two strict-family admission theorems remain open. So do evaluation of every global matrix, verification of the resulting two inclusions, and the short complete proof. The existing qualitative-existence conjunction V01-V06 is unchanged.
+The two strict-family admission theorems remain open. L18 delivers every global matrix and proves the outer inclusion and the conditional reverse inclusion. An unconditional reverse inclusion and the short complete proof remain unfinished. The existing qualitative-existence conjunction V01-V06 is unchanged.
 
 ## Evidence
 
@@ -58,3 +58,6 @@ The two strict-family admission theorems remain open. So do evaluation of every 
 
 
 The original strict Z6 witness still proves the unconditional K364 Slater point and attained duality. Its use requires no universal Z6 admission theorem.
+
+
+[Evaluated conditional global pencil](CONDITIONAL_GLOBAL_PENCIL_UPDATE.md) supersedes the earlier materialization gap without proving either admission hypothesis.

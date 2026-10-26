@@ -1,0 +1,16 @@
+ADDITIVE APPENDIX: INDEPENDENT FINITE INDEXING COVERAGE
+Date: 2026-10-26
+
+A separate targeted verifier, verify_independent_indexing.py, imports no supplied generation or assembly code and reads the original recovered materialized JSON. It passed in 0.460779 seconds. This addresses the two finite checker-coverage limitations noted above without rerunning the supplied exact suite.
+
+1. For every one of the 66,430 upper pairs (364 diagonal; 66,066 offdiagonal), independently extracted the polynomial product key from the two stored fixed features, derived the quadratic-form coefficient by enumerating the symmetric matrix positions, and derived the trace coefficient by expanding the corresponding trace matrix positions. Compared both with every stored A entry and Astar entry, including the offdiagonal multiplicity. All 3,250 coefficient keys are covered exactly as indexed. This is an independent complete coefficient/indexing check; it replaces reliance on the supplied checker's identical-expression bilinear calculation.
+
+2. Checked every variable/block/equality partition of all 128 copies, including contiguous boundaries and copy identities: 896 copy-variable partitions, 896 copy-PSD blocks, 128 equality offsets. The separate 16-event block gives 897 blocks and order 51,088. Confirmed 423,176 scalar variables and all stated dimensions. Each packed 6x6/3x3 coordinate map was independently enumerated, rather than taken from the supplied upper-index formula.
+
+3. Independently constructed E^T Q_g from each physical signed permutation, verified all 128 canonical/face target tables, and reconstructed every assembled affine row from base source columns and face matrices with independent symmetric trace contractions and checked offsets. All 3,456 rows and 34,304 nonzero coefficients passed, including constants, global indices, signs, duplicate elimination and row metadata. Exact row counts: K_adjoint 1,152; SG12_target 896; SG12_skew 384; SG13_target 896; SG13_xi 128. Checked both face source injections and all 16 event entries independently.
+
+Repeated large moment blocks were covered by the complete 66,430-entry local map and all verified disjoint translations with identical dimensions. No 8.5-million-entry expansion was necessary or performed. No original file, old suite, solver, sweep, Git state or browser was touched.
+
+The passed checks establish exact finite coefficient/indexing consistency for the recovered pencil. They do not establish the original quantum interpretation of every base face formula, universal C1/C2 source admission, global reverse inclusion, or the unconditional finite-SDP theorem.
+
+Fresh artifacts in this evidence folder: verify_independent_indexing.py; independent_indexing.log; independent_indexing_results.json; independent_indexing_appendix.txt.

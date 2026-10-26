@@ -61,3 +61,8 @@ Both complete normal answers and their original archives are recovered. [Origina
 ## Latest strict-source reductions
 
 [Current construction scope](STRICT_SOURCE_REDUCTIONS_UPDATE.md) records the verified Z18 nine-gauge/two-Schur reduction and the scoped C2 carrier and multiplied-parent identities. Universal oriented C1 and strict C2 PSD admission remain unproved; no completion status is promoted. Original proof packages and targeted independent checks are linked under L13/L14.
+
+
+## Evaluated conditional outer SDP
+
+[Evaluated conditional global pencil](CONDITIONAL_GLOBAL_PENCIL_UPDATE.md) records L18: every rational coefficient and all physical copies are delivered and independently checked. Quantum-to-feasible inclusion holds; reverse inclusion is conditional on direct K364 admissions H1/H2. The scalar small-f C1 charge theorem does not establish H1. L08-L10 remain open for exactness, and V01-V06 retain their prior scope.

@@ -1,0 +1,18 @@
+Independent analytical review: C1 small-f charge capacity
+26 October 2026
+
+Source: fetched-1819/task5/package/Q222_C1_ORIENTED_K364_ADMISSION_2026_10_26/PROOF.md and original_native/c1_native.py.
+
+Scope supported: for each fixed 0<x<=1, 0<z<1 with B=x*z^2-(1+x)^2*z+x*(1+x)>0, the native a=t=1, k=sqrt(x), g=sqrt(z) source is strict for sufficiently small f>0, and gamma=0, delta=S_Y meets the stated scalar charge-demand and delta-capacity inequalities. This is not a full PSD certificate, even on that subfamily.
+
+The source signs are supported directly by the original dictionary. At f=0 all denominator factors needed for the displayed coquotients stay nonzero. The leading d,m,A,beta coefficients in the proof are strictly positive, D has a positive finite limit, and alpha=2*a*Delta^2*k^6*f^4*cal/c3 has a positive leading coefficient because cal tends to a positive multiple of (1+x-z). C=2 and lambda=n=0 are the intended C1 source values. Strictness is relative to this C1 face, not positivity of every source coordinate.
+
+The polynomial argument is valid: writing K=1+x, B=xK-z*(K^2-x)+xz(z-1) implies z<zmax=xK/(x^2+x+1). For 0<x<=1, zmax<=2/3. On [0,zmax], the positive term 4K^2(1-z)^3(K-z) strictly decreases, and x[z(K-xz)]^2 increases since K-2xz>=1-x/3>0. Therefore their difference Dpoly strictly decreases. Its nonnegative endpoint factorization, together with z<zmax, gives Dpoly>0, including x=1. The identity D4-Y2^2=(64x^3/K^2)Dpoly then gives a strict leading margin for delta^2<U_delta.
+
+Since S_Y/f^2 has a strictly positive limit while S_X,S_Z are positive and of higher order, sqrt(S_Y) eventually exceeds sqrt(S_X)+sqrt(S_Z). Thus the triangle demand is positive and strictly smaller than sqrt(S_Y), and its square is below delta=S_Y. These are fixed-parameter asymptotic statements; they do not supply one cutoff uniform up to the source boundary. The proof explicitly retains that restriction.
+
+Minor wording clarification only: gamma=0, delta=S_Y are nonnegative charges, not two positive charges. The original file is preserved. Its final reference to prior conditional scopes must not downgrade the separately reviewed qualitative V01-V06 theorem; this new result does not change that theorem's status.
+
+Remaining C1 requirement is unchanged: find all seven gauges making both full 4x4 Schur residuals PSD on the entire oriented domain, or prove the weaker sufficient direct K364 admission. Scalar charge compatibility does not establish either assertion, and Z18 feasibility is not necessary for K364 feasibility. No new admission completion is warranted.
+
+Exact identity replay and original-file integrity are recorded separately in global_pencil_exact_verification_2026_10_26.txt. No numerical search or broad rederivation was used in this review.

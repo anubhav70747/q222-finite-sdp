@@ -30,7 +30,7 @@ The original recovery conversation's unequal-angle result agrees with the recove
 
 These are completion conditions, not a requirement to execute every possible proof route. R01–R05 can be discharged by one sufficiently strong admission theorem. They refine L08–L10 in the [material checklist](CHECKLIST.md).
 
-- [ ] **R01 — Specify the explicit finite construction.** Fix the testing functions, source-to-coefficient maps and allowed additional globally sound cones. Their finite dimensions must be independent of the source. L17 specifies a common 364-feature weighted cone and exact reflection embeddings, conditional on direct oriented C1 and strict C2 admission inputs in K364. Its complete coefficient maps and final symmetry-assembled matrices remain to be evaluated; an adequate proved alternative is also sufficient. **Maps to L08/L09.**
+- [ ] **R01 — Specify the explicit finite construction.** Fix the testing functions, source-to-coefficient maps and allowed additional globally sound cones. Their finite dimensions must be independent of the source. L17 specifies a common 364-feature weighted cone and exact reflection embeddings, conditional on direct oriented C1 and strict C2 admission inputs in K364. L18 now evaluates its complete conditional source maps, symmetry blocks and affine equations. H1/H2 remain unproved; an adequate proved alternative is also sufficient. **Maps to L08/L09.**
 
 - [ ] **R02 — Prove complete strict C1 admission.** The weaker sufficient H1 is direct K364 admission for every physically valid strict C1 source with 0<k<=1. Reflection covers the opposite orientation in sigma(K364), and the closed sum Kbar supplies L15. A Z18/Z6 certificate is sufficient, not necessary. Supply the missing PSD proof throughout the oriented domain. Preserve the complete four-state parent, independent testing angles and all coefficient equations. A rational affine preimage or positive diagonal masses alone do not close this item. **Maps to L09, with the strict-family part made explicit.**
 
@@ -40,11 +40,11 @@ These are completion conditions, not a requirement to execute every possible pro
 
 - [ ] **R05 — Establish complete testing and canonical-source coverage.** L17 verifies all-testing soundness of its common cone, including projective endpoints. Complete canonical-source admission still requires R02 and R03 and the full physical symmetry orbit. Join regional testing certificates for the same source before global use. Then apply the existing canonical classification and include event and closed-face orbits. **Maps to L09.**
 
-- [ ] **R06 — Instantiate the proved duality and assembly.** L17 verifies closedness, a strict point and attained duality for its common cone. Complete the source admission hypotheses and instantiate every required event, closed-face and physical-symmetry block. Insert the exact canonical cone into the existing eight-orientation or hybrid assembly. **Maps to L10.**
+- [ ] **R06 — Instantiate the proved duality and assembly.** L17 verifies closedness, a strict point and attained duality for its common cone. L18 instantiates every event, closed-face and physical-symmetry block. Complete the two source-admission hypotheses for global exactness. Insert the exact canonical cone into the existing eight-orientation or hybrid assembly. **Maps to L10.**
 
-- [ ] **R07 — Evaluate the affine pencil.** Deliver every matrix in A0 + sum(q_i A_i) + sum(y_j B_j), each exact coefficient, all auxiliary equations, block orders and variable counts. Supply deterministic generation instructions. If algebraic constants occur, identify them exactly. **Maps to L10.**
+- [ ] **R07 — Verify exactness of the evaluated conditional pencil.** L18 delivers every rational matrix entry, all 3456 affine equalities, block and variable offsets, and deterministic generation instructions for the complete 128-orbit candidate. **Conditional matrix delivery is complete.** Its use as an exact global lift remains pending H1/H2; there is no missing matrix-materialization step for this candidate. **Maps to L10/L18.**
 
-- [ ] **R08 — Verify both inclusions for the delivered matrices.** Instantiate quantum-to-feasible and feasible-to-quantum arguments for the actual evaluated system. Check the decisive new identities, PSD arguments and universal coverage independently. Reuse unchanged reviewed dependencies. **Maps to L10.**
+- [ ] **R08 — Verify both inclusions for the delivered matrices.** L18 verifies quantum-to-feasible inclusion for the evaluated system and the reverse implication conditional on H1/H2. Establish those two remaining admission hypotheses to conclude exactness. Check the decisive new identities, PSD arguments and universal coverage independently. Reuse unchanged reviewed dependencies. **Maps to L10.**
 
 - [ ] **R09 — Obtain a genuinely shorter complete proof.** Replace the long native-contact argument by proved general mechanisms, preserving every singular case and dependency. [PEN_AND_PAPER](../independent-review/PEN_AND_PAPER.md) still imports I5 from the long companion; the seven-page exposition does not itself replace that proof.
 
@@ -60,8 +60,8 @@ These are completion conditions, not a requirement to execute every possible pro
 |---|---|
 | R02 strict C1 | Task5: prove direct oriented k<=1 C1 admission in K364; an actual Z18 gauge construction is sufficient. Kbar and the full orbit supply the verified reflection/density implication. |
 | R03 strict C2 | Task3: prove direct strict C2 K364 admission. The stronger Z6 dual inequality remains open; neither the carrier nor the mixed-multiplier identity proves admission. |
-| R01/R04/R05 | L15 verifies conditional density; L17 specifies and verifies a common fixed weighted cone and reflection transport. Strict-family admission and complete evaluated maps remain open. |
-| R06–R08 | L17 supplies the common-cone duality implication. The complete physical orbit and final matrices still require the strict-family conjunction and explicit evaluation. |
+| R01/R04/R05 | L15 verifies conditional density; L17 specifies and verifies a common fixed weighted cone and reflection transport. Strict-family admission remains open; L18 now delivers the evaluated conditional maps. |
+| R06–R08 | L17 supplies the common-cone duality implication. L18 delivers the complete conditional physical orbit and matrices. Global exactness requires the strict-family conjunction. |
 | R09 | Can develop alongside the new mechanism, but closure requires a complete replacement for the imported long argument. |
 | R10–R12 | Integrate and release only the proved final construction; keep existing original evidence available. |
 
@@ -88,7 +88,10 @@ No substantive contradiction was found between the completed body reviews, the V
 The reflection package resolves the transport/duality implication L17. It does not close R02, R03 or R07. [Verified reflection transport and extension](REFLECTION_TRANSPORT_UPDATE.md) gives the full-Z6 extension, the required global-symmetry correction and the precise remaining data requirements.
 
 
-The latest strict-source packages refine the algebra without closing R02 or R03: C1 now has an exact nine-gauge/two-Schur interface, while the C2 selected carrier has an unproved residual and its separate full-state SOS represents a mixed-multiplier polynomial. [Current construction scope](STRICT_SOURCE_REDUCTIONS_UPDATE.md) specifies the exact scope and next positivity statements. R07 and the global evaluated lift remain open.
+The latest strict-source packages refine the algebra without closing R02 or R03: C1 now has an exact nine-gauge/two-Schur interface, while the C2 selected carrier has an unproved residual and its separate full-state SOS represents a mixed-multiplier polynomial. [Current construction scope](STRICT_SOURCE_REDUCTIONS_UPDATE.md) specifies the exact scope and next positivity statements. The global exactness claim remains open. L18 supersedes the former matrix-materialization gap by delivering the conditional candidate.
 
 
-[Direct common-cone reduction](materials/historical/analysis/direct_common_cone_admission_reduction_2026_10_26.txt) removes universal original-Z6 admission as a requirement. Under H1/H2, density uses Kbar=K364+sigma(K364), and the full128 orbit sum absorbs sigma without additional blocks. Task7 can materialize this conditional pencil while the two admission proofs remain open.
+[Direct common-cone reduction](materials/historical/analysis/direct_common_cone_admission_reduction_2026_10_26.txt) removes universal original-Z6 admission as a requirement. Under H1/H2, density uses Kbar=K364+sigma(K364), and the full128 orbit sum absorbs sigma without additional blocks. L18 now materializes this conditional pencil; the two admission proofs remain open.
+
+
+[Evaluated conditional global pencil](CONDITIONAL_GLOBAL_PENCIL_UPDATE.md) is the current matrix-delivery result. It completes materialization of the conditional candidate and establishes its outer inclusion. R02/H1 and R03/H2 remain the outstanding mathematical admission steps; R09-R12 still require the short proof and final scientific delivery.

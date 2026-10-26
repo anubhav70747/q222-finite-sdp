@@ -1,0 +1,39 @@
+=== verify_z18_exact.py exit 0 ===
+PASS: 42 native invariant keys vs 46 full parity-compatible keys; four new odd keys forbidden
+PASS: 46x49 invariant-plus-odd map has rank 40 by 36+4 minor and six contact jets
+PASS: odd block reduces to gamma>=0, delta>=0, on W-Z and X-Y separately
+PASS: exact eighth/ninth source-only gauge identities in all four states and arbitrary u,v
+PASS: complete fixed-feature coefficient matching and pure-source contact scalings
+PASS: existing strict forced Schur pivots survive the delta extension unchanged
+PASS: six original contact jets annihilate all 49 columns, so exact rank=40
+ALL Z18 SYMBOLIC CHECKS PASSED
+=== verify_schur_identities.py exit 0 ===
+PASS: exact H7 2x2 strict Schur congruence
+PASS: exact H7 positive diagonal pivot and 4x4 residual congruence
+PASS: exact H5 last forced positive pivot and 4x4 residual congruence
+PASS: delta gauge preserves all source-strict forced pivots and gamma bound
+No universal PSD conclusion is asserted for either 4x4 tail.
+=== original_baseline/verify_c1_native_stationarity.py exit 0 ===
+W EXACT_STATIONARITY True time 0.1
+X EXACT_STATIONARITY True time 0.2
+Y EXACT_STATIONARITY True time 0.5
+Z EXACT_STATIONARITY True time 0.6
+u EXACT_STATIONARITY True time 1.0
+v EXACT_STATIONARITY True time 1.4
+PASS: all four full state derivatives and both angle derivatives exactly zero
+=== original_baseline/verify_c1_map_exact.py exit 0 ===
+PASS: invariant 42x44 reduced C1 map rank 36, 8 exact gauge null vectors
+PASS: fixed 36x36 integer pivot determinant -2^24; 6x6 contact-jet minor 4
+PASS: 16 candidate features, 12 contact roots, rank 66, 6 universal zero equations [1, 2, 4, 5, 8, 10]
+PASS: all 6 C1 state/angle jets + 6 universal equations span cokernel exactly
+PASS: lexicographic fixed rational 66 pivot right inverse on complete coefficient image
+=== original_baseline/verify_parent_scale.py exit 0 ===
+PASS m-positive
+PASS C-positive
+PASS A-positive
+PASS D-full
+PASS alpha+core-full
+PASS beta+core-full
+PASS signed-core
+PASS: SD2 = Delta^2 Lambda times whole canonical C1 parent, unrestricted W,X,Y,Z and u,v.
+EXACT REPLAY SUCCESS. Universal oriented-source PSD is NOT established.

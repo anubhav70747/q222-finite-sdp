@@ -1,0 +1,178 @@
+Independent bounded analytical audit: task7 conditional global pencil
+26 October 2026
+
+Package reviewed:
+analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/
+fetched-1819/task7/package (26 original files)
+
+VERDICT
+
+The package materializes a finite rational global OUTER SDP formulation.
+Its exactness for Q222 is correctly conditional on the two direct K364
+admissions H1/H2. I found no mathematical defect in the reviewed source
+adjoints, physical group actions, face injections/duals, Slater argument,
+or conditional assembly. One prose arithmetic typo requires correction:
+PROOF_AND_MATRIX_SPECIFICATION.md section 3 says 17 affine face equalities
+per group; there are 7+3+7+1=18. The actual 27 equalities per group and
+3456 overall are correct. The typo does not alter the specified matrices.
+
+This audit read the proof/specification, coordinator theorem, generator,
+assembler, and relevant verifier construction. It checked the new
+mathematical implications against the already inspected SG/EN/native
+sources. Exact data replay is assigned separately; I did not rerun the
+scripts, perform a sweep, or certify the two universal admission claims.
+The prior V01--V06, L15 and L17 conclusions retain their stated scopes.
+
+1. Source map, normalization and Gram adjoint
+
+The generator's canonical_E() is the actual SG1 map E: the first column
+is H=1-(E00-E01+E10+E11)/2, and the other eight are 4p in the exact event
+order (lambda,n,m,C,A,D,alpha,beta). Thus f_c(q)=c^T E^T(1,q), with no
+missing factor 4, half-angle clearing factor or state normalization.
+Its ROOTS/ORIG entries reproduce the complete SG2 parent, including the
+negative -2d Du Dv Z^2 term. T_columns() retains the additional Dv=1+v^2.
+
+The polynomial-state keys, 364 feature indices and all 66430 independent
+upper Gram coordinates have finite explicit orders. For a<=b, A(P) uses
+P_ab once on the diagonal and twice off diagonal. With the symmetric
+matrix trace inner product, A*(y)_ab=y_key(a,b), not 2y_key off diagonal.
+This follows directly from <y,A(P)>=Tr(A*(y)P). The generator and assembler
+use precisely these two compatible conventions. The source orthant is
+retained in b=T^T y+r, r>=0, A*(y)>=0. Omitting r would change the dual.
+
+K364 soundness, closedness and the pure-testing division are the same
+fixed-cone facts checked in L17. All four state coordinates remain free.
+The signed-angle congruences, homogeneous SG2 endpoints and real/imaginary
+state splitting give all projective tests. No native source normalization
+or testing-dependent state gauge enters the SDP variables.
+
+2. Full physical group and actual orbit target
+
+q_action() implements party exchange, local setting permutations, then
+independent output signs. For the exchanged-party case its correlator
+index is E_(y xor pB, x xor pA), as required. The seven binary/sign choices
+enumerate the full128 physical actions, including all eight PR sectors;
+the earlier SG8-only assembly defect is repaired.
+
+For homogeneous behaviour action Q_g, the inequality coefficient action
+is Q_g^T. Hence S_g=E^(-1)Q_g^T E and the target is
+  b_g(q)=E^T Q_g(1,q)=S_g^T E^T(1,q).
+These are the actual formulas in group_data() and the serialized targets.
+The transpose direction and coefficient scales are correct. Although S_g
+can leave the source orthant for actions changing PR sector, the package
+evaluates the unaltered canonical cone dual at b_g. It does not impose a
+false transformed source orthant. The verified C1 reflection is included
+as group member24; the physical identity is member15 under this indexing.
+
+3. Closed faces and attained duals
+
+SG12 omits lambda,m, so its retained indices are (0,2,4,5,6,7,8).
+SG13 omits lambda,alpha, giving (0,2,3,4,5,6,8). These injections match
+the original source formulas. face12_matrix() is exactly the SG12
+six-by-six pencil with opposite skew signs in its off-diagonal blocks.
+face13_matrix() is the original pair of SG13 three-by-three blocks,
+including opposite xi signs. All retained source coordinates are >=0.
+
+For SG12, the correct source dual is
+  I12^T b_g=M12_x^*(Y12)+r12,
+  M12_skew^*(Y12)=0, Y12>=0, r12>=0.
+SG13 uses the sum of the two source adjoints and the single joint xi
+cancellation, with two PSD matrices and its seven-coordinate orthant.
+All omitted source coordinates are absent from these target conditions;
+they do not acquire extra target inequalities. The assembler includes
+factor2 in every off-diagonal matrix trace and uses the right signs in
+the target equalities. Its upper_index formula indexes all independent
+entries consecutively within each symmetric PSD variable matrix.
+
+The stated strict source points have every retained source coordinate
+positive. Their original SG12/SG13 matrix values are positive definite;
+the printed leading minors agree with their explicit matrix formulas.
+For a convergent sequence of source-dual images, pairing with the fixed
+strict point bounds the traces of the PSD dual matrices and the orthant
+coordinates. Free-auxiliary cancellations make this pairing exact.
+The image is therefore closed and finite-dimensional separation gives
+the displayed dual representations with attainment. A generic assertion
+that PSD projections are closed is neither needed nor justified.
+
+4. Strict K364 point
+
+build_strict_witness() reconstructs the same eighteen event roots and
+signed CHSH roots as the original196 strict construction. It forms
+  Qc=Q0+(Qplus-Qminus)/21-I16/21,
+  P6=J Qc J^T+(H tensor H tensor I4)/21,
+  P364=J0 P6 J0^T+J1 P6 J1^T.
+The roots match SG2, and H's polynomial is 1+r^12. Thus the tensor term
+restores exactly the corner identity subtracted in Qc. The target is
+F_(1/21,1,...,1), then Dv times this parent after the two embeddings.
+It is not a different source or a dropped-multiplier certificate.
+
+The analytical positive-definiteness argument already established for
+L17 applies unchanged: root recovery gives Q0>0 (indeed Q0>=2I16/3),
+Qminus<=2I16, so Qc>=11I16/21; H>0. Hence P6>0. J0 and J1 cover Bob
+indices0..6 and6..12, so every extended coordinate is covered and
+P364>0. Together with c*=(1/21,1,...,1)>0 and AP364=Tc*, this is a
+strict point of the joint source/Gram lift.
+
+Consequently the K364 source-dual image is closed and attained: pairing
+with (c*,P364) bounds A*y and r, and quotienting the joint kernel of
+y -> (A*y,T^T y) supplies bounded y representatives. The moment-feature
+trace argument closes the primal Gram image. This licenses exactly the
+K dual equations used in the package. It proves neither H1 nor H2.
+
+5. What is materialized
+
+The package contains actual rational T columns, every A/A* upper-entry
+index, all128 numeric action/target matrices, both complete face source
+and free-auxiliary bases, all group copy/variable/block offsets, every
+3456 affine equality row, all16 event diagonal entries, and the rational
+strict source/Gram witness. These are sufficient to evaluate every
+global matrix entry uniquely. No undefined linear operator or unevaluated
+search is left in the formulation.
+
+The optional 8,510,224-entry expansion only repeats already specified
+sparse matrices at their explicit offsets. Its absence does not prevent
+materialization. The most precise description is a fully indexed
+rational SDP with one block-diagonal PSD constraint PLUS3456 affine
+equalities, rather than an equality-free single LMI of the same order.
+
+The dimensions are internally correct:
+  per copy: seven PSD blocks, total order399, 3306 auxiliary scalars,
+            nine K equalities and eighteen face equalities;
+  full128 plus events: 897 PSD blocks, order51088,
+            423168 auxiliary scalars plus8 Bell variables,
+            3456 affine equalities and16 event inequalities.
+All event entries are 4p=1+a A_x+b B_y+ab E_xy; their positive factor4
+does not change the probability inequalities.
+
+6. Both inclusions and exactly what remains
+
+Unconditionally, every represented source cone is globally sound.
+Its source dual is attained, the group actions are physical and all
+event inequalities are valid. Therefore every quantum behaviour has
+feasible auxiliary variables in the specified global outer SDP.
+
+Under H1 (all actual oriented strictC1 rays in K364) and H2 (all actual
+strict six-event C2 rays in K364), the verified native reflection and
+positive source normalization place all strictC1/C2 rays in
+Kbar=K364+sigma K364. This fixed sound sum is closed by the established
+deterministic-coefficient bound. L15 admits the allowed singular
+third-omission contacts to Kbar, and the retained classification plus
+closed-face/event cones covers the remaining source extremes.
+Because sigma belongs to the full group, its orbit sum is already the
+K364 orbit sum. The resulting full sound finite cone sum is closed,
+equals the Bell-validity cone, and dualization gives exact Q222.
+No invariance sigma K364=K364 or universal originalZ6 admission is used.
+
+Remaining mathematical obligations for this explicit candidate:
+  H1: universal directK364 admission of genuinely physical strictC1
+      sources with actual oriented native contact0<k<=1;
+  H2: universal directK364 admission of genuinely physical strictC2
+      six-event sources in their complete exact native domain.
+Exact coefficients, finite identity replay, Slater, q=0 feasibility and
+the inherited qualitative-existence proof do not discharge these claims.
+
+The materialization task is now completed for this conditional candidate;
+earlier notes listing global-pencil materialization as pending are
+superseded on that point. The package is not an unconditional exact
+global lift or a computational-practicality/minimal-size result.
+No existing published theorem/review, repository or browser was modified.
