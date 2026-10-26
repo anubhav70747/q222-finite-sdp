@@ -1,0 +1,250 @@
+{
+  "active_target_rows_24": [
+    0,
+    3,
+    5,
+    18,
+    25,
+    45,
+    49,
+    52,
+    54,
+    175,
+    179,
+    204,
+    206,
+    231,
+    235,
+    357,
+    361,
+    364,
+    366,
+    386,
+    393,
+    406,
+    409,
+    411
+  ],
+  "angular_balance": {
+    "circuits": [
+      "s+1/s-2",
+      "s/t+t/s-2",
+      "t+1/t-2",
+      "1/s+t+s/t-3",
+      "t/s+1/t+s-3"
+    ],
+    "positive_claim": "p,q,z,k,l>=0 from source balance, including exact zero values",
+    "source_only_circuit_coefficients": [
+      "k=max(w_A-w_F,0)",
+      "p=w_A-k",
+      "l=w_F-p",
+      "q=w_E-k",
+      "z=w_D-k"
+    ],
+    "weights": [
+      "w_A=q(-1,0)/U_c",
+      "w_B=q(-1,1)*V_c/U_c",
+      "w_C=q(0,-1)/V_c",
+      "w_D=q(0,1)*V_c",
+      "w_E=q(1,-1)*U_c/V_c",
+      "w_F=q(1,0)*U_c"
+    ]
+  },
+  "carrier": {
+    "K": "2*c**4*r*(2*n+1)",
+    "h": "b-a**2*t",
+    "negative_gap_h_le_q": "K*((q-h)*(V*phi_X-phi_X)**2 + h*(U*phi_Y-V*phi_X)**2)",
+    "note": "carrier PSD and contact-zero for each branch, but residual PSD unproved",
+    "positive_gap_h_ge_q": "K*((h-q)*(U*phi_Y-phi_X)**2 + q*(U*phi_Y-V*phi_X)**2)",
+    "q": "a**2*r"
+  },
+  "domain": "Actual strict six-event C2 native Omega as in c2_fixed_map.py",
+  "extreme_diagonal": [
+    {
+      "coefficient": "2*c**4*r*(2*n+1)*(b-a**2*t)",
+      "key": [
+        12,
+        0,
+        2,
+        2
+      ],
+      "row": 364,
+      "unique_feature": [
+        6,
+        0,
+        2
+      ]
+    },
+    {
+      "coefficient": "2*c**4*r*(2*n+1)*a**2*r",
+      "key": [
+        0,
+        12,
+        1,
+        1
+      ],
+      "row": 49,
+      "unique_feature": [
+        0,
+        6,
+        1
+      ]
+    }
+  ],
+  "fixed_library": "Z6, with 154 support-face rows and four PSD parity blocks",
+  "full_parent_multiplier": {
+    "B": "leading W,X,Y 3x3 block of complete four-state parent",
+    "angular_roots": 21,
+    "complete_identity": "det(B)*F = sum_{i<j}[(R_i cross R_j) dot(B*xi+z*Z)]**2 + det(P)*Z**2",
+    "limitation": "det(B) depends jointly on native source and testing angles; cannot cancel in polynomial SOS or infer an affine fixed SDP cone",
+    "multiplier": "det(B(u,v;theta))>0",
+    "rank_one_R_rows": 16,
+    "wedge_roots": 120
+  },
+  "residual_transfer": [
+    {
+      "key": [
+        6,
+        0,
+        1,
+        2
+      ],
+      "required_coefficient": "2*K*(h-q)",
+      "row": 178,
+      "sign": "h>q",
+      "surviving_pairs": [
+        {
+          "block": 0,
+          "left": [
+            2,
+            0,
+            1
+          ],
+          "right": [
+            4,
+            0,
+            2
+          ]
+        },
+        {
+          "block": 0,
+          "left": [
+            4,
+            0,
+            1
+          ],
+          "right": [
+            2,
+            0,
+            2
+          ]
+        },
+        {
+          "block": 0,
+          "left": [
+            6,
+            0,
+            1
+          ],
+          "right": [
+            0,
+            0,
+            2
+          ]
+        },
+        {
+          "block": 2,
+          "left": [
+            1,
+            0,
+            1
+          ],
+          "right": [
+            5,
+            0,
+            2
+          ]
+        },
+        {
+          "block": 2,
+          "left": [
+            3,
+            0,
+            1
+          ],
+          "right": [
+            3,
+            0,
+            2
+          ]
+        },
+        {
+          "block": 2,
+          "left": [
+            5,
+            0,
+            1
+          ],
+          "right": [
+            1,
+            0,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "key": [
+        0,
+        6,
+        1,
+        1
+      ],
+      "required_coefficient": "2*K*(q-h)",
+      "row": 21,
+      "sign": "h<q",
+      "surviving_pairs": [
+        {
+          "block": 0,
+          "left": [
+            0,
+            2,
+            1
+          ],
+          "right": [
+            0,
+            4,
+            1
+          ]
+        },
+        {
+          "block": 1,
+          "left": [
+            0,
+            1,
+            1
+          ],
+          "right": [
+            0,
+            5,
+            1
+          ]
+        },
+        {
+          "block": 1,
+          "left": [
+            0,
+            3,
+            1
+          ],
+          "right": [
+            0,
+            3,
+            1
+          ]
+        }
+      ]
+    }
+  ],
+  "status": "STRICT_C2_Z6_UNIVERSAL_PSD_UNPROVED"
+}

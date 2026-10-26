@@ -1,0 +1,46 @@
+H7
+0,0: 2*uc**2*wc**2*(2*C + 2*D + d)
+0,1: -s7/2
+0,2: 0
+0,3: 2*uc**2*vc*wc*xc*(2*D + d)
+0,4: -2*uc*wc*yc*(2*C + 2*D + d)
+0,5: -s0
+0,6: 0
+1,1: 4*m*vc**2*wc**2
+1,2: -4*m*vc*wc*xc
+1,3: -4*C*uc**2*wc**2 + 4*C*uc*vc**2*wc*yc + 4*C*uc*wc*yc - 4*D*uc**2*vc*wc*xc - 4*D*uc**2*wc**2 + 4*D*uc*vc*wc*zc + 4*D*uc*wc*yc - 2*d*uc**2*vc*wc*xc - 2*d*uc**2*wc**2 + 2*d*uc*vc*wc*zc + 2*d*uc*wc*yc - 4*m*uc*vc**2*wc*yc + 4*m*uc*vc*wc*zc - 4*m*vc**2*wc**2 + 4*m*vc*wc*xc + s0 + s1 + s2
+1,4: 0
+1,5: -4*C*uc*vc**2*wc*yc + 4*m*uc*vc**2*wc*yc - s1
+1,6: -(-8*C*uc**2*wc**2 + 8*C*uc*wc*yc - 8*D*uc**2*vc*wc*xc - 8*D*uc**2*wc**2 + 8*D*uc*vc*wc*zc + 8*D*uc*wc*yc - 4*d*uc**2*vc*wc*xc - 4*d*uc**2*wc**2 + 4*d*uc*vc*wc*zc + 4*d*uc*wc*yc + 8*m*uc*vc*wc*zc + 2*s0 + 2*s2 - s7)/2
+2,2: 2*xc**2*(2*beta + d + 2*m)
+2,3: 0
+2,4: 0
+2,5: -4*beta*uc*xc*zc - 4*beta*xc**2 - 2*d*uc*xc*zc - 2*d*xc**2 - 4*m*uc*xc*zc + 4*m*vc*wc*xc - 4*m*xc**2 + s3
+2,6: 2*uc*xc*zc*(2*beta + d + 2*m)
+3,3: 2*uc**2*vc**2*xc**2*(2*D + d)
+3,4: -4*A*yc**2 + 4*C*uc*wc*yc - 4*C*yc**2 + 4*D*uc*wc*yc - 4*D*vc*yc*zc - 4*D*yc**2 + 4*alpha*vc*yc*zc + 2*d*uc*wc*yc - 2*d*yc**2 + s4 + s5 + s6
+3,5: -2*xc*(2*D*uc**2*vc**2*xc + 2*D*uc**2*vc*wc - 2*D*uc*vc**2*zc - 2*D*uc*vc*yc + 2*beta*uc*vc**2*zc + 2*beta*uc*zc + 2*beta*vc**2*xc + 2*beta*xc + d*uc**2*vc**2*xc + d*uc**2*vc*wc - d*uc*vc*yc + d*uc*zc + d*vc**2*xc + d*xc - 2*m*uc*vc*yc + 2*m*uc*zc - 2*m*vc*wc + 2*m*xc)
+3,6: 0
+4,4: 2*yc**2*(2*A + 2*C + 2*D + d)
+4,5: -s4
+4,6: -s5
+5,5: 2*(2*A*yc**2 + 2*C*uc**2*wc**2 - 4*C*uc*wc*yc + 2*C*yc**2 + 2*D*uc**2*vc**2*xc**2 + 4*D*uc**2*vc*wc*xc + 2*D*uc**2*wc**2 - 4*D*uc*vc**2*xc*zc - 4*D*uc*vc*wc*zc - 4*D*uc*vc*xc*yc - 4*D*uc*wc*yc + 2*D*vc**2*zc**2 + 4*D*vc*yc*zc + 2*D*yc**2 + 2*alpha*uc**2*zc**2 - 4*alpha*vc*yc*zc + 4*alpha*zc**2 + 2*beta*uc**2*zc**2 + 4*beta*uc*vc**2*xc*zc + 8*beta*uc*xc*zc + 4*beta*vc**2*xc**2 + 6*beta*xc**2 + d*uc**2*vc**2*xc**2 + 2*d*uc**2*vc*wc*xc + d*uc**2*wc**2 + d*uc**2*zc**2 - 2*d*uc*vc*wc*zc - 2*d*uc*vc*xc*yc - 2*d*uc*wc*yc + 4*d*uc*xc*zc + 2*d*vc**2*xc**2 + 3*d*xc**2 + d*yc**2 + 2*m*uc**2*zc**2 - 4*m*uc*vc*wc*zc - 4*m*uc*vc*xc*yc + 8*m*uc*xc*zc + 2*m*vc**2*wc**2 - 8*m*vc*wc*xc + 6*m*xc**2)
+5,6: -4*C*uc**2*wc**2 + 4*C*uc*wc*yc - 4*D*uc**2*vc*wc*xc - 4*D*uc**2*wc**2 + 4*D*uc*vc*wc*zc + 4*D*uc*wc*yc - 4*alpha*uc**2*zc**2 - 4*alpha*zc**2 - 4*beta*uc**2*zc**2 - 4*beta*uc*xc*zc - 2*d*uc**2*vc*wc*xc - 2*d*uc**2*wc**2 - 2*d*uc**2*zc**2 + 2*d*uc*vc*wc*zc + 2*d*uc*wc*yc - 2*d*uc*xc*zc - 4*m*uc**2*zc**2 + 4*m*uc*vc*wc*zc - 4*m*uc*xc*zc + s0 - s3 - s6
+6,6: 2*uc**2*zc**2*(2*alpha + 2*beta + d + 2*m)
+H5
+7,7: 4*C*uc**2*vc**2*wc**2
+7,8: 4*C*uc**2*wc**2 - 4*C*uc*vc**2*wc*yc - 4*C*uc*wc*yc + 4*D*uc**2*vc*wc*xc + 4*D*uc**2*wc**2 - 4*D*uc*vc*wc*zc - 4*D*uc*wc*yc + 2*d*uc**2*vc*wc*xc + 2*d*uc**2*wc**2 - 2*d*uc*vc*wc*zc - 2*d*uc*wc*yc + 4*m*uc*vc**2*wc*yc - 4*m*uc*vc*wc*zc + 4*m*vc**2*wc**2 - 4*m*vc*wc*xc - s0 - s1 - s2
+7,9: s0
+7,10: s1
+7,11: s2
+8,8: 2*vc**2*xc**2*(2*beta + d)
+8,9: 4*A*yc**2 - 4*C*uc*wc*yc + 4*C*yc**2 - 4*D*uc*vc*xc*yc - 4*D*uc*wc*yc + 4*D*vc*yc*zc + 4*D*yc**2 - 4*alpha*vc*yc*zc + 4*beta*uc*xc*zc + 4*beta*xc**2 - 2*d*uc*vc*xc*yc - 2*d*uc*wc*yc + 2*d*uc*xc*zc + 2*d*xc**2 + 2*d*yc**2 - 4*m*uc*vc*xc*yc + 4*m*uc*xc*zc - 4*m*vc*wc*xc + 4*m*xc**2 - s3 - s4 - s5 - s6
+8,10: 0
+8,11: s3
+9,9: 4*A*uc**2*yc**2
+9,10: s4
+9,11: s5
+10,10: 2*vc**2*yc**2*(2*A + 2*C + 2*alpha + d)
+10,11: s6
+11,11: 4*alpha*zc**2
+odd: s7

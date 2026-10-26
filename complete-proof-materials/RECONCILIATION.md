@@ -56,3 +56,8 @@ Both complete normal answers and their original archives are recovered. [Origina
 ## Reflection and common-cone implication
 
 [Verified reflection transport and extension](REFLECTION_TRANSPORT_UPDATE.md) records L17: strict C1 reflection reduces coverage to k<=1, and the full-Z6 transport embeds both orientations into one fixed 364-feature cone. Soundness, closedness and attained source-dual representation are verified. Use the full physical relabeling orbit, not only the SG8 stabilizer. The two strict-family PSD assumptions and the evaluated global pencil remain open; no qualitative-existence result is reopened.
+
+
+## Latest strict-source reductions
+
+[Current construction scope](STRICT_SOURCE_REDUCTIONS_UPDATE.md) records the verified Z18 nine-gauge/two-Schur reduction and the scoped C2 carrier and multiplied-parent identities. Universal oriented C1 and strict C2 PSD admission remain unproved; no completion status is promoted. Original proof packages and targeted independent checks are linked under L13/L14.

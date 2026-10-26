@@ -1,0 +1,61 @@
+{
+  "scope": "Verified partial C2 globally on Omega, NOT full fixed Z6 PSD admission",
+  "created": "2026-10-26",
+  "proof": "PROOF_AND_OPEN_GATE.md",
+  "verifier": "verify_c2_transfer.py",
+  "baseline_files_reused_unchanged": [
+    "c2_fixed_map.py",
+    "C2_154_CONTACT_MAP.json",
+    "C2_CLEARED_POLYNOMIAL_TARGET.json"
+  ],
+  "mathematical_inputs": [
+    "original SG2 full four-state parent",
+    "native six-event C2 rational source fractions and stationarity",
+    "SG5-SG6 exact determinant Laurent expansion",
+    "previously independently verified 154-feature map and 24 cleared coefficients"
+  ],
+  "not_proved": [
+    "full strict C2 Z6 PSD admission",
+    "24-term compact-dual nonstrict inequality",
+    "PSD residual after sign-dependent carrier",
+    "fixed affine SDP cone from source/test-dependent determinant multiplier"
+  ],
+  "files": {
+    "EXACT_CHECK_OUTPUT.txt": {
+      "sha256": "846750f50eb3a33f6def0a8977a1f619b5ebb2a8535842b55b236cbb149a97d0",
+      "bytes": 860
+    },
+    "verify_c2_transfer.py": {
+      "sha256": "4681a3c26757d8d6f77e9da486a537b4a45c78774d8a9a790390186ff9de85e6",
+      "bytes": 6962
+    },
+    "PROOF_AND_OPEN_GATE.md": {
+      "sha256": "4374e30ddae587c675b8b440c92b2ce416390508ac11031e052ca4e80ea31114",
+      "bytes": 11496
+    },
+    "C2_CLEARED_POLYNOMIAL_TARGET.json": {
+      "sha256": "44bd403b8af26382ae2e5a6c524e6caa29940c06bc9f2647b447f8e427e69cbe",
+      "bytes": 217438
+    },
+    "c2_fixed_map.py": {
+      "sha256": "f30df0acdc8ff85fbbb11996ccb07ace5a877621d8b7f7a8ca97eee8aace30dc",
+      "bytes": 8025
+    },
+    "build_transfer_data.py": {
+      "sha256": "c51fef44ba2be927f802baab8369c5c1826df7be4038507d0c9d7076d4a338bd",
+      "bytes": 3261
+    },
+    "README.txt": {
+      "sha256": "222298d13c1976512fb6fd6df8a6e8a91f3d3aa683cd56efb8b0ccf15ca107cf",
+      "bytes": 1934
+    },
+    "C2_TRANSFER_EXACT_DATA.json": {
+      "sha256": "943f8848e63063610fc12eeb9e7b428b40e93e773f468661dd26b6c2974f4f25",
+      "bytes": 4456
+    },
+    "C2_154_CONTACT_MAP.json": {
+      "sha256": "0db6fae00a077e283a76ec0ed02a587562e8b377b58d99856a430cc104fa6b71",
+      "bytes": 143927
+    }
+  }
+}

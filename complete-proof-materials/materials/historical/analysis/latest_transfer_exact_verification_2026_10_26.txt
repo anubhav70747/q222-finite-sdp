@@ -1,0 +1,25 @@
+Latest C1/C2 transfer packages: targeted exact verification, 2026-10-26
+
+Sources: analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1739/task3 and task5.
+Fresh artifacts: analysis/latest-transfer-exact-verification-2026-10-26/.
+Original fetched packages were read only. Execution used separate private copies.
+
+INTEGRITY
+C2 original-package.zip: 71,344 bytes; SHA256 a082eb11be85f51ca67c9d8c5214644bd29dd14db26a77a8d9df91d4714314ea.
+C1 original-package.zip: 39,873 bytes; SHA256 283bbab097680d4d5ca9ac76b89da43916c8b55dd2f37b2726a76b310e867472.
+The original Downloads archives named in RECOVERY_RECEIPT.json also match the recovered archives in byte length and SHA256. Both ZIP CRC checks passed. All 10 C2 and 29 C1 archived files match the fetched extracted bytes exactly, including manifest files. All original listed manifest checks passed: C2 9/9; C1 28/28 (byte lengths and SHA256). The manifest cannot self-authenticate provenance; this verifies internal consistency with the recovered original ZIPs.
+
+REPLAY
+Inspected the three verifier scripts and all their import dependencies before execution. Python 3.14.3, SymPy 1.14.0. Single sequential process at a time; numerical thread environment variables set to 1. No missing dependencies or new failures.
+verify_c2_transfer.py: exit 0; eight reported checks passed; 1.281 s.
+verify_z18_exact.py: exit 0; all symbolic checks passed; 0.988 s.
+verify_schur_identities.py: exit 0; four reported checks passed; 1.206 s.
+Detailed stdout/stderr: C2.log, C1_Z18.log, C1_Schur.log. Results and complete integrity records: results.json and integrity.json. Replay orchestration: run_targeted_replay.py.
+
+ACTUAL MATHEMATICAL SCOPE
+C2: source identity and extreme diagonal formulas; exact algebra and support of the sign-adaptive contact carrier; uniqueness of two extreme capacities; existence/counts of available residual pair classes (6 and 3); the complete four-state parent's top 3x3 16-row Gram identity; generic four-state adjugate/Schur identity; five-ray Laurent and cubical identities; fixed-root transfer identities. PSD statements require their stated source/sign premises. The generic five-ray identity does not by itself establish the required nonnegative decomposition coefficients for every native determinant.
+C1: exact support/rank calculation (46x49 map rank 40 with six annihilating contact jets), forbidden odd coefficient reduction, eighth/ninth gauge polynomial zero identities, unchanged pivot entries, and generic Schur congruences reducing to two 4x4 tails. The native source constructor is imported but not evaluated by these new targeted checks; native stationarity and strict pivot positivity remain baseline inputs rather than newly replayed conclusions. The printed claim about complete matching must be read at this fixed-map/gauge level, not as a universal positive Gram constructor.
+Neither replay proves universal C1 Z18 or C2 Z6 PSD admission, PSD of the C1 residual tails, PSD completion of the C2 carrier defect, or a fixed affine SDP cone. C2 contact-pair availability is not a constructive residual PSD repair. A source/test-dependent determinant multiplier remains distinct from fixed-feature admission.
+
+EXCLUDED WORK
+No unchanged baseline verifier was rerun. No try_tree_gauge, derivation exploration, numerical optimization, SDP, sample/sweep, Git, or browser action was run.

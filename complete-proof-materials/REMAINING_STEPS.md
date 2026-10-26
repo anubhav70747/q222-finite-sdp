@@ -86,3 +86,6 @@ No substantive contradiction was found between the completed body reviews, the V
 
 
 The reflection package resolves the transport/duality implication L17. It does not close R02, R03 or R07. [Verified reflection transport and extension](REFLECTION_TRANSPORT_UPDATE.md) gives the full-Z6 extension, the required global-symmetry correction and the precise remaining data requirements.
+
+
+The latest strict-source packages refine the algebra without closing R02 or R03: C1 now has an exact nine-gauge/two-Schur interface, while the C2 selected carrier has an unproved residual and its separate full-state SOS represents a mixed-multiplier polynomial. [Current construction scope](STRICT_SOURCE_REDUCTIONS_UPDATE.md) specifies the exact scope and next positivity statements. R07 and the global evaluated lift remain open.

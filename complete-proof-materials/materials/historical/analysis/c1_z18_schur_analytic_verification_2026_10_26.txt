@@ -1,0 +1,122 @@
+C1 Z18 / Schur analytical verification — 26 October 2026
+
+Scope
+Bounded read-only mathematical review of fetched-1739/task5/package/PROOF.md,
+c1_z18_extension.py, verify_z18_exact.py, verify_schur_identities.py, the
+preserved original_baseline map/native/positivity proofs and constructors, and
+the inherited four-contact Fourier argument in fetched-1628/task5/package/
+Q222_C1_16_obstruction_2026_10_26/PROOF.md. No script replay, optimizer, sweep,
+browser, Git mutation, manuscript edit, or broad global-proof attempt.
+The independent code reviewer owns executable verification. The established
+L17 full-Z6 reflection into the same 364 frame is not reopened.
+
+Verdict
+The new reduction is a valid exact coefficient construction and a complete
+conditional PSD criterion for its fixed 18-feature cone. It does not establish
+universal oriented strict-C1 admission. No contradiction in the stated new
+mathematical scope was found. The original qualitative proof is untouched.
+
+1. The two identities are full polynomial identities.
+r1=V(W-Z) and r0-r6=U(W-Z), so r1(r0-r6)=UV(W-Z)^2.
+Likewise r2-r4=X-Y and r3-r5=UV(X-Y), so their product is
+UV(X-Y)^2. These hold for independent testing variables and unrestricted four
+state coordinates, rather than merely at contact. Symmetric off-diagonal
+entries contribute twice. The displayed K_delta therefore gives exactly
+r^T K_delta r=-(r2-r4)(r3-r5)=-UV(X-Y)^2, with the stated signs and halves.
+Gamma has the analogous old correction on entries (0,1),(1,6).
+
+2. Distinguish the three maps and their coefficient supports.
+There are 43 integer symmetric block entries (28+15) and six symmetric
+half-difference entries, hence 49 columns. Their generated support has 46 keys:
+42 old parity-compatible keys plus four parity-incompatible keys
+UV WX, UV WY, UV XZ, UV YZ. The full parity-compatible bidegree-(2,2) space
+separately has 46 keys. Its four missing keys are W^2, WZ, U^2 X^2, U^2 XY;
+the native parent vanishes there. Neither collection of four is the other.
+The new forbidden-row minor has determinant 16; together with the old rank-36
+minor it yields rank at least 40. Six independent contact-jet rows annihilate
+all 49 columns, so rank=40 and the full generated map has nullity 9 and
+cokernel dimension 6.
+Matching the four forbidden coefficients forces the half Gram to be
+diag(gamma, delta*[[1,-1],[-1,1]]) in the stated 1+2 arrangement.
+Consequently the native invariant map is 42x45, rank 36, nullity 9.
+Its coefficient image is unchanged; its PSD cone may be enlarged. The new
+charge is not evidence of an enlarged invariant linear image.
+
+3. Full coefficient matching is justified, with PSD kept separate.
+Native full-state/full-angle stationarity supplies the six jet equations.
+The old rational 36-pivot inverse matches the entire 42-key invariant target,
+and the four absent compatible coefficients are identically zero.
+Adding gamma and delta changes the integer Gram by exact zero identities.
+Thus every strict native source has a full-parent symmetric-Gram identity.
+Calling this "coefficient admission" is acceptable only with that qualifier:
+it is not admission to a PSD Gram cone. The construction remains valid
+algebraically on unrestricted strict A1, although the named oriented constructor
+checks 0<k<=1. The unrestricted k=4 non-PSD obstruction therefore creates no
+conflict with coefficient matching or with the oriented-domain limitation.
+
+4. Necessity of the reduced form for PSD certificates is sound.
+Averaging the formal square-root sign removes integer/half cross terms.
+The simultaneous (U,V,X,Y)->(-U,-V,-X,-Y) symmetry splits integer parity
+and half WZ/XY sectors. These are fixed sign congruences preserving the
+parent and PSD. At the true zero contact, each positive block kills its
+contact-evaluation vector. Nonzero source/contact scalings and anchor
+differences then yield precisely the 7+5 integer contact blocks and the two
+nonnegative half charges. These transformations lose no PSD certificate
+within Z18. Source-side normalizations do not make the testing library
+source-dependent.
+
+5. The two 4x4 Schur conditions retain singular certificates.
+P=H7[{1,2}] is positive definite from H11>0 and its strictly positive
+displayed determinant. H7[4,{1,2}]=0, so the scalar pivot in the first
+Schur complement is exactly the original p4=H7[4,4]>0, not an unproved
+modified pivot. The remaining H5 scalar pivot is 4 alpha Zc^2>0.
+Invertible block-triangular congruences therefore give
+H7 PSD iff S7 PSD, and H5 PSD iff S5 PSD.
+Only these strictly positive source blocks are inverted. No strict
+positivity of a final residual, pseudoinverse, or discarded zero eigenvalue
+is required. Equation (11)'s Ridx must be interpreted in local positions
+(0,1,3,4) after Tidx=(0,3,4,5,6), as the proof already explicitly says.
+The formula for (S7)00 follows directly from H01=-gamma/2, H02=0, and
+H04=-2B uc Wc Yc, giving the stated gamma-squared coefficient.
+Delta changes none of those entries, P, or p4.
+
+6. Charge transfer removes only the old scalar contradiction.
+At the four physical sign contacts
+(U,V;W,X,Y,Z)=(sigma,tau;1,tau,sigma,sigma*tau),
+both UV(W-Z)^2 and UV(X-Y)^2 equal 0 when sigma*tau=1 and -4 otherwise.
+The integer-root Fourier average therefore bounds its trivial sector by
+sqrt(gamma+delta), yielding gamma+delta >= L_triangle^2.
+The three unique integer-square masses S_X,S_Y,S_Z remain unchanged:
+the added half squares have UV exponents, whereas these masses have
+V^2, U^2, and U^2V^2 exponents. Thus the inherited argument genuinely
+changes from gamma to gamma+delta on this four-contact Bell slice.
+The forced gamma upper bound persists, but does not alone bound the sum.
+
+A further useful necessary bound follows immediately from the existing map:
+H7[2,3]=-delta/2 while H22,H33 are forced. Hence every PSD certificate has
+delta^2 <= 4 H22 H33
+        = 16(2 beta+d+2m)(2D+d) uc^2 vc^2 Xc^4.
+The new charge is therefore not arbitrarily available. Combining this with
+gamma^2<=U_theta gives the necessary scalar compatibility condition
+L_triangle^2 <= sqrt(U_theta)+
+4 uc vc Xc^2 sqrt((2 beta+d+2m)(2D+d)).
+This does not follow merely from coefficient matching, and even if proved
+on the native domain would not establish the coupled residual PSD conditions.
+
+First unproved statement / most focused next step
+Exactly PROOF.md (14): for every real strict native source with 0<k<=1,
+choose seven real gauges and gamma,delta>=0 so that both 4x4 residuals are
+PSD. Neither the recovered k>1 counterexample nor connectedness, closedness,
+positive forced minors, stationarity, or C2 opening proves or refutes that
+implication. It is also still unproved that all these sources lie in full Z6.
+
+Work directly with the existing nine-gauge Schur interface. A concrete first
+new analytical target is the exact native/oriented compatibility of the charge
+lower bound with both forced charge caps just displayed, followed by an actual
+simultaneous PSD gauge construction if that obstruction test clears.
+On a saturated scalar bound, PSD forces the corresponding residual row to
+vanish; retain that range/kernel constraint rather than dividing by it.
+There is no need for another full coefficient-map reduction or for rebuilding
+the known reflection. Passing the scalar target alone must not be reported
+as universal C1 admission.
+

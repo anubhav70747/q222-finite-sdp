@@ -23,3 +23,6 @@ L08-L10 remain open. Use targeted exact checks for new identities and independen
 
 
 [Verified reflection transport and extension](REFLECTION_TRANSPORT_UPDATE.md) controls the reflection result and its extension. The complete sparse coefficient maps and global matrix pencil are still required; sparse feature transport alone is not that deliverable.
+
+
+The latest [Current construction scope](STRICT_SOURCE_REDUCTIONS_UPDATE.md) sharpens the next analytical work: solve the C1 nine-gauge simultaneous Schur inequalities, retaining both charge bounds and saturated-kernel conditions, and prove the C2 full Gram/dual positivity assertion. The selected C2 carrier is not a complete reduction, and its separate det(B)*F certificate has a mixed source/testing multiplier. Do not promote either to fixed-library admission. An adequate alternative fixed sound cone can be pursued without first disproving Z6.
