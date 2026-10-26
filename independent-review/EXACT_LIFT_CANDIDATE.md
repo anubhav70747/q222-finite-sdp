@@ -485,6 +485,27 @@ A proof over the whole continuum therefore needs certificates that are
 explicit functions of the source parameters. The paper's charts are of this
 kind, and so are the explicit cones of `EXACT_LIFT_ROUTE.md`.
 
+**The frontier.** [`COMPACT_NATIVE_CONTACT_COVER.md`](COMPACT_NATIVE_CONTACT_COVER.md)
+covers every compact strict native subfamily by one finite cone. Joining
+finitely many closed sound cones is then routine (assembly lemma). What
+remains is a finite set of fixed cones, each covering a neighbourhood of one
+stratum of the singular boundary of the native domains. That boundary is
+large. A first inventory of C1 (scripts not yet in this folder) found:
+
+- **Six genuine facets, proved.** They are `Lc = 0`, `M = 0`, `J = 0`,
+  `Qc = 0`, `D = 0` and `β = 0`. Each one contains an exact rational point
+  where every other defining inequality is strict.
+- **Exact weight behaviour at the walls.** At the walls `A ~ 1/Lc`,
+  `m ~ 1/M`, `D ~ 1/J` and `α ~ 1/Qc`, with the contact fixed. The coordinate
+  ends send the contact to an edge or to the corner `(0,0)`.
+- **About 225 candidate corner strata, numerically.** By number of meeting
+  walls they split 12, 47, 77, 61, 23 and 5, at a resolution of 10⁻⁴.
+
+C2 has a comparable structure. Along `r → 0`, two corners keep a flat margin:
+with `h → 0` it stays about 0.2, and with `c → 0` about 0.05–0.08. With
+`1 − zh → 0` the margin falls linearly in the gap, while `α` diverges. Only
+the four C2 ends above have known mechanisms, and none is yet a proof.
+
 ## Evidence
 
 The ratio `d_k(e)/d*(e)` compares the largest CHSH weight the lift admits with
