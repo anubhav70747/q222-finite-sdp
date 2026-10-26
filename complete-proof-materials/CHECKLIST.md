@@ -122,9 +122,9 @@ The 22 October full analytical review supports qualitative finite-SDP existence.
   Evidence: [IC/LII version-and-proof audit](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1207/IC_LII_3324833_VERSION_AND_PROOF_AUDIT.md); [Independent native-source verification](materials/historical/analysis/ic_lii_interface_verification_2026_10_26.txt); [Recovery limits](RECOVERY_LIMITS.md).
   Completion condition/scope: The independent comparison and targeted source verification found no correction needed. Earlier inaccessible chat history remains unrecovered; it supplies no substantiated defect. Other C2 sectors and global construction remain separate.
 
-- [ ] **V04 — Latest BN/UN, R2, R3/R4, R6/R7 and UL readbacks.** OPEN consolidated version check; full proofs and available original checkers delivered.
-  Evidence: [Material inventory](INVENTORY.md).
-  Completion condition/scope: Check each new normalisation and imported lemma against the native source. Retain N0=N/ell in the corrected BN/UN proof.
+- [x] **V04 — Latest BN/UN, R2, R3/R4, R6/R7 and UL readbacks.** RESOLVED for the specified current-version normalization, domain and import interfaces.
+  Evidence: [Full frozen-version crosswalk](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1248/Q222_V04_FROZEN_INTERFACE_CROSSWALK_2026-10-26.md); [Independent native-source verification](materials/historical/analysis/v04_interface_verification_2026_10_26.txt); [Original evidence and checker package](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1248/V04_crosswalk_original_evidence.zip).
+  Completion condition/scope: Corrected BN/UN factors, restricted reflected k=1 subdomains, R3/R4/R6/R7 replacement routing and UL whole-parent restoration agree with current native sources. Existing source bounds and previously reviewed imports remain explicit. Final V01/V06 conjunction and L08-L10 construction remain separate.
 
 - [x] **V05 — Identity, link, archive and delivery coverage checks.** performed for this publication.
   Evidence: [Integrity verifier](verify_materials.py); [Verification receipt](VERIFICATION.json).

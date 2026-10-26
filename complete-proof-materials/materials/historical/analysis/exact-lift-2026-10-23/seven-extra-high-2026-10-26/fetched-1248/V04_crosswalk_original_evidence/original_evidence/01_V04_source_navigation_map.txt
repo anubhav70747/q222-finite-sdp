@@ -1,0 +1,125 @@
+V04 bounded source/version map - 26 October 2026
+
+Scope: source navigation and status reconciliation only. No mathematical
+rederivation, checker execution, numerical tests, or repository mutation.
+
+PATH ALIASES
+R = q222/analytical-paper-2026-10-22/github-q222-finite-sdp/ relative to the
+workspace root. All following aliases are relative to R:
+A = complete-proof-materials/materials/historical/analysis/
+S = A/exact-lift-2026-10-23/seven-extra-high-2026-10-26/
+F = S/fetched-for-publication/
+E = F/extracted-packages/
+C1 = latex/certificates/c1_short.tex
+C2 = latex/certificates/c2_short.tex
+
+SHORTEST PRIMARY PACKET FOR ONE VERSION REVIEW
+
+1. BN/UN corrected definition and complete parent
+Use F/Q222_BN_UN_CORRECTED_FULL_PARENT_PROOF_2026-10-26.md.
+Source hypotheses lines 3-5; exact full parent 84-118; complete scalar and
+two-normal coefficient identities 119-262; ordered helper completion
+264-319; all-tests/dependency join 321-327. The original proposal
+F/Q222_C1_BN_UN_Full_Parent_Proof_2026-10-26.md:23 actually prints
+N_0=N/kappa=W/zeta-uwZ. The independent correction at lines 108-117
+replaces it by N_0=N/ell and names the old expression a typo.
+CURRENT C1:13529 ALREADY PRINTS N_0=W/zeta-uwZ=N/ell.
+BN body C1:13438-13673; UN begins at 13675 and runs through about 13975.
+Key current UN full scalar and normal restoration: 13821-13889, UN12-16;
+strict/helper alternatives 13919-13965, UN19-21.
+This normalization is therefore already reconciled at the definition;
+the remaining assignment should compare its subsequent formulas and
+retained packets, not claim the current manuscript needs this correction.
+Checker evidence is in E/BN_UN_corrected_independent_package/:
+verify_bn_un_independent.py, verify_bn_un_parent_full.py,
+verify_bn_un_structural_coeffs.py, verify_bn_un_all.py and the recorded log.
+Original proposal/checker package: F/BN_UN_complete_package.zip.
+Corrected package: F/BN_UN_corrected_independent_package.zip.
+Prior C1 audit: A/c1_completion/audit_report.txt:167-177; refined delta
+audit:74-104 says actual BN body is unchanged and explains BN/UN exhaustive
+source dispatch and ordered purchases. Its scope should be preserved.
+
+2. R2 bounded-current/source assembly
+Use F/R2_C2_COEFFICIENT_AND_ASSEMBLY_PROOF.md (330+ lines), especially
+source split 23-32; RL full parent/two normals 95-167; TU comparison and
+full perturbations 169-264; new outer simplification 266-294.
+Current C2 source bound RER:8610-8765; RL:10080-10408;
+opposite helper SH:10409-10524; TU:10525-10911;
+UL:10912-11268; reflected outer R2O:11269-11618.
+Current routing C2:184-261 remains the source-domain reference.
+Package E/R2_C2_complete_package/r2_c2_assembly/ contains proof,
+verify_full_state.py, verify_r2.py, verify_rl_fast.py,
+verify_outer_caps.py, verify_circuit.py, verify_r8_scope.py and README.
+The new join simplification says unbounded native a (TU/UL, plus the
+relevant RL subcase) has reflected kbar=1, eliminating difficult R2O
+finite-cap cases on that smaller domain. Compare this restriction with
+current R2O10/11; do not delete the general R2O13-24 theorem.
+Prior complete C2 audit final_audit.txt:90-98 already verifies R2,
+TU/UL imports, retained n packet and full reflected-parent outer joins.
+The newer proof's warning that it does not certify R8 or other sectors
+(296-328) is its assignment boundary, not a newly found global gap.
+
+3. R3/R4, R6/R7: shortest combined independent readback
+Use E/R3_R4_R6_R7_independent_package/
+Q222_C2_R34_R67_Independent_Audit_2026-10-26/PROOF.md:
+R6/R7 source admission 30-79; complete two-normal parent/conductor 81-178;
+R3/R4 exact balances and full normals 180-237; helper/normal completion
+239-267; all-testing import boundary 269-280. Package checks/ contains
+six independent modules and recorded replay evidence; no rerun needed.
+Original R34 proof/checker:
+E/R3_R4_original_complete_package/R34_C2_COMPLETE_PARENT_ANALYTICAL_PROOF.md
+and R34_FULL_PARENT_EXACT_CHECK.py; readable copy S/07_R34_COMPLETE_RENDERED.txt.
+Original R6/R7 proof: F/R6_R7_COEFFICIENT_PROOF.md, complete parent 73-221,
+filtered conductor 223-356, remote/state joins 358-395; original modules
+under E/R6_R7_complete_package/r6_r7_exact/.
+Current source: C2:11619-12092 (R34 EN infinitesimal-e, unbounded-a body);
+C2:12093-12444 (RB unit b); 12445-12908 (RI infinitesimal b);
+12909-13435 (RU all unbounded-a R7).
+Current bounded-a proposition is C2:7997-8003; its actual domain and
+complete parent must accompany it (source dictionary 7950-8015 and
+the complete bounded-a proof through the following modules).
+Historical unit-e R3/R4 and bounded-a R6/R7 component IDs now occur as
+alias labels at C2:14295-14304, not as fresh proof bodies there. The current
+source partition explicitly routes bounded a to its proposition and
+unbounded a to EN/RB/RI/RU. A version crosswalk must therefore compare
+domain routing, not assume a retained alias is the old displayed theorem.
+Prior C2 final_audit.txt:100-115,129-144 checks complete R34 and R67
+chains, D syzygy, raw support, both full normals and source filtrations;
+selected exact replay details 184-195. Later independent conditional
+scope does not reopen those earlier reviewed leaves.
+
+4. UL local 24-root readback and simplified outer interface
+Shortest independent readable proof: S/06_UL_R2O_AUDIT_RENDERED.txt:
+claim/dependency boundary 8-10; complete local coefficient construction
+through 183; exact simplified R2O join 184-198; imports/limits 199-203.
+Original full local construction: S/07_UL_RENDERED.txt, especially
+complete normal/hard readback 160-175, root list 177, strict leading
+Gram 180-188, exact scalar contact divisions 190-202, finite matrix-entry
+algorithm 204-208. Checker: S/UL_FULL_COEFFICIENT_CHECK.py.
+Current source C2:10912-11268, specifically entire current 10976-11066,
+both normals 11067-11148, finite contact lift 11149-11253;
+R2O exact reflected/current identities 11281-11440.
+The independent proof gives an analytical finite 24-root coefficient
+algorithm; it explicitly does not claim an independently expanded final
+24x24 matrix. Verify compatibility of that algorithm/imported polynomial
+QI and SC identities, not a nonexistent global pencil-size requirement.
+Prior full C2 audit:31-34 reuses complete earlier TU/UL/SC/QI readings;
+90-98 verifies current source-specific joins. Do not reopen an earlier
+historical failed independent-root frame used only diagnostically.
+
+FOCUSED FOLLOW-UP QUESTION
+
+Freeze the current source identity, compare the four packets above against
+their pinned171a7e9/8960b3f versions and the earlier complete audit. For
+each actual changed interface report: exact equation, current importing
+domain, retained whole packets and two-normal frame, whether its earlier
+algebraic dependency remains applicable, and any precise mismatch. Start
+with the already-correct BN N/ell definition, then the R2/UL kbar=1
+simplification and current bounded-a versus EN/RB/RI/RU routing. Preserve
+the complete historical verdict where unchanged. No blanket rederivation,
+numerical sweeps, all-source certification, or explicit-library admission.
+
+Status from this mapping alone: N0 normalization visibly reconciled;
+R2/R34/R67/UL mathematical modules already substantively reviewed;
+latest domain/normalization/import crosswalk remains the V04 task. No
+new mathematical failure was established by this navigation pass.

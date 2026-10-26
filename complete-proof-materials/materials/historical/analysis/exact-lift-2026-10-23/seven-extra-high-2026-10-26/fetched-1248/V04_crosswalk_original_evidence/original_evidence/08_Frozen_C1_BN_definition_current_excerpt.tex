@@ -1,0 +1,141 @@
+13490: and the shifted exact scalar dictionary SN9. Let $\zeta=\ell/\kappa$,
+13491: $a=u^2,c=w^2$, $x=\kappa S$, and assume $u,w\ge0$ by the original
+13492: sign gauges. Both may be zero. For every state define
+13493: \[
+13494: \begin{array}{ll}
+13495:  A_1=\sqrt\beta\,uZ,&A_2=\sqrt\beta\,W/(\zeta\sqrt q),\\
+13496:  A_3=\sqrt\beta\sqrt{x/q}\,wZ,
+13497:  &A_4=\sqrt\beta\,uwW/(\zeta q\sqrt x),
+13498: \end{array}\tag{BN4}
+13499: \]
+13500: \[
+13501:  \Psi=\sum_{i=1}^4 A_i^2-\frac{4\beta}{\zeta q}uwWZ,
+13502:  \qquad E_1=A_1-A_2,\quad E_2=A_3-A_4.
+13503:  \tag{BN5}
+13504: \]
+13505: Every monomial and its radical is a product of a pure-source and a
+13506: pure-testing element. This remains true if $x/q$ is unbounded.
+13507: The exact inequality meant here is a separated SOS certificate:
+13508: \[
+13509:                     \Psi-\tfrac12(E_1^2+E_2^2)\in\Sigma T^2.
+13510:  \tag{BN6}
+13511: \]
+13512: Indeed, if $WZ\ge0$, then $A_1A_2,A_3A_4\ge0$ and
+13513: \[
+13514:  \Psi=E_1^2+E_2^2+
+13515:               2(\sqrt{A_1A_2}-\sqrt{A_3A_4})^2.
+13516: \]
+13517: The radicals displayed here split into pure-source and pure-testing
+13518: radicals. If $WZ<0$, use instead
+13519: \[
+13520:  \Psi-\tfrac12(E_1^2+E_2^2)
+13521:  =\tfrac12(A_1+A_2)^2+\tfrac12(A_3+A_4)^2
+13522:                   +\frac{4\beta}{\zeta q}|uwWZ|.
+13523: \]
+13524: The last positive separated monomial is a square. Thus BN6 is valid
+13525: for all states, including $WZ=0$. At the actual source contact every
+13526: $A_i$ agrees, so $\Psi$ and its first contact derivatives vanish.
+13527: 
+13528: \paragraph{The exact scalar after circuit subtraction.}
+13529: Write $N_0=W/\zeta-uwZ=N/\ell$, where $N$ is SN7, and keep
+13530: $G,B,B_u,R$ from SN7. Thus
+13531: \[
+13532:  R=\frac{\sqrt S}{\zeta}G-uN_0.
+13533:  \tag{BN7}
+13534: \]
+13535: Subtract the entire circuit BN5 from the exact scalar graph in SN9.
+13536: Define
+13537: \[
+13538: \begin{gathered}
+13539:  A=\zeta^2 A_N-b,\qquad A_P'=A_P-zc/\ell^2,\\
+13540:  K'=K-2\beta/(\zeta q),\quad J'=K'-\ell A_P',
+13541:  \quad L'=J'-A/\zeta,\\
+13542:  H'=F_Z-\beta a-\beta xc/q-\ell^2ScA_P'
+13543:                           +ac(A-2\zeta J').
+13544: \end{gathered}\tag{BN8}
+13545: \]
+13546: Then $F_0-\Psi=A N_0^2+A_P'G^2-2\zeta uwZL'N_0+H'Z^2$.
+13547: All coefficients of $A$ and $A_P'$ are bounded:
+13548: \[
+13549:  A=\mu\ell^2(1+ra+ec)^2
+13550:        +(\beta+\tfrac12)\tau^2c(1+c)-b,
+13551:  \qquad \overline A=\overline{A_P'}=\tfrac12.
+13552:  \tag{BN9}
+13553: \]
+13554: Here and below the residue is taken at infinitesimal $u,w$.
+13555: 
+13556: The circuit subtraction has especially simple exact effects on the
+13557: SN10 quotient dictionary:
+13558: \[
+13559: \begin{gathered}
+13560:  L'_a=L_a,\qquad L'_c=L_c+\kappa n_s/\ell,\qquad
+13561:  H'_{20}=H_{20},\quad H'_{02}=H_{02},\quad
+13562:  H'_{11}=H_{11}-2n_s,\\
+13563:  H'=S\delta^2(d_s+cH_{02})
+13564:                +c(a-x)\delta H'_{11}+c(a-x)^2H_{20}.
+13565: \end{gathered}\tag{BN10}
+13566: \]
+13567: In particular no coefficient $n_s$ remains on its own in the final
+13568: conductors. With $C_R$ and $L_a$ from SN11--SN13 put
+13569: \[
+13570:  C_G'=\kappa(H_{11}-2n_s)/\ell,\qquad
+13571:  C_N'=-H_{11}-2\ell L_c/\kappa.
+13572:  \tag{BN11}
+13573: \]
+13574: These are bounded. The cancellation for the second coefficient is
+13575: explicit:
+13576: \[
+13577:  C_N'=-Sa_0\ell^2r+(\beta+m+\tfrac12)\tau^2(c+1/\ell)
+13578:                  +2\ell\kappa\mu\tau-m\tau^2.
+13579:  \tag{BN12}
+13580: \]
+13581: For $C_G'$ use the bounded formula SN13 and $\kappa n_s=z$.
+13582: The exact full scalar is consequently
+13583: \[
+13584: \begin{split}
+13585:  F_0={}&\Psi+A N_0^2+A_P'G^2+d_sB^2+H_{02}(wB)^2
+13586:        +C_RR^2-2\sqrt S\,L_aGR\\
+13587:  &+C_G'G(wB)+C_N'N_0(wB_u).
+13588: \end{split}\tag{BN13}
+13589: \]
+13590: This is an identity in unrestricted state coordinates, not a
+13591: restriction to a contact graph in the full parent.
+13592: 
+13593: \paragraph{Free helper rows across the whole source sphere.}
+13594: First reserve the positive rows $E_1,E_2$ from BN6. If $d_s$ is a
+13595: unit, $wB$ has infinitesimal cost on $\sqrt{d_s}B$. Otherwise
+13596: $z$ is a positive bounded unit. The exact identity
+13597: \[
+13598:  E_2=-\sqrt z\,\{(w/\ell)G+
+13599:                           \sqrt S\,w(w-\sqrt q)Z\}
+13600: \]
+13601: then gives
+13602: \[
+13603:  wB=-\frac{w+\sqrt q}{\sqrt z}E_2
+13604:                    -\frac{w(w+\sqrt q)}\ell G.
+13605:  \tag{BN14}
+13606: \]
+13607: Every coefficient in BN14 is infinitesimal, so any fixed real pivot
+13608: on $wB$ is free at infinitesimal Gram cost. Only the chosen pure-source
+13609: unit $\sqrt z$ is inverted. Literal $\beta=0$ uses the first branch.
+13610: 
+13611: After this pivot has been allocationd, the normalized SN8 identity is
+13612: \[
+13613:  \delta^2N_0^2+\frac{2\kappa\delta}{\ell}G(wB)
+13614:           +2\kappa(wB)^2-(wB_u)^2
+13615:                          =(\delta W/\zeta)^2.
+13616:  \tag{BN15}
+13617: \]
+13618: It supplies any fixed pivot on $wB_u$ at infinitesimal cost. The order of
+13619: these two allocations is deliberate; no weak $B$ diagonal is needed
+13620: in the second step.
+13621: 
+13622: \paragraph{Both full normals and their only additional row.}
+13623: Use the complete $H_X,H_Y,H_{XY},Y_P,Y_a,Y_c$ from SN18 and its
+13624: bounded $\widehat A_X,\widehat X_a,X_c$ from SN17. These formulas
+13625: only require $\tau,\mu,\beta$ bounded, not $n_s$ bounded.
+13626: The entire first-normal part is
+13627: \[
+13628: \begin{split}
+13629:  L_X={}&\ell w\widehat A_XN_0
+13630:        +\frac{uw\sqrt S}{\ell}\widehat X_aG
