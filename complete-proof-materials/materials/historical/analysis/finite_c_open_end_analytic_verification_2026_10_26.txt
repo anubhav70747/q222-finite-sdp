@@ -1,0 +1,142 @@
+Finite-c open-end theorem: bounded analytic PSD-chain verification
+26 October 2026
+
+VERDICT AND SCOPE
+The analytical PSD argument in fetched-1407/FINITE_C_THEOREM_AND_PROOF.md
+is valid on its stated strict real face domain, conditional on its explicit
+generic coefficient/source identities (being checked separately). No gap
+was found in the gauge limit, graded Schur implication, or compact
+uniformity. It supports admission of every sufficiently small positive
+epsilon along each strict face point, uniformly on compact subsets, and
+the corresponding inverted zero-end neighborhoods. It does NOT establish
+all finite c, singular face boundaries, arbitrary noncompact coupled
+face/epsilon degenerations, or a global exact lift.
+
+Inputs read: the complete theorem/proof, map_core.py, two_kernel.py, and
+the endpoint/tree/tail/right-inverse portions of verify_finite_c.py.
+No checker execution, numeric test, browser action or repository change.
+The separate code/identity audit must be combined with this analytical
+finding before publishing the theorem as verified.
+
+1. EXACT DOMAIN
+The theorem fixes positive real a,t,eta,rho with rho<t,
+0<t-rho<1, eta<1 and T=a^2t+eta>1, then uses
+b=a^2t+eta epsilon, r=rho epsilon, epsilon=c^-2.
+These are strict face interiors, not arbitrary source-dependent
+infinitesimal face parameters. For sufficiently small epsilon the native
+gaps h=eta epsilon, g=T-1+(eta+rho)epsilon,
+j=1+rho-t, 1-c^2h=1-eta and
+b-a^2c^2r=a^2(t-rho)+eta epsilon have the required signs.
+The full rescaled parent is source-normalized without a state slice;
+map_core.py:8-29 and proof:20-43 retain all four state coordinates.
+Its C/epsilon coefficient is analytic because C starts at epsilon^2.
+
+2. SMALL GAUGE AND ENDPOINT BLOCK
+Proof:79-97 gives p2,q2>0: a^2t+2eta-1=(T-1)+eta>0 and
+2rho+1-t=rho+[1-(t-rho)]>0. gamma_max is strictly positive.
+For 0<gamma<gamma_max the listed last LDL condition is equivalent to
+p2 q2-gamma(q2+a^2 p2)/(4a)>0 after cancellation of gamma^2;
+this also implies q2-gamma a/4>0. The positive cX,cY and kernel pivot
+therefore give the old five-difference A_gamma positive definite and
+positive odd coefficient. Only sufficiently small gamma is subsequently
+needed; fixing gamma_max/2 without a tail check is not assumed.
+
+3. RANGE CONDITION AND SCHUR LIMIT
+verify_finite_c.py:57-61 shows Q0 splits into the first-three and
+last-three feature blocks. Its first-five principal block A0 has one
+extra kernel x=(1,1,1,0,0). The actual tail coupling B is a multiple
+of principal columns 3 and 0 of A0 (proof:118-124; checker:95-98).
+Thus both columns are in ran A0; this is stronger than merely small B.
+The two columns belong to complementary blocks, so Q0[0,3]=0 makes
+their limiting cross cost zero. The principal-column quadratic costs
+are exactly the indicated Q0[3,3] and Q0[0,0] entries.
+
+The limit at proof:145-160 is justified. In range/kernel coordinates,
+A_gamma=[A4+O(gamma), O(gamma); O(gamma), gamma d+O(gamma^2)]
+with d>0. Its kernel Schur term is gamma d+O(gamma^2); the range
+inverse tends to A4^-1 and the B vectors have zero kernel component.
+Hence B^T A_gamma^-1 B -> B^T A0^+ B; no 1/gamma pole survives.
+The supplied exact source reductions give the full residual matrix
+diag(rho t(1+rho)/(2(t+1)), eta t(1+rho)/(2(t+1)))>0.
+Consequently small positive gamma makes the full 2x2 tail Schur matrix
+positive, not just its two original diagonal terms. The proposed
+dyadic source-only search terminates by this positive limit.
+
+4. FIRST-ORDER TREE AND ACTUAL TAIL COUPLINGS
+All five tree weights at proof:103-110 are positive; the only less
+immediate numerator T+rho-t=(T-1)+[1-(t-rho)] is positive.
+The five edges form a connected tree, so its reduced Laplacian is
+positive definite (its quadratic form vanishes only on constants,
+removed by the chosen differences). Its determinant is the edge-weight
+product. The first-order free solve leaves this charge block fixed,
+fixes old/tail B, and forces charge/tail and tail/tail first orders zero.
+Thus the 37-rank compatibility solve needs no positivity from its free
+old/old or old/charge entries. Those entries are harmless at the later
+graded Schur orders. Their exact compatibility is an algebraic checker
+obligation rather than a consequence of tree positivity alone.
+
+5. ALL-ORDERS RIGHT INVERSE AND FORCED TAIL
+The coefficient map is constant rational on the fixed 12 differences
+plus odd square (two_kernel.py). A fixed rational inverse on its image
+maps the analytic rational Taylor remainder r2 to an analytic bounded
+matrix; it cannot introduce a small epsilon denominator. An isolated
+zero denominator in the Taylor quotient is removable by its exact
+value/first derivative subtraction. The construction is exact for the
+whole coefficient vector, not a truncated equality.
+
+The last-state X and Y rows are X-UVY and Y-UVY. No other difference
+root has constant-angular X or Y. Consequently their diagonal and mixed
+Gram entries are uniquely the full parent coefficients of constant X^2,
+Y^2,XY. This verifies the analytic force-of-coefficients reason for
+proof:186-193; an arbitrary image right inverse cannot alter those
+entries. The tail is epsilon^2 T0+O(epsilon^3), with exactly zero mixed
+entry, while charge/tail begins at epsilon^2. Note that the literal code
+ordering is old5,tail2,charge5; the proof's displayed block ordering is
+the corresponding fixed permutation, not a different frame.
+
+6. FULL GRADED SCHUR
+For fixed admissible face parameters and a chosen small gamma,
+the old block is uniformly positive for sufficiently small epsilon.
+Eliminating it produces charge epsilon L+O(epsilon^2), charge/tail
+O(epsilon^2), and tail epsilon^2 S_gamma+O(epsilon^3).
+The charge inverse is O(epsilon^-1), so its full 2x2 tail correction
+is O(epsilon^3). Since S_gamma is positive definite, the whole remaining
+tail is positive definite, including its determinant. The odd scalar
+has a positive constant term. Hence H(epsilon)>0 and g(epsilon)>0
+for all sufficiently small positive epsilon; endpoint support continuity
+alone was not substituted for this argument.
+
+7. COMPACT UNIFORMITY
+On a compact set strictly inside the face domain, all source denominators,
+A4/kernel pivots, the explicit limiting S0 margins and gamma_max have
+uniform bounds away from zero. The preceding range/kernel Schur formulas
+give uniform convergence S_gamma->S0. Thus a single sufficiently small
+positive gamma works throughout the compact set. All rational coefficient
+maps and removable Taylor remainders are uniformly bounded there. The
+three positive blocks and odd scalar then admit one sufficiently small
+epsilon_K. Pointwise continuity alone would not justify the single gauge;
+the fixed-rank block form and positive explicit margins supply it.
+
+8. OTHER END AND FIXED GRID
+The source inversion and entire-parent permutation are separate exact
+identity checks. The limiting coordinate map is bijective on the strict
+face interiors: from zero-end (a,b',r',t') recover
+t=1/b', rho=r'/b', eta=1-a^2 t'/b'. Its strict inequalities are exactly
+rho<t, t-rho<1, eta in (0,1), T>1. The reciprocal parent transform maps
+sixth-root indices (i,j) to (6-j,6-i), preserving the fixed finite grid.
+The present 16 feature set is also preserved up to source/state scaling
+and permutation (UVX<->X, UVY<->Y, UVW<->Z, UW<->UZ, VW<->VZ).
+
+To interpret 'whole open zero end', transformed face coordinates may vary
+analytically with epsilon rather than stay exactly fixed. The proved
+compact uniformity handles these paths in a small compact neighborhood
+of each strict limiting face point. It does not cover approach to the
+boundary of that open face while epsilon vanishes at an uncontrolled rate.
+
+SUPPORTED CLAIM FOR DELIVERY
+Exact fixed-grid PSD admission for the native C2 parent in sufficiently
+small finite-c neighborhoods of the two strict open c-ends, pointwise
+in the face parameters and uniformly on their compact interior subsets,
+once the companion exact coefficient/inversion audit passes. Both full
+normal rows and all state cross terms are included. No global finite-c
+or singular-limit completion follows from this result alone.

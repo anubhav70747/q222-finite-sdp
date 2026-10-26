@@ -47,6 +47,14 @@ after the source face has been fixed.
 
 ## What is proved
 
+The [verified open-end construction, L12](../complete-proof-materials/CHECKLIST.md)
+now gives an exact 16-feature Gram for every sufficiently small positive
+epsilon=c^-2 at each strict C2 infinity-face point, uniformly on compact
+interior subsets. Exact source inversion gives the corresponding zero-end
+neighborhoods. Its all-orders coefficient correction and full last Schur block
+are proved. Arbitrary finite native c and coupled approaches to the source
+walls remain outside this result.
+
 **Proposition 1 (soundness).** `L_k ⊆ C_can` for every k. See the bullets
 above.
 

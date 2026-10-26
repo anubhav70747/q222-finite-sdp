@@ -1,6 +1,6 @@
 # Published material inventory
 
-1342 original files copied; 75 members unpacked from newly fetched packages; 265 exact-byte matches linked to existing repository files. Original archives preserve further inherited dependencies and data.
+1358 original files copied; 75 members unpacked from newly fetched packages; 265 exact-byte matches linked to existing repository files. Original archives preserve further inherited dependencies and data.
 
 The [source map](SOURCE_MAP.json) contains every file hash, original path, publication path, duplicate mapping and exclusion reason. The [checklist](CHECKLIST.md) distinguishes proofs, historical reviews and unfinished construction.
 
@@ -1723,3 +1723,25 @@ The [source map](SOURCE_MAP.json) contains every file hash, original path, publi
 | analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1328/V06_global_implication_original.zip | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1328/V06_global_implication_original.zip) | 14182 |
 | analysis/v01_conjunction_verification_2026_10_26.txt | [file](materials/historical/analysis/v01_conjunction_verification_2026_10_26.txt) | 7368 |
 | analysis/v06_global_conjunction_verification_2026_10_26.txt | [file](materials/historical/analysis/v06_global_conjunction_verification_2026_10_26.txt) | 7016 |
+
+
+## Verified C2 open-end construction, 14 UTC
+
+| Source | Public material | Bytes |
+|---|---|---:|
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1407/C2_open_end_verified_delivery.zip | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1407/C2_open_end_verified_delivery.zip) | 31383 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1407/construct_exact_witness.py | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1407/construct_exact_witness.py) | 3873 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1407/DELIVERY_AND_REPLAY_RECEIPT.json | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1407/DELIVERY_AND_REPLAY_RECEIPT.json) | 2353 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1407/EXAMPLE_EXACT_GRAM.json | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1407/EXAMPLE_EXACT_GRAM.json) | 3657 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1407/FINITE_C_THEOREM_AND_PROOF.md | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1407/FINITE_C_THEOREM_AND_PROOF.md) | 18375 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1407/map_core.py | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1407/map_core.py) | 3623 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1407/RECOVERY_MANIFEST.json | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1407/RECOVERY_MANIFEST.json) | 2191 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1407/two_kernel.py | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1407/two_kernel.py) | 1068 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1407/verify_finite_c.py | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1407/verify_finite_c.py) | 7940 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1407/verify_inversion.py | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1407/verify_inversion.py) | 1537 |
+| analysis/finite_c_open_end_analytic_verification_2026_10_26.txt | [file](materials/historical/analysis/finite_c_open_end_analytic_verification_2026_10_26.txt) | 8131 |
+| analysis/finite_c_open_end_code_verification_2026_10_26.txt | [file](materials/historical/analysis/finite_c_open_end_code_verification_2026_10_26.txt) | 7192 |
+| analysis/finite_c_open_end_code_verification_2026_10_26/verify_finite_c.py.stdout.txt | [file](materials/historical/analysis/finite_c_open_end_code_verification_2026_10_26/verify_finite_c.py.stdout.txt) | 1210 |
+| analysis/finite_c_open_end_code_verification_2026_10_26/verify_interface_supplement.py.stdout.txt | [file](materials/historical/analysis/finite_c_open_end_code_verification_2026_10_26/verify_interface_supplement.py.stdout.txt) | 946 |
+| analysis/finite_c_open_end_code_verification_2026_10_26/verify_inversion.py.stdout.txt | [file](materials/historical/analysis/finite_c_open_end_code_verification_2026_10_26/verify_inversion.py.stdout.txt) | 329 |
+| analysis/finite_c_open_end_code_verification_2026_10_26/isolated_run/verify_interface_supplement.py | [file](materials/historical/analysis/finite_c_open_end_code_verification_2026_10_26/isolated_run/verify_interface_supplement.py) | 1731 |

@@ -1,0 +1,125 @@
+FINITE-C OPEN-END ORIGINAL CODE / INTERFACE VERIFICATION
+Date: 2026-10-26
+
+Conclusion. The recovered original package passes the targeted exact generic
+coefficient and inversion checks. Its source dictionary, full four-state parent,
+fixed two-kernel coefficient map, all-orders right inverse, and forced tail block
+agree with the current native equations. No unresolved algebraic interface gap
+was found in this bounded audit. This is evidence for the strict open-end theorem
+in the recovered proof, not for all finite c, walls, or global Q222 coverage.
+Analytical Schur positivity and compact-uniform existence are reviewed separately.
+
+Inputs and preservation
+-----------------------
+Original directory (relative to analytical-paper-2026-10-22):
+analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1407/
+Read FINITE_C_THEOREM_AND_PROOF.md, map_core.py, two_kernel.py,
+verify_finite_c.py, verify_inversion.py, construct_exact_witness.py,
+EXAMPLE_EXACT_GRAM.json, and RECOVERY_MANIFEST.json in full. All seven payload
+hashes and byte lengths match the recovery manifest. Originals were unchanged.
+Compared the source equations directly with github-q222-finite-sdp/latex/
+certificates/c2_short.tex:263-299 and the native entry/contact convention.
+
+Exact native interface
+----------------------
+The face parameters are a,t,eta,rho>0 with 0<rho<t, 0<t-rho<1,
+0<eta<1, and a^2*t+eta>1. Set epsilon=c^(-2), b=a^2*t+eta*epsilon,
+r=rho*epsilon. All six rational native weights (n,m,C,A,D,alpha), including
+their common Delta and N formulas and signed denominators, match c2_short.
+The current native contact (c,ac; b/a,-cr,c(b/a-at),1) becomes all ones under
+u=cU, v=caV, W_native=(b/a)W, X_native=-rho X/c,
+Y_native=eta Y/(ac), Z_native=Z.
+
+The supplemental checker substitutes those transformations into the full native
+parent with SIX INDEPENDENT weights and FOUR unrestricted state coordinates. It
+proves F_native/c^2 equals map_core.native_parent exactly, including the signed
+core. Thus this comparison is not confined to a contact-state or reduced-state
+restriction. The Gram maps represent F/4: f0,f1 and the exact tail comparisons
+use that same factor; no factor-of-four inconsistency was found.
+
+Dictionary, map, and all-orders completion
+-----------------------------------------
+The fixed 14 even features are
+UW, UVX, VZ, VW, UZ, UVY, UVW, Z, UX, VX, UY, VY, X, Y;
+the two odd features are sqrt(UV)W, sqrt(UV)Z. Their angular exponents lie in
+the fixed Z6 grid. The two even kernel groups produce 12 difference roots; the
+odd difference is sqrt(UV)(W-Z). The code orders the even roots as old five,
+tail two, charged five; the proof's old/charged/tail order is a permutation.
+
+The exact map M has 78 coefficient rows, 79 symmetric-Gram coordinates and rank
+66. verify_finite_c.py:29-46 checks its rank and all 12 left-kernel identities
+for the exact native rational source, not only a Taylor approximation. Lines
+67 and 124 check M H0=f0 and M H1=f1, retaining all state coefficients and the
+specified first-order tree/tail couplings (restricted-map rank 37).
+
+Lines 128-133 construct the source-independent rational 66-pivot inverse R.
+The supplement additionally proves the full matrix identity
+M[:,pivots] R M[pivot_rows,:] = M.
+This is a right inverse ON THE IMAGE of M; it is not a surjection onto R^78.
+The 12 native identities put the exact f(epsilon) in this image. Consequently
+H2(epsilon)=R[(f-f0-epsilon*f1)/epsilon^2] on the pivot coordinates gives
+M(H0+epsilon H1+epsilon^2 H2)=f(epsilon) exactly at all admissible epsilon.
+There is no unrepresented higher-order coefficient remainder.
+
+The supplement verifies C(0)=C'(0)=0, needed because the parent includes C/epsilon
+and the original Taylor construction retains C through second order. The six
+rational source denominators at epsilon=0 factor, respectively, as
+  n:     2 a^4 rho t(t+1)
+  m:     2 a^4 t(t+1)(a^2 t+eta-1)
+  C:     2 a^6 t^2(t+1)
+  A:     2 a^4 eta t(t+1)
+  D:     2 a^6 t(t+1)(t-rho-1)
+  alpha: 2 a^4 t(eta-1)(t+1).
+Every factor is nonzero on the stated strict face. Thus the rational source is
+analytic near zero, f0/f1 are its actual value/derivative, and H2 has no pole
+there. This supports the bounded-remainder input; it does not itself prove the
+separate positive-semidefinite continuation or compact-uniform theorem.
+
+Forced tail coefficients
+------------------------
+The supplement inspects the complete constant-angular X^2,Y^2,XY rows of M.
+Each has exactly one nonzero Gram coordinate, respectively H[5,5], H[6,6],
+and 2H[5,6] in the code's reduced-root order. Therefore EVERY exact lift through
+this map has the following tail block, regardless of the chosen right inverse:
+  epsilon^2 diag(rho^2(n+m+1/2), (eta/a)^2(A+C+D+1/2)),
+with zero mixed term. Original lines 137-142 check those three exact native
+coefficients, including full D/C/alpha contributions to the parent. The
+Schur-limit algebraic identities at lines 151-154 also pass; the emitted words
+"positive" and "CERTIFIED" are not an independent machine proof of inequalities.
+
+Inversion
+---------
+The exact source involution is c'=1/(ac), a'=a, b'=a^2/b,
+r'=a^2 c^2 r/b, t'=(1-c^2(b-a^2 t))/b. verify_inversion.py:18-29 proves
+(n,m,C,A,D,alpha) -> (n,D,alpha,A,m,C) and the unrestricted full-parent identity
+u^2 v^2 F_sigma(1/v,1/u; Z,X,Y,W)=F_original(u,v; W,X,Y,Z).
+The Z6 grid is preserved since uv(1/v)^(i/6)(1/u)^(j/6)
+=u^((6-j)/6)v^((6-i)/6), the index permutation (i,j)->(6-j,6-i).
+At the transformed zero end, (b',r',t') tends to
+(1/t,rho/t,(1-eta)/(a^2 t)). Its strict inequalities
+0<r'<1, 0<t'<1, b'+r'>1, b'>a^2 t'
+are equivalent to the original face inequalities, with inverse
+t=1/b', rho=r'/b', eta=1-a^2 t'/b'. Thus the checked inversion reaches the
+corresponding open end without changing the fixed angular grid.
+
+Replay and exact limits of the audit
+------------------------------------
+Receipts: analysis/finite_c_open_end_code_verification_2026_10_26/
+Python 3.14.3, SymPy 1.14.0, Windows; internal dependencies map_core.py and
+two_kernel.py. Unchanged copies ran in isolated_run with Python -B:
+  verify_finite_c.py: exit 0, 10.049 seconds.
+  verify_inversion.py: exit 0, 1.659 seconds.
+The separately authored verify_interface_supplement.py also exited 0.
+Each has separate saved stdout/stderr; dependencies_and_replay.json records
+runtime versions, source hashes and execution scope. No numerical solver,
+witness search, parameter sweep, browser operation, or repository edit occurred.
+
+construct_exact_witness.py was inspected but NOT run. It performs exact dyadic
+gauge selection followed by an exact LDL test at a supplied rational epsilon;
+its finite max_gauge_index can report failure even when the analytical existence
+result guarantees success after further refinement. That implementation cap is
+not a counterexample to the existence theorem. The stored exact Gram example
+was read, but its LDL witness was not independently replayed in this task.
+The justified scope is a fixed strict face point and sufficiently small positive
+epsilon, with the second end obtained by the proved inversion. The claimed
+compact-uniform bound and positivity argument require the companion proof audit.

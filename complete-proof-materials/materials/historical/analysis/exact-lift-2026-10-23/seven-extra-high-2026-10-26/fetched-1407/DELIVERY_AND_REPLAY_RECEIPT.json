@@ -1,0 +1,72 @@
+{
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "sympy": "1.14.0",
+  "original_manifest_matches": [
+    {
+      "name": "FINITE_C_THEOREM_AND_PROOF.md",
+      "sha256": "fd344e0410479104eb811eb4a254e2ca5da7dc2f886d0554b83d5655b7b1caae",
+      "bytes": 18375
+    },
+    {
+      "name": "map_core.py",
+      "sha256": "7550e8eae8029fa422f2608d97e4d787943c8f189534132c8368afde90d6f0c9",
+      "bytes": 3623
+    },
+    {
+      "name": "two_kernel.py",
+      "sha256": "61e4ba5a7cceb642677b3dad24231d05dc9954cf00c22f18579bc76d2305de0f",
+      "bytes": 1068
+    },
+    {
+      "name": "verify_finite_c.py",
+      "sha256": "66e920c3391e3fc82372d0712cbbad0adbf9bcd284b011db53ea3ea3efeed552",
+      "bytes": 7940
+    },
+    {
+      "name": "verify_inversion.py",
+      "sha256": "9785f0bb5c073951deb9f338a8a3720ec89e4424288cdee34a1de996ea386535",
+      "bytes": 1537
+    },
+    {
+      "name": "construct_exact_witness.py",
+      "sha256": "b7f822b2af97e6a250ef40f355d772d8f6dd708379d79f97b2446dc81ad2de13",
+      "bytes": 3873
+    },
+    {
+      "name": "EXAMPLE_EXACT_GRAM.json",
+      "sha256": "17a52809e5e0b4b126d7f70578c3cd8c0ab1eddea16ab758e66c7334e1851c77",
+      "bytes": 3657
+    }
+  ],
+  "internal_dependencies": [
+    "map_core.py",
+    "two_kernel.py"
+  ],
+  "runs": [
+    {
+      "script": "verify_finite_c.py",
+      "exit_code": 0,
+      "elapsed_seconds": 10.049
+    },
+    {
+      "script": "verify_inversion.py",
+      "exit_code": 0,
+      "elapsed_seconds": 1.659
+    },
+    {
+      "script": "verify_interface_supplement.py",
+      "exit_code": 0,
+      "provenance": "separately authored generic interface audit",
+      "stdout": "verify_interface_supplement.py.stdout.txt",
+      "stderr": "verify_interface_supplement.py.stderr.txt"
+    }
+  ],
+  "not_executed": [
+    "construct_exact_witness.py"
+  ],
+  "policy": "exact generic verification only; no witness search or sweeps",
+  "original_files_recovered": 8,
+  "original_zip_recovered": false,
+  "zip_limit": "The visible package link produced no download event; all seven manifest-listed files and the manifest were downloaded from their file cards.",
+  "scope": "Exact generic checks plus separate analytical PSD verification; strict open-end neighborhoods only. All finite c and singular-source uniform admission remain open."
+}

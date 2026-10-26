@@ -91,8 +91,8 @@ The 22 October full analytical review supports qualitative finite-SDP existence.
   Evidence: [C2_END_GRAM_LEMMA.md](../independent-review/C2_END_GRAM_LEMMA.md).
   Completion condition/scope: Keep the distinct state rescaling at the two ends. Endpoint positivity alone does not give finite-c positivity.
 
-- [ ] **L08 — Finite-c complete-state certificate in one fixed library.** OPEN construction; affine and graded partial calculations recovered.
-  Evidence: [EXACT_LIFT_CANDIDATE.md](../independent-review/EXACT_LIFT_CANDIDATE.md); [Finite-c recovered record](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1207/C2_finite_c_recovery/C2_Finite_c_Recovery_Record.md); [Missing runtime dependencies](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1207/C2_finite_c_recovery/MISSING_DEPENDENCIES.txt).
+- [ ] **L08 — Finite-c complete-state certificate in one fixed library.** OPEN for arbitrary finite native c; exact neighborhoods of both strict open C2 ends verified in L12.
+  Evidence: [EXACT_LIFT_CANDIDATE.md](../independent-review/EXACT_LIFT_CANDIDATE.md); [Finite-c recovered record](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1207/C2_finite_c_recovery/C2_Finite_c_Recovery_Record.md); [Missing runtime dependencies](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1207/C2_finite_c_recovery/MISSING_DEPENDENCIES.txt); [Original open-end theorem and proof](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1407/FINITE_C_THEOREM_AND_PROOF.md); [Independent analytic PSD verification](materials/historical/analysis/finite_c_open_end_analytic_verification_2026_10_26.txt); [Exact source and coefficient verification](materials/historical/analysis/finite_c_open_end_code_verification_2026_10_26.txt).
   Completion condition/scope: Give a Gram or equivalent exact certificate for the complete parent at all finite native c, with actual coefficient matching and positivity.
 
 - [ ] **L09 — Uniform admission through every singular source limit.** OPEN construction.
@@ -107,6 +107,10 @@ The 22 October full analytical review supports qualitative finite-SDP existence.
   Evidence: [SMOOTH_FEATURE_OBSTRUCTION.md](../independent-review/SMOOTH_FEATURE_OBSTRUCTION.md); [NATIVE_MULTIPLIER_OBSTRUCTION.md](../independent-review/NATIVE_MULTIPLIER_OBSTRUCTION.md); [C2_HALF_POWER_OBSTRUCTION.md](../independent-review/C2_HALF_POWER_OBSTRUCTION.md).
   Completion condition/scope: Distinguish failure of one fixed NPA/feature cone from impossibility of an arbitrary finite SDP lift.
 
+
+- [x] **L12 — Exact C2 finite-c admission near both strict open c-ends.** VERIFIED on the stated strict real face domain, uniformly on compact interior subsets.
+  Evidence: [Original open-end theorem and proof](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1407/FINITE_C_THEOREM_AND_PROOF.md); [Independent analytic PSD verification](materials/historical/analysis/finite_c_open_end_analytic_verification_2026_10_26.txt); [Exact source and coefficient verification](materials/historical/analysis/finite_c_open_end_code_verification_2026_10_26.txt); [Verified delivery ZIP (assembled from original files)](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1407/C2_open_end_verified_delivery.zip).
+  Completion condition/scope: For every fixed a,t,eta,rho>0 with rho<t, 0<t-rho<1, eta<1 and a^2*t+eta>1, the complete native parent has an exact PSD Gram on 16 fixed features for sufficiently small positive epsilon=c^-2. The gauge, full 2x2 tail Schur complement, constant rational all-orders correction and inversion are verified. Coupled approaches to source walls and arbitrary finite c are outside this result.
 
 ## Reconciliation and verification
 

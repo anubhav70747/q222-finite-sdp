@@ -1,6 +1,8 @@
 # Finite semidefinite representation of the simplest quantum correlation set
 
-**Complete material publication, 26 October:** [proofs, data and exhaustive checklist](complete-proof-materials/). This includes the original 215-component source archive, all 45 C1 and 49 C2 case records with direct proof links, the complete historical analytical reviews, and newly fetched proof/checker packages. The [final reconciliation](complete-proof-materials/RECONCILIATION.md#final-qualitative-conjunction-26-october-13-utc) completes the current-version qualitative-existence review using those body reviews. Finite-c positivity, uniform singular-limit admission and the evaluated global pencil remain open as L08-L10.
+**Complete material publication, 26 October:** [proofs, data and exhaustive checklist](complete-proof-materials/). This includes the original 215-component source archive, all 45 C1 and 49 C2 case records with direct proof links, the complete historical analytical reviews, and newly fetched proof/checker packages. The [final reconciliation](complete-proof-materials/RECONCILIATION.md#final-qualitative-conjunction-26-october-13-utc) completes the current-version qualitative-existence review using those body reviews. Admission for arbitrary finite c, all singular source limits and the evaluated global pencil remain open as L08-L10.
+
+**New exact construction:** [L12 and its proof package](complete-proof-materials/CHECKLIST.md) give a fixed 16-feature PSD certificate near both strict open C2 ends. The complete finite-c identity and graded Schur positivity have been independently checked; the result is uniform on compact subsets of the stated face interior.
 
 The central difficulty lies where measurements become compatible. There,
 the state matrix loses rank while the Bell coefficients and measurement

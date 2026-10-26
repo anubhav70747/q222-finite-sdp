@@ -1,0 +1,10 @@
+PASS generic full-parent normalization, with all six independent weights and four states
+PASS exact C(0)=C_prime(0)=0 required by checker Taylor truncation
+SOURCE n denominator_at_zero= 2*a**4*rho*t*(t + 1) limit= (-rho + t)/(2*rho*(t + 1))
+SOURCE m denominator_at_zero= 2*a**4*t*(t + 1)*(a**2*t + eta - 1) limit= (rho + 1)/(2*(t + 1)*(a**2*t + eta - 1))
+SOURCE C denominator_at_zero= 2*a**6*t**2*(t + 1) limit= 0
+SOURCE A denominator_at_zero= 2*a**4*eta*t*(t + 1) limit= a**2*t*(rho + 1)/(2*eta*(t + 1))
+SOURCE D denominator_at_zero= 2*a**6*t*(t + 1)*(-rho + t - 1) limit= -t*(-rho + t)/(2*(t + 1)*(-rho + t - 1))
+SOURCE alpha denominator_at_zero= 2*a**4*t*(eta - 1)*(t + 1) limit= -(a**2*rho*t + a**2*t + eta*t + eta + rho - t)/(2*(eta - 1)*(t + 1))
+PASS exact constant-angular X^2,Y^2,XY rows uniquely force the two tail diagonals and mixed entry
+PASS fixed rational 66-pivot projection is identity on the full coefficient-map image
