@@ -1,0 +1,79 @@
+{
+  "text_hashes": {
+    "scope": "Exact SHA256 checks of connector-fetched new text against published manifest. Does not verify all binaries, old inherited bytes, mathematical claims or execute the publisher's Python verifier.",
+    "matched": 1353,
+    "mismatches": [],
+    "matching_paths": "Available fetched_sha256 entries in REPOSITORY_INVENTORY.json, compared with the pinned publisher manifest."
+  },
+  "links": {
+    "links": 2488,
+    "broken": [],
+    "scope": "Path existence in the pinned Git tree; no mathematical correctness inference or fragment validation."
+  },
+  "published_receipt": {
+    "scope": "delivery integrity only; scripts parsed, not executed; no new theorem certification",
+    "verified_manifest_files": 2023,
+    "source_map_records_checked": 1698,
+    "component_source_and_presentation_hashes": 430,
+    "original_archive_dependency_bindings": 445,
+    "c1_cells": 45,
+    "c2_leaves": 49,
+    "local_links_checked": 2488,
+    "new_original_archives": [
+      {
+        "file": "BN_UN_complete_package.zip",
+        "members": 4,
+        "crc_ok": true
+      },
+      {
+        "file": "BN_UN_corrected_independent_package.zip",
+        "members": 6,
+        "crc_ok": true
+      },
+      {
+        "file": "EL_NU_independent_complete_package.zip",
+        "members": 12,
+        "crc_ok": true
+      },
+      {
+        "file": "fixed_delta_C2_complete_package.zip",
+        "members": 6,
+        "crc_ok": true
+      },
+      {
+        "file": "IC_LII_complete_package.zip",
+        "members": 13,
+        "crc_ok": true
+      },
+      {
+        "file": "R2_C2_complete_package.zip",
+        "members": 10,
+        "crc_ok": true
+      },
+      {
+        "file": "R3_R4_original_complete_package.zip",
+        "members": 3,
+        "crc_ok": true
+      },
+      {
+        "file": "R3_R4_R6_R7_independent_package.zip",
+        "members": 10,
+        "crc_ok": true
+      },
+      {
+        "file": "R6_R7_complete_package.zip",
+        "members": 13,
+        "crc_ok": true
+      },
+      {
+        "file": "SG_EN_complete_package.zip",
+        "members": 4,
+        "crc_ok": true
+      }
+    ],
+    "new_standalone_python_files_parsed": 7,
+    "errors": [],
+    "ok": true
+  },
+  "attribution": "Publisher receipt is on-file evidence. Only separately labelled text-hash and path checks were repeated here."
+}
