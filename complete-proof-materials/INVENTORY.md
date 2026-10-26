@@ -1864,3 +1864,8 @@ The [source map](SOURCE_MAP.json) contains every file hash, original path, publi
 | analysis/new-density-obstruction-replay-2026-10-26/c2_corner.log | [file](materials/historical/analysis/new-density-obstruction-replay-2026-10-26/c2_corner.log) | 774 |
 | analysis/new-density-obstruction-replay-2026-10-26/density_entrances.log | [file](materials/historical/analysis/new-density-obstruction-replay-2026-10-26/density_entrances.log) | 493 |
 | analysis/new-density-obstruction-replay-2026-10-26/verification_results.json | [file](materials/historical/analysis/new-density-obstruction-replay-2026-10-26/verification_results.json) | 1639 |
+
+
+## Bounded review of merged upstream package
+
+[Bounded review of the merged upstream package](materials/historical/analysis/upstream_85e915c_bounded_review_2026_10_26.txt) preserves the independent scientific delta review of upstream commit 85e915c. Original note: 8569 bytes; SHA-256 f9e1d8fb97f188a75fa2cb453c9dd02c6dcdffbcaca00e422f61898e6fa412fb.

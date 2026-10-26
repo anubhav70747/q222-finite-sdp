@@ -24,3 +24,8 @@ The qualitative existence proof and the strict C2 open-end theorem retain their 
 
 
 Original proofs, exact data and independent reviews are linked under L15/L16 in the [material checklist](CHECKLIST.md). The C2 scoped reduction is linked under L14.
+
+
+## Merged upstream results
+
+[Bounded review of the merged upstream package](materials/historical/analysis/upstream_85e915c_bounded_review_2026_10_26.txt) verifies the contact-ray exposure deduction, the order-13 angular determinant pencil and the half-power sharpening of the strict C2 open-end theorem. Exposure requires each extreme contact ray to enter at least one cone in an exact finite sound sum. The angular pencil has quartic source coefficients and does not supply a source-affine full-state lift. The half-power result applies to the already verified open-end neighborhoods. None of these deductions proves strict C1 or general finite-c C2 admission. The proposed reflection reduction still requires its exact source transformation, positive testing multiplier and state congruence before it can justify covering C1 from an oriented domain.
