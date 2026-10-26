@@ -1,0 +1,96 @@
+IC/LII current-version interface verification — 26 October 2026
+
+VERDICT
+V03 can be closed as CURRENT-VERSION RECONCILIATION. The fetched
+IC_LII_3324833_VERSION_AND_PROOF_AUDIT.md and the original recovered IC/LII
+proof agree with the actual native equations at commit
+332483309586e0fec6e16fc1dd855915b648dca1. No substantiated correction or
+incompatible current formula was found. This does not recover or certify
+the contents of the inaccessible earlier conversation. Its alleged
+correction should remain unverified historical provenance, not an open
+mathematical defect inferred solely from that conversation's absence.
+
+The conclusion is restricted to native weak-IH IC and strong-II LII,
+with their stated source bounds, original contact equations, strict
+bounded-residue Gram lemma and previously reviewed complementary tests.
+It is not independent certification of every C2 leaf or global assembly.
+
+VERSION AND SOURCES
+Current HEAD is the stated frozen commit. The working c2_short.tex blob
+and its frozen Git blob both equal d61c3bc3a49eda5bace886fbaa3124aa8bd261eb.
+Read the original complete IC_LII package PROOF.md, four relevant checker
+sources, the new audit, c2_short.tex LII1–LII20 and IC1–WIE6, the native
+GE1/WI1/DI7 source dictionary, RR5–RR6, and the earlier complete C2 review
+analysis/c2_completion/final_audit.txt. The latter supplies explicitly
+identified prior coverage; its verdict is not substituted for the local
+equation checks below.
+
+1. NORMAL FACTORS ARE CONSISTENT
+IC uses Fhat=4w^2 P(u,1/w), and defines 4L_X=partial_X Fhat, likewise Y
+(c2_short.tex:4770–4778,4873–4876). Thus the linear restoration is
+4L_X E_X/sqrt(4n+2), not twice that L_X or a normal of P. Direct exact
+readback of both derivative formulas and their monic quotient identities
+passed. The factors do not affect the infinitesimal cross-coupling claim.
+
+The decisive LII xi–R factor can also be read independently from LII6–7.
+Write Rcal for the bounded gauge coefficient in original PROOF.md (29).
+Before native substitution, the full xi-W coefficient divided by v is
+
+ P_xi = -8nzr(1+U)(1+V)/B
+        -8m[B+zr+U(H-1)]/B
+        +4(1+V)(U-zr)/B + U Rcal(U,V).
+
+Using DI7, its U-quotient residue is 4/h-8g_0 s_0
+=4/h-4/(1+h)=4/[h(1+h)]. The symmetric Gram off-diagonal is HALF
+this polynomial cross coefficient: 2/[h(1+h)]. With xi diagonal 2
+and R diagonal 2/[h^2(1+h)], the Schur pivot is
+2/[h(1+h)^2]>0, exactly LII18–19 (c2_short.tex:1437–1465).
+There is no missing factor of two in the current source.
+
+2. IC LARGE-D REMOVAL IS A FULL-STATE IDENTITY
+WIE4, including the kappa=k-8DHr cancellation, passed exact symbolic
+readback for independent formal weights. The state relation WIE5 follows
+directly from J+eZ=Q+u(X+ruZ)-w(Y-HwZ); it retains both normals.
+Subtracting 4D(J+eZ)^2 from the full parent leaves, relative to setting
+D=0, the polynomial -8De JZ-4De^2 Z^2. Hence derivative/4 introduces
+exactly -2De uZ and +2De wZ into the X and Y rows. These are the stated
+constant corrections; the monic quotient coefficients are D-removed.
+They cannot introduce a bare D hard-normal coefficient. WIE3 gives
+bounded De and infinitesimal 1/sqrt(D). Substitution in WIE4 plus IC8a
+gives the WIE6 T pivot 1+r_0-r_0^2; every listed diagonal is positive
+for 0<=r_0<=1/2 (c2_short.tex:5029–5107).
+
+3. LII GAUGE, BOUNDED DIVISION AND GRAM ARE COMPATIBLE
+Exact replay confirms both LII4 identities, all four retained packets,
+and full-parent LII6. It also confirms the complete bounded gauge
+coefficient, disappearance of R_h W, parities, P_xi ideal support,
+degree_U(phi)<=2, and the stated phi(0,V).
+
+The boundedness inference is legitimate: c=CL,d=Dyj are units;
+t+j=1+zr and positivity make cj+dt a unit even at t or j openings.
+Thus g,s and q are bounded, and the remainder contains n only through
+nr and extra bounded source factors, alpha through alpha(1-H) or its
+real cap, m=z^2*mhat and A=y*Ahat. The source-only real caps need not
+be uniform across source points. No mixed inversion is involved.
+
+After the exact gauge removes the dependent first-normal coefficient,
+the original contact jets imply LII9–10 for the formal remainder.
+P_xi in the bounded ideal (U,z) supplies a bounded factor-z quotient;
+the subsequent divisions are monic. For phi, subtracting its stated
+V(d_s+e_s V)(U-z)^2/z^2 leaves U[a(V)U+b(V)]; the value and U-jet
+force a(y)=b(y)=0, and the V-jet supplies the final monic quotient.
+LII15 therefore allocates the entire parent remainder on the six roots.
+The five-root residue excluding T is strict; the exact LII20 zero adds
+only a positive T^2 residue and absorbs bounded T couplings by a real
+Schur complement (c2_short.tex:1337–1480). Literal n=0 is preserved.
+
+VALIDATION AND LIMITS
+Four targeted original checkers were freshly replayed, all exit 0:
+Q222_IC_normal_symbolic_check.py; Q222_WIE4_full_graph_identity.py;
+Q222_LII_full_parent_readback.py; Q222_LII_coeff_extraction_probe.py.
+No broad solver run, native-source rederivation, or repo edit was made.
+The positivity and boundedness arguments above are separate from these
+polynomial checks. The remaining projective test charts are reused from
+the complete prior C2 review with their original-parent identities and
+matching source hypotheses; this bounded pass did not replay every
+remote chart. Close V03 on this exact scope and retain those imports.

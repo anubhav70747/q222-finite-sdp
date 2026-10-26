@@ -1,0 +1,48 @@
+Recovery integrity note (2026-10-26)
+
+The prior run reported saving the following files under /mnt/data/c2_c_continuation,
+but the current container does not have that directory. These files could not
+be copied into this recovery bundle. Do not treat this ZIP as the original
+complete computational project or as a runnable full finite-c verifier.
+
+Historical runtime data (binary intermediates, not recoverable from logs):
+- first_order_matrices.pkl
+- second_grade_data.pkl
+- charge_edge_family.pkl
+- graded_schur_data.pkl
+- two_kernel_grade2.pkl
+- exact_full_coeffs.pkl
+- new_contact_functional.pkl
+
+Historical checker source in previous runtime (not all copies recovered):
+- first_order_rank_probe.py
+- second_grade_rational.py
+- charge_edge_family.py
+- charge_good_rational.py
+- graded_schur_exact.py
+- construct_two_kernel_grade2.py
+- two_kernel_rank.py
+- new_contact_exact.py
+- new_contact_formal.py
+- generic_first_order_charge_verify.py
+- generic_two_kernel_verify.py
+- exact_two_kernel_compat.py
+- verify_g0_endpoint.py
+- verify_charge_identities.py
+- charge_y_min.py
+- first_order_kernel_test.py
+- graded_schur_couplings.py
+- second_grade_nullspace.py
+
+Historical first, earlier partial bundle:
+- /mnt/data/C2_C_End_Charge_Continuation_Audit.zip
+- /mnt/data/c2_c_continuation/C2_C_End_Charge_Audit.md
+- /mnt/data/c2_c_continuation/exact_check_output.txt
+
+Only code found in current user-provided sources is complete and verifiable:
+- check_c2_c_limits.py, copied verbatim from uploaded pasted source.
+
+Some source code from the previous run can be reconstructed from the recovered
+execution transcript, but the original binaries and full exact Gram matrices
+are missing. The reported positive 2x2 Schur data and graph edges were
+preserved as exact rationals in this recovery bundle.

@@ -1,0 +1,127 @@
+Thin-R10 interface reconciliation: bounded analytical verification
+26 October 2026
+
+VERDICT
+
+V02 may be marked RESOLVED for the precise source/version interface task:
+the frozen strict positive-thin native R10 branch, its CA/SE local contact
+chart, formal negative-beta base, and composition with the separately
+reviewed actual-C2 all-tests joins. No mathematical interface mismatch was
+found. This is not a new audit of every local coefficient, other C1/C2
+leaves, or an evaluated uniform global SDP pencil.
+
+Reviewed note:
+analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1207/
+thin_R10_reconciliation/THIN_R10_INTERFACE_RECONCILIATION.md (lines 1-138).
+Its frozen reference is 332483309586e0fec6e16fc1dd855915b648dca1.
+Original source/review copies under its original_sources/ were compared
+with the current maintained latex sources below. No symbolic checker or
+numerical test was run; no repository file was changed.
+
+FIVE INTERFACES
+
+1. Quarter-parent, retained packets, and complete stress: supported.
+Current latex/certificates/c2_short.tex:13909-13911 explicitly fixes F/4.
+TL3 at 13950-13961 retains delta m=0 and delta beta+delta d/2=-n.
+The entire TL5 identity at 14015-14025 contains the complete N-normal,
+while TL6 at 14038-14056 retains -n D_v(X+uZ)^2 and the original D event
+row, centered-A difference and signed-core difference. These agree with
+the reconciliation note lines 20-49 and A8-A16 of the included original
+combined application. The stress is not restricted to zero normals.
+TL4 vanishes at the actual contact by 14012-14015. The actual centered-A
+excess is positive under 14029-14036, using the bounded formal cap rather
+than assigning a sign to a raw negative event.
+
+2. Distinct source names and common frame: supported.
+R10.2-R10.3 at c2_short.tex:13705-13721 prove b=O(w_s) from the actual
+physical source before the CA/SE split. TL1 at 13914-13920 gives
+b/w_s~1/t in the thin branch. The note lines 53-66 agrees with the CA
+dictionary c1_short.tex:5313-5326,5385-5395 and the SE dictionary
+6039-6055,6088-6092,6117-6131. Substitution k^2=sb gives
+delta_c^2 E k^2=s R_1/K=sK/Q=j_s^2 E, so the two K_c expressions are
+consistent. T_1=K-k^2 e agrees with the native T=K-k^2 t_1 zeta_1 since
+t_1 zeta_1=e. Source j_R is not replaced by infinitesimal j_s.
+The CA circuit monomials equal delta_c times the SE ones; their paired
+radical roots therefore scale by delta_c as well. The hard normals N,M_B
+are the original unscaled normals in both c1 exact parent displays.
+The note correctly applies SE directly rather than transporting a
+bounded CA matrix by an unbounded delta_c. The optional CS1 normal
+delta_c M_B is not silently used in SE.
+
+3. Native cancellations and normalized SE first stage: supported.
+Current c2_short.tex:14077-14133 supplies both raw chart allocations,
+the TL8/TL10 coquotients and the complete contribution of the negative
+paired-beta packet. The original combined application A7-A9,A17-A19
+(included source lines 43-60,110-126) displays the necessary common
+epsilon^2 factor in all five scalar, five full-normal, and three hard
+coefficients of E/rho. The f_0 cancellation is done before treating
+1/D_0^2 as a bounded coefficient. After the common source factor is
+extracted, all scalar omega dependence still enters through
+V_0=1-(epsilon^2 tau/R_1)uv omega. Thus its ordered omega quotient has
+epsilon^2, not merely epsilon. Modulo epsilon the normalized scalar
+coefficients remain even in u,v. The exact scalar contact equation
+gives s_0(0,0)=0, making p_0,q_0 polynomial quotients. These are the
+premises actually needed for the following division, not an appeal to
+small evaluated stress or to contact jets alone.
+
+4. SE second quotients and both normals: supported.
+The current c1 proof at 6173-6222 explicitly specifies the first and
+second stages. Applying SE7 with V=0 and U=T_omega/epsilon, whose
+residue vanishes, gives the displayed reductions at 6205-6207:
+J_x=2 f_BB+f_BC-u^2 p_s, J_y=E j_s v q_s,
+J_z=u p_s+E omega v q_s, J_h=0 modulo epsilon.
+In the ordered omega quotient u has already been set to k, which is
+zero modulo epsilon. Only J_z contributes, namely E v q_s(v^2).
+Therefore all four second quotients are in (epsilon,v), with bounded
+polynomial coquotients, as claimed in the note lines 95-102. This
+checks the precise order of substitutions; generic contact vanishing
+would not establish the result. Both complete normalized normal source
+sums are omega-independent modulo epsilon and need only one conductor.
+The note and A21 retain the factor 1/2 required when changing from
+N L_N+M_B L_M to 2N G_N+2M_B G_M. CA uses the separate restricted
+CC3 premise M^2+(D_0^2), not unrestricted mixed D_0 products.
+
+5. Formal beta reserve, normalization, and strict-base composition:
+supported. Current c2_short.tex:13967-13991 states the altered formal
+premises explicitly and does not import a physical C1 theorem at beta<0.
+The actual original SE reserved coefficient at c1_short.tex:6105-6113
+is ((4 beta+2d)/a)(R-t)/R. With formal d_1=1 and
+nu=(d_1/a)(R-t)/R, it is exactly (4 beta_1+2)nu=2pi nu.
+Since pi~1, retaining nu leaves (2pi-1)nu>0. All other retained paired
+packets use beta_1+1/2=pi/2>0. The scale bound formerly derived from
+beta>=0 is separately supplied by TL1; no positivity of bare beta_1
+is asserted. CA8 at c1_short.tex:5465-5474 and SE9-SE11 at 6234-6259
+give the strict full eight-root remainder with both normals.
+The note line 130 correctly converts a Gram for F'=sigma F_1 to the
+quarter-parent kappa F_1/4 by kappa/(4sigma), or kappa/sigma if that
+Gram already represents F'/4. For this formal native source a_1 and
+sigma=2/C_1 are positive units. Restoring the native normalizations and
+ordering the same roots therefore preserves boundedness and strict
+residue. Addition of rho H has zero real residue; it is an indefinite
+bounded correction, not a separate positive Gram. Packet restoration
+then gives the full actual local parent.
+
+SCOPE AND DISCREPANCIES
+
+No substantive discrepancy was found. The current TL paragraph at
+c2_short.tex:14135-14145 states the weaker first-stage epsilon condition;
+the stronger normalized epsilon^2 justification is explicit in the
+recovered A19-A20 application and in the current c1 proof at 6165-6222.
+Adding that explanation at TL is optional exposition, not a missing
+analytical implication once the cited construction is retained.
+
+All-tests composition is reused from R10_all_tests_join_review.txt:
+its local-gate hypothesis is now supplied by the reconciled construction.
+Its remote/state joins are actual-C2 results, not negative-beta physical
+C1 imports. The 22 October full C2 review already inspected TL stress,
+both normal supports, paired reserve and literal n=0 overlap (its final
+audit lines 123-125,156-164). This verification closes the later specific
+version/interface uncertainty while preserving that historical scope.
+
+CURRENT SOURCE IDENTITIES (SHA256, read during this pass)
+latex/certificates/c2_short.tex
+7fb22ff3c61e1e124b512e02bdb4cd3bf65ebed30d930711aea604ed0cca93db
+latex/certificates/c1_short.tex
+1866359e57b7795780e252599e986884e3b8e74f495f867ef4404b70bbcf9161
+latex/chapters/06_mechanisms.tex
+74545bc1576453a9d2b427540cdd6b097f3ed0200d60afa4724d57a14a74a148

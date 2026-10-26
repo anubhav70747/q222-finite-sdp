@@ -1,0 +1,202 @@
+SOURCE: latex/certificates/c1_short.tex:6060-6259
+
+6060: Their residues are $2(E+\ell)$ for $i=2,b,3,5,\alpha$, and $4$ for
+6061: $i=d$; $c_4$ has residue $2$. These formulas hold uniformly as
+6062: $\ell$ tends to zero or to one.
+6063: 
+6064: \paragraph{One bounded centered remainder, including both normals.}
+6065: Set
+6066: \[
+6067:  A_* =\frac{ArH}{1+rH},\qquad
+6068:  A-A_* =\frac{A}{1+rH}>0.                              \tag{SE2}
+6069: \]
+6070: Retain the entire square $4(A-A_*)D_uD_v(Y-r uW)^2$.
+6071: It and its full first derivative vanish at exact native contact.
+6072: Divide the remaining parent by the positive pure coefficient $a$;
+6073: every factor $a$ cancels before coefficients are used. Write
+6074: \[
+6075:  \begin{array}{ll}
+6076:  b_2=8\widetilde c_2e^2/(R\widetilde c_3),&
+6077:  b_b=8\widetilde c_be^2/(R\widetilde c_3),\\
+6078:  b_3=8/T,&b_5=8\widetilde c_5/(T\widetilde c_3),\\
+6079:  L=Ar/a=2\eta^2c_4/(Q\widetilde c_3),&
+6080:  d_0=d/a=2\eta\widetilde c_d/\widetilde c_3,\\
+6081:  A_0=A_*/a=LH/(1+rH),&
+6082:  \alpha_0=\alpha/a=2\varepsilon^4j^6Q^2\eta^2
+6083:        \widetilde c_\alpha/(K^2\widetilde c_3).
+6084:  \end{array}                                                     \tag{SE3}
+6085: \]
+6086: Every quantity in (SE3) is bounded with unit denominators, and
+6087: $b_2,b_b$ contain $\varepsilon^2$.
+6088: Use the original normals $N,M_B$, put $p=t/R$, $h=a/T$, and write
+6089: \begin{align*}
+6090:  q_A&=vD_uw,\qquad q_B=v(D_u-uN-puD_uv w),\\
+6091:  W&=w+u(M_B+hq_B)/D_u,\qquad Y=uw-(M_B+hq_B)/D_u.
+6092: \end{align*}
+6093: The entire bounded remainder is
+6094: \begin{align*}
+6095: G_s={}&b_2\{N^2-2q_AN+(1-p)q_A^2\}
+6096:  +b_bD_v\{N^2+2q_AN+pq_A^2\}\\
+6097:  &+b_3D_v\{M_B^2+2q_BM_B+hq_B^2\}
+6098:  +b_5\{M_B^2-2q_BM_B+(1-h)q_B^2\}\\
+6099:  &+4A_0D_uD_v(Y-r uW)^2
+6100:  +4LD_uD_v(2uWY-r u^2W^2)\\
+6101:  &+4\alpha_0D_u(vY-1)^2
+6102:  +2d_0D_u\{(vY-1)^2-D_v\}
+6103:  +\nu D_vN^2,\qquad \nu=d_0(R-t)/R.                 \tag{SE4}
+6104: \end{align*}
+6105: This is (SD4), after the indicated exact centered subtraction and
+6106: normalization, except that a positive part of the original $\Pi_2$ is
+6107: kept inside the remainder. Indeed the original coefficient of
+6108: $D_vN^2$ in $\Pi_2/a$ is
+6109: \[
+6110:  \frac{4\beta+2d}{a}\frac{R-t}{R}\ \ge\ 2\nu.
+6111: \]
+6112: Thus subtracting only $\Pi_2/a-\nu D_vN^2$ remains legitimate, even
+6113: when $\beta=0$. The other three original terms are retained unchanged.
+6114: All full first normals and every hard quadratic term are present in
+6115: (SE4); there are no terms of higher normal degree.
+6116: 
+6117: \paragraph{A conductor that never divides by $\varepsilon$.}
+6118: Define the separated monomials and differences
+6119: \[
+6120:  A=\varepsilon wv,\quad B=v,\quad C=Euw,\quad
+6121:  D_0=\varepsilon^2j^3E,\quad k=\varepsilon j,
+6122: \]
+6123: \[
+6124:  x=B-C,\quad y=A-kC,\quad z=uB-kC,\quad h_0=kC-D_0.
+6125: \]
+6126: The two standard radical pairings are obtained by dividing the original
+6127: four squared circuit monomials by $\delta$: they are
+6128: $A,uB,kC,D_0$, and their product is $(k^2BC)^2$.
+6129: Their strict circuit is
+6130: $T_4=y^2+z^2+h_0^2-2yz+2q_1^2$.
+6131: The exact contact is $(u,w,v)=(k,j,\varepsilon j^2E)$.
+6132: Besides the three basic conductor identities,
+6133: \[
+6134:  C(u-k)=z-ux,\quad
+6135:  \varepsilon C(w-j)=y-\varepsilon wx,\quad
+6136:  C(v-\varepsilon j^2E)=E(wz+jy-kwx),                \tag{SE5}
+6137: \]
+6138: use the additional, division-free identity
+6139: \[
+6140:  C v(w-j)=Ew(w-j)z+Ejw y-Ekw^2x.                    \tag{SE6}
+6141: \]
+6142: For a monic contact division
+6143: $S=(u-k)T_u+(w-j)T_w+(v-\varepsilon j^2E)T_v$,
+6144: whenever $T_w=\varepsilon U+vV$, the bounded conductor is
+6145: \[
+6146:  \begin{aligned}
+6147:  CS={}&x[-uT_u-\varepsilon wU-Ekw^2V-EkwT_v]\\
+6148:  &+y[U+EjwV+EjT_v]
+6149:  +z[T_u+Ew(w-j)V+EwT_v].
+6150:  \end{aligned}                                      \tag{SE7}
+6151: \]
+6152: No division by $\varepsilon,j,k,r,a,t$, or a contact difference occurs.
+6153: 
+6154: To apply (SE7), first express the scalar in the four raw monomials.
+6155: At zero normals let
+6156: $V_0=1-puv w$. Then
+6157: \[
+6158:  q_A=D_u wv,\quad q_B=D_uvV_0,\quad
+6159:  uW=C/E+u^2hvV_0,\quad Y=C/E-hvV_0.
+6160: \]
+6161: The scalar of (SE4) therefore has an exact raw allocation
+6162: \[
+6163:  f_AA^2+f_{BB}B^2+f_{BC}BC+f_{CC}C^2+\rho D_0^2.     \tag{SE8}
+6164: \]
+6165: Expand only the nonconstant part of $(vY-1)^2$ into $B,C$; its constant
+6166: has $\alpha_0/D_0^2=2\widetilde c_\alpha/\widetilde c_3$.
+6167: The coefficients in (SE8) have unit denominators independent of $w$.
+6168: Every dependence on $w$ in them comes through $V_0$, and hence has a
+6169: factor $\varepsilon^2$; modulo $\varepsilon$ they are independent of
+6170: $w$ and even in $u,v$. Both complete first normals are in $(A,B,C)$
+6171: with bounded coefficients by the same exact formulas.
+6172: 
+6173: Write $\mathcal L_x(S),\mathcal L_y(S),\mathcal L_z(S)$ for the three
+6174: coefficients produced by (SE7), using monic divisions in the order
+6175: $u,w,v$. Substitution of $A=y+kC$, $B=x+C$, and $D_0=kC-h_0$
+6176: leaves the scalar coefficient
+6177: \[
+6178:  S=k^2f_A+f_{BB}+f_{BC}+f_{CC}+k^2\rho.
+6179: \]
+6180: It vanishes at contact, and $T_w(S)\in(\varepsilon^2)$, so (SE7)
+6181: applies with $U=T_w(S)/\varepsilon$ and $V=0$. Let
+6182: \[
+6183:  H=(2f_{BB}+f_{BC}+\mathcal L_x(S),\,
+6184:        2kf_A+\mathcal L_y(S),\,\mathcal L_z(S),\,-2k\rho),
+6185:  \qquad J=H-2k\rho_c(-2k,1,1,-1),
+6186: \]
+6187: where the subscript $c$ denotes exact contact evaluation. The native
+6188: contact jets and the identity $kC(y+z-h_0-2kx)=q_1^2-yz$ give
+6189: $J_i|_c=0$ for all four coefficients. The factor $k$ needed for this
+6190: identity comes from the original $\rho D_0^2$ term.
+6191: The contact Jacobian of $(x,y,z)$ has determinant
+6192: $-E^2\varepsilon^3j^4\ne0$; its independence proves these vanishing
+6193: statements without introducing its inverse into a coefficient.
+6194: 
+6195: It remains to check the second conductor. In this paragraph a bar
+6196: means reduction modulo $\varepsilon$ only. Write
+6197: $\bar S=s(u^2,v^2)$ and put
+6198: \[
+6199:  p_s(U,V)=\frac{s(U,V)-s(0,V)}{U},\qquad
+6200:  q_s(V)=\frac{s(0,V)}{V}.
+6201: \]
+6202: These are polynomial quotients: parity gives the first, and contact
+6203: gives $s(0,0)=0$. Direct substitution into (SE7) yields
+6204: \[
+6205:  \bar J_x=\overline{2f_{BB}+f_{BC}}-u^2p_s(u^2,v^2),\quad
+6206:  \bar J_y=Ejv q_s(v^2),\quad
+6207:  \bar J_z=u p_s(u^2,v^2)+Ewv q_s(v^2),\quad \bar J_h=0.
+6208: \]
+6209: The ordered $w$ division first sets $u=k$, which is zero modulo
+6210: $\varepsilon$. Consequently
+6211: \[
+6212:  (\overline{T_w(J_x)},\overline{T_w(J_y)},
+6213:    \overline{T_w(J_z)},\overline{T_w(J_h)})
+6214:        =(0,0,Ev q_s(v^2),0).
+6215: \]
+6216: Every second-stage $T_w$ therefore belongs to $(\varepsilon,v)$,
+6217: as required by (SE7), with bounded polynomial coquotients. The complete
+6218: normal raw coefficients are independent of $w$ modulo $\varepsilon$;
+6219: their single conductor has $T_w\in(\varepsilon)$. Thus both scalar
+6220: divisions and both full normal lifts stay in the bounded coefficient
+6221: ring. All denominators used here are the separated units already
+6222: displayed in (SE3)--(SE4).
+6223: 
+6224: \paragraph{Finite residues of that full lift.}
+6225: Give $(\varepsilon,j,u,w,v,N,M_B)$ weights $(1,1,2,1,3,5,3)$;
+6226: $E,\ell,\tau$ have weight zero. Every positive-weight variable is
+6227: infinitesimal, while all weight-zero coefficients are bounded.
+6228: The contact substitutions preserve the grading; $x$ has weight three
+6229: and the other circuit roots weight five. Both (SE5) and (SE6) preserve
+6230: weights, so after the scalar collection through weight ten and full
+6231: first normals through weight five, every lifted remainder coefficient
+6232: has positive weight. Restore the unit denominators afterward.
+6233: 
+6234: Set $H_0=E+\ell$ and $V_*=1+\ell H_0$. Direct exact multiplication of
+6235: (SE1)--(SE4), followed by (SE7), gives scalar residue
+6236: \[
+6237:        \frac{8(E+2)}{H_0V_*}x^2+8T_4,                         \tag{SE9}
+6238: \]
+6239: and complete first-normal residues
+6240: \[
+6241:        L_N=0,\qquad L_M=\frac{16E(H_0+1)}{H_0V_*}\,x.
+6242: \]
+6243: The hard block has residue
+6244: \[
+6245:  \operatorname{diag}\left(\frac{4E}{H_0},
+6246:            \frac{8(E^2+2E\ell+2\ell^2+2)}{V_*}\right).       \tag{SE10}
+6247: \]
+6248: These statements include coefficient corrections of positive weight;
+6249: they are not asserted as literal equalities of the full rational scalar.
+6250: 
+6251: The only hard-soft coupled determinant is
+6252: \[
+6253:  \det G_{M,x}
+6254:  =\frac{64(E^2+2E\ell+4E+4\ell)}{H_0^2V_*}>0.              \tag{SE11}
+6255: \]
+6256: Together with $4E/H_0>0$ and the strict two-pairing circuit this gives
+6257: the full bounded strict eight-root Gram. All original positive terms,
+6258: the centered square, and the positive pure-coefficient factor $a$ are
+6259: then restored. All inverses and radicals remain separated between the

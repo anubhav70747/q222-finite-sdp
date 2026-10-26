@@ -1,0 +1,151 @@
+SOURCE: analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/01_R10_COMBINED_APPLICATION_RENDERED.txt
+
+      Q222 Thin R10 Combined Conductor Application Audit 2026 10 26
+
+
+
+ 
+
+
+Thin-R10 bounded conductor: literal CA/SE application audit
+Date: 26 October 2026Object: the original, quarter-parent-normalized thin-R10 stress TL6, on the independent double-infinitesimal testing chart; two actual hard state normals.Outcome: the algebraic gate TL6/rho = R^T H R, with a bounded eight-root coefficient matrix, follows from the corrected CC/SE conductor provided the original native coefficient comparison TL3 and formal contact OP4/OP5 identities hold. All additional boundedness, support, parity, second-stage and first-normal hypotheses are discharged below. The separate strict formal-C1 base is an additional input for local SOS. No complete full-Q222 finite SDP is claimed.
+Sources and exact dependencies
+Original source at pinned commit 92c1f0941bf7565f5fe3f45168959fc9cab12998, latex/certificates/c2_short.tex, source statements R10.2, TL1–TL10, especially the exact full TL6 (around file lines 13900–14145).
+Original C1 chart calculations latex/certificates/c1_short.tex: CA3–CA8 and SE1–SE11. Original CC1–CC6 are also in latex/chapters/06_mechanisms.tex.
+Supplied corrected conductor and candidate native application, Pasted text(6).txt. The raw coefficient definitions (12)–(15) of the candidate were checked by direct formal subtraction from original TL6 without using positive-residue arguments or source sampling.
+Imported source facts, audited elsewhere: (i) TL3's seven native C2-versus-formal-C1 coefficient differences, including the paired-beta identity; (ii) OP4/OP5 giving the same complete stationary contact for the two parents; (iii) a strictly positive-residue full Gram for the formal negative-beta C1 base after selecting its legitimate positive packets. None of these is a consequence of the conductor and they must not be hidden inside it.
+1. Both contact charts, with distinct source names
+To prevent collisions write w_s=ae for the source variable, omega for the independent testing coordinate, j_R for the actual R10 source gap, and j_s for the C1 contact parameter. Let
+$s=1/a,\quad b=a^2B,\quad x=sb,\quad e=s w_s,\quad r=1-s w_s,\quad B=s^2b,\quad \rho=n/e^2>0.$R10.2 gives b bounded; TL1 gives b/w_s and w_s/b positive bounded units, with t,g,j_R units and s,h,x,e infinitesimal. Put
+$K=1+k^2,\ k^2=x=sb,\quad R_1=1+hk^2,\quad Q=K^2/R_1,\quad E=tK/R_1,$$\delta_c^2=\frac{R_1^2}{tK^2b},\quad \varepsilon=\delta_c^{-1},\quad j_s=\delta_c k.
+\tag{A1}$The original C1 source coordinates are (eta_1,zeta_1,r_1,t_1)=(t,s,h,w_s). Substitution into CA3, r_1=ell/Q, eta_1=KE/Q, zeta_1=delta_c^2 k^2 Q E/K, gives exactly
+$\ell=hQ,\quad
+s=j_s^2 QE/K=\frac{j_s^2tK^2}{R_1^2},\quad
+k=\varepsilon j_s,\quad K_c=sK/Q=j_s^2E,
+\tag{A2}$not merely equalities of residues. The inherited source coefficient and its denominator reduce to
+$a_1=(K-\ell)/E=(1-h)/t,\quad
+T_1=K-k^2e,\quad
+h_1=a_1/T_1=\frac{1-h}{tT_1},\quad
+p=w_s/R_1.
+\tag{A3}$Here T_1 is a positive bounded unit. So are t, K, R_1, Q, E, 1-h, h+t, Q_c=1-hB, g, j_R, and the denominators of the native short polynomials P_kappa,P_D,P_alpha in TL3. The letter delta_c is the CA angular source scaling; Delta L=L_2-kappa L_1 is the entirely different coefficient difference (candidate text reused delta for both).
+When b is a positive unit, delta_c and delta_c^{-1} are units and the CA dictionary is
+$(A,B_0,C,D_0)=(\omega v,\delta_c v,\delta_c E u\omega,\delta_c^2k^3E).
+\tag{A4}$It matches original CC with d=delta_c and b_CC^2=E; its contact is (u,omega,v)=(k,delta_c k,delta_c k^2 E).
+When b is positive infinitesimal, epsilon,j_s are positive infinitesimals. Define the source-only unit tau=w_s/epsilon^2, which is a unit because epsilon^2=tK^2 b/R_1^2 and w_s/b is a unit. The SE dictionary is
+$(A,B_0,C,D_0)=(\varepsilon\omega v,v,E u\omega,\varepsilon^2j_s^3E),\qquad
+(u_c,\omega_c,v_c)=(\varepsilon j_s,j_s,\varepsilon j_s^2E).
+\tag{A5}$Every CA monomial is exactly delta_c times the corresponding SE monomial. The soft differences and the two circuit radicals scale by the same factor; the original hard normals N,M_B do not. No CS1 optional scaling delta_c M_B is substituted into SE.
+2. The precise bounded source coquotients
+Use nu=n/rho=e^2, Xi=nu x, Lambda=Theta/rho=w_s^2/b, gamma=r/K_c. In CA,
+$\Lambda=\frac{\delta_c^2QEw_s^2}{K},\quad
+\nu\gamma^2=\frac{w_s^2r^2Q^2}{K^2},\quad
+\nu\gamma=\frac{\delta_c^2Ek^2w_s^2rQ^2}{K^2},\quad
+\frac{\Xi}{D_0^2}=\frac{w_s^2Q^2}{K^2}.
+\tag{A6}$All are bounded in CA because w_s,b,delta_c,E,Q,K are units/bounded. In SE, substituting w_s=epsilon^2 tau and (A2) yields exactly
+$\begin{aligned}
+\Lambda&=\varepsilon^2\tau^2 QE/K,&
+\nu&=\varepsilon^4j_s^4\tau^2Q^2E^2/K^2,\\
+\nu\gamma^2&=\varepsilon^4\tau^2r^2Q^2/K^2,&
+\nu\gamma&=\varepsilon^4j_s^2E\tau^2rQ^2/K^2,\\
+\Xi/D_0^2&=\varepsilon^2\tau^2Q^2/K^2,&
+p&=\varepsilon^2\tau/R_1.
+\end{aligned}\tag{A7}$In particular gamma=r/(j_s^2 E) is unbounded but occurs only in the combinations of (A6)–(A7). The apparent powers 1/j_s are canceled before entering a coefficient ring. These are source identities, not estimates comparing source and test variables.
+Write the TL3-derived starred coefficients as in the candidate:
+$\begin{aligned}
+c_*&=-\Lambda\frac{c_a}{1-h},&
+a_*&=-\Lambda\frac{tc_a S_c}{K(h+t)},\\
+d_0&=-\Lambda\frac{P_\kappa}{K(h+t)},&
+d_*&=\Lambda\left(\frac{S_cP_D}{K(h+t)t j_R}-\frac{P_\kappa}{K(h+t)}\right),\\
+z_*&=d_0-\Xi\frac{P_\alpha}{KQ_c}.
+\end{aligned}\tag{A8}$All five have bounded CA values and belong to epsilon^2 B_c in SE. Crucially, this alone is not enough for f_0: one must retain the last difference in (A8) exactly, giving
+$\boxed{f_0=(z_*-d_0)\frac{D_u}{D_0^2}
+=-\frac{\varepsilon^2\tau^2Q^2P_\alpha}{K^3Q_c}D_u\quad\text{(SE)}.}\tag{A9}$The canceled coefficient has only unit denominators. Declaring an arbitrary (z_*-d_0)/D_0^2 bounded is false without this extra native relation. Other scalar coefficients, both full first-normal rows and all hard entries are epsilon^2 times bounded forms by (A7)–(A8), (A3) and the explicit expansions in the next section. This verifies the source-generator, rather than only raw-input, boundedness premise.
+3. Exact complete TL6 coefficient identity
+Set D_u=1+u^2, D_v=1+v^2, A_t=v omega, V_0=1-puv omega, and use the literal original TL7 inverse, with Z=1:
+$X=N+pD_uA_t-u,\quad q_B=v(D_u-uN-puD_uv\omega),$$W=\omega+\frac{u(M_B+h_1q_B)}{D_u},\quad
+Y=u\omega-\frac{M_B+h_1q_B}{D_u}.
+\tag{A10}$Hence uW-Y=M_B+h_1 q_B, R_{D,event}=M_B+(h_1-1)q_B and X+u=N+pD_uA_t exactly. After TL3 and retention of the complete TL4 contact-zero square and centered-A positive packet, the original quarter-parent TL6 divided by rho is
+$\begin{split}
+\mathscr E/\rho={}&
+2\nu\gamma D_uD_v uA_t
+-\nu D_uD_v(2\gamma pD_u+\gamma^2)A_t^2
+-2\nu\gamma D_uD_v A_t N\\
+&-\nu D_v(N+pD_uA_t)^2
++c_*D_v(M_B+h_1q_B)^2
++d_*(M_B+(h_1-1)q_B)^2\\
+&+z_*D_u(vY-1)^2-d_0D_uD_v
++a_*D_uD_v(2(uW)Y-h(uW)^2).
+\end{split}\tag{A11}$It is not enough to omit either the positive TL5 term 2 nu gamma D_u D_v u A_t or the scalar piece -d_0D_uv^2. They become, respectively, the +2nu gamma D_uD_v/(alpha_B alpha_C) term in f_BC and the -d_0D_u/alpha_B^2 term in f_BB.
+For (alpha_A,alpha_B,alpha_C)=(1,delta_c,delta_c E) in CA and (epsilon,1,E) in SE, introduce the fully specified bounded linear forms
+$\begin{array}{c|ccc}
+& B_0 & C & (N,M_B)\\\hline
+uW & U_B=u^2h_1V_0/\alpha_B & U_C=1/\alpha_C & U_N=-u^3h_1v/D_u,\quad U_M=u^2/D_u\\
+Y&Y_B=-h_1V_0/\alpha_B &Y_C=1/\alpha_C &Y_N=h_1uv/D_u,\quad Y_M=-1/D_u
+\end{array}\tag{A12}$where the first entry of the table denotes uW, not the source scale nu (the checker's code uses UW). Also write
+$t_B=h_1D_uV_0/\alpha_B,\quad r_B=(h_1-1)D_uV_0/\alpha_B,\quad
+t_N=-h_1uv,\quad r_N=-(h_1-1)uv.
+\tag{A13}$Then (A11) is polynomial of degree at most two in the formal variables N,M_B. Its scalar support has exactly
+$F_0=f_AA^2+f_{BB}B_0^2+f_{BC}B_0C+f_{CC}C^2+f_0D_0^2,$its two complete first-normal rows have the form
+$\begin{split}
+L_N&=\ell_{NA}A+\ell_{NB}B_0+\ell_{NC}C,\\
+L_M&=\ell_{MB}B_0+\ell_{MC}C,
+\end{split}\tag{A14}$and the unchanged hard quadratic is H_NN N^2+2H_NM NM_B+H_MM M_B^2. There are no AB_0, AC, CD_0 or B_0D_0 scalar packets; the only D_0 contribution is (D_0^2). Thus the CC second-order hypothesis is (A,B_0,C)^2+(D_0^2), not the larger (A,B_0,C,D_0)^2 (known to be false).
+A direct symbolic collection of (A11) using (A12)–(A13) equals every one of the candidate's original coefficient formulas (12)–(15), including the p^2 contribution of -nu D_v(X+u)^2 and the z_*-d_0 term. The independent script verify_r10_TL6_and_conductor_hypotheses.py performs this universal coefficient identity check with algebraically independent source letters; the check is not a rational sample. The resulting five scalar, five normal and three hard coefficients are exactly those printed in the user's source, without freezing any state normal.
+4. Exact formal jets, before residues or asymptotic reductions
+The test contact (A5) is the same for both original parents. Its full projective state is
+$\boxed{(W_c,X_c,Y_c,Z_c)=
+\left(\frac{j_sK}{R_1},-kr,\frac{kj_sKh}{R_1},1\right).}\tag{A15}$Verify directly from (A10): at contact V_{0,c}=T_1/K, and (A2)–(A3) give
+$pKj_s^2E=1-r,\qquad
+h_1=\frac{1-h}{tT_1},\qquad E=\frac{tK}{R_1}.$Hence omega_c=j_s, N_c=M_{B,c}=0, and all four entries of (A15) are recovered exactly by the TL7 inverse. No residue is taken and no source gap set to zero.
+Now use the algebraic (not positivity) content of OP4/OP5: both the actual native C2 parent and the formal C1 parent obey their complete four state-kernel and two angular stationarity equations at (A15). TL3 is the exact coefficient difference; TL4 and the centered-A excess are squares that vanish at the contact. Subtracting their full parents and square packets therefore gives the formal equalities
+$F_{0,c}=\partial_uF_{0,c}=\partial_\omega F_{0,c}
+=\partial_vF_{0,c}=0,\qquad
+(L_N)_c=(L_M)_c=0.
+\tag{A16}$These are before specialization to infinitesimal sizes and are full-state identities, since the map from the three state coordinates to (omega,N,M_B) has exact inverse (A10). The differentiation in (A16) does not turn any source parameter into a test parameter. This step depends explicitly on the exact TL3 and OP4/OP5 source identities; their independent auditing is outside the conductor theorem.
+At contact A_c=kC_c, B_{0,c}=C_c\ne0, D_{0,c}=k C_c. Thus (A16) gives S_c=0 for the scalar's first conductor and both normal S_{N,c}=S_{M,c}=0 by cancellation in the source field, without inserting an inverse of C_c into a matrix coefficient. The scalar has F_0\in J^2; the two complete normal rows belong to J.
+5. CA: the original CC conductor applies literally
+Use the CA source ring with d_CC=delta_c, b_CC^2=E. The source generators are bounded and delta_c,E,delta_c^{-1} are positive units because this branch has b a unit. Clear the finite source-unit denominators in (A11), and clear powers of D_u=1+u^2, a positive pure-testing unit, before division. These clearings are even in test angles and independent of omega and do not introduce mixed denominators.
+Equations (A13)–(A14) give bounded polynomial coefficients with restricted scalar support (A,B_0,C)^2+(D_0^2) and both normals in (A,B_0,C). The contact jets (A16) give the exact CC premises. CC1–CC6 therefore write the scalar as a quadratic on (x_0,y_0,z_0,h_0,q_1) and each normal as a linear form in (x_0,y_0,z_0). Every quotient is monic; its coefficients are polynomials in bounded source/test generators, so all outputs are bounded, even if k and the testing angles approach zero at unrelated rates. Add the unused second circuit root q_2 and the original two hard normals. The resulting eight-root matrix is bounded. CA does not invoke SE by calling epsilon infinitesimal when it is a unit.
+6. SE: the two scalar stages and both normal rows
+Here epsilon,j_s are positive source infinitesimals; the bounded source generators include tau,E,K,Q,R_1,r,h,h_1, t,j_R,g, and all displayed source-unit inverses. The testing variables u,omega,v are independently infinitesimal. The SE formulas (A7)–(A9) give
+$\boxed{f_A,f_{BB},f_{BC},f_{CC},f_0,
+\ell_{NA},\ell_{NB},\ell_{NC},\ell_{MB},\ell_{MC},
+H_{NN},H_{NM},H_{MM}\in\varepsilon^2\mathcal B.}\tag{A17}$This does not follow merely from their raw boundedness. In particular (A9) is needed to eliminate 1/D_0^2, and the products nu gamma^2/epsilon^2, nu gamma/epsilon must be simplified using (A7) before a source coefficient is considered bounded.
+Divide the entire coefficient polynomial by the common pure-source epsilon^2; put hats on the normalized coefficients. After clearing bounded source-unit and D_u denominators, all normalized coefficients are polynomial in u,omega,v over a bounded source coefficient ring. The four quantities
+$ t_B=h_1D_uV_0,\quad r_B=(h_1-1)D_uV_0,\quad
+Y_B=-h_1V_0,\quad U_B=h_1u^2V_0$are the only scalar expressions depending on omega outside the explicit packet A=epsilon omega v; and each occurs through
+$V_0=1-\frac{\varepsilon^2\tau}{R_1}uv\omega.$Consequently every normalized scalar coefficient satisfies hat f_i-hat f_i|_{omega=j_s}\in(epsilon^2) and, modulo epsilon, is even in both u and v. For example, the exact nonzero reductions include
+$\overline{\hat f_A}=-\frac{\tau^2r^2Q^2}{K^2}D_uD_v,
+\qquad
+\overline{\hat f_0}=-\frac{\tau^2Q^2P_\alpha}{K^3Q_c}D_u.
+\tag{A18}$Likewise all normalized first-normal coefficients are omega-independent modulo epsilon. Their parity is not required: t_N=-h_1uv, for example, is odd in the test angles, but its coefficient is still independent of omega modulo epsilon.
+Let \hat S=k^2\hat f_A+\hat f_{BB}+\hat f_{BC}+\hat f_{CC}+k^2\hat f_0. By (A16), \hat S_c=0. Its omega-dependence starts at epsilon^2, and \bar{\hat S}=s(u^2,v^2) with s(0,0)=0 in the reduced coefficient ring. Thus the first monic division, in the exact order u=k, then omega=j_s, then v=epsilon j_s^2 E, satisfies
+$T_u(\hat S)\equiv u\,p_0(u^2,v^2),\quad
+T_\omega(\hat S)\in(\varepsilon^2),\quad
+T_v(\hat S)\equiv v\,q_0(v^2)\pmod\varepsilon,
+\tag{A19}$where the latter two quotients have no source infinitesimal inverses. Use SE7 with V=0, U=T_omega/epsilon; its U has an additional epsilon factor.
+Subtract the exact circuit contact-gradient relation, using the full F_0\in J^2 jet and the nonzero contact Jacobian -E^2 epsilon^3j_s^4, which is canceled as a zero identity, not inverted. The four corrected scalar coefficients J_x,J_y,J_z,J_h have exact zero contact values. The original corrected conductor now gives, from the actual congruences (A19),
+$\boxed{(T_\omega J_x,T_\omega J_y,T_\omega J_z,T_\omega J_h)
+\equiv(0,0,E v\,q_0(v^2),0)\pmod\varepsilon.}\tag{A20}$Thus each second-stage T_omega J_i\in(\varepsilon,v). The two polynomial quotients V_i=[T_omega J_i-(T_omega J_i)|_{v=0}]/v and U_i=(T_omega J_i)|_{v=0}/epsilon exist in the bounded coefficient ring. This is the proved second-stage premise, not an appeal to generic contact vanishing.
+For the two normal rows define
+$S_N=\frac{k\hat\ell_{NA}+\hat\ell_{NB}+\hat\ell_{NC}}2,
+\qquad
+S_M=\frac{\hat\ell_{MB}+\hat\ell_{MC}}2.
+\tag{A21}$Each vanishes at contact by (A16), and each is omega-independent modulo epsilon, hence its single ordered quotient satisfies T_omega(S_N),T_omega(S_M)\in(\varepsilon). Apply SE7 once to both complete normal rows. Notice the exact factor 1/2 in (A21): the native (A14) writes N L_N+M_B L_M, while the corrected general conductor writes 2NG_N+2M_BG_M.
+Combining the scalar second-stage outputs, both normal rows and the unchanged hard quadratic gives a symmetric 8×8 Gram \hat H over \mathcal B on the fixed root order
+$\mathcal R=(N,M_B,x_0,y_0,z_0,h_0,q_1,q_2)^T,
+\quad\boxed{\mathscr E/\rho=\mathcal R^T(\varepsilon^2\hat H)\mathcal R.}
+\tag{A22}$All coefficient operations are monic polynomial divisions, coefficient additions/multiplications, and inversion of explicit pure source or pure testing units. Neither epsilon, j_s, k, the source gap h, rho, nor any mixed source/test element is inverted. Tests u,omega,v may have any relative infinitesimal valuations independent of source valuations.
+7. Formal-base input and status
+In CA the strict full formal-C1 residue is encoded by the original CA5–CA8 matrix. Its nontrivial (M_B,x_0) determinant is 256/(E^3 delta_c^2)>0. In SE the corresponding source is the actual original SE4 on the unscaled normals; its nontrivial determinant is 64(E^2+2E ell+4E+4ell)/( (E+ell)^2[1+ell(E+ell)] )>0. The soft contrast matrix and the other hard diagonals are strictly positive in the printed formulas. The derivation that the formal negative-beta source legitimately retains all selected positive packets is assigned to the separate formal-base audit. Do not replace it by a physical C1 theorem, because beta_1=-s_n/2<0.
+Conditional conclusion. Let G_0 be the verified bounded formal-C1 full Gram with positive-definite real residue. By the algebraic result above, H\in\operatorname{Sym}_8(\mathcal B) and \mathscr E=\rho\mathcal R^TH\mathcal R; \rho>0 is source infinitesimal. Therefore \overline{G_0+\rho H}=\overline{G_0}\succ0. TF1–TF2 in 03_tensor.tex produce a finite tensor sum of squares, independent of all source/test relative valuations. Restore the exact contact-zero TL4 packet, the centered-A positive excess and the original positive formal-C1 packets. This closes only the native thin-R10 local testing chart once the TL3 and formal-base audits are accepted. The remote/all-source joins and a complete finite SDP lift for Q222 do not follow from this note.
+8. Verified discrepancies and audit boundary
+Must cancel D_0^{-2} first: (A9); otherwise raw boundedness would not prove bounded outputs.
+Must divide by epsilon^2 in SE before reducing: (A17)–(A20). The first scalar T_u\equiv u p_0 only modulo epsilon; no stronger claim is used.
+Second stage is not generic contact vanishing: it uses the normalized exact omega dependence through V_0 and yields (A20). In general, reducing only modulo epsilon is insufficient for this allocation.
+Hard-normal factor of two: the native linear rows are N L_N+M_B L_M, so the conductor inputs are G_N=L_N/2, G_M=L_M/2.
+Separate CA and SE: in CA delta_c is a source unit and CC3 is used; in SE epsilon,j_s are infinitesimal and the two-stage SE7 division is used. j_R is never replaced by j_s.
+Coefficient support is restricted: M^2+(D_0^2), not (M,D_0)^2, throughout. No mixed D_0 products were invented.
+Non-overclaim: the exact TL3 coefficient subtraction and OP4/OP5 stationary identities and the strict negative-beta formal-base decomposition remain independent source-level proof obligations. This note verifies their interfaces and consequences, and checks the whole algebraic bounded-conductor application, but does not independently rederive those large source formulas.
+Reproduction
+Run python verify_r10_TL6_and_conductor_hypotheses.py with SymPy. It proves identically, without numerical sampling, that TL6 expands into all candidate scalar, two full first-normal and hard coefficients. It verifies the CA/SE source dictionary, exact h_1 contact formula and the positive common epsilon^2 factor, with the native z_*-d_0 cancellation before the D_0^{-2} coefficient, and checks scalar parity and omega independence and both normal rows modulo epsilon. The corrected conductor's second-division theorem is applied analytically in (A19)–(A20), not inferred from solver output.

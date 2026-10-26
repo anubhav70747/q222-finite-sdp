@@ -91,8 +91,8 @@ The 22 October full analytical review supports qualitative finite-SDP existence.
   Evidence: [C2_END_GRAM_LEMMA.md](../independent-review/C2_END_GRAM_LEMMA.md).
   Completion condition/scope: Keep the distinct state rescaling at the two ends. Endpoint positivity alone does not give finite-c positivity.
 
-- [ ] **L08 — Finite-c complete-state certificate in one fixed library.** OPEN construction.
-  Evidence: [EXACT_LIFT_CANDIDATE.md](../independent-review/EXACT_LIFT_CANDIDATE.md).
+- [ ] **L08 — Finite-c complete-state certificate in one fixed library.** OPEN construction; affine and graded partial calculations recovered.
+  Evidence: [EXACT_LIFT_CANDIDATE.md](../independent-review/EXACT_LIFT_CANDIDATE.md); [Finite-c recovered record](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1207/C2_finite_c_recovery/C2_Finite_c_Recovery_Record.md); [Missing runtime dependencies](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1207/C2_finite_c_recovery/MISSING_DEPENDENCIES.txt).
   Completion condition/scope: Give a Gram or equivalent exact certificate for the complete parent at all finite native c, with actual coefficient matching and positivity.
 
 - [ ] **L09 — Uniform admission through every singular source limit.** OPEN construction.
@@ -114,13 +114,13 @@ The 22 October full analytical review supports qualitative finite-SDP existence.
   Evidence: [Status reconciliation](RECONCILIATION.md); [final_audit.txt](../complete-proof-materials/materials/historical/analysis/final_audit.txt).
   Completion condition/scope: Compare actual changed equations and hypotheses. A later assignment that did not check a branch does not reopen its prior proof by itself.
 
-- [ ] **V02 — Thin-R10 formal-base and conductor interfaces in the latest source.** OPEN final reconciliation; prior proof and later partial rechecks delivered.
-  Evidence: [r10_source_and_formal_base_audit_2026_10_26.txt](../complete-proof-materials/materials/historical/analysis/r10_source_and_formal_base_audit_2026_10_26.txt); [ca_se_conductor_structural_review_2026_10_26.txt](../complete-proof-materials/materials/historical/analysis/ca_se_conductor_structural_review_2026_10_26.txt); [r10_all_tests_join_audit_2026_10_26.txt](../complete-proof-materials/materials/historical/analysis/r10_all_tests_join_audit_2026_10_26.txt); [final_audit.txt](../complete-proof-materials/materials/historical/analysis/c2_completion/final_audit.txt).
-  Completion condition/scope: Compare TL stress, CA/SE full scalar and normal coefficient collections, negative-beta paired reserve and all testing joins against the already reviewed chain.
+- [x] **V02 — Thin-R10 formal-base and conductor interfaces in the latest source.** RESOLVED for the frozen thin-R10 version/interface task.
+  Evidence: [Five-interface analytical reconciliation](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1207/thin_R10_reconciliation/THIN_R10_INTERFACE_RECONCILIATION.md); [Independent native-source verification](materials/historical/analysis/thin_r10_interface_verification_2026_10_26.txt); [r10_source_and_formal_base_audit_2026_10_26.txt](../complete-proof-materials/materials/historical/analysis/r10_source_and_formal_base_audit_2026_10_26.txt); [ca_se_conductor_structural_review_2026_10_26.txt](../complete-proof-materials/materials/historical/analysis/ca_se_conductor_structural_review_2026_10_26.txt); [r10_all_tests_join_audit_2026_10_26.txt](../complete-proof-materials/materials/historical/analysis/r10_all_tests_join_audit_2026_10_26.txt); [final_audit.txt](../complete-proof-materials/materials/historical/analysis/c2_completion/final_audit.txt).
+  Completion condition/scope: The quarter-parent stress, both normals, native CA/SE frames, normalized two-stage SE division, negative-beta reserve and all-test imports compose at 332483309586e0fec6e16fc1dd855915b648dca1. This closes this interface check, not all leaves or an evaluated global lift.
 
-- [ ] **V03 — IC/LII independent follow-up and any claimed coefficient correction.** OPEN recovery/reconciliation; original proof and checker package delivered.
-  Evidence: [Recovery limits](RECOVERY_LIMITS.md).
-  Completion condition/scope: Recover the independent follow-up from the inaccessible chat and identify the exact equation/version it changes before treating the proposed correction as operative.
+- [x] **V03 — IC/LII current-source and full-parent proof reconciliation.** RESOLVED for the specified native IC and LII sectors.
+  Evidence: [IC/LII version-and-proof audit](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1207/IC_LII_3324833_VERSION_AND_PROOF_AUDIT.md); [Independent native-source verification](materials/historical/analysis/ic_lii_interface_verification_2026_10_26.txt); [Recovery limits](RECOVERY_LIMITS.md).
+  Completion condition/scope: The independent comparison and targeted source verification found no correction needed. Earlier inaccessible chat history remains unrecovered; it supplies no substantiated defect. Other C2 sectors and global construction remain separate.
 
 - [ ] **V04 — Latest BN/UN, R2, R3/R4, R6/R7 and UL readbacks.** OPEN consolidated version check; full proofs and available original checkers delivered.
   Evidence: [Material inventory](INVENTORY.md).

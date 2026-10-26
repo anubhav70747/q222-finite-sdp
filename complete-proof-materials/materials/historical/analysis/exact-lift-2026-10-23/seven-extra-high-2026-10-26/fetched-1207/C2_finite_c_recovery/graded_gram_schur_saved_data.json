@@ -1,0 +1,135 @@
+{
+  "status": "RECOVERY_ONLY_NO_FINITE_C_ADMISSION_PROOF",
+  "source_commit_as_supplied": "feb9543",
+  "face_domain": {
+    "a": ">0",
+    "t": ">0",
+    "eta": "0<eta<1",
+    "rho": ">0",
+    "t_minus_rho": "0<t-rho<1",
+    "a_squared_t_plus_eta": ">1",
+    "epsilon": "epsilon=c^-2>0"
+  },
+  "exact_rational_face_point": {
+    "a": "1",
+    "t": "3/2",
+    "eta": "1/4",
+    "rho": "1"
+  },
+  "source_limit": {
+    "n": "1/10",
+    "m": "8/15",
+    "C": "0 (first nonzero order epsilon^2)",
+    "A": "12/5",
+    "D": "3/10",
+    "alpha": "5/6"
+  },
+  "source_first_derivative": {
+    "n": "-33/50",
+    "m": "-48/25",
+    "C": "0",
+    "A": "-66/25",
+    "D": "3/25",
+    "alpha": "-10/9"
+  },
+  "integer_grid_features": {
+    "old": [
+      "UW",
+      "UVX",
+      "VZ",
+      "VW",
+      "UZ",
+      "UVY"
+    ],
+    "charged": [
+      "UVW",
+      "Z",
+      "UX",
+      "VX",
+      "UY",
+      "VY"
+    ],
+    "second": [
+      "X",
+      "Y"
+    ],
+    "additional_odd": [
+      "sqrt(UV)W",
+      "sqrt(UV)Z"
+    ]
+  },
+  "affine_ranks": {
+    "integer_coefficient_rows": 78,
+    "integer_symmetric_variables_plus_odd_gauge": 106,
+    "integer_coefficient_map_rank": 78,
+    "augmented_contact_rank": 86,
+    "generic_first_order_map_rank": 72,
+    "generic_first_order_left_nullity": 34,
+    "two_kernel_matrix_shape": [
+      106,
+      106
+    ],
+    "two_kernel_rank": 93,
+    "two_kernel_left_nullity": 13,
+    "two_kernel_generic_relations": "13 exact zeros",
+    "rational_all_epsilon_relations": "13 exact zeros"
+  },
+  "leading_endpoint_5d_principal_minors": [
+    "36/5",
+    "72/25",
+    "175392/78125",
+    "3701376/390625",
+    "677376/78125"
+  ],
+  "second_order_projected_H2": [
+    [
+      "16/3",
+      "0",
+      "-68/15",
+      "-4/5"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "-68/15",
+      "0",
+      "68/15",
+      "0"
+    ],
+    [
+      "-4/5",
+      "0",
+      "0",
+      "4/5"
+    ]
+  ],
+  "first_order_schur_cost": {
+    "EXX": "329207/131250",
+    "EYY": "501079/2362500",
+    "EXY": "-2469/21875"
+  },
+  "second_order_positive_schur": [
+    [
+      "265793/131250",
+      "2469/21875"
+    ],
+    [
+      "2469/21875",
+      "1388921/2362500"
+    ]
+  ],
+  "second_order_schur_determinant": "2921722373/2480625000",
+  "missing_original_binary_matrix_payloads": [
+    "first_order_matrices.pkl",
+    "second_grade_data.pkl",
+    "charge_edge_family.pkl",
+    "graded_schur_data.pkl",
+    "two_kernel_grade2.pkl",
+    "exact_full_coeffs.pkl"
+  ],
+  "interpretation": "Verified exact affine compatibility and strictly positive displayed grade-2 Schur block at one rational point; neither a complete finite-epsilon PSD Gram nor a theorem across the open strict face has been preserved/verified."
+}

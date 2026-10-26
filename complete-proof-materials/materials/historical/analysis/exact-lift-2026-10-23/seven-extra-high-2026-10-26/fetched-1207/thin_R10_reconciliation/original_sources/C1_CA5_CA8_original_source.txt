@@ -1,0 +1,129 @@
+SOURCE: latex/certificates/c1_short.tex:5351-5477
+
+5351: These formulas explicitly account for the cancellation needed below.
+5352: 
+5353: \paragraph{The exact full remainder, before any collection.}
+5354: Retain the four original (SD3) terms, divided by the positive source
+5355: factor $\Delta^2\Lambda$, and retain (CA1). Use the unchanged pure
+5356: testing coordinate $w=(W+uY)/D_u$ and the hard normals $N,M_B$.
+5357: For $Z=1$ put $p=t/R$, $h=a/T$ and
+5358: \[
+5359:  q_A=vD_uw,\quad q_B=v(D_u-uN-puD_uv w),
+5360: \]
+5361: \[
+5362:  W=w+u(M_B+hq_B)/D_u,\qquad
+5363:  Y=uw-(M_B+hq_B)/D_u.
+5364: \]
+5365: The complete remainder is exactly
+5366: \begin{align*}
+5367: \mathscr G={}&B_2\{N^2-2q_AN+(1-p)q_A^2\}
+5368:  +B_bD_v\{N^2+2q_AN+pq_A^2\}\\
+5369: &+B_3D_v\{M_B^2+2q_BM_B+hq_B^2\}
+5370:  +B_5\{M_B^2-2q_BM_B+(1-h)q_B^2\}\\
+5371: &+4A_*D_uD_v(Y-r uW)^2
+5372:  +4LD_uD_v(2uWY-r u^2W^2)\\
+5373: &+4\alpha D_u(vY-1)^2
+5374:  +2dD_u\{(vY-1)^2-D_v\}.                         \tag{CA5}
+5375: \end{align*}
+5376: There are no normal terms above degree two. Every coefficient of
+5377: (CA5) is bounded. The only testing denominator is a power of the
+5378: positive unit $D_u$; every source denominator in (CA3)--(CA5) is a
+5379: positive unit. The possibly unbounded opening ratios remain exclusively
+5380: in the four retained positive terms.
+5381: 
+5382: \paragraph{The exact low-weight collection.}
+5383: The outer/state lemma in Section~\ref{component:p364e14238053} reduces the
+5384: independent tests to $Z=1$ and $u,w,v$ infinitesimal, with $w>0$ on
+5385: the negative pure-core branch. Use the unchanged circuit monomials
+5386: \[
+5387:  A_0=wv,\quad B_0=\delta v,\quad C_0=\delta Euw,
+5388:  \quad D_0=\delta^2k^3E,
+5389: \]
+5390: \[
+5391:  x=B_0-C_0,\quad y=A_0-kC_0,\quad
+5392:  z=uB_0-kC_0,\quad h_0=kC_0-D_0.
+5393: \]
+5394: Let $q_1,q_2$ be the same two separated radical pairings as in the
+5395: contact--conductor proof, and let
+5396: \[
+5397:  T_4=y^2+z^2+h_0^2-2yz+2q_1^2.
+5398: \]
+5399: Give $(\delta,k,E,\ell,t,u,w,v)$ weights $(0,1,0,1,0,1,1,2)$.
+5400: Then $x$ has weight two and $y,z,h_0,q_1,q_2$ have weight three.
+5401: Denote the scalar of (CA5) by $S$, and its two complete first normals
+5402: by $L_N,L_M$. Direct multiplication of (CA3)--(CA5) through the
+5403: indicated weights gives
+5404: \[
+5405:  \begin{aligned}
+5406:  S_{\le6}&=\frac{4P}{E^4\delta^2}x^2
+5407:  -\frac{16(k+u)}{E^2\delta^2}xz
+5408:  +\frac8{E\delta^2}T_4,\\
+5409:  (L_N)_{\le3}&=0,\\
+5410:  (L_M)_{\le3}&=
+5411:  \frac{8\{E^2+2E-2\ell(E+1)\}}{E^2\delta}\,x,
+5412:  \end{aligned}                                                   \tag{CA6}
+5413: \]
+5414: where the short coefficient polynomial is
+5415: \[
+5416:  \begin{split}
+5417:  P={}&E^2(E+4)-E(E^2+6E+4)\ell+2(E+1)(E+2)\ell^2\\
+5418:  &+E^2(8-3E)k^2+4E^2ku+E^2(E+4)u^2.
+5419:  \end{split}
+5420: \]
+5421: The full hard-normal block, from the quadratic part of (CA5), has
+5422: residue
+5423: \[
+5424:        \operatorname{diag}\left(\frac{16}{E\delta^2},
+5425:                                 \frac{4(E^2+4)}E\right).          \tag{CA7}
+5426: \]
+5427: Here and in the residue Grams, $E,\delta$ denote their positive
+5428: residues. Formula (CA6), rather than a large expansion, is the finite
+5429: coefficient identity used by the proof. Its 37 raw scalar monomials
+5430: collect to the displayed three terms. 
+5431: 
+5432: \paragraph{Why all higher terms have harmless coefficients.}
+5433: The scalar of (CA5), after clearing the stated units, belongs to
+5434: $(A_0,B_0,C_0)^2+(D_0^2)$. This follows directly from $q_A=wvD_u$,
+5435: $q_B|_{N=M_B=0}\in(v)$, and $Y,W$ in (CA5): the centered scalar
+5436: $Y-r uW$ lies in $(v,uw)$; its square is in the same raw monomial
+5437: square ideal since $\delta,E$ are units. The sole constant state term
+5438: comes from $\alpha$, which has the factor $k^6$, and is a bounded
+5439: unit multiple of $D_0^2$. Both full first normals belong to
+5440: $(A_0,B_0,C_0)$ by the same displayed expression.
+5441: 
+5442: All retained terms vanish to first order at the exact contact
+5443: \[ (u,w,v,N,M_B)=(k,\delta k,\delta k^2E,0,0). \]
+5444: Thus the scalar belongs to the square of its contact ideal and the
+5445: first normals belong to that ideal. The unchanged monic
+5446: contact--conductor identities therefore apply, over the coefficient
+5447: ring in which only the displayed positive units have been inverted.
+5448: They never divide by $k$, $\ell$, $M$, $J$, $t$, or a contact difference;
+5449: the displayed $1/a$ is the inverse of a known positive unit.
+5450: The contact substitutions preserve the new weights. After (CA6) is
+5451: subtracted, scalar weights are at least seven and normal weights at
+5452: least four. Their lifted coefficients consequently have positive
+5453: weights, hence zero residues. Clearing the finitely many unit
+5454: denominators before this polynomial lift and restoring them afterward
+5455: changes no residue sign and introduces no mixed inverse.
+5456: 
+5457: \paragraph{Strictness, full normals, and restoration.}
+5458: The leading scalar is
+5459: \[
+5460:  \frac{4(E+4)}{E^2\delta^2}x^2+\frac8{E\delta^2}T_4.
+5461: \]
+5462: The standard two-pairing circuit supplies a strict Gram on
+5463: $(y,z,h_0,q_1,q_2)$. The only nonzero first-normal residue is
+5464: $8(E+2)x/(E\delta)$, the coefficient of the full normal $M_B$.
+5465: Accordingly the coupled $(M_B,x)$ Gram is
+5466: \[
+5467:  \begin{pmatrix}
+5468:  4(E^2+4)/E&4(E+2)/(E\delta)\\
+5469:  4(E+2)/(E\delta)&4(E+4)/(E^2\delta^2)
+5470:  \end{pmatrix},\qquad
+5471:  \det=\frac{256}{E^3\delta^2}>0.                      \tag{CA8}
+5472: \]
+5473: Together with the independent $N$ pivot in (CA7), this gives a
+5474: bounded strict eight-root Gram for the entire remainder (CA5).
+5475: Restore (CA1), all four original positive terms, and all separated
+5476: normalization factors. The outer/state lemma exhausts the remaining
+5477: tests; real and imaginary state evaluations give the complex case.
