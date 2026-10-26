@@ -2031,3 +2031,26 @@ Expanded Python bytecode is omitted; its original bytes remain in the unchanged 
 | analysis/global-pencil-exact-verification-2026-10-26/results.json | [file](materials/historical/analysis/global-pencil-exact-verification-2026-10-26/results.json) | 23773 |
 | analysis/global-pencil-exact-verification-2026-10-26/run_targeted_verification.py | [file](materials/historical/analysis/global-pencil-exact-verification-2026-10-26/run_targeted_verification.py) | 6006 |
 | analysis/global-pencil-exact-verification-2026-10-26/verify_independent_indexing.py | [file](materials/historical/analysis/global-pencil-exact-verification-2026-10-26/verify_independent_indexing.py) | 10755 |
+
+
+## Direct C2 syzygy identities and exact selected-family obstruction
+
+| Source | Public material | Bytes |
+|---|---|---:|
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1839/task3/original-package.zip | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1839/task3/original-package.zip) | 11844 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1839/task3/RECOVERY_RECEIPT.json | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1839/task3/RECOVERY_RECEIPT.json) | 250 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1839/task3/package/EXACT_CHECK_OUTPUT.txt | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1839/task3/package/EXACT_CHECK_OUTPUT.txt) | 814 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1839/task3/package/K364_SYZYGY_DATA.json | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1839/task3/package/K364_SYZYGY_DATA.json) | 6781 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1839/task3/package/MANIFEST.json | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1839/task3/package/MANIFEST.json) | 946 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1839/task3/package/PROOF_AND_OPEN_GATE.md | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1839/task3/package/PROOF_AND_OPEN_GATE.md) | 10889 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1839/task3/package/verify_syzygy.py | [file](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1839/task3/package/verify_syzygy.py) | 8782 |
+| analysis/c2_direct_syzygy_analytic_verification_2026_10_26.txt | [file](materials/historical/analysis/c2_direct_syzygy_analytic_verification_2026_10_26.txt) | 6905 |
+| analysis/c2_direct_syzygy_exact_verification_2026_10_26.txt | [file](materials/historical/analysis/c2_direct_syzygy_exact_verification_2026_10_26.txt) | 5421 |
+| analysis/c2_direct_syzygy_exact_obstruction_2026_10_26.py | [file](materials/historical/analysis/c2_direct_syzygy_exact_obstruction_2026_10_26.py) | 5598 |
+| analysis/c2_direct_syzygy_exact_obstruction_2026_10_26.json | [file](materials/historical/analysis/c2_direct_syzygy_exact_obstruction_2026_10_26.json) | 1255 |
+| analysis/c2-direct-syzygy-exact-verification-2026-10-26/bounded_coverage.log | [file](materials/historical/analysis/c2-direct-syzygy-exact-verification-2026-10-26/bounded_coverage.log) | 919 |
+| analysis/c2-direct-syzygy-exact-verification-2026-10-26/bounded_coverage_results.json | [file](materials/historical/analysis/c2-direct-syzygy-exact-verification-2026-10-26/bounded_coverage_results.json) | 603 |
+| analysis/c2-direct-syzygy-exact-verification-2026-10-26/integrity_and_replay_results.json | [file](materials/historical/analysis/c2-direct-syzygy-exact-verification-2026-10-26/integrity_and_replay_results.json) | 1835 |
+| analysis/c2-direct-syzygy-exact-verification-2026-10-26/run_targeted_replay.py | [file](materials/historical/analysis/c2-direct-syzygy-exact-verification-2026-10-26/run_targeted_replay.py) | 3254 |
+| analysis/c2-direct-syzygy-exact-verification-2026-10-26/verify_bounded_coverage.py | [file](materials/historical/analysis/c2-direct-syzygy-exact-verification-2026-10-26/verify_bounded_coverage.py) | 3739 |
+| analysis/c2-direct-syzygy-exact-verification-2026-10-26/verify_syzygy.log | [file](materials/historical/analysis/c2-direct-syzygy-exact-verification-2026-10-26/verify_syzygy.log) | 824 |

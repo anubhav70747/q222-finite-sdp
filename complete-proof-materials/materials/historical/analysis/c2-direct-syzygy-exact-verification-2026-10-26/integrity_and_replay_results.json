@@ -1,0 +1,76 @@
+{
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "sympy": "1.14.0",
+  "environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONUTF8": "1"
+  },
+  "archive_bytes": 11844,
+  "archive_sha256": "732ea691d5d1cc99303a22c86d35662b64f0931b6147084dc24fc4860eb9d1bf",
+  "receipt_sha256_match": true,
+  "download_original_bytes_match": true,
+  "crc_bad_member": null,
+  "archive_file_count": 5,
+  "extracted_byte_checks": [
+    {
+      "file": "PROOF_AND_OPEN_GATE.md",
+      "bytes": 10889,
+      "identical": true
+    },
+    {
+      "file": "verify_syzygy.py",
+      "bytes": 8782,
+      "identical": true
+    },
+    {
+      "file": "K364_SYZYGY_DATA.json",
+      "bytes": 6781,
+      "identical": true
+    },
+    {
+      "file": "EXACT_CHECK_OUTPUT.txt",
+      "bytes": 814,
+      "identical": true
+    },
+    {
+      "file": "MANIFEST.json",
+      "bytes": 946,
+      "identical": true
+    }
+  ],
+  "manifest_checks": [
+    {
+      "file": "PROOF_AND_OPEN_GATE.md",
+      "sha256_match": true
+    },
+    {
+      "file": "verify_syzygy.py",
+      "sha256_match": true
+    },
+    {
+      "file": "K364_SYZYGY_DATA.json",
+      "sha256_match": true
+    },
+    {
+      "file": "EXACT_CHECK_OUTPUT.txt",
+      "sha256_match": true
+    }
+  ],
+  "script_assert_statement_count": 26,
+  "replay": {
+    "exit_code": 0,
+    "elapsed_seconds": 1.337594
+  },
+  "generated_data_comparison": {
+    "byte_identical": false,
+    "newline_normalized_identical": true,
+    "json_semantically_identical": true
+  },
+  "reported_pass_groups": 9
+}

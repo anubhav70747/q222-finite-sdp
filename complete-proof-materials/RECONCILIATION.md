@@ -66,3 +66,6 @@ Both complete normal answers and their original archives are recovered. [Origina
 ## Evaluated conditional outer SDP
 
 [Evaluated conditional global pencil](CONDITIONAL_GLOBAL_PENCIL_UPDATE.md) records L18: every rational coefficient and all physical copies are delivered and independently checked. Quantum-to-feasible inclusion holds; reverse inclusion is conditional on direct K364 admissions H1/H2. The scalar small-f C1 charge theorem does not establish H1. L08-L10 remain open for exactness, and V01-V06 retain their prior scope.
+
+
+The direct C2 syzygy package preserves the complete-parent identity but its selected scalar completion fails at an exact strict source for every value of the single added coefficient. [Current construction scope](STRICT_SOURCE_REDUCTIONS_UPDATE.md) gives the counterexample and the required Y_u interpolation correction. Do not pursue positivity of that fixed family as an open target. Additional zero-contact directions must repair the angular derivative constraint before a global scalar SOS proof, or a different full K364 Gram must establish H2. L18 conditional matrix delivery and the unproved H1/H2 inputs are unchanged.

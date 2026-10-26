@@ -1,0 +1,37 @@
+C2 direct syzygy package: exact replay and bounded checker-coverage audit
+Package date: 2026-10-26. Local replay date: 2026-10-27.
+
+SOURCE / EXECUTION
+Original source: analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1839/task3/.
+Evidence folder: analysis/c2-direct-syzygy-exact-verification-2026-10-26/.
+Read verify_syzygy.py and its proof/manifest before execution. Original package preserved; checker ran once in a private copy, with Python bytecode disabled and numerical thread limits set to 1. Python 3.14.3; SymPy 1.14.0. No missing dependency or execution failure.
+
+ORIGINAL INTEGRITY
+ZIP: 11,844 bytes, SHA256 732ea691d5d1cc99303a22c86d35662b64f0931b6147084dc24fc4860eb9d1bf.
+CRC passed. All five archived files match extracted bytes exactly. All four MANIFEST.json listed SHA256 values match. The original Downloads ZIP matches the recovered ZIP bytes and RECOVERY_RECEIPT.json hash. The manifest itself is included in the archived/extracted byte comparison. This proves recovered-package integrity, not independent provenance or mathematical correctness.
+
+TARGETED REPLAY
+verify_syzygy.py ran once: exit 0, 1.337594 seconds, nine reported PASS groups, 26 assert statements in source (several execute inside loops).
+The emitted K364_SYZYGY_DATA.json is semantically identical to the original data and byte-identical after CRLF normalization; its changed final newline is a platform encoding detail.
+The replay checks: positive-packet expansion; 29 normalized polynomial syzygies; one additional degree-(1,2) high syzygy; generic positive-coordinate contact-kernel interpolation; source scaling of the syzygies; the two-copy complete-parent identity; source-only high-correction interpolation; the highest Bob-degree scalar coefficient 4D/(2D+1); and the eight positive event-polynomial coefficients in det B/(8 Du Dv).
+
+TWO ADDITIVE BOUNDED CHECKS
+A separate verify_bounded_coverage.py imports no supplied checker code and reads its emitted data. Both checks passed in 0.200778 seconds.
+1. Expanded the complete generic four-state normal-completion identity with 32 independent formal t entries. The expansion leaves exactly 2 Z xi^T Rhat^T t. Independently substituted t=K^-1(S ell+tau T_high) and checked all three syzygy coefficients vanish for arbitrary 29 source-only ell coordinates and the high-transfer parameter tau. This closes the checker's missing explicit generic completion expansion.
+2. Enumerated all 128 state components of the 32 deformed roots. All 108 nonzero component monomials are in the fixed 364-feature dictionary, with maximum testing bidegree (1,2). Coefficients have no testing-variable dependence. This directly closes the actual deformed-root dictionary check, including the extra high syzygy.
+These operations do not evaluate native source parameters or establish scalar nonnegativity.
+
+COVERAGE LIMITS
+The supplied checker declares n,m,C,A,D,alpha positive as independent formal symbols. It contains no native five-parameter rational weight formulas, no Omega inequalities, and no substitution of the native contact (c,ac;b/a,-cr,c(b/a-at),1). Consequently it does not re-establish source positivity/denominator signs, F=0, any actual state/angular contact jet, or the source-domain quantifiers in the proof. Those are external mathematical inputs, not newly replayed conclusions.
+The interpolation check is for arbitrary u_c,v_c>0 and generic normalized vectors. It verifies generic kernel spanning and the high correction at such coordinates. Applying it to b_c=-K e_c and concluding actual four-state root vanishing requires the native stationarity input Rhat_c^T e_c=0. This replay does not independently establish that input or angular tangency of the scalar remainder at the native contact.
+The determinant coefficient check establishes positivity of all eight formal event-polynomial coefficients under positive event weights. The determinant vanishes at u=v=0; this must not be read as a strictly positive bound there. Similarly, 4D/(2D+1)>0 is pointwise for D>0, not a positive lower bound uniform as D approaches zero.
+The first supplied assertion that reinserts the negative Z square subtracts the same expression on both sides and adds no independent evidence beyond the already checked positive-packet expansion. The nontrivial 32-row complete-parent comparison and the additive generic completion expansion provide the relevant full-parent identities.
+Neither successful replay proves positivity/nonnegativity of the whole scalar remainder, a fixed-grid scalar SOS, existence of favorable source-only gauges, or universal strict C2 K364 admission. The construction is a sufficient ansatz and is not an equivalent restriction of K364. Leading-coefficient positivity plus exact algebra/contact compatibility does not discharge its scalar PSD gate.
+
+ARTIFACTS
+integrity_and_replay_results.json: complete archive/manifest checks, assertion count, timing, data comparison.
+verify_syzygy.log: fresh supplied-checker stdout/stderr.
+run_targeted_replay.py: one-run integrity/replay orchestration.
+verify_bounded_coverage.py, bounded_coverage.log, bounded_coverage_results.json: two additive generic checks.
+private-copy/: executed isolated package, including fresh generated data.
+No old baseline checker, solver, sample/time sweep, native five-parameter full run, Git or browser action was performed. No original package or manuscript file was edited.

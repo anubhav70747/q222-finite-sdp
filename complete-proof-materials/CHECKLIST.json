@@ -287,7 +287,7 @@
     {
       "id": "L14",
       "title": "Strict C2 fixed dual inequality and exact coefficient data",
-      "status": "VERIFIED affine/dual reduction; nonnegative dual inequality OPEN",
+      "status": "VERIFIED affine/dual and syzygy identities; universal PSD inequality OPEN; selected scalar-completion family REFUTED",
       "evidence": [
         "[Original C2 dual reduction](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1522/task3/package/interior/STRICT_C2_INTERIOR_THEOREM_AND_OPEN_GATE.md)",
         "[Original complete C2 package](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1522/task3/original-package.zip)",
@@ -301,9 +301,16 @@
         "[Original complete C2 package](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1739/task3/original-package.zip)",
         "[Independent C2 analytical review](materials/historical/analysis/c2_coupled_transfer_analytic_verification_2026_10_26.txt)",
         "[Targeted exact replay](materials/historical/analysis/latest_transfer_exact_verification_2026_10_26.txt)",
+        "[Current construction scope](STRICT_SOURCE_REDUCTIONS_UPDATE.md)",
+        "[Original direct C2 syzygy construction](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1839/task3/package/PROOF_AND_OPEN_GATE.md)",
+        "[Original syzygy proof and checker package](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1839/task3/original-package.zip)",
+        "[Independent analytical review and strict-source obstruction](materials/historical/analysis/c2_direct_syzygy_analytic_verification_2026_10_26.txt)",
+        "[Independent exact replay and coverage](materials/historical/analysis/c2_direct_syzygy_exact_verification_2026_10_26.txt)",
+        "[Independent exact obstruction checker](materials/historical/analysis/c2_direct_syzygy_exact_obstruction_2026_10_26.py)",
+        "[Exact strict-source obstruction data](materials/historical/analysis/c2_direct_syzygy_exact_obstruction_2026_10_26.json)",
         "[Current construction scope](STRICT_SOURCE_REDUCTIONS_UPDATE.md)"
       ],
-      "completion_condition": "On strict real six-event Omega with n>0, the contact-reduced 154-feature map has 412 rows,3021 columns and rank406. Six exact jets give affine reachability. Closedness and the compact normalized dual give PSD admission iff the displayed cleared 24-term evaluation is nonnegative for every dual point. Data and rank were exactly replayed. Physical curvature does not prove the inequality; source walls and uniform singular limits remain outside the result. The new positive carrier is a restricted decomposition with an unproved PSD residual. The exact at-most-141-square certificate represents det(B)*F with a source/test-dependent multiplier; it is not fixed affine-cone admission for F."
+      "completion_condition": "On strict real six-event Omega with n>0, the contact-reduced 154-feature map has 412 rows,3021 columns and rank406. Six exact jets give affine reachability. Closedness and the compact normalized dual give PSD admission iff the displayed cleared 24-term evaluation is nonnegative for every dual point. Data and rank were exactly replayed. Physical curvature does not prove the inequality; source walls and uniform singular limits remain outside the result. The new positive carrier is a restricted decomposition with an unproved PSD residual. The exact at-most-141-square certificate represents det(B)*F with a source/test-dependent multiplier; it is not fixed affine-cone admission for F. The direct 32-root syzygy identity and highest-Bob-degree pivot are exact. At a genuine strict native seed the selected scalar remainder is negative for every real coefficient tau of its single added direction. This refutes that sufficient completion family, not K364 admission. General admissible deformations and H2 remain open; the corrected Y_u interpolation coefficient is recorded in the controlling note."
     },
     {
       "id": "L15",

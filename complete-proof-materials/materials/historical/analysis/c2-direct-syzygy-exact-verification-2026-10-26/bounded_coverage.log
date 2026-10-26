@@ -1,0 +1,19 @@
+PASS generic full four-state normal-completion identity: complete expansion leaves only 2 Z xi^T R^T t, and all three syzygy coefficients vanish
+PASS all 128 state components of 32 deformed roots use only fixed K364 dictionary features; maximum bidegree (1,2); arbitrary 29 source-only gauges and high parameter
+{
+  "result": "BOTH BOUNDED GENERIC COVERAGE CHECKS PASSED",
+  "elapsed_seconds": 0.200778,
+  "deformed_roots": 32,
+  "state_components_checked": 128,
+  "nonzero_component_monomials": 108,
+  "maximum_testing_bidegree": [
+    1,
+    2
+  ],
+  "fixed_library_features": 364,
+  "generic_source_only_gauge_coordinates": 29,
+  "extra_high_syzygy_parameter": true,
+  "normal_completion_identity": "expanded exactly modulo the separately verified three-component syzygy",
+  "native_source_domain_or_contact_substitution_checked": false,
+  "remaining_scalar_nonnegativity_or_SOS_checked": false
+}

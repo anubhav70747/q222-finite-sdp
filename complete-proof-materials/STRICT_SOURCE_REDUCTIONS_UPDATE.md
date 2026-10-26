@@ -23,6 +23,32 @@ A separate exact identity gives a full-state sum of at most 141 squares for det(
 
 Consequently neither the carrier nor the multiplied-parent identity proves the full strict C2 dual inequality. Their exact identities and support calculations are verified within these scopes.
 
+## C2 direct syzygies: the selected scalar completion fails
+
+The new construction gives a full four-state identity for (1+v^2)F using 32 fixed polynomial roots and a scalar remainder. Its 29 contact-kernel directions, one additional high-degree direction and positive highest-Bob-degree pivot are verified. The generic deformed roots remain in K364's fixed feature span. None of these facts establishes nonnegativity of the scalar remainder.
+
+The particular contact interpolation, even with an arbitrary real coefficient tau on its single additional direction, fails at the genuine strict native source
+
+    (a,b,c,t,r)=(1,1,1,3/4,1/4),
+    (n,m,C,A,D,alpha)=(1/8,3/8,1/6,5/8,3/8,1/6).
+
+For this source the exact remainder on v=1 is
+
+    S_tau(u,1)=-(u-1)^2 [379(tau-738/379)^2+295599/379]/30.
+
+It is strictly negative for every real tau and every positive u other than 1. In particular the proposed tau=2 gives S_2(1/2,1)=-781/120, despite its positive v^4 coefficient 6/7. Thus universal positivity/SOS for this selected one-direction family is refuted, not merely unproved. This is a failure of that sufficient scalar-completion ansatz, not a counterexample to K364 admission.
+
+A correction is also required when using the original JSON's interpolation shorthand: besides lambda_m=eta4/u_c, the exceptional coefficient is lambda_Yu=eta9+v_c*eta4. The original proof and executable code contain this adjustment; the abbreviated JSON prose omits it. The original files remain unchanged.
+
+A repair must change the contact roots' angular derivatives through additional admissible zero-contact syzygies, or supply a different full Gram. At the exact seed, the current completed-root squared u-derivative norm is 1523/40, whereas the parent permits at most 289/24. The necessary local filter is Hessian((1+v^2)F at the fixed contact state)-2(dG)^T(dG)>=0. Passing that filter would still not establish global scalar SOS or H2. Retuning tau alone cannot repair this source.
+
+- [Original direct C2 syzygy construction](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1839/task3/package/PROOF_AND_OPEN_GATE.md)
+- [Original syzygy proof and checker package](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1839/task3/original-package.zip)
+- [Independent analytical review and strict-source obstruction](materials/historical/analysis/c2_direct_syzygy_analytic_verification_2026_10_26.txt)
+- [Independent exact replay and coverage](materials/historical/analysis/c2_direct_syzygy_exact_verification_2026_10_26.txt)
+- [Independent exact obstruction checker](materials/historical/analysis/c2_direct_syzygy_exact_obstruction_2026_10_26.py)
+- [Exact strict-source obstruction data](materials/historical/analysis/c2_direct_syzygy_exact_obstruction_2026_10_26.json)
+
 ## Next implication
 
 The next C1 task is a simultaneous native-domain PSD gauge construction; the next C2 task is full Gram admission or its equivalent dual positivity statement. Another coefficient-rank calculation or isolated carrier is insufficient. A different fixed globally sound library remains an admissible route if it gives a complete proof. A separating witness against Z6 is not a prerequisite for choosing one.

@@ -1,0 +1,139 @@
+Bounded analytical review: direct C2 K364 syzygy completion
+Reviewed 27 October 2026; requested record dated 26 October 2026
+
+Package:
+analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/
+fetched-1839/task3/package
+
+VERDICT
+
+The 32-row complete-parent expansion, 29-dimensional contact-kernel
+interpolation, allowed high-degree syzygy, exact normal-completion identity
+and universal positive [v^4] pivot are supported. All are full-state,
+source/test-separated statements in the specified fixed feature library.
+
+However, the particular scalar remainder selected by Eq. (6) is NOT
+universally nonnegative. An exact genuine strict C2 seed gives a negative
+quadratic on an interior testing line. Moreover, varying the coefficient
+tau of the single added high syzygy cannot repair this seed. Thus proving
+positivity/SOS of that fixed remainder is not an open viable target: it is
+false. General zero-contact syzygy deformations and strict C2 admission
+to K364 remain open. This is not a counterexample to K364 admission.
+
+1. Supported algebra and scope
+
+The sixteen normalized positive packet rows and source scalings reproduce
+the complete SG2 source with d=1, lambda=beta=0 and all six retained event
+weights positive. Multiplying by Dv produces exactly the two 16-row copies
+minus 2 Du Dv^2 Z^2, including every W,X,Y,Z coefficient. The normalized
+contact in Eq. (2) matches EN14. On Omega, every scaling and interpolation
+denominator is a positive pure-source number.
+
+The thirteen unshifted syzygies eliminate all nonpivot rows, with the m
+column divided only by u_c. The sixteen shift syzygies eliminate the
+second copy. The pivot rows e0,e7,e5 have determinant u_c>0, so the 29
+evaluated columns form the entire 29-dimensional contact kernel. The
+required exceptional coefficient is
+  lambda_Yu=eta9+v_c eta4,
+in addition to lambda_m=eta4/u_c. The proof and executable code include it.
+
+The extra high syzygy cancels all W,X,Y components. Its coefficients have
+u-degree<=1 and v-degree<=2. Subtracting its contact interpolation makes
+the correction vanish at contact. For every resulting syzygy t, expanding
+the squares gives exactly
+  Dv F=sum_i [Rhat_i xi+(qhat_i+t_i)Z]^2+S_t Z^2,
+  S_t=-2 Du Dv^2-2 qhat^T t-t^T t.
+The roots remain in the fixed 364-feature span. This means their sum has
+a PSD Gram in that feature library; the sum alone need not be an SG2
+source polynomial in the canonical nine-dimensional source subspace.
+All roots vanish at the actual contact, yielding scalar contact value
+and both angular first derivatives zero. None of these facts implies
+scalar positivity.
+
+The two v^2 entries of qhat and the high correction give the stated
+general pivot
+  -2(1+u^2)+2 tau(1+u^2)-tau^2[1/(4D+2)+u^2/2].
+At tau=2 this is exactly 4D/(2D+1)>0 throughout strict Omega. The positive
+determinant-coefficient observation is also compatible with the complete
+three-state block and does not cancel its extra testing factor in K364.
+
+2. Exact strict-domain counterexample to the selected scalar completion
+
+Choose the established exact seed
+  (a,b,c,t,r)=(1,1,1,3/4,1/4).
+Every strict-domain condition is explicit:
+  h=1/4, g=1/2, j=1/2,
+  1-c^2 h=3/4, b-a^2 c^2 r=3/4,
+  Delta=10, N_*=2, N_n=5/8,
+and a,b,c,t>0, 0<r<1. The native source formulas give
+  (n,m,C,A,D,alpha)=(1/8,3/8,1/6,5/8,3/8,1/6).
+Its contact is
+  (u_c,v_c;W_c,X_c,Y_c,Z_c)=(1,1;1,-1/4,1/4,1).
+The complete parent and all six derivatives in W,X,Y,Z,u,v vanish
+there exactly. Together with the strictly positive weights and SG7,
+this is a genuine physical strict C2 source. It even satisfies h=a^2 r;
+the obstruction does not require the difficult unbalanced bridge case.
+
+Use the CORRECT contact interpolation from the proof/code. Allow an
+arbitrary real tau in place of the fixed coefficient2 in Eq. (6):
+  t_tau=K^-1[S Lambda(b_c)+tau(high-S Lambda(b_h))].
+Exact expansion at this one source gives the line certificate
+  S_tau(u,1)=-(u-1)^2(379 tau^2-1476 tau+2217)/30
+           =-(u-1)^2[379(tau-738/379)^2+295599/379]/30.
+The bracket is strictly positive for every real tau. Therefore every
+member of this one-extra-direction interpolation family has a negative
+scalar remainder whenever u>0, u!=1, v=1, including arbitrarily near
+the actual contact. Retuning tau alone cannot help.
+
+In particular the specified tau=2 remainder satisfies
+  S_2(u,1)=-781(u-1)^2/30,
+  S_2(1/2,1)=-781/120<0,
+  partial_u^2 S_2(1,1)=-781/15<0,
+while [v^4]S_2=6/7>0 exactly as the package claims.
+For an independent value check, at testing u=1/2,v=1 and state
+(W,X,Y,Z)=(0,0,0,1), Dv F=77/12 and the 32 completed squares sum to
+517/40. Their difference is exactly -781/120.
+
+These calculations used two bounded exact reconstructions: first from
+the row/syzygy formulas, then from the serialized sparse syzygy data.
+No source/test sweep, numerical solver or approximate positivity check
+was used. The independent full-package replay remains separate.
+
+3. Concrete next target
+
+Change the contact interpolation's first angular jet using additional
+degree-admissible zero-contact syzygy directions; then test its scalar
+contact Hessian before attempting a global scalar SOS. The current family
+fails a necessary local condition at a moderate interior source, so it
+should not be carried forward as merely awaiting a positivity proof.
+
+At the seed, with the source contact state held fixed,
+  Dv F(u,1;psi_c)=289(u-1)^2/24.
+For the present tau=2 completion the completed-root sum is
+  1523(u-1)^2/40.
+Thus a repaired construction must reduce the squared u-jet norm from
+1523/40 to at most289/24 (and also satisfy the full two-angular-variable
+Hessian condition). Equivalently, for completed roots G vanishing at
+contact, it must satisfy
+  Hessian(Dv F|psi_c)-2 (dG)^T(dG)>=0
+there. Zero-contact syzygies such as (u-u_c) times a normalized syzygy
+independent of u preserve the allowed u-degree; they are concrete
+additional directions to examine. This is a necessary local filter,
+not a guarantee of global positivity or fixed-grid scalar SOS.
+
+4. Data clarification and retained open claims
+
+K364_SYZYGY_DATA.json's 'interpolation' prose says lambda_i=eta_i for
+every nonpivot row except m. It omits the exceptional Y_u adjustment
+lambda_Yu=eta9+v_c eta4. That shorthand is false if used literally;
+the proof section3 and executable code supply the correct formula.
+Later implementations must follow the corrected formula above.
+
+No universal strict C2 directK364 admission follows from this package.
+The general sufficient normal-completion ansatz with further admissible
+deformations remains open; the selected t_theta and its single high
+coefficient family are now explicitly ruled out as universal scalar SOS
+constructions. Other K364 Grams remain possible. The existing strict
+open-end theorem, L15/L17, full128 assembly and prior qualitative-existence
+reviews are unchanged. No original package, Git repository or browser
+was edited.

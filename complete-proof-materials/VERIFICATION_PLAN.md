@@ -33,3 +33,6 @@ The latest [Current construction scope](STRICT_SOURCE_REDUCTIONS_UPDATE.md) shar
 
 
 [Evaluated conditional global pencil](CONDITIONAL_GLOBAL_PENCIL_UPDATE.md) records the verified matrix delivery, the corrected count of18 face equalities per group, and the limited C1 small-f charge result. Do not rerun materialization merely because admission is still open; check changed identities if the candidate changes.
+
+
+The direct C2 syzygy package preserves the complete-parent identity but its selected scalar completion fails at an exact strict source for every value of the single added coefficient. [Current construction scope](STRICT_SOURCE_REDUCTIONS_UPDATE.md) gives the counterexample and the required Y_u interpolation correction. Do not pursue positivity of that fixed family as an open target. Additional zero-contact directions must repair the angular derivative constraint before a global scalar SOS proof, or a different full K364 Gram must establish H2. L18 conditional matrix delivery and the unproved H1/H2 inputs are unchanged.

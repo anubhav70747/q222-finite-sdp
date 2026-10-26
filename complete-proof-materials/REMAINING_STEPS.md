@@ -95,3 +95,6 @@ The latest strict-source packages refine the algebra without closing R02 or R03:
 
 
 [Evaluated conditional global pencil](CONDITIONAL_GLOBAL_PENCIL_UPDATE.md) is the current matrix-delivery result. It completes materialization of the conditional candidate and establishes its outer inclusion. R02/H1 and R03/H2 remain the outstanding mathematical admission steps; R09-R12 still require the short proof and final scientific delivery.
+
+
+The direct C2 syzygy package preserves the complete-parent identity but its selected scalar completion fails at an exact strict source for every value of the single added coefficient. [Current construction scope](STRICT_SOURCE_REDUCTIONS_UPDATE.md) gives the counterexample and the required Y_u interpolation correction. Do not pursue positivity of that fixed family as an open target. Additional zero-contact directions must repair the angular derivative constraint before a global scalar SOS proof, or a different full K364 Gram must establish H2. L18 conditional matrix delivery and the unproved H1/H2 inputs are unchanged.

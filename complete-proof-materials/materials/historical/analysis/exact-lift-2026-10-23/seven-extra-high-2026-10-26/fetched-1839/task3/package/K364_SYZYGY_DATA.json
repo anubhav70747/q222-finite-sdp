@@ -1,0 +1,399 @@
+{
+  "statement": "FULL-PARENT SYZYGY AND DET-B AUDIT; UNIVERSAL K364 ADMISSION UNPROVED",
+  "base_row_order": [
+    "n_11",
+    "n_1v",
+    "n_u1",
+    "n_uv",
+    "m",
+    "C_1",
+    "C_v",
+    "A_11",
+    "A_1v",
+    "A_u1",
+    "A_uv",
+    "D",
+    "alpha_1",
+    "alpha_u",
+    "core_1",
+    "core_v"
+  ],
+  "base_row_factors": [
+    "2*sqrt(n)",
+    "2*sqrt(n)",
+    "2*sqrt(n)",
+    "2*sqrt(n)",
+    "2*sqrt(m)",
+    "2*sqrt(C)",
+    "2*sqrt(C)",
+    "2*sqrt(A)",
+    "2*sqrt(A)",
+    "2*sqrt(A)",
+    "2*sqrt(A)",
+    "sqrt(4*D + 2)",
+    "sqrt(4*alpha + 2)",
+    "sqrt(4*alpha + 2)",
+    "sqrt(2)",
+    "sqrt(2)"
+  ],
+  "base_row_shapes": [
+    [
+      "0",
+      "1",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "v",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "u",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "u*v",
+      "0",
+      "0"
+    ],
+    [
+      "v",
+      "-1",
+      "u*v",
+      "-u"
+    ],
+    [
+      "u",
+      "0",
+      "-1",
+      "0"
+    ],
+    [
+      "u*v",
+      "0",
+      "-v",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "1",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "v",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "u",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "u*v",
+      "0"
+    ],
+    [
+      "u",
+      "u*v",
+      "-1",
+      "-v"
+    ],
+    [
+      "0",
+      "0",
+      "v",
+      "-1"
+    ],
+    [
+      "0",
+      "0",
+      "u*v",
+      "-u"
+    ],
+    [
+      "0",
+      "1",
+      "0",
+      "u"
+    ],
+    [
+      "0",
+      "v",
+      "0",
+      "u*v"
+    ]
+  ],
+  "syzygy_order": [
+    "X_1",
+    "X_2",
+    "X_3",
+    "X_14",
+    "X_15",
+    "Y_8",
+    "Y_9",
+    "Y_10",
+    "Y_12",
+    "Y_13",
+    "Cv",
+    "D",
+    "m",
+    "shift_0",
+    "shift_1",
+    "shift_2",
+    "shift_3",
+    "shift_4",
+    "shift_5",
+    "shift_6",
+    "shift_7",
+    "shift_8",
+    "shift_9",
+    "shift_10",
+    "shift_11",
+    "shift_12",
+    "shift_13",
+    "shift_14",
+    "shift_15"
+  ],
+  "extra_top_degree_syzygy": {
+    "16": "-u*v",
+    "20": "-u*v",
+    "24": "v",
+    "26": "u*v",
+    "27": "v**2",
+    "31": "-u*v**2"
+  },
+  "top_bob_coefficient_tau": "-2*(1+u**2)+2*tau*(1+u**2)-tau**2*(1/(4*D+2)+u**2/2)",
+  "top_bob_pivot_at_tau_2": "4*D/(2*D+1)>0 for every strict C2 source",
+  "syzygy_sparse": [
+    {
+      "name": "X_1",
+      "entries": {
+        "0": "-v",
+        "1": "1"
+      }
+    },
+    {
+      "name": "X_2",
+      "entries": {
+        "0": "-u",
+        "2": "1"
+      }
+    },
+    {
+      "name": "X_3",
+      "entries": {
+        "0": "-u*v",
+        "3": "1"
+      }
+    },
+    {
+      "name": "X_14",
+      "entries": {
+        "0": "-1",
+        "14": "1"
+      }
+    },
+    {
+      "name": "X_15",
+      "entries": {
+        "0": "-v",
+        "15": "1"
+      }
+    },
+    {
+      "name": "Y_8",
+      "entries": {
+        "7": "-v",
+        "8": "1"
+      }
+    },
+    {
+      "name": "Y_9",
+      "entries": {
+        "7": "-u",
+        "9": "1"
+      }
+    },
+    {
+      "name": "Y_10",
+      "entries": {
+        "7": "-u*v",
+        "10": "1"
+      }
+    },
+    {
+      "name": "Y_12",
+      "entries": {
+        "7": "-v",
+        "12": "1"
+      }
+    },
+    {
+      "name": "Y_13",
+      "entries": {
+        "7": "-u*v",
+        "13": "1"
+      }
+    },
+    {
+      "name": "Cv",
+      "entries": {
+        "5": "-v",
+        "6": "1"
+      }
+    },
+    {
+      "name": "D",
+      "entries": {
+        "0": "-u*v",
+        "5": "-1",
+        "11": "1"
+      }
+    },
+    {
+      "name": "m",
+      "entries": {
+        "0": "u",
+        "4": "u",
+        "5": "-v",
+        "7": "-v",
+        "9": "-u*v"
+      }
+    },
+    {
+      "name": "shift_0",
+      "entries": {
+        "0": "-v",
+        "16": "1"
+      }
+    },
+    {
+      "name": "shift_1",
+      "entries": {
+        "1": "-v",
+        "17": "1"
+      }
+    },
+    {
+      "name": "shift_2",
+      "entries": {
+        "2": "-v",
+        "18": "1"
+      }
+    },
+    {
+      "name": "shift_3",
+      "entries": {
+        "3": "-v",
+        "19": "1"
+      }
+    },
+    {
+      "name": "shift_4",
+      "entries": {
+        "4": "-v",
+        "20": "1"
+      }
+    },
+    {
+      "name": "shift_5",
+      "entries": {
+        "5": "-v",
+        "21": "1"
+      }
+    },
+    {
+      "name": "shift_6",
+      "entries": {
+        "6": "-v",
+        "22": "1"
+      }
+    },
+    {
+      "name": "shift_7",
+      "entries": {
+        "7": "-v",
+        "23": "1"
+      }
+    },
+    {
+      "name": "shift_8",
+      "entries": {
+        "8": "-v",
+        "24": "1"
+      }
+    },
+    {
+      "name": "shift_9",
+      "entries": {
+        "9": "-v",
+        "25": "1"
+      }
+    },
+    {
+      "name": "shift_10",
+      "entries": {
+        "10": "-v",
+        "26": "1"
+      }
+    },
+    {
+      "name": "shift_11",
+      "entries": {
+        "11": "-v",
+        "27": "1"
+      }
+    },
+    {
+      "name": "shift_12",
+      "entries": {
+        "12": "-v",
+        "28": "1"
+      }
+    },
+    {
+      "name": "shift_13",
+      "entries": {
+        "13": "-v",
+        "29": "1"
+      }
+    },
+    {
+      "name": "shift_14",
+      "entries": {
+        "14": "-v",
+        "30": "1"
+      }
+    },
+    {
+      "name": "shift_15",
+      "entries": {
+        "15": "-v",
+        "31": "1"
+      }
+    }
+  ],
+  "H_coefficients": {
+    "u^4v^4": "2*C*(2*D + 2*n + 1)*(2*A + 2*alpha + 2*m + 1)",
+    "u^4v^2": "2*(4*A*C*D + 8*A*C*n + 2*A*C + 4*A*D*n + 2*A*n + 4*C*alpha*n + 4*C*m*n + 2*C*n + 4*D*alpha*n + 4*D*m*n + 2*D*n + 2*alpha*n + 2*m*n + n)",
+    "u^4v^0": "4*A*n*(2*C + 2*D + 1)",
+    "u^2v^4": "2*(4*A*C*n + 2*A*C + 4*A*D*m + 4*A*m*n + 2*A*m + 4*C*D*m + 4*C*alpha*n + 2*C*alpha + 8*C*m*n + 4*C*m + 2*C*n + C + 4*D*alpha*m + 2*D*m + 4*alpha*m*n + 2*alpha*m + 2*m*n + m)",
+    "u^2v^2": "8*A*C*m + 16*A*C*n + 8*A*C + 16*A*D*m + 8*A*D*n + 4*A*D + 8*A*m*n + 8*A*m + 4*A*n + 2*A + 8*C*alpha*m + 8*C*alpha*n + 4*C*alpha + 16*C*m*n + 8*C*m + 4*C*n + 2*C + 8*D*alpha*m + 8*D*alpha*n + 4*D*alpha + 16*D*m*n + 8*D*m + 4*D*n + 2*D + 4*alpha*m + 4*alpha*n + 2*alpha + 8*m*n + 4*m + 2*n + 1",
+    "u^2v^0": "2*A*(2*C + 2*D + 1)*(2*m + 2*n + 1)",
+    "u^0v^4": "2*m*(2*n + 1)*(2*A + 2*C + 2*alpha + 1)",
+    "u^0v^2": "2*m*(2*n + 1)*(2*A + 2*C + 2*D + 1)"
+  },
+  "interpolation": "eta_i=b_i+v_c*b_(16+i), lambda_i=eta_i for nonpivot i except m; lambda_m=eta_m/u_c; lambda_shift_i=b_(16+i). Residual in pivot rows equals (R_pivot^T)^-1 R_c^T b.",
+  "remaining": "Find source-only syzygy gauges with scalar remainder -2DuDv\u00b2-2q^T t-t^T t an SOS in fixed Z_(6,12) Z features. The leading v^4 pivot is certified by high degree syzygy at tau=2, but the lower-degree scalar and contact-coupled PSD inequalities remain open. This is a sufficient ansatz, not an equivalent restriction of K364."
+}
