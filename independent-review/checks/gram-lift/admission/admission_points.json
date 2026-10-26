@@ -1,0 +1,228 @@
+{
+ "versions": {
+  "python": "3.9.6",
+  "numpy": "2.0.2",
+  "scipy": "1.13.1",
+  "sympy": "1.14.0",
+  "python_flint": "0.6.0",
+  "clarabel": "0.11.1"
+ },
+ "total_time_s": 347.1,
+ "all_as_expected": true,
+ "results": [
+  {
+   "family": "C1",
+   "point": [
+    0.111,
+    0.0967,
+    0.0543,
+    0.114,
+    1.0
+   ],
+   "allow_outside": false,
+   "rational_point": [
+    "111/1000",
+    "967/10000",
+    "543/10000",
+    "57/500",
+    "1"
+   ],
+   "t": 6.96699314931527e-10,
+   "trel": 1.7539127877673635e-10,
+   "solver_status": "AlmostSolved",
+   "exact_residual_rows": 0,
+   "exact_pd_blocks": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "exact_pd": true,
+   "time_s": 85.1,
+   "expected_exact_pd": true,
+   "as_expected": true
+  },
+  {
+   "family": "C1",
+   "point": [
+    0.3645,
+    0.01901,
+    0.01046,
+    0.8042,
+    1.086
+   ],
+   "allow_outside": false,
+   "rational_point": [
+    "729/2000",
+    "1901/100000",
+    "523/50000",
+    "4021/5000",
+    "543/500"
+   ],
+   "t": 3.1673289517149054e-10,
+   "trel": 8.95688364594416e-11,
+   "solver_status": "AlmostSolved",
+   "exact_residual_rows": 0,
+   "exact_pd_blocks": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "exact_pd": true,
+   "time_s": 64.1,
+   "expected_exact_pd": true,
+   "as_expected": true
+  },
+  {
+   "family": "C1",
+   "point": [
+    0.0945,
+    0.146,
+    0.0544,
+    0.335,
+    0.999
+   ],
+   "allow_outside": false,
+   "rational_point": [
+    "189/2000",
+    "73/500",
+    "34/625",
+    "67/200",
+    "999/1000"
+   ],
+   "t": 2.714421901284912e-09,
+   "trel": 1.022141615566067e-09,
+   "solver_status": "Solved",
+   "exact_residual_rows": 0,
+   "exact_pd_blocks": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "exact_pd": true,
+   "time_s": 56.2,
+   "expected_exact_pd": true,
+   "as_expected": true
+  },
+  {
+   "family": "C2",
+   "point": [
+    0.02828,
+    0.0009625,
+    0.001251,
+    0.47,
+    0.9988
+   ],
+   "allow_outside": false,
+   "rational_point": [
+    "707/25000",
+    "77/80000",
+    "1251/1000000",
+    "47/100",
+    "2497/2500"
+   ],
+   "t": 6.931954882105317e-09,
+   "trel": 4.0324739628238404e-09,
+   "solver_status": "AlmostSolved",
+   "exact_residual_rows": 0,
+   "exact_pd_blocks": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "exact_pd": true,
+   "time_s": 62.2,
+   "expected_exact_pd": true,
+   "as_expected": true
+  },
+  {
+   "family": "C2",
+   "point": [
+    1.0,
+    0.5,
+    0.65,
+    0.4,
+    0.3
+   ],
+   "allow_outside": false,
+   "rational_point": [
+    "1",
+    "1/2",
+    "13/20",
+    "2/5",
+    "3/10"
+   ],
+   "t": 0.03170766082997045,
+   "trel": 0.012772749746335542,
+   "solver_status": "Solved",
+   "exact_residual_rows": 0,
+   "exact_pd_blocks": [
+    true,
+    true,
+    true,
+    true
+   ],
+   "exact_pd": true,
+   "time_s": 49.5,
+   "expected_exact_pd": true,
+   "as_expected": true
+  },
+  {
+   "family": "C2",
+   "point": [
+    1.0,
+    0.5,
+    0.65,
+    0.4,
+    0.6
+   ],
+   "allow_outside": false,
+   "rational_point": null,
+   "t": null,
+   "trel": null,
+   "solver_status": null,
+   "exact_residual_rows": null,
+   "exact_pd_blocks": null,
+   "exact_pd": false,
+   "time_s": 0.0,
+   "error": "rationalised point outside native chart",
+   "expected_exact_pd": false,
+   "as_expected": true
+  },
+  {
+   "family": "C2",
+   "point": [
+    1.0,
+    0.5,
+    0.65,
+    0.4,
+    0.6
+   ],
+   "allow_outside": true,
+   "rational_point": [
+    "1",
+    "1/2",
+    "13/20",
+    "2/5",
+    "3/5"
+   ],
+   "t": -0.1440606317720792,
+   "trel": -0.006626170194514449,
+   "solver_status": "Solved",
+   "exact_residual_rows": 0,
+   "exact_pd_blocks": [
+    false,
+    false,
+    false,
+    true
+   ],
+   "exact_pd": false,
+   "time_s": 29.9,
+   "expected_exact_pd": false,
+   "as_expected": true
+  }
+ ]
+}
