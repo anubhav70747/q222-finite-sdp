@@ -68,13 +68,14 @@
     {
       "id": "P07",
       "title": "All 49 C2 source/test leaves",
-      "status": "prior complete analytical review",
+      "status": "prior complete analytical review; named compressed-proof omissions repaired on 28 October",
       "evidence": [
         "[All C2 cases](C2_CASES.md)",
         "[final_audit.txt](../complete-proof-materials/materials/historical/analysis/c2_completion/final_audit.txt)",
-        "[refined_delta_audit.txt](../complete-proof-materials/materials/historical/analysis/c2_completion/refined_delta_audit.txt)"
+        "[refined_delta_audit.txt](../complete-proof-materials/materials/historical/analysis/c2_completion/refined_delta_audit.txt)",
+        "[28 October dependency repair and bounded reviews](DEPENDENCY_REPAIR_2026_10_28.md)"
       ],
-      "completion_condition": "Preserve strong-angle branches, weak-source R1–R10, both normals, literal n=0 and projective joins."
+      "completion_condition": "Preserve strong-angle branches, weak-source R1–R10, both normals, literal n=0 and projective joins. The 28 October repair supplies the missing R5.5 and R6.5–R6.7 bodies and their actual R6/R7 uses. Its bounded reviews do not repeat all 49 leaves."
     },
     {
       "id": "P08",
@@ -497,13 +498,14 @@
     {
       "id": "V04",
       "title": "Latest BN/UN, R2, R3/R4, R6/R7 and UL readbacks",
-      "status": "RESOLVED for the specified current-version normalization, domain and import interfaces",
+      "status": "prior interface review retained; missing R5.5 and R6.5–R6.7 proof bodies repaired on 28 October",
       "evidence": [
         "[Full frozen-version crosswalk](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1248/Q222_V04_FROZEN_INTERFACE_CROSSWALK_2026-10-26.md)",
         "[Independent native-source verification](materials/historical/analysis/v04_interface_verification_2026_10_26.txt)",
-        "[Original evidence and checker package](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1248/V04_crosswalk_original_evidence.zip)"
+        "[Original evidence and checker package](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1248/V04_crosswalk_original_evidence.zip)",
+        "[28 October dependency repair and bounded reviews](DEPENDENCY_REPAIR_2026_10_28.md)"
       ],
-      "completion_condition": "Corrected BN/UN factors, restricted reflected k=1 subdomains, R3/R4/R6/R7 replacement routing and UL whole-parent restoration agree with current native sources. Existing source bounds and previously reviewed imports remain explicit. Final V01/V06 conjunction is recorded below; L08-L10 construction remains separate."
+      "completion_condition": "Corrected BN/UN factors, restricted reflected k=1 subdomains, R3/R4/R6/R7 replacement routing and UL whole-parent restoration agree with current native sources. Existing source bounds and previously reviewed imports remain explicit. Final V01/V06 conjunction is recorded below; L08-L10 construction remains separate. The later compression defect is corrected by full-parent extraction, actual unbounded-a R6 bounds, complete homogenizations, real caps and the separate (infinity,0) allocation."
     },
     {
       "id": "V05",
@@ -518,13 +520,14 @@
     {
       "id": "V06",
       "title": "Final independent mathematical verification of the integrated package",
-      "status": "RESOLVED integrated qualitative-existence implication on the reviewed source",
+      "status": "prior integrated qualitative-existence review retained; named dependency repair verified separately on 28 October",
       "evidence": [
         "[Eight-lemma global proof](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1328/V06_global_implication_original/Q222_V06_GLOBAL_IMPLICATION_CONCISE_PROOF_2026-10-26.md)",
         "[Independent global verification and notation clarification](materials/historical/analysis/v06_global_conjunction_verification_2026_10_26.txt)",
-        "[Original V06 proof package](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1328/V06_global_implication_original.zip)"
+        "[Original V06 proof package](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1328/V06_global_implication_original.zip)",
+        "[28 October dependency repair and bounded reviews](DEPENDENCY_REPAIR_2026_10_28.md)"
       ],
-      "completion_condition": "V01 supplies the exact NATIVE input. Independent verification checks the transferred physical model and valid source body, separated tensor Gram, affine constant and zero weights, primary Corollary 3.19, and both existential lift inclusions. The review shorthand for the normalized source body must retain physical validity as the current manuscript does. L08-L10 remain open; no evaluated pencil or size bound follows."
+      "completion_condition": "V01 supplies the exact NATIVE input. Independent verification checks the transferred physical model and valid source body, separated tensor Gram, affine constant and zero weights, primary Corollary 3.19, and both existential lift inclusions. The review shorthand for the normalized source body must retain physical validity as the current manuscript does. L08-L10 remain open; no evaluated pencil or size bound follows. The current compressed companion includes the separately reviewed R5.5 and R6.5–R6.7 repair; no fresh exhaustive global audit is claimed."
     }
   ],
   "c1_cells": [

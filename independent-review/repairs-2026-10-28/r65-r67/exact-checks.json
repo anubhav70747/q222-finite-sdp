@@ -1,0 +1,33 @@
+{
+  "scope": "Targeted polynomial identities, support and residual determinants only",
+  "sympy_version": "1.14.0",
+  "checks": [
+    "single-u full-state polynomial homogenization",
+    "single-v full-state polynomial homogenization",
+    "double full five-root homogenization",
+    "u exact centered m extraction",
+    "v exact centered m extraction",
+    "uv exact centered m extraction",
+    "R6.5 complete kernel restriction",
+    "R6.6 complete kernel restriction including centered correction",
+    "R6.7 complete five-root residue",
+    "R6.5 full residue restoration",
+    "R6.6 full residue restoration",
+    "R6.5 determinant at n0=0",
+    "R6.6 determinant",
+    "R6.7 determinant",
+    "infinity-zero exact whole-core four-root allocation",
+    "infinity-zero four-root residue",
+    "infinity-zero four-root determinant",
+    "R7 RU28 full four-state capped residue",
+    "R7 RU29 full four-state capped residue",
+    "R7 RU30 full five-root capped residue",
+    "R7 RU28 determinant"
+  ],
+  "checked_count": 21,
+  "limitations": [
+    "No source nonemptiness or universal source classification checked",
+    "No local contact conductor or finite remote proof checked here",
+    "Tensor SOS uses the existing bounded separated-Gram lemma, not determinant positivity alone"
+  ]
+}

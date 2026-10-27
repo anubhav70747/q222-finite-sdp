@@ -2211,3 +2211,19 @@ Eight original or independently verified payloads record the four scalar inequal
 | analysis/c1_global_schur_gate_verification_2026_10_27.txt | [file](../complete-proof-materials/materials/historical/analysis/c1_global_schur_gate_verification_2026_10_27.txt) | 6542 |
 | analysis/c1_global_schur_gate_replay_2026_10_27.log | [file](../complete-proof-materials/materials/historical/analysis/c1_global_schur_gate_replay_2026_10_27.log) | 908 |
 | analysis/c1_global_schur_gate_integrity_2026_10_27.json | [file](../complete-proof-materials/materials/historical/analysis/c1_global_schur_gate_integrity_2026_10_27.json) | 1399 |
+
+## R5.5 and R6.5–R6.7 dependency repair, 28 October
+
+The [correction notice](DEPENDENCY_REPAIR_2026_10_28.md) links the integrated proof and two bounded reviews. Original archived sources remain unchanged. Nine new review and integration payloads record the named repair and its delivery checks.
+
+| Review payload | Bytes |
+|---|---:|
+| [independent-review/repairs-2026-10-28/r55/check_r55.py](../independent-review/repairs-2026-10-28/r55/check_r55.py) | 6114 |
+| [independent-review/repairs-2026-10-28/r55/exact-checks.json](../independent-review/repairs-2026-10-28/r55/exact-checks.json) | 1545 |
+| [independent-review/repairs-2026-10-28/r55/r55_dependency.tex](../independent-review/repairs-2026-10-28/r55/r55_dependency.tex) | 7150 |
+| [independent-review/repairs-2026-10-28/r55/REPORT.md](../independent-review/repairs-2026-10-28/r55/REPORT.md) | 8311 |
+| [independent-review/repairs-2026-10-28/r65-r67/check_homogeneous.py](../independent-review/repairs-2026-10-28/r65-r67/check_homogeneous.py) | 5340 |
+| [independent-review/repairs-2026-10-28/r65-r67/exact-checks.json](../independent-review/repairs-2026-10-28/r65-r67/exact-checks.json) | 1326 |
+| [independent-review/repairs-2026-10-28/r65-r67/r65_r67_dependency.tex](../independent-review/repairs-2026-10-28/r65-r67/r65_r67_dependency.tex) | 9044 |
+| [independent-review/repairs-2026-10-28/r65-r67/REPORT.md](../independent-review/repairs-2026-10-28/r65-r67/REPORT.md) | 8374 |
+| [independent-review/repairs-2026-10-28/INTEGRATION.md](../independent-review/repairs-2026-10-28/INTEGRATION.md) | 3838 |

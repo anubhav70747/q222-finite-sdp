@@ -1,0 +1,221 @@
+\subsection{Exact projective full-state identities for R6 and R7}
+\label{component:pd5fa361b4623}
+\label{pd5fa361b4623:sec:r17-r6-bounded-a}
+
+The following polynomial identities concern the original parent
+\eqref{eq:c2-master-parent}, rather than a source theorem on another
+stratum. They also give an endpoint proof that applies when the actual
+coefficient $n$ is zero or the actual coefficients $A,D$ are unbounded.
+Write $D_z=1+z^2$ for each angular variable $z$, and continue to use
+$P=F/4$. Thus
+\[
+\begin{split}
+ P={}&nD_uD_vX^2+mM^2+CD_v(uW-Y)^2+AD_uD_vY^2+DJ^2
+       +\alpha D_u(vY-Z)^2\\
+ &+\tfrac12\{J^2+D_u(vY-Z)^2+D_v(X+uZ)^2-D_uD_vZ^2\},\\
+ M={}&vW-X+uvY-uZ,\qquad J=uW+uvX-Y-vZ.
+\end{split}
+\]
+
+\paragraph{Three whole homogeneous polynomials.}
+For $p=1/u$ define
+\[
+ M_u=pvW-pX+vY-Z,\qquad J_u=W+vX-pY-pvZ.
+\]
+Multiplication by $p^2$ gives the exact identity
+\begin{equation}\label{eq:c2-r65-pu}
+\begin{split}
+ P_u:={}&p^2P
+ =nD_pD_vX^2+mM_u^2+CD_v(W-pY)^2+AD_pD_vY^2\\
+ &+DJ_u^2+\alpha D_p(vY-Z)^2+\tfrac12\mathcal C_u,\\
+ \mathcal C_u={}&J_u^2+D_p(vY-Z)^2+D_v(pX+Z)^2-D_pD_vZ^2.
+\end{split}
+\end{equation}
+For $q=1/v$ put
+\[
+ M_v=W-qX+uY-quZ,\qquad J_v=quW+uX-qY-Z.
+\]
+The other single homogeneous polynomial is
+\begin{equation}\label{eq:c2-r65-pv}
+\begin{split}
+ P_v:={}&q^2P
+ =nD_uD_qX^2+mM_v^2+CD_q(uW-Y)^2+AD_uD_qY^2\\
+ &+DJ_v^2+\alpha D_u(Y-qZ)^2+\tfrac12\mathcal C_v,\\
+ \mathcal C_v={}&J_v^2+D_u(Y-qZ)^2+D_q(X+uZ)^2-D_uD_qZ^2.
+\end{split}
+\end{equation}
+For both reciprocal coordinates use the five roots
+$(X,W,Y,P_Z,Q_Z)$, where $P_Z=pZ$ and $Q_Z=qZ$, and set
+\[
+ M_b=pW-pqX+Y-Q_Z,\qquad J_b=qW+X-pqY-P_Z.
+\]
+Then the complete polynomial is
+\begin{equation}\label{eq:c2-r65-pb}
+\begin{split}
+ P_b:={}&p^2q^2P
+ =nD_pD_qX^2+mM_b^2+CD_q(W-pY)^2+AD_pD_qY^2\\
+ &+DJ_b^2+\alpha D_p(Y-Q_Z)^2+\tfrac12\mathcal C_b,\\
+ \mathcal C_b={}&J_b^2+D_p(Y-Q_Z)^2
+                  +D_q(p^2X^2+2XP_Z-P_Z^2).
+\end{split}
+\end{equation}
+In particular the apparently remaining $Z^2$ term has canceled in
+\eqref{eq:c2-r65-pb}. This is an identity on the five displayed roots;
+their independence is unnecessary. All three right-hand sides are
+polynomials at $p=0$ or $q=0$. They therefore define the literal
+projective endpoints without division by a reciprocal coordinate.
+
+\paragraph{The R6 kernel identities, including zero residue of $n$.}
+Suppose $g$ is infinitesimal, $m$ is unbounded, $mg$ is bounded,
+$n,C,A,D,\alpha$ are bounded, $n\ge0$, and
+$C_0,A_0,D_0>0$, $\alpha_0=0$. These are precisely the coefficient
+properties needed here. Both the original bounded-$a$ R6 source
+and the unbounded-$a$ R6 sources supply them; in the latter,
+$n_0=0$, including when $n$ is literally zero.
+
+For any positive real $K<m$, apply the exact identity
+\begin{equation}\label{eq:c2-r65-centered}
+ mH^2-(m-K)(H-gL)^2
+   =KH^2+2\mu LH-\mu gL^2,\qquad \mu=(m-K)g,
+\end{equation}
+with $(H,L)=(M_u,pvW),(M_v,W),(M_b,pW)$ in the three
+homogeneous polynomials. The remainder has bounded coefficients.
+Write $\kappa=\mu_0=(mg)_0$.
+
+At $p=0$ the centered correction has zero residue. On the kernel
+$vY-Z=0$ of the limiting $m$ row, the complete residue is
+\begin{equation}
+ n_0D_vX^2+C_0D_vW^2+A_0D_vY^2
+       +(D_0+\tfrac12)(W+vX)^2.\tag{R6.5}
+\end{equation}
+Here and in the next two displays the remaining testing letters denote
+their real residues. The full four-state residue is this form plus
+$(K+\tfrac12)(vY-Z)^2$. If $n_0>0$, it is strict for every finite
+$v$. If $n_0=0$, the determinant of the kernel form is
+\[
+ A_0C_0(D_0+\tfrac12)v^2D_v^2.
+\]
+It is strict for $v\ne0$. At $v=0$ its $X$ direction is absent;
+the separate four-root calculation below treats that corner.
+
+At $q=0$ the centered correction is
+$2\kappa W(W+uY)$, which vanishes on the limiting $m$-row kernel
+$W+uY=0$. On this kernel the complete residue is
+\begin{equation}
+ (n_0+\tfrac12)D_uX^2+C_0D_u^2Y^2
+       +(A_0+\tfrac12)D_uY^2+D_0(uX-Z)^2.\tag{R6.6}
+\end{equation}
+Its determinant on $(X,Y,Z)$ is
+\[
+ D_0(n_0+\tfrac12)D_u^2(C_0D_u+A_0+\tfrac12)>0.
+\]
+Its $Y$ coefficient is positive and its $(X,Z)$ block is strict, so
+the kernel form is positive definite for every finite $u$, including
+$u=0$ and $n_0=0$. The real-cap argument in
+Section~\ref{lem:c2-r55-real-cap} chooses a sufficiently large real
+$K$ for the full four-state residue; its inverses occur only in a
+real matrix, never in the tensor ring.
+
+At $p=q=0$ the centered correction again has zero residue and the
+complete five-root form is
+\begin{equation}
+ (n_0+\tfrac12)X^2+C_0W^2+A_0Y^2+D_0(X-P_Z)^2
+                 +(K+\tfrac12)(Y-Q_Z)^2.\tag{R6.7}
+\end{equation}
+The two nontrivial block determinants are
+$D_0(n_0+\tfrac12)$ and $A_0(K+\tfrac12)$. Both remain positive
+at $n_0=0$; the whole five-root determinant is
+$A_0C_0D_0(n_0+\tfrac12)(K+\tfrac12)>0$.
+
+\paragraph{A common capped proof for the R6 and R7 endpoints.}
+There is also an endpoint proof using only positive real lower bounds
+on $m,C,A,D$. It avoids imposing boundedness on $A$ or $D$.
+Choose positive real numbers
+\[
+ m_c<m,\qquad C_c<C,\qquad A_c<A,\qquad D_c<D.
+\]
+Retain the whole $n,\alpha$ event squares and the four nonnegative
+excess event squares with coefficients
+$m-m_c,C-C_c,A-A_c,D-D_c$. In each homogeneous chart the remaining
+polynomial is exactly \eqref{eq:c2-r65-pu},
+\eqref{eq:c2-r65-pv}, or \eqref{eq:c2-r65-pb} with
+\[
+ (n,\alpha,m,C,A,D)=(0,0,m_c,C_c,A_c,D_c).
+\]
+Thus all its coefficients are bounded pure-testing elements. Its
+complete residues in the three charts are, respectively,
+\begin{align}
+ &C_cD_vW^2+A_cD_vY^2+(D_c+\tfrac12)(W+vX)^2
+                   +(m_c+\tfrac12)(vY-Z)^2,
+                         \label{eq:c2-r65-cap-u}\\
+ &m_c(W+uY)^2+C_c(uW-Y)^2+(A_c+\tfrac12)D_uY^2
+                   +D_c(uX-Z)^2+\tfrac12D_uX^2,
+                         \label{eq:c2-r65-cap-v}\\
+ &C_cW^2+A_cY^2+D_c(X-P_Z)^2+\tfrac12X^2
+                   +(m_c+\tfrac12)(Y-Q_Z)^2.
+                         \label{eq:c2-r65-cap-b}
+\end{align}
+The square rows in \eqref{eq:c2-r65-cap-u} have common kernel zero
+when $v\ne0$. The square rows in \eqref{eq:c2-r65-cap-v} have
+common kernel zero for every finite $u$: first $X=Y=0$, then the
+$m_c$ and $D_c$ rows give $W=Z=0$. In
+\eqref{eq:c2-r65-cap-b}, the separate $W,X,Y$ squares and the last
+two rows force all five roots to vanish. These are strict Gram
+matrices for the entire homogeneous state polynomial.
+
+The R6 bounds give the required positive real lower bounds. In
+unbounded-$a$ R7, $m,A$ are unbounded and $C_0=t_0/2>0$.
+When $t_0>1$, $D_0=1/[2(t_0-1)]>0$; when $t_0=1$, $D$ is
+unbounded. Hence these same real caps exist on both R7 gap
+boundaries. The actual $n,\alpha$ packets were retained, so neither
+of them was replaced by its zero residue in the full polynomial.
+
+\paragraph{The complete $(\infty,0)$ allocation.}
+Assume $p,v$ are infinitesimal, allowing either to be literally zero.
+Retain all the original event squares except positive real caps
+$C_c,A_c$ of the $C,A$ events. Put
+\[
+ H=pX+Z,\qquad T=vX,\qquad
+ \widehat J=W+D_pT-pY-pvH.
+\]
+The entire selected polynomial has the following four-root identity:
+\begin{equation}\label{eq:c2-r65-exceptional}
+\begin{split}
+ Q_{\infty0}={}&C_cD_v(W-pY)^2+A_cD_pD_vY^2
+                      +\tfrac12\widehat{\mathcal C},\\
+ \widehat{\mathcal C}={}&\widehat J^2+D_pv^2Y^2-2D_pvYH
+          +(1-p^2v^2)H^2\\
+ &+2pD_pTY+2pvD_pTH-p^2D_pT^2.
+\end{split}
+\end{equation}
+Indeed substitute $Z=H-pX$ into $\mathcal C_u$ and collect every
+remaining $vX$ as $T$. This gives
+\eqref{eq:c2-r65-exceptional} by multiplication and addition only.
+In particular it gives every state cross term, with no inverse of
+$p$ or $v$. On $(H,W,Y,T)$ its residue is
+\[
+ \tfrac12H^2+\tfrac12(W+T)^2+C_cW^2+A_cY^2\succ0,
+ \qquad \det=\tfrac14A_cC_c>0.
+\]
+This replaces the nonstrict ordinary state residue at $n_0=v_0=0$.
+It also treats the literal endpoint, where some of the four roots
+are dependent or zero.
+
+\paragraph{Passage from the residues to tensor sums of squares.}
+Each polynomial above has an explicit finite root frame with bounded
+coefficients. For the centered R6 formulas the coefficients belong to
+$B_c\otimes_{\mathbb R}B_t$ because $\mu=(m-K)g$ is bounded;
+for the capped proof they even belong to $B_t$. The strict real
+matrices therefore meet every hypothesis of
+Lemma~\ref{p25af2c58da7e:lem:gram}. That lemma gives a finite tensor
+sum of squares for the complete remainder, rather than merely
+pointwise real positivity. Restore the retained positive event
+squares, or the positive centered excess square in
+\eqref{eq:c2-r65-centered}. For nonzero reciprocal coordinates,
+restoring homogeneity multiplies squares only by pure-testing
+factors. At literal endpoints the displayed polynomial value is
+used directly. All identities hold for either angle sign and every
+real state; a complex state is treated by adding the identities for
+its real and imaginary parts. These calculations cover every
+projective test with at least one angle at infinity or unbounded,
+without using a finite-contact theorem on another source stratum.

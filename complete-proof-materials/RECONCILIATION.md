@@ -1,5 +1,7 @@
 # What the recovered work already establishes
 
+**Current-source correction, 28 October:** [R5.5 and R6.5–R6.7](DEPENDENCY_REPAIR_2026_10_28.md) had labelled destinations without proof bodies in the compressed companion at `d01e5e0`. The restored full-parent derivations and bounded analytical reviews close those named missing steps. The dated reviews below remain historical records; their statements that no repair was needed do not describe this later compression defect. This correction does not repeat the complete C2 or global audit, and leaves H1/H2 open.
+
 The earlier list of unfinished work overstated what remained to be derived. The complete 22 October audits were available locally but had not been reconciled with the later, narrower assignments.
 
 The complete C1 report discusses all ten LC5 rows, ordinary and complementary UI charts, UH opening faces, all six refined C14 predicates and seven restored exits. It examines full state forms, normal rows, constrained Schur completions and real coefficient bounds. The complete C2 report includes R8 joint-D cancellation and the thin-R10 stress, both normal supports, the negative formal beta interface and the literal n=0 overlap. These are substantive proof reviews, not just completion labels.
