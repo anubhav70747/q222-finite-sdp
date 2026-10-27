@@ -1,5 +1,7 @@
 # Independent review of the finite-lift proof
 
+The [preservation audit](../reconciliation/2026-10-27/preservation-audit/README.md) records unchanged original scientific artifacts and no deleted files across the audited Git baselines. The [nine-work comparison](LITERATURE_COMPARISON.md) and [two analytical consequences](ANALYTICAL_COMPARISON_BRIDGES.md) add a local-mixture interval test and a trigonometric-degree corollary, with [targeted exact checks](checks/comparison-bridges/result.json). These additions preserve the original results and leave universal H1/H2 admission open.
+
 The [Sun–Wang–Yu matching](SUN_WANG_YU_CONTACT_MATCH.md) gives a short alternative proof of finite-contact coercivity, uniqueness and full C1/C2 curvature. It includes the full affine coefficient map, measurement/state scaling, a [bounded independent review](SUN_WANG_YU_CONTACT_REVIEW.md), and [exact symbolic checks](checks/sun-wang-yu-match/result.json). The native bounds are tied; their frustrated-case lemmas apply. This completes the matching, not universal fixed-library admission.
 
 This folder records an outside review of the existence proof in `latex/` and of

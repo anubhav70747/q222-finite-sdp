@@ -10,6 +10,12 @@ The [new exact comparison and proof](independent-review/SUN_WANG_YU_CONTACT_MATC
 
 Their one-real-two-qubit-plus-local membership description does not supply fixed affine SDP admission. H1/H2 and global reverse inclusion remain open. This update preserves the original manuscript, singular proofs and the outstanding L20/L21 reviews. Scheduled research tasks remain paused.
 
+## Preservation and broader comparison
+
+The [Git preservation audit](reconciliation/2026-10-27/preservation-audit/README.md) confirms no files were deleted and no existing manuscript, PDF, extracted lift, archived proof or checker was changed between the audited baselines and `ac8861a`. Original checklist entries and component coverage remain recoverable; the audit identifies the index/status changes separately.
+
+The [nine-work literature comparison](independent-review/LITERATURE_COMPARISON.md) distinguishes full-behavior geometry, correlator SDPs, NPA convergence and arbitrary finite lifts. Two [analytical consequences](independent-review/ANALYTICAL_COMPARISON_BRIDGES.md) eliminate the local mixture variables by a facet interval test and derive trigonometric-degree divergence along our existing doubly tilted family from the retained smooth-feature obstruction. These simplify membership search and rule out an unsuitable uniform-degree route; they do not supply H1/H2. The [nine exact checks](independent-review/checks/comparison-bridges/result.json) cover their stated algebra and examples. Original proof and manuscript files are unchanged.
+
 ## What would complete the current candidate
 
 Let
