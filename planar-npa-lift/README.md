@@ -15,13 +15,14 @@ then gives the complete finite lift.
 
 - [Two-page note](note/main.pdf) — the central insight and proof.
 - [Two-page PRL sequel draft](article/main.pdf) and [abstract](ABSTRACT.txt).
-- [Complete proofs](proofs/main.pdf) — 23 pages, including all matrix entries,
+- [Complete proofs](proofs/main.pdf) — 13 pages, including all matrix entries,
   both membership inclusions and the entire NPA nontermination argument.
 - [Portable source package](NPA_Finite_Lift_Overleaf.zip).
 - [Exact data for all 32 projections](checks/ALL32_EXACT_PROJECTION_CONSTRAINTS.json).
 
-The article and abstract are candidates prepared for author review. The
-source authorship follows the existing PRL manuscript.
+The abstract is author-approved and reproduced verbatim. The revised Letter
+includes the analytical proof of the finite lift in its two-page main text.
+The source authorship follows the existing PRL manuscript.
 
 ## What the proof covers
 
@@ -31,7 +32,7 @@ source authorship follows the existing PRL manuscript.
 | Minimal block order | Extension degree 2 by the planar theorem and nonpolyhedrality; the explicit displayed lift has orders 5 and 4 | F3 |
 | Independently signed tilts | Exact fixed-input support SDP for every real pair of tilts, including axes, critical and commuting branches | F4 |
 | Relabelled projections | All 32 marginal–CHSH planes; exact support after intersection with any NPA level | F5 |
-| Infinite NPA depth | Divergent relative support error near the local threshold at every fixed level; extension to every fixed finite word list | S1–S10 |
+| Infinite NPA depth | Divergent relative support error near the local threshold at every fixed level; extension to every fixed finite word list | S1–S5 |
 
 The signed two-tilt construction is a support calculation with coefficients
 depending on the chosen tilts. The full eight-coordinate quantum-set lift

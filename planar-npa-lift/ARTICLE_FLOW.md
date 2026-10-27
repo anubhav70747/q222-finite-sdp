@@ -1,30 +1,34 @@
 # Article flow
 
-Start with the two observed numbers: the CHSH value and the sum of two
-marginal averages. The preceding NPA Letter proves that no finite level
-recovers their quantum region. This sequel constructs one exact finite lift.
+Begin with the same quantum region: infinite NPA depth, but an exact finite
+lift. Its two coordinates are the CHSH value and the sum of two marginal
+averages; the marginals themselves need not be equal.
 
-To find the region, decide every supporting inequality. Above the local
-bound, three characteristic coefficients are nonnegative, leaving the
-determinant to decide positivity. At fixed product of the overlap
-parameters, the determinant is affine in their sum. Its coefficient is
-nonnegative in the nonclassical range: the arithmetic–geometric mean
-inequality therefore selects equal overlaps. The other directions are local.
+Every supporting line asks for positivity of a two-qubit slack operator.
+Above the local bound, its first three characteristic coefficients are
+nonnegative. The determinant therefore decides positivity. At fixed product
+of the overlap parameters, the determinant is affine in their sum with a
+nonnegative coefficient in the nonclassical range. AM–GM selects equal
+overlaps. A short explicit sum of squares completes the local directions.
+One angle consequently determines every supporting line.
 
-Rationally parametrize the remaining angle. The slack becomes a quartic
-matrix affine in every support coefficient. Univariate matrix positivity
-gives quadratic square factors; parity separates them into blocks of
-orders five and four. The affine coefficient map represents the whole cone
-of valid inequalities. Its positive definite anchor and trace normalization
-then give an attained membership lift, including the boundary.
+Rationally parametrize that angle. The slack becomes a univariate quartic
+matrix, affine in all support coefficients. Univariate matrix positivity
+gives quadratic square factors, including singular cases. Parity separates
+the factors into blocks of orders five and four. Matching sixteen
+coefficients gives one fixed cone of valid inequalities. The main text
+proves both membership inclusions: trace pairing gives one, and the strict
+anchor, bounded normalization and semidefinite duality give the other.
 
-The earlier NPA proof supplies the comparison. Its certificates must still
-hold for independent measurement angles, which retain the shifted Motzkin
-obstruction. The main text recalls that mechanism in one paragraph; the
-companion preserves the complete argument. The inherited cubic boundary
-expansion also excludes a polygon, so the planar representation theorem
-makes block order two optimal.
+The distinction from the preceding NPA result now has a concrete meaning.
+The support optimization admits equal overlaps, while finite observable-word
+certificates must hold for independent angles. The earlier shifted Motzkin
+obstruction survives that freedom. Its complete proof is reorganized into
+five connected sections in the companion: the quantum/NPA models, the cubic
+boundary, the trial-state gap, the polynomial limit of a finite certificate,
+and the extension to arbitrary finite word lists. The uniform Taylor
+remainder and the bounded-coefficient argument remain separate steps.
 
-Physical relabellings yield thirty-two exact projections. They can be added
-to any NPA relaxation to resolve all support directions of the obstructed
-family.
+Finally, the cubic boundary excludes a polygon, making block order two
+optimal by the planar representation theorem. Physical relabellings give
+thirty-two exact projections that can be added to any NPA level.
