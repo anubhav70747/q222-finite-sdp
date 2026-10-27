@@ -1,0 +1,127 @@
+RESULTS AND REMAINING BRANCHES — 27 OCTOBER 2026
+
+The new result
+--------------
+The exact region W={(<A0>+<B0>, CHSH): p quantum} has the explicit
+membership lift in proof/main.tex, equations (6)-(7): two PSD blocks of
+orders 5 and 4, sixteen auxiliary scalars and three affine equations.
+Every support direction is covered, including negative CHSH coefficients.
+Its semidefinite extension degree is exactly two. The explicit order-two
+construction is not evaluated; this minimum follows from the planar
+theorem and the elementary nonpolyhedrality proof.
+
+The prior infinite-NPA-depth theorem applies to support directions of
+this SAME region. Thus the new supplied package genuinely supplies the
+symmetric-tilt connection, independently of the earlier C1 neighborhood.
+
+Completed branches in the extension
+-----------------------------------
+[x] Symmetric common tilt: all real h, a in h*CHSH+a*(A0+B0).
+[x] Low tilt |a|<=|h|: global determinant reduction to equal overlaps.
+[x] Critical and supercritical |a|>=|h|: exact local support
+    2|h|+2|a|, with an operator sum-of-squares certificate.
+[x] Both signs, h=0, a=0 and the completely zero functional.
+[x] Commuting measurement edges, t=0, t=infinity and singular slacks.
+[x] Identically singular quartic matrices and rank-deficient leading terms.
+[x] All sixteen affine support-lift equations.
+[x] Exact membership matrices, both inclusions and attained auxiliaries.
+[x] Compact normalized auxiliary section from an explicit positive anchor.
+[x] Nonpolyhedrality and minimal extension degree two, without using the
+    imported near-critical cubic expansion.
+[x] Asymmetric fixed tilts: all real alpha,beta, not only nonnegative ones.
+[x] Signed subcritical diamond |alpha|+|beta|<2: weighted-ray reduction,
+    clipped commuting edge, and fixed-input PSD blocks of orders 16 and12.
+[x] Either zero-tilt axis, CHSH and either ordering of the tilt magnitudes.
+[x] Signed critical diamond and exterior: exact local bound 2+|alpha|+|beta|.
+[x] Singular ray endpoints: invert the congruence only in the interior,
+    then take limits of the original slack.
+[x] Interval matrix factorization with fixed degree, including endpoint
+    zeros and singular polynomial matrices.
+
+What the constructions represent
+--------------------------------
+1. Supplied symmetric E_sym: two visible coordinates (tilt,bound).
+   One affine lift, with scalar tilt-domain inequalities when restricted.
+2. New W: two observed coordinates (sum of marginals,CHSH).
+   One exact membership lift, derived from the homogeneous support cone.
+3. General signed double tilt: each fixed (alpha,beta) has an exact SDP
+   for its bound. The slope rho is nonlinear in the tilts, so this is not
+   yet a single evaluated affine lift with both tilts free.
+4. Balanced C1: a different three-dimensional source cone, exact condition
+   A*alpha>=2m^2, with PSD orders (2,1,1,1). Its complete short AM-GM proof
+   is in ../compact-exposition-2026-10-27 relative to the project root.
+5. C1 source neighborhood: a relative open region in five native parameters,
+   with globally valid certificates in one eighteen-function space.
+6. Full Q222: reviewed qualitative finite-SDP existence is retained as a
+   separate historical input. The current evaluated global outer pencil
+   has not yet acquired a proof of universal reverse inclusion.
+
+The remaining constructive targets
+-----------------------------------
+[ ] A direct evaluated common affine lift of the three-coordinate image
+    W3={(<A0>,<B0>,CHSH)}. The fixed-input asymmetric construction is not
+    this lift. Qualitative existence follows from the separate full-Q222
+    existence theorem if that reviewed input is invoked.
+[ ] H1: every actual strict oriented C1 source enters the same fixed sound
+    finite cone K364, or an explicit adequate replacement. The local
+    eighteen-function tube does not cover the complete native domain.
+[ ] H2: every actual strict C2 source enters that same cone/replacement,
+    including arbitrary finite c and coupled approaches to face walls.
+[ ] With H1/H2 (or alternative coverage), apply the established reflection,
+    coefficient density, closed cone sum, event and SG12/SG13 cones and
+    full128 physical orbit to prove reverse inclusion for the evaluated
+    global pencil. These are downstream steps; they do not prove H1/H2.
+[ ] Integrate a complete global constructive proof and final manuscript
+    only after those universal admissions are supplied.
+
+Useful existing pieces toward H1/H2
+-----------------------------------
+C1: endpoint PSD; contact-local PSD; exact Schur and scalar formulations;
+balanced source cone and quantified five-parameter tube; conditional
+beta- and D-wall openings. Missing: global, simultaneous PSD in one fixed
+space throughout the native domain, including approaches to the walls.
+
+C2: admission near both open c-ends; conditional n=0 wall opening with
+all-four-contact-complement positive definiteness; exact finite witnesses
+and coefficient identities. Missing: whole-wall PD where used and the
+remaining finite-c interior/coupled limits.
+
+The established singular-density theorem can close boundary coefficient
+limits AFTER universal strict admission. It does not require a separate
+uniform Gram-norm limit on that route. Retain the separate event and
+closed-face cones instead of forcing them into the new square library.
+
+Organizing insights
+--------------------
+I. A deterministic bound can make three characteristic coefficients
+   positive. Then one determinant controls the entire state optimization.
+II. At fixed angle product, the determinant's only varying term is a
+    two-term weighted arithmetic-geometric mean. This removes one angle.
+III. Univariate matrix positivity gives bounded-degree squares. Whether
+     the resulting lift is common-affine depends on how the reduced
+     matrix depends on the visible Bell coefficients.
+IV. An explicit positive Gram anchor turns support certificates into
+    an attained behavior membership lift by conic duality.
+V. Contact-complement positivity is a different mechanism: it propagates
+   a fixed certificate space to nearby sources. Local propagation needs
+   a further argument before it supplies a whole-domain cover.
+
+Source and verification boundaries
+------------------------------------
+Original ZIP is preserved under ../original. It was treated as a candidate;
+its locked-title label and submission/author-verification narrative were
+not taken as new instructions or independently established facts.
+
+Repo baseline: 1b293832ffeff46ebbee834b89554481d70f544e, fetched this turn.
+Sources for the broader map: FRONTIER.md; complete-proof-materials/
+CHECKLIST.md, RECONCILIATION.md and VERIFICATION_PLAN.md; independent-review/
+C1_BALANCED_SLICE.md, C2_N0_OPENING.md, ZERO_WEIGHT_OPENING.md,
+CONDITIONAL_GLOBAL_PENCIL and related controlling notes.
+
+verify_symmetric.py checks17 identities from the physical operator.
+verify_membership_and_asymmetric.py checks the adjoint/anchor and the
+general signed determinant, characteristic inputs and ray congruence.
+The universal positivity, degree and duality implications are proved in
+proof/main.tex and were separately reviewed. No numerical sweeps used.
+
+Browser monitoring remains paused. No existing conversation was interrupted.

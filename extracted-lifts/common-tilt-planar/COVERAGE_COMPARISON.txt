@@ -1,0 +1,124 @@
+Covering the relabelled hard directions — 27 October 2026
+
+New proved consequence
+-----------------------
+Let chi=(chi00,chi01,chi10,chi11) have entries +/-1 and product -1.
+There are8 such CHSH orientations. For each chosen pair x,y in{0,1}, set
+
+  M_chi,xy = <Ax> + chi_xy <By>,
+  S_chi = sum_ij chi_ij <Ai Bj>.
+
+Each of the32 maps pi_chi,xy=(M_chi,xy,S_chi) maps the quantum behavior
+set exactly onto the planar W from proof/main.tex. This follows by a
+physical input/output relabeling; the condition product(chi)=-1 is precisely
+what permits the four correlator signs to be matched. Flipping all outputs
+changes M to -M and leaves S unchanged, so its duplicate constraints can
+be removed. An independent enumeration of all128 physical actions gives
+exactly these32 maps, all with distinct unoriented coefficient planes.
+
+For any fixed standard NPA behavior relaxation Q_L, define
+
+  R_L = Q_L intersect [intersection over chi,x,y of pi_chi,xy^-1(W)].
+
+This is one finite SDP. The added constraints are fully evaluated in
+ALL32_EXACT_PROJECTION_CONSTRAINTS.json:64 PSD blocks of orders5 and4,
+total order288,512 auxiliary scalars and96 affine equalities. These are
+additional to the chosen NPA level, whose existing moment block is retained.
+
+For every h,a and every listed projection, optimization over R_L is EXACT:
+
+  sup_{p in R_L} [h S_chi(p)+a M_chi,xy(p)]
+    = sup_{p quantum} [h S_chi(p)+a M_chi,xy(p)].
+
+Proof. Q is contained in R_L because the32 projected constraints are
+quantum-valid. Conversely R_L is contained in each inverse image of W,
+so its support in that plane is at most the quantum support of W.
+The quantum inclusion gives the opposite inequality. This proves equality.
+The previously established NPA nontermination theorem gives, for every
+fixed L, some near-critical symmetric tilt where Q_L's support is strictly
+larger. Hence R_L is a strict strengthening of every fixed Q_L. This is a
+symbolic theorem, not a numerical comparison or a claim that R_L equals Q.
+
+The same construction can be intersected with existing finite outer
+pencils and all globally sound C1/C2/closed-face constraints. Every such
+intersection remains quantum-valid and retains exact support on these32
+planes. Enforcing several exact projections does not ensure their state
+and measurement realizations can all be chosen jointly.
+
+Comparison with existing work
+------------------------------
+Single-marginal tilted projection:
+  Exact two-coordinate quantum image (a0,CHSH), with a small explicit
+  second-order-cone representation. Already in extracted-lifts/README.md.
+  Its finite-NPA-exact regime is a useful baseline.
+
+New common-tilt projection:
+  Exact full two-coordinate image (a0+b0,CHSH), all support directions.
+  It contains the symmetric near-critical NPA-hard directions and now
+  supplies the32-copy construction above. Minimum largest block order2
+  is proved; evaluated membership blocks are5 and4.
+
+Balanced C1 slice:
+  Exact cone of Bell sources with A*alpha>=2m^2 and total PSD order5.
+  Its contact-complement Grams extend to a relative open five-parameter
+  source neighborhood in a fixed18-function space. This is source coverage,
+  not a five-dimensional behavior projection. Its generic coefficients
+  include three or four nonzero marginal terms, whereas a new common-tilt
+  plane has exactly two equally weighted marginals. Neither domain size
+  nor number of parameters establishes containment between the results.
+
+Equal-angle C2 cone:
+  Two independent contact parameters; exact source cone with two2x2 PSD
+  blocks and three scalar inequalities (total order7). Its decomposition
+  into one contact source and two event rays gives a different small
+  certificate. It already sharpens NPA1+AB on its stated sources.
+
+Unequal-angle C2 curve:
+  Exact conic hull of one contact curve, with two3x3 moment blocks
+  (total order6). The full three-parameter contact surface has an additional
+  quartic relation; its convex hull is not described by imposing the
+  generator equalities on mixtures.
+
+General doubly tilted support values:
+  The signed fixed-input16,12 construction covers every tilt pair.
+  Its ratio rho=(4-alpha^2)/(4-beta^2) remains nonlinear in the free tilts.
+  Removing that dependence in a common affine lift would yield an explicit
+  three-coordinate image (a0,b0,CHSH), a substantive next extension.
+
+Full evaluated Q222 pencil:
+  Universal C1 and C2 admission into one fixed globally sound library is
+  still the missing constructive input. Existing reflection, coefficient
+  density and closed-face/event pieces assemble the other branches once
+  that input is available. The reviewed qualitative existence theorem is
+  a separate retained result.
+
+Best next proof targets
+-------------------------
+1. Use the32 projections immediately as exact additions to a chosen NPA
+   level, together with the existing order5 C1 and order7/order6 C2 cones.
+   The current JSON is an evaluated add-on; a combined NPA solver instance
+   has not been assembled or benchmarked in this comparison.
+2. Seek a common affine lift of W3=(a0,b0,CHSH), preserving both independent
+   tilts as visible coefficients. A source-dependent optimal ray alone is
+   insufficient. This is the nearest larger observed region.
+3. For direct C2 expansion, extend the unequal-angle contact curve to the
+   convex hull of its three-parameter surface while retaining the quartic
+   branch and all endpoint conditions. The existing order6 moment proof
+   suggests the right language, but multivariate positivity is a new step.
+4. For global completion, use a proved uniform strict-source construction
+   or a genuine finite coverage argument for H1/H2. Neither repeated local
+   neighborhoods nor finitely many exact projections prove that coverage.
+
+Exact source pointers
+----------------------
+New proof: proof/main.tex, sections1-3.
+New orbit data: ALL32_EXACT_PROJECTION_CONSTRAINTS.json.
+Existing repo baseline:1b293832ffeff46ebbee834b89554481d70f544e.
+  extracted-lifts/README.md
+  independent-review/C1_BALANCED_SLICE.md
+  extracted-lifts/c2-equal-angle-cone/README.md
+  extracted-lifts/c2-unequal-angle-curve/README.md
+  independent-review/C2_CONTACT_GEOMETRY.md
+  FRONTIER.md
+The comparison read these existing results; it did not rerun their full
+historical checks or claim a new audit of the qualitative global theorem.

@@ -18,6 +18,8 @@ The [nine-work literature comparison](independent-review/LITERATURE_COMPARISON.m
 
 ## What would complete the current candidate
 
+The separately completed [common-tilt planar lift and 32 physical projections](extracted-lifts/common-tilt-planar/README.md) are now preserved in Git with their original proof, actual matrices, checkers and delivery archives. They give exact support on the stated 32 planes and, using the imported nontermination theorem, strictly strengthen every fixed NPA level. They do not establish full-set membership or H1/H2. The common affine construction for W3 also remains open. This publication imports existing local results; no original manuscript or certificate was rewritten.
+
 Let
 
 \[

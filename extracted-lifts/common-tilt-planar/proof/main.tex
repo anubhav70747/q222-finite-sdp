@@ -1,0 +1,441 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,microtype}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\W}{\mathcal W}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\sxdeg}{\operatorname{sxdeg}}
+\setlength{\parskip}{2pt}
+\title{An exact planar quantum region beyond finite NPA depth}
+\author{}
+\date{27 October 2026}
+\begin{document}
+\maketitle
+\vspace{-2em}
+
+In the simplest Bell experiment, retain two observed quantities:
+\[
+ M=\langle A_0\rangle+\langle B_0\rangle,\qquad
+ S=\langle A_0B_0+A_0B_1+A_1B_0-A_1B_1\rangle .
+\]
+Their quantum region is
+\(\W=\{(M,S):p\in\Q_{222}\}\).
+The supplied symmetric-tilt construction describes upper bounds on \(S+aM\).
+We extend it to every linear functional \(hS+aM\), including negative \(h\),
+and obtain an explicit membership test for the whole region \(\W\).
+
+\begin{theorem}
+The region \(\W\) is the projection of one fixed affine semidefinite set with
+PSD blocks of orders \(5\) and \(4\), given explicitly in
+Eqs.~\eqref{eq:dualmat}--\eqref{eq:coords}.
+Its semidefinite extension degree is exactly two.
+For the same region, every fixed standard NPA level has divergent relative
+support error along the symmetric doubly tilted family as \(a\uparrow1\),
+by the prior nontermination theorem~\cite{prior}.
+\end{theorem}
+
+The explicit blocks and the extension-degree assertion serve different purposes.
+The former give a reproducible lift; the latter establish the smallest possible
+largest block order among all finite lifts, without specifying the number of blocks.
+The proof reduces all measurement pairs to equal overlaps, converts the remaining
+matrix polynomial into a sum of squares, and dualizes its affine coefficient equations.
+
+\section{One polynomial for every symmetric support direction}
+
+Let \(H=h\,\mathrm{CHSH}+a(A_0+B_0)\), with \(h,a\in\mathbb R\).
+Write
+\[
+ {\cal C}=\{(\lambda,a,h):\lambda I-H\succeq0
+ \text{ for every quantum realization}\}.
+\]
+Jordan's lemma, after projective dilation, reduces this condition to real
+two-qubit blocks. Put
+\[
+ A_0=B_0=Z,\quad A_1=cZ+rX,\quad B_1=dZ+sX,\qquad
+ r^2=1-c^2,\ s^2=1-d^2 .
+\]
+We may take \(r,s\ge0\) by local \(Z\) conjugations. Endpoints include the
+one-dimensional blocks. Complex state vectors cause no further condition,
+because the Bell matrix is real symmetric.
+
+Set \(H_*=|h|\), \(b=|a|\) and \(L=2H_*+2b\).
+Deterministic assignments attain \(L\): choose \(A_0=B_0=\operatorname{sign}(a)\),
+and take \(A_1=B_1\) equal to that sign for \(h\ge0\), or its negative for \(h<0\).
+At \(a=0\), either sign works. Therefore every admissible \(\lambda\) satisfies
+\(\lambda\ge L\).
+
+\paragraph{The determinant controls positivity.}
+With \(\Omega=1+c+d-cd\in[-2,2]\), the coefficients in
+\[
+ \det(uI+\lambda I-H)=u^4+e_1u^3+e_2u^2+e_3u+e_4
+\]
+are
+\begin{align*}
+ e_1&=4\lambda,&
+ e_2&=6\lambda^2-4a^2-8h^2,\\
+ e_3&=4\lambda^3-8\lambda a^2-16\lambda h^2-8ha^2\Omega,
+ &e_4&=\det(\lambda I-H).
+\end{align*}
+The first three are nonnegative for \(\lambda\ge L\).
+For \(e_3\), bound its last term below by \(-16H_*b^2\).
+The resulting cubic is increasing for \(\lambda\ge L\), and at \(L\) equals
+\(16b(b+2H_*)^2\).
+Consequently
+\[
+ \lambda I-H\succeq0\quad\Longleftrightarrow\quad e_4\ge0 .
+\]
+Indeed, a negative eigenvalue would produce a positive root of a polynomial
+whose coefficients are all nonnegative. This argument includes zero determinants
+and multiple zero eigenvalues.
+
+\paragraph{Equal overlaps give the global minimum.}
+Put \(x=(1-c)/2\), \(y=(1-d)/2\), and denote the determinant by \(D(x,y)\).
+Direct expansion gives
+\begin{align*}
+D(x,y)={}&D_0+64h^2(4h^2-a^2)xy(x+y)\\
+ &+(32\lambda ha^2+128h^2a^2-256h^4)xy-256h^4x^2y^2,\\
+D_0={}&[(\lambda-2h)^2-4a^2](\lambda+2h)^2.
+\end{align*}
+Hence
+\begin{equation}
+ D(x,y)-D(\sqrt{xy},\sqrt{xy})
+ =64h^2(4h^2-a^2)xy(\sqrt x-\sqrt y)^2 .
+ \label{eq:diagonal}
+\end{equation}
+For \(|a|\le |h|\), the right side is nonnegative. Testing all equal-overlap
+blocks therefore suffices for every pair \(c,d\). No division by an angle,
+a determinant, or \(h\) occurs.
+
+\paragraph{The remaining directions are classical.}
+The range \(b\ge H_*\) has exact support value \(L\).
+To prove this, set \(C_B=(B_0+B_1)/2\), \(D_B=(B_0-B_1)/2\). Then
+\begin{equation}
+ 4I-(\mathrm{CHSH}+2A_0)
+ =(I-C_B-A_1D_B)^2+
+ \frac14\sum_{y=0}^1[(I-A_0)(I+B_y)]^2\succeq0 .
+ \label{eq:critical}
+\end{equation}
+Here \(C_B^2+D_B^2=I\) and \(C_BD_B+D_BC_B=0\).
+Party exchange and output flips give
+\(\sigma\mathrm{CHSH}+2\tau A_0\le4I\) and
+\(\sigma\mathrm{CHSH}+2\tau B_0\le4I\), for either sign \(\sigma,\tau\).
+Average these inequalities, multiply by \(H_*\), and add
+\((b-H_*)[2I-\tau(A_0+B_0)]\succeq0\).
+The resulting bound is \(H\le LI\), attained by the deterministic strategies above.
+This also covers \(h=0\), the critical line, and both coefficient signs.
+
+\paragraph{The quartic matrix.}
+On \(c=d\), the Bell basis
+\[
+ \phi_\pm=(|00\rangle\pm|11\rangle)/\sqrt2,\qquad
+ \psi_\pm=(|01\rangle\pm|10\rangle)/\sqrt2
+\]
+splits off \(\psi_-\), with eigenvalue \(-2hc\).
+In the basis \((\phi_+,\phi_-,\psi_+)\), the remaining block is
+\[
+ H_3(c)=
+ \begin{pmatrix}
+ 2hc&2a&0\\
+ 2a&2h(1+c-c^2)&2h(1-c)\sqrt{1-c^2}\\
+ 0&2h(1-c)\sqrt{1-c^2}&-2h(1+c-c^2)
+ \end{pmatrix}.
+\]
+Use \(c=(1-t^2)/(1+t^2)\) and multiply its slack by \((1+t^2)^2\).
+Writing
+\[
+ p_0=(1+t^2)^2,\qquad p_1=1-t^4,\qquad p_2=1+4t^2-t^4,
+\]
+the resulting quartic is
+\begin{equation}
+ K_{h,a,\lambda}(t)=
+ \begin{pmatrix}
+ \lambda p_0-2hp_1&-2ap_0&0\\
+ -2ap_0&\lambda p_0-2hp_2&-8ht^3\\
+ 0&-8ht^3&\lambda p_0+2hp_2
+ \end{pmatrix}.
+ \label{eq:K}
+\end{equation}
+Finite \(t\ge0\) covers \(-1<c\le1\); \(c=-1\) follows by continuity.
+Negative \(t\) adds no condition because
+\(K(-t)=\operatorname{diag}(1,1,-1)K(t)\operatorname{diag}(1,1,-1)\).
+
+Conversely, \(K(t)\succeq0\) for all real \(t\) forces the local bound.
+Its upper-left block at \(t=0\) gives \(\lambda\ge2h+2|a|\);
+the leading coefficient at \(t=\infty\) gives \(\lambda\ge-2h+2|a|\).
+Thus \(\lambda\ge L\), and the omitted scalar sector is controlled.
+Equation~\eqref{eq:diagonal} handles the low-tilt range; Eq.~\eqref{eq:critical}
+handles the rest. We have proved, for all real coefficients,
+\begin{equation}
+ (\lambda,a,h)\in{\cal C}
+ \quad\Longleftrightarrow\quad
+ K_{h,a,\lambda}(t)\succeq0\quad\text{for every }t\in\mathbb R .
+ \label{eq:cone}
+\end{equation}
+
+\paragraph{A fixed affine Gram lift.}
+Every PSD real univariate matrix polynomial is a polynomial matrix sum of squares,
+including identically singular ones~\cite{hs}.
+Since the diagonal entries of \(K\) have degree at most four, every square factor
+has degree at most two: highest-degree real squares cannot cancel.
+Average a Gram representation under the involution above. Its two parity blocks
+use precisely
+\[
+ Z_+=(\xi_1,\xi_2,t\xi_3,t^2\xi_1,t^2\xi_2)^T,\qquad
+ Z_-=(\xi_3,t\xi_1,t\xi_2,t^2\xi_3)^T.
+\]
+Thus \(\xi^TK(t)\xi=Z_+^TGZ_++Z_-^TJZ_-\), with
+\(G\succeq0\) of order five and \(J\succeq0\) of order four.
+The sixteen coefficient equations are
+\begin{equation}
+\begin{aligned}
+ g_{11}&=\lambda-2h,&g_{12}&=-2a,\\
+ g_{22}&=\lambda-2h,&j_{11}&=\lambda+2h,\\
+ g_{13}+j_{12}&=0,&g_{23}+j_{13}&=0,\\
+ 2g_{14}+j_{22}&=2\lambda,&g_{15}+g_{24}+j_{23}&=-4a,\\
+ 2g_{25}+j_{33}&=2\lambda-8h,&g_{33}+2j_{14}&=2\lambda+8h,\\
+ g_{34}+j_{24}&=0,&g_{35}+j_{34}&=-8h,\\
+ g_{44}&=\lambda+2h,&g_{45}&=-2a,\\
+ g_{55}&=\lambda+2h,&j_{44}&=\lambda-2h .
+\end{aligned}
+\label{eq:rows}
+\end{equation}
+These equations include zero coefficients, lower polynomial degrees and every
+rank-deficient case. Setting \(h=1\) gives the common-tilt epigraph for all real
+\(a\); its restriction to \(0\le a\le1\) additionally requires those two scalar
+inequalities.
+
+\section{Explicit membership matrices for the quantum region}
+
+Introduce sixteen real variables \(z_1,\ldots,z_{16}\) and define
+\begin{equation}
+\begin{split}
+ U(z)&=
+ \begin{pmatrix}
+ z_1&z_2/2&z_5/2&z_7&z_8/2\\
+ z_2/2&z_3&z_6/2&z_8/2&z_9\\
+ z_5/2&z_6/2&z_{10}&z_{11}/2&z_{12}/2\\
+ z_7&z_8/2&z_{11}/2&z_{13}&z_{14}/2\\
+ z_8/2&z_9&z_{12}/2&z_{14}/2&z_{15}
+ \end{pmatrix},\\[2pt]
+ V(z)&=
+ \begin{pmatrix}
+ z_4&z_5/2&z_6/2&z_{10}\\
+ z_5/2&z_7&z_8/2&z_{11}/2\\
+ z_6/2&z_8/2&z_9&z_{12}/2\\
+ z_{10}&z_{11}/2&z_{12}/2&z_{16}
+ \end{pmatrix}.
+\end{split}\label{eq:dualmat}
+\end{equation}
+The exact membership test is
+\[
+ (M,S)\in\W\quad\Longleftrightarrow\quad
+ \text{there exists }z\in\mathbb R^{16}
+ \text{ with }U(z)\succeq0,\quad V(z)\succeq0,
+\]
+and
+\begin{align}
+ 1={}&z_1+z_3+z_4+2z_7+2z_9+2z_{10}+z_{13}+z_{15}+z_{16},\nonumber\\
+ M={}&2z_2+4z_8+2z_{14},\nonumber\\
+ S={}&2z_1+2z_3-2z_4+8z_9-8z_{10}+8z_{12}
+       -2z_{13}-2z_{15}+2z_{16}.
+ \label{eq:coords}
+\end{align}
+
+Here is why dualization gives both inclusions and attains the auxiliary variables.
+Write Eq.~\eqref{eq:rows} as
+\(\mathcal A(G,J)=B(\lambda,a,h)\), in the displayed row order.
+The matrices in Eq.~\eqref{eq:dualmat} are exactly
+\(\mathcal A^*z\), and
+\(B^Tz=(\ell(z),-M(z),-S(z))\), where \(\ell\) is the normalization in
+Eq.~\eqref{eq:coords}. Therefore a feasible \(z\) pairs nonnegatively with every
+valid support inequality.
+
+For the reverse implication, the dual image
+\[
+ {\cal D}=\{B^Tz:U(z)\succeq0,\ V(z)\succeq0\}
+\]
+is closed. Indeed, the positive definite matrices
+\[
+ G_0=\operatorname{diag}(1,1,2,1,1),\qquad
+ J_0=\operatorname{diag}(1,2,2,1)
+\]
+satisfy \(\mathcal A(G_0,J_0)=B(1,0,0)\), and hence
+\(\ell(z)=\tr[U(z)G_0]+\tr[V(z)J_0]\).
+If \(B^Tz\) converges, this weighted trace bounds both PSD matrices.
+Every \(z_i\) occurs in their entries, so \(z\) is bounded and has a convergent
+subsequence. The limit is feasible. The strictly feasible pair \((G_0,J_0)\)
+licenses the conic intersection-dual rule, giving
+\({\cal C}^*=\overline{\cal D}={\cal D}\).
+Finally, the compact convex set \(\W\) is the intersection of its support
+half-spaces, so \((M,S)\in\W\) exactly when \((1,-M,-S)\in{\cal C}^*\).
+This proves the membership test. The normalized feasible \(z\)-set is itself
+compact by the same trace argument.
+
+\section{Minimal block order and the NPA comparison}
+
+The set \(\W\) is compact and convex. The explicit lift makes it semialgebraic.
+Scheiderer's planar theorem therefore gives \(\sxdeg(\W)\le2\)~\cite{soc}.
+A short argument shows that \(\W\) is not a polygon.
+
+Let \(f(a)=\max_{\W}(S+aM)\), and \(w=2\sqrt2=f(0)\).
+The identity
+\[
+ \mathrm{CHSH}(c,d)^2=4I+4rs\,Y\otimes Y
+\]
+shows that attaining \(w\) requires \(r=s=1\).
+At \(c=d=0\), the top state is
+\(v=\cos(\pi/8)\phi_-+\sin(\pi/8)\psi_+\), with both reduced states \(I/2\).
+Thus every CHSH-maximizing behavior has \(M=0\).
+For maximizers \(p_a\) of \(f(a)\), compactness then gives \(M(p_a)\to0\) as
+\(a\downarrow0\), and
+\[
+ 0\le\frac{f(a)-w}{a}\le M(p_a)\longrightarrow0.
+\]
+Yet \(f(a)>w\) for every \(a>0\): keeping \(c=d=0\), the normalized state
+\((v+\varepsilon\phi_+)/\sqrt{1+\varepsilon^2}\) gives
+\[
+ \frac{w+4a\cos(\pi/8)\varepsilon}{1+\varepsilon^2}>w
+ \quad\text{for}\quad \varepsilon=\frac{2a\cos(\pi/8)}w .
+\]
+A polygon would make \(f\) piecewise affine with finitely many pieces.
+Its zero right derivative at zero would force an initial constant piece,
+contradicting this strict increase. Therefore \(\W\) is nonpolyhedral, and
+\[
+ \boxed{\sxdeg(\W)=2.}
+\]
+The same proof gives extension degree two for
+\(\{(a,\lambda):0\le a\le1,\ \lambda\ge f(a)\}\).
+
+The prior NPA result applies to these very support directions \(h=1\)~\cite{prior}:
+\[
+ f(1-T)=4-2T+\frac43T^3+O(T^4),\qquad
+ \frac{\omega_{\mathrm{NPA}}^{(L)}(1-T)-f(1-T)}{T^3}\longrightarrow+\infty
+\]
+for every fixed finite level \(L\).
+Consequently no fixed NPA projection onto \((M,S)\) equals \(\W\), while
+Eqs.~\eqref{eq:dualmat}--\eqref{eq:coords} describe that same region exactly.
+The nontermination theorem is an imported established result; the finite lift
+and nonpolyhedrality arguments above do not depend on its proof.
+
+\section{All signed asymmetric tilt branches}
+
+The weighted-ray argument also extends to arbitrary real tilts in
+\[
+ H_{\alpha,\beta}=\mathrm{CHSH}+\alpha A_0+\beta B_0.
+\]
+Put \(q=|\alpha|+|\beta|\). Its local bound is \(2+q\), attained for any tilt
+signs. If \(q\ge2\), signed one-sided versions of Eq.~\eqref{eq:critical},
+convex combination on \(q=2\), and sign-adjusted marginal slacks above it prove
+that this is also the quantum bound.
+
+Suppose \(q<2\) and \(\lambda\ge2+q\). For the full Jordan slack,
+\[
+ e_2=6\lambda^2-2\alpha^2-2\beta^2-8,\qquad
+ e_3=4\lambda^3-4\lambda(\alpha^2+\beta^2+4)-8\alpha\beta\Omega .
+\]
+Both are nonnegative. For \(e_3\), a lower bound is
+\(g(\lambda)=4\lambda^3-4\lambda(q^2+4)-4q^2\).
+It increases on this range, and \(g(2+q)=32q+12q^2\ge0\).
+Thus the determinant again decides PSD.
+
+With \(x=(1-c)/2\), \(y=(1-d)/2\), direct expansion gives
+\begin{align*}
+ D(x,y)&=D_0+xy[C+64Ax+64By-256xy],\\
+ A&=4-\alpha^2,\qquad B=4-\beta^2,\\
+ C&=32\lambda\alpha\beta+64\alpha^2+64\beta^2-256,\\
+ D_0&=[(\lambda-2)^2-(\alpha+\beta)^2]
+       [(\lambda+2)^2-(\alpha-\beta)^2].
+\end{align*}
+Both \(A,B\) are positive. Exchange parties if necessary so that
+\(|\alpha|\ge|\beta|\), and set \(\rho=A/B\in(0,1]\).
+For a fixed product \(p=xy\), minimize \(Ax+Bp/x\) on \(p\le x\le1\).
+For \(p\le\rho\), its minimizer lies on \(x=z,y=\rho z\).
+For \(p>\rho\), it lies on \(x=1\). On that edge,
+\[
+ D(1,y)=-F_-(y)F_+(y),
+\]
+where
+\[
+ F_-=-(\lambda+\alpha)^2+\beta^2+4+4\beta(2y-1),\qquad
+ F_+=(\lambda-\alpha)^2-\beta^2-4+4\beta(2y-1).
+\]
+Since \(\lambda\pm\alpha\ge2+|\beta|\), we have \(F_-\le0\le F_+\).
+Hence the complete measurement square reduces to the weighted ray, for every
+choice of tilt signs.
+
+Along the ray, put
+\(R=4z(1-z)\), \(T=4\rho z(1-\rho z)\), and \(\Omega=2-4\rho z^2\).
+Congruence by \(\operatorname{diag}(\sqrt{RT},\sqrt R,\sqrt T,1)\) gives
+\begin{equation}
+ P(z)=
+ \begin{pmatrix}
+ RT(\lambda-\Omega-\alpha-\beta)&-2zRT&-2\rho zRT&RT\\
+ -2zRT&R(\lambda+\Omega-\alpha+\beta)&RT&2\rho zR\\
+ -2\rho zRT&RT&T(\lambda+\Omega+\alpha-\beta)&2zT\\
+ RT&2\rho zR&2zT&\lambda-\Omega+\alpha+\beta
+ \end{pmatrix}.
+ \label{eq:rayP}
+\end{equation}
+This matrix has degree at most six. The congruence is invertible on \(0<z<1\);
+the original slack at both endpoints follows by continuity from that interval.
+The matrix interval sum-of-squares theorem gives
+\begin{equation}
+ P(z)=Y_3(z)^TUY_3(z)+z(1-z)Y_2(z)^TVY_2(z),\qquad
+ U\succeq0,\quad V\succeq0,
+ \label{eq:interval}
+\end{equation}
+with \(Y_j=(I_4,zI_4,\ldots,z^jI_4)^T\), and block orders \(16,12\).
+One can obtain this interval theorem directly from the real-line matrix theorem:
+apply it to \((1+t^2)^6P(t^2/(1+t^2))\), split its factors into even and odd parts,
+and divide back. Even factors become polynomials of degree at most three in \(z\);
+odd factors give \(\sqrt{z(1-z)}\) times polynomials of degree at most two.
+This argument also includes singular matrices and endpoint zeros.
+
+For fixed \(\alpha,\beta\), coefficient matching in Eq.~\eqref{eq:interval}
+is affine in \(\lambda,U,V\). Include \(\lambda\ge2+q\) explicitly.
+This yields an exact fixed-size SDP throughout the signed subcritical diamond,
+including either zero-tilt axis and CHSH. The critical and exterior branches
+are the elementary local-bound certificates already proved.
+The ratio \(\rho\) still depends nonlinearly on the two independent tilts:
+this construction computes their support values, while the common-tilt
+construction above gives an affine membership lift.
+
+\section*{How the results fit together}
+
+Three general steps organize the proofs. First, a local deterministic bound makes
+the first three characteristic coefficients positive, leaving one determinant.
+Second, minimizing that determinant at fixed angle product removes one testing
+variable. Third, univariate matrix positivity gives bounded-degree square factors;
+when its coefficients remain affine in the visible Bell parameters, duality gives
+a single membership lift.
+
+For equal tilts these steps close the entire planar region, including the NPA-hard
+directions. For independent tilts they close every fixed-input support calculation.
+The existing five-parameter C1 neighborhood uses a complementary mechanism:
+positive Grams on contact complements persist under compatible changes of the
+source coefficients. Its eighteen-function space remains fixed while the contact
+moves. It supplies local source coverage beyond the exact C1 slice.
+
+The remaining global construction has two substantive admission targets:
+every strict C1 source and every strict C2 source must enter one fixed sound
+finite library, or an adequate replacement. The existing reflection, singular
+coefficient density, event and closed-face cones then supply the other branches.
+The planar theorem above adds an exact region and a completed NPA comparison;
+the broader branch map records where the universal source obligations remain.
+
+\begin{thebibliography}{9}
+\bibitem{hs} C. Hanselka and R. Sinn, Positive semidefinite univariate matrix
+polynomials, \emph{Math. Z.} \textbf{292}, 83--101 (2019);
+\href{https://arxiv.org/pdf/1707.08261}{Corollary 2.8}.
+\bibitem{soc} C. Scheiderer, Second-Order Cone Representation for Convex Sets in
+the Plane, \emph{SIAM J. Appl. Algebra Geom.} \textbf{5}, 114--139 (2021),
+\href{https://doi.org/10.1137/20M133717X}{doi:10.1137/20M133717X};
+\href{https://arxiv.org/html/2004.04196v2}{Theorem 0.1}.
+\bibitem{prior} A. Chaturvedi, \emph{No Finite NPA Level Characterizes the Complete
+Quantum Set in the Simplest Bell Scenario}, prior Letter and Supplemental
+Material supplied in the project.
+\end{thebibliography}
+\end{document}

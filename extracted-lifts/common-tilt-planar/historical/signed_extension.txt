@@ -1,0 +1,23 @@
+Signed-tilt extension of the weighted-ray SDP (bounded algebra check)
+
+Let a=|alpha|, b=|beta|, q=a+b. The Jordan determinant formulas in SM Sec. S4 extend without change of form to signed coefficients: A=4-alpha^2, B=4-beta^2, C=32 lambda alpha beta+64alpha^2+64beta^2-256, and D0=[(lambda-2)^2-(alpha+beta)^2][(lambda+2)^2-(alpha-beta)^2]. Thus the sign of alpha beta remains in C and D0; it should not be erased by replacing alpha,beta with their absolute values in the determinant itself.
+
+For q<2, A,B>0. At every lambda>=2+q, the shifted characteristic coefficients other than the determinant are nonnegative on the full Jordan square. In particular e2=6lambda^2-2alpha^2-2beta^2-8>0. Since |Omega|<=2, e3=4lambda^3-4lambda(alpha^2+beta^2+4)-8alpha beta Omega obeys
+
+e3 >= 4lambda^3-4lambda(q^2+4)-4q^2.
+
+Indeed the right side is a deliberately weaker bound than substituting |Omega|<=2 directly; their difference is nonnegative for lambda>=2. Its derivative is 4(3lambda^2-q^2-4)>0 in this range, and at lambda=2+q it equals 32q+12q^2>=0. Also e1=4lambda>0. Hence the determinant test remains sufficient for PSD. This includes q=0 (CHSH) and either zero-tilt axis.
+
+After swapping parties if needed, assume a>=b, so rho=A/B<=1. At fixed p=xy, the variable part of D is proportional to Ax+Bp/x and its interior minimum satisfies Ax=By. The stationary ray is therefore x=z, y=rho z (equivalently A(1-c)=B(1-d)). If that minimizer exits the square, p>rho and the minimum is on x=1. The same edge factorization as in SM S4 applies with signed alpha,beta. Uniformly for y in [0,1],
+
+Fminus <= -(lambda+alpha)^2+beta^2+4+4|beta| <= 0,
+Fplus >= (lambda-alpha)^2-beta^2-4-4|beta| >= 0,
+
+because lambda+alpha and lambda-alpha are both at least 2+|beta| when lambda>=2+q. Thus the clipped edge is nonnegative. Party exchange covers b>a. This proves global two-angle reduction for signed subcritical tilts, not merely a stationary-point condition.
+
+The same positive diagonal congruence and degree-six interval matrix-SOS representation then apply on the ray. For each fixed signed pair (alpha,beta), rho is fixed and P(z) is affine in lambda; the (16,12) Gram lift remains an exact fixed-input SDP. The congruence is strictly positive for 0<z<1. Polynomial continuity closes z=0,1, and continuity of the original Jordan slack covers projective/commuting measurement endpoints. This does not create one affine lift as alpha,beta vary, nor a lift of W3 or full Q222.
+
+For every sign choice the local value 2+q is attained: take A0=sgn(alpha), B0=sgn(beta), B1=-B0, A1=B0 (choose either sign when a tilt is zero), so CHSH=2. For q=2, the critical operator SOS extends to signed axis vertices by CHSH relabelings; for example, A0->-A0, A1->A1, B0->-B1, B1->-B0 preserves CHSH and flips only the A0 tilt. convex combinations of the vertices (+/-2,0),(0,+/-2) give the whole signed critical diamond. For q>2, scale (alpha,beta) to (2alpha/q,2beta/q) and add the PSD marginal slacks (a-2a/q)(I-sgn(alpha)A0)+(b-2b/q)(I-sgn(beta)B0) to the critical SOS, omitting a term when its coefficient is zero. This gives the local-bound 1+AB SOS and the exact value 2+q. These critical/supercritical cases are separate from the weighted-ray argument, which requires A,B>0.
+
+Source alignment: new `original/supplement.tex`, “Critical and supercritical phase,” “Global weighted Jordan reduction,” and “Exact fixed-size SDP.” The unsigned supplement writes e3 with the symmetric specialization; the signed e3 expression used above is the general characteristic coefficient stipulated in the task and the bound is checked directly from |Omega|<=2. No numerical sweep or source edit was made.
+
