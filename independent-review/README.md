@@ -25,7 +25,7 @@ scoped rechecks, not evidence that those earlier proofs were absent. The
 [final conjunction](../complete-proof-materials/RECONCILIATION.md#final-qualitative-conjunction-26-october-13-utc)
 reconciles the current source coverage with the independently checked global
 implication. The [remaining construction](../complete-proof-materials/VERIFICATION_PLAN.md)
-concerns finite-c PSD, uniform admission and evaluation of the global pencil.
+concerns universal strict-source PSD admission and exactness of the already evaluated conditional global pencil. The [current frontier](../FRONTIER.md) and [C2 n=0 opening theorem](C2_N0_OPENING.md) give the latest scopes.
 
 For the current construction route, read
 [`EXACT_LIFT_ROUTE.md`](EXACT_LIFT_ROUTE.md): a fixed NPA baseline, the
@@ -46,7 +46,7 @@ also has a positive-definite three-by-three Gram at every finite native
 C1/C2 contact. The [compact-family construction](COMPACT_NATIVE_CONTACT_COVER.md)
 completes the full state form on a fixed finite testing grid for any
 compact strict native subfamily, with a size that depends on the subfamily.
-Uniform control at the singular source limits is the next stage. The `r → 0`
+Universal strict admission in one fixed cone remains open; the verified density theorem then supplies the singular sources. The `r → 0`
 end and the zero-weight walls reduce to explicit limit problems, certified
 exactly at sample points, and the `c → 0` and `c → ∞` limit problems are
 solved in closed form on whole faces ([sextic lift](EXACT_LIFT_CANDIDATE.md)).

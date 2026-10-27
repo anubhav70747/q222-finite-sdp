@@ -11,7 +11,7 @@ Start with the [complete checklist](CHECKLIST.md). It links the foundations, eve
 - [Status reconciliation](RECONCILIATION.md), [recovery limits](RECOVERY_LIMITS.md) and [next verification pass](VERIFICATION_PLAN.md).
 - [Machine-readable checklist](CHECKLIST.json), [source-to-publication map](SOURCE_MAP.json), [file hashes](MANIFEST.json) and [delivery verification](VERIFICATION.json).
 
-The full 22 October analytical review supports the qualitative existence theorem. Later scoped reviews raised narrower questions about particular versions and interfaces. Those questions are recorded without treating previously reviewed cases as absent. A final integrated mathematical check is still due. The separate construction of one evaluated global affine pencil remains unfinished at uniform admission through the singular source limits.
+The full 22 October analytical review supports the qualitative existence theorem. Later scoped reviews raised narrower questions about particular versions and interfaces. Those questions are recorded without treating previously reviewed cases as absent. The current-version qualitative conjunction is reconciled in V01–V06 using those body reviews. L18 now supplies the complete evaluated conditional global outer SDP. Its unconditional exactness still requires universal oriented C1 and strict C2 admission into the fixed cone, followed by the proved density and assembly implication. See the [current frontier](../FRONTIER.md).
 
 Historical files retain their original wording and dates, including superseded constructions, unsuccessful attempts and earlier status claims. Their presence is evidence of the work performed, not endorsement of every claim in every version. The reconciliation and checklist identify how to use them.
 

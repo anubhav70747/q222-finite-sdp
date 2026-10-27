@@ -2,6 +2,8 @@
 
 **Complete material publication, 26 October:** [proofs, data and exhaustive checklist](complete-proof-materials/). This includes the original 215-component source archive, all 45 C1 and 49 C2 case records with direct proof links, the complete historical analytical reviews, and newly fetched proof/checker packages. The [final reconciliation](complete-proof-materials/RECONCILIATION.md#final-qualitative-conjunction-26-october-13-utc) completes the current-version qualitative-existence review using those body reviews. The [conditional global outer SDP is now fully evaluated](complete-proof-materials/CONDITIONAL_GLOBAL_PENCIL_UPDATE.md). Its exactness remains conditional on direct oriented C1 and strict C2 admission into K364; the verified density and orbit arguments then cover the singular source limits. These admission/exactness obligations remain open as L08-L10.
 
+**Current frontier:** [the completion map](FRONTIER.md) records the remaining universal C1/C2 admission proofs and the evaluated global matrices. The [C2 wall-to-strict opening theorem](independent-review/C2_N0_OPENING.md) now gives an explicit PSD neighborhood in 28 half-power features at every n=0 wall point with a Gram positive on all four contact complements. It does not establish whole-wall or general strict C2 admission.
+
 **New exact construction:** [L12 and its proof package](complete-proof-materials/CHECKLIST.md) give a fixed 16-feature PSD certificate near both strict open C2 ends. The complete finite-c identity and graded Schur positivity have been independently checked; the result is uniform on compact subsets of the stated face interior.
 
 The central difficulty lies where measurements become compatible. There,
@@ -31,8 +33,9 @@ for the full eight-coordinate quantum set:
   sixth-root lift admits the hardest sources found, with exact certificates,
   and its limit problems at the `c → 0` and `c → ∞` ends are solved in closed
   form on whole faces ([sextic lift](independent-review/EXACT_LIFT_CANDIDATE.md)).
-  Uniform control at the singular limits, including the finite-`c` step, is
-  the next stage.
+  Universal strict admission in the same fixed closed cone remains open.
+  The verified coefficient-space density theorem then handles the singular
+  sources; no separate uniform limiting-Gram estimate is required on that route.
 - **Explicit blocks.** Exact cones cover singular source families on explicit
   testing regions, as described below.
 
@@ -112,7 +115,7 @@ global construction. Their proofs and matrices remain available.
 | Construction | Representation |
 |---|---|
 | Tilted-CHSH projection | Exact order 4, without auxiliaries; both inclusions |
-| Canonical angular validity | Exact order 49 in the Laurent coefficients; their Bell-source map is quartic |
+| Canonical angular validity | [Exact order 13](extracted-lifts/global-weighted/angular-order13/) in Laurent coefficients; their Bell-source map is quartic |
 | Determinant-weighted state polynomial | Fixed certificate of order 133, with 104 functions |
 | Specified local source cones | Exact pencils of orders 62, 669 and 731 |
 | Full-set size bound | Total PSD order at least 9 |

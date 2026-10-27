@@ -1,0 +1,27 @@
+[   0.9s] PASS (S1): on the wall  m = r(1-r)(1+a^2c^2)/(2g(b+r)), A = a^2 r/(2h), D = r(1+c^2)B/(2a^2(1+c^2 r)j), alpha = c^2(1-r)B/(2(1+c^2 r)k), C = (1-r)B/(2a^2c^2 t(b+r)); g+k=b+r  (exact)
+[   1.1s] PASS (S2): 18-feature Gram family G(free) with Z^T G Z == F identically in (m,C,A,D,alpha,free); 100 entries, 72 determined, 28 free: ['g_uW_vY', 'g_uW_vZ', 'g_uvW_X', 'g_uvW_vX', 'g_uvW_Y', 'g_uvW_vY', 'g_uvW_uY', 'g_uvW_Z', 'g_vX_Y', 'g_vX_uY', 'g_vX_Z', 'g_uvX_Y', 'g_uvX_vY', 'g_uvX_Z', 'g_vY_uY', 'g_vY_Z', 'g_uY_Z', 'g_uY_vZ', 'g_uvY_Z', 'g_tX_tX', 'g_tX_tY', 'g_tX_tZ', 'g_tY_tY', 'g_tY_tZ', 'g_tZ_tZ', 'g_stW_stW', 'g_stW_stZ', 'g_stZ_stZ']
+[   1.1s]    determined diagonals: vW=4*m, uW=4*C + 4*D + 2, uvW=4*C, X=4*m + 2, vX=2, uvX=4*D + 2, Y=4*A + 4*C + 4*D + 2, vY=4*A + 4*C + 4*alpha + 2, uY=4*A, uvY=4*A + 4*alpha + 4*m + 2, Z=4*alpha, vZ=4*D, uZ=4*alpha + 4*m + 2
+[  79.4s] PASS (S3): G y_c = 0 (18 equations, symbolic over Q(c,a,b,r), t=t_w) is consistent with rank 12 => explicit 28-12 = 16-dimensional affine Gram family on the whole wall
+[  79.6s] PASS (S4): wall point (c,a,b,r)=('1', '1', '22/13', '2/5'): 18-feature Gram, Z^T G Z == F, G y_c == 0, 3 reduced blocks PD (min pivots ['0.53', '1.6', '1.9']) [0s]
+[  79.7s] PASS (S4): wall point (c,a,b,r)=('1', '4/9', '9/14', '9/20'): 18-feature Gram, Z^T G Z == F, G y_c == 0, 3 reduced blocks PD (min pivots ['0.07', '0.12', '0.98']) [0s]
+[  79.8s] PASS (S4): wall point (c,a,b,r)=('1', '9/4', '9/4', '1/5'): 18-feature Gram, Z^T G Z == F, G y_c == 0, 3 reduced blocks PD (min pivots ['0.17', '0.93', '2.4']) [0s]
+[  79.9s] PASS (S4): wall point (c,a,b,r)=('1/4', '1', '1', '17/20'): 18-feature Gram, Z^T G Z == F, G y_c == 0, 3 reduced blocks PD (min pivots ['0.02', '0.058', '1.2']) [0s]
+[  80.0s] PASS (S4): wall point (c,a,b,r)=('1/4', '16', '39/8', '1/20'): 18-feature Gram, Z^T G Z == F, G y_c == 0, 3 reduced blocks PD (min pivots ['0.0093', '0.052', '0.62']) [0s]
+[  80.2s] PASS (S4): wall point (c,a,b,r)=('1/4', '9/4', '56/3', '1/2'): 18-feature Gram, Z^T G Z == F, G y_c == 0, 3 reduced blocks PD (min pivots ['0.02', '1.2', '0.56']) [0s]
+[  80.3s] PASS (S4): wall point (c,a,b,r)=('1/9', '1', '50/19', '19/20'): 18-feature Gram, Z^T G Z == F, G y_c == 0, 3 reduced blocks PD (min pivots ['0.0034', '0.018', '0.15']) [0s]
+[  80.5s] PASS (S4): wall point (c,a,b,r)=('1/16', '9/4', '12', '19/20'): 18-feature Gram, Z^T G Z == F, G y_c == 0, 3 reduced blocks PD (min pivots ['0.0033', '0.16', '0.082']) [0s]
+[  80.6s] PASS (S4): wall point (c,a,b,r)=('1', '1', '7/4', '2/5'): 18-feature Gram, Z^T G Z == F, G y_c == 0, 3 reduced blocks PD (min pivots ['0.51', '1.6', '1.8']) [0s]
+[  80.7s] PASS (S4): wall point (c,a,b,r)=('1/4', '9/4', '17/6', '7/10'): 18-feature Gram, Z^T G Z == F, G y_c == 0, 3 reduced blocks PD (min pivots ['0.11', '0.053', '1.1']) [0s]
+[  80.9s] PASS (S4): wall point (c,a,b,r)=('1', '9/4', '5', '7/20'): 18-feature Gram, Z^T G Z == F, G y_c == 0, 3 reduced blocks PD (min pivots ['0.13', '3.5', '3.7']) [0s]
+[  81.0s] PASS (S4): wall point (c,a,b,r)=('1/4', '4', '43/13', '2/5'): 18-feature Gram, Z^T G Z == F, G y_c == 0, 3 reduced blocks PD (min pivots ['0.14', '0.098', '1.4']) [0s]
+[  81.1s] PASS (S4): wall point (c,a,b,r)=('1', '4', '34/11', '1/10'): 18-feature Gram, Z^T G Z == F, G y_c == 0, 3 reduced blocks PD (min pivots ['0.16', '1.4', '1.3']) [0s]
+[  81.2s] PASS (S4): wall point (c,a,b,r)=('1/4', '1', '53/15', '3/4'): 18-feature Gram, Z^T G Z == F, G y_c == 0, 3 reduced blocks PD (min pivots ['0.065', '0.43', '0.64']) [0s]
+[  81.3s] PASS (S4): wall point (c,a,b,r)=('9/4', '1', '19/10', '1/4'): 18-feature Gram, Z^T G Z == F, G y_c == 0, 3 reduced blocks PD (min pivots ['0.065', '3.7', '2.6']) [0s]
+[  81.4s] PASS (S4): wall point (c,a,b,r)=('1/4', '1', '13/18', '17/20'): 18-feature Gram, Z^T G Z == F, G y_c == 0, 3 reduced blocks PD (min pivots ['0.014', '0.051', '1.1']) [0s]
+[  81.6s] PASS (S4): wall point (c,a,b,r)=('3/4', '10/3', '43/13', '1/5'): 18-feature Gram, Z^T G Z == F, G y_c == 0, 3 reduced blocks PD (min pivots ['0.25', '1.6', '2.8']) [0s]
+[  81.7s] PASS (S4): wall point (c,a,b,r)=('1/2', '5/2', '13/3', '2/5'): 18-feature Gram, Z^T G Z == F, G y_c == 0, 3 reduced blocks PD (min pivots ['0.15', '0.33', '1.3']) [0s]
+[  81.8s] PASS (S4): wall point (c,a,b,r)=('2/5', '5/2', '7', '2/5'): 18-feature Gram, Z^T G Z == F, G y_c == 0, 3 reduced blocks PD (min pivots ['0.087', '0.31', '0.72']) [0s]
+[  81.9s] PASS (S4): wall point (c,a,b,r)=('2', '5/3', '37/10', '1/5'): 18-feature Gram, Z^T G Z == F, G y_c == 0, 3 reduced blocks PD (min pivots ['0.051', '4.3', '1.7']) [0s]
+[  82.0s] PASS (S4): wall point (c,a,b,r)=('3/10', '16/3', '65/14', '1/4'): 18-feature Gram, Z^T G Z == F, G y_c == 0, 3 reduced blocks PD (min pivots ['0.1', '1', '1.4']) [0s]
+[  82.1s] PASS (S4): wall point (c,a,b,r)=('4/5', '1', '9/8', '1/2'): 18-feature Gram, Z^T G Z == F, G y_c == 0, 3 reduced blocks PD (min pivots ['0.54', '0.77', '3.6']) [0s]
+[  82.1s] DONE (partial).  NOT proved: PD of the 16-dim family at every wall point.

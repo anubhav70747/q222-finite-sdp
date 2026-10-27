@@ -54,6 +54,8 @@ These are completion conditions, not a requirement to execute every possible pro
 
 - [ ] **R12 — Publish verified completion.** Push the revised sources, exact data and evidence to main; verify remote identity and links; close L08–L10 and R01–R11 against their actual deliverables. Pause the recurring proof checks only when the exact lift and short complete proof are verified.
 
+The [local C2 wall opening](../independent-review/C2_N0_OPENING.md) now supplies exact finite-n neighborhoods from wall Grams PD on all four larger contact complements. This closes that conditional local continuation task in28 half-power features. It does not close R03/H2: whole-wall PSD and the rest of the strict native domain remain open. The latest C1 result separately supplies source-wide contact-local positivity; joining it with the endpoints within one fixed adequate library remains unproved.
+
 ## Immediate dependency and assignment map
 
 | Work | Present assignment or next dependency |

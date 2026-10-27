@@ -1,0 +1,153 @@
+{
+  "base_commit": "e1a98969082c7c3c338c5f86d93f9540e892aaa7",
+  "scope": "Exact replays of scoped identities and finite witnesses, plus the local n=0 opening lemma. Not universal H1/H2; no independent review claimed.",
+  "checks": [
+    {
+      "name": "C2_complete_jet",
+      "exit_code": 0,
+      "seconds": 3.165,
+      "stdout_log": "C2_complete_jet.stdout.log",
+      "stderr_log": null,
+      "source_path": "complete-proof-materials/materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1939/task3/package/verify_exact.py",
+      "source_sha256": "610fe3b65ec8b08a5dd9bdb4822bb5a323fcbc5c27c90c7d83c4cf8672f9ac8b",
+      "source_git_blob_sha": "fcc640daf8d8ea992f55caea96706bfd1d70c3e9"
+    },
+    {
+      "name": "C1_Bob_parent",
+      "exit_code": 0,
+      "seconds": 5.851,
+      "stdout_log": "C1_Bob_parent.stdout.log",
+      "stderr_log": null,
+      "source_path": "complete-proof-materials/materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1959/task5/package/verify_full_parent_bob.py",
+      "source_sha256": "2908795be15a0687d195431bcc25d6b78b78aafc6a2e563bdf4967cca44b6d61",
+      "source_git_blob_sha": "caae84155291329b8342c02d5d8ac865a7361feb"
+    },
+    {
+      "name": "C1_Bob_Schur",
+      "exit_code": 0,
+      "seconds": 6.98,
+      "stdout_log": "C1_Bob_Schur.stdout.log",
+      "stderr_log": null,
+      "source_path": "complete-proof-materials/materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1959/task5/package/verify_boundary_schur.py",
+      "source_sha256": "89b1a34d41df9bbbd2a820fd814bf1d5b9451ce1cc05ccd1521dce4eb6b0a322",
+      "source_git_blob_sha": "48d00efb2c0b19e9f272af3cbc68f760b2629411"
+    },
+    {
+      "name": "C1_Bob_anchor",
+      "exit_code": 0,
+      "seconds": 5.885,
+      "stdout_log": "C1_Bob_anchor.stdout.log",
+      "stderr_log": null,
+      "source_path": "complete-proof-materials/materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1959/task5/package/verify_anchor_interpolation.py",
+      "source_sha256": "ee5b4ce49219959ee84ec3ee884a256185af29ae82ac182097b668285df80f92",
+      "source_git_blob_sha": "9d3e350a2b6b193bb883db0d660cfb12dd0d8ca1"
+    },
+    {
+      "name": "C2_fractional_carrier",
+      "exit_code": 0,
+      "seconds": 0.655,
+      "stdout_log": "C2_fractional_carrier.stdout.log",
+      "stderr_log": null,
+      "source_path": "complete-proof-materials/materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-2039/task3/package/verify_fractional_opening.py",
+      "source_sha256": "0b4bacf842cb4911cb7290bd8ab848c9eba9e59b0468964d64ab791277c04386",
+      "source_git_blob_sha": "2cfc7d6deb2e9b8c6f7f9322c6f2533ae12bbee9"
+    },
+    {
+      "name": "C2_r0_face",
+      "exit_code": 0,
+      "seconds": 1.984,
+      "stdout_log": "C2_r0_face.stdout.log",
+      "stderr_log": null,
+      "source_path": "independent-review/checks/gram-lift/ends/check_c2_r0_face_k2.py",
+      "source_sha256": "339c5850d9753a7f8c2069a2dfc85ae51d5fd2b071159150615e084082b1d155",
+      "source_git_blob_sha": "fabc6348dadd333d59f488bd988b9666268fc440"
+    },
+    {
+      "name": "C2_n0_wall",
+      "exit_code": 0,
+      "seconds": 15.479,
+      "stdout_log": "C2_n0_wall.stdout.log",
+      "stderr_log": null,
+      "source_path": "independent-review/checks/gram-lift/ends/check_c2_n0_wall_k2.py",
+      "source_sha256": "48c4b4c39edd66961cf82b6dba4a7a53f75654211196f9ce68c0df5cebd81cb1",
+      "source_git_blob_sha": "d0875027607ebab6da96896a6674a31fc305085a"
+    },
+    {
+      "name": "C1_zero_walls",
+      "exit_code": 0,
+      "seconds": 21.602,
+      "stdout_log": "C1_zero_walls.stdout.log",
+      "stderr_log": null,
+      "source_path": "independent-review/checks/gram-lift/ends/check_c1_zero_walls_k2.py",
+      "source_sha256": "a109c604e91735fe60f81c7b41e25e7a2b9deb06e1b5f3e45687f0fc841c476b",
+      "source_git_blob_sha": "992640f8e257a4b094de8e1c13448cc86977390e"
+    },
+    {
+      "name": "C2_n0_family",
+      "exit_code": 0,
+      "seconds": 82.646,
+      "stdout_log": "C2_n0_family.stdout.log",
+      "stderr_log": null,
+      "source_path": "independent-review/checks/gram-lift/ends/n0-wall/check_c2_n0_wall_family.py",
+      "source_sha256": "113fa5a2b6ad5b6915f80831506f16518707fbcb4462c69114dd9f87c707ed8e",
+      "source_git_blob_sha": "2107dc7612eb121644b7b80bf39371ae32193031"
+    },
+    {
+      "name": "C2_n0_opening",
+      "exit_code": 0,
+      "seconds": 2.259,
+      "stdout_log": "C2_n0_opening.stdout.log",
+      "stderr_log": null,
+      "source_path": "independent-review/checks/gram-lift/ends/n0-opening/verify_n0_opening.py",
+      "source_sha256": "d44deb20608eb28fbcc779682880cbfe53d9edfa705d4218aba8c985c3c7e434",
+      "source_git_blob_sha": null
+    },
+    {
+      "name": "C1_contact_geometry",
+      "exit_code": 0,
+      "seconds": 0.862,
+      "stdout_log": "C1_contact_geometry.stdout.log",
+      "stderr_log": null,
+      "source_path": "complete-proof-materials/materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-20261027-0705/task5/package/Q222_C1_K364_CONTACT_JET_2026_10_27/verify_contact_geometry.py",
+      "source_sha256": "cc4bd750d0ceed4ec5ec2ff8bf1d2ea7d2d40600b5fd3de0f2e1adc000233c21",
+      "source_git_blob_sha": "ae6f1be20f948a5be209dd172319add76fa406f7"
+    },
+    {
+      "name": "C1_contact_jet",
+      "exit_code": 0,
+      "seconds": 0.771,
+      "stdout_log": "C1_contact_jet.stdout.log",
+      "stderr_log": null,
+      "source_path": "complete-proof-materials/materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-20261027-0705/task5/package/Q222_C1_K364_CONTACT_JET_2026_10_27/verify_contact_jet_exact.py",
+      "source_sha256": "265a228a34eabc8dbd980ab0fd598ac08244f1440e5352f8aea5d235bfad88d7",
+      "source_git_blob_sha": "5e1f0000869da90d07428dd1cc4ae9179ed90e51"
+    },
+    {
+      "name": "C1_two_Schur",
+      "exit_code": 0,
+      "seconds": 0.848,
+      "stdout_log": "C1_two_Schur.stdout.log",
+      "stderr_log": null,
+      "source_path": "complete-proof-materials/materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-20261027-0705/task5/package/Q222_C1_K364_CONTACT_JET_2026_10_27/verify_two_schur.py",
+      "source_sha256": "001e6feb572b84861804ba0c3912041d77c2052145da5445b7fa445384bf44cc",
+      "source_git_blob_sha": "b2bcaeb781a015485ed7b7ca4d6a04515ca66221"
+    },
+    {
+      "name": "K364_moment_dual",
+      "exit_code": 0,
+      "seconds": 0.112,
+      "stdout_log": "K364_moment_dual.stdout.log",
+      "stderr_log": null,
+      "source_path": "complete-proof-materials/materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-20261027-0705/task7/package/verify_exact_dual.py",
+      "source_sha256": "d88b284a3432395ab43644f7cc2ba2c9660b3b3bb028d62103c2873997b7be63",
+      "source_git_blob_sha": "bab6c77da55d2b0f957c06a6602523fd98e9c076"
+    }
+  ],
+  "all_passed": true,
+  "runtime": {
+    "Python": "3.12.14",
+    "SymPy": "1.14.0"
+  },
+  "independent_review": false,
+  "source_note": "Upstream script identities checked against e1a9896; the new opening script is identified by SHA256 and included in this commit."
+}

@@ -74,6 +74,10 @@ This is an ambient PSD Gram on the canonical positive testing chart, not a membe
 - [Exact replay](materials/historical/analysis/c2_fractional_opening_replay_2026_10_26.log)
 - [Original-file integrity](materials/historical/analysis/c2_fractional_opening_integrity_2026_10_26.json)
 
+## Exact local completion of the fractional opening
+
+The [C2 n=0 opening theorem](../independent-review/C2_N0_OPENING.md) now proves a PSD residual on an explicit neighborhood of every wall point with a Gram PD on all four larger wall contact complements. Contact normalization gives a constant72x104 map of rank66 whose image is exactly the six-jet kernel. The carrier removes the missing forced diagonal; a fixed rational correction, confined to the integer block, matches every residual coefficient and stays PSD for a quantified small perturbation. This uses28 fixed half-power features, or49 weighted K364 features. Whole-wall PD selection and arbitrary strict-source H2 remain open. The earlier carrier review correctly describes its scope before this local completion; the new result does not assert global carrier domination.
+
 ## Next implication
 
 The next C1 task is a simultaneous native-domain PSD gauge construction; the next C2 task is full Gram admission or its equivalent dual positivity statement. Another coefficient-rank calculation or isolated carrier is insufficient. A different fixed globally sound library remains an admissible route if it gives a complete proof. A separating witness against Z6 is not a prerequisite for choosing one.

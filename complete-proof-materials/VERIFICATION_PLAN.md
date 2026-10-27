@@ -10,6 +10,8 @@ L12 supplies exact PSD admission near both strict open C2 ends, including the la
 
 L15 proves the singular-source density and closed hybrid-assembly implication: if all strict C1 and C2 sources enter one fixed closed globally sound cone, coefficient-space closure covers the permitted five-event boundaries. Event rays and SG12/SG13 face cones are retained separately with the required finite relabelings. Thus this route does not require a new singular Gram bound once its strict admission hypotheses hold. Those hypotheses remain unproved.
 
+The [local C2 opening theorem](../independent-review/C2_N0_OPENING.md) completes coupled n>0 continuation near wall certificates PD on all four larger contact complements. Its fixed coefficient map, quantitative PSD radius and exact strict witness are delivered; same-assistant checking is not independent review. Whole-wall positivity and general H2 remain open.
+
 ## Complete the explicit construction
 
 1. **Fix the library and its physical transformations.** Specify a finite globally sound cone or finite collection of such cones, their coefficient maps, and the exact closed finite sum used for assembly. For a reflection or relabeling, retain the source transformation, positive testing multiplier and testing-dependent state congruence. L17 now proves the strict C1 reflection and full-Z6 transport into a common 364-feature cone. Its use requires the full 128-element physical group or eight sector representatives plus the canonical stabilizer. Do not assume a reflected dictionary is contained in the original sixth-root monomial grid.
