@@ -1,0 +1,153 @@
+Bounded analytical verification: source-wide C1 contact-jet theorem
+27 October 2026
+
+Reviewed original:
+analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/
+fetched-20261027-0705/task5/package/Q222_C1_K364_CONTACT_JET_2026_10_27/
+PROOF.md, COORDINATOR_THEOREM.md, source_only_contact_jet.py and the
+supporting symbolic geometry; checked the needed SG6, SG18--SG19 source.
+This is an analytical audit, not a new exact-checker replay or source scan.
+
+VERDICT
+
+The claimed local theorem is supported on its stated domain: every genuine
+REAL strict oriented native C1 source with d>0, lambda=n=0, all six retained
+weights positive, actual finite positive contact, and0<k<=1. It gives a
+rank-six contact Gram and one source-only quadratic cross-skew T(v) whose
+entire8x8 matrix is PSD at contact and PD on a two-sided punctured Bob
+neighborhood. No additional source ratio, small-gap separation or k<1
+restriction is silently needed. In particular k=1 causes no degeneracy
+in the argument. The statement is pointwise in the source, not uniform
+over a family approaching its boundary. H1 remains unresolved.
+
+1. Zero geometry and the rank-six contact anchor
+
+For strict C1, the positive SG6 terms include exponent directions in both
+angular coordinates. At fixed V=v_*^2>0 the Laurent polynomial has a
+strictly convex dependence on log U, with a stationary zero at U=k^2.
+There is therefore no other positive U zero. The Alice sign congruence
+gives precisely the other sign u=-k. SG3's PD three-state block makes the
+state kernel one-dimensional at either finite nonzero angle. The u=0
+and Alice-infinity endpoint matrices are strictly positive for v_*>0
+under the stated positive weights. Hence the two projective zeros used
+in section3 are indeed the only ones; this is not inferred from Hessian
+positivity alone or from a single sampled contact.
+
+Write z=(w,y), h=k, x+=(z,hz), x-=(w,-y;-hw,hy).
+Their Alice factors(1,h),(1,-h) and state factors z,(w,-y) are independent
+because h>0 and w,y are both nonzero. Consequently the span N of x+,x-
+contains no further rank-one Segre point. The source-rational projector
+Pi_R onto Nperp thus has exactly these two zeros on RP1 x RP3.
+
+SG18--SG19 give a strictly positive Hessian in(W,X,Y,u,v) with Z=1.
+Restriction to fixed v and passage to local projective coordinates give
+a positive quadratic lower bound for Dv_*F near each zero. Q_ref is
+smooth, nonnegative and vanishes there, so Q_ref=O(distance^2). Away
+from the two zeros the normalized Segre variety is compact and F>0.
+These facts rigorously give a sufficiently small source-dependent real
+epsilon>0 with
+  Dv_*F-epsilon Q_ref>=0
+globally in the homogeneous Alice pair and all states. Compactness is
+used at one real source, not as a compact cover of the native domain.
+
+With Calderon's2-by-n nonnegative-biquadratic SOS theorem explicitly
+imported, the remainder has a PSD bilinear Gram annihilating x+,x-.
+Adding epsilon Pi_R gives kernel exactly N, rank6, and positivity on its
+six-dimensional complement. Alice-sign averaging preserves this strict
+complement and produces the required4+4 parity blocks, each with a
+one-dimensional kernel. Thus the new nondegenerate anchor is stronger
+than the predecessor's isolated possibly degenerate PSD anchor.
+
+2. Exact source-only contact skew
+
+The coefficient identity fixes the diagonal state subblocks and the
+symmetric cross part, leaving only the cross-parity skew T. The contact
+equations reduce to
+  T y=p, T^T w=q, w^T p=y^T q.
+The compatibility follows from the actual state and Alice stationarity;
+it is not an identity for arbitrary independent event weights.
+The printed affine line
+  T=p y^T/||y||^2+w q^T/||w||^2
+    -(w^T p)w y^T/(||w||^2||y||^2)+tau w_perp y_perp^T
+is the complete solution. Its denominators are strictly positive source
+norms. Rank-six existence makes the simultaneous strict complement-PD
+inequalities a nonempty open one-variable semialgebraic set. Finite
+root isolation/selection gives a source-algebraic tau; this is not a
+globally rational closed formula or a numerical SDP conclusion.
+
+3. Derivative freedom and two-sided PSD
+
+At x=x+, the physical tangent space
+  E={(dotpsi,h dotpsi+dotu z)}
+has dimension5 and E intersect N=R x. Thus
+  L=Eperp intersect Nperp=(E+N)perp
+has dimension2. The coefficient-neutral correction satisfies
+  J(U)x=(h S(U)z,-S(U)z),
+and its image is ALL Eperp, of dimension3: the cross-skew map has only
+the one-dimensional kernel R w_perp y_perp^T. Both source subvectors
+are nonzero throughout the stated domain, so there is no rank loss.
+
+U0=w y^T/(||w||^2||y||^2) changes the two raw soft derivatives by
++2h and-2h. Bob stationarity makes their sum zero, hence one source-only
+coefficient kills both. The remaining independent directions
+U1=w_perp y^T and U2=w y_perp^T give a basis l1,l2 of L. Their Gram
+  G_ij=l_i^T Msharp l_j
+is PD because Msharp is PD on Nperp. The correction -G^(-1)b makes
+Msharp b_opt orthogonal to L, hence in E+N, and therefore b_opt=M e
+for some e in E. This proves that the full-range Schur minimization
+agrees with the physically permitted Segre-tangent minimization; it
+does not minimize over spurious independent state normals.
+
+The quadratic Taylor coefficient along an actual Segre path is
+  e^T M e+2 e^T b_opt+x^T H2 x.
+Terms involving the second derivative of the Segre embedding vanish
+because Mx=0. The full strict native Hessian, after minimizing the
+other four projective state/Alice variables for a fixed unit Bob
+displacement, gives
+  kappa=x^T H2 x-b_opt^T Msharp b_opt>0.
+Radial state scaling contributes only the already removed x null line.
+
+Parity eliminates cross terms between the two soft modes, so their
+second-order coefficients sum to kappa. Adding delta U0 to the quadratic
+skew coefficient changes them by+2h delta,-2h delta. The printed delta
+makes both equal kappa/2>0. Complementary3x3 blocks stay PD. Their exact
+Schur expansions are delta_v^2(kappa/2+O(delta_v)), proving positivity
+on BOTH sides of v_* for sufficiently small nonzero delta_v. This is
+an actual singular-matrix Schur proof; continuity of the contact Gram
+alone would not establish it.
+
+4. Code correspondence and limitations
+
+source_only_contact_jet.py implements this algebra consistently.
+Msharp=(M+Pi_N)^(-1)-Pi_N uses a PD source-only inverse. Its first-jet
+projection is the stated2x2 PD solve. H2base=Hfixed''/2 is the Taylor
+coefficient, while Tsecond multiplies(v-v_*)^2; the opposite2h shifts
+and the balancing formula have the correct factors. No testing inverse
+enters T(v). The returned quadratic T keeps H's Bob degree<=4 and the
+conditional global factorization in the same40-row subset of Z364.
+
+The function REQUIRES a tau giving strict contact complements; it does
+not implement or independently certify the source-algebraic tau selection.
+Its identities cannot establish positivity for an arbitrary supplied tau.
+The universal local positivity conclusion uses Calderon and the strict
+native Hessian as mathematical imports, not the regression check alone.
+No extension to literal zero weights, non-strict contacts, a uniform
+neighborhood radius, or arbitrary remote Bob angles is proved here.
+
+5. One focused sufficient completion target
+
+For every source in the complete oriented strict domain, find ONE
+source-only polynomial T_theta(v) of degree<=4 for which BOTH complete
+2x2 Schur residuals R_A(v),R_B(v) are PSD for every v>0, with the required
+homogeneous endpoints. Treat the allowable contact jets and endpoint
+allocations as compatible freedoms; do not unnecessarily freeze the
+particular local quadratic recipe or prior endpoint allocation.
+
+Independent positive neighborhoods cannot be patched merely by
+source-dependent polynomial approximation: the degree bound and fixed
+feature library must be proved. A different fixed adequate enlargement
+or a direct full364-feature Gram is also sufficient if established
+coefficientwise. The present theorem supplies the missing nondegenerate
+contact-local piece, but no such global joining or H1 certificate.
+
+No original package, source repository or published review was edited.

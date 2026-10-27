@@ -1,0 +1,38 @@
+C1 contact-jet and K364 moment-dual packages: targeted exact verification
+Date: 2026-10-27.
+
+SOURCES / EVIDENCE
+Sources: analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-20261027-0705/task5 and task7.
+Evidence: analysis/contact-jet-and-dual-exact-verification-2026-10-27/.
+Read the new executable scripts and their source/native dependencies before execution. They use deterministic SymPy/Fractions identities, pure-source rational matrix formulas and local output writes. No numerical solver, optimizer, parameter search or sweep. Executed each appropriate new checker once, sequentially, in private copies with bytecode disabled and numerical thread limits set to 1. Python 3.14.3, SymPy 1.14.0. No missing dependency or execution failure.
+
+INTEGRITY
+Task5 original ZIP: 32,693 bytes; SHA256 3d7da7ab57ff45a964356aa43e3b87f32ef440117e868680671980f2ccaa463b.
+CRC passed; all 16 archived members match extracted bytes/SHA256; all 15 MANIFEST.json entries match SHA256 and length. The Downloads original Q222_C1_K364_CONTACT_JET_EXACT_LOCAL_POSITIVITY_2026-10-27.zip is byte-identical.
+Task7 original ZIP: 24,001 bytes; SHA256 910959144323d667d65a921c30f2bc0f8c2709433151266a26ce0992b0898e7b.
+CRC passed; all seven archived members match extracted bytes/SHA256; all six SHA256_MANIFEST.json entries pass. The Downloads original K364_MOMENT_DUAL_ANALYTIC_AUDIT.zip is byte-identical.
+Manifest files themselves were included in archive/extracted member comparison. All originals were checked unchanged after replay. No archived bytecode was present; no private bytecode was published. Internal manifests verify package consistency, not independent provenance or mathematical correctness.
+
+NEW REPLAYS
+verify_contact_geometry.py: exit 0; 1.022997 s; five PASS lines; 17 assert statements. Checks the unrestricted four-state polynomial/parity identity, source-rational contact-skew solution, tangent annihilation and opposite soft split, and rank-three skew action/two soft-neutral directions.
+verify_two_schur.py: exit 0; 0.964124 s; two PASS lines; one asserted matrix identity called in both sectors. Checks generic 4x4 to 2x2 Schur congruences, not sign of the residual matrices.
+verify_contact_jet_exact.py: exit 0; 0.928988 s; two PASS lines; five assertion statements plus assertions in source_only_contact_jet.py. One specified rational native regression only: (k,f,g,a,t)=(1,1,1,3/5,3/5), weights (d,lambda,n,m,C,A,D,alpha,beta)=(8,0,0,2,2,3,1,8/3,2/3), contact (1,1;1,-2/5,2/5,1), tau=0. Contact-complement leading principal minors are A: 6032/75, 639824/75, 458773504/675; B: 3538/3, 1642352/9, 40961920/9. Physical contact Schur curvature=4256/115>0. Full coefficient identity for the interpolated polynomial passes.
+The combined fresh Task5 stdout exactly matches original verification.log after ordinary text newline decoding.
+verify_exact_dual.py: exit 0; 0.147249 s; 12 assert statements. Checks source packet order and 120 nonzero entries, exact positive pairings and independent packet-wise W-state evaluation formulas, feature counts and exponent reachability ranges. Fresh EXACT_EVIDENCE.json matches original semantically and after newline normalization; raw difference is the final Windows CRLF.
+Exact pairings: C2 seed=38/273>0; supplied C1 coefficient vector=2316936438928/6385857947469>0. Neither is a negative dual separator.
+
+TINY INDEPENDENT COVERAGE CHECK
+The supplied dual checker's nested moment loop equates the same conditional expression with itself; rank, trace, PSD and the rational PD anchor are partly reported rather than computationally established there. A separate verify_independent_moment_coverage.py closes these bounded finite coverage gaps in 0.117135 s without importing supplied code.
+All 66,430 actual moment upper entries agree with qq^T/91, where q has exactly 91 nonzero W-feature coordinates. Since q is nonzero, this establishes rank one, PSD and trace one. All 3,250 actual state/exponent moment coordinates were reached by valid feature pairs, including zero-target keys. The 7x7 and 13x13 integer Vandermonde determinants were computed independently and matched the products of positive pairwise differences: 24883200 and 127313963299399416749559771247411200000000000. Their tensor-product determinant is nonzero, supplying the stated integral strictly positive moment anchor via its evaluation Gram. No 364x364 symbolic determinant or optimization was needed.
+
+SCOPE LIMITS
+Task5's exact geometry and Schur identities plus one rational source regression do not certify the claimed source-wide contact-local positivity theorem by computation. The Calderon anchor, native Hessian bounds, admissible contact-gauge existence and source-wide strict estimates require the separate mathematical proof review. No test here establishes global Bob-angle PSD, uniform source positivity, or universal K364 admission.
+Task7's positive rank-one pairing refutes universal equality against all PSD moments. It is compatible with, and does not prove, universal nonnegative pairing. The checker does not establish physical/oriented native-domain provenance of its hard-coded C1 coefficient vector; the proof labels it a separate k=4 witness outside the oriented H1 scope. The C2/C1 numerical coefficients are exact input vectors for this replay.
+Compactness, Gram-image closedness, rational negative-witness density and source-domain continuity are mathematical arguments rather than outcomes of these finite checks. No negative separator is constructed, and no universal source-pairing inequality is proved. H1/H2 and the unconditional candidate-specific finite-SDP conclusion remain open.
+
+ARTIFACTS / EXCLUSIONS
+results.json records archive/member SHA256 identities, manifest comparisons, preservation checks, timings and machine-output comparisons.
+verify_contact_geometry.log, verify_two_schur.log, verify_contact_jet_exact.log, verify_exact_dual.log contain fresh stdout/stderr.
+verify_independent_moment_coverage.py, independent_moment_coverage.log, independent_moment_coverage_results.json document the small additive coverage check.
+run_targeted_replay.py records orchestration; private-copy contains exact executable copies and fresh task7 evidence JSON.
+No predecessor checker, old global suite, sweep, numerical solver, source mutation, repository edit or publication was performed.

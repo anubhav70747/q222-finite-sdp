@@ -42,6 +42,22 @@ A separate verifier, without importing the supplied generator or assembler, chec
 
 The accompanying C1 theorem concerns a fixed a=t=1, k=sqrt(x), g=sqrt(z) subfamily, with 0<x<=1, 0<z<1 and x*z^2-(1+x)^2*z+x*(1+x)>0. For each fixed such pair, sufficiently small f>0 gives strict native sources whose scalar charge demand and capacity inequalities admit gamma=0 and delta=S_Y. These charges are nonnegative, not both positive. No uniform cutoff up to the source boundary is supplied. The seven remaining gauges and two full Schur PSD conditions are unresolved, so this is not C1 admission even on that subfamily. The qualitative V01-V06 conjunction is unchanged.
 
+## Moment-dual formulation and the actual remaining inequality
+
+The fixed moment map is injective on all 3,250 coefficient keys, including zero-target coordinates. Its PSD trace-one section is compact. A rational positive-definite moment is obtained from the 364 evaluation vectors at u=r^6, v=s^6 for r=1,...,7 and s=1,...,13, with the four state basis vectors; the Vandermonde factors prove independence.
+
+For a genuine contact source, its contact evaluation supplies a normalized rank-one moment with zero pairing. Closedness of the coefficient Gram image therefore makes K364 admission equivalent to the minimum pairing being zero, or equivalently to every admissible moment having nonnegative pairing. Individual pairings can be positive: the explicit W-state evaluation gives 38/273 at the stated C2 source. The separate supplied C1 vector uses k=4 and lies outside the oriented H1 domain.
+
+The original recovered report incorrectly describes its assignment as requiring equality against every moment. The actual assignment required nonnegative pairing. Its positive evaluations are compatible with that assignment and with admission; they are not counterexamples to either. The original report is preserved unchanged, with this correction governing its use.
+
+If a negative pairing existed, mixing with the rational positive-definite anchor and then approximating would yield a rational strict separator; continuity of the native maps also gives a nearby rational strict source. This is an existence implication, not a constructed negative witness. Neither universal nonnegativity nor a negative separator is supplied. H1/H2 and the global reverse inclusion remain open.
+
+- [Original moment-dual report](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-20261027-0705/task7/package/PROOF.md)
+- [Original complete moment-dual package](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-20261027-0705/task7/original-package.zip)
+- [Independent dual review and attribution correction](materials/historical/analysis/k364_moment_dual_analytic_verification_2026_10_27.txt)
+- [Targeted exact replay and independent moment checks](materials/historical/analysis/contact_jet_and_dual_exact_verification_2026_10_27.txt)
+- [Independent full moment-index coverage](materials/historical/analysis/contact-jet-and-dual-exact-verification-2026-10-27/independent_moment_coverage_results.json)
+
 ## Evidence
 
 - [Original proof and matrix specification](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1819/task7/package/PROOF_AND_MATRIX_SPECIFICATION.md)

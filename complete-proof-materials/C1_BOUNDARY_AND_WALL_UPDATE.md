@@ -1,6 +1,6 @@
 # C1 endpoint construction and exact boundary certificates
 
-The C1 construction now controls the full state matrix near both Bob endpoints and at its contact. The merged boundary calculations add exact Gram witnesses and a smaller rational family on the C2 n=0 wall. These results sharpen the two remaining admission problems; H1 and H2 remain open.
+The C1 constructions now control the full state matrix near both Bob endpoints and in a two-sided neighborhood of its contact. Joining these regions with one globally positive polynomial remains open. The merged boundary calculations add exact Gram witnesses and a smaller rational family on the C2 n=0 wall. These results sharpen the two remaining admission problems; H1 and H2 remain open.
 
 ## C1: one polynomial matrix, two positive ends and a contact anchor
 
@@ -24,6 +24,19 @@ If this H(v) can be made PSD for every v>=0, Hanselka--Sinn Corollary 2.8 and th
 - [Independent analytical verification](materials/historical/analysis/c1_bob_harmonic_analytic_verification_2026_10_26.txt)
 - [Exact replay and additive sign checks](materials/historical/analysis/c1_bob_harmonic_exact_verification_2026_10_26.txt)
 - [Primary-source import check](materials/historical/analysis/c1_bob_harmonic_external_imports_2026_10_26.txt)
+
+## C1: a nondegenerate contact and two-sided local positivity
+
+For every genuine real strict oriented C1 source, including k=1, the fixed-Bob form has exactly two projective zeros related by the Alice sign congruence. The strict native Hessian and compactness at that one source allow a small multiple of the contact-annihilator square to be subtracted. Calderon's theorem then supplies a rank-six contact Gram, positive on the complement of the two contact directions.
+
+Its cross-parity skew lies on an explicit source-rational affine line. The strict complement inequalities admit a source-algebraic choice of its one free scalar. A positive 2-by-2 source-only solve adjusts the first Bob derivative so that the full Schur minimum agrees with the physical tangent minimum. A quadratic skew correction divides the positive second-order curvature between the two soft modes. This gives one quadratic skew polynomial whose full 8-by-8 matrix is PSD at contact and PD throughout a two-sided punctured neighborhood.
+
+The neighborhood radius depends on the source. The constructor requires a free scalar satisfying the strict contact inequalities; it does not implement the analytical selection argument. The endpoint polynomial and this contact polynomial have not been joined within one globally PSD degree-four construction. The remaining sufficient target is one source-only polynomial making both complete 2-by-2 Schur residuals PSD for every positive Bob angle, or a direct full K364 Gram. H1 remains open.
+
+- [Original C1 contact-jet proof](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-20261027-0705/task5/package/Q222_C1_K364_CONTACT_JET_2026_10_27/PROOF.md)
+- [Original complete contact-jet package](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-20261027-0705/task5/original-package.zip)
+- [Independent contact-local theorem review](materials/historical/analysis/c1_contact_jet_analytic_verification_2026_10_27.txt)
+- [Targeted exact replay and independent moment checks](materials/historical/analysis/contact_jet_and_dual_exact_verification_2026_10_27.txt)
 
 ## Boundary identities, finite witnesses and the generic C2 wall family
 

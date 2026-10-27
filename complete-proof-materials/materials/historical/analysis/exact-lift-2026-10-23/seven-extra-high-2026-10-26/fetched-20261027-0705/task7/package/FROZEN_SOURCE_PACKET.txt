@@ -1,0 +1,662 @@
+Verified source packet for the next admission derivation. Main8d23998 contains the evaluated conditional global outer SDP. No proof of H1 or H2 is present. Original sources below are evidence; the independent C2 correction supersedes the original claim that the fixed remainder could still be proved nonnegative. No requirement to reproduce unchanged matrices or old baseline checks.
+
+
+===== analysis/direct_common_cone_admission_reduction_2026_10_26.txt =====
+Direct common-cone admission reduction -- 26 October 2026
+
+SUPPORTED, conditional on the two direct admissions below.
+
+Let K=K364={c>=0: Dv F_c=Z_ext^T P Z_ext for some P>=0} and let
+sigma be the verified CHSH-preserving C1 source permutation. Assume:
+  H1: every genuinely physical strict C1 source in the actual oriented
+      native domain 0<k<=1 belongs directly to K;
+  H2: every genuinely physical strict C2 source in its complete actual
+      native domain belongs directly to K.
+Positive native source normalizations do not change these memberships,
+because K is a cone. Neither assumption requires a representation of F_c
+in the original196 Z6 library.
+
+Set Kbar=K+sigma(K). The permutation sigma preserves the canonical source
+orthant and physical validity. Both summands are fixed, sound and closed;
+the established deterministic-coefficient bound closes their finite sum.
+Thus Kbar meets the fixed closed globally sound cone hypotheses of L15.
+
+For strict C1 with k<=1, H1 gives c in K. For k>1, the verified native
+reflection has k'=1/k<1 and the correct positive C=2 scale; H1 therefore
+gives sigma(c) in K, and c in sigma(K). H2 gives strict C2 in K. Hence
+every strict C1/C2 source belongs to the same Kbar, and L15 admits the
+permitted five-event contacts to Kbar by coefficient-space closure.
+The retained source classification and face/event cones then assemble
+the Bell-validity cone using the full physical symmetry orbit of Kbar.
+
+For the full128 physical relabeling group Gamma, sigma is an element and
+Gamma sigma=Gamma. Consequently, writing C=sum_(g in Gamma) gK,
+  sum_g gKbar = sum_g gK + sum_g g sigma K = C+C = C.
+Thus the already defined global candidate with all128 K364 orbit blocks
+needs no extra blocks. Retain the SG12/SG13 face-orbit and event blocks.
+The attained K364 dual, source-coordinate adjoints and orthants remain
+unchanged. The existing strict original196 witness may still construct
+the unconditional fixed364 Slater point; no universal Z6 admission
+theorem is used for that purpose.
+
+Critical scope: this does not prove H1 or H2, does not assert sigma(K)=K,
+and does not put every unoriented strict C1 source into K individually.
+The density conclusion first concerns Kbar. The orbit identity removes
+Kbar from the final global sum. If individual admission of an extreme
+boundary ray is required, its decomposition in the two sound summands
+lies along that same extreme ray, so a nonzero summand admits the ray
+individually. No new universal admission follows merely from closedness.
+
+This is a strictly weaker sufficient route than requiring the relevant
+sources to lie in Z16/Z18/fullZ6: those representations imply direct K364
+admission, whereas their necessity is not asserted. The global exactness
+claim remains conditional, and the full global pencil remains a separate
+materialization task. No existing review or theorem file was modified.
+
+
+===== analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/batch1839_compact_exact_K364_map.json =====
+{"source_order":["d","lambda","n","m","C","A","D","alpha","beta"],"key_convention":"(I,J,a,b) means u^(I/6)*v^(J/6)*psi_a*psi_b, psi=(W,X,Y,Z), a<=b. All keys have 0<=I<=12,0<=J<=24. Feature rows:0<=i<=6,0<=j<=12,0<=ell<=3. Astar(y)[(i,j,l),(ip,jp,lp)]=y[i+ip,j+jp,min(l,lp),max(l,lp)]. T is the coefficient map for (1+v^2)F_c. Off-diagonal Gram entries have factor two; symmetric trace uses the same factor.","source_columns":{"d":[[[0,0,1,1],"2"],[[0,0,2,2],"2"],[[0,12,1,1],"4"],[[0,12,2,2],"4"],[[0,24,1,1],"2"],[[0,24,2,2],"2"],[[6,0,0,2],"-4"],[[6,0,1,3],"4"],[[6,6,0,3],"-4"],[[6,6,1,2],"-4"],[[6,12,0,2],"-4"],[[6,12,1,3],"4"],[[6,18,0,3],"-4"],[[6,18,1,2],"-4"],[[12,0,0,0],"2"],[[12,0,3,3],"2"],[[12,6,0,1],"4"],[[12,6,2,3],"-4"],[[12,12,0,0],"2"],[[12,12,1,1],"2"],[[12,12,2,2],"2"],[[12,12,3,3],"2"],[[12,18,0,1],"4"],[[12,18,2,3],"-4"],[[12,24,1,1],"2"],[[12,24,2,2],"2"]],"lambda":[[[0,0,0,0],"4"],[[0,6,0,1],"8"],[[0,12,0,0],"4"],[[0,12,1,1],"4"],[[0,18,0,1],"8"],[[0,24,1,1],"4"],[[12,0,0,0],"4"],[[12,6,0,1],"8"],[[12,12,0,0],"4"],[[12,12,1,1],"4"],[[12,18,0,1],"8"],[[12,24,1,1],"4"]],"n":[[[0,0,1,1],"4"],[[0,12,1,1],"8"],[[0,24,1,1],"4"],[[12,0,1,1],"4"],[[12,12,1,1],"8"],[[12,24,1,1],"4"]],"m":[[[0,0,1,1],"4"],[[0,6,0,1],"-8"],[[0,12,0,0],"4"],[[0,12,1,1],"4"],[[0,18,0,1],"-8"],[[0,24,0,0],"4"],[[6,0,1,3],"8"],[[6,6,0,3],"-8"],[[6,6,1,2],"-8"],[[6,12,0,2],"8"],[[6,12,1,3],"8"],[[6,18,0,3],"-8"],[[6,18,1,2],"-8"],[[6,24,0,2],"8"],[[12,0,3,3],"4"],[[12,6,2,3],"-8"],[[12,12,2,2],"4"],[[12,12,3,3],"4"],[[12,18,2,3],"-8"],[[12,24,2,2],"4"]],"C":[[[0,0,2,2],"4"],[[0,12,2,2],"8"],[[0,24,2,2],"4"],[[6,0,0,2],"-8"],[[6,12,0,2],"-16"],[[6,24,0,2],"-8"],[[12,0,0,0],"4"],[[12,12,0,0],"8"],[[12,24,0,0],"4"]],"A":[[[0,0,2,2],"4"],[[0,12,2,2],"8"],[[0,24,2,2],"4"],[[12,0,2,2],"4"],[[12,12,2,2],"8"],[[12,24,2,2],"4"]],"D":[[[0,0,2,2],"4"],[[0,6,2,3],"8"],[[0,12,2,2],"4"],[[0,12,3,3],"4"],[[0,18,2,3],"8"],[[0,24,3,3],"4"],[[6,0,0,2],"-8"],[[6,6,0,3],"-8"],[[6,6,1,2],"-8"],[[6,12,0,2],"-8"],[[6,12,1,3],"-8"],[[6,18,0,3],"-8"],[[6,18,1,2],"-8"],[[6,24,1,3],"-8"],[[12,0,0,0],"4"],[[12,6,0,1],"8"],[[12,12,0,0],"4"],[[12,12,1,1],"4"],[[12,18,0,1],"8"],[[12,24,1,1],"4"]],"alpha":[[[0,0,3,3],"4"],[[0,6,2,3],"-8"],[[0,12,2,2],"4"],[[0,12,3,3],"4"],[[0,18,2,3],"-8"],[[0,24,2,2],"4"],[[12,0,3,3],"4"],[[12,6,2,3],"-8"],[[12,12,2,2],"4"],[[12,12,3,3],"4"],[[12,18,2,3],"-8"],[[12,24,2,2],"4"]],"beta":[[[0,0,1,1],"4"],[[0,12,1,1],"8"],[[0,24,1,1],"4"],[[6,0,1,3],"8"],[[6,12,1,3],"16"],[[6,24,1,3],"8"],[[12,0,3,3],"4"],[[12,12,3,3],"8"],[[12,24,3,3],"4"]]}}
+
+===== analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1819/task7/package/COORDINATOR_SHORT_THEOREM.md =====
+# K364 exact conditional pencil: short theorem
+
+At main `3d193cc25ae2fcdfd3817c0bf5ebd54dfada7b55`, define the genuine fixed globally sound closed cone
+\(K_{364}=\{c\ge0:\operatorname{coeff}[(1+v^2)F_c]=\operatorname{coeff}[Z_{6,12}^{T}PZ_{6,12}],\ P\succeq0\}\).
+The ZIP materializes its rational `3250 x 9` source map with **120** nonzero entries, its entire `3250 x 66430` symmetric Gram map as **66,430 explicitly indexed single-key columns**, all 128 physical group action and target matrices, all SG12/SG13 face source/dual matrix bases, the full 3456 affine equality rows, PSD copy offsets, and the 16 event inequalities.
+
+For each group member \(g\), set \(b_g(q)=E_{SG1}^TQ_g(1,q)\). The exact global LMI imposes \(b_g=T^Ty_g+r_g\), \(A^*y_g\succeq0\), \(r_g\ge0\); SG12 requires \(I_{12}^Tb_g=M_{12,x}^*Y_{12,g}+r_{12,g}\), \(M_{12,s}^*Y_{12,g}=0\), \(Y_{12,g}\succeq0,r_{12,g}\ge0\); SG13 likewise uses two \(3\times3\) matrices and \(\xi\)-cancellation. Add all 16 event inequalities. Exact dimensions: **897 PSD blocks, total order 51,088; 423,176 scalar variables including 8 Bell coordinates; 3,456 affine equalities**. Every block is explicitly defined by sparse rational data and copy offsets.
+
+**Unconditional:** \(\mathcal Q_{222}\subseteq\mathcal Q_{364}^{outer}\) by soundness and attained dual representation; the explicit positive-definite source point \((1/21,1,\ldots,1)\) is serialized and checked.
+
+**Conditional:** Assuming (H1) every genuinely physical oriented strict C1 source \(0<k\le1\) is in **K364** and (H2) every genuine strict six-event C2 source is in **K364**, then \(K364+\sigma K364\) covers strict contact rays, L15 admits their singular coefficient limits, and SG9/SG10 + SG12/SG13/events close the source cone. The full 128 group includes \(\sigma\), so its orbit sum needs **only K364 copies**, giving \(\mathcal Q_{364}^{outer}=\mathcal Q_{222}\). Neither H1 nor H2 is proved or inferred from the 196-row Z6 candidate. No Git writes.
+
+
+===== analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1819/task5/package/Q222_C1_ORIENTED_K364_ADMISSION_2026_10_26/original_native/c1_native.py =====
+#!/usr/bin/env python3
+"""Original exact C1 native coquotients and 4-state parent, SymPy only."""
+import sympy as s
+k,f,g,a,t=s.symbols('k f g a t',positive=True)
+u,v,W,X,Y,Z=s.symbols('u v W X Y Z')
+ka=k*k;eta=f*f;zet=g*g;vc=ka*eta*zet
+Lc=1-a*eta;Hc=1+(1-a)*eta;Qc=1-ka*zet+a*vc
+R=1+ka*(1-a*eta);T=1+ka-ka*zet*t; M=R-t;J=T-a;e=k*f/g;Delta=g/(k*f)
+P4=1+ka+eta*ka*(a-ka-1)-zet*ka*t+vc*(-zet*ka*t**2+2*ka*t+a*(1-t)+t)
+Pa=1+ka-a*eta*ka+zet*((1+ka)-(2+ka)*t)+vc*(-zet*t**2+a*(t-1)+t)
+Pd=(1+ka)**2-a*eta*ka**2+zet*ka*((ka+1)-(ka+2)*t)+vc*(-zet*ka*t**2+ka*a*(t-1)+ka*t+ka+1)
+c2=2*(1+ka)*(1-t*zet)*Lc*(1+vc)*Hc*Qc
+cb=2*(1+ka)*Lc*(1+(1-t)*zet)*Hc*Qc
+c3=2*(1+ka)*Lc*Hc*Qc*(1-ka*eta+t*vc)
+c5=2*(1+ka)*Lc*Hc*Qc*(1+vc)
+c4=2*Qc*P4;cal=2*Lc*Hc*Pa;cd=4*Lc*Qc*Pd
+COQ=[c2,cb,c3,c5,c4,cal,cd]
+dB=2*a*eta*cd/c3
+m=2*a*e**2*c2/(M*c3);C=s.Integer(2);A=2*a*eta**2*c4/c3
+al=2*a*Delta**2*k**6*eta**2*cal/c3
+D=2*a*c5/(J*c3)-dB/2
+be=2*a*e**2*cb/(t*c3)-dB/2
+NATIVE=(dB,s.Integer(0),s.Integer(0),m,C,A,D,al,be)
+CONTACT=(k,k*f*g,g/f,-k*(1-t*g**2),k*g*Lc/f,s.Integer(1))
+
+def phi_state():
+    Du=1+u*u;Dv=1+v*v
+    bb=X+u*Z; qa=W+u*Y;ra=u*W-Y;r2=v*qa-bb;r5=ra-v*(Z-u*X)
+    H2=4*T*c2; Hb=4*T*cb; H3=4*R*c3;H5=4*R*c5
+    return (H2*(R/M)*r2**2+Hb*(R/t)*Dv*bb**2+
+       Delta**2*H3*(T/a)*Dv*ra**2+Delta**2*H5*(T/J)*r5**2+
+       4*R*T*Delta**2*eta**2*c4*Du*Dv*Y**2+
+       4*R*T*Delta**4*k**6*eta**2*cal*Du*(v*Y-Z)**2+
+       2*R*T*Delta**2*eta*cd*Du*((v*Y-Z)**2-Dv*Z**2))
+
+def stationary_components():
+   return u,v,W,X,Y,Z
+
+
+===== analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1739/task5/package/PROOF.md =====
+# Oriented strict native C1: exact fixed Z18 charge transfer and the remaining PSD implication
+
+**26 October 2026.** This is an analytical continuation of the verified C1 16-feature coefficient-map and obstruction package, not an assertion of universal strict-C1 Gram admission. The orientation is **exactly** `0 < k <= 1`. No numerical SDPs, parameter sweeps, guessed Gram positivity, connection-to-closedness argument, or GitHub write is used. The earlier strict `k=4` counterexample is outside the oriented source domain, though it remains a genuine obstruction to the old 16-feature cone on unrestricted A1.
+
+## Theorem 1: genuine native scope and the full parent
+
+Let `k,f,g,a,t` be real with `0<k<=1` and `f,g,a,t>0`, and put
+
+\[
+\kappa=k^2,\quad \eta=f^2,\quad \zeta=g^2,\quad
+ V_c=\kappa\eta\zeta,\quad e=kf/g,\quad
+ L_c=1-a\eta,\quad H_c=1+(1-a)\eta,\quad
+ Q_c=1-\kappa\zeta+aV_c,
+\]
+\[
+ R=1+\kappa L_c,\quad T=1+\kappa-\kappa\zeta t,\quad
+ M=R-t,\quad J=T-a.
+\]
+
+The **strict original-source domain** requires
+
+\[
+ L_c,H_c,Q_c,M,J,1-t\zeta,1-\kappa\eta+tV_c>0,
+\]
+
+and strictly positive seven native coquotients `c2, cb, c3, c5, c4, calpha, cd` and their defining `P4,Palpha,Pd`, as in the unchanged `original_baseline/c1_native.py` and SD1 (these definitions are part of the exact source, not substitute free weights). With
+
+\[
+ d=\frac{2a\eta c_d}{c_3},\ m=\frac{2ae^2c_2}{Mc_3},\ C=2,\ A=\frac{2a\eta^2c_4}{c_3},\
+ \alpha=\frac{2ae^{-2}\kappa^3\eta^2c_\alpha}{c_3},
+\]
+\[
+ D=\frac{2ac_5}{Jc_3}-\frac d2>0,\qquad
+ \beta=\frac{2ae^2c_b}{tc_3}-\frac d2>0,
+\]
+
+this is the genuine strict C1 source `(d,lambda,n,m,C,A,D,alpha,beta)=(d,0,0,m,2,A,D,alpha,beta)`. All denominators are positive on this domain, and the established native entry/stationarity theorem gives the nonzero physical contact
+
+\[
+ (u_c,v_c;W_c,X_c,Y_c,Z_c)
+ =(k,kfg;g/f,-k(1-tg^2),kgL_c/f,1).
+\tag{1}
+\]
+
+Use the original unrestricted four-state SG2 parent
+
+\[
+\begin{split}
+F={}&4m(vW-X+uvY-uZ)^2+4C(1+v^2)(uW-Y)^2
+ +4A(1+u^2)(1+v^2)Y^2\\
+&+(4D+2d)(uW+uvX-Y-vZ)^2
+ +(4\alpha+2d)(1+u^2)(vY-Z)^2\\
+&+(4\beta+2d)(1+v^2)(X+uZ)^2
+ -2d(1+u^2)(1+v^2)Z^2.
+\end{split}
+\tag{2}
+\]
+
+All coefficient statements below concern (2) **for all independent positive `u,v` and all four unrestricted state coordinates**. The original source identities and full-parent stationarity are in `original_baseline`, and are not silently replaced by just scalar contact or determinant positivity.
+
+## Theorem 2: an exact universal 18-feature coefficient admission and precisely two fractional charges
+
+The fixed, source-independent testing library is
+
+\[
+\begin{aligned}
+Z_{18}^{\rm int}&=(uW,vW,X,uvX,Y,uvY,uZ,vZ,uvW,vX,uY,vY,Z,uvZ),\\
+Z_{18}^{\rm half}&=(\sqrt{uv}W,\sqrt{uv}Z,\sqrt{uv}X,\sqrt{uv}Y).
+\end{aligned}\tag{3}
+\]
+
+Every feature belongs to the fixed sixth-root grid `Z6` (the half-power exponent is `3/6`). The feature library does **not** depend on any native source. Source-only changes `u=u_c U`, `v=v_c V`, `psi=diag(psi_c)phi`, and division of individual rows by their nonzero contact evaluations are invertible diagonal congruences. No testing denominators or new testing degrees are introduced.
+
+Use the twelve established integer contact differences
+
+\[
+\begin{split}
+r_0,\ldots,r_6={}&(UW-VZ,\ VW-VZ,\ X-VZ,\ UVX-VZ,\\
+&Y-VZ,\ UVY-VZ,\ UZ-VZ),\\
+r_7,\ldots,r_{11}={}&(UVW-UVZ,\ VX-UVZ,\ UY-UVZ,\\
+&VY-UVZ,\ Z-UVZ).
+\end{split}\tag{4}
+\]
+
+Here the state letters are the **contact-normalized** `phi`, not the original unnormalized state. Introduce two fractional contact-root squares
+
+\[
+ h_W=\sqrt{UV}(W-Z),\qquad h_X=\sqrt{UV}(X-Y).
+\tag{5}
+\]
+
+The underlying constant exact coefficient map on all contact-difference Gram entries has **46 generated angular/state coefficient keys, 49 entries, rank 40, cokernel 6**. **These 46 generated keys must not be confused with the full 46 parity-compatible bidegree-(2,2) keys**: they consist of the old 42 parity-compatible invariant-support keys plus four extra *parity-incompatible* keys (forced to zero). The four parity-compatible keys still absent from both selected libraries are the constant `W^2,WZ` and the `U^2X^2,U^2XY` coefficients; the genuine native parent has zero coefficients there. The old integer plus WZ-odd submap has rank 36 on its 42 invariant keys, with the previous eight gauges. A four-by-four new coefficient minor on the four new parity-incompatible monomials
+
+\[
+ (UV\,WX,UV\,WY,UV\,XZ,UV\,YZ)
+\]
+
+has determinant **16** (its columns are the half-root pairs `(0,1),(0,2),(1,1),(2,2)`). Thus the rank is at least `36+4=40`. Every contact-difference product satisfies the four state and two angle contact jets; these six independent rows bound the rank by `46-6=40`. The checker constructs the exact whole matrix and verifies these statements by integer arithmetic. This keeps the dimensional distinction precise: the **entire parity-compatible** polynomial space has 46 keys, but the selected invariant Bell support has 42; the four additional keys of the *generated* extended map are forbidden by the parent symmetry, not those four missing compatible keys.
+
+For the actual C1 parent those four additional parity-incompatible coefficients vanish. Writing the general real symmetric Gram on the three half-root differences
+
+\[
+ h_0=\sqrt{UV}(W-Z),\quad h_1=\sqrt{UV}(X-Z),\quad h_2=\sqrt{UV}(Y-Z)
+\]
+
+and matching the four forbidden monomials gives the **complete exact odd-block form**
+
+\[
+ \Omega=\begin{pmatrix}\gamma&0&0\\0&\delta&-\delta\\0&-\delta&\delta\end{pmatrix},
+ \qquad \Omega\succeq0\iff\gamma\ge0,\ \delta\ge0.
+\tag{6}
+\]
+
+The integer/fractional cross block can be removed by averaging the formal square-root sign automorphism. The integer parity groups and the half WZ/XY sectors separate by averaging the exact simultaneous sign congruence `(U,V,X,Y) -> (-U,-V,-X,-Y)` (and keeping the formal square root of `UV` fixed). Each operation preserves the parent and PSD. At a genuine contact, each block has its corresponding all-ones contact kernel. Thus the contact-reduced description loses no PSD certificate from this 18-feature cone.
+
+**The two new globally valid zero identities** in the contact-normalized polynomial ring are
+
+\[
+ \begin{aligned}
+ r_1(r_0-r_6)&=UV(W-Z)^2=h_W^2,\\
+ (r_2-r_4)(r_3-r_5)&=UV(X-Y)^2=h_X^2.
+ \end{aligned}\tag{7}
+\]
+
+Consequently every actual strict C1 source has the **exact full-parent coefficient identity**
+
+\[
+\boxed{
+ \widehat F_\theta
+ =r_{0:6}^TH_7(\theta;s,\gamma,\delta)r_{0:6}
+ +r_{7:11}^TH_5(\theta;s)r_{7:11}
+ +\gamma h_W^2+\delta h_X^2,
+}\tag{8}
+\]
+
+where `s=(s0,...,s6)` is source-only, and all entries are source-rational except for any algebraically chosen gauges. Take the original rational 36-pivot inverse and seven kernels from the recovered 16-feature proof, retain its eighth gauge `gamma`, and add **one** new integer correction `delta K_X`, where the only nonzero symmetric entries (zero-based indices in `H7`) are
+
+\[
+ (K_X)_{23}=-\tfrac12,\quad(K_X)_{25}=+\tfrac12,
+ \quad(K_X)_{34}=+\tfrac12,\quad(K_X)_{45}=-\tfrac12.
+\tag{9}
+\]
+
+Indeed `r^T K_X r=-h_X^2` exactly. Hence the 18-feature **C1 invariant** coefficient map is `42 x 45`, rank 36, with nine independent source-only gauge coordinates. Matching includes the complete first and second state-normal polynomials: (8) is an identity of all coefficients of (2), not just the six contact jets.
+
+The cone of sources admitted by the original fixed `Z18` Gram is globally sound: its defining polynomial equality is linear in the Bell-source coefficients and one finite PSD Gram; positivity on positive testing angles follows from the square representation, and the original sign gauges and homogeneous limits cover all other projective tests. The fixed feature Gram cone is closed by the positive-definite moment-integral trace bound on `(u,v) in [1/2,2]^2` and the state unit sphere. **No assertion that this cone contains all strict C1 sources is made.**
+
+### Why this is a real construction change
+
+In the old 16-feature cone the Fourier/contact inequality imposes a lower bound on the *single* odd charge `gamma`, while a forced H7 principal Schur block bounds that same scalar above. The rigorous unrestricted-`k` obstruction exploits their conflict. In (8) the exact sign-related-contact argument (valid only on the physical Bell slice) becomes a bound on **`gamma+delta`**, while the old forced **upper bound on `gamma` alone** is unchanged by (9). The added source-only positive charge can therefore carry the previously conflicting demand. Explicitly, on the **canonical Bell slice with the four sign-related contact zeros**, put
+
+\[
+ S_X=(4\beta+2d)v_c^2X_c^2,\quad S_Y=4Au_c^2Y_c^2,\quad
+ S_Z=4\beta u_c^2v_c^2Z_c^2,
+\]
+
+and define the three-side deficit
+
+\[
+ L_{\triangle}=\max\{0,\sqrt{S_X}-\sqrt{S_Y}-\sqrt{S_Z},
+ \sqrt{S_Y}-\sqrt{S_X}-\sqrt{S_Z},
+ \sqrt{S_Z}-\sqrt{S_X}-\sqrt{S_Y}\}.
+\]
+
+The same four-contact integer-root Fourier argument as in the recovered exact counterexample gives **the necessary inequality**
+
+\[
+\boxed{\gamma+\delta\ge L_{\triangle}^2.}\tag{9a}
+\]
+
+The old forced Schur upper bound acts on `gamma` alone. Identity (7) transfers a positive cross charge to `delta` while leaving every original full-parent coefficient matched, so the previous `gamma`-only contradiction no longer follows. This removes the specific *logical contradiction* but does **not** establish PSD feasibility of the whole H7/H5 pair, even for the old `k=4` source. The inequality (9a) is used only on the actual four-contact Bell-validity slice, **not** on arbitrary single-contact polynomials. It also does not prove the old 16-feature cone fails on `k<=1`.
+
+## Theorem 3: exact complete Schur admission interface, including singular certificates
+
+Let `H7,H5` be the source-rational affine matrices in (8), constructed without any inverse of testing coordinates. Define the **forced positive** block, with indices local to `H7`,
+
+\[
+ P=H_7[\{1,2\}]=\begin{pmatrix}
+ 4m v_c^2W_c^2&-4mv_cW_cX_c\\
+ -4mv_cW_cX_c&2(2\beta+d+2m)X_c^2
+ \end{pmatrix},
+\]
+\[
+ \det P=8m(2\beta+d)v_c^2W_c^2X_c^2>0,
+\quad p_4=H_7[4,4]=2Y_c^2(2A+2C+2D+d)>0,
+\quad p_{11}=H_5[4,4]=4\alpha Z_c^2>0.
+\tag{10}
+\]
+
+No gauge, including the new `delta`, changes any entry of `P` or either scalar pivot. Put `Tidx=(0,3,4,5,6)` and `Ridx=(0,3,5,6)` (global `H7` indices). Define
+
+\[
+ T_7=H_7[Tidx,Tidx]-H_7[Tidx,\{1,2\}]P^{-1}H_7[\{1,2\},Tidx],
+\]
+\[
+\boxed{ S_7=T_7[Ridx,Ridx]
+   -T_7[Ridx,\{4\}]\,T_7[\{4\},Ridx]/p_4, }
+\tag{11}
+\]
+
+where in the second formula `Ridx` means the corresponding positions `(0,1,3,4)` **inside** `Tidx`. For the global `H5` block indexed `(7,8,9,10,11)`, put
+
+\[
+\boxed{ S_5=H_5[0{:}4,0{:}4]
+       -H_5[0{:}4,4]H_5[4,0{:}4]/p_{11}. }
+\tag{12}
+\]
+
+Exact block-triangular congruences prove, **without assuming any nonzero eigenvalue of `S7` or `S5`**,
+
+\[
+\boxed{
+ H_7\succeq0\iff S_7\succeq0,\qquad
+ H_5\succeq0\iff S_5\succeq0.
+}\tag{13}
+\]
+
+The only divisions are by the forced strict positive source blocks in (10). In particular singular final certificates are retained exactly: there is no inverse of an unproved Schur pivot, no pseudoinverse, and no loss of a `gamma`-equality face. The *one remaining finite, globally quantified admission implication* is
+
+\[
+\boxed{
+ \forall\theta\in\Theta_{\mathrm{C1},\,0<k\le1}^{\rm strict}
+ \ \exists\ s\in\mathbb R^7,\ \gamma,\delta\in\mathbb R_{\ge0}:\quad
+ \operatorname{diag}(S_7(\theta;s,\gamma,\delta),
+ S_5(\theta;s),[\gamma],[\delta])\succeq0.
+}\tag{14}
+\]
+
+For the original 16-feature cone set `delta=0`. The verified `k>1` counterexample disproves this original condition on unrestricted A1, **but not on the oriented domain in (14)**. The 18-feature implication (14) is also currently **unproved**, as is universal strict-C1 admission to the full sixth-root cone. Neither algebraic matching, full native stationarity, positive forced minors, connectedness nor the known C2 open-end construction proves (14).
+
+### A forced charge bound survives the enlargement
+
+Writing `B=2C+2D+d`, the `(0,0)` entry of `S7` is the exact gauge-independent expression
+
+\[
+ (S_7)_{00}=
+ \frac{4ABu_c^2W_c^2}{2A+B}
+ -\frac{(2\beta+d+2m)\gamma^2}{16m(2\beta+d)v_c^2W_c^2}.
+\tag{15}
+\]
+
+It is independent of `delta` since the new gauge avoids every pivot/coupling entering this scalar. Thus the old source-rational upper bound on `gamma` remains necessary, but the two-charge extension avoids making it an upper bound on `gamma+delta`. No positivity of the other 4x4 entries follows from this scalar alone.
+
+## Preservation, exact replay, and scope
+
+`c1_z18_extension.py` constructs the fixed 46-by-49 coefficient map, all half-difference columns, the explicit added gauge, source-rational original-frame constructor and exact Schur matrices. `verify_z18_exact.py` proves all source-independent monomial identities, rank bounds and odd-block forcing. `verify_schur_identities.py` checks both block congruences algebraically, independently of any numerical source or SDP. The unchanged `original_baseline` contains the seven actual coquotients, full parent, six-jet stationary verification, 36-pivot coefficient map, and earlier forced positivity proof. The original source files are preserved byte-for-byte.
+
+**Completed:** exact full-state Z18 coefficient admission for all strict C1 sources (indeed all strict A1 sources), fixed nine-gauge parametrization, and complete singularity-safe 4x4+4x4 Schur criterion. **Not completed:** a single choice of those gauges with PSD proved for every oriented strict real native source, or a proven source-wide alternative finite cone. This is an algebraic matrix-feasibility frontier, not an evaluated global affine lift. Conditional singular-source density and the independently verified C2 open-end theorem remain untouched.
+
+
+===== analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-1839/task3/package/PROOF_AND_OPEN_GATE.md =====
+# Direct strict-C2 admission in K364: exact normal syzygies and the remaining scalar SOS gate
+
+**Scope:** genuine six-event native C2 source; full four-state parent; source coefficients independent of testing variables. **Status:** a new exact division-free, fixed-feature full-parent normal completion and a positive universal highest-Bob-degree pivot are proved. **Universal K364 PSD admission remains open.** The independently checked strict C2 open-end theorem, the older scalar determinant circuits and the qualitative finite-SDP existence proof are not altered.
+
+## 1. Native hypotheses and fixed library
+
+Take the complete native strict C2 source `(a,b,c,t,r)` in
+\[
+\Omega=\{a,b,c,t>0,\ 0<r<1,\ h=b-a^2t>0,\ g=(1+c^2)b-(1-r+a^2c^2t)>0,\ j=1+c^2r-t>0,\ 1-c^2h>0,\ b-a^2c^2r>0,\ N_*>0,\ N_n>0\}.
+\]
+Here
+\[
+\begin{split}
+\Delta={}&1+(1+c^2)b+c^2(1+c^2)b^2+2c^2(1+c^2)br+c^4r^2+2c^2r\\
+&+a^2c^2[(1+c^2)b+1+c^2r(2-r)],\\
+N_*={}&(1+c^2)(b+r)[b+a^2(1-t)]-a^2(1+a^2c^2)(1-r)t,\\
+N_n={}&(b+r)(1+c^2r)(1+c^2r+a^2c^2t)-r\Delta.
+\end{split}
+\]
+The six weights are precisely the positive rational native values
+\[
+\begin{split}
+n&=N_n/(2r\Delta),\\
+m&=(1+a^2c^2)(1-r)(1+c^2r)(1+c^2r+a^2c^2t)/(2g\Delta),\\
+C&=(1+c^2r)N_*/(2a^2t\Delta),\\
+A&=a^2(1+c^2r)(b+r)(1+c^2r+a^2c^2t)/(2h\Delta),\\
+D&=(1+c^2)(b+r)(b-a^2c^2r)(1+c^2r+a^2c^2t)/(2a^2j\Delta),\\
+\alpha&=c^4(b+r)N_*/(2(1-c^2h)\Delta).
+\end{split}
+\]
+Set \(d=1,\lambda=\beta=0\), \(D_u=1+u^2\), \(D_v=1+v^2\). The complete cleared parent is
+\[
+\begin{split}
+F={}&4nD_uD_vX^2+4m(vW-X+uvY-uZ)^2+4CD_v(uW-Y)^2+4AD_uD_vY^2\\
+&+(4D+2)(uW+uvX-Y-vZ)^2+(4\alpha+2)D_u(vY-Z)^2\\
+&+2D_v(X+uZ)^2-2D_uD_vZ^2.
+\end{split}\tag{1}
+\]
+The fixed candidate cone is \(K_{364}=\{s\ge0: D_vF_s=Z_{(6,12)}^TPZ_{(6,12)},\ P\succeq0\}\), with \(Z_{(6,12)}=(u^{i/6}v^{j/6}\psi_l)_{0\le i\le6,0\le j\le12,l=W,X,Y,Z}\). The native contact is
+\[
+(u_c,v_c;W_c,X_c,Y_c,Z_c)=(c,ac;b/a,-cr,c(b/a-at),1).
+\tag{2}
+\]
+The exact full-state and angular contact equations \(F=\partial_{W,X,Y,Z,u,v}F=0\) at (2) are the verified native-source inputs.
+
+## 2. A division-free full-state identity in exactly 32 fixed polynomial rows
+
+Let \(\xi=(W,X,Y)^T\). Use the **16 normalized row shapes** \(r_i=(\mathbf r_i,q_i)\) in the following order; each actual full row is \(k_i r_i\), with its positive **pure-source** scaling \(k_i\):
+
+| Index | Normalized shape `(W,X,Y,Z)` | `k_i` |
+|---:|---|---|
+| 0–3 | `(0,fg,0,0)`, `f=1,u`, `g=1,v` lexically | `2 sqrt(n)` |
+| 4 | `(v,-1,uv,-u)` | `2 sqrt(m)` |
+| 5–6 | `(ug,0,-g,0)`, `g=1,v` | `2 sqrt(C)` |
+| 7–10 | `(0,0,fg,0)`, `f=1,u`, `g=1,v` lexically | `2 sqrt(A)` |
+| 11 | `(u,uv,-1,-v)` | `sqrt(4D+2)` |
+| 12–13 | `(0,0,fv,-f)`, `f=1,u` | `sqrt(4alpha+2)` |
+| 14–15 | `(0,g,0,ug)`, `g=1,v` | `sqrt(2)` |
+
+Write \(R_0\in\mathbb R[u,v]^{16\times3}\) for the first three columns of these normalized rows, \(q_0\) for the last column, and \(K_0=\operatorname{diag}(k_0,\ldots,k_{15})\). Set
+\[
+\widehat R=\begin{pmatrix}K_0R_0\\vK_0R_0\end{pmatrix},\quad
+\widehat q=\begin{pmatrix}K_0q_0\\vK_0q_0\end{pmatrix},\quad
+\mathsf K=\operatorname{diag}(K_0,K_0).
+\]
+By expanding precisely the *original* nine terms in (1),
+\[
+\boxed{D_vF=\|\widehat R\xi+\widehat qZ\|^2-2D_uD_v^2Z^2.}\tag{3}
+\]
+Every row of \((\widehat R,\widehat q)\) has angular bidegree at most \((1,2)\). It is therefore a root in the **fixed** 364-feature dictionary. No state normal or angle is specialized.
+
+## 3. Twenty-nine exact source-independent polynomial syzygies
+
+Number the original *normalized* rows \(e_i\), and the 16 Bob-shifted rows \(e_i'=v e_i\). All the following are identities **in the three-dimensional \((W,X,Y)\) part**, not identities of the fourth-state coefficient:
+
+1. For the five rows `i=1,2,3,14,15` proportional to \(X\): \(e_i-f_i g_i e_0=0\), where \(f_i g_i=(R_0)_{i,X}\).
+2. For the five rows `i=8,9,10,12,13` proportional to \(Y\): \(e_i-f_i g_i e_7=0\), where \(f_i g_i=(R_0)_{i,Y}\).
+3. \(e_6-ve_5=0\).
+4. \(e_{11}-e_5-uv e_0=0\).
+5. \(u e_4-ve_5+u e_0-ve_7-uv e_9=0\).
+6. For each \(0\le i<16\), \(e_i'-ve_i=0\).
+
+These yield **29 linearly independent kernel vectors** \(S(u,v)\in\mathbb R[u,v]^{32\times29}\), with every entry of bidegree at most \((1,1)\), such that
+\[
+\boxed{(R_0;vR_0)^TS(u,v)=0.}\tag{4}
+\]
+Their full sparse entries, row order and exact coefficients are machine-readable in `K364_SYZYGY_DATA.json`. Multiplying each vector by \(\mathsf K^{-1}\) produces actual source-scaled syzygies \(t\) satisfying \(\widehat R^Tt=0\) with the *same* testing degrees.
+
+**Contact-kernel interpolation without any testing inverse.** At arbitrary \(u_c,v_c>0\), rows \(e_0,e_7,e_5\) form an invertible \(3\times3\) matrix of determinant \(u_c\). Consequently the 29 syzygies evaluated at the contact form a basis of \(\ker(R_0(u_c,v_c);v_cR_0(u_c,v_c))^T\). There is an explicit triangular interpolation procedure: for an arbitrary normalized contact-kernel vector \(b=(b_0,\ldots,b_{31})\), put \(\eta_i=b_i+v_cb_{16+i}\), set the 16 shift coefficients to \(b_{16+i}\), set every simple 13-column coefficient to \(\eta_i\) for its distinguished row except \(m\), set \(\lambda_m=\eta_4/u_c\), and adjust the \(Y_u\) coefficient to \(\lambda_{Y_u}=\eta_9+v_c\eta_4\). The three unused pivot-row equations then hold automatically from the kernel equation. **All divisions are by the positive pure-source \(u_c\)**; none is by \(u\), \(v\), or a mixed source/testing sum.
+
+## 4. An explicit Bob-degree-two transfer and a positive all-domain high pivot
+
+The following **additional** normalized syzygy has bidegree at most \((1,2)\):
+\[
+\boxed{T_{\rm high}=v^2e_{11}'-uv e_4'-uv^2e_{15}'-uv e_0'+v e_8'+uv e_{10}'.}\tag{5}
+\]
+Indeed its \(W,X,Y\) components cancel as
+\[
+ v^2(uv,uv^2,-v)-uv(v^2,-v,uv^2)-uv^2(0,v^2,0)
+ -uv(0,v,0)+v(0,0,v^2)+uv(0,0,uv^2)=0.
+\]
+Unlike an unrestricted Koszul syzygy, this uses no \(u^2\) or \(v^3\) coefficient and **stays inside the fixed K364 degrees**.
+
+For any source contact, put \(e_c=\widehat R_c\xi_c+\widehat q_c\), \(\xi_c=(W_c,X_c,Y_c)\). Native stationarity gives \(\widehat R_c^Te_c=0\). Let \(\Lambda(b)\) be the triangular interpolation operator of Section 3. Define source-only normalized contact vectors \(b_c=-\mathsf K e_c\), \(b_h=T_{\rm high}(u_c,v_c)\) and the **explicit polynomial syzygy**
+\[
+\boxed{t_\theta(u,v)=\mathsf K^{-1}\left(S(u,v)\Lambda(b_c)
+  +2\left[T_{\rm high}(u,v)-S(u,v)\Lambda(b_h)\right]\right).}\tag{6}
+\]
+Every parameter in (6) depends on the source only; its entries have bidegree at most \((1,2)\), and
+\[
+\widehat R^Tt_\theta=0,\qquad t_\theta(u_c,v_c)=-e_c.\tag{7}
+\]
+In particular the rows of \(\widehat R\xi+(\widehat q+t_\theta)Z\) **all vanish at the actual four-state contact**.
+
+For **every** polynomial syzygy \(t\) with \(\widehat R^Tt=0\), we have the exact full-parent normal-completion identity
+\[
+\boxed{D_vF=\sum_{i=1}^{32}\left[\widehat R_i\cdot\xi+(\widehat q_i+t_i)Z\right]^2
+  +\mathscr S_t(u,v)Z^2,\quad
+\mathscr S_t=-2D_uD_v^2-2\widehat q^Tt-t^Tt.}\tag{8}
+\]
+This is a literal polynomial identity (not merely at contact or in residue); its first term already belongs to the fixed K364 cone for all \(\theta\in\Omega\). With \(t=t_\theta\), the scalar remainder \(\mathscr S_t\) vanishes with both angular first derivatives at the native contact, because every retained square vanishes there and the entire original parent is stationary.
+
+The degree-four Bob pivot is **universally positive, with no restriction on the sign of \(h-a^2r\)**. The \(v^2\) coefficient of the vector \(\widehat q\) has precisely two entries \(-\sqrt{4D+2}\) in row 27 and \(u\sqrt2\) in row 31. The contact interpolation \(S\Lambda\) in (6) has degree at most one in \(v\); the high syzygy contributes \(2/\sqrt{4D+2}\) to row 27 and \(-2u/\sqrt2\) to row 31 at degree two. Therefore **exactly**
+\[
+\begin{split}
+[v^4]\mathscr S_{t_\theta}
+&=-2(1+u^2)+4(1+u^2)
+  -4\left[\frac1{4D+2}+\frac{u^2}2\right]\\
+&=\boxed{\frac{4D}{2D+1}>0.}
+\end{split}\tag{9}
+\]
+This sign is valid for every strict native source, including arbitrarily small source gaps (pointwise, not uniform at their zero limits). No numerical comparison of source and testing rates is involved.
+
+## 5. The single unresolved PSD implication for this constructive route
+
+Equation (8) certifies the complete four-state parent in K364 **if** the scalar remainder from (6), or from an admissible source-only syzygy deformation of it, has a finite SOS using scalar roots in the fixed grid
+\[
+\big\{u^{i/6}v^{j/6}Z:0\le i\le6,\ 0\le j\le12\big\}.
+\tag{10}
+\]
+This is a specific *sufficient normal-assembly ansatz*, not a necessary characterization of all possible K364 Grams. The positive leading coefficient (9), exact contact tangency, and full state-normal matching **do not establish** that scalar SOS, nor positivity of the entire scalar polynomial. Lower Bob degrees, angular contact circuits, and their Schur couplings are the first unproved implication. One must find source-algebraic coefficients and an exact positive Gram for (10), possibly after varying the admissible syzygy with zero contact evaluation. The original K364 cone might admit a different Gram even if this particular scalar-completion ansatz fails.
+
+For comparison, the original 141-square identity involves the test-dependent multiplier \(\det B\). The present construction **never introduces that multiplier in (8)**. Independently, exact expansion of the three-state principal block gives
+\[
+\det B=8(1+u^2)(1+v^2)H(u^2,v^2),\qquad
+H=\sum_{(i,j)\in\{0,1,2\}^2\setminus\{(0,0)\}}h_{ij}\,u^{2i}v^{2j},
+\tag{11}
+\]
+with all eight \(h_{ij}\) strictly positive for every \(n,m,C,A,D,\alpha>0\); the checker writes all eight polynomials to `K364_SYZYGY_DATA.json`. Notice \(H(0,0)=0\), while \(1+v^2=1\) there. Thus the old multiplied-parent certificate cannot be divided by \(8(1+u^2)H\) inside this fixed Gram library; (8) is the direct denominator-free alternative, whose scalar PSD step is genuinely still open.
+
+**No theorem of all-strict-C2 K364 admission, nor of the global explicit SDP lift, is claimed.** The orientation-restricted C1 problem is being solved independently. The verified open-end theorem, source-density conditional, reflection, and 128-relabeling assembly retain their previous stated scopes.
+
+## 6. Reproduction
+
+Run `python verify_syzygy.py`. It uses SymPy only and checks, without optimization or samples: original four-state parent row expansion; all 29 syzygies; the admissible extra v² syzygy; the full rank-29 contact interpolation with an explicit pure-source inverse; exact \((1+v^2)F\) identity; contact compatibility of the v² correction; the strict source-uniform pivot (9); and the 8 positive coefficient formulas (11). The output is `K364_SYZYGY_DATA.json`, including every sparse syzygy and positive determinant coefficient. None of this is an all-source PSD check of (10).
+
+
+===== analysis/c2_direct_syzygy_analytic_verification_2026_10_26.txt =====
+Bounded analytical review: direct C2 K364 syzygy completion
+Reviewed 27 October 2026; requested record dated 26 October 2026
+
+Package:
+analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/
+fetched-1839/task3/package
+
+VERDICT
+
+The 32-row complete-parent expansion, 29-dimensional contact-kernel
+interpolation, allowed high-degree syzygy, exact normal-completion identity
+and universal positive [v^4] pivot are supported. All are full-state,
+source/test-separated statements in the specified fixed feature library.
+
+However, the particular scalar remainder selected by Eq. (6) is NOT
+universally nonnegative. An exact genuine strict C2 seed gives a negative
+quadratic on an interior testing line. Moreover, varying the coefficient
+tau of the single added high syzygy cannot repair this seed. Thus proving
+positivity/SOS of that fixed remainder is not an open viable target: it is
+false. General zero-contact syzygy deformations and strict C2 admission
+to K364 remain open. This is not a counterexample to K364 admission.
+
+1. Supported algebra and scope
+
+The sixteen normalized positive packet rows and source scalings reproduce
+the complete SG2 source with d=1, lambda=beta=0 and all six retained event
+weights positive. Multiplying by Dv produces exactly the two 16-row copies
+minus 2 Du Dv^2 Z^2, including every W,X,Y,Z coefficient. The normalized
+contact in Eq. (2) matches EN14. On Omega, every scaling and interpolation
+denominator is a positive pure-source number.
+
+The thirteen unshifted syzygies eliminate all nonpivot rows, with the m
+column divided only by u_c. The sixteen shift syzygies eliminate the
+second copy. The pivot rows e0,e7,e5 have determinant u_c>0, so the 29
+evaluated columns form the entire 29-dimensional contact kernel. The
+required exceptional coefficient is
+  lambda_Yu=eta9+v_c eta4,
+in addition to lambda_m=eta4/u_c. The proof and executable code include it.
+
+The extra high syzygy cancels all W,X,Y components. Its coefficients have
+u-degree<=1 and v-degree<=2. Subtracting its contact interpolation makes
+the correction vanish at contact. For every resulting syzygy t, expanding
+the squares gives exactly
+  Dv F=sum_i [Rhat_i xi+(qhat_i+t_i)Z]^2+S_t Z^2,
+  S_t=-2 Du Dv^2-2 qhat^T t-t^T t.
+The roots remain in the fixed 364-feature span. This means their sum has
+a PSD Gram in that feature library; the sum alone need not be an SG2
+source polynomial in the canonical nine-dimensional source subspace.
+All roots vanish at the actual contact, yielding scalar contact value
+and both angular first derivatives zero. None of these facts implies
+scalar positivity.
+
+The two v^2 entries of qhat and the high correction give the stated
+general pivot
+  -2(1+u^2)+2 tau(1+u^2)-tau^2[1/(4D+2)+u^2/2].
+At tau=2 this is exactly 4D/(2D+1)>0 throughout strict Omega. The positive
+determinant-coefficient observation is also compatible with the complete
+three-state block and does not cancel its extra testing factor in K364.
+
+2. Exact strict-domain counterexample to the selected scalar completion
+
+Choose the established exact seed
+  (a,b,c,t,r)=(1,1,1,3/4,1/4).
+Every strict-domain condition is explicit:
+  h=1/4, g=1/2, j=1/2,
+  1-c^2 h=3/4, b-a^2 c^2 r=3/4,
+  Delta=10, N_*=2, N_n=5/8,
+and a,b,c,t>0, 0<r<1. The native source formulas give
+  (n,m,C,A,D,alpha)=(1/8,3/8,1/6,5/8,3/8,1/6).
+Its contact is
+  (u_c,v_c;W_c,X_c,Y_c,Z_c)=(1,1;1,-1/4,1/4,1).
+The complete parent and all six derivatives in W,X,Y,Z,u,v vanish
+there exactly. Together with the strictly positive weights and SG7,
+this is a genuine physical strict C2 source. It even satisfies h=a^2 r;
+the obstruction does not require the difficult unbalanced bridge case.
+
+Use the CORRECT contact interpolation from the proof/code. Allow an
+arbitrary real tau in place of the fixed coefficient2 in Eq. (6):
+  t_tau=K^-1[S Lambda(b_c)+tau(high-S Lambda(b_h))].
+Exact expansion at this one source gives the line certificate
+  S_tau(u,1)=-(u-1)^2(379 tau^2-1476 tau+2217)/30
+           =-(u-1)^2[379(tau-738/379)^2+295599/379]/30.
+The bracket is strictly positive for every real tau. Therefore every
+member of this one-extra-direction interpolation family has a negative
+scalar remainder whenever u>0, u!=1, v=1, including arbitrarily near
+the actual contact. Retuning tau alone cannot help.
+
+In particular the specified tau=2 remainder satisfies
+  S_2(u,1)=-781(u-1)^2/30,
+  S_2(1/2,1)=-781/120<0,
+  partial_u^2 S_2(1,1)=-781/15<0,
+while [v^4]S_2=6/7>0 exactly as the package claims.
+For an independent value check, at testing u=1/2,v=1 and state
+(W,X,Y,Z)=(0,0,0,1), Dv F=77/12 and the 32 completed squares sum to
+517/40. Their difference is exactly -781/120.
+
+These calculations used two bounded exact reconstructions: first from
+the row/syzygy formulas, then from the serialized sparse syzygy data.
+No source/test sweep, numerical solver or approximate positivity check
+was used. The independent full-package replay remains separate.
+
+3. Concrete next target
+
+Change the contact interpolation's first angular jet using additional
+degree-admissible zero-contact syzygy directions; then test its scalar
+contact Hessian before attempting a global scalar SOS. The current family
+fails a necessary local condition at a moderate interior source, so it
+should not be carried forward as merely awaiting a positivity proof.
+
+At the seed, with the source contact state held fixed,
+  Dv F(u,1;psi_c)=289(u-1)^2/24.
+For the present tau=2 completion the completed-root sum is
+  1523(u-1)^2/40.
+Thus a repaired construction must reduce the squared u-jet norm from
+1523/40 to at most289/24 (and also satisfy the full two-angular-variable
+Hessian condition). Equivalently, for completed roots G vanishing at
+contact, it must satisfy
+  Hessian(Dv F|psi_c)-2 (dG)^T(dG)>=0
+there. Zero-contact syzygies such as (u-u_c) times a normalized syzygy
+independent of u preserve the allowed u-degree; they are concrete
+additional directions to examine. This is a necessary local filter,
+not a guarantee of global positivity or fixed-grid scalar SOS.
+
+4. Data clarification and retained open claims
+
+K364_SYZYGY_DATA.json's 'interpolation' prose says lambda_i=eta_i for
+every nonpivot row except m. It omits the exceptional Y_u adjustment
+lambda_Yu=eta9+v_c eta4. That shorthand is false if used literally;
+the proof section3 and executable code supply the correct formula.
+Later implementations must follow the corrected formula above.
+
+No universal strict C2 directK364 admission follows from this package.
+The general sufficient normal-completion ansatz with further admissible
+deformations remains open; the selected t_theta and its single high
+coefficient family are now explicitly ruled out as universal scalar SOS
+constructions. Other K364 Grams remain possible. The existing strict
+open-end theorem, L15/L17, full128 assembly and prior qualitative-existence
+reviews are unchanged. No original package, Git repository or browser
+was edited.

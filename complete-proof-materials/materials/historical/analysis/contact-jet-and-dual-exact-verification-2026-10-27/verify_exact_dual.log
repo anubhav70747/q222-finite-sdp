@@ -1,0 +1,14 @@
+{
+  "verification": "PASS",
+  "trace_M": "1",
+  "rank_M": 1,
+  "positive_semidefinite": true,
+  "nonzero_moment_keys": "(I,J,W,W)=1/91 for all I=0..12 J=0..24",
+  "C2_seed_pairing": "38/273",
+  "C1_strict_witness_pairing": "2316936438928/6385857947469",
+  "source_column_nonzeros": 120,
+  "coefficient_keys": 3250,
+  "features": 364,
+  "PD_rational_anchor": "sum over r=1..7,s=1..13,l=0..3 of evaluation at (r^6,s^6,e_l): 364x364 positive definite by tensor-product Vandermonde",
+  "negative_witness_route": "For a rational c outside K364, mix a negative PSD moment witness with rational PD anchor, normalize, approximate rationally; retains strict negative pairing."
+}
