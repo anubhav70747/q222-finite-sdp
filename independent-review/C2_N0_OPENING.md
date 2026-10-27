@@ -2,7 +2,9 @@
 
 27 October 2026. This note supplies a local PSD completion for the fractional carrier introduced in the [2039 package](../complete-proof-materials/materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-2039/task3/package/PROOF_AND_OPEN_GATE.md). Every C2 n=0 wall point with a positive definite Gram on all four reduced blocks of the larger 27-feature wall support has an explicitly described neighborhood of strict n>0 admission in **28 fixed half-power features**. Multiplication by 1+v² embeds the result in **49 fixed K364 features**.
 
-The theorem does not assume that the selected carrier can be subtracted globally. It proves a PSD residual near the stated wall points by a fixed coefficient right inverse and a quantitative positive-definiteness bound. Whole-wall PSD selection, arbitrary strict C2 admission H2, and C1 admission H1 remain open. This is a same-assistant derivation and exact replay, with no independent review claimed.
+The theorem does not assume that the selected carrier can be subtracted globally. It proves a PSD residual near the stated wall points by a fixed coefficient right inverse and a quantitative positive-definiteness bound. Whole-wall PSD selection, arbitrary strict C2 admission H2, and C1 admission H1 remain open. The original derivation and replay were performed together; the subsequent independent checks are linked below.
+
+Subsequent independent [analytical review](../complete-proof-materials/materials/historical/analysis/c2_n0_opening_analytic_verification_2026_10_27.txt) and [bounded exact replay](../complete-proof-materials/materials/historical/analysis/c2_n0_opening_exact_verification_2026_10_27.txt) support the stated conditional neighborhood theorem. The replay verifies the already archived positive step 2^-24 without repeating the original source-search loop.
 
 ## Source, contact and quantifiers
 
@@ -77,7 +79,7 @@ Choose the source-rational q=a/(1+a), and write
 \end{split}\tag{4}
 \]
 
-This is the two-square carrier before multiplication by 1+v². It is PSD for U,V>0 and arbitrary Phi, vanishes at the moving contact, and has all six contact derivatives zero. At n=0 it vanishes identically. It is an ambient polynomial SOS, not a separate Bell source.
+This is the two-square carrier before multiplication by 1+v². It is PSD for U,V>0 and arbitrary Phi, vanishes at the moving contact, and has all six contact derivatives zero. At n=0 it vanishes identically. It is a positive-quadrant half-power SOS, not a separate Bell source.
 
 Let
 

@@ -78,6 +78,26 @@ This is an ambient PSD Gram on the canonical positive testing chart, not a membe
 
 The [C2 n=0 opening theorem](../independent-review/C2_N0_OPENING.md) now proves a PSD residual on an explicit neighborhood of every wall point with a Gram PD on all four larger wall contact complements. Contact normalization gives a constant72x104 map of rank66 whose image is exactly the six-jet kernel. The carrier removes the missing forced diagonal; a fixed rational correction, confined to the integer block, matches every residual coefficient and stays PSD for a quantified small perturbation. This uses28 fixed half-power features, or49 weighted K364 features. Whole-wall PD selection and arbitrary strict-source H2 remain open. The earlier carrier review correctly describes its scope before this local completion; the new result does not assert global carrier domination.
 
+The independent analytical review verifies the fixed right inverse, all six contact conditions, the PSD norm estimate and the nonempty strict side. The bounded replay checks only the archived positive step 2^-24; its regenerated map and certificate data are byte-identical. The four larger-wall strict-complement assumptions remain essential.
+
+- [Independent analytical opening review](materials/historical/analysis/c2_n0_opening_analytic_verification_2026_10_27.txt)
+- [Bounded exact replay of the archived strict step](materials/historical/analysis/c2_n0_opening_exact_verification_2026_10_27.txt)
+- [Independent carrier support and inverse-norm checks](materials/historical/analysis/c2-n0-opening-exact-verification-2026-10-27/bounded_carrier_norm_results.json)
+
+## Pointwise factor verification
+
+Use the separately reviewed real-factor checker below for proposed exact K364 certificates. The original program accepts imaginary coefficients while accumulating ordinary squares and does not enforce the direct-source nonnegative orthant. Multiplying its elementary n-event roots by I with n=-1 therefore produces a false SOS acceptance. This is a checker defect outside the genuine native domain, not a counterexample to admission or a failure of any previously verified native certificate.
+
+The corrected variant requires provably finite real coefficients, nonnegative direct weights and known source names. It retains the exact native-gap tests and all 120 source-map entries. The positive event self-test passes; both the negative-weight example and a separate imaginary factor are rejected. It checks one supplied witness and does not generate or prove a universal native Gram. Original code and data are preserved unchanged.
+
+Dritschel's Theorem 4.1 supplies a per-source finite trigonometric factorization. After Cayley denominator clearing it gives a multiplied-parent SOS with a source-dependent degree. Neither a uniform degree bound nor the fixed K364 multiplier follows, so this import does not close H2.
+
+- [Original status and pointwise verifier package](materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-20261027-0745/task3/original-package.zip)
+- [Independent verifier and factorization review](materials/historical/analysis/c2_admission_verifier_review_2026_10_27.txt)
+- [Reviewed real-factor verifier](materials/historical/analysis/c2-admission-verifier-review-2026-10-27/verify_primal_factor_checked.py)
+- [Usage and scope](materials/historical/analysis/c2-admission-verifier-review-2026-10-27/README.txt)
+- [Exact positive and negative regression results](materials/historical/analysis/c2-admission-verifier-review-2026-10-27/review_results.json)
+
 ## Next implication
 
 The next C1 task is a simultaneous native-domain PSD gauge construction; the next C2 task is full Gram admission or its equivalent dual positivity statement. Another coefficient-rank calculation or isolated carrier is insufficient. A different fixed globally sound library remains an admissible route if it gives a complete proof. A separating witness against Z6 is not a prerequisite for choosing one.

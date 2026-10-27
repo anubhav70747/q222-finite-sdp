@@ -2168,3 +2168,31 @@ Thirty-seven original or independently verified scientific payloads are preserve
 | analysis/contact-jet-and-dual-exact-verification-2026-10-27/verify_exact_dual.log | [file](../complete-proof-materials/materials/historical/analysis/contact-jet-and-dual-exact-verification-2026-10-27/verify_exact_dual.log) | 684 |
 | analysis/contact-jet-and-dual-exact-verification-2026-10-27/verify_independent_moment_coverage.py | [file](../complete-proof-materials/materials/historical/analysis/contact-jet-and-dual-exact-verification-2026-10-27/verify_independent_moment_coverage.py) | 2413 |
 | analysis/contact-jet-and-dual-exact-verification-2026-10-27/verify_two_schur.log | [file](../complete-proof-materials/materials/historical/analysis/contact-jet-and-dual-exact-verification-2026-10-27/verify_two_schur.log) | 286 |
+
+## Independent C2 local-opening and factor-verifier review
+
+Twenty-one scientific payloads add independent evidence for existing L19 and preserve the new original task3 package with a separately named corrected pointwise verifier. No universal admission result is supplied. Private execution copies are excluded.
+
+| Project-relative source | Public material | Bytes |
+|---|---|---:|
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-20261027-0745/task3/original-package.zip | [file](../complete-proof-materials/materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-20261027-0745/task3/original-package.zip) | 8908 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-20261027-0745/task3/package/COMPACT_K364_SOURCE_MAP.json | [file](../complete-proof-materials/materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-20261027-0745/task3/package/COMPACT_K364_SOURCE_MAP.json) | 12938 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-20261027-0745/task3/package/H2_ANALYTICAL_STATUS.md | [file](../complete-proof-materials/materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-20261027-0745/task3/package/H2_ANALYTICAL_STATUS.md) | 7421 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-20261027-0745/task3/package/MANIFEST.json | [file](../complete-proof-materials/materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-20261027-0745/task3/package/MANIFEST.json) | 851 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-20261027-0745/task3/package/README.txt | [file](../complete-proof-materials/materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-20261027-0745/task3/package/README.txt) | 850 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-20261027-0745/task3/package/SELFTEST_OUTPUT.json | [file](../complete-proof-materials/materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-20261027-0745/task3/package/SELFTEST_OUTPUT.json) | 417 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-20261027-0745/task3/package/verify_primal_factor.py | [file](../complete-proof-materials/materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-20261027-0745/task3/package/verify_primal_factor.py) | 6131 |
+| analysis/c2_n0_opening_analytic_verification_2026_10_27.txt | [file](../complete-proof-materials/materials/historical/analysis/c2_n0_opening_analytic_verification_2026_10_27.txt) | 7724 |
+| analysis/c2_n0_opening_exact_verification_2026_10_27.txt | [file](../complete-proof-materials/materials/historical/analysis/c2_n0_opening_exact_verification_2026_10_27.txt) | 5549 |
+| analysis/c2_admission_verifier_review_2026_10_27.txt | [file](../complete-proof-materials/materials/historical/analysis/c2_admission_verifier_review_2026_10_27.txt) | 4031 |
+| analysis/c2-n0-opening-exact-verification-2026-10-27/bounded_carrier_norm.log | [file](../complete-proof-materials/materials/historical/analysis/c2-n0-opening-exact-verification-2026-10-27/bounded_carrier_norm.log) | 545 |
+| analysis/c2-n0-opening-exact-verification-2026-10-27/bounded_carrier_norm_results.json | [file](../complete-proof-materials/materials/historical/analysis/c2-n0-opening-exact-verification-2026-10-27/bounded_carrier_norm_results.json) | 543 |
+| analysis/c2-n0-opening-exact-verification-2026-10-27/results.json | [file](../complete-proof-materials/materials/historical/analysis/c2-n0-opening-exact-verification-2026-10-27/results.json) | 3336 |
+| analysis/c2-n0-opening-exact-verification-2026-10-27/run_targeted_replay.py | [file](../complete-proof-materials/materials/historical/analysis/c2-n0-opening-exact-verification-2026-10-27/run_targeted_replay.py) | 4178 |
+| analysis/c2-n0-opening-exact-verification-2026-10-27/verify_bounded_carrier_norm.py | [file](../complete-proof-materials/materials/historical/analysis/c2-n0-opening-exact-verification-2026-10-27/verify_bounded_carrier_norm.py) | 2394 |
+| analysis/c2-n0-opening-exact-verification-2026-10-27/verify_n0_opening.log | [file](../complete-proof-materials/materials/historical/analysis/c2-n0-opening-exact-verification-2026-10-27/verify_n0_opening.log) | 544 |
+| analysis/c2-admission-verifier-review-2026-10-27/COMPACT_K364_SOURCE_MAP.json | [file](../complete-proof-materials/materials/historical/analysis/c2-admission-verifier-review-2026-10-27/COMPACT_K364_SOURCE_MAP.json) | 12938 |
+| analysis/c2-admission-verifier-review-2026-10-27/false_positive_example.json | [file](../complete-proof-materials/materials/historical/analysis/c2-admission-verifier-review-2026-10-27/false_positive_example.json) | 597 |
+| analysis/c2-admission-verifier-review-2026-10-27/README.txt | [file](../complete-proof-materials/materials/historical/analysis/c2-admission-verifier-review-2026-10-27/README.txt) | 1099 |
+| analysis/c2-admission-verifier-review-2026-10-27/review_results.json | [file](../complete-proof-materials/materials/historical/analysis/c2-admission-verifier-review-2026-10-27/review_results.json) | 1673 |
+| analysis/c2-admission-verifier-review-2026-10-27/verify_primal_factor_checked.py | [file](../complete-proof-materials/materials/historical/analysis/c2-admission-verifier-review-2026-10-27/verify_primal_factor_checked.py) | 6818 |

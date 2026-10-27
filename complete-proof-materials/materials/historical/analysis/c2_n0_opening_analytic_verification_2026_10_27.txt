@@ -1,0 +1,149 @@
+Independent analytical audit: L19 C2 n=0 wall-to-strict opening
+27 October 2026
+
+Reviewed additions at upstream2dc657f5af5dffc0137d35f2ec9d6b9a1fc28f23:
+independent-review/C2_N0_OPENING.md and the fixed-map/native construction
+in independent-review/checks/gram-lift/ends/n0-opening/verify_n0_opening.py,
+fixed_map.json and exact_results.json. No unchanged H1/H2 case was
+rederived. No repository file was edited or published.
+
+VERDICT
+
+The conditional neighborhood theorem is valid as stated. Its quantifiers
+are essential: for EVERY genuine n=0 wall point having a Gram positive
+on ALL FOUR larger wall contact complements, the supplied certificate
+has a source-only continuation admitting every sufficiently nearby
+actual native source on the n>=0 side. It is not a theorem that every
+wall point has the required strict-complement Gram, nor that every
+strict C2 source is in this neighborhood union. The smaller18-feature
+wall certificates alone do not meet its hypothesis.
+
+1. Native domain, normalization and strict-side existence
+
+The complete SG2 parent and native weight formulas match the established
+C2 d=1,lambda=beta=0 convention and EN14--EN16 contact. A wall point
+requires0<r<1, a,b,c,t>0, h,g,j,k=1-c^2h,B=b-a^2c^2r>0,
+Delta,N_*>0, N_n=0 and all five retained weights positive. For nearby
+strict sources replace N_n=0 by N_n>0. These restrictions cannot be
+dropped merely because a point has formal positive parameters.
+
+The substitutions u=cU, v=acV and
+  psi=diag(b/a,-cr,ch/a,1)Phi
+are invertible throughout that domain. The negative X scale is an
+ordinary invertible source congruence and causes no PSD problem. Every
+normalized feature takes value1 at contact; half-power angular factors
+change only source coefficients by positive source radicals. There is
+no testing denominator or mixed-field inverse.
+
+The actual native full state/angular stationarity gives all six
+normalized first derivatives zero by the chain rule. Four state
+derivatives also imply the value condition by degree-two state Euler
+homogeneity, so no seventh independent contact condition is missing.
+
+The strict side is locally nonempty at every wall point in the stated
+domain, not just at the delivered example. Delta is independent of t,
+and
+  partial n/partial t = a^2 c^2(b+r)(1+c^2r)/(2r Delta)>0.
+Increasing t sufficiently little opens n>0 while preserving the other
+strict gaps and retained weights. Native stationarity and the existing
+stationary-source physicality theorem apply to this branch.
+
+2. The universal coefficient right inverse is genuinely fixed
+
+The four difference columns have lengths12,4,4,3. Their independent
+symmetric Gram coordinates number78+10+10+6=104. Because each block
+has a fixed parity, their products are polynomials with the specified
+72 integer-exponent quadratic-state keys. The product map correctly
+uses factor2 for off-diagonal independent Gram coordinates.
+
+I independently reconstructed M and J from the serialized feature
+blocks and upper-entry positions, rather than relying on a native
+parameter specialization. Exact arithmetic confirmed:
+  M is72x104; its selected66x66 minor has determinant2^54;
+  J is6x72; its selected6x6 minor has determinant2;
+  JM=0;
+  M[:,pc] minor_inverse M[pr,:]=M;
+  every selected column is in the first78 integer-block coordinates;
+  the maximum absolute row sum of the inverse is141.
+Thus rankM=66, rankJ=6 and imM=kerJ hold everywhere: no rational-function
+generic-rank exception remains. The constructed E is a right inverse
+on this kernel, with corrections confined to the integer block. This
+is stronger than the earlier generic18-feature wall reduction.
+
+3. Carrier and full residual identity
+
+The normalized carrier is the correct source-rescaled version of the
+prior two-square opening:
+  C_hat=4n c^4r^2[(-UX+qVX+(1-q)VW)^2
+                 +2qUV(W-X)^2], q=a/(1+a).
+Its roots vanish at the normalized contact, hence every carrier first
+state/angular derivative vanishes. It removes the entire forced
+U^2X^2 coefficient and cancels its UVX^2 coefficient internally.
+The formal residual support check retains all four state components
+and all mixed terms, including the negative WX transfers; it does not
+infer positivity from individual coefficient signs.
+
+The carrier is an ambient SOS on the positive canonical testing chart,
+not a separate Bell source. Here that distinction is explicitly stated
+and harmless: only the combined full-parent identity is used for source
+admission. For every actual stationary source Jr_theta=0, hence
+  x(theta)=x0+E(r_theta-r0)
+matches EVERY residual coefficient. The last three normalized matrices
+are exactly unchanged. No positivity or Gram dominance assumption is
+used to establish this coefficient identity.
+
+4. PSD estimate and local quantifiers
+
+For a supplied wall certificate Q_b^0>0,
+  mu_b=1/||(Q_b^0)^(-1)||_infinity
+is a valid positive lower eigenvalue bound: the inverse is symmetric,
+and its spectral radius is at most its maximum absolute row sum.
+An upper-coordinate correction is bounded by C_b epsilon entrywise;
+after symmetric unpacking its operator norm is at most d_b C_b epsilon.
+There is no additional missing off-diagonal factor in this bound.
+
+Since C=(141,0,0,0),
+  ||r_theta-r0||_infinity < mu0/(2*12*141)
+implies Q0(theta)>=mu0 I/2, while Q1,Q2,Q3 remain PD. Native weights,
+normalization and q are continuous at the wall point because all their
+denominators stay nonzero. The coefficient-radius condition therefore
+defines a genuine relative source neighborhood. Its radius depends on
+the wall point and its chosen Gram; it is not a common Euclidean native
+parameter radius or merely a condition that n is small.
+
+The wall assumption is exactly strict positivity on each whole larger
+contact complement. A generic singular PSD wall Gram or a Gram on the
+smaller18-row support cannot replace it. For an arbitrary supplied
+strict wall Gram, the continuation is rational in the moving source
+data relative to that fixed certificate; the theorem does not supply
+a universal rational selection of the initial wall Gram.
+
+5. Feature counts and conclusion
+
+All residual roots remain in the27 larger wall features. The carrier
+adds only UX, so28 fixed half-power features suffice before the Dv
+multiplier. I independently checked their union with their V-shifted
+copies has49 distinct features. Their Alice exponents are<=1 and Bob
+exponents<=2, in half-integer steps, hence all lie in the original
+364-row sixth-root grid. Undoing contact normalization changes only
+source coefficients. The physical multiplier uses v=acV, so its shifted
+roots acquire only the source factor ac, with no dictionary change.
+
+The combined identity therefore gives actual K364 membership on each
+neighborhood. SG2 sign congruences and homogeneous continuation apply
+to the complete parent, not necessarily to each carrier separately.
+The advertised single fixed28-feature cone for the union of these
+neighborhoods is consistent with these source-only rescalings.
+
+The delivered rational seed is a finite instance of the hypothesis and
+continuation; it is not the basis for the universal conditional step.
+I inspected its stated native and radius checks but did not rerun that
+seed search/LDL replay in this analytical pass. The source-independent
+map/minor/right-inverse/count checks above were independently executed.
+
+L19 establishes a legitimate conditional wall-to-strict opening, with
+an actual fixed surjectivity map and norm bound. It does not reverse
+L15 without the additional strict wall-Gram hypothesis. Whole-wall
+strict-complement PSD selection, coverage beyond these neighborhoods,
+arbitrary strict H2, and H1 remain open. No claim of unconditional
+exactness of the global pencil follows.

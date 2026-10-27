@@ -1,0 +1,39 @@
+C2 n=0 opening: bounded exact replay, 2026-10-27
+Upstream context label supplied by coordinator: main2dc657f.
+
+SOURCE / EXECUTION
+Inspected github-q222-finite-sdp/independent-review/checks/gram-lift/ends/n0-opening/verify_n0_opening.py, fixed_map.json, seed_wall_proposal.json and exact_results.json, plus independent-review/C2_N0_OPENING.md. Recorded all five original byte counts/SHA256 identities and checked them unchanged after replay.
+Evidence folder: analysis/c2-n0-opening-exact-verification-2026-10-27/.
+Python 3.14.3; SymPy 1.14.0; bytecode disabled; numerical thread limits 1. Safe operations are exact rational symbolic algebra, matrix inversions/LDL and private JSON output. No missing dependency or failure.
+
+NO SEARCH / OLD RECHECKS
+The supplied script normally searches signs +/-1 and dyadic exponents 1..89 for a strict source. To enforce the requested verification-only scope, its private execution copy changed exactly two loop headers: signs restricted to (1,), exponents to (24,). This verifies only the already materialized +2^-24 strict step. No other executable algebra/assertion changed. The exact original and private executable SHA256 values and replacements are in results.json. The original script was not edited.
+One private targeted run passed: exit 0, 1.764215 seconds, five PASS lines. No fourteen old upstream checkers, parameter search/sweep, numerical solver or global suite ran.
+Both freshly emitted files, fixed_map.json and exact_results.json, are BYTE-IDENTICAL to the original repository data.
+
+CHECKED EXACT CONSTRUCTION
+Rebuilt all four normalized contact-difference blocks from feature products. The fixed coefficient matrix is 72x104. Its selected 66x66 minor has determinant 2^54; six-jet map J has a 6x6 minor with determinant 2; JM=0. These prove rank(M)=66, rank(J)=6 and im(M)=ker(J), with no source-dependent generic rank assumption.
+Recomputed the inverse minor and embedded right inverse E; checked MEM=M. All 26 rows after the first 78 are zero, so correction touches only the 12x12 integer block. Formal residual coefficient support, all six carrier contact derivatives and removal of the forced U^2 X^2 coefficient pass exactly.
+Repaired the archived wall proposal using E and checked full coefficient equality plus exact positive LDL pivots for all four reduced blocks of sizes (12,4,4,3). Recomputed reciprocal inverse-infinity-norm eigenvalue bounds, right-inverse block row sums and the positive coefficient radius. The row-sum bounds are (141,0,0,0); the radius is exactly greater than 9/1000000.
+At the one specified strict point, native domain gaps and six event signs pass, Jr=0 passes, Mx=r passes and all four reduced blocks pass exact positive LDL. These are complete fixed-map coefficient checks, not raw-diagonal or solver-status evidence.
+
+DELIVERED FINITE POINT
+Wall theta=(a,b,c,t,r)=(1,22/13,1,2581/2210,2/5).
+Strict theta=(1,22/13,1,2581/2210+2^-24,2/5), with n=221/19042140160>0. The five other weights and native gaps remain strictly positive. Full exact rational vectors, all minimum LDL pivots, inverse-norm bounds and the radius are reproduced in private-copy/exact_results.json.
+
+TINY INDEPENDENT CHECK
+verify_bounded_carrier_norm.py passed in 0.042145 seconds without importing supplied code. It independently checks the carrier as the sum of the root (-UX+qVX+(1-q)VW) squared and 2q times [sqrt(UV)(W-X)] squared, verifies their support in the 28-feature library, and verifies all original/V-multiplied roots lie in the 49-feature union and fixed K364 dictionary. It independently derives (141,0,0,0) from absolute row sums of the stored inverse and its pivot-coordinate/block positions.
+This correctly interprets positivity in positive U,V through half-power roots. The carrier is not an integer-polynomial SOS valid on all real U,V; the theorem's 'ambient polynomial SOS' wording should be understood with that domain/library qualification.
+
+SCOPE
+The run establishes the exact fixed linear algebra, radius construction and the one delivered strict rational certificate. The source-wide formal support calculation is separate from actual native stationarity; this replay verifies the stationary coefficient-kernel condition at the delivered wall and strict points, not a new universal five-parameter contact theorem.
+The local opening theorem is conditional on a wall Gram positive definite on ALL FOUR larger support contact complements. A smaller 18-feature certificate or a singular larger-wall Gram does not automatically satisfy that hypothesis. The fixed right inverse avoids exceptional native pivots, while positivity beyond the delivered point follows from the stated norm/continuity argument and requires its mathematical scope review.
+No whole-wall PSD selection, arbitrary strict-source admission H2, C1 admission H1, or unconditional global SDP exactness is established. The local construction does not supply a common radius at singular boundary limits.
+
+ARTIFACTS / PRESERVATION
+results.json: original/proof identities, exact private loop change, runtime, byte comparisons, map/source summary and final preservation checks.
+verify_n0_opening.log: fresh complete targeted stdout/stderr.
+run_targeted_replay.py: exact one-run orchestration.
+verify_bounded_carrier_norm.py, bounded_carrier_norm.log, bounded_carrier_norm_results.json: small additive check.
+private-copy/: isolated executable inputs plus byte-identical regenerated fixed map/results.
+No original file, repository file, Git state or publication was changed. No browser action occurred.

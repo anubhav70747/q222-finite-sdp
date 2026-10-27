@@ -2,7 +2,7 @@
 
 The complete rational **outer SDP** is evaluated. Its unconditional exactness remains open. The reviewed qualitative finite-SDP existence theorem is a separate established input with the V01–V06 dependencies retained. The new result in this update is [exact C2 n=0 wall-to-strict opening](independent-review/C2_N0_OPENING.md), recorded as L19. It closes a conditional local construction task, not universal H2.
 
-This update incorporates upstream through [`e1a9896`](https://github.com/anubhav70747/q222-finite-sdp/commit/e1a98969082c7c3c338c5f86d93f9540e892aaa7), including the source-wide C1 contact-local theorem and the corrected moment-dual target. [Fourteen exact checker runs](reconciliation/2026-10-27/verification/latest_checks.json) passed. These are same-assistant replays of their stated contracts, not a new independent full-proof review.
+This update incorporates upstream through [`e1a9896`](https://github.com/anubhav70747/q222-finite-sdp/commit/e1a98969082c7c3c338c5f86d93f9540e892aaa7), including the source-wide C1 contact-local theorem and the corrected moment-dual target. [Fourteen exact checker runs](reconciliation/2026-10-27/verification/latest_checks.json) passed. These are same-assistant replays of their stated contracts, not a new independent full-proof review. L19 now also has independent [analytical](complete-proof-materials/materials/historical/analysis/c2_n0_opening_analytic_verification_2026_10_27.txt) and [bounded exact](complete-proof-materials/materials/historical/analysis/c2_n0_opening_exact_verification_2026_10_27.txt) reviews of its conditional local theorem.
 
 ## What would complete the current candidate
 
@@ -53,16 +53,18 @@ Delivered: [proof](independent-review/C2_N0_OPENING.md), [standalone SymPy check
 * The unrestricted C1 Z16 target is refuted; oriented Z18 and K364 are not excluded by that counterexample.
 * The selected one-direction C2 scalar completion fails at a strict seed for every real tau. All lower polynomial gauges also fail when its old complete top allocation is frozen. Those are restricted-ansatz failures.
 * The mixed determinant identity represents det(B)F and does not give fixed source-affine admission for F after cancellation.
-* The fractional carrier alone is an ambient PSD polynomial, not a Bell-source cone element. L19 supplies a residual only under its local PD-wall hypothesis.
+* The fractional carrier alone is a positive-quadrant half-power SOS, not a Bell-source cone element. L19 supplies a residual only under its local PD-wall hypothesis.
 * The unweighted global half-power cone fails at an exact strict source, consistently with its proved local coverage.
 * The angular order13 pencil has a quartic source map. It does not replace a source-affine full-state lift.
 
 ## Remaining completion checklist
 
 1. Prove H1 and H2, or state and prove adequate alternative fixed finite orbit coverage. Preserve actual native inequalities, independent tests and all state normals. Universal strict-source coverage includes every strict point arbitrarily near a wall.
-2. Verify the new PSD mechanism and all equality/saturation cases independently. L19 has exact same-assistant checks; an independent mathematical review remains desirable and is not claimed here.
+2. Verify the new PSD mechanism and all equality/saturation cases independently. L19's independent review is complete for its stated all-four-wall-complement PD premise. The remaining universal constructions still require their own proofs and review.
 3. Apply the established reflection/density/closed-sum theorem and conclude equality with the full Bell-validity cone; discharge reverse inclusion for L18.
 4. Integrate the final theorem, domains, formulas and both inclusions into the article and companion. A shorter complete replacement proof remains an additional objective; local results do not replace the imported long native argument.
 5. Rebuild changed manuscript PDFs, reproduce any changed matrices, synchronize the final source/data/Overleaf release and then close L08–L10. No manuscript PDF was changed or rebuilt in this update.
 
 The matrices have 897 PSD blocks of total order51088, 423168 auxiliary scalars and3456 affine equalities. Their size and materialization do not establish admission or computational practicality. The remaining universal positivity statements are substantive research obligations and remain explicitly open.
+
+The latest task3 delivery adds a pointwise verifier, not an admission theorem. Use the [reviewed real-factor variant and its scope](complete-proof-materials/STRICT_SOURCE_REDUCTIONS_UPDATE.md), which rejects the original program's imaginary-factor/negative-weight false positive. The original package remains preserved.

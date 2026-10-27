@@ -1,0 +1,122 @@
+{
+  "upstream_label": "main2dc657f supplied by coordinator",
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "sympy": "1.14.0",
+  "environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONUTF8": "1"
+  },
+  "input_files": [
+    {
+      "file": "verify_n0_opening.py",
+      "bytes": 10983,
+      "sha256": "60819aa239ac7fff8a96ea9abbab4e9976f0eaf7b57a2c1826948a3b8c267986",
+      "original_preserved": true
+    },
+    {
+      "file": "fixed_map.json",
+      "bytes": 65607,
+      "sha256": "f5e7fa4f13a71241c8a50a82fc221f1aab2f029f5c80803b2e06a3152e19aa33",
+      "original_preserved": true
+    },
+    {
+      "file": "seed_wall_proposal.json",
+      "bytes": 2394,
+      "sha256": "28c884a56174a90dd7f370a61e2a83cfe5a9ca6b49962c8c67fff5ebb6028154",
+      "original_preserved": true
+    },
+    {
+      "file": "exact_results.json",
+      "bytes": 14555,
+      "sha256": "f2860831e6379dd4f3db341d76f9c1539e4d70af6af1e5f9d2f01a611b9b6e5c",
+      "original_preserved": true
+    }
+  ],
+  "proof_identity": {
+    "file": "independent-review\\C2_N0_OPENING.md",
+    "bytes": 10563,
+    "sha256": "761aa66324d0332568a83b8cb2bd57d576ae87be85986a8ac63c6b4654581e0f",
+    "original_preserved": true
+  },
+  "private_execution_change": {
+    "reason": "Remove adaptive source-step search; verify only the already materialized source +2^-24.",
+    "exact_replacements": [
+      [
+        "for sign in (-1,1):",
+        "for sign in (1,):"
+      ],
+      [
+        "for power in range(1,90):",
+        "for power in (24,):"
+      ]
+    ],
+    "executed_sha256": "151ede2d8d554a0f76be99108628ee7104e22de38b3497021c06d97add900630",
+    "assert_statements": 28
+  },
+  "replay": {
+    "exit_code": 0,
+    "elapsed_seconds": 1.764215
+  },
+  "output_comparisons": [
+    {
+      "file": "exact_results.json",
+      "byte_identical": true,
+      "newline_normalized_identical": true,
+      "json_semantically_identical": true
+    },
+    {
+      "file": "fixed_map.json",
+      "byte_identical": true,
+      "newline_normalized_identical": true,
+      "json_semantically_identical": true
+    }
+  ],
+  "reported_pass_lines": 5,
+  "derived_summary": {
+    "map_shape": [
+      72,
+      104
+    ],
+    "rank": 66,
+    "pivot_minor": "2^54",
+    "jet_minor": "2",
+    "unweighted_feature_count": 28,
+    "weighted_feature_union_count": 49,
+    "wall_theta_a_b_c_t_r": [
+      "1",
+      "22/13",
+      "1",
+      "2581/2210",
+      "2/5"
+    ],
+    "strict_theta_a_b_c_t_r": [
+      "1",
+      "22/13",
+      "1",
+      "21650998353/18538823680",
+      "2/5"
+    ],
+    "strict_weights_n_m_C_A_D_alpha": [
+      "221/19042140160",
+      "4827182642607/68037564283330",
+      "1559551178549/9829553252262",
+      "4208313073042/11034918968545",
+      "7769193365616/4884307696865",
+      "1165378902652/2001329181651"
+    ],
+    "right_inverse_block_row_bounds": [
+      "141",
+      "0",
+      "0",
+      "0"
+    ],
+    "simple_coefficient_radius": "9/1000000",
+    "strict_step_t": "1/16777216"
+  }
+}
