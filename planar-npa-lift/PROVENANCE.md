@@ -24,7 +24,13 @@ informed exposition only and are not redistributed here.
 
 Source hashes (SHA-256):
 
-- prior-PRL/supplement.tex: d5778e636fb5825e1697f16b8293a518ba8a4a49469c7900a5e36f8500ecb0e8
+- finite-extension/main.tex: d5778e636fb5825e1697f16b8293a518ba8a4a49469c7900a5e36f8500ecb0e8
 - prior-PRL/supplement.tex: f54cc00aa3f2b9fcad44e2377b06c491d03a1b5f0a78bde9b8aa4e7b29aac0e1
 
 The article abstract is a candidate, not an inferred author-approved lock.
+
+The sequel revision of 27 October shortens the article from three to two
+standard RevTeX pages. It cites the preceding NPA result at the strength
+used by the new theorem and develops the determinant comparison as a
+fixed-product arithmetic–geometric mean argument. The complete proof
+companion, exact matrices and checkers are unchanged from main c513f54.

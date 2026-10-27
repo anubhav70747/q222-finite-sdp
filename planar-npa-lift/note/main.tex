@@ -15,13 +15,6 @@
 {\normalsize An exact quantum region in the simplest Bell experiment\par}
 \vspace{13pt}}]
 
-The first NPA level recovers the quantum CHSH bound. Once marginal averages
-are retained, every fixed level misses some quantum bounds. Yet the whole
-two-dimensional region tested by symmetric doubly tilted CHSH has a fixed,
-exact semidefinite representation. The distinction can be seen directly in
-the proofs: equal measurement overlaps determine all its supporting lines,
-while finite NPA certificates must hold for two independently varying angles.
-
 Alice and Bob choose between two measurements with outcomes $\pm1$.
 Write $a_x=\langle A_x\rangle$, $b_y=\langle B_y\rangle$ and
 $E_{xy}=\langle A_xB_y\rangle$. Retain
@@ -31,7 +24,10 @@ $E_{xy}=\langle A_xB_y\rangle$. Retain
 \end{equation}
 Their quantum region $\W=\{(M,S):p\in\Q_{222}\}$ includes all quantum
 behaviors, with no equality imposed on the marginal averages.
-If $\W_L$ denotes its level-$L$ NPA outer approximation, then
+Our preceding Letter~\cite{prior} showed that every finite NPA level
+misses supporting lines of this region. We now give one exact finite
+semidefinite lift of the same region. If $\W_L$ is its level-$L$
+NPA outer approximation, then
 \begin{equation}
  \boxed{\begin{gathered}
  \W\subsetneq\W_L\quad\text{for every finite }L,\\
@@ -55,30 +51,30 @@ $\lambda I-H$, where
  A_1=cZ+\sqrt{1-c^2}X,\quad B_1=dZ+\sqrt{1-d^2}X.
 \end{gathered}
 \]
-Here $A_0=B_0=Z$ and $c,d\in[-1,1]$. Deterministic strategies attain
+Here $A_0=B_0=Z$ and $c,d\in[-1,1]$ are the cosines of the local
+measurement angles. Deterministic strategies attain
 $\ell=2|h|+2|\alpha|$, so $\lambda\geq\ell$ is necessary.
 Above this bound, the first three elementary symmetric functions of
 the eigenvalues of $\lambda I-H$ are nonnegative. Its determinant
-therefore decides positivity.
+therefore decides positivity: if it too is nonnegative, the characteristic
+polynomial of $H-\lambda I$ has nonnegative coefficients and hence
+no positive root.
 
-Put $x=(1-c)/2$, $y=(1-d)/2$, and let
-$D(x,y)=\det(\lambda I-H)$. The decisive identity is
+Put $x=(1-c)/2$, $y=(1-d)/2$, and write
+$D(x,y)=\det(\lambda I-H)$. The determinant takes the form
 \begin{equation}
-\begin{split}
- D(x,y)-D(\sqrt{xy},\sqrt{xy})
- ={}&64h^2(4h^2-\alpha^2)xy\\
- &{}\times(\sqrt x-\sqrt y)^2 .
-\end{split}
-\label{eq:key}
+ D(x,y)=F(xy)+64h^2(4h^2-\alpha^2)xy(x+y),
+ \label{eq:key}
 \end{equation}
-In the nonclassical range $|\alpha|\leq|h|$, replacing the two overlaps
-by equal ones preserves $xy$ and can only decrease the determinant.
-Thus positivity at equal overlaps implies positivity at every pair.
+where $F$ depends on the product alone.
+In the nonclassical range $|\alpha|\leq|h|$, the coefficient of $x+y$
+is nonnegative. At fixed product, $x+y\geq2\sqrt{xy}$, with equality
+at $x=y=\sqrt{xy}$. Thus equal overlaps minimize the determinant;
+positivity there implies positivity for every pair.
 For $|\alpha|\geq|h|$, the quantum support is the deterministic value
 $\ell$: average the two signed one-sided tilted-CHSH bounds and add
 the remaining marginal slack. Equal overlaps attain this value too.
-Hence they suffice for \emph{every} support direction. Symmetry of the
-functional alone would not give this conclusion.
+Hence they suffice for \emph{every} support direction.
 
 At equal overlaps $c=d$, the singlet decouples. In the remaining
 three-dimensional block, set $c=(1-t^2)/(1+t^2)$ and multiply the slack
@@ -111,14 +107,15 @@ what will give one lift for the whole region.
 A PSD real univariate matrix polynomial is a polynomial matrix sum
 of squares, including on its singular boundary~\cite{hs}.
 For a quartic, the factors have degree at most two.
-The parity of Eq.~\eqref{eq:K} splits the nine quadratic features into
+For $\xi\in\mathbb R^3$, the parity of Eq.~\eqref{eq:K} splits the nine
+quadratic features into
 \[
 \begin{aligned}
  Z_+&=(\xi_1,\xi_2,t\xi_3,t^2\xi_1,t^2\xi_2)^T,\\
  Z_-&=(\xi_3,t\xi_1,t\xi_2,t^2\xi_3)^T .
 \end{aligned}
 \]
-Consequently Eq.~\eqref{eq:support} is equivalent to
+Consequently Eq.~\eqref{eq:support} is equivalent to the polynomial identity
 \begin{equation}
  \begin{gathered}
  \xi^TK(t)\xi=Z_+^TGZ_++Z_-^TJZ_-,\\
@@ -127,77 +124,57 @@ Consequently Eq.~\eqref{eq:support} is equivalent to
  \label{eq:gram}
 \end{equation}
 with $G$ of order five and $J$ of order four. Matching coefficients
-gives sixteen affine equations. There is no remaining angle
-optimization.
+gives sixteen affine equations.
 
-Dualizing these equations gives an exact membership test with the
-same two block orders, sixteen auxiliary variables, and three affine
-equations for normalization, $M$ and $S$. The explicit matrices are
-given in the accompanying complete proofs.
-\newpage
-A positive definite Gram
-pair at $(\lambda,\alpha,h)=(1,0,0)$ supplies strict feasibility;
-its weighted-trace normalization bounds every dual variable. The
-dual image is therefore closed and attains every boundary point.
-Since its supporting half-spaces are exactly Eq.~\eqref{eq:support},
-it equals $\W$.
-
-\emph{Why finite NPA depth still fails.}
-For the same region, let
-\[
- \begin{gathered}
- \omega_{\rm Q}(\alpha)=\max_{\W}(S+\alpha M),\\
- \Delta_\alpha=\omega_{\rm Q}(\alpha)-(2+2\alpha).
- \end{gathered}
-\]
-The nontermination proof~\cite{prior} gives, with $T=1-\alpha$,
+Dualizing gives the membership lift
 \begin{equation}
-\begin{gathered}
- \Delta_{1-T}=\tfrac43T^3+O(T^4),\\
- \frac{\omega_{\rm NPA}^{(L)}(1-T)-\omega_{\rm Q}(1-T)}
- {\Delta_{1-T}}\longrightarrow+\infty
- \qquad(T\downarrow0)
-\end{gathered}
-\label{eq:npa}
+ \begin{split}
+ \W=\{&(m(z),s(z)):z\in\mathbb R^{16},\\
+       &\ell(z)=1,\ U(z),V(z)\succeq0\}.
+ \end{split}
+ \label{eq:membership}
 \end{equation}
-for each fixed finite $L$.
+The matrices $U,V$ are the adjoints of the coefficient map, of orders
+five and four; $\ell,m,s$ are its linear coordinate maps. Their rational
+entries are given in the complete proofs.
 
-The obstruction survives in the two independent measurement angles.
-Set $T=t^2$, use angles $tu,tv$, and the normalized version of
+This lift attains the boundary. The positive definite Gram pair
 \[
- \xi_t=(1,t^3u^2v/12,t^3uv^2/12,-t^2uv/4)^T .
+ G_0=\operatorname{diag}(1,1,2,1,1),\quad
+ J_0=\operatorname{diag}(1,2,2,1)
 \]
-The gap between the quantum bound and this strategy, divided by
-$\Delta_{1-t^2}$, tends to $\mathcal M(u/2,v/2)$, where
-\[
- {\cal M}(U,V)=1+U^4V^2+U^2V^4-3U^2V^2.
-\]
-A bounded ratio in Eq.~\eqref{eq:npa} would make the fixed-level
-NPA square factors converge, after rescaling, to polynomial squares
-representing $\mathcal M+c$ for some $c\geq0$.
-The fixed word length and bounded Gram trace control their Taylor
-remainders; bounded polynomial values then control their coefficients.
-These compactness steps are proved in full in the companion.
+represents $(\lambda,\alpha,h)=(1,0,0)$ and supplies strict feasibility.
+The normalization is
+$\operatorname{tr}(U(z)G_0)+\operatorname{tr}(V(z)J_0)=1$,
+which bounds the PSD matrices and every auxiliary variable.
+The normalized dual image is compact and has exactly the support
+values in Eq.~\eqref{eq:support}. It therefore equals $\W$, including
+its boundary.
 
-The contradiction itself takes one line of coefficients.
-Each square factor has degree at most three and is constant on both
-axes, hence has the form $a+bUV+dU^2V+eUV^2$.
-The coefficient of $U^2V^2$ in a sum of such squares is $\sum b^2$;
-in $\mathcal M+c$ it is $-3$.
-
-Equal overlaps thus determine the support values, while an NPA
-certificate must represent the bound for independently chosen
-measurement angles. The univariate squares in Eq.~\eqref{eq:gram}
-are obtained after the support reduction. They need not be identities
-in a fixed list of observable words.
+\emph{Why the NPA obstruction remains.}
+Equal overlaps determine support values; a finite NPA certificate
+must represent the bound for independently chosen measurement angles.
+The earlier nontermination proof~\cite{prior} uses this freedom:
+near the local threshold, an NPA error bounded by a constant times
+the quantum violation above the local bound would force a shifted
+Motzkin polynomial to be a sum of polynomial squares.
+The univariate squares in Eq.~\eqref{eq:gram} arise after the support
+minimization and need not be identities in a fixed list of observable
+words. The complete earlier argument is retained in the companion.
 
 \emph{Minimal block order and thirty-two exact projections.}
-The set $\W$ is closed, convex and semialgebraic, so Scheiderer's
-planar theorem gives $\sxdeg(\W)\leq2$~\cite{soc}.
-The cubic term in Eq.~\eqref{eq:npa} excludes a polygon: a polygon's
-support would be affine sufficiently close to $\alpha=1$.
-Thus $\sxdeg(\W)=2$. The blocks $5,4$ give the explicit construction;
-the planar theorem gives the optimal order.
+For $f(\alpha)=\max_\W(S+\alpha M)$, the exact quantum bound has
+the expansion~\cite{prior}
+\begin{equation}
+ f(1-T)=4-2T+\tfrac43T^3+O(T^4),\qquad T\downarrow0 .
+ \label{eq:cubic}
+\end{equation}
+A polygon would have affine support sufficiently close to $\alpha=1$,
+contrary to Eq.~\eqref{eq:cubic}. Thus $\W$ is nonpolyhedral.
+It is also closed, convex and semialgebraic, so Scheiderer's planar
+theorem gives $\sxdeg(\W)\leq2$~\cite{soc}.
+Order-one lifts are polyhedral, hence $\sxdeg(\W)=2$.
+The blocks $5,4$ are explicit; the optimal-order lift is existential.
 
 Physical input and output relabellings give the same quantum region for
 \[
@@ -207,12 +184,11 @@ Physical input and output relabellings give the same quantum region for
 The eight CHSH sign patterns and four selected input pairs give
 32 distinct planes. Intersecting their fixed lifts with any NPA
 relaxation makes every support value on these planes exact, including
-all the directions in Eq.~\eqref{eq:npa}.
+all the directions responsible for finite-level nontermination.
 
 \begin{thebibliography}{3}\setlength{\itemsep}{0pt}
 \bibitem{prior} A. Chaturvedi, \emph{No Finite NPA Level Characterizes
-the Complete Quantum Set in the Simplest Bell Scenario}, project
-manuscript (September 2026). Its complete nontermination proof is
+the Complete Quantum Set in the Simplest Bell Scenario}, manuscript (2026). Its complete nontermination proof is
 reproduced in the companion, Part II.
 \bibitem{hs} C. Hanselka and R. Sinn, \emph{Math. Z.} \textbf{292},
 83--101 (2019), Corollary 2.8;

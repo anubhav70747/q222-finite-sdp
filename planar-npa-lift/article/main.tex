@@ -1,5 +1,5 @@
 \documentclass[aps,prl,reprint,superscriptaddress,nofootinbib,longbibliography]{revtex4-2}
-\usepackage{amsmath,amssymb,amsthm,mathtools,bm,microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools,microtype}
 \usepackage[hidelinks]{hyperref}
 \newcommand{\Q}{\mathcal Q}\newcommand{\W}{\mathcal W}
 \newcommand{\sxdeg}{\operatorname{sxdeg}}
@@ -8,138 +8,125 @@
 \title{Infinite NPA depth at minimal semidefinite complexity}
 \author{Anubhav Chaturvedi}
 \affiliation{Division of Quantum Optics and Information, Institute of Theoretical Physics and Astrophysics, Faculty of Mathematics, Physics and Informatics, University of Gda\'nsk, 80-308 Gda\'nsk, Poland}
-\date{\today}
+\date{27 October 2026}
 \begin{abstract}
-The Navascu\'es--Pironio--Ac\'in hierarchy approaches quantum correlations through increasingly large semidefinite programs. We construct a quantum region that admits one fixed semidefinite lift although every finite hierarchy level fails to describe it. The region records the CHSH value and the sum of two marginal averages, so its supporting lines include the symmetric doubly tilted CHSH family. Equal measurement overlaps suffice for every supporting inequality: a determinant comparison handles the nonclassical directions, and the remaining bounds are local. The resulting univariate quartic matrix depends affinely on the inequality coefficients and yields an explicit lift with blocks of orders five and four. Independently varying the two measurement angles produces a shifted Motzkin polynomial that obstructs every fixed NPA level near the local threshold. The region has semidefinite extension degree two, the smallest possible for a nonpolyhedral set. Physical relabellings give thirty-two exact projections that can be added to any NPA relaxation.
+The quantum region of the CHSH value and the sum of two marginal averages
+is not recovered by any finite level of the Navascu\'es--Pironio--Ac\'in
+hierarchy. We give an exact finite semidefinite lift of this same region.
+The proof reduces every supporting inequality to equal measurement
+overlaps. At fixed product of the overlap parameters, the determinant
+is affine in their sum. In the nonclassical range the coefficient is
+nonnegative, so equal overlaps minimize it; the remaining bounds are
+local. The resulting univariate quartic
+matrix depends affinely on the supporting inequality and gives an
+explicit lift with blocks of orders five and four. The region has
+semidefinite extension degree two, the smallest possible for a
+nonpolyhedral set. Thus the family that requires unbounded NPA depth
+has a finite representation of minimal semidefinite block order.
 \end{abstract}
 \maketitle
 
-Bell experiments ask which correlations can arise from local measurements
-on a shared quantum state. The Navascu\'es--Pironio--Ac\'in (NPA)
-hierarchy~\cite{NPA2007,NPA2008} answers through semidefinite outer
-approximations: increasing the list of observable words gives
-progressively stronger consistency conditions. The first level already
-recovers the quantum CHSH bound~\cite{CHSH,Tsirelson}. Retaining marginal
-averages changes the situation. Along the symmetric doubly tilted CHSH
-family, every fixed level overestimates quantum bounds arbitrarily close
-to the local threshold~\cite{prior}.
-
-Does this unbounded depth reflect an intrinsically complicated quantum
-region? We answer by constructing a fixed semidefinite representation
-of the entire two-dimensional region probed by that family.
-Its boundary includes all the directions responsible for NPA
-nontermination. Moreover, a general planar theorem implies that this
-region has the smallest possible semidefinite block order for a
-nonpolyhedral set.
-
-The construction turns on a reduction that preserves every support
-value. A Bell operator initially depends on two independent measurement
-overlaps. In the nonclassical range, its determinant is minimized at
-fixed overlap product when the overlaps coincide. The remaining bounds
-are attained by equal-overlap deterministic strategies. Thus every
-supporting inequality can be decided with one variable. Positivity of a univariate
-matrix polynomial then has a finite sum-of-squares representation.
-The NPA obstruction retains both independent variables because its
-operator certificates must hold before this support reduction.
-
-\emph{The observed region.}---Alice and Bob each choose one of two
-measurements with outcomes $\pm1$. Write
-$a_x=\langle A_x\rangle$, $b_y=\langle B_y\rangle$ and
-$E_{xy}=\langle A_xB_y\rangle$, and retain
+Alice and Bob each choose between two measurements with outcomes $\pm1$.
+Their marginal averages are $a_x=\langle A_x\rangle$ and
+$b_y=\langle B_y\rangle$, and their correlators are
+$E_{xy}=\langle A_xB_y\rangle$. Retain two observed numbers:
 \begin{equation}
  M=a_0+b_0,\qquad S=E_{00}+E_{01}+E_{10}-E_{11}.
  \label{eq:observed}
 \end{equation}
-Let $\Q_{222}$ be the quantum set in this scenario. The projection
-\begin{equation}
- \W=\{(M,S):p\in\Q_{222}\}
- \label{eq:W}
-\end{equation}
-is compact and convex. It includes all quantum behaviors; equal
-marginals are not assumed. Denote by $\W_L$ the same projection of the
-standard level-$L$ NPA relaxation.
+The second is the CHSH value~\cite{CHSH}. Let $\W$ be the set of
+pairs $(M,S)$ obtainable in quantum theory. All quantum correlations
+are allowed, including those with unequal marginal averages.
+
+In our preceding Letter~\cite{prior}, we showed that no fixed level
+of the Navascu\'es--Pironio--Ac\'in (NPA) hierarchy~\cite{NPA2007,NPA2008}
+recovers this region. For every finite level, symmetric doubly tilted
+inequalities $S+\alpha M\leq\omega_{\rm Q}(\alpha)$ are overestimated
+sufficiently close to the local threshold $\alpha=1$.
+We now construct one exact finite semidefinite representation of
+the entire region $\W$.
 
 \begin{theorem}
-The quantum region $\W$ has an exact affine semidefinite lift with
-positive semidefinite blocks of orders five and four and sixteen
-auxiliary variables. It satisfies
+The compact convex quantum region $\W$ has an affine semidefinite
+lift with blocks of orders five and four and sixteen auxiliary variables.
+If $\W_L$ is its level-$L$ NPA outer approximation, then
 \begin{equation}
- \W\subsetneq\W_L\quad\text{for every fixed finite }L,
+ \W\subsetneq\W_L\quad\text{for every finite }L,
  \qquad \sxdeg(\W)=2 .
  \label{eq:theorem}
 \end{equation}
 \end{theorem}
-Here $\sxdeg$ is the smallest possible largest block order among
-finite semidefinite lifts. We first construct the explicit lift,
-then connect it to the NPA obstruction. The optimal-order statement
-follows at the end. Complete proofs and membership matrices are
-provided in the Supplemental Material~\cite{SM}.
+A semidefinite lift describes a set by affine constraints and positive
+semidefinite (PSD) matrices in its observed and auxiliary coordinates.
+The extension degree $\sxdeg$ is the smallest possible largest
+block order among such finite lifts. We construct the explicit
+$5,4$ lift below; the optimal order two follows from a planar
+representation theorem.
 
-\emph{Equal overlaps determine all supporting lines.}---A pair
-$(M,S)$ is determined by the inequalities
-$hS+\alpha M\leq\lambda$ valid on $\W$, where $h,\alpha\in\mathbb R$.
-Jordan's lemma reduces their validity to real two-qubit Bell operators
+\emph{Two measurement angles, one determinant.}---A compact convex
+region is the intersection of its supporting half-planes.
+It therefore suffices to decide, for every real $h,\alpha,\lambda$,
+whether
 \begin{equation}
- H=h\,\mathrm{CHSH}+\alpha(Z\otimes I+I\otimes Z),
- \label{eq:H}
+ hS+\alpha M\leq\lambda\qquad\text{throughout }\W .
+ \label{eq:supportquestion}
 \end{equation}
-with $A_0=B_0=Z$ and
-\[
+For fixed measurements this is equivalent to positivity of
+$\lambda I-H$, where $H=h\,\mathrm{CHSH}+\alpha(A_0+B_0)$:
+its expectation in any state is the slack in
+Eq.~\eqref{eq:supportquestion}. Jordan's lemma reduces the
+measurements to two-qubit blocks. Choosing local axes gives
+$A_0=B_0=Z$ and
+\begin{equation}
  A_1=cZ+\sqrt{1-c^2}X,\quad
- B_1=dZ+\sqrt{1-d^2}X.
-\]
-Here $c,d\in[-1,1]$; one-dimensional blocks are included at the endpoints.
-Deterministic assignments attain
-\begin{equation}
- \ell=2|h|+2|\alpha|,
- \label{eq:local}
+ B_1=dZ+\sqrt{1-d^2}X .
+ \label{eq:angles}
 \end{equation}
-so a valid bound necessarily has $\lambda\geq\ell$.
+Here $c,d\in[-1,1]$ are the cosines of the two local measurement
+angles. Deterministic strategies attain
+$\ell=2|h|+2|\alpha|$, so $\lambda\geq\ell$ is necessary.
 
-On this range, the first three elementary symmetric functions of
-the eigenvalues of $\lambda I-H$ are nonnegative~\cite{SM}.
-The determinant therefore decides positivity. Indeed, if the
-determinant is also nonnegative, the polynomial
-$\det(rI+\lambda I-H)$ has nonnegative coefficients and cannot have
-a positive root; a negative eigenvalue would supply such a root.
+Above this local bound, the first three elementary symmetric
+functions of the eigenvalues of $\lambda I-H$ are nonnegative.
+Thus its determinant decides positivity~\cite{SM}. Indeed, if the
+determinant is also nonnegative, $\det(rI+\lambda I-H)$ has
+nonnegative coefficients and no positive root; a negative eigenvalue
+would give such a root.
 
-Set $x=(1-c)/2$, $y=(1-d)/2$ and
-$D(x,y)=\det(\lambda I-H)$. Direct expansion gives
+Put $x=(1-c)/2$ and $y=(1-d)/2$. The determinant has the form
 \begin{equation}
-\begin{split}
- D(x,y)-D(\sqrt{xy},\sqrt{xy})
- ={}&64h^2(4h^2-\alpha^2)xy\\
- &{}\times(\sqrt{x}-\sqrt{y})^2 .
-\end{split}
+ D(x,y)=F(xy)+64h^2(4h^2-\alpha^2)xy(x+y),
  \label{eq:det}
 \end{equation}
-For $|\alpha|\leq|h|$, the right-hand side is nonnegative.
-Every pair of overlaps can thus be replaced by equal overlaps,
-at the same $xy$, without increasing the determinant.
-Checking all equal-overlap slacks proves the bound for every
-measurement pair. This comparison is the reason the symmetric
-optimization reduces to one angle.
+where $F$ is a polynomial in the product alone.
+For $|\alpha|\leq|h|$, the coefficient of $x+y$ is nonnegative.
+At fixed product, $x+y\geq2\sqrt{xy}$, with equality at
+$x=y=\sqrt{xy}$. Hence
+\[
+ D(x,y)\geq D(\sqrt{xy},\sqrt{xy}).
+\]
+Positivity at equal overlaps therefore implies positivity at
+every pair of overlaps. This elementary minimization removes one
+measurement angle.
 
-The remaining directions have support $\ell$. To see this,
-the one-sided tilted-CHSH inequality
-$\mathrm{CHSH}+2A_0\leq4I$ follows from a sum of squares~\cite{SM}.
-Party exchange and output flips give either marginal and either
-sign of CHSH. Average the two appropriate inequalities, multiply
-by $|h|$, and add the marginal slack of weight $|\alpha|-|h|$.
-For $|\alpha|\geq|h|$ this proves $H\leq\ell I$.
-Equal-overlap deterministic strategies attain $\ell$.
-Thus the reduction covers all real support coefficients, including
-zero coefficients and the critical line.
+The other directions, $|\alpha|\geq|h|$, have quantum support
+$\ell$. The one-sided bounds
+$\pm\mathrm{CHSH}+2\tau A_0\leq4I$ and
+$\pm\mathrm{CHSH}+2\tau B_0\leq4I$, $\tau=\pm1$, follow from the
+critical tilted-CHSH sum of squares~\cite{SM}.
+Average the two with the required signs, multiply by $|h|$ and
+add the marginal slack of weight $|\alpha|-|h|$.
+This proves $H\leq\ell I$, attained by equal-overlap deterministic
+strategies. Equal overlaps thus decide \emph{all} supporting lines.
 
-\emph{The finite lift.}---When $c=d$, the singlet decouples with
-eigenvalue $-2hc$. The other three Bell states carry a real
-$3\times3$ block. Parametrize
-$c=(1-t^2)/(1+t^2)$ and multiply its slack by $(1+t^2)^2$.
-Writing
+\emph{One angle, one finite lift.}---At $c=d$, the singlet decouples
+with eigenvalue $-2hc$. On the remaining three Bell states, set
+$c=(1-t^2)/(1+t^2)$ and multiply the slack by $(1+t^2)^2$.
+With
 \[
  p_0=(1+t^2)^2,\qquad p_1=1-t^4,\qquad p_2=1+4t^2-t^4,
 \]
-gives
+the resulting quartic matrix is
 \begin{equation}
  K(t)=
  \begin{pmatrix}
@@ -149,44 +136,42 @@ gives
  \end{pmatrix}.
  \label{eq:K}
 \end{equation}
-Positivity at $t=0$ and of the leading coefficient implies
-$\lambda\geq\ell$, which also bounds the singlet.
-The endpoint $c=-1$ follows by continuity. Negative $t$ adds no
-condition since $K(-t)=RK(t)R$, with $R=\operatorname{diag}(1,1,-1)$.
-We obtain
+Its value at zero and its leading coefficient force
+$\lambda\geq\ell$, which also controls the singlet.
+The endpoint $c=-1$ follows by continuity, and the parity
+$K(-t)=RK(t)R$, $R=\operatorname{diag}(1,1,-1)$,
+allows all real $t$. Consequently
 \begin{equation}
- \max_{(M,S)\in\W}(hS+\alpha M)\leq\lambda
+ \max_{\W}(hS+\alpha M)\leq\lambda
  \quad\Longleftrightarrow\quad
  K(t)\succeq0\quad\forall t\in\mathbb R .
  \label{eq:equiv}
 \end{equation}
 
-Every PSD real univariate matrix polynomial is a polynomial matrix
-sum of squares, including identically singular
-polynomials~\cite{HanselkaSinn}. Since $K$ is quartic, its factors
-have degree at most two: the highest-degree real squares cannot
-cancel. Averaging a Gram representation under $t\mapsto-t$ and $R$
-splits it into two parity blocks. For $\xi\in\mathbb R^3$, use
+A PSD real univariate matrix polynomial is a polynomial matrix
+sum of squares, including when singular~\cite{HanselkaSinn}.
+For a quartic, every factor has degree at most two, since leading
+real squares cannot cancel. For $\xi\in\mathbb R^3$, the parity of $K$
+splits the quadratic features into
 \begin{equation}
 \begin{aligned}
  Z_+&=(\xi_1,\xi_2,t\xi_3,t^2\xi_1,t^2\xi_2)^T,\\
  Z_-&=(\xi_3,t\xi_1,t\xi_2,t^2\xi_3)^T .
 \end{aligned}
-\label{eq:features}
+ \label{eq:features}
 \end{equation}
-Equation~\eqref{eq:equiv} is then equivalent to
+Thus Eq.~\eqref{eq:equiv} is equivalent to the polynomial identity
 \begin{equation}
  \xi^TK(t)\xi=Z_+^TGZ_++Z_-^TJZ_-,
  \qquad G\succeq0,\quad J\succeq0 .
  \label{eq:sos}
 \end{equation}
-The blocks have orders five and four. Coefficient matching gives
-sixteen affine equations in $(G,J,\lambda,\alpha,h)$.
+The blocks have orders five and four. Matching coefficients
+eliminates $t$ and gives sixteen affine equations.
 
-The affine dependence on \emph{all} support coefficients is essential:
-these equations describe the complete cone of valid inequalities
-of $\W$. Their dual supplies a single membership lift, with two
-PSD matrices $U(z),V(z)$ and three affine equations
+Since $K$ is affine in \emph{all} support coefficients, these equations
+describe the whole cone of valid inequalities. Semidefinite duality
+therefore gives a single membership lift:
 \begin{equation}
  \W=\left\{(M,S):
  \begin{array}{l}
@@ -195,141 +180,79 @@ PSD matrices $U(z),V(z)$ and three affine equations
  \end{array}\right\}.
  \label{eq:membership}
 \end{equation}
-All entries are rational and listed in the Supplemental Material.
-Exact boundary membership follows from two elementary facts.
-The Gram pair
+Here $U,V$ are the adjoints of the coefficient map, and $\ell,m,s$
+are the corresponding linear coordinate maps; all their rational
+entries are given in the Supplemental Material~\cite{SM}.
+
+The lift also attains the boundary. The Gram pair
 \[
  G_0=\operatorname{diag}(1,1,2,1,1),\qquad
  J_0=\operatorname{diag}(1,2,2,1)
 \]
-represents $(\lambda,\alpha,h)=(1,0,0)$ and is positive definite.
-It supplies strict feasibility, while
-$\ell(z)=\operatorname{tr}(U(z)G_0)+\operatorname{tr}(V(z)J_0)$
-bounds every dual variable on the normalized section.
-The dual image is compact there. Conic duality and
-Eq.~\eqref{eq:equiv} therefore prove both inclusions in
-Eq.~\eqref{eq:membership}, with attained auxiliary variables.
+is positive definite and represents $(\lambda,\alpha,h)=(1,0,0)$.
+It supplies strict feasibility. Moreover, the normalization is
+$\operatorname{tr}(U(z)G_0)+\operatorname{tr}(V(z)J_0)=1$,
+which bounds both PSD matrices and every auxiliary variable.
+The normalized dual image is compact, and its supporting half-planes
+are exactly Eq.~\eqref{eq:equiv}. This proves equality in
+Eq.~\eqref{eq:membership}, including boundary points.
 
-\emph{The two-angle obstruction to finite NPA depth.}---For
-$0\leq\alpha<1$, define the symmetric doubly tilted support
-\[
- \omega_{\rm Q}(\alpha)=\max_{\W}(S+\alpha M),\qquad
- \Delta_\alpha=\omega_{\rm Q}(\alpha)-(2+2\alpha).
-\]
-The exact quantum bound and optimal measurements were obtained in
-Ref.~\cite{GigenaEtAl2025}. Near the local threshold, $T=1-\alpha$
-gives~\cite{prior,SM}
+\emph{What the NPA obstruction measures.}---Equal overlaps determine
+the support values, whereas a finite NPA certificate must represent
+the bound for independently chosen measurement angles.
+The preceding proof of nontermination uses precisely that
+two-variable freedom: near the local threshold, an NPA error bounded
+by a constant times the quantum violation above the local bound
+would force a shifted Motzkin polynomial to be a sum of
+polynomial squares~\cite{prior}. The univariate squares in
+Eq.~\eqref{eq:sos} arise \emph{after} the support minimization and
+need not be identities in a fixed list of observable words.
+The full earlier argument is included in the companion proofs.
+
+The optimal block order follows from the same boundary.
+For $f(\alpha)=\max_\W(S+\alpha M)$, the exact quantum
+bound~\cite{GigenaEtAl2025} has the expansion~\cite{prior}
 \begin{equation}
- \Delta_{1-T}=\frac43T^3+O(T^4).
+ f(1-T)=4-2T+\tfrac43T^3+O(T^4),\qquad T\downarrow0 .
  \label{eq:cubic}
 \end{equation}
-The NPA nontermination theorem states that, for every fixed finite $L$,
-\begin{equation}
- \frac{\omega_{\rm NPA}^{(L)}(1-T)-\omega_{\rm Q}(1-T)}
- {\Delta_{1-T}}\longrightarrow+\infty
- \qquad(T\downarrow0).
- \label{eq:divergence}
-\end{equation}
-It concerns this very projection, so it implies the strict inclusion
-in Eq.~\eqref{eq:theorem}.
-Each fixed level's excess dominates the vanishing quantum advantage
-above the local bound.
+A polygon would have affine support for $\alpha$ sufficiently close
+to one, contrary to Eq.~\eqref{eq:cubic}.
+Thus $\W$ is nonpolyhedral. It is also closed, convex and semialgebraic
+by Eq.~\eqref{eq:membership}; Scheiderer's planar
+theorem~\cite{Scheiderer} gives $\sxdeg(\W)\leq2$.
+Order-one lifts are polyhedral, so $\sxdeg(\W)=2$.
+The optimal-order representation is existential; the blocks $5,4$
+above are explicit.
 
-The proof identifies what remains difficult for NPA after the support
-values have become univariate. Let $T=t^2$, keep $A_0=B_0=Z$, and
-take the two other measurement angles independently as $tu,tv$.
-Use the normalized version of
-\begin{equation}
- \xi_t=(1,\ t^3u^2v/12,\ t^3uv^2/12,\ -t^2uv/4)^T .
- \label{eq:state}
-\end{equation}
-The gap between $\omega_{\rm Q}(1-t^2)$ and the value of this strategy,
-divided by $\Delta_{1-t^2}$, converges locally uniformly to
-\begin{equation}
- \mathcal M(u/2,v/2),\qquad
- \mathcal M(U,V)=1+U^4V^2+U^2V^4-3U^2V^2 .
- \label{eq:motzkin}
-\end{equation}
-This is the Motzkin polynomial.
-
-Suppose the ratio in Eq.~\eqref{eq:divergence} stayed bounded along
-a sequence. At a fixed NPA level, an optimal dual certificate is a
-sum of squares in a fixed finite list of observable words.
-A trace bound controls its Gram coefficients. Evaluate the square
-factors on Eq.~\eqref{eq:state}, divide by $t^3$, and expand through
-third order. The fixed word length gives a uniformly vanishing
-Taylor remainder. Bounded sums of squared values then bound the
-coefficients of these degree-three polynomials.
-A convergent subsequence would give a polynomial sum of squares for
-$\mathcal M+c$, with $c\geq0$.
-
-Such squares cannot exist. Every factor has degree at most three;
-restriction to either axis makes it constant on that axis. It
-therefore has the form $a+bUV+dU^2V+eUV^2$.
-The coefficient of $U^2V^2$ in the sum of squares is $\sum b^2\geq0$,
-contradicting the coefficient $-3$ in $\mathcal M+c$.
-The Supplemental Material supplies the trace, remainder and
-coefficient bounds and handles arbitrary fixed finite word lists.
-
-There is no conflict with Eq.~\eqref{eq:sos}. Equal overlaps determine
-the quantum support values, whereas a finite NPA certificate must
-represent the bound simultaneously for independently chosen
-measurement angles. The polynomial squares obtained after
-Eq.~\eqref{eq:det} need not be fixed-word operator identities.
-
-\emph{Minimal block order and exact additions to NPA.}---Equation
-\eqref{eq:membership} makes $\W$ a closed convex semialgebraic
-subset of the plane. Scheiderer's theorem~\cite{Scheiderer} therefore
-gives $\sxdeg(\W)\leq2$. It cannot be one, since order-one lifts
-are polyhedral. Indeed, a polygon would have an affine support
-function for $\alpha$ sufficiently close to one. Its limiting value
-and slope would force the line $2+2\alpha$, contradicting the positive
-cubic term in Eq.~\eqref{eq:cubic}. Thus $\sxdeg(\W)=2$.
-This optimal-order conclusion is existential; Eqs.~\eqref{eq:sos}
-and \eqref{eq:membership} provide the explicit blocks $5,4$.
-
-The construction also gives exact information about many other
-projections of the full quantum set. For each CHSH sign pattern
-$\chi\in\{\pm1\}^{2\times2}$ with $\prod_{ij}\chi_{ij}=-1$, and each
-selected pair $(x,y)$, define
+Finally, physical relabellings give the same quantum image $\W$ for
 \begin{equation}
  \pi_{\chi,xy}(p)=
  \left(a_x+\chi_{xy}b_y,\ \sum_{ij}\chi_{ij}E_{ij}\right).
  \label{eq:32}
 \end{equation}
-Physical relabellings show that each image
-$\pi_{\chi,xy}(\Q_{222})$ is exactly $\W$.
-The eight patterns and four selected pairs give 32 distinct planes.
-Consequently
-\begin{equation}
- \mathcal R_L=\Q_L\cap
- \bigcap_{\chi,x,y}\pi_{\chi,xy}^{-1}(\W)
- \label{eq:hybrid}
-\end{equation}
-retains every quantum behavior and has exact quantum support on
-all these planes. It strictly strengthens each finite NPA relaxation.
-The accompanying rational data implement the 32 added lifts without
-any angle discretization.
+Here $\prod_{ij}\chi_{ij}=-1$. The eight CHSH sign patterns and four selected input pairs give
+32 distinct planes. Intersecting any NPA relaxation with
+$\pi_{\chi,xy}^{-1}(\W)$ for all of them retains every quantum
+correlation and gives exact support on all 32 planes.
+In particular, it resolves the entire family responsible for
+finite-level nontermination.
 
-\begin{thebibliography}{10}
+\begin{thebibliography}{9}
+\bibitem{CHSH} J. F. Clauser, M. A. Horne, A. Shimony, and R. A. Holt,
+Proposed experiment to test local hidden-variable theories,
+Phys. Rev. Lett. \textbf{23}, 880 (1969).
+\bibitem{prior} A. Chaturvedi, \emph{No Finite NPA Level Characterizes
+the Complete Quantum Set in the Simplest Bell Scenario}, manuscript (2026).
 \bibitem{NPA2007} M. Navascu\'es, S. Pironio, and A. Ac\'in,
 Bounding the set of quantum correlations, Phys. Rev. Lett.
 \textbf{98}, 010401 (2007).
 \bibitem{NPA2008} M. Navascu\'es, S. Pironio, and A. Ac\'in,
 A convergent hierarchy of semidefinite programs characterizing the set
 of quantum correlations, New J. Phys. \textbf{10}, 073013 (2008).
-\bibitem{CHSH} J. F. Clauser, M. A. Horne, A. Shimony, and R. A. Holt,
-Proposed experiment to test local hidden-variable theories,
-Phys. Rev. Lett. \textbf{23}, 880 (1969).
-\bibitem{Tsirelson} B. S. Cirel'son, Quantum generalizations of Bell's
-inequality, Lett. Math. Phys. \textbf{4}, 93 (1980).
-\bibitem{prior} A. Chaturvedi, \emph{No Finite NPA Level Characterizes
-the Complete Quantum Set in the Simplest Bell Scenario}, project
-manuscript, September 2026. The complete nontermination argument
-is reproduced in Part II of the Supplemental Material.
 \bibitem{SM} See the accompanying Supplemental Material for the complete
-finite-lift and NPA proofs, all signed asymmetric support branches,
-and the physical relabelling construction.
+finite-lift proof, explicit membership matrices, all signed asymmetric
+support branches, physical relabellings and the full earlier NPA proof.
 \bibitem{HanselkaSinn} C. Hanselka and R. Sinn,
 Positive semidefinite univariate matrix polynomials,
 Math. Z. \textbf{292}, 83--101 (2019), Corollary 2.8.

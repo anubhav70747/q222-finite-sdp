@@ -1,27 +1,30 @@
 # Article flow
 
-The same observed region poses both questions. Measure the CHSH value and
-the sum of two marginal averages. A finite NPA level misses some of its
-supporting lines, while one fixed semidefinite lift describes all of it.
+Start with the two observed numbers: the CHSH value and the sum of two
+marginal averages. The preceding NPA Letter proves that no finite level
+recovers their quantum region. This sequel constructs one exact finite lift.
 
-To find the region, decide every supporting inequality. The local bound
-makes the first three characteristic coefficients nonnegative, leaving
-the determinant to decide positivity. Its dependence on the two overlaps
-has a sign: at fixed product, equal overlaps minimize it in the
-nonclassical range. The other directions are local.
+To find the region, decide every supporting inequality. Above the local
+bound, three characteristic coefficients are nonnegative, leaving the
+determinant to decide positivity. At fixed product of the overlap
+parameters, the determinant is affine in their sum. Its coefficient is
+nonnegative in the nonclassical range: the arithmetic–geometric mean
+inequality therefore selects equal overlaps. The other directions are local.
 
-The second angle has now disappeared. Rationally parametrize the remaining
-one to obtain a quartic matrix affine in every support coefficient.
-Univariate matrix positivity gives quadratic square factors. Parity
-splits their Gram matrix into orders five and four, and attained duality
-turns the complete cone of inequalities into an exact membership lift.
+Rationally parametrize the remaining angle. The slack becomes a quartic
+matrix affine in every support coefficient. Univariate matrix positivity
+gives quadratic square factors; parity separates them into blocks of
+orders five and four. The affine coefficient map represents the whole cone
+of valid inequalities. Its positive definite anchor and trace normalization
+then give an attained membership lift, including the boundary.
 
-Return to NPA only after this construction. Its certificate must still
-hold for independent measurement angles. Near the local threshold, those
-two variables retain the shifted Motzkin obstruction. A bounded relative
-error would make fixed-word square factors converge to forbidden
-polynomial squares.
+The earlier NPA proof supplies the comparison. Its certificates must still
+hold for independent measurement angles, which retain the shifted Motzkin
+obstruction. The main text recalls that mechanism in one paragraph; the
+companion preserves the complete argument. The inherited cubic boundary
+expansion also excludes a polygon, so the planar representation theorem
+makes block order two optimal.
 
-The same region therefore separates hierarchy depth from semidefinite
-extension degree. Close with the concrete consequence: relabel the lift
-to obtain 32 exact projections that can strengthen every NPA level.
+Physical relabellings yield thirty-two exact projections. They can be added
+to any NPA relaxation to resolve all support directions of the obstructed
+family.

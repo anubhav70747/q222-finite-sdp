@@ -5,14 +5,16 @@ The full quantum region of the CHSH value and the marginal sum
 PSD blocks of orders 5 and 4. Every fixed NPA level projects strictly
 outside that same region. Its semidefinite extension degree is 2.
 
-The central step is analytical: at fixed product of the two measurement
-overlap parameters, a determinant comparison reduces the nonclassical
-support directions to equal overlaps. The remaining directions have local
+This is a sequel to the NPA Letter: the earlier result supplies infinite
+depth, and the new proof supplies the finite representation. Its central
+step is elementary. At fixed product of the two overlap parameters, the
+determinant is affine in their sum; the arithmetic–geometric mean inequality
+reduces the nonclassical support directions to equal overlaps. The remaining directions have local
 bounds. One univariate quartic matrix, affine in all support coefficients,
 then gives the complete finite lift.
 
 - [Two-page note](note/main.pdf) — the central insight and proof.
-- [PRL article draft](article/main.pdf) and [abstract](ABSTRACT.txt).
+- [Two-page PRL sequel draft](article/main.pdf) and [abstract](ABSTRACT.txt).
 - [Complete proofs](proofs/main.pdf) — 23 pages, including all matrix entries,
   both membership inclusions and the entire NPA nontermination argument.
 - [Portable source package](NPA_Finite_Lift_Overleaf.zip).
