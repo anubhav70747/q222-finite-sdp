@@ -1,0 +1,18 @@
+Provided checker: one safe private-copy run
+Exit: 0
+Elapsed seconds: 1.06
+
+PASS exact positive 2x2 endpoint-block determinants for all v>0
+PASS forced endpoint skew T(0)=diag(2C+2D+d, 2beta+d+2m)
+PASS exact 4x4 determinant and 2x2 Schur-trace polynomial identities
+THEOREM: with B(v) positive definite, M(v)>=0 iff trace_numer(v)>=0 and det M(v)>=0.
+The source-wide 40-feature criterion requires these two inequalities in EACH parity block for all v>0.
+No universal source-only quartic T(v) is constructed or certified by this checker.
+
+STDERR
+
+Independent supplementary checks
+PASS independent extraction: all five displayed blocks match the unrestricted full SG2 parent
+PASS independent generic Schur identities for a nonsymmetric 2x2 cross block
+PASS all four endpoint constants uniquely forced by zero PSD rows
+PASS endpoint zero-row/column orders imply determinant divisibility by v^2

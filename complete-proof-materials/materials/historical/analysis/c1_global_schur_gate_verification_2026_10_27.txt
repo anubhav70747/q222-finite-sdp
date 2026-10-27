@@ -1,0 +1,135 @@
+Bounded combined audit: C1 global scalar-Schur gate
+27 October 2026
+
+Original package:
+analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/
+fetched-20261027-0845/task5/package/
+Q222_C1_global_schur_unproved_2026_10_27/ (4 members)
+
+VERDICT
+
+The displayed full-parent blocks, positive leading-block determinants,
+four scalar Schur criteria, degree bounds, forced constant skew and
+conditional determinant factors are correct. The result is a reduction
+of the particular sufficient40-feature mechanism, not H1 admission,
+a universal global skew or a K364 separator. The new checker passed
+once in a private copy. Independent supplementary symbolic checks
+covered its full-parent and nonsymmetric-cross-block omissions.
+
+1. Full-parent coefficient check and source scope
+
+I independently formed the actual unrestricted SG2 C1 parent with seven
+independent symbolic coefficients(d,m,C,A,D,alpha,beta), extracted its
+four-state Hessian/2 and the u^0,u^1,u^2 matrices, and checked ALL five
+displayed2x2 matrices P0w,P0y,P2w,P2y,E exactly. Here
+  E=P1[w,y]/2, L=(1+v^2)E.
+There is no factor-two change in the parent, no omitted state normal
+and no restriction to a contact slice. The two cross-skew contributions
+cancel on(psi,u psi), giving exactly(1+v^2)F.
+
+These coefficient identities are valid for independent symbolic source
+weights. Admission and the contact-factor statements require the actual
+genuine native C1 rational coquotients, positive strict gaps and contact,
+with0<k<=1. Treating arbitrary seven positive weights as physical contact
+sources would be an invalid extension. All testing variables remain
+independent of the native source contact.
+
+2. Scalar Schur equivalence and degrees
+
+For v>0, each displayed leading2x2 block A0,B0 has positive first diagonal
+and positive determinant. Thus both are PD. The inverse/adjugate Schur
+calculation is legitimate at every positive testing v, although such
+testing-dependent inverses are not SOS coefficients or multipliers.
+
+For any real2x2 cross matrix C and symmetric A>0,D,
+  R=D-C^T A^(-1)C,
+  trR=[det(A)trD-tr(C^T adj(A)C)]/det(A),
+  detR=det([[A,C],[C^T,D]])/det(A).
+The analogous B formula has the correct transposes. Since a real
+symmetric2x2 matrix is PSD iff trace and determinant are nonnegative,
+qA,dA,qB,dB are jointly necessary and sufficient for the two complete
+4x4 matrices at every v>0, including singular PSD cases.
+
+The supplied generic checker uses a SYMMETRIC cross matrix H, despite
+its description of an arbitrary cross block. This does not invalidate
+the theorem, but that regression alone is narrower than actual general
+T. I independently checked the determinant and trace identities with
+four independent nonsymmetric cross entries, closing this verification
+gap without changing the original checker.
+
+All matrix entries have v-degree<=4. Consequently qA,qB have degree<=12
+and dA,dB degree<=16, as stated. Ordinary univariate half-line SOS can
+certify their signs if a suitable common source-only T is found; this
+does not supply the missing source-wide choice of its20 coefficients.
+
+3. Exact endpoint and contact-factor hypotheses
+
+PSD at v=0 forces the W0 row of HA and X1 row of HB to vanish, because
+their diagonal entries are zero. Solving all four resulting constant
+cross-entry equations uniquely gives
+  T(0)=diag(2C+2D+d,2beta+d+2m), T01(0)=T10(0)=0.
+I independently checked this uniqueness, not just sufficiency of the
+displayed substitution.
+
+For any quartic T with that constant value, each corresponding zero-row
+diagonal is O(v^2) and its other entries are O(v). Symmetry gives the
+same column orders, so determinant expansion forces v^2 to divide each
+full4x4 determinant. This does not require global PSD of that candidate.
+
+At v=v_*>0, the additional double factor requires BOTH individual
+contact-kernel equations and BOTH individual zero soft first derivatives:
+  HA(v_*)xA=0, HB(v_*)xB=0,
+  xA^T HA'(v_*)xA=xB^T HB'(v_*)xB=0.
+Total native Bob stationarity alone sets only the sum and is not enough.
+Under these exact hypotheses each determinant and its first derivative
+vanish. If the contact block has rank3, its adjugate is a scalar multiple
+of xx^T; if its rank is<=2, its adjugate is zero. This proves the claim
+also for more singular contact Grams, without assuming a unique kernel
+or a positive complement just to obtain divisibility.
+
+Since v_* is nonzero, the endpoint and contact factors are coprime.
+Monic division over the source coefficient field yields
+  dA=v^2(v-v_*)^2 pA, dB=v^2(v-v_*)^2 pB,
+with quotient degree<=12. No sign of either quotient follows. These
+are polynomials IN THE TESTING VARIABLE v with source-only coefficients;
+they are not necessarily polynomials in native source parameters.
+Native coquotients are rational, and the allowable T coefficients may
+be source-algebraic.
+
+4. Notation and exact remaining task
+
+'The four physical source coefficients' is a slip: the displayed list
+contains seven coefficients, including d. 'Degree-40 univariate matrix
+SOS' should read the40-feature matrix-SOS mechanism; the matrix polynomial
+degree is4. These are notation corrections, not mathematical defects.
+
+The exact remaining sufficient target is ONE source-only T_theta(v) of
+degree<=4 making all four scalar polynomials nonnegative on the whole
+positive half-line, with the homogeneous endpoints and any required
+contact conditions imposed jointly. Independent positive neighborhoods
+or scalar signs at selected angles cannot establish this. Failure of
+the mechanism would not refute full364-feature H1. No new admission,
+global candidate or obstruction is proved by the package.
+
+5. Integrity and safe exact evidence
+
+Original ZIP SHA256:
+2830ae7de6b90e36a48556a21568cc450b391dd4a2d44b0dbb7c74b3285ce2e1
+
+The ZIP is byte-identical to
+C:/Users/anubh/Downloads/Q222_C1_GLOBAL_BOB_PSD_OPEN_GATE_2026-10-27.zip.
+ZIP integrity passed; all4 payload members match the extracted package
+bytewise. SHA256.json matches all3 listed payload hashes.
+
+The inspected checker has no optimizer, network, sweep, external data
+or file-write action. I ran it exactly once in the separate directory
+analysis/c1-global-schur-gate-replay-2026-10-27: exit0, elapsed1.060s.
+Independent full-parent, nonsymmetric-Schur, endpoint-uniqueness and
+endpoint-row-order checks also passed. No native source samples or
+unchanged baseline runs were used.
+
+Evidence:
+  analysis/c1_global_schur_gate_replay_2026_10_27.log
+  analysis/c1_global_schur_gate_integrity_2026_10_27.json
+
+No original package, repository or browser was edited.

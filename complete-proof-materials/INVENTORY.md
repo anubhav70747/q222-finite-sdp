@@ -2196,3 +2196,18 @@ Twenty-one scientific payloads add independent evidence for existing L19 and pre
 | analysis/c2-admission-verifier-review-2026-10-27/README.txt | [file](../complete-proof-materials/materials/historical/analysis/c2-admission-verifier-review-2026-10-27/README.txt) | 1099 |
 | analysis/c2-admission-verifier-review-2026-10-27/review_results.json | [file](../complete-proof-materials/materials/historical/analysis/c2-admission-verifier-review-2026-10-27/review_results.json) | 1673 |
 | analysis/c2-admission-verifier-review-2026-10-27/verify_primal_factor_checked.py | [file](../complete-proof-materials/materials/historical/analysis/c2-admission-verifier-review-2026-10-27/verify_primal_factor_checked.py) | 6818 |
+
+## C1 scalar-Schur reduction
+
+Eight original or independently verified payloads record the four scalar inequalities for the existing 40-feature mechanism. The common source-only quartic remains unconstructed; no admission milestone changes.
+
+| Project-relative source | Public material | Bytes |
+|---|---|---:|
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-20261027-0845/task5/original-package.zip | [file](../complete-proof-materials/materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-20261027-0845/task5/original-package.zip) | 5526 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-20261027-0845/task5/package/Q222_C1_global_schur_unproved_2026_10_27/check_scalar_gate.py | [file](../complete-proof-materials/materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-20261027-0845/task5/package/Q222_C1_global_schur_unproved_2026_10_27/check_scalar_gate.py) | 2155 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-20261027-0845/task5/package/Q222_C1_global_schur_unproved_2026_10_27/PROOF_AND_OPEN_GATE.md | [file](../complete-proof-materials/materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-20261027-0845/task5/package/Q222_C1_global_schur_unproved_2026_10_27/PROOF_AND_OPEN_GATE.md) | 6887 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-20261027-0845/task5/package/Q222_C1_global_schur_unproved_2026_10_27/SHA256.json | [file](../complete-proof-materials/materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-20261027-0845/task5/package/Q222_C1_global_schur_unproved_2026_10_27/SHA256.json) | 283 |
+| analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-20261027-0845/task5/package/Q222_C1_global_schur_unproved_2026_10_27/verification.log | [file](../complete-proof-materials/materials/historical/analysis/exact-lift-2026-10-23/seven-extra-high-2026-10-26/fetched-20261027-0845/task5/package/Q222_C1_global_schur_unproved_2026_10_27/verification.log) | 461 |
+| analysis/c1_global_schur_gate_verification_2026_10_27.txt | [file](../complete-proof-materials/materials/historical/analysis/c1_global_schur_gate_verification_2026_10_27.txt) | 6542 |
+| analysis/c1_global_schur_gate_replay_2026_10_27.log | [file](../complete-proof-materials/materials/historical/analysis/c1_global_schur_gate_replay_2026_10_27.log) | 908 |
+| analysis/c1_global_schur_gate_integrity_2026_10_27.json | [file](../complete-proof-materials/materials/historical/analysis/c1_global_schur_gate_integrity_2026_10_27.json) | 1399 |
