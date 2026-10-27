@@ -4,6 +4,12 @@ The complete rational **outer SDP** is evaluated. Its unconditional exactness re
 
 This update incorporates upstream through [`e37c26d`](https://github.com/anubhav70747/q222-finite-sdp/commit/e37c26d15ac2bb11d94c90b98f7a2dd152b6ee19), preserving the independent L19 review, guarded real-factor checker and new C1 scalar-Schur reformulation. [Fourteen earlier exact checker runs](reconciliation/2026-10-27/verification/latest_checks.json) and [the two new exact certificate checks](reconciliation/2026-10-27/completion-advance/verification.json) passed on their stated contracts. The two new runs are same-assistant checks, not independent review. L19 has independent [analytical](complete-proof-materials/materials/historical/analysis/c2_n0_opening_analytic_verification_2026_10_27.txt) and [bounded exact](complete-proof-materials/materials/historical/analysis/c2_n0_opening_exact_verification_2026_10_27.txt) reviews of its conditional local theorem.
 
+## Sun–Wang–Yu matching completed
+
+The [new exact comparison and proof](independent-review/SUN_WANG_YU_CONTACT_MATCH.md), based on main `1b29383`, matches their canonical Bell operator to the full SG2 parent. Every canonical d>0 source has correlator signs (+,−,+,+). Both native C1/C2 families have tied local and quantum bounds, so the relevant external inputs are Proposition 4 and Lemma 6, not the strict-advantage theorem. The resulting short argument proves finite-contact coercivity, uniqueness and the complete five-variable contact Hessian, including the allowed zero-weight faces. It is an alternative proof of existing geometry, with [bounded independent review](independent-review/SUN_WANG_YU_CONTACT_REVIEW.md) and [13 exact matching checks](independent-review/checks/sun-wang-yu-match/result.json).
+
+Their one-real-two-qubit-plus-local membership description does not supply fixed affine SDP admission. H1/H2 and global reverse inclusion remain open. This update preserves the original manuscript, singular proofs and the outstanding L20/L21 reviews. Scheduled research tasks remain paused.
+
 ## What would complete the current candidate
 
 Let
@@ -30,6 +36,7 @@ The source-dual target is nonnegative pairing against **every** PSD truncated mo
 
 | Result | Completed statement | Remaining statement |
 |---|---|---|
+| C1/C2 contact matching, L22 | Common proof of finite-contact coercivity, uniqueness and full Hessian using the exact SG1/SG2 map and the frustrated-case lemmas | Uniform all-testing fixed-library admission; no new H1/H2 coverage |
 | C1 balanced slice and source tube, L20 | Exact order-five source/behavior pencils on the stated slice; a rational global Z18 interval certificate and explicit five-parameter all-testing tube | The rest of the native C1 domain; independent review of the new result |
 | Zero-weight openings, L21 | Fixed carriers and coefficient maps for C2 n, C1 beta and C1 D opening from full wall-complement PD Grams | Whole-wall PD selection and coverage outside the local source neighborhoods |
 | C1 Z18 reduction | Nine source-only gauges, two exact 4x4 Schur residuals | Simultaneous PSD selection on the actual oriented native domain |

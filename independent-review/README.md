@@ -1,5 +1,7 @@
 # Independent review of the finite-lift proof
 
+The [Sun–Wang–Yu matching](SUN_WANG_YU_CONTACT_MATCH.md) gives a short alternative proof of finite-contact coercivity, uniqueness and full C1/C2 curvature. It includes the full affine coefficient map, measurement/state scaling, a [bounded independent review](SUN_WANG_YU_CONTACT_REVIEW.md), and [exact symbolic checks](checks/sun-wang-yu-match/result.json). The native bounds are tied; their frustrated-case lemmas apply. This completes the matching, not universal fixed-library admission.
+
 This folder records an outside review of the existence proof in `latex/` and of
 the explicit-lift material in `extracted-lifts/`, followed by new constructions
 on `main`. The review breaks the argument into stages, states the idea that organizes it,

@@ -1,6 +1,6 @@
 {
-  "scope": "Published file identity inventory; new/changed entries refreshed for the exact balanced C1 slice, quantified source tube and conditional three-wall openings. Universal H1/H2 remain open.",
-  "base_commit": "e37c26d15ac2bb11d94c90b98f7a2dd152b6ee19",
+  "scope": "Published file identity inventory; refreshed for the exact Sun-Wang-Yu native matching, common contact-geometry proof and bounded review. Original proof package preserved; H1/H2 remain open.",
+  "base_commit": "1b293832ffeff46ebbee834b89554481d70f544e",
   "files": [
     {
       "path": ".gitattributes",
@@ -17,8 +17,8 @@
     {
       "path": "FRONTIER.md",
       "canonical_lf": true,
-      "bytes": 11743,
-      "sha256": "e8eb72348218e9485c6432b1589c2918aa21c4dd8c53b0e85c56bcb0243609f7"
+      "bytes": 13088,
+      "sha256": "93c1e03c8e61c7d0042acd6c05d28af52b3a4687f903b3769580a193caf2b885"
     },
     {
       "path": "Q222_Overleaf.zip",
@@ -48,13 +48,13 @@
     },
     {
       "path": "complete-proof-materials/CHECKLIST.json",
-      "bytes": 266026,
-      "sha256": "18cbae0821caf40c19b0aac27d64c2a1f40530d72b9652e0c04e361954b89ab8"
+      "bytes": 267283,
+      "sha256": "4ed40892f7f57aa91f42db1cc41536c3ef2165f8e7538349e98aee1a8c36f508"
     },
     {
       "path": "complete-proof-materials/CHECKLIST.md",
-      "bytes": 45977,
-      "sha256": "1c9be6b360ae45a5a834c2641bf905d17e5b12868b269bb3e1b3f7de552079c4"
+      "bytes": 47116,
+      "sha256": "84985a5735c94edda363be7d4355b2128cf867bc3aba133fb8e94cf291de9b9a"
     },
     {
       "path": "complete-proof-materials/COMPONENTS.md",
@@ -118,8 +118,8 @@
     },
     {
       "path": "complete-proof-materials/VERIFICATION_PLAN.md",
-      "bytes": 9801,
-      "sha256": "1340e47a1aaf4b1784f5c35f3053340291c3f57d6b4b477f7aa01030b6d6c9be"
+      "bytes": 10277,
+      "sha256": "c4c6dc9df19eba96aad90338d7a603f4daef118e9f5f3b865c99cf2d84e5cdd8"
     },
     {
       "path": "complete-proof-materials/materials/historical/Q222_Analytical_Extraction_Refinement_REGENERATED_2026-10-22.zip",
@@ -11457,8 +11457,8 @@
     {
       "path": "independent-review/README.md",
       "canonical_lf": true,
-      "bytes": 26973,
-      "sha256": "725c40885777ec629f4bcdc835bb0aad0772f5a1b1785da1679456774ae8b3fb"
+      "bytes": 27468,
+      "sha256": "660d3b68d09a1455daf32413adeef4de682d83e71f30cdd9ef4c2f12908dd441"
     },
     {
       "path": "independent-review/SE_BOUNDED_CONDUCTOR.md",
@@ -11485,6 +11485,18 @@
       "sha256": "8a68e1f213339b7e2041bbc6d372ee5d1853eef57a41458fc450f54ab956793e"
     },
     {
+      "path": "independent-review/SUN_WANG_YU_CONTACT_MATCH.md",
+      "canonical_lf": true,
+      "bytes": 11275,
+      "sha256": "f281caa5673b5a58f34dc151760d5f177d414697dc225baf0d976513a086f0d5"
+    },
+    {
+      "path": "independent-review/SUN_WANG_YU_CONTACT_REVIEW.md",
+      "canonical_lf": true,
+      "bytes": 5730,
+      "sha256": "7c2dd9a9dfe122959ab27966c487e25a2a0ec2545ea9792ec16aa1d5910ede37"
+    },
+    {
       "path": "independent-review/TWO_POWER_CONDUCTOR.md",
       "canonical_lf": true,
       "bytes": 5869,
@@ -11498,37 +11510,44 @@
     {
       "path": "independent-review/checks/c1-balanced-slice/PROVENANCE.json",
       "bytes": 779,
-      "sha256": "0f3e0fec5e0fe1c7d0474c8f69852cf6815bd5029f94528bf6ddea74e44d9b25"
+      "sha256": "0f3e0fec5e0fe1c7d0474c8f69852cf6815bd5029f94528bf6ddea74e44d9b25",
+      "canonical_lf": true
     },
     {
       "path": "independent-review/checks/c1-balanced-slice/certificate.json",
       "bytes": 13052,
-      "sha256": "a3d47dac9b42f8e62018a4bc92dfd302972f1ad39b53425da344b34bfdcda265"
+      "sha256": "a3d47dac9b42f8e62018a4bc92dfd302972f1ad39b53425da344b34bfdcda265",
+      "canonical_lf": true
     },
     {
       "path": "independent-review/checks/c1-balanced-slice/contact_map.json",
       "bytes": 24237,
-      "sha256": "f0a4f40a95f52d99cd1c299059183d48908eddddb3ffb69ace577bd0b55828e3"
+      "sha256": "f0a4f40a95f52d99cd1c299059183d48908eddddb3ffb69ace577bd0b55828e3",
+      "canonical_lf": true
     },
     {
       "path": "independent-review/checks/c1-balanced-slice/exact_results.json",
       "bytes": 18021,
-      "sha256": "fb484f5e95418474204f8532a206f0d7223d1d4a01a8bf0c80936a898e276a40"
+      "sha256": "fb484f5e95418474204f8532a206f0d7223d1d4a01a8bf0c80936a898e276a40",
+      "canonical_lf": true
     },
     {
       "path": "independent-review/checks/c1-balanced-slice/native_c1.py",
       "bytes": 1493,
-      "sha256": "a8d8d7488bbad0f9f8be8c29f4db282971dd71e05298829b1a58f73b7b7b5684"
+      "sha256": "a8d8d7488bbad0f9f8be8c29f4db282971dd71e05298829b1a58f73b7b7b5684",
+      "canonical_lf": true
     },
     {
       "path": "independent-review/checks/c1-balanced-slice/source_and_behaviour_pencil.json",
       "bytes": 1889,
-      "sha256": "e7b2870a21396888f1d78560b4f25958496336c022fec50dc40773de68db9daf"
+      "sha256": "e7b2870a21396888f1d78560b4f25958496336c022fec50dc40773de68db9daf",
+      "canonical_lf": true
     },
     {
       "path": "independent-review/checks/c1-balanced-slice/verify_c1_slice.py",
       "bytes": 12540,
-      "sha256": "1911b05c2e274d6cc62e6569f7d18ae513ef71f59e073e2a808f6dd463e74b82"
+      "sha256": "1911b05c2e274d6cc62e6569f7d18ae513ef71f59e073e2a808f6dd463e74b82",
+      "canonical_lf": true
     },
     {
       "path": "independent-review/checks/c1_generic_seed.json",
@@ -12137,6 +12156,18 @@
       "sha256": "58543340fbcec5528df1418e68d1cda001e9077c937b5278fd5f0ed8cb8abf76"
     },
     {
+      "path": "independent-review/checks/sun-wang-yu-match/result.json",
+      "canonical_lf": true,
+      "bytes": 887,
+      "sha256": "751b91383157d8c751e9594e52de45ba0292624d1e15f4e688c9ab912843f02e"
+    },
+    {
+      "path": "independent-review/checks/sun-wang-yu-match/verify_match.py",
+      "canonical_lf": true,
+      "bytes": 4594,
+      "sha256": "f2f226ff87df596c9b17b25a177acc5ad769f600f166b1531cdec154ef855247"
+    },
+    {
       "path": "independent-review/checks/thin-layer/base.py",
       "canonical_lf": true,
       "bytes": 1752,
@@ -12163,17 +12194,20 @@
     {
       "path": "independent-review/checks/zero-wall-opening/exact_results.json",
       "bytes": 1200,
-      "sha256": "9e05b985be87ceb7c7bb64baf898d9d0a915a0a9c57c72cb29b1aefb5f673a9e"
+      "sha256": "9e05b985be87ceb7c7bb64baf898d9d0a915a0a9c57c72cb29b1aefb5f673a9e",
+      "canonical_lf": true
     },
     {
       "path": "independent-review/checks/zero-wall-opening/fixed_maps.json",
       "bytes": 227857,
-      "sha256": "18c471c906f906e069e6db2d82081b7bc3588ceaa436742e244923a3457f8003"
+      "sha256": "18c471c906f906e069e6db2d82081b7bc3588ceaa436742e244923a3457f8003",
+      "canonical_lf": true
     },
     {
       "path": "independent-review/checks/zero-wall-opening/verify_zero_wall_opening.py",
       "bytes": 5582,
-      "sha256": "fe5adb8136ee3e23bafc3f2c8c5cee597375caf3b9ddb7ce27e3b0ff591bf7fe"
+      "sha256": "fe5adb8136ee3e23bafc3f2c8c5cee597375caf3b9ddb7ce27e3b0ff591bf7fe",
+      "canonical_lf": true
     },
     {
       "path": "independent-review/q222-lift-anatomy.html",
@@ -12318,22 +12352,26 @@
     {
       "path": "reconciliation/2026-10-27/completion-advance/C1_slice_and_tube.log",
       "bytes": 533,
-      "sha256": "7003bd46ac3f0377f93d081a4966ebaf83674c2fbdbbcd9ea7aa6bf74ac7e9d7"
+      "sha256": "7003bd46ac3f0377f93d081a4966ebaf83674c2fbdbbcd9ea7aa6bf74ac7e9d7",
+      "canonical_lf": true
     },
     {
       "path": "reconciliation/2026-10-27/completion-advance/all_zero_weight_openings.log",
       "bytes": 243,
-      "sha256": "6b33d661570c8522f3f6ee4cc1f2fd5b00c84b1602aa3ce8b95f80d95968e373"
+      "sha256": "6b33d661570c8522f3f6ee4cc1f2fd5b00c84b1602aa3ce8b95f80d95968e373",
+      "canonical_lf": true
     },
     {
       "path": "reconciliation/2026-10-27/completion-advance/publication_integrity.json",
       "bytes": 7579,
-      "sha256": "50cabaadbd6ea95c70523e02f769226a982f685cce145f31207f2de56ce8e1de"
+      "sha256": "50cabaadbd6ea95c70523e02f769226a982f685cce145f31207f2de56ce8e1de",
+      "canonical_lf": true
     },
     {
       "path": "reconciliation/2026-10-27/completion-advance/verification.json",
       "bytes": 1050,
-      "sha256": "0e7b94dcd88b2a814cc50e9b1bcecacd50278971553943dc211b56126b968fa3"
+      "sha256": "0e7b94dcd88b2a814cc50e9b1bcecacd50278971553943dc211b56126b968fa3",
+      "canonical_lf": true
     },
     {
       "path": "reconciliation/2026-10-27/verification/C1_Bob_Schur.stdout.log",
@@ -12431,5 +12469,6 @@
       "bytes": 7306,
       "sha256": "8dcbbc8b7a170658b0f7f32c1daabb5751727627dad8a4df8de099c4dd85c1e4"
     }
-  ]
+  ],
+  "line_ending_metadata_correction": "Fourteen pre-existing text entries now declare canonical_lf: their recorded lengths and SHA256 values already match the unchanged HEAD Git blobs and LF-normalized working files. No source, coefficient, certificate or recorded hash was changed by this correction."
 }

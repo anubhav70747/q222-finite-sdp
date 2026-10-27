@@ -1,0 +1,24 @@
+{
+  "scope": "exact symbolic coordinate and coefficient matching only; analytic hypotheses in accompanying proof",
+  "sympy_version": "1.14.0",
+  "checks": [
+    "SG1 affine constant, biases and four correlators",
+    "all-positive deterministic assignment has slack 4 lambda",
+    "frustration product factorization",
+    "full SG2 matrix equals Du*Dv*(kappa I-B)",
+    "negative Alice angle is local state congruence",
+    "negative Bob angle is local state congruence",
+    "overlap Jacobian",
+    "positive-chart square-root identity Alice",
+    "positive-chart square-root identity Bob",
+    "determinant trace polynomial has bidegree (2,2)",
+    "determinant leading mixed coefficient",
+    "null-direction quartic coefficient",
+    "axis restrictions have degree at most two"
+  ],
+  "count": 13,
+  "ok": true,
+  "H1": "open",
+  "H2": "open",
+  "global_exactness": "conditional"
+}

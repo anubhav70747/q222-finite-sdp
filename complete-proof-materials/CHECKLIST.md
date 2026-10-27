@@ -155,6 +155,10 @@ The 22 October full analytical review supports qualitative finite-SDP existence.
   Evidence: [Theorem and carriers](../independent-review/ZERO_WEIGHT_OPENING.md); [Standalone exact map/carrier checker](../independent-review/checks/zero-wall-opening/verify_zero_wall_opening.py); [All evaluated maps](../independent-review/checks/zero-wall-opening/fixed_maps.json); [Exact results](../independent-review/checks/zero-wall-opening/exact_results.json).
   Completion condition/scope: A Gram PD on all four larger wall contact complements gives finite opened-weight source neighborhoods for C2 n=0, C1 beta=0 and C1 D=0. The fixed residual maps have shape72x104 and rank66; all coefficient corrections lie in the integer block. Individual openings use28,30,28 half-power features. The result does not supply whole-wall PD selection. Independent review of the new extensions is not claimed.
 
+- [x] **L22 — Sun-Wang-Yu matching and common finite-contact geometry proof.** VERIFIED scoped matching and alternative proof; bounded independent review; H1/H2 remain OPEN.
+  Evidence: [Matching, theorem and proof](../independent-review/SUN_WANG_YU_CONTACT_MATCH.md); [Bounded independent review](../independent-review/SUN_WANG_YU_CONTACT_REVIEW.md); [Standalone exact checker](../independent-review/checks/sun-wang-yu-match/verify_match.py); [13 exact matching checks](../independent-review/checks/sun-wang-yu-match/result.json).
+  Completion condition/scope: For every quantum-valid canonical d>0 source with nonnegative event weights and a finite noncommuting contact, the exact SG1/SG2 map verifies frustration and yields a common proof of coercivity, uniqueness and the full projective-state/angular Hessian. C1/C2 have tied local and quantum bounds; Proposition 4 and Lemma 6 apply without strict advantage. Includes allowed zero-weight faces. Imports the stated external lemmas, not a full paper audit. No uniform degree, fixed-library admission, or new H1/H2 coverage; original manuscript and singular tensor proofs preserved.
+
 ## Reconciliation and verification
 
 
