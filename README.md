@@ -4,6 +4,8 @@
 
 **Current frontier:** [the completion map](FRONTIER.md) records the remaining universal C1/C2 admission proofs and the evaluated global matrices. The [C2 wall-to-strict opening theorem](independent-review/C2_N0_OPENING.md) now gives an explicit PSD neighborhood in 28 half-power features at every n=0 wall point with a Gram positive on all four contact complements. It does not establish whole-wall or general strict C2 admission.
 
+**New global C1 result:** the [balanced source slice](independent-review/C1_BALANCED_SLICE.md) has an exact rational SDP of total order5, a fixed global Z18 certificate, and an explicit five-native-parameter admission tube. The [zero-weight opening theorem](independent-review/ZERO_WEIGHT_OPENING.md) now handles the C1 beta=0 and D=0 walls as well as C2 n=0, conditional on a Gram PD on all four larger wall complements. These results enlarge the proved admission regions; universal H1/H2 remain open.
+
 **New exact construction:** [L12 and its proof package](complete-proof-materials/CHECKLIST.md) give a fixed 16-feature PSD certificate near both strict open C2 ends. The complete finite-c identity and graded Schur positivity have been independently checked; the result is uniform on compact subsets of the stated face interior.
 
 The central difficulty lies where measurements become compatible. There,
@@ -115,6 +117,7 @@ global construction. Their proofs and matrices remain available.
 | Construction | Representation |
 |---|---|
 | Tilted-CHSH projection | Exact order 4, without auxiliaries; both inclusions |
+| Balanced C1 source slice | [Exact order 5](independent-review/C1_BALANCED_SLICE.md), with the stated linear relations and canonical source orthant |
 | Canonical angular validity | [Exact order 13](extracted-lifts/global-weighted/angular-order13/) in Laurent coefficients; their Bell-source map is quartic |
 | Determinant-weighted state polynomial | Fixed certificate of order 133, with 104 functions |
 | Specified local source cones | Exact pencils of orders 62, 669 and 731 |

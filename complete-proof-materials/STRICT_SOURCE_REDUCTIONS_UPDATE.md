@@ -98,11 +98,15 @@ Dritschel's Theorem 4.1 supplies a per-source finite trigonometric factorization
 - [Usage and scope](materials/historical/analysis/c2-admission-verifier-review-2026-10-27/README.txt)
 - [Exact positive and negative regression results](materials/historical/analysis/c2-admission-verifier-review-2026-10-27/review_results.json)
 
+## Global C1 slice and the other zero-weight openings
+
+The [balanced C1 slice](../independent-review/C1_BALANCED_SLICE.md) is now represented exactly by a rational order-five pencil. Eight fixed rational Grams certify its whole native interval, and the contact right inverse gives an explicit all-testing admission tube in five native parameters. It is a proved region of H1, not universal H1. The [general zero-weight theorem](../independent-review/ZERO_WEIGHT_OPENING.md) supplies PSD residual neighborhoods from full relative-PD wall Grams for the beta and D openings as well as n. Whole-wall PD selection and coverage outside these source regions remain open. Independent review of these two new results is not claimed.
+
 ## Next implication
 
 The next C1 task is a simultaneous native-domain PSD gauge construction; the next C2 task is full Gram admission or its equivalent dual positivity statement. Another coefficient-rank calculation or isolated carrier is insufficient. A different fixed globally sound library remains an admissible route if it gives a complete proof. A separating witness against Z6 is not a prerequisite for choosing one.
 
-The two strict-family admission inputs remain open. L15/L17 retain their conditional density, reflection and assembly results; the qualitative V01-V06 conjunction is unchanged. No new completion box is closed by this batch.
+The two strict-family admission inputs remain open. L15/L17 retain their conditional density, reflection and assembly results; the qualitative V01-V06 conjunction is unchanged. These reductions do not close universal L08-L10; the scoped new constructions are recorded separately as L20/L21.
 
 ## Evidence
 

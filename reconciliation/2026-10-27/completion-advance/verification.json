@@ -1,0 +1,29 @@
+{
+  "date_IST": "2026-10-27",
+  "base_commit": "1501d008a07945355876a8bacc790864b059ce1a",
+  "runtime": {
+    "Python": "3.12.14",
+    "SymPy": "1.14.0"
+  },
+  "checks": [
+    {
+      "name": "C1_slice_and_tube",
+      "source_path": "independent-review/checks/c1-balanced-slice/verify_c1_slice.py",
+      "source_sha256": "1911b05c2e274d6cc62e6569f7d18ae513ef71f59e073e2a808f6dd463e74b82",
+      "exit_code": 0,
+      "seconds": 2.874,
+      "log": "C1_slice_and_tube.log"
+    },
+    {
+      "name": "all_zero_weight_openings",
+      "source_path": "independent-review/checks/zero-wall-opening/verify_zero_wall_opening.py",
+      "source_sha256": "fe5adb8136ee3e23bafc3f2c8c5cee597375caf3b9ddb7ce27e3b0ff591bf7fe",
+      "exit_code": 0,
+      "seconds": 4.735,
+      "log": "all_zero_weight_openings.log"
+    }
+  ],
+  "all_passed": true,
+  "independent_review": false,
+  "scope": "Exact new restricted global lift, C1 admission tube and conditional zero-weight openings. Universal H1/H2 remain open. No historical full-proof or archive re-audit."
+}

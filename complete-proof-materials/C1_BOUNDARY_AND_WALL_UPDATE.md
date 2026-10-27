@@ -54,6 +54,12 @@ A source-algebraic PSD selection on the dense physical open set, followed by the
 
 The four checkers certify 56 stored witness instances, including repeated sources on different supports, and 202 reduced-block positivity checks. These are finite exact certificates. Universal graph and coefficient identities have broader scope; numerical samples do not extend the PSD conclusions.
 
+## New all-testing source regions
+
+[L20](../independent-review/C1_BALANCED_SLICE.md) now gives an exact global three-dimensional C1 source cone of total PSD order5 and a whole-interval Z18 certificate. Its quantified eta^2/246960 coefficient tube is open in all five native parameters and retains every independent testing angle and state normal. This is a source-neighborhood result, distinct from the testing-angle neighborhoods above. It leaves the rest of H1 open.
+
+[L21](../independent-review/ZERO_WEIGHT_OPENING.md) extends the contact-zero carrier argument to C1 beta=0 and D=0 as well as C2 n=0. Full relative-PD wall Grams remain required; whole-wall PSD selection is not established. Both new derivations have exact same-assistant checks, not independent review.
+
 ## Remaining implication
 
 Construct a source-only PSD completion throughout each actual strict native domain, either by solving the C1 polynomial-matrix problem and a coupled C2 completion or directly in K364. Once H1/H2 hold, the verified density, reflection and full-group assembly results apply to the already evaluated conditional global pencil. L13/L14 receive this evidence without a new completion milestone; L08-L10 and H1/H2 remain open.

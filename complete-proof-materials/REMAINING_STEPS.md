@@ -56,6 +56,8 @@ These are completion conditions, not a requirement to execute every possible pro
 
 The [local C2 wall opening](../independent-review/C2_N0_OPENING.md) now supplies exact finite-n neighborhoods from wall Grams PD on all four larger contact complements. This closes that conditional local continuation task in28 half-power features. It does not close R03/H2: whole-wall PSD and the rest of the strict native domain remain open. The latest C1 result separately supplies source-wide contact-local positivity; joining it with the endpoints within one fixed adequate library remains unproved.
 
+L20 now supplies [an exact global C1 source slice and a quantified five-parameter source tube](../independent-review/C1_BALANCED_SLICE.md); L21 supplies [conditional local opening at all three zero-weight walls](../independent-review/ZERO_WEIGHT_OPENING.md). These close those scoped construction tasks. R02/H1 and R03/H2 still require coverage of the remaining native sources; whole-wall PD selection is not supplied. New independent review and final manuscript integration remain separate.
+
 ## Immediate dependency and assignment map
 
 | Work | Present assignment or next dependency |

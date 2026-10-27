@@ -27,6 +27,8 @@ reconciles the current source coverage with the independently checked global
 implication. The [remaining construction](../complete-proof-materials/VERIFICATION_PLAN.md)
 concerns universal strict-source PSD admission and exactness of the already evaluated conditional global pencil. The [current frontier](../FRONTIER.md) and [C2 n=0 opening theorem](C2_N0_OPENING.md) give the latest scopes.
 
+New scoped all-testing constructions are [the balanced C1 source cone and native tube](C1_BALANCED_SLICE.md), with exact order-five source/behavior pencils, and [contact-compatible opening at all three zero-weight walls](ZERO_WEIGHT_OPENING.md). Their complete rational data and standalone checkers are included. Universal H1/H2 and independent review of these new results remain open.
+
 For the current construction route, read
 [`EXACT_LIFT_ROUTE.md`](EXACT_LIFT_ROUTE.md): a fixed NPA baseline, the
 seven-root reduction forced by two classical zeros, the existing closed-face
