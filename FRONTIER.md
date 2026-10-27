@@ -18,6 +18,8 @@ The [nine-work literature comparison](independent-review/LITERATURE_COMPARISON.m
 
 ## What would complete the current candidate
 
+The planar result now has a [two-page exposition](planar-npa-lift/note/main.pdf), [PRL article draft](planar-npa-lift/article/main.pdf), and [integrated complete proofs](planar-npa-lift/proofs/main.pdf). Its proof follows the determinant reduction to one angle, a quartic affine matrix, and attained duality, then explains the independent-angle Motzkin obstruction to fixed NPA depth. All signed support branches, boundary membership and the 32 physical projections are included.
+
 The separately completed [common-tilt planar lift and 32 physical projections](extracted-lifts/common-tilt-planar/README.md) are now preserved in Git with their original proof, actual matrices, checkers and delivery archives. They give exact support on the stated 32 planes and, using the imported nontermination theorem, strictly strengthen every fixed NPA level. They do not establish full-set membership or H1/H2. The common affine construction for W3 also remains open. This publication imports existing local results; no original manuscript or certificate was rewritten.
 
 Let

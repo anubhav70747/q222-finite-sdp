@@ -1,0 +1,52 @@
+{
+  "date_utc": "2026-10-27T17:30:13.112865+00:00",
+  "scope": "Exact algebra, source preservation and artifact delivery. Universal implications are in the analytical proofs.",
+  "checks": [
+    {
+      "script": "checks/verify_symmetric.py",
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"all exact identities verified\",\n  \"checks\": [\n    \"physical Kronecker operator equals displayed 4x4 block\",\n    \"CHSH square identity\",\n    \"characteristic e1\",\n    \"characteristic e2\",\n    \"characteristic e3\",\n    \"complete homogeneous determinant\",\n    \"global determinant diagonal difference\",\n    \"e2 positivity expansion\",\n    \"e3 positivity expansion\",\n    \"explicit Bell-basis orthogonality\",\n    \"symmetric 3x3 block and scalar -2hc\",\n    \"quartic tangent-half-angle identity\",\n    \"parity involution\",\n    \"h=0 singular case\",\n    \"all sixteen affine Gram equations\",\n    \"critical one-sided SOS\",\n    \"symmetric stationary resultant factorization\"\n  ],\n  \"count\": 17,\n  \"scope\": \"Named polynomial identities only; universal proof in ../proofs/main.tex.\"\n}"
+    },
+    {
+      "script": "checks/verify_membership_and_asymmetric.py",
+      "exit_code": 0,
+      "stdout": "PASS sixteen-row adjoint, behavior coordinates, positive anchor and injectivity\nPASS general signed physical determinant, edge factorization and characteristic inputs\nPASS signed ray congruence, degree six and affinity in the candidate bound"
+    },
+    {
+      "script": "checks/build_orbit_constraints.py",
+      "exit_code": 0,
+      "stdout": "Verified all128 physical actions reduce to32 distinct projection constraints.\nMaterialized64 PSD blocks, total order288,512 auxiliaries and96 affine equations.\n.\\checks\\ALL32_EXACT_PROJECTION_CONSTRAINTS.json"
+    }
+  ],
+  "matrix_regeneration_byte_identical": true,
+  "prior_NPA_S1_S10_body_preserved_exactly": true,
+  "source_baselines_unchanged": true,
+  "all_internal_refs_and_citations_resolve": true,
+  "pdf_pages": {
+    "note": 2,
+    "article": 3,
+    "proofs": 23
+  },
+  "visual_review": "Every final page inspected; equations and text fit, no clipping. Final proof bibliography occupies pages22-23.",
+  "reviews": [
+    {
+      "role": "bounded mathematical coauthor perspective",
+      "model": "Sol high",
+      "scope": "Theorem/proof correspondence, all support branches, attainment, 32 physical projections and complete prior proof preservation",
+      "outcome": "One introductory branch qualification corrected; no other consequential issue found."
+    },
+    {
+      "role": "editorial fresh-reader pass followed by a bounded return review",
+      "model": "Sol high",
+      "scope": "Central insight, argument flow and abstract consistency",
+      "outcome": "Constructive proof moved first; determinant range qualified; NPA scale interpreted; redundant closing recap removed."
+    }
+  ],
+  "abstract_status": "Candidate, not author-accepted or locked.",
+  "portable_fresh_build": {
+    "exit_code": 0,
+    "stdout": "Built note/main.pdf\nBuilt article/main.pdf\nBuilt proofs/main.pdf",
+    "all_three_PDF_texts_match_delivered_versions": true
+  },
+  "desktop_editor_compilation": "All three projects compiled successfully."
+}

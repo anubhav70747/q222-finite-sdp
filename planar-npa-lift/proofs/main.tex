@@ -1,0 +1,1646 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,bm,microtype}
+\usepackage[hidelinks]{hyperref}
+\emergencystretch=2em
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb R}\newcommand{\C}{\mathbb C}
+\newcommand{\id}{\mathbf 1}\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\tr}{\operatorname{tr}}\newcommand{\Q}{\mathcal Q}
+\newcommand{\W}{\mathcal W}\newcommand{\sxdeg}{\operatorname{sxdeg}}
+\newcommand{\Span}{\operatorname{span}}\newcommand{\Newt}{\operatorname{Newt}}
+\title{Complete proofs\\Infinite NPA depth at minimal semidefinite complexity}
+\author{Anubhav Chaturvedi}\date{27 October 2026}
+\begin{document}
+\maketitle
+
+Let $M=\langle A_0\rangle+\langle B_0\rangle$ and
+$S=\langle A_0B_0+A_0B_1+A_1B_0-A_1B_1\rangle$ in the two-input,
+two-output Bell scenario. We prove that their full quantum region
+$\W=\{(M,S):p\in\Q_{222}\}$ has an explicit affine semidefinite lift
+with blocks of orders five and four and has semidefinite extension
+degree two, although every fixed NPA level projects strictly outside it.
+
+Part I proves the complete support reduction, gives the exact membership
+matrices and proves boundary attainment. It also covers all signed
+asymmetric tilt branches and the thirty-two physically relabelled projections.
+Part II reproduces the full nontermination argument from the author's
+September 2026 manuscript~\cite{prior}, including the quantum asymptotics,
+dual attainment, Gram trace bound, uniform Taylor estimates and polynomial
+compactness. No numerical positivity assumption enters either proof.
+
+\part*{I. The finite representation}
+\renewcommand{\thesection}{F\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\theequation}{F\arabic{equation}}
+\renewcommand{\thetheorem}{F\arabic{theorem}}
+\renewcommand{\theHequation}{F.\arabic{equation}}
+\renewcommand{\theHsection}{F.\arabic{section}}
+\section{One polynomial for every symmetric support direction}
+
+Let \(H=h\,\mathrm{CHSH}+a(A_0+B_0)\), with \(h,a\in\mathbb R\).
+Write
+\[
+ {\cal C}=\{(\lambda,a,h):\lambda I-H\succeq0
+ \text{ for every quantum realization}\}.
+\]
+Jordan's lemma, after projective dilation, reduces this condition to real
+two-qubit blocks. Put
+\[
+ A_0=B_0=Z,\quad A_1=cZ+rX,\quad B_1=dZ+sX,\qquad
+ r^2=1-c^2,\ s^2=1-d^2 .
+\]
+We may take \(r,s\ge0\) by local \(Z\) conjugations. Endpoints include the
+one-dimensional blocks. Complex state vectors cause no further condition,
+because the Bell matrix is real symmetric.
+
+Set \(H_*=|h|\), \(b=|a|\) and \(L=2H_*+2b\).
+Deterministic assignments attain \(L\): choose \(A_0=B_0=\operatorname{sign}(a)\),
+and take \(A_1=B_1\) equal to that sign for \(h\ge0\), or its negative for \(h<0\).
+At \(a=0\), either sign works. Therefore every admissible \(\lambda\) satisfies
+\(\lambda\ge L\).
+
+\paragraph{The determinant controls positivity.}
+With \(\Omega=1+c+d-cd\in[-2,2]\), the coefficients in
+\[
+ \det(uI+\lambda I-H)=u^4+e_1u^3+e_2u^2+e_3u+e_4
+\]
+are
+\begin{align*}
+ e_1&=4\lambda,&
+ e_2&=6\lambda^2-4a^2-8h^2,\\
+ e_3&=4\lambda^3-8\lambda a^2-16\lambda h^2-8ha^2\Omega,
+ &e_4&=\det(\lambda I-H).
+\end{align*}
+The first three are nonnegative for \(\lambda\ge L\).
+For \(e_3\), bound its last term below by \(-16H_*b^2\).
+The resulting cubic is increasing for \(\lambda\ge L\), and at \(L\) equals
+\(16b(b+2H_*)^2\).
+Consequently
+\[
+ \lambda I-H\succeq0\quad\Longleftrightarrow\quad e_4\ge0 .
+\]
+Indeed, a negative eigenvalue would produce a positive root of a polynomial
+whose coefficients are all nonnegative. This argument includes zero determinants
+and multiple zero eigenvalues.
+
+\paragraph{Equal overlaps give the global minimum.}
+Put \(x=(1-c)/2\), \(y=(1-d)/2\), and denote the determinant by \(D(x,y)\).
+Direct expansion gives
+\begin{align*}
+D(x,y)={}&D_0+64h^2(4h^2-a^2)xy(x+y)\\
+ &+(32\lambda ha^2+128h^2a^2-256h^4)xy-256h^4x^2y^2,\\
+D_0={}&[(\lambda-2h)^2-4a^2](\lambda+2h)^2.
+\end{align*}
+Hence
+\begin{equation}
+ D(x,y)-D(\sqrt{xy},\sqrt{xy})
+ =64h^2(4h^2-a^2)xy(\sqrt x-\sqrt y)^2 .
+ \label{eq:diagonal}
+\end{equation}
+For \(|a|\le |h|\), the right side is nonnegative. Testing all equal-overlap
+blocks therefore suffices for every pair \(c,d\). No division by an angle,
+a determinant, or \(h\) occurs.
+
+\paragraph{The remaining directions are classical.}
+The range \(b\ge H_*\) has exact support value \(L\).
+To prove this, set \(C_B=(B_0+B_1)/2\), \(D_B=(B_0-B_1)/2\). Then
+\begin{equation}
+ 4I-(\mathrm{CHSH}+2A_0)
+ =(I-C_B-A_1D_B)^2+
+ \frac14\sum_{y=0}^1[(I-A_0)(I+B_y)]^2\succeq0 .
+ \label{eq:critical}
+\end{equation}
+Here \(C_B^2+D_B^2=I\) and \(C_BD_B+D_BC_B=0\).
+Party exchange and output flips give
+\(\sigma\mathrm{CHSH}+2\tau A_0\le4I\) and
+\(\sigma\mathrm{CHSH}+2\tau B_0\le4I\), for either sign \(\sigma,\tau\).
+Average these inequalities, multiply by \(H_*\), and add
+\((b-H_*)[2I-\tau(A_0+B_0)]\succeq0\).
+The resulting bound is \(H\le LI\), attained by the deterministic strategies above.
+This also covers \(h=0\), the critical line, and both coefficient signs.
+
+\paragraph{The quartic matrix.}
+On \(c=d\), the Bell basis
+\[
+ \phi_\pm=(|00\rangle\pm|11\rangle)/\sqrt2,\qquad
+ \psi_\pm=(|01\rangle\pm|10\rangle)/\sqrt2
+\]
+splits off \(\psi_-\), with eigenvalue \(-2hc\).
+In the basis \((\phi_+,\phi_-,\psi_+)\), the remaining block is
+\[
+ H_3(c)=
+ \begin{pmatrix}
+ 2hc&2a&0\\
+ 2a&2h(1+c-c^2)&2h(1-c)\sqrt{1-c^2}\\
+ 0&2h(1-c)\sqrt{1-c^2}&-2h(1+c-c^2)
+ \end{pmatrix}.
+\]
+Use \(c=(1-t^2)/(1+t^2)\) and multiply its slack by \((1+t^2)^2\).
+Writing
+\[
+ p_0=(1+t^2)^2,\qquad p_1=1-t^4,\qquad p_2=1+4t^2-t^4,
+\]
+the resulting quartic is
+\begin{equation}
+ K_{h,a,\lambda}(t)=
+ \begin{pmatrix}
+ \lambda p_0-2hp_1&-2ap_0&0\\
+ -2ap_0&\lambda p_0-2hp_2&-8ht^3\\
+ 0&-8ht^3&\lambda p_0+2hp_2
+ \end{pmatrix}.
+ \label{eq:K}
+\end{equation}
+Finite \(t\ge0\) covers \(-1<c\le1\); \(c=-1\) follows by continuity.
+Negative \(t\) adds no condition because
+\(K(-t)=\operatorname{diag}(1,1,-1)K(t)\operatorname{diag}(1,1,-1)\).
+
+Conversely, \(K(t)\succeq0\) for all real \(t\) forces the local bound.
+Its upper-left block at \(t=0\) gives \(\lambda\ge2h+2|a|\);
+the leading coefficient at \(t=\infty\) gives \(\lambda\ge-2h+2|a|\).
+Thus \(\lambda\ge L\), and the omitted scalar sector is controlled.
+Equation~\eqref{eq:diagonal} handles the low-tilt range; Eq.~\eqref{eq:critical}
+handles the rest. We have proved, for all real coefficients,
+\begin{equation}
+ (\lambda,a,h)\in{\cal C}
+ \quad\Longleftrightarrow\quad
+ K_{h,a,\lambda}(t)\succeq0\quad\text{for every }t\in\mathbb R .
+ \label{eq:cone}
+\end{equation}
+
+\paragraph{A fixed affine Gram lift.}
+Every PSD real univariate matrix polynomial is a polynomial matrix sum of squares,
+including identically singular ones~\cite{hs}.
+Since the diagonal entries of \(K\) have degree at most four, every square factor
+has degree at most two: highest-degree real squares cannot cancel.
+Average a Gram representation under the involution above. Its two parity blocks
+use precisely
+\[
+ Z_+=(\xi_1,\xi_2,t\xi_3,t^2\xi_1,t^2\xi_2)^T,\qquad
+ Z_-=(\xi_3,t\xi_1,t\xi_2,t^2\xi_3)^T.
+\]
+Thus \(\xi^TK(t)\xi=Z_+^TGZ_++Z_-^TJZ_-\), with
+\(G\succeq0\) of order five and \(J\succeq0\) of order four.
+The sixteen coefficient equations are
+\begin{equation}
+\begin{aligned}
+ g_{11}&=\lambda-2h,&g_{12}&=-2a,\\
+ g_{22}&=\lambda-2h,&j_{11}&=\lambda+2h,\\
+ g_{13}+j_{12}&=0,&g_{23}+j_{13}&=0,\\
+ 2g_{14}+j_{22}&=2\lambda,&g_{15}+g_{24}+j_{23}&=-4a,\\
+ 2g_{25}+j_{33}&=2\lambda-8h,&g_{33}+2j_{14}&=2\lambda+8h,\\
+ g_{34}+j_{24}&=0,&g_{35}+j_{34}&=-8h,\\
+ g_{44}&=\lambda+2h,&g_{45}&=-2a,\\
+ g_{55}&=\lambda+2h,&j_{44}&=\lambda-2h .
+\end{aligned}
+\label{eq:rows}
+\end{equation}
+These equations include zero coefficients, lower polynomial degrees and every
+rank-deficient case. Setting \(h=1\) gives the common-tilt epigraph for all real
+\(a\); its restriction to \(0\le a\le1\) additionally requires those two scalar
+inequalities.
+
+\section{Explicit membership matrices for the quantum region}
+
+Introduce sixteen real variables \(z_1,\ldots,z_{16}\) and define
+\begin{equation}
+\begin{split}
+ U(z)&=
+ \begin{pmatrix}
+ z_1&z_2/2&z_5/2&z_7&z_8/2\\
+ z_2/2&z_3&z_6/2&z_8/2&z_9\\
+ z_5/2&z_6/2&z_{10}&z_{11}/2&z_{12}/2\\
+ z_7&z_8/2&z_{11}/2&z_{13}&z_{14}/2\\
+ z_8/2&z_9&z_{12}/2&z_{14}/2&z_{15}
+ \end{pmatrix},\\[2pt]
+ V(z)&=
+ \begin{pmatrix}
+ z_4&z_5/2&z_6/2&z_{10}\\
+ z_5/2&z_7&z_8/2&z_{11}/2\\
+ z_6/2&z_8/2&z_9&z_{12}/2\\
+ z_{10}&z_{11}/2&z_{12}/2&z_{16}
+ \end{pmatrix}.
+\end{split}\label{eq:dualmat}
+\end{equation}
+The exact membership test is
+\[
+ (M,S)\in\W\quad\Longleftrightarrow\quad
+ \text{there exists }z\in\mathbb R^{16}
+ \text{ with }U(z)\succeq0,\quad V(z)\succeq0,
+\]
+and
+\begin{align}
+ 1={}&z_1+z_3+z_4+2z_7+2z_9+2z_{10}+z_{13}+z_{15}+z_{16},\nonumber\\
+ M={}&2z_2+4z_8+2z_{14},\nonumber\\
+ S={}&2z_1+2z_3-2z_4+8z_9-8z_{10}+8z_{12}
+       -2z_{13}-2z_{15}+2z_{16}.
+ \label{eq:coords}
+\end{align}
+
+Here is why dualization gives both inclusions and attains the auxiliary variables.
+Write Eq.~\eqref{eq:rows} as
+\(\mathcal A(G,J)=B(\lambda,a,h)\), in the displayed row order.
+The matrices in Eq.~\eqref{eq:dualmat} are exactly
+\(\mathcal A^*z\), and
+\(B^Tz=(\ell(z),-M(z),-S(z))\), where \(\ell\) is the normalization in
+Eq.~\eqref{eq:coords}. Therefore a feasible \(z\) pairs nonnegatively with every
+valid support inequality.
+
+For the reverse implication, the dual image
+\[
+ {\cal D}=\{B^Tz:U(z)\succeq0,\ V(z)\succeq0\}
+\]
+is closed. Indeed, the positive definite matrices
+\[
+ G_0=\operatorname{diag}(1,1,2,1,1),\qquad
+ J_0=\operatorname{diag}(1,2,2,1)
+\]
+satisfy \(\mathcal A(G_0,J_0)=B(1,0,0)\), and hence
+\(\ell(z)=\tr[U(z)G_0]+\tr[V(z)J_0]\).
+If \(B^Tz\) converges, this weighted trace bounds both PSD matrices.
+Every \(z_i\) occurs in their entries, so \(z\) is bounded and has a convergent
+subsequence. The limit is feasible. The strictly feasible pair \((G_0,J_0)\)
+licenses the conic intersection-dual rule, giving
+\({\cal C}^*=\overline{\cal D}={\cal D}\).
+Finally, the compact convex set \(\W\) is the intersection of its support
+half-spaces, so \((M,S)\in\W\) exactly when \((1,-M,-S)\in{\cal C}^*\).
+This proves the membership test. The normalized feasible \(z\)-set is itself
+compact by the same trace argument.
+
+\section{Minimal block order and the NPA comparison}
+
+The set \(\W\) is compact and convex. The explicit lift makes it semialgebraic.
+Scheiderer's planar theorem therefore gives \(\sxdeg(\W)\le2\)~\cite{soc}.
+A short argument shows that \(\W\) is not a polygon.
+
+Let \(f(a)=\max_{\W}(S+aM)\), and \(w=2\sqrt2=f(0)\).
+The identity
+\[
+ \mathrm{CHSH}(c,d)^2=4I+4rs\,Y\otimes Y
+\]
+shows that attaining \(w\) requires \(r=s=1\).
+At \(c=d=0\), the top state is
+\(v=\cos(\pi/8)\phi_-+\sin(\pi/8)\psi_+\), with both reduced states \(I/2\).
+Thus every CHSH-maximizing behavior has \(M=0\).
+For maximizers \(p_a\) of \(f(a)\), compactness then gives \(M(p_a)\to0\) as
+\(a\downarrow0\), and
+\[
+ 0\le\frac{f(a)-w}{a}\le M(p_a)\longrightarrow0.
+\]
+Yet \(f(a)>w\) for every \(a>0\): keeping \(c=d=0\), the normalized state
+\((v+\varepsilon\phi_+)/\sqrt{1+\varepsilon^2}\) gives
+\[
+ \frac{w+4a\cos(\pi/8)\varepsilon}{1+\varepsilon^2}>w
+ \quad\text{for}\quad \varepsilon=\frac{2a\cos(\pi/8)}w .
+\]
+A polygon would make \(f\) piecewise affine with finitely many pieces.
+Its zero right derivative at zero would force an initial constant piece,
+contradicting this strict increase. Therefore \(\W\) is nonpolyhedral, and
+\[
+ \boxed{\sxdeg(\W)=2.}
+\]
+The same proof gives extension degree two for
+\(\{(a,\lambda):0\le a\le1,\ \lambda\ge f(a)\}\).
+
+The prior NPA result applies to these very support directions \(h=1\)~\cite{prior}:
+\[
+ f(1-T)=4-2T+\frac43T^3+O(T^4),\qquad
+ \frac{\omega_{\mathrm{NPA}}^{(L)}(1-T)-f(1-T)}{T^3}\longrightarrow+\infty
+\]
+for every fixed finite level \(L\).
+Consequently no fixed NPA projection onto \((M,S)\) equals \(\W\), while
+Eqs.~\eqref{eq:dualmat}--\eqref{eq:coords} describe that same region exactly.
+The nontermination theorem is proved in Part II. The finite lift and the
+nonpolyhedrality argument above are independent of that proof.
+
+\section{All signed asymmetric tilt branches}
+
+The weighted-ray argument also extends to arbitrary real tilts in
+\[
+ H_{\alpha,\beta}=\mathrm{CHSH}+\alpha A_0+\beta B_0.
+\]
+Put \(q=|\alpha|+|\beta|\). Its local bound is \(2+q\), attained for any tilt
+signs. If \(q\ge2\), signed one-sided versions of Eq.~\eqref{eq:critical},
+convex combination on \(q=2\), and sign-adjusted marginal slacks above it prove
+that this is also the quantum bound.
+
+Suppose \(q<2\) and \(\lambda\ge2+q\). For the full Jordan slack,
+\[
+ e_2=6\lambda^2-2\alpha^2-2\beta^2-8,\qquad
+ e_3=4\lambda^3-4\lambda(\alpha^2+\beta^2+4)-8\alpha\beta\Omega .
+\]
+Both are nonnegative. For \(e_3\), a lower bound is
+\(g(\lambda)=4\lambda^3-4\lambda(q^2+4)-4q^2\).
+It increases on this range, and \(g(2+q)=32q+12q^2\ge0\).
+Thus the determinant again decides PSD.
+
+With \(x=(1-c)/2\), \(y=(1-d)/2\), direct expansion gives
+\begin{align*}
+ D(x,y)&=D_0+xy[C+64Ax+64By-256xy],\\
+ A&=4-\alpha^2,\qquad B=4-\beta^2,\\
+ C&=32\lambda\alpha\beta+64\alpha^2+64\beta^2-256,\\
+ D_0&=[(\lambda-2)^2-(\alpha+\beta)^2]
+       [(\lambda+2)^2-(\alpha-\beta)^2].
+\end{align*}
+Both \(A,B\) are positive. Exchange parties if necessary so that
+\(|\alpha|\ge|\beta|\), and set \(\rho=A/B\in(0,1]\).
+For a fixed product \(p=xy\), minimize \(Ax+Bp/x\) on \(p\le x\le1\).
+For \(p\le\rho\), its minimizer lies on \(x=z,y=\rho z\).
+For \(p>\rho\), it lies on \(x=1\). On that edge,
+\[
+ D(1,y)=-F_-(y)F_+(y),
+\]
+where
+\[
+ F_-=-(\lambda+\alpha)^2+\beta^2+4+4\beta(2y-1),\qquad
+ F_+=(\lambda-\alpha)^2-\beta^2-4+4\beta(2y-1).
+\]
+Since \(\lambda\pm\alpha\ge2+|\beta|\), we have \(F_-\le0\le F_+\).
+Hence the complete measurement square reduces to the weighted ray, for every
+choice of tilt signs.
+
+Along the ray, put
+\(R=4z(1-z)\), \(T=4\rho z(1-\rho z)\), and \(\Omega=2-4\rho z^2\).
+Congruence by \(\operatorname{diag}(\sqrt{RT},\sqrt R,\sqrt T,1)\) gives
+\begin{equation}
+ P(z)=
+ \begin{pmatrix}
+ RT(\lambda-\Omega-\alpha-\beta)&-2zRT&-2\rho zRT&RT\\
+ -2zRT&R(\lambda+\Omega-\alpha+\beta)&RT&2\rho zR\\
+ -2\rho zRT&RT&T(\lambda+\Omega+\alpha-\beta)&2zT\\
+ RT&2\rho zR&2zT&\lambda-\Omega+\alpha+\beta
+ \end{pmatrix}.
+ \label{eq:rayP}
+\end{equation}
+This matrix has degree at most six. The congruence is invertible on \(0<z<1\);
+the original slack at both endpoints follows by continuity from that interval.
+The matrix interval sum-of-squares theorem gives
+\begin{equation}
+ P(z)=Y_3(z)^TUY_3(z)+z(1-z)Y_2(z)^TVY_2(z),\qquad
+ U\succeq0,\quad V\succeq0,
+ \label{eq:interval}
+\end{equation}
+with \(Y_j=(I_4,zI_4,\ldots,z^jI_4)^T\), and block orders \(16,12\).
+One can obtain this interval theorem directly from the real-line matrix theorem:
+apply it to \((1+t^2)^6P(t^2/(1+t^2))\), split its factors into even and odd parts,
+and divide back. Even factors become polynomials of degree at most three in \(z\);
+odd factors give \(\sqrt{z(1-z)}\) times polynomials of degree at most two.
+This argument also includes singular matrices and endpoint zeros.
+
+For fixed \(\alpha,\beta\), coefficient matching in Eq.~\eqref{eq:interval}
+is affine in \(\lambda,U,V\). Include \(\lambda\ge2+q\) explicitly.
+This yields an exact fixed-size SDP throughout the signed subcritical diamond,
+including either zero-tilt axis and CHSH. The critical and exterior branches
+are the elementary local-bound certificates already proved.
+The ratio \(\rho\) still depends nonlinearly on the two independent tilts:
+this construction computes their support values, while the common-tilt
+construction above gives an affine membership lift.
+
+
+\section{Thirty-two exact projections and their NPA intersections}
+\label{finite:sec:orbit}
+
+For a sign pattern $\chi\in\{\pm1\}^{2\times2}$ satisfying
+$\prod_{ij}\chi_{ij}=-1$, and $x,y\in\{0,1\}$, set
+\[
+ M_{\chi,xy}=a_x+\chi_{xy}b_y,\qquad
+ S_\chi=\sum_{ij}\chi_{ij}E_{ij}.
+\]
+The quantum image of $(M_{\chi,xy},S_\chi)$ is exactly $\W$.
+Here is an explicit physical relabelling. In the canonical observables
+replace
+\[
+ A_0'=A_x,\quad A_1'=\varepsilon_1 A_{1-x},\qquad
+ B_0'=\eta_0B_y,\quad B_1'=\eta_1B_{1-y},
+\]
+where
+\[
+ \eta_0=\chi_{xy},\qquad
+ \eta_1=\chi_{x,1-y},\qquad
+ \varepsilon_1=\chi_{1-x,y}/\eta_0.
+\]
+Then $a'_0+b'_0=M_{\chi,xy}$. The first three CHSH coefficients
+are the corresponding entries of $\chi$, and the fourth is
+$-\varepsilon_1\eta_1=\chi_{1-x,1-y}$ because the product of
+the four entries is $-1$. The relabelling is invertible and preserves
+quantum realizability, which proves equality of the images.
+
+These are thirty-two distinct two-dimensional subspaces of the
+space of Bell functionals. The marginal part identifies $x,y$.
+Equality of the correlation directions would require
+$\chi'=\chi$ or $\chi'=-\chi$.
+The latter changes the relative sign of the two nonzero marginal
+coefficients, so the marginal directions are not proportional.
+Thus only the identical pair gives the same plane.
+
+Let $\Q_L$ be a fixed standard NPA relaxation and define
+\[
+ \mathcal R_L=\Q_L\cap
+ \bigcap_{\chi,x,y}\{p:\pi_{\chi,xy}(p)\in\W\},\qquad
+ \pi_{\chi,xy}(p)=(M_{\chi,xy},S_\chi).
+\]
+Every quantum behavior survives, while each imposed image lies in $\W$:
+\[
+ \Q_{222}\subseteq\mathcal R_L\subseteq
+ \pi_{\chi,xy}^{-1}(\W).
+\]
+For any real $h,\alpha$, these two inclusions imply
+\[
+ \sup_{p\in\mathcal R_L}
+ [hS_\chi(p)+\alpha M_{\chi,xy}(p)]
+ =
+ \sup_{p\in\Q_{222}}
+ [hS_\chi(p)+\alpha M_{\chi,xy}(p)] .
+\]
+Part II gives directions on the canonical plane for which the
+level-$L$ support is strictly larger. Hence
+$\mathcal R_L\subsetneq\Q_L$ for every finite $L$.
+
+The rational data file
+\texttt{ALL32\_EXACT\_PROJECTION\_CONSTRAINTS.json}
+implements each copy of Eqs.~\eqref{eq:dualmat}--\eqref{eq:coords}
+with the two appropriate linear forms. The added constraints use
+64 PSD blocks, alternating orders five and four, total order 288,
+512 auxiliary variables and 96 affine equations. The generator enumerates
+physical relabellings and checks the distinct maps exactly.
+The inclusions above establish exactness on the stated planes;
+they impose no claim of joint quantum realizability outside those
+projections.
+
+\clearpage
+\part*{II. The complete finite-NPA obstruction}
+\setcounter{section}{0}\setcounter{equation}{0}\setcounter{theorem}{0}
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\theequation}{S\arabic{equation}}
+\renewcommand{\thetheorem}{S\arabic{theorem}}
+\renewcommand{\theHequation}{S.\arabic{equation}}
+\renewcommand{\theHsection}{S.\arabic{section}}
+All remainder bounds are locally uniform in the angular coordinates: $R(t,x,y)=O_K(t^m)$ means that for every compact $K\subset\R^2$ there are $C_K,\delta_K>0$ such that
+\begin{equation}
+\sup_{(x,y)\in K}|R(t,x,y)|\leq C_K|t|^m
+\qquad (0<|t|<\delta_K).
+\label{supp:eq:uniform-big-O-definition}
+\end{equation}
+For vector or matrix remainders, the same definition uses the Euclidean or operator norm. We omit $K$ when no angular variables are present.
+
+\section{Bell correlations, the doubly tilted CHSH functional, and quantum strategies}
+\label{supp:sec:bell}
+
+\subsection{Correlations and Bell values}
+
+Alice and Bob choose settings $x,y\in\{0,1\}$ and obtain outcomes $a,b\in\{\pm1\}$. Their correlation $p(a,b|x,y)$ consists of normalized, nonnegative conditional probabilities with no-signaling marginals
+\begin{equation}
+p_A(a|x)=\sum_b p(a,b|x,y),
+\qquad
+p_B(b|y)=\sum_a p(a,b|x,y).
+\label{supp:eq:nosig-a}
+\end{equation}
+No-signaling means that the first marginal is independent of $y$ and the second of $x$. The corresponding marginal expectations and joint correlators are
+\begin{equation}
+\langle A_x\rangle=\sum_a a\,p_A(a|x),
+\qquad
+\langle B_y\rangle=\sum_b b\,p_B(b|y),
+\qquad
+\langle A_xB_y\rangle=\sum_{a,b}ab\,p(a,b|x,y).
+\label{supp:eq:correlator}
+\end{equation}
+These eight real numbers specify the full correlation through~\cite{BrunnerEtAl2014}
+\begin{equation}
+p(a,b|x,y)=\frac14\left[1+a\langle A_x\rangle+b\langle B_y\rangle+ab\langle A_xB_y\rangle\right],
+\label{supp:eq:behavior-reconstruction}
+\end{equation}
+subject to nonnegativity of the reconstructed probabilities.
+
+For $0\leq\alpha<1$, the symmetric doubly tilted CHSH functional is
+\begin{equation}
+\beta_\alpha(p)=\langle A_0B_0\rangle+\langle A_0B_1\rangle
++\langle A_1B_0\rangle-\langle A_1B_1\rangle
++\alpha(\langle A_0\rangle+\langle B_0\rangle).
+\label{supp:eq:bell-functional-on-behaviors}
+\end{equation}
+We use $h_\alpha$ for the corresponding polynomial in observable symbols,
+\begin{equation}
+h_\alpha=A_0B_0+A_0B_1+A_1B_0-A_1B_1+\alpha(A_0+B_0).
+\label{supp:eq:bell-functional}
+\end{equation}
+A choice of observables turns $h_\alpha$ into a Bell operator whose expectation is $\beta_\alpha(p)$. The CHSH local bound is $2$~\cite{CHSH1969}, the two marginal terms contribute at most $2\alpha$, and the deterministic assignment $A_0=A_1=B_0=B_1=1$ attains both bounds. Hence
+\begin{equation}
+\omega_{\rm L}(\alpha)=2+2\alpha.
+\label{supp:eq:local-value}
+\end{equation}
+
+The same functional describes CHSH with equal detector efficiencies and outcome $+1$ assigned to every no-detection event~\cite{MiklinEtAl2022,GigenaEtAl2025}. Suppose each detector fires with probability $\eta$, independently of the other detector, the settings, and the ideal outcomes. For an ideal correlation $p$,
+\begin{align*}
+\langle A_xB_y\rangle_\eta
+&=\eta^2\langle A_xB_y\rangle
++\eta(1-\eta)(\langle A_x\rangle+\langle B_y\rangle)+(1-\eta)^2,\\
+\mathrm{CHSH}_\eta(p)
+&=\eta^2\beta_\alpha(p)+2(1-\eta)^2,
+\qquad \alpha=\frac{2(1-\eta)}{\eta}.
+\end{align*}
+The setting-$1$ marginals cancel in the CHSH sum, while the setting-$0$ marginals each enter twice. Thus $\alpha\uparrow1$ corresponds to approaching the critical efficiency $\eta^*=2/3$ from above~\cite{Eberhard1993}. The local bound becomes $2$, and both the violation above the local bound and the NPA error acquire the factor $\eta^2$, preserving their ratio.
+
+\subsection{CHSH and one-sided tilted CHSH}
+
+Short lists of observable products already recover several exact quantum bounds. These lists index the NPA moment matrices defined in Section~\ref{supp:sec:npa}. Observable level $1$ uses
+\begin{equation}
+\mathcal W_1=\{\id,A_0,A_1,B_0,B_1\},
+\label{supp:eq:level-one-list}
+\end{equation}
+and gives the exact CHSH maximum $2\sqrt2$~\cite{Tsirelson1980,NPA2007}. The intermediate level $1+AB$ uses
+\begin{equation}
+\mathcal W_{1+AB}=\mathcal W_1\cup\{A_xB_y:x,y\in\{0,1\}\}.
+\label{supp:eq:level-one-ab-list}
+\end{equation}
+For the one-sided tilted CHSH operator~\cite{AMP2012},
+\begin{equation}
+I_\gamma=A_0B_0+A_0B_1+A_1B_0-A_1B_1+\gamma A_0,
+\qquad 0\leq\gamma<2,
+\label{supp:eq:one-sided-tilted}
+\end{equation}
+tight sum-of-squares decompositions use words in $\mathcal W_{1+AB}$ and self-test the maximizing strategy~\cite{BampsPironio2015,SupicBowles2020}. Consequently, level $1+AB$ is exact when either marginal tilt vanishes~\cite{GigenaEtAl2025}.
+
+\subsection{Quantum strategies and projective measurements}
+
+A quantum correlation has the form
+\begin{equation}
+p(a,b|x,y)=\Tr\!\left[\rho_{AB}\,E_{a|x}\otimes F_{b|y}\right],
+\label{supp:eq:quantum-behavior}
+\end{equation}
+where $\rho_{AB}$ is a density operator on $\mathcal H_A\otimes\mathcal H_B$ and
+\begin{equation}
+E_{a|x}\succeq0,\quad\sum_aE_{a|x}=I_A,
+\qquad
+F_{b|y}\succeq0,\quad\sum_bF_{b|y}=I_B.
+\label{supp:eq:povm-relations}
+\end{equation}
+Write $\Q$ for this tensor-product correlation set and $\omega_{\rm Q}(\alpha)=\sup_{p\in\Q}\beta_\alpha(p)$. Section~\ref{supp:subsec:models} establishes its equality with the finite-dimensional, closure, and commuting-operator versions.
+
+By Naimark dilation, the local POVMs can be replaced by projective measurements on larger local spaces without changing any joint probability~\cite{Naimark1940}. The dilation is common to both settings at each party and preserves finite dimensionality. Projective measurements also suffice in the commuting model by Proposition~3.4(b) of Ref.~\cite{Fritz2012}. Denote the resulting local projectors by $P_{a|x}$ and $Q_{b|y}$. Taking the difference of the two outcome projectors gives the binary observables
+\begin{equation}
+A_x=P_{+|x}-P_{-|x},
+\qquad B_y=Q_{+|y}-Q_{-|y}
+\label{supp:eq:reflections}
+\end{equation}
+which satisfy
+\begin{equation}
+A_x=A_x^*,\quad A_x^2=I,
+\qquad B_y=B_y^*,\quad B_y^2=I,
+\label{supp:eq:reflection-relations}
+\end{equation}
+with inverse relations
+\begin{equation}
+P_{a|x}=\frac{I+aA_x}{2},
+\qquad Q_{b|y}=\frac{I+bB_y}{2}.
+\label{supp:eq:projector-reflection}
+\end{equation}
+
+\section{Jordan's lemma, quantum models, and the two-qubit Bell operator}
+\label{supp:sec:jordan}
+
+Jordan's lemma decomposes any finite-dimensional pair of binary projective observables into common orthogonal invariant subspaces of dimension at most two~\cite{Halmos1969,Masanes2005,PanwarPandyaWiesniak2022}. Applied locally, it gives $\mathcal H_A=\bigoplus_iV_i$ and $\mathcal H_B=\bigoplus_jW_j$, with all measurement projectors preserving each $V_i\otimes W_j$.
+
+\subsection{Equality of the quantum models in the \texorpdfstring{$(2,2,2)$}{(2,2,2)} scenario}
+\label{supp:subsec:models}
+
+Let $\Pi_i^A,\Pi_j^B$ project onto the local Jordan blocks, and put $P_{ij}=\Pi_i^A\otimes\Pi_j^B$. The block weights are $r_{ij}=\Tr(P_{ij}\rho_{AB})$; for $r_{ij}>0$, the normalized block state is $\rho_{ij}=P_{ij}\rho_{AB}P_{ij}/r_{ij}$. Since the measurements preserve these blocks, their probabilities satisfy $p=\sum_{i,j:r_{ij}>0}r_{ij}p_{ij}$, where $p_{ij}$ is generated by $\rho_{ij}$ and the restricted measurements~\cite[Eqs.~(12)--(15)]{Masanes2005}. Let $\mathcal K_2$ contain the correlations generated by two-qubit density operators and two binary projective measurements per party, including trivial projectors. Conversely, any finite mixture of these correlations is realized by correlated classical labels selecting the corresponding local direct-sum blocks. The block decomposition and the common local dilation therefore give
+\begin{equation}
+\mathcal Q_{\rm fd}=\operatorname{conv}\mathcal K_2.
+\label{supp:eq:finite-convex-qubit-model}
+\end{equation}
+The eight-dimensional correlation space and Carath\'eodory's theorem limit each mixture to nine components. The parameters defining $\mathcal K_2$ form compact sets, and the Born probabilities depend continuously on them. The mixtures therefore form the continuous image of $\Delta_8\times\mathcal K_2^9$, where $\Delta_8$ is the probability simplex on nine points. This makes $\operatorname{conv}\mathcal K_2$ compact. The usual finite-dimensional approximation of tensor-product correlations consequently introduces no additional points~\cite{ScholzWerner2008}.
+
+For the commuting model, the local algebra generated by two binary projective measurements is nuclear; Sec.~4, Example~7(2), of Ref.~\cite{ScholzWerner2008} gives this two-projection case. Proposition~3.4 and Remark~3.6 of Ref.~\cite{Fritz2012} equate the commuting set with the tensor-product closure. The compactness above makes that closure equal to the same finite-dimensional set. Therefore
+\begin{equation}
+\mathcal Q_{\rm fd}=\Q=\overline{\mathcal Q_{\rm fd}}
+=\mathcal Q_{\rm c}=\operatorname{conv}\mathcal K_2.
+\label{supp:eq:quantum-model-equality}
+\end{equation}
+Theorem~8 of Ref.~\cite{NPA2008} states that a correlation belongs to the commuting set exactly when it satisfies every NPA level. Hence the hierarchy converges to $\Q$ in this scenario.
+
+\subsection{The two-qubit Bell operator}
+
+On each nontrivial two-dimensional Jordan block, diagonalizing the first observable gives $Z$. A phase change of the second basis vector preserves $Z$ and makes the second observable's off-diagonal entry real and nonnegative. Applied independently at Alice and Bob, these choices give
+\begin{align}
+A_0&=Z,\qquad A_1=cZ+rX,\qquad r=\sqrt{1-c^2},
+\label{supp:eq:alice-block}\\
+B_0&=Z,\qquad B_1=dZ+sX,\qquad s=\sqrt{1-d^2}.
+\label{supp:eq:bob-block}
+\end{align}
+Here $X,Z$ are Pauli matrices and $c,d\in(-1,1)$. Allowing the endpoints $c,d=\pm1$ also includes all one-dimensional blocks: the assignment $(A_0,A_1)=(\epsilon_0,\epsilon_1)$ occurs on the $Z$ eigenspace with eigenvalue $\epsilon_0$ at $c=\epsilon_0\epsilon_1$, and similarly for Bob.
+
+Set
+\begin{equation}
+\alpha=1-T,\qquad0<T\leq1.
+\label{supp:eq:T-definition}
+\end{equation}
+The two-qubit evaluation of $h_{1-T}$ is
+\begin{align}
+H_T(c,d)
+={}&(1+c+d-cd)Z\otimes Z+(1-c)s\,Z\otimes X
+\nonumber\\
+&+(1-d)r\,X\otimes Z-rs\,X\otimes X
++(1-T)(Z\otimes I+I\otimes Z).
+\label{supp:eq:operator-decomposition}
+\end{align}
+Writing
+\begin{equation}
+\Omega=1+c+d-cd,
+\label{supp:eq:omega-block}
+\end{equation}
+the matrix in the basis $|00\rangle,|01\rangle,|10\rangle,|11\rangle$ is
+\begin{equation}
+H_T(c,d)=
+\begin{pmatrix}
+\Omega+2(1-T)&(1-c)s&(1-d)r&-rs\\
+(1-c)s&-\Omega&-rs&(d-1)r\\
+(1-d)r&-rs&-\Omega&(c-1)s\\
+-rs&(d-1)r&(c-1)s&\Omega-2(1-T)
+\end{pmatrix}.
+\label{supp:eq:block-matrix}
+\end{equation}
+Every finite-dimensional Bell operator is a direct sum of these blocks or their invariant restrictions. Each block maximum is attained by its largest-eigenvalue eigenvector, and Eq.~\eqref{supp:eq:quantum-model-equality} covers all quantum models. Therefore
+\begin{equation}
+\omega_{\rm Q}(1-T)=\max_{c,d\in[-1,1]}\lambda_{\max}H_T(c,d).
+\label{supp:eq:block-maximum}
+\end{equation}
+The maximum exists by continuity on the compact parameter square and is attained on two qubits.
+
+
+\section{The Bell-value excess as a quadratic form}
+\label{supp:sec:cubic-scale}
+
+To calculate the Motzkin limit in Section~\ref{supp:sec:motzkin}, we will
+expand the Bell value of vectors close to $|00\rangle$. The following
+identity gives their excess above the local bound directly from the Bell
+matrix in Eq.~\eqref{supp:eq:block-matrix}. Denote the local bound by
+\begin{equation}
+\lambda_0(T)=4-2T,
+\label{supp:eq:lambda-zero}
+\end{equation}
+and set $u=1-c$, $v=1-d$, $r=\sqrt{1-c^2}$, and $s=\sqrt{1-d^2}$. The variables $u,v$ vanish when each party's two observables coincide.
+For a real vector $\eta=(1,b_1,b_2,b_3)^T$, multiplying the matrix by
+$\eta$ gives
+\begin{align}
+\mathcal E_T(\eta)
+:={}&\langle\eta,[H_T-\lambda_0(T)I]\eta\rangle
+\nonumber\\
+={}&-uv+2us\,b_1+2vr\,b_2-2rs\,b_3
+\nonumber\\
+&+(-6+2T+uv)(b_1^2+b_2^2)+(-4+4T-uv)b_3^2
+\nonumber\\
+&-2rs\,b_1b_2-2vr\,b_1b_3-2us\,b_2b_3.
+\label{supp:eq:excess-quadratic-form}
+\end{align}
+The normalized vector therefore attains the Bell value
+$\lambda_0(T)+\mathcal E_T(\eta)/\|\eta\|^2$.
+The same identity holds for signed $r,s$ satisfying $r^2=1-c^2$ and
+$s^2=1-d^2$, as used for the freely varying angles in
+Section~\ref{supp:sec:motzkin}.
+
+The corresponding unnormalized quantum gap is
+\[
+\langle\eta,[\omega_{\rm Q}(1-T)I-H_T]\eta\rangle
+=[\omega_{\rm Q}(1-T)-\lambda_0(T)]\|\eta\|^2-\mathcal E_T(\eta).
+\]
+
+\section{Endpoint expansions from the exact quantum bound}
+\label{supp:sec:endpoint}
+
+We use the exact quantum bound and maximizing measurements from
+Theorem~1 of Ref.~\cite{GigenaEtAl2025} to find their behavior near the
+critical tilt. For each $0\leq\alpha<1$, that theorem identifies
+$\omega_{\rm Q}(\alpha)$ with the largest real root, in the Bell-value
+variable $\lambda$, of the polynomial in Eq.~(18) of that reference:
+\begin{align}
+F(\lambda,\alpha)={}&\lambda^4+(4-\alpha^2)\lambda^3
++\left(\frac{11}{4}\alpha^4-12\alpha^2-4\right)\lambda^2
+\nonumber\\
+&+\left(2\alpha^6-\alpha^4-20\alpha^2-32\right)\lambda
+\nonumber\\
+&+5\alpha^6-21\alpha^4+16\alpha^2-32.
+\label{supp:eq:exact-quartic}
+\end{align}
+Equation~(19) of the same reference gives the common cosine of the two optimal measurement angles,
+\begin{equation}
+c_*(\alpha)=\frac18\left[3\alpha^2-4+
+\sqrt{16+9\alpha^4+8\alpha^2\bigl(2\omega_{\rm Q}(\alpha)-1\bigr)}\right].
+\label{supp:eq:exact-optimal-cosine}
+\end{equation}
+Their behavior near $\alpha=1$ fixes both the vanishing quantum violation and the angles on which to evaluate the certificates.
+
+At $\alpha=1$, the polynomial factors as
+\begin{equation}
+F(\lambda,1)=\frac14(\lambda-4)
+\left(4\lambda^3+28\lambda^2+59\lambda+32\right).
+\label{supp:eq:quartic-factor-endpoint}
+\end{equation}
+There is no real root above $4$, because the cubic factor is positive
+there. The quantum value is bounded by $4+2\alpha$ and is at least the
+local value $2+2\alpha$. Every limit point as $\alpha\uparrow1$ is
+therefore a root of $F(\lambda,1)$ at least $4$, and hence equals $4$.
+Thus $\omega_{\rm Q}(1-T)\to4$ as $T\downarrow0$.
+Changing the tilt by $T$ changes the Bell value of any strategy by at most
+$2T$: the coefficient of the tilt is the sum of two expectations in
+$[-1,1]$. The maximum obeys the same bound. Hence the quantum value and
+the local value $4-2T$ are both $4+O(T)$.
+
+We next compare the polynomial at those two values. Substituting the
+local value gives
+\[
+F(2+2\alpha,\alpha)=4(\alpha-1)^3(\alpha+2)^4,
+\]
+whereas $F(\omega_{\rm Q}(\alpha),\alpha)=0$.
+At the endpoint, the slope with respect to the Bell-value variable is
+\begin{equation}
+\left.\frac{\partial F(\lambda,\alpha)}{\partial\lambda}
+\right|_{(\lambda,\alpha)=(4,1)}=243.
+\label{supp:eq:simple-root}
+\end{equation}
+To convert the polynomial difference into a difference of Bell values,
+apply the mean-value theorem at fixed $\alpha=1-T$. With
+$\Delta_{1-T}=\omega_{\rm Q}(1-T)-(4-2T)$, it gives
+\[
+4T^3(3-T)^4
+=\Delta_{1-T}\,\partial_\lambda F(\widetilde\lambda_T,1-T),
+\]
+for some $\widetilde\lambda_T$ between the local and quantum values.
+Both endpoints are $4+O(T)$, so the intermediate value has the same form
+and its slope is $243+O(T)$. The numerator has leading coefficient $4\cdot3^4=324$; dividing by the limiting slope gives $324/243=4/3$. Thus
+\[
+\Delta_{1-T}=\frac43T^3+O(T^4).
+\]
+
+The nonzero derivative in Eq.~\eqref{supp:eq:simple-root} also controls
+the higher-order remainder. The analytic implicit function theorem
+gives a unique real-analytic root $\lambda(T)$ near $4$, with
+$\lambda(0)=4$. Since the quantum maximum tends to $4$, it must be this
+root:
+\begin{equation}
+\omega_{\rm Q}(1-T)=\lambda(T)
+\label{supp:eq:quantum-analytic-branch}
+\end{equation}
+for sufficiently small $T\geq0$.
+Write
+\[
+\lambda(T)=4-2T+\frac43T^3+c_4T^4+c_5T^5+O(T^6).
+\]
+Substitution into $F(\lambda(T),1-T)=0$ gives
+\begin{equation}
+0=27(9c_4+4)T^4+(243c_5-243c_4-120)T^5+O(T^6).
+\label{supp:eq:coefficient-equations}
+\end{equation}
+The coefficients of $T^4$ and $T^5$ must vanish, giving
+$c_4=-4/9$ and $c_5=4/81$. Analyticity bounds the remaining terms:
+there are $C,\delta>0$ such that
+\begin{align}
+\omega_{\rm Q}(1-T)
+&=4-2T+\frac43T^3-\frac49T^4+\frac4{81}T^5+R_6(T),
+\label{supp:eq:exact-endpoint-expansion}\\
+|R_6(T)|&\leq CT^6\qquad(0\leq T<\delta).
+\label{supp:eq:R6-bound}
+\end{align}
+In particular,
+\begin{equation}
+\lim_{T\downarrow0}
+\frac{\omega_{\rm Q}(1-T)-\left(4-2T+\frac43T^3\right)}{T^4}
+=-\frac49.
+\label{supp:eq:quartic-limit}
+\end{equation}
+For the detector-loss model of Section~\ref{supp:sec:bell},
+$T=(3\eta-2)/\eta=(9/2)(\eta-2/3)+O((\eta-2/3)^2)$. The observed violation is $\eta^2\Delta_\alpha$, so its leading coefficient is $(2/3)^2(4/3)(9/2)^3=54$:
+
+\[
+\eta^2[\omega_{\rm Q}(\alpha)-\omega_{\rm L}(\alpha)]
+=54(\eta-2/3)^3+O\bigl((\eta-2/3)^4\bigr)
+\qquad (\eta\downarrow2/3).
+\]
+
+Substituting the quantum-value expansion into
+Eq.~\eqref{supp:eq:exact-optimal-cosine} gives
+\begin{equation}
+c_*(1-T)=1-2T+\frac89T^2+\frac{20}{81}T^3+R_c(T),
+\label{supp:eq:optimal-cosine-expansion}
+\end{equation}
+where $|R_c(T)|\leq C_cT^4$ for sufficiently small $T$.
+Since $1-\cos\theta=\theta^2/2+O(\theta^4)$, both optimal angles
+satisfy $\theta_*(T)\sim2\sqrt T$. The cited self-testing theorem
+identifies the measurement angles of every maximizing strategy, so the
+same scale applies to all maximizers in the canonical form.
+
+
+\section{The NPA hierarchy at level \texorpdfstring{$L$}{L}: moment matrices, duality, and the trace identity}
+\label{supp:sec:npa}
+
+\subsection{Words and moment matrices}
+
+The NPA relaxation~\cite{NPA2007,NPA2008,PironioEtAl2010} keeps the measurement relations while optimizing over the moments of observable products. Write $a_x,b_y$ for the abstract binary observables and $e$ for their identity. Their products form the group
+\begin{equation}
+G=\langle a_0,a_1,b_0,b_1:
+a_x^2=b_y^2=e,\ a_xb_y=b_ya_x\rangle.
+\label{supp:eq:group-presentation}
+\end{equation}
+Moving Alice's generators to the left of Bob's and cancelling adjacent equal generators gives a unique reduced word, alternating within each party. For example, $b_0a_1a_1a_0b_1=a_0b_0b_1$. The group algebra consists of finite complex linear combinations of these words, with multiplication followed by the same reduction. The adjoint reverses each word and conjugates its coefficient. We use $h_\alpha$ from Eq.~\eqref{supp:eq:bell-functional} with $A_x,B_y$ replaced by $a_x,b_y$ in this algebra. Let $\mathcal W_L$ be the set of reduced words of length at most $L$, and set
+\begin{equation}
+V_L=\Span_{\C}\mathcal W_L.
+\label{supp:eq:VL}
+\end{equation}
+
+In a quantum strategy, the moment of a word is the expectation of the corresponding product of observables. The relaxation instead assigns a number $\ell(w)$ to each reduced word through length $2L$, without assuming a realizing strategy. Extending the assignment linearly gives a Hermitian functional $\ell$, with $\ell(g^{-1})=\overline{\ell(g)}$. Products of words through length $L$ then define its moment matrix:
+\begin{equation}
+\Gamma_L(\ell)=\bigl(\ell(u^*v)\bigr)_{u,v\in\mathcal W_L},
+\label{supp:eq:moment-matrix}
+\end{equation}
+For a normalized state $|\psi\rangle$ and an assignment $\pi$ of the generators to measurement observables, the physical moments are
+\begin{equation}
+\ell(w)=\langle\psi|\pi(w)|\psi\rangle.
+\label{supp:eq:quantum-functional}
+\end{equation}
+For these moments, $\Gamma_L(\ell)$ is the Gram matrix of the vectors $\pi(w)|\psi\rangle$, hence positive semidefinite. Maximizing the candidate Bell value $\ell(h_\alpha)$ under this necessary condition gives the level-$L$ NPA bound:
+\begin{equation}
+\omega_{\rm NPA}^{(L)}(\alpha)=
+\sup\left\{\ell(h_\alpha):\ell(e)=1,\ \Gamma_L(\ell)\succeq0\right\}.
+\label{supp:eq:primal-NPA}
+\end{equation}
+Every quantum strategy is feasible, so
+\begin{equation}
+\omega_{\rm NPA}^{(L)}(\alpha)\geq\omega_{\rm Q}(\alpha).
+\label{supp:eq:outer-bound}
+\end{equation}
+At $L=1$ this observable moment program is an algebraic upper bound; its moments need not reconstruct nonnegative probabilities. The extraction of valid correlations in Section~\ref{supp:sec:transfer} uses $d\geq2$.
+
+If $p=\sum_{w\in\mathcal W_L}c_ww$ has coefficient vector $\bm c=(c_w)_w$, then $\ell(p^*p)=\bm c^*\Gamma_L(\ell)\bm c$. Thus moment positivity is equivalent to nonnegativity on every square $p^*p$ with $p\in V_L$, and hence on their sums. These sums form the cone
+\begin{equation}
+\Sigma_L=
+\left\{\sum_{j=1}^{r}p_j^*p_j:
+p_j\in V_L,\ r<\infty\right\}.
+\label{supp:eq:sigma-L}
+\end{equation}
+Writing each $p_j$ as a row of coefficients times the word vector $\bm w$ gives $Q=C^*C$, where $C$ collects those rows. Hence every sum has the form
+\begin{equation}
+\sum_jp_j^*p_j=\bm w^*Q\bm w,
+\qquad Q\succeq0.
+\label{supp:eq:gram-representation}
+\end{equation}
+If $\lambda e-h_\alpha\in\Sigma_L$, every feasible $\ell$ satisfies $\lambda-\ell(h_\alpha)=\sum_j\ell(p_j^*p_j)\geq0$. To compare the certificate with the NPA error, we need this identity at the optimal bound itself. The strict-feasibility and boundedness conditions below give that attainment by SDP duality.
+
+\subsection{Applying SDP duality}
+
+\begin{proposition}
+\label{supp:prop:duality}
+For every $L\geq1$ and $0\leq\alpha\leq1$,
+\begin{equation}
+\omega_{\rm NPA}^{(L)}(\alpha)=
+\min\left\{\lambda\in\R:\lambda e-h_\alpha\in\Sigma_L\right\}.
+\label{supp:eq:dual-NPA}
+\end{equation}
+The primal maximum and the dual minimum are attained, and the Gram matrix in Eq.~\eqref{supp:eq:gram-representation} may be chosen real and symmetric.
+\end{proposition}
+
+\begin{proof}
+The canonical trace extracts the identity coefficient of a word polynomial:
+\begin{equation}
+\tau\!\left(\sum_{g\in G}c_gg\right)=c_e.
+\label{supp:eq:canonical-trace}
+\end{equation}
+Since $u^*v=e$ exactly when $u=v$, we have $\tau(u^*v)=\delta_{u,v}$ and hence
+\begin{equation}
+\Gamma_L(\tau)=I\succ0.
+\label{supp:eq:strict-feasibility}
+\end{equation}
+Thus the positivity constraint has a strictly feasible point~\cite[Appendix~C]{Tavakoli2024}. To show that the optimum is finite and attained, consider the $2\times2$ principal minors of any feasible moment matrix. They give
+\begin{equation}
+|\ell(u^*v)|^2\leq\ell(u^*u)\,\ell(v^*v)=1,
+\label{supp:eq:moment-CS}
+\end{equation}
+using $u^*u=v^*v=e$. Every reduced word $g$ of length at most $2L$ can be written as $g=u^*v$ with $u,v\in\mathcal W_L$: split a reduced representative as $g=st$ with $|s|,|t|\leq L$ and take $u=s^{-1}$, $v=t$. Equation~\eqref{supp:eq:moment-CS} therefore bounds every coordinate of $\ell$ on $\Span\mathcal W_{2L}$ by one. The feasible set is closed and bounded in a finite-dimensional space, hence compact, and the supremum in Eq.~\eqref{supp:eq:primal-NPA} is a maximum.
+
+Strict feasibility and the finite primal optimum give zero duality gap and dual attainment by Slater's theorem~\cite{BoydVandenberghe2004}; this uses the standard SDP duality reviewed in Ref.~\cite{VandenbergheBoyd1996}. The dual variable is a positive semidefinite matrix $Q$ satisfying
+\begin{equation}
+\lambda e-h_\alpha=\bm w^*Q\bm w,
+\qquad Q\succeq0,
+\label{supp:eq:dual-gram}
+\end{equation}
+which is the statement $\lambda e-h_\alpha\in\Sigma_L$. Finally, the multiplication table of the reduced-word basis and the coefficients of $h_\alpha$ are real; if $Q$ is a complex Hermitian Gram matrix, then $(Q+\overline Q)/2$ is real, symmetric, positive semidefinite, and represents the same element.
+\end{proof}
+
+\subsection{The trace identity}
+
+The coefficients in an optimal certificate can vary with the tilt. The same canonical trace bounds their square-root matrix, because it extracts the identity coefficient on both sides of the certificate.
+
+\begin{lemma}[Trace identity]
+\label{supp:lem:trace-identity}
+Every Gram representation
+\begin{equation}
+\lambda e-h_\alpha=\bm w^*Q\bm w,
+\qquad Q\succeq0,
+\label{supp:eq:generic-dual-gram}
+\end{equation}
+satisfies
+\begin{equation}
+\Tr Q=\lambda.
+\label{supp:eq:trace-Q}
+\end{equation}
+In particular, $\|Q\|\leq\lambda$ and $\|Q^{1/2}\|\leq\sqrt\lambda$.
+\end{lemma}
+
+\begin{proof}
+Apply the canonical trace to both sides of Eq.~\eqref{supp:eq:generic-dual-gram}. Since $\tau(w_i^*w_j)=\delta_{i,j}$,
+\begin{equation}
+\tau(\bm w^*Q\bm w)
+=\sum_{i,j}Q_{ij}\,\tau(w_i^*w_j)
+=\sum_iQ_{ii}
+=\Tr Q.
+\label{supp:eq:trace-gram-calculation}
+\end{equation}
+Since $\tau(h_\alpha)=0$, the left side equals $\lambda$. The norm bounds follow from $Q\succeq0$ and $\|Q\|\leq\Tr Q$.
+\end{proof}
+
+\section{The Motzkin polynomial from the Bell operator}
+\label{supp:sec:motzkin}
+
+Following the angle scale in Section~\ref{supp:sec:endpoint}, write
+\begin{equation}
+T=t^2,
+\label{supp:eq:T-t}
+\end{equation}
+and allow both measurement angles to vary independently. With real scaled angular coordinates $x$ and $y$ (denoted $u$ and $v$ in the Letter), take
+\begin{align}
+A_0&=Z,&A_1&=\cos(tx)Z+\sin(tx)X,\nonumber\\
+B_0&=Z,&B_1&=\cos(ty)Z+\sin(ty)X.
+\label{supp:eq:two-parameter-observables}
+\end{align}
+Let $H(t;x,y)$ denote the matrix of $h_{1-t^2}$ evaluated on these observables, and write $H(t)$ when the angles are fixed. This is the signed-sine parametrization of the Bell matrix in Section~\ref{supp:sec:jordan}, with $T=t^2$. The maximizing angles correspond asymptotically to $(x,y)=(2,2)$, but the certificate is an operator identity and must hold for every real $(x,y)$. Keeping both coordinates free will give a polynomial identity in two variables.
+
+The violation above the local bound is of order $t^6$. To obtain a gap between the quantum bound and the attained Bell value of the same order, we seek a vector whose expectation of the positive operator $\omega_{\rm Q}(1-t^2)I-H(t)$ is of order $t^6$. We first keep the vector unnormalized so that its entries can be polynomials; its normalization will give the physical state below.
+
+At $t=0$, $H(0)=\operatorname{diag}(4,-2,-2,0)$, with top eigenvector $|00\rangle$ and gaps $6,6,4$ to $|01\rangle,|10\rangle,|11\rangle$. Substituting the angles into Eq.~\eqref{supp:eq:block-matrix} gives the couplings away from this vector:
+\[
+\begin{aligned}
+\langle01|H(t)|00\rangle&=[1-\cos(tx)]\sin(ty)
+=\tfrac12 x^2y\,t^3+O_K(t^5),\\
+\langle10|H(t)|00\rangle&=[1-\cos(ty)]\sin(tx)
+=\tfrac12 xy^2\,t^3+O_K(t^5),\\
+\langle11|H(t)|00\rangle&=-\sin(tx)\sin(ty)
+=-xy\,t^2+O_K(t^4).
+\end{aligned}
+\]
+A real correction $z$ along $|11\rangle$ contributes $4z^2+2xy\,t^2z$ to the leading gap, so its minimizing order is $t^2$. The other two couplings have order $t^3$ and diagonal gaps $6$, giving corrections of order $t^3$. We therefore vary three real coefficients $A,B,C$ at fixed $(x,y)$ in the vector
+\begin{equation}
+\zeta_t=(1,At^3,Bt^3,Ct^2)^T.
+\label{supp:eq:generic-scaled-vector}
+\end{equation}
+At the required order, we can replace the quantum value by
+\begin{equation}
+\Lambda_t=4-2t^2+\frac43t^6.
+\label{supp:eq:Lambda-t}
+\end{equation}
+Equation~\eqref{supp:eq:exact-endpoint-expansion} bounds its difference from the exact quantum value by $O(t^8)$. To expand the expectation, use Eq.~\eqref{supp:eq:excess-quadratic-form} with $u=1-\cos(tx)$, $v=1-\cos(ty)$, $r=\sin(tx)$, $s=\sin(ty)$, and $(b_1,b_2,b_3)=(At^3,Bt^3,Ct^2)$. Since $\Lambda_t-\lambda_0(t^2)=4t^6/3$, the expectation is $4t^6\|\zeta_t\|^2/3-\mathcal E_{t^2}(\zeta_t)$. At order $t^4$, the $|00\rangle$ diagonal, its coupling to $|11\rangle$, and the squared $|11\rangle$ correction contribute $x^2y^2/4$, $2Cxy$, and $4C^2$, respectively. Their sum is a square:
+\begin{equation}
+\langle\zeta_t,(\Lambda_tI-H(t))\zeta_t\rangle
+=\frac{(4C+xy)^2}{4}t^4+O(t^6).
+\label{supp:eq:generic-gap-expansion}
+\end{equation}
+A finite limit after division by $t^6$ requires $C=-xy/4$: the $|11\rangle$ correction cancels the entire order-$t^4$ contribution. After this choice, the coefficient of $t^6$ obtained from Eq.~\eqref{supp:eq:excess-quadratic-form} is
+\[
+6A^2-Ax^2y+6B^2-Bxy^2
++\frac43+\frac{x^4y^2+x^2y^4}{16}-\frac{x^2y^2}{4}.
+\]
+Completing the square in $A$ subtracts $x^4y^2/24$ from the terms independent of $A$, and completing the square in $B$ subtracts $x^2y^4/24$. Since $1/16-1/24=1/48$, the expectation becomes
+\begin{align}
+\langle\zeta_t,(\Lambda_tI-H(t))\zeta_t\rangle
+={}&t^6\biggl[
+6\left(A-\frac{x^2y}{12}\right)^2
++6\left(B-\frac{xy^2}{12}\right)^2
+\nonumber\\
+&\hspace{12mm}+\frac43+\frac{x^4y^2+x^2y^4}{48}-\frac{x^2y^2}{4}
+\biggr]+O(t^8).
+\label{supp:eq:gap-completed-squares}
+\end{align}
+Choosing $A=x^2y/12$ and $B=xy^2/12$ cancels the two squares. Together with $C=-xy/4$, this gives the polynomial vector
+\begin{equation}
+\xi_t(x,y)=
+\begin{pmatrix}
+1&t^3x^2y/12&t^3xy^2/12&-t^2xy/4
+\end{pmatrix}^{T}.
+\label{supp:eq:scaled-test-vector}
+\end{equation}
+This vector also has a spectral interpretation. On a compact angular set $K$, $H(t)$ stays uniformly close to $H(0)$ for small $t$, so the simple top eigenvalue and its eigenvector vary analytically. Normalize the first component of that eigenvector to one. The leading equations for the other components are $6A=x^2y/2$, $6B=xy^2/2$, and $4C=-xy$, using the couplings and gaps above. Thus $\xi_t$ is its Taylor polynomial through order three, with an $O_K(t^4)$ error. The required gap estimate follows directly from the completed squares, as the next proposition shows.
+
+\begin{proposition}
+\label{supp:prop:motzkin-limit}
+Locally uniformly in $(x,y)\in\R^2$,
+\begin{equation}
+\lim_{t\downarrow0}t^{-6}
+\langle\xi_t,[\omega_{\rm Q}(1-t^2)I-H(t;x,y)]\xi_t\rangle
+=\frac43M\!\left(\frac{x}{2},\frac{y}{2}\right),
+\label{supp:eq:motzkin-limit}
+\end{equation}
+where
+\begin{equation}
+M(X,Y)=X^4Y^2+X^2Y^4-3X^2Y^2+1.
+\label{supp:eq:Motzkin-polynomial}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Fix a compact $K\subset\R^2$. The sine and cosine Taylor remainders are uniform on $K$. To control the first omitted order, note that conjugation by $U=Z\otimes Z$ reverses the sign of each $X$ factor. Hence
+\begin{equation}
+H(-t;x,y)=UH(t;x,y)U,
+\qquad
+\xi_{-t}(x,y)=U\xi_t(x,y),
+\label{supp:eq:t-evenness}
+\end{equation}
+so the expectation is even in $t$. The Taylor coefficients calculated above therefore leave an $O_K(t^8)$ remainder. Substituting the entries of $\xi_t$ from Eq.~\eqref{supp:eq:scaled-test-vector} into Eq.~\eqref{supp:eq:gap-completed-squares}, we obtain
+\begin{align}
+\langle\xi_t,(\Lambda_tI-H(t))\xi_t\rangle
+=t^6\left[
+\frac43+\frac{x^4y^2}{48}+\frac{x^2y^4}{48}-\frac{x^2y^2}{4}
+\right]+O_K(t^8).
+\label{supp:eq:motzkin-leading-term}
+\end{align}
+The bracket is $\frac43M(x/2,y/2)$. Restoring the exact quantum value uses
+\begin{equation}
+\omega_{\rm Q}(1-t^2)-\Lambda_t
+=-\frac49t^8+\frac4{81}t^{10}+R_6(t^2),
+\label{supp:eq:omega-Lambda}
+\end{equation}
+where $|R_6(t^2)|\leq Ct^{12}$ for sufficiently small $t$. The exact norm is
+\begin{equation}
+\|\xi_t(x,y)\|^2
+=1+\frac{x^2y^2}{16}t^4+\frac{x^4y^2+x^2y^4}{144}t^6
+=1+O_K(t^4).
+\label{supp:eq:test-vector-norm}
+\end{equation}
+Multiplying Eq.~\eqref{supp:eq:omega-Lambda} by this norm changes the expectation by $O_K(t^8)$. After division by $t^6$ the change is $O_K(t^2)$, which proves Eq.~\eqref{supp:eq:motzkin-limit}.
+\end{proof}
+
+The first component of $\xi_t$ is one, so it is nonzero for every $(t,x,y)$. Normalizing it gives a two-qubit state and its Bell value on the observables in Eq.~\eqref{supp:eq:two-parameter-observables}:
+\begin{equation}
+\psi_t(x,y)=\frac{\xi_t(x,y)}{\|\xi_t(x,y)\|},
+\qquad
+b_t(x,y)=\langle\psi_t(x,y),H(t;x,y)\psi_t(x,y)\rangle.
+\label{supp:eq:normalized-test-strategy}
+\end{equation}
+Write $\Delta_\alpha=\omega_{\rm Q}(\alpha)-\omega_{\rm L}(\alpha)$ for the maximal quantum violation above the local bound. Equation~\eqref{supp:eq:exact-endpoint-expansion} gives $\Delta_{1-t^2}=4t^6/3+O(t^8)$, while Eq.~\eqref{supp:eq:test-vector-norm} gives $\|\xi_t\|^2=1+O_K(t^4)$. Therefore the gap between the exact quantum bound and this attained Bell value satisfies
+\begin{align}
+\frac{\omega_{\rm Q}(1-t^2)-b_t(x,y)}{\Delta_{1-t^2}}
+&=\frac{\langle\xi_t,[\omega_{\rm Q}(1-t^2)I-H(t;x,y)]\xi_t\rangle}
+{\|\xi_t\|^2\Delta_{1-t^2}}
+\nonumber\\
+&\xrightarrow[t\downarrow0]{}M\!\left(\frac{x}{2},\frac{y}{2}\right)
+\label{supp:eq:normalized-bell-gap}
+\end{align}
+locally uniformly in $(x,y)$. If $x=0$ or $y=0$, then $\xi_t=|00\rangle$ and $H(t)\xi_t=\omega_{\rm L}(1-t^2)\xi_t$. Thus the numerator equals $\Delta_{1-t^2}$, the ratio is exactly $1$, and $M$ is also $1$ on either axis. At $(x,y)=(2,2)$, the ratio tends to $M(1,1)=0$: these strategies attain the quantum bound up to an error smaller than the violation above the local bound. A certificate evaluated on these strategies adds the NPA error $\omega_{\rm NPA}^{(L)}(\alpha)-\omega_{\rm Q}(\alpha)$ to this strategy gap. We will compare that error with the same vanishing quantum violation.
+
+The limit $M$ is the Motzkin polynomial~\cite{Motzkin1967}. It is nonnegative by the arithmetic-geometric mean inequality applied to $X^4Y^2$, $X^2Y^4$, and $1$,
+\begin{equation}
+X^4Y^2+X^2Y^4+1\geq3X^2Y^2.
+\label{supp:eq:motzkin-nonnegative}
+\end{equation}
+
+The equal-angle restriction is itself a sum of squares:
+\[
+M(X,X)=(X^2-1)^2+2[X(X^2-1)]^2.
+\]
+Adding a nonnegative constant preserves this property, so the contradiction below uses the polynomial identity on the full two-parameter family.
+
+\section{The Motzkin polynomial plus a nonnegative constant is not a sum of squares}
+\label{supp:sec:not-sos}
+
+A bounded NPA error on the $t^6$ scale contributes a nonnegative constant to the limit because $\|\xi_t\|^2\to1$. We must therefore exclude sums of squares for every $M+c$, $c\geq0$~\cite{Hilbert1888,Motzkin1967}.
+
+The elementary argument used in the Letter already proves the obstruction. Suppose $M+c=\sum_jq_j^2$. Each $q_j$ has degree at most three: the highest-degree homogeneous terms of their squares cannot cancel unless all corresponding highest-degree terms vanish. On either axis, $M+c=1+c$, so each restricted $q_j$ is a bounded polynomial of one real variable and hence constant. Every $q_j$ therefore has the form $a_j+b_jXY+c_jX^2Y+d_jXY^2$. The coefficient of $X^2Y^2$ in their squared sum is $\sum_jb_j^2\geq0$, whereas it is $-3$ in $M+c$.
+
+The same monomial restriction follows from the Newton-polytope theorem~\cite[Theorem~1]{Reznick1978}, giving an alternative proof. For $p(X,Y)=\sum_{i,j}p_{ij}X^iY^j$, its Newton polytope is $\Newt(p)=\operatorname{conv}\{(i,j):p_{ij}\neq0\}$, the convex hull of the exponents with nonzero coefficients.
+
+\begin{lemma}[Half-Newton-polytope property~\cite{Reznick1978}]
+\label{supp:lem:half-newton}
+If $p=\sum_kq_k^2$ with real polynomials $q_k$, then
+\begin{equation}
+\Newt(q_k)\subseteq\frac12\Newt(p)
+\label{supp:eq:half-newton}
+\end{equation}
+for every $k$.
+\end{lemma}
+
+The cited theorem is stated for homogeneous forms. Homogenizing the polynomials to a common even degree and then setting the extra variable to one gives Eq.~\eqref{supp:eq:half-newton}.
+
+\begin{lemma}
+\label{supp:lem:motzkin-not-sos}
+For every $c\geq0$, the polynomial $M(X,Y)+c$ is not a sum of squares of real polynomials.
+\end{lemma}
+
+\begin{proof}
+The constant coefficient of $M+c$ is $1+c>0$, so its exponent set is $\{(0,0),(4,2),(2,4),(2,2)\}$ and
+\begin{equation}
+\Newt(M+c)=\operatorname{conv}\{(0,0),(4,2),(2,4)\},
+\label{supp:eq:motzkin-newton}
+\end{equation}
+the point $(2,2)$ being interior to the triangle. Half of this triangle has vertices $(0,0)$, $(2,1)$, and $(1,2)$ and exactly four integer points:
+
+\begin{equation}
+(0,0),\quad(1,1),\quad(2,1),\quad(1,2).
+\label{supp:eq:half-triangle-points}
+\end{equation}
+By Lemma~\ref{supp:lem:half-newton}, every polynomial in a hypothetical representation $M+c=\sum_kq_k^2$ has the form
+\begin{equation}
+q_k=a_k+b_kXY+c_kX^2Y+d_kXY^2.
+\label{supp:eq:qk-form}
+\end{equation}
+The only pair of allowed exponents summing to $(2,2)$ is $(1,1)+(1,1)$. Hence the coefficient of $X^2Y^2$ in the sum of squares is
+\begin{equation}
+\sum_kb_k^2\geq0,
+\label{supp:eq:positive-middle-coefficient}
+\end{equation}
+whereas the coefficient of $X^2Y^2$ in $M+c$ is $-3$. This contradiction proves the lemma.
+\end{proof}
+
+\section{Fixed NPA levels yield polynomial sum-of-squares limits}
+\label{supp:sec:compactness}
+
+A certificate evaluated on the two-qubit strategies gives a sum of squared norms. To apply the obstruction in Section~\ref{supp:sec:not-sos}, we need its limit to be a sum of polynomial squares. At fixed level, the factors contain only finitely many words, and their Taylor coefficients are polynomials in the angles. The following argument controls the error of replacing the factors by these polynomials before taking the limit.
+
+Fix $L$ and enumerate $\mathcal W_L$ as $w_1,\ldots,w_N$. Let $\pi_{t,x,y}$ evaluate each word on the observables in Eq.~\eqref{supp:eq:two-parameter-observables}. Applying all words to the polynomial vector $\xi_t$ gives
+\begin{equation}
+z_t(x,y)=
+\begin{pmatrix}
+\pi_{t,x,y}(w_1)\xi_t(x,y)\\
+\vdots\\
+\pi_{t,x,y}(w_N)\xi_t(x,y)
+\end{pmatrix}
+\in\C^{4N},
+\label{supp:eq:z-vector}
+\end{equation}
+If $C_n=Q_n^{1/2}$, the square factor $f_{n,j}=\sum_k(C_n)_{jk}w_k$ acts on $\xi_t$ by combining the corresponding four-component blocks of $z_t$. Stacking the results gives $g_n(t,x,y)=(C_n\otimes I_4)z_t(x,y)$. We keep $\xi_t$ unnormalized to retain polynomial entries; its norm tends locally uniformly to one, so normalization leaves any finite rescaled squared-norm limit unchanged.
+
+\begin{lemma}[Fixed-level sum-of-squares limit]
+\label{supp:lem:fixed-level-limit}
+Let $t_n\downarrow0$ and let the $N\times N$ matrices $Q_n\succeq0$ have uniformly bounded trace. Suppose that for an integer $m\geq0$,
+\begin{equation}
+t_n^{-2m}\left\|(Q_n^{1/2}\otimes I_4)z_{t_n}(x,y)\right\|^2
+\longrightarrow P(x,y)
+\label{supp:eq:compactness-assumption}
+\end{equation}
+locally uniformly, where $P$ is a real polynomial. Then $P$ is a sum of squares of real polynomials.
+\end{lemma}
+
+\begin{proof}
+Each observable in Eq.~\eqref{supp:eq:two-parameter-observables} is analytic in $t$. A sine or cosine coefficient of order $k$ is a polynomial of degree at most $k$ in its angular coordinate, and the entries of $\xi_t$ have the same relation between their order in $t$ and their degree in $x,y$. In a product contributing to order $r$, these orders add to $r$. Thus, for the fixed word list,
+\begin{equation}
+z_t(x,y)=\sum_{r=0}^{m}t^rz_r(x,y)+R_{m+1}(t,x,y),
+\label{supp:eq:z-Taylor}
+\end{equation}
+where each coordinate of $z_r$ is a polynomial of total degree at most $r$. The word list is finite, so the analytic Taylor remainders can be bounded simultaneously: for every compact $K\subset\R^2$,
+\begin{equation}
+\sup_{(x,y)\in K}\|R_{m+1}(t,x,y)\|=O_K(t^{m+1}).
+\label{supp:eq:remainder-bound}
+\end{equation}
+
+Take $C_n=Q_n^{1/2}$, keeping the vector dimension fixed even when the rank changes, and let $C_{\rm tr}=\sup_n\Tr Q_n<\infty$. Positivity gives
+\begin{equation}
+\|C_n\|\leq\sqrt{C_{\rm tr}}.
+\label{supp:eq:Cn-bound}
+\end{equation}
+The vector $v_n=t_n^{-m}(C_n\otimes I_4)z_{t_n}$ has the convergent squared norm in Eq.~\eqref{supp:eq:compactness-assumption}. Retaining the Taylor terms through order $m$ gives its polynomial approximation
+\begin{equation}
+p_n(x,y)=t_n^{-m}(C_n\otimes I_4)
+\sum_{r=0}^{m}t_n^rz_r(x,y).
+\label{supp:eq:pn-definition}
+\end{equation}
+Equations~\eqref{supp:eq:remainder-bound} and \eqref{supp:eq:Cn-bound} give, for all sufficiently large $n$,
+\begin{equation}
+\sup_K\left\|p_n-t_n^{-m}(C_n\otimes I_4)z_{t_n}\right\|
+\leq\sqrt{C_{\rm tr}}\,C_Kt_n.
+\label{supp:eq:pn-remainder}
+\end{equation}
+Thus $p_n-v_n$ tends uniformly to zero on every compact set. The coefficients of $p_n$ may still contain negative powers of $t_n$; their bound will instead follow from the bounded values of $v_n$.
+
+Take $K_0=[-1,1]^2$. The convergence in Eq.~\eqref{supp:eq:compactness-assumption} bounds $v_n$ on $K_0$, and Eq.~\eqref{supp:eq:pn-remainder} then bounds $p_n$ there. Every $p_n$ has $4N$ coordinates of total degree at most $m$. We can recover their coefficients from finitely many values: choose $m+1$ fixed distinct nodes $s_0,\ldots,s_m$ in $[-1,1]$, with Lagrange polynomials
+\[
+L_i(x)=\prod_{k\neq i}\frac{x-s_k}{s_i-s_k}.
+\]
+Each component $p$ of $p_n$ has degree at most $m$ in each variable, so
+\[
+p(x,y)=\sum_{i,j=0}^m p(s_i,s_j)L_i(x)L_j(y).
+\]
+The coefficients of the fixed polynomials $L_iL_j$ do not depend on $n$. The bounded grid values therefore bound every monomial coefficient of $p_n$. Writing $\|p_n\|_{\rm coeff}$ for the Euclidean norm of this finite list of coefficients, we obtain
+\begin{equation}
+\|p_n\|_{\rm coeff}
+\leq C_{m,N}\sup_{K_0}\|p_n\|\leq C.
+\label{supp:eq:rescaled-coefficient-bound}
+\end{equation}
+This is equivalence of norms on the fixed polynomial space: $\sup_{K_0}\|p\|$ is a norm because a polynomial that vanishes on the interior of $K_0$ vanishes identically. For the application in the Letter, $m=3$, so four nodes in each variable suffice.
+
+There are finitely many bounded coefficients, so one subsequence makes them all converge, defining a polynomial vector $q(x,y)$. On any compact set the finitely many monomials are bounded, so convergence of their coefficients gives uniform convergence of $p_n$ to $q$ there.
+
+To identify the squared norm of $q$, use the approximation $p_n-v_n\to0$. Both vectors are bounded on $K_0$, so
+\begin{equation}
+\bigl|\|p_n\|^2-\|v_n\|^2\bigr|
+\leq(\|p_n\|+\|v_n\|)\,\|p_n-v_n\|
+\longrightarrow0
+\label{supp:eq:squared-norm-comparison}
+\end{equation}
+uniformly on $K_0$. Combining this estimate with Eq.~\eqref{supp:eq:compactness-assumption} and the coefficientwise convergence of $p_n$ gives
+\begin{equation}
+P(x,y)=\|q(x,y)\|^2
+\label{supp:eq:P-norm-square}
+\end{equation}
+on $K_0$. The difference of the two sides is a polynomial vanishing on the interior of $K_0$, so the identity holds on all of $\R^2$. Finally, splitting each complex coordinate of $q$ into its real and imaginary parts writes its squared modulus as two squares of real polynomials.
+\end{proof}
+
+\section{No finite level is exact: proof of the divergence}
+\label{supp:sec:main-proof}
+
+If the error of a fixed NPA level stayed bounded on the cubic scale, its optimal certificates would satisfy Lemma~\ref{supp:lem:fixed-level-limit}. Their limiting polynomial would then contradict Section~\ref{supp:sec:not-sos}.
+
+\begin{theorem}
+\label{supp:thm:fixed-level}
+For every finite $L\geq1$,
+\begin{equation}
+\lim_{\alpha\uparrow1}
+\frac{\omega_{\rm NPA}^{(L)}(\alpha)-\omega_{\rm Q}(\alpha)}{(1-\alpha)^3}=+\infty.
+\label{supp:eq:main-divergence}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Fix $L$ throughout the proof. By Eq.~\eqref{supp:eq:outer-bound}, the error is nonnegative. Failure of the claimed divergence would give a sequence approaching the critical tilt along which the error divided by $(1-\alpha)^3$ is bounded. Writing $1-\alpha=t_n^2$, there would therefore exist $t_n\downarrow0$ and bounded $r_n\geq0$ with
+\begin{equation}
+\omega_{\rm NPA}^{(L)}(1-t_n^2)=\omega_{\rm Q}(1-t_n^2)+r_nt_n^6.
+\label{supp:eq:bounded-excess}
+\end{equation}
+After passing to a further subsequence, assume $r_n\to r\geq0$.
+
+Dual attainment in Proposition~\ref{supp:prop:duality} realizes these exact level-$L$ values with Gram certificates on the fixed word list:
+\begin{equation}
+\omega_{\rm NPA}^{(L)}(1-t_n^2)\,e-h_{1-t_n^2}=\bm w^*Q_n\bm w.
+\label{supp:eq:certificate-sequence}
+\end{equation}
+Lemma~\ref{supp:lem:trace-identity} gives
+\begin{equation}
+\Tr Q_n=\omega_{\rm NPA}^{(L)}(1-t_n^2).
+\label{supp:eq:trace-sequence}
+\end{equation}
+The Cauchy--Schwarz inequality for moments, Eq.~\eqref{supp:eq:moment-CS}, bounds each of the four correlators and each marginal by one, so $\omega_{\rm NPA}^{(L)}(\alpha)\leq6$ for all $0\leq\alpha\leq1$, and the traces in Eq.~\eqref{supp:eq:trace-sequence} are uniformly bounded.
+
+Evaluating Eq.~\eqref{supp:eq:certificate-sequence} on the observables in Eq.~\eqref{supp:eq:two-parameter-observables} and the vector $\xi_{t_n}(x,y)$ turns the Gram form into a squared norm:
+\begin{align}
+&\langle\xi_{t_n},
+[\omega_{\rm NPA}^{(L)}(1-t_n^2)I-H(t_n;x,y)]\xi_{t_n}\rangle
+\nonumber\\
+&\hspace{22mm}
+=\left\|(Q_n^{1/2}\otimes I_4)z_{t_n}(x,y)\right\|^2,
+\label{supp:eq:evaluated-certificate}
+\end{align}
+where $z_t$ is defined in Eq.~\eqref{supp:eq:z-vector}. By Eq.~\eqref{supp:eq:bounded-excess}, the expectation on the left is the strategy gap $\langle\xi_{t_n},[\omega_{\rm Q}(1-t_n^2)I-H(t_n)]\xi_{t_n}\rangle$ plus $r_nt_n^6\|\xi_{t_n}\|^2$. Dividing by $t_n^6$, the first term tends to $\frac43M(x/2,y/2)$ by Eq.~\eqref{supp:eq:motzkin-limit}, and the second tends to $r$ because $\|\xi_{t_n}\|^2\to1$. Consequently,
+\begin{equation}
+t_n^{-6}
+\left\|(Q_n^{1/2}\otimes I_4)z_{t_n}(x,y)\right\|^2
+\longrightarrow
+\frac43M\!\left(\frac{x}{2},\frac{y}{2}\right)+r
+\label{supp:eq:certificate-limit}
+\end{equation}
+locally uniformly. The matrices have bounded trace, the word list is fixed, and the right-hand side is a real polynomial. All hypotheses of Lemma~\ref{supp:lem:fixed-level-limit} therefore hold with $m=3$, so this limiting polynomial is a sum of squares of real polynomials. If its real square factors are $q_j(x,y)$, substituting $x=2X$, $y=2Y$ and multiplying by $3/4$ gives
+\begin{equation}
+M(X,Y)+\frac{3r}{4}
+=\sum_j\left[\frac{\sqrt3}{2}q_j(2X,2Y)\right]^2,
+\label{supp:eq:forbidden-SOS}
+\end{equation}
+contradicting Lemma~\ref{supp:lem:motzkin-not-sos}. Hence Eq.~\eqref{supp:eq:main-divergence} holds.
+\end{proof}
+
+The local value in Eq.~\eqref{supp:eq:local-value} and the expansion in Eq.~\eqref{supp:eq:exact-endpoint-expansion} give
+\begin{equation}
+\lim_{\alpha\uparrow1}
+\frac{\omega_{\rm Q}(\alpha)-\omega_{\rm L}(\alpha)}{(1-\alpha)^3}
+=\frac43.
+\label{supp:eq:quantum-advantage}
+\end{equation}
+Combining this limit with Theorem~\ref{supp:thm:fixed-level} gives
+\begin{equation}
+\lim_{\alpha\uparrow1}
+\frac{\omega_{\rm NPA}^{(L)}(\alpha)-\omega_{\rm Q}(\alpha)}
+{\omega_{\rm Q}(\alpha)-\omega_{\rm L}(\alpha)}
+=+\infty.
+\label{supp:eq:relative-divergence}
+\end{equation}
+For each fixed $L$, the moment constraints keep the absolute NPA error bounded, while the quantum violation vanishes cubically. Equation~\eqref{supp:eq:relative-divergence} shows that the error exceeds every constant multiple of that violation.
+
+\section{From Bell values to correlation sets}
+\label{supp:sec:transfer}
+
+A Bell value above $\omega_{\rm Q}$ certifies a nonquantum correlation only when the moments define valid probabilities. We first show that level $d\geq2$ guarantees this. We then choose $d$ large enough that the same moments satisfy the constraints of any prescribed finite projector-word list.
+
+\begin{definition}
+\label{supp:def:finite-word-relaxation}
+Fix a finite list $\mathcal S=(S_1,\ldots,S_m)$ of words in the projectors $E_{a|x}$ and $F_{b|y}$. We say that a valid no-signaling correlation $p$ belongs to $\mathcal N_{\mathcal S}$ if there exists a Hermitian linear functional $\ell$, defined on all words required to form the moment matrix, impose the identities below, and recover the observed probabilities, such that
+\begin{equation}
+\ell(I)=1,
+\qquad
+\Gamma_{\mathcal S}=\bigl(\ell(S_i^*S_j)\bigr)_{i,j=1}^{m}\succeq0,
+\label{supp:eq:selected-moment-matrix}
+\end{equation}
+and $\ell$ is required to obey the identities generated by
+\begin{align}
+E_{a|x}E_{a'|x}&=\delta_{a,a'}E_{a|x},
+&\sum_aE_{a|x}&=I,
+\label{supp:eq:alice-projector-identities}\\
+F_{b|y}F_{b'|y}&=\delta_{b,b'}F_{b|y},
+&\sum_bF_{b|y}&=I,
+\label{supp:eq:bob-projector-identities}\\
+[E_{a|x},F_{b|y}]&=0,
+&\ell(W^*)&=\overline{\ell(W)}.
+\label{supp:eq:cross-and-adjoint}
+\end{align}
+The observed probabilities are linked to the moments by
+\begin{equation}
+p(a,b|x,y)=\ell(E_{a|x}F_{b|y}).
+\label{supp:eq:behavior-link}
+\end{equation}
+\end{definition}
+
+Every standard finite NPA level is included in this definition. If the chosen list does not constrain some of the moments in Eq.~\eqref{supp:eq:behavior-link}, those moments remain free apart from the stated identities and the requirement that $p$ is a valid correlation. Additional localizing matrices, state-optimality conditions, operator-optimality conditions, or problem-specific inequalities define different relaxations.
+
+\begin{lemma}[Valid correlations at level $d\geq2$]
+\label{supp:lem:valid-behavior}
+Let $d\geq2$ and let $\ell$ be feasible for the level-$d$ moment matrix $\Gamma_d(\ell)$. Define the abstract projectors
+\begin{equation}
+E_{a|x}=\frac{e+aa_x}{2},
+\qquad
+F_{b|y}=\frac{e+bb_y}{2},
+\label{supp:eq:abstract-projectors}
+\end{equation}
+and
+\begin{equation}
+p(a,b|x,y)=\ell(E_{a|x}F_{b|y}).
+\label{supp:eq:extracted-probability}
+\end{equation}
+Then $p$ is nonnegative, normalized, and no-signaling.
+\end{lemma}
+
+\begin{proof}
+The relations $a_x^2=b_y^2=e$ and $[a_x,b_y]=0$ make $P_{ab|xy}=E_{a|x}F_{b|y}$ a self-adjoint projector. Expanding Eq.~\eqref{supp:eq:abstract-projectors} writes it as $(e+aa_x+bb_y+ab\,a_xb_y)/4$, using only words of length at most two. Hence $P_{ab|xy}\in V_d$ for $d\geq2$. Moment positivity therefore gives
+\begin{equation}
+p(a,b|x,y)=\ell(P_{ab|xy})
+=\ell(P_{ab|xy}^*P_{ab|xy})\geq0.
+\label{supp:eq:probability-positive}
+\end{equation}
+Using $\sum_aE_{a|x}=\sum_bF_{b|y}=e$, we obtain normalization and Alice's marginal:
+\begin{align}
+\sum_{a,b}p(a,b|x,y)&=\ell(e)=1,
+\label{supp:eq:probability-normalization}\\
+\sum_b p(a,b|x,y)&=\ell(E_{a|x}).
+\label{supp:eq:no-signaling-A}
+\end{align}
+The marginal is independent of $y$; the analogous identity for Bob proves no-signaling.
+\end{proof}
+
+\begin{lemma}[Containment in a relaxation defined by a finite word list]
+\label{supp:lem:finite-list-containment}
+For every fixed finite list $\mathcal S$ of words in the measurement projectors in Definition~\ref{supp:def:finite-word-relaxation}, there exists $d\geq2$ such that
+\begin{equation}
+\mathcal N_d\subseteq\mathcal N_{\mathcal S},
+\label{supp:eq:relaxation-containment}
+\end{equation}
+where $\mathcal N_d$ denotes the correlation set extracted from the standard level-$d$ relaxation by Lemma~\ref{supp:lem:valid-behavior}.
+\end{lemma}
+
+\begin{proof}
+Use Eq.~\eqref{supp:eq:abstract-projectors} to expand every projector in every word $S_i$ as a linear combination of $e,a_0,a_1,b_0,b_1$. After distributing products and reducing with the group relations, each $S_i$ is a finite linear combination of reduced words. A word with $D$ projector factors expands into observable words of length at most $D$, and reduction can only shorten them. Thus a finite $d\geq2$ contains every word in all the expansions; it is sufficient to take $d$ at least the largest projector-word length in $\mathcal S$. Enlarge $d$ if necessary to include any additional finitely many moments used to state the relaxation. Any unconstrained moments outside this space may be assigned by a Hermitian linear extension on the reduced-word basis, choosing conjugate values on inverse word pairs. The definition requires no further positive moment matrices involving those moments.
+
+Let $\bm w_d$ be the vector of reduced words of length at most $d$ and write
+\begin{equation}
+\bm S=T\bm w_d
+\label{supp:eq:S-Tw}
+\end{equation}
+for the real matrix $T$ of expansion coefficients. For any functional feasible at level $d$,
+\begin{equation}
+\Gamma_{\mathcal S}
+=\bigl(\ell(S_i^*S_j)\bigr)_{i,j}
+=T\Gamma_d(\ell)T^*\succeq0,
+\label{supp:eq:congruence}
+\end{equation}
+because $v^*\Gamma_{\mathcal S}v=(T^*v)^*\Gamma_d(\ell)(T^*v)\geq0$ for every column vector $v$. The group relations imply all the identities in Eqs.~\eqref{supp:eq:alice-projector-identities}--\eqref{supp:eq:cross-and-adjoint}, and Lemma~\ref{supp:lem:valid-behavior} supplies a valid correlation satisfying the linking relation of Eq.~\eqref{supp:eq:behavior-link}. Hence every correlation in $\mathcal N_d$ belongs to $\mathcal N_{\mathcal S}$.
+\end{proof}
+
+\begin{theorem}
+\label{supp:thm:set-separation}
+For every fixed finite list $\mathcal S$ of words in the measurement projectors defining $\mathcal N_{\mathcal S}$ as in Definition~\ref{supp:def:finite-word-relaxation},
+\begin{equation}
+\Q\subsetneq\mathcal N_{\mathcal S}.
+\label{supp:eq:strict-set-inclusion}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Quantum correlations satisfy every finite moment constraint, so $\Q\subseteq\mathcal N_{\mathcal S}$. For the strictness, choose $d\geq2$ as in Lemma~\ref{supp:lem:finite-list-containment}. By Theorem~\ref{supp:thm:fixed-level}, for $\alpha$ sufficiently close to one,
+\begin{equation}
+\omega_{\rm NPA}^{(d)}(\alpha)>\omega_{\rm Q}(\alpha).
+\label{supp:eq:strict-value-gap}
+\end{equation}
+The primal maximum is attained by Proposition~\ref{supp:prop:duality}; let $\ell$ be an optimizer, and let $p\in\mathcal N_d$ be the correlation extracted from it by Lemma~\ref{supp:lem:valid-behavior}. From Eq.~\eqref{supp:eq:behavior-reconstruction} and the definitions of the abstract projectors,
+\begin{align}
+\langle A_x\rangle_p&=\ell(a_x),
+&\langle B_y\rangle_p&=\ell(b_y),
+&\langle A_xB_y\rangle_p&=\ell(a_xb_y),
+\label{supp:eq:moment-behavior-identity}
+\end{align}
+so the Bell value of the extracted correlation is
+\begin{equation}
+\beta_\alpha(p)=\ell(h_\alpha)=\omega_{\rm NPA}^{(d)}(\alpha)>\omega_{\rm Q}(\alpha).
+\label{supp:eq:Bell-value-identity}
+\end{equation}
+Thus $p\notin\Q$, while Lemma~\ref{supp:lem:finite-list-containment} gives $p\in\mathcal N_{\mathcal S}$, proving strict inclusion.
+\end{proof}
+
+The divergent relative error also allows a vanishing weight of the NPA optimizer to raise a deterministic correlation's Bell value above the quantum bound.
+
+\begin{corollary}[Postquantum correlations arbitrarily close to a local correlation]
+\label{supp:cor:local-accumulation}
+Fix a finite list $\mathcal S$ of words in the measurement projectors as in Definition~\ref{supp:def:finite-word-relaxation}, and let
+\begin{equation}
+p_{\rm loc}(a,b|x,y)=\delta_{a,1}\delta_{b,1}.
+\label{supp:eq:local-deterministic-behavior}
+\end{equation}
+Every neighborhood of $p_{\rm loc}$ contains a correlation in $\mathcal N_{\mathcal S}\setminus\Q$.
+\end{corollary}
+
+\begin{proof}
+Choose $d\geq2$ as in Lemma~\ref{supp:lem:finite-list-containment}. For each $\alpha$, let $p_{d,\alpha}\in\mathcal N_d$ attain the level-$d$ value $\omega_{\rm NPA}^{(d)}(\alpha)$, which exists by Proposition~\ref{supp:prop:duality} and Lemma~\ref{supp:lem:valid-behavior}. Separate its excess above the local value into the quantum violation and the NPA error:
+\begin{equation}
+\Delta_\alpha=\omega_{\rm Q}(\alpha)-\omega_{\rm L}(\alpha),
+\qquad
+e_{d,\alpha}=\omega_{\rm NPA}^{(d)}(\alpha)-\omega_{\rm Q}(\alpha).
+\label{supp:eq:advantage-and-excess}
+\end{equation}
+For $\alpha$ sufficiently close to one, both are positive and $e_{d,\alpha}/\Delta_\alpha\to\infty$. Mixing weight $\lambda$ increases the local Bell value by $\lambda(\Delta_\alpha+e_{d,\alpha})$. To exceed the quantum bound, this increase must be larger than $\Delta_\alpha$. Choosing $2\Delta_\alpha$ gives
+\begin{equation}
+\lambda_\alpha=\frac{2\Delta_\alpha}{\Delta_\alpha+e_{d,\alpha}}
+\label{supp:eq:mixing-weight}
+\end{equation}
+Since $e_{d,\alpha}/\Delta_\alpha\to\infty$, this weight lies in $(0,1)$ for $\alpha$ sufficiently close to one and tends to zero. The corresponding correlation is
+\begin{equation}
+q_\alpha=(1-\lambda_\alpha)p_{\rm loc}+\lambda_\alpha p_{d,\alpha}.
+\label{supp:eq:mixed-postquantum-behavior}
+\end{equation}
+Both $p_{\rm loc}$ and $p_{d,\alpha}$ belong to the convex set $\mathcal N_{\mathcal S}$, the latter by Lemma~\ref{supp:lem:finite-list-containment}. Hence so does $q_\alpha$. Its Bell value is
+\begin{align}
+\beta_\alpha(q_\alpha)
+&=\omega_{\rm L}(\alpha)
++\lambda_\alpha\bigl[\omega_{\rm NPA}^{(d)}(\alpha)-\omega_{\rm L}(\alpha)\bigr]\nonumber\\
+&=\omega_{\rm L}(\alpha)+2\Delta_\alpha
+=\omega_{\rm Q}(\alpha)+\Delta_\alpha
+>\omega_{\rm Q}(\alpha).
+\label{supp:eq:mixed-value}
+\end{align}
+Therefore $q_\alpha\notin\Q$. Finally, all coordinates of $p_{d,\alpha}$ and $p_{\rm loc}$ lie in $[0,1]$, so every coordinate of $q_\alpha-p_{\rm loc}$ has absolute value at most $\lambda_\alpha$. Since $\lambda_\alpha\to0$, we obtain $q_\alpha\to p_{\rm loc}$ in the finite-dimensional correlation space, proving the claim.
+\end{proof}
+
+\begin{thebibliography}{99}
+\small
+
+\bibitem{GigenaEtAl2025}
+N.~Gigena, E.~Panwar, G.~Scala, M.~Ara\'ujo, M.~Farkas, and A.~Chaturvedi,
+Self-testing tilted strategies for maximal loophole-free nonlocality,
+npj Quantum Inf. \textbf{11}, 82 (2025).
+
+\bibitem{BrunnerEtAl2014}
+N.~Brunner, D.~Cavalcanti, S.~Pironio, V.~Scarani, and S.~Wehner,
+Bell nonlocality, Rev. Mod. Phys. \textbf{86}, 419--478 (2014),
+\href{https://doi.org/10.1103/RevModPhys.86.419}{doi:10.1103/RevModPhys.86.419}.
+
+\bibitem{CHSH1969}
+J.~F. Clauser, M.~A. Horne, A.~Shimony, and R.~A. Holt,
+Proposed experiment to test local hidden-variable theories,
+Phys. Rev. Lett. \textbf{23}, 880 (1969).
+
+\bibitem{MiklinEtAl2022}
+N.~Miklin, A.~Chaturvedi, M.~Bourennane, M.~Paw\l{}owski, and A.~Cabello,
+Exponentially decreasing critical detection efficiency for any Bell inequality,
+Phys. Rev. Lett. \textbf{129}, 230403 (2022),
+\href{https://doi.org/10.1103/PhysRevLett.129.230403}{doi:10.1103/PhysRevLett.129.230403}.
+
+\bibitem{Eberhard1993}
+P.~H.~Eberhard,
+Background level and counter efficiencies required for a loophole-free Einstein--Podolsky--Rosen experiment,
+Phys. Rev. A \textbf{47}, R747--R750 (1993),
+\href{https://doi.org/10.1103/PhysRevA.47.R747}{doi:10.1103/PhysRevA.47.R747}.
+
+\bibitem{Tsirelson1980}
+B.~S. Tsirelson,
+Quantum generalizations of Bell's inequality,
+Lett. Math. Phys. \textbf{4}, 93 (1980).
+
+\bibitem{NPA2007}
+M.~Navascu\'es, S.~Pironio, and A.~Ac\'in,
+Bounding the set of quantum correlations,
+Phys. Rev. Lett. \textbf{98}, 010401 (2007).
+
+\bibitem{AMP2012}
+A.~Ac\'in, S.~Massar, and S.~Pironio,
+Randomness versus nonlocality and entanglement,
+Phys. Rev. Lett. \textbf{108}, 100402 (2012).
+
+\bibitem{BampsPironio2015}
+C.~Bamps and S.~Pironio,
+Sum-of-squares decompositions for a family of Clauser--Horne--Shimony--Holt-like inequalities and their application to self-testing,
+Phys. Rev. A \textbf{91}, 052111 (2015).
+
+\bibitem{SupicBowles2020}
+I.~\v{S}upi\'c and J.~Bowles,
+Self-testing of quantum systems: a review,
+Quantum \textbf{4}, 337 (2020),
+\href{https://doi.org/10.22331/q-2020-09-30-337}{doi:10.22331/q-2020-09-30-337}.
+
+\bibitem{Naimark1940}
+M.~Neumark,
+\href{https://www.mathnet.ru/eng/im3893}{Spectral functions of a symmetric operator},
+Izv. Akad. Nauk SSSR Ser. Mat. \textbf{4}, 277--318 (1940).
+
+\bibitem{Fritz2012}
+T.~Fritz,
+Tsirelson's problem and Kirchberg's conjecture,
+Rev. Math. Phys. \textbf{24}, 1250012 (2012),
+\href{https://doi.org/10.1142/S0129055X12500122}{doi:10.1142/S0129055X12500122}.
+
+\bibitem{Halmos1969}
+P.~R. Halmos,
+Two subspaces,
+Trans. Am. Math. Soc. \textbf{144}, 381 (1969).
+
+\bibitem{Masanes2005}
+Ll.~Masanes,
+Extremal quantum correlations for $N$ parties with two dichotomic observables per site,
+\href{https://arxiv.org/abs/quant-ph/0512100}{arXiv:quant-ph/0512100} (2005).
+
+\bibitem{PanwarPandyaWiesniak2022}
+E.~Panwar, P.~Pandya, and M.~Wie\'sniak,
+An elegant scheme of self-testing for multipartite Bell inequalities,
+npj Quantum Inf. \textbf{9}, 71 (2023), \href{https://doi.org/10.1038/s41534-023-00735-3}{doi:10.1038/s41534-023-00735-3}.
+
+\bibitem{ScholzWerner2008}
+V.~B. Scholz and R.~F. Werner,
+Tsirelson's problem,
+\href{https://arxiv.org/abs/0812.4305}{arXiv:0812.4305} (2008).
+
+\bibitem{NPA2008}
+M.~Navascu\'es, S.~Pironio, and A.~Ac\'in,
+A convergent hierarchy of semidefinite programs characterizing the set of quantum correlations,
+New J. Phys. \textbf{10}, 073013 (2008).
+
+\bibitem{PironioEtAl2010}
+S.~Pironio, M.~Navascu\'es, and A.~Ac\'in,
+Convergent relaxations of polynomial optimization problems with noncommuting variables,
+SIAM J. Optim. \textbf{20}, 2157--2180 (2010),
+\href{https://doi.org/10.1137/090760155}{doi:10.1137/090760155}.
+
+\bibitem{BoydVandenberghe2004}
+S.~Boyd and L.~Vandenberghe,
+\emph{Convex Optimization} (Cambridge University Press, Cambridge, 2004),
+Secs.~5.2.3 and 5.9.1,
+\href{https://web.stanford.edu/~boyd/cvxbook/}{author's online edition}.
+
+\bibitem{VandenbergheBoyd1996}
+L.~Vandenberghe and S.~Boyd,
+Semidefinite programming,
+SIAM Rev. \textbf{38}, 49--95 (1996),
+\href{https://doi.org/10.1137/1038003}{doi:10.1137/1038003}.
+
+\bibitem{Motzkin1967}
+T.~S. Motzkin,
+The arithmetic-geometric inequality, in
+\emph{Inequalities}, edited by O.~Shisha
+(Academic Press, New York, 1967), pp.~205--224.
+
+\bibitem{Hilbert1888}
+D.~Hilbert,
+\"Uber die Darstellung definiter Formen als Summe von Formenquadraten,
+Math. Ann. \textbf{32}, 342 (1888).
+
+\bibitem{Reznick1978}
+B.~Reznick,
+Extremal PSD forms with few terms,
+Duke Math. J. \textbf{45}, 363 (1978).
+
+\bibitem{hs} C. Hanselka and R. Sinn, Positive semidefinite univariate matrix
+polynomials, \emph{Math. Z.} \textbf{292}, 83--101 (2019);
+\href{https://arxiv.org/pdf/1707.08261}{Corollary 2.8}.
+\bibitem{soc} C. Scheiderer, Second-Order Cone Representation for Convex Sets in
+the Plane, \emph{SIAM J. Appl. Algebra Geom.} \textbf{5}, 114--139 (2021),
+\href{https://doi.org/10.1137/20M133717X}{doi:10.1137/20M133717X};
+\href{https://arxiv.org/html/2004.04196v2}{Theorem 0.1}.
+\bibitem{prior} A. Chaturvedi, \emph{No Finite NPA Level Characterizes the Complete
+Quantum Set in the Simplest Bell Scenario}, project manuscript, September 2026. Its Sections S1--S10 are reproduced
+in Part II of this companion.
+\bibitem{Tavakoli2024}
+A.~Tavakoli, A.~Pozas-Kerstjens, P.~Brown, and M.~Ara\'ujo, Semidefinite programming relaxations for quantum correlations, Rev. Mod. Phys. \textbf{96}, 045006 (2024), \href{https://doi.org/10.1103/RevModPhys.96.045006}{doi:10.1103/RevModPhys.96.045006}.
+
+\end{thebibliography}
+\end{document}

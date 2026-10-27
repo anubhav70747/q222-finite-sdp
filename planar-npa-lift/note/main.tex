@@ -1,0 +1,224 @@
+\documentclass[11pt,twocolumn]{article}
+\usepackage[a4paper,left=17mm,right=17mm,top=17mm,bottom=18mm,columnsep=7mm]{geometry}
+\usepackage{amsmath,amssymb,mathtools,microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage{flushend}
+\newcommand{\Q}{\mathcal Q}\newcommand{\W}{\mathcal W}
+\newcommand{\sxdeg}{\operatorname{sxdeg}}
+\setlength{\parindent}{1em}
+\setlength{\abovedisplayskip}{6pt}\setlength{\belowdisplayskip}{6pt}
+\allowdisplaybreaks
+\begin{document}
+\twocolumn[{\centering
+{\Large\bfseries Infinite NPA depth, finite semidefinite lift\par}
+\vspace{5pt}
+{\normalsize An exact quantum region in the simplest Bell experiment\par}
+\vspace{13pt}}]
+
+The first NPA level recovers the quantum CHSH bound. Once marginal averages
+are retained, every fixed level misses some quantum bounds. Yet the whole
+two-dimensional region tested by symmetric doubly tilted CHSH has a fixed,
+exact semidefinite representation. The distinction can be seen directly in
+the proofs: equal measurement overlaps determine all its supporting lines,
+while finite NPA certificates must hold for two independently varying angles.
+
+Alice and Bob choose between two measurements with outcomes $\pm1$.
+Write $a_x=\langle A_x\rangle$, $b_y=\langle B_y\rangle$ and
+$E_{xy}=\langle A_xB_y\rangle$. Retain
+\begin{equation}
+ M=a_0+b_0,\qquad S=E_{00}+E_{01}+E_{10}-E_{11}.
+ \label{eq:coordinates}
+\end{equation}
+Their quantum region $\W=\{(M,S):p\in\Q_{222}\}$ includes all quantum
+behaviors, with no equality imposed on the marginal averages.
+If $\W_L$ denotes its level-$L$ NPA outer approximation, then
+\begin{equation}
+ \boxed{\begin{gathered}
+ \W\subsetneq\W_L\quad\text{for every finite }L,\\
+ \sxdeg(\W)=2.
+ \end{gathered}}
+ \label{eq:result}
+\end{equation}
+We construct one lift with positive semidefinite (PSD) blocks of orders
+five and four. Extension degree is the smallest possible largest block
+order among all finite lifts; its value two follows separately from a
+planar representation theorem.
+
+\emph{Why one angle suffices.}
+To determine $\W$, consider an arbitrary supporting inequality
+$hS+\alpha M\leq\lambda$, with real $h,\alpha$.
+Jordan's lemma reduces its validity to positivity of two-qubit slacks
+$\lambda I-H$, where
+\[
+\begin{gathered}
+ H=h\,\mathrm{CHSH}+\alpha(ZI+IZ),\\
+ A_1=cZ+\sqrt{1-c^2}X,\quad B_1=dZ+\sqrt{1-d^2}X.
+\end{gathered}
+\]
+Here $A_0=B_0=Z$ and $c,d\in[-1,1]$. Deterministic strategies attain
+$\ell=2|h|+2|\alpha|$, so $\lambda\geq\ell$ is necessary.
+Above this bound, the first three elementary symmetric functions of
+the eigenvalues of $\lambda I-H$ are nonnegative. Its determinant
+therefore decides positivity.
+
+Put $x=(1-c)/2$, $y=(1-d)/2$, and let
+$D(x,y)=\det(\lambda I-H)$. The decisive identity is
+\begin{equation}
+\begin{split}
+ D(x,y)-D(\sqrt{xy},\sqrt{xy})
+ ={}&64h^2(4h^2-\alpha^2)xy\\
+ &{}\times(\sqrt x-\sqrt y)^2 .
+\end{split}
+\label{eq:key}
+\end{equation}
+In the nonclassical range $|\alpha|\leq|h|$, replacing the two overlaps
+by equal ones preserves $xy$ and can only decrease the determinant.
+Thus positivity at equal overlaps implies positivity at every pair.
+For $|\alpha|\geq|h|$, the quantum support is the deterministic value
+$\ell$: average the two signed one-sided tilted-CHSH bounds and add
+the remaining marginal slack. Equal overlaps attain this value too.
+Hence they suffice for \emph{every} support direction. Symmetry of the
+functional alone would not give this conclusion.
+
+At equal overlaps $c=d$, the singlet decouples. In the remaining
+three-dimensional block, set $c=(1-t^2)/(1+t^2)$ and multiply the slack
+by $(1+t^2)^2$. With
+\[
+ p_0=(1+t^2)^2,\qquad p_1=1-t^4,\qquad p_2=1+4t^2-t^4,
+\]
+the result is the quartic matrix
+\begin{equation}
+ K(t)=
+ \begin{pmatrix}
+ \lambda p_0-2hp_1&-2\alpha p_0&0\\
+ -2\alpha p_0&\lambda p_0-2hp_2&-8ht^3\\
+ 0&-8ht^3&\lambda p_0+2hp_2
+ \end{pmatrix}.
+ \label{eq:K}
+\end{equation}
+Its value at zero and leading coefficient force $\lambda\geq\ell$,
+which also controls the singlet. The missing endpoint follows by
+continuity. We have therefore proved
+\begin{equation}
+ \max_{\W}(hS+\alpha M)\leq\lambda
+ \quad\Longleftrightarrow\quad K(t)\succeq0\quad\forall t\in\mathbb R .
+ \label{eq:support}
+\end{equation}
+All three support coefficients still enter \emph{affinely}. This is
+what will give one lift for the whole region.
+
+\emph{From one variable to one finite lift.}
+A PSD real univariate matrix polynomial is a polynomial matrix sum
+of squares, including on its singular boundary~\cite{hs}.
+For a quartic, the factors have degree at most two.
+The parity of Eq.~\eqref{eq:K} splits the nine quadratic features into
+\[
+\begin{aligned}
+ Z_+&=(\xi_1,\xi_2,t\xi_3,t^2\xi_1,t^2\xi_2)^T,\\
+ Z_-&=(\xi_3,t\xi_1,t\xi_2,t^2\xi_3)^T .
+\end{aligned}
+\]
+Consequently Eq.~\eqref{eq:support} is equivalent to
+\begin{equation}
+ \begin{gathered}
+ \xi^TK(t)\xi=Z_+^TGZ_++Z_-^TJZ_-,\\
+ G\succeq0,\quad J\succeq0,
+ \end{gathered}
+ \label{eq:gram}
+\end{equation}
+with $G$ of order five and $J$ of order four. Matching coefficients
+gives sixteen affine equations. There is no remaining angle
+optimization.
+
+Dualizing these equations gives an exact membership test with the
+same two block orders, sixteen auxiliary variables, and three affine
+equations for normalization, $M$ and $S$. The explicit matrices are
+given in the accompanying complete proofs.
+\newpage
+A positive definite Gram
+pair at $(\lambda,\alpha,h)=(1,0,0)$ supplies strict feasibility;
+its weighted-trace normalization bounds every dual variable. The
+dual image is therefore closed and attains every boundary point.
+Since its supporting half-spaces are exactly Eq.~\eqref{eq:support},
+it equals $\W$.
+
+\emph{Why finite NPA depth still fails.}
+For the same region, let
+\[
+ \begin{gathered}
+ \omega_{\rm Q}(\alpha)=\max_{\W}(S+\alpha M),\\
+ \Delta_\alpha=\omega_{\rm Q}(\alpha)-(2+2\alpha).
+ \end{gathered}
+\]
+The nontermination proof~\cite{prior} gives, with $T=1-\alpha$,
+\begin{equation}
+\begin{gathered}
+ \Delta_{1-T}=\tfrac43T^3+O(T^4),\\
+ \frac{\omega_{\rm NPA}^{(L)}(1-T)-\omega_{\rm Q}(1-T)}
+ {\Delta_{1-T}}\longrightarrow+\infty
+ \qquad(T\downarrow0)
+\end{gathered}
+\label{eq:npa}
+\end{equation}
+for each fixed finite $L$.
+
+The obstruction survives in the two independent measurement angles.
+Set $T=t^2$, use angles $tu,tv$, and the normalized version of
+\[
+ \xi_t=(1,t^3u^2v/12,t^3uv^2/12,-t^2uv/4)^T .
+\]
+The gap between the quantum bound and this strategy, divided by
+$\Delta_{1-t^2}$, tends to $\mathcal M(u/2,v/2)$, where
+\[
+ {\cal M}(U,V)=1+U^4V^2+U^2V^4-3U^2V^2.
+\]
+A bounded ratio in Eq.~\eqref{eq:npa} would make the fixed-level
+NPA square factors converge, after rescaling, to polynomial squares
+representing $\mathcal M+c$ for some $c\geq0$.
+The fixed word length and bounded Gram trace control their Taylor
+remainders; bounded polynomial values then control their coefficients.
+These compactness steps are proved in full in the companion.
+
+The contradiction itself takes one line of coefficients.
+Each square factor has degree at most three and is constant on both
+axes, hence has the form $a+bUV+dU^2V+eUV^2$.
+The coefficient of $U^2V^2$ in a sum of such squares is $\sum b^2$;
+in $\mathcal M+c$ it is $-3$.
+
+Equal overlaps thus determine the support values, while an NPA
+certificate must represent the bound for independently chosen
+measurement angles. The univariate squares in Eq.~\eqref{eq:gram}
+are obtained after the support reduction. They need not be identities
+in a fixed list of observable words.
+
+\emph{Minimal block order and thirty-two exact projections.}
+The set $\W$ is closed, convex and semialgebraic, so Scheiderer's
+planar theorem gives $\sxdeg(\W)\leq2$~\cite{soc}.
+The cubic term in Eq.~\eqref{eq:npa} excludes a polygon: a polygon's
+support would be affine sufficiently close to $\alpha=1$.
+Thus $\sxdeg(\W)=2$. The blocks $5,4$ give the explicit construction;
+the planar theorem gives the optimal order.
+
+Physical input and output relabellings give the same quantum region for
+\[
+ \left(a_x+\chi_{xy}b_y,\ \sum_{ij}\chi_{ij}E_{ij}\right),
+ \qquad \prod_{ij}\chi_{ij}=-1.
+\]
+The eight CHSH sign patterns and four selected input pairs give
+32 distinct planes. Intersecting their fixed lifts with any NPA
+relaxation makes every support value on these planes exact, including
+all the directions in Eq.~\eqref{eq:npa}.
+
+\begin{thebibliography}{3}\setlength{\itemsep}{0pt}
+\bibitem{prior} A. Chaturvedi, \emph{No Finite NPA Level Characterizes
+the Complete Quantum Set in the Simplest Bell Scenario}, project
+manuscript (September 2026). Its complete nontermination proof is
+reproduced in the companion, Part II.
+\bibitem{hs} C. Hanselka and R. Sinn, \emph{Math. Z.} \textbf{292},
+83--101 (2019), Corollary 2.8;
+\href{https://arxiv.org/abs/1707.08261}{arXiv:1707.08261}.
+\bibitem{soc} C. Scheiderer, \emph{SIAM J. Appl. Algebra Geom.}
+\textbf{5}, 114--139 (2021), Theorem 0.1;
+\href{https://arxiv.org/abs/2004.04196}{arXiv:2004.04196}.
+\end{thebibliography}
+\end{document}
