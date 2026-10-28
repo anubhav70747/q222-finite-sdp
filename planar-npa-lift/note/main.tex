@@ -107,8 +107,9 @@ what will give one lift for the whole region.
 A PSD real univariate matrix polynomial is a polynomial matrix sum
 of squares, including on its singular boundary~\cite{hs}.
 For a quartic, the factors have degree at most two.
-For $\xi\in\mathbb R^3$, the parity of Eq.~\eqref{eq:K} splits the nine
-quadratic features into
+For $\xi\in\mathbb R^3$, average the Gram matrix under
+$(t,\xi)\mapsto(-t,\operatorname{diag}(1,1,-1)\xi)$. Mixed parities
+cancel, splitting the nine quadratic features into
 \[
 \begin{aligned}
  Z_+&=(\xi_1,\xi_2,t\xi_3,t^2\xi_1,t^2\xi_2)^T,\\
@@ -126,7 +127,7 @@ Consequently Eq.~\eqref{eq:support} is equivalent to the polynomial identity
 with $G$ of order five and $J$ of order four. Matching coefficients
 gives sixteen affine equations.
 
-Dualizing gives the membership lift
+The adjoint coefficient maps give the membership test
 \begin{equation}
  \begin{split}
  \W=\{&(m(z),s(z)):z\in\mathbb R^{16},\\
@@ -138,18 +139,26 @@ The matrices $U,V$ are the adjoints of the coefficient map, of orders
 five and four; $\ell,m,s$ are its linear coordinate maps. Their rational
 entries are given in the complete proofs.
 
-This lift attains the boundary. The positive definite Gram pair
+There is a direct physical proof of the reverse inclusion.
+For a real unit triplet state $\xi$ at angle $t$, choose
 \[
- G_0=\operatorname{diag}(1,1,2,1,1),\quad
- J_0=\operatorname{diag}(1,2,2,1)
+ U=\frac{Z_+Z_+^T}{(1+t^2)^2},\qquad
+ V=\frac{Z_-Z_-^T}{(1+t^2)^2}.
 \]
-represents $(\lambda,\alpha,h)=(1,0,0)$ and supplies strict feasibility.
-The normalization is
-$\operatorname{tr}(U(z)G_0)+\operatorname{tr}(V(z)J_0)=1$,
-which bounds the PSD matrices and every auxiliary variable.
-The normalized dual image is compact and has exactly the support
-values in Eq.~\eqref{eq:support}. It therefore equals $\W$, including
-its boundary.
+These matrices obey the shared-entry constraints, normalize to one,
+and return the state's actual $M,S$. Their limits include $t=\infty$.
+The triplet images have every quantum support value; the omitted
+singlet points $(0,-2c)$ are mixtures of triplet endpoints $(0,\pm2)$.
+Their convex hull is therefore $\W$. Mixing witnesses admits every
+point. Conversely, pairing any feasible matrices with every Gram
+certificate gives $\lambda-hS-\alpha M\ge0$, so no point outside
+$\W$ is admitted.
+
+The compact triplet image is connected. A point in its planar convex
+hull lies on a chord joining two image points: otherwise its connected
+radial image would lie in an open semicircle, giving a separating line.
+Thus every point of $\W$ needs at most two real equal-overlap strategies,
+with both membership matrices of rank at most two.
 
 \emph{Why the NPA obstruction remains.}
 Equal overlaps determine support values; a finite NPA certificate

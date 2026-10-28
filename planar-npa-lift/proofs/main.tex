@@ -15,7 +15,7 @@
 \newcommand{\W}{\mathcal W}\newcommand{\sxdeg}{\operatorname{sxdeg}}
 \newcommand{\Span}{\operatorname{span}}\newcommand{\Newt}{\operatorname{Newt}}
 \title{Complete proofs\\Infinite NPA depth at minimal semidefinite complexity}
-\author{Anubhav Chaturvedi}\date{27 October 2026}
+\author{Anubhav Chaturvedi}\date{28 October 2026}
 \begin{document}
 \maketitle
 
@@ -29,7 +29,8 @@ degree two, although every fixed NPA level projects strictly outside it.
 The finite lift rests on equal measurement overlaps: in the nonclassical
 range, fixing their product leaves the determinant minimized by their
 smallest sum. Part I develops this
-reduction, the actual membership matrices, all signed asymmetric branches
+reduction, physical rank-one witnesses, the two-strategy realization,
+the actual membership matrices, all signed asymmetric branches
 and the thirty-two relabelled projections. Part II gives the full NPA
 obstruction in five connected steps, from the quantum boundary to the
 polynomial limit of a finite certificate.
@@ -243,15 +244,89 @@ and
  \label{eq:coords}
 \end{align}
 
-Here is why dualization gives both inclusions and attains the auxiliary variables.
-Write Eq.~\eqref{eq:rows} as
-\(\mathcal A(G,J)=B(\lambda,a,h)\), in the displayed row order.
-The matrices in Eq.~\eqref{eq:dualmat} are exactly
-\(\mathcal A^*z\), and
-\(B^Tz=(\ell(z),-M(z),-S(z))\), where \(\ell\) is the normalization in
-Eq.~\eqref{eq:coords}. Therefore a feasible \(z\) pairs nonnegatively with every
-valid support inequality.
+We first build the membership variables from actual states.
+Use $u,v\ge0$, $u^2+v^2=1$, and a real unit vector
+$\xi=(\xi_1,\xi_2,\xi_3)$ in the triplet basis
+$(\phi_+,\phi_-,\psi_+)$. The measurement overlap is $c=u^2-v^2$,
+with sine $2uv$. Define
+\[
+ r_+=(u^2\xi_1,u^2\xi_2,uv\xi_3,v^2\xi_1,v^2\xi_2)^T,\qquad
+ r_-=(u^2\xi_3,uv\xi_1,uv\xi_2,v^2\xi_3)^T.
+\]
+The rank-one matrices $U=r_+r_+^T$, $V=r_-r_-^T$ have precisely the
+shared entries in Eq.~\eqref{eq:dualmat}. Explicitly, choose
+\begin{equation}
+\begin{split}
+ z={}&(u^4\xi_1^2,\ 2u^4\xi_1\xi_2,\ u^4\xi_2^2,\ u^4\xi_3^2,\\
+ &2u^3v\xi_1\xi_3,\ 2u^3v\xi_2\xi_3,\ u^2v^2\xi_1^2,
+   \ 2u^2v^2\xi_1\xi_2,\\
+ &u^2v^2\xi_2^2,\ u^2v^2\xi_3^2,\ 2uv^3\xi_1\xi_3,
+   \ 2uv^3\xi_2\xi_3,\\
+ &v^4\xi_1^2,\ 2v^4\xi_1\xi_2,\ v^4\xi_2^2,\ v^4\xi_3^2).
+\end{split}
+\label{eq:statewitness}
+\end{equation}
+Substitution into Eq.~\eqref{eq:coords} gives $\ell(z)=1$ and
+\begin{align*}
+ M={}&4\xi_1\xi_2,\\
+ S={}&2(u^4-v^4)\xi_1^2
+ +2(u^4+4u^2v^2-v^4)(\xi_2^2-\xi_3^2)
+ +16uv^3\xi_2\xi_3.
+\end{align*}
+These are the state's physical expectations. The homogeneous variables
+include both endpoints without division or limits.
 
+Let $\mathcal T$ be this set of real triplet images. It is compact and
+path-connected, being a continuous image of a quarter-circle times $S^2$.
+The singlet contributes only $(0,-2c)$, and
+\[
+ (0,-2c)=\frac{1+c}{2}(0,-2)+\frac{1-c}{2}(0,2).
+\]
+Both endpoints belong to $\mathcal T$: choose $\xi=(0,0,1)$ and
+respectively $(u,v)=(1,0),(0,1)$. Since equal overlaps attain every
+support value, $\operatorname{conv}\mathcal T$ and $\W$ have the same
+supporting inequalities. They are compact convex sets, hence
+\begin{equation}
+ \W=\operatorname{conv}\mathcal T.
+ \label{eq:triplet-hull}
+\end{equation}
+Convex mixtures of the displayed witnesses therefore admit every point of
+$\W$ into the SDP, including the boundary.
+
+For the other inclusion, write Eq.~\eqref{eq:rows} as
+$\mathcal A(G,J)=B(\lambda,a,h)$ in the displayed row order.
+Then $(U(z),V(z))=\mathcal A^*z$ and
+$B^Tz=(\ell(z),-M(z),-S(z))$. Any feasible $z$ satisfies
+\[
+ \lambda-aM(z)-hS(z)=\tr[U(z)G]+\tr[V(z)J]\ge0
+\]
+for every valid supporting inequality, by Eq.~\eqref{eq:cone} and its Gram
+representation. Thus its coordinates belong to $\W$. This proves the
+membership test without invoking dual attainment.
+
+\paragraph{Two strategies suffice.}
+Every point of the convex hull of a compact connected set in the plane
+lies on a segment joining two points of the set. Here is a direct proof.
+Take $p\in\operatorname{conv}\mathcal T\setminus\mathcal T$ and project
+$\mathcal T$ radially onto the unit circle about $p$. Its image is compact
+and connected. If it contains no antipodal pair, it is an arc of length
+less than $\pi$, contained in an open semicircle. The midpoint direction
+then strictly separates $p$ from $\mathcal T$, a contradiction.
+Thus $x-p=r n$ and $y-p=-s n$ for some $x,y\in\mathcal T$ and $r,s>0$,
+and $p=(s x+r y)/(r+s)$.
+
+Applied to Eq.~\eqref{eq:triplet-hull}, this shows that every $(M,S)\in\W$
+is realized by a mixture of at most two real pure two-qubit strategies,
+each with equal local overlaps. Their witnesses give simultaneously
+$\operatorname{rank}U,\operatorname{rank}V\le2$.
+If the point is extreme, it belongs to $\mathcal T$ and both ranks can be
+at most one. These rank bounds describe available witnesses; no rank
+constraint is added to the convex SDP.
+
+\paragraph{Compactness and the dual formulation.}
+The normalized feasible auxiliary set is also compact. The following
+argument gives an alternative dual proof of membership and can be useful
+when optimizing over the lift.
 For the reverse implication, the dual image
 \[
  {\cal D}=\{B^Tz:U(z)\succeq0,\ V(z)\succeq0\}

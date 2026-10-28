@@ -1,34 +1,42 @@
 # Article flow
 
-Begin with the same quantum region: infinite NPA depth, but an exact finite
-lift. Its two coordinates are the CHSH value and the sum of two marginal
-averages; the marginals themselves need not be equal.
+Start with the same experiment and the same planar quantum region:
+infinite NPA depth, yet a finite exact lift. The two marginal averages
+need not agree; only their sum is retained.
 
-Every supporting line asks for positivity of a two-qubit slack operator.
-Above the local bound, its first three characteristic coefficients are
-nonnegative. The determinant therefore decides positivity. At fixed product
-of the overlap parameters, the determinant is affine in their sum with a
-nonnegative coefficient in the nonclassical range. AM–GM selects equal
-overlaps. A short explicit sum of squares completes the local directions.
-One angle consequently determines every supporting line.
+A supporting line asks whether a two-qubit slack is positive. Above the
+local bound, its first three characteristic coefficients are nonnegative,
+so its determinant decides positivity. At fixed product of the overlap
+parameters the determinant is affine in their sum. AM–GM selects equal
+overlaps in the nonclassical range; the explicit critical sum of squares
+completes the local range. One angle determines every supporting line.
 
-Rationally parametrize that angle. The slack becomes a univariate quartic
-matrix, affine in all support coefficients. Univariate matrix positivity
-gives quadratic square factors, including singular cases. Parity separates
-the factors into blocks of orders five and four. Matching sixteen
-coefficients gives one fixed cone of valid inequalities. The main text
-proves both membership inclusions: trace pairing gives one, and the strict
-anchor, bounded normalization and semidefinite duality give the other.
+Rational parametrization turns the slack into a quartic matrix. Univariate
+matrix positivity gives quadratic square factors even on the boundary.
+Averaging under the sign symmetry cancels mixed parities and gives the
+same two finite feature lists for every support direction.
 
-The distinction from the preceding NPA result now has a concrete meaning.
-The support optimization admits equal overlaps, while finite observable-word
-certificates must hold for independent angles. The earlier shifted Motzkin
-obstruction survives that freedom. Its complete proof is reorganized into
-five connected sections in the companion: the quantum/NPA models, the cubic
-boundary, the trial-state gap, the polynomial limit of a finite certificate,
-and the extension to arbitrary finite word lists. The uniform Taylor
-remainder and the bounded-coefficient argument remain separate steps.
+Turn polynomial evaluation into a linear functional. Trace pairing with
+each certificate proves that every feasible SDP point is quantum. For
+the converse, an actual state at an actual angle supplies the functional
+by evaluation. Its matrices are rank-one outer products. The triplet
+image has every quantum support value, and the singlet values are mixtures
+of two triplet endpoints. Mixing these physical witnesses fills the region.
+No dual-attainment argument is needed for either inclusion.
 
-Finally, the cubic boundary excludes a polygon, making block order two
-optimal by the planar representation theorem. Physical relabellings give
-thirty-two exact projections that can be added to any NPA level.
+The triplet image is compact and connected. A planar point in its convex
+hull lies on a chord between two image points: otherwise radial projection
+would put the image inside an open semicircle and strictly separate the
+point. Thus two real pure strategies suffice, with simultaneous witness
+ranks at most two. The companion gives the homogeneous witness and proof.
+
+NPA certificates must still hold at two independent angles. The limiting
+shifted Motzkin polynomial cannot be a sum of squares there, whereas its
+equal-angle restriction factors explicitly into squares. This makes the
+source of infinite depth visible beside the finite construction. The full
+scaling, uniform Taylor remainder and coefficient-compactness argument
+remain in the companion.
+
+The cubic quantum boundary excludes a polygon. The planar representation
+theorem then makes block order two optimal. Physical relabellings give
+32 exact projections that can be added to any NPA level.

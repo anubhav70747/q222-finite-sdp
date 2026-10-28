@@ -16,7 +16,7 @@ merged. The original source files remain unchanged. The preceding
 [23-page companion](https://github.com/anubhav70747/q222-finite-sdp/blob/3de9b29f3d09be1397124c870c31380a2a6a182d/planar-npa-lift/proofs/main.pdf)
 and its
 [source](https://github.com/anubhav70747/q222-finite-sdp/blob/3de9b29f3d09be1397124c870c31380a2a6a182d/planar-npa-lift/proofs/main.tex)
-remain available in Git history. The current companion is 13 pages at the
+remain available in Git history. The current companion is 14 pages at the
 same 11-point font and 23-mm margins.
 
 | Prior argument | Current location |
@@ -27,9 +27,9 @@ same 11-point font and 23-mm margins.
 | Uniform Taylor approximation, fixed-grid coefficient bound, polynomial sum-of-squares limit, fixed-level divergence and its quantifiers | S4 |
 | Valid probabilities, arbitrary finite projector-word lists, strict inclusion and deterministic-limit mixtures | S5 |
 
-The current two-page Letter includes the new finite-lift proof: the
+The Letter has two pages of argument and one references page. It includes the
 characteristic-coefficient test, AM–GM reduction, explicit local sum of
-squares, univariate Gram construction and both dual membership inclusions.
+squares, univariate Gram construction and both physical membership inclusions.
 The complete proof companion gives the actual matrices and full NPA proof.
 
 Scientific inputs retain their citations: Hanselka–Sinn, Corollary 2.8
@@ -55,3 +55,27 @@ the original proof. A separate Luna high reader received the Letter in
 two sequential frozen portions and could reconstruct each without later
 text supplying a missing inference. These are writing and proof-scope
 reviews; they do not imply coauthor acceptance of the revised article.
+
+## 28 October physical-witness revision
+
+The previous 13-page companion is preserved at commit
+d01e5e089c5b4ad73667e922eec5b62b5d82485d. Its entire Part II is unchanged
+in this revision. Part I adds an explicit homogeneous state-to-membership
+map, a direct proof of both inclusions, and an elementary connected-set
+chord argument. Together they prove that two real pure equal-overlap
+two-qubit strategies suffice for every point of the planar region, with
+simultaneous witness ranks at most two. The earlier strict-anchor duality
+proof is retained as an alternative.
+
+The parallel-repetition and BoundingContextuality coauthored sources were
+read again for exposition: explain the object needed, construct it, then
+verify its defining properties. No isolated passage is attributed to one
+coauthor and no coauthor approval is inferred. The accepted abstract is
+unchanged.
+
+Two bounded Sol high reviewers were used: one audited the science and the
+new physical/chord argument; one read the whole Letter sequentially and
+identified the first missing explanations. A focused return reading of
+the replacement membership passage checked whether both inclusions could
+now be reconstructed. This was a whole-manuscript reader followed by an
+informed return pass, not a new frozen-prefix experiment.

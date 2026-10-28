@@ -9,7 +9,7 @@
 \title{Infinite NPA depth at minimal semidefinite complexity}
 \author{Anubhav Chaturvedi}
 \affiliation{Division of Quantum Optics and Information, Institute of Theoretical Physics and Astrophysics, Faculty of Mathematics, Physics and Informatics, University of Gda\'nsk, 80-308 Gda\'nsk, Poland}
-\date{27 October 2026}
+\date{28 October 2026}
 \begin{abstract}
 The quantum region of the CHSH value and the sum of two marginal averages requires infinite Navascués–Pironio–Acín depth, yet admits an exact finite semidefinite lift. We construct this lift by showing that every supporting bound is attained with equal measurement overlaps: one angle determines the entire boundary. Finite NPA certificates must remain valid for two independently varying angles, where the obstruction to finite depth survives. The same region has the smallest semidefinite extension degree possible for a nonpolyhedral set, separating infinite hierarchy depth from minimal semidefinite complexity.
 \end{abstract}
@@ -29,7 +29,8 @@ $\W$ convex, and the two-qubit reduction below makes it compact.
 The preceding Letter~\cite{prior} proved that every finite NPA
 level~\cite{NPA2007,NPA2008} overestimates some supporting lines
 $S+\alpha M$ near $\alpha=1$. Here we construct an exact finite lift
-of this same region. Its semidefinite extension degree---the smallest
+of this same region. Write $\W_L$ for its level-$L$ NPA projection.
+Its semidefinite extension degree---the smallest
 possible largest PSD block order in a finite lift---is two:
 \begin{equation}
  \W\subsetneq\W_L\quad\text{for every finite }L,
@@ -149,7 +150,8 @@ sum of squares, including when singular~\cite{HanselkaSinn}.
 Quartic diagonal entries force every factor to have degree at most
 two, since leading real squares cannot cancel. Thus the same finite
 feature list works for every supporting line. For $\xi\in\mathbb R^3$,
-parity separates it into
+average a Gram representation under $(t,\xi)\mapsto(-t,R\xi)$.
+Mixed parities cancel, leaving the two feature vectors
 \[
 \begin{aligned}
  Z_+&=(\xi_1,\xi_2,t\xi_3,t^2\xi_1,t^2\xi_2)^T,\\
@@ -162,51 +164,72 @@ Equation~\eqref{eq:equiv} is therefore equivalent to the polynomial identity
  \qquad G,J\succeq0 .
  \label{eq:gram}
 \end{equation}
-Matching the sixteen independent coefficients defines a linear map
-$\mathcal A(G,J)=Bq$, where $q=(\lambda,\alpha,h)$.
-Because $K$ is affine in all three entries of $q$, this describes
-the entire cone of valid inequalities in one SDP.
-
-To recover the region, take the adjoint maps
+To turn these certificates into a membership test, replace evaluation
+of their monomials by a linear functional. The entries of
+$Z_+Z_+^T$ and $Z_-Z_-^T$ span a sixteen-dimensional polynomial
+space. Let $\mathcal L_z$ assign real values $z\in\mathbb R^{16}$
+to a basis of that space, and set
 \[
- (U(z),V(z))=\mathcal A^*z,\qquad
- B^Tz=(\ell(z),-m(z),-s(z)).
+ U(z)=\mathcal L_z(Z_+Z_+^T),\qquad
+ V(z)=\mathcal L_z(Z_-Z_-^T).
 \]
-Here $z\in\mathbb R^{16}$, and $U,V$ have orders five and four.
-A feasible $z$ with $\ell(z)=1$ satisfies
+Define the three linear coordinate maps by
+\[
+ \mathcal L_z(\xi^TK(t)\xi)
+ =\lambda\ell(z)-\alpha m(z)-hs(z).
+\]
+If $U(z),V(z)\succeq0$ and $\ell(z)=1$, applying
+$\mathcal L_z$ to Eq.~\eqref{eq:gram} gives
 \begin{equation}
  \lambda-\alpha m(z)-hs(z)
- =\operatorname{tr}(UG)+\operatorname{tr}(VJ)\ge0
+ =\operatorname{tr}(UG)+\operatorname{tr}(VJ)\ge0.
  \label{eq:pairing}
 \end{equation}
-for every valid supporting bound. Thus $(m(z),s(z))\in\W$.
+Thus $(m(z),s(z))$ satisfies every supporting inequality of $\W$.
 
-For the converse, the positive definite pair
-\[
- G_0=\operatorname{diag}(1,1,2,1,1),\qquad
- J_0=\operatorname{diag}(1,2,2,1)
-\]
-represents $q=(1,0,0)$ and supplies strict feasibility.
-Moreover,
-$\ell(z)=\operatorname{tr}(U(z)G_0)+\operatorname{tr}(V(z)J_0)$.
-A bounded normalization therefore bounds both PSD matrices.
-Every coordinate of $z$ occurs in their entries, so the feasible
-auxiliaries are bounded too. The dual image is closed, and
-semidefinite duality gives the reverse inclusion:
+Conversely, each real unit triplet state $\xi$ at angle $t$ supplies
+the functional $P\mapsto P(t,\xi)/(1+t^2)^2$. It gives
+\begin{equation}
+ U=\frac{Z_+Z_+^T}{(1+t^2)^2},\qquad
+ V=\frac{Z_-Z_-^T}{(1+t^2)^2},
+ \label{eq:witness}
+\end{equation}
+with normalization one and coordinates equal to the state's
+actual $M,S$. The scaled features have limits at $t=\infty$.
+These triplet images form a compact set. Their convex hull has
+every quantum support value: equal overlaps suffice, and each
+singlet point $(0,-2c)$ is a mixture of the triplet endpoint
+points $(0,\pm2)$. Their convex hull is therefore $\W$.
+Mixing the corresponding functionals gives
 \begin{equation}
  \W=\{(m(z),s(z)):\ell(z)=1,\ U(z),V(z)\succeq0\}.
  \label{eq:lift}
 \end{equation}
-This is the exact finite lift, with every boundary point attained.
-The coefficient equations and rational matrices are listed in the
-complete proofs~\cite{SM}.
+Both inclusions follow directly, including the boundary.
+The rational matrices are listed in the complete proofs~\cite{SM}.
+Moreover, the triplet image is connected: every point of its
+planar convex hull lies on a chord between two image points.
+Thus two real equal-overlap strategies suffice for every $(M,S)$,
+and both membership matrices can simultaneously have rank at most
+two~\cite{SM}.
 
 \emph{Infinite depth, minimal block order.}---
-The equal-overlap reduction concerns the support values.
-Finite NPA certificates must hold as observable-word identities
-for independent measurement angles. Near $\alpha=1$, our earlier
-proof uses this two-variable freedom to produce a shifted Motzkin
-polynomial that cannot be a sum of squares~\cite{prior}.
+The equal-overlap reduction concerns support values. Finite NPA
+certificates must hold for independently varying measurement angles.
+Near $\alpha=1$, the preceding proof~\cite{prior} shows that a
+NPA error bounded relative to the quantum violation would give a polynomial sum of squares for
+\[
+ \mathfrak m(X,Y)+c,\qquad
+ \mathfrak m=1+X^4Y^2+X^2Y^4-3X^2Y^2,\quad c\ge0.
+\]
+This is impossible: constant values on both axes restrict each
+cubic square factor to $a+bXY+dX^2Y+eXY^2$, whose squared
+$X^2Y^2$ coefficient is nonnegative. Yet on equal angles,
+\[
+ \mathfrak m(X,X)=(X^2-1)^2(2X^2+1).
+\]
+The obstruction needs the freedom discarded by the support reduction.
+The complete scaling and limiting argument is in the companion~\cite{SM}.
 
 For $f(\alpha)=\max_\W(S+\alpha M)$, the quantum boundary
 satisfies~\cite{GigenaEtAl2025,prior}
@@ -230,6 +253,7 @@ Adding these lifts to any NPA level retains every quantum correlation
 and makes all supporting bounds on these planes exact, including
 the family responsible for finite-level nontermination.
 
+\clearpage
 \begin{thebibliography}{9}
 \bibitem{CHSH} J. F. Clauser, M. A. Horne, A. Shimony, and R. A. Holt,
 Proposed experiment to test local hidden-variable theories,
