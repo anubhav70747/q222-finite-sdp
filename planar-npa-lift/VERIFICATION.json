@@ -1,15 +1,16 @@
 {
-  "date_utc": "2026-10-28T08:51:16.453793+00:00",
-  "base_commit": "41b74889f31d15afd6bdbebe467ece904a107b1a",
-  "scope": "Physical-witness proof revision, two-strategy corollary and complete portable delivery. Analytical arguments establish universal statements; symbolic checks establish the stated identities.",
+  "date_utc": "2026-10-28T09:28:01.618369+00:00",
+  "base_commit": "0d89ff42b643fbbd109c712a6c4a6ba90f40c1dd",
+  "scope": "Terminology and explanation revision of the Letter, note and complete proofs. No new scientific claim; dated exact verification retained without unchanged-baseline replay.",
   "abstract_status": "Author-approved; article and ABSTRACT.txt reproduce the accepted text verbatim.",
   "abstract_sha256": "b6f96dca28746fe5f6c7c8f0ca120832819e611ae24b151fa492cca23d6c6854",
   "source_baselines_unchanged": true,
   "exact_data_and_checkers_unchanged": [
-    "checks/verify_symmetric.py",
-    "checks/verify_membership_and_asymmetric.py",
+    "checks/ALL32_EXACT_PROJECTION_CONSTRAINTS.json",
     "checks/build_orbit_constraints.py",
-    "checks/ALL32_EXACT_PROJECTION_CONSTRAINTS.json"
+    "checks/verify_membership_and_asymmetric.py",
+    "checks/verify_state_witness.py",
+    "checks/verify_symmetric.py"
   ],
   "baseline_exact_verification": {
     "date_utc": "2026-10-27T17:30:13.112865+00:00",
@@ -40,50 +41,77 @@
     "scope": "Shared matrix entries, normalization, physical coordinates, both endpoints, feature-span dimension and diagonal Motzkin factorization. The connected-set theorem is proved analytically."
   },
   "proof_preservation": {
-    "Part_I": "All previous branches and matrices retained; explicit physical membership witnesses and the two-strategy corollary added.",
-    "Part_II": "Byte-identical body to the preceding 13-page companion; all original S1-S10 results remain in S1-S5.",
-    "critical_dependencies": "Uniform Taylor remainder and fixed-grid coefficient compactness are separate arguments. Trial-state gap, all quantifiers, detector-loss asymptotics, arbitrary finite lists and deterministic-limit mixtures retained.",
-    "original_sources": "Unchanged; original manuscript and prior 23-page companion preserved."
+    "Part_I": "Explanatory prose revised; all formulas, branches, matrices and result statements preserved.",
+    "Part_II": "Explanatory prose revised; all displayed mathematics, results and critical dependencies retained. Not byte-identical to preceding prose.",
+    "counts": "All 77 displayed mathematical blocks and 61 labels retained; formal environment sequences unchanged.",
+    "source_archives": "Original source hashes checked unchanged."
   },
-  "new_result": "Every planar point is a mixture of at most two real pure equal-overlap two-qubit strategies; both membership matrices can simultaneously have rank at most two, and at most one at extreme points. These are existential witness ranks, not block sizes.",
+  "new_result": "None in this prose revision. The two-strategy result was established in the preceding physical-witness revision.",
   "reviews": [
     {
-      "role": "Independent mathematical reviewer",
+      "role": "Fresh sequential reader, then one informed return pass",
       "model": "Sol high",
-      "scope": "Whole Letter and companion; new physical witnesses and planar chord argument",
-      "outcome": "Source domains, both inclusions, endpoints and two-strategy/rank corollary checked. No material scientific error identified."
+      "outcome": "Initially identified undefined lift, Bell basis, Gram representation, functional and relative-error notation. After repair, reconstructed both membership inclusions; no remaining material gap identified."
     },
     {
-      "role": "Fresh sequential whole-manuscript reader",
+      "role": "Companion prose and preservation reviewer",
       "model": "Sol high",
-      "scope": "Whole Letter without project history, followed by one informed return reading of the changed membership passage",
-      "outcome": "Identified parity and abstract-duality friction. The revised physical proof allowed reconstruction of both inclusions without the former hidden steps."
+      "outcome": "Read full companion and coauthored source passages. Revised terminology and checked all displays, labels, formal statements and substantive conditions against frozen baseline."
     },
     {
-      "role": "Lead source and integration review",
-      "scope": "Coauthored exposition sources, original scientific sources, complete final article and changed companion",
-      "outcome": "Accepted abstract and entire NPA Part II preserved; fixed affine lift and witness rank claims kept distinct."
+      "role": "Lead integration and production",
+      "outcome": "Accepted abstract preserved byte-for-byte; checked edits, all logs and all rendered pages."
     }
   ],
   "pdf_pages": {
     "article": 3,
     "note": 2,
-    "proofs": 14
+    "proofs": 16
   },
-  "article_layout": "Two pages of argument, followed by references on page 3; unchanged RevTeX settings.",
+  "article_layout": "Three pages including references; the separate short note remains two pages.",
   "all_internal_refs_and_citations_resolve": true,
-  "visual_review": "All 19 pages inspected, including the final reference-page split. No clipping or overfull boxes. Proofs retain 11-point font and 23-mm margins.",
+  "visual_review": "All 21 rendered pages inspected. No clipping or overfull boxes; companion retains 11-point font and 23-mm margins.",
   "desktop_editor_compilation": "All three current projects compiled successfully.",
   "portable_fresh_build": {
-    "exit_code": 0,
-    "stdout": "Built note/main.pdf\nBuilt article/main.pdf\nBuilt proofs/main.pdf",
+    "all_three_root_entrypoints_pass": true,
     "all_three_PDF_texts_match_delivered_versions": true,
-    "root_entrypoints_tested": [
-      "main.tex",
-      "supplement.tex",
-      "note.tex"
+    "zip_crc_and_member_hashes_match": true,
+    "exact_checkers": "Unchanged since preceding verified revision; not replayed for prose-only edits."
+  },
+  "preceding_revision_evidence": {
+    "date_utc": "2026-10-28T08:51:16.453793+00:00",
+    "base_commit": "41b74889f31d15afd6bdbebe467ece904a107b1a",
+    "scope": "Physical-witness proof revision, two-strategy corollary and complete portable delivery. Analytical arguments establish universal statements; symbolic checks establish the stated identities.",
+    "new_exact_verification": {
+      "script": "checks/verify_state_witness.py",
+      "exit_code": 0,
+      "stdout": "Verified exact shared-entry witnesses, normalization, physical coordinates, both endpoints, 16-dimensional feature span and equal-angle Motzkin factorization.\nScope: algebraic identities only. Convex-hull equality and the two-strategy/rank result use the analytical proofs.",
+      "scope": "Shared matrix entries, normalization, physical coordinates, both endpoints, feature-span dimension and diagonal Motzkin factorization. The connected-set theorem is proved analytically."
+    },
+    "reviews": [
+      {
+        "role": "Independent mathematical reviewer",
+        "model": "Sol high",
+        "scope": "Whole Letter and companion; new physical witnesses and planar chord argument",
+        "outcome": "Source domains, both inclusions, endpoints and two-strategy/rank corollary checked. No material scientific error identified."
+      },
+      {
+        "role": "Fresh sequential whole-manuscript reader",
+        "model": "Sol high",
+        "scope": "Whole Letter without project history, followed by one informed return reading of the changed membership passage",
+        "outcome": "Identified parity and abstract-duality friction. The revised physical proof allowed reconstruction of both inclusions without the former hidden steps."
+      },
+      {
+        "role": "Lead source and integration review",
+        "scope": "Coauthored exposition sources, original scientific sources, complete final article and changed companion",
+        "outcome": "Accepted abstract and entire NPA Part II preserved; fixed affine lift and witness rank claims kept distinct."
+      }
     ],
-    "all_root_entrypoint_PDF_texts_match": true,
-    "zip_crc_and_member_hashes_match": true
+    "proof_preservation": {
+      "Part_I": "All previous branches and matrices retained; explicit physical membership witnesses and the two-strategy corollary added.",
+      "Part_II": "Byte-identical body to the preceding 13-page companion; all original S1-S10 results remain in S1-S5.",
+      "critical_dependencies": "Uniform Taylor remainder and fixed-grid coefficient compactness are separate arguments. Trial-state gap, all quantifiers, detector-loss asymptotics, arbitrary finite lists and deterministic-limit mixtures retained.",
+      "original_sources": "Unchanged; original manuscript and prior 23-page companion preserved."
+    }
   }
 }

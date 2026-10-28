@@ -19,9 +19,9 @@ These are ranks of available witnesses. The explicit block orders remain
 5 and 4; the optimal extension degree 2 follows separately from the planar
 representation theorem.
 
-- [PRL Letter](article/main.pdf): two pages of argument, followed by one page of references.
+- [PRL Letter](article/main.pdf): three pages including references.
 - [Two-page note](note/main.pdf): the central insight and proof.
-- [Complete proofs](proofs/main.pdf): 14 pages, including every membership
+- [Complete proofs](proofs/main.pdf): 16 pages, including every membership
   matrix, both inclusions, the two-strategy realization, all signed support
   branches and the entire earlier NPA argument.
 - [Complete Overleaf package](NPA_Finite_Lift_Overleaf.zip).

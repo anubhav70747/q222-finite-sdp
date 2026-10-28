@@ -17,15 +17,15 @@
 
 The quantum region of the CHSH value and the sum of two marginal averages requires infinite Navascués–Pironio–Acín depth, yet admits an exact finite semidefinite lift. We construct this lift by showing that every supporting bound is attained with equal measurement overlaps: one angle determines the entire boundary. Finite NPA certificates must remain valid for two independently varying angles, where the obstruction to finite depth survives. The same region has the smallest semidefinite extension degree possible for a nonpolyhedral set, separating infinite hierarchy depth from minimal semidefinite complexity.
 
-Alice and Bob choose between two measurements with outcomes $\pm1$.
-Write $a_x=\langle A_x\rangle$, $b_y=\langle B_y\rangle$ and
+Alice and Bob share a quantum state and choose between observables
+$A_x,B_y$ with outcomes $\pm1$, where $x,y\in\{0,1\}$. Write $a_x=\langle A_x\rangle$, $b_y=\langle B_y\rangle$ and
 $E_{xy}=\langle A_xB_y\rangle$. Retain
 \begin{equation}
  M=a_0+b_0,\qquad S=E_{00}+E_{01}+E_{10}-E_{11}.
  \label{eq:coordinates}
 \end{equation}
-Their quantum region $\W=\{(M,S):p\in\Q_{222}\}$ includes all quantum
-behaviors, with no equality imposed on the marginal averages.
+Let $\W$ contain all pairs $(M,S)$ attainable with quantum states
+and local measurements. The marginal averages need not be equal.
 For its level-$L$ NPA outer approximation $\W_L$, the preceding
 Letter~\cite{prior} and the construction below give
 \begin{equation}
@@ -35,25 +35,29 @@ Letter~\cite{prior} and the construction below give
  \end{gathered}}
  \label{eq:result}
 \end{equation}
-We construct one lift with positive semidefinite (PSD) blocks of orders
-five and four. Extension degree is the smallest possible largest block
-order among all finite lifts; its value two follows separately from a
-planar representation theorem.
+A semidefinite lift describes membership by positive semidefinite (PSD)
+matrices whose entries are affine in $(M,S)$ and auxiliary variables.
+We construct one with matrix sizes five and four. The extension degree
+is the smallest possible largest matrix size; its value two follows
+from a theorem on planar convex sets.
 
 \emph{Why one angle suffices.}
 To determine $\W$, consider an arbitrary supporting inequality
 $hS+\alpha M\leq\lambda$, with real $h,\alpha$.
-Jordan's lemma reduces its validity to positivity of two-qubit slacks
-$\lambda I-H$, where
+After realizing the measurements projectively on a larger space,
+Jordan's lemma reduces this question to whether the two-qubit matrices
+$\lambda I-H$ are PSD. Here
 \[
 \begin{gathered}
  H=h\,\mathrm{CHSH}+\alpha(ZI+IZ),\\
  A_1=cZ+\sqrt{1-c^2}X,\quad B_1=dZ+\sqrt{1-d^2}X.
 \end{gathered}
 \]
-Here $A_0=B_0=Z$ and $c,d\in[-1,1]$ are the cosines of the local
-measurement angles. Deterministic strategies attain
-$\ell=2|h|+2|\alpha|$, so $\lambda\geq\ell$ is necessary.
+Here $X,Z$ are Pauli matrices, $A_0=B_0=Z$, and
+$\mathrm{CHSH}=A_0B_0+A_0B_1+A_1B_0-A_1B_1$. Products of local
+operators mean tensor products. The numbers $c,d\in[-1,1]$ are
+the cosines of the angles between each party's two measurement directions. Deterministic strategies attain
+$\beta=2|h|+2|\alpha|$, so $\lambda\geq\beta$ is necessary.
 Above this bound, the first three elementary symmetric functions of
 the eigenvalues of $\lambda I-H$ are nonnegative. Its determinant
 therefore decides positivity: if it too is nonnegative, the characteristic
@@ -71,14 +75,15 @@ In the nonclassical range $|\alpha|\leq|h|$, the coefficient of $x+y$
 is nonnegative. At fixed product, $x+y\geq2\sqrt{xy}$, with equality
 at $x=y=\sqrt{xy}$. Thus equal overlaps minimize the determinant;
 positivity there implies positivity for every pair.
-For $|\alpha|\geq|h|$, the quantum support is the deterministic value
-$\ell$: average the two signed one-sided tilted-CHSH bounds and add
-the remaining marginal slack. Equal overlaps attain this value too.
-Hence they suffice for \emph{every} support direction.
+For $|\alpha|\geq|h|$, the maximum is the local bound $\beta$:
+average the Alice and Bob tilted-CHSH bounds at their local threshold,
+then use $\pm(A_0+B_0)\le2I$ for the remaining marginal coefficient.
+Equal overlaps attain this value too, for every real $h,\alpha$.
 
-At equal overlaps $c=d$, the singlet decouples. In the remaining
-three-dimensional block, set $c=(1-t^2)/(1+t^2)$ and multiply the slack
-by $(1+t^2)^2$. With
+At $c=d$, use the Bell states $\phi_\pm=(|00\rangle\pm|11\rangle)/\sqrt2$
+and $\psi_\pm=(|01\rangle\pm|10\rangle)/\sqrt2$. The singlet $\psi_-$
+decouples. In the ordered triplet basis $(\phi_+,\phi_-,\psi_+)$, set
+$c=(1-t^2)/(1+t^2)$ and multiply $\lambda I-H$ by $(1+t^2)^2$. With
 \[
  p_0=(1+t^2)^2,\qquad p_1=1-t^4,\qquad p_2=1+4t^2-t^4,
 \]
@@ -92,24 +97,25 @@ the result is the quartic matrix
  \end{pmatrix}.
  \label{eq:K}
 \end{equation}
-Its value at zero and leading coefficient force $\lambda\geq\ell$,
-which also controls the singlet. The missing endpoint follows by
-continuity. We have therefore proved
+Its value at zero and leading coefficient force $\lambda\geq\beta$,
+so the singlet bound holds too. Continuity includes $c=-1$, while
+$K(-t)=RK(t)R$, $R=\operatorname{diag}(1,1,-1)$, includes negative $t$. We have therefore proved
 \begin{equation}
  \max_{\W}(hS+\alpha M)\leq\lambda
  \quad\Longleftrightarrow\quad K(t)\succeq0\quad\forall t\in\mathbb R .
  \label{eq:support}
 \end{equation}
-All three support coefficients still enter \emph{affinely}. This is
-what will give one lift for the whole region.
+The entries are affine---constant plus linear---in $\lambda,\alpha,h$.
+Thus one fixed matrix describes every supporting inequality.
 
 \emph{From one variable to one finite lift.}
-A PSD real univariate matrix polynomial is a polynomial matrix sum
-of squares, including on its singular boundary~\cite{hs}.
-For a quartic, the factors have degree at most two.
-For $\xi\in\mathbb R^3$, average the Gram matrix under
-$(t,\xi)\mapsto(-t,\operatorname{diag}(1,1,-1)\xi)$. Mixed parities
-cancel, splitting the nine quadratic features into
+A real matrix polynomial in one variable is PSD everywhere exactly
+when it equals $\sum_j Q_j(t)^TQ_j(t)$ for polynomial matrices $Q_j$,
+including singular cases~\cite{hs}. Quartic diagonal entries force
+each $Q_j$ to have degree at most two. Thus, for $\xi\in\mathbb R^3$,
+$\xi^TK(t)\xi$ is a sum of squares of linear combinations of
+$t^k\xi_i$, $0\le k\le2$. Averaging under $(t,\xi)\mapsto(-t,R\xi)$
+cancels terms that change sign and leaves two groups of monomials:
 \[
 \begin{aligned}
  Z_+&=(\xi_1,\xi_2,t\xi_3,t^2\xi_1,t^2\xi_2)^T,\\
@@ -124,20 +130,23 @@ Consequently Eq.~\eqref{eq:support} is equivalent to the polynomial identity
  \end{gathered}
  \label{eq:gram}
 \end{equation}
-with $G$ of order five and $J$ of order four. Matching coefficients
-gives sixteen affine equations.
+The PSD coefficient matrices $G,J$, of sizes five and four, are
+called Gram matrices. Matching coefficients gives sixteen affine equations.
 
-The adjoint coefficient maps give the membership test
+Let $\mathcal L_z$ be a linear functional on the sixteen-dimensional
+span of the entries of $Z_+Z_+^T,Z_-Z_-^T$, specified by sixteen real
+values $z$. Apply it entrywise to define
+\[
+ U(z)=\mathcal L_z(Z_+Z_+^T),\quad V(z)=\mathcal L_z(Z_-Z_-^T),
+\]
+and define $\ell,m,s$ by
+$\mathcal L_z(\xi^TK\xi)=\lambda\ell(z)-\alpha m(z)-hs(z)$.
+Then the membership test is
 \begin{equation}
- \begin{split}
- \W=\{&(m(z),s(z)):z\in\mathbb R^{16},\\
-       &\ell(z)=1,\ U(z),V(z)\succeq0\}.
- \end{split}
+ \W=\{(m(z),s(z)):\ell(z)=1,\ U(z),V(z)\succeq0\}.
  \label{eq:membership}
 \end{equation}
-The matrices $U,V$ are the adjoints of the coefficient map, of orders
-five and four; $\ell,m,s$ are its linear coordinate maps. Their rational
-entries are given in the complete proofs.
+The complete proofs list every matrix entry.
 
 There is a direct physical proof of the reverse inclusion.
 For a real unit triplet state $\xi$ at angle $t$, choose
@@ -145,16 +154,16 @@ For a real unit triplet state $\xi$ at angle $t$, choose
  U=\frac{Z_+Z_+^T}{(1+t^2)^2},\qquad
  V=\frac{Z_-Z_-^T}{(1+t^2)^2}.
 \]
-These matrices obey the shared-entry constraints, normalize to one,
-and return the state's actual $M,S$. Their limits include $t=\infty$.
-The triplet images have every quantum support value; the omitted
+These matrices come from $\mathcal L_z(P)=P(t,\xi)/(1+t^2)^2$,
+with $\ell(z)=1$ and coordinates equal to the state's $M,S$. Their limits include $t=\infty$.
+The triplet states attain every quantum maximum of $hS+\alpha M$; the omitted
 singlet points $(0,-2c)$ are mixtures of triplet endpoints $(0,\pm2)$.
 Their convex hull is therefore $\W$. Mixing witnesses admits every
 point. Conversely, pairing any feasible matrices with every Gram
 certificate gives $\lambda-hS-\alpha M\ge0$, so no point outside
 $\W$ is admitted.
 
-The compact triplet image is connected. A point in its planar convex
+The set of pairs obtained from triplet states is compact and connected. A point in its planar convex
 hull lies on a chord joining two image points: otherwise its connected
 radial image would lie in an open semicircle, giving a separating line.
 Thus every point of $\W$ needs at most two real equal-overlap strategies,
@@ -163,10 +172,11 @@ with both membership matrices of rank at most two.
 \emph{Why the NPA obstruction remains.}
 Equal overlaps determine support values; a finite NPA certificate
 must represent the bound for independently chosen measurement angles.
-The earlier nontermination proof~\cite{prior} uses this freedom:
-near the local threshold, an NPA error bounded by a constant times
-the quantum violation above the local bound would force a shifted
-Motzkin polynomial to be a sum of polynomial squares.
+Write $f_L(\alpha)$ for the NPA maximum and $f(\alpha)$ for the quantum
+maximum of $S+\alpha M$. As $\alpha\uparrow1$, a bounded ratio
+$[f_L-f]/[f-(2+2|\alpha|)]$ would force a shifted Motzkin polynomial
+to be a sum of squares~\cite{prior}. The numerator is the NPA error;
+the denominator is the quantum violation above the local bound.
 The complete earlier argument is retained in the companion.
 
 \emph{Minimal block order and thirty-two exact projections.}
@@ -176,19 +186,21 @@ the expansion~\cite{prior}
  f(1-T)=4-2T+\tfrac43T^3+O(T^4),\qquad T\downarrow0 .
  \label{eq:cubic}
 \end{equation}
-A polygon would have affine support sufficiently close to $\alpha=1$,
+For a polygon, this maximum would be affine sufficiently close to $\alpha=1$,
 contrary to Eq.~\eqref{eq:cubic}. Thus $\W$ is nonpolyhedral.
-It is also closed, convex and semialgebraic, so Scheiderer's planar
-theorem gives $\sxdeg(\W)\leq2$~\cite{soc}.
+Its finite lift makes it semialgebraic: it is a finite union of sets
+defined by polynomial equalities and inequalities. Since it is also
+closed and convex, Scheiderer's planar theorem gives $\sxdeg(\W)\leq2$~\cite{soc}.
 Order-one lifts are polyhedral, hence $\sxdeg(\W)=2$.
-The blocks $5,4$ are explicit; the optimal-order lift is existential.
+The displayed lift has sizes $5,4$; the theorem guarantees a lift
+using matrices of size at most two.
 
 Physical input and output relabellings give the same quantum region for
 \[
  \left(a_x+\chi_{xy}b_y,\ \sum_{ij}\chi_{ij}E_{ij}\right),
  \qquad \prod_{ij}\chi_{ij}=-1.
 \]
-The eight CHSH sign patterns and four selected input pairs give
+Here $\chi_{ij}\in\{\pm1\}$. The eight CHSH sign patterns and four selected input pairs give
 32 distinct planes. Intersecting their fixed lifts with any NPA
 relaxation makes every support value on these planes exact, including
 all the directions responsible for finite-level nontermination.

@@ -16,7 +16,7 @@ merged. The original source files remain unchanged. The preceding
 [23-page companion](https://github.com/anubhav70747/q222-finite-sdp/blob/3de9b29f3d09be1397124c870c31380a2a6a182d/planar-npa-lift/proofs/main.pdf)
 and its
 [source](https://github.com/anubhav70747/q222-finite-sdp/blob/3de9b29f3d09be1397124c870c31380a2a6a182d/planar-npa-lift/proofs/main.tex)
-remain available in Git history. The current companion is 14 pages at the
+remain available in Git history. The current companion is 16 pages at the
 same 11-point font and 23-mm margins.
 
 | Prior argument | Current location |
@@ -27,7 +27,7 @@ same 11-point font and 23-mm margins.
 | Uniform Taylor approximation, fixed-grid coefficient bound, polynomial sum-of-squares limit, fixed-level divergence and its quantifiers | S4 |
 | Valid probabilities, arbitrary finite projector-word lists, strict inclusion and deterministic-limit mixtures | S5 |
 
-The Letter has two pages of argument and one references page. It includes the
+The Letter is three pages including references. It includes the
 characteristic-coefficient test, AM–GM reduction, explicit local sum of
 squares, univariate Gram construction and both physical membership inclusions.
 The complete proof companion gives the actual matrices and full NPA proof.
@@ -59,8 +59,8 @@ reviews; they do not imply coauthor acceptance of the revised article.
 ## 28 October physical-witness revision
 
 The previous 13-page companion is preserved at commit
-d01e5e089c5b4ad73667e922eec5b62b5d82485d. Its entire Part II is unchanged
-in this revision. Part I adds an explicit homogeneous state-to-membership
+d01e5e089c5b4ad73667e922eec5b62b5d82485d. Its entire Part II was unchanged
+in the physical-witness revision at commit 0d89ff42b643fbbd109c712a6c4a6ba90f40c1dd. Part I adds an explicit homogeneous state-to-membership
 map, a direct proof of both inclusions, and an elementary connected-set
 chord argument. Together they prove that two real pure equal-overlap
 two-qubit strategies suffice for every point of the planar region, with
@@ -79,3 +79,22 @@ identified the first missing explanations. A focused return reading of
 the replacement membership passage checked whether both inclusions could
 now be reconstructed. This was a whole-manuscript reader followed by an
 informed return pass, not a new frozen-prefix experiment.
+
+## 28 October terminology and explanation revision
+
+The Letter, two-page note and complete proofs now define the finite lift,
+ordered Bell basis, Gram representation, coordinate maps, and NPA error at
+their first use. Supporting maxima are written explicitly. The two
+membership inclusions follow the same physical construction throughout.
+The accepted abstract is unchanged. The companion retains all 77 displayed
+mathematical blocks, 61 labels and formal theorem/proof structures from
+0d89ff4. Both parts received explanatory prose edits; Part II is no longer
+byte-identical to that earlier version.
+
+One Sol high reader received the Letter in sequential frozen portions,
+then made one informed return pass over the repaired manuscript. A separate
+Sol high reviewer edited and checked the companion's terminology and
+preservation. The lead integrated the changes and inspected all 21 rendered
+pages. The original sources, exact data and scientific checkers are unchanged.
+Coauthored source texts informed terminology and exposition; no personal
+preference or coauthor approval is inferred.

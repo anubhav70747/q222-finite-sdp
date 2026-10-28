@@ -15,41 +15,48 @@ The quantum region of the CHSH value and the sum of two marginal averages requir
 \end{abstract}
 \maketitle
 
-Alice and Bob each choose between two measurements with outcomes $\pm1$.
-Write $a_x=\langle A_x\rangle$, $b_y=\langle B_y\rangle$ and
+Alice and Bob share a quantum state and each choose between two
+measurements with outcomes $\pm1$. Their observables are $A_x,B_y$,
+where $x,y\in\{0,1\}$. Write $a_x=\langle A_x\rangle$, $b_y=\langle B_y\rangle$ and
 $E_{xy}=\langle A_xB_y\rangle$, and retain
 \begin{equation}
  M=a_0+b_0,\qquad S=E_{00}+E_{01}+E_{10}-E_{11}.
  \label{eq:observed}
 \end{equation}
-$S$ is the CHSH value~\cite{CHSH}. Let $\W$ be their full quantum region. The two marginal averages
-may differ; only their sum is retained. Mixing strategies makes
-$\W$ convex, and the two-qubit reduction below makes it compact.
+$S$ is the CHSH value~\cite{CHSH}. Let $\W$ contain all pairs $(M,S)$
+attainable with quantum states and local measurements. The two marginal
+averages may differ; only their sum is retained. Shared randomness allows
+convex mixtures of strategies, so $\W$ is convex.
 
 The preceding Letter~\cite{prior} proved that every finite NPA
 level~\cite{NPA2007,NPA2008} overestimates some supporting lines
 $S+\alpha M$ near $\alpha=1$. Here we construct an exact finite lift
-of this same region. Write $\W_L$ for its level-$L$ NPA projection.
-Its semidefinite extension degree---the smallest
-possible largest PSD block order in a finite lift---is two:
+of this same region: membership in $\W$ is equivalent to finitely many
+positive semidefinite (PSD) matrix constraints, with entries affine
+(constant plus linear) in $M,S$ and auxiliary real variables.
+Write $\W_L$ for its level-$L$ NPA projection. The semidefinite extension
+degree is the smallest possible largest matrix size in such a lift. We show
 \begin{equation}
  \W\subsetneq\W_L\quad\text{for every finite }L,
  \qquad \sxdeg(\W)=2.
  \label{eq:result}
 \end{equation}
-The explicit construction below uses blocks of orders five and four.
-The optimal order two follows from the geometry of the region.
+Our explicit lift uses matrices of sizes five and four. The optimal
+size two follows from a theorem on planar convex sets.
 
 \emph{Equal overlaps determine every supporting line.}---
-To find $\W$, fix a candidate inequality $hS+\alpha M\le\lambda$.
-For given measurements its validity in every state is equivalent to
+A supporting line bounds $hS+\alpha M$ for fixed real coefficients
+$h,\alpha$. Define the Bell operator
 \[
- \lambda I-H\succeq0,\qquad
- H=h\,\mathrm{CHSH}+\alpha(A_0+B_0).
+ C_{\mathrm{CHSH}}=A_0B_0+A_0B_1+A_1B_0-A_1B_1,
 \]
-After projective dilation, Jordan's lemma decomposes each pair of
-binary observables into blocks of dimension at most two. Choosing
-local axes within these blocks gives
+where $A_xB_y$ means $A_x\otimes B_y$, and set
+$H=hC_{\mathrm{CHSH}}+\alpha(A_0+B_0)$, with identities on the other party
+understood. The bound $hS+\alpha M\le\lambda$ holds in every state
+exactly when $\lambda I-H\succeq0$; here $\succeq0$ means PSD.
+Every binary measurement can be realized as a projective measurement
+on a larger space. Jordan's lemma then decomposes each local pair into
+blocks of dimension at most two. In each block choose axes so that
 \begin{equation}
 \begin{gathered}
 A_0=B_0=Z,\\
@@ -58,12 +65,13 @@ A_0=B_0=Z,\\
 \end{gathered}
  \label{eq:angles}
 \end{equation}
-The cosines $c,d\in[-1,1]$ are the local measurement overlaps.
-Deterministic strategies attain $\ell=2|h|+2|\alpha|$,
-so a valid bound must satisfy $\lambda\ge\ell$.
+Here $X,Z$ are Pauli matrices and $c,d\in[-1,1]$ are the cosines
+of the angles between each party's two measurement directions. These
+are the measurement overlaps. Deterministic strategies attain the
+local bound $\beta=2|h|+2|\alpha|$, so $\lambda\ge\beta$ is necessary.
 
-Above this bound, the determinant decides positivity of the slack.
-To see this, put $\Omega=1+c+d-cd\in[-2,2]$ and expand
+For $\lambda\ge\beta$, a nonnegative determinant is enough to show
+that $\lambda I-H$ is PSD. Put $\Omega=1+c+d-cd\in[-2,2]$ and expand
 $\det(rI+\lambda I-H)=r^4+e_1r^3+e_2r^2+e_3r+D$:
 \begin{equation}
 \begin{aligned}
@@ -75,34 +83,32 @@ $\det(rI+\lambda I-H)=r^4+e_1r^3+e_2r^2+e_3r+D$:
 \end{equation}
 These three coefficients are nonnegative. For $e_3$, replacing its
 last term by $-16|h|\alpha^2$ gives an increasing cubic on
-$\lambda\ge\ell$, whose value at $\ell$ is
+$\lambda\ge\beta$, whose value at $\beta$ is
 $16|\alpha|(|\alpha|+2|h|)^2$.
-If $D\ge0$ too, the polynomial is positive for every $r>0$;
-a negative eigenvalue of the slack would give such a root.
+If $D\ge0$ too, the polynomial is positive for every $r>0$. A negative
+eigenvalue $-r$ of $\lambda I-H$ would make it zero, a contradiction.
 
-We can therefore compare measurement choices through a scalar.
-Set $x=(1-c)/2$, $y=(1-d)/2$, and write
+It remains to compare the determinants for different measurements. Set $x=(1-c)/2$, $y=(1-d)/2$, and write
 $D(x,y)=\det(\lambda I-H)$. Direct expansion gives
 \begin{equation}
  D(x,y)=F(xy)+64h^2(4h^2-\alpha^2)xy(x+y),
  \label{eq:det}
 \end{equation}
-where $F$ depends only on the product. For $|\alpha|\le|h|$,
+where $F$ is a polynomial in $xy$. For $|\alpha|\le|h|$,
 the coefficient of the sum is nonnegative. At fixed product,
 $x+y\ge2\sqrt{xy}$, so
 \begin{equation}
  D(x,y)\ge D(\sqrt{xy},\sqrt{xy}).
  \label{eq:agm}
 \end{equation}
-The equal-overlap point remains in $[0,1]^2$. Positivity there
-implies positivity at the original pair. Thus equal overlaps are
-the hardest measurements on which to satisfy the supporting bound.
+The equal-overlap point remains in $[0,1]^2$. If the bound holds at every equal-overlap pair, this comparison proves
+it at every pair. Equal overlaps therefore attain the maximum.
 
-For $|\alpha|\ge|h|$, the support is simply $\ell$.
+For $|\alpha|\ge|h|$, the maximum is the local bound $\beta$.
 The endpoint tilted-CHSH inequality follows from the identity
 \begin{equation}
 \begin{split}
-4I-(\mathrm{CHSH}+2A_0)
+4I-(C_{\mathrm{CHSH}}+2A_0)
 ={}&(I-C-A_1D_B)^2\\
 &+\tfrac14\sum_{y=0}^1[(I-A_0)(I+B_y)]^2,
 \end{split}
@@ -111,16 +117,20 @@ The endpoint tilted-CHSH inequality follows from the identity
 where $C=(B_0+B_1)/2$ and $D_B=(B_0-B_1)/2$.
 Party exchange and output flips give either sign of CHSH and
 either sign of the marginal. Average the Alice and Bob bounds,
-multiply by $|h|$, and add the remaining marginal slack of weight
-$|\alpha|-|h|$. This proves $H\le\ell I$, attained with equal-overlap
-deterministic measurements. Equal overlaps therefore suffice
-for every support direction.
+multiply by $|h|$, and use $\pm(A_0+B_0)\le2I$ for the remaining weight
+$|\alpha|-|h|$. This proves $H\le\beta I$, attained by deterministic
+measurements with equal overlaps. The reduction thus holds for every
+real $h,\alpha$.
 
 \emph{One angle gives one finite lift.}---
-At $c=d$, exchange symmetry separates the singlet, whose eigenvalue
-is $-2hc$. On the other three Bell states, set
-$c=(1-t^2)/(1+t^2)$ and multiply the slack by $(1+t^2)^2$.
-This removes the square root and gives
+At $c=d$, $H$ preserves the singlet
+$|\psi_-\rangle=(|01\rangle-|10\rangle)/\sqrt2$, with eigenvalue
+$-2hc$. Use the ordered basis $(|\phi_+\rangle,|\phi_-\rangle,|\psi_+\rangle)$
+for the triplet subspace, where
+$|\phi_\pm\rangle=(|00\rangle\pm|11\rangle)/\sqrt2$ and
+$|\psi_+\rangle=(|01\rangle+|10\rangle)/\sqrt2$. Set
+$c=(1-t^2)/(1+t^2)$, initially with $t\ge0$. Multiplying this block
+of $\lambda I-H$ by $(1+t^2)^2$ removes the denominators and gives
 \begin{equation}
  K(t)=
  \begin{pmatrix}
@@ -133,7 +143,7 @@ This removes the square root and gives
 with $p_0=(1+t^2)^2$, $p_1=1-t^4$ and $p_2=1+4t^2-t^4$.
 At $t=0$ and in the leading coefficient, positivity forces
 $\lambda\ge2h+2|\alpha|$ and $\lambda\ge-2h+2|\alpha|$.
-These imply $\lambda\ge\ell$ and control the singlet.
+Together they imply $\lambda\ge\beta$, so the singlet bound holds too.
 Continuity includes $c=-1$, while
 $K(-t)=RK(t)R$, $R=\operatorname{diag}(1,1,-1)$.
 Consequently, for all real support coefficients,
@@ -144,14 +154,20 @@ Consequently, for all real support coefficients,
  \label{eq:equiv}
 \end{equation}
 
-The infinitely many angle tests now have a finite certificate.
-A PSD real univariate matrix polynomial is a polynomial matrix
-sum of squares, including when singular~\cite{HanselkaSinn}.
-Quartic diagonal entries force every factor to have degree at most
-two, since leading real squares cannot cancel. Thus the same finite
-feature list works for every supporting line. For $\xi\in\mathbb R^3$,
-average a Gram representation under $(t,\xi)\mapsto(-t,R\xi)$.
-Mixed parities cancel, leaving the two feature vectors
+Positivity for all $t$ has a finite description. A real matrix polynomial
+in one variable is PSD everywhere exactly when
+$K(t)=\sum_j Q_j(t)^TQ_j(t)$ for polynomial matrices $Q_j$, including
+singular cases~\cite{HanselkaSinn}. Each diagonal entry of $K$ is a sum
+of real squares of degree at most four, so every entry of $Q_j$ has degree
+at most two: higher leading powers cannot cancel.
+
+For a real vector $\xi=(\xi_1,\xi_2,\xi_3)^T$, the scalar
+$\xi^TK(t)\xi$ is therefore a sum of squares of linear combinations
+of the nine monomials $t^k\xi_i$, $0\le k\le2$. Equivalently, it is
+a quadratic form in those monomials with a PSD coefficient matrix,
+called a Gram matrix. Average this representation under
+$(t,\xi)\mapsto(-t,R\xi)$. Terms that change sign under this transformation cancel,
+leaving two groups of monomials:
 \[
 \begin{aligned}
  Z_+&=(\xi_1,\xi_2,t\xi_3,t^2\xi_1,t^2\xi_2)^T,\\
@@ -164,11 +180,11 @@ Equation~\eqref{eq:equiv} is therefore equivalent to the polynomial identity
  \qquad G,J\succeq0 .
  \label{eq:gram}
 \end{equation}
-To turn these certificates into a membership test, replace evaluation
-of their monomials by a linear functional. The entries of
+We now use the same monomials to test whether a pair $(M,S)$ belongs
+to $\W$. Replace evaluation of polynomials by a linear functional. The entries of
 $Z_+Z_+^T$ and $Z_-Z_-^T$ span a sixteen-dimensional polynomial
 space. Let $\mathcal L_z$ assign real values $z\in\mathbb R^{16}$
-to a basis of that space, and set
+to a basis of that space, extend it linearly, and apply it entrywise to set
 \[
  U(z)=\mathcal L_z(Z_+Z_+^T),\qquad
  V(z)=\mathcal L_z(Z_-Z_-^T).
@@ -194,10 +210,10 @@ the functional $P\mapsto P(t,\xi)/(1+t^2)^2$. It gives
  V=\frac{Z_-Z_-^T}{(1+t^2)^2},
  \label{eq:witness}
 \end{equation}
-with normalization one and coordinates equal to the state's
-actual $M,S$. The scaled features have limits at $t=\infty$.
-These triplet images form a compact set. Their convex hull has
-every quantum support value: equal overlaps suffice, and each
+with $\ell(z)=1$ and coordinates equal to the state's $M,S$. The scaled features have limits at $t=\infty$.
+The pairs $(M,S)$ obtained this way form a compact set. Their convex
+hull has the same maxima of $hS+\alpha M$ as $\W$: equal overlaps
+suffice, and each
 singlet point $(0,-2c)$ is a mixture of the triplet endpoint
 points $(0,\pm2)$. Their convex hull is therefore $\W$.
 Mixing the corresponding functionals gives
@@ -205,55 +221,62 @@ Mixing the corresponding functionals gives
  \W=\{(m(z),s(z)):\ell(z)=1,\ U(z),V(z)\succeq0\}.
  \label{eq:lift}
 \end{equation}
-Both inclusions follow directly, including the boundary.
-The rational matrices are listed in the complete proofs~\cite{SM}.
-Moreover, the triplet image is connected: every point of its
-planar convex hull lies on a chord between two image points.
-Thus two real equal-overlap strategies suffice for every $(M,S)$,
-and both membership matrices can simultaneously have rank at most
-two~\cite{SM}.
+The complete proofs give every entry of $U,V$~\cite{SM}. The set of
+triplet pairs is also connected. Every point in the convex hull of a
+compact connected planar set lies on a segment joining two points of
+the set~\cite{SM}. Thus every $(M,S)$ is a mixture of two real
+equal-overlap strategies. Each matrix is then a sum of two rank-one
+matrices, so $U,V$ can simultaneously have rank at most two.
 
 \emph{Infinite depth, minimal block order.}---
-The equal-overlap reduction concerns support values. Finite NPA
-certificates must hold for independently varying measurement angles.
-Near $\alpha=1$, the preceding proof~\cite{prior} shows that a
-NPA error bounded relative to the quantum violation would give a polynomial sum of squares for
+Equal overlaps attain the quantum maximum. Finite NPA certificates,
+however, must hold for independent measurement angles. Let
+$f(\alpha)=\max_{\W}(S+\alpha M)$ and let $f_L(\alpha)$ be its
+level-$L$ NPA upper bound. The NPA error is $f_L-f$; the quantum
+violation is $f-(2+2|\alpha|)$. The preceding proof~\cite{prior}
+shows that a bounded ratio of these quantities as $\alpha\uparrow1$
+would give a sum of polynomial squares for
 \[
  \mathfrak m(X,Y)+c,\qquad
  \mathfrak m=1+X^4Y^2+X^2Y^4-3X^2Y^2,\quad c\ge0.
 \]
-This is impossible: constant values on both axes restrict each
+Here $X,Y$ are rescaled real angle variables. Such a sum of squares is impossible:
+constant values on both axes restrict each
 cubic square factor to $a+bXY+dX^2Y+eXY^2$, whose squared
 $X^2Y^2$ coefficient is nonnegative. Yet on equal angles,
 \[
  \mathfrak m(X,X)=(X^2-1)^2(2X^2+1).
 \]
-The obstruction needs the freedom discarded by the support reduction.
-The complete scaling and limiting argument is in the companion~\cite{SM}.
+The two-angle polynomial is not a sum of squares, although its
+equal-angle restriction is. The complete rescaling and limit argument
+appears in the companion~\cite{SM}.
 
-For $f(\alpha)=\max_\W(S+\alpha M)$, the quantum boundary
-satisfies~\cite{GigenaEtAl2025,prior}
+The quantum maximum satisfies~\cite{GigenaEtAl2025,prior}
 \[
  f(1-T)=4-2T+\tfrac43T^3+O(T^4),\qquad T\downarrow0.
 \]
-A polygon would have affine support sufficiently near this direction,
-so $\W$ is nonpolyhedral. Its finite lift makes it semialgebraic.
+For a polygon, this maximum would be affine in $T$ sufficiently near
+zero. Thus $\W$ is not a polygon. PSD constraints are polynomial
+inequalities; their projections are semialgebraic, meaning finite
+unions of sets defined by polynomial equalities and inequalities.
 Scheiderer's theorem gives extension degree at most two for every
-closed convex semialgebraic set in the plane~\cite{Scheiderer};
-order-one lifts are polyhedral. Hence $\sxdeg(\W)=2$.
+closed convex semialgebraic set in the plane~\cite{Scheiderer}.
+Scalar PSD constraints describe polyhedra, so size one cannot suffice.
+Hence $\sxdeg(\W)=2$.
 
 The construction also gives thirty-two exact projections.
-For each CHSH sign pattern $\chi$ with $\prod_{ij}\chi_{ij}=-1$,
-and each selected input pair $x,y$, physical relabellings identify
+For each CHSH sign pattern $\chi_{ij}\in\{\pm1\}$ with
+$\prod_{ij}\chi_{ij}=-1$,
+and each selected input pair $x,y$, relabelling inputs and outputs identifies
 \[
  \left(a_x+\chi_{xy}b_y,\ \sum_{ij}\chi_{ij}E_{ij}\right)
 \]
 with the same region $\W$.
 Adding these lifts to any NPA level retains every quantum correlation
-and makes all supporting bounds on these planes exact, including
-the family responsible for finite-level nontermination.
+and gives the exact maximum of every linear combination of the two
+coordinates on each plane. This removes the NPA error on all
+thirty-two planes.
 
-\clearpage
 \begin{thebibliography}{9}
 \bibitem{CHSH} J. F. Clauser, M. A. Horne, A. Shimony, and R. A. Holt,
 Proposed experiment to test local hidden-variable theories,

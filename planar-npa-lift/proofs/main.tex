@@ -19,21 +19,30 @@
 \begin{document}
 \maketitle
 
+Alice and Bob each choose one of two measurements and obtain an outcome
+in $\{\pm1\}$. Write $A_0,A_1$ and $B_0,B_1$ for their observables,
+and $\Q_{222}$ for the set of quantum correlations in this scenario.
 Let $M=\langle A_0\rangle+\langle B_0\rangle$ and
 $S=\langle A_0B_0+A_0B_1+A_1B_0-A_1B_1\rangle$ in the two-input,
-two-output Bell scenario. We prove that their full quantum region
-$\W=\{(M,S):p\in\Q_{222}\}$ has an explicit affine semidefinite lift
-with blocks of orders five and four and has semidefinite extension
-degree two, although every fixed NPA level projects strictly outside it.
+two-output Bell scenario, and let $\W=\{(M,S):p\in\Q_{222}\}$.
+A semidefinite lift describes membership by introducing auxiliary variables
+and imposing affine equations and positive semidefinite matrix constraints.
+Its block orders are the sizes of these matrices. The semidefinite extension
+degree is the smallest possible largest block order, allowing any finite
+number of blocks. We give an explicit lift of $\W$ with blocks of orders
+five and four and prove that its extension degree is two. Every fixed level
+of the Navascu\'es--Pironio--Ac\'in (NPA) hierarchy nevertheless projects
+to a strict superset of $\W$.
 
-The finite lift rests on equal measurement overlaps: in the nonclassical
-range, fixing their product leaves the determinant minimized by their
-smallest sum. Part I develops this
-reduction, physical rank-one witnesses, the two-strategy realization,
-the actual membership matrices, all signed asymmetric branches
-and the thirty-two relabelled projections. Part II gives the full NPA
-obstruction in five connected steps, from the quantum boundary to the
-polynomial limit of a finite certificate.
+For each supporting inequality, the quantum maximum can be attained when
+Alice's two observables and Bob's two observables have the same relative
+angle. Part I proves this reduction and constructs the membership matrices
+from pure two-qubit states. It also proves that two such strategies suffice,
+treats arbitrary signs and unequal marginal coefficients, and gives
+thirty-two equivalent projections under measurement relabellings.
+Part II proves that no fixed NPA level is exact. If its error remained
+bounded relative to the quantum violation near the local boundary,
+the certificate would give an impossible polynomial sum of squares.
 
 \part*{I. The finite representation}
 \renewcommand{\thesection}{F\arabic{section}}
@@ -42,20 +51,24 @@ polynomial limit of a finite certificate.
 \renewcommand{\thetheorem}{F\arabic{theorem}}
 \renewcommand{\theHequation}{F.\arabic{equation}}
 \renewcommand{\theHsection}{F.\arabic{section}}
-\section{Why equal measurement overlaps suffice}
+\section{Why equal local measurement angles suffice}
 
-The region is determined by its supporting inequalities.
+The supporting inequalities of $\W$ have the form $aM+hS\le\lambda$.
+Write $\mathrm{CHSH}=A_0B_0+A_0B_1+A_1B_0-A_1B_1$ for the CHSH
+operator. We determine when its tilted form is bounded above by $\lambda I$
+for every choice of state and measurements.
 For \(H=h\,\mathrm{CHSH}+a(A_0+B_0)\), with \(h,a\in\mathbb R\), write
 \[
  {\cal C}=\{(\lambda,a,h):\lambda I-H\succeq0
  \text{ for every quantum realization}\}.
 \]
-Jordan's lemma, after projective dilation, reduces this condition to real
-two-qubit blocks. Put
+Projective dilation and Jordan's lemma reduce this condition to real
+two-qubit blocks. With $X,Y,Z$ denoting the Pauli matrices, put
 \[
  A_0=B_0=Z,\quad A_1=cZ+rX,\quad B_1=dZ+sX,\qquad
  r^2=1-c^2,\ s^2=1-d^2 .
 \]
+Here $c,d\in[-1,1]$ are the cosines of the two local measurement angles.
 We may take \(r,s\ge0\) by local \(Z\) conjugations. Endpoints include the
 one-dimensional blocks. Complex state vectors cause no further condition,
 because the Bell matrix is real symmetric.
@@ -91,7 +104,8 @@ whose coefficients are all nonnegative. This argument includes zero determinants
 and multiple zero eigenvalues.
 
 \paragraph{At fixed product, minimize the sum.}
-Put \(x=(1-c)/2\), \(y=(1-d)/2\), and denote the determinant by \(D(x,y)\).
+Put \(x=(1-c)/2\), \(y=(1-d)/2\), so $(x,y)\in[0,1]^2$, and denote
+the determinant $\det(\lambda I-H)$ by \(D(x,y)\).
 Direct expansion gives
 \begin{align*}
 D(x,y)={}&D_0+64h^2(4h^2-a^2)xy(x+y)\\
@@ -105,9 +119,11 @@ Only \(x+y\) varies when \(xy\) is fixed. Arithmetic--geometric mean gives
  =64h^2(4h^2-a^2)xy(\sqrt x-\sqrt y)^2 .
  \label{eq:diagonal}
 \end{equation}
-For \(|a|\le |h|\), the right side is nonnegative. The equal-overlap
-point remains in the measurement square, so positivity there implies
-positivity at every original pair \(c,d\), including the endpoints.
+For \(|a|\le |h|\), the right side is nonnegative. Replacing $(x,y)$ by
+$(\sqrt{xy},\sqrt{xy})$ stays in $[0,1]^2$ and makes $c=d$.
+Thus nonnegative determinants for all equal-angle choices imply nonnegative
+determinants for every pair \(c,d\), including the endpoints. For
+$\lambda\ge L$, this is equivalent to positivity of the corresponding slacks.
 
 \paragraph{The remaining directions are classical.}
 The range \(b\ge H_*\) has exact support value \(L\).
@@ -143,7 +159,8 @@ In the basis \((\phi_+,\phi_-,\psi_+)\), the remaining block is
  0&2h(1-c)\sqrt{1-c^2}&-2h(1+c-c^2)
  \end{pmatrix}.
 \]
-Use \(c=(1-t^2)/(1+t^2)\) and multiply its slack by \((1+t^2)^2\).
+To remove the square root, use \(c=(1-t^2)/(1+t^2)\) and multiply
+the slack $\lambda I_3-H_3(c)$ by \((1+t^2)^2\).
 Writing
 \[
  p_0=(1+t^2)^2,\qquad p_1=1-t^4,\qquad p_2=1+4t^2-t^4,
@@ -165,9 +182,10 @@ Negative \(t\) adds no condition because
 Conversely, \(K(t)\succeq0\) for all real \(t\) forces the local bound.
 Its upper-left block at \(t=0\) gives \(\lambda\ge2h+2|a|\);
 the leading coefficient at \(t=\infty\) gives \(\lambda\ge-2h+2|a|\).
-Thus \(\lambda\ge L\), and the omitted scalar sector is controlled.
-Equation~\eqref{eq:diagonal} handles the low-tilt range; Eq.~\eqref{eq:critical}
-handles the rest. We have proved, for all real coefficients,
+Thus \(\lambda\ge L\), which also bounds the omitted eigenvalue $-2hc$.
+Equation~\eqref{eq:diagonal} applies for $|a|\le|h|$, and
+Eq.~\eqref{eq:critical} gives the bound for $|a|\ge|h|$.
+We have proved, for all real coefficients,
 \begin{equation}
  (\lambda,a,h)\in{\cal C}
  \quad\Longleftrightarrow\quad
@@ -176,12 +194,16 @@ handles the rest. We have proved, for all real coefficients,
 \end{equation}
 
 \paragraph{A fixed affine Gram lift.}
-Every PSD real univariate matrix polynomial is a polynomial matrix sum of squares,
-including identically singular ones~\cite{hs}.
+Every real univariate matrix polynomial that is positive semidefinite (PSD)
+for all real arguments can be written as a sum $\sum_j F_j(t)^TF_j(t)$
+of polynomial matrix squares, including identically singular ones~\cite{hs}.
 Since the diagonal entries of \(K\) have degree at most four, every square factor
 has degree at most two: highest-degree real squares cannot cancel.
-Average a Gram representation under the involution above. Its two parity blocks
-use precisely
+For $\xi=(\xi_1,\xi_2,\xi_3)^T\in\mathbb R^3$, a Gram representation
+expresses $\xi^TK(t)\xi$ as a quadratic form in monomials in $t$ and $\xi$.
+Average this representation under
+$(t,\xi)\mapsto(-t,\operatorname{diag}(1,1,-1)\xi)$.
+The even and odd monomials then form separate blocks, with vectors
 \[
  Z_+=(\xi_1,\xi_2,t\xi_3,t^2\xi_1,t^2\xi_2)^T,\qquad
  Z_-=(\xi_3,t\xi_1,t\xi_2,t^2\xi_3)^T.
@@ -203,9 +225,9 @@ The sixteen coefficient equations are
 \label{eq:rows}
 \end{equation}
 These equations include zero coefficients, lower polynomial degrees and every
-rank-deficient case. Setting \(h=1\) gives the common-tilt epigraph for all real
-\(a\); its restriction to \(0\le a\le1\) additionally requires those two scalar
-inequalities.
+rank-deficient case. Setting \(h=1\) describes all pairs $(a,\lambda)$ for
+which $S+aM\le\lambda$ holds on $\W$. Restricting to \(0\le a\le1\)
+requires the additional scalar inequalities $a\ge0$ and $a\le1$.
 
 \section{Explicit membership matrices for the quantum region}
 
@@ -229,7 +251,8 @@ Introduce sixteen real variables \(z_1,\ldots,z_{16}\) and define
  \end{pmatrix}.
 \end{split}\label{eq:dualmat}
 \end{equation}
-The exact membership test is
+Membership is equivalent to feasibility of the following semidefinite
+program (SDP):
 \[
  (M,S)\in\W\quad\Longleftrightarrow\quad
  \text{there exists }z\in\mathbb R^{16}
@@ -244,17 +267,18 @@ and
  \label{eq:coords}
 \end{align}
 
-We first build the membership variables from actual states.
+We first construct feasible $z$ from two-qubit states, proving that every
+point in $\W$ passes this test.
 Use $u,v\ge0$, $u^2+v^2=1$, and a real unit vector
 $\xi=(\xi_1,\xi_2,\xi_3)$ in the triplet basis
-$(\phi_+,\phi_-,\psi_+)$. The measurement overlap is $c=u^2-v^2$,
+$(\phi_+,\phi_-,\psi_+)$. The common local measurement angle has cosine $c=u^2-v^2$,
 with sine $2uv$. Define
 \[
  r_+=(u^2\xi_1,u^2\xi_2,uv\xi_3,v^2\xi_1,v^2\xi_2)^T,\qquad
  r_-=(u^2\xi_3,uv\xi_1,uv\xi_2,v^2\xi_3)^T.
 \]
-The rank-one matrices $U=r_+r_+^T$, $V=r_-r_-^T$ have precisely the
-shared entries in Eq.~\eqref{eq:dualmat}. Explicitly, choose
+The matrices $U=r_+r_+^T$, $V=r_-r_-^T$ each have rank at most one and
+have precisely the shared entries in Eq.~\eqref{eq:dualmat}. Explicitly, choose
 \begin{equation}
 \begin{split}
  z={}&(u^4\xi_1^2,\ 2u^4\xi_1\xi_2,\ u^4\xi_2^2,\ u^4\xi_3^2,\\
@@ -266,24 +290,26 @@ shared entries in Eq.~\eqref{eq:dualmat}. Explicitly, choose
 \end{split}
 \label{eq:statewitness}
 \end{equation}
-Substitution into Eq.~\eqref{eq:coords} gives $\ell(z)=1$ and
+Let $\ell(z)$ denote the linear form on the right-hand side of the
+normalization equation in Eq.~\eqref{eq:coords}. Substitution gives $\ell(z)=1$ and
 \begin{align*}
  M={}&4\xi_1\xi_2,\\
  S={}&2(u^4-v^4)\xi_1^2
  +2(u^4+4u^2v^2-v^4)(\xi_2^2-\xi_3^2)
  +16uv^3\xi_2\xi_3.
 \end{align*}
-These are the state's physical expectations. The homogeneous variables
-include both endpoints without division or limits.
+These are the state's observed averages. The variables $u,v$ include
+both endpoints without division or limits.
 
-Let $\mathcal T$ be this set of real triplet images. It is compact and
-path-connected, being a continuous image of a quarter-circle times $S^2$.
+Let $\mathcal T$ be the set of pairs $(M,S)$ obtained from these real states
+in the triplet subspace. It is compact and path-connected, being a continuous
+image of the quarter-circle $u,v\ge0$, $u^2+v^2=1$, times the unit sphere $S^2$.
 The singlet contributes only $(0,-2c)$, and
 \[
  (0,-2c)=\frac{1+c}{2}(0,-2)+\frac{1-c}{2}(0,2).
 \]
 Both endpoints belong to $\mathcal T$: choose $\xi=(0,0,1)$ and
-respectively $(u,v)=(1,0),(0,1)$. Since equal overlaps attain every
+respectively $(u,v)=(1,0),(0,1)$. Since choices with $c=d$ attain every
 support value, $\operatorname{conv}\mathcal T$ and $\W$ have the same
 supporting inequalities. They are compact convex sets, hence
 \begin{equation}
@@ -293,9 +319,12 @@ supporting inequalities. They are compact convex sets, hence
 Convex mixtures of the displayed witnesses therefore admit every point of
 $\W$ into the SDP, including the boundary.
 
-For the other inclusion, write Eq.~\eqref{eq:rows} as
+To prove that every feasible $z$ gives a point in $\W$, write Eq.~\eqref{eq:rows} as
 $\mathcal A(G,J)=B(\lambda,a,h)$ in the displayed row order.
-Then $(U(z),V(z))=\mathcal A^*z$ and
+Here $\mathcal A$ maps the two Gram matrices to the sixteen left-hand sides,
+and $B$ maps $(\lambda,a,h)$ to the corresponding right-hand sides.
+With the trace inner product on symmetric matrices, the adjoint of
+$\mathcal A$ satisfies $(U(z),V(z))=\mathcal A^*z$ and
 $B^Tz=(\ell(z),-M(z),-S(z))$. Any feasible $z$ satisfies
 \[
  \lambda-aM(z)-hS(z)=\tr[U(z)G]+\tr[V(z)J]\ge0
@@ -317,7 +346,7 @@ and $p=(s x+r y)/(r+s)$.
 
 Applied to Eq.~\eqref{eq:triplet-hull}, this shows that every $(M,S)\in\W$
 is realized by a mixture of at most two real pure two-qubit strategies,
-each with equal local overlaps. Their witnesses give simultaneously
+each with equal local measurement angles. Their witnesses give simultaneously
 $\operatorname{rank}U,\operatorname{rank}V\le2$.
 If the point is extreme, it belongs to $\mathcal T$ and both ranks can be
 at most one. These rank bounds describe available witnesses; no rank
@@ -327,11 +356,11 @@ constraint is added to the convex SDP.
 The normalized feasible auxiliary set is also compact. The following
 argument gives an alternative dual proof of membership and can be useful
 when optimizing over the lift.
-For the reverse implication, the dual image
+Define the dual image
 \[
  {\cal D}=\{B^Tz:U(z)\succeq0,\ V(z)\succeq0\}
 \]
-is closed. Indeed, the positive definite matrices
+and note that it is closed. Indeed, the positive definite matrices
 \[
  G_0=\operatorname{diag}(1,1,2,1,1),\qquad
  J_0=\operatorname{diag}(1,2,2,1)
@@ -340,8 +369,10 @@ satisfy \(\mathcal A(G_0,J_0)=B(1,0,0)\), and hence
 \(\ell(z)=\tr[U(z)G_0]+\tr[V(z)J_0]\).
 If \(B^Tz\) converges, this weighted trace bounds both PSD matrices.
 Every \(z_i\) occurs in their entries, so \(z\) is bounded and has a convergent
-subsequence. The limit is feasible. The strictly feasible pair \((G_0,J_0)\)
-licenses the conic intersection-dual rule, giving
+subsequence. The limit is feasible. Let ${\cal C}^*$ denote the dual cone,
+whose elements have nonnegative inner product with every element of ${\cal C}$.
+The strictly feasible pair \((G_0,J_0)\)
+allows us to take the dual of the Gram representation, giving
 \({\cal C}^*=\overline{\cal D}={\cal D}\).
 Finally, the compact convex set \(\W\) is the intersection of its support
 half-spaces, so \((M,S)\in\W\) exactly when \((1,-M,-S)\in{\cal C}^*\).
@@ -350,8 +381,11 @@ compact by the same trace argument.
 
 \section{Minimal block order and the NPA comparison}
 
-The set \(\W\) is compact and convex. The explicit lift makes it semialgebraic.
-Scheiderer's planar theorem therefore gives \(\sxdeg(\W)\le2\)~\cite{soc}.
+The set \(\W\) is compact and convex. The explicit lift also makes it
+semialgebraic: its membership condition can be expressed by a finite
+combination of polynomial equalities and inequalities.
+Writing $\sxdeg(\W)$ for its semidefinite extension degree, Scheiderer's
+planar theorem gives \(\sxdeg(\W)\le2\)~\cite{soc}.
 A short argument shows that \(\W\) is not a polygon.
 
 Let \(f(a)=\max_{\W}(S+aM)\), and \(w=2\sqrt2=f(0)\).
@@ -362,7 +396,7 @@ The identity
 shows that attaining \(w\) requires \(r=s=1\).
 At \(c=d=0\), the top state is
 \(v=\cos(\pi/8)\phi_-+\sin(\pi/8)\psi_+\), with both reduced states \(I/2\).
-Thus every CHSH-maximizing behavior has \(M=0\).
+Thus every CHSH-maximizing correlation has \(M=0\).
 For maximizers \(p_a\) of \(f(a)\), compactness then gives \(M(p_a)\to0\) as
 \(a\downarrow0\), and
 \[
@@ -383,7 +417,9 @@ contradicting this strict increase. Therefore \(\W\) is nonpolyhedral, and
 The same proof gives extension degree two for
 \(\{(a,\lambda):0\le a\le1,\ \lambda\ge f(a)\}\).
 
-The prior NPA result applies to these very support directions \(h=1\)~\cite{prior}:
+Write $\omega_{\mathrm{NPA}}^{(L)}(a)$ for the level-$L$ NPA upper bound on
+$S+aM$. The prior NPA result applies to these support directions
+\(h=1\)~\cite{prior}, with $T=1-a\downarrow0$:
 \[
  f(1-T)=4-2T+\frac43T^3+O(T^4),\qquad
  \frac{\omega_{\mathrm{NPA}}^{(L)}(1-T)-f(1-T)}{T^3}\longrightarrow+\infty
@@ -396,16 +432,20 @@ nonpolyhedrality argument above are independent of that proof.
 
 \section{All signed asymmetric tilt branches}
 
-The weighted-ray argument also extends to arbitrary real tilts in
+The determinant minimization extends to arbitrary real marginal coefficients in
 \[
  H_{\alpha,\beta}=\mathrm{CHSH}+\alpha A_0+\beta B_0.
 \]
 Put \(q=|\alpha|+|\beta|\). Its local bound is \(2+q\), attained for any tilt
-signs. If \(q\ge2\), signed one-sided versions of Eq.~\eqref{eq:critical},
-convex combination on \(q=2\), and sign-adjusted marginal slacks above it prove
-that this is also the quantum bound.
+signs. On $q=2$, combine the signed one-sided bounds from
+Eq.~\eqref{eq:critical} with weights $|\alpha|/2$ and $|\beta|/2$.
+This gives the same quantum bound. For $q>2$, first apply this result
+to coefficients $2\alpha/q,2\beta/q$. The remaining marginal terms
+are bounded above by $q-2$, giving $2+q$ again.
 
-Suppose \(q<2\) and \(\lambda\ge2+q\). For the full Jordan slack,
+Suppose \(q<2\) and \(\lambda\ge2+q\). On a two-qubit Jordan block,
+the coefficients of $u^2$ and $u$ in
+$\det(uI+\lambda I-H_{\alpha,\beta})$ are
 \[
  e_2=6\lambda^2-2\alpha^2-2\beta^2-8,\qquad
  e_3=4\lambda^3-4\lambda(\alpha^2+\beta^2+4)-8\alpha\beta\Omega .
@@ -413,7 +453,8 @@ Suppose \(q<2\) and \(\lambda\ge2+q\). For the full Jordan slack,
 Both are nonnegative. For \(e_3\), a lower bound is
 \(g(\lambda)=4\lambda^3-4\lambda(q^2+4)-4q^2\).
 It increases on this range, and \(g(2+q)=32q+12q^2\ge0\).
-Thus the determinant again decides PSD.
+Together with $e_1=4\lambda\ge0$, these inequalities show that the
+determinant again decides positive semidefiniteness.
 
 With \(x=(1-c)/2\), \(y=(1-d)/2\), direct expansion gives
 \begin{align*}
@@ -437,10 +478,10 @@ where
  F_+=(\lambda-\alpha)^2-\beta^2-4+4\beta(2y-1).
 \]
 Since \(\lambda\pm\alpha\ge2+|\beta|\), we have \(F_-\le0\le F_+\).
-Hence the complete measurement square reduces to the weighted ray, for every
-choice of tilt signs.
+Thus it suffices to test the segment $(x,y)=(z,\rho z)$,
+$0\le z\le1$, for every choice of tilt signs.
 
-Along the ray, put
+Along this segment, put
 \(R=4z(1-z)\), \(T=4\rho z(1-\rho z)\), and \(\Omega=2-4\rho z^2\).
 Congruence by \(\operatorname{diag}(\sqrt{RT},\sqrt R,\sqrt T,1)\) gives
 \begin{equation}
@@ -470,9 +511,9 @@ This argument also includes singular matrices and endpoint zeros.
 
 For fixed \(\alpha,\beta\), coefficient matching in Eq.~\eqref{eq:interval}
 is affine in \(\lambda,U,V\). Include \(\lambda\ge2+q\) explicitly.
-This yields an exact fixed-size SDP throughout the signed subcritical diamond,
-including either zero-tilt axis and CHSH. The critical and exterior branches
-are the elementary local-bound certificates already proved.
+This yields an exact SDP of fixed size whenever
+$|\alpha|+|\beta|<2$, including either zero-tilt axis and CHSH.
+For $|\alpha|+|\beta|\ge2$, the local-bound certificates above apply.
 The ratio \(\rho\) still depends nonlinearly on the two independent tilts:
 this construction computes their support values, while the common-tilt
 construction above gives an affine membership lift.
@@ -481,7 +522,8 @@ construction above gives an affine membership lift.
 \section{Thirty-two exact projections and their NPA intersections}
 \label{finite:sec:orbit}
 
-For a sign pattern $\chi\in\{\pm1\}^{2\times2}$ satisfying
+Write $a_x=\langle A_x\rangle$, $b_y=\langle B_y\rangle$, and
+$E_{ij}=\langle A_iB_j\rangle$. For a sign pattern $\chi\in\{\pm1\}^{2\times2}$ satisfying
 $\prod_{ij}\chi_{ij}=-1$, and $x,y\in\{0,1\}$, set
 \[
  M_{\chi,xy}=a_x+\chi_{xy}b_y,\qquad
@@ -520,7 +562,8 @@ Let $\Q_L$ be a fixed standard NPA relaxation and define
  \bigcap_{\chi,x,y}\{p:\pi_{\chi,xy}(p)\in\W\},\qquad
  \pi_{\chi,xy}(p)=(M_{\chi,xy},S_\chi).
 \]
-Every quantum behavior survives, while each imposed image lies in $\W$:
+Every quantum correlation satisfies these constraints, and each projection
+of $\mathcal R_L$ lies in $\W$:
 \[
  \Q_{222}\subseteq\mathcal R_L\subseteq
  \pi_{\chi,xy}^{-1}(\W).
@@ -545,8 +588,8 @@ with the two appropriate linear forms. The added constraints use
 512 auxiliary variables and 96 affine equations. The generator enumerates
 physical relabellings and checks the distinct maps exactly.
 The inclusions above establish exactness on the stated planes;
-they impose no claim of joint quantum realizability outside those
-projections.
+they do not establish quantum realizability of a full correlation whose
+projections satisfy them.
 
 \clearpage
 \part*{II. The complete finite-NPA obstruction}
@@ -577,30 +620,38 @@ h_\alpha=A_0B_0+A_0B_1+A_1B_0-A_1B_1+\alpha(A_0+B_0),
 \end{equation}
 The CHSH bound $2$ and the two marginal bounds give the local maximum
 $\omega_{\rm L}(\alpha)=2+2\alpha$, attained when all outputs are $+1$.
+In this part we abbreviate $\Q_{222}$ to $\Q$.
 Write $\omega_{\rm Q}(\alpha)=\max_{p\in\Q}\beta_\alpha(p)$ and
-$\Delta_\alpha=\omega_{\rm Q}(\alpha)-\omega_{\rm L}(\alpha)$.
+$\Delta_\alpha=\omega_{\rm Q}(\alpha)-\omega_{\rm L}(\alpha)$,
+the quantum violation above the local bound.
 
 The quantum set $\Q$ consists of
 $p(a,b|x,y)=\Tr[\rho(E_{a|x}\otimes F_{b|y})]$, with a density operator
-$\rho$ and local binary POVMs. A common local Naimark dilation preserves
+$\rho$ and local binary positive-operator-valued measurements (POVMs),
+$\{E_{a|x}\}_a$ and $\{F_{b|y}\}_b$. A common local Naimark dilation preserves
 all probabilities and makes both settings projective~\cite{Naimark1940};
 the commuting-model version follows from Proposition~3.4(b) of
-Ref.~\cite{Fritz2012}. Their differences are self-adjoint reflections,
+Ref.~\cite{Fritz2012}. The differences of the two outcome projectors
+are self-adjoint reflections,
 $A_x^2=B_y^2=I$, with projectors $(I+aA_x)/2$, $(I+bB_y)/2$.
 
+Let $\Q_{\rm fd}$ denote the finite-dimensional tensor-product quantum set.
 Jordan's lemma decomposes each finite-dimensional local pair into invariant
 blocks of dimension at most two~\cite{Halmos1969,Masanes2005,PanwarPandyaWiesniak2022}.
 For block projections $P_{ij}=\Pi_i^A\otimes\Pi_j^B$, the weights
 $r_{ij}=\Tr(P_{ij}\rho)$ and states $P_{ij}\rho P_{ij}/r_{ij}$ give
 $p=\sum_{ij:r_{ij}>0}r_{ij}p_{ij}$. Conversely, correlated classical labels
 realize any finite mixture by local direct sums. If $\mathcal K_2$ denotes
-the two-qubit correlations with projective measurements, including trivial
-projectors, then $\mathcal Q_{\rm fd}=\operatorname{conv}\mathcal K_2$.
+the two-qubit correlations with projective measurements, including the
+projectors $0$ and $I$, then $\mathcal Q_{\rm fd}=\operatorname{conv}\mathcal K_2$.
 Carath\'eodory's theorem requires at most nine components in the
 eight-dimensional correlation space. The state and projector parameter sets
 are compact, so the mixture set is the compact continuous image of
-$\Delta_8\times\mathcal K_2^9$. Finite-dimensional approximation adds no
-tensor-product correlations. The local two-projection algebra is nuclear
+$\Delta_8\times\mathcal K_2^9$, where $\Delta_8$ is the simplex of nine
+nonnegative weights summing to one. Finite-dimensional approximation adds no
+tensor-product correlations. In the commuting model, denoted by $\Q_{\rm c}$,
+Alice's and Bob's operators act on one Hilbert space and commute with each other.
+The local two-projection algebra is nuclear
 \cite[Sec.~4, Example~7(2)]{ScholzWerner2008}; Proposition~3.4 and
 Remark~3.6 of Ref.~\cite{Fritz2012} therefore identify the commuting set with
 the tensor-product closure. Thus, with complex Hilbert spaces throughout,
@@ -611,38 +662,53 @@ the tensor-product closure. Thus, with complex Hilbert spaces throughout,
 \end{equation}
 In particular, NPA converges to $\Q$ here~\cite[Theorem~8]{NPA2008}.
 
-To define its finite levels, use the complex group algebra of
+To define the finite NPA levels, we use formal observable products, called
+words. The group relations express that the observables square to the
+identity and that Alice's observables commute with Bob's. With $e$ denoting
+the identity, the group is
 \begin{equation}
 G=\langle a_0,a_1,b_0,b_1:a_x^2=b_y^2=e,\ a_xb_y=b_ya_x\rangle.
 \label{supp:eq:group-presentation}
 \end{equation}
-Reduced words have Alice's alternating letters before Bob's alternating
-letters; the adjoint reverses a word and conjugates its coefficient. Let
+Its complex group algebra consists of finite complex linear combinations
+of these words. Reduced words have Alice's alternating letters before Bob's
+alternating letters; the adjoint reverses a word and conjugates its coefficient. Let
 $\mathcal W_L$ contain the reduced words of length at most $L$, let
 $V_L=\Span_\C\mathcal W_L$, and enumerate its words as $\bm w$.
-A Hermitian functional $\ell$ on words through length $2L$ defines
+A candidate moment assignment associates a complex number $\ell(w)$ with
+each word through length $2L$, extends linearly, and is Hermitian when
+$\ell(w^*)=\overline{\ell(w)}$. It need not come from a physical realization.
+Its moment matrix and the resulting NPA bound are
 \begin{equation}
 \Gamma_L(\ell)=(\ell(u^*v))_{u,v\in\mathcal W_L},\qquad
 \omega_{\rm NPA}^{(L)}(\alpha)
 =\max_{\ell(e)=1,\ \Gamma_L(\ell)\succeq0}\ell(h_\alpha),
 \label{supp:eq:primal-NPA}
 \end{equation}
-where $h_\alpha$ now uses the abstract generators. Physical moments
+where $h_\alpha$ now uses the abstract generators. For a measurement
+representation $\pi$ and a unit state vector $|\psi\rangle$, physical moments
 $\ell(w)=\langle\psi|\pi(w)|\psi\rangle$ make $\Gamma_L$ a Gram matrix;
 therefore $\omega_{\rm NPA}^{(L)}\geq\omega_{\rm Q}$.
+We call $\omega_{\rm NPA}^{(L)}-\omega_{\rm Q}$ the NPA approximation error.
 Level $1$ is an observable moment bound and need not give nonnegative
 probabilities. We extract correlations only at levels $d\geq2$ below.
 
+An identity $\lambda e-h_\alpha=\sum_jp_j^*p_j$ in the group algebra,
+with $p_j\in V_L$, is an upper-bound certificate: evaluation on any
+measurements gives $\lambda I-\pi(h_\alpha)\succeq0$. Its Gram matrix is the
+variable in the dual problem below.
+
 \begin{proposition}[Attainment and Gram trace bound]
 \label{supp:prop:duality}\label{supp:lem:trace-identity}
-For every finite $L\geq1$ and $0\leq\alpha\leq1$, both optima in
+For every finite $L\geq1$ and $0\leq\alpha\leq1$, the primal maximum in
+Eq.~\eqref{supp:eq:primal-NPA} and the dual minimum below are attained:
 \begin{equation}
 \omega_{\rm NPA}^{(L)}(\alpha)
 =\min\{\lambda\in\R:\lambda e-h_\alpha=\bm w^*Q\bm w,\ Q\succeq0\}
 \label{supp:eq:dual-NPA}
 \end{equation}
-are attained. The Gram matrix may be real symmetric. Every such certificate
-satisfies
+The Gram matrix may be real symmetric. Every such certificate satisfies
+the following bounds, where matrix norms are operator norms:
 \begin{equation}
 \Tr Q=\lambda,\qquad \|Q\|\leq\lambda,\qquad
 \|Q^{1/2}\|\leq\sqrt\lambda.
@@ -783,25 +849,30 @@ $T=(3\eta-2)/\eta=(9/2)(\eta-2/3)+O((\eta-2/3)^2)$,
 \label{supp:eq:loss-cubic}
 \end{equation}
 
-\section{A two-parameter trial state and its Motzkin gap}
+\section{A two-parameter trial state and the Motzkin polynomial}
 \label{supp:sec:motzkin}\label{supp:sec:not-sos}
-Set $T=t^2$ and vary the two angles independently:
+The quantum violation is of order $T^3$, and the optimal measurement angles
+are of order $\sqrt T$. Set $T=t^2$ so that these scales become $t^6$
+and $t$, and vary the two angles independently:
 \begin{equation}
 A_0=B_0=Z,\quad A_1=\cos(tx)Z+\sin(tx)X,\quad
 B_1=\cos(ty)Z+\sin(ty)X,\qquad x,y\in\R.
 \label{supp:eq:two-parameter-observables}
 \end{equation}
-Write $H(t;x,y)$ for their Bell operator. A certificate must hold for every
-$(x,y)$, although optimal angles approach $(2,2)$. In what follows
+Write $H(t;x,y)$ for the evaluation of $h_{1-t^2}$ on these observables.
+A certificate must hold for every $(x,y)$, although the canonical rescaled
+optimal angles approach $(x,y)=(2,2)$. In what follows
 $O_K(t^k)$ bounds the scalar, Euclidean, or operator norm uniformly on each
 compact $K\subset\R^2$ by $C_K|t|^k$ for $0<|t|<\delta_K$.
 
 At $t=0$, $H=\operatorname{diag}(4,-2,-2,0)$; the gaps from $|00\rangle$
 are $6,6,4$. Its couplings to the other basis vectors are
 $x^2yt^3/2+O_K(t^5)$, $xy^2t^3/2+O_K(t^5)$, and
-$-xyt^2+O_K(t^4)$. To cancel the gap before order $t^6$, take
+$-xyt^2+O_K(t^4)$. Take
 $\zeta_t=(1,At^3,Bt^3,Ct^2)^T$ and
 $\Lambda_t=4-2t^2+4t^6/3$.
+We choose $A,B,C$ to make the expectation of $\Lambda_tI-H(t)$ vanish
+below order $t^6$.
 Equation~\eqref{supp:eq:excess-quadratic-form} gives the leading gap
 $(4C+xy)^2t^4/4$. Hence choose $C=-xy/4$. The next coefficient is
 \begin{align}
@@ -812,15 +883,17 @@ $(4C+xy)^2t^4/4$. Hence choose $C=-xy/4$. The next coefficient is
 \label{supp:eq:gap-completed-squares}
 \end{align}
 Indeed, before completing the two squares their contribution is
-$6A^2-Ax^2y+6B^2-Bxy^2$ and the sixth-degree coefficient is $1/16$;
-subtracting $1/24$ leaves $1/48$. Thus the polynomial vector
+$6A^2-Ax^2y+6B^2-Bxy^2$, and the coefficient of $x^4y^2+x^2y^4$
+is $1/16$; completing the squares subtracts $1/24$, leaving $1/48$.
+Choose $A=x^2y/12$ and $B=xy^2/12$. Define the resulting polynomial
+vector $\xi_t$ and the Motzkin polynomial $M(X,Y)$ by
 \begin{equation}
 \xi_t=(1,t^3x^2y/12,t^3xy^2/12,-t^2xy/4)^T,
 \qquad
 M(X,Y)=X^4Y^2+X^2Y^4-3X^2Y^2+1
 \label{supp:eq:scaled-test-vector}
 \end{equation}
-satisfies
+Then $\xi_t$ satisfies
 \begin{equation}
 \langle\xi_t,[\omega_{\rm Q}(1-t^2)I-H(t;x,y)]\xi_t\rangle
 =\tfrac43t^6M(x/2,y/2)+O_K(t^8).
@@ -865,6 +938,8 @@ each restricted polynomial is bounded and therefore constant. Thus
 $q_j=a_j+b_jXY+c_jX^2Y+d_jXY^2$. The $X^2Y^2$ coefficient of
 $\sum_jq_j^2$ is $\sum_jb_j^2\geq0$, contradicting $-3$.
 \end{proof}
+An alternative proof uses the Newton polytope $\Newt(p)$, the convex hull
+of the exponent vectors of monomials with nonzero coefficients in $p$.
 The usual half-Newton-polytope property gives the same monomial restriction:
 if $p=\sum_jq_j^2$, then
 $\Newt(q_j)\subseteq\frac12\Newt(p)$~\cite[Theorem~1]{Reznick1978}.
@@ -900,8 +975,8 @@ locally uniformly for a real polynomial $P$, then $P$ is a sum of squares
 of real polynomials.
 \end{lemma}
 \begin{proof}
-A sine or cosine coefficient of order $k$ in $t$ has angular degree at
-most $k$; the entries of $\xi_t$ have the same property. Multiplication
+A sine or cosine coefficient of order $k$ in $t$ is a polynomial in $x,y$
+of total degree at most $k$; the entries of $\xi_t$ have the same property. Multiplication
 adds these orders. Since the word list is fixed and finite, Taylor's
 theorem gives, on every compact $K$,
 \begin{equation}
@@ -911,14 +986,15 @@ z_t=\sum_{r=0}^m t^rz_r+R_{m+1},\qquad
 \end{equation}
 Put $C_n=Q_n^{1/2}$, keeping all $N$ rows even if its rank changes.
 The trace bound gives $\|C_n\|\leq\sqrt{\sup_n\Tr Q_n}$.
-Hence the polynomial vectors of degree at most $m$,
+Define the polynomial vector $p_n$ of degree at most $m$ and the
+analytic vector $v_n$ by
 \begin{equation}
 p_n=t_n^{-m}(C_n\otimes I_4)\sum_{r=0}^m t_n^rz_r,
 \qquad v_n=t_n^{-m}(C_n\otimes I_4)z_{t_n},
 \qquad \sup_K\|p_n-v_n\|=O_K(t_n),
 \label{supp:eq:pn-definition}
 \end{equation}
-are uniformly bounded on $K_0=[-1,1]^2$, since $\|v_n\|^2\to P$
+The vectors $p_n$ are uniformly bounded on $K_0=[-1,1]^2$, since $\|v_n\|^2\to P$
 uniformly there. To bound coefficients despite the negative powers of
 $t_n$, choose $m+1$ fixed distinct nodes $s_i\in[-1,1]$. Their fixed
 Lagrange polynomials $L_i$ give, for each coordinate $p$ of $p_n$,
